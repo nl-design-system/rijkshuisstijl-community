@@ -254,6 +254,7 @@ jobs:
           HUSKY: 0
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
+          pnpm config set "@rijkshuisstijl-community:registry" "https://registry.npmjs.org/"
           pnpm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
           pnpm run publish
           pnpm config delete "//registry.npmjs.org/:_authToken"
