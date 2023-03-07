@@ -1,3 +1,9 @@
-# Assets
+<!-- @license CC0-1.0 -->
 
-Story any font files here, such as proprietary fonts.
+# Rijkshuisstijl font
+
+Copyright (c) 2023 Dutch Ministry of General Affairs. All rights reserved.
+
+The open source license does NOT apply to files in this directory.
+
+These are properietary assets to the Dutch Ministry of General Affairs.

@@ -1,7 +1,7 @@
-import '@example/design-tokens/dist/index.css';
-import '@example/font/src/index.scss';
+import '@rijkshuisstijl-community/design-tokens/dist/index.css';
+import '@rijkshuisstijl-community/font/src/index.scss';
 
-import { defineCustomElements } from '@example/web-components-stencil/loader/index.js';
+import { defineCustomElements } from '@rijkshuisstijl-community/web-components-stencil/loader/index.js';
 
 defineCustomElements();
 
@@ -14,7 +14,7 @@ export const decorators = [
     storyContext.parameters.args = storyContext.args;
 
     return (
-      <div className="example-theme">
+      <div className="rhc-theme">
         <Story />
       </div>
     );

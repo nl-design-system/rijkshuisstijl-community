@@ -1,14 +1,8 @@
 <!-- @license CC0-1.0 -->
 
-# Rijkshuisstijl font
+# Rijkshuisstijl design tokens
 
-Copyright (c) 2023 Dutch Ministry of General Affairs. All rights reserved.
-
-The open source license does NOT apply to files in this directory.
-
-These are properietary assets to the Dutch Ministry of General Affairs.
-
-## Auteursrechten
+## Auteursrecht logo en huisstijl
 
 Er gelden auteursrechten op het logo en de huisstijl. De Rijksoverheid heeft het beeldmerk als hoogheidsteken gedeponeerd. Daardoor kan zij actie ondernemen tegen een (vermoedelijke) inbreuk op deze rechten. Het gaat dan om het gebruik en de toepassing van het ontwerp van het logo en de huisstijl. Waaronder ook de lettertypes RijksoverheidSerif en RijksoverheidSans.
 

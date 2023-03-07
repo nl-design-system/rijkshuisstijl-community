@@ -95,16 +95,28 @@ importers:
       typescript: 4.9.5
       webpack: 5.75.0
 
+  packages/design-tokens:
+    specifiers:
+      chokidar-cli: 3.0.0
+      npm-run-all: 4.1.5
+      rimraf: 4.1.2
+      style-dictionary: 3.7.2
+    devDependencies:
+      chokidar-cli: 3.0.0
+      npm-run-all: 4.1.5
+      rimraf: 4.1.2
+      style-dictionary: 3.7.2
+
   packages/storybook:
     specifiers:
       '@babel/core': 7.21.0
       '@etchteam/storybook-addon-status': 4.2.2
-      '@example/assets': workspace:*
-      '@example/components-css': workspace:*
-      '@example/design-tokens': workspace:*
-      '@example/documentation': workspace:*
-      '@example/font': workspace:*
-      '@example/web-components-stencil': workspace:*
+      '@rijkshuisstijl-community/assets': workspace:*
+      '@rijkshuisstijl-community/components-css': workspace:*
+      '@rijkshuisstijl-community/design-tokens': workspace:*
+      '@rijkshuisstijl-community/documentation': workspace:*
+      '@rijkshuisstijl-community/font': workspace:*
+      '@rijkshuisstijl-community/web-components-stencil': workspace:*
       '@storybook/addon-a11y': 6.5.16
       '@storybook/addon-actions': 6.5.16
       '@storybook/addon-docs': 6.5.16
@@ -132,12 +144,12 @@ importers:
     devDependencies:
       '@babel/core': 7.21.0
       '@etchteam/storybook-addon-status': 4.2.2_biqbaboplfbrettd7655fr4n2y
-      '@example/assets': link:../../proprietary/assets
-      '@example/components-css': link:../components-css
-      '@example/design-tokens': link:../../proprietary/design-tokens
-      '@example/documentation': link:../../documentation
-      '@example/font': link:../../proprietary/font
-      '@example/web-components-stencil': link:../web-components-stencil
+      '@rijkshuisstijl-community/assets': link:../../proprietary/assets
+      '@rijkshuisstijl-community/components-css': link:../components-css
+      '@rijkshuisstijl-community/design-tokens': link:../design-tokens
+      '@rijkshuisstijl-community/documentation': link:../../documentation
+      '@rijkshuisstijl-community/font': link:../../proprietary/font
+      '@rijkshuisstijl-community/web-components-stencil': link:../web-components-stencil
       '@storybook/addon-a11y': 6.5.16_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-actions': 6.5.16_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-docs': 6.5.16_htlz4q7ejpsymjoev6bwuekuwm
@@ -165,7 +177,7 @@ importers:
 
   packages/web-components-react:
     specifiers:
-      '@example/web-components-stencil': workspace:*
+      '@rijkshuisstijl-community/web-components-stencil': workspace:*
       '@types/node': 18.14.2
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
@@ -174,7 +186,7 @@ importers:
       rimraf: 4.1.2
       typescript: 4.9.5
     devDependencies:
-      '@example/web-components-stencil': link:../web-components-stencil
+      '@rijkshuisstijl-community/web-components-stencil': link:../web-components-stencil
       '@types/node': 18.14.2
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
@@ -185,7 +197,7 @@ importers:
 
   packages/web-components-stencil:
     specifiers:
-      '@example/components-css': workspace:*
+      '@rijkshuisstijl-community/components-css': workspace:*
       '@stencil/core': 3.0.1
       '@stencil/react-output-target': 0.4.0
       '@stencil/sass': 2.0.4
@@ -199,7 +211,7 @@ importers:
     dependencies:
       '@stencil/core': 3.0.1
     devDependencies:
-      '@example/components-css': link:../components-css
+      '@rijkshuisstijl-community/components-css': link:../components-css
       '@stencil/react-output-target': 0.4.0_@stencil+core@3.0.1
       '@stencil/sass': 2.0.4_@stencil+core@3.0.1
       '@types/jest': 29.4.0
@@ -212,18 +224,6 @@ importers:
 
   proprietary/assets:
     specifiers: {}
-
-  proprietary/design-tokens:
-    specifiers:
-      chokidar-cli: 3.0.0
-      npm-run-all: 4.1.5
-      rimraf: 4.1.2
-      style-dictionary: 3.7.2
-    devDependencies:
-      chokidar-cli: 3.0.0
-      npm-run-all: 4.1.5
-      rimraf: 4.1.2
-      style-dictionary: 3.7.2
 
   proprietary/font:
     specifiers: {}
@@ -5848,7 +5848,7 @@ packages:
       mississippi: 3.0.0
       mkdirp: 0.5.6
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       rimraf: 2.7.1
       ssri: 6.0.2
       unique-filename: 1.1.1
@@ -6123,7 +6123,7 @@ packages:
       path-case: 3.0.4
       sentence-case: 3.0.4
       snake-case: 3.0.4
-      tslib: 2.4.0
+      tslib: 2.5.0
     dev: true
 
   /character-entities-html4/2.1.0:
@@ -10467,12 +10467,6 @@ packages:
       minimist: 1.2.6
     dev: true
 
-  /json5/2.2.1:
-    resolution: {integrity: sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==}
-    engines: {node: '>=6'}
-    hasBin: true
-    dev: true
-
   /json5/2.2.3:
     resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
     engines: {node: '>=6'}
@@ -13382,17 +13376,6 @@ packages:
         optional: true
     dev: true
 
-  /promise-inflight/1.0.1_bluebird@3.7.2:
-    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
-    peerDependencies:
-      bluebird: '*'
-    peerDependenciesMeta:
-      bluebird:
-        optional: true
-    dependencies:
-      bluebird: 3.7.2
-    dev: true
-
   /promise-retry/2.0.1:
     resolution: {integrity: sha512-y+WKFlBR8BGXnsNlIHFGPZmyDf3DFMoLhaflAnyZgV6rG6xu+JwesTo2Q9R6XwYmtmwAFCkAk3e35jEdoeh/3g==}
     engines: {node: '>=10'}
@@ -15146,7 +15129,7 @@ packages:
       commander: 8.3.0
       fs-extra: 10.1.0
       glob: 7.2.3
-      json5: 2.2.1
+      json5: 2.2.3
       jsonc-parser: 3.2.0
       lodash: 4.17.21
       tinycolor2: 1.4.2
@@ -15729,10 +15712,6 @@ packages:
 
   /tslib/1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
-    dev: true
-
-  /tslib/2.4.0:
-    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
     dev: true
 
   /tslib/2.5.0:

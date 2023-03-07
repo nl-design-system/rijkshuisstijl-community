@@ -3,7 +3,7 @@ import { reactOutputTarget } from '@stencil/react-output-target';
 import { sass } from '@stencil/sass';
 
 export const config: Config = {
-  namespace: 'example',
+  namespace: 'rhc',
   srcDir: '../../components/',
   outputTargets: [
     {
@@ -15,7 +15,7 @@ export const config: Config = {
       customElementsExportBehavior: 'bundle',
     },
     reactOutputTarget({
-      componentCorePackage: '@example/web-components-stencil',
+      componentCorePackage: '@rijkshuisstijl-community/web-components-stencil',
       proxiesFile: '../web-components-react/src/components.ts',
     }),
   ],
