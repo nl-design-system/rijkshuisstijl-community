@@ -1,13 +1,13 @@
 /* @license CC0-1.0 */
 
-import readme from '@example/components-css/button/README.md';
+import readme from '@rijkshuisstijl-community/components-css/button/README.md';
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import '@example/components-css/button/index.scss';
+import '@rijkshuisstijl-community/components-css/button/index.scss';
 
 const Button = ({ textContent }) => (
-  <button className="example-button" type="button">
-    <span className="example-button__text">{textContent}</span>
+  <button className="rhc-button" type="button">
+    <span className="rhc-button__text">{textContent}</span>
   </button>
 );
 

@@ -3,11 +3,14 @@
   "author": "Community for NL Design System",
   "description": "CSS Components for a design system based on the NL Design System architecture",
   "license": "EUPL-1.2",
-  "name": "@example/components-css",
+  "name": "@rijkshuisstijl-community/components-css",
   "keywords": [
     "nl-design-system"
   ],
-  "private": true,
+  "private": false,
+  "publishConfig": {
+    "access": "restricted"
+  },
   "devDependencies": {
     "@babel/core": "7.21.0",
     "@mdx-js/react": "1.6.22",

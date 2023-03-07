@@ -3,14 +3,17 @@
   "author": "Community for NL Design System",
   "description": "React web components bundle based on the NL Design System architecture",
   "license": "EUPL-1.2",
-  "name": "@example/web-components-react",
+  "name": "@rijkshuisstijl-community/web-components-react",
   "keywords": [
     "nl-design-system"
   ],
   "private": true,
+  "publishConfig": {
+    "access": "restricted"
+  },
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/example.git"
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git"
   },
   "sideEffects": false,
   "scripts": {
@@ -28,7 +31,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@example/web-components-stencil": "workspace:*",
+    "@rijkshuisstijl-community/web-components-stencil": "workspace:*",
     "@types/node": "18.14.2",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
