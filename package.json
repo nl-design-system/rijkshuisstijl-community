@@ -1,0 +1,80 @@
+{
+  "version": "1.0.0-alpha.0",
+  "author": "Community for NL Design System",
+  "description": "Design system based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "name": "@example/design-system",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": true,
+  "engines": {
+    "node": "^18.12.0"
+  },
+  "workspaces": [
+    "./documentation/",
+    "./packages/*",
+    "./proprietary/*"
+  ],
+  "devDependencies": {
+    "@lerna-lite/cli": "1.15.1",
+    "@lerna-lite/run": "1.15.1",
+    "@types/node": "18.14.2",
+    "@typescript-eslint/eslint-plugin": "5.54.0",
+    "@typescript-eslint/parser": "5.54.0",
+    "eslint": "8.35.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-json": "3.1.0",
+    "eslint-plugin-mdx": "2.0.5",
+    "eslint-plugin-react": "7.32.2",
+    "html-validate": "7.13.2",
+    "husky": "8.0.3",
+    "lint-staged": "13.1.2",
+    "markdownlint-cli": "0.33.0",
+    "npm-check-updates": "16.7.10",
+    "npm-package-json-lint": "6.4.0",
+    "npm-run-all": "4.1.5",
+    "postcss": "8.4.21",
+    "prettier": "2.8.4",
+    "stylelint": "15.2.0",
+    "stylelint-config-prettier": "9.0.5",
+    "stylelint-config-standard-scss": "7.0.1",
+    "stylelint-order": "6.0.2",
+    "typescript": "4.9.5"
+  },
+  "scripts": {
+    "build": "lerna run build",
+    "clean": "lerna run clean",
+    "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
+    "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
+    "lint:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx' --report-unused-disable-directives .",
+    "lint:html": "find . -type d \\( -name coverage -or -name dist -or -name node_modules -or -name build -or -name tmp \\) -prune -false -o -name '*.html' -print0 | xargs -0 npx html-validate",
+    "lint:md": "markdownlint '**/*.md'",
+    "lint:package-json": "npmPkgJsonLint '**/package.json'",
+    "lint:package-lock": "pnpm ls --recursive",
+    "lint-fix": "npm-run-all --continue-on-error lint-fix:** prettier",
+    "lint-fix:css": "stylelint --fix '**/*.{css,scss}'",
+    "lint-fix:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx' --fix --report-unused-disable-directives .",
+    "lint-fix:md": "markdownlint --fix '**/*.md'",
+    "lint-workspaces": "lerna run --no-bail lint",
+    "prepare": "husky install",
+    "prettier": "prettier --write .",
+    "publish": "lerna publish from-package --yes",
+    "release": "lerna version prerelease --conventional-prerelease --no-changelog --no-private --yes",
+    "start": "node_modules/http-server/bin packages/storybook/dist/",
+    "storybook": "npm-run-all --parallel watch:**",
+    "test": "npm run test-workspaces",
+    "test-update": "npm-run-all --sequential clean lint build test",
+    "test-workspaces": "lerna run --no-bail test",
+    "prewatch:storybook": "lerna run build:stencil && lerna run build:style-dictionary",
+    "update-patch": "npm-check-updates --configFileName .ncurc.patch.js --deep --dep dev,prod --target patch --upgrade && pnpm install",
+    "update-minor": "npm-check-updates --configFileName .ncurc.minor.js --deep --dep dev,prod --target minor --upgrade && pnpm install",
+    "update-major": "npm-check-updates --configFileName .ncurc.major.js --deep --dep dev,prod --target latest --upgrade && pnpm install",
+    "watch:storybook": "npm run --workspace packages/storybook storybook",
+    "watch:style-dictionary": "lerna run watch:style-dictionary"
+  },
+  "dependencies": {
+    "http-server": "14.1.1"
+  }
+}

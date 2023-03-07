@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "outDir": "dist",
+    "target": "es2017",
+    "jsx": "react",
+    "jsxFactory": "h",
+    "skipLibCheck": true
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["**/node_modules/*", "dist", "loader", "**/*.spec.ts", "**/*.spec.tsx"]
+}
