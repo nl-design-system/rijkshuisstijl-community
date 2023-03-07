@@ -251,6 +251,7 @@ jobs:
 
       - name: "Continuous Deployment: publish to npm"
         env:
+          HUSKY: 0
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           pnpm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
