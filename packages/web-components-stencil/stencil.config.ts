@@ -4,7 +4,7 @@ import { sass } from '@stencil/sass';
 
 export const config: Config = {
   namespace: 'rhc',
-  srcDir: '../../components/',
+  srcDir: './src/',
   outputTargets: [
     {
       type: 'dist',
