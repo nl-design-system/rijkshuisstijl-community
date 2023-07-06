@@ -7,10 +7,13 @@ module.exports = {
     '@storybook/addon-docs',
     '@storybook/addon-viewport/register',
     '@storybook/preset-scss',
+    '@storybook/addon-mdx-gfm',
   ],
-  framework: '@storybook/react',
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
+  },
   core: {
-    builder: '@storybook/builder-webpack5',
     disableTelemetry: true,
   },
   docs: {
@@ -19,6 +22,8 @@ module.exports = {
   features: {
     postcss: false,
     buildStoriesJson: true,
+    storyStoreV7: true,
+    babelModeV7: true,
   },
   staticDirs: ['../../../proprietary/assets/src'],
   webpackFinal: async (config) => ({
