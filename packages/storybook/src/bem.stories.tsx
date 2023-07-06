@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import readme from '@rijkshuisstijl-community/components-css/button/README.md';
+import readme from '@rijkshuisstijl-community/components-css/button/README.md?raw';
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import '@rijkshuisstijl-community/components-css/button/index.scss';
