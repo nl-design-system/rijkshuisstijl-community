@@ -5,7 +5,7 @@ const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
   },
-  stories: ['../../../documentation/**/*stories.@(js|jsx|mdx|ts|tsx)', '../src/**/*stories.@(js|jsx|mdx|ts|tsx)'],
+  stories: ['../src/**/*stories.@(js|jsx|mdx|ts|tsx)'],
   addons: [
     '@etchteam/storybook-addon-status/register',
     '@storybook/addon-a11y/register',
