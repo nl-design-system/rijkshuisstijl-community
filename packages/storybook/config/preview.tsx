@@ -3,11 +3,8 @@ import '@rijkshuisstijl-community/font/src/index.scss';
 
 import { defineCustomElements } from '@rijkshuisstijl-community/web-components-stencil/loader/index.js';
 import { Preview } from '@storybook/react';
-import { themes, ThemeProvider } from '@storybook/theming';
 
 defineCustomElements();
-
-const theme = themes.normal;
 // Configure @etchteam/storybook-addon-status
 const addonStatus = {
   status: {
@@ -40,20 +37,6 @@ const addonStatus = {
   },
 };
 
-const addonThemes = {
-  clearable: true,
-  themes: {
-    default: 'Gemeente Utrecht',
-    target: 'root',
-    list: [
-      { name: 'No style', class: 'no-style', color: '#000000' },
-      { name: 'No design tokens', class: 'no-theme', color: '#CCCCCC' },
-      { name: 'Gemeente Utrecht', class: 'utrecht-theme', color: '#CC0000' },
-      { name: 'Gemeente Utrecht (dark mode)', class: 'utrecht-theme--color-scheme-dark', color: '#000000' },
-    ],
-  },
-};
-
 const previewTabs = {
   'storybookjs/notes/panel': { title: 'Documentation' },
   'storybook/docs/panel': { title: 'API' },
@@ -67,43 +50,6 @@ const preview: Preview = {
       ...previewTabs,
     },
     ...addonStatus,
-export const preview: Preview = {
-  decorators: [
-    // Enable `utrecht-document` component as backdrop
-    // Enable `utrecht-theme` to configure the design tokens
-    // Ensure old html templates will be rendered as react component
-    (Story, storyContext) => {
-      // Hack to make current args for a story available in the transformSource of the docs addon
-      storyContext.parameters.args = storyContext.args;
-
-      return (
-        <ThemeProvider theme={theme}>
-          <div>${Story()}</div>
-        </ThemeProvider>
-      );
-    },
-  ],
-  parameters: {
-    // Make the "Docs" tab the default, instead of the "Canvas" tab
-    viewMode: 'docs',
-
-    previewTabs: {
-      ...previewTabs,
-    },
-
-    clearable: true,
-    themes: {
-      default: 'Gemeente Utrecht',
-      target: 'root',
-      list: [
-        { name: 'No style', class: 'no-style', color: '#000000' },
-        { name: 'No design tokens', class: 'no-theme', color: '#CCCCCC' },
-        { name: 'Gemeente Utrecht', class: 'utrecht-theme', color: '#CC0000' },
-        { name: 'Gemeente Utrecht (dark mode)', class: 'utrecht-theme--color-scheme-dark', color: '#000000' },
-      ],
-    },
-    ...addonStatus,
-    ...addonThemes,
     controls: { expanded: false },
     options: {
       panelPosition: 'right',
