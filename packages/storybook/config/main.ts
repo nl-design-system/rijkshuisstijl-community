@@ -1,5 +1,10 @@
 /* eslint-env node */
-module.exports = {
+import type { StorybookConfig } from '@storybook/react-vite';
+
+const config: StorybookConfig = {
+  core: {
+    disableTelemetry: true,
+  },
   stories: ['../../../documentation/**/*stories.@(js|jsx|mdx|ts|tsx)', '../src/**/*stories.@(js|jsx|mdx|ts|tsx)'],
   addons: [
     '@etchteam/storybook-addon-status/register',
@@ -9,28 +14,15 @@ module.exports = {
     '@storybook/preset-scss',
     '@storybook/addon-mdx-gfm',
   ],
-  framework: {
-    name: '@storybook/react-webpack5',
-    options: {},
+  framework: '@storybook/react-vite',
+  features: {
+    buildStoriesJson: true,
+    storyStoreV7: true,
   },
-  core: {
-    disableTelemetry: true,
-  },
+  staticDirs: ['../../../proprietary/assets/src'],
   docs: {
     autodocs: true,
   },
-  features: {
-    postcss: false,
-    buildStoriesJson: true,
-    storyStoreV7: true,
-    babelModeV7: true,
-  },
-  staticDirs: ['../../../proprietary/assets/src'],
-  webpackFinal: async (config) => ({
-    ...config,
-    performance: {
-      // Disable warning for: "asset size exceeds the recommended limit (244 KiB)"
-      hints: false,
-    },
-  }),
 };
+
+export default config;
