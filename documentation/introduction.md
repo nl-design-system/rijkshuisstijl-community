@@ -7,10 +7,10 @@ Daarom gaan we tussen overheidsorganisaties principes, interactiepatronen en cod
 
 > ⚠️ **LET OP**
 >
-> Het NL Design System bevindt zich momenteel nog in de pilotfase.  
-> Hierdoor is het nu nog niet volwassen genoeg om volledig gebruikt te worden.  
-> Houdt hier dus rekening mee voor je aan de slag gaat.  
-> We zouden het op prijs stellen als je wilt bijdragen om het NLDS tot een succes te maken.  
+> Het NL Design System bevindt zich momenteel nog in de pilotfase.
+> Hierdoor is het nu nog niet volwassen genoeg om volledig gebruikt te worden.
+> Houdt hier dus rekening mee voor je aan de slag gaat.
+> We zouden het op prijs stellen als je wilt bijdragen om het NLDS tot een succes te maken.
 > Dit kan in onze GitHub of met een mailtje aan: [nldesignsystem@gebruikercentraal.nl](mailto:nldesignsystem@gebruikercentraal.nl)
 
 ## Wat is een Design System
@@ -32,5 +32,3 @@ Dankzij het NL Design System kan de hele overheid in Nederland samenwerken aan e
 Het is belangrijk dat iedereen de online dienstverlening van de overheid kan gebruiken, ongeacht wie je bent en wat je situatie is. Dit heet inclusie: iedereen moet kunnen meedoen. Daarom testen we de afspraken in het Design System met een heel diverse gebruikersgroep, waaronder mensen met beperkingen. Zo nemen de kwaliteit, bruikbaarheid en toegankelijkheid toe en kunnen we iedereen in Nederland met onze digitale producten steeds beter van dienst zijn.
 
 De POC is te vinden op:
-
-<http://github.com/nl-design-system>

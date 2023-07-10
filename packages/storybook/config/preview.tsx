@@ -2,25 +2,9 @@ import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/font/src/index.scss';
 
 import { defineCustomElements } from '@rijkshuisstijl-community/web-components-stencil/loader/index.js';
+import { Preview } from '@storybook/react';
 
 defineCustomElements();
-
-export const decorators = [
-  // Enable `utrecht-document` component as backdrop
-  // Enable `utrecht-theme` to configure the design tokens
-  // Ensure old html templates will be rendered as react component
-  (Story, storyContext) => {
-    // Hack to make current args for a story available in the transformSource of the docs addon
-    storyContext.parameters.args = storyContext.args;
-
-    return (
-      <div className="rhc-theme">
-        <Story />
-      </div>
-    );
-  },
-];
-
 // Configure @etchteam/storybook-addon-status
 const addonStatus = {
   status: {
@@ -59,11 +43,18 @@ const previewTabs = {
   canvas: { title: 'Design Tokens' },
 };
 
-export const parameters = {
-  controls: { expanded: false },
-  previewTabs,
-  addonStatus,
-  options: {
-    panelPosition: 'right',
+const preview: Preview = {
+  decorators: [(Story: any) => <div className="rhc-theme">{Story()}</div>],
+  parameters: {
+    previewTabs: {
+      ...previewTabs,
+    },
+    ...addonStatus,
+    controls: { expanded: false },
+    options: {
+      panelPosition: 'right',
+    },
   },
 };
+
+export default preview;
