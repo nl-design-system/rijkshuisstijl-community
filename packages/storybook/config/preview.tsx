@@ -1,3 +1,4 @@
+import { withThemeByClassName } from '@storybook/addon-styling';
 import { Preview } from '@storybook/react';
 import type { StoryContext } from '@storybook/types';
 import { UtrechtDocument } from '@utrecht/web-component-library-react';
@@ -52,11 +53,16 @@ const previewTabs = {
 
 const preview: Preview = {
   decorators: [
-    (Story: any) => (
-      <div className="rhc-theme">
-        <UtrechtDocument>{Story()}</UtrechtDocument>
-      </div>
-    ),
+    withThemeByClassName({
+      themes: {
+        RijkshuisstijlCommunity: 'rhc-theme',
+        DigiD: 'digid-theme',
+        MijnOverheid: 'mijnoverheid-theme',
+        Logius: 'logius-theme',
+      },
+      defaultTheme: 'Logius',
+    }),
+    (Story: any) => <UtrechtDocument>{Story()}</UtrechtDocument>,
   ],
   parameters: {
     previewTabs: {
@@ -83,14 +89,11 @@ const preview: Preview = {
 
           if (render) {
             const renderOutput = render(storyContext.args);
-            console.log('transform', src, renderOutput);
             const markup = ReactDOMServer.renderToStaticMarkup(renderOutput);
-            console.log('renderOutput', markup);
             const prettierMarkup = prettier.format(markup, {
               parser: 'babel',
               plugins: [prettierBabel],
             });
-            console.log(prettierMarkup);
             return prettierMarkup;
           }
           return src;
