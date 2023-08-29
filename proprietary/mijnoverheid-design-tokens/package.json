@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0-alpha.0",
+  "author": "Community for NL Design System",
+  "description": "MijnOverheid design tokens",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "name": "@rijkshuisstijl-community/mijnoverheid-design-tokens",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git"
+  },
+  "scripts": {
+    "clean": "rimraf dist/",
+    "prebuild": "npm run clean",
+    "build": "npm-run-all --sequential build:figma-tokens build:style-dictionary",
+    "build:figma-tokens": "token-transformer --throwErrorWhenNotResolved=true ../logius-design-tokens/src/figma.tokens.json tmp/figma.tokens.json brand,common,components,'change brand/MijnOverheid'",
+    "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.json",
+    "watch": "npm-run-all watch:**",
+    "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'npm run build' 'tmp/*.tokens.json'"
+  },
+  "devDependencies": {
+    "chokidar-cli": "3.0.0",
+    "npm-run-all": "4.1.5",
+    "rimraf": "5.0.1",
+    "style-dictionary": "3.8.0",
+    "token-transformer": "0.0.33"
+  }
+}
