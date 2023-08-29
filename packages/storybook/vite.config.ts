@@ -9,4 +9,7 @@ export default defineConfig({
     outDir: '../dist',
   },
   plugins: [react(), mdPlugin()],
+  optimizeDeps: {
+    exclude: ['@utrecht/web-component-library-stencil'],
+  },
 });

@@ -2,13 +2,7 @@ import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/font/src/index.scss';
 import '@nl-rvo/assets/fonts/index.css';
 
-import { defineCustomElements } from '@rijkshuisstijl-community/web-components-stencil/loader/index.js';
-import { defineCustomElements as defineUtrechtCustomElements } from '@utrecht/web-component-library-stencil/loader/index.js';
-
 import { Preview } from '@storybook/react';
-
-defineCustomElements();
-defineUtrechtCustomElements();
 
 // Configure @etchteam/storybook-addon-status
 const addonStatus = {
