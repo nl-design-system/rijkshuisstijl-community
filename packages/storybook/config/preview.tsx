@@ -6,6 +6,9 @@ import prettier from 'prettier/standalone';
 import React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
+import '@rijkshuisstijl-community/digid-design-tokens/dist/theme.css';
+import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';
+import '@rijkshuisstijl-community/mijnoverheid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/font/src/index.scss';
 import '@nl-rvo/assets/fonts/index.css';
 
