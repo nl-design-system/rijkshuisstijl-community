@@ -13,6 +13,7 @@ const config: StorybookConfig = {
     '@storybook/addon-viewport/register',
     '@storybook/preset-scss',
     '@storybook/addon-mdx-gfm',
+    '@storybook/addon-styling',
   ],
   framework: '@storybook/react-vite',
   features: {
