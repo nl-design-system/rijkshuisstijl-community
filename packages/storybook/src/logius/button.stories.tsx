@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
-import readme from '@rijkshuisstijl-community/components-css/button/README.md?raw';
 import type { Meta, StoryObj } from '@storybook/react';
 import { UtrechtButton } from '@utrecht/web-component-library-react';
+import readme from './button.md?raw';
 
 const meta = {
   title: 'Logius/Button',
@@ -37,4 +37,5 @@ export const Default: StoryObj<typeof meta> = {
   args: {
     children: 'Opslaan en verder',
   },
+  name: 'Button',
 };
