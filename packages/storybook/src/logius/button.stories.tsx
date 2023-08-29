@@ -9,7 +9,7 @@ const meta = {
   id: 'logius-button',
   component: UtrechtButton,
   argTypes: {
-    textContent: {
+    children: {
       description: 'Button text',
       type: {
         name: 'string',
@@ -19,7 +19,7 @@ const meta = {
     },
   },
   args: {
-    textContent: 'Opslaan en verder',
+    children: '',
   },
   tags: ['autodocs'],
   parameters: {
@@ -33,6 +33,8 @@ const meta = {
 
 export default meta;
 
-export const Default: StoryObj<typeof UtrechtButton> = {
-  name: 'Example button',
+export const Default: StoryObj<typeof meta> = {
+  args: {
+    children: 'Opslaan en verder',
+  },
 };
