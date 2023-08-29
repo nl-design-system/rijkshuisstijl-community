@@ -1,9 +1,9 @@
 {
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.0",
   "author": "Community for NL Design System",
-  "description": "Logius design tokens",
+  "description": "DigiD design tokens",
   "license": "SEE LICENSE IN LICENSE.md",
-  "name": "@rijkshuisstijl-community/logius-design-tokens",
+  "name": "@rijkshuisstijl-community/digid-design-tokens",
   "keywords": [
     "nl-design-system"
   ],
@@ -20,7 +20,7 @@
     "clean": "rimraf dist/",
     "prebuild": "npm run clean",
     "build": "npm-run-all --sequential build:figma-tokens build:style-dictionary",
-    "build:figma-tokens": "token-transformer --throwErrorWhenNotResolved=true src/figma.tokens.json tmp/figma.tokens.json brand,common,components",
+    "build:figma-tokens": "token-transformer --throwErrorWhenNotResolved=true ../logius-design-tokens/src/figma.tokens.json tmp/figma.tokens.json brand,common,components,'change brand/DigiD'",
     "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.json",
     "watch": "npm-run-all watch:**",
     "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'npm run build' 'tmp/*.tokens.json'"
