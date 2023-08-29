@@ -356,11 +356,11 @@ importers:
         specifier: 18.2.7
         version: 18.2.7
       '@utrecht/web-component-library-react':
-        specifier: 1.0.0-alpha.547
-        version: 1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0)
+        specifier: 1.0.0-alpha.548
+        version: 1.0.0-alpha.548(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/web-component-library-stencil':
-        specifier: 1.0.0-alpha.547
-        version: 1.0.0-alpha.547
+        specifier: 1.0.0-alpha.548
+        version: 1.0.0-alpha.548
       '@vitejs/plugin-react':
         specifier: 4.0.4
         version: 4.0.4(vite@4.4.9)
@@ -5999,19 +5999,19 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
-  /@utrecht/web-component-library-react@1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-vDDdKMzF9arJOsqGdGEZKy8Pb9SzMgTmN1hoQTDtm2wQ/QFMA+OPFpCC8NSr1+xo/KhaWeuqWp+HHgl4n4aGsw==}
+  /@utrecht/web-component-library-react@1.0.0-alpha.548(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-ONHz23QVr2JUSHHhkd7GUUipDYJT3KmFNSAj2If8OMr6MGFgOvNubebTn9sAX/q1dHtiQLN9LgMVKNQ1E+cijw==}
     peerDependencies:
       react: 16 - 18
       react-dom: 16 - 18
     dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.547
+      '@utrecht/web-component-library-stencil': 1.0.0-alpha.548
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@utrecht/web-component-library-stencil@1.0.0-alpha.547:
-    resolution: {integrity: sha512-bOSQXx3PohvMsaKGQhf578wvy8u/UXn+Pvx6DgZ5CjYA07rMGueMwgjdMxH5EiQEsxVJpH7iYERR12AHo3XhbA==}
+  /@utrecht/web-component-library-stencil@1.0.0-alpha.548:
+    resolution: {integrity: sha512-QvdFW7Bs2r6/QiUUHSCO9IQRntwzK8PL9DeK6FTxx0jimZxiaxoFNkbw4FOBRMEzJRQvRsC76yDfiw7AaaGopA==}
     dependencies:
       '@stencil/core': 3.4.2
     dev: true
@@ -15038,6 +15038,7 @@ packages:
 
   /prr@1.0.1:
     resolution: {integrity: sha512-yPw4Sng1gWghHQWj0B3ZggWUm4qVbPwPFcRG8KyxiU7J2OHFSoEHKS+EZ3fv5l1t9CyCiop6l/ZYeWbrgoQejw==}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -16036,6 +16037,7 @@ packages:
 
   /sax@1.2.4:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
+    requiresBuild: true
     dev: true
     optional: true
 
