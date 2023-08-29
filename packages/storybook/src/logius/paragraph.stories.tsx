@@ -9,6 +9,16 @@ const meta = {
   id: 'logius-paragraph',
   component: UtrechtParagraph,
   argTypes: {
+    lead: {
+      description: 'Lead paragraph',
+      type: {
+        name: 'boolean',
+      },
+      table: {
+        category: 'Property',
+      },
+      defaultValue: false,
+    },
     children: {
       description: 'Paragraph text - default webcomponent slot',
       type: {
@@ -41,5 +51,12 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+  },
+};
+
+export const Lead: Story = {
+  args: {
+    children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+    lead: true,
   },
 };
