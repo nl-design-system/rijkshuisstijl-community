@@ -343,6 +343,12 @@ importers:
       '@types/react-dom':
         specifier: 18.2.7
         version: 18.2.7
+      '@utrecht/web-component-library-react':
+        specifier: 1.0.0-alpha.547
+        version: 1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0)
+      '@utrecht/web-component-library-stencil':
+        specifier: 1.0.0-alpha.547
+        version: 1.0.0-alpha.547
       '@vitejs/plugin-react':
         specifier: 4.0.4
         version: 4.0.4(vite@4.4.9)
@@ -4034,6 +4040,12 @@ packages:
       '@sinonjs/commons': 3.0.0
     dev: true
 
+  /@stencil/core@3.4.2:
+    resolution: {integrity: sha512-FAUhUVaakCy29nU2GwO/HQBRV1ihPRvncz3PUc8oR+UJLAxGabTmP8PLY7wvHfbw+Cvi4VXfJFTBvdfDu6iKPQ==}
+    engines: {node: '>=14.10.0', npm: '>=6.0.0'}
+    hasBin: true
+    dev: true
+
   /@stencil/core@4.1.0:
     resolution: {integrity: sha512-yIpL+CX02fy5zvFXwXcHZjjEILRm3aiONbucpfLIWPS7zcBAuucdROssartEa+D7E1JRko97ydxn1Ntdu4GoWg==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
@@ -5879,6 +5891,23 @@ packages:
     dependencies:
       '@typescript-eslint/types': 6.5.0
       eslint-visitor-keys: 3.4.3
+    dev: true
+
+  /@utrecht/web-component-library-react@1.0.0-alpha.547(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-vDDdKMzF9arJOsqGdGEZKy8Pb9SzMgTmN1hoQTDtm2wQ/QFMA+OPFpCC8NSr1+xo/KhaWeuqWp+HHgl4n4aGsw==}
+    peerDependencies:
+      react: 16 - 18
+      react-dom: 16 - 18
+    dependencies:
+      '@utrecht/web-component-library-stencil': 1.0.0-alpha.547
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: true
+
+  /@utrecht/web-component-library-stencil@1.0.0-alpha.547:
+    resolution: {integrity: sha512-bOSQXx3PohvMsaKGQhf578wvy8u/UXn+Pvx6DgZ5CjYA07rMGueMwgjdMxH5EiQEsxVJpH7iYERR12AHo3XhbA==}
+    dependencies:
+      '@stencil/core': 3.4.2
     dev: true
 
   /@vitejs/plugin-react@3.1.0(vite@4.4.9):

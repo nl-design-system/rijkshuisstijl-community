@@ -2,14 +2,12 @@
 
 import readme from '@rijkshuisstijl-community/components-css/button/README.md?raw';
 import type { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
-
-const Button = ({ textContent }) => <rhc-button>{textContent}</rhc-button>;
+import { UtrechtButton } from '@utrecht/web-component-library-react';
 
 const meta = {
-  title: 'Web Component/Button',
-  id: 'web-component-button',
-  component: Button,
+  title: 'Logius/Button',
+  id: 'logius-button',
+  component: UtrechtButton,
   argTypes: {
     textContent: {
       description: 'Button text',
@@ -31,10 +29,10 @@ const meta = {
       },
     },
   },
-} as Meta<typeof Button>;
+} as Meta<typeof UtrechtButton>;
 
 export default meta;
 
-export const Default: StoryObj<typeof Button> = {
+export const Default: StoryObj<typeof UtrechtButton> = {
   name: 'Example button',
 };
