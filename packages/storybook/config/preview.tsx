@@ -1,9 +1,13 @@
+import { Preview } from '@storybook/react';
+import type { StoryContext } from '@storybook/types';
+import { UtrechtDocument } from '@utrecht/web-component-library-react';
+import prettierBabel from 'prettier/parser-babel';
+import prettier from 'prettier/standalone';
+import React from 'react';
+import * as ReactDOMServer from 'react-dom/server';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/font/src/index.scss';
 import '@nl-rvo/assets/fonts/index.css';
-
-import { Preview } from '@storybook/react';
-import { UtrechtDocument } from '@utrecht/web-component-library-react';
 
 // Configure @etchteam/storybook-addon-status
 const addonStatus = {
@@ -59,6 +63,36 @@ const preview: Preview = {
     controls: { expanded: false },
     options: {
       panelPosition: 'right',
+    },
+    docs: {
+      // Show code by default.
+      // Stories without concise code snippets can hide the code at Story level.
+      source: {
+        state: 'open',
+        transform: (src: string, storyContext: StoryContext<any>): string => {
+          // Ensure valid HTML in the Preview source
+          const render =
+            typeof storyContext.component === 'function'
+              ? storyContext.component
+              : typeof storyContext.component?.render === 'function'
+              ? storyContext.component?.render
+              : null;
+
+          if (render) {
+            const renderOutput = render(storyContext.args);
+            console.log('transform', src, renderOutput);
+            const markup = ReactDOMServer.renderToStaticMarkup(renderOutput);
+            console.log('renderOutput', markup);
+            const prettierMarkup = prettier.format(markup, {
+              parser: 'babel',
+              plugins: [prettierBabel],
+            });
+            console.log(prettierMarkup);
+            return prettierMarkup;
+          }
+          return src;
+        },
+      },
     },
   },
 };
