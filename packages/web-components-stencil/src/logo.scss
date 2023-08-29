@@ -1,0 +1,47 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.rhc-logo {
+  --_rhc-logo-emblem-inline-size: var(--rhc-logo-emblem-inline-size, calc(var(--rhc-logo-font-size, 1em) * 3.1415));
+
+  color: var(--rhc-logo-color);
+  display: grid;
+  font-family: var(--rhc-logo-font-family);
+  font-size: var(--rhc-logo-font-size, 1em);
+  gap: 0 var(--rhc-logo-gap, calc(var(--_rhc-logo-emblem-inline-size) / 4));
+  grid-auto-rows: var(--_rhc-logo-emblem-inline-size);
+  grid-template-areas: ". emblem ." ". emblem wordmark";
+  grid-template-columns: 1fr var(--_rhc-logo-emblem-inline-size) 1fr;
+  grid-template-rows: 1fr var(--_rhc-logo-emblem-inline-size);
+  line-height: var(--rhc-logo-line-height, 1);
+  min-block-size: calc(var(--rhc-logo-rows, 2) * var(--_rhc-logo-emblem-inline-size));
+}
+
+.rhc-logo__emblem {
+  align-items: center;
+  background-color: var(--rhc-logo-emblem-background-color);
+  block-size: 100%;
+  display: flex;
+  flex-direction: column;
+  grid-area: emblem;
+  justify-content: end;
+}
+
+.rhc-logo__wordmark {
+  grid-area: wordmark;
+  max-inline-size: calc(210 / 14 * var(--rhc-logo-font-size, 1em));
+}
+
+.rhc-logo__subtitle {
+  font-style: italic;
+}
+
+.rhc-logo__title,
+.rhc-logo__subtitle {
+  /* reset margin of HTML <p> element */
+  margin-block-end: 0;
+  margin-block-start: 0;
+  white-space: pre-line;
+}
