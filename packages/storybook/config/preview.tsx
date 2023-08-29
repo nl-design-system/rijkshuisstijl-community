@@ -3,6 +3,7 @@ import '@rijkshuisstijl-community/font/src/index.scss';
 import '@nl-rvo/assets/fonts/index.css';
 
 import { Preview } from '@storybook/react';
+import { UtrechtDocument } from '@utrecht/web-component-library-react';
 
 // Configure @etchteam/storybook-addon-status
 const addonStatus = {
@@ -43,7 +44,13 @@ const previewTabs = {
 };
 
 const preview: Preview = {
-  decorators: [(Story: any) => <div className="rhc-theme">{Story()}</div>],
+  decorators: [
+    (Story: any) => (
+      <div className="rhc-theme">
+        <UtrechtDocument>{Story()}</UtrechtDocument>
+      </div>
+    ),
+  ],
   parameters: {
     previewTabs: {
       ...previewTabs,
