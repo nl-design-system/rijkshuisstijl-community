@@ -1,0 +1,148 @@
+/* @license CC0-1.0 */
+
+import readme from '@rijkshuisstijl-community/components-css/button/README.md?raw';
+import type { Meta, StoryObj } from '@storybook/react';
+import { UtrechtAlert, UtrechtHeading, UtrechtIcon, UtrechtParagraph } from '@utrecht/web-component-library-react';
+
+interface AlertStoryComponentProps {
+  type: string;
+  icon?: string;
+  heading: string;
+  textContent: string;
+  headingLevel: number;
+}
+
+const AlertStoryComponent = ({ type, icon, heading, textContent, headingLevel }: AlertStoryComponentProps) => {
+  const Icon = () =>
+    icon === 'info' ? (
+      <rhc-icon-info></rhc-icon-info>
+    ) : icon === 'success' ? (
+      <rhc-icon-succes></rhc-icon-succes>
+    ) : icon === 'warning' ? (
+      <rhc-icon-warning></rhc-icon-warning>
+    ) : icon === 'error' ? (
+      <rhc-icon-error></rhc-icon-error>
+    ) : (
+      <></>
+    );
+
+  return (
+    <UtrechtAlert type={type}>
+      {icon && (
+        <UtrechtIcon slot="icon">
+          <Icon />
+        </UtrechtIcon>
+      )}
+      <UtrechtHeading level={headingLevel}>{heading}</UtrechtHeading>
+      <UtrechtParagraph>{textContent}</UtrechtParagraph>
+    </UtrechtAlert>
+  );
+};
+
+const meta = {
+  title: 'Logius/Alert',
+  id: 'logius-alert',
+  component: UtrechtAlert,
+  argTypes: {
+    type: {
+      description: 'Alert type',
+      control: { type: 'select' },
+      options: ['info', 'error', 'warning', 'ok'],
+      table: {
+        category: 'Property',
+      },
+    },
+    icon: {
+      description: 'Alert Icon',
+      control: { type: 'select' },
+      options: ['', 'info', 'error', 'warning', 'succes'],
+      table: {
+        category: 'Slot',
+      },
+    },
+    heading: {
+      description: 'Alert heading',
+      type: {
+        name: 'string',
+      },
+      table: {
+        category: 'Demo',
+      },
+    },
+    headingLevel: {
+      description: 'Alert heading level',
+      control: { type: 'select' },
+      options: [1, 2, 3, 4, 5, 6],
+      table: {
+        category: 'Demo',
+      },
+    },
+    textContent: {
+      description: 'Alert content',
+      type: {
+        name: 'string',
+      },
+      table: {
+        category: 'Demo',
+      },
+    },
+  },
+  args: {
+    type: 'info',
+    icon: 'info',
+    heading: 'Heading',
+    headingLevel: 3,
+    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+  },
+  tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
+  },
+  render: AlertStoryComponent,
+} as Meta<typeof AlertStoryComponent>;
+
+export default meta;
+
+export const Informative: StoryObj<typeof meta> = {
+  args: {
+    type: 'info',
+    icon: 'info',
+    heading: 'Heading',
+    headingLevel: 3,
+    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+  },
+};
+
+export const Negative: StoryObj<typeof meta> = {
+  args: {
+    type: 'error',
+    icon: 'error',
+    heading: 'Heading',
+    headingLevel: 3,
+    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+  },
+};
+
+export const Positive: StoryObj<typeof meta> = {
+  args: {
+    type: 'succes',
+    icon: 'succes',
+    heading: 'Heading',
+    headingLevel: 3,
+    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+  },
+};
+
+export const Warning: StoryObj<typeof meta> = {
+  args: {
+    type: 'warning',
+    icon: 'warning',
+    heading: 'Heading',
+    headingLevel: 3,
+    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+  },
+};
