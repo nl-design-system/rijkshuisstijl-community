@@ -10,10 +10,13 @@ const meta = {
   component: UtrechtButton,
   argTypes: {
     children: {
-      description: 'Button text',
+      description: 'Button text - default webcomponent slot',
       type: {
         name: 'string',
         required: true,
+      },
+      table: {
+        category: 'Webcomponent Slot',
       },
       defaultValue: '',
     },

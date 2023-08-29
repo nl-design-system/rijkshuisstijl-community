@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
-import readme from '@rijkshuisstijl-community/components-css/button/README.md?raw';
 import type { Meta, StoryObj } from '@storybook/react';
 import { UtrechtAlert, UtrechtHeading, UtrechtIcon, UtrechtParagraph } from '@utrecht/web-component-library-react';
+import readme from './alert.md?raw';
 
 interface AlertStoryComponentProps {
   type: string;
@@ -57,11 +57,11 @@ const meta = {
       control: { type: 'select' },
       options: ['', 'info', 'error', 'warning', 'succes'],
       table: {
-        category: 'Slot',
+        category: 'Webcomponent Slot',
       },
     },
     heading: {
-      description: 'Alert heading',
+      description: 'Alert heading - used in default webcomponent slot',
       type: {
         name: 'string',
       },
@@ -78,7 +78,7 @@ const meta = {
       },
     },
     textContent: {
-      description: 'Alert content',
+      description: 'Alert content - used in default webcomponent slot',
       type: {
         name: 'string',
       },
