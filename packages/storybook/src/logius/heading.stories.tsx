@@ -14,12 +14,18 @@ const meta = {
       control: { type: 'select' },
       options: [1, 2, 3, 4, 5, 6],
       defaultValue: 1,
+      table: {
+        category: 'Property',
+      },
     },
     children: {
-      description: 'Heading text',
+      description: 'Heading text - default webcomponent slot',
       type: {
         name: 'string',
         required: true,
+      },
+      table: {
+        category: 'Webcomponent Slot',
       },
       defaultValue: '',
     },

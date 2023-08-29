@@ -9,11 +9,24 @@ const meta = {
   id: 'logius-link',
   component: UtrechtLink,
   argTypes: {
-    children: {
-      description: 'Link text',
+    href: {
+      description: 'Url to link to',
       type: {
         name: 'string',
         required: true,
+      },
+      table: {
+        category: 'Property',
+      },
+    },
+    children: {
+      description: 'Link text - default webcomponent slot',
+      type: {
+        name: 'string',
+        required: true,
+      },
+      table: {
+        category: 'Webcomponent Slot',
       },
       defaultValue: '',
     },

@@ -10,10 +10,13 @@ const meta = {
   component: UtrechtParagraph,
   argTypes: {
     children: {
-      description: 'Paragraph text',
+      description: 'Paragraph text - default webcomponent slot',
       type: {
         name: 'string',
         required: true,
+      },
+      table: {
+        category: 'Webcomponent Slot',
       },
       defaultValue: '',
     },
