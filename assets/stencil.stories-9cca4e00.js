@@ -1,4 +1,0 @@
-import{j as a}from"./jsx-runtime-5926aa06.js";import{r as s}from"./README-d28cd70e.js";import"./index-ebeaab24.js";const m=({textContent:n})=>a.jsx("rhc-button",{children:n}),d={title:"Web Component/Button",id:"web-component-button",component:m,argTypes:{textContent:{description:"Button text",type:{name:"string",required:!0},defaultValue:""}},args:{textContent:"Opslaan en verder"},tags:["autodocs"],parameters:{docs:{description:{component:s}}}},t={name:"Example button"};var e,o,r;t.parameters={...t.parameters,docs:{...(e=t.parameters)==null?void 0:e.docs,source:{originalSource:`{
-  name: 'Example button'
-}`,...(r=(o=t.parameters)==null?void 0:o.docs)==null?void 0:r.source}}};const i=["Default"];export{t as Default,i as __namedExportsOrder,d as default};
-//# sourceMappingURL=stencil.stories-9cca4e00.js.map
