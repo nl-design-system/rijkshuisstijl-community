@@ -5172,6 +5172,40 @@
       }
     }
   },
+  "Card set": {
+    "logius": {
+      "card": {
+        "background-color": {
+          "value": "{logius.color.background}",
+          "type": "color"
+        },
+        "margin": {
+          "value": "{logius.space.4-x}",
+          "type": "spacing"
+        },
+        "spacing": {
+          "l": {
+            "value": "{logius.space.4-x}",
+            "type": "spacing"
+          },
+          "m": {
+            "value": "{logius.space.2-x}",
+            "type": "spacing"
+          },
+          "s": {
+            "value": "{logius.space.1-x}",
+            "type": "spacing"
+          }
+        },
+        "border-radius": {
+          "m": {
+            "value": "{logius.border-radius.default}",
+            "type": "borderRadius"
+          }
+        }
+      }
+    }
+  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
@@ -5213,7 +5247,8 @@
       "components/unordered-list",
       "components/form-control",
       "theme/DigiD",
-      "theme/MijnOverheid"
+      "theme/MijnOverheid",
+      "Card set"
     ]
   }
 }
