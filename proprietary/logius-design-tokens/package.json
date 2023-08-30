@@ -23,7 +23,7 @@
     "build:figma-tokens": "node token-transformer.mjs",
     "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.json",
     "watch": "npm-run-all watch:**",
-    "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'npm run build' 'tmp/*.tokens.json'"
+    "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'npm run --ignore-scripts build' 'src/*.tokens.json'"
   },
   "devDependencies": {
     "chokidar-cli": "3.0.0",
