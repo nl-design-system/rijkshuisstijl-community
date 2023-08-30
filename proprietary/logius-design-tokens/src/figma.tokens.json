@@ -917,22 +917,28 @@
     "utrecht": {
       "document": {
         "background-color": {
-          "value": "{logius.color.background}"
+          "value": "{logius.color.background}",
+          "type": "other"
         },
         "color": {
-          "value": "{logius.color.foreground}"
+          "value": "{logius.color.foreground}",
+          "type": "other"
         },
         "font-family": {
-          "value": "{logius.font-family.default}"
+          "value": "{logius.font-family.default}",
+          "type": "other"
         },
         "font-size": {
-          "value": "{logius.font-size.m}"
+          "value": "{logius.font-size.m}",
+          "type": "other"
         },
         "font-weight": {
-          "value": "400"
+          "value": "400",
+          "type": "other"
         },
         "line-height": {
-          "value": "{logius.font.line-height.m}"
+          "value": "{logius.font.line-height.m}",
+          "type": "other"
         }
       },
       "focus": {
@@ -943,13 +949,6 @@
         "color": {
           "type": "color",
           "value": "red"
-        },
-        "outline-color": {},
-        "outline-offset": {},
-        "outline-style": {},
-        "outline-width": {},
-        "inverse": {
-          "outline-color": {}
         }
       }
     },
@@ -4727,150 +4726,6 @@
       }
     }
   },
-  "components/form-control": {
-    "utrecht": {
-      "form-control": {
-        "accent-color": {
-          "value": "{logius.color.brand.default}",
-          "type": "color"
-        },
-        "background-color": {
-          "value": "{logius.color.background}",
-          "type": "color"
-        },
-        "border-color": {
-          "value": "{logius.color.border}",
-          "type": "color"
-        },
-        "border-width": {
-          "value": "{logius.border-width.default}",
-          "type": "borderWidth"
-        },
-        "color": {
-          "value": "{logius.color.foreground}",
-          "type": "color"
-        },
-        "active": {
-          "accent-color": {
-            "value": "{utrecht.form-control.accent-color}",
-            "type": "color"
-          },
-          "background-color": {
-            "value": "{utrecht.form-control.background-color}",
-            "type": "color"
-          },
-          "border-color": {
-            "value": "{utrecht.form-control.border-color}",
-            "type": "color"
-          },
-          "border-width": {
-            "value": "{utrecht.form-control.border-width}",
-            "type": "borderWidth"
-          },
-          "color": {
-            "value": "{utrecht.form-control.color}",
-            "type": "color"
-          }
-        },
-        "disabled": {
-          "accent-color": {
-            "value": "{utrecht.form-control.accent-color}",
-            "type": "color"
-          },
-          "background-color": {
-            "value": "{utrecht.form-control.background-color}",
-            "type": "color"
-          },
-          "border-color": {
-            "value": "{utrecht.form-control.border-color}",
-            "type": "color"
-          },
-          "color": {
-            "value": "{utrecht.form-control.color}",
-            "type": "color"
-          }
-        },
-        "focus": {
-          "background-color": {
-            "value": "{utrecht.form-control.background-color}",
-            "type": "color"
-          },
-          "border-color": {
-            "value": "{utrecht.form-control.border-color}",
-            "type": "color"
-          },
-          "border-width": {
-            "value": "{utrecht.form-control.border-width}",
-            "type": "borderWidth"
-          },
-          "color": {
-            "value": "{utrecht.form-control.color}",
-            "type": "color"
-          }
-        },
-        "hover": {
-          "accent-color": {
-            "value": "{utrecht.form-control.accent-color}",
-            "type": "color"
-          },
-          "background-color": {
-            "value": "{utrecht.form-control.background-color}",
-            "type": "color"
-          },
-          "border-color": {
-            "value": "{utrecht.form-control.border-color}",
-            "type": "color"
-          },
-          "border-width": {
-            "value": "{utrecht.form-control.border-width}",
-            "type": "borderWidth"
-          },
-          "color": {
-            "value": "{utrecht.form-control.color}",
-            "type": "color"
-          }
-        },
-        "invalid": {
-          "background-color": {
-            "value": "{utrecht.form-control.background-color}",
-            "type": "color"
-          },
-          "border-color": {
-            "value": "{utrecht.form-control.border-color}",
-            "type": "color"
-          },
-          "border-width": {
-            "value": "{utrecht.form-control.border-width}",
-            "type": "borderWidth"
-          },
-          "color": {
-            "value": "{utrecht.form-control.color}",
-            "type": "color"
-          }
-        },
-        "read-only": {
-          "background-color": {
-            "value": "{logius.color.subdued.background}",
-            "type": "color"
-          },
-          "border-color": {
-            "value": "transparent",
-            "type": "color"
-          },
-          "color": {
-            "value": "{logius.color.subdued.foreground}",
-            "type": "color"
-          }
-        },
-        "placeholder": {
-          "color": {
-            "value": "{logius.color.subdued.foreground}",
-            "type": "color"
-          }
-        }
-      }
-    }
-  },
   "components/text-input": {
     "utrecht": {
       "textbox": {
@@ -5075,6 +4930,176 @@
       }
     }
   },
+  "components/form-control": {
+    "utrecht": {
+      "form-control": {
+        "accent-color": {
+          "value": "{logius.color.brand.default}",
+          "type": "color"
+        },
+        "background-color": {
+          "value": "{logius.color.background}",
+          "type": "color"
+        },
+        "border-color": {
+          "value": "{logius.color.border}",
+          "type": "color"
+        },
+        "border-width": {
+          "value": "{logius.border-width.default}",
+          "type": "borderWidth"
+        },
+        "color": {
+          "value": "{logius.color.foreground}",
+          "type": "color"
+        },
+        "active": {
+          "accent-color": {
+            "value": "{utrecht.form-control.accent-color}",
+            "type": "color"
+          },
+          "background-color": {
+            "value": "{utrecht.form-control.background-color}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{utrecht.form-control.border-color}",
+            "type": "color"
+          },
+          "border-width": {
+            "value": "{utrecht.form-control.border-width}",
+            "type": "borderWidth"
+          },
+          "color": {
+            "value": "{utrecht.form-control.color}",
+            "type": "color"
+          }
+        },
+        "disabled": {
+          "accent-color": {
+            "value": "{utrecht.form-control.accent-color}",
+            "type": "color"
+          },
+          "background-color": {
+            "value": "{utrecht.form-control.background-color}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{utrecht.form-control.border-color}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{utrecht.form-control.color}",
+            "type": "color"
+          }
+        },
+        "focus": {
+          "background-color": {
+            "value": "{utrecht.form-control.background-color}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{utrecht.form-control.border-color}",
+            "type": "color"
+          },
+          "border-width": {
+            "value": "{utrecht.form-control.border-width}",
+            "type": "borderWidth"
+          },
+          "color": {
+            "value": "{utrecht.form-control.color}",
+            "type": "color"
+          }
+        },
+        "hover": {
+          "accent-color": {
+            "value": "{utrecht.form-control.accent-color}",
+            "type": "color"
+          },
+          "background-color": {
+            "value": "{utrecht.form-control.background-color}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{utrecht.form-control.border-color}",
+            "type": "color"
+          },
+          "border-width": {
+            "value": "{utrecht.form-control.border-width}",
+            "type": "borderWidth"
+          },
+          "color": {
+            "value": "{utrecht.form-control.color}",
+            "type": "color"
+          }
+        },
+        "invalid": {
+          "background-color": {
+            "value": "{utrecht.form-control.background-color}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{utrecht.form-control.border-color}",
+            "type": "color"
+          },
+          "border-width": {
+            "value": "{utrecht.form-control.border-width}",
+            "type": "borderWidth"
+          },
+          "color": {
+            "value": "{utrecht.form-control.color}",
+            "type": "color"
+          }
+        },
+        "read-only": {
+          "background-color": {
+            "value": "{logius.color.subdued.background}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "color": {
+            "value": "{logius.color.subdued.foreground}",
+            "type": "color"
+          }
+        },
+        "placeholder": {
+          "color": {
+            "value": "{logius.color.subdued.foreground}",
+            "type": "color"
+          }
+        }
+      }
+    }
+  },
+  "components/card": {
+    "logius": {
+      "card": {
+        "border-color": {
+          "value": "{logius.color.brand.default}",
+          "type": "color"
+        },
+        "padding-block": {
+          "value": "{logius.space.2-x}",
+          "type": "spacing"
+        },
+        "padding-inline": {
+          "value": "{logius.space.2-x}",
+          "type": "spacing"
+        },
+        "border-radius": {
+          "value": "{logius.border-radius.default}",
+          "type": "borderRadius"
+        },
+        "background-color": {
+          "value": "{logius.color.background}",
+          "type": "color"
+        }
+      }
+    }
+  },
   "theme/DigiD": {
     "logius": {
       "color": {
@@ -5212,6 +5237,8 @@
       "components/textarea",
       "components/text-input",
       "components/unordered-list",
+      "components/form-control",
+      "components/card",
       "theme/DigiD",
       "theme/MijnOverheid"
     ]
