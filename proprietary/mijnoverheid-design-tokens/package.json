@@ -17,10 +17,10 @@
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git"
   },
   "scripts": {
-    "clean": "rimraf dist/",
+    "clean": "rimraf dist/ tmp/",
     "prebuild": "npm run clean",
     "build": "npm-run-all --sequential build:figma-tokens build:style-dictionary",
-    "build:figma-tokens": "token-transformer --throwErrorWhenNotResolved=true ../logius-design-tokens/src/figma.tokens.json tmp/figma.tokens.json brand,common,components,'change brand/MijnOverheid'",
+    "build:figma-tokens": "node token-transformer.mjs",
     "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.json",
     "watch": "npm-run-all watch:**",
     "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'npm run build' 'tmp/*.tokens.json'"
