@@ -62,7 +62,7 @@ const preview: Preview = {
         Logius: 'logius-theme',
         RIVM: 'rivm-theme',
       },
-      defaultTheme: 'Logius',
+      defaultTheme: 'RIVM',
     }),
     (Story: any) => <UtrechtDocument>{Story()}</UtrechtDocument>,
   ],
