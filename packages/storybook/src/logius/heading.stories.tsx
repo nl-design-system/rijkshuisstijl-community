@@ -5,8 +5,8 @@ import { UtrechtHeading } from '@utrecht/web-component-library-react';
 import readme from './heading.md?raw';
 
 const meta = {
-  title: 'RIVM/Heading',
-  id: 'rivm-heading',
+  title: 'Logius/Heading',
+  id: 'logius-heading',
   component: UtrechtHeading,
   argTypes: {
     level: {
