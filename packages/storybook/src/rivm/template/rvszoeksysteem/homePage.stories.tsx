@@ -1,11 +1,7 @@
 /* @license CC0-1.0 */
-import { FooterMenu } from '@nl-rvo/component-library-react';
+import { FooterMenu } from '@nl-rvo/component-library-react/dist/css-module';
 import type { Meta, StoryObj } from '@storybook/react';
-import {
-  UtrechtHeading1,
-  UtrechtHeading2,
-  UtrechtPage
-} from '@utrecht/web-component-library-react';
+import { UtrechtHeading1, UtrechtHeading2, UtrechtPage, UtrechtPageFooter } from '@utrecht/web-component-library-react';
 import readme from './homePage.md?raw';
 
 const meta = {
@@ -24,11 +20,25 @@ const meta = {
 
 export default meta;
 
-export const Page = {
-  name: "Example page",
-  render: () =>
-  <UtrechtPage>
-    <UtrechtHeading1>UtrechtHeading1</UtrechtHeading1>
-    <UtrechtHeading2>UtrechtHeading2</UtrechtHeading2>
-  </UtrechtPage>
+type Story = StoryObj<typeof meta>;
+
+export const Page: Story = {
+  name: 'Example page',
+  render: () => (
+    <UtrechtPage>
+      <UtrechtHeading1>UtrechtHeading1</UtrechtHeading1>
+      <UtrechtHeading2>UtrechtHeading2</UtrechtHeading2>
+      <UtrechtPageFooter>
+        <FooterMenu
+          heading="Service"
+          links={[
+            {
+              textContent: 'Contact',
+              href: '/contact',
+            },
+          ]}
+        ></FooterMenu>
+      </UtrechtPageFooter>
+    </UtrechtPage>
+  ),
 };
