@@ -1,34 +1,15 @@
 /* @license CC0-1.0 */
 import { FooterMenu } from '@nl-rvo/component-library-react/dist/css-module';
 import type { Meta, StoryObj } from '@storybook/react';
-import { UtrechtHeading1, UtrechtHeading2, UtrechtPage, UtrechtPageFooter } from '@utrecht/web-component-library-react';
+import { Document, Heading1, Heading2, Page, PageFooter } from '@utrecht/component-library-react/dist/css-module';
 import readme from './homePage.md?raw';
 
-const meta = {
-  title: 'RIVM/Template/Example Page',
-  id: 'rivm-template',
-  component: UtrechtPage,
-  tags: ['autodocs'],
-  parameters: {
-    docs: {
-      description: {
-        component: readme,
-      },
-    },
-  },
-} as Meta<typeof Page>;
-
-export default meta;
-
-type Story = StoryObj<typeof meta>;
-
-export const Page: Story = {
-  name: 'Example page',
-  render: () => (
-    <UtrechtPage>
-      <UtrechtHeading1>UtrechtHeading1</UtrechtHeading1>
-      <UtrechtHeading2>UtrechtHeading2</UtrechtHeading2>
-      <UtrechtPageFooter>
+const PageTemplate = () => (
+  <Document>
+    <Page>
+      <Heading1>Heading1</Heading1>
+      <Heading2>Heading2</Heading2>
+      <PageFooter>
         <FooterMenu
           heading="Service"
           links={[
@@ -38,7 +19,29 @@ export const Page: Story = {
             },
           ]}
         ></FooterMenu>
-      </UtrechtPageFooter>
-    </UtrechtPage>
-  ),
+      </PageFooter>
+    </Page>
+  </Document>
+);
+
+const meta = {
+  title: 'RIVM/Template/Example Page',
+  id: 'rivm-template',
+  component: PageTemplate,
+  tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
+  },
+} satisfies Meta<typeof PageTemplate>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const ExamplePage: Story = {
+  name: 'Example page',
 };
