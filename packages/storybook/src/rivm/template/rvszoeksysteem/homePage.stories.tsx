@@ -1,13 +1,18 @@
 /* @license CC0-1.0 */
-import { FooterMenu, Logo } from '@nl-rvo/component-library-react/dist/css-module';
+import { Logo } from '@nl-rvo/component-library-react/dist/css-module';
 import type { Meta, StoryObj } from '@storybook/react';
 import {
+  Button,
+  Checkbox,
   Document,
+  FormField,
+  FormLabel,
   Heading1,
-  Heading2,
   Page,
-  PageFooter,
+  PageContent,
   PageHeader,
+  Paragraph,
+  Textbox,
 } from '@utrecht/component-library-react/dist/css-module';
 import readme from './homePage.md?raw';
 import {} from '@utrecht/component-library-react';
@@ -21,19 +26,51 @@ const PageTemplate = () => (
           subtitle="Ministerie van Volksgezondheid, Welzijn en Sport"
         ></Logo>
       </PageHeader>
-      <Heading1>Heading1</Heading1>
-      <Heading2>Heading2</Heading2>
-      <PageFooter>
-        <FooterMenu
-          heading="Service"
-          links={[
-            {
-              textContent: 'Contact',
-              href: '/contact',
-            },
-          ]}
-        ></FooterMenu>
-      </PageFooter>
+
+      <PageContent>
+        <Heading1>Zoeksysteem Risico&#39;s van stoffen</Heading1>
+        <Paragraph>Vul je zoekterm(en) in</Paragraph>
+
+        <FormField type="text">
+          <Paragraph>
+            <FormLabel>Stofnaam</FormLabel>
+          </Paragraph>
+          <Paragraph>
+            <Textbox />
+          </Paragraph>
+        </FormField>
+
+        <FormField type="checkbox">
+          <Paragraph className="utrecht-form-field__label utrecht-form-field__label--checkbox">
+            <FormLabel type="checkbox">
+              <Checkbox className="utrecht-form-field__input" name="exact" />
+              Zoek exact
+            </FormLabel>
+          </Paragraph>
+        </FormField>
+
+        <FormField type="text">
+          <Paragraph>
+            <FormLabel>Cas-nummer(s)</FormLabel>
+          </Paragraph>
+          <Paragraph>
+            <Textbox />
+          </Paragraph>
+        </FormField>
+
+        <FormField type="text">
+          <Paragraph>
+            <FormLabel>EG-nummer(s)</FormLabel>
+          </Paragraph>
+          <Paragraph>
+            <Textbox />
+          </Paragraph>
+        </FormField>
+
+        <Button appearance="primary-action-button" type="button">
+          Zoeken
+        </Button>
+      </PageContent>
     </Page>
   </Document>
 );
