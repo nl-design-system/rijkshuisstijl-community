@@ -2,6 +2,10 @@
 
 # Rijkshuisstijl design tokens
 
+Copyright (c) 2023 Rijksoverheid. All rights reserved.
+
+The open source license does NOT apply to files in this directory.
+
 ## Auteursrecht logo en huisstijl
 
 Er gelden auteursrechten op het logo en de huisstijl. De Rijksoverheid heeft het beeldmerk als hoogheidsteken gedeponeerd. Daardoor kan zij actie ondernemen tegen een (vermoedelijke) inbreuk op deze rechten. Het gaat dan om het gebruik en de toepassing van het ontwerp van het logo en de huisstijl. Waaronder ook de lettertypes RijksoverheidSerif en RijksoverheidSans.
