@@ -1,0 +1,31 @@
+<!doctype html>
+<!--
+Start this Stencil development page using:
+
+  `pnpm run start`
+
+-->
+<html lang="en" dir="ltr" class="rhc-theme">
+  <head>
+    <meta charset="utf-8" />
+    <title>Web Components example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <link rel="stylesheet" href="https://unpkg.com/@rijkshuisstijl-community/design-tokens/dist/index.css" />
+    <script
+      src="https://unpkg.com/@utrecht/web-component-library-stencil/dist/utrecht/utrecht.esm.js"
+      type="module"
+    ></script>
+    <script type="module" src="/build/rhc.esm.js"></script>
+    <script nomodule src="/build/rhc.js"></script>
+  </head>
+  <body>
+    <rhc-logo
+      organisation="Rijksinstituut voor Volksgezondheid en Milieu"
+      subtitle="Ministerie van Volksgezondheid,
+Welzijn en Sport"
+    ></rhc-logo>
+    <utrecht-button
+      ><utrecht-icon> <rhc-icon-info></rhc-icon-info> </utrecht-icon>Info</utrecht-button
+    >
+  </body>
+</html>

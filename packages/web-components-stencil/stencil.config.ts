@@ -18,6 +18,11 @@ export const config: Config = {
       componentCorePackage: '@rijkshuisstijl-community/web-components-stencil',
       proxiesFile: '../web-components-react/src/components.ts',
     }),
+    {
+      type: 'www',
+      serviceWorker: null, // disable service workers
+    },
   ],
   plugins: [sass()],
+  extras: { enableImportInjection: true },
 };
