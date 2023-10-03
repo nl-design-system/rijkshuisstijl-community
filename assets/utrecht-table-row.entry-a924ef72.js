@@ -1,2 +1,0 @@
-import{r as o,h as t,H as s}from"./index.esm-922f40fd.js";import"./getPrototypeOf-624f05c9.js";import"./index-d665635d.js";import"./iframe-eed2f6c4.js";import"../sb-preview/runtime.js";const e=":host{page-break-inside:avoid;display:table-row}",a=class{constructor(r){o(this,r)}render(){return t(s,{role:"row"},t("slot",null))}};a.style=e;export{a as utrecht_table_row};
-//# sourceMappingURL=utrecht-table-row.entry-a924ef72.js.map
