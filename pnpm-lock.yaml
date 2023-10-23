@@ -344,8 +344,8 @@ importers:
         specifier: 18.2.7
         version: 18.2.7
       '@utrecht/web-component-library-react':
-        specifier: 1.0.0-alpha.549
-        version: 1.0.0-alpha.549(react-dom@18.2.0)(react@18.2.0)
+        specifier: 1.0.0-alpha.603
+        version: 1.0.0-alpha.603(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/web-component-library-stencil':
         specifier: 1.0.0-alpha.549
         version: 1.0.0-alpha.549
@@ -4123,6 +4123,12 @@ packages:
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
 
+  /@stencil/core@4.5.0:
+    resolution: {integrity: sha512-XRbHdb9t4SQzCCbF9qsh0dexvnlArEzCDJl19BJzxzazVBM398SeJUKCBh4p91AZIWveN0gHuZSIGMhLWR7qSA==}
+    engines: {node: '>=16.0.0', npm: '>=7.10.0'}
+    hasBin: true
+    dev: true
+
   /@stencil/react-output-target@0.5.3(@stencil/core@4.1.0):
     resolution: {integrity: sha512-68jwRp35CjAcwhTJ9yFD/3n+jrHOqvEH2jreVuPVvZK+4tkhPlYlwz0d1E1RlF3jyifUSfdkWUGgXIEy8Fo3yw==}
     peerDependencies:
@@ -6020,13 +6026,13 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
-  /@utrecht/web-component-library-react@1.0.0-alpha.549(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-YCCBnKJ5bOIyvefXSEIhi/Gqh4XRJbqGPxCBsurfLL7KtTTLanz1Mwas8fISaOWEr8Nssrv8y0XG3ZtfxCnGzQ==}
+  /@utrecht/web-component-library-react@1.0.0-alpha.603(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-7lD3Mwr/sFuVtL43pLaCXPWbKaTfZVU64xtCqnNVa5hC0V1e3LZ2BdVc7WIJrmsi+Wf2znOnv0i/LuSMOGKgFg==}
     peerDependencies:
       react: 16 - 18
       react-dom: 16 - 18
     dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.549
+      '@utrecht/web-component-library-stencil': 1.0.0-alpha.603
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
@@ -6035,6 +6041,12 @@ packages:
     resolution: {integrity: sha512-EtjkBtJ/LKeqeNhGmgeT8rhgtgV9SgngOckcPkpp0iiJ4Wl2CSxdY8t/BwBEz17wPlPsJ5I3fNxYL8po+jKf4g==}
     dependencies:
       '@stencil/core': 3.4.2
+    dev: true
+
+  /@utrecht/web-component-library-stencil@1.0.0-alpha.603:
+    resolution: {integrity: sha512-ionTYo4k4A2ijdTxzRWoUqGmWBfCR43DJi9H9MLtPVQdFWK0bePFFAmJ1Qc3oIJ/1ITwSQR8an0GQM0Owwh0PA==}
+    dependencies:
+      '@stencil/core': 4.5.0
     dev: true
 
   /@vitejs/plugin-react@3.1.0(vite@4.4.9):
