@@ -2007,7 +2007,7 @@
         },
         "min-inline-size": {
           "type": "sizing",
-          "value": "0"
+          "value": "{logius.space.6-x}"
         },
         "subtle-copy": {
           "hover": {
@@ -2728,6 +2728,40 @@
         "font-weight": {
           "value": "{utrecht.document.font-weight}",
           "type": "fontWeights"
+        }
+      }
+    }
+  },
+  "components/button-group": {
+    "utrecht": {
+      "button-group": {
+        "background-color": {
+          "value": "transparent",
+          "type": "color"
+        },
+        "column-gap": {
+          "value": "{voorbeeld.space.column.snail}",
+          "type": "spacing"
+        },
+        "margin-block-end": {
+          "value": "0px",
+          "type": "spacing"
+        },
+        "margin-block-start": {
+          "value": "0px",
+          "type": "spacing"
+        },
+        "padding-block-end": {
+          "value": "0px",
+          "type": "spacing"
+        },
+        "padding-block-start": {
+          "value": "0px",
+          "type": "spacing"
+        },
+        "row-gap": {
+          "value": "{voorbeeld.space.row.snail}",
+          "type": "spacing"
         }
       }
     }
@@ -5220,6 +5254,7 @@
       "components/accordion",
       "components/blockquote",
       "components/breadcrumb",
+      "components/button-group",
       "components/checkbox",
       "components/checkbox-group",
       "components/counter-badge",
