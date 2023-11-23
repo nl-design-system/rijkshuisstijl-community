@@ -19,7 +19,7 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "npm-run-all build:**",
-    "build:components": "vite build",
+    "build:components": "rollup --config rollup.config.mjs",
     "clean": "rimraf dist/ pages/",
     "lint": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
     "test": "mkdir -p pages && NODE_OPTIONS=--experimental-vm-modules jest --verbose",
@@ -31,6 +31,7 @@
   "files": [
     "dist/"
   ],
+  "sideEffects": false,
   "dependencies": {
     "clsx": "2.0.0",
     "date-fns": "2.30.0",
