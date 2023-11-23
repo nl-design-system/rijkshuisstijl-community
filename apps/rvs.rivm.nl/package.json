@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0-alpha.0",
+  "author": "Community for NL Design System",
+  "description": "Storybook based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "name": "@rijkshuisstijl-community/rvs.rivm.nl",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": true,
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "next lint",
+    "lint:ts": "tsc --noEmit --project tsconfig.json",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@rijkshuisstijl-community/components-css": "workspace:*",
+    "@rijkshuisstijl-community/components-react": "workspace:*",
+    "@rijkshuisstijl-community/font": "workspace:*",
+    "@rijkshuisstijl-community/rivm-design-tokens": "workspace:*",
+    "@rijkshuisstijl-community/web-components-react": "workspace:*",
+    "@rijkshuisstijl-community/web-components-stencil": "workspace:*",
+    "@types/node": "20.9.4",
+    "@types/react": "18.2.38",
+    "@types/react-dom": "18.2.17",
+    "@utrecht/component-library-css": "1.0.2-alpha.0",
+    "@utrecht/component-library-react": "1.0.2-alpha.0",
+    "eslint": "8.54.0",
+    "eslint-config-next": "14.0.3",
+    "typescript": "5.3.2"
+  }
+}
