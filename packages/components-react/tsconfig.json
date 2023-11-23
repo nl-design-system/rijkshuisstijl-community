@@ -3,6 +3,7 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
+    "composite": true,
     "declaration": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
@@ -17,10 +18,11 @@
     "noUnusedParameters": true,
     "outDir": "dist",
     "resolveJsonModule": true,
+    "rootDir": "./src/",
     "skipLibCheck": true,
     "strict": true,
     "target": "es2020"
   },
-  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", "src/index.ts", "vite.config.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/*.ts"],
   "exclude": ["**/node_modules/*", "**/*.test.ts", "src/**/*.test.tsx"]
 }
