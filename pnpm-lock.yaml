@@ -350,8 +350,8 @@ importers:
         specifier: 1.0.0-alpha.365
         version: 1.0.0-alpha.365(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/web-component-library-react':
-        specifier: 1.0.0-alpha.549
-        version: 1.0.0-alpha.549(react-dom@18.2.0)(react@18.2.0)
+        specifier: 1.0.2
+        version: 1.0.2(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/web-component-library-stencil':
         specifier: 1.0.0-alpha.549
         version: 1.0.0-alpha.549
@@ -4132,6 +4132,12 @@ packages:
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
 
+  /@stencil/core@4.5.0:
+    resolution: {integrity: sha512-XRbHdb9t4SQzCCbF9qsh0dexvnlArEzCDJl19BJzxzazVBM398SeJUKCBh4p91AZIWveN0gHuZSIGMhLWR7qSA==}
+    engines: {node: '>=16.0.0', npm: '>=7.10.0'}
+    hasBin: true
+    dev: true
+
   /@stencil/react-output-target@0.5.3(@stencil/core@4.1.0):
     resolution: {integrity: sha512-68jwRp35CjAcwhTJ9yFD/3n+jrHOqvEH2jreVuPVvZK+4tkhPlYlwz0d1E1RlF3jyifUSfdkWUGgXIEy8Fo3yw==}
     peerDependencies:
@@ -6046,13 +6052,13 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@utrecht/web-component-library-react@1.0.0-alpha.549(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-YCCBnKJ5bOIyvefXSEIhi/Gqh4XRJbqGPxCBsurfLL7KtTTLanz1Mwas8fISaOWEr8Nssrv8y0XG3ZtfxCnGzQ==}
+  /@utrecht/web-component-library-react@1.0.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-TFs2ub0bNvqXlNNn2rdmWyb7/1fQN/pijQFcBt5yohaiQYhrdk7G63JfqPiF7xGk6XbAV0NW3HogcYMhMbKBqg==}
     peerDependencies:
       react: 16 - 18
       react-dom: 16 - 18
     dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.549
+      '@utrecht/web-component-library-stencil': 1.1.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
@@ -6061,6 +6067,12 @@ packages:
     resolution: {integrity: sha512-EtjkBtJ/LKeqeNhGmgeT8rhgtgV9SgngOckcPkpp0iiJ4Wl2CSxdY8t/BwBEz17wPlPsJ5I3fNxYL8po+jKf4g==}
     dependencies:
       '@stencil/core': 3.4.2
+    dev: true
+
+  /@utrecht/web-component-library-stencil@1.1.0:
+    resolution: {integrity: sha512-3gHqaSqI5y6J+H6ZABHNxgdPxhQDzLFJX+ILfQDzuzQUOywyuAFodrArE2J53uPPcL6cw6ckXlIPEOZmuy3KSA==}
+    dependencies:
+      '@stencil/core': 4.5.0
     dev: true
 
   /@vitejs/plugin-react@3.1.0(vite@4.4.9):
