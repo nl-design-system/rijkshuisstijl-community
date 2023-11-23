@@ -1,2 +1,0 @@
-import{r as o,h as t,H as e}from"./index.esm-a506570d.js";import"./getPrototypeOf-624f05c9.js";import"./index-d665635d.js";import"./iframe-d9a5e902.js";import"../sb-preview/runtime.js";const s=":host{--_utrecht-table-header-cell-z-index:5;z-index:3;display:table-footer-group}",l=class{constructor(r){o(this,r)}render(){return t(e,{role:"rowgroup"},t("slot",null))}};l.style=s;export{l as utrecht_table_footer};
-//# sourceMappingURL=utrecht-table-footer.entry-3c8abe78.js.map
