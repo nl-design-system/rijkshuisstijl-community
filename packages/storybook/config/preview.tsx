@@ -6,6 +6,8 @@ import prettierBabel from 'prettier/parser-babel';
 import prettier from 'prettier/standalone';
 import React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
+import '@utrecht/component-library-css/dist/index.css';
+import '@utrecht/component-library-css/dist/html.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/digid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';

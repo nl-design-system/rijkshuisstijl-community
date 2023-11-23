@@ -343,6 +343,12 @@ importers:
       '@types/react-dom':
         specifier: 18.2.7
         version: 18.2.7
+      '@utrecht/component-library-css':
+        specifier: 1.0.0-alpha.556
+        version: 1.0.0-alpha.556
+      '@utrecht/component-library-react':
+        specifier: 1.0.0-alpha.365
+        version: 1.0.0-alpha.365(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/web-component-library-react':
         specifier: 1.0.0-alpha.549
         version: 1.0.0-alpha.549(react-dom@18.2.0)(react@18.2.0)
@@ -6023,6 +6029,23 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
+  /@utrecht/component-library-css@1.0.0-alpha.556:
+    resolution: {integrity: sha512-BD5CZoP5/6WCE/vm84v7hLHJf11Mjbe6/Kos3cwyLJ3d08UhDTz4935KigL4KwFd03DyoOiQ/vIOokW/1BycFg==}
+    dev: true
+
+  /@utrecht/component-library-react@1.0.0-alpha.365(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-y10iiSyo5Sr6CJ2kxVex9aBcg3l/J6F1Vk0XXXlbpNsdXrW1JFJa6v14VNd8tyZDjqpcx7E0tn83PxGVvZclWQ==}
+    peerDependencies:
+      react: '18'
+      react-dom: '18'
+    dependencies:
+      clsx: 1.2.1
+      date-fns: 2.30.0
+      lodash.chunk: 4.2.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: true
+
   /@utrecht/web-component-library-react@1.0.0-alpha.549(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-YCCBnKJ5bOIyvefXSEIhi/Gqh4XRJbqGPxCBsurfLL7KtTTLanz1Mwas8fISaOWEr8Nssrv8y0XG3ZtfxCnGzQ==}
     peerDependencies:
@@ -7480,6 +7503,11 @@ packages:
   /clone@1.0.4:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
+    dev: true
+
+  /clsx@1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: true
 
   /clsx@2.0.0:
@@ -12112,7 +12140,6 @@ packages:
 
   /lodash.chunk@4.2.0:
     resolution: {integrity: sha512-ZzydJKfUHJwHa+hF5X66zLFCBrWn5GeF28OHEr4WVWtNDXlQ/IjWKPBiikqKo2ne0+v6JgCgJ0GzJp8k8bHC7w==}
-    dev: false
 
   /lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
