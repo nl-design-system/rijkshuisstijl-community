@@ -152,8 +152,8 @@ importers:
         specifier: 7.23.3
         version: 7.23.3
       '@mdx-js/react':
-        specifier: 2.3.0
-        version: 2.3.0(react@18.2.0)
+        specifier: 3.0.0
+        version: 3.0.0(@types/react@18.2.38)(react@18.2.0)
       '@storybook/addon-docs':
         specifier: 7.5.3
         version: 7.5.3(@types/react-dom@18.2.17)(@types/react@18.2.38)(react-dom@18.2.0)(react@18.2.0)
@@ -3064,6 +3064,17 @@ packages:
   /@mdx-js/react@2.3.0(react@18.2.0):
     resolution: {integrity: sha512-zQH//gdOmuu7nt2oJR29vFhDv88oGPmVw6BggmrHeMI+xgEkp1B2dX9/bMBSYtK0dyLX/aOmesKS09g222K1/g==}
     peerDependencies:
+      react: '>=16'
+    dependencies:
+      '@types/mdx': 2.0.5
+      '@types/react': 18.2.38
+      react: 18.2.0
+    dev: true
+
+  /@mdx-js/react@3.0.0(@types/react@18.2.38)(react@18.2.0):
+    resolution: {integrity: sha512-nDctevR9KyYFyV+m+/+S4cpzCWHqj+iHDHq3QrsWezcC+B17uZdIWgCguESUkwFhM3n/56KxWVE3V6EokrmONQ==}
+    peerDependencies:
+      '@types/react': '>=16'
       react: '>=16'
     dependencies:
       '@types/mdx': 2.0.5
