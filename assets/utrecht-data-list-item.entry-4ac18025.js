@@ -1,5 +1,0 @@
-import{r as o,h as t}from"./index.esm-2a34c341.js";import"./defineProperty-74566bd6.js";import"./getPrototypeOf-624f05c9.js";import"./index-1b03fe98.js";import"./index-6fd5a17b.js";import"./iframe-83749513.js";import"../sb-preview/runtime.js";const a=`:host{display:contents}div{page-break-inside:avoid;--_utrecht-minmax:max(
-    var(--utrecht-data-list-rows-column-min-inline-size, 25ch),
-    var(--utrecht-data-list-rows-column-inline-size, 80%)
-  );--_utrecht-auto-col:minmax(var(--_utrecht-minmax), max-content);border-block-end-color:var(--utrecht-data-list-rows-border-bottom-color, transparent);border-block-end-style:solid;border-block-end-width:var(--utrecht-data-list-rows-border-bottom-width, 0);column-gap:var(--utrecht-data-list-rows-gap);display:grid;grid-auto-columns:1fr;grid-template-columns:repeat(auto-fit, var(--_utrecht-auto-col));margin-block-start:var(--utrecht-data-list-rows-item-margin-block-start);row-gap:0}:host([hidden]){display:none !important}`,i=class{constructor(r){o(this,r)}render(){return t("div",null,t("slot",null))}};i.style=a;export{i as utrecht_data_list_item};
-//# sourceMappingURL=utrecht-data-list-item.entry-4ac18025.js.map

@@ -1,0 +1,1 @@
+import{D as n,d as f}from"./chunk-HLWAVYOI-FXF2g_lY.js";import"./iframe-mL5_C8_i.js";import"../sb-preview/runtime.js";import"./index-DogsOklH.js";import"./react-18-Zjprz-m4.js";import"./index-MroJ3egt.js";import"./extends-dGVwEr9R.js";import"./getPrototypeOf-GRdCamOq.js";import"./index-83LIMwj7.js";export{n as DocsRenderer,f as defaultComponents};
