@@ -21,7 +21,7 @@
     "build": "next build",
     "lint": "next lint",
     "lint:ts": "tsc --noEmit --project tsconfig.json",
-    "start": "next start"
+    "start": "http-server dist/"
   },
   "dependencies": {
     "next": "14.0.4",
