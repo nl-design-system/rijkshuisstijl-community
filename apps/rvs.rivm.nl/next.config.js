@@ -1,6 +1,9 @@
 /* eslint-env node */
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  distDir: 'dist',
+  output: 'export',
+};
 
 module.exports = nextConfig;
