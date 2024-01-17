@@ -11,7 +11,7 @@ Daarom gaan we tussen overheidsorganisaties principes, interactiepatronen en cod
 > Hierdoor is het nu nog niet volwassen genoeg om volledig gebruikt te worden.
 > Houdt hier dus rekening mee voor je aan de slag gaat.
 > We zouden het op prijs stellen als je wilt bijdragen om het NLDS tot een succes te maken.
-> Dit kan in onze GitHub of met een mailtje aan: [nldesignsystem@gebruikercentraal.nl](mailto:nldesignsystem@gebruikercentraal.nl)
+> Dit kan in onze GitHub of met een mailtje aan: [kernteam@nldesignsystem.nl](mailto:kernteam@nldesignsystem.nl)
 
 ## Wat is een Design System
 
