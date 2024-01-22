@@ -192,6 +192,7 @@ jobs:
         with:
           branch: gh-pages
           folder: packages/storybook/dist/
+          token: ${{ secrets.GH_TOKEN }}
 
   publish-npm:
     runs-on: ubuntu-latest
