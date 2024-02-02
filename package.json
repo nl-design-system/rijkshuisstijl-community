@@ -57,7 +57,7 @@
     "lint-fix:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx' --fix --report-unused-disable-directives .",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
     "lint-workspaces": "lerna run --no-bail lint",
-    "prepare": "husky install",
+    "prepare": "husky",
     "prettier": "prettier --write .",
     "publish": "lerna publish from-package --yes",
     "release": "lerna version prerelease --conventional-prerelease --no-changelog --no-private --yes",
