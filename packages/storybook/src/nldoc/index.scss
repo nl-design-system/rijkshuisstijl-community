@@ -13,10 +13,124 @@
   --utrecht-icon-inset-block-start: -0.22em;
 }
 
+/**
+ * Modifier for icons that align at the start of a container,
+ * such as a link or a button.
+ * 
+ * This modifier should probably become a part of utrecht-icon.
+ */
 .utrecht-icon--nldoc-start {
   margin-inline-end: 1ch;
 }
 
+/**
+ * Modifier for icons that align at the end of a container,
+ * such as a link or a button.
+ *
+ * This modifier should probably become a part of utrecht-icon.
+ */
 .utrecht-icon--nldoc-end {
   margin-inline-start: 1ch;
+}
+
+.nldoc-basis-theme {
+  --utrecht-surface-background-color: #f3f3f3;
+  --utrecht-logo-min-inline-size: 50px;
+  --utrecht-logo-min-block-size: 50px;
+  --utrecht-logo-max-inline-size: 100px;
+  --utrecht-logo-max-block-size: 100px;
+  --nldoc-content-max-inline-size: 1200px;
+  --nldoc-page-header-background-color: #fff;
+  --nldoc-article-background-color: #fff;
+  --nldoc-article-padding-inline-start: 96px;
+  --nldoc-article-padding-block-start: 48px;
+  --nldoc-article-padding-block-end: 48px;
+  --nldoc-article-padding-inline-end: 96px;
+  --nldoc-nav-bar-min-block-size: 75px;
+}
+
+.nldoc-header,
+.nldoc-content {
+  margin-inline: auto;
+
+  /* the max-inline-size should apply to the header contents, the page, the navbar contents, but not to the navbar itself and not the footer */
+  max-inline-size: var(--nldoc-content-max-inline-size);
+}
+
+.nldoc-header {
+  /* temporary style to put some space between the logo and the nav-bar */
+  padding-block: 1em;
+}
+
+.nldoc-content {
+  /* temporary style to put some space between the content and the nav-bar */
+  padding-block: 2em;
+}
+
+.nldoc-header--logo-center {
+  /* This is a very naive implementation, this only works when the header only has a logo */
+  display: grid;
+  justify-content: center;
+}
+
+.utrecht-article--nldoc-main {
+  background-color: var(--nldoc-article-background-color);
+  padding-block-end: var(--nldoc-article-padding-block-end);
+  padding-block-start: var(--nldoc-article-padding-block-start);
+  padding-inline-end: var(--nldoc-article-padding-inline-end);
+  padding-inline-start: var(--nldoc-article-padding-inline-start);
+}
+
+/**
+ * Theme voor Gemeente Ridderkerk
+ * Deze implementatie moet waarschijnlijk verhuizen naar https://github.com/nl-design-system/themes/
+ * Deze implementatie moet dan geconverteerd worden naar JSON.
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+.ridderkerk-theme {
+  --utrecht-nav-bar-background-color: #028532;
+  --utrecht-nav-bar-color: white;
+  --utrecht-document-font-family: lato, -apple-system, blinkmacsystemfont, "Segoe UI", "Source Sans Pro",
+    "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/**
+ * Theme voor Waterschaps Hollandse Delta
+ * Deze implementatie moet waarschijnlijk verhuizen naar https://github.com/nl-design-system/themes/
+ * Deze implementatie moet dan geconverteerd worden naar JSON.
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+.wshd-theme {
+  --utrecht-logo-min-inline-size: 50px;
+  --utrecht-logo-min-block-size: 50px;
+  --utrecht-nav-bar-background-color: #462e87;
+  --utrecht-nav-bar-color: #fff;
+  --utrecht-logo-max-inline-size: 200px;
+  --utrecht-logo-max-block-size: 130px;
+  --utrecht-button-border-radius: 0.3rem; /* from website */
+  --utrecht-document-font-family: "Verdana", sans-serif;
+}
+
+.utrecht-logo > :is(img, svg) {
+  max-block-size: var(--utrecht-logo-max-block-size);
+  max-inline-size: var(--utrecht-logo-max-inline-size);
+  min-block-size: var(--utrecht-logo-min-block-size);
+  min-inline-size: var(--utrecht-logo-min-inline-size);
+}
+
+.utrecht-nav-bar {
+  align-items: center; /* this `center` code will be part of a new release of this component */
+  min-block-size: var(
+    --nldoc-nav-bar-min-block-size
+  ); /* the utrecht component should probably have this token, useful when nav-bar is still empty */
+}
+
+.utrecht-nav-bar .utrecht-nav-list,
+.utrecht-nav-bar .utrecht-link-button,
+.utrecht-nav-bar .utrecht-breadcrumb-nav {
+  --utrecht-link-color: currentColor;
+  --utrecht-link-hover-color: currentColor;
+  --utrecht-link-text-decoration-color: currentColor;
+  --utrecht-link-focus-color: currentColor;
+  --utrecht-link-active-color: currentColor;
 }

@@ -30,6 +30,7 @@ import {
 } from '@utrecht/component-library-react';
 import { PropsWithChildren } from 'react';
 import { IconEnd, IconExterneLink, IconMail } from './icon';
+import '../../../components-css/logo/index.scss';
 import './index.scss';
 
 interface NldocPageProps {
@@ -38,15 +39,15 @@ interface NldocPageProps {
 
 const Blockquote = ({ children }: PropsWithChildren<{}>) => <blockquote>{children}</blockquote>;
 
-const NldocPage = ({ lang }: NldocPageProps) => {
+export const NldocPage = ({ lang }: NldocPageProps) => {
   return (
-    <Document lang={lang}>
-      <Article className="nldoc-rich-text nldoc-rich-text--force">
+    <>
+      <Article className="nldoc-rich-text nldoc-rich-text--force" lang={lang}>
         <Heading1>Dit is een H1</Heading1>
         <Paragraph>Dit is een caption</Paragraph>
         <Paragraph>Dit is een paragraph</Paragraph>
         <Figure>
-          <Image src="/hofvijver.png" />
+          <Image src="/hofvijver.png" photo />
           <FigureCaption>Dit is een beschrijving van het beeld</FigureCaption>
         </Figure>
         <Heading2>Dit is een H2</Heading2>
@@ -153,7 +154,7 @@ const NldocPage = ({ lang }: NldocPageProps) => {
           </IconEnd>
         </ButtonLink>
       </ButtonGroup>
-    </Document>
+    </>
   );
 };
 
@@ -171,6 +172,7 @@ const meta = {
       },
     },
   },
+  decorators: [(Story) => <Document className="rhc-theme">{Story()}</Document>],
   render: NldocPage,
 } as Meta<typeof NldocPage>;
 
