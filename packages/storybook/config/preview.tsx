@@ -1,4 +1,3 @@
-import { withThemeByClassName } from '@storybook/addon-styling';
 import { Preview } from '@storybook/react';
 import type { StoryContext } from '@storybook/types';
 import { UtrechtDocument } from '@utrecht/web-component-library-react';
@@ -15,6 +14,7 @@ import '@rijkshuisstijl-community/mijnoverheid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/font/src/index.scss';
 import '@nl-rvo/assets/fonts/index.css';
+import '@fontsource/lato';
 
 // Configure @etchteam/storybook-addon-status
 const addonStatus = {
@@ -56,16 +56,16 @@ const previewTabs = {
 
 const preview: Preview = {
   decorators: [
-    withThemeByClassName({
-      themes: {
-        RijkshuisstijlCommunity: 'rhc-theme',
-        DigiD: 'digid-theme',
-        MijnOverheid: 'mijnoverheid-theme',
-        Logius: 'logius-theme',
-        RIVM: 'rivm-theme',
-      },
-      defaultTheme: 'Logius',
-    }),
+    // withThemeByClassName({
+    //   themes: {
+    //     RijkshuisstijlCommunity: 'rhc-theme',
+    //     DigiD: 'digid-theme',
+    //     MijnOverheid: 'mijnoverheid-theme',
+    //     Logius: 'logius-theme',
+    //     RIVM: 'rivm-theme',
+    //   },
+    //   defaultTheme: 'Logius',
+    // }),
     (Story: any) => <UtrechtDocument>{Story()}</UtrechtDocument>,
   ],
   parameters: {
