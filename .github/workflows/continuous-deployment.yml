@@ -12,31 +12,18 @@ jobs:
 
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.1.1
 
-      - name: Set up Node.js version
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: ".nvmrc"
-
-      - uses: pnpm/action-setup@v2.4.0
-        name: Install pnpm
-        id: pnpm-install
+      - name: Install pnpm package manager
+        uses: pnpm/action-setup@v3.0.0
         with:
           version: 8
-          run_install: false
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-      - uses: actions/cache@v4
-        name: Setup pnpm cache
+      - name: Set up Node.js version
+        uses: actions/setup-node@v4.0.2
         with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          node-version-file: .nvmrc
+          cache: pnpm
 
       - name: Install dependencies
         run: |
@@ -49,31 +36,18 @@ jobs:
 
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.1.1
 
-      - name: Set up Node.js version
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: ".nvmrc"
-
-      - uses: pnpm/action-setup@v2.4.0
-        name: Install pnpm
-        id: pnpm-install
+      - name: Install pnpm package manager
+        uses: pnpm/action-setup@v3.0.0
         with:
           version: 8
-          run_install: false
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-      - uses: actions/cache@v4
-        name: Setup pnpm cache
+      - name: Set up Node.js version
+        uses: actions/setup-node@v4.0.2
         with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          node-version-file: .nvmrc
+          cache: pnpm
 
       - name: Install dependencies
         run: |
@@ -89,31 +63,18 @@ jobs:
 
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.1.1
 
-      - name: Set up Node.js version
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: ".nvmrc"
-
-      - uses: pnpm/action-setup@v2.4.0
-        name: Install pnpm
-        id: pnpm-install
+      - name: Install pnpm package manager
+        uses: pnpm/action-setup@v3.0.0
         with:
           version: 8
-          run_install: false
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-      - uses: actions/cache@v4
-        name: Setup pnpm cache
+      - name: Set up Node.js version
+        uses: actions/setup-node@v4.0.2
         with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          node-version-file: .nvmrc
+          cache: pnpm
 
       - name: Install dependencies
         run: |
@@ -126,7 +87,7 @@ jobs:
           pnpm run --if-present build
 
       - name: "Retain build artifact: storybook"
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.3.1
         with:
           name: storybook
           path: packages/storybook/dist/
@@ -138,31 +99,18 @@ jobs:
 
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.1.1
 
-      - name: Set up Node.js version
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: ".nvmrc"
-
-      - uses: pnpm/action-setup@v2.4.0
-        name: Install pnpm
-        id: pnpm-install
+      - name: Install pnpm package manager
+        uses: pnpm/action-setup@v3.0.0
         with:
           version: 8
-          run_install: false
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-      - uses: actions/cache@v4
-        name: Setup pnpm cache
+      - name: Set up Node.js version
+        uses: actions/setup-node@v4.0.2
         with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          node-version-file: .nvmrc
+          cache: pnpm
 
       - name: Install dependencies
         run: |
@@ -179,10 +127,10 @@ jobs:
 
     steps:
       - name: Checkout release branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.1.1
 
       - name: "Restore build artifact: Storybook"
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v4.1.4
         with:
           name: storybook
           path: packages/storybook/dist/
@@ -201,34 +149,25 @@ jobs:
 
     steps:
       - name: Checkout release branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.1.1
         with:
           token: ${{ secrets.GH_TOKEN }}
 
-      - name: Set up Node.js version
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: ".nvmrc"
-
-      - uses: pnpm/action-setup@v2.4.0
-        name: Install pnpm
-        id: pnpm-install
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3.0.0
         with:
           version: 8
-          run_install: false
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
 
       - name: Get pnpm store directory
         id: pnpm-cache
         run: |
           echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-
-      - uses: actions/cache@v4
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
 
       - name: "Continuous Deployment: install"
         run: |
