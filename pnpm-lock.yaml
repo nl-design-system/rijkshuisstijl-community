@@ -489,18 +489,18 @@ importers:
   packages/web-components-stencil:
     dependencies:
       '@stencil/core':
-        specifier: 4.13.0
-        version: 4.13.0
+        specifier: 4.14.0
+        version: 4.14.0
     devDependencies:
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css
       '@stencil/react-output-target':
         specifier: 0.5.3
-        version: 0.5.3(@stencil/core@4.13.0)
+        version: 0.5.3(@stencil/core@4.14.0)
       '@stencil/sass':
         specifier: 3.0.10
-        version: 3.0.10(@stencil/core@4.13.0)
+        version: 3.0.10(@stencil/core@4.14.0)
       '@types/jest':
         specifier: 29.5.12
         version: 29.5.12
@@ -4745,8 +4745,8 @@ packages:
       '@sinonjs/commons': 3.0.0
     dev: true
 
-  /@stencil/core@4.13.0:
-    resolution: {integrity: sha512-gg+gtBWekQ08mDja8GVAUHNu+rrFhQaKZDvfhnS3l/5JbYiJddTimuDPPhuc0sR0JZL1iRdJTJSa+JbvmnQ1cQ==}
+  /@stencil/core@4.14.0:
+    resolution: {integrity: sha512-+s0u/KsNolXZ7tC2hEMgMA3jaNaqOhZvYKwSzjQbc0Wv+cB481Isxzo7ifgEWRYqsJzNSyqhO6cyu/EJrGGTdg==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
 
@@ -4756,21 +4756,21 @@ packages:
     hasBin: true
     dev: true
 
-  /@stencil/react-output-target@0.5.3(@stencil/core@4.13.0):
+  /@stencil/react-output-target@0.5.3(@stencil/core@4.14.0):
     resolution: {integrity: sha512-68jwRp35CjAcwhTJ9yFD/3n+jrHOqvEH2jreVuPVvZK+4tkhPlYlwz0d1E1RlF3jyifUSfdkWUGgXIEy8Fo3yw==}
     peerDependencies:
       '@stencil/core': '>=2.0.0 || >=3 || >= 4.0.0-beta.0 || >= 4.0.0'
     dependencies:
-      '@stencil/core': 4.13.0
+      '@stencil/core': 4.14.0
     dev: true
 
-  /@stencil/sass@3.0.10(@stencil/core@4.13.0):
+  /@stencil/sass@3.0.10(@stencil/core@4.14.0):
     resolution: {integrity: sha512-G4JdKDhEXEBS4+Riy5WVxPRXfHdfEwPopmPne8fm9ilQpaTRyl3BMpbxt63ijHtQjH0KtH8jxmRiTYamP4BfIA==}
     engines: {node: '>=12.0.0', npm: '>=6.0.0'}
     peerDependencies:
       '@stencil/core': '>=2.0.0 || >=3.0.0-beta.0 || >= 4.0.0-beta.0 || >= 4.0.0'
     dependencies:
-      '@stencil/core': 4.13.0
+      '@stencil/core': 4.14.0
     dev: true
 
   /@storybook/addon-a11y@7.6.17:
