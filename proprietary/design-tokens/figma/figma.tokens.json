@@ -2582,7 +2582,7 @@
     }
   },
   "components/breadcrumb": {
-    "utrecht": {
+    "todo": {
       "breadcrumb": {
         "line-height": {
           "value": "{utrecht.document.line-height}",
@@ -2597,6 +2597,10 @@
             "margin-inline": {
               "value": "{rijkshuisstijl.space.inline.beetle}",
               "type": "spacing"
+            },
+            "size": {
+              "type": "sizing",
+              "value": "{utrecht.icon.functional.size}"
             }
           },
           "padding-block-end": {
@@ -2625,7 +2629,7 @@
               "value": "{utrecht.interaction.active.color}"
             },
             "text-decoration": {
-              "value": "none",
+              "value": "None",
               "type": "textDecoration"
             }
           },
@@ -2639,7 +2643,7 @@
               "value": "{utrecht.focus.color}"
             },
             "text-decoration": {
-              "value": "none",
+              "value": "None",
               "type": "textDecoration"
             }
           },
@@ -2649,7 +2653,7 @@
               "value": "{utrecht.interaction.hover.color}"
             },
             "text-decoration": {
-              "value": "none",
+              "value": "None",
               "type": "textDecoration"
             }
           },
@@ -2668,6 +2672,10 @@
           "color": {
             "value": "{utrecht.document.subtle.color}",
             "type": "color"
+          },
+          "size": {
+            "type": "sizing",
+            "value": "{rijkshuisstijl.size.2xs}"
           }
         },
         "margin-inline": {
@@ -2681,24 +2689,6 @@
         "font-weight": {
           "value": "{utrecht.document.font-weight}",
           "type": "fontWeights"
-        }
-      }
-    },
-    "todo": {
-      "breadcrumb": {
-        "link": {
-          "icon": {
-            "size": {
-              "type": "sizing",
-              "value": "{utrecht.icon.functional.size}"
-            }
-          }
-        },
-        "divider": {
-          "size": {
-            "type": "sizing",
-            "value": "{rijkshuisstijl.size.2xs}"
-          }
         }
       }
     }
@@ -3362,7 +3352,7 @@
     }
   },
   "components/checkbox-group": {
-    "utrecht": {
+    "todo": {
       "checkbox-group": {
         "padding-block-end": {
           "value": "{rijkshuisstijl.space.block.beetle}",
@@ -3438,7 +3428,7 @@
     }
   },
   "components/data-list": {
-    "utrecht": {
+    "todo": {
       "data-list": {
         "font-family": {
           "value": "{utrecht.document.font-family}",
@@ -3586,7 +3576,7 @@
     }
   },
   "components/drawer": {
-    "utrecht": {
+    "todo": {
       "drawer": {
         "header": {
           "border-width": {
@@ -3716,7 +3706,7 @@
     }
   },
   "components/form-field": {
-    "utrecht": {
+    "todo": {
       "form-field": {
         "invalid": {
           "border-inline-start-color": {
@@ -3735,8 +3725,18 @@
       }
     }
   },
+  "components/form-field-checkbox-option": {
+    "todo": {
+      "form-field-checkbox-option": {
+        "column-gap": {
+          "value": "{rijkshuisstijl.space.column.snail}",
+          "type": "spacing"
+        }
+      }
+    }
+  },
   "components/form-field-description": {
-    "utrecht": {
+    "todo": {
       "form-field-description": {
         "color": {
           "type": "color",
@@ -3761,18 +3761,8 @@
       }
     }
   },
-  "components/form-field-checkbox-option": {
-    "utrecht": {
-      "form-field-checkbox-option": {
-        "column-gap": {
-          "value": "{rijkshuisstijl.space.column.snail}",
-          "type": "spacing"
-        }
-      }
-    }
-  },
   "components/form-field-error-message": {
-    "utrecht": {
+    "todo": {
       "form-field-error-message": {
         "icon": {
           "size": {
@@ -3808,7 +3798,7 @@
     }
   },
   "components/form-field-label": {
-    "utrecht": {
+    "todo": {
       "form-field-label": {
         "color": {
           "type": "color",
@@ -3834,7 +3824,7 @@
     }
   },
   "components/form-field-option-label": {
-    "utrecht": {
+    "todo": {
       "form-field-option-label": {
         "color": {
           "value": "{rijkshuisstijl.color.zwart}",
@@ -3866,7 +3856,7 @@
     }
   },
   "components/form-field-radio-option": {
-    "utrecht": {
+    "todo": {
       "form-field-radio-option": {
         "column-gap": {
           "value": "{rijkshuisstijl.space.column.snail}",
@@ -4092,7 +4082,7 @@
     }
   },
   "components/icon-only-button": {
-    "utrecht": {
+    "todo": {
       "icon-only-button": {
         "padding-block-end": {
           "value": "{rijkshuisstijl.space.block.snail}",
@@ -4134,7 +4124,7 @@
             "value": "{utrecht.interaction.active.color}"
           },
           "text-decoration": {
-            "value": "none",
+            "value": "None",
             "type": "textDecoration"
           }
         },
@@ -4148,7 +4138,7 @@
             "value": "{utrecht.focus.color}"
           },
           "text-decoration": {
-            "value": "none",
+            "value": "None",
             "type": "textDecoration"
           },
           "text-decoration-thickness": {
@@ -4162,7 +4152,7 @@
             "value": "{utrecht.interaction.hover.color}"
           },
           "text-decoration": {
-            "value": "none",
+            "value": "None",
             "type": "textDecoration"
           },
           "text-decoration-thickness": {
@@ -4250,7 +4240,7 @@
               "value": "{utrecht.document.color}",
               "type": "color"
             },
-            "font-familiy": {
+            "font-family": {
               "value": "{utrecht.document.font-family}",
               "type": "fontFamilies"
             },
@@ -4347,8 +4337,48 @@
       }
     }
   },
-  "components/pagination": {
+  "components/ordered-list": {
     "utrecht": {
+      "ordered-list": {
+        "padding-inline-start": {
+          "value": "{rijkshuisstijl.space.inline.rabbit}",
+          "type": "spacing"
+        },
+        "color": {
+          "type": "color",
+          "value": "{utrecht.document.color}"
+        },
+        "font-family": {
+          "value": "{utrecht.document.font-family}",
+          "type": "fontFamilies"
+        },
+        "font-weight": {
+          "value": "{utrecht.document.font-weight}",
+          "type": "fontWeights"
+        },
+        "font-size": {
+          "value": "{utrecht.document.font-size}",
+          "type": "fontSizes"
+        },
+        "line-height": {
+          "value": "{utrecht.document.line-height}",
+          "type": "lineHeights"
+        },
+        "item": {
+          "margin-block-end": {
+            "value": "{rijkshuisstijl.space.block.ant}",
+            "type": "spacing"
+          },
+          "margin-block-start": {
+            "value": "{rijkshuisstijl.space.block.ant}",
+            "type": "spacing"
+          }
+        }
+      }
+    }
+  },
+  "components/pagination": {
+    "todo": {
       "pagination": {
         "relative-link": {
           "border-width": {
@@ -4421,7 +4451,7 @@
               "value": "{utrecht.focus.color}"
             },
             "text-decoration": {
-              "value": "none",
+              "value": "None",
               "type": "textDecoration"
             }
           },
@@ -4444,7 +4474,7 @@
             }
           },
           "text-decoration": {
-            "value": "none",
+            "value": "None",
             "type": "textDecoration"
           },
           "border-radius": {
@@ -4491,7 +4521,7 @@
               "type": "fontWeights"
             },
             "text-decoration": {
-              "value": "none",
+              "value": "None",
               "type": "textDecoration"
             },
             "background-color": {
@@ -4529,7 +4559,7 @@
           },
           "focus": {
             "text-decoration": {
-              "value": "none",
+              "value": "None",
               "type": "textDecoration"
             },
             "background-color": {
@@ -4560,7 +4590,7 @@
             }
           },
           "text-decoration": {
-            "value": "none",
+            "value": "None",
             "type": "textDecoration"
           },
           "active": {
@@ -4643,45 +4673,17 @@
             "value": "{utrecht.document.font-weight}",
             "type": "fontWeights"
           }
-        }
-      }
-    }
-  },
-  "components/ordered-list": {
-    "utrecht": {
-      "ordered-list": {
-        "padding-inline-start": {
-          "value": "{rijkshuisstijl.space.inline.rabbit}",
-          "type": "spacing"
         },
-        "color": {
-          "type": "color",
-          "value": "{utrecht.document.color}"
+        " description": {
+          "font-weight": {
+            "value": "{utrecht.document.font-weight}",
+            "type": "fontWeights"
+          }
         },
-        "font-familiy": {
-          "value": "{utrecht.document.font-family}",
-          "type": "fontFamilies"
-        },
-        "font-weight": {
-          "value": "{utrecht.document.font-weight}",
-          "type": "fontWeights"
-        },
-        "font-size": {
-          "value": "{utrecht.document.font-size}",
-          "type": "fontSizes"
-        },
-        "line-height": {
-          "value": "{utrecht.document.line-height}",
-          "type": "lineHeights"
-        },
-        "item": {
-          "margin-block-end": {
-            "value": "{rijkshuisstijl.space.block.ant}",
-            "type": "spacing"
-          },
-          "margin-block-start": {
-            "value": "{rijkshuisstijl.space.block.ant}",
-            "type": "spacing"
+        "description": {
+          "color": {
+            "value": "{utrecht.document.color}",
+            "type": "color"
           }
         }
       }
@@ -4942,7 +4944,7 @@
     }
   },
   "components/radio-group": {
-    "utrecht": {
+    "todo": {
       "radio-group": {
         "padding-block-end": {
           "value": "{rijkshuisstijl.space.block.beetle}",
@@ -5121,7 +5123,7 @@
       }
     }
   },
-  "components/side-nav": {
+  "components/sidenav": {
     "denhaag": {
       "sidenav": {
         "link": {
@@ -5930,7 +5932,7 @@
             "value": "{utrecht.document.color}"
           }
         },
-        "font-familiy": {
+        "font-family": {
           "value": "{utrecht.document.font-family}",
           "type": "fontFamilies"
         },
@@ -5982,8 +5984,8 @@
       "components/data-list",
       "components/drawer",
       "components/form-field",
-      "components/form-field-description",
       "components/form-field-checkbox-option",
+      "components/form-field-description",
       "components/form-field-error-message",
       "components/form-field-label",
       "components/form-field-option-label",
@@ -5993,14 +5995,14 @@
       "components/icon-only-button",
       "components/link",
       "components/modal-dialog",
-      "components/pagination",
       "components/ordered-list",
+      "components/pagination",
       "components/paragraph",
       "components/radio",
       "components/radio-group",
       "components/select",
       "components/separator",
-      "components/side-nav",
+      "components/sidenav",
       "components/skip-link",
       "components/status-badge",
       "components/table",
