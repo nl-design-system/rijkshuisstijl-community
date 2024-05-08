@@ -1,25 +1,21 @@
-/* eslint-env node */
 import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
   },
-  stories: ['../src/**/*stories.@(js|jsx|mdx|ts|tsx)'],
+  stories: ['../src/**/*stories.@(js|jsx|ts|tsx)', '../src/**/*.mdx'],
   addons: [
-    '@etchteam/storybook-addon-status/register',
-    '@storybook/addon-a11y/register',
+    '@storybook/addon-a11y',
+    '@storybook/addon-actions',
     '@storybook/addon-docs',
-    '@storybook/addon-viewport/register',
-    '@storybook/preset-scss',
-    '@storybook/addon-mdx-gfm',
-    '@storybook/addon-styling',
+    '@storybook/addon-interactions',
+    '@storybook/addon-links',
+    '@storybook/addon-themes',
+    '@storybook/addon-viewport',
+    '@whitespace/storybook-addon-html',
   ],
   framework: '@storybook/react-vite',
-  features: {
-    buildStoriesJson: true,
-    storyStoreV7: true,
-  },
   staticDirs: ['../../../proprietary/assets/src'],
   docs: {
     autodocs: true,
