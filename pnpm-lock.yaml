@@ -384,7 +384,7 @@ importers:
         version: 5.4.5
       vite:
         specifier: 5.2.11
-        version: 5.2.11
+        version: 5.2.11(@types/node@20.12.11)(sass@1.77.0)
 
   packages/web-components-react:
     devDependencies:
@@ -416,18 +416,18 @@ importers:
   packages/web-components-stencil:
     dependencies:
       '@stencil/core':
-        specifier: 4.18.0
-        version: 4.18.0
+        specifier: 4.18.1
+        version: 4.18.1
     devDependencies:
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css
       '@stencil/react-output-target':
         specifier: 0.5.3
-        version: 0.5.3(@stencil/core@4.18.0)
+        version: 0.5.3(@stencil/core@4.18.1)
       '@stencil/sass':
         specifier: 3.0.12
-        version: 3.0.12(@stencil/core@4.18.0)
+        version: 3.0.12(@stencil/core@4.18.1)
       '@types/jest':
         specifier: 29.5.12
         version: 29.5.12
@@ -2731,7 +2731,7 @@ packages:
       magic-string: 0.27.0
       react-docgen-typescript: 2.2.2(typescript@5.4.5)
       typescript: 5.4.5
-      vite: 5.2.11
+      vite: 5.2.11(@types/node@20.12.11)(sass@1.77.0)
     dev: true
 
   /@jridgewell/gen-mapping@0.3.3:
@@ -3562,20 +3562,6 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@rollup/pluginutils@5.0.2:
-    resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      rollup: ^1.20.0||^2.0.0||^3.0.0
-    peerDependenciesMeta:
-      rollup:
-        optional: true
-    dependencies:
-      '@types/estree': 1.0.1
-      estree-walker: 2.0.2
-      picomatch: 2.3.1
-    dev: true
-
   /@rollup/pluginutils@5.0.2(rollup@4.17.2):
     resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
     engines: {node: '>=14.0.0'}
@@ -3816,8 +3802,8 @@ packages:
       '@sinonjs/commons': 3.0.0
     dev: true
 
-  /@stencil/core@4.18.0:
-    resolution: {integrity: sha512-cN+nvjy0L8KyYq7N1bmswN/AcBustFlsAxfyPQ+fd3m98lPo53jNKIxKve1ZQ4ZmzSzYO7alDhZvjIesM0rl7w==}
+  /@stencil/core@4.18.1:
+    resolution: {integrity: sha512-WoRctLuXqoiLquS4EEvMoyLsbQ5+xuk8wp0+n4mYjoAoXy8NppXmMqKrMlFyYXL/zUI5ODS7U7IcLCpZ3IcKZQ==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
 
@@ -3827,21 +3813,21 @@ packages:
     hasBin: true
     dev: true
 
-  /@stencil/react-output-target@0.5.3(@stencil/core@4.18.0):
+  /@stencil/react-output-target@0.5.3(@stencil/core@4.18.1):
     resolution: {integrity: sha512-68jwRp35CjAcwhTJ9yFD/3n+jrHOqvEH2jreVuPVvZK+4tkhPlYlwz0d1E1RlF3jyifUSfdkWUGgXIEy8Fo3yw==}
     peerDependencies:
       '@stencil/core': '>=2.0.0 || >=3 || >= 4.0.0-beta.0 || >= 4.0.0'
     dependencies:
-      '@stencil/core': 4.18.0
+      '@stencil/core': 4.18.1
     dev: true
 
-  /@stencil/sass@3.0.12(@stencil/core@4.18.0):
+  /@stencil/sass@3.0.12(@stencil/core@4.18.1):
     resolution: {integrity: sha512-aXMgpG13ftxLYo2dDauapvE9gKzSxTAqCMOfTqbPhKUCZ43JsknkLx+PArRaFtfYeVGSQ8eTS4ck7/Nlec+PNA==}
     engines: {node: '>=12.0.0', npm: '>=6.0.0'}
     peerDependencies:
       '@stencil/core': '>=2.0.0 || >=3.0.0-beta.0 || >= 4.0.0-beta.0 || >= 4.0.0'
     dependencies:
-      '@stencil/core': 4.18.0
+      '@stencil/core': 4.18.1
     dev: true
 
   /@storybook/addon-a11y@8.0.10:
@@ -4037,7 +4023,7 @@ packages:
       magic-string: 0.30.5
       ts-dedent: 2.2.0
       typescript: 5.4.5
-      vite: 5.2.11
+      vite: 5.2.11(@types/node@20.12.11)(sass@1.77.0)
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -4400,7 +4386,7 @@ packages:
       vite: ^4.0.0 || ^5.0.0
     dependencies:
       '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.0(typescript@5.4.5)(vite@5.2.11)
-      '@rollup/pluginutils': 5.0.2
+      '@rollup/pluginutils': 5.0.2(rollup@4.17.2)
       '@storybook/builder-vite': 8.0.10(typescript@5.4.5)(vite@5.2.11)
       '@storybook/node-logger': 8.0.10
       '@storybook/react': 8.0.10(react-dom@18.3.1)(react@18.3.1)(typescript@5.4.5)
@@ -4411,7 +4397,7 @@ packages:
       react-dom: 18.3.1(react@18.3.1)
       resolve: 1.22.8
       tsconfig-paths: 4.2.0
-      vite: 5.2.11
+      vite: 5.2.11(@types/node@20.12.11)(sass@1.77.0)
     transitivePeerDependencies:
       - '@preact/preset-vite'
       - encoding
@@ -4493,7 +4479,7 @@ packages:
       '@storybook/instrumenter': 8.0.10
       '@storybook/preview-api': 8.0.10
       '@testing-library/dom': 9.3.4
-      '@testing-library/jest-dom': 6.4.5
+      '@testing-library/jest-dom': 6.4.5(@types/jest@29.5.12)(jest@29.7.0)
       '@testing-library/user-event': 14.5.2(@testing-library/dom@9.3.4)
       '@vitest/expect': 1.3.1
       '@vitest/spy': 1.6.0
@@ -4583,37 +4569,6 @@ packages:
       dom-accessibility-api: 0.5.16
       lz-string: 1.5.0
       pretty-format: 27.5.1
-    dev: true
-
-  /@testing-library/jest-dom@6.4.5:
-    resolution: {integrity: sha512-AguB9yvTXmCnySBP1lWjfNNUwpbElsaQ567lt2VdGqAdHtpieLgjmcVyv1q7PMIvLbgpDdkWV5Ydv3FEejyp2A==}
-    engines: {node: '>=14', npm: '>=6', yarn: '>=1'}
-    peerDependencies:
-      '@jest/globals': '>= 28'
-      '@types/bun': latest
-      '@types/jest': '>= 28'
-      jest: '>= 28'
-      vitest: '>= 0.32'
-    peerDependenciesMeta:
-      '@jest/globals':
-        optional: true
-      '@types/bun':
-        optional: true
-      '@types/jest':
-        optional: true
-      jest:
-        optional: true
-      vitest:
-        optional: true
-    dependencies:
-      '@adobe/css-tools': 4.3.2
-      '@babel/runtime': 7.24.5
-      aria-query: 5.3.0
-      chalk: 3.0.0
-      css.escape: 1.5.1
-      dom-accessibility-api: 0.6.3
-      lodash: 4.17.21
-      redent: 3.0.0
     dev: true
 
   /@testing-library/jest-dom@6.4.5(@types/jest@29.5.12)(jest@29.7.0):
@@ -16804,41 +16759,6 @@ packages:
     dependencies:
       lodash: 4.17.21
       vite: 5.2.11(@types/node@20.12.11)(sass@1.77.0)
-    dev: true
-
-  /vite@5.2.11:
-    resolution: {integrity: sha512-HndV31LWW05i1BLPMUCE1B9E9GFbOu1MbenhS58FuK6owSO5qHm7GiCotrNY1YE5rMeQSFBGmT5ZaLEjFizgiQ==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': ^18.0.0 || >=20.0.0
-      less: '*'
-      lightningcss: ^1.21.0
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      esbuild: 0.20.2
-      postcss: 8.4.38
-      rollup: 4.17.2
-    optionalDependencies:
-      fsevents: 2.3.3
     dev: true
 
   /vite@5.2.11(@types/node@20.12.11)(sass@1.77.0):
