@@ -140,10 +140,6 @@ importers:
         specifier: 5.4.5
         version: 5.4.5
 
-  apps/rvs.rivm.nl/dist: {}
-
-  apps/rvs.rivm.nl/dist/types: {}
-
   packages/components-css: {}
 
   packages/components-react:
@@ -306,8 +302,8 @@ importers:
         specifier: 8.0.10
         version: 8.0.10
       '@storybook/addon-actions':
-        specifier: 8.0.10
-        version: 8.0.10
+        specifier: 8.1.2
+        version: 8.1.2
       '@storybook/addon-docs':
         specifier: 8.0.10
         version: 8.0.10(encoding@0.1.13)
@@ -2209,8 +2205,8 @@ packages:
   '@storybook/addon-a11y@8.0.10':
     resolution: {integrity: sha512-ymeTRE1uWplifWUMc3tO5lLGn4buS/hUVWKRM11SqugmxRym55B4thCJU089HAEMY+V/imiCeOE63TT+DGsk8g==}
 
-  '@storybook/addon-actions@8.0.10':
-    resolution: {integrity: sha512-IEuc30UAFl7Ws0GwaY/whjBnGaViVEVjmPc+MXUym2wwwJbnCbI+BKJxPoYi/I7QJb5aUNToAE6pl2pDda2g3Q==}
+  '@storybook/addon-actions@8.1.2':
+    resolution: {integrity: sha512-EW8sYgA1vpn67pTheBjfLCfPO82w0jMkKYFDFMMvxVoEDbJ3fgsUDDd058zBBFiDtnngv3VUrXASPTxK51F2mQ==}
 
   '@storybook/addon-docs@8.0.10':
     resolution: {integrity: sha512-y+Agoez/hXZHKUMIZHU96T5V1v0cs4ArSNfjqDg9DPYcyQ88ihJNb6ZabIgzmEaJF/NncCW+LofWeUtkTwalkw==}
@@ -2288,6 +2284,9 @@ packages:
 
   '@storybook/core-events@8.0.10':
     resolution: {integrity: sha512-TuHPS6p5ZNr4vp4butLb4R98aFx0NRYCI/7VPhJEUH5rPiqNzE3PZd8DC8rnVxavsJ+jO1/y+egNKXRYkEcoPQ==}
+
+  '@storybook/core-events@8.1.2':
+    resolution: {integrity: sha512-GKsvo/eeEQYDEhAw5YkUIZHYNurAJjzW3+uzThUuC1r0CGcfE+twJVfQXynAyOgL6hFdqy7879/3augf3v3cJQ==}
 
   '@storybook/core-server@8.0.10':
     resolution: {integrity: sha512-HYDw2QFBxg1X/d6g0rUhirOB5Jq6g90HBnyrZzxKoqKWJCNsCADSgM+h9HgtUw0jA97qBpIqmNO9n3mXFPWU/Q==}
@@ -2371,6 +2370,7 @@ packages:
 
   '@storybook/testing-library@0.2.2':
     resolution: {integrity: sha512-L8sXFJUHmrlyU2BsWWZGuAjv39Jl1uAqUHdxmN42JY15M4+XCMjGlArdCCjDe1wpTSW6USYISA9axjZojgtvnw==}
+    deprecated: In Storybook 8, this package functionality has been integrated to a new package called @storybook/test, which uses Vitest APIs for an improved experience. When upgrading to Storybook 8 with 'npx storybook@latest upgrade', you will get prompted and will get an automigration for the new package. Please migrate when you can.
 
   '@storybook/theming@8.0.10':
     resolution: {integrity: sha512-7NHt7bMC7lPkwz9KdDpa6DkLoQZz5OV6jsx/qY91kcdLo1rpnRPAiVlJvmWesFxi1oXOpVDpHHllWzf8KDBv8A==}
@@ -10822,9 +10822,9 @@ snapshots:
       '@storybook/addon-highlight': 8.0.10
       axe-core: 4.7.2
 
-  '@storybook/addon-actions@8.0.10':
+  '@storybook/addon-actions@8.1.2':
     dependencies:
-      '@storybook/core-events': 8.0.10
+      '@storybook/core-events': 8.1.2
       '@storybook/global': 5.0.0
       '@types/uuid': 9.0.7
       dequal: 2.0.3
@@ -11103,6 +11103,11 @@ snapshots:
 
   '@storybook/core-events@8.0.10':
     dependencies:
+      ts-dedent: 2.2.0
+
+  '@storybook/core-events@8.1.2':
+    dependencies:
+      '@storybook/csf': 0.1.7
       ts-dedent: 2.2.0
 
   '@storybook/core-server@8.0.10(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
