@@ -140,10 +140,6 @@ importers:
         specifier: 5.4.5
         version: 5.4.5
 
-  apps/rvs.rivm.nl/dist: {}
-
-  apps/rvs.rivm.nl/dist/types: {}
-
   packages/components-css: {}
 
   packages/components-react:
@@ -420,18 +416,18 @@ importers:
   packages/web-components-stencil:
     dependencies:
       '@stencil/core':
-        specifier: 4.18.0
-        version: 4.18.0
+        specifier: 4.18.2
+        version: 4.18.2
     devDependencies:
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css
       '@stencil/react-output-target':
         specifier: 0.5.3
-        version: 0.5.3(@stencil/core@4.18.0)
+        version: 0.5.3(@stencil/core@4.18.2)
       '@stencil/sass':
         specifier: 3.0.12
-        version: 3.0.12(@stencil/core@4.18.0)
+        version: 3.0.12(@stencil/core@4.18.2)
       '@types/jest':
         specifier: 29.5.12
         version: 29.5.12
@@ -2185,8 +2181,8 @@ packages:
   '@sinonjs/fake-timers@10.3.0':
     resolution: {integrity: sha512-V4BG07kuYSUkTCSBHG8G8TNhM+F19jXFWnQtzj+we8DrkpSBCee9Z3Ms8yiGer/dlmhe35/Xdgyo3/0rQKg7YA==}
 
-  '@stencil/core@4.18.0':
-    resolution: {integrity: sha512-cN+nvjy0L8KyYq7N1bmswN/AcBustFlsAxfyPQ+fd3m98lPo53jNKIxKve1ZQ4ZmzSzYO7alDhZvjIesM0rl7w==}
+  '@stencil/core@4.18.2':
+    resolution: {integrity: sha512-GLYbzv3Bq/oUbQk3CH09zkjISANccyE5/A1C7+1JZhdnWUx1MRuWQR9/2uzSPR7kF0sdppwzXvArl7VqYCxLOQ==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
 
@@ -2371,6 +2367,7 @@ packages:
 
   '@storybook/testing-library@0.2.2':
     resolution: {integrity: sha512-L8sXFJUHmrlyU2BsWWZGuAjv39Jl1uAqUHdxmN42JY15M4+XCMjGlArdCCjDe1wpTSW6USYISA9axjZojgtvnw==}
+    deprecated: In Storybook 8, this package functionality has been integrated to a new package called @storybook/test, which uses Vitest APIs for an improved experience. When upgrading to Storybook 8 with 'npx storybook@latest upgrade', you will get prompted and will get an automigration for the new package. Please migrate when you can.
 
   '@storybook/theming@8.0.10':
     resolution: {integrity: sha512-7NHt7bMC7lPkwz9KdDpa6DkLoQZz5OV6jsx/qY91kcdLo1rpnRPAiVlJvmWesFxi1oXOpVDpHHllWzf8KDBv8A==}
@@ -10805,17 +10802,17 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 3.0.0
 
-  '@stencil/core@4.18.0': {}
+  '@stencil/core@4.18.2': {}
 
   '@stencil/core@4.5.0': {}
 
-  '@stencil/react-output-target@0.5.3(@stencil/core@4.18.0)':
+  '@stencil/react-output-target@0.5.3(@stencil/core@4.18.2)':
     dependencies:
-      '@stencil/core': 4.18.0
+      '@stencil/core': 4.18.2
 
-  '@stencil/sass@3.0.12(@stencil/core@4.18.0)':
+  '@stencil/sass@3.0.12(@stencil/core@4.18.2)':
     dependencies:
-      '@stencil/core': 4.18.0
+      '@stencil/core': 4.18.2
 
   '@storybook/addon-a11y@8.0.10':
     dependencies:
