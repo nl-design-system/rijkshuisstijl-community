@@ -128,8 +128,8 @@ importers:
         specifier: 3.0.1-alpha.33
         version: 3.0.1-alpha.33
       '@utrecht/component-library-react':
-        specifier: 3.0.1-alpha.33
-        version: 3.0.1-alpha.33(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 3.0.1-alpha.41
+        version: 3.0.1-alpha.41(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -139,10 +139,6 @@ importers:
       typescript:
         specifier: 5.4.5
         version: 5.4.5
-
-  apps/rvs.rivm.nl/dist: {}
-
-  apps/rvs.rivm.nl/dist/types: {}
 
   packages/components-css: {}
 
@@ -351,8 +347,8 @@ importers:
         specifier: 3.0.1-alpha.33
         version: 3.0.1-alpha.33
       '@utrecht/component-library-react':
-        specifier: 3.0.1-alpha.33
-        version: 3.0.1-alpha.33(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 3.0.1-alpha.41
+        version: 3.0.1-alpha.41(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/web-component-library-react':
         specifier: 1.0.2
         version: 1.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2371,6 +2367,7 @@ packages:
 
   '@storybook/testing-library@0.2.2':
     resolution: {integrity: sha512-L8sXFJUHmrlyU2BsWWZGuAjv39Jl1uAqUHdxmN42JY15M4+XCMjGlArdCCjDe1wpTSW6USYISA9axjZojgtvnw==}
+    deprecated: In Storybook 8, this package functionality has been integrated to a new package called @storybook/test, which uses Vitest APIs for an improved experience. When upgrading to Storybook 8 with 'npx storybook@latest upgrade', you will get prompted and will get an automigration for the new package. Please migrate when you can.
 
   '@storybook/theming@8.0.10':
     resolution: {integrity: sha512-7NHt7bMC7lPkwz9KdDpa6DkLoQZz5OV6jsx/qY91kcdLo1rpnRPAiVlJvmWesFxi1oXOpVDpHHllWzf8KDBv8A==}
@@ -2777,8 +2774,8 @@ packages:
   '@utrecht/component-library-css@3.0.1-alpha.33':
     resolution: {integrity: sha512-0zYgnl1wIitpoULWacQohuQe21FNxJDANjdVpDkLcGH6QwVqvxoZxmMGUBIKOK72f3pDhyzs7HkdUSEqsu7Zfg==}
 
-  '@utrecht/component-library-react@3.0.1-alpha.33':
-    resolution: {integrity: sha512-08evj9q090LGiY/zAPzrD7j63fxyFcoBvyEMVd7DA+mXK5F8URb7aB11knN2Od4u9rkeEG1V08MQALrqB+1jdQ==}
+  '@utrecht/component-library-react@3.0.1-alpha.41':
+    resolution: {integrity: sha512-Mra3ZeoDIdJAWkwRtrHFnMLDGN6goikWuHOP7v499HWSUxciDLaD5rXXgjIE3Zs+NfuwGiCbyRun6GJ9VAEUwg==}
     peerDependencies:
       date-fns: ^2.30.0
       react: '18'
@@ -11820,7 +11817,7 @@ snapshots:
 
   '@utrecht/component-library-css@3.0.1-alpha.33': {}
 
-  '@utrecht/component-library-react@3.0.1-alpha.33(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@utrecht/component-library-react@3.0.1-alpha.41(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       clsx: 1.2.1
       lodash.chunk: 4.2.0
