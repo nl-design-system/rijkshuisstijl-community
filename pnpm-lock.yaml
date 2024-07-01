@@ -128,8 +128,8 @@ importers:
         specifier: 3.2.0
         version: 3.2.0
       '@utrecht/component-library-react':
-        specifier: 3.1.0
-        version: 3.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 4.0.0
+        version: 4.0.0(@babel/runtime@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -347,8 +347,8 @@ importers:
         specifier: 3.2.0
         version: 3.2.0
       '@utrecht/component-library-react':
-        specifier: 3.1.0
-        version: 3.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 4.0.0
+        version: 4.0.0(@babel/runtime@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/web-component-library-react':
         specifier: 1.1.0
         version: 1.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1672,6 +1672,7 @@ packages:
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
+    deprecated: Use @eslint/config-array instead
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -1679,6 +1680,7 @@ packages:
 
   '@humanwhocodes/object-schema@2.0.2':
     resolution: {integrity: sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==}
+    deprecated: Use @eslint/object-schema instead
 
   '@hutson/parse-repository-url@5.0.0':
     resolution: {integrity: sha512-e5+YUKENATs1JgYHMzTr2MW/NDcXGfYFAuOQU8gJgF/kEh4EqKgfGrfLI67bMD4tbhZVlkigz/9YYwWcbOFthg==}
@@ -2629,6 +2631,7 @@ packages:
 
   '@storybook/testing-library@0.2.2':
     resolution: {integrity: sha512-L8sXFJUHmrlyU2BsWWZGuAjv39Jl1uAqUHdxmN42JY15M4+XCMjGlArdCCjDe1wpTSW6USYISA9axjZojgtvnw==}
+    deprecated: In Storybook 8, this package functionality has been integrated to a new package called @storybook/test, which uses Vitest APIs for an improved experience. When upgrading to Storybook 8 with 'npx storybook@latest upgrade', you will get prompted and will get an automigration for the new package. Please migrate when you can.
 
   '@storybook/theming@8.1.9':
     resolution: {integrity: sha512-CVM3F4Fa9cIFL4u/BhbANWytShBFeFBZeCFwvcJizJUL+nSgVlxeYilxwQB/1AxyJn/+OprW3nCw5aSbui/EEA==}
@@ -3036,9 +3039,10 @@ packages:
   '@utrecht/component-library-css@3.2.0':
     resolution: {integrity: sha512-gye9m5NaxZGTTHLeYiCaGwugitNZE6jB1OPyo10m/YGesh6zmM+lCJoFf1UY2Q9UyTQih6SKC9dn5QU7QObY9g==}
 
-  '@utrecht/component-library-react@3.1.0':
-    resolution: {integrity: sha512-mz2CGkPbbAZiv+wcdUPu5MwfZ3fUqIUVI0HKzAfHNDPbB71pnboW8QSMV9HItsQ/bu5+4zM+l4fyJ69mvOGK0w==}
+  '@utrecht/component-library-react@4.0.0':
+    resolution: {integrity: sha512-scrPPT3TM1ZGdTUBuQ4L72DW/dZyKacq+lrrjJfNpXB/xnSFeGLWi4gzR6xzg2c6q7ucUt0SKIYi6/W4r7USKg==}
     peerDependencies:
+      '@babel/runtime': ^7.23.6
       date-fns: ^2.30.0
       react: '18'
       react-dom: '18'
@@ -5016,10 +5020,12 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   glob@8.1.0:
     resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
     engines: {node: '>=12'}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   global-dirs@3.0.1:
     resolution: {integrity: sha512-NBcGGFbBA9s1VzD41QXDG+3++t9Mn5t1FpLdhESY6oKY4gYTFpX4wO3sqGUa0Srjtbfj3szX0RnemmrVRUdULA==}
@@ -5344,6 +5350,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -12454,8 +12461,9 @@ snapshots:
 
   '@utrecht/component-library-css@3.2.0': {}
 
-  '@utrecht/component-library-react@3.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@utrecht/component-library-react@4.0.0(@babel/runtime@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
+      '@babel/runtime': 7.24.7
       clsx: 1.2.1
       lodash.chunk: 4.2.0
       react: 18.3.1
