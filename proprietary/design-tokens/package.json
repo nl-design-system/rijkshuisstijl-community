@@ -17,9 +17,9 @@
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git"
   },
   "scripts": {
-    "clean": "rimraf dist/",
+    "clean": "rimraf dist/* src/generated/*",
     "build": "npm-run-all clean build:figma-tokens build:style-dictionary",
-    "build:figma-tokens": "token-transformer --throwErrorWhenNotResolved=true figma/*.tokens.json src/generated/figma.tokens.json",
+    "build:figma-tokens": "node ./token-transformer.mjs",
     "build:scss": "sass --no-source-map src/:dist/",
     "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.json",
     "watch": "npm-run-all watch:**",
