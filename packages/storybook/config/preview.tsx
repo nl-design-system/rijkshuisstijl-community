@@ -23,7 +23,7 @@ const preview: Preview = {
         Logius: 'logius-theme',
         RIVM: 'rivm-theme',
       },
-      defaultTheme: 'Logius',
+      defaultTheme: 'RijkshuisstijlCommunity',
     }),
     (Story: any) => <UtrechtDocument>{Story()}</UtrechtDocument>,
   ],

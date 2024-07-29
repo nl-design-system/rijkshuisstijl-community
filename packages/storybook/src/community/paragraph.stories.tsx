@@ -1,13 +1,13 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import { UtrechtParagraph } from '@utrecht/web-component-library-react';
+import { Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import readme from './paragraph.md?raw';
 
 const meta = {
   title: 'Logius/Paragraph',
   id: 'logius-paragraph',
-  component: UtrechtParagraph,
+  component: Paragraph,
   argTypes: {
     lead: {
       description: 'Lead paragraph',
@@ -42,7 +42,7 @@ const meta = {
       },
     },
   },
-} as Meta<typeof UtrechtParagraph>;
+} as Meta<typeof Paragraph>;
 
 export default meta;
 

@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import { UtrechtIcon, UtrechtLink } from '@utrecht/web-component-library-react';
+import { Icon, Link } from '@utrecht/component-library-react/dist/css-module';
 import { PropsWithChildren } from 'react';
 import readme from './link.md?raw';
 interface LinkStoryProps {
@@ -11,19 +11,19 @@ interface LinkStoryProps {
 }
 
 const LinkStory = ({ href, children, iconLeft, iconRight, ...props }: PropsWithChildren<LinkStoryProps>) => (
-  <UtrechtLink href={href} {...props} style={{ '--utrecht-icon-inset-block-start': '0.2em' }}>
+  <Link href={href} {...props} style={{ '--utrecht-icon-inset-block-start': '0.2em' }}>
     {iconLeft && (
-      <UtrechtIcon>
+      <Icon>
         <rhc-icon-calendar></rhc-icon-calendar>
-      </UtrechtIcon>
+      </Icon>
     )}
     {children}
     {iconRight && (
-      <UtrechtIcon>
+      <Icon>
         <rhc-icon-arrow-right></rhc-icon-arrow-right>
-      </UtrechtIcon>
+      </Icon>
     )}
-  </UtrechtLink>
+  </Link>
 );
 
 const meta = {
