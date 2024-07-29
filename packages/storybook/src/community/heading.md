@@ -1,3 +1,3 @@
 <!-- @license CC0-1.0 -->
 
-# Rijkhuisstijl Community heading component
+# Rijkshuisstijl Community heading component
