@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import { UtrechtAlert, UtrechtHeading, UtrechtIcon, UtrechtParagraph } from '@utrecht/web-component-library-react';
+import { Alert, Heading, Icon, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import readme from './alert.md?raw';
 
 interface AlertStoryComponentProps {
@@ -13,7 +13,7 @@ interface AlertStoryComponentProps {
 }
 
 const AlertStoryComponent = ({ type, icon, heading, textContent, headingLevel }: AlertStoryComponentProps) => {
-  const Icon = () =>
+  const RhcIcon = () =>
     icon === 'info' ? (
       <rhc-icon-info></rhc-icon-info>
     ) : icon === 'success' ? (
@@ -27,15 +27,15 @@ const AlertStoryComponent = ({ type, icon, heading, textContent, headingLevel }:
     );
 
   return (
-    <UtrechtAlert type={type}>
+    <Alert type={type}>
       {icon && (
-        <UtrechtIcon slot="icon">
-          <Icon />
-        </UtrechtIcon>
+        <Icon slot="icon">
+          <RhcIcon />
+        </Icon>
       )}
-      <UtrechtHeading level={headingLevel}>{heading}</UtrechtHeading>
-      <UtrechtParagraph>{textContent}</UtrechtParagraph>
-    </UtrechtAlert>
+      <Heading level={headingLevel}>{heading}</Heading>
+      <Paragraph>{textContent}</Paragraph>
+    </Alert>
   );
 };
 

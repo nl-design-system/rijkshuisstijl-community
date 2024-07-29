@@ -1,13 +1,13 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import { UtrechtHeading } from '@utrecht/web-component-library-react';
+import { Heading } from '@utrecht/component-library-react/dist/css-module';
 import readme from './heading.md?raw';
 
 const meta = {
   title: 'Logius/Heading',
   id: 'logius-heading',
-  component: UtrechtHeading,
+  component: Heading,
   argTypes: {
     level: {
       description: 'Heading level',
@@ -41,7 +41,7 @@ const meta = {
       },
     },
   },
-} as Meta<typeof UtrechtHeading>;
+} as Meta<typeof Heading>;
 
 export default meta;
 

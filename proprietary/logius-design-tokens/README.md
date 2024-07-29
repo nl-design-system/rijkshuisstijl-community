@@ -85,13 +85,13 @@ This method should only be used in case there is no control over the HTML templa
 Use files from this package in JavaScript projects, for example in React Native or Storybook:
 
 ```js
-import { logiusButtonFontSize } from "@rijkshuisstijl-community/logius-design-tokens/dist/index.mjs";
+import { logiusButtonFontSize } from '@rijkshuisstijl-community/logius-design-tokens/dist/index.mjs';
 ```
 
 ### `dist/_variables.scss`
 
 ```scss
-@import "~@rijkshuisstijl-community/logius-design-tokens/dist/variables";
+@import '~@rijkshuisstijl-community/logius-design-tokens/dist/variables';
 
 button {
   font-size: $utrecht-button-font-size;
@@ -103,7 +103,7 @@ SCSS variables are not the preferred way to style components, it is better to us
 However, SCSS variables could be very useful to re-use values where CSS variables cannot be used, like inside CSS media queries:
 
 ```scss
-@import "~@rijkshuisstijl-community/logius-design-tokens/dist/variables";
+@import '~@rijkshuisstijl-community/logius-design-tokens/dist/variables';
 
 @media (min-width: $logius-viewport-scale-xl-width) {
   --logius-heading-1-font-size: 3rem;
@@ -113,7 +113,7 @@ However, SCSS variables could be very useful to re-use values where CSS variable
 SCSS variables are also useful in the process of incrementally migrating away from your a codebase that currently uses SCSS, such as a website built with [Bootstrap 4 components](https://getbootstrap.com/docs/4.6/getting-started/theming/), by already using the design tokens as single source of truth. For example:
 
 ```scss
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import '../node_modules/bootstrap/scss/bootstrap';
 
 $body-bg: $logius-document-background-color;
 $body-color: $logius-document-color;

@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import { UtrechtButton, UtrechtIcon } from '@utrecht/web-component-library-react';
+import { Button, Icon } from '@utrecht/component-library-react/dist/css-module';
 import { PropsWithChildren } from 'react';
 import readme from './button.md?raw';
 
@@ -12,23 +12,19 @@ interface ButtonStoryProps {
 }
 
 const ButtonStory = ({ appearance, children, iconLeft, iconRight, ...props }: PropsWithChildren<ButtonStoryProps>) => (
-  <UtrechtButton
-    appearance={appearance}
-    {...props}
-    style={{ '--utrecht-icon-inset-block-start': iconLeft ? '-0.1em' : 0 }}
-  >
+  <Button appearance={appearance} {...props} style={{ '--utrecht-icon-inset-block-start': iconLeft ? '-0.1em' : 0 }}>
     {iconLeft && (
-      <UtrechtIcon>
+      <Icon>
         <rhc-icon-calendar></rhc-icon-calendar>
-      </UtrechtIcon>
+      </Icon>
     )}
     {children}
     {iconRight && (
-      <UtrechtIcon>
+      <Icon>
         <rhc-icon-arrow-right></rhc-icon-arrow-right>
-      </UtrechtIcon>
+      </Icon>
     )}
-  </UtrechtButton>
+  </Button>
 );
 
 const meta = {
