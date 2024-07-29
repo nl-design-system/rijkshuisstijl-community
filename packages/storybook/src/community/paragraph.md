@@ -1,1 +1,1 @@
-# Rijkhuisstijl Community paragraph component
+# Rijkshuisstijl Community paragraph component
