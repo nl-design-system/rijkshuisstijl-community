@@ -18,16 +18,18 @@
   },
   "scripts": {
     "clean": "rimraf dist/",
-    "prebuild": "npm run clean",
-    "build": "npm-run-all build:**",
+    "build": "npm-run-all clean build:figma-tokens build:style-dictionary",
+    "build:figma-tokens": "token-transformer --throwErrorWhenNotResolved=true figma/*.tokens.json src/generated/figma.tokens.json",
+    "build:scss": "sass --no-source-map src/:dist/",
     "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.json",
     "watch": "npm-run-all watch:**",
-    "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'npm run build' 'src/**/*.tokens.json'"
+    "watch:style-dictionary": "chokidar --follow-symlinks --command 'npm-run-all clean build:figma-tokens build:style-dictionary' 'src/**/*.tokens.json'"
   },
   "devDependencies": {
     "chokidar-cli": "3.0.0",
     "npm-run-all": "4.1.5",
     "rimraf": "6.0.1",
-    "style-dictionary": "3.9.2"
+    "style-dictionary": "3.9.2",
+    "token-transformer": "0.0.33"
   }
 }
