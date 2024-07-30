@@ -1,5 +1,11 @@
 /* @license CC0-1.0 */
 
+import {
+  RhcIconError,
+  RhcIconInfo,
+  RhcIconSuccess,
+  RhcIconWarning,
+} from '@rijkshuisstijl-community/web-components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Alert, Heading, Icon, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import readme from './alert.md?raw';
@@ -15,13 +21,13 @@ interface AlertStoryComponentProps {
 const AlertStoryComponent = ({ type, icon, heading, textContent, headingLevel }: AlertStoryComponentProps) => {
   const RhcIcon = () =>
     icon === 'info' ? (
-      <rhc-icon-info></rhc-icon-info>
+      <RhcIconInfo></RhcIconInfo>
     ) : icon === 'success' ? (
-      <rhc-icon-succes></rhc-icon-succes>
+      <RhcIconSuccess></RhcIconSuccess>
     ) : icon === 'warning' ? (
-      <rhc-icon-warning></rhc-icon-warning>
+      <RhcIconWarning></RhcIconWarning>
     ) : icon === 'error' ? (
-      <rhc-icon-error></rhc-icon-error>
+      <RhcIconError></RhcIconError>
     ) : (
       <></>
     );

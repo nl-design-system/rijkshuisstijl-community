@@ -1,5 +1,6 @@
 /* @license CC0-1.0 */
 
+import { RhcIconArrowRight, RhcIconCalendar } from '@rijkshuisstijl-community/web-components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button, Icon } from '@utrecht/component-library-react/dist/css-module';
 import { PropsWithChildren } from 'react';
@@ -15,13 +16,13 @@ const ButtonStory = ({ appearance, children, iconLeft, iconRight, ...props }: Pr
   <Button appearance={appearance} {...props} style={{ '--utrecht-icon-inset-block-start': iconLeft ? '-0.1em' : 0 }}>
     {iconLeft && (
       <Icon>
-        <rhc-icon-calendar></rhc-icon-calendar>
+        <RhcIconCalendar></RhcIconCalendar>
       </Icon>
     )}
     {children}
     {iconRight && (
       <Icon>
-        <rhc-icon-arrow-right></rhc-icon-arrow-right>
+        <RhcIconArrowRight></RhcIconArrowRight>
       </Icon>
     )}
   </Button>
