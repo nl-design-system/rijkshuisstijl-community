@@ -1,9 +1,9 @@
 {
+  "name": "@rijkshuisstijl-community/web-components-stencil",
   "version": "1.0.0-alpha.5",
   "author": "Community for NL Design System",
   "description": "Stencil web components bundle based on the NL Design System architecture",
   "license": "EUPL-1.2",
-  "name": "@rijkshuisstijl-community/web-components-stencil",
   "keywords": [
     "nl-design-system"
   ],
@@ -26,7 +26,8 @@
   ],
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git"
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
+    "directory": "packages/web-components-stencil"
   },
   "scripts": {
     "prebuild": "npm run clean",
