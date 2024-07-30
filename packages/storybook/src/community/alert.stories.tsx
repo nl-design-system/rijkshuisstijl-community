@@ -29,7 +29,7 @@ const AlertStoryComponent = ({ type, icon, heading, textContent, headingLevel }:
   return (
     <Alert type={type}>
       {icon && (
-        <Icon slot="icon">
+        <Icon>
           <RhcIcon />
         </Icon>
       )}
@@ -40,8 +40,8 @@ const AlertStoryComponent = ({ type, icon, heading, textContent, headingLevel }:
 };
 
 const meta = {
-  title: 'Logius/Alert',
-  id: 'logius-alert',
+  title: 'Rijkshuisstijl/Alert',
+  id: 'rijkshuisstijl-alert',
   component: AlertStoryComponent,
   argTypes: {
     type: {

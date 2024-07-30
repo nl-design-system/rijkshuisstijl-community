@@ -28,8 +28,8 @@ const ButtonStory = ({ appearance, children, iconLeft, iconRight, ...props }: Pr
 );
 
 const meta = {
-  title: 'Logius/Button',
-  id: 'logius-button',
+  title: 'Rijkshuisstijl/Button',
+  id: 'rijkshuisstijl-button',
   component: ButtonStory,
   argTypes: {
     appearance: {

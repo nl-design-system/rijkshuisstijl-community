@@ -5,8 +5,8 @@ import { Heading } from '@utrecht/component-library-react/dist/css-module';
 import readme from './heading.md?raw';
 
 const meta = {
-  title: 'Logius/Heading',
-  id: 'logius-heading',
+  title: 'Rijkshuisstijl/Heading',
+  id: 'rijkshuisstijl-heading',
   component: Heading,
   argTypes: {
     level: {
