@@ -5,8 +5,8 @@ import { Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import readme from './paragraph.md?raw';
 
 const meta = {
-  title: 'Logius/Paragraph',
-  id: 'logius-paragraph',
+  title: 'Rijkshuisstijl/Paragraph',
+  id: 'rijkshuisstijl-paragraph',
   component: Paragraph,
   argTypes: {
     lead: {

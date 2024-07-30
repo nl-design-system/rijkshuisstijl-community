@@ -27,8 +27,8 @@ const LinkStory = ({ href, children, iconLeft, iconRight, ...props }: PropsWithC
 );
 
 const meta = {
-  title: 'Logius/Link',
-  id: 'logius-link',
+  title: 'Rijkshuisstijl/Link',
+  id: 'rijkshuisstijl-link',
   component: LinkStory,
   argTypes: {
     href: {
