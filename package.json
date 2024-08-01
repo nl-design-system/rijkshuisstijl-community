@@ -46,7 +46,6 @@
   "scripts": {
     "build": "lerna run build",
     "clean": "lerna run clean",
-    "cleandep": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
     "lint:js": "eslint --ext .js,.cjs,.mjs,.json,.jsx,.mdx,.ts,.tsx --report-unused-disable-directives .",
