@@ -1,3 +1,5 @@
+'use client';
+
 import { Article, Button, ButtonGroup, Heading1, Link, Paragraph } from '@utrecht/component-library-react';
 import { Logo } from '@rijkshuisstijl-community/components-react';
 import './page.css';
