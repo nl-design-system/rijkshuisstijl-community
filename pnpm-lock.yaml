@@ -129,7 +129,7 @@ importers:
         version: 4.0.0
       '@utrecht/component-library-react':
         specifier: 4.1.0
-        version: 4.1.0(@babel/runtime@7.24.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 4.1.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -205,6 +205,9 @@ importers:
       '@types/react':
         specifier: 18.3.3
         version: 18.3.3
+      '@utrecht/component-library-react':
+        specifier: 4.1.0
+        version: 4.1.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@vitejs/plugin-react':
         specifier: 4.3.1
         version: 4.3.1(vite@5.3.4(@types/node@20.14.11)(sass@1.77.8)(terser@5.19.1))
@@ -354,7 +357,7 @@ importers:
         version: 4.0.0
       '@utrecht/component-library-react':
         specifier: 4.1.0
-        version: 4.1.0(@babel/runtime@7.24.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 4.1.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/web-component-library-react':
         specifier: 1.2.0
         version: 1.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -11600,13 +11603,15 @@ snapshots:
 
   '@utrecht/component-library-css@4.0.0': {}
 
-  '@utrecht/component-library-react@4.1.0(@babel/runtime@7.24.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@utrecht/component-library-react@4.1.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.24.8
       clsx: 2.1.1
       lodash.chunk: 4.2.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
+    optionalDependencies:
+      date-fns: 3.6.0
 
   '@utrecht/web-component-library-react@1.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
