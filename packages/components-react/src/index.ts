@@ -2,7 +2,15 @@
 export * from '@utrecht/component-library-react/dist/css-module';
 
 // Export overwrites and new components
-export { Accordion } from './Accordion';
+export {
+  Accordion,
+  type AccordionProps,
+  AccordionProvider,
+  type AccordionProviderProps,
+  AccordionSection,
+  type AccordionSectionProps,
+  type AccordionSectionProviderProps,
+} from './Accordion';
 export { Button } from './Button';
 export { Logo } from './Logo';
 export type { LogoProps } from './Logo';
