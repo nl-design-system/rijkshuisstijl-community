@@ -1,0 +1,7 @@
+@import "../node_modules/@utrecht/components/accordion/src/";
+
+.utrecht-accordion__button {
+  @include utrecht-accordion__button;
+
+  --utrecht-button-border-radius: var(--utrecht-accordion-button-border-radius);
+}
