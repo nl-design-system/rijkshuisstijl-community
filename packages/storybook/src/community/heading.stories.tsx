@@ -24,6 +24,7 @@ const meta = {
         'utrecht-heading-3',
         'utrecht-heading-4',
         'utrecht-heading-5',
+        'utrecht-heading-6',
       ],
     },
   },
@@ -76,4 +77,11 @@ export const Heading5: StoryObj<typeof meta> = {
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
   },
   name: 'Heading 5',
+};
+
+export const Heading6: StoryObj<typeof meta> = {
+  args: {
+    level: 6,
+    children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+  },
 };
