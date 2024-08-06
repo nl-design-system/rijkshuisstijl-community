@@ -4213,8 +4213,17 @@
           },
           "hover": {
             "color": {
-              "value": "{rhc.color.primary.hover}",
-              "type": "color"
+              "value": "{rhc.color.foreground.link}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "0.3",
+                    "space": "lch"
+                  }
+                }
+              }
             },
             "text-decoration": {
               "value": "underline",
