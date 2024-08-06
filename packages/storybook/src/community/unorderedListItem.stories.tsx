@@ -1,10 +1,11 @@
-import { UnorderedListItem } from '@rijkshuisstijl-community/components-react';
+import { UnorderedList, UnorderedListItem } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react/*';
 
 const meta = {
   title: 'Rijkshuisstijl/Unordered List/Unordered Item',
   id: 'rijkshuisstijl-unorderedListItem',
   component: UnorderedListItem,
+  decorators: [(Story) => <UnorderedList>{Story()}</UnorderedList>],
   args: {
     children: 'List item',
   },
