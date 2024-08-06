@@ -799,6 +799,13 @@
           "type": "lineHeights"
         }
       }
+    },
+    "utrecht/document": {
+      "background-color": { "value": "{rhc.color.wit}" },
+      "color": { "value": "{rhc.color.zwart}" },
+      "font-family": { "value": "{rhc.font-family.primary}" },
+      "font-size": { "value": "{rhc.font-size.md}" },
+      "line-height": { "value": "1.4" }
     }
   },
   "brand/size": {
@@ -987,6 +994,10 @@
           }
         }
       }
+    },
+    "utrecht/document": {
+      "background-color": { "value": "{rhc.color.wit}" },
+      "color": { "value": "{rhc.color.zwart}" }
     }
   },
   "common/size": {
@@ -1245,7 +1256,7 @@
             "type": "color"
           }
         },
-        "body": {
+        "panel": {
           "border-color": {
             "value": "{rhc.color.border.subdued}",
             "type": "color"
@@ -1280,11 +1291,11 @@
             "value": "{rhc.line-height.md}",
             "type": "lineHeights"
           },
+          "gap": {
+            "value": "{rhc.space.100}",
+            "type": "spacing"
+          },
           "icon": {
-            "margin-inline": {
-              "value": "{rhc.space.100}",
-              "type": "spacing"
-            },
             "size": {
               "value": "{rhc.size.half-lint}",
               "type": "sizing"
@@ -1395,7 +1406,7 @@
       "alert": {
         "heading": {
           "font-family": {
-            "value": "{utrecht.heading.font-family}",
+            "value": "{utrecht.heading.font-family.primary}",
             "type": "fontFamilies"
           },
           "font-weight": {
@@ -1589,7 +1600,7 @@
         },
         "text": {
           "font-family": {
-            "value": "{utrecht.document.font-family}",
+            "value": "{rhc.font-family.primary}",
             "type": "fontFamilies"
           },
           "font-weight": {
@@ -1673,7 +1684,7 @@
             "type": "fontSizes"
           },
           "font-family": {
-            "value": "{utrecht.document.font-family}",
+            "value": "{rhc.font-family.primary}",
             "type": "fontFamilies"
           },
           "line-height": {
@@ -1695,7 +1706,7 @@
         },
         "content": {
           "font-family": {
-            "value": "{utrecht.heading.font-family}",
+            "value": "{utrecht.heading.font-family.primary}",
             "type": "fontFamilies"
           },
           "line-height": {
@@ -2609,7 +2620,7 @@
           "type": "borderRadius"
         },
         "font-family": {
-          "value": "{utrecht.document.font-family}",
+          "value": "{rhc.font-family.primary}",
           "type": "fontFamilies"
         },
         "background-color": {
@@ -2753,7 +2764,7 @@
         "header": {
           "label": {
             "font-family": {
-              "value": "{utrecht.document.font-family}",
+              "value": "{rhc.font-family.primary}",
               "type": "fontFamilies"
             },
             "font-size": {
@@ -2843,7 +2854,7 @@
           "type": "color"
         },
         "font-family": {
-          "value": "{utrecht.document.font-family}",
+          "value": "{rhc.font-family.primary}",
           "type": "fontFamilies"
         },
         "font-size": {
@@ -2899,7 +2910,7 @@
           "type": "lineHeights"
         },
         "font-family": {
-          "value": "{utrecht.document.font-family}",
+          "value": "{rhc.font-family.primary}",
           "type": "fontFamilies"
         },
         "font-weight": {
@@ -3278,7 +3289,7 @@
               "type": "color"
             },
             "font-family": {
-              "value": "{utrecht.document.font-family}",
+              "value": "{rhc.font-family.primary}",
               "type": "fontFamilies"
             },
             "font-weight": {
@@ -3668,7 +3679,7 @@
           }
         },
         "font-family": {
-          "value": "{utrecht.document.font-family}",
+          "value": "{rhc.font-family.primary}",
           "type": "fontFamilies"
         },
         "line-height": {
@@ -4108,7 +4119,7 @@
           "type": "borderWidth"
         },
         "font-family": {
-          "value": "{utrecht.document.font-family}",
+          "value": "{rhc.font-family.primary}",
           "type": "fontFamilies"
         },
         "font-weight": {
@@ -4263,7 +4274,7 @@
           "type": "fontWeights"
         },
         "font-family": {
-          "value": "{utrecht.document.font-family}",
+          "value": "{rhc.font-family.primary}",
           "type": "fontFamilies"
         },
         "font-size": {
@@ -4363,7 +4374,7 @@
           "type": "borderWidth"
         },
         "font-family": {
-          "value": "{utrecht.document.font-family}",
+          "value": "{rhc.font-family.primary}",
           "type": "fontFamilies"
         },
         "border-radius": {
@@ -4453,7 +4464,7 @@
     "todo": {
       "summary-list": {
         "font-family": {
-          "value": "{utrecht.document.font-family}",
+          "value": "{rhc.font-family.primary}",
           "type": "fontFamilies"
         },
         "item-value": {
@@ -4610,7 +4621,7 @@
             "type": "color"
           },
           "font-family": {
-            "value": "{utrecht.document.font-family}",
+            "value": "{rhc.font-family.primary}",
             "type": "fontFamilies"
           },
           "font-weight": {
@@ -4636,7 +4647,7 @@
             "type": "color"
           },
           "font-family": {
-            "value": "{utrecht.heading.font-family}",
+            "value": "{utrecht.heading.font-family.primary}",
             "type": "fontFamilies"
           },
           "font-weight": {
@@ -4672,7 +4683,7 @@
             "type": "color"
           },
           "font-family": {
-            "value": "{utrecht.document.font-family}",
+            "value": "{rhc.font-family.primary}",
             "type": "fontFamilies"
           },
           "font-weight": {
@@ -4744,7 +4755,7 @@
             "type": "color"
           },
           "font-family": {
-            "value": "{utrecht.document.font-family}",
+            "value": "{rhc.font-family.primary}",
             "type": "fontFamilies"
           },
           "line-height": {
@@ -4817,7 +4828,7 @@
           }
         },
         "font-family": {
-          "value": "{utrecht.document.font-family}",
+          "value": "{rhc.font-family.primary}",
           "type": "fontFamilies"
         },
         "font-size": {
@@ -4989,7 +5000,7 @@
           "type": "borderWidth"
         },
         "font-family": {
-          "value": "{utrecht.document.font-family}",
+          "value": "{rhc.font-family.primary}",
           "type": "fontFamilies"
         },
         "font-weight": {
@@ -5207,7 +5218,7 @@
           }
         },
         "font-family": {
-          "value": "{utrecht.document.font-family}",
+          "value": "{rhc.font-family.primary}",
           "type": "fontFamilies"
         },
         "font-size": {
