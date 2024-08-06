@@ -85,6 +85,10 @@ importers:
         specifier: 5.5.3
         version: 5.5.3
 
+  apps/rhc-template/dist: {}
+
+  apps/rhc-template/dist/types: {}
+
   apps/rvs.rivm.nl:
     dependencies:
       next:
@@ -175,6 +179,9 @@ importers:
       '@babel/runtime':
         specifier: 7.24.8
         version: 7.24.8
+      '@rijkshuisstijl-community/web-components-react':
+        specifier: workspace:*
+        version: link:../web-components-react
       '@rollup/plugin-babel':
         specifier: 6.0.4
         version: 6.0.4(@babel/core@7.24.9)(@types/babel__core@7.20.5)(rollup@4.18.1)
@@ -280,6 +287,9 @@ importers:
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css
+      '@rijkshuisstijl-community/components-react':
+        specifier: workspace:*
+        version: link:../components-react
       '@rijkshuisstijl-community/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
