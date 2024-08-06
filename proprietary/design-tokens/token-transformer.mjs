@@ -28,7 +28,6 @@ const init = async ({ input, output }) => {
     'components/heading',
     'components/icon-only-button',
     'components/modal-dialog',
-    'components/ordered-list',
     'components/pagination',
     'components/paragraph',
     'components/radio',
