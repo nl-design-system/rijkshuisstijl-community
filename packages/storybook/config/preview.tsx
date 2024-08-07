@@ -6,12 +6,10 @@ import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/mijnoverheid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
 import { withThemeByClassName } from '@storybook/addon-themes';
-import { Preview, StoryContext } from '@storybook/react';
+import { Preview } from '@storybook/react';
 import '@utrecht/component-library-css/dist/html.css';
 import '@utrecht/component-library-css/dist/index.css';
 import { UtrechtDocument } from '@utrecht/web-component-library-react';
-import { renderToStaticMarkup } from 'react-dom/server';
-import { Prettify } from './Prettify';
 
 const preview: Preview = {
   decorators: [
@@ -65,21 +63,27 @@ const preview: Preview = {
     },
     docs: {
       source: {
-        transform(src: string, storyContext: StoryContext) {
-          const render =
-            typeof storyContext.component === 'function'
-              ? storyContext.component
-              : typeof storyContext.component?.render === 'function'
-                ? storyContext.component?.render
-                : null;
+        state: 'open',
 
-          if (render) {
-            const srcString = renderToStaticMarkup(render(storyContext.args));
+        /*
+            Uncomment the transformer to show underlying CSS and HTML
+        */
 
-            return Prettify({ ugly: srcString });
-          }
-          return src;
-        },
+        // transform(src: string, storyContext: StoryContext) {
+        //   const render =
+        //     typeof storyContext.component === 'function'
+        //       ? storyContext.component
+        //       : typeof storyContext.component?.render === 'function'
+        //         ? storyContext.component?.render
+        //         : null;
+
+        //   if (render) {
+        //     const srcString = renderToStaticMarkup(render(storyContext.args));
+
+        //     return Prettify({ ugly: srcString });
+        //   }
+        //   return src;
+        // },
       },
     },
   },
