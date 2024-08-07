@@ -10,10 +10,11 @@ interface LinkStoryProps {
   href: string;
   iconLeft?: boolean;
   iconRight?: boolean;
+  external?: boolean;
 }
 
-const LinkStory = ({ href, children, iconLeft, iconRight, ...props }: PropsWithChildren<LinkStoryProps>) => (
-  <Link href={href} {...props} style={{ '--utrecht-icon-inset-block-start': '0.2em' }}>
+const LinkStory = ({ href, children, iconLeft, iconRight, external, ...props }: PropsWithChildren<LinkStoryProps>) => (
+  <Link href={href} external={external} {...props} style={{ '--utrecht-icon-inset-block-start': '0.2em' }}>
     {iconLeft && (
       <Icon>
         <RhcIconCalendar></RhcIconCalendar>
@@ -113,5 +114,13 @@ export const IconRight: Story = {
     href: 'https://example.com/',
     children: 'Label',
     iconRight: true,
+  },
+};
+
+export const External: Story = {
+  args: {
+    href: 'https://example.com/',
+    children: 'Label',
+    external: true,
   },
 };
