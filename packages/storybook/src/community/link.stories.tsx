@@ -1,8 +1,9 @@
 /* @license CC0-1.0 */
 
+import { Link } from '@rijkshuisstijl-community/components-react';
 import { RhcIconArrowRight, RhcIconCalendar } from '@rijkshuisstijl-community/web-components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Icon, Link } from '@utrecht/component-library-react/dist/css-module';
+import { Icon } from '@utrecht/component-library-react/dist/css-module';
 import { PropsWithChildren } from 'react';
 import readme from './link.md?raw';
 interface LinkStoryProps {
@@ -113,5 +114,4 @@ export const IconRight: Story = {
     children: 'Label',
     iconRight: true,
   },
-  name: 'Link',
 };
