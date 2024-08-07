@@ -7,11 +7,7 @@ const meta = {
   id: 'rijkshuisstijl-orderedList',
   component: OrderedList,
   args: {
-    children: [
-      <OrderedListItem>Ordered List item 1</OrderedListItem>,
-      <OrderedListItem>Ordered List item 2</OrderedListItem>,
-      <OrderedListItem>Ordered List item 3</OrderedListItem>,
-    ],
+    children: '',
   },
   parameters: {
     docs: {
@@ -26,4 +22,28 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const DefaultOrderedList: Story = {};
+export const DefaultOrderedList: Story = {
+  args: {
+    children: [
+      <OrderedListItem>Ordered List item 1</OrderedListItem>,
+      <OrderedListItem>Ordered List item 2</OrderedListItem>,
+      <OrderedListItem>Ordered List item 3</OrderedListItem>,
+    ],
+  },
+};
+
+export const NestedOrderedList: Story = {
+  args: {
+    children: [
+      <OrderedListItem>Ordered List item 1</OrderedListItem>,
+      <OrderedListItem>
+        Ordered List item 2
+        <OrderedList>
+          <OrderedListItem>Order List item 2.1</OrderedListItem>
+          <OrderedListItem>Order List item 2.2</OrderedListItem>
+        </OrderedList>
+      </OrderedListItem>,
+      <OrderedListItem>Ordered List item 3</OrderedListItem>,
+    ],
+  },
+};
