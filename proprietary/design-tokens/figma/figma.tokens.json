@@ -1742,47 +1742,47 @@
     "todo": {
       "breadcrumb": {
         "line-height": {
-          "value": "{utrecht.document.line-height}",
+          "value": "{rhc.line-height.paragraph}",
           "type": "lineHeights"
         },
         "font-size": {
-          "value": "{utrecht.document.font-size}",
+          "value": "{rhc.font-size.paragraph.default}",
           "type": "fontSizes"
         },
         "link": {
           "icon": {
             "size": {
-              "value": "{rhc.icon.functional.size}",
+              "value": "{rhc.size.icon.functional}",
               "type": "sizing"
             },
             "margin-inline": {
-              "value": "{voorbeeld.space.text.beetle}",
+              "value": "{rhc.space.50}",
               "type": "spacing"
             }
           },
           "padding-block-end": {
-            "value": "{voorbeeld.space.block.snail}",
+            "value": "{rhc.space.150}",
             "type": "spacing"
           },
           "padding-block-start": {
-            "value": "{voorbeeld.space.block.snail}",
+            "value": "{rhc.space.150}",
             "type": "spacing"
           },
           "padding-inline-end": {
-            "value": "0px",
+            "value": "{rhc.space.0}",
             "type": "spacing"
           },
           "padding-inline-start": {
-            "value": "0px",
+            "value": "{rhc.space.0}",
             "type": "spacing"
           },
           "color": {
-            "value": "{utrecht.interaction.color}",
+            "value": "{rhc.color.foreground.link}",
             "type": "color"
           },
           "active": {
             "color": {
-              "value": "{utrecht.interaction.active.color}",
+              "value": "{rhc.color.paars.500}",
               "type": "color"
             },
             "text-decoration": {
@@ -1792,11 +1792,11 @@
           },
           "focus": {
             "background-color": {
-              "value": "{rhc.focus.background-color}",
+              "value": "transparent",
               "type": "color"
             },
             "color": {
-              "value": "{rhc.focus.color}",
+              "value": "{rhc.color.foreground.link}",
               "type": "color"
             },
             "text-decoration": {
@@ -1806,8 +1806,17 @@
           },
           "hover": {
             "color": {
-              "value": "{utrecht.interaction.hover.color}",
-              "type": "color"
+              "value": "{rhc.color.foreground.link}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "0.3",
+                    "space": "srgb"
+                  }
+                }
+              }
             },
             "text-decoration": {
               "value": "None",
@@ -1816,7 +1825,7 @@
           },
           "current": {
             "color": {
-              "value": "{utrecht.document.subtle.color}",
+              "value": "{rhc.color.foreground.subdued}",
               "type": "color"
             }
           },
@@ -1827,24 +1836,24 @@
         },
         "divider": {
           "size": {
-            "value": "{voorbeeld.size.2xs}",
+            "value": "{rhc.size.icon.functional}",
             "type": "sizing"
           },
           "color": {
-            "value": "{utrecht.document.subtle.color}",
+            "value": "{rhc.color.foreground.subdued}",
             "type": "color"
           }
         },
         "margin-inline": {
-          "value": "{voorbeeld.space.inline.beetle}",
+          "value": "{rhc.space.100}",
           "type": "spacing"
         },
         "font-family": {
-          "value": "{utrecht.document.font-family}",
+          "value": "{rhc.font-family.primary}",
           "type": "fontFamilies"
         },
         "font-weight": {
-          "value": "{utrecht.document.font-weight}",
+          "value": "{rhc.font-weight.regular}",
           "type": "fontWeights"
         }
       }
