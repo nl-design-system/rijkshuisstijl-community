@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
 import { Link } from '@rijkshuisstijl-community/components-react';
-import { RhcIconArrowRight, RhcIconCalendar } from '@rijkshuisstijl-community/web-components-react';
 import type { Meta, StoryObj } from '@storybook/react';
+import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
 import { Icon } from '@utrecht/component-library-react/dist/css-module';
 import { PropsWithChildren } from 'react';
 import readme from './link.md?raw';
@@ -17,13 +17,13 @@ const LinkStory = ({ href, children, iconLeft, iconRight, external, ...props }: 
   <Link href={href} external={external} {...props} style={{ '--utrecht-icon-inset-block-start': '0.2em' }}>
     {iconLeft && (
       <Icon>
-        <RhcIconCalendar></RhcIconCalendar>
+        <IconCalendarEvent />
       </Icon>
     )}
     {children}
     {iconRight && (
       <Icon>
-        <RhcIconArrowRight></RhcIconArrowRight>
+        <IconArrowRight />
       </Icon>
     )}
   </Link>
