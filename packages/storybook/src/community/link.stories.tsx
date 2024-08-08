@@ -1,27 +1,29 @@
 /* @license CC0-1.0 */
 
-import { RhcIconArrowRight, RhcIconCalendar } from '@rijkshuisstijl-community/web-components-react';
+import { Link } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Icon, Link } from '@utrecht/component-library-react/dist/css-module';
+import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
+import { Icon } from '@utrecht/component-library-react/dist/css-module';
 import { PropsWithChildren } from 'react';
 import readme from './link.md?raw';
 interface LinkStoryProps {
   href: string;
   iconLeft?: boolean;
   iconRight?: boolean;
+  external?: boolean;
 }
 
-const LinkStory = ({ href, children, iconLeft, iconRight, ...props }: PropsWithChildren<LinkStoryProps>) => (
-  <Link href={href} {...props} style={{ '--utrecht-icon-inset-block-start': '0.2em' }}>
+const LinkStory = ({ href, children, iconLeft, iconRight, external, ...props }: PropsWithChildren<LinkStoryProps>) => (
+  <Link href={href} external={external} {...props} style={{ '--utrecht-icon-inset-block-start': '0.2em' }}>
     {iconLeft && (
       <Icon>
-        <RhcIconCalendar></RhcIconCalendar>
+        <IconCalendarEvent />
       </Icon>
     )}
     {children}
     {iconRight && (
       <Icon>
-        <RhcIconArrowRight></RhcIconArrowRight>
+        <IconArrowRight />
       </Icon>
     )}
   </Link>
@@ -113,5 +115,12 @@ export const IconRight: Story = {
     children: 'Label',
     iconRight: true,
   },
-  name: 'Link',
+};
+
+export const External: Story = {
+  args: {
+    href: 'https://example.com/',
+    children: 'Label',
+    external: true,
+  },
 };
