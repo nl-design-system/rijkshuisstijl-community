@@ -40,3 +40,17 @@ export const DefaultLinkList: Story = {
     ),
   },
 };
+
+export const ZonderIcon: Story = {
+  args: {
+    children: (
+      <>
+        <LinkListLink href="#">
+          Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
+        </LinkListLink>
+        <LinkListLink href="#">Link 2</LinkListLink>
+        <LinkListLink href="#">Link 3</LinkListLink>
+      </>
+    ),
+  },
+};
