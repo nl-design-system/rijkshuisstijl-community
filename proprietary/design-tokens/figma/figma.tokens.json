@@ -780,7 +780,7 @@
         },
         "xl": {
           "desktop": {
-            "value": "2.125rem",
+            "value": "3.125rem",
             "type": "fontSizes"
           },
           "tablet": {
@@ -794,11 +794,22 @@
         }
       },
       "line-height": {
+        "sm": {
+          "value": "125%",
+          "type": "lineHeights"
+        },
         "md": {
           "value": "150%",
           "type": "lineHeights"
         }
       }
+    },
+    "utrecht/document": {
+      "background-color": { "value": "{rhc.color.wit}" },
+      "color": { "value": "{rhc.color.zwart}" },
+      "font-family": { "value": "{rhc.font-family.primary}" },
+      "font-size": { "value": "{rhc.font-size.md}" },
+      "line-height": { "value": "1.4" }
     }
   },
   "brand/size": {
@@ -987,6 +998,10 @@
           }
         }
       }
+    },
+    "utrecht/document": {
+      "background-color": { "value": "{rhc.color.wit}" },
+      "color": { "value": "{rhc.color.zwart}" }
     }
   },
   "common/size": {
@@ -2941,7 +2956,7 @@
           "type": "fontWeights"
         },
         "line-height": {
-          "value": "{rhc.line-height.md}",
+          "value": "{rhc.line-height.sm}",
           "type": "lineHeights"
         },
         "font-size": {
@@ -2971,7 +2986,7 @@
           "type": "fontWeights"
         },
         "line-height": {
-          "value": "{rhc.line-height.md}",
+          "value": "{rhc.line-height.sm}",
           "type": "lineHeights"
         },
         "font-size": {
@@ -3001,7 +3016,7 @@
           "type": "fontWeights"
         },
         "line-height": {
-          "value": "{rhc.line-height.md}",
+          "value": "{rhc.line-height.sm}",
           "type": "lineHeights"
         },
         "font-size": {
@@ -3031,7 +3046,7 @@
           "type": "fontWeights"
         },
         "line-height": {
-          "value": "{rhc.line-height.md}",
+          "value": "{rhc.line-height.sm}",
           "type": "lineHeights"
         },
         "font-size": {
@@ -3061,37 +3076,7 @@
           "type": "fontWeights"
         },
         "line-height": {
-          "value": "{rhc.line-height.md}",
-          "type": "lineHeights"
-        },
-        "font-size": {
-          "value": "{rhc.font-size.heading.level-5}",
-          "type": "fontSizes"
-        },
-        "margin-block-end": {
-          "value": "{rhc.space.0}",
-          "type": "spacing"
-        },
-        "margin-block-start": {
-          "value": "{rhc.space.0}",
-          "type": "spacing"
-        }
-      },
-      "heading-6": {
-        "color": {
-          "value": "{rhc.color.foreground.lint}",
-          "type": "color"
-        },
-        "font-family": {
-          "value": "{rhc.font-family.primary}",
-          "type": "fontFamilies"
-        },
-        "font-weight": {
-          "value": "{rhc.font-weight.bold}",
-          "type": "fontWeights"
-        },
-        "line-height": {
-          "value": "{rhc.line-height.md}",
+          "value": "{rhc.line-height.sm}",
           "type": "lineHeights"
         },
         "font-size": {
