@@ -1,13 +1,7 @@
 /* @license CC0-1.0 */
 
-import {
-  RhcIconError,
-  RhcIconInfo,
-  RhcIconSuccess,
-  RhcIconWarning,
-} from '@rijkshuisstijl-community/web-components-react';
+import { Alert } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Alert, Heading, Icon, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import readme from './alert.md?raw';
 
 interface AlertStoryComponentProps {
@@ -19,29 +13,8 @@ interface AlertStoryComponentProps {
 }
 
 const AlertStoryComponent = ({ type, icon, heading, textContent, headingLevel }: AlertStoryComponentProps) => {
-  const RhcIcon = () =>
-    icon === 'info' ? (
-      <RhcIconInfo></RhcIconInfo>
-    ) : icon === 'success' ? (
-      <RhcIconSuccess></RhcIconSuccess>
-    ) : icon === 'warning' ? (
-      <RhcIconWarning></RhcIconWarning>
-    ) : icon === 'error' ? (
-      <RhcIconError></RhcIconError>
-    ) : (
-      <></>
-    );
-
   return (
-    <Alert type={type}>
-      {icon && (
-        <Icon>
-          <RhcIcon />
-        </Icon>
-      )}
-      <Heading level={headingLevel}>{heading}</Heading>
-      <Paragraph>{textContent}</Paragraph>
-    </Alert>
+    <Alert type={type} icon={icon} heading={heading} headingLevel={headingLevel} textContent={textContent}></Alert>
   );
 };
 
@@ -61,7 +34,7 @@ const meta = {
     icon: {
       description: 'Alert Icon',
       control: { type: 'select' },
-      options: ['', 'info', 'error', 'warning', 'succes'],
+      options: ['', 'info', 'error', 'warning', 'ok'],
       table: {
         category: 'Webcomponent Slot',
       },
@@ -135,8 +108,8 @@ export const Negative: StoryObj<typeof meta> = {
 
 export const Positive: StoryObj<typeof meta> = {
   args: {
-    type: 'succes',
-    icon: 'succes',
+    type: 'ok',
+    icon: 'ok',
     heading: 'Heading',
     headingLevel: 3,
     textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
