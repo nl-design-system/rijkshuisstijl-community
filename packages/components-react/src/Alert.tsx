@@ -24,7 +24,7 @@ export const Alert = forwardRef(
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     return (
-      <UAlert ref={ref} {...restProps} type={type}>
+      <UAlert ref={ref} {...restProps} type={type} role="alert">
         <div
           style={{
             display: 'flex',
