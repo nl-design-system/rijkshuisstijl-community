@@ -11,6 +11,5 @@ export {
   type AccordionSectionProps,
   type AccordionSectionProviderProps,
 } from './Accordion';
-export { Button } from './Button';
 export { Logo } from './Logo';
 export type { LogoProps } from './Logo';
