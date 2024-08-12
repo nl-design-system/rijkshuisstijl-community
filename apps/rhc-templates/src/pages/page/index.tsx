@@ -31,10 +31,9 @@ import {
   FigureCaption,
 } from '@utrecht/component-library-react/dist/css-module';
 import { Button, Logo } from '@rijkshuisstijl-community/components-react';
-import './page.css';
 import { HeadingGroup } from '@utrecht/component-library-react';
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <main>
