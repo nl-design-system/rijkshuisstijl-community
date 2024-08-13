@@ -2,24 +2,40 @@
 
 import { Logo } from '@rijkshuisstijl-community/components-react';
 import {
+  AccordionProvider,
   BreadcrumbNav,
   BreadcrumbNavLink,
+  Button,
+  Checkbox,
+  Fieldset,
+  FieldsetLegend,
   FormField,
   Heading,
   Link,
+  LinkList,
+  LinkListLink,
+  PageContent,
+  PageFooter,
+  PageHeader,
   Paragraph,
+  RadioButton,
+  Textarea,
   Textbox,
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react';
-import { DateInput } from '@amsterdam/design-system-react';
+import { DateInput, FileInput } from '@amsterdam/design-system-react';
 
 export default function Form() {
   return (
     <>
       <main>
-        <Logo organisation="Voorbeeld organisatie" subtitle="Voorbeeld sub-title"></Logo>
-        <div className="container page-content">
+        <div className="unfinished">
+          <PageHeader>
+            <Logo organisation="Voorbeeld organisatie" subtitle="Voorbeeld sub-title"></Logo>
+          </PageHeader>
+        </div>
+        <PageContent className="container page-content">
           <div className="unstarted">
             <BreadcrumbNav>
               <BreadcrumbNavLink href="/" rel="home" index={0}>
@@ -36,10 +52,12 @@ export default function Form() {
           <div className="unstarted">
             <Heading level={1}>Formulier voor vragen over Sisa</Heading>
           </div>
-          <Paragraph>Heeft u vragen over Single information, Single audit (SiSa)?</Paragraph>
-          <Paragraph>Gebruik dan het formulier hieronder.</Paragraph>
-          <br />
-          <Paragraph>Mogelijke vragen:</Paragraph>
+          <div className="unstarted">
+            <Paragraph>Heeft u vragen over Single information, Single audit (SiSa)?</Paragraph>
+            <Paragraph>Gebruik dan het formulier hieronder.</Paragraph>
+            <br />
+            <Paragraph>Mogelijke vragen:</Paragraph>
+          </div>
           <div className="unstarted">
             <UnorderedList>
               <UnorderedListItem>Hoe moet ik extra regels toevoegen bij de macro-versie?</UnorderedListItem>
@@ -54,13 +72,15 @@ export default function Form() {
             </UnorderedList>
           </div>
           <br />
-          <Paragraph>
-            Lees verder over de{' '}
-            <span className="unstarted">
-              <Link href="#">verantwoordingsmethode SiSa</Link>
-            </span>
-            .
-          </Paragraph>
+          <div className="unstarted">
+            <Paragraph>
+              Lees verder over de{' '}
+              <span className="unstarted">
+                <Link href="#">verantwoordingsmethode SiSa</Link>
+              </span>
+              .
+            </Paragraph>
+          </div>
           <form>
             <div className="unstarted">
               <FormField label="Naam">
@@ -103,7 +123,107 @@ export default function Form() {
                 </Paragraph>
               </FormField>
             </div>
+            <div className="unstarted">
+              <FormField label="Stel hier uw vraag">
+                <Textarea rows={6} cols={40}></Textarea>
+              </FormField>
+            </div>
+            <div className="unstarted">
+              <Fieldset>
+                <FieldsetLegend>Label</FieldsetLegend>
+                <div>
+                  <FormField label="Label">
+                    <RadioButton></RadioButton>
+                  </FormField>
+                  <FormField label="Label">
+                    <RadioButton></RadioButton>
+                  </FormField>
+                  <FormField label="Label">
+                    <RadioButton></RadioButton>
+                  </FormField>
+                </div>
+              </Fieldset>
+            </div>
+            <div className="unstarted">
+              <FormField label="Bestand toevoegen">
+                <UnorderedList>
+                  <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
+                  <UnorderedListItem>U mag maximaal 10 Mb aan bestanden toevoegen.</UnorderedListItem>
+                  <UnorderedListItem>
+                    Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bpm en gif.
+                  </UnorderedListItem>
+                </UnorderedList>
+                <FileInput multiple></FileInput>
+              </FormField>
+            </div>
+            <div className="unstarted">
+              <Heading level={1}>Informatie over de verwerking van uw persoonsgegevens</Heading>
+            </div>
+            <div className="unstarted">
+              <Paragraph>
+                Wij gebruiken gegevens die u heeft ingevuld om uw vraag te beantwoorden. Daarna worden ze volgens in de
+                archiefwet tijdelijk bewaard in de daarvoor bestemde archiefsystemen. Deze zijn van het Ministerie van
+                Binnenlandse Zaken & Koninkrijksrelaties (BZK).
+              </Paragraph>
+            </div>
+            <div className="unstarted">
+              <AccordionProvider
+                sections={[
+                  {
+                    label: 'Toon extra informatie over de verwerking van uw persoonsgegevens',
+                    body: 'Dit is extra informatie',
+                  },
+                ]}
+              ></AccordionProvider>
+            </div>
+            <Fieldset>
+              <FieldsetLegend>Akkoordverklaring</FieldsetLegend>
+              <FormField label="Ik heb gelezen en begrepen wat er met mijn persoonsgegevens wordt gedaan">
+                <Checkbox></Checkbox>
+              </FormField>
+            </Fieldset>
+            <div className="unfinished">
+              <Button type="submit" appearance="primary-action-button">
+                Ga verder
+              </Button>
+            </div>
           </form>
+        </PageContent>
+        <div className="unstarted">
+          <PageFooter>
+            <Heading level={1} appearance="utrecht-heading-2">
+              De Rijksoverheid. Voor Nederland
+            </Heading>
+            <div className="left-column">
+              <Heading level={2} appearance="utrecht-heading-4">
+                Service
+              </Heading>
+              <LinkList>
+                <LinkListLink href="#">Contact</LinkListLink>
+                <LinkListLink href="#">Abonneren</LinkListLink>
+                <LinkListLink href="#">RSS</LinkListLink>
+                <LinkListLink href="#">Vacatures</LinkListLink>
+                <LinkListLink href="#">Sitemap</LinkListLink>
+                <LinkListLink href="#">Help</LinkListLink>
+                <LinkListLink href="#">Archief</LinkListLink>
+              </LinkList>
+            </div>
+            <div className="right-column">
+              <Heading level={2} appearance="utrecht-heading-4">
+                Service
+              </Heading>
+              <LinkList>
+                <LinkListLink href="#">Over Rijksoverheid.nl</LinkListLink>
+                <LinkListLink href="#">Wetten en regelingen</LinkListLink>
+                <LinkListLink href="#">Copyright</LinkListLink>
+                <LinkListLink href="#">Privacy</LinkListLink>
+                <LinkListLink href="#">Cookies</LinkListLink>
+                <LinkListLink href="#">Toegankelijkheid</LinkListLink>
+                <LinkListLink href="#">Open data</LinkListLink>
+                <LinkListLink href="#">Kwetsbaarheid melden</LinkListLink>
+              </LinkList>
+            </div>
+          </PageFooter>
         </div>
       </main>
     </>

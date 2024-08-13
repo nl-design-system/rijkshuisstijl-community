@@ -11,6 +11,8 @@ import {
   LinkListLink,
   OrderedList,
   OrderedListItem,
+  PageContent,
+  PageHeader,
   Separator,
   Table,
   TableBody,
@@ -36,8 +38,12 @@ import { HeadingGroup } from '@utrecht/component-library-react';
 export default function Page() {
   return (
     <>
-      <main>
-        <Logo organisation="Voorbeeld organisatie" subtitle="Voorbeeld sub-title"></Logo>
+      <main className="page">
+        <div className="unfinished header">
+          <PageHeader>
+            <Logo organisation="Voorbeeld organisatie" subtitle="Voorbeeld sub-title"></Logo>
+          </PageHeader>
+        </div>
         <div className="unstarted">
           {/* wrong spacing, wrong background color, wrong text color, no way to add right aligning link */}
           <NavBar>
@@ -54,7 +60,7 @@ export default function Page() {
             </NavList>
           </NavBar>
         </div>
-        <div className="container page-content">
+        <PageContent className="container page-content">
           <div className="unstarted">
             <HeadingGroup>
               <Heading level={1}>Titel van de pagina (H1)</Heading>
@@ -76,8 +82,12 @@ export default function Page() {
           <div className="unstarted">
             <Heading level={2}>Dit is een H2</Heading>
           </div>
-          <Paragraph>Dit is een paragraaf.</Paragraph>
-          <Paragraph>Opsomming ordered list</Paragraph>
+          <div className="unstarted">
+            <Paragraph>Dit is een paragraaf.</Paragraph>
+          </div>
+          <div className="unstarted">
+            <Paragraph>Opsomming ordered list</Paragraph>
+          </div>
           <div className="unstarted">
             <OrderedList>
               <OrderedListItem>Ordered list item.</OrderedListItem>
@@ -85,7 +95,9 @@ export default function Page() {
               <OrderedListItem>Ordered list item.</OrderedListItem>
             </OrderedList>
           </div>
-          <Paragraph>Opsomming unordered list</Paragraph>
+          <div className="unstarted">
+            <Paragraph>Opsomming unordered list</Paragraph>
+          </div>
           <div className="unstarted">
             <UnorderedList>
               <UnorderedListItem>Unordered list item.</UnorderedListItem>
@@ -93,7 +105,9 @@ export default function Page() {
               <UnorderedListItem>Unordered list item.</UnorderedListItem>
             </UnorderedList>
           </div>
-          <Paragraph>Opsomming link list</Paragraph>
+          <div className="unstarted">
+            <Paragraph>Opsomming link list</Paragraph>
+          </div>
           <div className="unstarted">
             <LinkList
               icon={() => (
@@ -115,7 +129,9 @@ export default function Page() {
           <div className="unstarted">
             <Heading level={3}>Dit is een H3</Heading>
           </div>
-          <Paragraph>Dit is een paragraaf.</Paragraph>
+          <div className="unstarted">
+            <Paragraph>Dit is een paragraaf.</Paragraph>
+          </div>
           <div className="unstarted">
             <Link external={true} href="example.com">
               Dit is een externe link
@@ -150,16 +166,18 @@ export default function Page() {
           <div className="unstarted">
             <Heading level={4}>Dit is een H4</Heading>
           </div>
-          <Paragraph>
-            Dit is een wat langere paragraaf. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-            <span className="unstarted">
-              <Link href="/">Dit is een normale link</Link>
-            </span>
-          </Paragraph>
+          <div className="unstarted">
+            <Paragraph>
+              Dit is een wat langere paragraaf. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <span className="unstarted">
+                <Link href="/">Dit is een normale link</Link>
+              </span>
+            </Paragraph>
+          </div>
           <div className="unstarted">
             <Blockquote attribution="Label">
               Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
@@ -168,7 +186,9 @@ export default function Page() {
           <div className="unstarted">
             <Heading level={5}>Dit is een H5</Heading>
           </div>
-          <Paragraph>Dit is een paragraaf.</Paragraph>
+          <div className="unstarted">
+            <Paragraph>Dit is een paragraaf.</Paragraph>
+          </div>
           <div className="unstarted">
             <Separator></Separator>
           </div>
@@ -213,7 +233,7 @@ export default function Page() {
               </ButtonLink>
             </ButtonGroup>
           </div>
-        </div>
+        </PageContent>
       </main>
     </>
   );

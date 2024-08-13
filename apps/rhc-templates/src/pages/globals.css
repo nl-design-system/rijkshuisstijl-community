@@ -1,9 +1,12 @@
 /* global CSS here */
 body {
   margin: 0;
-  background-color: #f2f4f6;
   display: flex;
   flex-direction: column;
+}
+
+.page {
+  background-color: #f2f4f6;
 }
 
 .unstarted {
@@ -18,7 +21,8 @@ body {
   color: red;
 }
 
-.information {
+.information,
+.header {
   background-color: white;
 }
 
@@ -30,5 +34,8 @@ body {
 }
 
 .page-content {
-  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  padding: 6em 3em !important;
+  gap: 3em !important;
 }
