@@ -36,6 +36,29 @@ body {
 .page-content {
   display: flex;
   flex-direction: column;
-  padding: 6em 3em !important;
-  gap: 3em !important;
+  /* padding: 3em 6em !important; */
+  gap: 1em !important;
+}
+
+.header-image {
+  background-image: url("https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg");
+  padding: 3.5rem 1rem 5.5rem;
+}
+
+.header-image-textbox {
+  max-width: 1200px;
+  background-color: #f2f4f6;
+}
+
+@media (min-width: 768px) {
+  .page-content {
+    padding: 0 !important;
+  }
+  .header-image-textbox {
+    max-width: 35%;
+  }
+}
+
+.sub-navigation {
+  background-color: #f2f4f6;
 }

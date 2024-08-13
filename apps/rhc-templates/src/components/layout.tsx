@@ -1,5 +1,6 @@
 import { Document } from '@utrecht/component-library-react';
 import { PropsWithChildren } from 'react';
+import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/components-css/index.scss';
 import Link from 'next/link';
@@ -21,6 +22,10 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
         <Link href="/page">Page</Link>
         <br />
         <Link href="/form">Form</Link>
+        <br />
+        <Link href="/details">Details</Link>
+        <br />
+        <Link href="/collage">Collage</Link>
       </div>
       <RHCTheme>
         <Document>{children}</Document>

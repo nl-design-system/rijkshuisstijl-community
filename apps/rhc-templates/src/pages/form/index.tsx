@@ -25,6 +25,7 @@ import {
   UnorderedListItem,
 } from '@utrecht/component-library-react';
 import { DateInput, FileInput } from '@amsterdam/design-system-react';
+import { FormLabel } from '@utrecht/component-library-react/dist/css-module';
 
 export default function Form() {
   return (
@@ -132,15 +133,20 @@ export default function Form() {
               <Fieldset>
                 <FieldsetLegend>Label</FieldsetLegend>
                 <div>
-                  <FormField label="Label">
-                    <RadioButton></RadioButton>
-                  </FormField>
-                  <FormField label="Label">
-                    <RadioButton></RadioButton>
-                  </FormField>
-                  <FormField label="Label">
-                    <RadioButton></RadioButton>
-                  </FormField>
+                  <div className="unstarted">
+                    <FormField label="Label" description="Description">
+                      <div className="rhc-radio-button__group">
+                        <RadioButton></RadioButton>
+                        <FormLabel>Label</FormLabel>
+                        <RadioButton></RadioButton>
+                        <FormLabel>Label</FormLabel>
+                        <RadioButton></RadioButton>
+                        <FormLabel>Label</FormLabel>
+                        <RadioButton></RadioButton>
+                        <FormLabel>Label</FormLabel>
+                      </div>
+                    </FormField>
+                  </div>
                 </div>
               </Fieldset>
             </div>
