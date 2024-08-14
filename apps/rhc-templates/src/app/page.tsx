@@ -4,7 +4,6 @@ import {
   Blockquote,
   ButtonGroup,
   ButtonLink,
-  Heading,
   Icon,
   Link,
   LinkList,
@@ -30,7 +29,7 @@ import {
   Figure,
   FigureCaption,
 } from '@utrecht/component-library-react/dist/css-module';
-import { Button, Logo } from '@rijkshuisstijl-community/components-react';
+import { Button, Logo, Heading } from '@rijkshuisstijl-community/components-react';
 import './page.css';
 import { HeadingGroup } from '@utrecht/component-library-react';
 
@@ -56,7 +55,7 @@ export default function Home() {
           </NavBar>
         </div>
         <div className="container page-content">
-          <div className="unstarted">
+          <div className="unfinished">
             <HeadingGroup>
               <Heading level={1}>Titel van de pagina (H1)</Heading>
               <Paragraph>Dit is een sub-titel van de H1</Paragraph>
@@ -74,9 +73,7 @@ export default function Home() {
           <Button type="submit" appearance="primary-action-button">
             Primary action button
           </Button>
-          <div className="unstarted">
-            <Heading level={2}>Dit is een H2</Heading>
-          </div>
+          <Heading level={2}>Dit is een H2</Heading>
           <Paragraph>Dit is een paragraaf.</Paragraph>
           <Paragraph>Opsomming ordered list</Paragraph>
           <div className="unstarted">
@@ -113,9 +110,7 @@ export default function Home() {
               </LinkListLink>
             </LinkList>
           </div>
-          <div className="unstarted">
-            <Heading level={3}>Dit is een H3</Heading>
-          </div>
+          <Heading level={3}>Dit is een H3</Heading>
           <Paragraph>Dit is een paragraaf.</Paragraph>
           <div className="unstarted">
             <Link external={true} href="example.com">
@@ -148,9 +143,7 @@ export default function Home() {
               </TableFooter>
             </Table>
           </div>
-          <div className="unstarted">
-            <Heading level={4}>Dit is een H4</Heading>
-          </div>
+          <Heading level={4}>Dit is een H4</Heading>
           <Paragraph>
             Dit is een wat langere paragraaf. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -166,9 +159,7 @@ export default function Home() {
               Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
             </Blockquote>
           </div>
-          <div className="unstarted">
-            <Heading level={5}>Dit is een H5</Heading>
-          </div>
+          <Heading level={5}>Dit is een H5</Heading>
           <Paragraph>Dit is een paragraaf.</Paragraph>
           <div className="unstarted">
             <Separator></Separator>
