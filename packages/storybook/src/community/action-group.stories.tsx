@@ -15,9 +15,6 @@ const meta = {
   },
   tags: ['autodocs'],
   parameters: {
-    tokensPrefix: 'utrecht-button-group',
-    // tokens,
-    // tokensDefinition,
     docs: {
       description: {
         component: readme,
