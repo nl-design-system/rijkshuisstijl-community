@@ -805,9 +805,18 @@
       }
     },
     "utrecht/document": {
-      "font-family": { "value": "{rhc.font-family.primary}" },
-      "font-size": { "value": "{rhc.font-size.md}" },
-      "line-height": { "value": "1.4" }
+      "font-family": {
+        "value": "{rhc.font-family.primary}",
+        "type": "other"
+      },
+      "font-size": {
+        "value": "{rhc.font-size.md}",
+        "type": "other"
+      },
+      "line-height": {
+        "value": "1.4",
+        "type": "other"
+      }
     }
   },
   "brand/size": {
@@ -998,8 +1007,14 @@
       }
     },
     "utrecht/document": {
-      "background-color": { "value": "{rhc.color.wit}" },
-      "color": { "value": "{rhc.color.zwart}" }
+      "background-color": {
+        "value": "{rhc.color.wit}",
+        "type": "other"
+      },
+      "color": {
+        "value": "{rhc.color.zwart}",
+        "type": "other"
+      }
     }
   },
   "common/size": {
@@ -3360,6 +3375,28 @@
           "value": "{rhc.space.300}",
           "type": "spacing"
         },
+        "margin-block-end": {
+          "value": "{rhc.space.50}",
+          "type": "spacing"
+        },
+        "margin-block-start": {
+          "value": "{rhc.space.50}",
+          "type": "spacing"
+        },
+        "item": {
+          "padding-inline-start": {
+            "value": "{rhc.space.0}",
+            "type": "spacing"
+          },
+          "margin-block-end": {
+            "value": "{rhc.space.0}",
+            "type": "spacing"
+          },
+          "margin-block-start": {
+            "value": "{rhc.space.0}",
+            "type": "spacing"
+          }
+        },
         "color": {
           "value": "{rhc.color.foreground.lint}",
           "type": "color"
@@ -3379,16 +3416,6 @@
         "line-height": {
           "value": "{rhc.line-height.paragraph}",
           "type": "lineHeights"
-        },
-        "item": {
-          "margin-block-end": {
-            "value": "{rhc.space.50}",
-            "type": "spacing"
-          },
-          "margin-block-start": {
-            "value": "{rhc.space.50}",
-            "type": "spacing"
-          }
         }
       }
     }
@@ -5200,6 +5227,14 @@
           "value": "{rhc.space.300}",
           "type": "spacing"
         },
+        "margin-block-end": {
+          "value": "{rhc.space.50}",
+          "type": "spacing"
+        },
+        "margin-block-start": {
+          "value": "{rhc.space.50}",
+          "type": "spacing"
+        },
         "color": {
           "value": "{rhc.color.foreground.lint}",
           "type": "color"
@@ -5221,12 +5256,16 @@
           "type": "lineHeights"
         },
         "item": {
+          "padding-inline-start": {
+            "value": "{rhc.space.0}",
+            "type": "spacing"
+          },
           "margin-block-end": {
-            "value": "{rhc.space.50}",
+            "value": "{rhc.space.0}",
             "type": "spacing"
           },
           "margin-block-start": {
-            "value": "{rhc.space.50}",
+            "value": "{rhc.space.0}",
             "type": "spacing"
           }
         },
