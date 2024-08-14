@@ -1,14 +1,17 @@
 # Ignore 3rd party files
+
 node_modules/
 vendor/
 
 # Ignore generated files
+
 build/
 coverage/
 dist/
 tmp/
 
 # Ignore generated files from Stencil
+
 components/components.d.ts
 packages/web-components-angular/src/directives/angular-component-lib/utils.ts
 packages/web-components-angular/src/directives/proxies.ts
@@ -17,4 +20,6 @@ packages/web-components-react/src/react-component-lib/
 packages/web-components-react/src/components.ts
 
 # Ignore Next.js project with own ESLint config
+
 apps/rvs.rivm.nl/
+apps/rhc-templates/
