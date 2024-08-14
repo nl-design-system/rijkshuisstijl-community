@@ -61,7 +61,7 @@ export default function Collage() {
       </div>
       <div className="unfinished">
         <Avatar label="BK"></Avatar>
-      </div>{' '}
+      </div>
       <div className="unstarted">
         <Heading level={1}>Componenten collage NL Design System</Heading>
       </div>
@@ -126,7 +126,8 @@ export default function Collage() {
       </div>
       <div className="unstarted">
         <Link href="#">
-          Hello, I'm a link <IconArrowRight />
+          {`Hello, I'm a link `}
+          <IconArrowRight />
         </Link>
       </div>
       <div className="unstarted">
@@ -225,7 +226,7 @@ export default function Collage() {
             <DataListValue>Value</DataListValue>
           </DataListItem>
         </DataList>
-      </div>{' '}
+      </div>
       <div className="unstarted">
         <Alert type="info" icon={<IconInfoCircle />}>
           <Heading level={1}>Heading</Heading>
