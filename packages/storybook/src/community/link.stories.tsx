@@ -14,7 +14,7 @@ interface LinkStoryProps {
 }
 
 const LinkStory = ({ href, children, iconLeft, iconRight, external, ...props }: PropsWithChildren<LinkStoryProps>) => (
-  <Link href={href} external={external} {...props} style={{ '--utrecht-icon-inset-block-start': '0.2em' }}>
+  <Link href={href} external={external} {...props}>
     {iconLeft && (
       <Icon>
         <IconCalendarEvent />

@@ -1,4 +1,4 @@
-import { IconExternalLink } from '@tabler/icons-react';
+import { IconExternalLink } from '@tabler/icons-react/dist/esm/tabler-icons-react';
 import {
   Icon,
   Link as UtrechtLink,
