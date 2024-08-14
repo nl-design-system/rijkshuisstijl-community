@@ -20,8 +20,6 @@ import {
   TableHeader,
   TableHeaderCell,
   TableRow,
-  UnorderedList,
-  UnorderedListItem,
   NavBar,
   NavList,
   NavListLinkButton,
@@ -30,7 +28,7 @@ import {
   Figure,
   FigureCaption,
 } from '@utrecht/component-library-react/dist/css-module';
-import { Button, Logo } from '@rijkshuisstijl-community/components-react';
+import { Button, Logo, UnorderedList, UnorderedListItem } from '@rijkshuisstijl-community/components-react';
 import './page.css';
 import { HeadingGroup } from '@utrecht/component-library-react';
 
@@ -87,13 +85,11 @@ export default function Home() {
             </OrderedList>
           </div>
           <Paragraph>Opsomming unordered list</Paragraph>
-          <div className="unstarted">
-            <UnorderedList>
-              <UnorderedListItem>Unordered list item.</UnorderedListItem>
-              <UnorderedListItem>Unordered list item.</UnorderedListItem>
-              <UnorderedListItem>Unordered list item.</UnorderedListItem>
-            </UnorderedList>
-          </div>
+          <UnorderedList>
+            <UnorderedListItem>Unordered list item.</UnorderedListItem>
+            <UnorderedListItem>Unordered list item.</UnorderedListItem>
+            <UnorderedListItem>Unordered list item.</UnorderedListItem>
+          </UnorderedList>
           <Paragraph>Opsomming link list</Paragraph>
           <div className="unstarted">
             <LinkList
