@@ -9,8 +9,6 @@ import {
   Link,
   LinkList,
   LinkListLink,
-  OrderedList,
-  OrderedListItem,
   Separator,
   Table,
   TableBody,
@@ -30,7 +28,7 @@ import {
   Figure,
   FigureCaption,
 } from '@utrecht/component-library-react/dist/css-module';
-import { Button, Logo } from '@rijkshuisstijl-community/components-react';
+import { Button, Logo, OrderedList, OrderedListItem } from '@rijkshuisstijl-community/components-react';
 import './page.css';
 import { HeadingGroup } from '@utrecht/component-library-react';
 
@@ -79,13 +77,11 @@ export default function Home() {
           </div>
           <Paragraph>Dit is een paragraaf.</Paragraph>
           <Paragraph>Opsomming ordered list</Paragraph>
-          <div className="unstarted">
-            <OrderedList>
-              <OrderedListItem>Ordered list item.</OrderedListItem>
-              <OrderedListItem>Ordered list item.</OrderedListItem>
-              <OrderedListItem>Ordered list item.</OrderedListItem>
-            </OrderedList>
-          </div>
+          <OrderedList>
+            <OrderedListItem>Ordered list item.</OrderedListItem>
+            <OrderedListItem>Ordered list item.</OrderedListItem>
+            <OrderedListItem>Ordered list item.</OrderedListItem>
+          </OrderedList>
           <Paragraph>Opsomming unordered list</Paragraph>
           <div className="unstarted">
             <UnorderedList>
