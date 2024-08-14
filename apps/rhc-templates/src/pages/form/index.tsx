@@ -1,6 +1,7 @@
 'use client';
 
 import { Logo } from '@rijkshuisstijl-community/components-react';
+import { FormLabel, Heading } from '@utrecht/component-library-react';
 import {
   AccordionProvider,
   BreadcrumbNav,
@@ -10,7 +11,6 @@ import {
   Fieldset,
   FieldsetLegend,
   FormField,
-  Heading,
   Link,
   LinkList,
   LinkListLink,
@@ -23,9 +23,8 @@ import {
   Textbox,
   UnorderedList,
   UnorderedListItem,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist/css-module';
 import { DateInput, FileInput } from '@amsterdam/design-system-react';
-import { FormLabel } from '@utrecht/component-library-react/dist/css-module';
 
 export default function Form() {
   return (
