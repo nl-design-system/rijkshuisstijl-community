@@ -1,5 +1,15 @@
 @import "../node_modules/@utrecht/components/unordered-list/src";
 
-.utrecht-unordered-list__item {
+.utrecht-unordered-list {
   color: var(--utrecht-unordered-list-color);
+  font-family: var(--utrecht-unordered-list-font-family);
+  font-size: var(--utrecht-unordered-list-font-size);
+  font-weight: var(--utrecht-unordered-list-font-weight);
+  line-height: var(--utrecht-unordered-list-line-heigh);
+  padding-inline-start: var(--utrecht-unordered-list-padding-inline-start);
+}
+
+.utrecht-unordered-list__item {
+  margin-block-end: var(--utrecht-unordered-list-item-margin-block-end);
+  margin-block-start: var(--utrecht-unordered-list-item-margin-block-start);
 }
