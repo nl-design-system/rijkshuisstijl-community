@@ -3,7 +3,6 @@
 import {
   Blockquote,
   Button,
-  ButtonGroup,
   ButtonLink,
   Heading,
   Icon,
@@ -33,7 +32,7 @@ import {
   Figure,
   FigureCaption,
 } from '@utrecht/component-library-react/dist/css-module';
-import { Logo } from '@rijkshuisstijl-community/components-react';
+import { ActionGroup, Logo } from '@rijkshuisstijl-community/components-react';
 import { HeadingGroup } from '@utrecht/component-library-react';
 
 export default function Page() {
@@ -200,7 +199,7 @@ export default function Page() {
               Dit is een H5 met H6 appearance
             </Heading>
           </div>
-          <ButtonGroup>
+          <ActionGroup>
             <Button appearance="secondary-action-button">
               Link kopiëren
               <Icon>
@@ -233,7 +232,7 @@ export default function Page() {
                 </svg>
               </Icon>
             </ButtonLink>
-          </ButtonGroup>
+          </ActionGroup>
         </PageContent>
       </main>
     </>
