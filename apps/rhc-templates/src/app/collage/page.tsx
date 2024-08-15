@@ -120,9 +120,7 @@ export default function Collage() {
           In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
         </Paragraph>
       </div>
-      <div className="unstarted">
-        <Blockquote attribution="Pippi Langkous">Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan</Blockquote>
-      </div>
+      <Blockquote attribution="Pippi Langkous">Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan</Blockquote>
       <div className="unstarted">
         <Separator></Separator>
       </div>

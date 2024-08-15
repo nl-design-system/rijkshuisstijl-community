@@ -179,11 +179,9 @@ export default function Page() {
             </span>
           </Paragraph>
         </div>
-        <div className="unstarted">
-          <Blockquote attribution="Label">
-            Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
-          </Blockquote>
-        </div>
+        <Blockquote attribution="Label">
+          Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
+        </Blockquote>
         <div className="unstarted">
           <Heading level={5}>Dit is een H5</Heading>
         </div>
