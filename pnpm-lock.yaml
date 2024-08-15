@@ -85,6 +85,10 @@ importers:
         specifier: 5.5.3
         version: 5.5.3
 
+  apps/rhc-template/dist: {}
+
+  apps/rhc-template/dist/types: {}
+
   apps/rhc-templates:
     dependencies:
       next:
@@ -152,10 +156,6 @@ importers:
         specifier: 5.5.3
         version: 5.5.3
 
-  apps/rhc-templates/dist: {}
-
-  apps/rhc-templates/dist/types: {}
-
   apps/rvs.rivm.nl:
     dependencies:
       next:
@@ -211,10 +211,17 @@ importers:
         specifier: 5.5.3
         version: 5.5.3
 
-  packages/components-css: {}
+  packages/components-css:
+    devDependencies:
+      '@utrecht/components':
+        specifier: 6.0.0
+        version: 6.0.0
 
   packages/components-react:
     dependencies:
+      '@rijkshuisstijl-community/components-css':
+        specifier: workspace:*
+        version: link:../components-css
       '@utrecht/component-library-react':
         specifier: 5.0.0
         version: 5.0.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -351,6 +358,9 @@ importers:
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css
+      '@rijkshuisstijl-community/components-react':
+        specifier: workspace:*
+        version: link:../components-react
       '@rijkshuisstijl-community/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
@@ -424,8 +434,8 @@ importers:
         specifier: 4.0.0
         version: 4.0.0
       '@utrecht/component-library-react':
-        specifier: 4.1.0
-        version: 4.1.0(@babel/runtime@7.24.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 5.0.0
+        version: 5.0.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/web-component-library-react':
         specifier: 1.2.0
         version: 1.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
