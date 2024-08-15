@@ -1,6 +1,5 @@
+import { ActionGroup, Button } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react/*';
-import { ButtonGroup as ActionGroup } from '@utrecht/component-library-react';
-import { Button } from '@utrecht/component-library-react/dist/css-module';
 import readme from './action-group.md?raw';
 const meta = {
   title: 'Rijkshuisstijl/ActionGroup',
@@ -8,7 +7,7 @@ const meta = {
   component: ActionGroup,
   argTypes: {
     direction: {
-      description: 'Layout of the button group',
+      description: 'Layout of the action group',
       control: 'select',
       options: ['column', 'row'],
     },
