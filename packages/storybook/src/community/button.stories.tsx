@@ -53,6 +53,12 @@ const meta = {
       },
       defaultValue: '',
     },
+    disabled: {
+      table: {
+        category: 'Property',
+      },
+      defaultValue: false,
+    },
     iconLeft: {
       description: 'Icon Left',
       type: {
@@ -77,6 +83,7 @@ const meta = {
   args: {
     children: '',
     appearance: '',
+    disabled: false,
     iconLeft: false,
     iconRight: false,
   },
