@@ -20,7 +20,7 @@ const AccordionStory = ({ expanded, label, body, appearance, icon, sections }: A
 
 const meta = {
   title: 'Rijkshuisstijl/Accordion',
-  id: 'react-accordion',
+  id: 'rijkshuisstijl-accordion',
   args: {
     label: '',
     body: '',
