@@ -75,11 +75,9 @@ export default function Page() {
           ></Image>
           <FigureCaption>Bijschrift (figcaption) van een afbeelding)</FigureCaption>
         </Figure>
-        <div className="unstarted">
-          <Button type="submit" appearance="primary-action-button">
-            Primary action button
-          </Button>
-        </div>
+        <Button type="submit" appearance="primary-action-button">
+          Primary action button
+        </Button>
         <div className="unstarted">
           <Heading level={2}>Dit is een H2</Heading>
         </div>

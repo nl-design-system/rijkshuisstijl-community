@@ -67,14 +67,12 @@ export default function Collage() {
       <div className="unstarted">
         <Heading level={1}>Componenten collage NL Design System</Heading>
       </div>
-      <div className="unstarted">
-        <Image
-          alt="Multicolored tulip field"
-          width="640"
-          height="763"
-          src="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
-        ></Image>
-      </div>
+      <Image
+        alt="Multicolored tulip field"
+        width="640"
+        height="763"
+        src="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
+      ></Image>
       <div className="unstarted">
         <Paragraph lead>
           In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
@@ -132,23 +130,13 @@ export default function Collage() {
           <IconArrowRight />
         </Link>
       </div>
-      <div className="unstarted">
-        <Button appearance="primary-action-button">Primary button</Button>
-      </div>
-      <div className="unstarted">
-        <Button appearance="secondary-action-button">Secondary button</Button>
-      </div>
-      <div className="unstarted">
-        <Button>Default button</Button>
-      </div>
-      <div className="unstarted">
-        <Button appearance="subtle-button">Subtle button</Button>
-      </div>
-      <div className="unstarted">
-        <Button appearance="subtle-button">
-          <IconCalendarEvent />
-        </Button>
-      </div>
+      <Button appearance="primary-action-button">Primary button</Button>
+      <Button appearance="secondary-action-button">Secondary button</Button>
+      <Button>Default button</Button>
+      <Button appearance="subtle-button">Subtle button</Button>
+      <Button appearance="subtle-button">
+        <IconCalendarEvent />
+      </Button>
       <div className="unstarted">
         <FormField label="Name" description="Description">
           <Textbox></Textbox>
