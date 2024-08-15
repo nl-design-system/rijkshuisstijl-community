@@ -1,0 +1,14 @@
+@import "../node_modules/@utrecht/components/blockquote/src/";
+
+.utrecht-blockquote {
+  color: var(--utrecht-blockquote-content-color, inherit);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--utrecht-blockquote-content-font-family, inherit);
+  font-size: var(--utrecht-blockquote-content-font-size, inherit);
+  gap: var(--utrecht-blockquote-row-gap);
+}
+
+.utrecht-blockquote__attribution {
+  font-family: var(--utrecht-blockquote-attribution-font-family, inherit);
+}
