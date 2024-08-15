@@ -133,11 +133,9 @@ export default function Page() {
         <div className="unstarted">
           <Paragraph>Dit is een paragraaf.</Paragraph>
         </div>
-        <div className="unstarted">
-          <Link external={true} href="example.com">
-            Dit is een externe link
-          </Link>
-        </div>
+        <Link external={true} href="example.com">
+          Dit is een externe link
+        </Link>
         <div className="unstarted">
           <Table>
             <TableCaption>Caption van tabel</TableCaption>
@@ -174,9 +172,7 @@ export default function Page() {
             ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
             velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
-            <span className="unstarted">
-              <Link href="/">Dit is een normale link</Link>
-            </span>
+            <Link href="/">Dit is een normale link</Link>
           </Paragraph>
         </div>
         <div className="unstarted">

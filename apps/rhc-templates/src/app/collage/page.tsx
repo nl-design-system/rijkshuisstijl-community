@@ -126,12 +126,10 @@ export default function Collage() {
       <div className="unstarted">
         <Separator></Separator>
       </div>
-      <div className="unstarted">
-        <Link href="#">
-          {`Hello, I'm a link `}
-          <IconArrowRight />
-        </Link>
-      </div>
+      <Link href="#">
+        {`Hello, I'm a link `}
+        <IconArrowRight />
+      </Link>
       <div className="unstarted">
         <Button appearance="primary-action-button">Primary button</Button>
       </div>

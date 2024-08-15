@@ -72,11 +72,7 @@ export default function Form() {
         <br />
         <div className="unstarted">
           <Paragraph>
-            Lees verder over de{' '}
-            <span className="unstarted">
-              <Link href="#">verantwoordingsmethode SiSa</Link>
-            </span>
-            .
+            Lees verder over de <Link href="#">verantwoordingsmethode SiSa</Link>.
           </Paragraph>
         </div>
         <form>
