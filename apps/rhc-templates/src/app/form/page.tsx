@@ -170,23 +170,23 @@ export default function Form() {
                 Binnenlandse Zaken & Koninkrijksrelaties (BZK).
               </Paragraph>
             </div>
+            <AccordionProvider
+              sections={[
+                {
+                  label: 'Toon extra informatie over de verwerking van uw persoonsgegevens',
+                  body: 'Dit is extra informatie',
+                },
+              ]}
+            ></AccordionProvider>
             <div className="unstarted">
-              <AccordionProvider
-                sections={[
-                  {
-                    label: 'Toon extra informatie over de verwerking van uw persoonsgegevens',
-                    body: 'Dit is extra informatie',
-                  },
-                ]}
-              ></AccordionProvider>
+              <Fieldset>
+                <FieldsetLegend>Akkoordverklaring</FieldsetLegend>
+                <FormField label="Ik heb gelezen en begrepen wat er met mijn persoonsgegevens wordt gedaan">
+                  <Checkbox></Checkbox>
+                </FormField>
+              </Fieldset>
             </div>
-            <Fieldset>
-              <FieldsetLegend>Akkoordverklaring</FieldsetLegend>
-              <FormField label="Ik heb gelezen en begrepen wat er met mijn persoonsgegevens wordt gedaan">
-                <Checkbox></Checkbox>
-              </FormField>
-            </Fieldset>
-            <div className="unfinished">
+            <div className="unstarted">
               <Button type="submit" appearance="primary-action-button">
                 Ga verder
               </Button>

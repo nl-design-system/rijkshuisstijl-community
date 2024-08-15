@@ -253,32 +253,30 @@ export default function Collage() {
           <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
         </Alert>
       </div>
-      <div className="unstarted">
-        <AccordionProvider
-          sections={[
-            {
-              label: 'Zorg voor vergelijkbare ervaring',
-              body: 'Body',
-            },
-            {
-              label: 'Overweeg situatie',
-              body: 'Body',
-            },
-            {
-              label: 'Wees consistent',
-              body: 'Body',
-            },
-            {
-              label: 'Geef controle',
-              body: 'Body',
-            },
-            {
-              label: 'Bied keuze',
-              body: 'Body',
-            },
-          ]}
-        ></AccordionProvider>
-      </div>
+      <AccordionProvider
+        sections={[
+          {
+            label: 'Zorg voor vergelijkbare ervaring',
+            body: 'Body',
+          },
+          {
+            label: 'Overweeg situatie',
+            body: 'Body',
+          },
+          {
+            label: 'Wees consistent',
+            body: 'Body',
+          },
+          {
+            label: 'Geef controle',
+            body: 'Body',
+          },
+          {
+            label: 'Bied keuze',
+            body: 'Body',
+          },
+        ]}
+      ></AccordionProvider>
       <div className="unstarted">
         <BadgeCounter>9</BadgeCounter>
       </div>
