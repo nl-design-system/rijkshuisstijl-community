@@ -1,5 +1,8 @@
+'use client';
+
 import {
   Blockquote,
+  Button,
   ButtonGroup,
   ButtonLink,
   Heading,
@@ -30,7 +33,7 @@ import {
   Figure,
   FigureCaption,
 } from '@utrecht/component-library-react/dist/css-module';
-import { Button, Logo } from '@rijkshuisstijl-community/components-react';
+import { Logo } from '@rijkshuisstijl-community/components-react';
 import { HeadingGroup } from '@utrecht/component-library-react';
 
 export default function Page() {
@@ -74,9 +77,11 @@ export default function Page() {
             ></Image>
             <FigureCaption>Bijschrift (figcaption) van een afbeelding)</FigureCaption>
           </Figure>
-          <Button type="submit" appearance="primary-action-button">
-            Primary action button
-          </Button>
+          <div className="unstarted">
+            <Button type="submit" appearance="primary-action-button">
+              Primary action button
+            </Button>
+          </div>
           <div className="unstarted">
             <Heading level={2}>Dit is een H2</Heading>
           </div>
@@ -195,42 +200,40 @@ export default function Page() {
               Dit is een H5 met H6 appearance
             </Heading>
           </div>
-          <div className="unstarted">
-            <ButtonGroup>
-              <Button appearance="secondary-action-button">
-                Link kopiëren
-                <Icon>
-                  <svg viewBox="0 0 1000 1000">
-                    <rect fill="currentColor" x="0" y="0" width="1000" height="1000" />
-                  </svg>
-                </Icon>
-              </Button>
-              <ButtonLink appearance="secondary-action-button" external={true}>
-                E-mail
-                <Icon>
-                  <svg viewBox="0 0 1000 1000">
-                    <rect fill="currentColor" x="0" y="0" width="1000" height="1000" />
-                  </svg>
-                </Icon>
-              </ButtonLink>
-              <ButtonLink appearance="secondary-action-button" external={true}>
-                Twitter
-                <Icon>
-                  <svg viewBox="0 0 1000 1000">
-                    <rect fill="currentColor" x="0" y="0" width="1000" height="1000" />
-                  </svg>
-                </Icon>
-              </ButtonLink>
-              <ButtonLink appearance="secondary-action-button" external={true}>
-                LinkedIn
-                <Icon>
-                  <svg viewBox="0 0 1000 1000">
-                    <rect fill="currentColor" x="0" y="0" width="1000" height="1000" />
-                  </svg>
-                </Icon>
-              </ButtonLink>
-            </ButtonGroup>
-          </div>
+          <ButtonGroup>
+            <Button appearance="secondary-action-button">
+              Link kopiëren
+              <Icon>
+                <svg viewBox="0 0 1000 1000">
+                  <rect fill="currentColor" x="0" y="0" width="1000" height="1000" />
+                </svg>
+              </Icon>
+            </Button>
+            <ButtonLink appearance="secondary-action-button" external={true}>
+              E-mail
+              <Icon>
+                <svg viewBox="0 0 1000 1000">
+                  <rect fill="currentColor" x="0" y="0" width="1000" height="1000" />
+                </svg>
+              </Icon>
+            </ButtonLink>
+            <ButtonLink appearance="secondary-action-button" external={true}>
+              Twitter
+              <Icon>
+                <svg viewBox="0 0 1000 1000">
+                  <rect fill="currentColor" x="0" y="0" width="1000" height="1000" />
+                </svg>
+              </Icon>
+            </ButtonLink>
+            <ButtonLink appearance="secondary-action-button" external={true}>
+              LinkedIn
+              <Icon>
+                <svg viewBox="0 0 1000 1000">
+                  <rect fill="currentColor" x="0" y="0" width="1000" height="1000" />
+                </svg>
+              </Icon>
+            </ButtonLink>
+          </ButtonGroup>
         </PageContent>
       </main>
     </>

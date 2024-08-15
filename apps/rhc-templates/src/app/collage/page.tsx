@@ -1,5 +1,6 @@
 'use client';
 
+import { AccordionProvider } from '@rijkshuisstijl-community/components-react';
 import { Avatar, Pagination } from '@amsterdam/design-system-react';
 import {
   IconAlertTriangle,
@@ -10,7 +11,6 @@ import {
   IconInfoCircle,
 } from '@tabler/icons-react/dist/esm/tabler-icons-react';
 import {
-  AccordionProvider,
   Alert,
   BadgeCounter,
   Blockquote,

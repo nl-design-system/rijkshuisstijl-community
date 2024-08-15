@@ -1,3 +1,5 @@
+'use client';
+
 import { Logo } from '@rijkshuisstijl-community/components-react';
 import {
   BreadcrumbNav,
