@@ -11,6 +11,8 @@ const init = async ({ input, output }) => {
   // The following components didn't work yet because of broken design token references.
   // You can remove excludes from this list at any time, as long as they don't break the build.
   const excludes = [
+    'overwrites/primary-color',
+    'overwrites/tablet',
     'components/alert',
     'components/avatar',
     'components/backdrop',
