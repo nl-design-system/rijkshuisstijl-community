@@ -1,3 +1,5 @@
+'use client';
+
 import { Avatar, Pagination } from '@amsterdam/design-system-react';
 import {
   IconAlertTriangle,
@@ -6,7 +8,7 @@ import {
   IconCircleCheck,
   IconExclamationCircle,
   IconInfoCircle,
-} from '@tabler/icons-react';
+} from '@tabler/icons-react/dist/esm/tabler-icons-react';
 import {
   AccordionProvider,
   Alert,
