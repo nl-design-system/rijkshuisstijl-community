@@ -5,6 +5,7 @@ import {
   RhcIconWarning,
 } from '@rijkshuisstijl-community/web-components-react';
 import { Heading, Icon, Paragraph, Alert as UAlert } from '@utrecht/component-library-react/dist/css-module';
+import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 const RhcIcon = ({ icon }: { icon: string }) =>
   icon === 'info' ? (
@@ -27,37 +28,36 @@ interface AlertProps {
 }
 export const Alert = forwardRef(
   (
-    { type, icon, heading, headingLevel, textContent, ...restProps }: PropsWithChildren<AlertProps>,
+    { type, children, icon, heading, headingLevel, textContent, ...restProps }: PropsWithChildren<AlertProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     return (
       <UAlert ref={ref} {...restProps} type={type} role="alert">
-        <div className="rhc-alert-container">
-          <div className="rhc-alert-container__icon">
-            {icon && (
-              <Icon
-                style={{
-                  color:
-                    type === 'ok'
-                      ? 'var(--rhc-color-feedback-success-default)'
-                      : type === 'error'
-                        ? 'var(--rhc-color-feedback-error-default)'
-                        : type === 'warning'
-                          ? 'var(--rhc-color-feedback-warning-default)'
-                          : 'var(--rhc-color-feedback-info-default)',
-                  inlineSize: 'var(--rhc-space-300)',
-                  paddingInlineEnd: 'var(--rhc-space-100)',
-                }}
-              >
-                <RhcIcon icon={icon} />
-              </Icon>
-            )}
+        {children ? (
+          children
+        ) : (
+          <div className="rhc-alert-container">
+            <div>
+              {icon && (
+                <Icon
+                  className={clsx({
+                    'rhc-alert-container__icon': true,
+                    'rhc-alert-container__icon-ok': type === 'ok',
+                    'rhc-alert-container__icon-error': type === 'error',
+                    'rhc-alert-container__icon-warning': type === 'warning',
+                    'rhc-alert-container__icon-info': type === 'info',
+                  })}
+                >
+                  <RhcIcon icon={icon} />
+                </Icon>
+              )}
+            </div>
+            <div>
+              <Heading level={headingLevel || 3}>{heading}</Heading>
+              <Paragraph>{textContent}</Paragraph>
+            </div>
           </div>
-          <div>
-            <Heading level={headingLevel || 3}>{heading}</Heading>
-            <Paragraph>{textContent}</Paragraph>
-          </div>
-        </div>
+        )}
       </UAlert>
     );
   },

@@ -3,5 +3,19 @@
 }
 
 .rhc-alert-container__icon {
+  inline-size: var(--rhc-space-300);
   padding-block-start: var(--rhc-space-100);
+  padding-inline-end: var(--rhc-space-100);
+  &-ok {
+    color: var(--rhc-color-feedback-success-default);
+  }
+  &-error {
+    color: var(--rhc-color-feedback-error-default);
+  }
+  &-warning {
+    color: var(--rhc-color-feedback-warning-default);
+  }
+  &-info {
+    color: var(--rhc-color-feedback-info-default);
+  }
 }
