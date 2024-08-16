@@ -12,6 +12,7 @@ const init = async ({ input, output }) => {
   // You can remove excludes from this list at any time, as long as they don't break the build.
   const excludes = [
     'components/accordion',
+    'components/alert',
     'components/avatar',
     'components/backdrop',
     'components/blockquote',

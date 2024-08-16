@@ -1,1 +1,64 @@
 /* global CSS here */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  background-color: #f2f4f6;
+}
+
+.unstarted {
+  border: medium solid red;
+}
+
+.unfinished {
+  border: medium solid yellow;
+}
+
+.explanation {
+  color: red;
+}
+
+.information,
+.header {
+  background-color: white;
+}
+
+.container {
+  background-color: white;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 74em;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  /* padding: 3em 6em !important; */
+  gap: 1em !important;
+}
+
+.header-image {
+  background-image: url("https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg");
+  padding: 3.5rem 1rem 5.5rem;
+}
+
+.header-image-textbox {
+  max-width: 1200px;
+  background-color: #f2f4f6;
+}
+
+@media (min-width: 768px) {
+  .page-content {
+    padding: 0 !important;
+  }
+  .header-image-textbox {
+    max-width: 35%;
+  }
+}
+
+.sub-navigation {
+  background-color: #f2f4f6;
+}
