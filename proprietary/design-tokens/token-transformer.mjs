@@ -27,7 +27,6 @@ const init = async ({ input, output }) => {
     'components/modal-dialog',
     'components/ordered-list',
     'components/pagination',
-    'components/paragraph',
     'components/radio',
     'components/radio-group',
     'components/select',

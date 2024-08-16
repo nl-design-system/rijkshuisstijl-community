@@ -1,6 +1,6 @@
 'use client';
 
-import { AccordionProvider } from '@rijkshuisstijl-community/components-react';
+import { AccordionProvider, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { Avatar, Pagination } from '@amsterdam/design-system-react';
 import {
   IconAlertTriangle,
@@ -33,7 +33,6 @@ import {
   LinkListLink,
   OrderedList,
   OrderedListItem,
-  Paragraph,
   RadioButton,
   Separator,
   StatusBadge,
@@ -75,18 +74,14 @@ export default function Collage() {
           src="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
         ></Image>
       </div>
-      <div className="unstarted">
-        <Paragraph lead>
-          In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
-        </Paragraph>
-      </div>
-      <div className="unstarted">
-        <Paragraph>
-          In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen. Zo kan de
-          hele Nederlandse overheid samenwerken aan een begrijpelijke, gebruiksvriendelijke én toegankelijke online
-          dienstverlening.
-        </Paragraph>
-      </div>
+      <Paragraph lead>
+        In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
+      </Paragraph>
+      <Paragraph>
+        In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen. Zo kan de hele
+        Nederlandse overheid samenwerken aan een begrijpelijke, gebruiksvriendelijke én toegankelijke online
+        dienstverlening.
+      </Paragraph>
       <div className="unstarted">
         <OrderedList>
           <OrderedListItem>Verkies makkelijke korte boven formele lange woorden.</OrderedListItem>
@@ -115,11 +110,9 @@ export default function Collage() {
           <UnorderedListItem>Maak gebruik van opsommingstekens waar dat mogelijk is.</UnorderedListItem>
         </UnorderedList>
       </div>
-      <div className="unstarted">
-        <Paragraph lead>
-          In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
-        </Paragraph>
-      </div>
+      <Paragraph lead>
+        In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
+      </Paragraph>
       <div className="unstarted">
         <Blockquote attribution="Pippi Langkous">Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan</Blockquote>
       </div>
