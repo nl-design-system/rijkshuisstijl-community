@@ -20,7 +20,7 @@ const AccordionStory = ({ expanded, label, body, appearance, icon, sections }: A
 
 const meta = {
   title: 'Rijkshuisstijl/Accordion',
-  id: 'react-accordion',
+  id: 'rijkshuisstijl-accordion',
   args: {
     label: '',
     body: '',
@@ -49,7 +49,7 @@ const meta = {
       name: 'expandedAccordion',
       type: { name: 'boolean', required: false },
       table: {
-        defaultValue: { summary: false },
+        defaultValue: { summary: '' },
         category: 'API',
       },
     },
@@ -62,7 +62,8 @@ const meta = {
       name: 'icon',
       description: 'Icon at the start',
       control: { type: 'select' },
-      options: {
+      options: ['', null, 'utrecht-icon-chevron-down'],
+      mapping: {
         '': undefined,
         null: null,
         'utrecht-icon-chevron-down': <UtrechtIconChevronDown />,
