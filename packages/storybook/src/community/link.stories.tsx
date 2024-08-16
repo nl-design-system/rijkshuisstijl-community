@@ -44,6 +44,24 @@ const meta = {
         category: 'Property',
       },
     },
+    external: {
+      description: 'Whether the link is external',
+      type: {
+        name: 'boolean',
+      },
+      table: {
+        category: 'Property',
+      },
+    },
+    externalLabel: {
+      description: 'Aria label for external link icon',
+      type: {
+        name: 'string',
+      },
+      table: {
+        category: 'Property',
+      },
+    },
     children: {
       description: 'Link text - default webcomponent slot',
       type: {
