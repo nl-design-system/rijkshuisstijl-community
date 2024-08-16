@@ -805,17 +805,25 @@
       }
     },
     "utrecht/document": {
+      "background-color": {
+        "value": "{rhc.color.wit}",
+        "type": "color"
+      },
+      "color": {
+        "value": "{rhc.color.zwart}",
+        "type": "color"
+      },
       "font-family": {
         "value": "{rhc.font-family.primary}",
-        "type": "other"
+        "type": "fontFamilies"
       },
       "font-size": {
         "value": "{rhc.font-size.md}",
-        "type": "other"
+        "type": "fontSizes"
       },
       "line-height": {
         "value": "1.4",
-        "type": "other"
+        "type": "lineHeights"
       }
     }
   },
@@ -1771,8 +1779,8 @@
     }
   },
   "components/breadcrumb": {
-    "todo": {
-      "breadcrumb": {
+    "utrecht": {
+      "breadcrumb-nav": {
         "line-height": {
           "value": "{rhc.line-height.paragraph}",
           "type": "lineHeights"
@@ -1781,17 +1789,7 @@
           "value": "{rhc.font-size.paragraph.default}",
           "type": "fontSizes"
         },
-        "link": {
-          "icon": {
-            "size": {
-              "value": "{rhc.size.icon.functional}",
-              "type": "sizing"
-            },
-            "margin-inline": {
-              "value": "{rhc.space.50}",
-              "type": "spacing"
-            }
-          },
+        "item":{
           "padding-block-end": {
             "value": "{rhc.space.150}",
             "type": "spacing"
@@ -1807,7 +1805,20 @@
           "padding-inline-start": {
             "value": "{rhc.space.0}",
             "type": "spacing"
+          }
+        },
+        "link": {
+          "icon": {
+            "size": {
+              "value": "{rhc.size.icon.functional}",
+              "type": "sizing"
+            },
+            "margin-inline": {
+              "value": "{rhc.space.50}",
+              "type": "spacing"
+            }
           },
+
           "color": {
             "value": "{rhc.color.foreground.link}",
             "type": "color"
@@ -1859,6 +1870,10 @@
             "color": {
               "value": "{rhc.color.foreground.subdued}",
               "type": "color"
+            },
+            "text-decoration": {
+              "value": "None",
+              "type": "textDecoration"
             }
           },
           "text-decoration": {
