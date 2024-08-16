@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from './alert.md?raw';
 
 interface AlertStoryComponentProps {
-  type: string;
+  type: 'info' | 'error' | 'warning' | 'ok';
   icon?: string;
   heading: string;
   textContent: string;
