@@ -6,7 +6,6 @@ import {
   ButtonLink,
   Heading,
   Icon,
-  Link,
   LinkList,
   LinkListLink,
   OrderedList,
@@ -32,7 +31,7 @@ import {
   Figure,
   FigureCaption,
 } from '@utrecht/component-library-react/dist/css-module';
-import { ActionGroup, Logo } from '@rijkshuisstijl-community/components-react';
+import { ActionGroup, Link, Logo } from '@rijkshuisstijl-community/components-react';
 import { HeadingGroup } from '@utrecht/component-library-react';
 
 export default function Page() {

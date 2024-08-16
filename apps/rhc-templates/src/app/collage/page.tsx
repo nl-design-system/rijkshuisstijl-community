@@ -1,6 +1,6 @@
 'use client';
 
-import { AccordionProvider } from '@rijkshuisstijl-community/components-react';
+import { AccordionProvider, Link } from '@rijkshuisstijl-community/components-react';
 import { Avatar, Pagination } from '@amsterdam/design-system-react';
 import {
   IconAlertTriangle,
@@ -28,7 +28,6 @@ import {
   FormLabel,
   Heading,
   Image,
-  Link,
   LinkList,
   LinkListLink,
   OrderedList,
