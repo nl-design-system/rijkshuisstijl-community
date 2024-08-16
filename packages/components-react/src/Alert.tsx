@@ -32,12 +32,8 @@ export const Alert = forwardRef(
   ) => {
     return (
       <UAlert ref={ref} {...restProps} type={type} role="alert">
-        <div
-          style={{
-            display: 'flex',
-          }}
-        >
-          <div>
+        <div className="rhc-alert-container">
+          <div className="rhc-alert-container__icon">
             {icon && (
               <Icon
                 style={{
@@ -49,7 +45,7 @@ export const Alert = forwardRef(
                         : type === 'warning'
                           ? 'var(--rhc-color-feedback-warning-default)'
                           : 'var(--rhc-color-feedback-info-default)',
-                  inlineSize: 'var(--rhc-space-200)',
+                  inlineSize: 'var(--rhc-space-300)',
                   paddingInlineEnd: 'var(--rhc-space-100)',
                 }}
               >
