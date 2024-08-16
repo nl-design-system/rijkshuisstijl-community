@@ -1,6 +1,6 @@
 'use client';
 
-import { AccordionProvider } from '@rijkshuisstijl-community/components-react';
+import { AccordionProvider, Blockquote } from '@rijkshuisstijl-community/components-react';
 import { Avatar, Pagination } from '@amsterdam/design-system-react';
 import {
   IconAlertTriangle,
@@ -13,7 +13,6 @@ import {
 import {
   Alert,
   BadgeCounter,
-  Blockquote,
   BreadcrumbNav,
   BreadcrumbNavLink,
   Button,
@@ -120,7 +119,7 @@ export default function Collage() {
           In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
         </Paragraph>
       </div>
-      <Blockquote attribution="Pippi Langkous">Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan</Blockquote>
+      <Blockquote attribution="— Pippi Langkous">Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan</Blockquote>
       <div className="unstarted">
         <Separator></Separator>
       </div>

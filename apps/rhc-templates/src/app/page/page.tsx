@@ -1,7 +1,6 @@
 'use client';
 
 import {
-  Blockquote,
   Button,
   ButtonLink,
   Heading,
@@ -32,7 +31,7 @@ import {
   Figure,
   FigureCaption,
 } from '@utrecht/component-library-react/dist/css-module';
-import { ActionGroup, Logo } from '@rijkshuisstijl-community/components-react';
+import { ActionGroup, Blockquote, Logo } from '@rijkshuisstijl-community/components-react';
 import { HeadingGroup } from '@utrecht/component-library-react';
 
 export default function Page() {
