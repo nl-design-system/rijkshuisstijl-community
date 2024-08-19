@@ -178,7 +178,7 @@ export default function Collage() {
         </FormField>
       </div>
       <div className="unstarted">
-        <Alert type="error" icon={<IconExclamationCircle />}>
+        <Alert type="error">
           <Heading level={1}>Heading</Heading>
           <Paragraph>
             <LinkList>

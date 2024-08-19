@@ -6,16 +6,13 @@ import readme from './alert.md?raw';
 
 interface AlertStoryComponentProps {
   type: 'info' | 'error' | 'warning' | 'ok';
-  icon?: string;
   heading: string;
   textContent: string;
   headingLevel: number;
 }
 
-const AlertStoryComponent = ({ type, icon, heading, textContent, headingLevel }: AlertStoryComponentProps) => {
-  return (
-    <Alert type={type} icon={icon} heading={heading} headingLevel={headingLevel} textContent={textContent}></Alert>
-  );
+const AlertStoryComponent = ({ type, heading, textContent, headingLevel }: AlertStoryComponentProps) => {
+  return <Alert type={type} heading={heading} headingLevel={headingLevel} textContent={textContent}></Alert>;
 };
 
 const meta = {
@@ -29,14 +26,6 @@ const meta = {
       options: ['info', 'error', 'warning', 'ok'],
       table: {
         category: 'Property',
-      },
-    },
-    icon: {
-      description: 'Alert Icon',
-      control: { type: 'select' },
-      options: ['', 'info', 'error', 'warning', 'ok'],
-      table: {
-        category: 'Webcomponent Slot',
       },
     },
     heading: {
@@ -68,7 +57,6 @@ const meta = {
   },
   args: {
     type: 'info',
-    icon: 'info',
     heading: 'Heading',
     headingLevel: 3,
     textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
@@ -89,7 +77,6 @@ export default meta;
 export const Informative: StoryObj<typeof meta> = {
   args: {
     type: 'info',
-    icon: 'info',
     heading: 'Heading',
     headingLevel: 3,
     textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
@@ -99,7 +86,6 @@ export const Informative: StoryObj<typeof meta> = {
 export const Negative: StoryObj<typeof meta> = {
   args: {
     type: 'error',
-    icon: 'error',
     heading: 'Heading',
     headingLevel: 3,
     textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
@@ -109,7 +95,6 @@ export const Negative: StoryObj<typeof meta> = {
 export const Positive: StoryObj<typeof meta> = {
   args: {
     type: 'ok',
-    icon: 'ok',
     heading: 'Heading',
     headingLevel: 3,
     textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
@@ -119,7 +104,6 @@ export const Positive: StoryObj<typeof meta> = {
 export const Warning: StoryObj<typeof meta> = {
   args: {
     type: 'warning',
-    icon: 'warning',
     heading: 'Heading',
     headingLevel: 3,
     textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',

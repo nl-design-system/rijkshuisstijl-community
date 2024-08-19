@@ -1,32 +1,31 @@
-import { Heading, Icon, Paragraph, Alert as UAlert } from '@utrecht/component-library-react/dist/css-module';
+import { Heading, Icon, Paragraph, Alert as UtrechtAlert } from '@utrecht/component-library-react/dist/css-module';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
-const RhcIcon = ({ icon }: { icon: string }) =>
-  icon === 'info' ? (
+const RhcIcon = ({ type }: { type: string }) =>
+  type === 'info' ? (
     <IconInfo></IconInfo>
-  ) : icon === 'ok' ? (
+  ) : type === 'ok' ? (
     <IconSuccess></IconSuccess>
-  ) : icon === 'warning' ? (
+  ) : type === 'warning' ? (
     <IconWarning></IconWarning>
-  ) : icon === 'error' ? (
+  ) : type === 'error' ? (
     <IconError></IconError>
   ) : (
     <></>
   );
 interface AlertProps {
-  type?: 'info' | 'ok' | 'warning' | 'error';
-  icon?: string;
+  type: 'info' | 'ok' | 'warning' | 'error';
   heading?: string;
   headingLevel?: number;
   textContent?: string;
 }
 export const Alert = forwardRef(
   (
-    { type, children, icon, heading, headingLevel, textContent, ...restProps }: PropsWithChildren<AlertProps>,
+    { type, children, heading, headingLevel, textContent, ...restProps }: PropsWithChildren<AlertProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     return (
-      <UAlert ref={ref} {...restProps} type={type} role="alert">
+      <UtrechtAlert role="alert" ref={ref} type={type} {...restProps}>
         {children ? (
           children
         ) : (
@@ -40,11 +39,9 @@ export const Alert = forwardRef(
                 'rhc-alert-container__icon-info': type === 'info',
               })}
             >
-              {icon && (
-                <Icon>
-                  <RhcIcon icon={icon} />
-                </Icon>
-              )}
+              <Icon>
+                <RhcIcon type={type} />
+              </Icon>
             </div>
             <div>
               <Heading level={headingLevel || 3}>{heading}</Heading>
@@ -52,7 +49,7 @@ export const Alert = forwardRef(
             </div>
           </div>
         )}
-      </UAlert>
+      </UtrechtAlert>
     );
   },
 );
