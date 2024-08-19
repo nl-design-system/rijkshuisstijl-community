@@ -13,7 +13,6 @@ const init = async ({ input, output }) => {
   const excludes = [
     'components/avatar',
     'components/backdrop',
-    'components/blockquote',
     'components/button-group',
     'components/checkbox',
     'components/checkbox-group',
