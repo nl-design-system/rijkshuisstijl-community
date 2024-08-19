@@ -1,7 +1,6 @@
 'use client';
 
 import {
-  Blockquote,
   Button,
   ButtonLink,
   Heading,
@@ -30,7 +29,7 @@ import {
   Figure,
   FigureCaption,
 } from '@utrecht/component-library-react/dist/css-module';
-import { ActionGroup, Link, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { ActionGroup, Blockquote, Link, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { HeadingGroup } from '@utrecht/component-library-react';
 
 export default function Page() {
@@ -161,11 +160,9 @@ export default function Page() {
           officia deserunt mollit anim id est laborum.
           <Link href="/">Dit is een normale link</Link>
         </Paragraph>
-        <div className="unstarted">
-          <Blockquote attribution="Label">
-            Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
-          </Blockquote>
-        </div>
+        <Blockquote attribution="Label">
+          Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
+        </Blockquote>
         <div className="unstarted">
           <Heading level={5}>Dit is een H5</Heading>
         </div>
