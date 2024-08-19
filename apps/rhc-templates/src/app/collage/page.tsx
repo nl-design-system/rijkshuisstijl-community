@@ -1,6 +1,6 @@
 'use client';
 
-import { AccordionProvider, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { AccordionProvider, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { Avatar, Pagination } from '@amsterdam/design-system-react';
 import {
   IconAlertTriangle,
@@ -28,7 +28,6 @@ import {
   FormLabel,
   Heading,
   Image,
-  Link,
   LinkList,
   LinkListLink,
   OrderedList,
@@ -119,12 +118,10 @@ export default function Collage() {
       <div className="unstarted">
         <Separator></Separator>
       </div>
-      <div className="unstarted">
-        <Link href="#">
-          {`Hello, I'm a link `}
-          <IconArrowRight />
-        </Link>
-      </div>
+      <Link href="#">
+        {`Hello, I'm a link `}
+        <IconArrowRight />
+      </Link>
       <div className="unstarted">
         <Button appearance="primary-action-button">Primary button</Button>
       </div>

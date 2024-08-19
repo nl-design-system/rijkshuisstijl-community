@@ -13,6 +13,7 @@ export {
   type AccordionSectionProps,
   type AccordionSectionProviderProps,
 } from './Accordion';
+export { Link } from './Link';
 export { ActionGroup } from './ActionGroup';
 export { Logo } from './Logo';
 export { Alert } from './Alert';
