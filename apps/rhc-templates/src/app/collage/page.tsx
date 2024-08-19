@@ -1,6 +1,6 @@
 'use client';
 
-import { AccordionProvider } from '@rijkshuisstijl-community/components-react';
+import { AccordionProvider, Button, IconButton } from '@rijkshuisstijl-community/components-react';
 import { Avatar, Pagination } from '@amsterdam/design-system-react';
 import {
   IconAlertTriangle,
@@ -16,7 +16,6 @@ import {
   Blockquote,
   BreadcrumbNav,
   BreadcrumbNavLink,
-  Button,
   Checkbox,
   DataList,
   DataListActions,
@@ -134,9 +133,9 @@ export default function Collage() {
       <Button appearance="secondary-action-button">Secondary button</Button>
       <Button>Default button</Button>
       <Button appearance="subtle-button">Subtle button</Button>
-      <Button appearance="subtle-button">
+      <IconButton aria-label="calendar">
         <IconCalendarEvent />
-      </Button>
+      </IconButton>
       <div className="unstarted">
         <FormField label="Name" description="Description">
           <Textbox></Textbox>

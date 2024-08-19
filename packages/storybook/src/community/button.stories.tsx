@@ -1,5 +1,6 @@
 /* @license CC0-1.0 */
 
+import { IconButton } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
 import { Button, Icon } from '@utrecht/component-library-react/dist/css-module';
@@ -141,4 +142,12 @@ export const IconRight: StoryObj<typeof meta> = {
     appearance: 'primary-action-button',
     iconRight: true,
   },
+};
+
+export const IconOnly: StoryObj<typeof IconButton> = {
+  render: () => (
+    <IconButton aria-label="calendar">
+      <IconCalendarEvent></IconCalendarEvent>
+    </IconButton>
+  ),
 };

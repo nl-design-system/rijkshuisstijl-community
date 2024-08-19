@@ -1,11 +1,10 @@
 'use client';
 
-import { AccordionProvider, Logo } from '@rijkshuisstijl-community/components-react';
+import { AccordionProvider, Button, Logo } from '@rijkshuisstijl-community/components-react';
 import { FormLabel, Heading } from '@utrecht/component-library-react';
 import {
   BreadcrumbNav,
   BreadcrumbNavLink,
-  Button,
   Checkbox,
   Fieldset,
   FieldsetLegend,

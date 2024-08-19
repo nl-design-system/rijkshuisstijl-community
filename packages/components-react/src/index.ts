@@ -12,5 +12,14 @@ export {
   type AccordionSectionProviderProps,
 } from './Accordion';
 export { ActionGroup } from './ActionGroup';
+export {
+  Button,
+  type ButtonProps,
+  IconButton,
+  type IconButtonProps,
+  PrimaryActionButton,
+  SecondaryActionButton,
+  SubtleButton,
+} from './Button';
 export { Logo } from './Logo';
 export type { LogoProps } from './Logo';
