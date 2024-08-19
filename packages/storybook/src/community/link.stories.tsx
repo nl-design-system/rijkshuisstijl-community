@@ -15,7 +15,6 @@ interface LinkStoryProps {
 
 const LinkStory = ({ href, children, iconLeft, iconRight, external, ...props }: PropsWithChildren<LinkStoryProps>) => (
   <Link href={href} external={external} {...props}>
-
     {iconLeft && (
       <Icon>
         <IconCalendarEvent />
