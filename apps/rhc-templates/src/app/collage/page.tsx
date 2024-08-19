@@ -1,6 +1,13 @@
 'use client';
 
-import { AccordionProvider, Blockquote, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
+import {
+  AccordionProvider,
+  BreadcrumbNav,
+  BreadcrumbNavLink,
+  Blockquote,
+  Link,
+  Paragraph,
+} from '@rijkshuisstijl-community/components-react';
 import { Avatar, Pagination } from '@amsterdam/design-system-react';
 import {
   IconAlertTriangle,
@@ -13,8 +20,6 @@ import {
 import {
   Alert,
   BadgeCounter,
-  BreadcrumbNav,
-  BreadcrumbNavLink,
   Button,
   Checkbox,
   DataList,
@@ -51,7 +56,7 @@ import {
 export default function Collage() {
   return (
     <>
-      <div className="unfinished">
+      <div>
         <BreadcrumbNav>
           <BreadcrumbNavLink href="/" rel="home" index={0}>
             Label

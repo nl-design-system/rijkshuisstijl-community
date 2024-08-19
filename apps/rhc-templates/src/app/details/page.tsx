@@ -1,9 +1,7 @@
 'use client';
 
-import { Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { BreadcrumbNav, BreadcrumbNavLink, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
 import {
-  BreadcrumbNav,
-  BreadcrumbNavLink,
   Figure,
   FigureCaption,
   Heading,
