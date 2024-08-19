@@ -1,0 +1,43 @@
+@import "./mixin";
+
+.utrecht-checkbox {
+  &--disabled {
+    @include utrecht-checkbox--disabled;
+  }
+
+  &--invalid {
+    @include utrecht-checkbox--invalid;
+  }
+}
+
+.utrecht-checkbox--custom.utrecht-checkbox--html-input {
+  &:checked {
+    &:active {
+      @include utrecht-checkbox--checked--active;
+    }
+
+    &:hover {
+      @include utrecht-checkbox--checked--hover;
+    }
+  }
+
+  /* stylelint-disable no-descending-specificity */
+  &:indeterminate {
+    &:active {
+      @include utrecht-checkbox--indeterminate--active;
+    }
+
+    &:hover {
+      @include utrecht-checkbox--indeterminate--hover;
+    }
+
+    &:focus {
+      @include utrecht-checkbox--indeterminate--focus;
+    }
+
+    &:disabled {
+      @include utrecht-checkbox--indeterminate--disabled;
+    }
+  }
+}
+/* stylelint-enable no-descending-specificity */

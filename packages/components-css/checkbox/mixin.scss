@@ -1,0 +1,39 @@
+@mixin utrecht-checkbox--disabled {
+  background-color: var(--utrecht-checkbox-disabled-background-color);
+  border-color: var(--utrecht-checkbox-disabled-border-color);
+  cursor: var(--utrecht-action-disabled-cursor, revert);
+}
+
+@mixin utrecht-checkbox--invalid {
+  background-color: var(--utrecht-checkbox-invalid-background-color);
+}
+
+@mixin utrecht-checkbox--checked--active {
+  background-color: var(--utrecht-checkbox-checked-active-background-color);
+  border-color: var(--utrecht-checkbox-checked-active-border-color);
+}
+
+@mixin utrecht-checkbox--checked--hover {
+  background-color: var(--utrecht-checkbox-checked-hover-background-color);
+  border-color: var(--utrecht-checkbox-checked-hover-border-color);
+}
+
+@mixin utrecht-checkbox--indeterminate--active {
+  background-color: var(--utrecht-checkbox-indeterminate-active-background-color);
+  border-color: var(--utrecht-checkbox-indeterminate-active-border-color);
+}
+
+@mixin utrecht-checkbox--indeterminate--hover {
+  background-color: var(--utrecht-checkbox-indeterminate-hover-background-color);
+  border-color: var(--utrecht-checkbox-indeterminate-hover-border-color);
+}
+
+@mixin utrecht-checkbox--indeterminate--focus {
+  background-color: var(--utrecht-checkbox-indeterminate-focus-background-color);
+  border-color: var(--utrecht-checkbox-indeterminate-focus-border-color);
+}
+
+@mixin utrecht-checkbox--indeterminate--disabled {
+  background-color: var(--utrecht-checkbox-indeterminate-disabled-background-color);
+  border-color: var(--utrecht-checkbox-indeterminate-disabled-border-color);
+}

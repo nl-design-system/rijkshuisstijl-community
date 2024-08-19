@@ -17,7 +17,6 @@ const init = async ({ input, output }) => {
     'components/blockquote',
     'components/breadcrumb',
     'components/button-group',
-    'components/checkbox',
     'components/checkbox-group',
     'components/counter-badge',
     'components/drawer',

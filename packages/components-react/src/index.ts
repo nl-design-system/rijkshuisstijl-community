@@ -11,5 +11,6 @@ export {
   type AccordionSectionProps,
   type AccordionSectionProviderProps,
 } from './Accordion';
+export { Checkbox } from './Checkbox';
 export { Logo } from './Logo';
 export type { LogoProps } from './Logo';

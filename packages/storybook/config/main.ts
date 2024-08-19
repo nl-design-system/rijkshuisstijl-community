@@ -11,6 +11,7 @@ const config: StorybookConfig = {
     '@storybook/addon-docs',
     '@storybook/addon-interactions',
     '@storybook/addon-links',
+    'storybook-addon-pseudo-states',
     '@storybook/addon-themes',
     '@storybook/addon-viewport',
     '@etchteam/storybook-addon-status',
