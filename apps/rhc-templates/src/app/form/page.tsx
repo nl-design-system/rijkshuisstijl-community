@@ -1,6 +1,6 @@
 'use client';
 
-import { AccordionProvider, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { AccordionProvider, Link, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { FormLabel, Heading } from '@utrecht/component-library-react';
 import {
   BreadcrumbNav,
@@ -10,7 +10,6 @@ import {
   Fieldset,
   FieldsetLegend,
   FormField,
-  Link,
   LinkList,
   LinkListLink,
   PageContent,
@@ -68,11 +67,7 @@ export default function Form() {
         </div>
         <br />
         <Paragraph>
-          Lees verder over de{' '}
-          <span className="unstarted">
-            <Link href="#">verantwoordingsmethode SiSa</Link>
-          </span>
-          .
+          Lees verder over de <Link href="#">verantwoordingsmethode SiSa</Link>.
         </Paragraph>
         <form>
           <div className="unstarted">
