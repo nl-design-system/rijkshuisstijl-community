@@ -14,7 +14,7 @@ describe('IconButton', () => {
   it('renders an sr-only label for accessibility', () => {
     const { container } = render(<IconButton label="example-icon-label" />);
 
-    const span = container.querySelector('button>span.utrecht-button__sr-only');
+    const span = container.querySelector('button>span.rhc-button__sr-only');
 
     expect(span).toBeInTheDocument();
 
@@ -26,9 +26,9 @@ describe('IconButton', () => {
 
     const button = container.querySelector('button');
 
-    expect(button).toHaveClass('utrecht-button');
+    expect(button).toHaveClass('rhc-button');
 
-    expect(button).toHaveClass('utrecht-button--icon-only');
+    expect(button).toHaveClass('rhc-button--icon-only');
   });
 
   it('is not disabled by default', () => {
