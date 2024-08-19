@@ -1,9 +1,25 @@
 @import "../node_modules/@utrecht/components/breadcrumb-nav/src/";
+.utrecht-breadcrumb-nav {
+  &__link {
+    &--current {
+      color: var(--utrecht-breadcrumb-nav-link-current-color);
+      text-decoration: var(--utrecht-breadcrumb-nav-link-current-text-decoration) !important;
+    }
+    &--active {
+      color: var(--utrecht-breadcrumb-nav-link-active-color) !important;
+      text-decoration: underline !important;
+      text-decoration-color: var(--utrecht-breadcrumb-nav-link-active-color) !important;
+    }
+    &--arrow-wrapper {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+    }
+  }
+  &__separator {
+    --utrecht-icon-size: 12px;
 
-.utrecht-breadcrumb-nav__link--current {
-  color: var(--utrecht-breadcrumb-nav-link-current-color);
-  text-decoration: var(--utrecht-breadcrumb-nav-link-current-text-decoration) !important;
-}
-.utrecht-breadcrumb-nav__separator {
-  --utrecht-icon-size: 12px;
+    color: var(--utrecht-breadcrumb-nav-divider-color);
+  }
 }
