@@ -1,8 +1,6 @@
 'use client';
 
 import {
-  Blockquote,
-  Button,
   ButtonLink,
   Heading,
   Icon,

@@ -1,6 +1,13 @@
 'use client';
 
-import { AccordionProvider, Button, Blockquote, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
+import {
+  AccordionProvider,
+  Button,
+  IconButton,
+  Blockquote,
+  Link,
+  Paragraph,
+} from '@rijkshuisstijl-community/components-react';
 import { Avatar, Pagination } from '@amsterdam/design-system-react';
 import {
   IconAlertTriangle,
