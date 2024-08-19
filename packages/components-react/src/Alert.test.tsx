@@ -7,7 +7,6 @@ describe('Alert', () => {
     render(
       <Alert
         type="info"
-        icon=""
         heading="Heading"
         headingLevel={3}
         textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
