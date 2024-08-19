@@ -7,6 +7,9 @@ import '@rijkshuisstijl-community/mijnoverheid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import { Preview } from '@storybook/react';
+
+import '@utrecht/component-library-css/dist/html.css';
+import '@utrecht/component-library-css/dist/index.css';
 import { UtrechtDocument } from '@utrecht/web-component-library-react';
 
 const preview: Preview = {
@@ -60,7 +63,29 @@ const preview: Preview = {
       },
     },
     docs: {
-      source: {},
+      source: {
+        state: 'open',
+
+        /*
+            Uncomment the transformer to show underlying CSS and HTML
+        */
+
+        // transform(src: string, storyContext: StoryContext) {
+        //   const render =
+        //     typeof storyContext.component === 'function'
+        //       ? storyContext.component
+        //       : typeof storyContext.component?.render === 'function'
+        //         ? storyContext.component?.render
+        //         : null;
+
+        //   if (render) {
+        //     const srcString = renderToStaticMarkup(render(storyContext.args));
+
+        //     return Prettify({ ugly: srcString });
+        //   }
+        //   return src;
+        // },
+      },
     },
   },
 };

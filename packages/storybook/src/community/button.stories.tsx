@@ -13,7 +13,7 @@ interface ButtonStoryProps {
 }
 
 const ButtonStory = ({ appearance, children, iconLeft, iconRight, ...props }: PropsWithChildren<ButtonStoryProps>) => (
-  <Button appearance={appearance} {...props} style={{ '--utrecht-icon-inset-block-start': iconLeft ? '-0.1em' : 0 }}>
+  <Button appearance={appearance} {...props}>
     {iconLeft && (
       <Icon>
         <RhcIconCalendar></RhcIconCalendar>

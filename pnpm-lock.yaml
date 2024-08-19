@@ -97,6 +97,12 @@ importers:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@amsterdam/design-system-react':
+        specifier: 0.11.0
+        version: 0.11.0(@amsterdam/design-system-css@0.11.0(@amsterdam/design-system-assets@0.2.1)(@amsterdam/design-system-tokens@0.11.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nl-rvo/assets':
+        specifier: 1.0.0-alpha.360
+        version: 1.0.0-alpha.360
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../../packages/components-css
@@ -115,6 +121,9 @@ importers:
       '@rijkshuisstijl-community/web-components-stencil':
         specifier: workspace:*
         version: link:../../packages/web-components-stencil
+      '@tabler/icons-react':
+        specifier: 3.11.0
+        version: 3.11.0(react@18.3.1)
       '@types/node':
         specifier: 20.14.11
         version: 20.14.11
@@ -209,6 +218,9 @@ importers:
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css
+      '@rijkshuisstijl-community/web-components-react':
+        specifier: workspace:*
+        version: link:../web-components-react
       '@utrecht/component-library-react':
         specifier: 5.0.0
         version: 5.0.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -411,6 +423,9 @@ importers:
       '@storybook/theming':
         specifier: 8.2.4
         version: 8.2.4(storybook@8.2.4(@babel/preset-env@7.24.8(@babel/core@7.24.9)))
+      '@tabler/icons-react':
+        specifier: 3.11.0
+        version: 3.11.0(react@18.3.1)
       '@types/react':
         specifier: 18.3.3
         version: 18.3.3
@@ -636,6 +651,31 @@ packages:
   '@ampproject/remapping@2.2.1':
     resolution: {integrity: sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg==}
     engines: {node: '>=6.0.0'}
+
+  '@amsterdam/design-system-assets@0.2.1':
+    resolution: {integrity: sha512-byLLmmF1cv2niZMXETV30nprypZY8bAFpNKKuRlmYlIREA6blz9kVIJsQeH3IldmClW1mNa8ccJN4EKJglnuRw==}
+
+  '@amsterdam/design-system-css@0.11.0':
+    resolution: {integrity: sha512-f7HIkxmvkg6O75AaK1AnsPMsCMulCGHk847TrhRY3xFN+IXBaQUQyJiqLdFYa4GVhgA5vVXZO9WgNUSc7lnDQA==}
+    peerDependencies:
+      '@amsterdam/design-system-assets': 0.2.1
+      '@amsterdam/design-system-tokens': 0.11.0
+
+  '@amsterdam/design-system-react-icons@0.1.12':
+    resolution: {integrity: sha512-pBR7NnX2J8CsKaNbWSf+lxrPHvPqgSmgB2CYuIDD4RL472kUsNjzJNVOhR24QaKkUGCSUaskhVlUPqeJZIX/MA==}
+    peerDependencies:
+      react: 16 - 18
+      react-dom: 16 - 18
+
+  '@amsterdam/design-system-react@0.11.0':
+    resolution: {integrity: sha512-LXZMajnhScYqZ1f+Di4Ta9+xXESsBqjVscrw95X49W/SaMr+K8L2CzbhLhAVmTUeqhM7JACcB5Fz+iXe/S8Rbw==}
+    peerDependencies:
+      '@amsterdam/design-system-css': 0.11.0
+      react: 16 - 18
+      react-dom: 16 - 18
+
+  '@amsterdam/design-system-tokens@0.11.0':
+    resolution: {integrity: sha512-LgF8u5EDhNpjdhF4doaojoPV/cLJYWJR0ZPcJpJjjkkfKRsesEtO8cTZIQBCDMpXwvRUIuw7henmipdueLtsww==}
 
   '@babel/code-frame@7.24.7':
     resolution: {integrity: sha512-BcYH1CVJBO9tvyIZ2jVeXgSIMvGZ2FDRvDdOIVQyuklNKSsx+eppDEBq/g47Ayw+RqNFE+URvOShmf+f/qwAlA==}
@@ -2444,6 +2484,7 @@ packages:
 
   '@storybook/testing-library@0.2.2':
     resolution: {integrity: sha512-L8sXFJUHmrlyU2BsWWZGuAjv39Jl1uAqUHdxmN42JY15M4+XCMjGlArdCCjDe1wpTSW6USYISA9axjZojgtvnw==}
+    deprecated: In Storybook 8, this package functionality has been integrated to a new package called @storybook/test, which uses Vitest APIs for an improved experience. When upgrading to Storybook 8 with 'npx storybook@latest upgrade', you will get prompted and will get an automigration for the new package. Please migrate when you can.
 
   '@storybook/theming@8.2.4':
     resolution: {integrity: sha512-B4HQMzTeg1TgV9uPDIoDkMSnP839Y05I9+Tw60cilAD+jTqrCvMlccHfehsTzJk+gioAflunATcbU05TMZoeIQ==}
@@ -2459,6 +2500,14 @@ packages:
   '@szmarczak/http-timer@5.0.1':
     resolution: {integrity: sha512-+PmQX0PiAYPMeVYe237LJAYvOMYW1j2rH5YROyS3b4CTVJum34HfRvKvAzozHAQG0TnHNdUfY9nCeUyRAs//cw==}
     engines: {node: '>=14.16'}
+
+  '@tabler/icons-react@3.11.0':
+    resolution: {integrity: sha512-xHNBi9mns1slvqos+7LkP3ube4CjWrANMbxMaorzwzO9J/+y1sAEG/sN8CV8FmtpYW/9/gDR+OWCjjLLg0RmAw==}
+    peerDependencies:
+      react: '>= 16'
+
+  '@tabler/icons@3.11.0':
+    resolution: {integrity: sha512-/vZinJNvCYhdAB+RUsyCpanSPuOEKHHIZi4Uu0Bw7ilewHnQhCWUPrT704uHCRli2ROl7spADPmWzAqOganA5A==}
 
   '@testing-library/dom@10.1.0':
     resolution: {integrity: sha512-wdsYKy5zupPyLCW2Je5DLHSxSfbIp6h80WoHOQc+RPtmPGA52O9x5MJEkv92Sjonpq+poOAtUKhh1kBGAXBrNA==}
@@ -5070,6 +5119,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -8846,6 +8896,29 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
+  '@amsterdam/design-system-assets@0.2.1': {}
+
+  '@amsterdam/design-system-css@0.11.0(@amsterdam/design-system-assets@0.2.1)(@amsterdam/design-system-tokens@0.11.0)':
+    dependencies:
+      '@amsterdam/design-system-assets': 0.2.1
+      '@amsterdam/design-system-tokens': 0.11.0
+
+  '@amsterdam/design-system-react-icons@0.1.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@amsterdam/design-system-react@0.11.0(@amsterdam/design-system-css@0.11.0(@amsterdam/design-system-assets@0.2.1)(@amsterdam/design-system-tokens@0.11.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@amsterdam/design-system-css': 0.11.0(@amsterdam/design-system-assets@0.2.1)(@amsterdam/design-system-tokens@0.11.0)
+      '@amsterdam/design-system-react-icons': 0.1.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@babel/runtime': 7.24.8
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@amsterdam/design-system-tokens@0.11.0': {}
+
   '@babel/code-frame@7.24.7':
     dependencies:
       '@babel/highlight': 7.24.7
@@ -11264,6 +11337,13 @@ snapshots:
   '@szmarczak/http-timer@5.0.1':
     dependencies:
       defer-to-connect: 2.0.1
+
+  '@tabler/icons-react@3.11.0(react@18.3.1)':
+    dependencies:
+      '@tabler/icons': 3.11.0
+      react: 18.3.1
+
+  '@tabler/icons@3.11.0': {}
 
   '@testing-library/dom@10.1.0':
     dependencies:
