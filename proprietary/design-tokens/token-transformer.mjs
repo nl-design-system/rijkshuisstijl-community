@@ -11,7 +11,6 @@ const init = async ({ input, output }) => {
   // The following components didn't work yet because of broken design token references.
   // You can remove excludes from this list at any time, as long as they don't break the build.
   const excludes = [
-    'components/alert',
     'components/avatar',
     'components/backdrop',
     'components/breadcrumb',
@@ -27,7 +26,6 @@ const init = async ({ input, output }) => {
     'components/modal-dialog',
     'components/ordered-list',
     'components/pagination',
-    'components/paragraph',
     'components/radio',
     'components/radio-group',
     'components/select',

@@ -1,6 +1,7 @@
 'use client';
 
-import { AccordionProvider, Blockquote } from '@rijkshuisstijl-community/components-react';
+
+import { AccordionProvider, Blockquote, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { Avatar, Pagination } from '@amsterdam/design-system-react';
 import {
   IconAlertTriangle,
@@ -27,12 +28,10 @@ import {
   FormLabel,
   Heading,
   Image,
-  Link,
   LinkList,
   LinkListLink,
   OrderedList,
   OrderedListItem,
-  Paragraph,
   RadioButton,
   Separator,
   StatusBadge,
@@ -74,18 +73,14 @@ export default function Collage() {
           src="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
         ></Image>
       </div>
-      <div className="unstarted">
-        <Paragraph lead>
-          In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
-        </Paragraph>
-      </div>
-      <div className="unstarted">
-        <Paragraph>
-          In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen. Zo kan de
-          hele Nederlandse overheid samenwerken aan een begrijpelijke, gebruiksvriendelijke én toegankelijke online
-          dienstverlening.
-        </Paragraph>
-      </div>
+      <Paragraph lead>
+        In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
+      </Paragraph>
+      <Paragraph>
+        In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen. Zo kan de hele
+        Nederlandse overheid samenwerken aan een begrijpelijke, gebruiksvriendelijke én toegankelijke online
+        dienstverlening.
+      </Paragraph>
       <div className="unstarted">
         <OrderedList>
           <OrderedListItem>Verkies makkelijke korte boven formele lange woorden.</OrderedListItem>
@@ -114,21 +109,17 @@ export default function Collage() {
           <UnorderedListItem>Maak gebruik van opsommingstekens waar dat mogelijk is.</UnorderedListItem>
         </UnorderedList>
       </div>
-      <div className="unstarted">
-        <Paragraph lead>
-          In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
-        </Paragraph>
-      </div>
+      <Paragraph lead>
+        In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
+      </Paragraph>
       <Blockquote attribution="— Pippi Langkous">Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan</Blockquote>
       <div className="unstarted">
         <Separator></Separator>
       </div>
-      <div className="unstarted">
-        <Link href="#">
-          {`Hello, I'm a link `}
-          <IconArrowRight />
-        </Link>
-      </div>
+      <Link href="#">
+        {`Hello, I'm a link `}
+        <IconArrowRight />
+      </Link>
       <div className="unstarted">
         <Button appearance="primary-action-button">Primary button</Button>
       </div>
@@ -185,7 +176,7 @@ export default function Collage() {
         </FormField>
       </div>
       <div className="unstarted">
-        <Alert type="error" icon={<IconExclamationCircle />}>
+        <Alert type="error">
           <Heading level={1}>Heading</Heading>
           <Paragraph>
             <LinkList>
@@ -226,28 +217,48 @@ export default function Collage() {
           </DataListItem>
         </DataList>
       </div>
-      <div className="unstarted">
-        <Alert type="info" icon={<IconInfoCircle />}>
-          <Heading level={1}>Heading</Heading>
-          <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+      <div>
+        <Alert type="info">
+          <div className="rhc-alert-container">
+            <IconInfoCircle className="rhc-alert-container__icon rhc-alert-container__icon-info " />
+            <div>
+              <Heading level={3}>Heading</Heading>
+              <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+            </div>
+          </div>
         </Alert>
       </div>
-      <div className="unstarted">
-        <Alert type="error" icon={<IconExclamationCircle />}>
-          <Heading level={1}>Heading</Heading>
-          <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+      <div>
+        <Alert type="error">
+          <div className="rhc-alert-container">
+            <IconAlertTriangle className="rhc-alert-container__icon rhc-alert-container__icon-error " />
+            <div>
+              <Heading level={3}>Heading</Heading>
+              <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+            </div>
+          </div>
         </Alert>
       </div>
-      <div className="unstarted">
-        <Alert type="ok" icon={<IconCircleCheck />}>
-          <Heading level={1}>Heading</Heading>
-          <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+      <div>
+        <Alert type="ok">
+          <div className="rhc-alert-container">
+            <IconCircleCheck className="rhc-alert-container__icon rhc-alert-container__icon-ok " />
+            <div>
+              <Heading level={3}>Heading</Heading>
+              <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+            </div>
+          </div>
         </Alert>
       </div>
-      <div className="unstarted">
-        <Alert type="warning" icon={<IconAlertTriangle />}>
-          <Heading level={1}>Heading</Heading>
-          <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+      <div>
+        <Alert type="warning">
+          <div className="rhc-alert-container">
+            <IconExclamationCircle className="rhc-alert-container__icon rhc-alert-container__icon-warning " />
+            <div>
+              <Heading level={3}>Heading</Heading>
+              <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+            </div>
+          </div>
         </Alert>
       </div>
       <AccordionProvider

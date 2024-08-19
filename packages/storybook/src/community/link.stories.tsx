@@ -1,27 +1,29 @@
 /* @license CC0-1.0 */
 
-import { RhcIconArrowRight, RhcIconCalendar } from '@rijkshuisstijl-community/web-components-react';
+import { Link } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Icon, Link } from '@utrecht/component-library-react/dist/css-module';
+import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
+import { Icon } from '@utrecht/component-library-react/dist/css-module';
 import { PropsWithChildren } from 'react';
 import readme from './link.md?raw';
 interface LinkStoryProps {
   href: string;
   iconLeft?: boolean;
   iconRight?: boolean;
+  external?: boolean;
 }
 
-const LinkStory = ({ href, children, iconLeft, iconRight, ...props }: PropsWithChildren<LinkStoryProps>) => (
-  <Link href={href} {...props}>
+const LinkStory = ({ href, children, iconLeft, iconRight, external, ...props }: PropsWithChildren<LinkStoryProps>) => (
+  <Link href={href} external={external} {...props}>
     {iconLeft && (
       <Icon>
-        <RhcIconCalendar></RhcIconCalendar>
+        <IconCalendarEvent />
       </Icon>
     )}
     {children}
     {iconRight && (
       <Icon>
-        <RhcIconArrowRight></RhcIconArrowRight>
+        <IconArrowRight />
       </Icon>
     )}
   </Link>
@@ -37,6 +39,24 @@ const meta = {
       type: {
         name: 'string',
         required: true,
+      },
+      table: {
+        category: 'Property',
+      },
+    },
+    external: {
+      description: 'Whether the link is external',
+      type: {
+        name: 'boolean',
+      },
+      table: {
+        category: 'Property',
+      },
+    },
+    externalLabel: {
+      description: 'Aria label for external link icon',
+      type: {
+        name: 'string',
       },
       table: {
         category: 'Property',
@@ -113,5 +133,12 @@ export const IconRight: Story = {
     children: 'Label',
     iconRight: true,
   },
-  name: 'Link',
+};
+
+export const External: Story = {
+  args: {
+    href: 'https://example.com/',
+    children: 'Label',
+    external: true,
+  },
 };
