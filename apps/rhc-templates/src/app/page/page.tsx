@@ -117,7 +117,7 @@ export default function Page() {
           <Heading level={3}>Dit is een H3</Heading>
         </div>
         <Paragraph>Dit is een paragraaf.</Paragraph>
-        <Link external={true} href="example.com">
+        <Link external={true} externalLabel="example external label" href="example.com">
           Dit is een externe link
         </Link>
         <div className="unstarted">

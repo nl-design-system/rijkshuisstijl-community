@@ -127,18 +127,14 @@ describe('Link', () => {
         expect(icon).toBeInTheDocument();
       });
 
-      it('contains a visual icon that has an aria-label that comes from a property', () => {
+      it('contains a visual icon that has an sr-only label that comes from a property', () => {
         const { container } = render(<Link external externalLabel="some-external-label" />);
 
-        const link = container.querySelector(':only-child');
+        const label = container.querySelector('.rhc-link .rhc-link__sr-only');
 
-        const icon = link?.querySelector('.utrecht-icon');
+        expect(label).toBeInTheDocument();
 
-        expect(icon).toBeInTheDocument();
-
-        expect(icon).toHaveAttribute('aria-label');
-
-        expect(icon?.getAttribute('aria-label')).toContain('some-external-label');
+        expect(label).toHaveTextContent('some-external-label');
       });
     });
   });

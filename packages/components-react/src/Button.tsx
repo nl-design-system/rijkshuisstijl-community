@@ -7,6 +7,7 @@ import {
   SecondaryActionButton,
   SubtleButton,
 } from '@utrecht/component-library-react/dist/css-module';
+import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
 export { type ButtonProps, Button, PrimaryActionButton, SecondaryActionButton, SubtleButton };
@@ -16,9 +17,12 @@ export interface IconButtonProps extends ButtonProps {
 }
 
 export const IconButton = forwardRef(
-  ({ children, label, ...restProps }: PropsWithChildren<IconButtonProps>, ref: ForwardedRef<HTMLButtonElement>) => (
-    <SubtleButton ref={ref} className="utrecht-button--icon-only" {...restProps}>
-      <span className="utrecht-button__sr-only">{label}</span>
+  (
+    { children, className, label, ...restProps }: PropsWithChildren<IconButtonProps>,
+    ref: ForwardedRef<HTMLButtonElement>,
+  ) => (
+    <SubtleButton ref={ref} className={clsx('rhc-button', 'rhc-button--icon-only', className)} {...restProps}>
+      <span className="rhc-button__sr-only">{label}</span>
       <Icon>{children}</Icon>
     </SubtleButton>
   ),
