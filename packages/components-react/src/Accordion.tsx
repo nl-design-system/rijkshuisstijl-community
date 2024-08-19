@@ -1,5 +1,3 @@
-import '@rijkshuisstijl-community/components-css/index.scss';
-
 export {
   Accordion,
   type AccordionProps,

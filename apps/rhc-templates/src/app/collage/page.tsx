@@ -178,7 +178,7 @@ export default function Collage() {
         </FormField>
       </div>
       <div className="unstarted">
-        <Alert type="error" icon={<IconExclamationCircle />}>
+        <Alert type="error">
           <Heading level={1}>Heading</Heading>
           <Paragraph>
             <LinkList>
@@ -219,28 +219,48 @@ export default function Collage() {
           </DataListItem>
         </DataList>
       </div>
-      <div className="unstarted">
-        <Alert type="info" icon={<IconInfoCircle />}>
-          <Heading level={1}>Heading</Heading>
-          <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+      <div>
+        <Alert type="info">
+          <div className="rhc-alert-container">
+            <IconInfoCircle className="rhc-alert-container__icon rhc-alert-container__icon-info " />
+            <div>
+              <Heading level={3}>Heading</Heading>
+              <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+            </div>
+          </div>
         </Alert>
       </div>
-      <div className="unstarted">
-        <Alert type="error" icon={<IconExclamationCircle />}>
-          <Heading level={1}>Heading</Heading>
-          <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+      <div>
+        <Alert type="error">
+          <div className="rhc-alert-container">
+            <IconAlertTriangle className="rhc-alert-container__icon rhc-alert-container__icon-error " />
+            <div>
+              <Heading level={3}>Heading</Heading>
+              <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+            </div>
+          </div>
         </Alert>
       </div>
-      <div className="unstarted">
-        <Alert type="ok" icon={<IconCircleCheck />}>
-          <Heading level={1}>Heading</Heading>
-          <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+      <div>
+        <Alert type="ok">
+          <div className="rhc-alert-container">
+            <IconCircleCheck className="rhc-alert-container__icon rhc-alert-container__icon-ok " />
+            <div>
+              <Heading level={3}>Heading</Heading>
+              <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+            </div>
+          </div>
         </Alert>
       </div>
-      <div className="unstarted">
-        <Alert type="warning" icon={<IconAlertTriangle />}>
-          <Heading level={1}>Heading</Heading>
-          <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+      <div>
+        <Alert type="warning">
+          <div className="rhc-alert-container">
+            <IconExclamationCircle className="rhc-alert-container__icon rhc-alert-container__icon-warning " />
+            <div>
+              <Heading level={3}>Heading</Heading>
+              <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+            </div>
+          </div>
         </Alert>
       </div>
       <AccordionProvider
