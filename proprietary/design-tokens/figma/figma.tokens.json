@@ -805,21 +805,13 @@
       }
     },
     "utrecht/document": {
-      "background-color": {
-        "value": "{rhc.color.wit}",
-        "type": "color"
-      },
-      "color": {
-        "value": "{rhc.color.zwart}",
-        "type": "color"
-      },
       "font-family": {
         "value": "{rhc.font-family.primary}",
         "type": "fontFamilies"
       },
       "font-size": {
-        "value": "{rhc.font-size.md}",
-        "type": "fontSizes"
+        "value": "{rhc.font-size.paragraph.default}",
+        "type": "other"
       },
       "line-height": {
         "value": "1.4",
@@ -1020,7 +1012,7 @@
         "type": "other"
       },
       "color": {
-        "value": "{rhc.color.zwart}",
+        "value": "{rhc.color.lintblauw.500}",
         "type": "other"
       }
     }
@@ -1779,8 +1771,8 @@
     }
   },
   "components/breadcrumb": {
-    "utrecht": {
-      "breadcrumb-nav": {
+    "todo": {
+      "breadcrumb": {
         "line-height": {
           "value": "{rhc.line-height.paragraph}",
           "type": "lineHeights"
@@ -1789,7 +1781,17 @@
           "value": "{rhc.font-size.paragraph.default}",
           "type": "fontSizes"
         },
-        "item":{
+        "link": {
+          "icon": {
+            "size": {
+              "value": "{rhc.size.icon.functional}",
+              "type": "sizing"
+            },
+            "margin-inline": {
+              "value": "{rhc.space.50}",
+              "type": "spacing"
+            }
+          },
           "padding-block-end": {
             "value": "{rhc.space.150}",
             "type": "spacing"
@@ -1805,20 +1807,7 @@
           "padding-inline-start": {
             "value": "{rhc.space.0}",
             "type": "spacing"
-          }
-        },
-        "link": {
-          "icon": {
-            "size": {
-              "value": "{rhc.size.icon.functional}",
-              "type": "sizing"
-            },
-            "margin-inline": {
-              "value": "{rhc.space.50}",
-              "type": "spacing"
-            }
           },
-
           "color": {
             "value": "{rhc.color.foreground.link}",
             "type": "color"
@@ -1870,10 +1859,6 @@
             "color": {
               "value": "{rhc.color.foreground.subdued}",
               "type": "color"
-            },
-            "text-decoration": {
-              "value": "None",
-              "type": "textDecoration"
             }
           },
           "text-decoration": {
@@ -3222,7 +3207,7 @@
         },
         "icon": {
           "size": {
-            "value": "{rhc.size.icon.functional}",
+            "value": "18px",
             "type": "sizing"
           }
         },

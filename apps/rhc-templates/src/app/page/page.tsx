@@ -6,7 +6,6 @@ import {
   ButtonLink,
   Heading,
   Icon,
-  Link,
   LinkList,
   LinkListLink,
   OrderedList,
@@ -27,12 +26,11 @@ import {
   NavBar,
   NavList,
   NavListLinkButton,
-  Paragraph,
   Image,
   Figure,
   FigureCaption,
 } from '@utrecht/component-library-react/dist/css-module';
-import { ActionGroup, Logo } from '@rijkshuisstijl-community/components-react';
+import { ActionGroup, Link, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { HeadingGroup } from '@utrecht/component-library-react';
 
 export default function Page() {
@@ -83,12 +81,8 @@ export default function Page() {
         <div className="unstarted">
           <Heading level={2}>Dit is een H2</Heading>
         </div>
-        <div className="unstarted">
-          <Paragraph>Dit is een paragraaf.</Paragraph>
-        </div>
-        <div className="unstarted">
-          <Paragraph>Opsomming ordered list</Paragraph>
-        </div>
+        <Paragraph>Dit is een paragraaf.</Paragraph>
+        <Paragraph>Opsomming ordered list</Paragraph>
         <div className="unstarted">
           <OrderedList>
             <OrderedListItem>Ordered list item.</OrderedListItem>
@@ -96,9 +90,7 @@ export default function Page() {
             <OrderedListItem>Ordered list item.</OrderedListItem>
           </OrderedList>
         </div>
-        <div className="unstarted">
-          <Paragraph>Opsomming unordered list</Paragraph>
-        </div>
+        <Paragraph>Opsomming unordered list</Paragraph>
         <div className="unstarted">
           <UnorderedList>
             <UnorderedListItem>Unordered list item.</UnorderedListItem>
@@ -106,9 +98,7 @@ export default function Page() {
             <UnorderedListItem>Unordered list item.</UnorderedListItem>
           </UnorderedList>
         </div>
-        <div className="unstarted">
-          <Paragraph>Opsomming link list</Paragraph>
-        </div>
+        <Paragraph>Opsomming link list</Paragraph>
         <div className="unstarted">
           <LinkList
             icon={() => (
@@ -130,14 +120,10 @@ export default function Page() {
         <div className="unstarted">
           <Heading level={3}>Dit is een H3</Heading>
         </div>
-        <div className="unstarted">
-          <Paragraph>Dit is een paragraaf.</Paragraph>
-        </div>
-        <div className="unstarted">
-          <Link external={true} href="example.com">
-            Dit is een externe link
-          </Link>
-        </div>
+        <Paragraph>Dit is een paragraaf.</Paragraph>
+        <Link external={true} href="example.com">
+          Dit is een externe link
+        </Link>
         <div className="unstarted">
           <Table>
             <TableCaption>Caption van tabel</TableCaption>
@@ -167,18 +153,14 @@ export default function Page() {
         <div className="unstarted">
           <Heading level={4}>Dit is een H4</Heading>
         </div>
-        <div className="unstarted">
-          <Paragraph>
-            Dit is een wat langere paragraaf. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-            <span className="unstarted">
-              <Link href="/">Dit is een normale link</Link>
-            </span>
-          </Paragraph>
-        </div>
+        <Paragraph>
+          Dit is een wat langere paragraaf. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum.
+          <Link href="/">Dit is een normale link</Link>
+        </Paragraph>
         <div className="unstarted">
           <Blockquote attribution="Label">
             Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
@@ -187,9 +169,7 @@ export default function Page() {
         <div className="unstarted">
           <Heading level={5}>Dit is een H5</Heading>
         </div>
-        <div className="unstarted">
-          <Paragraph>Dit is een paragraaf.</Paragraph>
-        </div>
+        <Paragraph>Dit is een paragraaf.</Paragraph>
         <div className="unstarted">
           <Separator></Separator>
         </div>
