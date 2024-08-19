@@ -133,7 +133,7 @@ export default function Collage() {
       <Button appearance="secondary-action-button">Secondary button</Button>
       <Button>Default button</Button>
       <Button appearance="subtle-button">Subtle button</Button>
-      <IconButton aria-label="calendar">
+      <IconButton label="calendar">
         <IconCalendarEvent />
       </IconButton>
       <div className="unstarted">

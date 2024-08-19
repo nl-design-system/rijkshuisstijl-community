@@ -146,7 +146,7 @@ export const IconRight: StoryObj<typeof meta> = {
 
 export const IconOnly: StoryObj<typeof IconButton> = {
   render: () => (
-    <IconButton aria-label="calendar">
+    <IconButton label="calendar">
       <IconCalendarEvent></IconCalendarEvent>
     </IconButton>
   ),
