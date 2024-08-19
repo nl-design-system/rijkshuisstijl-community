@@ -1,6 +1,6 @@
 'use client';
 
-import { Logo } from '@rijkshuisstijl-community/components-react';
+import { Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
 import {
   BreadcrumbNav,
   BreadcrumbNavLink,
@@ -13,7 +13,6 @@ import {
   PageContent,
   PageFooter,
   PageHeader,
-  Paragraph,
   Separator,
 } from '@utrecht/component-library-react/dist/css-module';
 
@@ -54,13 +53,11 @@ export default function Details() {
       </div>
 
       <PageContent className="container page-content">
-        <div className="unstarted">
-          <Paragraph>
-            De Arbeidstijdenwet geeft regels voor werktijden, pauzes en rusttijden van werknemers. Met deze regels wil
-            de Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de combinatie van werk, privé en
-            zorgtaken gemakkelijker maken.
-          </Paragraph>
-        </div>
+        <Paragraph>
+          De Arbeidstijdenwet geeft regels voor werktijden, pauzes en rusttijden van werknemers. Met deze regels wil de
+          Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de combinatie van werk, privé en
+          zorgtaken gemakkelijker maken.
+        </Paragraph>
         <div className="unstarted">
           <Separator></Separator>
         </div>

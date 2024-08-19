@@ -1,6 +1,6 @@
 'use client';
 
-import { AccordionProvider, Button, Logo } from '@rijkshuisstijl-community/components-react';
+import { AccordionProvider, Button, Link, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { FormLabel, Heading } from '@utrecht/component-library-react';
 import {
   BreadcrumbNav,
@@ -9,13 +9,11 @@ import {
   Fieldset,
   FieldsetLegend,
   FormField,
-  Link,
   LinkList,
   LinkListLink,
   PageContent,
   PageFooter,
   PageHeader,
-  Paragraph,
   RadioButton,
   Textarea,
   Textbox,
@@ -49,12 +47,10 @@ export default function Form() {
         <div className="unstarted">
           <Heading level={1}>Formulier voor vragen over Sisa</Heading>
         </div>
-        <div className="unstarted">
-          <Paragraph>Heeft u vragen over Single information, Single audit (SiSa)?</Paragraph>
-          <Paragraph>Gebruik dan het formulier hieronder.</Paragraph>
-          <br />
-          <Paragraph>Mogelijke vragen:</Paragraph>
-        </div>
+        <Paragraph>Heeft u vragen over Single information, Single audit (SiSa)?</Paragraph>
+        <Paragraph>Gebruik dan het formulier hieronder.</Paragraph>
+        <br />
+        <Paragraph>Mogelijke vragen:</Paragraph>
         <div className="unstarted">
           <UnorderedList>
             <UnorderedListItem>Hoe moet ik extra regels toevoegen bij de macro-versie?</UnorderedListItem>
@@ -69,15 +65,9 @@ export default function Form() {
           </UnorderedList>
         </div>
         <br />
-        <div className="unstarted">
-          <Paragraph>
-            Lees verder over de{' '}
-            <span className="unstarted">
-              <Link href="#">verantwoordingsmethode SiSa</Link>
-            </span>
-            .
-          </Paragraph>
-        </div>
+        <Paragraph>
+          Lees verder over de <Link href="#">verantwoordingsmethode SiSa</Link>.
+        </Paragraph>
         <form>
           <div className="unstarted">
             <FormField label="Naam">
@@ -161,13 +151,11 @@ export default function Form() {
           <div className="unstarted">
             <Heading level={1}>Informatie over de verwerking van uw persoonsgegevens</Heading>
           </div>
-          <div className="unstarted">
-            <Paragraph>
-              Wij gebruiken gegevens die u heeft ingevuld om uw vraag te beantwoorden. Daarna worden ze volgens in de
-              archiefwet tijdelijk bewaard in de daarvoor bestemde archiefsystemen. Deze zijn van het Ministerie van
-              Binnenlandse Zaken & Koninkrijksrelaties (BZK).
-            </Paragraph>
-          </div>
+          <Paragraph>
+            Wij gebruiken gegevens die u heeft ingevuld om uw vraag te beantwoorden. Daarna worden ze volgens in de
+            archiefwet tijdelijk bewaard in de daarvoor bestemde archiefsystemen. Deze zijn van het Ministerie van
+            Binnenlandse Zaken & Koninkrijksrelaties (BZK).
+          </Paragraph>
           <AccordionProvider
             sections={[
               {

@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
+import { Heading } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Heading } from '@utrecht/component-library-react/dist/css-module';
 import readme from './heading.md?raw';
 
 const meta = {
@@ -13,27 +13,21 @@ const meta = {
       description: 'Heading level',
       control: { type: 'select' },
       options: [1, 2, 3, 4, 5, 6],
-      defaultValue: 1,
-      table: {
-        category: 'Property',
-      },
     },
-    children: {
-      description: 'Heading text - default webcomponent slot',
-      type: {
-        name: 'string',
-        required: true,
-      },
-      table: {
-        category: 'Webcomponent Slot',
-      },
-      defaultValue: '',
+    appearance: {
+      description: 'Appearance',
+      control: { type: 'select' },
+      options: [
+        undefined,
+        'utrecht-heading-1',
+        'utrecht-heading-2',
+        'utrecht-heading-3',
+        'utrecht-heading-4',
+        'utrecht-heading-5',
+        'utrecht-heading-6',
+      ],
     },
   },
-  args: {
-    children: '',
-  },
-  tags: ['autodocs'],
   parameters: {
     docs: {
       description: {
@@ -41,7 +35,7 @@ const meta = {
       },
     },
   },
-} as Meta<typeof Heading>;
+} satisfies Meta<typeof Heading>;
 
 export default meta;
 
@@ -90,5 +84,4 @@ export const Heading6: StoryObj<typeof meta> = {
     level: 6,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
   },
-  name: 'Heading 6',
 };
