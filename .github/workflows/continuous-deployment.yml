@@ -112,6 +112,11 @@ jobs:
       - name: "Continuous Integration: test"
         run: pnpm run --if-present test
 
+      - name: Run Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+
   publish-website:
     runs-on: ubuntu-latest
     needs: build
