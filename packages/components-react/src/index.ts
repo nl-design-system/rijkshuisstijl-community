@@ -13,8 +13,11 @@ export {
   type AccordionSectionProps,
   type AccordionSectionProviderProps,
 } from './Accordion';
-export { Link } from './Link';
-export { ActionGroup } from './ActionGroup';
-export { Logo } from './Logo';
-export { Alert } from './Alert';
-export type { LogoProps } from './Logo';
+export { ActionGroup, type ActionGroupProps } from './ActionGroup';
+export { Alert, type AlertProps } from './Alert';
+export { Blockquote, type BlockquoteProps } from './Blockquote';
+export { Image, type ImageProps } from './Image';
+export { Link, type LinkProps } from './Link';
+export { Logo, type LogoProps } from './Logo';
+export { Paragraph, type ParagraphProps } from './Paragraph';
+export { Separator, type SeparatorProps } from './Separator';

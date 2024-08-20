@@ -1,5 +1,8 @@
-import { ButtonGroup as ActionGroup } from '@utrecht/component-library-react/dist/css-module';
+import {
+  ButtonGroup as ActionGroup,
+  type ButtonGroupProps as ActionGroupProps,
+} from '@utrecht/component-library-react/dist/css-module';
 
-export { ActionGroup };
+export { ActionGroup, type ActionGroupProps };
 
 ActionGroup.displayName = 'ActionGroup';

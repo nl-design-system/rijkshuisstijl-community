@@ -1,8 +1,13 @@
-import { Image as UtrechtImage } from '@utrecht/component-library-react/dist/css-module';
-import { ForwardedRef, forwardRef, ImgHTMLAttributes } from 'react';
+import {
+  Image as UtrechtImage,
+  type ImageProps as UtrechtImageProps,
+} from '@utrecht/component-library-react/dist/css-module';
+import { ForwardedRef, forwardRef } from 'react';
+
+export { type UtrechtImageProps as ImageProps };
 
 export const Image = forwardRef(
-  ({ className, ...restProps }: ImgHTMLAttributes<HTMLImageElement>, ref: ForwardedRef<HTMLImageElement>) => (
+  ({ className, ...restProps }: UtrechtImageProps, ref: ForwardedRef<HTMLImageElement>) => (
     <UtrechtImage {...restProps} ref={ref} photo className={className} />
   ),
 );

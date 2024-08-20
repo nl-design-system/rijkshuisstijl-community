@@ -13,7 +13,7 @@ const RhcIcon = ({ type }: { type: string }) =>
   ) : (
     <></>
   );
-interface AlertProps {
+export interface AlertProps {
   type: 'info' | 'ok' | 'warning' | 'error';
   heading?: string;
   headingLevel?: number;

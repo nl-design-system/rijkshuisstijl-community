@@ -10,7 +10,6 @@ import {
   OrderedListItem,
   PageContent,
   PageHeader,
-  Separator,
   Table,
   TableBody,
   TableCaption,
@@ -28,7 +27,15 @@ import {
   Figure,
   FigureCaption,
 } from '@utrecht/component-library-react/dist/css-module';
-import { ActionGroup, Blockquote, Heading, Link, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
+import {
+  ActionGroup,
+  Blockquote,
+  Heading,
+  Link,
+  Logo,
+  Paragraph,
+  Separator,
+} from '@rijkshuisstijl-community/components-react';
 import { HeadingGroup } from '@utrecht/component-library-react';
 
 export default function Page() {
@@ -158,9 +165,7 @@ export default function Page() {
         </Blockquote>
         <Heading level={5}>Dit is een H5</Heading>
         <Paragraph>Dit is een paragraaf.</Paragraph>
-        <div className="unstarted">
-          <Separator></Separator>
-        </div>
+        <Separator></Separator>
         <Heading level={5} appearance="utrecht-heading-6">
           Dit is een H5 met H6 appearance
         </Heading>
