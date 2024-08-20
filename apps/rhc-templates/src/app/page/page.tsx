@@ -2,7 +2,6 @@
 
 import {
   ButtonLink,
-  Heading,
   Icon,
   LinkList,
   LinkListLink,
@@ -28,7 +27,15 @@ import {
   Figure,
   FigureCaption,
 } from '@utrecht/component-library-react/dist/css-module';
-import { ActionGroup, Button, Blockquote, Link, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
+import {
+  ActionGroup,
+  Blockquote,
+  Button,
+  Heading,
+  Link,
+  Logo,
+  Paragraph,
+} from '@rijkshuisstijl-community/components-react';
 import { HeadingGroup } from '@utrecht/component-library-react';
 
 export default function Page() {
@@ -74,9 +81,7 @@ export default function Page() {
         <Button type="submit" appearance="primary-action-button">
           Primary action button
         </Button>
-        <div className="unstarted">
-          <Heading level={2}>Dit is een H2</Heading>
-        </div>
+        <Heading level={2}>Dit is een H2</Heading>
         <Paragraph>Dit is een paragraaf.</Paragraph>
         <Paragraph>Opsomming ordered list</Paragraph>
         <div className="unstarted">
@@ -113,9 +118,7 @@ export default function Page() {
             </LinkListLink>
           </LinkList>
         </div>
-        <div className="unstarted">
-          <Heading level={3}>Dit is een H3</Heading>
-        </div>
+        <Heading level={3}>Dit is een H3</Heading>
         <Paragraph>Dit is een paragraaf.</Paragraph>
         <Link external={true} externalLabel="example external label" href="example.com">
           Dit is een externe link
@@ -146,9 +149,7 @@ export default function Page() {
             </TableFooter>
           </Table>
         </div>
-        <div className="unstarted">
-          <Heading level={4}>Dit is een H4</Heading>
-        </div>
+        <Heading level={4}>Dit is een H4</Heading>
         <Paragraph>
           Dit is een wat langere paragraaf. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -160,18 +161,14 @@ export default function Page() {
         <Blockquote attribution="Label">
           Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
         </Blockquote>
-        <div className="unstarted">
-          <Heading level={5}>Dit is een H5</Heading>
-        </div>
+        <Heading level={5}>Dit is een H5</Heading>
         <Paragraph>Dit is een paragraaf.</Paragraph>
         <div className="unstarted">
           <Separator></Separator>
         </div>
-        <div className="unstarted">
-          <Heading level={5} appearance="utrecht-heading-6">
-            Dit is een H5 met H6 appearance
-          </Heading>
-        </div>
+        <Heading level={5} appearance="utrecht-heading-6">
+          Dit is een H5 met H6 appearance
+        </Heading>
         <ActionGroup>
           <Button appearance="secondary-action-button">
             Link kopiëren

@@ -3,8 +3,9 @@
 import {
   AccordionProvider,
   Button,
-  IconButton,
   Blockquote,
+  Heading,
+  IconButton,
   Link,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
@@ -31,7 +32,6 @@ import {
   FormField,
   FormFieldErrorMessage,
   FormLabel,
-  Heading,
   Image,
   LinkList,
   LinkListLink,
@@ -67,9 +67,7 @@ export default function Collage() {
       <div className="unfinished">
         <Avatar label="BK"></Avatar>
       </div>
-      <div className="unstarted">
-        <Heading level={1}>Componenten collage NL Design System</Heading>
-      </div>
+      <Heading level={1}>Componenten collage NL Design System</Heading>
       <Image
         alt="Multicolored tulip field"
         width="640"
