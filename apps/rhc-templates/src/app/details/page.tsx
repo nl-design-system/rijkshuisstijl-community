@@ -1,10 +1,9 @@
 'use client';
 
-import { BreadcrumbNav, BreadcrumbNavLink, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { BreadcrumbNav, BreadcrumbNavLink, Heading, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
 import {
   Figure,
   FigureCaption,
-  Heading,
   Image,
   LinkList,
   LinkListLink,
@@ -59,9 +58,7 @@ export default function Details() {
         <div className="unstarted">
           <Separator></Separator>
         </div>
-        <div className="unstarted">
-          <Heading level={1}>Vraag en antwoord</Heading>
-        </div>
+        <Heading level={1}>Vraag en antwoord</Heading>
         <div className="unstarted">
           <LinkList>
             <LinkListLink>Wat zijn de regels bij consignatie (oproepdienst)?</LinkListLink>
