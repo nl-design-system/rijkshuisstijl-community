@@ -1,7 +1,7 @@
 'use client';
 
-import { AccordionProvider, Link, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
-import { FormLabel, Heading } from '@utrecht/component-library-react';
+import { AccordionProvider, Heading, Link, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { FormLabel } from '@utrecht/component-library-react';
 import {
   BreadcrumbNav,
   BreadcrumbNavLink,
@@ -45,9 +45,7 @@ export default function Form() {
             </BreadcrumbNavLink>
           </BreadcrumbNav>
         </div>
-        <div className="unstarted">
-          <Heading level={1}>Formulier voor vragen over Sisa</Heading>
-        </div>
+        <Heading level={1}>Formulier voor vragen over Sisa</Heading>
         <Paragraph>Heeft u vragen over Single information, Single audit (SiSa)?</Paragraph>
         <Paragraph>Gebruik dan het formulier hieronder.</Paragraph>
         <br />
@@ -149,9 +147,7 @@ export default function Form() {
               <FileInput multiple></FileInput>
             </FormField>
           </div>
-          <div className="unstarted">
-            <Heading level={1}>Informatie over de verwerking van uw persoonsgegevens</Heading>
-          </div>
+          <Heading level={1}>Informatie over de verwerking van uw persoonsgegevens</Heading>
           <Paragraph>
             Wij gebruiken gegevens die u heeft ingevuld om uw vraag te beantwoorden. Daarna worden ze volgens in de
             archiefwet tijdelijk bewaard in de daarvoor bestemde archiefsystemen. Deze zijn van het Ministerie van

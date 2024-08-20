@@ -1,7 +1,6 @@
 'use client';
 
-
-import { AccordionProvider, Blockquote, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { AccordionProvider, Blockquote, Heading, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { Avatar, Pagination } from '@amsterdam/design-system-react';
 import {
   IconAlertTriangle,
@@ -26,7 +25,6 @@ import {
   FormField,
   FormFieldErrorMessage,
   FormLabel,
-  Heading,
   Image,
   LinkList,
   LinkListLink,
@@ -62,9 +60,7 @@ export default function Collage() {
       <div className="unfinished">
         <Avatar label="BK"></Avatar>
       </div>
-      <div className="unstarted">
-        <Heading level={1}>Componenten collage NL Design System</Heading>
-      </div>
+      <Heading level={1}>Componenten collage NL Design System</Heading>
       <div className="unstarted">
         <Image
           alt="Multicolored tulip field"
