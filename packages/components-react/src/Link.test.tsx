@@ -128,13 +128,11 @@ describe('Link', () => {
       });
 
       it('contains a visual icon that has an sr-only label that comes from a property', () => {
-        const { container } = render(<Link external externalLabel="some-external-label" />);
+        render(<Link external externalLabel="some-external-label" />);
 
-        const label = container.querySelector('.rhc-link .rhc-link__sr-only');
+        const label = screen.getByText('some-external-label');
 
-        expect(label).toBeInTheDocument();
-
-        expect(label).toHaveTextContent('some-external-label');
+        expect(label).toHaveClass('rhc-link__sr-only');
       });
     });
   });

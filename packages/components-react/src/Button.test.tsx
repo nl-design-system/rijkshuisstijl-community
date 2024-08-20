@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { IconButton } from './Button';
 import '@testing-library/jest-dom';
 
@@ -12,13 +12,11 @@ describe('IconButton', () => {
   });
 
   it('renders an sr-only label for accessibility', () => {
-    const { container } = render(<IconButton label="example-icon-label" />);
+    render(<IconButton label="example-icon-label" />);
 
-    const span = container.querySelector('button>span.rhc-button__sr-only');
+    const span = screen.getByText('example-icon-label');
 
-    expect(span).toBeInTheDocument();
-
-    expect(span).toHaveTextContent('example-icon-label');
+    expect(span).toHaveClass('rhc-button__sr-only');
   });
 
   it('renders a design system BEM class name', () => {
