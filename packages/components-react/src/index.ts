@@ -16,6 +16,6 @@ export {
 export { Link } from './Link';
 export { ActionGroup } from './ActionGroup';
 export { Logo } from './Logo';
-export { BreadcrumbNav, BreadcrumbNavLink } from './Breadcrumb';
+export { BreadcrumbNavLink } from './BreadcrumbNavLink';
 export { Alert } from './Alert';
 export type { LogoProps } from './Logo';
