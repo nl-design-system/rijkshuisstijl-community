@@ -24,7 +24,7 @@ export const Logo = forwardRef(
   ) => {
     return (
       <div ref={ref} className={clsx('rhc-logo', className)} {...restProps}>
-        <div className="rhc-logo__emblem">
+        <div>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -12 44 88">
             <rect x="0" y="-12" fill="var(--rhc-logo-emblem-background-color, #154273)" width="44" height="88" />
             <path
