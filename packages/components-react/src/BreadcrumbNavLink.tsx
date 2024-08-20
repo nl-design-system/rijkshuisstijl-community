@@ -1,26 +1,19 @@
 import {
-  type BreadcrumbNavLinkProps,
   Icon,
   BreadcrumbNavLink as UtrechtBreadcrumbNavLink,
+  type BreadcrumbNavLinkProps as UtrechtBreadcrumbNavLinkProps,
 } from '@utrecht/component-library-react/dist/css-module';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
+interface BreadcrumbNavLinkProps extends UtrechtBreadcrumbNavLinkProps {
+  arrow?: boolean;
+  active?: boolean;
+}
+
 export const BreadcrumbNavLink = forwardRef(
   (
-    {
-      children,
-      className,
-      href,
-      arrow,
-      active,
-      ...restProps
-    }: PropsWithChildren<
-      BreadcrumbNavLinkProps & {
-        arrow?: boolean;
-        active?: boolean;
-      }
-    >,
+    { children, className, href, arrow, active, ...restProps }: PropsWithChildren<BreadcrumbNavLinkProps>,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     return (

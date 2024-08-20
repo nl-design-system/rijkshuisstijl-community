@@ -80,11 +80,6 @@ export const Separator: Story = {
       </BreadcrumbNavLink>,
     ],
   },
-  parameters: {
-    status: {
-      type: 'WORK IN PROGRESS',
-    },
-  },
 };
 export const Arrow: Story = {
   args: {

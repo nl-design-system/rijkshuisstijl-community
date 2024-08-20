@@ -2,7 +2,7 @@
 .utrecht-breadcrumb-nav {
   &__link {
     &--current {
-      color: var(--utrecht-breadcrumb-nav-link-current-color);
+      color: var(--utrecht-breadcrumb-nav-link-current-color) !important;
       text-decoration: var(--utrecht-breadcrumb-nav-link-current-text-decoration) !important;
     }
     &--active {
@@ -18,8 +18,7 @@
     }
   }
   &__separator {
-    --utrecht-icon-size: 12px;
-
-    color: var(--utrecht-breadcrumb-nav-divider-color);
+    --utrecht-breadcrumb-nav-separator-icon-size: 12px;
+    --utrecht-breadcrumb-nav-separator-color: --utrecht-breadcrumb-nav-divider-color;
   }
 }
