@@ -1,15 +1,16 @@
 @import "../node_modules/@utrecht/components/blockquote/src/";
 
 .utrecht-blockquote {
-  color: var(--utrecht-blockquote-content-color, inherit);
+  --utrecht-blockquote-color: --utrecht-blockquote-content-color;
+  --utrecht-document-font-family: --utrecht-blockquote-content-font-family;
+  --utrecht-blockquote-font-size: --utrecht-blockquote-content-font-size;
+
   display: flex;
   flex-direction: column;
-  font-family: var(--utrecht-blockquote-content-font-family, inherit);
-  font-size: var(--utrecht-blockquote-content-font-size, inherit);
   row-gap: var(--utrecht-blockquote-row-gap);
 }
 
 .utrecht-blockquote__attribution {
-  color: var(--utrecht-blockquote-attribution-color, inherit);
-  font-family: var(--utrecht-blockquote-attribution-font-family, inherit);
+  --utrecht-blockquote-color: --utrecht-blockquote-attribution-color font-family;
+  --utrecht-document-font-family: --utrecht-blockquote-attribution-font-family;
 }
