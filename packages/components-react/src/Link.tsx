@@ -3,6 +3,7 @@ import {
   Link as UtrechtLink,
   type LinkProps as UtrechtLinkProps,
 } from '@utrecht/component-library-react/dist/css-module';
+import clsx from 'clsx';
 import { ForwardedRef, forwardRef } from 'react';
 import '@rijkshuisstijl-community/components-css/index.scss';
 
@@ -18,17 +19,21 @@ const IconExternalLink = () => (
 );
 
 export interface LinkProps extends UtrechtLinkProps {
+  external?: boolean;
   externalLabel?: string;
 }
 
 export const Link = forwardRef(
-  ({ children, externalLabel, ...restProps }: LinkProps, ref: ForwardedRef<HTMLAnchorElement>) => (
-    <UtrechtLink {...restProps} ref={ref}>
+  ({ children, className, external, externalLabel, ...restProps }: LinkProps, ref: ForwardedRef<HTMLAnchorElement>) => (
+    <UtrechtLink {...restProps} external={external} className={clsx('rhc-link', className)} ref={ref}>
       {children}
-      {restProps.external && (
-        <Icon role="img" aria-label={externalLabel}>
-          <IconExternalLink />
-        </Icon>
+      {external && (
+        <>
+          <span className="rhc-link__sr-only">{externalLabel}</span>
+          <Icon role="img">
+            <IconExternalLink />
+          </Icon>
+        </>
       )}
     </UtrechtLink>
   ),

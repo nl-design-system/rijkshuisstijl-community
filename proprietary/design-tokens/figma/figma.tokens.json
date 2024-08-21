@@ -1171,87 +1171,6 @@
       }
     }
   },
-  "overwrites/primary-color": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "value": "{rhc.color.hemelblauw.50}",
-            "type": "color"
-          },
-          "100": {
-            "value": "{rhc.color.hemelblauw.100}",
-            "type": "color"
-          },
-          "200": {
-            "value": "{rhc.color.hemelblauw.200}",
-            "type": "color"
-          },
-          "300": {
-            "value": "{rhc.color.hemelblauw.300}",
-            "type": "color"
-          },
-          "400": {
-            "value": "{rhc.color.hemelblauw.400}",
-            "type": "color"
-          },
-          "500": {
-            "value": "{rhc.color.hemelblauw.500}",
-            "type": "color"
-          },
-          "hover": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "darken",
-                  "value": "0.3",
-                  "space": "lch"
-                }
-              }
-            },
-            "value": "{rhc.color.primary.500}",
-            "type": "color"
-          }
-        }
-      }
-    }
-  },
-  "overwrites/tablet": {
-    "rhc": {
-      "heading": {
-        "level-1": {
-          "value": "{rhc.font-size.xl.tablet}",
-          "type": "fontSizes"
-        },
-        "level-2": {
-          "value": "{rhc.font-size.lg.tablet}",
-          "type": "fontSizes"
-        },
-        "level-3": {
-          "value": "{rhc.font-size.md.tablet}",
-          "type": "fontSizes"
-        },
-        "level-4": {
-          "value": "{rhc.font-size.sm.tablet}",
-          "type": "fontSizes"
-        },
-        "level-5": {
-          "value": "{rhc.font-size.xs.tablet}",
-          "type": "fontSizes"
-        }
-      },
-      "paragraph": {
-        "intro": {
-          "value": "{rhc.font-size.sm.tablet}",
-          "type": "fontSizes"
-        },
-        "default": {
-          "value": "{rhc.font-size.xs.tablet}",
-          "type": "fontSizes"
-        }
-      }
-    }
-  },
   "components/accordion": {
     "utrecht": {
       "accordion": {
@@ -1919,6 +1838,10 @@
           "type": "borderWidth"
         },
         "icon": {
+          "gap": {
+            "value": "{utrecht.button.column-gap}",
+            "type": "spacing"
+          },
           "size": {
             "value": "{rhc.size.icon.functional}",
             "type": "sizing"
@@ -3116,7 +3039,7 @@
     }
   },
   "components/icon-only-button": {
-    "todo": {
+    "rhc": {
       "icon-only-button": {
         "padding-block-end": {
           "value": "{rhc.space.150}",
@@ -3242,6 +3165,44 @@
         "line-height": {
           "value": "{rhc.line-height.paragraph}",
           "type": "lineHeights"
+        }
+      }
+    }
+  },
+  "components/link-list": {
+    "utrecht": {
+      "link-list": {
+        "margin-block-start": {
+          "value": "{rhc.space.0}",
+          "type": "spacing"
+        },
+        "row-gap": {
+          "value": "{rhc.space.100}",
+          "type": "spacing"
+        },
+        "margin-block-end": {
+          "value": "{rhc.space.0}",
+          "type": "spacing"
+        },
+        "item": {
+          "column-gap": {
+            "value": "{rhc.space.100}",
+            "type": "spacing"
+          },
+          "text-decoration": {
+            "value": "None",
+            "type": "textDecoration"
+          }
+        },
+        "icon": {
+          "size": {
+            "value": "{rhc.size.icon.functional}",
+            "type": "sizing"
+          },
+          "inset-block-start": {
+            "value": "{rhc.space.0}",
+            "type": "spacing"
+          }
         }
       }
     }
@@ -5304,8 +5265,6 @@
       "common/focus",
       "common/border",
       "common/keep",
-      "overwrites/primary-color",
-      "overwrites/tablet",
       "components/accordion",
       "components/alert",
       "components/avatar",
@@ -5328,6 +5287,7 @@
       "components/heading",
       "components/icon-only-button",
       "components/link",
+      "components/link-list",
       "components/modal-dialog",
       "components/ordered-list",
       "components/pagination",

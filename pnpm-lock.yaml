@@ -155,6 +155,10 @@ importers:
         specifier: 5.5.3
         version: 5.5.3
 
+  apps/rhc-templates/dist: {}
+
+  apps/rhc-templates/dist/types: {}
+
   apps/rvs.rivm.nl:
     dependencies:
       next:
@@ -344,6 +348,9 @@ importers:
 
   packages/storybook:
     devDependencies:
+      '@chromatic-com/storybook':
+        specifier: 1.6.1
+        version: 1.6.1(react@18.3.1)
       '@etchteam/storybook-addon-status':
         specifier: 5.0.0
         version: 5.0.0
@@ -446,6 +453,9 @@ importers:
       '@whitespace/storybook-addon-html':
         specifier: 6.1.1
         version: 6.1.1(prettier@3.3.3)(react-syntax-highlighter@15.5.0(react@18.3.1))
+      chromatic:
+        specifier: 11.3.0
+        version: 11.3.0
       prettier:
         specifier: 3.3.3
         version: 3.3.3
@@ -1430,6 +1440,10 @@ packages:
 
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+
+  '@chromatic-com/storybook@1.6.1':
+    resolution: {integrity: sha512-x1x1NB3j4xpfeSWKr96emc+7ZvfsvH+/WVb3XCjkB24PPbT8VZXb3mJSAQMrSzuQ8+eQE9kDogYHH9Fj3tb/Cw==}
+    engines: {node: '>=16.0.0', yarn: '>=1.22.18'}
 
   '@colors/colors@1.5.0':
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
@@ -3494,6 +3508,30 @@ packages:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
 
+  chromatic@11.3.0:
+    resolution: {integrity: sha512-q1ZtJDJrjLGnz60ivpC16gmd7KFzcaA4eTb7gcytCqbaKqlHhCFr1xQmcUDsm14CK7JsqdkFU6S+JQdOd2ZNJg==}
+    hasBin: true
+    peerDependencies:
+      '@chromatic-com/cypress': ^0.*.* || ^1.0.0
+      '@chromatic-com/playwright': ^0.*.* || ^1.0.0
+    peerDependenciesMeta:
+      '@chromatic-com/cypress':
+        optional: true
+      '@chromatic-com/playwright':
+        optional: true
+
+  chromatic@11.7.1:
+    resolution: {integrity: sha512-LvgPimdQdnQB07ZDxLEC2KtxgYeqTw0X71GA7fi3zhgtKLxZcE+BSZ/5I9rrQp1V8ydmfElfw0ZwnUH4fVgUAQ==}
+    hasBin: true
+    peerDependencies:
+      '@chromatic-com/cypress': ^0.*.* || ^1.0.0
+      '@chromatic-com/playwright': ^0.*.* || ^1.0.0
+    peerDependenciesMeta:
+      '@chromatic-com/cypress':
+        optional: true
+      '@chromatic-com/playwright':
+        optional: true
+
   ci-info@3.8.0:
     resolution: {integrity: sha512-eXTggHWSooYhq49F2opQhuHWgzucfF2YgODK4e1566GQs5BIfP30B0oenwBJHfWxAs2fyPB1s7Mg949zLf61Yw==}
     engines: {node: '>=8'}
@@ -4493,6 +4531,10 @@ packages:
   file-entry-cache@9.0.0:
     resolution: {integrity: sha512-6MgEugi8p2tiUhqO7GnPsmbCCzj0YRCwwaTbpGRyKZesjRSzkqkAE9fPp7V2yMs5hwfgbQLgdvSSkGNg1s5Uvw==}
     engines: {node: '>=18'}
+
+  filesize@10.1.4:
+    resolution: {integrity: sha512-ryBwPIIeErmxgPnm6cbESAzXjuEFubs+yKYLBZvg3CaiNcmkJChoOGcBSrZ6IwkMwPABwPpVXE6IlNdGJJrvEg==}
+    engines: {node: '>= 10.4.0'}
 
   filesize@6.4.0:
     resolution: {integrity: sha512-mjFIpOHC4jbfcTfoh4rkWpI31mF7viw9ikj/JyLoKzqlwG/YsefKfvYlYhdYdg/9mtK2z1AzgN/0LvVQ3zdlSQ==}
@@ -7286,6 +7328,12 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
 
+  react-confetti@6.1.0:
+    resolution: {integrity: sha512-7Ypx4vz0+g8ECVxr88W9zhcQpbeujJAVqL14ZnXJ3I23mOI9/oBVTQ3dkJhUmB0D6XOtCZEM6N0Gm9PMngkORw==}
+    engines: {node: '>=10.18'}
+    peerDependencies:
+      react: ^16.3.0 || ^17.0.1 || ^18.0.0
+
   react-docgen-typescript@2.2.2:
     resolution: {integrity: sha512-tvg2ZtOpOi6QDwsb3GZhOjDkkX0h8Z2gipvTg6OVMUyoYoURhEiRNePT8NZItTVCDh39JJHnLdfCOkzoLbFnTg==}
     peerDependencies:
@@ -8258,6 +8306,9 @@ packages:
   tuf-js@2.2.0:
     resolution: {integrity: sha512-ZSDngmP1z6zw+FIkIBjvOp/II/mIub/O7Pp12j1WNsiCpg5R5wAc//i555bBQsE44O94btLt0xM/Zr2LQjwdCg==}
     engines: {node: ^16.14.0 || >=18.0.0}
+
+  tween-functions@1.2.0:
+    resolution: {integrity: sha512-PZBtLYcCLtEcjL14Fzb1gSxPBeL7nWvGhO5ZFPGqziCcr8uvHp0NDmdjBchp6KHL+tExcg0m3NISmKxhU394dA==}
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -9860,6 +9911,18 @@ snapshots:
   '@base2/pretty-print-object@1.0.1': {}
 
   '@bcoe/v8-coverage@0.2.3': {}
+
+  '@chromatic-com/storybook@1.6.1(react@18.3.1)':
+    dependencies:
+      chromatic: 11.7.1
+      filesize: 10.1.4
+      jsonfile: 6.1.0
+      react-confetti: 6.1.0(react@18.3.1)
+      strip-ansi: 7.1.0
+    transitivePeerDependencies:
+      - '@chromatic-com/cypress'
+      - '@chromatic-com/playwright'
+      - react
 
   '@colors/colors@1.5.0':
     optional: true
@@ -12508,6 +12571,10 @@ snapshots:
 
   chownr@2.0.0: {}
 
+  chromatic@11.3.0: {}
+
+  chromatic@11.7.1: {}
+
   ci-info@3.8.0: {}
 
   ci-info@4.0.0: {}
@@ -13802,6 +13869,8 @@ snapshots:
   file-entry-cache@9.0.0:
     dependencies:
       flat-cache: 5.0.0
+
+  filesize@10.1.4: {}
 
   filesize@6.4.0: {}
 
@@ -17213,6 +17282,11 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
+  react-confetti@6.1.0(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+      tween-functions: 1.2.0
+
   react-docgen-typescript@2.2.2(typescript@5.5.3):
     dependencies:
       typescript: 5.5.3
@@ -18443,6 +18517,8 @@ snapshots:
       make-fetch-happen: 13.0.0
     transitivePeerDependencies:
       - supports-color
+
+  tween-functions@1.2.0: {}
 
   type-check@0.4.0:
     dependencies:

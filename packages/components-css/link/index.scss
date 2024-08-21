@@ -2,9 +2,14 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+@import "../button/mixin";
 
-.utrecht-link:any-link {
+.rhc-link:any-link {
   align-items: center;
   column-gap: var(--utrecht-link-column-gap, inherit);
   display: inline-flex;
+}
+
+.rhc-link .rhc-link__sr-only {
+  @include invisible-but-accessible;
 }

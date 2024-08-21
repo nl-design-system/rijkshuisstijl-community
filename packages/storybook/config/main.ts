@@ -15,6 +15,7 @@ const config: StorybookConfig = {
     '@storybook/addon-viewport',
     '@etchteam/storybook-addon-status',
     '@whitespace/storybook-addon-html',
+    '@chromatic-com/storybook',
   ],
   framework: '@storybook/react-vite',
   staticDirs: ['../../../proprietary/assets/src'],

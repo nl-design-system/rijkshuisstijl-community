@@ -1,7 +1,6 @@
 'use client';
 
 import {
-  Button,
   ButtonLink,
   Icon,
   LinkList,
@@ -30,6 +29,7 @@ import {
 import {
   ActionGroup,
   Blockquote,
+  Button,
   Heading,
   Link,
   Logo,
@@ -78,11 +78,9 @@ export default function Page() {
           ></Image>
           <FigureCaption>Bijschrift (figcaption) van een afbeelding)</FigureCaption>
         </Figure>
-        <div className="unstarted">
-          <Button type="submit" appearance="primary-action-button">
-            Primary action button
-          </Button>
-        </div>
+        <Button type="submit" appearance="primary-action-button">
+          Primary action button
+        </Button>
         <Heading level={2}>Dit is een H2</Heading>
         <Paragraph>Dit is een paragraaf.</Paragraph>
         <Paragraph>Opsomming ordered list</Paragraph>
@@ -122,7 +120,7 @@ export default function Page() {
         </div>
         <Heading level={3}>Dit is een H3</Heading>
         <Paragraph>Dit is een paragraaf.</Paragraph>
-        <Link external={true} href="example.com">
+        <Link external={true} externalLabel="example external label" href="example.com">
           Dit is een externe link
         </Link>
         <div className="unstarted">

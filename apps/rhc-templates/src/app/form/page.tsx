@@ -5,6 +5,7 @@ import {
   BreadcrumbNav,
   BreadcrumbNavLink,
   BreadcrumbNavSeparator,
+  Button,
   Heading,
   Link,
   Logo,
@@ -12,7 +13,6 @@ import {
 } from '@rijkshuisstijl-community/components-react';
 import { FormLabel } from '@utrecht/component-library-react';
 import {
-  Button,
   Checkbox,
   Fieldset,
   FieldsetLegend,
@@ -181,11 +181,9 @@ export default function Form() {
               </FormField>
             </Fieldset>
           </div>
-          <div className="unstarted">
-            <Button type="submit" appearance="primary-action-button">
-              Ga verder
-            </Button>
-          </div>
+          <Button type="submit" appearance="primary-action-button">
+            Ga verder
+          </Button>
         </form>
       </PageContent>
       <div className="unstarted">
