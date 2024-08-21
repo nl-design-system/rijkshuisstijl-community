@@ -115,7 +115,7 @@ jobs:
         run: pnpm run --if-present test
 
       - name: Run Chromatic
-        uses: chromaui/action@latest
+        uses: chromaui/action@b984808b772126a9f44b2b7737b131b68a2ede32 # 11.7.1
         with:
           autoAcceptChanges: "main"
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
