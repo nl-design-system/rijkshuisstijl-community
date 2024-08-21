@@ -14,3 +14,7 @@
   margin-block-start: var(--utrecht-unordered-list-item-margin-block-start);
   padding-inline-start: var(--utrecht-unordered-list-item-padding-inline-start);
 }
+
+.utrecht-unordered-list--nested > .utrecht-unordered-list__item::marker {
+  content: "○";
+}
