@@ -1,4 +1,3 @@
-import '@rijkshuisstijl-community/components-css/index.scss';
 import { UnorderedList as UtrechtUnorderedList } from '@utrecht/component-library-react';
 import { UnorderedListProps } from '@utrecht/component-library-react/dist/css-module';
 import clsx from 'clsx';
