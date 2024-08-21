@@ -21,7 +21,6 @@ const init = async ({ input, output }) => {
     'components/form-field-error-message',
     'components/form-field-option-label',
     'components/form-field-radio-option',
-    'components/icon-only-button',
     'components/modal-dialog',
     'components/ordered-list',
     'components/pagination',

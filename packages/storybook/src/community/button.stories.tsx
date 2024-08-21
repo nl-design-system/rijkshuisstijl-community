@@ -1,7 +1,8 @@
 /* @license CC0-1.0 */
 
-import { RhcIconArrowRight, RhcIconCalendar } from '@rijkshuisstijl-community/web-components-react';
+import { IconButton } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
+import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
 import { Button, Icon } from '@utrecht/component-library-react/dist/css-module';
 import { PropsWithChildren } from 'react';
 import readme from './button.md?raw';
@@ -16,13 +17,13 @@ const ButtonStory = ({ appearance, children, iconLeft, iconRight, ...props }: Pr
   <Button appearance={appearance} {...props}>
     {iconLeft && (
       <Icon>
-        <RhcIconCalendar></RhcIconCalendar>
+        <IconCalendarEvent></IconCalendarEvent>
       </Icon>
     )}
     {children}
     {iconRight && (
       <Icon>
-        <RhcIconArrowRight></RhcIconArrowRight>
+        <IconArrowRight></IconArrowRight>
       </Icon>
     )}
   </Button>
@@ -53,6 +54,12 @@ const meta = {
       },
       defaultValue: '',
     },
+    disabled: {
+      table: {
+        category: 'Property',
+      },
+      defaultValue: false,
+    },
     iconLeft: {
       description: 'Icon Left',
       type: {
@@ -77,6 +84,7 @@ const meta = {
   args: {
     children: '',
     appearance: '',
+    disabled: false,
     iconLeft: false,
     iconRight: false,
   },
@@ -134,5 +142,12 @@ export const IconRight: StoryObj<typeof meta> = {
     appearance: 'primary-action-button',
     iconRight: true,
   },
-  name: 'Button',
+};
+
+export const IconOnly: StoryObj<typeof IconButton> = {
+  render: () => (
+    <IconButton label="calendar">
+      <IconCalendarEvent></IconCalendarEvent>
+    </IconButton>
+  ),
 };

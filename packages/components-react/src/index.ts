@@ -15,6 +15,15 @@ export {
 } from './Accordion';
 export { Link } from './Link';
 export { ActionGroup } from './ActionGroup';
+export {
+  Button,
+  type ButtonProps,
+  IconButton,
+  type IconButtonProps,
+  PrimaryActionButton,
+  SecondaryActionButton,
+  SubtleButton,
+} from './Button';
 export { Logo } from './Logo';
 export { BreadcrumbNavLink } from './BreadcrumbNavLink';
 export { Alert } from './Alert';

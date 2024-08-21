@@ -1179,87 +1179,6 @@
       }
     }
   },
-  "overwrites/primary-color": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "value": "{rhc.color.hemelblauw.50}",
-            "type": "color"
-          },
-          "100": {
-            "value": "{rhc.color.hemelblauw.100}",
-            "type": "color"
-          },
-          "200": {
-            "value": "{rhc.color.hemelblauw.200}",
-            "type": "color"
-          },
-          "300": {
-            "value": "{rhc.color.hemelblauw.300}",
-            "type": "color"
-          },
-          "400": {
-            "value": "{rhc.color.hemelblauw.400}",
-            "type": "color"
-          },
-          "500": {
-            "value": "{rhc.color.hemelblauw.500}",
-            "type": "color"
-          },
-          "hover": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "darken",
-                  "value": "0.3",
-                  "space": "lch"
-                }
-              }
-            },
-            "value": "{rhc.color.primary.500}",
-            "type": "color"
-          }
-        }
-      }
-    }
-  },
-  "overwrites/tablet": {
-    "rhc": {
-      "heading": {
-        "level-1": {
-          "value": "{rhc.font-size.xl.tablet}",
-          "type": "fontSizes"
-        },
-        "level-2": {
-          "value": "{rhc.font-size.lg.tablet}",
-          "type": "fontSizes"
-        },
-        "level-3": {
-          "value": "{rhc.font-size.md.tablet}",
-          "type": "fontSizes"
-        },
-        "level-4": {
-          "value": "{rhc.font-size.sm.tablet}",
-          "type": "fontSizes"
-        },
-        "level-5": {
-          "value": "{rhc.font-size.xs.tablet}",
-          "type": "fontSizes"
-        }
-      },
-      "paragraph": {
-        "intro": {
-          "value": "{rhc.font-size.sm.tablet}",
-          "type": "fontSizes"
-        },
-        "default": {
-          "value": "{rhc.font-size.xs.tablet}",
-          "type": "fontSizes"
-        }
-      }
-    }
-  },
   "components/accordion": {
     "utrecht": {
       "accordion": {
@@ -1927,6 +1846,10 @@
           "type": "borderWidth"
         },
         "icon": {
+          "gap": {
+            "value": "{utrecht.button.column-gap}",
+            "type": "spacing"
+          },
           "size": {
             "value": "{rhc.size.icon.functional}",
             "type": "sizing"
@@ -3124,7 +3047,7 @@
     }
   },
   "components/icon-only-button": {
-    "todo": {
+    "rhc": {
       "icon-only-button": {
         "padding-block-end": {
           "value": "{rhc.space.150}",
@@ -5350,8 +5273,6 @@
       "common/focus",
       "common/border",
       "common/keep",
-      "overwrites/primary-color",
-      "overwrites/tablet",
       "components/accordion",
       "components/alert",
       "components/avatar",

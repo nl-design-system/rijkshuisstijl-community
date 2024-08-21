@@ -2,10 +2,12 @@
 
 import {
   AccordionProvider,
+  Blockquote,
   BreadcrumbNav,
   BreadcrumbNavLink,
-  Blockquote,
+  Button,
   Heading,
+  IconButton,
   Link,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
@@ -21,7 +23,6 @@ import {
 import {
   Alert,
   BadgeCounter,
-  Button,
   Checkbox,
   DataList,
   DataListActions,
@@ -67,14 +68,12 @@ export default function Collage() {
         <Avatar label="BK"></Avatar>
       </div>
       <Heading level={1}>Componenten collage NL Design System</Heading>
-      <div className="unstarted">
-        <Image
-          alt="Multicolored tulip field"
-          width="640"
-          height="763"
-          src="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
-        ></Image>
-      </div>
+      <Image
+        alt="Multicolored tulip field"
+        width="640"
+        height="763"
+        src="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
+      ></Image>
       <Paragraph lead>
         In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
       </Paragraph>
@@ -122,23 +121,13 @@ export default function Collage() {
         {`Hello, I'm a link `}
         <IconArrowRight />
       </Link>
-      <div className="unstarted">
-        <Button appearance="primary-action-button">Primary button</Button>
-      </div>
-      <div className="unstarted">
-        <Button appearance="secondary-action-button">Secondary button</Button>
-      </div>
-      <div className="unstarted">
-        <Button>Default button</Button>
-      </div>
-      <div className="unstarted">
-        <Button appearance="subtle-button">Subtle button</Button>
-      </div>
-      <div className="unstarted">
-        <Button appearance="subtle-button">
-          <IconCalendarEvent />
-        </Button>
-      </div>
+      <Button appearance="primary-action-button">Primary button</Button>
+      <Button appearance="secondary-action-button">Secondary button</Button>
+      <Button>Default button</Button>
+      <Button appearance="subtle-button">Subtle button</Button>
+      <IconButton label="calendar">
+        <IconCalendarEvent />
+      </IconButton>
       <div className="unstarted">
         <FormField label="Name" description="Description">
           <Textbox></Textbox>
