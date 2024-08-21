@@ -3,6 +3,8 @@
 import {
   AccordionProvider,
   Blockquote,
+  BreadcrumbNav,
+  BreadcrumbNavLink,
   Heading,
   Link,
   Paragraph,
@@ -20,8 +22,6 @@ import {
 import {
   Alert,
   BadgeCounter,
-  BreadcrumbNav,
-  BreadcrumbNavLink,
   Button,
   Checkbox,
   DataList,
@@ -56,7 +56,7 @@ import {
 export default function Collage() {
   return (
     <>
-      <div className="unfinished">
+      <div>
         <BreadcrumbNav>
           <BreadcrumbNavLink href="/" rel="home" index={0}>
             Label
