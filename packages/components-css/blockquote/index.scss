@@ -10,10 +10,9 @@
 
   display: flex;
   flex-direction: column;
-  row-gap: var(--utrecht-blockquote-row-gap);
+  row-gap: var(--utrecht-blockquote-row-gap, inherit);
 }
 
 .utrecht-blockquote__attribution {
-  --utrecht-blockquote-color: --utrecht-blockquote-attribution-color;
-  --utrecht-document-font-family: --utrecht-blockquote-attribution-font-family;
+  font-family: var(--utrecht-blockquote-attribution-font-family, inherit);
 }
