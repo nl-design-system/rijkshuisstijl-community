@@ -1,5 +1,5 @@
+import { Separator } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
-import { Separator } from '@utrecht/component-library-react/dist/css-module';
 import readme from './separator.md?raw';
 
 const meta = {
