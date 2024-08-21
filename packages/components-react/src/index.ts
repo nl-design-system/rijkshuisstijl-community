@@ -28,4 +28,4 @@ export { Logo } from './Logo';
 export { BreadcrumbNavLink } from './BreadcrumbNavLink';
 export { Alert } from './Alert';
 export type { LogoProps } from './Logo';
-export { UnorderedList, UnorderedListItem } from './UnoderedList';
+export { UnorderedList } from './UnoderedList';
