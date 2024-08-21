@@ -1,0 +1,16 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@import "./mixin";
+
+.rhc-button--icon-only {
+  padding-block-end: var(--rhc-icon-only-button-padding-block-end);
+  padding-block-start: var(--rhc-icon-only-button-padding-block-start);
+  padding-inline-end: var(--rhc-icon-only-button-padding-inline-end);
+  padding-inline-start: var(--rhc-icon-only-button-padding-inline-start);
+}
+
+.rhc-button--icon-only .rhc-button__sr-only {
+  @include invisible-but-accessible;
+}
