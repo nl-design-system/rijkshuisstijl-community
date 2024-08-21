@@ -38,7 +38,7 @@ export const NestedUnorderedList: Story = {
       <UnorderedListItem>List item 1</UnorderedListItem>,
       <UnorderedListItem>
         List item 2
-        <UnorderedList>
+        <UnorderedList nested>
           <UnorderedListItem>Nested List item 1</UnorderedListItem>
           <UnorderedListItem>Nested List item 2</UnorderedListItem>
         </UnorderedList>
