@@ -1,0 +1,19 @@
+@import "../node_modules/@utrecht/components/table/src";
+
+.utrecht-table {
+  &__caption {
+    text-align: var(--utrecht-table-caption-text-align, start);
+  }
+  &__header {
+    tr:last-child > th {
+      border-block-end-color: var(--utrecht-table-header-border-block-end-color, transparent);
+      border-block-end-style: solid;
+      border-block-end-width: var(--utrecht-table-header-border-block-end-width, 1px);
+    }
+  }
+  &__footer {
+    td {
+      font-weight: var(--utrecht-table-footer-font-weight, bold);
+    }
+  }
+}
