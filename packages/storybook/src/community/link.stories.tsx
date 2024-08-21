@@ -11,6 +11,7 @@ interface LinkStoryProps {
   iconLeft?: boolean;
   iconRight?: boolean;
   external?: boolean;
+  externalLabel?: string;
 }
 
 const LinkStory = ({ href, children, iconLeft, iconRight, external, ...props }: PropsWithChildren<LinkStoryProps>) => (
@@ -54,7 +55,7 @@ const meta = {
       },
     },
     externalLabel: {
-      description: 'Aria label for external link icon',
+      description: 'SR only label for external link icon',
       type: {
         name: 'string',
       },
@@ -140,5 +141,6 @@ export const External: Story = {
     href: 'https://example.com/',
     children: 'Label',
     external: true,
+    externalLabel: 'example external label',
   },
 };
