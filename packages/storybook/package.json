@@ -19,10 +19,13 @@
   },
   "scripts": {
     "build": "storybook build --output-dir dist/ --config-dir config/",
+    "build-storybook": "pnpm build",
+    "chromatic": "chromatic",
     "clean": "rimraf dist/",
     "storybook": "storybook dev --config-dir config/ --port 6006"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "1.6.1",
     "@etchteam/storybook-addon-status": "5.0.0",
     "@nl-rvo/assets": "1.0.0-alpha.360",
     "@rijkshuisstijl-community/assets": "workspace:*",
@@ -52,6 +55,7 @@
     "@tabler/icons-react": "3.11.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
+    "chromatic": "11.3.0",
     "@utrecht/component-library-css": "4.0.0",
     "@utrecht/component-library-react": "5.0.0",
     "@utrecht/web-component-library-react": "1.2.0",
