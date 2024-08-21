@@ -16,7 +16,14 @@ export {
 export { ActionGroup, type ActionGroupProps } from './ActionGroup';
 export { Alert, type AlertProps } from './Alert';
 export { Blockquote, type BlockquoteProps } from './Blockquote';
-export { BreadcrumbNavLink } from './BreadcrumbNavLink';
+export {
+  BreadcrumbNav,
+  type BreadcrumbNavProps,
+  BreadcrumbNavLink,
+  type BreadcrumbNavLinkProps,
+  BreadcrumbNavSeparator,
+  type BreadcrumbNavSeparatorProps,
+} from './BreadcrumbNav';
 export { Image, type ImageProps } from './Image';
 export { Link, type LinkProps } from './Link';
 export { Logo, type LogoProps } from './Logo';
