@@ -1,7 +1,7 @@
 import { BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
-import readme from './breadcrumb.md?raw';
+import readme from './breadcrumb-nav.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Breadcrumb navigation',
