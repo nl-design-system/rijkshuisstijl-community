@@ -9,8 +9,6 @@ import {
   Fieldset,
   FieldsetLegend,
   FormField,
-  LinkList,
-  LinkListLink,
   PageContent,
   PageFooter,
   PageHeader,
@@ -20,6 +18,7 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
+import { LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
 import { DateInput, FileInput } from '@amsterdam/design-system-react';
 
 export default function Form() {
