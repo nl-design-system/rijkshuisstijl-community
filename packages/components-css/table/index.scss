@@ -2,17 +2,25 @@
 
 .utrecht-table {
   &__caption {
-    text-align: var(--utrecht-table-caption-text-align, start);
+    --utrecht-table-caption-text-align: left;
   }
   &__header {
     tr:last-child > th {
-      border-block-end-color: var(--utrecht-table-header-border-block-end-color, transparent);
+      border-block-end-color: var(
+        --utrecht-table-header-sticky-border-block-end-color,
+        var(--utrecht-table-header-border-block-end-color, transparent)
+      );
       border-block-end-style: solid;
-      border-block-end-width: var(--utrecht-table-header-border-block-end-width, 1px);
+      border-block-end-width: var(
+        --utrecht-table-header-sticky-border-block-end-width,
+        var(--utrecht-table-header-border-block-end-width, 0)
+      );
     }
   }
   &__footer {
     td {
+      --utrecht-table-footer-font-weight: var(--utrecht-table-footer-font-weight, bold);
+
       font-weight: var(--utrecht-table-footer-font-weight, bold);
     }
   }
