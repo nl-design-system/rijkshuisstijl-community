@@ -35,7 +35,6 @@ const init = async ({ input, output }) => {
     'components/task-list',
     'components/textarea',
     'components/toolbar-button',
-    'components/unordered-list',
   ];
 
   const transformerOptions = {
