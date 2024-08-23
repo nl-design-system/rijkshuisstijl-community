@@ -22,7 +22,6 @@ const init = async ({ input, output }) => {
     'components/form-field-option-label',
     'components/form-field-radio-option',
     'components/modal-dialog',
-    'components/ordered-list',
     'components/pagination',
     'components/radio',
     'components/radio-group',
