@@ -30,3 +30,4 @@ export { BreadcrumbNavLink } from './BreadcrumbNavLink';
 export type { LogoProps } from './Logo';
 export { UnorderedList } from './UnoderedList';
 export { TableHeaderCell, type TableHeaderCellProps } from './TableHeaderCell';
+export { TableCell, type TableCellProps } from './TableCell';

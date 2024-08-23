@@ -9,11 +9,12 @@ import { Button } from './index';
 
 export interface TableHeaderCellProps extends UtrechtTableHeaderCellProps {
   withSorting?: boolean;
+  align?: 'right' | 'center' | 'left';
 }
 
 export const TableHeaderCell = forwardRef(
   (
-    { children, withSorting, className, scope, ...restProps }: PropsWithChildren<TableHeaderCellProps>,
+    { children, withSorting, className, scope, align, ...restProps }: PropsWithChildren<TableHeaderCellProps>,
     ref: ForwardedRef<HTMLTableCellElement>,
   ) => {
     return (
@@ -21,12 +22,23 @@ export const TableHeaderCell = forwardRef(
         ref={ref}
         className={clsx({
           'utrecht-table__header-cell-row': scope === 'row',
+          'utrecht-table__header-cell-align-right': align === 'right',
+          'utrecht-table__header-cell-align-center': align === 'center',
+          'utrecht-table__header-cell-align-left': align === 'left',
           className,
         })}
         {...restProps}
       >
         {withSorting ? (
-          <Button type={'button'} appearance={'subtle-button'} className={'utrecht-table__header-cell-button'}>
+          <Button
+            type={'button'}
+            appearance={'subtle-button'}
+            className={clsx('utrecht-table__header-cell-button', {
+              'utrecht-table__header-cell-button-align-right': align === 'right',
+              'utrecht-table__header-cell-button-align-center': align === 'center',
+              'utrecht-table__header-cell-button-align-left': align === 'left',
+            })}
+          >
             {children}
 
             <Icon>

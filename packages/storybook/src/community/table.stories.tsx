@@ -1,4 +1,5 @@
 import {
+  Link,
   Table,
   TableBody,
   TableCaption,
@@ -193,6 +194,13 @@ export const Sorting: Story = {
       </>
     ),
   },
+  parameters: {
+    docs: {
+      description: {
+        story: `Voor screen reader gebruikers is het belangrijk dat je de kolom kunt vinden waarop gesorteerd is, en dat je makkelijk vanuit die kolom naar de vorige of volgende rij kunt gaan om snel de relevante rij te vinden. Wanneer je informatie zoekt op een bepaalde datum dan is het belangrijk dat je met één druk op de knop naar de volgende datum kunt gaan, daarna nog een keer, enzovoorts`,
+      },
+    },
+  },
 };
 export const SortingDescending: Story = {
   args: {
@@ -241,6 +249,13 @@ export const SortingDescending: Story = {
       </>
     ),
   },
+  parameters: {
+    docs: {
+      description: {
+        story: `\`aria-sort="descending"\` voor "aflopende volgorde", bijvoorbeeld namen van Z naar A, ontvangen berichten van nieuw naar oud, bedragen en aantallen van groot naar klein`,
+      },
+    },
+  },
 };
 export const SortingAscending: Story = {
   args: {
@@ -286,6 +301,97 @@ export const SortingAscending: Story = {
             <TableCell>Footer</TableCell>
           </TableRow>
         </TableFooter>
+      </>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `\`aria-sort="ascending"\` voor "oplopende volgorde", bijvoorbeeld namen van A tot Z (namen), van bedragen en aantallen van klein naar groot, geplande activiteiten van eerdere naar latere datums`,
+      },
+    },
+  },
+};
+
+export const Alignment: Story = {
+  args: {
+    children: (
+      <>
+        <TableCaption>Alignment</TableCaption>
+        <TableHeader>
+          <TableRow>
+            <TableHeaderCell scope="col">Header</TableHeaderCell>
+            <TableHeaderCell scope="col">Header</TableHeaderCell>
+            <TableHeaderCell scope="col">Header</TableHeaderCell>
+            <TableHeaderCell scope="col" align={'right'}>
+              Header
+            </TableHeaderCell>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableCell>Label</TableCell>
+            <TableCell>Label</TableCell>
+            <TableCell>Label</TableCell>
+            <TableCell align={'right'}>Label</TableCell>
+          </TableRow>{' '}
+          <TableRow>
+            <TableCell>Label</TableCell>
+            <TableCell>Label</TableCell>
+            <TableCell>Label</TableCell>
+            <TableCell align={'right'}>Label</TableCell>
+          </TableRow>{' '}
+          <TableRow>
+            <TableCell>Label</TableCell>
+            <TableCell>Label</TableCell>
+            <TableCell>Label</TableCell>
+            <TableCell align={'right'}>Label</TableCell>
+          </TableRow>
+        </TableBody>
+      </>
+    ),
+  },
+};
+
+export const Content: Story = {
+  args: {
+    children: (
+      <>
+        <TableCaption>Content</TableCaption>
+        <TableHeader>
+          <TableRow>
+            <TableHeaderCell scope="col">Header</TableHeaderCell>
+            <TableHeaderCell scope="col">Header</TableHeaderCell>
+            <TableHeaderCell scope="col">Header</TableHeaderCell>
+            <TableHeaderCell scope="col">Header</TableHeaderCell>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableCell>
+              <Link href={'#'}>Label</Link>
+            </TableCell>
+            <TableCell>Label</TableCell>
+            <TableCell>Label</TableCell>
+            <TableCell>Label</TableCell>
+          </TableRow>{' '}
+          <TableRow>
+            <TableCell>
+              <Link href={'#'}>Label</Link>
+            </TableCell>
+            <TableCell>Label</TableCell>
+            <TableCell>Label</TableCell>
+            <TableCell>Label</TableCell>
+          </TableRow>{' '}
+          <TableRow>
+            <TableCell>
+              <Link href={'#'}>Label</Link>
+            </TableCell>
+            <TableCell>Label</TableCell>
+            <TableCell>Label</TableCell>
+            <TableCell>Label</TableCell>
+          </TableRow>
+        </TableBody>
       </>
     ),
   },
