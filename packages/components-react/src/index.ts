@@ -13,8 +13,8 @@ export {
   type AccordionSectionProps,
   type AccordionSectionProviderProps,
 } from './Accordion';
-export { Link } from './Link';
 export { ActionGroup } from './ActionGroup';
+export { Alert } from './Alert';
 export {
   Button,
   type ButtonProps,
@@ -24,8 +24,9 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from './Button';
+export { Link } from './Link';
 export { Logo } from './Logo';
 export { BreadcrumbNavLink } from './BreadcrumbNavLink';
-export { Alert } from './Alert';
 export type { LogoProps } from './Logo';
 export { UnorderedList } from './UnoderedList';
+export { TableHeaderCell, type TableHeaderCellProps } from './TableHeaderCell';

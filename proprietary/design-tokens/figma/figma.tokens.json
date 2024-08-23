@@ -1077,6 +1077,24 @@
       }
     }
   },
+  "common/text-align": {
+    "rhc": {
+      "text-align": {
+        "left": {
+          "value": "left",
+          "type": "textAligns"
+        },
+        "center": {
+          "value": "center",
+          "type": "textAligns"
+        },
+        "right": {
+          "value": "right",
+          "type": "textAligns"
+        }
+      }
+    }
+  },
   "common/focus": {
     "rhc": {
       "focus": {
@@ -4632,6 +4650,10 @@
           "font-size": {
             "value": "{rhc.font-size.heading.level-3}",
             "type": "fontSizes"
+          },
+          "text-align": {
+            "value": "{rhc.text-align.left}",
+            "type": "textAligns"
           }
         },
         "cell": {
