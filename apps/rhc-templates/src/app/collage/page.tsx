@@ -10,6 +10,13 @@ import {
   IconButton,
   Link,
   Paragraph,
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHeader,
+  TableHeaderCell,
 } from '@rijkshuisstijl-community/components-react';
 import { Avatar, Pagination } from '@amsterdam/design-system-react';
 import {
@@ -40,13 +47,6 @@ import {
   RadioButton,
   Separator,
   StatusBadge,
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableFooter,
-  TableHeader,
-  TableHeaderCell,
   TableRow,
   Textarea,
   Textbox,
@@ -294,7 +294,7 @@ export default function Collage() {
       <div className="unstarted">
         <StatusBadge status="warning">Label</StatusBadge>
       </div>
-      <div className="unstarted">
+      <div>
         <Table>
           <TableCaption>Caption van tabel</TableCaption>
           <TableHeader>
