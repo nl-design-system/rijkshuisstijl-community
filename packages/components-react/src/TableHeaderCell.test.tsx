@@ -10,17 +10,17 @@ describe('TableHeaderCell', () => {
 
   test('applies correct className based on scope', () => {
     const { container } = render(<TableHeaderCell scope="row">Header Cell</TableHeaderCell>);
-    expect(container.firstChild).toHaveClass('utrecht-table__header-cell-row');
+    expect(container.firstChild).toHaveClass('utrecht-table__header--cell-row');
   });
 
   test('applies correct alignment className when align="right"', () => {
     const { container } = render(<TableHeaderCell align="right">Header Cell</TableHeaderCell>);
-    expect(container.firstChild).toHaveClass('utrecht-table__header-cell-align-right');
+    expect(container.firstChild).toHaveClass('utrecht-table__header--cell-align-right');
   });
 
   test('applies correct alignment className when align="center"', () => {
     const { container } = render(<TableHeaderCell align="center">Header Cell</TableHeaderCell>);
-    expect(container.firstChild).toHaveClass('utrecht-table__header-cell-align-center');
+    expect(container.firstChild).toHaveClass('utrecht-table__header--cell-align-center');
   });
 
   test('renders sorting button with correct icon when withSorting is true and aria-sort is "ascending"', () => {
