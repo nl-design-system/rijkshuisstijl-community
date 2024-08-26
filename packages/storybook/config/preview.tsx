@@ -10,6 +10,10 @@ import { Preview } from '@storybook/react';
 import '@utrecht/component-library-css/dist/html.css';
 import '@utrecht/component-library-css/dist/index.css';
 import { UtrechtDocument } from '@utrecht/web-component-library-react';
+import '@fontsource/fira-sans/400.css';
+import '@fontsource/fira-sans/400-italic.css';
+import '@fontsource/fira-sans/700.css';
+import '@fontsource/fira-sans/700-italic.css';
 
 const preview: Preview = {
   decorators: [
