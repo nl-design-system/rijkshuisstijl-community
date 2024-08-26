@@ -68,7 +68,6 @@
     "release": "lerna version prerelease --conventional-prerelease --no-changelog --no-private --yes",
     "start": "node_modules/http-server/bin packages/storybook/dist/",
     "storybook": "npm-run-all --parallel watch:**",
-    "storybook:serve": "npm run --workspace packages/storybook build && npm run --workspace packages/storybook storybook:serve",
     "test": "npm run test-workspaces",
     "test-update": "npm-run-all --sequential clean lint build test",
     "test-workspaces": "lerna run --no-bail test",
