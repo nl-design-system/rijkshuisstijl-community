@@ -20,13 +20,15 @@ export const TableHeaderCell = forwardRef(
     return (
       <UtrechtTableHeaderCell
         ref={ref}
-        className={clsx({
-          'utrecht-table__header-cell-row': scope === 'row',
-          'utrecht-table__header-cell-align-right': align === 'right',
-          'utrecht-table__header-cell-align-center': align === 'center',
-          'utrecht-table__header-cell-align-left': align === 'left',
+        className={clsx(
+          {
+            'utrecht-table__header-cell-row': scope === 'row',
+            'utrecht-table__header-cell-align-right': align === 'right',
+            'utrecht-table__header-cell-align-center': align === 'center',
+            'utrecht-table__header-cell-align-left': align === 'left',
+          },
           className,
-        })}
+        )}
         {...restProps}
       >
         {withSorting ? (
@@ -68,9 +70,9 @@ const AscendingIcon = () => (
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
     className="tabler-icon tabler-icon-sort-ascending"
   >
     <path d="M4 6l7 0"></path>
@@ -89,9 +91,9 @@ const DescendingIcon = () => (
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
   >
     <path d="M4 6l9 0"></path>
     <path d="M4 12l7 0"></path>
@@ -108,9 +110,9 @@ const SortIcon = () => (
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
     className="tabler-icon tabler-icon-arrows-sort"
   >
     <path d="M3 9l4 -4l4 4m-4 -4v14"></path>

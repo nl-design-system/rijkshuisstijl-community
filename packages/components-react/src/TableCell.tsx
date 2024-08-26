@@ -17,11 +17,13 @@ export const TableCell = forwardRef(
     return (
       <UtrechtTableCell
         ref={ref}
-        className={clsx({
-          'utrecht-table__cell-align-right': align === 'right',
-          'utrecht-table__cell-align-center': align === 'center',
+        className={clsx(
+          {
+            'utrecht-table__cell-align-right': align === 'right',
+            'utrecht-table__cell-align-center': align === 'center',
+          },
           className,
-        })}
+        )}
         {...restProps}
       >
         {children}
