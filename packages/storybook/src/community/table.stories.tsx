@@ -1,4 +1,5 @@
 import {
+  Link,
   Table,
   TableBody,
   TableCaption,
@@ -278,5 +279,85 @@ export const SortingAscending: Story = {
         </TableFooter>
       </>
     ),
+  },
+};
+
+export const Alignment: Story = {
+  args: {
+    children: [
+      <TableCaption>Alignment</TableCaption>,
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell scope="col">Header</TableHeaderCell>
+          <TableHeaderCell scope="col">Header</TableHeaderCell>
+          <TableHeaderCell scope="col">Header</TableHeaderCell>
+          <TableHeaderCell scope="col" align={'right'}>
+            Header
+          </TableHeaderCell>
+        </TableRow>
+      </TableHeader>,
+      <TableBody>
+        <TableRow>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+          <TableCell align={'right'}>Label</TableCell>
+        </TableRow>{' '}
+        <TableRow>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+          <TableCell align={'right'}>Label</TableCell>
+        </TableRow>{' '}
+        <TableRow>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+          <TableCell align={'right'}>Label</TableCell>
+        </TableRow>
+      </TableBody>,
+    ],
+  },
+};
+
+export const Content: Story = {
+  args: {
+    children: [
+      <TableCaption>Content</TableCaption>,
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell scope="col">Header</TableHeaderCell>
+          <TableHeaderCell scope="col">Header</TableHeaderCell>
+          <TableHeaderCell scope="col">Header</TableHeaderCell>
+          <TableHeaderCell scope="col">Header</TableHeaderCell>
+        </TableRow>
+      </TableHeader>,
+      <TableBody>
+        <TableRow>
+          <TableCell>
+            <Link href={'#'}>Label</Link>
+          </TableCell>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+        </TableRow>{' '}
+        <TableRow>
+          <TableCell>
+            <Link href={'#'}>Label</Link>
+          </TableCell>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+        </TableRow>{' '}
+        <TableRow>
+          <TableCell>
+            <Link href={'#'}>Label</Link>
+          </TableCell>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+        </TableRow>
+      </TableBody>,
+    ],
   },
 };

@@ -22,7 +22,7 @@
     "build-storybook": "pnpm build",
     "chromatic": "chromatic",
     "clean": "rimraf dist/",
-    "storybook:serve": "npx http-server dist/"
+    "storybook": "storybook dev --config-dir config/ --port 6006"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.6.1",

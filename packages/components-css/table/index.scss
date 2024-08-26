@@ -21,23 +21,26 @@
         var(--utrecht-table-header-border-block-end-width, 0)
       );
     }
-    &-cell-button-align-right {
-      justify-content: var(--utrecht-table-cell-align-right, right) !important;
+    &--button {
+      &-align-right {
+        --_utrecht-table-cell-text-align: right;
+      }
+      &-align-center {
+        --_utrecht-table-cell-text-align: center;
+      }
+      &-align-left {
+        --_utrecht-table-cell-text-align: left;
+      }
     }
-    &-cell-button-align-center {
-      justify-content: var(--utrecht-table-cell-align-center, center) !important;
-    }
-    &-cell-button-align-left {
-      justify-content: var(--utrecht-table-cell-align-left, start) !important;
-    }
-    &-cell-row {
-      --utrecht-table-header-cell-font-weight: --utrecht-table-row-border-block-end-width;
 
-      border-block-end-color: var(--utrecht-table-row-border-block-end-color);
-      border-block-end-style: solid;
-      border-block-end-width: var(--utrecht-table-row-border-block-end-width, 2px);
-    }
-    &-cell {
+    &--cell {
+      &-row {
+        --utrecht-table-header-cell-font-weight: --utrecht-table-row-border-block-end-width;
+
+        border-block-end-color: var(--utrecht-table-row-border-block-end-color);
+        border-block-end-style: solid;
+        border-block-end-width: var(--utrecht-table-row-border-block-end-width, 2px);
+      }
       &-align-right {
         text-align: var(--utrecht-table-cell-align-right, right) !important;
       }

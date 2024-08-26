@@ -22,10 +22,10 @@ export const TableHeaderCell = forwardRef(
         ref={ref}
         className={clsx(
           {
-            'utrecht-table__header-cell-row': scope === 'row',
-            'utrecht-table__header-cell-align-right': align === 'right',
-            'utrecht-table__header-cell-align-center': align === 'center',
-            'utrecht-table__header-cell-align-left': align === 'left',
+            'utrecht-table__header--cell-row': scope === 'row',
+            'utrecht-table__header--cell-align-right': align === 'right',
+            'utrecht-table__header--cell-align-center': align === 'center',
+            'utrecht-table__header--cell-align-left': align === 'left',
           },
           className,
         )}
@@ -36,9 +36,9 @@ export const TableHeaderCell = forwardRef(
             type={'button'}
             appearance={'subtle-button'}
             className={clsx('utrecht-table__header-cell-button', {
-              'utrecht-table__header-cell-button-align-right': align === 'right',
-              'utrecht-table__header-cell-button-align-center': align === 'center',
-              'utrecht-table__header-cell-button-align-left': align === 'left',
+              'utrecht-table__header--button-align-right': align === 'right',
+              'utrecht-table__header--button-align-center': align === 'center',
+              'utrecht-table__header--button-align-left': align === 'left',
             })}
           >
             {children}
