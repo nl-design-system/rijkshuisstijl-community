@@ -803,28 +803,6 @@
           "type": "lineHeights"
         }
       }
-    },
-    "utrecht/document": {
-      "background-color": {
-        "value": "{rhc.color.wit}",
-        "type": "color"
-      },
-      "color": {
-        "value": "{rhc.color.zwart}",
-        "type": "color"
-      },
-      "font-family": {
-        "value": "{rhc.font-family.primary}",
-        "type": "fontFamilies"
-      },
-      "font-size": {
-        "value": "{rhc.font-size.paragraph.default}",
-        "type": "other"
-      },
-      "line-height": {
-        "value": "1.4",
-        "type": "lineHeights"
-      }
     }
   },
   "brand/size": {
@@ -1165,6 +1143,32 @@
             "borderRadiusBottomLeft": "{rhc.border-radius.keep}"
           },
           "type": "composition"
+        }
+      }
+    }
+  },
+  "utrecht/document": {
+    "utrecht": {
+      "document": {
+        "background-color": {
+          "value": "{rhc.color.wit}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{rhc.color.zwart}",
+          "type": "color"
+        },
+        "font-family": {
+          "value": "{rhc.font-family.primary}",
+          "type": "fontFamilies"
+        },
+        "font-size": {
+          "value": "{rhc.font-size.paragraph.default}",
+          "type": "other"
+        },
+        "line-height": {
+          "value": "1.4",
+          "type": "lineHeights"
         }
       }
     }
@@ -5271,6 +5275,7 @@
       "common/focus",
       "common/border",
       "common/keep",
+      "utrecht/document",
       "components/accordion",
       "components/alert",
       "components/avatar",
