@@ -2,7 +2,12 @@
 
 import {
   ButtonLink,
+  Figure,
+  FigureCaption,
   Icon,
+  NavBar,
+  NavList,
+  NavListLinkButton,
   OrderedList,
   OrderedListItem,
   PageContent,
@@ -15,24 +20,19 @@ import {
   TableHeader,
   TableHeaderCell,
   TableRow,
-  UnorderedList,
   UnorderedListItem,
-  NavBar,
-  NavList,
-  NavListLinkButton,
-  Image,
-  Figure,
-  FigureCaption,
 } from '@utrecht/component-library-react/dist/css-module';
 import {
   ActionGroup,
   Blockquote,
   Button,
   Heading,
+  Image,
   Link,
   Logo,
   Paragraph,
   Separator,
+  UnorderedList,
 } from '@rijkshuisstijl-community/components-react';
 import { HeadingGroup } from '@utrecht/component-library-react';
 

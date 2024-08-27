@@ -2,17 +2,20 @@
 
 import {
   AccordionProvider,
+  Alert,
   Blockquote,
   BreadcrumbNav,
   BreadcrumbNavLink,
   Button,
   Heading,
   IconButton,
+  Image,
   Link,
   LinkList,
   LinkListLink,
   Paragraph,
   Separator,
+  UnorderedList,
 } from '@rijkshuisstijl-community/components-react';
 import { Avatar, Pagination } from '@amsterdam/design-system-react';
 import {
@@ -24,7 +27,6 @@ import {
   IconInfoCircle,
 } from '@tabler/icons-react/dist/esm/tabler-icons-react';
 import {
-  Alert,
   BadgeCounter,
   Checkbox,
   DataList,
@@ -35,7 +37,6 @@ import {
   FormField,
   FormFieldErrorMessage,
   FormLabel,
-  Image,
   OrderedList,
   OrderedListItem,
   RadioButton,
@@ -50,7 +51,6 @@ import {
   TableRow,
   Textarea,
   Textbox,
-  UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
 
