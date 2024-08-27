@@ -4763,6 +4763,50 @@
       }
     }
   },
+  "components/footer": {
+    "utrecht": {
+      "page": {
+        "footer" : {
+          "background-color" :{
+            "value": "{rhc.color.lintblauw.500}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{rhc.color.wit}",
+            "type": "color"
+          },
+          "padding-block-start": {
+            "value": "{rhc.space.600}",
+            "type": "spacing"
+          },
+          "padding-block-end": {
+            "value": "{rhc.space.600}",
+            "type": "spacing"
+          },
+          "padding-inline-start": {
+            "value": "80px",
+            "type": "spacing"
+          },
+          "padding-inline-end": {
+            "value": "80px",
+            "type": "spacing"
+          },
+          "gap" :{
+            "value": "{rhc.space.300}",
+            "type": "spacing"
+          },
+          "column" : {
+            "title" : {
+              "margin-block-end": {
+                "value": "{rhc.space.150}",
+                "type": "spacing"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "components/task-list": {
     "todo": {
       "task-list": {
@@ -5275,6 +5319,7 @@
       "components/checkbox-group",
       "components/counter-badge",
       "components/drawer",
+      "components/footer",
       "components/form-field",
       "components/form-field-checkbox-option",
       "components/form-field-description",
