@@ -1182,7 +1182,7 @@
         },
         "font-size": {
           "value": "{rhc.font-size.paragraph.default}",
-          "type": "other"
+          "type": "fontSizes"
         },
         "line-height": {
           "value": "1.4",
@@ -3266,8 +3266,14 @@
   "components/logo": {
     "rhc": {
       "logo": {
-        "color": "{rhc.color.lintblauw.500}",
-        "font-weight": "{rhc.font-weight.bold}"
+        "color": {
+          "value": "{rhc.color.lintblauw.500}",
+          "type": "other"
+        },
+        "font-weight": {
+          "value": "{rhc.font-weight.bold}",
+          "type": "other"
+        }
       }
     }
   },
