@@ -30,7 +30,6 @@ const init = async ({ input, output }) => {
     'components/skip-link',
     'components/status-badge',
     'components/summary-list',
-    'components/table',
     'components/task-list',
     'components/textarea',
     'components/toolbar-button',

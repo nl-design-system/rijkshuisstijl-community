@@ -12,14 +12,6 @@ import {
   OrderedListItem,
   PageContent,
   PageHeader,
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableFooter,
-  TableHeader,
-  TableHeaderCell,
-  TableRow,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
 import {
@@ -32,6 +24,14 @@ import {
   Logo,
   Paragraph,
   Separator,
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHeader,
+  TableHeaderCell,
+  TableRow,
   UnorderedList,
 } from '@rijkshuisstijl-community/components-react';
 import { HeadingGroup } from '@utrecht/component-library-react';
@@ -102,7 +102,7 @@ export default function Page() {
         <Link external={true} externalLabel="example external label" href="example.com">
           Dit is een externe link
         </Link>
-        <div className="unstarted">
+        <div>
           <Table>
             <TableCaption>Caption van tabel</TableCaption>
             <TableHeader>
