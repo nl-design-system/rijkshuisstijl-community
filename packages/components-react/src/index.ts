@@ -39,4 +39,6 @@ export { Link, type LinkProps } from './Link';
 export { Logo, type LogoProps } from './Logo';
 export { Paragraph, type ParagraphProps } from './Paragraph';
 export { Separator, type SeparatorProps } from './Separator';
+export { TableCell, type TableCellProps } from './TableCell';
+export { TableHeaderCell, type TableHeaderCellProps } from './TableHeaderCell';
 export { UnorderedList, type UnorderedListProps } from './UnoderedList';
