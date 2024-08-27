@@ -8,8 +8,11 @@ import {
   Button,
   Heading,
   Link,
+  LinkList,
+  LinkListLink,
   Logo,
   Paragraph,
+  UnorderedList,
 } from '@rijkshuisstijl-community/components-react';
 import { FormLabel } from '@utrecht/component-library-react';
 import {
@@ -17,15 +20,12 @@ import {
   Fieldset,
   FieldsetLegend,
   FormField,
-  LinkList,
-  LinkListLink,
   PageContent,
   PageFooter,
   PageHeader,
   RadioButton,
   Textarea,
   Textbox,
-  UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
