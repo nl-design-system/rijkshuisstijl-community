@@ -29,3 +29,4 @@ export { BreadcrumbNavLink } from './BreadcrumbNavLink';
 export { Alert } from './Alert';
 export type { LogoProps } from './Logo';
 export { UnorderedList } from './UnoderedList';
+export { Footer } from './Footer';
