@@ -1,0 +1,1 @@
+# Rijkshuisstijl Community Footer component
