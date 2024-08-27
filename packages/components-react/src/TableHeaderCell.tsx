@@ -23,12 +23,12 @@ export const TableHeaderCell = forwardRef(
         className={clsx(
           {
             'utrecht-table__header--cell-row': scope === 'row',
-            'utrecht-table__header--cell-align-right': align === 'right',
-            'utrecht-table__header--cell-align-center': align === 'center',
-            'utrecht-table__header--cell-align-left': align === 'left',
           },
           className,
         )}
+        style={{
+          textAlign: align,
+        }}
         {...restProps}
       >
         {withSorting ? (
@@ -36,9 +36,9 @@ export const TableHeaderCell = forwardRef(
             type={'button'}
             appearance={'subtle-button'}
             className={clsx('utrecht-table__header-cell-button', {
-              'utrecht-table__header--button-align-right': align === 'right',
-              'utrecht-table__header--button-align-center': align === 'center',
-              'utrecht-table__header--button-align-left': align === 'left',
+              'utrecht-table__header--align-right': align === 'right',
+              'utrecht-table__header--align-center': align === 'center',
+              'utrecht-table__header--align-left': align === 'left',
             })}
           >
             {children}
