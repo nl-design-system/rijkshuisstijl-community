@@ -1,6 +1,15 @@
 'use client';
 
-import { AccordionProvider, Button, Heading, Link, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
+import {
+  AccordionProvider,
+  Button,
+  Heading,
+  Link,
+  Logo,
+  Paragraph,
+  LinkList,
+  LinkListLink,
+} from '@rijkshuisstijl-community/components-react';
 import { FormLabel } from '@utrecht/component-library-react';
 import {
   BreadcrumbNav,
@@ -18,7 +27,6 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
-import { LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
 import { DateInput, FileInput } from '@amsterdam/design-system-react';
 
 export default function Form() {
