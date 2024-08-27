@@ -2,12 +2,16 @@
 
 import {
   ButtonLink,
+  Figure,
+  FigureCaption,
   Icon,
+  NavBar,
+  NavList,
+  NavListLinkButton,
   OrderedList,
   OrderedListItem,
   PageContent,
   PageHeader,
-  Separator,
   Table,
   TableBody,
   TableCaption,
@@ -16,23 +20,19 @@ import {
   TableHeader,
   TableHeaderCell,
   TableRow,
-  UnorderedList,
   UnorderedListItem,
-  NavBar,
-  NavList,
-  NavListLinkButton,
-  Image,
-  Figure,
-  FigureCaption,
 } from '@utrecht/component-library-react/dist/css-module';
 import {
   ActionGroup,
   Blockquote,
   Button,
   Heading,
+  Image,
   Link,
   Logo,
   Paragraph,
+  Separator,
+  UnorderedList,
 } from '@rijkshuisstijl-community/components-react';
 import { HeadingGroup } from '@utrecht/component-library-react';
 
@@ -142,9 +142,7 @@ export default function Page() {
         </Blockquote>
         <Heading level={5}>Dit is een H5</Heading>
         <Paragraph>Dit is een paragraaf.</Paragraph>
-        <div className="unstarted">
-          <Separator></Separator>
-        </div>
+        <Separator></Separator>
         <Heading level={5} appearance="utrecht-heading-6">
           Dit is een H5 met H6 appearance
         </Heading>

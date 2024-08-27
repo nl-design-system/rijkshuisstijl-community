@@ -1,16 +1,22 @@
 'use client';
 
-import { BreadcrumbNav, BreadcrumbNavLink, Heading, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
+import {
+  BreadcrumbNav,
+  BreadcrumbNavLink,
+  Heading,
+  Image,
+  Logo,
+  Paragraph,
+  Separator,
+} from '@rijkshuisstijl-community/components-react';
 import {
   Figure,
   FigureCaption,
-  Image,
   LinkList,
   LinkListLink,
   PageContent,
   PageFooter,
   PageHeader,
-  Separator,
 } from '@utrecht/component-library-react/dist/css-module';
 
 export default function Details() {
@@ -55,9 +61,7 @@ export default function Details() {
           Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de combinatie van werk, privé en
           zorgtaken gemakkelijker maken.
         </Paragraph>
-        <div className="unstarted">
-          <Separator></Separator>
-        </div>
+        <Separator></Separator>
         <Heading level={1}>Vraag en antwoord</Heading>
         <div className="unstarted">
           <LinkList>

@@ -1,17 +1,16 @@
-import { UnorderedList as UtrechtUnorderedList } from '@utrecht/component-library-react';
-import { UnorderedListProps } from '@utrecht/component-library-react/dist/css-module';
+import {
+  UnorderedList as UtrechtUnorderedList,
+  UnorderedListProps as UtrechtUnorederedListProps,
+} from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
-interface RhcUnorderedListProps extends UnorderedListProps {
+export interface UnorderedListProps extends UtrechtUnorederedListProps {
   nested?: boolean;
 }
 
 export const UnorderedList = forwardRef(
-  (
-    { children, nested, ...restProps }: PropsWithChildren<RhcUnorderedListProps>,
-    ref: ForwardedRef<HTMLUListElement>,
-  ) => {
+  ({ children, nested, ...restProps }: PropsWithChildren<UnorderedListProps>, ref: ForwardedRef<HTMLUListElement>) => {
     return (
       <UtrechtUnorderedList
         ref={ref}

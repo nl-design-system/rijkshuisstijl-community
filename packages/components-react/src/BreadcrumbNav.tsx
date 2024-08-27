@@ -1,12 +1,18 @@
 import {
-  Icon,
+  BreadcrumbNav,
+  type BreadcrumbNavProps,
+  BreadcrumbNavSeparator,
+  type BreadcrumbNavSeparatorProps,
   BreadcrumbNavLink as UtrechtBreadcrumbNavLink,
   type BreadcrumbNavLinkProps as UtrechtBreadcrumbNavLinkProps,
-} from '@utrecht/component-library-react/dist/css-module';
+} from '@utrecht/component-library-react/';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
+import { Icon } from './';
 
-interface BreadcrumbNavLinkProps extends UtrechtBreadcrumbNavLinkProps {
+export { BreadcrumbNav, type BreadcrumbNavProps, BreadcrumbNavSeparator, type BreadcrumbNavSeparatorProps };
+
+export interface BreadcrumbNavLinkProps extends UtrechtBreadcrumbNavLinkProps {
   arrow?: boolean;
   active?: boolean;
 }
@@ -42,6 +48,7 @@ export const BreadcrumbNavLink = forwardRef(
 );
 
 BreadcrumbNavLink.displayName = 'BreadcrumbNavLink';
+
 const Arrow = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
