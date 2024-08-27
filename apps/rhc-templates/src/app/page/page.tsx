@@ -3,8 +3,6 @@
 import {
   ButtonLink,
   Icon,
-  LinkList,
-  LinkListLink,
   OrderedList,
   OrderedListItem,
   PageContent,
@@ -98,25 +96,6 @@ export default function Page() {
             <UnorderedListItem>Unordered list item.</UnorderedListItem>
             <UnorderedListItem>Unordered list item.</UnorderedListItem>
           </UnorderedList>
-        </div>
-        <Paragraph>Opsomming link list</Paragraph>
-        <div className="unstarted">
-          <LinkList
-            icon={() => (
-              <Icon>
-                <svg viewBox="0 0 1000 1000">
-                  <rect fill="currentColor" x="0" y="0" width="1000" height="1000" />
-                </svg>
-              </Icon>
-            )}
-            links={[{ href: 'examle.com' }, { href: 'github.com' }]}
-          >
-            <LinkListLink href="/">Dit is een normale link</LinkListLink>
-            <LinkListLink href="/">Dit is een normale link</LinkListLink>
-            <LinkListLink href="example.com" external={true}>
-              Dit is een externe link
-            </LinkListLink>
-          </LinkList>
         </div>
         <Heading level={3}>Dit is een H3</Heading>
         <Paragraph>Dit is een paragraaf.</Paragraph>

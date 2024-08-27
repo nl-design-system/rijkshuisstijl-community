@@ -8,6 +8,8 @@ import {
   Button,
   Heading,
   Link,
+  LinkList,
+  LinkListLink,
   Logo,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
@@ -17,8 +19,6 @@ import {
   Fieldset,
   FieldsetLegend,
   FormField,
-  LinkList,
-  LinkListLink,
   PageContent,
   PageFooter,
   PageHeader,
