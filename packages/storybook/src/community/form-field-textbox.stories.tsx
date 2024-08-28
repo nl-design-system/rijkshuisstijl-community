@@ -14,7 +14,7 @@ const meta = {
       control: 'boolean',
       table: {
         category: 'API',
-        defaultValue: { summary: false },
+        defaultValue: { summary: 'false' },
       },
     },
     inputRequired: {
@@ -22,7 +22,7 @@ const meta = {
       control: 'boolean',
       table: {
         category: 'API',
-        defaultValue: { summary: false },
+        defaultValue: { summary: 'false' },
       },
     },
     disabled: {
@@ -30,7 +30,7 @@ const meta = {
       control: 'boolean',
       table: {
         category: 'API',
-        defaultValue: { summary: false },
+        defaultValue: { summary: 'false' },
       },
     },
     readOnly: {
@@ -38,7 +38,7 @@ const meta = {
       control: 'boolean',
       table: {
         category: 'API',
-        defaultValue: { summary: false },
+        defaultValue: { summary: 'false' },
       },
     },
     invalid: {
@@ -46,7 +46,7 @@ const meta = {
       control: 'boolean',
       table: {
         category: 'API',
-        defaultValue: { summary: false },
+        defaultValue: { summary: 'false' },
       },
     },
     name: {
@@ -83,7 +83,7 @@ const meta = {
     },
     label: {
       name: 'label',
-      type: { name: 'text', required: true },
+      type: { name: 'string', required: true },
       table: {
         defaultValue: { summary: '' },
         category: 'API',
@@ -92,7 +92,7 @@ const meta = {
     errorMessage: {
       name: 'errorMessage',
       description: 'Description for invalid input',
-      type: { name: 'text', required: false },
+      type: { name: 'string', required: false },
       table: {
         defaultValue: { summary: '' },
         category: 'API',
@@ -100,7 +100,7 @@ const meta = {
     },
     description: {
       description: 'Description',
-      type: { name: 'text', required: false },
+      type: { name: 'string', required: false },
       table: {
         category: 'API',
         defaultValue: { summary: '' },

@@ -7,7 +7,6 @@ const meta = {
   title: 'Rijkshuisstijl/Breadcrumb navigation',
   id: 'rijkshuisstijl-breadcrumb-nav',
   component: BreadcrumbNav,
-
   argTypes: {},
   parameters: {
     docs: {
