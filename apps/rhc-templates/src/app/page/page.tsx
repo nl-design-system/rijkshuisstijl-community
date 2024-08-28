@@ -2,28 +2,27 @@
 
 import {
   ButtonLink,
-  Figure,
-  FigureCaption,
   Icon,
   NavBar,
   NavList,
   NavListLinkButton,
-  OrderedList,
-  OrderedListItem,
   PageContent,
   PageHeader,
-  UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
 import {
   ActionGroup,
   Blockquote,
   Button,
+  Figure,
+  FigureCaption,
   Heading,
   Image,
   Link,
   Logo,
   Paragraph,
   Separator,
+  OrderedList,
+  OrderedListItem,
   Table,
   TableBody,
   TableCaption,
@@ -33,6 +32,7 @@ import {
   TableHeaderCell,
   TableRow,
   UnorderedList,
+  UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
 import { HeadingGroup } from '@utrecht/component-library-react';
 
@@ -67,7 +67,7 @@ export default function Page() {
             <Paragraph>Dit is een sub-titel van de H1</Paragraph>
           </HeadingGroup>
         </div>
-        <Figure className="unstarted">
+        <Figure>
           <Image
             alt="Multicolored tulip field"
             width="640"
@@ -82,21 +82,17 @@ export default function Page() {
         <Heading level={2}>Dit is een H2</Heading>
         <Paragraph>Dit is een paragraaf.</Paragraph>
         <Paragraph>Opsomming ordered list</Paragraph>
-        <div className="unstarted">
-          <OrderedList>
-            <OrderedListItem>Ordered list item.</OrderedListItem>
-            <OrderedListItem>Ordered list item.</OrderedListItem>
-            <OrderedListItem>Ordered list item.</OrderedListItem>
-          </OrderedList>
-        </div>
+        <OrderedList>
+          <OrderedListItem>Ordered list item.</OrderedListItem>
+          <OrderedListItem>Ordered list item.</OrderedListItem>
+          <OrderedListItem>Ordered list item.</OrderedListItem>
+        </OrderedList>
         <Paragraph>Opsomming unordered list</Paragraph>
-        <div className="unstarted">
-          <UnorderedList>
-            <UnorderedListItem>Unordered list item.</UnorderedListItem>
-            <UnorderedListItem>Unordered list item.</UnorderedListItem>
-            <UnorderedListItem>Unordered list item.</UnorderedListItem>
-          </UnorderedList>
-        </div>
+        <UnorderedList>
+          <UnorderedListItem>Unordered list item.</UnorderedListItem>
+          <UnorderedListItem>Unordered list item.</UnorderedListItem>
+          <UnorderedListItem>Unordered list item.</UnorderedListItem>
+        </UnorderedList>
         <Heading level={3}>Dit is een H3</Heading>
         <Paragraph>Dit is een paragraaf.</Paragraph>
         <Link external={true} externalLabel="example external label" href="example.com">
