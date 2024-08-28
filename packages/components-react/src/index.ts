@@ -13,8 +13,17 @@ export {
   type AccordionSectionProps,
   type AccordionSectionProviderProps,
 } from './Accordion';
-export { Link } from './Link';
-export { ActionGroup } from './ActionGroup';
+export { ActionGroup, type ActionGroupProps } from './ActionGroup';
+export { Alert, type AlertProps } from './Alert';
+export { Blockquote, type BlockquoteProps } from './Blockquote';
+export {
+  BreadcrumbNav,
+  type BreadcrumbNavProps,
+  BreadcrumbNavLink,
+  type BreadcrumbNavLinkProps,
+  BreadcrumbNavSeparator,
+  type BreadcrumbNavSeparatorProps,
+} from './BreadcrumbNav';
 export {
   Button,
   type ButtonProps,
@@ -24,9 +33,13 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from './Button';
-export { Logo } from './Logo';
-export { BreadcrumbNavLink } from './BreadcrumbNavLink';
-export { Alert } from './Alert';
-export type { LogoProps } from './Logo';
-export { UnorderedList } from './UnoderedList';
 export { Footer } from './Footer';
+export { Heading, type HeadingProps } from './Heading';
+export { Image, type ImageProps } from './Image';
+export { Link, type LinkProps } from './Link';
+export { Logo, type LogoProps } from './Logo';
+export { Paragraph, type ParagraphProps } from './Paragraph';
+export { Separator, type SeparatorProps } from './Separator';
+export { TableCell, type TableCellProps } from './TableCell';
+export { TableHeaderCell, type TableHeaderCellProps } from './TableHeaderCell';
+export { UnorderedList, type UnorderedListProps } from './UnoderedList';

@@ -18,16 +18,13 @@ const IconExternalLink = () => (
   </svg>
 );
 
-interface RhcLinkProps extends UtrechtLinkProps {
+export interface LinkProps extends UtrechtLinkProps {
   external?: boolean;
   externalLabel?: string;
 }
 
 export const Link = forwardRef(
-  (
-    { children, className, external, externalLabel, ...restProps }: RhcLinkProps,
-    ref: ForwardedRef<HTMLAnchorElement>,
-  ) => (
+  ({ children, className, external, externalLabel, ...restProps }: LinkProps, ref: ForwardedRef<HTMLAnchorElement>) => (
     <UtrechtLink {...restProps} external={external} className={clsx('rhc-link', className)} ref={ref}>
       {children}
       {external && (

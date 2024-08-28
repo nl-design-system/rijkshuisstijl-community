@@ -1075,6 +1075,24 @@
       }
     }
   },
+  "common/text-align": {
+    "rhc": {
+      "text-align": {
+        "left": {
+          "value": "left",
+          "type": "textAligns"
+        },
+        "center": {
+          "value": "center",
+          "type": "textAligns"
+        },
+        "right": {
+          "value": "right",
+          "type": "textAligns"
+        }
+      }
+    }
+  },
   "common/focus": {
     "rhc": {
       "focus": {
@@ -3205,6 +3223,14 @@
       }
     }
   },
+  "components/logo": {
+    "rhc": {
+      "logo": {
+        "color": "{rhc.color.lintblauw.500}",
+        "font-weight": "{rhc.font-weight.bold}"
+      }
+    }
+  },
   "components/modal-dialog": {
     "todo": {
       "modal-dialog": {
@@ -4118,11 +4144,11 @@
           "value": "{rhc.border-width.m}",
           "type": "sizing"
         },
-        "padding-block-end": {
+        "margin-block-end": {
           "value": "{rhc.space.150}",
           "type": "spacing"
         },
-        "padding-block-start": {
+        "margin-block-start": {
           "value": "{rhc.space.150}",
           "type": "spacing"
         }
@@ -4630,6 +4656,10 @@
           "font-size": {
             "value": "{rhc.font-size.heading.level-3}",
             "type": "fontSizes"
+          },
+          "text-align": {
+            "value": "{rhc.text-align.left}",
+            "type": "textAligns"
           }
         },
         "cell": {
@@ -5331,6 +5361,7 @@
       "components/icon-only-button",
       "components/link",
       "components/link-list",
+      "components/logo",
       "components/modal-dialog",
       "components/ordered-list",
       "components/pagination",

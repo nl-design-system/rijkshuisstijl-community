@@ -2,16 +2,28 @@
 
 import {
   AccordionProvider,
+  Alert,
   Blockquote,
   BreadcrumbNav,
   BreadcrumbNavLink,
   Button,
   Heading,
   IconButton,
+  Image,
   Link,
   LinkList,
   LinkListLink,
   Paragraph,
+  Separator,
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHeader,
+  TableHeaderCell,
+  TableRow,
+  UnorderedList,
 } from '@rijkshuisstijl-community/components-react';
 import { Avatar, Pagination } from '@amsterdam/design-system-react';
 import {
@@ -23,7 +35,6 @@ import {
   IconInfoCircle,
 } from '@tabler/icons-react/dist/esm/tabler-icons-react';
 import {
-  Alert,
   BadgeCounter,
   Checkbox,
   DataList,
@@ -34,23 +45,12 @@ import {
   FormField,
   FormFieldErrorMessage,
   FormLabel,
-  Image,
   OrderedList,
   OrderedListItem,
   RadioButton,
-  Separator,
   StatusBadge,
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableFooter,
-  TableHeader,
-  TableHeaderCell,
-  TableRow,
   Textarea,
   Textbox,
-  UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
 
@@ -114,9 +114,7 @@ export default function Collage() {
         In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
       </Paragraph>
       <Blockquote attribution="— Pippi Langkous">Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan</Blockquote>
-      <div className="unstarted">
-        <Separator></Separator>
-      </div>
+      <Separator></Separator>
       <Link href="#">
         {`Hello, I'm a link `}
         <IconArrowRight />
@@ -292,7 +290,7 @@ export default function Collage() {
       <div className="unstarted">
         <StatusBadge status="warning">Label</StatusBadge>
       </div>
-      <div className="unstarted">
+      <div>
         <Table>
           <TableCaption>Caption van tabel</TableCaption>
           <TableHeader>
