@@ -33,6 +33,7 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from './Button';
+export { Footer } from './Footer';
 export { Heading, type HeadingProps } from './Heading';
 export { Image, type ImageProps } from './Image';
 export { Link, type LinkProps } from './Link';
