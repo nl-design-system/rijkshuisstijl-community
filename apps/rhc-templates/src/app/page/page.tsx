@@ -8,8 +8,6 @@ import {
   NavBar,
   NavList,
   NavListLinkButton,
-  OrderedList,
-  OrderedListItem,
   PageContent,
   PageHeader,
   UnorderedListItem,
@@ -24,6 +22,8 @@ import {
   Logo,
   Paragraph,
   Separator,
+  OrderedList,
+  OrderedListItem,
   Table,
   TableBody,
   TableCaption,
@@ -90,13 +90,11 @@ export default function Page() {
           </OrderedList>
         </div>
         <Paragraph>Opsomming unordered list</Paragraph>
-        <div className="unstarted">
-          <UnorderedList>
-            <UnorderedListItem>Unordered list item.</UnorderedListItem>
-            <UnorderedListItem>Unordered list item.</UnorderedListItem>
-            <UnorderedListItem>Unordered list item.</UnorderedListItem>
-          </UnorderedList>
-        </div>
+        <UnorderedList>
+          <UnorderedListItem>Unordered list item.</UnorderedListItem>
+          <UnorderedListItem>Unordered list item.</UnorderedListItem>
+          <UnorderedListItem>Unordered list item.</UnorderedListItem>
+        </UnorderedList>
         <Heading level={3}>Dit is een H3</Heading>
         <Paragraph>Dit is een paragraaf.</Paragraph>
         <Link external={true} externalLabel="example external label" href="example.com">
