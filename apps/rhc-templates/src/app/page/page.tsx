@@ -2,8 +2,6 @@
 
 import {
   ButtonLink,
-  Figure,
-  FigureCaption,
   Icon,
   NavBar,
   NavList,
@@ -15,6 +13,8 @@ import {
   ActionGroup,
   Blockquote,
   Button,
+  Figure,
+  FigureCaption,
   Heading,
   Image,
   Link,
@@ -67,7 +67,7 @@ export default function Page() {
             <Paragraph>Dit is een sub-titel van de H1</Paragraph>
           </HeadingGroup>
         </div>
-        <Figure className="unstarted">
+        <Figure>
           <Image
             alt="Multicolored tulip field"
             width="640"
