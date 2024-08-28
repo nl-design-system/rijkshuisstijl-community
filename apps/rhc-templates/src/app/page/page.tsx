@@ -10,7 +10,6 @@ import {
   NavListLinkButton,
   PageContent,
   PageHeader,
-  UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
 import {
   ActionGroup,
@@ -33,6 +32,7 @@ import {
   TableHeaderCell,
   TableRow,
   UnorderedList,
+  UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
 import { HeadingGroup } from '@utrecht/component-library-react';
 
@@ -82,13 +82,11 @@ export default function Page() {
         <Heading level={2}>Dit is een H2</Heading>
         <Paragraph>Dit is een paragraaf.</Paragraph>
         <Paragraph>Opsomming ordered list</Paragraph>
-        <div className="unstarted">
-          <OrderedList>
-            <OrderedListItem>Ordered list item.</OrderedListItem>
-            <OrderedListItem>Ordered list item.</OrderedListItem>
-            <OrderedListItem>Ordered list item.</OrderedListItem>
-          </OrderedList>
-        </div>
+        <OrderedList>
+          <OrderedListItem>Ordered list item.</OrderedListItem>
+          <OrderedListItem>Ordered list item.</OrderedListItem>
+          <OrderedListItem>Ordered list item.</OrderedListItem>
+        </OrderedList>
         <Paragraph>Opsomming unordered list</Paragraph>
         <UnorderedList>
           <UnorderedListItem>Unordered list item.</UnorderedListItem>
