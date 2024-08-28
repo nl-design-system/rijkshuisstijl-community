@@ -1,4 +1,3 @@
-import '@rijkshuisstijl-community/components-css/index.scss';
 import {
   Button,
   type ButtonProps,

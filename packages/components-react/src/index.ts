@@ -33,6 +33,8 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from './Button';
+export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFieldErrorMessage';
+export { FormFieldTextbox } from './FormFieldTextbox';
 export { Footer } from './Footer';
 export { Heading, type HeadingProps } from './Heading';
 export { Image, type ImageProps } from './Image';

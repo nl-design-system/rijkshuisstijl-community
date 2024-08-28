@@ -2787,6 +2787,14 @@
   "components/form-field": {
     "utrecht": {
       "form-field": {
+        "margin-block-start": {
+          "value": "{rhc.space.100}",
+          "type": "spacing"
+        },
+        "margin-block-end": {
+          "value": "{rhc.space.100}",
+          "type": "spacing"
+        },
         "invalid": {
           "border-inline-start-color": {
             "value": "{rhc.color.feedback.error.default}",
@@ -2799,6 +2807,13 @@
           "padding-inline-start": {
             "value": "{rhc.space.0}",
             "type": "spacing"
+          }
+        },
+        "label": {
+          "margin-block-end": {
+            "value": "{rhc.space.100}",
+            "type": "spacing"
+
           }
         }
       }
@@ -2832,7 +2847,18 @@
         "line-height": {
           "value": "{rhc.line-height.md}",
           "type": "lineHeights"
-        }
+        },
+        "margin-block-end": {
+          "value": "{rhc.space.100}",
+          "type": "spacing"
+        },
+        "padding-block-start": {},
+        "padding-block-end": {
+          "value": "{rhc.space.100}",
+          "type": "spacing"
+        },
+        "padding-inline-start": {},
+        "padding-inline-end": {}
       }
     }
   },
@@ -2864,12 +2890,56 @@
         "font-weight": {
           "value": "{rhc.font-weight.regular}",
           "type": "fontWeights"
+        },
+        "margin-block-start": {},
+        "margin-block-end": {
+          "value": "{rhc.space.100}",
+          "type": "spacing"
+        },
+        "padding-block-start": {},
+        "padding-block-end": {
+          "value": "{rhc.space.100}",
+          "type": "spacing"
+        },
+        "padding-inline-start": {},
+        "padding-inline-end": {}
+      }
+    }
+  },
+  "components/form-label": {
+    "utrecht": {
+      "form-label": {
+        "color": {
+          "value": "{rhc.color.foreground.lint}",
+          "type": "color"
+        },
+        "font-size": {
+          "value": "{rhc.font-size.paragraph.default}",
+          "type": "fontSizes"
+        },
+        "font-weight": {
+          "value": "{rhc.font-weight.bold}",
+          "type": "fontWeights"
+        },
+        "checkbox": {
+          "color": {},
+          "font-weight": {}
+        },
+        "checked": {
+          "font-weight": {}
+        },
+        "disabled": {
+          "color": {}
+        },
+        "radio": {
+          "color": {},
+          "font-weight": {}
         }
       }
     }
   },
   "components/form-field-label": {
-    "todo": {
+    "utrecht": {
       "form-field-label": {
         "color": {
           "value": "{rhc.color.foreground.lint}",
