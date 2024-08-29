@@ -38,7 +38,7 @@ import {
 export default function Page() {
   return (
     <main className="page">
-      <div className="unfinished header">
+      <div className="header">
         <PageHeader>
           <Logo organisation="Voorbeeld organisatie" subtitle="Voorbeeld sub-title"></Logo>
         </PageHeader>
