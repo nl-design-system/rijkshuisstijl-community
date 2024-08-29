@@ -34,7 +34,6 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
-import { HeadingGroup } from '@utrecht/component-library-react';
 
 export default function Page() {
   return (
@@ -61,12 +60,8 @@ export default function Page() {
         </NavBar>
       </div>
       <PageContent className="container page-content">
-        <div className="unstarted">
-          <HeadingGroup>
-            <Heading level={1}>Titel van de pagina (H1)</Heading>
-            <Paragraph>Dit is een sub-titel van de H1</Paragraph>
-          </HeadingGroup>
-        </div>
+        <Heading level={1}>Titel van de pagina (H1)</Heading>
+        <Paragraph lead>Dit is een sub-titel van de H1</Paragraph>
         <Figure>
           <Image
             alt="Multicolored tulip field"
