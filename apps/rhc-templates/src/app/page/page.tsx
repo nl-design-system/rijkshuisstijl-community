@@ -60,8 +60,8 @@ export default function Page() {
         </NavBar>
       </div>
       <PageContent className="container page-content">
-        <Heading level={1}>Titel van de pagina (H1)</Heading>
-        <Paragraph lead>Dit is een sub-titel van de H1</Paragraph>
+        <Heading level={1}>Titel van de pagina</Heading>
+        <Paragraph lead>Hier zou een korte introductie van de pagina kunnen staan.</Paragraph>
         <Figure>
           <Image
             alt="Multicolored tulip field"
@@ -71,9 +71,6 @@ export default function Page() {
           ></Image>
           <FigureCaption>Bijschrift (figcaption) van een afbeelding)</FigureCaption>
         </Figure>
-        <Button type="submit" appearance="primary-action-button">
-          Primary action button
-        </Button>
         <Heading level={2}>Dit is een H2</Heading>
         <Paragraph>Dit is een paragraaf.</Paragraph>
         <Paragraph>Opsomming ordered list</Paragraph>
@@ -91,7 +88,7 @@ export default function Page() {
         <Heading level={3}>Dit is een H3</Heading>
         <Paragraph>Dit is een paragraaf.</Paragraph>
         <Link external={true} externalLabel="example external label" href="example.com">
-          Dit is een externe link
+          Een externe link
         </Link>
         <div>
           <Table>
@@ -121,22 +118,18 @@ export default function Page() {
         </div>
         <Heading level={4}>Dit is een H4</Heading>
         <Paragraph>
-          Dit is een wat langere paragraaf. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-          officia deserunt mollit anim id est laborum.
-          <Link href="/">Dit is een normale link</Link>
+          Dit is een wat langere paragraaf. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut orci mauris,
+          convallis id nisl vel, accumsan placerat elit. Aliquam sed viverra nunc, sit amet aliquet velit. Sed mollis,
+          felis eu placerat eleifend, libero augue congue sem, at dignissim dui libero ac nisi. Sed bibendum quis eros
+          quis luctus. Curabitur lobortis convallis ante, sit amet eleifend nunc dictum et.
         </Paragraph>
-        <Blockquote attribution="Label">
+        <Blockquote attribution="- Label">
           Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
         </Blockquote>
         <Heading level={5}>Dit is een H5</Heading>
         <Paragraph>Dit is een paragraaf.</Paragraph>
-        <Separator></Separator>
-        <Heading level={5} appearance="utrecht-heading-6">
-          Dit is een H5 met H6 appearance
-        </Heading>
+        <Separator />
+        <Heading level={5}>Document delen</Heading>
         <ActionGroup>
           <Button appearance="secondary-action-button">
             Link kopiëren
