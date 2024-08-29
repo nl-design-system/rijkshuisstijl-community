@@ -1,11 +1,11 @@
-# Rijkshuisstijl Community Form field with text input
+# Rijkshuisstijl Community FormFieldTextarea component
 
 ## Usage
 
 ```jsx
-import { FormFieldTextbox } from '@rijkshuisstijl/community-components';
+import { FormFieldTextarea } from '@rijkshuisstijl/community-components';
 
-<FormFieldTextbox
+<FormFieldTextarea
   label="Label"
   placeholder="Placeholder"
   description="Description"
@@ -15,5 +15,7 @@ import { FormFieldTextbox } from '@rijkshuisstijl/community-components';
   required
   disabled
   readOnly
+  rows={5}
+  cols={10}
 />;
 ```
