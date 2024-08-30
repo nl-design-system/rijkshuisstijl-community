@@ -3,7 +3,6 @@ import {
   BlockquoteProps as UtrechtBlockquoteProps,
 } from '@utrecht/component-library-react';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
-import '@rijkshuisstijl-community/components-css/index.scss';
 
 export type { UtrechtBlockquoteProps as BlockquoteProps };
 

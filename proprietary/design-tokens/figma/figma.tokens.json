@@ -803,28 +803,6 @@
           "type": "lineHeights"
         }
       }
-    },
-    "utrecht/document": {
-      "background-color": {
-        "value": "{rhc.color.wit}",
-        "type": "color"
-      },
-      "color": {
-        "value": "{rhc.color.zwart}",
-        "type": "color"
-      },
-      "font-family": {
-        "value": "{rhc.font-family.primary}",
-        "type": "fontFamilies"
-      },
-      "font-size": {
-        "value": "{rhc.font-size.paragraph.default}",
-        "type": "other"
-      },
-      "line-height": {
-        "value": "1.4",
-        "type": "lineHeights"
-      }
     }
   },
   "brand/size": {
@@ -1183,6 +1161,36 @@
             "borderRadiusBottomLeft": "{rhc.border-radius.keep}"
           },
           "type": "composition"
+        }
+      }
+    }
+  },
+  "utrecht/document": {
+    "utrecht": {
+      "document": {
+        "background-color": {
+          "value": "{rhc.color.wit}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{rhc.color.zwart}",
+          "type": "color"
+        },
+        "font-family": {
+          "value": "{rhc.font-family.primary}",
+          "type": "fontFamilies"
+        },
+        "font-size": {
+          "value": "{rhc.font-size.paragraph.default}",
+          "type": "fontSizes"
+        },
+        "line-height": {
+          "value": "1.4",
+          "type": "lineHeights"
+        },
+        "font-weight": {
+          "value": "{rhc.font-weight.regular}",
+          "type": "fontWeights"
         }
       }
     }
@@ -2766,9 +2774,53 @@
       }
     }
   },
+  "components/figure": {
+    "utrecht": {
+      "figure": {
+        "caption": {
+          "border-color": {
+            "value": "#e4e7ec",
+            "type": "color"
+          },
+          "border-width": {
+            "value": "4px",
+            "type": "borderWidth"
+          },
+          "color": {
+            "value": "{rhc.color.primary.500}",
+            "type": "color"
+          },
+          "padding-block-end" :{
+            "value": "{rhc.space.100}",
+            "type": "spacing"
+          },
+          "padding-block-start" :{
+            "value": "{rhc.space.100}",
+            "type": "spacing"
+          },
+          "padding-inline-start" :{
+            "value": "{rhc.space.150}",
+            "type": "spacing"
+          },
+          "line-height": {
+            "value": "30px",
+            "type": "lineHeights"
+          }
+      }
+    }
+  }
+},
   "components/form-field": {
     "utrecht": {
       "form-field": {
+        "margin-block-start": {
+          "value": "{rhc.space.100}",
+          "type": "spacing"
+        },
+        "margin-block-end": {
+          "value": "{rhc.space.100}",
+          "type": "spacing"
+        },
         "invalid": {
           "border-inline-start-color": {
             "value": "{rhc.color.feedback.error.default}",
@@ -2780,6 +2832,12 @@
           },
           "padding-inline-start": {
             "value": "{rhc.space.0}",
+            "type": "spacing"
+          }
+        },
+        "label": {
+          "margin-block-end": {
+            "value": "{rhc.space.100}",
             "type": "spacing"
           }
         }
@@ -2814,7 +2872,18 @@
         "line-height": {
           "value": "{rhc.line-height.md}",
           "type": "lineHeights"
-        }
+        },
+        "margin-block-end": {
+          "value": "{rhc.space.100}",
+          "type": "spacing"
+        },
+        "padding-block-start": {},
+        "padding-block-end": {
+          "value": "{rhc.space.100}",
+          "type": "spacing"
+        },
+        "padding-inline-start": {},
+        "padding-inline-end": {}
       }
     }
   },
@@ -2846,12 +2915,56 @@
         "font-weight": {
           "value": "{rhc.font-weight.regular}",
           "type": "fontWeights"
+        },
+        "margin-block-start": {},
+        "margin-block-end": {
+          "value": "{rhc.space.100}",
+          "type": "spacing"
+        },
+        "padding-block-start": {},
+        "padding-block-end": {
+          "value": "{rhc.space.100}",
+          "type": "spacing"
+        },
+        "padding-inline-start": {},
+        "padding-inline-end": {}
+      }
+    }
+  },
+  "components/form-label": {
+    "utrecht": {
+      "form-label": {
+        "color": {
+          "value": "{rhc.color.foreground.lint}",
+          "type": "color"
+        },
+        "font-size": {
+          "value": "{rhc.font-size.paragraph.default}",
+          "type": "fontSizes"
+        },
+        "font-weight": {
+          "value": "{rhc.font-weight.bold}",
+          "type": "fontWeights"
+        },
+        "checkbox": {
+          "color": {},
+          "font-weight": {}
+        },
+        "checked": {
+          "font-weight": {}
+        },
+        "disabled": {
+          "color": {}
+        },
+        "radio": {
+          "color": {},
+          "font-weight": {}
         }
       }
     }
   },
   "components/form-field-label": {
-    "todo": {
+    "utrecht": {
       "form-field-label": {
         "color": {
           "value": "{rhc.color.foreground.lint}",
@@ -3244,8 +3357,14 @@
   "components/logo": {
     "rhc": {
       "logo": {
-        "color": "{rhc.color.lintblauw.500}",
-        "font-weight": "{rhc.font-weight.bold}"
+        "color": {
+          "value": "{rhc.color.lintblauw.500}",
+          "type": "other"
+        },
+        "font-weight": {
+          "value": "{rhc.font-weight.bold}",
+          "type": "other"
+        }
       }
     }
   },
@@ -5071,7 +5190,7 @@
           "type": "borderRadius"
         },
         "border-bottom-width": {
-          "value": "auto",
+          "value": "{rhc.border-width.default}",
           "type": "borderWidth"
         },
         "border-width": {
@@ -5355,6 +5474,7 @@
       "common/focus",
       "common/border",
       "common/keep",
+      "utrecht/document",
       "components/accordion",
       "components/alert",
       "components/avatar",
@@ -5367,6 +5487,7 @@
       "components/checkbox-group",
       "components/counter-badge",
       "components/drawer",
+      "components/figure",
       "components/footer",
       "components/form-field",
       "components/form-field-checkbox-option",

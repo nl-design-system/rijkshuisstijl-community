@@ -18,7 +18,6 @@ const init = async ({ input, output }) => {
     'components/checkbox-group',
     'components/counter-badge',
     'components/drawer',
-    'components/form-field-error-message',
     'components/form-field-option-label',
     'components/form-field-radio-option',
     'components/modal-dialog',
@@ -31,7 +30,6 @@ const init = async ({ input, output }) => {
     'components/status-badge',
     'components/summary-list',
     'components/task-list',
-    'components/textarea',
     'components/toolbar-button',
   ];
 
