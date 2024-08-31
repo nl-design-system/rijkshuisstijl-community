@@ -4,6 +4,7 @@ import { PropsWithChildren } from 'react';
 import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/components-css/index.scss';
+import '@rijkshuisstijl-community/font/src/index.mjs';
 import './globals.css';
 import './page/page.scss';
 import Link from 'next/link';
