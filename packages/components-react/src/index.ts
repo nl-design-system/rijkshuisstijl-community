@@ -33,6 +33,7 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from './Button';
+export { Fieldset, type FieldsetProps } from './Fieldset';
 export { Heading, type HeadingProps } from './Heading';
 export { Image, type ImageProps } from './Image';
 export { Link, type LinkProps } from './Link';

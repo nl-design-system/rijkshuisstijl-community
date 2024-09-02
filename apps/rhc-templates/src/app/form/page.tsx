@@ -127,25 +127,18 @@ export default function Form() {
             </FormField>
           </div>
           <div className="unstarted">
-            <Fieldset>
-              <FieldsetLegend>Label</FieldsetLegend>
-              <div>
-                <div className="unstarted">
-                  <FormField label="Label" description="Description">
-                    <div className="rhc-radio-button__group">
-                      <RadioButton></RadioButton>
-                      <FormLabel>Label</FormLabel>
-                      <RadioButton></RadioButton>
-                      <FormLabel>Label</FormLabel>
-                      <RadioButton></RadioButton>
-                      <FormLabel>Label</FormLabel>
-                      <RadioButton></RadioButton>
-                      <FormLabel>Label</FormLabel>
-                    </div>
-                  </FormField>
-                </div>
+            <FormField label="Label" description="Description">
+              <div className="rhc-radio-button__group">
+                <RadioButton></RadioButton>
+                <FormLabel>Label</FormLabel>
+                <RadioButton></RadioButton>
+                <FormLabel>Label</FormLabel>
+                <RadioButton></RadioButton>
+                <FormLabel>Label</FormLabel>
+                <RadioButton></RadioButton>
+                <FormLabel>Label</FormLabel>
               </div>
-            </Fieldset>
+            </FormField>
           </div>
           <div className="unstarted">
             <FormField label="Bestand toevoegen">
