@@ -184,12 +184,13 @@ const meta = {
     } = args;
     return (
       <FormFieldTextarea
+        cols={cols || undefined}
         defaultValue={defaultValue || undefined}
         description={description || undefined}
         dir={dir || undefined}
-        id={id || undefined}
         disabled={disabled || undefined}
         errorMessage={errorMessage || undefined}
+        id={id || undefined}
         invalid={invalid || undefined}
         label={label || undefined}
         maxLength={maxLength || undefined}
@@ -198,10 +199,9 @@ const meta = {
         placeholder={placeholder || undefined}
         readOnly={readOnly || undefined}
         required={required || undefined}
+        rows={rows || undefined}
         status={status || undefined}
         value={value || undefined}
-        cols={cols || undefined}
-        rows={rows || undefined}
       />
     );
   },

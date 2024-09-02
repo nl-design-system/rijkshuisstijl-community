@@ -312,27 +312,27 @@ const meta = {
     } = args;
     return (
       <FormFieldTextbox
-        id={id || undefined}
+        autoComplete={autoComplete || undefined}
+        defaultValue={defaultValue || undefined}
         description={description || undefined}
+        dir={dir || undefined}
         disabled={disabled}
         errorMessage={errorMessage || undefined}
-        status={status || undefined}
+        id={id || undefined}
+        inputDir={inputDir || undefined}
+        inputRequired={inputRequired}
         invalid={invalid}
         label={label || undefined}
-        name={name || undefined}
-        required={required}
-        inputRequired={inputRequired}
-        defaultValue={defaultValue || undefined}
-        value={value || undefined}
-        type={type || undefined}
-        autoComplete={autoComplete || undefined}
-        minLength={minLength || undefined}
         maxLength={maxLength || undefined}
-        readOnly={readOnly || undefined}
-        inputDir={inputDir || undefined}
-        dir={dir || undefined}
+        minLength={minLength || undefined}
+        name={name || undefined}
         placeholder={placeholder || undefined}
+        readOnly={readOnly || undefined}
+        required={required}
         size={size || undefined}
+        status={status || undefined}
+        type={type || undefined}
+        value={value || undefined}
       />
     );
   },

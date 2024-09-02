@@ -74,7 +74,7 @@ export const FormFieldTextarea = forwardRef(
     const errorMessageId = useId();
 
     return (
-      <FormField type={'textarea'} invalid={invalid} ref={ref} {...restProps}>
+      <FormField invalid={invalid} ref={ref} type={'textarea'} {...restProps}>
         <div className="utrecht-form-field__label">
           <FormLabel htmlFor={inputId}>{label}</FormLabel>
         </div>
@@ -90,13 +90,6 @@ export const FormFieldTextarea = forwardRef(
         )}
         <div className="utrecht-form-field__input">
           <Textarea
-            aria-describedby={
-              clsx({
-                [descriptionId]: description,
-                [errorMessageId]: invalid,
-                [statusId]: status,
-              }) || undefined
-            }
             autoComplete={autoComplete}
             cols={cols}
             defaultValue={defaultValue}
@@ -114,6 +107,13 @@ export const FormFieldTextarea = forwardRef(
             rows={rows}
             spellCheck={spellCheck}
             value={value}
+            aria-describedby={
+              clsx({
+                [descriptionId]: description,
+                [errorMessageId]: invalid,
+                [statusId]: status,
+              }) || undefined
+            }
             onBlur={onBlur}
             onChange={onChange}
             onFocus={onFocus}

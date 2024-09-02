@@ -87,7 +87,11 @@
           "packages/web-components-stencil/tsconfig.jest.json"
         ]
       },
-      "plugins": ["@typescript-eslint"]
+      "plugins": ["@typescript-eslint", "sort-exports"],
+      "rules": {
+        "sort-exports/sort-exports": ["error", { "sortDir": "asc", "pattern": "**/index.ts" }],
+        "react/jsx-sort-props": ["error", { "callbacksLast": true, "shorthandFirst": true, "multiline": "last" }]
+      }
     }
   ]
 }

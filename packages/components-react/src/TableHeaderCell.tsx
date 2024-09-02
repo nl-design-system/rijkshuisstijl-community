@@ -36,8 +36,8 @@ export const TableHeaderCell = forwardRef(
       >
         {withSorting ? (
           <Button
-            type={'button'}
             appearance={'subtle-button'}
+            type={'button'}
             className={clsx('utrecht-table__header-cell-button', {
               'utrecht-table__header--align-right': align === 'right',
               'utrecht-table__header--align-center': align === 'center',

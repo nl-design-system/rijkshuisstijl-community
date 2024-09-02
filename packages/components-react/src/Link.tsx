@@ -14,7 +14,7 @@ export interface LinkProps extends UtrechtLinkProps {
 
 export const Link = forwardRef(
   ({ children, className, external, externalLabel, ...restProps }: LinkProps, ref: ForwardedRef<HTMLAnchorElement>) => (
-    <UtrechtLink {...restProps} external={external} className={clsx('rhc-link', className)} ref={ref}>
+    <UtrechtLink {...restProps} className={clsx('rhc-link', className)} external={external} ref={ref}>
       {children}
       {external && (
         <>

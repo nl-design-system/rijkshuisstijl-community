@@ -6,10 +6,10 @@ describe('Alert', () => {
   it('should render successfully', () => {
     render(
       <Alert
-        type="info"
         heading="Heading"
         headingLevel={3}
         textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
+        type="info"
       />,
     );
     const alert = screen.getByRole('alert');
