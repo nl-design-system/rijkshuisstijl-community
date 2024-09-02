@@ -474,7 +474,7 @@ describe('Form field with a textbox', () => {
     });
 
     it('can have a invalid state in CSS based on pattern', () => {
-      const { container } = render(<FormFieldTextbox {...defaultProps} pattern="[0-9]+" defaultValue="test" />);
+      const { container } = render(<FormFieldTextbox {...defaultProps} defaultValue="test" pattern="[0-9]+" />);
 
       const textbox = container.querySelector(':invalid');
 
@@ -482,7 +482,7 @@ describe('Form field with a textbox', () => {
     });
 
     it('can have a invalid state in CSS based on type=email', () => {
-      const { container } = render(<FormFieldTextbox {...defaultProps} type="email" defaultValue="test" />);
+      const { container } = render(<FormFieldTextbox {...defaultProps} defaultValue="test" type="email" />);
 
       const textbox = container.querySelector(':invalid');
 
@@ -490,7 +490,7 @@ describe('Form field with a textbox', () => {
     });
 
     it('can have a invalid state in CSS based on min', () => {
-      const { container } = render(<FormFieldTextbox {...defaultProps} type="number" defaultValue="1" min="2" />);
+      const { container } = render(<FormFieldTextbox {...defaultProps} defaultValue="1" min="2" type="number" />);
 
       const textbox = container.querySelector(':invalid');
 
@@ -498,7 +498,7 @@ describe('Form field with a textbox', () => {
     });
 
     it('can have a invalid state in CSS based on max', () => {
-      const { container } = render(<FormFieldTextbox {...defaultProps} type="number" defaultValue="3" max="2" />);
+      const { container } = render(<FormFieldTextbox {...defaultProps} defaultValue="3" max="2" type="number" />);
 
       const textbox = container.querySelector(':invalid');
 
@@ -507,7 +507,7 @@ describe('Form field with a textbox', () => {
 
     it('can have a invalid state in CSS based on step', () => {
       const { container } = render(
-        <FormFieldTextbox {...defaultProps} type="number" defaultValue="3" min="0" step="2" />,
+        <FormFieldTextbox {...defaultProps} defaultValue="3" min="0" step="2" type="number" />,
       );
 
       const textbox = container.querySelector(':invalid');

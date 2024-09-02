@@ -11,7 +11,7 @@ export const Blockquote = forwardRef(
     { children, attribution, ...restProps }: PropsWithChildren<UtrechtBlockquoteProps>,
     ref: ForwardedRef<HTMLQuoteElement>,
   ) => (
-    <UtrechtBlockquote {...restProps} ref={ref} attribution={attribution}>
+    <UtrechtBlockquote {...restProps} attribution={attribution} ref={ref}>
       <div className="utrecht-blockquote__content">{children}</div>
     </UtrechtBlockquote>
   ),

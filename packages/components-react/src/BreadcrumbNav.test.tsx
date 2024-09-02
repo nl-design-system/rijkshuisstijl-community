@@ -139,7 +139,7 @@ describe('Breadcrumb navigation', () => {
   describe('custom link component', () => {
     it('renders with custom link', () => {
       const { getByRole } = render(
-        <BreadcrumbNavLink href="/custom" Link={CustomLink} className="utrecht-link utrecht-link--html-a">
+        <BreadcrumbNavLink Link={CustomLink} className="utrecht-link utrecht-link--html-a" href="/custom">
           Custom Link
         </BreadcrumbNavLink>,
       );

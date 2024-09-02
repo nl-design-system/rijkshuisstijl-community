@@ -46,7 +46,7 @@ export const FormFieldSelect = forwardRef(
     const errorMessageId = useId();
 
     return (
-      <FormField type={'select'} invalid={invalid} ref={ref} input={input} dir={dir}>
+      <FormField dir={dir} input={input} invalid={invalid} ref={ref} type={'select'}>
         <div className="utrecht-form-field__label">
           <FormLabel htmlFor={id}>{label}</FormLabel>
         </div>
@@ -62,9 +62,11 @@ export const FormFieldSelect = forwardRef(
         )}
         <div className="utrecht-form-field__input">
           <Select
-            className={clsx({
-              'utrecht-select--html-select-rtl': dir === 'rtl',
-            })}
+            dir={dir}
+            disabled={disabled}
+            id={id}
+            invalid={invalid}
+            ref={selectRef}
             aria-describedby={
               clsx({
                 [descriptionId]: description,
@@ -72,16 +74,14 @@ export const FormFieldSelect = forwardRef(
                 [statusId]: status,
               }) || undefined
             }
-            id={id}
-            disabled={disabled}
-            ref={selectRef}
-            dir={dir}
-            invalid={invalid}
+            className={clsx({
+              'utrecht-select--html-select-rtl': dir === 'rtl',
+            })}
             {...restProps}
           >
             {options?.length
               ? options.map((option, index) => (
-                  <SelectOption disabled={disabled} id={option + index} value={option} invalid={invalid} key={index}>
+                  <SelectOption disabled={disabled} id={option + index} invalid={invalid} key={index} value={option}>
                     {option}
                   </SelectOption>
                 ))

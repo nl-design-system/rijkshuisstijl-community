@@ -8,7 +8,7 @@ export { type UtrechtImageProps as ImageProps };
 
 export const Image = forwardRef(
   ({ className, ...restProps }: UtrechtImageProps, ref: ForwardedRef<HTMLImageElement>) => (
-    <UtrechtImage {...restProps} ref={ref} photo className={className} />
+    <UtrechtImage {...restProps} photo className={className} ref={ref} />
   ),
 );
 

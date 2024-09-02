@@ -291,7 +291,7 @@ export const Alignment: Story = {
           <TableHeaderCell scope="col">Header</TableHeaderCell>
           <TableHeaderCell scope="col">Header</TableHeaderCell>
           <TableHeaderCell scope="col">Header</TableHeaderCell>
-          <TableHeaderCell scope="col" align={'right'}>
+          <TableHeaderCell align={'right'} scope="col">
             Header
           </TableHeaderCell>
         </TableRow>

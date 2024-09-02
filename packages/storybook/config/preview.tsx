@@ -1,3 +1,11 @@
+import { withThemeByClassName } from '@storybook/addon-themes';
+import { Preview } from '@storybook/react';
+import { UtrechtDocument } from '@utrecht/web-component-library-react';
+
+import '@fontsource/fira-sans/400.css';
+import '@fontsource/fira-sans/400-italic.css';
+import '@fontsource/fira-sans/700.css';
+import '@fontsource/fira-sans/700-italic.css';
 import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/digid-design-tokens/dist/theme.css';
@@ -5,15 +13,8 @@ import '@rijkshuisstijl-community/font/src/index.scss';
 import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/mijnoverheid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
-import { withThemeByClassName } from '@storybook/addon-themes';
-import { Preview } from '@storybook/react';
 import '@utrecht/component-library-css/dist/html.css';
 import '@utrecht/component-library-css/dist/index.css';
-import { UtrechtDocument } from '@utrecht/web-component-library-react';
-import '@fontsource/fira-sans/400.css';
-import '@fontsource/fira-sans/400-italic.css';
-import '@fontsource/fira-sans/700.css';
-import '@fontsource/fira-sans/700-italic.css';
 
 const preview: Preview = {
   decorators: [

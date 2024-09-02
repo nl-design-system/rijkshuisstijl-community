@@ -15,10 +15,10 @@ interface IColumn {
 
 export const Footer = forwardRef(
   ({ className, title, columns, ...restProps }: PropsWithChildren<FooterProps>, ref: ForwardedRef<HTMLDivElement>) => (
-    <UtrechtPageFooter {...restProps} ref={ref} className={clsx('rhc-footer', className)}>
+    <UtrechtPageFooter {...restProps} className={clsx('rhc-footer', className)} ref={ref}>
       {title && (
         <div className="rhc-footer__column">
-          <Heading level={4} className="rhc-footer__title">
+          <Heading className="rhc-footer__title" level={4}>
             {title}
           </Heading>
         </div>
@@ -26,7 +26,7 @@ export const Footer = forwardRef(
 
       {columns &&
         columns.map((column, index) => (
-          <div key={index} className="rhc-footer__column">
+          <div className="rhc-footer__column" key={index}>
             <Heading className="rhc-footer__column--title" level={5}>
               {column.title}
             </Heading>

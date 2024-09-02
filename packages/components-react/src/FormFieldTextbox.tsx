@@ -69,11 +69,28 @@ export const FormFieldTextbox = forwardRef(
         )}
         <div className="utrecht-form-field__input">
           <Textbox
-            ref={inputRef}
-            id={inputId}
-            name={name}
-            type={(type as TextboxTypes) || 'text'}
             autoComplete={autoComplete}
+            defaultValue={defaultValue}
+            dir={inputDir || 'auto'}
+            disabled={disabled}
+            id={inputId}
+            inputRequired={inputRequired}
+            invalid={invalid}
+            list={list}
+            max={max}
+            maxLength={maxLength}
+            min={min}
+            minLength={minLength}
+            name={name}
+            pattern={pattern}
+            placeholder={placeholder}
+            readOnly={readOnly}
+            ref={inputRef}
+            required={required}
+            size={size}
+            step={step}
+            type={(type as TextboxTypes) || 'text'}
+            value={value}
             aria-describedby={
               clsx({
                 [descriptionId]: description,
@@ -81,27 +98,10 @@ export const FormFieldTextbox = forwardRef(
                 [statusId]: status,
               }) || undefined
             }
-            invalid={invalid}
-            dir={inputDir || 'auto'}
-            disabled={disabled}
-            min={min}
-            max={max}
-            minLength={minLength}
-            maxLength={maxLength}
-            pattern={pattern}
-            placeholder={placeholder}
-            readOnly={readOnly}
-            required={required}
-            inputRequired={inputRequired}
-            value={value}
-            onFocus={onFocus}
             onBlur={onBlur}
-            onInput={onInput}
             onChange={onChange}
-            defaultValue={defaultValue}
-            list={list}
-            size={size}
-            step={step}
+            onFocus={onFocus}
+            onInput={onInput}
           />
         </div>
         {status && (

@@ -13,7 +13,7 @@ const TableHeaderCell = ({ children, withSorting, align, scope, ...restProps }: 
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHeaderCellComponent {...restProps} scope={scope} withSorting={withSorting} align={align}>
+          <TableHeaderCellComponent {...restProps} align={align} scope={scope} withSorting={withSorting}>
             {children}
           </TableHeaderCellComponent>
         </TableRow>

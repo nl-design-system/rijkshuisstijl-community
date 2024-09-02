@@ -48,6 +48,9 @@ importers:
       eslint-plugin-react:
         specifier: 7.34.4
         version: 7.34.4(eslint@8.57.0)
+      eslint-plugin-sort-exports:
+        specifier: 0.9.1
+        version: 0.9.1(eslint@8.57.0)
       husky:
         specifier: 9.1.1
         version: 9.1.1
@@ -210,7 +213,11 @@ importers:
         specifier: 5.5.3
         version: 5.5.3
 
-  packages/components-css: {}
+  packages/components-css:
+    devDependencies:
+      eslint-plugin-css-import-order:
+        specifier: 1.1.0
+        version: 1.1.0(eslint@8.57.0)
 
   packages/components-react:
     dependencies:
@@ -4339,6 +4346,11 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
 
+  eslint-plugin-css-import-order@1.1.0:
+    resolution: {integrity: sha512-43ODxP1sXpmgI4c+NCtXqmhkLsYGe8El1ewOlvsXKchLjWLxJw5zfp4eEg31Eni+is3jGkBL2TrNyUOOnbOMDg==}
+    peerDependencies:
+      eslint: '>= 6.0.0 < 9.0.0'
+
   eslint-plugin-import@2.29.1:
     resolution: {integrity: sha512-BbPC0cuExzhiMo4Ff1BTVwHpjjv28C5R+btTOGaCRC7UEz801up0JadwkeSk5Ued6TG34uaczuVuH6qyy5YUxw==}
     engines: {node: '>=4'}
@@ -4388,6 +4400,11 @@ packages:
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
+
+  eslint-plugin-sort-exports@0.9.1:
+    resolution: {integrity: sha512-2w6jHusdF2K60bcGKpa9HEinETwNzVrvplZipVculCfu3ZDd5IW3xL54XVEnVkGIPJnp/LitFCg7owL4DOtuHg==}
+    peerDependencies:
+      eslint: '>=5.0.0'
 
   eslint-scope@7.2.2:
     resolution: {integrity: sha512-dOt21O7lTMhDM+X9mB4GX+DZrZtCUJPL/wlcTqxyrx5IvO0IYtILdtrQGQp+8n5S0gwSVmOf9NQrjMOgfQZlIg==}
@@ -13522,6 +13539,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  eslint-plugin-css-import-order@1.1.0(eslint@8.57.0):
+    dependencies:
+      eslint: 8.57.0
+
   eslint-plugin-import@2.29.1(@typescript-eslint/parser@6.20.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
     dependencies:
       array-includes: 3.1.7
@@ -13670,6 +13691,11 @@ snapshots:
       semver: 6.3.1
       string.prototype.matchall: 4.0.11
       string.prototype.repeat: 1.0.0
+
+  eslint-plugin-sort-exports@0.9.1(eslint@8.57.0):
+    dependencies:
+      eslint: 8.57.0
+      minimatch: 9.0.5
 
   eslint-scope@7.2.2:
     dependencies:

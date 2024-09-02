@@ -12,7 +12,7 @@ interface AlertStoryComponentProps {
 }
 
 const AlertStoryComponent = ({ type, heading, textContent, headingLevel }: AlertStoryComponentProps) => {
-  return <Alert type={type} heading={heading} headingLevel={headingLevel} textContent={textContent}></Alert>;
+  return <Alert heading={heading} headingLevel={headingLevel} textContent={textContent} type={type}></Alert>;
 };
 
 const meta = {

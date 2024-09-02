@@ -26,7 +26,7 @@ export const Alert = forwardRef(
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     return (
-      <UtrechtAlert role="alert" ref={ref} type={type} {...restProps}>
+      <UtrechtAlert ref={ref} role="alert" type={type} {...restProps}>
         {children ? (
           children
         ) : (

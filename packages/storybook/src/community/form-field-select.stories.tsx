@@ -114,16 +114,16 @@ const meta = {
     } = args;
     return (
       <FormFieldSelect
+        defaultValue={defaultValue || undefined}
+        description={description || undefined}
+        dir={dir || undefined}
+        disabled={disabled || undefined}
+        errorMessage={errorMessage || undefined}
+        invalid={invalid || undefined}
         label={label || undefined}
         name={name || undefined}
-        description={description || undefined}
-        errorMessage={errorMessage || undefined}
-        required={required || undefined}
-        disabled={disabled || undefined}
-        invalid={invalid || undefined}
-        defaultValue={defaultValue || undefined}
         options={options || undefined}
-        dir={dir || undefined}
+        required={required || undefined}
       >
         {!options?.length && children}
       </FormFieldSelect>
@@ -165,13 +165,13 @@ export const CustomOptions: Story = {
     disabled: false,
     invalid: false,
     children: [
-      <SelectOption value="optie 1" id="optie1">
+      <SelectOption id="optie1" value="optie 1">
         optie 1
       </SelectOption>,
-      <SelectOption value="optie 2" id="optie2">
+      <SelectOption id="optie2" value="optie 2">
         optie 2
       </SelectOption>,
-      <SelectOption value="optie 3" id="optie3">
+      <SelectOption id="optie3" value="optie 3">
         optie 3
       </SelectOption>,
     ],
