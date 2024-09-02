@@ -6,6 +6,8 @@ import {
   BreadcrumbNavLink,
   BreadcrumbNavSeparator,
   Button,
+  FileInput,
+  FormField,
   Heading,
   Link,
   LinkList,
@@ -19,7 +21,6 @@ import {
   Checkbox,
   Fieldset,
   FieldsetLegend,
-  FormField,
   PageContent,
   PageFooter,
   PageHeader,
@@ -29,7 +30,7 @@ import {
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
-import { DateInput, FileInput } from '@amsterdam/design-system-react';
+import { DateInput } from '@amsterdam/design-system-react';
 
 export default function Form() {
   return (
@@ -147,18 +148,16 @@ export default function Form() {
               </div>
             </Fieldset>
           </div>
-          <div className="unstarted">
-            <FormField label="Bestand toevoegen">
-              <UnorderedList>
-                <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
-                <UnorderedListItem>U mag maximaal 10 Mb aan bestanden toevoegen.</UnorderedListItem>
-                <UnorderedListItem>
-                  Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bpm en gif.
-                </UnorderedListItem>
-              </UnorderedList>
-              <FileInput multiple></FileInput>
-            </FormField>
-          </div>
+          <FormField label="Bestand toevoegen">
+            <UnorderedList>
+              <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
+              <UnorderedListItem>U mag maximaal 10 Mb aan bestanden toevoegen.</UnorderedListItem>
+              <UnorderedListItem>
+                Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bpm en gif.
+              </UnorderedListItem>
+            </UnorderedList>
+            <FileInput multiple></FileInput>
+          </FormField>
           <Heading level={1}>Informatie over de verwerking van uw persoonsgegevens</Heading>
           <Paragraph>
             Wij gebruiken gegevens die u heeft ingevuld om uw vraag te beantwoorden. Daarna worden ze volgens in de

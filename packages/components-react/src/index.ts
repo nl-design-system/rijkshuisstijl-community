@@ -33,6 +33,7 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from './Button';
+export { FileInput, type FileInputProps } from './FileInput';
 export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFieldErrorMessage';
 export { FormFieldTextarea, type FormFieldTextareaProps } from './FormFieldTextarea';
 export { FormFieldTextbox } from './FormFieldTextbox';

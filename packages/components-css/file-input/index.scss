@@ -1,0 +1,25 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@import "./utrecht-button";
+
+.rhc-file-input {
+  color: var(--rhc-file-input-feedback-text-color);
+}
+
+.rhc-file-input::file-selector-button {
+  @extend .utrecht-button;
+  @extend .utrecht-button--secondary-action;
+  @include utrecht-button-appearance("utrecht-button", "secondary-action");
+
+  margin-inline-end: var(--rhc-file-input-file-selector-button-margin-inline-end, inherit);
+}
+
+.rhc-file-input:disabled::file-selector-button {
+  @include utrecht-button--disabled;
+}
+
+.rhc-file-input:not(:disabled):hover::file-selector-button {
+  @include utrecht-button--hover;
+}
