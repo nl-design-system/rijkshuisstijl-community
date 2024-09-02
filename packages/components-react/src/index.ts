@@ -36,6 +36,7 @@ export {
 export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFieldErrorMessage';
 export { FormFieldTextarea, type FormFieldTextareaProps } from './FormFieldTextarea';
 export { FormFieldTextbox } from './FormFieldTextbox';
+export { FormFieldSelect, type FormFieldSelectProps } from './FormFieldSelect';
 export { Footer } from './Footer';
 export { Heading, type HeadingProps } from './Heading';
 export { Image, type ImageProps } from './Image';

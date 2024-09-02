@@ -74,7 +74,7 @@ export const FormFieldTextarea = forwardRef(
     const errorMessageId = useId();
 
     return (
-      <FormField invalid={invalid} ref={ref} {...restProps}>
+      <FormField type={'textarea'} invalid={invalid} ref={ref} {...restProps}>
         <div className="utrecht-form-field__label">
           <FormLabel htmlFor={inputId}>{label}</FormLabel>
         </div>

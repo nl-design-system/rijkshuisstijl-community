@@ -24,7 +24,6 @@ const init = async ({ input, output }) => {
     'components/pagination',
     'components/radio',
     'components/radio-group',
-    'components/select',
     'components/side-nav',
     'components/skip-link',
     'components/status-badge',
