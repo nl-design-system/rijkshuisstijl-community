@@ -6,6 +6,7 @@ import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/components-css/index.scss';
 import { Logo } from '@rijkshuisstijl-community/components-react';
 import { NavBar, NavList, NavListLinkButton, PageHeader } from '@utrecht/component-library-react/dist/css-module';
+import '@rijkshuisstijl-community/font/src/index.mjs';
 import './globals.css';
 import Link from 'next/link';
 import Head from 'next/head';
