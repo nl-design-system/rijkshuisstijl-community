@@ -25,9 +25,17 @@ export const Default: Story = {
     organisation: 'Voorbeeld organisatie',
   },
 };
-export const Subtitle: Story = {
+
+export const Organisation: Story = {
+  args: {
+    organisation: 'Voorbeeld organisatie',
+  },
+};
+
+export const OrganisationSubtitle: Story = {
   args: {
     organisation: 'Voorbeeld organisatie',
     subtitle: 'Voorbeeld sub-title',
   },
+  name: 'Organisation + subtitle',
 };
