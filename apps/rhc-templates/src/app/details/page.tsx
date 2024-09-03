@@ -100,7 +100,7 @@ export default function Details() {
           {
             title: 'Service',
             elements: [
-              <LinkList>
+              <LinkList key="1">
                 <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
                   Contact
                 </LinkListLink>
@@ -128,7 +128,7 @@ export default function Details() {
           {
             title: 'Over deze site',
             elements: (
-              <LinkList>
+              <LinkList key="2">
                 <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
                   Over Rijksoverheid.nl
                 </LinkListLink>
