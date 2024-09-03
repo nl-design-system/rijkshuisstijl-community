@@ -1195,6 +1195,95 @@
       }
     }
   },
+  "overwrites/Belastingdienst": {
+    "rhc": {
+      "color": {
+        "accent": {
+          "500": {
+            "value": "{rhc.color.roze.500}",
+            "type": "color"
+          }
+        },
+        "primary": {
+          "50": {
+            "value": "{rhc.color.lichtblauw.50}",
+            "type": "color"
+          },
+          "100": {
+            "value": "{rhc.color.lichtblauw.100}",
+            "type": "color"
+          },
+          "200": {
+            "value": "{rhc.color.lichtblauw.200}",
+            "type": "color"
+          },
+          "300": {
+            "value": "{rhc.color.lichtblauw.300}",
+            "type": "color"
+          },
+          "400": {
+            "value": "{rhc.color.lichtblauw.400}",
+            "type": "color"
+          },
+          "500": {
+            "value": "{rhc.color.lichtblauw.500}",
+            "type": "color"
+          },
+          "hover": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "darken",
+                  "value": "0.3",
+                  "space": "lch"
+                }
+              }
+            },
+            "value": "{rhc.color.primary.500}",
+            "type": "color"
+          }
+        }
+      }
+    }
+  },
+  "overwrites/mobile": {
+    "rhc": {
+      "font-size": {
+        "heading": {
+          "level-1": {
+            "value": "{rhc.font-size.xl.mobile}",
+            "type": "fontSizes"
+          },
+          "level-2": {
+            "value": "{rhc.font-size.lg.mobile}",
+            "type": "fontSizes"
+          },
+          "level-3": {
+            "value": "{rhc.font-size.md.mobile}",
+            "type": "fontSizes"
+          },
+          "level-4": {
+            "value": "{rhc.font-size.sm.mobile}",
+            "type": "fontSizes"
+          },
+          "level-5": {
+            "value": "{rhc.font-size.xs.mobile}",
+            "type": "fontSizes"
+          }
+        },
+        "paragraph": {
+          "intro": {
+            "value": "{rhc.font-size.sm.mobile}",
+            "type": "fontSizes"
+          },
+          "default": {
+            "value": "{rhc.font-size.xs.mobile}",
+            "type": "fontSizes"
+          }
+        }
+      }
+    }
+  },
   "components/accordion": {
     "utrecht": {
       "accordion": {
@@ -2903,13 +2992,10 @@
           "value": "{rhc.space.100}",
           "type": "spacing"
         },
-        "padding-block-start": {},
         "padding-block-end": {
           "value": "{rhc.space.100}",
           "type": "spacing"
-        },
-        "padding-inline-start": {},
-        "padding-inline-end": {}
+        }
       }
     }
   },
@@ -2942,49 +3028,13 @@
           "value": "{rhc.font-weight.regular}",
           "type": "fontWeights"
         },
-        "margin-block-start": {},
         "margin-block-end": {
           "value": "{rhc.space.100}",
           "type": "spacing"
         },
-        "padding-block-start": {},
         "padding-block-end": {
           "value": "{rhc.space.100}",
           "type": "spacing"
-        },
-        "padding-inline-start": {},
-        "padding-inline-end": {}
-      }
-    }
-  },
-  "components/form-label": {
-    "utrecht": {
-      "form-label": {
-        "color": {
-          "value": "{rhc.color.foreground.lint}",
-          "type": "color"
-        },
-        "font-size": {
-          "value": "{rhc.font-size.paragraph.default}",
-          "type": "fontSizes"
-        },
-        "font-weight": {
-          "value": "{rhc.font-weight.bold}",
-          "type": "fontWeights"
-        },
-        "checkbox": {
-          "color": {},
-          "font-weight": {}
-        },
-        "checked": {
-          "font-weight": {}
-        },
-        "disabled": {
-          "color": {}
-        },
-        "radio": {
-          "color": {},
-          "font-weight": {}
         }
       }
     }
@@ -5502,6 +5552,24 @@
       }
     }
   },
+  "components/form-label": {
+    "utrecht": {
+      "form-label": {
+        "color": {
+          "value": "{rhc.color.foreground.lint}",
+          "type": "color"
+        },
+        "font-size": {
+          "value": "{rhc.font-size.paragraph.default}",
+          "type": "fontSizes"
+        },
+        "font-weight": {
+          "value": "{rhc.font-weight.bold}",
+          "type": "fontWeights"
+        }
+      }
+    }
+  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
@@ -5518,6 +5586,8 @@
       "common/keep",
       "common/text-align",
       "utrecht/document",
+      "overwrites/Belastingdienst",
+      "overwrites/mobile",
       "components/accordion",
       "components/alert",
       "components/avatar",
@@ -5561,7 +5631,8 @@
       "components/textarea",
       "components/text-input",
       "components/toolbar-button",
-      "components/unordered-list"
+      "components/unordered-list",
+      "components/form-label"
     ]
   }
 }
