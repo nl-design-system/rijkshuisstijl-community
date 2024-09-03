@@ -1,24 +1,14 @@
-/* @license CC0-1.0 */
-
-import { FormFieldTextbox } from '@rijkshuisstijl-community/components-react';
+import { Textbox } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from './form-field-textbox.md?raw';
+import readme from './text-input.md?raw';
 
-const meta = {
-  title: 'Rijkshuisstijl/Form Field Text Input',
-  id: 'rijkshuisstijl-form-field-text-input',
-  component: FormFieldTextbox,
+const meta: Meta<typeof Textbox> = {
+  title: 'Rijkshuisstijl/Text Input',
+  component: Textbox,
+  tags: ['autodocs'],
   argTypes: {
     required: {
       description: 'Required',
-      control: 'boolean',
-      table: {
-        category: 'API',
-        defaultValue: { summary: 'false' },
-      },
-    },
-    inputRequired: {
-      description: 'Required (HTML validation)',
       control: 'boolean',
       table: {
         category: 'API',
@@ -76,31 +66,6 @@ const meta = {
     placeholder: {
       description: 'Placeholder',
       control: 'text',
-      table: {
-        category: 'API',
-        defaultValue: { summary: '' },
-      },
-    },
-    label: {
-      name: 'label',
-      type: { name: 'string', required: true },
-      table: {
-        defaultValue: { summary: '' },
-        category: 'API',
-      },
-    },
-    errorMessage: {
-      name: 'errorMessage',
-      description: 'Description for invalid input',
-      type: { name: 'string', required: false },
-      table: {
-        defaultValue: { summary: '' },
-        category: 'API',
-      },
-    },
-    description: {
-      description: 'Description',
-      type: { name: 'string', required: false },
       table: {
         category: 'API',
         defaultValue: { summary: '' },
@@ -176,36 +141,6 @@ const meta = {
         defaultValue: { summary: '' },
       },
     },
-    minLength: {
-      description: 'Set the minimum length of the input text',
-      control: 'number',
-      table: {
-        category: 'API',
-        defaultValue: { summary: undefined },
-      },
-    },
-    maxLength: {
-      description: 'Set the maximum length of the input text',
-      control: 'number',
-      table: {
-        category: 'API',
-        defaultValue: { summary: undefined },
-      },
-    },
-    min: {
-      control: 'number',
-      table: {
-        category: 'API',
-        defaultValue: { summary: undefined },
-      },
-    },
-    max: {
-      control: 'number',
-      table: {
-        category: 'API',
-        defaultValue: { summary: undefined },
-      },
-    },
     step: {
       control: 'number',
       table: {
@@ -252,91 +187,74 @@ const meta = {
         defaultValue: { summary: '' },
       },
     },
-    inputDir: {
-      description: 'Text direction',
-      control: { type: 'select' },
-      options: {
-        '': undefined,
-        auto: 'auto',
-        ltr: 'ltr',
-        rtl: 'rtl',
-      },
+    inputRequired: {
+      description: 'Required (HTML validation)',
+      control: 'boolean',
       table: {
         category: 'API',
-        defaultValue: { summary: '' },
+        defaultValue: { summary: 'false' },
+      },
+    },
+    spellCheck: {
+      description: 'Spellcheck',
+      control: 'boolean',
+      table: {
+        category: 'API',
+        defaultValue: { summary: 'false' },
+      },
+    },
+    minLength: {
+      description: 'Set the minimum length of the input text',
+      control: 'number',
+      table: {
+        category: 'API',
+        defaultValue: { summary: undefined },
+      },
+    },
+    maxLength: {
+      description: 'Set the maximum length of the input text',
+      control: 'number',
+      table: {
+        category: 'API',
+        defaultValue: { summary: undefined },
+      },
+    },
+    min: {
+      control: 'number',
+      table: {
+        category: 'API',
+        defaultValue: { summary: undefined },
+      },
+    },
+    max: {
+      control: 'number',
+      table: {
+        category: 'API',
+        defaultValue: { summary: undefined },
       },
     },
   },
   args: {
-    description: '',
+    name: 'subject',
+    required: false,
     disabled: false,
+    readOnly: false,
     invalid: false,
-    errorMessage: '',
-    label: '',
-    name: '',
     defaultValue: '',
     value: '',
-    required: false,
-    inputRequired: false,
-    type: undefined,
-    autoComplete: '',
-    readOnly: false,
-    dir: undefined,
-    inputDir: undefined,
     placeholder: '',
+    autoComplete: '',
+    step: undefined,
     size: undefined,
+    type: undefined,
+    dir: undefined,
+    inputRequired: false,
+    spellCheck: false,
+    minLength: undefined,
+    maxLength: undefined,
+    min: undefined,
+    max: undefined,
   },
-  render: (args) => {
-    const {
-      description,
-      disabled,
-      id,
-      invalid,
-      errorMessage,
-      status,
-      inputRequired,
-      label,
-      name,
-      required,
-      defaultValue,
-      type,
-      autoComplete,
-      minLength,
-      maxLength,
-      readOnly,
-      dir,
-      inputDir,
-      placeholder,
-      value,
-      size,
-    } = args;
-    return (
-      <FormFieldTextbox
-        autoComplete={autoComplete || undefined}
-        defaultValue={defaultValue || undefined}
-        description={description || undefined}
-        dir={dir || undefined}
-        disabled={disabled}
-        errorMessage={errorMessage || undefined}
-        id={id || undefined}
-        inputDir={inputDir || undefined}
-        inputRequired={inputRequired}
-        invalid={invalid}
-        label={label || undefined}
-        maxLength={maxLength || undefined}
-        minLength={minLength || undefined}
-        name={name || undefined}
-        placeholder={placeholder || undefined}
-        readOnly={readOnly || undefined}
-        required={required}
-        size={size || undefined}
-        status={status || undefined}
-        type={type || undefined}
-        value={value || undefined}
-      />
-    );
-  },
-  tags: ['autodocs'],
   parameters: {
     docs: {
       description: {
@@ -344,7 +262,53 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof FormFieldTextbox>;
+  render: (args) => {
+    const {
+      name,
+      required,
+      disabled,
+      readOnly,
+      invalid,
+      defaultValue,
+      value,
+      placeholder,
+      autoComplete,
+      step,
+      size,
+      type,
+      dir,
+      spellCheck,
+      inputRequired,
+      minLength,
+      maxLength,
+      min,
+      max,
+    } = args;
+    return (
+      <Textbox
+        autoComplete={autoComplete || undefined}
+        defaultValue={defaultValue || undefined}
+        dir={dir || undefined}
+        disabled={disabled}
+        inputRequired={inputRequired}
+        invalid={invalid}
+        max={max || undefined}
+        maxLength={maxLength || undefined}
+        min={min || undefined}
+        minLength={minLength || undefined}
+        name={name || undefined}
+        placeholder={placeholder || undefined}
+        readOnly={readOnly || undefined}
+        required={required}
+        size={size || undefined}
+        spellCheck={spellCheck}
+        step={step || undefined}
+        type={type || undefined}
+        value={value || undefined}
+      />
+    );
+  },
+} satisfies Meta<typeof Textbox>;
 
 export default meta;
 
@@ -353,49 +317,19 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     name: 'subject',
-    label: 'Onderwerp',
   },
 };
 
-export const Description: Story = {
+export const Required: Story = {
   args: {
     name: 'subject',
-    label: 'Onderwerp',
-    description: 'Kort maar krachtig.',
-  },
-};
-
-export const ErrorMessage: Story = {
-  args: {
-    name: 'subject',
-    label: 'Onderwerp',
-    errorMessage: 'Vul een onderwerp in.',
-    invalid: true,
-  },
-};
-
-export const Status: Story = {
-  args: {
-    name: 'subject',
-    label: 'Onderwerp',
-    defaultValue: 'Hello, World!',
-    status: '13 van de 50 tekens gebruikt.',
-  },
-};
-
-export const Password: Story = {
-  args: {
-    name: 'subject',
-    label: 'Wachtwoord',
-    type: 'password',
-    autoComplete: 'current-password',
+    required: true,
   },
 };
 
 export const Disabled: Story = {
   args: {
     name: 'subject',
-    label: 'Onderwerp',
     disabled: true,
     defaultValue: 'Hello, world!',
   },
@@ -404,43 +338,39 @@ export const Disabled: Story = {
 export const ReadOnly: Story = {
   args: {
     name: 'subject',
-    label: 'Onderwerp',
     readOnly: true,
     defaultValue: 'Hello, world!',
   },
 };
 
-export const Required: Story = {
+export const Invalid: Story = {
   args: {
     name: 'subject',
-    label: 'Onderwerp',
-    required: true,
-  },
-};
-
-export const InputRequired: Story = {
-  args: {
-    name: 'subject',
-    label: 'Onderwerp',
-    inputRequired: true,
+    invalid: true,
   },
 };
 
 export const Placeholder: Story = {
   args: {
     name: 'subject',
-    label: 'Onderwerp',
     placeholder: 'Type some text...',
+  },
+};
+
+export const AutoComplete: Story = {
+  args: {
+    name: 'subject',
+    autoComplete: 'current-password',
+    type: 'password',
   },
 };
 
 export const LeftToRightInput: Story = {
   args: {
     dir: 'rtl',
-    label: 'رقم الجوال',
-    type: 'tel',
-    autoComplete: 'mobile tel-national',
-    inputDir: 'ltr',
+    type: 'text',
+    autoComplete: 'username',
+    placeholder: 'اسم المستخدم',
   },
   name: 'Left-to-right input',
 };
