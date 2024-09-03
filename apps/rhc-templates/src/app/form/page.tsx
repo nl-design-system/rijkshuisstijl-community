@@ -6,11 +6,13 @@ import {
   BreadcrumbNavLink,
   BreadcrumbNavSeparator,
   Button,
+  Footer,
+  FormFieldTextarea,
+  FormFieldTextbox,
   Heading,
   Link,
   LinkList,
   LinkListLink,
-  Logo,
   Paragraph,
   UnorderedList,
 } from '@rijkshuisstijl-community/components-react';
@@ -21,10 +23,7 @@ import {
   FieldsetLegend,
   FormField,
   PageContent,
-  PageFooter,
-  PageHeader,
   RadioButton,
-  Textarea,
   Textbox,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
@@ -33,12 +32,7 @@ import { DateInput, FileInput } from '@amsterdam/design-system-react';
 
 export default function Form() {
   return (
-    <main>
-      <div className="unfinished">
-        <PageHeader>
-          <Logo organisation="Voorbeeld organisatie" subtitle="Voorbeeld sub-title"></Logo>
-        </PageHeader>
-      </div>
+    <>
       <PageContent className="container page-content">
         <BreadcrumbNav>
           <BreadcrumbNavLink href="/" rel="home" index={0}>
@@ -80,37 +74,16 @@ export default function Form() {
           Lees verder over de <Link href="#">verantwoordingsmethode SiSa</Link>.
         </Paragraph>
         <form>
+          <FormFieldTextbox label="Naam" required></FormFieldTextbox>
+          <FormFieldTextbox label="Organisatie"></FormFieldTextbox>
+          <FormFieldTextbox type="email" label="E-mailadres"></FormFieldTextbox>
+          <FormFieldTextbox label="Telefoonnummer" type="tel"></FormFieldTextbox>
           <div className="unstarted">
-            <FormField label="Naam">
-              <Textbox required></Textbox>
-            </FormField>
-          </div>
-          <div className="unstarted">
-            <FormField label="Organisatie">
-              <Textbox></Textbox>
-            </FormField>
-          </div>
-          <div className="unstarted">
-            <FormField label="E-mailadres">
-              <Textbox type="email"></Textbox>
-            </FormField>
-          </div>
-          <div className="unstarted">
-            <FormField label="Telefoonnummer">
-              <Textbox type="tel"></Textbox>
-            </FormField>
-          </div>
-          <div className="unstarted">
-            <FormField label="Organisatie">
+            <FormField label="Datum">
               <DateInput></DateInput>
             </FormField>
           </div>
-          <div className="unstarted">
-            <FormField label="Om welke uitkering gaat het?">
-              <Paragraph>Bijvoorbeeld E27B</Paragraph>
-              <Textbox></Textbox>
-            </FormField>
-          </div>
+          <FormFieldTextbox description="Bijvoorbeeld E27B" label="Om welke uitkering gaat het?"></FormFieldTextbox>
           <div className="unstarted">
             <FormField label="">
               <Paragraph className="utrecht-form-field__label">Om welke indicator gaat het?</Paragraph>
@@ -121,11 +94,7 @@ export default function Form() {
               </Paragraph>
             </FormField>
           </div>
-          <div className="unstarted">
-            <FormField label="Stel hier uw vraag">
-              <Textarea rows={6} cols={40}></Textarea>
-            </FormField>
-          </div>
+          <FormFieldTextarea label="Stel hier uw vraag" rows={6} cols={40}></FormFieldTextarea>
           <div className="unstarted">
             <Fieldset>
               <FieldsetLegend>Label</FieldsetLegend>
@@ -186,42 +155,70 @@ export default function Form() {
           </Button>
         </form>
       </PageContent>
-      <div className="unstarted">
-        <PageFooter>
-          <Heading level={1} appearance="utrecht-heading-2">
-            De Rijksoverheid. Voor Nederland
-          </Heading>
-          <div className="left-column">
-            <Heading level={2} appearance="utrecht-heading-4">
-              Service
-            </Heading>
-            <LinkList>
-              <LinkListLink href="#">Contact</LinkListLink>
-              <LinkListLink href="#">Abonneren</LinkListLink>
-              <LinkListLink href="#">RSS</LinkListLink>
-              <LinkListLink href="#">Vacatures</LinkListLink>
-              <LinkListLink href="#">Sitemap</LinkListLink>
-              <LinkListLink href="#">Help</LinkListLink>
-              <LinkListLink href="#">Archief</LinkListLink>
-            </LinkList>
-          </div>
-          <div className="right-column">
-            <Heading level={2} appearance="utrecht-heading-4">
-              Service
-            </Heading>
-            <LinkList>
-              <LinkListLink href="#">Over Rijksoverheid.nl</LinkListLink>
-              <LinkListLink href="#">Wetten en regelingen</LinkListLink>
-              <LinkListLink href="#">Copyright</LinkListLink>
-              <LinkListLink href="#">Privacy</LinkListLink>
-              <LinkListLink href="#">Cookies</LinkListLink>
-              <LinkListLink href="#">Toegankelijkheid</LinkListLink>
-              <LinkListLink href="#">Open data</LinkListLink>
-              <LinkListLink href="#">Kwetsbaarheid melden</LinkListLink>
-            </LinkList>
-          </div>
-        </PageFooter>
-      </div>
-    </main>
+      <Footer
+        title="De Rijksoverheid. Voor Nederland"
+        columns={[
+          {
+            title: 'Service',
+            elements: [
+              <LinkList>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Contact
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Abonneren
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  RSS
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Vacatures
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Sitemap
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Help
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Archief
+                </LinkListLink>
+              </LinkList>,
+            ],
+          },
+          {
+            title: 'Over deze site',
+            elements: (
+              <LinkList>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Over Rijksoverheid.nl
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Wetten en regelingen
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Copyright
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Privacy
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Cookies
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Toegankelijkheid
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Open data
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Kwetsbaarheid melden
+                </LinkListLink>
+              </LinkList>
+            ),
+          },
+        ]}
+      ></Footer>
+    </>
   );
 }
