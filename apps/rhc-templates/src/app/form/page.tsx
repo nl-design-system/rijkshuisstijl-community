@@ -1,25 +1,34 @@
 'use client';
 
-import { AccordionProvider, Button, Heading, Link, Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
-import { FormLabel } from '@utrecht/component-library-react';
 import {
+  AccordionProvider,
   BreadcrumbNav,
   BreadcrumbNavLink,
+  BreadcrumbNavSeparator,
+  Button,
+  Heading,
+  Link,
+  LinkList,
+  LinkListLink,
+  Logo,
+  Paragraph,
+  UnorderedList,
+} from '@rijkshuisstijl-community/components-react';
+import { FormLabel } from '@utrecht/component-library-react';
+import {
   Checkbox,
   Fieldset,
   FieldsetLegend,
   FormField,
-  LinkList,
-  LinkListLink,
   PageContent,
   PageFooter,
   PageHeader,
   RadioButton,
   Textarea,
   Textbox,
-  UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
+import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import { DateInput, FileInput } from '@amsterdam/design-system-react';
 
 export default function Form() {
@@ -31,19 +40,23 @@ export default function Form() {
         </PageHeader>
       </div>
       <PageContent className="container page-content">
-        <div className="unstarted">
-          <BreadcrumbNav>
-            <BreadcrumbNavLink href="/" rel="home" index={0}>
-              Home
-            </BreadcrumbNavLink>
-            <BreadcrumbNavLink href="/a/" index={1}>
-              Niveau 1
-            </BreadcrumbNavLink>
-            <BreadcrumbNavLink href="/a/b/" rel="up" index={2}>
-              Niveau 2
-            </BreadcrumbNavLink>
-          </BreadcrumbNav>
-        </div>
+        <BreadcrumbNav>
+          <BreadcrumbNavLink href="/" rel="home" index={0}>
+            Home
+          </BreadcrumbNavLink>
+          <BreadcrumbNavSeparator>
+            <UtrechtIconChevronRight />
+          </BreadcrumbNavSeparator>
+          <BreadcrumbNavLink href="/a/" index={1}>
+            Niveau 1
+          </BreadcrumbNavLink>
+          <BreadcrumbNavSeparator>
+            <UtrechtIconChevronRight />
+          </BreadcrumbNavSeparator>
+          <BreadcrumbNavLink href="/a/b/" rel="up" index={2}>
+            Niveau 2
+          </BreadcrumbNavLink>
+        </BreadcrumbNav>
         <Heading level={1}>Formulier voor vragen over Sisa</Heading>
         <Paragraph>Heeft u vragen over Single information, Single audit (SiSa)?</Paragraph>
         <Paragraph>Gebruik dan het formulier hieronder.</Paragraph>

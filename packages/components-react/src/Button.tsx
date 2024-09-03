@@ -1,4 +1,3 @@
-import '@rijkshuisstijl-community/components-css/index.scss';
 import {
   Button,
   type ButtonProps,
@@ -21,7 +20,7 @@ export const IconButton = forwardRef(
     { children, className, label, ...restProps }: PropsWithChildren<IconButtonProps>,
     ref: ForwardedRef<HTMLButtonElement>,
   ) => (
-    <SubtleButton ref={ref} className={clsx('rhc-button', 'rhc-button--icon-only', className)} {...restProps}>
+    <SubtleButton className={clsx('rhc-button', 'rhc-button--icon-only', className)} ref={ref} {...restProps}>
       <span className="rhc-button__sr-only">{label}</span>
       <Icon>{children}</Icon>
     </SubtleButton>

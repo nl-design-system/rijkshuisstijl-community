@@ -48,6 +48,9 @@ importers:
       eslint-plugin-react:
         specifier: 7.34.4
         version: 7.34.4(eslint@8.57.0)
+      eslint-plugin-sort-exports:
+        specifier: 0.9.1
+        version: 0.9.1(eslint@8.57.0)
       husky:
         specifier: 9.1.1
         version: 9.1.1
@@ -142,6 +145,9 @@ importers:
       '@utrecht/components':
         specifier: 6.0.0
         version: 6.0.0
+      '@utrecht/web-component-library-react':
+        specifier: 1.2.0
+        version: 1.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -151,10 +157,6 @@ importers:
       typescript:
         specifier: 5.5.3
         version: 5.5.3
-
-  apps/rhc-templates/dist: {}
-
-  apps/rhc-templates/dist/types: {}
 
   apps/rvs.rivm.nl:
     dependencies:
@@ -211,11 +213,7 @@ importers:
         specifier: 5.5.3
         version: 5.5.3
 
-  packages/components-css:
-    devDependencies:
-      '@utrecht/components':
-        specifier: 6.0.0
-        version: 6.0.0
+  packages/components-css: {}
 
   packages/components-react:
     dependencies:
@@ -355,6 +353,9 @@ importers:
       '@etchteam/storybook-addon-status':
         specifier: 5.0.0
         version: 5.0.0
+      '@fontsource/fira-sans':
+        specifier: 5.0.21
+        version: 5.0.21
       '@nl-rvo/assets':
         specifier: 1.0.0-alpha.360
         version: 1.0.0-alpha.360
@@ -1634,6 +1635,9 @@ packages:
 
   '@etchteam/storybook-addon-status@5.0.0':
     resolution: {integrity: sha512-0Dg94xQ3T+rYTi6ekFkaH0XU9k0IQOqidiSmwN47Oqw4u1qjxK6m7wV3j7C0deLEuf4U4PrAcsDfDjyehKne2A==}
+
+  '@fontsource/fira-sans@5.0.21':
+    resolution: {integrity: sha512-R4s5A+WF4rm45Us+3Gqp9Lijm83OflTSVyp7xccQLUAtjzp+Qmp7Y+adQ37vnjxaNfSoicJ6fTNYvlXck6KNUg==}
 
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -4387,6 +4391,11 @@ packages:
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
+
+  eslint-plugin-sort-exports@0.9.1:
+    resolution: {integrity: sha512-2w6jHusdF2K60bcGKpa9HEinETwNzVrvplZipVculCfu3ZDd5IW3xL54XVEnVkGIPJnp/LitFCg7owL4DOtuHg==}
+    peerDependencies:
+      eslint: '>=5.0.0'
 
   eslint-scope@7.2.2:
     resolution: {integrity: sha512-dOt21O7lTMhDM+X9mB4GX+DZrZtCUJPL/wlcTqxyrx5IvO0IYtILdtrQGQp+8n5S0gwSVmOf9NQrjMOgfQZlIg==}
@@ -10041,6 +10050,8 @@ snapshots:
     dependencies:
       lodash: 4.17.21
 
+  '@fontsource/fira-sans@5.0.21': {}
+
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.2
@@ -13640,6 +13651,11 @@ snapshots:
       semver: 6.3.1
       string.prototype.matchall: 4.0.11
       string.prototype.repeat: 1.0.0
+
+  eslint-plugin-sort-exports@0.9.1(eslint@8.57.0):
+    dependencies:
+      eslint: 8.57.0
+      minimatch: 9.0.5
 
   eslint-scope@7.2.2:
     dependencies:

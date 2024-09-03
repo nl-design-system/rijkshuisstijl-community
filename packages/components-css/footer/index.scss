@@ -1,0 +1,33 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+.rhc-footer {
+  background-color: var(--utrecht-page-footer-background-color);
+  color: var(--utrecht-page-footer-color);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--utrecht-page-footer-gap);
+  justify-content: flex-start;
+  padding-block-end: var(--utrecht-page-footer-padding-block-end);
+  padding-block-start: var(--utrecht-page-footer-padding-block-start);
+  padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
+  padding-inline-start: var(--utrecht-page-footer-padding-inline-start);
+}
+
+.rhc-footer__title {
+  --utrecht-heading-4-color: var(--utrecht-page-footer-color);
+}
+
+.rhc-footer__column--title {
+  --utrecht-heading-5-color: var(--utrecht-page-footer-color);
+  --utrecht-heading-5-margin-block-end: var(--utrecht-page-footer-column-title-margin-block-end);
+  --utrecht-space-around: 1;
+}
+
+.rhc-footer__column {
+  --utrecht-link-hover-text-decoration: underline;
+  --_utrecht-link-state-text-decoration-color: --utrecht-page-footer-color;
+
+  flex: 1;
+}
