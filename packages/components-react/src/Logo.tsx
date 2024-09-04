@@ -24,9 +24,7 @@ export const Logo = forwardRef(
   ) => {
     return (
       <div className={clsx('rhc-logo', className)} ref={ref} {...restProps}>
-        <div className="rhc-logo__lint">
-          <div className="rhc-logo__emblem">{children}</div>
-        </div>
+        <div className="rhc-logo__lint">{children}</div>
         <div className="rhc-logo__wordmark">
           <p className="rhc-logo__title">{organisation}</p>
           {subtitle && <p className="rhc-logo__subtitle">{subtitle}</p>}
