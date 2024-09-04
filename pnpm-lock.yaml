@@ -114,7 +114,7 @@ importers:
         version: link:../../packages/components-react
       '@rijkshuisstijl-community/font':
         specifier: workspace:*
-        version: link:../../proprietary/font
+        version: link:../../packages/font
       '@rijkshuisstijl-community/rivm-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/rivm-design-tokens
@@ -158,6 +158,8 @@ importers:
         specifier: 5.5.3
         version: 5.5.3
 
+  apps/rhc-templates/dist/types: {}
+
   apps/rvs.rivm.nl:
     dependencies:
       next:
@@ -178,7 +180,7 @@ importers:
         version: link:../../packages/components-react
       '@rijkshuisstijl-community/font':
         specifier: workspace:*
-        version: link:../../proprietary/font
+        version: link:../../packages/font
       '@rijkshuisstijl-community/rivm-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/rivm-design-tokens
@@ -345,6 +347,12 @@ importers:
         specifier: 1.0.2
         version: 1.0.2(vite@5.3.4(@types/node@20.14.11)(sass@1.77.8)(terser@5.19.1))
 
+  packages/font:
+    devDependencies:
+      '@fontsource/fira-sans':
+        specifier: 5.0.21
+        version: 5.0.21
+
   packages/storybook:
     devDependencies:
       '@chromatic-com/storybook':
@@ -353,9 +361,6 @@ importers:
       '@etchteam/storybook-addon-status':
         specifier: 5.0.0
         version: 5.0.0
-      '@fontsource/fira-sans':
-        specifier: 5.0.21
-        version: 5.0.21
       '@nl-rvo/assets':
         specifier: 1.0.0-alpha.360
         version: 1.0.0-alpha.360
@@ -376,7 +381,7 @@ importers:
         version: link:../../proprietary/digid-design-tokens
       '@rijkshuisstijl-community/font':
         specifier: workspace:*
-        version: link:../../proprietary/font
+        version: link:../font
       '@rijkshuisstijl-community/logius-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/logius-design-tokens
@@ -587,8 +592,6 @@ importers:
       token-transformer:
         specifier: 0.0.33
         version: 0.0.33
-
-  proprietary/font: {}
 
   proprietary/logius-design-tokens:
     devDependencies:

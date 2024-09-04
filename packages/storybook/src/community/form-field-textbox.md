@@ -1,4 +1,8 @@
+<!-- @license CC0-1.0 -->
+
 # Rijkshuisstijl Community Form field with text input
+
+## Form field met [Textbox](/docs/rijkshuisstijl-textbox--docs)
 
 ## Usage
 
