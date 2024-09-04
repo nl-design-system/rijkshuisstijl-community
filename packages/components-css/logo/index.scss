@@ -4,15 +4,12 @@
  */
 
 .rhc-logo {
-  --_rhc-logo-emblem-inline-size: var(--rhc-logo-emblem-inline-size, calc(var(--rhc-logo-font-size, 1em) * 3.1415));
-
-  color: var(--rhc-logo-emblem-color);
   display: grid;
   font-family: var(--rhc-logo-font-family);
   font-size: var(--rhc-logo-title-font-size, 1em);
   font-weight: var(--rhc-logo-title-font-weight);
   gap: 0 var(--rhc-logo-column-gap, inherit);
-  grid-auto-rows: var(--_rhc-logo-lint-inline-size);
+  grid-auto-rows: var(--rhc-logo-lint-inline-size);
   grid-template-areas: ". lint ." ". lint wordmark";
   grid-template-columns: 1fr var(--rhc-logo-lint-inline-size) 1fr;
   grid-template-rows: 1fr 1fr;
