@@ -1,4 +1,7 @@
+@import "@utrecht/article-css/src/mixin";
+
 .utrecht-article {
+  @include utrecht-article;
+
   max-inline-size: var(--utrecht-article-max-inline-size);
-  writing-mode: horizontal-tb;
 }
