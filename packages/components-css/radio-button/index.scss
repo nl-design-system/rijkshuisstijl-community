@@ -4,6 +4,13 @@
  */
 
 .utrecht-radio-button--focus {
-  // Change checked dot color when radio button is focused
   --utrecht-radio-button-checked-color: var(--utrecht-radio-button-checked-background-color, inherit);
+}
+
+.utrecht-radio-button--disabled {
+  --utrecht-radio-button-checked-color: var(--utrecht-radio-button-disabled-color, inherit);
+}
+
+.utrecht-radio-button--invalid {
+  --utrecht-radio-button-background-color: var(--utrecht-radio-button-invalid-background-color, inherit);
 }
