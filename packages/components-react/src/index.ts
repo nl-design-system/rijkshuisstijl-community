@@ -35,6 +35,7 @@ export {
 } from './Button';
 export { Footer } from './Footer';
 export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFieldErrorMessage';
+export { FormFieldRadioOption, type FormFieldRadioOptionProps } from './FormFieldRadioOption';
 export { FormFieldSelect, type FormFieldSelectProps } from './FormFieldSelect';
 export { FormFieldTextarea, type FormFieldTextareaProps } from './FormFieldTextarea';
 export { FormFieldTextbox } from './FormFieldTextbox';

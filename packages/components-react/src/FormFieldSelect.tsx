@@ -1,13 +1,6 @@
-import {
-  FormField,
-  FormFieldDescription,
-  FormLabel,
-  Select,
-  SelectOption,
-  SelectProps,
-} from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
+import { FormField, FormFieldDescription, FormLabel, Select, SelectOption, SelectProps } from './';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
 export interface FormFieldSelectProps extends SelectProps {

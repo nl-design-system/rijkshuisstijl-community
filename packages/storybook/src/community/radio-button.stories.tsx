@@ -69,7 +69,6 @@ const meta = {
     },
     name: {
       description: 'Radio group name. Use the same name for each radio button in a group.',
-      control: 'string',
     },
   },
   parameters: {

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from './form-field-select.md?raw';
 
 const meta = {
-  title: 'Rijkshuisstijl/Form Field Select',
+  title: 'Rijkshuisstijl/Form field/Form Field Select',
   id: 'rijkshuisstijl-form-field-select',
   component: FormFieldSelect,
   argTypes: {
