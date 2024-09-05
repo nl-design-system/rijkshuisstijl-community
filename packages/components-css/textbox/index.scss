@@ -1,6 +1,6 @@
 .utrecht-textbox:focus {
   border-width: var(--utrecht-textbox-focus-border-width, var(--rhc-border-width-m));
-  &--invalid:focus {
-    border-width: var(--utrecht-textbox-focus-border-width, var(--rhc-border-width-m));
-  }
+}
+.utrecht-textbox--invalid:focus {
+  border-width: var(--utrecht-textbox-focus-border-width, var(--rhc-border-width-m)) !important;
 }
