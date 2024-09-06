@@ -8,12 +8,12 @@ import {
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './table-header-cell.md?raw';
 
-const TableHeaderCell = ({ children, withSorting, align, scope, ...restProps }: TableHeaderCellProps) => {
+const TableHeaderCell = ({ children, withSorting, alignCell, scope, ...restProps }: TableHeaderCellProps) => {
   return (
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHeaderCellComponent {...restProps} align={align} scope={scope} withSorting={withSorting}>
+          <TableHeaderCellComponent {...restProps} alignCell={alignCell} scope={scope} withSorting={withSorting}>
             {children}
           </TableHeaderCellComponent>
         </TableRow>
@@ -39,8 +39,8 @@ const meta = {
       options: ['row', 'col'],
       control: { type: 'select' },
     },
-    align: {
-      options: ['left', 'right', 'center'],
+    alignCell: {
+      options: ['start', 'end', 'center'],
       control: { type: 'select' },
     },
   },
@@ -62,6 +62,6 @@ export const Default: Story = {
     children: 'Label',
     scope: 'col',
     withSorting: false,
-    align: 'left',
+    alignCell: 'start',
   },
 };
