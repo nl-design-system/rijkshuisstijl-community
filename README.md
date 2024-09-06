@@ -49,14 +49,14 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm install`       | Installs dependencies                                                       |
 | `pnpm run storybook` | Starts local dev server at `localhost:6006` and a watcher for design tokens |
 | `pnpm run build`     | Build your production site to `./dist/`                                     |
-| `npm run lint`       | Run the linting scripts to ensure your code meets the project standards     |
-| `npm run lint-fix`   | Run the linting scripts and automatically fix all possible errors           |
+| `pnpm run lint`      | Run the linting scripts to ensure your code meets the project standards     |
+| `pnpm run lint-fix`  | Run the linting scripts and automatically fix all possible errors           |
 
 Best to be run from `packages/components-react` because then you get a more detailed view of how many test suites and tests are ran and which have passed:
 
-| Command        | Action              |
-| :------------- | :------------------ |
-| `npm run test` | Run all test suites |
+| Command         | Action              |
+| :-------------- | :------------------ |
+| `pnpm run test` | Run all test suites |
 
 ### Packages
 
