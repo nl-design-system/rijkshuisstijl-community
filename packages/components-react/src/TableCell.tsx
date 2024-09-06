@@ -5,16 +5,19 @@ import {
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
 export interface TableCellProps extends UtrechtTableCellProps {
-  align?: 'right' | 'center' | 'left';
+  alignCell?: 'start' | 'center' | 'end';
 }
 
 export const TableCell = forwardRef(
-  ({ children, align, ...restProps }: PropsWithChildren<TableCellProps>, ref: ForwardedRef<HTMLTableCellElement>) => {
+  (
+    { children, alignCell, ...restProps }: PropsWithChildren<TableCellProps>,
+    ref: ForwardedRef<HTMLTableCellElement>,
+  ) => {
     return (
       <UtrechtTableCell
         ref={ref}
         style={{
-          textAlign: align,
+          textAlign: alignCell,
         }}
         {...restProps}
       >

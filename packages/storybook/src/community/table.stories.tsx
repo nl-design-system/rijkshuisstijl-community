@@ -17,6 +17,9 @@ const meta = {
   id: 'rijkshuisstijl-table',
   component: Table,
   tags: ['autodocs'],
+  args: {
+    dir: '',
+  },
   parameters: {
     docs: {
       description: {
@@ -291,7 +294,7 @@ export const Alignment: Story = {
           <TableHeaderCell scope="col">Header</TableHeaderCell>
           <TableHeaderCell scope="col">Header</TableHeaderCell>
           <TableHeaderCell scope="col">Header</TableHeaderCell>
-          <TableHeaderCell align={'right'} scope="col">
+          <TableHeaderCell alignCell={'end'} scope="col">
             Header
           </TableHeaderCell>
         </TableRow>
@@ -301,19 +304,19 @@ export const Alignment: Story = {
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
-          <TableCell align={'right'}>Label</TableCell>
+          <TableCell alignCell={'end'}>Label</TableCell>
         </TableRow>{' '}
         <TableRow>
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
-          <TableCell align={'right'}>Label</TableCell>
+          <TableCell alignCell={'end'}>Label</TableCell>
         </TableRow>{' '}
         <TableRow>
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
-          <TableCell align={'right'}>Label</TableCell>
+          <TableCell alignCell={'end'}>Label</TableCell>
         </TableRow>
       </TableBody>,
     ],
@@ -356,6 +359,42 @@ export const Content: Story = {
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
+        </TableRow>
+      </TableBody>,
+    ],
+  },
+};
+export const RightToLeft: Story = {
+  args: {
+    children: [
+      <TableCaption dir={'rtl'}>من اليمين إلى اليسار</TableCaption>,
+      <TableHeader dir={'rtl'}>
+        <TableRow>
+          <TableHeaderCell alignCell={'end'} scope="col">
+            العنوان
+          </TableHeaderCell>
+          <TableHeaderCell scope="col">العنوان</TableHeaderCell>
+          <TableHeaderCell dir={'rtl'} scope="col">
+            العنوان
+          </TableHeaderCell>
+        </TableRow>
+      </TableHeader>,
+
+      <TableBody dir={'rtl'}>
+        <TableRow>
+          <TableCell alignCell={'end'}>وسم</TableCell>
+          <TableCell>وسم</TableCell>
+          <TableCell>وسم</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell alignCell={'end'}>وسم</TableCell>
+          <TableCell>وسم</TableCell>
+          <TableCell>وسم</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell alignCell={'end'}>وسم</TableCell>
+          <TableCell>وسم</TableCell>
+          <TableCell>وسم</TableCell>
         </TableRow>
       </TableBody>,
     ],
