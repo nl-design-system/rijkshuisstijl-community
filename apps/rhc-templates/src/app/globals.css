@@ -3,6 +3,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  padding: 0.25em;
 }
 
 .page {
@@ -10,55 +11,63 @@ body {
 }
 
 .unstarted {
-  border: medium solid red;
+  border: 2px dashed red;
 }
 
 .unfinished {
-  border: medium solid yellow;
+  border: 2px dashed yellow;
 }
 
 .explanation {
   color: red;
 }
 
-.information,
-.header {
-  background-color: white;
+.rhc-background-color-white {
+  background-color: var(--rhc-color-wit);
 }
 
-.container {
-  background-color: white;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 74em;
+.rhc-background-color-lint-blauw {
+  background-color: var(--rhc-color-lintblauw-500);
 }
 
-.page-content {
+.rhc-spacing-2 {
+  margin-block-end: var(--rhc-space-400);
+}
+
+.rhc-main-content {
   display: flex;
-  flex-direction: column;
-  /* padding: 3em 6em !important; */
-  gap: 1em !important;
+  justify-content: center;
+  align-items: center;
 }
 
-.header-image {
-  background-image: url("https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg");
-  padding: 3.5rem 1rem 5.5rem;
+.utrecht-figure {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
-.header-image-textbox {
-  max-width: 1200px;
-  background-color: #f2f4f6;
+.rhc-page-content {
+  --utrecht-page-content-padding-block-end: var(--rhc-space-600);
+  --utrecht-page-content-padding-block-start: var(--rhc-space-600);
+  --utrecht-page-padding-inline-end: var(--rhc-space-700);
+  --utrecht-page-padding-inline-start: var(--rhc-space-700);
+
+  margin-block-start: 80px;
+  margin-block-end: 80px;
+  width: 70%;
 }
 
-@media (min-width: 768px) {
-  .page-content {
-    padding: 0 !important;
+.utrecht-nav-list {
+  gap: 0.5rem;
+}
+
+.utrecht-nav-list__link a {
+  color: white;
+}
+
+@media (max-width: 780px) {
+  .rhc-page-content {
+    width: 100%;
+    margin-block-start: 0;
+    margin-block-end: 0;
   }
-  .header-image-textbox {
-    max-width: 35%;
-  }
-}
-
-.sub-navigation {
-  background-color: #f2f4f6;
 }

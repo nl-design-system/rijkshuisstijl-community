@@ -1,27 +1,24 @@
 'use client';
 
-import { Logo, Paragraph } from '@rijkshuisstijl-community/components-react';
 import {
   BreadcrumbNav,
   BreadcrumbNavLink,
   Figure,
   FigureCaption,
+  Footer,
   Heading,
   Image,
-  LinkList,
-  LinkListLink,
-  PageContent,
-  PageFooter,
-  PageHeader,
+  Paragraph,
   Separator,
-} from '@utrecht/component-library-react/dist/css-module';
+} from '@rijkshuisstijl-community/components-react';
+import { LinkList, LinkListLink, PageContent, PageHeader } from '@utrecht/component-library-react/dist/css-module';
+import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 
 export default function Details() {
   return (
     <main>
       <div className="unfinished">
         <PageHeader>
-          <Logo organisation="Voorbeeld organisatie" subtitle="Voorbeeld sub-title"></Logo>
           <BreadcrumbNav>
             <BreadcrumbNavLink href="/" rel="home" index={0}>
               Home
@@ -58,12 +55,8 @@ export default function Details() {
           Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de combinatie van werk, privé en
           zorgtaken gemakkelijker maken.
         </Paragraph>
-        <div className="unstarted">
-          <Separator></Separator>
-        </div>
-        <div className="unstarted">
-          <Heading level={1}>Vraag en antwoord</Heading>
-        </div>
+        <Separator></Separator>
+        <Heading level={1}>Vraag en antwoord</Heading>
         <div className="unstarted">
           <LinkList>
             <LinkListLink>Wat zijn de regels bij consignatie (oproepdienst)?</LinkListLink>
@@ -88,7 +81,7 @@ export default function Details() {
               </Figure>
             </div>
             <div className="image-group-box">
-              <Figure className="unstarted">
+              <Figure>
                 <Image
                   alt="Multicolored tulip field"
                   width="640"
@@ -101,42 +94,70 @@ export default function Details() {
           </div>
         </div>
       </PageContent>
-      <div className="unstarted">
-        <PageFooter>
-          <Heading level={1} appearance="utrecht-heading-2">
-            De Rijksoverheid. Voor Nederland
-          </Heading>
-          <div className="left-column">
-            <Heading level={2} appearance="utrecht-heading-4">
-              Service
-            </Heading>
-            <LinkList>
-              <LinkListLink href="#">Contact</LinkListLink>
-              <LinkListLink href="#">Abonneren</LinkListLink>
-              <LinkListLink href="#">RSS</LinkListLink>
-              <LinkListLink href="#">Vacatures</LinkListLink>
-              <LinkListLink href="#">Sitemap</LinkListLink>
-              <LinkListLink href="#">Help</LinkListLink>
-              <LinkListLink href="#">Archief</LinkListLink>
-            </LinkList>
-          </div>
-          <div className="right-column">
-            <Heading level={2} appearance="utrecht-heading-4">
-              Service
-            </Heading>
-            <LinkList>
-              <LinkListLink href="#">Over Rijksoverheid.nl</LinkListLink>
-              <LinkListLink href="#">Wetten en regelingen</LinkListLink>
-              <LinkListLink href="#">Copyright</LinkListLink>
-              <LinkListLink href="#">Privacy</LinkListLink>
-              <LinkListLink href="#">Cookies</LinkListLink>
-              <LinkListLink href="#">Toegankelijkheid</LinkListLink>
-              <LinkListLink href="#">Open data</LinkListLink>
-              <LinkListLink href="#">Kwetsbaarheid melden</LinkListLink>
-            </LinkList>
-          </div>
-        </PageFooter>
-      </div>
+      <Footer
+        title="De Rijksoverheid. Voor Nederland"
+        columns={[
+          {
+            title: 'Service',
+            elements: [
+              <LinkList key="1">
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Contact
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Abonneren
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  RSS
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Vacatures
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Sitemap
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Help
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Archief
+                </LinkListLink>
+              </LinkList>,
+            ],
+          },
+          {
+            title: 'Over deze site',
+            elements: (
+              <LinkList key="2">
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Over Rijksoverheid.nl
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Wetten en regelingen
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Copyright
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Privacy
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Cookies
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Toegankelijkheid
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Open data
+                </LinkListLink>
+                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                  Kwetsbaarheid melden
+                </LinkListLink>
+              </LinkList>
+            ),
+          },
+        ]}
+      ></Footer>
     </main>
   );
 }

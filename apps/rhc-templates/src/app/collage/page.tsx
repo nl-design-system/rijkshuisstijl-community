@@ -1,7 +1,30 @@
 'use client';
 
-
-import { AccordionProvider, Blockquote, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
+import {
+  AccordionProvider,
+  Alert,
+  Blockquote,
+  BreadcrumbNav,
+  BreadcrumbNavLink,
+  Button,
+  Heading,
+  IconButton,
+  Image,
+  Link,
+  LinkList,
+  LinkListLink,
+  Paragraph,
+  Separator,
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHeader,
+  TableHeaderCell,
+  TableRow,
+  UnorderedList,
+} from '@rijkshuisstijl-community/components-react';
 import { Avatar, Pagination } from '@amsterdam/design-system-react';
 import {
   IconAlertTriangle,
@@ -12,11 +35,7 @@ import {
   IconInfoCircle,
 } from '@tabler/icons-react/dist/esm/tabler-icons-react';
 import {
-  Alert,
   BadgeCounter,
-  BreadcrumbNav,
-  BreadcrumbNavLink,
-  Button,
   Checkbox,
   DataList,
   DataListActions,
@@ -26,33 +45,19 @@ import {
   FormField,
   FormFieldErrorMessage,
   FormLabel,
-  Heading,
-  Image,
-  LinkList,
-  LinkListLink,
   OrderedList,
   OrderedListItem,
   RadioButton,
-  Separator,
   StatusBadge,
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableFooter,
-  TableHeader,
-  TableHeaderCell,
-  TableRow,
   Textarea,
   Textbox,
-  UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
 
 export default function Collage() {
   return (
     <>
-      <div className="unfinished">
+      <div>
         <BreadcrumbNav>
           <BreadcrumbNavLink href="/" rel="home" index={0}>
             Label
@@ -62,17 +67,13 @@ export default function Collage() {
       <div className="unfinished">
         <Avatar label="BK"></Avatar>
       </div>
-      <div className="unstarted">
-        <Heading level={1}>Componenten collage NL Design System</Heading>
-      </div>
-      <div className="unstarted">
-        <Image
-          alt="Multicolored tulip field"
-          width="640"
-          height="763"
-          src="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
-        ></Image>
-      </div>
+      <Heading level={1}>Componenten collage NL Design System</Heading>
+      <Image
+        alt="Multicolored tulip field"
+        width="640"
+        height="763"
+        src="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
+      ></Image>
       <Paragraph lead>
         In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
       </Paragraph>
@@ -113,30 +114,18 @@ export default function Collage() {
         In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
       </Paragraph>
       <Blockquote attribution="— Pippi Langkous">Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan</Blockquote>
-      <div className="unstarted">
-        <Separator></Separator>
-      </div>
+      <Separator></Separator>
       <Link href="#">
         {`Hello, I'm a link `}
         <IconArrowRight />
       </Link>
-      <div className="unstarted">
-        <Button appearance="primary-action-button">Primary button</Button>
-      </div>
-      <div className="unstarted">
-        <Button appearance="secondary-action-button">Secondary button</Button>
-      </div>
-      <div className="unstarted">
-        <Button>Default button</Button>
-      </div>
-      <div className="unstarted">
-        <Button appearance="subtle-button">Subtle button</Button>
-      </div>
-      <div className="unstarted">
-        <Button appearance="subtle-button">
-          <IconCalendarEvent />
-        </Button>
-      </div>
+      <Button appearance="primary-action-button">Primary button</Button>
+      <Button appearance="secondary-action-button">Secondary button</Button>
+      <Button>Default button</Button>
+      <Button appearance="subtle-button">Subtle button</Button>
+      <IconButton label="calendar">
+        <IconCalendarEvent />
+      </IconButton>
       <div className="unstarted">
         <FormField label="Name" description="Description">
           <Textbox></Textbox>
@@ -175,18 +164,16 @@ export default function Collage() {
           </div>
         </FormField>
       </div>
-      <div className="unstarted">
-        <Alert type="error">
-          <Heading level={1}>Heading</Heading>
-          <Paragraph>
-            <LinkList>
-              <LinkListLink href="#">Label</LinkListLink>
-              <LinkListLink href="#">Label</LinkListLink>
-              <LinkListLink href="#">Label</LinkListLink>
-            </LinkList>
-          </Paragraph>
-        </Alert>
-      </div>
+      <Alert type="error">
+        <Heading level={1}>Heading</Heading>
+        <Paragraph>
+          <LinkList>
+            <LinkListLink href="#">Label</LinkListLink>
+            <LinkListLink href="#">Label</LinkListLink>
+            <LinkListLink href="#">Label</LinkListLink>
+          </LinkList>
+        </Paragraph>
+      </Alert>
       <div className="unstarted">
         <FormField label="Label" description="Description">
           <FormFieldErrorMessage>
@@ -303,7 +290,7 @@ export default function Collage() {
       <div className="unstarted">
         <StatusBadge status="warning">Label</StatusBadge>
       </div>
-      <div className="unstarted">
+      <div>
         <Table>
           <TableCaption>Caption van tabel</TableCaption>
           <TableHeader>

@@ -1,0 +1,8 @@
+.utrecht-textarea {
+  &:focus {
+    border-width: var(--utrecht-textarea-focus-border-width, var(--rhc-border-width-m, 2px)) !important;
+  }
+  &--html-textarea:read-only {
+    --utrecht-textarea-read-only-border: var(--utrecht-textarea-read-only-background-color, --rhc-color-grijs-100);
+  }
+}

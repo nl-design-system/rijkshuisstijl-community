@@ -93,6 +93,8 @@ jobs:
     steps:
       - name: Checkout branch
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        with:
+          fetch-depth: 0
 
       - name: Install pnpm package manager
         uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4.0.0
@@ -111,6 +113,13 @@ jobs:
 
       - name: "Continuous Integration: test"
         run: pnpm run --if-present test
+
+      - name: Run Chromatic
+        uses: chromaui/action@b984808b772126a9f44b2b7737b131b68a2ede32 # 11.7.1
+        with:
+          autoAcceptChanges: "main"
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storybookBuildDir: packages/storybook/dist/
 
   publish-website:
     runs-on: ubuntu-latest

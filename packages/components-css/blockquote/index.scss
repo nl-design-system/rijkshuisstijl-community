@@ -1,15 +1,18 @@
-@import "../node_modules/@utrecht/components/blockquote/src/";
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
 
 .utrecht-blockquote {
-  color: var(--utrecht-blockquote-content-color, inherit);
+  --utrecht-blockquote-color: --utrecht-blockquote-content-color;
+  --utrecht-blockquote-font-size: --utrecht-blockquote-content-font-size;
+  --utrecht-document-font-family: --utrecht-blockquote-content-font-family;
+
   display: flex;
   flex-direction: column;
-  font-family: var(--utrecht-blockquote-content-font-family, inherit);
-  font-size: var(--utrecht-blockquote-content-font-size, inherit);
-  row-gap: var(--utrecht-blockquote-row-gap);
+  row-gap: var(--utrecht-blockquote-row-gap, inherit);
 }
 
 .utrecht-blockquote__attribution {
-  color: var(--utrecht-blockquote-attribution-color, inherit);
   font-family: var(--utrecht-blockquote-attribution-font-family, inherit);
 }
