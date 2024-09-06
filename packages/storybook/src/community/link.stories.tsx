@@ -4,18 +4,45 @@ import { Link } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
 import { Icon } from '@utrecht/component-library-react/dist/css-module';
+import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
 import readme from './link.md?raw';
 interface LinkStoryProps {
+  active?: boolean;
+  focus?: boolean;
+  focusVisible?: boolean;
   href: string;
   iconLeft?: boolean;
   iconRight?: boolean;
   external?: boolean;
   externalLabel?: string;
+  visited?: boolean;
 }
 
-const LinkStory = ({ href, children, iconLeft, iconRight, external, ...props }: PropsWithChildren<LinkStoryProps>) => (
-  <Link external={external} href={href} {...props}>
+const LinkStory = ({
+  active,
+  focus,
+  focusVisible,
+  visited,
+  href,
+  children,
+  iconLeft,
+  iconRight,
+  external,
+  ...props
+}: PropsWithChildren<LinkStoryProps>) => (
+  <Link
+    external={external}
+    href={href}
+    className={clsx({
+      'utrecht-link--active': active,
+      'utrecht-link--external': external,
+      'utrecht-link--focus': focus,
+      'utrecht-link--focus-visible': focusVisible,
+      'utrecht-link--visited': visited,
+    })}
+    {...props}
+  >
     {iconLeft && (
       <Icon>
         <IconCalendarEvent />
@@ -43,6 +70,33 @@ const meta = {
       },
       table: {
         category: 'Property',
+      },
+    },
+    active: {
+      description: 'Whether the link is active',
+      type: {
+        name: 'boolean',
+      },
+      table: {
+        category: 'Demo',
+      },
+    },
+    focus: {
+      description: 'Whether the link is focused',
+      type: {
+        name: 'boolean',
+      },
+      table: {
+        category: 'Demo',
+      },
+    },
+    focusVisible: {
+      description: 'Whether the link is focus visible',
+      type: {
+        name: 'boolean',
+      },
+      table: {
+        category: 'Demo',
       },
     },
     external: {

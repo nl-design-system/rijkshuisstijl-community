@@ -5,9 +5,15 @@
 @import "../button/mixin";
 
 .rhc-link:any-link {
-  align-items: center;
+  --utrecht-icon-inset-block-start: var(--utrecht-link-icon-inset-block-start, inherit);
+
   column-gap: var(--utrecht-link-column-gap, inherit);
   display: inline-flex;
+}
+
+.rhc-link:any-link .utrecht-icon {
+  min-block-size: var(--utrecht-link-icon-size, inherit);
+  min-inline-size: var(--utrecht-link-icon-size, inherit);
 }
 
 .rhc-link .rhc-link__sr-only {
