@@ -52,6 +52,12 @@ All commands are run from the root of the project, from a terminal:
 | `npm run lint`       | Run the linting scripts to ensure your code meets the project standards     |
 | `npm run lint-fix`   | Run the linting scripts and automatically fix all possible errors           |
 
+Best to be run from `packages/components-react` because then you get a more detailed view of how many test suites and tests are ran and which have passed:
+
+| Command        | Action              |
+| :------------- | :------------------ |
+| `npm run test` | Run all test suites |
+
 ### Packages
 
 | Package                  | Purpose                                                                                                                                              |
