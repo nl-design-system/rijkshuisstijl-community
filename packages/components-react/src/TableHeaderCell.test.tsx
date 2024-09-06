@@ -9,18 +9,18 @@ describe('TableHeaderCell', () => {
   });
 
   test('applies correct text alignment when align="right"', () => {
-    const { container } = render(<TableHeaderCell align="right">Aligned Right</TableHeaderCell>);
-    expect(container.firstChild).toHaveStyle('text-align: right');
+    const { container } = render(<TableHeaderCell alignCell="end">Aligned Right</TableHeaderCell>);
+    expect(container.firstChild).toHaveStyle('text-align: end');
   });
 
   test('applies correct text alignment when align="center"', () => {
-    const { container } = render(<TableHeaderCell align="center">Aligned Center</TableHeaderCell>);
+    const { container } = render(<TableHeaderCell alignCell="center">Aligned Center</TableHeaderCell>);
     expect(container.firstChild).toHaveStyle('text-align: center');
   });
 
   test('applies correct text alignment when align="left"', () => {
-    const { container } = render(<TableHeaderCell align="left">Aligned Left</TableHeaderCell>);
-    expect(container.firstChild).toHaveStyle('text-align: left');
+    const { container } = render(<TableHeaderCell alignCell="start">Aligned Left</TableHeaderCell>);
+    expect(container.firstChild).toHaveStyle('text-align: start');
   });
 
   test('renders Button with sorting icon when withSorting is true and aria-sort is "ascending"', () => {
