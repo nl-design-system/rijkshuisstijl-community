@@ -1,7 +1,7 @@
 import { PageFooterProps, PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
-import { Heading } from './index';
+import { Heading } from './Heading';
 
 interface FooterProps extends PageFooterProps {
   title: string;

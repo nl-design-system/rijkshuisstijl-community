@@ -1,4 +1,5 @@
 export { AscendingIcon } from './AscendingIcon';
+export { ChevronRightIcon } from './ChevronRightIcon';
 export { DescendingIcon } from './DescendingIcon';
 export { DutchMapIcon } from './DutchMapIcon';
 export { ErrorIcon } from './ErrorIcon';
