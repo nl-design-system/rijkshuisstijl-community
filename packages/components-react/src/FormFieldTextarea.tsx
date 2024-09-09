@@ -1,6 +1,13 @@
+import {
+  FormField,
+  FormFieldDescription,
+  FormFieldProps,
+  FormLabel,
+  Textarea,
+  TextareaProps,
+} from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
-import { FormField, FormFieldDescription, FormFieldProps, FormLabel, Textarea, TextareaProps } from './';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 export interface FormFieldTextareaProps
   extends Omit<FormFieldProps, 'onInput' | 'onBlur' | 'onFocus' | 'onChange'>,
