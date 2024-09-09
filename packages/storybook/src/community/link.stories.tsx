@@ -81,6 +81,15 @@ const meta = {
         category: 'Demo',
       },
     },
+    visited: {
+      description: 'Whether the link is visited',
+      type: {
+        name: 'boolean',
+      },
+      table: {
+        category: 'Demo',
+      },
+    },
     focus: {
       description: 'Whether the link is focused',
       type: {
