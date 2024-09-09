@@ -16,6 +16,10 @@
   min-inline-size: var(--utrecht-link-icon-size, inherit);
 }
 
+.utrecht-link--visited {
+  --utrecht-link-text-decoration-color: var(--utrecht-link-visited-color, inherit);
+}
+
 .rhc-link .rhc-link__sr-only {
   @include invisible-but-accessible;
 }
