@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from './form-field-textbox.md?raw';
 
 const meta = {
-  title: 'Rijkshuisstijl/Form field/Form Field Text Input',
+  title: 'Rijkshuisstijl/Form Field/Form Field Text Input',
   id: 'rijkshuisstijl-form-field-text-input',
   component: FormFieldTextbox,
   argTypes: {

@@ -1,18 +1,18 @@
 /* @license CC0-1.0 */
 
-import { RadioButton, type RadioButtonProps } from '@rijkshuisstijl-community/components-react';
+import { Radio, type RadioProps } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import clsx from 'clsx';
 
-interface RadioButtonStoryProps extends RadioButtonProps {
+interface RadioStoryProps extends RadioProps {
   focus?: boolean;
   focusVisible?: boolean;
   hover?: boolean;
   active?: boolean;
 }
 
-const RadioButtonStory = ({ active, focus, focusVisible, hover, name, ...args }: RadioButtonStoryProps) => (
-  <RadioButton
+const RadioStory = ({ active, focus, focusVisible, hover, name, ...args }: RadioStoryProps) => (
+  <Radio
     name={name || undefined}
     className={clsx({
       'utrecht-radio-button--active': active,
@@ -25,9 +25,9 @@ const RadioButtonStory = ({ active, focus, focusVisible, hover, name, ...args }:
 );
 
 const meta = {
-  title: 'Rijkshuisstijl/Radio Button',
-  id: 'rijkshuisstijl-radio-button',
-  component: RadioButtonStory,
+  title: 'Rijkshuisstijl/Radio',
+  id: 'rijkshuisstijl-radio',
+  component: RadioStory,
   args: {
     checked: false,
     disabled: false,
@@ -68,22 +68,10 @@ const meta = {
       control: 'boolean',
     },
     name: {
-      description: 'Radio group name. Use the same name for each radio button in a group.',
+      description: 'Radio group name. Use the same name for each radio in a group.',
     },
   },
-  parameters: {
-    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fradio-button',
-    communityFigma:
-      'https://www.figma.com/design/shhwGcqPLi2CapK0P1zz8O/NLDS---Voorbeeld---Bibliotheek?node-id=948-1789&t=CiZrkiC5t6Bn59Hg-0',
-    figma:
-      'https://www.figma.com/design/UXIHcIurAD8hyoBWx4hDBV/NLDS---Gemeente-Utrecht---Bibliotheek?node-id=948-1789&t=kJatlKfN59e8T0eA-0',
-    nldesignsystem: 'https://nldesignsystem.nl/radio',
-    tokensPrefix: 'utrecht-radio-button',
-    status: {
-      type: 'WORK IN PROGRESS',
-    },
-  },
-} satisfies Meta<typeof RadioButtonStory>;
+} satisfies Meta<typeof RadioStory>;
 
 export default meta;
 

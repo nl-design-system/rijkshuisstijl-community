@@ -44,7 +44,7 @@ export { Image, type ImageProps } from './Image';
 export { Link, type LinkProps } from './Link';
 export { Logo, type LogoProps } from './Logo';
 export { Paragraph, type ParagraphProps } from './Paragraph';
-export { RadioButton, type RadioButtonProps } from './RadioButton';
+export { Radio, type RadioProps } from './Radio';
 export { Separator, type SeparatorProps } from './Separator';
 export { TableCell, type TableCellProps } from './TableCell';
 export { TableHeaderCell, type TableHeaderCellProps } from './TableHeaderCell';

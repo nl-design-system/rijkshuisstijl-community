@@ -1,11 +1,11 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
-import { FormField, FormFieldDescription, FormLabel, RadioButton, RadioButtonProps } from '.';
+import { FormField, FormFieldDescription, FormLabel, Radio, RadioProps } from '.';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
-export interface FormFieldRadioOptionProps extends RadioButtonProps {
+export interface FormFieldRadioOptionProps extends RadioProps {
   errorMessage?: string;
-  radioButtonRef?: Ref<HTMLInputElement>;
+  radioRef?: Ref<HTMLInputElement>;
   status?: ReactNode;
   description?: ReactNode;
   input?: ReactNode;
@@ -21,7 +21,7 @@ export const FormFieldRadioOption = forwardRef(
       description,
       disabled,
       errorMessage,
-      radioButtonRef,
+      radioRef,
       status,
       invalid,
       input,
@@ -38,12 +38,12 @@ export const FormFieldRadioOption = forwardRef(
     return (
       <FormField dir={dir} input={input} invalid={invalid} ref={ref} type={'radio'}>
         <div className="utrecht-form-field__input">
-          <RadioButton
+          <Radio
             dir={dir}
             disabled={disabled}
             id={id}
             invalid={invalid}
-            ref={radioButtonRef}
+            ref={radioRef}
             aria-describedby={
               clsx({
                 [descriptionId]: description,
@@ -55,7 +55,7 @@ export const FormFieldRadioOption = forwardRef(
               'utrecht-radio-button--html-radio-button-rtl': dir === 'rtl',
             })}
             {...restProps}
-          ></RadioButton>
+          ></Radio>
         </div>
         <div className="utrecht-form-field__label">
           <FormLabel htmlFor={id}>{label}</FormLabel>
