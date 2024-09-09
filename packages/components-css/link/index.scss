@@ -20,6 +20,10 @@
   --utrecht-link-text-decoration-color: var(--utrecht-link-visited-color, inherit);
 }
 
+.utrecht-link--active {
+  --utrecht-link-text-decoration: var(--utrecht-link-active-text-decoration, inherit);
+}
+
 .rhc-link .rhc-link__sr-only {
   @include invisible-but-accessible;
 }
