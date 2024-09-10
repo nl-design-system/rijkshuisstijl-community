@@ -13,27 +13,14 @@ interface LinkStoryProps {
   iconRight?: boolean;
   external?: boolean;
   externalLabel?: string;
-  focusVisible?: boolean;
-  visited?: boolean;
 }
 
-const LinkStory = ({
-  href,
-  children,
-  iconLeft,
-  iconRight,
-  external,
-  focusVisible,
-  visited,
-  ...props
-}: PropsWithChildren<LinkStoryProps>) => (
+const LinkStory = ({ href, children, iconLeft, iconRight, external, ...props }: PropsWithChildren<LinkStoryProps>) => (
   <Link
     external={external}
     href={href}
     className={clsx({
       'utrecht-link--external': external,
-      'utrecht-link--focus-visible': focusVisible,
-      'utrecht-link--visited': visited,
     })}
     {...props}
   >
@@ -66,8 +53,26 @@ const meta = {
         category: 'Property',
       },
     },
+    active: {
+      description: 'Whether the link is active',
+      type: {
+        name: 'boolean',
+      },
+      table: {
+        category: 'Demo',
+      },
+    },
     visited: {
       description: 'Whether the link is visited',
+      type: {
+        name: 'boolean',
+      },
+      table: {
+        category: 'Demo',
+      },
+    },
+    focus: {
+      description: 'Whether the link is focused',
       type: {
         name: 'boolean',
       },
@@ -154,14 +159,14 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    href: 'https://example.com/',
+    href: '#',
     children: 'Label',
   },
 };
 
 export const IconLeft: Story = {
   args: {
-    href: 'https://example.com/',
+    href: '#',
     children: 'Label',
     iconLeft: true,
   },
@@ -169,7 +174,7 @@ export const IconLeft: Story = {
 
 export const IconRight: Story = {
   args: {
-    href: 'https://example.com/',
+    href: '#',
     children: 'Label',
     iconRight: true,
   },
@@ -177,7 +182,7 @@ export const IconRight: Story = {
 
 export const External: Story = {
   args: {
-    href: 'https://example.com/',
+    href: '#',
     children: 'Label',
     external: true,
     externalLabel: 'example external label',
@@ -189,7 +194,7 @@ export const Active: Story = {
     pseudo: { active: true },
   },
   args: {
-    href: 'https://example.com/',
+    href: '#',
     children: 'Label',
   },
 };
@@ -199,7 +204,27 @@ export const Focus: Story = {
     pseudo: { focus: true },
   },
   args: {
+    href: '#',
+    children: 'Label',
+  },
+};
+
+export const FocusVisible: Story = {
+  parameters: {},
+  args: {
+    href: '#',
+    children: 'Label',
+    className: 'utrecht-link--focus-visible',
+  },
+};
+
+export const Visited: Story = {
+  parameters: {
+    pseudo: { visited: true },
+  },
+  args: {
     href: 'https://example.com/',
     children: 'Label',
+    className: 'utrecht-link--visited',
   },
 };

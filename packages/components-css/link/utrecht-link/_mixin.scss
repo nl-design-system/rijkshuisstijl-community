@@ -101,6 +101,9 @@ however browsers don't seem to have implemented great looking supixel tweening y
 @mixin utrecht-link--visited {
   --_utrecht-link-forced-colors-color: visitedtext;
   --_utrecht-link-state-color: var(--utrecht-link-visited-color);
+
+  color: var(--utrecht-link-visited-color, inherit);
+  text-decoration-color: var(--utrecht-link-visited-color, inherit) !important;
 }
 
 @mixin utrecht-link--hover {
@@ -116,6 +119,8 @@ however browsers don't seem to have implemented great looking supixel tweening y
 @mixin utrecht-link--active {
   --_utrecht-link-forced-colors-color: activetext;
   --_utrecht-link-state-color: var(--utrecht-link-active-color);
+
+  text-decoration: none !important;
 }
 
 @mixin utrecht-link--focus {

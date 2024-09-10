@@ -13,6 +13,18 @@
   @include utrecht-link;
 }
 
+.utrecht-link:visited {
+  @include utrecht-link--visited;
+}
+
+.utrecht-link:hover {
+  @include utrecht-link--hover;
+}
+
+.utrecht-link:active {
+  @include utrecht-link--active;
+}
+
 .utrecht-link:any-link {
   @include utrecht-link--any-link;
 }
