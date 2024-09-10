@@ -41,6 +41,7 @@ export { FormFieldTextbox } from './FormFieldTextbox';
 export { Heading, type HeadingProps } from './Heading';
 export { Image, type ImageProps } from './Image';
 export { Link, type LinkProps } from './Link';
+export { LinkList, type LinkListProps } from './LinkList';
 export { Logo, type LogoProps } from './Logo';
 export { Paragraph, type ParagraphProps } from './Paragraph';
 export { Separator, type SeparatorProps } from './Separator';
