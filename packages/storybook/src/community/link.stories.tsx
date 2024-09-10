@@ -8,36 +8,30 @@ import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
 import readme from './link.md?raw';
 interface LinkStoryProps {
-  active?: boolean;
-  focus?: boolean;
-  focusVisible?: boolean;
   href: string;
   iconLeft?: boolean;
   iconRight?: boolean;
   external?: boolean;
   externalLabel?: string;
+  focusVisible?: boolean;
   visited?: boolean;
 }
 
 const LinkStory = ({
-  active,
-  focus,
-  focusVisible,
-  visited,
   href,
   children,
   iconLeft,
   iconRight,
   external,
+  focusVisible,
+  visited,
   ...props
 }: PropsWithChildren<LinkStoryProps>) => (
   <Link
     external={external}
     href={href}
     className={clsx({
-      'utrecht-link--active': active,
       'utrecht-link--external': external,
-      'utrecht-link--focus': focus,
       'utrecht-link--focus-visible': focusVisible,
       'utrecht-link--visited': visited,
     })}
@@ -72,26 +66,8 @@ const meta = {
         category: 'Property',
       },
     },
-    active: {
-      description: 'Whether the link is active',
-      type: {
-        name: 'boolean',
-      },
-      table: {
-        category: 'Demo',
-      },
-    },
     visited: {
       description: 'Whether the link is visited',
-      type: {
-        name: 'boolean',
-      },
-      table: {
-        category: 'Demo',
-      },
-    },
-    focus: {
-      description: 'Whether the link is focused',
       type: {
         name: 'boolean',
       },
@@ -205,5 +181,25 @@ export const External: Story = {
     children: 'Label',
     external: true,
     externalLabel: 'example external label',
+  },
+};
+
+export const Active: Story = {
+  parameters: {
+    pseudo: { active: true },
+  },
+  args: {
+    href: 'https://example.com/',
+    children: 'Label',
+  },
+};
+
+export const Focus: Story = {
+  parameters: {
+    pseudo: { focus: true },
+  },
+  args: {
+    href: 'https://example.com/',
+    children: 'Label',
   },
 };
