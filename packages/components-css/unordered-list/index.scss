@@ -18,6 +18,10 @@
   padding-inline-start: var(--utrecht-unordered-list-item-padding-inline-start);
 }
 
+.utrecht-unordered-list--nested {
+  margin-inline-start: var(--utrecht-unordered-list-margin-inline-start);
+}
+
 .utrecht-unordered-list--nested > .utrecht-unordered-list__item::marker {
   content: "○";
 }
