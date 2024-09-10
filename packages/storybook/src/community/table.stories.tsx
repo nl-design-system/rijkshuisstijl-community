@@ -147,7 +147,7 @@ export const Footer: Story = {
 export const Sorting: Story = {
   args: {
     children: [
-      <TableCaption>Soorten</TableCaption>,
+      <TableCaption>Sorting</TableCaption>,
       <TableHeader>
         <TableRow>
           <TableHeaderCell withSorting aria-sort={'none'} scope="col">
@@ -193,7 +193,7 @@ export const Sorting: Story = {
 export const SortingDescending: Story = {
   args: {
     children: [
-      <TableCaption>Soorten Descending</TableCaption>,
+      <TableCaption>Sorting Descending</TableCaption>,
       <TableHeader>
         <TableRow>
           <TableHeaderCell withSorting aria-sort={'descending'} scope="col">
@@ -238,50 +238,48 @@ export const SortingDescending: Story = {
 };
 export const SortingAscending: Story = {
   args: {
-    children: (
-      <>
-        <TableCaption>Soorten Ascending</TableCaption>
-        <TableHeader>
-          <TableRow>
-            <TableHeaderCell withSorting aria-sort={'ascending'} scope="col">
-              Header
-            </TableHeaderCell>
-            <TableHeaderCell scope="col">Header</TableHeaderCell>
-            <TableHeaderCell scope="col">Header</TableHeaderCell>
-            <TableHeaderCell scope="col">Header</TableHeaderCell>
-          </TableRow>
-        </TableHeader>
+    children: [
+      <TableCaption>Sorting Ascending</TableCaption>,
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell withSorting aria-sort={'ascending'} scope="col">
+            Header
+          </TableHeaderCell>
+          <TableHeaderCell scope="col">Header</TableHeaderCell>
+          <TableHeaderCell scope="col">Header</TableHeaderCell>
+          <TableHeaderCell scope="col">Header</TableHeaderCell>
+        </TableRow>
+      </TableHeader>,
 
-        <TableBody>
-          <TableRow>
-            <TableHeaderCell scope={'row'}>Label-1</TableHeaderCell>
-            <TableCell>Label</TableCell>
-            <TableCell>Label</TableCell>
-            <TableCell>Label</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableHeaderCell scope={'row'}>Label-2</TableHeaderCell>
-            <TableCell>Label</TableCell>
-            <TableCell>Label</TableCell>
-            <TableCell>Label</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableHeaderCell scope={'row'}>Label-3</TableHeaderCell>
-            <TableCell>Label</TableCell>
-            <TableCell>Label</TableCell>
-            <TableCell>Label</TableCell>
-          </TableRow>
-        </TableBody>
-        <TableFooter>
-          <TableRow>
-            <TableCell>Footer</TableCell>
-            <TableCell>Footer</TableCell>
-            <TableCell>Footer</TableCell>
-            <TableCell>Footer</TableCell>
-          </TableRow>
-        </TableFooter>
-      </>
-    ),
+      <TableBody>
+        <TableRow>
+          <TableHeaderCell scope={'row'}>Label-1</TableHeaderCell>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableHeaderCell scope={'row'}>Label-2</TableHeaderCell>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableHeaderCell scope={'row'}>Label-3</TableHeaderCell>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+          <TableCell>Label</TableCell>
+        </TableRow>
+      </TableBody>,
+      <TableFooter>
+        <TableRow>
+          <TableCell>Footer</TableCell>
+          <TableCell>Footer</TableCell>
+          <TableCell>Footer</TableCell>
+          <TableCell>Footer</TableCell>
+        </TableRow>
+      </TableFooter>,
+    ],
   },
 };
 
