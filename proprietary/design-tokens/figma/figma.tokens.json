@@ -1545,6 +1545,16 @@
       }
     }
   },
+  "components/article": {
+      "utrecht": {
+        "article": {
+          "max-inline-size": {
+            "value": "75ch",
+            "type": "spacing"
+          }
+        }
+      }
+  },
   "components/avatar": {
     "todo": {
       "avatar": {
@@ -2361,7 +2371,7 @@
             "type": "color"
           },
           "border-width": {
-            "value": "{rhc.form-control.border-width}",
+            "value": "{rhc.border-width.default}",
             "type": "borderWidth"
           },
           "disabled": {
@@ -2447,7 +2457,7 @@
             "type": "color"
           },
           "border-width": {
-            "value": "{rhc.form-control.border-width}",
+            "value": "{rhc.border-width.default}",
             "type": "borderWidth"
           },
           "disabled": {
@@ -5509,6 +5519,7 @@
       "utrecht/document",
       "components/accordion",
       "components/alert",
+      "components/article",
       "components/avatar",
       "components/backdrop",
       "components/blockquote",
