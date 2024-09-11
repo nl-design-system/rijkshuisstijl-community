@@ -16,12 +16,7 @@ const meta = {
         category: 'HTML attribute',
       },
     },
-    icon: {
-      type: { name: 'function' },
-      table: {
-        category: 'Property',
-      },
-    },
+    icon: {},
   },
 } satisfies Meta<typeof LinkListLink>;
 
@@ -70,20 +65,6 @@ export const Focus: Story = {
   args: {
     children: 'Label',
     href: '#',
-    icon: (
-      <Icon>
-        <ChevronRightIcon />
-      </Icon>
-    ),
-  },
-};
-
-export const FocusVisible: Story = {
-  parameters: {},
-  args: {
-    children: 'Label',
-    href: '#',
-    className: 'utrecht-link-list-link--focus-visible',
     icon: (
       <Icon>
         <ChevronRightIcon />
