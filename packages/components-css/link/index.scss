@@ -3,32 +3,28 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 @import "../button/mixin";
+@import "./mixin";
 
 .rhc-link:any-link {
-  --utrecht-icon-inset-block-start: var(--utrecht-link-icon-inset-block-start, inherit);
-
-  column-gap: var(--utrecht-link-column-gap, inherit);
-  display: inline-flex;
+  @include rhc-link--any-link;
 }
 
 .rhc-link:any-link .utrecht-icon {
-  min-block-size: var(--utrecht-link-icon-size, inherit);
-  min-inline-size: var(--utrecht-link-icon-size, inherit);
+  @include rhc-link--icon;
 }
 
 .rhc-link:visited,
 .utrecht-link--visted {
-  color: var(--utrecht-link-visited-color, inherit);
-  text-decoration-color: var(--utrecht-link-visited-color, inherit);
+  @include rhc-link--visited;
 }
 
 .rhc-link:visited .utrecht-icon {
-  color: var(--utrecht-link-visited-color, inherit);
+  @include rhc-link--visited-icon;
 }
 
 .rhc-link:active,
 .utrecht-link--active {
-  --utrecht-link-text-decoration: var(--utrecht-link-active-text-decoration, inherit);
+  @include rhc-link--active;
 }
 
 .rhc-link .rhc-link__sr-only {
