@@ -14,7 +14,6 @@ const init = async ({ input, output }) => {
     'components/avatar',
     'components/backdrop',
     'components/button-group',
-    'components/checkbox',
     'components/checkbox-group',
     'components/counter-badge',
     'components/drawer',

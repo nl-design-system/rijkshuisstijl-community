@@ -33,6 +33,7 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from './Button';
+export { Checkbox } from './Checkbox';
 export { Footer } from './Footer';
 export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFieldErrorMessage';
 export { FormFieldSelect, type FormFieldSelectProps } from './FormFieldSelect';
