@@ -189,6 +189,5 @@ export const Visited: Story = {
   args: {
     href: 'https://example.com/',
     children: 'Label',
-    className: 'utrecht-link--visited',
   },
 };
