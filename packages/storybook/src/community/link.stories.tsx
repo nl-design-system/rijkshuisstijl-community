@@ -4,6 +4,7 @@ import { Link } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
 import { Icon } from '@utrecht/component-library-react/dist/css-module';
+import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
 import readme from './link.md?raw';
 interface LinkStoryProps {
@@ -15,7 +16,14 @@ interface LinkStoryProps {
 }
 
 const LinkStory = ({ href, children, iconLeft, iconRight, external, ...props }: PropsWithChildren<LinkStoryProps>) => (
-  <Link external={external} href={href} {...props}>
+  <Link
+    external={external}
+    href={href}
+    className={clsx({
+      'utrecht-link--external': external,
+    })}
+    {...props}
+  >
     {iconLeft && (
       <Icon>
         <IconCalendarEvent />
@@ -115,14 +123,14 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    href: 'https://example.com/',
+    href: '#',
     children: 'Label',
   },
 };
 
 export const IconLeft: Story = {
   args: {
-    href: 'https://example.com/',
+    href: '#',
     children: 'Label',
     iconLeft: true,
   },
@@ -130,7 +138,7 @@ export const IconLeft: Story = {
 
 export const IconRight: Story = {
   args: {
-    href: 'https://example.com/',
+    href: '#',
     children: 'Label',
     iconRight: true,
   },
@@ -138,9 +146,48 @@ export const IconRight: Story = {
 
 export const External: Story = {
   args: {
-    href: 'https://example.com/',
+    href: '#',
     children: 'Label',
     external: true,
     externalLabel: 'example external label',
+  },
+};
+
+export const Active: Story = {
+  parameters: {
+    pseudo: { active: true },
+  },
+  args: {
+    href: '#',
+    children: 'Label',
+  },
+};
+
+export const Focus: Story = {
+  parameters: {
+    pseudo: { focus: true },
+  },
+  args: {
+    href: '#',
+    children: 'Label',
+  },
+};
+
+export const FocusVisible: Story = {
+  parameters: {},
+  args: {
+    href: '#',
+    children: 'Label',
+    className: 'utrecht-link--focus-visible',
+  },
+};
+
+export const Visited: Story = {
+  parameters: {
+    pseudo: { visited: true },
+  },
+  args: {
+    href: 'https://example.com/',
+    children: 'Label',
   },
 };

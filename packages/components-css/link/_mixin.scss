@@ -1,0 +1,30 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@mixin rhc-link--any-link {
+  --utrecht-icon-inset-block-start: var(--utrecht-link-icon-inset-block-start, inherit);
+
+  column-gap: var(--utrecht-link-column-gap, inherit);
+  display: inline-flex;
+}
+
+@mixin rhc-link--icon {
+  min-block-size: var(--utrecht-link-icon-size, inherit);
+  min-inline-size: var(--utrecht-link-icon-size, inherit);
+}
+
+@mixin rhc-link--visited {
+  --utrecht-link-text-decoration-color: var(--utrecht-link-visited-color, inherit);
+
+  color: var(--utrecht-link-visited-color, inherit);
+}
+
+@mixin rhc-link--visited-icon {
+  color: var(--utrecht-link-visited-color, inherit);
+}
+
+@mixin rhc-link--active {
+  --utrecht-link-text-decoration: var(--utrecht-link-active-text-decoration, inherit);
+}
