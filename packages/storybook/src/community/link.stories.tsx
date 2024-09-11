@@ -53,42 +53,6 @@ const meta = {
         category: 'Property',
       },
     },
-    active: {
-      description: 'Whether the link is active',
-      type: {
-        name: 'boolean',
-      },
-      table: {
-        category: 'Demo',
-      },
-    },
-    visited: {
-      description: 'Whether the link is visited',
-      type: {
-        name: 'boolean',
-      },
-      table: {
-        category: 'Demo',
-      },
-    },
-    focus: {
-      description: 'Whether the link is focused',
-      type: {
-        name: 'boolean',
-      },
-      table: {
-        category: 'Demo',
-      },
-    },
-    focusVisible: {
-      description: 'Whether the link is focus visible',
-      type: {
-        name: 'boolean',
-      },
-      table: {
-        category: 'Demo',
-      },
-    },
     external: {
       description: 'Whether the link is external',
       type: {
