@@ -17,12 +17,10 @@ const meta = {
     checked: {
       name: 'checked',
       type: { name: 'boolean', required: false },
-      //   table: { defaultValue: { summary: false } },
     },
     disabled: {
       name: 'disabled',
       type: { name: 'boolean', required: false },
-      //   table: { defaultValue: { summary: false } },
     },
     value: {
       name: 'value',
@@ -57,7 +55,11 @@ export const Focus: Story = {
     pseudo: { focus: true },
   },
 };
-
+export const FocusVisible: Story = {
+  parameters: {
+    pseudo: { focusVisible: true },
+  },
+};
 export const Disabled: Story = {
   args: {
     disabled: true,
@@ -99,7 +101,17 @@ export const CheckedAndFocus: Story = {
     checked: true,
   },
   parameters: {
-    pseudo: { focusVisible: true, focus: true },
+    pseudo: { focus: true },
+  },
+};
+
+export const CheckedAndFocusVisible: Story = {
+  args: {
+    checked: true,
+  },
+  parameters: {
+    pseudo: { focusVisible: true },
+    controls: { exclude: ['appearance'] },
   },
 };
 

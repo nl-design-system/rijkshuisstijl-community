@@ -4,40 +4,14 @@
   &--disabled {
     @include utrecht-checkbox--disabled;
   }
-
   &--invalid {
     @include utrecht-checkbox--invalid;
   }
 }
-
-.utrecht-checkbox--custom.utrecht-checkbox--html-input {
-  &:checked {
-    &:active {
-      @include utrecht-checkbox--checked--active;
-    }
-
-    &:hover {
-      @include utrecht-checkbox--checked--hover;
-    }
-  }
-
-  /* stylelint-disable no-descending-specificity */
-  &:indeterminate {
-    &:active {
-      @include utrecht-checkbox--indeterminate--active;
-    }
-
-    &:hover {
-      @include utrecht-checkbox--indeterminate--hover;
-    }
-
-    &:focus {
-      @include utrecht-checkbox--indeterminate--focus;
-    }
-
-    &:disabled {
-      @include utrecht-checkbox--indeterminate--disabled;
-    }
-  }
+.utrecht-checkbox--custom.utrecht-checkbox--html-input,
+.utrecht-custom-checkbox--html-input {
+  @include utrecht-custom-checkbox--html-input;
 }
-/* stylelint-enable no-descending-specificity */
+.utrecht-checkbox--custom.utrecht-checkbox--html-input:indeterminate {
+  @include utrecht-checkbox--indeterminate;
+}
