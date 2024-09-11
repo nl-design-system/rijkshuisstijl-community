@@ -3,11 +3,28 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 @import "../button/mixin";
+@import "./mixin";
 
 .rhc-link:any-link {
-  align-items: center;
-  column-gap: var(--utrecht-link-column-gap, inherit);
-  display: inline-flex;
+  @include rhc-link--any-link;
+}
+
+.rhc-link:any-link .utrecht-icon {
+  @include rhc-link--icon;
+}
+
+.rhc-link:visited,
+.utrecht-link--visted {
+  @include rhc-link--visited;
+}
+
+.rhc-link:visited .utrecht-icon {
+  @include rhc-link--visited-icon;
+}
+
+.rhc-link:active,
+.utrecht-link--active {
+  @include rhc-link--active;
 }
 
 .rhc-link .rhc-link__sr-only {

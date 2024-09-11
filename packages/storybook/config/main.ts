@@ -17,6 +17,7 @@ const config: StorybookConfig = {
     '@etchteam/storybook-addon-status',
     '@whitespace/storybook-addon-html',
     '@chromatic-com/storybook',
+    'storybook-addon-pseudo-states',
   ],
   framework: '@storybook/react-vite',
   staticDirs: ['../../../proprietary/assets/src'],
