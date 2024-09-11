@@ -80,15 +80,6 @@ export const Separator: Story = {
     ],
   },
 };
-export const Arrow: Story = {
-  args: {
-    children: [
-      <BreadcrumbNavLink arrow href="/a" index={0} rel="label">
-        Label
-      </BreadcrumbNavLink>,
-    ],
-  },
-};
 
 export const Active: Story = {
   args: {
