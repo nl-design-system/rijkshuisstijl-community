@@ -4,6 +4,12 @@
  */
 
 .utrecht-table {
+  &__caption {
+    text-align: start !important;
+    &--rtl {
+      text-align: end !important;
+    }
+  }
   &__cell {
     color: var(--rhc-color-foreground-lint);
   }
@@ -19,13 +25,13 @@
     }
 
     &--align-right {
-      --_utrecht-table-cell-text-align: right;
+      --_utrecht-table-cell-text-align: end;
     }
     &--align-center {
       --_utrecht-table-cell-text-align: center;
     }
     &--align-left {
-      --_utrecht-table-cell-text-align: left;
+      --_utrecht-table-cell-text-align: start;
     }
 
     &--cell {
