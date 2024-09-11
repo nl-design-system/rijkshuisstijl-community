@@ -2,7 +2,6 @@ import { Icon, LinkList, LinkListLink, type LinkListProps } from '@rijkshuisstij
 import { ChevronRightIcon } from '@rijkshuisstijl-community/components-react/src/icons';
 import { Meta, StoryObj } from '@storybook/react/*';
 import { PropsWithChildren } from 'react';
-import readme from './linkList.md?raw';
 
 interface LinkListStoryProps extends LinkListProps {
   active: boolean;
@@ -12,14 +11,7 @@ interface LinkListStoryProps extends LinkListProps {
   hasIcons: boolean;
 }
 
-const LinkListStory = ({
-  // active,
-  // visited,
-  // focus,
-  // focusVisible,
-  hasIcons = true,
-  ...props
-}: PropsWithChildren<LinkListStoryProps>) => (
+const LinkListStory = ({ hasIcons = true, ...props }: PropsWithChildren<LinkListStoryProps>) => (
   <LinkList {...props}>
     <LinkListLink
       href="#"
@@ -61,8 +53,8 @@ const LinkListStory = ({
 );
 
 const meta = {
-  title: 'Rijkshuisstijl/Link list',
-  id: 'rijkshuisstijl-linklist',
+  title: 'Rijkshuisstijl/Link List',
+  id: 'rijkshuisstijl-link-list',
   component: LinkListStory,
   args: {
     children: '',
@@ -114,14 +106,6 @@ const meta = {
       },
     },
   },
-  parameters: {
-    docs: {
-      description: {
-        component: readme,
-      },
-    },
-  },
-  render: LinkListStory,
 } satisfies Meta<typeof LinkList>;
 
 export default meta;
