@@ -3031,9 +3031,17 @@
     }
   },
   "components/form-field-radio-option": {
-    "todo": {
+    "rhc": {
       "form-field-radio-option": {
         "column-gap": {
+          "value": "{rhc.space.100}",
+          "type": "spacing"
+        },
+        "font-weight": {
+          "value": "{rhc.font-weight.regular}",
+          "type": "fontWeights"
+        },
+        "row-gap": {
           "value": "{rhc.space.100}",
           "type": "spacing"
         }
@@ -3999,7 +4007,7 @@
   },
   "components/radio": {
     "utrecht": {
-      "radio": {
+      "radio-button": {
         "active": {
           "border-width": {
             "value": "{rhc.border-width.default}",
@@ -4067,6 +4075,10 @@
           },
           "border-color": {
             "value": "{rhc.color.grijs.400}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{rhc.color.grijs.600}",
             "type": "color"
           }
         },
@@ -4182,7 +4194,7 @@
     }
   },
   "components/radio-group": {
-    "todo": {
+    "rhc": {
       "radio-group": {
         "padding-block-end": {
           "value": "{rhc.space.100}",
