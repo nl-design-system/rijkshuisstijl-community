@@ -34,6 +34,7 @@ export {
   SubtleButton,
 } from './Button';
 export { Checkbox } from './Checkbox';
+export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from './Figure';
 export { Footer } from './Footer';
 export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFieldErrorMessage';
 export { FormFieldSelect, type FormFieldSelectProps } from './FormFieldSelect';
