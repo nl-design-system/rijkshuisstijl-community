@@ -1546,14 +1546,14 @@
     }
   },
   "components/article": {
-      "utrecht": {
-        "article": {
-          "max-inline-size": {
-            "value": "75ch",
-            "type": "spacing"
-          }
+    "utrecht": {
+      "article": {
+        "max-inline-size": {
+          "value": "75ch",
+          "type": "spacing"
         }
       }
+    }
   },
   "components/avatar": {
     "todo": {
@@ -1735,6 +1735,22 @@
         "background-color": {
           "value": "transparent",
           "type": "color"
+        },
+        "border": {
+          "color": {
+            "value": "{rhc.color.primary.500}",
+            "type": "color"
+          }
+        }
+      },
+      "blockqoute": {
+        "border-radius": {
+          "value": "{rhc.border-radius.none}",
+          "type": "borderRadius"
+        },
+        "border-width": {
+          "value": "{rhc.border-width.m}",
+          "type": "borderWidth"
         }
       }
     }
@@ -3290,8 +3306,8 @@
         },
         "icon": {
           "inset-block-start": {
-          "value": "{rhc.space.50}",
-          "type": "spacing"
+            "value": "{rhc.space.50}",
+            "type": "spacing"
           },
           "size": {
             "value": "{rhc.size.icon.functional}",
@@ -5517,7 +5533,6 @@
       "common/focus",
       "common/border",
       "common/keep",
-      "common/text-align",
       "utrecht/focus",
       "utrecht/pointer-target",
       "utrecht/document",
