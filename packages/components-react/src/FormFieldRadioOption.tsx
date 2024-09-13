@@ -1,7 +1,8 @@
+import { FormField, FormFieldDescription, FormLabel } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
-import { FormField, FormFieldDescription, FormLabel, Radio, RadioProps } from '.';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
+import { Radio, RadioProps } from './Radio';
 
 export interface FormFieldRadioOptionProps extends RadioProps {
   errorMessage?: string;

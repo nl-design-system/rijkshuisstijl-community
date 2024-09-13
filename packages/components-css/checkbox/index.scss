@@ -15,3 +15,17 @@
 .utrecht-checkbox--custom.utrecht-checkbox--html-input:indeterminate {
   @include utrecht-checkbox--indeterminate;
 }
+.utrecht-checkbox--custom.utrecht-checkbox--html-input[aria-invalid="true"]:hover {
+  @include utrecht-checkbox--invalid;
+}
+
+.utrecht-checkbox__label {
+  white-space: nowrap;
+}
+.rhc-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  padding-block-end: var(--rhc-checkbox-group-padding-block-end);
+  padding-block-start: var(--rhc-checkbox-group-padding-block-start);
+  row-gap: var(--rhc-checkbox-group-row-gap);
+}
