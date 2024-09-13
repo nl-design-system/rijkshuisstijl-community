@@ -58,6 +58,7 @@ export const FormFieldCheckboxGroup = forwardRef(
         )}
         <div className="utrecht-form-field__input">
           <CheckboxGroup
+            className="rhc-checkbox-group--form-field"
             dir={dir}
             id={id}
             ref={inputRef}
