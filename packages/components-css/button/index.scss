@@ -5,10 +5,10 @@
 @import "./mixin";
 
 .rhc-button--icon-only {
-  padding-block-end: var(--rhc-icon-only-button-padding-block-end);
-  padding-block-start: var(--rhc-icon-only-button-padding-block-start);
-  padding-inline-end: var(--rhc-icon-only-button-padding-inline-end);
-  padding-inline-start: var(--rhc-icon-only-button-padding-inline-start);
+  --utrecht-button-padding-block-end: var(--rhc-icon-only-button-padding-block-end, inherit);
+  --utrecht-button-padding-block-start: var(--rhc-icon-only-button-padding-block-start, inherit);
+  --utrecht-button-padding-inline-end: var(--rhc-icon-only-button-padding-inline-end, inherit);
+  --utrecht-button-padding-inline-start: var(--rhc-icon-only-button-padding-inline-start, inherit);
 }
 
 .rhc-button--icon-only .rhc-button__sr-only {

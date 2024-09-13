@@ -33,8 +33,11 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from './Button';
+export { Checkbox } from './Checkbox';
+export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from './Figure';
 export { Footer } from './Footer';
 export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFieldErrorMessage';
+export { FormFieldRadioOption, type FormFieldRadioOptionProps } from './FormFieldRadioOption';
 export { FormFieldSelect, type FormFieldSelectProps } from './FormFieldSelect';
 export { FormFieldTextarea, type FormFieldTextareaProps } from './FormFieldTextarea';
 export { FormFieldTextbox } from './FormFieldTextbox';
@@ -43,6 +46,7 @@ export { Image, type ImageProps } from './Image';
 export { Link, type LinkProps } from './Link';
 export { Logo, type LogoProps } from './Logo';
 export { Paragraph, type ParagraphProps } from './Paragraph';
+export { Radio, type RadioProps } from './Radio';
 export { Separator, type SeparatorProps } from './Separator';
 export { SkipLink, type SkipLinkProps } from './SkipLink';
 export { TableCaption } from './TableCaption';

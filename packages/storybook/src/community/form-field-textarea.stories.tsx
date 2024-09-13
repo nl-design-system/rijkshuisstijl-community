@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from './form-field-textarea.md?raw';
 
 const meta = {
-  title: 'Rijkshuisstijl/Form field textarea',
+  title: 'Rijkshuisstijl/Form Field/Form Field Textarea',
   id: 'rijkshuisstijl-form-field-textarea',
   component: FormFieldTextarea,
   argTypes: {
