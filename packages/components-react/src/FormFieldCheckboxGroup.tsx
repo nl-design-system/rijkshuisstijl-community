@@ -1,7 +1,6 @@
 import { FormField, FormFieldDescription, FormFieldProps, FormLabel } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { Children, ForwardedRef, forwardRef, PropsWithChildren, ReactNode, useId } from 'react';
-import { CheckboxGroup } from './CheckboxGroup';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
 export interface FormFieldCheckboxGroupProps extends FormFieldProps {
@@ -24,7 +23,6 @@ export const FormFieldCheckboxGroup = forwardRef(
       status,
       invalid,
       children,
-      inputRef,
       dir,
       ...restProps
     }: PropsWithChildren<FormFieldCheckboxGroupProps>,
@@ -56,22 +54,20 @@ export const FormFieldCheckboxGroup = forwardRef(
             {errorMessage}
           </FormFieldErrorMessage>
         )}
-        <div className="utrecht-form-field__input">
-          <CheckboxGroup
-            className="rhc-checkbox-group--form-field"
-            dir={dir}
-            id={id}
-            ref={inputRef}
-            aria-describedby={
-              clsx({
-                [descriptionId]: description,
-                [errorMessageId]: invalid,
-                [statusId]: status,
-              }) || undefined
-            }
-          >
-            {children}
-          </CheckboxGroup>
+        <div
+          className="utrecht-form-field__input"
+          dir={dir}
+          id={id}
+          role={hasManyChildren(children) ? 'group' : undefined}
+          aria-describedby={
+            clsx({
+              [descriptionId]: description,
+              [errorMessageId]: invalid,
+              [statusId]: status,
+            }) || undefined
+          }
+        >
+          {children}
         </div>
         {status && (
           <div className="utrecht-form-field__status" id={statusId}>
