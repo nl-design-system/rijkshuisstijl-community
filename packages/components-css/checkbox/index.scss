@@ -15,3 +15,25 @@
 .utrecht-checkbox--custom.utrecht-checkbox--html-input:indeterminate {
   @include utrecht-checkbox--indeterminate;
 }
+.utrecht-checkbox--custom.utrecht-checkbox--html-input[aria-invalid="true"]:hover {
+  @include utrecht-checkbox--invalid;
+}
+
+.utrecht-checkbox__container {
+  align-items: center;
+  color: var(--rhc-color-foreground-lint, var(--rhc-color-lintblauw-500, #154273));
+  display: flex;
+  font-weight: var(--rhc-font-weight-regular-rhc, 400);
+  gap: 8px;
+}
+
+.utrecht-checkbox__label {
+  white-space: nowrap;
+}
+.rhc-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--utrecht-checkbox-group-row-gap);
+  padding-block-end: var(--utrecht-checkbox-group-padding-block-end);
+  padding-block-start: var(--utrecht-checkbox-group-padding-block-start);
+}

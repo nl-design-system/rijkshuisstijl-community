@@ -1,44 +1,33 @@
-import {
-  FormField,
-  FormFieldDescription,
-  FormLabel,
-  Select,
-  SelectOption,
-  SelectProps,
-} from '@utrecht/component-library-react';
+import { FormField, FormFieldDescription, FormFieldProps, FormLabel } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
+import { Children, ForwardedRef, forwardRef, PropsWithChildren, ReactNode, useId } from 'react';
+import { CheckboxGroup } from './CheckboxGroup';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
-export interface FormFieldSelectProps extends SelectProps {
+export interface FormFieldCheckboxGroupProps extends FormFieldProps {
   errorMessage?: string;
-  selectRef?: Ref<HTMLSelectElement>;
   status?: ReactNode;
   description?: ReactNode;
   input?: ReactNode;
   label?: ReactNode;
-  type?: string;
-  options?: string[];
-  defaultValue?: string;
+  inputRef?: ForwardedRef<HTMLDivElement>;
 }
-
-export const FormFieldSelect = forwardRef(
+const hasManyChildren = (children: ReactNode) => {
+  return Children.count(children) > 1;
+};
+export const FormFieldCheckboxGroup = forwardRef(
   (
     {
       label,
       description,
-      disabled,
       errorMessage,
-      selectRef,
       status,
       invalid,
       children,
-      options,
-      input,
+      inputRef,
       dir,
-      name,
       ...restProps
-    }: PropsWithChildren<FormFieldSelectProps>,
+    }: PropsWithChildren<FormFieldCheckboxGroupProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const id = useId();
@@ -47,7 +36,13 @@ export const FormFieldSelect = forwardRef(
     const errorMessageId = useId();
 
     return (
-      <FormField dir={dir} input={input} invalid={invalid} ref={ref} type={'select'}>
+      <FormField
+        dir={dir}
+        invalid={invalid}
+        type={hasManyChildren(children) ? 'group' : undefined}
+        {...restProps}
+        ref={ref}
+      >
         <div className="utrecht-form-field__label">
           <FormLabel htmlFor={id}>{label}</FormLabel>
         </div>
@@ -62,13 +57,10 @@ export const FormFieldSelect = forwardRef(
           </FormFieldErrorMessage>
         )}
         <div className="utrecht-form-field__input">
-          <Select
+          <CheckboxGroup
             dir={dir}
-            disabled={disabled}
             id={id}
-            invalid={invalid}
-            name={name}
-            ref={selectRef}
+            ref={inputRef}
             aria-describedby={
               clsx({
                 [descriptionId]: description,
@@ -76,19 +68,9 @@ export const FormFieldSelect = forwardRef(
                 [statusId]: status,
               }) || undefined
             }
-            className={clsx({
-              'utrecht-select--html-select-rtl': dir === 'rtl',
-            })}
-            {...restProps}
           >
-            {options?.length
-              ? options.map((option, index) => (
-                  <SelectOption disabled={disabled} id={option + index} invalid={invalid} key={index} value={option}>
-                    {option}
-                  </SelectOption>
-                ))
-              : children}
-          </Select>
+            {children}
+          </CheckboxGroup>
         </div>
         {status && (
           <div className="utrecht-form-field__status" id={statusId}>
@@ -100,4 +82,4 @@ export const FormFieldSelect = forwardRef(
   },
 );
 
-FormFieldSelect.displayName = 'FormFieldSelect';
+FormFieldCheckboxGroup.displayName = 'FormFieldCheckboxGroup';
