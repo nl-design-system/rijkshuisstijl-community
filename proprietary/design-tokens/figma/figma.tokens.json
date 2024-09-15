@@ -1189,7 +1189,7 @@
       }
     }
   },
-  "overwrites/Belastingdienst": {
+  "overwrites/lichtblauw": {
     "rhc": {
       "color": {
         "accent": {
@@ -1221,6 +1221,159 @@
           },
           "500": {
             "value": "{rhc.color.lichtblauw.500}",
+            "type": "color"
+          },
+          "hover": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "darken",
+                  "value": "0.3",
+                  "space": "lch"
+                }
+              }
+            },
+            "value": "{rhc.color.primary.500}",
+            "type": "color"
+          }
+        }
+      }
+    }
+  },
+  "overwrites/oranje": {
+    "rhc": {
+      "color": {
+        "accent": {
+          "500": {
+            "value": "{rhc.color.roze.500}",
+            "type": "color"
+          }
+        },
+        "primary": {
+          "50": {
+            "value": "{rhc.color.oranje.50}",
+            "type": "color"
+          },
+          "100": {
+            "value": "{rhc.color.oranje.50}",
+            "type": "color"
+          },
+          "200": {
+            "value": "{rhc.color.oranje.200}",
+            "type": "color"
+          },
+          "300": {
+            "value": "{rhc.color.oranje.300}",
+            "type": "color"
+          },
+          "400": {
+            "value": "{rhc.color.oranje.400}",
+            "type": "color"
+          },
+          "500": {
+            "value": "{rhc.color.oranje.500}",
+            "type": "color"
+          },
+          "hover": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "darken",
+                  "value": "0.3",
+                  "space": "lch"
+                }
+              }
+            },
+            "value": "{rhc.color.primary.500}",
+            "type": "color"
+          }
+        }
+      }
+    }
+  },
+  "overwrites/violet": {
+    "rhc": {
+      "color": {
+        "accent": {
+          "500": {
+            "value": "{rhc.color.roze.500}",
+            "type": "color"
+          }
+        },
+        "primary": {
+          "50": {
+            "value": "{rhc.color.violet.50}",
+            "type": "color"
+          },
+          "100": {
+            "value": "{rhc.color.violet.100}",
+            "type": "color"
+          },
+          "200": {
+            "value": "{rhc.color.violet.200}",
+            "type": "color"
+          },
+          "300": {
+            "value": "{rhc.color.violet.300}",
+            "type": "color"
+          },
+          "400": {
+            "value": "{rhc.color.violet.400}",
+            "type": "color"
+          },
+          "500": {
+            "value": "{rhc.color.violet.500}",
+            "type": "color"
+          },
+          "hover": {
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "darken",
+                  "value": "0.3",
+                  "space": "lch"
+                }
+              }
+            },
+            "value": "{rhc.color.primary.500}",
+            "type": "color"
+          }
+        }
+      }
+    }
+  },
+  "overwrites/mintgroen": {
+    "rhc": {
+      "color": {
+        "accent": {
+          "500": {
+            "value": "{rhc.color.roze.500}",
+            "type": "color"
+          }
+        },
+        "primary": {
+          "50": {
+            "value": "{rhc.color.mintgroen.50}",
+            "type": "color"
+          },
+          "100": {
+            "value": "{rhc.color.mintgroen.100}",
+            "type": "color"
+          },
+          "200": {
+            "value": "{rhc.color.mintgroen.200}",
+            "type": "color"
+          },
+          "300": {
+            "value": "{rhc.color.mintgroen.300}",
+            "type": "color"
+          },
+          "400": {
+            "value": "{rhc.color.mintgroen.400}",
+            "type": "color"
+          },
+          "500": {
+            "value": "{rhc.color.mintgroen.500}",
             "type": "color"
           },
           "hover": {
@@ -5580,7 +5733,10 @@
       "common/keep",
       "common/text-align",
       "utrecht/document",
-      "overwrites/Belastingdienst",
+      "overwrites/lichtblauw",
+      "overwrites/oranje",
+      "overwrites/violet",
+      "overwrites/mintgroen",
       "overwrites/mobile",
       "components/accordion",
       "components/alert",
