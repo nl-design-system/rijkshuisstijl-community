@@ -16,10 +16,9 @@ describe('Alert', () => {
   });
 });
 
-it('should apply the correct class based on the type prop', () => {
-  const types = ['info', 'ok', 'warning', 'error'];
-
-  types.forEach((type) => {
+test.each([['info'], ['ok'], ['warning'], ['error']])(
+  'should apply the correct class based on the type prop: %s',
+  (type) => {
     render(
       <Alert heading="Test Heading" textContent="Test content" type={type as 'info' | 'ok' | 'warning' | 'error'} />,
     );
@@ -30,5 +29,5 @@ it('should apply the correct class based on the type prop', () => {
     expect(iconContainer).toHaveClass(`rhc-alert__icon-container-${type}`);
 
     cleanup();
-  });
-});
+  },
+);

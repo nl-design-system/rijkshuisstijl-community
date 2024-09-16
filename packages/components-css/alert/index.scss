@@ -10,18 +10,18 @@
 .rhc-alert__icon-container {
   inline-size: var(--utrecht-alert-icon-size);
   inset-block-start: var(--utrecht-alert-icon-inset-block-start);
-  min-width: var(--utrecht-alert-icon-size);
+  min-inline-size: var(--utrecht-alert-icon-size);
   padding-inline-end: var(--rhc-space-100);
-  &-ok {
+  &--ok {
     color: var(--rhc-color-feedback-success-default);
   }
-  &-error {
+  &--error {
     color: var(--rhc-color-feedback-error-default);
   }
-  &-warning {
+  &--warning {
     color: var(--rhc-color-feedback-warning-default);
   }
-  &-info {
+  &--info {
     color: var(--rhc-color-feedback-info-default);
   }
 }

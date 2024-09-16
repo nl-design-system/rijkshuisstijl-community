@@ -4,21 +4,10 @@ import { Alert } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './alert.md?raw';
 
-interface AlertStoryComponentProps {
-  type: 'info' | 'error' | 'warning' | 'ok';
-  heading: string;
-  textContent: string;
-  headingLevel: number;
-}
-
-const AlertStoryComponent = ({ type, heading, textContent, headingLevel }: AlertStoryComponentProps) => {
-  return <Alert heading={heading} headingLevel={headingLevel} textContent={textContent} type={type}></Alert>;
-};
-
 const meta = {
   title: 'Rijkshuisstijl/Alert',
   id: 'rijkshuisstijl-alert',
-  component: AlertStoryComponent,
+  component: Alert,
   argTypes: {
     type: {
       description: 'Alert type',
@@ -37,6 +26,14 @@ const meta = {
         category: 'Demo',
       },
     },
+    headingLevel: {
+      description: 'Alert heading level',
+      control: { type: 'select' },
+      options: [1, 2, 3, 4, 5, 6],
+      table: {
+        category: 'Demo',
+      },
+    },
     textContent: {
       description: 'Alert content - used in default webcomponent slot',
       type: {
@@ -50,6 +47,7 @@ const meta = {
   args: {
     type: 'info',
     heading: 'Heading',
+    headingLevel: 3,
     textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
   },
   tags: ['autodocs'],
@@ -60,8 +58,7 @@ const meta = {
       },
     },
   },
-  render: AlertStoryComponent,
-} as Meta<typeof AlertStoryComponent>;
+} as Meta<typeof Alert>;
 
 export default meta;
 
