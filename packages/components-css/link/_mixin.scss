@@ -28,3 +28,7 @@
 @mixin rhc-link--active {
   --utrecht-link-text-decoration: var(--utrecht-link-active-text-decoration, inherit);
 }
+
+@mixin rhc-link--focus-visible {
+  z-index: var(--utrecht-stack-focus-z-index, 1);
+}

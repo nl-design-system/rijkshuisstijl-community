@@ -27,6 +27,11 @@
   @include rhc-link--active;
 }
 
+.rhc-link:focus-visible,
+.utrecht-link--focus-visible {
+  @include rhc-link--focus-visible;
+}
+
 .rhc-link .rhc-link__sr-only {
   @include invisible-but-accessible;
 }
