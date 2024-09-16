@@ -6,13 +6,16 @@
   background-color: var(--utrecht-page-footer-background-color);
   color: var(--utrecht-page-footer-color);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   gap: var(--utrecht-page-footer-gap);
   justify-content: flex-start;
   padding-block-end: var(--utrecht-page-footer-padding-block-end);
   padding-block-start: var(--utrecht-page-footer-padding-block-start);
   padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
   padding-inline-start: var(--utrecht-page-footer-padding-inline-start);
+  @media (width <= 860px) {
+    flex-direction: column;
+  }
 }
 
 .rhc-footer__title {
