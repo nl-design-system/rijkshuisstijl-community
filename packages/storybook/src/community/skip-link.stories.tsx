@@ -5,14 +5,16 @@ import readme from './skip-link.md?raw';
 
 interface SkipLinkStoryProps extends SkipLinkProps {
   focus?: boolean;
+  focusVisible?: boolean;
   visibility?: string | 'hidden' | 'visible';
   visibleOnFocus?: boolean;
 }
 
-const SkipLinkStory = ({ focus, visibility, visibleOnFocus, ...restProps }: SkipLinkStoryProps) => (
+const SkipLinkStory = ({ focus, focusVisible, visibility, visibleOnFocus, ...restProps }: SkipLinkStoryProps) => (
   <SkipLink
     className={clsx({
-      'utrecht-skip-link--focus': focus,
+      'rhc-skip-link--focus': focus,
+      'rhc-skip-link--focus-visible': focusVisible,
       'rhc-skip-link--visible-on-focus': visibleOnFocus,
       'rhc-skip-link--hidden': visibility === 'hidden',
       'utrecht-skip-link--visible': visibility === 'visible',
@@ -79,7 +81,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Styling met de \`.utrecht-skip-link\` en \`.rhc-skip-link--visible-on-focus\` class naam.`,
+        story: `Styling met de \`.rhc-skip-link\` en \`.rhc-skip-link--visible-on-focus\` class naam.`,
       },
     },
   },
@@ -97,7 +99,7 @@ export const VisibleOnFocus: Story = {
     docs: {
       description: {
         story:
-          'Styling met de `.utrecht-skip-link--visible-on-focus` class naam. Standaard niet zichtbaar, wordt zichtbaar wanneer je met het toetsenbord er naar toe tabt.',
+          'Styling met de `.rhc-skip-link--visible-on-focus` class naam. Standaard niet zichtbaar, wordt zichtbaar wanneer je met het toetsenbord er naar toe tabt.',
       },
     },
   },
@@ -121,6 +123,39 @@ export const RightToLeft: Story = {
     docs: {
       description: {
         story: `Skip link in right-to-left script.`,
+      },
+    },
+  },
+};
+
+export const Focus: Story = {
+  args: {
+    href: '#main',
+    children: 'Skip to main content',
+    focus: true,
+  },
+  name: 'Focus',
+  parameters: {
+    docs: {
+      description: {
+        story: `Styling met de \`.rhc-skip-link--focus\` class naam.`,
+      },
+    },
+  },
+};
+
+export const FocusVisible: Story = {
+  args: {
+    href: '#main',
+    children: 'Skip to main content',
+    focus: true,
+    focusVisible: true,
+  },
+  name: 'Focus visible',
+  parameters: {
+    docs: {
+      description: {
+        story: `Styling met de \`.rhc-skip-link--focus-visible\` class naam.`,
       },
     },
   },
