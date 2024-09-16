@@ -1,55 +1,55 @@
 import {
+  CheckboxProps,
   FormField,
   FormFieldDescription,
+  FormFieldProps,
   FormLabel,
-  Select,
-  SelectOption,
-  SelectProps,
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
+import { ForwardedRef, forwardRef, useId } from 'react';
+import { Checkbox } from './Checkbox';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
-export interface FormFieldSelectProps extends SelectProps {
+export interface FormFieldCheckboxProps
+  extends Omit<FormFieldProps, 'onBlur' | 'onFocus' | 'onChange' | 'onInput'>,
+    Pick<CheckboxProps, 'name' | 'value' | 'disabled' | 'invalid' | 'onInput' | 'onBlur' | 'onFocus' | 'onChange'> {
+  label: string;
+  description?: string;
   errorMessage?: string;
-  selectRef?: Ref<HTMLSelectElement>;
-  status?: ReactNode;
-  description?: ReactNode;
-  input?: ReactNode;
-  label?: ReactNode;
-  type?: string;
-  options?: string[];
-  defaultValue?: string;
+  inputRef?: ForwardedRef<HTMLInputElement>;
+  status?: string;
 }
 
-export const FormFieldSelect = forwardRef(
+export const FormFieldCheckbox = forwardRef(
   (
     {
       label,
       description,
-      disabled,
-      errorMessage,
-      selectRef,
-      status,
       invalid,
-      children,
-      options,
-      input,
-      dir,
+      errorMessage,
+      inputRef,
+      status,
+      disabled,
       name,
+      value,
+      onInput,
+      onBlur,
+      onFocus,
+      onChange,
       ...restProps
-    }: PropsWithChildren<FormFieldSelectProps>,
+    }: FormFieldCheckboxProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const id = useId();
     const descriptionId = useId();
     const statusId = useId();
     const errorMessageId = useId();
-
     return (
-      <FormField dir={dir} input={input} invalid={invalid} ref={ref} type={'select'}>
+      <FormField className="rhc-form-field-checkbox" invalid={invalid} ref={ref} type="checkbox" {...restProps}>
         <div className="utrecht-form-field__label">
-          <FormLabel htmlFor={id}>{label}</FormLabel>
+          <FormLabel className="rhc-form-label--checkbox" htmlFor={id}>
+            {label}
+          </FormLabel>
         </div>
         {description && (
           <FormFieldDescription className="utrecht-form-field__description" id={descriptionId}>
@@ -62,13 +62,13 @@ export const FormFieldSelect = forwardRef(
           </FormFieldErrorMessage>
         )}
         <div className="utrecht-form-field__input">
-          <Select
-            dir={dir}
+          <Checkbox
             disabled={disabled}
             id={id}
             invalid={invalid}
             name={name}
-            ref={selectRef}
+            ref={inputRef}
+            value={value}
             aria-describedby={
               clsx({
                 [descriptionId]: description,
@@ -76,19 +76,11 @@ export const FormFieldSelect = forwardRef(
                 [statusId]: status,
               }) || undefined
             }
-            className={clsx({
-              'utrecht-select--html-select-rtl': dir === 'rtl',
-            })}
-            {...restProps}
-          >
-            {options?.length
-              ? options.map((option, index) => (
-                  <SelectOption disabled={disabled} id={option + index} invalid={invalid} key={index} value={option}>
-                    {option}
-                  </SelectOption>
-                ))
-              : children}
-          </Select>
+            onBlur={onBlur}
+            onChange={onChange}
+            onFocus={onFocus}
+            onInput={onInput}
+          />
         </div>
         {status && (
           <div className="utrecht-form-field__status" id={statusId}>
@@ -100,4 +92,4 @@ export const FormFieldSelect = forwardRef(
   },
 );
 
-FormFieldSelect.displayName = 'FormFieldSelect';
+FormFieldCheckbox.displayName = 'FormFieldCheckbox';
