@@ -13,8 +13,8 @@ const SkipLinkStory = ({ focus, visibility, visibleOnFocus, ...restProps }: Skip
   <SkipLink
     className={clsx({
       'utrecht-skip-link--focus': focus,
-      'utrecht-skip-link--visible-on-focus': visibleOnFocus,
-      'utrecht-skip-link--hidden': visibility === 'hidden',
+      'rhc-skip-link--visible-on-focus': visibleOnFocus,
+      'rhc-skip-link--hidden': visibility === 'hidden',
       'utrecht-skip-link--visible': visibility === 'visible',
     })}
     {...restProps}
@@ -77,10 +77,9 @@ export const Default: Story = {
     visibility: 'visible',
   },
   parameters: {
-    pseudo: { focus: true },
     docs: {
       description: {
-        story: `Styling met de \`.utrecht-skip-link\` en \`.utrecht-skip-link--visible-on-focus\` class naam.`,
+        story: `Styling met de \`.utrecht-skip-link\` en \`.rhc-skip-link--visible-on-focus\` class naam.`,
       },
     },
   },
@@ -89,7 +88,6 @@ export const Default: Story = {
 export const VisibleOnFocus: Story = {
   args: {
     href: '#main',
-    focus: true,
     children: 'Skip to main content',
     visibleOnFocus: true,
   },
@@ -108,7 +106,6 @@ export const VisibleOnFocus: Story = {
 export const RightToLeft: Story = {
   args: {
     href: '#main',
-    focus: true,
     children: 'تخطي إلى المحتوى الرئيسي',
     visibility: 'visible',
   },
