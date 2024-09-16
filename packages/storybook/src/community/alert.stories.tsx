@@ -6,7 +6,7 @@ import readme from './alert.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Alert',
-  id: 'rijkshuisstijl-alert',
+  id: 'rhc-alert',
   component: Alert,
   argTypes: {
     type: {

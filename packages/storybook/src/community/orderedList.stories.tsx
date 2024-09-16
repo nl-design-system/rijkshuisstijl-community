@@ -4,7 +4,7 @@ import readme from './orderedList.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Ordered List',
-  id: 'rijkshuisstijl-orderedList',
+  id: 'rhc-orderedList',
   component: OrderedList,
   args: {
     children: '',

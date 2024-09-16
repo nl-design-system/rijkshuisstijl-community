@@ -4,6 +4,7 @@ import readme from './text-input.md?raw';
 
 const meta: Meta<typeof Textbox> = {
   title: 'Rijkshuisstijl/Text Input',
+  id: 'rhc-text-input',
   component: Textbox,
   tags: ['autodocs'],
   argTypes: {

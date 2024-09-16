@@ -4,7 +4,7 @@ import readme from './form-field-textarea.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Form Field/Form Field Textarea',
-  id: 'rijkshuisstijl-form-field-textarea',
+  id: 'rhc-form-field-textarea',
   component: FormFieldTextarea,
   argTypes: {
     required: {

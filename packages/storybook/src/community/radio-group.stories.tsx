@@ -13,7 +13,7 @@ const RadioGroupStory = () => (
 
 const meta = {
   title: 'Rijkshuisstijl/Radio Group',
-  id: 'rijkshuisstijl-radio-group',
+  id: 'rhc-radio-group',
   component: RadioGroupStory,
   render: RadioGroupStory,
 } satisfies Meta<typeof RadioGroupStory>;

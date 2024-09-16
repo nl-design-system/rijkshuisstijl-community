@@ -31,7 +31,7 @@ const ButtonStory = ({ appearance, children, iconLeft, iconRight, ...props }: Pr
 
 const meta = {
   title: 'Rijkshuisstijl/Button',
-  id: 'rijkshuisstijl-button',
+  id: 'rhc-button',
   component: ButtonStory,
   argTypes: {
     appearance: {
