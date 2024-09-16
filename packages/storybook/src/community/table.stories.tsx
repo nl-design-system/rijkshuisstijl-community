@@ -14,7 +14,7 @@ import readme from './table.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Table',
-  id: 'rijkshuisstijl-table',
+  id: 'rhc-table',
   component: Table,
   tags: ['autodocs'],
   args: {

@@ -17,7 +17,7 @@ const AlertStoryComponent = ({ type, heading, textContent, headingLevel }: Alert
 
 const meta = {
   title: 'Rijkshuisstijl/Alert',
-  id: 'rijkshuisstijl-alert',
+  id: 'rhc-alert',
   component: AlertStoryComponent,
   argTypes: {
     type: {

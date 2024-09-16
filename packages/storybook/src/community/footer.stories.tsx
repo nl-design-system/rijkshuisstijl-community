@@ -5,7 +5,7 @@ import readme from './footer.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Footer',
-  id: 'rijkshuisstijl-footer',
+  id: 'rhc-footer',
   component: Footer,
   parameters: {
     docs: {

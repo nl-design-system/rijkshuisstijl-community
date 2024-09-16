@@ -5,7 +5,7 @@ import readme from './breadcrumb-nav.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Breadcrumb navigation',
-  id: 'rijkshuisstijl-breadcrumb-nav',
+  id: 'rhc-breadcrumb-nav',
   component: BreadcrumbNav,
   argTypes: {},
   parameters: {

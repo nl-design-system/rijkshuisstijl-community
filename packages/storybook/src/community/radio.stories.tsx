@@ -26,7 +26,7 @@ const RadioStory = ({ active, focus, focusVisible, hover, name, ...args }: Radio
 
 const meta = {
   title: 'Rijkshuisstijl/Radio',
-  id: 'rijkshuisstijl-radio',
+  id: 'rhc-radio',
   component: RadioStory,
   args: {
     checked: false,

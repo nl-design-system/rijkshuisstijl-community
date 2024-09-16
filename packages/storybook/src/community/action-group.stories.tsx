@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react/*';
 import readme from './action-group.md?raw';
 const meta = {
   title: 'Rijkshuisstijl/ActionGroup',
-  id: 'rijkshuisstijl-action-group',
+  id: 'rhc-action-group',
   component: ActionGroup,
   argTypes: {
     direction: {

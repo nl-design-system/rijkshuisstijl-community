@@ -4,7 +4,7 @@ import readme from './image.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Image',
-  id: 'rijkshuisstijl-image',
+  id: 'rhc-image',
   component: Image,
   argTypes: {
     src: {

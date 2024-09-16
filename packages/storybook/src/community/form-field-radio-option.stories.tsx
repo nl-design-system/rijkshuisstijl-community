@@ -4,7 +4,7 @@ import '@rijkshuisstijl-community/components-css/index.scss';
 
 const meta = {
   title: 'Rijkshuisstijl/Form field/Form field Radio Option',
-  id: 'rijkshuisstijl-form-field-radio-option',
+  id: 'rhc-form-field-radio-option',
   component: FormFieldRadioOption,
   parameters: {},
   args: {
