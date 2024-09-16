@@ -26,7 +26,8 @@ test.each([['info'], ['ok'], ['warning'], ['error']])(
     const alert = screen.getByRole('alert');
     const iconContainer = alert.querySelector('.rhc-alert__icon-container');
 
-    expect(iconContainer).toHaveClass(`rhc-alert__icon-container-${type}`);
+    expect(iconContainer).toHaveClass(`rhc-alert__icon-container`);
+    expect(iconContainer).toHaveClass(`rhc-alert__icon-container--${type}`);
 
     cleanup();
   },
