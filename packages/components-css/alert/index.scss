@@ -3,13 +3,14 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-.rhc-alert-container {
+.rhc-alert__container {
   display: flex;
 }
 
-.rhc-alert-container__icon {
-  inline-size: var(--rhc-space-300);
-  padding-block-start: var(--rhc-space-100);
+.rhc-alert__icon-container {
+  inline-size: var(--utrecht-alert-icon-size);
+  inset-block-start: var(--utrecht-alert-icon-inset-block-start);
+  min-width: var(--utrecht-alert-icon-size);
   padding-inline-end: var(--rhc-space-100);
   &-ok {
     color: var(--rhc-color-feedback-success-default);

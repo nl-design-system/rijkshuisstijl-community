@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import { Alert } from './Alert';
 import '@testing-library/jest-dom';
 
@@ -7,12 +7,28 @@ describe('Alert', () => {
     render(
       <Alert
         heading="Heading"
-        headingLevel={3}
         textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
         type="info"
       />,
     );
     const alert = screen.getByRole('alert');
     expect(alert).toBeInTheDocument();
+  });
+});
+
+it('should apply the correct class based on the type prop', () => {
+  const types = ['info', 'ok', 'warning', 'error'];
+
+  types.forEach((type) => {
+    render(
+      <Alert heading="Test Heading" textContent="Test content" type={type as 'info' | 'ok' | 'warning' | 'error'} />,
+    );
+
+    const alert = screen.getByRole('alert');
+    const iconContainer = alert.querySelector('.rhc-alert__icon-container');
+
+    expect(iconContainer).toHaveClass(`rhc-alert__icon-container-${type}`);
+
+    cleanup();
   });
 });

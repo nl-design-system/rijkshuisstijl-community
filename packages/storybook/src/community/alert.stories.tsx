@@ -37,14 +37,6 @@ const meta = {
         category: 'Demo',
       },
     },
-    headingLevel: {
-      description: 'Alert heading level',
-      control: { type: 'select' },
-      options: [1, 2, 3, 4, 5, 6],
-      table: {
-        category: 'Demo',
-      },
-    },
     textContent: {
       description: 'Alert content - used in default webcomponent slot',
       type: {
@@ -58,7 +50,6 @@ const meta = {
   args: {
     type: 'info',
     heading: 'Heading',
-    headingLevel: 3,
     textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
   },
   tags: ['autodocs'],
@@ -78,7 +69,6 @@ export const Informative: StoryObj<typeof meta> = {
   args: {
     type: 'info',
     heading: 'Heading',
-    headingLevel: 3,
     textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
   },
 };
@@ -87,7 +77,6 @@ export const Negative: StoryObj<typeof meta> = {
   args: {
     type: 'error',
     heading: 'Heading',
-    headingLevel: 3,
     textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
   },
 };
@@ -96,7 +85,6 @@ export const Positive: StoryObj<typeof meta> = {
   args: {
     type: 'ok',
     heading: 'Heading',
-    headingLevel: 3,
     textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
   },
 };
@@ -105,7 +93,6 @@ export const Warning: StoryObj<typeof meta> = {
   args: {
     type: 'warning',
     heading: 'Heading',
-    headingLevel: 3,
     textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
   },
 };

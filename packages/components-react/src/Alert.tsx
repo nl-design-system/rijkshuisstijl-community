@@ -17,12 +17,11 @@ const RhcIcon = ({ type }: { type: string }) =>
 export interface AlertProps {
   type: 'info' | 'ok' | 'warning' | 'error';
   heading?: string;
-  headingLevel?: number;
   textContent?: string;
 }
 export const Alert = forwardRef(
   (
-    { type, children, heading, headingLevel, textContent, ...restProps }: PropsWithChildren<AlertProps>,
+    { type, children, heading, textContent, ...restProps }: PropsWithChildren<AlertProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     return (
@@ -30,14 +29,13 @@ export const Alert = forwardRef(
         {children ? (
           children
         ) : (
-          <div className="rhc-alert-container">
+          <div className="rhc-alert__container">
             <div
-              className={clsx({
-                'rhc-alert-container__icon': true,
-                'rhc-alert-container__icon-ok': type === 'ok',
-                'rhc-alert-container__icon-error': type === 'error',
-                'rhc-alert-container__icon-warning': type === 'warning',
-                'rhc-alert-container__icon-info': type === 'info',
+              className={clsx('rhc-alert__icon-container', {
+                'rhc-alert__icon-container-ok': type === 'ok',
+                'rhc-alert__icon-container-error': type === 'error',
+                'rhc-alert__icon-container-warning': type === 'warning',
+                'rhc-alert__icon-container-info': type === 'info',
               })}
             >
               <Icon>
@@ -45,7 +43,7 @@ export const Alert = forwardRef(
               </Icon>
             </div>
             <div>
-              <Heading level={headingLevel || 3}>{heading}</Heading>
+              <Heading level={5}>{heading}</Heading>
               <Paragraph>{textContent}</Paragraph>
             </div>
           </div>
