@@ -1981,7 +1981,7 @@
             }
           },
           "background-color": {
-            "value": "{rhc.color.primary.500}",
+            "value": "{rhc.color.roze.500}",
             "type": "color"
           },
           "border-color": {
@@ -5475,7 +5475,7 @@
       }
     }
   },
-  "overwrites/primaire kleur/lichtblauw": {
+  "overwrites/lichtblauw": {
     "rhc": {
       "color": {
         "primary": {
@@ -5520,7 +5520,7 @@
       }
     }
   },
-  "overwrites/primaire kleur/oranje": {
+  "overwrites/oranje": {
     "rhc": {
       "color": {
         "primary": {
@@ -5565,7 +5565,7 @@
       }
     }
   },
-  "overwrites/primaire kleur/violet": {
+  "overwrites/violet": {
     "rhc": {
       "color": {
         "primary": {
@@ -5610,9 +5610,15 @@
       }
     }
   },
-  "overwrites/primaire kleur/mintgroen": {
+  "overwrites/mintgroen": {
     "rhc": {
       "color": {
+        "accent": {
+          "500": {
+            "value": "{rhc.color.roze.500}",
+            "type": "color"
+          }
+        },
         "primary": {
           "50": {
             "value": "{rhc.color.mintgroen.50}",
@@ -5636,51 +5642,6 @@
           },
           "500": {
             "value": "{rhc.color.mintgroen.500}",
-            "type": "color"
-          },
-          "hover": {
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "darken",
-                  "value": "0.3",
-                  "space": "lch"
-                }
-              }
-            },
-            "value": "{rhc.color.primary.500}",
-            "type": "color"
-          }
-        }
-      }
-    }
-  },
-  "overwrites/primaire kleur/paars": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "value": "{rhc.color.paars.50}",
-            "type": "color"
-          },
-          "100": {
-            "value": "{rhc.color.paars.100}",
-            "type": "color"
-          },
-          "200": {
-            "value": "{rhc.color.paars.200}",
-            "type": "color"
-          },
-          "300": {
-            "value": "{rhc.color.paars.300}",
-            "type": "color"
-          },
-          "400": {
-            "value": "{rhc.color.paars.400}",
-            "type": "color"
-          },
-          "500": {
-            "value": "{rhc.color.paars.500}",
             "type": "color"
           },
           "hover": {
@@ -5782,6 +5743,144 @@
               "type": "color"
             }
           }
+        }
+      }
+    }
+  },
+  "overwrites/mobile": {
+    "rhc": {
+      "font-size": {
+        "heading": {
+          "level-1": {
+            "value": "{rhc.font-size.xl.mobile}",
+            "type": "fontSizes"
+          },
+          "level-2": {
+            "value": "{rhc.font-size.lg.mobile}",
+            "type": "fontSizes"
+          },
+          "level-3": {
+            "value": "{rhc.font-size.md.mobile}",
+            "type": "fontSizes"
+          },
+          "level-4": {
+            "value": "{rhc.font-size.sm.mobile}",
+            "type": "fontSizes"
+          },
+          "level-5": {
+            "value": "{rhc.font-size.xs.mobile}",
+            "type": "fontSizes"
+          }
+        },
+        "paragraph": {
+          "intro": {
+            "value": "{rhc.font-size.sm.mobile}",
+            "type": "fontSizes"
+          },
+          "default": {
+            "value": "{rhc.font-size.xs.mobile}",
+            "type": "fontSizes"
+          }
+        }
+      }
+    }
+  },
+  "overwrites/oude rijkshuisstijl/border": {
+    "rhc": {
+      "border-radius": {
+        "sm": {
+          "value": "0",
+          "type": "borderRadius"
+        },
+        "md": {
+          "value": "0",
+          "type": "borderRadius"
+        },
+        "keep": {
+          "value": "0",
+          "type": "borderRadius"
+        }
+      }
+    }
+  },
+  "overwrites/oude rijkshuisstijl/blockquote": {
+    "utrecht": {
+      "blockquote": {
+        "attribution": {
+          "font-size": {
+            "value": "{rhc.font-size.paragraph.default}",
+            "type": "fontSizes"
+          },
+          "font-family": {
+            "value": "{rhc.font-family.primary}",
+            "type": "fontFamilies"
+          },
+          "line-height": {
+            "value": "{rhc.line-height.paragraph}",
+            "type": "lineHeights"
+          },
+          "font-weight": {
+            "value": "{rhc.font-weight.regular}",
+            "type": "fontWeights"
+          },
+          "padding-block-start": {
+            "value": "{rhc.space.150}",
+            "type": "spacing"
+          },
+          "color": {
+            "value": "{rhc.color.foreground.subdued}",
+            "type": "color"
+          }
+        },
+        "content": {
+          "font-family": {
+            "value": "{rhc.font-family.secondary}",
+            "type": "fontFamilies"
+          },
+          "line-height": {
+            "value": "{rhc.line-height.paragraph}",
+            "type": "lineHeights"
+          },
+          "font-weight": {
+            "value": "{rhc.font-weight.regular}",
+            "type": "fontWeights"
+          },
+          "font-size": {
+            "value": "{rhc.font-size.paragraph.intro}",
+            "type": "fontSizes"
+          },
+          "color": {
+            "value": "{rhc.color.foreground.default}",
+            "type": "color"
+          }
+        },
+        "padding-block-end": {
+          "value": "{rhc.space.150}",
+          "type": "spacing"
+        },
+        "padding-block-start": {
+          "value": "{rhc.space.150}",
+          "type": "spacing"
+        },
+        "padding-inline-end": {
+          "value": "{rhc.space.500}",
+          "type": "spacing"
+        },
+        "padding-inline-start": {
+          "value": "{rhc.space.500}",
+          "type": "spacing"
+        },
+        "row-gap": {
+          "value": "{rhc.space.150}",
+          "type": "spacing"
+        },
+        "background-color": {
+          "value": "{rhc.color.none}",
+          "type": "color"
+        },
+        "border-left": {
+          "value": "{rhc.color.accent.500}",
+          "type": "color"
         }
       }
     }
@@ -6106,224 +6205,6 @@
       }
     }
   },
-  "overwrites/mobile": {
-    "rhc": {
-      "font-size": {
-        "heading": {
-          "level-1": {
-            "value": "{rhc.font-size.xl.mobile}",
-            "type": "fontSizes"
-          },
-          "level-2": {
-            "value": "{rhc.font-size.lg.mobile}",
-            "type": "fontSizes"
-          },
-          "level-3": {
-            "value": "{rhc.font-size.md.mobile}",
-            "type": "fontSizes"
-          },
-          "level-4": {
-            "value": "{rhc.font-size.sm.mobile}",
-            "type": "fontSizes"
-          },
-          "level-5": {
-            "value": "{rhc.font-size.xs.mobile}",
-            "type": "fontSizes"
-          }
-        },
-        "paragraph": {
-          "intro": {
-            "value": "{rhc.font-size.sm.mobile}",
-            "type": "fontSizes"
-          },
-          "default": {
-            "value": "{rhc.font-size.xs.mobile}",
-            "type": "fontSizes"
-          }
-        }
-      }
-    }
-  },
-  "overwrites/oude rijkshuisstijl/border": {
-    "rhc": {
-      "border-radius": {
-        "sm": {
-          "value": "0",
-          "type": "borderRadius"
-        },
-        "md": {
-          "value": "0",
-          "type": "borderRadius"
-        },
-        "keep": {
-          "value": "0",
-          "type": "borderRadius"
-        }
-      }
-    }
-  },
-  "overwrites/oude rijkshuisstijl/blockquote": {
-    "utrecht": {
-      "blockquote": {
-        "attribution": {
-          "font-size": {
-            "value": "{rhc.font-size.paragraph.default}",
-            "type": "fontSizes"
-          },
-          "font-family": {
-            "value": "{rhc.font-family.primary}",
-            "type": "fontFamilies"
-          },
-          "line-height": {
-            "value": "{rhc.line-height.paragraph}",
-            "type": "lineHeights"
-          },
-          "font-weight": {
-            "value": "{rhc.font-weight.regular}",
-            "type": "fontWeights"
-          },
-          "padding-block-start": {
-            "value": "{rhc.space.150}",
-            "type": "spacing"
-          },
-          "color": {
-            "value": "{rhc.color.foreground.subdued}",
-            "type": "color"
-          }
-        },
-        "content": {
-          "font-family": {
-            "value": "{rhc.font-family.secondary}",
-            "type": "fontFamilies"
-          },
-          "line-height": {
-            "value": "{rhc.line-height.paragraph}",
-            "type": "lineHeights"
-          },
-          "font-weight": {
-            "value": "{rhc.font-weight.regular}",
-            "type": "fontWeights"
-          },
-          "font-size": {
-            "value": "{rhc.font-size.paragraph.intro}",
-            "type": "fontSizes"
-          },
-          "color": {
-            "value": "{rhc.color.foreground.default}",
-            "type": "color"
-          }
-        },
-        "padding-block-end": {
-          "value": "{rhc.space.150}",
-          "type": "spacing"
-        },
-        "padding-block-start": {
-          "value": "{rhc.space.150}",
-          "type": "spacing"
-        },
-        "padding-inline-end": {
-          "value": "{rhc.space.500}",
-          "type": "spacing"
-        },
-        "padding-inline-start": {
-          "value": "{rhc.space.500}",
-          "type": "spacing"
-        },
-        "row-gap": {
-          "value": "{rhc.space.150}",
-          "type": "spacing"
-        },
-        "background-color": {
-          "value": "{rhc.color.none}",
-          "type": "color"
-        },
-        "border-left": {
-          "value": "{rhc.color.accent.500}",
-          "type": "color"
-        }
-      }
-    }
-  },
-  "overwrites/tekstkleur/foreground-zwart": {
-    "rhc": {
-      "color": {
-        "foreground": {
-          "default": {
-            "value": "{rhc.color.zwart}",
-            "type": "color"
-          }
-        }
-      }
-    }
-  },
-  "overwrites/tekstkleur/heading-primairy": {
-    "utrecht": {
-      "heading-1": {
-        "color": {
-          "value": "{rhc.color.primary.500}",
-          "type": "color"
-        }
-      },
-      "heading-2": {
-        "color": {
-          "value": "{rhc.color.primary.500}",
-          "type": "color"
-        }
-      },
-      "heading-3": {
-        "color": {
-          "value": "{rhc.color.primary.500}",
-          "type": "color"
-        }
-      },
-      "heading-4": {
-        "color": {
-          "value": "{rhc.color.primary.500}",
-          "type": "color"
-        }
-      },
-      "heading-5": {
-        "color": {
-          "value": "{rhc.color.primary.500}",
-          "type": "color"
-        }
-      }
-    }
-  },
-  "overwrites/tekstkleur/heading-lintblauw": {
-    "utrecht": {
-      "heading-1": {
-        "color": {
-          "value": "{rhc.color.lintblauw.500}",
-          "type": "color"
-        }
-      },
-      "heading-2": {
-        "color": {
-          "value": "{rhc.color.lintblauw.500}",
-          "type": "color"
-        }
-      },
-      "heading-3": {
-        "color": {
-          "value": "{rhc.color.lintblauw.500}",
-          "type": "color"
-        }
-      },
-      "heading-4": {
-        "color": {
-          "value": "{rhc.color.lintblauw.500}",
-          "type": "color"
-        }
-      },
-      "heading-5": {
-        "color": {
-          "value": "{rhc.color.lintblauw.500}",
-          "type": "color"
-        }
-      }
-    }
-  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
@@ -6385,20 +6266,16 @@
       "components/toolbar-button",
       "components/unordered-list",
       "components/form-label",
-      "overwrites/primaire kleur/lichtblauw",
-      "overwrites/primaire kleur/oranje",
-      "overwrites/primaire kleur/violet",
-      "overwrites/primaire kleur/mintgroen",
-      "overwrites/primaire kleur/paars",
+      "overwrites/lichtblauw",
+      "overwrites/oranje",
+      "overwrites/violet",
+      "overwrites/mintgroen",
       "overwrites/on-color-zwart",
       "overwrites/button_zwart_label",
-      "overwrites/button_lintblauw",
       "overwrites/mobile",
       "overwrites/oude rijkshuisstijl/border",
       "overwrites/oude rijkshuisstijl/blockquote",
-      "overwrites/tekstkleur/foreground-zwart",
-      "overwrites/tekstkleur/heading-primairy",
-      "overwrites/tekstkleur/heading-lintblauw"
+      "overwrites/button_lintblauw"
     ]
   }
 }
