@@ -6,7 +6,7 @@ import readme from './blockquote.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Blockquote',
-  id: 'rijkshuisstijl-blockquote',
+  id: 'rhc-blockquote',
   component: Blockquote,
   argTypes: {
     attribution: {

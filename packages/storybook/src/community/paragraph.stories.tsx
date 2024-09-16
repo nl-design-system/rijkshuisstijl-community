@@ -6,7 +6,7 @@ import readme from './paragraph.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Paragraph',
-  id: 'rijkshuisstijl-paragraph',
+  id: 'rhc-paragraph',
   component: Paragraph,
   argTypes: {
     lead: {

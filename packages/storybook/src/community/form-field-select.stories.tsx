@@ -4,7 +4,7 @@ import readme from './form-field-select.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Form Field/Form Field Select',
-  id: 'rijkshuisstijl-form-field-select',
+  id: 'rhc-form-field-select',
   component: FormFieldSelect,
   argTypes: {
     label: {

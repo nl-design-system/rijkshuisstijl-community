@@ -4,7 +4,7 @@ import readme from './checkbox.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Checkbox',
-  id: 'rijkshuisstijl-checkbox',
+  id: 'rhc-checkbox',
   component: Checkbox,
   parameters: {
     docs: {
