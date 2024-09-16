@@ -40,7 +40,7 @@ const LinkStory = ({ href, children, iconLeft, iconRight, external, ...props }: 
 
 const meta = {
   title: 'Rijkshuisstijl/Link',
-  id: 'rijkshuisstijl-link',
+  id: 'rhc-link',
   component: LinkStory,
   argTypes: {
     href: {

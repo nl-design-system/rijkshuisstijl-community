@@ -4,7 +4,7 @@ import { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'Rijkshuisstijl/Logo',
-  id: 'rijkshuisstijl-logo',
+  id: 'rhc-logo',
   component: Logo,
   argTypes: {
     organisation: {

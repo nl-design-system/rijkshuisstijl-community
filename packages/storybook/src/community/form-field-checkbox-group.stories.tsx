@@ -4,7 +4,7 @@ import readme from './form-field-checkbox-group.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Form Field/Form Field Checkbox Group',
-  id: 'rijkshuisstijl-form-field-checkbox-group',
+  id: 'rhc-form-field-checkbox-group',
   component: FormFieldCheckboxGroup,
   argTypes: {
     label: {

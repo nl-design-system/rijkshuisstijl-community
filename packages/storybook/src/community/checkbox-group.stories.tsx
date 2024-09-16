@@ -4,7 +4,7 @@ import readme from './checkbox-group.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/CheckboxGroup',
-  id: 'rijkshuisstijl-checkbox-group',
+  id: 'rhc-checkbox-group',
   component: CheckboxGroup,
   parameters: {
     docs: {

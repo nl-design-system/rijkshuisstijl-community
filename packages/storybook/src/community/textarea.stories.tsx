@@ -4,7 +4,7 @@ import readme from './textarea.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Textarea',
-  id: 'rijkshuisstijl-textarea',
+  id: 'rhc-textarea',
   component: Textarea,
   argTypes: {
     required: {
