@@ -1,0 +1,98 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@import "./mixin";
+
+.rhc-hero {
+  @include rhc-hero;
+  .rhc-hero__image {
+    @include rhc-hero__image;
+  }
+
+  &.rhc-hero--aspect-ratio-16-9 {
+    @include rhc-hero--aspect-ratio-16-9;
+
+    .rhc-hero__image {
+      @include rhc-hero--aspect-ratio-16-9;
+    }
+  }
+
+  &.rhc-hero--aspect-ratio-1-1 {
+    @include rhc-hero--aspect-ratio-1-1;
+
+    .rhc-hero__image {
+      @include rhc-hero--aspect-ratio-1-1;
+    }
+  }
+
+  &.rhc-hero--aspect-ratio-4-3 {
+    @include rhc-hero--aspect-ratio-4-3;
+
+    .rhc-hero__image {
+      @include rhc-hero--aspect-ratio-4-3;
+    }
+  }
+
+  .rhc-hero__message {
+    @include rhc-hero__message;
+  }
+
+  &.rhc-hero--align-inline-start {
+    &:not(.rhc-hero--rounded-border-custom) {
+      @include rhc-hero--rounded-border-start-start;
+      .rhc-hero__image {
+        @include rhc-hero--rounded-border-start-start;
+      }
+    }
+
+    .rhc-hero__message {
+      @include rhc-hero__message--align-inline-start;
+    }
+  }
+
+  &.rhc-hero--align-inline-end {
+    &:not(.rhc-hero--rounded-border-custom) {
+      @include rhc-hero--rounded-border-start-end;
+      .rhc-hero__image {
+        @include rhc-hero--rounded-border-start-end;
+      }
+    }
+
+    .rhc-hero__message {
+      @include rhc-hero__message--align-inline-end;
+    }
+  }
+
+  &.rhc-hero--rounded-border-custom.rhc-hero--rounded-border-start-start {
+    @include rhc-hero--rounded-border-start-start;
+
+    .rhc-hero__image {
+      @include rhc-hero--rounded-border-start-start;
+    }
+  }
+
+  &.rhc-hero--rounded-border-custom.rhc-hero--rounded-border-start-end {
+    @include rhc-hero--rounded-border-start-end;
+
+    .rhc-hero__image {
+      @include rhc-hero--rounded-border-start-end;
+    }
+  }
+
+  &.rhc-hero--rounded-border-custom.rhc-hero--rounded-border-end-start {
+    @include rhc-hero--rounded-border-end-start;
+
+    .rhc-hero__image {
+      @include rhc-hero--rounded-border-end-start;
+    }
+  }
+
+  &.rhc-hero--rounded-border-custom.rhc-hero--rounded-border-end-end {
+    @include rhc-hero--rounded-border-end-end;
+
+    .rhc-hero__image {
+      @include rhc-hero--rounded-border-end-end;
+    }
+  }
+}

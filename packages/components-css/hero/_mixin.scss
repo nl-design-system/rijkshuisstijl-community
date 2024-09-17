@@ -1,0 +1,77 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@mixin rhc-hero {
+  block-size: auto;
+  inline-size: var(--rhc-hero-inline-size, inherit);
+  overflow: hidden;
+  position: relative;
+}
+
+@mixin rhc-hero--aspect-ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+@mixin rhc-hero--aspect-ratio-1-1 {
+  aspect-ratio: 1 / 1;
+}
+
+@mixin rhc-hero--aspect-ratio-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+@mixin rhc-hero__message {
+  --utrecht-heading-1-color: var(--rhc-hero-message-color, inherit);
+  --utrecht-heading-2-color: var(--rhc-hero-message-color, inherit);
+  --utrecht-heading-3-color: var(--rhc-hero-message-color, inherit);
+  --utrecht-heading-4-color: var(--rhc-hero-message-color, inherit);
+  --utrecht-heading-5-color: var(--rhc-hero-message-color, inherit);
+  --utrecht-heading-6-color: var(--rhc-hero-message-color, inherit);
+  --utrecht-paragraph-color: var(--rhc-hero-message-color, inherit);
+
+  background-color: var(--rhc-hero-message-background-color, inherit);
+  box-sizing: border-box;
+  color: var(--rhc-hero-message-color, inherit);
+  inline-size: var(--rhc-hero-message-inline-size, inherit);
+  inset-block-end: 0;
+  padding-block-end: var(--rhc-hero-message-padding-block-end, inherit);
+  padding-block-start: var(--rhc-hero-message-padding-block-start, inherit);
+  padding-inline-end: var(--rhc-hero-message-padding-inline-end, inherit);
+  padding-inline-start: var(--rhc-hero-message-padding-inline-start, inherit);
+  position: absolute;
+}
+
+@mixin rhc-hero--rounded-border-end-end {
+  border-end-end-radius: var(--rhc-hero-border-radius, inherit);
+}
+
+@mixin rhc-hero--rounded-border-end-start {
+  border-end-start-radius: var(--rhc-hero-border-radius, inherit);
+}
+
+@mixin rhc-hero--rounded-border-start-end {
+  border-start-end-radius: var(--rhc-hero-border-radius, inherit);
+}
+
+@mixin rhc-hero--rounded-border-start-start {
+  border-start-start-radius: var(--rhc-hero-border-radius, inherit);
+}
+
+@mixin rhc-hero__message--align-inline-start {
+  border-start-end-radius: var(--rhc-hero-message-border-radius, inherit);
+  inset-inline-start: 0;
+}
+
+@mixin rhc-hero__message--align-inline-end {
+  border-start-start-radius: var(--rhc-hero-message-border-radius, inherit);
+  inset-inline-end: 0;
+}
+
+@mixin rhc-hero__image {
+  block-size: auto;
+  inline-size: var(--rhc-hero-inline-size, inherit);
+  position: relative;
+  z-index: -1;
+}
