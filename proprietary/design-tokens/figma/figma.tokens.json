@@ -1546,14 +1546,14 @@
     }
   },
   "components/article": {
-      "utrecht": {
-        "article": {
-          "max-inline-size": {
-            "value": "75ch",
-            "type": "spacing"
-          }
+    "utrecht": {
+      "article": {
+        "max-inline-size": {
+          "value": "75ch",
+          "type": "spacing"
         }
       }
+    }
   },
   "components/avatar": {
     "todo": {
@@ -3048,6 +3048,24 @@
       }
     }
   },
+  "components/form-label": {
+    "utrecht": {
+      "form-label": {
+        "color": {
+          "value": "{rhc.color.foreground.lint}",
+          "type": "color"
+        },
+        "font-size": {
+          "value": "{rhc.font-size.paragraph.default}",
+          "type": "fontSizes"
+        },
+        "font-weight": {
+          "value": "{rhc.font-weight.bold}",
+          "type": "fontWeights"
+        }
+      }
+    }
+  },
   "components/heading": {
     "utrecht": {
       "heading-1": {
@@ -3202,6 +3220,86 @@
       }
     }
   },
+  "components/hero": {
+    "todo": {
+      "hero": {
+        "heading": {
+          "font-weight": {
+            "value": "{rhc.font-weight.bold}",
+            "type": "fontWeights"
+          },
+          "line-height": {
+            "value": "{rhc.line-height.sm}",
+            "type": "lineHeights"
+          },
+          "font-size": {
+            "value": "{rhc.font-size.heading.level-3}",
+            "type": "fontSizes"
+          },
+          "font-family": {
+            "value": "{rhc.font-family.primary}",
+            "type": "fontFamilies"
+          }
+        },
+        "subtext": {
+          "font-weight": {
+            "value": "{rhc.font-weight.regular}",
+            "type": "fontWeights"
+          },
+          "line-height": {
+            "value": "{rhc.line-height.paragraph}",
+            "type": "lineHeights"
+          },
+          "font-size": {
+            "value": "{rhc.font-size.paragraph.default}",
+            "type": "fontSizes"
+          },
+          "font-family": {
+            "value": "{rhc.font-family.primary}",
+            "type": "fontFamilies"
+          }
+        },
+        "message": {
+          "background-color": {
+            "value": "{rhc.color.lintblauw.500}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{rhc.color.foreground.onEmphasis}",
+            "type": "color"
+          },
+          "row-gap": {
+            "value": "{rhc.space.25}",
+            "type": "spacing"
+          },
+          "padding-block-end": {
+            "value": "{rhc.space.200}",
+            "type": "spacing"
+          },
+          "padding-inline-end": {
+            "value": "{rhc.space.200}",
+            "type": "spacing"
+          },
+          "padding-inline-start": {
+            "value": "{rhc.space.200}",
+            "type": "spacing"
+          },
+          "padding-block-start": {
+            "value": "{rhc.space.200}",
+            "type": "spacing"
+          },
+          "border-radius": {
+            "value": "20px",
+            "type": "borderRadius"
+          }
+        },
+        "border-radius": {
+          "value": "40px",
+          "type": "borderRadius"
+        }
+      }
+    }
+  },
   "components/icon-only-button": {
     "rhc": {
       "icon-only-button": {
@@ -3298,8 +3396,8 @@
         },
         "icon": {
           "inset-block-start": {
-          "value": "{rhc.space.50}",
-          "type": "spacing"
+            "value": "{rhc.space.50}",
+            "type": "spacing"
           },
           "size": {
             "value": "{rhc.size.icon.functional}",
@@ -5497,24 +5595,6 @@
       }
     }
   },
-  "components/form-label": {
-    "utrecht": {
-      "form-label": {
-        "color": {
-          "value": "{rhc.color.foreground.lint}",
-          "type": "color"
-        },
-        "font-size": {
-          "value": "{rhc.font-size.paragraph.default}",
-          "type": "fontSizes"
-        },
-        "font-weight": {
-          "value": "{rhc.font-weight.bold}",
-          "type": "fontWeights"
-        }
-      }
-    }
-  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
@@ -5555,7 +5635,9 @@
       "components/form-field-label",
       "components/form-field-option-label",
       "components/form-field-radio-option",
+      "components/form-label",
       "components/heading",
+      "components/hero",
       "components/icon-only-button",
       "components/link",
       "components/link-list",
@@ -5577,8 +5659,7 @@
       "components/textarea",
       "components/text-input",
       "components/toolbar-button",
-      "components/unordered-list",
-      "components/form-label"
+      "components/unordered-list"
     ]
   }
 }
