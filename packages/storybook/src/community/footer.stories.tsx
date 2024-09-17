@@ -22,10 +22,10 @@ type Story = StoryObj<typeof meta>;
 
 export const DefaultFooter: Story = {
   args: {
-    title: 'De Rijksoverheid. Voor Nederland',
+    heading: 'De Rijksoverheid. Voor Nederland',
     columns: [
       {
-        title: 'Service',
+        heading: 'Service',
         elements: (
           <LinkList>
             <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
@@ -53,7 +53,7 @@ export const DefaultFooter: Story = {
         ),
       },
       {
-        title: 'Over deze site',
+        heading: 'Over deze site',
         elements: (
           <LinkList>
             <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>

@@ -156,10 +156,10 @@ export default function Form() {
         </form>
       </PageContent>
       <Footer
-        title="De Rijksoverheid. Voor Nederland"
+        heading="De Rijksoverheid. Voor Nederland"
         columns={[
           {
-            title: 'Service',
+            heading: 'Service',
             elements: [
               <LinkList key="1">
                 <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
@@ -187,7 +187,7 @@ export default function Form() {
             ],
           },
           {
-            title: 'Over deze site',
+            heading: 'Over deze site',
             elements: (
               <LinkList key="2">
                 <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
