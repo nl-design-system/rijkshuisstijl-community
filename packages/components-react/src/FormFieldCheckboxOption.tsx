@@ -6,21 +6,24 @@ import {
   FormLabel,
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, useId } from 'react';
+import { ForwardedRef, forwardRef, ReactNode, useId } from 'react';
 import { Checkbox } from './Checkbox';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
-export interface FormFieldCheckboxProps
+export interface FormFieldCheckboxOptionProps
   extends Omit<FormFieldProps, 'onBlur' | 'onFocus' | 'onChange' | 'onInput'>,
-    Pick<CheckboxProps, 'name' | 'value' | 'disabled' | 'invalid' | 'onInput' | 'onBlur' | 'onFocus' | 'onChange'> {
-  label: string;
-  description?: string;
-  errorMessage?: string;
+    Pick<
+      CheckboxProps,
+      'name' | 'value' | 'disabled' | 'invalid' | 'onInput' | 'onBlur' | 'onFocus' | 'onChange' | 'defaultValue'
+    > {
+  label: ReactNode;
+  description?: ReactNode;
+  errorMessage?: ReactNode;
   inputRef?: ForwardedRef<HTMLInputElement>;
   status?: string;
 }
 
-export const FormFieldCheckbox = forwardRef(
+export const FormFieldCheckboxOption = forwardRef(
   (
     {
       label,
@@ -36,8 +39,9 @@ export const FormFieldCheckbox = forwardRef(
       onBlur,
       onFocus,
       onChange,
+      defaultValue,
       ...restProps
-    }: FormFieldCheckboxProps,
+    }: FormFieldCheckboxOptionProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const id = useId();
@@ -46,6 +50,27 @@ export const FormFieldCheckbox = forwardRef(
     const errorMessageId = useId();
     return (
       <FormField className="rhc-form-field-checkbox" invalid={invalid} ref={ref} type="checkbox" {...restProps}>
+        <div className="utrecht-form-field__input">
+          <Checkbox
+            defaultValue={defaultValue}
+            disabled={disabled}
+            id={id}
+            invalid={invalid}
+            name={name}
+            ref={inputRef}
+            value={value}
+            aria-describedby={
+              clsx({
+                [descriptionId]: description,
+                [errorMessageId]: invalid && errorMessage,
+              }) || undefined
+            }
+            onBlur={onBlur}
+            onChange={onChange}
+            onFocus={onFocus}
+            onInput={onInput}
+          />
+        </div>
         <div className="utrecht-form-field__label">
           <FormLabel className="rhc-form-label--checkbox" htmlFor={id}>
             {label}
@@ -61,27 +86,6 @@ export const FormFieldCheckbox = forwardRef(
             {errorMessage}
           </FormFieldErrorMessage>
         )}
-        <div className="utrecht-form-field__input">
-          <Checkbox
-            disabled={disabled}
-            id={id}
-            invalid={invalid}
-            name={name}
-            ref={inputRef}
-            value={value}
-            aria-describedby={
-              clsx({
-                [descriptionId]: description,
-                [errorMessageId]: invalid,
-                [statusId]: status,
-              }) || undefined
-            }
-            onBlur={onBlur}
-            onChange={onChange}
-            onFocus={onFocus}
-            onInput={onInput}
-          />
-        </div>
         {status && (
           <div className="utrecht-form-field__status" id={statusId}>
             {status}
@@ -92,4 +96,4 @@ export const FormFieldCheckbox = forwardRef(
   },
 );
 
-FormFieldCheckbox.displayName = 'FormFieldCheckbox';
+FormFieldCheckboxOption.displayName = 'FormFieldCheckboxOption';

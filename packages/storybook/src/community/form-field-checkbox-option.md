@@ -7,7 +7,7 @@
 ## Usage
 
 ```tsx
-import { FormFieldCheckbox } from '@rijkshuisstijl-community/components-react';
+import { FormFieldCheckboxOption } from '@rijkshuisstijl-community/components-react';
 
-<FormFieldCheckbox label="Checkbox" />;
+<FormFieldCheckboxOption label="Checkbox" />;
 ```

@@ -36,8 +36,8 @@ export {
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
 export { Footer } from './Footer';
-export { FormFieldCheckbox, type FormFieldCheckboxProps } from './FormFieldCheckbox';
 export { FormFieldCheckboxGroup, type FormFieldCheckboxGroupProps } from './FormFieldCheckboxGroup';
+export { FormFieldCheckboxOption, type FormFieldCheckboxOptionProps } from './FormFieldCheckboxOption';
 export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFieldErrorMessage';
 export { FormFieldRadioOption, type FormFieldRadioOptionProps } from './FormFieldRadioOption';
 export { FormFieldSelect, type FormFieldSelectProps } from './FormFieldSelect';
