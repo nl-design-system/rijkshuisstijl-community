@@ -7,9 +7,9 @@ De kolommen lijsten kunnen worden toegevoegd door middel van properties aan het 
 ```tsx
 columns={[
     {
-      elements: <LinkList><LinkListLink href="#" icon={<UtrechtIconChevronRight />}>Contact</LinkListLink> etc...</LinkList>,
-      title: 'Service'
+      children: <LinkList><LinkListLink href="#" icon={<UtrechtIconChevronRight />}>Contact</LinkListLink> etc...</LinkList>,
+      heading: 'Service'
     }
   ]}
-  title="De Rijksoverheid. Voor Nederland"
+  heading="De Rijksoverheid. Voor Nederland"
 ```

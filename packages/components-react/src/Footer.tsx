@@ -10,7 +10,7 @@ interface FooterProps extends PageFooterProps {
 
 interface IColumn {
   heading: ReactNode;
-  elements: ReactNode;
+  children: ReactNode;
 }
 
 export const Footer = forwardRef(
@@ -33,7 +33,7 @@ export const Footer = forwardRef(
             <Heading className="rhc-footer__column--title" level={5}>
               {column.heading}
             </Heading>
-            {column.elements}
+            {column.children}
           </div>
         ))}
 

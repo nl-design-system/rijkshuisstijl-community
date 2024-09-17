@@ -26,7 +26,7 @@ export const DefaultFooter: Story = {
     columns: [
       {
         heading: 'Service',
-        elements: (
+        children: (
           <LinkList>
             <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
               Contact
@@ -54,7 +54,7 @@ export const DefaultFooter: Story = {
       },
       {
         heading: 'Over deze site',
-        elements: (
+        children: (
           <LinkList>
             <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
               Over Rijksoverheid.nl

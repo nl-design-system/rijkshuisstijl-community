@@ -160,7 +160,7 @@ export default function Form() {
         columns={[
           {
             heading: 'Service',
-            elements: [
+            children: [
               <LinkList key="1">
                 <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
                   Contact
@@ -188,7 +188,7 @@ export default function Form() {
           },
           {
             heading: 'Over deze site',
-            elements: (
+            children: (
               <LinkList key="2">
                 <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
                   Over Rijksoverheid.nl
