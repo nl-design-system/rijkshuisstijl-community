@@ -5,7 +5,7 @@
 
 @mixin rhc-hero {
   block-size: auto;
-  inline-size: var(--rhc-hero-inline-size, inherit);
+  inline-size: var(--rhc-hero-inline-size);
   overflow: hidden;
   position: relative;
 }
@@ -23,54 +23,71 @@
 }
 
 @mixin rhc-hero__message {
-  --utrecht-heading-1-color: var(--rhc-hero-message-color, inherit);
-  --utrecht-heading-2-color: var(--rhc-hero-message-color, inherit);
-  --utrecht-heading-3-color: var(--rhc-hero-message-color, inherit);
-  --utrecht-heading-4-color: var(--rhc-hero-message-color, inherit);
-  --utrecht-heading-5-color: var(--rhc-hero-message-color, inherit);
-  --utrecht-heading-6-color: var(--rhc-hero-message-color, inherit);
-  --utrecht-paragraph-color: var(--rhc-hero-message-color, inherit);
-
-  background-color: var(--rhc-hero-message-background-color, inherit);
+  background-color: var(--rhc-hero-message-background-color);
   box-sizing: border-box;
   color: var(--rhc-hero-message-color, inherit);
-  inline-size: var(--rhc-hero-message-inline-size, inherit);
+  display: flex;
+  flex-direction: column;
+  inline-size: var(--rhc-hero-message-inline-size);
   inset-block-end: 0;
-  padding-block-end: var(--rhc-hero-message-padding-block-end, inherit);
-  padding-block-start: var(--rhc-hero-message-padding-block-start, inherit);
-  padding-inline-end: var(--rhc-hero-message-padding-inline-end, inherit);
-  padding-inline-start: var(--rhc-hero-message-padding-inline-start, inherit);
+  padding-block-end: var(--rhc-hero-message-padding-block-end);
+  padding-block-start: var(--rhc-hero-message-padding-block-start);
+  padding-inline-end: var(--rhc-hero-message-padding-inline-end);
+  padding-inline-start: var(--rhc-hero-message-padding-inline-start);
   position: absolute;
+  row-gap: var(--rhc-hero-message-row-gap);
 }
 
-@mixin rhc-hero--rounded-border-end-end {
-  border-end-end-radius: var(--rhc-hero-border-radius, inherit);
+@mixin rhc-hero__heading-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--rhc-hero-message-heading-group-row-gap, var(--rhc-hero-message-row-gap));
 }
 
-@mixin rhc-hero--rounded-border-end-start {
-  border-end-start-radius: var(--rhc-hero-border-radius, inherit);
+@mixin rhc-hero--border-radius-corner-end-end {
+  border-end-end-radius: var(--rhc-hero-border-radius);
 }
 
-@mixin rhc-hero--rounded-border-start-end {
-  border-start-end-radius: var(--rhc-hero-border-radius, inherit);
+@mixin rhc-hero--border-radius-corner-end-start {
+  border-end-start-radius: var(--rhc-hero-border-radius);
 }
 
-@mixin rhc-hero--rounded-border-start-start {
-  border-start-start-radius: var(--rhc-hero-border-radius, inherit);
+@mixin rhc-hero--border-radius-corner-start-end {
+  border-start-end-radius: var(--rhc-hero-border-radius);
 }
 
-@mixin rhc-hero__message--align-inline-start {
-  border-start-end-radius: var(--rhc-hero-message-border-radius, inherit);
+@mixin rhc-hero--border-radius-corner-start-start {
+  border-start-start-radius: var(--rhc-hero-border-radius);
+}
+
+@mixin rhc-hero__message--text-align-start {
+  border-start-end-radius: var(--rhc-hero-message-border-radius);
   inset-inline-start: 0;
 }
 
-@mixin rhc-hero__message--align-inline-end {
-  border-start-start-radius: var(--rhc-hero-message-border-radius, inherit);
+@mixin rhc-hero__message--text-align-end {
+  border-start-start-radius: var(--rhc-hero-message-border-radius);
   inset-inline-end: 0;
 }
 
 @mixin rhc-hero__image {
   block-size: auto;
-  inline-size: var(--rhc-hero-inline-size, inherit);
+  inline-size: var(--rhc-hero-inline-size);
   position: relative;
+}
+
+@mixin rhc-hero__heading {
+  color: currentColor;
+  font-family: var(--rhc-hero-heading-font-family);
+  font-size: var(--rhc-hero-heading-font-size);
+  font-weight: var(--rhc-hero-heading-font-weight);
+  line-height: var(--rhc-hero-heading-line-height);
+}
+
+@mixin rhc-hero__sub-heading {
+  color: currentColor;
+  font-family: var(--rhc-hero-sub-heading-font-family);
+  font-size: var(--rhc-hero-sub-heading-font-size);
+  font-weight: var(--rhc-hero-sub-heading-font-weight);
+  line-height: var(--rhc-hero-sub-heading-line-height);
 }

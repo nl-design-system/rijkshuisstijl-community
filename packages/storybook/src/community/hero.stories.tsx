@@ -15,10 +15,10 @@ const meta = {
         type: { summary: 'number' },
       },
     },
-    alignment: {
-      description: 'Alignment',
+    textAlign: {
+      description: 'Alignment of the message box',
       control: { type: 'select' },
-      options: [undefined, 'inline-start', 'inline-end'],
+      options: [undefined, 'start', 'end'],
       table: {
         type: { summary: 'string' },
       },
@@ -26,13 +26,13 @@ const meta = {
     aspectRatio: {
       description: 'Aspect ratio',
       control: { type: 'select' },
-      options: [undefined, '16:9', '1:1', '4:3'],
+      options: [undefined, '16 / 9', '1 / 1', '4 / 3'],
       table: {
         type: { summary: 'string' },
       },
     },
-    roundedCornerLocation: {
-      description: 'Rounded corner location',
+    borderRadiusCorner: {
+      description: 'Border radius corner',
       control: { type: 'select' },
       options: [undefined, 'start-start', 'start-end', 'end-start', 'end-end'],
       table: {
@@ -54,11 +54,10 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
-    alignment: 'inline-start',
     imageSrc:
       'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
     imageAlt: 'Tullip field',
     heading: 'Heading',
-    subtext: 'Subtext',
+    subHeading: 'Subtext',
   },
 } satisfies Story;
