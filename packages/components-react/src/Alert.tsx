@@ -22,35 +22,31 @@ export interface AlertProps {
 }
 export const Alert = forwardRef(
   (
-    { type, children, heading, headingLevel, textContent, ...restProps }: PropsWithChildren<AlertProps>,
+    { type, heading, headingLevel, textContent, ...restProps }: PropsWithChildren<AlertProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     return (
       <UtrechtAlert ref={ref} role="alert" type={type} {...restProps}>
-        {children ? (
-          children
-        ) : (
-          <div className="rhc-alert__container">
-            <div
-              className={clsx('rhc-alert__icon-container', {
-                'rhc-alert__icon-container--ok': type === 'ok',
-                'rhc-alert__icon-container--error': type === 'error',
-                'rhc-alert__icon-container--warning': type === 'warning',
-                'rhc-alert__icon-container--info': type === 'info',
-              })}
-            >
-              <Icon>
-                <RhcIcon type={type} />
-              </Icon>
-            </div>
-            <div>
-              <Heading appearance="utrecht-heading-5" level={headingLevel || 3}>
-                {heading}
-              </Heading>
-              <Paragraph>{textContent}</Paragraph>
-            </div>
+        <div className="rhc-alert__container">
+          <div
+            className={clsx('rhc-alert__icon-container', {
+              'rhc-alert__icon-container--ok': type === 'ok',
+              'rhc-alert__icon-container--error': type === 'error',
+              'rhc-alert__icon-container--warning': type === 'warning',
+              'rhc-alert__icon-container--info': type === 'info',
+            })}
+          >
+            <Icon>
+              <RhcIcon type={type} />
+            </Icon>
           </div>
-        )}
+          <div>
+            <Heading appearance="utrecht-heading-5" level={headingLevel || 3}>
+              {heading}
+            </Heading>
+            <Paragraph>{textContent}</Paragraph>
+          </div>
+        </div>
       </UtrechtAlert>
     );
   },
