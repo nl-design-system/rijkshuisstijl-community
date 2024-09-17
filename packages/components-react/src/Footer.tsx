@@ -15,7 +15,7 @@ interface IColumn {
 
 export const Footer = forwardRef(
   (
-    { className, heading, columns, ...restProps }: PropsWithChildren<FooterProps>,
+    { className, heading, columns, children, ...restProps }: PropsWithChildren<FooterProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => (
     <UtrechtPageFooter {...restProps} className={clsx('rhc-footer', className)} ref={ref}>
@@ -36,6 +36,8 @@ export const Footer = forwardRef(
             {column.elements}
           </div>
         ))}
+
+      {children}
     </UtrechtPageFooter>
   ),
 );
