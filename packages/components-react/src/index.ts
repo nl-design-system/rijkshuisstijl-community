@@ -1,6 +1,6 @@
 // Export all Utrecht components
-export * from '@utrecht/component-library-react/dist/css-module';
-// Import CSS from Rijkshuisstijl Community components-css
+export * from '@utrecht/component-library-react';
+import '@utrecht/component-library-css/dist/index.css';
 import '@rijkshuisstijl-community/components-css/index.scss';
 
 // Export overwrites and new components
