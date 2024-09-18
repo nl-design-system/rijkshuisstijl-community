@@ -71,10 +71,8 @@ export const FormFieldCheckboxOption = forwardRef(
             onInput={onInput}
           />
         </div>
-        <div className="utrecht-form-field__label">
-          <FormLabel className="rhc-form-label--checkbox" htmlFor={id}>
-            {label}
-          </FormLabel>
+        <div className="utrecht-form-field__label rhc-form-label--checkbox">
+          <FormLabel htmlFor={id}>{label}</FormLabel>
         </div>
         {description && (
           <FormFieldDescription className="utrecht-form-field__description" id={descriptionId}>
