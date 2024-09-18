@@ -23,6 +23,7 @@ type Story = StoryObj<typeof meta>;
 export const DefaultFooter: Story = {
   args: {
     heading: 'De Rijksoverheid. Voor Nederland',
+    headingLevel: 4,
     columns: [
       {
         heading: 'Service',

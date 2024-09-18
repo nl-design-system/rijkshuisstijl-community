@@ -157,6 +157,7 @@ export default function Form() {
       </PageContent>
       <Footer
         heading="De Rijksoverheid. Voor Nederland"
+        headingLevel={4}
         columns={[
           {
             heading: 'Service',

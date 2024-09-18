@@ -96,6 +96,7 @@ export default function Details() {
       </PageContent>
       <Footer
         heading="De Rijksoverheid. Voor Nederland"
+        headingLevel={4}
         columns={[
           {
             heading: 'Service',
