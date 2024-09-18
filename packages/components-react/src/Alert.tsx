@@ -17,7 +17,7 @@ const RhcIcon = ({ type }: { type: string }) =>
 export interface AlertProps {
   type: 'info' | 'ok' | 'warning' | 'error';
   heading?: ReactNode;
-  headingLevel?: 1 | 2 | 3 | 4 | 5 | 6;
+  headingLevel?: 1 | 2 | 3 | 4 | 5;
   textContent?: ReactNode;
 }
 export const Alert = forwardRef(

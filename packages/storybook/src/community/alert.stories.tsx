@@ -29,7 +29,7 @@ const meta = {
     headingLevel: {
       description: 'Alert heading level',
       control: { type: 'select' },
-      options: [1, 2, 3, 4, 5, 6],
+      options: [1, 2, 3, 4, 5],
       table: {
         category: 'Demo',
       },
