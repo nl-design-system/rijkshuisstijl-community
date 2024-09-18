@@ -1,6 +1,6 @@
 // Export all Utrecht components
-export * from '@utrecht/component-library-react/dist/css-module';
-// Import CSS from Rijkshuisstijl Community components-css
+export * from '@utrecht/component-library-react';
+import '@utrecht/component-library-css/dist/index.css';
 import '@rijkshuisstijl-community/components-css/index.scss';
 
 // Export overwrites and new components
@@ -36,8 +36,8 @@ export {
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
 export { Footer } from './Footer';
-export { FormFieldCheckbox, type FormFieldCheckboxProps } from './FormFieldCheckbox';
 export { FormFieldCheckboxGroup, type FormFieldCheckboxGroupProps } from './FormFieldCheckboxGroup';
+export { FormFieldCheckboxOption, type FormFieldCheckboxOptionProps } from './FormFieldCheckboxOption';
 export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFieldErrorMessage';
 export { FormFieldRadioOption, type FormFieldRadioOptionProps } from './FormFieldRadioOption';
 export { FormFieldSelect, type FormFieldSelectProps } from './FormFieldSelect';

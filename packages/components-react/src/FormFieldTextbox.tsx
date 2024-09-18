@@ -5,7 +5,7 @@ import {
   FormLabel,
   Textbox,
 } from '@utrecht/component-library-react';
-import { TextboxTypes } from '@utrecht/component-library-react/dist/Textbox';
+import { type TextboxTypes } from '@utrecht/component-library-react/dist/Textbox';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, useId } from 'react';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';

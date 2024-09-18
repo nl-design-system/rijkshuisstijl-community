@@ -1,8 +1,4 @@
-import {
-  Icon,
-  Link as UtrechtLink,
-  type LinkProps as UtrechtLinkProps,
-} from '@utrecht/component-library-react/dist/css-module';
+import { Icon, Link as UtrechtLink, type LinkProps as UtrechtLinkProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef } from 'react';
 import { ExternalLinkIcon } from './icons';

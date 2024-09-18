@@ -2,7 +2,7 @@ import {
   TableHeaderCell as UtrechtTableHeaderCell,
   TableHeaderCellProps as UtrechtTableHeaderCellProps,
 } from '@utrecht/component-library-react';
-import { Icon } from '@utrecht/component-library-react/dist/css-module';
+import { Icon } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 import { Button } from './Button';

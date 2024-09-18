@@ -27,9 +27,7 @@ const meta = {
       type: { name: 'string', required: false },
     },
   },
-  args: {
-    appearance: 'custom',
-  },
+  args: {},
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;
