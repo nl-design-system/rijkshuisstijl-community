@@ -8,5 +8,6 @@ export const Checkbox = forwardRef(
     return <UtrechtCheckbox ref={ref} {...Props} />;
   },
 );
+export { Checkbox, type CheckboxProps } from '@utrecht/component-library-react;
 
 Checkbox.displayName = 'Checkbox';
