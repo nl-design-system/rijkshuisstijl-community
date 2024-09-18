@@ -7,12 +7,13 @@
   color: var(--utrecht-page-footer-color);
   display: flex;
   flex-direction: row;
+  gap: var(--utrecht-page-footer-gap);
   justify-content: flex-start;
   padding-block-end: var(--utrecht-page-footer-padding-block-end);
   padding-block-start: var(--utrecht-page-footer-padding-block-start);
   padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
   padding-inline-start: var(--utrecht-page-footer-padding-inline-start);
-  @media (width <= 860px) {
+  @media (width <= 768px) {
     flex-direction: column;
   }
 }
@@ -25,6 +26,7 @@
   --utrecht-space-around: 1;
 
   color: var(--utrecht-page-footer-color) !important;
+  margin-block-end: var(--utrecht-page-footer-column-title-margin-block-end);
 }
 
 .rhc-footer__column {
