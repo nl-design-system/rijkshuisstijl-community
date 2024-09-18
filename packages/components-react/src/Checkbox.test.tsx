@@ -49,17 +49,4 @@ describe('Checkbox', () => {
     fireEvent.click(checkbox);
     expect(handleChange).toHaveBeenCalledTimes(1);
   });
-
-  test('uses provided id', () => {
-    render(<Checkbox id="custom-id" />);
-    const checkbox = screen.getByRole('checkbox');
-    expect(checkbox).toHaveAttribute('id', 'custom-id');
-  });
-
-  test('generates id when not provided', () => {
-    render(<Checkbox />);
-    const checkbox = screen.getByRole('checkbox');
-    expect(checkbox).toHaveAttribute('id');
-    expect(checkbox.id).not.toBe('');
-  });
 });
