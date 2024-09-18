@@ -13,7 +13,6 @@ const init = async ({ input, output }) => {
   const excludes = [
     'components/avatar',
     'components/backdrop',
-    'components/button-group',
     'components/counter-badge',
     'components/drawer',
     'components/form-field-option-label',
