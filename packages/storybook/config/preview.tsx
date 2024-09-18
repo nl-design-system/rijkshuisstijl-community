@@ -1,6 +1,5 @@
 import { withThemeByClassName } from '@storybook/addon-themes';
 import { Preview } from '@storybook/react';
-import { UtrechtDocument } from '@utrecht/web-component-library-react';
 
 import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
@@ -9,8 +8,6 @@ import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/mijnoverheid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
-import '@utrecht/component-library-css/dist/html.css';
-import '@utrecht/component-library-css/dist/index.css';
 
 const preview: Preview = {
   decorators: [
@@ -24,7 +21,7 @@ const preview: Preview = {
       },
       defaultTheme: 'RijkshuisstijlCommunity',
     }),
-    (Story: any) => <UtrechtDocument>{Story()}</UtrechtDocument>,
+    (Story: any) => Story(),
   ],
   parameters: {
     previewTabs: {

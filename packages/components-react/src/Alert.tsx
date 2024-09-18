@@ -1,4 +1,4 @@
-import { Heading, Icon, Paragraph, Alert as UtrechtAlert } from '@utrecht/component-library-react/dist/css-module';
+import { Heading, Icon, Paragraph, Alert as UtrechtAlert } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from './icons';

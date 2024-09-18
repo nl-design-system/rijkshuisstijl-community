@@ -3,7 +3,7 @@
 import { Link } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
-import { Icon } from '@utrecht/component-library-react/dist/css-module';
+import { Icon } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
 import readme from './link.md?raw';
