@@ -4,17 +4,13 @@ import clsx from 'clsx';
 import readme from './skip-link.md?raw';
 
 interface SkipLinkStoryProps extends SkipLinkProps {
-  focus?: boolean;
-  focusVisible?: boolean;
   visibility?: string | 'hidden' | 'visible';
   visibleOnFocus?: boolean;
 }
 
-const SkipLinkStory = ({ focus, focusVisible, visibility, visibleOnFocus, ...restProps }: SkipLinkStoryProps) => (
+const SkipLinkStory = ({ visibility, visibleOnFocus, ...restProps }: SkipLinkStoryProps) => (
   <SkipLink
     className={clsx({
-      'rhc-skip-link--focus': focus,
-      'rhc-skip-link--focus-visible': focusVisible,
       'rhc-skip-link--visible-on-focus': visibleOnFocus,
       'rhc-skip-link--hidden': visibility === 'hidden',
       'utrecht-skip-link--visible': visibility === 'visible',
@@ -54,7 +50,6 @@ const meta = {
   args: {
     children: '',
     href: '',
-    focus: false,
     visibility: '',
     visibleOnFocus: false,
   },
@@ -132,7 +127,6 @@ export const Focus: Story = {
   args: {
     href: '#main',
     children: 'Skip to main content',
-    focus: true,
   },
   name: 'Focus',
   parameters: {
@@ -141,6 +135,7 @@ export const Focus: Story = {
         story: `Styling met de \`.rhc-skip-link--focus\` class naam.`,
       },
     },
+    pseudo: { focus: true },
   },
 };
 
@@ -148,8 +143,6 @@ export const FocusVisible: Story = {
   args: {
     href: '#main',
     children: 'Skip to main content',
-    focus: true,
-    focusVisible: true,
   },
   name: 'Focus visible',
   parameters: {
@@ -158,5 +151,6 @@ export const FocusVisible: Story = {
         story: `Styling met de \`.rhc-skip-link--focus-visible\` class naam.`,
       },
     },
+    pseudo: { focus: true, focusVisible: true },
   },
 };
