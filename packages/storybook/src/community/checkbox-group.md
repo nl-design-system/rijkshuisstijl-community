@@ -6,8 +6,6 @@
 
 ## Usage
 
-- Als je wilt de CheckboxGroup gebruiken met je eigen `children`
-
 ```tsx
 import { CheckboxGroup, Checkbox } from '@rijkshuisstijl-community/components-react';
 

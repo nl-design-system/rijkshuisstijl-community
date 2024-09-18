@@ -5,7 +5,7 @@ import {
   type BreadcrumbNavSeparatorProps,
   BreadcrumbNavLink as UtrechtBreadcrumbNavLink,
   type BreadcrumbNavLinkProps as UtrechtBreadcrumbNavLinkProps,
-} from '@utrecht/component-library-react/';
+} from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
