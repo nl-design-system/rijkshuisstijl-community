@@ -1,4 +1,15 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
 .utrecht-table {
+  &__caption {
+    text-align: start;
+    &--rtl {
+      text-align: end;
+    }
+  }
   &__cell {
     color: var(--rhc-color-foreground-lint);
   }
@@ -14,13 +25,13 @@
     }
 
     &--align-right {
-      --_utrecht-table-cell-text-align: right;
+      --_utrecht-table-cell-text-align: end;
     }
     &--align-center {
       --_utrecht-table-cell-text-align: center;
     }
     &--align-left {
-      --_utrecht-table-cell-text-align: left;
+      --_utrecht-table-cell-text-align: start;
     }
 
     &--cell {

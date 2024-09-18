@@ -42,7 +42,7 @@ describe('IconButton', () => {
   });
 
   it('can have a disabled state', () => {
-    const { container } = render(<IconButton label="example-icon-label" disabled={true} />);
+    const { container } = render(<IconButton disabled={true} label="example-icon-label" />);
 
     const button = container.querySelector('button');
 
@@ -50,7 +50,7 @@ describe('IconButton', () => {
   });
 
   it('can be hidden', () => {
-    const { container } = render(<IconButton label="example-icon-label" hidden />);
+    const { container } = render(<IconButton hidden label="example-icon-label" />);
 
     const button = container.querySelector('button');
 
@@ -58,7 +58,7 @@ describe('IconButton', () => {
   });
 
   it('can have a additional class name', () => {
-    const { container } = render(<IconButton label="example-icon-label" className="large" />);
+    const { container } = render(<IconButton className="large" label="example-icon-label" />);
 
     const button = container.querySelector('button');
 

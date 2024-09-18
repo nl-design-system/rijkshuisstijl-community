@@ -15,12 +15,12 @@ interface AccordionStoryProps {
 }
 
 const AccordionStory = ({ expanded, label, body, appearance, icon, sections }: AccordionStoryProps) => (
-  <AccordionProvider icon={icon} appearance={appearance} sections={sections || [{ expanded, label, body }]} />
+  <AccordionProvider appearance={appearance} icon={icon} sections={sections || [{ expanded, label, body }]} />
 );
 
 const meta = {
   title: 'Rijkshuisstijl/Accordion',
-  id: 'rijkshuisstijl-accordion',
+  id: 'rhc-accordion',
   args: {
     label: '',
     body: '',
@@ -129,7 +129,7 @@ export const RTL: Story = {
   args: accordionDefaultDataAR,
   decorators: [
     (Story) => (
-      <div lang="ar" dir="rtl">
+      <div dir="rtl" lang="ar">
         {Story()}
       </div>
     ),

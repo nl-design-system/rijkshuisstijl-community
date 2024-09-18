@@ -5,8 +5,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from './form-field-textbox.md?raw';
 
 const meta = {
-  title: 'Rijkshuisstijl/Form field text input',
-  id: 'rijkshuisstijl-form-field-text-input',
+  title: 'Rijkshuisstijl/Form Field/Form Field Text Input',
+  id: 'rhc-form-field-text-input',
   component: FormFieldTextbox,
   argTypes: {
     required: {
@@ -14,7 +14,7 @@ const meta = {
       control: 'boolean',
       table: {
         category: 'API',
-        defaultValue: { summary: false },
+        defaultValue: { summary: 'false' },
       },
     },
     inputRequired: {
@@ -22,7 +22,7 @@ const meta = {
       control: 'boolean',
       table: {
         category: 'API',
-        defaultValue: { summary: false },
+        defaultValue: { summary: 'false' },
       },
     },
     disabled: {
@@ -30,7 +30,7 @@ const meta = {
       control: 'boolean',
       table: {
         category: 'API',
-        defaultValue: { summary: false },
+        defaultValue: { summary: 'false' },
       },
     },
     readOnly: {
@@ -38,7 +38,7 @@ const meta = {
       control: 'boolean',
       table: {
         category: 'API',
-        defaultValue: { summary: false },
+        defaultValue: { summary: 'false' },
       },
     },
     invalid: {
@@ -46,7 +46,7 @@ const meta = {
       control: 'boolean',
       table: {
         category: 'API',
-        defaultValue: { summary: false },
+        defaultValue: { summary: 'false' },
       },
     },
     name: {
@@ -83,7 +83,7 @@ const meta = {
     },
     label: {
       name: 'label',
-      type: { name: 'text', required: true },
+      type: { name: 'string', required: true },
       table: {
         defaultValue: { summary: '' },
         category: 'API',
@@ -92,7 +92,7 @@ const meta = {
     errorMessage: {
       name: 'errorMessage',
       description: 'Description for invalid input',
-      type: { name: 'text', required: false },
+      type: { name: 'string', required: false },
       table: {
         defaultValue: { summary: '' },
         category: 'API',
@@ -100,7 +100,7 @@ const meta = {
     },
     description: {
       description: 'Description',
-      type: { name: 'text', required: false },
+      type: { name: 'string', required: false },
       table: {
         category: 'API',
         defaultValue: { summary: '' },
@@ -312,27 +312,27 @@ const meta = {
     } = args;
     return (
       <FormFieldTextbox
-        id={id || undefined}
+        autoComplete={autoComplete || undefined}
+        defaultValue={defaultValue || undefined}
         description={description || undefined}
+        dir={dir || undefined}
         disabled={disabled}
         errorMessage={errorMessage || undefined}
-        status={status || undefined}
+        id={id || undefined}
+        inputDir={inputDir || undefined}
+        inputRequired={inputRequired}
         invalid={invalid}
         label={label || undefined}
-        name={name || undefined}
-        required={required}
-        inputRequired={inputRequired}
-        defaultValue={defaultValue || undefined}
-        value={value || undefined}
-        type={type || undefined}
-        autoComplete={autoComplete || undefined}
-        minLength={minLength || undefined}
         maxLength={maxLength || undefined}
-        readOnly={readOnly || undefined}
-        inputDir={inputDir || undefined}
-        dir={dir || undefined}
+        minLength={minLength || undefined}
+        name={name || undefined}
         placeholder={placeholder || undefined}
+        readOnly={readOnly || undefined}
+        required={required}
         size={size || undefined}
+        status={status || undefined}
+        type={type || undefined}
+        value={value || undefined}
       />
     );
   },

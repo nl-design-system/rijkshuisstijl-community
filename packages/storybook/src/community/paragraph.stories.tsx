@@ -1,12 +1,12 @@
 /* @license CC0-1.0 */
 
+import { Paragraph } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import readme from './paragraph.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Paragraph',
-  id: 'rijkshuisstijl-paragraph',
+  id: 'rhc-paragraph',
   component: Paragraph,
   argTypes: {
     lead: {
@@ -15,9 +15,18 @@ const meta = {
         name: 'boolean',
       },
       table: {
-        category: 'Property',
+        category: 'API',
       },
       defaultValue: false,
+    },
+    small: {
+      description: 'Small paragraph',
+      type: {
+        name: 'boolean',
+      },
+      table: {
+        category: 'API',
+      },
     },
     children: {
       description: 'Paragraph text - default webcomponent slot',
@@ -59,5 +68,12 @@ export const Lead: Story = {
   args: {
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
     lead: true,
+  },
+};
+
+export const Small: Story = {
+  args: {
+    children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+    small: true,
   },
 };

@@ -6,13 +6,13 @@ import readme from './heading.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Heading',
-  id: 'rijkshuisstijl-heading',
+  id: 'rhc-heading',
   component: Heading,
   argTypes: {
     level: {
       description: 'Heading level',
       control: { type: 'select' },
-      options: [1, 2, 3, 4, 5, 6],
+      options: [1, 2, 3, 4, 5],
     },
     appearance: {
       description: 'Appearance',
@@ -24,7 +24,6 @@ const meta = {
         'utrecht-heading-3',
         'utrecht-heading-4',
         'utrecht-heading-5',
-        'utrecht-heading-6',
       ],
     },
   },
@@ -77,11 +76,4 @@ export const Heading5: StoryObj<typeof meta> = {
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
   },
   name: 'Heading 5',
-};
-
-export const Heading6: StoryObj<typeof meta> = {
-  args: {
-    level: 6,
-    children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
-  },
 };
