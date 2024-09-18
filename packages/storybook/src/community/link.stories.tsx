@@ -13,15 +13,27 @@ interface LinkStoryProps {
   iconRight?: boolean;
   external?: boolean;
   externalLabel?: string;
+  className?: string;
 }
 
-const LinkStory = ({ href, children, iconLeft, iconRight, external, ...props }: PropsWithChildren<LinkStoryProps>) => (
+const LinkStory = ({
+  href,
+  children,
+  iconLeft,
+  iconRight,
+  external,
+  className,
+  ...props
+}: PropsWithChildren<LinkStoryProps>) => (
   <Link
     external={external}
     href={href}
-    className={clsx({
-      'utrecht-link--external': external,
-    })}
+    className={clsx(
+      {
+        'utrecht-link--external': external,
+      },
+      className,
+    )}
     {...props}
   >
     {iconLeft && (
