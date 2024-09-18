@@ -4,11 +4,13 @@
  */
 @import "./mixin";
 
+.rhc-button:focus-visible,
+.rhc-button--focus-visible {
+  @include rhc-button--focus-visible;
+}
+
 .rhc-button--icon-only {
-  --utrecht-button-padding-block-end: var(--rhc-icon-only-button-padding-block-end, inherit);
-  --utrecht-button-padding-block-start: var(--rhc-icon-only-button-padding-block-start, inherit);
-  --utrecht-button-padding-inline-end: var(--rhc-icon-only-button-padding-inline-end, inherit);
-  --utrecht-button-padding-inline-start: var(--rhc-icon-only-button-padding-inline-start, inherit);
+  @include rhc-button--icon-only;
 }
 
 .rhc-button--icon-only .rhc-button__sr-only {
