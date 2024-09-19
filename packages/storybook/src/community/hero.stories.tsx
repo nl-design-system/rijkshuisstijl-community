@@ -10,7 +10,7 @@ const meta = {
     headingLevel: {
       description: 'Heading level',
       control: { type: 'select' },
-      options: [undefined, 1, 2, 3, 4, 5, 6],
+      options: [undefined, 1, 2, 3, 4, 5],
       table: {
         type: { summary: 'number' },
       },

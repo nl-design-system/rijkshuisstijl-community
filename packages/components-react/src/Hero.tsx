@@ -10,7 +10,7 @@ export interface HeroProps extends HTMLAttributes<HTMLDivElement> {
   imageSrc: string;
   imageAlt: string;
   heading: ReactNode;
-  headingLevel?: 1 | 2 | 3 | 4 | 5 | 6;
+  headingLevel?: 1 | 2 | 3 | 4 | 5;
   subHeading: ReactNode;
   aspectRatio?: '16 / 9' | '1 / 1' | '4 / 3';
   borderRadiusCorner?: 'start-start' | 'start-end' | 'end-start' | 'end-end';
