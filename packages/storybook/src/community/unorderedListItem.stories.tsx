@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react/*';
 
 const meta = {
   title: 'Rijkshuisstijl/Unordered List/Unordered Item',
-  id: 'rijkshuisstijl-unorderedListItem',
+  id: 'rhc-unorderedListItem',
   component: UnorderedListItem,
   decorators: [(Story) => <UnorderedList>{Story()}</UnorderedList>],
   args: {

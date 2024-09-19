@@ -22,7 +22,7 @@ const ArticleStoryComponent = () => {
 
 const meta = {
   title: 'Rijkshuisstijl/Article',
-  id: 'rijkshuisstijl-article',
+  id: 'rhc-article',
   component: ArticleStoryComponent,
   argTypes: {},
   args: {},

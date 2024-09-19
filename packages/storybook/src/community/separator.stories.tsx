@@ -4,7 +4,7 @@ import readme from './separator.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Separator',
-  id: 'rijkshuisstijl-separator',
+  id: 'rhc-separator',
   component: Separator,
   parameters: {
     docs: {

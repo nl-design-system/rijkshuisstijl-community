@@ -3,7 +3,7 @@
 import { IconButton } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
-import { Button, Icon } from '@utrecht/component-library-react/dist/css-module';
+import { Button, Icon } from '@utrecht/component-library-react';
 import { PropsWithChildren } from 'react';
 import readme from './button.md?raw';
 
@@ -31,7 +31,7 @@ const ButtonStory = ({ appearance, children, iconLeft, iconRight, ...props }: Pr
 
 const meta = {
   title: 'Rijkshuisstijl/Button',
-  id: 'rijkshuisstijl-button',
+  id: 'rhc-button',
   component: ButtonStory,
   argTypes: {
     appearance: {
