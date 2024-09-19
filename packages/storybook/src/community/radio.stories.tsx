@@ -7,18 +7,16 @@ import clsx from 'clsx';
 interface RadioStoryProps extends RadioProps {
   focus?: boolean;
   focusVisible?: boolean;
-  hover?: boolean;
   active?: boolean;
 }
 
-const RadioStory = ({ active, focus, focusVisible, hover, name, ...args }: RadioStoryProps) => (
+const RadioStory = ({ active, focus, focusVisible, name, ...args }: RadioStoryProps) => (
   <Radio
     name={name || undefined}
     className={clsx({
       'utrecht-radio-button--active': active,
       'utrecht-radio-button--focus': focus,
       'utrecht-radio-button--focus-visible': focusVisible,
-      'utrecht-radio-button--hover': hover,
     })}
     {...args}
   />
@@ -32,11 +30,10 @@ const meta = {
     checked: false,
     disabled: false,
     active: false,
-    hover: false,
     focus: false,
     focusVisible: false,
     invalid: false,
-    name: '',
+    name: 'meta',
   },
   argTypes: {
     checked: {
@@ -49,10 +46,6 @@ const meta = {
     },
     active: {
       description: 'Active',
-      control: 'boolean',
-    },
-    hover: {
-      description: 'Hover',
       control: 'boolean',
     },
     focus: {
@@ -77,13 +70,8 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
-
-export const Hover: Story = {
-  name: 'Hover',
-  args: {
-    hover: true,
-  },
+export const Default: Story = {
+  name: 'Default',
 };
 
 export const Focus: Story = {
@@ -140,14 +128,6 @@ export const DisabledAndFocusVisible: Story = {
   },
 };
 
-export const DisabledAndHover: Story = {
-  name: 'Disabled and Hover',
-  args: {
-    disabled: true,
-    hover: true,
-  },
-};
-
 export const DisabledAndActive: Story = {
   name: 'Disabled and Active',
   args: {
@@ -180,14 +160,6 @@ export const CheckedAndFocusVisible: Story = {
   },
 };
 
-export const CheckedAndHover: Story = {
-  name: 'Checked and Hover',
-  args: {
-    checked: true,
-    hover: true,
-  },
-};
-
 export const CheckedAndActive: Story = {
   name: 'Checked and Active',
   args: {
@@ -201,22 +173,6 @@ export const CheckedAndDisabled: Story = {
   args: {
     checked: true,
     disabled: true,
-  },
-};
-
-export const CheckedDisabledAndHover: Story = {
-  name: 'Checked, Disabled and Hover',
-  args: {
-    checked: true,
-    disabled: true,
-    hover: true,
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: `Should be identical to "Checked + disabled"`,
-      },
-    },
   },
 };
 
@@ -273,14 +229,6 @@ export const CheckedDisabledAndActive: Story = {
 export const Invalid: Story = {
   name: 'Invalid',
   args: {
-    invalid: true,
-  },
-};
-
-export const CheckedAndInvalid: Story = {
-  name: 'Checked and Invalid',
-  args: {
-    checked: true,
     invalid: true,
   },
 };
