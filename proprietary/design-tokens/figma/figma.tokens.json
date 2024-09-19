@@ -5537,6 +5537,76 @@
       }
     }
   },
+  "components/toggletip": {
+    "todo": {
+      "toggletip": {
+        "color": {
+          "value": "{rhc.color.wit}",
+          "type": "color"
+        },
+        "background-color": {
+          "value": "{rhc.color.feedback.info.default}",
+          "type": "color"
+        },
+        "border-color": {
+          "value": "{rhc.color.none}",
+          "type": "color"
+        },
+        "border-radius": {
+          "value": "{rhc.border-radius.md}",
+          "type": "borderRadius"
+        },
+        "icon": {
+          "size": {
+            "value": "{rhc.size.icon.functional}",
+            "type": "sizing"
+          }
+        },
+        "size": {
+          "value": "{rhc.size.icon.functional}",
+          "type": "sizing"
+        },
+        "active": {
+          "color": {
+            "value": "{rhc.color.feedback.info.default}",
+            "type": "color"
+          },
+          "background-color": {
+            "value": "{rhc.color.wit}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{rhc.color.feedback.info.default}",
+            "type": "color"
+          }
+        },
+        "hover": {
+          "color": {
+            "value": "{rhc.color.foreground.lint}",
+            "type": "color"
+          },
+          "background-color": {
+            "value": "{rhc.color.hemelblauw.300}",
+            "type": "color"
+          }
+        },
+        "focus": {
+          "color": {
+            "value": "{rhc.color.wit}",
+            "type": "color"
+          },
+          "background-color": {
+            "value": "{rhc.color.feedback.info.default}",
+            "type": "color"
+          }
+        },
+        "border-width": {
+          "value": "{rhc.border-width.default}",
+          "type": "borderWidth"
+        }
+      }
+    }
+  },
   "components/toolbar-button": {
     "todo": {
       "toolbar-button": {
@@ -5641,7 +5711,6 @@
       "common/focus",
       "common/border",
       "common/keep",
-      "common/text-align",
       "utrecht/focus",
       "utrecht/pointer-target",
       "utrecht/document",
@@ -5690,6 +5759,7 @@
       "components/task-list",
       "components/textarea",
       "components/text-input",
+      "components/toggletip",
       "components/toolbar-button",
       "components/unordered-list"
     ]
