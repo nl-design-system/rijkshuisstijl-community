@@ -5,7 +5,7 @@ import {
   PrimaryActionButton,
   SecondaryActionButton,
   SubtleButton,
-} from '@utrecht/component-library-react/dist/css-module';
+} from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 

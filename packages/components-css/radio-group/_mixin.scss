@@ -1,0 +1,12 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@mixin rhc-radio-group {
+  display: flex;
+  flex-direction: column;
+  padding-block-end: var(--rhc-radio-group-padding-block-end, inherit);
+  padding-block-start: var(--rhc-radio-group-padding-block-start, inherit);
+  row-gap: var(--rhc-radio-group-row-gap, inherit);
+}

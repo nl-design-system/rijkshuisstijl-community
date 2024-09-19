@@ -6,7 +6,7 @@ import readme from './heading.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Heading',
-  id: 'rijkshuisstijl-heading',
+  id: 'rhc-heading',
   component: Heading,
   argTypes: {
     level: {

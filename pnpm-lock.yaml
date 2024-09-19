@@ -223,6 +223,9 @@ importers:
       '@rijkshuisstijl-community/web-components-react':
         specifier: workspace:*
         version: link:../web-components-react
+      '@utrecht/component-library-css':
+        specifier: 4.0.0
+        version: 4.0.0
       '@utrecht/component-library-react':
         specifier: 5.0.0
         version: 5.0.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -461,6 +464,9 @@ importers:
       chromatic:
         specifier: 11.3.0
         version: 11.3.0
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
       prettier:
         specifier: 3.3.3
         version: 3.3.3
@@ -482,6 +488,9 @@ importers:
       storybook:
         specifier: 8.2.4
         version: 8.2.4(@babel/preset-env@7.24.8(@babel/core@7.24.9))
+      storybook-addon-pseudo-states:
+        specifier: 4.0.2
+        version: 4.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.4(@babel/preset-env@7.24.8(@babel/core@7.24.9)))
       typescript:
         specifier: 5.5.3
         version: 5.5.3
@@ -2413,6 +2422,13 @@ packages:
 
   '@storybook/global@5.0.0':
     resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
+
+  '@storybook/icons@1.2.10':
+    resolution: {integrity: sha512-310apKdDcjbbX2VSLWPwhEwAgjxTzVagrwucVZIdGPErwiAppX8KvBuWZgPo+rQLVrtH8S+pw1dbUwjcE6d7og==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
 
   '@storybook/icons@1.2.9':
     resolution: {integrity: sha512-cOmylsz25SYXaJL/gvTk/dl3pyk7yBFRfeXTsHvTA3dfhoU/LWSq0NKL9nM7WBasJyn6XPSGnLS4RtKXLw5EUg==}
@@ -7931,6 +7947,11 @@ packages:
     resolution: {integrity: sha512-iCGQj+0l0HOdZ2AEeBADlsRC+vsnDsZsbdSiH1yNSjcfKM7fdpCMfqAL/dwF5BLiw/XhRft/Wax6zQbhq2BcjQ==}
     engines: {node: '>= 0.4'}
 
+  storybook-addon-pseudo-states@4.0.2:
+    resolution: {integrity: sha512-dTHkeq4VzqIrJfR8k2BHkX190cQ+aYBZUktWNZpDw3N5tJ8IwaRLzf6ZjHDHY6xwDshaNiTO5UkziRE0Ytukkw==}
+    peerDependencies:
+      storybook: ^8.2.0
+
   storybook@8.2.4:
     resolution: {integrity: sha512-ASavW8vIHiWpFY+4M6ngeqK5oL4OkxqdpmQYxvRqH0gA1G1hfq/vmDw4YC4GnqKwyWPQh2kaV5JFurKZVaeaDQ==}
     hasBin: true
@@ -11219,6 +11240,11 @@ snapshots:
       type-fest: 2.19.0
 
   '@storybook/global@5.0.0': {}
+
+  '@storybook/icons@1.2.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   '@storybook/icons@1.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -18033,6 +18059,14 @@ snapshots:
   stop-iteration-iterator@1.0.0:
     dependencies:
       internal-slot: 1.0.5
+
+  storybook-addon-pseudo-states@4.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.4(@babel/preset-env@7.24.8(@babel/core@7.24.9))):
+    dependencies:
+      '@storybook/icons': 1.2.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      storybook: 8.2.4(@babel/preset-env@7.24.8(@babel/core@7.24.9))
+    transitivePeerDependencies:
+      - react
+      - react-dom
 
   storybook@8.2.4(@babel/preset-env@7.24.8(@babel/core@7.24.9)):
     dependencies:

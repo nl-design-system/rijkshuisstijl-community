@@ -1,7 +1,4 @@
-import {
-  Article as UtrechtArticle,
-  ArticleProps as UtrechtArticleProps,
-} from '@utrecht/component-library-react/dist/css-module';
+import { Article as UtrechtArticle, ArticleProps as UtrechtArticleProps } from '@utrecht/component-library-react';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
 export const Article = forwardRef(

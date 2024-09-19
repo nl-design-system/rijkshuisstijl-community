@@ -1,6 +1,7 @@
 import {
   FormField,
   FormFieldDescription,
+  FormFieldProps,
   FormLabel,
   Select,
   SelectOption,
@@ -10,16 +11,19 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
-export interface FormFieldSelectProps extends SelectProps {
+export interface FormFieldSelectProps
+  extends Omit<FormFieldProps, 'onInput' | 'onBlur' | 'onFocus' | 'onChange'>,
+    Pick<
+      SelectProps,
+      'value' | 'onInput' | 'onBlur' | 'onFocus' | 'onChange' | 'defaultValue' | 'disabled' | 'name' | 'invalid'
+    > {
   errorMessage?: string;
   selectRef?: Ref<HTMLSelectElement>;
   status?: ReactNode;
   description?: ReactNode;
   input?: ReactNode;
   label?: ReactNode;
-  type?: string;
   options?: string[];
-  defaultValue?: string;
 }
 
 export const FormFieldSelect = forwardRef(
@@ -36,6 +40,13 @@ export const FormFieldSelect = forwardRef(
       options,
       input,
       dir,
+      defaultValue,
+      value,
+      onChange,
+      onInput,
+      onBlur,
+      onFocus,
+      name,
       ...restProps
     }: PropsWithChildren<FormFieldSelectProps>,
     ref: ForwardedRef<HTMLDivElement>,
@@ -46,7 +57,7 @@ export const FormFieldSelect = forwardRef(
     const errorMessageId = useId();
 
     return (
-      <FormField dir={dir} input={input} invalid={invalid} ref={ref} type={'select'}>
+      <FormField dir={dir} input={input} invalid={invalid} ref={ref} type={'select'} {...restProps}>
         <div className="utrecht-form-field__label">
           <FormLabel htmlFor={id}>{label}</FormLabel>
         </div>
@@ -62,11 +73,14 @@ export const FormFieldSelect = forwardRef(
         )}
         <div className="utrecht-form-field__input">
           <Select
+            defaultValue={defaultValue}
             dir={dir}
             disabled={disabled}
             id={id}
             invalid={invalid}
+            name={name}
             ref={selectRef}
+            value={value}
             aria-describedby={
               clsx({
                 [descriptionId]: description,
@@ -77,7 +91,10 @@ export const FormFieldSelect = forwardRef(
             className={clsx({
               'utrecht-select--html-select-rtl': dir === 'rtl',
             })}
-            {...restProps}
+            onBlur={onBlur}
+            onChange={onChange}
+            onFocus={onFocus}
+            onInput={onInput}
           >
             {options?.length
               ? options.map((option, index) => (

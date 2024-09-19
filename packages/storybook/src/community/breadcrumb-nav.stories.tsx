@@ -5,7 +5,7 @@ import readme from './breadcrumb-nav.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Breadcrumb navigation',
-  id: 'rijkshuisstijl-breadcrumb-nav',
+  id: 'rhc-breadcrumb-nav',
   component: BreadcrumbNav,
   argTypes: {},
   parameters: {
@@ -75,15 +75,6 @@ export const Separator: Story = {
         <UtrechtIconChevronRight />
       </BreadcrumbNavSeparator>,
       <BreadcrumbNavLink href="/a/b/" index={2}>
-        Label
-      </BreadcrumbNavLink>,
-    ],
-  },
-};
-export const Arrow: Story = {
-  args: {
-    children: [
-      <BreadcrumbNavLink arrow href="/a" index={0} rel="label">
         Label
       </BreadcrumbNavLink>,
     ],

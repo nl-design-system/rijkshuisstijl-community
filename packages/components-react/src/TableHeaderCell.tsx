@@ -2,22 +2,20 @@ import {
   TableHeaderCell as UtrechtTableHeaderCell,
   TableHeaderCellProps as UtrechtTableHeaderCellProps,
 } from '@utrecht/component-library-react';
-import { Icon } from '@utrecht/component-library-react/dist/css-module';
+import { Icon } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
-import { AscendingIcon } from './icons/AscendingIcon';
-import { DescendingIcon } from './icons/DescendingIcon';
-import { SortIcon } from './icons/SortIcon';
-import { Button } from './index';
+import { Button } from './Button';
+import { AscendingIcon, DescendingIcon, SortIcon } from './icons';
 
 export interface TableHeaderCellProps extends UtrechtTableHeaderCellProps {
   withSorting?: boolean;
-  align?: 'right' | 'center' | 'left';
+  alignCell?: 'start' | 'center' | 'end';
 }
 
 export const TableHeaderCell = forwardRef(
   (
-    { children, withSorting, className, scope, align, ...restProps }: PropsWithChildren<TableHeaderCellProps>,
+    { children, withSorting, className, scope, alignCell, ...restProps }: PropsWithChildren<TableHeaderCellProps>,
     ref: ForwardedRef<HTMLTableCellElement>,
   ) => {
     return (
@@ -30,7 +28,7 @@ export const TableHeaderCell = forwardRef(
           className,
         )}
         style={{
-          textAlign: align,
+          textAlign: alignCell,
         }}
         {...restProps}
       >
@@ -39,9 +37,9 @@ export const TableHeaderCell = forwardRef(
             appearance={'subtle-button'}
             type={'button'}
             className={clsx('utrecht-table__header-cell-button', {
-              'utrecht-table__header--align-right': align === 'right',
-              'utrecht-table__header--align-center': align === 'center',
-              'utrecht-table__header--align-left': align === 'left',
+              'utrecht-table__header--align-right': alignCell === 'end',
+              'utrecht-table__header--align-center': alignCell === 'center',
+              'utrecht-table__header--align-left': alignCell === 'start',
             })}
           >
             {children}
