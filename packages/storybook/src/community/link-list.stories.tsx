@@ -1,52 +1,82 @@
-import { LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
+import { Icon, LinkList, LinkListLink, type LinkListProps } from '@rijkshuisstijl-community/components-react';
+import { ChevronRightIcon } from '@rijkshuisstijl-community/components-react/src/icons';
 import { Meta, StoryObj } from '@storybook/react/*';
-import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
-import readme from './link-list.md?raw';
+import { PropsWithChildren } from 'react';
+
+interface LinkListStoryProps extends LinkListProps {
+  hasIcons?: boolean;
+}
+
+const LinkListStory = ({ hasIcons = true, ...props }: PropsWithChildren<LinkListStoryProps>) => (
+  <LinkList {...props}>
+    <LinkListLink
+      href="#"
+      icon={
+        hasIcons ? (
+          <Icon>
+            <ChevronRightIcon />
+          </Icon>
+        ) : undefined
+      }
+    >
+      Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
+    </LinkListLink>
+    <LinkListLink
+      href="#"
+      icon={
+        hasIcons ? (
+          <Icon>
+            <ChevronRightIcon />
+          </Icon>
+        ) : undefined
+      }
+    >
+      Link 2
+    </LinkListLink>
+    <LinkListLink
+      href="#"
+      icon={
+        hasIcons ? (
+          <Icon>
+            <ChevronRightIcon />
+          </Icon>
+        ) : undefined
+      }
+    >
+      Link 3
+    </LinkListLink>
+  </LinkList>
+);
 
 const meta = {
-  title: 'Rijkshuisstijl/Link list',
+  title: 'Rijkshuisstijl/Link List',
   id: 'rhc-link-list',
-  component: LinkList,
+  component: LinkListStory,
   args: {
     children: '',
   },
-  parameters: {
-    docs: {
-      description: {
-        component: readme,
+  argTypes: {
+    hasIcons: {
+      description: 'Whether the links have an icon',
+      type: {
+        name: 'boolean',
+      },
+      table: {
+        category: 'Demo',
       },
     },
   },
-} satisfies Meta<typeof LinkList>;
+  render: LinkListStory,
+} satisfies Meta<typeof LinkListStory>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const DefaultLinkList: Story = {
-  args: {
-    children: [
-      <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
-        Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
-      </LinkListLink>,
-      <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
-        Link 2
-      </LinkListLink>,
-      <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
-        Link 3
-      </LinkListLink>,
-    ],
-  },
-};
+export const DefaultLinkList: Story = {};
 
-export const ZonderIcon: Story = {
+export const NoIcon: Story = {
   args: {
-    children: [
-      <LinkListLink href="#">
-        Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
-      </LinkListLink>,
-      <LinkListLink href="#">Link 2</LinkListLink>,
-      <LinkListLink href="#">Link 3</LinkListLink>,
-    ],
+    hasIcons: false,
   },
 };
