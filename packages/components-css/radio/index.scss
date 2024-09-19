@@ -20,7 +20,8 @@
 .utrecht-radio-button:invalid,
 .utrecht-radio-button--invalid {
   --utrecht-radio-button-background-color: var(--utrecht-radio-button-invalid-background-color, inherit);
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--utrecht-radio-button-background-color);
   }
 }
