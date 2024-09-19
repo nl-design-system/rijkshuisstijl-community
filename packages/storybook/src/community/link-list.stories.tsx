@@ -5,7 +5,7 @@ import readme from './link-list.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Link list',
-  id: 'rhc-linklist',
+  id: 'rhc-link-list',
   component: LinkList,
   args: {
     children: '',
