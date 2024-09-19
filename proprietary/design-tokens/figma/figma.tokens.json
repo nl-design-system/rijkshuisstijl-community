@@ -1095,7 +1095,7 @@
           "type": "borderRadius"
         },
         "keep": {
-          "value": "{rhc.size.2-lint}",
+          "value": "{rhc.size.lint}",
           "type": "borderRadius"
         }
       }
@@ -1727,19 +1727,19 @@
           }
         },
         "padding-block-end": {
-          "value": "{rhc.space.150}",
+          "value": "{rhc.space.400}",
           "type": "spacing"
         },
         "padding-block-start": {
-          "value": "{rhc.space.150}",
+          "value": "{rhc.space.400}",
           "type": "spacing"
         },
         "padding-inline-end": {
-          "value": "{rhc.space.0}",
+          "value": "{rhc.space.400}",
           "type": "spacing"
         },
         "padding-inline-start": {
-          "value": "{rhc.space.0}",
+          "value": "{rhc.space.400}",
           "type": "spacing"
         },
         "row-gap": {
@@ -1749,6 +1749,22 @@
         "background-color": {
           "value": "transparent",
           "type": "color"
+        },
+        "border": {
+          "color": {
+            "value": "{rhc.color.primary.500}",
+            "type": "color"
+          }
+        }
+      },
+      "blockqoute": {
+        "border-radius": {
+          "value": "0px, {rhc.border-radius.keep}, 0px, 0px",
+          "type": "borderRadius"
+        },
+        "border-width": {
+          "value": "{rhc.border-width.m}",
+          "type": "borderWidth"
         }
       }
     }
