@@ -4,6 +4,9 @@
  */
 
 .rhc-skip-link {
+  box-shadow: var(--utrecht-skip-link-box-block-end-shadow-offset-x)
+    var(--utrecht-skip-link-box-block-end-shadow-offset-y) var(--utrecht-skip-link-box-block-end-shadow-blur-radius)
+    var(--utrecht-skip-link-box-block-end-shadow-spread-radius) var(--utrecht-skip-link-box-block-end-shadow-color);
   font-weight: var(--utrecht-skip-link-font-weight, inherit);
   position: revert;
   text-underline-offset: var(--utrecht-skip-link-text-underline-offset, inherit);
