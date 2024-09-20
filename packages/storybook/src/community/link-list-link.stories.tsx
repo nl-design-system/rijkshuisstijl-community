@@ -7,7 +7,13 @@ const meta = {
   id: 'rijkshuisstijl-link-list-link',
   component: LinkListLink,
   args: {
-    children: '',
+    children: 'Label',
+    href: '#',
+    icon: (
+      <Icon>
+        <ChevronRightIcon />
+      </Icon>
+    ),
   },
   argTypes: {
     href: {
@@ -16,7 +22,6 @@ const meta = {
         category: 'HTML attribute',
       },
     },
-    icon: {},
   },
 } satisfies Meta<typeof LinkListLink>;
 
@@ -36,10 +41,9 @@ export const Default: Story = {
   },
 };
 
-export const NoIcon: Story = {
-  args: {
-    children: 'Label',
-    href: '#',
+export const Hover: Story = {
+  parameters: {
+    pseudo: { hover: true },
   },
 };
 
@@ -47,43 +51,17 @@ export const Active: Story = {
   parameters: {
     pseudo: { active: true },
   },
-  args: {
-    children: 'Label',
-    href: '#',
-    icon: (
-      <Icon>
-        <ChevronRightIcon />
-      </Icon>
-    ),
-  },
 };
 
 export const Focus: Story = {
   parameters: {
     pseudo: { focus: true },
   },
-  args: {
-    children: 'Label',
-    href: '#',
-    icon: (
-      <Icon>
-        <ChevronRightIcon />
-      </Icon>
-    ),
-  },
+  args: {},
 };
 
 export const Visited: Story = {
   parameters: {
     pseudo: { visited: true },
-  },
-  args: {
-    children: 'Label',
-    href: 'https://example.com/',
-    icon: (
-      <Icon>
-        <ChevronRightIcon />
-      </Icon>
-    ),
   },
 };

@@ -73,10 +73,4 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const DefaultLinkList: Story = {};
-
-export const NoIcon: Story = {
-  args: {
-    hasIcons: false,
-  },
-};
+export const Default: Story = {};
