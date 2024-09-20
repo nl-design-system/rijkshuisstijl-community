@@ -34,8 +34,8 @@ const meta = {
   id: 'rhc-logo',
   component: LogoStory,
   args: {
-    organisation: 'Voorbeeld organisatie',
-    subtitle: 'Voorbeeld sub-title',
+    organisation: '',
+    subtitle: '',
     backgroundColor: '#FFFFFF',
     color: '#154273',
   },
@@ -75,16 +75,9 @@ export const Default: Story = {
   },
 };
 
-export const Organisation: Story = {
-  args: {
-    organisation: 'Voorbeeld organisatie',
-  },
-};
-
-export const OrganisationSubtitle: Story = {
+export const WithSubtitle: Story = {
   args: {
     organisation: 'Voorbeeld organisatie',
     subtitle: 'Voorbeeld sub-title',
   },
-  name: 'Organisation + subtitle',
 };
