@@ -1,11 +1,44 @@
-import { Logo } from '@rijkshuisstijl-community/components-react';
+import { Logo, type LogoProps } from '@rijkshuisstijl-community/components-react';
 import { DutchMapIcon } from '@rijkshuisstijl-community/components-react/src/icons';
 import { Meta, StoryObj } from '@storybook/react';
+import { CSSProperties } from 'react';
+
+interface LogoCSSProperties extends CSSProperties {
+  '--rhc-logo-lint-background-color': string;
+  '--rhc-logo-color': string;
+}
+
+interface LogoStoryProps extends LogoProps {
+  backgroundColor?: string;
+  color?: string;
+}
+
+const LogoStory = ({ backgroundColor, color, ...args }: LogoStoryProps) => (
+  <>
+    <Logo
+      {...args}
+      style={
+        {
+          '--rhc-logo-lint-background-color': backgroundColor || '#FFFFFF',
+          '--rhc-logo-color': color || '#154273',
+        } as LogoCSSProperties
+      }
+    >
+      <DutchMapIcon />
+    </Logo>
+  </>
+);
 
 const meta = {
   title: 'Rijkshuisstijl/Logo',
   id: 'rhc-logo',
-  component: Logo,
+  component: LogoStory,
+  args: {
+    organisation: 'Voorbeeld organisatie',
+    subtitle: 'Voorbeeld sub-title',
+    backgroundColor: '#FFFFFF',
+    color: '#154273',
+  },
   argTypes: {
     organisation: {
       name: 'organisation',
@@ -15,8 +48,23 @@ const meta = {
       name: 'subtitle',
       type: { name: 'string', required: false },
     },
+    backgroundColor: {
+      control: 'color',
+      description: 'Changes background color',
+      table: {
+        category: 'Demo',
+      },
+    },
+    color: {
+      control: 'color',
+      description: 'Changes color',
+      table: {
+        category: 'Demo',
+      },
+    },
   },
-} satisfies Meta<typeof Logo>;
+  render: LogoStory,
+} satisfies Meta<typeof LogoStory>;
 
 export default meta;
 
@@ -39,13 +87,4 @@ export const OrganisationSubtitle: Story = {
     subtitle: 'Voorbeeld sub-title',
   },
   name: 'Organisation + subtitle',
-};
-
-export const ExampleIcon: Story = {
-  args: {
-    organisation: 'Voorbeeld organisatie',
-    subtitle: 'Voorbeeld sub-title',
-    children: <DutchMapIcon />,
-  },
-  name: 'Organisation + subtitle + example icon',
 };
