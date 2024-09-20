@@ -4,23 +4,26 @@ import { Meta, StoryObj } from '@storybook/react';
 import { CSSProperties } from 'react';
 
 interface LogoCSSProperties extends CSSProperties {
-  '--rhc-logo-lint-background-color': string;
   '--rhc-logo-color': string;
+  '--rhc-logo-lint-background-color': string;
+  '--rhc-logo-lint-color': string;
 }
 
 interface LogoStoryProps extends LogoProps {
-  backgroundColor?: string;
-  color?: string;
+  lintBackgroundColor?: string;
+  lintIconColor?: string;
+  textColor?: string;
 }
 
-const LogoStory = ({ backgroundColor, color, ...args }: LogoStoryProps) => (
+const LogoStory = ({ lintBackgroundColor, textColor, lintIconColor, ...args }: LogoStoryProps) => (
   <>
     <Logo
       {...args}
       style={
         {
-          '--rhc-logo-lint-background-color': backgroundColor || '#FFFFFF',
-          '--rhc-logo-color': color || '#154273',
+          '--rhc-logo-color': textColor || '#154273',
+          '--rhc-logo-lint-background-color': lintBackgroundColor || '#FFFFFF',
+          '--rhc-logo-lint-color': lintIconColor || '#154273',
         } as LogoCSSProperties
       }
     >
@@ -36,8 +39,9 @@ const meta = {
   args: {
     organisation: '',
     subtitle: '',
-    backgroundColor: '#FFFFFF',
-    color: '#154273',
+    lintBackgroundColor: '#FFFFFF',
+    lintIconColor: '#154273',
+    textColor: '#154273',
   },
   argTypes: {
     organisation: {
@@ -48,16 +52,23 @@ const meta = {
       name: 'subtitle',
       type: { name: 'string', required: false },
     },
-    backgroundColor: {
+    lintBackgroundColor: {
       control: 'color',
-      description: 'Changes background color',
+      description: 'Changes background color of the lint',
       table: {
         category: 'Demo',
       },
     },
-    color: {
+    lintIconColor: {
       control: 'color',
-      description: 'Changes color',
+      description: 'Changes color of the lint icon',
+      table: {
+        category: 'Demo',
+      },
+    },
+    textColor: {
+      control: 'color',
+      description: 'Changes text color',
       table: {
         category: 'Demo',
       },
