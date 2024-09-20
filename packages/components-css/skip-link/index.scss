@@ -3,13 +3,10 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
+@import "./mixin";
+
 .rhc-skip-link {
-  box-shadow: var(--utrecht-skip-link-box-block-end-shadow-offset-x)
-    var(--utrecht-skip-link-box-block-end-shadow-offset-y) var(--utrecht-skip-link-box-block-end-shadow-blur-radius)
-    var(--utrecht-skip-link-box-block-end-shadow-spread-radius) var(--utrecht-skip-link-box-block-end-shadow-color);
-  font-weight: var(--utrecht-skip-link-font-weight, inherit);
-  position: revert;
-  text-underline-offset: var(--utrecht-skip-link-text-underline-offset, inherit);
+  @include rhc-skip-link;
 }
 
 .rhc-skip-link--hidden,
@@ -20,6 +17,8 @@
 
 .rhc-skip-link--focus,
 .rhc-skip-link:focus {
+  @include rhc-skip-link;
+
   background-color: var(--utrecht-skip-link-focus-background-color, inherit);
   border-color: var(--utrecht-skip-link-focus-border-color, inherit);
   border-style: var(--utrecht-skip-link-focus-border-style, inherit);
@@ -35,6 +34,8 @@
 
 .rhc-skip-link--focus-visible,
 .rhc-skip-link:focus-visible {
+  @include rhc-skip-link;
+
   outline-color: var(--utrecht-skip-link-focus-visible-outline-color, var(--utrecht-focus-outline-color));
   outline-offset: var(--utrecht-skip-link-focus-visible-outline-offset, var(--utrecht-focus-outline-offset));
   outline-style: var(--utrecht-skip-link-focus-visible-outline-style, var(--utrecht-focus-outline-style));
