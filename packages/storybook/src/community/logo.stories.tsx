@@ -22,7 +22,7 @@ const LogoStory = ({ lintBackgroundColor, textColor, lintIconColor, ...args }: L
       style={
         {
           '--rhc-logo-color': textColor || '#154273',
-          '--rhc-logo-lint-background-color': lintBackgroundColor || '#FFFFFF',
+          '--rhc-logo-lint-background-color': lintBackgroundColor || '#ffffff',
           '--rhc-logo-lint-color': lintIconColor || '#154273',
         } as LogoCSSProperties
       }
@@ -39,7 +39,7 @@ const meta = {
   args: {
     organisation: '',
     subtitle: '',
-    lintBackgroundColor: '#FFFFFF',
+    lintBackgroundColor: '#ffffff',
     lintIconColor: '#154273',
     textColor: '#154273',
   },
