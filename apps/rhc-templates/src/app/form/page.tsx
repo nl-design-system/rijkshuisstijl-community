@@ -15,18 +15,18 @@ import {
   LinkListLink,
   Paragraph,
   UnorderedList,
-} from '@rijkshuisstijl-community/components-react';
-import { FormLabel } from '@utrecht/component-library-react';
-import {
+  FormField,
   Checkbox,
+  FormLabel,
+} from '@rijkshuisstijl-community/components-react';
+import {
   Fieldset,
   FieldsetLegend,
-  FormField,
   PageContent,
   RadioButton,
   Textbox,
   UnorderedListItem,
-} from '@utrecht/component-library-react/dist/css-module';
+} from '@utrecht/component-library-react';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import { DateInput, FileInput } from '@amsterdam/design-system-react';
 

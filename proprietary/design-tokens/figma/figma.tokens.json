@@ -1095,7 +1095,7 @@
           "type": "borderRadius"
         },
         "keep": {
-          "value": "{rhc.size.2-lint}",
+          "value": "{rhc.size.lint}",
           "type": "borderRadius"
         }
       }
@@ -1727,19 +1727,19 @@
           }
         },
         "padding-block-end": {
-          "value": "{rhc.space.150}",
+          "value": "{rhc.space.400}",
           "type": "spacing"
         },
         "padding-block-start": {
-          "value": "{rhc.space.150}",
+          "value": "{rhc.space.400}",
           "type": "spacing"
         },
         "padding-inline-end": {
-          "value": "{rhc.space.0}",
+          "value": "{rhc.space.400}",
           "type": "spacing"
         },
         "padding-inline-start": {
-          "value": "{rhc.space.0}",
+          "value": "{rhc.space.400}",
           "type": "spacing"
         },
         "row-gap": {
@@ -1749,6 +1749,22 @@
         "background-color": {
           "value": "transparent",
           "type": "color"
+        },
+        "border": {
+          "color": {
+            "value": "{rhc.color.primary.500}",
+            "type": "color"
+          }
+        }
+      },
+      "blockqoute": {
+        "border-radius": {
+          "value": "0px, {rhc.border-radius.keep}, 0px, 0px",
+          "type": "borderRadius"
+        },
+        "border-width": {
+          "value": "{rhc.border-width.m}",
+          "type": "borderWidth"
         }
       }
     }
@@ -3491,6 +3507,32 @@
             "value": "0.3rem",
             "type": "spacing"
           }
+        }
+      }
+    }
+  },
+  "components/link-list-card": {
+    "todo": {
+      "link-list-card": {
+        "background-color": {
+          "value": "{rhc.color.wit}",
+          "type": "color"
+        },
+        "padding-block-start": {
+          "value": "{rhc.space.300}",
+          "type": "spacing"
+        },
+        "padding-block-end": {
+          "value": "{rhc.space.300}",
+          "type": "spacing"
+        },
+        "padding-inline-start": {
+          "value": "{rhc.space.300}",
+          "type": "spacing"
+        },
+        "padding-inline-end": {
+          "value": "{rhc.space.300}",
+          "type": "spacing"
         }
       }
     }
@@ -5545,6 +5587,76 @@
       }
     }
   },
+  "components/toggletip": {
+    "todo": {
+      "toggletip": {
+        "color": {
+          "value": "{rhc.color.wit}",
+          "type": "color"
+        },
+        "background-color": {
+          "value": "{rhc.color.feedback.info.default}",
+          "type": "color"
+        },
+        "border-color": {
+          "value": "{rhc.color.none}",
+          "type": "color"
+        },
+        "border-radius": {
+          "value": "{rhc.border-radius.md}",
+          "type": "borderRadius"
+        },
+        "icon": {
+          "size": {
+            "value": "{rhc.size.icon.functional}",
+            "type": "sizing"
+          }
+        },
+        "size": {
+          "value": "{rhc.size.icon.functional}",
+          "type": "sizing"
+        },
+        "active": {
+          "color": {
+            "value": "{rhc.color.feedback.info.default}",
+            "type": "color"
+          },
+          "background-color": {
+            "value": "{rhc.color.wit}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{rhc.color.feedback.info.default}",
+            "type": "color"
+          }
+        },
+        "hover": {
+          "color": {
+            "value": "{rhc.color.foreground.lint}",
+            "type": "color"
+          },
+          "background-color": {
+            "value": "{rhc.color.hemelblauw.300}",
+            "type": "color"
+          }
+        },
+        "focus": {
+          "color": {
+            "value": "{rhc.color.wit}",
+            "type": "color"
+          },
+          "background-color": {
+            "value": "{rhc.color.feedback.info.default}",
+            "type": "color"
+          }
+        },
+        "border-width": {
+          "value": "{rhc.border-width.default}",
+          "type": "borderWidth"
+        }
+      }
+    }
+  },
   "components/toolbar-button": {
     "todo": {
       "toolbar-button": {
@@ -5649,7 +5761,6 @@
       "common/focus",
       "common/border",
       "common/keep",
-      "common/text-align",
       "utrecht/focus",
       "utrecht/pointer-target",
       "utrecht/document",
@@ -5681,6 +5792,7 @@
       "components/icon-only-button",
       "components/link",
       "components/link-list",
+      "components/link-list-card",
       "components/logo",
       "components/modal-dialog",
       "components/ordered-list",
@@ -5698,6 +5810,7 @@
       "components/task-list",
       "components/textarea",
       "components/text-input",
+      "components/toggletip",
       "components/toolbar-button",
       "components/unordered-list"
     ]
