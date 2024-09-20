@@ -6055,7 +6055,7 @@
               "type": "color"
             },
             "color": {
-              "value": "{rhc.color.foreground.onEmphasis}",
+              "value": "{rhc.color.foreground.on-color}",
               "type": "color"
             }
           },
@@ -6111,7 +6111,7 @@
           },
           "active": {
             "color": {
-              "value": "{rhc.color.foreground.onEmphasis}",
+              "value": "{rhc.color.foreground.on-color}",
               "type": "color"
             }
           },
@@ -6257,9 +6257,13 @@
             "value": "{rhc.color.primary.500}",
             "type": "color"
           },
+          "background-color": {
+            "value": "{rhc.color.foreground.on-color}",
+            "type": "color"
+          },
           "active": {
             "color": {
-              "value": "{rhc.color.foreground.onEmphasis}",
+              "value": "{rhc.color.foreground.on-color}",
               "type": "color"
             }
           },
@@ -6367,7 +6371,7 @@
           "type": "color"
         },
         "border-color": {
-          "value": "{rhc.color.foreground.default}",
+          "value": "{rhc.color.primary.500}",
           "type": "color"
         },
         "breadcrumb": {
@@ -6384,12 +6388,16 @@
         },
         "icon": {
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.on-color}",
+            "type": "color"
+          },
+          "background-color": {
+            "value": "{rhc.color.primary.500}",
             "type": "color"
           },
           "active": {
             "color": {
-              "value": "{rhc.color.foreground.onEmphasis}",
+              "value": "{rhc.color.foreground.on-color}",
               "type": "color"
             }
           },
@@ -6519,13 +6527,17 @@
           },
           "active": {
             "color": {
-              "value": "{rhc.color.foreground.onEmphasis}",
+              "value": "{rhc.color.foreground.on-color}",
               "type": "color"
             }
           },
           "size": {
             "value": "{rhc.size.icon.functional}",
             "type": "sizing"
+          },
+          "background-color": {
+            "value": "{rhc.color.foreground.on-color}",
+            "type": "color"
           }
         },
         "border-width": {
@@ -6764,7 +6776,7 @@
     "rhc": {
       "color": {
         "foreground": {
-          "onEmphasis": {
+          "on-color": {
             "value": "{rhc.color.zwart}",
             "type": "color",
             "description": "Tekst en iconen die op een sterke achtergrond staan. Zoals het label in de primaire button of links in de footer."
