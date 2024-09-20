@@ -5,6 +5,7 @@ import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/components-css/index.scss';
 import { Logo } from '@rijkshuisstijl-community/components-react';
+import { DutchMapIcon } from '@rijkshuisstijl-community/components-react/src/icons';
 import { NavBar, NavList, NavListLinkButton, PageHeader } from '@utrecht/component-library-react/dist/css-module';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import './globals.css';
@@ -24,9 +25,9 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
           <main className="page">
             <div className="rhc-background-color-white">
               <PageHeader>
-                <div className="unfinished">
-                  <Logo organisation="Rijkshuisstijl Community"></Logo>
-                </div>
+                <Logo organisation="Rijkshuisstijl Community">
+                  <DutchMapIcon />
+                </Logo>
               </PageHeader>
             </div>
             <div className="unstarted rhc-background-color-lint-blauw">
