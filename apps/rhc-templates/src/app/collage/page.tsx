@@ -50,7 +50,7 @@ import {
   StatusBadge,
   Textbox,
   UnorderedListItem,
-} from '@utrecht/component-library-react/dist/css-module';
+} from '@utrecht/component-library-react';
 
 export default function Collage() {
   return (
