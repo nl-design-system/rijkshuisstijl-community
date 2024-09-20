@@ -47,6 +47,7 @@ export const Alert = forwardRef(
             <Paragraph>{textContent}</Paragraph>
           </div>
         </div>
+        {restProps.children}
       </UtrechtAlert>
     );
   },
