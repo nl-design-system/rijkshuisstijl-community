@@ -31,12 +31,20 @@ const FieldsetStory = ({
     <Fieldset
       className={clsx({
         'utrecht-form-fieldset--section': section,
-        'utrecht-form-fieldset--disabled': disabled,
-        'utrecht-form-fieldset--invalid': invalid,
       })}
       {...restProps}
     >
-      {legend && <FieldsetLegend id={legendId}>{legend}</FieldsetLegend>}
+      {legend && (
+        <FieldsetLegend
+          id={legendId}
+          className={clsx({
+            'utrecht-form-fieldset__legend--disabled': disabled,
+            'utrecht-form-fieldset__legend--invalid': invalid,
+          })}
+        >
+          {legend}
+        </FieldsetLegend>
+      )}
       {children}
     </Fieldset>
   );
