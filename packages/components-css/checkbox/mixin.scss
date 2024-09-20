@@ -1,5 +1,5 @@
 @mixin utrecht-checkbox--checked {
-  background-image: url('data:image/svg+xml,<svg width="5.5" height="7" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 0.292893C17.0976 0.683417 17.0976 1.31658 16.7071 1.70711L6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071L0.292893 6.70711C-0.0976311 6.31658 -0.0976311 5.68342 0.292893 5.29289C0.683417 4.90237 1.31658 4.90237 1.70711 5.29289L6 9.58579L15.2929 0.292893C15.6834 -0.0976311 16.3166 -0.0976311 16.7071 0.292893Z" fill="white"/></svg>');
+  background-image: url('data:image/svg+xml,<svg width="5.5" height="7" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 0.292893C17.0976 0.683417 17.0976 1.31658 16.7071 1.70711L6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071L0.292893 6.70711C-0.0976311 6.31658 -0.0976311 5.68342 0.292893 5.29289C0.683417 4.90237 1.31658 4.90237 1.70711 5.29289L6 9.58579L15.2929 0.292893C15.6834 -0.0976311 16.3166 -0.0976311 16.7071 0.292893Z" fill="white"/></svg>') !important;
 }
 
 @mixin utrecht-checkbox--disabled {
@@ -24,7 +24,7 @@
   border-color: var(--utrecht-checkbox-checked-hover-border-color);
 }
 @mixin utrecht-checkbox--checked--disabled {
-  background-color: var(--utrecht-checkbox-disabled-background-color);
+  background-color: var(--utrecht-checkbox-disabled-background-color) !important;
   background-image: url('data:image/svg+xml,<svg width="5.5" height="7" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 0.292893C17.0976 0.683417 17.0976 1.31658 16.7071 1.70711L6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071L0.292893 6.70711C-0.0976311 6.31658 -0.0976311 5.68342 0.292893 5.29289C0.683417 4.90237 1.31658 4.90237 1.70711 5.29289L6 9.58579L15.2929 0.292893C15.6834 -0.0976311 16.3166 -0.0976311 16.7071 0.292893Z" fill="%23475569"/></svg>');
 }
 
@@ -40,7 +40,7 @@
 
 @mixin utrecht-checkbox--indeterminate--focus {
   background-color: var(--utrecht-checkbox-indeterminate-focus-background-color);
-  background-image: url('data:image/svg+xml,<svg  width="16" height="4" viewBox="0 0 16 4"   fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H1C0.447715 2 0 1.55228 0 1Z" fill="%23154273"/></svg>');
+  background-image: url('data:image/svg+xml,<svg  width="16" height="4" viewBox="0 0 16 4"   fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H1C0.447715 2 0 1.55228 0 1Z" fill="%23154273"/></svg>') !important;
   border-color: var(--utrecht-checkbox-indeterminate-focus-border-color);
 }
 
@@ -63,13 +63,13 @@
     }
     &:focus {
       background-color: var(--utrecht-checkbox-checked-focus-background-color);
-      background-image: url('data:image/svg+xml,<svg width="5.5" height="7" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 0.292893C17.0976 0.683417 17.0976 1.31658 16.7071 1.70711L6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071L0.292893 6.70711C-0.0976311 6.31658 -0.0976311 5.68342 0.292893 5.29289C0.683417 4.90237 1.31658 4.90237 1.70711 5.29289L6 9.58579L15.2929 0.292893C15.6834 -0.0976311 16.3166 -0.0976311 16.7071 0.292893Z" fill="%23154273"/></svg>');
+      background-image: url('data:image/svg+xml,<svg width="5.5" height="7" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 0.292893C17.0976 0.683417 17.0976 1.31658 16.7071 1.70711L6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071L0.292893 6.70711C-0.0976311 6.31658 -0.0976311 5.68342 0.292893 5.29289C0.683417 4.90237 1.31658 4.90237 1.70711 5.29289L6 9.58579L15.2929 0.292893C15.6834 -0.0976311 16.3166 -0.0976311 16.7071 0.292893Z" fill="%23154273"/></svg>') !important;
       border-color: var(--utrecht-checkbox-checked-focus-border-color);
       border-width: var(--utrecht-checkbox-checked-focus-border-width);
     }
     &:focus-visible {
       background-color: var(--utrecht-checkbox-checked-focus-background-color);
-      background-image: url('data:image/svg+xml,<svg width="5.5" height="7" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 0.292893C17.0976 0.683417 17.0976 1.31658 16.7071 1.70711L6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071L0.292893 6.70711C-0.0976311 6.31658 -0.0976311 5.68342 0.292893 5.29289C0.683417 4.90237 1.31658 4.90237 1.70711 5.29289L6 9.58579L15.2929 0.292893C15.6834 -0.0976311 16.3166 -0.0976311 16.7071 0.292893Z" fill="%23154273"/></svg>');
+      background-image: url('data:image/svg+xml,<svg width="5.5" height="7" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 0.292893C17.0976 0.683417 17.0976 1.31658 16.7071 1.70711L6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071L0.292893 6.70711C-0.0976311 6.31658 -0.0976311 5.68342 0.292893 5.29289C0.683417 4.90237 1.31658 4.90237 1.70711 5.29289L6 9.58579L15.2929 0.292893C15.6834 -0.0976311 16.3166 -0.0976311 16.7071 0.292893Z" fill="%23154273"/></svg>') !important;
       border-color: var(--utrecht-checkbox-checked-focus-border-color);
       border-width: var(--utrecht-checkbox-checked-focus-border-width);
     }

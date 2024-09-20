@@ -15,13 +15,13 @@ import {
   LinkListLink,
   Paragraph,
   UnorderedList,
-} from '@rijkshuisstijl-community/components-react';
-import { FormLabel } from '@utrecht/component-library-react';
-import {
+  FormField,
   Checkbox,
+  FormLabel,
+} from '@rijkshuisstijl-community/components-react';
+import {
   Fieldset,
   FieldsetLegend,
-  FormField,
   PageContent,
   RadioButton,
   Textbox,
