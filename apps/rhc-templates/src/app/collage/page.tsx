@@ -7,6 +7,9 @@ import {
   BreadcrumbNav,
   BreadcrumbNavLink,
   Button,
+  FormFieldCheckboxGroup,
+  FormFieldCheckboxOption,
+  FormFieldTextarea,
   Heading,
   IconButton,
   Image,
@@ -27,16 +30,12 @@ import {
 } from '@rijkshuisstijl-community/components-react';
 import { Avatar, Pagination } from '@amsterdam/design-system-react';
 import {
-  IconAlertTriangle,
   IconArrowRight,
   IconCalendarEvent,
-  IconCircleCheck,
   IconExclamationCircle,
-  IconInfoCircle,
 } from '@tabler/icons-react/dist/esm/tabler-icons-react';
 import {
   BadgeCounter,
-  Checkbox,
   DataList,
   DataListActions,
   DataListItem,
@@ -49,14 +48,13 @@ import {
   OrderedListItem,
   RadioButton,
   StatusBadge,
-  Textarea,
   Textbox,
   UnorderedListItem,
-} from '@utrecht/component-library-react/dist/css-module';
+} from '@utrecht/component-library-react';
 
 export default function Collage() {
   return (
-    <>
+    <main>
       <div>
         <BreadcrumbNav>
           <BreadcrumbNavLink href="/" rel="home" index={0}>
@@ -131,10 +129,8 @@ export default function Collage() {
           <Textbox></Textbox>
         </FormField>
       </div>
-      <div className="unstarted">
-        <FormField label="Label">
-          <Textarea rows={4}></Textarea>
-        </FormField>
+      <div>
+        <FormFieldTextarea label="Label" rows={4} />
       </div>
       <div className="unstarted">
         <FormField label="Label" description="Description">
@@ -150,19 +146,13 @@ export default function Collage() {
           </div>
         </FormField>
       </div>
-      <div className="unstarted">
-        <FormField label="Label" description="Description">
-          <div className="rhc-radio-button__group">
-            <Checkbox></Checkbox>
-            <FormLabel>Label</FormLabel>
-            <Checkbox></Checkbox>
-            <FormLabel>Label</FormLabel>
-            <Checkbox></Checkbox>
-            <FormLabel>Label</FormLabel>
-            <Checkbox></Checkbox>
-            <FormLabel>Label</FormLabel>
-          </div>
-        </FormField>
+      <div>
+        <FormFieldCheckboxGroup label="Label" description="Description">
+          <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
+          <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
+          <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
+          <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
+        </FormFieldCheckboxGroup>
       </div>
       <Alert type="error">
         <Heading level={1}>Heading</Heading>
@@ -205,48 +195,36 @@ export default function Collage() {
         </DataList>
       </div>
       <div>
-        <Alert type="info">
-          <div className="rhc-alert-container">
-            <IconInfoCircle className="rhc-alert-container__icon rhc-alert-container__icon-info " />
-            <div>
-              <Heading level={3}>Heading</Heading>
-              <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
-            </div>
-          </div>
-        </Alert>
+        <Alert
+          type="info"
+          headingLevel={3}
+          textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
+          heading="Heading"
+        />
       </div>
       <div>
-        <Alert type="error">
-          <div className="rhc-alert-container">
-            <IconAlertTriangle className="rhc-alert-container__icon rhc-alert-container__icon-error " />
-            <div>
-              <Heading level={3}>Heading</Heading>
-              <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
-            </div>
-          </div>
-        </Alert>
+        <Alert
+          type="error"
+          headingLevel={3}
+          textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
+          heading="Heading"
+        />
       </div>
       <div>
-        <Alert type="ok">
-          <div className="rhc-alert-container">
-            <IconCircleCheck className="rhc-alert-container__icon rhc-alert-container__icon-ok " />
-            <div>
-              <Heading level={3}>Heading</Heading>
-              <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
-            </div>
-          </div>
-        </Alert>
+        <Alert
+          type="ok"
+          headingLevel={3}
+          textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
+          heading="Heading"
+        />
       </div>
       <div>
-        <Alert type="warning">
-          <div className="rhc-alert-container">
-            <IconExclamationCircle className="rhc-alert-container__icon rhc-alert-container__icon-warning " />
-            <div>
-              <Heading level={3}>Heading</Heading>
-              <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
-            </div>
-          </div>
-        </Alert>
+        <Alert
+          textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
+          type="warning"
+          headingLevel={3}
+          heading="Heading"
+        />
       </div>
       <AccordionProvider
         sections={[
@@ -319,6 +297,6 @@ export default function Collage() {
       <div className="unstarted">
         <Pagination maxVisiblePages={6} page={1} totalPages={99}></Pagination>
       </div>
-    </>
+    </main>
   );
 }
