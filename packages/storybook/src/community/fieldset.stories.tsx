@@ -9,18 +9,33 @@ import {
 import { Meta, StoryObj } from '@storybook/react';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
+import readme from './fieldset.md?raw';
 
-interface FormFieldsetStoryProps extends FieldsetProps {
+interface FieldsetStoryProps extends FieldsetProps {
   element?: string | 'div' | 'fieldset';
   legend?: ReactNode;
   legendId?: string;
-  invalid?: boolean;
   section?: boolean;
 }
 
-const FormFieldsetStory = ({ children, legend, legendId, section, ...restProps }: FormFieldsetStoryProps) => {
+const FieldsetStory = ({
+  children,
+  legend,
+  legendId,
+  section,
+  disabled,
+  invalid,
+  ...restProps
+}: FieldsetStoryProps) => {
   return (
-    <Fieldset className={clsx({ 'utrecht-form-fieldset--section': section })} {...restProps}>
+    <Fieldset
+      className={clsx({
+        'utrecht-form-fieldset--section': section,
+        'utrecht-form-fieldset--disabled': disabled,
+        'utrecht-form-fieldset--invalid': invalid,
+      })}
+      {...restProps}
+    >
       {legend && <FieldsetLegend id={legendId}>{legend}</FieldsetLegend>}
       {children}
     </Fieldset>
@@ -30,9 +45,10 @@ const FormFieldsetStory = ({ children, legend, legendId, section, ...restProps }
 const meta = {
   title: 'Rijkshuisstijl/Fieldset',
   id: 'rhc-fieldset',
-  component: FormFieldsetStory,
+  component: FieldsetStory,
   args: {
     disabled: false,
+    invalid: false,
     children: (
       <>
         <FormFieldTextbox label="Field A"></FormFieldTextbox>
@@ -42,8 +58,15 @@ const meta = {
     ),
     legend: 'Legend',
   },
-  render: FormFieldsetStory,
-} satisfies Meta<typeof FormFieldsetStory>;
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
+  },
+  render: FieldsetStory,
+} satisfies Meta<typeof FieldsetStory>;
 
 export default meta;
 
@@ -70,6 +93,21 @@ export const Disabled: Story = {
     docs: {
       description: {
         story: 'Styling via the `.utrecht-form-fieldset__legend--disabled` class names.',
+      },
+    },
+  },
+};
+
+export const Invalid: Story = {
+  args: {
+    ...Default.args,
+    invalid: true,
+  },
+  name: 'Invalid',
+  parameters: {
+    docs: {
+      description: {
+        story: 'Styling via the `.utrecht-form-fieldset__legend--invalid` class names.',
       },
     },
   },
