@@ -941,7 +941,7 @@
         },
         "accent": {
           "500": {
-            "value": "{rhc.color.lichtblauw.500}",
+            "value": "{rhc.color.roze.300}",
             "type": "color"
           }
         },
@@ -7452,6 +7452,178 @@
       }
     }
   },
+  "overwrites/focus/outline-color": {
+    "rhc": {
+      "color": {
+        "focus": {
+          "outline": {
+            "value": "{rhc.color.primary.500}",
+            "type": "color"
+          }
+        }
+      }
+    }
+  },
+  "overwrites/focus/background": {
+    "utrecht": {
+      "accordion": {
+        "button": {
+          "focus": {
+            "background-color": {
+              "value": "{overwrite.focus.background}",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "button": {
+        "primary-action": {
+          "focus": {
+            "background-color": {
+              "value": "{overwrite.focus.background}",
+              "type": "color"
+            }
+          }
+        },
+        "secondary-action": {
+          "focus": {
+            "background-color": {
+              "value": "{overwrite.focus.background}",
+              "type": "color"
+            }
+          }
+        },
+        "subtle": {
+          "focus": {
+            "background-color": {
+              "value": "{overwrite.focus.background}",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "checkbox": {
+        "focus": {
+          "background-color": {
+            "value": "{overwrite.focus.background}",
+            "type": "color"
+          }
+        },
+        "checked": {
+          "focus": {
+            "background-color": {
+              "value": "{overwrite.focus.background}",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "radio": {
+        "focus": {
+          "background-color": {
+            "value": "{overwrite.focus.background}",
+            "type": "color"
+          }
+        },
+        "checked": {
+          "focus": {
+            "background-color": {
+              "value": "{overwrite.focus.background}",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "link": {
+        "focus": {
+          "background-color": {
+            "value": "{overwrite.focus.background}",
+            "type": "color"
+          }
+        }
+      },
+      "select": {
+        "focus": {
+          "background-color": {
+            "value": "{overwrite.focus.background}",
+            "type": "color"
+          }
+        }
+      },
+      "textarea": {
+        "focus": {
+          "background-color": {
+            "value": "{overwrite.focus.background}",
+            "type": "color"
+          }
+        }
+      },
+      "textbox": {
+        "focus": {
+          "background-color": {
+            "value": "{overwrite.focus.background}",
+            "type": "color"
+          }
+        }
+      },
+      "counter-badge": {
+        "background-color": {
+          "value": "{overwrite.focus.background}",
+          "type": "color"
+        }
+      },
+      "skip-link": {
+        "focus": {
+          "background-color": {
+            "value": "{overwrite.focus.background}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "overwrite": {
+      "focus": {
+        "background": {
+          "value": "{rhc.color.donkergeel.300}",
+          "type": "color"
+        }
+      }
+    },
+    "todo": {
+      "nav-bar": {
+        "link": {
+          "focus": {
+            "background-color": {
+              "value": "{overwrite.focus.background}",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "pagination": {
+        "page-link": {
+          "focus": {
+            "background-color": {
+              "value": "{overwrite.focus.background}",
+              "type": "color"
+            }
+          }
+        }
+      }
+    },
+    "denhaag": {
+      "sidenav": {
+        "link": {
+          "focus": {
+            "background-color": {
+              "value": "{overwrite.focus.background}",
+              "type": "color"
+            }
+          }
+        }
+      }
+    }
+  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
@@ -7533,7 +7705,9 @@
       "overwrites/tekst/foreground-zwart",
       "overwrites/tekst/heading-primairy",
       "overwrites/tekst/heading-lintblauw",
-      "overwrites/tekst/font-weights"
+      "overwrites/tekst/font-weights",
+      "overwrites/focus/outline-color",
+      "overwrites/focus/background"
     ]
   }
 }
