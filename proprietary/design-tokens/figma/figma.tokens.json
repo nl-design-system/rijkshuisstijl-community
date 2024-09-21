@@ -1069,32 +1069,24 @@
   },
   "common/focus": {
     "rhc": {
+      "color": {
+        "focus": {
+          "outline": {
+            "value": "{rhc.color.zwart}",
+            "type": "color"
+          }
+        }
+      },
       "focus": {
-        "outline-color": {
-          "value": "{rhc.color.lintblauw.500}",
-          "type": "color"
-        },
         "outline-offset": {
-          "value": "2px",
-          "type": "other"
+          "value": "{rhc.space.25}",
+          "type": "spacing"
         },
         "outline-style": {
           "value": "solid",
           "type": "other"
         },
         "outline-width": {
-          "value": "2px",
-          "type": "borderWidth"
-        },
-        "inverse": {
-          "outline-color": {
-            "value": "{rhc.color.lintblauw.500}",
-            "type": "color"
-          }
-        }
-      },
-      "form-control": {
-        "border-width": {
           "value": "{rhc.border-width.m}",
           "type": "borderWidth"
         }
@@ -1179,6 +1171,44 @@
       }
     }
   },
+  "utrecht/focus": {
+    "utrecht": {
+      "focus": {
+        "outline-color": {
+          "value": "{rhc.color.focus.outline}",
+          "type": "color"
+        },
+        "outline-offset": {
+          "value": "{rhc.focus.outline-offset}",
+          "type": "spacing"
+        },
+        "outline-style": {
+          "value": "{rhc.focus.outline-style}",
+          "type": "other"
+        },
+        "outline-width": {
+          "value": "{rhc.focus.outline-width}",
+          "type": "borderWidth"
+        },
+        "inverse": {
+          "outline-color": {
+            "value": "transparant",
+            "type": "color"
+          }
+        }
+      }
+    }
+  },
+  "utrecht/pointer-target": {
+    "utrecht": {
+      "pointer-target": {
+        "min-size": {
+          "value": "{rhc.size.target}",
+          "type": "sizing"
+        }
+      }
+    }
+  },
   "utrecht/document": {
     "utrecht": {
       "document": {
@@ -1216,17 +1246,25 @@
           "value": "0px",
           "type": "borderRadius"
         },
+        "color": {
+          "value": "{rhc.color.foreground.default}",
+          "type": "color"
+        },
+        "row-gap": {
+          "value": "0",
+          "type": "spacing"
+        },
         "section": {
           "border-block-end-width": {
             "value": "{rhc.border-width.default}",
             "type": "borderWidth"
           },
           "border-width": {
-            "value": "auto",
+            "value": "0",
             "type": "borderWidth"
           },
           "border-color": {
-            "value": "{rhc.color.canvas}",
+            "value": "{rhc.color.border.subdued}",
             "type": "color"
           }
         },
@@ -1236,7 +1274,7 @@
             "type": "color"
           },
           "border-width": {
-            "value": "{rhc.border-width.default}",
+            "value": "0",
             "type": "borderWidth"
           },
           "padding-block-end": {
@@ -1253,6 +1291,12 @@
           },
           "padding-inline-start": {
             "value": "{rhc.space.200}",
+            "type": "spacing"
+          }
+        },
+        "header": {
+          "margin": {
+            "value": "0",
             "type": "spacing"
           }
         },
@@ -1314,10 +1358,6 @@
               "value": "{rhc.color.canvas}",
               "type": "color"
             },
-            "border-color": {
-              "value": "transparent",
-              "type": "color"
-            },
             "color": {
               "value": "{rhc.color.foreground.default}",
               "type": "color"
@@ -1330,6 +1370,10 @@
           "border-color": {
             "value": "{rhc.color.border.subdued}",
             "type": "color"
+          },
+          "border-width": {
+            "value": "0",
+            "type": "borderWidth"
           },
           "color": {
             "value": "{rhc.color.foreground.default}",
@@ -1362,10 +1406,6 @@
               "value": "{rhc.color.foreground.default}",
               "type": "color"
             }
-          },
-          "border-width": {
-            "value": "{rhc.border-width.default}",
-            "type": "borderWidth"
           },
           "font-family": {
             "value": "{rhc.font-family.primary}",
@@ -7427,6 +7467,8 @@
       "common/border",
       "common/keep",
       "common/text-align",
+      "utrecht/focus",
+      "utrecht/pointer-target",
       "utrecht/document",
       "components/accordion",
       "components/alert",
