@@ -22,14 +22,6 @@ type Story = StoryObj<typeof meta>;
 const items: NavBarItemProps[] = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  {
-    label: 'Services',
-    href: '/services',
-    subItems: [
-      { label: 'Consulting', href: '/services/consulting' },
-      { label: 'Development', href: '/services/development' },
-    ],
-  },
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -41,6 +33,13 @@ const endItems: NavBarItemProps[] = [
 export const Default: Story = {
   args: {
     items,
+  },
+};
+
+export const WithHeading: Story = {
+  args: {
+    items,
+    headingItem: { label: 'My Site', href: '/' },
   },
 };
 
@@ -58,10 +57,18 @@ export const WithSubMenu: Story = {
       {
         label: 'More',
         href: '/more',
-        subItems: [
-          { label: 'Option 1', href: '/more/option1' },
-          { label: 'Option 2', href: '/more/option2' },
-        ],
+        subList: {
+          sections: [
+            {
+              heading: 'More',
+              headingLevel: 3,
+              items: [
+                { label: 'More 1', href: '/more/more1' },
+                { label: 'More 2', href: '/more/more2' },
+              ],
+            },
+          ],
+        },
       },
     ],
     endItems,

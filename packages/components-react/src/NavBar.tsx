@@ -4,6 +4,7 @@ import { Heading } from './Heading';
 import { Link } from './Link';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
+  headingItem?: NavBarItemProps;
   items: NavBarItemProps[];
   endItems?: NavBarItemProps[];
 }
@@ -21,7 +22,7 @@ export interface NavBarItemProps extends NavbarLinkProps, HTMLAttributes<HTMLLIE
 }
 
 interface NavbarSubListProps {
-  sections: { heading: string; headingLevel: 1 | 2 | 3 | 4 | 5; items: NavbarLinkProps[] }[];
+  sections: { heading: string; headingLevel?: 1 | 2 | 3 | 4 | 5; items: NavbarLinkProps[] }[];
 }
 
 const NavBarItem = forwardRef(
@@ -73,19 +74,28 @@ NavBarItem.displayName = 'NavBarItem';
 
 export const NavBar = forwardRef(
   (
-    { children, className, items, endItems, ...restProps }: PropsWithChildren<NavBarProps>,
+    { children, className, headingItem, items, endItems, ...restProps }: PropsWithChildren<NavBarProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     return (
       <nav className={clsx('rhc-nav-bar', className)} ref={ref} {...restProps}>
         <ul className="rhc-nav-bar__list">
+          {headingItem && (
+            <NavBarItem
+              className="rhc-nav-bar__heading"
+              href={headingItem.href}
+              icon={headingItem.icon}
+              label={headingItem.label}
+              subList={headingItem.subList}
+            />
+          )}
           {items.map(({ href, label, icon, subList }) => (
             <NavBarItem href={href} icon={icon} label={label} subList={subList} />
           ))}
         </ul>
         {endItems && (
           <ul className="rhc-nav-bar__list rhc-nav-bar__list--end">
-            {items.map(({ href, label, icon, subList }) => (
+            {endItems.map(({ href, label, icon, subList }) => (
               <NavBarItem href={href} icon={icon} label={label} subList={subList} />
             ))}
           </ul>
