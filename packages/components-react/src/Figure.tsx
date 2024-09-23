@@ -1,1 +1,1 @@
-export { Figure, FigureCaption, type FigureProps, type FigureCaptionProps } from '@utrecht/component-library-react';
+export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from '@utrecht/component-library-react';

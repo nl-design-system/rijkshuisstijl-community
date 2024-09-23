@@ -1,6 +1,7 @@
-import { transformTokens } from 'token-transformer';
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
+
+import { transformTokens } from 'token-transformer';
 
 const init = async ({ input, output }) => {
   const json = await readFile(input, 'utf-8');

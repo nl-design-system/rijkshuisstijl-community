@@ -9,7 +9,7 @@ import {
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
-export { type ButtonProps, Button, PrimaryActionButton, SecondaryActionButton, SubtleButton };
+export { Button, type ButtonProps, PrimaryActionButton, SecondaryActionButton, SubtleButton };
 
 export interface IconButtonProps extends ButtonProps {
   label: string;

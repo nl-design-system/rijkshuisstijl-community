@@ -1,7 +1,8 @@
+import '@testing-library/jest-dom';
+
 import { render, screen } from '@testing-library/react';
 import { createRef } from 'react';
 import { Separator } from './Separator';
-import '@testing-library/jest-dom';
 
 describe('Separator', () => {
   it('renders an separator role element', () => {

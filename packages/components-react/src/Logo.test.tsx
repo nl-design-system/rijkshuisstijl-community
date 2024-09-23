@@ -1,6 +1,7 @@
+import '@testing-library/jest-dom';
+
 import { render, screen } from '@testing-library/react';
 import { Logo } from './Logo';
-import '@testing-library/jest-dom';
 
 describe('Logo', () => {
   it('renders a logo role element', () => {
