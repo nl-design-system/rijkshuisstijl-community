@@ -1,6 +1,7 @@
+import '@testing-library/jest-dom';
+
 import { render, screen } from '@testing-library/react';
 import { IconButton } from './Button';
-import '@testing-library/jest-dom';
 
 describe('IconButton', () => {
   it('renders an HTML button element', () => {
