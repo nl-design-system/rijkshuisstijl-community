@@ -1,8 +1,9 @@
+import '@testing-library/jest-dom';
+
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { createRef } from 'react';
 import { FormFieldTextbox } from './FormFieldTextbox';
-import '@testing-library/jest-dom';
 
 describe('Form field with a textbox', () => {
   const defaultProps = {

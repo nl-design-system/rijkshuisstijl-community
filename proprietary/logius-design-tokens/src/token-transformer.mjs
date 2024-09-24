@@ -3,9 +3,10 @@
  * Copyright (c) 2023 Frameless B.V.
  */
 
-import { transformTokens } from 'token-transformer';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname } from 'node:path';
+
+import { transformTokens } from 'token-transformer';
 
 export const tokenTransformer = ({ input, output, themes }) => {
   const rawTokens = JSON.parse(readFileSync(input));
