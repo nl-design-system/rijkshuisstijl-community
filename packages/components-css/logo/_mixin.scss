@@ -12,7 +12,7 @@
   grid-auto-rows: var(--rhc-logo-lint-inline-size);
   grid-template-areas: ". lint ." ". lint wordmark";
   grid-template-columns: 1fr var(--rhc-logo-lint-inline-size) 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: var(--rhc-logo-title-padding-block-start) 1fr;
   line-height: var(--rhc-logo-title-line-height, 1);
   min-block-size: calc(var(--rhc-logo-rows, 2) * var(--rhc-logo-lint-inline-size));
 }
