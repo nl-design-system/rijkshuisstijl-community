@@ -1,10 +1,10 @@
-import { FormFieldCheckbox, FormFieldCheckboxGroup } from '@rijkshuisstijl-community/components-react';
+import { FormFieldCheckboxGroup, FormFieldCheckboxOption } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './form-field-checkbox-group.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Form Field/Form Field Checkbox Group',
-  id: 'rijkshuisstijl-form-field-checkbox-group',
+  id: 'rhc-form-field-checkbox-group',
   component: FormFieldCheckboxGroup,
   argTypes: {
     label: {
@@ -65,9 +65,9 @@ export const Default: StoryObj<typeof meta> = {
   args: {
     label: 'Select option',
     children: [
-      <FormFieldCheckbox key="1" label="Checkbox 1" />,
-      <FormFieldCheckbox key="2" label="Checkbox 2" />,
-      <FormFieldCheckbox key="3" label="Checkbox 3" />,
+      <FormFieldCheckboxOption key="1" label="Checkbox 1" />,
+      <FormFieldCheckboxOption key="2" label="Checkbox 2" />,
+      <FormFieldCheckboxOption key="3" label="Checkbox 3" />,
     ],
   },
 };
@@ -76,9 +76,9 @@ export const Error: StoryObj<typeof meta> = {
   args: {
     label: 'Select option',
     children: [
-      <FormFieldCheckbox invalid key="1" label="Checkbox 1" />,
-      <FormFieldCheckbox invalid key="2" label="Checkbox 2" />,
-      <FormFieldCheckbox invalid key="3" label="Checkbox 3" />,
+      <FormFieldCheckboxOption invalid key="1" label="Checkbox 1" />,
+      <FormFieldCheckboxOption invalid key="2" label="Checkbox 2" />,
+      <FormFieldCheckboxOption invalid key="3" label="Checkbox 3" />,
     ],
     errorMessage: 'This is an error message',
     invalid: true,
@@ -91,23 +91,21 @@ export const Description: StoryObj<typeof meta> = {
     description: 'This is a description',
   },
 };
-
 export const Status: StoryObj<typeof meta> = {
   args: {
     ...Default.args,
     status: 'This is a status',
   },
 };
-
-export const InputDir: StoryObj<typeof meta> = {
+export const RightToLeft: StoryObj<typeof meta> = {
   args: {
     label: 'حدد خياراً',
     description: 'هذا هو الوصف',
     status: 'هذه هي رسالة الحالة',
     children: [
-      <FormFieldCheckbox key="1" label="خيار 1" />,
-      <FormFieldCheckbox key="2" label="خيار 2" />,
-      <FormFieldCheckbox key="3" label="خيار 3" />,
+      <FormFieldCheckboxOption key="1" label="خيار 1" />,
+      <FormFieldCheckboxOption key="2" label="خيار 2" />,
+      <FormFieldCheckboxOption key="3" label="خيار 3" />,
     ],
     dir: 'rtl',
   },

@@ -1,7 +1,8 @@
+import '@testing-library/jest-dom';
+
 import { render, screen } from '@testing-library/react';
 import { createRef } from 'react';
 import { ActionGroup, Button } from './';
-import '@testing-library/jest-dom';
 
 describe('Action group', () => {
   it('renders a visible element', () => {

@@ -1,6 +1,7 @@
+import '@rijkshuisstijl-community/components-css/index.scss';
+
 import { FormFieldRadioOption } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import '@rijkshuisstijl-community/components-css/index.scss';
 
 const RadioGroupStory = () => (
   <div className="rhc-radio-group">
@@ -13,7 +14,7 @@ const RadioGroupStory = () => (
 
 const meta = {
   title: 'Rijkshuisstijl/Radio Group',
-  id: 'rijkshuisstijl-radio-group',
+  id: 'rhc-radio-group',
   component: RadioGroupStory,
   render: RadioGroupStory,
 } satisfies Meta<typeof RadioGroupStory>;

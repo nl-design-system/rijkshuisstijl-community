@@ -1,11 +1,11 @@
-import { FormFieldCheckbox } from '@rijkshuisstijl-community/components-react';
+import { FormFieldCheckboxOption } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from './form-field-checkbox.md?raw';
+import readme from './form-field-checkbox-option.md?raw';
 
 const meta = {
-  title: 'Rijkshuisstijl/Form Field/Form Field Checkbox',
-  id: 'rijkshuisstijl-form-field-checkbox',
-  component: FormFieldCheckbox,
+  title: 'Rijkshuisstijl/Form Field/Form Field Checkbox Option',
+  id: 'rhc-form-field-checkbox-option',
+  component: FormFieldCheckboxOption,
   argTypes: {
     label: {
       description: 'The label of the form field',
@@ -81,7 +81,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof FormFieldCheckbox>;
+} satisfies Meta<typeof FormFieldCheckboxOption>;
 
 export default meta;
 

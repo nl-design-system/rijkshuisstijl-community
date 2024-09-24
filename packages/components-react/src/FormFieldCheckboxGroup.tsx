@@ -1,15 +1,14 @@
 import { FormField, FormFieldDescription, FormFieldProps, FormLabel } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { Children, ForwardedRef, forwardRef, PropsWithChildren, ReactNode, useId } from 'react';
+import { CheckboxGroup } from './CheckboxGroup';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
 export interface FormFieldCheckboxGroupProps extends FormFieldProps {
   errorMessage?: string;
   status?: ReactNode;
   description?: ReactNode;
-  input?: ReactNode;
   label?: ReactNode;
-  inputRef?: ForwardedRef<HTMLDivElement>;
 }
 const hasManyChildren = (children: ReactNode) => {
   return Children.count(children) > 1;
@@ -37,9 +36,9 @@ export const FormFieldCheckboxGroup = forwardRef(
       <FormField
         dir={dir}
         invalid={invalid}
+        ref={ref}
         type={hasManyChildren(children) ? 'group' : undefined}
         {...restProps}
-        ref={ref}
       >
         <div className="utrecht-form-field__label">
           <FormLabel htmlFor={id}>{label}</FormLabel>
@@ -54,20 +53,20 @@ export const FormFieldCheckboxGroup = forwardRef(
             {errorMessage}
           </FormFieldErrorMessage>
         )}
-        <div
-          className="utrecht-form-field__input"
-          dir={dir}
-          id={id}
-          role={hasManyChildren(children) ? 'group' : undefined}
-          aria-describedby={
-            clsx({
-              [descriptionId]: description,
-              [errorMessageId]: invalid,
-              [statusId]: status,
-            }) || undefined
-          }
-        >
-          {children}
+        <div className="utrecht-form-field__input">
+          <CheckboxGroup
+            dir={dir}
+            id={id}
+            role={hasManyChildren(children) ? 'group' : undefined}
+            aria-describedby={
+              clsx({
+                [descriptionId]: description,
+                [errorMessageId]: invalid && errorMessage,
+              }) || undefined
+            }
+          >
+            {children}
+          </CheckboxGroup>
         </div>
         {status && (
           <div className="utrecht-form-field__status" id={statusId}>

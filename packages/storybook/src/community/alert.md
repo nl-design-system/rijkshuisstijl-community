@@ -12,24 +12,6 @@ Gebruik niet een alert voor een algemene aankondiging die op meerdere pagina's s
 
 ## Usage
 
-- Als je wilt de Alert gebruiken met je eigen `children`
-
-```tsx
-import { Alert, Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
-
-<Alert type="info">
-  <div className="rhc-alert-container">
-    <IconInfoCircle className="rhc-alert-container__icon rhc-alert-container__icon-info " />
-    <div>
-      <Heading level={3}>Heading</Heading>
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
-    </div>
-  </div>
-</Alert>;
-```
-
-- Als je wilt de Alert gebruiken met een `type` en defualt `children`
-
 ```tsx
 import { Alert } from '@rijkshuisstijl-community/components-react';
 

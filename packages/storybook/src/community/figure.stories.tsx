@@ -4,7 +4,7 @@ import readme from './figure.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Figure',
-  id: 'rijkshuisstijl-figure',
+  id: 'rhc-figure',
   component: Figure,
   args: {
     children: <Image alt="Multicolored tulip field" height={763} src="./placeholder.jpg" width={640} />,

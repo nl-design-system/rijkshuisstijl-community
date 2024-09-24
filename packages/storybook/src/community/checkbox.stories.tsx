@@ -4,7 +4,7 @@ import readme from './checkbox.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Checkbox',
-  id: 'rijkshuisstijl-checkbox',
+  id: 'rhc-checkbox',
   component: Checkbox,
   parameters: {
     docs: {
@@ -27,9 +27,7 @@ const meta = {
       type: { name: 'string', required: false },
     },
   },
-  args: {
-    appearance: 'custom',
-  },
+  args: {},
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;

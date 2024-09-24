@@ -1,10 +1,10 @@
-import { Checkbox, CheckboxGroup } from '@rijkshuisstijl-community/components-react';
+import { CheckboxGroup, FormFieldCheckboxOption } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './checkbox-group.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/CheckboxGroup',
-  id: 'rijkshuisstijl-checkbox-group',
+  id: 'rhc-checkbox-group',
   component: CheckboxGroup,
   parameters: {
     docs: {
@@ -19,6 +19,10 @@ export default meta;
 
 export const Default: StoryObj<typeof meta> = {
   args: {
-    children: [<Checkbox />, <Checkbox />, <Checkbox />],
+    children: [
+      <FormFieldCheckboxOption label="Checkbox 1" />,
+      <FormFieldCheckboxOption label="Checkbox 2" />,
+      <FormFieldCheckboxOption label="Checkbox 3" />,
+    ],
   },
 };
