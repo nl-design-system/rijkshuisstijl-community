@@ -5,14 +5,6 @@ const meta = {
   title: 'Rijkshuisstijl/NavBar',
   id: 'rhc-nav-bar',
   component: NavBar,
-  argTypes: {
-    items: {
-      name: 'items',
-    },
-    endItems: {
-      name: 'endItems',
-    },
-  },
 } satisfies Meta<typeof NavBar>;
 
 export default meta;
@@ -20,14 +12,29 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const items: NavBarItemProps[] = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
+  {
+    label: 'Link',
+    href: '/',
+  },
+  {
+    label: 'Link',
+    href: '/',
+  },
+  {
+    label: 'Link',
+    href: '/',
+  },
 ];
 
 const endItems: NavBarItemProps[] = [
-  { label: 'Login', href: '/login' },
-  { label: 'Register', href: '/register' },
+  {
+    label: 'Link',
+    href: '/',
+  },
+  {
+    label: 'Link',
+    href: '/',
+  },
 ];
 
 export const Default: Story = {
@@ -39,38 +46,13 @@ export const Default: Story = {
 export const WithHeading: Story = {
   args: {
     items,
-    headingItem: { label: 'My Site', href: '/' },
+    headingItem: { label: 'Heading', href: '/' },
   },
 };
 
 export const WithEndItems: Story = {
   args: {
     items,
-    endItems,
-  },
-};
-
-export const WithSubMenu: Story = {
-  args: {
-    items: [
-      ...items,
-      {
-        label: 'More',
-        href: '/more',
-        subList: {
-          sections: [
-            {
-              heading: 'More',
-              headingLevel: 3,
-              items: [
-                { label: 'More 1', href: '/more/more1' },
-                { label: 'More 2', href: '/more/more2' },
-              ],
-            },
-          ],
-        },
-      },
-    ],
     endItems,
   },
 };
