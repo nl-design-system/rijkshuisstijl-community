@@ -5,14 +5,21 @@ import {
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
-export type { UtrechtBlockquoteProps as BlockquoteProps };
+export interface BlockquoteProps extends UtrechtBlockquoteProps {
+  variation?: 'blue-corner-border' | 'pink-background' | 'pink-left-border' | 'pink-corner-border';
+}
 
 export const Blockquote = forwardRef(
   (
-    { className, children, attribution, ...restProps }: PropsWithChildren<UtrechtBlockquoteProps>,
+    { className, children, attribution, variation, ...restProps }: PropsWithChildren<BlockquoteProps>,
     ref: ForwardedRef<HTMLQuoteElement>,
   ) => (
-    <UtrechtBlockquote {...restProps} attribution={attribution} className={clsx('rhc-blockquote', className)} ref={ref}>
+    <UtrechtBlockquote
+      {...restProps}
+      attribution={attribution}
+      className={clsx('rhc-blockquote', variation && `rhc-blockquote--${variation}-variation`, className)}
+      ref={ref}
+    >
       <div className="rhc-blockquote__content utrecht-blockquote__content">{children}</div>
     </UtrechtBlockquote>
   ),
