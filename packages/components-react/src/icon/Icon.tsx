@@ -66,7 +66,7 @@ import {
   IconX,
 } from '@tabler/icons-react';
 import { Icon as UtrechtIcon } from '@utrecht/component-library-react';
-import { PropsWithChildren } from 'react';
+import { forwardRef, PropsWithChildren } from 'react';
 import { RijkshuisstijlIconID } from './IconTypes';
 
 export const IconenSet: Partial<Record<RijkshuisstijlIconID, any>> = {
@@ -143,15 +143,17 @@ export const IconenSet: Partial<Record<RijkshuisstijlIconID, any>> = {
 
 export const iconOptions = Object.keys(IconenSet);
 
-interface IconProps {
+export interface IconProps {
   icon?: any;
 }
 
-export const Icon = ({ children, icon }: PropsWithChildren<IconProps>) => {
+export const Icon = forwardRef(({ children, icon }: PropsWithChildren<IconProps>) => {
   return (
     <UtrechtIcon>
       {icon && IconenSet[icon as keyof typeof IconenSet]}
       {children}
     </UtrechtIcon>
   );
-};
+});
+
+Icon.displayName = 'Icon';
