@@ -2,23 +2,25 @@ import { Figure, FigureCaption, Image } from '@rijkshuisstijl-community/componen
 import { Args, Meta, StoryObj } from '@storybook/react/*';
 import readme from './figure.md?raw';
 
+const ImageComponent = () => <Image alt="Multicolored tulip field" height={763} src="./placeholder.jpg" width={640} />;
+
 const meta = {
   title: 'Rijkshuisstijl/Figure',
   id: 'rhc-figure',
   component: Figure,
   args: {
-    children: <Image alt="Multicolored tulip field" height={763} src="./placeholder.jpg" width={640} />,
-    caption: ['Bijschrift (figcaption) van afbeelding.'],
+    image: ImageComponent(),
+    caption: 'Bijschrift (figcaption) van afbeelding.',
   },
   argTypes: {
     caption: {
       type: { name: 'string', required: true },
     },
   },
-  render: ({ caption, children }: Args) => {
+  render: ({ caption, image }: Args) => {
     return (
       <Figure>
-        {children}
+        {image}
         <FigureCaption>{caption}</FigureCaption>
       </Figure>
     );

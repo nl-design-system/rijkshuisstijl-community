@@ -3251,7 +3251,7 @@
     }
   },
   "components/hero": {
-    "todo": {
+    "rhc": {
       "hero": {
         "heading": {
           "font-weight": {
@@ -3271,7 +3271,7 @@
             "type": "fontFamilies"
           }
         },
-        "subtext": {
+        "sub-heading": {
           "font-weight": {
             "value": "{rhc.font-weight.regular}",
             "type": "fontWeights"
@@ -3321,11 +3321,19 @@
           "border-radius": {
             "value": "20px",
             "type": "borderRadius"
+          },
+          "inline-size": {
+            "value": "90%",
+            "type": "sizing"
           }
         },
         "border-radius": {
           "value": "40px",
           "type": "borderRadius"
+        },
+        "inline-size": {
+          "value": "100%",
+          "type": "sizing"
         }
       }
     }
@@ -3725,6 +3733,122 @@
         "border-width": {
           "value": "{voorbeeld.border-width.sm}",
           "type": "borderWidth"
+        }
+      }
+    }
+  },
+  "components/nav-bar": {
+    "rhc": {
+      "nav-bar": {
+        "border-block-end-width": {
+          "value": "{rhc.border-width.default}",
+          "type": "borderWidth"
+        },
+        "padding-inline": {
+          "value": "{rhc.space.200}",
+          "type": "spacing"
+        },
+        "content": {
+          "column-gap": {
+            "value": "{rhc.space.200}",
+            "type": "spacing"
+          },
+          "row-gap": {
+            "value": "{rhc.space.100}",
+            "type": "spacing"
+          },
+          "padding-block": {
+            "value": "{rhc.space.100}",
+            "type": "spacing"
+          },
+          "max-inline-size": {
+            "value": "100%",
+            "type": "sizing"
+          }
+        },
+        "icon": {
+          "color": {
+            "value": "{rhc.color.foreground.lint}",
+            "type": "color"
+          },
+          "active": {
+            "color": {
+              "value": "{rhc.color.foreground.onEmphasis}",
+              "type": "color"
+            }
+          },
+          "size": {
+            "value": "{rhc.size.icon.functional}",
+            "type": "sizing"
+          }
+        },
+        "breadcrumb": {
+          "border-color": {
+            "value": "{rhc.color.lintblauw.500}",
+            "type": "color"
+          }
+        },
+        "link": {
+          "active": {
+            "background-color": {
+              "value": "{rhc.color.primary.500} / darken(0.4) / srgb",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.foreground.onEmphasis}",
+              "type": "color"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "value": "{rhc.color.primary.500}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.foreground.lint}",
+              "type": "color"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "value": "{rhc.color.primary.hover}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.foreground.lint}",
+              "type": "color"
+            }
+          },
+          "padding-block-end": {
+            "value": "{rhc.space.200}",
+            "type": "spacing"
+          },
+          "padding-block-start": {
+            "value": "{rhc.space.200}",
+            "type": "spacing"
+          },
+          "padding-inline-end": {
+            "value": "{rhc.space.150}",
+            "type": "spacing"
+          },
+          "padding-inline-start": {
+            "value": "{rhc.space.150}",
+            "type": "spacing"
+          }
+        },
+        "heading": {
+          "font-weight": {
+            "value": "{rhc.font-weight.bold}",
+            "type": "fontWeights"
+          }
+        },
+        "background-color": {
+          "value": "{rhc.color.primary.500}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{rhc.color.foreground.onEmphasis}",
+          "type": "color"
         }
       }
     }
@@ -5787,6 +5911,7 @@
       "components/link-list-card",
       "components/logo",
       "components/modal-dialog",
+      "components/nav-bar",
       "components/ordered-list",
       "components/pagination",
       "components/paragraph",
