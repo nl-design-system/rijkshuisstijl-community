@@ -1,6 +1,7 @@
+import '@rijkshuisstijl-community/components-css/index.scss';
+
 import { FormFieldRadioOption } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import '@rijkshuisstijl-community/components-css/index.scss';
 
 const RadioGroupStory = () => (
   <div className="rhc-radio-group">

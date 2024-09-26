@@ -4,9 +4,13 @@ import { Article } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './article.md?raw';
 
-const ArticleStoryComponent = () => {
-  return (
-    <Article>
+const meta = {
+  title: 'Rijkshuisstijl/Article',
+  id: 'rhc-article',
+  component: Article,
+  argTypes: {},
+  args: {
+    children: [
       <p>
         Lorem ipsum dolor sit amet. Aut amet quibusdam et atque soluta id unde provident non sequi dolor rem iusto
         expedita eum voluptates asperiores aut quae modi. 33 ipsa recusandae et repudiandae optio est ullam fugit sit
@@ -15,17 +19,9 @@ const ArticleStoryComponent = () => {
         facilis hic odio nisi est eligendi quidem? Aut similique quasi non repellat expedita qui magni tempore ab
         aperiam voluptatum sit quia atque et enim alias ea voluptas internos. Qui quia eius vel alias dolores et
         expedita ipsum.
-      </p>
-    </Article>
-  );
-};
-
-const meta = {
-  title: 'Rijkshuisstijl/Article',
-  id: 'rhc-article',
-  component: ArticleStoryComponent,
-  argTypes: {},
-  args: {},
+      </p>,
+    ],
+  },
   tags: ['autodocs'],
   parameters: {
     docs: {
@@ -34,8 +30,7 @@ const meta = {
       },
     },
   },
-  render: ArticleStoryComponent,
-} as Meta<typeof ArticleStoryComponent>;
+} as Meta<typeof Article>;
 
 export default meta;
 

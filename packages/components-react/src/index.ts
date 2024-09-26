@@ -15,6 +15,7 @@ export {
 } from './Accordion';
 export { ActionGroup, type ActionGroupProps } from './ActionGroup';
 export { Alert, type AlertProps } from './Alert';
+export { Article } from './Article';
 export { Blockquote, type BlockquoteProps } from './Blockquote';
 export {
   BreadcrumbNav,
@@ -45,12 +46,19 @@ export { FormFieldSelect, type FormFieldSelectProps } from './FormFieldSelect';
 export { FormFieldTextarea, type FormFieldTextareaProps } from './FormFieldTextarea';
 export { FormFieldTextbox } from './FormFieldTextbox';
 export { Heading, type HeadingProps } from './Heading';
+export { Hero, type HeroProps } from './Hero';
+export { Icon, type IconProps, iconOptions } from './icon/Icon';
 export { Image, type ImageProps } from './Image';
 export { Link, type LinkProps } from './Link';
 export { Logo, type LogoProps } from './Logo';
+export { NavBar, type NavBarItemProps, type NavBarProps } from './NavBar';
 export { Paragraph, type ParagraphProps } from './Paragraph';
 export { Radio, type RadioProps } from './Radio';
 export { Separator, type SeparatorProps } from './Separator';
+export { SideNav, type SideNavProps } from './SideNav';
+export { SideNavItem, type SideNavItemProps } from './SideNavItem';
+export { SideNavLink, type SideNavLinkProps } from './SideNavLink';
+export { SideNavList, type SideNavListProps } from './SideNavList';
 export { SkipLink, type SkipLinkProps } from './SkipLink';
 export { TableCaption } from './TableCaption';
 export { TableCell, type TableCellProps } from './TableCell';

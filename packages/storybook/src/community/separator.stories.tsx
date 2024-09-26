@@ -13,9 +13,22 @@ const meta = {
       },
     },
   },
+  argTypes: {
+    invisible: {
+      control: {
+        type: 'boolean',
+      },
+    },
+  },
 } satisfies Meta<typeof Separator>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
+
+export const Invisible: Story = {
+  args: {
+    invisible: true,
+  },
+};
