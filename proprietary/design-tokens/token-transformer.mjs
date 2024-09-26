@@ -18,7 +18,6 @@ const init = async ({ input, output }) => {
     'components/form-field-option-label',
     'components/modal-dialog',
     'components/pagination',
-    'components/side-nav',
     'components/status-badge',
     'components/summary-list',
     'components/task-list',
