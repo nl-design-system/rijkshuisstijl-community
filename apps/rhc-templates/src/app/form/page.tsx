@@ -183,11 +183,12 @@ export default function Form() {
         </Article>
       </PageContent>
       <Footer
-        title="De Rijksoverheid. Voor Nederland"
+        heading="De Rijksoverheid. Voor Nederland"
+        headingLevel={4}
         columns={[
           {
-            title: 'Service',
-            elements: [
+            heading: 'Service',
+            children: [
               <LinkList key="1">
                 <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
                   Contact
@@ -214,8 +215,8 @@ export default function Form() {
             ],
           },
           {
-            title: 'Over deze site',
-            elements: (
+            heading: 'Over deze site',
+            children: (
               <LinkList key="2">
                 <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
                   Over Rijksoverheid.nl
