@@ -1,7 +1,8 @@
+import '@testing-library/jest-dom';
+
 import { render } from '@testing-library/react';
 import { createRef } from 'react';
 import { Blockquote } from './Blockquote';
-import '@testing-library/jest-dom';
 
 describe('Blockquote', () => {
   it('renders an HTML blockquote element', () => {

@@ -4,7 +4,10 @@
  */
 
 .utrecht-breadcrumb-nav {
+  line-height: var(--utrecht-breadcrumb-nav-line-height, inherit);
   &__link {
+    --utrecht-link-icon-inset-block-start: var(--utrecht-breadcrumb-nav-link-icon-inset-block-start, inherit);
+
     &--current {
       color: var(--utrecht-breadcrumb-nav-link-current-color) !important;
       text-decoration: var(--utrecht-breadcrumb-nav-link-current-text-decoration) !important;
@@ -13,12 +16,6 @@
       color: var(--utrecht-breadcrumb-nav-link-active-color) !important;
       text-decoration: underline !important;
       text-decoration-color: var(--utrecht-breadcrumb-nav-link-active-color) !important;
-    }
-    &--arrow-wrapper {
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      justify-items: center;
     }
   }
   &__separator {

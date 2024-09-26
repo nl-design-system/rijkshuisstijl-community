@@ -1,6 +1,7 @@
+import '@rijkshuisstijl-community/components-css/index.scss';
+
 import { FormFieldRadioOption } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import '@rijkshuisstijl-community/components-css/index.scss';
 
 const meta = {
   title: 'Rijkshuisstijl/Form field/Form field Radio Option',
