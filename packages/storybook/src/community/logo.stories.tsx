@@ -5,25 +5,25 @@ import { CSSProperties } from 'react';
 
 interface LogoCSSProperties extends CSSProperties {
   '--rhc-logo-color': string;
-  '--rhc-logo-lint-background-color': string;
-  '--rhc-logo-lint-color': string;
+  '--rhc-logo-img-background-color': string;
+  '--rhc-logo-img-color': string;
 }
 
 interface LogoStoryProps extends LogoProps {
-  lintBackgroundColor?: string;
-  lintIconColor?: string;
+  imgBackgroundColor?: string;
+  imgIconColor?: string;
   textColor?: string;
 }
 
-const LogoStory = ({ lintBackgroundColor, textColor, lintIconColor, ...args }: LogoStoryProps) => (
+const LogoStory = ({ imgBackgroundColor, textColor, imgIconColor, ...args }: LogoStoryProps) => (
   <>
     <Logo
       {...args}
       style={
         {
           '--rhc-logo-color': textColor || '#154273',
-          '--rhc-logo-lint-background-color': lintBackgroundColor || '#ffffff',
-          '--rhc-logo-lint-color': lintIconColor || '#154273',
+          '--rhc-logo-img-background-color': imgBackgroundColor || '#ffffff',
+          '--rhc-logo-img-color': imgIconColor || '#154273',
         } as LogoCSSProperties
       }
     >
@@ -39,8 +39,8 @@ const meta = {
   args: {
     organisation: '',
     subtitle: '',
-    lintBackgroundColor: '#ffffff',
-    lintIconColor: '#154273',
+    imgBackgroundColor: '#ffffff',
+    imgIconColor: '#154273',
     textColor: '#154273',
   },
   argTypes: {
@@ -52,16 +52,16 @@ const meta = {
       name: 'subtitle',
       type: { name: 'string', required: false },
     },
-    lintBackgroundColor: {
+    imgBackgroundColor: {
       control: 'color',
-      description: 'Changes background color of the lint',
+      description: 'Changes background color of the image',
       table: {
         category: 'Demo',
       },
     },
-    lintIconColor: {
+    imgIconColor: {
       control: 'color',
-      description: 'Changes color of the lint icon',
+      description: 'Changes color of the image icon',
       table: {
         category: 'Demo',
       },
