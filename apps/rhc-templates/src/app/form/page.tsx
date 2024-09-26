@@ -59,6 +59,30 @@ export default function Form() {
           <br />
           <Paragraph>Mogelijke vragen:</Paragraph>
           <div className="unstarted">
+            <FormField label="Label" description="Description">
+              <div className="rhc-radio-button__group">
+                <RadioButton></RadioButton>
+                <FormLabel>Label</FormLabel>
+                <RadioButton></RadioButton>
+                <FormLabel>Label</FormLabel>
+                <RadioButton></RadioButton>
+                <FormLabel>Label</FormLabel>
+                <RadioButton></RadioButton>
+                <FormLabel>Label</FormLabel>
+              </div>
+            </FormField>
+          </div>
+          <div className="unstarted">
+            <FormField label="Bestand toevoegen">
+              <UnorderedList>
+                <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
+                <UnorderedListItem>U mag maximaal 10 Mb aan bestanden toevoegen.</UnorderedListItem>
+                <UnorderedListItem>
+                  Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bpm en gif.
+                </UnorderedListItem>
+              </UnorderedList>
+              <FileInput multiple></FileInput>
+            </FormField>
             <UnorderedList>
               <UnorderedListItem>Hoe moet ik extra regels toevoegen bij de macro-versie?</UnorderedListItem>
               <UnorderedListItem>Er zitten fouten in het Excel bestand of de macro-versie?</UnorderedListItem>

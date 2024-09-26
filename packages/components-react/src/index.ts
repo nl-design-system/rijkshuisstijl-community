@@ -36,6 +36,7 @@ export {
 } from './Button';
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
+export { Fieldset, type FieldsetProps } from './Fieldset';
 export { Footer } from './Footer';
 export { FormFieldCheckboxGroup, type FormFieldCheckboxGroupProps } from './FormFieldCheckboxGroup';
 export { FormFieldCheckboxOption, type FormFieldCheckboxOptionProps } from './FormFieldCheckboxOption';
