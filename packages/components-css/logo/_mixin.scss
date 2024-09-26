@@ -9,29 +9,29 @@
   font-size: var(--rhc-logo-title-font-size, 1em);
   font-weight: var(--rhc-logo-title-font-weight);
   gap: 0 var(--rhc-logo-column-gap, inherit);
-  grid-auto-rows: var(--rhc-logo-lint-inline-size);
-  grid-template-areas: ". lint ." ". lint wordmark";
-  grid-template-columns: 1fr var(--rhc-logo-lint-inline-size) 1fr;
+  grid-auto-rows: var(--rhc-logo-img-inline-size);
+  grid-template-areas: ". img ." ". img caption";
+  grid-template-columns: 1fr var(--rhc-logo-img-inline-size) 1fr;
   grid-template-rows: var(--rhc-logo-title-padding-block-start) 1fr;
   line-height: var(--rhc-logo-title-line-height, 1);
-  min-block-size: calc(var(--rhc-logo-rows, 2) * var(--rhc-logo-lint-inline-size));
+  min-block-size: calc(var(--rhc-logo-rows, 2) * var(--rhc-logo-img-inline-size));
 }
 
-@mixin rhc-logo__lint {
+@mixin rhc-logo__img {
   align-items: center;
-  background-color: var(--rhc-logo-lint-background-color, inherit);
-  block-size: var(--rhc-logo-lint-block-size, inherit);
-  color: var(--rhc-logo-lint-color, inherit);
+  background-color: var(--rhc-logo-img-background-color, inherit);
+  block-size: var(--rhc-logo-img-block-size, inherit);
+  color: var(--rhc-logo-img-color, inherit);
   display: flex;
   flex-direction: column;
-  grid-area: lint;
-  inline-size: var(--rhc-logo-lint-inline-size, inherit);
+  grid-area: img;
+  inline-size: var(--rhc-logo-img-inline-size, inherit);
   justify-content: end;
 }
 
-@mixin rhc-logo__wordmark {
+@mixin rhc-logo__caption {
   color: var(--rhc-logo-color, inherit);
-  grid-area: wordmark;
+  grid-area: caption;
   max-inline-size: calc(210 / 14 * var(--rhc-logo-font-size, 1em));
 }
 
