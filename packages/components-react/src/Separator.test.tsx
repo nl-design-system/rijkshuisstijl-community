@@ -86,6 +86,6 @@ describe('Separator', () => {
 
     const separator = container.querySelector(':only-child');
 
-    expect(separator).toHaveClass('rhc-separator-invisible');
+    expect(separator).toHaveClass('utrecht-separator--invisible');
   });
 });
