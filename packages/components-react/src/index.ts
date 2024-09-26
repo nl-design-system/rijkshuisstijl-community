@@ -46,6 +46,7 @@ export { FormFieldTextarea, type FormFieldTextareaProps } from './FormFieldTexta
 export { FormFieldTextbox } from './FormFieldTextbox';
 export { Heading, type HeadingProps } from './Heading';
 export { Hero, type HeroProps } from './Hero';
+export { Icon, iconOptions } from './icon/Icon';
 export { Image, type ImageProps } from './Image';
 export { Link, type LinkProps } from './Link';
 export { Logo, type LogoProps } from './Logo';
