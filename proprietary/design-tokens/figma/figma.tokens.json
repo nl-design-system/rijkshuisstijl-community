@@ -3563,9 +3563,9 @@
   "components/logo": {
     "rhc": {
       "logo": {
-        "lint": {
+        "img": {
           "background-color": {
-            "value": "{rhc.color.lintblauw.500}",
+            "value": "{rhc.color.wit}",
             "type": "color"
           },
           "inline-size": {
@@ -3577,13 +3577,13 @@
             "type": "sizing"
           },
           "color": {
-            "value": "{rhc.color.wit}",
+            "value": "{rhc.color.lintblauw.500}",
             "type": "color"
           }
         },
         "title": {
           "font-weight": {
-            "value": "{rhc.font-weight.semi-bold}",
+            "value": "600",
             "type": "fontWeights"
           },
           "line-height": {
@@ -3593,6 +3593,10 @@
           "font-size": {
             "value": "0.913rem",
             "type": "fontSizes"
+          },
+          "padding-block-start": {
+            "value": "3.125rem",
+            "type": "spacing"
           }
         },
         "subtitle": {
@@ -3620,12 +3624,6 @@
         "color": {
           "value": "{rhc.color.lintblauw.500}",
           "type": "color"
-        }
-      },
-      "wordmark": {
-        "padding-block-start": {
-          "value": "3.125rem",
-          "type": "spacing"
         }
       }
     }
