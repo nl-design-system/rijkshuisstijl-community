@@ -17,13 +17,9 @@ import {
   LinkListLink,
   PageContent,
   Paragraph,
-  RadioButton,
-  Textbox,
-  FormField,
-  Checkbox,
-  FormLabel,
   Article,
   FormFieldRadioOption,
+  FormFieldCheckboxOption,
 } from '@rijkshuisstijl-community/components-react';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 // import { DateInput, FileInput } from '@amsterdam/design-system-react';
@@ -137,9 +133,7 @@ export default function Form() {
               ></AccordionProvider>
               <Fieldset>
                 <FieldsetLegend>Akkoordverklaring</FieldsetLegend>
-                <FormField label="Ik heb gelezen en begrepen wat er met mijn persoonsgegevens wordt gedaan">
-                  <Checkbox></Checkbox>
-                </FormField>
+                <FormFieldCheckboxOption label="Ik heb gelezen en begrepen wat er met mijn persoonsgegevens wordt gedaan"></FormFieldCheckboxOption>
               </Fieldset>
               <Button type="submit" appearance="primary-action-button">
                 Ga verder
