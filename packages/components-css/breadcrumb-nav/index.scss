@@ -4,7 +4,10 @@
  */
 
 .utrecht-breadcrumb-nav {
+  line-height: var(--utrecht-breadcrumb-nav-line-height, inherit);
   &__link {
+    --utrecht-link-icon-inset-block-start: var(--utrecht-breadcrumb-nav-link-icon-inset-block-start, inherit);
+
     &--current {
       color: var(--utrecht-breadcrumb-nav-link-current-color) !important;
       text-decoration: var(--utrecht-breadcrumb-nav-link-current-text-decoration) !important;

@@ -49,6 +49,7 @@ export { Hero, type HeroProps } from './Hero';
 export { Icon, type IconProps, iconOptions } from './icon/Icon';
 export { Image, type ImageProps } from './Image';
 export { Link, type LinkProps } from './Link';
+export { LinkList, LinkListLink, type LinkListLinkProps, type LinkListProps } from './LinkList';
 export { Logo, type LogoProps } from './Logo';
 export { NavBar, type NavBarItemProps, type NavBarProps } from './NavBar';
 export { Paragraph, type ParagraphProps } from './Paragraph';
