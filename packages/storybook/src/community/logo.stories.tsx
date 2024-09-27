@@ -1,5 +1,6 @@
 import { Logo, type LogoProps } from '@rijkshuisstijl-community/components-react';
 import { DutchMapIcon } from '@rijkshuisstijl-community/components-react/src/icons';
+import { rhcLogoColor, rhcLogoImgBackgroundColor, rhcLogoImgColor } from '@rijkshuisstijl-community/design-tokens/dist';
 import { Meta, StoryObj } from '@storybook/react';
 import { CSSProperties } from 'react';
 
@@ -21,9 +22,9 @@ const LogoStory = ({ imgBackgroundColor, textColor, imgIconColor, ...args }: Log
       {...args}
       style={
         {
-          '--rhc-logo-color': textColor || '#154273',
-          '--rhc-logo-img-background-color': imgBackgroundColor || '#ffffff',
-          '--rhc-logo-img-color': imgIconColor || '#154273',
+          '--rhc-logo-color': textColor || rhcLogoColor,
+          '--rhc-logo-img-background-color': imgBackgroundColor || rhcLogoImgBackgroundColor,
+          '--rhc-logo-img-color': imgIconColor || rhcLogoImgColor,
         } as LogoCSSProperties
       }
     >
@@ -39,9 +40,9 @@ const meta = {
   args: {
     organisation: '',
     subtitle: '',
-    imgBackgroundColor: '#ffffff',
-    imgIconColor: '#154273',
-    textColor: '#154273',
+    imgBackgroundColor: rhcLogoImgBackgroundColor,
+    imgIconColor: rhcLogoImgColor,
+    textColor: rhcLogoColor,
   },
   argTypes: {
     organisation: {
