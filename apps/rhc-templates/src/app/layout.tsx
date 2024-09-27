@@ -20,24 +20,22 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
       </Head>
       <body>
         <RHCTheme>
+          <div className="rhc-background-color-white">
+            <PageHeader>
+              <Logo organisation="Rijkshuisstijl Community">
+                <DutchMapIcon />
+              </Logo>
+            </PageHeader>
+          </div>
+          <NavBar
+            items={[
+              { href: '/', label: 'Page' },
+              { href: '/form', label: 'Form' },
+              { href: '/details', label: 'Details' },
+              { href: '/collage', label: 'Collage' },
+            ]}
+          ></NavBar>
           <main className="page">
-            <div className="rhc-background-color-white">
-              <PageHeader>
-                <Logo organisation="Rijkshuisstijl Community">
-                  <DutchMapIcon />
-                </Logo>
-              </PageHeader>
-            </div>
-            <div className="unstarted rhc-background-color-lint-blauw">
-              <NavBar
-                items={[
-                  { href: '/', label: 'Page' },
-                  { href: '/form', label: 'Form' },
-                  { href: '/details', label: 'Details' },
-                  { href: '/collage', label: 'Collage' },
-                ]}
-              ></NavBar>
-            </div>
             <Document>{children}</Document>
           </main>
         </RHCTheme>
