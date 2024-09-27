@@ -11,55 +11,55 @@ import {
   Image,
   Paragraph,
   Separator,
+  LinkList,
+  LinkListLink,
+  PageContent,
+  PageHeader,
 } from '@rijkshuisstijl-community/components-react';
-import { LinkList, LinkListLink, PageContent, PageHeader } from '@utrecht/component-library-react/dist/css-module';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 
 export default function Details() {
   return (
-    <main>
-      <div className="unfinished">
-        <PageHeader>
-          <BreadcrumbNav>
-            <BreadcrumbNavLink href="/" rel="home" index={0}>
-              Home
-            </BreadcrumbNavLink>
-            <BreadcrumbNavLink href="/a/" index={1}>
-              Onderwerpen
-            </BreadcrumbNavLink>
-            <BreadcrumbNavLink href="/a/b/" rel="up" index={2}>
-              Werktijden
-            </BreadcrumbNavLink>
-          </BreadcrumbNav>
-          <div className="header-image">
-            <div className="header-image-textbox">
-              <Heading level={1}>Veel bekeken</Heading>
-              <LinkList>
-                <LinkListLink>Wat zijn de wettelijke regels voor mijn werktijden en rusttijden?</LinkListLink>
-                <LinkListLink>Wat zijn de wettelijke regels voor pauzes tijdens mijn werk?</LinkListLink>
-              </LinkList>
-            </div>
-          </div>
-          <div className="sub-navigation">
+    <>
+      <PageHeader>
+        <BreadcrumbNav>
+          <BreadcrumbNavLink href="/" rel="home" index={0}>
+            Home
+          </BreadcrumbNavLink>
+          <BreadcrumbNavLink href="/a/" index={1}>
+            Onderwerpen
+          </BreadcrumbNavLink>
+          <BreadcrumbNavLink href="/a/b/" rel="up" index={2}>
+            Werktijden
+          </BreadcrumbNavLink>
+        </BreadcrumbNav>
+        <div className="header-image">
+          <div className="header-image-textbox">
+            <Heading level={1}>Veel bekeken</Heading>
             <LinkList>
-              <LinkListLink>Regels voor rijtijden en rusttijden bij wegvervoer</LinkListLink>
-              <LinkListLink>Vraag en antwoord</LinkListLink>
-              <LinkListLink>Documenten</LinkListLink>
+              <LinkListLink>Wat zijn de wettelijke regels voor mijn werktijden en rusttijden?</LinkListLink>
+              <LinkListLink>Wat zijn de wettelijke regels voor pauzes tijdens mijn werk?</LinkListLink>
             </LinkList>
           </div>
-        </PageHeader>
-      </div>
-
-      <PageContent className="container page-content">
-        <Article>
-          <Paragraph>
-            De Arbeidstijdenwet geeft regels voor werktijden, pauzes en rusttijden van werknemers. Met deze regels wil
-            de Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de combinatie van werk, privé en
-            zorgtaken gemakkelijker maken.
-          </Paragraph>
-          <Separator></Separator>
-          <Heading level={1}>Vraag en antwoord</Heading>
-          <div className="unstarted">
+        </div>
+        <div className="sub-navigation">
+          <LinkList>
+            <LinkListLink>Regels voor rijtijden en rusttijden bij wegvervoer</LinkListLink>
+            <LinkListLink>Vraag en antwoord</LinkListLink>
+            <LinkListLink>Documenten</LinkListLink>
+          </LinkList>
+        </div>
+      </PageHeader>
+      <main className="rhc-main-content">
+        <PageContent className="container page-content rhc-page-content rhc-background-color-white">
+          <Article>
+            <Paragraph>
+              De Arbeidstijdenwet geeft regels voor werktijden, pauzes en rusttijden van werknemers. Met deze regels wil
+              de Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de combinatie van werk, privé en
+              zorgtaken gemakkelijker maken.
+            </Paragraph>
+            <Separator></Separator>
+            <Heading level={1}>Vraag en antwoord</Heading>
             <LinkList>
               <LinkListLink>Wat zijn de regels bij consignatie (oproepdienst)?</LinkListLink>
               <LinkListLink>Hoe vaak mag ik nachtdienst hebben?</LinkListLink>
@@ -67,8 +67,6 @@ export default function Details() {
               <LinkListLink>Wanneer geldt de Arbeidstijdenwet niet (of gedeeltelijk) voor mij?</LinkListLink>
               <LinkListLink>Meer vragen en antwoorden</LinkListLink>
             </LinkList>
-          </div>
-          <div className="unstarted">
             <Heading level={1}>Uitgelicht</Heading>
             <div className="image-group">
               <div className="image-group-box">
@@ -94,9 +92,9 @@ export default function Details() {
                 </Figure>
               </div>
             </div>
-          </div>
-        </Article>
-      </PageContent>
+          </Article>
+        </PageContent>
+      </main>
       <Footer
         heading="De Rijksoverheid. Voor Nederland"
         headingLevel={4}
@@ -162,6 +160,6 @@ export default function Details() {
           },
         ]}
       ></Footer>
-    </main>
+    </>
   );
 }
