@@ -42,12 +42,7 @@ import {
   FormFieldRadioOption,
 } from '@rijkshuisstijl-community/components-react';
 // import { Avatar, Pagination } from '@amsterdam/design-system-react';
-import {
-  IconArrowRight,
-  IconCalendarEvent,
-  IconExclamationCircle,
-} from '@tabler/icons-react/dist/esm/tabler-icons-react';
-import {} from '@utrecht/component-library-react';
+import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react/dist/esm/tabler-icons-react';
 
 export default function Collage() {
   return (
@@ -151,10 +146,7 @@ export default function Collage() {
               </Paragraph>
             </Alert>
             <FormField label="Label" description="Description">
-              <FormFieldErrorMessage>
-                <IconExclamationCircle />
-                Error message
-              </FormFieldErrorMessage>
+              <FormFieldErrorMessage>Error message</FormFieldErrorMessage>
               <Textbox invalid></Textbox>
             </FormField>
             <DataList>

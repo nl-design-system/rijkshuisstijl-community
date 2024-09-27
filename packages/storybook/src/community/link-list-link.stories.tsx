@@ -1,5 +1,4 @@
 import { Icon, LinkListLink } from '@rijkshuisstijl-community/components-react';
-import { ChevronRightIcon } from '@rijkshuisstijl-community/components-react/src/icons';
 import { Meta, StoryObj } from '@storybook/react/*';
 
 const meta = {
@@ -9,11 +8,7 @@ const meta = {
   args: {
     children: 'Label',
     href: '#',
-    icon: (
-      <Icon>
-        <ChevronRightIcon />
-      </Icon>
-    ),
+    icon: <Icon icon={'chevron-right'} />,
   },
   argTypes: {
     href: {
@@ -33,11 +28,7 @@ export const Default: Story = {
   args: {
     children: 'Label',
     href: '#',
-    icon: (
-      <Icon>
-        <ChevronRightIcon />
-      </Icon>
-    ),
+    icon: <Icon icon={'chevron-right'} />,
   },
 };
 

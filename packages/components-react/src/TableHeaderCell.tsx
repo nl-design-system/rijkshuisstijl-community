@@ -2,11 +2,10 @@ import {
   TableHeaderCell as UtrechtTableHeaderCell,
   TableHeaderCellProps as UtrechtTableHeaderCellProps,
 } from '@utrecht/component-library-react';
-import { Icon } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 import { Button } from './Button';
-import { AscendingIcon, DescendingIcon, SortIcon } from './icons';
+import { Icon } from './icon/Icon';
 
 export interface TableHeaderCellProps extends UtrechtTableHeaderCellProps {
   withSorting?: boolean;
@@ -44,15 +43,15 @@ export const TableHeaderCell = forwardRef(
           >
             {children}
 
-            <Icon>
-              {restProps['aria-sort'] === 'ascending' ? (
-                <DescendingIcon />
-              ) : restProps['aria-sort'] === 'descending' ? (
-                <AscendingIcon />
-              ) : (
-                <SortIcon />
-              )}
-            </Icon>
+            <Icon
+              icon={
+                restProps['aria-sort'] === 'ascending'
+                  ? 'sort-ascending'
+                  : restProps['aria-sort'] === 'descending'
+                    ? 'sort-descending'
+                    : 'arrows-sort'
+              }
+            ></Icon>
           </Button>
         ) : (
           children

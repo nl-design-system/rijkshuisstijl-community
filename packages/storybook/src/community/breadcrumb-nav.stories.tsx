@@ -1,6 +1,10 @@
-import { BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from '@rijkshuisstijl-community/components-react';
+import {
+  BreadcrumbNav,
+  BreadcrumbNavLink,
+  BreadcrumbNavSeparator,
+  Icon,
+} from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
-import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import readme from './breadcrumb-nav.md?raw';
 
 const meta = {
@@ -66,13 +70,13 @@ export const Separator: Story = {
         Home
       </BreadcrumbNavLink>,
       <BreadcrumbNavSeparator>
-        <UtrechtIconChevronRight />
+        <Icon icon={'chevron-right'} />
       </BreadcrumbNavSeparator>,
       <BreadcrumbNavLink href="/a/" index={1}>
         Label
       </BreadcrumbNavLink>,
       <BreadcrumbNavSeparator>
-        <UtrechtIconChevronRight />
+        <Icon icon={'chevron-right'} />
       </BreadcrumbNavSeparator>,
       <BreadcrumbNavLink href="/a/b/" index={2}>
         Label

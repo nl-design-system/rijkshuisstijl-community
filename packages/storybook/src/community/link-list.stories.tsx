@@ -1,5 +1,4 @@
 import { Icon, LinkList, LinkListLink, type LinkListProps } from '@rijkshuisstijl-community/components-react';
-import { ChevronRightIcon } from '@rijkshuisstijl-community/components-react/src/icons';
 import { Meta, StoryObj } from '@storybook/react/*';
 import { PropsWithChildren } from 'react';
 
@@ -9,40 +8,13 @@ interface LinkListStoryProps extends LinkListProps {
 
 const LinkListStory = ({ hasIcons = true, ...props }: PropsWithChildren<LinkListStoryProps>) => (
   <LinkList {...props}>
-    <LinkListLink
-      href="#"
-      icon={
-        hasIcons ? (
-          <Icon>
-            <ChevronRightIcon />
-          </Icon>
-        ) : undefined
-      }
-    >
+    <LinkListLink href="#" icon={hasIcons ? <Icon icon={'chevron-right'} /> : undefined}>
       Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
     </LinkListLink>
-    <LinkListLink
-      href="#"
-      icon={
-        hasIcons ? (
-          <Icon>
-            <ChevronRightIcon />
-          </Icon>
-        ) : undefined
-      }
-    >
+    <LinkListLink href="#" icon={hasIcons ? <Icon icon={'chevron-right'} /> : undefined}>
       Link 2
     </LinkListLink>
-    <LinkListLink
-      href="#"
-      icon={
-        hasIcons ? (
-          <Icon>
-            <ChevronRightIcon />
-          </Icon>
-        ) : undefined
-      }
-    >
+    <LinkListLink href="#" icon={hasIcons ? <Icon icon={'chevron-right'} /> : undefined}>
       Link 3
     </LinkListLink>
   </LinkList>
