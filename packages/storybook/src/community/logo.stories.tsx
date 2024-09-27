@@ -1,5 +1,4 @@
-import { Logo, type LogoProps } from '@rijkshuisstijl-community/components-react';
-import { DutchMapIcon } from '@rijkshuisstijl-community/components-react/src/icons';
+import { Icon, Logo, LogoProps } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import { CSSProperties } from 'react';
 
@@ -27,7 +26,13 @@ const LogoStory = ({ imgBackgroundColor, textColor, imgIconColor, ...args }: Log
         } as LogoCSSProperties
       }
     >
-      <DutchMapIcon />
+      <Icon
+        icon={'nederland-map'}
+        style={{
+          height: '48px',
+          width: '42px',
+        }}
+      />
     </Logo>
   </>
 );

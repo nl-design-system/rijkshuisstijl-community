@@ -20,8 +20,8 @@ import {
   Article,
   FormFieldRadioOption,
   FormFieldCheckboxOption,
+  Icon,
 } from '@rijkshuisstijl-community/components-react';
-import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 // import { DateInput, FileInput } from '@amsterdam/design-system-react';
 
 export default function Form() {
@@ -35,13 +35,13 @@ export default function Form() {
                 Home
               </BreadcrumbNavLink>
               <BreadcrumbNavSeparator>
-                <UtrechtIconChevronRight />
+                <Icon icon={'chevron-right'} />
               </BreadcrumbNavSeparator>
               <BreadcrumbNavLink href="/a/" index={1}>
                 Niveau 1
               </BreadcrumbNavLink>
               <BreadcrumbNavSeparator>
-                <UtrechtIconChevronRight />
+                <Icon icon={'chevron-right'} />
               </BreadcrumbNavSeparator>
               <BreadcrumbNavLink href="/a/b/" rel="up" index={2}>
                 Niveau 2
@@ -150,25 +150,25 @@ export default function Form() {
             heading: 'Service',
             children: [
               <LinkList key="1">
-                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Contact
                 </LinkListLink>
-                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Abonneren
                 </LinkListLink>
-                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   RSS
                 </LinkListLink>
-                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Vacatures
                 </LinkListLink>
-                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Sitemap
                 </LinkListLink>
-                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Help
                 </LinkListLink>
-                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Archief
                 </LinkListLink>
               </LinkList>,
@@ -178,28 +178,28 @@ export default function Form() {
             heading: 'Over deze site',
             children: (
               <LinkList key="2">
-                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Over Rijksoverheid.nl
                 </LinkListLink>
-                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Wetten en regelingen
                 </LinkListLink>
-                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Copyright
                 </LinkListLink>
-                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Privacy
                 </LinkListLink>
-                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Cookies
                 </LinkListLink>
-                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Toegankelijkheid
                 </LinkListLink>
-                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Open data
                 </LinkListLink>
-                <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Kwetsbaarheid melden
                 </LinkListLink>
               </LinkList>
