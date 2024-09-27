@@ -2988,24 +2988,6 @@
             "value": "{rhc.line-height.paragraph}",
             "type": "lineHeights"
           }
-        },
-        "img": {
-          "border-end-end-radius": {
-            "value": "0",
-            "type": "borderRadius"
-          },
-          "border-end-start-radius": {
-            "value": "0",
-            "type": "borderRadius"
-          },
-          "border-start-end-radius": {
-            "value": "0",
-            "type": "borderRadius"
-          },
-          "border-start-start-radius": {
-            "value": "0",
-            "type": "borderRadius"
-          }
         }
       }
     }
@@ -3708,7 +3690,7 @@
       "logo": {
         "img": {
           "background-color": {
-            "value": "{rhc.color.grijs.100}",
+            "value": "{rhc.color.wit}",
             "type": "color"
           },
           "inline-size": {
@@ -3767,6 +3749,90 @@
         "color": {
           "value": "{rhc.color.lintblauw.500}",
           "type": "color"
+        }
+      }
+    }
+  },
+  "components/menu-bar": {
+    "todo": {
+      "menu-bar": {
+        "icon": {
+          "size": {
+            "value": "{rhc.size.icon.functional}",
+            "type": "sizing"
+          },
+          "color": {
+            "value": "{rhc.color.foreground.lint}",
+            "type": "color"
+          }
+        },
+        "background-color": {
+          "value": "{rhc.color.wit}",
+          "type": "color"
+        },
+        "search": {
+          "padding-block-start": {
+            "value": "{rhc.space.150}",
+            "type": "spacing"
+          },
+          "padding-block-end": {
+            "value": "{rhc.space.150}",
+            "type": "spacing"
+          },
+          "padding-inline-start": {
+            "value": "{rhc.space.150}",
+            "type": "spacing"
+          },
+          "padding-inline-end": {
+            "value": "{rhc.space.150}",
+            "type": "spacing"
+          }
+        },
+        "link": {
+          "background-color": {
+            "value": "{rhc.color.wit}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{rhc.color.foreground.lint}",
+            "type": "color"
+          },
+          "padding-block-start": {
+            "value": "{rhc.space.150}",
+            "type": "spacing"
+          },
+          "padding-block-end": {
+            "value": "{rhc.space.150}",
+            "type": "spacing"
+          },
+          "padding-inline-start": {
+            "value": "{rhc.space.150}",
+            "type": "spacing"
+          },
+          "padding-inline-end": {
+            "value": "{rhc.space.150}",
+            "type": "spacing"
+          },
+          "column-gap": {
+            "value": "{rhc.space.100}",
+            "type": "spacing"
+          },
+          "min-inline-size": {
+            "value": "{rhc.size.target}",
+            "type": "sizing"
+          },
+          "min-block-size": {
+            "value": "{rhc.size.target}",
+            "type": "sizing"
+          }
+        },
+        "border-color": {
+          "value": "{rhc.color.border.default}",
+          "type": "color"
+        },
+        "border-block-end-width": {
+          "value": "{rhc.border-width.m}",
+          "type": "borderWidth"
         }
       }
     }
@@ -3917,8 +3983,16 @@
             "value": "{rhc.space.200}",
             "type": "spacing"
           },
+          "row-gap": {
+            "value": "{rhc.space.100}",
+            "type": "spacing"
+          },
+          "padding-block": {
+            "value": "{rhc.space.100}",
+            "type": "spacing"
+          },
           "max-inline-size": {
-            "value": "1280px",
+            "value": "100%",
             "type": "sizing"
           }
         },
@@ -3938,10 +4012,16 @@
             "type": "sizing"
           }
         },
+        "breadcrumb": {
+          "border-color": {
+            "value": "{rhc.color.lintblauw.500}",
+            "type": "color"
+          }
+        },
         "link": {
           "active": {
             "background-color": {
-              "value": "{rhc.color.foreground.lint}",
+              "value": "{rhc.color.primary.500} / darken(0.4) / srgb",
               "type": "color"
             },
             "color": {
@@ -3949,17 +4029,9 @@
               "type": "color"
             }
           },
-          "background-color": {
-            "value": "{rhc.color.wit}",
-            "type": "color"
-          },
-          "color": {
-            "value": "{rhc.color.foreground.lint}",
-            "type": "color"
-          },
           "focus": {
             "background-color": {
-              "value": "{rhc.color.lintblauw.50}",
+              "value": "{rhc.color.primary.500}",
               "type": "color"
             },
             "color": {
@@ -3969,7 +4041,7 @@
           },
           "hover": {
             "background-color": {
-              "value": "{rhc.color.grijs.50}",
+              "value": "{rhc.color.primary.hover}",
               "type": "color"
             },
             "color": {
@@ -3992,10 +4064,6 @@
           "padding-inline-start": {
             "value": "{rhc.space.150}",
             "type": "spacing"
-          },
-          "column-gap": {
-            "value": "{rhc.space.100}",
-            "type": "spacing"
           }
         },
         "heading": {
@@ -4005,15 +4073,11 @@
           }
         },
         "background-color": {
-          "value": "{rhc.color.wit}",
+          "value": "{rhc.color.primary.500}",
           "type": "color"
         },
         "color": {
-          "value": "{rhc.color.foreground.lint}",
-          "type": "color"
-        },
-        "border-color": {
-          "value": "{rhc.color.border.default}",
+          "value": "{rhc.color.foreground.onEmphasis}",
           "type": "color"
         }
       }
@@ -6131,6 +6195,7 @@
       "components/link-list",
       "components/link-list-card",
       "components/logo",
+      "components/menu-bar",
       "components/modal-dialog",
       "components/nav-bar",
       "components/ordered-list",
