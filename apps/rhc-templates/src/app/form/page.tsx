@@ -50,33 +50,31 @@ export default function Form() {
             <Heading level={1}>Formulier voor vragen over Sisa</Heading>
             <Paragraph>Heeft u vragen over Single information, Single audit (SiSa)?</Paragraph>
             <Paragraph>Gebruik dan het formulier hieronder.</Paragraph>
-            <br />
             {/*
-    <div className="unstarted">
-      <FormField label="Bestand toevoegen">
-        <UnorderedList>
-          <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
-          <UnorderedListItem>U mag maximaal 10 Mb aan bestanden toevoegen.</UnorderedListItem>
-          <UnorderedListItem>
-            Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bpm en gif.
-          </UnorderedListItem>
-        </UnorderedList>
-        <FileInput multiple></FileInput>
-      </FormField>
-      <UnorderedList>
-        <UnorderedListItem>Hoe moet ik extra regels toevoegen bij de macro-versie?</UnorderedListItem>
-        <UnorderedListItem>Er zitten fouten in het Excel bestand of de macro-versie?</UnorderedListItem>
-        <UnorderedListItem>Macro bestand werkt niet</UnorderedListItem>
-        <UnorderedListItem>Hierziene aanleveringen</UnorderedListItem>
-        <UnorderedListItem>Tabel van fouten en onzekerheden</UnorderedListItem>
-        <UnorderedListItem>Inloggegevens CBS</UnorderedListItem>
-        <UnorderedListItem>Aanlevering CBS</UnorderedListItem>
-        <UnorderedListItem>Controle verklaring</UnorderedListItem>
-        <UnorderedListItem>Hoe leg ik verantwoording af?</UnorderedListItem>
-      </UnorderedList>
-    </div>
-    */}
-            <br />
+              <div className="unstarted">
+                <FormField label="Bestand toevoegen">
+                  <UnorderedList>
+                    <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
+                    <UnorderedListItem>U mag maximaal 10 Mb aan bestanden toevoegen.</UnorderedListItem>
+                    <UnorderedListItem>
+                      Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bpm en gif.
+                    </UnorderedListItem>
+                  </UnorderedList>
+                  <FileInput multiple></FileInput>
+                </FormField>
+                <UnorderedList>
+                  <UnorderedListItem>Hoe moet ik extra regels toevoegen bij de macro-versie?</UnorderedListItem>
+                  <UnorderedListItem>Er zitten fouten in het Excel bestand of de macro-versie?</UnorderedListItem>
+                  <UnorderedListItem>Macro bestand werkt niet</UnorderedListItem>
+                  <UnorderedListItem>Hierziene aanleveringen</UnorderedListItem>
+                  <UnorderedListItem>Tabel van fouten en onzekerheden</UnorderedListItem>
+                  <UnorderedListItem>Inloggegevens CBS</UnorderedListItem>
+                  <UnorderedListItem>Aanlevering CBS</UnorderedListItem>
+                  <UnorderedListItem>Controle verklaring</UnorderedListItem>
+                  <UnorderedListItem>Hoe leg ik verantwoording af?</UnorderedListItem>
+                </UnorderedList>
+              </div>
+            */}
             <Paragraph>
               Lees verder over de <Link href="#">verantwoordingsmethode SiSa</Link>.
             </Paragraph>
@@ -86,12 +84,12 @@ export default function Form() {
               <FormFieldTextbox type="email" label="E-mailadres"></FormFieldTextbox>
               <FormFieldTextbox label="Telefoonnummer" type="tel"></FormFieldTextbox>
               {/*
-    <div className="unstarted">
-      <FormField label="Datum">
-        <DateInput></DateInput>
-      </FormField>
-    </div>
-    */}
+                <div className="unstarted">
+                  <FormField label="Datum">
+                    <DateInput></DateInput>
+                  </FormField>
+                </div>
+              */}
               <FormFieldTextbox description="Bijvoorbeeld E27B" label="Om welke uitkering gaat het?"></FormFieldTextbox>
               <FormFieldTextarea label="Stel hier uw vraag" rows={6} cols={40}></FormFieldTextarea>
               <Fieldset>
@@ -104,19 +102,19 @@ export default function Form() {
                 </div>
               </Fieldset>
               {/*
-    <div className="unstarted">
-      <FormField label="Bestand toevoegen">
-        <UnorderedList>
-          <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
-          <UnorderedListItem>U mag maximaal 10 Mb aan bestanden toevoegen.</UnorderedListItem>
-          <UnorderedListItem>
-            Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bpm en gif.
-          </UnorderedListItem>
-        </UnorderedList>
-        <FileInput multiple></FileInput>
-      </FormField>
-    </div>
-    */}
+                <div className="unstarted">
+                  <FormField label="Bestand toevoegen">
+                    <UnorderedList>
+                      <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
+                      <UnorderedListItem>U mag maximaal 10 Mb aan bestanden toevoegen.</UnorderedListItem>
+                      <UnorderedListItem>
+                        Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bpm en gif.
+                      </UnorderedListItem>
+                    </UnorderedList>
+                    <FileInput multiple></FileInput>
+                  </FormField>
+                </div>
+              */}
               <Heading level={1}>Informatie over de verwerking van uw persoonsgegevens</Heading>
               <Paragraph>
                 Wij gebruiken gegevens die u heeft ingevuld om uw vraag te beantwoorden. Daarna worden ze volgens in de
