@@ -53,6 +53,8 @@
   --utrecht-button-padding-block-start: var(--utrecht-accordion-button-padding-block-start, inherit);
   --utrecht-button-padding-inline-end: var(--utrecht-accordion-button-padding-inline-end, inherit);
   --utrecht-button-padding-inline-start: var(--utrecht-accordion-button-padding-inline-start, inherit);
+
+  align-items: start;
 }
 
 .utrecht-accordion__button:focus-visible,
@@ -61,5 +63,10 @@
 }
 
 .utrecht-accordion__button-icon {
+  align-items: center;
+  block-size: var(--utrecht-accordion-button-icon-size);
+  display: flex;
   fill: var(--utrecht-accordion-button-color, inherit);
+  inline-size: var(--utrecht-accordion-button-icon-size);
+  margin-block: var(--utrecht-accordion-button-icon-margin-block);
 }
