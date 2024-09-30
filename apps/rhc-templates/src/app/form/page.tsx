@@ -15,7 +15,6 @@ import {
   Link,
   LinkList,
   LinkListLink,
-  PageContent,
   Paragraph,
   Article,
   FormFieldRadioOption,
@@ -28,29 +27,28 @@ export default function Form() {
   return (
     <>
       <div className="rhc-main-content">
-        <PageContent className="container page-content rhc-page-content rhc-background-color-white">
-          <Article>
-            <BreadcrumbNav>
-              <BreadcrumbNavLink href="/" rel="home" index={0}>
-                Home
-              </BreadcrumbNavLink>
-              <BreadcrumbNavSeparator>
-                <Icon icon={'chevron-right'} />
-              </BreadcrumbNavSeparator>
-              <BreadcrumbNavLink href="/a/" index={1}>
-                Niveau 1
-              </BreadcrumbNavLink>
-              <BreadcrumbNavSeparator>
-                <Icon icon={'chevron-right'} />
-              </BreadcrumbNavSeparator>
-              <BreadcrumbNavLink href="/a/b/" rel="up" index={2}>
-                Niveau 2
-              </BreadcrumbNavLink>
-            </BreadcrumbNav>
-            <Heading level={1}>Formulier voor vragen over Sisa</Heading>
-            <Paragraph>Heeft u vragen over Single information, Single audit (SiSa)?</Paragraph>
-            <Paragraph>Gebruik dan het formulier hieronder.</Paragraph>
-            {/*
+        <Article>
+          <BreadcrumbNav>
+            <BreadcrumbNavLink href="/" rel="home" index={0}>
+              Home
+            </BreadcrumbNavLink>
+            <BreadcrumbNavSeparator>
+              <Icon icon={'chevron-right'} />
+            </BreadcrumbNavSeparator>
+            <BreadcrumbNavLink href="/a/" index={1}>
+              Niveau 1
+            </BreadcrumbNavLink>
+            <BreadcrumbNavSeparator>
+              <Icon icon={'chevron-right'} />
+            </BreadcrumbNavSeparator>
+            <BreadcrumbNavLink href="/a/b/" rel="up" index={2}>
+              Niveau 2
+            </BreadcrumbNavLink>
+          </BreadcrumbNav>
+          <Heading level={1}>Formulier voor vragen over Sisa</Heading>
+          <Paragraph>Heeft u vragen over Single information, Single audit (SiSa)?</Paragraph>
+          <Paragraph>Gebruik dan het formulier hieronder.</Paragraph>
+          {/*
               <div className="unstarted">
                 <FormField label="Bestand toevoegen">
                   <UnorderedList>
@@ -75,33 +73,33 @@ export default function Form() {
                 </UnorderedList>
               </div>
             */}
-            <Paragraph>
-              Lees verder over de <Link href="#">verantwoordingsmethode SiSa</Link>.
-            </Paragraph>
-            <form>
-              <FormFieldTextbox label="Naam" required></FormFieldTextbox>
-              <FormFieldTextbox label="Organisatie"></FormFieldTextbox>
-              <FormFieldTextbox type="email" label="E-mailadres"></FormFieldTextbox>
-              <FormFieldTextbox label="Telefoonnummer" type="tel"></FormFieldTextbox>
-              {/*
+          <Paragraph>
+            Lees verder over de <Link href="#">verantwoordingsmethode SiSa</Link>.
+          </Paragraph>
+          <form>
+            <FormFieldTextbox label="Naam" required></FormFieldTextbox>
+            <FormFieldTextbox label="Organisatie"></FormFieldTextbox>
+            <FormFieldTextbox type="email" label="E-mailadres"></FormFieldTextbox>
+            <FormFieldTextbox label="Telefoonnummer" type="tel"></FormFieldTextbox>
+            {/*
                 <div className="unstarted">
                   <FormField label="Datum">
                     <DateInput></DateInput>
                   </FormField>
                 </div>
               */}
-              <FormFieldTextbox description="Bijvoorbeeld E27B" label="Om welke uitkering gaat het?"></FormFieldTextbox>
-              <FormFieldTextarea label="Stel hier uw vraag" rows={6} cols={40}></FormFieldTextarea>
-              <Fieldset>
-                <FieldsetLegend>Label</FieldsetLegend>
-                <div>
-                  <FormFieldRadioOption label="Label" />
-                  <FormFieldRadioOption label="Label" />
-                  <FormFieldRadioOption label="Label" />
-                  <FormFieldRadioOption label="Label" />
-                </div>
-              </Fieldset>
-              {/*
+            <FormFieldTextbox description="Bijvoorbeeld E27B" label="Om welke uitkering gaat het?"></FormFieldTextbox>
+            <FormFieldTextarea label="Stel hier uw vraag" rows={6} cols={40}></FormFieldTextarea>
+            <Fieldset>
+              <FieldsetLegend>Label</FieldsetLegend>
+              <div>
+                <FormFieldRadioOption label="Label" />
+                <FormFieldRadioOption label="Label" />
+                <FormFieldRadioOption label="Label" />
+                <FormFieldRadioOption label="Label" />
+              </div>
+            </Fieldset>
+            {/*
                 <div className="unstarted">
                   <FormField label="Bestand toevoegen">
                     <UnorderedList>
@@ -115,30 +113,29 @@ export default function Form() {
                   </FormField>
                 </div>
               */}
-              <Heading level={1}>Informatie over de verwerking van uw persoonsgegevens</Heading>
-              <Paragraph>
-                Wij gebruiken gegevens die u heeft ingevuld om uw vraag te beantwoorden. Daarna worden ze volgens in de
-                archiefwet tijdelijk bewaard in de daarvoor bestemde archiefsystemen. Deze zijn van het Ministerie van
-                Binnenlandse Zaken & Koninkrijksrelaties (BZK).
-              </Paragraph>
-              <AccordionProvider
-                sections={[
-                  {
-                    label: 'Toon extra informatie over de verwerking van uw persoonsgegevens',
-                    body: 'Dit is extra informatie',
-                  },
-                ]}
-              ></AccordionProvider>
-              <Fieldset>
-                <FieldsetLegend>Akkoordverklaring</FieldsetLegend>
-                <FormFieldCheckboxOption label="Ik heb gelezen en begrepen wat er met mijn persoonsgegevens wordt gedaan"></FormFieldCheckboxOption>
-              </Fieldset>
-              <Button type="submit" appearance="primary-action-button">
-                Ga verder
-              </Button>
-            </form>
-          </Article>
-        </PageContent>
+            <Heading level={1}>Informatie over de verwerking van uw persoonsgegevens</Heading>
+            <Paragraph>
+              Wij gebruiken gegevens die u heeft ingevuld om uw vraag te beantwoorden. Daarna worden ze volgens in de
+              archiefwet tijdelijk bewaard in de daarvoor bestemde archiefsystemen. Deze zijn van het Ministerie van
+              Binnenlandse Zaken & Koninkrijksrelaties (BZK).
+            </Paragraph>
+            <AccordionProvider
+              sections={[
+                {
+                  label: 'Toon extra informatie over de verwerking van uw persoonsgegevens',
+                  body: 'Dit is extra informatie',
+                },
+              ]}
+            ></AccordionProvider>
+            <Fieldset>
+              <FieldsetLegend>Akkoordverklaring</FieldsetLegend>
+              <FormFieldCheckboxOption label="Ik heb gelezen en begrepen wat er met mijn persoonsgegevens wordt gedaan"></FormFieldCheckboxOption>
+            </Fieldset>
+            <Button type="submit" appearance="primary-action-button">
+              Ga verder
+            </Button>
+          </form>
+        </Article>
       </div>
       <Footer
         heading="De Rijksoverheid. Voor Nederland"

@@ -13,7 +13,6 @@ import {
   Separator,
   LinkList,
   LinkListLink,
-  PageContent,
   PageHeader,
 } from '@rijkshuisstijl-community/components-react';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
@@ -21,37 +20,37 @@ import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 export default function Details() {
   return (
     <>
-      <PageHeader>
-        <BreadcrumbNav>
-          <BreadcrumbNavLink href="/" rel="home" index={0}>
-            Home
-          </BreadcrumbNavLink>
-          <BreadcrumbNavLink href="/a/" index={1}>
-            Onderwerpen
-          </BreadcrumbNavLink>
-          <BreadcrumbNavLink href="/a/b/" rel="up" index={2}>
-            Werktijden
-          </BreadcrumbNavLink>
-        </BreadcrumbNav>
-        <div className="header-image">
-          <div className="header-image-textbox">
-            <Heading level={1}>Veel bekeken</Heading>
+      <div className="rhc-background-color-white">
+        <PageHeader>
+          <BreadcrumbNav>
+            <BreadcrumbNavLink href="/" rel="home" index={0}>
+              Home
+            </BreadcrumbNavLink>
+            <BreadcrumbNavLink href="/a/" index={1}>
+              Onderwerpen
+            </BreadcrumbNavLink>
+            <BreadcrumbNavLink href="/a/b/" rel="up" index={2}>
+              Werktijden
+            </BreadcrumbNavLink>
+          </BreadcrumbNav>
+          <div className="header-image">
+            <div className="header-image-textbox">
+              <Heading level={1}>Veel bekeken</Heading>
+              <LinkList>
+                <LinkListLink>Wat zijn de wettelijke regels voor mijn werktijden en rusttijden?</LinkListLink>
+                <LinkListLink>Wat zijn de wettelijke regels voor pauzes tijdens mijn werk?</LinkListLink>
+              </LinkList>
+            </div>
+          </div>
+          <div className="sub-navigation">
             <LinkList>
-              <LinkListLink>Wat zijn de wettelijke regels voor mijn werktijden en rusttijden?</LinkListLink>
-              <LinkListLink>Wat zijn de wettelijke regels voor pauzes tijdens mijn werk?</LinkListLink>
+              <LinkListLink>Regels voor rijtijden en rusttijden bij wegvervoer</LinkListLink>
+              <LinkListLink>Vraag en antwoord</LinkListLink>
+              <LinkListLink>Documenten</LinkListLink>
             </LinkList>
           </div>
-        </div>
-        <div className="sub-navigation">
-          <LinkList>
-            <LinkListLink>Regels voor rijtijden en rusttijden bij wegvervoer</LinkListLink>
-            <LinkListLink>Vraag en antwoord</LinkListLink>
-            <LinkListLink>Documenten</LinkListLink>
-          </LinkList>
-        </div>
-      </PageHeader>
-      <main className="rhc-main-content">
-        <PageContent className="container page-content rhc-page-content rhc-background-color-white">
+        </PageHeader>
+        <main className="rhc-main-content">
           <Article>
             <Paragraph>
               De Arbeidstijdenwet geeft regels voor werktijden, pauzes en rusttijden van werknemers. Met deze regels wil
@@ -93,8 +92,8 @@ export default function Details() {
               </div>
             </div>
           </Article>
-        </PageContent>
-      </main>
+        </main>
+      </div>
       <Footer
         heading="De Rijksoverheid. Voor Nederland"
         headingLevel={4}
