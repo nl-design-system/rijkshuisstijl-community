@@ -6,8 +6,13 @@
 .utrecht-ordered-list {
   color: var(--utrecht-ordered-list-color);
   font-weight: var(--utrecht-ordered-list-font-weight);
-  line-height: var(--utrecht-ordered-list-line-height);
+  line-height: var(--utrecht-ordered-list-line-height) !important;
   margin-block-end: var(--utrecht-ordered-list-margin-block-end);
   margin-block-start: var(--utrecht-ordered-list-margin-block-start);
+  margin-inline-start: var(--utrecht-ordered-list-margin-inline-start);
   padding-inline-start: var(--utrecht-ordered-list-padding-inline-start);
+}
+
+.utrecht-ordered-list__item {
+  padding-inline-start: var(--utrecht-ordered-list-item-padding-inline-start);
 }
