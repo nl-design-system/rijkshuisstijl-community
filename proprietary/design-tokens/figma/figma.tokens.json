@@ -3020,42 +3020,48 @@
   },
   "components/footer": {
     "utrecht": {
-      "page": {
-        "footer": {
-          "background-color": {
-            "value": "{rhc.color.lintblauw.500}",
-            "type": "color"
-          },
-          "color": {
-            "value": "{rhc.color.foreground.onEmphasis}",
-            "type": "color"
-          },
-          "padding-block-start": {
-            "value": "{rhc.space.600}",
-            "type": "spacing"
-          },
-          "padding-block-end": {
-            "value": "{rhc.space.600}",
-            "type": "spacing"
-          },
-          "padding-inline-start": {
-            "value": "80px",
-            "type": "spacing"
-          },
-          "padding-inline-end": {
-            "value": "80px",
-            "type": "spacing"
-          },
-          "gap": {
-            "value": "{rhc.space.300}",
-            "type": "spacing"
-          },
-          "column": {
-            "title": {
-              "margin-block-end": {
-                "value": "{rhc.space.150}",
-                "type": "spacing"
-              }
+      "page-footer": {
+        "background-color": {
+          "value": "{rhc.color.lintblauw.500}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{rhc.color.foreground.onEmphasis}",
+          "type": "color"
+        },
+        "padding-block-start": {
+          "value": "{rhc.space.600}",
+          "type": "spacing"
+        },
+        "padding-block-end": {
+          "value": "{rhc.space.600}",
+          "type": "spacing"
+        },
+        "padding-inline-start": {
+          "value": "80px",
+          "type": "spacing"
+        },
+        "padding-inline-end": {
+          "value": "80px",
+          "type": "spacing"
+        }
+      }
+    },
+    "rhc": {
+      "page-footer": {
+        "column-gap": {
+          "value": "{rhc.space.300}",
+          "type": "spacing"
+        },
+        "column-width": {
+          "value": "200px",
+          "type": "sizing"
+        },
+        "column": {
+          "title": {
+            "margin-block-end": {
+              "value": "{rhc.space.150}",
+              "type": "spacing"
             }
           }
         }

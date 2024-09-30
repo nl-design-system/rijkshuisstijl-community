@@ -1,4 +1,4 @@
-import { PageFooterProps, PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
+import { ColumnLayout, PageFooterProps, PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 import { Heading } from './Heading';
@@ -23,27 +23,27 @@ export const Footer = forwardRef(
   ) => (
     <UtrechtPageFooter {...restProps} className={clsx('rhc-footer', className)} ref={ref}>
       {heading && (
-        <div className="rhc-footer__column">
-          <Heading className="rhc-footer__title" level={headingLevel}>
-            {heading}
-          </Heading>
-        </div>
+        <Heading className="rhc-footer__title" level={headingLevel}>
+          {heading}
+        </Heading>
       )}
 
-      {columns &&
-        columns.map((column, index) => (
-          <div className="rhc-footer__column" key={index}>
-            <Heading
-              className="rhc-footer__column--title"
-              level={headingLevel >= MAX_HEADING_LEVEL ? MAX_HEADING_LEVEL : headingLevel + 1}
-            >
-              {column.heading}
-            </Heading>
-            {column.children}
-          </div>
-        ))}
+      <ColumnLayout>
+        {columns &&
+          columns.map((column, index) => (
+            <div className="rhc-page-footer__section" key={index}>
+              <Heading
+                className="rhc-footer__column--title"
+                level={headingLevel >= MAX_HEADING_LEVEL ? MAX_HEADING_LEVEL : headingLevel + 1}
+              >
+                {column.heading}
+              </Heading>
+              {column.children}
+            </div>
+          ))}
 
-      {children}
+        {children}
+      </ColumnLayout>
     </UtrechtPageFooter>
   ),
 );
