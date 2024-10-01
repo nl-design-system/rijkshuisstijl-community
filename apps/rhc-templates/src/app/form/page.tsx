@@ -37,14 +37,14 @@ export default function Form() {
               <BreadcrumbNavSeparator>
                 <Icon icon={'chevron-right'} />
               </BreadcrumbNavSeparator>
-              <BreadcrumbNavLink href="/a/" index={1}>
-                Niveau 1
+              <BreadcrumbNavLink href="/" index={1}>
+                Home 1
               </BreadcrumbNavLink>
               <BreadcrumbNavSeparator>
                 <Icon icon={'chevron-right'} />
               </BreadcrumbNavSeparator>
-              <BreadcrumbNavLink href="/a/b/" rel="up" index={2}>
-                Niveau 2
+              <BreadcrumbNavLink href="/" rel="up" index={2}>
+                Home 2
               </BreadcrumbNavLink>
             </BreadcrumbNav>
             <Heading level={1}>Formulier voor vragen over Sisa</Heading>
