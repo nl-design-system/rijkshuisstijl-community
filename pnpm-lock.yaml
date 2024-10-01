@@ -141,7 +141,7 @@ importers:
         version: 4.0.0
       '@utrecht/component-library-react':
         specifier: 4.1.0
-        version: 4.1.0(@babel/runtime@7.24.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 4.1.0(@babel/runtime@7.25.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/components':
         specifier: 6.0.0
         version: 6.0.0
@@ -157,10 +157,6 @@ importers:
       typescript:
         specifier: 5.5.3
         version: 5.5.3
-
-  apps/rhc-templates/dist: {}
-
-  apps/rhc-templates/dist/types: {}
 
   apps/rvs.rivm.nl:
     dependencies:
@@ -206,7 +202,7 @@ importers:
         version: 4.0.0
       '@utrecht/component-library-react':
         specifier: 4.1.0
-        version: 4.1.0(@babel/runtime@7.24.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 4.1.0(@babel/runtime@7.25.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -235,7 +231,7 @@ importers:
         version: 4.0.0
       '@utrecht/component-library-react':
         specifier: 5.0.0
-        version: 5.0.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 5.0.0(@babel/runtime@7.25.6)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -262,8 +258,8 @@ importers:
         specifier: 7.24.7
         version: 7.24.7(@babel/core@7.24.9)
       '@babel/runtime':
-        specifier: 7.24.8
-        version: 7.24.8
+        specifier: 7.25.6
+        version: 7.25.6
       '@rollup/plugin-babel':
         specifier: 6.0.4
         version: 6.0.4(@babel/core@7.24.9)(@types/babel__core@7.20.5)(rollup@4.18.1)
@@ -458,7 +454,7 @@ importers:
         version: 4.0.0
       '@utrecht/component-library-react':
         specifier: 5.0.0
-        version: 5.0.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 5.0.0(@babel/runtime@7.25.6)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/web-component-library-react':
         specifier: 1.2.0
         version: 1.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1345,6 +1341,10 @@ packages:
 
   '@babel/runtime@7.24.8':
     resolution: {integrity: sha512-5F7SDGs1T72ZczbRwbGO9lQi0NLjQxzl6i4lJxLxfW9U5UluCSyEJeniWvnhl3/euNiqQVbo8zruhsDfid0esA==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/runtime@7.25.6':
+    resolution: {integrity: sha512-VBj9MYyDb9tuLq7yzqjgzt6Q+IBQLrGZfdjOekyEirZPHxXWoTSGUTMrpsfi58Up73d13NfYLv8HT9vmznjzhQ==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.25.0':
@@ -9502,6 +9502,10 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.1
 
+  '@babel/runtime@7.25.6':
+    dependencies:
+      regenerator-runtime: 0.14.1
+
   '@babel/template@7.25.0':
     dependencies:
       '@babel/code-frame': 7.24.7
@@ -11008,7 +11012,7 @@ snapshots:
   '@testing-library/dom@10.1.0':
     dependencies:
       '@babel/code-frame': 7.24.7
-      '@babel/runtime': 7.24.8
+      '@babel/runtime': 7.25.6
       '@types/aria-query': 5.0.4
       aria-query: 5.3.0
       chalk: 4.1.2
@@ -11019,7 +11023,7 @@ snapshots:
   '@testing-library/dom@10.3.2':
     dependencies:
       '@babel/code-frame': 7.24.7
-      '@babel/runtime': 7.24.8
+      '@babel/runtime': 7.25.6
       '@types/aria-query': 5.0.4
       aria-query: 5.3.0
       chalk: 4.1.2
@@ -11030,7 +11034,7 @@ snapshots:
   '@testing-library/dom@9.3.4':
     dependencies:
       '@babel/code-frame': 7.24.7
-      '@babel/runtime': 7.24.8
+      '@babel/runtime': 7.25.6
       '@types/aria-query': 5.0.4
       aria-query: 5.1.3
       chalk: 4.1.2
@@ -11041,7 +11045,7 @@ snapshots:
   '@testing-library/jest-dom@6.4.5(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@22.7.4))':
     dependencies:
       '@adobe/css-tools': 4.4.0
-      '@babel/runtime': 7.24.8
+      '@babel/runtime': 7.25.6
       aria-query: 5.3.2
       chalk: 3.0.0
       css.escape: 1.5.1
@@ -11056,7 +11060,7 @@ snapshots:
   '@testing-library/jest-dom@6.4.6(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.7.0(@types/node@20.14.11))':
     dependencies:
       '@adobe/css-tools': 4.4.0
-      '@babel/runtime': 7.24.8
+      '@babel/runtime': 7.25.6
       aria-query: 5.3.2
       chalk: 3.0.0
       css.escape: 1.5.1
@@ -11070,7 +11074,7 @@ snapshots:
 
   '@testing-library/react@16.0.0(@testing-library/dom@10.3.2)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.8
+      '@babel/runtime': 7.25.6
       '@testing-library/dom': 10.3.2
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -11455,17 +11459,17 @@ snapshots:
 
   '@utrecht/component-library-css@4.0.0': {}
 
-  '@utrecht/component-library-react@4.1.0(@babel/runtime@7.24.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@utrecht/component-library-react@4.1.0(@babel/runtime@7.25.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.8
+      '@babel/runtime': 7.25.6
       clsx: 2.1.1
       lodash.chunk: 4.2.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@utrecht/component-library-react@5.0.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@utrecht/component-library-react@5.0.0(@babel/runtime@7.25.6)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.8
+      '@babel/runtime': 7.25.6
       clsx: 2.1.1
       lodash.chunk: 4.2.0
       react: 18.3.1
@@ -16420,7 +16424,7 @@ snapshots:
 
   polished@4.3.1:
     dependencies:
-      '@babel/runtime': 7.24.8
+      '@babel/runtime': 7.25.6
 
   portfinder@1.0.32:
     dependencies:
@@ -16841,7 +16845,7 @@ snapshots:
 
   react-syntax-highlighter@15.5.0(react@18.3.1):
     dependencies:
-      '@babel/runtime': 7.24.8
+      '@babel/runtime': 7.25.6
       highlight.js: 10.7.3
       lowlight: 1.20.0
       prismjs: 1.29.0
@@ -16955,7 +16959,7 @@ snapshots:
 
   regenerator-transform@0.15.2:
     dependencies:
-      '@babel/runtime': 7.24.8
+      '@babel/runtime': 7.25.6
 
   regexp.prototype.flags@1.5.2:
     dependencies:
@@ -17104,7 +17108,7 @@ snapshots:
 
   rollup-plugin-filesize@10.0.0:
     dependencies:
-      '@babel/runtime': 7.24.8
+      '@babel/runtime': 7.25.6
       boxen: 5.1.2
       brotli-size: 4.0.0
       colors: 1.4.0
