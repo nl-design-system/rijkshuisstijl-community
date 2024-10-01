@@ -1,6 +1,6 @@
 'use client';
 
-import { ButtonLink, Icon, PageContent } from '@utrecht/component-library-react/dist/css-module';
+import { ButtonLink, Icon } from '@utrecht/component-library-react/dist/css-module';
 import {
   Article,
   ActionGroup,
@@ -12,6 +12,7 @@ import {
   Image,
   Link,
   Paragraph,
+  PageContent,
   Separator,
   OrderedList,
   OrderedListItem,
