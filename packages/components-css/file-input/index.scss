@@ -1,0 +1,42 @@
+.rhc-file-input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-file-input-column-gap);
+}
+
+.rhc-file-input__item {
+  border-color: var(--rhc-file-input-item-border-color);
+  border-radius: var(--rhc-file-input-item-border-radius);
+  border-style: var(--rhc-file-input-item-border-style);
+  display: flex;
+  flex-direction: column;
+  padding-block-end: var(--rhc-file-input-item-padding-block-end);
+  padding-block-start: var(--rhc-file-input-item-padding-block-start);
+  padding-inline-end: var(--rhc-file-input-item-padding-inline-end);
+  padding-inline-start: var(--rhc-file-input-item-padding-inline-start);
+}
+
+.rhc-file-input__item--error {
+  border-color: var(--rhc-file-input-item-error-border-color);
+}
+
+.rhc-file-input__item--subtitle {
+  color: var(--rhc-file-input-item-subtitle-color);
+}
+
+.rhc-file-input__items-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-file-input-item-column-gap);
+}
+
+.rhc-file-input__inner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rhc-file-input__inner-container__sub {
+  display: flex;
+  flex-direction: column;
+}
