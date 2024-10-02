@@ -8,8 +8,12 @@
   @include rhc-logo;
 }
 
-.rhc-logo__img {
-  @include rhc-logo__img;
+.rhc-logo__image {
+  @include rhc-logo__image;
+}
+
+.rhc-logo__image * {
+  @include rhc-logo__icon;
 }
 
 .rhc-logo__caption {
