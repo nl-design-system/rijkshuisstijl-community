@@ -34,6 +34,7 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from './Button';
+export { Card, type CardProps } from './Card';
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
 export { Fieldset, type FieldsetProps } from './Fieldset';

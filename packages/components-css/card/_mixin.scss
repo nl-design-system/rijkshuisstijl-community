@@ -1,0 +1,129 @@
+@mixin rhc-card {
+  border-end-end-radius: var(--rhc-card-border-end-end-radius, var(--rhc-card-border-radius, 5px));
+  border-end-start-radius: var(--rhc-card-border-end-start-radius, var(--rhc-card-border-radius, 5px));
+  border-start-end-radius: var(--rhc-card-border-start-end-radius, var(--rhc-card-border-radius, 5px));
+  border-start-start-radius: var(--rhc-card-border-start-start-radius, var(--rhc-card-border-radius, 5px));
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-card-gap, inherit);
+  inline-size: var(--rhc-card-inline-size, 328px);
+  position: relative;
+  text-decoration: none;
+}
+
+@mixin rhc-card--default {
+  border-color: var(--rhc-card-border-color, #cbd5e1);
+  border-style: solid;
+  border-width: var(--rhc-card-border-width, 1px);
+  color: var(--rhc-card-color, #154273);
+}
+
+@mixin rhc-card--full-bleed {
+  color: var(--rhc-card-full-bleed-color, white);
+}
+
+@mixin rhc-card--active {
+  background-color: #f1f5f9;
+}
+
+@mixin rhc-card--focus-visible {
+  background-color: var(--rhc-card-focus-visible-background-color, #dce3ea);
+}
+
+@mixin rhc-card--default__content {
+  padding-block: var(--rhc-card-content-padding-block, 16px);
+  padding-inline: var(--rhc-card-content-padding-inline, 16px);
+}
+
+@mixin rhc-card--full-bleed__content {
+  padding-block: var(--rhc-card-full-bleed-content-padding-block, 16px);
+  padding-inline: var(--rhc-card-full-bleed-content-padding-inline, 16px);
+}
+
+@mixin rhc-card--full-bleed__footer {
+  padding-block: var(--rhc-card-full-bleed-footer-padding-block, 0);
+  padding-inline: var(--rhc-card-full-bleed-footer-padding-inline, 0);
+}
+
+@mixin rhc-card__footer {
+  padding-block: var(--rhc-card-footer-padding-block, 16px);
+  padding-inline: var(--rhc-card-footer-padding-inline, 16px);
+}
+
+@mixin rhc-card--horizontal__content {
+  background-color: var(--rhc-card-horizontal-background-color, #154273);
+  border-end-end-radius: var(--rhc-card-border-end-end-radius, var(--rhc-card-border-radius, 5px));
+  border-end-start-radius: var(--rhc-card-border-end-start-radius, var(--rhc-card-border-radius, 5px));
+  border-start-end-radius: var(--rhc-card-border-start-end-radius, var(--rhc-card-border-radius, 5px));
+  border-start-start-radius: var(--rhc-card-border-start-start-radius, var(--rhc-card-border-radius, 5px));
+  color: var(--rhc-card-horizontal-color, white);
+  display: flex;
+  flex-direction: row;
+  gap: var(--rhc-card-horizontal-content-gap, 16px);
+  padding-inline-end: var(--rhc-card-horizontal-padding-inline-end, 16px);
+}
+
+@mixin rhc-card__image {
+  aspect-ratio: 16 / 9;
+  block-size: 100%;
+}
+
+@mixin rhc-card--full-bleed__image-container {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+@mixin rhc-card--full-bleed__image {
+  @include rounded-border-corners;
+
+  block-size: unset;
+  inline-size: var(--rhc-card-inline-size, 328px);
+  position: absolute;
+  z-index: -1;
+}
+
+@mixin rhc-card--horizontal__image {
+  @include rounded-border-corners;
+}
+
+@mixin rhc-card__heading {
+  align-items: center;
+  display: flex;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@mixin rhc-card__heading--active {
+  text-decoration: underline;
+}
+
+@mixin rhc-card__heading--hover {
+  text-decoration: underline;
+}
+
+@mixin rhc-card__link {
+  color: var(--rhc-card-link-color, #01689b);
+  text-decoration: underline;
+}
+
+@mixin rhc-card__link--active {
+  --utrecht-link-color: var(--rhc-card-link-active-color, #42145f);
+
+  color: var(--rhc-card-link-active-color, #42145f);
+}
+
+@mixin rhc-card__link--hover {
+  text-decoration: none;
+}
+
+@mixin rounded-border-corners {
+  border-end-end-radius: var(--rhc-card-border-end-end-radius, var(--rhc-card-border-radius, 5px));
+  border-end-start-radius: var(--rhc-card-border-end-start-radius, var(--rhc-card-border-radius, 5px));
+  border-start-end-radius: var(--rhc-card-border-start-end-radius, var(--rhc-card-border-radius, 5px));
+  border-start-start-radius: var(--rhc-card-border-start-start-radius, var(--rhc-card-border-radius, 5px));
+}
+
+@mixin rhc-card__empty-element {
+  display: none;
+}
