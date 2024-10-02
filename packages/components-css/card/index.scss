@@ -72,7 +72,7 @@
 }
 
 .rhc-card:hover .rhc-card__heading {
-  @include rhc-card__heading--hover;
+  @include rhc-card__heading--active;
 }
 
 .rhc-card:focus-visible {
@@ -80,9 +80,9 @@
 }
 
 .rhc-card:focus-visible .rhc-card__heading {
-  @include rhc-card__heading--focus-visible;
+  @include rhc-card__heading--active;
 }
 
 .rhc-card:focus-visible .rhc-card__link {
-  @include rhc-card__link--focus-visible;
+  @include rhc-card__link--hover;
 }
