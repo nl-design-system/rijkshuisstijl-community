@@ -9,6 +9,9 @@ import {
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
+
+export { Textarea, type TextareaProps };
+
 export interface FormFieldTextareaProps
   extends Omit<FormFieldProps, 'onInput' | 'onBlur' | 'onFocus' | 'onChange'>,
     Pick<
