@@ -9,6 +9,7 @@ export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
   allowedFileTypes: string;
   fileSizeErrorMessage: string;
   fileTypeErrorMessage: string;
+  onFilesChange?: (callbackFiles: File[]) => void; // eslint-disable-line no-unused-vars
 }
 
 export const FileInput = forwardRef(
@@ -21,12 +22,21 @@ export const FileInput = forwardRef(
       buttonAppearance,
       fileSizeErrorMessage,
       fileTypeErrorMessage,
+      onFilesChange,
     }: PropsWithChildren<FileInputProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const [files, setFiles] = useState<File[]>([]);
     const inputElement = useRef<HTMLInputElement | null>(null);
-    const onChange = (newFiles: FileList | null) => newFiles && setFiles([...files, ...Array.from(newFiles)]);
+    const onChange = (newFiles: FileList | null) => {
+      if (newFiles) {
+        const updatedFiles = [...files, ...Array.from(newFiles)];
+        setFiles(updatedFiles);
+        if (onFilesChange) {
+          onFilesChange(updatedFiles);
+        }
+      }
+    };
 
     return (
       <div className="rhc-file-input" ref={ref}>

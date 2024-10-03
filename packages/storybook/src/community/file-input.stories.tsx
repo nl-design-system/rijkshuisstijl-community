@@ -94,3 +94,22 @@ export const MetCustomElementenParagraafEnAccordion: Story = {
     fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
   },
 };
+
+export const MetCallback: Story = {
+  args: {
+    children: [
+      <Paragraph>
+        Dit component heeft een callbackfunctie genaamd &apos;onFilesChange&apos;. Hiermee kan de parent component op de
+        hoogte worden gesteld zodra er een nieuw bestand is toegevoegd. Zie de console voor de waarden.
+      </Paragraph>,
+    ],
+    buttonText: 'Bestanden kiezen',
+    maxFileSizeInBytes: 10_485_760,
+    allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif',
+    fileSizeErrorMessage: 'Dit bestand is groter dan 10 MB.',
+    fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
+    onFilesChange: (files: File[]) => {
+      console.log('Callback bestanden: ', files);
+    },
+  },
+};
