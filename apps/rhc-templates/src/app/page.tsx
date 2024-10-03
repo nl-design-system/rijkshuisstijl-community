@@ -34,7 +34,7 @@ import {
 
 export default function Page() {
   return (
-    <div>
+    <>
       <div className="rhc-main-content">
         <PageContent className="rhc-page-content rhc-background-color-white">
           <Article>
@@ -275,6 +275,6 @@ export default function Page() {
           },
         ]}
       />
-    </div>
+    </>
   );
 }
