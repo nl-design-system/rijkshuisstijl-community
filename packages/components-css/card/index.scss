@@ -17,7 +17,7 @@
 }
 
 .rhc-card__footer {
-  @include rhc-card__footer;
+  @include rhc-card__content;
 }
 .rhc-card__image {
   @include rhc-card__image;
@@ -27,16 +27,16 @@
   @include rhc-card__heading;
 }
 
-.rhc-card--default .rhc-card__content {
-  @include rhc-card--default__content;
+.rhc-card__icon {
+  @include rhc-card__icon;
 }
 
-.rhc-card--full-bleed .rhc-card__content {
-  @include rhc-card--full-bleed__content;
+.rhc-card__metadata {
+  @include rhc-card__metadata;
 }
 
-.rhc-card--full-bleed .rhc-card__image {
-  @include rhc-card--full-bleed__image;
+.rhc-card__content {
+  @include rhc-card__content;
 }
 
 .rhc-card--horizontal .rhc-card__content {
@@ -49,6 +49,10 @@
 
 .rhc-card--full-bleed .rhc-card__footer {
   @include rhc-card--full-bleed__footer;
+}
+
+.rhc-card--full-bleed .rhc-card__image {
+  @include rhc-card--full-bleed__image;
 }
 
 .rhc-card__link {
@@ -67,22 +71,22 @@
   @include rhc-card__link--active;
 }
 
-.rhc-card:hover .rhc-card__link {
-  @include rhc-card__link--hover;
+.rhc-card:focus {
+  @include rhc-card--focus;
+}
+
+.rhc-card:focus .rhc-card__heading {
+  @include rhc-card__heading--active;
+}
+
+.rhc-card:focus .rhc-card__link {
+  @include rhc-card__link--focus;
 }
 
 .rhc-card:hover .rhc-card__heading {
   @include rhc-card__heading--active;
 }
 
-.rhc-card:focus-visible {
-  @include rhc-card--focus-visible;
-}
-
-.rhc-card:focus-visible .rhc-card__heading {
-  @include rhc-card__heading--active;
-}
-
-.rhc-card:focus-visible .rhc-card__link {
+.rhc-card:hover .rhc-card__link {
   @include rhc-card__link--hover;
 }
