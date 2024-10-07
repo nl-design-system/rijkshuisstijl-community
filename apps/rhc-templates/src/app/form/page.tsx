@@ -27,7 +27,7 @@ import {
 export default function Form() {
   return (
     <>
-      <div className="rhc-main-content">
+      <div className="rhc-background-color-white rhc-main-content">
         <PageContent className="container page-content rhc-page-content rhc-background-color-white">
           <Article>
             <BreadcrumbNav>
