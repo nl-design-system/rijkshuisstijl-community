@@ -1,0 +1,42 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@import "./mixin";
+
+.rhc-navigation-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-block: 0;
+  padding-inline: 0;
+  row-gap: var(--rhc-navigation-list-row-gap, var(--rhc-space-100));
+  &__item {
+    @include rhc-navigation-list__item;
+    &__content {
+      @include rhc-navigation-list__item__content;
+    }
+    &__label {
+      @include rhc-navigation-list__item__label;
+    }
+    &__description {
+      @include rhc-navigation-list__item__description;
+    }
+    &__start-icon {
+      @include rhc-navigation-list__item__start-icon;
+    }
+    &__end-icon {
+      @include rhc-navigation-list__item__end-icon;
+    }
+  }
+}
+@container (width <= 768px) {
+  .rhc-navigation-list__item__content {
+    grid-template-areas:
+      "label label label end-icon"
+      "content content content end-icon";
+  }
+  .rhc-navigation-list__item__start-icon {
+    align-self: start;
+  }
+}
