@@ -12,7 +12,7 @@ const meta = {
     },
   },
   args: {
-    'aria-label': 'Nieuwe Bericht',
+    'aria-label': 'Nieuw Bericht',
   },
   parameters: {
     docs: {
