@@ -1,13 +1,13 @@
 import {
   AccordionProvider,
   FileInput,
-  FormLabel,
   Heading,
   Paragraph,
   UnorderedList,
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react/*';
+import { FormLabel } from '@utrecht/component-library-react';
 
 const meta = {
   title: 'Rijkshuisstijl/FileInput',

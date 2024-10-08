@@ -21,8 +21,12 @@ import {
   FormFieldRadioOption,
   FormFieldCheckboxOption,
   Icon,
+  FileInput,
+  UnorderedList,
+  UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
-// import { DateInput, FileInput } from '@amsterdam/design-system-react';
+import { FormLabel } from '@utrecht/component-library-react';
+// import { DateInput } from '@amsterdam/design-system-react';
 
 export default function Form() {
   return (
@@ -101,20 +105,22 @@ export default function Form() {
                   <FormFieldRadioOption label="Label" />
                 </div>
               </Fieldset>
-              {/*
-                <div className="unstarted">
-                  <FormField label="Bestand toevoegen">
-                    <UnorderedList>
-                      <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
-                      <UnorderedListItem>U mag maximaal 10 Mb aan bestanden toevoegen.</UnorderedListItem>
-                      <UnorderedListItem>
-                        Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bpm en gif.
-                      </UnorderedListItem>
-                    </UnorderedList>
-                    <FileInput multiple></FileInput>
-                  </FormField>
-                </div>
-              */}
+              <FileInput
+                allowedFileTypes=".doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif"
+                buttonText="Bestand kiezen"
+                fileSizeErrorMessage="Dit bestand is groter dan 10 MB."
+                fileTypeErrorMessage="Dit bestandstype wordt niet toegestaan."
+                maxFileSizeInBytes={10485760}
+              >
+                <FormLabel>Bestand toevoegen</FormLabel>
+                <UnorderedList>
+                  <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
+                  <UnorderedListItem>Een bestand mag maximaal 10MB groot zijn.</UnorderedListItem>
+                  <UnorderedListItem>
+                    Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bmp en gif.
+                  </UnorderedListItem>
+                </UnorderedList>
+              </FileInput>
               <Heading level={1}>Informatie over de verwerking van uw persoonsgegevens</Heading>
               <Paragraph>
                 Wij gebruiken gegevens die u heeft ingevuld om uw vraag te beantwoorden. Daarna worden ze volgens in de
