@@ -8,6 +8,7 @@ import {
 } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react/*';
 import { FormLabel } from '@utrecht/component-library-react';
+import readme from './file-input.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/FileInput',
@@ -17,6 +18,13 @@ const meta = {
     buttonAppearance: {
       control: { type: 'select' },
       options: ['primary-action-button', 'secondary-action-button', 'subtle-button'],
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
     },
   },
 } satisfies Meta<typeof FileInput>;
