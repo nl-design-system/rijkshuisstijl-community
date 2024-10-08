@@ -19,7 +19,7 @@
   },
   "scripts": {
     "clean": "rimraf dist/* src/generated/*",
-    "build": "npm-run-all clean build:figma-tokens build:adham build:style-dictionary",
+    "build": "npm-run-all clean build:figma-tokens build:extract-themes build:style-dictionary",
     "build:extract-themes": "node ./extract-themes.mjs",
     "build:figma-tokens": "node ./token-transformer.mjs",
     "build:scss": "sass --no-source-map src/:dist/",
