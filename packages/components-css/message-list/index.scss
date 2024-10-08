@@ -1,0 +1,28 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@import "./mixin";
+
+.rhc-message-list {
+  @include rhc-message-list;
+  &__item {
+    @include rhc-message-list__item;
+    &__content {
+      @include rhc-message-list__item__content;
+    }
+    &__label {
+      @include rhc-message-list__item__label;
+    }
+    &__description {
+      @include rhc-message-list__item__description;
+    }
+    &__meta-data {
+      @include rhc-message-list__item__meta-data;
+    }
+    &__end-icon {
+      @include rhc-navigation-list__item__end-icon;
+    }
+  }
+}
