@@ -4,7 +4,7 @@ import { PropsWithChildren } from 'react';
 import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/components-css/index.scss';
-import { Logo, NavBar, PageHeader } from '@rijkshuisstijl-community/components-react';
+import { Logo, Icon, NavBar, PageHeader } from '@rijkshuisstijl-community/components-react';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import './globals.css';
 import Head from 'next/head';
@@ -19,24 +19,22 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
       </Head>
       <body>
         <RHCTheme>
+          <div className="rhc-background-color-white">
+            <PageHeader>
+              <Logo organisation="Rijkshuisstijl Community">
+                <Icon icon={'nederland-map'} className={'dutch-map'} />
+              </Logo>
+            </PageHeader>
+          </div>
+          <NavBar
+            items={[
+              { href: '/', label: 'Page' },
+              { href: '/form', label: 'Form' },
+              { href: '/details', label: 'Details' },
+              { href: '/collage', label: 'Collage' },
+            ]}
+          ></NavBar>
           <main className="page">
-            <div className="rhc-background-color-white">
-              <PageHeader>
-                <div className="unfinished">
-                  <Logo organisation="Rijkshuisstijl Community"></Logo>
-                </div>
-              </PageHeader>
-            </div>
-            <div className="unstarted rhc-background-color-lint-blauw">
-              <NavBar
-                items={[
-                  { href: '/', label: 'Page' },
-                  { href: '/form', label: 'Form' },
-                  { href: '/details', label: 'Details' },
-                  { href: '/collage', label: 'Collage' },
-                ]}
-              ></NavBar>
-            </div>
             <Document>{children}</Document>
           </main>
         </RHCTheme>

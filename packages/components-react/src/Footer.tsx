@@ -4,22 +4,28 @@ import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 import { Heading } from './Heading';
 
 interface FooterProps extends PageFooterProps {
-  title: string;
+  heading: ReactNode;
+  headingLevel: number;
   columns?: IColumn[];
 }
 
 interface IColumn {
-  title: string;
-  elements: ReactNode;
+  heading: ReactNode;
+  children: ReactNode;
 }
 
+const MAX_HEADING_LEVEL = 6;
+
 export const Footer = forwardRef(
-  ({ className, title, columns, ...restProps }: PropsWithChildren<FooterProps>, ref: ForwardedRef<HTMLDivElement>) => (
+  (
+    { className, heading, columns, headingLevel, children, ...restProps }: PropsWithChildren<FooterProps>,
+    ref: ForwardedRef<HTMLDivElement>,
+  ) => (
     <UtrechtPageFooter {...restProps} className={clsx('rhc-footer', className)} ref={ref}>
-      {title && (
+      {heading && (
         <div className="rhc-footer__column">
-          <Heading className="rhc-footer__title" level={4}>
-            {title}
+          <Heading className="rhc-footer__title" level={headingLevel}>
+            {heading}
           </Heading>
         </div>
       )}
@@ -27,12 +33,17 @@ export const Footer = forwardRef(
       {columns &&
         columns.map((column, index) => (
           <div className="rhc-footer__column" key={index}>
-            <Heading className="rhc-footer__column--title" level={5}>
-              {column.title}
+            <Heading
+              className="rhc-footer__column--title"
+              level={headingLevel >= MAX_HEADING_LEVEL ? MAX_HEADING_LEVEL : headingLevel + 1}
+            >
+              {column.heading}
             </Heading>
-            {column.elements}
+            {column.children}
           </div>
         ))}
+
+      {children}
     </UtrechtPageFooter>
   ),
 );

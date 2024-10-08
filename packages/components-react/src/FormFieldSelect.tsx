@@ -1,15 +1,18 @@
 import {
   FormField,
   FormFieldDescription,
-  FormFieldProps,
+  type FormFieldProps,
   FormLabel,
   Select,
   SelectOption,
+  type SelectOptionProps,
   SelectProps,
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
+
+export { SelectOption, type SelectOptionProps };
 
 export interface FormFieldSelectProps
   extends Omit<FormFieldProps, 'onInput' | 'onBlur' | 'onFocus' | 'onChange'>,

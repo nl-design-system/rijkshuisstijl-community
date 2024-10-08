@@ -14,12 +14,10 @@ const init = async ({ input, output }) => {
   const excludes = [
     'components/avatar',
     'components/backdrop',
-    'components/counter-badge',
     'components/drawer',
     'components/form-field-option-label',
     'components/modal-dialog',
     'components/pagination',
-    'components/side-nav',
     'components/status-badge',
     'components/summary-list',
     'components/task-list',

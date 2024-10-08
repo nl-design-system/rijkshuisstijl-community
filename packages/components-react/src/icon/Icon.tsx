@@ -8,6 +8,7 @@ import {
   IconArrowNarrowRight,
   IconArrowNarrowUp,
   IconArrowsDiagonal,
+  IconArrowsSort,
   IconArrowUpRight,
   IconBackhoe,
   IconBell,
@@ -18,6 +19,8 @@ import {
   IconCaretRight,
   IconCaretUp,
   IconCheck,
+  IconChevronRight,
+  IconCircleCheck,
   IconClock,
   IconCloudLock,
   IconCornerLeftUp,
@@ -34,6 +37,7 @@ import {
   IconHash,
   IconHeart,
   IconHome,
+  IconInfoCircle,
   IconInfoSquare,
   IconLink,
   IconLock,
@@ -56,6 +60,8 @@ import {
   IconSend,
   IconSettings,
   IconShare,
+  IconSortAscending,
+  IconSortDescending,
   IconSquare,
   IconTransfer,
   IconTrash,
@@ -65,18 +71,24 @@ import {
   IconVolumeOff,
   IconX,
 } from '@tabler/icons-react';
-import { Icon as UtrechtIcon } from '@utrecht/component-library-react';
-import { PropsWithChildren } from 'react';
+import { Icon as UtrechtIcon, type IconProps as UtrechtIconProps } from '@utrecht/component-library-react';
+import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
+import { DutchMapIcon } from './DutchMapIcon';
 import { RijkshuisstijlIconID } from './IconTypes';
 
-export const IconenSet: Partial<Record<RijkshuisstijlIconID, any>> = {
+export const IconenSet: Partial<Record<RijkshuisstijlIconID, ReactNode>> = {
   activiteit: <IconCalendarCheck />,
   'agile-werken': <IconArrowIteration />,
+  'alert-circle': <IconAlertCircle />,
+
   'api-inrichting': <IconApi />,
+  'arrows-sort': <IconArrowsSort />,
   audio: <IconVolume />,
   bel: <IconBell />,
   bewerken: <IconEdit />,
   blog: <IconFilePencil />,
+  'circle-check': <IconCircleCheck />,
+  'chevron-right': <IconChevronRight />,
   comment: <IconMessageDots />,
   communicatie: <IconBubble />,
   delen: <IconShare />,
@@ -96,6 +108,7 @@ export const IconenSet: Partial<Record<RijkshuisstijlIconID, any>> = {
   hashtag: <IconHash />,
   home: <IconHome />,
   info: <IconInfoSquare />,
+  'info-circle': <IconInfoCircle />,
   inloggen: <IconLogin2 />,
   instellingen: <IconSettings />,
   'interne-link': <IconLink />,
@@ -108,6 +121,7 @@ export const IconenSet: Partial<Record<RijkshuisstijlIconID, any>> = {
   mail: <IconMail />,
   meer: <IconDotsVertical />,
   menu: <IconMenu2 />,
+  'nederland-map': <DutchMapIcon />,
   nieuws: <IconNews />,
   paperclip: <IconPaperclip />,
   'permanent-beta': <IconBackhoe />,
@@ -124,6 +138,8 @@ export const IconenSet: Partial<Record<RijkshuisstijlIconID, any>> = {
   save: <IconDeviceFloppy />,
   'secure-link': <IconLock />,
   smartphone: <IconDeviceMobile />,
+  'sort-ascending': <IconSortAscending />,
+  'sort-descending': <IconSortDescending />,
   tegelweergave: <IconGridDots />,
   telefoon: <IconPhone />,
   terug: <IconArrowNarrowLeft />,
@@ -143,15 +159,19 @@ export const IconenSet: Partial<Record<RijkshuisstijlIconID, any>> = {
 
 export const iconOptions = Object.keys(IconenSet);
 
-interface IconProps {
-  icon?: any;
+export interface IconProps extends UtrechtIconProps {
+  icon?: ReactNode;
 }
 
-export const Icon = ({ children, icon }: PropsWithChildren<IconProps>) => {
-  return (
-    <UtrechtIcon>
-      {icon && IconenSet[icon as keyof typeof IconenSet]}
-      {children}
-    </UtrechtIcon>
-  );
-};
+export const Icon = forwardRef(
+  ({ children, icon, className, ...restProps }: PropsWithChildren<IconProps>, ref: ForwardedRef<HTMLSpanElement>) => {
+    return (
+      <UtrechtIcon className={className} ref={ref} {...restProps}>
+        {icon && IconenSet[icon as keyof typeof IconenSet]}
+        {children}
+      </UtrechtIcon>
+    );
+  },
+);
+
+Icon.displayName = 'Icon';

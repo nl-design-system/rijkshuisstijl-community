@@ -11,14 +11,16 @@ import {
   Image,
   Paragraph,
   Separator,
+  LinkList,
+  LinkListLink,
+  PageHeader,
 } from '@rijkshuisstijl-community/components-react';
-import { LinkList, LinkListLink, PageContent, PageHeader } from '@utrecht/component-library-react/dist/css-module';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 
 export default function Details() {
   return (
-    <main>
-      <div className="unfinished">
+    <>
+      <div className="rhc-background-color-white">
         <PageHeader>
           <BreadcrumbNav>
             <BreadcrumbNavLink href="/" rel="home" index={0}>
@@ -48,18 +50,15 @@ export default function Details() {
             </LinkList>
           </div>
         </PageHeader>
-      </div>
-
-      <PageContent className="container page-content">
-        <Article>
-          <Paragraph>
-            De Arbeidstijdenwet geeft regels voor werktijden, pauzes en rusttijden van werknemers. Met deze regels wil
-            de Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de combinatie van werk, privé en
-            zorgtaken gemakkelijker maken.
-          </Paragraph>
-          <Separator></Separator>
-          <Heading level={1}>Vraag en antwoord</Heading>
-          <div className="unstarted">
+        <main className="rhc-main-content">
+          <Article>
+            <Paragraph>
+              De Arbeidstijdenwet geeft regels voor werktijden, pauzes en rusttijden van werknemers. Met deze regels wil
+              de Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de combinatie van werk, privé en
+              zorgtaken gemakkelijker maken.
+            </Paragraph>
+            <Separator></Separator>
+            <Heading level={1}>Vraag en antwoord</Heading>
             <LinkList>
               <LinkListLink>Wat zijn de regels bij consignatie (oproepdienst)?</LinkListLink>
               <LinkListLink>Hoe vaak mag ik nachtdienst hebben?</LinkListLink>
@@ -67,8 +66,6 @@ export default function Details() {
               <LinkListLink>Wanneer geldt de Arbeidstijdenwet niet (of gedeeltelijk) voor mij?</LinkListLink>
               <LinkListLink>Meer vragen en antwoorden</LinkListLink>
             </LinkList>
-          </div>
-          <div className="unstarted">
             <Heading level={1}>Uitgelicht</Heading>
             <div className="image-group">
               <div className="image-group-box">
@@ -94,15 +91,16 @@ export default function Details() {
                 </Figure>
               </div>
             </div>
-          </div>
-        </Article>
-      </PageContent>
+          </Article>
+        </main>
+      </div>
       <Footer
-        title="De Rijksoverheid. Voor Nederland"
+        heading="De Rijksoverheid. Voor Nederland"
+        headingLevel={4}
         columns={[
           {
-            title: 'Service',
-            elements: [
+            heading: 'Service',
+            children: [
               <LinkList key="1">
                 <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
                   Contact
@@ -129,8 +127,8 @@ export default function Details() {
             ],
           },
           {
-            title: 'Over deze site',
-            elements: (
+            heading: 'Over deze site',
+            children: (
               <LinkList key="2">
                 <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
                   Over Rijksoverheid.nl
@@ -161,6 +159,6 @@ export default function Details() {
           },
         ]}
       ></Footer>
-    </main>
+    </>
   );
 }

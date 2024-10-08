@@ -1,19 +1,8 @@
-import { Heading, Icon, Paragraph, Alert as UtrechtAlert } from '@utrecht/component-library-react';
+import { Heading, Paragraph, Alert as UtrechtAlert } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
-import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from './icons';
-const RhcIcon = ({ type }: { type: string }) =>
-  type === 'info' ? (
-    <InfoIcon></InfoIcon>
-  ) : type === 'ok' ? (
-    <SuccessIcon></SuccessIcon>
-  ) : type === 'warning' ? (
-    <WarningIcon></WarningIcon>
-  ) : type === 'error' ? (
-    <ErrorIcon></ErrorIcon>
-  ) : (
-    <></>
-  );
+import { Icon } from './icon/Icon';
+
 export interface AlertProps {
   type: 'info' | 'ok' | 'warning' | 'error';
   heading?: ReactNode;
@@ -36,9 +25,17 @@ export const Alert = forwardRef(
               'rhc-alert__icon-container--info': type === 'info',
             })}
           >
-            <Icon>
-              <RhcIcon type={type} />
-            </Icon>
+            <Icon
+              icon={
+                type === 'info'
+                  ? 'info-circle'
+                  : type === 'ok'
+                    ? 'circle-check'
+                    : type === 'warning'
+                      ? 'let-op'
+                      : 'alert-circle'
+              }
+            />
           </div>
           <div>
             <Heading appearance="utrecht-heading-5" level={headingLevel || 3}>
