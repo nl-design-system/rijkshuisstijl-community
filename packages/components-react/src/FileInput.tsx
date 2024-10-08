@@ -57,7 +57,7 @@ export const FileInput = forwardRef(
         >
           {buttonText}
         </Button>
-        <div className="file-input__items-container">
+        <div className="rhc-file-input__items-container">
           {files.map((item: File) => {
             return (
               <FileInputItem
@@ -77,4 +77,4 @@ export const FileInput = forwardRef(
   },
 );
 
-FileInput.displayName = 'File-input';
+FileInput.displayName = 'FileInput';
