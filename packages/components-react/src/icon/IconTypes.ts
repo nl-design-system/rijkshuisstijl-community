@@ -230,6 +230,7 @@ export type RijkshuisstijlIconID =
   | 'home'
   | 'info'
   | 'info-circle'
+  | 'info-square'
   | 'inloggen'
   | 'instellingen'
   | 'interne-link'
