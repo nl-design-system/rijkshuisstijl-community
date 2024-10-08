@@ -19,10 +19,11 @@
   },
   "scripts": {
     "clean": "rimraf dist/* src/generated/*",
-    "build": "npm-run-all clean build:figma-tokens build:style-dictionary",
+    "build": "npm-run-all clean build:figma-tokens build:adham build:style-dictionary",
+    "build:extract-themes": "node ./extract-themes.mjs",
     "build:figma-tokens": "node ./token-transformer.mjs",
     "build:scss": "sass --no-source-map src/:dist/",
-    "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.json",
+    "build:style-dictionary": "node ./run-build.mjs",
     "watch": "npm-run-all watch:**",
     "watch:style-dictionary": "chokidar --follow-symlinks --command 'npm-run-all clean build:figma-tokens build:style-dictionary' 'src/**/*.tokens.json'"
   },
