@@ -45,14 +45,11 @@
   background-color: var(--rhc-toggletip-active-background-color);
   border-color: var(--rhc-toggletip-active-border-color);
   border-style: solid;
-  border-width: 1px;
   color: var(--rhc-toggletip-active-color);
 }
 
 @mixin rhc-toggletip--hover {
   background-color: var(--rhc-toggletip-hover-background-color);
-  border-color: var(--rhc-toggletip-hover-border-color, var(--rhc-toggletip-hover-color));
-  border-width: var(--rhc-toggletip-hover-border-width);
   color: var(--rhc-toggletip-hover-color);
 }
 
