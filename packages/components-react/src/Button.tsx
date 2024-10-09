@@ -12,6 +12,7 @@ import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 export { Button, type ButtonProps, PrimaryActionButton, SecondaryActionButton, SubtleButton };
 
 export interface IconButtonProps extends ButtonProps {
+  className?: string;
   label: string;
 }
 
