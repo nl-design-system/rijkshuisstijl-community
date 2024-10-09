@@ -47,6 +47,7 @@ export {
   DataListValue,
   type DataListValueProps,
 } from './DataList';
+export { DotBadge, type DotBadgeProps } from './DotBadge';
 export { Fieldset, FieldsetLegend, type FieldsetLegendProps, type FieldsetProps } from './Fieldset';
 export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from './Figure';
 export { Footer } from './Footer';
