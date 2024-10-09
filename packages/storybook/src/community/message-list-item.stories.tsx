@@ -10,6 +10,7 @@ const meta = {
     description: 'Description',
     href: '#',
     label: 'Label',
+    metaData: 'Meta Data',
   },
   argTypes: {
     description: {
@@ -68,5 +69,17 @@ export const Default: Story = {
     href: '#',
     label: 'Label',
     metaData: 'Meta Data',
+  },
+};
+
+export const Hover: Story = {
+  parameters: {
+    pseudo: { hover: true },
+  },
+};
+
+export const Focus: Story = {
+  parameters: {
+    pseudo: { focus: true },
   },
 };

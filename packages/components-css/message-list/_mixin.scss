@@ -9,7 +9,7 @@
   list-style: none;
   margin-block: 0;
   padding-inline: 0;
-  row-gap: var(--rhc-message-list-row-gap);
+  row-gap: var(--rhc-message-list-row-gap, var(--rhc-space-100));
   &:last-child {
     border-block-end-color: var(--rhc-message-list-item-border-color);
     border-block-end-style: solid;

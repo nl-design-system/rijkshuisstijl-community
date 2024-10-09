@@ -41,3 +41,26 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const SmallContainer: Story = {
+  render: (args) => (
+    <div style={{ width: '380px', containerType: 'inline-size' }}>
+      <MessageList {...args}>
+        <MessageListItem
+          description={'Uw pensioenoverzicht'}
+          href={'#'}
+          label={'Pensioenfonds'}
+          metaData={'01-05-2024'}
+          withBadge={{ ariaLabel: 'Nieuw', role: 'status' }}
+        />
+        <MessageListItem description={'Herinnering APK'} href={'#'} label={'RDW'} metaData={'04-04-2024'} />
+        <MessageListItem
+          description={'Aanslag OZB'}
+          href={'#'}
+          label={'Samenwerkings-verband Haaglanden'}
+          metaData={'04-04-2024'}
+        />
+      </MessageList>
+    </div>
+  ),
+};
