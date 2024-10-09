@@ -62,6 +62,7 @@ export { Heading, type HeadingProps } from './Heading';
 export { Hero, type HeroProps } from './Hero';
 export { Icon, type IconProps, iconOptions } from './icon/Icon';
 export { Image, type ImageProps } from './Image';
+export { Keep } from './Keep';
 export { Link, type LinkProps } from './Link';
 export { LinkList, LinkListLink, type LinkListLinkProps, type LinkListProps } from './LinkList';
 export { Logo, type LogoProps } from './Logo';

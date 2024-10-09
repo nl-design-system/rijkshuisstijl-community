@@ -1,0 +1,43 @@
+@import "./mixin";
+
+.rhc-keep {
+  *:nth-child(1) {
+    border-radius: inherit;
+  }
+}
+
+.rhc-keep-start-start {
+  @include rhc-keep--border-radius-corner-start-start;
+
+  *:nth-child(2) {
+    border-start-end-radius: var(--rhc-hero-message-border-radius);
+    inset-inline-start: 0;
+  }
+}
+
+.rhc-keep-start-end {
+  @include rhc-keep--border-radius-corner-start-end;
+
+  *:nth-child(2) {
+    border-start-start-radius: var(--rhc-hero-message-border-radius);
+    inset-inline-end: 0;
+  }
+}
+
+.rhc-keep-end-start {
+  @include rhc-keep--border-radius-corner-end-start;
+
+  *:nth-child(2) {
+    border-start-start-radius: var(--rhc-hero-message-border-radius);
+    inset-inline-end: 0;
+  }
+}
+
+.rhc-keep-end-end {
+  @include rhc-keep--border-radius-corner-end-end;
+
+  *:nth-child(2) {
+    border-start-end-radius: var(--rhc-hero-message-border-radius);
+    inset-inline-start: 0;
+  }
+}
