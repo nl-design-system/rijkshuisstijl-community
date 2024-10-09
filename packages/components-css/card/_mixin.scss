@@ -86,8 +86,8 @@
 @mixin rhc-card__heading {
   align-items: center;
   display: flex;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: var(--rhc-card-as-link-heading-font-size, 24px);
+  font-weight: var(--rhc-card-as-link-heading-font-weight, 700);
 }
 
 @mixin rhc-card__heading--active {
