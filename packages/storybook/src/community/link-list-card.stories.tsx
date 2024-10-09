@@ -42,13 +42,8 @@ type Story = StoryObj<StoryProps>;
 
 export const Default: Story = {
   args: {
-    headingLevel: 3,
+    headingLevel: 2,
     heading: 'Heading',
-    // links: [
-    //   { href: 'https://www.example.com', body: 'Link 1' },
-    //   { href: 'https://www.example.com', body: 'Link 2' },
-    //   { href: 'https://www.example.com', body: 'Link 3' },
-    // ],
     children: [
       <LinkListLink href="#">Link 1</LinkListLink>,
       <LinkListLink href="#">Link 2</LinkListLink>,
