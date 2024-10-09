@@ -65,6 +65,7 @@ export { Icon, type IconProps, iconOptions } from './icon/Icon';
 export { Image, type ImageProps } from './Image';
 export { Link, type LinkProps } from './Link';
 export { LinkList, LinkListLink, type LinkListLinkProps, type LinkListProps } from './LinkList';
+export { LinkListCard } from './LinkListCard';
 export { Logo, type LogoProps } from './Logo';
 export { NavBar, type NavBarItemProps, type NavBarProps } from './NavBar';
 export { OrderedList, OrderedListItem, type OrderedListItemProps, type OrderedListProps } from './OrderedList';
