@@ -95,6 +95,7 @@ export { TableCaption } from './TableCaption';
 export { TableCell, type TableCellProps } from './TableCell';
 export { TableHeaderCell, type TableHeaderCellProps } from './TableHeaderCell';
 export { Textbox, type TextboxProps } from './Textbox';
+export { Toggletip, ToggletipButton, ToggletipContent, type ToggletipProps } from './Toggletip';
 export {
   UnorderedList,
   UnorderedListItem,
