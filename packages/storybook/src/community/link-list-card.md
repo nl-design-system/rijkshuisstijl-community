@@ -4,12 +4,12 @@
 
 [NL design system](https://www.nldesignsystem.nl/alert/) | [Figma](https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1195-4201&t=n1djYpmvDCKmAEUi-0) | [GitHub](https://github.com/nl-design-system/rijkshuisstijl-community/issues/472)
 
-De **LinkListCard** component biedt een manier om een **card** weer te geven met een heading en een collectie van links. Dit component accepteert twee verschillende props: `headingLevel`, `headingText`
+De **LinkListCard** component biedt een manier om een **card** weer te geven met een heading en een collectie van links. Dit component accepteert twee verschillende props: `headingLevel`, `heading`
 
 - **`headingLevel`** (`number`)
   Dit bepaalt het niveau van de heading, vergelijkbaar met HTML heading-tags
 
-- **`headingText`** (`string`)
+- **`heading`** (`string`)
   De tekst die weergegeven wordt binnen de heading.
 
 LinkListCard-component bestaat uit de volgende subcomponenten:
