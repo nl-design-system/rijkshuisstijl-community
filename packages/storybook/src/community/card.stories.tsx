@@ -38,9 +38,10 @@ const meta = {
     imageAlt: 'Placeholder Image',
     href: '#',
     title: 'Card Title',
-    description: '',
-    linkLabel: '',
-    metadata: '',
+    heading: 'Default Card',
+    description: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    metadata: 'Metadata',
+    linkLabel: 'Label',
   },
   tags: ['autodocs'],
   parameters: {
@@ -54,12 +55,7 @@ const meta = {
 
 export default meta;
 
-export const Default = {
-  args: {
-    heading: 'Default Card',
-    appearance: 'default',
-  },
-};
+export const Default = {};
 
 export const FullBleed = {
   args: {
