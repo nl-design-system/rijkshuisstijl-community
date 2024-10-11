@@ -26,6 +26,7 @@
   min-block-size: var(--rhc-navigation-list-item-min-height, var(--rhc-size-target));
   padding-block: var(--rhc-navigation-list-item-padding-block, var(--rhc-space-100));
   padding-inline: var(--rhc-navigation-list-item-padding-inline, var(--rhc-space-200));
+  position: relative;
   text-decoration: none;
   &:hover {
     background-color: var(--rhc-navigation-list-item-hover-background-color, var(--rhc-color-grijs-50));
@@ -33,6 +34,7 @@
 
   &:focus {
     background-color: var(--rhc-navigation-list-item-focus-background-color, var(--rhc-color-lintblauw-50));
+    z-index: 999;
   }
 
   &:active {
@@ -55,7 +57,7 @@
   }
 }
 
-@mixin rhc-navigation-list__item__content {
+@mixin rhc-navigation-list__item-content {
   align-items: center;
   display: grid;
   flex: 1;

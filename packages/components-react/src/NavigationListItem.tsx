@@ -21,7 +21,7 @@ export const NavigationListItem = forwardRef<HTMLLIElement, NavigationListItemPr
           ) : (
             <Icon className={clsx('rhc-navigation-list__item__start-icon')}>{icon}</Icon>
           )}
-          <span className={clsx('rhc-navigation-list__item__content')}>
+          <span className={clsx('rhc-navigation-list__item-content')}>
             <Heading className={clsx('rhc-navigation-list__item__label')} level={3}>
               {label}
             </Heading>

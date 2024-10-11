@@ -8,8 +8,8 @@
   @include rhc-navigation-list;
   &__item {
     @include rhc-navigation-list__item;
-    &__content {
-      @include rhc-navigation-list__item__content;
+    &-content {
+      @include rhc-navigation-list__item-content;
     }
     &__label {
       @include rhc-navigation-list__item__label;
@@ -25,8 +25,11 @@
     }
   }
 }
+.rhc-navigation-list--container-small {
+  container-type: inline-size;
+}
 @container (width <= 768px) {
-  .rhc-navigation-list__item__content {
+  .rhc-navigation-list__item-content {
     grid-template-areas:
       "label label label end-icon"
       "content content content end-icon";
