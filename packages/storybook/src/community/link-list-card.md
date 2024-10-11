@@ -9,7 +9,7 @@ De **LinkListCard** component biedt een manier om een **card** weer te geven met
 - **`headingLevel`** (`number`)
   Dit bepaalt het niveau van de heading, vergelijkbaar met HTML heading-tags
 
-- **`headingText`** (`string`)
+- **`heading`** (`string`)
   De tekst die weergegeven wordt binnen de heading.
 
 LinkListCard-component bestaat uit de volgende subcomponenten:

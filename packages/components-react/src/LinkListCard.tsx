@@ -1,16 +1,17 @@
-import { forwardRef, HTMLAttributes } from 'react';
+import clsx from 'clsx';
+import { forwardRef, HTMLAttributes, ReactNode } from 'react';
 import { Heading } from './Heading';
 import { LinkList } from './LinkList';
 
 export interface LinkListCardProps extends HTMLAttributes<HTMLDivElement> {
   headingLevel: number;
-  heading: string;
+  heading: ReactNode;
 }
 
 export const LinkListCard = forwardRef<HTMLDivElement, LinkListCardProps>(
-  ({ children, headingLevel, heading }, ref) => {
+  ({ children, className, headingLevel, heading }, ref) => {
     return (
-      <div className="rhc-link-list__card" ref={ref}>
+      <div className={clsx('rhc-link-list-card', className)} ref={ref}>
         <Heading level={headingLevel}>{heading}</Heading>
         <LinkList>{children}</LinkList>
       </div>
