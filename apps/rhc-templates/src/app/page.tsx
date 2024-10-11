@@ -75,32 +75,30 @@ export default function Page() {
                 <Link external={true} externalLabel="example external label" href="example.com">
                   Een externe link
                 </Link>
-                <div>
-                  <Table>
-                    <TableCaption>Caption van tabel</TableCaption>
-                    <TableHeader>
-                      <TableRow>
-                        <TableHeaderCell>Label</TableHeaderCell>
-                        <TableHeaderCell>Label</TableHeaderCell>
-                        <TableHeaderCell>Label</TableHeaderCell>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      <TableRow>
-                        <TableCell>Label</TableCell>
-                        <TableCell>Label</TableCell>
-                        <TableCell>Label</TableCell>
-                      </TableRow>
-                    </TableBody>
-                    <TableFooter>
-                      <TableRow>
-                        <TableCell>Label</TableCell>
-                        <TableCell>Label</TableCell>
-                        <TableCell>Label</TableCell>
-                      </TableRow>
-                    </TableFooter>
-                  </Table>
-                </div>
+                <Table>
+                  <TableCaption>Caption van tabel</TableCaption>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHeaderCell>Label</TableHeaderCell>
+                      <TableHeaderCell>Label</TableHeaderCell>
+                      <TableHeaderCell>Label</TableHeaderCell>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell>Label</TableCell>
+                      <TableCell>Label</TableCell>
+                      <TableCell>Label</TableCell>
+                    </TableRow>
+                  </TableBody>
+                  <TableFooter>
+                    <TableRow>
+                      <TableCell>Label</TableCell>
+                      <TableCell>Label</TableCell>
+                      <TableCell>Label</TableCell>
+                    </TableRow>
+                  </TableFooter>
+                </Table>
               </div>
               <div className="rhc-spacing-2">
                 <Heading level={4}>Dit is een H4</Heading>

@@ -5,6 +5,10 @@
 @import "../button/mixin";
 @import "./mixin";
 
+.utrecht-rich-text .utrecht-link {
+  margin-block-end: var(--utrecht-link-margin-block-end);
+}
+
 .utrecht-link:any-link {
   @include rhc-link--any-link;
 }
