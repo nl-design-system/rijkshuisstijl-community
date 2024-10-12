@@ -44,7 +44,7 @@ export const Default: Story = {};
 
 export const SmallContainer: Story = {
   render: (args) => (
-    <div style={{ width: '380px', containerType: 'inline-size' }}>
+    <div style={{ width: '380px' }}>
       <MessageList {...args}>
         <MessageListItem
           description={'Uw pensioenoverzicht'}

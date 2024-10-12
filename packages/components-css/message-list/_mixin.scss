@@ -9,7 +9,6 @@
   list-style: none;
   margin-block: 0;
   padding-inline: 0;
-  row-gap: var(--rhc-message-list-row-gap, var(--rhc-space-100));
   &:last-child {
     border-block-end-color: var(--rhc-message-list-item-border-color);
     border-block-end-style: solid;
@@ -27,6 +26,7 @@
   min-block-size: var(--rhc-message-list-item-min-height);
   padding-block: var(--rhc-message-list-item-padding-block);
   padding-inline: var(--rhc-message-list-item-padding-inline);
+  position: relative;
   text-decoration: none;
   &:hover {
     background-color: var(--rhc-message-list-item-hover-background-color, var(--rhc-color-grijs-50));
@@ -34,6 +34,7 @@
 
   &:focus {
     background-color: var(--rhc-message-list-item-focus-background-color, var(--rhc-color-lintblauw-50));
+    z-index: 999;
   }
 
   &:active {
@@ -41,7 +42,7 @@
   }
 }
 
-@mixin rhc-message-list__item__content {
+@mixin rhc-message-list__item-content {
   align-items: center;
   display: grid;
   flex: 1;
@@ -52,14 +53,9 @@
     "label description meta icon"
     "label description meta icon";
   grid-template-columns: 1fr 2fr auto auto;
-  @media (width <= 768px) {
-    grid-template-areas:
-      "label label label icon"
-      "description description description icon"
-      "meta meta meta icon";
-  }
 }
 @mixin rhc-message-list__item__label {
+  color: var(--rhc-message-list-item-heading-color);
   column-gap: var(--rhc-space-100);
   display: flex;
   font-family: var(--rhc-message-list-item-label-font-family), sans-serif;

@@ -9,8 +9,8 @@
   @include rhc-message-list;
   &__item {
     @include rhc-message-list__item;
-    &__content {
-      @include rhc-message-list__item__content;
+    &-content {
+      @include rhc-message-list__item-content;
     }
     &__label {
       @include rhc-message-list__item__label;
@@ -26,8 +26,13 @@
     }
   }
 }
-@container (width <= 768px) {
-  .rhc-message-list__item__content {
+.rhc-message-list__item-container {
+  container-name: message-list;
+  container-type: inline-size;
+}
+@container message-list (width <= 768px) {
+  .rhc-message-list__item-content {
+    grid-row-gap: var(--rhc-message-list-item-content-row-gap);
     grid-template-areas:
       "label label label icon"
       "description description description icon"
