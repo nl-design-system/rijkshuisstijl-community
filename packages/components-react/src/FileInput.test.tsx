@@ -4,7 +4,7 @@ import { fireEvent, render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { FileInput, FileInputProps } from './FileInput';
 
-describe('Form field with a textbox', () => {
+describe('File Input tests', () => {
   const defaultProps: FileInputProps = {
     buttonText: 'Bestanden kiezen',
     maxFileSizeInBytes: 10_485_760,
