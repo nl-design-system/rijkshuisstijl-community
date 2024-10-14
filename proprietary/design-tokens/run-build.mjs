@@ -56,7 +56,7 @@ const getStyleDictionaryConfig = (product) => {
             destination: `theme.css`,
             format: 'css/variables',
             options: {
-              selector: `.rhc-theme`,
+              selector: `.${normalizeFileName(product)}-theme`,
               outputReferences: true,
             },
           },

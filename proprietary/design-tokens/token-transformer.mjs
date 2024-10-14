@@ -30,7 +30,7 @@ const init = async ({ input, output }) => {
     expandComposition: false,
     // expandBorder: true,
     preserveRawValue: true,
-    // throwErrorWhenNotResolved: true,
+    // throwErrorWhenNotResolved: false,
     resolveReferences: 'math',
   };
   const start = Date.now();
