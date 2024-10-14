@@ -29,6 +29,8 @@ import { FormLabel } from '@utrecht/component-library-react';
 // import { DateInput } from '@amsterdam/design-system-react';
 
 export default function Form() {
+  const SIZE_IN_BYTES_10_MB = 10485760;
+
   return (
     <>
       <div className="rhc-background-color-white rhc-main-content">
@@ -106,11 +108,11 @@ export default function Form() {
                 </div>
               </Fieldset>
               <FileInput
-                allowedFileTypes=".doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif"
+                allowedFileTypes=".doc, .docx, .xlsx, .pdf, .zip, .jpg, .png, .bmp, .gif"
                 buttonText="Bestand kiezen"
                 fileSizeErrorMessage="Dit bestand is groter dan 10 MB."
                 fileTypeErrorMessage="Dit bestandstype wordt niet toegestaan."
-                maxFileSizeInBytes={10485760}
+                maxFileSizeInBytes={SIZE_IN_BYTES_10_MB}
               >
                 <FormLabel>Bestand toevoegen</FormLabel>
                 <UnorderedList>
