@@ -1,0 +1,73 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@import "./mixin";
+
+.rhc-hero {
+  @include rhc-hero;
+}
+
+.rhc-hero--aspect-ratio-16-9 {
+  @include rhc-hero--aspect-ratio-16-9;
+}
+
+.rhc-hero--aspect-ratio-1-1 {
+  @include rhc-hero--aspect-ratio-1-1;
+}
+
+.rhc-hero--aspect-ratio-4-3 {
+  @include rhc-hero--aspect-ratio-4-3;
+}
+
+.rhc-hero__message {
+  @include rhc-hero__message;
+}
+
+.rhc-hero__message .utrecht-heading-group {
+  @include rhc-hero__heading-group;
+}
+
+.rhc-hero--text-align-start:not(.rhc-hero--custom-border-radius-corner) {
+  @include rhc-hero--border-radius-corner-start-start;
+}
+
+.rhc-hero--text-align-start .rhc-hero__message {
+  @include rhc-hero__message--text-align-start;
+}
+
+.rhc-hero--text-align-end:not(.rhc-hero--custom-border-radius-corner) {
+  @include rhc-hero--border-radius-corner-start-end;
+}
+
+.rhc-hero--text-align-end .rhc-hero__message {
+  @include rhc-hero__message--text-align-end;
+}
+
+.rhc-hero--custom-border-radius-corner.rhc-hero--border-radius-corner-start-start {
+  @include rhc-hero--border-radius-corner-start-start;
+}
+
+.rhc-hero--custom-border-radius-corner.rhc-hero--border-radius-corner-start-end {
+  @include rhc-hero--border-radius-corner-start-end;
+}
+
+.rhc-hero--custom-border-radius-corner.rhc-hero--border-radius-corner-end-start {
+  @include rhc-hero--border-radius-corner-end-start;
+}
+
+.rhc-hero--custom-border-radius-corner.rhc-hero--border-radius-corner-end-end {
+  @include rhc-hero--border-radius-corner-end-end;
+}
+
+.rhc-hero__image {
+  @include rhc-hero__image;
+}
+
+.rhc-hero__heading {
+  @include rhc-hero__heading;
+}
+
+.rhc-hero__sub-heading {
+  @include rhc-hero__sub-heading;
+}

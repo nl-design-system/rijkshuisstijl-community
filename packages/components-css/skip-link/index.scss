@@ -1,0 +1,43 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@import "./mixin";
+
+.rhc-skip-link {
+  @include rhc-skip-link;
+}
+
+.rhc-skip-link--hidden,
+.rhc-skip-link--visible-on-focus {
+  inset-block-start: -9999px;
+  position: fixed;
+}
+
+.rhc-skip-link--focus,
+.rhc-skip-link:focus {
+  @include rhc-skip-link;
+
+  background-color: var(--utrecht-skip-link-focus-background-color, inherit);
+  border-color: var(--utrecht-skip-link-focus-border-color, inherit);
+  border-style: var(--utrecht-skip-link-focus-border-style, inherit);
+  border-width: var(--utrecht-skip-link-focus-border-width, inherit);
+  color: var(--utrecht-skip-link-focus-color, inherit);
+  outline-color: var(--utrecht-skip-link-focus-outline-color, revert);
+  outline-offset: var(--utrecht-skip-link-focus-outline-offset, revert);
+  outline-style: var(--utrecht-skip-link-focus-outline-style, revert);
+  outline-width: var(--utrecht-skip-link-focus-outline-width, revert);
+  position: revert;
+  text-decoration: var(--utrecht-skip-link-focus-text-decoration, inherit);
+}
+
+.rhc-skip-link--focus-visible,
+.rhc-skip-link:focus-visible {
+  @include rhc-skip-link;
+
+  outline-color: var(--utrecht-skip-link-focus-visible-outline-color, var(--utrecht-focus-outline-color));
+  outline-offset: var(--utrecht-skip-link-focus-visible-outline-offset, var(--utrecht-focus-outline-offset));
+  outline-style: var(--utrecht-skip-link-focus-visible-outline-style, var(--utrecht-focus-outline-style));
+  outline-width: var(--utrecht-skip-link-focus-visible-outline-width, var(--utrecht-focus-outline-width));
+}

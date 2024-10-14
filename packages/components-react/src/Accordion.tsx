@@ -6,4 +6,4 @@ export {
   AccordionSection,
   type AccordionSectionProps,
   type AccordionSectionProviderProps,
-} from '@utrecht/component-library-react/';
+} from '@utrecht/component-library-react';

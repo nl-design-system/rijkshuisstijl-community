@@ -1,8 +1,10 @@
+import '@testing-library/jest-dom';
+
 import { render, screen } from '@testing-library/react';
 import NextLink from 'next/link';
 import { AnchorHTMLAttributes, createRef, PropsWithChildren } from 'react';
-import { BreadcrumbNav, BreadcrumbNavLink } from './BreadcrumbNav';
-import '@testing-library/jest-dom';
+import { BreadcrumbNavLink } from './BreadcrumbNav';
+import { BreadcrumbNav } from './index';
 
 const CustomLink = ({ children, ...restProps }: PropsWithChildren<AnchorHTMLAttributes<HTMLAnchorElement>>) => {
   return <a {...restProps}>{children}</a>;

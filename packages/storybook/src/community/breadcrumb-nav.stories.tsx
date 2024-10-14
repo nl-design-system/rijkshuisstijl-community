@@ -1,11 +1,15 @@
-import { BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from '@rijkshuisstijl-community/components-react';
+import {
+  BreadcrumbNav,
+  BreadcrumbNavLink,
+  BreadcrumbNavSeparator,
+  Icon,
+} from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
-import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import readme from './breadcrumb-nav.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Breadcrumb navigation',
-  id: 'rijkshuisstijl-breadcrumb-nav',
+  id: 'rhc-breadcrumb-nav',
   component: BreadcrumbNav,
   argTypes: {},
   parameters: {
@@ -66,24 +70,15 @@ export const Separator: Story = {
         Home
       </BreadcrumbNavLink>,
       <BreadcrumbNavSeparator>
-        <UtrechtIconChevronRight />
+        <Icon icon={'chevron-right'} />
       </BreadcrumbNavSeparator>,
       <BreadcrumbNavLink href="/a/" index={1}>
         Label
       </BreadcrumbNavLink>,
       <BreadcrumbNavSeparator>
-        <UtrechtIconChevronRight />
+        <Icon icon={'chevron-right'} />
       </BreadcrumbNavSeparator>,
       <BreadcrumbNavLink href="/a/b/" index={2}>
-        Label
-      </BreadcrumbNavLink>,
-    ],
-  },
-};
-export const Arrow: Story = {
-  args: {
-    children: [
-      <BreadcrumbNavLink arrow href="/a" index={0} rel="label">
         Label
       </BreadcrumbNavLink>,
     ],

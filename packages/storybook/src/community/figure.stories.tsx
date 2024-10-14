@@ -1,24 +1,84 @@
 import { Figure, FigureCaption, Image } from '@rijkshuisstijl-community/components-react';
 import { Args, Meta, StoryObj } from '@storybook/react/*';
+import { CSSProperties } from 'react';
 import readme from './figure.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Figure',
-  id: 'rijkshuisstijl-figure',
+  id: 'rhc-figure',
   component: Figure,
   args: {
-    children: <Image alt="Multicolored tulip field" height={763} src="./placeholder.jpg" width={640} />,
-    caption: ['Bijschrift (figcaption) van afbeelding.'],
+    caption: 'Bijschrift (figcaption) van afbeelding.',
+    imageSrc: './placeholder.jpg',
+    borderEndEndRadius: 0,
+    borderEndStartRadius: 0,
+    borderStartEndRadius: 0,
+    borderStartStartRadius: 0,
   },
   argTypes: {
     caption: {
       type: { name: 'string', required: true },
     },
+    imageSrc: {
+      type: { name: 'string' },
+      description: 'Source of the demo image',
+      table: {
+        category: 'Demo',
+      },
+    },
+    borderEndEndRadius: {
+      type: { name: 'string', required: false },
+      control: { type: 'range', min: 0, max: 80, step: 8 },
+      description: 'Bottom right corner radius of the image in pixels',
+      table: {
+        category: 'Demo',
+      },
+    },
+    borderEndStartRadius: {
+      type: { name: 'string', required: false },
+      control: { type: 'range', min: 0, max: 80, step: 8 },
+      description: 'Bottom left corner radius of the image in pixels',
+      table: {
+        category: 'Demo',
+      },
+    },
+    borderStartEndRadius: {
+      type: { name: 'string', required: false },
+      control: { type: 'range', min: 0, max: 80, step: 8 },
+      description: 'Top right corner radius of the image in pixels',
+      table: {
+        category: 'Demo',
+      },
+    },
+    borderStartStartRadius: {
+      type: { name: 'string', required: false },
+      control: { type: 'range', min: 0, max: 80, step: 8 },
+      description: 'Top left corner radius of the image in pixels',
+      table: {
+        category: 'Demo',
+      },
+    },
   },
-  render: ({ caption, children }: Args) => {
+  render: ({
+    caption,
+    imageSrc,
+    borderEndEndRadius,
+    borderEndStartRadius,
+    borderStartEndRadius,
+    borderStartStartRadius,
+  }: Args) => {
     return (
-      <Figure>
-        {children}
+      <Figure
+        style={
+          {
+            '--utrecht-figure-img-border-end-end-radius': `${borderEndEndRadius}px`,
+            '--utrecht-figure-img-border-end-start-radius': `${borderEndStartRadius}px`,
+            '--utrecht-figure-img-border-start-end-radius': `${borderStartEndRadius}px`,
+            '--utrecht-figure-img-border-start-start-radius': `${borderStartStartRadius}px`,
+          } as unknown as CSSProperties
+        }
+      >
+        <Image alt="Multicolored tulip field" height={763} src={imageSrc} width={640} />
         <FigureCaption>{caption}</FigureCaption>
       </Figure>
     );

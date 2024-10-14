@@ -1,0 +1,55 @@
+.rhc-nav-bar {
+  align-items: center;
+  background-color: var(--rhc-nav-bar-background-color);
+  border-block-end-width: var(--rhc-nav-bar-border-block-end-width);
+  color: var(--rhc-nav-bar-color);
+  column-gap: var(--rhc-nav-bar-content-column-gap);
+  display: flex;
+  font-family: var(--rhc-font-family-primary, inherit);
+  justify-content: space-between;
+  row-gap: var(--rhc-nav-bar-content-row-gap);
+}
+
+.rhc-nav-bar__list {
+  background-color: var(--rhc-nav-bar-background-color);
+  display: flex;
+  list-style: none;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+}
+
+.rhc-nav-bar__list--end {
+  margin-inline-start: auto;
+}
+
+.rhc-nav-bar__heading {
+  font-weight: var(--rhc-nav-bar-heading-font-weight);
+}
+
+.rhc-nav-bar__link {
+  --utrecht-link-text-decoration: none;
+  --utrecht-link-visited-color: var(--rhc-nav-bar-color);
+
+  color: var(--rhc-nav-bar-color);
+  padding-block-end: var(--rhc-nav-bar-link-padding-block-end);
+  padding-block-start: var(--rhc-nav-bar-link-padding-block-start);
+  padding-inline-end: var(--rhc-nav-bar-link-padding-inline-end);
+  padding-inline-start: var(--rhc-nav-bar-link-padding-inline-start);
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--rhc-nav-bar-link-hover-background-color);
+  }
+
+  &:focus {
+    background-color: var(--rhc-nav-bar-link-focus-background-color);
+    color: var(--rhc-nav-bar-link-focus-color);
+  }
+
+  &:active {
+    background-color: var(--rhc-nav-bar-link-active-background-color);
+    color: var(--rhc-nav-bar-link-active-color);
+  }
+}

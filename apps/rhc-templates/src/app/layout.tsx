@@ -4,10 +4,9 @@ import { PropsWithChildren } from 'react';
 import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/components-css/index.scss';
+import { Logo, Icon, NavBar, PageHeader } from '@rijkshuisstijl-community/components-react';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import './globals.css';
-import './page/page.scss';
-import Link from 'next/link';
 import Head from 'next/head';
 
 const RHCTheme = ({ children }: PropsWithChildren<{}>) => <div className="rhc-theme">{children}</div>;
@@ -19,25 +18,25 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
         <title>Rijkshuisstijl demo - Index</title>
       </Head>
       <body>
-        <div className="information">
-          <div className="unstarted">Elemententen die nog helemaal geen styling hebben zijn met rood omgeven</div>
-          <div className="unfinished">
-            Elementen die al styling hebben maar die nog niet helemaal af zijn zijn met geel omgeven
-          </div>
-          <div>
-            Elementen die niet met een kleur zijn omgeven zijn af, let op: dit betekent niet per se dat ze ook in
-            storybook staan.
-          </div>
-          <Link href="/page">Page</Link>
-          <br />
-          <Link href="/form">Form</Link>
-          <br />
-          <Link href="/details">Details</Link>
-          <br />
-          <Link href="/collage">Collage</Link>
-        </div>
         <RHCTheme>
-          <Document>{children}</Document>
+          <div className="rhc-background-color-white">
+            <PageHeader>
+              <Logo organisation="Rijkshuisstijl Community">
+                <Icon icon={'nederland-map'} className={'dutch-map'} />
+              </Logo>
+            </PageHeader>
+          </div>
+          <NavBar
+            items={[
+              { href: '/', label: 'Page' },
+              { href: '/form', label: 'Form' },
+              { href: '/details', label: 'Details' },
+              { href: '/collage', label: 'Collage' },
+            ]}
+          ></NavBar>
+          <main className="page">
+            <Document>{children}</Document>
+          </main>
         </RHCTheme>
       </body>
     </html>

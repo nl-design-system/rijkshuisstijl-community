@@ -2,17 +2,18 @@ import {
   Table,
   TableBody,
   TableCell as TableCellComponent,
+  type TableCellProps,
   TableRow,
 } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './table-cell.md?raw';
 
-const TableCell = ({ children, align, ...restProps }: any) => {
+const TableCell = ({ children, alignCell, ...restProps }: TableCellProps) => {
   return (
     <Table>
       <TableBody>
         <TableRow>
-          <TableCellComponent align={align} {...restProps}>
+          <TableCellComponent alignCell={alignCell} {...restProps}>
             {children}
           </TableCellComponent>
         </TableRow>
@@ -23,11 +24,12 @@ const TableCell = ({ children, align, ...restProps }: any) => {
 
 export default {
   title: 'Rijkshuisstijl/Table/Table Cell',
+  id: 'rhc-table-cell',
   component: TableCell,
   tags: ['autodocs'],
   argTypes: {
-    align: {
-      options: ['left', 'right', 'center'],
+    alignCell: {
+      options: ['start', 'end', 'center'],
       control: { type: 'select' },
     },
   },
@@ -46,6 +48,6 @@ type Story = StoryObj<typeof TableCell>;
 export const Default: Story = {
   args: {
     children: 'Label',
-    align: 'left',
+    alignCell: 'start',
   },
 };

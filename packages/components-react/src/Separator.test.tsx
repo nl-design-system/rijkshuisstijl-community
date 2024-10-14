@@ -1,7 +1,8 @@
+import '@testing-library/jest-dom';
+
 import { render, screen } from '@testing-library/react';
 import { createRef } from 'react';
 import { Separator } from './Separator';
-import '@testing-library/jest-dom';
 
 describe('Separator', () => {
   it('renders an separator role element', () => {
@@ -78,5 +79,13 @@ describe('Separator', () => {
     const separator = container.querySelector(':only-child');
 
     expect(ref.current).toBe(separator);
+  });
+
+  it('can be invisible', () => {
+    const { container } = render(<Separator invisible />);
+
+    const separator = container.querySelector(':only-child');
+
+    expect(separator).toHaveClass('utrecht-separator--invisible');
   });
 });

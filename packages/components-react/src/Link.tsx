@@ -1,11 +1,7 @@
-import {
-  Icon,
-  Link as UtrechtLink,
-  type LinkProps as UtrechtLinkProps,
-} from '@utrecht/component-library-react/dist/css-module';
+import { Link as UtrechtLink, type LinkProps as UtrechtLinkProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef } from 'react';
-import { ExternalLinkIcon } from './icons';
+import { Icon } from './icon/Icon';
 
 export interface LinkProps extends UtrechtLinkProps {
   external?: boolean;
@@ -19,9 +15,7 @@ export const Link = forwardRef(
       {external && (
         <>
           <span className="rhc-link__sr-only">{externalLabel}</span>
-          <Icon role="img">
-            <ExternalLinkIcon />
-          </Icon>
+          <Icon icon={'externe-link'} />
         </>
       )}
     </UtrechtLink>

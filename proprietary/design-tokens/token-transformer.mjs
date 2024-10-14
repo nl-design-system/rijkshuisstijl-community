@@ -1,6 +1,7 @@
-import { transformTokens } from 'token-transformer';
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
+
+import { transformTokens } from 'token-transformer';
 
 const init = async ({ input, output }) => {
   const json = await readFile(input, 'utf-8');
@@ -13,19 +14,10 @@ const init = async ({ input, output }) => {
   const excludes = [
     'components/avatar',
     'components/backdrop',
-    'components/button-group',
-    'components/checkbox',
-    'components/checkbox-group',
-    'components/counter-badge',
     'components/drawer',
     'components/form-field-option-label',
-    'components/form-field-radio-option',
     'components/modal-dialog',
     'components/pagination',
-    'components/radio',
-    'components/radio-group',
-    'components/side-nav',
-    'components/skip-link',
     'components/status-badge',
     'components/summary-list',
     'components/task-list',

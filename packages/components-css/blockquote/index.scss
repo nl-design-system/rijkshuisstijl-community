@@ -3,16 +3,32 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-.utrecht-blockquote {
-  --utrecht-blockquote-color: --utrecht-blockquote-content-color;
-  --utrecht-blockquote-font-size: --utrecht-blockquote-content-font-size;
-  --utrecht-document-font-family: --utrecht-blockquote-content-font-family;
+@import "./mixin";
 
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--utrecht-blockquote-row-gap, inherit);
+.rhc-blockquote {
+  --utrecht-blockquote-color: var(--utrecht-blockquote-content-color);
+  --utrecht-blockquote-font-size: var(--utrecht-blockquote-content-font-size);
+  --utrecht-document-font-family: var(--utrecht-blockquote-content-font-family);
+
+  @include rhc-blockquote;
 }
 
 .utrecht-blockquote__attribution {
   font-family: var(--utrecht-blockquote-attribution-font-family, inherit);
+}
+
+.rhc-blockquote--blue-corner-border-variation {
+  @include rhc-blockquote-variation("blue-corner-border-variation");
+}
+
+.rhc-blockquote--pink-background-variation {
+  @include rhc-blockquote-variation("pink-background-variation");
+}
+
+.rhc-blockquote--pink-left-border-variation {
+  @include rhc-blockquote-variation("pink-left-border-variation");
+}
+
+.rhc-blockquote--pink-corner-border-variation {
+  @include rhc-blockquote-variation("pink-corner-border-variation");
 }

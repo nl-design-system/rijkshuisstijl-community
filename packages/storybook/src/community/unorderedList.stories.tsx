@@ -4,7 +4,7 @@ import readme from './unorderedList.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Unordered List',
-  id: 'rijkshuisstijl-unorderedList',
+  id: 'rhc-unordered-list',
   component: UnorderedList,
   args: {
     children: '',

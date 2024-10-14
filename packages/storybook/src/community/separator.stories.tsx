@@ -4,12 +4,19 @@ import readme from './separator.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Separator',
-  id: 'rijkshuisstijl-separator',
+  id: 'rhc-separator',
   component: Separator,
   parameters: {
     docs: {
       description: {
         component: readme,
+      },
+    },
+  },
+  argTypes: {
+    invisible: {
+      control: {
+        type: 'boolean',
       },
     },
   },
@@ -19,3 +26,9 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
+
+export const Invisible: Story = {
+  args: {
+    invisible: true,
+  },
+};

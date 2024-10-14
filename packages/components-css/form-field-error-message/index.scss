@@ -4,12 +4,12 @@
  */
 .utrecht-form-field-error-message {
   &--icon-container {
-    align-items: center;
     display: flex;
     &-icon {
       --utrecht-icon-size: var(--utrecht-form-field-error-message-icon-size, 24px);
 
       margin-inline-end: var(--utrecht-form-field-error-message-icon-margin-inline-end, 0.5rem);
+      min-inline-size: var(--utrecht-form-field-error-message-icon-min-width, 24px);
     }
   }
 }

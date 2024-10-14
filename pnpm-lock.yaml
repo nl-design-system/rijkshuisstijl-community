@@ -14,7 +14,7 @@ importers:
     devDependencies:
       '@lerna-lite/cli':
         specifier: 3.7.1
-        version: 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
+        version: 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)
       '@lerna-lite/publish':
         specifier: 3.7.1
         version: 3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3)
@@ -37,8 +37,8 @@ importers:
         specifier: 9.1.0
         version: 9.1.0(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: 2.29.1
-        version: 2.29.1(@typescript-eslint/parser@7.16.1(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)
+        specifier: 2.30.0
+        version: 2.30.0(@typescript-eslint/parser@7.16.1(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)
       eslint-plugin-json:
         specifier: 3.1.0
         version: 3.1.0
@@ -223,6 +223,12 @@ importers:
       '@rijkshuisstijl-community/web-components-react':
         specifier: workspace:*
         version: link:../web-components-react
+      '@tabler/icons-react':
+        specifier: 3.11.0
+        version: 3.11.0(react@18.3.1)
+      '@utrecht/component-library-css':
+        specifier: 4.0.0
+        version: 4.0.0
       '@utrecht/component-library-react':
         specifier: 5.0.0
         version: 5.0.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -461,6 +467,9 @@ importers:
       chromatic:
         specifier: 11.3.0
         version: 11.3.0
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
       prettier:
         specifier: 3.3.3
         version: 3.3.3
@@ -482,6 +491,9 @@ importers:
       storybook:
         specifier: 8.2.4
         version: 8.2.4(@babel/preset-env@7.24.8(@babel/core@7.24.9))
+      storybook-addon-pseudo-states:
+        specifier: 4.0.2
+        version: 4.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.4(@babel/preset-env@7.24.8(@babel/core@7.24.9)))
       typescript:
         specifier: 5.5.3
         version: 5.5.3
@@ -2240,6 +2252,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@rtsao/scc@1.1.0':
+    resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
+
   '@rushstack/eslint-patch@1.6.0':
     resolution: {integrity: sha512-2/U3GXA6YiPYQDLGwtGlnNgKYBSwCFIHf8Y9LUY5VATHdtbLlU0Y1R3QoBnT0aB4qv/BEiVVsj7LJXoQCgJ2vA==}
 
@@ -2413,6 +2428,13 @@ packages:
 
   '@storybook/global@5.0.0':
     resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
+
+  '@storybook/icons@1.2.12':
+    resolution: {integrity: sha512-UxgyK5W3/UV4VrI3dl6ajGfHM4aOqMAkFLWe2KibeQudLf6NJpDrDMSHwZj+3iKC4jFU7dkKbbtH2h/al4sW3Q==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
 
   '@storybook/icons@1.2.9':
     resolution: {integrity: sha512-cOmylsz25SYXaJL/gvTk/dl3pyk7yBFRfeXTsHvTA3dfhoU/LWSq0NKL9nM7WBasJyn6XPSGnLS4RtKXLw5EUg==}
@@ -3151,6 +3173,10 @@ packages:
 
   array.prototype.findlastindex@1.2.3:
     resolution: {integrity: sha512-LzLoiOMAxvy+Gd3BAq3B7VeIgPdo+Q8hthvKtXybMvRV0jrXfJM/t8mw7nNlpEcVlVUnCnM2KSX4XU5HmpodOA==}
+    engines: {node: '>= 0.4'}
+
+  array.prototype.findlastindex@1.2.5:
+    resolution: {integrity: sha512-zfETvRFA8o7EiNn++N5f/kaCw221hrpGsDmcpndVupkPzEc1Wuf3VgC0qby1BbHs7f5DVYjgtEU2LLh5bqeGfQ==}
     engines: {node: '>= 0.4'}
 
   array.prototype.flat@1.3.2:
@@ -4322,6 +4348,27 @@ packages:
     peerDependencies:
       eslint: '>=8.0.0'
 
+  eslint-module-utils@2.12.0:
+    resolution: {integrity: sha512-wALZ0HFoytlyh/1+4wuZ9FJCD/leWHQzzrxJ8+rebyReSLk7LApMyd3WJaLVoN+D5+WIdJyDK1c6JnE65V4Zyg==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      '@typescript-eslint/parser': '*'
+      eslint: '*'
+      eslint-import-resolver-node: '*'
+      eslint-import-resolver-typescript: '*'
+      eslint-import-resolver-webpack: '*'
+    peerDependenciesMeta:
+      '@typescript-eslint/parser':
+        optional: true
+      eslint:
+        optional: true
+      eslint-import-resolver-node:
+        optional: true
+      eslint-import-resolver-typescript:
+        optional: true
+      eslint-import-resolver-webpack:
+        optional: true
+
   eslint-module-utils@2.8.0:
     resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==}
     engines: {node: '>=4'}
@@ -4345,6 +4392,16 @@ packages:
 
   eslint-plugin-import@2.29.1:
     resolution: {integrity: sha512-BbPC0cuExzhiMo4Ff1BTVwHpjjv28C5R+btTOGaCRC7UEz801up0JadwkeSk5Ued6TG34uaczuVuH6qyy5YUxw==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      '@typescript-eslint/parser': '*'
+      eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8
+    peerDependenciesMeta:
+      '@typescript-eslint/parser':
+        optional: true
+
+  eslint-plugin-import@2.30.0:
+    resolution: {integrity: sha512-/mHNE9jINJfiD2EKkg1BKyPyUk4zdnT54YgbOgfjSakWT5oyX/qQLVNTkehyfpcMxZXMy1zyonZ2v7hZTX43Yw==}
     engines: {node: '>=4'}
     peerDependencies:
       '@typescript-eslint/parser': '*'
@@ -5240,6 +5297,10 @@ packages:
 
   is-core-module@2.13.1:
     resolution: {integrity: sha512-hHrIjvZsftOsvKSn2TRYl63zvxsgE0K+0mYMoH6gD4omR5IWB2KynivBQczo3+wF1cCkjzvptnI9Q0sPU66ilw==}
+
+  is-core-module@2.15.1:
+    resolution: {integrity: sha512-z0vtXSwucUJtANQWldhbtbt7BnL0vxiFjIdDLAatwhDYty2bad6s+rijD6Ri4YuYJubLzIJLUidCh09e1djEVQ==}
+    engines: {node: '>= 0.4'}
 
   is-data-view@1.0.1:
     resolution: {integrity: sha512-AHkaJrsUVW6wq6JS8y3JnM/GJF/9cf+k20+iDzlSaJrinEo5+7vRiteOSwBhHRiAyQATN1AmY4hwzxJKPmYf+w==}
@@ -6592,6 +6653,10 @@ packages:
   object.groupby@1.0.1:
     resolution: {integrity: sha512-HqaQtqLnp/8Bn4GL16cj+CUYbnpe1bh0TtEaWvybszDG4tgxCJuRpV8VGuvNaI1fAnI4lUJzDG55MXcOH4JZcQ==}
 
+  object.groupby@1.0.3:
+    resolution: {integrity: sha512-+Lhy3TQTuzXI5hevh8sBGqbmurHbbIjAi0Z4S63nthVLmLxfbj4T54a4CfZrXIrt9iP4mVAPYMo/v99taj3wjQ==}
+    engines: {node: '>= 0.4'}
+
   object.hasown@1.1.4:
     resolution: {integrity: sha512-FZ9LZt9/RHzGySlBARE3VF+gE26TxR38SdmqOqliuTnl9wrKulaQs+4dee1V+Io8VfxqzAfHu6YuRgUy8OHoTg==}
     engines: {node: '>= 0.4'}
@@ -7930,6 +7995,11 @@ packages:
   stop-iteration-iterator@1.0.0:
     resolution: {integrity: sha512-iCGQj+0l0HOdZ2AEeBADlsRC+vsnDsZsbdSiH1yNSjcfKM7fdpCMfqAL/dwF5BLiw/XhRft/Wax6zQbhq2BcjQ==}
     engines: {node: '>= 0.4'}
+
+  storybook-addon-pseudo-states@4.0.2:
+    resolution: {integrity: sha512-dTHkeq4VzqIrJfR8k2BHkX190cQ+aYBZUktWNZpDw3N5tJ8IwaRLzf6ZjHDHY6xwDshaNiTO5UkziRE0Ytukkw==}
+    peerDependencies:
+      storybook: ^8.2.0
 
   storybook@8.2.4:
     resolution: {integrity: sha512-ASavW8vIHiWpFY+4M6ngeqK5oL4OkxqdpmQYxvRqH0gA1G1hfq/vmDw4YC4GnqKwyWPQh2kaV5JFurKZVaeaDQ==}
@@ -10371,7 +10441,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  '@lerna-lite/cli@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3))(typescript@5.5.3)':
+  '@lerna-lite/cli@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)':
     dependencies:
       '@lerna-lite/core': 3.7.1(typescript@5.5.3)
       '@lerna-lite/init': 3.7.1(typescript@5.5.3)
@@ -10384,7 +10454,7 @@ snapshots:
     optionalDependencies:
       '@lerna-lite/publish': 3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3)
       '@lerna-lite/run': 3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3)
-      '@lerna-lite/version': 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3)
+      '@lerna-lite/version': 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
     transitivePeerDependencies:
       - babel-plugin-macros
       - bluebird
@@ -10474,10 +10544,10 @@ snapshots:
 
   '@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3)':
     dependencies:
-      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
+      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)
       '@lerna-lite/core': 3.7.1(typescript@5.5.3)
       '@lerna-lite/npmlog': 3.7.0
-      '@lerna-lite/version': 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3)
+      '@lerna-lite/version': 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
       '@npmcli/arborist': 7.5.4
       '@npmcli/package-json': 5.2.0
       byte-size: 8.1.1
@@ -10511,7 +10581,7 @@ snapshots:
 
   '@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3)':
     dependencies:
-      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
+      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)
       '@lerna-lite/core': 3.7.1(typescript@5.5.3)
       '@lerna-lite/filter-packages': 3.7.1(typescript@5.5.3)
       '@lerna-lite/npmlog': 3.7.0
@@ -10530,9 +10600,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3)':
+  '@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3)':
     dependencies:
-      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
+      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)
       '@lerna-lite/core': 3.7.1(typescript@5.5.3)
       '@lerna-lite/npmlog': 3.7.0
       '@octokit/plugin-enterprise-rest': 6.0.1
@@ -10977,6 +11047,8 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.18.1':
     optional: true
 
+  '@rtsao/scc@1.1.0': {}
+
   '@rushstack/eslint-patch@1.6.0': {}
 
   '@sec-ant/readable-stream@0.4.1': {}
@@ -11219,6 +11291,11 @@ snapshots:
       type-fest: 2.19.0
 
   '@storybook/global@5.0.0': {}
+
+  '@storybook/icons@1.2.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   '@storybook/icons@1.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -12061,6 +12138,15 @@ snapshots:
       es-abstract: 1.22.1
       es-shim-unscopables: 1.0.0
       get-intrinsic: 1.2.1
+
+  array.prototype.findlastindex@1.2.5:
+    dependencies:
+      call-bind: 1.0.7
+      define-properties: 1.2.1
+      es-abstract: 1.23.3
+      es-errors: 1.3.0
+      es-object-atoms: 1.0.0
+      es-shim-unscopables: 1.0.2
 
   array.prototype.flat@1.3.2:
     dependencies:
@@ -13478,7 +13564,7 @@ snapshots:
       debug: 4.3.4
       enhanced-resolve: 5.15.0
       eslint: 8.57.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.20.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.20.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.20.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.16.1(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.2
@@ -13510,7 +13596,17 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.20.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@7.16.1(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint@8.57.0):
+    dependencies:
+      debug: 3.2.7
+    optionalDependencies:
+      '@typescript-eslint/parser': 7.16.1(eslint@8.57.0)(typescript@5.5.3)
+      eslint: 8.57.0
+      eslint-import-resolver-node: 0.3.9
+    transitivePeerDependencies:
+      - supports-color
+
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.20.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.20.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -13549,6 +13645,34 @@ snapshots:
       object.fromentries: 2.0.7
       object.groupby: 1.0.1
       object.values: 1.1.7
+      semver: 6.3.1
+      tsconfig-paths: 3.15.0
+    optionalDependencies:
+      '@typescript-eslint/parser': 7.16.1(eslint@8.57.0)(typescript@5.5.3)
+    transitivePeerDependencies:
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - supports-color
+
+  eslint-plugin-import@2.30.0(@typescript-eslint/parser@7.16.1(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0):
+    dependencies:
+      '@rtsao/scc': 1.1.0
+      array-includes: 3.1.8
+      array.prototype.findlastindex: 1.2.5
+      array.prototype.flat: 1.3.2
+      array.prototype.flatmap: 1.3.2
+      debug: 3.2.7
+      doctrine: 2.1.0
+      eslint: 8.57.0
+      eslint-import-resolver-node: 0.3.9
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@7.16.1(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint@8.57.0)
+      hasown: 2.0.2
+      is-core-module: 2.15.1
+      is-glob: 4.0.3
+      minimatch: 3.1.2
+      object.fromentries: 2.0.8
+      object.groupby: 1.0.3
+      object.values: 1.2.0
       semver: 6.3.1
       tsconfig-paths: 3.15.0
     optionalDependencies:
@@ -14663,6 +14787,10 @@ snapshots:
   is-core-module@2.13.1:
     dependencies:
       hasown: 2.0.0
+
+  is-core-module@2.15.1:
+    dependencies:
+      hasown: 2.0.2
 
   is-data-view@1.0.1:
     dependencies:
@@ -16531,6 +16659,12 @@ snapshots:
       es-abstract: 1.22.1
       get-intrinsic: 1.2.1
 
+  object.groupby@1.0.3:
+    dependencies:
+      call-bind: 1.0.7
+      define-properties: 1.2.1
+      es-abstract: 1.23.3
+
   object.hasown@1.1.4:
     dependencies:
       define-properties: 1.2.1
@@ -18033,6 +18167,14 @@ snapshots:
   stop-iteration-iterator@1.0.0:
     dependencies:
       internal-slot: 1.0.5
+
+  storybook-addon-pseudo-states@4.0.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.4(@babel/preset-env@7.24.8(@babel/core@7.24.9))):
+    dependencies:
+      '@storybook/icons': 1.2.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      storybook: 8.2.4(@babel/preset-env@7.24.8(@babel/core@7.24.9))
+    transitivePeerDependencies:
+      - react
+      - react-dom
 
   storybook@8.2.4(@babel/preset-env@7.24.8(@babel/core@7.24.9)):
     dependencies:

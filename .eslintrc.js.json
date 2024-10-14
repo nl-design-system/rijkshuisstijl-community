@@ -69,6 +69,13 @@
     "no-prototype-builtins": "error",
     "no-redeclare": "error",
     "no-regex-spaces": "error",
+    "no-restricted-imports": [
+      "error",
+      {
+        "name": "@utrecht/component-library-react/dist/css-module",
+        "message": "Please import from '@utrecht/component-library-react' instead. The styling is already included in the barrel file."
+      }
+    ],
     "no-return-assign": "error",
     "no-return-await": "error",
     "no-self-assign": "error",
