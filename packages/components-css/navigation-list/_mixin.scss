@@ -51,10 +51,6 @@
   min-inline-size: var(--rhc-navigation-list-item-icon-size);
   padding-block: var(--rhc-navigation-list-item-icon-padding-block);
   padding-inline: var(--rhc-navigation-list-item-icon-padding-inline);
-
-  @media (width <= 768px) {
-    align-self: start;
-  }
 }
 
 @mixin rhc-navigation-list__item-content {
@@ -67,11 +63,6 @@
     "label content content end-icon"
     "label content content end-icon";
   grid-template-columns: 1fr 1fr 1fr auto;
-  @media (width <= 768px) {
-    grid-template-areas:
-      "label label label end-icon"
-      "content content content end-icon";
-  }
 }
 
 @mixin rhc-navigation-list__item__label {

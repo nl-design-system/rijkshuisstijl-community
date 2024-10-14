@@ -46,7 +46,7 @@ export const Default: Story = {
 };
 export const SmallContainer: Story = {
   render: (args: NavigationListProps) => (
-    <div className={'rhc-navigation-list--container-small'} style={{ width: '380px' }}>
+    <div style={{ width: '380px' }}>
       <NavigationList {...args}>
         <NavigationListItem
           description="Uw gegevens, familie en identiteitsbewijs"

@@ -8,7 +8,7 @@ export const NavigationList = forwardRef<HTMLUListElement, NavigationListProps>(
     return (
       <ul
         aria-label="Navigation List"
-        className={clsx('rhc-navigation-list', className)}
+        className={clsx('rhc-navigation-list rhc-navigation-list--container-small', className)}
         ref={ref}
         role={'list'}
         {...restProps}
