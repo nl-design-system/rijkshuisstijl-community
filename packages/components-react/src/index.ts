@@ -68,6 +68,8 @@ export { LinkList, LinkListLink, type LinkListLinkProps, type LinkListProps } fr
 export { LinkListCard } from './LinkListCard';
 export { Logo, type LogoProps } from './Logo';
 export { NavBar, type NavBarItemProps, type NavBarProps } from './NavBar';
+export { NavigationList, type NavigationListProps } from './NavigationList';
+export { NavigationListItem, type NavigationListItemProps } from './NavigationListItem';
 export { OrderedList, OrderedListItem, type OrderedListItemProps, type OrderedListProps } from './OrderedList';
 export { PageContent, type PageContentProps } from './PageContent';
 export { PageHeader, type PageHeaderProps } from './PageHeader';

@@ -4085,6 +4085,126 @@
       }
     }
   },
+  "components/navigation-list": {
+    "rhc": {
+      "navigation-list": {
+        "icon": {
+          "background-color": {
+            "value": "{rhc.color.foreground.lint}",
+            "type": "color"
+          },
+          "border-radius": {
+            "value": "{rhc.border-radius.circle}",
+            "type": "borderRadius"
+          },
+          "color": {
+            "value": "{rhc.color.foreground.onEmphasis}",
+            "type": "color"
+          }
+        },
+        "item": {
+          "icon": {
+            "padding-inline": {
+              "value": "{rhc.space.100}",
+              "type": "space"
+            },
+            "padding-block": {
+              "value": "{rhc.space.100}",
+              "type": "space"
+            },
+            "size": {
+              "value": "{rhc.size.icon.functional}",
+              "type": "size"
+            }
+          },
+          "content": {
+            "column-gap": {
+              "value": "{rhc.space.100}",
+              "type": "space"
+            },
+            "row-gap": {
+              "value": "{rhc.space.50}",
+              "type": "space"
+            }
+          },
+          "label": {
+            "font-family": {
+              "value": "{rhc.font-family.primary}",
+              "type": "font-family"
+            },
+            "font-size": {
+              "value": "{rhc.font-size.md.desktop}",
+              "type": "font-size"
+            },
+            "font-weight": {
+              "value": "{rhc.font-weight.bold}",
+              "type": "font-weight"
+            },
+            "line-height": {
+              "value": "{rhc.line-height.md}",
+              "type": "line-height"
+            }
+          },
+          "active": {
+            "background-color": {
+              "value": "{rhc.color.grijs.100}",
+              "type": "color"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "value": "{rhc.color.grijs.50}",
+              "type": "color"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "value": "{rhc.color.lintblauw.50}",
+              "type": "color"
+            }
+          },
+          "background-color": {
+            "value": "{rhc.color.canvas}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{rhc.color.foreground.subdued}",
+            "type": "color"
+          },
+          "border-width": {
+            "value": "{rhc.border-width.default}",
+            "type": "borderWidth"
+          },
+          "border-color": {
+            "value": "{rhc.color.grijs.300}",
+            "type": "color"
+          },
+          "heading": {
+            "color": {
+              "value": "{rhc.color.foreground.lint}",
+              "type": "color"
+            }
+          },
+          "column-gap": {
+            "value": "{rhc.space.200}",
+            "type": "space"
+          },
+          "min-height": {
+            "value": "{rhc.size.target}",
+            "type": "size"
+          },
+          "padding-block": {
+            "value": "{rhc.space.150}",
+            "type": "space"
+          },
+          "padding-inline": {
+            "value": "{rhc.space.200}",
+            "type": "space"
+          }
+        }
+      }
+    }
+  },
   "components/ordered-list": {
     "utrecht": {
       "ordered-list": {
@@ -6205,6 +6325,7 @@
       "components/logo",
       "components/modal-dialog",
       "components/nav-bar",
+      "components/navigation-list",
       "components/ordered-list",
       "components/pagination",
       "components/paragraph",
