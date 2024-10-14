@@ -31,7 +31,7 @@ describe('File Input tests', () => {
       allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif',
       fileSizeErrorMessage: 'Dit bestand is groter dan 10 MB.',
       fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
-      onFilesChange: mockOnFileChange,
+      onValueChange: mockOnFileChange,
     };
 
     const { container } = render(<FileInput {...propsTest} />);
@@ -58,7 +58,7 @@ describe('File Input tests', () => {
       allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif',
       fileSizeErrorMessage: 'Dit bestand is groter dan 10 MB.',
       fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
-      onFilesChange: mockOnFileChange,
+      onValueChange: mockOnFileChange,
     };
 
     const { container } = render(<FileInput {...propsTest} />);
@@ -88,7 +88,7 @@ describe('File Input tests', () => {
       allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.bmp,.gif', // Removed .png from allow list
       fileSizeErrorMessage: 'Dit bestand is groter dan 10 MB.',
       fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
-      onFilesChange: mockOnFileChange,
+      onValueChange: mockOnFileChange,
     };
 
     const { container } = render(<FileInput {...propsTest} />);

@@ -9,7 +9,7 @@ export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
   allowedFileTypes: string;
   fileSizeErrorMessage: string;
   fileTypeErrorMessage: string;
-  onFilesChange?: (callbackFiles: File[]) => void; // eslint-disable-line no-unused-vars
+  onValueChange?: (callbackFiles: File[]) => void; // eslint-disable-line no-unused-vars
 }
 
 export const FileInput = forwardRef(
@@ -22,7 +22,7 @@ export const FileInput = forwardRef(
       buttonAppearance,
       fileSizeErrorMessage,
       fileTypeErrorMessage,
-      onFilesChange,
+      onValueChange,
     }: PropsWithChildren<FileInputProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
@@ -32,8 +32,8 @@ export const FileInput = forwardRef(
       if (newFiles) {
         const updatedFiles = [...files, ...Array.from(newFiles)];
         setFiles(updatedFiles);
-        if (onFilesChange) {
-          onFilesChange(updatedFiles);
+        if (onValueChange) {
+          onValueChange(updatedFiles);
         }
       }
     };

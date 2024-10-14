@@ -116,7 +116,7 @@ export const MetCallback: Story = {
     allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif',
     fileSizeErrorMessage: 'Dit bestand is groter dan 10 MB.',
     fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
-    onFilesChange: (files: File[]) => {
+    onValueChange: (files: File[]) => {
       console.log('Callback bestanden: ', files);
     },
   },
