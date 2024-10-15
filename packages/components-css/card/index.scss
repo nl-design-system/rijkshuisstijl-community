@@ -16,6 +16,10 @@
   @include rhc-card--full-bleed;
 }
 
+.rhc-card--horizontal {
+  @include rhc-card--horizontal;
+}
+
 .rhc-card__footer {
   @include rhc-card__content;
 }
@@ -41,6 +45,10 @@
 
 .rhc-card--horizontal .rhc-card__content {
   @include rhc-card--horizontal__content;
+}
+
+.rhc-card--horizontal .rhc-card__heading {
+  @include rhc-card--horizontal__heading;
 }
 
 .rhc-card--horizontal .rhc-card__image {
@@ -71,8 +79,8 @@
   @include rhc-card__link--active;
 }
 
-.rhc-card:focus {
-  @include rhc-card--focus;
+.rhc-card--default:focus {
+  @include rhc-card--default--focus;
 }
 
 .rhc-card:focus .rhc-card__heading {
@@ -81,6 +89,10 @@
 
 .rhc-card:focus .rhc-card__link {
   @include rhc-card__link--focus;
+}
+
+.rhc-card--default:hover {
+  @include rhc-card--default--hover;
 }
 
 .rhc-card:hover .rhc-card__heading {

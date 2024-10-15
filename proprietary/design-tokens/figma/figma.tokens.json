@@ -2686,6 +2686,10 @@
             "value": "{rhc.color.foreground.onEmphasis}",
             "type": "color"
           },
+          "max-block-size": {
+            "value": "{rhc.size.2-lint}",
+            "type": "sizing"
+          },
           "padding-block-end": {
             "value": "0",
             "type": "spacing"
@@ -2699,8 +2703,14 @@
             "type": "spacing"
           },
           "padding-inline-start": {
-            "value": "0",
+            "value": "{rhc.space.200}",
             "type": "spacing"
+          },
+          "heading": {
+            "inline-size": {
+              "value": "200px",
+              "type": "sizing"
+            }
           }
         }
       }
