@@ -18,17 +18,17 @@ const isProduct = (content) => {
 };
 
 const extractSeparateFiles = async () => {
-  const file = JSON.parse(await promises.readFile(join(GENERATED_FOLDER, 'figma.tokens.json'), 'utf-8'));
+  const themes = JSON.parse(await promises.readFile(join(GENERATED_FOLDER, 'figma.tokens.json'), 'utf-8'));
 
-  Object.keys(file).forEach(async (key) => {
-    const content = file[key];
+  Object.keys(themes).forEach(async (theme) => {
+    const content = themes[theme];
 
+    let folder = GENERATED_FOLDER;
     if (isProduct(content)) {
       await ensureProductFolder();
-      await promises.writeFile(join(PRODUCT_FOLDER, `${key}.json`), JSON.stringify(content, null, 2));
-    } else {
-      await promises.writeFile(join(GENERATED_FOLDER, `${key}.json`), JSON.stringify(content, null, 2));
+      folder = PRODUCT_FOLDER;
     }
+    await promises.writeFile(join(folder, `${theme}.json`), JSON.stringify(content, null, 2));
   });
 };
 

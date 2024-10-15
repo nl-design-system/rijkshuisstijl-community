@@ -1,5 +1,5 @@
-// import { DIST_FOLDER, COPY_FOLDER } from "./constants.mjs";
-// import { addMediaDependentFiles } from './add-media-dependent-files.mjs';
+import { promises } from 'fs';
+import { join } from 'path';
 import StyleDictionary from 'style-dictionary';
 
 const DIST_FOLDER = './dist';
@@ -80,23 +80,30 @@ const getStyleDictionaryConfig = (product) => {
   };
 };
 
+const isProduct = (content) => {
+  return Object.hasOwn(content, '$figmaStyleReferences') && content.group === 'Rijkshuisstijl';
+};
+
+const getTokensFile = async () => {
+  return JSON.parse(await promises.readFile(join('src', 'generated', 'figma.tokens.json'), 'utf-8'));
+};
+
 const run = async () => {
-  const start = Date.now();
-  [
-    'wetgevend',
-    'uitvoerend - mintgroen -  ander fontweight - focus',
-    'uitvoerend - violet - oud',
-    'uitvoerend - violet',
-  ].forEach((product) => {
-    const config = getStyleDictionaryConfig(product);
-    const sd = StyleDictionary.extend(config);
-    sd.buildAllPlatforms();
+  const start = performance.now();
+  const tokens = await getTokensFile();
+  Object.entries(tokens).forEach(([product, config]) => {
+    if (isProduct(config)) {
+      const config = getStyleDictionaryConfig(product);
+      const sd = StyleDictionary.extend(config);
+      sd.buildAllPlatforms();
+    }
   });
   // await addMediaDependentFiles(DIST_FOLDER, COPY_FOLDER);
 
-  const end = Date.now();
-
-  console.log(`Done in ${end - start}ms`);
+  const end = performance.now();
+  const formatter = new Intl.NumberFormat('en-EN', { notation: 'compact' });
+  const elapsedTime = formatter.format(end - start);
+  console.log(`Done in ${elapsedTime}ms`);
 };
 
 run();
