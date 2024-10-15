@@ -7,6 +7,7 @@ interface FooterProps extends PageFooterProps {
   heading: ReactNode;
   headingLevel: number;
   columns?: IColumn[];
+  background?: 'filled-primary' | 'filled-secondary' | 'outlined';
 }
 
 interface IColumn {
@@ -18,10 +19,18 @@ const MAX_HEADING_LEVEL = 6;
 
 export const Footer = forwardRef(
   (
-    { className, heading, columns, headingLevel, children, ...restProps }: PropsWithChildren<FooterProps>,
+    { className, heading, columns, headingLevel, children, background, ...restProps }: PropsWithChildren<FooterProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => (
-    <UtrechtPageFooter {...restProps} className={clsx('rhc-footer', className)} ref={ref}>
+    <UtrechtPageFooter
+      {...restProps}
+      ref={ref}
+      className={clsx(
+        'rhc-footer',
+        background === 'filled-secondary' || background === 'outlined' ? `rhc-footer--${background}` : '',
+        className,
+      )}
+    >
       {heading && (
         <Heading className="rhc-footer__title" level={headingLevel}>
           {heading}
@@ -47,4 +56,5 @@ export const Footer = forwardRef(
     </UtrechtPageFooter>
   ),
 );
+
 Footer.displayName = 'Footer';

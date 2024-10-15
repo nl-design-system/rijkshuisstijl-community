@@ -14,10 +14,25 @@
   --utrecht-heading-4-color: currentColor;
   --utrecht-heading-5-color: currentColor;
   --utrecht-heading-6-color: currentColor;
+  --utrecht-page-footer-background-color: var(--rhc-color-robijnrood-500);
+  --utrecht-page-footer-color: var(--rhc-color-wit);
 
   column-gap: var(--rhc-page-footer-column-gap);
   display: flex;
   flex-direction: row;
+}
+
+.rhc-footer--filled-secondary {
+  --utrecht-page-footer-background-color: var(--rhc-color-lintblauw-500);
+}
+
+.rhc-footer--outlined {
+  --utrecht-page-footer-background-color: var(--rhc-color-wit);
+  --utrecht-page-footer-color: var(--rhc-color-lintblauw-500);
+
+  border-block-start-color: var(--rhc-page-footer-border-block-start-color);
+  border-block-start-style: var(--rhc-page-footer-border-block-start-style);
+  border-block-start-width: var(--rhc-page-footer-border-block-start-width);
 }
 
 .rhc-page-footer__section {

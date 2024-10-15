@@ -23,6 +23,7 @@ export const DefaultFooter: Story = {
   args: {
     heading: 'De Rijksoverheid. Voor Nederland',
     headingLevel: 4,
+    background: 'filled-primary',
     columns: [
       {
         heading: 'Service',
