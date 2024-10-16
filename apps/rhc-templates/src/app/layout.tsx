@@ -32,6 +32,7 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
               { href: '/form', label: 'Form' },
               { href: '/details', label: 'Details' },
               { href: '/collage', label: 'Collage' },
+              { href: '/mijn-omgeving', label: 'Mijn Omgeving' },
             ]}
           ></NavBar>
           <main className="page">
