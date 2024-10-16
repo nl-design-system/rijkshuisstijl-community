@@ -66,3 +66,27 @@ body {
     margin-block-start: 0;
   }
 }
+
+.rhc-page-container {
+  --utrecht-page-content-padding-block-end: var(--rhc-space-600);
+  --utrecht-page-content-padding-block-start: var(--rhc-space-600);
+  --utrecht-page-padding-inline-end: var(--rhc-space-700);
+  --utrecht-page-padding-inline-start: var(--rhc-space-700);
+  margin-inline: auto;
+  max-inline-size: 1100px;
+  display: flex;
+  justify-self: center;
+  column-gap: var(--rhc-space-700);
+}
+.rhc-side-nav {
+  min-inline-size: 230px;
+  @media (width <= 780px) {
+    --rhc-sidenav-display: none;
+  }
+}
+.rhc-page-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--rhc-space-700);
+}
