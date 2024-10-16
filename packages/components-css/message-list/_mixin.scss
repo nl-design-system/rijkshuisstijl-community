@@ -1,0 +1,79 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@mixin rhc-message-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-block: 0;
+  padding-inline: 0;
+  &:last-child {
+    border-block-end-color: var(--rhc-message-list-item-border-color);
+    border-block-end-style: solid;
+    border-block-end-width: var(--rhc-message-list-item-border-width);
+  }
+}
+@mixin rhc-message-list__item {
+  background-color: var(--rhc-message-list-item-background-color);
+  border-block-start-color: var(--rhc-message-list-item-border-color);
+  border-block-start-style: solid;
+  border-block-start-width: var(--rhc-message-list-item-border-width);
+  color: var(--rhc-message-list-item-color);
+  column-gap: var(--rhc-message-list-item-column-gap);
+  display: flex;
+  min-block-size: var(--rhc-message-list-item-min-height);
+  padding-block: var(--rhc-message-list-item-padding-block);
+  padding-inline: var(--rhc-message-list-item-padding-inline);
+  position: relative;
+  text-decoration: none;
+  &:hover {
+    background-color: var(--rhc-message-list-item-hover-background-color, var(--rhc-color-grijs-50));
+  }
+
+  &:focus {
+    background-color: var(--rhc-message-list-item-focus-background-color, var(--rhc-color-lintblauw-50));
+    z-index: 999;
+  }
+
+  &:active {
+    background-color: var(--rhc-message-list-item-active-background-color, var(--rhc-color-grijs-100));
+  }
+}
+
+@mixin rhc-message-list__item-content {
+  align-items: center;
+  display: grid;
+  flex: 1;
+  grid-column-gap: var(--rhc-message-list-item-content-column-gap);
+  grid-row-gap: var(--rhc-message-list-item-content-row-gap);
+  grid-template-areas:
+    "label description meta icon"
+    "label description meta icon"
+    "label description meta icon";
+  grid-template-columns: 1fr 2fr auto auto;
+}
+@mixin rhc-message-list__item__label {
+  color: var(--rhc-message-list-item-heading-color);
+  column-gap: var(--rhc-space-100);
+  display: flex;
+  font-family: var(--rhc-message-list-item-label-font-family), sans-serif;
+  font-size: var(--rhc-message-list-item-label-font-size);
+  font-weight: var(--rhc-message-list-item-label-font-weight);
+  grid-area: label;
+  line-height: var(--rhc-message-list-item-label-line-height);
+}
+@mixin rhc-message-list__item__description {
+  color: inherit;
+  grid-area: description;
+}
+@mixin rhc-message-list__item__meta-data {
+  color: inherit;
+  grid-area: meta;
+}
+@mixin rhc-navigation-list__item__end-icon {
+  color: var(--rhc-message-list-item-icon-color);
+  grid-area: icon;
+  min-block-size: var(--rhc-message-list-item-icon-font-size);
+}
