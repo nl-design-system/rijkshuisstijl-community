@@ -43,6 +43,8 @@
 }
 
 @mixin rhc-navigation-list__item__start-icon {
+  --utrecht-icon-color: var(--rhc-navigation-list-icon-color, var(--rhc-color-foreground-subdued));
+
   background-color: var(--rhc-navigation-list-icon-background-color, var(--rhc-color-wit));
   block-size: var(--rhc-navigation-list-item-icon-size);
   border-radius: var(--rhc-navigation-list-icon-border-radius, var(--rhc-border-radius-circle));
