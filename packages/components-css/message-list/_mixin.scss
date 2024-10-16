@@ -55,6 +55,8 @@
   grid-template-columns: 1fr 2fr auto auto;
 }
 @mixin rhc-message-list__item__label {
+  --utrecht-paragraph-font-weight: var(--rhc-message-list-item-label-font-weight);
+
   color: var(--rhc-message-list-item-heading-color);
   column-gap: var(--rhc-space-100);
   display: flex;
