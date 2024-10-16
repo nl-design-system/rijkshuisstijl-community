@@ -27,13 +27,13 @@ const init = async ({ input, output }) => {
   const transformerOptions = {
     // expandTypography: true,
     // expandShadow: true,
-    // expandComposition: true,
+    expandComposition: false,
     // expandBorder: true,
-    // preserveRawValue: false,
-    // throwErrorWhenNotResolved: true,
-    // resolveReferences: true,
+    preserveRawValue: true,
+    // throwErrorWhenNotResolved: false,
+    resolveReferences: 'math',
   };
-
+  const start = Date.now();
   let resolved = transformTokens(rawTokens, setsToUse, excludes, transformerOptions);
 
   delete resolved['tokenSetOrder'];
@@ -41,6 +41,9 @@ const init = async ({ input, output }) => {
   await mkdir(dirname(output), { recursive: true });
 
   await writeFile(output, JSON.stringify(resolved, null, 2));
+  const end = Date.now();
+
+  console.log(`Build ready in ${end - start}ms`);
 };
 
 init({
