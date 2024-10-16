@@ -3,35 +3,27 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 .rhc-footer {
-  background-color: var(--utrecht-page-footer-background-color);
-  color: var(--utrecht-page-footer-color);
+  --utrecht-space-around: 1;
+  --utrecht-link-hover-text-decoration: underline;
+  --_utrecht-link-state-text-decoration-color: currentColor;
+  --utrecht-column-layout-column-gap: var(--rhc-page-footer-column-gap);
+  --utrecht-column-layout-column-width: var(--rhc-page-footer-column-width);
+  --utrecht-heading-1-color: currentColor;
+  --utrecht-heading-2-color: currentColor;
+  --utrecht-heading-3-color: currentColor;
+  --utrecht-heading-4-color: currentColor;
+  --utrecht-heading-5-color: currentColor;
+  --utrecht-heading-6-color: currentColor;
+
+  column-gap: var(--rhc-page-footer-column-gap);
   display: flex;
   flex-direction: row;
-  gap: var(--utrecht-page-footer-gap);
-  justify-content: flex-start;
-  padding-block-end: var(--utrecht-page-footer-padding-block-end);
-  padding-block-start: var(--utrecht-page-footer-padding-block-start);
-  padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
-  padding-inline-start: var(--utrecht-page-footer-padding-inline-start);
-  @media (width <= 768px) {
-    flex-direction: column;
-  }
 }
 
-.rhc-footer__title {
-  color: var(--utrecht-page-footer-color) !important;
+.rhc-page-footer__section {
+  break-inside: avoid;
 }
 
-.rhc-footer__column--title {
-  --utrecht-space-around: 1;
-
-  color: var(--utrecht-page-footer-color) !important;
-  margin-block-end: var(--utrecht-page-footer-column-title-margin-block-end);
-}
-
-.rhc-footer__column {
-  --utrecht-link-hover-text-decoration: underline;
-  --_utrecht-link-state-text-decoration-color: --utrecht-page-footer-color;
-
+.rhc-footer > * {
   flex: 1;
 }
