@@ -7,7 +7,7 @@ interface FooterProps extends PageFooterProps {
   heading: ReactNode;
   headingLevel: number;
   columns?: IColumn[];
-  background?: 'filled-primary' | 'filled-secondary' | 'outlined';
+  background?: 'primary-filled' | 'primary-outlined';
 }
 
 interface IColumn {
@@ -27,29 +27,22 @@ export const Footer = forwardRef(
       ref={ref}
       className={clsx(
         'rhc-footer',
-        background === 'filled-secondary' || background === 'outlined' ? `rhc-footer--${background}` : '',
+        background === 'primary-outlined' || background === 'primary-filled' ? `rhc-footer--${background}` : '',
         className,
       )}
     >
-      {heading && (
-        <Heading className="rhc-footer__title" level={headingLevel}>
-          {heading}
-        </Heading>
-      )}
-
       <ColumnLayout>
-        {columns &&
-          columns.map((column, index) => (
-            <div className="rhc-page-footer__section" key={index}>
-              <Heading
-                className="rhc-footer__column--title"
-                level={headingLevel >= MAX_HEADING_LEVEL ? MAX_HEADING_LEVEL : headingLevel + 1}
-              >
-                {column.heading}
-              </Heading>
-              {column.children}
-            </div>
-          ))}
+        <div className="rhc-page-footer__title" key={'heading'}>
+          <Heading level={headingLevel}>{heading}</Heading>
+        </div>
+        {columns?.map((column, index) => (
+          <div className="rhc-page-footer__section" key={index}>
+            <Heading level={headingLevel >= MAX_HEADING_LEVEL ? MAX_HEADING_LEVEL : headingLevel + 1}>
+              {column.heading}
+            </Heading>
+            {column.children}
+          </div>
+        ))}
 
         {children}
       </ColumnLayout>

@@ -14,21 +14,19 @@
   --utrecht-heading-4-color: currentColor;
   --utrecht-heading-5-color: currentColor;
   --utrecht-heading-6-color: currentColor;
-  --utrecht-page-footer-background-color: var(--rhc-color-robijnrood-500);
-  --utrecht-page-footer-color: var(--rhc-color-wit);
 
   column-gap: var(--rhc-page-footer-column-gap);
   display: flex;
   flex-direction: row;
 }
 
-.rhc-footer--filled-secondary {
-  --utrecht-page-footer-background-color: var(--rhc-color-lintblauw-500);
+.rhc-footer--primary-filled {
+  --utrecht-page-footer-background-color: var(--rhc-color-primary-500);
 }
 
-.rhc-footer--outlined {
+.rhc-footer--primary-outlined {
   --utrecht-page-footer-background-color: var(--rhc-color-wit);
-  --utrecht-page-footer-color: var(--rhc-color-lintblauw-500);
+  --utrecht-page-footer-color: var(--rhc-color-primary-500);
 
   border-block-start-color: var(--rhc-page-footer-border-block-start-color);
   border-block-start-style: var(--rhc-page-footer-border-block-start-style);
@@ -41,4 +39,23 @@
 
 .rhc-footer > * {
   flex: 1;
+}
+
+@media (width >= 1024px) {
+  .rhc-page-footer__title {
+    block-size: 80%;
+  }
+}
+
+@media (width <= 1024px) {
+  .rhc-page-footer__section {
+    margin-block-start: var(--rhc-space-150);
+  }
+}
+
+@media (width <= 320px) {
+  .rhc-footer {
+    --utrecht-page-footer-padding-inline-start: var(--rhc-page-footer-padding-inline-start);
+    --utrecht-page-footer-padding-block-start: var(--rhc-page-footer-padding-block-start);
+  }
 }
