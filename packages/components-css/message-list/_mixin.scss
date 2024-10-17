@@ -65,14 +65,17 @@
   font-weight: var(--rhc-message-list-item-label-font-weight);
   grid-area: label;
   line-height: var(--rhc-message-list-item-label-line-height);
+  margin-block: 0;
 }
 @mixin rhc-message-list__item__description {
-  color: inherit;
+  color: var(--rhc-color-foreground-subdued);
   grid-area: description;
+  margin-block: 0;
 }
 @mixin rhc-message-list__item__meta-data {
-  color: inherit;
+  color: var(--rhc-color-foreground-subdued);
   grid-area: meta;
+  margin-block: 0;
 }
 @mixin rhc-navigation-list__item__end-icon {
   color: var(--rhc-message-list-item-icon-color);
