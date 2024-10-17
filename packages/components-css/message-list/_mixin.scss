@@ -78,7 +78,8 @@
   margin-block: 0;
 }
 @mixin rhc-navigation-list__item__end-icon {
-  color: var(--rhc-message-list-item-icon-color);
+  --utrecht-icon-color: var(--rhc-color-foreground-lint);
+
   grid-area: icon;
   min-block-size: var(--rhc-message-list-item-icon-font-size);
 }
