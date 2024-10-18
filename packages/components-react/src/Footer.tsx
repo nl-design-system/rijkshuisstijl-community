@@ -31,10 +31,10 @@ export const Footer = forwardRef(
         className,
       )}
     >
+      <div className="rhc-page-footer__title" key={'heading'}>
+        <Heading level={headingLevel}>{heading}</Heading>
+      </div>
       <ColumnLayout>
-        <div className="rhc-page-footer__title" key={'heading'}>
-          <Heading level={headingLevel}>{heading}</Heading>
-        </div>
         {columns?.map((column, index) => (
           <div className="rhc-page-footer__section" key={index}>
             <Heading level={headingLevel >= MAX_HEADING_LEVEL ? MAX_HEADING_LEVEL : headingLevel + 1}>
