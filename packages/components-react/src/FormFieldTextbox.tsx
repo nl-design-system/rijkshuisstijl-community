@@ -1,14 +1,7 @@
-import {
-  FormField,
-  FormFieldDescription,
-  FormFieldTextboxProps,
-  FormLabel,
-  Textbox,
-} from '@utrecht/component-library-react';
+import { FormField, FormFieldTextboxProps, FormFieldTextbox as TextBox } from '@utrecht/component-library-react';
 import { type TextboxTypes } from '@utrecht/component-library-react/dist/Textbox';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, useId } from 'react';
-import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
 export const FormFieldTextbox = forwardRef(
   (
@@ -54,28 +47,18 @@ export const FormFieldTextbox = forwardRef(
 
     return (
       <FormField invalid={invalid} ref={ref} {...props}>
-        <div className="utrecht-form-field__label">
-          <FormLabel htmlFor={inputId}>{label}</FormLabel>
-        </div>
-        {description && (
-          <FormFieldDescription className="utrecht-form-field__description" id={descriptionId}>
-            {description}
-          </FormFieldDescription>
-        )}
-        {invalid && errorMessage && (
-          <FormFieldErrorMessage className="utrecht-form-field__error-message" id={errorMessageId}>
-            {errorMessage}
-          </FormFieldErrorMessage>
-        )}
         <div className="utrecht-form-field__input">
-          <Textbox
+          <TextBox
             autoComplete={autoComplete}
             defaultValue={defaultValue}
+            description={description}
             dir={inputDir || 'auto'}
             disabled={disabled}
+            errorMessage={errorMessage}
             id={inputId}
             inputRequired={inputRequired}
             invalid={invalid}
+            label={label}
             list={list}
             max={max}
             maxLength={maxLength}
