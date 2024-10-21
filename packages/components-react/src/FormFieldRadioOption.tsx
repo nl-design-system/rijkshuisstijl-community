@@ -52,9 +52,12 @@ export const FormFieldRadioOption = forwardRef(
                 [statusId]: status,
               }) || undefined
             }
-            className={clsx({
-              'utrecht-radio-button--html-radio-button-rtl': dir === 'rtl',
-            })}
+            className={clsx(
+              {
+                'utrecht-radio-button--html-radio-button-rtl': dir === 'rtl',
+              },
+              'rhc-radio',
+            )}
             {...restProps}
           ></Radio>
         </div>
