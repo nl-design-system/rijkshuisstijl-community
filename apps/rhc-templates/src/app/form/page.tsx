@@ -99,10 +99,10 @@ export default function Form() {
                 <Fieldset>
                   <FieldsetLegend>Label</FieldsetLegend>
                   <div>
-                    <FormFieldRadioOption label="Label" name="radio-option" />
-                    <FormFieldRadioOption label="Label" name="radio-option" />
-                    <FormFieldRadioOption label="Label" name="radio-option" />
-                    <FormFieldRadioOption label="Label" name="radio-option" />
+                    <FormFieldRadioOption label="Label" />
+                    <FormFieldRadioOption label="Label" />
+                    <FormFieldRadioOption label="Label" />
+                    <FormFieldRadioOption label="Label" />
                   </div>
                 </Fieldset>
                 {/*
