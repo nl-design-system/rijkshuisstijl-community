@@ -18,7 +18,7 @@ import { Alert } from '@rijkshuisstijl-community/components-react';
 <Alert
   heading="Heading"
   headingLevel={3}
-  icon="info"
+  icon="info-circle"
   textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
   type="info"
 />;

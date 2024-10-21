@@ -1217,6 +1217,42 @@
       }
     }
   },
+  "utrecht/rich-text": {
+    "utrecht": {
+      "rich-text": {
+        "stranger": {
+          "margin-block-end": {
+            "value": "{rhc.space.400}",
+            "type": "spacing"
+          }
+        },
+        "acquaintance": {
+          "margin-block-end": {
+            "value": "{rhc.space.200}",
+            "type": "spacing"
+          }
+        },
+        "friend": {
+          "margin-block-end": {
+            "value": "{rhc.space.100}",
+            "type": "spacing"
+          }
+        },
+        "best-friend": {
+          "margin-block-end": {
+            "value": "{rhc.space.50}",
+            "type": "spacing"
+          }
+        },
+        "confidant": {
+          "margin-block-end": {
+            "value": "{rhc.space.0}",
+            "type": "spacing"
+          }
+        }
+      }
+    }
+  },
   "utrecht/document": {
     "utrecht": {
       "document": {
@@ -2826,6 +2862,24 @@
       }
     }
   },
+  "components/dot-badge": {
+    "rhc": {
+      "dot-badge": {
+        "border-radius": {
+          "value": "{rhc.border-radius.circle}",
+          "type": "border-radius"
+        },
+        "color": {
+          "value": "{rhc.color.rood.500}",
+          "type": "color"
+        },
+        "size": {
+          "value": "{rhc.size.quarter-lint}",
+          "type": "size"
+        }
+      }
+    }
+  },
   "components/drawer": {
     "todo": {
       "drawer": {
@@ -3690,7 +3744,7 @@
     }
   },
   "components/link-list-card": {
-    "todo": {
+    "rhc": {
       "link-list-card": {
         "background-color": {
           "value": "{rhc.color.wit}",
@@ -3703,6 +3757,10 @@
         "padding-block-end": {
           "value": "{rhc.space.300}",
           "type": "spacing"
+        },
+        "row-gap": {
+            "value":"{rhc.space.200}",
+            "type": "spacing"
         },
         "padding-inline-start": {
           "value": "{rhc.space.300}",
@@ -5919,7 +5977,7 @@
     }
   },
   "components/toggletip": {
-    "todo": {
+    "rhc": {
       "toggletip": {
         "color": {
           "value": "{rhc.color.wit}",
@@ -5936,6 +5994,10 @@
         "border-radius": {
           "value": "{rhc.border-radius.md}",
           "type": "borderRadius"
+        },
+        "border-width": {
+          "value": "{rhc.border-width.default}",
+          "type": "borderWidth"
         },
         "icon": {
           "size": {
@@ -5980,10 +6042,6 @@
             "value": "{rhc.color.feedback.info.default}",
             "type": "color"
           }
-        },
-        "border-width": {
-          "value": "{rhc.border-width.default}",
-          "type": "borderWidth"
         }
       }
     }
@@ -6112,6 +6170,7 @@
       "common/keep",
       "utrecht/focus",
       "utrecht/pointer-target",
+      "utrecht/rich-text",
       "utrecht/document",
       "components/accordion",
       "components/alert",
@@ -6125,6 +6184,7 @@
       "components/checkbox",
       "components/checkbox-group",
       "components/counter-badge",
+      "components/dot-badge",
       "components/drawer",
       "components/figure",
       "components/footer",
