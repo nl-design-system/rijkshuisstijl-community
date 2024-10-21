@@ -1,44 +1,8 @@
-import {
-  FormField,
-  FormFieldDescription,
-  FormFieldProps,
-  FormLabel,
-  Textarea,
-  TextareaProps,
-} from '@utrecht/component-library-react';
+import { FormField, FormFieldTextareaProps, FormFieldTextarea as Textarea } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
-import { FormFieldErrorMessage } from './FormFieldErrorMessage';
+import { ForwardedRef, forwardRef, PropsWithChildren, useId } from 'react';
 
-export { Textarea, type TextareaProps };
-
-export interface FormFieldTextareaProps
-  extends Omit<FormFieldProps, 'onInput' | 'onBlur' | 'onFocus' | 'onChange'>,
-    Pick<
-      TextareaProps,
-      | 'onInput'
-      | 'onBlur'
-      | 'onFocus'
-      | 'onChange'
-      | 'autoComplete'
-      | 'cols'
-      | 'defaultValue'
-      | 'disabled'
-      | 'invalid'
-      | 'maxLength'
-      | 'minLength'
-      | 'name'
-      | 'placeholder'
-      | 'readOnly'
-      | 'required'
-      | 'rows'
-      | 'value'
-    > {
-  errorMessage?: string;
-  inputRef?: Ref<HTMLTextAreaElement>;
-  inputDir?: 'auto' | 'ltr' | 'rtl';
-  status?: ReactNode;
-}
+export { Textarea, type FormFieldTextareaProps };
 
 export const FormFieldTextarea = forwardRef(
   (
@@ -78,34 +42,24 @@ export const FormFieldTextarea = forwardRef(
 
     return (
       <FormField invalid={invalid} ref={ref} type={'textarea'} {...restProps}>
-        <div className="utrecht-form-field__label">
-          <FormLabel htmlFor={inputId}>{label}</FormLabel>
-        </div>
-        {description && (
-          <FormFieldDescription className="utrecht-form-field__description" id={descriptionId}>
-            {description}
-          </FormFieldDescription>
-        )}
-        {invalid && errorMessage && (
-          <FormFieldErrorMessage className="utrecht-form-field__error-message" id={errorMessageId}>
-            {errorMessage}
-          </FormFieldErrorMessage>
-        )}
         <div className="utrecht-form-field__input">
           <Textarea
             autoComplete={autoComplete}
             cols={cols}
             defaultValue={defaultValue}
+            description={description}
             dir={inputDir || 'auto'}
             disabled={disabled}
+            errorMessage={errorMessage}
             id={inputId}
+            inputRef={inputRef}
             invalid={invalid}
+            label={label}
             maxLength={maxLength}
             minLength={minLength}
             name={name}
             placeholder={placeholder}
             readOnly={readOnly}
-            ref={inputRef}
             required={required}
             rows={rows}
             spellCheck={spellCheck}

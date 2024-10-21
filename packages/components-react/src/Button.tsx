@@ -13,6 +13,7 @@ export { Button, type ButtonProps, PrimaryActionButton, SecondaryActionButton, S
 
 export interface IconButtonProps extends ButtonProps {
   label: string;
+  className: string;
 }
 
 export const IconButton = forwardRef(

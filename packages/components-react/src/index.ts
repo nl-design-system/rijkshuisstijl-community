@@ -57,7 +57,7 @@ export { FormFieldCheckboxOption, type FormFieldCheckboxOptionProps } from './Fo
 export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFieldErrorMessage';
 export { FormFieldRadioOption, type FormFieldRadioOptionProps } from './FormFieldRadioOption';
 export { FormFieldSelect, type FormFieldSelectProps, SelectOption, type SelectOptionProps } from './FormFieldSelect';
-export { FormFieldTextarea, type FormFieldTextareaProps, Textarea, type TextareaProps } from './FormFieldTextarea';
+export { FormFieldTextarea, type FormFieldTextareaProps, Textarea } from './FormFieldTextarea';
 export { FormFieldTextbox } from './FormFieldTextbox';
 export { Heading, type HeadingProps } from './Heading';
 export { Hero, type HeroProps } from './Hero';
