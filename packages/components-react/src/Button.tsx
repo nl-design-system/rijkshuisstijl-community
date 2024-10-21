@@ -11,14 +11,9 @@ import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
 export { Button, type ButtonProps, PrimaryActionButton, SecondaryActionButton, SubtleButton };
 
-export interface IconButtonProps extends ButtonProps {
-  label: string;
-  className: string;
-}
-
 export const IconButton = forwardRef(
   (
-    { children, className, label, ...restProps }: PropsWithChildren<IconButtonProps>,
+    { children, className, label, ...restProps }: PropsWithChildren<ButtonProps>,
     ref: ForwardedRef<HTMLButtonElement>,
   ) => (
     <SubtleButton className={clsx('rhc-button', 'rhc-button--icon-only', className)} ref={ref} {...restProps}>

@@ -28,7 +28,6 @@ export {
   Button,
   type ButtonProps,
   IconButton,
-  type IconButtonProps,
   PrimaryActionButton,
   SecondaryActionButton,
   SubtleButton,
