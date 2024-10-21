@@ -1,4 +1,4 @@
-import { FormField, FormFieldTextboxProps, FormFieldTextbox as TextBox } from '@utrecht/component-library-react';
+import { FormFieldTextboxProps, FormFieldTextbox as TextBox } from '@utrecht/component-library-react';
 import { type TextboxTypes } from '@utrecht/component-library-react/dist/Textbox';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, useId } from 'react';
@@ -36,7 +36,7 @@ export const FormFieldTextbox = forwardRef(
       size,
       children,
       inputRef,
-      ...props
+      ...restProps
     }: PropsWithChildren<FormFieldTextboxProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
@@ -46,54 +46,48 @@ export const FormFieldTextbox = forwardRef(
     const errorMessageId = useId();
 
     return (
-      <FormField invalid={invalid} ref={ref} {...props}>
-        <div className="utrecht-form-field__input">
-          <TextBox
-            autoComplete={autoComplete}
-            defaultValue={defaultValue}
-            description={description}
-            dir={inputDir || 'auto'}
-            disabled={disabled}
-            errorMessage={errorMessage}
-            id={inputId}
-            inputRequired={inputRequired}
-            invalid={invalid}
-            label={label}
-            list={list}
-            max={max}
-            maxLength={maxLength}
-            min={min}
-            minLength={minLength}
-            name={name}
-            pattern={pattern}
-            placeholder={placeholder}
-            readOnly={readOnly}
-            ref={inputRef}
-            required={required}
-            size={size}
-            step={step}
-            type={(type as TextboxTypes) || 'text'}
-            value={value}
-            aria-describedby={
-              clsx({
-                [descriptionId]: description,
-                [errorMessageId]: invalid,
-                [statusId]: status,
-              }) || undefined
-            }
-            onBlur={onBlur}
-            onChange={onChange}
-            onFocus={onFocus}
-            onInput={onInput}
-          />
-        </div>
-        {status && (
-          <div className="utrecht-form-field__status" id={statusId}>
-            {status}
-          </div>
-        )}
+      <TextBox
+        autoComplete={autoComplete}
+        defaultValue={defaultValue}
+        description={description}
+        dir={inputDir || 'auto'}
+        disabled={disabled}
+        errorMessage={errorMessage}
+        id={inputId}
+        inputRef={inputRef}
+        inputRequired={inputRequired}
+        invalid={invalid}
+        label={label}
+        list={list}
+        max={max}
+        maxLength={maxLength}
+        min={min}
+        minLength={minLength}
+        name={name}
+        pattern={pattern}
+        placeholder={placeholder}
+        readOnly={readOnly}
+        ref={ref}
+        required={required}
+        size={size}
+        step={step}
+        type={(type as TextboxTypes) || 'text'}
+        value={value}
+        aria-describedby={
+          clsx({
+            [descriptionId]: description,
+            [errorMessageId]: invalid,
+            [statusId]: status,
+          }) || undefined
+        }
+        onBlur={onBlur}
+        onChange={onChange}
+        onFocus={onFocus}
+        onInput={onInput}
+        {...restProps}
+      >
         {children}
-      </FormField>
+      </TextBox>
     );
   },
 );

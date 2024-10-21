@@ -1,4 +1,4 @@
-import { FormField, FormFieldTextareaProps, FormFieldTextarea as Textarea } from '@utrecht/component-library-react';
+import { FormFieldTextareaProps, FormFieldTextarea as Textarea } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, useId } from 'react';
 
@@ -41,48 +41,42 @@ export const FormFieldTextarea = forwardRef(
     const errorMessageId = useId();
 
     return (
-      <FormField invalid={invalid} ref={ref} type={'textarea'} {...restProps}>
-        <div className="utrecht-form-field__input">
-          <Textarea
-            autoComplete={autoComplete}
-            cols={cols}
-            defaultValue={defaultValue}
-            description={description}
-            dir={inputDir || 'auto'}
-            disabled={disabled}
-            errorMessage={errorMessage}
-            id={inputId}
-            inputRef={inputRef}
-            invalid={invalid}
-            label={label}
-            maxLength={maxLength}
-            minLength={minLength}
-            name={name}
-            placeholder={placeholder}
-            readOnly={readOnly}
-            required={required}
-            rows={rows}
-            spellCheck={spellCheck}
-            value={value}
-            aria-describedby={
-              clsx({
-                [descriptionId]: description,
-                [errorMessageId]: invalid,
-                [statusId]: status,
-              }) || undefined
-            }
-            onBlur={onBlur}
-            onChange={onChange}
-            onFocus={onFocus}
-            onInput={onInput}
-          />
-        </div>
-        {status && (
-          <div className="utrecht-form-field__status" id={statusId}>
-            {status}
-          </div>
-        )}
-      </FormField>
+      <Textarea
+        autoComplete={autoComplete}
+        cols={cols}
+        defaultValue={defaultValue}
+        description={description}
+        dir={inputDir || 'auto'}
+        disabled={disabled}
+        errorMessage={errorMessage}
+        id={inputId}
+        inputRef={inputRef}
+        invalid={invalid}
+        label={label}
+        maxLength={maxLength}
+        minLength={minLength}
+        name={name}
+        placeholder={placeholder}
+        readOnly={readOnly}
+        ref={ref}
+        required={required}
+        rows={rows}
+        spellCheck={spellCheck}
+        status={status}
+        value={value}
+        aria-describedby={
+          clsx({
+            [descriptionId]: description,
+            [errorMessageId]: invalid,
+            [statusId]: status,
+          }) || undefined
+        }
+        onBlur={onBlur}
+        onChange={onChange}
+        onFocus={onFocus}
+        onInput={onInput}
+        {...restProps}
+      />
     );
   },
 );
