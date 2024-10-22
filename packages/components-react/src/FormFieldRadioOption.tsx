@@ -61,7 +61,7 @@ export const FormFieldRadioOption = forwardRef(
             {...restProps}
           ></Radio>
         </div>
-        <div className="utrecht-form-field__label">
+        <div className="utrecht-form-field__label rhc-form-field__label">
           <FormLabel htmlFor={id}>{label}</FormLabel>
         </div>
         {description && (
