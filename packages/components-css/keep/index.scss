@@ -1,43 +1,141 @@
 @import "./mixin";
 
 .rhc-keep {
-  *:nth-child(1) {
-    border-radius: inherit;
+  display: inline-block;
+  position: relative;
+
+  &-top-left {
+    &-s {
+      > :first-child {
+        @include rhc-keep-corner("top-left", "s");
+      }
+    }
+
+    &-m {
+      > :first-child {
+        @include rhc-keep-corner("top-left", "m");
+      }
+    }
+
+    &-l {
+      > :first-child {
+        @include rhc-keep-corner("top-left", "l");
+      }
+    }
+  }
+
+  &-top-right {
+    &-s {
+      > :first-child {
+        @include rhc-keep-corner("top-right", "s");
+      }
+    }
+
+    &-m {
+      > :first-child {
+        @include rhc-keep-corner("top-right", "m");
+      }
+    }
+
+    &-l {
+      > :first-child {
+        @include rhc-keep-corner("top-right", "l");
+      }
+    }
+  }
+
+  &-bottom-left {
+    &-s {
+      > :first-child {
+        @include rhc-keep-corner("bottom-left", "s");
+      }
+    }
+    &-m {
+      > :first-child {
+        @include rhc-keep-corner("bottom-left", "m");
+      }
+    }
+
+    &-l {
+      > :first-child {
+        @include rhc-keep-corner("bottom-left", "l");
+      }
+    }
+  }
+
+  &-bottom-right {
+    &-s {
+      > :first-child {
+        @include rhc-keep-corner("bottom-right", "s");
+      }
+    }
+
+    &-m {
+      > :first-child {
+        @include rhc-keep-corner("bottom-right", "m");
+      }
+    }
+
+    &-l {
+      > :first-child {
+        @include rhc-keep-corner("bottom-right", "l");
+      }
+    }
   }
 }
 
-.rhc-keep-start-start {
-  @include rhc-keep--border-radius-corner-start-start;
+.rhc-keep-child-top-left {
+  @include rhc-keep-child("top-left");
+  @include rhc-keep-corner("bottom-right", "s");
+}
 
-  *:nth-child(2) {
-    border-start-end-radius: var(--rhc-hero-message-border-radius);
-    inset-inline-start: 0;
+.rhc-keep-child-top-right {
+  @include rhc-keep-child("top-right");
+  @include rhc-keep-corner("bottom-left", "s");
+}
+
+.rhc-keep-child-bottom-left {
+  @include rhc-keep-child("bottom-left");
+  @include rhc-keep-corner("top-right", "s");
+}
+
+.rhc-keep-child-bottom-right {
+  @include rhc-keep-child("bottom-right");
+  @include rhc-keep-corner("top-left", "s");
+}
+
+.rhc-keep-child__horizontal {
+  &-s {
+    @include rhc-keep-child__horizontal("s");
+  }
+
+  &-m {
+    @include rhc-keep-child__horizontal("m");
+  }
+
+  &-l {
+    @include rhc-keep-child__horizontal("l");
+  }
+
+  &-full {
+    @include rhc-keep-child__horizontal("full");
   }
 }
 
-.rhc-keep-start-end {
-  @include rhc-keep--border-radius-corner-start-end;
-
-  *:nth-child(2) {
-    border-start-start-radius: var(--rhc-hero-message-border-radius);
-    inset-inline-end: 0;
+.rhc-keep-child__vertical {
+  &-s {
+    @include rhc-keep-child__vertical("s");
   }
-}
 
-.rhc-keep-end-start {
-  @include rhc-keep--border-radius-corner-end-start;
-
-  *:nth-child(2) {
-    border-start-start-radius: var(--rhc-hero-message-border-radius);
-    inset-inline-end: 0;
+  &-m {
+    @include rhc-keep-child__vertical("m");
   }
-}
 
-.rhc-keep-end-end {
-  @include rhc-keep--border-radius-corner-end-end;
+  &-l {
+    @include rhc-keep-child__vertical("l");
+  }
 
-  *:nth-child(2) {
-    border-start-end-radius: var(--rhc-hero-message-border-radius);
-    inset-inline-start: 0;
+  &-full {
+    @include rhc-keep-child__vertical("full");
   }
 }
