@@ -5,7 +5,10 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 const RadioGroupStory = () => (
   <div className="rhc-radio-group">
-    <FormFieldRadioOption label="Radio option" name="radio-option" />
+    <FormFieldRadioOption
+      label="Radio option Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id tempus ex. Vestibulum auctor sagittis sagittis."
+      name="radio-option"
+    />
     <FormFieldRadioOption label="Radio option" name="radio-option" />
     <FormFieldRadioOption label="Radio option" name="radio-option" />
     <FormFieldRadioOption label="Radio option" name="radio-option" />
