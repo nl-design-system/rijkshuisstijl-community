@@ -622,7 +622,6 @@ describe('Form field with a textarea', () => {
   describe('placeholder', () => {
     it('omits non-essential required attributes when not required', () => {
       render(<FormFieldTextarea {...defaultProps} />);
-      screen.debug();
       const textarea = screen.getByRole('textbox');
 
       expect(textarea).not.toHaveAttribute('placeholder');
