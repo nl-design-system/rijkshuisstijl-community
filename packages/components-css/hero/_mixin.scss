@@ -91,3 +91,18 @@
   font-weight: var(--rhc-hero-sub-heading-font-weight);
   line-height: var(--rhc-hero-sub-heading-line-height);
 }
+
+@mixin rhc-hero__children {
+  box-sizing: border-box;
+  color: var(--rhc-hero-message-color, inherit);
+  display: flex;
+  flex-direction: column;
+  inline-size: var(--rhc-hero-message-inline-size);
+  inset-block-end: 0;
+  padding-block-end: var(--rhc-hero-message-padding-block-end);
+  padding-block-start: var(--rhc-hero-message-padding-block-start);
+  padding-inline-end: var(--rhc-hero-message-padding-inline-end);
+  padding-inline-start: var(--rhc-hero-message-padding-inline-start);
+  position: absolute;
+  row-gap: var(--rhc-hero-message-row-gap);
+}

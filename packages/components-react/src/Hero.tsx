@@ -9,9 +9,10 @@ export interface HeroProps extends HTMLAttributes<HTMLDivElement> {
   textAlign?: 'start' | 'end';
   imageSrc: string;
   imageAlt: string;
-  heading: ReactNode;
+  heading?: ReactNode;
   headingLevel?: 1 | 2 | 3 | 4 | 5;
-  subHeading: ReactNode;
+  subHeading?: ReactNode;
+  heroMessage?: boolean;
   aspectRatio?: '16 / 9' | '1 / 1' | '4 / 3';
   borderRadiusCorner?: 'start-start' | 'start-end' | 'end-start' | 'end-end';
 }
@@ -26,6 +27,7 @@ export const Hero = forwardRef(
       imageAlt,
       heading,
       subHeading,
+      heroMessage,
       headingLevel = 3,
       borderRadiusCorner,
       aspectRatio = '16 / 9',
@@ -47,15 +49,17 @@ export const Hero = forwardRef(
         {...restProps}
       >
         <Image alt={imageAlt} className="rhc-hero__image" src={imageSrc} />
-        <div className="rhc-hero__message">
-          <HeadingGroup>
-            <Heading appearance="utrecht-heading-3" className="rhc-hero__heading" level={headingLevel}>
-              {heading}
-            </Heading>
-            <Paragraph className="rhc-hero__sub-heading">{subHeading}</Paragraph>
-          </HeadingGroup>
-          {children}
-        </div>
+        {heroMessage && (
+          <div className={clsx('rhc-hero__message')}>
+            <HeadingGroup>
+              <Heading appearance="utrecht-heading-3" className="rhc-hero__heading" level={headingLevel}>
+                {heading}
+              </Heading>
+              <Paragraph className="rhc-hero__sub-heading">{subHeading}</Paragraph>
+            </HeadingGroup>
+          </div>
+        )}
+        {children && <div className="rhc-hero__children">{children}</div>}
       </div>
     );
   },
