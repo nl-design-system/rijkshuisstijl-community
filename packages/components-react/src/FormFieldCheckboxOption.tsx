@@ -30,7 +30,7 @@ export const FormFieldCheckboxOption = forwardRef(
     const errorMessageId = useId();
     return (
       <FormFieldCheckbox
-        className="utrecht-form-field__checkbox"
+        className="utrecht-form-field__checkbox rhc-form-label--checkbox"
         defaultValue={defaultValue}
         description={description}
         disabled={disabled}
