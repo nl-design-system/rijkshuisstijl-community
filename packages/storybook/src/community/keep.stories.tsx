@@ -52,7 +52,7 @@ const meta = {
   id: 'rhc-keep',
   component: Keep,
   argTypes: {
-    keep: {
+    keepCorner: {
       control: { type: 'select' },
       options: ['top-left', 'bottom-left', 'top-right', 'bottom-right'],
     },
@@ -82,7 +82,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    keep: 'top-right',
+    keepCorner: 'top-right',
     borderRadius: 'm',
     children: 'Vormtaal',
   },
