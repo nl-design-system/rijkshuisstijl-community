@@ -27,7 +27,7 @@ import { RichText } from '@utrecht/component-library-react/dist/css-module';
 export default function Form() {
   return (
     <>
-      <div className="rhc-background-color-white rhc-main-content">
+      <div className="rhc-main-content">
         <PageContent className="container page-content rhc-page-content rhc-background-color-white">
           <Article>
             <RichText>
