@@ -1,6 +1,7 @@
 import { FormFieldCheckbox, FormFieldCheckboxProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, useId } from 'react';
+import { Icon } from './icon/Icon';
 
 export interface FormFieldCheckboxOptionProps extends FormFieldCheckboxProps {}
 
@@ -28,13 +29,21 @@ export const FormFieldCheckboxOption = forwardRef(
     const id = useId();
     const descriptionId = useId();
     const errorMessageId = useId();
+
+    const errorMsg = () => (
+      <span className={'utrecht-form-field-error-message--icon-container'}>
+        <Icon className={'utrecht-form-field-error-message--icon-container-icon'} icon={'alert-circle'}></Icon>{' '}
+        {errorMessage}
+      </span>
+    );
+
     return (
       <FormFieldCheckbox
         className="utrecht-form-field__checkbox rhc-form-label--checkbox"
         defaultValue={defaultValue}
         description={description}
         disabled={disabled}
-        errorMessage={errorMessage}
+        errorMessage={errorMsg()}
         id={id}
         inputRef={inputRef}
         invalid={invalid}
