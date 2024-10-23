@@ -105,16 +105,24 @@
 }
 
 .rhc-keep-child__horizontal {
-  &-s {
-    @include rhc-keep-child__horizontal("s");
+  &-xs {
+    @include rhc-keep-child__horizontal("xs");
   }
 
-  &-m {
-    @include rhc-keep-child__horizontal("m");
+  &-sm {
+    @include rhc-keep-child__horizontal("sm");
   }
 
-  &-l {
-    @include rhc-keep-child__horizontal("l");
+  &-md {
+    @include rhc-keep-child__horizontal("md");
+  }
+
+  &-lg {
+    @include rhc-keep-child__horizontal("lg");
+  }
+
+  &-xl {
+    @include rhc-keep-child__horizontal("xl");
   }
 
   &-full {
@@ -123,16 +131,24 @@
 }
 
 .rhc-keep-child__vertical {
-  &-s {
-    @include rhc-keep-child__vertical("s");
+  &-xs {
+    @include rhc-keep-child__vertical("xs");
   }
 
-  &-m {
-    @include rhc-keep-child__vertical("m");
+  &-sm {
+    @include rhc-keep-child__vertical("sm");
   }
 
-  &-l {
-    @include rhc-keep-child__vertical("l");
+  &-md {
+    @include rhc-keep-child__vertical("md");
+  }
+
+  &-lg {
+    @include rhc-keep-child__vertical("lg");
+  }
+
+  &-xl {
+    @include rhc-keep-child__vertical("xl");
   }
 
   &-full {

@@ -27,11 +27,15 @@
 }
 
 @mixin rhc-keep-child__horizontal($size) {
-  @if $size == "s" {
+  @if $size == "xs" {
     inline-size: 25%;
-  } @else if $size == "m" {
+  } @else if $size == "sm" {
+    inline-size: 33%;
+  } @else if $size == "md" {
     inline-size: 50%;
-  } @else if $size == "l" {
+  } @else if $size == "lg" {
+    inline-size: 66%;
+  } @else if $size == "xl" {
     inline-size: 75%;
   } @else if $size == "full" {
     border-radius: 0;
@@ -40,11 +44,15 @@
 }
 
 @mixin rhc-keep-child__vertical($size) {
-  @if $size == "s" {
+  @if $size == "xs" {
     block-size: 25%;
-  } @else if $size == "m" {
+  } @else if $size == "sm" {
+    block-size: 33%;
+  } @else if $size == "md" {
     block-size: 50%;
-  } @else if $size == "l" {
+  } @else if $size == "lg" {
+    block-size: 66%;
+  } @else if $size == "xl" {
     block-size: 75%;
   } @else if $size == "full" {
     block-size: 100%;
