@@ -30,12 +30,13 @@ export const FormFieldCheckboxOption = forwardRef(
     const descriptionId = useId();
     const errorMessageId = useId();
 
-    const errorMsg = () => (
-      <span className={'utrecht-form-field-error-message--icon-container'}>
-        <Icon className={'utrecht-form-field-error-message--icon-container-icon'} icon={'alert-circle'}></Icon>{' '}
-        {errorMessage}
-      </span>
-    );
+    const errorMsg = () =>
+      errorMessage && (
+        <span className={'utrecht-form-field-error-message--icon-container'}>
+          <Icon className={'utrecht-form-field-error-message--icon-container-icon'} icon={'alert-circle'}></Icon>{' '}
+          {errorMessage}
+        </span>
+      );
 
     return (
       <FormFieldCheckbox
