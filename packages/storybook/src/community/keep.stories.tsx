@@ -1,7 +1,6 @@
 import {
   Blockquote,
   Heading,
-  Hero,
   Image,
   Keep,
   Paragraph,
@@ -13,31 +12,23 @@ import { Article } from '@utrecht/component-library-react';
 import readme from './keep.md?raw';
 
 const childrenOptions = {
-  Hero: (
-    <Hero
-      heading="Heading"
-      imageAlt="Tullip field"
-      imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg"
-      subHeading="Subtext"
-    />
+  Blockquote: (
+    <Blockquote attribution="— Pippi Langkous" variation="pink-background">
+      Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan
+    </Blockquote>
   ),
-  VoorbeeldOne: [
-    <Image
-      alt="Multicolored tulip field"
-      height={763}
-      src="./placeholder.jpg"
-      style={{ marginBottom: '-.5rem' }}
-      width={640}
-    />,
+  Image: <Image alt="Multicolored tulip field" height={763} src="./placeholder.jpg" width={640} />,
+  Vormtaal: [
+    <Image alt="Multicolored tulip field" height={763} src="./placeholder.jpg" width={640} />,
     <Blockquote
       attribution="— Pippi Langkous"
-      className="rhc-keep-child-top-left rhc-keep-child__horizontal-l"
+      className="rhc-keep-child-top-left rhc-keep-child__horizontal-lg"
       variation="pink-background"
     >
       Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan
     </Blockquote>,
     <Article
-      className="rhc-keep-child-bottom-left rhc-keep-child__horizontal-full rhc-keep-child__vertical-m"
+      className="rhc-keep-child-bottom-left rhc-keep-child__horizontal-full rhc-keep-child__vertical-md"
       style={{ backgroundColor: '#dce3ea', paddingBlock: '10px', paddingInline: '10px' }}
     >
       <Heading appearance="utrecht-heading-3" level={1}>
@@ -65,15 +56,15 @@ const meta = {
       control: { type: 'select' },
       options: ['top-left', 'bottom-left', 'top-right', 'bottom-right'],
     },
+    borderRadius: {
+      control: { type: 'select' },
+      options: ['s', 'm', 'l'],
+    },
     children: {
       control: { type: 'select' },
-      options: ['Hero', 'VoorbeeldOne'],
+      options: ['Vormtaal', 'Blockquote', 'Image'],
       mapping: childrenOptions,
-      name: 'Elementen',
-    },
-    firstChild: {
-      type: { name: 'string' },
-      description: 'Position of the first child',
+      name: 'Component',
     },
   },
   parameters: {
@@ -93,7 +84,6 @@ export const Default: Story = {
   args: {
     keep: 'top-right',
     borderRadius: 'm',
-    children: 'VoorbeeldOne',
-    nested: false,
+    children: 'Vormtaal',
   },
 };
