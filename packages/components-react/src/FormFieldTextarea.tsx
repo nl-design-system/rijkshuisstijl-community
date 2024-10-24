@@ -1,6 +1,7 @@
 import { FormFieldTextareaProps, FormFieldTextarea as Textarea } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, useId } from 'react';
+import { Icon } from './icon/Icon';
 
 export { Textarea, type FormFieldTextareaProps };
 
@@ -40,6 +41,14 @@ export const FormFieldTextarea = forwardRef(
     const statusId = useId();
     const errorMessageId = useId();
 
+    const errorMsg = () =>
+      errorMessage && (
+        <span className={'utrecht-form-field-error-message--icon-container'}>
+          <Icon className={'utrecht-form-field-error-message--icon-container-icon'} icon={'alert-circle'}></Icon>{' '}
+          {errorMessage}
+        </span>
+      );
+
     return (
       <Textarea
         autoComplete={autoComplete}
@@ -47,7 +56,7 @@ export const FormFieldTextarea = forwardRef(
         defaultValue={defaultValue}
         description={description}
         disabled={disabled}
-        errorMessage={errorMessage}
+        errorMessage={errorMsg()}
         id={inputId}
         inputDir={inputDir || 'auto'}
         inputRef={inputRef}
