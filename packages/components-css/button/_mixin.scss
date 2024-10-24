@@ -4,7 +4,7 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-@import "../link/mixin";
+@use "../link/mixin";
 
 @mixin rhc-button--icon-only {
   --utrecht-button-padding-block-end: var(--rhc-icon-only-button-padding-block-end, inherit);
@@ -14,7 +14,7 @@
 }
 
 @mixin rhc-button--focus-visible {
-  @include rhc-link--focus-visible;
+  @include mixin.rhc-link--focus-visible;
 }
 
 @mixin invisible-but-accessible {

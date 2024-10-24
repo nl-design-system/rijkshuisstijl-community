@@ -3,26 +3,26 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@import "./mixin";
+@use "mixin";
 
 .rhc-message-list {
-  @include rhc-message-list;
+  @include mixin.rhc-message-list;
   &__item {
-    @include rhc-message-list__item;
+    @include mixin.rhc-message-list__item;
     &-content {
-      @include rhc-message-list__item-content;
+      @include mixin.rhc-message-list__item-content;
     }
     &__label {
-      @include rhc-message-list__item__label;
+      @include mixin.rhc-message-list__item__label;
     }
     &__description {
-      @include rhc-message-list__item__description;
+      @include mixin.rhc-message-list__item__description;
     }
     &__meta-data {
-      @include rhc-message-list__item__meta-data;
+      @include mixin.rhc-message-list__item__meta-data;
     }
     &__end-icon {
-      @include rhc-navigation-list__item__end-icon;
+      @include mixin.rhc-navigation-list__item__end-icon;
     }
   }
 }

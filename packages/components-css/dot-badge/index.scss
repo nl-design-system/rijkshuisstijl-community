@@ -2,8 +2,8 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-@import "./mixin";
+@use "mixin";
 
 .rhc-dot-badge {
-  @include rhc-dot-badge;
+  @include mixin.rhc-dot-badge;
 }

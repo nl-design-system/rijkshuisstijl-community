@@ -3,46 +3,46 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@import "./mixin";
+@use "mixin";
 
 .rhc-toggletip {
-  @include rhc-toggletip;
+  @include mixin.rhc-toggletip;
 }
 
 .rhc-toggletip__summary {
-  @include rhc-toggletip__summary;
+  @include mixin.rhc-toggletip__summary;
 }
 
 .rhc-toggletip__button {
-  @include rhc-toggletip__button;
+  @include mixin.rhc-toggletip__button;
 }
 
 .rhc-toggletip__summary .rhc-toggletip__button {
   // If button is not used standalone the summary should take precedence
-  @include rhc-toggletip__button--no-pointer-events;
+  @include mixin.rhc-toggletip__button--no-pointer-events;
 }
 
 .rhc-toggletip__button:focus {
-  @include rhc-toggletip--focus;
+  @include mixin.rhc-toggletip--focus;
 }
 
 .rhc-toggletip__button:hover {
-  @include rhc-toggletip--hover;
+  @include mixin.rhc-toggletip--hover;
 }
 
 .rhc-toggletip__summary:focus .rhc-toggletip__button {
-  @include rhc-toggletip--focus;
+  @include mixin.rhc-toggletip--focus;
 }
 
 .rhc-toggletip__summary:hover .rhc-toggletip__button {
-  @include rhc-toggletip--hover;
+  @include mixin.rhc-toggletip--hover;
 }
 
 .rhc-toggletip:active .rhc-toggletip__button,
 .rhc-toggletip[open] .rhc-toggletip__button {
-  @include rhc-toggletip--active;
+  @include mixin.rhc-toggletip--active;
 }
 
 .rhc-toggletip__icon {
-  @include rhc-toggletip__icon;
+  @include mixin.rhc-toggletip__icon;
 }

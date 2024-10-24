@@ -2,17 +2,17 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-@import "./mixin";
+@use "mixin";
 
 .rhc-button:focus-visible,
 .rhc-button--focus-visible {
-  @include rhc-button--focus-visible;
+  @include mixin.rhc-button--focus-visible;
 }
 
 .rhc-button--icon-only {
-  @include rhc-button--icon-only;
+  @include mixin.rhc-button--icon-only;
 }
 
 .rhc-button--icon-only .rhc-button__sr-only {
-  @include invisible-but-accessible;
+  @include mixin.invisible-but-accessible;
 }

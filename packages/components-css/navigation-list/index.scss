@@ -2,26 +2,26 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-@import "./mixin";
+@use "mixin";
 
 .rhc-navigation-list {
-  @include rhc-navigation-list;
+  @include mixin.rhc-navigation-list;
   &__item {
-    @include rhc-navigation-list__item;
+    @include mixin.rhc-navigation-list__item;
     &-content {
-      @include rhc-navigation-list__item-content;
+      @include mixin.rhc-navigation-list__item-content;
     }
     &__label {
-      @include rhc-navigation-list__item__label;
+      @include mixin.rhc-navigation-list__item__label;
     }
     &__description {
-      @include rhc-navigation-list__item__description;
+      @include mixin.rhc-navigation-list__item__description;
     }
     &__start-icon {
-      @include rhc-navigation-list__item__start-icon;
+      @include mixin.rhc-navigation-list__item__start-icon;
     }
     &__end-icon {
-      @include rhc-navigation-list__item__end-icon;
+      @include mixin.rhc-navigation-list__item__end-icon;
     }
   }
 }

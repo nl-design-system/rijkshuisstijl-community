@@ -3,10 +3,10 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@import "./mixin";
+@use "mixin";
 
 .rhc-skip-link {
-  @include rhc-skip-link;
+  @include mixin.rhc-skip-link;
 }
 
 .rhc-skip-link--hidden,
@@ -17,7 +17,7 @@
 
 .rhc-skip-link--focus,
 .rhc-skip-link:focus {
-  @include rhc-skip-link;
+  @include mixin.rhc-skip-link;
 
   background-color: var(--utrecht-skip-link-focus-background-color, inherit);
   border-color: var(--utrecht-skip-link-focus-border-color, inherit);
@@ -34,7 +34,7 @@
 
 .rhc-skip-link--focus-visible,
 .rhc-skip-link:focus-visible {
-  @include rhc-skip-link;
+  @include mixin.rhc-skip-link;
 
   outline-color: var(--utrecht-skip-link-focus-visible-outline-color, var(--utrecht-focus-outline-color));
   outline-offset: var(--utrecht-skip-link-focus-visible-outline-offset, var(--utrecht-focus-outline-offset));
