@@ -24,6 +24,7 @@ export const FormFieldTextarea = forwardRef(
       placeholder,
       readOnly,
       required,
+      inputRequired,
       rows,
       spellCheck,
       status,
@@ -60,6 +61,7 @@ export const FormFieldTextarea = forwardRef(
         id={inputId}
         inputDir={inputDir || 'auto'}
         inputRef={inputRef}
+        inputRequired={inputRequired}
         invalid={invalid}
         label={label}
         maxLength={maxLength}
