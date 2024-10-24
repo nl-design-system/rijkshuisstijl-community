@@ -1,14 +1,8 @@
-import {
-  FormField,
-  FormFieldDescription,
-  FormFieldTextboxProps,
-  FormLabel,
-  Textbox,
-} from '@utrecht/component-library-react';
+import { FormFieldTextboxProps, FormFieldTextbox as TextBox } from '@utrecht/component-library-react';
 import { type TextboxTypes } from '@utrecht/component-library-react/dist/Textbox';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, useId } from 'react';
-import { FormFieldErrorMessage } from './FormFieldErrorMessage';
+import { Icon } from './icon/Icon';
 
 export const FormFieldTextbox = forwardRef(
   (
@@ -43,7 +37,7 @@ export const FormFieldTextbox = forwardRef(
       size,
       children,
       inputRef,
-      ...props
+      ...restProps
     }: PropsWithChildren<FormFieldTextboxProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
@@ -52,65 +46,58 @@ export const FormFieldTextbox = forwardRef(
     const statusId = useId();
     const errorMessageId = useId();
 
+    const errorMsg = () =>
+      errorMessage && (
+        <span className={'utrecht-form-field-error-message--icon-container'}>
+          <Icon className={'utrecht-form-field-error-message--icon-container-icon'} icon={'alert-circle'}></Icon>{' '}
+          {errorMessage}
+        </span>
+      );
+
     return (
-      <FormField invalid={invalid} ref={ref} {...props}>
-        <div className="utrecht-form-field__label">
-          <FormLabel htmlFor={inputId}>{label}</FormLabel>
-        </div>
-        {description && (
-          <FormFieldDescription className="utrecht-form-field__description" id={descriptionId}>
-            {description}
-          </FormFieldDescription>
-        )}
-        {invalid && errorMessage && (
-          <FormFieldErrorMessage className="utrecht-form-field__error-message" id={errorMessageId}>
-            {errorMessage}
-          </FormFieldErrorMessage>
-        )}
-        <div className="utrecht-form-field__input">
-          <Textbox
-            autoComplete={autoComplete}
-            defaultValue={defaultValue}
-            dir={inputDir || 'auto'}
-            disabled={disabled}
-            id={inputId}
-            inputRequired={inputRequired}
-            invalid={invalid}
-            list={list}
-            max={max}
-            maxLength={maxLength}
-            min={min}
-            minLength={minLength}
-            name={name}
-            pattern={pattern}
-            placeholder={placeholder}
-            readOnly={readOnly}
-            ref={inputRef}
-            required={required}
-            size={size}
-            step={step}
-            type={(type as TextboxTypes) || 'text'}
-            value={value}
-            aria-describedby={
-              clsx({
-                [descriptionId]: description,
-                [errorMessageId]: invalid,
-                [statusId]: status,
-              }) || undefined
-            }
-            onBlur={onBlur}
-            onChange={onChange}
-            onFocus={onFocus}
-            onInput={onInput}
-          />
-        </div>
-        {status && (
-          <div className="utrecht-form-field__status" id={statusId}>
-            {status}
-          </div>
-        )}
+      <TextBox
+        autoComplete={autoComplete}
+        defaultValue={defaultValue}
+        description={description}
+        disabled={disabled}
+        errorMessage={errorMsg()}
+        id={inputId}
+        inputDir={inputDir || 'auto'}
+        inputRef={inputRef}
+        inputRequired={inputRequired}
+        invalid={invalid}
+        label={label}
+        list={list}
+        max={max}
+        maxLength={maxLength}
+        min={min}
+        minLength={minLength}
+        name={name}
+        pattern={pattern}
+        placeholder={placeholder}
+        readOnly={readOnly}
+        ref={ref}
+        required={required}
+        size={size}
+        status={status}
+        step={step}
+        type={(type as TextboxTypes) || 'text'}
+        value={value}
+        aria-describedby={
+          clsx({
+            [descriptionId]: description,
+            [errorMessageId]: invalid,
+            [statusId]: status,
+          }) || undefined
+        }
+        onBlur={onBlur}
+        onChange={onChange}
+        onFocus={onFocus}
+        onInput={onInput}
+        {...restProps}
+      >
         {children}
-      </FormField>
+      </TextBox>
     );
   },
 );

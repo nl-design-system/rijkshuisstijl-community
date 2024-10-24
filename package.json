@@ -50,8 +50,9 @@
     "typescript": "5.5.3"
   },
   "scripts": {
+    "prebuild": "pnpm run clean",
     "build": "lerna run build",
-    "clean": "lerna run clean",
+    "clean": "rimraf dist/ && lerna run clean",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
     "lint:js": "eslint --ext .js,.cjs,.mjs,.json,.jsx,.mdx,.ts,.tsx --report-unused-disable-directives .",
@@ -80,7 +81,8 @@
     "watch:style-dictionary": "lerna run watch:style-dictionary"
   },
   "dependencies": {
-    "http-server": "14.1.1"
+    "http-server": "14.1.1",
+    "rimraf": "6.0.1"
   },
   "packageManager": "pnpm@9.4.0+sha256.b6fd0bfda555e7e584ad7e56b30c68b01d5a04f9ee93989f4b93ca8473c49c74"
 }

@@ -15,7 +15,7 @@ export const Alert = forwardRef(
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     return (
-      <UtrechtAlert ref={ref} role="alert" type={type} {...restProps}>
+      <UtrechtAlert ref={ref} type={type} {...restProps}>
         <div className="rhc-alert__container">
           <div
             className={clsx('rhc-alert__icon-container', {

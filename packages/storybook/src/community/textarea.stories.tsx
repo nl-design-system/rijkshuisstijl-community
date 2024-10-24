@@ -15,6 +15,14 @@ const meta = {
         defaultValue: { summary: 'false' },
       },
     },
+    inputRequired: {
+      description: 'Input Required',
+      control: 'boolean',
+      table: {
+        category: 'API',
+        defaultValue: { summary: 'false' },
+      },
+    },
     disabled: {
       description: 'Disabled',
       control: 'boolean',
@@ -125,6 +133,7 @@ const meta = {
     defaultValue: '',
     value: '',
     required: false,
+    inputRequired: false,
     readOnly: false,
     placeholder: '',
     minLength: undefined,
@@ -141,6 +150,7 @@ const meta = {
       invalid,
       name,
       required,
+      inputRequired,
       defaultValue,
       value,
       placeholder,
@@ -157,6 +167,7 @@ const meta = {
         dir={dir || undefined}
         disabled={disabled}
         id={id || undefined}
+        inputRequired={inputRequired || undefined}
         invalid={invalid}
         maxLength={maxLength || undefined}
         minLength={minLength || undefined}
@@ -208,6 +219,13 @@ export const Required: Story = {
   args: {
     name: 'subject',
     required: true,
+  },
+};
+
+export const InputRequired: Story = {
+  args: {
+    name: 'subject',
+    inputRequired: true,
   },
 };
 
