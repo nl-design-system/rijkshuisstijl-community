@@ -143,7 +143,7 @@ export default function Page() {
                       </svg>
                     </Icon>
                   </Button>
-                  <ButtonLink appearance="secondary-action-button" external={true}>
+                  <ButtonLink appearance="secondary-action-button" external={true} href="#">
                     E-mail
                     <Icon>
                       <svg
@@ -163,7 +163,7 @@ export default function Page() {
                       </svg>
                     </Icon>
                   </ButtonLink>
-                  <ButtonLink appearance="secondary-action-button" external={true}>
+                  <ButtonLink appearance="secondary-action-button" external={true} href="#">
                     Twitter
                     <Icon>
                       <svg
@@ -183,7 +183,7 @@ export default function Page() {
                       </svg>
                     </Icon>
                   </ButtonLink>
-                  <ButtonLink appearance="secondary-action-button" external={true}>
+                  <ButtonLink appearance="secondary-action-button" external={true} href="#">
                     LinkedIn
                     <Icon>
                       <svg
