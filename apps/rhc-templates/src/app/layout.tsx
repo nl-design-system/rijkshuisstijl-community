@@ -2,7 +2,7 @@
 import { Document } from '@utrecht/component-library-react';
 import { PropsWithChildren } from 'react';
 import '@nl-rvo/assets/fonts/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/wetgevend/index.css';
 import '@rijkshuisstijl-community/components-css/index.scss';
 import { Logo, Icon, NavBar, PageHeader } from '@rijkshuisstijl-community/components-react';
 import '@rijkshuisstijl-community/font/src/index.mjs';
