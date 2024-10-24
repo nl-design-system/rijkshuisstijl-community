@@ -2,6 +2,7 @@ import { FormFieldTextboxProps, FormFieldTextbox as TextBox } from '@utrecht/com
 import { type TextboxTypes } from '@utrecht/component-library-react/dist/Textbox';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, useId } from 'react';
+import { Icon } from './icon/Icon';
 
 export const FormFieldTextbox = forwardRef(
   (
@@ -45,13 +46,21 @@ export const FormFieldTextbox = forwardRef(
     const statusId = useId();
     const errorMessageId = useId();
 
+    const errorMsg = () =>
+      errorMessage && (
+        <span className={'utrecht-form-field-error-message--icon-container'}>
+          <Icon className={'utrecht-form-field-error-message--icon-container-icon'} icon={'alert-circle'}></Icon>{' '}
+          {errorMessage}
+        </span>
+      );
+
     return (
       <TextBox
         autoComplete={autoComplete}
         defaultValue={defaultValue}
         description={description}
         disabled={disabled}
-        errorMessage={errorMessage}
+        errorMessage={errorMsg()}
         id={inputId}
         inputDir={inputDir || 'auto'}
         inputRef={inputRef}
