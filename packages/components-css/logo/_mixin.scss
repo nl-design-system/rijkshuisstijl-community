@@ -41,7 +41,7 @@
 @mixin rhc-logo__caption {
   color: var(--rhc-logo-color, inherit);
   grid-area: caption;
-  max-inline-size: calc(210 / 14 * var(--rhc-logo-font-size, 1em));
+  max-inline-size: var(--rhc-logo-caption-max-inline-size);
 }
 
 @mixin rhc-logo__title {
