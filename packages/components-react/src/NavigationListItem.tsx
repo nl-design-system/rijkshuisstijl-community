@@ -1,7 +1,5 @@
 import clsx from 'clsx';
 import { forwardRef, HTMLAttributes, ReactNode } from 'react';
-import { Heading } from './Heading';
-import { Paragraph } from './Paragraph';
 import { Icon } from './icon/Icon';
 
 export interface NavigationListItemProps extends HTMLAttributes<HTMLLIElement> {
@@ -22,12 +20,8 @@ export const NavigationListItem = forwardRef<HTMLLIElement, NavigationListItemPr
             <Icon className={clsx('rhc-navigation-list__item__start-icon')}>{icon}</Icon>
           )}
           <span className={clsx('rhc-navigation-list__item-content')}>
-            <Heading className={clsx('rhc-navigation-list__item__label')} level={3}>
-              {label}
-            </Heading>
-            <Paragraph small className={'rhc-navigation-list__item__description'}>
-              {description}
-            </Paragraph>
+            <p className={clsx('rhc-navigation-list__item__label')}>{label}</p>
+            <p className={'rhc-navigation-list__item__description'}>{description}</p>
             <Icon className={clsx('rhc-navigation-list__item__end-icon')} icon={'chevron-right'} />
           </span>
         </a>

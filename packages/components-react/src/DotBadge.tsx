@@ -6,7 +6,7 @@ export interface DotBadgeProps extends HTMLAttributes<HTMLDivElement> {
 
 export const DotBadge = forwardRef<HTMLDivElement, DotBadgeProps>((props, ref) => {
   return (
-    <div
+    <span
       className="rhc-dot-badge"
       ref={ref}
       {...props}
@@ -17,7 +17,7 @@ export const DotBadge = forwardRef<HTMLDivElement, DotBadgeProps>((props, ref) =
       <svg fill="none" height="12" viewBox="0 0 12 12" width="12" xmlns="http://www.w3.org/2000/svg">
         <rect fill="#D52B1E" height="12" rx="6" width="12" />
       </svg>
-    </div>
+    </span>
   );
 });
 
