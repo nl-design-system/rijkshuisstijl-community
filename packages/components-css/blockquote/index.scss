@@ -17,6 +17,13 @@
   font-family: var(--utrecht-blockquote-attribution-font-family, inherit);
 }
 
+.utrecht-blockquote__quote {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
 .rhc-blockquote--blue-corner-border-variation {
   @include rhc-blockquote-variation("blue-corner-border-variation");
 }
