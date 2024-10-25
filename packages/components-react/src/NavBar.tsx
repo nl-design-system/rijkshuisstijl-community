@@ -85,30 +85,32 @@ export const NavBar = forwardRef(
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     return (
-      <nav className={clsx('rhc-nav-bar', className)} ref={ref} {...restProps}>
-        <ul className="rhc-nav-bar__list">
-          {headingItem && (
-            <NavBarItem
-              className="rhc-nav-bar__heading"
-              href={headingItem.href}
-              icon={headingItem.icon}
-              label={headingItem.label}
-              subList={headingItem.subList}
-            />
-          )}
-          {items.map(({ href, label, icon, subList }) => (
-            <NavBarItem href={href} icon={icon} label={label} subList={subList} />
-          ))}
-        </ul>
-        {endItems && (
-          <ul className="rhc-nav-bar__list rhc-nav-bar__list--end">
-            {endItems.map(({ href, label, icon, subList }) => (
+      <div className="rhc-nav-bar__container">
+        <nav className={clsx('rhc-nav-bar', className)} ref={ref} {...restProps}>
+          <ul className="rhc-nav-bar__list">
+            {headingItem && (
+              <NavBarItem
+                className="rhc-nav-bar__heading"
+                href={headingItem.href}
+                icon={headingItem.icon}
+                label={headingItem.label}
+                subList={headingItem.subList}
+              />
+            )}
+            {items.map(({ href, label, icon, subList }) => (
               <NavBarItem href={href} icon={icon} label={label} subList={subList} />
             ))}
           </ul>
-        )}
-        {children}
-      </nav>
+          {endItems && (
+            <ul className="rhc-nav-bar__list rhc-nav-bar__list--end">
+              {endItems.map(({ href, label, icon, subList }) => (
+                <NavBarItem href={href} icon={icon} label={label} subList={subList} />
+              ))}
+            </ul>
+          )}
+          {children}
+        </nav>
+      </div>
     );
   },
 );
