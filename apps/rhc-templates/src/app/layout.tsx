@@ -1,6 +1,6 @@
 'use client';
 import { Document } from '@utrecht/component-library-react';
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, ReactNode } from 'react';
 import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/components-css/index.scss';
@@ -9,7 +9,7 @@ import '@rijkshuisstijl-community/font/src/index.mjs';
 import './globals.css';
 import Head from 'next/head';
 
-const RHCTheme = ({ children }: PropsWithChildren<{}>) => <div className="rhc-theme">{children}</div>;
+const RHCTheme = ({ children }: { children: ReactNode }) => <div className="rhc-theme">{children}</div>;
 
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
