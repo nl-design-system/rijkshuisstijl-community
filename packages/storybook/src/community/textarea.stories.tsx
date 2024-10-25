@@ -139,6 +139,7 @@ const meta = {
     minLength: undefined,
     maxLength: undefined,
     dir: undefined,
+    label: undefined,
     cols: undefined,
     rows: undefined,
   },
@@ -156,6 +157,7 @@ const meta = {
       placeholder,
       minLength,
       maxLength,
+      label,
       dir,
       cols,
       rows,
@@ -164,11 +166,12 @@ const meta = {
       <Textarea
         cols={cols || undefined}
         defaultValue={defaultValue || undefined}
-        dir={dir || undefined}
         disabled={disabled}
         id={id || undefined}
+        inputDir={dir || undefined}
         inputRequired={inputRequired || undefined}
         invalid={invalid}
+        label={label || undefined}
         maxLength={maxLength || undefined}
         minLength={minLength || undefined}
         name={name || undefined}
