@@ -11,10 +11,13 @@ importers:
       http-server:
         specifier: 14.1.1
         version: 14.1.1
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
     devDependencies:
       '@lerna-lite/cli':
         specifier: 3.7.1
-        version: 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)
+        version: 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
       '@lerna-lite/publish':
         specifier: 3.7.1
         version: 3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3)
@@ -137,11 +140,11 @@ importers:
         specifier: 18.3.0
         version: 18.3.0
       '@utrecht/component-library-css':
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 6.1.0
+        version: 6.1.0
       '@utrecht/component-library-react':
-        specifier: 4.1.0
-        version: 4.1.0(@babel/runtime@7.24.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 7.2.0
+        version: 7.2.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/components':
         specifier: 6.0.0
         version: 6.0.0
@@ -198,11 +201,11 @@ importers:
         specifier: 18.3.0
         version: 18.3.0
       '@utrecht/component-library-css':
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 6.1.0
+        version: 6.1.0
       '@utrecht/component-library-react':
-        specifier: 4.1.0
-        version: 4.1.0(@babel/runtime@7.24.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 7.2.0
+        version: 7.2.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -227,11 +230,11 @@ importers:
         specifier: 3.11.0
         version: 3.11.0(react@18.3.1)
       '@utrecht/component-library-css':
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 6.1.0
+        version: 6.1.0
       '@utrecht/component-library-react':
-        specifier: 5.0.0
-        version: 5.0.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 7.2.0
+        version: 7.2.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -450,11 +453,11 @@ importers:
         specifier: 18.3.0
         version: 18.3.0
       '@utrecht/component-library-css':
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 6.1.0
+        version: 6.1.0
       '@utrecht/component-library-react':
-        specifier: 5.0.0
-        version: 5.0.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 7.2.0
+        version: 7.2.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/web-component-library-react':
         specifier: 1.2.0
         version: 1.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2913,28 +2916,11 @@ packages:
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  '@utrecht/component-library-css@4.0.0':
-    resolution: {integrity: sha512-QQD+/NrhTlWWBaTlivqiq4/LMoyhgR1vKjtGQh75QIphDud67Qw/PT/fq7/Poi2xasGQXgI7GIbF+aD5OSqlDQ==}
+  '@utrecht/component-library-css@6.1.0':
+    resolution: {integrity: sha512-+2qarCIgsNpLpxOcG5Rw3WLqNBASoWJFHMI4RlZJm5JTFfnhnl2wC/ylK23wOOooLNNCmsGrLdvSHHrEThJynw==}
 
-  '@utrecht/component-library-react@4.1.0':
-    resolution: {integrity: sha512-0KkJ0t7cL5IEK1LZHABHyTDNqUVHaaXXqUCipaBe0tmunsvgrnhzqVi/g4YZJiH27HcweHgN1y7VspWvD06VYg==}
-    peerDependencies:
-      '@babel/runtime': ^7.23.6
-      date-fns: ^2.30.0
-      react: '18'
-      react-dom: '18'
-      react-vega: ^7.6.0
-      vega: ^5.25.0
-    peerDependenciesMeta:
-      date-fns:
-        optional: true
-      react-vega:
-        optional: true
-      vega:
-        optional: true
-
-  '@utrecht/component-library-react@5.0.0':
-    resolution: {integrity: sha512-D8wSfBl1rCLA5zNj1wND2QaHBrlW5T5qZjlqvcYmQdvOOF+L+aQ8gxg3uo30FBvugvH2HDfOCc6qD8z7/+R+0A==}
+  '@utrecht/component-library-react@7.2.0':
+    resolution: {integrity: sha512-o2nJIWxc93KmQIVNSX4WIJQqZCcMCOnS1A6oqfFKV8kBbnVaDxuqQSgjT/HNkoqLWZQY9Zo5orKdmRDHDpKr+w==}
     peerDependencies:
       '@babel/runtime': ^7.23.6
       date-fns: ^2.30.0
@@ -4466,6 +4452,7 @@ packages:
   eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@9.6.1:
@@ -10441,7 +10428,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  '@lerna-lite/cli@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)':
+  '@lerna-lite/cli@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3))(typescript@5.5.3)':
     dependencies:
       '@lerna-lite/core': 3.7.1(typescript@5.5.3)
       '@lerna-lite/init': 3.7.1(typescript@5.5.3)
@@ -10454,7 +10441,7 @@ snapshots:
     optionalDependencies:
       '@lerna-lite/publish': 3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3)
       '@lerna-lite/run': 3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3)
-      '@lerna-lite/version': 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
+      '@lerna-lite/version': 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3)
     transitivePeerDependencies:
       - babel-plugin-macros
       - bluebird
@@ -10544,10 +10531,10 @@ snapshots:
 
   '@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3)':
     dependencies:
-      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)
+      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
       '@lerna-lite/core': 3.7.1(typescript@5.5.3)
       '@lerna-lite/npmlog': 3.7.0
-      '@lerna-lite/version': 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
+      '@lerna-lite/version': 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3)
       '@npmcli/arborist': 7.5.4
       '@npmcli/package-json': 5.2.0
       byte-size: 8.1.1
@@ -10581,7 +10568,7 @@ snapshots:
 
   '@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3)':
     dependencies:
-      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)
+      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
       '@lerna-lite/core': 3.7.1(typescript@5.5.3)
       '@lerna-lite/filter-packages': 3.7.1(typescript@5.5.3)
       '@lerna-lite/npmlog': 3.7.0
@@ -10600,9 +10587,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3)':
+  '@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3)':
     dependencies:
-      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)
+      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
       '@lerna-lite/core': 3.7.1(typescript@5.5.3)
       '@lerna-lite/npmlog': 3.7.0
       '@octokit/plugin-enterprise-rest': 6.0.1
@@ -11864,17 +11851,9 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@utrecht/component-library-css@4.0.0': {}
+  '@utrecht/component-library-css@6.1.0': {}
 
-  '@utrecht/component-library-react@4.1.0(@babel/runtime@7.24.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@babel/runtime': 7.24.8
-      clsx: 2.1.1
-      lodash.chunk: 4.2.0
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
-  '@utrecht/component-library-react@5.0.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@utrecht/component-library-react@7.2.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.24.8
       clsx: 2.1.1
@@ -13564,7 +13543,7 @@ snapshots:
       debug: 4.3.4
       enhanced-resolve: 5.15.0
       eslint: 8.57.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.20.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.20.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@6.20.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.16.1(eslint@8.57.0)(typescript@5.5.3))(eslint@8.57.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.2
@@ -13596,17 +13575,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@7.16.1(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint@8.57.0):
-    dependencies:
-      debug: 3.2.7
-    optionalDependencies:
-      '@typescript-eslint/parser': 7.16.1(eslint@8.57.0)(typescript@5.5.3)
-      eslint: 8.57.0
-      eslint-import-resolver-node: 0.3.9
-    transitivePeerDependencies:
-      - supports-color
-
-  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.20.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.20.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@6.20.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -13614,6 +13583,16 @@ snapshots:
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.20.0(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
+    transitivePeerDependencies:
+      - supports-color
+
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@7.16.1(eslint@8.57.0)(typescript@5.5.3))(eslint-import-resolver-node@0.3.9)(eslint@8.57.0):
+    dependencies:
+      debug: 3.2.7
+    optionalDependencies:
+      '@typescript-eslint/parser': 7.16.1(eslint@8.57.0)(typescript@5.5.3)
+      eslint: 8.57.0
+      eslint-import-resolver-node: 0.3.9
     transitivePeerDependencies:
       - supports-color
 
