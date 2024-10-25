@@ -5,15 +5,20 @@ import StyleDictionary from 'style-dictionary';
 const DIST_FOLDER = './dist';
 
 const normalizeFileName = (fileName) => fileName.replaceAll(/\s*/g, '').toLowerCase();
+const isProduct = (content) => Object.hasOwn(content, '$figmaStyleReferences') && content.group === 'Rijkshuisstijl';
+const getTokensFile = async () =>
+  JSON.parse(await promises.readFile(join('src', 'generated', 'figma.tokens.json'), 'utf-8'));
 
 const getStyleDictionaryConfig = (product) => {
+  const buildPath = `${DIST_FOLDER}/${normalizeFileName(product)}/`;
+
   return {
-    source: [`src/generated/*.json`, `src/generated/product/${product}.json`],
+    source: ['src/generated/*.json', `src/generated/product/${product}.json`],
     platforms: {
       javascript: {
         transforms: ['attribute/cti', 'name/cti/camel', 'color/hsl-4'],
         transformGroup: 'js',
-        buildPath: `${DIST_FOLDER}/${normalizeFileName(product)}/`,
+        buildPath,
         files: [
           {
             format: 'typescript/es6-declarations',
@@ -43,17 +48,17 @@ const getStyleDictionaryConfig = (product) => {
       },
       web: {
         transformGroup: 'web',
-        buildPath: `${DIST_FOLDER}/${normalizeFileName(product)}/`,
+        buildPath,
         files: [
           {
-            destination: `index.css`,
+            destination: 'index.css',
             format: 'css/variables',
             options: {
               outputReferences: true,
             },
           },
           {
-            destination: `theme.css`,
+            destination: 'theme.css',
             format: 'css/variables',
             options: {
               selector: `.${normalizeFileName(product)}-theme`,
@@ -61,14 +66,14 @@ const getStyleDictionaryConfig = (product) => {
             },
           },
           {
-            destination: `_variables.scss`,
+            destination: '_variables.scss',
             format: 'scss/variables',
             options: {
               outputReferences: true,
             },
           },
           {
-            destination: `variables.less`,
+            destination: 'variables.less',
             format: 'less/variables',
             options: {
               outputReferences: true,
@@ -78,14 +83,6 @@ const getStyleDictionaryConfig = (product) => {
       },
     },
   };
-};
-
-const isProduct = (content) => {
-  return Object.hasOwn(content, '$figmaStyleReferences') && content.group === 'Rijkshuisstijl';
-};
-
-const getTokensFile = async () => {
-  return JSON.parse(await promises.readFile(join('src', 'generated', 'figma.tokens.json'), 'utf-8'));
 };
 
 const run = async () => {
@@ -98,7 +95,6 @@ const run = async () => {
       sd.buildAllPlatforms();
     }
   });
-  // await addMediaDependentFiles(DIST_FOLDER, COPY_FOLDER);
 
   const end = performance.now();
   const formatter = new Intl.NumberFormat('en-EN', { notation: 'compact' });
