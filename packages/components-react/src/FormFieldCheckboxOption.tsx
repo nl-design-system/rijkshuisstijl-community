@@ -7,23 +7,7 @@ export interface FormFieldCheckboxOptionProps extends FormFieldCheckboxProps {}
 
 export const FormFieldCheckboxOption = forwardRef(
   (
-    {
-      label,
-      description,
-      invalid,
-      errorMessage,
-      inputRef,
-      status,
-      disabled,
-      name,
-      value,
-      onInput,
-      onBlur,
-      onFocus,
-      onChange,
-      defaultValue,
-      ...restProps
-    }: FormFieldCheckboxOptionProps,
+    { description, invalid, errorMessage, status, defaultValue, ...restProps }: FormFieldCheckboxOptionProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const id = useId();
@@ -43,26 +27,17 @@ export const FormFieldCheckboxOption = forwardRef(
         className="utrecht-form-field__checkbox rhc-form-label--checkbox"
         defaultValue={defaultValue}
         description={description}
-        disabled={disabled}
         errorMessage={errorMsg()}
         id={id}
-        inputRef={inputRef}
         invalid={invalid}
-        label={label}
-        name={name}
         ref={ref}
         status={status}
-        value={value}
         aria-describedby={
           clsx({
             [descriptionId]: description,
             [errorMessageId]: invalid && errorMessage,
           }) || undefined
         }
-        onBlur={onBlur}
-        onChange={onChange}
-        onFocus={onFocus}
-        onInput={onInput}
         {...restProps}
       />
     );

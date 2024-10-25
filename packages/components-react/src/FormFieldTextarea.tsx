@@ -7,34 +7,7 @@ export { Textarea, type FormFieldTextareaProps };
 
 export const FormFieldTextarea = forwardRef(
   (
-    {
-      autoComplete,
-      cols,
-      description,
-      defaultValue,
-      name,
-      disabled,
-      label,
-      errorMessage,
-      inputRef,
-      inputDir,
-      invalid,
-      maxLength,
-      minLength,
-      placeholder,
-      readOnly,
-      required,
-      inputRequired,
-      rows,
-      spellCheck,
-      status,
-      value,
-      onChange,
-      onFocus,
-      onInput,
-      onBlur,
-      ...restProps
-    }: PropsWithChildren<FormFieldTextareaProps>,
+    { errorMessage, description, status, invalid, ...restProps }: PropsWithChildren<FormFieldTextareaProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const inputId = useId();
@@ -52,29 +25,12 @@ export const FormFieldTextarea = forwardRef(
 
     return (
       <Textarea
-        autoComplete={autoComplete}
-        cols={cols}
-        defaultValue={defaultValue}
         description={description}
-        disabled={disabled}
         errorMessage={errorMsg()}
         id={inputId}
-        inputDir={inputDir || 'auto'}
-        inputRef={inputRef}
-        inputRequired={inputRequired}
         invalid={invalid}
-        label={label}
-        maxLength={maxLength}
-        minLength={minLength}
-        name={name}
-        placeholder={placeholder}
-        readOnly={readOnly}
         ref={ref}
-        required={required}
-        rows={rows}
-        spellCheck={spellCheck}
         status={status}
-        value={value}
         aria-describedby={
           clsx({
             [descriptionId]: description,
@@ -82,10 +38,6 @@ export const FormFieldTextarea = forwardRef(
             [statusId]: status,
           }) || undefined
         }
-        onBlur={onBlur}
-        onChange={onChange}
-        onFocus={onFocus}
-        onInput={onInput}
         {...restProps}
       />
     );

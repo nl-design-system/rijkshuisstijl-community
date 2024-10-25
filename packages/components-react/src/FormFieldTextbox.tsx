@@ -1,44 +1,11 @@
 import { FormFieldTextboxProps, FormFieldTextbox as TextBox } from '@utrecht/component-library-react';
-import { type TextboxTypes } from '@utrecht/component-library-react/dist/Textbox';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, useId } from 'react';
 import { Icon } from './icon/Icon';
 
 export const FormFieldTextbox = forwardRef(
   (
-    {
-      name,
-      invalid,
-      disabled,
-      label,
-      errorMessage,
-      description,
-      readOnly,
-      status,
-      autoComplete,
-      list,
-      min,
-      max,
-      minLength,
-      maxLength,
-      step,
-      placeholder,
-      pattern,
-      required,
-      inputRequired,
-      inputDir,
-      type,
-      value,
-      onChange,
-      onInput,
-      onFocus,
-      onBlur,
-      defaultValue,
-      size,
-      children,
-      inputRef,
-      ...restProps
-    }: PropsWithChildren<FormFieldTextboxProps>,
+    { invalid, errorMessage, description, status, children, ...restProps }: PropsWithChildren<FormFieldTextboxProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const inputId = useId();
@@ -56,33 +23,12 @@ export const FormFieldTextbox = forwardRef(
 
     return (
       <TextBox
-        autoComplete={autoComplete}
-        defaultValue={defaultValue}
         description={description}
-        disabled={disabled}
         errorMessage={errorMsg()}
         id={inputId}
-        inputDir={inputDir || 'auto'}
-        inputRef={inputRef}
-        inputRequired={inputRequired}
         invalid={invalid}
-        label={label}
-        list={list}
-        max={max}
-        maxLength={maxLength}
-        min={min}
-        minLength={minLength}
-        name={name}
-        pattern={pattern}
-        placeholder={placeholder}
-        readOnly={readOnly}
         ref={ref}
-        required={required}
-        size={size}
         status={status}
-        step={step}
-        type={(type as TextboxTypes) || 'text'}
-        value={value}
         aria-describedby={
           clsx({
             [descriptionId]: description,
@@ -90,10 +36,6 @@ export const FormFieldTextbox = forwardRef(
             [statusId]: status,
           }) || undefined
         }
-        onBlur={onBlur}
-        onChange={onChange}
-        onFocus={onFocus}
-        onInput={onInput}
         {...restProps}
       >
         {children}
