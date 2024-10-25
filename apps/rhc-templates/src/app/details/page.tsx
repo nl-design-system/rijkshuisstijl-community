@@ -14,6 +14,7 @@ import {
   LinkList,
   LinkListLink,
   PageHeader,
+  SubNavBar,
 } from '@rijkshuisstijl-community/components-react';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import { RichText } from '@utrecht/component-library-react/dist/css-module';
@@ -43,13 +44,15 @@ export default function Details() {
               </LinkList>
             </div>
           </div>
-          <div className="sub-navigation">
-            <LinkList>
-              <LinkListLink>Regels voor rijtijden en rusttijden bij wegvervoer</LinkListLink>
-              <LinkListLink>Vraag en antwoord</LinkListLink>
-              <LinkListLink>Documenten</LinkListLink>
-            </LinkList>
-          </div>
+          <SubNavBar
+            columns={[
+              [
+                { label: 'Regels voor rijtijden en rusttijden bij wegvervoer', href: '#' },
+                { label: 'Vraag en antwoord', href: '#' },
+              ],
+              [{ label: 'Documenten', href: '#' }],
+            ]}
+          ></SubNavBar>
         </PageHeader>
         <main className="rhc-main-content">
           <Article>

@@ -1,7 +1,10 @@
+import { ColumnLayout } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 import { Heading } from './Heading';
 import { Link } from './Link';
+import { LinkList, LinkListLink } from './LinkList';
+import { Icon } from './icon/Icon';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   headingItem?: NavBarItemProps;
@@ -9,12 +12,12 @@ export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   endItems?: NavBarItemProps[];
 }
 
-interface NavbarLinkProps {
+export interface NavBarLinkProps {
   label: string;
   href: string;
 }
 
-export interface NavBarItemProps extends NavbarLinkProps, HTMLAttributes<HTMLLIElement> {
+export interface NavBarItemProps extends NavBarLinkProps, HTMLAttributes<HTMLLIElement> {
   icon?: ReactNode;
   subList?: NavbarSubListProps;
   bold?: boolean;
@@ -22,7 +25,11 @@ export interface NavBarItemProps extends NavbarLinkProps, HTMLAttributes<HTMLLIE
 }
 
 interface NavbarSubListProps {
-  sections: { heading: string; headingLevel?: 1 | 2 | 3 | 4 | 5; items: NavbarLinkProps[] }[];
+  sections: { heading: string; headingLevel?: 1 | 2 | 3 | 4 | 5; items: NavBarLinkProps[] }[];
+}
+
+export interface SubNavBarProps extends HTMLAttributes<HTMLDivElement> {
+  columns: NavBarLinkProps[][];
 }
 
 const NavBarItem = forwardRef(
@@ -107,3 +114,33 @@ export const NavBar = forwardRef(
 );
 
 NavBar.displayName = 'NavBar';
+
+export const SubNavBar = forwardRef(
+  (
+    { children, className, columns, ...restProps }: PropsWithChildren<SubNavBarProps>,
+    ref: ForwardedRef<HTMLDivElement>,
+  ) => {
+    return (
+      <div className={clsx('rhc-sub-nav-bar', className)} ref={ref} {...restProps}>
+        <div className="rhc-sub-nav-bar__content">
+          <ColumnLayout>
+            {columns.map((column: NavBarLinkProps[], index: number) => (
+              <div className="rhc-sub-nav-bar__list" key={index}>
+                <LinkList>
+                  {column.map(({ href, label }) => (
+                    <LinkListLink href={href} icon={<Icon icon={'chevron-right'} />}>
+                      {label}
+                    </LinkListLink>
+                  ))}
+                </LinkList>
+              </div>
+            ))}
+          </ColumnLayout>
+          {children}
+        </div>
+      </div>
+    );
+  },
+);
+
+SubNavBar.displayName = 'SubNavBar';

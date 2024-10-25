@@ -68,7 +68,14 @@ export { LinkListCard } from './LinkListCard';
 export { Logo, type LogoProps } from './Logo';
 export { MessageList, type MessageListProps } from './MessageList';
 export { MessageListItem, type MessageListItemProps } from './MessageListItem';
-export { NavBar, type NavBarItemProps, type NavBarProps } from './NavBar';
+export {
+  NavBar,
+  type NavBarItemProps,
+  type NavBarLinkProps,
+  type NavBarProps,
+  SubNavBar,
+  type SubNavBarProps,
+} from './NavBar';
 export { NavigationList, type NavigationListProps } from './NavigationList';
 export { NavigationListItem, type NavigationListItemProps } from './NavigationListItem';
 export { OrderedList, OrderedListItem, type OrderedListItemProps, type OrderedListProps } from './OrderedList';
