@@ -26,26 +26,27 @@ export const Footer = forwardRef(
       {...restProps}
       ref={ref}
       className={clsx(
-        'rhc-footer',
+        'rhc-page-footer',
         background === 'primary-outlined' || background === 'primary-filled' ? `rhc-footer--${background}` : '',
         className,
       )}
     >
-      <div className="rhc-page-footer__title" key={'heading'}>
-        <Heading level={headingLevel}>{heading}</Heading>
+      <div className="rhc-page-footer__content">
+        <div className="rhc-page-footer__title" key={'heading'}>
+          <Heading level={headingLevel}>{heading}</Heading>
+        </div>
+        <ColumnLayout>
+          {columns?.map((column, index) => (
+            <div className="rhc-page-footer__section" key={index}>
+              <Heading level={headingLevel >= MAX_HEADING_LEVEL ? MAX_HEADING_LEVEL : headingLevel + 1}>
+                {column.heading}
+              </Heading>
+              {column.children}
+            </div>
+          ))}
+          {children}
+        </ColumnLayout>
       </div>
-      <ColumnLayout>
-        {columns?.map((column, index) => (
-          <div className="rhc-page-footer__section" key={index}>
-            <Heading level={headingLevel >= MAX_HEADING_LEVEL ? MAX_HEADING_LEVEL : headingLevel + 1}>
-              {column.heading}
-            </Heading>
-            {column.children}
-          </div>
-        ))}
-
-        {children}
-      </ColumnLayout>
     </UtrechtPageFooter>
   ),
 );
