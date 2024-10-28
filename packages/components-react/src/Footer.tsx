@@ -1,18 +1,20 @@
 import { ColumnLayout, PageFooterProps, PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
+// import { type LinkListProps, type LinkListLinkProps } from '@utrecht/component-library-react';
+import { type LinkListProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
+import { ForwardedRef, forwardRef, PropsWithChildren, ReactElement } from 'react';
 import { Heading } from './Heading';
 
 interface FooterProps extends PageFooterProps {
-  heading: ReactNode;
+  heading: string;
   headingLevel: number;
-  columns?: IColumn[];
+  columns?: ColumnProps[];
   background?: 'primary-filled' | 'primary-outlined';
 }
 
-interface IColumn {
-  heading: ReactNode;
-  children: ReactNode;
+interface ColumnProps {
+  heading: string;
+  children: ReactElement<LinkListProps>[] | ReactElement<LinkListProps>;
 }
 
 const MAX_HEADING_LEVEL = 6;
@@ -43,7 +45,6 @@ export const Footer = forwardRef(
             {column.children}
           </div>
         ))}
-
         {children}
       </ColumnLayout>
     </UtrechtPageFooter>

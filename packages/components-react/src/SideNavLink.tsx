@@ -1,10 +1,10 @@
 import clsx from 'clsx';
-import { AnchorHTMLAttributes, forwardRef, ReactNode } from 'react';
+import { AnchorHTMLAttributes, forwardRef } from 'react';
 import { Icon } from './icon/Icon';
 
 export interface SideNavLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   current?: boolean;
-  icon?: ReactNode;
+  icon?: string;
 }
 
 export const SideNavLink = forwardRef<HTMLAnchorElement, SideNavLinkProps>((props, ref) => {

@@ -1,16 +1,16 @@
 import { FormField, FormFieldDescription, FormLabel } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
+import { ForwardedRef, forwardRef, PropsWithChildren, ReactElement, Ref, useId } from 'react';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 import { Radio, RadioProps } from './Radio';
 
 export interface FormFieldRadioOptionProps extends RadioProps {
   errorMessage?: string;
   radioRef?: Ref<HTMLInputElement>;
-  status?: ReactNode;
-  description?: ReactNode;
-  input?: ReactNode;
-  label?: ReactNode;
+  status?: string;
+  description?: string;
+  input?: ReactElement;
+  label?: string;
   type?: string;
   defaultValue?: string;
 }
@@ -20,7 +20,6 @@ export const FormFieldRadioOption = forwardRef(
     {
       label,
       description,
-      disabled,
       errorMessage,
       radioRef,
       status,
@@ -41,7 +40,6 @@ export const FormFieldRadioOption = forwardRef(
         <div className="utrecht-form-field__input">
           <Radio
             dir={dir}
-            disabled={disabled}
             id={id}
             invalid={invalid}
             ref={radioRef}

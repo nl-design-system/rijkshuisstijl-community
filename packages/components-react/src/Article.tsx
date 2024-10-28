@@ -2,8 +2,8 @@ import { Article as UtrechtArticle, ArticleProps as UtrechtArticleProps } from '
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
 export const Article = forwardRef(
-  ({ ...restProps }: PropsWithChildren<UtrechtArticleProps>, ref: ForwardedRef<HTMLDivElement>) => {
-    return <UtrechtArticle ref={ref} {...restProps}></UtrechtArticle>;
+  (props: PropsWithChildren<UtrechtArticleProps>, ref: ForwardedRef<HTMLDivElement>) => {
+    return <UtrechtArticle ref={ref} {...props}></UtrechtArticle>;
   },
 );
 

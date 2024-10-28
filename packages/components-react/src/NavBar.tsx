@@ -10,6 +10,7 @@ export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 interface NavbarLinkProps {
+  id: string;
   label: string;
   href: string;
 }
@@ -19,10 +20,18 @@ export interface NavBarItemProps extends NavbarLinkProps, HTMLAttributes<HTMLLIE
   subList?: NavbarSubListProps;
   bold?: boolean;
   iconOnly?: boolean;
+  id: string;
 }
 
 interface NavbarSubListProps {
-  sections: { heading: string; headingLevel?: 1 | 2 | 3 | 4 | 5; items: NavbarLinkProps[] }[];
+  sections: SectionProps[];
+}
+
+interface SectionProps {
+  id: string;
+  heading: string;
+  headingLevel?: 1 | 2 | 3 | 4 | 5;
+  items: NavbarLinkProps[];
 }
 
 const NavBarItem = forwardRef(
@@ -48,14 +57,14 @@ const NavBarItem = forwardRef(
         </Link>
         {subList && (
           <div className="rhc-nav-bar__sub-list">
-            {subList.sections.map(({ heading, headingLevel = 3, items }) => (
-              <div className="rhc-nav-bar__sub-list-section">
+            {subList.sections.map(({ id, heading, headingLevel = 3, items }) => (
+              <div className="rhc-nav-bar__sub-list-section" key={id}>
                 <Heading className="rhc-nav-bar__sub-list-section-title" level={headingLevel}>
                   {heading}
                 </Heading>
                 <ul className="rhc-nav-bar__sub-list-section-list">
-                  {items.map(({ href, label }) => (
-                    <li className="rhc-nav-bar__sub-list-section-item">
+                  {items.map(({ id, href, label }) => (
+                    <li className="rhc-nav-bar__sub-list-section-item" key={id}>
                       <Link href={href}>{label}</Link>
                     </li>
                   ))}
@@ -80,23 +89,15 @@ export const NavBar = forwardRef(
     return (
       <nav className={clsx('rhc-nav-bar', className)} ref={ref} {...restProps}>
         <ul className="rhc-nav-bar__list">
-          {headingItem && (
-            <NavBarItem
-              className="rhc-nav-bar__heading"
-              href={headingItem.href}
-              icon={headingItem.icon}
-              label={headingItem.label}
-              subList={headingItem.subList}
-            />
-          )}
-          {items.map(({ href, label, icon, subList }) => (
-            <NavBarItem href={href} icon={icon} label={label} subList={subList} />
+          {headingItem && <NavBarItem className="rhc-nav-bar__heading" {...headingItem} />}
+          {items.map(({ id, href, label, icon, subList }) => (
+            <NavBarItem href={href} icon={icon} id={id} key={id} label={label} subList={subList} />
           ))}
         </ul>
         {endItems && (
           <ul className="rhc-nav-bar__list rhc-nav-bar__list--end">
-            {endItems.map(({ href, label, icon, subList }) => (
-              <NavBarItem href={href} icon={icon} label={label} subList={subList} />
+            {endItems.map(({ id, href, label, icon, subList }) => (
+              <NavBarItem href={href} icon={icon} id={id} key={id} label={label} subList={subList} />
             ))}
           </ul>
         )}

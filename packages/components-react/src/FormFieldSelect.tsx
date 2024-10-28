@@ -9,7 +9,7 @@ import {
   SelectProps,
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
+import { ForwardedRef, forwardRef, PropsWithChildren, ReactElement, Ref, useId } from 'react';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
 export { SelectOption, type SelectOptionProps };
@@ -22,10 +22,10 @@ export interface FormFieldSelectProps
     > {
   errorMessage?: string;
   selectRef?: Ref<HTMLSelectElement>;
-  status?: ReactNode;
-  description?: ReactNode;
-  input?: ReactNode;
-  label?: ReactNode;
+  status?: string;
+  description?: string;
+  input?: ReactElement;
+  label?: string;
   options?: string[];
 }
 

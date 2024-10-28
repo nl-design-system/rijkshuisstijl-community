@@ -15,10 +15,10 @@ export const Blockquote = forwardRef(
     ref: ForwardedRef<HTMLQuoteElement>,
   ) => (
     <UtrechtBlockquote
-      {...restProps}
       attribution={attribution}
       className={clsx('rhc-blockquote', variation && `rhc-blockquote--${variation}-variation`, className)}
       ref={ref}
+      {...restProps}
     >
       <div className="rhc-blockquote__content utrecht-blockquote__content">{children}</div>
     </UtrechtBlockquote>

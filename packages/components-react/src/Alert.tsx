@@ -1,13 +1,13 @@
 import { Heading, Paragraph, Alert as UtrechtAlert } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
+import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 import { Icon } from './icon/Icon';
 
 export interface AlertProps {
   type: 'info' | 'ok' | 'warning' | 'error';
-  heading?: ReactNode;
+  heading?: string;
   headingLevel?: 1 | 2 | 3 | 4 | 5;
-  textContent?: ReactNode;
+  textContent?: string;
 }
 export const Alert = forwardRef(
   (

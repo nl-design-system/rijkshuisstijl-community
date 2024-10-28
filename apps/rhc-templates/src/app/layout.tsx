@@ -28,10 +28,10 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
           </div>
           <NavBar
             items={[
-              { href: '/', label: 'Page' },
-              { href: '/form', label: 'Form' },
-              { href: '/details', label: 'Details' },
-              { href: '/collage', label: 'Collage' },
+              { id: 'page', href: '/', label: 'Page' },
+              { id: 'form', href: '/form', label: 'Form' },
+              { id: 'details', href: '/details', label: 'Details' },
+              { id: 'collage', href: '/collage', label: 'Collage' },
             ]}
           ></NavBar>
           <main className="page">
