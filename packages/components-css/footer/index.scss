@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: var(--rhc-page-footer-flex-direction);
 
-  .utrecht-heading-5 {
+  :is(h1, h2, h3, h4, h5, h6) {
     margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
 }
