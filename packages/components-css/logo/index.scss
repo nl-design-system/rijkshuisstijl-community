@@ -9,12 +9,12 @@
 }
 
 .rhc-logo__image {
-  @include rhc-logo__image;
+  @include mixin.rhc-logo__image;
 }
 
 .rhc-logo__image .utrecht-icon,
 .rhc-logo__image .rhc-icon {
-  @include rhc-logo__icon;
+  @include mixin.rhc-logo__icon;
 }
 
 .rhc-logo__caption {
