@@ -21,10 +21,17 @@ import {
   FormFieldRadioOption,
   FormFieldCheckboxOption,
   Icon,
+  FileInput,
+  UnorderedList,
+  UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
+import { FormLabel } from '@utrecht/component-library-react';
+// import { DateInput } from '@amsterdam/design-system-react';
 import { RichText } from '@utrecht/component-library-react/dist/css-module';
 
 export default function Form() {
+  const SIZE_IN_BYTES_10_MB = 10485760;
+
   return (
     <>
       <div className="rhc-background-color-white rhc-main-content">
@@ -91,56 +98,55 @@ export default function Form() {
                   </FormField>
                 </div>
               */}
-                <FormFieldTextbox
-                  description="Bijvoorbeeld E27B"
-                  label="Om welke uitkering gaat het?"
-                ></FormFieldTextbox>
-                <FormFieldTextarea label="Stel hier uw vraag" rows={6} cols={40}></FormFieldTextarea>
-                <Fieldset>
-                  <FieldsetLegend>Label</FieldsetLegend>
-                  <div className="rhc-radio-group">
-                    <FormFieldRadioOption name="name" label="Label" />
-                    <FormFieldRadioOption name="name" label="Label" />
-                    <FormFieldRadioOption name="name" label="Label" />
-                    <FormFieldRadioOption name="name" label="Label" />
-                  </div>
-                </Fieldset>
-                {/*
-                <div className="unstarted">
-                  <FormField label="Bestand toevoegen">
-                    <UnorderedList>
-                      <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
-                      <UnorderedListItem>U mag maximaal 10 Mb aan bestanden toevoegen.</UnorderedListItem>
-                      <UnorderedListItem>
-                        Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bpm en gif.
-                      </UnorderedListItem>
-                    </UnorderedList>
-                    <FileInput multiple></FileInput>
-                  </FormField>
+              <FormFieldTextbox description="Bijvoorbeeld E27B" label="Om welke uitkering gaat het?"></FormFieldTextbox>
+              <FormFieldTextarea label="Stel hier uw vraag" rows={6} cols={40}></FormFieldTextarea>
+              <Fieldset>
+                <FieldsetLegend>Label</FieldsetLegend>
+                <div>
+                  <FormFieldRadioOption label="Label" />
+                  <FormFieldRadioOption label="Label" />
+                  <FormFieldRadioOption label="Label" />
+                  <FormFieldRadioOption label="Label" />
                 </div>
-              */}
-                <Heading level={1}>Informatie over de verwerking van uw persoonsgegevens</Heading>
-                <Paragraph>
-                  Wij gebruiken gegevens die u heeft ingevuld om uw vraag te beantwoorden. Daarna worden ze volgens in
-                  de archiefwet tijdelijk bewaard in de daarvoor bestemde archiefsystemen. Deze zijn van het Ministerie
-                  van Binnenlandse Zaken & Koninkrijksrelaties (BZK).
-                </Paragraph>
-                <AccordionProvider
-                  sections={[
-                    {
-                      label: 'Toon extra informatie over de verwerking van uw persoonsgegevens',
-                      body: 'Dit is extra informatie',
-                    },
-                  ]}
-                ></AccordionProvider>
-                <Fieldset>
-                  <FieldsetLegend>Akkoordverklaring</FieldsetLegend>
-                  <FormFieldCheckboxOption label="Ik heb gelezen en begrepen wat er met mijn persoonsgegevens wordt gedaan"></FormFieldCheckboxOption>
-                </Fieldset>
-                <Button type="submit" appearance="primary-action-button">
-                  Ga verder
-                </Button>
-              </form>
+              </Fieldset>
+              <FileInput
+                allowedFileTypes=".doc, .docx, .xlsx, .pdf, .zip, .jpg, .png, .bmp, .gif"
+                buttonText="Bestand kiezen"
+                fileSizeErrorMessage="Dit bestand is groter dan 10 MB."
+                fileTypeErrorMessage="Dit bestandstype wordt niet toegestaan."
+                maxFileSizeInBytes={SIZE_IN_BYTES_10_MB}
+              >
+                <FormLabel>Bestand toevoegen</FormLabel>
+                <UnorderedList>
+                  <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
+                  <UnorderedListItem>Een bestand mag maximaal 10MB groot zijn.</UnorderedListItem>
+                  <UnorderedListItem>
+                    Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bmp en gif.
+                  </UnorderedListItem>
+                </UnorderedList>
+              </FileInput>
+              <Heading level={1}>Informatie over de verwerking van uw persoonsgegevens</Heading>
+              <Paragraph>
+                Wij gebruiken gegevens die u heeft ingevuld om uw vraag te beantwoorden. Daarna worden ze volgens in de
+                archiefwet tijdelijk bewaard in de daarvoor bestemde archiefsystemen. Deze zijn van het Ministerie van
+                Binnenlandse Zaken & Koninkrijksrelaties (BZK).
+              </Paragraph>
+              <AccordionProvider
+                sections={[
+                  {
+                    label: 'Toon extra informatie over de verwerking van uw persoonsgegevens',
+                    body: 'Dit is extra informatie',
+                  },
+                ]}
+              ></AccordionProvider>
+              <Fieldset>
+                <FieldsetLegend>Akkoordverklaring</FieldsetLegend>
+                <FormFieldCheckboxOption label="Ik heb gelezen en begrepen wat er met mijn persoonsgegevens wordt gedaan"></FormFieldCheckboxOption>
+              </Fieldset>
+              <Button type="submit" appearance="primary-action-button">
+                Ga verder
+              </Button>
+            </form>               
             </RichText>
           </Article>
         </PageContent>
