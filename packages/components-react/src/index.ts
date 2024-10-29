@@ -28,7 +28,6 @@ export {
   Button,
   type ButtonProps,
   IconButton,
-  type IconButtonProps,
   PrimaryActionButton,
   SecondaryActionButton,
   SubtleButton,
@@ -57,7 +56,7 @@ export { FormFieldCheckboxOption, type FormFieldCheckboxOptionProps } from './Fo
 export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFieldErrorMessage';
 export { FormFieldRadioOption, type FormFieldRadioOptionProps } from './FormFieldRadioOption';
 export { FormFieldSelect, type FormFieldSelectProps, SelectOption, type SelectOptionProps } from './FormFieldSelect';
-export { FormFieldTextarea, type FormFieldTextareaProps, Textarea, type TextareaProps } from './FormFieldTextarea';
+export { FormFieldTextarea, type FormFieldTextareaProps, Textarea } from './FormFieldTextarea';
 export { FormFieldTextbox } from './FormFieldTextbox';
 export { Heading, type HeadingProps } from './Heading';
 export { Hero, type HeroProps } from './Hero';
@@ -67,7 +66,11 @@ export { Link, type LinkProps } from './Link';
 export { LinkList, LinkListLink, type LinkListLinkProps, type LinkListProps } from './LinkList';
 export { LinkListCard } from './LinkListCard';
 export { Logo, type LogoProps } from './Logo';
+export { MessageList, type MessageListProps } from './MessageList';
+export { MessageListItem, type MessageListItemProps } from './MessageListItem';
 export { NavBar, type NavBarItemProps, type NavBarProps } from './NavBar';
+export { NavigationList, type NavigationListProps } from './NavigationList';
+export { NavigationListItem, type NavigationListItemProps } from './NavigationListItem';
 export { OrderedList, OrderedListItem, type OrderedListItemProps, type OrderedListProps } from './OrderedList';
 export { PageContent, type PageContentProps } from './PageContent';
 export { PageHeader, type PageHeaderProps } from './PageHeader';

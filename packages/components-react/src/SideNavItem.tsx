@@ -5,7 +5,7 @@ export interface SideNavItemProps extends HTMLAttributes<HTMLLIElement> {}
 
 export const SideNavItem = forwardRef<HTMLLIElement, SideNavItemProps>((props, ref) => {
   return (
-    <li {...props} className={clsx('rhc-side-nav__item', props.className)} ref={ref}>
+    <li role="listitem" {...props} className={clsx('rhc-side-nav__item', props.className)} ref={ref}>
       {props.children}
     </li>
   );
