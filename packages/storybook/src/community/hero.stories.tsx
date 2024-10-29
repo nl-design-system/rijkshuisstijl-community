@@ -73,7 +73,7 @@ export const Default: Story = {
   },
 } satisfies Story;
 
-export const CustomLinkListCard: Story = {
+export const CustomChildren: Story = {
   args: {
     imageSrc:
       'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',

@@ -40,8 +40,9 @@ export const Hero = forwardRef(
         ref={ref}
         className={clsx(
           'rhc-hero',
-          `rhc-hero--text-align-${textAlign}`,
-          borderRadiusCorner &&
+          heroMessage && `rhc-hero--text-align-${textAlign}`,
+          heroMessage &&
+            borderRadiusCorner &&
             `rhc-hero--custom-border-radius-corner rhc-hero--border-radius-corner-${borderRadiusCorner}`,
           `rhc-hero--aspect-ratio-${aspectRatio.replace(' / ', '-')}`,
           className,
