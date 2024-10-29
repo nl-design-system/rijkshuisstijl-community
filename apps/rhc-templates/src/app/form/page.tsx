@@ -98,11 +98,11 @@ export default function Form() {
                 <FormFieldTextarea label="Stel hier uw vraag" rows={6} cols={40}></FormFieldTextarea>
                 <Fieldset>
                   <FieldsetLegend>Label</FieldsetLegend>
-                  <div>
-                    <FormFieldRadioOption label="Label" />
-                    <FormFieldRadioOption label="Label" />
-                    <FormFieldRadioOption label="Label" />
-                    <FormFieldRadioOption label="Label" />
+                  <div className="rhc-radio-group">
+                    <FormFieldRadioOption name="name" label="Label" />
+                    <FormFieldRadioOption name="name" label="Label" />
+                    <FormFieldRadioOption name="name" label="Label" />
+                    <FormFieldRadioOption name="name" label="Label" />
                   </div>
                 </Fieldset>
                 {/*
