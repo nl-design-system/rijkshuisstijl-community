@@ -32,8 +32,11 @@
 }
 
 .utrecht-link:focus-visible,
-.utrecht-link--focus-visible {
+.utrecht-link--focus-visible,
+.utrecht-link:focus,
+.utrecht-link--focus {
   @include mixin.rhc-link--focus-visible;
+  @include mixin.rhc-link--focus;
 }
 
 .utrecht-link .rhc-link__sr-only {
