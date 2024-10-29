@@ -3,12 +3,13 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@import "../button/mixin";
+@use "../button/mixin";
 
 .utrecht-accordion {
   color: var(--rhc-accordion-color, inherit);
   display: flex;
   flex-direction: column;
+  margin-block-end: var(--utrecht-accordion-margin-block-end);
   row-gap: var(--utrecht-accordion-row-gap, inherit);
 }
 
@@ -53,7 +54,7 @@
 
 .utrecht-accordion__button:focus-visible,
 .utrecht-accordion__button--focus-visible {
-  @include rhc-button--focus-visible;
+  @include mixin.rhc-button--focus-visible;
 }
 
 .utrecht-accordion__button-icon {

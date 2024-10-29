@@ -28,7 +28,6 @@ export {
   Button,
   type ButtonProps,
   IconButton,
-  type IconButtonProps,
   PrimaryActionButton,
   SecondaryActionButton,
   SubtleButton,
@@ -47,6 +46,7 @@ export {
   DataListValue,
   type DataListValueProps,
 } from './DataList';
+export { DotBadge, type DotBadgeProps } from './DotBadge';
 export { Fieldset, FieldsetLegend, type FieldsetLegendProps, type FieldsetProps } from './Fieldset';
 export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from './Figure';
 export { FileInput, type FileInputProps } from './FileInput';
@@ -57,7 +57,7 @@ export { FormFieldCheckboxOption, type FormFieldCheckboxOptionProps } from './Fo
 export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFieldErrorMessage';
 export { FormFieldRadioOption, type FormFieldRadioOptionProps } from './FormFieldRadioOption';
 export { FormFieldSelect, type FormFieldSelectProps, SelectOption, type SelectOptionProps } from './FormFieldSelect';
-export { FormFieldTextarea, type FormFieldTextareaProps, Textarea, type TextareaProps } from './FormFieldTextarea';
+export { FormFieldTextarea, type FormFieldTextareaProps, Textarea } from './FormFieldTextarea';
 export { FormFieldTextbox } from './FormFieldTextbox';
 export { Heading, type HeadingProps } from './Heading';
 export { Hero, type HeroProps } from './Hero';
@@ -65,8 +65,13 @@ export { Icon, type IconProps, iconOptions } from './icon/Icon';
 export { Image, type ImageProps } from './Image';
 export { Link, type LinkProps } from './Link';
 export { LinkList, LinkListLink, type LinkListLinkProps, type LinkListProps } from './LinkList';
+export { LinkListCard } from './LinkListCard';
 export { Logo, type LogoProps } from './Logo';
+export { MessageList, type MessageListProps } from './MessageList';
+export { MessageListItem, type MessageListItemProps } from './MessageListItem';
 export { NavBar, type NavBarItemProps, type NavBarProps } from './NavBar';
+export { NavigationList, type NavigationListProps } from './NavigationList';
+export { NavigationListItem, type NavigationListItemProps } from './NavigationListItem';
 export { OrderedList, OrderedListItem, type OrderedListItemProps, type OrderedListProps } from './OrderedList';
 export { PageContent, type PageContentProps } from './PageContent';
 export { PageHeader, type PageHeaderProps } from './PageHeader';
@@ -94,6 +99,7 @@ export { TableCaption } from './TableCaption';
 export { TableCell, type TableCellProps } from './TableCell';
 export { TableHeaderCell, type TableHeaderCellProps } from './TableHeaderCell';
 export { Textbox, type TextboxProps } from './Textbox';
+export { Toggletip, ToggletipButton, ToggletipContent, type ToggletipProps } from './Toggletip';
 export {
   UnorderedList,
   UnorderedListItem,

@@ -15,6 +15,14 @@ const meta = {
         defaultValue: { summary: 'false' },
       },
     },
+    inputRequired: {
+      description: 'Input Required',
+      control: 'boolean',
+      table: {
+        category: 'API',
+        defaultValue: { summary: 'false' },
+      },
+    },
     disabled: {
       description: 'Disabled',
       control: 'boolean',
@@ -125,11 +133,13 @@ const meta = {
     defaultValue: '',
     value: '',
     required: false,
+    inputRequired: false,
     readOnly: false,
     placeholder: '',
     minLength: undefined,
     maxLength: undefined,
     dir: undefined,
+    label: undefined,
     cols: undefined,
     rows: undefined,
   },
@@ -141,11 +151,13 @@ const meta = {
       invalid,
       name,
       required,
+      inputRequired,
       defaultValue,
       value,
       placeholder,
       minLength,
       maxLength,
+      label,
       dir,
       cols,
       rows,
@@ -154,10 +166,12 @@ const meta = {
       <Textarea
         cols={cols || undefined}
         defaultValue={defaultValue || undefined}
-        dir={dir || undefined}
         disabled={disabled}
         id={id || undefined}
+        inputDir={dir || undefined}
+        inputRequired={inputRequired || undefined}
         invalid={invalid}
+        label={label || undefined}
         maxLength={maxLength || undefined}
         minLength={minLength || undefined}
         name={name || undefined}
@@ -208,6 +222,13 @@ export const Required: Story = {
   args: {
     name: 'subject',
     required: true,
+  },
+};
+
+export const InputRequired: Story = {
+  args: {
+    name: 'subject',
+    inputRequired: true,
   },
 };
 

@@ -1,0 +1,48 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@use "mixin";
+
+.rhc-toggletip {
+  @include mixin.rhc-toggletip;
+}
+
+.rhc-toggletip__summary {
+  @include mixin.rhc-toggletip__summary;
+}
+
+.rhc-toggletip__button {
+  @include mixin.rhc-toggletip__button;
+}
+
+.rhc-toggletip__summary .rhc-toggletip__button {
+  // If button is not used standalone the summary should take precedence
+  @include mixin.rhc-toggletip__button--no-pointer-events;
+}
+
+.rhc-toggletip__button:focus {
+  @include mixin.rhc-toggletip--focus;
+}
+
+.rhc-toggletip__button:hover {
+  @include mixin.rhc-toggletip--hover;
+}
+
+.rhc-toggletip__summary:focus .rhc-toggletip__button {
+  @include mixin.rhc-toggletip--focus;
+}
+
+.rhc-toggletip__summary:hover .rhc-toggletip__button {
+  @include mixin.rhc-toggletip--hover;
+}
+
+.rhc-toggletip:active .rhc-toggletip__button,
+.rhc-toggletip[open] .rhc-toggletip__button {
+  @include mixin.rhc-toggletip--active;
+}
+
+.rhc-toggletip__icon {
+  @include mixin.rhc-toggletip__icon;
+}
