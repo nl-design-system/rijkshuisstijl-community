@@ -2,10 +2,10 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-@import "./mixin";
+@use "mixin";
 
 .rhc-logo {
-  @include rhc-logo;
+  @include mixin.rhc-logo;
 }
 
 .rhc-logo__image {
@@ -18,14 +18,14 @@
 }
 
 .rhc-logo__caption {
-  @include rhc-logo__caption;
+  @include mixin.rhc-logo__caption;
 }
 
 .rhc-logo__title {
-  @include rhc-logo__title;
+  @include mixin.rhc-logo__title;
 }
 
 .rhc-logo__subtitle {
-  @include rhc-logo__subtitle;
-  @include rhc-logo__title;
+  @include mixin.rhc-logo__subtitle;
+  @include mixin.rhc-logo__title;
 }
