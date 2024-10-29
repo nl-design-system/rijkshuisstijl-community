@@ -14,10 +14,10 @@ export const UnorderedList = forwardRef(
     return (
       <UtrechtUnorderedList
         ref={ref}
-        {...restProps}
         className={clsx({
           'utrecht-unordered-list--nested': nested,
         })}
+        {...restProps}
       >
         {children}
       </UtrechtUnorderedList>

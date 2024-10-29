@@ -1,7 +1,8 @@
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
+import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactElement } from 'react';
 import { Heading } from './Heading';
 import { Link } from './Link';
+import { IconProps } from './icon/Icon';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   headingItem?: NavBarItemProps;
@@ -16,7 +17,7 @@ interface NavbarLinkProps {
 }
 
 export interface NavBarItemProps extends NavbarLinkProps, HTMLAttributes<HTMLLIElement> {
-  icon?: ReactNode;
+  icon?: ReactElement<IconProps>;
   subList?: NavbarSubListProps;
   bold?: boolean;
   iconOnly?: boolean;
@@ -49,6 +50,7 @@ const NavBarItem = forwardRef(
     }: PropsWithChildren<NavBarItemProps>,
     ref: ForwardedRef<HTMLLIElement>,
   ) => {
+    console.log('icon', icon);
     return (
       <li className={clsx('rhc-nav-bar__item', className)} ref={ref} {...restProps}>
         <Link className={clsx('rhc-nav-bar__link', bold && 'rhc-nav-bar__link--bold')} href={href}>

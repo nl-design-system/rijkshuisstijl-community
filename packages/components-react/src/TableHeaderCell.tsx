@@ -14,7 +14,15 @@ export interface TableHeaderCellProps extends UtrechtTableHeaderCellProps {
 
 export const TableHeaderCell = forwardRef(
   (
-    { children, withSorting, className, scope, alignCell, ...restProps }: PropsWithChildren<TableHeaderCellProps>,
+    {
+      children,
+      withSorting,
+      className,
+      scope,
+      alignCell,
+      'aria-sort': ariaSort,
+      ...restProps
+    }: PropsWithChildren<TableHeaderCellProps>,
     ref: ForwardedRef<HTMLTableCellElement>,
   ) => {
     return (
@@ -42,15 +50,8 @@ export const TableHeaderCell = forwardRef(
             })}
           >
             {children}
-
             <Icon
-              icon={
-                restProps['aria-sort'] === 'ascending'
-                  ? 'sort-ascending'
-                  : restProps['aria-sort'] === 'descending'
-                    ? 'sort-descending'
-                    : 'arrows-sort'
-              }
+              icon={ariaSort === 'ascending' || ariaSort === 'descending' ? `sort-${ariaSort}` : 'arrows-sort'}
             ></Icon>
           </Button>
         ) : (
