@@ -15,6 +15,9 @@ const meta = {
     'aria-label': 'Nieuw Bericht',
   },
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
         component: readme,

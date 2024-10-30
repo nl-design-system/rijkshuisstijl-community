@@ -28,6 +28,9 @@ const meta: Meta<StoryProps> = {
     },
   },
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
         component: readme,
