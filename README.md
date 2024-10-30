@@ -40,6 +40,10 @@ nvm use 18
 
 The components are using scss, make sure your project is able to process scss files.
 
+## Getting started with the component without framework
+
+We're working on components that will work without any framework.
+
 ## Getting Started with React Components
 
 To use the React components from the Rijkshuisstijl community, you'll need to install a package available in the [npm Registry](https://www.npmjs.com/package/@rijkshuisstijl-community/components-react).
@@ -168,6 +172,10 @@ Best to be run from `packages/components-react` because then you get a more deta
 ### Proprietary
 
 Branding, fonts and other assets should often not be part of the EUPL license. By adding those in the `proprietary` packages they are legally excluded based on the LICENSE and NOTICE files. Each rijksoverheid organisation working with a NL Design System thema can add their theme as a package here.
+
+### Who is working on this project?
+
+This project is a collaboration between front-end developers, designers, and enthusiasts from various fields within the IT sector and government organizations.
 
 ## Links
 
