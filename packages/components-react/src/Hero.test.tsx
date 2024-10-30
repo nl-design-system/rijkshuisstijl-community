@@ -5,7 +5,13 @@ import '@testing-library/jest-dom';
 describe('Hero', () => {
   it('renders the hero component with the provided heading and subHeading', () => {
     render(
-      <Hero heading="Test Heading" imageAlt="Test Alt Text" imageSrc="test-image.jpg" subHeading="Test subHeading" />,
+      <Hero
+        heading="Test Heading"
+        heroMessage={true}
+        imageAlt="Test Alt Text"
+        imageSrc="test-image.jpg"
+        subHeading="Test subHeading"
+      />,
     );
 
     const heading = screen.getByText('Test Heading');
@@ -21,6 +27,7 @@ describe('Hero', () => {
     render(
       <Hero
         heading="Test Heading"
+        heroMessage={true}
         imageAlt="Test Alt Text"
         imageSrc="test-image.jpg"
         subHeading="Test subHeading"
@@ -38,6 +45,7 @@ describe('Hero', () => {
       <Hero
         aspectRatio="4 / 3"
         heading="Test Heading"
+        heroMessage={true}
         imageAlt="Test Alt Text"
         imageSrc="test-image.jpg"
         subHeading="Test subHeading"
@@ -54,6 +62,7 @@ describe('Hero', () => {
       <Hero
         borderRadiusCorner="start-end"
         heading="Test Heading"
+        heroMessage={true}
         imageAlt="Test Alt Text"
         imageSrc="test-image.jpg"
         subHeading="Test subHeading"
