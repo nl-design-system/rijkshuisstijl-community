@@ -9,10 +9,13 @@
 }
 
 .rhc-form-field-radio-option__input {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
+  margin-block-start: var(--rhc-form-field-radio-option-input-margin-block-start, inherit);
 }
 
 .utrecht-form-field--radio .utrecht-form-field__label {
   --utrecht-form-label-font-weight: var(--rhc-form-field-radio-option-font-weight, inherit);
+
+  display: inline-flex;
 }
