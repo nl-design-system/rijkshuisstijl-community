@@ -4,9 +4,11 @@
  */
 
 .utrecht-form-field--radio {
-  --utrecht-form-field-label-margin-block-end: var(--rhc-form-field-radio-option-row-gap, inherit);
+  --utrecht-form-field-label-margin-block-end: var(--rhc-form-field-radio-option-label-margin-block-end, inherit);
   --utrecht-radio-button-margin-inline-end: var(--rhc-form-field-radio-option-column-gap, inherit);
+}
 
+.rhc-form-field-radio-option__input {
   align-items: center;
   display: flex;
 }
