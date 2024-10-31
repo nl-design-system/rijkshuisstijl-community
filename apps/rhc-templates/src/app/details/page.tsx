@@ -8,14 +8,14 @@ import {
   FigureCaption,
   Footer,
   Heading,
+  Icon,
   Image,
-  Paragraph,
-  Separator,
   LinkList,
   LinkListLink,
   PageHeader,
+  Paragraph,
+  Separator,
   SubNavBar,
-  Icon,
 } from '@rijkshuisstijl-community/components-react';
 import { RichText } from '@utrecht/component-library-react/dist/css-module';
 
