@@ -12,6 +12,11 @@ const meta = {
       options: iconOptions,
     },
   },
+  parameters: {
+    status: {
+      type: 'STABLE',
+    },
+  },
 } satisfies Meta<typeof Icon>;
 
 export default meta;

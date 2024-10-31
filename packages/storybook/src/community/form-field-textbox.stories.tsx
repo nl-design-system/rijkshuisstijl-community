@@ -338,6 +338,9 @@ const meta = {
   },
   tags: ['autodocs'],
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
         component: readme,

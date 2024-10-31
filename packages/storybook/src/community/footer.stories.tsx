@@ -7,6 +7,9 @@ const meta = {
   id: 'rhc-footer',
   component: Footer,
   parameters: {
+    status: {
+      type: 'UNSTABLE',
+    },
     docs: {
       description: {
         component: readme,
