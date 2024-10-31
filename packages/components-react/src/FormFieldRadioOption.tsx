@@ -38,7 +38,7 @@ export const FormFieldRadioOption = forwardRef(
 
     return (
       <FormField dir={dir} input={input} invalid={invalid} ref={ref} type={'radio'}>
-        <div className="utrecht-form-field__input">
+        <div className="utrecht-form-field__input rhc-form-field-radio-option__input">
           <Radio
             dir={dir}
             disabled={disabled}
