@@ -1,8 +1,15 @@
 .rhc-form-label--checkbox {
   --utrecht-form-label-font-weight: var(--rhc-font-weight-regular, 400);
+}
 
-  align-items: center;
-  display: grid;
+.rhc-form-label--checkbox .utrecht-form-field__label--checkbox {
+  align-items: flex-start;
+  display: flex;
+  margin-block-end: var(--rhc-form-field-checkbox-option-margin-block-end, inherit);
+}
+
+.rhc-form-label--checkbox .utrecht-form-field__input {
+  margin-block-start: var(--rhc-form-field-checkbox-option-margin-block-start, inherit);
 }
 
 .utrecht-form-field__status {
