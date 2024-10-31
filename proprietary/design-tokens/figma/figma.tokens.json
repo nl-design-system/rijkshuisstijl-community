@@ -2804,6 +2804,16 @@
       }
     }
   },
+  "components/code-input": {
+    "todo": {
+      "code-input": {
+        "size": {
+          "value": "{rhc.size.target}",
+          "type": "spacing"
+        }
+      }
+    }
+  },
   "components/counter-badge": {
     "utrecht": {
       "badge-counter": {
@@ -3136,7 +3146,7 @@
   "components/file-input": {
     "rhc": {
       "file-input": {
-         "column-gap": {
+        "column-gap": {
           "value": "{rhc.space.150}",
           "type": "spacing"
         },
@@ -3241,40 +3251,40 @@
           }
         },
         "border": {
-            "block-start": {
-                "width": {
-                    "value": "{rhc.border-width.m}",
-                    "type": "borderWidth"
-                },
-                "color": {
-                    "value": "{rhc.color.primary.500}",
-                    "type": "color"
-                },
-                "style": {
-                    "value": "solid",
-                    "type": "borderStyle"
-                }
+          "block-start": {
+            "width": {
+              "value": "{rhc.border-width.m}",
+              "type": "borderWidth"
+            },
+            "color": {
+              "value": "{rhc.color.primary.500}",
+              "type": "color"
+            },
+            "style": {
+              "value": "solid",
+              "type": "borderStyle"
             }
+          }
         },
         "padding": {
-            "block-start": {
-                "value": "{rhc.space.500}",
-                "type": "spacing"
-            },
-            "block-end": {
-                "value": "{rhc.space.500}",
-                "type": "spacing"
-            },
-            "inline-start": {
-                "value": "{rhc.space.500}",
-                "type": "spacing"
-            }
+          "block-start": {
+            "value": "{rhc.space.500}",
+            "type": "spacing"
+          },
+          "block-end": {
+            "value": "{rhc.space.500}",
+            "type": "spacing"
+          },
+          "inline-start": {
+            "value": "{rhc.space.500}",
+            "type": "spacing"
+          }
         },
         "flex": {
-            "direction": {
-                "value": "row",
-                "type": "flexDirection"
-            }
+          "direction": {
+            "value": "row",
+            "type": "flexDirection"
+          }
         }
       }
     }
@@ -6558,6 +6568,7 @@
       "components/button-group",
       "components/checkbox",
       "components/checkbox-group",
+      "components/code-input",
       "components/counter-badge",
       "components/dot-badge",
       "components/drawer",
