@@ -16,7 +16,7 @@ const meta = {
   },
   parameters: {
     status: {
-      type: 'STABLE',
+      type: 'UNSTABLE',
     },
     docs: {
       description: {
