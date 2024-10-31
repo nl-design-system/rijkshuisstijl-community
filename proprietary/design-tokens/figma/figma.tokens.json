@@ -3240,41 +3240,55 @@
             }
           }
         },
+        "content": {
+          "max-inline-size": {
+            "value": "1280px",
+            "type": "sizing"
+          },
+          "padding-inline-start": {
+            "value": "{rhc.space.200}",
+            "type": "spacing"
+          },
+          "padding-inline-end": {
+            "value": "{rhc.space.200}",
+            "type": "spacing"
+          }
+        },
         "border": {
-            "block-start": {
-                "width": {
-                    "value": "{rhc.border-width.m}",
-                    "type": "borderWidth"
-                },
-                "color": {
-                    "value": "{rhc.color.primary.500}",
-                    "type": "color"
-                },
-                "style": {
-                    "value": "solid",
-                    "type": "borderStyle"
-                }
+          "block-start": {
+            "width": {
+              "value": "{rhc.border-width.m}",
+              "type": "borderWidth"
+            },
+            "color": {
+              "value": "{rhc.color.primary.500}",
+              "type": "color"
+            },
+            "style": {
+              "value": "solid",
+              "type": "borderStyle"
             }
+          }
         },
         "padding": {
-            "block-start": {
-                "value": "{rhc.space.500}",
-                "type": "spacing"
-            },
-            "block-end": {
-                "value": "{rhc.space.500}",
-                "type": "spacing"
-            },
-            "inline-start": {
-                "value": "{rhc.space.500}",
-                "type": "spacing"
-            }
+          "block-start": {
+            "value": "{rhc.space.500}",
+            "type": "spacing"
+          },
+          "block-end": {
+            "value": "{rhc.space.500}",
+            "type": "spacing"
+          },
+          "inline-start": {
+            "value": "{rhc.space.500}",
+            "type": "spacing"
+          }
         },
         "flex": {
-            "direction": {
-                "value": "row",
-                "type": "flexDirection"
-            }
+          "direction": {
+            "value": "row",
+            "type": "flexDirection"
+          }
         }
       }
     }
@@ -4251,9 +4265,19 @@
           "value": "{rhc.border-width.default}",
           "type": "borderWidth"
         },
+        "max-inline-size": {
+          "value": "1280px",
+          "type": "sizing"
+        },
         "padding-inline": {
           "value": "{rhc.space.200}",
           "type": "spacing"
+        },
+        "container": {
+          "inline-size": {
+            "value": "100%",
+            "type": "sizing"
+          }
         },
         "content": {
           "column-gap": {
@@ -5617,6 +5641,56 @@
         "color": {
           "value": "{rhc.color.foreground.lint}",
           "type": "color"
+        }
+      }
+    }
+  },
+  "components/sub-nav-bar": {
+    "rhc": {
+      "sub-nav-bar": {
+        "background-color": {
+          "value": "#f2f4f6",
+          "type": "color"
+        },
+        "column-gap": {
+          "value": "{rhc.space.100}",
+          "type": "spacing"
+        },
+        "column-width": {
+          "value": "375px",
+          "type": "sizing"
+        },
+        "padding-block-end": {
+          "value": "{rhc.space.400}",
+          "type": "spacing"
+        },
+        "padding-block-start": {
+          "value": "{rhc.space.400}",
+          "type": "spacing"
+        },
+        "inline-size": {
+          "value": "100%",
+          "type": "sizing"
+        },
+        "content": {
+          "padding-inline-end": {
+            "value": "{rhc.space.200}",
+            "type": "spacing"
+          },
+          "padding-inline-start": {
+            "value": "{rhc.space.200}",
+            "type": "spacing"
+          },
+          "max-inline-size": {
+            "value": "1280px",
+            "type": "sizing"
+          },
+          "list": {
+            "row-gap": {
+              "value": "{rhc.space.100}",
+              "type": "spacing"
+            }
+          }
         }
       }
     }
