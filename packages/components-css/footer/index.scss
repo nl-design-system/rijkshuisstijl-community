@@ -16,7 +16,12 @@
   --utrecht-heading-6-color: currentColor;
 
   display: flex;
+  flex-direction: var(--rhc-page-footer-flex-direction);
   justify-content: center;
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
 }
 
 .rhc-page-footer--primary-filled {
