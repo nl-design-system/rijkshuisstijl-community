@@ -257,6 +257,9 @@ const meta: Meta<typeof Textbox> = {
     max: undefined,
   },
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
         component: readme,

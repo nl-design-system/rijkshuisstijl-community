@@ -11,6 +11,9 @@ const meta = {
   title: 'Rijkshuisstijl/NavigationList/NavigationListItem',
   component: NavigationListItem,
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
         component: readme,

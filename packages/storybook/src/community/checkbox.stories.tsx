@@ -7,6 +7,9 @@ const meta = {
   id: 'rhc-checkbox',
   component: Checkbox,
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
         component: readme,

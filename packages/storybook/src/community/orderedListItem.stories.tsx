@@ -17,6 +17,11 @@ const meta = {
       },
     },
   },
+  parameters: {
+    status: {
+      type: 'STABLE',
+    },
+  },
 } satisfies Meta<typeof OrderedListItem>;
 
 export default meta;

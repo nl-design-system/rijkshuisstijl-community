@@ -9,6 +9,11 @@ const meta = {
   args: {
     children: 'List item',
   },
+  parameters: {
+    status: {
+      type: 'STABLE',
+    },
+  },
 } satisfies Meta<typeof UnorderedListItem>;
 
 export default meta;
