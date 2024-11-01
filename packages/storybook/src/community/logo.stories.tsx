@@ -78,6 +78,11 @@ const meta = {
       },
     },
   },
+  parameters: {
+    status: {
+      type: 'STABLE',
+    },
+  },
   render: LogoStory,
 } satisfies Meta<typeof LogoStory>;
 

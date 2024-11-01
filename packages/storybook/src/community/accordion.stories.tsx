@@ -72,6 +72,9 @@ const meta = {
   },
   parameters: {
     tokensPrefix: 'utrecht-accordion',
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
         component: readme,

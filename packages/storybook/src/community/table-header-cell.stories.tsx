@@ -46,6 +46,9 @@ const meta = {
   },
   render: (args) => <TableHeaderCell {...args} />,
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
         component: readme,

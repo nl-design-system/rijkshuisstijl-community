@@ -2,7 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-.rhc-footer {
+.rhc-page-footer {
   --utrecht-space-around: 1;
   --utrecht-link-hover-text-decoration: underline;
   --_utrecht-link-state-text-decoration-color: currentColor;
@@ -15,20 +15,20 @@
   --utrecht-heading-5-color: currentColor;
   --utrecht-heading-6-color: currentColor;
 
-  column-gap: var(--rhc-page-footer-column-gap);
   display: flex;
   flex-direction: var(--rhc-page-footer-flex-direction);
+  justify-content: center;
 
   :is(h1, h2, h3, h4, h5, h6) {
     margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
 }
 
-.rhc-footer--primary-filled {
+.rhc-page-footer--primary-filled {
   --utrecht-page-footer-background-color: var(--rhc-color-primary-500);
 }
 
-.rhc-footer--primary-outlined {
+.rhc-page-footer--primary-outlined {
   --utrecht-page-footer-background-color: var(--rhc-color-wit);
   --utrecht-page-footer-color: var(--rhc-color-primary-500);
 
@@ -37,24 +37,34 @@
   border-block-start-width: var(--rhc-page-footer-border-block-start-width);
 }
 
+.rhc-page-footer__content {
+  column-gap: var(--rhc-page-footer-column-gap);
+  display: flex;
+  flex: 1;
+  flex-direction: var(--rhc-page-footer-flex-direction);
+  max-inline-size: var(--rhc-page-footer-content-max-inline-size);
+  padding-inline-end: var(--rhc-page-footer-content-padding-inline-end);
+  padding-inline-start: var(--rhc-page-footer-content-padding-inline-start);
+}
+
 .rhc-page-footer__section,
 .rhc-page-footer__title {
   break-inside: avoid;
   padding-block-end: var(--rhc-page-footer-padding-block-end);
 }
 
-.rhc-footer > * {
+.rhc-page-footer__content > * {
   flex: 1;
 }
 
 @media (width <= 1024px) {
-  .rhc-footer {
+  .rhc-page-footer {
     --rhc-page-footer-flex-direction: column;
   }
 }
 
 @media (width <= 320px) {
-  .rhc-footer {
+  .rhc-page-footer {
     --utrecht-page-footer-padding-inline-start: var(--rhc-page-footer-padding-inline-start);
     --utrecht-page-footer-padding-block-start: var(--rhc-page-footer-padding-block-start);
   }

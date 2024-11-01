@@ -8,6 +8,11 @@ const meta = {
   args: {
     children: 'Lorem ipsum dolor sit amet, consecteur ad * isicing elit, sed do eiusmod *',
   },
+  parameters: {
+    status: {
+      type: 'UNSTABLE',
+    },
+  },
 } satisfies Meta<typeof Toggletip>;
 
 export default meta;
