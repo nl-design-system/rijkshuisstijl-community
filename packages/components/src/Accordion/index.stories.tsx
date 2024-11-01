@@ -1,8 +1,8 @@
-import { AccordionProvider, AccordionSectionProps } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import { UtrechtIconChevronDown } from '@utrecht/web-component-library-react';
 import { ReactNode } from 'react';
-import readme from './accordion.md?raw';
+import { AccordionProvider, AccordionSectionProps } from './index';
+import readme from './readme.md?raw';
 
 interface AccordionStoryProps {
   label: string;

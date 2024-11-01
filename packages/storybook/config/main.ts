@@ -4,7 +4,7 @@ const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
   },
-  stories: ['../src/**/*stories.@(js|jsx|ts|tsx)', '../src/**/*.mdx'],
+  stories: ['../../components/src/**/**.stories.tsx', '../src/**/*stories.@(js|jsx|ts|tsx)', '../src/**/*.mdx'],
   addons: [
     '@chromatic-com/storybook',
     '@etchteam/storybook-addon-status',

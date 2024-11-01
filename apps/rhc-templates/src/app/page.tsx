@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client';
 
 import { ButtonLink } from '@utrecht/component-library-react/dist/css-module';

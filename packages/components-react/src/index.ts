@@ -10,7 +10,7 @@ export {
   AccordionSection,
   type AccordionSectionProps,
   type AccordionSectionProviderProps,
-} from './Accordion';
+} from '@components/Accordion';
 export { ActionGroup, type ActionGroupProps } from './ActionGroup';
 export { Alert, type AlertProps } from './Alert';
 export { Article } from './Article';

@@ -1,27 +1,16 @@
 {
-  "name": "@rijkshuisstijl-community/components-react",
-  "version": "1.0.0-alpha.21",
+  "name": "@rijkshuisstijl-community/components",
+  "version": "1.0.0",
   "author": "Community for NL Design System",
-  "description": "React component library for the Rijkshuisstijl Community repository, based on the NL Design System architecture",
+  "description": "Component library for the Rijkshuisstijl Community repository, based on the NL Design System architecture",
   "license": "EUPL-1.2",
-  "keywords": [
-    "nl-design-system"
-  ],
   "private": false,
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
-    "directory": "packages/components-react"
+    "directory": "packages/components"
   },
   "scripts": {
-    "prebuild": "npm run clean",
-    "build": "npm-run-all build:**",
-    "build:components": "rollup --config rollup.config.mjs",
-    "clean": "rimraf dist/ pages/",
     "lint": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
     "test": "mkdir -p pages && NODE_OPTIONS=--experimental-vm-modules jest --verbose",
     "watch:test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --watch"

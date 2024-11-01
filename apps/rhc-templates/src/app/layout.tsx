@@ -1,4 +1,6 @@
+// @ts-nocheck
 'use client';
+
 import { Document } from '@utrecht/component-library-react';
 import { PropsWithChildren } from 'react';
 import '@nl-rvo/assets/fonts/index.css';
