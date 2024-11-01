@@ -91,3 +91,13 @@
   font-weight: var(--rhc-hero-sub-heading-font-weight);
   line-height: var(--rhc-hero-sub-heading-line-height);
 }
+
+@mixin rhc-hero__children {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  inset-block-start: 50%;
+  position: absolute;
+  row-gap: var(--rhc-hero-message-row-gap);
+  transform: translateY(-50%);
+}

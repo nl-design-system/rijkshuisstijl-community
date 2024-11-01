@@ -17,7 +17,7 @@ importers:
     devDependencies:
       '@lerna-lite/cli':
         specifier: 3.7.1
-        version: 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)
+        version: 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
       '@lerna-lite/publish':
         specifier: 3.7.1
         version: 3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3)
@@ -9980,7 +9980,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@lerna-lite/cli@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)':
+  '@lerna-lite/cli@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3))(typescript@5.5.3)':
     dependencies:
       '@lerna-lite/core': 3.7.1(typescript@5.5.3)
       '@lerna-lite/init': 3.7.1(typescript@5.5.3)
@@ -9993,7 +9993,7 @@ snapshots:
     optionalDependencies:
       '@lerna-lite/publish': 3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3)
       '@lerna-lite/run': 3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3)
-      '@lerna-lite/version': 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
+      '@lerna-lite/version': 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3)
     transitivePeerDependencies:
       - babel-plugin-macros
       - bluebird
@@ -10095,10 +10095,10 @@ snapshots:
 
   '@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3)':
     dependencies:
-      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)
+      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
       '@lerna-lite/core': 3.7.1(typescript@5.5.3)
       '@lerna-lite/npmlog': 3.8.0
-      '@lerna-lite/version': 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
+      '@lerna-lite/version': 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3)
       '@npmcli/arborist': 7.5.4
       '@npmcli/package-json': 5.2.1
       byte-size: 8.2.1
@@ -10132,7 +10132,7 @@ snapshots:
 
   '@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3)':
     dependencies:
-      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)
+      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
       '@lerna-lite/core': 3.7.1(typescript@5.5.3)
       '@lerna-lite/filter-packages': 3.7.1(typescript@5.5.3)
       '@lerna-lite/npmlog': 3.7.0
@@ -10151,9 +10151,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3)':
+  '@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3)':
     dependencies:
-      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1(@lerna-lite/run@3.7.1)(typescript@5.5.3))(@lerna-lite/run@3.7.1(@lerna-lite/publish@3.7.1)(typescript@5.5.3))(typescript@5.5.3))(typescript@5.5.3)
+      '@lerna-lite/cli': 3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(@lerna-lite/version@3.7.1(@lerna-lite/publish@3.7.1)(@lerna-lite/run@3.7.1)(typescript@5.5.3))(typescript@5.5.3)
       '@lerna-lite/core': 3.7.1(typescript@5.5.3)
       '@lerna-lite/npmlog': 3.8.0
       '@octokit/plugin-enterprise-rest': 6.0.1

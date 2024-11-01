@@ -7,6 +7,9 @@ const meta = {
   title: 'Rijkshuisstijl/NavigationList',
   component: NavigationList,
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
         component: readme,

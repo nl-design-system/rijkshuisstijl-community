@@ -5,6 +5,11 @@ const meta = {
   title: 'Rijkshuisstijl/NavBar',
   id: 'rhc-nav-bar',
   component: NavBar,
+  parameters: {
+    status: {
+      type: 'STABLE',
+    },
+  },
 } satisfies Meta<typeof NavBar>;
 
 export default meta;

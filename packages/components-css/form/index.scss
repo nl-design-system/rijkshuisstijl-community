@@ -1,5 +1,9 @@
-.rhc-form-label--checkbox {
+.rhc-form-label--checkbox .utrecht-form-field__label--checkbox {
   --utrecht-form-label-font-weight: var(--rhc-font-weight-regular, 400);
+
+  align-items: flex-start;
+  display: flex;
+  margin-block-end: var(--rhc-form-field-checkbox-option-margin-block-end, inherit);
 }
 
 .utrecht-form-field__status {

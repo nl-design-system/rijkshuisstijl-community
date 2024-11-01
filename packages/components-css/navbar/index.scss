@@ -1,3 +1,11 @@
+.rhc-nav-bar__container {
+  align-items: center;
+  background-color: var(--rhc-nav-bar-background-color);
+  display: flex;
+  inline-size: var(--rhc-nav-bar-container-inline-size);
+  justify-content: center;
+}
+
 .rhc-nav-bar {
   align-items: center;
   background-color: var(--rhc-nav-bar-background-color);
@@ -5,8 +13,10 @@
   color: var(--rhc-nav-bar-color);
   column-gap: var(--rhc-nav-bar-content-column-gap);
   display: flex;
+  flex: 1;
   font-family: var(--rhc-font-family-primary, inherit);
   justify-content: space-between;
+  max-inline-size: var(--rhc-nav-bar-max-inline-size);
   row-gap: var(--rhc-nav-bar-content-row-gap);
 }
 
@@ -39,6 +49,11 @@
   padding-inline-start: var(--rhc-nav-bar-link-padding-inline-start);
   text-decoration: none;
 
+  &:active {
+    background-color: var(--rhc-nav-bar-link-active-background-color);
+    color: var(--rhc-nav-bar-link-active-color);
+  }
+
   &:hover {
     background-color: var(--rhc-nav-bar-link-hover-background-color);
   }
@@ -47,9 +62,29 @@
     background-color: var(--rhc-nav-bar-link-focus-background-color);
     color: var(--rhc-nav-bar-link-focus-color);
   }
+}
 
-  &:active {
-    background-color: var(--rhc-nav-bar-link-active-background-color);
-    color: var(--rhc-nav-bar-link-active-color);
-  }
+.rhc-sub-nav-bar {
+  --utrecht-column-layout-gap: var(--rhc-sub-nav-bar-column-gap);
+  --utrecht-column-layout-column-width: var(--rhc-sub-nav-bar-column-width);
+
+  background-color: var(--rhc-sub-nav-bar-background-color);
+  inline-size: var(--rhc-sub-nav-bar-inline-size);
+  padding-block-end: calc(var(--rhc-sub-nav-bar-padding-block-end) - var(--rhc-sub-nav-bar-content-list-row-gap));
+  padding-block-start: var(--rhc-sub-nav-bar-padding-block-start);
+  text-align: center;
+}
+
+.rhc-sub-nav-bar__content {
+  margin-inline-end: auto;
+  margin-inline-start: auto;
+  max-inline-size: var(--rhc-sub-nav-bar-content-max-inline-size);
+  padding-inline-end: var(--rhc-sub-nav-bar-content-padding-inline-end);
+  padding-inline-start: var(--rhc-sub-nav-bar-content-padding-inline-start);
+}
+
+.rhc-sub-nav-bar__list {
+  break-inside: avoid;
+  margin-block-end: var(--rhc-sub-nav-bar-content-list-row-gap);
+  text-align: initial;
 }
