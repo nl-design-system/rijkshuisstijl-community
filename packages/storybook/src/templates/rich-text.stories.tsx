@@ -5,7 +5,11 @@ import './globals.css';
 const meta: Meta = {
   title: 'Templates/Rich Text',
   component: Page,
-  parameters: {},
+  parameters: {
+    status: {
+      type: 'UNSTABLE',
+    },
+  },
 };
 export default meta;
 

@@ -57,7 +57,7 @@ export default function Collage() {
       </div>
       <NavBar
         items={[
-          { href: '/', label: 'Page' },
+          { href: '/', label: 'Rich Text' },
           { href: '/form', label: 'Form' },
           { href: '/details', label: 'Details' },
           { href: '/collage', label: 'Collage' },
