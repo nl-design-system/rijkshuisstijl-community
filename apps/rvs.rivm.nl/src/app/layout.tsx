@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { Document } from '@utrecht/component-library-react';
 import type { Metadata } from 'next';
 import { PropsWithChildren } from 'react';

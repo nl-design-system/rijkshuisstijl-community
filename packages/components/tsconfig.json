@@ -18,14 +18,11 @@
     "noUnusedParameters": true,
     "outDir": "dist",
     "resolveJsonModule": true,
-    "rootDir": "..",
+    "rootDir": "./src/",
     "skipLibCheck": true,
     "strict": true,
-    "target": "es2020",
-    "paths": {
-      "@components/*": ["../components/src/*"]
-    }
+    "target": "es2020"
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/*.ts", "markdown.d.ts", "../components/src"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/*.ts", "markdown.d.ts"],
   "exclude": ["**/node_modules/*"]
 }

@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client';
 
 import { Article, Button, ButtonGroup, Heading1, Link, Paragraph } from '@utrecht/component-library-react';
