@@ -4,12 +4,10 @@ import {
   Article,
   BreadcrumbNav,
   BreadcrumbNavLink,
-  Figure,
-  FigureCaption,
+  Card,
   Footer,
   Heading,
   Icon,
-  Image,
   LinkList,
   LinkListLink,
   PageHeader,
@@ -72,30 +70,16 @@ export default function Details() {
                 <LinkListLink>Meer vragen en antwoorden</LinkListLink>
               </LinkList>
               <Heading level={1}>Uitgelicht</Heading>
-              <div className="image-group">
-                <div className="image-group-box">
-                  <Figure className="unstarted">
-                    <Image
-                      alt="Multicolored tulip field"
-                      width="640"
-                      height="763"
-                      src="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
-                    ></Image>
-                    <FigureCaption>Bijschrift (figcaption) van een afbeelding)</FigureCaption>
-                  </Figure>
-                </div>
-                <div className="image-group-box">
-                  <Figure>
-                    <Image
-                      alt="Multicolored tulip field"
-                      width="640"
-                      height="763"
-                      src="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
-                    ></Image>
-                    <FigureCaption>Bijschrift (figcaption) van een afbeelding)</FigureCaption>
-                  </Figure>
-                </div>
-              </div>
+              <Card
+                imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
+                heading="Bijbaan, vakantiewerk en stage door jongeren"
+                href="#"
+              ></Card>
+              <Card
+                imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
+                heading="Vakantiedagen en vakantiegeld"
+                href="#"
+              ></Card>
             </RichText>
           </Article>
         </main>

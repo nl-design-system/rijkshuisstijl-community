@@ -5,13 +5,12 @@ import { Link } from './Link';
 
 interface CardPropsBase extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
-  title: string;
   className?: string;
   heading: ReactNode;
 }
 
 export interface CardProps extends CardPropsBase {
-  appearance: 'default';
+  appearance?: 'default';
   button?: ReactNode;
   icon?: ReactNode;
   imageSrc?: string;
