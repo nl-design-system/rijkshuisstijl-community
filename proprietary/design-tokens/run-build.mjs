@@ -86,7 +86,7 @@ const getStyleDictionaryConfig = (product) => {
 };
 
 const run = async () => {
-  const start = performance.now();
+  const start = Date.now();
   const tokens = await getTokensFile();
   Object.entries(tokens).forEach(([product, config]) => {
     if (isProduct(config)) {
@@ -96,10 +96,8 @@ const run = async () => {
     }
   });
 
-  const end = performance.now();
-  const formatter = new Intl.NumberFormat('en-EN', { notation: 'compact' });
-  const elapsedTime = formatter.format(end - start);
-  console.log(`Done in ${elapsedTime}ms`);
+  const end = Date.now();
+  console.log(`Done in ${end - start}ms`);
 };
 
 run();
