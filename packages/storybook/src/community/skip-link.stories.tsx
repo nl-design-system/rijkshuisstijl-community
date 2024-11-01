@@ -54,6 +54,9 @@ const meta = {
     visibleOnFocus: false,
   },
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
         component: readme,

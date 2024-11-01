@@ -17,6 +17,11 @@ const meta = {
   id: 'rhc-radio-group',
   component: RadioGroupStory,
   render: RadioGroupStory,
+  parameters: {
+    status: {
+      type: 'STABLE',
+    },
+  },
 } satisfies Meta<typeof RadioGroupStory>;
 
 export default meta;

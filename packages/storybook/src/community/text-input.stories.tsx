@@ -189,7 +189,7 @@ const meta: Meta<typeof Textbox> = {
       },
     },
     inputRequired: {
-      description: 'Required (HTML validation)',
+      description: 'Input Required',
       control: 'boolean',
       table: {
         category: 'API',
@@ -257,6 +257,9 @@ const meta: Meta<typeof Textbox> = {
     max: undefined,
   },
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
         component: readme,
@@ -291,7 +294,7 @@ const meta: Meta<typeof Textbox> = {
         defaultValue={defaultValue || undefined}
         dir={dir || undefined}
         disabled={disabled}
-        inputRequired={inputRequired}
+        inputRequired={inputRequired || undefined}
         invalid={invalid}
         max={max || undefined}
         maxLength={maxLength || undefined}
@@ -325,6 +328,13 @@ export const Required: Story = {
   args: {
     name: 'subject',
     required: true,
+  },
+};
+
+export const InputRequired: Story = {
+  args: {
+    name: 'subject',
+    inputRequired: true,
   },
 };
 

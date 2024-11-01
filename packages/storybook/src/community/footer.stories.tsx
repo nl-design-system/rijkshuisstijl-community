@@ -7,6 +7,9 @@ const meta = {
   id: 'rhc-footer',
   component: Footer,
   parameters: {
+    status: {
+      type: 'UNSTABLE',
+    },
     docs: {
       description: {
         component: readme,
@@ -23,6 +26,7 @@ export const DefaultFooter: Story = {
   args: {
     heading: 'De Rijksoverheid. Voor Nederland',
     headingLevel: 4,
+    background: 'primary-filled',
     columns: [
       {
         heading: 'Service',

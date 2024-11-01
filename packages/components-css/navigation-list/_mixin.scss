@@ -1,0 +1,88 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@mixin rhc-navigation-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-block: 0;
+  padding-inline: 0;
+  &:last-child {
+    border-block-start-color: var(--rhc-navigation-list-item-border-color, var(--rhc-color-grijs-300));
+    border-block-start-style: solid;
+    border-block-start-width: var(--rhc-navigation-list-item-border-width, var(--rhc-border-width-default));
+  }
+}
+@mixin rhc-navigation-list__item {
+  align-items: center;
+  background-color: var(--rhc-navigation-list-item-background-color, var(--rhc-color-canvas));
+  border-block-end-color: var(--rhc-navigation-list-item-border-color, var(--rhc-color-grijs-300));
+  border-block-end-style: solid;
+  border-block-end-width: var(--rhc-navigation-list-item-border-width, var(--rhc-border-width-default));
+  color: var(--rhc-navigation-list-item-color, var(--rhc-color-foreground-subdued));
+  column-gap: var(--rhc-navigation-list-item-column-gap, var(--rhc-space-100));
+  display: flex;
+  min-block-size: var(--rhc-navigation-list-item-min-height, var(--rhc-size-target));
+  padding-block: var(--rhc-navigation-list-item-padding-block, var(--rhc-space-100));
+  padding-inline: var(--rhc-navigation-list-item-padding-inline, var(--rhc-space-200));
+  position: relative;
+  text-decoration: none;
+  &:hover {
+    background-color: var(--rhc-navigation-list-item-hover-background-color, var(--rhc-color-grijs-50));
+  }
+
+  &:focus {
+    background-color: var(--rhc-navigation-list-item-focus-background-color, var(--rhc-color-lintblauw-50));
+    z-index: 999;
+  }
+
+  &:active {
+    background-color: var(--rhc-navigation-list-item-active-background-color, var(--rhc-color-grijs-100));
+  }
+}
+
+@mixin rhc-navigation-list__item__start-icon {
+  background-color: var(--rhc-navigation-list-icon-background-color, var(--rhc-color-wit));
+  block-size: var(--rhc-navigation-list-item-icon-size);
+  border-radius: var(--rhc-navigation-list-icon-border-radius, var(--rhc-border-radius-circle));
+  color: var(--rhc-navigation-list-icon-color, var(--rhc-color-foreground-subdued));
+  grid-area: start-icon;
+  min-inline-size: var(--rhc-navigation-list-item-icon-size);
+  padding-block: var(--rhc-navigation-list-item-icon-padding-block);
+  padding-inline: var(--rhc-navigation-list-item-icon-padding-inline);
+}
+
+@mixin rhc-navigation-list__item-content {
+  align-items: center;
+  display: grid;
+  flex: 1;
+  grid-column-gap: var(--rhc-navigation-list-item-content-column-gap, var(--rhc-space-100));
+  grid-row-gap: var(--rhc-navigation-list-item-content-row-gap, var(--rhc-space-100));
+  grid-template-areas:
+    "label content content end-icon"
+    "label content content end-icon";
+  grid-template-columns: 1fr 1fr 1fr auto;
+}
+
+@mixin rhc-navigation-list__item__label {
+  color: var(--rhc-navigation-list-item-heading-color, var(--rhc-color-foreground-lint));
+  font-family: var(--rhc-navigation-list-item-label-font-family, var(--rhc-font-family-primary)), sans-serif;
+  font-size: var(--rhc-navigation-list-item-label-font-size, var(--rhc-font-size-md-desktop));
+  font-weight: var(--rhc-navigation-list-item-label-font-weight, var(--rhc-font-weight-bold));
+  grid-area: label;
+  line-height: var(--rhc-navigation-list-item-label-line-height, var(--rhc-line-height-md));
+}
+@mixin rhc-navigation-list__item__description {
+  color: inherit;
+  grid-area: content;
+  @media (width<= 768px) {
+    text-align: start;
+  }
+}
+
+@mixin rhc-navigation-list__item__end-icon {
+  align-self: center;
+  grid-area: end-icon;
+  justify-self: end;
+}

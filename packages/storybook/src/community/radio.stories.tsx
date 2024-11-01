@@ -78,6 +78,11 @@ const meta = {
       description: 'Radio group name. Use the same name for each radio in a group.',
     },
   },
+  parameters: {
+    status: {
+      type: 'STABLE',
+    },
+  },
 } satisfies Meta<typeof RadioStory>;
 
 export default meta;

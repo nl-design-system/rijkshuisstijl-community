@@ -1,4 +1,7 @@
 import { Hero } from '@rijkshuisstijl-community/components-react';
+import { LinkListCard } from '@rijkshuisstijl-community/components-react';
+import { LinkList } from '@rijkshuisstijl-community/components-react';
+import { LinkListLink } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './hero.md?raw';
 
@@ -7,6 +10,13 @@ const meta = {
   id: 'rhc-hero',
   component: Hero,
   argTypes: {
+    heroMessage: {
+      description: 'Hero Message Visible',
+      control: { type: 'boolean' },
+      table: {
+        type: { summary: 'boolean' },
+      },
+    },
     headingLevel: {
       description: 'Heading level',
       control: { type: 'select' },
@@ -41,6 +51,9 @@ const meta = {
     },
   },
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
         component: readme,
@@ -59,5 +72,24 @@ export const Default: Story = {
     imageAlt: 'Tullip field',
     heading: 'Heading',
     subHeading: 'Subtext',
+    heroMessage: true,
+  },
+} satisfies Story;
+
+export const CustomChildren: Story = {
+  args: {
+    imageSrc:
+      'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
+    imageAlt: 'Tullip field',
+    heroMessage: false,
+    children: (
+      <LinkListCard heading="Hello World" headingLevel={2}>
+        <LinkList>
+          <LinkListLink href="#">Link 1</LinkListLink>
+          <LinkListLink href="#">Link 2</LinkListLink>
+          <LinkListLink href="#">Link 3</LinkListLink>
+        </LinkList>
+      </LinkListCard>
+    ),
   },
 } satisfies Story;

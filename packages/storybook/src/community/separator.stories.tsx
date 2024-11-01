@@ -7,6 +7,9 @@ const meta = {
   id: 'rhc-separator',
   component: Separator,
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
         component: readme,

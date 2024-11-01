@@ -4,10 +4,14 @@ import { FormFieldRadioOption } from '@rijkshuisstijl-community/components-react
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Rijkshuisstijl/Form field/Form field Radio Option',
+  title: 'Rijkshuisstijl/Form field/Form Field Radio Option',
   id: 'rhc-form-field-radio-option',
   component: FormFieldRadioOption,
-  parameters: {},
+  parameters: {
+    status: {
+      type: 'STABLE',
+    },
+  },
   args: {
     checked: false,
     disabled: false,
