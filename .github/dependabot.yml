@@ -18,9 +18,9 @@ updates:
           - "patch"
           - "minor"
     ignore:
-      dependency-name: "@types/node"
-      update-types:
-        - "version-update:semver-major"
+      - dependency-name: "@types/node"
+        update-types:
+          - "version-update:semver-major"
     versioning-strategy: "increase-if-necessary"
     open-pull-requests-limit: 20
     reviewers:
