@@ -52,6 +52,7 @@ export { DotBadge, type DotBadgeProps } from './DotBadge';
 export { Fieldset, FieldsetLegend, type FieldsetLegendProps, type FieldsetProps } from './Fieldset';
 export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from './Figure';
 export { FileInput, type FileInputProps } from './FileInput';
+export { FileInputItem } from './FileInputItem';
 export { Footer } from './Footer';
 export { FormField, type FormFieldProps } from './FormField';
 export { FormFieldCheckboxGroup, type FormFieldCheckboxGroupProps } from './FormFieldCheckboxGroup';
@@ -62,6 +63,7 @@ export { FormFieldSelect, type FormFieldSelectProps, SelectOption, type SelectOp
 export { FormFieldTextarea, type FormFieldTextareaProps, Textarea } from './FormFieldTextarea';
 export { FormFieldTextbox } from './FormFieldTextbox';
 export { Heading, type HeadingProps } from './Heading';
+export { HeadingGroup, type HeadingGroupProps } from './HeadingGroup';
 export { Hero, type HeroProps } from './Hero';
 export { Icon, type IconProps, iconOptions } from './icon/Icon';
 export { Image, type ImageProps } from './Image';
@@ -109,9 +111,5 @@ export { TableCell, type TableCellProps } from './TableCell';
 export { TableHeaderCell, type TableHeaderCellProps } from './TableHeaderCell';
 export { Textbox, type TextboxProps } from './Textbox';
 export { Toggletip, ToggletipButton, ToggletipContent, type ToggletipProps } from './Toggletip';
-export {
-  UnorderedList,
-  UnorderedListItem,
-  type UnorderedListItemProps,
-  type UnorderedListProps,
-} from './UnorderedList';
+export { UnorderedList, type UnorderedListProps } from './UnorderedList';
+export { UnorderedListItem, type UnorderedListItemProps } from './UnorderedListItem';
