@@ -1,8 +1,5 @@
 import {
-  FormField,
-  FormFieldDescription,
   type FormFieldProps,
-  FormLabel,
   Select,
   SelectOption,
   type SelectOptionProps,
@@ -10,7 +7,7 @@ import {
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
-import { FormFieldErrorMessage } from './FormFieldErrorMessage';
+import { FormField } from './FormField';
 
 export { SelectOption, type SelectOptionProps };
 
@@ -23,9 +20,9 @@ export interface FormFieldSelectProps
   errorMessage?: string;
   selectRef?: Ref<HTMLSelectElement>;
   status?: ReactNode;
-  description?: ReactNode;
+  description?: string;
   input?: ReactNode;
-  label?: ReactNode;
+  label?: string;
   options?: string[];
 }
 
@@ -60,20 +57,18 @@ export const FormFieldSelect = forwardRef(
     const errorMessageId = useId();
 
     return (
-      <FormField dir={dir} input={input} invalid={invalid} ref={ref} type={'select'} {...restProps}>
-        <div className="utrecht-form-field__label">
-          <FormLabel htmlFor={id}>{label}</FormLabel>
-        </div>
-        {description && (
-          <FormFieldDescription className="utrecht-form-field__description" id={descriptionId}>
-            {description}
-          </FormFieldDescription>
-        )}
-        {invalid && errorMessage && (
-          <FormFieldErrorMessage className="utrecht-form-field__error-message" id={errorMessageId}>
-            {errorMessage}
-          </FormFieldErrorMessage>
-        )}
+      <FormField
+        description={description}
+        dir={dir}
+        errorMessage={errorMessage}
+        id={id}
+        input={input}
+        invalid={invalid}
+        label={label}
+        ref={ref}
+        type={'select'}
+        {...restProps}
+      >
         <div className="utrecht-form-field__input">
           <Select
             defaultValue={defaultValue}
