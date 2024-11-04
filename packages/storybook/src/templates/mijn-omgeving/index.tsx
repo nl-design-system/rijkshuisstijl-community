@@ -26,7 +26,7 @@ import { Document } from '@utrecht/component-library-react';
 export default function MijnOmgeving() {
   return (
     <>
-      <div className="rhc-templates-background-color-white">
+      <div className="">
         <PageHeader>
           <Logo organisation="Rijkshuisstijl Community">
             <Icon className={'dutch-map'} icon={'nederland-map'} />
@@ -42,7 +42,7 @@ export default function MijnOmgeving() {
           { href: '/mijn-omgeving', label: 'Mijn Omgeving' },
         ]}
       ></NavBar>
-      <main className="rhc-templates-page rhc-templates-background-color-white">
+      <main className="rhc-templates-page  rhc-templates-background-color-white">
         <Document>
           <PageContent className="rhc-page-container">
             <SideNav className={'rhc-side-nav'}>
@@ -206,6 +206,7 @@ export default function MijnOmgeving() {
               </div>
             </section>
           </PageContent>
+
           <Footer
             heading="De Rijksoverheid. Voor Nederland"
             headingLevel={4}
