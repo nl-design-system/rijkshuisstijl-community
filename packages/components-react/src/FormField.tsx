@@ -4,14 +4,14 @@ import {
   FormLabel,
   FormField as UtrechtFormField,
 } from '@utrecht/component-library-react';
-import { ForwardedRef, forwardRef, PropsWithChildren, ReactElement, ReactNode } from 'react';
+import { ForwardedRef, forwardRef, PropsWithChildren, ReactElement } from 'react';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
 export interface CustomFormFieldProps extends FormFieldProps {
   label?: string;
   description?: string;
   errorMessage?: string;
-  input: ReactNode; // !FIX: needs to be more specifiec
+  input: ReactElement;
   status?: ReactElement | string;
   invalid?: boolean;
   statusId: string;
@@ -37,10 +37,9 @@ export const FormField = forwardRef(
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const descriptionComponent = () => {
-      return <FormFieldDescription id={descriptionId}>{description}</FormFieldDescription>;
+      return description && <FormFieldDescription id={descriptionId}>{description}</FormFieldDescription>;
     };
 
-    // !FIX: needs more padding, see original on production.
     const labelComponent = <FormLabel htmlFor={id}>{label}</FormLabel>;
 
     return (

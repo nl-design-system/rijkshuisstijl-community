@@ -6,7 +6,7 @@ import {
   SelectProps,
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, PropsWithChildren, ReactElement, ReactNode, Ref, useId } from 'react';
+import { ForwardedRef, forwardRef, PropsWithChildren, ReactElement, Ref, useId } from 'react';
 import { FormField } from './FormField';
 
 export { SelectOption, type SelectOptionProps };
@@ -21,7 +21,7 @@ export interface FormFieldSelectProps
   selectRef?: Ref<HTMLSelectElement>;
   status?: ReactElement | string;
   description?: string;
-  input?: ReactNode;
+  input?: ReactElement;
   label?: string;
   options?: string[];
 }
@@ -53,7 +53,7 @@ export const FormFieldSelect = forwardRef(
     const statusId = useId();
     const errorMessageId = useId();
 
-    const inputComponent = (
+    const inputComponent: ReactElement = (
       <Select
         defaultValue={defaultValue}
         dir={dir}
