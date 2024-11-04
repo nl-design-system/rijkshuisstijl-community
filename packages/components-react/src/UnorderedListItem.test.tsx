@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import { UnorderedListItem } from '.';
 
-describe('Toggletip', () => {
+describe('UnorderedListItem', () => {
   it('renders a visible element', () => {
     const { container } = render(<UnorderedListItem />);
 
