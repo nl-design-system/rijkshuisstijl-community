@@ -15,14 +15,14 @@ export const NavigationListItem = forwardRef<HTMLLIElement, NavigationListItemPr
       <li ref={ref} role="listitem" {...restProps}>
         <a className={clsx('rhc-navigation-list__item', className)} href={href} role={'link'}>
           {typeof icon === 'string' ? (
-            <Icon className={clsx('rhc-navigation-list__item__start-icon')} icon={icon} />
+            <Icon className={'rhc-navigation-list__item__start-icon'} icon={icon} />
           ) : (
-            <Icon className={clsx('rhc-navigation-list__item__start-icon')}>{icon}</Icon>
+            <Icon className={'rhc-navigation-list__item__start-icon'}>{icon}</Icon>
           )}
-          <span className={clsx('rhc-navigation-list__item-content')}>
-            <p className={clsx('rhc-navigation-list__item__label')}>{label}</p>
+          <span className={'rhc-navigation-list__item-content'}>
+            <p className={'rhc-navigation-list__item__label'}>{label}</p>
             <p className={'rhc-navigation-list__item__description'}>{description}</p>
-            <Icon className={clsx('rhc-navigation-list__item__end-icon')} icon={'chevron-right'} />
+            <Icon className={'rhc-navigation-list__item__end-icon'} icon={'chevron-right'} />
           </span>
         </a>
       </li>
