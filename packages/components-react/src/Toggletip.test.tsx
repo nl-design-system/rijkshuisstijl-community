@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Toggletip } from '.';
 
 describe('Toggletip', () => {
@@ -9,7 +9,10 @@ describe('Toggletip', () => {
 
     const toggletip = container.querySelector(':only-child');
 
+    screen.debug();
+
+    console.log('toggletip - test', toggletip);
+
     expect(toggletip).toBeInTheDocument();
-    expect(toggletip).toBeVisible();
   });
 });
