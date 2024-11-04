@@ -87,6 +87,7 @@ export { OrderedList, OrderedListItem, type OrderedListItemProps, type OrderedLi
 export { PageContent, type PageContentProps } from './PageContent';
 export { PageHeader, type PageHeaderProps } from './PageHeader';
 export { Paragraph, type ParagraphProps } from './Paragraph';
+export { PreHeading, type PreHeadingProps } from './PreHeading';
 export { Radio, type RadioProps } from './Radio';
 export { Separator, type SeparatorProps } from './Separator';
 export { SideNav, type SideNavProps } from './SideNav';
