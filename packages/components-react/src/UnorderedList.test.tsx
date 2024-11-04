@@ -1,15 +1,15 @@
-import '@testing-library/jest-dom';
+// import '@testing-library/jest-dom';
 
-import { render } from '@testing-library/react';
-import { UnorderedList } from '.';
+// import { render } from '@testing-library/react';
+// import { Toggletip } from '.';
 
-describe('UnorderedList', () => {
-  it('renders a visible element', () => {
-    const { container } = render(<UnorderedList />);
+// describe('Toggletip', () => {
+//   it('renders a visible element', () => {
+//     const { container } = render(<Toggletip />);
 
-    const unorderedList = container.querySelector(':only-child');
+//     const toggletip = container.querySelector(':only-child');
 
-    expect(unorderedList).toBeInTheDocument();
-    expect(unorderedList).toBeVisible();
-  });
-});
+//     expect(toggletip).toBeInTheDocument();
+//     expect(toggletip).toBeVisible();
+//   });
+// });

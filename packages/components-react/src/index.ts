@@ -109,9 +109,5 @@ export { TableCell, type TableCellProps } from './TableCell';
 export { TableHeaderCell, type TableHeaderCellProps } from './TableHeaderCell';
 export { Textbox, type TextboxProps } from './Textbox';
 export { Toggletip, ToggletipButton, ToggletipContent, type ToggletipProps } from './Toggletip';
-export {
-  UnorderedList,
-  UnorderedListItem,
-  type UnorderedListItemProps,
-  type UnorderedListProps,
-} from './UnorderedList';
+export { UnorderedList, type UnorderedListProps } from './UnorderedList';
+export { UnorderedListItem, type UnorderedListItemProps } from './UnorderedListItem';
