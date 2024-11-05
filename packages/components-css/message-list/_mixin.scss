@@ -68,17 +68,17 @@
   margin-block: 0;
 }
 @mixin rhc-message-list__item__description {
-  color: var(--rhc-color-foreground-subdued);
+  color: var(--rhc-color-foreground-subdued, inherit);
   grid-area: description;
   margin-block: 0;
 }
 @mixin rhc-message-list__item__meta-data {
-  color: var(--rhc-color-foreground-subdued);
+  color: var(--rhc-color-foreground-subdued, inherit);
   grid-area: meta;
   margin-block: 0;
 }
 @mixin rhc-navigation-list__item__end-icon {
-  --utrecht-icon-color: var(--rhc-color-foreground-lint);
+  --utrecht-icon-color: var(--rhc-color-foreground-lint, inherit);
 
   grid-area: icon;
   min-block-size: var(--rhc-message-list-item-icon-font-size);

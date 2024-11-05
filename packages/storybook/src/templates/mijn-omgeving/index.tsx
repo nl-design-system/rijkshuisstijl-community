@@ -44,7 +44,7 @@ export default function MijnOmgeving() {
       ></NavBar>
       <main className="rhc-templates-page  rhc-templates-background-color-white">
         <Document>
-          <PageContent className="rhc-page-container">
+          <PageContent className="rhc-templates-page-container">
             <SideNav className={'rhc-side-nav'}>
               <SideNavList>
                 <SideNavItem>
