@@ -115,7 +115,7 @@ jobs:
         run: pnpm run --if-present test
 
       - name: Publish to Chromatic
-        uses: chromaui/action@b984808b772126a9f44b2b7737b131b68a2ede32 # 11.7.1
+        uses: chromaui/action@2929680e80a2298d17561b7f1deaa334653f905e # 11.16.5
         if: |
           github.event.pull_request.draft == false &&
           github.actor != 'dependabot[bot]'
