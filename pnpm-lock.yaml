@@ -429,8 +429,8 @@ importers:
         specifier: 8.4.2
         version: 8.4.2(storybook@8.4.2(prettier@3.3.3))
       '@storybook/blocks':
-        specifier: 8.2.4
-        version: 8.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))
+        specifier: 8.4.2
+        version: 8.4.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))
       '@storybook/cli':
         specifier: 8.4.2
         version: 8.4.2(@babel/preset-env@7.24.8(@babel/core@7.24.9))(prettier@3.3.3)
@@ -2302,18 +2302,6 @@ packages:
     resolution: {integrity: sha512-qVQ2UaxCNsUSFHnAAAizNPIJ/QwfMg7p5bBdpYROTZXJe+bxVp0rFzZmQgHZ3/sn+lzE4ItM4QEfxkfQUWi1ag==}
     peerDependencies:
       storybook: ^8.4.2
-
-  '@storybook/blocks@8.2.4':
-    resolution: {integrity: sha512-Hl2Dpg41YiJLSVXxjEJPjgPShrDJM3RY6HEEOjqTcAADsheX1IHAWXMJSJGMmne3Sew6VdJXPuHBIOFV4suZxg==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-      storybook: ^8.2.4
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
 
   '@storybook/blocks@8.4.2':
     resolution: {integrity: sha512-yAAvmOWaD8gIrepOxCh/RxQqd/1xZIwd/V+gsvAhW/thawN+SpI+zK63gmcqAPLX84hJ3Dh5pegRk0SoHNuDVA==}
@@ -5669,12 +5657,6 @@ packages:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
     hasBin: true
 
-  markdown-to-jsx@7.5.0:
-    resolution: {integrity: sha512-RrBNcMHiFPcz/iqIj0n3wclzHXjwS7mzjBNWecKKVhNTIxQepIix6Il/wZCn2Cg5Y1ow2Qi84+eJrryFRWBEWw==}
-    engines: {node: '>= 10'}
-    peerDependencies:
-      react: '>= 0.14.0'
-
   markdownlint-cli@0.41.0:
     resolution: {integrity: sha512-kp29tKrMKdn+xonfefjp3a/MsNzAd9c5ke0ydMEI9PR98bOjzglYN4nfMSaIs69msUf1DNkgevAIAPtK2SeX0Q==}
     engines: {node: '>=18'}
@@ -6918,12 +6900,6 @@ packages:
     resolution: {integrity: sha512-8zGqypfENjCIqGhgXToC8aB2r7YrBX+AQAfIPs/Mlk+BtPTztOvTS01NRW/3Eh60J+a48lt8qsCzirQ6loCVfA==}
     engines: {node: '>= 0.8'}
 
-  react-colorful@5.6.1:
-    resolution: {integrity: sha512-1exovf0uGTGyq5mXQT0zgQ80uvj2PCwvF8zY1RN9/vbJVSjSo3fsB/4L3ObbF7u70NduSiK4xu4Y6q1MHoUGEw==}
-    peerDependencies:
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-
   react-confetti@6.1.0:
     resolution: {integrity: sha512-7Ypx4vz0+g8ECVxr88W9zhcQpbeujJAVqL14ZnXJ3I23mOI9/oBVTQ3dkJhUmB0D6XOtCZEM6N0Gm9PMngkORw==}
     engines: {node: '>=10.18'}
@@ -7700,9 +7676,6 @@ packages:
   tar@6.2.1:
     resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
-
-  telejson@7.2.0:
-    resolution: {integrity: sha512-1QTEcJkJEhc8OnStBx/ILRu5J2p0GjvWsBx56bmZRqnrkdBMUe+nX92jxV+p3dB4CP6PZCdJMQJwCggkNBMzkQ==}
 
   temp-dir@3.0.0:
     resolution: {integrity: sha512-nHc6S/bwIilKHNRgK/3jlhDoIHcp45YgyiwcAk46Tr0LfEqGBVpmiAyuiuxeVE44m3mXnEeVhaipLOEWmH+Njw==}
@@ -10499,27 +10472,6 @@ snapshots:
     dependencies:
       memoizerific: 1.11.3
       storybook: 8.4.2(prettier@3.3.3)
-
-  '@storybook/blocks@8.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))':
-    dependencies:
-      '@storybook/csf': 0.1.11
-      '@storybook/global': 5.0.0
-      '@storybook/icons': 1.2.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@types/lodash': 4.17.9
-      color-convert: 2.0.1
-      dequal: 2.0.3
-      lodash: 4.17.21
-      markdown-to-jsx: 7.5.0(react@18.3.1)
-      memoizerific: 1.11.3
-      polished: 4.3.1
-      react-colorful: 5.6.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      storybook: 8.4.2(prettier@3.3.3)
-      telejson: 7.2.0
-      ts-dedent: 2.2.0
-      util-deprecate: 1.0.2
-    optionalDependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
 
   '@storybook/blocks@8.4.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))':
     dependencies:
@@ -14792,10 +14744,6 @@ snapshots:
       punycode.js: 2.3.1
       uc.micro: 2.1.0
 
-  markdown-to-jsx@7.5.0(react@18.3.1):
-    dependencies:
-      react: 18.3.1
-
   markdownlint-cli@0.41.0:
     dependencies:
       commander: 12.1.0
@@ -16319,11 +16267,6 @@ snapshots:
       iconv-lite: 0.4.24
       unpipe: 1.0.0
 
-  react-colorful@5.6.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
-    dependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
   react-confetti@6.1.0(react@18.3.1):
     dependencies:
       react: 18.3.1
@@ -17310,10 +17253,6 @@ snapshots:
       minizlib: 2.1.2
       mkdirp: 1.0.4
       yallist: 4.0.0
-
-  telejson@7.2.0:
-    dependencies:
-      memoizerific: 1.11.3
 
   temp-dir@3.0.0: {}
 
