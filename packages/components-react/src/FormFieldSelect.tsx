@@ -22,7 +22,7 @@ export interface FormFieldSelectProps
   status?: ReactElement | string;
   description?: string;
   input?: ReactElement;
-  label?: string;
+  label: string;
   options?: string[];
 }
 
@@ -34,6 +34,7 @@ export const FormFieldSelect = forwardRef(
       selectRef,
       status,
       invalid,
+      input,
       children,
       options,
       dir,
@@ -95,7 +96,7 @@ export const FormFieldSelect = forwardRef(
         dir={dir}
         errorMessageId={errorMessageId}
         id={id}
-        input={inputComponent}
+        input={input ?? inputComponent}
         invalid={invalid}
         ref={ref}
         status={status}

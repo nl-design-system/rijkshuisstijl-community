@@ -8,7 +8,7 @@ import { ForwardedRef, forwardRef, PropsWithChildren, ReactElement } from 'react
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
 export interface CustomFormFieldProps extends FormFieldProps {
-  label?: string;
+  label: string;
   description?: string;
   errorMessage?: string;
   input: ReactElement;
