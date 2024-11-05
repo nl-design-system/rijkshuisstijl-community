@@ -1,3 +1,4 @@
+import { Paragraph } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { forwardRef, HTMLAttributes, ReactNode } from 'react';
 import { Icon } from './icon/Icon';
@@ -20,8 +21,12 @@ export const NavigationListItem = forwardRef<HTMLLIElement, NavigationListItemPr
             <Icon className={'rhc-navigation-list__item__start-icon'}>{icon}</Icon>
           )}
           <span className={'rhc-navigation-list__item-content'}>
-            <p className={'rhc-navigation-list__item__label'}>{label}</p>
-            <p className={'rhc-navigation-list__item__description'}>{description}</p>
+            <Paragraph appearance="small" className={'rhc-navigation-list__item__label'}>
+              {label}
+            </Paragraph>
+            <Paragraph appearance="small" className={'rhc-navigation-list__item__description'}>
+              {description}
+            </Paragraph>
             <Icon className={'rhc-navigation-list__item__end-icon'} icon={'chevron-right'} />
           </span>
         </a>
