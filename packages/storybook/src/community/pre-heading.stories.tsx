@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { PreHeading } from '@rijkshuisstijl-community/components-react';
+import { Heading, PreHeading } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './pre-heading.md?raw';
 
@@ -27,4 +27,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   name: 'Pre Heading',
+  args: {
+    children: 'Stap 1 van 8',
+    heading: <Heading level={2}>Introductie</Heading>,
+  },
 };

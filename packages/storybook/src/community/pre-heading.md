@@ -21,8 +21,9 @@ Dit wijzigt geen onderliggend HTML-element, maar verandert wel het uiterlijk. Di
 
 ```HTML
 <PreHeading
-  appearance="utrecht-heading-3"
-  level={1}
+  heading: {
+    <Heading level{1}>Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod</Heading>
+  }
 >
 ```
 
