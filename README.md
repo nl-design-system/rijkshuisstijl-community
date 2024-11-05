@@ -4,7 +4,7 @@
 
 _Dit project is **niet** goedgekeurd door het Ministerie van Algemene Zaken._
 
-**Het toepassen van designelementen uit dit project is strikt verboden voor organisaties die geen deel uitmaken van de
+**Het toepassen van desig nelementen uit dit project is strikt verboden voor organisaties die geen deel uitmaken van de
 centrale overheid van Nederland.**
 
 Dit project maakt deel uit van een gemeenschapsinitiatief om [NL Design System](https://nldesignsystem.nl)-componenten
@@ -17,30 +17,19 @@ en degenen die door hen zijn ingehuurd voor het ontwikkelen van websites en apps
 
 ### Node
 
-Zorg ervoor dat je Node.js versie **_20_** of hoger geïnstalleerd hebt.
-
-Controleer je huidige Node-versie door in je terminal te typen:
-
-```bash
-node --version
-```
-
-Als je versie lager is dan 20, kun je via Node Version Manager (nvm) je Node-versies beheren en wisselen. Volg deze
-stappen om de juiste Node-versie te installeren:
+In dit project wordt Node.js versie **_20.10_** gebruikt. Dit project bevat een `.nvmrc` bestand en helpt je met het
+installeren van de juiste versie met behulp van `nvm`.
 
 - Als je nvm nog niet hebt, [installeer `nvm`](https://github.com/nvm-sh/nvm#install--update-script).
 
-- Gebruik daarna `nvm` om Node.js 20 (of hoger) te installeren:
+Zodra je `nvm` hebt geïnstalleerd, run je het commando:
 
 ```bash
-nvm install 20
+nvm use
 ```
 
-- Stel Node.js 20 in als actieve versie:
-
-```bash
-nvm use 20
-```
+Als je de juiste versie nog niet hebt, wordt gevraagd om deze te installeren door middel van `nvm install`. Als de
+juiste versie al is geïnstalleerd, of nadat hij is geïnstalleerd, wordt hij ingesteld als de huidige versie.
 
 ### SCSS/SASS
 
@@ -48,7 +37,7 @@ De componenten gebruiken scss, zorg dat je project scss-bestanden kan verwerken.
 
 ## Aan de slag zonder framework
 
-We werken aan componenten die zonder framework te gebruiken zijn.
+We zij bezig met componenten aan het maken die te gebruiken zijn zonder een framework.
 
 ## Aan de slag met React-componenten
 
@@ -62,7 +51,7 @@ npm install --save-dev @rijkshuisstijl-community/components-react
 Dit installeert de React-componenten. Om deze componenten te gebruiken, kun je ze importeren in je app.
 
 ```tsx
-'use client'; // needed in some projects
+'use client'; // Nodig in sommige projecten
 
 import { Button } from '@rijkshuisstijl-community/components-react';
 
