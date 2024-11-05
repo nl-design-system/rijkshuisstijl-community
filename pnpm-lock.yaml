@@ -435,8 +435,8 @@ importers:
         specifier: 8.4.2
         version: 8.4.2(@babel/preset-env@7.24.8(@babel/core@7.24.9))(prettier@3.3.3)
       '@storybook/react':
-        specifier: 8.2.4
-        version: 8.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))(typescript@5.5.3)
+        specifier: 8.4.2
+        version: 8.4.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))(typescript@5.5.3)
       '@storybook/react-vite':
         specifier: 8.2.4
         version: 8.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.4)(storybook@8.4.2(prettier@3.3.3))(typescript@5.5.3)(vite@5.3.4(@types/node@22.7.4)(sass@1.77.8)(terser@5.34.1))
@@ -2350,10 +2350,10 @@ packages:
   '@storybook/codemod@8.4.2':
     resolution: {integrity: sha512-f9RKpNv0yOzD5HlFglObbStvlxoGaI7LCmsdJ1jlEgtGXCS0MuMCbq9UMXihxYdRNghMjJi3rE9uqGm2ezLepQ==}
 
-  '@storybook/components@8.3.4':
-    resolution: {integrity: sha512-iQzLJd87uGbFBbYNqlrN/ABrnx3dUrL0tjPCarzglzshZoPCNOsllJeJx5TJwB9kCxSZ8zB9TTOgr7NXl+oyVA==}
+  '@storybook/components@8.4.2':
+    resolution: {integrity: sha512-+W59oF7D73LAxLNmCfFrfs98cH9pyNHK9HlJoO5/lKbK4IdWhhOoqUR/AJ3ueksoLuetFat4DxyE8SN1H4Bvrg==}
     peerDependencies:
-      storybook: ^8.3.4
+      storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
   '@storybook/core@8.4.2':
     resolution: {integrity: sha512-hF8GWoUZTjwwuV5j4OLhMHZtZQL/NYcVUBReC2Ba06c8PkFIKqKZwATr1zKd301gQ5Qwcn9WgmZxJTMgdKQtOg==}
@@ -2391,15 +2391,15 @@ packages:
     peerDependencies:
       storybook: ^8.2.4
 
-  '@storybook/manager-api@8.3.4':
-    resolution: {integrity: sha512-tBx7MBfPUrKSlD666zmVjtIvoNArwCciZiW/UJ8IWmomrTJRfFBnVvPVM2gp1lkDIzRHYmz5x9BHbYaEDNcZWQ==}
+  '@storybook/manager-api@8.4.2':
+    resolution: {integrity: sha512-rhPc4cgQDKDH8NUyRh/ZaJW7QIhR/PO5MNX4xc+vz71sM2nO7ONA/FrgLtCuu4SULdwilEPvGefYvLK0dE+Caw==}
     peerDependencies:
-      storybook: ^8.3.4
+      storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
-  '@storybook/preview-api@8.3.4':
-    resolution: {integrity: sha512-/YKQ3QDVSHmtFXXCShf5w0XMlg8wkfTpdYxdGv1CKFV8DU24f3N7KWulAgeWWCWQwBzZClDa9kzxmroKlQqx3A==}
+  '@storybook/preview-api@8.4.2':
+    resolution: {integrity: sha512-5X/xvIvDPaWJKUBCo5zVeBbbjkhnwcI2KPkuOgrHVRRhuQ5WqD0RYxVtOOFNyQXme7g0nNl5RFNgvT7qv9qGeg==}
     peerDependencies:
-      storybook: ^8.3.4
+      storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
   '@storybook/react-dom-shim@8.2.4':
     resolution: {integrity: sha512-p2ypPWuKKFY/ij7yYjvdnrOcfdpxnAJd9D4/2Hm2eVioE4y8HQSND54t9OfkW+498Ez7ph4zW9ez005XqzH/+w==}
@@ -2436,6 +2436,21 @@ packages:
       typescript:
         optional: true
 
+  '@storybook/react@8.4.2':
+    resolution: {integrity: sha512-rO5/aVKBVhIKENcL7G8ud4QKC5OyWBPCkJIvY6XUHIuhErJy9/4pP+sZ85jypVwx5kq+EqCPF8AEOWjIxB/4/Q==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      '@storybook/test': 8.4.2
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      storybook: ^8.4.2
+      typescript: '>= 4.2.x'
+    peerDependenciesMeta:
+      '@storybook/test':
+        optional: true
+      typescript:
+        optional: true
+
   '@storybook/test@8.2.4':
     resolution: {integrity: sha512-boFjNFja4BNSbQhvmMlTVdQmZh36iM9+8w0sb7IK2e9Xnoi4+utupPNwBLvSsw4bRayK8+mP4Vk46O8h3TaiMw==}
     peerDependencies:
@@ -2449,6 +2464,11 @@ packages:
     resolution: {integrity: sha512-B4HQMzTeg1TgV9uPDIoDkMSnP839Y05I9+Tw60cilAD+jTqrCvMlccHfehsTzJk+gioAflunATcbU05TMZoeIQ==}
     peerDependencies:
       storybook: ^8.2.4
+
+  '@storybook/theming@8.4.2':
+    resolution: {integrity: sha512-9j4fnu5LcV+qSs1rdwf61Bt14lms0T1LOZkHxGNcS1c1oH+cPS+sxECh2lxtni+mvOAHUlBs9pKhVZzRPdWpvg==}
+    peerDependencies:
+      storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
   '@swc/counter@0.1.3':
     resolution: {integrity: sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==}
@@ -10579,7 +10599,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@storybook/components@8.3.4(storybook@8.4.2(prettier@3.3.3))':
+  '@storybook/components@8.4.2(storybook@8.4.2(prettier@3.3.3))':
     dependencies:
       storybook: 8.4.2(prettier@3.3.3)
 
@@ -10635,11 +10655,11 @@ snapshots:
       storybook: 8.4.2(prettier@3.3.3)
       util: 0.12.5
 
-  '@storybook/manager-api@8.3.4(storybook@8.4.2(prettier@3.3.3))':
+  '@storybook/manager-api@8.4.2(storybook@8.4.2(prettier@3.3.3))':
     dependencies:
       storybook: 8.4.2(prettier@3.3.3)
 
-  '@storybook/preview-api@8.3.4(storybook@8.4.2(prettier@3.3.3))':
+  '@storybook/preview-api@8.4.2(storybook@8.4.2(prettier@3.3.3))':
     dependencies:
       storybook: 8.4.2(prettier@3.3.3)
 
@@ -10680,10 +10700,10 @@ snapshots:
 
   '@storybook/react@8.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))(typescript@5.5.3)':
     dependencies:
-      '@storybook/components': 8.3.4(storybook@8.4.2(prettier@3.3.3))
+      '@storybook/components': 8.4.2(storybook@8.4.2(prettier@3.3.3))
       '@storybook/global': 5.0.0
-      '@storybook/manager-api': 8.3.4(storybook@8.4.2(prettier@3.3.3))
-      '@storybook/preview-api': 8.3.4(storybook@8.4.2(prettier@3.3.3))
+      '@storybook/manager-api': 8.4.2(storybook@8.4.2(prettier@3.3.3))
+      '@storybook/preview-api': 8.4.2(storybook@8.4.2(prettier@3.3.3))
       '@storybook/react-dom-shim': 8.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))
       '@storybook/theming': 8.2.4(storybook@8.4.2(prettier@3.3.3))
       '@types/escodegen': 0.0.6
@@ -10704,6 +10724,20 @@ snapshots:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       util-deprecate: 1.0.2
+    optionalDependencies:
+      typescript: 5.5.3
+
+  '@storybook/react@8.4.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))(typescript@5.5.3)':
+    dependencies:
+      '@storybook/components': 8.4.2(storybook@8.4.2(prettier@3.3.3))
+      '@storybook/global': 5.0.0
+      '@storybook/manager-api': 8.4.2(storybook@8.4.2(prettier@3.3.3))
+      '@storybook/preview-api': 8.4.2(storybook@8.4.2(prettier@3.3.3))
+      '@storybook/react-dom-shim': 8.4.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))
+      '@storybook/theming': 8.4.2(storybook@8.4.2(prettier@3.3.3))
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      storybook: 8.4.2(prettier@3.3.3)
     optionalDependencies:
       typescript: 5.5.3
 
@@ -10732,6 +10766,10 @@ snapshots:
       ts-dedent: 2.2.0
 
   '@storybook/theming@8.2.4(storybook@8.4.2(prettier@3.3.3))':
+    dependencies:
+      storybook: 8.4.2(prettier@3.3.3)
+
+  '@storybook/theming@8.4.2(storybook@8.4.2(prettier@3.3.3))':
     dependencies:
       storybook: 8.4.2(prettier@3.3.3)
 
