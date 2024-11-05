@@ -1,17 +1,17 @@
 /* @license CC0-1.0 */
 
 import { PreHeading } from '@rijkshuisstijl-community/components-react';
-import type { Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import readme from './pre-heading.md?raw';
 
 const meta = {
-  title: 'Rijkshuisstijl/Heading',
+  title: 'Rijkshuisstijl/PreHeading',
   id: 'rhc-pre-heading',
   component: PreHeading,
   argTypes: {},
   parameters: {
     status: {
-      type: 'STABLE',
+      type: 'UNSTABLE',
     },
     docs: {
       description: {
@@ -22,3 +22,9 @@ const meta = {
 } satisfies Meta<typeof PreHeading>;
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  name: 'Pre Heading',
+};

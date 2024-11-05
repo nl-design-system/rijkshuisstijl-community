@@ -2,7 +2,7 @@
 
 # Rijkshuisstijl Community heading component
 
-## Gebruik en toegankelijkheid van headings (koppen)
+## Gebruik en toegankelijkheid van pre-headings (koppen)
 
 - Gebruik altijd maar één H1-heading op een pagina met digitale content.
 - Gebruik alleen een heading als er content onder staat.
@@ -13,14 +13,14 @@
 
 ### De heading component beschikt over properties `level` en `appearance`
 
-**level (verplicht)**  
+**level (verplicht)**
 Dit wijzigt de HTML-tag naar het overeenkomende niveau, bijvoorbeeld: `level={1}` transformeert de HTML naar de `<h1>`-tag, `level={2}` naar `<h2>` enzovoort.
 
-**appearance (optioneel)**  
+**appearance (optioneel)**
 Dit wijzigt geen onderliggend HTML-element, maar verandert wel het uiterlijk. Dit is nog steeds een `<h1>` en wordt zo ook door screenreaders gelezen, maar ziet er visueel uit als een `<h3>`.
 
 ```HTML
-<Heading
+<PreHeading
   appearance="utrecht-heading-3"
   level={1}
 >
