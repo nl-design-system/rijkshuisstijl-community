@@ -61,6 +61,7 @@ export default function Collage() {
           { href: '/form', label: 'Form' },
           { href: '/details', label: 'Details' },
           { href: '/collage', label: 'Collage' },
+          { href: '/mijn-omgeving', label: 'Mijn Omgeving' },
         ]}
       ></NavBar>
       <main className="rhc-templates-page">

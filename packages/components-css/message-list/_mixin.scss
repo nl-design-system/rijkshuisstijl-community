@@ -55,6 +55,8 @@
   grid-template-columns: 1fr 2fr auto auto;
 }
 @mixin rhc-message-list__item__label {
+  --utrecht-paragraph-font-weight: var(--rhc-message-list-item-label-font-weight);
+
   color: var(--rhc-message-list-item-heading-color);
   column-gap: var(--rhc-space-100);
   display: flex;
@@ -63,17 +65,21 @@
   font-weight: var(--rhc-message-list-item-label-font-weight);
   grid-area: label;
   line-height: var(--rhc-message-list-item-label-line-height);
+  margin-block: 0;
 }
 @mixin rhc-message-list__item__description {
-  color: inherit;
+  color: var(--rhc-color-foreground-subdued, inherit);
   grid-area: description;
+  margin-block: 0;
 }
 @mixin rhc-message-list__item__meta-data {
-  color: inherit;
+  color: var(--rhc-color-foreground-subdued, inherit);
   grid-area: meta;
+  margin-block: 0;
 }
 @mixin rhc-navigation-list__item__end-icon {
-  color: var(--rhc-message-list-item-icon-color);
+  --utrecht-icon-color: var(--rhc-color-foreground-lint, inherit);
+
   grid-area: icon;
   min-block-size: var(--rhc-message-list-item-icon-font-size);
 }

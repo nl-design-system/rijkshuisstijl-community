@@ -66,3 +66,34 @@ body {
     margin-block-start: 0;
   }
 }
+
+.rhc-templates-page-container {
+  --utrecht-page-content-padding-block-end: var(--rhc-space-600);
+  --utrecht-page-content-padding-block-start: var(--rhc-space-600);
+  --utrecht-page-padding-inline-end: var(--rhc-space-700);
+  --utrecht-page-padding-inline-start: var(--rhc-space-700);
+
+  column-gap: var(--rhc-space-700);
+  display: flex;
+  justify-self: center;
+  margin-inline: auto;
+  max-inline-size: 1100px;
+  @media (width <= 780px) {
+    --utrecht-page-content-padding-block-end: var(--rhc-space-150);
+    --utrecht-page-content-padding-block-start: var(--rhc-space-150);
+    --utrecht-page-padding-inline-end: var(--rhc-space-150);
+    --utrecht-page-padding-inline-start: var(--rhc-space-150);
+  }
+}
+.rhc-side-nav {
+  min-inline-size: 230px;
+  @media (width <= 780px) {
+    --rhc-sidenav-display: none;
+  }
+}
+.rhc-page-main-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  row-gap: var(--rhc-space-700);
+}

@@ -18,8 +18,10 @@
     "directory": "apps/rhc-templates"
   },
   "scripts": {
+    "prebuild": "npm run clean",
     "dev": "next dev",
     "build": "next build",
+    "clean": "rimraf dist/ .next/",
     "lint": "next lint",
     "lint:ts": "tsc --noEmit --project tsconfig.json",
     "start": "http-server dist/"
