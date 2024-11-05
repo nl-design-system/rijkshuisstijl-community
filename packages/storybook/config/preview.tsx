@@ -27,6 +27,7 @@ const preview: Preview = {
     (Story: any) => <UtrechtDocument>{Story()}</UtrechtDocument>,
   ],
   parameters: {
+    chromatic: { delay: 500 },
     previewTabs: {
       'storybookjs/notes/panel': { title: 'Documentation' },
       'storybook/docs/panel': { title: 'API' },
