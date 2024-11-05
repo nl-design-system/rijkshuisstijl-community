@@ -1,58 +1,65 @@
 <!-- @license CC0-1.0 -->
 
-# Rijkshuisstijl Community Components
+# Rijkshuisstijl Community Componenten
 
-_This project is **not** endorsed by the Dutch Ministry of General Affairs._
+_Dit project is **niet** goedgekeurd door het Ministerie van Algemene Zaken._
 
-**Applying design elements from this project is strictly prohibited for organisations that are not part of the central Government of The Netherlands.**
+**Het toepassen van designelementen uit dit project is strikt verboden voor organisaties die geen deel uitmaken van de
+centrale overheid van Nederland.**
 
-This project is part of a community initiative to use [NL Design System](https://nldesignsystem.nl) components for projects that need to adhere to Rijkshuisstijl. Organisations from the central Government of the Netherlands (for example: [Belastingdienst](https://www.belastingdienst.nl/), [DUO](https://www.duo.nl), [Logius](http://logius.nl), [SVB](https://www.svb.nl/)), as well as those who are contracted by them to develop websites and apps, are able to collaborate via this project.
+Dit project maakt deel uit van een gemeenschapsinitiatief om [NL Design System](https://nldesignsystem.nl)-componenten
+te gebruiken voor projecten die moeten voldoen aan de Rijkshuisstijl. Organisaties van de centrale overheid van
+Nederland (
+bijvoorbeeld: [Belastingdienst](https://www.belastingdienst.nl/), [DUO](https://www.duo.nl), [Logius](http://logius.nl), [SVB](https://www.svb.nl/))
+en degenen die door hen zijn ingehuurd voor het ontwikkelen van websites en apps, kunnen via dit project samenwerken.
 
-## Before you start
+## Voordat je begint
 
 ### Node
 
-Ensure that you have Node.js version **_18_** or higher installed.
+Zorg ervoor dat je Node.js versie **_20_** of hoger geïnstalleerd hebt.
 
-To check your current Node version, open your terminal and run:
+Controleer je huidige Node-versie door in je terminal te typen:
 
 ```bash
 node --version
 ```
 
-If your version is below 18, you can manage and switch between Node versions using **_Node Version Manager (nvm)_**. To install and set the correct Node version, follow these steps:
+Als je versie lager is dan 20, kun je via Node Version Manager (nvm) je Node-versies beheren en wisselen. Volg deze
+stappen om de juiste Node-versie te installeren:
 
-- If you don't have nvm installed, [install `nvm`](https://github.com/nvm-sh/nvm#install--update-script).
+- Als je nvm nog niet hebt, [installeer `nvm`](https://github.com/nvm-sh/nvm#install--update-script).
 
-- Once `nvm` is installed, use it to install Node.js 18 (or higher) by running:
+- Gebruik daarna `nvm` om Node.js 20 (of hoger) te installeren:
 
 ```bash
-nvm install 18
+nvm install 20
 ```
 
-- Set Node.js 18 as the active version for this project:
+- Stel Node.js 20 in als actieve versie:
 
 ```bash
-nvm use 18
+nvm use 20
 ```
 
 ### SCSS/SASS
 
-The components are using scss, make sure your project is able to process scss files.
+De componenten gebruiken scss, zorg dat je project scss-bestanden kan verwerken.
 
-## Getting started with the component without framework
+## Aan de slag zonder framework
 
-We're working on components that will work without any framework.
+We werken aan componenten die zonder framework te gebruiken zijn.
 
-## Getting Started with React Components
+## Aan de slag met React-componenten
 
-To use the React components from the Rijkshuisstijl community, you'll need to install a package available in the [npm Registry](https://www.npmjs.com/package/@rijkshuisstijl-community/components-react).
+Om de React-componenten van de Rijkshuisstijl-community te gebruiken, installeer je een pakket beschikbaar in
+de [npm Registry](https://www.npmjs.com/package/@rijkshuisstijl-community/components-react).
 
 ```npm
 npm install --save-dev @rijkshuisstijl-community/components-react
 ```
 
-This will install the React components. To use these components, you can import them into your app.
+Dit installeert de React-componenten. Om deze componenten te gebruiken, kun je ze importeren in je app.
 
 ```tsx
 'use client'; // needed in some projects
@@ -62,17 +69,20 @@ import { Button } from '@rijkshuisstijl-community/components-react';
 <Button>Click Here!</Button>;
 ```
 
-Some components use the [useRef](https://react.dev/reference/react/useRef) hook, which only works in Client Components. To resolve this, add the `"use client"` directive at the top of the file.
+Sommige componenten gebruiken de [useRef](https://react.dev/reference/react/useRef) hook, die alleen werkt in Client
+Componenten. Voeg `"use client"` toe bovenaan het bestand om dit op te lossen.
 
-### Applying the theme
+### Thema toepassen
 
-The React components do not include styling on their own. To add the _Rijkshuisstijl_ theme to your project, you will need to install the [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens)
+De React-componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je project toe te voegen, installeer je
+het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens)
 
 ```npm
 npm install --save-dev @rijkshuisstijl-community/design-tokens
 ```
 
-This package includes the CSS variables created by the design system. To use them, import the `index.css` file located in the `dist` folder of the package, and wrap the part of the application where you want to apply the theme with the Rijkshuisstijl theme: `rhc-theme`. This can be a sub-part of your application or the root level, allowing your entire application to use the theme.
+Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.css`-bestand uit de `dist` map van het
+pakket, en omring het deel van je applicatie waar je het thema wilt toepassen met de Rijkshuisstijl-thema: `rhc-theme`.
 
 ```tsx
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
@@ -86,25 +96,30 @@ function App() {
 }
 ```
 
-## License
+## Licentie
 
-This project contains both proprietary and free and open-source software licensed under the [European Union Public License (EUPL) v1.2](LICENSE.md).
+Dit project bevat zowel eigen als vrije en open-source software die wordt gelicentieerd onder
+de [European Union Public License (EUPL) v1.2](LICENSE.md).
 
-For information about proprietary assets in this repository, please carefully read the [NOTICE file](NOTICE.md).
+Lees de [NOTICE file](NOTICE.md) voor informatie over eigen assets in deze repository.
 
-### Logo and style guide
+### Logo en stijlgids
 
-Copyright applies to the Rijkshuisstijl logo and Rijkshuisstijl brand identity. Use of logo and brand identity is strictly prohibited for any other use than developing websites and apps for the central Government of The Netherlands.
+Copyright geldt voor het Rijkshuisstijl-logo en merkidentiteit. Gebruik hiervan is strikt verboden, behalve voor het
+ontwikkelen van websites en apps voor de Nederlandse overheid.
 
 ### Fonts
 
-[Fonts used for the Rijkshuisstijl](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-online/webfonts) are [designed specifcally for the central Government of The Netherlands](https://www.rijkshuisstijl.nl/basiselementen/documenten/verzamelingen-afbeeldingen/2014/06/01/achtergrondartikel-rijkshuisstijl-webfonts) and are not open source. Before applying the web fonts to your project, ensure you have permission from the Rijkshuisstijl. Until you have permission, use fallback fonts instead, such as the system fonts Arial, Verdana or Times New Roman.
+[De lettertypen voor de Rijkshuisstijl](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-online/webfonts)
+zijn [speciaal ontworpen voor de Nederlandse overheid](https://www.rijkshuisstijl.nl/basiselementen/documenten/verzamelingen-afbeeldingen/2014/06/01/achtergrondartikel-rijkshuisstijl-webfonts)
+en zijn niet open source. Gebruik tot toestemming, systeemlettertypen zoals Arial, Verdana of Times New Roman.
 
-### Open source variants
+### Open source varianten
 
-During development, you can use placeholder variants for assets that require a license, such as logos, fonts, and icons.
+Gebruik tijdens ontwikkeling placeholder varianten voor assets die een licentie vereisen, zoals logo’s, lettertypen en
+iconen.
 
-**_Fonts_**
+**_Lettertypen_**
 
 ```npm
 npm install -D @rijkshuisstijl-community/font
@@ -116,71 +131,84 @@ import '@rijkshuisstijl-community/font/src/index.mjs';
 
 **_Logo_**
 
-You can use the icon with id `nederland-map`
+Je kunt het icoon met id `nederland-map` gebruiken.
 
 **_Icons_**
 
 TODO
 
-## Permission
+## Toestemming
 
-When you are developing a website for the central Government of the Netherlands, you request permission by [contacting the Ministry of General Affairs](https://www.rijkshuisstijl.nl/contact).
+Wanneer je een website voor de Nederlandse overheid ontwikkelt, kun je toestemming aanvragen
+door [contact op te nemen met het Ministerie van Algemene Zaken](https://www.rijkshuisstijl.nl/contact).
 
-## Code of Conduct
+## Gedragscode
 
-We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community. Read [our Code of Conduct](CODE_OF_CONDUCT.md) if you haven't already.
+We beloven op een manier te handelen die bijdraagt aan een open, gastvrije, diverse, inclusieve en gezonde gemeenschap.
+Lees
+onze [gedragscode](https://github.com/nl-design-system/rijkshuisstijl-community/blob/feature/filter-by-tags/CODE_OF_CONDUCT.md)
+als je dat nog niet hebt gedaan.
 
-## Development
+## Ontwikkeling
 
-This project is based on the NL Design System template repository and can be used by the Rijksoverheid organisations that want to use NL Design System and collaborate on extra components a shared theme and storybook templates.
+Dit project is gebaseerd op de NL Design System-template en kan worden gebruikt door Rijksoverheidsorganisaties die het
+NL Design System willen gebruiken en willen samenwerken aan extra componenten, een gedeeld thema en storybook-sjablonen.
 
 ### NodeJS and pnpm
 
-We use NodeJS for installing and managing our javascript packages. Check in your terminal with `node -v` if you have NodeJS installed. Otherwise install node [https://nodejs.org/en](https://nodejs.org/en) before you start.
+We gebruiken NodeJS om onze JavaScript-pakketten te beheren. Controleer in je terminal met `node -v` of je NodeJS hebt
+geïnstalleerd. Installeer NodeJS anders via [nodejs.org](https://nodejs.org/en).
 
-NodeJS comes with `npm`. We will not use `npm` to install our packages, but `pnpm` instead. This is so we can ensure super stable package resolution. To get started make sure you have `pnpm` installed by checking with `pnpm -v`. If you do not see a version use `npm install -g pnpm` to install `pnpm` globally on your machine.
+NodeJS bevat `npm`, maar we gebruiken `pnpm` voor stabiele pakketresolutie. Controleer of je `pnpm` hebt door `pnpm -v`
+te typen. Installeer het met `npm install -g pnpm` als dat niet zo is.
 
-### Handy Commands
+### Handige commando's
 
-All commands are run from the root of the project, from a terminal:
+Alle commando’s worden uitgevoerd vanuit de root van het project, in een terminal:
 
-| Command              | Action                                                                      |
-| :------------------- | :-------------------------------------------------------------------------- |
-| `pnpm install`       | Installs dependencies                                                       |
-| `pnpm run storybook` | Starts local dev server at `localhost:6006` and a watcher for design tokens |
-| `pnpm run build`     | Build your production site to `./dist/`                                     |
-| `pnpm run lint`      | Run the linting scripts to ensure your code meets the project standards     |
-| `pnpm run lint-fix`  | Run the linting scripts and automatically fix all possible errors           |
+| Command              | Action                                                                   |
+| :------------------- | :----------------------------------------------------------------------- |
+| `pnpm install`       | Installeert afhankelijkheden                                             |
+| `pnpm run storybook` | Start de lokale ontwikkelserver op `localhost:6006`                      |
+| `pnpm run build`     | Bouw je productie-site naar `./dist/`                                    |
+| `pnpm run lint`      | Voer de lint-scripts uit om de code aan de projectstandaarden te voldoen |
+| `pnpm run lint-fix`  | Voert lint-scripts uit en herstelt automatisch mogelijke fouten          |
 
-Best to be run from `packages/components-react` because then you get a more detailed view of how many test suites and tests are ran and which have passed:
+Vanuit`packages/components-react` krijg je een gedetailleerder overzicht van tests::
 
-| Command         | Action              |
-| :-------------- | :------------------ |
-| `pnpm run test` | Run all test suites |
+| Command         | Action                     |
+| :-------------- | :------------------------- |
+| `pnpm run test` | Voert alle test suites uit |
 
 ### Packages
 
-| Package                  | Purpose                                                                                                                                              |
-| :----------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `components-css`         | When no component exists in the NL Design System community, candidate of hall-of-fame a component can be added here for use by the community         |
-| `components-react`       | Optionally when a CSS component exists but a React wrapper is missing, the React wrapper can be added here for use by the community                  |
-| `design-tokens`          | The rijkshuisstijl themes are managed here for use in combination with themeless NL Design System. **Note** these should move to proprietary instead |
-| `storybook`              | Extra components and page templates can be added as a story to document the existance and use of components and visual regression testing            |
-| `web-components-stencil` | When a CSS component exists but a Web component wrapper is missing, the web-component wrapper can be added for use by the community                  |
-| `web-components-react`   | When a web-component exists a React web-component wrapper can be added for convenience                                                               |
+| Package                  | Purpose                                                                                                                                           |
+| :----------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `components-css`         | Hier kunnen CSS-componenten toegevoegd worden die nog niet bestaan in de NL Design System-community                                               |
+| `components-react`       | Optioneel voor het toevoegen van een React-wrapper aan een CSS-component als die nog niet bestaat                                                 |
+| `design-tokens`          | Hier worden de rijkshuisstijl-thema’s beheerd, voor gebruik met NL Design System zonder thema. Opmerking deze zouden naar proprietary moeten gaan |
+| `storybook`              | Extra componenten en pagina-sjablonen kunnen worden toegevoegd als story voor documentatie en visuele regressietesten                             |
+| `web-components-stencil` | Hier kunnen webcomponenten worden toegevoegd voor componenten die nog niet als webcomponent bestaan                                               |
+| `web-components-react`   | Hier kunnen React-webcomponenten toegevoegd worden voor gebruiksgemak                                                                             |
 
 ### Proprietary
 
-Branding, fonts and other assets should often not be part of the EUPL license. By adding those in the `proprietary` packages they are legally excluded based on the LICENSE and NOTICE files. Each rijksoverheid organisation working with a NL Design System thema can add their theme as a package here.
+Branding, lettertypen en andere assets moeten vaak niet deel uitmaken van de EUPL-licentie. Door deze in de
+`proprietary` pakketten toe te voegen, worden ze juridisch uitgesloten op basis van de LICENSE en NOTICE-bestanden. Elke
+Rijksoverheidsorganisatie die met een NL Design System-thema werkt, kan hier hun thema als pakket toevoegen.
 
-### Who is working on this project?
+### Wie werkt er aan dit project?
 
-This project is a collaboration between front-end developers, designers, and enthusiasts from various fields within the IT sector and government organizations.
+Dit project is een samenwerking tussen frontend-ontwikkelaars, ontwerpers en enthousiastelingen uit diverse velden
+binnen de IT-sector en overheidsorganisaties.
 
 ## Links
 
-- **_Found a bug or want to explore the source code?_** Visit our [GitHub repository](https://github.com/nl-design-system/rijkshuisstijl-community).
+- **_Bug gevonden of code bekijken?_** Bezoek
+  onze [GitHub repository](https://github.com/nl-design-system/rijkshuisstijl-community).
 
-- **_Curious about what we’re working on?_** Check out our current progress on the [Sprint Board](https://github.com/orgs/nl-design-system/projects/59).
+- **_Benieuwd naar onze voortgang?_** Bekijk ons huidige werk op
+  het[Sprint Board](https://github.com/orgs/nl-design-system/projects/59).
 
-- **_Stay connected with the community!_** Join the [Code for NL Slack](https://praatmee.codefor.nl/), and participate in the `#nl-design-system` channel to see what others are working on and collaborate with the community.
+- **_Blijf in contact met de community!_** Word lid van de [Code for NL Slack](https://praatmee.codefor.nl/) en join het
+  `#nl-design-system` kanaal om samen te werken met de community.
