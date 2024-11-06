@@ -18,19 +18,19 @@
 }
 
 @mixin invisible-but-accessible {
-  block-size: 1px !important;
+  block-size: 1px;
 
   /* Source: https://kittygiraudel.com/snippets/sr-only-class/ */
-  border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-  -webkit-clip-path: inset(50%) !important;
-  clip-path: inset(50%) !important;
-  inline-size: 1px !important;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  inline-size: 1px;
   /* stylelint-disable-next-line property-disallowed-list */
-  margin: -1px !important;
-  overflow: hidden !important;
+  margin: -1px;
+  overflow: hidden;
   /* stylelint-disable-next-line property-disallowed-list */
-  padding: 0 !important;
-  position: absolute !important;
-  white-space: nowrap !important;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
 }

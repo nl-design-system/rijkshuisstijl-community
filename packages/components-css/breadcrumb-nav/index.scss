@@ -9,13 +9,13 @@
     --utrecht-link-icon-inset-block-start: var(--utrecht-breadcrumb-nav-link-icon-inset-block-start, inherit);
 
     &--current {
-      color: var(--utrecht-breadcrumb-nav-link-current-color) !important;
-      text-decoration: var(--utrecht-breadcrumb-nav-link-current-text-decoration) !important;
+      color: var(--utrecht-breadcrumb-nav-link-current-color);
+      text-decoration: var(--utrecht-breadcrumb-nav-link-current-text-decoration);
     }
     &--active {
-      color: var(--utrecht-breadcrumb-nav-link-active-color) !important;
-      text-decoration: underline !important;
-      text-decoration-color: var(--utrecht-breadcrumb-nav-link-active-color) !important;
+      color: var(--utrecht-breadcrumb-nav-link-active-color);
+      text-decoration: underline;
+      text-decoration-color: var(--utrecht-breadcrumb-nav-link-active-color);
     }
   }
   &__separator {
