@@ -85,12 +85,21 @@ body {
     --utrecht-page-padding-inline-start: var(--rhc-space-150);
   }
 }
+
+.rhc-templates-card-container {
+  column-gap: 1.5rem;
+  display: flex;
+  margin-block-end: 4rem;
+  margin-block-start: 1.5rem;
+}
+
 .rhc-side-nav {
   min-inline-size: 230px;
   @media (width <= 780px) {
     --rhc-sidenav-display: none;
   }
 }
+
 .rhc-page-main-content {
   display: flex;
   flex: 1;

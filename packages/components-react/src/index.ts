@@ -34,6 +34,14 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from './Button';
+export {
+  Card,
+  type CardProps,
+  FullBleedCard,
+  type FullBleedCardProps,
+  HorizontalImageCard,
+  type HorizontalImageCardProps,
+} from './Card';
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
 export { type CustomFormFieldProps, FormField } from './FormField';
