@@ -52,6 +52,7 @@
   "scripts": {
     "prebuild": "pnpm run clean",
     "build": "lerna run build",
+    "build:dev": "APP_ENV=dev lerna run build --stream",
     "clean": "rimraf dist/ && lerna run clean",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",

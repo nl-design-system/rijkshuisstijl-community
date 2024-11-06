@@ -46,7 +46,10 @@ export default [
         include: /node_modules/,
       }),
       nodePolyfills(),
-      typescript({ includeDependencies: false }),
+      typescript({
+        includeDependencies: false,
+        tsconfig: process.env.APP_ENV === 'dev' ? './tsconfig.dev.json' : './tsconfig.json',
+      }),
       babel({
         presets: ['@babel/preset-react'],
         babelHelpers: 'runtime',
