@@ -95,7 +95,7 @@
 @mixin rhc-card--full-bleed__image {
   @include rounded-border-corners;
 
-  block-size: unset;
+  block-size: 100%;
   filter: brightness(var(--rhc-card-as-link-full-bleed-opacity, 0.5));
   inline-size: var(--rhc-card-as-link-inline-size, 328px);
   position: absolute;

@@ -20,16 +20,16 @@ export interface CardProps extends CardPropsBase {
 }
 
 export interface FullBleedCardProps extends CardPropsBase {
-  appearance: 'full-bleed';
+  appearance?: 'full-bleed';
   imageSrc: string;
   description?: ReactNode;
   metadata?: ReactNode;
 }
 
 export interface HorizontalImageCardProps extends CardPropsBase {
-  appearance: 'horizontal';
+  appearance?: 'horizontal';
   imageSrc: string;
-  imageAlt: string;
+  imageAlt?: string;
 }
 
 export const Card = forwardRef(
@@ -37,13 +37,14 @@ export const Card = forwardRef(
     props: PropsWithChildren<CardProps | FullBleedCardProps | HorizontalImageCardProps>,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
-    switch (props.appearance) {
+    const { appearance, ...cardProps } = props;
+    switch (appearance) {
       case 'full-bleed':
-        return <FullBleedCard {...props} ref={ref} />;
+        return <FullBleedCard {...(cardProps as FullBleedCardProps)} ref={ref} />;
       case 'horizontal':
-        return <HorizontalImageCard {...props} ref={ref} />;
+        return <HorizontalImageCard {...(cardProps as HorizontalImageCardProps)} ref={ref} />;
       default:
-        return <DefaultCard {...props} ref={ref} />;
+        return <DefaultCard {...(cardProps as CardProps)} ref={ref} />;
     }
   },
 );
