@@ -15,12 +15,15 @@
 **heading (verplicht)**
 Dit verwijst naar het Heading component. Dit component is nodig om vervolgens de pre-heading visueel boven te tonen. In de HTML zal deze nog steeds onder de heading getoond zijn.
 
-```HTML
-<PreHeading
-  heading: {
-    <Heading level{1}>Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod</Heading>
-  }
->
+**children (verplicht)**
+Dit verwijst naar het text component dat als child kan worden meegegeven aan de PreHeading. Dit is de text die visueel getoond gaat worden boven de heading.
+
+## Usage
+
+```tsx
+import { PreHeading } from '@rijkshuisstijl-community/components-react';
+
+<PreHeading heading={<Heading level={1}>Introductie</Heading>}>Stap 1 van 8</PreHeading>;
 ```
 
 ---
