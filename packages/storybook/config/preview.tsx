@@ -5,8 +5,7 @@ import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/mijnoverheid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
-import '@rijkshuisstijl-community/components-css/index.scss';
-import '@utrecht/component-library-css/dist/html.css';
+import '@rijkshuisstijl-community/components-css/dist/index.css';
 
 import { withThemeByClassName } from '@storybook/addon-themes';
 import { Preview } from '@storybook/react';
