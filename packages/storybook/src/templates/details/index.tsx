@@ -86,16 +86,18 @@ export default function Details() {
                     <LinkListLink>Meer vragen en antwoorden</LinkListLink>
                   </LinkList>
                   <Heading level={1}>Uitgelicht</Heading>
-                  <Card
-                    heading="Bijbaan, vakantiewerk en stage door jongeren"
-                    href="#"
-                    imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
-                  ></Card>
-                  <Card
-                    heading="Vakantiedagen en vakantiegeld"
-                    href="#"
-                    imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
-                  ></Card>
+                  <div className="rhc-templates-card-container">
+                    <Card
+                      heading="Bijbaan, vakantiewerk en stage door jongeren"
+                      href="#"
+                      imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
+                    ></Card>
+                    <Card
+                      heading="Vakantiedagen en vakantiegeld"
+                      href="#"
+                      imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
+                    ></Card>
+                  </div>
                 </RichText>
               </Article>
             </main>
