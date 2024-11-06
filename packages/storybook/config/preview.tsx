@@ -5,6 +5,7 @@ import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/mijnoverheid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
+import '@rijkshuisstijl-community/components-css/index.scss';
 import '@utrecht/component-library-css/dist/html.css';
 import '@utrecht/component-library-css/dist/index.css';
 
@@ -27,7 +28,6 @@ const preview: Preview = {
     (Story: any) => <UtrechtDocument>{Story()}</UtrechtDocument>,
   ],
   parameters: {
-    chromatic: { delay: 500 },
     previewTabs: {
       'storybookjs/notes/panel': { title: 'Documentation' },
       'storybook/docs/panel': { title: 'API' },
