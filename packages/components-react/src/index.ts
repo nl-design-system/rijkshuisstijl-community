@@ -1,5 +1,4 @@
-import '@utrecht/component-library-css/dist/index.css';
-import '@rijkshuisstijl-community/components-css/index.scss';
+import '@rijkshuisstijl-community/components-css/dist/index.css';
 
 // Export overwrites and new components
 export {
@@ -34,8 +33,17 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from './Button';
+export {
+  Card,
+  type CardProps,
+  FullBleedCard,
+  type FullBleedCardProps,
+  HorizontalImageCard,
+  type HorizontalImageCardProps,
+} from './Card';
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
+export { type CustomFormFieldProps, FormField } from './FormField';
 export {
   DataList,
   DataListActions,
@@ -54,7 +62,6 @@ export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from
 export { FileInput, type FileInputProps } from './FileInput';
 export { FileInputItem } from './FileInputItem';
 export { Footer } from './Footer';
-export { FormField, type FormFieldProps } from './FormField';
 export { FormFieldCheckboxGroup, type FormFieldCheckboxGroupProps } from './FormFieldCheckboxGroup';
 export { FormFieldCheckboxOption, type FormFieldCheckboxOptionProps } from './FormFieldCheckboxOption';
 export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFieldErrorMessage';

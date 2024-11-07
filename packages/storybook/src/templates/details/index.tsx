@@ -2,12 +2,10 @@ import {
   Article,
   BreadcrumbNav,
   BreadcrumbNavLink,
-  Figure,
-  FigureCaption,
+  Card,
   Footer,
   Heading,
   Icon,
-  Image,
   LinkList,
   LinkListLink,
   Logo,
@@ -35,6 +33,7 @@ export default function Details() {
           { href: '/form', label: 'Form' },
           { href: '/details', label: 'Details' },
           { href: '/collage', label: 'Collage' },
+          { href: '/mijn-omgeving', label: 'Mijn Omgeving' },
         ]}
       ></NavBar>
       <main className="rhc-templates-page">
@@ -87,29 +86,17 @@ export default function Details() {
                     <LinkListLink>Meer vragen en antwoorden</LinkListLink>
                   </LinkList>
                   <Heading level={1}>Uitgelicht</Heading>
-                  <div>
-                    <div>
-                      <Figure className="rhc-templates-unstarted">
-                        <Image
-                          alt="Multicolored tulip field"
-                          height="763"
-                          src="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
-                          width="640"
-                        ></Image>
-                        <FigureCaption>Bijschrift (figcaption) van een afbeelding)</FigureCaption>
-                      </Figure>
-                    </div>
-                    <div>
-                      <Figure>
-                        <Image
-                          alt="Multicolored tulip field"
-                          height="763"
-                          src="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
-                          width="640"
-                        ></Image>
-                        <FigureCaption>Bijschrift (figcaption) van een afbeelding)</FigureCaption>
-                      </Figure>
-                    </div>
+                  <div className="rhc-templates-card-container">
+                    <Card
+                      heading="Bijbaan, vakantiewerk en stage door jongeren"
+                      href="#"
+                      imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
+                    ></Card>
+                    <Card
+                      heading="Vakantiedagen en vakantiegeld"
+                      href="#"
+                      imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
+                    ></Card>
                   </div>
                 </RichText>
               </Article>

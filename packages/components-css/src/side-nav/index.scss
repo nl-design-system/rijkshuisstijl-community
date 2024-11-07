@@ -4,7 +4,7 @@
  */
 
 .rhc-side-nav {
-  display: flex;
+  display: var(--rhc-sidenav-display, flex);
   flex-direction: column;
   row-gap: var(--rhc-sidenav-row-gap);
   &__list {

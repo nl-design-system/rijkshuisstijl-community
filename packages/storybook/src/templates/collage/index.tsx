@@ -9,7 +9,7 @@ import {
   DataListItem,
   DataListKey,
   DataListValue,
-  FormField,
+  //FormField,
   FormFieldCheckboxGroup,
   FormFieldCheckboxOption,
   FormFieldErrorMessage,
@@ -43,6 +43,7 @@ import {
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react/dist/esm/tabler-icons-react';
+import { FormField } from '@utrecht/component-library-react';
 import { Document, RichText } from '@utrecht/component-library-react';
 
 export default function Collage() {
@@ -61,6 +62,7 @@ export default function Collage() {
           { href: '/form', label: 'Form' },
           { href: '/details', label: 'Details' },
           { href: '/collage', label: 'Collage' },
+          { href: '/mijn-omgeving', label: 'Mijn Omgeving' },
         ]}
       ></NavBar>
       <main className="rhc-templates-page">
