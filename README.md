@@ -4,10 +4,10 @@
 
 _Dit project is **niet** goedgekeurd door het Ministerie van Algemene Zaken._
 
-**Het toepassen van desig nelementen uit dit project is strikt verboden voor organisaties die geen deel uitmaken van de
+**Het toepassen van design-elementen uit dit project is strikt verboden voor organisaties die geen deel uitmaken van de
 centrale overheid van Nederland.**
 
-Dit project maakt deel uit van een gemeenschapsinitiatief om [NL Design System](https://nldesignsystem.nl)-componenten
+Dit project maakt deel uit van een gemeenschapsinitiatief om [NL Design System](https://nldesignsystem.nl) componenten
 te gebruiken voor projecten die moeten voldoen aan de Rijkshuisstijl. Organisaties van de centrale overheid van
 Nederland (
 bijvoorbeeld: [Belastingdienst](https://www.belastingdienst.nl/), [DUO](https://www.duo.nl), [Logius](http://logius.nl), [SVB](https://www.svb.nl/))
@@ -17,12 +17,11 @@ en degenen die door hen zijn ingehuurd voor het ontwikkelen van websites en apps
 
 ### Node
 
-In dit project wordt Node.js versie **_20.10_** gebruikt. Dit project bevat een `.nvmrc` bestand en helpt je met het
-installeren van de juiste versie met behulp van `nvm`.
+In dit project wordt Node.js versie **_20.10.0_** gebruikt. Met behulp van `nvm` en het `.nvmrc` bestand kun je makkelijk de juiste versie installeren.
 
 - Als je nvm nog niet hebt, [installeer `nvm`](https://github.com/nvm-sh/nvm#install--update-script).
 
-Zodra je `nvm` hebt geïnstalleerd, run je het commando:
+Draai vervolgens het commando:
 
 ```bash
 nvm use
@@ -33,22 +32,22 @@ juiste versie al is geïnstalleerd, of nadat hij is geïnstalleerd, wordt hij in
 
 ### SCSS/SASS
 
-De componenten gebruiken scss, zorg dat je project scss-bestanden kan verwerken.
+De componenten gebruiken scss, zorg dat jouw project scss-bestanden kan verwerken.
 
 ## Aan de slag zonder framework
 
-We zij bezig met componenten aan het maken die te gebruiken zijn zonder een framework.
+Binnenkort komen er componenten die te gebruiken zijn zonder een framework.
 
 ## Aan de slag met React-componenten
 
-Om de React-componenten van de Rijkshuisstijl-community te gebruiken, installeer je een pakket beschikbaar in
+Om de React-componenten van de Rijkshuisstijl-community te gebruiken, installeer je het pakket dat beschikbaar in
 de [npm Registry](https://www.npmjs.com/package/@rijkshuisstijl-community/components-react).
 
 ```npm
 npm install --save-dev @rijkshuisstijl-community/components-react
 ```
 
-Dit installeert de React-componenten. Om deze componenten te gebruiken, kun je ze importeren in je app.
+Dit installeert de React-componenten. Om deze componenten te gebruiken, kun je ze importeren in jouw app.
 
 ```tsx
 'use client'; // Nodig in sommige projecten
@@ -103,7 +102,7 @@ ontwikkelen van websites en apps voor de Nederlandse overheid.
 zijn [speciaal ontworpen voor de Nederlandse overheid](https://www.rijkshuisstijl.nl/basiselementen/documenten/verzamelingen-afbeeldingen/2014/06/01/achtergrondartikel-rijkshuisstijl-webfonts)
 en zijn niet open source. Gebruik tot toestemming, systeemlettertypen zoals Arial, Verdana of Times New Roman.
 
-### Open source varianten
+#### Open source varianten
 
 Gebruik tijdens ontwikkeling placeholder varianten voor assets die een licentie vereisen, zoals logo’s, lettertypen en
 iconen.
@@ -136,7 +135,7 @@ door [contact op te nemen met het Ministerie van Algemene Zaken](https://www.rij
 We beloven op een manier te handelen die bijdraagt aan een open, gastvrije, diverse, inclusieve en gezonde gemeenschap.
 Lees
 onze [gedragscode](https://github.com/nl-design-system/rijkshuisstijl-community/blob/feature/filter-by-tags/CODE_OF_CONDUCT.md)
-als je dat nog niet hebt gedaan.
+om te lezen wat dat inhoudt.
 
 ## Ontwikkeling
 
@@ -155,30 +154,30 @@ te typen. Installeer het met `npm install -g pnpm` als dat niet zo is.
 
 Alle commando’s worden uitgevoerd vanuit de root van het project, in een terminal:
 
-| Command              | Action                                                                   |
-| :------------------- | :----------------------------------------------------------------------- |
-| `pnpm install`       | Installeert afhankelijkheden                                             |
-| `pnpm run storybook` | Start de lokale ontwikkelserver op `localhost:6006`                      |
-| `pnpm run build`     | Bouw je productie-site naar `./dist/`                                    |
-| `pnpm run lint`      | Voer de lint-scripts uit om de code aan de projectstandaarden te voldoen |
-| `pnpm run lint-fix`  | Voert lint-scripts uit en herstelt automatisch mogelijke fouten          |
+| Command              | Action                                                                        |
+| :------------------- | :---------------------------------------------------------------------------- |
+| `pnpm install`       | Installeert dependencies.                                                     |
+| `pnpm run storybook` | Start de lokale ontwikkelserver op `localhost:6006`.                          |
+| `pnpm run build`     | Bouw je productie-site naar `./dist/`.                                        |
+| `pnpm run lint`      | Voert de lint-scripts uit om de code aan de projectstandaarden te voldoen.    |
+| `pnpm run lint-fix`  | Voert lint-scripts uit en herstelt automatisch fouten mits die gevonden zijn. |
 
-Vanuit`packages/components-react` krijg je een gedetailleerder overzicht van tests::
+Vanuit`packages/components-react` krijg je een gedetailleerder overzicht van tests:
 
-| Command         | Action                     |
-| :-------------- | :------------------------- |
-| `pnpm run test` | Voert alle test suites uit |
+| Command         | Action                      |
+| :-------------- | :-------------------------- |
+| `pnpm run test` | Voert alle test suites uit. |
 
 ### Packages
 
-| Package                  | Purpose                                                                                                                                           |
-| :----------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `components-css`         | Hier kunnen CSS-componenten toegevoegd worden die nog niet bestaan in de NL Design System-community                                               |
-| `components-react`       | Optioneel voor het toevoegen van een React-wrapper aan een CSS-component als die nog niet bestaat                                                 |
-| `design-tokens`          | Hier worden de rijkshuisstijl-thema’s beheerd, voor gebruik met NL Design System zonder thema. Opmerking deze zouden naar proprietary moeten gaan |
-| `storybook`              | Extra componenten en pagina-sjablonen kunnen worden toegevoegd als story voor documentatie en visuele regressietesten                             |
-| `web-components-stencil` | Hier kunnen webcomponenten worden toegevoegd voor componenten die nog niet als webcomponent bestaan                                               |
-| `web-components-react`   | Hier kunnen React-webcomponenten toegevoegd worden voor gebruiksgemak                                                                             |
+| Package                  | Purpose                                                                                                                                            |
+| :----------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `components-css`         | Hier kunnen CSS-componenten toegevoegd worden die nog niet bestaan in de NL Design System-community.                                               |
+| `components-react`       | Optioneel voor het toevoegen van een React-wrapper aan een CSS-component als die nog niet bestaat.                                                 |
+| `design-tokens`          | Hier worden de rijkshuisstijl-thema’s beheerd, voor gebruik met NL Design System zonder thema. Opmerking deze zouden naar proprietary moeten gaan. |
+| `storybook`              | Extra componenten en pagina-sjablonen kunnen worden toegevoegd als story voor documentatie en visuele regressietesten.                             |
+| `web-components-stencil` | Hier kunnen webcomponenten worden toegevoegd voor componenten die nog niet als webcomponent bestaan.                                               |
+| `web-components-react`   | Hier kunnen React-webcomponenten toegevoegd worden voor gebruiksgemak.                                                                             |
 
 ### Proprietary
 
@@ -193,11 +192,8 @@ binnen de IT-sector en overheidsorganisaties.
 
 ## Links
 
-- **_Bug gevonden of code bekijken?_** Bezoek
-  onze [GitHub repository](https://github.com/nl-design-system/rijkshuisstijl-community).
+- **_Bug gevonden of code bekijken?_** Bezoek onze [GitHub repository](https://github.com/nl-design-system/rijkshuisstijl-community).
 
-- **_Benieuwd naar onze voortgang?_** Bekijk ons huidige werk op
-  het[Sprint Board](https://github.com/orgs/nl-design-system/projects/59).
+- **_Benieuwd naar onze voortgang?_** Bekijk ons huidige werk op het[Sprint Board](https://github.com/orgs/nl-design-system/projects/59).
 
-- **_Blijf in contact met de community!_** Word lid van de [Code for NL Slack](https://praatmee.codefor.nl/) en join het
-  `#nl-design-system` kanaal om samen te werken met de community.
+- **_Blijf in contact met de community!_** Word lid van de [Code for NL Slack](https://praatmee.codefor.nl/) en join het `#nl-design-system` kanaal om samen te werken met de community.
