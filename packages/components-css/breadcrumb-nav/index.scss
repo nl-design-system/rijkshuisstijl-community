@@ -10,12 +10,12 @@
 
     &--current {
       color: var(--utrecht-breadcrumb-nav-link-current-color);
-      text-decoration: var(--utrecht-breadcrumb-nav-link-current-text-decoration);
+      text-decoration: var(--utrecht-breadcrumb-nav-link-current-text-decoration) !important;
     }
     &--active {
       color: var(--utrecht-breadcrumb-nav-link-active-color);
       text-decoration: underline;
-      text-decoration-color: var(--utrecht-breadcrumb-nav-link-active-color);
+      text-decoration-color: var(--utrecht-breadcrumb-nav-link-active-color) !important;
     }
   }
   &__separator {
