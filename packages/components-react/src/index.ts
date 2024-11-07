@@ -1,5 +1,4 @@
-import '@utrecht/component-library-css/dist/index.css';
-import '@rijkshuisstijl-community/components-css/index.scss';
+import '@rijkshuisstijl-community/components-css/dist/index.css';
 
 // Export overwrites and new components
 export {

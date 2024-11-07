@@ -9,13 +9,16 @@
     --utrecht-link-icon-inset-block-start: var(--utrecht-breadcrumb-nav-link-icon-inset-block-start, inherit);
 
     &--current {
-      color: var(--utrecht-breadcrumb-nav-link-current-color) !important;
-      text-decoration: var(--utrecht-breadcrumb-nav-link-current-text-decoration) !important;
+      --utrecht-link-text-decoration-color: var(--utrecht-link-text-decoration-color);
+      --utrecht-link-text-decoration: none;
+
+      color: var(--utrecht-breadcrumb-nav-link-current-color);
     }
     &--active {
-      color: var(--utrecht-breadcrumb-nav-link-active-color) !important;
-      text-decoration: underline !important;
-      text-decoration-color: var(--utrecht-breadcrumb-nav-link-active-color) !important;
+      --utrecht-link-text-decoration: var(--utrecht-breadcrumb-nav-link-active-text-decoration, underline);
+
+      color: var(--utrecht-breadcrumb-nav-link-active-color);
+      text-decoration-color: var(--utrecht-breadcrumb-nav-link-active-color);
     }
   }
   &__separator {
