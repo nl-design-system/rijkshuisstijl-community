@@ -10,12 +10,13 @@
 
     &--current {
       --utrecht-link-text-decoration-color: var(--utrecht-link-text-decoration-color);
+      --utrecht-link-text-decoration: none;
 
       color: var(--utrecht-breadcrumb-nav-link-current-color);
     }
     &--active {
       color: var(--utrecht-breadcrumb-nav-link-active-color);
-      text-decoration: underline;
+      text-decoration: var(--utrecht-breadcrumb-nav-link-active-text-decoration);
       text-decoration-color: var(--utrecht-breadcrumb-nav-link-active-color);
     }
   }

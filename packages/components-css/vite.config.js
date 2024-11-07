@@ -11,7 +11,7 @@ export default defineConfig({
       input: path.resolve(__dirname, 'index.scss'), // Entry point for SCSS
       output: {
         // Disable JS output and ensure only CSS is generated
-        format: 'es', // Use ES module output for the CSS
+        format: 'es',
         assetFileNames: 'index.css', // Ensure the CSS file gets the correct name
       },
     },
