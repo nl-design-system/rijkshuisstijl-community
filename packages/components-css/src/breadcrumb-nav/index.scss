@@ -15,8 +15,9 @@
       color: var(--utrecht-breadcrumb-nav-link-current-color);
     }
     &--active {
+      --utrecht-link-text-decoration: var(--utrecht-breadcrumb-nav-link-active-text-decoration, underline);
+
       color: var(--utrecht-breadcrumb-nav-link-active-color);
-      text-decoration: var(--utrecht-breadcrumb-nav-link-active-text-decoration);
       text-decoration-color: var(--utrecht-breadcrumb-nav-link-active-color);
     }
   }

@@ -1,4 +1,3 @@
-// component-css/vite.config.ts
 import path from 'node:path';
 import { defineConfig } from 'vite';
 
