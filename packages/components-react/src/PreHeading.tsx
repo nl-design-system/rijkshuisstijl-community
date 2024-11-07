@@ -15,7 +15,7 @@ export const PreHeading = forwardRef(
     ref: ForwardedRef<HTMLParagraphElement>,
   ) => {
     return (
-      <div className={'rhc-heading-container'} {...restProps}>
+      <div className="rhc-heading-container" {...restProps}>
         {heading}
         <UtrechtPreHeading className={'rhc-pre-heading'} ref={ref}>
           {children}
