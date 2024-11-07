@@ -1,6 +1,6 @@
 {
   "name": "@rijkshuisstijl-community/components-css",
-  "version": "1.0.0-alpha.45",
+  "version": "1.0.0-alpha.60",
   "author": "Community for NL Design System",
   "description": "CSS Components for a design system based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -16,5 +16,17 @@
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
     "directory": "packages/components-css"
+  },
+  "devDependencies": {
+    "scss": "0.2.4",
+    "vite": "5.3.4"
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "pnpm run build:css",
+    "build:css": "vite build"
+  },
+  "dependencies": {
+    "@utrecht/component-library-css": "6.1.0"
   }
 }
