@@ -152,8 +152,8 @@ importers:
         specifier: 6.0.0
         version: 6.0.0
       '@utrecht/web-component-library-react':
-        specifier: 1.2.0
-        version: 1.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 3.0.0
+        version: 3.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -467,8 +467,8 @@ importers:
         specifier: 7.2.0
         version: 7.2.0(@babel/runtime@7.24.8)(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/web-component-library-react':
-        specifier: 1.2.0
-        version: 1.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 3.0.0
+        version: 3.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@utrecht/web-component-library-stencil':
         specifier: 1.3.0
         version: 1.3.0
@@ -2919,14 +2919,17 @@ packages:
   '@utrecht/components@6.0.0':
     resolution: {integrity: sha512-ur+wYEabU9o5LqKsrkfPiaAQaKM2nbHH0E4WjOjlLrUrY7U5c0Nvbq5sqtxOTB4f6g6kI87KljIsAoMa3EKBsQ==}
 
-  '@utrecht/web-component-library-react@1.2.0':
-    resolution: {integrity: sha512-M//AVotO1tqBeC9aTta1hso/0N6npHyk2JAU63iHL8CA3INaThXQOJqAopy3D+CZa7ao8FIG1LszK96JQW6R0A==}
+  '@utrecht/web-component-library-react@3.0.0':
+    resolution: {integrity: sha512-lgJOzhRK1/9TRTz6ECgJk3yJPhh+t2Df1uj0xjTzca0qWU2UVR/kQwbdlmKRqu7D86iOm5kBfa0jP2yzUkLFvw==}
     peerDependencies:
       react: 16 - 18
       react-dom: 16 - 18
 
   '@utrecht/web-component-library-stencil@1.3.0':
     resolution: {integrity: sha512-7/S36RhMXkjo17ShOyUGWbOVt7lQtMUt6aOtz/u0xuqccofEyFNp3bx77+3nT3esFFUZ7YW77CVjMtPpNJpAjQ==}
+
+  '@utrecht/web-component-library-stencil@2.2.0':
+    resolution: {integrity: sha512-2ny336xp8dVcUaey0bWe65V+zqooyeApyMW8Vi44IxKJTcqNvKdOawT/mI1t1lTTsGoUhxxi0QQYT4AfXMU0aQ==}
 
   '@vitejs/plugin-react@4.3.1':
     resolution: {integrity: sha512-m/V2syj5CuVnaxcUJOQRel/Wr31FFXRFlnOoq1TVtkCxsY5veGMTEmpWHndrhB2U8ScHtCQB1e+4hWYExQc6Lg==}
@@ -4218,6 +4221,7 @@ packages:
   eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@9.6.1:
@@ -11038,13 +11042,17 @@ snapshots:
     dependencies:
       clsx: 1.2.1
 
-  '@utrecht/web-component-library-react@1.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@utrecht/web-component-library-react@3.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@utrecht/web-component-library-stencil': 1.3.0
+      '@utrecht/web-component-library-stencil': 2.2.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
   '@utrecht/web-component-library-stencil@1.3.0':
+    dependencies:
+      '@stencil/core': 4.18.3
+
+  '@utrecht/web-component-library-stencil@2.2.0':
     dependencies:
       '@stencil/core': 4.18.3
 
