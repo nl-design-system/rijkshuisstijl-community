@@ -1,7 +1,11 @@
 import '@testing-library/jest-dom';
 
+import { IconCalendarEvent } from '@tabler/icons-react';
 import { render, screen } from '@testing-library/react';
-import { IconButton } from './Button';
+import { Icon } from '@utrecht/component-library-react';
+import { axe, toHaveNoViolations } from 'jest-axe';
+import { Button, IconButton, PrimaryActionButton, SecondaryActionButton, SubtleButton } from './Button';
+expect.extend(toHaveNoViolations);
 
 describe('IconButton', () => {
   it('renders an HTML button element', () => {
@@ -78,5 +82,54 @@ describe('IconButton', () => {
     button?.click();
 
     expect(handleClick).toHaveBeenCalled();
+  });
+
+  it('should not have basic accessibility issues with Button', async () => {
+    const { container } = render(<Button label="example-button-label" />);
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
+  });
+
+  it('should not have basic accessibility issues with PrimaryActionButton', async () => {
+    const { container } = render(<PrimaryActionButton label="example-primary-label" />);
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
+  });
+
+  it('should not have basic accessibility issues with SecondaryActionButton', async () => {
+    const { container } = render(<SecondaryActionButton label="example-secondary-label" />);
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
+  });
+
+  it('should not have basic accessibility issues with SubtleButton', async () => {
+    const { container } = render(<SubtleButton label="example-subtle-label" />);
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
+  });
+
+  it('should not have basic accessibility issues with Button with Icon', async () => {
+    const { container } = render(
+      <Button appearance="secondary-action-button">
+        <Icon>
+          <IconCalendarEvent />
+        </Icon>
+        Label
+      </Button>,
+    );
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
+  });
+
+  it('should not have basic accessibility issues with IconButton', async () => {
+    const { container } = render(<IconButton label="example-icon-label" />);
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
   });
 });
