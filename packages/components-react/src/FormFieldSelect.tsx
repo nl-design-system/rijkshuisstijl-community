@@ -19,10 +19,10 @@ export interface FormFieldSelectProps
     > {
   errorMessage?: string;
   selectRef?: Ref<HTMLSelectElement>;
-  status?: string;
+  status?: ReactElement | string;
   description?: string;
   input?: ReactElement;
-  label?: string;
+  label: string;
   options?: string[];
 }
 
