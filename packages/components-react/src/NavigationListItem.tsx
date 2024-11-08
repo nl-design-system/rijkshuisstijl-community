@@ -1,7 +1,6 @@
+import { Paragraph } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { forwardRef, HTMLAttributes, ReactElement } from 'react';
-import { Heading } from './Heading';
-import { Paragraph } from './Paragraph';
 import { Icon } from './icon/Icon';
 
 export interface NavigationListItemProps extends HTMLAttributes<HTMLLIElement> {
@@ -17,18 +16,18 @@ export const NavigationListItem = forwardRef<HTMLLIElement, NavigationListItemPr
       <li ref={ref} role="listitem" {...restProps}>
         <a className={clsx('rhc-navigation-list__item', className)} href={href} role={'link'}>
           {typeof icon === 'string' ? (
-            <Icon className={clsx('rhc-navigation-list__item__start-icon')} icon={icon} />
+            <Icon className={'rhc-navigation-list__item__start-icon'} icon={icon} />
           ) : (
-            <Icon className={clsx('rhc-navigation-list__item__start-icon')}>{icon}</Icon>
+            <Icon className={'rhc-navigation-list__item__start-icon'}>{icon}</Icon>
           )}
-          <span className={clsx('rhc-navigation-list__item-content')}>
-            <Heading className={clsx('rhc-navigation-list__item__label')} level={3}>
+          <span className={'rhc-navigation-list__item-content'}>
+            <Paragraph appearance="small" className={'rhc-navigation-list__item__label'}>
               {label}
-            </Heading>
+            </Paragraph>
             <Paragraph appearance="small" className={'rhc-navigation-list__item__description'}>
               {description}
             </Paragraph>
-            <Icon className={clsx('rhc-navigation-list__item__end-icon')} icon={'chevron-right'} />
+            <Icon className={'rhc-navigation-list__item__end-icon'} icon={'chevron-right'} />
           </span>
         </a>
       </li>

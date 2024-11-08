@@ -1,0 +1,50 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.rhc-side-nav {
+  display: var(--rhc-sidenav-display, flex);
+  flex-direction: column;
+  row-gap: var(--rhc-sidenav-row-gap);
+  &__list {
+    list-style: none;
+    margin-block: 0;
+    padding-block: 0;
+    padding-inline: 0;
+  }
+  &__link {
+    align-items: center;
+    color: var(--rhc-sidenav-link-color);
+    column-gap: var(--rhc-sidenav-link-column-gap);
+    display: flex;
+    font-family: var(--rhc-sidenav-link-font-family), sans-serif;
+    font-size: var(--rhc-sidenav-link-font-size);
+    font-weight: var(--rhc-sidenav-link-font-weight);
+    line-height: var(--rhc-sidenav-link-line-height);
+    padding-block-end: var(--rhc-sidenav-link-padding-block-end);
+    padding-block-start: var(--rhc-sidenav-link-padding-block-start);
+    text-decoration: var(--rhc-sidenav-link-text-decoration);
+    &[aria-current="page"] {
+      color: var(--rhc-sidenav-link-current-color);
+      font-weight: var(--rhc-sidenav-link-current-font-weight);
+    }
+    &:active {
+      color: var(--rhc-sidenav-link-active-color);
+      text-decoration: var(--rhc-sidenav-link-active-text-decoration);
+    }
+    &:focus {
+      background-color: var(--rhc-sidenav-link-focus-background-color);
+      color: var(--rhc-sidenav-link-focus-color);
+      text-decoration: var(--rhc-sidenav-link-focus-text-decoration);
+    }
+    &:focus-visible {
+      border-color: var(--rhc-color-focus-border-color);
+      border-width: var(--rhc-border-width-m);
+    }
+    &:hover {
+      color: var(--rhc-sidenav-link-hover-color);
+      text-decoration: var(--rhc-sidenav-link-hover-text-decoration);
+    }
+  }
+}

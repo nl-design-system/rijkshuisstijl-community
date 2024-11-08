@@ -1,8 +1,5 @@
 import {
-  FormField,
-  FormFieldDescription,
   type FormFieldProps,
-  FormLabel,
   Select,
   SelectOption,
   type SelectOptionProps,
@@ -10,7 +7,7 @@ import {
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactElement, Ref, useId } from 'react';
-import { FormFieldErrorMessage } from './FormFieldErrorMessage';
+import { FormField } from './FormField';
 
 export { SelectOption, type SelectOptionProps };
 
@@ -32,16 +29,14 @@ export interface FormFieldSelectProps
 export const FormFieldSelect = forwardRef(
   (
     {
-      label,
       description,
       disabled,
-      errorMessage,
       selectRef,
       status,
       invalid,
+      input,
       children,
       options,
-      input,
       dir,
       defaultValue,
       value,
@@ -59,61 +54,55 @@ export const FormFieldSelect = forwardRef(
     const statusId = useId();
     const errorMessageId = useId();
 
+    const inputComponent: ReactElement = (
+      <Select
+        defaultValue={defaultValue}
+        dir={dir}
+        disabled={disabled}
+        id={id}
+        invalid={invalid}
+        name={name}
+        ref={selectRef}
+        value={value}
+        aria-describedby={
+          clsx({
+            [descriptionId]: description,
+            [errorMessageId]: invalid,
+            [statusId]: status,
+          }) || undefined
+        }
+        className={clsx({
+          'utrecht-select--html-select-rtl': dir === 'rtl',
+        })}
+        onBlur={onBlur}
+        onChange={onChange}
+        onFocus={onFocus}
+        onInput={onInput}
+      >
+        {options?.length
+          ? options.map((option, index) => (
+              <SelectOption disabled={disabled} id={option + index} invalid={invalid} key={index} value={option}>
+                {option}
+              </SelectOption>
+            ))
+          : children}
+      </Select>
+    );
+
     return (
-      <FormField dir={dir} input={input} invalid={invalid} ref={ref} type={'select'} {...restProps}>
-        <div className="utrecht-form-field__label">
-          <FormLabel htmlFor={id}>{label}</FormLabel>
-        </div>
-        {description && (
-          <FormFieldDescription className="utrecht-form-field__description" id={descriptionId}>
-            {description}
-          </FormFieldDescription>
-        )}
-        {invalid && errorMessage && (
-          <FormFieldErrorMessage className="utrecht-form-field__error-message" id={errorMessageId}>
-            {errorMessage}
-          </FormFieldErrorMessage>
-        )}
-        <div className="utrecht-form-field__input">
-          <Select
-            defaultValue={defaultValue}
-            dir={dir}
-            disabled={disabled}
-            id={id}
-            invalid={invalid}
-            name={name}
-            ref={selectRef}
-            value={value}
-            aria-describedby={
-              clsx({
-                [descriptionId]: description,
-                [errorMessageId]: invalid,
-                [statusId]: status,
-              }) || undefined
-            }
-            className={clsx({
-              'utrecht-select--html-select-rtl': dir === 'rtl',
-            })}
-            onBlur={onBlur}
-            onChange={onChange}
-            onFocus={onFocus}
-            onInput={onInput}
-          >
-            {options?.length
-              ? options.map((option, index) => (
-                  <SelectOption disabled={disabled} id={option + index} invalid={invalid} key={index} value={option}>
-                    {option}
-                  </SelectOption>
-                ))
-              : children}
-          </Select>
-        </div>
-        {status && (
-          <div className="utrecht-form-field__status" id={statusId}>
-            {status}
-          </div>
-        )}
-      </FormField>
+      <FormField
+        description={description}
+        descriptionId={descriptionId}
+        dir={dir}
+        errorMessageId={errorMessageId}
+        id={id}
+        input={input ?? inputComponent}
+        invalid={invalid}
+        ref={ref}
+        status={status}
+        statusId={statusId}
+        {...restProps}
+      />
     );
   },
 );

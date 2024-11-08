@@ -19,7 +19,7 @@ export const MessageListItem = forwardRef<HTMLLIElement, MessageListItemProps>(
   ({ label, description, href, metaData, className, withBadge, ...restProps }, ref) => (
     <li ref={ref} role={'listitem'} {...restProps}>
       <a className={clsx('rhc-message-list__item', className)} href={href} role={'link'}>
-        <span className={clsx('rhc-message-list__item-content')}>
+        <span className={'rhc-message-list__item-content'}>
           <Paragraph className={clsx('rhc-message-list__item__label')}>
             {withBadge && <DotBadge {...withBadge} />}
             {label}
@@ -30,7 +30,7 @@ export const MessageListItem = forwardRef<HTMLLIElement, MessageListItemProps>(
           <Paragraph appearance="small" className={'rhc-message-list__item__meta-data'}>
             {metaData}
           </Paragraph>
-          <Icon className={clsx('rhc-message-list__item__end-icon')} icon={'chevron-right'} />
+          <Icon className={'rhc-message-list__item__end-icon'} icon={'chevron-right'} />
         </span>
       </a>
     </li>

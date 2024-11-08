@@ -26,6 +26,7 @@ export const IconenSet: Partial<Record<RijkshuisstijlIconID, ReactNode>> = {
   'delta-omlaag': <Icons.IconCaretDown />,
   'diagonale-pijl': <Icons.IconArrowUpRight />,
   downloaden: <Icons.IconDownload />,
+  inbox: <Icons.IconInbox />,
   'currency-euro': <Icons.IconCurrencyEuro />,
   'externe-link': <Icons.IconExternalLink />,
   favoriet: <Icons.IconHeart />,
