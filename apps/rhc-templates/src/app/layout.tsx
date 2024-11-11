@@ -14,7 +14,7 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
         <title>Rijkshuisstijl demo - Index</title>
       </Head>
       <body>
-        <div className="rhc-theme">{children}</div>;
+        <div className="rhc-theme">{children}</div>
       </body>
     </html>
   );
