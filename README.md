@@ -2,12 +2,12 @@
 
 # Rijkshuisstijl Community Componenten
 
-_Dit project is **niet** goedgekeurd door het Ministerie van Algemene Zaken._
+_Dit project wordt **niet** gesteund door het Ministerie van Algemene Zaken._
 
 **Het toepassen van design-elementen uit dit project is strikt verboden voor organisaties die geen deel uitmaken van de
 centrale overheid van Nederland.**
 
-Dit project maakt deel uit van een gemeenschapsinitiatief om [NL Design System](https://nldesignsystem.nl) componenten
+Dit project maakt deel uit van een samenwerkingsverband om [NL Design System](https://nldesignsystem.nl)-componenten
 te gebruiken voor projecten die moeten voldoen aan de Rijkshuisstijl. Organisaties van de centrale overheid van
 Nederland (
 bijvoorbeeld: [Belastingdienst](https://www.belastingdienst.nl/), [DUO](https://www.duo.nl), [Logius](http://logius.nl), [SVB](https://www.svb.nl/))
@@ -17,11 +17,12 @@ en degenen die door hen zijn ingehuurd voor het ontwikkelen van websites en apps
 
 ### Node
 
-In dit project wordt Node.js versie **_20.10.0_** gebruikt. Met behulp van `nvm` en het `.nvmrc` bestand kun je makkelijk de juiste versie installeren.
+In dit project wordt Node.js versie **_20.10_** gebruikt. Dit project bevat een [.nvmrc](.nvmrc) bestand en helpt je met het
+installeren van de juiste versie met behulp van `nvm`.
 
 - Als je nvm nog niet hebt, [installeer `nvm`](https://github.com/nvm-sh/nvm#install--update-script).
 
-Draai vervolgens het commando:
+Zodra je `nvm` hebt geïnstalleerd, run je het commando:
 
 ```bash
 nvm use
@@ -135,7 +136,7 @@ door [contact op te nemen met het Ministerie van Algemene Zaken](https://www.rij
 We beloven op een manier te handelen die bijdraagt aan een open, gastvrije, diverse, inclusieve en gezonde gemeenschap.
 Lees
 onze [gedragscode](https://github.com/nl-design-system/rijkshuisstijl-community/blob/feature/filter-by-tags/CODE_OF_CONDUCT.md)
-om te lezen wat dat inhoudt.
+als je dat nog niet hebt gedaan.
 
 ## Ontwikkeling
 
@@ -192,8 +193,11 @@ binnen de IT-sector en overheidsorganisaties.
 
 ## Links
 
-- **_Bug gevonden of code bekijken?_** Bezoek onze [GitHub repository](https://github.com/nl-design-system/rijkshuisstijl-community).
+- **_Bug gevonden of code bekijken?_** Bezoek
+  onze [GitHub repository](https://github.com/nl-design-system/rijkshuisstijl-community).
 
-- **_Benieuwd naar onze voortgang?_** Bekijk ons huidige werk op het[Sprint Board](https://github.com/orgs/nl-design-system/projects/59).
+- **_Benieuwd naar onze voortgang?_** Bekijk ons huidige werk op
+  het[Sprint Board](https://github.com/orgs/nl-design-system/projects/59).
 
-- **_Blijf in contact met de community!_** Word lid van de [Code for NL Slack](https://praatmee.codefor.nl/) en join het `#nl-design-system` kanaal om samen te werken met de community.
+- **_Blijf in contact met de community!_** Word lid van de [Code for NL Slack](https://praatmee.codefor.nl/) en join het
+  `#nl-design-system` kanaal om samen te werken met de community.
