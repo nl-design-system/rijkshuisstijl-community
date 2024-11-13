@@ -5,7 +5,7 @@ import { Icon } from './icon/Icon';
 
 export interface AlertProps {
   type: 'info' | 'ok' | 'warning' | 'error';
-  heading?: string;
+  heading?: ReactElement[];
   headingLevel?: 1 | 2 | 3 | 4 | 5;
   textContent?: ReactElement | string;
 }
