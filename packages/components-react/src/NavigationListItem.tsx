@@ -1,12 +1,12 @@
 import { Paragraph } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { forwardRef, HTMLAttributes, ReactElement } from 'react';
+import { forwardRef, HTMLAttributes, ReactNode } from 'react';
 import { Icon } from './icon/Icon';
 
 export interface NavigationListItemProps extends HTMLAttributes<HTMLLIElement> {
-  label: string;
-  description: string;
-  icon: string | ReactElement;
+  label: ReactNode;
+  description: ReactNode;
+  icon: ReactNode;
   href: string;
 }
 
