@@ -90,6 +90,7 @@ export {
 } from './NavBar';
 export { NavigationList, type NavigationListProps } from './NavigationList';
 export { NavigationListItem, type NavigationListItemProps } from './NavigationListItem';
+export { NumberBadge, type NumberBadgeProps } from './NumberBadge';
 export { OrderedList, OrderedListItem, type OrderedListItemProps, type OrderedListProps } from './OrderedList';
 export { PageContent, type PageContentProps } from './PageContent';
 export { PageHeader, type PageHeaderProps } from './PageHeader';

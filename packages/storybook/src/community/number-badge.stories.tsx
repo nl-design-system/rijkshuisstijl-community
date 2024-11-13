@@ -1,10 +1,10 @@
-import { BadgeCounter } from '@rijkshuisstijl-community/components-react';
+import { NumberBadge } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
-import readme from './badge-counter.md?raw';
+import readme from './number-badge.md?raw';
 const meta = {
-  title: 'Rijkshuisstijl/CounterBadge',
-  id: 'rhc-counterBadge',
-  component: BadgeCounter,
+  title: 'Rijkshuisstijl/Number Badge',
+  id: 'rhc-number-badge',
+  component: NumberBadge,
   tags: ['autodocs'],
   argTypes: {
     children: {
@@ -18,7 +18,7 @@ const meta = {
   },
   parameters: {
     status: {
-      type: 'UNSTABLE',
+      type: 'STABLE',
     },
     docs: {
       description: {
@@ -26,19 +26,19 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof BadgeCounter>;
+} satisfies Meta<typeof NumberBadge>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: '2',
+    children: '9',
   },
 };
 
 export const WithValue: Story = {
   args: {
-    children: '2,002',
-    value: '2002',
+    children: '9,009',
+    value: '9009',
   },
 };
