@@ -62,6 +62,8 @@ h1 {
 
   box-sizing: border-box;
   inline-size: 100%;
+  margin-block-end: 80px;
+  margin-block-start: 80px;
   max-inline-size: 64rem;
 }
 
@@ -71,6 +73,9 @@ h1 {
     --utrecht-page-content-padding-block-start: var(--rhc-space-400);
     --utrecht-page-padding-inline-end: var(--rhc-space-200);
     --utrecht-page-padding-inline-start: var(--rhc-space-200);
+
+    margin-block-end: var(--rhc-space-0);
+    margin-block-start: var(--rhc-space-0);
   }
 }
 
