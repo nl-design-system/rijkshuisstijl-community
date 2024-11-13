@@ -1,18 +1,19 @@
 import {
   Article,
-  BreadcrumbNav,
-  BreadcrumbNavLink,
   Card,
   Footer,
   Heading,
+  Hero,
   Icon,
   LinkList,
+  LinkListCard,
   LinkListLink,
   Logo,
   NavBar,
   PageHeader,
   Paragraph,
   Separator,
+  SubNavBar,
 } from '@rijkshuisstijl-community/components-react';
 import { Document, RichText } from '@utrecht/component-library-react';
 
@@ -37,75 +38,94 @@ export default function Details() {
       ></NavBar>
       <div className="rhc-templates-page">
         <Document>
+          <Hero
+            className="rhc-hero-details-template"
+            imageAlt="Tullip field"
+            imageSrc="https://s3-alpha-sig.figma.com/img/b43a/3c14/e7b6de15e1bad99afbc02ab820aee7c5?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=B4iG1tGERyT2uCyTCQwKZE-u0yp5uCcBYGmi7BRVUYNq1HmXG7qwVknrUcL14OF9WEgbf1T7ZHYPo2Je17vrY840gBTmeerOUgPvWeRvzukBzmYhJYye8W9xn6BZoXksV2gKnaIuoLhRjH8Yvuqo61MdSoPfTOedJloKR2J8-MDOjEVaYZEax4qgBixKSn5FBPJvc488cxBVFguL0ywTG9OEPFmVGgMSNc4NG1WE0K32aCs0MIGW-PflphGyRlbtBsKoh4Z~syoyJAsen3MdPJJuByYxfSUqvNAIBYHQYYvVxfWqRZBgGeeUYtKsgFl5yM~yp9z1c0563uST7iT2AQ"
+          >
+            <LinkListCard heading="Veel bekeken" headingLevel={2}>
+              <LinkList>
+                <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                  Wat zijn de wettelijke regels voor mijn werktijden en rusttijden?
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                  Wat zijn de wettelijke regels voor pauzes tijdens mijn werk?
+                </LinkListLink>
+              </LinkList>
+            </LinkListCard>
+          </Hero>
+          <SubNavBar
+            className="rhc-subnavbar-details-template"
+            columns={[
+              [
+                {
+                  href: '#',
+                  label: 'Regels voor rijtijden en rusttijden bij wegvervoer',
+                },
+                {
+                  href: '#',
+                  label: 'Vraag en antwoord',
+                },
+              ],
+              [
+                {
+                  href: '#',
+                  label: 'Documenten',
+                },
+              ],
+            ]}
+          />
           <div className="rhc-templates-background-color-white">
             <div className="rhc-templates-main-content">
               <div className="utrecht-page-content rhc-templates-page-content">
-                <div className="rhc-templates-spacing-2">
-                  <PageHeader className="rhc-page-header">
-                    <BreadcrumbNav>
-                      <BreadcrumbNavLink href="/" index={0} rel="home">
-                        Home
-                      </BreadcrumbNavLink>
-                      <BreadcrumbNavLink href="/a/" index={1}>
-                        Onderwerpen
-                      </BreadcrumbNavLink>
-                      <BreadcrumbNavLink href="/a/b/" index={2} rel="up">
-                        Werktijden
-                      </BreadcrumbNavLink>
-                    </BreadcrumbNav>
-                    <div>
-                      <div>
-                        <Heading level={1}>Veel bekeken</Heading>
+                <Article>
+                  <RichText>
+                    <Paragraph lead>
+                      De Arbeidstijdenwet geeft regels voor werktijden, pauzes en rusttijden van werknemers. Met deze
+                      regels wil de Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de combinatie
+                      van werk, privé en zorgtaken gemakkelijker maken.
+                    </Paragraph>
+                    <Separator></Separator>
+                    <div className="rhc-templates-spacing-2">
+                      <Heading level={1}>Vraag en antwoord</Heading>
+                      <div className="rhc-linklist-collection">
                         <LinkList>
-                          <LinkListLink>Wat zijn de wettelijke regels voor mijn werktijden en rusttijden?</LinkListLink>
-                          <LinkListLink>Wat zijn de wettelijke regels voor pauzes tijdens mijn werk?</LinkListLink>
+                          <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                            Wat zijn de regels bij consignatie?
+                          </LinkListLink>
+                          <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                            Hoe vaak mag ik nachtdienst hebben?
+                          </LinkListLink>
+                          <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                            Welke brochures zijn er over Arbeidstijdenwet?
+                          </LinkListLink>
+                        </LinkList>
+                        <LinkList>
+                          <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                            Wanneer geldt de Arbeidstijdenwet niet (of gedeeltelijk) voor mij?
+                          </LinkListLink>
+                          <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                            Meer vragen en antwoorden
+                          </LinkListLink>
                         </LinkList>
                       </div>
                     </div>
-                    <div>
-                      <LinkList>
-                        <LinkListLink>Regels voor rijtijden en rusttijden bij wegvervoer</LinkListLink>
-                        <LinkListLink>Vraag en antwoord</LinkListLink>
-                        <LinkListLink>Documenten</LinkListLink>
-                      </LinkList>
+                    <Separator></Separator>
+                    <Heading level={1}>Uitgelicht</Heading>
+                    <div className="rhc-templates-card-container">
+                      <Card
+                        heading="Bijbaan, vakantiewerk en stage door jongeren"
+                        href="#"
+                        imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
+                      ></Card>
+                      <Card
+                        heading="Vakantiedagen en vakantiegeld"
+                        href="#"
+                        imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
+                      ></Card>
                     </div>
-                  </PageHeader>
-                </div>
-                <div className="rhc-templates-spacing-2">
-                  <Article>
-                    <RichText>
-                      <Paragraph>
-                        De Arbeidstijdenwet geeft regels voor werktijden, pauzes en rusttijden van werknemers. Met deze
-                        regels wil de Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de
-                        combinatie van werk, privé en zorgtaken gemakkelijker maken.
-                      </Paragraph>
-                      <Separator></Separator>
-                      <Heading level={1}>Vraag en antwoord</Heading>
-                      <LinkList>
-                        <LinkListLink>Wat zijn de regels bij consignatie (oproepdienst)?</LinkListLink>
-                        <LinkListLink>Hoe vaak mag ik nachtdienst hebben?</LinkListLink>
-                        <LinkListLink>
-                          Welke brochures zijn er over Arbeidstijdenwet en Arbeidstijdenbesluit?
-                        </LinkListLink>
-                        <LinkListLink>Wanneer geldt de Arbeidstijdenwet niet (of gedeeltelijk) voor mij?</LinkListLink>
-                        <LinkListLink>Meer vragen en antwoorden</LinkListLink>
-                      </LinkList>
-                      <Heading level={1}>Uitgelicht</Heading>
-                      <div className="rhc-templates-card-container">
-                        <Card
-                          heading="Bijbaan, vakantiewerk en stage door jongeren"
-                          href="#"
-                          imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
-                        ></Card>
-                        <Card
-                          heading="Vakantiedagen en vakantiegeld"
-                          href="#"
-                          imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
-                        ></Card>
-                      </div>
-                    </RichText>
-                  </Article>
-                </div>
+                  </RichText>
+                </Article>
               </div>
             </div>
           </div>
