@@ -44,14 +44,12 @@ export default function Details() {
             imageSrc="https://s3-alpha-sig.figma.com/img/b43a/3c14/e7b6de15e1bad99afbc02ab820aee7c5?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=B4iG1tGERyT2uCyTCQwKZE-u0yp5uCcBYGmi7BRVUYNq1HmXG7qwVknrUcL14OF9WEgbf1T7ZHYPo2Je17vrY840gBTmeerOUgPvWeRvzukBzmYhJYye8W9xn6BZoXksV2gKnaIuoLhRjH8Yvuqo61MdSoPfTOedJloKR2J8-MDOjEVaYZEax4qgBixKSn5FBPJvc488cxBVFguL0ywTG9OEPFmVGgMSNc4NG1WE0K32aCs0MIGW-PflphGyRlbtBsKoh4Z~syoyJAsen3MdPJJuByYxfSUqvNAIBYHQYYvVxfWqRZBgGeeUYtKsgFl5yM~yp9z1c0563uST7iT2AQ"
           >
             <LinkListCard heading="Veel bekeken" headingLevel={2}>
-              <LinkList>
-                <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                  Wat zijn de wettelijke regels voor mijn werktijden en rusttijden?
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                  Wat zijn de wettelijke regels voor pauzes tijdens mijn werk?
-                </LinkListLink>
-              </LinkList>
+              <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                Wat zijn de wettelijke regels voor mijn werktijden en rusttijden?
+              </LinkListLink>
+              <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                Wat zijn de wettelijke regels voor pauzes tijdens mijn werk?
+              </LinkListLink>
             </LinkListCard>
           </Hero>
           <SubNavBar
@@ -87,7 +85,7 @@ export default function Details() {
                     </Paragraph>
                     <Separator></Separator>
                     <div className="rhc-templates-spacing-3">
-                      <Heading level={1}>Vraag en antwoord</Heading>
+                      <Heading level={2}>Vraag en antwoord</Heading>
                       <div className="rhc-linklist-collection">
                         <LinkList>
                           <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
@@ -111,16 +109,18 @@ export default function Details() {
                       </div>
                     </div>
                     <Separator></Separator>
-                    <Heading level={1}>Uitgelicht</Heading>
+                    <Heading level={2}>Uitgelicht</Heading>
                     <div className="rhc-templates-card-container">
                       <Card
                         heading="Bijbaan, vakantiewerk en stage door jongeren"
                         href="#"
+                        imageAlt="Tullip field"
                         imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
                       ></Card>
                       <Card
                         heading="Vakantiedagen en vakantiegeld"
                         href="#"
+                        imageAlt="Tullip field"
                         imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
                       ></Card>
                     </div>
@@ -131,7 +131,7 @@ export default function Details() {
           </div>
           <Footer
             heading="De Rijksoverheid. Voor Nederland"
-            headingLevel={4}
+            headingLevel={3}
             columns={[
               {
                 heading: 'Service',
