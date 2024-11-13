@@ -86,7 +86,7 @@ export default function Details() {
                       van werk, privé en zorgtaken gemakkelijker maken.
                     </Paragraph>
                     <Separator></Separator>
-                    <div className="rhc-templates-spacing-2">
+                    <div className="rhc-templates-spacing-3">
                       <Heading level={1}>Vraag en antwoord</Heading>
                       <div className="rhc-linklist-collection">
                         <LinkList>
