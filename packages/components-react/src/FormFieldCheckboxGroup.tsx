@@ -6,9 +6,9 @@ import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
 export interface FormFieldCheckboxGroupProps extends FormFieldProps {
   errorMessage?: string;
-  status?: ReactNode;
-  description?: ReactNode;
-  label?: ReactNode;
+  status?: string;
+  description?: string;
+  label?: string;
 }
 const hasManyChildren = (children: ReactNode) => {
   return Children.count(children) > 1;
@@ -22,7 +22,6 @@ export const FormFieldCheckboxGroup = forwardRef(
       status,
       invalid,
       children,
-      dir,
       ...restProps
     }: PropsWithChildren<FormFieldCheckboxGroupProps>,
     ref: ForwardedRef<HTMLDivElement>,
@@ -33,13 +32,7 @@ export const FormFieldCheckboxGroup = forwardRef(
     const errorMessageId = useId();
 
     return (
-      <FormField
-        dir={dir}
-        invalid={invalid}
-        ref={ref}
-        type={hasManyChildren(children) ? 'group' : undefined}
-        {...restProps}
-      >
+      <FormField invalid={invalid} ref={ref} type={hasManyChildren(children) ? 'group' : undefined} {...restProps}>
         <div className="utrecht-form-field__label">
           <FormLabel htmlFor={id}>{label}</FormLabel>
         </div>
@@ -55,7 +48,6 @@ export const FormFieldCheckboxGroup = forwardRef(
         )}
         <div className="utrecht-form-field__input">
           <CheckboxGroup
-            dir={dir}
             id={id}
             role={hasManyChildren(children) ? 'group' : undefined}
             aria-describedby={

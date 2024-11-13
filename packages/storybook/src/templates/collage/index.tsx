@@ -58,11 +58,11 @@ export default function Collage() {
       </div>
       <NavBar
         items={[
-          { href: '/', label: 'Rich Text' },
-          { href: '/form', label: 'Form' },
-          { href: '/details', label: 'Details' },
-          { href: '/collage', label: 'Collage' },
-          { href: '/mijn-omgeving', label: 'Mijn Omgeving' },
+          { id: '1', href: '/', label: 'Rich Text' },
+          { id: '2', href: '/form', label: 'Form' },
+          { id: '3', href: '/details', label: 'Details' },
+          { id: '4', href: '/collage', label: 'Collage' },
+          { id: '5', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
         ]}
       ></NavBar>
       <main className="rhc-templates-page">

@@ -10,20 +10,18 @@ export interface MessageListItemProps extends HTMLAttributes<HTMLLIElement> {
   href: string;
   metaData?: string;
   withBadge?: {
-    ariaLabel: string;
+    'aria-label': string;
     role?: string;
   };
 }
 
 export const MessageListItem = forwardRef<HTMLLIElement, MessageListItemProps>(
-  ({ label, description, href, metaData, className, ...restProps }, ref) => (
+  ({ label, description, href, metaData, className, withBadge, ...restProps }, ref) => (
     <li ref={ref} role={'listitem'} {...restProps}>
       <a className={clsx('rhc-message-list__item', className)} href={href} role={'link'}>
         <span className={'rhc-message-list__item-content'}>
           <Paragraph className={clsx('rhc-message-list__item__label')}>
-            {restProps.withBadge && (
-              <DotBadge aria-label={restProps.withBadge.ariaLabel} role={restProps.withBadge.role} />
-            )}
+            {withBadge && <DotBadge {...withBadge} />}
             {label}
           </Paragraph>
           <Paragraph appearance="small" className={'rhc-message-list__item__description'}>

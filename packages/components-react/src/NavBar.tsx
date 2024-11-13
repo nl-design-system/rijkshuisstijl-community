@@ -1,10 +1,10 @@
 import { ColumnLayout } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
+import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactElement } from 'react';
 import { Heading } from './Heading';
 import { Link } from './Link';
 import { LinkList, LinkListLink } from './LinkList';
-import { Icon } from './icon/Icon';
+import { Icon, IconProps } from './icon/Icon';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   headingItem?: NavBarItemProps;
@@ -13,23 +13,32 @@ export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export interface NavBarLinkProps {
+  id: string;
   label: string;
   href: string;
 }
 
 export interface NavBarItemProps extends NavBarLinkProps, HTMLAttributes<HTMLLIElement> {
-  icon?: ReactNode;
+  icon?: ReactElement<IconProps>;
   subList?: NavbarSubListProps;
   bold?: boolean;
   iconOnly?: boolean;
+  id: string;
 }
 
 interface NavbarSubListProps {
-  sections: { heading: string; headingLevel?: 1 | 2 | 3 | 4 | 5; items: NavBarLinkProps[] }[];
+  sections: SectionProps[];
 }
 
 export interface SubNavBarProps extends HTMLAttributes<HTMLDivElement> {
   columns: NavBarLinkProps[][];
+}
+
+interface SectionProps {
+  id: string;
+  heading: string;
+  headingLevel?: 1 | 2 | 3 | 4 | 5;
+  items: NavBarLinkProps[];
 }
 
 const NavBarItem = forwardRef(
@@ -55,14 +64,14 @@ const NavBarItem = forwardRef(
         </Link>
         {subList && (
           <div className="rhc-nav-bar__sub-list">
-            {subList.sections.map(({ heading, headingLevel = 3, items }) => (
-              <div className="rhc-nav-bar__sub-list-section">
+            {subList.sections.map(({ id, heading, headingLevel = 3, items }) => (
+              <div className="rhc-nav-bar__sub-list-section" key={id}>
                 <Heading className="rhc-nav-bar__sub-list-section-title" level={headingLevel}>
                   {heading}
                 </Heading>
                 <ul className="rhc-nav-bar__sub-list-section-list">
-                  {items.map(({ href, label }) => (
-                    <li className="rhc-nav-bar__sub-list-section-item">
+                  {items.map(({ id, href, label }) => (
+                    <li className="rhc-nav-bar__sub-list-section-item" key={id}>
                       <Link href={href}>{label}</Link>
                     </li>
                   ))}
@@ -88,23 +97,15 @@ export const NavBar = forwardRef(
       <div className="rhc-nav-bar__container">
         <nav className={clsx('rhc-nav-bar', className)} ref={ref} {...restProps}>
           <ul className="rhc-nav-bar__list">
-            {headingItem && (
-              <NavBarItem
-                className="rhc-nav-bar__heading"
-                href={headingItem.href}
-                icon={headingItem.icon}
-                label={headingItem.label}
-                subList={headingItem.subList}
-              />
-            )}
-            {items.map(({ href, label, icon, subList }) => (
-              <NavBarItem href={href} icon={icon} label={label} subList={subList} />
+            {headingItem && <NavBarItem className="rhc-nav-bar__heading" {...headingItem} />}
+            {items.map(({ id, href, label, icon, subList }) => (
+              <NavBarItem href={href} icon={icon} id={id} key={id} label={label} subList={subList} />
             ))}
           </ul>
           {endItems && (
             <ul className="rhc-nav-bar__list rhc-nav-bar__list--end">
-              {endItems.map(({ href, label, icon, subList }) => (
-                <NavBarItem href={href} icon={icon} label={label} subList={subList} />
+              {endItems.map(({ id, href, label, icon, subList }) => (
+                <NavBarItem href={href} icon={icon} id={id} key={id} label={label} subList={subList} />
               ))}
             </ul>
           )}

@@ -15,9 +15,9 @@ export const SkipLink = forwardRef(
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => (
     <UtrechtSkipLink
-      {...restProps}
       className={clsx('rhc-skip-link', { 'rhc-skip-link--visible-on-focus': visibleOnFocus }, className)}
       ref={ref}
+      {...restProps}
     >
       {children}
     </UtrechtSkipLink>

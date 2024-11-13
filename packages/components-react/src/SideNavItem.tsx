@@ -3,10 +3,10 @@ import { forwardRef, HTMLAttributes } from 'react';
 
 export interface SideNavItemProps extends HTMLAttributes<HTMLLIElement> {}
 
-export const SideNavItem = forwardRef<HTMLLIElement, SideNavItemProps>((props, ref) => {
+export const SideNavItem = forwardRef<HTMLLIElement, SideNavItemProps>(({ className, children, ...restProps }, ref) => {
   return (
-    <li role="listitem" {...props} className={clsx('rhc-side-nav__item', props.className)} ref={ref}>
-      {props.children}
+    <li className={clsx('rhc-side-nav__item', className)} ref={ref} role="listitem" {...restProps}>
+      {children}
     </li>
   );
 });

@@ -1,25 +1,27 @@
 import clsx from 'clsx';
-import { AnchorHTMLAttributes, forwardRef, ReactNode } from 'react';
+import { AnchorHTMLAttributes, forwardRef } from 'react';
 import { Icon } from './icon/Icon';
 
 export interface SideNavLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   current?: boolean;
-  icon?: ReactNode;
+  icon?: string;
 }
 
-export const SideNavLink = forwardRef<HTMLAnchorElement, SideNavLinkProps>((props, ref) => {
-  return (
-    <a
-      aria-current={props.current || props['aria-current'] ? 'page' : undefined}
-      role="link"
-      {...props}
-      className={clsx('rhc-side-nav__link', props.className)}
-      ref={ref}
-    >
-      {props.icon && <Icon icon={props.icon}></Icon>}
-      {props.children}
-    </a>
-  );
-});
+export const SideNavLink = forwardRef<HTMLAnchorElement, SideNavLinkProps>(
+  ({ current, className, icon, children, 'aria-current': ariaCurrent, ...restProps }, ref) => {
+    return (
+      <a
+        aria-current={current || ariaCurrent ? 'page' : undefined}
+        className={clsx('rhc-side-nav__link', className)}
+        ref={ref}
+        role="link"
+        {...restProps}
+      >
+        {icon && <Icon icon={icon}></Icon>}
+        {children}
+      </a>
+    );
+  },
+);
 
 SideNavLink.displayName = 'SideNavLink';

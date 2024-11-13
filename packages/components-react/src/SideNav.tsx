@@ -3,10 +3,10 @@ import { forwardRef, HTMLAttributes } from 'react';
 
 export interface SideNavProps extends HTMLAttributes<HTMLElement> {}
 
-export const SideNav = forwardRef<HTMLElement, SideNavProps>((props, ref) => {
+export const SideNav = forwardRef<HTMLElement, SideNavProps>(({ className, children, ...restProps }, ref) => {
   return (
-    <aside role="navigation" {...props} className={clsx('rhc-side-nav', props.className)} ref={ref}>
-      {props.children}
+    <aside className={clsx('rhc-side-nav', className)} ref={ref} role="navigation" {...restProps}>
+      {children}
     </aside>
   );
 });
