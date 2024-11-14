@@ -1,3 +1,4 @@
+import { Paragraph } from '@utrecht/component-library-react';
 import { ChangeEvent, ForwardedRef, forwardRef, PropsWithChildren, useRef, useState } from 'react';
 import { Button, ButtonProps } from './Button';
 import { FileInputItem } from './FileInputItem';
@@ -51,12 +52,20 @@ export const FileInput = forwardRef(
             onChange(event.target.files);
           }}
         />
-        <Button
-          appearance={buttonAppearance ?? 'secondary-action-button'}
-          onClick={() => inputElement.current && inputElement.current.click()}
-        >
-          {buttonText}
-        </Button>
+        <div className="rhc-file-input__button-feedback-container">
+          <Button
+            appearance={buttonAppearance ?? 'secondary-action-button'}
+            onClick={() => inputElement.current && inputElement.current.click()}
+          >
+            {buttonText}
+          </Button>
+          {files.length === 0 && (
+            <Paragraph appearance="small" className="rhc-file-input__feedback">
+              {' '}
+              Geen bestand gekozen{' '}
+            </Paragraph>
+          )}
+        </div>
         <div className="rhc-file-input__items-container">
           {files.map((item: File) => {
             return (

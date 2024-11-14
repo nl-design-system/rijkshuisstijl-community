@@ -4,6 +4,19 @@
   row-gap: var(--rhc-file-input-row-gap);
 }
 
+.rhc-file-input__button-feedback-container {
+  display: flex;
+}
+
+.rhc-file-input__feedback {
+  align-items: center;
+  color: var(--rhc-file-input-feedback-color);
+  display: flex;
+  font-size: var(--rhc-file-input-feedback-font-size);
+  padding-inline-end: var(--rhc-file-input-item-padding-inline-end);
+  padding-inline-start: var(--rhc-file-input-item-padding-inline-start);
+}
+
 .rhc-file-input__item {
   border-color: var(--rhc-file-input-item-border-color);
   border-radius: var(--rhc-file-input-item-border-radius);
