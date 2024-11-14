@@ -4,15 +4,15 @@ import {
   FormLabel,
   FormField as UtrechtFormField,
 } from '@utrecht/component-library-react';
-import { ForwardedRef, forwardRef, PropsWithChildren, ReactElement } from 'react';
+import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
 export interface CustomFormFieldProps extends FormFieldProps {
   label: string;
   description?: string;
   errorMessage?: string;
-  input: ReactElement;
-  status?: ReactElement | string;
+  input: ReactNode;
+  status?: ReactNode;
   invalid?: boolean;
   statusId: string;
   errorMessageId: string;
