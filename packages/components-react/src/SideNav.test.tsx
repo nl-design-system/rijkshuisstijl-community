@@ -15,14 +15,14 @@ describe('SideNav', () => {
   });
 
   it('forwards ref correctly', () => {
-    render(<SideNav />);
+    render(<SideNav data-testid="test-id" />);
 
-    expect(screen.getByRole('navigation')).toBeInstanceOf(HTMLElement);
+    expect(screen.getByTestId('test-id')).toBeInstanceOf(HTMLElement);
   });
   it('applies custom class name', () => {
     const testClassName = 'test-class';
-    render(<SideNav className={testClassName} />);
+    render(<SideNav className={testClassName} data-testid="test-id" />);
 
-    expect(screen.getByRole('navigation')).toHaveClass(testClassName);
+    expect(screen.getByTestId('test-id')).toHaveClass(testClassName);
   });
 });
