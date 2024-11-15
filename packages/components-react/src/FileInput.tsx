@@ -1,7 +1,7 @@
 import { Paragraph } from '@utrecht/component-library-react';
 import { ChangeEvent, ForwardedRef, forwardRef, PropsWithChildren, useRef, useState } from 'react';
 import { Button, ButtonProps } from './Button';
-import { FileInputItem } from './FileInputItem';
+import { File } from './File';
 
 export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
   buttonText: string;
@@ -66,10 +66,10 @@ export const FileInput = forwardRef(
             </Paragraph>
           )}
         </div>
-        <div className="rhc-file-input__items-container">
+        <div className="rhc-files-container">
           {files.map((item: File) => {
             return (
-              <FileInputItem
+              <File
                 allowedFileTypes={allowedFileTypes}
                 file={item}
                 fileSizeErrorMessage={fileSizeErrorMessage}
