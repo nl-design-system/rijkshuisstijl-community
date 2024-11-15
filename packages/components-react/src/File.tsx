@@ -27,9 +27,17 @@ export const File = ({
   const checkFileSize = (file: File) =>
     file.size <= maxFileSizeInBytes || ((errorMessage = fileSizeErrorMessage), (error = true), false);
 
-  const checkFileType = (file: File) =>
-    allowedFileTypes.split(',').includes(`.${extractFileTypeShort(file.type)}`) ||
-    ((errorMessage = fileTypeErrorMessage), (error = true), false);
+  const checkFileType = (file: File) => {
+    const trimmedTypes = allowedFileTypes
+      .trim()
+      .split(',')
+      .map((type) => type.trim());
+
+    return (
+      trimmedTypes.includes(`.${extractFileTypeShort(file.type)}`) ||
+      ((errorMessage = fileTypeErrorMessage), (error = true), false)
+    );
+  };
 
   const formatBytes = (bytes: number): string => {
     const kilobytes: number = bytes / 1024;
