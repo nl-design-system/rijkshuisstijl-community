@@ -130,8 +130,8 @@ export const SubNavBar = forwardRef(
             {columns.map((column: NavBarLinkProps[], index: number) => (
               <div className="rhc-sub-nav-bar__list" key={index}>
                 <LinkList>
-                  {column.map(({ href, label }) => (
-                    <LinkListLink href={href} icon={<Icon icon={'chevron-right'} />}>
+                  {column.map(({ id, href, label }) => (
+                    <LinkListLink href={href} icon={<Icon icon={'chevron-right'} />} key={id}>
                       {label}
                     </LinkListLink>
                   ))}
