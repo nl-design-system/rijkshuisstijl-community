@@ -1,9 +1,9 @@
 import { BadgeCounter } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
-import readme from './counter-badge.md?raw';
+import readme from './badge-counter.md?raw';
 const meta = {
-  title: 'Rijkshuisstijl/Counter Badge',
-  id: 'rhc-counter-badge',
+  title: 'Rijkshuisstijl/CounterBadge',
+  id: 'rhc-counterBadge',
   component: BadgeCounter,
   tags: ['autodocs'],
   argTypes: {
