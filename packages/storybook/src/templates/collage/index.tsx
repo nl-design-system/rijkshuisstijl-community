@@ -9,10 +9,9 @@ import {
   DataListItem,
   DataListKey,
   DataListValue,
-  //FormField,
+  FormField,
   FormFieldCheckboxGroup,
   FormFieldCheckboxOption,
-  FormFieldErrorMessage,
   FormFieldRadioOption,
   FormFieldTextarea,
   FormFieldTextbox,
@@ -43,7 +42,6 @@ import {
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react/dist/esm/tabler-icons-react';
-import { FormField } from '@utrecht/component-library-react';
 import { Document, RichText } from '@utrecht/component-library-react';
 
 export default function Collage() {
@@ -145,13 +143,22 @@ export default function Collage() {
                     </IconButton>
                     <FormFieldTextbox description="Description" label="Name"></FormFieldTextbox>
                     <FormFieldTextarea label="Label" rows={4} />
-                    <FormField label="Label">
-                      <FormFieldRadioOption label="Label"></FormFieldRadioOption>
-                      <FormFieldRadioOption label="Label"></FormFieldRadioOption>
-                      <FormFieldRadioOption label="Label"></FormFieldRadioOption>
-                      <FormFieldRadioOption label="Label"></FormFieldRadioOption>
-                      <FormFieldRadioOption label="Label"></FormFieldRadioOption>
-                    </FormField>
+                    <FormField
+                      description="Form Field Radio Options"
+                      descriptionId="description-id"
+                      errorMessageId="error-id"
+                      invalid={false}
+                      label="Label"
+                      statusId="status-id"
+                      input={
+                        <>
+                          <FormFieldRadioOption label="Option 1" name="group1" value="option1" />
+                          <FormFieldRadioOption label="Option 2" name="group1" value="option2" />
+                          <FormFieldRadioOption label="Option 3" name="group1" value="option3" />
+                          <FormFieldRadioOption label="Option 4" name="group1" value="option4" />
+                        </>
+                      }
+                    />
                     <FormFieldCheckboxGroup description="Description" label="Label">
                       <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
                       <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
@@ -167,10 +174,16 @@ export default function Collage() {
                         </LinkList>
                       </Paragraph>
                     </Alert>
-                    <FormField description="Description" label="Label">
-                      <FormFieldErrorMessage>Error message</FormFieldErrorMessage>
-                      <Textbox invalid></Textbox>
-                    </FormField>
+                    <FormField
+                      description="Description"
+                      descriptionId="description-id"
+                      errorMessage="Error message"
+                      errorMessageId="error-id"
+                      input={<Textbox invalid />}
+                      invalid={true}
+                      label="Label"
+                      statusId="status-id"
+                    />
                     <DataList>
                       <DataListItem>
                         <DataListKey>Key</DataListKey>
