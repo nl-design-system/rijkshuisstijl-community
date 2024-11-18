@@ -15,7 +15,7 @@ import {
   Separator,
   SubNavBar,
 } from '@rijkshuisstijl-community/components-react';
-import { Document, RichText } from '@utrecht/component-library-react';
+import { ColumnLayout, Document, RichText } from '@utrecht/component-library-react';
 
 export default function Details() {
   return (
@@ -92,27 +92,29 @@ export default function Details() {
                     <Separator></Separator>
                     <div className="rhc-templates-spacing-3">
                       <Heading level={2}>Vraag en antwoord</Heading>
-                      <div className="rhc-linklist-collection">
-                        <LinkList>
-                          <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                            Wat zijn de regels bij consignatie?
-                          </LinkListLink>
-                          <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                            Hoe vaak mag ik nachtdienst hebben?
-                          </LinkListLink>
-                          <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                            Welke brochures zijn er over Arbeidstijdenwet?
-                          </LinkListLink>
-                        </LinkList>
-                        <LinkList>
-                          <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                            Wanneer geldt de Arbeidstijdenwet niet (of gedeeltelijk) voor mij?
-                          </LinkListLink>
-                          <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                            Meer vragen en antwoorden
-                          </LinkListLink>
-                        </LinkList>
-                      </div>
+                      <ColumnLayout>
+                        <div className="rhc-linklist-collection">
+                          <LinkList>
+                            <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                              Wat zijn de regels bij consignatie?
+                            </LinkListLink>
+                            <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                              Hoe vaak mag ik nachtdienst hebben?
+                            </LinkListLink>
+                            <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                              Welke brochures zijn er over Arbeidstijdenwet?
+                            </LinkListLink>
+                          </LinkList>
+                          <LinkList>
+                            <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                              Wanneer geldt de Arbeidstijdenwet niet (of gedeeltelijk) voor mij?
+                            </LinkListLink>
+                            <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                              Meer vragen en antwoorden
+                            </LinkListLink>
+                          </LinkList>
+                        </div>
+                      </ColumnLayout>
                     </div>
                     <Separator></Separator>
                     <Heading level={2}>Uitgelicht</Heading>
