@@ -38,7 +38,7 @@ type Story = StoryObj<typeof meta>;
 export const Tabel: Story = {
   args: {
     children: [
-      <TableHeader>
+      <TableHeader key="thead-1">
         <TableRow>
           <TableHeaderCell scope="col">Header</TableHeaderCell>
           <TableHeaderCell scope="col">Header</TableHeaderCell>
@@ -47,7 +47,7 @@ export const Tabel: Story = {
         </TableRow>
       </TableHeader>,
 
-      <TableBody>
+      <TableBody key="tbody-1">
         <TableRow>
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
@@ -74,8 +74,8 @@ export const Tabel: Story = {
 export const Caption: Story = {
   args: {
     children: [
-      <TableCaption> Caption</TableCaption>,
-      <TableHeader>
+      <TableCaption key="caption-1"> Caption</TableCaption>,
+      <TableHeader key="thead-2">
         <TableRow>
           <TableHeaderCell scope="col">Header</TableHeaderCell>
           <TableHeaderCell scope="col">Header</TableHeaderCell>
@@ -84,7 +84,7 @@ export const Caption: Story = {
         </TableRow>
       </TableHeader>,
 
-      <TableBody>
+      <TableBody key="tbody-2">
         <TableRow>
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
@@ -111,8 +111,8 @@ export const Caption: Story = {
 export const Footer: Story = {
   args: {
     children: [
-      <TableCaption> footer</TableCaption>,
-      <TableHeader>
+      <TableCaption key="caption-2"> footer</TableCaption>,
+      <TableHeader key="thead-3">
         <TableRow>
           <TableHeaderCell scope="col">Header</TableHeaderCell>
           <TableHeaderCell scope="col">Header</TableHeaderCell>
@@ -120,7 +120,7 @@ export const Footer: Story = {
         </TableRow>
       </TableHeader>,
 
-      <TableBody>
+      <TableBody key="tbody-3">
         <TableRow>
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
@@ -137,7 +137,7 @@ export const Footer: Story = {
           <TableCell>Label</TableCell>
         </TableRow>
       </TableBody>,
-      <TableFooter>
+      <TableFooter key="tfoot-1">
         <TableRow>
           <TableCell>Footer</TableCell>
           <TableCell>Footer</TableCell>
@@ -150,8 +150,8 @@ export const Footer: Story = {
 export const Sorting: Story = {
   args: {
     children: [
-      <TableCaption>Sorting</TableCaption>,
-      <TableHeader>
+      <TableCaption key="caption-3">Sorting</TableCaption>,
+      <TableHeader key="thead-4">
         <TableRow>
           <TableHeaderCell withSorting aria-sort={'none'} scope="col">
             Header
@@ -162,7 +162,7 @@ export const Sorting: Story = {
         </TableRow>
       </TableHeader>,
 
-      <TableBody>
+      <TableBody key="tbody-4">
         <TableRow>
           <TableHeaderCell scope={'row'}>Label-1</TableHeaderCell>
           <TableCell>Label</TableCell>
@@ -182,7 +182,7 @@ export const Sorting: Story = {
           <TableCell>Label</TableCell>
         </TableRow>
       </TableBody>,
-      <TableFooter>
+      <TableFooter key="tfoot-1">
         <TableRow>
           <TableCell>Footer</TableCell>
           <TableCell>Footer</TableCell>
@@ -196,8 +196,8 @@ export const Sorting: Story = {
 export const SortingDescending: Story = {
   args: {
     children: [
-      <TableCaption>Sorting Descending</TableCaption>,
-      <TableHeader>
+      <TableCaption key="caption-4">Sorting Descending</TableCaption>,
+      <TableHeader key="thead-5">
         <TableRow>
           <TableHeaderCell withSorting aria-sort={'descending'} scope="col">
             Header
@@ -208,7 +208,7 @@ export const SortingDescending: Story = {
         </TableRow>
       </TableHeader>,
 
-      <TableBody>
+      <TableBody key="tbody-5">
         <TableRow>
           <TableHeaderCell scope={'row'}>Label-3</TableHeaderCell>
           <TableCell>Label</TableCell>
@@ -228,7 +228,7 @@ export const SortingDescending: Story = {
           <TableCell>Label</TableCell>
         </TableRow>
       </TableBody>,
-      <TableFooter>
+      <TableFooter key="tfoot-2">
         <TableRow>
           <TableCell>Footer</TableCell>
           <TableCell>Footer</TableCell>
@@ -242,8 +242,8 @@ export const SortingDescending: Story = {
 export const SortingAscending: Story = {
   args: {
     children: [
-      <TableCaption>Sorting Ascending</TableCaption>,
-      <TableHeader>
+      <TableCaption key="caption-6">Sorting Ascending</TableCaption>,
+      <TableHeader key="thead-6">
         <TableRow>
           <TableHeaderCell withSorting aria-sort={'ascending'} scope="col">
             Header
@@ -254,7 +254,7 @@ export const SortingAscending: Story = {
         </TableRow>
       </TableHeader>,
 
-      <TableBody>
+      <TableBody key="tbody-6">
         <TableRow>
           <TableHeaderCell scope={'row'}>Label-1</TableHeaderCell>
           <TableCell>Label</TableCell>
@@ -274,7 +274,7 @@ export const SortingAscending: Story = {
           <TableCell>Label</TableCell>
         </TableRow>
       </TableBody>,
-      <TableFooter>
+      <TableFooter key="tfoot-3">
         <TableRow>
           <TableCell>Footer</TableCell>
           <TableCell>Footer</TableCell>
@@ -289,8 +289,8 @@ export const SortingAscending: Story = {
 export const Alignment: Story = {
   args: {
     children: [
-      <TableCaption>Alignment</TableCaption>,
-      <TableHeader>
+      <TableCaption key="caption-7">Alignment</TableCaption>,
+      <TableHeader key="thead-7">
         <TableRow>
           <TableHeaderCell scope="col">Header</TableHeaderCell>
           <TableHeaderCell scope="col">Header</TableHeaderCell>
@@ -300,19 +300,19 @@ export const Alignment: Story = {
           </TableHeaderCell>
         </TableRow>
       </TableHeader>,
-      <TableBody>
+      <TableBody key="tbody-7">
+        <TableRow>
+          <TableCell>Label</TableCell>
+          <TableCell>Labedddl</TableCell>
+          <TableCell>Label</TableCell>
+          <TableCell alignCell={'end'}>Label</TableCell>
+        </TableRow>
         <TableRow>
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
           <TableCell alignCell={'end'}>Label</TableCell>
-        </TableRow>{' '}
-        <TableRow>
-          <TableCell>Label</TableCell>
-          <TableCell>Label</TableCell>
-          <TableCell>Label</TableCell>
-          <TableCell alignCell={'end'}>Label</TableCell>
-        </TableRow>{' '}
+        </TableRow>
         <TableRow>
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
@@ -327,8 +327,8 @@ export const Alignment: Story = {
 export const Content: Story = {
   args: {
     children: [
-      <TableCaption>Content</TableCaption>,
-      <TableHeader>
+      <TableCaption key="caption-8">Content</TableCaption>,
+      <TableHeader key="thead-8">
         <TableRow>
           <TableHeaderCell scope="col">Header</TableHeaderCell>
           <TableHeaderCell scope="col">Header</TableHeaderCell>
@@ -336,7 +336,7 @@ export const Content: Story = {
           <TableHeaderCell scope="col">Header</TableHeaderCell>
         </TableRow>
       </TableHeader>,
-      <TableBody>
+      <TableBody key="tbody-8">
         <TableRow>
           <TableCell>
             <Link href={'#'}>Label</Link>
@@ -344,7 +344,7 @@ export const Content: Story = {
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
-        </TableRow>{' '}
+        </TableRow>
         <TableRow>
           <TableCell>
             <Link href={'#'}>Label</Link>
@@ -352,7 +352,7 @@ export const Content: Story = {
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
-        </TableRow>{' '}
+        </TableRow>
         <TableRow>
           <TableCell>
             <Link href={'#'}>Label</Link>
@@ -368,8 +368,10 @@ export const Content: Story = {
 export const RightToLeft: Story = {
   args: {
     children: [
-      <TableCaption dir={'rtl'}>من اليمين إلى اليسار</TableCaption>,
-      <TableHeader dir={'rtl'}>
+      <TableCaption dir={'rtl'} key="caption-9">
+        من اليمين إلى اليسار
+      </TableCaption>,
+      <TableHeader dir={'rtl'} key="thead-9">
         <TableRow>
           <TableHeaderCell alignCell={'end'} scope="col">
             العنوان
@@ -381,7 +383,7 @@ export const RightToLeft: Story = {
         </TableRow>
       </TableHeader>,
 
-      <TableBody dir={'rtl'}>
+      <TableBody dir={'rtl'} key="tbody-9">
         <TableRow>
           <TableCell alignCell={'end'}>وسم</TableCell>
           <TableCell>وسم</TableCell>

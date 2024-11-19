@@ -50,9 +50,9 @@ export const Default: Story = {
 export const MetCustomElementenLijst: Story = {
   args: {
     children: [
-      <div>
-        <FormLabel>Bestand toevoegen</FormLabel>
-        <UnorderedList>
+      <div key="div-1">
+        <FormLabel key="form-label-1">Bestand toevoegen</FormLabel>
+        <UnorderedList key="ul-1">
           <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
           <UnorderedListItem>Een bestand mag maximaal 10MB groot zijn.</UnorderedListItem>
           <UnorderedListItem>
@@ -72,25 +72,29 @@ export const MetCustomElementenLijst: Story = {
 export const MetCustomElementenParagraafEnAccordion: Story = {
   args: {
     children: [
-      <div>
-        <Heading level={2}>Bestanden uploaden</Heading>
-        <Paragraph>Hier kan je meerdere bestanden uploaden. Bestanden mogen niet groter dan 10 MB zijn.</Paragraph>
+      <div key="div-2">
+        <Heading key="h-1" level={2}>
+          Bestanden uploaden
+        </Heading>
+        <Paragraph key="p-1">
+          Hier kan je meerdere bestanden uploaden. Bestanden mogen niet groter dan 10 MB zijn.
+        </Paragraph>
         <AccordionProvider
           appearance=""
           sections={[
             {
               label: 'Bestandstypen die worden toegestaan.',
               body: [
-                <UnorderedList>
-                  <UnorderedListItem>.doc</UnorderedListItem>
-                  <UnorderedListItem>.docx</UnorderedListItem>
-                  <UnorderedListItem>.xlsx</UnorderedListItem>
-                  <UnorderedListItem>.pdf</UnorderedListItem>
-                  <UnorderedListItem>.zip</UnorderedListItem>
-                  <UnorderedListItem>.jpg</UnorderedListItem>
-                  <UnorderedListItem>.png</UnorderedListItem>
-                  <UnorderedListItem>.bmp</UnorderedListItem>
-                  <UnorderedListItem>.gif</UnorderedListItem>
+                <UnorderedList key="ul-2">
+                  <UnorderedListItem key="li-4">.doc</UnorderedListItem>
+                  <UnorderedListItem key="li-5">.docx</UnorderedListItem>
+                  <UnorderedListItem key="li-6">.xlsx</UnorderedListItem>
+                  <UnorderedListItem key="li-7">.pdf</UnorderedListItem>
+                  <UnorderedListItem key="li-8">.zip</UnorderedListItem>
+                  <UnorderedListItem key="li-9">.jpg</UnorderedListItem>
+                  <UnorderedListItem key="li-10">.png</UnorderedListItem>
+                  <UnorderedListItem key="li-11">.bmp</UnorderedListItem>
+                  <UnorderedListItem key="li-12">.gif</UnorderedListItem>
                 </UnorderedList>,
               ],
             },
@@ -109,7 +113,7 @@ export const MetCustomElementenParagraafEnAccordion: Story = {
 export const MetCallback: Story = {
   args: {
     children: [
-      <Paragraph>
+      <Paragraph key="p-2">
         Dit component heeft een callbackfunctie genaamd &apos;onFilesChange&apos;. Hiermee kan de parent component op de
         hoogte worden gesteld zodra er een nieuw bestand is toegevoegd. Zie de console voor de waarden.
       </Paragraph>,

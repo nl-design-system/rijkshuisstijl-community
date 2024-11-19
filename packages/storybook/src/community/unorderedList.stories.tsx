@@ -28,9 +28,9 @@ type Story = StoryObj<typeof meta>;
 export const DefaultUnorderedList: Story = {
   args: {
     children: [
-      <UnorderedListItem>List item 1</UnorderedListItem>,
-      <UnorderedListItem>List item 2</UnorderedListItem>,
-      <UnorderedListItem>List item 3</UnorderedListItem>,
+      <UnorderedListItem key="li-1">List item 1</UnorderedListItem>,
+      <UnorderedListItem key="li-2">List item 2</UnorderedListItem>,
+      <UnorderedListItem key="li-3">List item 3</UnorderedListItem>,
     ],
   },
 };
@@ -38,15 +38,15 @@ export const DefaultUnorderedList: Story = {
 export const NestedUnorderedList: Story = {
   args: {
     children: [
-      <UnorderedListItem>List item 1</UnorderedListItem>,
-      <UnorderedListItem>
+      <UnorderedListItem key="li-4">List item 1</UnorderedListItem>,
+      <UnorderedListItem key="li-5">
         List item 2
         <UnorderedList nested>
           <UnorderedListItem>Nested List item 1</UnorderedListItem>
           <UnorderedListItem>Nested List item 2</UnorderedListItem>
         </UnorderedList>
       </UnorderedListItem>,
-      <UnorderedListItem>List item 3</UnorderedListItem>,
+      <UnorderedListItem key="li-6">List item 3</UnorderedListItem>,
     ],
   },
 };

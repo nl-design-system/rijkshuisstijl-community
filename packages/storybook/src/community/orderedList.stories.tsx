@@ -28,9 +28,9 @@ type Story = StoryObj<typeof meta>;
 export const DefaultOrderedList: Story = {
   args: {
     children: [
-      <OrderedListItem>Ordered List item 1</OrderedListItem>,
-      <OrderedListItem>Ordered List item 2</OrderedListItem>,
-      <OrderedListItem>Ordered List item 3</OrderedListItem>,
+      <OrderedListItem key="li-1">Ordered List item 1</OrderedListItem>,
+      <OrderedListItem key="li-2">Ordered List item 2</OrderedListItem>,
+      <OrderedListItem key="li-3">Ordered List item 3</OrderedListItem>,
     ],
   },
 };
@@ -38,15 +38,15 @@ export const DefaultOrderedList: Story = {
 export const NestedOrderedList: Story = {
   args: {
     children: [
-      <OrderedListItem>Ordered List item 1</OrderedListItem>,
-      <OrderedListItem>
+      <OrderedListItem key="li-4">Ordered List item 1</OrderedListItem>,
+      <OrderedListItem key="li-5">
         Ordered List item 2
         <OrderedList>
           <OrderedListItem>Order List item 2.1</OrderedListItem>
           <OrderedListItem>Order List item 2.2</OrderedListItem>
         </OrderedList>
       </OrderedListItem>,
-      <OrderedListItem>Ordered List item 3</OrderedListItem>,
+      <OrderedListItem key="li-6">Ordered List item 3</OrderedListItem>,
     ],
   },
 };
