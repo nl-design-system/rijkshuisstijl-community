@@ -50,9 +50,9 @@ export const Default: Story = {
 export const MetCustomElementenLijst: Story = {
   args: {
     children: [
-      <div key="div-1">
-        <FormLabel key="form-label-1">Bestand toevoegen</FormLabel>
-        <UnorderedList key="ul-1">
+      <div key="file-input-example-1">
+        <FormLabel>Bestand toevoegen</FormLabel>
+        <UnorderedList>
           <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
           <UnorderedListItem>Een bestand mag maximaal 10MB groot zijn.</UnorderedListItem>
           <UnorderedListItem>
@@ -72,13 +72,9 @@ export const MetCustomElementenLijst: Story = {
 export const MetCustomElementenParagraafEnAccordion: Story = {
   args: {
     children: [
-      <div key="div-2">
-        <Heading key="h-1" level={2}>
-          Bestanden uploaden
-        </Heading>
-        <Paragraph key="p-1">
-          Hier kan je meerdere bestanden uploaden. Bestanden mogen niet groter dan 10 MB zijn.
-        </Paragraph>
+      <div key="file-input-example-2">
+        <Heading level={2}>Bestanden uploaden</Heading>
+        <Paragraph>Hier kan je meerdere bestanden uploaden. Bestanden mogen niet groter dan 10 MB zijn.</Paragraph>
         <AccordionProvider
           appearance=""
           sections={[
