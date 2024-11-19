@@ -69,6 +69,7 @@ export { FormFieldRadioOption, type FormFieldRadioOptionProps } from './FormFiel
 export { FormFieldSelect, type FormFieldSelectProps, SelectOption, type SelectOptionProps } from './FormFieldSelect';
 export { FormFieldTextarea, type FormFieldTextareaProps, Textarea } from './FormFieldTextarea';
 export { FormFieldTextbox } from './FormFieldTextbox';
+export { FormSummary } from './FormSummary';
 export { Heading, type HeadingProps } from './Heading';
 export { HeadingGroup, type HeadingGroupProps } from './HeadingGroup';
 export { Hero, type HeroProps } from './Hero';
