@@ -5,7 +5,7 @@ export interface SideNavProps extends HTMLAttributes<HTMLElement> {}
 
 export const SideNav = forwardRef<HTMLElement, SideNavProps>(({ className, children, ...restProps }, ref) => {
   return (
-    <aside className={clsx('rhc-side-nav', className)} ref={ref} role="navigation" {...restProps}>
+    <aside className={clsx('rhc-side-nav', className)} ref={ref} {...restProps}>
       {children}
     </aside>
   );
