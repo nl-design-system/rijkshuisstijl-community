@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { createRef } from 'react';
 import { SideNavItem } from './SideNavItem';
 
 describe('SideNaveItem', () => {
@@ -15,7 +16,7 @@ describe('SideNaveItem', () => {
   });
 
   it('forwards ref correctly', () => {
-    const ref = { current: null };
+    const ref = createRef<HTMLLIElement>();
     render(<SideNavItem ref={ref} />);
 
     expect(ref.current).toBeInstanceOf(HTMLLIElement);

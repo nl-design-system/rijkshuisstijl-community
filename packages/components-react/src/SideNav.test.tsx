@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { createRef } from 'react';
 import { SideNav } from './SideNav';
 
 describe('SideNav', () => {
@@ -15,9 +16,9 @@ describe('SideNav', () => {
   });
 
   it('forwards ref correctly', () => {
-    render(<SideNav data-testid="test-id" />);
-
-    expect(screen.getByTestId('test-id')).toBeInstanceOf(HTMLElement);
+    const ref = createRef<HTMLElement>();
+    render(<SideNav ref={ref} />);
+    expect(ref.current).toBeInstanceOf(HTMLElement);
   });
   it('applies custom class name', () => {
     const testClassName = 'test-class';
