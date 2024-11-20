@@ -24,8 +24,8 @@ describe('SideNaveItem', () => {
 
   it('applies custom class name', () => {
     const testClassName = 'test-class';
-    render(<SideNavItem className={testClassName} />);
+    render(<SideNavItem className={testClassName} data-testid="test-id" />);
 
-    expect(screen.getByRole('listitem')).toHaveClass(testClassName);
+    expect(screen.getByTestId('test-id')).toHaveClass(testClassName);
   });
 });
