@@ -3,8 +3,8 @@ import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
 export interface CustomFormFieldProps extends FormFieldProps {
-  label: string;
-  description?: string;
+  label: ReactNode;
+  description?: ReactNode;
   errorMessage?: string;
   input: ReactNode;
   status?: ReactNode;
