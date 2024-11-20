@@ -120,7 +120,6 @@ const meta = {
         disabled={disabled || undefined}
         errorMessage={errorMessage || undefined}
         invalid={invalid || undefined}
-        key="form-field-1"
         label={label || undefined}
         name={name || undefined}
         options={options || undefined}
