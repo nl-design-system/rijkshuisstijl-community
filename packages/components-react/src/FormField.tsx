@@ -1,15 +1,10 @@
-import {
-  FormFieldDescription,
-  type FormFieldProps,
-  FormLabel,
-  FormField as UtrechtFormField,
-} from '@utrecht/component-library-react';
+import { type FormFieldProps, FormLabel, FormField as UtrechtFormField } from '@utrecht/component-library-react';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
 export interface CustomFormFieldProps extends FormFieldProps {
-  label: string;
-  description?: string;
+  label: ReactNode;
+  description?: ReactNode;
   errorMessage?: string;
   input: ReactNode;
   status?: ReactNode;
@@ -22,9 +17,9 @@ export interface CustomFormFieldProps extends FormFieldProps {
 export const FormField = forwardRef(
   (
     {
+      className,
       errorMessageId,
       statusId,
-      descriptionId,
       invalid,
       input,
       description,
@@ -36,16 +31,12 @@ export const FormField = forwardRef(
     }: PropsWithChildren<CustomFormFieldProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
-    const descriptionComponent = () => {
-      return description && <FormFieldDescription id={descriptionId}>{description}</FormFieldDescription>;
-    };
-
     const labelComponent = <FormLabel htmlFor={id}>{label}</FormLabel>;
 
     return (
-      <UtrechtFormField description={descriptionComponent()} id={id} label={labelComponent} ref={ref}>
+      <UtrechtFormField className={className} description={description} id={id} label={labelComponent} ref={ref}>
         {invalid && errorMessage && <FormFieldErrorMessage id={errorMessageId}>{errorMessage}</FormFieldErrorMessage>}
-        {input && <div>{input}</div>}
+        {input}
         {status && (
           <div className="utrecht-form-field__status" id={statusId}>
             {status}
