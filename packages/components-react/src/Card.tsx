@@ -14,6 +14,7 @@ export interface CardProps extends CardPropsBase {
   button?: ReactNode;
   icon?: ReactNode;
   imageSrc?: string;
+  imageAlt?: string;
   description?: ReactNode;
   metadata?: ReactNode;
   linkLabel?: string;
@@ -59,6 +60,7 @@ const DefaultCard = forwardRef(
       imageSrc,
       icon,
       description,
+      imageAlt,
       metadata,
       linkLabel,
       button,
@@ -78,7 +80,9 @@ const DefaultCard = forwardRef(
         {...restProps}
       >
         <div className="rhc-card__content">
-          <div className="rhc-card__image-container">{<Image className="rhc-card__image" src={imageSrc} />}</div>
+          <div className="rhc-card__image-container">
+            {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
+          </div>
           <div className="rhc-card__icon">{icon}</div>
           <div className="rhc-card__heading">{heading}</div>
           <div className="rhc-card__description">{description}</div>

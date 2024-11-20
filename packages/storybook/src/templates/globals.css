@@ -1,3 +1,5 @@
+@import "./details/index.css";
+
 /* global CSS here */
 body {
   display: flex;
@@ -55,8 +57,11 @@ h1 {
   --utrecht-page-padding-inline-end: var(--rhc-space-700);
   --utrecht-page-padding-inline-start: var(--rhc-space-700);
 
+  box-sizing: border-box;
+  inline-size: 100%;
   margin-block-end: 80px;
   margin-block-start: 80px;
+  max-inline-size: 64rem;
 }
 
 @media (width <= 780px) {
@@ -66,8 +71,8 @@ h1 {
     --utrecht-page-padding-inline-end: var(--rhc-space-200);
     --utrecht-page-padding-inline-start: var(--rhc-space-200);
 
-    margin-block-end: 0;
-    margin-block-start: 0;
+    margin-block-end: var(--rhc-space-0);
+    margin-block-start: var(--rhc-space-0);
   }
 }
 
@@ -96,10 +101,11 @@ h1 {
 }
 
 .rhc-templates-card-container {
-  column-gap: 1.5rem;
+  column-gap: var(--rhc-space-300);
   display: flex;
-  margin-block-end: 4rem;
-  margin-block-start: 1.5rem;
+  margin-block-end: var(--rhc-space-400);
+  margin-block-start: var(--rhc-space-300);
+  row-gap: var(--rhc-space-300);
   @media (width <= 780px) {
     flex-direction: column;
   }
