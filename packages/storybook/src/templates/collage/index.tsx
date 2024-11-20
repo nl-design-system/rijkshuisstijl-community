@@ -143,22 +143,12 @@ export default function Collage() {
                     </IconButton>
                     <FormFieldTextbox description="Description" label="Name"></FormFieldTextbox>
                     <FormFieldTextarea label="Label" rows={4} />
-                    <FormField
-                      description="Form Field Radio Options"
-                      descriptionId="description-id"
-                      errorMessageId="error-id"
-                      invalid={false}
-                      label="Label"
-                      statusId="status-id"
-                      input={
-                        <>
-                          <FormFieldRadioOption label="Option 1" name="group1" value="option1" />
-                          <FormFieldRadioOption label="Option 2" name="group1" value="option2" />
-                          <FormFieldRadioOption label="Option 3" name="group1" value="option3" />
-                          <FormFieldRadioOption label="Option 4" name="group1" value="option4" />
-                        </>
-                      }
-                    />
+
+                    <FormFieldRadioOption label="Option 1" name="group1" value="option1" />
+                    <FormFieldRadioOption label="Option 2" name="group1" value="option2" />
+                    <FormFieldRadioOption label="Option 3" name="group1" value="option3" />
+                    <FormFieldRadioOption label="Option 4" name="group1" value="option4" />
+
                     <FormFieldCheckboxGroup description="Description" label="Label">
                       <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
                       <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>

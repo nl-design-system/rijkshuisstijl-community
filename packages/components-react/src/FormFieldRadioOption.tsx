@@ -1,16 +1,15 @@
-import { FormField, FormFieldDescription, FormLabel } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
-import { FormFieldErrorMessage } from './FormFieldErrorMessage';
+import { FormField } from './FormField';
 import { Radio, RadioProps } from './Radio';
 
 export interface FormFieldRadioOptionProps extends RadioProps {
   errorMessage?: string;
   radioRef?: Ref<HTMLInputElement>;
   status?: ReactNode;
-  description?: ReactNode;
+  description?: string;
   input?: ReactNode;
-  label?: ReactNode;
+  label: string;
   type?: string;
   defaultValue?: string;
 }
@@ -35,46 +34,43 @@ export const FormFieldRadioOption = forwardRef(
     const statusId = useId();
     const errorMessageId = useId();
 
+    const inputComponent: ReactNode = (
+      <div className="utrecht-form-field__input rhc-form-field-radio-option__input">
+        <Radio
+          dir={dir}
+          id={id}
+          invalid={invalid}
+          ref={radioRef}
+          aria-describedby={
+            clsx({
+              [descriptionId]: description,
+              [errorMessageId]: invalid,
+              [statusId]: status,
+            }) || undefined
+          }
+          className={clsx({
+            'utrecht-radio-button--html-radio-button-rtl': dir === 'rtl',
+          })}
+          {...restProps}
+        ></Radio>
+      </div>
+    );
     return (
-      <FormField dir={dir} input={input} invalid={invalid} ref={ref} type={'radio'}>
-        <div className="utrecht-form-field__input rhc-form-field-radio-option__input">
-          <Radio
-            dir={dir}
-            id={id}
-            invalid={invalid}
-            ref={radioRef}
-            aria-describedby={
-              clsx({
-                [descriptionId]: description,
-                [errorMessageId]: invalid,
-                [statusId]: status,
-              }) || undefined
-            }
-            className={clsx({
-              'utrecht-radio-button--html-radio-button-rtl': dir === 'rtl',
-            })}
-            {...restProps}
-          ></Radio>
-        </div>
-        <div className="utrecht-form-field__label">
-          <FormLabel htmlFor={id}>{label}</FormLabel>
-        </div>
-        {description && (
-          <FormFieldDescription className="utrecht-form-field__description" id={descriptionId}>
-            {description}
-          </FormFieldDescription>
-        )}
-        {invalid && errorMessage && (
-          <FormFieldErrorMessage className="utrecht-form-field__error-message" id={errorMessageId}>
-            {errorMessage}
-          </FormFieldErrorMessage>
-        )}
-        {status && (
-          <div className="utrecht-form-field__status" id={statusId}>
-            {status}
-          </div>
-        )}
-      </FormField>
+      <FormField
+        className="utrecht-form-field utrecht-form-field--radio"
+        description={description}
+        descriptionId={descriptionId}
+        dir={dir}
+        errorMessage={errorMessage}
+        errorMessageId={errorMessageId}
+        id={id}
+        invalid={invalid}
+        label={label}
+        ref={ref}
+        statusId={statusId}
+        {...restProps}
+        input={input ?? inputComponent}
+      />
     );
   },
 );
