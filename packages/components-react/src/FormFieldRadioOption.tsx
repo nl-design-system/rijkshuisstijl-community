@@ -7,9 +7,9 @@ export interface FormFieldRadioOptionProps extends RadioProps {
   errorMessage?: string;
   radioRef?: Ref<HTMLInputElement>;
   status?: ReactNode;
-  description?: string;
+  description?: ReactNode;
   input?: ReactNode;
-  label: string;
+  label: ReactNode;
   type?: string;
   defaultValue?: string;
 }
