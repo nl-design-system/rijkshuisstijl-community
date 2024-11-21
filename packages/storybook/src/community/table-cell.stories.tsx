@@ -35,6 +35,9 @@ export default {
   },
   render: (args) => <TableCell {...args} />,
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
         component: readme,

@@ -13,6 +13,9 @@ const meta = {
   component: BreadcrumbNav,
   argTypes: {},
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
         component: readme,

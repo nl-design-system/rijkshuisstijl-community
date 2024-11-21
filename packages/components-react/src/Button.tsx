@@ -1,5 +1,7 @@
 import {
   Button,
+  ButtonLink,
+  type ButtonLinkProps,
   type ButtonProps,
   Icon,
   PrimaryActionButton,
@@ -9,7 +11,15 @@ import {
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
-export { Button, type ButtonProps, PrimaryActionButton, SecondaryActionButton, SubtleButton };
+export {
+  Button,
+  ButtonLink,
+  type ButtonLinkProps,
+  type ButtonProps,
+  PrimaryActionButton,
+  SecondaryActionButton,
+  SubtleButton,
+};
 
 export const IconButton = forwardRef(
   (

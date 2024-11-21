@@ -16,6 +16,9 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {},
   parameters: {
+    status: {
+      type: 'UNSTABLE',
+    },
     docs: {
       description: {
         component: readme,

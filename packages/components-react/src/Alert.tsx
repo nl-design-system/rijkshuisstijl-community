@@ -11,7 +11,7 @@ export interface AlertProps {
 }
 export const Alert = forwardRef(
   (
-    { type, heading, headingLevel, textContent, ...restProps }: PropsWithChildren<AlertProps>,
+    { type, heading, headingLevel, textContent, children, ...restProps }: PropsWithChildren<AlertProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     return (
@@ -44,7 +44,7 @@ export const Alert = forwardRef(
             <Paragraph>{textContent}</Paragraph>
           </div>
         </div>
-        {restProps.children}
+        {children}
       </UtrechtAlert>
     );
   },

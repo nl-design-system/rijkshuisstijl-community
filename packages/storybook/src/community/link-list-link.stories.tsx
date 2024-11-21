@@ -18,6 +18,11 @@ const meta = {
       },
     },
   },
+  parameters: {
+    status: {
+      type: 'STABLE',
+    },
+  },
 } satisfies Meta<typeof LinkListLink>;
 
 export default meta;

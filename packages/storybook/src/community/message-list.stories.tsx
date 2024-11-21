@@ -15,7 +15,7 @@ const meta = {
           href={'#'}
           label={'Pensioenfonds'}
           metaData={'01-05-2024'}
-          withBadge={{ ariaLabel: 'Nieuw', role: 'status' }}
+          withBadge={{ 'aria-label': 'Nieuw', role: 'status' }}
         />
         <MessageListItem description={'Herinnering APK'} href={'#'} label={'RDW'} metaData={'04-04-2024'} />
         <MessageListItem
@@ -28,6 +28,9 @@ const meta = {
     );
   },
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
         component: readme,
@@ -51,7 +54,7 @@ export const SmallContainer: Story = {
           href={'#'}
           label={'Pensioenfonds'}
           metaData={'01-05-2024'}
-          withBadge={{ ariaLabel: 'Nieuw', role: 'status' }}
+          withBadge={{ 'aria-label': 'Nieuw', role: 'status' }}
         />
         <MessageListItem description={'Herinnering APK'} href={'#'} label={'RDW'} metaData={'04-04-2024'} />
         <MessageListItem

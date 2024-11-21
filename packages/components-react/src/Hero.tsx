@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
+import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 import { Heading } from './Heading';
 import { HeadingGroup } from './HeadingGroup';
 import { Image } from './Image';
@@ -9,9 +9,9 @@ export interface HeroProps extends HTMLAttributes<HTMLDivElement> {
   textAlign?: 'start' | 'end';
   imageSrc: string;
   imageAlt: string;
-  heading?: ReactNode;
+  heading: string;
   headingLevel?: 1 | 2 | 3 | 4 | 5;
-  subHeading?: ReactNode;
+  subHeading: string;
   heroMessage?: boolean;
   aspectRatio?: '16 / 9' | '1 / 1' | '4 / 3';
   borderRadiusCorner?: 'start-start' | 'start-end' | 'end-start' | 'end-end';

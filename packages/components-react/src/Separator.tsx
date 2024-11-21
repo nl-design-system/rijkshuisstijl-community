@@ -6,23 +6,20 @@ import clsx from 'clsx';
 import { forwardRef } from 'react';
 
 export interface SeparatorProps extends UtrechtSeparatorProps {
-  /**
-   * Whether the separator should be invisible.
-   */
   invisible?: boolean;
 }
 
-export const Separator = forwardRef<HTMLHRElement, SeparatorProps>((props, ref) => {
+export const Separator = forwardRef<HTMLHRElement, SeparatorProps>(({ invisible, className, ...restProps }, ref) => {
   return (
     <UtrechtSeparator
-      {...props}
       ref={ref}
       className={clsx(
         {
-          'utrecht-separator--invisible': props.invisible,
+          'utrecht-separator--invisible': invisible,
         },
-        props.className,
+        className,
       )}
+      {...restProps}
     />
   );
 });

@@ -28,6 +28,9 @@ const meta = {
   },
   tags: ['autodocs'],
   parameters: {
+    status: {
+      type: 'UNSTABLE',
+    },
     docs: {
       description: {
         component: readme,

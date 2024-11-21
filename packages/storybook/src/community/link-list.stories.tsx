@@ -38,6 +38,11 @@ const meta = {
       },
     },
   },
+  parameters: {
+    status: {
+      type: 'UNSTABLE',
+    },
+  },
   render: LinkListStory,
 } satisfies Meta<typeof LinkListStory>;
 
