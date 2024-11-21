@@ -67,6 +67,9 @@
 .rhc-hero__image {
   @include mixin.rhc-hero__image;
 }
+.rhc-hero__image:not(img[height]) {
+  @include mixin.rhc-hero__image;
+}
 
 .rhc-hero__heading {
   @include mixin.rhc-hero__heading;
