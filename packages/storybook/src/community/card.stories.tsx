@@ -35,13 +35,11 @@ const meta = {
   },
   args: {
     imageSrc: './placeholder.jpg',
-    imageAlt: 'Placeholder Image',
     href: '#',
     title: 'Card Title',
     heading: 'Default Card',
     description: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
     metadata: 'Metadata',
-    linkLabel: 'Label',
   },
   tags: ['autodocs'],
   parameters: {
@@ -58,7 +56,11 @@ const meta = {
 
 export default meta;
 
-export const Default = {};
+export const Default = {
+  args: {
+    linkLabel: 'Label',
+  },
+};
 
 export const FullBleed = {
   args: {
@@ -72,5 +74,6 @@ export const Horizontal = {
   args: {
     heading: 'Heading',
     appearance: 'horizontal',
+    imageAlt: 'Placeholder Image',
   },
 };

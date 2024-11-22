@@ -23,9 +23,9 @@ export default meta;
 export const Default: StoryObj<typeof meta> = {
   args: {
     children: [
-      <FormFieldCheckboxOption label="Checkbox 1" />,
-      <FormFieldCheckboxOption label="Checkbox 2" />,
-      <FormFieldCheckboxOption label="Checkbox 3" />,
+      <FormFieldCheckboxOption key="checkbox-1" label="Checkbox 1" />,
+      <FormFieldCheckboxOption key="checkbox-2" label="Checkbox 2" />,
+      <FormFieldCheckboxOption key="checkbox-3" label="Checkbox 3" />,
     ],
   },
 };
