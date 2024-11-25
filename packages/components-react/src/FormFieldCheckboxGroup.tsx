@@ -63,6 +63,7 @@ export const FormFieldCheckboxGroup = forwardRef(
         invalid={invalid}
         label={label}
         ref={ref}
+        status={status}
         statusId={statusId}
         {...restProps}
         input={input ?? inputComponent}
