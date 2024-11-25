@@ -1,0 +1,23 @@
+.rhc-code-input {
+  block-size: var(--rhc-code-input-size);
+  inline-size: var(--rhc-code-input-size);
+  text-align: center;
+}
+
+.rhc-code-input-group {
+  column-gap: var(--rhc-code-input-group-column-gap);
+  display: flex;
+  flex-direction: row;
+}
+
+.rhc-code-input--hidden {
+  block-size: 0;
+  inline-size: 0;
+  opacity: 0%;
+  position: absolute;
+}
+
+.rhc-code-input-container {
+  display: flex;
+  flex-direction: column;
+}
