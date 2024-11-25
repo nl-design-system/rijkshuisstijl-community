@@ -1,14 +1,14 @@
-import { FormField, FormFieldDescription, FormFieldProps, FormLabel } from '@utrecht/component-library-react';
+import { FormFieldProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { Children, ForwardedRef, forwardRef, PropsWithChildren, ReactNode, useId } from 'react';
 import { CheckboxGroup } from './CheckboxGroup';
-import { FormFieldErrorMessage } from './FormFieldErrorMessage';
+import { FormField } from './FormField';
 
 export interface FormFieldCheckboxGroupProps extends FormFieldProps {
   errorMessage?: string;
   status?: string;
-  description?: string;
-  label?: string;
+  description?: ReactNode;
+  label?: ReactNode;
 }
 const hasManyChildren = (children: ReactNode) => {
   return Children.count(children) > 1;
@@ -19,6 +19,7 @@ export const FormFieldCheckboxGroup = forwardRef(
       label,
       description,
       errorMessage,
+      input,
       status,
       invalid,
       children,
@@ -31,41 +32,38 @@ export const FormFieldCheckboxGroup = forwardRef(
     const statusId = useId();
     const errorMessageId = useId();
 
+    const inputComponent: ReactNode = (
+      <div className="utrecht-form-field__input">
+        <CheckboxGroup
+          id={id}
+          role={hasManyChildren(children) ? 'group' : undefined}
+          aria-describedby={
+            clsx({
+              [descriptionId]: description,
+              [errorMessageId]: invalid && errorMessage,
+              [statusId]: status,
+            }) || undefined
+          }
+        >
+          {children}
+        </CheckboxGroup>
+      </div>
+    );
+
     return (
-      <FormField invalid={invalid} ref={ref} type={hasManyChildren(children) ? 'group' : undefined} {...restProps}>
-        <div className="utrecht-form-field__label">
-          <FormLabel htmlFor={id}>{label}</FormLabel>
-        </div>
-        {description && (
-          <FormFieldDescription className="utrecht-form-field__description" id={descriptionId}>
-            {description}
-          </FormFieldDescription>
-        )}
-        {invalid && errorMessage && (
-          <FormFieldErrorMessage className="utrecht-form-field__error-message" id={errorMessageId}>
-            {errorMessage}
-          </FormFieldErrorMessage>
-        )}
-        <div className="utrecht-form-field__input">
-          <CheckboxGroup
-            id={id}
-            role={hasManyChildren(children) ? 'group' : undefined}
-            aria-describedby={
-              clsx({
-                [descriptionId]: description,
-                [errorMessageId]: invalid && errorMessage,
-              }) || undefined
-            }
-          >
-            {children}
-          </CheckboxGroup>
-        </div>
-        {status && (
-          <div className="utrecht-form-field__status" id={statusId}>
-            {status}
-          </div>
-        )}
-      </FormField>
+      <FormField
+        description={description}
+        descriptionId={descriptionId}
+        errorMessage={errorMessage}
+        errorMessageId={errorMessageId}
+        id={id}
+        invalid={invalid}
+        label={label}
+        ref={ref}
+        statusId={statusId}
+        {...restProps}
+        input={input ?? inputComponent}
+      />
     );
   },
 );
