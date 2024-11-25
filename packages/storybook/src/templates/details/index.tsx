@@ -43,7 +43,7 @@ export default function Details() {
             heading=""
             heroMessage={false}
             imageAlt="Tullip field"
-            imageSrc="https://s3-alpha-sig.figma.com/img/b43a/3c14/e7b6de15e1bad99afbc02ab820aee7c5?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=B4iG1tGERyT2uCyTCQwKZE-u0yp5uCcBYGmi7BRVUYNq1HmXG7qwVknrUcL14OF9WEgbf1T7ZHYPo2Je17vrY840gBTmeerOUgPvWeRvzukBzmYhJYye8W9xn6BZoXksV2gKnaIuoLhRjH8Yvuqo61MdSoPfTOedJloKR2J8-MDOjEVaYZEax4qgBixKSn5FBPJvc488cxBVFguL0ywTG9OEPFmVGgMSNc4NG1WE0K32aCs0MIGW-PflphGyRlbtBsKoh4Z~syoyJAsen3MdPJJuByYxfSUqvNAIBYHQYYvVxfWqRZBgGeeUYtKsgFl5yM~yp9z1c0563uST7iT2AQ"
+            imageSrc="https://s3-alpha-sig.figma.com/img/b43a/3c14/e7b6de15e1bad99afbc02ab820aee7c5?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gRYTRxIGuY347XsazznropOhUnFYMHIo6agvu0yIiwDvPq89bXfq8wnmfW9zkRobul9YpMHILjqg-CN-Npu32qU6rrDjsK~yNEgE99IqKk~N-qEhbR9Argrdg6e0-5UcjOSZqmkkfrTVssHAfoOd6zY2yNhQty18qn~cBVkqkRZHZx1RIKZYTLjLxjZH0NbCxmKveEGanEETEC92OWV8SVfsWx8aYkb8~AvrJl4keNkwWdmpVw26gLLuuvVKHIRkdWzreSlYQkM~Hn470jYUVTosianhVShHPPiDph2XLGRbiReOS4HhGhzQKK2WQbqYRsIUrsSiXLPPusMGPKm7sQ__"
             subHeading=""
           >
             <LinkListCard heading="Veel bekeken" headingLevel={2}>
