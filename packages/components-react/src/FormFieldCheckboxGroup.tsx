@@ -22,6 +22,7 @@ export const FormFieldCheckboxGroup = forwardRef(
       input,
       status,
       invalid,
+      dir,
       children,
       ...restProps
     }: PropsWithChildren<FormFieldCheckboxGroupProps>,
@@ -35,6 +36,7 @@ export const FormFieldCheckboxGroup = forwardRef(
     const inputComponent: ReactNode = (
       <div className="utrecht-form-field__input">
         <CheckboxGroup
+          dir={dir}
           id={id}
           role={hasManyChildren(children) ? 'group' : undefined}
           aria-describedby={
@@ -54,6 +56,7 @@ export const FormFieldCheckboxGroup = forwardRef(
       <FormField
         description={description}
         descriptionId={descriptionId}
+        dir={dir}
         errorMessage={errorMessage}
         errorMessageId={errorMessageId}
         id={id}
