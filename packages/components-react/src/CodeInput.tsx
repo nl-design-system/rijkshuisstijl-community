@@ -40,10 +40,11 @@ export const CodeInput = forwardRef(
     };
 
     return (
-      <div className={'rhc-code-input-container'} ref={ref}>
+      <div className={'rhc-code-input-container'} data-testid={'code-input-container'} ref={ref}>
         <Textbox
           aria-label="code-input"
           className={'rhc-code-input--hidden'}
+          data-testid={'hidden-input'}
           ref={inputRef}
           value={values}
           onChange={handleInputChange}
@@ -57,7 +58,9 @@ export const CodeInput = forwardRef(
           {[...Array(numberOfDigits)].map((_, i) => (
             <Textbox
               aria-label={`code-input-${i}`}
+              data-testid={`input-item`}
               disabled={!isInputFilled(i) && isInputInactive(i)}
+              key={`input-${i}`}
               maxLength={1}
               ref={ref}
               type="text"
@@ -65,6 +68,7 @@ export const CodeInput = forwardRef(
               className={clsx('rhc-code-input', {
                 'utrecht-textbox--focus-visible': isInputSelected(i),
               })}
+              onChange={() => {}}
               onClick={handleCodeInputClick}
             />
           ))}
