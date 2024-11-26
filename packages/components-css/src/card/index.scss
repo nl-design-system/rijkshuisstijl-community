@@ -2,6 +2,10 @@
 
 .rhc-card {
   @include mixin.rhc-card;
+  .utrecht-img:not(img[width]) {
+    block-size: 100%;
+    inline-size: 100%;
+  }
 }
 
 .rhc-card div:empty {

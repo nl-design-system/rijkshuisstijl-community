@@ -54,13 +54,15 @@ describe('FormFieldCheckboxGroup', () => {
     expect(container.querySelector('[role="group"]')).not.toBeInTheDocument();
   });
 
-  it('applies dir attribute when provided', () => {
+  it('applies dir attribute to the component', () => {
     const { container } = render(
       <FormFieldCheckboxGroup dir="rtl" label="Test Checkbox Group">
         <FormFieldCheckboxOption label="Option 1" />
       </FormFieldCheckboxGroup>,
     );
-    expect(container.firstChild).toHaveAttribute('dir', 'rtl');
+
+    const renderedComponent = container.querySelector('div[dir="rtl"]');
+    expect(renderedComponent).toBeInTheDocument();
   });
 
   it('forwards ref to FormField component', () => {

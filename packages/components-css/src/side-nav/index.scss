@@ -39,8 +39,10 @@
       text-decoration: var(--rhc-sidenav-link-focus-text-decoration);
     }
     &:focus-visible {
-      border-color: var(--rhc-color-focus-border-color);
-      border-width: var(--rhc-border-width-m);
+      border-color: var(--rhc-sidenav-link-focus-border-color);
+      border-radius: var(--rhc-sidenav-link-focus-border-radius);
+      border-style: var(--rhc-sidenav-link-focus-border-style);
+      border-width: var(--rhc-sidenav-link-focus-border-width);
     }
     &:hover {
       color: var(--rhc-sidenav-link-hover-color);
