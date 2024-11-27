@@ -1,0 +1,29 @@
+@mixin rhc-code-input__display-flex {
+  display: flex;
+}
+
+@mixin rhc-code-input--hidden {
+  block-size: 0;
+  inline-size: 0;
+  opacity: 0%;
+  position: absolute;
+}
+
+@mixin rhc-code-input-group {
+  column-gap: var(--rhc-code-input-group-column-gap);
+  @include rhc-code-input__display-flex;
+
+  flex-direction: row;
+}
+
+@mixin rhc-code-input-container {
+  @include rhc-code-input__display-flex;
+
+  flex-direction: column;
+}
+
+@mixin rhc-code-input {
+  block-size: var(--rhc-code-input-size);
+  inline-size: var(--rhc-code-input-size);
+  text-align: center;
+}
