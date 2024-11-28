@@ -13,11 +13,6 @@ describe('Footer', () => {
         headingLevel={4}
         columns={[
           {
-            heading: 'Contact',
-            headingLevel: 4,
-            children: [],
-          },
-          {
             heading: 'Service',
             children: [
               <LinkList key="1">
