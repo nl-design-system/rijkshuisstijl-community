@@ -56,6 +56,10 @@ export const CodeInput = forwardRef(
           onFocus={() => {
             setActive(true);
           }}
+          onSelect={(e) => {
+            const val = e.currentTarget.value; // currentTarget is strongly typed
+            e.currentTarget.setSelectionRange(val.length, val.length);
+          }}
         />
 
         <div className={'rhc-code-input-group'}>
