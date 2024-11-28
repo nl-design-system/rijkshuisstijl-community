@@ -29,6 +29,7 @@ export class Hero {
       subHeading,
       heroMessage,
       customName,
+      headingLevel,
     } = this;
 
     return (
@@ -48,7 +49,13 @@ export class Hero {
           {heroMessage && (
             <div class="rhc-hero__message">
               <div>
-                <h3 class={`rhc-hero__heading utrecht-heading-${this.headingLevel}`}>{heading}</h3>
+                <h3
+                  class={clsx(`rhc-hero__heading`, {
+                    [`utrecht-heading-${headingLevel}`]: headingLevel,
+                  })}
+                >
+                  {heading}
+                </h3>
                 <p class="rhc-hero__sub-heading utrecht-paragraph">{subHeading}</p>
               </div>
             </div>

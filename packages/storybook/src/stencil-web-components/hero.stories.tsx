@@ -2,7 +2,7 @@ import { RhcHero } from '@rijkshuisstijl-community/web-components-react';
 import { Meta, StoryObj } from '@storybook/react/*';
 
 const meta: Meta = {
-  title: 'Templates/Hero',
+  title: 'Stencil Web Components/Hero',
   component: RhcHero,
   argTypes: {
     heroMessage: {
