@@ -18,7 +18,7 @@ const meta = {
   },
   argTypes: {},
   args: {
-    numberOfDigits: 4,
+    numberOfDigits: 6,
   },
 } satisfies Meta<typeof CodeInput>;
 
@@ -27,3 +27,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+export const Invalid: Story = {
+  args: {
+    numberOfDigits: 6,
+    inValid: true,
+  },
+};

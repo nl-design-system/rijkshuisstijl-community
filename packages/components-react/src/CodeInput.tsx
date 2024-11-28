@@ -6,10 +6,11 @@ export interface CodeInputGroupProps {
   numberOfDigits: number;
   // eslint-disable-next-line no-unused-vars
   onChange?: (value: string) => void;
+  inValid?: boolean;
 }
 
 export const CodeInput = forwardRef(
-  ({ numberOfDigits, onChange }: CodeInputGroupProps, ref: ForwardedRef<HTMLInputElement>) => {
+  ({ numberOfDigits, onChange, inValid }: CodeInputGroupProps, ref: ForwardedRef<HTMLInputElement>) => {
     const [values, setValues] = useState<string>('');
     const [isActive, setActive] = useState(false);
 
@@ -49,6 +50,9 @@ export const CodeInput = forwardRef(
           value={values}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
+          onBlur={() => {
+            setActive(false);
+          }}
           onFocus={() => {
             setActive(true);
           }}
@@ -60,9 +64,11 @@ export const CodeInput = forwardRef(
               aria-label={`code-input-${i}`}
               data-testid={`input-item`}
               disabled={!isInputFilled(i) && isInputInactive(i)}
+              invalid={inValid}
               key={`input-${i}`}
               maxLength={1}
               ref={ref}
+              tabIndex={-1}
               type="text"
               value={values[i] || ''}
               className={clsx('rhc-code-input', {
