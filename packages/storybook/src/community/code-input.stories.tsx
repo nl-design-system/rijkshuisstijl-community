@@ -19,6 +19,7 @@ const meta = {
   argTypes: {},
   args: {
     numberOfDigits: 6,
+    inValid: false,
   },
 } satisfies Meta<typeof CodeInput>;
 
