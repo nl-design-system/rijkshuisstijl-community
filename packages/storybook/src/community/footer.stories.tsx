@@ -25,7 +25,7 @@ type Story = StoryObj<typeof meta>;
 export const DefaultFooter: Story = {
   args: {
     heading: 'De Rijksoverheid. Voor Nederland',
-    headingLevel: 4,
+    headingLevel: 2,
     background: 'primary-filled',
     columns: [
       {
@@ -83,6 +83,99 @@ export const DefaultFooter: Story = {
             </LinkListLink>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
               Kwetsbaarheid melden
+            </LinkListLink>
+          </LinkList>
+        ),
+      },
+    ],
+  },
+};
+
+export const CustomHeadingFooter: Story = {
+  args: {
+    background: 'primary-filled',
+    columns: [
+      {
+        heading: 'Heading 1',
+        headingLevel: 1,
+        children: (
+          <LinkList>
+            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+              List item 1
+            </LinkListLink>
+            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+              List item 2
+            </LinkListLink>
+            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+              List item 3
+            </LinkListLink>
+          </LinkList>
+        ),
+      },
+      {
+        heading: 'Heading 2',
+        headingLevel: 2,
+        children: (
+          <LinkList>
+            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+              List item 1
+            </LinkListLink>
+            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+              List item 2
+            </LinkListLink>
+            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+              List item 3
+            </LinkListLink>
+          </LinkList>
+        ),
+      },
+      {
+        heading: 'Heading 3',
+        headingLevel: 3,
+        children: (
+          <LinkList>
+            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+              List item 1
+            </LinkListLink>
+            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+              List item 2
+            </LinkListLink>
+            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+              List item 3
+            </LinkListLink>
+          </LinkList>
+        ),
+      },
+      {
+        heading: 'Heading 4',
+        headingLevel: 4,
+        children: (
+          <LinkList>
+            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+              List item 1
+            </LinkListLink>
+            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+              List item 2
+            </LinkListLink>
+            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+              List item 3
+            </LinkListLink>
+          </LinkList>
+        ),
+      },
+      {
+        heading: 'Heading 5',
+        headingLevel: 5,
+        children: (
+          <LinkList>
+            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+              List item 1
+            </LinkListLink>
+            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+              List item 2
+            </LinkListLink>
+            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+              List item 3
             </LinkListLink>
           </LinkList>
         ),
