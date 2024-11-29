@@ -2,7 +2,7 @@ import { RhcHero } from '@rijkshuisstijl-community/web-components-react';
 import { Meta, StoryObj } from '@storybook/react/*';
 
 const meta: Meta = {
-  title: 'Stencil Web Components/Hero',
+  title: 'Web Components Stencil/Hero',
   component: RhcHero,
   argTypes: {
     heroMessage: {
@@ -45,6 +45,18 @@ const meta: Meta = {
       },
     },
   },
+  args: {
+    imageSrc:
+      'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
+    imageAlt: 'Tullip field',
+    heading: 'Heading',
+    subHeading: 'Subtext',
+    heroMessage: true,
+    headingLevel: 3,
+    textAlign: 'start',
+    aspectRatio: '16 / 9',
+    borderRadiusCorner: 'start-start',
+  },
   parameters: {
     status: {
       type: 'UNSTABLE',
@@ -55,13 +67,4 @@ export default meta;
 
 type Story = StoryObj<typeof RhcHero>;
 
-export const Default: Story = {
-  args: {
-    imageSrc:
-      'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
-    imageAlt: 'Tullip field',
-    heading: 'Heading',
-    subHeading: 'Subtext',
-    heroMessage: true,
-  },
-} satisfies Story;
+export const Default: Story = {} satisfies Story;
