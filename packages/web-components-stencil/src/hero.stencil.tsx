@@ -16,7 +16,7 @@ export class Hero {
   @Prop() headingLevel?: 1 | 2 | 3 | 4 | 5 = 3;
   @Prop() subHeading?: string;
   @Prop() heroMessage?: boolean;
-  @Prop() customName?: string;
+  @Prop() customClass?: string;
 
   render() {
     const {
@@ -28,7 +28,7 @@ export class Hero {
       heading,
       subHeading,
       heroMessage,
-      customName,
+      customClass,
       headingLevel,
     } = this;
 
@@ -42,7 +42,7 @@ export class Hero {
               borderRadiusCorner &&
               `rhc-hero--custom-border-radius-corner rhc-hero--border-radius-corner-${borderRadiusCorner}`,
             `rhc-hero--aspect-ratio-${aspectRatio?.replace(' / ', '-')}`,
-            customName,
+            customClass,
           )}
         >
           <img class="rhc-hero__image" src={imageSrc} alt={imageAlt} />
