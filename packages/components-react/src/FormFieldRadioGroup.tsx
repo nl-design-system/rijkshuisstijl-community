@@ -1,32 +1,33 @@
+import { type FormFieldProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
+import { Children, ForwardedRef, forwardRef, PropsWithChildren, ReactNode, useId } from 'react';
 import { FormField } from './FormField';
-import { Radio, RadioProps } from './Radio';
+import { RadioGroup } from './RadioGroup';
 
-export interface FormFieldRadioOptionProps extends RadioProps {
+export interface FormFieldRadioGroupProps extends FormFieldProps {
   errorMessage?: string;
-  radioRef?: Ref<HTMLInputElement>;
   status?: ReactNode;
   description?: ReactNode;
-  input?: ReactNode;
-  label: ReactNode;
-  type?: string;
-  defaultValue?: string;
+  label?: ReactNode;
 }
 
-export const FormFieldRadioOption = forwardRef(
+const hasManyChildren = (children: ReactNode) => {
+  return Children.count(children) > 1;
+};
+
+export const FormFieldRadioGroup = forwardRef(
   (
     {
       label,
       description,
       errorMessage,
-      radioRef,
+      input,
       status,
       invalid,
-      input,
       dir,
+      children,
       ...restProps
-    }: PropsWithChildren<FormFieldRadioOptionProps>,
+    }: PropsWithChildren<FormFieldRadioGroupProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const id = useId();
@@ -35,44 +36,41 @@ export const FormFieldRadioOption = forwardRef(
     const errorMessageId = useId();
 
     const inputComponent: ReactNode = (
-      <div className="utrecht-form-field__input rhc-form-field-radio-option__input">
-        <Radio
+      <div className="utrecht-form-field__input">
+        <RadioGroup
           dir={dir}
           id={id}
-          invalid={invalid}
-          ref={radioRef}
+          role={hasManyChildren(children) ? 'group' : undefined}
           aria-describedby={
             clsx({
               [descriptionId]: description,
-              [errorMessageId]: invalid,
+              [errorMessageId]: invalid && errorMessage,
               [statusId]: status,
             }) || undefined
           }
-          className={clsx({
-            'utrecht-radio-button--html-radio-button-rtl': dir === 'rtl',
-          })}
-          {...restProps}
-        ></Radio>
+        >
+          {children}
+        </RadioGroup>
       </div>
     );
+
     return (
       <FormField
-        className="utrecht-form-field utrecht-form-field--radio"
         description={description}
         descriptionId={descriptionId}
-        dir={dir}
         errorMessage={errorMessage}
         errorMessageId={errorMessageId}
         id={id}
+        input={input ?? inputComponent}
         invalid={invalid}
         label={label}
         ref={ref}
+        status={status}
         statusId={statusId}
         {...restProps}
-        input={input ?? inputComponent}
       />
     );
   },
 );
 
-FormFieldRadioOption.displayName = 'FormFieldRadioOption';
+FormFieldRadioGroup.displayName = 'FormFieldRadioGroup';

@@ -1,33 +1,32 @@
-import { type FormFieldProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { Children, ForwardedRef, forwardRef, PropsWithChildren, ReactNode, useId } from 'react';
-import { CheckboxGroup } from './CheckboxGroup';
+import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
 import { FormField } from './FormField';
+import { Radio, RadioProps } from './Radio';
 
-export interface FormFieldCheckboxGroupProps extends FormFieldProps {
+export interface FormFieldRadioProps extends RadioProps {
   errorMessage?: string;
-  status?: string;
+  radioRef?: Ref<HTMLInputElement>;
+  status?: ReactNode;
   description?: ReactNode;
-  label?: ReactNode;
+  input?: ReactNode;
+  label: ReactNode;
+  type?: string;
+  defaultValue?: string;
 }
 
-const hasManyChildren = (children: ReactNode) => {
-  return Children.count(children) > 1;
-};
-
-export const FormFieldCheckboxGroup = forwardRef(
+export const FormFieldRadio = forwardRef(
   (
     {
       label,
       description,
       errorMessage,
-      input,
+      radioRef,
       status,
       invalid,
+      input,
       dir,
-      children,
       ...restProps
-    }: PropsWithChildren<FormFieldCheckboxGroupProps>,
+    }: PropsWithChildren<FormFieldRadioProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const id = useId();
@@ -36,26 +35,29 @@ export const FormFieldCheckboxGroup = forwardRef(
     const errorMessageId = useId();
 
     const inputComponent: ReactNode = (
-      <div className="utrecht-form-field__input">
-        <CheckboxGroup
+      <div className="utrecht-form-field__input rhc-form-field-radio-option__input">
+        <Radio
           dir={dir}
           id={id}
-          role={hasManyChildren(children) ? 'group' : undefined}
+          invalid={invalid}
+          ref={radioRef}
           aria-describedby={
             clsx({
               [descriptionId]: description,
-              [errorMessageId]: invalid && errorMessage,
+              [errorMessageId]: invalid,
               [statusId]: status,
             }) || undefined
           }
-        >
-          {children}
-        </CheckboxGroup>
+          className={clsx({
+            'utrecht-radio-button--html-radio-button-rtl': dir === 'rtl',
+          })}
+          {...restProps}
+        ></Radio>
       </div>
     );
-
     return (
       <FormField
+        className="utrecht-form-field utrecht-form-field--radio"
         description={description}
         descriptionId={descriptionId}
         dir={dir}
@@ -65,7 +67,6 @@ export const FormFieldCheckboxGroup = forwardRef(
         invalid={invalid}
         label={label}
         ref={ref}
-        status={status}
         statusId={statusId}
         {...restProps}
         input={input ?? inputComponent}
@@ -74,4 +75,4 @@ export const FormFieldCheckboxGroup = forwardRef(
   },
 );
 
-FormFieldCheckboxGroup.displayName = 'FormFieldCheckboxGroup';
+FormFieldRadio.displayName = 'FormFieldRadio';

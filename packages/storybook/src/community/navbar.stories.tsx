@@ -7,7 +7,7 @@ const meta = {
   component: NavBar,
   parameters: {
     status: {
-      type: 'STABLE',
+      type: 'UNSTABLE',
     },
   },
 } satisfies Meta<typeof NavBar>;
