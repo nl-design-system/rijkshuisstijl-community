@@ -44,6 +44,9 @@ const meta: Meta = {
         type: { summary: 'string' },
       },
     },
+    children: {
+      description: 'Children',
+    },
   },
   args: {
     imageSrc:
@@ -56,6 +59,7 @@ const meta: Meta = {
     textAlign: 'start',
     aspectRatio: '16 / 9',
     borderRadiusCorner: 'start-start',
+    children: [],
   },
   parameters: {
     status: {
