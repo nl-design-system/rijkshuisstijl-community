@@ -66,6 +66,9 @@ export class Hero {
             </div>
           )}
         </div>
+        <div class="rhc-hero__children">
+          <slot />
+        </div>
       </div>
     );
   }
