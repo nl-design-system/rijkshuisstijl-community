@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, JSX, Prop } from '@stencil/core';
 import clsx from 'clsx';
 
 @Component({
@@ -49,13 +49,18 @@ export class Hero {
           {heroMessage && (
             <div class="rhc-hero__message">
               <div>
-                <h3
-                  class={clsx(`rhc-hero__heading`, {
-                    [`utrecht-heading-${headingLevel}`]: headingLevel,
-                  })}
-                >
-                  {heading}
-                </h3>
+                {(() => {
+                  const HeadingTag = `h${headingLevel}` as keyof JSX.IntrinsicElements;
+                  return (
+                    <HeadingTag
+                      class={clsx(`rhc-hero__heading`, {
+                        [`utrecht-heading-${headingLevel}`]: headingLevel,
+                      })}
+                    >
+                      {heading}
+                    </HeadingTag>
+                  );
+                })()}
                 <p class="rhc-hero__sub-heading utrecht-paragraph">{subHeading}</p>
               </div>
             </div>
