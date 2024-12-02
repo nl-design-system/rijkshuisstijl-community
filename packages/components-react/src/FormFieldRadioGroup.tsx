@@ -60,7 +60,6 @@ export const FormFieldRadioGroup = forwardRef(
         descriptionId={descriptionId}
         errorMessage={errorMessage}
         errorMessageId={errorMessageId}
-        id={id}
         input={input ?? inputComponent}
         invalid={invalid}
         label={label}

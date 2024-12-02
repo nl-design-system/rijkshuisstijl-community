@@ -13,6 +13,8 @@ describe('FormFieldRadioGroup', () => {
       </FormFieldRadioGroup>,
     );
     expect(screen.getByText('Test Radio Group')).toBeInTheDocument();
+    expect(screen.getByLabelText('Option 1')).toBeInTheDocument();
+    expect(screen.getByLabelText('Option 2')).toBeInTheDocument();
   });
 
   it('renders with description', () => {
@@ -59,5 +61,15 @@ describe('FormFieldRadioGroup', () => {
       </FormFieldRadioGroup>,
     );
     expect(container.querySelector('[dir="rtl"]')).toBeInTheDocument();
+  });
+
+  it('forwards ref to FormField component', () => {
+    const ref = jest.fn();
+    render(
+      <FormFieldRadioGroup label="Test Radio Group" ref={ref}>
+        <FormFieldRadio label="Option 1" />
+      </FormFieldRadioGroup>,
+    );
+    expect(ref).not.toBeNull();
   });
 });

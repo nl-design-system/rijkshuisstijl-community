@@ -35,14 +35,7 @@ export const FormField = forwardRef(
     const labelComponent = <FormLabel htmlFor={id}>{label}</FormLabel>;
 
     return (
-      <UtrechtFormField
-        className={className}
-        description={description}
-        dir={dir}
-        id={id}
-        label={labelComponent}
-        ref={ref}
-      >
+      <UtrechtFormField className={className} description={description} dir={dir} label={labelComponent} ref={ref}>
         {invalid && errorMessage && <FormFieldErrorMessage id={errorMessageId}>{errorMessage}</FormFieldErrorMessage>}
         {input}
         {status && (
