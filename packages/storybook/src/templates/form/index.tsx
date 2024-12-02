@@ -9,7 +9,7 @@ import {
   FieldsetLegend,
   Footer,
   FormFieldCheckboxOption,
-  FormFieldRadioOption,
+  FormFieldRadio,
   FormFieldTextarea,
   FormFieldTextbox,
   Heading,
@@ -118,10 +118,10 @@ export default function Form() {
                     <Fieldset>
                       <FieldsetLegend>Label</FieldsetLegend>
                       <div className="rhc-radio-group">
-                        <FormFieldRadioOption label="Label" name="name" />
-                        <FormFieldRadioOption label="Label" name="name" />
-                        <FormFieldRadioOption label="Label" name="name" />
-                        <FormFieldRadioOption label="Label" name="name" />
+                        <FormFieldRadio label="Label" name="name" />
+                        <FormFieldRadio label="Label" name="name" />
+                        <FormFieldRadio label="Label" name="name" />
+                        <FormFieldRadio label="Label" name="name" />
                       </div>
                     </Fieldset>
                     {/*
