@@ -413,8 +413,8 @@ importers:
         specifier: workspace:*
         version: link:../web-components-stencil
       '@storybook/addon-a11y':
-        specifier: 8.4.5
-        version: 8.4.5(storybook@8.4.5(prettier@3.3.3))
+        specifier: 8.4.6
+        version: 8.4.6(storybook@8.4.5(prettier@3.3.3))
       '@storybook/addon-actions':
         specifier: 8.4.5
         version: 8.4.5(storybook@8.4.5(prettier@3.3.3))
@@ -2512,10 +2512,10 @@ packages:
     peerDependencies:
       '@stencil/core': '>=2.0.0 || >=3.0.0-beta.0 || >= 4.0.0-beta.0 || >= 4.0.0'
 
-  '@storybook/addon-a11y@8.4.5':
-    resolution: {integrity: sha512-lqIOpWJZNR0Ur+2zUcnFAMvdOe7kYEDeXPv1TM7fwEGyzKPYoM/k5xPA2cJCrYwtydxOqqrmn1jUIw0Qdkhuhg==}
+  '@storybook/addon-a11y@8.4.6':
+    resolution: {integrity: sha512-Z6x/yfStplSROgmBTtiJ8LJgTqPgzW3Q7KXi+l+KoZ0pht6Nz9cYfcyygLCaftBk1ZaL7SDDIrjCP0H1NwfYiQ==}
     peerDependencies:
-      storybook: ^8.4.5
+      storybook: ^8.4.6
 
   '@storybook/addon-actions@8.4.5':
     resolution: {integrity: sha512-rbB19uiGJ61XHbKIbS1a9bUS6re5L8rT5NMNeEJhCxXRpFUPrlTXMSoD/Pgcn3ENeEMVZsm8/eCzxAVgAP3Mgg==}
@@ -2527,10 +2527,10 @@ packages:
     peerDependencies:
       storybook: ^8.4.6
 
-  '@storybook/addon-highlight@8.4.5':
-    resolution: {integrity: sha512-sMA7v+4unaKY+5RDhow6lLncJqNX9ZLUnBIt3vzY1ntUsOYVwykAY1Hq4Ysj0luCBXjJJdJ6223ylrycnb7Ilw==}
+  '@storybook/addon-highlight@8.4.6':
+    resolution: {integrity: sha512-m8wedbqDMbwkP99dNHkHAiAUkx5E7FEEEyLPX1zfkhZWOGtTkavXHH235SGp50zD75LQ6eC/BvgegrzxSQa9Wg==}
     peerDependencies:
-      storybook: ^8.4.5
+      storybook: ^8.4.6
 
   '@storybook/addon-interactions@8.4.6':
     resolution: {integrity: sha512-sR2oUSYIGUoAdrHT+fM1zgykhad98bsJ11c79r7HfBMXEPWc1yRcjIMmz8Xz06FMROMfebqduYDf60V++/I0Jw==}
@@ -10820,9 +10820,9 @@ snapshots:
     dependencies:
       '@stencil/core': 4.19.2
 
-  '@storybook/addon-a11y@8.4.5(storybook@8.4.5(prettier@3.3.3))':
+  '@storybook/addon-a11y@8.4.6(storybook@8.4.5(prettier@3.3.3))':
     dependencies:
-      '@storybook/addon-highlight': 8.4.5(storybook@8.4.5(prettier@3.3.3))
+      '@storybook/addon-highlight': 8.4.6(storybook@8.4.5(prettier@3.3.3))
       axe-core: 4.10.2
       storybook: 8.4.5(prettier@3.3.3)
 
@@ -10849,7 +10849,7 @@ snapshots:
       - '@types/react'
       - webpack-sources
 
-  '@storybook/addon-highlight@8.4.5(storybook@8.4.5(prettier@3.3.3))':
+  '@storybook/addon-highlight@8.4.6(storybook@8.4.5(prettier@3.3.3))':
     dependencies:
       '@storybook/global': 5.0.0
       storybook: 8.4.5(prettier@3.3.3)
