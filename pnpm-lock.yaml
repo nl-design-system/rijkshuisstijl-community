@@ -422,8 +422,8 @@ importers:
         specifier: 8.4.5
         version: 8.4.5(@types/react@18.3.12)(storybook@8.4.5(prettier@3.3.3))
       '@storybook/addon-interactions':
-        specifier: 8.4.5
-        version: 8.4.5(storybook@8.4.5(prettier@3.3.3))
+        specifier: 8.4.6
+        version: 8.4.6(storybook@8.4.5(prettier@3.3.3))
       '@storybook/addon-links':
         specifier: 8.4.5
         version: 8.4.5(react@18.3.1)(storybook@8.4.5(prettier@3.3.3))
@@ -2532,10 +2532,10 @@ packages:
     peerDependencies:
       storybook: ^8.4.5
 
-  '@storybook/addon-interactions@8.4.5':
-    resolution: {integrity: sha512-s6R8XVD8LTp+LQTDbhtDjDLE6S44I7FtMLxPdMNwN9VEJjBk01NONLDuGDpNq5o/0bnybA3rMHk9+3afsgzidQ==}
+  '@storybook/addon-interactions@8.4.6':
+    resolution: {integrity: sha512-sR2oUSYIGUoAdrHT+fM1zgykhad98bsJ11c79r7HfBMXEPWc1yRcjIMmz8Xz06FMROMfebqduYDf60V++/I0Jw==}
     peerDependencies:
-      storybook: ^8.4.5
+      storybook: ^8.4.6
 
   '@storybook/addon-links@8.4.5':
     resolution: {integrity: sha512-ac3OtplFdrPw/2jtLnteuVllwu2yCe3sgKJS9AbdYMT/65OW47M7oDnzcpRPsDGufrKlDMBJXXEv4SfTtlT+rg==}
@@ -2617,6 +2617,11 @@ packages:
     peerDependencies:
       storybook: ^8.4.5
 
+  '@storybook/instrumenter@8.4.6':
+    resolution: {integrity: sha512-snXjlgbp065A6KoK9zkjBYEIMCSlN5JefPKzt1FC0rbcbtahhD+iPpqISKhDSczwgOku/JVhVUDp/vU7AIf4mg==}
+    peerDependencies:
+      storybook: ^8.4.6
+
   '@storybook/manager-api@8.4.5':
     resolution: {integrity: sha512-t39JaMy3UX4StbUH/tIDcaflBDxTcyIq853wQtBMhVL3e1+Dw3MIiiG/5bw79HU4R7kSmPVLXIIbV3FmXkq7KQ==}
     peerDependencies:
@@ -2662,6 +2667,11 @@ packages:
     resolution: {integrity: sha512-mHsRc6m60nfcEBsjvUkKz+Jnz0or4WH5jmJ1VL2pGKO4VzESCPqAwDnwDqP2YyeSQ0b/MAKUT5kdoLE2RE2eVw==}
     peerDependencies:
       storybook: ^8.4.5
+
+  '@storybook/test@8.4.6':
+    resolution: {integrity: sha512-MeU1g65YgU66M2NtmEIL9gVeHk+en0k9Hp0wfxEO7NT/WLfaOD5RXLRDJVhbAlrH/6tLeWKIPNh/D26y27vO/g==}
+    peerDependencies:
+      storybook: ^8.4.6
 
   '@storybook/testing-library@0.2.2':
     resolution: {integrity: sha512-L8sXFJUHmrlyU2BsWWZGuAjv39Jl1uAqUHdxmN42JY15M4+XCMjGlArdCCjDe1wpTSW6USYISA9axjZojgtvnw==}
@@ -10837,11 +10847,11 @@ snapshots:
       '@storybook/global': 5.0.0
       storybook: 8.4.5(prettier@3.3.3)
 
-  '@storybook/addon-interactions@8.4.5(storybook@8.4.5(prettier@3.3.3))':
+  '@storybook/addon-interactions@8.4.6(storybook@8.4.5(prettier@3.3.3))':
     dependencies:
       '@storybook/global': 5.0.0
-      '@storybook/instrumenter': 8.4.5(storybook@8.4.5(prettier@3.3.3))
-      '@storybook/test': 8.4.5(storybook@8.4.5(prettier@3.3.3))
+      '@storybook/instrumenter': 8.4.6(storybook@8.4.5(prettier@3.3.3))
+      '@storybook/test': 8.4.6(storybook@8.4.5(prettier@3.3.3))
       polished: 4.3.1
       storybook: 8.4.5(prettier@3.3.3)
       ts-dedent: 2.2.0
@@ -10981,6 +10991,13 @@ snapshots:
       '@storybook/global': 5.0.0
       '@vitest/utils': 2.1.4
       storybook: 8.4.5(prettier@3.3.3)
+    optional: true
+
+  '@storybook/instrumenter@8.4.6(storybook@8.4.5(prettier@3.3.3))':
+    dependencies:
+      '@storybook/global': 5.0.0
+      '@vitest/utils': 2.1.4
+      storybook: 8.4.5(prettier@3.3.3)
 
   '@storybook/manager-api@8.4.5(storybook@8.4.5(prettier@3.3.3))':
     dependencies:
@@ -11038,6 +11055,19 @@ snapshots:
       '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
       '@storybook/instrumenter': 8.4.5(storybook@8.4.5(prettier@3.3.3))
+      '@testing-library/dom': 10.4.0
+      '@testing-library/jest-dom': 6.5.0
+      '@testing-library/user-event': 14.5.2(@testing-library/dom@10.4.0)
+      '@vitest/expect': 2.0.5
+      '@vitest/spy': 2.0.5
+      storybook: 8.4.5(prettier@3.3.3)
+    optional: true
+
+  '@storybook/test@8.4.6(storybook@8.4.5(prettier@3.3.3))':
+    dependencies:
+      '@storybook/csf': 0.1.11
+      '@storybook/global': 5.0.0
+      '@storybook/instrumenter': 8.4.6(storybook@8.4.5(prettier@3.3.3))
       '@testing-library/dom': 10.4.0
       '@testing-library/jest-dom': 6.5.0
       '@testing-library/user-event': 14.5.2(@testing-library/dom@10.4.0)
