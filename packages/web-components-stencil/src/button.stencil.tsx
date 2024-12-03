@@ -13,9 +13,11 @@ export class Button {
   @Prop() type?: string;
   @Prop() hint?: string;
   @Prop() pressed?: boolean;
+  @Prop() label?: string;
+  @Prop() customClass?: string;
 
   render() {
-    const { busy, disabled, type, hint, pressed, appearance } = this;
+    const { label, busy, disabled, type, hint, pressed, appearance, customClass } = this;
 
     return (
       <button
@@ -31,8 +33,13 @@ export class Button {
           hint === 'warning' && 'utrecht-button--warning',
           hint === 'ready' && 'utrecht-button--ready',
           pressed && 'utrecht-button--pressed',
+          customClass,
         )}
+        aria-busy={busy || undefined}
+        aria-pressed={typeof pressed === 'boolean' ? pressed : undefined}
+        type={type || 'button'}
       >
+        {label && <span class="utrecht-button__label">{label}</span>}
         <slot />
       </button>
     );

@@ -1,4 +1,5 @@
 import { RhcButton } from '@rijkshuisstijl-community/web-components-react';
+import { RhcIconbutton } from '@rijkshuisstijl-community/web-components-react';
 import { Meta, StoryObj } from '@storybook/react/*';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
 import { Icon } from '@utrecht/component-library-react';
@@ -133,4 +134,12 @@ export const IconRight: StoryObj<typeof meta> = {
     appearance: 'primary-action-button',
     iconRight: true,
   },
+};
+
+export const IconOnly: StoryObj<typeof RhcIconbutton> = {
+  render: () => (
+    <RhcIconbutton label="calendar">
+      <IconCalendarEvent></IconCalendarEvent>
+    </RhcIconbutton>
+  ),
 };
