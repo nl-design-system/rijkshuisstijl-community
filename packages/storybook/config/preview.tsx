@@ -6,10 +6,15 @@ import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/mijnoverheid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
-
+import { defineCustomElements } from '@rijkshuisstijl-community/web-components-stencil/loader/index';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import { Preview } from '@storybook/react';
 import { UtrechtDocument } from '@utrecht/web-component-library-react';
+import { defineCustomElements as defineUtrechtCustomElements } from '@utrecht/web-component-library-stencil/loader/index';
+
+// Initialize web components
+defineCustomElements();
+defineUtrechtCustomElements();
 
 const preview: Preview = {
   decorators: [
@@ -80,5 +85,4 @@ const preview: Preview = {
     },
   },
 };
-
 export default preview;
