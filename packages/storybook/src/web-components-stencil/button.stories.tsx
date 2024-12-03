@@ -1,65 +1,31 @@
-import { RhcHero } from '@rijkshuisstijl-community/web-components-react';
+import { RhcButton } from '@rijkshuisstijl-community/web-components-react';
 import { Meta, StoryObj } from '@storybook/react/*';
 
 const meta: Meta = {
-  title: 'Web Components Stencil/Hero',
-  component: RhcHero,
+  title: 'Web Components Stencil/Button',
+  component: RhcButton,
   argTypes: {
-    heroMessage: {
-      description: 'Hero Message Visible',
-      control: { type: 'boolean' },
-      table: {
-        type: { summary: 'boolean' },
-      },
-    },
-    headingLevel: {
-      description: 'Heading level',
+    appearance: {
+      description: 'Button appearance',
       control: { type: 'select' },
-      options: [undefined, 1, 2, 3, 4, 5],
+      options: ['', 'primary-action', 'secondary-action', 'subtle'],
       table: {
-        type: { summary: 'number' },
+        category: 'Property',
       },
+      defaultValue: '',
     },
-    textAlign: {
-      description: 'Alignment of the message box',
-      control: { type: 'select' },
-      options: [undefined, 'start', 'end'],
+    label: {
+      description: 'Button Label',
+      type: {
+        name: 'string',
+      },
       table: {
-        type: { summary: 'string' },
+        type: { summary: 'demo' },
       },
-    },
-    aspectRatio: {
-      description: 'Aspect ratio',
-      control: { type: 'select' },
-      options: [undefined, '16 / 9', '1 / 1', '4 / 3'],
-      table: {
-        type: { summary: 'string' },
-      },
-    },
-    borderRadiusCorner: {
-      description: 'Border radius corner',
-      control: { type: 'select' },
-      options: [undefined, 'start-start', 'start-end', 'end-start', 'end-end'],
-      table: {
-        type: { summary: 'string' },
-      },
-    },
-    children: {
-      description: 'Children',
     },
   },
   args: {
-    imageSrc:
-      'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
-    imageAlt: 'Tullip field',
-    heading: 'Heading',
-    subHeading: 'Subtext',
-    heroMessage: true,
-    headingLevel: 3,
-    textAlign: 'start',
-    aspectRatio: '16 / 9',
-    borderRadiusCorner: 'start-start',
-    children: [],
+    label: 'Label',
   },
   parameters: {
     status: {
@@ -69,6 +35,27 @@ const meta: Meta = {
 };
 export default meta;
 
-type Story = StoryObj<typeof RhcHero>;
+type Story = StoryObj<typeof RhcButton>;
 
 export const Default: Story = {} satisfies Story;
+
+export const PrimaryAction: StoryObj<typeof meta> = {
+  args: {
+    label: 'Label',
+    appearance: 'primary-action',
+  },
+};
+
+export const SecondaryAction: StoryObj<typeof meta> = {
+  args: {
+    label: 'Label',
+    appearance: 'secondary-action',
+  },
+};
+
+export const Subtle: StoryObj<typeof meta> = {
+  args: {
+    label: 'Label',
+    appearance: 'subtle',
+  },
+};

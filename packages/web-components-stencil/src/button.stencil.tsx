@@ -3,17 +3,18 @@ import clsx from 'clsx';
 
 @Component({
   tag: 'rhc-button',
-  styleUrl: 'button.scss',
+  styleUrls: ['button.scss', 'index.scss'],
   shadow: true,
 })
 export class Hero {
   @Prop() label!: string;
+  @Prop() appearance!: string;
 
   render() {
-    const { label } = this;
+    const { label, appearance } = this;
 
     return (
-      <button class={clsx('rhc-button', 'rhc-button--icon-only')} aria-label={label}>
+      <button class={clsx('utrecht-button', appearance && 'utrecht-button--' + appearance)} aria-label={label}>
         <span class="rhc-button__sr-only">{label}</span>
         <slot />
       </button>
