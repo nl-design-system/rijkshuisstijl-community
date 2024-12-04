@@ -306,8 +306,8 @@ export default function Collage() {
                     </Table>
                     <CodeInput
                       numberOfDigits={6}
-                      onChange={(e: any) => {
-                        console.log('onchange: ', e);
+                      onChange={(value: String) => {
+                        console.log('onchange: ', value);
                       }}
                     />
                     {/*}
