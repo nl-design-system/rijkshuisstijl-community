@@ -28,6 +28,14 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const PrivateMode: Story = {
+  args: {
+    numberOfDigits: 6,
+    privateMode: true,
+  },
+};
+
 export const Invalid: Story = {
   args: {
     numberOfDigits: 6,

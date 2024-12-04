@@ -1,16 +1,19 @@
 import clsx from 'clsx';
-import { ChangeEvent, ForwardedRef, forwardRef, KeyboardEvent, useRef, useState } from 'react';
+import { ChangeEvent, ForwardedRef, forwardRef, KeyboardEvent, PropsWithChildren, useRef, useState } from 'react';
 import { Textbox } from './Textbox';
 
 export interface CodeInputGroupProps {
   numberOfDigits: number;
-  // eslint-disable-next-line no-unused-vars
-  onChange?: (value: string) => void;
+  onChange?: (_value: string) => void;
   inValid?: boolean;
+  privateMode?: boolean;
 }
 
 export const CodeInput = forwardRef(
-  ({ numberOfDigits, onChange, inValid }: CodeInputGroupProps, ref: ForwardedRef<HTMLInputElement>) => {
+  (
+    { numberOfDigits, onChange, inValid, privateMode, ...restProps }: PropsWithChildren<CodeInputGroupProps>,
+    ref: ForwardedRef<HTMLInputElement>,
+  ) => {
     const [values, setValues] = useState<string>('');
     const [isActive, setActive] = useState(false);
 
@@ -29,8 +32,6 @@ export const CodeInput = forwardRef(
     const isInputSelected = (i: number) => {
       return (values.length === i || (values.length === i + 1 && numberOfDigits === i + 1)) && isActive;
     };
-    const isInputFilled = (i: number) => values.length > i;
-    const isInputInactive = (i: number) => values.length < i;
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
       const newInputVal = event.target.value.replace(/\D/g, ''); // Remove non-numeric characters.
@@ -41,11 +42,14 @@ export const CodeInput = forwardRef(
     };
 
     return (
-      <div className={'rhc-code-input-container'} data-testid={'code-input-container'} ref={ref}>
+      <div className={'rhc-code-input-container'} data-testid={'code-input-container'} ref={ref} {...restProps}>
         <Textbox
           aria-label="code-input"
+          autoComplete="one-time-code"
           className={'rhc-code-input--hidden'}
           data-testid={'hidden-input'}
+          inputMode="numeric"
+          maxLength={numberOfDigits}
           ref={inputRef}
           value={values}
           onChange={handleInputChange}
@@ -67,14 +71,13 @@ export const CodeInput = forwardRef(
             <Textbox
               aria-label={`code-input-${i}`}
               data-testid={`input-item`}
-              disabled={!isInputFilled(i) && isInputInactive(i)}
               invalid={inValid}
               key={`input-${i}`}
               maxLength={1}
               ref={ref}
               tabIndex={-1}
               type="text"
-              value={values[i] || ''}
+              value={privateMode && values[i] ? '*' : values[i] || ''}
               className={clsx('rhc-code-input', {
                 'utrecht-textbox--focus-visible': isInputSelected(i),
               })}

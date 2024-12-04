@@ -3,10 +3,18 @@
 }
 
 @mixin rhc-code-input--hidden {
-  block-size: 0;
-  inline-size: 0;
+  block-size: 1px !important;
+  border: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  inline-size: 1px !important;
+  margin-block: -1px !important;
+  margin-inline: -1px !important;
   opacity: 0%;
+  overflow: hidden !important;
+  padding-block: 0 !important;
+  padding-inline: 0 !important;
   position: absolute;
+  white-space: nowrap !important;
 }
 
 @mixin rhc-code-input-group {
