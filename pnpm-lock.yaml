@@ -17,7 +17,7 @@ importers:
     devDependencies:
       '@lerna-lite/cli':
         specifier: 3.10.0
-        version: 3.10.0(@lerna-lite/publish@3.10.0(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/run@3.10.0(@lerna-lite/publish@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/version@3.10.0(@lerna-lite/publish@3.10.0(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/run@3.10.0(@lerna-lite/publish@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3)
+        version: 3.10.0(@lerna-lite/publish@3.10.0)(@lerna-lite/run@3.10.0)(@lerna-lite/version@3.10.0(@lerna-lite/publish@3.10.0)(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3)
       '@lerna-lite/publish':
         specifier: 3.10.0
         version: 3.10.0(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3)
@@ -237,9 +237,6 @@ importers:
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css
-      '@rijkshuisstijl-community/web-components-react':
-        specifier: workspace:*
-        version: link:../web-components-react
       '@tabler/icons-react':
         specifier: 3.22.0
         version: 3.22.0(react@18.3.1)
@@ -544,10 +541,16 @@ importers:
       clsx:
         specifier: 2.1.1
         version: 2.1.1
+      react:
+        specifier: 18.3.1
+        version: 18.3.1
     devDependencies:
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css
+      '@rijkshuisstijl-community/components-react':
+        specifier: workspace:*
+        version: link:../components-react
       '@stencil/react-output-target':
         specifier: 0.5.3
         version: 0.5.3(@stencil/core@4.19.2)
@@ -557,6 +560,12 @@ importers:
       '@types/jest':
         specifier: 29.5.12
         version: 29.5.12
+      '@types/react':
+        specifier: 18.3.1
+        version: 18.3.1
+      '@types/react-dom':
+        specifier: 18.3.1
+        version: 18.3.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -566,6 +575,9 @@ importers:
       npm-run-all:
         specifier: 4.1.5
         version: 4.1.5
+      react-dom:
+        specifier: 18.3.1
+        version: 18.3.1(react@18.3.1)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -3094,6 +3106,9 @@ packages:
 
   '@types/react-dom@18.3.1':
     resolution: {integrity: sha512-qW1Mfv8taImTthu4KoXgDfLuk4bydU6Q/TkADnDWWHwi4NX4BR+LWfTp2sVmTqRrsHvyDDTelgelxJ+SsejKKQ==}
+
+  '@types/react@18.3.1':
+    resolution: {integrity: sha512-V0kuGBX3+prX+DQ/7r2qsv1NsdfnCLnTgnRJ1pYnxykBhGMz+qj+box5lq7XsO5mtZsBqpjwwTu/7wszPfMBcw==}
 
   '@types/react@18.3.12':
     resolution: {integrity: sha512-D2wOSq/d6Agt28q7rSI3jhU7G6aiuzljDGZ2hTZHIkrTLUI+AF3WMeKkEZ9nN2fkBAlcktT6vcZjDFiIhMYEQw==}
@@ -10322,7 +10337,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@lerna-lite/cli@3.10.0(@lerna-lite/publish@3.10.0(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/run@3.10.0(@lerna-lite/publish@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/version@3.10.0(@lerna-lite/publish@3.10.0(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/run@3.10.0(@lerna-lite/publish@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3)':
+  '@lerna-lite/cli@3.10.0(@lerna-lite/publish@3.10.0)(@lerna-lite/run@3.10.0)(@lerna-lite/version@3.10.0(@lerna-lite/publish@3.10.0)(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3)':
     dependencies:
       '@lerna-lite/core': 3.10.0(@types/node@20.17.6)(typescript@5.6.3)
       '@lerna-lite/init': 3.10.0(@types/node@20.17.6)(typescript@5.6.3)
@@ -10335,7 +10350,7 @@ snapshots:
     optionalDependencies:
       '@lerna-lite/publish': 3.10.0(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3)
       '@lerna-lite/run': 3.10.0(@lerna-lite/publish@3.10.0)(@types/node@20.17.6)(typescript@5.6.3)
-      '@lerna-lite/version': 3.10.0(@lerna-lite/publish@3.10.0(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/run@3.10.0(@lerna-lite/publish@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3)
+      '@lerna-lite/version': 3.10.0(@lerna-lite/publish@3.10.0)(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -10421,10 +10436,10 @@ snapshots:
 
   '@lerna-lite/publish@3.10.0(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3)':
     dependencies:
-      '@lerna-lite/cli': 3.10.0(@lerna-lite/publish@3.10.0(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/run@3.10.0(@lerna-lite/publish@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/version@3.10.0(@lerna-lite/publish@3.10.0(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/run@3.10.0(@lerna-lite/publish@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3)
+      '@lerna-lite/cli': 3.10.0(@lerna-lite/publish@3.10.0)(@lerna-lite/run@3.10.0)(@lerna-lite/version@3.10.0(@lerna-lite/publish@3.10.0)(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3)
       '@lerna-lite/core': 3.10.0(@types/node@20.17.6)(typescript@5.6.3)
       '@lerna-lite/npmlog': 3.10.0
-      '@lerna-lite/version': 3.10.0(@lerna-lite/publish@3.10.0(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/run@3.10.0(@lerna-lite/publish@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3)
+      '@lerna-lite/version': 3.10.0(@lerna-lite/publish@3.10.0)(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3)
       '@npmcli/arborist': 7.5.4
       '@npmcli/package-json': 5.2.1
       byte-size: 9.0.0
@@ -10459,7 +10474,7 @@ snapshots:
 
   '@lerna-lite/run@3.10.0(@lerna-lite/publish@3.10.0)(@types/node@20.17.6)(typescript@5.6.3)':
     dependencies:
-      '@lerna-lite/cli': 3.10.0(@lerna-lite/publish@3.10.0(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/run@3.10.0(@lerna-lite/publish@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/version@3.10.0(@lerna-lite/publish@3.10.0(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/run@3.10.0(@lerna-lite/publish@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3)
+      '@lerna-lite/cli': 3.10.0(@lerna-lite/publish@3.10.0)(@lerna-lite/run@3.10.0)(@lerna-lite/version@3.10.0(@lerna-lite/publish@3.10.0)(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3)
       '@lerna-lite/core': 3.10.0(@types/node@20.17.6)(typescript@5.6.3)
       '@lerna-lite/npmlog': 3.10.0
       '@lerna-lite/profiler': 3.10.0(@types/node@20.17.6)(typescript@5.6.3)
@@ -10478,9 +10493,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/version@3.10.0(@lerna-lite/publish@3.10.0(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/run@3.10.0(@lerna-lite/publish@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3)':
+  '@lerna-lite/version@3.10.0(@lerna-lite/publish@3.10.0)(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3)':
     dependencies:
-      '@lerna-lite/cli': 3.10.0(@lerna-lite/publish@3.10.0(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/run@3.10.0(@lerna-lite/publish@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/version@3.10.0(@lerna-lite/publish@3.10.0(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@lerna-lite/run@3.10.0(@lerna-lite/publish@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3)
+      '@lerna-lite/cli': 3.10.0(@lerna-lite/publish@3.10.0)(@lerna-lite/run@3.10.0)(@lerna-lite/version@3.10.0(@lerna-lite/publish@3.10.0)(@lerna-lite/run@3.10.0)(@types/node@20.17.6)(typescript@5.6.3))(@types/node@20.17.6)(typescript@5.6.3)
       '@lerna-lite/core': 3.10.0(@types/node@20.17.6)(typescript@5.6.3)
       '@lerna-lite/npmlog': 3.10.0
       '@octokit/plugin-enterprise-rest': 6.0.1
@@ -11634,6 +11649,11 @@ snapshots:
   '@types/react-dom@18.3.1':
     dependencies:
       '@types/react': 18.3.12
+
+  '@types/react@18.3.1':
+    dependencies:
+      '@types/prop-types': 15.7.13
+      csstype: 3.1.3
 
   '@types/react@18.3.12':
     dependencies:

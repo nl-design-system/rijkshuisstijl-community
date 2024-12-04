@@ -1,75 +1,34 @@
-import { Component, h, JSX, Prop } from '@stencil/core';
-import clsx from 'clsx';
+import { Hero, HeroProps } from '@rijkshuisstijl-community/components-react';
+import { Component } from '@stencil/core';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { StencilBase } from './StencilBase';
 
 @Component({
   tag: 'rhc-hero',
-  styleUrl: 'hero.scss',
-  shadow: true,
+  shadow: false,
 })
-export class Hero {
-  @Prop() aspectRatio?: '16-9' | '1-1' | '4-3' = '16-9';
-  @Prop() textAlign?: 'start' | 'center' | 'end' = 'start';
-  @Prop() borderRadiusCorner?: 'start-start' | 'start-end' | 'end-start' | 'end-end';
-  @Prop() imageSrc?: string;
-  @Prop() imageAlt?: string;
-  @Prop() heading?: string;
-  @Prop() headingLevel?: 1 | 2 | 3 | 4 | 5 = 3;
-  @Prop() subHeading?: string;
-  @Prop() heroMessage?: boolean;
-  @Prop() customClass?: string;
+export class StencilHero extends StencilBase {
+  componentDidLoad() {
+    if (!this.host) {
+      console.error('Invalid host:', this.host);
+      return;
+    }
 
-  render() {
-    const {
-      aspectRatio,
-      textAlign,
-      borderRadiusCorner,
-      imageSrc,
-      imageAlt,
-      heading,
-      subHeading,
-      heroMessage,
-      customClass,
-      headingLevel,
-    } = this;
+    const props: Partial<HeroProps> = this.props;
 
-    return (
-      <div class="rhc-hero">
-        <div
-          class={clsx(
-            'rhc-hero',
-            heroMessage && `rhc-hero--text-align-${textAlign}`,
-            heroMessage &&
-              borderRadiusCorner &&
-              `rhc-hero--custom-border-radius-corner rhc-hero--border-radius-corner-${borderRadiusCorner}`,
-            `rhc-hero--aspect-ratio-${aspectRatio?.replace(' / ', '-')}`,
-            customClass,
-          )}
-        >
-          <img class="rhc-hero__image" src={imageSrc} alt={imageAlt} />
-          {heroMessage && (
-            <div class="rhc-hero__message">
-              <div>
-                {(() => {
-                  const HeadingTag = `h${headingLevel}` as keyof JSX.IntrinsicElements;
-                  return (
-                    <HeadingTag
-                      class={clsx(`rhc-hero__heading`, {
-                        [`utrecht-heading-${headingLevel}`]: headingLevel,
-                      })}
-                    >
-                      {heading}
-                    </HeadingTag>
-                  );
-                })()}
-                <p class="rhc-hero__sub-heading utrecht-paragraph">{subHeading}</p>
-              </div>
-            </div>
-          )}
-        </div>
-        <div class="rhc-hero__children">
-          <slot />
-        </div>
-      </div>
+    this.reactRoot = ReactDOM.createRoot(this.host);
+    this.reactRoot.render(
+      React.createElement(Hero, {
+        textAlign: props.textAlign || 'start',
+        imageSrc:
+          props.imageSrc ||
+          'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
+        imageAlt: props.imageAlt || 'Tullip field',
+        heading: props.heading || 'Heading',
+        subHeading: props.subHeading || 'Subtext',
+        ...this.props,
+      }),
     );
   }
 }
