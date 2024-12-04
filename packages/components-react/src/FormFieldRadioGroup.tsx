@@ -1,12 +1,12 @@
 import { type FormFieldProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { Children, ForwardedRef, forwardRef, PropsWithChildren, ReactNode, useId } from 'react';
-import { CheckboxGroup } from './CheckboxGroup';
 import { FormField } from './FormField';
+import { RadioGroup } from './RadioGroup';
 
-export interface FormFieldCheckboxGroupProps extends FormFieldProps {
+export interface FormFieldRadioGroupProps extends FormFieldProps {
   errorMessage?: string;
-  status?: string;
+  status?: ReactNode;
   description?: ReactNode;
   label?: ReactNode;
 }
@@ -15,7 +15,7 @@ const hasManyChildren = (children: ReactNode) => {
   return Children.count(children) > 1;
 };
 
-export const FormFieldCheckboxGroup = forwardRef(
+export const FormFieldRadioGroup = forwardRef(
   (
     {
       label,
@@ -27,7 +27,7 @@ export const FormFieldCheckboxGroup = forwardRef(
       dir,
       children,
       ...restProps
-    }: PropsWithChildren<FormFieldCheckboxGroupProps>,
+    }: PropsWithChildren<FormFieldRadioGroupProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const id = useId();
@@ -37,7 +37,7 @@ export const FormFieldCheckboxGroup = forwardRef(
 
     const inputComponent: ReactNode = (
       <div className="utrecht-form-field__input">
-        <CheckboxGroup
+        <RadioGroup
           dir={dir}
           id={id}
           role={hasManyChildren(children) ? 'group' : undefined}
@@ -50,7 +50,7 @@ export const FormFieldCheckboxGroup = forwardRef(
           }
         >
           {children}
-        </CheckboxGroup>
+        </RadioGroup>
       </div>
     );
 
@@ -58,20 +58,18 @@ export const FormFieldCheckboxGroup = forwardRef(
       <FormField
         description={description}
         descriptionId={descriptionId}
-        dir={dir}
         errorMessage={errorMessage}
         errorMessageId={errorMessageId}
-        id={id}
+        input={input ?? inputComponent}
         invalid={invalid}
         label={label}
         ref={ref}
         status={status}
         statusId={statusId}
         {...restProps}
-        input={input ?? inputComponent}
       />
     );
   },
 );
 
-FormFieldCheckboxGroup.displayName = 'FormFieldCheckboxGroup';
+FormFieldRadioGroup.displayName = 'FormFieldRadioGroup';
