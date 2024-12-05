@@ -5,7 +5,7 @@ import { Textbox } from './Textbox';
 export interface CodeInputGroupProps {
   numberOfDigits: number;
   // eslint-disable-next-line no-unused-vars
-  onChange?: (value: string) => string;
+  onChange?: (value: string) => void;
   inValid?: boolean;
   privateMode?: boolean;
 }
@@ -82,7 +82,6 @@ export const CodeInput = forwardRef(
               className={clsx('rhc-code-input', {
                 'utrecht-textbox--focus-visible': isInputSelected(i),
               })}
-              onChange={() => {}}
               onClick={handleCodeInputClick}
             />
           ))}
