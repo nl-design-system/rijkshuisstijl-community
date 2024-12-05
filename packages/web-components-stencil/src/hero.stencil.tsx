@@ -13,16 +13,32 @@ export class StencilHero implements StencilInterface {
   @Prop() props: Record<string, any> = {};
   @Element() host!: HTMLElement;
 
-  reactRoot?: ReactDOM.Root;
+  private reactRoot?: ReactDOM.Root;
+  private observer?: MutationObserver;
+
   componentDidLoad() {
     if (!this.host) {
       console.error('Invalid host:', this.host);
       return;
     }
 
+    this.reactRoot = ReactDOM.createRoot(this.host);
+    this.renderComponent();
+
+    this.observer = new MutationObserver(() => {
+      this.props = handleProps(this.host);
+      this.renderComponent();
+    });
+
+    this.observer.observe(this.host, {
+      attributes: true,
+    });
+  }
+
+  renderComponent = () => {
+    if (!this.reactRoot) return;
     const props: Partial<HeroProps> = this.props;
 
-    this.reactRoot = ReactDOM.createRoot(this.host);
     this.reactRoot.render(
       React.createElement(Hero, {
         textAlign: props.textAlign || 'start',
@@ -35,10 +51,11 @@ export class StencilHero implements StencilInterface {
         ...this.props,
       }),
     );
-  }
+  };
 
   componentWillLoad() {
     this.props = handleProps(this.host);
+    this.renderComponent();
   }
 
   componentWillUpdate() {
@@ -50,6 +67,11 @@ export class StencilHero implements StencilInterface {
     if (this.reactRoot) {
       this.reactRoot.unmount();
       this.reactRoot = undefined;
+    }
+
+    if (this.observer) {
+      this.observer.disconnect(); // Stop observing
+      this.observer = undefined;
     }
   }
 
