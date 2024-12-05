@@ -6,7 +6,7 @@ export interface FormSummaryProps extends HTMLAttributes<HTMLDivElement> {
 
 export const FormSummary = forwardRef<HTMLDivElement, FormSummaryProps>((props, ref) => {
   return (
-    <p ref={ref} {...props}>
+    <p data-testid="paragraph" ref={ref} {...props}>
       Hello world!
     </p>
   );
