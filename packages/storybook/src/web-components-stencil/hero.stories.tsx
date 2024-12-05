@@ -49,16 +49,16 @@ const meta: Meta = {
     },
   },
   args: {
-    imageSrc:
+    'image-src':
       'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
-    imageAlt: 'Tullip field',
+    'image-alt': 'Tullip field',
     heading: 'Heading',
-    subHeading: 'Subtext',
-    heroMessage: true,
-    headingLevel: 3,
-    textAlign: 'start',
-    aspectRatio: '16 / 9',
-    borderRadiusCorner: 'start-start',
+    'sub-heading': 'Subtext',
+    'hero-message': true,
+    'heading-level': 3,
+    'text-align': 'start',
+    'aspect-ratio': '16 / 9',
+    'border-radius-corner': 'start-start',
     children: [],
   },
   parameters: {

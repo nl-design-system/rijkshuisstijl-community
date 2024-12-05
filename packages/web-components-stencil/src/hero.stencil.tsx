@@ -1,14 +1,16 @@
-import { Component, h, JSX, Prop } from '@stencil/core';
-import clsx from 'clsx';
+import { Hero } from '@rijkshuisstijl-community/components-react';
+import { Component, Element, Prop } from '@stencil/core';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 @Component({
   tag: 'rhc-hero',
   styleUrl: 'hero.scss',
-  shadow: true,
+  shadow: false,
 })
-export class Hero {
-  @Prop() aspectRatio?: '16-9' | '1-1' | '4-3' = '16-9';
-  @Prop() textAlign?: 'start' | 'center' | 'end' = 'start';
+export class StencilHero {
+  @Prop() aspectRatio?: '16 / 9' | '1 / 1' | '4 / 3' = '16 / 9';
+  @Prop() textAlign?: 'start' | 'end' = 'start';
   @Prop() borderRadiusCorner?: 'start-start' | 'start-end' | 'end-start' | 'end-end';
   @Prop() imageSrc?: string;
   @Prop() imageAlt?: string;
@@ -18,58 +20,48 @@ export class Hero {
   @Prop() heroMessage?: boolean;
   @Prop() customClass?: string;
 
-  render() {
-    const {
-      aspectRatio,
-      textAlign,
-      borderRadiusCorner,
-      imageSrc,
-      imageAlt,
-      heading,
-      subHeading,
-      heroMessage,
-      customClass,
-      headingLevel,
-    } = this;
+  @Element() host!: HTMLElement;
+  private reactRoot?: ReactDOM.Root;
 
-    return (
-      <div class="rhc-hero">
-        <div
-          class={clsx(
-            'rhc-hero',
-            heroMessage && `rhc-hero--text-align-${textAlign}`,
-            heroMessage &&
-              borderRadiusCorner &&
-              `rhc-hero--custom-border-radius-corner rhc-hero--border-radius-corner-${borderRadiusCorner}`,
-            `rhc-hero--aspect-ratio-${aspectRatio?.replace(' / ', '-')}`,
-            customClass,
-          )}
-        >
-          <img class="rhc-hero__image" src={imageSrc} alt={imageAlt} />
-          {heroMessage && (
-            <div class="rhc-hero__message">
-              <div>
-                {(() => {
-                  const HeadingTag = `h${headingLevel}` as keyof JSX.IntrinsicElements;
-                  return (
-                    <HeadingTag
-                      class={clsx(`rhc-hero__heading`, {
-                        [`utrecht-heading-${headingLevel}`]: headingLevel,
-                      })}
-                    >
-                      {heading}
-                    </HeadingTag>
-                  );
-                })()}
-                <p class="rhc-hero__sub-heading utrecht-paragraph">{subHeading}</p>
-              </div>
-            </div>
-          )}
-        </div>
-        <div class="rhc-hero__children">
-          <slot />
-        </div>
-      </div>
+  componentDidLoad() {
+    if (!this.host) {
+      console.error('Invalid host:', this.host);
+      return;
+    }
+
+    this.reactRoot = ReactDOM.createRoot(this.host);
+    this.renderComponent();
+  }
+
+  renderComponent() {
+    if (!this.reactRoot) return;
+
+    this.reactRoot.render(
+      React.createElement(Hero, {
+        textAlign: this.textAlign || 'start',
+        imageSrc:
+          this.imageSrc ||
+          'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
+        imageAlt: this.imageAlt || 'Tullip field',
+        heading: this.heading || 'Heading',
+        subHeading: this.subHeading || 'Subtext',
+        aspectRatio: this.aspectRatio || '16 / 9',
+        borderRadiusCorner: this.borderRadiusCorner || 'start-start',
+        headingLevel: this.headingLevel || 3,
+        heroMessage: this.heroMessage || false,
+        className: this.customClass || '',
+      }),
     );
+  }
+
+  componentWillUpdate() {
+    this.renderComponent();
+  }
+
+  disconnectedCallback() {
+    if (this.reactRoot) {
+      this.reactRoot.unmount();
+      this.reactRoot = undefined;
+    }
   }
 }
