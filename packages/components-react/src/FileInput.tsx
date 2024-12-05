@@ -1,6 +1,7 @@
+import { Paragraph } from '@utrecht/component-library-react';
 import { ChangeEvent, ForwardedRef, forwardRef, PropsWithChildren, useRef, useState } from 'react';
 import { Button, ButtonProps } from './Button';
-import { FileInputItem } from './FileInputItem';
+import { File } from './File';
 
 export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
   buttonText: string;
@@ -51,16 +52,19 @@ export const FileInput = forwardRef(
             onChange(event.target.files);
           }}
         />
-        <Button
-          appearance={buttonAppearance ?? 'secondary-action-button'}
-          onClick={() => inputElement.current && inputElement.current.click()}
-        >
-          {buttonText}
-        </Button>
-        <div className="rhc-file-input__items-container">
+        <div className="rhc-file-input__button-feedback-container">
+          <Button
+            appearance={buttonAppearance ?? 'secondary-action-button'}
+            onClick={() => inputElement.current && inputElement.current.click()}
+          >
+            {buttonText}
+          </Button>
+          {files.length === 0 && <Paragraph className="rhc-file-input__feedback">Geen bestand gekozen</Paragraph>}
+        </div>
+        <div className="rhc-files-container">
           {files.map((item: File) => {
             return (
-              <FileInputItem
+              <File
                 allowedFileTypes={allowedFileTypes}
                 file={item}
                 fileSizeErrorMessage={fileSizeErrorMessage}
