@@ -1,20 +1,27 @@
-import { Hero, HeroProps } from '@rijkshuisstijl-community/components-react';
+import { Hero } from '@rijkshuisstijl-community/components-react';
 import { Component, Element, Prop } from '@stencil/core';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { handleProps } from './stencil.helper';
-import { StencilInterface } from './stencil.interface';
 
 @Component({
   tag: 'rhc-hero',
+  styleUrl: 'hero.scss',
   shadow: false,
 })
-export class StencilHero implements StencilInterface {
-  @Prop() props: Record<string, any> = {};
-  @Element() host!: HTMLElement;
+export class StencilHero {
+  @Prop() aspectRatio?: '16 / 9' | '1 / 1' | '4 / 3' = '16 / 9';
+  @Prop() textAlign?: 'start' | 'end' = 'start';
+  @Prop() borderRadiusCorner?: 'start-start' | 'start-end' | 'end-start' | 'end-end';
+  @Prop() imageSrc?: string;
+  @Prop() imageAlt?: string;
+  @Prop() heading?: string;
+  @Prop() headingLevel?: 1 | 2 | 3 | 4 | 5 = 3;
+  @Prop() subHeading?: string;
+  @Prop() heroMessage?: boolean;
+  @Prop() customClass?: string;
 
+  @Element() host!: HTMLElement;
   private reactRoot?: ReactDOM.Root;
-  private observer?: MutationObserver;
 
   componentDidLoad() {
     if (!this.host) {
@@ -24,43 +31,31 @@ export class StencilHero implements StencilInterface {
 
     this.reactRoot = ReactDOM.createRoot(this.host);
     this.renderComponent();
-
-    this.observer = new MutationObserver(() => {
-      this.props = handleProps(this.host);
-      this.renderComponent();
-    });
-
-    this.observer.observe(this.host, {
-      attributes: true,
-    });
   }
 
-  renderComponent = () => {
+  renderComponent() {
     if (!this.reactRoot) return;
-    const props: Partial<HeroProps> = this.props;
 
     this.reactRoot.render(
       React.createElement(Hero, {
-        textAlign: props.textAlign || 'start',
+        textAlign: this.textAlign || 'start',
         imageSrc:
-          props.imageSrc ||
+          this.imageSrc ||
           'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
-        imageAlt: props.imageAlt || 'Tullip field',
-        heading: props.heading || 'Heading',
-        subHeading: props.subHeading || 'Subtext',
-        ...this.props,
+        imageAlt: this.imageAlt || 'Tullip field',
+        heading: this.heading || 'Heading',
+        subHeading: this.subHeading || 'Subtext',
+        aspectRatio: this.aspectRatio || '16 / 9',
+        borderRadiusCorner: this.borderRadiusCorner || 'start-start',
+        headingLevel: this.headingLevel || 3,
+        heroMessage: this.heroMessage || false,
+        className: this.customClass || '',
       }),
     );
-  };
-
-  componentWillLoad() {
-    this.props = handleProps(this.host);
-    this.renderComponent();
   }
 
   componentWillUpdate() {
-    console.log('componentWillUpdate');
-    this.props = handleProps(this.host);
+    this.renderComponent();
   }
 
   disconnectedCallback() {
@@ -68,14 +63,5 @@ export class StencilHero implements StencilInterface {
       this.reactRoot.unmount();
       this.reactRoot = undefined;
     }
-
-    if (this.observer) {
-      this.observer.disconnect(); // Stop observing
-      this.observer = undefined;
-    }
-  }
-
-  render() {
-    return null;
   }
 }
