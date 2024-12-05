@@ -4,6 +4,10 @@ import { fireEvent, render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { FileInput, FileInputProps } from './FileInput';
 
+beforeAll(() => {
+  window.URL.createObjectURL = jest.fn((file) => `mocked-url/${(file as File).name}`);
+});
+
 describe('File Input tests', () => {
   const defaultProps: FileInputProps = {
     buttonText: 'Bestanden kiezen',
@@ -100,5 +104,31 @@ describe('File Input tests', () => {
     await waitFor(() => userEvent.upload(fileInput!, fileOne));
 
     expect(mockOnFileChange).toHaveBeenCalledTimes(0);
+  });
+
+  it('should render a link with the correct URL and target attributes for a preview of the selected file', async () => {
+    const mockOnFileChange = jest.fn();
+
+    const propsTest: FileInputProps = {
+      ...defaultProps,
+      onValueChange: mockOnFileChange,
+    };
+
+    const { container, getByRole } = render(<FileInput {...propsTest} />);
+
+    const file = new File(['dummy content'], 'example.png', { type: 'image/png' });
+
+    const fileInput = container.querySelector('input');
+
+    await waitFor(() =>
+      fireEvent.change(fileInput!, {
+        target: { files: [file] },
+      }),
+    );
+
+    const link = getByRole('link', { name: file.name });
+
+    expect(link).toHaveAttribute('href', 'mocked-url/example.png');
+    expect(link).toHaveAttribute('target', '_blank');
   });
 });

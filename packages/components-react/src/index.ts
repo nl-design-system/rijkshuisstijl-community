@@ -59,8 +59,8 @@ export {
 export { DotBadge, type DotBadgeProps } from './DotBadge';
 export { Fieldset, FieldsetLegend, type FieldsetLegendProps, type FieldsetProps } from './Fieldset';
 export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from './Figure';
+export { File } from './File';
 export { FileInput, type FileInputProps } from './FileInput';
-export { FileInputItem } from './FileInputItem';
 export { Footer } from './Footer';
 export { FormFieldCheckboxGroup, type FormFieldCheckboxGroupProps } from './FormFieldCheckboxGroup';
 export { FormFieldCheckboxOption, type FormFieldCheckboxOptionProps } from './FormFieldCheckboxOption';
