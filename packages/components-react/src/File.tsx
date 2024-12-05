@@ -54,8 +54,8 @@ export const File = ({
     >
       <div className="rhc-file-input__inner-container">
         <div className="rhc-file-input__inner-container__sub">
-          <Link className="rhc-file--name" href={URL.createObjectURL(file)} target="_blank">
-            {file.name}
+          <Link href={URL.createObjectURL(file)} target="_blank">
+            <span className="rhc-file--name">{file.name}</span>
           </Link>
           <span className="rhc-file--subtitle">
             ({extractFileTypeShort(file.type)}, {formatBytes(file.size)})
