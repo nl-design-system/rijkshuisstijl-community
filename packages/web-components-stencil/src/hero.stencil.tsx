@@ -1,14 +1,19 @@
 import { Hero, HeroProps } from '@rijkshuisstijl-community/components-react';
-import { Component } from '@stencil/core';
+import { Component, Element, Prop } from '@stencil/core';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { StencilBase } from './StencilBase';
+import { handleProps } from './stencil.helper';
+import { StencilInterface } from './stencil.interface';
 
 @Component({
   tag: 'rhc-hero',
   shadow: false,
 })
-export class StencilHero extends StencilBase {
+export class StencilHero implements StencilInterface {
+  @Prop() props: Record<string, any> = {};
+  @Element() host!: HTMLElement;
+
+  reactRoot?: ReactDOM.Root;
   componentDidLoad() {
     if (!this.host) {
       console.error('Invalid host:', this.host);
@@ -30,5 +35,25 @@ export class StencilHero extends StencilBase {
         ...this.props,
       }),
     );
+  }
+
+  componentWillLoad() {
+    this.props = handleProps(this.host);
+  }
+
+  componentWillUpdate() {
+    console.log('componentWillUpdate');
+    this.props = handleProps(this.host);
+  }
+
+  disconnectedCallback() {
+    if (this.reactRoot) {
+      this.reactRoot.unmount();
+      this.reactRoot = undefined;
+    }
+  }
+
+  render() {
+    return null;
   }
 }
