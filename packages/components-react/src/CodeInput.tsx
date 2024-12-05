@@ -4,7 +4,8 @@ import { Textbox } from './Textbox';
 
 export interface CodeInputGroupProps {
   numberOfDigits: number;
-  onChange?: (_value: string) => void;
+  // eslint-disable-next-line no-unused-vars
+  onChange?: (value: string) => string;
   inValid?: boolean;
   privateMode?: boolean;
 }
