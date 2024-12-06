@@ -4,6 +4,7 @@ import {
   Article,
   Blockquote,
   Button,
+  CodeInput,
   DataList,
   DataListActions,
   DataListItem,
@@ -303,6 +304,12 @@ export default function Collage() {
                         </TableRow>
                       </TableFooter>
                     </Table>
+                    <CodeInput
+                      numberOfDigits={6}
+                      onChange={(value: String) => {
+                        console.log('onchange: ', value);
+                      }}
+                    />
                     {/*}
         <div className="unstarted">
           <Pagination maxVisiblePages={6} page={1} totalPages={99}></Pagination>
