@@ -41,7 +41,6 @@ export default function Details() {
           <Hero
             className="rhc-hero-details-template"
             heading=""
-            heroMessage={false}
             imageAlt="Tullip field"
             imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg"
             subHeading=""

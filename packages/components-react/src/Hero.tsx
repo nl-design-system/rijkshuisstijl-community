@@ -27,7 +27,6 @@ export const Hero = forwardRef(
       imageAlt,
       heading,
       subHeading,
-      heroMessage,
       headingLevel = 3,
       borderRadiusCorner,
       aspectRatio = '16 / 9',
@@ -35,13 +34,9 @@ export const Hero = forwardRef(
     }: PropsWithChildren<HeroProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
-    if (heroMessage) {
-      if (!heading && subHeading) {
-        console.error(
-          'Hero component: "subHeading" is provided, but "heading" is missing. Both should be set or omitted.',
-        );
-        return null;
-      }
+    if (subHeading && !heading) {
+      console.error('Hero component: "subHeading" is provided, but "heading" is missing');
+      return null;
     }
 
     return (
@@ -49,8 +44,8 @@ export const Hero = forwardRef(
         ref={ref}
         className={clsx(
           'rhc-hero',
-          heroMessage && `rhc-hero--text-align-${textAlign}`,
-          heroMessage &&
+          heading && `rhc-hero--text-align-${textAlign}`,
+          heading &&
             borderRadiusCorner &&
             `rhc-hero--custom-border-radius-corner rhc-hero--border-radius-corner-${borderRadiusCorner}`,
           `rhc-hero--aspect-ratio-${aspectRatio.replace(' / ', '-')}`,
@@ -59,7 +54,7 @@ export const Hero = forwardRef(
         {...restProps}
       >
         <Image alt={imageAlt} className="rhc-hero__image" src={imageSrc} />
-        {heroMessage && heading && (
+        {heading && (
           <div className={clsx('rhc-hero__message')}>
             <HeadingGroup>
               <Heading appearance="utrecht-heading-3" className="rhc-hero__heading" level={headingLevel}>
