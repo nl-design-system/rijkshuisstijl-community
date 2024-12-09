@@ -33,11 +33,9 @@ export const Hero = forwardRef(
     }: PropsWithChildren<HeroProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
-    if (subHeading && !heading) { 
-        console.error(
-          'Hero component: "subHeading" is provided, but "heading" is missing',
-        );
-        return null;
+    if (subHeading && !heading) {
+      console.error('Hero component: "subHeading" is provided, but "heading" is missing');
+      return null;
     }
 
     return (
