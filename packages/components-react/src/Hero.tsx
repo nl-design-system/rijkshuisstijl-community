@@ -37,7 +37,9 @@ export const Hero = forwardRef(
   ) => {
     if (heroMessage) {
       if (!heading && subHeading) {
-        console.error('Hero component: "subHeading" is provided, but "heading" is missing. Both should be set or omitted.');
+        console.error(
+          'Hero component: "subHeading" is provided, but "heading" is missing. Both should be set or omitted.',
+        );
         return null;
       }
     }
