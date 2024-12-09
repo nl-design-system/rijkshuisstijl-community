@@ -10,13 +10,6 @@ const meta = {
   id: 'rhc-hero',
   component: Hero,
   argTypes: {
-    heroMessage: {
-      description: 'Hero Message Visible',
-      control: { type: 'boolean' },
-      table: {
-        type: { summary: 'boolean' },
-      },
-    },
     headingLevel: {
       description: 'Heading level',
       control: { type: 'select' },
@@ -72,7 +65,6 @@ export const Default: Story = {
     imageAlt: 'Tullip field',
     heading: 'Heading',
     subHeading: 'Subtext',
-    heroMessage: true,
   },
 } satisfies Story;
 
@@ -81,7 +73,6 @@ export const CustomChildren: Story = {
     imageSrc:
       'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
     imageAlt: 'Tullip field',
-    heroMessage: false,
     children: (
       <LinkListCard heading="Hello World" headingLevel={2}>
         <LinkList>
