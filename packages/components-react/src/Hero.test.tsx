@@ -5,12 +5,7 @@ import '@testing-library/jest-dom';
 describe('Hero', () => {
   it('renders the hero component with the provided heading and subHeading', () => {
     render(
-      <Hero
-        heading="Test Heading"
-        imageAlt="Test Alt Text"
-        imageSrc="test-image.jpg"
-        subHeading="Test subHeading"
-      />,
+      <Hero heading="Test Heading" imageAlt="Test Alt Text" imageSrc="test-image.jpg" subHeading="Test subHeading" />,
     );
 
     const heading = screen.getByText('Test Heading');
@@ -25,17 +20,9 @@ describe('Hero', () => {
   it('logs an error and does not render when subHeading is provided without heading', () => {
     console.error = jest.fn();
 
-    render(
-      <Hero
-        imageAlt="Test Alt Text"
-        imageSrc="test-image.jpg"
-        subHeading="Test subHeading"
-      />,
-    );
+    render(<Hero imageAlt="Test Alt Text" imageSrc="test-image.jpg" subHeading="Test subHeading" />);
 
-    expect(console.error).toHaveBeenCalledWith(
-      'Hero component: "subHeading" is provided, but "heading" is missing',
-    );
+    expect(console.error).toHaveBeenCalledWith('Hero component: "subHeading" is provided, but "heading" is missing');
     expect(screen.queryByText('Test subHeading')).toBeNull();
   });
 
@@ -98,18 +85,5 @@ describe('Hero', () => {
     const button = screen.getByText('Click Me');
 
     expect(button).toBeInTheDocument();
-  });
-
-  it('does not render anything when subHeading is provided without heading', () => {
-
-    render(
-      <Hero
-        imageAlt="Test Alt Text"
-        imageSrc="test-image.jpg"
-        subHeading="Test subHeading"
-      />,
-    );
-
-    expect(screen.queryByText('Test subHeading')).toBeNull();
   });
 });
