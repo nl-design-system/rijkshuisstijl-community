@@ -35,6 +35,15 @@ export const Hero = forwardRef(
     }: PropsWithChildren<HeroProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
+    if (heroMessage) {
+      if (!heading && subHeading) {
+        console.error(
+          'Hero component: "subHeading" is provided, but "heading" is missing. Both should be set or omitted.',
+        );
+        return null;
+      }
+    }
+
     return (
       <div
         ref={ref}
@@ -50,13 +59,13 @@ export const Hero = forwardRef(
         {...restProps}
       >
         <Image alt={imageAlt} className="rhc-hero__image" src={imageSrc} />
-        {heroMessage && (
+        {heroMessage && heading && (
           <div className={clsx('rhc-hero__message')}>
             <HeadingGroup>
               <Heading appearance="utrecht-heading-3" className="rhc-hero__heading" level={headingLevel}>
                 {heading}
               </Heading>
-              <Paragraph className="rhc-hero__sub-heading">{subHeading}</Paragraph>
+              {subHeading && <Paragraph className="rhc-hero__sub-heading">{subHeading}</Paragraph>}
             </HeadingGroup>
           </div>
         )}
