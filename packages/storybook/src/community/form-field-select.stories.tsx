@@ -79,9 +79,9 @@ const meta = {
     },
     dir: {
       description: 'The direction of the form field',
+      options: ['ltr', 'rtl'],
       control: {
         type: 'select',
-        options: ['ltr', 'rtl'],
       },
     },
   },
