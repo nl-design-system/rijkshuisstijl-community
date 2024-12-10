@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { ChangeEvent, ForwardedRef, forwardRef, KeyboardEvent, PropsWithChildren, useRef, useState } from 'react';
 import { Textbox } from './Textbox';
+import { VisuallyHidden } from './VisuallyHidden';
 
 export interface CodeInputGroupProps {
   numberOfDigits: number;
@@ -44,28 +45,29 @@ export const CodeInput = forwardRef(
 
     return (
       <div className={'rhc-code-input-container'} data-testid={'code-input-container'} ref={ref} {...restProps}>
-        <Textbox
-          aria-label="code-input"
-          autoComplete="one-time-code"
-          className={'rhc-code-input--hidden'}
-          data-testid={'hidden-input'}
-          inputMode="numeric"
-          maxLength={numberOfDigits}
-          ref={inputRef}
-          value={values}
-          onChange={handleInputChange}
-          onKeyDown={handleKeyDown}
-          onBlur={() => {
-            setActive(false);
-          }}
-          onFocus={() => {
-            setActive(true);
-          }}
-          onSelect={(e) => {
-            const val = e.currentTarget.value; // currentTarget is strongly typed
-            e.currentTarget.setSelectionRange(val.length, val.length);
-          }}
-        />
+        <VisuallyHidden>
+          <Textbox
+            aria-label="code-input"
+            autoComplete="one-time-code"
+            data-testid={'hidden-input'}
+            inputMode="numeric"
+            maxLength={numberOfDigits}
+            ref={inputRef}
+            value={values}
+            onChange={handleInputChange}
+            onKeyDown={handleKeyDown}
+            onBlur={() => {
+              setActive(false);
+            }}
+            onFocus={() => {
+              setActive(true);
+            }}
+            onSelect={(e) => {
+              const val = e.currentTarget.value; // currentTarget is strongly typed
+              e.currentTarget.setSelectionRange(val.length, val.length);
+            }}
+          />
+        </VisuallyHidden>
 
         <div className={'rhc-code-input-group'}>
           {[...Array(numberOfDigits)].map((_, i) => (
