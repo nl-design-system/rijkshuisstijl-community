@@ -1,0 +1,7 @@
+{%- if appearance is not empty -%}
+  {% set attributes = attributes|merge({'appearance': appearance}) %}
+{%- endif -%}
+{% if level is empty %}
+  {% set level = 1 %}
+{% endif %}
+<h{{ level }}{{ attributes }}>{{ children }}</h{{ level }}>

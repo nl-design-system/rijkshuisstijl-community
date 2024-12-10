@@ -1,10 +1,23 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import custom from './webpack.config.js';
 
 const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
   },
   stories: ['../src/**/*stories.@(js|jsx|ts|tsx)', '../src/**/*.mdx'],
+  webpackFinal: async (config: { module: { rules: any } }) => {
+    return {
+      ...config,
+      module: {
+        ...config.module,
+        rules: [
+          ...config.module.rules,
+          ...custom.module.rules
+        ]
+      },
+    };
+  },
   addons: [
     '@chromatic-com/storybook',
     '@etchteam/storybook-addon-status',
