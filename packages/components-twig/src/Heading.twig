@@ -4,4 +4,4 @@
 {% if level is empty %}
   {% set level = 1 %}
 {% endif %}
-<h{{ level }}{{ attributes }}>{{ children }}</h{{ level }}>
+<h{{ level }} class="utrecht-heading-{{level}}" {{ attributes }}>{{ children }}</h{{ level }}>
