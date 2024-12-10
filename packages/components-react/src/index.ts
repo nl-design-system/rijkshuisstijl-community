@@ -43,6 +43,7 @@ export {
 } from './Card';
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
+export { CodeInput } from './CodeInput';
 export { type CustomFormFieldProps, FormField } from './FormField';
 export {
   DataList,
@@ -123,3 +124,4 @@ export { Textbox, type TextboxProps } from './Textbox';
 export { Toggletip, ToggletipButton, ToggletipContent, type ToggletipProps } from './Toggletip';
 export { UnorderedList, type UnorderedListProps } from './UnorderedList';
 export { UnorderedListItem, type UnorderedListItemProps } from './UnorderedListItem';
+export { VisuallyHidden } from './VisuallyHidden';
