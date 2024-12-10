@@ -2,7 +2,8 @@
 
 import twigTemplate from '@rijkshuisstijl-community/components-twig/src/Heading.twig?raw';
 import type { Meta, StoryObj } from '@storybook/react';
-import { createTwigComponent } from './TwigRenderer';
+import { createTwigComponent } from './TwigElement';
+// import { createTwigComponent } from './TwigRenderer';
 
 interface TwigHeadingProps {
   appearance?: string;
