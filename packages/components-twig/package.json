@@ -20,22 +20,13 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "npm-run-all build:**",
-    "build:components": "rollup --config rollup.config.mjs",
-    "clean": "rimraf dist/ pages/",
-    "lint": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
-    "test": "mkdir -p pages && NODE_OPTIONS=--experimental-vm-modules jest --verbose",
-    "watch:test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --watch"
+    "clean": "rimraf dist/"
   },
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.esm.js",
-  "types": "./dist/index.d.ts",
   "files": [
     "dist/"
   ],
   "sideEffects": false,
   "dependencies": {
-    "@rijkshuisstijl-community/components-css": "workspace:*",
-    "clsx": "2.1.1",
-    "lodash.chunk": "4.2.0"
+    "@rijkshuisstijl-community/components-css": "workspace:*"
   }
 }
