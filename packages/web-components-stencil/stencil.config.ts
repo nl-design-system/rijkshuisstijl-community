@@ -12,11 +12,11 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
-      customElementsExportBehavior: 'bundle',
+      externalRuntime: false,
     },
     reactOutputTarget({
-      componentCorePackage: '@rijkshuisstijl-community/web-components-stencil',
-      proxiesFile: '../web-components-react/src/components.ts',
+      outDir: '../web-components-react/src/',
+      stencilPackageName: '@rijkshuisstijl-community/web-components-stencil',
     }),
     {
       type: 'www',

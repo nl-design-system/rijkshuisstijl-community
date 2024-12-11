@@ -3,7 +3,7 @@ import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } fr
 import { FormField } from './FormField';
 import { Radio, RadioProps } from './Radio';
 
-export interface FormFieldRadioOptionProps extends RadioProps {
+export interface FormFieldRadioProps extends RadioProps {
   errorMessage?: string;
   radioRef?: Ref<HTMLInputElement>;
   status?: ReactNode;
@@ -14,7 +14,7 @@ export interface FormFieldRadioOptionProps extends RadioProps {
   defaultValue?: string;
 }
 
-export const FormFieldRadioOption = forwardRef(
+export const FormFieldRadio = forwardRef(
   (
     {
       label,
@@ -26,7 +26,7 @@ export const FormFieldRadioOption = forwardRef(
       input,
       dir,
       ...restProps
-    }: PropsWithChildren<FormFieldRadioOptionProps>,
+    }: PropsWithChildren<FormFieldRadioProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const id = useId();
@@ -75,4 +75,4 @@ export const FormFieldRadioOption = forwardRef(
   },
 );
 
-FormFieldRadioOption.displayName = 'FormFieldRadioOption';
+FormFieldRadio.displayName = 'FormFieldRadio';

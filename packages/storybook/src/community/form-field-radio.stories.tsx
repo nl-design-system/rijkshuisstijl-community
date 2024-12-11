@@ -1,17 +1,13 @@
 import '@rijkshuisstijl-community/components-css/index.scss';
 
-import { FormFieldRadioOption } from '@rijkshuisstijl-community/components-react';
+import { FormFieldRadio } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
+import readme from './form-field-radio.md?raw';
 
 const meta = {
-  title: 'Rijkshuisstijl/Form field/Form Field Radio Option',
-  id: 'rhc-form-field-radio-option',
-  component: FormFieldRadioOption,
-  parameters: {
-    status: {
-      type: 'STABLE',
-    },
-  },
+  title: 'Rijkshuisstijl/Form field/Form Field Radio',
+  id: 'rhc-form-field-radio',
+  component: FormFieldRadio,
   args: {
     checked: false,
     disabled: false,
@@ -35,7 +31,17 @@ const meta = {
       description: 'Radio group name. Use the same name for each radio option in a group.',
     },
   },
-} satisfies Meta<typeof FormFieldRadioOption>;
+  parameters: {
+    status: {
+      type: 'UNSTABLE',
+    },
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
+  },
+} satisfies Meta<typeof FormFieldRadio>;
 
 export default meta;
 
@@ -51,5 +57,5 @@ export const Default: Story = {
     disabled: false,
     invalid: false,
   },
-  render: (args) => <FormFieldRadioOption {...args} onChange={() => {}} />,
+  render: (args) => <FormFieldRadio {...args} onChange={() => {}} />,
 };

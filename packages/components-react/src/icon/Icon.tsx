@@ -91,14 +91,14 @@ export const IconenSet: Partial<Record<RijkshuisstijlIconID, ReactNode>> = {
 export const iconOptions = Object.keys(IconenSet);
 
 export interface IconProps extends UtrechtIconProps {
-  icon?: string;
+  icon?: RijkshuisstijlIconID;
 }
 
 export const Icon = forwardRef(
   ({ children, icon, className, ...restProps }: PropsWithChildren<IconProps>, ref: ForwardedRef<HTMLSpanElement>) => {
     return (
       <UtrechtIcon className={className} ref={ref} {...restProps}>
-        {icon && IconenSet[icon as keyof typeof IconenSet]}
+        {icon && IconenSet[icon]}
         {children}
       </UtrechtIcon>
     );

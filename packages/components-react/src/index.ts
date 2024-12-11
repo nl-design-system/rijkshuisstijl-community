@@ -43,6 +43,7 @@ export {
 } from './Card';
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
+export { CodeInput } from './CodeInput';
 export { type CustomFormFieldProps, FormField } from './FormField';
 export {
   DataList,
@@ -59,13 +60,14 @@ export {
 export { DotBadge, type DotBadgeProps } from './DotBadge';
 export { Fieldset, FieldsetLegend, type FieldsetLegendProps, type FieldsetProps } from './Fieldset';
 export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from './Figure';
+export { File } from './File';
 export { FileInput, type FileInputProps } from './FileInput';
-export { FileInputItem } from './FileInputItem';
 export { Footer } from './Footer';
 export { FormFieldCheckboxGroup, type FormFieldCheckboxGroupProps } from './FormFieldCheckboxGroup';
 export { FormFieldCheckboxOption, type FormFieldCheckboxOptionProps } from './FormFieldCheckboxOption';
 export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFieldErrorMessage';
-export { FormFieldRadioOption, type FormFieldRadioOptionProps } from './FormFieldRadioOption';
+export { FormFieldRadio, type FormFieldRadioProps } from './FormFieldRadio';
+export { FormFieldRadioGroup, type FormFieldRadioGroupProps } from './FormFieldRadioGroup';
 export { FormFieldSelect, type FormFieldSelectProps, SelectOption, type SelectOptionProps } from './FormFieldSelect';
 export { FormFieldTextarea, type FormFieldTextareaProps, Textarea } from './FormFieldTextarea';
 export { FormFieldTextbox } from './FormFieldTextbox';
@@ -96,6 +98,7 @@ export { PageHeader, type PageHeaderProps } from './PageHeader';
 export { Paragraph, type ParagraphProps } from './Paragraph';
 export { PreHeading, type PreHeadingProps } from './PreHeading';
 export { Radio, type RadioProps } from './Radio';
+export { RadioGroup, type RadioGroupProps } from './RadioGroup';
 export { Separator, type SeparatorProps } from './Separator';
 export { SideNav, type SideNavProps } from './SideNav';
 export { SideNavItem, type SideNavItemProps } from './SideNavItem';
@@ -121,3 +124,4 @@ export { Textbox, type TextboxProps } from './Textbox';
 export { Toggletip, ToggletipButton, ToggletipContent, type ToggletipProps } from './Toggletip';
 export { UnorderedList, type UnorderedListProps } from './UnorderedList';
 export { UnorderedListItem, type UnorderedListItemProps } from './UnorderedListItem';
+export { VisuallyHidden } from './VisuallyHidden';

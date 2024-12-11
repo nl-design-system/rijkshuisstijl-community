@@ -4,6 +4,7 @@ import {
   Article,
   Blockquote,
   Button,
+  CodeInput,
   DataList,
   DataListActions,
   DataListItem,
@@ -12,7 +13,7 @@ import {
   FormField,
   FormFieldCheckboxGroup,
   FormFieldCheckboxOption,
-  FormFieldRadioOption,
+  FormFieldRadio,
   FormFieldTextarea,
   FormFieldTextbox,
   Heading,
@@ -152,10 +153,10 @@ export default function Collage() {
                       statusId="status-id"
                       input={
                         <>
-                          <FormFieldRadioOption label="Option 1" name="group1" value="option1" />
-                          <FormFieldRadioOption label="Option 2" name="group1" value="option2" />
-                          <FormFieldRadioOption label="Option 3" name="group1" value="option3" />
-                          <FormFieldRadioOption label="Option 4" name="group1" value="option4" />
+                          <FormFieldRadio label="Option 1" name="group1" value="option1" />
+                          <FormFieldRadio label="Option 2" name="group1" value="option2" />
+                          <FormFieldRadio label="Option 3" name="group1" value="option3" />
+                          <FormFieldRadio label="Option 4" name="group1" value="option4" />
                         </>
                       }
                     />
@@ -301,6 +302,12 @@ export default function Collage() {
                         </TableRow>
                       </TableFooter>
                     </Table>
+                    <CodeInput
+                      numberOfDigits={6}
+                      onChange={(value: String) => {
+                        console.log('onchange: ', value);
+                      }}
+                    />
                     {/*}
         <div className="unstarted">
           <Pagination maxVisiblePages={6} page={1} totalPages={99}></Pagination>
