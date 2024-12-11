@@ -32,7 +32,7 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
-import { Document, RichText } from '@utrecht/component-library-react';
+import { Document } from '@utrecht/component-library-react';
 
 export default function Page() {
   return (
@@ -58,7 +58,7 @@ export default function Page() {
           <div className="rhc-templates-main-content">
             <PageContent className="rhc-templates-page-content rhc-templates-background-color-white">
               <Article>
-                <RichText>
+                <div className="rhc-margin-block-end-wrapper">
                   <div className="rhc-templates-spacing-2">
                     <Heading level={1}>Titel van de pagina</Heading>
                     <Paragraph lead>Hier zou een korte introductie van de pagina kunnen staan.</Paragraph>
@@ -227,7 +227,7 @@ export default function Page() {
                       </ButtonLink>
                     </ActionGroup>
                   </div>
-                </RichText>
+                </div>
               </Article>
             </PageContent>
           </div>

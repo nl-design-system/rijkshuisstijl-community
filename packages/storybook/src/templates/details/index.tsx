@@ -15,7 +15,7 @@ import {
   Separator,
   SubNavBar,
 } from '@rijkshuisstijl-community/components-react';
-import { ColumnLayout, Document, RichText } from '@utrecht/component-library-react';
+import { ColumnLayout, Document } from '@utrecht/component-library-react';
 
 export default function Details() {
   return (
@@ -83,7 +83,7 @@ export default function Details() {
             <div className="rhc-templates-main-content">
               <div className="utrecht-page-content rhc-templates-page-content">
                 <Article>
-                  <RichText>
+                  <div className="rhc-margin-block-end-wrapper">
                     <Paragraph lead>
                       De Arbeidstijdenwet geeft regels voor werktijden, pauzes en rusttijden van werknemers. Met deze
                       regels wil de Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de combinatie
@@ -132,7 +132,7 @@ export default function Details() {
                         imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
                       ></Card>
                     </div>
-                  </RichText>
+                  </div>
                 </Article>
               </div>
             </div>
