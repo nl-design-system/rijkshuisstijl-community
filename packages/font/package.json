@@ -4,13 +4,12 @@
   "author": "Community for NL Design System",
   "description": "Font assets",
   "license": "EUPL-1.2",
-  "main": "dist/index.css",
   "keywords": [
     "nl-design-system"
   ],
   "private": false,
   "publishConfig": {
-    "access": "restricted",
+    "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "files": [
@@ -19,7 +18,7 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
-    "directory": "proprietary/font"
+    "directory": "packages/font"
   },
   "devDependencies": {
     "@fontsource/fira-sans": "5.1.0"
