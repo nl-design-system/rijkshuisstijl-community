@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Web Components Dev</title>
     <script type="module" src="/src/index.ts"></script>
+    <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css" />
+    <script type="module">
+      import { RHCButton } from './src/index.ts';
+      RHCButton.define();
+    </script>
     <style>
       body {
         padding: 2rem;
@@ -12,10 +18,11 @@
       }
     </style>
   </head>
-  <body>
+  <body class="rhc-theme">
     <h1>Web Components Development</h1>
-    <rh-button>Default Button</rh-button>
-    <rh-button variant="primary">Primary Button</rh-button>
-    <rh-button disabled>Disabled Button</rh-button>
+    <rhc-button>Default Button</rhc-button>
+    <rhc-button appearance="primary-action">Primary Button</rhc-button>
+    <rhc-button appearance="secondary-action">Secondary Button</rhc-button>
+    <rhc-button appearance="subtle">Subtle Button</rhc-button>
   </body>
 </html>
