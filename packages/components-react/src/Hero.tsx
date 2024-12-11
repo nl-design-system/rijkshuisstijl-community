@@ -9,10 +9,9 @@ export interface HeroProps extends HTMLAttributes<HTMLDivElement> {
   textAlign?: 'start' | 'end';
   imageSrc: string;
   imageAlt: string;
-  heading: ReactNode;
+  heading?: ReactNode;
   headingLevel?: 1 | 2 | 3 | 4 | 5;
-  subHeading: ReactNode;
-  heroMessage?: boolean;
+  subHeading?: ReactNode;
   aspectRatio?: '16 / 9' | '1 / 1' | '4 / 3';
   borderRadiusCorner?: 'start-start' | 'start-end' | 'end-start' | 'end-end';
 }
@@ -27,7 +26,6 @@ export const Hero = forwardRef(
       imageAlt,
       heading,
       subHeading,
-      heroMessage,
       headingLevel = 3,
       borderRadiusCorner,
       aspectRatio = '16 / 9',
@@ -35,13 +33,18 @@ export const Hero = forwardRef(
     }: PropsWithChildren<HeroProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
+    if (subHeading && !heading) {
+      console.error('Hero component: "subHeading" is provided, but "heading" is missing');
+      return null;
+    }
+
     return (
       <div
         ref={ref}
         className={clsx(
           'rhc-hero',
-          heroMessage && `rhc-hero--text-align-${textAlign}`,
-          heroMessage &&
+          heading && `rhc-hero--text-align-${textAlign}`,
+          heading &&
             borderRadiusCorner &&
             `rhc-hero--custom-border-radius-corner rhc-hero--border-radius-corner-${borderRadiusCorner}`,
           `rhc-hero--aspect-ratio-${aspectRatio.replace(' / ', '-')}`,
@@ -50,13 +53,13 @@ export const Hero = forwardRef(
         {...restProps}
       >
         <Image alt={imageAlt} className="rhc-hero__image" src={imageSrc} />
-        {heroMessage && (
+        {heading && (
           <div className={clsx('rhc-hero__message')}>
             <HeadingGroup>
               <Heading appearance="utrecht-heading-3" className="rhc-hero__heading" level={headingLevel}>
                 {heading}
               </Heading>
-              <Paragraph className="rhc-hero__sub-heading">{subHeading}</Paragraph>
+              {subHeading && <Paragraph className="rhc-hero__sub-heading">{subHeading}</Paragraph>}
             </HeadingGroup>
           </div>
         )}
