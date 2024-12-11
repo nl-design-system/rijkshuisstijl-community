@@ -1,7 +1,11 @@
+{% from "attributes.twig" import parse_attributes %}
+{%- set attributes = attributes|default({'class': []})|merge({
+  'class': attributes.class|default([]),
+}) -%}
 {%- if appearance is not empty -%}
   {% set attributes = attributes|merge({'appearance': appearance}) %}
 {%- endif -%}
-{% if level is empty %}
+{%- if level is empty -%}
   {% set level = 1 %}
-{% endif %}
-<h{{ level }} class="utrecht-heading-{{level}}" {{ attributes }}>{{ children }}</h{{ level }}>
+{%- endif -%}
+<h{{ level }}{{ parse_attributes(attributes) }}>{{ children }}</h{{ level }}>
