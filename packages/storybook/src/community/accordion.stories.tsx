@@ -100,7 +100,7 @@ const accordionData = [
       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
       laborum.`,
-    expandedAccordion: true,
+    expanded: true,
   },
   {
     label: 'Lorem ipsum 2',
@@ -109,7 +109,7 @@ const accordionData = [
       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
       laborum.`,
-    expandedAccordion: false,
+    expanded: true,
   },
   {
     label: 'Lorem ipsum 3',
@@ -118,7 +118,7 @@ const accordionData = [
       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
       laborum.`,
-    expandedAccordion: false,
+    expanded: true,
   },
 ];
 

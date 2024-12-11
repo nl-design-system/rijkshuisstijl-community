@@ -57,4 +57,5 @@ export const Default: Story = {
     disabled: false,
     invalid: false,
   },
+  render: (args) => <FormFieldRadio {...args} onChange={() => {}} />,
 };

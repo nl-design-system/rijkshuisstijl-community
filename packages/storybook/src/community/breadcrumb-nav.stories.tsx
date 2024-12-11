@@ -30,13 +30,13 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: [
-      <BreadcrumbNavLink href="https://example.com/" index={0} rel="home">
+      <BreadcrumbNavLink href="https://example.com/" index={0} key="home" rel="home">
         Home
       </BreadcrumbNavLink>,
-      <BreadcrumbNavLink href="https://example.com/search" index={1} rel="up">
+      <BreadcrumbNavLink href="https://example.com/search" index={1} key="search" rel="up">
         Zoeken
       </BreadcrumbNavLink>,
-      <BreadcrumbNavLink href="https://example.com/search?q=example" index={2} rel="first">
+      <BreadcrumbNavLink href="https://example.com/search?q=example" index={2} key="example" rel="first">
         Example
       </BreadcrumbNavLink>,
     ],
@@ -46,13 +46,13 @@ export const Default: Story = {
 export const Current: Story = {
   args: {
     children: [
-      <BreadcrumbNavLink href="/" index={0} rel="home">
+      <BreadcrumbNavLink href="/" index={0} key="home" rel="home">
         Home
       </BreadcrumbNavLink>,
-      <BreadcrumbNavLink href="/a/" index={1}>
+      <BreadcrumbNavLink href="/a/" index={1} key="label">
         Label
       </BreadcrumbNavLink>,
-      <BreadcrumbNavLink current href="/a/b/" index={2}>
+      <BreadcrumbNavLink current href="/a/b/" index={2} key="label-2">
         Label
       </BreadcrumbNavLink>,
     ],
@@ -69,19 +69,19 @@ export const Current: Story = {
 export const Separator: Story = {
   args: {
     children: [
-      <BreadcrumbNavLink href="/" index={0} rel="home">
+      <BreadcrumbNavLink href="/" index={0} key="home" rel="home">
         Home
       </BreadcrumbNavLink>,
-      <BreadcrumbNavSeparator>
+      <BreadcrumbNavSeparator key="icon">
         <Icon icon={'chevron-right'} />
       </BreadcrumbNavSeparator>,
-      <BreadcrumbNavLink href="/a/" index={1}>
+      <BreadcrumbNavLink href="/a/" index={1} key="label">
         Label
       </BreadcrumbNavLink>,
-      <BreadcrumbNavSeparator>
+      <BreadcrumbNavSeparator key="icon-2">
         <Icon icon={'chevron-right'} />
       </BreadcrumbNavSeparator>,
-      <BreadcrumbNavLink href="/a/b/" index={2}>
+      <BreadcrumbNavLink href="/a/b/" index={2} key="label-2">
         Label
       </BreadcrumbNavLink>,
     ],
@@ -91,13 +91,13 @@ export const Separator: Story = {
 export const Active: Story = {
   args: {
     children: [
-      <BreadcrumbNavLink href="/" index={0} rel="home">
+      <BreadcrumbNavLink href="/" index={0} key="home" rel="home">
         Home
       </BreadcrumbNavLink>,
-      <BreadcrumbNavLink href="/a/" index={1}>
+      <BreadcrumbNavLink href="/a/" index={1} key="label">
         Label
       </BreadcrumbNavLink>,
-      <BreadcrumbNavLink active current href="/a/b/" index={2}>
+      <BreadcrumbNavLink active current href="/a/b/" index={2} key="label-2">
         Label
       </BreadcrumbNavLink>,
     ],
@@ -107,13 +107,13 @@ export const Active: Story = {
 export const DisabledAndCurrent: Story = {
   args: {
     children: [
-      <BreadcrumbNavLink href="/" index={0} rel="home">
+      <BreadcrumbNavLink href="/" index={0} key="home" rel="home">
         Home
       </BreadcrumbNavLink>,
-      <BreadcrumbNavLink href="/a/" index={1}>
+      <BreadcrumbNavLink href="/a/" index={1} key="label">
         Label
       </BreadcrumbNavLink>,
-      <BreadcrumbNavLink current disabled href="/a/b/" index={2}>
+      <BreadcrumbNavLink current disabled href="/a/b/" index={2} key="label-2">
         Label
       </BreadcrumbNavLink>,
     ],

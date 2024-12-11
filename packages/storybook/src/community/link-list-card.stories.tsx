@@ -48,9 +48,15 @@ export const Default: Story = {
     headingLevel: 2,
     heading: 'Heading',
     children: [
-      <LinkListLink href="#">Link 1</LinkListLink>,
-      <LinkListLink href="#">Link 2</LinkListLink>,
-      <LinkListLink href="#">Link 3</LinkListLink>,
+      <LinkListLink href="#" key="link-1">
+        Link 1
+      </LinkListLink>,
+      <LinkListLink href="#" key="link-2">
+        Link 2
+      </LinkListLink>,
+      <LinkListLink href="#" key="link-3">
+        Link 3
+      </LinkListLink>,
     ],
   },
 };

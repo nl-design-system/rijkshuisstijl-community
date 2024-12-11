@@ -213,6 +213,7 @@ const meta = {
         rows={rows || undefined}
         status={status || undefined}
         value={value || undefined}
+        onChange={() => {}}
       />
     );
   },

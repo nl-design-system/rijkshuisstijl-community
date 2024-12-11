@@ -13,11 +13,29 @@ type Story = StoryObj<typeof meta>;
 
 const columns: NavBarLinkProps[][] = [
   [
-    { label: 'Label', href: '#' },
-    { label: 'Label', href: '#' },
-    { label: 'Label', href: '#' },
+    {
+      label: 'Label',
+      href: '#',
+      id: 'li-1',
+    },
+    {
+      label: 'Label',
+      href: '#',
+      id: 'li-2',
+    },
+    {
+      label: 'Label',
+      href: '#',
+      id: 'li-3',
+    },
   ],
-  [{ label: 'Label', href: '#' }],
+  [
+    {
+      label: 'Label',
+      href: '#',
+      id: 'li-4',
+    },
+  ],
 ];
 
 export const Default: Story = {

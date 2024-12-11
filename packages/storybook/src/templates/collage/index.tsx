@@ -167,13 +167,11 @@ export default function Collage() {
                       <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
                     </FormFieldCheckboxGroup>
                     <Alert heading="Heading" type="error">
-                      <Paragraph>
-                        <LinkList>
-                          <LinkListLink href="#">Label</LinkListLink>
-                          <LinkListLink href="#">Label</LinkListLink>
-                          <LinkListLink href="#">Label</LinkListLink>
-                        </LinkList>
-                      </Paragraph>
+                      <LinkList>
+                        <LinkListLink href="#">Label</LinkListLink>
+                        <LinkListLink href="#">Label</LinkListLink>
+                        <LinkListLink href="#">Label</LinkListLink>
+                      </LinkList>
                     </Alert>
                     <FormField
                       description="Description"
