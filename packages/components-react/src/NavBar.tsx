@@ -1,6 +1,6 @@
 import { ColumnLayout } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactElement } from 'react';
+import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactElement, ReactNode } from 'react';
 import { Heading } from './Heading';
 import { Link } from './Link';
 import { LinkList, LinkListLink } from './LinkList';
@@ -14,7 +14,7 @@ export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
 
 export interface NavBarLinkProps {
   id: string;
-  label: string;
+  label: ReactNode;
   href: string;
 }
 
@@ -36,7 +36,7 @@ export interface SubNavBarProps extends HTMLAttributes<HTMLDivElement> {
 
 interface SectionProps {
   id: string;
-  heading: string;
+  heading: ReactNode;
   headingLevel?: 1 | 2 | 3 | 4 | 5;
   items: NavBarLinkProps[];
 }

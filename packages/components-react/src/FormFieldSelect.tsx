@@ -22,7 +22,7 @@ export interface FormFieldSelectProps
   status?: ReactNode;
   description?: string;
   input?: ReactNode;
-  label: string;
+  label: ReactNode;
   options?: string[];
 }
 
