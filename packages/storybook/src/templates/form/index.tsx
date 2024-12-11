@@ -23,7 +23,7 @@ import {
   PageHeader,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
-import { Document, RichText } from '@utrecht/component-library-react';
+import { Document } from '@utrecht/component-library-react';
 
 export default function Form() {
   return (
@@ -49,7 +49,7 @@ export default function Form() {
           <div className="rhc-templates-background-color-white rhc-templates-main-content">
             <PageContent className="rhc-templates-page-content rhc-templates-background-color-white">
               <Article>
-                <RichText>
+                <div className="rhc-margin-block-end-wrapper">
                   <BreadcrumbNav>
                     <BreadcrumbNavLink href="/" index={0} rel="home">
                       Home
@@ -160,7 +160,7 @@ export default function Form() {
                       Ga verder
                     </Button>
                   </form>
-                </RichText>
+                </div>
               </Article>
             </PageContent>
           </div>

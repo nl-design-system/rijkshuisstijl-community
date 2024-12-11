@@ -11,7 +11,7 @@ interface FooterProps extends PageFooterProps {
 }
 
 interface ColumnProps {
-  heading: string;
+  heading: ReactNode;
   headingLevel?: number;
   children: ReactNode;
 }

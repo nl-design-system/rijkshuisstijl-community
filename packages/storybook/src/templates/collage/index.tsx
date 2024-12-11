@@ -4,6 +4,7 @@ import {
   Article,
   Blockquote,
   Button,
+  CodeInput,
   DataList,
   DataListActions,
   DataListItem,
@@ -42,7 +43,7 @@ import {
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react/dist/esm/tabler-icons-react';
-import { Document, RichText } from '@utrecht/component-library-react';
+import { Document } from '@utrecht/component-library-react';
 
 export default function Collage() {
   return (
@@ -78,7 +79,7 @@ export default function Collage() {
             <div className="rhc-templates-main-content">
               <div className="utrecht-page-content rhc-templates-page-content">
                 <Article>
-                  <RichText>
+                  <div className="rhc-margin-block-end-wrapper">
                     {/*
         <div className="unfinished">
           <Avatar label="BK"></Avatar>
@@ -303,12 +304,18 @@ export default function Collage() {
                         </TableRow>
                       </TableFooter>
                     </Table>
+                    <CodeInput
+                      numberOfDigits={6}
+                      onChange={(value: String) => {
+                        console.log('onchange: ', value);
+                      }}
+                    />
                     {/*}
         <div className="unstarted">
           <Pagination maxVisiblePages={6} page={1} totalPages={99}></Pagination>
         </div>
         */}
-                  </RichText>
+                  </div>
                 </Article>
               </div>
             </div>
