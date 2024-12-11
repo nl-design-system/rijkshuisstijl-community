@@ -34,6 +34,7 @@ const meta = {
         'utrecht-heading-3',
         'utrecht-heading-4',
         'utrecht-heading-5',
+        'utrecht-heading-6',
       ],
     },
   },
