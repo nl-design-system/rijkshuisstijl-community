@@ -406,6 +406,9 @@ importers:
       '@rijkshuisstijl-community/rivm-design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/rivm-design-tokens
+      '@rijkshuisstijl-community/web-components':
+        specifier: workspace:*
+        version: link:../web-component-native
       '@rijkshuisstijl-community/web-components-react':
         specifier: workspace:*
         version: link:../web-components-react
@@ -451,6 +454,9 @@ importers:
       '@storybook/theming':
         specifier: 8.4.6
         version: 8.4.6(storybook@8.4.6(prettier@3.4.1))
+      '@storybook/web-components':
+        specifier: 8.4.7
+        version: 8.4.7(lit@3.2.1)(storybook@8.4.6(prettier@3.4.1))
       '@tabler/icons-react':
         specifier: 3.23.0
         version: 3.23.0(react@18.3.1)
@@ -515,6 +521,15 @@ importers:
         specifier: 2.8.1
         version: 2.8.1
     devDependencies:
+      '@rijkshuisstijl-community/components-css':
+        specifier: workspace:*
+        version: link:../components-css
+      '@rijkshuisstijl-community/design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/design-tokens
+      '@utrecht/button-css':
+        specifier: 2.2.0
+        version: 2.2.0
       '@web/test-runner':
         specifier: 0.19.0
         version: 0.19.0
@@ -1966,10 +1981,16 @@ packages:
     resolution: {integrity: sha512-2a+xLesTQhpglMwxi3xemoMvHV45ZyMYocmkCvivSTv9GAsRuVxRdK6aE1WLbo8NKErztZcfs9kxnr6U+/RrQg==}
     engines: {node: ^18.0.0 || >=20.0.0}
 
+  '@lit-labs/ssr-dom-shim@1.2.1':
+    resolution: {integrity: sha512-wx4aBmgeGvFmOKucFKY+8VFJSYZxs9poN3SDNQFF6lT6NrQUnHiPB2PWz2sc4ieEcAaYYzN+1uWahEeTq2aRIQ==}
+
   '@lit/react@1.0.6':
     resolution: {integrity: sha512-QIss8MPh6qUoFJmuaF4dSHts3qCsA36S3HcOLiNPShxhgYPr4XJRnCBKPipk85sR9xr6TQrOcDMfexwbNdJHYA==}
     peerDependencies:
       '@types/react': 17 || 18
+
+  '@lit/reactive-element@2.0.4':
+    resolution: {integrity: sha512-GFn91inaUa2oHLak8awSIigYz0cU0Payr1rcFsrkf5OJ5eSPxElyZfKh0f2p9FsTiZWXQdWGJeXZICEfXXYSXQ==}
 
   '@mdx-js/react@3.1.0':
     resolution: {integrity: sha512-QjHtSaoameoalGnKDT3FoIl4+9RwyTmo9ZJGBdLOks/YOiWHoRDI3PUwEzOE7kEmGcV3AFcp9K6dYu9rEuKLAQ==}
@@ -2666,6 +2687,11 @@ packages:
     peerDependencies:
       storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
+  '@storybook/components@8.4.7':
+    resolution: {integrity: sha512-uyJIcoyeMWKAvjrG9tJBUCKxr2WZk+PomgrgrUwejkIfXMO76i6jw9BwLa0NZjYdlthDv30r9FfbYZyeNPmF0g==}
+    peerDependencies:
+      storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
+
   '@storybook/core@8.4.6':
     resolution: {integrity: sha512-WeojVtHy0/t50tzw/15S+DLzKsj8BN9yWdo3vJMvm+nflLFvfq1XvD9WGOWeaFp8E/o3AP+4HprXG0r42KEJtA==}
     peerDependencies:
@@ -2702,8 +2728,18 @@ packages:
     peerDependencies:
       storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
+  '@storybook/manager-api@8.4.7':
+    resolution: {integrity: sha512-ELqemTviCxAsZ5tqUz39sDmQkvhVAvAgiplYy9Uf15kO0SP2+HKsCMzlrm2ue2FfkUNyqbDayCPPCB0Cdn/mpQ==}
+    peerDependencies:
+      storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
+
   '@storybook/preview-api@8.4.6':
     resolution: {integrity: sha512-LbD+lR1FGvWaJBXteVx5xdgs1x1D7tyidBg2CsW2ex+cP0iJ176JgjPfutZxlWOfQnhfRYNnJ3WKoCIfxFOTKA==}
+    peerDependencies:
+      storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
+
+  '@storybook/preview-api@8.4.7':
+    resolution: {integrity: sha512-0QVQwHw+OyZGHAJEXo6Knx+6/4er7n2rTDE5RYJ9F2E2Lg42E19pfdLlq2Jhoods2Xrclo3wj6GWR//Ahi39Eg==}
     peerDependencies:
       storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
@@ -2751,6 +2787,18 @@ packages:
     resolution: {integrity: sha512-q7vDPN/mgj7cXIVQ9R1/V75hrzNgKkm2G0LjMo57//9/djQ+7LxvBsR1iScbFIRSEqppvMiBFzkts+2uXidySA==}
     peerDependencies:
       storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
+
+  '@storybook/theming@8.4.7':
+    resolution: {integrity: sha512-99rgLEjf7iwfSEmdqlHkSG3AyLcK0sfExcr0jnc6rLiAkBhzuIsvcHjjUwkR210SOCgXqBPW0ZA6uhnuyppHLw==}
+    peerDependencies:
+      storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
+
+  '@storybook/web-components@8.4.7':
+    resolution: {integrity: sha512-zR/bUWGkS5uxvqfXnW082ScrC4y5UrTdE1VKasezLGi5bTLub2hz8JP87PJgtWrq+mdrdmkLGzv5O4iJ/tlMAw==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      lit: ^2.0.0 || ^3.0.0
+      storybook: ^8.4.7
 
   '@swc/counter@0.1.3':
     resolution: {integrity: sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==}
@@ -3048,6 +3096,9 @@ packages:
   '@types/tough-cookie@4.0.5':
     resolution: {integrity: sha512-/Ad8+nIOV7Rl++6f1BdKxFSMgmoqEoYbHRpPcx3JEfv8VRsQe9Z4mCXeJBzxs7mbHY/XOZZuXlRNfhpVPbs6ZA==}
 
+  '@types/trusted-types@2.0.7':
+    resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
+
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==}
 
@@ -3129,6 +3180,9 @@ packages:
 
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
+
+  '@utrecht/button-css@2.2.0':
+    resolution: {integrity: sha512-Fooo1EN8Dla4XKdqAnvSI3yCqnh4XkwX0jmMWgm9czcyj4ahVYayEIz7zEg34J8Gd5bMbFmeakyaIU9/A9YAvQ==}
 
   '@utrecht/button-react@2.0.2':
     resolution: {integrity: sha512-Nt8hSZApoACqUtu/nTRCjELWAi9KQ7n1Vffs5sXyA0Xjw9r99xRkrIQsFyDxJV2y14Kisp89fkDNY8MwAtJYDA==}
@@ -6383,6 +6437,15 @@ packages:
   listr2@8.2.5:
     resolution: {integrity: sha512-iyAZCeyD+c1gPyE9qpFu8af0Y+MRtmKOncdGoA2S5EY8iFq99dmmvkNnHiWo+pj0s7yH7l3KPIgee77tKpXPWQ==}
     engines: {node: '>=18.0.0'}
+
+  lit-element@4.1.1:
+    resolution: {integrity: sha512-HO9Tkkh34QkTeUmEdNYhMT8hzLid7YlMlATSi1q4q17HE5d9mrrEHJ/o8O2D0cMi182zK1F3v7x0PWFjrhXFew==}
+
+  lit-html@3.2.1:
+    resolution: {integrity: sha512-qI/3lziaPMSKsrwlxH/xMgikhQ0EGOX2ICU73Bi/YHFvz2j/yMCIrw4+puF2IpQ4+upd3EWbvnHM9+PnJn48YA==}
+
+  lit@3.2.1:
+    resolution: {integrity: sha512-1BBa1E/z0O9ye5fZprPtdqnc0BFzxIxTTOO/tQFmyC/hj1O3jL4TfmLBw0WEwjAokdLwpclkvGgDJwTIh0/22w==}
 
   load-json-file@4.0.0:
     resolution: {integrity: sha512-Kx8hMakjX03tiGTLAIdJ+lL0htKnXjEZN6hk/tozf/WOuYGdZBJrZ+rCJRbVCugsjB3jMLn9746NsQIf5VjBMw==}
@@ -11155,6 +11218,8 @@ snapshots:
       - supports-color
       - typescript
 
+  '@lit-labs/ssr-dom-shim@1.2.1': {}
+
   '@lit/react@1.0.6(@types/react@18.3.1)':
     dependencies:
       '@types/react': 18.3.1
@@ -11162,6 +11227,10 @@ snapshots:
   '@lit/react@1.0.6(@types/react@18.3.12)':
     dependencies:
       '@types/react': 18.3.12
+
+  '@lit/reactive-element@2.0.4':
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.2.1
 
   '@mdx-js/react@3.1.0(@types/react@18.3.12)(react@18.3.1)':
     dependencies:
@@ -11974,6 +12043,10 @@ snapshots:
     dependencies:
       storybook: 8.4.6(prettier@3.4.1)
 
+  '@storybook/components@8.4.7(storybook@8.4.6(prettier@3.4.1))':
+    dependencies:
+      storybook: 8.4.6(prettier@3.4.1)
+
   '@storybook/core@8.4.6(prettier@3.4.1)':
     dependencies:
       '@storybook/csf': 0.1.11
@@ -12022,7 +12095,15 @@ snapshots:
     dependencies:
       storybook: 8.4.6(prettier@3.4.1)
 
+  '@storybook/manager-api@8.4.7(storybook@8.4.6(prettier@3.4.1))':
+    dependencies:
+      storybook: 8.4.6(prettier@3.4.1)
+
   '@storybook/preview-api@8.4.6(storybook@8.4.6(prettier@3.4.1))':
+    dependencies:
+      storybook: 8.4.6(prettier@3.4.1)
+
+  '@storybook/preview-api@8.4.7(storybook@8.4.6(prettier@3.4.1))':
     dependencies:
       storybook: 8.4.6(prettier@3.4.1)
 
@@ -12090,6 +12171,22 @@ snapshots:
   '@storybook/theming@8.4.6(storybook@8.4.6(prettier@3.4.1))':
     dependencies:
       storybook: 8.4.6(prettier@3.4.1)
+
+  '@storybook/theming@8.4.7(storybook@8.4.6(prettier@3.4.1))':
+    dependencies:
+      storybook: 8.4.6(prettier@3.4.1)
+
+  '@storybook/web-components@8.4.7(lit@3.2.1)(storybook@8.4.6(prettier@3.4.1))':
+    dependencies:
+      '@storybook/components': 8.4.7(storybook@8.4.6(prettier@3.4.1))
+      '@storybook/global': 5.0.0
+      '@storybook/manager-api': 8.4.7(storybook@8.4.6(prettier@3.4.1))
+      '@storybook/preview-api': 8.4.7(storybook@8.4.6(prettier@3.4.1))
+      '@storybook/theming': 8.4.7(storybook@8.4.6(prettier@3.4.1))
+      lit: 3.2.1
+      storybook: 8.4.6(prettier@3.4.1)
+      tiny-invariant: 1.3.3
+      ts-dedent: 2.2.0
 
   '@swc/counter@0.1.3': {}
 
@@ -12440,6 +12537,8 @@ snapshots:
 
   '@types/tough-cookie@4.0.5': {}
 
+  '@types/trusted-types@2.0.7': {}
+
   '@types/unist@2.0.11': {}
 
   '@types/unist@3.0.3': {}
@@ -12597,6 +12696,8 @@ snapshots:
       eslint-visitor-keys: 3.4.3
 
   '@ungap/structured-clone@1.2.0': {}
+
+  '@utrecht/button-css@2.2.0': {}
 
   '@utrecht/button-react@2.0.2(@babel/runtime@7.26.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -16803,6 +16904,22 @@ snapshots:
       log-update: 6.1.0
       rfdc: 1.4.1
       wrap-ansi: 9.0.0
+
+  lit-element@4.1.1:
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.2.1
+      '@lit/reactive-element': 2.0.4
+      lit-html: 3.2.1
+
+  lit-html@3.2.1:
+    dependencies:
+      '@types/trusted-types': 2.0.7
+
+  lit@3.2.1:
+    dependencies:
+      '@lit/reactive-element': 2.0.4
+      lit-element: 4.1.1
+      lit-html: 3.2.1
 
   load-json-file@4.0.0:
     dependencies:
