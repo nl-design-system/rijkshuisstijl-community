@@ -2,13 +2,14 @@
 
 import twigTemplate from '@rijkshuisstijl-community/components-twig/src/Heading.twig?raw';
 import type { Meta, StoryObj } from '@storybook/react';
-import { createTwigComponent } from './TwigElement';
-// import { createTwigComponent } from './TwigRenderer';
+import { createTwigComponent } from './TwigRenderer';
+import readme from '../community/heading.md?raw';
 
 interface TwigHeadingProps {
   appearance?: string;
   level: number;
   children: string;
+  attributes?: object;
 }
 
 const TwigHeading = createTwigComponent<TwigHeadingProps>(twigTemplate);
@@ -42,7 +43,7 @@ const meta = {
     },
     docs: {
       description: {
-        // component: readme,
+        component: readme,
       },
     },
   },
@@ -54,6 +55,10 @@ export const TwigHeading1: StoryObj<typeof meta> = {
   args: {
     level: 1,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+    attributes: {
+      class: ['my-heading-1'],
+    },
+    appearance: 'utrecht-heading-3',
   },
   name: 'Heading 1',
 };
