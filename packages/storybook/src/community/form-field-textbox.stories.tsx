@@ -393,7 +393,6 @@ export const Password: Story = {
     label: 'Wachtwoord',
     type: 'password',
   },
-  //
   render: (args) => (
     <form>
       <input hidden autoComplete="username" type="text" />
