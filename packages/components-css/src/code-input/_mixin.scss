@@ -9,9 +9,8 @@
 
 @mixin rhc-code-input-group {
   column-gap: var(--rhc-code-input-group-column-gap);
-  @include rhc-code-input__display-flex;
-
   flex-direction: row;
+  @include rhc-code-input__display-flex;
 }
 
 @mixin rhc-code-input-container {

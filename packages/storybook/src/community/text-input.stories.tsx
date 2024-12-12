@@ -374,6 +374,12 @@ export const AutoComplete: Story = {
     autoComplete: 'current-password',
     type: 'password',
   },
+  render: (args) => (
+    <form>
+      <input hidden autoComplete="username" type="text" />
+      <Textbox autoComplete={args.autoComplete} name={args.name} type={args.type} />
+    </form>
+  ),
 };
 
 export const LeftToRightInput: Story = {

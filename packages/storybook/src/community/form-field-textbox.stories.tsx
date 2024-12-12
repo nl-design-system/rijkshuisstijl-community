@@ -388,11 +388,17 @@ export const Status: Story = {
 
 export const Password: Story = {
   args: {
+    autoComplete: 'current-password',
     name: 'subject',
     label: 'Wachtwoord',
     type: 'password',
-    autoComplete: 'current-password',
   },
+  render: (args) => (
+    <form>
+      <input hidden autoComplete="username" type="text" />
+      <FormFieldTextbox autoComplete={args.autoComplete} label={args.label} name={args.name} type={args.type} />
+    </form>
+  ),
 };
 
 export const Disabled: Story = {

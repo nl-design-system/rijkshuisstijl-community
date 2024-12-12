@@ -79,9 +79,9 @@ const meta = {
     },
     dir: {
       description: 'The direction of the form field',
+      options: ['ltr', 'rtl'],
       control: {
         type: 'select',
-        options: ['ltr', 'rtl'],
       },
     },
   },
@@ -168,13 +168,13 @@ export const CustomOptions: Story = {
     disabled: false,
     invalid: false,
     children: [
-      <SelectOption id="optie1" value="optie 1">
+      <SelectOption id="optie1" key="option-1" value="optie 1">
         optie 1
       </SelectOption>,
-      <SelectOption id="optie2" value="optie 2">
+      <SelectOption id="optie2" key="option-2" value="optie 2">
         optie 2
       </SelectOption>,
-      <SelectOption id="optie3" value="optie 3">
+      <SelectOption id="optie3" key="option-3" value="optie 3">
         optie 3
       </SelectOption>,
     ],
