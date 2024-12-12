@@ -1,10 +1,10 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
-import { Hero } from '@rijkshuisstijl-community/components-react';
-import ReactDOM from 'react-dom/client';
+import { Hero, HeroProps } from '@rijkshuisstijl-community/components-react';
+import { BaseWebComponent } from '../BaseComopnent';
 
-export class HeroWebComponent extends HTMLElement {
-  private root: ReactDOM.Root;
-  static observedAttributes = [
+export class HeroWebComponent extends BaseWebComponent {
+  static override tagName: string = 'rhc-hero';
+  static override observedAttributes: string[] = [
     'aspectratio',
     'heading',
     'heromessage',
@@ -17,55 +17,29 @@ export class HeroWebComponent extends HTMLElement {
   ];
 
   constructor() {
-    super();
-    const shadowRoot = this.attachShadow({ mode: 'open' });
-    this.root = ReactDOM.createRoot(shadowRoot);
-
-    const style: CSSStyleSheet = new CSSStyleSheet();
-    style.replaceSync(stylesheet);
-    shadowRoot.adoptedStyleSheets = [style];
-  }
-
-  attributeChangedCallback(): void {
-    this.render();
-  }
-
-  connectedCallback(): void {
-    this.render();
+    super(stylesheet);
   }
 
   render(): void {
     this.root.render(
       <Hero
-        aspectRatio={(this.getAttribute('aspectRatio') as '16 / 9' | '1 / 1' | '4 / 3') || undefined}
+        aspectRatio={this.getAttribute('aspectRatio') as HeroProps['aspectRatio']}
+        borderRadiusCorner={this.getAttribute('borderRadiusCorner') as HeroProps['borderRadiusCorner']}
         heading={this.getAttribute('heading') ?? 'default heading'}
-        heroMessage={this.getAttribute('heroMessage') === 'true'}
+        heroMessage={this.getAttribute('heroMessage') === 'false'}
         imageAlt={this.getAttribute('imageAlt') ?? 'image alt'}
         subHeading={this.getAttribute('subHeading') ?? 'sub heading'}
-        textAlign={(this.getAttribute('textAlign') as 'start' | 'end') || undefined}
-        borderRadiusCorner={
-          (this.getAttribute('borderRadiusCorner') as 'start-start' | 'start-end' | 'end-start' | 'end-end') ||
-          undefined
-        }
+        textAlign={this.getAttribute('textAlign') as HeroProps['textAlign']}
         headingLevel={
-          ((this.getAttribute('headingLevel') && Number(this.getAttribute('headingLevel'))) as 1 | 2 | 3 | 4 | 5) ||
-          undefined
+          (this.getAttribute('headingLevel') && Number(this.getAttribute('headingLevel'))) as HeroProps['headingLevel']
         }
         imageSrc={
           this.getAttribute('imageSrc') ??
           'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg'
         }
-      />,
+      >
+        <slot />
+      </Hero>,
     );
-  }
-
-  disconnectedCallback(): void {
-    this.root.unmount();
-  }
-
-  static define(): void {
-    if (!customElements.get('rhc-hero')) {
-      customElements.define('rhc-hero', this);
-    }
   }
 }
