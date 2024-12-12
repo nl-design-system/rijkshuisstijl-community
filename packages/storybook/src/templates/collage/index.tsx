@@ -4,7 +4,7 @@ import {
   Article,
   Blockquote,
   Button,
-  CodeInput,
+  CodeInputGroup,
   DataList,
   DataListActions,
   DataListItem,
@@ -304,7 +304,7 @@ export default function Collage() {
                         </TableRow>
                       </TableFooter>
                     </Table>
-                    <CodeInput
+                    <CodeInputGroup
                       numberOfDigits={6}
                       onChange={(value: String) => {
                         console.log('onchange: ', value);

@@ -1,11 +1,11 @@
-import { CodeInput } from '@rijkshuisstijl-community/components-react';
+import { CodeInputGroup } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react/*';
-import readme from './code-input.md?raw';
+import readme from './code-input-group.md?raw';
 
 const meta = {
-  title: 'Rijkshuisstijl/CodeInput',
+  title: 'Rijkshuisstijl/CodeInputGroup',
   id: 'rhc-codeInput',
-  component: CodeInput,
+  component: CodeInputGroup,
   parameters: {
     status: {
       type: 'UNSTABLE',
@@ -21,7 +21,7 @@ const meta = {
     numberOfDigits: 6,
     inValid: false,
   },
-} satisfies Meta<typeof CodeInput>;
+} satisfies Meta<typeof CodeInputGroup>;
 
 export default meta;
 

@@ -2,31 +2,31 @@ import '@testing-library/jest-dom';
 
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { CodeInput } from './CodeInput';
+import { CodeInputGroup } from './CodeInputGroup';
 
 describe('CodeInput', () => {
   it('renders successfully', () => {
-    render(<CodeInput numberOfDigits={4} />);
-    expect(screen.getByTestId('code-input-container')).toBeInTheDocument();
+    render(<CodeInputGroup numberOfDigits={4} />);
+    expect(screen.getByTestId('code-input-group-container')).toBeInTheDocument();
   });
 
   it('should render number of digits', async () => {
     const nDigits = 6;
-    render(<CodeInput numberOfDigits={nDigits} />);
+    render(<CodeInputGroup numberOfDigits={nDigits} />);
 
     const inputs = await screen.findAllByTestId('input-item');
     expect(inputs).toHaveLength(nDigits);
   });
 
   it('should not accept anything else then digits', async () => {
-    render(<CodeInput numberOfDigits={4} />);
+    render(<CodeInputGroup numberOfDigits={4} />);
 
     await userEvent.type(screen.getByTestId('hidden-input'), '#A0@1D2f3');
     expect(screen.getByTestId('hidden-input')).toHaveValue('0123');
   });
 
   it('should set focus on next input', async () => {
-    render(<CodeInput numberOfDigits={4} />);
+    render(<CodeInputGroup numberOfDigits={4} />);
     await userEvent.type(screen.getByTestId('hidden-input'), '0');
     const inputs = await screen.findAllByTestId('input-item');
 
@@ -35,7 +35,7 @@ describe('CodeInput', () => {
   });
 
   it('should set focus on previous input', async () => {
-    render(<CodeInput numberOfDigits={4} />);
+    render(<CodeInputGroup numberOfDigits={4} />);
     await userEvent.type(screen.getByTestId('hidden-input'), '012');
 
     const inputs = await screen.findAllByTestId('input-item');

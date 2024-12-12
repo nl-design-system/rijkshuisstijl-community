@@ -11,7 +11,7 @@ export interface CodeInputGroupProps {
   privateMode?: boolean;
 }
 
-export const CodeInput = forwardRef(
+export const CodeInputGroup = forwardRef(
   (
     { numberOfDigits, onChange, inValid, privateMode, ...restProps }: PropsWithChildren<CodeInputGroupProps>,
     ref: ForwardedRef<HTMLInputElement>,
@@ -44,7 +44,7 @@ export const CodeInput = forwardRef(
     };
 
     return (
-      <div className={'rhc-code-input-container'} data-testid={'code-input-container'} ref={ref} {...restProps}>
+      <div className={'rhc-code-input-container'} data-testid={'code-input-group-container'} ref={ref} {...restProps}>
         <VisuallyHidden>
           <Textbox
             aria-label="code-input"
@@ -93,4 +93,4 @@ export const CodeInput = forwardRef(
   },
 );
 
-CodeInput.displayName = 'CodeInput';
+CodeInputGroup.displayName = 'CodeInputGroup';
