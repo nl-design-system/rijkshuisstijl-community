@@ -1,1 +1,1 @@
-export * from './hero/hero';
+export { HeroWebComponent } from './hero/hero';

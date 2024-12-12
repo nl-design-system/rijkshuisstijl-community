@@ -2,8 +2,19 @@ import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?
 import { Hero } from '@rijkshuisstijl-community/components-react';
 import ReactDOM from 'react-dom/client';
 
-class HeroWebComponent extends HTMLElement {
+export class HeroWebComponent extends HTMLElement {
   private root: ReactDOM.Root;
+  static observedAttributes = [
+    'aspectratio',
+    'heading',
+    'heromessage',
+    'imagealt',
+    'subheading',
+    'textalign',
+    'borderradiuscorner',
+    'headinglevel',
+    'imagesrc',
+  ];
 
   constructor() {
     super();
@@ -15,14 +26,33 @@ class HeroWebComponent extends HTMLElement {
     shadowRoot.adoptedStyleSheets = [style];
   }
 
+  attributeChangedCallback() {
+    this.render();
+  }
+
   connectedCallback() {
+    this.render();
+  }
+
+  render() {
     this.root.render(
       <Hero
-        heading={'heading'}
-        heroMessage={true}
-        imageAlt={'imageAlt'}
-        subHeading={'sub heading'}
+        aspectRatio={(this.getAttribute('aspectRatio') as '16 / 9' | '1 / 1' | '4 / 3') || undefined}
+        heading={this.getAttribute('heading') ?? 'default heading'}
+        heroMessage={this.getAttribute('heroMessage') === 'true'}
+        imageAlt={this.getAttribute('imageAlt') ?? 'image alt'}
+        subHeading={this.getAttribute('subHeading') ?? 'sub heading'}
+        textAlign={(this.getAttribute('textAlign') as 'start' | 'end') || undefined}
+        borderRadiusCorner={
+          (this.getAttribute('borderRadiusCorner') as 'start-start' | 'start-end' | 'end-start' | 'end-end') ||
+          undefined
+        }
+        headingLevel={
+          ((this.getAttribute('headingLevel') && Number(this.getAttribute('headingLevel'))) as 1 | 2 | 3 | 4 | 5) ||
+          undefined
+        }
         imageSrc={
+          this.getAttribute('imageSrc') ??
           'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg'
         }
       />,
@@ -32,6 +62,10 @@ class HeroWebComponent extends HTMLElement {
   disconnectedCallback() {
     this.root.unmount();
   }
-}
 
-customElements.define('rhc-hero', HeroWebComponent);
+  static define(): void {
+    if (!customElements.get('rhc-hero')) {
+      customElements.define('rhc-hero', this);
+    }
+  }
+}
