@@ -26,15 +26,15 @@ export class HeroWebComponent extends HTMLElement {
     shadowRoot.adoptedStyleSheets = [style];
   }
 
-  attributeChangedCallback() {
+  attributeChangedCallback(): void {
     this.render();
   }
 
-  connectedCallback() {
+  connectedCallback(): void {
     this.render();
   }
 
-  render() {
+  render(): void {
     this.root.render(
       <Hero
         aspectRatio={(this.getAttribute('aspectRatio') as '16 / 9' | '1 / 1' | '4 / 3') || undefined}
@@ -59,7 +59,7 @@ export class HeroWebComponent extends HTMLElement {
     );
   }
 
-  disconnectedCallback() {
+  disconnectedCallback(): void {
     this.root.unmount();
   }
 
