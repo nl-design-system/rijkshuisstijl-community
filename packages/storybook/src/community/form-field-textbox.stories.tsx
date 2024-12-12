@@ -393,9 +393,11 @@ export const Password: Story = {
     label: 'Wachtwoord',
     type: 'password',
   },
-  render: () => (
+  //
+  render: (args) => (
     <form>
-      <input autoComplete="username" name="username" />
+      <input hidden autoComplete="username" type="text" />
+      <FormFieldTextbox autoComplete={args.autoComplete} label={args.label} name={args.name} type={args.type} />
     </form>
   ),
 };

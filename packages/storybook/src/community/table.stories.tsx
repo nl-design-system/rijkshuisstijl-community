@@ -303,7 +303,7 @@ export const Alignment: Story = {
       <TableBody key="tbody-7">
         <TableRow>
           <TableCell>Label</TableCell>
-          <TableCell>Labedddl</TableCell>
+          <TableCell>Label</TableCell>
           <TableCell>Label</TableCell>
           <TableCell alignCell={'end'}>Label</TableCell>
         </TableRow>
