@@ -27,7 +27,7 @@ const meta = {
     },
     disabled: {
       type: {
-        name: 'string',
+        name: 'boolean',
       },
       table: {
         category: 'Property',
