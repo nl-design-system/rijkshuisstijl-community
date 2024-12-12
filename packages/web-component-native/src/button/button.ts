@@ -17,8 +17,6 @@ export interface ButtonProps {
   appearance?: ButtonAppearanceType;
   disabled?: boolean;
   type: 'button' | 'submit' | 'reset';
-  iconLeft?: string;
-  iconRight?: string;
 }
 
 export class RHCButton extends HTMLElement {
@@ -31,8 +29,6 @@ export class RHCButton extends HTMLElement {
   private props: ButtonProps = {
     disabled: false,
     type: 'button',
-    iconLeft: undefined,
-    iconRight: undefined,
   };
 
   constructor() {
@@ -46,7 +42,6 @@ export class RHCButton extends HTMLElement {
   }
 
   attributeChangedCallback(name: string, oldValue: string | undefined | boolean, newValue: string | undefined): void {
-    console.log(name, oldValue, newValue);
     if (oldValue === newValue) return;
     if (name === 'appearance') {
       this.props.appearance = newValue as ButtonAppearanceType;
@@ -61,11 +56,8 @@ export class RHCButton extends HTMLElement {
       }
     } else if (name === 'type') {
       this.props.type = newValue as ButtonProps['type'];
-    } else if (name === 'icon-left') {
-      this.props.iconLeft = newValue;
-    } else if (name === 'icon-right') {
-      this.props.iconRight = newValue;
     }
+
     this.render();
   }
 
@@ -81,9 +73,7 @@ export class RHCButton extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
       <button class="${classes.join(' ')}" type="${this.props.type}">
-        ${this.props.iconLeft ? `<span class="utrecht-button__icon utrecht-button__icon--left">${this.props.iconLeft}</span>` : ''}
         <slot></slot>
-        ${this.props.iconRight ? `<span class="utrecht-button__icon utrecht-button__icon--right">${this.props.iconRight}</span>` : ''}
       </button>
     `;
     if (this.props.disabled) this.shadowRoot.querySelector('button')?.setAttribute('disabled', String(false));

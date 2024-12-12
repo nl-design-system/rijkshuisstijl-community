@@ -10,7 +10,7 @@ const meta = {
     appearance: {
       description: 'Button appearance',
       control: { type: 'select' },
-      options: ['', 'primary-action', 'secondary-action', 'subtle'],
+      options: ['button', 'primary-action', 'secondary-action', 'subtle'],
       table: {
         category: 'Property',
       },
@@ -36,13 +36,14 @@ const meta = {
   },
   args: {
     children: 'Label',
-    appearance: '',
-    disabled: null,
-    iconLeft: false,
-    iconRight: false,
+    appearance: 'button',
+    disabled: false,
   },
   tags: ['autodocs'],
   parameters: {
+    status: {
+      type: 'UNSTABLE',
+    },
     docs: {
       description: {
         component: 'Button',
@@ -54,3 +55,27 @@ const meta = {
 export default meta;
 
 export const Default: StoryObj<typeof meta> = {};
+
+export const PrimaryAction = {
+  args: {
+    appearance: 'primary-action',
+  },
+};
+
+export const SecondaryAction = {
+  args: {
+    appearance: 'secondary-action',
+  },
+};
+
+export const Subtle = {
+  args: {
+    appearance: 'subtle',
+  },
+};
+
+export const Disabled = {
+  args: {
+    disabled: true,
+  },
+};
