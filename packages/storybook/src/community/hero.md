@@ -17,7 +17,7 @@ import { Paragraph } from './Paragraph';
 
 <Hero
   heading="Heading"
-  imageAlt="Tullip field"
+  imageAlt="Tulip field"
   imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg"
   subHeading="Subtext"
 />;
