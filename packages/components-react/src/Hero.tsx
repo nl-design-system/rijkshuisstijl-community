@@ -5,16 +5,26 @@ import { HeadingGroup } from './HeadingGroup';
 import { Image } from './Image';
 import { Paragraph } from './Paragraph';
 
-export interface HeroProps extends HTMLAttributes<HTMLDivElement> {
+export interface HeroBaseProps extends HTMLAttributes<HTMLDivElement> {
   textAlign?: 'start' | 'end';
   imageSrc: string;
   imageAlt: string;
-  heading?: ReactNode;
   headingLevel?: 1 | 2 | 3 | 4 | 5;
-  subHeading?: ReactNode;
   aspectRatio?: '16 / 9' | '1 / 1' | '4 / 3';
   borderRadiusCorner?: 'start-start' | 'start-end' | 'end-start' | 'end-end';
 }
+
+export interface HeroWithHeading extends HeroBaseProps {
+  heading: ReactNode;
+  subHeading?: ReactNode;
+}
+
+export interface HeroWithoutSubHeading extends HeroBaseProps {
+  heading?: ReactNode;
+  subHeading?: never;
+}
+
+export type HeroProps = HeroWithHeading | HeroWithoutSubHeading;
 
 export const Hero = forwardRef(
   (
@@ -33,11 +43,6 @@ export const Hero = forwardRef(
     }: PropsWithChildren<HeroProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
-    if (subHeading && !heading) {
-      console.error('Hero component: "subHeading" is provided, but "heading" is missing');
-      return null;
-    }
-
     return (
       <div
         ref={ref}

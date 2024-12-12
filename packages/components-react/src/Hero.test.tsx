@@ -17,14 +17,6 @@ describe('Hero', () => {
     expect(image).toHaveAttribute('src', 'test-image.jpg');
   });
 
-  it('logs an error and does not render when subHeading is provided without heading', () => {
-    console.error = jest.fn();
-
-    render(<Hero heading="" imageAlt="Test Alt Text" imageSrc="test-image.jpg" subHeading="Test subHeading" />);
-    expect(console.error).toHaveBeenCalledWith('Hero component: "subHeading" is provided, but "heading" is missing');
-    expect(screen.queryByText('Test subHeading')).toBeNull();
-  });
-
   it('applies the correct alignment class', () => {
     render(
       <Hero

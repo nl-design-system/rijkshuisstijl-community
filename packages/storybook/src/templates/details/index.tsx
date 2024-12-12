@@ -40,8 +40,10 @@ export default function Details() {
         <Document>
           <Hero
             className="rhc-hero-details-template"
+            heading="aref"
             imageAlt="Tullip field"
             imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg"
+            subHeading="aa"
           >
             <LinkListCard heading="Veel bekeken" headingLevel={2}>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>

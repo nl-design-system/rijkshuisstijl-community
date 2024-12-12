@@ -10,10 +10,6 @@ Let op: Zowel `heading` als `subHeading` zijn optioneel, maar als je een `subHea
 
 ```tsx
 import { Hero } from '@rijkshuisstijl-community/components-react';
-import { Heading } from './Heading';
-import { HeadingGroup } from './HeadingGroup';
-import { Image } from './Image';
-import { Paragraph } from './Paragraph';
 
 <Hero
   heading="Heading"
