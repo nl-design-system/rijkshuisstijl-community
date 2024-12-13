@@ -28,7 +28,7 @@ describe('Hero', () => {
       />,
     );
 
-    const hero = screen.getByRole('img').closest('div');
+    const hero = screen.getByRole('img').closest('section');
 
     expect(hero).toHaveClass('rhc-hero--text-align-end');
   });
@@ -44,7 +44,7 @@ describe('Hero', () => {
       />,
     );
 
-    const hero = screen.getByRole('img').closest('div');
+    const hero = screen.getByRole('img').closest('section');
 
     expect(hero).toHaveClass('rhc-hero--aspect-ratio-4-3');
   });
@@ -60,7 +60,7 @@ describe('Hero', () => {
       />,
     );
 
-    const hero = screen.getByRole('img').closest('div');
+    const hero = screen.getByRole('img').closest('section');
 
     expect(hero).toHaveClass('rhc-hero--custom-border-radius-corner');
     expect(hero).toHaveClass('rhc-hero--border-radius-corner-start-end');
