@@ -44,7 +44,7 @@ export const Hero = forwardRef(
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     return (
-      <div
+      <section
         ref={ref}
         className={clsx(
           'rhc-hero',
@@ -69,7 +69,7 @@ export const Hero = forwardRef(
           </div>
         )}
         {children && <div className="rhc-hero__children">{children}</div>}
-      </div>
+      </section>
     );
   },
 );
