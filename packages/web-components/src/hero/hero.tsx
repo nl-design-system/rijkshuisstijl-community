@@ -1,6 +1,6 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { Hero, HeroProps } from '@rijkshuisstijl-community/components-react';
-import { BaseWebComponent } from '../BaseComopnent';
+import { BaseWebComponent } from '../BaseComponent';
 
 export class HeroWebComponent extends BaseWebComponent {
   static override tagName: string = 'rhc-hero';
