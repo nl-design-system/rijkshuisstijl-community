@@ -138,8 +138,8 @@ export default function Details() {
             </div>
           </div>
           <Footer
+            appearanceLevel={3}
             heading="De Rijksoverheid. Voor Nederland"
-            headingLevel={3}
             columns={[
               {
                 heading: 'Service',
