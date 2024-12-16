@@ -41,8 +41,8 @@ export const Alert = forwardRef(
             {heading}
           </Heading>
           <Paragraph>{textContent}</Paragraph>
+          {children}
         </div>
-        {children}
       </UtrechtAlert>
     );
   },
