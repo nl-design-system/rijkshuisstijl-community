@@ -34,7 +34,7 @@
     "build": "npm-run-all build:**",
     "build:stencil": "stencil build",
     "build:typescript": "tsc",
-    "clean": "rimraf dist/ && rimraf ../../web-components-react/src/components",
+    "clean": "rimraf dist/ && rimraf ../web-components-react/src/components.ts",
     "start": "stencil build --dev --watch --serve",
     "watch": "npm-run-all --parallel watch:**",
     "watch:stencil": "chokidar --follow-symlinks --initial --command 'npm run build:stencil' '../../components/**/*.(js|jsx|ts|tsx)'",
