@@ -19,6 +19,7 @@
   },
   "sideEffects": false,
   "scripts": {
+    "prebuild": "npm run clean",
     "build": "tsc -p .",
     "clean": "rimraf dist/"
   },
