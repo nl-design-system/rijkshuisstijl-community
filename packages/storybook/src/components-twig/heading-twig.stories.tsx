@@ -15,7 +15,7 @@ interface TwigHeadingProps {
 const TwigHeading = createTwigComponent<TwigHeadingProps>(twigTemplate);
 
 const meta = {
-  title: 'Rijkshuisstijl/Twig/Heading',
+  title: 'Twig Components/Heading',
   id: 'rhc-twig-heading',
   component: TwigHeading,
   argTypes: {
