@@ -205,8 +205,8 @@ export default function MijnOmgeving() {
           </PageContent>
 
           <Footer
+            appearanceLevel={4}
             heading="De Rijksoverheid. Voor Nederland"
-            headingLevel={4}
             columns={[
               {
                 heading: 'Service',
