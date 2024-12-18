@@ -9,8 +9,8 @@ describe('Footer', () => {
     expect(1).toBe(1);
     render(
       <Footer
+        appearanceLevel={4}
         heading="De Rijksoverheid. Voor Nederland"
-        headingLevel={4}
         columns={[
           {
             heading: 'Service',

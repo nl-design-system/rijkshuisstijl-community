@@ -25,7 +25,7 @@ type Story = StoryObj<typeof meta>;
 export const DefaultFooter: Story = {
   args: {
     heading: 'De Rijksoverheid. Voor Nederland',
-    headingLevel: 2,
+    appearanceLevel: 1,
     background: 'primary-filled',
     columns: [
       {
@@ -97,7 +97,7 @@ export const CustomHeadingFooter: Story = {
     columns: [
       {
         heading: 'Heading 1',
-        headingLevel: 1,
+        appearanceLevel: 1,
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
@@ -114,7 +114,7 @@ export const CustomHeadingFooter: Story = {
       },
       {
         heading: 'Heading 2',
-        headingLevel: 2,
+        appearanceLevel: 2,
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
@@ -131,7 +131,7 @@ export const CustomHeadingFooter: Story = {
       },
       {
         heading: 'Heading 3',
-        headingLevel: 3,
+        appearanceLevel: 3,
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
@@ -148,7 +148,7 @@ export const CustomHeadingFooter: Story = {
       },
       {
         heading: 'Heading 4',
-        headingLevel: 4,
+        appearanceLevel: 4,
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
@@ -165,7 +165,7 @@ export const CustomHeadingFooter: Story = {
       },
       {
         heading: 'Heading 5',
-        headingLevel: 5,
+        appearanceLevel: 5,
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>

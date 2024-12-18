@@ -5,25 +5,25 @@ import { Heading } from './Heading';
 
 interface FooterProps extends PageFooterProps {
   heading?: ReactNode;
-  headingLevel?: number;
+  appearanceLevel?: number;
   columns?: ColumnProps[];
   background?: 'primary-filled' | 'primary-outlined';
 }
 
 interface ColumnProps {
   heading: ReactNode;
-  headingLevel?: number;
+  appearanceLevel?: number;
   children: ReactNode;
 }
 
-const MAX_HEADING_LEVEL = 6;
+const MAX_APPEARANCE_HEADING_LEVEL = 6;
 
 export const Footer = forwardRef(
   (
     {
       className,
       heading,
-      headingLevel = 2,
+      appearanceLevel = 2,
       columns,
       children,
       background,
@@ -43,17 +43,25 @@ export const Footer = forwardRef(
       <div className="rhc-page-footer__content">
         {heading && (
           <div className="rhc-page-footer__title" key={'heading'}>
-            <Heading level={headingLevel}>{heading}</Heading>
+            <Heading
+              appearance={`utrecht-heading-${appearanceLevel >= MAX_APPEARANCE_HEADING_LEVEL ? MAX_APPEARANCE_HEADING_LEVEL : appearanceLevel}`}
+              level={2}
+            >
+              {heading}
+            </Heading>
           </div>
         )}
         <ColumnLayout>
           {columns?.map(
             (
-              { heading: columnHeading, headingLevel: columnHeadingLevel = 3, children }: ColumnProps,
+              { heading: columnHeading, appearanceLevel: columnAppearanceLevel = 3, children }: ColumnProps,
               index: number,
             ) => (
               <div className="rhc-page-footer__section" key={index}>
-                <Heading level={columnHeadingLevel >= MAX_HEADING_LEVEL ? MAX_HEADING_LEVEL : columnHeadingLevel + 1}>
+                <Heading
+                  appearance={`utrecht-heading-${columnAppearanceLevel >= MAX_APPEARANCE_HEADING_LEVEL ? MAX_APPEARANCE_HEADING_LEVEL : columnAppearanceLevel}`}
+                  level={heading ? 3 : 2}
+                >
                   {columnHeading}
                 </Heading>
                 {children}
