@@ -1,10 +1,10 @@
-import { BadgeCounter } from '@rijkshuisstijl-community/components-react';
+import { NumberBadge } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
-import readme from './counter-badge.md?raw';
+import readme from './number-badge.md?raw';
 const meta = {
-  title: 'Rijkshuisstijl/Counter Badge',
+  title: 'Rijkshuisstijl/Number Badge',
   id: 'rhc-counter-badge',
-  component: BadgeCounter,
+  component: NumberBadge,
   tags: ['autodocs'],
   argTypes: {
     children: {
@@ -26,7 +26,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof BadgeCounter>;
+} satisfies Meta<typeof NumberBadge>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
