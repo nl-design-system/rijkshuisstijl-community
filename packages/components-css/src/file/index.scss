@@ -1,0 +1,38 @@
+.rhc-file {
+  border-color: var(--rhc-file-border-color);
+  border-radius: var(--rhc-file-border-radius);
+  border-style: var(--rhc-file-border-style);
+  display: flex;
+  flex-direction: column;
+  padding-block-end: var(--rhc-file-padding-block-end);
+  padding-block-start: var(--rhc-file-padding-block-start);
+  padding-inline-end: var(--rhc-file-padding-inline-end);
+  padding-inline-start: var(--rhc-file-padding-inline-start);
+}
+
+.rhc-file__name {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rhc-file__subtitle {
+  color: var(--rhc-file-subtitle-color);
+}
+
+.rhc-file__inner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rhc-file__inner-container__sub {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.rhc-file--error {
+  border-color: var(--rhc-file-error-border-color);
+}

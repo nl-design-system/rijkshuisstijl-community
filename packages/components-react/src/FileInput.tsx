@@ -61,7 +61,7 @@ export const FileInput = forwardRef(
           </Button>
           {files.length === 0 && <Paragraph className="rhc-file-input__feedback">Geen bestand gekozen</Paragraph>}
         </div>
-        <div className="rhc-files-container">
+        <div className="rhc-file-input__files-container">
           {files.map((item: File) => {
             return (
               <File
