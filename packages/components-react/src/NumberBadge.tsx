@@ -1,1 +1,4 @@
-export { BadgeCounter as NumberBadge } from '@utrecht/component-library-react';
+export {
+  BadgeCounter as NumberBadge,
+  type BadgeCounterProps as NumberBadgeProps,
+} from '@utrecht/component-library-react';
