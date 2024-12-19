@@ -1,5 +1,5 @@
 import {
-  BadgeCounter,
+  NumberBadge,
   Separator,
   SideNav,
   SideNavItem,
@@ -49,7 +49,7 @@ export const Default: Story = {
         <SideNavItem>
           <SideNavLink href="/#" icon="mail">
             Mijn berichten
-            <BadgeCounter>2</BadgeCounter>
+            <NumberBadge>2</NumberBadge>
           </SideNavLink>
         </SideNavItem>
         <SideNavItem>

@@ -1,6 +1,5 @@
 import {
   AccordionProvider,
-  BadgeCounter,
   Footer,
   Heading,
   Icon,
@@ -13,6 +12,7 @@ import {
   NavBar,
   NavigationList,
   NavigationListItem,
+  NumberBadge,
   PageContent,
   PageHeader,
   Separator,
@@ -55,7 +55,7 @@ export default function MijnOmgeving() {
                 <SideNavItem>
                   <SideNavLink href="/#" icon="inbox">
                     MijnZaken
-                    <BadgeCounter>2</BadgeCounter>
+                    <NumberBadge>2</NumberBadge>
                   </SideNavLink>
                 </SideNavItem>
               </SideNavList>
