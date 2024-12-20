@@ -52,12 +52,12 @@ export const File = ({
         'rhc-file--error': checkFileSize(file) === false || checkFileType(file) === false,
       })}
     >
-      <div className="rhc-file-input__inner-container">
-        <div className="rhc-file-input__inner-container__sub">
+      <div className="rhc-file__inner-container">
+        <div className="rhc-file__inner-container__sub">
           <Link href={URL.createObjectURL(file)} target="_blank">
-            <span className="rhc-file--name">{file.name}</span>
+            <span className="rhc-file__name">{file.name}</span>
           </Link>
-          <span className="rhc-file--subtitle">
+          <span className="rhc-file__subtitle">
             ({extractFileTypeShort(file.type)}, {formatBytes(file.size)})
           </span>
         </div>
