@@ -9,7 +9,6 @@ import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { defineCustomElements } from '@rijkshuisstijl-community/web-components-stencil/loader/index';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import { Preview } from '@storybook/react';
-import { UtrechtDocument } from '@utrecht/web-component-library-react';
 import { defineCustomElements as defineUtrechtCustomElements } from '@utrecht/web-component-library-stencil/loader/index';
 
 // Initialize web components
@@ -28,7 +27,7 @@ const preview: Preview = {
       },
       defaultTheme: 'RijkshuisstijlCommunity',
     }),
-    (Story: any) => <UtrechtDocument>{Story()}</UtrechtDocument>,
+    (Story: any) => Story(),
   ],
   parameters: {
     previewTabs: {
