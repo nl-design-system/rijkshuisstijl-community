@@ -3,8 +3,11 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
+.utrecht-breadcrumb-nav .utrecht-link:any-link {
+  line-height: var(--utrecht-breadcrumb-nav-line-height, inherit) !important;
+}
+
 .utrecht-breadcrumb-nav {
-  line-height: var(--utrecht-breadcrumb-nav-line-height, inherit);
   &__link {
     --utrecht-link-icon-inset-block-start: var(--utrecht-breadcrumb-nav-link-icon-inset-block-start, inherit);
 
