@@ -38,7 +38,7 @@ import {
   TableHeader,
   TableHeaderCell,
   TableRow,
-  Textbox,
+  TextInput,
   UnorderedList,
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
@@ -178,7 +178,7 @@ export default function Collage() {
                       descriptionId="description-id"
                       errorMessage="Error message"
                       errorMessageId="error-id"
-                      input={<Textbox invalid />}
+                      input={<TextInput invalid />}
                       invalid={true}
                       label="Label"
                       statusId="status-id"

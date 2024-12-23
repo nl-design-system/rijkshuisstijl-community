@@ -120,7 +120,7 @@ export {
 export { TableCaption } from './TableCaption';
 export { TableCell, type TableCellProps } from './TableCell';
 export { TableHeaderCell, type TableHeaderCellProps } from './TableHeaderCell';
-export { Textbox, type TextboxProps } from './Textbox';
+export { TextInput, type TextInputProps } from './TextInput';
 export { Toggletip, ToggletipButton, ToggletipContent, type ToggletipProps } from './Toggletip';
 export { UnorderedList, type UnorderedListProps } from './UnorderedList';
 export { UnorderedListItem, type UnorderedListItemProps } from './UnorderedListItem';

@@ -1,11 +1,11 @@
-import { Textbox } from '@rijkshuisstijl-community/components-react';
+import { TextInput } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './text-input.md?raw';
 
-const meta: Meta<typeof Textbox> = {
+const meta: Meta<typeof TextInput> = {
   title: 'Rijkshuisstijl/Text Input',
   id: 'rhc-text-input',
-  component: Textbox,
+  component: TextInput,
   tags: ['autodocs'],
   argTypes: {
     required: {
@@ -264,6 +264,11 @@ const meta: Meta<typeof Textbox> = {
       description: {
         component: readme,
       },
+      source: {
+        transform: (code) => {
+          return code.replace(/Textbox/g, 'TextInput');
+        },
+      },
     },
   },
   render: (args) => {
@@ -289,7 +294,7 @@ const meta: Meta<typeof Textbox> = {
       max,
     } = args;
     return (
-      <Textbox
+      <TextInput
         autoComplete={autoComplete || undefined}
         defaultValue={defaultValue || undefined}
         dir={dir || undefined}
@@ -312,7 +317,7 @@ const meta: Meta<typeof Textbox> = {
       />
     );
   },
-} satisfies Meta<typeof Textbox>;
+} satisfies Meta<typeof TextInput>;
 
 export default meta;
 
@@ -377,7 +382,7 @@ export const AutoComplete: Story = {
   render: (args) => (
     <form>
       <input hidden autoComplete="username" type="text" />
-      <Textbox autoComplete={args.autoComplete} name={args.name} type={args.type} />
+      <TextInput autoComplete={args.autoComplete} name={args.name} type={args.type} />
     </form>
   ),
 };
