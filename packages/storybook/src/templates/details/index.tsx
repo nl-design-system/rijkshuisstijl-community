@@ -78,7 +78,7 @@ export default function Details() {
           />
           <div className="rhc-templates-background-color-white">
             <div className="rhc-templates-main-content">
-              <div className="utrecht-page-content rhc-templates-page-content">
+              <div className="utrecht-page-content rhc-templates-page-content rhc-templates-page-palin">
                 <Article>
                   <div className="rhc-margin-block-end-wrapper">
                     <Paragraph lead>

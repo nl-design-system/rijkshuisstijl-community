@@ -13,7 +13,6 @@ export {
 export { ActionGroup, type ActionGroupProps } from './ActionGroup';
 export { Alert, type AlertProps } from './Alert';
 export { Article } from './Article';
-export { BadgeCounter } from './BadgeCounter';
 export { Blockquote, type BlockquoteProps } from './Blockquote';
 export {
   BreadcrumbNav,
@@ -92,6 +91,7 @@ export {
 } from './NavBar';
 export { NavigationList, type NavigationListProps } from './NavigationList';
 export { NavigationListItem, type NavigationListItemProps } from './NavigationListItem';
+export { NumberBadge, type NumberBadgeProps } from './NumberBadge';
 export { OrderedList, OrderedListItem, type OrderedListItemProps, type OrderedListProps } from './OrderedList';
 export { PageContent, type PageContentProps } from './PageContent';
 export { PageHeader, type PageHeaderProps } from './PageHeader';
