@@ -15,7 +15,7 @@ import {
   FormFieldCheckboxOption,
   FormFieldRadio,
   FormFieldTextarea,
-  FormFieldTextbox,
+  FormFieldTextInput,
   Heading,
   Icon,
   IconButton,
@@ -38,7 +38,7 @@ import {
   TableHeader,
   TableHeaderCell,
   TableRow,
-  Textbox,
+  TextInput,
   UnorderedList,
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
@@ -142,7 +142,7 @@ export default function Collage() {
                     <IconButton label="calendar">
                       <IconCalendarEvent />
                     </IconButton>
-                    <FormFieldTextbox description="Description" label="Name"></FormFieldTextbox>
+                    <FormFieldTextInput description="Description" label="Name"></FormFieldTextInput>
                     <FormFieldTextarea label="Label" rows={4} />
                     <FormField
                       description="Form Field Radio Options"
@@ -178,7 +178,7 @@ export default function Collage() {
                       descriptionId="description-id"
                       errorMessage="Error message"
                       errorMessageId="error-id"
-                      input={<Textbox invalid />}
+                      input={<TextInput invalid />}
                       invalid={true}
                       label="Label"
                       statusId="status-id"

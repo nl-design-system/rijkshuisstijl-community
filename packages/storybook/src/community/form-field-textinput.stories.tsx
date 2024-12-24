@@ -1,13 +1,13 @@
 /* @license CC0-1.0 */
 
-import { FormFieldTextbox } from '@rijkshuisstijl-community/components-react';
+import { FormFieldTextInput } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from './form-field-textbox.md?raw';
+import readme from './form-field-textinput.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Form Field/Form Field Text Input',
   id: 'rhc-form-field-text-input',
-  component: FormFieldTextbox,
+  component: FormFieldTextInput,
   argTypes: {
     required: {
       description: 'Required',
@@ -311,7 +311,7 @@ const meta = {
       size,
     } = args;
     return (
-      <FormFieldTextbox
+      <FormFieldTextInput
         autoComplete={autoComplete || undefined}
         defaultValue={defaultValue || undefined}
         description={description || undefined}
@@ -347,7 +347,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof FormFieldTextbox>;
+} satisfies Meta<typeof FormFieldTextInput>;
 
 export default meta;
 
@@ -396,7 +396,7 @@ export const Password: Story = {
   render: (args) => (
     <form>
       <input hidden autoComplete="username" type="text" />
-      <FormFieldTextbox autoComplete={args.autoComplete} label={args.label} name={args.name} type={args.type} />
+      <FormFieldTextInput autoComplete={args.autoComplete} label={args.label} name={args.name} type={args.type} />
     </form>
   ),
 };

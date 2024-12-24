@@ -1,11 +1,14 @@
-import { FormFieldTextboxProps, FormFieldTextbox as TextBox } from '@utrecht/component-library-react';
+import {
+  FormFieldTextboxProps as FormFieldTextInputProps,
+  FormFieldTextbox as TextInput,
+} from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, useId } from 'react';
 import { Icon } from './icon/Icon';
 
-export const FormFieldTextbox = forwardRef(
+export const FormFieldTextInput = forwardRef(
   (
-    { invalid, errorMessage, description, status, children, ...restProps }: PropsWithChildren<FormFieldTextboxProps>,
+    { invalid, errorMessage, description, status, children, ...restProps }: PropsWithChildren<FormFieldTextInputProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const inputId = useId();
@@ -22,7 +25,7 @@ export const FormFieldTextbox = forwardRef(
       );
 
     return (
-      <TextBox
+      <TextInput
         description={description}
         errorMessage={errorMsg()}
         id={inputId}
@@ -39,9 +42,9 @@ export const FormFieldTextbox = forwardRef(
         {...restProps}
       >
         {children}
-      </TextBox>
+      </TextInput>
     );
   },
 );
 
-FormFieldTextbox.displayName = 'FormFieldTextbox';
+FormFieldTextInput.displayName = 'FormFieldTextInput';
