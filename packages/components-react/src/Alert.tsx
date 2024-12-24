@@ -37,10 +37,12 @@ export const Alert = forwardRef(
           />
         </div>
         <div>
-          <Heading appearance="utrecht-heading-5" level={headingLevel || 3}>
-            {heading}
-          </Heading>
-          <Paragraph>{textContent}</Paragraph>
+          {heading && (
+            <Heading appearance="utrecht-heading-5" level={headingLevel || 3}>
+              {heading}
+            </Heading>
+          )}
+          {textContent && <Paragraph>{textContent}</Paragraph>}
           {children}
         </div>
       </UtrechtAlert>
