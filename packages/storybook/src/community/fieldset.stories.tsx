@@ -4,7 +4,7 @@ import {
   Fieldset,
   FieldsetLegend,
   type FieldsetProps,
-  FormFieldTextbox,
+  FormFieldTextInput,
 } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import clsx from 'clsx';
@@ -59,9 +59,9 @@ const meta = {
     invalid: false,
     children: (
       <>
-        <FormFieldTextbox label="Field A"></FormFieldTextbox>
-        <FormFieldTextbox label="Field B"></FormFieldTextbox>
-        <FormFieldTextbox label="Field C"></FormFieldTextbox>
+        <FormFieldTextInput label="Field A"></FormFieldTextInput>
+        <FormFieldTextInput label="Field B"></FormFieldTextInput>
+        <FormFieldTextInput label="Field C"></FormFieldTextInput>
       </>
     ),
     legend: 'Legend',

@@ -15,7 +15,7 @@ import {
   FormFieldCheckboxOption,
   FormFieldRadio,
   FormFieldTextarea,
-  FormFieldTextbox,
+  FormFieldTextInput,
   Heading,
   Icon,
   IconButton,
@@ -142,7 +142,7 @@ export default function Collage() {
                     <IconButton label="calendar">
                       <IconCalendarEvent />
                     </IconButton>
-                    <FormFieldTextbox description="Description" label="Name"></FormFieldTextbox>
+                    <FormFieldTextInput description="Description" label="Name"></FormFieldTextInput>
                     <FormFieldTextarea label="Label" rows={4} />
                     <FormField
                       description="Form Field Radio Options"

@@ -68,8 +68,8 @@ export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFi
 export { FormFieldRadio, type FormFieldRadioProps } from './FormFieldRadio';
 export { FormFieldRadioGroup, type FormFieldRadioGroupProps } from './FormFieldRadioGroup';
 export { FormFieldSelect, type FormFieldSelectProps, SelectOption, type SelectOptionProps } from './FormFieldSelect';
+export { FormFieldTextInput } from './FormFieldTextInput';
 export { FormFieldTextarea, type FormFieldTextareaProps, Textarea } from './FormFieldTextarea';
-export { FormFieldTextbox } from './FormFieldTextbox';
 export { Heading, type HeadingProps } from './Heading';
 export { HeadingGroup, type HeadingGroupProps } from './HeadingGroup';
 export { Hero, type HeroProps } from './Hero';

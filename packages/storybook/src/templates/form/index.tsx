@@ -11,7 +11,7 @@ import {
   FormFieldCheckboxOption,
   FormFieldRadio,
   FormFieldTextarea,
-  FormFieldTextbox,
+  FormFieldTextInput,
   Heading,
   Icon,
   Link,
@@ -99,10 +99,10 @@ export default function Form() {
                     Lees verder over de <Link href="#">verantwoordingsmethode SiSa</Link>.
                   </Paragraph>
                   <form>
-                    <FormFieldTextbox required label="Naam"></FormFieldTextbox>
-                    <FormFieldTextbox label="Organisatie"></FormFieldTextbox>
-                    <FormFieldTextbox label="E-mailadres" type="email"></FormFieldTextbox>
-                    <FormFieldTextbox label="Telefoonnummer" type="tel"></FormFieldTextbox>
+                    <FormFieldTextInput required label="Naam"></FormFieldTextInput>
+                    <FormFieldTextInput label="Organisatie"></FormFieldTextInput>
+                    <FormFieldTextInput label="E-mailadres" type="email"></FormFieldTextInput>
+                    <FormFieldTextInput label="Telefoonnummer" type="tel"></FormFieldTextInput>
                     {/*
                 <div className="unstarted">
                   <FormField label="Datum">
@@ -110,10 +110,10 @@ export default function Form() {
                   </FormField>
                 </div>
               */}
-                    <FormFieldTextbox
+                    <FormFieldTextInput
                       description="Bijvoorbeeld E27B"
                       label="Om welke uitkering gaat het?"
-                    ></FormFieldTextbox>
+                    ></FormFieldTextInput>
                     <FormFieldTextarea cols={40} label="Stel hier uw vraag" rows={6}></FormFieldTextarea>
                     <Fieldset>
                       <FieldsetLegend>Label</FieldsetLegend>
