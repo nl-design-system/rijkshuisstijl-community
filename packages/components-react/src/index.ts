@@ -68,8 +68,8 @@ export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFi
 export { FormFieldRadio, type FormFieldRadioProps } from './FormFieldRadio';
 export { FormFieldRadioGroup, type FormFieldRadioGroupProps } from './FormFieldRadioGroup';
 export { FormFieldSelect, type FormFieldSelectProps, SelectOption, type SelectOptionProps } from './FormFieldSelect';
+export { FormFieldTextInput } from './FormFieldTextInput';
 export { FormFieldTextarea, type FormFieldTextareaProps, Textarea } from './FormFieldTextarea';
-export { FormFieldTextbox } from './FormFieldTextbox';
 export { Heading, type HeadingProps } from './Heading';
 export { HeadingGroup, type HeadingGroupProps } from './HeadingGroup';
 export { Hero, type HeroProps } from './Hero';
@@ -120,7 +120,7 @@ export {
 export { TableCaption } from './TableCaption';
 export { TableCell, type TableCellProps } from './TableCell';
 export { TableHeaderCell, type TableHeaderCellProps } from './TableHeaderCell';
-export { Textbox, type TextboxProps } from './Textbox';
+export { TextInput, type TextInputProps } from './TextInput';
 export { Toggletip, ToggletipButton, ToggletipContent, type ToggletipProps } from './Toggletip';
 export { UnorderedList, type UnorderedListProps } from './UnorderedList';
 export { UnorderedListItem, type UnorderedListItemProps } from './UnorderedListItem';
