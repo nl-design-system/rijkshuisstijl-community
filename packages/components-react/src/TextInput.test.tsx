@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import { TextInput } from '.';
 
-describe('Textbox', () => {
+describe('TextInput', () => {
   it('renders a visible element', () => {
     const { container } = render(<TextInput />);
 

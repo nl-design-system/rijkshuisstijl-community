@@ -264,11 +264,6 @@ const meta: Meta<typeof TextInput> = {
       description: {
         component: readme,
       },
-      source: {
-        transform: (code: string) => {
-          return code.replace(/Textbox/g, 'TextInput');
-        },
-      },
     },
   },
   render: (args) => {
