@@ -133,6 +133,7 @@ export default function Page() {
                 </div>
                 <div className="rhc-templates-spacing-2">
                   <Heading level={5}>Dit is een H5</Heading>
+                  hello world
                   <Paragraph>Dit is een paragraaf.</Paragraph>
                 </div>
                 <div className="rhc-templates-spacing-2">
