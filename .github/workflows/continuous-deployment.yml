@@ -148,7 +148,7 @@ jobs:
 
   test-a11y:
     runs-on: ubuntu-latest
-    needs: publish-website
+    needs: [lint, test, build]
 
     steps:
       - name: Checkout branch
@@ -167,9 +167,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-
-      - name: build packages
-        run: pnpm run build
 
       - name: "Continuous Integration: test-storybook"
         run: npx test-storybook
