@@ -151,7 +151,7 @@ jobs:
 
       - name: "Continuous Integration: test-storybook"
         if: github.event.deployment_status.state == 'success'
-        run: pnpm --filter @rijkshuisstijl-community/storybook run test-storybook
+        run: npx test-storybook
         env:
           TARGET_URL: '${{ github.event.deployment_status.target_url }}'
 
