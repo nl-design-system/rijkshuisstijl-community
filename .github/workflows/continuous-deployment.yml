@@ -149,11 +149,10 @@ jobs:
       - name: build packages
         run: pnpm run build
 
-      - name: Start Storybook server
-        run: nohup pnpm run storybook
-
       - name: "Continuous Integration: test-storybook"
         run: pnpm --filter @rijkshuisstijl-community/storybook run test-storybook
+        env:
+          TARGET_URL: '${{ github.event.deployment_status.target_url }}'
 
   publish-website:
     runs-on: ubuntu-latest
