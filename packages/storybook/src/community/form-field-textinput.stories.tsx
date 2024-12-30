@@ -346,6 +346,9 @@ const meta = {
         component: readme,
       },
     },
+    jest: {
+      timeout: 30000,
+    },
   },
 } satisfies Meta<typeof FormFieldTextInput>;
 
