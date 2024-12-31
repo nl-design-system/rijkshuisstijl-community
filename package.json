@@ -29,6 +29,7 @@
     "@types/node": "20.17.6",
     "@typescript-eslint/eslint-plugin": "8.18.0",
     "@typescript-eslint/parser": "8.18.0",
+    "concurrently": "9.1.2",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.31.0",
@@ -47,7 +48,8 @@
     "stylelint": "16.11.0",
     "stylelint-config-standard-scss": "13.1.0",
     "stylelint-order": "6.0.4",
-    "typescript": "5.7.2"
+    "typescript": "5.7.2",
+    "wait-on": "8.0.1"
   },
   "scripts": {
     "prebuild": "pnpm run clean",
@@ -79,7 +81,8 @@
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.cjs",
     "update-major": "npm-check-updates --configFileName .ncurc.major.cjs",
     "watch:storybook": "npm run --workspace packages/storybook storybook",
-    "watch:style-dictionary": "lerna run watch:style-dictionary"
+    "watch:style-dictionary": "lerna run watch:style-dictionary",
+    "test-storybook:ci": "concurrently -k -s first -n \"STORYBOOK,A11Y-TEST\" -c \"magenta,green\" \"npm run --workspace packages/storybook build-storybook -- --quiet && npm run --workspace packages/storybook prod-static -- --silent\" \"wait-on tcp:6006 && npm run --workspace packages/storybook test-storybook\""
   },
   "dependencies": {
     "@storybook/test-runner": "0.21.0",

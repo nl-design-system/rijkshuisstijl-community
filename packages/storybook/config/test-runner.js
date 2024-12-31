@@ -5,9 +5,6 @@ export async function preVisit(page) {
 }
 export async function postVisit(page) {
   await checkA11y(page, '#storybook-root', {
-    detailedReport: true,
-    detailedReportOptions: {
-      html: true,
-    },
+    verbose: false,
   });
 }

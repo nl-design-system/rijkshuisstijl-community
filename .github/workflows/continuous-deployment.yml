@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-  deployment_status:
-    types: [success]
   pull_request:
 
 jobs:
@@ -151,7 +149,6 @@ jobs:
   test-a11y:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    needs: [lint, test, build]
 
     steps:
       - name: Checkout branch
@@ -172,9 +169,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: "Accessibility tests Storybook"
-        run: pnpm test-storybook
-        env:
-          TARGET_URL: '${{ github.event.deployment_status.target_url }}'
+        run: pnpm test-storybook:ci
 
   publish-npm:
     runs-on: ubuntu-latest

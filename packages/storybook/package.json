@@ -24,8 +24,8 @@
     "chromatic": "chromatic",
     "clean": "rimraf dist/",
     "storybook": "storybook dev --config-dir config/ --port 6006",
-    "prod-static": "http-server dist/",
-    "test-storybook": "test-storybook --maxWorkers=1 --config-dir config/"
+    "prod-static": "http-server --port 6006 dist/",
+    "test-storybook": "test-storybook --maxWorkers=2 --config-dir config/"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "3.2.2",
