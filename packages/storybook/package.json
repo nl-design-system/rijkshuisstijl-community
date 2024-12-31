@@ -25,7 +25,8 @@
     "clean": "rimraf dist/",
     "storybook": "storybook dev --config-dir config/ --port 6006",
     "prod-static": "http-server --port 6006 dist/",
-    "test-storybook": "test-storybook --maxWorkers=2 --config-dir config/"
+    "test-storybook": "test-storybook --maxWorkers=2 --config-dir config/",
+    "playwright:exec": "npm exec playwright install"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "3.2.2",
