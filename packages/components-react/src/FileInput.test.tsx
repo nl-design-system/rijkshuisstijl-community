@@ -1,5 +1,4 @@
 import '@testing-library/jest-dom';
-
 import { fireEvent, render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { FileInput, FileInputProps } from './FileInput';
@@ -10,6 +9,7 @@ beforeAll(() => {
 
 describe('File Input tests', () => {
   const defaultProps: FileInputProps = {
+    ref: { current: document.createElement('input') },
     buttonText: 'Bestanden kiezen',
     maxFileSizeInBytes: 10_485_760,
     allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif',
@@ -30,6 +30,7 @@ describe('File Input tests', () => {
     const mockOnFileChange = jest.fn();
 
     const propsTest: FileInputProps = {
+      ref: { current: document.createElement('input') },
       buttonText: 'Bestanden kiezen',
       maxFileSizeInBytes: 10_485_760,
       allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif',
@@ -57,6 +58,7 @@ describe('File Input tests', () => {
     const mockOnFileChange = jest.fn();
 
     const propsTest: FileInputProps = {
+      ref: { current: document.createElement('input') },
       buttonText: 'Bestanden kiezen',
       maxFileSizeInBytes: 10_485_760,
       allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif',
@@ -87,6 +89,7 @@ describe('File Input tests', () => {
     const mockOnFileChange = jest.fn();
 
     const propsTest: FileInputProps = {
+      ref: { current: document.createElement('input') },
       buttonText: 'Bestanden kiezen',
       maxFileSizeInBytes: 10_485_760,
       allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.bmp,.gif', // Removed .png from allow list
