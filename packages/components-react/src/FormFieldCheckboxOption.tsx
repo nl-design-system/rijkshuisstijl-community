@@ -1,4 +1,4 @@
-import { FormFieldCheckbox, FormFieldCheckboxProps } from '@utrecht/component-library-react';
+import { FormFieldCheckbox, type FormFieldCheckboxProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, useId } from 'react';
 import { Icon } from './icon/Icon';

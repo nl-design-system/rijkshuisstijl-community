@@ -22,6 +22,8 @@ const meta = {
         component: readme,
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrign: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof FileInput>;
 

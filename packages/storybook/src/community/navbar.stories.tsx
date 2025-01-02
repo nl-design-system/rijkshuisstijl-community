@@ -6,9 +6,12 @@ const meta = {
   id: 'rhc-nav-bar',
   component: NavBar,
   parameters: {
+    // TODO: add documentation
     status: {
       type: 'UNSTABLE',
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrign: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof NavBar>;
 

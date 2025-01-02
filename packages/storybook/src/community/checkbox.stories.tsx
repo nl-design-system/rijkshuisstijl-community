@@ -12,9 +12,16 @@ const meta = {
     },
     docs: {
       description: {
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
         component: readme,
       },
     },
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=944-1535&node-type=canvas&t=HiNKOQhf1hQtLZrr-0',
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/462',
+    nldesignsystem: 'https://www.nldesignsystem.nl/checkbox/',
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
   },
   argTypes: {
     checked: {

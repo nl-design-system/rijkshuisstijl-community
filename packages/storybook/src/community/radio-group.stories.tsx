@@ -18,9 +18,12 @@ const meta = {
   component: RadioGroupStory,
   render: RadioGroupStory,
   parameters: {
+    // TODO: add documentation
     status: {
       type: 'STABLE',
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrign: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof RadioGroupStory>;
 

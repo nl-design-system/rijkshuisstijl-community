@@ -15,6 +15,11 @@ const meta = {
         component: readme,
       },
     },
+    // TODO: add NL Design System link when there is a page for CodeInput
+    figma:
+      'https://www.figma.com/design/H4hSqpPbvFMLklDZgswwgd/NLDS---Rijkshuisstijl---Templates?node-id=4652-10195&node-type=frame&t=b4RSbycsPxEdIHZ6-0',
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/823',
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
   argTypes: {},
   args: {

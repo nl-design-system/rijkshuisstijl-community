@@ -15,6 +15,11 @@ const meta = {
         component: readme,
       },
     },
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=954-2226&node-type=canvas&t=HiNKOQhf1hQtLZrr-0',
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/462',
+    nldesignsystem: 'https://www.nldesignsystem.nl/checkbox-group/',
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof CheckboxGroup>;
 

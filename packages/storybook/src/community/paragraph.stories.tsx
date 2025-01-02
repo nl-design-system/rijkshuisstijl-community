@@ -50,9 +50,13 @@ const meta = {
     },
     docs: {
       description: {
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
         component: readme,
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met alleen overgeschreven design tokens van de Rijkshuisstijl Community.',
   },
 } as Meta<typeof Paragraph>;
 

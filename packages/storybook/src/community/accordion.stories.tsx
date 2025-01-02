@@ -1,8 +1,9 @@
 import { AccordionProvider, AccordionSectionProps } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
+import readme from '@utrecht/components/accordion/README.md?raw';
 import { UtrechtIconChevronDown } from '@utrecht/web-component-library-react';
 import { ReactNode } from 'react';
-import readme from './accordion.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface AccordionStoryProps {
   label: string;
@@ -77,9 +78,13 @@ const meta = {
     },
     docs: {
       description: {
-        component: readme,
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
   },
   render: AccordionStory,
 } satisfies Meta<AccordionStoryProps>;

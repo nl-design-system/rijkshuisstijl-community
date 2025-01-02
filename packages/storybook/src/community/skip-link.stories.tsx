@@ -1,7 +1,7 @@
 import { SkipLink, type SkipLinkProps } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
+import readme from '@utrecht/components/skip-link/README.md?raw';
 import clsx from 'clsx';
-import readme from './skip-link.md?raw';
 
 interface SkipLinkStoryProps extends SkipLinkProps {
   visibility?: string | 'hidden' | 'visible';
@@ -59,9 +59,13 @@ const meta = {
     },
     docs: {
       description: {
+        // TODO: add usage documentation and also restructure this when it is differently structurized in the Utrecht documentation source
         component: readme,
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
   render: SkipLinkStory,
 } satisfies Meta<typeof SkipLinkStory>;

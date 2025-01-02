@@ -262,9 +262,16 @@ const meta: Meta<typeof TextInput> = {
     },
     docs: {
       description: {
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source (including with usage and wcag documentation)
         component: readme,
       },
     },
+    // TODO: add Github issue link
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=859-981&node-type=CANVAS&t=VGu5hA1sXPDhCUwB-0',
+    nldesignsystem: 'https://www.nldesignsystem.nl/text-input/',
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht (daar heet het Textbox), met styling van de Rijkshuisstijl Community.',
   },
   render: (args) => {
     const {

@@ -2,8 +2,6 @@
 
 # Rijkshuisstijl Community hero component
 
-[NL design system](https://www.nldesignsystem.nl/hero/) | [Figma](https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=15708-524&node-type=canvas&t=fXG4KjJRXbo2PG2J-0)
-
 Let op: Zowel `heading` als `subHeading` zijn optioneel, maar als je een `subHeading` toevoegt, moet je ook een `heading` toevoegen. Een Hero-component met alleen een `subHeading` is niet toegestaan.
 
 ## Usage

@@ -6,11 +6,14 @@ import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/mijnoverheid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
+import { Paragraph } from '@rijkshuisstijl-community/components-react';
 import { defineCustomElements } from '@rijkshuisstijl-community/web-components-stencil/loader/index';
 import { withThemeByClassName } from '@storybook/addon-themes';
+import { Controls, Description, Primary, Stories, useOf } from '@storybook/blocks';
 import { Preview } from '@storybook/react';
 import { UtrechtDocument } from '@utrecht/web-component-library-react';
 import { defineCustomElements as defineUtrechtCustomElements } from '@utrecht/web-component-library-stencil/loader/index';
+import { Fragment } from 'react';
 
 // Initialize web components
 defineCustomElements();
@@ -59,6 +62,39 @@ const preview: Preview = {
       },
     },
     docs: {
+      page: () => {
+        const storyParameters: any = useOf<'story'>('story')?.story?.parameters;
+        const parameterLabels = {
+          nldesignsystem: 'NL Design System',
+          figma: 'Figma',
+          github: 'GitHub',
+        };
+        const links = (
+          <>
+            {['nldesignsystem', 'figma', 'github']
+              .filter((parameterKey) => storyParameters?.[parameterKey])
+              .map((parameterKey, index) => (
+                <Fragment key={parameterKey}>
+                  {index > 0 && ' | '}
+                  <a href={storyParameters[parameterKey]}>
+                    {parameterLabels[parameterKey as keyof typeof parameterLabels]}
+                  </a>
+                </Fragment>
+              ))}
+          </>
+        );
+        // Exclude `<Title>` because the title comes from the Markdown file
+        return (
+          <>
+            {links}
+            {storyParameters?.componentOrigin && <Paragraph>{storyParameters.componentOrigin}</Paragraph>}
+            <Description />
+            <Primary />
+            <Controls />
+            <Stories />
+          </>
+        );
+      },
       source: {
         state: 'open',
 

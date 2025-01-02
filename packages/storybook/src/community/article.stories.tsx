@@ -29,9 +29,15 @@ const meta = {
     },
     docs: {
       description: {
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
         component: readme,
       },
     },
+    // TODO: add Figma link
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/566',
+    nldesignsystem: 'https://www.nldesignsystem.nl/article/',
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met alleen overgeschreven design tokens van de Rijkshuisstijl Community.',
   },
 } as Meta<typeof Article>;
 

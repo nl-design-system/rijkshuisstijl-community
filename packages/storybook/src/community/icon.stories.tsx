@@ -13,9 +13,13 @@ const meta = {
     },
   },
   parameters: {
+    // TODO: add documentation from Utrecht, but not until readme is correctly structurized in the Utrecht documentation source
     status: {
       type: 'STABLE',
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met extra functionaliteit voor het gebruiken van de iconenset van de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof Icon>;
 

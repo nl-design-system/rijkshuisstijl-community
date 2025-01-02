@@ -52,6 +52,10 @@ const meta = {
         component: readme,
       },
     },
+    // TODO: add GitHub issue and NL DesignSystem links
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=15708-524&node-type=canvas&t=fXG4KjJRXbo2PG2J-0',
+    componentOrign: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof Hero>;
 

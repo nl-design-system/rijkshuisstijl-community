@@ -23,6 +23,10 @@ const meta = {
         component: readme,
       },
     },
+    // TODO: add NL Design System link when there is a page for DotBadge/BadgeCounter
+    figma: 'https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/',
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/744',
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof DotBadge>;
 
