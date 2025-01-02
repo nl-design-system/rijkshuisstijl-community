@@ -1,5 +1,5 @@
 import {
-  BadgeCounter,
+  NumberBadge,
   Separator,
   SideNav,
   SideNavItem,
@@ -32,15 +32,15 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: [
-      <SideNavList>
+      <SideNavList key="ul-1">
         <SideNavItem>
           <SideNavLink current href="/#" icon="tegelweergave">
             Overzicht
           </SideNavLink>
         </SideNavItem>
       </SideNavList>,
-      <Separator invisible />,
-      <SideNavList>
+      <Separator invisible key="separator-1" />,
+      <SideNavList key="ul-2">
         <SideNavItem>
           <SideNavLink href="/#" icon="activiteit">
             Mijn taken
@@ -49,7 +49,7 @@ export const Default: Story = {
         <SideNavItem>
           <SideNavLink href="/#" icon="mail">
             Mijn berichten
-            <BadgeCounter>2</BadgeCounter>
+            <NumberBadge>2</NumberBadge>
           </SideNavLink>
         </SideNavItem>
         <SideNavItem>
@@ -58,8 +58,8 @@ export const Default: Story = {
           </SideNavLink>
         </SideNavItem>
       </SideNavList>,
-      <Separator invisible />,
-      <SideNavList>
+      <Separator invisible key="separator-2" />,
+      <SideNavList key="ul-3">
         <SideNavItem>
           <SideNavLink href="/#" icon="user">
             Mijn gegevens

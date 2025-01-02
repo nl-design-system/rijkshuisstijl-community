@@ -21,6 +21,10 @@ const meta = {
       name: 'checked',
       type: { name: 'boolean', required: false },
     },
+    onChange: {
+      name: 'onChange',
+      type: { name: 'function', required: false },
+    },
     disabled: {
       name: 'disabled',
       type: { name: 'boolean', required: false },
@@ -76,12 +80,14 @@ export const Invalid: Story = {
 export const Checked: Story = {
   args: {
     checked: true,
+    onChange: () => {},
   },
 };
 
 export const CheckedAndActive: Story = {
   args: {
     checked: true,
+    onChange: () => {},
   },
   parameters: {
     pseudo: { active: true },
@@ -91,6 +97,7 @@ export const CheckedAndActive: Story = {
 export const CheckedAndHover: Story = {
   args: {
     checked: true,
+    onChange: () => {},
   },
   parameters: {
     pseudo: { hover: true },
@@ -100,6 +107,7 @@ export const CheckedAndHover: Story = {
 export const CheckedAndFocus: Story = {
   args: {
     checked: true,
+    onChange: () => {},
   },
   parameters: {
     pseudo: { focus: true },
@@ -109,6 +117,7 @@ export const CheckedAndFocus: Story = {
 export const CheckedAndFocusVisible: Story = {
   args: {
     checked: true,
+    onChange: () => {},
   },
   parameters: {
     pseudo: { focusVisible: true },
@@ -119,6 +128,7 @@ export const CheckedAndFocusVisible: Story = {
 export const CheckedAndDisabled: Story = {
   args: {
     checked: true,
+    onChange: () => {},
     disabled: true,
   },
 };

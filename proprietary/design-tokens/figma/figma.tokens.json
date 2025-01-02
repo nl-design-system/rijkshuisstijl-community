@@ -1046,6 +1046,10 @@
           "default": {
             "value": "{rhc.font-size.xs.desktop}",
             "type": "fontSizes"
+          },
+          "small": {
+            "value": "{rhc.font-size.xs.tablet}",
+            "type": "fontSizes"
           }
         }
       },
@@ -1627,8 +1631,12 @@
           }
         },
         "message": {
-          "row-gap": {
-            "value": "{rhc.space.0}",
+          "line-height": {
+            "value": "{rhc.line-height.md}",
+            "type": "lineHeights"
+          },
+          "column-gap": {
+            "value": "{rhc.space.100}",
             "type": "spacing"
           }
         },
@@ -1768,7 +1776,7 @@
             "type": "fontFamilies"
           },
           "line-height": {
-            "value": "{rhc.line-height.paragraph}",
+            "value": "1.25",
             "type": "lineHeights"
           },
           "font-weight": {
@@ -3330,6 +3338,10 @@
           "line-height": {
             "value": "{rhc.line-height.paragraph}",
             "type": "lineHeights"
+          },
+          "font-size": {
+            "value": "{rhc.font-size.xs.desktop}",
+            "type": "fontSizes"
           }
         },
         "img": {
@@ -3556,6 +3568,12 @@
           "margin-block-end": {
             "value": "{rhc.space.100}",
             "type": "spacing"
+          }
+        },
+        "error-message": {
+          "line-height": {
+              "value": "normal",
+              "type": "lineHeights"
           }
         }
       }
@@ -5155,7 +5173,7 @@
             "type": "color"
           },
           "font-size": {
-            "value": "{rhc.font-size.paragraph.default}",
+            "value": "{rhc.font-size.paragraph.small}",
             "type": "fontSizes"
           },
           "font-weight": {
@@ -6164,6 +6182,10 @@
           "padding-inline-start": {
             "value": "{rhc.space.200}",
             "type": "spacing"
+          },
+          "line-height": {
+            "value": "{rhc.line-height.md}",
+            "type": "lineHeights"
           }
         },
         "data-cell": {
@@ -6297,6 +6319,10 @@
               "type": "color"
             }
           }
+        },
+        "font-size": {
+            "value": "{rhc.font-size.xs.desktop}",
+            "type": "fontSizes"
         }
       }
     }

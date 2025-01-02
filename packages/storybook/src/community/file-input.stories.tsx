@@ -43,7 +43,7 @@ export const Default: Story = {
 export const MetCustomElementenLijst: Story = {
   args: {
     children: [
-      <div>
+      <div key="file-input-example-1">
         <FormLabel>Bestand toevoegen</FormLabel>
         <UnorderedList>
           <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>

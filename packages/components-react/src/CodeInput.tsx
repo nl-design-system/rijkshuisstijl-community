@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { ChangeEvent, ForwardedRef, forwardRef, KeyboardEvent, PropsWithChildren, useRef, useState } from 'react';
-import { Textbox } from './Textbox';
+import { TextInput } from './TextInput';
 import { VisuallyHidden } from './VisuallyHidden';
 
 export interface CodeInputGroupProps {
@@ -46,7 +46,7 @@ export const CodeInput = forwardRef(
     return (
       <div className={'rhc-code-input-container'} data-testid={'code-input-container'} ref={ref} {...restProps}>
         <VisuallyHidden>
-          <Textbox
+          <TextInput
             aria-label="code-input"
             autoComplete="one-time-code"
             data-testid={'hidden-input'}
@@ -71,7 +71,7 @@ export const CodeInput = forwardRef(
 
         <div className={'rhc-code-input-group'}>
           {[...Array(numberOfDigits)].map((_, i) => (
-            <Textbox
+            <TextInput
               aria-label={`code-input-${i}`}
               data-testid={`input-item`}
               invalid={inValid}

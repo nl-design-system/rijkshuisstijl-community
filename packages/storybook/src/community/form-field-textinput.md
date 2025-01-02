@@ -7,9 +7,9 @@
 ## Usage
 
 ```jsx
-import { FormFieldTextbox } from '@rijkshuisstijl/community-components';
+import { FormFieldTextInput } from '@rijkshuisstijl/community-components';
 
-<FormFieldTextbox
+<FormFieldTextInput
   label="Label"
   placeholder="Placeholder"
   description="Description"
