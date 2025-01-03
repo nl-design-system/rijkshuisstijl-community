@@ -1,1 +1,1 @@
-export { HeroWebComponent } from './hero/hero';
+export { HeroWebComponent, type HeroWebComponentAttributes } from './components/hero';

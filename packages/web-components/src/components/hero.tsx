@@ -2,6 +2,8 @@ import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?
 import { Hero, HeroProps } from '@rijkshuisstijl-community/components-react';
 import { BaseWebComponent } from '../BaseComponent';
 
+export type HeroWebComponentAttributes = HeroProps;
+
 export class HeroWebComponent extends BaseWebComponent {
   static override tagName: string = 'rhc-hero';
   static override observedAttributes: string[] = [
@@ -23,15 +25,15 @@ export class HeroWebComponent extends BaseWebComponent {
   render(): void {
     this.root.render(
       <Hero
-        aspectRatio={this.getAttribute('aspectRatio') as HeroProps['aspectRatio']}
-        borderRadiusCorner={this.getAttribute('borderRadiusCorner') as HeroProps['borderRadiusCorner']}
+        aspectRatio={(this.getAttribute('aspectRatio') as HeroProps['aspectRatio']) ?? undefined}
+        borderRadiusCorner={(this.getAttribute('borderRadiusCorner') as HeroProps['borderRadiusCorner']) ?? undefined}
         heading={this.getAttribute('heading') ?? 'default heading'}
-        heroMessage={this.getAttribute('heroMessage') === 'true'}
         imageAlt={this.getAttribute('imageAlt') ?? 'image alt'}
         subHeading={this.getAttribute('subHeading') ?? 'sub heading'}
-        textAlign={this.getAttribute('textAlign') as HeroProps['textAlign']}
+        textAlign={(this.getAttribute('textAlign') as HeroProps['textAlign']) ?? undefined}
         headingLevel={
-          (this.getAttribute('headingLevel') && Number(this.getAttribute('headingLevel'))) as HeroProps['headingLevel']
+          ((this.getAttribute('headingLevel') &&
+            Number(this.getAttribute('headingLevel'))) as HeroProps['headingLevel']) ?? undefined
         }
         imageSrc={
           this.getAttribute('imageSrc') ??
@@ -43,3 +45,21 @@ export class HeroWebComponent extends BaseWebComponent {
     );
   }
 }
+
+// const Hero: FC<HeroProps> = ({ title, description }) => {
+//     // Create and return the custom web component
+//     const webComponent = React.createElement('hero-element', {
+//       title,
+//       description,
+//     });
+
+//     return <div>{webComponent}</div>;
+//   };
+
+// customElements.define('hero-element', HeroElement);
+
+// const HeroComponent: FC<HeroProps> = (props) => {
+//   return <rhc-hero {...props} />;
+// };
+
+// export default HeroComponent;
