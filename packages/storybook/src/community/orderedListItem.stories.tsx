@@ -18,9 +18,12 @@ const meta = {
     },
   },
   parameters: {
+    // TODO: add documentation, but not until readme is correctly structurized in the Utrecht documentation source
     status: {
       type: 'STABLE',
     },
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof OrderedListItem>;
 

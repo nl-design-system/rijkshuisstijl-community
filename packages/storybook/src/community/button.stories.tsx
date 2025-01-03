@@ -1,11 +1,16 @@
 /* @license CC0-1.0 */
 
 import { IconButton } from '@rijkshuisstijl-community/components-react';
+import { Button, Icon } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
-import { Button, Icon } from '@utrecht/component-library-react';
+import readme from '@utrecht/components/button/README.md?raw';
+import anatomyDocs from '@utrecht/components/button/docs/anatomy.nl.md?raw';
+import htmlDocs from '@utrecht/components/button/docs/technology-html.nl.md?raw';
+import visualDesignDocs from '@utrecht/components/button/docs/visual-design.nl.md?raw';
+import wcagDocs from '@utrecht/components/button/docs/wcag.nl.md?raw';
 import { PropsWithChildren } from 'react';
-import readme from './button.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface ButtonStoryProps {
   appearance: string;
@@ -95,9 +100,12 @@ const meta = {
     },
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme, anatomyDocs, visualDesignDocs, htmlDocs, wcagDocs]),
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen (voor de IconButton) en styling van de Rijkshuisstijl Community.',
   },
   render: ButtonStory,
 } as Meta<typeof ButtonStory>;

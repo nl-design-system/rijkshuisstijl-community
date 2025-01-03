@@ -1,10 +1,12 @@
 import {
   FormFieldTextboxProps as FormFieldTextInputProps,
-  FormFieldTextbox as TextInput,
+  FormFieldTextbox as UtrechtFormFieldTextInput,
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, useId } from 'react';
 import { Icon } from './icon/Icon';
+
+export { type FormFieldTextInputProps };
 
 export const FormFieldTextInput = forwardRef(
   (
@@ -25,7 +27,7 @@ export const FormFieldTextInput = forwardRef(
       );
 
     return (
-      <TextInput
+      <UtrechtFormFieldTextInput
         description={description}
         errorMessage={errorMsg()}
         id={inputId}
@@ -42,7 +44,7 @@ export const FormFieldTextInput = forwardRef(
         {...restProps}
       >
         {children}
-      </TextInput>
+      </UtrechtFormFieldTextInput>
     );
   },
 );

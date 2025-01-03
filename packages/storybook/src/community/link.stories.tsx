@@ -1,12 +1,28 @@
 /* @license CC0-1.0 */
 
-import { Link } from '@rijkshuisstijl-community/components-react';
+import { Icon, Link } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
-import { Icon } from '@utrecht/component-library-react';
+import readme from '@utrecht/components/link/README.md?raw';
+import anatomyDocs from '@utrecht/components/link/docs/anatomy.nl.md?raw';
+import contentDocs from '@utrecht/components/link/docs/content.nl.md?raw';
+import failureNoAriaCurrentDocs from '@utrecht/components/link/docs/failure-no-aria-current.nl.md?raw';
+import failureNoContextGoalDocs from '@utrecht/components/link/docs/failure-no-context-goal.nl.md?raw';
+import failureNoHrefDocs from '@utrecht/components/link/docs/failure-no-href.nl.md?raw';
+import failureNoLangDocs from '@utrecht/components/link/docs/failure-no-lang.nl.md?raw';
+import failurePerceivableFocusDocs from '@utrecht/components/link/docs/failure-perceivable-focus.nl.md?raw';
+import failureUnecessaryHomeLinkDocs from '@utrecht/components/link/docs/failure-unecessary-home-link.md?raw';
+import interactionDocs from '@utrecht/components/link/docs/interaction.nl.md?raw';
+import privacyDocs from '@utrecht/components/link/docs/privacy.md?raw';
+import referencesDocs from '@utrecht/components/link/docs/references.nl.md?raw';
+import relatedComponentsDocs from '@utrecht/components/link/docs/related-components.nl.md?raw';
+import technologyHtmlDocs from '@utrecht/components/link/docs/technology-html.nl.md?raw';
+import usageDocs from '@utrecht/components/link/docs/usage.nl.md?raw';
+import visualDesignDocs from '@utrecht/components/link/docs/visual-design.nl.md?raw';
+import wcagDocs from '@utrecht/components/link/docs/wcag.nl.md?raw';
 import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
-import readme from './link.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 interface LinkStoryProps {
   href: string;
   iconLeft?: boolean;
@@ -125,9 +141,30 @@ const meta = {
     },
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([
+          readme,
+          interactionDocs,
+          usageDocs,
+          relatedComponentsDocs,
+          visualDesignDocs,
+          contentDocs,
+          anatomyDocs,
+          technologyHtmlDocs,
+          privacyDocs,
+          failurePerceivableFocusDocs,
+          failureNoContextGoalDocs,
+          failureNoLangDocs,
+          failureNoAriaCurrentDocs,
+          failureUnecessaryHomeLinkDocs,
+          failureNoHrefDocs,
+          referencesDocs,
+          wcagDocs,
+        ]),
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
   render: LinkStory,
 } as Meta<typeof LinkStory>;

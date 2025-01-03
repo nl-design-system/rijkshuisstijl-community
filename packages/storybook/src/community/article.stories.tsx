@@ -3,6 +3,7 @@
 import { Article } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './article.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/Article',
@@ -29,9 +30,15 @@ const meta = {
     },
     docs: {
       description: {
-        component: readme,
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add Figma link
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/566',
+    nldesignsystem: 'https://www.nldesignsystem.nl/article/',
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met alleen overgeschreven design tokens van de Rijkshuisstijl Community.',
   },
 } as Meta<typeof Article>;
 
