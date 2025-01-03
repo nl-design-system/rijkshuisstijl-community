@@ -3,6 +3,7 @@
 import { Heading, PageHeader } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './page-header.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/PageHeader',
@@ -14,7 +15,7 @@ const meta = {
   parameters: {
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
   },

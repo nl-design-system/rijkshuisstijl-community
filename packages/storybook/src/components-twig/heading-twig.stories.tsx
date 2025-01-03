@@ -3,6 +3,7 @@
 import twigTemplate from '@rijkshuisstijl-community/components-twig/src/Heading.twig?raw';
 import type { Meta, StoryObj } from '@storybook/react';
 import { createTwigComponent } from './TwigRenderer';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../community/heading.md?raw';
 
 interface TwigHeadingProps {
@@ -44,9 +45,10 @@ const meta = {
     },
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof TwigHeading>;
 

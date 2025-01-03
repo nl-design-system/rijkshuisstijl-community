@@ -1,9 +1,12 @@
-import { FormFieldTextareaProps, FormFieldTextarea as Textarea } from '@utrecht/component-library-react';
+import {
+  FormFieldTextareaProps,
+  FormFieldTextarea as UtrechtFormFieldTextarea,
+} from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, useId } from 'react';
 import { Icon } from './icon/Icon';
 
-export { Textarea, type FormFieldTextareaProps };
+export { type FormFieldTextareaProps };
 
 export const FormFieldTextarea = forwardRef(
   (
@@ -24,7 +27,7 @@ export const FormFieldTextarea = forwardRef(
       );
 
     return (
-      <Textarea
+      <UtrechtFormFieldTextarea
         description={description}
         errorMessage={errorMsg()}
         id={inputId}

@@ -1,6 +1,7 @@
 import { Textarea } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './textarea.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/Textarea',
@@ -139,7 +140,6 @@ const meta = {
     minLength: undefined,
     maxLength: undefined,
     dir: undefined,
-    label: undefined,
     cols: undefined,
     rows: undefined,
   },
@@ -157,7 +157,6 @@ const meta = {
       placeholder,
       minLength,
       maxLength,
-      label,
       dir,
       cols,
       rows,
@@ -166,12 +165,11 @@ const meta = {
       <Textarea
         cols={cols || undefined}
         defaultValue={defaultValue || undefined}
+        dir={dir || undefined}
         disabled={disabled}
         id={id || undefined}
-        inputDir={dir || undefined}
         inputRequired={inputRequired || undefined}
         invalid={invalid}
-        label={label || undefined}
         maxLength={maxLength || undefined}
         minLength={minLength || undefined}
         name={name || undefined}
@@ -190,9 +188,16 @@ const meta = {
     },
     docs: {
       description: {
-        component: readme,
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source (including with usage and wcag documentation)
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add Github issue link
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=969-2047&node-type=CANVAS&t=VGu5hA1sXPDhCUwB-0',
+    nldesignsystem: 'https://www.nldesignsystem.nl/textarea/',
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof Textarea>;
 
@@ -248,6 +253,7 @@ export const Placeholder: Story = {
     placeholder: 'Placeholder',
   },
 };
+
 export const RightToLeft: Story = {
   args: {
     name: 'subject',
