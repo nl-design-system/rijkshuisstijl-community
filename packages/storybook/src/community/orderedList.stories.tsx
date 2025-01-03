@@ -1,6 +1,7 @@
 import { OrderedList, OrderedListItem } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './orderedList.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/Ordered List',
@@ -16,7 +17,7 @@ const meta = {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
     componentOrigin:

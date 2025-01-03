@@ -4,6 +4,7 @@ import { LinkList } from '@rijkshuisstijl-community/components-react';
 import { LinkListLink } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './hero.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/Hero',
@@ -49,7 +50,7 @@ const meta = {
     },
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
     // TODO: add GitHub issue and NL DesignSystem links

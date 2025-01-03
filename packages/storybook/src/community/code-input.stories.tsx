@@ -1,6 +1,7 @@
 import { CodeInput } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react/*';
 import readme from './code-input.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/CodeInput',
@@ -12,7 +13,7 @@ const meta = {
     },
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
     // TODO: add NL Design System link when there is a page for CodeInput

@@ -3,6 +3,7 @@
 import { Article } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './article.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/Article',
@@ -30,7 +31,7 @@ const meta = {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
     // TODO: add Figma link

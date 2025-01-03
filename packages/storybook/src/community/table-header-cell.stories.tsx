@@ -7,6 +7,7 @@ import {
 } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './table-header-cell.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const TableHeaderCell = ({ children, withSorting, alignCell, scope, ...restProps }: TableHeaderCellProps) => {
   return (
@@ -52,7 +53,7 @@ const meta = {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
     figma:

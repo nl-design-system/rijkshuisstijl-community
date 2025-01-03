@@ -2,6 +2,7 @@ import { FileInput, UnorderedList, UnorderedListItem } from '@rijkshuisstijl-com
 import { Meta, StoryObj } from '@storybook/react/*';
 import { FormLabel } from '@utrecht/component-library-react';
 import readme from './file-input.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/FileInput',
@@ -19,7 +20,7 @@ const meta = {
     },
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
     // TODO: add Figma, GitHub and NL DesignSystem links

@@ -3,6 +3,7 @@
 import { Alert } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './alert.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/Alert',
@@ -58,7 +59,7 @@ const meta = {
     docs: {
       description: {
         // TODO: disconnect "Usage" from the current readme, import the readme from Utrecht afterwards and combine with our own Usage
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
     figma:

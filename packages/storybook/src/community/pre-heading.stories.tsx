@@ -3,6 +3,7 @@
 import { Heading, PreHeading } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './pre-heading.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/PreHeading',
@@ -16,7 +17,7 @@ const meta = {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
     // TODO: add Figma, GitHub and NL DesignSystem links

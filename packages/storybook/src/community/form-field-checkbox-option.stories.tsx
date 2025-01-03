@@ -1,6 +1,7 @@
 import { FormFieldCheckboxOption } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './form-field-checkbox-option.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/Form Field/Form Field Checkbox Option',
@@ -81,7 +82,7 @@ const meta = {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
     // TODO: add GitHub issue and NL DesignSystem links

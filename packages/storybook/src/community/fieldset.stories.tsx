@@ -10,6 +10,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
 import readme from './fieldset.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface FieldsetStoryProps extends FieldsetProps {
   element?: string | 'div' | 'fieldset';
@@ -73,7 +74,7 @@ const meta = {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
     // TODO: add Figma, GitHub and NL DesignSystem links

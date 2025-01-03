@@ -2,6 +2,7 @@ import { LinkListCard, LinkListLink } from '@rijkshuisstijl-community/components
 import { Meta, StoryObj } from '@storybook/react';
 import { ComponentProps } from 'react';
 import readme from './link-list-card.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 type StoryProps = ComponentProps<typeof LinkListCard>;
 const meta: Meta<StoryProps> = {
@@ -33,7 +34,7 @@ const meta: Meta<StoryProps> = {
     },
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
     // TODO: add NL Design System link when there is a page for LinkListCard

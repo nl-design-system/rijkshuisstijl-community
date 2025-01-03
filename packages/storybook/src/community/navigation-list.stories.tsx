@@ -2,6 +2,7 @@ import { NavigationList, NavigationListItem } from '@rijkshuisstijl-community/co
 import { NavigationListProps } from '@rijkshuisstijl-community/components-react/dist/NavigationList';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './navigation-list.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/NavigationList',
@@ -12,7 +13,7 @@ const meta = {
     },
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
     // TODO: add NL Design System link when there is a page for NavigationList

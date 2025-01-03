@@ -1,6 +1,7 @@
 import { TextInput } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './text-input.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta: Meta<typeof TextInput> = {
   title: 'Rijkshuisstijl/Text Input',
@@ -263,7 +264,7 @@ const meta: Meta<typeof TextInput> = {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source (including with usage and wcag documentation)
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
     // TODO: add Github issue link
