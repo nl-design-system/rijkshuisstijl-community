@@ -43,7 +43,7 @@ const meta = {
       },
     },
     // TODO: add Figma, GitHub and NL DesignSystem links
-    componentOrign: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof SideNavLink>;
 export default meta;

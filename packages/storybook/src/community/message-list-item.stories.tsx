@@ -55,7 +55,7 @@ const meta = {
     figma:
       'https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/Local---Rijkshuisstijl---Bibliotheek?node-id=4070-5888&node-type=frame&t=xhXU5ugIkPqvOZwt-0',
     github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/556',
-    componentOrign: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
   render: (args) => {
     return (

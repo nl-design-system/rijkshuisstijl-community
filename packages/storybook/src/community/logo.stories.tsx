@@ -84,7 +84,7 @@ const meta = {
       type: 'STABLE',
     },
     // TODO: add Figma, GitHub and NL DesignSystem links
-    componentOrign: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
   render: LogoStory,
 } satisfies Meta<typeof LogoStory>;

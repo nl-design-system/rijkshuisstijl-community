@@ -23,7 +23,7 @@ const meta = {
     figma:
       'https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/Local---Rijkshuisstijl---Bibliotheek?node-id=4074-1580&node-type=canvas&t=HuDzyBW9wHdB2QVh-0',
     github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/557',
-    componentOrign: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
   argTypes: {
     description: {
