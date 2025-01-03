@@ -51,11 +51,11 @@ const getRichTextStyles = (components) => `
  * Copyright (c) 2024-2025 Frameless B.V.
  */
 
-@import "./mixin";
+@use "./mixin";
 
 .rhc-margin-block-end-wrapper {
-  --utrecht-space-around: 1;
-  ${components.map((mixinGroup) => `@include ${mixinGroup[0].component}`).join(';\n')}
+--utrecht-space-around: 1;
+${components.map((mixinGroup) => `@include mixin.${mixinGroup[0].component}`).join(';\n')}
 }`;
 
 const spacings = getSpacings(spacingMatrix);

@@ -9,6 +9,9 @@
   --utrecht-blockquote-color: var(--utrecht-blockquote-content-color);
   --utrecht-blockquote-font-size: var(--utrecht-blockquote-content-font-size);
   --utrecht-document-font-family: var(--utrecht-blockquote-content-font-family);
+  --utrecht-blockquote-caption-font-size: var(--utrecht-blockquote-content-font-size);
+
+  line-height: var(--utrecht-blockquote-attribution-line-height, inherit);
 
   @include mixin.rhc-blockquote;
 }
