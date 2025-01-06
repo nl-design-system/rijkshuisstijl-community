@@ -115,12 +115,7 @@ const meta = {
     dir: {
       description: 'Text direction',
       control: { type: 'select' },
-      options: {
-        '': undefined,
-        auto: 'auto',
-        ltr: 'ltr',
-        rtl: 'rtl',
-      },
+      options: [undefined, 'auto', 'ltr', 'rtl'],
       table: {
         category: 'DOM',
         defaultValue: { summary: '' },
@@ -163,6 +158,7 @@ const meta = {
     } = args;
     return (
       <Textarea
+        aria-label="textarea-label"
         cols={cols || undefined}
         defaultValue={defaultValue || undefined}
         dir={dir || undefined}

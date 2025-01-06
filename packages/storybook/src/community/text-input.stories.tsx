@@ -77,7 +77,6 @@ const meta: Meta<typeof TextInput> = {
       description: 'Autocomplete',
       control: 'select',
       options: [
-        '',
         'additional-name',
         'address-level1',
         'address-level2',
@@ -160,16 +159,7 @@ const meta: Meta<typeof TextInput> = {
     type: {
       description: 'Type',
       control: 'select',
-      options: {
-        '': null,
-        email: 'email',
-        number: 'number',
-        password: 'password',
-        search: 'search',
-        tel: 'tel',
-        text: 'text',
-        url: 'url',
-      },
+      options: [null, 'email', 'number', 'password', 'search', 'tel', 'text', 'url'],
       table: {
         category: 'API',
         defaultValue: { summary: '' },
@@ -178,12 +168,7 @@ const meta: Meta<typeof TextInput> = {
     dir: {
       description: 'Text direction',
       control: { type: 'select' },
-      options: {
-        '': undefined,
-        auto: 'auto',
-        ltr: 'ltr',
-        rtl: 'rtl',
-      },
+      options: [undefined, 'auto', 'ltr', 'rtl'],
       table: {
         category: 'DOM',
         defaultValue: { summary: '' },
@@ -298,6 +283,7 @@ const meta: Meta<typeof TextInput> = {
     } = args;
     return (
       <TextInput
+        aria-label="text-input-label"
         autoComplete={autoComplete || undefined}
         defaultValue={defaultValue || undefined}
         dir={dir || undefined}
@@ -385,7 +371,7 @@ export const AutoComplete: Story = {
   render: (args) => (
     <form>
       <input hidden autoComplete="username" type="text" />
-      <TextInput autoComplete={args.autoComplete} name={args.name} type={args.type} />
+      <TextInput aria-label="text-input-label" autoComplete={args.autoComplete} name={args.name} type={args.type} />
     </form>
   ),
 };

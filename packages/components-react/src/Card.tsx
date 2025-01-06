@@ -25,6 +25,7 @@ export interface FullBleedCardProps extends CardPropsBase {
   imageSrc: string;
   description?: ReactNode;
   metadata?: ReactNode;
+  imageAlt?: string;
 }
 
 export interface HorizontalImageCardProps extends CardPropsBase {
@@ -113,6 +114,7 @@ export const FullBleedCard = forwardRef(
       description,
       metadata,
       className,
+      imageAlt,
       ...restProps
     }: PropsWithChildren<FullBleedCardProps>,
     ref: ForwardedRef<HTMLAnchorElement>,
@@ -124,7 +126,7 @@ export const FullBleedCard = forwardRef(
       title={title}
       {...restProps}
     >
-      {<Image className="rhc-card__image" src={imageSrc} />}
+      {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
       <div className="rhc-card__content">
         <div className="rhc-card__heading">{heading}</div>
         <div className="rhc-card__description">{description}</div>

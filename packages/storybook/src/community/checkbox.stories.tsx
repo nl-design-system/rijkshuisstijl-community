@@ -41,15 +41,25 @@ const meta = {
       name: 'value',
       type: { name: 'string', required: false },
     },
+    'aria-label': {
+      name: 'aria-label',
+      type: { name: 'string', required: true },
+    },
   },
-  args: {},
+  args: {
+    'aria-label': 'checkbox-label',
+  },
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    'aria-label': 'checkbox-label',
+  },
+};
 
 export const Active: Story = {
   parameters: {
@@ -76,6 +86,7 @@ export const FocusVisible: Story = {
 export const Disabled: Story = {
   args: {
     disabled: true,
+    'aria-label': 'checkbox-label',
   },
 };
 
