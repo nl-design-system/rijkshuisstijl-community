@@ -23,7 +23,7 @@
     "build-storybook": "pnpm build",
     "chromatic": "chromatic",
     "clean": "rimraf dist/",
-    "storybook": "storybook dev --config-dir config/ --port 6007",
+    "storybook": "storybook dev --config-dir config/ --port 6006",
     "prod-static": "http-server --port 6006 dist/",
     "test-storybook": "test-storybook --maxWorkers=2 --config-dir config/",
     "playwright:install": "playwright install --with-deps chromium --only-shell"
