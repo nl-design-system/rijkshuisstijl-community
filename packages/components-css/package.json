@@ -19,6 +19,7 @@
     "directory": "packages/components-css"
   },
   "devDependencies": {
+    "@utrecht/components": "7.4.0",
     "scss": "0.2.4",
     "vite": "6.0.1"
   },
@@ -27,8 +28,5 @@
     "generate": "node src/wrapper/createSpacingCSS.js && prettier --write ./src/wrapper",
     "build": "pnpm run generate && pnpm run build:css",
     "build:css": "vite build"
-  },
-  "dependencies": {
-    "@utrecht/component-library-css": "7.0.0"
   }
 }
