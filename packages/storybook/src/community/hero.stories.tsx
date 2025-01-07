@@ -1,6 +1,5 @@
 import { Hero } from '@rijkshuisstijl-community/components-react';
 import { LinkListCard } from '@rijkshuisstijl-community/components-react';
-import { LinkList } from '@rijkshuisstijl-community/components-react';
 import { LinkListLink } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './hero.md?raw';
@@ -80,11 +79,9 @@ export const CustomChildren: Story = {
     imageAlt: 'Tullip field',
     children: (
       <LinkListCard heading="Hello World" headingLevel={2}>
-        <LinkList>
-          <LinkListLink href="#">Link 1</LinkListLink>
-          <LinkListLink href="#">Link 2</LinkListLink>
-          <LinkListLink href="#">Link 3</LinkListLink>
-        </LinkList>
+        <LinkListLink href="#">Link 1</LinkListLink>
+        <LinkListLink href="#">Link 2</LinkListLink>
+        <LinkListLink href="#">Link 3</LinkListLink>
       </LinkListCard>
     ),
   },

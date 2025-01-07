@@ -122,7 +122,7 @@ export { TableCell, type TableCellProps } from './TableCell';
 export { TableHeaderCell, type TableHeaderCellProps } from './TableHeaderCell';
 export { TextInput, type TextInputProps } from './TextInput';
 export { Textarea, type TextareaProps } from './Textarea';
-export { Toggletip, ToggletipButton, ToggletipContent, type ToggletipProps } from './Toggletip';
+export { Toggletip, type ToggletipProps } from './Toggletip';
 export { UnorderedList, type UnorderedListProps } from './UnorderedList';
 export { UnorderedListItem, type UnorderedListItemProps } from './UnorderedListItem';
 export { VisuallyHidden } from './VisuallyHidden';

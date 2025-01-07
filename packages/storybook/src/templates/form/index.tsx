@@ -35,6 +35,7 @@ export default function Form() {
         </PageHeader>
       </div>
       <NavBar
+        aria-label="navbar-label"
         items={[
           { id: '1', href: '/', label: 'Rich Text' },
           { id: '2', href: '/form', label: 'Form' },

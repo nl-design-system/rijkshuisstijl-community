@@ -42,9 +42,11 @@ export const Alert = ({
         />
       </div>
       <div>
-        <Heading appearance="utrecht-heading-5" level={headingLevel || 3}>
-          {heading}
-        </Heading>
+        {heading && (
+          <Heading appearance="utrecht-heading-5" level={headingLevel || 3}>
+            {heading}
+          </Heading>
+        )}
         <Paragraph>{textContent}</Paragraph>
         {children}
       </div>
