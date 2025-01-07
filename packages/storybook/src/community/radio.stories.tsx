@@ -16,6 +16,7 @@ interface RadioStoryProps extends RadioProps {
 
 const RadioStory = ({ active, focus, focusVisible, name, ...args }: RadioStoryProps) => (
   <Radio
+    aria-label="radio-label"
     name={name || undefined}
     className={clsx({
       'utrecht-radio-button--active': active,
