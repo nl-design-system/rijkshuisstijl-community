@@ -22,6 +22,11 @@
     "./packages/*",
     "./proprietary/*"
   ],
+  "dependencies": {
+    "@storybook/test-runner": "0.21.0",
+    "http-server": "14.1.1",
+    "rimraf": "6.0.1"
+  },
   "devDependencies": {
     "@lerna-lite/cli": "3.10.1",
     "@lerna-lite/publish": "3.10.1",
@@ -50,6 +55,9 @@
     "stylelint-order": "6.0.4",
     "typescript": "5.7.2",
     "wait-on": "8.0.1"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
   },
   "scripts": {
     "prebuild": "pnpm run clean",
@@ -83,11 +91,6 @@
     "watch:storybook": "npm run --workspace packages/storybook storybook",
     "watch:style-dictionary": "lerna run watch:style-dictionary",
     "test-storybook:ci": "npm run --workspace packages/storybook playwright:install && concurrently -k -s first -n \"STORYBOOK,A11Y-TEST\" -c \"magenta,green\" \"npm run --workspace packages/storybook prod-static -- --silent\" \"wait-on tcp:6006 && npm run --workspace packages/storybook test-storybook\""
-  },
-  "dependencies": {
-    "@storybook/test-runner": "0.21.0",
-    "http-server": "14.1.1",
-    "rimraf": "6.0.1"
   },
   "packageManager": "pnpm@9.4.0+sha256.b6fd0bfda555e7e584ad7e56b30c68b01d5a04f9ee93989f4b93ca8473c49c74"
 }
