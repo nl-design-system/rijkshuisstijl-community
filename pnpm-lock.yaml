@@ -23,7 +23,7 @@ importers:
     devDependencies:
       '@lerna-lite/cli':
         specifier: 3.10.1
-        version: 3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
+        version: 3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/publish':
         specifier: 3.10.1
         version: 3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2)
@@ -73,8 +73,8 @@ importers:
         specifier: 0.43.0
         version: 0.43.0
       npm-check-updates:
-        specifier: 17.1.11
-        version: 17.1.11
+        specifier: 17.1.13
+        version: 17.1.13
       npm-package-json-lint:
         specifier: 8.0.0
         version: 8.0.0(typescript@5.7.2)
@@ -6730,8 +6730,8 @@ packages:
     resolution: {integrity: sha512-+AvaheE/ww1JEwRHOrn4WHNzOxGtVp+adrg2AeZS/7KuxGUYFuBta98wYpfHBbJp6Tg6j1NKSEVHNcfZzJHQwQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
-  npm-check-updates@17.1.11:
-    resolution: {integrity: sha512-TR2RuGIH7P3Qrb0jfdC/nT7JWqXPKjDlxuNQt3kx4oNVf1Pn5SBRB7KLypgYZhruivJthgTtfkkyK4mz342VjA==}
+  npm-check-updates@17.1.13:
+    resolution: {integrity: sha512-m9Woo2J5XVab0VcQpYvrQ0hx3ySI1mGbiHR595mc6Lr1/FIaTWvv+oU+T1WKSfXRiluKC/V5P6Bdk5agaYpqqg==}
     engines: {node: ^18.18.0 || >=20.0.0, npm: '>=8.12.1'}
     hasBin: true
 
@@ -10528,7 +10528,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@lerna-lite/cli@3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)':
+  '@lerna-lite/cli@3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)':
     dependencies:
       '@lerna-lite/core': 3.10.1(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/init': 3.10.1(@types/node@20.17.6)(typescript@5.7.2)
@@ -10541,7 +10541,7 @@ snapshots:
     optionalDependencies:
       '@lerna-lite/publish': 3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/run': 3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2)
-      '@lerna-lite/version': 3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2)
+      '@lerna-lite/version': 3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -10626,10 +10626,10 @@ snapshots:
 
   '@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2)':
     dependencies:
-      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
+      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/core': 3.10.1(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/npmlog': 3.10.1
-      '@lerna-lite/version': 3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2)
+      '@lerna-lite/version': 3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
       '@npmcli/arborist': 7.5.4
       '@npmcli/package-json': 5.2.1
       byte-size: 9.0.0
@@ -10664,7 +10664,7 @@ snapshots:
 
   '@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2)':
     dependencies:
-      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
+      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/core': 3.10.1(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/npmlog': 3.10.1
       '@lerna-lite/profiler': 3.10.1(@types/node@20.17.6)(typescript@5.7.2)
@@ -10683,9 +10683,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2)':
+  '@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)':
     dependencies:
-      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
+      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/core': 3.10.1(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/npmlog': 3.10.1
       '@octokit/plugin-enterprise-rest': 6.0.1
@@ -13955,7 +13955,7 @@ snapshots:
       '@typescript-eslint/parser': 8.18.0(eslint@9.15.0)(typescript@5.7.2)
       eslint: 9.15.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint@9.15.0))(eslint@9.15.0)
+      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0)(eslint@9.15.0)
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-typescript@3.6.3)(eslint@9.15.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.15.0)
       eslint-plugin-react: 7.37.2(eslint@9.15.0)
@@ -13979,13 +13979,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint@9.15.0))(eslint@9.15.0):
+  eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0)(eslint@9.15.0):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.3.7
       enhanced-resolve: 5.17.1
       eslint: 9.15.0
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint@9.15.0))(eslint@9.15.0))(eslint@9.15.0)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0)(eslint@9.15.0))(eslint@9.15.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.8.1
       is-bun-module: 1.2.1
@@ -14029,14 +14029,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint@9.15.0))(eslint@9.15.0))(eslint@9.15.0):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0)(eslint@9.15.0))(eslint@9.15.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.18.0(eslint@9.15.0)(typescript@5.7.2)
       eslint: 9.15.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint@9.15.0))(eslint@9.15.0)
+      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0)(eslint@9.15.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -14080,7 +14080,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.15.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint@9.15.0))(eslint@9.15.0))(eslint@9.15.0)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.18.0(eslint@9.15.0)(typescript@5.7.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0)(eslint@9.15.0))(eslint@9.15.0)
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
@@ -16954,7 +16954,7 @@ snapshots:
     dependencies:
       npm-normalize-package-bin: 3.0.1
 
-  npm-check-updates@17.1.11: {}
+  npm-check-updates@17.1.13: {}
 
   npm-install-checks@6.3.0:
     dependencies:
