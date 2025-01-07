@@ -3,10 +3,8 @@ import {
   Card,
   Footer,
   Heading,
-  Hero,
   Icon,
   LinkList,
-  LinkListCard,
   LinkListLink,
   Logo,
   NavBar,
@@ -37,20 +35,6 @@ export default function Details() {
         ]}
       ></NavBar>
       <div className="rhc-templates-page">
-        <Hero
-          className="rhc-hero-details-template"
-          imageAlt="Tullip field"
-          imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg"
-        >
-          <LinkListCard heading="Veel bekeken" headingLevel={2}>
-            <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-              Wat zijn de wettelijke regels voor mijn werktijden en rusttijden?
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-              Wat zijn de wettelijke regels voor pauzes tijdens mijn werk?
-            </LinkListLink>
-          </LinkListCard>
-        </Hero>
         <SubNavBar
           className="rhc-subnavbar-details-template"
           columns={[
