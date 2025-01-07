@@ -1,6 +1,6 @@
 import * as Icons from '@tabler/icons-react';
 import { Icon as UtrechtIcon, type IconProps as UtrechtIconProps } from '@utrecht/component-library-react';
-import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
+import { PropsWithChildren, ReactNode, Ref } from 'react';
 import { DutchMapIcon } from './DutchMapIcon';
 import { RijkshuisstijlIconID } from './IconTypes';
 
@@ -92,17 +92,16 @@ export const iconOptions = Object.keys(IconenSet);
 
 export interface IconProps extends UtrechtIconProps {
   icon?: RijkshuisstijlIconID;
+  ref?: Ref<HTMLSpanElement>;
 }
 
-export const Icon = forwardRef(
-  ({ children, icon, className, ...restProps }: PropsWithChildren<IconProps>, ref: ForwardedRef<HTMLSpanElement>) => {
-    return (
-      <UtrechtIcon className={className} ref={ref} {...restProps}>
-        {icon && IconenSet[icon]}
-        {children}
-      </UtrechtIcon>
-    );
-  },
-);
+export const Icon = ({ ref, children, icon, className, ...restProps }: PropsWithChildren<IconProps>) => {
+  return (
+    <UtrechtIcon className={className} ref={ref} {...restProps}>
+      {icon && IconenSet[icon]}
+      {children}
+    </UtrechtIcon>
+  );
+};
 
 Icon.displayName = 'Icon';

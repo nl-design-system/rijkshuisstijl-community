@@ -705,7 +705,7 @@ describe('Form field with a textarea', () => {
     });
   });
 
-  it('supports ForwardRef in React', () => {
+  it('supports ref in React', () => {
     const ref = createRef<HTMLDivElement>();
 
     const { container } = render(<FormFieldTextarea {...defaultProps} ref={ref} />);
@@ -715,7 +715,7 @@ describe('Form field with a textarea', () => {
     expect(ref.current).toBe(div);
   });
 
-  it('supports ForwardRef for the form control in React', () => {
+  it('supports ref for the form control in React', () => {
     const inputRef = createRef<HTMLTextAreaElement>();
 
     const { container } = render(<FormFieldTextarea {...defaultProps} inputRef={inputRef} />);

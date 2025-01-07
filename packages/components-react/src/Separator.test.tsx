@@ -71,7 +71,7 @@ describe('Separator', () => {
 
     expect(separator).toHaveClass('utrecht-separator');
   });
-  it('supports ForwardRef in React', () => {
+  it('supports ref in React', () => {
     const ref = createRef<HTMLHRElement>();
 
     const { container } = render(<Separator ref={ref} />);

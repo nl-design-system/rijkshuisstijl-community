@@ -3,26 +3,25 @@ import {
   UnorderedListProps as UtrechtUnorederedListProps,
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
+import { PropsWithChildren, Ref } from 'react';
 
 export interface UnorderedListProps extends UtrechtUnorederedListProps {
   nested?: boolean;
+  ref?: Ref<HTMLUListElement>;
 }
 
-export const UnorderedList = forwardRef(
-  ({ children, nested, ...restProps }: PropsWithChildren<UnorderedListProps>, ref: ForwardedRef<HTMLUListElement>) => {
-    return (
-      <UtrechtUnorderedList
-        ref={ref}
-        {...restProps}
-        className={clsx({
-          'utrecht-unordered-list--nested': nested,
-        })}
-      >
-        {children}
-      </UtrechtUnorderedList>
-    );
-  },
-);
+export const UnorderedList = ({ ref, children, nested, ...restProps }: PropsWithChildren<UnorderedListProps>) => {
+  return (
+    <UtrechtUnorderedList
+      ref={ref}
+      {...restProps}
+      className={clsx({
+        'utrecht-unordered-list--nested': nested,
+      })}
+    >
+      {children}
+    </UtrechtUnorderedList>
+  );
+};
 
 UnorderedList.displayName = 'UnorderedList';

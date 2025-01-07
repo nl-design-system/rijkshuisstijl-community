@@ -3,13 +3,14 @@ import {
   SeparatorProps as UtrechtSeparatorProps,
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { forwardRef } from 'react';
+import { Ref } from 'react';
 
 export interface SeparatorProps extends UtrechtSeparatorProps {
   invisible?: boolean;
+  ref?: Ref<HTMLHRElement>;
 }
 
-export const Separator = forwardRef<HTMLHRElement, SeparatorProps>(({ invisible, className, ...restProps }, ref) => {
+export const Separator = ({ ref, invisible, className, ...restProps }: SeparatorProps) => {
   return (
     <UtrechtSeparator
       ref={ref}
@@ -22,6 +23,6 @@ export const Separator = forwardRef<HTMLHRElement, SeparatorProps>(({ invisible,
       {...restProps}
     />
   );
-});
+};
 
 Separator.displayName = 'Separator';
