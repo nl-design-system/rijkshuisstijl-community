@@ -114,7 +114,7 @@ describe('Blockquote', () => {
     });
   });
 
-  it('supports ForwardRef in React', () => {
+  it('supports ref in React', () => {
     const ref = createRef<HTMLQuoteElement>();
 
     const { container } = render(<Blockquote ref={ref} />);
