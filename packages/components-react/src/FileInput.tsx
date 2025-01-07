@@ -1,10 +1,10 @@
 import { Paragraph } from '@utrecht/component-library-react';
-import { ChangeEvent, PropsWithChildren, RefObject, useState } from 'react';
+import { ChangeEvent, PropsWithChildren, Ref, RefObject, useState } from 'react';
 import { Button, ButtonProps } from './Button';
 import { File } from './File';
 
 export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
-  ref: RefObject<HTMLInputElement>;
+  ref: Ref<HTMLInputElement>;
   buttonText: string;
   buttonAppearance?: ButtonProps['appearance'];
   maxFileSizeInBytes: number;
@@ -26,7 +26,7 @@ export const FileInput = ({
   onValueChange,
 }: PropsWithChildren<FileInputProps>) => {
   const [files, setFiles] = useState<File[]>([]);
-  const inputElement = ref;
+  const inputElement = ref as RefObject<HTMLInputElement>;
   const onChange = (newFiles: FileList | null) => {
     if (newFiles) {
       const updatedFiles = [...files, ...Array.from(newFiles)];
@@ -53,7 +53,7 @@ export const FileInput = ({
       <div className="rhc-file-input__button-feedback-container">
         <Button
           appearance={buttonAppearance ?? 'secondary-action-button'}
-          onClick={() => inputElement.current && inputElement.current.click()}
+          onClick={() => inputElement?.current.click()}
         >
           {buttonText}
         </Button>
