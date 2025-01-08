@@ -90,7 +90,7 @@ export default function MijnOmgeving() {
                 </SideNavLink>
               </SideNavItem>
               <SideNavItem>
-                <SideNavLink href="/#" icon="backpack">
+                <SideNavLink href="/#" icon="school">
                   Onderwijs
                 </SideNavLink>
               </SideNavItem>
