@@ -1,16 +1,16 @@
 import clsx from 'clsx';
-import { forwardRef, HTMLAttributes } from 'react';
+import { HTMLAttributes, Ref } from 'react';
 
-export interface SideNavListProps extends HTMLAttributes<HTMLUListElement> {}
+export interface SideNavListProps extends HTMLAttributes<HTMLUListElement> {
+  ref?: Ref<HTMLUListElement>;
+}
 
-export const SideNavList = forwardRef<HTMLUListElement, SideNavListProps>(
-  ({ className, children, ...restProps }, ref) => {
-    return (
-      <ul className={clsx('rhc-side-nav__list', className)} ref={ref} role="list" {...restProps}>
-        {children}
-      </ul>
-    );
-  },
-);
+export const SideNavList = ({ ref, className, children, ...restProps }: SideNavListProps) => {
+  return (
+    <ul className={clsx('rhc-side-nav__list', className)} ref={ref} role="list" {...restProps}>
+      {children}
+    </ul>
+  );
+};
 
 SideNavList.displayName = 'SideNavList';

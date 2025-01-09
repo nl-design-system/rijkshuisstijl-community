@@ -790,7 +790,7 @@ describe('Form field with a textinput', () => {
     });
   });
 
-  it('supports ForwardRef in React', () => {
+  it('supports ref in React', () => {
     const ref = createRef<HTMLDivElement>();
 
     const { container } = render(<FormFieldTextInput {...defaultProps} ref={ref} />);
@@ -800,7 +800,7 @@ describe('Form field with a textinput', () => {
     expect(ref.current).toBe(div);
   });
 
-  it('supports ForwardRef for the form control in React', () => {
+  it('supports ref for the form control in React', () => {
     const inputRef = createRef<HTMLInputElement>();
 
     const { container } = render(<FormFieldTextInput {...defaultProps} inputRef={inputRef} />);
