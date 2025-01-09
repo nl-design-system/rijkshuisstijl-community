@@ -38,6 +38,7 @@ import {
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react/dist/esm/tabler-icons-react';
+import { PageBody } from '@utrecht/page-body-react';
 
 export default function Collage() {
   return (
@@ -56,7 +57,7 @@ export default function Collage() {
           ]}
         ></NavBar>
       </PageHeader>
-      <main className="rhc-templates-page">
+      <PageBody className="rhc-templates-page">
         <div className="rhc-templates-background-color-white">
           <div className="rhc-templates-main-content">
             <div className="utrecht-page-content rhc-templates-page-content">
@@ -272,7 +273,7 @@ export default function Collage() {
             </div>
           </div>
         </div>
-      </main>
+      </PageBody>
     </>
   );
 }

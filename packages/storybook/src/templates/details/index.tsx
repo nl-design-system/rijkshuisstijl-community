@@ -16,6 +16,7 @@ import {
   SubNavBar,
 } from '@rijkshuisstijl-community/components-react';
 import { ColumnLayout } from '@utrecht/component-library-react';
+import { PageBody } from '@utrecht/page-body-react';
 
 export default function Details() {
   return (
@@ -34,7 +35,7 @@ export default function Details() {
           ]}
         ></NavBar>
       </PageHeader>
-      <div className="rhc-templates-page">
+      <PageBody className="rhc-templates-page">
         <Hero
           className="rhc-hero-details-template"
           imageAlt="Tullip field"
@@ -196,7 +197,7 @@ export default function Details() {
             },
           ]}
         ></Footer>
-      </div>
+      </PageBody>
     </>
   );
 }

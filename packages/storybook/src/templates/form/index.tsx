@@ -23,6 +23,7 @@ import {
   PageHeader,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
+import { PageBody } from '@utrecht/page-body-react';
 
 export default function Form() {
   return (
@@ -42,7 +43,7 @@ export default function Form() {
           ]}
         ></NavBar>
       </PageHeader>
-      <main className="rhc-templates-page">
+      <PageBody className="rhc-templates-page">
         <div className="rhc-templates-background-color-white rhc-templates-main-content">
           <PageContent className="rhc-templates-page-content rhc-templates-background-color-white">
             <Article>
@@ -226,7 +227,7 @@ export default function Form() {
             },
           ]}
         ></Footer>
-      </main>
+      </PageBody>
     </>
   );
 }

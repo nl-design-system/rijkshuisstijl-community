@@ -21,6 +21,7 @@ import {
   SideNavLink,
   SideNavList,
 } from '@rijkshuisstijl-community/components-react';
+import { PageBody } from '@utrecht/page-body-react';
 
 export default function MijnOmgeving() {
   return (
@@ -39,7 +40,7 @@ export default function MijnOmgeving() {
           ]}
         ></NavBar>
       </PageHeader>
-      <main className="rhc-templates-page  rhc-templates-background-color-white">
+      <PageBody className="rhc-templates-page  rhc-templates-background-color-white">
         <PageContent className="rhc-templates-page-container">
           <SideNav className={'rhc-side-nav'}>
             <SideNavList>
@@ -265,7 +266,7 @@ export default function MijnOmgeving() {
             },
           ]}
         ></Footer>
-      </main>
+      </PageBody>
     </>
   );
 }

@@ -11,7 +11,6 @@ import { defineCustomElements } from '@rijkshuisstijl-community/web-components-s
 import { withThemeByClassName } from '@storybook/addon-themes';
 import { Controls, Description, Primary, Stories, useOf } from '@storybook/blocks';
 import { Preview } from '@storybook/react';
-import { PageBody } from '@utrecht/page-body-react';
 import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
 import { defineCustomElements as defineUtrechtCustomElements } from '@utrecht/web-component-library-stencil/loader/index';
@@ -36,9 +35,7 @@ const preview: Preview = {
     (Story, options) => {
       return options.parameters['isPage'] ? (
         <Root Component="div">
-          <PageBody>
-            <PageLayout>{Story()}</PageLayout>
-          </PageBody>
+          <PageLayout>{Story()}</PageLayout>
         </Root>
       ) : (
         Story()

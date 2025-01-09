@@ -32,6 +32,7 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
+import { PageBody } from '@utrecht/page-body-react';
 
 export default function Page() {
   return (
@@ -50,7 +51,7 @@ export default function Page() {
           ]}
         ></NavBar>
       </PageHeader>
-      <main className="rhc-templates-page">
+      <PageBody className="rhc-templates-page">
         <div className="rhc-templates-main-content">
           <PageContent className="rhc-templates-page-content rhc-templates-background-color-white">
             <Article>
@@ -292,7 +293,7 @@ export default function Page() {
             },
           ]}
         />
-      </main>
+      </PageBody>
     </>
   );
 }
