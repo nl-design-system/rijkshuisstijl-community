@@ -227,7 +227,7 @@ export default function Form() {
             ),
           },
         ]}
-      ></Footer>
+      />
     </>
   );
 }
