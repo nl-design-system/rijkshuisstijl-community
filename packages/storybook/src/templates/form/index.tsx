@@ -23,28 +23,27 @@ import {
   PageHeader,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
+import { PageBody } from '@utrecht/page-body-react';
 
 export default function Form() {
   return (
     <>
-      <div className="rhc-templates-background-color-white">
-        <PageHeader>
-          <Logo organisation="Rijkshuisstijl Community">
-            <Icon className={'dutch-map'} icon={'nederland-map'} />
-          </Logo>
-        </PageHeader>
-      </div>
-      <NavBar
-        aria-label="navbar-label"
-        items={[
-          { id: '1', href: '/', label: 'Rich Text' },
-          { id: '2', href: '/form', label: 'Form' },
-          { id: '3', href: '/details', label: 'Details' },
-          { id: '4', href: '/collage', label: 'Collage' },
-          { id: '5', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
-        ]}
-      ></NavBar>
-      <main className="rhc-templates-page">
+      <PageHeader>
+        <Logo organisation="Rijkshuisstijl Community">
+          <Icon className={'dutch-map'} icon={'nederland-map'} />
+        </Logo>
+        <NavBar
+          aria-label="navbar-label"
+          items={[
+            { id: '1', href: '/', label: 'Rich Text' },
+            { id: '2', href: '/form', label: 'Form' },
+            { id: '3', href: '/details', label: 'Details' },
+            { id: '4', href: '/collage', label: 'Collage' },
+            { id: '5', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
+          ]}
+        ></NavBar>
+      </PageHeader>
+      <PageBody className="rhc-templates-page">
         <div className="rhc-templates-background-color-white rhc-templates-main-content">
           <PageContent className="rhc-templates-page-content rhc-templates-background-color-white">
             <Article>
@@ -163,72 +162,72 @@ export default function Form() {
             </Article>
           </PageContent>
         </div>
-        <Footer
-          appearanceLevel={4}
-          heading="De Rijksoverheid. Voor Nederland"
-          columns={[
-            {
-              heading: 'Service',
-              children: [
-                <LinkList key="1">
-                  <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                    Contact
-                  </LinkListLink>
-                  <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                    Abonneren
-                  </LinkListLink>
-                  <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                    RSS
-                  </LinkListLink>
-                  <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                    Vacatures
-                  </LinkListLink>
-                  <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                    Sitemap
-                  </LinkListLink>
-                  <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                    Help
-                  </LinkListLink>
-                  <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                    Archief
-                  </LinkListLink>
-                </LinkList>,
-              ],
-            },
-            {
-              heading: 'Over deze site',
-              children: (
-                <LinkList key="2">
-                  <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                    Over Rijksoverheid.nl
-                  </LinkListLink>
-                  <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                    Wetten en regelingen
-                  </LinkListLink>
-                  <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                    Copyright
-                  </LinkListLink>
-                  <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                    Privacy
-                  </LinkListLink>
-                  <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                    Cookies
-                  </LinkListLink>
-                  <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                    Toegankelijkheid
-                  </LinkListLink>
-                  <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                    Open data
-                  </LinkListLink>
-                  <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                    Kwetsbaarheid melden
-                  </LinkListLink>
-                </LinkList>
-              ),
-            },
-          ]}
-        ></Footer>
-      </main>
+      </PageBody>
+      <Footer
+        appearanceLevel={4}
+        heading="De Rijksoverheid. Voor Nederland"
+        columns={[
+          {
+            heading: 'Service',
+            children: [
+              <LinkList key="1">
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+                  Contact
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+                  Abonneren
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+                  RSS
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+                  Vacatures
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+                  Sitemap
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+                  Help
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+                  Archief
+                </LinkListLink>
+              </LinkList>,
+            ],
+          },
+          {
+            heading: 'Over deze site',
+            children: (
+              <LinkList key="2">
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+                  Over Rijksoverheid.nl
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+                  Wetten en regelingen
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+                  Copyright
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+                  Privacy
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+                  Cookies
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+                  Toegankelijkheid
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+                  Open data
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+                  Kwetsbaarheid melden
+                </LinkListLink>
+              </LinkList>
+            ),
+          },
+        ]}
+      />
     </>
   );
 }

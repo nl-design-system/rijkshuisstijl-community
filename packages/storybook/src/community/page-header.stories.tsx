@@ -18,6 +18,9 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, voor dit component zijn (nog) geen specifieke design tokens gedefinieerd.',
   },
 } satisfies Meta<typeof PageHeader>;
 
