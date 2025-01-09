@@ -20,22 +20,20 @@ import { ColumnLayout } from '@utrecht/component-library-react';
 export default function Details() {
   return (
     <>
-      <div className="rhc-templates-background-color-white">
-        <PageHeader>
-          <Logo organisation="Rijkshuisstijl Community">
-            <Icon className={'dutch-map'} icon={'nederland-map'} />
-          </Logo>
-        </PageHeader>
-      </div>
-      <NavBar
-        items={[
-          { id: '1', href: '/', label: 'Rich Text' },
-          { id: '2', href: '/form', label: 'Form' },
-          { id: '3', href: '/details', label: 'Details' },
-          { id: '4', href: '/collage', label: 'Collage' },
-          { id: '5', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
-        ]}
-      ></NavBar>
+      <PageHeader>
+        <Logo organisation="Rijkshuisstijl Community">
+          <Icon className={'dutch-map'} icon={'nederland-map'} />
+        </Logo>
+        <NavBar
+          items={[
+            { id: '1', href: '/', label: 'Rich Text' },
+            { id: '2', href: '/form', label: 'Form' },
+            { id: '3', href: '/details', label: 'Details' },
+            { id: '4', href: '/collage', label: 'Collage' },
+            { id: '5', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
+          ]}
+        ></NavBar>
+      </PageHeader>
       <div className="rhc-templates-page">
         <Hero
           className="rhc-hero-details-template"

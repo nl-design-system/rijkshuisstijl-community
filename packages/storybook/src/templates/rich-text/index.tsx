@@ -36,22 +36,20 @@ import {
 export default function Page() {
   return (
     <>
-      <div className="rhc-templates-background-color-white">
-        <PageHeader>
-          <Logo organisation="Rijkshuisstijl Community">
-            <Icon className={'dutch-map'} icon={'nederland-map'} />
-          </Logo>
-        </PageHeader>
-      </div>
-      <NavBar
-        items={[
-          { id: '1', href: '/', label: 'Rich Text' },
-          { id: '2', href: '/form', label: 'Form' },
-          { id: '3', href: '/details', label: 'Details' },
-          { id: '4', href: '/collage', label: 'Collage' },
-          { id: '5', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
-        ]}
-      ></NavBar>
+      <PageHeader>
+        <Logo organisation="Rijkshuisstijl Community">
+          <Icon className={'dutch-map'} icon={'nederland-map'} />
+        </Logo>
+        <NavBar
+          items={[
+            { id: '1', href: '/', label: 'Rich Text' },
+            { id: '2', href: '/form', label: 'Form' },
+            { id: '3', href: '/details', label: 'Details' },
+            { id: '4', href: '/collage', label: 'Collage' },
+            { id: '5', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
+          ]}
+        ></NavBar>
+      </PageHeader>
       <main className="rhc-templates-page">
         <div className="rhc-templates-main-content">
           <PageContent className="rhc-templates-page-content rhc-templates-background-color-white">
