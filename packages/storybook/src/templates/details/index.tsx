@@ -80,7 +80,7 @@ export default function Details() {
             <div className="utrecht-page-content rhc-templates-page-content rhc-templates-page-palin">
               <Article>
                 <div className="rhc-margin-block-end-wrapper">
-                  <Paragraph lead>
+                  <Paragraph appearance="lead">
                     De Arbeidstijdenwet geeft regels voor werktijden, pauzes en rusttijden van werknemers. Met deze
                     regels wil de Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de combinatie
                     van werk, privé en zorgtaken gemakkelijker maken.
