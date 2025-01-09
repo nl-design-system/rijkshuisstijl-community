@@ -5,6 +5,14 @@ const meta = {
   title: 'Rijkshuisstijl/NavBar/SubNavBar',
   id: 'rhc-sub-nav-bar',
   component: SubNavBar,
+  parameters: {
+    // TODO: add documentation
+    status: {
+      type: 'STABLE',
+    },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+  },
 } satisfies Meta<typeof SubNavBar>;
 
 export default meta;

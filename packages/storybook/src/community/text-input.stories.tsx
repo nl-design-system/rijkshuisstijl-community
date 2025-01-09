@@ -1,6 +1,7 @@
 import { TextInput } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './text-input.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta: Meta<typeof TextInput> = {
   title: 'Rijkshuisstijl/Text Input',
@@ -76,7 +77,6 @@ const meta: Meta<typeof TextInput> = {
       description: 'Autocomplete',
       control: 'select',
       options: [
-        '',
         'additional-name',
         'address-level1',
         'address-level2',
@@ -159,16 +159,7 @@ const meta: Meta<typeof TextInput> = {
     type: {
       description: 'Type',
       control: 'select',
-      options: {
-        '': null,
-        email: 'email',
-        number: 'number',
-        password: 'password',
-        search: 'search',
-        tel: 'tel',
-        text: 'text',
-        url: 'url',
-      },
+      options: [null, 'email', 'number', 'password', 'search', 'tel', 'text', 'url'],
       table: {
         category: 'API',
         defaultValue: { summary: '' },
@@ -177,12 +168,7 @@ const meta: Meta<typeof TextInput> = {
     dir: {
       description: 'Text direction',
       control: { type: 'select' },
-      options: {
-        '': undefined,
-        auto: 'auto',
-        ltr: 'ltr',
-        rtl: 'rtl',
-      },
+      options: [undefined, 'auto', 'ltr', 'rtl'],
       table: {
         category: 'DOM',
         defaultValue: { summary: '' },
@@ -262,9 +248,16 @@ const meta: Meta<typeof TextInput> = {
     },
     docs: {
       description: {
-        component: readme,
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source (including with usage and wcag documentation)
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add Github issue link
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=859-981&node-type=CANVAS&t=VGu5hA1sXPDhCUwB-0',
+    nldesignsystem: 'https://www.nldesignsystem.nl/text-input/',
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht (daar heet het Textbox), met styling van de Rijkshuisstijl Community.',
   },
   render: (args) => {
     const {
@@ -290,6 +283,7 @@ const meta: Meta<typeof TextInput> = {
     } = args;
     return (
       <TextInput
+        aria-label="text-input-label"
         autoComplete={autoComplete || undefined}
         defaultValue={defaultValue || undefined}
         dir={dir || undefined}
@@ -377,7 +371,7 @@ export const AutoComplete: Story = {
   render: (args) => (
     <form>
       <input hidden autoComplete="username" type="text" />
-      <TextInput autoComplete={args.autoComplete} name={args.name} type={args.type} />
+      <TextInput aria-label="text-input-label" autoComplete={args.autoComplete} name={args.name} type={args.type} />
     </form>
   ),
 };

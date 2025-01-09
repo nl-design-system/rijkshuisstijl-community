@@ -2,6 +2,7 @@ import { FileInput, UnorderedList, UnorderedListItem } from '@rijkshuisstijl-com
 import { Meta, StoryObj } from '@storybook/react/*';
 import { FormLabel } from '@utrecht/component-library-react';
 import readme from './file-input.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/FileInput',
@@ -19,9 +20,14 @@ const meta = {
     },
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+  },
+  args: {
+    ref: undefined,
   },
 } satisfies Meta<typeof FileInput>;
 
@@ -59,5 +65,23 @@ export const MetCustomElementenLijst: Story = {
     allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif',
     fileSizeErrorMessage: 'Dit bestand is groter dan 10 MB.',
     fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
+  },
+};
+
+export const DefaultFiles: Story = {
+  args: {
+    buttonText: 'Bestanden kiezen',
+    maxFileSizeInBytes: 10_485_760,
+    allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif',
+    fileSizeErrorMessage: 'Dit bestand is groter dan 10 MB.',
+    fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
+    defaultFiles: [
+      new File(['Example content for PDF file'], 'example.pdf', {
+        type: 'application/pdf',
+      }),
+      new File(['Example content for a text file'], 'example.txt', {
+        type: 'text/plain',
+      }),
+    ],
   },
 };

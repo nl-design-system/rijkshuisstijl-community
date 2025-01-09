@@ -5,11 +5,6 @@ import {
   Blockquote,
   Button,
   CodeInput,
-  DataList,
-  DataListActions,
-  DataListItem,
-  DataListKey,
-  DataListValue,
   FormField,
   FormFieldCheckboxGroup,
   FormFieldCheckboxOption,
@@ -65,24 +60,10 @@ export default function Collage() {
       ></NavBar>
       <main className="rhc-templates-page">
         <div className="rhc-templates-background-color-white">
-          {/*
-      <div>
-        <BreadcrumbNav>
-          <BreadcrumbNavLink href="/" rel="home" index={0}>
-            Label
-          </BreadcrumbNavLink>
-        </BreadcrumbNav>
-      </div>
-      */}
           <div className="rhc-templates-main-content">
             <div className="utrecht-page-content rhc-templates-page-content">
               <Article>
                 <div className="rhc-margin-block-end-wrapper">
-                  {/*
-        <div className="unfinished">
-          <Avatar label="BK"></Avatar>
-        </div>
-        */}
                   <Heading level={1}>Componenten collage NL Design System</Heading>
                   <Image
                     alt="Multicolored tulip field"
@@ -140,7 +121,7 @@ export default function Collage() {
                   <IconButton label="calendar">
                     <IconCalendarEvent />
                   </IconButton>
-                  <FormFieldTextInput description="Description" label="Name"></FormFieldTextInput>
+                  <FormFieldTextInput description="Description" label="Name" />
                   <FormFieldTextarea label="Label" rows={4} />
                   <FormField
                     description="Form Field Radio Options"
@@ -164,7 +145,7 @@ export default function Collage() {
                     <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
                     <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
                   </FormFieldCheckboxGroup>
-                  <Alert heading="Heading" type="error">
+                  <Alert heading="Heading" headingLevel={2} type="error">
                     <LinkList>
                       <LinkListLink href="#">Label</LinkListLink>
                       <LinkListLink href="#">Label</LinkListLink>
@@ -176,12 +157,14 @@ export default function Collage() {
                     descriptionId="description-id"
                     errorMessage="Error message"
                     errorMessageId="error-id"
-                    input={<TextInput invalid />}
+                    id="input-error-id"
+                    input={<TextInput invalid id="input-error-id" />}
                     invalid={true}
                     label="Label"
                     statusId="status-id"
                   />
-                  <DataList>
+                  {/* Will be replaced with <SummaryList/> */}
+                  {/* <DataList>
                     <DataListItem>
                       <DataListKey>Key</DataListKey>
                       <DataListValue>Value</DataListValue>
@@ -199,11 +182,11 @@ export default function Collage() {
                       <DataListKey>Key</DataListKey>
                       <DataListValue>Value</DataListValue>
                     </DataListItem>
-                  </DataList>
+                  </DataList> */}
                   <div>
                     <Alert
                       heading="Heading"
-                      headingLevel={3}
+                      headingLevel={2}
                       textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
                       type="info"
                     />
@@ -211,7 +194,7 @@ export default function Collage() {
                   <div>
                     <Alert
                       heading="Heading"
-                      headingLevel={3}
+                      headingLevel={2}
                       textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
                       type="error"
                     />
@@ -219,7 +202,7 @@ export default function Collage() {
                   <div>
                     <Alert
                       heading="Heading"
-                      headingLevel={3}
+                      headingLevel={2}
                       textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
                       type="ok"
                     />
@@ -227,7 +210,7 @@ export default function Collage() {
                   <div>
                     <Alert
                       heading="Heading"
-                      headingLevel={3}
+                      headingLevel={2}
                       textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
                       type="warning"
                     />
@@ -256,26 +239,6 @@ export default function Collage() {
                       },
                     ]}
                   ></AccordionProvider>
-                  {/*
-            <div className="unstarted">
-              <BadgeCounter>9</BadgeCounter>
-            </div>
-            <div className="unstarted">
-              <StatusBadge status="neutral">Label</StatusBadge>
-            </div>
-            <div className="unstarted">
-              <StatusBadge status="info">Label</StatusBadge>
-            </div>
-            <div className="unstarted">
-              <StatusBadge status="error">Label</StatusBadge>
-            </div>
-            <div className="unstarted">
-              <StatusBadge status="success">Label</StatusBadge>
-            </div>
-            <div className="unstarted">
-              <StatusBadge status="warning">Label</StatusBadge>
-            </div>
-            */}
                   <Table>
                     <TableCaption>Caption van tabel</TableCaption>
                     <TableHeader>
@@ -306,11 +269,6 @@ export default function Collage() {
                       console.log('onchange: ', value);
                     }}
                   />
-                  {/*}
-        <div className="unstarted">
-          <Pagination maxVisiblePages={6} page={1} totalPages={99}></Pagination>
-        </div>
-        */}
                 </div>
               </Article>
             </div>

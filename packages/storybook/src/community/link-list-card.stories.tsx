@@ -2,6 +2,7 @@ import { LinkListCard, LinkListLink } from '@rijkshuisstijl-community/components
 import { Meta, StoryObj } from '@storybook/react';
 import { ComponentProps } from 'react';
 import readme from './link-list-card.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 type StoryProps = ComponentProps<typeof LinkListCard>;
 const meta: Meta<StoryProps> = {
@@ -33,9 +34,14 @@ const meta: Meta<StoryProps> = {
     },
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add NL Design System link when there is a page for LinkListCard
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1195-4201&t=n1djYpmvDCKmAEUi-0',
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/472',
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 };
 

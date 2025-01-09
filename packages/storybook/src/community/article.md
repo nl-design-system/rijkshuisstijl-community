@@ -2,8 +2,6 @@
 
 # Rijkshuisstijl Community article component
 
-[NL design system](https://www.nldesignsystem.nl/article/) | [GitHub](https://github.com/nl-design-system/rijkshuisstijl-community/issues/566)
-
 De article component is er om de breedte van de inhoud ervan te beperken tot de ideale lees-lengte.
 
 ## Usage

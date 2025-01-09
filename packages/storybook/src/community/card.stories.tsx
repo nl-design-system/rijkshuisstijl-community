@@ -48,9 +48,12 @@ const meta = {
     },
     docs: {
       description: {
+        // TODO: use readme
         component: 'Card component for displaying content in various styles.',
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } as Meta<typeof Card>;
 
@@ -59,6 +62,7 @@ export default meta;
 export const Default = {
   args: {
     linkLabel: 'Label',
+    imageAlt: 'Placeholder Image',
   },
 };
 
@@ -67,6 +71,7 @@ export const FullBleed = {
     heading: 'Full Bleed Card',
     appearance: 'full-bleed',
     description: 'This card has a background image.',
+    imageAlt: 'Placeholder Image',
   },
 };
 
