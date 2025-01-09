@@ -3,7 +3,7 @@ import {
   rhcLogoColor,
   rhcLogoImageBackgroundColor,
   rhcLogoImageColor,
-} from '@rijkshuisstijl-community/design-tokens/dist';
+} from '@rijkshuisstijl-community/design-tokens/dist/wetgevend';
 import { Meta, StoryObj } from '@storybook/react';
 import { CSSProperties } from 'react';
 
