@@ -45,21 +45,3 @@ export class HeroWebComponent extends BaseWebComponent {
     );
   }
 }
-
-// const Hero: FC<HeroProps> = ({ title, description }) => {
-//     // Create and return the custom web component
-//     const webComponent = React.createElement('hero-element', {
-//       title,
-//       description,
-//     });
-
-//     return <div>{webComponent}</div>;
-//   };
-
-// customElements.define('hero-element', HeroElement);
-
-// const HeroComponent: FC<HeroProps> = (props) => {
-//   return <rhc-hero {...props} />;
-// };
-
-// export default HeroComponent;
