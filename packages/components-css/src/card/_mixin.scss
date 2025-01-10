@@ -143,6 +143,14 @@
   text-decoration: var(--rhc-card-as-link-link-text-decoration, underline);
 }
 
+@mixin rhc-card__anchor {
+  a::after {
+    content: "";
+    inset: 0;
+    position: absolute;
+  }
+}
+
 @mixin rhc-card__link--active {
   --utrecht-link-color: var(--rhc-card-as-link-link-active-color, #42145f);
 
