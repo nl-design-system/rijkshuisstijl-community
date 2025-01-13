@@ -80,8 +80,21 @@
 .rhc-page-subfooter__content {
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
+  gap: var(--rhc-space-200);
   justify-content: space-between;
+}
+
+.rhc-page-subfooter__backtotop {
+  color: inherit;
+
+  &:hover {
+    color: white;
+  }
+
+  &:focus {
+    color: white;
+  }
 }
 
 @media (width <= 1024px) {

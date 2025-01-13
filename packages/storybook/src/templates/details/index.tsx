@@ -204,13 +204,12 @@ export default function Details() {
           },
         ]}
         subFooter={
-          <div className="rhc-subfooter-details">
-            <Link>Link 1</Link>
-            <Link>Link 2</Link>
-            <Link>Link 3</Link>
-            <Link>Link 4</Link>
-            <Link>Link 5</Link>
-          </div>
+          <LinkList className="rhc-subfooter-details">
+            <Link>Privacy</Link>
+            <Link>Cookies</Link>
+            <Link>Copyright</Link>
+            <Link>Toegankelijkheid</Link>
+          </LinkList>
         }
       />
     </>
