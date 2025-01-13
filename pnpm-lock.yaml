@@ -20,7 +20,7 @@ importers:
     devDependencies:
       '@lerna-lite/cli':
         specifier: 3.10.1
-        version: 3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
+        version: 3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/publish':
         specifier: 3.10.1
         version: 3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2)
@@ -160,6 +160,15 @@ importers:
       '@utrecht/components':
         specifier: 7.4.0
         version: 7.4.0
+      '@utrecht/page-body-react':
+        specifier: 1.0.3
+        version: 1.0.3(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@utrecht/page-layout-react':
+        specifier: 1.0.3
+        version: 1.0.3(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@utrecht/root-react':
+        specifier: 1.0.3
+        version: 1.0.3(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/web-component-library-react':
         specifier: 3.0.0
         version: 3.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -216,8 +225,8 @@ importers:
         specifier: 7.0.0
         version: 7.0.0
       '@utrecht/component-library-react':
-        specifier: 7.3.7
-        version: 7.3.7(@babel/runtime@7.26.0)(date-fns@2.30.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: 8.0.4
+        version: 8.0.4(@babel/runtime@7.26.0)(date-fns@2.30.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       eslint:
         specifier: 9.15.0
         version: 9.15.0
@@ -495,17 +504,26 @@ importers:
         specifier: 1.12.16
         version: 1.12.16
       '@utrecht/component-library-react':
-        specifier: 7.3.8
-        version: 7.3.8(@babel/runtime@7.26.0)(date-fns@2.30.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: 8.0.4
+        version: 8.0.4(@babel/runtime@7.26.0)(date-fns@2.30.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/components':
         specifier: 7.4.0
         version: 7.4.0
+      '@utrecht/page-body-react':
+        specifier: 1.0.3
+        version: 1.0.3(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@utrecht/page-layout-react':
+        specifier: 1.0.3
+        version: 1.0.3(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@utrecht/root-react':
+        specifier: 1.0.3
+        version: 1.0.3(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/web-component-library-react':
-        specifier: 3.0.0
-        version: 3.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: 3.0.2
+        version: 3.0.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/web-component-library-stencil':
-        specifier: 2.2.0
-        version: 2.2.0
+        specifier: 3.0.1
+        version: 3.0.1
       '@whitespace/storybook-addon-html':
         specifier: 6.1.1
         version: 6.1.1(prettier@3.4.1)(react-syntax-highlighter@15.6.1(react@19.0.0))
@@ -3232,6 +3250,13 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/checkbox-react@1.0.5':
+    resolution: {integrity: sha512-LfQw2mGUvS7qH1aohHYKsndcwiH9JyxygvS9A1iA+I9VIDZQRO6G1gC9yOd9j8wdl6A5/I+XfJGx3usN5EnDOQ==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/combobox-react@0.0.3':
     resolution: {integrity: sha512-l543Y0iaw68ZT0SuETjvzGp37pLtw72sfzh/QzkNGyr9kk9twUmo+gYEp1QedAsOGaK9ETjcAoeKL2lgreiUKQ==}
     peerDependencies:
@@ -3283,8 +3308,8 @@ packages:
       vega:
         optional: true
 
-  '@utrecht/component-library-react@7.3.8':
-    resolution: {integrity: sha512-L1T92WH/wljRgnc7Tg9A/Arj8Nr9tm5y1XXjOHB8xHKsjimFGZXXDwBPZeWqcTYcn4DMSg2NFmr2o6R9Zu6FTg==}
+  '@utrecht/component-library-react@8.0.4':
+    resolution: {integrity: sha512-Xflfm5KMyMRTH3veaw6C/2RZvN4KZIUPQCJOGF08MXyA05JRtgEZzFDgZ7KA2Wi/w5KnYA/gQwYSNr6VLRAcsw==}
     peerDependencies:
       '@babel/runtime': ^7.23.6
       date-fns: ^2.30.0
@@ -3326,6 +3351,13 @@ packages:
 
   '@utrecht/form-field-checkbox-react@1.0.6':
     resolution: {integrity: sha512-jVNl1WkuACDpYJEN2jkRxM7x5akLxNewMIjIrIZoI+6uNX19d4F2x6lP1EbbtyLN3SZng+sTA8cKRYxBlbmV5w==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
+  '@utrecht/form-field-checkbox-react@1.0.7':
+    resolution: {integrity: sha512-MAvd2GV8kwuN1b8Up72LrKI7b/wG5ueNjMFw0bLCgX6tfgWy9TCKCymupfzSgs5W2VSZRoqFD1FB10BBFHwZOg==}
     peerDependencies:
       '@babel/runtime': '*'
       react: '18'
@@ -3415,6 +3447,27 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/listbox-react@1.0.7':
+    resolution: {integrity: sha512-NGZlw2x+QqpuJDznV4oNWGXuuCNMgKRTdBAF5XjwrzJt8JLHM8gfbiDmIR5AXTmk4+emMfsmBmaPKFJMfxooWw==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
+  '@utrecht/page-body-react@1.0.3':
+    resolution: {integrity: sha512-uMOIVzf6dfVdjmfFhSj2jZ/0Ny/9YZxSInqKTBOoQgeaFCY9DypN5x5rS24UrMQlan1T7vwVqBAXPz8PPQcBCQ==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
+  '@utrecht/page-layout-react@1.0.3':
+    resolution: {integrity: sha512-k42G5zM2zmHhM5GxiBbXdbViEPQHf1b89UZJLXf+Ix/UcVdb/DWvmFnwyW3uQHZ7LDBdl0ltDNG4dqIWKAQL5w==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/radio-button-react@1.0.2':
     resolution: {integrity: sha512-y4r3913L0PxIZqVQbjs1bV8cuiez6X4Oaqhjo7d8tdeOtnMjIjvv2s8tyRzDuyU8PioGXcMjtfavY+bDdrfc7g==}
     peerDependencies:
@@ -3424,6 +3477,13 @@ packages:
 
   '@utrecht/radio-button-react@1.0.4':
     resolution: {integrity: sha512-pUcep0QygWwWAmdc44A3xI46ohZxIS7THjCQrJaO7EshTXfUOG8gqRkOaKmfTFLUjIENBCIIxVWWFI+hGAxRFA==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
+  '@utrecht/root-react@1.0.3':
+    resolution: {integrity: sha512-4Eg/ccsK/mShLr01tUUOBvqsOnTCvZg1DtkIWVu9bTW2SssxPtwCvRoyxj+v0E2ddy7QDYHpnqUvMxYmDp/qug==}
     peerDependencies:
       '@babel/runtime': '*'
       react: '18'
@@ -3449,8 +3509,17 @@ packages:
       react: 16 - 18
       react-dom: 16 - 18
 
+  '@utrecht/web-component-library-react@3.0.2':
+    resolution: {integrity: sha512-KwrE0Lt6H6mx4jXhnDh6WX3SGkqnS0pM/FFKyPnwiaQ3XmNGDPWnabpnEbW22YUkGTup/YUYrSjrzN2TvPr3bg==}
+    peerDependencies:
+      react: 16 - 18
+      react-dom: 16 - 18
+
   '@utrecht/web-component-library-stencil@2.2.0':
     resolution: {integrity: sha512-2ny336xp8dVcUaey0bWe65V+zqooyeApyMW8Vi44IxKJTcqNvKdOawT/mI1t1lTTsGoUhxxi0QQYT4AfXMU0aQ==}
+
+  '@utrecht/web-component-library-stencil@3.0.1':
+    resolution: {integrity: sha512-LRviT6RAV7ULxbuF3yxpO41XAlgL6UmPnDWL+ltj9lZm6FmKbprQ03u3mt02RN3Zk9Fr/sTwiJ9ydrHn+aagpQ==}
 
   '@vitejs/plugin-react@4.3.4':
     resolution: {integrity: sha512-SCCPBJtYLdE8PX/7ZQAs1QAZ8Jqwih+0VBLum1EGqmCCQal+MIUqLCzj3ZUy8ufbC0cAM4LRlSTm7IQJwWT4ug==}
@@ -10794,7 +10863,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@lerna-lite/cli@3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)':
+  '@lerna-lite/cli@3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)':
     dependencies:
       '@lerna-lite/core': 3.10.1(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/init': 3.10.1(@types/node@20.17.6)(typescript@5.7.2)
@@ -10807,7 +10876,7 @@ snapshots:
     optionalDependencies:
       '@lerna-lite/publish': 3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/run': 3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2)
-      '@lerna-lite/version': 3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2)
+      '@lerna-lite/version': 3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -10892,10 +10961,10 @@ snapshots:
 
   '@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2)':
     dependencies:
-      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
+      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/core': 3.10.1(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/npmlog': 3.10.1
-      '@lerna-lite/version': 3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2)
+      '@lerna-lite/version': 3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
       '@npmcli/arborist': 7.5.4
       '@npmcli/package-json': 5.2.1
       byte-size: 9.0.0
@@ -10930,7 +10999,7 @@ snapshots:
 
   '@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2)':
     dependencies:
-      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
+      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/core': 3.10.1(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/npmlog': 3.10.1
       '@lerna-lite/profiler': 3.10.1(@types/node@20.17.6)(typescript@5.7.2)
@@ -10949,9 +11018,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2)':
+  '@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)':
     dependencies:
-      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1)(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
+      '@lerna-lite/cli': 3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/version@3.10.1(@lerna-lite/publish@3.10.1(@lerna-lite/run@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@lerna-lite/run@3.10.1(@lerna-lite/publish@3.10.1)(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2))(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/core': 3.10.1(@types/node@20.17.6)(typescript@5.7.2)
       '@lerna-lite/npmlog': 3.10.1
       '@octokit/plugin-enterprise-rest': 6.0.1
@@ -12507,6 +12576,13 @@ snapshots:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
+  '@utrecht/checkbox-react@1.0.5(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      '@babel/runtime': 7.26.0
+      clsx: 2.1.1
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+
   '@utrecht/combobox-react@0.0.3(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@babel/runtime': 7.26.0
@@ -12571,21 +12647,21 @@ snapshots:
     optionalDependencies:
       date-fns: 2.30.0
 
-  '@utrecht/component-library-react@7.3.8(@babel/runtime@7.26.0)(date-fns@2.30.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@utrecht/component-library-react@8.0.4(@babel/runtime@7.26.0)(date-fns@2.30.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@babel/runtime': 7.26.0
       '@utrecht/button-react': 2.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/calendar-react': 1.0.8(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@utrecht/checkbox-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@utrecht/checkbox-react': 1.0.5(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/combobox-react': 0.0.5(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/fieldset-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@utrecht/form-field-checkbox-react': 1.0.6(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@utrecht/form-field-checkbox-react': 1.0.7(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/form-field-description-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/form-field-error-message-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/form-field-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/form-label-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/link-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@utrecht/listbox-react': 1.0.5(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@utrecht/listbox-react': 1.0.7(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/radio-button-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/textbox-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       clsx: 2.1.1
@@ -12629,6 +12705,18 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.26.0
       '@utrecht/checkbox-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@utrecht/form-field-description-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@utrecht/form-field-error-message-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@utrecht/form-field-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@utrecht/form-label-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      clsx: 2.1.1
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+
+  '@utrecht/form-field-checkbox-react@1.0.7(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      '@babel/runtime': 7.26.0
+      '@utrecht/checkbox-react': 1.0.5(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/form-field-description-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/form-field-error-message-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@utrecht/form-field-react': 1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -12721,6 +12809,27 @@ snapshots:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
+  '@utrecht/listbox-react@1.0.7(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      '@babel/runtime': 7.26.0
+      clsx: 2.1.1
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+
+  '@utrecht/page-body-react@1.0.3(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      '@babel/runtime': 7.26.0
+      clsx: 2.1.1
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+
+  '@utrecht/page-layout-react@1.0.3(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      '@babel/runtime': 7.26.0
+      clsx: 2.1.1
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+
   '@utrecht/radio-button-react@1.0.2(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@babel/runtime': 7.26.0
@@ -12729,6 +12838,13 @@ snapshots:
       react-dom: 19.0.0(react@19.0.0)
 
   '@utrecht/radio-button-react@1.0.4(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      '@babel/runtime': 7.26.0
+      clsx: 2.1.1
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+
+  '@utrecht/root-react@1.0.3(@babel/runtime@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@babel/runtime': 7.26.0
       clsx: 2.1.1
@@ -12755,7 +12871,17 @@ snapshots:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
+  '@utrecht/web-component-library-react@3.0.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+    dependencies:
+      '@utrecht/web-component-library-stencil': 3.0.1
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+
   '@utrecht/web-component-library-stencil@2.2.0':
+    dependencies:
+      '@stencil/core': 4.18.3
+
+  '@utrecht/web-component-library-stencil@3.0.1':
     dependencies:
       '@stencil/core': 4.18.3
 

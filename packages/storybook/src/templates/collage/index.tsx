@@ -38,27 +38,26 @@ import {
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react/dist/esm/tabler-icons-react';
+import { PageBody } from '@utrecht/page-body-react';
 
 export default function Collage() {
   return (
     <>
-      <div className="rhc-templates-background-color-white">
-        <PageHeader>
-          <Logo organisation="Rijkshuisstijl Community">
-            <Icon className={'dutch-map'} icon={'nederland-map'} />
-          </Logo>
-        </PageHeader>
-      </div>
-      <NavBar
-        items={[
-          { id: '1', href: '/', label: 'Rich Text' },
-          { id: '2', href: '/form', label: 'Form' },
-          { id: '3', href: '/details', label: 'Details' },
-          { id: '4', href: '/collage', label: 'Collage' },
-          { id: '5', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
-        ]}
-      ></NavBar>
-      <main className="rhc-templates-page">
+      <PageHeader>
+        <Logo organisation="Rijkshuisstijl Community">
+          <Icon className={'dutch-map'} icon={'nederland-map'} />
+        </Logo>
+        <NavBar
+          items={[
+            { id: '1', href: '/', label: 'Rich Text' },
+            { id: '2', href: '/form', label: 'Form' },
+            { id: '3', href: '/details', label: 'Details' },
+            { id: '4', href: '/collage', label: 'Collage' },
+            { id: '5', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
+          ]}
+        ></NavBar>
+      </PageHeader>
+      <PageBody className="rhc-templates-page">
         <div className="rhc-templates-background-color-white">
           <div className="rhc-templates-main-content">
             <div className="utrecht-page-content rhc-templates-page-content">
@@ -71,7 +70,7 @@ export default function Collage() {
                     src="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
                     width="640"
                   ></Image>
-                  <Paragraph lead>
+                  <Paragraph appearance="lead">
                     In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
                   </Paragraph>
                   <Paragraph>
@@ -103,7 +102,7 @@ export default function Collage() {
                     </UnorderedListItem>
                     <UnorderedListItem>Maak gebruik van opsommingstekens waar dat mogelijk is.</UnorderedListItem>
                   </UnorderedList>
-                  <Paragraph lead>
+                  <Paragraph appearance="lead">
                     In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
                   </Paragraph>
                   <Blockquote attribution="— Pippi Langkous">
@@ -274,7 +273,7 @@ export default function Collage() {
             </div>
           </div>
         </div>
-      </main>
+      </PageBody>
     </>
   );
 }

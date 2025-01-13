@@ -9,6 +9,7 @@ const meta: Meta = {
     status: {
       type: 'UNSTABLE',
     },
+    isPage: true,
   },
 };
 export default meta;
