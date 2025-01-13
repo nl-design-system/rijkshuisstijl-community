@@ -1,6 +1,7 @@
 import { PageFooterProps, PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
+import { Button } from './Button';
 import { ColumnLayout } from './ColumnLayout';
 import { Heading, HeadingLevel } from './Heading';
 
@@ -82,8 +83,12 @@ export const Footer = forwardRef(
           )}
         >
           <div className="rhc-page-subfooter__content rhc-page-footer__wrapper">
+            {backtotop && (
+              <Button appearance="subtle-button" className="rhc-page-subfooter__backtotop" onClick={scrollBackToTop}>
+                Terug naar boven
+              </Button>
+            )}
             {subFooter}
-            {backtotop && <span onClick={scrollBackToTop}>Back To Top</span>}
           </div>
         </div>
       )}
