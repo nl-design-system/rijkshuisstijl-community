@@ -73,3 +73,11 @@
   margin-block-end: var(--rhc-space-0);
   margin-block-start: var(--rhc-space-0);
 }
+
+.rhc-subfooter-details {
+  display: flex;
+  gap: 2rem;
+  @media (width <= 780px) {
+    flex-direction: column;
+  }
+}
