@@ -5,6 +5,7 @@ import {
   Heading,
   Hero,
   Icon,
+  Link,
   LinkList,
   LinkListCard,
   LinkListLink,
@@ -135,6 +136,7 @@ export default function Details() {
       </PageBody>
       <Footer
         appearanceLevel={3}
+        backtotop={true}
         heading="De Rijksoverheid. Voor Nederland"
         columns={[
           {
@@ -197,6 +199,15 @@ export default function Details() {
             ),
           },
         ]}
+        subFooter={
+          <div className="rhc-subfooter-details">
+            <Link>Link 1</Link>
+            <Link>Link 2</Link>
+            <Link>Link 3</Link>
+            <Link>Link 4</Link>
+            <Link>Link 5</Link>
+          </div>
+        }
       />
     </>
   );

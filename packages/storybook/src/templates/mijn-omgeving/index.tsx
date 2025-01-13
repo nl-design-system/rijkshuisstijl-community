@@ -203,6 +203,8 @@ export default function MijnOmgeving() {
       </PageBody>
       <Footer
         appearanceLevel={4}
+        background="primary-outlined"
+        backtotop={true}
         heading="De Rijksoverheid. Voor Nederland"
         columns={[
           {

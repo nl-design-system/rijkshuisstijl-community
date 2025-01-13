@@ -8,6 +8,8 @@ interface FooterProps extends PageFooterProps {
   appearanceLevel?: number;
   columns?: ColumnProps[];
   background?: 'primary-filled' | 'primary-outlined';
+  backtotop?: boolean;
+  subFooter?: ReactNode;
 }
 
 interface ColumnProps {
@@ -18,6 +20,10 @@ interface ColumnProps {
 
 const MAX_APPEARANCE_HEADING_LEVEL = 6;
 
+const scrollBackToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 export const Footer = forwardRef(
   (
     {
@@ -25,6 +31,8 @@ export const Footer = forwardRef(
       heading,
       appearanceLevel = 2,
       columns,
+      backtotop,
+      subFooter,
       children,
       background,
       ...restProps
@@ -40,7 +48,7 @@ export const Footer = forwardRef(
         className,
       )}
     >
-      <div className="rhc-page-footer__content">
+      <div className="rhc-page-footer__content rhc-page-footer__wrapper">
         {heading && (
           <div className="rhc-page-footer__title" key={'heading'}>
             <Heading
@@ -71,6 +79,21 @@ export const Footer = forwardRef(
           {children}
         </ColumnLayout>
       </div>
+      {(backtotop || subFooter) && (
+        <div
+          className={clsx(
+            'rhc-page-subfooter',
+            background === 'primary-outlined' || background === 'primary-filled'
+              ? `rhc-page-footer--${background}`
+              : '',
+          )}
+        >
+          <div className="rhc-page-subfooter__content rhc-page-footer__wrapper">
+            {subFooter}
+            {backtotop && <span onClick={scrollBackToTop}>Back To Top</span>}
+          </div>
+        </div>
+      )}
     </UtrechtPageFooter>
   ),
 );
