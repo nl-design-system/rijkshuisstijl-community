@@ -9,7 +9,6 @@ export class HeroWebComponent extends BaseWebComponent {
   static override observedAttributes: string[] = [
     'aspectratio',
     'heading',
-    'heromessage',
     'imagealt',
     'subheading',
     'textalign',
@@ -25,15 +24,14 @@ export class HeroWebComponent extends BaseWebComponent {
   render(): void {
     this.root.render(
       <Hero
-        aspectRatio={(this.getAttribute('aspectRatio') as HeroProps['aspectRatio']) ?? undefined}
-        borderRadiusCorner={(this.getAttribute('borderRadiusCorner') as HeroProps['borderRadiusCorner']) ?? undefined}
+        aspectRatio={this.getAttribute('aspectRatio') as HeroProps['aspectRatio']}
+        borderRadiusCorner={this.getAttribute('borderRadiusCorner') as HeroProps['borderRadiusCorner']}
         heading={this.getAttribute('heading') ?? 'default heading'}
         imageAlt={this.getAttribute('imageAlt') ?? 'image alt'}
         subHeading={this.getAttribute('subHeading') ?? 'sub heading'}
-        textAlign={(this.getAttribute('textAlign') as HeroProps['textAlign']) ?? undefined}
+        textAlign={this.getAttribute('textAlign') as HeroProps['textAlign']}
         headingLevel={
-          ((this.getAttribute('headingLevel') &&
-            Number(this.getAttribute('headingLevel'))) as HeroProps['headingLevel']) ?? undefined
+          (this.getAttribute('headingLevel') && Number(this.getAttribute('headingLevel'))) as HeroProps['headingLevel']
         }
         imageSrc={
           this.getAttribute('imageSrc') ??
