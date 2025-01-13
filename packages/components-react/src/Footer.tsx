@@ -35,7 +35,7 @@ export const Footer = forwardRef(
       ref={ref}
       className={clsx(
         'rhc-page-footer',
-        background === 'primary-outlined' || background === 'primary-filled' ? `rhc-footer--${background}` : '',
+        background === 'primary-outlined' || background === 'primary-filled' ? `rhc-page-footer--${background}` : '',
         className,
       )}
     >
