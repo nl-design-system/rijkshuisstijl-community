@@ -304,12 +304,7 @@ export default function Collage() {
                         </TableRow>
                       </TableFooter>
                     </Table>
-                    <CodeInputGroup
-                      numberOfDigits={6}
-                      onChange={(e: any) => {
-                        console.log('values!: ', e);
-                      }}
-                    />
+                    <CodeInputGroup numberOfDigits={6} />
 
                     {/*}
         <div className="unstarted">
