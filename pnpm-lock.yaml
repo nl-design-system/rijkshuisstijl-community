@@ -385,6 +385,10 @@ importers:
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css
+    devDependencies:
+      '@tabler/icons-sprite':
+        specifier: 3.23.0
+        version: 3.23.0
 
   packages/font:
     dependencies:
@@ -493,6 +497,9 @@ importers:
       '@tabler/icons-react':
         specifier: 3.23.0
         version: 3.23.0(react@19.0.0)
+      '@tabler/icons-sprite':
+        specifier: 3.23.0
+        version: 3.23.0
       '@types/react':
         specifier: 19.0.1
         version: 19.0.1
@@ -2917,6 +2924,9 @@ packages:
     resolution: {integrity: sha512-uSJfu1Tnhk6AAkerNCOBL3KL3aPpb/bnB4UjTbV3jItTJKitEgr4a98ted67qu5FHB3/tG1bxs32pqy5OL7NGw==}
     peerDependencies:
       react: '>= 16'
+
+  '@tabler/icons-sprite@3.23.0':
+    resolution: {integrity: sha512-5BjeBlqGIGXkraOJTh2XnfxaF+vE9ar7hvUK8RjujXLgCJeXG24fLKm3ib5B0aQWmSs+ZJTIJWCIq/fHnErnZQ==}
 
   '@tabler/icons@3.22.0':
     resolution: {integrity: sha512-IfgGzhFph5OBr2wTieWL/hyAs0FThnq9O155a6kfGYxqx7h5LQw91wnRswhEaGhXCcfmR7ZVDUr9H+x4b9Pb8g==}
@@ -12128,6 +12138,10 @@ snapshots:
     dependencies:
       '@tabler/icons': 3.23.0
       react: 19.0.0
+
+  '@tabler/icons-sprite@3.23.0':
+    dependencies:
+      '@tabler/icons': 3.23.0
 
   '@tabler/icons@3.22.0': {}
 
