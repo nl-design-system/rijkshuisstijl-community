@@ -1,6 +1,6 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { Hero, HeroProps } from '@rijkshuisstijl-community/components-react';
-import { BaseWebComponent } from '../BaseComponent';
+import { BaseWebComponent } from './BaseComponent';
 
 export type HeroWebComponentAttributes = HeroProps;
 
