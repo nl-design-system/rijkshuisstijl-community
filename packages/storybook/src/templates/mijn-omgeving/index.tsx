@@ -206,6 +206,8 @@ export default function MijnOmgeving() {
         background="primary-outlined"
         backtotop={true}
         heading="De Rijksoverheid. Voor Nederland"
+        preFooter={true}
+        preFooterMessage="Water, Energie en Maatschappij"
         columns={[
           {
             heading: 'Service',
