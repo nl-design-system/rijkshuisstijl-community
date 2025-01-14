@@ -112,3 +112,25 @@
     --utrecht-page-footer-padding-block-start: var(--rhc-page-footer-padding-block-start);
   }
 }
+
+.rhc-page-prefooter {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.rhc-page-prefooter::before {
+  background-color: var(--rhc-color-primary-500);
+  block-size: 1.5rem;
+  content: "";
+  inline-size: 2rem;
+}
+
+.rhc-page-prefooter__content {
+  font-family: var(--rhc-font-family-secondary);
+  inset: 0% 50% auto auto;
+  line-height: 100%;
+  margin-inline-end: -2rem;
+  position: absolute;
+  transform: translateX(100%);
+}
