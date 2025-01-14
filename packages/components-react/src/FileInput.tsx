@@ -61,7 +61,7 @@ export const FileInput = ({
       <div className="rhc-file-input__button-feedback-container">
         <Button
           appearance={buttonAppearance ?? 'secondary-action-button'}
-          onClick={() => inputElement?.current.click()}
+          onClick={() => inputElement!.current.click()}
         >
           {buttonText}
         </Button>
