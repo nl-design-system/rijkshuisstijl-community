@@ -1,0 +1,52 @@
+{
+  "name": "@rijkshuisstijl-community/web-components",
+  "version": "1.0.0",
+  "author": "Community for NL Design System",
+  "description": "Generic web components bundle based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/yyyy/yyyy.esm.js",
+  "files": [
+    "dist/"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
+    "directory": "packages/web-components"
+  },
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "vite build",
+    "clean": "rimraf dist/",
+    "start": "vite"
+  },
+  "devDependencies": {
+    "@rijkshuisstijl-community/components-css": "workspace:*",
+    "@rijkshuisstijl-community/components-react": "workspace:*",
+    "@rijkshuisstijl-community/design-tokens": "workspace:*",
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.1",
+    "@utrecht/component-library-css": "7.0.0",
+    "@vitejs/plugin-react": "4.3.4",
+    "rimraf": "6.0.1",
+    "tslib": "2.8.1",
+    "typescript": "5.7.2",
+    "vite": "6.0.3",
+    "vite-plugin-dts": "4.3.0",
+    "vite-plugin-static-copy": "2.2.0"
+  },
+  "dependencies": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  }
+}
