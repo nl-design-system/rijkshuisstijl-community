@@ -48,9 +48,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: build packages
-        run: pnpm run build
-
       - name: "Continuous Integration: lint"
         run: pnpm run --if-present lint
 
@@ -107,9 +104,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-
-      - name: build packages
-        run: pnpm run build
 
       - name: "Continuous Integration: test"
         run: pnpm run --if-present test
