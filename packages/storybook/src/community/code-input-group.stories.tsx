@@ -4,7 +4,7 @@ import readme from './code-input-group.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/CodeInputGroup',
-  id: 'rhc-codeInput',
+  id: 'rhc-codeInput-group',
   component: CodeInputGroup,
   parameters: {
     status: {
@@ -28,3 +28,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const Invalid: Story = {
+  args: {
+    inValid: true,
+  },
+};

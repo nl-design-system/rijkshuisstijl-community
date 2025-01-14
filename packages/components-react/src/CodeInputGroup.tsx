@@ -5,13 +5,12 @@ import { Fieldset } from './Fieldset';
 export interface CodeInputGroupProps {
   numberOfDigits: number;
   inValid?: boolean;
-  privateMode?: boolean;
   // eslint-disable-next-line no-unused-vars
   onChange?: (e: any) => void;
 }
 
 export const CodeInputGroup = forwardRef(
-  ({ numberOfDigits, onChange, ...restProps }: PropsWithChildren<CodeInputGroupProps>) => {
+  ({ numberOfDigits, inValid, onChange, ...restProps }: PropsWithChildren<CodeInputGroupProps>) => {
     const valueArr = new Array<string>();
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -44,6 +43,7 @@ export const CodeInputGroup = forwardRef(
             <CodeInput
               {...restProps}
               data-key={`${i}`}
+              invalid={inValid}
               key={`${i}`}
               onChange={(e: ChangeEvent<HTMLInputElement>) => onChangeHandler(e)}
               onKeyDown={onKeyDownHandler}
