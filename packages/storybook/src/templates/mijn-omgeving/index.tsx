@@ -203,7 +203,11 @@ export default function MijnOmgeving() {
       </PageBody>
       <Footer
         appearanceLevel={4}
+        background="primary-outlined"
+        backtotop={true}
         heading="De Rijksoverheid. Voor Nederland"
+        preFooter={true}
+        preFooterMessage="Water, Energie en Maatschappij"
         columns={[
           {
             heading: 'Service',
