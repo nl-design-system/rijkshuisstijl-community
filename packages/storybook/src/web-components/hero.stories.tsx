@@ -1,5 +1,6 @@
 import { HeroWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components';
+
 HeroWebComponent.define();
 
 const meta = {
@@ -117,4 +118,4 @@ const meta = {
 
 export default meta;
 
-export const Default: StoryObj<typeof meta> = {};
+export const Default = {} as StoryObj<typeof meta>;
