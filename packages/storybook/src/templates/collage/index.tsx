@@ -306,10 +306,11 @@ export default function Collage() {
                     </Table>
                     <CodeInputGroup
                       numberOfDigits={6}
-                      onChange={(value: String) => {
-                        console.log('onchange: ', value);
+                      onChange={(e: any) => {
+                        console.log('values!: ', e);
                       }}
                     />
+
                     {/*}
         <div className="unstarted">
           <Pagination maxVisiblePages={6} page={1} totalPages={99}></Pagination>

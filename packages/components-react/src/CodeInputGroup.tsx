@@ -1,94 +1,56 @@
-import clsx from 'clsx';
-import { ChangeEvent, ForwardedRef, forwardRef, KeyboardEvent, PropsWithChildren, useRef, useState } from 'react';
-import { Textbox } from './Textbox';
-import { VisuallyHidden } from './VisuallyHidden';
+import { ChangeEvent, forwardRef, KeyboardEvent, PropsWithChildren } from 'react';
+import { CodeInput } from './CodeInput';
+import { Fieldset } from './Fieldset';
 
 export interface CodeInputGroupProps {
   numberOfDigits: number;
-  // eslint-disable-next-line no-unused-vars
-  onChange?: (value: string) => void;
   inValid?: boolean;
   privateMode?: boolean;
+  // eslint-disable-next-line no-unused-vars
+  onChange?: (e: any) => void;
 }
 
 export const CodeInputGroup = forwardRef(
-  (
-    { numberOfDigits, onChange, inValid, privateMode, ...restProps }: PropsWithChildren<CodeInputGroupProps>,
-    ref: ForwardedRef<HTMLInputElement>,
-  ) => {
-    const [values, setValues] = useState<string>('');
-    const [isActive, setActive] = useState(false);
+  ({ numberOfDigits, onChange, ...restProps }: PropsWithChildren<CodeInputGroupProps>) => {
+    const valueArr = new Array<string>();
 
-    const inputRef = useRef<HTMLInputElement>(null);
+    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+      const index = Number(e.target.dataset.key);
+      const input = e.target.value;
+      const regex = /^[a-zA-Z0-9]$/;
 
-    const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-      if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) {
-        event.preventDefault();
+      if (regex.test(input)) {
+        valueArr.splice(index, valueArr[index] === undefined ? 0 : 1, input);
+      } else if (input === '') {
+        valueArr.splice(index, 1, input);
+      }
+
+      if (onChange) {
+        onChange([...valueArr]);
       }
     };
 
-    const handleCodeInputClick = () => {
-      inputRef.current?.focus();
-    };
-
-    const isInputSelected = (i: number) => {
-      return (values.length === i || (values.length === i + 1 && numberOfDigits === i + 1)) && isActive;
-    };
-
-    const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-      const newInputVal = event.target.value.replace(/\D/g, ''); // Remove non-numeric characters.
-      if (newInputVal.length <= numberOfDigits) {
-        setValues(newInputVal);
-        onChange?.(newInputVal);
+    const onKeyDownHandler = (e: KeyboardEvent<HTMLInputElement>) => {
+      const allowedKeys = /^[a-zA-Z0-9]$/; // Letters and numbers
+      if (!allowedKeys.test(e.key) && e.key !== 'Backspace' && e.key !== 'Tab') {
+        e.preventDefault();
       }
     };
 
     return (
-      <div className={'rhc-code-input-container'} data-testid={'code-input-group-container'} ref={ref} {...restProps}>
-        <VisuallyHidden>
-          <Textbox
-            aria-label="code-input"
-            autoComplete="one-time-code"
-            data-testid={'hidden-input'}
-            inputMode="numeric"
-            maxLength={numberOfDigits}
-            ref={inputRef}
-            value={values}
-            onChange={handleInputChange}
-            onKeyDown={handleKeyDown}
-            onBlur={() => {
-              setActive(false);
-            }}
-            onFocus={() => {
-              setActive(true);
-            }}
-            onSelect={(e) => {
-              const val = e.currentTarget.value; // currentTarget is strongly typed
-              e.currentTarget.setSelectionRange(val.length, val.length);
-            }}
-          />
-        </VisuallyHidden>
-
+      <Fieldset>
         <div className={'rhc-code-input-group'}>
           {[...Array(numberOfDigits)].map((_, i) => (
-            <Textbox
-              aria-label={`code-input-${i}`}
-              data-testid={`input-item`}
-              invalid={inValid}
-              key={`input-${i}`}
-              maxLength={1}
-              ref={ref}
-              tabIndex={-1}
-              type="text"
-              value={privateMode && values[i] ? '*' : values[i] || ''}
-              className={clsx('rhc-code-input', {
-                'utrecht-textbox--focus-visible': isInputSelected(i),
-              })}
-              onClick={handleCodeInputClick}
+            <CodeInput
+              {...restProps}
+              data-key={`${i}`}
+              key={`${i}`}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => onChangeHandler(e)}
+              onKeyDown={onKeyDownHandler}
             />
           ))}
         </div>
-      </div>
+      </Fieldset>
     );
   },
 );

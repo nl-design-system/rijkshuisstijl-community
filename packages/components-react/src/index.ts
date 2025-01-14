@@ -43,6 +43,7 @@ export {
 } from './Card';
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
+export { CodeInput } from './CodeInput';
 export { CodeInputGroup } from './CodeInputGroup';
 export { type CustomFormFieldProps, FormField } from './FormField';
 export {
