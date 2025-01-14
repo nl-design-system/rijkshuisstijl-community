@@ -1,7 +1,7 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { AccordionProvider, AccordionProviderProps, Icon } from '@rijkshuisstijl-community/components-react';
 import { RijkshuisstijlIconID } from '@rijkshuisstijl-community/components-react/dist/icon/IconTypes';
-import { BaseWebComponent } from '../BaseComponent';
+import { BaseWebComponent } from './BaseComponent';
 
 export type AccordionWebComponentAttributes = AccordionProviderProps;
 

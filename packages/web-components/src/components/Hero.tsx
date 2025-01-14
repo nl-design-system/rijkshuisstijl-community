@@ -1,6 +1,6 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { Hero, HeroProps } from '@rijkshuisstijl-community/components-react';
-import { BaseWebComponent } from '../BaseComponent';
+import { BaseWebComponent } from './BaseComponent';
 
 export type HeroWebComponentAttributes = HeroProps;
 
@@ -24,7 +24,7 @@ export class HeroWebComponent extends BaseWebComponent {
   render(): void {
     this.root.render(
       <Hero
-        aspectRatio={this.getAttribute('aspectRatio') as HeroProps['aspectRatio']}
+        aspectRatio={(this.getAttribute('aspectRatio') as HeroProps['aspectRatio']) ?? undefined}
         borderRadiusCorner={this.getAttribute('borderRadiusCorner') as HeroProps['borderRadiusCorner']}
         heading={this.getAttribute('heading') ?? 'default heading'}
         imageAlt={this.getAttribute('imageAlt') ?? 'image alt'}
