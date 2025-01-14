@@ -24,7 +24,7 @@ export class HeroWebComponent extends BaseWebComponent {
   render(): void {
     this.root.render(
       <Hero
-        aspectRatio={this.getAttribute('aspectRatio') as HeroProps['aspectRatio']}
+        aspectRatio={(this.getAttribute('aspectRatio') as HeroProps['aspectRatio']) ?? undefined}
         borderRadiusCorner={this.getAttribute('borderRadiusCorner') as HeroProps['borderRadiusCorner']}
         heading={this.getAttribute('heading') ?? 'default heading'}
         imageAlt={this.getAttribute('imageAlt') ?? 'image alt'}
