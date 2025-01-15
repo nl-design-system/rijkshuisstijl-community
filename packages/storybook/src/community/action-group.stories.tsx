@@ -25,7 +25,10 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    nldesignsystem: 'https://www.nldesignsystem.nl/action-group/',
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/479',
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=4626-10492&p=f&t=MHYw4lXBHCryrwek-0',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht (daar heeft het de naam ButtonGroup), met styling van de Rijkshuisstijl Community.',
   },
@@ -35,7 +38,7 @@ export default meta;
 
 type Story = StoryObj<typeof ActionGroup>;
 
-export const Default: Story = {
+export const Row: Story = {
   args: {
     children: [
       <Button appearance="primary-action-button" key="primary-action-button">
@@ -46,7 +49,6 @@ export const Default: Story = {
       </Button>,
     ],
   },
-  name: 'Default',
 };
 
 export const Column: Story = {
