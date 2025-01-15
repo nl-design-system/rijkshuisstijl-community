@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "outDir": "dist",
+    "target": "esnext",
+    "jsx": "react-jsx",
+    "skipLibCheck": true
+  },
+  "include": ["**/*.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["**/node_modules/*", "dist", "loader", "**/*.spec.ts", "**/*.spec.tsx"]
+}
