@@ -147,7 +147,7 @@ export const HorizontalImageCard = forwardRef(
     }: PropsWithChildren<HorizontalImageCardProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => (
-    <div className={clsx('rhc-card', 'rhc-card--horizontal', className)} ref={ref} title={title} {...restProps}>
+    <div className={clsx('rhc-card', 'rhc-card--horizontal', className)} ref={ref} {...restProps}>
       <span className="rhc-card__anchor">
         <a href={href} title={title}></a>
       </span>
