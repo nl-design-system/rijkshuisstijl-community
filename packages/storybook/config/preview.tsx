@@ -1,5 +1,8 @@
 import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-violet/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-mintgroen-focus/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-violet-oud/index.css';
 import '@rijkshuisstijl-community/digid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';
@@ -29,6 +32,9 @@ const preview: Preview = {
         MijnOverheid: 'mijnoverheid-theme',
         Logius: 'logius-theme',
         RIVM: 'rivm-theme',
+        'Uitvoerend - violet': 'uitvoerend-violet',
+        'Uitvoerend - mintgroen -  ander fontweight - focus': 'uitvoerend-mintgroen-focus',
+        'Uitvoerend - violet - oud': 'uitvoerend-violet-oud',
       },
       defaultTheme: 'RijkshuisstijlCommunity',
     }),
