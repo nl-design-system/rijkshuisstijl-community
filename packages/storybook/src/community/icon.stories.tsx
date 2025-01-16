@@ -1,6 +1,10 @@
-import { Icon, iconOptions } from '@rijkshuisstijl-community/components-react';
+import { getIconSet, Icon, registerIconSet } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react/*';
 import { IconBrandX } from '@tabler/icons-react';
+import readme from './icon.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
+
+registerIconSet({ 'brand-x': <IconBrandX /> });
 
 const meta = {
   title: 'Rijkshuisstijl/Icon',
@@ -9,11 +13,15 @@ const meta = {
   argTypes: {
     icon: {
       control: { type: 'select' },
-      options: iconOptions,
+      options: Object.keys(getIconSet()),
     },
   },
   parameters: {
-    // TODO: add documentation from Utrecht, but not until readme is correctly structurized in the Utrecht documentation source
+    docs: {
+      description: {
+        component: mergeMarkdown([readme]),
+      },
+    },
     status: {
       type: 'STABLE',
     },
@@ -36,5 +44,11 @@ export const Default: Story = {
 export const CustomIcon: Story = {
   args: {
     children: <IconBrandX />,
+  },
+};
+
+export const FromCustomIconSet: Story = {
+  args: {
+    icon: 'brand-x',
   },
 };

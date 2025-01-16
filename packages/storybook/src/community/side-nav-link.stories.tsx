@@ -1,4 +1,4 @@
-import { iconOptions, SideNavLink } from '@rijkshuisstijl-community/components-react';
+import { getIconSet, SideNavLink } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './side-nav-link.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
@@ -11,7 +11,7 @@ const meta = {
   argTypes: {
     icon: {
       control: { type: 'select' },
-      options: iconOptions,
+      options: getIconSet(),
       description: 'The icon to use',
       table: {
         type: { summary: 'string' },

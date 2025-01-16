@@ -2,12 +2,12 @@ import { Paragraph } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { forwardRef, HTMLAttributes, ReactNode } from 'react';
 import { Icon } from './icon/Icon';
-import { RijkshuisstijlIconID } from './icon/IconTypes';
+import { RHCIconID } from './icon/RHCIconIDs';
 
 export interface NavigationListItemProps extends HTMLAttributes<HTMLLIElement> {
   label: ReactNode;
   description: ReactNode;
-  icon: RijkshuisstijlIconID | ReactNode;
+  icon: RHCIconID | ReactNode;
   href: string;
 }
 
@@ -17,7 +17,7 @@ export const NavigationListItem = forwardRef<HTMLLIElement, NavigationListItemPr
       <li ref={ref} role="listitem" {...restProps}>
         <a className={clsx('rhc-navigation-list__item', className)} href={href} role={'link'}>
           {typeof icon === 'string' ? (
-            <Icon className={'rhc-navigation-list__item__start-icon'} icon={icon as RijkshuisstijlIconID} />
+            <Icon className={'rhc-navigation-list__item__start-icon'} icon={icon as RHCIconID} />
           ) : (
             <Icon className={'rhc-navigation-list__item__start-icon'}>{icon}</Icon>
           )}
