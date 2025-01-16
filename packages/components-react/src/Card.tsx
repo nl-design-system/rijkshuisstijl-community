@@ -118,7 +118,7 @@ export const FullBleedCard = forwardRef(
   ) => (
     <div className={clsx('rhc-card', 'rhc-card--full-bleed', className)} ref={ref} {...restProps}>
       <span className="rhc-card__anchor">
-        <a href={href} title={title}></a>
+        <a aria-label={title} href={href} title={title}></a>
       </span>
       {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
       <div className="rhc-card__content">
@@ -149,7 +149,7 @@ export const HorizontalImageCard = forwardRef(
   ) => (
     <div className={clsx('rhc-card', 'rhc-card--horizontal', className)} ref={ref} {...restProps}>
       <span className="rhc-card__anchor">
-        <a href={href} title={title}></a>
+        <a aria-label={title} href={href} title={title}></a>
       </span>
       <div className="rhc-card__image-container">
         <Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />
