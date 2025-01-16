@@ -21,6 +21,16 @@ const meta = {
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht (daar heeft het de naam PageFooter), met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
+  argTypes: {
+    appearanceLevel: {
+      description: 'Het uiterlijk van de heading in de footer.',
+      control: { type: 'select' },
+      options: [1, 2, 3, 4, 5],
+      table: {
+        type: { summary: 'number' },
+      },
+    },
+  },
 } satisfies Meta<typeof Footer>;
 
 export default meta;
@@ -35,6 +45,7 @@ export const DefaultFooter: Story = {
     columns: [
       {
         heading: 'Service',
+        appearanceLevel: 3,
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
@@ -63,6 +74,7 @@ export const DefaultFooter: Story = {
       },
       {
         heading: 'Over deze site',
+        appearanceLevel: 3,
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
@@ -102,7 +114,7 @@ export const CustomHeadingFooter: Story = {
     columns: [
       {
         heading: 'Heading 1',
-        appearanceLevel: 1,
+        appearanceLevel: 3,
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
@@ -119,7 +131,7 @@ export const CustomHeadingFooter: Story = {
       },
       {
         heading: 'Heading 2',
-        appearanceLevel: 2,
+        appearanceLevel: 3,
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
@@ -153,24 +165,7 @@ export const CustomHeadingFooter: Story = {
       },
       {
         heading: 'Heading 4',
-        appearanceLevel: 4,
-        children: (
-          <LinkList>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 1
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 2
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 3
-            </LinkListLink>
-          </LinkList>
-        ),
-      },
-      {
-        heading: 'Heading 5',
-        appearanceLevel: 5,
+        appearanceLevel: 3,
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
