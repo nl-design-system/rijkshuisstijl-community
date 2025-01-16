@@ -1,0 +1,21 @@
+{% from "attributes.twig" import parse_attributes %}
+{% set classes = [
+  'utrecht-ordered-list'
+] %}
+{%- set attributes = attributes|default({'class': []})|merge({
+  'class': attributes.class|default(classes),
+  'type': type,
+  'start': start
+}) -%}
+{% if reversed == true %}
+  {% set attributes = attributes|merge({
+    'reversed': 'reversed'
+  }) %}
+{% endif %}
+<ol{{ parse_attributes(attributes) }}>
+  {% if children is iterable %}
+    {{ children|join }}
+  {% else %}
+    {{ children }}
+  {% endif %}
+</ol>
