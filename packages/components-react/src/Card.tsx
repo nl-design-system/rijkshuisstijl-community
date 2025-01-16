@@ -75,6 +75,9 @@ const DefaultCard = forwardRef(
   ) => {
     return (
       <div className={clsx('rhc-card', 'rhc-card--default', className)} ref={ref} {...restProps}>
+        <span className="rhc-card__anchor">
+          <a aria-label={title} href={href} title={title}></a>
+        </span>
         <div className="rhc-card__content">
           <div className="rhc-card__image-container">
             {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
@@ -86,10 +89,8 @@ const DefaultCard = forwardRef(
           {children}
         </div>
         <div className="rhc-card__footer">
-          <div className="rhc-card__link rhc-card__anchor">
-            <Link href={href} title={title}>
-              {linkLabel}
-            </Link>
+          <div className="rhc-card__link">
+            <Link>{linkLabel}</Link>
           </div>
           <div className="rhc-card__button">{button}</div>
         </div>
