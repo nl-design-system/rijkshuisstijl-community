@@ -55,6 +55,10 @@
   padding-inline-start: var(--rhc-card-as-link-full-bleed-padding-inline-start, 0);
 }
 
+@mixin rhc-card__button {
+  z-index: 1;
+}
+
 @mixin rhc-card__image {
   aspect-ratio: 16 / 9;
   block-size: 100%;

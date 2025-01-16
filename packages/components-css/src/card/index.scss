@@ -8,6 +8,10 @@
   }
 }
 
+.rhc-card__button {
+  @include mixin.rhc-card__button;
+}
+
 .rhc-card div:empty {
   @include mixin.rhc-card__empty-element;
 }
