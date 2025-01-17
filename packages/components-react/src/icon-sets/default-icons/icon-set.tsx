@@ -1,10 +1,9 @@
 import * as TablerIcons from '@tabler/icons-react';
-import { Icon as UtrechtIcon, type IconProps as UtrechtIconProps } from '@utrecht/component-library-react';
-import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { DutchMapIcon } from './DutchMapIcon';
 import { RHCIconID } from './RHCIconIDs';
 
-let iconSet: Partial<Record<RHCIconID | string, ReactNode>> = {
+export const iconSet: Partial<Record<RHCIconID, ReactNode>> = {
   activiteit: <TablerIcons.IconCalendarCheck />,
   'agile-werken': <TablerIcons.IconArrowIteration />,
   'alert-circle': <TablerIcons.IconAlertCircle />,
@@ -89,28 +88,3 @@ let iconSet: Partial<Record<RHCIconID | string, ReactNode>> = {
   vraagteken: <TablerIcons.IconQuestionMark />,
   zoek: <TablerIcons.IconSearch />,
 };
-
-export const registerIconSet = (newIconSet: typeof iconSet) => {
-  iconSet = { ...iconSet, ...newIconSet };
-};
-
-export const getIconSet = () => ({ ...iconSet });
-
-export { type RHCIconID };
-
-export interface IconProps extends UtrechtIconProps {
-  icon?: RHCIconID | string;
-}
-
-export const Icon = forwardRef(
-  ({ children, icon, className, ...restProps }: PropsWithChildren<IconProps>, ref: ForwardedRef<HTMLSpanElement>) => {
-    return (
-      <UtrechtIcon className={className} ref={ref} {...restProps}>
-        {icon && iconSet[icon]}
-        {children}
-      </UtrechtIcon>
-    );
-  },
-);
-
-Icon.displayName = 'Icon';

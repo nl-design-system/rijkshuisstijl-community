@@ -1,6 +1,6 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { AccordionProvider, AccordionProviderProps, Icon } from '@rijkshuisstijl-community/components-react';
-import { RijkshuisstijlIconID } from '@rijkshuisstijl-community/components-react/dist/icon/IconTypes';
+import { RHCIconID } from '@rijkshuisstijl-community/components-react';
 import { BaseWebComponent } from '../BaseComponent';
 
 export type AccordionWebComponentAttributes = AccordionProviderProps;
@@ -18,7 +18,7 @@ export class AccordionWebComponent extends BaseWebComponent {
       <AccordionProvider
         appearance={this.getAttribute('appearance') ?? undefined}
         heading={this.getAttribute('heading') ?? undefined}
-        icon={this.getAttribute('icon') && <Icon icon={this.getAttribute('icon') as RijkshuisstijlIconID} />}
+        icon={this.getAttribute('icon') && <Icon icon={this.getAttribute('icon') as RHCIconID} />}
         headingLevel={
           this.getAttribute('headingLevel')
             ? (Number(this.getAttribute('headingLevel')) as AccordionProviderProps['headingLevel'])
