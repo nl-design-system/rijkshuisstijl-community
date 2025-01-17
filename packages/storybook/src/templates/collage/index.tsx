@@ -191,6 +191,9 @@ export default function Collage() {
                     />
                   </div>
                   <div>
+                    <Alert textContent="Hier zou een korte introductie kunnen staan." type="info"></Alert>
+                  </div>
+                  <div>
                     <Alert
                       heading="Heading"
                       headingLevel={2}
