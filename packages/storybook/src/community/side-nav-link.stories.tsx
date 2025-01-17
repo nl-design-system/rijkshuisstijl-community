@@ -11,7 +11,7 @@ const meta = {
   argTypes: {
     icon: {
       control: { type: 'select' },
-      options: getIconSet(),
+      options: Object.keys(getIconSet()),
       description: 'The icon to use',
       table: {
         type: { summary: 'string' },

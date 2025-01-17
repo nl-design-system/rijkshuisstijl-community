@@ -41,7 +41,7 @@ const meta = {
       control: {
         type: 'select',
       },
-      options: [...getIconSet()],
+      options: Object.keys(getIconSet()),
     },
     label: {
       control: {
