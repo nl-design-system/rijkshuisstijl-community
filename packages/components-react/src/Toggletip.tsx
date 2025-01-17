@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { DetailsHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 import { Alert } from './Alert';
-import { Icon } from './icon/Icon';
+import { Icon } from './Icon';
 
 export interface ToggletipProps extends DetailsHTMLAttributes<HTMLDetailsElement> {
   className?: string;

@@ -3,7 +3,7 @@ import {
   FormFieldErrorMessageProps as UtrechtFormFieldErrorMessageProps,
 } from '@utrecht/component-library-react';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
-import { Icon } from './icon/Icon';
+import { Icon } from './Icon';
 
 export interface FormFieldErrorMessageProps extends UtrechtFormFieldErrorMessageProps {}
 

@@ -1,7 +1,7 @@
 import { Heading, Paragraph, Alert as UtrechtAlert } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { PropsWithChildren, ReactNode, RefObject } from 'react';
-import { Icon } from './icon/Icon';
+import { Icon } from './Icon';
 
 export interface AlertProps {
   ref?: RefObject<HTMLDivElement>;

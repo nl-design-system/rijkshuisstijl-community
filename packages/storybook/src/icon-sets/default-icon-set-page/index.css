@@ -1,0 +1,23 @@
+.rhc-icon-set {
+  display: grid;
+  font-family: var(--rhc-font-family-primary, inherit);
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  margin-block-start: 16px;
+}
+
+.rhc-icon-set-item {
+  align-items: center;
+  background-color: var(--rhc-color-white);
+  border: 1px solid black;
+  border-radius: var(--rhc-border-radius-300);
+  box-shadow: var(--rhc-shadow-100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-block-end: 8px;
+  margin-block-start: 0;
+  margin-inline-end: 8px;
+  margin-inline-start: 0;
+  padding-block: 8px;
+  padding-inline: 8px;
+}

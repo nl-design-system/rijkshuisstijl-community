@@ -2,9 +2,9 @@ import { ColumnLayout } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactElement, ReactNode } from 'react';
 import { Heading } from './Heading';
+import { Icon, IconProps } from './Icon';
 import { Link } from './Link';
 import { LinkList, LinkListLink } from './LinkList';
-import { Icon, IconProps } from './icon/Icon';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   headingItem?: NavBarItemProps;

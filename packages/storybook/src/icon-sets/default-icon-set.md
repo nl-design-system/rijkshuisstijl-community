@@ -1,0 +1,3 @@
+# Rijkshuisstijl Community Standaard Icon Set
+
+Onderstaande iconen zijn beschikbaar in de Rijkshuisstijl Community en bruikbaar in het [Icon](?path=/docs/rhc-icon--docs) component. De iconen zijn afkomstig uit de open source [Tabler Icons](https://tabler.io/icons) icon set of handmatig geïmplementeerd door contributors van de Rijkshuisstijl Community. Om een icon die hieronder staat te gebruiken, kan de icon ID toegewezen worden aan de `icon` property van de [Icon](?path=/docs/rhc-icon--docs) component. Er kunnen eigen iconen worden toegevoegd aan de standaard iconen set, zie hiervoor de instructies op de [storybook pagina van de Icon component](?path=/docs/rhc-icon--docs).

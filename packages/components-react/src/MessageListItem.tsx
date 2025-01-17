@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import { forwardRef, HTMLAttributes, ReactNode } from 'react';
 import { DotBadge } from './DotBadge';
+import { Icon } from './Icon';
 import { Paragraph } from './Paragraph';
-import { Icon } from './icon/Icon';
 
 export interface MessageListItemProps extends HTMLAttributes<HTMLLIElement> {
   label: ReactNode;

@@ -1,7 +1,7 @@
 import { Button, Link } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { Alert } from './Alert';
-import { Icon } from './icon/Icon';
+import { Icon } from './Icon';
 
 interface FileProps {
   file: File;

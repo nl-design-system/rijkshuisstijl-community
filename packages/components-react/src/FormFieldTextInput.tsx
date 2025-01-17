@@ -4,7 +4,7 @@ import {
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, useId } from 'react';
-import { Icon } from './icon/Icon';
+import { Icon } from './Icon';
 
 export { type FormFieldTextInputProps };
 
