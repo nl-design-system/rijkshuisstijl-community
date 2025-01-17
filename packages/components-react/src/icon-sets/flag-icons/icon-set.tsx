@@ -3,7 +3,7 @@ import { BGFlagIcon } from './BGFlagIcon';
 import { DEFlagIcon } from './DEFlagIcon';
 import { ESFlagIcon } from './ESFlagIcon';
 import { FRFlagIcon } from './FRFlagIcon';
-import { flagIconIDs } from './FlagIconIDs';
+import { FlagIconIDs } from './FlagIconIDs';
 import { GRFlagIcon } from './GRFlagIcon';
 import { HUFlagIcon } from './HUFlagIcon';
 import { ITFlagIcon } from './ITFlagIcon';
@@ -15,7 +15,7 @@ import { ROFlagIcon } from './ROFlagIcon';
 import { SKFlagIcon } from './SKFlagIcon';
 import { UKFlagIcon } from './UKFlagIcon';
 
-export const iconSet: Partial<Record<flagIconIDs, ReactNode>> = {
+export const iconSet: Partial<Record<FlagIconIDs, ReactNode>> = {
   'bg-flag': <BGFlagIcon />,
   'de-flag': <DEFlagIcon />,
   'es-flag': <ESFlagIcon />,
@@ -30,4 +30,4 @@ export const iconSet: Partial<Record<flagIconIDs, ReactNode>> = {
   'ro-flag': <ROFlagIcon />,
   'sk-flag': <SKFlagIcon />,
   'uk-flag': <UKFlagIcon />,
-};
+} as const;

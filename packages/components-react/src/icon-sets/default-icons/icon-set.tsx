@@ -87,4 +87,4 @@ export const iconSet: Partial<Record<RHCIconID, ReactNode>> = {
   vinkje: <TablerIcons.IconCheck />,
   vraagteken: <TablerIcons.IconQuestionMark />,
   zoek: <TablerIcons.IconSearch />,
-};
+} as const;
