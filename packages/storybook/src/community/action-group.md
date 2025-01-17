@@ -22,7 +22,6 @@ import { ActionGroup } from '@rijkshuisstijl-community/components-react';
   <Button appearance="primary-action-button" key="primary-action-button">
     Save and continue
   </Button>
-  ,
   <Button appearance="secondary-action-button" key="secondary-action-button">
     Back
   </Button>
