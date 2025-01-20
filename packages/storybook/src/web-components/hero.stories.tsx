@@ -1,5 +1,7 @@
 import { HeroWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
+import readme from '../community/hero.md?raw';
 
 HeroWebComponent.define();
 
@@ -110,9 +112,13 @@ const meta = {
     },
     docs: {
       description: {
-        component: 'Hero',
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add GitHub issue and NL DesignSystem links
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=15708-524&node-type=canvas&t=fXG4KjJRXbo2PG2J-0',
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } as Meta<typeof HeroWebComponent>;
 
