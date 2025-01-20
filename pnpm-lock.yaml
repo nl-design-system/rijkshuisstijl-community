@@ -20,7 +20,7 @@ importers:
     devDependencies:
       '@lerna-lite/cli':
         specifier: 3.11.0
-        version: 3.11.0(@lerna-lite/publish@3.11.0(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.11.0(@lerna-lite/publish@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/version@3.11.0(@lerna-lite/publish@3.11.0(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.11.0(@lerna-lite/publish@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+        version: 3.11.0(@lerna-lite/publish@3.11.0)(@lerna-lite/run@3.11.0)(@lerna-lite/version@3.11.0(@lerna-lite/publish@3.11.0)(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/publish':
         specifier: 3.11.0
         version: 3.11.0(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3)
@@ -88,8 +88,8 @@ importers:
         specifier: 16.13.2
         version: 16.13.2(typescript@5.7.3)
       stylelint-config-standard-scss:
-        specifier: 13.1.0
-        version: 13.1.0(postcss@8.5.1)(stylelint@16.13.2(typescript@5.7.3))
+        specifier: 14.0.0
+        version: 14.0.0(postcss@8.5.1)(stylelint@16.13.2(typescript@5.7.3))
       stylelint-order:
         specifier: 6.0.4
         version: 6.0.4(stylelint@16.13.2(typescript@5.7.3))
@@ -5064,10 +5064,6 @@ packages:
     resolution: {integrity: sha512-tRpdppF7TRazZrjJ6v3stzv93qxRcSsFmW6cX0Zm2NVKpxE1WV1HblnghVv9TreireHkqI/VDEsfolRF1p6y7Q==}
     engines: {node: '>=8.0.0'}
 
-  css-tree@3.0.1:
-    resolution: {integrity: sha512-8Fxxv+tGhORlshCdCwnNJytvlvq46sOLSYEx2ZIGurahWvMucSRnyjPA3AmrMq4VPRYbHVpWj5VkiVasrM2H4Q==}
-    engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0}
-
   css-tree@3.1.0:
     resolution: {integrity: sha512-0eW44TGN5SQXU1mWSkKwFstI/22X2bG1nYzZTYMAWjylYURhse752YgbE4Cx46AC+bAvI+/dYTPRk1LqSUnu6w==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0}
@@ -7411,9 +7407,6 @@ packages:
   mdn-data@2.0.14:
     resolution: {integrity: sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==}
 
-  mdn-data@2.12.1:
-    resolution: {integrity: sha512-rsfnCbOHjqrhWxwt5/wtSLzpoKTzW7OXdT5lLOIH1OTYhWu9rRJveGq0sKvDZODABH7RX+uoR+DYcpFnq4Tf6Q==}
-
   mdn-data@2.12.2:
     resolution: {integrity: sha512-IEn+pegP1aManZuckezWCO+XZQDplx1366JoVhTpMpBB1sPey/SbveZQUosKiKiGYjg1wH4pMlNgXbCiYgihQA==}
 
@@ -9440,12 +9433,12 @@ packages:
     peerDependencies:
       stylelint: ^16.1.0
 
-  stylelint-config-standard-scss@13.1.0:
-    resolution: {integrity: sha512-Eo5w7/XvwGHWkeGLtdm2FZLOMYoZl1omP2/jgFCXyl2x5yNz7/8vv4Tj6slHvMSSUNTaGoam/GAZ0ZhukvalfA==}
+  stylelint-config-standard-scss@14.0.0:
+    resolution: {integrity: sha512-6Pa26D9mHyi4LauJ83ls3ELqCglU6VfCXchovbEqQUiEkezvKdv6VgsIoMy58i00c854wVmOw0k8W5FTpuaVqg==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
       postcss: ^8.3.3
-      stylelint: ^16.3.1
+      stylelint: ^16.11.0
     peerDependenciesMeta:
       postcss:
         optional: true
@@ -11820,7 +11813,7 @@ snapshots:
     dependencies:
       buffer: 6.0.3
 
-  '@lerna-lite/cli@3.11.0(@lerna-lite/publish@3.11.0(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.11.0(@lerna-lite/publish@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/version@3.11.0(@lerna-lite/publish@3.11.0(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.11.0(@lerna-lite/publish@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)':
+  '@lerna-lite/cli@3.11.0(@lerna-lite/publish@3.11.0)(@lerna-lite/run@3.11.0)(@lerna-lite/version@3.11.0(@lerna-lite/publish@3.11.0)(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)':
     dependencies:
       '@lerna-lite/core': 3.11.0(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/init': 3.11.0(@types/node@20.17.6)(typescript@5.7.3)
@@ -11833,7 +11826,7 @@ snapshots:
     optionalDependencies:
       '@lerna-lite/publish': 3.11.0(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/run': 3.11.0(@lerna-lite/publish@3.11.0)(@types/node@20.17.6)(typescript@5.7.3)
-      '@lerna-lite/version': 3.11.0(@lerna-lite/publish@3.11.0(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.11.0(@lerna-lite/publish@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+      '@lerna-lite/version': 3.11.0(@lerna-lite/publish@3.11.0)(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -11919,10 +11912,10 @@ snapshots:
 
   '@lerna-lite/publish@3.11.0(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3)':
     dependencies:
-      '@lerna-lite/cli': 3.11.0(@lerna-lite/publish@3.11.0(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.11.0(@lerna-lite/publish@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/version@3.11.0(@lerna-lite/publish@3.11.0(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.11.0(@lerna-lite/publish@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+      '@lerna-lite/cli': 3.11.0(@lerna-lite/publish@3.11.0)(@lerna-lite/run@3.11.0)(@lerna-lite/version@3.11.0(@lerna-lite/publish@3.11.0)(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/core': 3.11.0(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/npmlog': 3.11.0
-      '@lerna-lite/version': 3.11.0(@lerna-lite/publish@3.11.0(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.11.0(@lerna-lite/publish@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+      '@lerna-lite/version': 3.11.0(@lerna-lite/publish@3.11.0)(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3)
       '@npmcli/arborist': 7.5.4
       '@npmcli/package-json': 5.2.1
       byte-size: 9.0.1
@@ -11958,7 +11951,7 @@ snapshots:
 
   '@lerna-lite/run@3.11.0(@lerna-lite/publish@3.11.0)(@types/node@20.17.6)(typescript@5.7.3)':
     dependencies:
-      '@lerna-lite/cli': 3.11.0(@lerna-lite/publish@3.11.0(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.11.0(@lerna-lite/publish@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/version@3.11.0(@lerna-lite/publish@3.11.0(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.11.0(@lerna-lite/publish@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+      '@lerna-lite/cli': 3.11.0(@lerna-lite/publish@3.11.0)(@lerna-lite/run@3.11.0)(@lerna-lite/version@3.11.0(@lerna-lite/publish@3.11.0)(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/core': 3.11.0(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/npmlog': 3.11.0
       '@lerna-lite/profiler': 3.11.0(@types/node@20.17.6)(typescript@5.7.3)
@@ -11977,9 +11970,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/version@3.11.0(@lerna-lite/publish@3.11.0(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.11.0(@lerna-lite/publish@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)':
+  '@lerna-lite/version@3.11.0(@lerna-lite/publish@3.11.0)(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3)':
     dependencies:
-      '@lerna-lite/cli': 3.11.0(@lerna-lite/publish@3.11.0(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.11.0(@lerna-lite/publish@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/version@3.11.0(@lerna-lite/publish@3.11.0(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.11.0(@lerna-lite/publish@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+      '@lerna-lite/cli': 3.11.0(@lerna-lite/publish@3.11.0)(@lerna-lite/run@3.11.0)(@lerna-lite/version@3.11.0(@lerna-lite/publish@3.11.0)(@lerna-lite/run@3.11.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/core': 3.11.0(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/npmlog': 3.11.0
       '@octokit/plugin-enterprise-rest': 6.0.1
@@ -15463,11 +15456,6 @@ snapshots:
       mdn-data: 2.0.14
       source-map: 0.6.1
 
-  css-tree@3.0.1:
-    dependencies:
-      mdn-data: 2.12.1
-      source-map-js: 1.2.1
-
   css-tree@3.1.0:
     dependencies:
       mdn-data: 2.12.2
@@ -16110,7 +16098,7 @@ snapshots:
       '@typescript-eslint/parser': 8.20.0(eslint@9.18.0)(typescript@5.7.3)
       eslint: 9.18.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint@9.18.0))(eslint@9.18.0)
+      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0)(eslint@9.18.0)
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-typescript@3.6.3)(eslint@9.18.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.18.0)
       eslint-plugin-react: 7.37.4(eslint@9.18.0)
@@ -16134,13 +16122,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint@9.18.0))(eslint@9.18.0):
+  eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0)(eslint@9.18.0):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.3.7
       enhanced-resolve: 5.17.1
       eslint: 9.18.0
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint@9.18.0))(eslint@9.18.0))(eslint@9.18.0)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.18.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.8.1
       is-bun-module: 1.2.1
@@ -16184,14 +16172,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint@9.18.0))(eslint@9.18.0))(eslint@9.18.0):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.18.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.20.0(eslint@9.18.0)(typescript@5.7.3)
       eslint: 9.18.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint@9.18.0))(eslint@9.18.0)
+      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0)(eslint@9.18.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -16235,7 +16223,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.18.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint@9.18.0))(eslint@9.18.0))(eslint@9.18.0)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.18.0)
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
@@ -18747,8 +18735,6 @@ snapshots:
       '@types/mdast': 4.0.4
 
   mdn-data@2.0.14: {}
-
-  mdn-data@2.12.1: {}
 
   mdn-data@2.12.2: {}
 
@@ -21263,7 +21249,7 @@ snapshots:
     dependencies:
       stylelint: 16.13.2(typescript@5.7.3)
 
-  stylelint-config-standard-scss@13.1.0(postcss@8.5.1)(stylelint@16.13.2(typescript@5.7.3)):
+  stylelint-config-standard-scss@14.0.0(postcss@8.5.1)(stylelint@16.13.2(typescript@5.7.3)):
     dependencies:
       stylelint: 16.13.2(typescript@5.7.3)
       stylelint-config-recommended-scss: 14.1.0(postcss@8.5.1)(stylelint@16.13.2(typescript@5.7.3))
@@ -21284,7 +21270,7 @@ snapshots:
 
   stylelint-scss@6.8.1(stylelint@16.13.2(typescript@5.7.3)):
     dependencies:
-      css-tree: 3.0.1
+      css-tree: 3.1.0
       is-plain-object: 5.0.0
       known-css-properties: 0.34.0
       mdn-data: 2.12.2
