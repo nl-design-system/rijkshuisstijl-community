@@ -1,17 +1,23 @@
-import { ActionGroup, Button } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react/*';
-import readme from './action-group.md?raw';
+import { Button } from '@rijkshuisstijl-community/components-react';
+import { ActionGroupWebComponent } from '@rijkshuisstijl-community/web-components';
+import type { Meta, StoryObj } from '@storybook/web-components';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
+import readme from '../community/action-group.md?raw';
+
+ActionGroupWebComponent.define();
 
 const meta = {
-  title: 'Rijkshuisstijl/ActionGroup',
-  id: 'rhc-action-group',
-  component: ActionGroup,
+  title: 'Web Components/Action Group',
+  id: 'rhc-action-group-web',
+  component: 'rhc-action-group',
   argTypes: {
     direction: {
       description: 'Layout of the action group',
       control: 'select',
       options: ['column', 'row'],
+      table: {
+        defaultValue: { summary: 'row' },
+      },
     },
   },
   tags: ['autodocs'],
@@ -21,24 +27,19 @@ const meta = {
     },
     docs: {
       description: {
-        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source. Use our own documentation to correctly show its name as "Action Group" instead of "Button Group"
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
         component: mergeMarkdown([readme]),
       },
     },
-    nldesignsystem: 'https://www.nldesignsystem.nl/action-group/',
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/479',
-    figma:
-      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=4626-10492&p=f&t=MHYw4lXBHCryrwek-0',
+    // TODO: add Figma, GitHub and NL DesignSystem links
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht (daar heeft het de naam ButtonGroup), met styling van de Rijkshuisstijl Community.',
   },
-} as Meta<typeof ActionGroup>;
+} as Meta<typeof ActionGroupWebComponent>;
 
 export default meta;
 
-type Story = StoryObj<typeof ActionGroup>;
-
-export const Row: Story = {
+export const Default = {
   args: {
     children: [
       <Button appearance="primary-action-button" key="primary-action-button">
@@ -48,10 +49,11 @@ export const Row: Story = {
         Back
       </Button>,
     ],
+    direction: 'row',
   },
-};
+} as StoryObj<typeof meta>;
 
-export const Column: Story = {
+export const Column = {
   args: {
     direction: 'column',
     children: [
@@ -64,4 +66,4 @@ export const Column: Story = {
     ],
   },
   name: 'Column',
-};
+} as StoryObj<typeof meta>;
