@@ -27,7 +27,7 @@ export const SKFlagIcon = () => (
       fill="#fff"
     />
     <path
-      clip-path="url(#c)"
+      clipPath="url(#c)"
       d="m2463 5903a507 867 0 1 1 319-1541 584 1084 0 0 1 916 0 507 867 0 1 1 319 1541z"
       fill="#0b4ea2"
     />

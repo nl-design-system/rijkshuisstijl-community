@@ -1,7 +1,7 @@
 import { Icon, registerIconSet } from '@rijkshuisstijl-community/components-react';
 import { iconSet } from '@rijkshuisstijl-community/components-react/src/icon-sets/flag-icons/icon-set';
 import { PageBody } from '@utrecht/page-body-react';
-import './index.css';
+import '../index.css';
 
 registerIconSet(iconSet);
 
