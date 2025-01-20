@@ -32,9 +32,9 @@ import { Icon, registerIconSet } from from '@rijkshuisstijl-community/components
 import { MijnEigenIcon, NogEenIcon, EnEenDerdeIcon } from 'mijn-icon-package';
 
 registerIconSet({
-  'mijn-eigen-icon': MijnEigenIcon,
-  'nog-een-icon': NogEenIcon,
-  'en-een-derde-icon': EnEenDerdeIcon,
+  'mijn-eigen-icon': <MijnEigenIcon />,
+  'nog-een-icon': <NogEenIcon />,
+  'en-een-derde-icon': <EnEenDerdeIcon />,
 });
 
 <Icon icon="mijn-eigen-icon" />

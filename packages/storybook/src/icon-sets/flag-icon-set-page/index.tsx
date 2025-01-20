@@ -1,4 +1,4 @@
-import { Icon, registerIconSet } from '@rijkshuisstijl-community/components-react';
+import { Heading, Icon, registerIconSet } from '@rijkshuisstijl-community/components-react';
 import { iconSet } from '@rijkshuisstijl-community/components-react/src/icon-sets/flag-icons/icon-set';
 import { PageBody } from '@utrecht/page-body-react';
 import '../index.css';
@@ -6,6 +6,8 @@ import '../index.css';
 registerIconSet(iconSet);
 
 export default function IconSet() {
+  const countryCodeConverter = new Intl.DisplayNames(['nl'], { type: 'region' });
+
   return (
     <PageBody>
       <div className="rhc-icon-set">
@@ -13,6 +15,9 @@ export default function IconSet() {
           .sort((a, b) => a.localeCompare(b))
           .map((iconID) => (
             <div className="rhc-icon-set-item" key={iconID}>
+              <Heading appearance="utrecht-heading-5" level={1}>
+                {countryCodeConverter.of(iconID.substring(0, 2).toUpperCase())}
+              </Heading>
               <Icon icon={iconID}></Icon>
               <span>{iconID}</span>
             </div>
