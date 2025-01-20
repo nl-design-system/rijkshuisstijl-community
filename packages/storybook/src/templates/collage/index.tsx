@@ -34,6 +34,7 @@ import {
   TableHeaderCell,
   TableRow,
   TextInput,
+  Toggletip,
   UnorderedList,
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
@@ -182,6 +183,10 @@ export default function Collage() {
                       <DataListValue>Value</DataListValue>
                     </DataListItem>
                   </DataList> */}
+                  <div>
+                    Toggletip component:
+                    <Toggletip>Hier zou een korte introductie kunnen staan.</Toggletip>
+                  </div>
                   <div>
                     <Alert
                       heading="Heading"

@@ -10,7 +10,7 @@ export interface ToggletipProps extends DetailsHTMLAttributes<HTMLDetailsElement
 const ToggletipContent = forwardRef(({ children }: { children: ReactNode }, ref: ForwardedRef<HTMLDivElement>) => {
   return (
     <div className="rhc-toggletip__content" ref={ref}>
-      <Alert type="info">{children}</Alert>
+      <Alert textContent={children} type="info"></Alert>
     </div>
   );
 });
