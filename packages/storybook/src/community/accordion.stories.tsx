@@ -3,6 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/accordion/README.md?raw';
 import { UtrechtIconChevronDown } from '@utrecht/web-component-library-react';
 import { ReactNode } from 'react';
+import usageDocs from './accordion-usage.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface AccordionStoryProps {
@@ -79,10 +80,13 @@ const meta = {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
-        component: mergeMarkdown([readme]),
+        component: mergeMarkdown([readme, usageDocs]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/456',
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1261-4784&p=f&t=SHnEVcZMmxKnZVS8-0',
+    nldesignsystem: 'https://www.nldesignsystem.nl/accordion/',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
   },
