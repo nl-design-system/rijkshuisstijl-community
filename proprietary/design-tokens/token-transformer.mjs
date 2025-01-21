@@ -1,49 +1,85 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { dirname } from 'node:path';
+import { existsSync, mkdirSync } from 'fs';
+import { readFile, writeFile } from 'node:fs/promises';
 
 import { transformTokens } from 'token-transformer';
 
-const init = async ({ input, output }) => {
-  const json = await readFile(input, 'utf-8');
-  const rawTokens = JSON.parse(json);
-
-  const setsToUse = [];
-
-  // The following components didn't work yet because of broken design token references.
-  // You can remove excludes from this list at any time, as long as they don't break the build.
-  const excludes = [
-    'components/avatar',
-    'components/backdrop',
-    'components/drawer',
-    'components/form-field-option-label',
-    'components/modal-dialog',
-    'components/pagination',
-    'components/status-badge',
-    'components/summary-list',
-    'components/task-list',
-    'components/toolbar-button',
-  ];
-
-  const transformerOptions = {
-    // expandTypography: true,
-    // expandShadow: true,
-    // expandComposition: true,
-    // expandBorder: true,
-    // preserveRawValue: false,
-    // throwErrorWhenNotResolved: true,
-    // resolveReferences: true,
-  };
-
-  let resolved = transformTokens(rawTokens, setsToUse, excludes, transformerOptions);
-
-  delete resolved['tokenSetOrder'];
-
-  await mkdir(dirname(output), { recursive: true });
-
-  await writeFile(output, JSON.stringify(resolved, null, 2));
+// the commented options and their values are default values from the token-transformer package
+const transformerOptions = {
+  // expandTypography: true,
+  // expandShadow: true,
+  // expandComposition: true,
+  // expandBorder: true,
+  // preserveRawValue: false,
+  // throwErrorWhenNotResolved: true,
+  // Tried to set this to false, it worked in principle but there were breaking in the styles especially with spacing. I think it's better to keep it true
+  // resolveReferences: true,
 };
 
-init({
-  input: './figma/figma.tokens.json',
-  output: './src/generated/figma.tokens.json',
-});
+const excludes = [
+  'components/avatar',
+  'components/backdrop',
+  'components/drawer',
+  'components/form-field-option-label',
+  'components/modal-dialog',
+  'components/pagination',
+  'components/status-badge',
+  'components/summary-list',
+  'components/task-list',
+  'components/toolbar-button',
+];
+
+// Split tokens into separate files
+async function transformAndSplitTokens() {
+  // Read the raw JSON file directly
+  const json = await readFile('./figma/figma.tokens.json', 'utf-8');
+  const tokens = JSON.parse(json);
+
+  // Extract base tokens (excluding $themes and overwrites/)
+  // Not sure if other designers might not be able to modify the themes created by paid plugin so getting the base tokens is a good fallback
+  const baseTokens = {};
+  Object.entries(tokens).forEach(([key, value]) => {
+    if (!key.startsWith('$') && !key.startsWith('overwrites/')) {
+      baseTokens[key] = value;
+    }
+  });
+
+  // Transform base tokens
+  let resolved = transformTokens(baseTokens, [], excludes, transformerOptions);
+  delete resolved['tokenSetOrder'];
+
+  // Process themes to add the enabled components
+  const themes = tokens.$themes || [];
+  const processedThemes = {};
+
+  themes.forEach((theme) => {
+    const themeTokens = {};
+
+    Object.entries(theme.selectedTokenSets).forEach(([tokenSet, status]) => {
+      if (status === 'enabled') {
+        if (tokens[tokenSet]) {
+          themeTokens[tokenSet] = tokens[tokenSet];
+        }
+      }
+    });
+
+    // Transform the theme tokens
+    const transformedThemeTokens = transformTokens(themeTokens, [], excludes, transformerOptions);
+
+    processedThemes[theme.name] = {
+      id: theme.id,
+      tokens: transformedThemeTokens,
+      group: theme.group,
+    };
+  });
+
+  // Ensure directories exist
+  if (!existsSync('./src/generated')) {
+    mkdirSync('./src/generated', { recursive: true });
+  }
+
+  // Write files
+  await writeFile('./src/generated/base.tokens.json', JSON.stringify(resolved, null, 2));
+  await writeFile('./src/generated/themes.json', JSON.stringify(processedThemes, null, 2));
+}
+
+transformAndSplitTokens();
