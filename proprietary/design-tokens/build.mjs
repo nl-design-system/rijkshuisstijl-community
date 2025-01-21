@@ -3,6 +3,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import path from 'path';
 import StyleDictionary from 'style-dictionary';
 
+// Will take the theme name and remove all spaces and make it lowercase
 const normalizeThemeName = (name) => {
   return name.toLowerCase().replace(/\s+/g, '');
 };
