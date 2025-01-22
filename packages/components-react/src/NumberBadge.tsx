@@ -1,4 +1,1 @@
-export {
-  BadgeCounter as NumberBadge,
-  type BadgeCounterProps as NumberBadgeProps,
-} from '@utrecht/component-library-react';
+export { NumberBadge, type NumberBadgeProps } from '@nl-design-system-candidate/number-badge-react';
