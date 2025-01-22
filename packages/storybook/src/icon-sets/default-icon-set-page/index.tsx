@@ -4,17 +4,17 @@ import { PageBody } from '@utrecht/page-body-react';
 import '../index.css';
 
 export default function IconSet() {
+  const iconIDs = Object.keys(iconSet).sort((a, b) => a.localeCompare(b));
+
   return (
     <PageBody>
       <div className="rhc-icon-set">
-        {Object.keys(iconSet)
-          .sort((a, b) => a.localeCompare(b))
-          .map((iconID) => (
-            <div className="rhc-icon-set-item" key={iconID}>
-              <Icon icon={iconID}></Icon>
-              <span>{iconID}</span>
-            </div>
-          ))}
+        {iconIDs.map((iconID) => (
+          <div className="rhc-icon-set-item" key={iconID}>
+            <Icon icon={iconID}></Icon>
+            <span>{iconID}</span>
+          </div>
+        ))}
       </div>
     </PageBody>
   );

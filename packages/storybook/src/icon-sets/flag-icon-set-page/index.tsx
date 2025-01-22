@@ -7,21 +7,20 @@ registerIconSet(iconSet);
 
 export default function IconSet() {
   const countryCodeConverter = new Intl.DisplayNames(['nl'], { type: 'region' });
+  const iconIDs = Object.keys(iconSet).sort((a, b) => a.localeCompare(b));
 
   return (
     <PageBody>
       <div className="rhc-icon-set">
-        {Object.keys(iconSet)
-          .sort((a, b) => a.localeCompare(b))
-          .map((iconID) => (
-            <div className="rhc-icon-set-item" key={iconID}>
-              <Heading appearance="utrecht-heading-5" level={1}>
-                {countryCodeConverter.of(iconID.substring(0, 2).toUpperCase())}
-              </Heading>
-              <Icon icon={iconID}></Icon>
-              <span>{iconID}</span>
-            </div>
-          ))}
+        {iconIDs.map((iconID) => (
+          <div className="rhc-icon-set-item" key={iconID}>
+            <Heading appearance="utrecht-heading-5" level={1}>
+              {countryCodeConverter.of(iconID.substring(0, 2).toUpperCase())}
+            </Heading>
+            <Icon icon={iconID}></Icon>
+            <span>{iconID}</span>
+          </div>
+        ))}
       </div>
     </PageBody>
   );
