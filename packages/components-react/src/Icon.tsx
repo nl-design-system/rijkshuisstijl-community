@@ -14,7 +14,12 @@ export const getIconSet = () => ({ ...iconSet });
 export { type RHCIconID };
 
 export interface IconProps extends UtrechtIconProps {
-  icon?: RHCIconID | string;
+  /**
+   * The icon ID of the icon to display.
+   * The type of this property is a string, because a number of icon sets can be registered with any possible icon ID.
+   * This property can be kept undefined if a custom icon is instead passed as a child.
+   */
+  icon?: string;
 }
 
 export const Icon = forwardRef(
