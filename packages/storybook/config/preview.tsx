@@ -106,7 +106,7 @@ const preview: Preview = {
             <Description />
             <Primary />
             <Controls />
-            <Stories />
+            {!storyParameters?.isPage && <Stories />}
           </>
         );
       },

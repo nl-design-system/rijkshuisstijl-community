@@ -1,5 +1,5 @@
 import {
-  iconOptions,
+  getIconSet,
   NavigationList,
   NavigationListItem,
   NavigationListItemProps,
@@ -41,7 +41,7 @@ const meta = {
       control: {
         type: 'select',
       },
-      options: [...iconOptions],
+      options: Object.keys(getIconSet()),
     },
     label: {
       control: {
