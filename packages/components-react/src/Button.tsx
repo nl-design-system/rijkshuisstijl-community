@@ -9,8 +9,8 @@ import {
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
-import { Icon } from './icon/Icon';
-import { RijkshuisstijlIconID } from './icon/IconTypes';
+import { Icon } from './Icon';
+import { RHCIconID } from './icon-sets/default-icons/RHCIconIDs';
 
 export {
   Button,
@@ -23,7 +23,7 @@ export {
 };
 
 export interface IconButtonProps extends ButtonProps {
-  icon?: RijkshuisstijlIconID;
+  icon?: RHCIconID;
 }
 
 export const IconButton = forwardRef(

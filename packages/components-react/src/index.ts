@@ -73,7 +73,7 @@ export { FormFieldTextarea, type FormFieldTextareaProps } from './FormFieldTexta
 export { Heading, type HeadingProps } from './Heading';
 export { HeadingGroup, type HeadingGroupProps } from './HeadingGroup';
 export { Hero, type HeroProps } from './Hero';
-export { Icon, type IconProps, iconOptions } from './icon/Icon';
+export { Icon, type IconProps, type RHCIconID, getIconSet, registerIconSet } from './Icon';
 export { Image, type ImageProps } from './Image';
 export { Link, type LinkProps } from './Link';
 export { LinkList, LinkListLink, type LinkListLinkProps, type LinkListProps } from './LinkList';
