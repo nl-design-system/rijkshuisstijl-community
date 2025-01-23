@@ -165,7 +165,7 @@ export default function Form() {
       </PageBody>
       <Footer
         appearanceLevel={4}
-        heading="De Rijksoverheid. Voor Nederland"
+        heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         columns={[
           {
             heading: 'Service',
@@ -200,7 +200,7 @@ export default function Form() {
             children: (
               <LinkList key="2">
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Over Rijksoverheid.nl
+                  Over deze organisatie
                 </LinkListLink>
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Wetten en regelingen

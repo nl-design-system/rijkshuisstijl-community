@@ -39,7 +39,7 @@ type Story = StoryObj<typeof meta>;
 
 export const DefaultFooter: Story = {
   args: {
-    heading: 'De Rijksoverheid. Voor Nederland',
+    heading: 'Footer heading',
     appearanceLevel: 1,
     background: 'primary-filled',
     columns: [
@@ -78,7 +78,7 @@ export const DefaultFooter: Story = {
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              Over Rijksoverheid.nl
+              Over deze organisatie
             </LinkListLink>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
               Wetten en regelingen

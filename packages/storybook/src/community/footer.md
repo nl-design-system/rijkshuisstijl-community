@@ -22,5 +22,5 @@ columns={[
       heading: 'Service'
     }
   ]}
-  heading="De Rijksoverheid. Voor Nederland"
+  heading="Footer heading"
 ```
