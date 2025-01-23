@@ -120,11 +120,11 @@ import '@rijkshuisstijl-community/font/src/index.mjs';
 
 **_Logo_**
 
-Je kunt het icoon met id `nederland-map` gebruiken.
+Omdat buiten officiële Rijksoverheids-media het logo van de Rijksoverheid niet mag worden gebruik, wordt binnen dit project standaard het icoon met id `nederland-map` gebruiken, met een witte achtergrond.
 
 **_Icons_**
 
-TODO
+Binnen dit project zijn de iconen standaard afkomstig uit de open source [Tabler Icons](https://tabler.io/icons) icon set of handmatig geïmplementeerd door contributors van de Rijkshuisstijl Community. Er kunnen eigen iconen worden toegevoegd aan de standaard icon set, zie hiervoor instructies op de [storybook pagina van de Icon component](https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-icon--docs).
 
 ## Toestemming
 
