@@ -23,7 +23,7 @@ import {
   PageHeader,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
-import { PageBody } from '@utrecht/page-body-react';
+import { PageBody } from '@utrecht/page-body-react/dist';
 
 export default function Form() {
   return (
@@ -164,7 +164,7 @@ export default function Form() {
         </div>
       </PageBody>
       <Footer
-        appearanceLevel={4}
+        appearanceLevel="level-4"
         heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         columns={[
           {

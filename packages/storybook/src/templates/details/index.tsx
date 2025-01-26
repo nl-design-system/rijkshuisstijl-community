@@ -15,8 +15,8 @@ import {
   Separator,
   SubNavBar,
 } from '@rijkshuisstijl-community/components-react';
-import { ColumnLayout } from '@utrecht/component-library-react';
-import { PageBody } from '@utrecht/page-body-react';
+import { ColumnLayout } from '@utrecht/component-library-react/dist';
+import { PageBody } from '@utrecht/page-body-react/dist';
 
 export default function Details() {
   return (
@@ -138,7 +138,7 @@ export default function Details() {
         </div>
       </PageBody>
       <Footer
-        appearanceLevel={3}
+        appearanceLevel="level-3"
         heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         columns={[
           {

@@ -18,14 +18,7 @@ const meta = {
     appearance: {
       description: 'Appearance',
       control: { type: 'select' },
-      options: [
-        undefined,
-        'utrecht-heading-1',
-        'utrecht-heading-2',
-        'utrecht-heading-3',
-        'utrecht-heading-4',
-        'utrecht-heading-5',
-      ],
+      options: [undefined, 'level-1', 'level-2', 'level-3', 'level-4', 'level-5'],
     },
   },
   parameters: {
@@ -50,6 +43,7 @@ export const Heading1: StoryObj<typeof meta> = {
   args: {
     level: 1,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+    appearance: 'level-1',
   },
   name: 'Heading 1',
 };
@@ -58,6 +52,7 @@ export const Heading2: StoryObj<typeof meta> = {
   args: {
     level: 2,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+    appearance: 'level-2',
   },
   name: 'Heading 2',
 };
@@ -66,6 +61,7 @@ export const Heading3: StoryObj<typeof meta> = {
   args: {
     level: 3,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+    appearance: 'level-3',
   },
   name: 'Heading 3',
 };
@@ -74,6 +70,7 @@ export const Heading4: StoryObj<typeof meta> = {
   args: {
     level: 4,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+    appearance: 'level-4',
   },
   name: 'Heading 4',
 };
@@ -82,6 +79,7 @@ export const Heading5: StoryObj<typeof meta> = {
   args: {
     level: 5,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+    appearance: 'level-5',
   },
   name: 'Heading 5',
 };

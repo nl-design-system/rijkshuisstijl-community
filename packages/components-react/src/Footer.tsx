@@ -5,25 +5,31 @@ import { Heading } from './Heading';
 
 interface FooterProps extends PageFooterProps {
   heading?: ReactNode;
-  appearanceLevel?: number;
+  appearanceLevel?: 'level-1' | 'level-2' | 'level-3' | 'level-4' | 'level-5' | 'level-6';
   columns?: ColumnProps[];
   background?: 'primary-filled' | 'primary-outlined';
 }
 
 interface ColumnProps {
   heading: ReactNode;
-  appearanceLevel?: number;
+  appearanceLevel?: 'level-1' | 'level-2' | 'level-3' | 'level-4' | 'level-5' | 'level-6';
   children: ReactNode;
 }
 
-const MAX_APPEARANCE_HEADING_LEVEL = 6;
+const MAX_APPEARANCE_LEVEL = 'level-6' as const;
+
+const getValidAppearanceLevel = (level: 'level-1' | 'level-2' | 'level-3' | 'level-4' | 'level-5' | 'level-6') => {
+  const levelNumber = parseInt(level.replace('level-', ''), 2);
+  const maxNumber = parseInt(MAX_APPEARANCE_LEVEL.replace('level-', ''), 2);
+  return levelNumber > maxNumber ? MAX_APPEARANCE_LEVEL : level;
+};
 
 export const Footer = forwardRef(
   (
     {
       className,
       heading,
-      appearanceLevel = 2,
+      appearanceLevel = 'level-2',
       columns,
       children,
       background,
@@ -43,10 +49,7 @@ export const Footer = forwardRef(
       <div className="rhc-page-footer__content">
         {heading && (
           <div className="rhc-page-footer__title" key={'heading'}>
-            <Heading
-              appearance={`utrecht-heading-${appearanceLevel >= MAX_APPEARANCE_HEADING_LEVEL ? MAX_APPEARANCE_HEADING_LEVEL : appearanceLevel}`}
-              level={2}
-            >
+            <Heading appearance={getValidAppearanceLevel(appearanceLevel)} level={heading ? 2 : 3}>
               {heading}
             </Heading>
           </div>
@@ -54,14 +57,11 @@ export const Footer = forwardRef(
         <ColumnLayout>
           {columns?.map(
             (
-              { heading: columnHeading, appearanceLevel: columnAppearanceLevel = 3, children }: ColumnProps,
+              { heading: columnHeading, appearanceLevel: columnAppearanceLevel = 'level-3', children }: ColumnProps,
               index: number,
             ) => (
               <div className="rhc-page-footer__section" key={index}>
-                <Heading
-                  appearance={`utrecht-heading-${columnAppearanceLevel >= MAX_APPEARANCE_HEADING_LEVEL ? MAX_APPEARANCE_HEADING_LEVEL : columnAppearanceLevel}`}
-                  level={heading ? 3 : 2}
-                >
+                <Heading appearance={getValidAppearanceLevel(columnAppearanceLevel)} level={heading ? 3 : 2}>
                   {columnHeading}
                 </Heading>
                 {children}

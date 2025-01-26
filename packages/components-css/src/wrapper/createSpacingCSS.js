@@ -25,17 +25,23 @@ const getSpacings = (spacingMatrix) => {
     })
     .filter((arr) => arr.length);
 };
-
+const prefixMap = spacingMatrix.map(({ prefix }) => prefix);
 const getSpacingMixins = (components) =>
-  components.map((mixinGroup) => {
+  components.map((mixinGroup, index) => {
     const componentName = mixinGroup[0].component;
-
-    const mixins = mixinGroup.map(
-      ({ component, sibling, spacing }) =>
-        `.${component}:has(+ .${sibling}) {
-  --${component}-margin-block-end: var(--utrecht-rich-text-${spacing}-margin-block-end);
-}`,
-    );
+    const prefix = prefixMap[index];
+    console.log(prefix);
+    const mixins = mixinGroup.map(({ component, sibling, spacing }) => {
+      if (component.includes('heading')) {
+        return `.${component}:has(+ .${sibling}) {
+  --${prefix}-margin-block-end: var(--utrecht-rich-text-${spacing}-margin-block-end);
+}`;
+      } else {
+        return `.${component}:has(+ .${sibling}) {
+  --${componentName}-margin-block-end: var(--utrecht-rich-text-${spacing}-margin-block-end);
+}`;
+      }
+    });
     return `@mixin ${componentName} {
   .${componentName}:first-child {
     --${componentName}-margin-block-start: 0;
