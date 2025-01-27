@@ -47,7 +47,7 @@ export default OrderedList;
 
 export const TwigOrderedList1: StoryObj<typeof OrderedList> = {
   args: {
-    type: 'a',
+    type: '1',
     reversed: false,
     start: 1,
     children: [
@@ -57,4 +57,18 @@ export const TwigOrderedList1: StoryObj<typeof OrderedList> = {
     ],
   },
   name: 'Default ordered list',
+};
+
+export const TwigOrderedList2: StoryObj<typeof OrderedList> = {
+  args: {
+    type: 'a',
+    reversed: false,
+    start: 1,
+    children: [
+      '<li class="utrecht-ordered-list__item">Item 1</li>',
+      '<li class="utrecht-ordered-list__item">Item 2</li>',
+      '<li class="utrecht-ordered-list__item">Item 3</li>',
+    ],
+  },
+  name: 'Alphabetical ordered list',
 };

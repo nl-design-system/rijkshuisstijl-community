@@ -1,0 +1,8 @@
+{% from "attributes.twig" import parse_attributes %}
+{% set classes = [
+  'utrecht-ordered-list__item'
+] %}
+{%- set attributes = attributes|default({'class': []})|merge({
+  'class': attributes.class|default(classes),
+}) -%}
+<li{{ parse_attributes(attributes) }}>{{ children }}</li>
