@@ -13,7 +13,13 @@ const customJestConfig = {
   moduleDirectories: ['node_modules', '<rootDir>/'],
   testEnvironment: 'jest-environment-jsdom',
   testPathIgnorePatterns: ['/dist/'],
-  // transformIgnorePatterns: ['node_modules/(?!@utrecht/web-component-library-react)'],
+  moduleNameMapper: {
+    '^@utrecht/component-library-react': '<rootDir>/node_modules/@utrecht/component-library-react/dist/index.d.ts',
+  },
+  transformIgnorePatterns: ['node_modules/(?!@utrecht/component-library-react)'],
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest',
+  },
 };
 
 export default createJestConfig(customJestConfig);
