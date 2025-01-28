@@ -28,9 +28,11 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
-    componentOrigin:
-      'Dit component is overgenomen van de Gemeente Utrecht (daar heeft het de naam BadgeCounter), met alleen overgeschreven design tokens van de Rijkshuisstijl Community.',
+    nldesignsystem: 'https://www.nldesignsystem.nl/number-badge/',
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1233-4274&t=AHS0qWRed9fEffkN-0',
+    github:
+      'https://github.com/orgs/nl-design-system/projects/59/views/1?filterQuery=badge&pane=issue&itemId=81192772&issue=nl-design-system%7Crijkshuisstijl-community%7C681',
   },
 } satisfies Meta<typeof NumberBadge>;
 export default meta;
