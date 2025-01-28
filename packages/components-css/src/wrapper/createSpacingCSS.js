@@ -30,15 +30,21 @@ const getSpacingMixins = (components) =>
   components.map((mixinGroup, index) => {
     const componentName = mixinGroup[0].component;
     const prefix = prefixMap[index];
-
+    console.log(prefix);
     const mixins = mixinGroup.map(({ component, sibling, spacing }) => {
-      return `.${component}:has(+ .${sibling}) {
+      if (component.includes('heading')) {
+        return `.${component}:has(+ .${sibling}) {
   --${prefix}-margin-block-end: var(--utrecht-rich-text-${spacing}-margin-block-end);
 }`;
+      } else {
+        return `.${component}:has(+ .${sibling}) {
+  --${componentName}-margin-block-end: var(--utrecht-rich-text-${spacing}-margin-block-end);
+}`;
+      }
     });
     return `@mixin ${componentName} {
   .${componentName}:first-child {
-    --${prefix}-margin-block-start: 0;
+    --${componentName}-margin-block-start: 0;
   }
  ${mixins.join(';\n')}
 }`;
