@@ -1,22 +1,22 @@
 import { ColumnLayout, PageFooterProps, PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
-import { Heading } from './Heading';
+import { Heading, HeadingProps } from './Heading';
 
 interface FooterProps extends PageFooterProps {
   heading?: ReactNode;
-  appearanceLevel?: 'level-1' | 'level-2' | 'level-3' | 'level-4' | 'level-5' | 'level-6';
+  appearanceLevel?: HeadingProps['appearance'];
   columns?: ColumnProps[];
   background?: 'primary-filled' | 'primary-outlined';
 }
 
 interface ColumnProps {
   heading: ReactNode;
-  appearanceLevel?: 'level-1' | 'level-2' | 'level-3' | 'level-4' | 'level-5' | 'level-6';
+  appearanceLevel?: HeadingProps['appearance'];
   children: ReactNode;
 }
 
-const MAX_APPEARANCE_LEVEL = 'level-6' as const;
+const MAX_APPEARANCE_LEVEL = 'level-6';
 
 const getValidAppearanceLevel = (level: 'level-1' | 'level-2' | 'level-3' | 'level-4' | 'level-5' | 'level-6') => {
   const levelNumber = parseInt(level.replace('level-', ''), 2);
