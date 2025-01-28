@@ -16,37 +16,33 @@ const getSpacings = (spacingMatrix) => {
     .map((spacing) => {
       const entries = Object.entries(spacing);
       const [, component] = entries.shift();
+      const { prefix } = spacing;
       return entries
         .map(([sibling, space]) => {
           const spacing = spaceMap[space];
-          return spacing && { component, sibling, spacing };
+          return spacing && { component, sibling, spacing, prefix };
         })
         .filter(Boolean);
     })
     .filter((arr) => arr.length);
 };
-const prefixMap = spacingMatrix.map(({ prefix }) => prefix);
+
 const getSpacingMixins = (components) =>
-  components.map((mixinGroup, index) => {
+  components.map((mixinGroup) => {
     const componentName = mixinGroup[0].component;
-    const prefix = prefixMap[index];
-    console.log(prefix);
+    const prefix = mixinGroup[0].prefix;
+
     const mixins = mixinGroup.map(({ component, sibling, spacing }) => {
-      if (component.includes('heading')) {
-        return `.${component}:has(+ .${sibling}) {
+      return `.${component}:has(+ .${sibling}) {
   --${prefix}-margin-block-end: var(--utrecht-rich-text-${spacing}-margin-block-end);
 }`;
-      } else {
-        return `.${component}:has(+ .${sibling}) {
-  --${componentName}-margin-block-end: var(--utrecht-rich-text-${spacing}-margin-block-end);
-}`;
-      }
     });
+
     return `@mixin ${componentName} {
   .${componentName}:first-child {
-    --${componentName}-margin-block-start: 0;
+    --${prefix}-margin-block-start: 0;
   }
- ${mixins.join(';\n')}
+  ${mixins.join('\n  ')}
 }`;
   });
 

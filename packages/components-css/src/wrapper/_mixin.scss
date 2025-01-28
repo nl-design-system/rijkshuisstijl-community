@@ -1,6 +1,6 @@
 @mixin nl-heading--level-1 {
   .nl-heading--level-1:first-child {
-    --nl-heading--level-1-margin-block-start: 0;
+    --nl-heading-level-1-margin-block-start: 0;
   }
   .nl-heading--level-1:has(+ .nl-heading--level-2) {
     --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
@@ -59,7 +59,7 @@
 }
 @mixin nl-heading--level-2 {
   .nl-heading--level-2:first-child {
-    --nl-heading--level-2-margin-block-start: 0;
+    --nl-heading-level-2-margin-block-start: 0;
   }
   .nl-heading--level-2:has(+ .nl-heading--level-3) {
     --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
@@ -124,7 +124,7 @@
 }
 @mixin nl-heading--level-3 {
   .nl-heading--level-3:first-child {
-    --nl-heading--level-3-margin-block-start: 0;
+    --nl-heading-level-3-margin-block-start: 0;
   }
   .nl-heading--level-3:has(+ .nl-heading--level-4) {
     --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
@@ -189,7 +189,7 @@
 }
 @mixin nl-heading--level-4 {
   .nl-heading--level-4:first-child {
-    --nl-heading--level-4-margin-block-start: 0;
+    --nl-heading-level-4-margin-block-start: 0;
   }
   .nl-heading--level-4:has(+ .nl-heading--level-5) {
     --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
@@ -254,7 +254,7 @@
 }
 @mixin nl-heading--level-5 {
   .nl-heading--level-5:first-child {
-    --nl-heading--level-5-margin-block-start: 0;
+    --nl-heading-level-5-margin-block-start: 0;
   }
   .nl-heading--level-5:has(+ .nl-heading--level-6) {
     --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
@@ -319,7 +319,7 @@
 }
 @mixin nl-heading--level-6 {
   .nl-heading--level-6:first-child {
-    --nl-heading--level-6-margin-block-start: 0;
+    --nl-heading-level-6-margin-block-start: 0;
   }
   .nl-heading--level-6:has(+ .utrecht-accordion) {
     --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
