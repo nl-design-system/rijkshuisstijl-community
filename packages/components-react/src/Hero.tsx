@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
-import { Heading } from './Heading';
+import { Heading, HeadingLevel } from './Heading';
 import { HeadingGroup } from './HeadingGroup';
 import { Image } from './Image';
 import { Paragraph } from './Paragraph';
@@ -9,7 +9,8 @@ export interface HeroBaseProps extends HTMLAttributes<HTMLDivElement> {
   textAlign?: 'start' | 'end';
   imageSrc: string;
   imageAlt: string;
-  headingLevel?: 1 | 2 | 3 | 4 | 5;
+  headingLevel?: HeadingLevel;
+  headingAppearanceLevel?: HeadingLevel;
   aspectRatio?: '16 / 9' | '1 / 1' | '4 / 3';
   borderRadiusCorner?: 'start-start' | 'start-end' | 'end-start' | 'end-end';
 }
@@ -37,6 +38,7 @@ export const Hero = forwardRef(
       heading,
       subHeading,
       headingLevel = 3,
+      headingAppearanceLevel = 3,
       borderRadiusCorner,
       aspectRatio = '16 / 9',
       ...restProps
@@ -61,7 +63,7 @@ export const Hero = forwardRef(
         {heading && (
           <div className={clsx('rhc-hero__message')}>
             <HeadingGroup>
-              <Heading appearance="utrecht-heading-3" className="rhc-hero__heading" level={headingLevel}>
+              <Heading appearanceLevel={headingAppearanceLevel} className="rhc-hero__heading" level={headingLevel}>
                 {heading}
               </Heading>
               {subHeading && <Paragraph className="rhc-hero__sub-heading">{subHeading}</Paragraph>}

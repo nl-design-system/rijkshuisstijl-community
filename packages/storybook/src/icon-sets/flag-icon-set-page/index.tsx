@@ -14,7 +14,7 @@ export default function IconSet() {
       <div className="rhc-icon-set">
         {iconIDs.map((iconID) => (
           <div className="rhc-icon-set-item" key={iconID}>
-            <Heading appearance="utrecht-heading-5" level={1}>
+            <Heading appearanceLevel={5} level={1}>
               {countryCodeConverter.of(iconID.substring(0, 2).toUpperCase())}
             </Heading>
             <Icon icon={iconID}></Icon>

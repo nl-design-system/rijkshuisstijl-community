@@ -2,7 +2,7 @@ import { Heading as UtrechtHeading, type HeadingProps as UtrechtHeadingProps } f
 import clsx from 'clsx';
 import { PropsWithChildren, Ref } from 'react';
 
-type HeadingLevel = 1 | 2 | 3 | 4 | 5;
+export type HeadingLevel = 1 | 2 | 3 | 4 | 5;
 
 export interface HeadingProps extends Omit<UtrechtHeadingProps, 'appearance'> {
   appearanceLevel?: HeadingLevel;
