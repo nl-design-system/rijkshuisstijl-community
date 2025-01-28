@@ -31,9 +31,11 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
-    componentOrigin:
-      'Dit component is overgenomen van de Gemeente Utrecht, met alleen overgeschreven design tokens van de Rijkshuisstijl Community.',
+    nldesignsystem: 'https://www.nldesignsystem.nl/heading/',
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=153-1039&p=f&t=AHS0qWRed9fEffkN-0',
+    github:
+      'https://github.com/orgs/nl-design-system/projects/59/views/1?filterQuery=heading&pane=issue&itemId=72572695&issue=nl-design-system%7Crijkshuisstijl-community%7C469',
   },
 } satisfies Meta<typeof Heading>;
 
