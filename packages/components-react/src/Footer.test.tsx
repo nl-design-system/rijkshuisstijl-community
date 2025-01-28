@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import { LinkList, LinkListLink } from '@utrecht/component-library-react';
 import { Footer } from './Footer';
 import { Icon } from './Icon';
+import { LinkList, LinkListLink } from './index';
 
 describe('Footer', () => {
   it('renders successfully with required props', () => {

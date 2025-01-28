@@ -1,7 +1,7 @@
 import {
   Blockquote as UtrechtBlockquote,
   BlockquoteProps as UtrechtBlockquoteProps,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 

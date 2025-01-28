@@ -1,7 +1,7 @@
 import {
   FormFieldTextboxProps as FormFieldTextInputProps,
   FormFieldTextbox as UtrechtFormFieldTextInput,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, useId } from 'react';
 import { Icon } from './Icon';

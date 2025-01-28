@@ -1,7 +1,7 @@
 import {
   Separator as UtrechtSeparator,
   SeparatorProps as UtrechtSeparatorProps,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist';
 import clsx from 'clsx';
 import { forwardRef } from 'react';
 

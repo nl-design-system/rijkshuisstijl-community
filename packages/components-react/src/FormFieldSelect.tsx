@@ -4,7 +4,7 @@ import {
   SelectOption,
   type SelectOptionProps,
   SelectProps,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
 import { FormField } from './FormField';

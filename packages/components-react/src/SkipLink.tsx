@@ -1,7 +1,7 @@
 import {
   SkipLink as UtrechtSkipLink,
   type SkipLinkProps as UtrechtSkipLinkProps,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 

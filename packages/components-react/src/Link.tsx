@@ -1,4 +1,4 @@
-import { Link as UtrechtLink, type LinkProps as UtrechtLinkProps } from '@utrecht/component-library-react';
+import { Link as UtrechtLink, type LinkProps as UtrechtLinkProps } from '@utrecht/component-library-react/dist';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, ReactNode } from 'react';
 import { Icon } from './Icon';
@@ -6,6 +6,8 @@ import { Icon } from './Icon';
 export interface LinkProps extends UtrechtLinkProps {
   external?: boolean;
   externalLabel?: ReactNode;
+  label?: string;
+  className?: string;
 }
 
 export const Link = forwardRef(

@@ -1,1 +1,1 @@
-export { Article, type ArticleProps } from '@utrecht/component-library-react';
+export { Article, type ArticleProps } from '@utrecht/component-library-react/dist';

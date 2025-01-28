@@ -1,4 +1,4 @@
-import { type FormFieldProps, FormLabel, FormField as UtrechtFormField } from '@utrecht/component-library-react';
+import { type FormFieldProps, FormLabel, FormField as UtrechtFormField } from '@utrecht/component-library-react/dist';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 

@@ -1,1 +1,1 @@
-export { PageHeader, type PageHeaderProps } from '@utrecht/component-library-react';
+export { PageHeader, type PageHeaderProps } from '@utrecht/component-library-react/dist';

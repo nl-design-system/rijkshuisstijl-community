@@ -9,4 +9,4 @@ export {
   type DataListValueProps,
   DataListActions,
   type DataListActionsProps,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist';

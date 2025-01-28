@@ -1,1 +1,1 @@
-export { Checkbox, type CheckboxProps } from '@utrecht/component-library-react';
+export { Checkbox, type CheckboxProps } from '@utrecht/component-library-react/dist';

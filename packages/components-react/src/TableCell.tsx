@@ -1,7 +1,7 @@
 import {
   TableCell as UtrechtTableCell,
   TableCellProps as UtrechtTableCellProps,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
 export interface TableCellProps extends UtrechtTableCellProps {

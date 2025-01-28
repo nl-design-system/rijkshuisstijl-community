@@ -1,4 +1,4 @@
-import { Paragraph } from '@utrecht/component-library-react';
+import { Paragraph } from '@utrecht/component-library-react/dist';
 import { ChangeEvent, PropsWithChildren, RefObject, useEffect, useState } from 'react';
 import { Button, ButtonProps } from './Button';
 import { File } from './File';

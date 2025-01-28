@@ -9,4 +9,4 @@ export {
   type TableBodyProps,
   TableFooter,
   type TableFooterProps,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist';

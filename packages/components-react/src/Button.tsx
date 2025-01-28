@@ -6,7 +6,7 @@ import {
   PrimaryActionButton,
   SecondaryActionButton,
   SubtleButton,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 import { Icon } from './Icon';
@@ -24,6 +24,8 @@ export {
 
 export interface IconButtonProps extends ButtonProps {
   icon?: RHCIconID;
+  label?: string;
+  className?: string;
 }
 
 export const IconButton = forwardRef(

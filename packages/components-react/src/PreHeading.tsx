@@ -1,7 +1,7 @@
 import {
   PreHeading as UtrechtPreHeading,
   type PreHeadingProps as UtrechtPreHeadingProps,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactElement } from 'react';
 import { HeadingProps } from './Heading';
 

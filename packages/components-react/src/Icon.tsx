@@ -1,4 +1,4 @@
-import { Icon as UtrechtIcon, type IconProps as UtrechtIconProps } from '@utrecht/component-library-react';
+import { Icon as UtrechtIcon, type IconProps as UtrechtIconProps } from '@utrecht/component-library-react/dist';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 import { RHCIconID } from './icon-sets/default-icons/RHCIconIDs';
 import { iconSet as defaultIconSet } from './icon-sets/default-icons/icon-set';

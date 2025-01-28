@@ -1,4 +1,4 @@
-import { Image as UtrechtImage, type ImageProps as UtrechtImageProps } from '@utrecht/component-library-react';
+import { Image as UtrechtImage, type ImageProps as UtrechtImageProps } from '@utrecht/component-library-react/dist';
 import { ForwardedRef, forwardRef } from 'react';
 
 export { type UtrechtImageProps as ImageProps };

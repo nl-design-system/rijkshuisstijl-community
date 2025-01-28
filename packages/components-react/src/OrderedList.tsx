@@ -3,4 +3,4 @@ export {
   type OrderedListProps,
   OrderedListItem,
   type OrderedListItemProps,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist';

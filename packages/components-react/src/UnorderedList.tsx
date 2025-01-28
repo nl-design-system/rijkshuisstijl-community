@@ -1,7 +1,7 @@
 import {
   UnorderedList as UtrechtUnorderedList,
   UnorderedListProps as UtrechtUnorederedListProps,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 

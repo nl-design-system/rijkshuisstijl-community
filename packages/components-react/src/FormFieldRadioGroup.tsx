@@ -1,4 +1,4 @@
-import { type FormFieldProps } from '@utrecht/component-library-react';
+import { type FormFieldProps } from '@utrecht/component-library-react/dist';
 import clsx from 'clsx';
 import { Children, ForwardedRef, forwardRef, PropsWithChildren, ReactNode, useId } from 'react';
 import { FormField } from './FormField';

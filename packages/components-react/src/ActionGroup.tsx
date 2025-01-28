@@ -1,7 +1,7 @@
 import {
   ButtonGroup as ActionGroup,
   type ButtonGroupProps as ActionGroupProps,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist';
 
 export { ActionGroup, type ActionGroupProps };
 

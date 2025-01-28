@@ -1,4 +1,4 @@
-import { TableCaptionProps, TableCaption as UtrechtTableCaption } from '@utrecht/component-library-react';
+import { TableCaptionProps, TableCaption as UtrechtTableCaption } from '@utrecht/component-library-react/dist';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
 export const TableCaption = forwardRef(

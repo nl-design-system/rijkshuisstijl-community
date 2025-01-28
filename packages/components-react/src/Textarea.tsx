@@ -1,1 +1,1 @@
-export { Textarea, type TextareaProps } from '@utrecht/component-library-react';
+export { Textarea, type TextareaProps } from '@utrecht/component-library-react/dist';

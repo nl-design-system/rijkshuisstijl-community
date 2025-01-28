@@ -1,4 +1,4 @@
-import { Paragraph } from '@utrecht/component-library-react';
+import { Paragraph } from '@utrecht/component-library-react/dist';
 import clsx from 'clsx';
 import { forwardRef, HTMLAttributes, ReactNode } from 'react';
 import { Icon } from './Icon';

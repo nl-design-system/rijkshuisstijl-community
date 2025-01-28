@@ -1,1 +1,1 @@
-export { Paragraph, type ParagraphProps } from '@utrecht/component-library-react';
+export { Paragraph, type ParagraphProps } from '@utrecht/component-library-react/dist';

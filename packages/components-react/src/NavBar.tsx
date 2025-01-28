@@ -1,4 +1,4 @@
-import { ColumnLayout } from '@utrecht/component-library-react';
+import { ColumnLayout } from '@utrecht/component-library-react/dist';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactElement, ReactNode } from 'react';
 import { Heading } from './Heading';

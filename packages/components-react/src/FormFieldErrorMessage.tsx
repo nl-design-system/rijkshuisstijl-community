@@ -1,7 +1,7 @@
 import {
   FormFieldErrorMessage as UtrechtFormFieldErrorMessage,
   FormFieldErrorMessageProps as UtrechtFormFieldErrorMessageProps,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 import { Icon } from './Icon';
 

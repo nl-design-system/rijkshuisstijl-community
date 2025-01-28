@@ -1,1 +1,1 @@
-export { PageContent, type PageContentProps } from '@utrecht/component-library-react';
+export { PageContent, type PageContentProps } from '@utrecht/component-library-react/dist';
