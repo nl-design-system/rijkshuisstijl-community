@@ -1,15 +1,15 @@
 import { PageFooterProps, PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
-import { Button } from './Button';
 import { ColumnLayout } from './ColumnLayout';
 import { Heading, HeadingLevel } from './Heading';
+import { Icon } from './Icon';
 
 interface FooterProps extends PageFooterProps {
   heading?: ReactNode;
   appearanceLevel?: HeadingLevel;
   columns?: ColumnProps[];
-  background?: 'primary-filled' | 'primary-outlined';
+  background?: 'primary-filled' | 'secondary-filled' | 'primary-outlined';
   backtotop?: boolean;
   subFooter?: ReactNode;
   preFooter?: boolean;
@@ -99,9 +99,9 @@ export const Footer = forwardRef(
           >
             <div className="rhc-page-subfooter__content rhc-page-footer__wrapper">
               {backtotop && (
-                <Button appearance="subtle-button" className="rhc-page-subfooter__backtotop" onClick={scrollBackToTop}>
-                  Terug naar boven
-                </Button>
+                <a className="rhc-page-subfooter__backtotop" onClick={scrollBackToTop}>
+                  Terug naar boven <Icon icon={'pijl-omhoog'} />
+                </a>
               )}
               {subFooter}
             </div>
