@@ -140,7 +140,7 @@ export default function Details() {
       <Footer
         appearanceLevel={3}
         backtotop={true}
-        heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+        heading="De Rijksoverheid. Voor Nederland"
         columns={[
           {
             heading: 'Service',
