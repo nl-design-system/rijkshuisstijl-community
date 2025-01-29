@@ -6,7 +6,6 @@ import {
   Heading,
   Hero,
   Icon,
-  Link,
   LinkList,
   LinkListCard,
   LinkListLink,
@@ -205,10 +204,10 @@ export default function Details() {
         ]}
         subFooter={
           <LinkList className="rhc-subfooter-details">
-            <Link>Privacy</Link>
-            <Link>Cookies</Link>
-            <Link>Copyright</Link>
-            <Link>Toegankelijkheid</Link>
+            <LinkListLink href="#">Privacy</LinkListLink>
+            <LinkListLink href="#">Cookies</LinkListLink>
+            <LinkListLink href="#">Copyright</LinkListLink>
+            <LinkListLink href="#">Toegankelijkheid</LinkListLink>
           </LinkList>
         }
       />
