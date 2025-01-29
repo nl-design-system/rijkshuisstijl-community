@@ -6,28 +6,15 @@
 @use "mixin";
 
 .rhc-blockquote {
-  --utrecht-blockquote-color: var(--utrecht-blockquote-content-color);
-  --utrecht-blockquote-font-size: var(--utrecht-blockquote-content-font-size);
-  --utrecht-document-font-family: var(--utrecht-blockquote-content-font-family);
-
   @include mixin.rhc-blockquote;
 }
 
-.utrecht-blockquote__caption {
-  font-family: var(--utrecht-blockquote-caption-font-family, inherit);
-  line-height: var(--utrecht-blockquote-caption-line-height, inherit);
-}
-
-blockquote.utrecht-blockquote {
-  line-height: var(--utrecht-blockquote-content-line-height);
-}
-
 .utrecht-blockquote__quote {
-  line-height: var(--utrecht-blockquote-content-line-height);
-  margin-block-end: 0;
-  margin-block-start: 0;
-  margin-inline-end: 0;
-  margin-inline-start: 0;
+  @include mixin.rhc-blockquote__quote;
+}
+
+.utrecht-blockquote__caption {
+  @include mixin.rhc-blockquote__caption;
 }
 
 .rhc-blockquote--blue-corner-border-variation {
