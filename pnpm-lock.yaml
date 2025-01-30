@@ -239,6 +239,9 @@ importers:
 
   packages/components-css:
     dependencies:
+      '@nl-design-system-candidate/number-badge-css':
+        specifier: 1.1.0
+        version: 1.1.0
       '@utrecht/component-library-css':
         specifier: 7.0.0
         version: 7.0.0
@@ -252,6 +255,9 @@ importers:
 
   packages/components-react:
     dependencies:
+      '@nl-design-system-candidate/number-badge-react':
+        specifier: 1.1.0
+        version: 1.1.0(@babel/runtime@7.26.0)(react@19.0.0)
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css
@@ -2302,6 +2308,15 @@ packages:
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
+
+  '@nl-design-system-candidate/number-badge-css@1.1.0':
+    resolution: {integrity: sha512-y0Xiogm7U+WQ4lCny+SDD2AdMnPYc0fALWNMyzWyE6OHMEDFrKe1P9cnDcuapb6RK0GTUt/O0s8ocSyIOKecFg==}
+
+  '@nl-design-system-candidate/number-badge-react@1.1.0':
+    resolution: {integrity: sha512-QZbcKnMGlILHEmvrl4wjNKMpnfA1H5+XtZltjm7piq3ceBdqSctS+F5acKFuMExXZzf9uBRfXTJNo76Cjf8d/g==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
 
   '@nl-rvo/assets@1.0.0-alpha.360':
     resolution: {integrity: sha512-YfHk1bDfyPLtZEi5rBZLyhYaeZOs35MWRPZnL+GYiHmmsy+avqDL3wOrKEd1tF9bT2b/cI3jkmh8jsg5XKlToQ==}
@@ -12170,6 +12185,14 @@ snapshots:
 
   '@next/swc-win32-x64-msvc@15.1.4':
     optional: true
+
+  '@nl-design-system-candidate/number-badge-css@1.1.0': {}
+
+  '@nl-design-system-candidate/number-badge-react@1.1.0(@babel/runtime@7.26.0)(react@19.0.0)':
+    dependencies:
+      '@babel/runtime': 7.26.0
+      clsx: 2.1.1
+      react: 19.0.0
 
   '@nl-rvo/assets@1.0.0-alpha.360': {}
 
