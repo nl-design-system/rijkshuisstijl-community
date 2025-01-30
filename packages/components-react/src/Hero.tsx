@@ -61,7 +61,7 @@ export const Hero = forwardRef(
         {heading && (
           <div className={clsx('rhc-hero__message')}>
             <HeadingGroup>
-              <Heading appearance="utrecht-heading-3" className="rhc-hero__heading" level={headingLevel}>
+              <Heading appearance="level-3" className="rhc-hero__heading" level={headingLevel}>
                 {heading}
               </Heading>
               {subHeading && <Paragraph className="rhc-hero__sub-heading">{subHeading}</Paragraph>}
