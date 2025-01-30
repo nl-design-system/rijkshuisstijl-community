@@ -25,9 +25,9 @@ const meta = {
     appearanceLevel: {
       description: 'Het uiterlijk van de heading in de footer.',
       control: { type: 'select' },
-      options: [1, 2, 3, 4, 5],
+      options: ['level-1', 'level-2', 'level-3', 'level-4', 'level-5', 'level-6'],
       table: {
-        type: { summary: 'number' },
+        type: { summary: 'string' },
       },
     },
   },
@@ -40,12 +40,12 @@ type Story = StoryObj<typeof meta>;
 export const DefaultFooter: Story = {
   args: {
     heading: 'Footer heading',
-    appearanceLevel: 1,
+    appearanceLevel: 'level-1',
     background: 'primary-filled',
     columns: [
       {
         heading: 'Service',
-        appearanceLevel: 3,
+        appearanceLevel: 'level-3',
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
@@ -74,7 +74,7 @@ export const DefaultFooter: Story = {
       },
       {
         heading: 'Over deze site',
-        appearanceLevel: 3,
+        appearanceLevel: 'level-3',
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
@@ -113,8 +113,8 @@ export const CustomHeadingFooter: Story = {
     background: 'primary-filled',
     columns: [
       {
-        heading: 'Heading 1',
-        appearanceLevel: 3,
+        heading: 'First heading',
+        appearanceLevel: 'level-3',
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
@@ -130,8 +130,8 @@ export const CustomHeadingFooter: Story = {
         ),
       },
       {
-        heading: 'Heading 2',
-        appearanceLevel: 3,
+        heading: 'Second heading',
+        appearanceLevel: 'level-3',
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
@@ -147,8 +147,8 @@ export const CustomHeadingFooter: Story = {
         ),
       },
       {
-        heading: 'Heading 3',
-        appearanceLevel: 3,
+        heading: 'Third heading',
+        appearanceLevel: 'level-3',
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
@@ -164,8 +164,8 @@ export const CustomHeadingFooter: Story = {
         ),
       },
       {
-        heading: 'Heading 4',
-        appearanceLevel: 3,
+        heading: 'Fourth heading',
+        appearanceLevel: 'level-3',
         children: (
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>

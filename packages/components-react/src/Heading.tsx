@@ -1,1 +1,1 @@
-export { Heading, type HeadingProps } from '@utrecht/component-library-react';
+export { Heading, type HeadingProps } from '@nl-design-system-candidate/heading-react';

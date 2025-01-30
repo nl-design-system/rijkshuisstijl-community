@@ -4,7 +4,7 @@ import { Heading } from './Heading';
 import { LinkList } from './LinkList';
 
 export interface LinkListCardProps extends HTMLAttributes<HTMLDivElement> {
-  headingLevel: number;
+  headingLevel: 1 | 2 | 3 | 4 | 5 | 6;
   heading: ReactNode;
 }
 

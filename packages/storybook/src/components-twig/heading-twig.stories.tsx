@@ -28,15 +28,7 @@ const meta = {
     appearance: {
       description: 'Appearance',
       control: { type: 'select' },
-      options: [
-        undefined,
-        'utrecht-heading-1',
-        'utrecht-heading-2',
-        'utrecht-heading-3',
-        'utrecht-heading-4',
-        'utrecht-heading-5',
-        'utrecht-heading-6',
-      ],
+      options: [undefined, 'level-1', 'level-2', 'level-3', 'level-4', 'level-5', 'level-6'],
     },
   },
   parameters: {
