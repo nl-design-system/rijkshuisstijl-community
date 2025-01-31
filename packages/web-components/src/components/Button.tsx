@@ -10,6 +10,9 @@ export class ButtonWebComponent extends BaseWebComponent {
 
   constructor() {
     super(stylesheet);
+  }
+
+  override setupRestProps(): void {
     for (const attributeName of this.getAttributeNames()) {
       if (ButtonWebComponent.observedAttributes.includes(attributeName)) continue;
       this.restProps[attributeName] = this.getAttribute(attributeName);
@@ -19,11 +22,12 @@ export class ButtonWebComponent extends BaseWebComponent {
   render(): void {
     this.root.render(
       <Button
+        suppressHydrationWarning
         appearance={(this.getAttribute('appearance') as ButtonProps['appearance']) ?? undefined}
         disabled={Boolean(this.getAttribute('disabled')) as ButtonProps['disabled']}
         {...this.restProps}
       >
-        <slot />
+        {this.innerHTML && <span dangerouslySetInnerHTML={{ __html: this.innerHTML }} />}
       </Button>,
     );
   }

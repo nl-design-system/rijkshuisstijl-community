@@ -12,10 +12,20 @@ export class ActionGroupWebComponent extends BaseWebComponent {
     super(stylesheet);
   }
 
+  override setupRestProps(): void {
+    for (const attributeName of this.getAttributeNames()) {
+      if (ActionGroupWebComponent.observedAttributes.includes(attributeName)) continue;
+      this.restProps[attributeName] = this.getAttribute(attributeName);
+    }
+  }
+
   render(): void {
     this.root.render(
-      <ActionGroup direction={(this.getAttribute('direction') as ActionGroupProps['direction']) ?? undefined}>
-        <slot />
+      <ActionGroup
+        direction={(this.getAttribute('direction') as ActionGroupProps['direction']) ?? undefined}
+        {...this.restProps}
+      >
+        {this.innerHTML && <span dangerouslySetInnerHTML={{ __html: this.innerHTML }} />}
       </ActionGroup>,
     );
   }

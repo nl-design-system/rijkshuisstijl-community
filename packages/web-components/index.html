@@ -12,8 +12,15 @@
     <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css" />
   </head>
   <body class="rhc-theme">
-    <!-- <rhc-hero></rhc-hero> -->
-    <rhc-button appearance="secondary-action-button" popovertarget="myheader" aria-disabled="true"> Label </rhc-button>
+    <rhc-button
+      appearance="secondary-action-button"
+      popoverTarget="myheader"
+      aria-disabled="true"
+      type="submit"
+      value="test"
+    >
+      label
+    </rhc-button>
 
     <h1 popover id="myheader">Hello</h1>
     <button popovertarget="myheader" value="Click me!">button</button>

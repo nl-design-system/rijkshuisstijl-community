@@ -21,6 +21,13 @@ export class HeroWebComponent extends BaseWebComponent {
     super(stylesheet);
   }
 
+  override setupRestProps(): void {
+    for (const attributeName of this.getAttributeNames()) {
+      if (HeroWebComponent.observedAttributes.includes(attributeName)) continue;
+      this.restProps[attributeName] = this.getAttribute(attributeName);
+    }
+  }
+
   render(): void {
     this.root.render(
       <Hero
@@ -37,8 +44,9 @@ export class HeroWebComponent extends BaseWebComponent {
           this.getAttribute('imageSrc') ??
           'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg'
         }
+        {...this.restProps}
       >
-        <slot />
+        {this.innerHTML && <span dangerouslySetInnerHTML={{ __html: this.innerHTML }} />}
       </Hero>,
     );
   }

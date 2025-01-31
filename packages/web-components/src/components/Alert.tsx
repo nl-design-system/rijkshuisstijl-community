@@ -12,6 +12,13 @@ export class AlertWebComponent extends BaseWebComponent {
     super(stylesheet);
   }
 
+  override setupRestProps(): void {
+    for (const attributeName of this.getAttributeNames()) {
+      if (AlertWebComponent.observedAttributes.includes(attributeName)) continue;
+      this.restProps[attributeName] = this.getAttribute(attributeName);
+    }
+  }
+
   render(): void {
     this.root.render(
       <Alert
@@ -23,8 +30,9 @@ export class AlertWebComponent extends BaseWebComponent {
         textContent={
           (this.getAttribute('messageText') as AlertProps['textContent']) ?? 'This is a default alert message.'
         }
+        {...this.restProps}
       >
-        <slot />
+        {this.innerHTML && <span dangerouslySetInnerHTML={{ __html: this.innerHTML }} />}
       </Alert>,
     );
   }
