@@ -1,10 +1,10 @@
-import { Heading as UtrechtHeading, type HeadingProps as UtrechtHeadingProps } from '@utrecht/component-library-react';
+import { Heading as CandidateHeading, type HeadingProps as CandidateHeadingProps } from '@nl-design-system-candidate/heading-react';
 import clsx from 'clsx';
 import { PropsWithChildren, Ref } from 'react';
 
 export type HeadingLevel = 1 | 2 | 3 | 4 | 5;
 
-export interface HeadingProps extends Omit<UtrechtHeadingProps, 'appearance'> {
+export interface HeadingProps extends Omit<CandidateHeadingProps, 'appearance'> {
   appearanceLevel?: HeadingLevel;
   level: HeadingLevel;
   ref?: Ref<HTMLHeadingElement>;
@@ -19,14 +19,14 @@ export const Heading = ({
   ...restProps
 }: PropsWithChildren<HeadingProps>) => {
   return (
-    <UtrechtHeading
-      appearance={`utrecht-heading-${appearanceLevel ?? level}`}
+    <CandidateHeading
+      appearance={`level-${appearanceLevel ?? level}`}
       className={clsx('rhc-heading', className)}
       level={level}
       ref={ref}
       {...restProps}
     >
       {children}
-    </UtrechtHeading>
+    </CandidateHeading>
   );
 };

@@ -41,7 +41,7 @@ export const Footer = forwardRef(
       <div className="rhc-page-footer__content">
         {heading && (
           <div className="rhc-page-footer__title" key={'heading'}>
-            <Heading appearanceLevel={appearanceLevel} level={2}>
+            <Heading appearanceLevel={appearanceLevel} level={heading ? 2 : 3}>
               {heading}
             </Heading>
           </div>
@@ -49,7 +49,7 @@ export const Footer = forwardRef(
         <ColumnLayout>
           {columns?.map(
             (
-              { heading: columnHeading, appearanceLevel: columnAppearanceLevel = 3, children }: ColumnProps,
+              { heading: columnHeading, appearanceLevel: columnAppearanceLevel = 'level-3', children }: ColumnProps,
               index: number,
             ) => (
               <div className="rhc-page-footer__section" key={index}>

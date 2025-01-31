@@ -36,7 +36,7 @@ const meta = {
     github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/469',
     nldesignsystem: 'https://nldesignsystem.nl/heading/',
     componentOrigin:
-      'Dit component is overgenomen van de Gemeente Utrecht met extra functionaliteit, en met overgeschreven design tokens van de Rijkshuisstijl Community.',
+      'Dit component is overgenomen van de NL Design System Heading Candidate met extra functionaliteit, en met overgeschreven design tokens van de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof Heading>;
 
@@ -80,4 +80,13 @@ export const Heading5: StoryObj<typeof meta> = {
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
   },
   name: 'Heading 5',
+};
+
+export const Heading5Appearance: StoryObj<typeof meta> = {
+  args: {
+    level: 1,
+    children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+    appearanceLevel: 5,
+  },
+  name: 'Heading 5 (in appearance)',
 };

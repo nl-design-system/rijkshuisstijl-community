@@ -39,7 +39,7 @@ import {
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react/dist/esm/tabler-icons-react';
-import { PageBody } from '@utrecht/page-body-react';
+import { PageBody } from '@utrecht/page-body-react/dist';
 
 export default function Collage() {
   return (
