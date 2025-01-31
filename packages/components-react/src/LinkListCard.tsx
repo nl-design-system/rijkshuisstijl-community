@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import { forwardRef, HTMLAttributes, ReactNode } from 'react';
-import { Heading } from './Heading';
+import { Heading, HeadingLevel } from './Heading';
 import { LinkList } from './LinkList';
 
 export interface LinkListCardProps extends HTMLAttributes<HTMLDivElement> {
-  headingLevel: 1 | 2 | 3 | 4 | 5 | 6;
+  headingLevel: HeadingLevel;
   heading: ReactNode;
 }
 

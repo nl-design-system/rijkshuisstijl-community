@@ -9,7 +9,7 @@ describe('Footer', () => {
     expect(1).toBe(1);
     render(
       <Footer
-        appearanceLevel="level-4"
+        appearanceLevel={4}
         heading="Footer heading"
         columns={[
           {

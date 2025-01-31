@@ -138,7 +138,7 @@ export default function Details() {
         </div>
       </PageBody>
       <Footer
-        appearanceLevel="level-3"
+        appearanceLevel={3}
         heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         columns={[
           {
