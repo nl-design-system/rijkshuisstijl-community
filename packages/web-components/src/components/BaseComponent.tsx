@@ -2,6 +2,8 @@ import ReactDOM from 'react-dom/client';
 
 export abstract class BaseWebComponent extends HTMLElement {
   protected root: ReactDOM.Root;
+  protected restProps: { [key: string]: any } = {};
+
   static get tagName(): string {
     throw new Error('tagName must be defined in the derived class');
   }
