@@ -86,11 +86,3 @@ export const Subtle = {
     appearance: 'subtle-button',
   },
 } as StoryObj<typeof meta>;
-
-// export const IconLeft = {
-//   args: {
-//     children: 'Label',
-//     appearance: 'secondary-action-button',
-//     iconLeft: true,
-//   },
-// } as StoryObj<typeof meta>;

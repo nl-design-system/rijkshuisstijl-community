@@ -46,6 +46,7 @@ export class HeroWebComponent extends BaseWebComponent {
         }
         {...this.restProps}
       >
+        {/* This is done to recreate <slot /> logic without a shadow DOM. */}
         {this.innerHTML && <span dangerouslySetInnerHTML={{ __html: this.innerHTML }} />}
       </Hero>,
     );

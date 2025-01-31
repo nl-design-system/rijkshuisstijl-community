@@ -25,6 +25,7 @@ export class ActionGroupWebComponent extends BaseWebComponent {
         direction={(this.getAttribute('direction') as ActionGroupProps['direction']) ?? undefined}
         {...this.restProps}
       >
+        {/* This is done to recreate <slot /> logic without a shadow DOM. */}
         {this.innerHTML && <span dangerouslySetInnerHTML={{ __html: this.innerHTML }} />}
       </ActionGroup>,
     );

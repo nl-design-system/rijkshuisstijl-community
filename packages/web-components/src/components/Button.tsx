@@ -27,6 +27,7 @@ export class ButtonWebComponent extends BaseWebComponent {
         disabled={Boolean(this.getAttribute('disabled')) as ButtonProps['disabled']}
         {...this.restProps}
       >
+        {/* This is done to recreate <slot /> logic without a shadow DOM. */}
         {this.innerHTML && <span dangerouslySetInnerHTML={{ __html: this.innerHTML }} />}
       </Button>,
     );
