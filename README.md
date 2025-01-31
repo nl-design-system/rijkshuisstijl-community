@@ -171,14 +171,12 @@ Vanuit`packages/components-react` krijg je een gedetailleerder overzicht van tes
 
 ### Packages
 
-| Package                  | Purpose                                                                                                                                            |
-| :----------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `components-css`         | Hier kunnen CSS-componenten toegevoegd worden die nog niet bestaan in de NL Design System-community.                                               |
-| `components-react`       | Optioneel voor het toevoegen van een React-wrapper aan een CSS-component als die nog niet bestaat.                                                 |
-| `design-tokens`          | Hier worden de rijkshuisstijl-thema’s beheerd, voor gebruik met NL Design System zonder thema. Opmerking deze zouden naar proprietary moeten gaan. |
-| `storybook`              | Extra componenten en pagina-sjablonen kunnen worden toegevoegd als story voor documentatie en visuele regressietesten.                             |
-| `web-components-stencil` | Hier kunnen webcomponenten worden toegevoegd voor componenten die nog niet als webcomponent bestaan.                                               |
-| `web-components-react`   | Hier kunnen React-webcomponenten toegevoegd worden voor gebruiksgemak.                                                                             |
+| Package            | Purpose                                                                                                                                            |
+| :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `components-css`   | Hier kunnen CSS-componenten toegevoegd worden die nog niet bestaan in de NL Design System-community.                                               |
+| `components-react` | Optioneel voor het toevoegen van een React-wrapper aan een CSS-component als die nog niet bestaat.                                                 |
+| `design-tokens`    | Hier worden de rijkshuisstijl-thema’s beheerd, voor gebruik met NL Design System zonder thema. Opmerking deze zouden naar proprietary moeten gaan. |
+| `storybook`        | Extra componenten en pagina-sjablonen kunnen worden toegevoegd als story voor documentatie en visuele regressietesten.                             |
 
 ### Proprietary
 

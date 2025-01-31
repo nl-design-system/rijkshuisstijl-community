@@ -10,18 +10,12 @@ import '@rijkshuisstijl-community/mijnoverheid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Paragraph } from '@rijkshuisstijl-community/components-react';
-import { defineCustomElements } from '@rijkshuisstijl-community/web-components-stencil/loader/index';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import { Controls, Description, Primary, Stories, useOf } from '@storybook/blocks';
 import { Preview } from '@storybook/react';
 import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
-import { defineCustomElements as defineUtrechtCustomElements } from '@utrecht/web-component-library-stencil/loader/index';
 import { Fragment } from 'react';
-
-// Initialize web components
-defineCustomElements();
-defineUtrechtCustomElements();
 
 const preview: Preview = {
   decorators: [
