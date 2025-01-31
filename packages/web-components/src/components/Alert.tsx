@@ -1,6 +1,6 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { Alert, AlertProps } from '@rijkshuisstijl-community/components-react';
-import { BaseWebComponent } from './BaseComponent';
+import { BaseWebComponent, Slot } from './BaseComponent';
 
 export type AlertWebComponentAttributes = AlertProps;
 
@@ -32,8 +32,7 @@ export class AlertWebComponent extends BaseWebComponent {
         }
         {...this.restProps}
       >
-        {/* This is done to recreate <slot /> logic without a shadow DOM. */}
-        {this.innerHTML && <span dangerouslySetInnerHTML={{ __html: this.innerHTML }} />}
+        <Slot>{this.innerHTML}</Slot>
       </Alert>,
     );
   }

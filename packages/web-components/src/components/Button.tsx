@@ -1,6 +1,6 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { Button, ButtonProps } from '@rijkshuisstijl-community/components-react';
-import { BaseWebComponent } from './BaseComponent';
+import { BaseWebComponent, Slot } from './BaseComponent';
 
 export type ButtonWebComponentAttributes = ButtonProps;
 
@@ -27,8 +27,7 @@ export class ButtonWebComponent extends BaseWebComponent {
         disabled={Boolean(this.getAttribute('disabled')) as ButtonProps['disabled']}
         {...this.restProps}
       >
-        {/* This is done to recreate <slot /> logic without a shadow DOM. */}
-        {this.innerHTML && <span dangerouslySetInnerHTML={{ __html: this.innerHTML }} />}
+        <Slot>{this.innerHTML}</Slot>
       </Button>,
     );
   }
