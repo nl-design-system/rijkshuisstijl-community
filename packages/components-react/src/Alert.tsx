@@ -4,7 +4,6 @@ import { PropsWithChildren, ReactNode, RefObject } from 'react';
 import { Heading, type HeadingLevel } from './Heading';
 import { Icon } from './Icon';
 import { Paragraph } from './Paragraph';
-import { Heading } from './index';
 
 export interface AlertProps {
   ref?: RefObject<HTMLDivElement>;

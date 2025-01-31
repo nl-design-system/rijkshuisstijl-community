@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Heading } from '@rijkshuisstijl-community/components-react';
+import { Heading, headingLevels } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './heading.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
@@ -13,12 +13,12 @@ const meta = {
     level: {
       description: 'Heading level',
       control: { type: 'select' },
-      options: [1, 2, 3, 4, 5],
+      options: headingLevels,
     },
     appearanceLevel: {
       description: 'Appearance level',
       control: { type: 'select' },
-      options: [1, 2, 3, 4, 5, 5],
+      options: headingLevels,
     },
   },
   parameters: {

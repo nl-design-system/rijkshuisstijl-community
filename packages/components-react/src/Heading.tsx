@@ -1,8 +1,13 @@
-import { Heading as CandidateHeading, type HeadingProps as CandidateHeadingProps } from '@nl-design-system-candidate/heading-react';
+import {
+  Heading as CandidateHeading,
+  type HeadingProps as CandidateHeadingProps,
+} from '@nl-design-system-candidate/heading-react';
 import clsx from 'clsx';
 import { PropsWithChildren, Ref } from 'react';
 
-export type HeadingLevel = 1 | 2 | 3 | 4 | 5;
+export const headingLevels = [1, 2, 3, 4, 5] as const;
+
+export type HeadingLevel = (typeof headingLevels)[number];
 
 export interface HeadingProps extends Omit<CandidateHeadingProps, 'appearance'> {
   appearanceLevel?: HeadingLevel;
