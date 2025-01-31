@@ -1,4 +1,10 @@
+import parse from 'html-react-parser';
 import ReactDOM from 'react-dom/client';
+
+export const Slot = ({ children }: { children: string }) => {
+  // This is done to recreate <slot /> logic without a shadow DOM.
+  return <>{parse(children)}</>;
+};
 
 export abstract class BaseWebComponent extends HTMLElement {
   protected root: ReactDOM.Root;
