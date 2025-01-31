@@ -12,6 +12,13 @@ export class AccordionWebComponent extends BaseWebComponent {
     super(stylesheet);
   }
 
+  override setupRestProps(): void {
+    for (const attributeName of this.getAttributeNames()) {
+      if (AccordionWebComponent.observedAttributes.includes(attributeName)) continue;
+      this.restProps[attributeName] = this.getAttribute(attributeName);
+    }
+  }
+
   render(): void {
     this.root.render(
       <AccordionProvider
@@ -27,6 +34,7 @@ export class AccordionWebComponent extends BaseWebComponent {
           (this.getAttribute('sections') &&
             JSON.parse(this.getAttribute('sections') as string)) as AccordionProviderProps['sections']
         }
+        {...this.restProps}
       />,
     );
   }

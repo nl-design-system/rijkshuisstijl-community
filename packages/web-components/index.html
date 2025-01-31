@@ -6,12 +6,23 @@
     <title>Web Component Test</title>
     <script type="module" src="./dist/index.mjs"></script>
     <script type="module">
-      import { HeroWebComponent } from './dist/index.mjs';
-      HeroWebComponent.define();
+      import { ButtonWebComponent } from './dist/index.mjs';
+      ButtonWebComponent.define();
     </script>
     <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css" />
   </head>
   <body class="rhc-theme">
-    <rhc-hero heading="heading wc" />
+    <rhc-button
+      appearance="secondary-action-button"
+      popoverTarget="myheader"
+      aria-disabled="true"
+      type="submit"
+      value="test"
+    >
+      label
+    </rhc-button>
+
+    <h1 popover id="myheader">Hello</h1>
+    <button popovertarget="myheader" value="Click me!">button</button>
   </body>
 </html>
