@@ -1,6 +1,6 @@
 import { ActionGroup, Button } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react/*';
-import readme from './action-group.md?raw';
+import readme from '@utrecht/components/button-group/README.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
