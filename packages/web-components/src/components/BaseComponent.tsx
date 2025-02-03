@@ -1,5 +1,5 @@
 import parse from 'html-react-parser';
-import ReactDOM from 'react-dom/client';
+import { createRoot, Root } from 'react-dom/client';
 
 export const Slot = ({ children }: { children: string }) => {
   // This is done to recreate <slot /> logic without a shadow DOM.
@@ -7,7 +7,7 @@ export const Slot = ({ children }: { children: string }) => {
 };
 
 export abstract class BaseWebComponent extends HTMLElement {
-  protected root: ReactDOM.Root;
+  protected root: Root;
   protected restProps: { [key: string]: any } = {};
 
   static get tagName(): string {
@@ -18,7 +18,7 @@ export abstract class BaseWebComponent extends HTMLElement {
 
   constructor(stylesheet: string) {
     super();
-    this.root = ReactDOM.createRoot(this);
+    this.root = createRoot(this);
 
     const style = document.createElement('style');
     style.textContent = stylesheet;

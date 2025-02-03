@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
+  mode: 'production',
   build: {
     lib: {
       entry: 'src/index.ts',
@@ -11,7 +12,7 @@ export default defineConfig({
       fileName: 'index',
     },
     sourcemap: true,
-    minify: 'terser',
+    minify: 'esbuild',
     target: 'esnext',
   },
   plugins: [
