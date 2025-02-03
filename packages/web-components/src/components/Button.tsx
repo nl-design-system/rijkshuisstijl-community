@@ -5,8 +5,8 @@ import { BaseWebComponent, Slot } from './BaseComponent';
 export type ButtonWebComponentAttributes = ButtonProps;
 
 export class ButtonWebComponent extends BaseWebComponent {
-  static override tagName: string = 'rhc-button';
-  static override observedAttributes: string[] = ['appearance', 'disabled'];
+  static override readonly tagName: string = 'rhc-button';
+  static override readonly observedAttributes: string[] = ['appearance', 'disabled'];
 
   constructor() {
     super(stylesheet);

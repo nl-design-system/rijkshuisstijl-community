@@ -5,8 +5,8 @@ import { BaseWebComponent, Slot } from './BaseComponent';
 export type HeroWebComponentAttributes = HeroProps;
 
 export class HeroWebComponent extends BaseWebComponent {
-  static override tagName: string = 'rhc-hero';
-  static override observedAttributes: string[] = [
+  static override readonly tagName: string = 'rhc-hero';
+  static override readonly observedAttributes: string[] = [
     'aspectratio',
     'heading',
     'imagealt',

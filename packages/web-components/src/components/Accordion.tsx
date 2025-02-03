@@ -5,8 +5,8 @@ import { BaseWebComponent } from './BaseComponent';
 export type AccordionWebComponentAttributes = AccordionProviderProps;
 
 export class AccordionWebComponent extends BaseWebComponent {
-  static override tagName: string = 'rhc-accordion';
-  static override observedAttributes: string[] = ['appearance', 'icon', 'sections', 'heading', 'headinglevel'];
+  static override readonly tagName: string = 'rhc-accordion';
+  static override readonly observedAttributes: string[] = ['appearance', 'icon', 'sections', 'heading', 'headinglevel'];
 
   constructor() {
     super(stylesheet);

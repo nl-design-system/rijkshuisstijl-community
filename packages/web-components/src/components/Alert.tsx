@@ -5,8 +5,8 @@ import { BaseWebComponent, Slot } from './BaseComponent';
 export type AlertWebComponentAttributes = AlertProps;
 
 export class AlertWebComponent extends BaseWebComponent {
-  static override tagName: string = 'rhc-alert';
-  static override observedAttributes: string[] = ['type', 'heading', 'headinglevel', 'messagetext'];
+  static override readonly tagName: string = 'rhc-alert';
+  static override readonly observedAttributes: string[] = ['type', 'heading', 'headinglevel', 'messagetext'];
 
   constructor() {
     super(stylesheet);
