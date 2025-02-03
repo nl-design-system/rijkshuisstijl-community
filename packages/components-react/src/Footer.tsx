@@ -1,6 +1,7 @@
-import { ColumnLayout, PageFooterProps, PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
+import { PageFooterProps, PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
+import { ColumnLayout } from './ColumnLayout';
 import { Heading, HeadingProps } from './Heading';
 
 interface FooterProps extends PageFooterProps {
