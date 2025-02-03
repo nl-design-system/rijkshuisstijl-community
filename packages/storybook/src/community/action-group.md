@@ -1,17 +1,14 @@
 <!-- @license CC0-1.0 -->
 
-# Rijkshuisstijl Community action group component
+# Richtlijnen
 
-De action group is een container voor een aantal buttons, of voor een losstaande button.
+- Plaatsing: De action group wordt meestal horizontaal weergegeven, maar kan ook verticaal worden weergegeven als er onvoldoende ruimte is (bijvoorbeeld op mobiele apparaten of in smalle vensters).
+- Gebruik van knoppen: Wanneer een actie belangrijker is dan de andere, geef de belangrijkste actie een prominente stijl (bijvoorbeeld een primaire knop).
+- ARIA-rol: De role="group" is van toepassing op de container, om aan te geven dat de acties samen horen. Elke individuele actie heeft de role="button" voor knoppen, of role="link" voor links.
 
-## Terminologie
+## Zo moet het niet
 
-- **button**: van het `<button>` HTML element, `role="button"` in ARIA.
-- **group**: van `role=group` in ARIA.
-
-## Verticale variant
-
-Voor smalle schermen bij plaatsing in smalle panelen (zoals een sidebar) is er een variant waar buttons onder elkaar staan, in plaats van naast elkaar. Gebruik deze variant niet wanneer er voldoende ruimte is voor de standaard variant. Je kunt bijvoorbeeld CSS media queries gebruiken om deze variant toe te passen voor kleine schermen.
+Plaats geen ongepaste acties in een action group die geen gerelateerde acties zijn. Dit zou verwarring kunnen veroorzaken bij de gebruiker en de toegankelijkheid van de interface verminderen.
 
 ## Usage
 
