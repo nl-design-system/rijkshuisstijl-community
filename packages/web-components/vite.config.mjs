@@ -11,9 +11,6 @@ export default defineConfig({
       formats: ['es'],
       fileName: 'index',
     },
-    sourcemap: true,
-    minify: 'esbuild',
-    target: 'esnext',
   },
   plugins: [
     react(),
