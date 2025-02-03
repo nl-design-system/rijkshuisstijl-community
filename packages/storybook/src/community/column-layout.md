@@ -2,7 +2,7 @@
 
 # Rijkshuisstijl Community column layout component
 
-De column layout verdeeld content over twee kolommen
+De column layout verdeeld content over meerdere kolommen
 
 ## Usage
 
