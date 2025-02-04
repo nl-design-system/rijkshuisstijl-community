@@ -1,6 +1,7 @@
 import {
   Article,
   Card,
+  ColumnLayout,
   Footer,
   Heading,
   Hero,
@@ -15,7 +16,6 @@ import {
   Separator,
   SubNavBar,
 } from '@rijkshuisstijl-community/components-react';
-import { ColumnLayout } from '@utrecht/component-library-react/dist';
 import { PageBody } from '@utrecht/page-body-react/dist';
 
 export default function Details() {

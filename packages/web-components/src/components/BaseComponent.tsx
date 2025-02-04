@@ -1,7 +1,15 @@
+import parse from 'html-react-parser';
 import ReactDOM from 'react-dom/client';
+
+export const Slot = ({ children }: { children: string }) => {
+  // This is done to recreate <slot /> logic without a shadow DOM.
+  return <>{parse(children)}</>;
+};
 
 export abstract class BaseWebComponent extends HTMLElement {
   protected root: ReactDOM.Root;
+  protected restProps: { [key: string]: any } = {};
+
   static get tagName(): string {
     throw new Error('tagName must be defined in the derived class');
   }
@@ -10,15 +18,19 @@ export abstract class BaseWebComponent extends HTMLElement {
 
   constructor(stylesheet: string) {
     super();
-    const shadowRoot = this.attachShadow({ mode: 'open' });
-    this.root = ReactDOM.createRoot(shadowRoot);
+    this.root = ReactDOM.createRoot(this);
 
-    const style: CSSStyleSheet = new CSSStyleSheet();
-    style.replaceSync(stylesheet);
-    shadowRoot.adoptedStyleSheets = [style];
+    const style = document.createElement('style');
+    style.textContent = stylesheet;
+    document.head.appendChild(style);
+  }
+
+  setupRestProps(): void {
+    throw new Error('setupRestProps() must be defined in the derived class');
   }
 
   connectedCallback(): void {
+    this.setupRestProps();
     this.render();
   }
 

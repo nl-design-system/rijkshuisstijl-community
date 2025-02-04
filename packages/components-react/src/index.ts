@@ -43,6 +43,7 @@ export {
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
 export { CodeInput } from './CodeInput';
+export { ColumnLayout, type ColumnLayoutProps } from './ColumnLayout';
 export { type CustomFormFieldProps, FormField } from './FormField';
 export {
   DataList,
