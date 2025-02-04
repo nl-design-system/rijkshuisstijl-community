@@ -175,9 +175,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Install playwright
-        run: pnpm exec playwright install
-
       - name: "Accessibility tests Storybook"
         run: pnpm test-storybook:ci
 
