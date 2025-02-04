@@ -10,6 +10,7 @@ import htmlDocs from '@utrecht/components/button/docs/technology-html.nl.md?raw'
 import visualDesignDocs from '@utrecht/components/button/docs/visual-design.nl.md?raw';
 import wcagDocs from '@utrecht/components/button/docs/wcag.nl.md?raw';
 import { PropsWithChildren } from 'react';
+import rhcReadme from './button.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface ButtonStoryProps {
@@ -44,7 +45,7 @@ const meta = {
       control: { type: 'select' },
       options: ['', 'primary-action-button', 'secondary-action-button', 'subtle-button'],
       table: {
-        category: 'Property',
+        category: 'Variant',
       },
       defaultValue: '',
     },
@@ -61,7 +62,7 @@ const meta = {
     },
     disabled: {
       table: {
-        category: 'Property',
+        category: 'Props',
       },
       defaultValue: false,
     },
@@ -71,7 +72,7 @@ const meta = {
         name: 'boolean',
       },
       table: {
-        category: 'Demo',
+        category: 'Props',
       },
       defaultValue: false,
     },
@@ -81,14 +82,14 @@ const meta = {
         name: 'boolean',
       },
       table: {
-        category: 'Demo',
+        category: 'Props',
       },
       defaultValue: false,
     },
   },
   args: {
-    children: '',
     appearance: '',
+    children: 'Label',
     disabled: false,
     iconLeft: false,
     iconRight: false,
@@ -100,10 +101,13 @@ const meta = {
     },
     docs: {
       description: {
-        component: mergeMarkdown([readme, anatomyDocs, visualDesignDocs, htmlDocs, wcagDocs]),
+        component: mergeMarkdown([readme, anatomyDocs, visualDesignDocs, htmlDocs, rhcReadme, wcagDocs]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/455',
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=153-1138&p=f&t=bIUNfPQ6Tcm5rDPk-0',
+    nldesignsystem: 'https://nldesignsystem.nl/button',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen (voor de IconButton) en styling van de Rijkshuisstijl Community.',
   },
