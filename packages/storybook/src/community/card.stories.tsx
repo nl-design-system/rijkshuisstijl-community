@@ -8,65 +8,93 @@ const meta = {
   id: 'rhc-card',
   component: Card,
   argTypes: {
-    heading: {
-      description: 'Card heading',
-      control: { type: 'text' },
-      defaultValue: 'Card Heading',
-    },
     appearance: {
       description: 'Card appearance',
       control: { type: 'select' },
       options: ['default', 'full-bleed', 'horizontal'],
       defaultValue: 'default',
+      table: {
+        category: 'Variant',
+      },
+    },
+    heading: {
+      description: 'Card heading',
+      control: { type: 'text' },
+      defaultValue: 'Card Heading',
+      table: {
+        category: 'Props',
+      },
     },
     imageSrc: {
       description: 'Image source URL',
       control: { type: 'text' },
       defaultValue: '',
+      table: {
+        category: 'Props',
+      },
     },
     imageAlt: {
       description: 'Image alt text',
       control: { type: 'text' },
       defaultValue: '',
+      table: {
+        category: 'Props',
+      },
     },
     description: {
       description: 'Card content',
       control: { type: 'text' },
       defaultValue: '',
       if: { arg: 'appearance', neq: 'horizontal' },
+      table: {
+        category: 'Props',
+      },
     },
     linkLabel: {
       description: 'Link label',
       control: { type: 'text' },
       defaultValue: '',
       if: { arg: 'appearance', eq: 'default' },
+      table: {
+        category: 'Props',
+      },
     },
     metaData: {
       description: 'Metadata',
       control: { type: 'text' },
       defaultValue: '',
       if: { arg: 'appearance', neq: 'horizontal' },
+      table: {
+        category: 'Props',
+      },
     },
     title: {
       description: 'Anchor title (hover text) and aria-label attributes',
       control: { type: 'text' },
       defaultValue: '',
+      table: {
+        category: 'Props',
+      },
     },
     href: {
       description: 'Link',
       control: { type: 'text' },
       defaultValue: '',
+      table: {
+        category: 'Props',
+      },
     },
   },
   args: {
-    imageSrc: './placeholder.jpg',
-    href: '#',
-    title: 'Card Title',
-    heading: 'Card Heading',
+    appearance: 'default',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    heading: 'Card Heading',
+    href: '#',
+    imageSrc: './placeholder.jpg',
     linkLabel: 'Link label',
     metaData: 'Metadata',
+    title: 'Card Title',
   },
   tags: ['autodocs'],
   parameters: {
