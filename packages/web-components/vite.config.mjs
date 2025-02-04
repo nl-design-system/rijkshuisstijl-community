@@ -1,7 +1,6 @@
 import preact from '@preact/preset-vite';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
-import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   mode: 'production',
@@ -26,9 +25,6 @@ export default defineConfig({
       entryRoot: 'src',
       insertTypesEntry: true,
       rollupTypes: true,
-    }),
-    visualizer({
-      filename: './bundle-analysis.html',
     }),
   ],
 });

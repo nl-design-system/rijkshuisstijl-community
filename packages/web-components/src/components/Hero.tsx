@@ -1,6 +1,6 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { Hero, HeroProps } from '@rijkshuisstijl-community/components-react';
-import { render as renderComponent } from 'preact';
+import { render } from 'preact';
 import { BaseWebComponent, Slot } from './BaseComponent';
 
 export type HeroWebComponentAttributes = HeroProps;
@@ -19,12 +19,10 @@ export class HeroWebComponent extends BaseWebComponent {
   ];
 
   constructor() {
-    console.log('hero - constructor');
     super(stylesheet);
   }
 
   override setupRestProps(): void {
-    console.log('hero - setupRestProps');
     for (const attributeName of this.getAttributeNames()) {
       if (HeroWebComponent.observedAttributes.includes(attributeName)) continue;
       this.restProps[attributeName] = this.getAttribute(attributeName);
@@ -32,9 +30,8 @@ export class HeroWebComponent extends BaseWebComponent {
   }
 
   render(): void {
-    console.log('hero - render');
-    console.log('hero - this', this);
-    renderComponent(
+    if (!this.root) return;
+    render(
       <Hero
         aspectRatio={(this.getAttribute('aspectRatio') as HeroProps['aspectRatio']) ?? undefined}
         borderRadiusCorner={this.getAttribute('borderRadiusCorner') as HeroProps['borderRadiusCorner']}
@@ -53,7 +50,7 @@ export class HeroWebComponent extends BaseWebComponent {
       >
         <Slot>{this.innerHTML}</Slot>
       </Hero>,
-      this,
+      this.root,
     );
   }
 }

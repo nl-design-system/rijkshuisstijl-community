@@ -21,6 +21,7 @@ export class AccordionWebComponent extends BaseWebComponent {
   }
 
   render(): void {
+    if (!this.root) return;
     render(
       <AccordionProvider
         appearance={this.getAttribute('appearance') ?? undefined}

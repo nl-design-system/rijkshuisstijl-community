@@ -21,7 +21,6 @@ export class ButtonWebComponent extends BaseWebComponent {
   }
 
   render(): void {
-    console.log('Button - this', this);
     if (!this.root) return;
     render(
       <Button

@@ -2,8 +2,6 @@ import parse from 'html-react-parser';
 import { render } from 'preact';
 
 export const Slot = ({ children }: { children: any }) => {
-  console.log('parse(children)', parse(children));
-  console.log('children', children);
   // This is done to recreate <slot /> logic without a shadow DOM.
   return <>{parse(children)}</>;
 };
@@ -19,9 +17,7 @@ export abstract class BaseWebComponent extends HTMLElement {
   static observedAttributes: string[];
 
   constructor(stylesheet: string) {
-    console.log('basecomponent - constructor');
     super();
-    // this.root = this;
 
     const style = document.createElement('style');
     style.textContent = stylesheet;
@@ -33,19 +29,20 @@ export abstract class BaseWebComponent extends HTMLElement {
   }
 
   connectedCallback(): void {
-    console.log('basecomponent - connectedCallback');
     this.root = document.createElement('span');
     this.appendChild(this.root);
 
-    // this.initialContent = this.innerHTML
-    // this.innerHTML = '';
-
     this.setupRestProps();
     this.render();
+
+    if (!(this.parentNode instanceof Element)) return;
+
+    Array.from(this.childNodes).forEach((node) => {
+      if (node !== this.root) node.remove();
+    });
   }
 
   attributeChangedCallback(): void {
-    console.log('basecomponent - attributeChangedCallback');
     this.render();
   }
 

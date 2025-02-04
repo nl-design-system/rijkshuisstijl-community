@@ -21,6 +21,7 @@ export class AlertWebComponent extends BaseWebComponent {
   }
 
   render(): void {
+    if (!this.root) return;
     render(
       <Alert
         heading={(this.getAttribute('heading') as AlertProps['heading']) ?? 'default heading'}
