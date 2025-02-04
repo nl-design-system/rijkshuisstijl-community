@@ -21,14 +21,14 @@ describe('Heading', () => {
   it('applies the correct appearance level', () => {
     const { container } = render(<Heading appearanceLevel={4} level={3} />);
     const heading = container.querySelector(':only-child');
-    expect(heading).not.toHaveClass('utrecht-heading-3');
-    expect(heading).toHaveClass('utrecht-heading-4');
+    expect(heading).not.toHaveClass('nl-heading--level-3');
+    expect(heading).toHaveClass('nl-heading--level-4');
   });
 
   it('defaults appearance level to the heading level if not provided', () => {
     const { container } = render(<Heading level={5} />);
     const heading = container.querySelector(':only-child');
-    expect(heading).toHaveClass('utrecht-heading-5');
+    expect(heading).toHaveClass('nl-heading--level-5');
   });
 
   it('renders children correctly', () => {
