@@ -21,11 +21,25 @@ h1 {
 .rhc-templates-databadge {
   /* --utrecht-data-badge-background-color: blue;
   --utrecht-data-badge-color: red; */
-  background-color: #f2f4f6;
+  background-color: #fff !important;
   max-inline-size: 12em;
   color: darkblue;
   padding-inline: 0.5em;
   padding-block: 0.5em;
+}
+
+.rhc-badgelist-databadge {
+  background-color: #fff !important;
+  max-inline-size: 12em;
+  color: grey;
+  padding: 0.25rem 0.75rem;
+  border-radius: 13px;
+  border: solid 1px grey;
+}
+
+.rhc-badgelist {
+  display: flex;
+  gap: 0.3rem !important;
 }
 
 .rhc-templates-unstarted {
@@ -113,12 +127,18 @@ h1 {
 .rhc-templates-card-container {
   column-gap: var(--rhc-space-300);
   display: flex;
+  flex-wrap: wrap;
   margin-block-end: var(--rhc-space-400);
   margin-block-start: var(--rhc-space-300);
   row-gap: var(--rhc-space-300);
   @media (width <= 780px) {
     flex-direction: column;
   }
+}
+
+.rhc-card--full-bleed {
+  background-color: #f2f4f6;
+  color: #154273 !important;
 }
 
 .rhc-side-nav {
