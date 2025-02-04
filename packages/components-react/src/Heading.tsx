@@ -17,15 +17,15 @@ export interface HeadingProps extends Omit<CandidateHeadingProps, 'appearance'> 
 
 export const Heading = ({
   children,
-  appearanceLevel,
   level,
+  appearanceLevel = level,
   className,
   ref,
   ...restProps
 }: PropsWithChildren<HeadingProps>) => {
   return (
     <CandidateHeading
-      appearance={`level-${appearanceLevel ?? level}`}
+      appearance={`level-${appearanceLevel}`}
       className={clsx('rhc-heading', className)}
       level={level}
       ref={ref}
