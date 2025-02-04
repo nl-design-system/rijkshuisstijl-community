@@ -164,7 +164,7 @@ export default function Form() {
         </div>
       </PageBody>
       <Footer
-        appearanceLevel="level-4"
+        appearanceLevel={4}
         heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         columns={[
           {

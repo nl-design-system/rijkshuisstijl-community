@@ -1,20 +1,24 @@
-import { Paragraph, Alert as UtrechtAlert } from '@utrecht/component-library-react';
+import { Alert as UtrechtAlert } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { PropsWithChildren, ReactNode, RefObject } from 'react';
+import { Heading, type HeadingLevel } from './Heading';
 import { Icon } from './Icon';
-import { Heading } from './index';
+import { Paragraph } from './Paragraph';
+
 export interface AlertProps {
   ref?: RefObject<HTMLDivElement>;
   type: 'info' | 'ok' | 'warning' | 'error';
   heading?: ReactNode;
-  headingLevel?: 1 | 2 | 3 | 4 | 5;
+  headingLevel?: HeadingLevel;
+  headingAppearanceLevel?: HeadingLevel;
   textContent?: ReactNode;
 }
 export const Alert = ({
   ref,
   type,
   heading,
-  headingLevel,
+  headingLevel = 3,
+  headingAppearanceLevel = 5,
   textContent,
   children,
   ...restProps
@@ -43,7 +47,7 @@ export const Alert = ({
       </div>
       <div>
         {heading && (
-          <Heading appearance="level-5" level={headingLevel || 3}>
+          <Heading appearanceLevel={headingAppearanceLevel} level={headingLevel}>
             {heading}
           </Heading>
         )}
