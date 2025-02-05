@@ -20,7 +20,7 @@ importers:
     devDependencies:
       '@lerna-lite/cli':
         specifier: 3.12.0
-        version: 3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+        version: 3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/publish':
         specifier: 3.12.0
         version: 3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3)
@@ -227,6 +227,9 @@ importers:
       '@nl-design-system-candidate/heading-css':
         specifier: 1.0.0
         version: 1.0.0
+      '@nl-design-system-candidate/number-badge-css':
+        specifier: 1.1.0
+        version: 1.1.0
       '@utrecht/component-library-css':
         specifier: 7.0.0
         version: 7.0.0
@@ -243,6 +246,9 @@ importers:
       '@nl-design-system-candidate/heading-react':
         specifier: 1.0.0
         version: 1.0.0(@babel/runtime@7.26.7)(react@19.0.0)
+      '@nl-design-system-candidate/number-badge-react':
+        specifier: 1.1.0
+        version: 1.1.0(@babel/runtime@7.26.7)(react@19.0.0)
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css
@@ -2173,6 +2179,15 @@ packages:
 
   '@nl-design-system-candidate/heading-react@1.0.0':
     resolution: {integrity: sha512-tJ6JGokl7AY7tEZ0vYDhIUCAzL1Sz7TapTLJ/DOfAb4koVY5IUdbnNjII0OJn6a4fQON8m/Ngly2ezErG0ojsQ==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
+
+  '@nl-design-system-candidate/number-badge-css@1.1.0':
+    resolution: {integrity: sha512-y0Xiogm7U+WQ4lCny+SDD2AdMnPYc0fALWNMyzWyE6OHMEDFrKe1P9cnDcuapb6RK0GTUt/O0s8ocSyIOKecFg==}
+
+  '@nl-design-system-candidate/number-badge-react@1.1.0':
+    resolution: {integrity: sha512-QZbcKnMGlILHEmvrl4wjNKMpnfA1H5+XtZltjm7piq3ceBdqSctS+F5acKFuMExXZzf9uBRfXTJNo76Cjf8d/g==}
     peerDependencies:
       '@babel/runtime': ^7
       react: ^18
@@ -11568,7 +11583,7 @@ snapshots:
     dependencies:
       buffer: 6.0.3
 
-  '@lerna-lite/cli@3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)':
+  '@lerna-lite/cli@3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)':
     dependencies:
       '@lerna-lite/core': 3.12.0(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/init': 3.12.0(@types/node@20.17.6)(typescript@5.7.3)
@@ -11581,7 +11596,7 @@ snapshots:
     optionalDependencies:
       '@lerna-lite/publish': 3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/run': 3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3)
-      '@lerna-lite/version': 3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+      '@lerna-lite/version': 3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -11667,10 +11682,10 @@ snapshots:
 
   '@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3)':
     dependencies:
-      '@lerna-lite/cli': 3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+      '@lerna-lite/cli': 3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/core': 3.12.0(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/npmlog': 3.12.0
-      '@lerna-lite/version': 3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+      '@lerna-lite/version': 3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3)
       '@npmcli/arborist': 7.5.4
       '@npmcli/package-json': 5.2.1
       byte-size: 9.0.1
@@ -11706,7 +11721,7 @@ snapshots:
 
   '@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3)':
     dependencies:
-      '@lerna-lite/cli': 3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+      '@lerna-lite/cli': 3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/core': 3.12.0(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/npmlog': 3.12.0
       '@lerna-lite/profiler': 3.12.0(@types/node@20.17.6)(typescript@5.7.3)
@@ -11725,9 +11740,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)':
+  '@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3)':
     dependencies:
-      '@lerna-lite/cli': 3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+      '@lerna-lite/cli': 3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/core': 3.12.0(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/npmlog': 3.12.0
       '@octokit/plugin-enterprise-rest': 6.0.1
@@ -11878,6 +11893,14 @@ snapshots:
   '@nl-design-system-candidate/heading-css@1.0.0': {}
 
   '@nl-design-system-candidate/heading-react@1.0.0(@babel/runtime@7.26.7)(react@19.0.0)':
+    dependencies:
+      '@babel/runtime': 7.26.7
+      clsx: 2.1.1
+      react: 19.0.0
+
+  '@nl-design-system-candidate/number-badge-css@1.1.0': {}
+
+  '@nl-design-system-candidate/number-badge-react@1.1.0(@babel/runtime@7.26.7)(react@19.0.0)':
     dependencies:
       '@babel/runtime': 7.26.7
       clsx: 2.1.1
@@ -15797,7 +15820,7 @@ snapshots:
       '@typescript-eslint/parser': 8.20.0(eslint@9.18.0)(typescript@5.7.3)
       eslint: 9.18.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint@9.18.0))(eslint@9.18.0)
+      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0)(eslint@9.18.0)
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-typescript@3.6.3)(eslint@9.18.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.18.0)
       eslint-plugin-react: 7.37.4(eslint@9.18.0)
@@ -15821,13 +15844,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint@9.18.0))(eslint@9.18.0):
+  eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0)(eslint@9.18.0):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.3.7
       enhanced-resolve: 5.17.1
       eslint: 9.18.0
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint@9.18.0))(eslint@9.18.0))(eslint@9.18.0)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.18.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.8.1
       is-bun-module: 1.2.1
@@ -15861,14 +15884,14 @@ snapshots:
       - bluebird
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint@9.18.0))(eslint@9.18.0))(eslint@9.18.0):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.18.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.20.0(eslint@9.18.0)(typescript@5.7.3)
       eslint: 9.18.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint@9.18.0))(eslint@9.18.0)
+      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0)(eslint@9.18.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -15893,7 +15916,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.18.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint@9.18.0))(eslint@9.18.0))(eslint@9.18.0)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.18.0)
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
