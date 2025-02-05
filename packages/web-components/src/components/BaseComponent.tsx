@@ -1,5 +1,4 @@
 import parse from 'html-react-parser';
-import { render } from 'preact';
 
 export const Slot = ({ children }: { children: any }) => {
   // This is done to recreate <slot /> logic without a shadow DOM.
@@ -47,11 +46,8 @@ export abstract class BaseWebComponent extends HTMLElement {
   }
 
   disconnectedCallback(): void {
-    // Clean up when the element is removed
-    if (this.root) {
-      render(null, this.root); // Unmount Preact component
-      this.root.remove(); // Remove from DOM
-    }
+    if (!this.root) return;
+    this.root.remove();
   }
 
   protected abstract render(): void;

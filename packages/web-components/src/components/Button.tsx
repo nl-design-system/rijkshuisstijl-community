@@ -24,7 +24,6 @@ export class ButtonWebComponent extends BaseWebComponent {
     if (!this.root) return;
     render(
       <Button
-        suppressHydrationWarning
         appearance={(this.getAttribute('appearance') as ButtonProps['appearance']) ?? undefined}
         disabled={Boolean(this.getAttribute('disabled')) as ButtonProps['disabled']}
         {...this.restProps}
