@@ -1,8 +1,13 @@
 import parse from 'html-react-parser';
+import { JSX } from 'react';
 
-export const Slot = ({ children }: { children: any }) => {
-  // This is done to recreate <slot /> logic without a shadow DOM.
-  return <>{parse(children)}</>;
+// This is done to recreate <slot /> logic without a shadow DOM.
+export const Slot = ({ children }: { children: string }) => {
+  const parsedChildren: string | JSX.Element | JSX.Element[] = parse(children);
+  if (!Array.isArray(parsedChildren)) return parsedChildren;
+
+  const filteredChildren = parsedChildren.filter((el) => el.props.id !== 'root');
+  return <>{filteredChildren}</>;
 };
 
 export abstract class BaseWebComponent extends HTMLElement {
@@ -29,6 +34,7 @@ export abstract class BaseWebComponent extends HTMLElement {
 
   connectedCallback(): void {
     this.root = document.createElement('span');
+    this.root.id = 'root';
     this.appendChild(this.root);
 
     this.setupRestProps();
