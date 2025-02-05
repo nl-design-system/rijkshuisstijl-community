@@ -32,11 +32,11 @@
     "start": "vite"
   },
   "devDependencies": {
+    "@preact/preset-vite": "2.10.1",
     "@rijkshuisstijl-community/components-css": "workspace:*",
     "@rijkshuisstijl-community/components-react": "workspace:*",
     "@rijkshuisstijl-community/design-tokens": "workspace:*",
     "@types/react": "19.0.7",
-    "@types/react-dom": "19.0.3",
     "@vitejs/plugin-react": "4.3.4",
     "cpy-cli": "5.0.0",
     "html-react-parser": "5.2.2",
@@ -47,7 +47,6 @@
     "vite-plugin-dts": "4.5.0"
   },
   "dependencies": {
-    "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "preact": "10.25.4"
   }
 }
