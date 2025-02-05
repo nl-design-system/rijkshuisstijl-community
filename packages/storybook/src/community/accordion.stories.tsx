@@ -12,12 +12,11 @@ interface AccordionStoryProps {
   expanded?: boolean;
   expandedAccordion?: boolean;
   icon?: ReactNode;
-  appearance?: string;
   sections?: AccordionSectionProps[];
 }
 
-const AccordionStory = ({ expanded, label, body, appearance, icon, sections }: AccordionStoryProps) => (
-  <AccordionProvider appearance={appearance} icon={icon} sections={sections || [{ expanded, label, body }]} />
+const AccordionStory = ({ expanded, label, body, icon, sections }: AccordionStoryProps) => (
+  <AccordionProvider icon={icon} sections={sections || [{ expanded, label, body }]} />
 );
 
 const meta = {
@@ -26,39 +25,24 @@ const meta = {
   args: {
     label: '',
     body: '',
-    expandedAccordion: false,
-    appearance: '',
+    expanded: false,
     icon: undefined,
   },
   argTypes: {
     label: {
       name: 'label',
       type: { name: 'string', required: true },
-      table: {
-        defaultValue: { summary: '' },
-        category: 'API',
-      },
+      defaultValue: { summary: '' },
     },
     body: {
       name: 'body',
       type: { name: 'string', required: true },
-      table: {
-        defaultValue: { summary: '' },
-        category: 'API',
-      },
+      defaultValue: { summary: '' },
     },
-    expandedAccordion: {
-      name: 'expandedAccordion',
+    expanded: {
+      name: 'expanded',
       type: { name: 'boolean', required: false },
-      table: {
-        defaultValue: { summary: '' },
-        category: 'API',
-      },
-    },
-    appearance: {
-      description: 'Appearance',
-      control: { type: 'select' },
-      options: ['', 'utrecht'],
+      defaultValue: { summary: '' },
     },
     icon: {
       name: 'icon',
@@ -133,8 +117,22 @@ const accordionData = [
 
 export const Default: Story = {
   args: {
-    sections: accordionData,
+    label: 'Lorem ipsum 3',
+    body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+    laborum.`,
+    expanded: true,
   },
+};
+
+export const AccordionWithSections: Story = {
+  args: {
+    sections: accordionData,
+    expanded: true,
+  },
+  name: 'Accordion with sections',
 };
 
 export const RTL: Story = {
