@@ -117,7 +117,6 @@ jobs:
       - name: Publish to Chromatic
         uses: chromaui/action@2929680e80a2298d17561b7f1deaa334653f905e # 11.16.5
         if: |
-          github.event.pull_request.draft == false &&
           github.actor != 'dependabot[bot]'
         with:
           autoAcceptChanges: main
