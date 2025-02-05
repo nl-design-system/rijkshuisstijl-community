@@ -6,7 +6,7 @@ export const Slot = ({ children }: { children: string }) => {
   const parsedChildren: string | JSX.Element | JSX.Element[] = parse(children);
   if (!Array.isArray(parsedChildren)) return parsedChildren;
 
-  const filteredChildren = parsedChildren.filter((el) => el.props.id !== 'root');
+  const filteredChildren = parsedChildren.filter((el) => el.props?.id !== 'root');
   return <>{filteredChildren}</>;
 };
 
