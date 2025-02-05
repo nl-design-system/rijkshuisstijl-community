@@ -1,12 +1,11 @@
 import {
   // ActionGroup,
-  // BadgeList, //TODO: waarvandaan? / bestaat deze al?
   Card, //TODO: aanpassen naar Dev Ovh opbouw?
   Footer,
   Heading,
   HeadingGroup,
   Hero,
-  Icon, //afmetingen aanpassen (is nu erg klein naast h2)
+  Icon, //TODO: afmetingen aanpassen (is nu erg klein naast h2)
   Image,
   Link,
   Logo,
@@ -15,17 +14,17 @@ import {
   PageHeader,
   // Paragraph,
   // PreHeading,
-  // Section, //TODO: Section Component RHC/NLDS?
-  // Subtitle, //TODO:
+  // Section, //? Section Component RHC/NLDS?
+  // Subtitle, //TODO: toevoegen aan Hero?
 } from '@rijkshuisstijl-community/components-react';
 import {
-  // IconAffiliate, // moet in 2e card
+  // IconAffiliate, //TODO: moet in 2e card
   IconArrowRight,
   IconClipboardCheck,
-  // IconCode, // moet in 3e card
+  // IconCode, //TODO: moet in 3e card
   IconFolders,
   IconJetpack,
-  // IconMessages, // moet in 1e card
+  // IconMessages, //TODO: moet in 1e card
   // IconPrompt, //Placeholder Dev.Ovh logo
   IconTerminal2,
 } from '@tabler/icons-react';
