@@ -3,8 +3,7 @@ import './globals.css';
 import DevOvhHomepage from './developer-overheid/homepage';
 
 const meta = {
-  title: 'Templates/Mijn Omgeving',
-  id: 'rhc-templates-mijn-omgeving',
+  title: 'Templates/Developer Overheid Homepage',
   component: DevOvhHomepage,
   parameters: {
     status: {
