@@ -1,5 +1,5 @@
 import { Paragraph } from '@utrecht/component-library-react';
-import { ChangeEvent, PropsWithChildren, RefObject, useEffect, useState } from 'react';
+import { ChangeEvent, PropsWithChildren, RefObject, useEffect, useRef, useState } from 'react';
 import { Button, ButtonProps } from './Button';
 import { File } from './File';
 
@@ -28,7 +28,7 @@ export const FileInput = ({
   defaultFiles,
 }: PropsWithChildren<FileInputProps>) => {
   const [files, setFiles] = useState<File[]>([]);
-  const inputElement = ref;
+  const inputElement = useRef<HTMLInputElement>(null);
   const onChange = (newFiles: FileList | null) => {
     if (newFiles) {
       const updatedFiles = [...files, ...Array.from(newFiles)];
@@ -61,7 +61,7 @@ export const FileInput = ({
       <div className="rhc-file-input__button-feedback-container">
         <Button
           appearance={buttonAppearance ?? 'secondary-action-button'}
-          onClick={() => inputElement!.current.click()}
+          onClick={() => inputElement!.current!.click()}
         >
           {buttonText}
         </Button>
