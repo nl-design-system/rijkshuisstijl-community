@@ -1,5 +1,6 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { Button, ButtonProps } from '@rijkshuisstijl-community/components-react';
+import { render } from 'preact';
 import { BaseWebComponent, Slot } from './BaseComponent';
 
 export type ButtonWebComponentAttributes = ButtonProps;
@@ -20,15 +21,16 @@ export class ButtonWebComponent extends BaseWebComponent {
   }
 
   render(): void {
-    this.root.render(
+    if (!this.root) return;
+    render(
       <Button
-        suppressHydrationWarning
         appearance={(this.getAttribute('appearance') as ButtonProps['appearance']) ?? undefined}
         disabled={Boolean(this.getAttribute('disabled')) as ButtonProps['disabled']}
         {...this.restProps}
       >
         <Slot>{this.innerHTML}</Slot>
       </Button>,
+      this.root,
     );
   }
 }

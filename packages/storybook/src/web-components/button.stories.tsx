@@ -62,27 +62,27 @@ export default meta;
 
 export const Default = {
   args: {
-    children: 'Label',
+    children: 'Default',
   },
 } as StoryObj<typeof meta>;
 
 export const PrimaryAction = {
   args: {
-    children: 'Label',
+    children: 'PrimaryAction',
     appearance: 'primary-action-button',
   },
 } as StoryObj<typeof meta>;
 
 export const SecondaryAction = {
   args: {
-    children: 'Label',
+    children: 'SecondaryAction',
     appearance: 'secondary-action-button',
   },
 } as StoryObj<typeof meta>;
 
 export const Subtle = {
   args: {
-    children: 'Label',
+    children: 'SecondaryAction',
     appearance: 'subtle-button',
   },
 } as StoryObj<typeof meta>;

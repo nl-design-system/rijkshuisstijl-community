@@ -1,6 +1,7 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { Alert, AlertProps } from '@rijkshuisstijl-community/components-react';
-import { BaseWebComponent, Slot } from './BaseComponent';
+import { render } from 'preact';
+import { BaseWebComponent } from './BaseComponent';
 
 export type AlertWebComponentAttributes = AlertProps;
 
@@ -20,7 +21,8 @@ export class AlertWebComponent extends BaseWebComponent {
   }
 
   render(): void {
-    this.root.render(
+    if (!this.root) return;
+    render(
       <Alert
         heading={(this.getAttribute('heading') as AlertProps['heading']) ?? 'default heading'}
         type={(this.getAttribute('type') as AlertProps['type']) ?? 'info'}
@@ -32,8 +34,9 @@ export class AlertWebComponent extends BaseWebComponent {
         }
         {...this.restProps}
       >
-        <Slot>{this.innerHTML}</Slot>
+        {/* <Slot>{this.innerHTML}</Slot> */}
       </Alert>,
+      this.root,
     );
   }
 }

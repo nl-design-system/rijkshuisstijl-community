@@ -20,7 +20,7 @@ importers:
     devDependencies:
       '@lerna-lite/cli':
         specifier: 3.12.0
-        version: 3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+        version: 3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/publish':
         specifier: 3.12.0
         version: 3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3)
@@ -227,6 +227,9 @@ importers:
       '@nl-design-system-candidate/heading-css':
         specifier: 1.0.0
         version: 1.0.0
+      '@nl-design-system-candidate/number-badge-css':
+        specifier: 1.1.0
+        version: 1.1.0
       '@utrecht/component-library-css':
         specifier: 7.0.0
         version: 7.0.0
@@ -243,6 +246,9 @@ importers:
       '@nl-design-system-candidate/heading-react':
         specifier: 1.0.0
         version: 1.0.0(@babel/runtime@7.26.7)(react@19.0.0)
+      '@nl-design-system-candidate/number-badge-react':
+        specifier: 1.1.0
+        version: 1.1.0(@babel/runtime@7.26.7)(react@19.0.0)
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css
@@ -319,6 +325,9 @@ importers:
       npm-run-all:
         specifier: 4.1.5
         version: 4.1.5
+      preact:
+        specifier: 10.25.4
+        version: 10.25.4
       react:
         specifier: 19.0.0
         version: 19.0.0
@@ -556,13 +565,13 @@ importers:
 
   packages/web-components:
     dependencies:
-      react:
-        specifier: 19.0.0
-        version: 19.0.0
-      react-dom:
-        specifier: 19.0.0
-        version: 19.0.0(react@19.0.0)
+      preact:
+        specifier: 10.25.4
+        version: 10.25.4
     devDependencies:
+      '@preact/preset-vite':
+        specifier: 2.10.1
+        version: 2.10.1(@babel/core@7.26.7)(preact@10.25.4)(vite@6.0.11(@types/node@22.9.0)(sass@1.83.4)(terser@5.36.0)(yaml@2.7.0))
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css
@@ -575,12 +584,6 @@ importers:
       '@types/react':
         specifier: 19.0.8
         version: 19.0.8
-      '@types/react-dom':
-        specifier: 19.0.3
-        version: 19.0.3(@types/react@19.0.8)
-      '@utrecht/component-library-css':
-        specifier: 7.0.0
-        version: 7.0.0
       '@vitejs/plugin-react':
         specifier: 4.3.4
         version: 4.3.4(vite@6.0.11(@types/node@22.9.0)(sass@1.83.4)(terser@5.36.0)(yaml@2.7.0))
@@ -2178,6 +2181,15 @@ packages:
       '@babel/runtime': ^7
       react: ^18
 
+  '@nl-design-system-candidate/number-badge-css@1.1.0':
+    resolution: {integrity: sha512-y0Xiogm7U+WQ4lCny+SDD2AdMnPYc0fALWNMyzWyE6OHMEDFrKe1P9cnDcuapb6RK0GTUt/O0s8ocSyIOKecFg==}
+
+  '@nl-design-system-candidate/number-badge-react@1.1.0':
+    resolution: {integrity: sha512-QZbcKnMGlILHEmvrl4wjNKMpnfA1H5+XtZltjm7piq3ceBdqSctS+F5acKFuMExXZzf9uBRfXTJNo76Cjf8d/g==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
+
   '@nl-rvo/assets@1.0.0-alpha.360':
     resolution: {integrity: sha512-YfHk1bDfyPLtZEi5rBZLyhYaeZOs35MWRPZnL+GYiHmmsy+avqDL3wOrKEd1tF9bT2b/cI3jkmh8jsg5XKlToQ==}
 
@@ -2434,6 +2446,29 @@ packages:
     resolution: {integrity: sha512-Jii3aBg+CEDpgnuDxEp/h7BimHcUTDlpEtce89xEumlJ5ef2hqepZ+PWp1DDpYC/VO9fmWVI1IlEaoI5fK9FXQ==}
     engines: {node: '>=18'}
     hasBin: true
+
+  '@preact/preset-vite@2.10.1':
+    resolution: {integrity: sha512-59lyGBXNfZIr5OOuBUB4/IB8AqF/ULbvYnyItgK/2BJnsGJqaeaJobRVtMp1129obHQuj8oZ/dVxB9inmH8Xig==}
+    peerDependencies:
+      '@babel/core': 7.x
+      vite: 2.x || 3.x || 4.x || 5.x || 6.x
+
+  '@prefresh/babel-plugin@0.5.1':
+    resolution: {integrity: sha512-uG3jGEAysxWoyG3XkYfjYHgaySFrSsaEb4GagLzYaxlydbuREtaX+FTxuIidp241RaLl85XoHg9Ej6E4+V1pcg==}
+
+  '@prefresh/core@1.5.3':
+    resolution: {integrity: sha512-nDzxj0tA1/M6APNAWqaxkZ+3sTdPHESa+gol4+Bw7rMc2btWdkLoNH7j9rGhUb8SThC0Vz0VoXtq+U+9azGLHg==}
+    peerDependencies:
+      preact: ^10.0.0
+
+  '@prefresh/utils@1.2.0':
+    resolution: {integrity: sha512-KtC/fZw+oqtwOLUFM9UtiitB0JsVX0zLKNyRTA332sqREqSALIIQQxdUCS1P3xR/jT1e2e8/5rwH6gdcMLEmsQ==}
+
+  '@prefresh/vite@2.4.7':
+    resolution: {integrity: sha512-zmCEDWSFHl5A7PciXa/fe+OUjoGi4iiCQclpWfpIg7LjxwWrtlUT4DfxDBcQwHfTyipS/XDm8x7WYrkiTW0q+w==}
+    peerDependencies:
+      preact: ^10.4.0
+      vite: '>=2.0.0'
 
   '@rollup/plugin-babel@6.0.4':
     resolution: {integrity: sha512-YF7Y52kFdFT/xVSuVdjkV5ZdX/3YtmX0QulG+x0taQOtJdHYzVU61aSSkAgVJ7NOv6qPkIYiJSgSWWN/DM5sGw==}
@@ -4380,6 +4415,11 @@ packages:
     peerDependencies:
       '@babel/core': ^7.4.0 || ^8.0.0-0 <8.0.0
 
+  babel-plugin-transform-hook-names@1.0.2:
+    resolution: {integrity: sha512-5gafyjyyBTTdX/tQQ0hRgu4AhNHG/hqWi0ZZmg2xvs2FgRkJXzDNKBZCyoYqgFkovfDrgM8OoKg8karoUvWeCw==}
+    peerDependencies:
+      '@babel/core': ^7.12.10
+
   babel-preset-current-node-syntax@1.1.0:
     resolution: {integrity: sha512-ldYss8SbBlWva1bs28q78Ju5Zq1F+8BrqBZZ0VFhLBvhh6lCpC2o3gDJi/5DRLs9FgYZCnmPYIVFU4lRXCkyUw==}
     peerDependencies:
@@ -4942,6 +4982,9 @@ packages:
 
   css-select@4.3.0:
     resolution: {integrity: sha512-wPpOYtnsVontu2mODhA19JrqWxNsfdatRKd64kmpRbQgh1KtItko5sTnEpPdpSaJszTOhEMlF/RPz28qj4HqhQ==}
+
+  css-select@5.1.0:
+    resolution: {integrity: sha512-nwoRF1rvRRnnCqqY7updORDsuqKzqYJ28+oSMaJMMgOauh3fvwHqMS7EZpIPqK8GL+g9mKxF1vP/ZjSeNjEVHg==}
 
   css-tree@1.1.3:
     resolution: {integrity: sha512-tRpdppF7TRazZrjJ6v3stzv93qxRcSsFmW6cX0Zm2NVKpxE1WV1HblnghVv9TreireHkqI/VDEsfolRF1p6y7Q==}
@@ -7635,6 +7678,9 @@ packages:
     engines: {node: ^12.13 || ^14.13 || >=16}
     hasBin: true
 
+  node-html-parser@6.1.13:
+    resolution: {integrity: sha512-qIsTMOY4C/dAa5Q5vsobRpOOvPfC4pB61UVW2uSwZNUp0QU/jCekTal1vMmbO0DgdHeLUJpv/ARmDqErVxA3Sg==}
+
   node-int64@0.4.0:
     resolution: {integrity: sha512-O5lz91xSOeoXP6DulyHfllpq+Eg00MWitZIbtPfoSEvqIHdl5gfcY6hYzDWnj0qD5tz52PI08u9qUvSVeUBeHw==}
 
@@ -8422,6 +8468,9 @@ packages:
     resolution: {integrity: sha512-6oz2beyjc5VMn/KV1pPw8fliQkhBXrVn1Z3TVyqZxU8kZpzEKhBdmCFqI6ZbmGtamQvQGuU1sgPTk8ZrXDD7jQ==}
     engines: {node: ^10 || ^12 || >=14}
 
+  preact@10.25.4:
+    resolution: {integrity: sha512-jLdZDb+Q+odkHJ+MpW/9U5cODzqnB+fy2EiHSZES7ldV5LK7yjlVzTp7R8Xy6W6y75kfK8iWYtFVH7lvjwrCMA==}
+
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
@@ -9001,6 +9050,9 @@ packages:
     resolution: {integrity: sha512-8G+/XDU8wNsJOQS5ysDVO0Etg9/2uA5gR9l4ZwijjlwxBcrU6RPfwi2+jJmbP+Ap1Hlp/nVAaEO4Fj22/SL2gQ==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
+  simple-code-frame@1.3.0:
+    resolution: {integrity: sha512-MB4pQmETUBlNs62BBeRjIFGeuy/x6gGKh7+eRUemn1rCFhqo7K+4slPqsyizCbcbYLnaYqaoZ2FWsZ/jN06D8w==}
+
   simple-swizzle@0.2.2:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
 
@@ -9072,6 +9124,10 @@ packages:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
 
+  source-map@0.7.4:
+    resolution: {integrity: sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==}
+    engines: {node: '>= 8'}
+
   sourcemap-codec@1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
     deprecated: Please use @jridgewell/sourcemap-codec instead
@@ -9123,6 +9179,10 @@ packages:
   stable@0.1.8:
     resolution: {integrity: sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==}
     deprecated: 'Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility'
+
+  stack-trace@1.0.0-pre2:
+    resolution: {integrity: sha512-2ztBJRek8IVofG9DBJqdy2N5kulaacX30Nz7xmkYF6ale9WBVmIy6mFBchvGX7Vx/MyjBhx+Rcxqrj+dbOnQ6A==}
+    engines: {node: '>=16'}
 
   stack-utils@2.0.6:
     resolution: {integrity: sha512-XlkWvfIm6RmsWtNJx+uqtKLS8eqFbxUg0ZzLXqY0caEy9l7hruX8IpiDnjsLavoBgqCCR71TqWO8MaXYheJ3RQ==}
@@ -9834,6 +9894,18 @@ packages:
     peerDependenciesMeta:
       vite:
         optional: true
+
+  vite-plugin-runtime-config@1.0.2:
+    resolution: {integrity: sha512-UkZUqKDd88MsTq4TNmY7PdOavaNZGIc5UqiDN4hNI5CbBefGomPRU+ZShDuXVFIY795ynMPo9L+96lmMb+UJfA==}
+    peerDependencies:
+      vite: ^3.1.0
+      vitest: '>0.23.2 <1.0'
+    peerDependenciesMeta:
+      vitest:
+        optional: true
+
+  vite-prerender-plugin@0.5.5:
+    resolution: {integrity: sha512-WUXn08rPL8CkbEeLYQI/O/IAD2ggsy5Fp5tA5QMDOpiGi7J4vNBZW/gqYRmCd1ap3XdeobFCFBYEA5mqv39lAQ==}
 
   vite@6.0.11:
     resolution: {integrity: sha512-4VL9mQPKoHy4+FE0NnRE/kbY51TOfaknxAjt3fJbGJxhIpBZiqVzlZDEesWWsuREXHwNdAoOFZ9MkPEVXczHwg==}
@@ -11667,7 +11739,7 @@ snapshots:
     dependencies:
       buffer: 6.0.3
 
-  '@lerna-lite/cli@3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)':
+  '@lerna-lite/cli@3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)':
     dependencies:
       '@lerna-lite/core': 3.12.0(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/init': 3.12.0(@types/node@20.17.6)(typescript@5.7.3)
@@ -11680,7 +11752,7 @@ snapshots:
     optionalDependencies:
       '@lerna-lite/publish': 3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/run': 3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3)
-      '@lerna-lite/version': 3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+      '@lerna-lite/version': 3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -11766,10 +11838,10 @@ snapshots:
 
   '@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3)':
     dependencies:
-      '@lerna-lite/cli': 3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+      '@lerna-lite/cli': 3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/core': 3.12.0(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/npmlog': 3.12.0
-      '@lerna-lite/version': 3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+      '@lerna-lite/version': 3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3)
       '@npmcli/arborist': 7.5.4
       '@npmcli/package-json': 5.2.1
       byte-size: 9.0.1
@@ -11805,7 +11877,7 @@ snapshots:
 
   '@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3)':
     dependencies:
-      '@lerna-lite/cli': 3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+      '@lerna-lite/cli': 3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/core': 3.12.0(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/npmlog': 3.12.0
       '@lerna-lite/profiler': 3.12.0(@types/node@20.17.6)(typescript@5.7.3)
@@ -11824,9 +11896,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)':
+  '@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3)':
     dependencies:
-      '@lerna-lite/cli': 3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@lerna-lite/run@3.12.0(@lerna-lite/publish@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
+      '@lerna-lite/cli': 3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@lerna-lite/version@3.12.0(@lerna-lite/publish@3.12.0)(@lerna-lite/run@3.12.0)(@types/node@20.17.6)(typescript@5.7.3))(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/core': 3.12.0(@types/node@20.17.6)(typescript@5.7.3)
       '@lerna-lite/npmlog': 3.12.0
       '@octokit/plugin-enterprise-rest': 6.0.1
@@ -11977,6 +12049,14 @@ snapshots:
   '@nl-design-system-candidate/heading-css@1.0.0': {}
 
   '@nl-design-system-candidate/heading-react@1.0.0(@babel/runtime@7.26.7)(react@19.0.0)':
+    dependencies:
+      '@babel/runtime': 7.26.7
+      clsx: 2.1.1
+      react: 19.0.0
+
+  '@nl-design-system-candidate/number-badge-css@1.1.0': {}
+
+  '@nl-design-system-candidate/number-badge-react@1.1.0(@babel/runtime@7.26.7)(react@19.0.0)':
     dependencies:
       '@babel/runtime': 7.26.7
       clsx: 2.1.1
@@ -12317,6 +12397,42 @@ snapshots:
     dependencies:
       playwright: 1.50.1
     optional: true
+
+  '@preact/preset-vite@2.10.1(@babel/core@7.26.7)(preact@10.25.4)(vite@6.0.11(@types/node@22.9.0)(sass@1.83.4)(terser@5.36.0)(yaml@2.7.0))':
+    dependencies:
+      '@babel/core': 7.26.7
+      '@babel/plugin-transform-react-jsx': 7.25.9(@babel/core@7.26.7)
+      '@babel/plugin-transform-react-jsx-development': 7.25.9(@babel/core@7.26.7)
+      '@prefresh/vite': 2.4.7(preact@10.25.4)(vite@6.0.11(@types/node@22.9.0)(sass@1.83.4)(terser@5.36.0)(yaml@2.7.0))
+      '@rollup/pluginutils': 4.2.1
+      babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.26.7)
+      debug: 4.4.0
+      kolorist: 1.8.0
+      vite: 6.0.11(@types/node@22.9.0)(sass@1.83.4)(terser@5.36.0)(yaml@2.7.0)
+      vite-prerender-plugin: 0.5.5
+    transitivePeerDependencies:
+      - preact
+      - supports-color
+
+  '@prefresh/babel-plugin@0.5.1': {}
+
+  '@prefresh/core@1.5.3(preact@10.25.4)':
+    dependencies:
+      preact: 10.25.4
+
+  '@prefresh/utils@1.2.0': {}
+
+  '@prefresh/vite@2.4.7(preact@10.25.4)(vite@6.0.11(@types/node@22.9.0)(sass@1.83.4)(terser@5.36.0)(yaml@2.7.0))':
+    dependencies:
+      '@babel/core': 7.26.7
+      '@prefresh/babel-plugin': 0.5.1
+      '@prefresh/core': 1.5.3(preact@10.25.4)
+      '@prefresh/utils': 1.2.0
+      '@rollup/pluginutils': 4.2.1
+      preact: 10.25.4
+      vite: 6.0.11(@types/node@22.9.0)(sass@1.83.4)(terser@5.36.0)(yaml@2.7.0)
+    transitivePeerDependencies:
+      - supports-color
 
   '@rollup/plugin-babel@6.0.4(@babel/core@7.26.7)(@types/babel__core@7.20.5)(rollup@4.34.2)':
     dependencies:
@@ -14597,6 +14713,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  babel-plugin-transform-hook-names@1.0.2(@babel/core@7.26.7):
+    dependencies:
+      '@babel/core': 7.26.7
+
   babel-preset-current-node-syntax@1.1.0(@babel/core@7.26.7):
     dependencies:
       '@babel/core': 7.26.7
@@ -15271,6 +15391,14 @@ snapshots:
       domutils: 2.8.0
       nth-check: 2.1.1
 
+  css-select@5.1.0:
+    dependencies:
+      boolbase: 1.0.0
+      css-what: 6.1.0
+      domhandler: 5.0.3
+      domutils: 3.2.2
+      nth-check: 2.1.1
+
   css-tree@1.1.3:
     dependencies:
       mdn-data: 2.0.14
@@ -15933,7 +16061,7 @@ snapshots:
       debug: 4.4.0
       enhanced-resolve: 5.17.1
       eslint: 9.18.0
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0)(eslint@9.18.0))(eslint@9.18.0)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.18.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.8.1
       is-bun-module: 1.2.1
@@ -15967,7 +16095,7 @@ snapshots:
       - bluebird
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0)(eslint@9.18.0))(eslint@9.18.0):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.18.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -15999,7 +16127,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.18.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0)(eslint@9.18.0))(eslint@9.18.0)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.20.0(eslint@9.18.0)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.18.0)
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
@@ -18918,6 +19046,11 @@ snapshots:
       - bluebird
       - supports-color
 
+  node-html-parser@6.1.13:
+    dependencies:
+      css-select: 5.1.0
+      he: 1.2.0
+
   node-int64@0.4.0: {}
 
   node-preload@0.2.1:
@@ -19817,6 +19950,8 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
+  preact@10.25.4: {}
+
   prelude-ls@1.2.1: {}
 
   prettier@3.4.2: {}
@@ -20533,6 +20668,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  simple-code-frame@1.3.0:
+    dependencies:
+      kolorist: 1.8.0
+
   simple-swizzle@0.2.2:
     dependencies:
       is-arrayish: 0.3.2
@@ -20610,6 +20749,8 @@ snapshots:
 
   source-map@0.6.1: {}
 
+  source-map@0.7.4: {}
+
   sourcemap-codec@1.4.8: {}
 
   space-separated-tokens@1.1.5: {}
@@ -20665,6 +20806,8 @@ snapshots:
       minipass: 3.3.6
 
   stable@0.1.8: {}
+
+  stack-trace@1.0.0-pre2: {}
 
   stack-utils@2.0.6:
     dependencies:
@@ -21544,6 +21687,19 @@ snapshots:
       - '@types/node'
       - rollup
       - supports-color
+
+  vite-plugin-runtime-config@1.0.2(vite@6.0.11(@types/node@20.17.6)(sass@1.83.4)(terser@5.36.0)(yaml@2.7.0)):
+    dependencies:
+      lodash: 4.17.21
+      vite: 6.0.11(@types/node@20.17.6)(sass@1.83.4)(terser@5.36.0)(yaml@2.7.0)
+
+  vite-prerender-plugin@0.5.5:
+    dependencies:
+      magic-string: 0.30.17
+      node-html-parser: 6.1.13
+      simple-code-frame: 1.3.0
+      source-map: 0.7.4
+      stack-trace: 1.0.0-pre2
 
   vite@6.0.11(@types/node@20.17.6)(sass@1.83.4)(terser@5.36.0)(yaml@2.7.0):
     dependencies:
