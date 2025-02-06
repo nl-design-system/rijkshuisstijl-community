@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
-
 import { fireEvent, render, screen } from '@testing-library/react';
+import { describe, expect, vi } from 'vitest';
 import { Checkbox } from './Checkbox';
 
 describe('Checkbox', () => {
@@ -44,7 +44,7 @@ describe('Checkbox', () => {
   });
 
   test('calls onChange handler', () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
     render(<Checkbox onChange={handleChange} />);
     const checkbox = screen.getByRole('checkbox');
     fireEvent.click(checkbox);

@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { describe, expect, it } from 'vitest';
 import { NavigationListItem } from './NavigationListItem';
 
 const label = 'label';

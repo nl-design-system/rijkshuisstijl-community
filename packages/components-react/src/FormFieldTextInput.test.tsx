@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { createRef } from 'react';
+import { describe, expect, it, vi } from 'vitest';
 import { FormFieldTextInput } from './FormFieldTextInput';
 
 describe('Form field with a textinput', () => {
@@ -292,7 +293,7 @@ describe('Form field with a textinput', () => {
 
   describe('change event', () => {
     it('can trigger a change event', async () => {
-      const handleChange = jest.fn();
+      const handleChange = vi.fn();
 
       render(<FormFieldTextInput {...defaultProps} onChange={handleChange} />);
 
@@ -307,7 +308,7 @@ describe('Form field with a textinput', () => {
     });
 
     it('does not trigger a change event when disabled', async () => {
-      const handleChange = jest.fn();
+      const handleChange = vi.fn();
 
       render(<FormFieldTextInput {...defaultProps} disabled onChange={handleChange} />);
 
@@ -322,7 +323,7 @@ describe('Form field with a textinput', () => {
 
   describe('focus event', () => {
     it('can trigger a focus event', async () => {
-      const handleFocus = jest.fn();
+      const handleFocus = vi.fn();
 
       render(<FormFieldTextInput {...defaultProps} onFocus={handleFocus} />);
 
@@ -336,7 +337,7 @@ describe('Form field with a textinput', () => {
     });
 
     it('can trigger a focus event when read-only', async () => {
-      const handleFocus = jest.fn();
+      const handleFocus = vi.fn();
 
       render(<FormFieldTextInput {...defaultProps} readOnly onFocus={handleFocus} />);
 
@@ -348,7 +349,7 @@ describe('Form field with a textinput', () => {
     });
 
     it('does not trigger a focus event when disabled', async () => {
-      const handleFocus = jest.fn();
+      const handleFocus = vi.fn();
 
       render(<FormFieldTextInput {...defaultProps} disabled onFocus={handleFocus} />);
 
@@ -362,7 +363,7 @@ describe('Form field with a textinput', () => {
 
   describe('blur event', () => {
     it('can trigger a blur event', async () => {
-      const handleBlur = jest.fn();
+      const handleBlur = vi.fn();
 
       render(<FormFieldTextInput {...defaultProps} onBlur={handleBlur} />);
 
@@ -377,7 +378,7 @@ describe('Form field with a textinput', () => {
     });
 
     it('can trigger a blur event when read-only', async () => {
-      const handleBlur = jest.fn();
+      const handleBlur = vi.fn();
 
       render(<FormFieldTextInput {...defaultProps} readOnly onBlur={handleBlur} />);
 
@@ -390,7 +391,7 @@ describe('Form field with a textinput', () => {
     });
 
     it('does not trigger a blur event when disabled', async () => {
-      const handleBlur = jest.fn();
+      const handleBlur = vi.fn();
 
       render(<FormFieldTextInput {...defaultProps} disabled onBlur={handleBlur} />);
 
@@ -405,7 +406,7 @@ describe('Form field with a textinput', () => {
 
   describe('input event', () => {
     it('can trigger a input event', async () => {
-      const handleInput = jest.fn();
+      const handleInput = vi.fn();
 
       render(<FormFieldTextInput {...defaultProps} onInput={handleInput} />);
 
@@ -420,7 +421,7 @@ describe('Form field with a textinput', () => {
     });
 
     it('does not trigger a input event when disabled', async () => {
-      const handleInput = jest.fn();
+      const handleInput = vi.fn();
 
       render(<FormFieldTextInput {...defaultProps} disabled onInput={handleInput} />);
 
