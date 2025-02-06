@@ -1,4 +1,4 @@
-const { getJestConfig } = require('@storybook/test-runner');
+import { getJestConfig } from '@storybook/test-runner';
 
 const testRunnerConfig = getJestConfig();
 
