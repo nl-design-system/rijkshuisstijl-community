@@ -1,8 +1,9 @@
-import react from '@vitejs/plugin-react';
+import preact from '@preact/preset-vite';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
+  mode: 'production',
   build: {
     lib: {
       entry: 'src/index.ts',
@@ -10,12 +11,16 @@ export default defineConfig({
       formats: ['es'],
       fileName: 'index',
     },
-    sourcemap: true,
-    minify: 'terser',
-    target: 'esnext',
+  },
+  resolve: {
+    alias: {
+      react: 'preact',
+      'react-dom': 'preact',
+      'react/jsx-runtime': 'preact/jsx-runtime',
+    },
   },
   plugins: [
-    react(),
+    preact(),
     dts({
       entryRoot: 'src',
       insertTypesEntry: true,
