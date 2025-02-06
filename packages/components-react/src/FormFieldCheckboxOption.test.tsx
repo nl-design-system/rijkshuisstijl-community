@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
-
 import { fireEvent, render, screen } from '@testing-library/react';
+import { describe, expect, it, vi } from 'vitest';
 import { FormFieldCheckboxOption } from './FormFieldCheckboxOption';
 
 describe('FormFieldCheckboxOption', () => {
@@ -25,7 +25,7 @@ describe('FormFieldCheckboxOption', () => {
   });
 
   it('calls onChange when checkbox is clicked', () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
     render(<FormFieldCheckboxOption label="Test Checkbox" onChange={handleChange} />);
     fireEvent.click(screen.getByLabelText('Test Checkbox'));
     expect(handleChange).toHaveBeenCalledTimes(1);

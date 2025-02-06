@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
 import { getIconSet, Icon, registerIconSet } from './Icon';
 import { iconSet } from './icon-sets/default-icons/icon-set';
 import '@testing-library/jest-dom';

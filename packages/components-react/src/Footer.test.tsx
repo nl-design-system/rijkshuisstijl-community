@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { LinkList, LinkListLink } from '@utrecht/component-library-react';
+import { describe, expect, it } from 'vitest';
 import { Footer } from './Footer';
 import { Icon } from './Icon';
 

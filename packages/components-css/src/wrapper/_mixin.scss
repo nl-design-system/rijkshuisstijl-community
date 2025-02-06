@@ -1276,7 +1276,7 @@
     --utrecht-link-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-link:has(+ .utrecht-table) {
-    --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-link:has(+ .utrecht-unordered-list) {
     --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
@@ -1338,7 +1338,7 @@
     --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-ordered-list:has(+ .utrecht-paragraph) {
-    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-ordered-list:has(+ .utrecht-separator) {
     --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
@@ -1455,6 +1455,9 @@
   .utrecht-paragraph:has(+ .utrecht-data-list) {
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
+  .utrecht-paragraph:has(+ .utrecht-figure) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
   .utrecht-paragraph:has(+ .utrecht-form-field) {
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
@@ -1462,10 +1465,10 @@
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-paragraph:has(+ .utrecht-link) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-paragraph:has(+ .utrecht-ordered-list) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-paragraph:has(+ .utrecht-pagination) {
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
@@ -1480,7 +1483,7 @@
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-paragraph:has(+ .utrecht-unordered-list) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
 }
 @mixin utrecht-select {
@@ -1805,7 +1808,7 @@
     --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-unordered-list:has(+ .utrecht-paragraph) {
-    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-unordered-list:has(+ .utrecht-separator) {
     --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);

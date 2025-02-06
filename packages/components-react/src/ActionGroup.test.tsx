@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
-
 import { render, screen } from '@testing-library/react';
 import { createRef } from 'react';
+import { describe, expect, it } from 'vitest';
 import { ActionGroup, Button } from './';
 
 describe('Action group', () => {

@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
-
 import { render, screen } from '@testing-library/react';
+import { describe, expect, it, vi } from 'vitest';
 import { FormFieldRadio } from '.';
 
 describe('FormFieldRadio', () => {
@@ -25,7 +25,7 @@ describe('FormFieldRadio', () => {
   });
 
   it('calls onChange when radio is clicked', () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
     render(<FormFieldRadio label="Test Radio" onChange={handleChange} />);
     screen.getByLabelText('Test Radio').click();
     expect(handleChange).toHaveBeenCalledTimes(1);

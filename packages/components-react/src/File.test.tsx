@@ -1,17 +1,17 @@
 import '@testing-library/jest-dom';
-
 import { render, screen } from '@testing-library/react';
+import { describe, expect, it, vi } from 'vitest';
 import { File as FileComponent } from './File';
 beforeAll(() => {
   Object.defineProperty(window, 'URL', {
     value: {
-      createObjectURL: jest.fn().mockImplementation((blob: Blob | MediaSource) => `mocked-url/${(blob as File).name}`),
+      createObjectURL: vi.fn().mockImplementation((blob: Blob | MediaSource) => `mocked-url/${(blob as File).name}`),
     },
   });
 });
 
 afterAll(() => {
-  jest.restoreAllMocks();
+  vi.restoreAllMocks();
 });
 
 describe('FileComponent', () => {
@@ -44,7 +44,7 @@ describe('FileComponent', () => {
         fileSizeErrorMessage=""
         fileTypeErrorMessage={fileTypeErrorMessage}
         maxFileSizeInBytes={10485760}
-        onDelete={jest.fn()}
+        onDelete={vi.fn()}
       />,
     );
 
@@ -64,7 +64,7 @@ describe('FileComponent', () => {
         fileSizeErrorMessage={fileSizeErrorMessage}
         fileTypeErrorMessage=""
         maxFileSizeInBytes={10485760}
-        onDelete={jest.fn()}
+        onDelete={vi.fn()}
       />,
     );
 
@@ -82,7 +82,7 @@ describe('FileComponent', () => {
         fileSizeErrorMessage=""
         fileTypeErrorMessage=""
         maxFileSizeInBytes={10485760}
-        onDelete={jest.fn()}
+        onDelete={vi.fn()}
       />,
     );
 

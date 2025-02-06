@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { createRef } from 'react';
+import { describe, expect, it } from 'vitest';
 import { SideNav } from './SideNav';
 
 describe('SideNav', () => {

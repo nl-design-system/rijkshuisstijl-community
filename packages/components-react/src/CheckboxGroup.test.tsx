@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
-
 import { render, screen } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
 import { Checkbox } from './Checkbox';
 import { CheckboxGroup } from './CheckboxGroup';
 

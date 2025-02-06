@@ -1,10 +1,11 @@
 import '@testing-library/jest-dom';
 import { fireEvent, render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { describe, expect, it, vi } from 'vitest';
 import { FileInput, FileInputProps } from './FileInput';
 
 beforeAll(() => {
-  window.URL.createObjectURL = jest.fn((file) => `mocked-url/${(file as File).name}`);
+  window.URL.createObjectURL = vi.fn((file) => `mocked-url/${(file as File).name}`);
 });
 
 describe('File Input tests', () => {
@@ -27,7 +28,7 @@ describe('File Input tests', () => {
   });
 
   it('should be able to upload one file', async () => {
-    const mockOnFileChange = jest.fn();
+    const mockOnFileChange = vi.fn();
 
     const propsTest: FileInputProps = {
       ref: { current: document.createElement('input') },
@@ -55,7 +56,7 @@ describe('File Input tests', () => {
   });
 
   it('should be able to upload multiple files in once', async () => {
-    const mockOnFileChange = jest.fn();
+    const mockOnFileChange = vi.fn();
 
     const propsTest: FileInputProps = {
       ref: { current: document.createElement('input') },
@@ -86,7 +87,7 @@ describe('File Input tests', () => {
   });
 
   it('should not accept files not in the list', async () => {
-    const mockOnFileChange = jest.fn();
+    const mockOnFileChange = vi.fn();
 
     const propsTest: FileInputProps = {
       ref: { current: document.createElement('input') },
@@ -110,7 +111,7 @@ describe('File Input tests', () => {
   });
 
   it('should render a link with the correct URL and target attributes for a preview of the selected file', async () => {
-    const mockOnFileChange = jest.fn();
+    const mockOnFileChange = vi.fn();
 
     const propsTest: FileInputProps = {
       ...defaultProps,

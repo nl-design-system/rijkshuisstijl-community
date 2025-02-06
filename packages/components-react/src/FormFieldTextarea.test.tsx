@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { createRef } from 'react';
+import { describe, expect, it, vi } from 'vitest';
 import { FormFieldTextarea } from './FormFieldTextarea';
 
 describe('Form field with a textarea', () => {
@@ -284,7 +285,7 @@ describe('Form field with a textarea', () => {
 
   describe('change event', () => {
     it('can trigger a change event', async () => {
-      const handleChange = jest.fn();
+      const handleChange = vi.fn();
 
       render(<FormFieldTextarea {...defaultProps} onChange={handleChange} />);
 
@@ -299,7 +300,7 @@ describe('Form field with a textarea', () => {
     });
 
     it('does not trigger a change event when disabled', async () => {
-      const handleChange = jest.fn();
+      const handleChange = vi.fn();
 
       render(<FormFieldTextarea {...defaultProps} disabled onChange={handleChange} />);
 
@@ -314,7 +315,7 @@ describe('Form field with a textarea', () => {
 
   describe('focus event', () => {
     it('can trigger a focus event', async () => {
-      const handleFocus = jest.fn();
+      const handleFocus = vi.fn();
 
       render(<FormFieldTextarea {...defaultProps} onFocus={handleFocus} />);
 
@@ -328,7 +329,7 @@ describe('Form field with a textarea', () => {
     });
 
     it('can trigger a focus event when read-only', async () => {
-      const handleFocus = jest.fn();
+      const handleFocus = vi.fn();
 
       render(<FormFieldTextarea {...defaultProps} readOnly onFocus={handleFocus} />);
 
@@ -340,7 +341,7 @@ describe('Form field with a textarea', () => {
     });
 
     it('does not trigger a focus event when disabled', async () => {
-      const handleFocus = jest.fn();
+      const handleFocus = vi.fn();
 
       render(<FormFieldTextarea {...defaultProps} disabled onFocus={handleFocus} />);
 
@@ -354,7 +355,7 @@ describe('Form field with a textarea', () => {
 
   describe('blur event', () => {
     it('can trigger a blur event', async () => {
-      const handleBlur = jest.fn();
+      const handleBlur = vi.fn();
 
       render(<FormFieldTextarea {...defaultProps} onBlur={handleBlur} />);
 
@@ -369,7 +370,7 @@ describe('Form field with a textarea', () => {
     });
 
     it('can trigger a blur event when read-only', async () => {
-      const handleBlur = jest.fn();
+      const handleBlur = vi.fn();
 
       render(<FormFieldTextarea {...defaultProps} readOnly onBlur={handleBlur} />);
 
@@ -382,7 +383,7 @@ describe('Form field with a textarea', () => {
     });
 
     it('does not trigger a blur event when disabled', async () => {
-      const handleBlur = jest.fn();
+      const handleBlur = vi.fn();
 
       render(<FormFieldTextarea {...defaultProps} disabled onBlur={handleBlur} />);
 
@@ -397,7 +398,7 @@ describe('Form field with a textarea', () => {
 
   describe('input event', () => {
     it('can trigger a input event', async () => {
-      const handleInput = jest.fn();
+      const handleInput = vi.fn();
 
       render(<FormFieldTextarea {...defaultProps} onInput={handleInput} />);
 
@@ -412,7 +413,7 @@ describe('Form field with a textarea', () => {
     });
 
     it('does not trigger a input event when disabled', async () => {
-      const handleInput = jest.fn();
+      const handleInput = vi.fn();
 
       render(<FormFieldTextarea {...defaultProps} disabled onInput={handleInput} />);
 

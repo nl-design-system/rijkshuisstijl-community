@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
-
 import { render, screen } from '@testing-library/react';
+import { describe, expect, it, vi } from 'vitest';
 import { FormFieldCheckboxGroup } from './FormFieldCheckboxGroup';
 import { FormFieldCheckboxOption } from './FormFieldCheckboxOption';
 
@@ -66,7 +66,7 @@ describe('FormFieldCheckboxGroup', () => {
   });
 
   it('forwards ref to FormField component', () => {
-    const ref = jest.fn();
+    const ref = vi.fn();
     render(
       <FormFieldCheckboxGroup label="Test Checkbox Group" ref={ref}>
         <FormFieldCheckboxOption label="Option 1" />
