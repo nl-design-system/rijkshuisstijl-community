@@ -1,5 +1,6 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { Hero, HeroProps } from '@rijkshuisstijl-community/components-react';
+import { render } from 'preact';
 import { BaseWebComponent, Slot } from './BaseComponent';
 
 export type HeroWebComponentAttributes = HeroProps;
@@ -29,7 +30,8 @@ export class HeroWebComponent extends BaseWebComponent {
   }
 
   render(): void {
-    this.root.render(
+    if (!this.root) return;
+    render(
       <Hero
         aspectRatio={(this.getAttribute('aspectRatio') as HeroProps['aspectRatio']) ?? undefined}
         borderRadiusCorner={this.getAttribute('borderRadiusCorner') as HeroProps['borderRadiusCorner']}
@@ -48,6 +50,7 @@ export class HeroWebComponent extends BaseWebComponent {
       >
         <Slot>{this.innerHTML}</Slot>
       </Hero>,
+      this.root,
     );
   }
 }
