@@ -48,9 +48,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: build packages
-        run: pnpm run build
-
       - name: "Continuous Integration: lint"
         run: pnpm run --if-present lint
 
@@ -88,7 +85,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    needs: install
+    needs: build
 
     steps:
       - name: Checkout branch
@@ -104,12 +101,15 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: pnpm
+      
+      - name: "Restore build artifact: Storybook"
+        uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
+        with:
+          name: storybook
+          path: packages/storybook/dist/
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-
-      - name: build packages
-        run: pnpm run build
 
       - name: "Continuous Integration: test"
         run: pnpm run --if-present test
@@ -117,7 +117,6 @@ jobs:
       - name: Publish to Chromatic
         uses: chromaui/action@2929680e80a2298d17561b7f1deaa334653f905e # 11.16.5
         if: |
-          github.event.pull_request.draft == false &&
           github.actor != 'dependabot[bot]'
         with:
           autoAcceptChanges: main

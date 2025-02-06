@@ -1,7 +1,7 @@
-import { ColumnLayout } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactElement, ReactNode } from 'react';
-import { Heading } from './Heading';
+import { ColumnLayout } from './ColumnLayout';
+import { Heading, HeadingLevel } from './Heading';
 import { Icon, IconProps } from './Icon';
 import { Link } from './Link';
 import { LinkList, LinkListLink } from './LinkList';
@@ -37,7 +37,7 @@ export interface SubNavBarProps extends HTMLAttributes<HTMLDivElement> {
 interface SectionProps {
   id: string;
   heading: ReactNode;
-  headingLevel?: 1 | 2 | 3 | 4 | 5;
+  headingLevel?: HeadingLevel;
   items: NavBarLinkProps[];
 }
 
