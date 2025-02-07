@@ -74,7 +74,9 @@ Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.
 pakket, en omring het deel van je applicatie waar je het thema wilt toepassen met de Rijkshuisstijl-thema: `rhc-theme`.
 
 ```tsx
-import '@rijkshuisstijl-community/design-tokens/dist/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/index.css'; // design tokens importeren
+import '@rijkshuisstijl-community/font/src/index.mjs'; // font importeren, mits je deze font wilt gebruiken.
+import '@rijkshuisstijl-community/components-css/dist/index.css'; // css importeren
 
 function App() {
   return (
@@ -95,13 +97,13 @@ Lees de [NOTICE file](NOTICE.md) voor informatie over eigen assets in deze repos
 ### Logo en stijlgids
 
 Copyright geldt voor het Rijkshuisstijl-logo en merkidentiteit. Gebruik hiervan is strikt verboden, behalve voor het
-ontwikkelen van websites en apps voor de Nederlandse overheid.
+ontwikkelen van websites en apps voor de Rijksoverheid.
 
 ### Fonts
 
 [De lettertypen voor de Rijkshuisstijl](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-online/webfonts)
-zijn [speciaal ontworpen voor de Nederlandse overheid](https://www.rijkshuisstijl.nl/basiselementen/documenten/verzamelingen-afbeeldingen/2014/06/01/achtergrondartikel-rijkshuisstijl-webfonts)
-en zijn niet open source. Gebruik tot toestemming, systeemlettertypen zoals Arial, Verdana of Times New Roman.
+zijn [speciaal ontworpen voor de Rijksoverheid](https://www.rijkshuisstijl.nl/basiselementen/documenten/verzamelingen-afbeeldingen/2014/06/01/achtergrondartikel-rijkshuisstijl-webfonts)
+en zijn niet open source. Gebruik tot toestemming, systeemlettertypen zoals Arial, Verdana of Times New Roman of het @rijkshuisstijl-community/font.
 
 #### Open source varianten
 
@@ -195,7 +197,7 @@ binnen de IT-sector en overheidsorganisaties.
   onze [GitHub repository](https://github.com/nl-design-system/rijkshuisstijl-community).
 
 - **_Benieuwd naar onze voortgang?_** Bekijk ons huidige werk op
-  het[Sprint Board](https://github.com/orgs/nl-design-system/projects/59).
+  het [Sprint Board](https://github.com/orgs/nl-design-system/projects/59).
 
 - **_Blijf in contact met de community!_** Word lid van de [Code for NL Slack](https://praatmee.codefor.nl/) en join het
   `#nl-design-system` kanaal om samen te werken met de community.
