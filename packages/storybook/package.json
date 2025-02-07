@@ -25,7 +25,7 @@
     "clean": "rimraf dist/",
     "storybook": "storybook dev --config-dir config/ --port 6006",
     "prod-static": "http-server --port 6006 dist/",
-    "test-storybook": "test-storybook --maxWorkers=1 --config-dir config/",
+    "test-storybook": "test-storybook --maxWorkers=2 --config-dir config/",
     "playwright:install": "playwright install --with-deps chromium --only-shell"
   },
   "devDependencies": {
