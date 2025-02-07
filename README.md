@@ -74,7 +74,9 @@ Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.
 pakket, en omring het deel van je applicatie waar je het thema wilt toepassen met de Rijkshuisstijl-thema: `rhc-theme`.
 
 ```tsx
-import '@rijkshuisstijl-community/design-tokens/dist/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/index.css'; // design tokens importeren
+import '@rijkshuisstijl-community/font/src/index.mjs'; // font importeren, mits je deze font wilt gebruiken.
+import '@rijkshuisstijl-community/components-css/dist/index.css'; // css importeren
 
 function App() {
   return (
@@ -101,7 +103,7 @@ ontwikkelen van websites en apps voor de Nederlandse overheid.
 
 [De lettertypen voor de Rijkshuisstijl](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-online/webfonts)
 zijn [speciaal ontworpen voor de Nederlandse overheid](https://www.rijkshuisstijl.nl/basiselementen/documenten/verzamelingen-afbeeldingen/2014/06/01/achtergrondartikel-rijkshuisstijl-webfonts)
-en zijn niet open source. Gebruik tot toestemming, systeemlettertypen zoals Arial, Verdana of Times New Roman.
+en zijn niet open source. Gebruik tot toestemming, systeemlettertypen zoals Arial, Verdana of Times New Roman of het @rijkshuisstijl-community/font.
 
 #### Open source varianten
 
