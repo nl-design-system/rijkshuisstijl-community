@@ -21,7 +21,23 @@
     "rootDir": "./src/",
     "skipLibCheck": true,
     "strict": true,
-    "target": "es2020"
+    "target": "es2020",
+    "baseUrl": "./",
+    "paths": {
+      "@utrecht/component-library-react": ["node_modules/@utrecht/component-library-react/dist"],
+      "@utrecht/button-react": ["node_modules/@utrecht/button-react/src"],
+      "@utrecht/checkbox-react": ["node_modules/@utrecht/checkbox-react/src"],
+      "@utrecht/combobox-react": ["node_modules/@utrecht/combobox-react/src"],
+      "@utrecht/data-badge-react": ["node_modules/@utrecht/data-badge-react/src"],
+      "@utrecht/fieldset-react": ["node_modules/@utrecht/fieldset-react/src"],
+      "@utrecht/form-field-checkbox-react": ["node_modules/@utrecht/form-field-checkbox-react/src"],
+      "@utrecht/form-field-description-react": ["node_modules/@utrecht/form-field-description-react/src"],
+      "@utrecht/form-field-error-message-react": ["node_modules/@utrecht/form-field-error-message-react/src"],
+      "@utrecht/link-react": ["node_modules/@utrecht/link-react/src"],
+      "@utrecht/radio-button-react": ["node_modules/@utrecht/radio-button-react/src"],
+      "@utrecht/form-field-react": ["node_modules/@utrecht/form-field-react/src"],
+      "@utrecht/form-label-react": ["node_modules/@utrecht/form-label-react/src"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/*.ts"],
   "exclude": ["**/node_modules/*"]
