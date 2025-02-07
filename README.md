@@ -17,7 +17,7 @@ en degenen die door hen zijn ingehuurd voor het ontwikkelen van websites en apps
 
 ### Node
 
-In dit project wordt Node.js versie **_20.10_** gebruikt. Dit project bevat een [.nvmrc](.nvmrc) bestand en helpt je met het
+In dit project wordt Node.js versie **_22.13_** gebruikt. Dit project bevat een [.nvmrc](.nvmrc) bestand en helpt je met het
 installeren van de juiste versie met behulp van `nvm`.
 
 - Als je nvm nog niet hebt, [installeer `nvm`](https://github.com/nvm-sh/nvm#install--update-script).
