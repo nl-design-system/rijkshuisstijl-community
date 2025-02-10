@@ -75,7 +75,6 @@ pakket, en omring het deel van je applicatie waar je het thema wilt toepassen me
 
 ```tsx
 import '@rijkshuisstijl-community/design-tokens/dist/index.css'; // design tokens importeren
-import '@rijkshuisstijl-community/font/src/index.mjs'; // font importeren, mits je deze font wilt gebruiken.
 import '@rijkshuisstijl-community/components-css/dist/index.css'; // css importeren
 
 function App() {
