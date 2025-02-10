@@ -79,17 +79,17 @@ export const Default = {
   args: {
     sections: [
       {
-        label: 'Lorem ipsum 11',
+        label: 'Lorem ipsum 1',
         body: `Lorem ipsum dolor sit amet.`,
         expanded: true,
       },
       {
-        label: 'Lorem ipsum 22',
+        label: 'Lorem ipsum 2',
         body: `Lorem ipsum dolor sit amet.`,
         expanded: false,
       },
       {
-        label: 'Lorem ipsum 33',
+        label: 'Lorem ipsum 3',
         body: `Lorem ipsum dolor sit amet.`,
         expanded: false,
       },
