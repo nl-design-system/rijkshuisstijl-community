@@ -15,7 +15,7 @@
   },
   "engines": {
     "node": "^22",
-    "pnpm": "^10"
+    "pnpm": "^9"
   },
   "workspaces": [
     "./apps/*",
@@ -89,5 +89,5 @@
     "watch:style-dictionary": "lerna run watch:style-dictionary",
     "test-storybook:ci": "npm run --workspace packages/storybook playwright:install && concurrently -k -s first -n \"STORYBOOK,A11Y-TEST\" -c \"magenta,green\" \"npm run --workspace packages/storybook prod-static -- --silent\" \"wait-on tcp:6006 && npm run --workspace packages/storybook test-storybook\""
   },
-  "packageManager": "pnpm@10.2.1"
+  "packageManager": "pnpm@9.15.4"
 }
