@@ -22,6 +22,7 @@ interface ColumnProps {
   children: ReactNode;
 }
 
+const MAX_APPEARANCE_HEADING_LEVEL = 5;
 const scrollBackToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
@@ -63,30 +64,29 @@ export const Footer = forwardRef(
           {heading && (
             <div className="rhc-page-footer__title" key={'heading'}>
               <Heading
-                appearance={`utrecht-heading-${appearanceLevel >= MAX_APPEARANCE_HEADING_LEVEL ? MAX_APPEARANCE_HEADING_LEVEL : appearanceLevel}`}
                 level={2}
+                appearanceLevel={
+                  appearanceLevel >= MAX_APPEARANCE_HEADING_LEVEL ? MAX_APPEARANCE_HEADING_LEVEL : appearanceLevel
+                }
               >
                 {heading}
               </Heading>
             </div>
           )}
           <ColumnLayout>
-            {columns?.map(
-              (
-                { heading: columnHeading, appearanceLevel: columnAppearanceLevel = 3, children }: ColumnProps,
-                index: number,
-              ) => (
-                <div className="rhc-page-footer__section" key={index}>
-                  <Heading
-                    appearance={`utrecht-heading-${columnAppearanceLevel >= MAX_APPEARANCE_HEADING_LEVEL ? MAX_APPEARANCE_HEADING_LEVEL : columnAppearanceLevel}`}
-                    level={heading ? 3 : 2}
-                  >
-                    {columnHeading}
-                  </Heading>
-                  {children}
-                </div>
-              ),
-            )}
+            {columns?.map(({ heading: columnHeading, children }: ColumnProps, index: number) => (
+              <div className="rhc-page-footer__section" key={index}>
+                <Heading
+                  level={heading ? 3 : 2}
+                  appearanceLevel={
+                    appearanceLevel >= MAX_APPEARANCE_HEADING_LEVEL ? MAX_APPEARANCE_HEADING_LEVEL : appearanceLevel
+                  }
+                >
+                  {columnHeading}
+                </Heading>
+                {children}
+              </div>
+            ))}
             {children}
           </ColumnLayout>
         </div>
