@@ -16,7 +16,7 @@ const meta = {
           href={'#'}
           label={'Pensioenfonds'}
           metaData={'01-05-2024'}
-          withBadge={{ 'aria-label': 'Nieuw', role: 'status' }}
+          withBadge={{ label: 'Nieuw', role: 'status' }}
         />
         <MessageListItem description={'Herinnering APK'} href={'#'} label={'RDW'} metaData={'04-04-2024'} />
         <MessageListItem
@@ -60,7 +60,7 @@ export const SmallContainer: Story = {
           href={'#'}
           label={'Pensioenfonds'}
           metaData={'01-05-2024'}
-          withBadge={{ 'aria-label': 'Nieuw', role: 'status' }}
+          withBadge={{ label: 'Nieuw', role: 'status' }}
         />
         <MessageListItem description={'Herinnering APK'} href={'#'} label={'RDW'} metaData={'04-04-2024'} />
         <MessageListItem

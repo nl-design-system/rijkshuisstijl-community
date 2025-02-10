@@ -7,14 +7,20 @@
 ```tsx
 import { MessageList, MessageListItem } from '@rijkshuisstijl-community/components-react';
 
-<MessageList>
-  <MessageListItem description={'Uw pensioenoverzicht'} href={'#'} label={'Pensioenfonds'} metaData={'Meta Data'} />
-  <MessageListItem description={'Herinnering APK'} href={'#'} label={'RDW'} metaData={'Meta Data'} />
+<MessageList {...args}>
+  <MessageListItem
+    description={'Uw pensioenoverzicht'}
+    href={'#'}
+    label={'Pensioenfonds'}
+    metaData={'01-05-2024'}
+    withBadge={{ label: 'Nieuw', role: 'status' }}
+  />
+  <MessageListItem description={'Herinnering APK'} href={'#'} label={'RDW'} metaData={'04-04-2024'} />
   <MessageListItem
     description={'Aanslag OZB'}
     href={'#'}
     label={'Samenwerkings-verband Haaglanden'}
-    metaData={'Meta Data'}
+    metaData={'04-04-2024'}
   />
 </MessageList>;
 ```

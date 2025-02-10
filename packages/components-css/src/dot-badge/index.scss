@@ -2,8 +2,13 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+@use "../button/mixin" as button-mixin;
 @use "mixin";
 
 .rhc-dot-badge {
   @include mixin.rhc-dot-badge;
+}
+
+.rhc-dot-badge .rhc-dot-badge__sr-only {
+  @include button-mixin.invisible-but-accessible;
 }
