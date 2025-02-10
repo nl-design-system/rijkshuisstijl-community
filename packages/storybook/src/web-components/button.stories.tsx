@@ -82,7 +82,7 @@ export const SecondaryAction = {
 
 export const Subtle = {
   args: {
-    children: 'SecondaryAction',
+    children: 'SubtleAction',
     appearance: 'subtle-button',
   },
 } as StoryObj<typeof meta>;

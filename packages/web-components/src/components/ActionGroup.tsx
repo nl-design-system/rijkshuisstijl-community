@@ -1,7 +1,7 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { ActionGroup, ActionGroupProps } from '@rijkshuisstijl-community/components-react';
 import { render } from 'preact';
-import { BaseWebComponent, Slot } from './BaseComponent';
+import { BaseWebComponent } from './BaseComponent';
 
 export type ActionGroupWebComponentAttributes = ActionGroupProps;
 
@@ -27,7 +27,7 @@ export class ActionGroupWebComponent extends BaseWebComponent {
         direction={(this.getAttribute('direction') as ActionGroupProps['direction']) ?? undefined}
         {...this.restProps}
       >
-        <Slot>{this.innerHTML}</Slot>
+        <slot />
       </ActionGroup>,
       this.root,
     );
