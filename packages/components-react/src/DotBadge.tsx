@@ -1,7 +1,8 @@
-import { HTMLAttributes, PropsWithChildren, ReactNode, Ref } from 'react';
+import { AriaRole, HTMLAttributes, PropsWithChildren, ReactNode, Ref } from 'react';
 
 export interface DotBadgeProps extends HTMLAttributes<HTMLSpanElement> {
   label: ReactNode;
+  role?: AriaRole;
   ref?: Ref<HTMLSpanElement>;
 }
 
