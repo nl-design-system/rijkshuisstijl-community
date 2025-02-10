@@ -1,4 +1,5 @@
 /* @license CC0-1.0 */
+
 import twigTemplate from '@rijkshuisstijl-community/components-twig/src/OrderedListItem.twig?raw';
 import type { Meta } from '@storybook/react';
 import { createTwigComponent } from './TwigRenderer';
@@ -17,6 +18,13 @@ const OrderedListItem = {
   args: {
     children: 'List item',
   },
+  decorators: [
+    (Story) => (
+      <ol className={'utrecht-ordered-list'}>
+        <Story />
+      </ol>
+    ),
+  ],
   parameters: {
     status: {
       type: 'STABLE',
