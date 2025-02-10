@@ -1,17 +1,6 @@
-import parse from 'html-react-parser';
-import { JSX } from 'react';
-
-// This is done to recreate <slot /> logic without a shadow DOM.
-export const Slot = ({ children }: { children: string }) => {
-  const parsedChildren: string | JSX.Element | JSX.Element[] = parse(children);
-  if (!Array.isArray(parsedChildren)) return parsedChildren;
-
-  const filteredChildren = parsedChildren.filter((el) => el.props?.id !== 'root');
-  return <>{filteredChildren}</>;
-};
-
 export abstract class BaseWebComponent extends HTMLElement {
   protected root: HTMLElement | undefined;
+  public override shadowRoot: ShadowRoot;
   protected restProps: { [key: string]: any } = {};
 
   static get tagName(): string {
@@ -23,9 +12,11 @@ export abstract class BaseWebComponent extends HTMLElement {
   constructor(stylesheet: string) {
     super();
 
+    this.shadowRoot = this.attachShadow({ mode: 'open' });
+
     const style = document.createElement('style');
     style.textContent = stylesheet;
-    document.head.appendChild(style);
+    this.shadowRoot.appendChild(style);
   }
 
   setupRestProps(): void {
@@ -35,16 +26,10 @@ export abstract class BaseWebComponent extends HTMLElement {
   connectedCallback(): void {
     this.root = document.createElement('span');
     this.root.id = 'root';
-    this.appendChild(this.root);
+    this.shadowRoot.appendChild(this.root);
 
     this.setupRestProps();
     this.render();
-
-    if (!(this.parentNode instanceof Element)) return;
-
-    Array.from(this.childNodes).forEach((node) => {
-      if (node !== this.root) node.remove();
-    });
   }
 
   attributeChangedCallback(): void {
