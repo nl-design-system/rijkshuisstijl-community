@@ -9,7 +9,7 @@ een gemakkelijke en overzichtelijke manier te bieden om de code in te voeren.
 
 ## Gebruik
 
-Dit component is te gebruiken door de `CodeInput` te importeren. De component heeft één verplicht property genaamd
+Dit component is te gebruiken door de `CodeInput` te importeren. De component heeft één verplichte property genaamd
 `numberOfDigits`. Deze property bepaalt het aantal invoervelden dat wordt weergegeven, gebaseerd op de aangegeven waarde
 van type `number`.
 
