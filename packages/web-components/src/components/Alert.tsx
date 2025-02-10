@@ -34,7 +34,7 @@ export class AlertWebComponent extends BaseWebComponent {
         }
         {...this.restProps}
       >
-        {/* <Slot>{this.innerHTML}</Slot> */}
+        <slot />
       </Alert>,
       this.root,
     );

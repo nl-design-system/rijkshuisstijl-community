@@ -1,7 +1,7 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { Hero, HeroProps } from '@rijkshuisstijl-community/components-react';
 import { render } from 'preact';
-import { BaseWebComponent, Slot } from './BaseComponent';
+import { BaseWebComponent } from './BaseComponent';
 
 export type HeroWebComponentAttributes = HeroProps;
 
@@ -48,7 +48,7 @@ export class HeroWebComponent extends BaseWebComponent {
         }
         {...this.restProps}
       >
-        <Slot>{this.innerHTML}</Slot>
+        <slot />
       </Hero>,
       this.root,
     );
