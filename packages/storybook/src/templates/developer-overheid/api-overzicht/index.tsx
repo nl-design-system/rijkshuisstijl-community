@@ -6,40 +6,27 @@ import {
   BreadcrumbNavSeparator,
   Button,
   Card,
-  //   Fieldset,
   FieldsetLegend,
   Footer,
   FormFieldCheckboxGroup,
   FormFieldCheckboxOption,
-  //   CheckboxGroup,
-  //   DataBadge,
-  //   Donutchart,
-  //   Form,
-  //   FormField,
   Heading,
-  //   HeadingGroup,
+  HeadingGroup,
   Icon,
   LinkList,
   LinkListLink,
-  //   LinkButton,
-  //   Logo,
-  //   NavBar,
+  // NumberBadge,
   PageContent,
   PageHeader,
-  //   PageNumberNavigation,
   Paragraph,
   Textarea,
-  //   Textarea,
-  //   Subtitle,
-  //   SunmitButton,
-  //   ToggleButton,
 } from '@rijkshuisstijl-community/components-react';
 import { IconArrowDown, IconPlus } from '@tabler/icons-react';
-import { DataBadge } from '@utrecht/component-library-react';
+import { BadgeList, DataBadge } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 // import { UtrechtButtonGroup } from '@utrecht/web-component-library-react';
 
-export default function Page() {
+export default function DevOvhAPIoverzicht() {
   return (
     <>
       <PageHeader>
@@ -57,7 +44,7 @@ export default function Page() {
         ></NavBar> */}
       </PageHeader>
 
-      <PageBody className="rhc-templates-page">
+      <PageBody className="rhc-templates-page rhc-templates-main-content">
         <PageContent className="rhc-templates-page-content">
           <Article>
             <div className="rhc-margin-block-end-wrapper">
@@ -74,9 +61,11 @@ export default function Page() {
               </BreadcrumbNav>
             </div>
           </Article>
-          <Heading level={1}>Zoek APIs</Heading>
-          <Paragraph>Overzicht van open APIs van Nederlandse overheidsorganisatie</Paragraph>
-          <Paragraph>Vind APIs</Paragraph>
+          <HeadingGroup>
+            <Heading level={1}>Zoek APIs</Heading>
+            <Paragraph>Overzicht van open APIs van Nederlandse overheidsorganisatie</Paragraph>
+            <Paragraph>Vind APIs</Paragraph>
+          </HeadingGroup>
           <Textarea aria-label="textarea-label" name="subject" placeholder="Voer een zoekterm in"></Textarea>
           <FieldsetLegend>API type</FieldsetLegend>
           <FormFieldCheckboxGroup>
@@ -90,7 +79,11 @@ export default function Page() {
           </FormFieldCheckboxGroup>
           <FieldsetLegend>Organisatie</FieldsetLegend>
           <FormFieldCheckboxGroup>
-            <FormFieldCheckboxOption label="Algemeene Zaken"></FormFieldCheckboxOption>
+            <FormFieldCheckboxOption
+              className="rhc-templates-checkbox"
+              description="(1)"
+              label="Algemeene Zaken"
+            ></FormFieldCheckboxOption>
             <FormFieldCheckboxOption label="Binnenlandse Zaken en Koninkrijksrelaties"></FormFieldCheckboxOption>
             <FormFieldCheckboxOption label="Buitenlandse Zaken"></FormFieldCheckboxOption>
             <FormFieldCheckboxOption label="Centraal Bureau voor de Statistiek"></FormFieldCheckboxOption>
@@ -100,7 +93,7 @@ export default function Page() {
             <FormFieldCheckboxOption label="Gemeente Amsterdam"></FormFieldCheckboxOption>
             <FormFieldCheckboxOption label="Gemeente Eindhover"></FormFieldCheckboxOption>
             <FormFieldCheckboxOption label="Gemeente Enschede"></FormFieldCheckboxOption>
-          </FormFieldCheckboxGroup>{' '}
+          </FormFieldCheckboxGroup>
           {/* MISSEN NOG MEER WIP */}
           <ActionGroup className="rhc-templates-button">
             <Button appearance="primary-action-button">
@@ -118,7 +111,6 @@ export default function Page() {
               API toevoegen
             </Button>
           </ActionGroup>
-          <ActionGroup></ActionGroup>
           <section className="rhc-templates-card">
             <Card
               description="Centraal Bureau voor de Statistiek"
@@ -129,7 +121,9 @@ export default function Page() {
               metadata="Alle Nederlandstailige Statistieken van CBS ontsloten via oData versie 4"
               title="Card Title"
             >
-              <DataBadge className="rhc-templates-databadge">OData</DataBadge>
+              <BadgeList>
+                <DataBadge className="rhc-templates-databadge">OData</DataBadge>
+              </BadgeList>
             </Card>
 
             <Card
@@ -141,7 +135,9 @@ export default function Page() {
               metadata="Met behulp van de CBS Open Data API kun je Articles, Pages, Figures, Events en Flash content van de CBS"
               title="Card Title"
             >
-              <DataBadge className="rhc-templates-databadge">OData</DataBadge>
+              <BadgeList>
+                <DataBadge className="rhc-templates-databadge">OData</DataBadge>
+              </BadgeList>
             </Card>
             <Card
               description="Centraal Bureau voor de Statistiek"
@@ -152,7 +148,9 @@ export default function Page() {
               metadata="De zoekmachine van het CBS helpt je om artikelen en tabellen te vinden op de website van het CBS."
               title="Card Title"
             >
-              <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+              <BadgeList>
+                <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+              </BadgeList>
             </Card>
             <Card
               description="Centraal Justitieel Incassobureau"
@@ -163,7 +161,9 @@ export default function Page() {
               metadata="API waarmee burgers een overzicht van hun financiële verplichtingen bij een (overheids) organisatie kunnen opvragen"
               title="Card Title"
             >
-              <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+              <BadgeList>
+                <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+              </BadgeList>
             </Card>
             <Card
               description="Uitvoeringsorganisatie Bedrijfsvoering Rijk"
@@ -174,7 +174,9 @@ export default function Page() {
               metadata="De functionaliteit van de Vacature-API bestaat uit het tellen, ophalen en filteren van het vacature-aanbod, het ophalen van data met betrekking tot het gebruikte vacatureformaat en het opslaan van nieuwe vacatures van de website WerkenvoorNederland.nl, WerkenbijdeOverheid.nl en Mobiliteitbank.nl"
               title="Card Title"
             >
-              <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+              <BadgeList>
+                <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+              </BadgeList>
             </Card>
             <Card
               description="De Nederlandsche Bank"
@@ -185,7 +187,9 @@ export default function Page() {
               metadata="DNB API Services maakt het mogelijk om verschillende APIs van de Nederlandsche Bank te benaderen."
               title="Card Title"
             >
-              <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+              <BadgeList>
+                <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+              </BadgeList>
             </Card>
             <Card
               description="Dienst voor het kadaster en de openbare registers"
@@ -196,8 +200,10 @@ export default function Page() {
               metadata="Een REST API voor het beheren van de behandeldienstconfiguraties. Hierin kan een bevoegd gezag een activiteit waarvoor zij verantwoordelijk is koppelen aan een behandeldienst."
               title="Card Title"
             >
-              <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
-              <DataBadge className="rhc-templates-databadge">dso</DataBadge> {/* ANDERE DATABADGE */}
+              <BadgeList>
+                <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+                <DataBadge className="rhc-templates-databadge">dso</DataBadge> {/* ANDERE DATABADGE */}
+              </BadgeList>
             </Card>
             <Card
               description="Dienst voor het kadaster en de openbare registers"
@@ -208,8 +214,10 @@ export default function Page() {
               metadata="Met deze REST API kunnen begrippen en definities worden opgevraagd uit de stelselcatalogus."
               title="Card Title"
             >
-              <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
-              <DataBadge className="rhc-templates-databadge">dso</DataBadge> {/* ANDERE DATABADGE */}
+              <BadgeList>
+                <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+                <DataBadge className="rhc-templates-databadge">dso</DataBadge> {/* ANDERE DATABADGE */}
+              </BadgeList>
             </Card>
             <Card
               description="Dienst voor het kadaster en de openbare registers"
@@ -220,9 +228,11 @@ export default function Page() {
               metadata="Met deze REST API kunnen geometrische gegevens (werkingsgebieden of locaties) gevalideerd worden tegen GML 3.2.2 SF2."
               title="Card Title"
             >
-              <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
-              <DataBadge className="rhc-templates-databadge">dso</DataBadge> {/* ANDERE DATABADGE */}
-              <DataBadge className="rhc-templates-databadge">geo</DataBadge> {/* ANDERE DATABADGE */}
+              <BadgeList>
+                <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+                <DataBadge className="rhc-templates-databadge">dso</DataBadge> {/* ANDERE DATABADGE */}
+                <DataBadge className="rhc-templates-databadge">geo</DataBadge> {/* ANDERE DATABADGE */}
+              </BadgeList>
             </Card>
             <Card
               description="Dienst voor het kadaster en de openbare registers"
@@ -233,16 +243,22 @@ export default function Page() {
               metadata="Met deze REST API kan de vigerende regelingversie van een Omgevingsdocument uit het Digitaal Stelsel Omgevingswet (DSO) in een zip bestand worden gedownload met daarin de juridische tekst, de GIO’s en de OW-objecten."
               title="Card Title"
             >
-              <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
-              <DataBadge className="rhc-templates-databadge">dso</DataBadge> {/* ANDERE DATABADGE */}
+              <BadgeList>
+                <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+                <DataBadge className="rhc-templates-databadge">dso</DataBadge> {/* ANDERE DATABADGE */}
+              </BadgeList>
             </Card>
           </section>
-          <Heading level={2}>Praat mee in onze developer community</Heading>
-          <Paragraph>
-            In onze developer community kan je in gesprek gaan over de vraagstukken die jou bezig houden en vind je
-            richtlijnen, tutorials en tools
-          </Paragraph>
-          <Button appearance="primary-action-button">Community</Button>
+          <section className="rhc-templates-background-color-white rhc-templates-page-content rhc-templates-page">
+            <HeadingGroup>
+              <Heading level={2}>Praat mee in onze developer community</Heading>
+              <Paragraph>
+                In onze developer community kan je in gesprek gaan over de vraagstukken die jou bezig houden en vind je
+                richtlijnen, tutorials en tools
+              </Paragraph>
+            </HeadingGroup>
+            <Button appearance="primary-action-button">Community</Button>
+          </section>
         </PageContent>
       </PageBody>
 
