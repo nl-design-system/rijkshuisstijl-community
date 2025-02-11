@@ -2,49 +2,49 @@ import '@testing-library/jest-dom';
 
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { CodeInputGroup } from './CodeInputGroup';
 
 describe('CodeInputGroup', () => {
-  it('renders successfully', () => {
-    render(<CodeInputGroup numberOfDigits={4} />);
-    expect(screen.getByTestId('code-input-group-container')).toBeInTheDocument();
-  });
-
-  it('should render number of digits', async () => {
+  it('should render correct number of code inputs', async () => {
     const nDigits = 6;
     render(<CodeInputGroup numberOfDigits={nDigits} />);
 
-    const inputs = await screen.findAllByTestId('input-item');
+    const inputs = await screen.findAllByTestId('rhc-code-input', { exact: false });
+
     expect(inputs).toHaveLength(nDigits);
-  });
-
-  it('should not accept anything else then digits', async () => {
-    render(<CodeInputGroup numberOfDigits={4} />);
-
-    await userEvent.type(screen.getByTestId('hidden-input'), '#A0@1D2f3');
-    expect(screen.getByTestId('hidden-input')).toHaveValue('0123');
   });
 
   it('should set focus on next input', async () => {
     render(<CodeInputGroup numberOfDigits={4} />);
-    await userEvent.type(screen.getByTestId('hidden-input'), '0');
-    const inputs = await screen.findAllByTestId('input-item');
+    await userEvent.type(screen.getByTestId('rhc-code-input-0'), '0');
 
-    expect(inputs[0]).not.toHaveClass('utrecht-textbox--focus-visible');
-    expect(inputs[1]).toHaveClass('utrecht-textbox--focus-visible');
+    const inputs = await screen.findAllByTestId('rhc-code-input', { exact: false });
+    expect(inputs[0]).not.toHaveFocus();
+    expect(inputs[1]).toHaveFocus();
   });
 
   it('should set focus on previous input', async () => {
     render(<CodeInputGroup numberOfDigits={4} />);
-    await userEvent.type(screen.getByTestId('hidden-input'), '012');
+    await userEvent.type(screen.getByTestId('rhc-code-input-0'), '012');
 
-    const inputs = await screen.findAllByTestId('input-item');
+    const inputs = await screen.findAllByTestId('rhc-code-input', { exact: false });
+    expect(inputs[3]).toHaveFocus();
 
-    expect(inputs[3]).toHaveClass('utrecht-textbox--focus-visible');
+    await userEvent.type(screen.getByTestId('rhc-code-input-2'), '{backspace}');
 
-    await userEvent.type(screen.getByTestId('hidden-input'), '{backspace}');
+    expect(inputs[3]).not.toHaveFocus();
+  });
 
-    expect(inputs[3]).not.toHaveClass('utrecht-textbox--focus-visible');
+  it('should call onChange with correct value', async () => {
+    const onChange = vi.fn();
+    render(<CodeInputGroup numberOfDigits={4} onChange={onChange} />);
+    await userEvent.type(screen.getByTestId('rhc-code-input-0'), '0123');
+
+    expect(onChange).toHaveBeenCalledTimes(4);
+    expect(onChange).toHaveBeenNthCalledWith(1, '0');
+    expect(onChange).toHaveBeenNthCalledWith(2, '01');
+    expect(onChange).toHaveBeenNthCalledWith(3, '012');
+    expect(onChange).toHaveBeenNthCalledWith(4, '0123');
   });
 });

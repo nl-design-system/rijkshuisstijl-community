@@ -1,17 +1,18 @@
 import { ChangeEvent, ComponentPropsWithRef, KeyboardEvent, PropsWithChildren, useRef } from 'react';
-import { CodeInput } from './CodeInput';
+import { CodeInput, CodeInputProps } from './CodeInput';
 import { Fieldset } from './Fieldset';
 
-export interface CodeInputGroupProps {
+export interface CodeInputGroupProps extends Omit<CodeInputProps, 'ref' | 'onChange'> {
   numberOfDigits: number;
   inValid?: boolean;
   // TODO: figure out why disabling is needed; works fine in editor but not in lint script for some reason
   // eslint-disable-next-line no-unused-vars
-  onChange?: (currentValue: string[]) => void;
+  onChange?: (code: string) => void;
   ref?: ComponentPropsWithRef<typeof Fieldset>['ref'];
 }
 
 export const CodeInputGroup = ({
+  children,
   numberOfDigits,
   inValid,
   onChange,
@@ -37,7 +38,7 @@ export const CodeInputGroup = ({
     }
 
     if (onChange) {
-      onChange([...values]);
+      onChange(values.join(''));
     }
   };
 
@@ -46,7 +47,8 @@ export const CodeInputGroup = ({
     if (!allowedKeys.test(event.key) && event.key !== 'Backspace' && event.key !== 'Tab') {
       event.preventDefault();
     }
-    if (event.key === 'Backspace' && !event.currentTarget.value && index > 0) {
+    if (event.key === 'Backspace' && index > 0) {
+      event.currentTarget.value = '';
       inputRefs.current[index - 1]?.focus();
     }
   };
@@ -58,13 +60,16 @@ export const CodeInputGroup = ({
           <CodeInput
             {...restProps}
             data-key={`${i}`}
+            data-testid={`rhc-code-input-${i}`}
             invalid={inValid}
             key={`${i}`}
             ref={(el) => (inputRefs.current[i] = el)}
             onChange={(e: ChangeEvent<HTMLInputElement>) => onChangeHandler(e)}
+            onFocus={(e) => e.target.select()}
             onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => onKeyDownHandler(e, i)}
           />
         ))}
+        {children}
       </div>
     </Fieldset>
   );
