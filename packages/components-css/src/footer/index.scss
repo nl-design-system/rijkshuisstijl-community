@@ -96,6 +96,9 @@
   color: inherit;
   cursor: pointer;
   display: flex;
+  &:hover {
+    text-decoration: var(--rhc-sidenav-link-active-text-decoration);
+  }
 }
 
 @media (width <= 1024px) {
