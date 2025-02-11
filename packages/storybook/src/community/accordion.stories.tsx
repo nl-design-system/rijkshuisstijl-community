@@ -3,6 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/accordion/README.md?raw';
 import { UtrechtIconChevronDown } from '@utrecht/web-component-library-react';
 import { ReactNode } from 'react';
+import usageDocs from './accordion-usage.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface AccordionStoryProps {
@@ -11,12 +12,11 @@ interface AccordionStoryProps {
   expanded?: boolean;
   expandedAccordion?: boolean;
   icon?: ReactNode;
-  appearance?: string;
   sections?: AccordionSectionProps[];
 }
 
-const AccordionStory = ({ expanded, label, body, appearance, icon, sections }: AccordionStoryProps) => (
-  <AccordionProvider appearance={appearance} icon={icon} sections={sections || [{ expanded, label, body }]} />
+const AccordionStory = ({ expanded, label, body, icon, sections }: AccordionStoryProps) => (
+  <AccordionProvider icon={icon} sections={sections || [{ expanded, label, body }]} />
 );
 
 const meta = {
@@ -25,39 +25,24 @@ const meta = {
   args: {
     label: '',
     body: '',
-    expandedAccordion: false,
-    appearance: '',
+    expanded: false,
     icon: undefined,
   },
   argTypes: {
     label: {
       name: 'label',
       type: { name: 'string', required: true },
-      table: {
-        defaultValue: { summary: '' },
-        category: 'API',
-      },
+      defaultValue: { summary: '' },
     },
     body: {
       name: 'body',
       type: { name: 'string', required: true },
-      table: {
-        defaultValue: { summary: '' },
-        category: 'API',
-      },
+      defaultValue: { summary: '' },
     },
-    expandedAccordion: {
-      name: 'expandedAccordion',
+    expanded: {
+      name: 'expanded',
       type: { name: 'boolean', required: false },
-      table: {
-        defaultValue: { summary: '' },
-        category: 'API',
-      },
-    },
-    appearance: {
-      description: 'Appearance',
-      control: { type: 'select' },
-      options: ['', 'utrecht'],
+      defaultValue: { summary: '' },
     },
     icon: {
       name: 'icon',
@@ -79,10 +64,13 @@ const meta = {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
-        component: mergeMarkdown([readme]),
+        component: mergeMarkdown([readme, usageDocs]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/456',
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1261-4784&p=f&t=SHnEVcZMmxKnZVS8-0',
+    nldesignsystem: 'https://www.nldesignsystem.nl/accordion/',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
   },
@@ -129,8 +117,22 @@ const accordionData = [
 
 export const Default: Story = {
   args: {
-    sections: accordionData,
+    label: 'Lorem ipsum 3',
+    body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+    laborum.`,
+    expanded: true,
   },
+};
+
+export const AccordionWithSections: Story = {
+  args: {
+    sections: accordionData,
+    expanded: true,
+  },
+  name: 'Accordion with sections',
 };
 
 export const RTL: Story = {

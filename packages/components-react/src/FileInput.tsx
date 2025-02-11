@@ -1,5 +1,5 @@
 import { Paragraph } from '@utrecht/component-library-react';
-import { ChangeEvent, PropsWithChildren, Ref, RefObject, useState } from 'react';
+import { ChangeEvent, PropsWithChildren, Ref, RefObject, useEffect, useState } from 'react';
 import { Button, ButtonProps } from './Button';
 import { File } from './File';
 
@@ -12,6 +12,7 @@ export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
   fileSizeErrorMessage: string;
   fileTypeErrorMessage: string;
   onValueChange?: (callbackFiles: File[]) => void; // eslint-disable-line no-unused-vars
+  defaultFiles?: File[];
 }
 
 export const FileInput = ({
@@ -24,9 +25,11 @@ export const FileInput = ({
   fileSizeErrorMessage,
   fileTypeErrorMessage,
   onValueChange,
+  defaultFiles,
 }: PropsWithChildren<FileInputProps>) => {
   const [files, setFiles] = useState<File[]>([]);
   const inputElement = ref as RefObject<HTMLInputElement>;
+
   const onChange = (newFiles: FileList | null) => {
     if (newFiles) {
       const updatedFiles = [...files, ...Array.from(newFiles)];
@@ -36,6 +39,12 @@ export const FileInput = ({
       }
     }
   };
+
+  useEffect(() => {
+    if (defaultFiles) {
+      setFiles(defaultFiles);
+    }
+  }, [defaultFiles]);
 
   return (
     <div className="rhc-file-input" ref={ref}>

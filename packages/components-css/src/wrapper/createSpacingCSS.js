@@ -16,10 +16,11 @@ const getSpacings = (spacingMatrix) => {
     .map((spacing) => {
       const entries = Object.entries(spacing);
       const [, component] = entries.shift();
+      const { prefix } = spacing;
       return entries
         .map(([sibling, space]) => {
           const spacing = spaceMap[space];
-          return spacing && { component, sibling, spacing };
+          return spacing && { component, sibling, spacing, prefix };
         })
         .filter(Boolean);
     })
@@ -29,18 +30,19 @@ const getSpacings = (spacingMatrix) => {
 const getSpacingMixins = (components) =>
   components.map((mixinGroup) => {
     const componentName = mixinGroup[0].component;
+    const prefix = mixinGroup[0].prefix;
 
-    const mixins = mixinGroup.map(
-      ({ component, sibling, spacing }) =>
-        `.${component}:has(+ .${sibling}) {
-  --${component}-margin-block-end: var(--utrecht-rich-text-${spacing}-margin-block-end);
-}`,
-    );
+    const mixins = mixinGroup.map(({ component, sibling, spacing }) => {
+      return `.${component}:has(+ .${sibling}) {
+  --${prefix}-margin-block-end: var(--utrecht-rich-text-${spacing}-margin-block-end);
+}`;
+    });
+
     return `@mixin ${componentName} {
   .${componentName}:first-child {
-    --${componentName}-margin-block-start: 0;
+    --${prefix}-margin-block-start: 0;
   }
- ${mixins.join(';\n')}
+  ${mixins.join('\n  ')}
 }`;
   });
 

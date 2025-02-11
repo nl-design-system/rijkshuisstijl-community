@@ -1,7 +1,9 @@
 import { ActionGroup, Button } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react/*';
-import readme from './action-group.md?raw';
+import readme from '@utrecht/components/button-group/README.md?raw';
+import usageDocs from './action-group.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { replaceMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/ActionGroup',
@@ -22,10 +24,13 @@ const meta = {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source. Use our own documentation to correctly show its name as "Action Group" instead of "Button Group"
-        component: mergeMarkdown([readme]),
+        component: mergeMarkdown([replaceMarkdown(readme, 'Button Group', 'Action Group'), usageDocs]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    nldesignsystem: 'https://www.nldesignsystem.nl/action-group/',
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/479',
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=4626-10492&p=f&t=MHYw4lXBHCryrwek-0',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht (daar heeft het de naam ButtonGroup), met styling van de Rijkshuisstijl Community.',
   },
@@ -35,7 +40,7 @@ export default meta;
 
 type Story = StoryObj<typeof ActionGroup>;
 
-export const Default: Story = {
+export const Row: Story = {
   args: {
     children: [
       <Button appearance="primary-action-button" key="primary-action-button">
@@ -46,7 +51,6 @@ export const Default: Story = {
       </Button>,
     ],
   },
-  name: 'Default',
 };
 
 export const Column: Story = {

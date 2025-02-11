@@ -5,7 +5,7 @@ import {
 import clsx from 'clsx';
 import { PropsWithChildren, Ref } from 'react';
 import { Button } from './Button';
-import { Icon } from './icon/Icon';
+import { Icon } from './Icon';
 
 export interface TableHeaderCellProps extends UtrechtTableHeaderCellProps {
   withSorting?: boolean;

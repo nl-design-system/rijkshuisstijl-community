@@ -1,13 +1,14 @@
 import clsx from 'clsx';
-import { AnchorHTMLAttributes, PropsWithChildren, ReactNode, Ref } from 'react';
+import { PropsWithChildren, ReactNode, Ref } from 'react';
 import { Image } from './Image';
 import { Link } from './Link';
 
-interface CardPropsBase extends AnchorHTMLAttributes<HTMLAnchorElement> {
+interface CardPropsBase {
   href: string;
+  title?: string;
   className?: string;
   heading: ReactNode;
-  ref?: Ref<HTMLAnchorElement>;
+  ref?: Ref<HTMLDivElement>;
 }
 
 export interface CardProps extends CardPropsBase {
@@ -66,7 +67,7 @@ const DefaultCard = ({
   ...restProps
 }: PropsWithChildren<CardProps>) => {
   return (
-    <a className={clsx('rhc-card', 'rhc-card--default', className)} href={href} ref={ref} title={title} {...restProps}>
+    <div className={clsx('rhc-card', 'rhc-card--default', className)} ref={ref} {...restProps}>
       <div className="rhc-card__content">
         <div className="rhc-card__image-container">
           {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
@@ -78,12 +79,14 @@ const DefaultCard = ({
         {children}
       </div>
       <div className="rhc-card__footer">
-        <div className="rhc-card__link">
-          <Link>{linkLabel}</Link>
+        <div className="rhc-card__link rhc-card__anchor">
+          <Link aria-label={title} href={href} title={title}>
+            {linkLabel}
+          </Link>
         </div>
         <div className="rhc-card__button">{button}</div>
       </div>
-    </a>
+    </div>
   );
 };
 
@@ -102,15 +105,21 @@ export const FullBleedCard = ({
   imageAlt,
   ...restProps
 }: PropsWithChildren<FullBleedCardProps>) => (
-  <a className={clsx('rhc-card', 'rhc-card--full-bleed', className)} href={href} ref={ref} title={title} {...restProps}>
+  <div className={clsx('rhc-card', 'rhc-card--full-bleed', className)} ref={ref} {...restProps}>
+    <span className="rhc-card__anchor">
+      <a aria-label={title} href={href} title={title}></a>
+    </span>
     {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
     <div className="rhc-card__content">
+      <div className="rhc-card__image-container">
+        {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
+      </div>
       <div className="rhc-card__heading">{heading}</div>
       <div className="rhc-card__description">{description}</div>
       <div className="rhc-card__metadata">{metadata}</div>
       {children}
     </div>
-  </a>
+  </div>
 );
 
 FullBleedCard.displayName = 'FullBleedCard';
@@ -126,7 +135,10 @@ export const HorizontalImageCard = ({
   className,
   ...restProps
 }: PropsWithChildren<HorizontalImageCardProps>) => (
-  <a className={clsx('rhc-card', 'rhc-card--horizontal', className)} href={href} ref={ref} title={title} {...restProps}>
+  <div className={clsx('rhc-card', 'rhc-card--horizontal', className)} ref={ref} {...restProps}>
+    <span className="rhc-card__anchor">
+      <a aria-label={title} href={href} title={title}></a>
+    </span>
     <div className="rhc-card__image-container">
       <Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />
     </div>
@@ -134,7 +146,7 @@ export const HorizontalImageCard = ({
       <div className="rhc-card__heading">{heading}</div>
       {children}
     </div>
-  </a>
+  </div>
 );
 
 HorizontalImageCard.displayName = 'HorizontalImageCard';

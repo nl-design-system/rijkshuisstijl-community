@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { DetailsHTMLAttributes, PropsWithChildren, ReactNode, Ref } from 'react';
 import { Alert } from './Alert';
-import { Icon } from './icon/Icon';
+import { Icon } from './Icon';
 
 export interface ToggletipProps extends DetailsHTMLAttributes<HTMLDetailsElement> {
   className?: string;
@@ -11,7 +11,7 @@ export interface ToggletipProps extends DetailsHTMLAttributes<HTMLDetailsElement
 const ToggletipContent = ({ children, ref }: { children: ReactNode; ref?: Ref<HTMLDivElement> }) => {
   return (
     <div className="rhc-toggletip__content" ref={ref}>
-      <Alert type="info">{children}</Alert>
+      <Alert textContent={children} type="info"></Alert>
     </div>
   );
 };

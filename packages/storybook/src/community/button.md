@@ -1,3 +1,11 @@
 <!-- @license CC0-1.0 -->
 
-# Rijkshuisstijl Community button component
+# Icon Only
+
+```tsx
+<IconButton label="calendar">
+  <Icon>
+    <IconCalendarEvent></IconCalendarEvent>
+  </Icon>
+</IconButton>
+```

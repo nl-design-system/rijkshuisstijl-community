@@ -5,17 +5,19 @@ import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/storybook/src/templates/globals.css';
+import { PageLayout } from '@utrecht/page-layout-react';
+import { Root } from '@utrecht/root-react';
 import Head from 'next/head';
 
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
-    <html lang="nl">
+    <Root>
       <Head>
         <title>Rijkshuisstijl demo - Index</title>
       </Head>
-      <body>
-        <div className="rhc-theme">{children}</div>
+      <body className="rhc-theme">
+        <PageLayout>{children}</PageLayout>
       </body>
-    </html>
+    </Root>
   );
 }

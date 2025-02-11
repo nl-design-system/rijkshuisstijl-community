@@ -4,7 +4,7 @@ import {
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { Ref, useId } from 'react';
-import { Icon } from './icon/Icon';
+import { Icon } from './Icon';
 
 export interface FormFieldTextareaProps extends UtrechtFormFieldTextareaProps {
   ref?: Ref<HTMLDivElement>;

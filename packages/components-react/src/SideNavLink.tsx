@@ -1,11 +1,11 @@
 import clsx from 'clsx';
 import { AnchorHTMLAttributes, Ref } from 'react';
-import { Icon } from './icon/Icon';
-import { RijkshuisstijlIconID } from './icon/IconTypes';
+import { Icon } from './Icon';
+import { RHCIconID } from './icon-sets/default-icons/RHCIconIDs';
 
 export interface SideNavLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   current?: boolean;
-  icon?: RijkshuisstijlIconID;
+  icon?: RHCIconID;
   ref?: Ref<HTMLAnchorElement>;
 }
 

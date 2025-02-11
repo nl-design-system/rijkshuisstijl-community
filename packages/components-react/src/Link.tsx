@@ -1,7 +1,7 @@
 import { Link as UtrechtLink, type LinkProps as UtrechtLinkProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ReactNode, Ref } from 'react';
-import { Icon } from './icon/Icon';
+import { PropsWithChildren, ReactNode, Ref } from 'react';
+import { Icon } from './Icon';
 
 export interface LinkProps extends UtrechtLinkProps {
   external?: boolean;
@@ -9,7 +9,14 @@ export interface LinkProps extends UtrechtLinkProps {
   ref?: Ref<HTMLAnchorElement>;
 }
 
-export const Link = ({ ref, children, className, external, externalLabel, ...restProps }: LinkProps) => (
+export const Link = ({
+  ref,
+  children,
+  className,
+  external,
+  externalLabel,
+  ...restProps
+}: PropsWithChildren<LinkProps>) => (
   <UtrechtLink {...restProps} className={clsx('rhc-link', className)} external={external} ref={ref}>
     {children}
     {external && (

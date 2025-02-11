@@ -1,4 +1,4 @@
-import { Footer, Icon, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
+import { ColumnLayout, Footer, Icon, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './footer.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
@@ -21,78 +21,82 @@ const meta = {
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht (daar heeft het de naam PageFooter), met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
+  argTypes: {
+    appearanceLevel: {
+      description: 'Het uiterlijk van de heading in de footer.',
+      control: { type: 'select' },
+      options: ['level-1', 'level-2', 'level-3', 'level-4', 'level-5', 'level-6'],
+      table: {
+        type: { summary: 'string' },
+      },
+    },
+  },
 } satisfies Meta<typeof Footer>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+function _toLinkList(items: string[]) {
+  return (
+    <LinkList>
+      {items.map((item) => (
+        <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+          {item}
+        </LinkListLink>
+      ))}
+    </LinkList>
+  );
+}
+
 export const DefaultFooter: Story = {
   args: {
-    heading: 'De Rijksoverheid. Voor Nederland',
-    appearanceLevel: 1,
+    heading: 'Footer heading',
+    appearanceLevel: 'level-1',
     background: 'primary-filled',
     columns: [
       {
         heading: 'Service',
-        children: (
-          <LinkList>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              Contact
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              Abonneren
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              RSS
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              Vacatures
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              Sitemap
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              Help
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              Archief
-            </LinkListLink>
-          </LinkList>
-        ),
+        appearanceLevel: 'level-3',
+        children: _toLinkList(['Contact', 'Abonneren', 'RSS', 'Vacatures', 'Sitemap', 'Help', 'Archief']),
       },
       {
         heading: 'Over deze site',
-        children: (
-          <LinkList>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              Over Rijksoverheid.nl
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              Wetten en regelingen
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              Copyright
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              Privacy
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              Cookies
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              Toegankelijkheid
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              Open data
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              Kwetsbaarheid melden
-            </LinkListLink>
-          </LinkList>
-        ),
+        appearanceLevel: 'level-3',
+        children: _toLinkList([
+          'Over deze organisatie',
+          'Wetten en regelingen',
+          'Copyright',
+          'Privacy',
+          'Cookies',
+          'Toegankelijkheid',
+          'Open data',
+          'Kwetsbaarheid melden',
+        ]),
       },
     ],
+  },
+};
+
+export const ColumnLayoutFooter: Story = {
+  args: {
+    heading: 'Footer heading',
+    appearanceLevel: 'level-1',
+    background: 'primary-filled',
+    children: (
+      <ColumnLayout>
+        {_toLinkList([
+          'Over deze organisatie',
+          'Wetten en regelingen',
+          'Copyright',
+          'Privacy',
+          'Cookies',
+          'Toegankelijkheid',
+          'Open data',
+          'Kwetsbaarheid melden',
+        ])}
+      </ColumnLayout>
+    ),
   },
 };
 
@@ -101,89 +105,24 @@ export const CustomHeadingFooter: Story = {
     background: 'primary-filled',
     columns: [
       {
-        heading: 'Heading 1',
-        appearanceLevel: 1,
-        children: (
-          <LinkList>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 1
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 2
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 3
-            </LinkListLink>
-          </LinkList>
-        ),
+        heading: 'First heading',
+        appearanceLevel: 'level-3',
+        children: _toLinkList(['List item 1', 'List item 2', 'List item 3']),
       },
       {
-        heading: 'Heading 2',
-        appearanceLevel: 2,
-        children: (
-          <LinkList>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 1
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 2
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 3
-            </LinkListLink>
-          </LinkList>
-        ),
+        heading: 'Second heading',
+        appearanceLevel: 'level-3',
+        children: _toLinkList(['List item 1', 'List item 2', 'List item 3']),
       },
       {
-        heading: 'Heading 3',
-        appearanceLevel: 3,
-        children: (
-          <LinkList>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 1
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 2
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 3
-            </LinkListLink>
-          </LinkList>
-        ),
+        heading: 'Third heading',
+        appearanceLevel: 'level-3',
+        children: _toLinkList(['List item 1', 'List item 2', 'List item 3']),
       },
       {
-        heading: 'Heading 4',
-        appearanceLevel: 4,
-        children: (
-          <LinkList>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 1
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 2
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 3
-            </LinkListLink>
-          </LinkList>
-        ),
-      },
-      {
-        heading: 'Heading 5',
-        appearanceLevel: 5,
-        children: (
-          <LinkList>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 1
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 2
-            </LinkListLink>
-            <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-              List item 3
-            </LinkListLink>
-          </LinkList>
-        ),
+        heading: 'Fourth heading',
+        appearanceLevel: 'level-3',
+        children: _toLinkList(['List item 1', 'List item 2', 'List item 3']),
       },
     ],
   },

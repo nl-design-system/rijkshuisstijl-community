@@ -1,5 +1,8 @@
 import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-violet/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-mintgroen-focus/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-violet-oud/index.css';
 import '@rijkshuisstijl-community/digid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';
@@ -7,16 +10,12 @@ import '@rijkshuisstijl-community/mijnoverheid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Paragraph } from '@rijkshuisstijl-community/components-react';
-import { defineCustomElements } from '@rijkshuisstijl-community/web-components-stencil/loader/index';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import { Controls, Description, Primary, Stories, useOf } from '@storybook/blocks';
 import { Preview } from '@storybook/react';
-import { defineCustomElements as defineUtrechtCustomElements } from '@utrecht/web-component-library-stencil/loader/index';
+import { PageLayout } from '@utrecht/page-layout-react';
+import { Root } from '@utrecht/root-react';
 import { Fragment } from 'react';
-
-// Initialize web components
-defineCustomElements();
-defineUtrechtCustomElements();
 
 const preview: Preview = {
   decorators: [
@@ -27,10 +26,21 @@ const preview: Preview = {
         MijnOverheid: 'mijnoverheid-theme',
         Logius: 'logius-theme',
         RIVM: 'rivm-theme',
+        'Uitvoerend - violet': 'uitvoerend-violet',
+        'Uitvoerend - mintgroen -  ander fontweight - focus': 'uitvoerend-mintgroen-focus',
+        'Uitvoerend - violet - oud': 'uitvoerend-violet-oud',
       },
       defaultTheme: 'RijkshuisstijlCommunity',
     }),
-    (Story: any) => Story(),
+    (Story, options) => {
+      return options.parameters['isPage'] ? (
+        <Root Component="div">
+          <PageLayout>{Story()}</PageLayout>
+        </Root>
+      ) : (
+        Story()
+      );
+    },
   ],
   parameters: {
     previewTabs: {
@@ -90,7 +100,7 @@ const preview: Preview = {
             <Description />
             <Primary />
             <Controls />
-            <Stories />
+            {!storyParameters?.isPage && <Stories />}
           </>
         );
       },
