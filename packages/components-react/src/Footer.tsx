@@ -1,6 +1,7 @@
 import { PageFooterProps, PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
+import React from 'react';
 import { ColumnLayout } from './ColumnLayout';
 import { Heading, HeadingLevel } from './Heading';
 import { Icon } from './Icon';
@@ -23,7 +24,8 @@ interface ColumnProps {
 }
 
 const MAX_APPEARANCE_HEADING_LEVEL = 5;
-const scrollBackToTop = () => {
+const scrollBackToTop = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  event.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
@@ -99,8 +101,8 @@ export const Footer = forwardRef(
           >
             <div className="rhc-page-subfooter__content rhc-page-footer__wrapper">
               {backtotop && (
-                <a className="rhc-page-subfooter__backtotop" onClick={scrollBackToTop}>
-                  Terug naar boven <Icon icon={'pijl-omhoog'} />
+                <a className="rhc-page-subfooter__backtotop" href="#" onClick={scrollBackToTop}>
+                  Terug naar boven <Icon icon="pijl-omhoog" />
                 </a>
               )}
               {subFooter}
