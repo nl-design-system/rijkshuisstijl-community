@@ -2,6 +2,8 @@
 import twigTemplate from '@rijkshuisstijl-community/components-twig/src/Icon.twig?raw';
 import type { Meta, StoryObj } from '@storybook/react';
 import { createTwigComponent } from './TwigRenderer';
+import readme from './icon-twig.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface TwigIconProps {
   icon: string;
@@ -99,6 +101,11 @@ const meta = {
     },
   },
   parameters: {
+    docs: {
+      description: {
+        component: mergeMarkdown([readme]),
+      },
+    },
     status: {
       type: 'STABLE',
     },
