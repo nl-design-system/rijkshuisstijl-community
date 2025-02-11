@@ -6,15 +6,9 @@ export interface DotBadgeProps extends HTMLAttributes<HTMLSpanElement> {
   ref?: Ref<HTMLSpanElement>;
 }
 
-export const DotBadge = ({
-  children,
-  label,
-  role = 'status',
-  ref,
-  ...restpProps
-}: PropsWithChildren<DotBadgeProps>) => {
+export const DotBadge = ({ children, label, role = 'status', ref, ...restProps }: PropsWithChildren<DotBadgeProps>) => {
   return (
-    <span className="rhc-dot-badge" ref={ref} role={role || 'status'} {...restpProps}>
+    <span className="rhc-dot-badge" ref={ref} role={role || 'status'} {...restProps}>
       <span className="rhc-dot-badge__sr-only" data-testid="rhc-dot-badge__sr-label">
         {label}
       </span>
