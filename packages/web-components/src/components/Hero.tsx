@@ -1,12 +1,13 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { Hero, HeroProps } from '@rijkshuisstijl-community/components-react';
+import { render } from 'preact';
 import { BaseWebComponent } from './BaseComponent';
 
 export type HeroWebComponentAttributes = HeroProps;
 
 export class HeroWebComponent extends BaseWebComponent {
-  static override tagName: string = 'rhc-hero';
-  static override observedAttributes: string[] = [
+  static override readonly tagName: string = 'rhc-hero';
+  static override readonly observedAttributes: string[] = [
     'aspectratio',
     'heading',
     'imagealt',
@@ -21,8 +22,16 @@ export class HeroWebComponent extends BaseWebComponent {
     super(stylesheet);
   }
 
+  override setupRestProps(): void {
+    for (const attributeName of this.getAttributeNames()) {
+      if (HeroWebComponent.observedAttributes.includes(attributeName)) continue;
+      this.restProps[attributeName] = this.getAttribute(attributeName);
+    }
+  }
+
   render(): void {
-    this.root.render(
+    if (!this.root) return;
+    render(
       <Hero
         aspectRatio={(this.getAttribute('aspectRatio') as HeroProps['aspectRatio']) ?? undefined}
         borderRadiusCorner={this.getAttribute('borderRadiusCorner') as HeroProps['borderRadiusCorner']}
@@ -37,9 +46,11 @@ export class HeroWebComponent extends BaseWebComponent {
           this.getAttribute('imageSrc') ??
           'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg'
         }
+        {...this.restProps}
       >
         <slot />
       </Hero>,
+      this.root,
     );
   }
 }

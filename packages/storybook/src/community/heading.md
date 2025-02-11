@@ -11,19 +11,18 @@
 - Sla geen niveaus over bij het gebruik van headings, bijvoorbeeld geen H3 gebruiken zonder dat er een voorgaande H2 is.
 - Beperk het aantal headings op een pagina. In de meeste gevallen hebben teksten niet meer dan `<h2>`-koppen nodig en heel soms een `<h3>`. Alleen voor uitzonderlijk lange of complexe pagina's zouden `<h5>` en `<h6>` nodig zijn.
 
-### De heading component beschikt over properties `level` en `appearance`
+### De heading component beschikt over properties `level` en `appearanceLevel`
 
 **level (verplicht)**  
 Dit wijzigt de HTML-tag naar het overeenkomende niveau, bijvoorbeeld: `level={1}` transformeert de HTML naar de `<h1>`-tag, `level={2}` naar `<h2>` enzovoort.
 
-**appearance (optioneel)**  
+**appearanceLevel (optioneel)**  
 Dit wijzigt geen onderliggend HTML-element, maar verandert wel het uiterlijk. Dit is nog steeds een `<h1>` en wordt zo ook door screenreaders gelezen, maar ziet er visueel uit als een `<h3>`.
 
-```HTML
-<Heading
-  appearance="utrecht-heading-3"
-  level={1}
->
+```tsx
+<Heading appearanceLevel={3} level={1}>
+  Lorem ipsum
+</Heading>
 ```
 
 ---

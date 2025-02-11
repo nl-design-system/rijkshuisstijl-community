@@ -1,14 +1,23 @@
-import { AccordionWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/web-components';
+import { AccordionWebComponent, AccordionWebComponentAttributes } from '@rijkshuisstijl-community/web-components';
+import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/accordion/README.md?raw';
+import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 AccordionWebComponent.define();
 
+const AccordionWrapper = ({ appearance, icon, sections }: AccordionWebComponentAttributes) => {
+  return createElement('rhc-accordion', {
+    appearance: appearance,
+    icon: icon?.toString(),
+    sections: JSON.stringify(sections),
+  });
+};
+
 const meta = {
   title: 'Web Components/Accordion',
   id: 'rhc-accordion-web',
-  component: 'rhc-accordion',
+  component: AccordionWrapper,
   argTypes: {
     appearance: {
       description: 'Appearance of the component',
@@ -62,13 +71,13 @@ const meta = {
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
   },
-} as Meta<typeof AccordionWebComponent>;
+} as Meta<AccordionWebComponentAttributes>;
 
 export default meta;
 
 export const Default = {
   args: {
-    sections: JSON.stringify([
+    sections: [
       {
         label: 'Lorem ipsum 1',
         body: `Lorem ipsum dolor sit amet.`,
@@ -84,6 +93,6 @@ export const Default = {
         body: `Lorem ipsum dolor sit amet.`,
         expanded: false,
       },
-    ]),
+    ],
   },
 } as StoryObj<typeof meta>;

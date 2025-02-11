@@ -21,7 +21,7 @@ import {
   SideNavLink,
   SideNavList,
 } from '@rijkshuisstijl-community/components-react';
-import { PageBody } from '@utrecht/page-body-react';
+import { PageBody } from '@utrecht/page-body-react/dist';
 
 export default function MijnOmgeving() {
   return (

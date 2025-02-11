@@ -1,7 +1,8 @@
-import ReactDOM from 'react-dom/client';
-
 export abstract class BaseWebComponent extends HTMLElement {
-  protected root: ReactDOM.Root;
+  protected root: HTMLElement | undefined;
+  public override shadowRoot: ShadowRoot;
+  protected restProps: { [key: string]: any } = {};
+
   static get tagName(): string {
     throw new Error('tagName must be defined in the derived class');
   }
@@ -10,15 +11,24 @@ export abstract class BaseWebComponent extends HTMLElement {
 
   constructor(stylesheet: string) {
     super();
-    const shadowRoot = this.attachShadow({ mode: 'open' });
-    this.root = ReactDOM.createRoot(shadowRoot);
 
-    const style: CSSStyleSheet = new CSSStyleSheet();
-    style.replaceSync(stylesheet);
-    shadowRoot.adoptedStyleSheets = [style];
+    this.shadowRoot = this.attachShadow({ mode: 'open' });
+
+    const style = document.createElement('style');
+    style.textContent = stylesheet;
+    this.shadowRoot.appendChild(style);
+  }
+
+  setupRestProps(): void {
+    throw new Error('setupRestProps() must be defined in the derived class');
   }
 
   connectedCallback(): void {
+    this.root = document.createElement('span');
+    this.root.id = 'root';
+    this.shadowRoot.appendChild(this.root);
+
+    this.setupRestProps();
     this.render();
   }
 
@@ -27,7 +37,8 @@ export abstract class BaseWebComponent extends HTMLElement {
   }
 
   disconnectedCallback(): void {
-    this.root.unmount();
+    if (!this.root) return;
+    this.root.remove();
   }
 
   protected abstract render(): void;

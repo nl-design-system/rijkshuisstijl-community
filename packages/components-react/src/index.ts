@@ -43,6 +43,7 @@ export {
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
 export { CodeInput } from './CodeInput';
+export { ColumnLayout, type ColumnLayoutProps } from './ColumnLayout';
 export { type CustomFormFieldProps, FormField } from './FormField';
 export {
   DataList,
@@ -70,7 +71,7 @@ export { FormFieldRadioGroup, type FormFieldRadioGroupProps } from './FormFieldR
 export { FormFieldSelect, type FormFieldSelectProps, SelectOption, type SelectOptionProps } from './FormFieldSelect';
 export { FormFieldTextInput, type FormFieldTextInputProps } from './FormFieldTextInput';
 export { FormFieldTextarea, type FormFieldTextareaProps } from './FormFieldTextarea';
-export { Heading, type HeadingProps } from './Heading';
+export { Heading, type HeadingLevel, type HeadingProps, headingLevels } from './Heading';
 export { HeadingGroup, type HeadingGroupProps } from './HeadingGroup';
 export { Hero, type HeroProps } from './Hero';
 export { Icon, type IconProps, type RHCIconID, getIconSet, registerIconSet } from './Icon';

@@ -1,401 +1,401 @@
-@mixin utrecht-heading-1 {
-  .utrecht-heading-1:first-child {
-    --utrecht-heading-1-margin-block-start: 0;
+@mixin nl-heading--level-1 {
+  .nl-heading--level-1:first-child {
+    --nl-heading-level-1-margin-block-start: 0;
   }
-  .utrecht-heading-1:has(+ .utrecht-heading-2) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-1:has(+ .nl-heading--level-2) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-accordion) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-accordion) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-alert) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-alert) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-badge-list) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-badge-list) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-blockquote) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-blockquote) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-button) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-button) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-button-group) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-button-group) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-data-list) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-data-list) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-form-field) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-form-field) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-img) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-img) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-link) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-link) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-ordered-list) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-ordered-list) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-pagination) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-pagination) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-paragraph) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-paragraph) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-separator) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-separator) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-badge-status) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-badge-status) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-table) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-table) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-1:has(+ .utrecht-unordered-list) {
-    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
-  }
-}
-@mixin utrecht-heading-2 {
-  .utrecht-heading-2:first-child {
-    --utrecht-heading-2-margin-block-start: 0;
-  }
-  .utrecht-heading-2:has(+ .utrecht-heading-3) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-accordion) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-alert) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-badge-list) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-blockquote) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-button) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-button-group) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-data-list) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-figure) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-form-field) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-img) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-link) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-ordered-list) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-pagination) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-paragraph) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-separator) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-sidenav) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-badge-status) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-table) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-2:has(+ .utrecht-unordered-list) {
-    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-1:has(+ .utrecht-unordered-list) {
+    --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
 }
-@mixin utrecht-heading-3 {
-  .utrecht-heading-3:first-child {
-    --utrecht-heading-3-margin-block-start: 0;
+@mixin nl-heading--level-2 {
+  .nl-heading--level-2:first-child {
+    --nl-heading-level-2-margin-block-start: 0;
   }
-  .utrecht-heading-3:has(+ .utrecht-heading-4) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-2:has(+ .nl-heading--level-3) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-accordion) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-accordion) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-alert) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-alert) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-badge-list) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-badge-list) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-blockquote) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-blockquote) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-button) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-button) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-button-group) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-button-group) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-data-list) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-data-list) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-figure) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-figure) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-form-field) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-form-field) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-img) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-img) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-link) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-link) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-ordered-list) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-ordered-list) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-pagination) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-pagination) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-paragraph) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-paragraph) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-separator) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-separator) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-sidenav) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-sidenav) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-badge-status) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-badge-status) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-table) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-table) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-3:has(+ .utrecht-unordered-list) {
-    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-}
-@mixin utrecht-heading-4 {
-  .utrecht-heading-4:first-child {
-    --utrecht-heading-4-margin-block-start: 0;
-  }
-  .utrecht-heading-4:has(+ .utrecht-heading-5) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-accordion) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-alert) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-badge-list) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-blockquote) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-button) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-button-group) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-data-list) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-figure) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-form-field) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-img) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-link) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-ordered-list) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-pagination) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-paragraph) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-separator) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-sidenav) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-badge-status) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-table) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
-  }
-  .utrecht-heading-4:has(+ .utrecht-unordered-list) {
-    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-2:has(+ .utrecht-unordered-list) {
+    --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
 }
-@mixin utrecht-heading-5 {
-  .utrecht-heading-5:first-child {
-    --utrecht-heading-5-margin-block-start: 0;
+@mixin nl-heading--level-3 {
+  .nl-heading--level-3:first-child {
+    --nl-heading-level-3-margin-block-start: 0;
   }
-  .utrecht-heading-5:has(+ .utrecht-heading-6) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-3:has(+ .nl-heading--level-4) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-accordion) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-accordion) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-alert) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-alert) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-badge-list) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-badge-list) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-blockquote) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-blockquote) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-button) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-button) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-button-group) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-button-group) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-data-list) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-data-list) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-figure) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-figure) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-form-field) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-form-field) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-img) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-img) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-link) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-link) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-ordered-list) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-ordered-list) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-pagination) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-pagination) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-paragraph) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-paragraph) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-separator) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-separator) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-sidenav) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-sidenav) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-badge-status) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-badge-status) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-table) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-table) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-5:has(+ .utrecht-unordered-list) {
-    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-3:has(+ .utrecht-unordered-list) {
+    --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
 }
-@mixin utrecht-heading-6 {
-  .utrecht-heading-6:first-child {
-    --utrecht-heading-6-margin-block-start: 0;
+@mixin nl-heading--level-4 {
+  .nl-heading--level-4:first-child {
+    --nl-heading-level-4-margin-block-start: 0;
   }
-  .utrecht-heading-6:has(+ .utrecht-accordion) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-4:has(+ .nl-heading--level-5) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-alert) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-accordion) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-badge-list) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-alert) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-blockquote) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-badge-list) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-button) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-blockquote) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-button-group) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-button) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-data-list) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-button-group) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-figure) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-data-list) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-form-field) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-figure) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-img) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-form-field) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-link) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-img) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-ordered-list) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-link) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-pagination) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-ordered-list) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-paragraph) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-pagination) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-separator) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-paragraph) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-sidenav) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-separator) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-badge-status) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-sidenav) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-table) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-badge-status) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-heading-6:has(+ .utrecht-unordered-list) {
-    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-heading--level-4:has(+ .utrecht-table) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-4:has(+ .utrecht-unordered-list) {
+    --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin nl-heading--level-5 {
+  .nl-heading--level-5:first-child {
+    --nl-heading-level-5-margin-block-start: 0;
+  }
+  .nl-heading--level-5:has(+ .nl-heading--level-6) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-accordion) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-alert) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-badge-list) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-blockquote) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-button) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-button-group) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-data-list) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-figure) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-form-field) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-img) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-link) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-ordered-list) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-pagination) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-paragraph) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-separator) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-sidenav) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-badge-status) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-table) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-5:has(+ .utrecht-unordered-list) {
+    --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin nl-heading--level-6 {
+  .nl-heading--level-6:first-child {
+    --nl-heading-level-6-margin-block-start: 0;
+  }
+  .nl-heading--level-6:has(+ .utrecht-accordion) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-alert) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-badge-list) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-blockquote) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-button) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-button-group) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-data-list) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-figure) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-form-field) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-img) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-link) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-ordered-list) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-pagination) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-paragraph) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-separator) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-sidenav) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-badge-status) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-table) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .nl-heading--level-6:has(+ .utrecht-unordered-list) {
+    --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
 }
 @mixin utrecht-accordion {
   .utrecht-accordion:first-child {
     --utrecht-accordion-margin-block-start: 0;
   }
-  .utrecht-accordion:has(+ .utrecht-heading-2) {
+  .utrecht-accordion:has(+ .nl-heading--level-2) {
     --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-accordion:has(+ .utrecht-heading-3) {
+  .utrecht-accordion:has(+ .nl-heading--level-3) {
     --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-accordion:has(+ .utrecht-heading-4) {
+  .utrecht-accordion:has(+ .nl-heading--level-4) {
     --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-accordion:has(+ .utrecht-heading-5) {
+  .utrecht-accordion:has(+ .nl-heading--level-5) {
     --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-accordion:has(+ .utrecht-heading-6) {
+  .utrecht-accordion:has(+ .nl-heading--level-6) {
     --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-accordion:has(+ .utrecht-accordion) {
@@ -454,22 +454,22 @@
   .utrecht-alert:first-child {
     --utrecht-alert-margin-block-start: 0;
   }
-  .utrecht-alert:has(+ .utrecht-heading-1) {
+  .utrecht-alert:has(+ .nl-heading--level-1) {
     --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-alert:has(+ .utrecht-heading-2) {
+  .utrecht-alert:has(+ .nl-heading--level-2) {
     --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-alert:has(+ .utrecht-heading-3) {
+  .utrecht-alert:has(+ .nl-heading--level-3) {
     --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-alert:has(+ .utrecht-heading-4) {
+  .utrecht-alert:has(+ .nl-heading--level-4) {
     --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-alert:has(+ .utrecht-heading-5) {
+  .utrecht-alert:has(+ .nl-heading--level-5) {
     --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-alert:has(+ .utrecht-heading-6) {
+  .utrecht-alert:has(+ .nl-heading--level-6) {
     --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-alert:has(+ .utrecht-accordion) {
@@ -531,22 +531,22 @@
   .utrecht-badge-list:first-child {
     --utrecht-badge-list-margin-block-start: 0;
   }
-  .utrecht-badge-list:has(+ .utrecht-heading-1) {
+  .utrecht-badge-list:has(+ .nl-heading--level-1) {
     --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-badge-list:has(+ .utrecht-heading-2) {
+  .utrecht-badge-list:has(+ .nl-heading--level-2) {
     --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-badge-list:has(+ .utrecht-heading-3) {
+  .utrecht-badge-list:has(+ .nl-heading--level-3) {
     --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-badge-list:has(+ .utrecht-heading-4) {
+  .utrecht-badge-list:has(+ .nl-heading--level-4) {
     --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-badge-list:has(+ .utrecht-heading-5) {
+  .utrecht-badge-list:has(+ .nl-heading--level-5) {
     --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-badge-list:has(+ .utrecht-heading-6) {
+  .utrecht-badge-list:has(+ .nl-heading--level-6) {
     --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-badge-list:has(+ .utrecht-accordion) {
@@ -599,19 +599,19 @@
   .utrecht-blockquote:first-child {
     --utrecht-blockquote-margin-block-start: 0;
   }
-  .utrecht-blockquote:has(+ .utrecht-heading-2) {
+  .utrecht-blockquote:has(+ .nl-heading--level-2) {
     --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-blockquote:has(+ .utrecht-heading-3) {
+  .utrecht-blockquote:has(+ .nl-heading--level-3) {
     --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-blockquote:has(+ .utrecht-heading-4) {
+  .utrecht-blockquote:has(+ .nl-heading--level-4) {
     --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-blockquote:has(+ .utrecht-heading-5) {
+  .utrecht-blockquote:has(+ .nl-heading--level-5) {
     --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-blockquote:has(+ .utrecht-heading-6) {
+  .utrecht-blockquote:has(+ .nl-heading--level-6) {
     --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-blockquote:has(+ .utrecht-accordion) {
@@ -670,22 +670,22 @@
   .utrecht-breadcrumb-nav:first-child {
     --utrecht-breadcrumb-nav-margin-block-start: 0;
   }
-  .utrecht-breadcrumb-nav:has(+ .utrecht-heading-1) {
+  .utrecht-breadcrumb-nav:has(+ .nl-heading--level-1) {
     --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-breadcrumb-nav:has(+ .utrecht-heading-2) {
+  .utrecht-breadcrumb-nav:has(+ .nl-heading--level-2) {
     --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-breadcrumb-nav:has(+ .utrecht-heading-3) {
+  .utrecht-breadcrumb-nav:has(+ .nl-heading--level-3) {
     --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-breadcrumb-nav:has(+ .utrecht-heading-4) {
+  .utrecht-breadcrumb-nav:has(+ .nl-heading--level-4) {
     --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-breadcrumb-nav:has(+ .utrecht-heading-5) {
+  .utrecht-breadcrumb-nav:has(+ .nl-heading--level-5) {
     --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-breadcrumb-nav:has(+ .utrecht-heading-6) {
+  .utrecht-breadcrumb-nav:has(+ .nl-heading--level-6) {
     --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-breadcrumb-nav:has(+ .utrecht-accordion) {
@@ -750,19 +750,19 @@
   .utrecht-button:first-child {
     --utrecht-button-margin-block-start: 0;
   }
-  .utrecht-button:has(+ .utrecht-heading-2) {
+  .utrecht-button:has(+ .nl-heading--level-2) {
     --utrecht-button-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-button:has(+ .utrecht-heading-3) {
+  .utrecht-button:has(+ .nl-heading--level-3) {
     --utrecht-button-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-button:has(+ .utrecht-heading-4) {
+  .utrecht-button:has(+ .nl-heading--level-4) {
     --utrecht-button-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-button:has(+ .utrecht-heading-5) {
+  .utrecht-button:has(+ .nl-heading--level-5) {
     --utrecht-button-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-button:has(+ .utrecht-heading-6) {
+  .utrecht-button:has(+ .nl-heading--level-6) {
     --utrecht-button-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-button:has(+ .utrecht-accordion) {
@@ -818,19 +818,19 @@
   .utrecht-button-group:first-child {
     --utrecht-button-group-margin-block-start: 0;
   }
-  .utrecht-button-group:has(+ .utrecht-heading-2) {
+  .utrecht-button-group:has(+ .nl-heading--level-2) {
     --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-button-group:has(+ .utrecht-heading-3) {
+  .utrecht-button-group:has(+ .nl-heading--level-3) {
     --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-button-group:has(+ .utrecht-heading-4) {
+  .utrecht-button-group:has(+ .nl-heading--level-4) {
     --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-button-group:has(+ .utrecht-heading-5) {
+  .utrecht-button-group:has(+ .nl-heading--level-5) {
     --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-button-group:has(+ .utrecht-heading-6) {
+  .utrecht-button-group:has(+ .nl-heading--level-6) {
     --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-button-group:has(+ .utrecht-accordion) {
@@ -886,19 +886,19 @@
   .utrecht-data-list:first-child {
     --utrecht-data-list-margin-block-start: 0;
   }
-  .utrecht-data-list:has(+ .utrecht-heading-2) {
+  .utrecht-data-list:has(+ .nl-heading--level-2) {
     --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-data-list:has(+ .utrecht-heading-3) {
+  .utrecht-data-list:has(+ .nl-heading--level-3) {
     --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-data-list:has(+ .utrecht-heading-4) {
+  .utrecht-data-list:has(+ .nl-heading--level-4) {
     --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-data-list:has(+ .utrecht-heading-5) {
+  .utrecht-data-list:has(+ .nl-heading--level-5) {
     --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-data-list:has(+ .utrecht-heading-6) {
+  .utrecht-data-list:has(+ .nl-heading--level-6) {
     --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-data-list:has(+ .utrecht-accordion) {
@@ -957,19 +957,19 @@
   .utrecht-figure:first-child {
     --utrecht-figure-margin-block-start: 0;
   }
-  .utrecht-figure:has(+ .utrecht-heading-2) {
+  .utrecht-figure:has(+ .nl-heading--level-2) {
     --utrecht-figure-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-figure:has(+ .utrecht-heading-3) {
+  .utrecht-figure:has(+ .nl-heading--level-3) {
     --utrecht-figure-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-figure:has(+ .utrecht-heading-4) {
+  .utrecht-figure:has(+ .nl-heading--level-4) {
     --utrecht-figure-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-figure:has(+ .utrecht-heading-5) {
+  .utrecht-figure:has(+ .nl-heading--level-5) {
     --utrecht-figure-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-figure:has(+ .utrecht-heading-6) {
+  .utrecht-figure:has(+ .nl-heading--level-6) {
     --utrecht-figure-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-figure:has(+ .utrecht-accordion) {
@@ -1025,19 +1025,19 @@
   .utrecht-form-field:first-child {
     --utrecht-form-field-margin-block-start: 0;
   }
-  .utrecht-form-field:has(+ .utrecht-heading-2) {
+  .utrecht-form-field:has(+ .nl-heading--level-2) {
     --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-form-field:has(+ .utrecht-heading-3) {
+  .utrecht-form-field:has(+ .nl-heading--level-3) {
     --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-form-field:has(+ .utrecht-heading-4) {
+  .utrecht-form-field:has(+ .nl-heading--level-4) {
     --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-form-field:has(+ .utrecht-heading-5) {
+  .utrecht-form-field:has(+ .nl-heading--level-5) {
     --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-form-field:has(+ .utrecht-heading-6) {
+  .utrecht-form-field:has(+ .nl-heading--level-6) {
     --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-form-field:has(+ .utrecht-accordion) {
@@ -1150,19 +1150,19 @@
   .utrecht-img:first-child {
     --utrecht-img-margin-block-start: 0;
   }
-  .utrecht-img:has(+ .utrecht-heading-2) {
+  .utrecht-img:has(+ .nl-heading--level-2) {
     --utrecht-img-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-img:has(+ .utrecht-heading-3) {
+  .utrecht-img:has(+ .nl-heading--level-3) {
     --utrecht-img-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-img:has(+ .utrecht-heading-4) {
+  .utrecht-img:has(+ .nl-heading--level-4) {
     --utrecht-img-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-img:has(+ .utrecht-heading-5) {
+  .utrecht-img:has(+ .nl-heading--level-5) {
     --utrecht-img-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-img:has(+ .utrecht-heading-6) {
+  .utrecht-img:has(+ .nl-heading--level-6) {
     --utrecht-img-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-img:has(+ .utrecht-accordion) {
@@ -1218,19 +1218,19 @@
   .utrecht-link:first-child {
     --utrecht-link-margin-block-start: 0;
   }
-  .utrecht-link:has(+ .utrecht-heading-2) {
+  .utrecht-link:has(+ .nl-heading--level-2) {
     --utrecht-link-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-link:has(+ .utrecht-heading-3) {
+  .utrecht-link:has(+ .nl-heading--level-3) {
     --utrecht-link-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-link:has(+ .utrecht-heading-4) {
+  .utrecht-link:has(+ .nl-heading--level-4) {
     --utrecht-link-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-link:has(+ .utrecht-heading-5) {
+  .utrecht-link:has(+ .nl-heading--level-5) {
     --utrecht-link-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-link:has(+ .utrecht-heading-6) {
+  .utrecht-link:has(+ .nl-heading--level-6) {
     --utrecht-link-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-link:has(+ .utrecht-accordion) {
@@ -1276,7 +1276,7 @@
     --utrecht-link-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-link:has(+ .utrecht-table) {
-    --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-link:has(+ .utrecht-unordered-list) {
     --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
@@ -1286,19 +1286,19 @@
   .utrecht-ordered-list:first-child {
     --utrecht-ordered-list-margin-block-start: 0;
   }
-  .utrecht-ordered-list:has(+ .utrecht-heading-2) {
+  .utrecht-ordered-list:has(+ .nl-heading--level-2) {
     --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-ordered-list:has(+ .utrecht-heading-3) {
+  .utrecht-ordered-list:has(+ .nl-heading--level-3) {
     --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-ordered-list:has(+ .utrecht-heading-4) {
+  .utrecht-ordered-list:has(+ .nl-heading--level-4) {
     --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-ordered-list:has(+ .utrecht-heading-5) {
+  .utrecht-ordered-list:has(+ .nl-heading--level-5) {
     --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-ordered-list:has(+ .utrecht-heading-6) {
+  .utrecht-ordered-list:has(+ .nl-heading--level-6) {
     --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-ordered-list:has(+ .utrecht-accordion) {
@@ -1338,7 +1338,7 @@
     --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-ordered-list:has(+ .utrecht-paragraph) {
-    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-ordered-list:has(+ .utrecht-separator) {
     --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
@@ -1354,19 +1354,19 @@
   .utrecht-pagination:first-child {
     --utrecht-pagination-margin-block-start: 0;
   }
-  .utrecht-pagination:has(+ .utrecht-heading-2) {
+  .utrecht-pagination:has(+ .nl-heading--level-2) {
     --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-pagination:has(+ .utrecht-heading-3) {
+  .utrecht-pagination:has(+ .nl-heading--level-3) {
     --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-pagination:has(+ .utrecht-heading-4) {
+  .utrecht-pagination:has(+ .nl-heading--level-4) {
     --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-pagination:has(+ .utrecht-heading-5) {
+  .utrecht-pagination:has(+ .nl-heading--level-5) {
     --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-pagination:has(+ .utrecht-heading-6) {
+  .utrecht-pagination:has(+ .nl-heading--level-6) {
     --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-pagination:has(+ .utrecht-accordion) {
@@ -1419,19 +1419,19 @@
   .utrecht-paragraph:first-child {
     --utrecht-paragraph-margin-block-start: 0;
   }
-  .utrecht-paragraph:has(+ .utrecht-heading-2) {
+  .utrecht-paragraph:has(+ .nl-heading--level-2) {
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-heading-3) {
+  .utrecht-paragraph:has(+ .nl-heading--level-3) {
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-heading-4) {
+  .utrecht-paragraph:has(+ .nl-heading--level-4) {
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-heading-5) {
+  .utrecht-paragraph:has(+ .nl-heading--level-5) {
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-heading-6) {
+  .utrecht-paragraph:has(+ .nl-heading--level-6) {
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-paragraph:has(+ .utrecht-accordion) {
@@ -1455,6 +1455,9 @@
   .utrecht-paragraph:has(+ .utrecht-data-list) {
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
+  .utrecht-paragraph:has(+ .utrecht-figure) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
   .utrecht-paragraph:has(+ .utrecht-form-field) {
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
@@ -1462,10 +1465,10 @@
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-paragraph:has(+ .utrecht-link) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-paragraph:has(+ .utrecht-ordered-list) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-paragraph:has(+ .utrecht-pagination) {
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
@@ -1480,7 +1483,7 @@
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-paragraph:has(+ .utrecht-unordered-list) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
 }
 @mixin utrecht-select {
@@ -1498,22 +1501,22 @@
   .utrecht-separator:first-child {
     --utrecht-separator-margin-block-start: 0;
   }
-  .utrecht-separator:has(+ .utrecht-heading-1) {
+  .utrecht-separator:has(+ .nl-heading--level-1) {
     --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-separator:has(+ .utrecht-heading-2) {
+  .utrecht-separator:has(+ .nl-heading--level-2) {
     --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-separator:has(+ .utrecht-heading-3) {
+  .utrecht-separator:has(+ .nl-heading--level-3) {
     --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-separator:has(+ .utrecht-heading-4) {
+  .utrecht-separator:has(+ .nl-heading--level-4) {
     --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-separator:has(+ .utrecht-heading-5) {
+  .utrecht-separator:has(+ .nl-heading--level-5) {
     --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-separator:has(+ .utrecht-heading-6) {
+  .utrecht-separator:has(+ .nl-heading--level-6) {
     --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-separator:has(+ .utrecht-accordion) {
@@ -1572,22 +1575,22 @@
   .utrecht-sidenav:first-child {
     --utrecht-sidenav-margin-block-start: 0;
   }
-  .utrecht-sidenav:has(+ .utrecht-heading-1) {
+  .utrecht-sidenav:has(+ .nl-heading--level-1) {
     --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-sidenav:has(+ .utrecht-heading-2) {
+  .utrecht-sidenav:has(+ .nl-heading--level-2) {
     --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-sidenav:has(+ .utrecht-heading-3) {
+  .utrecht-sidenav:has(+ .nl-heading--level-3) {
     --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-sidenav:has(+ .utrecht-heading-4) {
+  .utrecht-sidenav:has(+ .nl-heading--level-4) {
     --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-sidenav:has(+ .utrecht-heading-5) {
+  .utrecht-sidenav:has(+ .nl-heading--level-5) {
     --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-sidenav:has(+ .utrecht-heading-6) {
+  .utrecht-sidenav:has(+ .nl-heading--level-6) {
     --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-sidenav:has(+ .utrecht-accordion) {
@@ -1640,19 +1643,19 @@
   .utrecht-badge-status:first-child {
     --utrecht-badge-status-margin-block-start: 0;
   }
-  .utrecht-badge-status:has(+ .utrecht-heading-2) {
+  .utrecht-badge-status:has(+ .nl-heading--level-2) {
     --utrecht-badge-status-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-badge-status:has(+ .utrecht-heading-3) {
+  .utrecht-badge-status:has(+ .nl-heading--level-3) {
     --utrecht-badge-status-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-badge-status:has(+ .utrecht-heading-4) {
+  .utrecht-badge-status:has(+ .nl-heading--level-4) {
     --utrecht-badge-status-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-badge-status:has(+ .utrecht-heading-5) {
+  .utrecht-badge-status:has(+ .nl-heading--level-5) {
     --utrecht-badge-status-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-badge-status:has(+ .utrecht-heading-6) {
+  .utrecht-badge-status:has(+ .nl-heading--level-6) {
     --utrecht-badge-status-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-badge-status:has(+ .utrecht-badge-status) {
@@ -1663,19 +1666,19 @@
   .utrecht-table:first-child {
     --utrecht-table-margin-block-start: 0;
   }
-  .utrecht-table:has(+ .utrecht-heading-2) {
+  .utrecht-table:has(+ .nl-heading--level-2) {
     --utrecht-table-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-table:has(+ .utrecht-heading-3) {
+  .utrecht-table:has(+ .nl-heading--level-3) {
     --utrecht-table-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-table:has(+ .utrecht-heading-4) {
+  .utrecht-table:has(+ .nl-heading--level-4) {
     --utrecht-table-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-table:has(+ .utrecht-heading-5) {
+  .utrecht-table:has(+ .nl-heading--level-5) {
     --utrecht-table-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-table:has(+ .utrecht-heading-6) {
+  .utrecht-table:has(+ .nl-heading--level-6) {
     --utrecht-table-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-table:has(+ .utrecht-accordion) {
@@ -1753,19 +1756,19 @@
   .utrecht-unordered-list:first-child {
     --utrecht-unordered-list-margin-block-start: 0;
   }
-  .utrecht-unordered-list:has(+ .utrecht-heading-2) {
+  .utrecht-unordered-list:has(+ .nl-heading--level-2) {
     --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-unordered-list:has(+ .utrecht-heading-3) {
+  .utrecht-unordered-list:has(+ .nl-heading--level-3) {
     --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-unordered-list:has(+ .utrecht-heading-4) {
+  .utrecht-unordered-list:has(+ .nl-heading--level-4) {
     --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-unordered-list:has(+ .utrecht-heading-5) {
+  .utrecht-unordered-list:has(+ .nl-heading--level-5) {
     --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-unordered-list:has(+ .utrecht-heading-6) {
+  .utrecht-unordered-list:has(+ .nl-heading--level-6) {
     --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-unordered-list:has(+ .utrecht-accordion) {
@@ -1805,7 +1808,7 @@
     --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-unordered-list:has(+ .utrecht-paragraph) {
-    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-unordered-list:has(+ .utrecht-separator) {
     --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);

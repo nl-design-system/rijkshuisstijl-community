@@ -1,4 +1,10 @@
-import { Icon, LinkList, LinkListLink, type LinkListProps } from '@rijkshuisstijl-community/components-react';
+import {
+  ColumnLayout,
+  Icon,
+  LinkList,
+  LinkListLink,
+  type LinkListProps,
+} from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react/*';
 import { PropsWithChildren } from 'react';
 
@@ -55,3 +61,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const ColumnsLayout: Story = {
+  render: (args) => <ColumnLayout>{LinkListStory(args)}</ColumnLayout>,
+};

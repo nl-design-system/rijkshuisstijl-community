@@ -37,9 +37,10 @@ import {
   Toggletip,
   UnorderedList,
   UnorderedListItem,
+  VisuallyHidden,
 } from '@rijkshuisstijl-community/components-react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react/dist/esm/tabler-icons-react';
-import { PageBody } from '@utrecht/page-body-react';
+import { PageBody } from '@utrecht/page-body-react/dist';
 
 export default function Collage() {
   return (
@@ -64,6 +65,9 @@ export default function Collage() {
             <div className="utrecht-page-content rhc-templates-page-content">
               <Article>
                 <div className="rhc-margin-block-end-wrapper">
+                  <VisuallyHidden>
+                    <span>Invisible text</span>
+                  </VisuallyHidden>
                   <Heading level={1}>Componenten collage NL Design System</Heading>
                   <Image
                     alt="Multicolored tulip field"
