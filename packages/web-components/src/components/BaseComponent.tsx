@@ -17,17 +17,11 @@ export abstract class BaseWebComponent extends HTMLElement {
     style.textContent = stylesheet;
     this.shadowRoot.appendChild(style);
 
-    this._observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        const attributeName = mutation.attributeName;
-        console.log('attributeName', attributeName);
-        this.attributeChangedCallback();
-      });
-    });
+    this._observer = new MutationObserver((mutations) => mutations.forEach(this.attributeChangedCallback.bind(this)));
   }
 
   setupProps(): void {
-    throw new Error('setupRestProps() must be defined in the derived class');
+    this.getAttributeNames().forEach((attributeName) => (this.props[attributeName] = this.getAttribute(attributeName)));
   }
 
   connectedCallback(): void {

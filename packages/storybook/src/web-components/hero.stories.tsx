@@ -28,16 +28,6 @@ const meta = {
         category: 'Attributes',
       },
     },
-    heroMessage: {
-      name: 'Show Hero Message',
-      type: { name: 'string' },
-      control: 'select',
-      options: ['true', 'false'],
-      table: {
-        category: 'Attributes',
-        defaultValue: { summary: 'false' },
-      },
-    },
     imageAlt: {
       name: 'Image Alt Text',
       type: { name: 'string' },
@@ -96,7 +86,6 @@ const meta = {
   args: {
     aspectRatio: '16 / 9',
     heading: 'heading text',
-    heroMessage: 'true',
     imageAlt: 'image alt text',
     subHeading: 'sub heading text',
     textAlign: 'start',

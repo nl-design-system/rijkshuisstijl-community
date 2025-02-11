@@ -12,38 +12,32 @@ export class HeroWebComponent extends BaseWebComponent {
     super(stylesheet);
   }
 
-  override setupProps(): void {
-    for (const attributeName of this.getAttributeNames()) {
-      this.props[attributeName] = this.getAttribute(attributeName);
-    }
-  }
-
   render(): void {
     if (!this.root) return;
 
-    console.log('this.props', this.props);
     const {
-      aspectRatio,
-      borderRadiusCorner,
+      aspectratio,
+      borderradiuscorner,
       heading,
-      imageAlt,
-      subHeading,
-      textAlign,
-      headingLevel,
-      imageSrc,
+      imagealt,
+      subheading,
+      textalign,
+      headinglevel,
+      imagesrc,
       ...restProps
     } = this.props;
+
     render(
       <Hero
-        aspectRatio={(aspectRatio as HeroProps['aspectRatio']) ?? undefined}
-        borderRadiusCorner={borderRadiusCorner as HeroProps['borderRadiusCorner']}
+        aspectRatio={(aspectratio as HeroProps['aspectRatio']) ?? undefined}
+        borderRadiusCorner={borderradiuscorner as HeroProps['borderRadiusCorner']}
         heading={heading ?? 'default heading'}
-        headingLevel={(headingLevel && Number(headingLevel)) as HeroProps['headingLevel']}
-        imageAlt={imageAlt ?? 'image alt'}
-        subHeading={subHeading ?? 'sub heading'}
-        textAlign={textAlign as HeroProps['textAlign']}
+        headingLevel={(headinglevel && Number(headinglevel)) as HeroProps['headingLevel']}
+        imageAlt={imagealt ?? 'image alt'}
+        subHeading={subheading ?? 'sub heading'}
+        textAlign={textalign as HeroProps['textAlign']}
         imageSrc={
-          imageSrc ??
+          imagesrc ??
           'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg'
         }
         {...restProps}
