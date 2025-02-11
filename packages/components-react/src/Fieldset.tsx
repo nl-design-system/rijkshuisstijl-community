@@ -3,4 +3,4 @@ export {
   FieldsetLegend,
   type FieldsetProps,
   type FieldsetLegendProps,
-} from '@utrecht/component-library-react/';
+} from '@utrecht/component-library-react';

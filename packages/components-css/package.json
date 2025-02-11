@@ -1,6 +1,7 @@
 {
   "name": "@rijkshuisstijl-community/components-css",
-  "version": "1.0.0-alpha.87",
+  "version": "1.0.0-alpha.150",
+  "type": "module",
   "author": "Community for NL Design System",
   "description": "CSS Components for a design system based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -19,14 +20,17 @@
   },
   "devDependencies": {
     "scss": "0.2.4",
-    "vite": "6.0.1"
+    "vite": "6.1.0"
   },
   "scripts": {
     "dev": "vite build --watch",
-    "build": "pnpm run build:css",
+    "generate": "node src/wrapper/createSpacingCSS.js && prettier --write ./src/wrapper",
+    "build": "pnpm run generate && pnpm run build:css",
     "build:css": "vite build"
   },
   "dependencies": {
+    "@nl-design-system-candidate/heading-css": "1.0.0",
+    "@nl-design-system-candidate/number-badge-css": "1.1.0",
     "@utrecht/component-library-css": "7.0.0"
   }
 }

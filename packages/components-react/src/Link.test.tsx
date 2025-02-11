@@ -2,6 +2,7 @@ import '@testing-library/jest-dom';
 
 import { render, screen } from '@testing-library/react';
 import { createRef } from 'react';
+import { describe, expect, it } from 'vitest';
 import { Link } from './Link';
 
 describe('Link', () => {
@@ -69,7 +70,7 @@ describe('Link', () => {
 
     expect(link).toHaveClass('utrecht-link');
   });
-  it('supports ForwardRef in React', () => {
+  it('supports ref in React', () => {
     const ref = createRef<HTMLAnchorElement>();
 
     const { container } = render(<Link ref={ref}>{'https://example.com/'}</Link>);

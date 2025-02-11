@@ -14,7 +14,7 @@
     "directory": "."
   },
   "engines": {
-    "node": "^20",
+    "node": "^22",
     "pnpm": "^9"
   },
   "workspaces": [
@@ -22,32 +22,39 @@
     "./packages/*",
     "./proprietary/*"
   ],
+  "dependencies": {
+    "@storybook/test-runner": "0.21.0",
+    "http-server": "14.1.1",
+    "rimraf": "6.0.1"
+  },
   "devDependencies": {
-    "@lerna-lite/cli": "3.10.1",
-    "@lerna-lite/publish": "3.10.1",
-    "@lerna-lite/run": "3.10.1",
+    "@lerna-lite/cli": "3.12.0",
+    "@lerna-lite/publish": "3.12.0",
+    "@lerna-lite/run": "3.12.0",
     "@types/node": "20.17.6",
-    "@typescript-eslint/eslint-plugin": "7.18.0",
-    "@typescript-eslint/parser": "7.18.0",
+    "@typescript-eslint/eslint-plugin": "8.23.0",
+    "@typescript-eslint/parser": "8.23.0",
+    "concurrently": "9.1.2",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-json": "3.1.0",
     "eslint-plugin-mdx": "3.1.5",
-    "eslint-plugin-react": "7.37.2",
+    "eslint-plugin-react": "7.37.4",
     "eslint-plugin-sort-exports": "0.9.1",
     "husky": "9.1.7",
-    "lint-staged": "15.2.10",
+    "lint-staged": "15.4.3",
     "markdownlint-cli": "0.43.0",
-    "npm-check-updates": "17.1.11",
+    "npm-check-updates": "17.1.14",
     "npm-package-json-lint": "8.0.0",
     "npm-run-all": "4.1.5",
-    "postcss": "8.4.49",
-    "prettier": "3.4.1",
-    "stylelint": "16.11.0",
+    "postcss": "8.5.1",
+    "prettier": "3.4.2",
+    "stylelint": "16.14.1",
     "stylelint-config-standard-scss": "13.1.0",
     "stylelint-order": "6.0.4",
-    "typescript": "5.7.2"
+    "typescript": "5.7.3",
+    "wait-on": "8.0.2"
   },
   "scripts": {
     "prebuild": "pnpm run clean",
@@ -79,11 +86,8 @@
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.cjs",
     "update-major": "npm-check-updates --configFileName .ncurc.major.cjs",
     "watch:storybook": "npm run --workspace packages/storybook storybook",
-    "watch:style-dictionary": "lerna run watch:style-dictionary"
+    "watch:style-dictionary": "lerna run watch:style-dictionary",
+    "test-storybook:ci": "npm run --workspace packages/storybook playwright:install && concurrently -k -s first -n \"STORYBOOK,A11Y-TEST\" -c \"magenta,green\" \"npm run --workspace packages/storybook prod-static -- --silent\" \"wait-on tcp:6006 && npm run --workspace packages/storybook test-storybook\""
   },
-  "dependencies": {
-    "http-server": "14.1.1",
-    "rimraf": "6.0.1"
-  },
-  "packageManager": "pnpm@9.4.0+sha256.b6fd0bfda555e7e584ad7e56b30c68b01d5a04f9ee93989f4b93ca8473c49c74"
+  "packageManager": "pnpm@9.15.4"
 }

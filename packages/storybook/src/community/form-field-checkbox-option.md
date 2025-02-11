@@ -2,8 +2,6 @@
 
 # Rijkshuisstijl Community FormFieldCheckbox component
 
-[Figma](https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1031-2917&node-type=canvas&t=HiNKOQhf1hQtLZrr-0)
-
 ## Usage
 
 ```tsx

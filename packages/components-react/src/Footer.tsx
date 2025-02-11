@@ -1,70 +1,68 @@
-import { ColumnLayout, PageFooterProps, PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
+import { PageFooterProps, PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
-import { Heading } from './Heading';
+import { PropsWithChildren, ReactNode, Ref } from 'react';
+import { ColumnLayout } from './ColumnLayout';
+import { Heading, HeadingLevel } from './Heading';
 
 interface FooterProps extends PageFooterProps {
   heading?: ReactNode;
-  headingLevel?: number;
+  appearanceLevel?: HeadingLevel;
   columns?: ColumnProps[];
   background?: 'primary-filled' | 'primary-outlined';
+  ref?: Ref<HTMLDivElement>;
 }
 
 interface ColumnProps {
   heading: ReactNode;
-  headingLevel?: number;
+  appearanceLevel?: HeadingLevel;
   children: ReactNode;
 }
 
-const MAX_HEADING_LEVEL = 6;
-
-export const Footer = forwardRef(
-  (
-    {
+export const Footer = ({
+  ref,
+  className,
+  heading,
+  appearanceLevel = 2,
+  columns,
+  children,
+  background,
+  ...restProps
+}: PropsWithChildren<FooterProps>) => (
+  <UtrechtPageFooter
+    {...restProps}
+    ref={ref}
+    className={clsx(
+      'rhc-page-footer',
+      background === 'primary-outlined' || background === 'primary-filled' ? `rhc-footer--${background}` : '',
       className,
-      heading,
-      headingLevel = 2,
-      columns,
-      children,
-      background,
-      ...restProps
-    }: PropsWithChildren<FooterProps>,
-    ref: ForwardedRef<HTMLDivElement>,
-  ) => (
-    <UtrechtPageFooter
-      {...restProps}
-      ref={ref}
-      className={clsx(
-        'rhc-page-footer',
-        background === 'primary-outlined' || background === 'primary-filled' ? `rhc-footer--${background}` : '',
-        className,
+    )}
+  >
+    <div className="rhc-page-footer__content">
+      {heading && (
+        <div className="rhc-page-footer__title" key={'heading'}>
+          <Heading appearanceLevel={appearanceLevel} level={heading ? 2 : 3}>
+            {heading}
+          </Heading>
+        </div>
       )}
-    >
-      <div className="rhc-page-footer__content">
-        {heading && (
-          <div className="rhc-page-footer__title" key={'heading'}>
-            <Heading level={headingLevel}>{heading}</Heading>
-          </div>
+      <ColumnLayout>
+        {columns?.map(
+          (
+            { heading: columnHeading, appearanceLevel: columnAppearanceLevel = 3, children }: ColumnProps,
+            index: number,
+          ) => (
+            <div className="rhc-page-footer__section" key={index}>
+              <Heading appearanceLevel={columnAppearanceLevel} level={heading ? 3 : 2}>
+                {columnHeading}
+              </Heading>
+              {children}
+            </div>
+          ),
         )}
-        <ColumnLayout>
-          {columns?.map(
-            (
-              { heading: columnHeading, headingLevel: columnHeadingLevel = 3, children }: ColumnProps,
-              index: number,
-            ) => (
-              <div className="rhc-page-footer__section" key={index}>
-                <Heading level={columnHeadingLevel >= MAX_HEADING_LEVEL ? MAX_HEADING_LEVEL : columnHeadingLevel + 1}>
-                  {columnHeading}
-                </Heading>
-                {children}
-              </div>
-            ),
-          )}
-          {children}
-        </ColumnLayout>
-      </div>
-    </UtrechtPageFooter>
-  ),
+        {children}
+      </ColumnLayout>
+    </div>
+  </UtrechtPageFooter>
 );
 
 Footer.displayName = 'Footer';

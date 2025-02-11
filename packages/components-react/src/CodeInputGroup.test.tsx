@@ -2,9 +2,10 @@ import '@testing-library/jest-dom';
 
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { describe, expect, it } from 'vitest';
 import { CodeInputGroup } from './CodeInputGroup';
 
-describe('CodeInput', () => {
+describe('CodeInputGroup', () => {
   it('renders successfully', () => {
     render(<CodeInputGroup numberOfDigits={4} />);
     expect(screen.getByTestId('code-input-group-container')).toBeInTheDocument();

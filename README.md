@@ -17,7 +17,7 @@ en degenen die door hen zijn ingehuurd voor het ontwikkelen van websites en apps
 
 ### Node
 
-In dit project wordt Node.js versie **_20.10_** gebruikt. Dit project bevat een [.nvmrc](.nvmrc) bestand en helpt je met het
+In dit project wordt Node.js versie **_22.13_** gebruikt. Dit project bevat een [.nvmrc](.nvmrc) bestand en helpt je met het
 installeren van de juiste versie met behulp van `nvm`.
 
 - Als je nvm nog niet hebt, [installeer `nvm`](https://github.com/nvm-sh/nvm#install--update-script).
@@ -74,7 +74,8 @@ Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.
 pakket, en omring het deel van je applicatie waar je het thema wilt toepassen met de Rijkshuisstijl-thema: `rhc-theme`.
 
 ```tsx
-import '@rijkshuisstijl-community/design-tokens/dist/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/index.css'; // design tokens importeren
+import '@rijkshuisstijl-community/components-css/dist/index.css'; // css importeren
 
 function App() {
   return (
@@ -95,13 +96,13 @@ Lees de [NOTICE file](NOTICE.md) voor informatie over eigen assets in deze repos
 ### Logo en stijlgids
 
 Copyright geldt voor het Rijkshuisstijl-logo en merkidentiteit. Gebruik hiervan is strikt verboden, behalve voor het
-ontwikkelen van websites en apps voor de Nederlandse overheid.
+ontwikkelen van websites en apps voor de Rijksoverheid.
 
 ### Fonts
 
 [De lettertypen voor de Rijkshuisstijl](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-online/webfonts)
-zijn [speciaal ontworpen voor de Nederlandse overheid](https://www.rijkshuisstijl.nl/basiselementen/documenten/verzamelingen-afbeeldingen/2014/06/01/achtergrondartikel-rijkshuisstijl-webfonts)
-en zijn niet open source. Gebruik tot toestemming, systeemlettertypen zoals Arial, Verdana of Times New Roman.
+zijn [speciaal ontworpen voor de Rijksoverheid](https://www.rijkshuisstijl.nl/basiselementen/documenten/verzamelingen-afbeeldingen/2014/06/01/achtergrondartikel-rijkshuisstijl-webfonts)
+en zijn niet open source. Gebruik tot toestemming, systeemlettertypen zoals Arial, Verdana of Times New Roman of het @rijkshuisstijl-community/font.
 
 #### Open source varianten
 
@@ -120,11 +121,11 @@ import '@rijkshuisstijl-community/font/src/index.mjs';
 
 **_Logo_**
 
-Je kunt het icoon met id `nederland-map` gebruiken.
+Omdat buiten officiële Rijksoverheids-media het logo van de Rijksoverheid niet mag worden gebruik, wordt binnen dit project standaard het icoon met id `nederland-map` gebruiken, met een witte achtergrond.
 
 **_Icons_**
 
-TODO
+Binnen dit project zijn de iconen standaard afkomstig uit de open source [Tabler Icons](https://tabler.io/icons) icon set of handmatig geïmplementeerd door contributors van de Rijkshuisstijl Community. Er kunnen eigen iconen worden toegevoegd aan de standaard icon set, zie hiervoor instructies op de [storybook pagina van de Icon component](https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-icon--docs).
 
 ## Toestemming
 
@@ -171,14 +172,12 @@ Vanuit`packages/components-react` krijg je een gedetailleerder overzicht van tes
 
 ### Packages
 
-| Package                  | Purpose                                                                                                                                            |
-| :----------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `components-css`         | Hier kunnen CSS-componenten toegevoegd worden die nog niet bestaan in de NL Design System-community.                                               |
-| `components-react`       | Optioneel voor het toevoegen van een React-wrapper aan een CSS-component als die nog niet bestaat.                                                 |
-| `design-tokens`          | Hier worden de rijkshuisstijl-thema’s beheerd, voor gebruik met NL Design System zonder thema. Opmerking deze zouden naar proprietary moeten gaan. |
-| `storybook`              | Extra componenten en pagina-sjablonen kunnen worden toegevoegd als story voor documentatie en visuele regressietesten.                             |
-| `web-components-stencil` | Hier kunnen webcomponenten worden toegevoegd voor componenten die nog niet als webcomponent bestaan.                                               |
-| `web-components-react`   | Hier kunnen React-webcomponenten toegevoegd worden voor gebruiksgemak.                                                                             |
+| Package            | Purpose                                                                                                                                            |
+| :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `components-css`   | Hier kunnen CSS-componenten toegevoegd worden die nog niet bestaan in de NL Design System-community.                                               |
+| `components-react` | Optioneel voor het toevoegen van een React-wrapper aan een CSS-component als die nog niet bestaat.                                                 |
+| `design-tokens`    | Hier worden de rijkshuisstijl-thema’s beheerd, voor gebruik met NL Design System zonder thema. Opmerking deze zouden naar proprietary moeten gaan. |
+| `storybook`        | Extra componenten en pagina-sjablonen kunnen worden toegevoegd als story voor documentatie en visuele regressietesten.                             |
 
 ### Proprietary
 
@@ -197,7 +196,7 @@ binnen de IT-sector en overheidsorganisaties.
   onze [GitHub repository](https://github.com/nl-design-system/rijkshuisstijl-community).
 
 - **_Benieuwd naar onze voortgang?_** Bekijk ons huidige werk op
-  het[Sprint Board](https://github.com/orgs/nl-design-system/projects/59).
+  het [Sprint Board](https://github.com/orgs/nl-design-system/projects/59).
 
 - **_Blijf in contact met de community!_** Word lid van de [Code for NL Slack](https://praatmee.codefor.nl/) en join het
   `#nl-design-system` kanaal om samen te werken met de community.

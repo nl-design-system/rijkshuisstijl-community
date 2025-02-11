@@ -8,9 +8,9 @@ import {
   SubtleButton,
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
-import { Icon } from './icon/Icon';
-import { RijkshuisstijlIconID } from './icon/IconTypes';
+import { PropsWithChildren, Ref } from 'react';
+import { Icon } from './Icon';
+import { RHCIconID } from './icon-sets/default-icons/RHCIconIDs';
 
 export {
   Button,
@@ -23,20 +23,23 @@ export {
 };
 
 export interface IconButtonProps extends ButtonProps {
-  icon?: RijkshuisstijlIconID;
+  ref?: Ref<HTMLButtonElement>;
+  icon?: RHCIconID;
 }
 
-export const IconButton = forwardRef(
-  (
-    { children, className, label, icon, ...restProps }: PropsWithChildren<IconButtonProps>,
-    ref: ForwardedRef<HTMLButtonElement>,
-  ) => (
-    <SubtleButton className={clsx('rhc-button', 'rhc-button--icon-only', className)} ref={ref} {...restProps}>
-      <span className="rhc-button__sr-only">{label}</span>
-      {icon && <Icon icon={icon} />}
-      {children}
-    </SubtleButton>
-  ),
+export const IconButton = ({
+  ref,
+  children,
+  className,
+  label,
+  icon,
+  ...restProps
+}: PropsWithChildren<IconButtonProps>) => (
+  <SubtleButton className={clsx('rhc-button', 'rhc-button--icon-only', className)} ref={ref} {...restProps}>
+    <span className="rhc-button__sr-only">{label}</span>
+    {icon && <Icon icon={icon} />}
+    {children}
+  </SubtleButton>
 );
 
 IconButton.displayName = 'IconButton';

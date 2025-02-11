@@ -3,6 +3,7 @@ import '@rijkshuisstijl-community/components-css/index.scss';
 import { FormFieldRadio } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './form-field-radio.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/Form field/Form Field Radio',
@@ -37,9 +38,13 @@ const meta = {
     },
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add GitHub issue and NL DesignSystem links
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1039-2941&node-type=canvas&t=LKhOoi8eF3bD0IIP-0',
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof FormFieldRadio>;
 
@@ -57,4 +62,5 @@ export const Default: Story = {
     disabled: false,
     invalid: false,
   },
+  render: (args) => <FormFieldRadio {...args} onChange={() => {}} />,
 };

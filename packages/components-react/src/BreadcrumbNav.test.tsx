@@ -2,8 +2,8 @@ import '@testing-library/jest-dom';
 
 import { render, screen } from '@testing-library/react';
 import { AnchorHTMLAttributes, createRef, PropsWithChildren } from 'react';
-import { BreadcrumbNavLink } from './BreadcrumbNav';
-import { BreadcrumbNav } from './index';
+import { describe, expect, it } from 'vitest';
+import { BreadcrumbNav, BreadcrumbNavLink } from './BreadcrumbNav';
 
 const CustomLink = ({ children, ...restProps }: PropsWithChildren<AnchorHTMLAttributes<HTMLAnchorElement>>) => {
   return <a {...restProps}>{children}</a>;
@@ -127,7 +127,7 @@ describe('Breadcrumb navigation', () => {
     expect(breadcrumbNav).toHaveClass('utrecht-breadcrumb-nav');
   });
 
-  it('supports ForwardRef in React', () => {
+  it('supports ref in React', () => {
     const ref = createRef<HTMLOListElement>();
 
     const { container } = render(<BreadcrumbNav ref={ref} />);

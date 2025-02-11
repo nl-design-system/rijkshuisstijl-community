@@ -1,4 +1,10 @@
-import { Icon, LinkList, LinkListLink, type LinkListProps } from '@rijkshuisstijl-community/components-react';
+import {
+  ColumnLayout,
+  Icon,
+  LinkList,
+  LinkListLink,
+  type LinkListProps,
+} from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react/*';
 import { PropsWithChildren } from 'react';
 
@@ -39,9 +45,13 @@ const meta = {
     },
   },
   parameters: {
+    // TODO: add documentation from Utrecht, but not until readme is correctly structurized in the Utrecht documentation source
     status: {
       type: 'UNSTABLE',
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
   },
   render: LinkListStory,
 } satisfies Meta<typeof LinkListStory>;
@@ -51,3 +61,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const ColumnsLayout: Story = {
+  render: (args) => <ColumnLayout>{LinkListStory(args)}</ColumnLayout>,
+};

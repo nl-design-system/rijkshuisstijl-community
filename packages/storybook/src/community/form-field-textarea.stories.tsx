@@ -1,6 +1,7 @@
 import { FormFieldTextarea } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './form-field-textarea.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/Form Field/Form Field Textarea',
@@ -213,6 +214,7 @@ const meta = {
         rows={rows || undefined}
         status={status || undefined}
         value={value || undefined}
+        onChange={() => {}}
       />
     );
   },
@@ -223,9 +225,13 @@ const meta = {
     },
     docs: {
       description: {
-        component: readme,
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof FormFieldTextarea>;
 

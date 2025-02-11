@@ -1,17 +1,12 @@
 import { render, screen } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
 import { Hero } from './Hero';
 import '@testing-library/jest-dom';
 
 describe('Hero', () => {
   it('renders the hero component with the provided heading and subHeading', () => {
     render(
-      <Hero
-        heading="Test Heading"
-        heroMessage={true}
-        imageAlt="Test Alt Text"
-        imageSrc="test-image.jpg"
-        subHeading="Test subHeading"
-      />,
+      <Hero heading="Test Heading" imageAlt="Test Alt Text" imageSrc="test-image.jpg" subHeading="Test subHeading" />,
     );
 
     const heading = screen.getByText('Test Heading');
@@ -27,7 +22,6 @@ describe('Hero', () => {
     render(
       <Hero
         heading="Test Heading"
-        heroMessage={true}
         imageAlt="Test Alt Text"
         imageSrc="test-image.jpg"
         subHeading="Test subHeading"
@@ -35,7 +29,7 @@ describe('Hero', () => {
       />,
     );
 
-    const hero = screen.getByRole('img').closest('div');
+    const hero = screen.getByRole('img').closest('section');
 
     expect(hero).toHaveClass('rhc-hero--text-align-end');
   });
@@ -45,14 +39,13 @@ describe('Hero', () => {
       <Hero
         aspectRatio="4 / 3"
         heading="Test Heading"
-        heroMessage={true}
         imageAlt="Test Alt Text"
         imageSrc="test-image.jpg"
         subHeading="Test subHeading"
       />,
     );
 
-    const hero = screen.getByRole('img').closest('div');
+    const hero = screen.getByRole('img').closest('section');
 
     expect(hero).toHaveClass('rhc-hero--aspect-ratio-4-3');
   });
@@ -62,14 +55,13 @@ describe('Hero', () => {
       <Hero
         borderRadiusCorner="start-end"
         heading="Test Heading"
-        heroMessage={true}
         imageAlt="Test Alt Text"
         imageSrc="test-image.jpg"
         subHeading="Test subHeading"
       />,
     );
 
-    const hero = screen.getByRole('img').closest('div');
+    const hero = screen.getByRole('img').closest('section');
 
     expect(hero).toHaveClass('rhc-hero--custom-border-radius-corner');
     expect(hero).toHaveClass('rhc-hero--border-radius-corner-start-end');

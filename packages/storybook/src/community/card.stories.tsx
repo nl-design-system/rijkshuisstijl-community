@@ -1,47 +1,100 @@
 import { Card } from '@rijkshuisstijl-community/components-react';
 import type { Meta } from '@storybook/react';
+import readme from './card.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/Card',
   id: 'rhc-card',
   component: Card,
   argTypes: {
-    heading: {
-      description: 'Card heading',
-      control: { type: 'text' },
-      defaultValue: 'Card Heading',
-    },
     appearance: {
       description: 'Card appearance',
       control: { type: 'select' },
       options: ['default', 'full-bleed', 'horizontal'],
       defaultValue: 'default',
+      table: {
+        category: 'Variant',
+      },
+    },
+    heading: {
+      description: 'Card heading',
+      control: { type: 'text' },
+      defaultValue: 'Card Heading',
+      table: {
+        category: 'Props',
+      },
     },
     imageSrc: {
       description: 'Image source URL',
       control: { type: 'text' },
       defaultValue: '',
+      table: {
+        category: 'Props',
+      },
     },
     imageAlt: {
       description: 'Image alt text',
       control: { type: 'text' },
       defaultValue: '',
+      table: {
+        category: 'Props',
+      },
     },
     description: {
       description: 'Card content',
       control: { type: 'text' },
       defaultValue: '',
+      if: { arg: 'appearance', neq: 'horizontal' },
+      table: {
+        category: 'Props',
+      },
+    },
+    linkLabel: {
+      description: 'Link label',
+      control: { type: 'text' },
+      defaultValue: '',
+      if: { arg: 'appearance', eq: 'default' },
+      table: {
+        category: 'Props',
+      },
+    },
+    metaData: {
+      description: 'Metadata',
+      control: { type: 'text' },
+      defaultValue: '',
+      if: { arg: 'appearance', neq: 'horizontal' },
+      table: {
+        category: 'Props',
+      },
+    },
+    title: {
+      description: 'Anchor title (hover text) and aria-label attributes',
+      control: { type: 'text' },
+      defaultValue: '',
+      table: {
+        category: 'Props',
+      },
+    },
+    href: {
+      description: 'Link',
+      control: { type: 'text' },
+      defaultValue: '',
+      table: {
+        category: 'Props',
+      },
     },
   },
   args: {
-    imageSrc: './placeholder.jpg',
-    imageAlt: 'Placeholder Image',
+    appearance: 'default',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    heading: 'Card Heading',
     href: '#',
+    imageSrc: './placeholder.jpg',
+    linkLabel: 'Link label',
+    metaData: 'Metadata',
     title: 'Card Title',
-    heading: 'Default Card',
-    description: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
-    metadata: 'Metadata',
-    linkLabel: 'Label',
   },
   tags: ['autodocs'],
   parameters: {
@@ -50,27 +103,39 @@ const meta = {
     },
     docs: {
       description: {
-        component: 'Card component for displaying content in various styles.',
+        component: mergeMarkdown([readme]),
       },
     },
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/561',
+    figma:
+      'https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/Local---Rijkshuisstijl---Bibliotheek?node-id=472-1420&p=f&t=fuaKEQHb4FZ444xP-0',
+    nldesignsystem: 'https://nldesignsystem.nl/card-as-link',
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } as Meta<typeof Card>;
 
 export default meta;
 
-export const Default = {};
+export const Default = {
+  args: {
+    appearance: 'default',
+    imageAlt: 'Placeholder Image',
+  },
+};
 
 export const FullBleed = {
   args: {
     heading: 'Full Bleed Card',
     appearance: 'full-bleed',
     description: 'This card has a background image.',
+    imageAlt: 'Placeholder Image',
   },
 };
 
 export const Horizontal = {
   args: {
-    heading: 'Heading',
+    heading: 'Horizontal Card',
     appearance: 'horizontal',
+    imageAlt: 'Placeholder Image',
   },
 };

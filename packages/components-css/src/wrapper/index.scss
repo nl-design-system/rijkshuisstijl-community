@@ -1,0 +1,43 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2024-2025 Gemeente Utrecht
+ * Copyright (c) 2024-2025 Frameless B.V.
+ */
+
+@use "./mixin";
+
+.rhc-margin-block-end-wrapper {
+  --utrecht-space-around: 1;
+  @include mixin.nl-heading--level-1;
+  @include mixin.nl-heading--level-2;
+  @include mixin.nl-heading--level-3;
+  @include mixin.nl-heading--level-4;
+  @include mixin.nl-heading--level-5;
+  @include mixin.nl-heading--level-6;
+  @include mixin.utrecht-accordion;
+  @include mixin.utrecht-alert;
+  @include mixin.utrecht-badge-list;
+  @include mixin.utrecht-blockquote;
+  @include mixin.utrecht-breadcrumb-nav;
+  @include mixin.utrecht-button;
+  @include mixin.utrecht-button-group;
+  @include mixin.utrecht-data-list;
+  @include mixin.utrecht-figure;
+  @include mixin.utrecht-form-field;
+  @include mixin.utrecht-form-field-description;
+  @include mixin.utrecht-form-field-error-message;
+  @include mixin.utrecht-form-label;
+  @include mixin.utrecht-img;
+  @include mixin.utrecht-link;
+  @include mixin.utrecht-ordered-list;
+  @include mixin.utrecht-pagination;
+  @include mixin.utrecht-paragraph;
+  @include mixin.utrecht-select;
+  @include mixin.utrecht-separator;
+  @include mixin.utrecht-sidenav;
+  @include mixin.utrecht-badge-status;
+  @include mixin.utrecht-table;
+  @include mixin.utrecht-textarea;
+  @include mixin.utrecht-textbox;
+  @include mixin.utrecht-unordered-list;
+}

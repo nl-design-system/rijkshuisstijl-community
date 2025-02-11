@@ -2,6 +2,7 @@ import '@testing-library/jest-dom';
 
 import { render, screen } from '@testing-library/react';
 import { createRef } from 'react';
+import { describe, expect, it } from 'vitest';
 import { Separator } from './Separator';
 
 describe('Separator', () => {
@@ -71,7 +72,7 @@ describe('Separator', () => {
 
     expect(separator).toHaveClass('utrecht-separator');
   });
-  it('supports ForwardRef in React', () => {
+  it('supports ref in React', () => {
     const ref = createRef<HTMLHRElement>();
 
     const { container } = render(<Separator ref={ref} />);

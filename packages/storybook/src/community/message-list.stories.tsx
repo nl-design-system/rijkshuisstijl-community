@@ -1,6 +1,7 @@
 import { MessageList, MessageListItem } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './message-list.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/Message List',
@@ -15,7 +16,7 @@ const meta = {
           href={'#'}
           label={'Pensioenfonds'}
           metaData={'01-05-2024'}
-          withBadge={{ 'aria-label': 'Nieuw', role: 'status' }}
+          withBadge={{ label: 'Nieuw', role: 'status' }}
         />
         <MessageListItem description={'Herinnering APK'} href={'#'} label={'RDW'} metaData={'04-04-2024'} />
         <MessageListItem
@@ -33,9 +34,14 @@ const meta = {
     },
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add NL Design System link when there is a page for MessageList
+    figma:
+      'https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/Local---Rijkshuisstijl---Bibliotheek?node-id=4070-5888&node-type=frame&t=xhXU5ugIkPqvOZwt-0',
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/556',
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof MessageList>;
 
@@ -54,7 +60,7 @@ export const SmallContainer: Story = {
           href={'#'}
           label={'Pensioenfonds'}
           metaData={'01-05-2024'}
-          withBadge={{ 'aria-label': 'Nieuw', role: 'status' }}
+          withBadge={{ label: 'Nieuw', role: 'status' }}
         />
         <MessageListItem description={'Herinnering APK'} href={'#'} label={'RDW'} metaData={'04-04-2024'} />
         <MessageListItem

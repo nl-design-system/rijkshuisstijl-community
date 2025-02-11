@@ -1,16 +1,17 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { LinkList, LinkListLink } from '@utrecht/component-library-react';
+import { describe, expect, it } from 'vitest';
 import { Footer } from './Footer';
-import { Icon } from './icon/Icon';
+import { Icon } from './Icon';
 
 describe('Footer', () => {
   it('renders successfully with required props', () => {
     expect(1).toBe(1);
     render(
       <Footer
-        heading="De Rijksoverheid. Voor Nederland"
-        headingLevel={4}
+        appearanceLevel={4}
+        heading="Footer heading"
         columns={[
           {
             heading: 'Service',
@@ -27,7 +28,7 @@ describe('Footer', () => {
             children: (
               <LinkList key="2">
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Over Rijksoverheid.nl
+                  Over deze organisatie
                 </LinkListLink>
               </LinkList>
             ),
@@ -35,10 +36,10 @@ describe('Footer', () => {
         ]}
       />,
     );
-    expect(screen.getByText('De Rijksoverheid. Voor Nederland')).toBeInTheDocument();
+    expect(screen.getByText('Footer heading')).toBeInTheDocument();
     expect(screen.getByText('Service')).toBeInTheDocument();
     expect(screen.getByText('Over deze site')).toBeInTheDocument();
     expect(screen.getByText('Contact')).toBeInTheDocument();
-    expect(screen.getByText('Over Rijksoverheid.nl')).toBeInTheDocument();
+    expect(screen.getByText('Over deze organisatie')).toBeInTheDocument();
   });
 });

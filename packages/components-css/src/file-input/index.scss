@@ -1,6 +1,8 @@
 .rhc-file-input {
   display: flex;
   flex-direction: column;
+  font-family: var(--rhc-font-family-primary, inherit);
+  line-height: var(--rhc-line-height-md, inherit);
   row-gap: var(--rhc-file-input-row-gap);
 }
 
@@ -17,47 +19,8 @@
   padding-inline-start: var(--rhc-file-padding-inline-start);
 }
 
-.rhc-file {
-  border-color: var(--rhc-file-border-color);
-  border-radius: var(--rhc-file-border-radius);
-  border-style: var(--rhc-file-border-style);
-  display: flex;
-  flex-direction: column;
-  padding-block-end: var(--rhc-file-padding-block-end);
-  padding-block-start: var(--rhc-file-padding-block-start);
-  padding-inline-end: var(--rhc-file-padding-inline-end);
-  padding-inline-start: var(--rhc-file-padding-inline-start);
-}
-
-.rhc-file--error {
-  border-color: var(--rhc-file-error-border-color);
-}
-
-.rhc-file--subtitle {
-  color: var(--rhc-file-subtitle-color);
-}
-
-.rhc-files-container {
+.rhc-file-input__files-container {
   display: flex;
   flex-direction: column;
   gap: var(--rhc-file-column-gap);
-}
-
-.rhc-file-input__inner-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.rhc-file-input__inner-container__sub {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.rhc-file--name {
-  display: inline-block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }

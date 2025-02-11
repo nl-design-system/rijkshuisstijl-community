@@ -1,9 +1,13 @@
 import { TextboxProps } from '@utrecht/component-library-react';
-import { ForwardedRef, forwardRef } from 'react';
-import { Textbox } from './Textbox';
+import { ForwardedRef } from 'react';
+import { TextInput } from './TextInput';
 
-export const CodeInput = forwardRef(({ ...restProps }: TextboxProps, ref: ForwardedRef<HTMLInputElement>) => {
-  return <Textbox {...restProps} className={'rhc-code-input'} maxLength={1} ref={ref} type="text" />;
-});
+export interface CodeInputProps extends TextboxProps {
+  ref: ForwardedRef<HTMLInputElement>;
+}
+
+export const CodeInput = ({ ref, ...restProps }: CodeInputProps) => {
+  return <TextInput {...restProps} className={'rhc-code-input'} maxLength={1} ref={ref} type="text" />;
+};
 
 CodeInput.displayName = 'CodeInput';

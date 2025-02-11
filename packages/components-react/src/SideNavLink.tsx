@@ -1,28 +1,35 @@
 import clsx from 'clsx';
-import { AnchorHTMLAttributes, forwardRef } from 'react';
-import { Icon } from './icon/Icon';
-import { RijkshuisstijlIconID } from './icon/IconTypes';
+import { AnchorHTMLAttributes, Ref } from 'react';
+import { Icon } from './Icon';
+import { RHCIconID } from './icon-sets/default-icons/RHCIconIDs';
 
 export interface SideNavLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   current?: boolean;
-  icon?: RijkshuisstijlIconID;
+  icon?: RHCIconID;
+  ref?: Ref<HTMLAnchorElement>;
 }
 
-export const SideNavLink = forwardRef<HTMLAnchorElement, SideNavLinkProps>(
-  ({ current, className, icon, children, 'aria-current': ariaCurrent, ...restProps }, ref) => {
-    return (
-      <a
-        aria-current={current || ariaCurrent ? 'page' : undefined}
-        className={clsx('rhc-side-nav__link', className)}
-        ref={ref}
-        role="link"
-        {...restProps}
-      >
-        {icon && <Icon icon={icon}></Icon>}
-        {children}
-      </a>
-    );
-  },
-);
+export const SideNavLink = ({
+  ref,
+  current,
+  className,
+  icon,
+  children,
+  'aria-current': ariaCurrent,
+  ...restProps
+}: SideNavLinkProps) => {
+  return (
+    <a
+      aria-current={current || ariaCurrent ? 'page' : undefined}
+      className={clsx('rhc-side-nav__link', className)}
+      ref={ref}
+      role="link"
+      {...restProps}
+    >
+      {icon && <Icon icon={icon}></Icon>}
+      {children}
+    </a>
+  );
+};
 
 SideNavLink.displayName = 'SideNavLink';

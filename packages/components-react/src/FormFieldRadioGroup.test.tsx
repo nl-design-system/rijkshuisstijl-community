@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
-
 import { render, screen } from '@testing-library/react';
+import { describe, expect, it, vi } from 'vitest';
 import { FormFieldRadio } from './FormFieldRadio';
 import { FormFieldRadioGroup } from './FormFieldRadioGroup';
 
@@ -64,7 +64,7 @@ describe('FormFieldRadioGroup', () => {
   });
 
   it('forwards ref to FormField component', () => {
-    const ref = jest.fn();
+    const ref = vi.fn();
     render(
       <FormFieldRadioGroup label="Test Radio Group" ref={ref}>
         <FormFieldRadio label="Option 1" />

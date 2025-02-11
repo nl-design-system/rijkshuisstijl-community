@@ -4,12 +4,13 @@ import {
   Fieldset,
   FieldsetLegend,
   type FieldsetProps,
-  FormFieldTextbox,
+  FormFieldTextInput,
 } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
 import readme from './fieldset.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface FieldsetStoryProps extends FieldsetProps {
   element?: string | 'div' | 'fieldset';
@@ -59,9 +60,9 @@ const meta = {
     invalid: false,
     children: (
       <>
-        <FormFieldTextbox label="Field A"></FormFieldTextbox>
-        <FormFieldTextbox label="Field B"></FormFieldTextbox>
-        <FormFieldTextbox label="Field C"></FormFieldTextbox>
+        <FormFieldTextInput label="Field A"></FormFieldTextInput>
+        <FormFieldTextInput label="Field B"></FormFieldTextInput>
+        <FormFieldTextInput label="Field C"></FormFieldTextInput>
       </>
     ),
     legend: 'Legend',
@@ -72,9 +73,13 @@ const meta = {
     },
     docs: {
       description: {
-        component: readme,
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met alleen overgeschreven design tokens van de Rijkshuisstijl Community.',
   },
   render: FieldsetStory,
 } satisfies Meta<typeof FieldsetStory>;
