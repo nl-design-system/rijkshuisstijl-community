@@ -496,6 +496,9 @@ importers:
       '@tabler/icons-react':
         specifier: 3.29.0
         version: 3.29.0(react@19.0.0)
+      '@tabler/icons-sprite':
+        specifier: 3.29.0
+        version: 3.29.0
       '@types/react':
         specifier: 19.0.8
         version: 19.0.8
@@ -3086,6 +3089,9 @@ packages:
     resolution: {integrity: sha512-jaa3b3j91CplY7TPgx/Gj/e+PcOnQgYiK6c5qtp1P0ytfKM5WPc1qtXyRLE3NcYlfxS2Pcst4YGy1vUML7SjbQ==}
     peerDependencies:
       react: '>= 16'
+
+  '@tabler/icons-sprite@3.29.0':
+    resolution: {integrity: sha512-QgioQ4CCTNVmq5lHbk2P7eIWqjcUauTbZCS/Gb64viHKhgSWo60kykh6FincJF52oXV9exDqteWM5wu4M4WLGA==}
 
   '@tabler/icons@3.28.1':
     resolution: {integrity: sha512-h7nqKEvFooLtFxhMOC1/2eiV+KRXhBUuDUUJrJlt6Ft6tuMw2eU/9GLQgrTk41DNmIEzp/LI83K9J9UUU8YBYQ==}
@@ -13171,6 +13177,10 @@ snapshots:
     dependencies:
       '@tabler/icons': 3.29.0
       react: 19.0.0
+
+  '@tabler/icons-sprite@3.29.0':
+    dependencies:
+      '@tabler/icons': 3.29.0
 
   '@tabler/icons@3.28.1': {}
 
