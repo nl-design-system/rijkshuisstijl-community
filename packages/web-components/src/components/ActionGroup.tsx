@@ -7,26 +7,18 @@ export type ActionGroupWebComponentAttributes = ActionGroupProps;
 
 export class ActionGroupWebComponent extends BaseWebComponent {
   static override tagName: string = 'rhc-action-group';
-  static override observedAttributes: string[] = ['direction'];
 
   constructor() {
     super(stylesheet);
   }
 
-  override setupRestProps(): void {
-    for (const attributeName of this.getAttributeNames()) {
-      if (ActionGroupWebComponent.observedAttributes.includes(attributeName)) continue;
-      this.restProps[attributeName] = this.getAttribute(attributeName);
-    }
-  }
-
   render(): void {
     if (!this.root) return;
+
+    const { direction, ...restProps } = this.props;
+
     render(
-      <ActionGroup
-        direction={(this.getAttribute('direction') as ActionGroupProps['direction']) ?? undefined}
-        {...this.restProps}
-      >
+      <ActionGroup direction={(direction as ActionGroupProps['direction']) ?? undefined} {...restProps}>
         <slot />
       </ActionGroup>,
       this.root,
