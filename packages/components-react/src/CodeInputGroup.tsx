@@ -1,67 +1,73 @@
-import { ChangeEvent, forwardRef, KeyboardEvent, PropsWithChildren, useRef } from 'react';
+import { ChangeEvent, ComponentPropsWithRef, KeyboardEvent, PropsWithChildren, useRef } from 'react';
 import { CodeInput } from './CodeInput';
 import { Fieldset } from './Fieldset';
 
 export interface CodeInputGroupProps {
   numberOfDigits: number;
   inValid?: boolean;
+  // TODO: figure out why disabling is needed; works fine in editor but not in lint script for some reason
   // eslint-disable-next-line no-unused-vars
-  onChange?: (e: any) => void;
+  onChange?: (currentValue: string[]) => void;
+  ref?: ComponentPropsWithRef<typeof Fieldset>['ref'];
 }
 
-export const CodeInputGroup = forwardRef(
-  ({ numberOfDigits, inValid, onChange, ...restProps }: PropsWithChildren<CodeInputGroupProps>) => {
-    const valueArr = new Array<string>();
-    const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+export const CodeInputGroup = ({
+  numberOfDigits,
+  inValid,
+  onChange,
+  ref,
+  ...restProps
+}: PropsWithChildren<CodeInputGroupProps>) => {
+  const values = new Array<string>();
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
-    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-      const index = Number(e.target.dataset.key);
-      const input = e.target.value;
-      const regex = /^[a-zA-Z0-9]$/;
+  const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
+    const index = Number(event.target.dataset.key);
+    const input = event.target.value;
+    const regex = /^[a-zA-Z0-9]$/;
 
-      if (regex.test(input)) {
-        valueArr.splice(index, valueArr[index] === undefined ? 0 : 1, input);
-      } else if (input === '') {
-        valueArr.splice(index, 1, input);
-      }
+    if (regex.test(input)) {
+      values.splice(index, values[index] === undefined ? 0 : 1, input);
+    } else if (input === '') {
+      values.splice(index, 1, input);
+    }
 
-      if (e.target.value && index < numberOfDigits - 1) {
-        inputRefs.current[index + 1]?.focus();
-      }
+    if (event.target.value && index < numberOfDigits - 1) {
+      inputRefs.current[index + 1]?.focus();
+    }
 
-      if (onChange) {
-        onChange([...valueArr]);
-      }
-    };
+    if (onChange) {
+      onChange([...values]);
+    }
+  };
 
-    const onKeyDownHandler = (e: KeyboardEvent<HTMLInputElement>, index: number) => {
-      const allowedKeys = /^[a-zA-Z0-9]$/; // Letters and numbers
-      if (!allowedKeys.test(e.key) && e.key !== 'Backspace' && e.key !== 'Tab') {
-        e.preventDefault();
-      }
-      if (e.key === 'Backspace' && !e.currentTarget.value && index > 0) {
-        inputRefs.current[index - 1]?.focus();
-      }
-    };
+  const onKeyDownHandler = (event: KeyboardEvent<HTMLInputElement>, index: number) => {
+    const allowedKeys = /^[a-zA-Z0-9]$/; // Letters and numbers
+    if (!allowedKeys.test(event.key) && event.key !== 'Backspace' && event.key !== 'Tab') {
+      event.preventDefault();
+    }
+    if (event.key === 'Backspace' && !event.currentTarget.value && index > 0) {
+      inputRefs.current[index - 1]?.focus();
+    }
+  };
 
-    return (
-      <Fieldset>
-        <div className={'rhc-code-input-group'}>
-          {[...Array(numberOfDigits)].map((_, i) => (
-            <CodeInput
-              {...restProps}
-              data-key={`${i}`}
-              invalid={inValid}
-              key={`${i}`}
-              ref={(el) => (inputRefs.current[i] = el)}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => onChangeHandler(e)}
-              onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => onKeyDownHandler(e, i)}
-            />
-          ))}
-        </div>
-      </Fieldset>
-    );
-  },
-);
+  return (
+    <Fieldset ref={ref}>
+      <div className={'rhc-code-input-group'}>
+        {[...Array(numberOfDigits)].map((_, i) => (
+          <CodeInput
+            {...restProps}
+            data-key={`${i}`}
+            invalid={inValid}
+            key={`${i}`}
+            ref={(el) => (inputRefs.current[i] = el)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => onChangeHandler(e)}
+            onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => onKeyDownHandler(e, i)}
+          />
+        ))}
+      </div>
+    </Fieldset>
+  );
+};
 
 CodeInputGroup.displayName = 'CodeInputGroup';
