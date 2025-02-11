@@ -18,7 +18,10 @@ export class ActionGroupWebComponent extends BaseWebComponent {
     const { direction, ...restProps } = this.props;
 
     render(
-      <ActionGroup direction={(direction as ActionGroupProps['direction']) ?? undefined} {...restProps}>
+      <ActionGroup
+        direction={(direction as ActionGroupWebComponentAttributes['direction']) ?? undefined}
+        {...restProps}
+      >
         <slot />
       </ActionGroup>,
       this.root,

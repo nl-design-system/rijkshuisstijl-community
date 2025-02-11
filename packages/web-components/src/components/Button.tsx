@@ -19,8 +19,8 @@ export class ButtonWebComponent extends BaseWebComponent {
 
     render(
       <Button
-        appearance={(appearance as ButtonProps['appearance']) ?? undefined}
-        disabled={Boolean(disabled) as ButtonProps['disabled']}
+        appearance={(appearance as ButtonWebComponentAttributes['appearance']) ?? undefined}
+        disabled={Boolean(disabled) as ButtonWebComponentAttributes['disabled']}
         {...restProps}
       >
         <slot />

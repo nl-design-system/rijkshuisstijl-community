@@ -29,13 +29,13 @@ export class HeroWebComponent extends BaseWebComponent {
 
     render(
       <Hero
-        aspectRatio={(aspectratio as HeroProps['aspectRatio']) ?? undefined}
-        borderRadiusCorner={borderradiuscorner as HeroProps['borderRadiusCorner']}
+        aspectRatio={(aspectratio as HeroWebComponentAttributes['aspectRatio']) ?? undefined}
+        borderRadiusCorner={borderradiuscorner as HeroWebComponentAttributes['borderRadiusCorner']}
         heading={heading ?? 'default heading'}
-        headingLevel={(headinglevel && Number(headinglevel)) as HeroProps['headingLevel']}
+        headingLevel={(headinglevel && Number(headinglevel)) as HeroWebComponentAttributes['headingLevel']}
         imageAlt={imagealt ?? 'image alt'}
         subHeading={subheading ?? 'sub heading'}
-        textAlign={textalign as HeroProps['textAlign']}
+        textAlign={textalign as HeroWebComponentAttributes['textAlign']}
         imageSrc={
           imagesrc ??
           'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg'

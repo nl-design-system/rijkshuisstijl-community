@@ -19,10 +19,10 @@ export class AlertWebComponent extends BaseWebComponent {
 
     render(
       <Alert
-        heading={(heading as AlertProps['heading']) ?? 'default heading'}
-        headingLevel={(headinglevel && Number(headinglevel)) as AlertProps['headingLevel']}
-        textContent={(messagetext as AlertProps['textContent']) ?? 'This is a default alert message.'}
-        type={(type as AlertProps['type']) ?? 'info'}
+        heading={(heading as AlertWebComponentAttributes['heading']) ?? 'default heading'}
+        headingLevel={(headinglevel && Number(headinglevel)) as AlertWebComponentAttributes['headingLevel']}
+        textContent={(messagetext as AlertWebComponentAttributes['textContent']) ?? 'This is a default alert message.'}
+        type={(type as AlertWebComponentAttributes['type']) ?? 'info'}
         {...restProps}
       >
         <slot />
