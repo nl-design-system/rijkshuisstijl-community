@@ -139,7 +139,8 @@ export default function Details() {
       </PageBody>
       <Footer
         appearanceLevel={3}
-        heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+        backtotop={true}
+        heading="De Rijksoverheid. Voor Nederland"
         columns={[
           {
             heading: 'Service',
@@ -201,6 +202,14 @@ export default function Details() {
             ),
           },
         ]}
+        subFooter={
+          <LinkList className="rhc-subfooter-details">
+            <LinkListLink href="#">Privacy</LinkListLink>
+            <LinkListLink href="#">Cookies</LinkListLink>
+            <LinkListLink href="#">Copyright</LinkListLink>
+            <LinkListLink href="#">Toegankelijkheid</LinkListLink>
+          </LinkList>
+        }
       />
     </>
   );
