@@ -70,7 +70,7 @@ describe('Link', () => {
 
     expect(link).toHaveClass('utrecht-link');
   });
-  it('supports ForwardRef in React', () => {
+  it('supports ref in React', () => {
     const ref = createRef<HTMLAnchorElement>();
 
     const { container } = render(<Link ref={ref}>{'https://example.com/'}</Link>);
