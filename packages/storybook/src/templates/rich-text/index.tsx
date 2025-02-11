@@ -231,7 +231,6 @@ export default function Page() {
       </PageBody>
       <Footer
         appearanceLevel={4}
-        background="secondary-filled"
         heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         columns={[
           {

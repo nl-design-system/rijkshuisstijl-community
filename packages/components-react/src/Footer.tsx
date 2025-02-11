@@ -9,7 +9,7 @@ interface FooterProps extends PageFooterProps {
   heading?: ReactNode;
   appearanceLevel?: HeadingLevel;
   columns?: ColumnProps[];
-  background?: 'primary-filled' | 'secondary-filled' | 'primary-outlined';
+  background?: 'primary-filled' | 'primary-outlined';
   backtotop?: boolean;
   subFooter?: ReactNode;
   preFooter?: boolean;
