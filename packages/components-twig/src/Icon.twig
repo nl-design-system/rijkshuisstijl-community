@@ -1,6 +1,8 @@
 {% from "attributes.twig" import parse_attributes %}
 {%- set attributes = attributes|default({'class': []})|merge({
   'class': attributes.class|default(['utrecht-icon']),
+  'role': 'presentation',
+  'aria-hidden': 'true'
 }) -%}
 {%- set svg_attributes = svg_attributes|default({
   'class':['icon','icon-tabler','icon-tabler-' ~ icon],
