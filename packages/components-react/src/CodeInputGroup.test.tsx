@@ -7,16 +7,16 @@ import { CodeInputGroup } from './CodeInputGroup';
 
 describe('CodeInputGroup', () => {
   it('should render correct number of code inputs', async () => {
-    const nDigits = 6;
-    render(<CodeInputGroup numberOfDigits={nDigits} />);
-
+    const codeLength = 6;
+    render(<CodeInputGroup codeLength={codeLength} />);
     const inputs = await screen.findAllByTestId('rhc-code-input', { exact: false });
 
-    expect(inputs).toHaveLength(nDigits);
+    expect(inputs).toHaveLength(codeLength);
   });
 
   it('should set focus on next input', async () => {
-    render(<CodeInputGroup numberOfDigits={4} />);
+    render(<CodeInputGroup codeLength={4} />);
+
     await userEvent.type(screen.getByTestId('rhc-code-input-0'), '0');
 
     const inputs = await screen.findAllByTestId('rhc-code-input', { exact: false });
@@ -25,7 +25,7 @@ describe('CodeInputGroup', () => {
   });
 
   it('should set focus on previous input', async () => {
-    render(<CodeInputGroup numberOfDigits={4} />);
+    render(<CodeInputGroup codeLength={4} />);
     await userEvent.type(screen.getByTestId('rhc-code-input-0'), '012');
 
     const inputs = await screen.findAllByTestId('rhc-code-input', { exact: false });
@@ -38,7 +38,8 @@ describe('CodeInputGroup', () => {
 
   it('should call onChange with correct value', async () => {
     const onChange = vi.fn();
-    render(<CodeInputGroup numberOfDigits={4} onChange={onChange} />);
+    render(<CodeInputGroup codeLength={4} onChange={onChange} />);
+
     await userEvent.type(screen.getByTestId('rhc-code-input-0'), '0123');
 
     expect(onChange).toHaveBeenCalledTimes(4);
@@ -46,5 +47,26 @@ describe('CodeInputGroup', () => {
     expect(onChange).toHaveBeenNthCalledWith(2, '01');
     expect(onChange).toHaveBeenNthCalledWith(3, '012');
     expect(onChange).toHaveBeenNthCalledWith(4, '0123');
+  });
+
+  describe('capitalization', () => {
+    it('should add class to inputs if capitalize prop is set', async () => {
+      render(<CodeInputGroup capitalize codeLength={4} />);
+      const inputs = await screen.findAllByTestId('rhc-code-input', { exact: false });
+
+      expect(inputs).toSatisfy((inputs) =>
+        inputs.every((input: HTMLElement) => input.classList.contains('rhc-code-input--capitalized')),
+      );
+    });
+
+    it('should automatically capitalize onChange parameter if capitalize prop is set', async () => {
+      const onChange = vi.fn();
+      render(<CodeInputGroup capitalize codeLength={4} onChange={onChange} />);
+
+      await userEvent.type(screen.getByTestId('rhc-code-input-0'), 'a');
+
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange).toHaveBeenNthCalledWith(1, 'A');
+    });
   });
 });

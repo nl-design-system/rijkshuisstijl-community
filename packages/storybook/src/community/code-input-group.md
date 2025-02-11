@@ -10,7 +10,7 @@ een gemakkelijke en overzichtelijke manier te bieden om de code in te voeren.
 ## Gebruik
 
 Dit component is te gebruiken door de `CodeInputGroup` te importeren. De component heeft één verplichte property genaamd
-`numberOfDigits`. Deze property bepaalt het aantal invoervelden dat wordt weergegeven, gebaseerd op de aangegeven waarde
+`codeLength`. Deze property bepaalt het aantal invoervelden dat wordt weergegeven, gebaseerd op de aangegeven waarde
 van type `number`.
 De values worden bij invoer terug gegeven via de `onChange()` methode.
 

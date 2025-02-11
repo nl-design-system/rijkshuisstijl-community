@@ -3,8 +3,8 @@ import { CodeInput, CodeInputProps } from './CodeInput';
 import { Fieldset } from './Fieldset';
 
 export interface CodeInputGroupProps extends Omit<CodeInputProps, 'ref' | 'onChange'> {
-  numberOfDigits: number;
-  inValid?: boolean;
+  codeLength: number;
+  invalid?: boolean;
   // TODO: figure out why disabling is needed; works fine in editor but not in lint script for some reason
   // eslint-disable-next-line no-unused-vars
   onChange?: (code: string) => void;
@@ -13,19 +13,21 @@ export interface CodeInputGroupProps extends Omit<CodeInputProps, 'ref' | 'onCha
 
 export const CodeInputGroup = ({
   children,
-  numberOfDigits,
-  inValid,
+  codeLength,
+  invalid,
   onChange,
+  pattern = '[a-zA-Z0-9]',
+  capitalize = false,
   ref,
   ...restProps
 }: PropsWithChildren<CodeInputGroupProps>) => {
   const values = new Array<string>();
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+  const regex = new RegExp(`^${pattern}$`);
 
   const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     const index = Number(event.target.dataset.key);
     const input = event.target.value;
-    const regex = /^[a-zA-Z0-9]$/;
 
     if (regex.test(input)) {
       values.splice(index, values[index] === undefined ? 0 : 1, input);
@@ -33,20 +35,21 @@ export const CodeInputGroup = ({
       values.splice(index, 1, input);
     }
 
-    if (event.target.value && index < numberOfDigits - 1) {
+    if (event.target.value && index < codeLength - 1) {
       inputRefs.current[index + 1]?.focus();
     }
 
     if (onChange) {
-      onChange(values.join(''));
+      const processedValue = capitalize ? values.join('').toUpperCase() : values.join('');
+      onChange(processedValue);
     }
   };
 
   const onKeyDownHandler = (event: KeyboardEvent<HTMLInputElement>, index: number) => {
-    const allowedKeys = /^[a-zA-Z0-9]$/; // Letters and numbers
-    if (!allowedKeys.test(event.key) && event.key !== 'Backspace' && event.key !== 'Tab') {
+    if (!regex.test(event.key) && event.key !== 'Backspace' && event.key !== 'Tab') {
       event.preventDefault();
     }
+
     if (event.key === 'Backspace' && index > 0) {
       event.currentTarget.value = '';
       inputRefs.current[index - 1]?.focus();
@@ -56,13 +59,16 @@ export const CodeInputGroup = ({
   return (
     <Fieldset ref={ref}>
       <div className={'rhc-code-input-group'}>
-        {[...Array(numberOfDigits)].map((_, i) => (
+        {[...Array(codeLength)].map((_, i) => (
           <CodeInput
             {...restProps}
+            aria-label={`${i + 1}/${codeLength}`}
+            capitalize={capitalize}
             data-key={`${i}`}
             data-testid={`rhc-code-input-${i}`}
-            invalid={inValid}
+            invalid={invalid}
             key={`${i}`}
+            pattern={pattern}
             ref={(el) => (inputRefs.current[i] = el)}
             onChange={(e: ChangeEvent<HTMLInputElement>) => onChangeHandler(e)}
             onFocus={(e) => e.target.select()}
