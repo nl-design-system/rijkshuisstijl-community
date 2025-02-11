@@ -2,6 +2,21 @@
 {%- set attributes = attributes|default({'class': []})|merge({
   'class': attributes.class|default(['utrecht-icon']),
 }) -%}
-<svg{{ parse_attributes(attributes) }}>
-  <use xlink:href="node_modules/@tabler/icons-sprite/dist/tabler-sprite.svg#tabler-{{ icon }}" />
-</svg>
+{%- set svg_attributes = svg_attributes|default({
+  'class':['icon','icon-tabler','icon-tabler-' ~ icon],
+  'xmlns':'http://www.w3.org/2000/svg',
+  'width': 24,
+  'height': 24,
+  'viewBox': '0 0 24 24',
+  'fill': 'none',
+  'stroke': 'currentColor',
+  'stroke-width': 2,
+  'stroke-linecap': 'round',
+  'stroke-linejoin': 'round'
+})
+-%}
+<span{{ parse_attributes(attributes) }}>
+  <svg{{ parse_attributes(svg_attributes) }}>
+    <use xlink:href="node_modules/@tabler/icons-sprite/dist/tabler-sprite.svg#tabler-{{ icon }}" />
+  </svg>
+</span>

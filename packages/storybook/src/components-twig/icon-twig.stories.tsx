@@ -10,8 +10,6 @@ const icons = Object.values(iconSet);
 
 interface TwigIconProps {
   icon: string;
-  width?: number;
-  height?: number;
 }
 
 const TwigIcon = createTwigComponent<TwigIconProps>(twigTemplate);
@@ -43,14 +41,14 @@ const meta = {
 
 export default meta;
 
-export const TwigIcon1: StoryObj<typeof meta> = {
+export const Default: StoryObj<typeof meta> = {
   args: {
     icon: 'home',
   },
   name: 'Home',
 };
 
-export const TwigIcon2: StoryObj<typeof meta> = {
+export const CustomIcon: StoryObj<typeof meta> = {
   args: {
     icon: 'brand-x',
   },
