@@ -13,7 +13,6 @@ export const CodeInput = ({ capitalize = false, ref, ...restProps }: CodeInputPr
     <TextInput
       {...restProps}
       className={clsx('rhc-code-input', { 'rhc-code-input--capitalized': capitalize })}
-      maxLength={1}
       ref={ref}
       type="text"
     />

@@ -21,7 +21,7 @@ export const CodeInputGroup = ({
   ref,
   ...restProps
 }: PropsWithChildren<CodeInputGroupProps>) => {
-  const values = new Array<string>();
+  let values = new Array<string>();
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
   const regex = new RegExp(`^${pattern}$`);
 
@@ -33,10 +33,13 @@ export const CodeInputGroup = ({
       values.splice(index, values[index] === undefined ? 0 : 1, input);
     } else if (input === '') {
       values.splice(index, 1, input);
-    }
-
-    if (event.target.value && index < codeLength - 1) {
-      inputRefs.current[index + 1]?.focus();
+    } else if (index === 0 && input.length > 1 && new RegExp(`^${pattern}{${codeLength}}$`).test(input.trim())) {
+      // If the input is pasted or auto-completed and the pattern is correct, fill the inputs
+      values = input.split('');
+      inputRefs.current.forEach((inputRef, i) => {
+        if (inputRef) inputRef.value = values[i];
+      });
+      delayedFocus(inputRefs.current[codeLength - 1]);
     }
 
     if (onChange) {
@@ -50,10 +53,21 @@ export const CodeInputGroup = ({
       event.preventDefault();
     }
 
+    if (regex.test(event.key) && index < codeLength - 1) {
+      delayedFocus(inputRefs.current[index + 1]);
+    }
+
     if (event.key === 'Backspace' && index > 0) {
       event.currentTarget.value = '';
-      inputRefs.current[index - 1]?.focus();
+      values.splice(index, 1, '');
+      delayedFocus(inputRefs.current[index - 1]);
     }
+  };
+
+  const delayedFocus = (inputRef: HTMLInputElement | null) => {
+    setTimeout(() => {
+      if (inputRef) inputRef.focus();
+    });
   };
 
   return (
@@ -63,11 +77,13 @@ export const CodeInputGroup = ({
           <CodeInput
             {...restProps}
             aria-label={`${i + 1}/${codeLength}`}
+            autoComplete={i === 0 ? 'one-time-code' : 'off'}
             capitalize={capitalize}
             data-key={`${i}`}
             data-testid={`rhc-code-input-${i}`}
             invalid={invalid}
             key={`${i}`}
+            maxLength={i === 0 ? codeLength : 1}
             pattern={pattern}
             ref={(el) => (inputRefs.current[i] = el)}
             onChange={(e: ChangeEvent<HTMLInputElement>) => onChangeHandler(e)}
