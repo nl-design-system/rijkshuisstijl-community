@@ -28,7 +28,7 @@ export abstract class BaseWebComponent extends HTMLElement {
     this._observer.observe(this, { attributes: true });
 
     this.root = document.createElement('span');
-    this.root.id = 'root';
+    this.root.style.height = '100% !important';
     this.shadowRoot.appendChild(this.root);
 
     this.setupProps();

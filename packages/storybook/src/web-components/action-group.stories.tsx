@@ -1,10 +1,11 @@
-import { Button } from '@rijkshuisstijl-community/components-react';
-import { ActionGroupWebComponent } from '@rijkshuisstijl-community/web-components';
+import { ActionGroupWebComponent, ButtonWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components';
+import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../community/action-group.md?raw';
 
 ActionGroupWebComponent.define();
+ButtonWebComponent.define();
 
 const meta = {
   title: 'Web Components/Action Group',
@@ -42,12 +43,22 @@ export default meta;
 export const Default = {
   args: {
     children: [
-      <Button appearance="primary-action-button" key="primary-action-button">
-        Save and continue
-      </Button>,
-      <Button appearance="secondary-action-button" key="secondary-action-button">
-        Back
-      </Button>,
+      createElement(
+        'rhc-button',
+        {
+          appearance: 'primary-action-button',
+          key: 'primary-action-button',
+        },
+        'Save and continue',
+      ),
+      createElement(
+        'rhc-button',
+        {
+          appearance: 'secondary-action-button',
+          key: 'secondary-action-button',
+        },
+        'Back',
+      ),
     ],
     direction: 'row',
   },
@@ -57,12 +68,22 @@ export const Column = {
   args: {
     direction: 'column',
     children: [
-      <Button appearance="primary-action-button" key="primary-action-button">
-        Save and continue
-      </Button>,
-      <Button appearance="secondary-action-button" key="secondary-action-button">
-        Back
-      </Button>,
+      createElement(
+        'rhc-button',
+        {
+          appearance: 'primary-action-button',
+          key: 'primary-action-button',
+        },
+        'Save and continue',
+      ),
+      createElement(
+        'rhc-button',
+        {
+          appearance: 'secondary-action-button',
+          key: 'secondary-action-button',
+        },
+        'Back',
+      ),
     ],
   },
   name: 'Column',
