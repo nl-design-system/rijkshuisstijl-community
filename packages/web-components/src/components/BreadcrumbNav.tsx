@@ -22,13 +22,13 @@ export class BreadcrumbNavWebComponent extends BaseWebComponent {
   }
 
   render(): void {
-    if (!this.root) return;
+    if (!this.shadowRoot) return;
 
     render(
       <BreadcrumbNav {...this.props}>
         <slot />
       </BreadcrumbNav>,
-      this.root,
+      this.shadowRoot,
     );
   }
 }

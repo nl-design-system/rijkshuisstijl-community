@@ -13,7 +13,7 @@ export class AlertWebComponent extends BaseWebComponent {
   }
 
   render(): void {
-    if (!this.root) return;
+    if (!this.shadowRoot) return;
 
     const { heading, type, headinglevel, messagetext, ...restProps } = this.props;
 
@@ -27,7 +27,7 @@ export class AlertWebComponent extends BaseWebComponent {
       >
         <slot />
       </Alert>,
-      this.root,
+      this.shadowRoot,
     );
   }
 }

@@ -9,18 +9,17 @@ export class BreadcrumbNavSeparatorWebComponent extends BaseWebComponent {
   static override readonly tagName: string = 'rhc-breadcrumb-nav-separator';
 
   constructor() {
-    const style = stylesheet + ``;
-    super(style);
+    super(stylesheet);
   }
 
   render(): void {
-    if (!this.root) return;
+    if (!this.shadowRoot) return;
 
     render(
       <BreadcrumbNavSeparator {...this.props}>
         <slot />
       </BreadcrumbNavSeparator>,
-      this.root,
+      this.shadowRoot,
     );
   }
 }

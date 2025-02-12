@@ -13,7 +13,7 @@ export class HeroWebComponent extends BaseWebComponent {
   }
 
   render(): void {
-    if (!this.root) return;
+    if (!this.shadowRoot) return;
 
     const {
       aspectratio,
@@ -44,7 +44,7 @@ export class HeroWebComponent extends BaseWebComponent {
       >
         <slot />
       </Hero>,
-      this.root,
+      this.shadowRoot,
     );
   }
 }

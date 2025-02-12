@@ -13,7 +13,7 @@ export class ActionGroupWebComponent extends BaseWebComponent {
   }
 
   render(): void {
-    if (!this.root) return;
+    if (!this.shadowRoot) return;
 
     const { direction, ...restProps } = this.props;
 
@@ -24,7 +24,7 @@ export class ActionGroupWebComponent extends BaseWebComponent {
       >
         <slot />
       </ActionGroup>,
-      this.root,
+      this.shadowRoot,
     );
   }
 }

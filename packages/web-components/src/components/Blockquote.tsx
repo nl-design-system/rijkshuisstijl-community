@@ -13,7 +13,7 @@ export class BlockquoteWebComponent extends BaseWebComponent {
   }
 
   render(): void {
-    if (!this.root) return;
+    if (!this.shadowRoot) return;
 
     const { attribution, variation, ...restProps } = this.props;
 
@@ -25,7 +25,7 @@ export class BlockquoteWebComponent extends BaseWebComponent {
       >
         <slot />
       </Blockquote>,
-      this.root,
+      this.shadowRoot,
     );
   }
 }

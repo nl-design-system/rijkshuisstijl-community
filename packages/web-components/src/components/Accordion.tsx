@@ -13,7 +13,7 @@ export class AccordionWebComponent extends BaseWebComponent {
   }
 
   render(): void {
-    if (!this.root) return;
+    if (!this.shadowRoot) return;
 
     const { appearance, heading, icon, headinglevel, sections, ...restProps } = this.props;
 
@@ -28,7 +28,7 @@ export class AccordionWebComponent extends BaseWebComponent {
         }
         {...restProps}
       />,
-      this.root,
+      this.shadowRoot,
     );
   }
 }

@@ -9,12 +9,11 @@ export class IconWebComponent extends BaseWebComponent {
   static override readonly tagName: string = 'rhc-icon';
 
   constructor() {
-    const style = stylesheet + ``;
-    super(style);
+    super(stylesheet);
   }
 
   render(): void {
-    if (!this.root) return;
+    if (!this.shadowRoot) return;
 
     const { icon, classname } = this.props;
 
@@ -22,7 +21,7 @@ export class IconWebComponent extends BaseWebComponent {
       <Icon className={classname as IconProps['className']} icon={icon as IconProps['icon']} {...this.props}>
         <slot />
       </Icon>,
-      this.root,
+      this.shadowRoot,
     );
   }
 }

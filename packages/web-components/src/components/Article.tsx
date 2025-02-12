@@ -13,13 +13,13 @@ export class ArticleWebComponent extends BaseWebComponent {
   }
 
   render(): void {
-    if (!this.root) return;
+    if (!this.shadowRoot) return;
 
     render(
       <Article {...this.props}>
         <slot />
       </Article>,
-      this.root,
+      this.shadowRoot,
     );
   }
 }

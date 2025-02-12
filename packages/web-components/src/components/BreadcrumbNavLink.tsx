@@ -9,12 +9,11 @@ export class BreadcrumbNavLinkWebComponent extends BaseWebComponent {
   static override readonly tagName: string = 'rhc-breadcrumb-nav-link';
 
   constructor() {
-    const style = stylesheet + ``;
-    super(style);
+    super(stylesheet);
   }
 
   render(): void {
-    if (!this.root) return;
+    if (!this.shadowRoot) return;
 
     const { active, classname, href, current, ...restProps } = this.props;
 
@@ -28,7 +27,7 @@ export class BreadcrumbNavLinkWebComponent extends BaseWebComponent {
       >
         <slot />
       </BreadcrumbNavLink>,
-      this.root,
+      this.shadowRoot,
     );
   }
 }

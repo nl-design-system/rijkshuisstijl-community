@@ -1,5 +1,6 @@
+import { render } from 'preact';
+
 export abstract class BaseWebComponent extends HTMLElement {
-  protected root: HTMLElement | undefined;
   public override shadowRoot: ShadowRoot;
   protected props: { [key: string]: any } = {};
   private readonly _observer: MutationObserver;
@@ -25,11 +26,8 @@ export abstract class BaseWebComponent extends HTMLElement {
   }
 
   connectedCallback(): void {
+    console.log('connectedCallback');
     this._observer.observe(this, { attributes: true });
-
-    this.root = document.createElement('span');
-    this.root.style.height = '100% !important';
-    this.shadowRoot.appendChild(this.root);
 
     this.setupProps();
     this.render();
@@ -41,8 +39,7 @@ export abstract class BaseWebComponent extends HTMLElement {
   }
 
   disconnectedCallback(): void {
-    if (!this.root) return;
-    this.root.remove();
+    render(null, this.shadowRoot);
   }
 
   protected abstract render(): void;

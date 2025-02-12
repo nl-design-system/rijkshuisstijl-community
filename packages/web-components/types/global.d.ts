@@ -30,8 +30,8 @@ declare global {
       'rhc-breadcrumb-nav-separator': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> &
         BreadcrumbNavSeparatorWebComponentAttributes;
       'rhc-button': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & ButtonWebComponentAttributes;
-      'rhc-icon': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & IconWebComponentAttributes;
       'rhc-hero': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & HeroWebComponentAttributes;
+      'rhc-icon': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & IconWebComponentAttributes;
     }
   }
 }

@@ -13,7 +13,7 @@ export class ButtonWebComponent extends BaseWebComponent {
   }
 
   render(): void {
-    if (!this.root) return;
+    if (!this.shadowRoot) return;
 
     const { appearance, disabled, ...restProps } = this.props;
 
@@ -25,7 +25,7 @@ export class ButtonWebComponent extends BaseWebComponent {
       >
         <slot />
       </Button>,
-      this.root,
+      this.shadowRoot,
     );
   }
 }
