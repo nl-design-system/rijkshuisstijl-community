@@ -7,6 +7,13 @@
 Dit component kan worden gebruikt wanneer een gebruiker een verificatiecode moet invoeren. Het doel is om de gebruiker  
 een gemakkelijke en overzichtelijke manier te bieden om de code in te voeren.
 
+## Kenmerken
+
+- Bij dit component kan je instellen welke karakters worden toegestaan
+- Dit component bevat functionaliteit om automatisch de cursor op het volgende input-veldje te zetten bij het typen van een geldig karakter
+- Als er een volledige en geldige code in het eerste veld wordt geplakt wordt deze verdeeld over de input-veldjes.
+- Als een karakter wordt weggehaald met backspace gaat de cursor automatisch naar het vorige input-veldje.
+
 ## Gebruik
 
 Dit component is te gebruiken door de `CodeInputGroup` te importeren. De component heeft één verplichte property genaamd
