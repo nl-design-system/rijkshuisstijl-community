@@ -73,3 +73,17 @@
   margin-block-end: var(--rhc-space-0);
   margin-block-start: var(--rhc-space-0);
 }
+
+.rhc-subfooter-details {
+  display: flex;
+  flex-direction: row;
+  gap: var(--rhc-space-300);
+  & * {
+    display: flex;
+    justify-content: center;
+  }
+  @container (width <= 780px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
