@@ -18,7 +18,11 @@ export class IconWebComponent extends BaseWebComponent {
     const { icon, classname } = this.props;
 
     render(
-      <Icon className={classname as IconProps['className']} icon={icon as IconProps['icon']} {...this.props}>
+      <Icon
+        className={classname as IconWebComponentAttributes['className']}
+        icon={icon as IconWebComponentAttributes['icon']}
+        {...this.props}
+      >
         <slot />
       </Icon>,
       this.shadowRoot,
