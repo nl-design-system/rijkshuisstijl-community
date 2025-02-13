@@ -1,19 +1,9 @@
-// import { BreadcrumbNavLink, BreadcrumbNavSeparator, Icon } from '@rijkshuisstijl-community/components-react';
-import {
-  BreadcrumbNavLinkWebComponent,
-  BreadcrumbNavSeparatorWebComponent,
-  BreadcrumbNavWebComponent,
-  IconWebComponent,
-} from '@rijkshuisstijl-community/web-components';
+import { BreadcrumbNavWebComponent } from '@rijkshuisstijl-community/web-components';
 import { Meta, StoryObj } from '@storybook/web-components';
 import readme from '@utrecht/components/breadcrumb-nav/README.md?raw';
-import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 BreadcrumbNavWebComponent.define();
-BreadcrumbNavLinkWebComponent.define();
-BreadcrumbNavSeparatorWebComponent.define();
-IconWebComponent.define();
 
 const meta = {
   title: 'Web Components/Breadcrumb navigation',
@@ -43,74 +33,64 @@ export default meta;
 
 export const Default = {
   args: {
-    children: [
-      createElement(
-        'rhc-breadcrumb-nav-link',
-        {
-          href: 'https://example.com/',
-          index: 0,
-          key: 'home',
-          rel: 'home',
-        },
-        'Home',
-      ),
-      createElement(
-        'rhc-breadcrumb-nav-link',
-        {
-          href: 'https://example.com/search',
-          index: 1,
-          key: 'search',
-          rel: 'up',
-        },
-        'Zoeken',
-      ),
-      createElement(
-        'rhc-breadcrumb-nav-link',
-        {
-          href: 'https://example.com/example',
-          index: 2,
-          key: 'example',
-          rel: 'first',
-        },
-        'Example',
-      ),
-    ],
+    elements: JSON.stringify([
+      {
+        type: 'LINK',
+        href: 'https://example.com/',
+        index: 0,
+        key: 'home',
+        rel: 'home',
+        text: 'Home',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/search',
+        index: 1,
+        key: 'search',
+        rel: 'up',
+        text: 'Zoeken',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/example',
+        index: 2,
+        key: 'example',
+        rel: 'first',
+        text: 'Example',
+      },
+    ]),
   },
 } as StoryObj<typeof meta>;
 
 export const Current = {
   args: {
-    children: [
-      createElement(
-        'rhc-breadcrumb-nav-link',
-        {
-          href: '/',
-          index: 0,
-          key: 'home',
-          rel: 'home',
-        },
-        'Home',
-      ),
-      createElement(
-        'rhc-breadcrumb-nav-link',
-        {
-          href: '/a/',
-          index: 1,
-          key: 'label',
-        },
-        'Label',
-      ),
-      createElement(
-        'rhc-breadcrumb-nav-link',
-        {
-          href: '/a/b',
-          index: 2,
-          key: 'label-2',
-          current: 'true',
-        },
-        'Label',
-      ),
-    ],
+    elements: JSON.stringify([
+      {
+        type: 'LINK',
+        href: 'https://example.com/',
+        index: 0,
+        key: 'home',
+        rel: 'home',
+        text: 'Home',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/search',
+        index: 1,
+        key: 'search',
+        rel: 'up',
+        text: 'Zoeken',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/example',
+        index: 2,
+        key: 'example',
+        rel: 'first',
+        text: 'Example',
+        current: 'true',
+      },
+    ]),
   },
   parameters: {
     docs: {
@@ -123,127 +103,106 @@ export const Current = {
 
 export const Separator = {
   args: {
-    children: [
-      createElement(
-        'rhc-breadcrumb-nav-link',
-        {
-          href: '/',
-          index: 0,
-          key: 'home',
-          rel: 'home',
-        },
-        'Home',
-      ),
-      createElement(
-        'rhc-breadcrumb-nav-separator',
-        {
-          key: 'icon',
-        },
-        createElement('rhc-icon', {
-          icon: 'chevron-right',
-        }),
-      ),
-      createElement(
-        'rhc-breadcrumb-nav-link',
-        {
-          href: '/a/',
-          index: 1,
-          key: 'label',
-        },
-        'Label',
-      ),
-      createElement(
-        'rhc-breadcrumb-nav-separator',
-        {
-          key: 'icon-2',
-        },
-        createElement('rhc-icon', {
-          icon: 'chevron-right',
-        }),
-      ),
-      createElement(
-        'rhc-breadcrumb-nav-link',
-        {
-          href: '/a/b/',
-          index: 2,
-          key: 'label-2',
-        },
-        'Label',
-      ),
-    ],
+    elements: JSON.stringify([
+      {
+        type: 'LINK',
+        href: '/',
+        index: 0,
+        key: 'home',
+        rel: 'home',
+        text: 'Home',
+      },
+      {
+        type: 'SEPARATOR',
+        key: 'icon',
+        icon: 'chevron-right',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/search',
+        index: 1,
+        key: 'search',
+        rel: 'up',
+        text: 'Zoeken',
+      },
+      {
+        type: 'SEPARATOR',
+        key: 'icon',
+        icon: 'chevron-right',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/example',
+        index: 2,
+        key: 'example',
+        rel: 'first',
+        text: 'Example',
+        current: 'true',
+      },
+    ]),
   },
 } as StoryObj<typeof meta>;
 
 export const Active = {
   args: {
-    children: [
-      createElement(
-        'rhc-breadcrumb-nav-link',
-        {
-          href: '/',
-          index: 0,
-          key: 'home',
-          rel: 'home',
-        },
-        'Home',
-      ),
-      createElement(
-        'rhc-breadcrumb-nav-link',
-        {
-          href: '/a/',
-          index: 1,
-          key: 'label',
-        },
-        'Label',
-      ),
-      createElement(
-        'rhc-breadcrumb-nav-link',
-        {
-          href: '/a/b/',
-          index: 2,
-          key: 'label-2',
-          active: 'true',
-          current: 'true',
-        },
-        'Label',
-      ),
-    ],
+    elements: JSON.stringify([
+      {
+        type: 'LINK',
+        href: 'https://example.com/',
+        index: 0,
+        key: 'home',
+        rel: 'home',
+        text: 'Home',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/search',
+        index: 1,
+        key: 'search',
+        rel: 'up',
+        text: 'Zoeken',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/example',
+        index: 2,
+        key: 'example',
+        text: 'Example',
+        active: 'true',
+        current: 'true',
+      },
+    ]),
   },
 } as StoryObj<typeof meta>;
 
 export const DisabledAndCurrent = {
   args: {
-    children: [
-      createElement(
-        'rhc-breadcrumb-nav-link',
-        {
-          href: '/',
-          index: 0,
-          key: 'home',
-          rel: 'home',
-        },
-        'Home',
-      ),
-      createElement(
-        'rhc-breadcrumb-nav-link',
-        {
-          href: '/a/',
-          index: 1,
-          key: 'label',
-        },
-        'Label',
-      ),
-      createElement(
-        'rhc-breadcrumb-nav-link',
-        {
-          href: '/a/b/',
-          index: 2,
-          key: 'label-2',
-          active: 'true',
-          disabled: 'true',
-        },
-        'Label',
-      ),
-    ],
+    elements: JSON.stringify([
+      {
+        type: 'LINK',
+        href: 'https://example.com/',
+        index: 0,
+        key: 'home',
+        rel: 'home',
+        text: 'Home',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/search',
+        index: 1,
+        key: 'search',
+        rel: 'up',
+        text: 'Zoeken',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/example',
+        index: 2,
+        key: 'example',
+        text: 'Example',
+        active: 'true',
+        disabled: 'true',
+      },
+    ]),
   },
 } as StoryObj<typeof meta>;

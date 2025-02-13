@@ -26,7 +26,6 @@ export abstract class BaseWebComponent extends HTMLElement {
   }
 
   connectedCallback(): void {
-    console.log('connectedCallback');
     this._observer.observe(this, { attributes: true });
 
     this.setupProps();
