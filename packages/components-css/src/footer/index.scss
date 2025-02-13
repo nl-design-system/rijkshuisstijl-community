@@ -91,18 +91,11 @@
 .rhc-page-subfooter__content {
   align-items: center;
   display: flex;
-  flex-direction: row;
   gap: var(--rhc-space-400);
   justify-content: space-between;
 
   @media (width <= 1024px) {
     flex-direction: column;
-  }
-
-  @media (width >= 1024px) {
-    &:has(> :only-child) {
-      flex-direction: row-reverse;
-    }
   }
 }
 

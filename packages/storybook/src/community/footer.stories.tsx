@@ -90,13 +90,11 @@ export const DefaultFooter: Story = {
     heading: 'Footer heading',
     appearanceLevel: 3,
     background: 'primary-filled',
+    backtotop: true,
     preFooter: false,
     subFooter: (
-      <LinkList className="rhc-subfooter-details">
+      <LinkList>
         <LinkListLink href="#">Privacy</LinkListLink>
-        <LinkListLink href="#">Cookies</LinkListLink>
-        <LinkListLink href="#">Copyright</LinkListLink>
-        <LinkListLink href="#">Toegankelijkheid</LinkListLink>
       </LinkList>
     ),
     columns: [
@@ -158,9 +156,6 @@ export const PrimaryOutlinedFooterSubFooter: Story = {
     subFooter: (
       <LinkList className="rhc-subfooter-details">
         <LinkListLink href="#">Privacy</LinkListLink>
-        <LinkListLink href="#">Cookies</LinkListLink>
-        <LinkListLink href="#">Copyright</LinkListLink>
-        <LinkListLink href="#">Toegankelijkheid</LinkListLink>
       </LinkList>
     ),
     children: (
