@@ -1,0 +1,208 @@
+import { BreadcrumbNavWebComponent } from '@rijkshuisstijl-community/web-components';
+import { Meta, StoryObj } from '@storybook/web-components';
+import readme from '@utrecht/components/breadcrumb-nav/README.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
+
+BreadcrumbNavWebComponent.define();
+
+const meta = {
+  title: 'Web Components/Breadcrumb navigation',
+  id: 'rhc-breadcrumb-nav-web',
+  component: 'rhc-breadcrumb-nav',
+  argTypes: {},
+  parameters: {
+    status: {
+      type: 'STABLE',
+    },
+    docs: {
+      description: {
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
+        component: mergeMarkdown([readme]),
+      },
+    },
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1862-9575&t=YSjs9i2uQ5Eq3wto-0',
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/443',
+    nldesignsystem: 'https://www.nldesignsystem.nl/breadcrumb-navigation/',
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
+  },
+} satisfies Meta<typeof BreadcrumbNavWebComponent>;
+
+export default meta;
+
+export const Default = {
+  args: {
+    elements: JSON.stringify([
+      {
+        type: 'LINK',
+        href: 'https://example.com/',
+        index: 0,
+        key: 'home',
+        rel: 'home',
+        text: 'Home',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/search',
+        index: 1,
+        key: 'search',
+        rel: 'up',
+        text: 'Zoeken',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/example',
+        index: 2,
+        key: 'example',
+        rel: 'first',
+        text: 'Example',
+      },
+    ]),
+  },
+} as StoryObj<typeof meta>;
+
+export const Current = {
+  args: {
+    elements: JSON.stringify([
+      {
+        type: 'LINK',
+        href: 'https://example.com/',
+        index: 0,
+        key: 'home',
+        rel: 'home',
+        text: 'Home',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/search',
+        index: 1,
+        key: 'search',
+        rel: 'up',
+        text: 'Zoeken',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/example',
+        index: 2,
+        key: 'example',
+        rel: 'first',
+        text: 'Example',
+        current: 'true',
+      },
+    ]),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `For accessibility specify the \`current\` property, to render \`aria-current="page"\`.`,
+      },
+    },
+  },
+} as StoryObj<typeof meta>;
+
+export const Separator = {
+  args: {
+    elements: JSON.stringify([
+      {
+        type: 'LINK',
+        href: '/',
+        index: 0,
+        key: 'home',
+        rel: 'home',
+        text: 'Home',
+      },
+      {
+        type: 'SEPARATOR',
+        key: 'icon',
+        icon: 'chevron-right',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/search',
+        index: 1,
+        key: 'search',
+        rel: 'up',
+        text: 'Zoeken',
+      },
+      {
+        type: 'SEPARATOR',
+        key: 'icon',
+        icon: 'chevron-right',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/example',
+        index: 2,
+        key: 'example',
+        rel: 'first',
+        text: 'Example',
+        current: 'true',
+      },
+    ]),
+  },
+} as StoryObj<typeof meta>;
+
+export const Active = {
+  args: {
+    elements: JSON.stringify([
+      {
+        type: 'LINK',
+        href: 'https://example.com/',
+        index: 0,
+        key: 'home',
+        rel: 'home',
+        text: 'Home',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/search',
+        index: 1,
+        key: 'search',
+        rel: 'up',
+        text: 'Zoeken',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/example',
+        index: 2,
+        key: 'example',
+        text: 'Example',
+        active: 'true',
+        current: 'true',
+      },
+    ]),
+  },
+} as StoryObj<typeof meta>;
+
+export const DisabledAndCurrent = {
+  args: {
+    elements: JSON.stringify([
+      {
+        type: 'LINK',
+        href: 'https://example.com/',
+        index: 0,
+        key: 'home',
+        rel: 'home',
+        text: 'Home',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/search',
+        index: 1,
+        key: 'search',
+        rel: 'up',
+        text: 'Zoeken',
+      },
+      {
+        type: 'LINK',
+        href: 'https://example.com/example',
+        index: 2,
+        key: 'example',
+        text: 'Example',
+        active: 'true',
+        disabled: 'true',
+      },
+    ]),
+  },
+} as StoryObj<typeof meta>;

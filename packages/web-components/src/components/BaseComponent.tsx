@@ -1,5 +1,6 @@
+import { render } from 'preact';
+
 export abstract class BaseWebComponent extends HTMLElement {
-  protected root: HTMLElement | undefined;
   public override shadowRoot: ShadowRoot;
   protected props: { [key: string]: any } = {};
   private readonly _observer: MutationObserver;
@@ -27,10 +28,6 @@ export abstract class BaseWebComponent extends HTMLElement {
   connectedCallback(): void {
     this._observer.observe(this, { attributes: true });
 
-    this.root = document.createElement('span');
-    this.root.id = 'root';
-    this.shadowRoot.appendChild(this.root);
-
     this.setupProps();
     this.render();
   }
@@ -41,8 +38,7 @@ export abstract class BaseWebComponent extends HTMLElement {
   }
 
   disconnectedCallback(): void {
-    if (!this.root) return;
-    this.root.remove();
+    render(null, this.shadowRoot);
   }
 
   protected abstract render(): void;

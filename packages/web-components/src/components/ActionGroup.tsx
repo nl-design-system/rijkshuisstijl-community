@@ -13,15 +13,18 @@ export class ActionGroupWebComponent extends BaseWebComponent {
   }
 
   render(): void {
-    if (!this.root) return;
+    if (!this.shadowRoot) return;
 
     const { direction, ...restProps } = this.props;
 
     render(
-      <ActionGroup direction={(direction as ActionGroupProps['direction']) ?? undefined} {...restProps}>
+      <ActionGroup
+        direction={(direction as ActionGroupWebComponentAttributes['direction']) ?? undefined}
+        {...restProps}
+      >
         <slot />
       </ActionGroup>,
-      this.root,
+      this.shadowRoot,
     );
   }
 }

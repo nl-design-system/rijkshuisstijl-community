@@ -13,7 +13,7 @@ export class AccordionWebComponent extends BaseWebComponent {
   }
 
   render(): void {
-    if (!this.root) return;
+    if (!this.shadowRoot) return;
 
     const { appearance, heading, icon, headinglevel, sections, ...restProps } = this.props;
 
@@ -21,12 +21,14 @@ export class AccordionWebComponent extends BaseWebComponent {
       <AccordionProvider
         appearance={appearance ?? undefined}
         heading={heading ?? undefined}
-        headingLevel={headinglevel ? (Number(headinglevel) as AccordionProviderProps['headingLevel']) : undefined}
         icon={icon && <Icon icon={icon as RHCIconID} />}
-        sections={(sections && JSON.parse(sections as string)) as AccordionProviderProps['sections']}
+        sections={(sections && JSON.parse(sections as string)) as AccordionWebComponentAttributes['sections']}
+        headingLevel={
+          headinglevel ? (Number(headinglevel) as AccordionWebComponentAttributes['headingLevel']) : undefined
+        }
         {...restProps}
       />,
-      this.root,
+      this.shadowRoot,
     );
   }
 }
