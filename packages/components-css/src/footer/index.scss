@@ -54,7 +54,7 @@
   display: flex;
   flex: 1;
   flex-direction: row;
-  @media (width <= 1024px) {
+  @container (width <= 1024px) {
     & {
       flex-direction: var(--rhc-page-footer-flex-direction);
     }
@@ -94,7 +94,7 @@
   gap: var(--rhc-space-400);
   justify-content: space-between;
 
-  @media (width <= 1024px) {
+  @container (width <= 1024px) {
     flex-direction: column;
   }
 }
@@ -110,7 +110,7 @@
   }
 }
 
-@media (width <= 780px) {
+@container (width <= 780px) {
   .rhc-page-footer__wrapper {
     --utrecht-page-footer-padding-inline-end: var(--rhc-page-footer-padding-inline-end);
     --utrecht-page-footer-padding-inline-start: var(--rhc-page-footer-padding-inline-start);
