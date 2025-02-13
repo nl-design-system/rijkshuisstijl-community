@@ -30,12 +30,8 @@ export const MessageListItem = ({
           {withBadge && <DotBadge {...withBadge} />}
           {label}
         </Paragraph>
-        <Paragraph appearance="small" className={'rhc-message-list__item__description'}>
-          {description}
-        </Paragraph>
-        <Paragraph appearance="small" className={'rhc-message-list__item__meta-data'}>
-          {metaData}
-        </Paragraph>
+        <Paragraph className={'rhc-message-list__item__description'}>{description}</Paragraph>
+        <Paragraph className={'rhc-message-list__item__meta-data'}>{metaData}</Paragraph>
         <Icon className={'rhc-message-list__item__end-icon'} icon={'chevron-right'} />
       </span>
     </a>

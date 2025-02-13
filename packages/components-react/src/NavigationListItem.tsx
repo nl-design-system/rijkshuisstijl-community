@@ -1,7 +1,7 @@
-import { Paragraph } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { HTMLAttributes, ReactNode, Ref } from 'react';
 import { Icon } from './Icon';
+import { Paragraph } from './Paragraph';
 import { RHCIconID } from './icon-sets/default-icons/RHCIconIDs';
 
 export interface NavigationListItemProps extends HTMLAttributes<HTMLLIElement> {
@@ -30,12 +30,8 @@ export const NavigationListItem = ({
           <Icon className={'rhc-navigation-list__item__start-icon'}>{icon}</Icon>
         )}
         <span className={'rhc-navigation-list__item-content'}>
-          <Paragraph appearance="small" className={'rhc-navigation-list__item__label'}>
-            {label}
-          </Paragraph>
-          <Paragraph appearance="small" className={'rhc-navigation-list__item__description'}>
-            {description}
-          </Paragraph>
+          <Paragraph className={'rhc-navigation-list__item__label'}>{label}</Paragraph>
+          <Paragraph className={'rhc-navigation-list__item__description'}>{description}</Paragraph>
           <Icon className={'rhc-navigation-list__item__end-icon'} icon={'chevron-right'} />
         </span>
       </a>

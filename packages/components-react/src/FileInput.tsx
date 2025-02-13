@@ -1,7 +1,7 @@
-import { Paragraph } from '@utrecht/component-library-react';
 import { ChangeEvent, PropsWithChildren, Ref, RefObject, useEffect, useState } from 'react';
 import { Button, ButtonProps } from './Button';
 import { File } from './File';
+import { Paragraph } from './Paragraph';
 
 export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
   ref: Ref<HTMLInputElement>;

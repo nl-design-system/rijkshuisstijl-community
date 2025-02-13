@@ -10,11 +10,10 @@ const meta = {
   id: 'rhc-paragraph',
   component: Paragraph,
   argTypes: {
-    lead: {
+    purpose: {
       description: 'Lead paragraph',
-      type: {
-        name: 'boolean',
-      },
+      control: { type: 'select' },
+      options: [undefined, 'lead'],
       table: {
         category: 'API',
       },
@@ -75,13 +74,6 @@ export const Default: Story = {
 export const Lead: Story = {
   args: {
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
-    lead: true,
-  },
-};
-
-export const Small: Story = {
-  args: {
-    children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
-    small: true,
+    purpose: 'lead',
   },
 };

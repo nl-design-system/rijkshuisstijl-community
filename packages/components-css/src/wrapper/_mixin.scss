@@ -41,7 +41,7 @@
   .nl-heading--level-1:has(+ .utrecht-pagination) {
     --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .nl-heading--level-1:has(+ .utrecht-paragraph) {
+  .nl-heading--level-1:has(+ .nl-paragraph) {
     --nl-heading-level-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .nl-heading--level-1:has(+ .utrecht-separator) {
@@ -103,7 +103,7 @@
   .nl-heading--level-2:has(+ .utrecht-pagination) {
     --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .nl-heading--level-2:has(+ .utrecht-paragraph) {
+  .nl-heading--level-2:has(+ .nl-paragraph) {
     --nl-heading-level-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .nl-heading--level-2:has(+ .utrecht-separator) {
@@ -168,7 +168,7 @@
   .nl-heading--level-3:has(+ .utrecht-pagination) {
     --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .nl-heading--level-3:has(+ .utrecht-paragraph) {
+  .nl-heading--level-3:has(+ .nl-paragraph) {
     --nl-heading-level-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .nl-heading--level-3:has(+ .utrecht-separator) {
@@ -233,7 +233,7 @@
   .nl-heading--level-4:has(+ .utrecht-pagination) {
     --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .nl-heading--level-4:has(+ .utrecht-paragraph) {
+  .nl-heading--level-4:has(+ .nl-paragraph) {
     --nl-heading-level-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .nl-heading--level-4:has(+ .utrecht-separator) {
@@ -298,7 +298,7 @@
   .nl-heading--level-5:has(+ .utrecht-pagination) {
     --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .nl-heading--level-5:has(+ .utrecht-paragraph) {
+  .nl-heading--level-5:has(+ .nl-paragraph) {
     --nl-heading-level-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .nl-heading--level-5:has(+ .utrecht-separator) {
@@ -360,7 +360,7 @@
   .nl-heading--level-6:has(+ .utrecht-pagination) {
     --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .nl-heading--level-6:has(+ .utrecht-paragraph) {
+  .nl-heading--level-6:has(+ .nl-paragraph) {
     --nl-heading-level-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .nl-heading--level-6:has(+ .utrecht-separator) {
@@ -434,7 +434,7 @@
   .utrecht-accordion:has(+ .utrecht-ordered-list) {
     --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-accordion:has(+ .utrecht-paragraph) {
+  .utrecht-accordion:has(+ .nl-paragraph) {
     --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-accordion:has(+ .utrecht-separator) {
@@ -511,7 +511,7 @@
   .utrecht-alert:has(+ .utrecht-pagination) {
     --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-alert:has(+ .utrecht-paragraph) {
+  .utrecht-alert:has(+ .nl-paragraph) {
     --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-alert:has(+ .utrecht-separator) {
@@ -582,7 +582,7 @@
   .utrecht-badge-list:has(+ .utrecht-ordered-list) {
     --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-badge-list:has(+ .utrecht-paragraph) {
+  .utrecht-badge-list:has(+ .nl-paragraph) {
     --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-badge-list:has(+ .utrecht-separator) {
@@ -653,7 +653,7 @@
   .utrecht-blockquote:has(+ .utrecht-pagination) {
     --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-blockquote:has(+ .utrecht-paragraph) {
+  .utrecht-blockquote:has(+ .nl-paragraph) {
     --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-blockquote:has(+ .utrecht-separator) {
@@ -727,7 +727,7 @@
   .utrecht-breadcrumb-nav:has(+ .utrecht-pagination) {
     --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-breadcrumb-nav:has(+ .utrecht-paragraph) {
+  .utrecht-breadcrumb-nav:has(+ .nl-paragraph) {
     --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-breadcrumb-nav:has(+ .utrecht-separator) {
@@ -798,7 +798,7 @@
   .utrecht-button:has(+ .utrecht-ordered-list) {
     --utrecht-button-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-button:has(+ .utrecht-paragraph) {
+  .utrecht-button:has(+ .nl-paragraph) {
     --utrecht-button-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-button:has(+ .utrecht-separator) {
@@ -866,7 +866,7 @@
   .utrecht-button-group:has(+ .utrecht-ordered-list) {
     --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-button-group:has(+ .utrecht-paragraph) {
+  .utrecht-button-group:has(+ .nl-paragraph) {
     --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-button-group:has(+ .utrecht-separator) {
@@ -940,7 +940,7 @@
   .utrecht-data-list:has(+ .utrecht-pagination) {
     --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-data-list:has(+ .utrecht-paragraph) {
+  .utrecht-data-list:has(+ .nl-paragraph) {
     --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-data-list:has(+ .utrecht-separator) {
@@ -1008,7 +1008,7 @@
   .utrecht-figure:has(+ .utrecht-pagination) {
     --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-figure:has(+ .utrecht-paragraph) {
+  .utrecht-figure:has(+ .nl-paragraph) {
     --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-figure:has(+ .utrecht-separator) {
@@ -1076,7 +1076,7 @@
   .utrecht-form-field:has(+ .utrecht-ordered-list) {
     --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-form-field:has(+ .utrecht-paragraph) {
+  .utrecht-form-field:has(+ .nl-paragraph) {
     --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-form-field:has(+ .utrecht-separator) {
@@ -1201,7 +1201,7 @@
   .utrecht-img:has(+ .utrecht-pagination) {
     --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-img:has(+ .utrecht-paragraph) {
+  .utrecht-img:has(+ .nl-paragraph) {
     --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-img:has(+ .utrecht-separator) {
@@ -1266,7 +1266,7 @@
   .utrecht-link:has(+ .utrecht-ordered-list) {
     --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-link:has(+ .utrecht-paragraph) {
+  .utrecht-link:has(+ .nl-paragraph) {
     --utrecht-link-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-link:has(+ .utrecht-separator) {
@@ -1337,7 +1337,7 @@
   .utrecht-ordered-list:has(+ .utrecht-pagination) {
     --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-ordered-list:has(+ .utrecht-paragraph) {
+  .utrecht-ordered-list:has(+ .nl-paragraph) {
     --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-ordered-list:has(+ .utrecht-separator) {
@@ -1402,7 +1402,7 @@
   .utrecht-pagination:has(+ .utrecht-ordered-list) {
     --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-pagination:has(+ .utrecht-paragraph) {
+  .utrecht-pagination:has(+ .nl-paragraph) {
     --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-pagination:has(+ .utrecht-separator) {
@@ -1415,75 +1415,75 @@
     --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
 }
-@mixin utrecht-paragraph {
-  .utrecht-paragraph:first-child {
-    --utrecht-paragraph-margin-block-start: 0;
+@mixin nl-paragraph {
+  .nl-paragraph:first-child {
+    --nl-paragraph-margin-block-start: 0;
   }
-  .utrecht-paragraph:has(+ .nl-heading--level-2) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-paragraph:has(+ .nl-heading--level-2) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .nl-heading--level-3) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-paragraph:has(+ .nl-heading--level-3) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .nl-heading--level-4) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-paragraph:has(+ .nl-heading--level-4) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .nl-heading--level-5) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-paragraph:has(+ .nl-heading--level-5) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .nl-heading--level-6) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-paragraph:has(+ .nl-heading--level-6) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-accordion) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-paragraph:has(+ .utrecht-accordion) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-alert) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-paragraph:has(+ .utrecht-alert) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-badge-list) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-paragraph:has(+ .utrecht-badge-list) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-blockquote) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-paragraph:has(+ .utrecht-blockquote) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-button) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-paragraph:has(+ .utrecht-button) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-button-group) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-paragraph:has(+ .utrecht-button-group) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-data-list) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-paragraph:has(+ .utrecht-data-list) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-figure) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-paragraph:has(+ .utrecht-figure) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-form-field) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-paragraph:has(+ .utrecht-form-field) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-img) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-paragraph:has(+ .utrecht-img) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-link) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-paragraph:has(+ .utrecht-link) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-ordered-list) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-paragraph:has(+ .utrecht-ordered-list) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-pagination) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-paragraph:has(+ .utrecht-pagination) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-paragraph) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-paragraph:has(+ .nl-paragraph) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-separator) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  .nl-paragraph:has(+ .utrecht-separator) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-table) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  .nl-paragraph:has(+ .utrecht-table) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-paragraph:has(+ .utrecht-unordered-list) {
-    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  .nl-paragraph:has(+ .utrecht-unordered-list) {
+    --nl-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
 }
 @mixin utrecht-select {
@@ -1555,7 +1555,7 @@
   .utrecht-separator:has(+ .utrecht-pagination) {
     --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
-  .utrecht-separator:has(+ .utrecht-paragraph) {
+  .utrecht-separator:has(+ .nl-paragraph) {
     --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-separator:has(+ .utrecht-separator) {
@@ -1717,7 +1717,7 @@
   .utrecht-table:has(+ .utrecht-pagination) {
     --utrecht-table-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-table:has(+ .utrecht-paragraph) {
+  .utrecht-table:has(+ .nl-paragraph) {
     --utrecht-table-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-table:has(+ .utrecht-separator) {
@@ -1807,7 +1807,7 @@
   .utrecht-unordered-list:has(+ .utrecht-pagination) {
     --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
-  .utrecht-unordered-list:has(+ .utrecht-paragraph) {
+  .utrecht-unordered-list:has(+ .nl-paragraph) {
     --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-unordered-list:has(+ .utrecht-separator) {
