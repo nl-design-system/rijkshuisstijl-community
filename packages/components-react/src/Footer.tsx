@@ -36,7 +36,7 @@ export const Footer = forwardRef(
       preFooterMessage,
       className,
       heading,
-      appearanceLevel = 2,
+      appearanceLevel = 3,
       columns,
       backtotop,
       subFooter,
@@ -47,9 +47,9 @@ export const Footer = forwardRef(
     ref: ForwardedRef<HTMLDivElement>,
   ) => (
     <>
-      {(preFooter || preFooterMessage) && (
+      {preFooter && (
         <div className="rhc-page-prefooter">
-          <span className="rhc-page-prefooter__content">{preFooterMessage}</span>
+          {preFooterMessage && <span className="rhc-page-prefooter__content">{preFooterMessage}</span>}
         </div>
       )}
 
@@ -100,12 +100,12 @@ export const Footer = forwardRef(
             )}
           >
             <div className="rhc-page-subfooter__content rhc-page-footer__wrapper">
+              {subFooter}
               {backtotop && (
                 <a className="rhc-page-subfooter__backtotop" href="#" onClick={scrollBackToTop}>
                   Terug naar boven <Icon icon="pijl-omhoog" />
                 </a>
               )}
-              {subFooter}
             </div>
           </div>
         )}
