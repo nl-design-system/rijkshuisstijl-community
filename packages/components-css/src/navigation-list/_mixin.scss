@@ -68,16 +68,19 @@
 }
 
 @mixin rhc-navigation-list__item__label {
+  --nl-paragraph-font-size: var(--rhc-navigation-list-item-label-font-size, var(--rhc-font-size-md-desktop));
+  --nl-paragraph-font-weight: var(--rhc-navigation-list-item-label-font-weight, var(--rhc-font-weight-bold));
+  --nl-paragraph-line-height: var(--rhc-navigation-list-item-label-line-height, var(--rhc-line-height-md));
+
   color: var(--rhc-navigation-list-item-heading-color, var(--rhc-color-foreground-lint));
   font-family: var(--rhc-navigation-list-item-label-font-family, var(--rhc-font-family-primary)), sans-serif;
-  font-size: var(--rhc-navigation-list-item-label-font-size, var(--rhc-font-size-md-desktop));
-  font-weight: var(--rhc-navigation-list-item-label-font-weight, var(--rhc-font-weight-bold));
   grid-area: label;
-  line-height: var(--rhc-navigation-list-item-label-line-height, var(--rhc-line-height-md));
   margin-block: 0;
 }
 @mixin rhc-navigation-list__item__description {
-  color: var(--rhc-color-foreground-subdued);
+  --nl-paragraph-color: var(--rhc-color-foreground-subdued);
+  --nl-paragraph-font-size: var(--rhc-navigation-list-item-content-font-size, var(--rhc-font-size-sm-desktop));
+
   grid-area: content;
   margin-block: 0;
   @media (width<= 768px) {

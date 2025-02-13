@@ -85,9 +85,10 @@
 }
 
 @mixin rhc-hero__sub-heading {
-  color: currentColor;
+  --nl-paragraph-font-size: var(--rhc-hero-sub-heading-font-size);
+  --nl-paragraph-color: currentColor;
+
   font-family: var(--rhc-hero-sub-heading-font-family);
-  font-size: var(--rhc-hero-sub-heading-font-size);
   font-weight: var(--rhc-hero-sub-heading-font-weight);
   line-height: var(--rhc-hero-sub-heading-line-height);
 }

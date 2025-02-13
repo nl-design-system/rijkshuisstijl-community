@@ -75,7 +75,7 @@ export default function Collage() {
                     src="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
                     width="640"
                   ></Image>
-                  <Paragraph appearance="lead">
+                  <Paragraph purpose="lead">
                     In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
                   </Paragraph>
                   <Paragraph>
@@ -107,7 +107,7 @@ export default function Collage() {
                     </UnorderedListItem>
                     <UnorderedListItem>Maak gebruik van opsommingstekens waar dat mogelijk is.</UnorderedListItem>
                   </UnorderedList>
-                  <Paragraph appearance="lead">
+                  <Paragraph purpose="lead">
                     In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
                   </Paragraph>
                   <Blockquote attribution="— Pippi Langkous">

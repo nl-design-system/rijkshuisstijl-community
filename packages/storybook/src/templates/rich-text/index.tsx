@@ -58,7 +58,7 @@ export default function Page() {
               <div className="rhc-margin-block-end-wrapper">
                 <div className="rhc-templates-spacing-2">
                   <Heading level={1}>Titel van de pagina</Heading>
-                  <Paragraph appearance="lead">Hier zou een korte introductie van de pagina kunnen staan.</Paragraph>
+                  <Paragraph purpose="lead">Hier zou een korte introductie van de pagina kunnen staan.</Paragraph>
                   <Figure>
                     <Image
                       alt="Multicolored tulip field"

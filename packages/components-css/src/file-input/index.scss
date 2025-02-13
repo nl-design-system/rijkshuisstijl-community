@@ -11,10 +11,11 @@
 }
 
 .rhc-file-input__feedback {
+  --nl-paragraph-font-size: var(--rhc-file-input-feedback-font-size);
+  --nl-paragraph-color: var(--rhc-file-input-feedback-color);
+
   align-items: center;
-  color: var(--rhc-file-input-feedback-color);
   display: flex;
-  font-size: var(--rhc-file-input-feedback-font-size);
   padding-inline-end: var(--rhc-file-padding-inline-end);
   padding-inline-start: var(--rhc-file-padding-inline-start);
 }

@@ -13,19 +13,19 @@ export class ButtonWebComponent extends BaseWebComponent {
   }
 
   render(): void {
-    if (!this.root) return;
+    if (!this.shadowRoot) return;
 
     const { appearance, disabled, ...restProps } = this.props;
 
     render(
       <Button
-        appearance={(appearance as ButtonProps['appearance']) ?? undefined}
-        disabled={Boolean(disabled) as ButtonProps['disabled']}
+        appearance={(appearance as ButtonWebComponentAttributes['appearance']) ?? undefined}
+        disabled={Boolean(disabled) as ButtonWebComponentAttributes['disabled']}
         {...restProps}
       >
         <slot />
       </Button>,
-      this.root,
+      this.shadowRoot,
     );
   }
 }
