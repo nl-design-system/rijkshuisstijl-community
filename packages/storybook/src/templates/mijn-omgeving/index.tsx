@@ -269,14 +269,6 @@ export default function MijnOmgeving() {
             ),
           },
         ]}
-        subFooter={
-          <LinkList className="rhc-subfooter-details">
-            <LinkListLink href="#">Privacy</LinkListLink>
-            <LinkListLink href="#">Cookies</LinkListLink>
-            <LinkListLink href="#">Copyright</LinkListLink>
-            <LinkListLink href="#">Toegankelijkheid</LinkListLink>
-          </LinkList>
-        }
       />
     </>
   );

@@ -91,11 +91,17 @@
 .rhc-page-subfooter__content {
   align-items: center;
   display: flex;
+  flex-direction: row;
   gap: var(--rhc-space-400);
   justify-content: space-between;
+
   @media (width <= 1024px) {
-    & {
-      flex-direction: column;
+    flex-direction: column;
+  }
+
+  @media (width >= 1024px) {
+    &:has(> :only-child) {
+      flex-direction: row-reverse;
     }
   }
 }
@@ -108,20 +114,6 @@
   text-decoration: none;
   &:hover {
     text-decoration: var(--rhc-sidenav-link-active-text-decoration);
-  }
-}
-
-.rhc-subfooter-details {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  & * {
-    display: flex;
-    justify-content: center;
-  }
-  @media (width <= 780px) {
-    flex-direction: column;
-    justify-content: center;
   }
 }
 
