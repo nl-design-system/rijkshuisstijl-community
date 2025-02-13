@@ -3,20 +3,10 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@mixin rhc-code-input__display-flex {
-  display: flex;
-}
-
 @mixin rhc-code-input-group {
   column-gap: var(--rhc-code-input-group-column-gap);
+  display: flex;
   flex-direction: row;
-  @include rhc-code-input__display-flex;
-}
-
-@mixin rhc-code-input-container {
-  @include rhc-code-input__display-flex;
-
-  flex-direction: column;
 }
 
 @mixin rhc-code-input {
