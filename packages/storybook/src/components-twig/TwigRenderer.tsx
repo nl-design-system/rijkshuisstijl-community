@@ -1,11 +1,5 @@
 /* eslint-disable react/display-name */
 import Twig from 'twig';
-import attributesMacro from './attributes.twig?raw';
-
-Twig.twig({
-  data: attributesMacro,
-  id: 'attributes.twig',
-});
 
 interface TwigTemplateProps {
   [index: string]: string | number;
