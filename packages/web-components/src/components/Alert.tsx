@@ -7,36 +7,27 @@ export type AlertWebComponentAttributes = AlertProps;
 
 export class AlertWebComponent extends BaseWebComponent {
   static override readonly tagName: string = 'rhc-alert';
-  static override readonly observedAttributes: string[] = ['type', 'heading', 'headinglevel', 'messagetext'];
 
   constructor() {
     super(stylesheet);
   }
 
-  override setupRestProps(): void {
-    for (const attributeName of this.getAttributeNames()) {
-      if (AlertWebComponent.observedAttributes.includes(attributeName)) continue;
-      this.restProps[attributeName] = this.getAttribute(attributeName);
-    }
-  }
-
   render(): void {
-    if (!this.root) return;
+    if (!this.shadowRoot) return;
+
+    const { heading, type, headinglevel, messagetext, ...restProps } = this.props;
+
     render(
       <Alert
-        heading={(this.getAttribute('heading') as AlertProps['heading']) ?? 'default heading'}
-        type={(this.getAttribute('type') as AlertProps['type']) ?? 'info'}
-        headingLevel={
-          (this.getAttribute('headingLevel') && Number(this.getAttribute('headingLevel'))) as AlertProps['headingLevel']
-        }
-        textContent={
-          (this.getAttribute('messageText') as AlertProps['textContent']) ?? 'This is a default alert message.'
-        }
-        {...this.restProps}
+        heading={(heading as AlertWebComponentAttributes['heading']) ?? 'default heading'}
+        headingLevel={(headinglevel && Number(headinglevel)) as AlertWebComponentAttributes['headingLevel']}
+        textContent={(messagetext as AlertWebComponentAttributes['textContent']) ?? 'This is a default alert message.'}
+        type={(type as AlertWebComponentAttributes['type']) ?? 'info'}
+        {...restProps}
       >
         <slot />
       </Alert>,
-      this.root,
+      this.shadowRoot,
     );
   }
 }

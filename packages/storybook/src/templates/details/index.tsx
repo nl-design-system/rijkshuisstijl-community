@@ -79,7 +79,7 @@ export default function Details() {
             <div className="utrecht-page-content rhc-templates-page-content rhc-templates-page-palin">
               <Article>
                 <div className="rhc-margin-block-end-wrapper">
-                  <Paragraph appearance="lead">
+                  <Paragraph purpose="lead">
                     De Arbeidstijdenwet geeft regels voor werktijden, pauzes en rusttijden van werknemers. Met deze
                     regels wil de Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de combinatie
                     van werk, privé en zorgtaken gemakkelijker maken.
@@ -138,8 +138,11 @@ export default function Details() {
         </div>
       </PageBody>
       <Footer
-        appearanceLevel={3}
-        heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+        appearanceLevel={4}
+        backtotop={true}
+        heading="De Rijksoverheid. Voor Nederland"
+        preFooter={true}
+        preFooterMessage="Water, Energie en Maatschappij"
         columns={[
           {
             heading: 'Service',
@@ -201,6 +204,14 @@ export default function Details() {
             ),
           },
         ]}
+        subFooter={
+          <LinkList className="rhc-subfooter-details">
+            <LinkListLink href="#">Privacy</LinkListLink>
+            <LinkListLink href="#">Cookies</LinkListLink>
+            <LinkListLink href="#">Copyright</LinkListLink>
+            <LinkListLink href="#">Toegankelijkheid</LinkListLink>
+          </LinkList>
+        }
       />
     </>
   );

@@ -1,12 +1,11 @@
 import { Alert as UtrechtAlert } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { PropsWithChildren, ReactNode, RefObject } from 'react';
+import { PropsWithChildren, ReactNode, Ref } from 'react';
 import { Heading, type HeadingLevel } from './Heading';
 import { Icon } from './Icon';
 import { Paragraph } from './Paragraph';
-
 export interface AlertProps {
-  ref?: RefObject<HTMLDivElement>;
+  ref?: Ref<HTMLDivElement>;
   type: 'info' | 'ok' | 'warning' | 'error';
   heading?: ReactNode;
   headingLevel?: HeadingLevel;

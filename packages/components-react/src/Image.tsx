@@ -1,12 +1,12 @@
 import { Image as UtrechtImage, type ImageProps as UtrechtImageProps } from '@utrecht/component-library-react';
-import { ForwardedRef, forwardRef } from 'react';
+import { Ref } from 'react';
 
-export { type UtrechtImageProps as ImageProps };
+export interface ImageProps extends UtrechtImageProps {
+  ref?: Ref<HTMLImageElement>;
+}
 
-export const Image = forwardRef(
-  ({ className, ...restProps }: UtrechtImageProps, ref: ForwardedRef<HTMLImageElement>) => (
-    <UtrechtImage {...restProps} photo className={className} ref={ref} />
-  ),
+export const Image = ({ ref, className, ...restProps }: ImageProps) => (
+  <UtrechtImage {...restProps} photo className={className} ref={ref} />
 );
 
 Image.displayName = 'Image';

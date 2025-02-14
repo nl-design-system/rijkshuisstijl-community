@@ -2,13 +2,13 @@
 
 # Rijkshuisstijl Community icon component
 
-Dit component is een wrapper om een React Node SVG element. Door dit component te gebruiken heeft deze constant dezelfde styling en grootte.
+Dit component is een wrapper om een SVG element. Door dit component te gebruiken heeft deze constant dezelfde styling en grootte.
 
-# Usage
+## Usage
 
 Dit component kan op verschillende manieren worden gebruikt. Hieronder staan de verschillende manieren beschreven, beginnend met de makkelijkste manier.
 
-- Standaard worden is er de optie om een icon property mee te geven met dit component, wat staat voor een van de ondersteunde icon IDs uit de [icon set](?path=/docs/rhc-templates-default-icon-set--docs) van de Rijkshuisstijl Community.
+- Standaard is er de optie om een icon property mee te geven met dit component, wat staat voor een van de ondersteunde icon IDs uit de [icon set](?path=/docs/rhc-templates-default-icon-set--docs) van de Rijkshuisstijl Community.
 
 ```tsx
 import { Icon } from from '@rijkshuisstijl-community/components-react';

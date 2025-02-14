@@ -3544,11 +3544,15 @@
           "inline-start": {
             "value": "{rhc.space.500}",
             "type": "spacing"
+          },
+          "inline-end": {
+            "value": "{rhc.space.500}",
+            "type": "spacing"
           }
         },
         "flex": {
           "direction": {
-            "value": "row",
+            "value": "column",
             "type": "flexDirection"
           }
         }
@@ -4489,6 +4493,10 @@
             "type": "spacing"
           },
           "content": {
+            "font-size": {
+              "value": "{rhc.font-size.paragraph.small}",
+              "type": "fontSizes"
+            },
             "column-gap": {
               "value": "{rhc.space.100}",
               "type": "spacing"
@@ -4683,6 +4691,10 @@
             }
           },
           "content": {
+            "font-size": {
+              "value": "{rhc.font-size.paragraph.small}",
+              "type": "fontSizes"
+            },
             "column-gap": {
               "value": "{rhc.space.100}",
               "type": "space"
@@ -5135,7 +5147,7 @@
     }
   },
   "components/paragraph": {
-    "utrecht": {
+    "nl": {
       "paragraph": {
         "color": {
           "value": "{rhc.color.foreground.lint}",

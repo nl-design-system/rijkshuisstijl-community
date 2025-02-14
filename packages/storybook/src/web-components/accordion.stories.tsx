@@ -6,11 +6,13 @@ import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 AccordionWebComponent.define();
 
-const AccordionWrapper = ({ appearance, icon, sections }: AccordionWebComponentAttributes) => {
+const AccordionWrapper = ({ appearance, icon, sections, heading, headingLevel }: AccordionWebComponentAttributes) => {
   return createElement('rhc-accordion', {
     appearance: appearance,
     icon: icon?.toString(),
     sections: JSON.stringify(sections),
+    heading: heading,
+    headingLevel: headingLevel,
   });
 };
 
@@ -54,6 +56,7 @@ const meta = {
   args: {
     icon: 'default',
     heading: '',
+    headinglevel: '',
   },
   tags: ['autodocs'],
   parameters: {

@@ -55,25 +55,28 @@
   grid-template-columns: 1fr 2fr auto auto;
 }
 @mixin rhc-message-list__item__label {
-  --utrecht-paragraph-font-weight: var(--rhc-message-list-item-label-font-weight);
+  --nl-paragraph-font-weight: var(--rhc-message-list-item-label-font-weight);
+  --nl-paragraph-font-size: var(--rhc-message-list-item-label-font-size);
+  --nl-paragraph-line-height: var(--rhc-message-list-item-label-line-height);
 
   color: var(--rhc-message-list-item-heading-color);
   column-gap: var(--rhc-space-100);
   display: flex;
   font-family: var(--rhc-message-list-item-label-font-family), sans-serif;
-  font-size: var(--rhc-message-list-item-label-font-size);
-  font-weight: var(--rhc-message-list-item-label-font-weight);
   grid-area: label;
-  line-height: var(--rhc-message-list-item-label-line-height);
   margin-block: 0;
 }
 @mixin rhc-message-list__item__description {
-  color: var(--rhc-color-foreground-subdued, inherit);
+  --nl-paragraph-color: var(--rhc-color-foreground-subdued, inherit);
+  --nl-paragraph-font-size: var(--rhc-message-list-item-content-font-size);
+
   grid-area: description;
   margin-block: 0;
 }
 @mixin rhc-message-list__item__meta-data {
-  color: var(--rhc-color-foreground-subdued, inherit);
+  --nl-paragraph-color: var(--rhc-color-foreground-subdued, inherit);
+  --nl-paragraph-font-size: var(--rhc-message-list-item-content-font-size);
+
   grid-area: meta;
   margin-block: 0;
 }

@@ -7,50 +7,44 @@ export type HeroWebComponentAttributes = HeroProps;
 
 export class HeroWebComponent extends BaseWebComponent {
   static override readonly tagName: string = 'rhc-hero';
-  static override readonly observedAttributes: string[] = [
-    'aspectratio',
-    'heading',
-    'imagealt',
-    'subheading',
-    'textalign',
-    'borderradiuscorner',
-    'headinglevel',
-    'imagesrc',
-  ];
 
   constructor() {
     super(stylesheet);
   }
 
-  override setupRestProps(): void {
-    for (const attributeName of this.getAttributeNames()) {
-      if (HeroWebComponent.observedAttributes.includes(attributeName)) continue;
-      this.restProps[attributeName] = this.getAttribute(attributeName);
-    }
-  }
-
   render(): void {
-    if (!this.root) return;
+    if (!this.shadowRoot) return;
+
+    const {
+      aspectratio,
+      borderradiuscorner,
+      heading,
+      imagealt,
+      subheading,
+      textalign,
+      headinglevel,
+      imagesrc,
+      ...restProps
+    } = this.props;
+
     render(
       <Hero
-        aspectRatio={(this.getAttribute('aspectRatio') as HeroProps['aspectRatio']) ?? undefined}
-        borderRadiusCorner={this.getAttribute('borderRadiusCorner') as HeroProps['borderRadiusCorner']}
-        heading={this.getAttribute('heading') ?? 'default heading'}
-        imageAlt={this.getAttribute('imageAlt') ?? 'image alt'}
-        subHeading={this.getAttribute('subHeading') ?? 'sub heading'}
-        textAlign={this.getAttribute('textAlign') as HeroProps['textAlign']}
-        headingLevel={
-          (this.getAttribute('headingLevel') && Number(this.getAttribute('headingLevel'))) as HeroProps['headingLevel']
-        }
+        aspectRatio={(aspectratio as HeroWebComponentAttributes['aspectRatio']) ?? undefined}
+        borderRadiusCorner={borderradiuscorner as HeroWebComponentAttributes['borderRadiusCorner']}
+        heading={heading ?? 'default heading'}
+        headingLevel={(headinglevel && Number(headinglevel)) as HeroWebComponentAttributes['headingLevel']}
+        imageAlt={imagealt ?? 'image alt'}
+        subHeading={subheading ?? 'sub heading'}
+        textAlign={textalign as HeroWebComponentAttributes['textAlign']}
         imageSrc={
-          this.getAttribute('imageSrc') ??
+          imagesrc ??
           'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg'
         }
-        {...this.restProps}
+        {...restProps}
       >
         <slot />
       </Hero>,
-      this.root,
+      this.shadowRoot,
     );
   }
 }

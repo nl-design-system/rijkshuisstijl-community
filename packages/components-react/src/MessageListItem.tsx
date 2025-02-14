@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { forwardRef, HTMLAttributes, ReactNode } from 'react';
+import { HTMLAttributes, ReactNode, Ref } from 'react';
 import { DotBadge, DotBadgeProps } from './DotBadge';
 import { Icon } from './Icon';
 import { Paragraph } from './Paragraph';
@@ -10,28 +10,32 @@ export interface MessageListItemProps extends HTMLAttributes<HTMLLIElement> {
   href: string;
   metaData?: ReactNode;
   withBadge?: DotBadgeProps;
+  ref?: Ref<HTMLLIElement>;
 }
 
-export const MessageListItem = forwardRef<HTMLLIElement, MessageListItemProps>(
-  ({ label, description, href, metaData, className, withBadge, ...restProps }, ref) => (
-    <li ref={ref} role={'listitem'} {...restProps}>
-      <a className={clsx('rhc-message-list__item', className)} href={href} role={'link'}>
-        <span className={'rhc-message-list__item-content'}>
-          <Paragraph className={clsx('rhc-message-list__item__label')}>
-            {withBadge && <DotBadge {...withBadge} />}
-            {label}
-          </Paragraph>
-          <Paragraph appearance="small" className={'rhc-message-list__item__description'}>
-            {description}
-          </Paragraph>
-          <Paragraph appearance="small" className={'rhc-message-list__item__meta-data'}>
-            {metaData}
-          </Paragraph>
-          <Icon className={'rhc-message-list__item__end-icon'} icon={'chevron-right'} />
-        </span>
-      </a>
-    </li>
-  ),
+export const MessageListItem = ({
+  ref,
+  label,
+  description,
+  href,
+  metaData,
+  className,
+  withBadge,
+  ...restProps
+}: MessageListItemProps) => (
+  <li ref={ref} role={'listitem'} {...restProps}>
+    <a className={clsx('rhc-message-list__item', className)} href={href} role={'link'}>
+      <span className={'rhc-message-list__item-content'}>
+        <Paragraph className={clsx('rhc-message-list__item__label')}>
+          {withBadge && <DotBadge {...withBadge} />}
+          {label}
+        </Paragraph>
+        <Paragraph className={'rhc-message-list__item__description'}>{description}</Paragraph>
+        <Paragraph className={'rhc-message-list__item__meta-data'}>{metaData}</Paragraph>
+        <Icon className={'rhc-message-list__item__end-icon'} icon={'chevron-right'} />
+      </span>
+    </a>
+  </li>
 );
 
 MessageListItem.displayName = 'MessageListItem';
