@@ -18,4 +18,5 @@ module.exports = {
       },
     },
   ],
+  plugins: ['@zackad/prettier-plugin-twig'],
 };
