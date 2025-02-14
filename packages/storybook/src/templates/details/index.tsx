@@ -138,8 +138,11 @@ export default function Details() {
         </div>
       </PageBody>
       <Footer
-        appearanceLevel={3}
-        heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+        appearanceLevel={4}
+        backtotop={true}
+        heading="De Rijksoverheid. Voor Nederland"
+        preFooter={true}
+        preFooterMessage="Water, Energie en Maatschappij"
         columns={[
           {
             heading: 'Service',
@@ -201,6 +204,14 @@ export default function Details() {
             ),
           },
         ]}
+        subFooter={
+          <LinkList className="rhc-subfooter-details">
+            <LinkListLink href="#">Privacy</LinkListLink>
+            <LinkListLink href="#">Cookies</LinkListLink>
+            <LinkListLink href="#">Copyright</LinkListLink>
+            <LinkListLink href="#">Toegankelijkheid</LinkListLink>
+          </LinkList>
+        }
       />
     </>
   );
