@@ -54,8 +54,9 @@ export class BreadcrumbNavWebComponent extends BaseWebComponent {
 
     const { elements, ...restProps } = this.props;
 
+    if (!elements) throw new Error("Elements wasn't passed upon element.");
     const parsedElements = JSON.parse(elements);
-    if (!parsedElements) return;
+    if (!parsedElements) throw new Error("Elements couldn't be parsed correctly.");
 
     render(
       <BreadcrumbNav {...restProps}>
