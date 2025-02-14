@@ -11,29 +11,23 @@ interface CardPropsBase {
   ref?: Ref<HTMLDivElement>;
 }
 
-export interface CardProps extends CardPropsBase {
-  appearance?: 'default';
-  button?: ReactNode;
-  icon?: ReactNode;
-  imageSrc?: string;
-  imageAlt?: string;
-  description?: ReactNode;
-  metadata?: ReactNode;
-  linkLabel?: string;
-}
-
-export interface FullBleedCardProps extends CardPropsBase {
-  appearance?: 'full-bleed';
-  imageSrc: string;
-  description?: ReactNode;
-  metadata?: ReactNode;
-  imageAlt?: string;
-}
-
 export interface HorizontalImageCardProps extends CardPropsBase {
   appearance?: 'horizontal';
   imageSrc: string;
   imageAlt?: string;
+}
+
+export interface FullBleedCardProps extends Omit<HorizontalImageCardProps, 'appearance'> {
+  appearance?: 'full-bleed';
+  description?: ReactNode;
+  metadata?: ReactNode;
+}
+
+export interface CardProps extends Partial<Omit<FullBleedCardProps, 'appearance'>> {
+  appearance?: 'default';
+  button?: ReactNode;
+  icon?: ReactNode;
+  linkLabel?: string;
 }
 
 export const Card = (props: PropsWithChildren<CardProps | FullBleedCardProps | HorizontalImageCardProps>) => {
@@ -111,9 +105,6 @@ export const FullBleedCard = ({
     </span>
     {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
     <div className="rhc-card__content">
-      <div className="rhc-card__image-container">
-        {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
-      </div>
       <div className="rhc-card__heading">{heading}</div>
       <div className="rhc-card__description">{description}</div>
       <div className="rhc-card__metadata">{metadata}</div>
