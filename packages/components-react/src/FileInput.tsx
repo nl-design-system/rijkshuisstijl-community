@@ -11,7 +11,9 @@ export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
   allowedFileTypes: string;
   fileSizeErrorMessage: string;
   fileTypeErrorMessage: string;
-  onValueChange?: (callbackFiles: File[]) => void; // eslint-disable-line no-unused-vars
+  // TODO: figure out why disabling is needed; works fine in editor but not in lint script for some reason
+  // eslint-disable-next-line no-unused-vars
+  onValueChange?: (callbackFiles: File[]) => void;
   defaultFiles?: File[];
 }
 
