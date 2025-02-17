@@ -27,21 +27,20 @@ Gebruik dit component **niet** voor andere numerieke invoervelden zoals telefoon
 ## Design tokens
 
 ```JSON
-    "rhc": {
-      "code-input-group": {
-        "column-gap": {
-          "value": "{}",
-          "type": "spacing"
-        }
+{
+  "rhc": {
+    "code-input-group": {
+      "column-gap": {
+        "value": "{}",
+        "type": "spacing"
+      }
+    },
+    "code-input": {
+      "size": {
+        "value": "{}",
+        "type": "spacing"
       }
     }
-
-    "rhc": {
-      "code-input": {
-        "size": {
-          "value": "{}",
-          "type": "spacing"
-        }
-      }
-    }
+  }
+}
 ```

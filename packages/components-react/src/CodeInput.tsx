@@ -8,11 +8,11 @@ export interface CodeInputProps extends TextboxProps {
   ref: ForwardedRef<HTMLInputElement>;
 }
 
-export const CodeInput = ({ capitalize = false, ref, ...restProps }: CodeInputProps) => {
+export const CodeInput = ({ capitalize = false, ref, className, ...restProps }: CodeInputProps) => {
   return (
     <TextInput
       {...restProps}
-      className={clsx('rhc-code-input', { 'rhc-code-input--capitalized': capitalize })}
+      className={clsx('rhc-code-input', { 'rhc-code-input--capitalized': capitalize }, className)}
       ref={ref}
       type="text"
     />

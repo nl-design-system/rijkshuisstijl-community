@@ -54,6 +54,13 @@ const meta = {
         defaultValue: { summary: 'false' },
       },
     },
+    label: {
+      name: 'label',
+      type: { name: 'string', required: false },
+      table: {
+        category: 'API',
+      },
+    },
   },
   args: {
     codeLength: 6,
@@ -69,15 +76,24 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-export const Capitalize: Story = {
+export const WithLabel: Story = {
+  args: {
+    label: 'Label',
+  },
+};
+
+export const CapitalizedLetters: Story = {
   args: {
     capitalize: true,
+    pattern: '[a-zA-Z]',
+    codeLength: 4,
   },
 };
 
 export const OnlyNumbers: Story = {
   args: {
     pattern: '[0-9]',
+    inputMode: 'numeric',
   },
 };
 
