@@ -5,7 +5,7 @@ import { SkipLink } from '.';
 
 describe('SkipLink', () => {
   it('renders a visible element', () => {
-    const { container } = render(<SkipLink />);
+    const { container } = render(<SkipLink href={'#'} />);
 
     const skipLink = container.querySelector(':only-child');
 
