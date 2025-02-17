@@ -30,9 +30,9 @@ export class BreadcrumbNavWebComponent extends BaseWebComponent {
   BreadcrumbNavLink({ active, classname, current, href, text, ...restProps }: BreadCrumbNavElement) {
     return (
       <BreadcrumbNavLink
-        active={(Boolean(active) as BreadcrumbNavLinkWebComponentAttributes['active']) ?? undefined}
+        active={(active === 'true') as BreadcrumbNavLinkWebComponentAttributes['active']}
         className={(classname as BreadcrumbNavLinkWebComponentAttributes['className']) ?? undefined}
-        current={Boolean(current) as BreadcrumbNavLinkWebComponentAttributes['current']}
+        current={(current === 'true') as BreadcrumbNavLinkWebComponentAttributes['current']}
         href={(href as BreadcrumbNavLinkWebComponentAttributes['href']) ?? undefined}
         {...restProps}
       >

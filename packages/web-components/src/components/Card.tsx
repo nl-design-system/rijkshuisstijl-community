@@ -27,7 +27,7 @@ export class CardWebComponent extends BaseWebComponent {
     return (
       <Button
         appearance={appearance as ButtonWebComponentAttributes['appearance']}
-        disabled={Boolean(disabled) as ButtonWebComponentAttributes['disabled']}
+        disabled={(disabled === 'true') as ButtonWebComponentAttributes['disabled']}
         {...restProps}
       >
         {text}

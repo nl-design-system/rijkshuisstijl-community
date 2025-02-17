@@ -17,7 +17,6 @@ const CheckboxWrapper = ({
   checked,
   ...restProps
 }: any) => {
-  console.log('wrapper - restProps', restProps);
   return createElement('rhc-Checkbox', {
     appearance,
     disabled: disabled?.toString(),
@@ -223,7 +222,7 @@ export const IndeterminateAndFocusVisible = {
 
 export const IndeterminateAndDisabled = {
   args: {
-    indeterminate: '#checkbox',
-    disabled: '#checkbox',
+    indeterminate: true,
+    disabled: true,
   },
 } as StoryObj<typeof meta>;
