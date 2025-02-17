@@ -7,7 +7,8 @@
   "keywords": [
     "nl-design-system"
   ],
-  "private": "true",
+  "private": false,
+  "type": "module",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -19,7 +20,10 @@
   },
   "scripts": {
     "prebuild": "npm run clean",
-    "clean": "rimraf dist/"
+    "build": "npm-run-all build:**",
+    "build:components": "rollup --config rollup.config.mjs",
+    "clean": "rimraf dist/",
+    "lint": "tsc --project ./tsconfig.json --noEmit"
   },
   "files": [
     "dist/"
@@ -27,5 +31,29 @@
   "sideEffects": false,
   "dependencies": {
     "@rijkshuisstijl-community/components-css": "workspace:*"
+  },
+  "devDependencies": {
+    "@babel/core": "7.26.8",
+    "@babel/plugin-transform-runtime": "7.26.8",
+    "@babel/preset-env": "7.26.8",
+    "@babel/preset-typescript": "7.26.0",
+    "@babel/runtime": "7.26.7",
+    "@rollup/plugin-babel": "6.0.4",
+    "@rollup/plugin-commonjs": "28.0.2",
+    "@rollup/plugin-node-resolve": "15.3.0",
+    "@types/lodash.chunk": "4.2.9",
+    "lodash.chunk": "4.2.0",
+    "npm-run-all": "4.1.5",
+    "rimraf": "6.0.1",
+    "rollup": "4.34.6",
+    "rollup-plugin-copy": "3.5.0",
+    "rollup-plugin-filesize": "10.0.0",
+    "rollup-plugin-node-externals": "8.0.0",
+    "rollup-plugin-node-polyfills": "0.2.1",
+    "rollup-plugin-peer-deps-external": "2.2.4",
+    "rollup-plugin-postcss": "4.0.2",
+    "rollup-plugin-typescript2": "0.36.0",
+    "tslib": "2.8.1",
+    "typescript": "5.7.3"
   }
 }
