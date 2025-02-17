@@ -1,12 +1,15 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import {
+  Button,
   Card,
   CardProps,
   FullBleedCardProps,
   HorizontalImageCardProps,
+  Icon,
 } from '@rijkshuisstijl-community/components-react';
 import { render } from 'preact';
 import { BaseWebComponent } from './BaseComponent';
+import { ButtonWebComponentAttributes } from './Button';
 
 export type CardWebComponentAttributes = CardProps;
 export type FullBleedCardPropsWebComponentAttributes = FullBleedCardProps;
@@ -17,6 +20,19 @@ export class CardWebComponent extends BaseWebComponent {
 
   constructor() {
     super(stylesheet);
+  }
+
+  Button({ appearance, disabled, text, ...restProps }: { [key: string]: string }) {
+    console.log('Button - start');
+    return (
+      <Button
+        appearance={appearance as ButtonWebComponentAttributes['appearance']}
+        disabled={Boolean(disabled) as ButtonWebComponentAttributes['disabled']}
+        {...restProps}
+      >
+        {text}
+      </Button>
+    );
   }
 
   render(): void {
@@ -34,10 +50,18 @@ export class CardWebComponent extends BaseWebComponent {
       title,
       classname,
       heading,
+      button,
       ...restProps
     } = this.props;
 
     let component;
+    let buttonParsed;
+
+    console.log('button prop', button);
+
+    if (button) {
+      buttonParsed = JSON.parse(button);
+    }
 
     switch (appearance) {
       case 'full-bleed':
@@ -74,15 +98,16 @@ export class CardWebComponent extends BaseWebComponent {
           </Card>
         );
         break;
-      default:
+      default: {
         component = (
           <Card
             appearance={appearance as CardWebComponentAttributes['appearance']}
+            button={buttonParsed && (this.Button(buttonParsed) as CardWebComponentAttributes['button'])}
             className={(classname as CardWebComponentAttributes['className']) ?? undefined}
             description={(description as CardWebComponentAttributes['description']) ?? undefined}
             heading={(heading as CardWebComponentAttributes['heading']) ?? undefined}
             href={(href as CardWebComponentAttributes['href']) ?? undefined}
-            icon={(icon as CardWebComponentAttributes['icon']) ?? undefined}
+            icon={icon && ((<Icon icon={icon} />) as CardWebComponentAttributes['icon'])}
             imageAlt={(imagealt as CardWebComponentAttributes['imageAlt']) ?? undefined}
             imageSrc={(imagesrc as CardWebComponentAttributes['imageSrc']) ?? undefined}
             linkLabel={(linklabel as CardWebComponentAttributes['linkLabel']) ?? undefined}
@@ -93,6 +118,7 @@ export class CardWebComponent extends BaseWebComponent {
             <slot />
           </Card>
         );
+      }
     }
 
     render(component, this.shadowRoot);
