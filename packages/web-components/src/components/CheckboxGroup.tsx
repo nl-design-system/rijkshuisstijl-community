@@ -1,12 +1,12 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
-import { Checkbox, CheckboxProps } from '@rijkshuisstijl-community/components-react';
+import { CheckboxGroup, CheckboxGroupProps } from '@rijkshuisstijl-community/components-react';
 import { render } from 'preact';
 import { BaseWebComponent } from './BaseComponent';
 
-export type CheckboxWebComponentAttributes = CheckboxProps;
+export type CheckboxGroupWebComponentAttributes = CheckboxGroupProps;
 
-export class CheckboxWebComponent extends BaseWebComponent {
-  static override readonly tagName: string = 'rhc-checkbox';
+export class CheckboxGroupWebComponent extends BaseWebComponent {
+  static override readonly tagName: string = 'rhc-checkbox-group';
 
   constructor() {
     super(stylesheet);
@@ -15,21 +15,15 @@ export class CheckboxWebComponent extends BaseWebComponent {
   render(): void {
     if (!this.shadowRoot) return;
 
-    const { appearance, disabled, indeterminate, inputrequired, invalid, required, classname, checked, ...restProps } =
-      this.props;
+    const { classname, ...restProps } = this.props;
 
     render(
-      <Checkbox
-        appearance={(appearance as CheckboxWebComponentAttributes['appearance']) ?? undefined}
-        checked={(checked === 'true') as CheckboxWebComponentAttributes['checked']}
-        className={(classname as CheckboxWebComponentAttributes['className']) ?? undefined}
-        disabled={(disabled === 'true') as CheckboxWebComponentAttributes['disabled']}
-        indeterminate={(indeterminate === 'true') as CheckboxWebComponentAttributes['indeterminate']}
-        inputRequired={(inputrequired === 'true') as CheckboxWebComponentAttributes['inputRequired']}
-        invalid={(invalid === 'true') as CheckboxWebComponentAttributes['invalid']}
-        required={(required === 'true') as CheckboxWebComponentAttributes['required']}
+      <CheckboxGroup
+        className={(classname as CheckboxGroupWebComponentAttributes['className']) ?? undefined}
         {...restProps}
-      />,
+      >
+        <slot />
+      </CheckboxGroup>,
       this.shadowRoot,
     );
   }
