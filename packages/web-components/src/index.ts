@@ -11,5 +11,6 @@ export {
 } from './components/BreadcrumbNav';
 export { ButtonWebComponent, type ButtonWebComponentAttributes } from './components/Button';
 export { CardWebComponent, type CardWebComponentAttributes } from './components/Card';
+export { CheckboxWebComponent, type CheckboxWebComponentAttributes } from './components/Checkbox';
 export { HeroWebComponent, type HeroWebComponentAttributes } from './components/Hero';
 export { IconWebComponent, type IconWebComponentAttributes } from './components/Icon';
