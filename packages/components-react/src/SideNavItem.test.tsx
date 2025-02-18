@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import { cleanup, render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
 import { createRef } from 'react';
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it } from 'vitest';
 import { SideNavItem } from './SideNavItem';
 
 describe('SideNaveItem', () => {
@@ -30,3 +30,5 @@ describe('SideNaveItem', () => {
     expect(screen.getByTestId('test-id')).toHaveClass(testClassName);
   });
 });
+
+afterEach(() => cleanup());

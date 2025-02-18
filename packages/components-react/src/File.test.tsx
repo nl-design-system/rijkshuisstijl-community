@@ -1,6 +1,6 @@
-import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
-import { describe, expect, it, vi } from 'vitest';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render, screen } from '@testing-library/react';
+import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import { File as FileComponent } from './File';
 beforeAll(() => {
   Object.defineProperty(window, 'URL', {
@@ -90,3 +90,5 @@ describe('FileComponent', () => {
     expect(linkElement).toHaveAttribute('href', 'mocked-url/example.png');
   });
 });
+
+afterEach(() => cleanup());

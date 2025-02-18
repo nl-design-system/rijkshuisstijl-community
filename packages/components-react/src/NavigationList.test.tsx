@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import { describe, expect, it } from 'vitest';
+import { cleanup, render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { afterEach, describe, expect, it } from 'vitest';
 import { NavigationList } from './NavigationList';
 
 describe('NavigationList', () => {
@@ -28,3 +28,5 @@ describe('NavigationList', () => {
     expect(screen.getByRole('list')).toHaveClass(testClassName);
   });
 });
+
+afterEach(() => cleanup());

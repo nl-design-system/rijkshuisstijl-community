@@ -1,8 +1,8 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it } from 'vitest';
 import { CodeInput } from './CodeInput';
 
 describe('CodeInput', () => {
@@ -48,3 +48,5 @@ describe('CodeInput', () => {
     expect(inputs[3]).not.toHaveClass('utrecht-textbox--focus-visible');
   });
 });
+
+afterEach(() => cleanup());

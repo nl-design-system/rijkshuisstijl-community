@@ -1,6 +1,6 @@
-import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render, screen } from '@testing-library/react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { Radio } from './Radio';
 import { RadioGroup } from './RadioGroup';
 
@@ -62,3 +62,5 @@ describe('RadioGroup', () => {
     expect(screen.getByTestId('test-group')).toBeInTheDocument();
   });
 });
+
+afterEach(() => cleanup());
