@@ -46,8 +46,8 @@ Returns:
     'truespeed'
   ] -%}
   {# Attributes is optional, so check if it exists. #}
-  {%- for key,value in attributes -%}
-    {%- if (value is iterable) -%}
+  {%- for key, value in attributes -%}
+    {%- if value is iterable -%}
       {%- set unique = [] -%}
       {%- for item in value -%}
         {%- if item not in unique -%}
@@ -55,12 +55,12 @@ Returns:
         {%- endif -%}
       {%- endfor -%}
       {%- set joined = unique|join(' ') -%}
-      {%- if joined != "" -%}
-        {%- set str = str ~ ' ' ~ key ~ '="' ~ joined|trim ~ '"' -%}
+      {%- if joined != '' -%}
+        {%- set str = str ~ ' ' ~ key ~ '="' ~ (joined|trim) ~ '"' -%}
       {%- endif -%}
     {%- elseif key in boolean_attributes -%}
       {%- set str = str ~ ' ' ~ key -%}
-    {%- else -%}
+    {% else %}
       {%- set str = str ~ ' ' ~ key ~ '="' ~ value ~ '"' -%}
     {%- endif -%}
   {%- endfor -%}

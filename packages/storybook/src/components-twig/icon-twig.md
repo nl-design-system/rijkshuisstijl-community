@@ -13,5 +13,7 @@ Het Twig icon component kan op gelimiteerde manieren worden gebruikt veregeleken
 - Standaard is er de optie om een icon property mee te geven met dit component, wat staat voor een van de ondersteunde icon IDs uit de [icon set](?path=/docs/rhc-templates-default-icon-set--docs) van de Rijkshuisstijl Community.
 
 ```twig
-{% include "icon.twig" with { icon: 'home' } %}
+{% include 'icon.twig' with {
+  icon: 'home'
+} %}
 ```

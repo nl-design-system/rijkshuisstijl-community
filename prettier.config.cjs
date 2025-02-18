@@ -17,5 +17,11 @@ module.exports = {
         singleQuote: false,
       },
     },
+    {
+      files: ['*.twig'],
+      options: {
+        plugins: ['@zackad/prettier-plugin-twig'],
+      },
+    },
   ],
 };
