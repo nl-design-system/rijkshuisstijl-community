@@ -14,6 +14,10 @@ export { CardWebComponent, type CardWebComponentAttributes } from './components/
 export { CheckboxGroupWebComponent, type CheckboxGroupWebComponentAttributes } from './components/CheckboxGroup';
 export { CheckboxWebComponent, type CheckboxWebComponentAttributes } from './components/Checkbox';
 export {
+  type FormFieldCheckboxGroupAttributes,
+  FormFieldCheckboxGroupWebComponent,
+} from './components/FormFieldCheckboxGroup';
+export {
   type FormFieldCheckboxOptionAttributes,
   FormFieldCheckboxOptionWebComponent,
 } from './components/FormFieldCheckboxOption';

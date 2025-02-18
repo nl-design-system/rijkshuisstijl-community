@@ -6,7 +6,7 @@ import { BaseWebComponent } from './BaseComponent';
 export type FormFieldCheckboxOptionAttributes = FormFieldCheckboxOptionProps;
 
 export class FormFieldCheckboxOptionWebComponent extends BaseWebComponent {
-  static override readonly tagName: string = 'rhc-checkbox-option';
+  static override readonly tagName: string = 'rhc-form-checkbox-option';
 
   constructor() {
     super(stylesheet);
