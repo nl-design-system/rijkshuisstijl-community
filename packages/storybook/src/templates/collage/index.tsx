@@ -4,7 +4,7 @@ import {
   Article,
   Blockquote,
   Button,
-  CodeInput,
+  CodeInputGroup,
   FormField,
   FormFieldCheckboxGroup,
   FormFieldCheckboxOption,
@@ -274,9 +274,9 @@ export default function Collage() {
                       </TableRow>
                     </TableFooter>
                   </Table>
-                  <CodeInput
-                    numberOfDigits={6}
-                    onChange={(value: String) => {
+                  <CodeInputGroup
+                    codeLength={6}
+                    onChange={(value: string) => {
                       console.log('onchange: ', value);
                     }}
                   />
