@@ -22,7 +22,10 @@ export abstract class BaseWebComponent extends HTMLElement {
   }
 
   setupProps(): void {
-    this.getAttributeNames().forEach((attributeName) => (this.props[attributeName] = this.getAttribute(attributeName)));
+    this.getAttributeNames().forEach((attributeName) => {
+      this.props[attributeName] = this.getAttribute(attributeName);
+      this.removeAttribute(attributeName);
+    });
   }
 
   connectedCallback(): void {

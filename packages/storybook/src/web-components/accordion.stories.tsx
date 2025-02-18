@@ -12,7 +12,7 @@ const AccordionWrapper = ({ appearance, icon, sections, heading, headingLevel }:
     icon: icon?.toString(),
     sections: JSON.stringify(sections),
     heading: heading,
-    headingLevel: headingLevel,
+    headingLevel: headingLevel?.toString(),
   });
 };
 
@@ -56,7 +56,7 @@ const meta = {
   args: {
     icon: 'default',
     heading: '',
-    headinglevel: '',
+    headingLevel: 0,
   },
   tags: ['autodocs'],
   parameters: {

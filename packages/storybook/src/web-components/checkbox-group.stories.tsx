@@ -1,11 +1,14 @@
-import { CheckboxGroupWebComponent, CheckboxWebComponent } from '@rijkshuisstijl-community/web-components';
+import {
+  CheckboxGroupWebComponent,
+  FormFieldCheckboxOptionWebComponent,
+} from '@rijkshuisstijl-community/web-components';
 import { Meta, StoryObj } from '@storybook/web-components';
 import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../community/checkbox-group.md?raw';
 
 CheckboxGroupWebComponent.define();
-CheckboxWebComponent.define();
+FormFieldCheckboxOptionWebComponent.define();
 
 const meta = {
   title: 'Web Components/CheckboxGroup',
@@ -33,21 +36,18 @@ export default meta;
 export const Default = {
   args: {
     children: [
-      createElement('rhc-Checkbox', {
+      createElement('rhc-checkbox-option', {
         key: 'checkbox-1',
         label: 'Checkbox 1',
       }),
-      createElement('rhc-Checkbox', {
+      createElement('rhc-checkbox-option', {
         key: 'checkbox-2',
         label: 'Checkbox 2',
       }),
-      createElement('rhc-Checkbox', {
+      createElement('rhc-checkbox-option', {
         key: 'checkbox-2',
         label: 'Checkbox 2',
       }),
-      // <FormFieldCheckboxOption key="checkbox-1" label="Checkbox 1" />,
-      // <FormFieldCheckboxOption key="checkbox-2" label="Checkbox 2" />,
-      // <FormFieldCheckboxOption key="checkbox-3" label="Checkbox 3" />,
     ],
   },
 } as StoryObj<typeof meta>;

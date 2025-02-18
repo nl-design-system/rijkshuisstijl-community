@@ -17,7 +17,7 @@ const CheckboxWrapper = ({
   checked,
   ...restProps
 }: any) => {
-  return createElement('rhc-Checkbox', {
+  return createElement('rhc-checkbox', {
     appearance,
     disabled: disabled?.toString(),
     indeterminate: indeterminate?.toString(),
@@ -26,7 +26,6 @@ const CheckboxWrapper = ({
     required: required?.toString(),
     classname,
     checked: checked?.toString(),
-    id: 'three',
     ...restProps,
   });
 };
