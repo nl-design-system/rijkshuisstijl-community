@@ -30,9 +30,9 @@ export class BreadcrumbNavWebComponent extends BaseWebComponent {
   BreadcrumbNavLink({ active, classname, current, href, text, ...restProps }: BreadCrumbNavElement) {
     return (
       <BreadcrumbNavLink
-        active={(Boolean(active) as BreadcrumbNavLinkWebComponentAttributes['active']) ?? undefined}
+        active={(active === 'true') as BreadcrumbNavLinkWebComponentAttributes['active']}
         className={(classname as BreadcrumbNavLinkWebComponentAttributes['className']) ?? undefined}
-        current={Boolean(current) as BreadcrumbNavLinkWebComponentAttributes['current']}
+        current={(current === 'true') as BreadcrumbNavLinkWebComponentAttributes['current']}
         href={(href as BreadcrumbNavLinkWebComponentAttributes['href']) ?? undefined}
         {...restProps}
       >
@@ -54,8 +54,9 @@ export class BreadcrumbNavWebComponent extends BaseWebComponent {
 
     const { elements, ...restProps } = this.props;
 
+    if (!elements) throw new Error("Elements wasn't passed upon element.");
     const parsedElements = JSON.parse(elements);
-    if (!parsedElements) return;
+    if (!parsedElements) throw new Error("Elements couldn't be parsed correctly.");
 
     render(
       <BreadcrumbNav {...restProps}>

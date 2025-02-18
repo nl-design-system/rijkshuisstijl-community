@@ -1,12 +1,39 @@
-import { Checkbox } from '@rijkshuisstijl-community/components-react';
+import { CheckboxWebComponent } from '@rijkshuisstijl-community/web-components';
 import { Meta, StoryObj } from '@storybook/react';
-import readme from './checkbox.md?raw';
+import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
+import readme from '../community/checkbox.md?raw';
+
+CheckboxWebComponent.define();
+
+const CheckboxWrapper = ({
+  appearance,
+  disabled,
+  indeterminate,
+  inputrequired,
+  invalid,
+  required,
+  classname,
+  checked,
+  ...restProps
+}: any) => {
+  return createElement('rhc-checkbox', {
+    appearance,
+    disabled: disabled?.toString(),
+    indeterminate: indeterminate?.toString(),
+    inputrequired: inputrequired?.toString(),
+    invalid: invalid?.toString(),
+    required: required?.toString(),
+    classname,
+    checked: checked?.toString(),
+    ...restProps,
+  });
+};
 
 const meta = {
-  title: 'Rijkshuisstijl/Checkbox',
-  id: 'rhc-checkbox',
-  component: Checkbox,
+  title: 'Web Components/Checkbox',
+  id: 'rhc-checkbox-web',
+  component: CheckboxWrapper,
   parameters: {
     status: {
       type: 'STABLE',
@@ -48,77 +75,80 @@ const meta = {
   },
   args: {
     'aria-label': 'checkbox-label',
+    id: 'checkbox',
   },
-} satisfies Meta<typeof Checkbox>;
+} as Meta<typeof CheckboxWebComponent>;
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
+export const Default = {} as StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Active = {
+  parameters: {
+    pseudo: {
+      active: '#checkbox',
+    },
+  },
+} as StoryObj<typeof meta>;
 
-export const Active: Story = {
+export const Hover = {
   parameters: {
-    pseudo: { active: true },
+    pseudo: { hover: '#checkbox' },
   },
-};
+} as StoryObj<typeof meta>;
 
-export const Hover: Story = {
+export const Focus = {
   parameters: {
-    pseudo: { hover: true },
+    pseudo: { focus: '#checkbox' },
   },
-};
+} as StoryObj<typeof meta>;
 
-export const Focus: Story = {
+export const FocusVisible = {
   parameters: {
-    pseudo: { focus: true },
+    pseudo: { focusVisible: '#checkbox' },
   },
-};
-export const FocusVisible: Story = {
-  parameters: {
-    pseudo: { focusVisible: true },
-  },
-};
-export const Disabled: Story = {
+} as StoryObj<typeof meta>;
+
+export const Disabled = {
   args: {
     disabled: true,
   },
-};
+} as StoryObj<typeof meta>;
 
-export const Invalid: Story = {
+export const Invalid = {
   args: {
     invalid: true,
   },
-};
+} as StoryObj<typeof meta>;
 
-export const Checked: Story = {
+export const Checked = {
   args: {
     checked: true,
     onChange: () => {},
   },
-};
+} as StoryObj<typeof meta>;
 
-export const CheckedAndActive: Story = {
-  args: {
-    checked: true,
-    onChange: () => {},
-  },
-  parameters: {
-    pseudo: { active: true },
-  },
-};
-
-export const CheckedAndHover: Story = {
+export const CheckedAndActive = {
   args: {
     checked: true,
     onChange: () => {},
   },
   parameters: {
-    pseudo: { hover: true },
+    pseudo: { active: '#checkbox' },
   },
-};
+} as StoryObj<typeof meta>;
 
-export const CheckedAndFocus: Story = {
+export const CheckedAndHover = {
+  args: {
+    checked: true,
+    onChange: () => {},
+  },
+  parameters: {
+    pseudo: { hover: '#checkbox' },
+  },
+} as StoryObj<typeof meta>;
+
+export const CheckedAndFocus = {
   args: {
     checked: true,
     onChange: () => {},
@@ -126,72 +156,72 @@ export const CheckedAndFocus: Story = {
   parameters: {
     pseudo: { focus: true },
   },
-};
+} as StoryObj<typeof meta>;
 
-export const CheckedAndFocusVisible: Story = {
+export const CheckedAndFocusVisible = {
   args: {
     checked: true,
     onChange: () => {},
   },
   parameters: {
-    pseudo: { focusVisible: true },
+    pseudo: { focusVisible: '#checkbox' },
     controls: { exclude: ['appearance'] },
   },
-};
+} as StoryObj<typeof meta>;
 
-export const CheckedAndDisabled: Story = {
+export const CheckedAndDisabled = {
   args: {
     checked: true,
     onChange: () => {},
     disabled: true,
   },
-};
+} as StoryObj<typeof meta>;
 
-export const Indeterminate: Story = {
+export const Indeterminate = {
   args: {
     indeterminate: true,
   },
-};
+} as StoryObj<typeof meta>;
 
-export const IndeterminateAndActive: Story = {
-  args: {
-    indeterminate: true,
-  },
-  parameters: {
-    pseudo: { active: true },
-  },
-};
-
-export const IndeterminateAndHover: Story = {
+export const IndeterminateAndActive = {
   args: {
     indeterminate: true,
   },
   parameters: {
-    pseudo: { hover: true },
+    pseudo: { active: '#checkbox' },
   },
-};
+} as StoryObj<typeof meta>;
 
-export const IndeterminateAndFocus: Story = {
+export const IndeterminateAndHover = {
   args: {
     indeterminate: true,
   },
   parameters: {
-    pseudo: { focus: true },
+    pseudo: { hover: '#checkbox' },
   },
-};
+} as StoryObj<typeof meta>;
 
-export const IndeterminateAndFocusVisible: Story = {
+export const IndeterminateAndFocus = {
   args: {
     indeterminate: true,
   },
   parameters: {
-    pseudo: { focusVisible: true, focus: true },
+    pseudo: { focus: '#checkbox' },
   },
-};
+} as StoryObj<typeof meta>;
 
-export const IndeterminateAndDisabled: Story = {
+export const IndeterminateAndFocusVisible = {
+  args: {
+    indeterminate: true,
+  },
+  parameters: {
+    pseudo: { focusVisible: '#checkbox', focus: '#checkbox' },
+  },
+} as StoryObj<typeof meta>;
+
+export const IndeterminateAndDisabled = {
   args: {
     indeterminate: true,
     disabled: true,
   },
-};
+} as StoryObj<typeof meta>;

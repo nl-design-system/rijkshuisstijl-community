@@ -1,14 +1,21 @@
 import { BreadcrumbNavWebComponent } from '@rijkshuisstijl-community/web-components';
-import { Meta, StoryObj } from '@storybook/web-components';
+import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/breadcrumb-nav/README.md?raw';
+import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 BreadcrumbNavWebComponent.define();
 
+const BreadcrumbNavWrapper = ({ elements }: any) => {
+  return createElement('rhc-breadcrumb-nav', {
+    elements: JSON.stringify(elements),
+  });
+};
+
 const meta = {
   title: 'Web Components/Breadcrumb navigation',
   id: 'rhc-breadcrumb-nav-web',
-  component: 'rhc-breadcrumb-nav',
+  component: BreadcrumbNavWrapper,
   argTypes: {},
   parameters: {
     status: {
@@ -33,7 +40,7 @@ export default meta;
 
 export const Default = {
   args: {
-    elements: JSON.stringify([
+    elements: [
       {
         type: 'LINK',
         href: 'https://example.com/',
@@ -58,13 +65,13 @@ export const Default = {
         rel: 'first',
         text: 'Example',
       },
-    ]),
+    ],
   },
 } as StoryObj<typeof meta>;
 
 export const Current = {
   args: {
-    elements: JSON.stringify([
+    elements: [
       {
         type: 'LINK',
         href: 'https://example.com/',
@@ -90,7 +97,7 @@ export const Current = {
         text: 'Example',
         current: 'true',
       },
-    ]),
+    ],
   },
   parameters: {
     docs: {
@@ -103,7 +110,7 @@ export const Current = {
 
 export const Separator = {
   args: {
-    elements: JSON.stringify([
+    elements: [
       {
         type: 'LINK',
         href: '/',
@@ -139,13 +146,13 @@ export const Separator = {
         text: 'Example',
         current: 'true',
       },
-    ]),
+    ],
   },
 } as StoryObj<typeof meta>;
 
 export const Active = {
   args: {
-    elements: JSON.stringify([
+    elements: [
       {
         type: 'LINK',
         href: 'https://example.com/',
@@ -171,13 +178,13 @@ export const Active = {
         active: 'true',
         current: 'true',
       },
-    ]),
+    ],
   },
 } as StoryObj<typeof meta>;
 
 export const DisabledAndCurrent = {
   args: {
-    elements: JSON.stringify([
+    elements: [
       {
         type: 'LINK',
         href: 'https://example.com/',
@@ -203,6 +210,6 @@ export const DisabledAndCurrent = {
         active: 'true',
         disabled: 'true',
       },
-    ]),
+    ],
   },
 } as StoryObj<typeof meta>;
