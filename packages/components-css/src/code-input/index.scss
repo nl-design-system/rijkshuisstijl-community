@@ -1,13 +1,9 @@
-@use "mixin";
-
 .rhc-code-input {
-  @include mixin.rhc-code-input;
-}
+  block-size: var(--rhc-code-input-size);
+  inline-size: var(--rhc-code-input-size);
+  text-align: center;
 
-.rhc-code-input-group {
-  @include mixin.rhc-code-input-group;
-}
-
-.rhc-code-input-container {
-  @include mixin.rhc-code-input-container;
+  &--capitalized {
+    text-transform: uppercase;
+  }
 }
