@@ -1,5 +1,14 @@
 import { Checkbox } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
+import anatomy from '@utrecht/components/checkbox/docs/anatomy.en.md?raw';
+import bestpractices from '@utrecht/components/checkbox/docs/best-practices.en.md?raw';
+import content from '@utrecht/components/checkbox/docs/content.nl.md?raw';
+import keyboard from '@utrecht/components/checkbox/docs/keyboard.en.md?raw';
+import references from '@utrecht/components/checkbox/docs/references.nl.md?raw';
+import relatedcomponents from '@utrecht/components/checkbox/docs/related-components.en.md?raw';
+import technologypdf from '@utrecht/components/checkbox/docs/technology-pdf.nl.md?raw';
+import usage from '@utrecht/components/checkbox/docs/usage.nl.md?raw';
+import wcag from '@utrecht/components/checkbox/docs/wcag.nl.md?raw';
 import readme from './checkbox.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
@@ -14,7 +23,18 @@ const meta = {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
-        component: mergeMarkdown([readme]),
+        component: mergeMarkdown([
+          readme,
+          usage,
+          anatomy,
+          bestpractices,
+          content,
+          keyboard,
+          technologypdf,
+          relatedcomponents,
+          references,
+          wcag,
+        ]),
       },
     },
     figma:
@@ -28,10 +48,6 @@ const meta = {
     checked: {
       name: 'checked',
       type: { name: 'boolean', required: false },
-    },
-    onChange: {
-      name: 'onChange',
-      type: { name: 'function', required: false },
     },
     disabled: {
       name: 'disabled',

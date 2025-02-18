@@ -2,8 +2,6 @@
 
 # Rijkshuisstijl Community Checkbox component
 
-## Usage
-
 ```tsx
 import { Checkbox } from '@rijkshuisstijl-community/components-react';
 
