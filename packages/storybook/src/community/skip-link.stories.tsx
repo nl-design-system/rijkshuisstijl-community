@@ -1,7 +1,7 @@
 import { SkipLink, type SkipLinkProps } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/skip-link/README.md?raw';
 import clsx from 'clsx';
+import readme from './skip-link.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface SkipLinkStoryProps extends SkipLinkProps {
@@ -14,7 +14,7 @@ const SkipLinkStory = ({ visibility, visibleOnFocus, ...restProps }: SkipLinkSto
     className={clsx({
       'rhc-skip-link--visible-on-focus': visibleOnFocus,
       'rhc-skip-link--hidden': visibility === 'hidden',
-      'utrecht-skip-link--visible': visibility === 'visible',
+      'rhc-skip-link--visible': visibility === 'visible',
     })}
     {...restProps}
   />

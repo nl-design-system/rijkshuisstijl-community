@@ -35,8 +35,8 @@
 .rhc-skip-link:focus-visible {
   @include mixin.rhc-skip-link;
 
-  outline-color: var(--nl-skip-link-focus-visible-outline-color, var(--utrecht-focus-outline-color));
+  outline: var(--nl-skip-link-focus-visible-outline-color, var(--utrecht-focus-outline-color))
+    var(--nl-skip-link-focus-visible-outline-style, var(--utrecht-focus-outline-style))
+    var(--nl-skip-link-focus-visible-outline-width, var(--utrecht-focus-outline-width));
   outline-offset: var(--nl-skip-link-focus-visible-outline-offset, var(--utrecht-focus-outline-offset));
-  outline-style: var(--nl-skip-link-focus-visible-outline-style, var(--utrecht-focus-outline-style));
-  outline-width: var(--nl-skip-link-focus-visible-outline-width, var(--utrecht-focus-outline-width));
 }
