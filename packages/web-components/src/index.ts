@@ -21,5 +21,7 @@ export {
   type FormFieldCheckboxOptionAttributes,
   FormFieldCheckboxOptionWebComponent,
 } from './components/FormFieldCheckboxOption';
+export { type FormFieldRadioAttributes, FormFieldRadioWebComponent } from './components/FormFieldRadio';
+export { type FormFieldRadioGroupAttributes, FormFieldRadioGroupWebComponent } from './components/FormFieldRadioGroup';
 export { HeroWebComponent, type HeroWebComponentAttributes } from './components/Hero';
 export { IconWebComponent, type IconWebComponentAttributes } from './components/Icon';
