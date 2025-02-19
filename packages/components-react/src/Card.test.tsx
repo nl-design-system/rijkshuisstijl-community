@@ -1,8 +1,8 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
-import { render } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 import { ReactElement } from 'react';
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it } from 'vitest';
 import { Card, FullBleedCard, HorizontalImageCard } from '.';
 
 const linkTest = (component: ReactElement, href: string, title: string) => {
@@ -58,3 +58,5 @@ describe('Card', () => {
     });
   });
 });
+
+afterEach(() => cleanup());

@@ -1,6 +1,6 @@
-import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render, screen } from '@testing-library/react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { NumberBadge } from './NumberBadge';
 
 describe('numberBadge', () => {
@@ -26,3 +26,5 @@ describe('numberBadge', () => {
     expect(screen.getByTestId('test-id').getAttribute('value')).toBe('5555');
   });
 });
+
+afterEach(() => cleanup());

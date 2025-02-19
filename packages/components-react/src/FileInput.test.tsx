@@ -1,7 +1,7 @@
-import '@testing-library/jest-dom';
-import { fireEvent, render, waitFor } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, fireEvent, render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import { FileInput, FileInputProps } from './FileInput';
 
 beforeAll(() => {
@@ -136,3 +136,5 @@ describe('File Input tests', () => {
     expect(link).toHaveAttribute('target', '_blank');
   });
 });
+
+afterEach(() => cleanup());

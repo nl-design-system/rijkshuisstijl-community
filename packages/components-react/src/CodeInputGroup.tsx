@@ -35,7 +35,7 @@ export const CodeInputGroup = ({
   const fullPattern = `^${pattern}{1,${codeLength}}$`;
 
   const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
-    const index = Number(event.target.dataset.key);
+    const index = Number(event.target.dataset['key']);
     const input = event.target.value;
 
     if (regex.test(input)) {

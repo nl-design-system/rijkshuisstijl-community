@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import { cleanup, render, screen } from '@testing-library/react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { SideNavList } from './SideNavList';
 
 describe('SideNavList', () => {
@@ -36,3 +36,5 @@ describe('SideNavList', () => {
     expect(list).toBeInstanceOf(HTMLUListElement);
   });
 });
+
+afterEach(() => cleanup());

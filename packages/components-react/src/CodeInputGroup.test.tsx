@@ -1,8 +1,8 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, it, vi } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { CodeInputGroup } from './CodeInputGroup';
 
 describe('CodeInputGroup', () => {
@@ -70,3 +70,5 @@ describe('CodeInputGroup', () => {
     });
   });
 });
+
+afterEach(() => cleanup());
