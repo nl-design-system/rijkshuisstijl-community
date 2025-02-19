@@ -1,78 +1,73 @@
 import {
-  // ActionGroup,
-  Card, //TODO: aanpassen naar Dev Ovh opbouw?
+  Card,
+  Figure,
   Footer,
   Heading,
   HeadingGroup,
   Hero,
-  Icon, //TODO: afmetingen aanpassen (is nu erg klein naast h2)
+  Icon,
   Image,
   Link,
   Logo,
   NavBar,
   PageContent,
   PageHeader,
-  // Paragraph,
-  // PreHeading,
-  // Section, //? Section Component RHC/NLDS?
-  // Subtitle, //TODO: toevoegen aan Hero?
 } from '@rijkshuisstijl-community/components-react';
 import {
-  // IconAffiliate, //TODO: moet in 2e card
   IconArrowRight,
   IconClipboardCheck,
-  // IconCode, //TODO: moet in 3e card
   IconFolders,
   IconJetpack,
-  // IconMessages, //TODO: moet in 1e card
   // IconPrompt, //Placeholder Dev.Ovh logo
   IconTerminal2,
 } from '@tabler/icons-react';
-import { BadgeList, DataBadge } from '@utrecht/component-library-react'; //? of DataBadge uit NLDS?
+import { BadgeList, DataBadge } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
-// import { ColumnLayout } from '@utrecht/component-library-react';
+// TODO: DataBadge, Heading, Link NL Design System Candidate gebruiken (+ RHC styling)
 
 export default function DevOvhHomepage() {
   return (
     <>
       <PageHeader>
-        <Logo organisation="Developer Overheid">
-          <Image
-            alt="Developer Overheid logo"
-            height={25}
-            src=" https://developer.overheid.nl/static/images/logo.e5300da726cb.svg"
-            width={25}
-          />
-        </Logo>
+        <Figure>
+          <Logo organisation="Developer Overheid">
+            <Image
+              alt="Developer Overheid logo"
+              height={25}
+              src=" https://developer.overheid.nl/static/images/logo.e5300da726cb.svg"
+              width={25}
+            />
+          </Logo>
+        </Figure>
         <NavBar
           items={[
             { id: '1', href: '/', label: 'API‘s' },
-            { id: '2', href: '/form', label: 'Repositories' },
-            { id: '3', href: '/details', label: 'Kennisbank' },
-            { id: '4', href: '/collage', label: 'Community' },
+            { id: '2', href: '/', label: 'Repositories' },
+            { id: '3', href: '/', label: 'Kennisbank' },
+            { id: '4', href: '/', label: 'Community' },
           ]}
         ></NavBar>
       </PageHeader>
 
-      <PageBody className="rhc-templates-page .rhc-templates-page-container">
-        <div className="rhc-templates-background-color-white rhc-templates-main-content">
+      <PageBody className="rhc-templates-page">
+        <div className="rhc-templates-main-content">
           <PageContent className="rhc-templates-page-content rhc-templates-background-color-white">
             <Hero
+              aspectRatio="16 / 9"
               heading="Developer Portal van de Nederlandse Overheid"
               headingLevel={1}
               imageAlt="Sterrenhemel"
               imageSrc="https://media.istockphoto.com/id/1369277204/vector/turquoise-green-starry-sky-illustration.jpg?s=612x612&w=0&k=20&c=zt_-oaVq_8yNHVe61pZQZ2nQXY6j0QiY6u09oScn8xU="
-              subHeading="Eén centrale plek voor de developer die voor of met de overheid ontwikkelt" //?is p, kan dit ook Subheading (ToDo status) zijn?
+              subHeading="Eén centrale plek voor de developer die voor of met de overheid ontwikkelt"
             ></Hero>
-
-            <section className="rhc-templates-card-container">
+            <section className="rhc-hero-cards-container">
               <Card
                 description="Ga in gesprek met andere developers en vind hier getting started guides, tutorials en tools."
                 heading="Onze community"
                 href="#"
-                imageAlt="Twee praat wolkjes"
-                imageSrc="./placeholder.jpg" //? kan dit ook een SVG/Icon zijn? (IconMessages)
-                linkLabel="Naar community" //? IconArrowRight toevoegen aan link?
+                imageAlt="Twee praat wolkjes die symbool staan voor in gesprek gaan met elkaar"
+                imageSrc="https://don.apps.digilab.network/img/tekstballonnen-met-punten.svg"
+                linkLabel="Naar community"
                 metadata="Metadata"
                 title="Onze community"
               ></Card>
@@ -81,9 +76,9 @@ export default function DevOvhHomepage() {
                 description="Bekijk welke API‘s er allemaal zijn en kom er achter hoe je jouw oplossing hier op kan laten aansluiten."
                 heading="Vind een API"
                 href="#"
-                imageAlt="Placeholder Image"
-                imageSrc="./placeholder.jpg" //? kan dit ook een SVG/Icon zijn? (IconAffiliate)
-                linkLabel="Zoek API‘"
+                imageAlt="Een wereld bol met daarbinnen connected dots, dit staat stymbool voor aansluiten"
+                imageSrc="https://don.apps.digilab.network/img/ict.svg"
+                linkLabel="Zoek API‘s"
                 metadata="Metadata"
                 title="Vind een API"
               ></Card>
@@ -92,8 +87,8 @@ export default function DevOvhHomepage() {
                 description="Vind bestaande repositories om bij aan te haken en ontdek wat er binnen welke organisatie beschikbaar is."
                 heading="Vind een repository"
                 href="#"
-                imageAlt="Placeholder Image"
-                imageSrc="./placeholder.jpg" //? kan dit ook een SVG zijn? (IconCode)
+                imageAlt="Een beeldscherm met een HTML closing tag, symbool voor computer code"
+                imageSrc="https://don.apps.digilab.network/img/computercode.svg"
                 linkLabel="Zoek repositories"
                 metadata="Metadata"
                 title="Vind een repository"
@@ -110,124 +105,126 @@ export default function DevOvhHomepage() {
                 </Heading>
               </HeadingGroup>
 
-              <div className="rhc-templates-card-container">
-                <Card
-                  appearance="full-bleed"
-                  heading="Ontwerp een API"
-                  href="#"
-                  imageAlt="Placeholder Image" //background color ipv image mogelijk?
-                  imageSrc="https://media.istockphoto.com/id/1095286208/nl/foto/licht-blauw-papierkleur-met-textuur-voor-achtergrond.jpg?s=612x612&w=0&k=20&c=M74rYkw4zXl2yf1OGhXR_Ronao8a4_3mxomHfU4z2Jk="
-                  metadata=""
-                  title="Ontwerp een API"
-                  description="Hier leggen we uit welke stappen je kunt doorlopen om snel en efficient een
+              <div className="rhc-templates-cards-container">
+                <div className="rhc-templates-card-container">
+                  <Card
+                    appearance="full-bleed"
+                    heading="Ontwerp een API"
+                    href="#"
+                    imageAlt="Placeholder Image" //background color ipv image mogelijk?
+                    imageSrc="https://media.istockphoto.com/id/1095286208/nl/foto/licht-blauw-papierkleur-met-textuur-voor-achtergrond.jpg?s=612x612&w=0&k=20&c=M74rYkw4zXl2yf1OGhXR_Ronao8a4_3mxomHfU4z2Jk="
+                    metadata=""
+                    title="Ontwerp een API"
+                    description="Hier leggen we uit welke stappen je kunt doorlopen om snel en efficient een
                         nieuwe REST API te ontwikkelen. We gaan hierbij uit van een design first aanpak, dus we starten 
                         met het API design."
-                >
-                  <DataBadge className="rhc-templates-databadge">
-                    <Image
-                      alt="Developer Overheid logo"
-                      height={16}
-                      src=" https://developer.overheid.nl/static/images/logo.e5300da726cb.svg"
-                      width={16}
-                    />
-                    Developer Overheid
-                  </DataBadge>
-                </Card>
+                  >
+                    <DataBadge className="rhc-templates-databadge">
+                      <Image
+                        alt="Developer Overheid logo"
+                        height={16}
+                        src=" https://developer.overheid.nl/static/images/logo.e5300da726cb.svg"
+                        width={16}
+                      />
+                      Developer Overheid
+                    </DataBadge>
+                  </Card>
 
-                <Card
-                  appearance="full-bleed"
-                  description="Open Source werken heeft veel voordelen. Maar hoe ziet de codebase van een gezond Open Source project er uit? En waar moet je nog meer rekening mee houden? Antwoorden daarop krijg je in dit artikel."
-                  heading="Start een Open Source project"
-                  href="#"
-                  imageAlt="Placeholder Image" //background color ipv image mogelijk?
-                  imageSrc="https://media.istockphoto.com/id/1095286208/nl/foto/licht-blauw-papierkleur-met-textuur-voor-achtergrond.jpg?s=612x612&w=0&k=20&c=M74rYkw4zXl2yf1OGhXR_Ronao8a4_3mxomHfU4z2Jk="
-                  metadata=""
-                  title="Start een Open Source project"
-                >
-                  <DataBadge className="rhc-templates-databadge">
-                    <Image
-                      alt="Developer Overheid logo"
-                      height={16}
-                      src=" https://developer.overheid.nl/static/images/logo.e5300da726cb.svg"
-                      width={16}
-                    />
-                    Developer Overheid
-                  </DataBadge>
-                </Card>
+                  <Card
+                    appearance="full-bleed"
+                    description="Open Source werken heeft veel voordelen. Maar hoe ziet de codebase van een gezond Open Source project er uit? En waar moet je nog meer rekening mee houden? Antwoorden daarop krijg je in dit artikel."
+                    heading="Start een Open Source project"
+                    href="#"
+                    imageAlt="Placeholder Image" //background color ipv image mogelijk?
+                    imageSrc="https://media.istockphoto.com/id/1095286208/nl/foto/licht-blauw-papierkleur-met-textuur-voor-achtergrond.jpg?s=612x612&w=0&k=20&c=M74rYkw4zXl2yf1OGhXR_Ronao8a4_3mxomHfU4z2Jk="
+                    metadata=""
+                    title="Start een Open Source project"
+                  >
+                    <DataBadge className="rhc-templates-databadge">
+                      <Image
+                        alt="Developer Overheid logo"
+                        height={16}
+                        src=" https://developer.overheid.nl/static/images/logo.e5300da726cb.svg"
+                        width={16}
+                      />
+                      Developer Overheid
+                    </DataBadge>
+                  </Card>
 
-                <Card
-                  appearance="full-bleed"
-                  description="Overheidsorganisaties ontwikkelen veel API‘s om allerlei data snel en efficient te delen met andere overheidsorganisaties en andere partijen die met de overheid werken. In deze post leer je hoe je zelf deze API’s kan gebruiken."
-                  heading="Gebruik API‘s van de overheid"
-                  href="#"
-                  imageAlt="Placeholder Image" //background color ipv image mogelijk?
-                  imageSrc="https://media.istockphoto.com/id/1095286208/nl/foto/licht-blauw-papierkleur-met-textuur-voor-achtergrond.jpg?s=612x612&w=0&k=20&c=M74rYkw4zXl2yf1OGhXR_Ronao8a4_3mxomHfU4z2Jk="
-                  metadata=""
-                  title="Gebruik API‘s van de overheid"
-                >
-                  <DataBadge className="rhc-templates-databadge">
-                    <Image
-                      alt="Kadaster logo"
-                      height={16}
-                      src=" https://developer.overheid.nl/static/images/logo-kadaster.22b0c6f65ecd.svg "
-                      width={16}
-                    />
-                    Kadaster
-                  </DataBadge>
-                </Card>
+                  <Card
+                    appearance="full-bleed"
+                    description="Overheidsorganisaties ontwikkelen veel API‘s om allerlei data snel en efficient te delen met andere overheidsorganisaties en andere partijen die met de overheid werken. In deze post leer je hoe je zelf deze API’s kan gebruiken."
+                    heading="Gebruik API‘s van de overheid"
+                    href="#"
+                    imageAlt="Placeholder Image" //background color ipv image mogelijk?
+                    imageSrc="https://media.istockphoto.com/id/1095286208/nl/foto/licht-blauw-papierkleur-met-textuur-voor-achtergrond.jpg?s=612x612&w=0&k=20&c=M74rYkw4zXl2yf1OGhXR_Ronao8a4_3mxomHfU4z2Jk="
+                    metadata=""
+                    title="Gebruik API‘s van de overheid"
+                  >
+                    <DataBadge className="rhc-templates-databadge">
+                      <Image
+                        alt="Kadaster logo"
+                        height={16}
+                        src=" https://developer.overheid.nl/static/images/logo-kadaster.22b0c6f65ecd.svg "
+                        width={16}
+                      />
+                      Kadaster
+                    </DataBadge>
+                  </Card>
 
-                <Card
-                  appearance="full-bleed"
-                  description="Binnen Open Source projecten wordt Git veelal op een specifiek manier ingezet. Zo worden bijdragen vanuit de community toegelaten, of niet. "
-                  heading="Git: hoe gebruik ik Git in een Open Source project?"
-                  href="#"
-                  imageAlt="Placeholder Image" //background color ipv image mogelijk?
-                  imageSrc="https://media.istockphoto.com/id/1095286208/nl/foto/licht-blauw-papierkleur-met-textuur-voor-achtergrond.jpg?s=612x612&w=0&k=20&c=M74rYkw4zXl2yf1OGhXR_Ronao8a4_3mxomHfU4z2Jk="
-                  metadata=""
-                  title="Git: hoe gebruik ik Git in een Open Source project?"
-                >
-                  <DataBadge className="rhc-templates-databadge">
-                    <Image
-                      alt="Kadaster logo"
-                      height={16}
-                      src=" https://developer.overheid.nl/static/images/logo-kadaster.22b0c6f65ecd.svg "
-                      width={16}
-                    />
-                    Kadaster
-                  </DataBadge>
-                </Card>
+                  <Card
+                    appearance="full-bleed"
+                    description="Binnen Open Source projecten wordt Git veelal op een specifiek manier ingezet. Zo worden bijdragen vanuit de community toegelaten, of niet. "
+                    heading="Git: hoe gebruik ik Git in een Open Source project?"
+                    href="#"
+                    imageAlt="Placeholder Image" //background color ipv image mogelijk?
+                    imageSrc="https://media.istockphoto.com/id/1095286208/nl/foto/licht-blauw-papierkleur-met-textuur-voor-achtergrond.jpg?s=612x612&w=0&k=20&c=M74rYkw4zXl2yf1OGhXR_Ronao8a4_3mxomHfU4z2Jk="
+                    metadata=""
+                    title="Git: hoe gebruik ik Git in een Open Source project?"
+                  >
+                    <DataBadge className="rhc-templates-databadge">
+                      <Image
+                        alt="Kadaster logo"
+                        height={16}
+                        src=" https://developer.overheid.nl/static/images/logo-kadaster.22b0c6f65ecd.svg "
+                        width={16}
+                      />
+                      Kadaster
+                    </DataBadge>
+                  </Card>
 
-                <Card
-                  appearance="full-bleed"
-                  description="NL Design System is een set van richtlijnen, componenten en tools."
-                  heading="Samen werken aan web-componenten met NL Design System" //een label hiertussen?
-                  href="#"
-                  imageAlt="Placeholder Image" //background color ipv image mogelijk?
-                  imageSrc="https://media.istockphoto.com/id/1095286208/nl/foto/licht-blauw-papierkleur-met-textuur-voor-achtergrond.jpg?s=612x612&w=0&k=20&c=M74rYkw4zXl2yf1OGhXR_Ronao8a4_3mxomHfU4z2Jk="
-                  metadata=""
-                  title="Samen werken aan web-componenten met NL Design System"
-                >
-                  <DataBadge className="rhc-templates-databadge">
-                    <Image
-                      alt="NL Design System logo"
-                      height={16}
-                      src=" https://developer.overheid.nl/static/images/logo_nld.2c563404d848.png "
-                      width={16}
-                    />
-                    NL Design System
-                  </DataBadge>
-                  <BadgeList className="rhc-badgelist">
-                    <DataBadge className="rhc-badgelist-databadge">open-source</DataBadge>
-                    <DataBadge className="rhc-badgelist-databadge">front-end</DataBadge>
-                    <DataBadge className="rhc-badgelist-databadge">community</DataBadge>
-                    <DataBadge className="rhc-badgelist-databadge">nl-design-system</DataBadge>
-                    <DataBadge className="rhc-badgelist-databadge">design-system</DataBadge>
-                  </BadgeList>
-                </Card>
+                  <Card
+                    appearance="full-bleed"
+                    description="NL Design System is een set van richtlijnen, componenten en tools."
+                    heading="Samen werken aan web-componenten met NL Design System" //een label hiertussen?
+                    href="#"
+                    imageAlt="Placeholder Image" //background color ipv image mogelijk?
+                    imageSrc="https://media.istockphoto.com/id/1095286208/nl/foto/licht-blauw-papierkleur-met-textuur-voor-achtergrond.jpg?s=612x612&w=0&k=20&c=M74rYkw4zXl2yf1OGhXR_Ronao8a4_3mxomHfU4z2Jk="
+                    metadata=""
+                    title="Samen werken aan web-componenten met NL Design System"
+                  >
+                    <DataBadge className="rhc-templates-databadge">
+                      <Image
+                        alt="NL Design System logo"
+                        height={16}
+                        src=" https://developer.overheid.nl/static/images/logo_nld.2c563404d848.png "
+                        width={16}
+                      />
+                      NL Design System
+                    </DataBadge>
+                    <BadgeList className="rhc-badgelist">
+                      <DataBadge className="rhc-badgelist-databadge">open-source</DataBadge>
+                      <DataBadge className="rhc-badgelist-databadge">front-end</DataBadge>
+                      <DataBadge className="rhc-badgelist-databadge">community</DataBadge>
+                      <DataBadge className="rhc-badgelist-databadge">nl-design-system</DataBadge>
+                      <DataBadge className="rhc-badgelist-databadge">design-system</DataBadge>
+                    </BadgeList>
+                  </Card>
+                </div>
               </div>
 
               <div>
-                <Link>
+                <Link href="https://community.developer.overheid.nl/c/kennisbank/aan-de-slag/14">
                   <Icon>
                     <IconArrowRight />
                   </Icon>
@@ -389,7 +386,7 @@ export default function DevOvhHomepage() {
               </div>
 
               <div>
-                <Link>
+                <Link href="https://community.developer.overheid.nl/c/kennisbank/richtlijnen/18">
                   <Icon>
                     <IconArrowRight />
                   </Icon>
@@ -596,7 +593,7 @@ export default function DevOvhHomepage() {
               </div>
 
               <div>
-                <Link>
+                <Link href="https://community.developer.overheid.nl/c/kennisbank/tools/17">
                   <Icon>
                     <IconArrowRight />
                   </Icon>
@@ -672,9 +669,8 @@ export default function DevOvhHomepage() {
                   </BadgeList>
                 </Card>
               </div>
-
               <div>
-                <Link>
+                <Link href="/">
                   <Icon>
                     <IconArrowRight />
                   </Icon>
