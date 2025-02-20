@@ -1,7 +1,6 @@
 import { LinkWebComponent } from '@rijkshuisstijl-community/web-components';
+import { IconWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/react';
-import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
-import { Icon } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/link/README.md?raw';
 import anatomyDocs from '@utrecht/components/link/docs/anatomy.nl.md?raw';
 import contentDocs from '@utrecht/components/link/docs/content.nl.md?raw';
@@ -23,38 +22,21 @@ import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 LinkWebComponent.define();
+IconWebComponent.define();
 
-const LinkWrapper = ({ external, externalLabel, iconRight, iconLeft, classname, ...restProps }: any) => {
+const LinkWrapper = ({ external, externalLabel, classname, ...restProps }: any) => {
   return createElement('rhc-link', {
     external: external?.toString(),
     externalLabel,
-    iconRight: iconRight?.toString(),
-    iconLeft: iconLeft?.toString(),
     classname,
     ...restProps,
   });
 };
 
-const LinkStory = ({ children, iconLeft, iconRight, classname, ...props }: any) => (
-  <LinkWrapper classname={classname} {...props}>
-    {iconLeft && (
-      <Icon>
-        <IconCalendarEvent />
-      </Icon>
-    )}
-    {children}
-    {iconRight && (
-      <Icon>
-        <IconArrowRight />
-      </Icon>
-    )}
-  </LinkWrapper>
-);
-
 const meta = {
   title: 'Web Components/Link',
   id: 'rhc-link-web',
-  component: LinkStory,
+  component: LinkWrapper,
   argTypes: {
     href: {
       description: 'Url to link to',
@@ -95,26 +77,6 @@ const meta = {
       },
       defaultValue: 'Label',
     },
-    iconLeft: {
-      description: 'Icon Left',
-      type: {
-        name: 'boolean',
-      },
-      table: {
-        category: 'Demo',
-      },
-      defaultValue: false,
-    },
-    iconRight: {
-      description: 'Icon Right',
-      type: {
-        name: 'boolean',
-      },
-      table: {
-        category: 'Demo',
-      },
-      defaultValue: false,
-    },
   },
   args: {
     id: 'link',
@@ -151,7 +113,7 @@ const meta = {
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
-  render: LinkStory,
+  render: LinkWrapper,
 } as Meta<typeof LinkWebComponent>;
 
 export default meta;
@@ -172,19 +134,17 @@ export const External = {
   },
 } as StoryObj<typeof meta>;
 
-export const iconRight = {
+export const iconLeft = {
   args: {
-    children: 'Link',
+    children: [createElement('rhc-icon', { icon: 'home' }), 'Link'],
     href: '#',
-    iconRight: true,
   },
 } as StoryObj<typeof meta>;
 
-export const iconLeft = {
+export const iconRight = {
   args: {
-    children: 'Link',
+    children: ['Link', createElement('rhc-icon', { icon: 'chevron-right' })],
     href: '#',
-    iconLeft: true,
   },
 } as StoryObj<typeof meta>;
 
