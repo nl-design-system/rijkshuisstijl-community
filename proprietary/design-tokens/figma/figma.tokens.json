@@ -2,7 +2,7 @@
   "brand/color": {
     "rhc": {
       "color": {
-        "grijs": {
+        "cool-grey": {
           "50": {
             "value": "#F8FAFC",
             "type": "color"
@@ -840,18 +840,12 @@
       "color": {
         "foreground": {
           "default": {
-            "parent": "mode/light",
-            "value": "{rhc.color.zwart}",
-            "type": "color",
-            "description": "Standaard kleur voor teksten en iconen. Gebruik deze voor body content, titels en labels."
-          },
-          "lint": {
-            "value": "{rhc.color.lintblauw.500}",
+            "value": "{rhc.color.cool-grey.900}",
             "type": "color"
           },
           "subdued": {
             "parent": "mode/light",
-            "value": "{rhc.color.grijs.700}",
+            "value": "{rhc.color.cool-grey.700}",
             "type": "color",
             "description": "Gebruik voor content die extra context biedt, maar niet essentieel is om de interface te begrijpen."
           },
@@ -869,13 +863,13 @@
         "border": {
           "default": {
             "parent": "mode/light",
-            "value": "{rhc.color.grijs.500}",
+            "value": "{rhc.color.cool-grey.500}",
             "type": "color",
             "description": "Border kleur"
           },
           "subdued": {
             "parent": "mode/light",
-            "value": "{rhc.color.grijs.400}",
+            "value": "{rhc.color.cool-grey.400}",
             "type": "color",
             "description": "Subtiele border"
           },
@@ -1265,7 +1259,7 @@
           "type": "color"
         },
         "color": {
-          "value": "{rhc.color.zwart}",
+          "value": "{rhc.color.foreground.default}",
           "type": "color"
         },
         "font-family": {
@@ -1335,7 +1329,7 @@
               "type": "color"
             },
             "color": {
-              "value": "{rhc.color.foreground.lint}",
+              "value": "{rhc.color.foreground.default}",
               "type": "color"
             }
           }
@@ -1365,7 +1359,7 @@
           "type": "borderRadius"
         },
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.foreground.default}",
           "type": "color"
         }
       }
@@ -1411,7 +1405,7 @@
           },
           "hover": {
             "background-color": {
-              "value": "{rhc.color.grijs.50}",
+              "value": "{rhc.color.cool-grey.50}",
               "type": "color"
             },
             "border-color": {
@@ -1419,7 +1413,7 @@
               "type": "color"
             },
             "color": {
-              "value": "{rhc.color.foreground.lint}",
+              "value": "{rhc.color.foreground.default}",
               "type": "color"
             }
           },
@@ -1436,7 +1430,7 @@
             "type": "borderWidth"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "focus": {
@@ -1449,13 +1443,13 @@
               "type": "color"
             },
             "color": {
-              "value": "{rhc.color.foreground.lint}",
+              "value": "{rhc.color.foreground.default}",
               "type": "color"
             }
           },
           "active": {
             "background-color": {
-              "value": "{rhc.color.grijs.100}",
+              "value": "{rhc.color.cool-grey.100}",
               "type": "color"
             },
             "border-color": {
@@ -1463,7 +1457,7 @@
               "type": "color"
             },
             "color": {
-              "value": "{rhc.color.foreground.lint}",
+              "value": "{rhc.color.foreground.default}",
               "type": "color"
             },
             "row-gap": {
@@ -1537,7 +1531,7 @@
           "type": "color"
         },
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.foreground.default}",
           "type": "color"
         },
         "info": {
@@ -1550,7 +1544,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         },
@@ -1564,7 +1558,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         },
@@ -1578,7 +1572,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         },
@@ -1592,7 +1586,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         },
@@ -1810,7 +1804,7 @@
             "type": "fontSizes"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         },
@@ -2114,11 +2108,11 @@
           "type": "color"
         },
         "border-color": {
-          "value": "{rhc.color.grijs.700}",
+          "value": "{rhc.color.cool-grey.700}",
           "type": "color"
         },
         "color": {
-          "value": "{rhc.color.grijs.700}",
+          "value": "{rhc.color.cool-grey.700}",
           "type": "color"
         },
         "border-radius": {
@@ -2173,7 +2167,7 @@
         },
         "disabled": {
           "background-color": {
-            "value": "{rhc.color.grijs.50}",
+            "value": "{rhc.color.cool-grey.50}",
             "type": "color"
           },
           "border-color": {
@@ -2181,7 +2175,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.grijs.500}",
+            "value": "{rhc.color.cool-grey.500}",
             "type": "color"
           }
         },
@@ -2195,35 +2189,35 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.grijs.800}",
+            "value": "{rhc.color.cool-grey.800}",
             "type": "color"
           }
         },
         "hover": {
           "background-color": {
-            "value": "{rhc.color.grijs.50}",
+            "value": "{rhc.color.cool-grey.50}",
             "type": "color"
           },
           "border-color": {
-            "value": "{rhc.color.grijs.800}",
+            "value": "{rhc.color.cool-grey.800}",
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.grijs.800}",
+            "value": "{rhc.color.cool-grey.800}",
             "type": "color"
           }
         },
         "active": {
           "background-color": {
-            "value": "{rhc.color.grijs.300}",
+            "value": "{rhc.color.cool-grey.300}",
             "type": "color"
           },
           "border-color": {
-            "value": "{rhc.color.grijs.900}",
+            "value": "{rhc.color.cool-grey.900}",
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.grijs.900}",
+            "value": "{rhc.color.cool-grey.900}",
             "type": "color"
           }
         },
@@ -2548,7 +2542,7 @@
           "type": "color"
         },
         "border-color": {
-          "value": "{rhc.color.grijs.300}",
+          "value": "{rhc.color.cool-grey.300}",
           "type": "color"
         },
         "border-radius": {
@@ -2560,7 +2554,7 @@
           "type": "borderWidth"
         },
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.foreground.default}",
           "type": "color"
         },
         "column-gap": {
@@ -2573,7 +2567,7 @@
         },
         "icon": {
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "size": {
@@ -2611,7 +2605,7 @@
         },
         "metadata": {
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         },
@@ -2637,7 +2631,7 @@
         },
         "active": {
           "background-color": {
-            "value": "{rhc.color.grijs.100}",
+            "value": "{rhc.color.cool-grey.100}",
             "type": "color"
           },
           "text-decoration": {
@@ -2647,7 +2641,7 @@
         },
         "hover": {
           "background-color": {
-            "value": "{rhc.color.grijs.50}",
+            "value": "{rhc.color.cool-grey.50}",
             "type": "color"
           },
           "text-decoration": {
@@ -2795,11 +2789,11 @@
         },
         "disabled": {
           "background-color": {
-            "value": "{rhc.color.grijs.300}",
+            "value": "{rhc.color.cool-grey.300}",
             "type": "color"
           },
           "border-color": {
-            "value": "{rhc.color.grijs.400}",
+            "value": "{rhc.color.cool-grey.400}",
             "type": "color"
           }
         },
@@ -2822,15 +2816,15 @@
           },
           "disabled": {
             "background-color": {
-              "value": "{rhc.color.grijs.300}",
+              "value": "{rhc.color.cool-grey.300}",
               "type": "color"
             },
             "border-color": {
-              "value": "{rhc.color.grijs.400}",
+              "value": "{rhc.color.cool-grey.400}",
               "type": "color"
             },
             "color": {
-              "value": "{rhc.color.grijs.600}",
+              "value": "{rhc.color.cool-grey.600}",
               "type": "color"
             }
           },
@@ -2908,15 +2902,15 @@
           },
           "disabled": {
             "background-color": {
-              "value": "{rhc.color.grijs.300}",
+              "value": "{rhc.color.cool-grey.300}",
               "type": "color"
             },
             "border-color": {
-              "value": "{rhc.color.grijs.400}",
+              "value": "{rhc.color.cool-grey.400}",
               "type": "color"
             },
             "color": {
-              "value": "{rhc.color.grijs.600}",
+              "value": "{rhc.color.cool-grey.600}",
               "type": "color"
             }
           },
@@ -3267,7 +3261,7 @@
       "form-fieldset": {
         "legend": {
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "font-family": {
@@ -3300,7 +3294,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         },
@@ -3328,7 +3322,7 @@
       "figure": {
         "caption": {
           "border-color": {
-            "value": "{rhc.color.grijs.300}",
+            "value": "{rhc.color.cool-grey.300}",
             "type": "color"
           },
           "border-width": {
@@ -3394,7 +3388,7 @@
         },
         "feedback": {
           "color": {
-            "value": "{rhc.color.grijs.600}",
+            "value": "{rhc.color.cool-grey.600}",
             "type": "color"
           },
           "font-size": {
@@ -3448,7 +3442,7 @@
         },
         "subtitle": {
           "color": {
-            "value": "{rhc.color.grijs.500}",
+            "value": "{rhc.color.cool-grey.500}",
             "type": "color"
           }
         }
@@ -3711,7 +3705,7 @@
     "utrecht": {
       "form-field-label": {
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.foreground.default}",
           "type": "color"
         },
         "font-family": {
@@ -3737,7 +3731,7 @@
     "todo": {
       "form-field-option-label": {
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.foreground.default}",
           "type": "color"
         },
         "font-size": {
@@ -3758,7 +3752,7 @@
         },
         "disabled": {
           "color": {
-            "value": "{rhc.color.grijs.600}",
+            "value": "{rhc.color.cool-grey.600}",
             "type": "color"
           }
         }
@@ -3801,7 +3795,7 @@
     "utrecht": {
       "form-label": {
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.foreground.default}",
           "type": "color"
         },
         "font-size": {
@@ -3819,7 +3813,7 @@
     "nl": {
       "heading-level-1": {
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.lintblauw.500}",
           "type": "color"
         },
         "font-family": {
@@ -3849,7 +3843,7 @@
       },
       "heading-level-2": {
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.lintblauw.500}",
           "type": "color"
         },
         "font-family": {
@@ -3879,7 +3873,7 @@
       },
       "heading-level-3": {
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.lintblauw.500}",
           "type": "color"
         },
         "font-family": {
@@ -3909,7 +3903,7 @@
       },
       "heading-level-4": {
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.lintblauw.500}",
           "type": "color"
         },
         "font-family": {
@@ -3939,7 +3933,7 @@
       },
       "heading-level-5": {
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.lintblauw.500}",
           "type": "color"
         },
         "font-family": {
@@ -4475,7 +4469,7 @@
             "type": "color"
           },
           "border-color": {
-            "value": "{rhc.color.grijs.300}",
+            "value": "{rhc.color.cool-grey.300}",
             "type": "color"
           },
           "border-width": {
@@ -4496,7 +4490,7 @@
               "type": "size"
             },
             "color": {
-              "value": "{rhc.color.foreground.lint}",
+              "value": "{rhc.color.foreground.default}",
               "type": "color"
             }
           },
@@ -4546,7 +4540,7 @@
           },
           "heading": {
             "color": {
-              "value": "{rhc.color.foreground.lint}",
+              "value": "{rhc.color.foreground.default}",
               "type": "color"
             }
           }
@@ -4583,7 +4577,7 @@
         },
         "icon": {
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "active": {
@@ -4600,7 +4594,7 @@
         "link": {
           "active": {
             "background-color": {
-              "value": "{rhc.color.foreground.lint}",
+              "value": "{rhc.color.primary.500}",
               "type": "color"
             },
             "color": {
@@ -4613,26 +4607,26 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.primary.500}",
             "type": "color"
           },
           "focus": {
             "background-color": {
-              "value": "{rhc.color.lintblauw.50}",
+              "value": "{rhc.color.primary.50}",
               "type": "color"
             },
             "color": {
-              "value": "{rhc.color.foreground.lint}",
+              "value": "{rhc.color.primary.500}",
               "type": "color"
             }
           },
           "hover": {
             "background-color": {
-              "value": "{rhc.color.grijs.50}",
+              "value": "{rhc.color.cool-grey.50}",
               "type": "color"
             },
             "color": {
-              "value": "{rhc.color.foreground.lint}",
+              "value": "{rhc.color.primary.500}",
               "type": "color"
             }
           },
@@ -4668,11 +4662,11 @@
           "type": "color"
         },
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.primary.500}",
           "type": "color"
         },
         "border-color": {
-          "value": "{rhc.color.border.default}",
+          "value": "{rhc.color.primary.400}",
           "type": "color"
         }
       }
@@ -4683,7 +4677,7 @@
       "navigation-list": {
         "icon": {
           "background-color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "border-radius": {
@@ -4744,13 +4738,13 @@
           },
           "active": {
             "background-color": {
-              "value": "{rhc.color.grijs.100}",
+              "value": "{rhc.color.cool-grey.100}",
               "type": "color"
             }
           },
           "hover": {
             "background-color": {
-              "value": "{rhc.color.grijs.50}",
+              "value": "{rhc.color.cool-grey.50}",
               "type": "color"
             }
           },
@@ -4773,12 +4767,12 @@
             "type": "borderWidth"
           },
           "border-color": {
-            "value": "{rhc.color.grijs.300}",
+            "value": "{rhc.color.cool-grey.300}",
             "type": "color"
           },
           "heading": {
             "color": {
-              "value": "{rhc.color.foreground.lint}",
+              "value": "{rhc.color.foreground.default}",
               "type": "color"
             }
           },
@@ -4836,7 +4830,7 @@
           }
         },
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.foreground.default}",
           "type": "color"
         },
         "font-family": {
@@ -5170,7 +5164,7 @@
     "nl": {
       "paragraph": {
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.foreground.default}",
           "type": "color"
         },
         "font-family": {
@@ -5199,29 +5193,11 @@
         },
         "lead": {
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "font-size": {
             "value": "{rhc.font-size.paragraph.intro}",
-            "type": "fontSizes"
-          },
-          "font-weight": {
-            "value": "{rhc.font-weight.regular}",
-            "type": "fontWeights"
-          },
-          "line-height": {
-            "value": "{rhc.line-height.paragraph}",
-            "type": "lineHeights"
-          }
-        },
-        "small": {
-          "color": {
-            "value": "{rhc.color.foreground.lint}",
-            "type": "color"
-          },
-          "font-size": {
-            "value": "{rhc.font-size.paragraph.small}",
             "type": "fontSizes"
           },
           "font-weight": {
@@ -5240,7 +5216,7 @@
     "utrecht": {
       "pre-heading": {
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.foreground.default}",
           "type": "color"
         },
         "font-family": {
@@ -5327,15 +5303,15 @@
         },
         "disabled": {
           "background-color": {
-            "value": "{rhc.color.grijs.300}",
+            "value": "{rhc.color.cool-grey.300}",
             "type": "color"
           },
           "border-color": {
-            "value": "{rhc.color.grijs.400}",
+            "value": "{rhc.color.cool-grey.400}",
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.grijs.600}",
+            "value": "{rhc.color.cool-grey.600}",
             "type": "color"
           }
         },
@@ -5408,15 +5384,15 @@
           },
           "disabled": {
             "background-color": {
-              "value": "{rhc.color.grijs.300}",
+              "value": "{rhc.color.cool-grey.300}",
               "type": "color"
             },
             "border-color": {
-              "value": "{rhc.color.grijs.400}",
+              "value": "{rhc.color.cool-grey.400}",
               "type": "color"
             },
             "color": {
-              "value": "{rhc.color.grijs.600}",
+              "value": "{rhc.color.cool-grey.600}",
               "type": "color"
             }
           },
@@ -5490,7 +5466,7 @@
           "type": "color"
         },
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.foreground.default}",
           "type": "color"
         },
         "invalid": {
@@ -5503,7 +5479,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "border-width": {
@@ -5521,7 +5497,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "border-width": {
@@ -5531,15 +5507,15 @@
         },
         "disabled": {
           "background-color": {
-            "value": "{rhc.color.grijs.300}",
+            "value": "{rhc.color.cool-grey.300}",
             "type": "color"
           },
           "border-color": {
-            "value": "{rhc.color.grijs.400}",
+            "value": "{rhc.color.cool-grey.400}",
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.grijs.600}",
+            "value": "{rhc.color.cool-grey.600}",
             "type": "color"
           }
         },
@@ -5553,7 +5529,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "border-width": {
@@ -5616,7 +5592,7 @@
     "utrecht": {
       "separator": {
         "color": {
-          "value": "{rhc.color.grijs.300}",
+          "value": "{rhc.color.cool-grey.300}",
           "type": "color"
         },
         "block-size": {
@@ -5674,7 +5650,7 @@
               "type": "fontWeights"
             },
             "color": {
-              "value": "{rhc.color.foreground.lint}",
+              "value": "{rhc.color.foreground.default}",
               "type": "color"
             }
           },
@@ -5822,7 +5798,7 @@
             "type": "borderWidth"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "text-decoration": {
@@ -5930,7 +5906,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         },
@@ -5944,7 +5920,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         },
@@ -5958,7 +5934,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         },
@@ -5972,12 +5948,12 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         },
         "background-color": {
-          "value": "{rhc.color.grijs.200}",
+          "value": "{rhc.color.cool-grey.200}",
           "type": "color"
         },
         "border-color": {
@@ -5985,7 +5961,7 @@
           "type": "color"
         },
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.foreground.default}",
           "type": "color"
         }
       }
@@ -6084,11 +6060,11 @@
             "type": "borderWidth"
           },
           "border-color": {
-            "value": "{rhc.color.grijs.300}",
+            "value": "{rhc.color.cool-grey.300}",
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         },
@@ -6148,7 +6124,7 @@
             "type": "lineHeights"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "font-family": {
@@ -6174,7 +6150,7 @@
             "type": "spacing"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "font-family": {
@@ -6214,7 +6190,7 @@
         },
         "data-cell": {
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "font-family": {
@@ -6240,7 +6216,7 @@
             "type": "borderWidth"
           },
           "border-block-end-color": {
-            "value": "{rhc.color.grijs.300}",
+            "value": "{rhc.color.cool-grey.300}",
             "type": "color"
           },
           "background-color": {
@@ -6254,7 +6230,7 @@
             "type": "borderWidth"
           },
           "border-block-end-color": {
-            "value": "{rhc.color.grijs.300}",
+            "value": "{rhc.color.cool-grey.300}",
             "type": "color"
           },
           "background-color": {
@@ -6268,7 +6244,7 @@
             "type": "borderWidth"
           },
           "border-block-end-color": {
-            "value": "{rhc.color.grijs.300}",
+            "value": "{rhc.color.cool-grey.300}",
             "type": "color"
           },
           "background-color": {
@@ -6286,7 +6262,7 @@
             "type": "fontSizes"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "font-family": {
@@ -6471,7 +6447,7 @@
           "type": "color"
         },
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.foreground.default}",
           "type": "color"
         },
         "invalid": {
@@ -6484,7 +6460,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "border-width": {
@@ -6494,7 +6470,7 @@
         },
         "placeholder": {
           "color": {
-            "value": "{rhc.color.grijs.500}",
+            "value": "{rhc.color.cool-grey.500}",
             "type": "color"
           }
         },
@@ -6508,7 +6484,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "border-width": {
@@ -6518,21 +6494,21 @@
         },
         "disabled": {
           "background-color": {
-            "value": "{rhc.color.grijs.300}",
+            "value": "{rhc.color.cool-grey.300}",
             "type": "color"
           },
           "border-color": {
-            "value": "{rhc.color.grijs.400}",
+            "value": "{rhc.color.cool-grey.400}",
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.grijs.600}",
+            "value": "{rhc.color.cool-grey.600}",
             "type": "color"
           }
         },
         "read-only": {
           "background-color": {
-            "value": "{rhc.color.grijs.100}",
+            "value": "{rhc.color.cool-grey.100}",
             "type": "color"
           },
           "border-color": {
@@ -6540,7 +6516,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         },
@@ -6554,7 +6530,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "border-width": {
@@ -6645,7 +6621,7 @@
           "type": "color"
         },
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.foreground.default}",
           "type": "color"
         },
         "invalid": {
@@ -6658,7 +6634,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "border-width": {
@@ -6668,7 +6644,7 @@
         },
         "placeholder": {
           "color": {
-            "value": "{rhc.color.grijs.500}",
+            "value": "{rhc.color.cool-grey.500}",
             "type": "color"
           }
         },
@@ -6694,27 +6670,27 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         },
         "disabled": {
           "background-color": {
-            "value": "{rhc.color.grijs.300}",
+            "value": "{rhc.color.cool-grey.300}",
             "type": "color"
           },
           "border-color": {
-            "value": "{rhc.color.grijs.400}",
+            "value": "{rhc.color.cool-grey.400}",
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.grijs.600}",
+            "value": "{rhc.color.cool-grey.600}",
             "type": "color"
           }
         },
         "read-only": {
           "background-color": {
-            "value": "{rhc.color.grijs.100}",
+            "value": "{rhc.color.cool-grey.100}",
             "type": "color"
           },
           "border-color": {
@@ -6722,7 +6698,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         },
@@ -6740,7 +6716,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         }
@@ -6796,7 +6772,7 @@
         },
         "hover": {
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "background-color": {
@@ -6861,7 +6837,7 @@
           "type": "spacing"
         },
         "color": {
-          "value": "{rhc.color.foreground.lint}",
+          "value": "{rhc.color.foreground.default}",
           "type": "color"
         },
         "font-family": {
@@ -6896,11 +6872,11 @@
         },
         "marker": {
           "color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           },
           "border-color": {
-            "value": "{rhc.color.foreground.lint}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color"
           }
         }
@@ -7029,7 +7005,7 @@
           }
         }
       },
-      "radio": {
+      "radio-button": {
         "focus": {
           "background-color": {
             "value": "{overwrite.focus.background}",
@@ -7337,7 +7313,8 @@
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled"
       },
-      "group": "Rijkshuisstijl"
+      "group": "Rijkshuisstijl",
+      "$figmaVariableReferences": {}
     },
     {
       "id": "c6dd93b7ffde608ac96ec3b636875b6534dca15e",
@@ -7421,7 +7398,8 @@
         "components/sub-nav-bar": "enabled",
         "overwrites/primaire kleur/violet": "enabled"
       },
-      "group": "Rijkshuisstijl"
+      "group": "Rijkshuisstijl",
+      "$figmaVariableReferences": {}
     },
     {
       "id": "786957ab6fd72ed726e59e0415f638eea0de0995",
@@ -7506,7 +7484,8 @@
         "overwrites/oude rijkshuisstijl/border": "enabled",
         "overwrites/primaire kleur/violet": "enabled"
       },
-      "group": "Rijkshuisstijl"
+      "group": "Rijkshuisstijl",
+      "$figmaVariableReferences": {}
     },
     {
       "id": "6dc199872ed7ed864f33144bdffb286fdedbf473",
@@ -7592,7 +7571,8 @@
         "overwrites/focus/outline-color": "enabled",
         "overwrites/primaire kleur/mintgroen": "enabled"
       },
-      "group": "Rijkshuisstijl"
+      "group": "Rijkshuisstijl",
+      "$figmaVariableReferences": {}
     }
   ],
   "$metadata": {
