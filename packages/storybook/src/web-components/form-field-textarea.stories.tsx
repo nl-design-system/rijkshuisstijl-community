@@ -195,53 +195,6 @@ const meta = {
     cols: undefined,
     rows: undefined,
   },
-  // render: (args) => {
-  //   const {
-  //     required,
-  //     inputRequired,
-  //     disabled,
-  //     readOnly,
-  //     id,
-  //     invalid,
-  //     name,
-  //     defaultValue,
-  //     value,
-  //     placeholder,
-  //     label,
-  //     errorMessage,
-  //     description,
-  //     minLength,
-  //     maxLength,
-  //     dir,
-  //     status,
-  //     cols,
-  //     rows,
-  //   } = args;
-  //   return (
-  //     <FormFieldTextarea
-  //       cols={cols || undefined}
-  //       defaultValue={defaultValue || undefined}
-  //       description={description || undefined}
-  //       dir={dir || undefined}
-  //       disabled={disabled || undefined}
-  //       errorMessage={errorMessage || undefined}
-  //       id={id || undefined}
-  //       inputRequired={inputRequired || undefined}
-  //       invalid={invalid || undefined}
-  //       label={label || undefined}
-  //       maxLength={maxLength || undefined}
-  //       minLength={minLength || undefined}
-  //       name={name || undefined}
-  //       placeholder={placeholder || undefined}
-  //       readOnly={readOnly || undefined}
-  //       required={required || undefined}
-  //       rows={rows || undefined}
-  //       status={status || undefined}
-  //       value={value || undefined}
-  //       onChange={() => {}}
-  //     />
-  //   );
-  // },
   tags: ['autodocs'],
   parameters: {
     status: {
