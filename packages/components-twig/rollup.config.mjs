@@ -18,12 +18,12 @@ export default [
     input: 'src/icon-sets/default-icons/icon-set.ts',
     output: [
       {
-        dir: 'dist',
+        file: 'dist/icon-set.cjs.js',
         format: 'cjs',
         sourcemap: true,
       },
       {
-        dir: 'dist',
+        file: 'dist/icon-set.esm.js',
         format: 'esm',
         sourcemap: true,
       },
