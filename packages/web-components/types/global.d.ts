@@ -10,6 +10,15 @@ import {
   BreadcrumbNavSeparatorWebComponentAttributes,
   BreadcrumbNavWebComponentAttributes,
   ButtonWebComponentAttributes,
+  CardWebComponentAttributes,
+  CheckboxGroupWebComponentAttributes,
+  CheckboxWebComponentAttributes,
+  FormFieldCheckboxGroupAttributes,
+  FormFieldCheckboxOptionAttributes,
+  FormFieldRadioAttributes,
+  FormFieldRadioGroupAttributes,
+  FormFieldSelectAttributes,
+  FormFieldTextInputAttributes,
   HeroWebComponentAttributes,
   IconWebComponentAttributes,
 } from '../src';
@@ -25,11 +34,20 @@ declare global {
       'rhc-blockquote': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & BlockquoteWebComponentAttributes;
       'rhc-breadcrumb-nav': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> &
         BreadcrumbNavWebComponentAttributes;
-      'rhc-breadcrumb-nav-link': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> &
-        BreadcrumbNavLinkWebComponentAttributes;
-      'rhc-breadcrumb-nav-separator': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> &
-        BreadcrumbNavSeparatorWebComponentAttributes;
       'rhc-button': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & ButtonWebComponentAttributes;
+      'rhc-card': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & CardWebComponentAttributes;
+      'rhc-checkbox-group': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> &
+        CheckboxGroupWebComponentAttributes;
+      'rhc-checkbox': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & CheckboxWebComponentAttributes;
+      'rhc-form-checkbox-group': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> &
+        FormFieldCheckboxGroupAttributes;
+      'rhc-form-checkbox': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> &
+        FormFieldCheckboxOptionAttributes;
+      'rhc-form-radio': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & FormFieldRadioAttributes;
+      'rhc-form-radio-group': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> &
+        FormFieldRadioGroupAttributes;
+      'rhc-form-select': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & FormFieldSelectAttributes;
+      'rhc-form-textinput': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & FormFieldTextInputAttributes;
       'rhc-hero': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & HeroWebComponentAttributes;
       'rhc-icon': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & IconWebComponentAttributes;
     }

@@ -17,6 +17,7 @@ export class FormFieldSelectWebComponent extends BaseWebComponent {
 
     const { label, description, disabled, status, invalid, options, dir, defaultvalue, value, name, ...restProps } =
       this.props;
+
     render(
       <FormFieldSelect
         defaultValue={(defaultvalue as FormFieldSelectAttributes['defaultValue']) ?? undefined}
