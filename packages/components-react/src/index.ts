@@ -107,6 +107,7 @@ export { SideNavItem, type SideNavItemProps } from './SideNavItem';
 export { SideNavLink, type SideNavLinkProps } from './SideNavLink';
 export { SideNavList, type SideNavListProps } from './SideNavList';
 export { SkipLink, type SkipLinkProps } from './SkipLink';
+export { SummaryList } from './SummaryList';
 export {
   Table,
   TableBody,
