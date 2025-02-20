@@ -1,7 +1,7 @@
-import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render, screen } from '@testing-library/react';
 import { LinkList, LinkListLink } from '@utrecht/component-library-react';
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it } from 'vitest';
 import { Footer } from './Footer';
 import { Icon } from './Icon';
 
@@ -72,3 +72,5 @@ describe('Footer', () => {
     expect(screen.getByText('Custom Child')).toBeInTheDocument();
   });
 });
+
+afterEach(() => cleanup());

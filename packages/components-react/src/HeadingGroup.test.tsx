@@ -1,6 +1,6 @@
-import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render } from '@testing-library/react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { HeadingGroup } from '.';
 
 describe('Heading Group', () => {
@@ -13,3 +13,5 @@ describe('Heading Group', () => {
     expect(headingGroup).toBeVisible();
   });
 });
+
+afterEach(() => cleanup());

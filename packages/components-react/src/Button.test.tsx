@@ -1,6 +1,6 @@
-import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
-import { describe, expect, it, vi } from 'vitest';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render, screen } from '@testing-library/react';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { IconButton } from './Button';
 
 describe('IconButton', () => {
@@ -80,3 +80,5 @@ describe('IconButton', () => {
     expect(handleClick).toHaveBeenCalled();
   });
 });
+
+afterEach(() => cleanup());

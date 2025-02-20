@@ -1,11 +1,11 @@
 import {
-  SkipLink as UtrechtSkipLink,
-  type SkipLinkProps as UtrechtSkipLinkProps,
-} from '@utrecht/component-library-react';
+  SkipLink as NLSkipLink,
+  type SkipLinkProps as NLSkipLinkProps,
+} from '@nl-design-system-candidate/skip-link-react';
 import clsx from 'clsx';
 import { PropsWithChildren, Ref } from 'react';
 
-export interface SkipLinkProps extends UtrechtSkipLinkProps {
+export interface SkipLinkProps extends NLSkipLinkProps {
   visibleOnFocus?: boolean;
   ref?: Ref<HTMLAnchorElement>;
 }
@@ -17,13 +17,13 @@ export const SkipLink = ({
   visibleOnFocus,
   ...restProps
 }: PropsWithChildren<SkipLinkProps>) => (
-  <UtrechtSkipLink
+  <NLSkipLink
     className={clsx('rhc-skip-link', { 'rhc-skip-link--visible-on-focus': visibleOnFocus }, className)}
     ref={ref}
     {...restProps}
   >
     {children}
-  </UtrechtSkipLink>
+  </NLSkipLink>
 );
 
 SkipLink.displayName = 'SkipLink';

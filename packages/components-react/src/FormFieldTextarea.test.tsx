@@ -1,9 +1,9 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { createRef } from 'react';
-import { describe, expect, it, vi } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { FormFieldTextarea } from './FormFieldTextarea';
 
 describe('Form field with a textarea', () => {
@@ -726,3 +726,5 @@ describe('Form field with a textarea', () => {
     expect(inputRef.current).toBe(div);
   });
 });
+
+afterEach(() => cleanup());

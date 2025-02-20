@@ -1,6 +1,6 @@
-import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render, screen } from '@testing-library/react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { DotBadge } from './DotBadge';
 
 describe('DotBadge', () => {
@@ -20,3 +20,5 @@ describe('DotBadge', () => {
     expect(dotBadge).toHaveAttribute('role', 'status');
   });
 });
+
+afterEach(() => cleanup());

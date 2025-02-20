@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import { cleanup, render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
 import { createRef } from 'react';
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it } from 'vitest';
 import { SideNavLink } from './SideNavLink';
 
 describe('SideNavLink', () => {
@@ -38,3 +38,5 @@ describe('SideNavLink', () => {
     expect(screen.getByRole('link')).not.toHaveAttribute('aria-current');
   });
 });
+
+afterEach(() => cleanup());

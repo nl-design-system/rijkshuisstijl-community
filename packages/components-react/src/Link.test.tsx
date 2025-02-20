@@ -1,8 +1,8 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import { createRef } from 'react';
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it } from 'vitest';
 import { Link } from './Link';
 
 describe('Link', () => {
@@ -139,3 +139,5 @@ describe('Link', () => {
     });
   });
 });
+
+afterEach(() => cleanup());

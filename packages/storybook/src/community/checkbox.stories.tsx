@@ -1,5 +1,5 @@
 import { Checkbox } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react/*';
+import { Meta, StoryObj } from '@storybook/react';
 import readme from './checkbox.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
