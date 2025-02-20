@@ -54,6 +54,7 @@ export default [
       postcss(),
       copy({
         targets: [{ src: 'src/**/*.twig', dest: 'dist' }],
+        flatten: false,
       }),
     ],
   },
