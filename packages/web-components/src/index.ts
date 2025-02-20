@@ -14,8 +14,17 @@ export { CardWebComponent, type CardWebComponentAttributes } from './components/
 export { CheckboxGroupWebComponent, type CheckboxGroupWebComponentAttributes } from './components/CheckboxGroup';
 export { CheckboxWebComponent, type CheckboxWebComponentAttributes } from './components/Checkbox';
 export {
+  type FormFieldCheckboxGroupAttributes,
+  FormFieldCheckboxGroupWebComponent,
+} from './components/FormFieldCheckboxGroup';
+export {
   type FormFieldCheckboxOptionAttributes,
   FormFieldCheckboxOptionWebComponent,
 } from './components/FormFieldCheckboxOption';
+export { type FormFieldRadioAttributes, FormFieldRadioWebComponent } from './components/FormFieldRadio';
+export { type FormFieldRadioGroupAttributes, FormFieldRadioGroupWebComponent } from './components/FormFieldRadioGroup';
+export { type FormFieldSelectAttributes, FormFieldSelectWebComponent } from './components/FormFieldSelect';
+export { type FormFieldTextInputAttributes, FormFieldTextInputWebComponent } from './components/FormFieldTextInput';
+export { type FormFieldTextareaAttributes, FormFieldTextareaWebComponent } from './components/FormFieldTextarea';
 export { HeroWebComponent, type HeroWebComponentAttributes } from './components/Hero';
 export { IconWebComponent, type IconWebComponentAttributes } from './components/Icon';
