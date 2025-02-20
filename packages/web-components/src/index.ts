@@ -25,5 +25,6 @@ export { type FormFieldRadioAttributes, FormFieldRadioWebComponent } from './com
 export { type FormFieldRadioGroupAttributes, FormFieldRadioGroupWebComponent } from './components/FormFieldRadioGroup';
 export { type FormFieldSelectAttributes, FormFieldSelectWebComponent } from './components/FormFieldSelect';
 export { type FormFieldTextInputAttributes, FormFieldTextInputWebComponent } from './components/FormFieldTextInput';
+export { type FormFieldTextareaAttributes, FormFieldTextareaWebComponent } from './components/FormFieldTextarea';
 export { HeroWebComponent, type HeroWebComponentAttributes } from './components/Hero';
 export { IconWebComponent, type IconWebComponentAttributes } from './components/Icon';

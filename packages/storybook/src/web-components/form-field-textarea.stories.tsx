@@ -1,12 +1,12 @@
-import { FormFieldTextInputWebComponent } from '@rijkshuisstijl-community/web-components';
+import { FormFieldTextareaWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/react';
 import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-text-input.md?raw';
+import readme from '../community/form-field-textarea.md?raw';
 
-FormFieldTextInputWebComponent.define();
+FormFieldTextareaWebComponent.define();
 
-const TextInputWrapper = ({
+const TextareaWrapper = ({
   label,
   disabled,
   invalid,
@@ -18,7 +18,7 @@ const TextInputWrapper = ({
   maxLength,
   ...restProps
 }: any) => {
-  return createElement('rhc-form-textinput', {
+  return createElement('rhc-form-textarea', {
     label,
     required: required?.toString(),
     inputrequired: inputRequired?.toString(),
@@ -33,9 +33,9 @@ const TextInputWrapper = ({
 };
 
 const meta = {
-  title: 'Web Components/Form Field/Form Field Text Input',
-  id: 'rhc-form-field-text-input-web',
-  component: TextInputWrapper,
+  title: 'Web Components/Form Field/Form Field Textarea',
+  id: 'rhc-form-field-textarea-web',
+  component: TextareaWrapper,
   argTypes: {
     required: {
       description: 'Required',
@@ -46,7 +46,7 @@ const meta = {
       },
     },
     inputRequired: {
-      description: 'Required (HTML validation)',
+      description: 'Input Required',
       control: 'boolean',
       table: {
         category: 'API',
@@ -134,76 +134,6 @@ const meta = {
         defaultValue: { summary: '' },
       },
     },
-    autoComplete: {
-      description: 'Autocomplete',
-      control: 'select',
-      options: [
-        '',
-        'additional-name',
-        'address-level1',
-        'address-level2',
-        'address-level3',
-        'address-level4',
-        'address-line1',
-        'address-line2',
-        'address-line3',
-        'bday',
-        'bday-day',
-        'bday-month',
-        'bday-year',
-        'cc-additional-name',
-        'cc-csc',
-        'cc-exp',
-        'cc-exp-month',
-        'cc-exp-year',
-        'cc-family-name',
-        'cc-given-name',
-        'cc-name',
-        'cc-number',
-        'cc-type',
-        'country',
-        'country-name',
-        'current-password',
-        'email',
-        'family-name',
-        'fax',
-        'given-name',
-        'home',
-        'honorific-prefix',
-        'honorific-suffix',
-        'impp',
-        'language',
-        'mobile',
-        'name',
-        'new-password',
-        'nickname',
-        'one-time-code',
-        'organization',
-        'organization-title',
-        'pager',
-        'photo',
-        'postal-code',
-        'sex',
-        'street-address',
-        'tel',
-        'tel-area-code',
-        'tel-country-code',
-        'tel-extension',
-        'tel-local',
-        'tel-local-prefix',
-        'tel-local-suffix',
-        'tel-national',
-        'transaction-amount',
-        'transaction-currency',
-        'url',
-        'username',
-        'work',
-      ],
-      table: {
-        category: 'API',
-        defaultValue: { summary: '' },
-      },
-    },
     minLength: {
       description: 'Set the minimum length of the input text',
       control: 'number',
@@ -220,100 +150,98 @@ const meta = {
         defaultValue: { summary: undefined },
       },
     },
-    min: {
+    cols: {
+      description: 'Set the number of visible columns in a text area',
       control: 'number',
       table: {
         category: 'API',
         defaultValue: { summary: undefined },
       },
     },
-    max: {
+    rows: {
+      description: 'Set the number of visible text lines for the control',
       control: 'number',
       table: {
         category: 'API',
         defaultValue: { summary: undefined },
-      },
-    },
-    step: {
-      control: 'number',
-      table: {
-        category: 'API',
-        defaultValue: { summary: undefined },
-      },
-    },
-    size: {
-      control: 'number',
-      table: {
-        category: 'API',
-        defaultValue: { summary: undefined },
-      },
-    },
-    type: {
-      description: 'Type',
-      control: 'select',
-      options: {
-        '': null,
-        email: 'email',
-        number: 'number',
-        password: 'password',
-        search: 'search',
-        tel: 'tel',
-        text: 'text',
-        url: 'url',
-      },
-      table: {
-        category: 'API',
-        defaultValue: { summary: '' },
       },
     },
     dir: {
       description: 'Text direction',
       control: { type: 'select' },
-      options: {
-        '': undefined,
-        auto: 'auto',
-        ltr: 'ltr',
-        rtl: 'rtl',
-      },
+      options: ['', 'auto', 'ltr', 'rtl'],
       table: {
         category: 'DOM',
         defaultValue: { summary: '' },
       },
     },
-    inputDir: {
-      description: 'Text direction',
-      control: { type: 'select' },
-      options: {
-        '': undefined,
-        auto: 'auto',
-        ltr: 'ltr',
-        rtl: 'rtl',
-      },
-      table: {
-        category: 'API',
-        defaultValue: { summary: '' },
-      },
-    },
   },
   args: {
-    description: '',
+    required: false,
+    inputRequired: false,
     disabled: false,
+    readOnly: false,
     invalid: false,
-    errorMessage: '',
-    label: '',
     name: '',
     defaultValue: '',
     value: '',
-    required: false,
-    inputRequired: false,
-    type: undefined,
-    autoComplete: '',
-    readOnly: false,
-    dir: undefined,
-    inputDir: undefined,
     placeholder: '',
-    size: undefined,
+    label: '',
+    errorMessage: '',
+    description: '',
+    minLength: undefined,
+    maxLength: undefined,
+    dir: undefined,
+    cols: undefined,
+    rows: undefined,
   },
+  // render: (args) => {
+  //   const {
+  //     required,
+  //     inputRequired,
+  //     disabled,
+  //     readOnly,
+  //     id,
+  //     invalid,
+  //     name,
+  //     defaultValue,
+  //     value,
+  //     placeholder,
+  //     label,
+  //     errorMessage,
+  //     description,
+  //     minLength,
+  //     maxLength,
+  //     dir,
+  //     status,
+  //     cols,
+  //     rows,
+  //   } = args;
+  //   return (
+  //     <FormFieldTextarea
+  //       cols={cols || undefined}
+  //       defaultValue={defaultValue || undefined}
+  //       description={description || undefined}
+  //       dir={dir || undefined}
+  //       disabled={disabled || undefined}
+  //       errorMessage={errorMessage || undefined}
+  //       id={id || undefined}
+  //       inputRequired={inputRequired || undefined}
+  //       invalid={invalid || undefined}
+  //       label={label || undefined}
+  //       maxLength={maxLength || undefined}
+  //       minLength={minLength || undefined}
+  //       name={name || undefined}
+  //       placeholder={placeholder || undefined}
+  //       readOnly={readOnly || undefined}
+  //       required={required || undefined}
+  //       rows={rows || undefined}
+  //       status={status || undefined}
+  //       value={value || undefined}
+  //       onChange={() => {}}
+  //     />
+  //   );
+  // },
   tags: ['autodocs'],
   parameters: {
     status: {
@@ -327,9 +255,9 @@ const meta = {
     },
     // TODO: add Figma, GitHub and NL DesignSystem links
     componentOrigin:
-      'Dit component is overgenomen van de Gemeente Utrecht (daar heeft het de naam FormFieldTextbox), met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
+      'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
-} as Meta<typeof FormFieldTextInputWebComponent>;
+} as Meta<typeof FormFieldTextareaWebComponent>;
 
 export default meta;
 
@@ -344,7 +272,7 @@ export const Description = {
   args: {
     name: 'subject',
     label: 'Onderwerp',
-    description: 'Kort maar krachtig.',
+    description: 'Beschrijving van het onderwerp',
   },
 } as StoryObj<typeof meta>;
 
@@ -352,7 +280,7 @@ export const ErrorMessage = {
   args: {
     name: 'subject',
     label: 'Onderwerp',
-    errorMessage: 'Vul een onderwerp in.',
+    errorMessage: 'Onderwerp is verplicht',
     invalid: true,
   },
 } as StoryObj<typeof meta>;
@@ -361,32 +289,33 @@ export const Status = {
   args: {
     name: 'subject',
     label: 'Onderwerp',
-    defaultValue: 'Hello, World!',
-    status: '13 van de 50 tekens gebruikt.',
+    defaultValue: 'Hello world!',
+    maxLength: 50,
+    status: '12 van de 50 tekens ingevuld',
   },
 } as StoryObj<typeof meta>;
 
-// export const Password = {
-//   args: {
-//     autoComplete: 'current-password',
-//     name: 'subject',
-//     label: 'Wachtwoord',
-//     type: 'password',
-//   },
-//   render: (args) => (
-//     <form>
-//       <input hidden autoComplete="username" type="text" />
-//       <FormFieldTextInput autoComplete={args.autoComplete} label={args.label} name={args.name} type={args.type} />
-//     </form>
-//   ),
-// } as StoryObj<typeof meta>;
-
-export const Disabled = {
+export const Placeholder = {
   args: {
     name: 'subject',
     label: 'Onderwerp',
-    disabled: true,
-    defaultValue: 'Hello, world!',
+    placeholder: 'Onderwerp',
+  },
+} as StoryObj<typeof meta>;
+
+export const Value = {
+  args: {
+    name: 'subject',
+    label: 'Onderwerp',
+    value: 'Onderwerp',
+  },
+} as StoryObj<typeof meta>;
+
+export const RightToLeft = {
+  args: {
+    name: 'subject',
+    label: 'الموضوع',
+    dir: 'rtl',
   },
 } as StoryObj<typeof meta>;
 
@@ -395,7 +324,15 @@ export const ReadOnly = {
     name: 'subject',
     label: 'Onderwerp',
     readOnly: true,
-    defaultValue: 'Hello, world!',
+    placeholder: 'Read Only',
+  },
+} as StoryObj<typeof meta>;
+
+export const Disabled = {
+  args: {
+    name: 'subject',
+    label: 'Onderwerp',
+    disabled: true,
   },
 } as StoryObj<typeof meta>;
 
@@ -413,23 +350,4 @@ export const InputRequired = {
     label: 'Onderwerp',
     inputRequired: true,
   },
-} as StoryObj<typeof meta>;
-
-export const Placeholder = {
-  args: {
-    name: 'subject',
-    label: 'Onderwerp',
-    placeholder: 'Type some text...',
-  },
-} as StoryObj<typeof meta>;
-
-export const LeftToRightInput = {
-  args: {
-    dir: 'rtl',
-    label: 'رقم الجوال',
-    type: 'tel',
-    autoComplete: 'mobile tel-national',
-    inputDir: 'ltr',
-  },
-  name: 'Left-to-right input',
 } as StoryObj<typeof meta>;

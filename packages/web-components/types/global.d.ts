@@ -18,6 +18,7 @@ import {
   FormFieldRadioAttributes,
   FormFieldRadioGroupAttributes,
   FormFieldSelectAttributes,
+  FormFieldTextareaAttributes,
   FormFieldTextInputAttributes,
   HeroWebComponentAttributes,
   IconWebComponentAttributes,
@@ -48,6 +49,7 @@ declare global {
         FormFieldRadioGroupAttributes;
       'rhc-form-select': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & FormFieldSelectAttributes;
       'rhc-form-textinput': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & FormFieldTextInputAttributes;
+      'rhc-form-textarea': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & FormFieldTextareaAttributes;
       'rhc-hero': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & HeroWebComponentAttributes;
       'rhc-icon': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & IconWebComponentAttributes;
     }
