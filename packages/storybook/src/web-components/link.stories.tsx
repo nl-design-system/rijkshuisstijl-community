@@ -196,7 +196,7 @@ export const Active = {
     href: '#',
     children: 'Label',
   },
-};
+} as StoryObj<typeof meta>;
 
 export const Focus = {
   parameters: {
@@ -206,7 +206,7 @@ export const Focus = {
     href: '#',
     children: 'Label',
   },
-};
+} as StoryObj<typeof meta>;
 
 export const FocusVisible = {
   parameters: {},
@@ -215,7 +215,7 @@ export const FocusVisible = {
     children: 'Label',
     classname: 'utrecht-link--focus-visible',
   },
-};
+} as StoryObj<typeof meta>;
 
 export const Visited = {
   args: {
@@ -225,4 +225,4 @@ export const Visited = {
   parameters: {
     pseudo: { visited: '#link' },
   },
-};
+} as StoryObj<typeof meta>;
