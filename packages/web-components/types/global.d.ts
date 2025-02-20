@@ -12,6 +12,7 @@ import {
   ButtonWebComponentAttributes,
   HeroWebComponentAttributes,
   IconWebComponentAttributes,
+  LinkWebComponentAttributes,
 } from '../src';
 
 declare global {
@@ -32,6 +33,7 @@ declare global {
       'rhc-button': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & ButtonWebComponentAttributes;
       'rhc-hero': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & HeroWebComponentAttributes;
       'rhc-icon': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & IconWebComponentAttributes;
+      'rhc-link': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & LinkWebComponentAttributes;
     }
   }
 }

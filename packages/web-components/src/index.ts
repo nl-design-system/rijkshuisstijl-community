@@ -19,3 +19,4 @@ export {
 } from './components/FormFieldCheckboxOption';
 export { HeroWebComponent, type HeroWebComponentAttributes } from './components/Hero';
 export { IconWebComponent, type IconWebComponentAttributes } from './components/Icon';
+export { LinkWebComponent, type LinkWebComponentAttributes } from './components/Link';
