@@ -30,8 +30,6 @@ export class FormFieldTextareaWebComponent extends BaseWebComponent {
       ...restProps
     } = this.props;
 
-    console.log('this.props', this.props);
-
     render(
       <FormFieldTextarea
         autoComplete={(autocomplete as FormFieldTextareaAttributes['autoComplete']) ?? undefined}

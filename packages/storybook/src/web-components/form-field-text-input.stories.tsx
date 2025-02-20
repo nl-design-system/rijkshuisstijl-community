@@ -366,20 +366,14 @@ export const Status = {
   },
 } as StoryObj<typeof meta>;
 
-// export const Password = {
-//   args: {
-//     autoComplete: 'current-password',
-//     name: 'subject',
-//     label: 'Wachtwoord',
-//     type: 'password',
-//   },
-//   render: (args) => (
-//     <form>
-//       <input hidden autoComplete="username" type="text" />
-//       <FormFieldTextInput autoComplete={args.autoComplete} label={args.label} name={args.name} type={args.type} />
-//     </form>
-//   ),
-// } as StoryObj<typeof meta>;
+export const Password = {
+  args: {
+    autoComplete: 'current-password',
+    name: 'subject',
+    label: 'Wachtwoord',
+    type: 'password',
+  },
+} as StoryObj<typeof meta>;
 
 export const Disabled = {
   args: {

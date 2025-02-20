@@ -31,8 +31,6 @@ export class FormFieldTextInputWebComponent extends BaseWebComponent {
       ...restProps
     } = this.props;
 
-    console.log('this.props', this.props);
-
     render(
       <FormFieldTextInput
         autoComplete={(autocomplete as FormFieldTextInputAttributes['autoComplete']) ?? undefined}

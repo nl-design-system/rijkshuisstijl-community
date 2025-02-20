@@ -23,7 +23,6 @@ export class CardWebComponent extends BaseWebComponent {
   }
 
   Button({ appearance, disabled, text, ...restProps }: { [key: string]: string }) {
-    console.log('Button - start');
     return (
       <Button
         appearance={appearance as ButtonWebComponentAttributes['appearance']}
@@ -56,8 +55,6 @@ export class CardWebComponent extends BaseWebComponent {
 
     let component;
     let buttonParsed;
-
-    console.log('button prop', button);
 
     if (button) {
       buttonParsed = JSON.parse(button);
