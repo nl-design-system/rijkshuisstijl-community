@@ -194,7 +194,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: install
     if: github.event_name == 'pull_request'
-    continue-on-error: true
 
     steps:
       - name: Checkout branch
