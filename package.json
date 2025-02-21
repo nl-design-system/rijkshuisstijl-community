@@ -29,6 +29,7 @@
     "rimraf": "6.0.1"
   },
   "devDependencies": {
+    "@changesets/cli": "2.28.1",
     "@lerna-lite/cli": "3.12.0",
     "@lerna-lite/publish": "3.12.0",
     "@lerna-lite/run": "3.12.0",
@@ -76,6 +77,7 @@
     "prepare": "husky",
     "prettier": "prettier --write .",
     "publish": "lerna publish from-package --yes",
+    "publish:changeset": "changeset publish",
     "release": "lerna version prerelease --conventional-prerelease --no-changelog --no-private --yes",
     "start": "node_modules/http-server/bin packages/storybook/dist/",
     "start:rhc-templates": "npm run --workspace apps/rhc-templates dev",
