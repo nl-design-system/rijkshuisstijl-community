@@ -1,30 +1,84 @@
-export { AccordionWebComponent, type AccordionWebComponentAttributes } from './components/Accordion';
-export { ActionGroupWebComponent, type ActionGroupWebComponentAttributes } from './components/ActionGroup';
-export { AlertWebComponent, type AlertWebComponentAttributes } from './components/Alert';
-export { ArticleWebComponent, type ArticleWebComponentAttributes } from './components/Article';
-export { BlockquoteWebComponent, type BlockquoteWebComponentAttributes } from './components/Blockquote';
-export {
+/* eslint-disable no-unused-vars */
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { AccordionWebComponent, type AccordionWebComponentAttributes } from './components/Accordion';
+import { ActionGroupWebComponent, type ActionGroupWebComponentAttributes } from './components/ActionGroup';
+import { AlertWebComponent, type AlertWebComponentAttributes } from './components/Alert';
+import { ArticleWebComponent, type ArticleWebComponentAttributes } from './components/Article';
+import { BlockquoteWebComponent, type BlockquoteWebComponentAttributes } from './components/Blockquote';
+import {
   type BreadcrumbNavLinkWebComponentAttributes,
   type BreadcrumbNavSeparatorWebComponentAttributes,
   BreadcrumbNavWebComponent,
   type BreadcrumbNavWebComponentAttributes,
 } from './components/BreadcrumbNav';
-export { ButtonWebComponent, type ButtonWebComponentAttributes } from './components/Button';
-export { CardWebComponent, type CardWebComponentAttributes } from './components/Card';
-export { CheckboxGroupWebComponent, type CheckboxGroupWebComponentAttributes } from './components/CheckboxGroup';
-export { CheckboxWebComponent, type CheckboxWebComponentAttributes } from './components/Checkbox';
-export {
+import { ButtonWebComponent, type ButtonWebComponentAttributes } from './components/Button';
+import { CardWebComponent, type CardWebComponentAttributes } from './components/Card';
+import { CheckboxWebComponent, type CheckboxWebComponentAttributes } from './components/Checkbox';
+import { CheckboxGroupWebComponent, type CheckboxGroupWebComponentAttributes } from './components/CheckboxGroup';
+import {
   type FormFieldCheckboxGroupAttributes,
   FormFieldCheckboxGroupWebComponent,
 } from './components/FormFieldCheckboxGroup';
-export {
+import {
   type FormFieldCheckboxOptionAttributes,
   FormFieldCheckboxOptionWebComponent,
 } from './components/FormFieldCheckboxOption';
-export { type FormFieldRadioAttributes, FormFieldRadioWebComponent } from './components/FormFieldRadio';
-export { type FormFieldRadioGroupAttributes, FormFieldRadioGroupWebComponent } from './components/FormFieldRadioGroup';
-export { type FormFieldSelectAttributes, FormFieldSelectWebComponent } from './components/FormFieldSelect';
-export { type FormFieldTextInputAttributes, FormFieldTextInputWebComponent } from './components/FormFieldTextInput';
-export { type FormFieldTextareaAttributes, FormFieldTextareaWebComponent } from './components/FormFieldTextarea';
-export { HeroWebComponent, type HeroWebComponentAttributes } from './components/Hero';
-export { IconWebComponent, type IconWebComponentAttributes } from './components/Icon';
+import { type FormFieldRadioAttributes, FormFieldRadioWebComponent } from './components/FormFieldRadio';
+import { type FormFieldRadioGroupAttributes, FormFieldRadioGroupWebComponent } from './components/FormFieldRadioGroup';
+import { type FormFieldSelectAttributes, FormFieldSelectWebComponent } from './components/FormFieldSelect';
+import { type FormFieldTextInputAttributes, FormFieldTextInputWebComponent } from './components/FormFieldTextInput';
+import { type FormFieldTextareaAttributes, FormFieldTextareaWebComponent } from './components/FormFieldTextarea';
+import { HeroWebComponent, type HeroWebComponentAttributes } from './components/Hero';
+import { IconWebComponent, type IconWebComponentAttributes } from './components/Icon';
+
+export { AccordionWebComponent, type AccordionWebComponentAttributes };
+export { ActionGroupWebComponent, type ActionGroupWebComponentAttributes };
+export { AlertWebComponent, type AlertWebComponentAttributes };
+export { ArticleWebComponent, type ArticleWebComponentAttributes };
+export { BlockquoteWebComponent, type BlockquoteWebComponentAttributes };
+export {
+  type BreadcrumbNavLinkWebComponentAttributes,
+  type BreadcrumbNavSeparatorWebComponentAttributes,
+  BreadcrumbNavWebComponent,
+  type BreadcrumbNavWebComponentAttributes,
+};
+export { ButtonWebComponent, type ButtonWebComponentAttributes };
+export { CardWebComponent, type CardWebComponentAttributes };
+export { CheckboxGroupWebComponent, type CheckboxGroupWebComponentAttributes };
+export { CheckboxWebComponent, type CheckboxWebComponentAttributes };
+export { type FormFieldCheckboxGroupAttributes, FormFieldCheckboxGroupWebComponent };
+export { type FormFieldCheckboxOptionAttributes, FormFieldCheckboxOptionWebComponent };
+export { FormFieldRadioAttributes, FormFieldRadioWebComponent };
+export { type FormFieldRadioGroupAttributes, FormFieldRadioGroupWebComponent };
+export { type FormFieldSelectAttributes, FormFieldSelectWebComponent };
+export { type FormFieldTextInputAttributes, FormFieldTextInputWebComponent };
+export { type FormFieldTextareaAttributes, FormFieldTextareaWebComponent };
+export { HeroWebComponent, type HeroWebComponentAttributes };
+export { IconWebComponent, type IconWebComponentAttributes };
+
+declare global {
+  namespace JSX {
+    type WebComponentAttributes<T> = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & T;
+    interface IntrinsicElements {
+      'rhc-accordion': WebComponentAttributes<AccordionWebComponentAttributes>;
+      'rhc-action-group': WebComponentAttributes<ActionGroupWebComponentAttributes>;
+      'rhc-alert': WebComponentAttributes<AlertWebComponentAttributes>;
+      'rhc-article': WebComponentAttributes<ArticleWebComponentAttributes>;
+      'rhc-blockquote': WebComponentAttributes<BlockquoteWebComponentAttributes>;
+      'rhc-breadcrumb-nav': WebComponentAttributes<BreadcrumbNavWebComponentAttributes>;
+      'rhc-button': WebComponentAttributes<ButtonWebComponentAttributes>;
+      'rhc-card': WebComponentAttributes<CardWebComponentAttributes>;
+      'rhc-checkbox-group': WebComponentAttributes<CheckboxGroupWebComponentAttributes>;
+      'rhc-checkbox': WebComponentAttributes<CheckboxWebComponentAttributes>;
+      'rhc-form-checkbox-group': WebComponentAttributes<FormFieldCheckboxGroupAttributes>;
+      'rhc-form-checkbox': WebComponentAttributes<FormFieldCheckboxOptionAttributes>;
+      'rhc-form-radio': WebComponentAttributes<FormFieldRadioAttributes>;
+      'rhc-form-radio-group': WebComponentAttributes<FormFieldRadioGroupAttributes>;
+      'rhc-form-select': WebComponentAttributes<FormFieldSelectAttributes>;
+      'rhc-form-textinput': WebComponentAttributes<FormFieldTextInputAttributes>;
+      'rhc-form-textarea': WebComponentAttributes<FormFieldTextareaAttributes>;
+      'rhc-hero': WebComponentAttributes<HeroWebComponentAttributes>;
+      'rhc-icon': WebComponentAttributes<IconWebComponentAttributes>;
+    }
+  }
+}
