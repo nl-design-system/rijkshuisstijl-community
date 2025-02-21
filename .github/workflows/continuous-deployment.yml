@@ -242,9 +242,8 @@ jobs:
       - name: "Continuous Deployment: build"
         run: pnpm run --if-present build
 
-      - name: "Continuous Deployment: publish changeset to GitHub repository"
+      - name: "Continuous Deployment: update versions and publish to NPM"
         uses: changesets/action@c8bada60c408975afd1a20b3db81d6eee6789308 # v1.4.9
-        id: changeset
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
@@ -257,13 +256,3 @@ jobs:
           setupGitUser: false
           title: "docs(release): design system packages"
           publish: "pnpm run publish:changeset"
-
-      - name: "Continuous Deployment: publish to npm"
-        env:
-          HUSKY: 0
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          pnpm config set "@rijkshuisstijl-community:registry" "https://registry.npmjs.org/"
-          pnpm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
-          pnpm run publish
-          pnpm config delete "//registry.npmjs.org/:_authToken"
