@@ -31,10 +31,4 @@ export class AccordionWebComponent extends BaseWebComponent {
       this.shadowRoot,
     );
   }
-
-  static override define(): void {
-    if (!customElements.get(this.tagName)) {
-      customElements.define(this.tagName, AccordionWebComponent);
-    }
-  }
 }
