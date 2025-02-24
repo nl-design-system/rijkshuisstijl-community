@@ -22,7 +22,11 @@ describe('Card', () => {
       expect(navBar).toBeVisible();
     });
     it('renders a link with the correct href and title', () => {
-      linkTest(<Card heading="Heading" href="/example" title="Example Title" />, '/example', 'Example Title');
+      linkTest(
+        <Card heading="Heading" href="/example" linkLabel={'Example Label'} title="Example Title" />,
+        '/example',
+        'Example Title',
+      );
     });
   });
 
