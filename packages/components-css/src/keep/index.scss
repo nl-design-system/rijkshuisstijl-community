@@ -4,154 +4,154 @@
   display: inline-block;
   position: relative;
 
-  &-top-left {
+  &--top-left {
+    &--s {
+      > :first-child {
+        @include mixin.rhc-keep--corner("top-left", "s");
+      }
+    }
+
+    &--m {
+      > :first-child {
+        @include mixin.rhc-keep--corner("top-left", "m");
+      }
+    }
+
+    &--l {
+      > :first-child {
+        @include mixin.rhc-keep--corner("top-left", "l");
+      }
+    }
+  }
+
+  &--top-right {
+    &--s {
+      > :first-child {
+        @include mixin.rhc-keep--corner("top-right", "s");
+      }
+    }
+
+    &--m {
+      > :first-child {
+        @include mixin.rhc-keep--corner("top-right", "m");
+      }
+    }
+
+    &--l {
+      > :first-child {
+        @include mixin.rhc-keep--corner("top-right", "l");
+      }
+    }
+  }
+
+  &--bottom-left {
     &-s {
       > :first-child {
-        @include mixin.rhc-keep-corner("top-left", "s");
+        @include mixin.rhc-keep--corner("bottom-left", "s");
+      }
+    }
+    &--m {
+      > :first-child {
+        @include mixin.rhc-keep--corner("bottom-left", "m");
       }
     }
 
-    &-m {
+    &--l {
       > :first-child {
-        @include mixin.rhc-keep-corner("top-left", "m");
-      }
-    }
-
-    &-l {
-      > :first-child {
-        @include mixin.rhc-keep-corner("top-left", "l");
+        @include mixin.rhc-keep--corner("bottom-left", "l");
       }
     }
   }
 
-  &-top-right {
-    &-s {
+  &--bottom-right {
+    &--s {
       > :first-child {
-        @include mixin.rhc-keep-corner("top-right", "s");
+        @include mixin.rhc-keep--corner("bottom-right", "s");
       }
     }
 
-    &-m {
+    &--m {
       > :first-child {
-        @include mixin.rhc-keep-corner("top-right", "m");
+        @include mixin.rhc-keep--corner("bottom-right", "m");
       }
     }
 
-    &-l {
+    &--l {
       > :first-child {
-        @include mixin.rhc-keep-corner("top-right", "l");
-      }
-    }
-  }
-
-  &-bottom-left {
-    &-s {
-      > :first-child {
-        @include mixin.rhc-keep-corner("bottom-left", "s");
-      }
-    }
-    &-m {
-      > :first-child {
-        @include mixin.rhc-keep-corner("bottom-left", "m");
-      }
-    }
-
-    &-l {
-      > :first-child {
-        @include mixin.rhc-keep-corner("bottom-left", "l");
-      }
-    }
-  }
-
-  &-bottom-right {
-    &-s {
-      > :first-child {
-        @include mixin.rhc-keep-corner("bottom-right", "s");
-      }
-    }
-
-    &-m {
-      > :first-child {
-        @include mixin.rhc-keep-corner("bottom-right", "m");
-      }
-    }
-
-    &-l {
-      > :first-child {
-        @include mixin.rhc-keep-corner("bottom-right", "l");
+        @include mixin.rhc-keep--corner("bottom-right", "l");
       }
     }
   }
 }
 
-.rhc-keep-child-top-left {
-  @include mixin.rhc-keep-child("top-left");
-  @include mixin.rhc-keep-corner("bottom-right", "s");
+.rhc-keep__child--top-left {
+  @include mixin.rhc-keep__child("top-left");
+  @include mixin.rhc-keep--corner("bottom-right", "s");
 }
 
-.rhc-keep-child-top-right {
-  @include mixin.rhc-keep-child("top-right");
-  @include mixin.rhc-keep-corner("bottom-left", "s");
+.rhc-keep__child--top-right {
+  @include mixin.rhc-keep__child("top-right");
+  @include mixin.rhc-keep--corner("bottom-left", "s");
 }
 
-.rhc-keep-child-bottom-left {
-  @include mixin.rhc-keep-child("bottom-left");
-  @include mixin.rhc-keep-corner("top-right", "s");
+.rhc-keep__child--bottom-left {
+  @include mixin.rhc-keep__child("bottom-left");
+  @include mixin.rhc-keep--corner("top-right", "s");
 }
 
-.rhc-keep-child-bottom-right {
-  @include mixin.rhc-keep-child("bottom-right");
-  @include mixin.rhc-keep-corner("top-left", "s");
+.rhc-keep__child--bottom-right {
+  @include mixin.rhc-keep__child("bottom-right");
+  @include mixin.rhc-keep--corner("top-left", "s");
 }
 
-.rhc-keep-child__horizontal {
-  &-xs {
-    @include mixin.rhc-keep-child__horizontal("xs");
+.rhc-keep__child--horizontal {
+  &--xs {
+    @include mixin.rhc-keep__child--horizontal("xs");
   }
 
-  &-sm {
-    @include mixin.rhc-keep-child__horizontal("sm");
+  &--sm {
+    @include mixin.rhc-keep__child--horizontal("sm");
   }
 
-  &-md {
-    @include mixin.rhc-keep-child__horizontal("md");
+  &--md {
+    @include mixin.rhc-keep__child--horizontal("md");
   }
 
-  &-lg {
-    @include mixin.rhc-keep-child__horizontal("lg");
+  &--lg {
+    @include mixin.rhc-keep__child--horizontal("lg");
   }
 
-  &-xl {
-    @include mixin.rhc-keep-child__horizontal("xl");
+  &--xl {
+    @include mixin.rhc-keep__child--horizontal("xl");
   }
 
-  &-full {
-    @include mixin.rhc-keep-child__horizontal("full");
+  &--full {
+    @include mixin.rhc-keep__child--horizontal("full");
   }
 }
 
-.rhc-keep-child__vertical {
-  &-xs {
-    @include mixin.rhc-keep-child__vertical("xs");
+.rhc-keep__child__vertical {
+  &--xs {
+    @include mixin.rhc-keep__child--vertical("xs");
   }
 
-  &-sm {
-    @include mixin.rhc-keep-child__vertical("sm");
+  &--sm {
+    @include mixin.rhc-keep__child--vertical("sm");
   }
 
-  &-md {
-    @include mixin.rhc-keep-child__vertical("md");
+  &--md {
+    @include mixin.rhc-keep__child--vertical("md");
   }
 
-  &-lg {
-    @include mixin.rhc-keep-child__vertical("lg");
+  &--lg {
+    @include mixin.rhc-keep__child--vertical("lg");
   }
 
-  &-xl {
-    @include mixin.rhc-keep-child__vertical("xl");
+  &--xl {
+    @include mixin.rhc-keep__child--vertical("xl");
   }
 
-  &-full {
-    @include mixin.rhc-keep-child__vertical("full");
+  &--full {
+    @include mixin.rhc-keep__child--vertical("full");
   }
 }

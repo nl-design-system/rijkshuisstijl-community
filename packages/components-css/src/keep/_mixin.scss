@@ -1,4 +1,4 @@
-@mixin rhc-keep-reset-border-radius {
+@mixin rhc-keep--reset-border-radius {
   border-radius: 0;
 }
 
@@ -14,8 +14,8 @@
   }
 }
 
-@mixin rhc-keep-corner($corner, $size) {
-  @include rhc-keep-reset-border-radius;
+@mixin rhc-keep--corner($corner, $size) {
+  @include rhc-keep--reset-border-radius;
 
   @if $size == "s" {
     @include rhc-keep--border-radius($corner, 1);
@@ -26,7 +26,7 @@
   }
 }
 
-@mixin rhc-keep-child__horizontal($size) {
+@mixin rhc-keep__child--horizontal($size) {
   @if $size == "xs" {
     inline-size: 25%;
   } @else if $size == "sm" {
@@ -43,7 +43,7 @@
   }
 }
 
-@mixin rhc-keep-child__vertical($size) {
+@mixin rhc-keep__child--vertical($size) {
   @if $size == "xs" {
     block-size: 25%;
   } @else if $size == "sm" {
@@ -60,8 +60,8 @@
   }
 }
 
-@mixin rhc-keep-child($position) {
-  @include rhc-keep-reset-border-radius;
+@mixin rhc-keep__child($position) {
+  @include rhc-keep--reset-border-radius;
 
   box-sizing: border-box;
   position: absolute;
