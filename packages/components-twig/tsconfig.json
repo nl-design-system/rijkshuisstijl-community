@@ -1,25 +1,12 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "allowUnreachableCode": false,
-    "declaration": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
-    "incremental": true,
-    "isolatedModules": true,
-    "lib": ["dom", "es2020"],
-    "module": "esnext",
+    "outDir": "./dist/",
+    "lib": ["dom"],
+    "module": "Preserve",
     "moduleResolution": "bundler",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "outDir": "dist",
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "es2020"
+    "declaration": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/*.ts"],
-  "exclude": ["**/node_modules/*"]
+  "extends": "@nl-design-system/tsconfig",
+  "include": ["./src/"]
 }
