@@ -1,6 +1,6 @@
-import '@testing-library/jest-dom';
-
-import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render, screen } from '@testing-library/react';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { IconButton } from './Button';
 
 describe('IconButton', () => {
@@ -69,7 +69,7 @@ describe('IconButton', () => {
   });
 
   it('can trigger a click event', () => {
-    const handleClick = jest.fn();
+    const handleClick = vi.fn();
 
     const { container } = render(<IconButton label="example-icon-label" onClick={handleClick} />);
 
@@ -80,3 +80,5 @@ describe('IconButton', () => {
     expect(handleClick).toHaveBeenCalled();
   });
 });
+
+afterEach(() => cleanup());

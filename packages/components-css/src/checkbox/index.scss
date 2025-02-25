@@ -1,0 +1,34 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@use "mixin";
+
+.utrecht-checkbox {
+  margin-block-start: var(--rhc-space-50);
+  &--disabled {
+    @include mixin.utrecht-checkbox--disabled;
+  }
+  &--invalid {
+    @include mixin.utrecht-checkbox--invalid;
+  }
+}
+.utrecht-checkbox--custom.utrecht-checkbox--html-input,
+.utrecht-custom-checkbox--html-input {
+  @include mixin.utrecht-custom-checkbox--html-input;
+}
+.utrecht-checkbox--custom.utrecht-checkbox--html-input:indeterminate {
+  @include mixin.utrecht-checkbox--indeterminate;
+}
+.utrecht-checkbox--custom.utrecht-checkbox--html-input[aria-invalid="true"]:hover {
+  @include mixin.utrecht-checkbox--invalid;
+}
+
+.rhc-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  padding-block-end: var(--rhc-checkbox-group-padding-block-end);
+  padding-block-start: var(--rhc-checkbox-group-padding-block-start);
+  row-gap: var(--rhc-checkbox-group-row-gap);
+}

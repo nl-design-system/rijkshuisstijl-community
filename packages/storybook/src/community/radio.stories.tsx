@@ -2,7 +2,11 @@
 
 import { Radio, type RadioProps } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
+import readme from '@utrecht/components/radio-button/README.md?raw';
+import anatomyDocs from '@utrecht/components/radio-button/docs/anatomy.nl.md?raw';
+import visualDesignDocs from '@utrecht/components/radio-button/docs/visual-design.nl.md?raw';
 import clsx from 'clsx';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface RadioStoryProps extends RadioProps {
   focus?: boolean;
@@ -12,6 +16,7 @@ interface RadioStoryProps extends RadioProps {
 
 const RadioStory = ({ active, focus, focusVisible, name, ...args }: RadioStoryProps) => (
   <Radio
+    aria-label="radio-label"
     name={name || undefined}
     className={clsx({
       'utrecht-radio-button--active': active,
@@ -77,6 +82,20 @@ const meta = {
     name: {
       description: 'Radio group name. Use the same name for each radio in a group.',
     },
+  },
+  parameters: {
+    status: {
+      type: 'STABLE',
+    },
+    docs: {
+      description: {
+        // TODO: add usage documentation
+        component: mergeMarkdown([readme, anatomyDocs, visualDesignDocs]),
+      },
+    },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin:
+      'Dit component en de documentatie hieronder is overgenomen van de Gemeente Utrecht (daar heeft het de naam RadioButton), met styling van de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof RadioStory>;
 

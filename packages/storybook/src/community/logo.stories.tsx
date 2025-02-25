@@ -1,39 +1,37 @@
 import { Icon, Logo, LogoProps } from '@rijkshuisstijl-community/components-react';
-import { rhcLogoColor, rhcLogoImgBackgroundColor, rhcLogoImgColor } from '@rijkshuisstijl-community/design-tokens/dist';
+import {
+  rhcLogoColor,
+  rhcLogoImageBackgroundColor,
+  rhcLogoImageColor,
+} from '@rijkshuisstijl-community/design-tokens/dist';
 import { Meta, StoryObj } from '@storybook/react';
 import { CSSProperties } from 'react';
 
 interface LogoCSSProperties extends CSSProperties {
   '--rhc-logo-color': string;
-  '--rhc-logo-img-background-color': string;
-  '--rhc-logo-img-color': string;
+  '--rhc-logo-image-background-color': string;
+  '--rhc-logo-image-color': string;
 }
 
 interface LogoStoryProps extends LogoProps {
-  imgBackgroundColor?: string;
-  imgIconColor?: string;
+  imageBackgroundColor?: string;
+  imageIconColor?: string;
   textColor?: string;
 }
 
-const LogoStory = ({ imgBackgroundColor, textColor, imgIconColor, ...args }: LogoStoryProps) => (
+const LogoStory = ({ imageBackgroundColor, textColor, imageIconColor, ...args }: LogoStoryProps) => (
   <>
     <Logo
       {...args}
       style={
         {
           '--rhc-logo-color': textColor || rhcLogoColor,
-          '--rhc-logo-img-background-color': imgBackgroundColor || rhcLogoImgBackgroundColor,
-          '--rhc-logo-img-color': imgIconColor || rhcLogoImgColor,
+          '--rhc-logo-image-background-color': imageBackgroundColor || rhcLogoImageBackgroundColor,
+          '--rhc-logo-image-color': imageIconColor || rhcLogoImageColor,
         } as LogoCSSProperties
       }
     >
-      <Icon
-        icon={'nederland-map'}
-        style={{
-          height: '48px',
-          width: '42px',
-        }}
-      />
+      <Icon icon={'nederland-map'} />
     </Logo>
   </>
 );
@@ -45,8 +43,8 @@ const meta = {
   args: {
     organisation: '',
     subtitle: '',
-    imgBackgroundColor: rhcLogoImgBackgroundColor,
-    imgIconColor: rhcLogoImgColor,
+    imageBackgroundColor: rhcLogoImageBackgroundColor,
+    imageIconColor: rhcLogoImageColor,
     textColor: rhcLogoColor,
   },
   argTypes: {
@@ -58,14 +56,14 @@ const meta = {
       name: 'subtitle',
       type: { name: 'string', required: false },
     },
-    imgBackgroundColor: {
+    imageBackgroundColor: {
       control: 'color',
       description: 'Changes background color of the image',
       table: {
         category: 'Demo',
       },
     },
-    imgIconColor: {
+    imageIconColor: {
       control: 'color',
       description: 'Changes color of the image icon',
       table: {
@@ -79,6 +77,14 @@ const meta = {
         category: 'Demo',
       },
     },
+  },
+  parameters: {
+    // TODO: add documentation
+    status: {
+      type: 'STABLE',
+    },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
   render: LogoStory,
 } satisfies Meta<typeof LogoStory>;

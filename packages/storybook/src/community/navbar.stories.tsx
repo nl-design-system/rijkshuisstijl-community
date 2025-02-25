@@ -5,6 +5,14 @@ const meta = {
   title: 'Rijkshuisstijl/NavBar',
   id: 'rhc-nav-bar',
   component: NavBar,
+  parameters: {
+    // TODO: add documentation
+    status: {
+      type: 'UNSTABLE',
+    },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+  },
 } satisfies Meta<typeof NavBar>;
 
 export default meta;
@@ -13,14 +21,17 @@ type Story = StoryObj<typeof meta>;
 
 const items: NavBarItemProps[] = [
   {
+    id: 'first-link',
     label: 'Link',
     href: '/',
   },
   {
+    id: 'second-link',
     label: 'Link',
     href: '/',
   },
   {
+    id: 'third-link',
     label: 'Link',
     href: '/',
   },
@@ -28,10 +39,12 @@ const items: NavBarItemProps[] = [
 
 const endItems: NavBarItemProps[] = [
   {
+    id: 'end-first-link',
     label: 'Link',
     href: '/',
   },
   {
+    id: 'end-second-link',
     label: 'Link',
     href: '/',
   },
@@ -46,7 +59,11 @@ export const Default: Story = {
 export const WithHeading: Story = {
   args: {
     items,
-    headingItem: { label: 'Heading', href: '/' },
+    headingItem: {
+      id: 'heading',
+      label: 'Heading',
+      href: '/',
+    },
   },
 };
 

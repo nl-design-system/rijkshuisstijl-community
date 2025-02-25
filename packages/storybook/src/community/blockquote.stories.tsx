@@ -3,6 +3,7 @@
 import { Blockquote } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './blockquote.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/Blockquote',
@@ -28,11 +29,21 @@ const meta = {
   },
   tags: ['autodocs'],
   parameters: {
+    status: {
+      type: 'UNSTABLE',
+    },
     docs: {
       description: {
-        component: readme,
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
+        component: mergeMarkdown([readme]),
       },
     },
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1349-6340&t=9KlJWkn6GEOm2sN1-11',
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/461',
+    nldesignsystem: 'https://www.nldesignsystem.nl/blockquote',
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
 } as Meta<typeof Blockquote>;
 

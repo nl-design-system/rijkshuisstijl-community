@@ -1,0 +1,24 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.utrecht-figure img {
+  border-end-end-radius: var(--utrecht-figure-img-border-end-end-radius);
+  border-end-start-radius: var(--utrecht-figure-img-border-end-start-radius);
+  border-start-end-radius: var(--utrecht-figure-img-border-start-end-radius);
+  border-start-start-radius: var(--utrecht-figure-img-border-start-start-radius);
+}
+
+.utrecht-figure {
+  font-size: var(--rhc-font-size-xs-desktop, inherit);
+  line-height: var(--rhc-line-height-md, inherit);
+}
+
+.utrecht-figure__caption {
+  border-inline-start: var(--utrecht-figure-caption-border-width) solid var(--utrecht-figure-caption-border-color);
+  font-family: var(--rhc-font-family-primary, inherit);
+  padding-block-end: var(--utrecht-figure-caption-padding-block-end);
+  padding-block-start: var(--utrecht-figure-caption-padding-block-start);
+  padding-inline-start: var(--utrecht-figure-caption-padding-inline-start);
+}

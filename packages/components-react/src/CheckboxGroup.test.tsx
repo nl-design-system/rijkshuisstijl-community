@@ -1,6 +1,6 @@
-import '@testing-library/jest-dom';
-
-import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, render, screen } from '@testing-library/react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { Checkbox } from './Checkbox';
 import { CheckboxGroup } from './CheckboxGroup';
 
@@ -62,3 +62,5 @@ describe('CheckboxGroup', () => {
     expect(screen.getByTestId('test-group')).toBeInTheDocument();
   });
 });
+
+afterEach(() => cleanup());

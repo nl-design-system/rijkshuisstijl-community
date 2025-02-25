@@ -1,5 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import { cleanup, render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { createRef } from 'react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { SideNavItem } from './SideNavItem';
 
 describe('SideNaveItem', () => {
@@ -15,7 +17,7 @@ describe('SideNaveItem', () => {
   });
 
   it('forwards ref correctly', () => {
-    const ref = { current: null };
+    const ref = createRef<HTMLLIElement>();
     render(<SideNavItem ref={ref} />);
 
     expect(ref.current).toBeInstanceOf(HTMLLIElement);
@@ -23,8 +25,10 @@ describe('SideNaveItem', () => {
 
   it('applies custom class name', () => {
     const testClassName = 'test-class';
-    render(<SideNavItem className={testClassName} />);
+    render(<SideNavItem className={testClassName} data-testid="test-id" />);
 
-    expect(screen.getByRole('listitem')).toHaveClass(testClassName);
+    expect(screen.getByTestId('test-id')).toHaveClass(testClassName);
   });
 });
+
+afterEach(() => cleanup());

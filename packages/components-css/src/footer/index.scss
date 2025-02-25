@@ -1,0 +1,147 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+.rhc-page-footer {
+  --utrecht-space-around: 1;
+  --utrecht-link-hover-text-decoration: underline;
+  --_utrecht-link-state-text-decoration-color: currentColor;
+  --utrecht-column-layout-gap: var(--rhc-page-footer-column-gap);
+  --utrecht-column-layout-column-width: var(--rhc-page-footer-column-width);
+  --nl-heading-level-1-color: currentColor;
+  --nl-heading-level-2-color: currentColor;
+  --nl-heading-level-3-color: currentColor;
+  --nl-heading-level-4-color: currentColor;
+  --nl-heading-level-5-color: currentColor;
+  --nl-heading-level-6-color: currentColor;
+
+  align-items: center;
+  display: flex;
+  flex-direction: var(--rhc-page-footer-flex-direction);
+  padding-block: 0;
+  padding-inline: 0;
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+
+.rhc-page-footer > * {
+  inline-size: 100%;
+}
+
+.rhc-page-footer--primary-filled {
+  --utrecht-page-footer-background-color: var(--rhc-color-primary-500);
+}
+
+.rhc-page-footer--primary-filled.rhc-page-subfooter {
+  border-block-start-color: var(--rhc-page-footer-border-block-start-color);
+  border-block-start-style: var(--rhc-page-footer-border-block-start-style);
+  border-block-start-width: var(--rhc-page-footer-border-block-start-width);
+}
+
+.rhc-page-footer--primary-outlined {
+  --utrecht-page-footer-background-color: var(--rhc-page-footer-outlined-background-color);
+  --utrecht-page-footer-color: var(--rhc-page-footer-outlined-color);
+
+  border-block-start-color: var(--rhc-page-footer-outlined-border-color);
+  border-block-start-style: var(--rhc-page-footer-border-block-start-style);
+  border-block-start-width: var(--rhc-page-footer-border-block-start-width);
+}
+
+.rhc-page-footer__content {
+  column-gap: var(--rhc-page-footer-column-gap);
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  @media (width <= 1024px) {
+    & {
+      flex-direction: var(--rhc-page-footer-flex-direction);
+    }
+  }
+}
+
+.rhc-page-footer__wrapper {
+  box-sizing: border-box;
+  inline-size: 100%;
+  max-inline-size: var(--rhc-page-footer-content-max-inline-size);
+  padding-block-end: var(--utrecht-page-footer-padding-block-end);
+  padding-block-start: var(--utrecht-page-footer-padding-block-start);
+  padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
+  padding-inline-start: var(--utrecht-page-footer-padding-inline-start);
+}
+
+.rhc-page-footer__section,
+.rhc-page-footer__title {
+  break-inside: avoid;
+  line-height: var(--rhc-line-height-md, inherit);
+  padding-block-end: var(--rhc-page-footer-padding-block-end);
+}
+
+.rhc-page-footer__content > * {
+  flex: 1;
+}
+
+.rhc-page-subfooter {
+  align-items: center;
+  display: flex;
+  flex-direction: var(--rhc-page-footer-flex-direction);
+}
+
+.rhc-page-subfooter__content {
+  align-items: center;
+  display: flex;
+  gap: var(--rhc-page-footer-content-column-gap);
+  justify-content: space-between;
+
+  @media (width <= 1024px) {
+    flex-direction: column;
+  }
+}
+
+.rhc-page-subfooter__backtotop {
+  align-items: center;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  text-decoration: none;
+  &:hover {
+    text-decoration: var(--rhc-sidenav-link-active-text-decoration);
+  }
+}
+
+@media (width <= 780px) {
+  .rhc-page-footer__wrapper {
+    --utrecht-page-footer-padding-inline-end: var(--rhc-page-footer-padding-inline-end);
+    --utrecht-page-footer-padding-inline-start: var(--rhc-page-footer-padding-inline-start);
+    --utrecht-page-footer-padding-block-end: var(--rhc-page-footer-padding-block-end);
+    --utrecht-page-footer-padding-block-start: var(--rhc-page-footer-padding-block-start);
+  }
+}
+
+.rhc-page-prefooter {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.rhc-page-prefooter::before {
+  background-color: var(--rhc-color-primary-500);
+  block-size: 1.5rem;
+  content: "";
+  inline-size: 2rem;
+}
+
+.rhc-page-prefooter__content {
+  font-family: var(--rhc-font-family-secondary);
+  inset: 0% 50% auto auto;
+  line-height: 100%;
+  margin-inline-end: -2rem;
+  position: absolute;
+  transform: translateX(100%);
+  @media (width <= 720px) {
+    & {
+      display: none;
+    }
+  }
+}

@@ -1,6 +1,7 @@
-import { iconOptions, SideNavLink } from '@rijkshuisstijl-community/components-react';
+import { getIconSet, SideNavLink } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './side-nav-link.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/SideNav/SideNavLink',
@@ -10,7 +11,7 @@ const meta = {
   argTypes: {
     icon: {
       control: { type: 'select' },
-      options: iconOptions,
+      options: Object.keys(getIconSet()),
       description: 'The icon to use',
       table: {
         type: { summary: 'string' },
@@ -25,12 +26,25 @@ const meta = {
       },
     },
   },
+  args: {
+    children: 'Label',
+    icon: 'activiteit',
+  },
+  render: (args) => {
+    return <SideNavLink {...args} />;
+  },
+
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof SideNavLink>;
 export default meta;
@@ -39,97 +53,73 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: 'Mijn gegevens',
+    icon: 'user',
   },
 };
 
-export const Current: Story = {
-  args: {
-    children: 'Label',
-    current: true,
-  },
-};
 export const Hover: Story = {
-  args: {
-    children: 'Label',
-  },
   parameters: {
     pseudo: { hover: true },
   },
 };
 export const Focus: Story = {
-  args: {
-    children: 'Label',
-  },
   parameters: {
     pseudo: { focus: true },
   },
 };
 export const FocusVisible: Story = {
-  args: {
-    children: 'Label',
-  },
   parameters: {
     pseudo: { focusVisible: true },
   },
 };
 export const Active: Story = {
-  args: {
-    children: 'Label',
-  },
   parameters: {
     pseudo: { active: true },
   },
 };
 
-export const WithIcon: Story = {
+export const Current: Story = {
   args: {
-    children: 'Label',
-    icon: 'activiteit',
+    current: true,
   },
 };
 
 export const CurrentAndHover: Story = {
   args: {
-    children: 'Label',
     current: true,
-    icon: 'activiteit',
   },
   parameters: {
     pseudo: { hover: true },
   },
 };
 
+export const CurrentAndActive: Story = {
+  args: {
+    current: true,
+  },
+  parameters: {
+    pseudo: { active: true },
+  },
+};
 export const CurrentAndFocus: Story = {
   args: {
-    children: 'Label',
     current: true,
-    icon: 'activiteit',
   },
   parameters: {
     pseudo: { focus: true },
   },
 };
-
 export const CurrentAndFocusVisible: Story = {
   args: {
-    children: 'Label',
     current: true,
-    icon: 'activiteit',
   },
   parameters: {
-    pseudo: {
-      focusVisible: true,
-    },
+    pseudo: { focusVisible: true, focus: true },
   },
 };
 
-export const CurrentAndActive: Story = {
+export const WithoutIcon: Story = {
   args: {
-    children: 'Label',
-    current: true,
-    icon: 'activiteit',
-  },
-  parameters: {
-    pseudo: { active: true },
+    icon: undefined,
   },
 };

@@ -14,44 +14,55 @@
     "directory": "."
   },
   "engines": {
-    "node": "^20",
-    "pnpm": "^9"
+    "//": "Update @types/node to match the highest node version here",
+    "node": ">=20 <=22",
+    "pnpm": "^10"
   },
   "workspaces": [
     "./apps/*",
     "./packages/*",
     "./proprietary/*"
   ],
+  "dependencies": {
+    "@storybook/test-runner": "0.21.0",
+    "http-server": "14.1.1",
+    "rimraf": "6.0.1"
+  },
   "devDependencies": {
-    "@lerna-lite/cli": "3.7.1",
-    "@lerna-lite/publish": "3.7.1",
-    "@lerna-lite/run": "3.7.1",
-    "@types/node": "20.14.11",
-    "@typescript-eslint/eslint-plugin": "7.16.1",
-    "@typescript-eslint/parser": "7.16.1",
+    "@changesets/cli": "2.28.1",
+    "@lerna-lite/cli": "3.12.0",
+    "@lerna-lite/publish": "3.12.0",
+    "@lerna-lite/run": "3.12.0",
+    "@types/node": "20.17.6",
+    "@typescript-eslint/eslint-plugin": "8.24.0",
+    "@typescript-eslint/parser": "8.24.0",
+    "concurrently": "9.1.2",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-import": "2.30.0",
+    "eslint-plugin-import": "2.31.0",
     "eslint-plugin-json": "3.1.0",
     "eslint-plugin-mdx": "3.1.5",
-    "eslint-plugin-react": "7.34.4",
+    "eslint-plugin-react": "7.37.4",
     "eslint-plugin-sort-exports": "0.9.1",
-    "husky": "9.1.1",
-    "lint-staged": "15.2.7",
-    "markdownlint-cli": "0.41.0",
-    "npm-check-updates": "16.14.20",
+    "husky": "9.1.7",
+    "lint-staged": "15.4.3",
+    "markdownlint-cli": "0.43.0",
+    "npm-check-updates": "17.1.14",
     "npm-package-json-lint": "8.0.0",
     "npm-run-all": "4.1.5",
-    "postcss": "8.4.39",
-    "prettier": "3.3.3",
-    "stylelint": "16.7.0",
+    "postcss": "8.5.2",
+    "prettier": "3.5.0",
+    "stylelint": "16.14.1",
     "stylelint-config-standard-scss": "13.1.0",
     "stylelint-order": "6.0.4",
-    "typescript": "5.5.3"
+    "typescript": "5.7.3",
+    "wait-on": "8.0.2"
   },
   "scripts": {
+    "prebuild": "pnpm run clean",
     "build": "lerna run build",
-    "clean": "lerna run clean",
+    "build:dev": "APP_ENV=dev lerna run build --stream",
+    "clean": "rimraf dist/ && lerna run clean",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
     "lint:js": "eslint --ext .js,.cjs,.mjs,.json,.jsx,.mdx,.ts,.tsx --report-unused-disable-directives .",
@@ -66,8 +77,10 @@
     "prepare": "husky",
     "prettier": "prettier --write .",
     "publish": "lerna publish from-package --yes",
+    "publish:changeset": "changeset publish",
     "release": "lerna version prerelease --conventional-prerelease --no-changelog --no-private --yes",
     "start": "node_modules/http-server/bin packages/storybook/dist/",
+    "start:rhc-templates": "npm run --workspace apps/rhc-templates dev",
     "storybook": "npm-run-all --parallel watch:**",
     "test": "npm run test-workspaces",
     "test-update": "npm-run-all --sequential clean lint build test",
@@ -77,10 +90,8 @@
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.cjs",
     "update-major": "npm-check-updates --configFileName .ncurc.major.cjs",
     "watch:storybook": "npm run --workspace packages/storybook storybook",
-    "watch:style-dictionary": "lerna run watch:style-dictionary"
+    "watch:style-dictionary": "lerna run watch:style-dictionary",
+    "test-storybook:ci": "npm run --workspace packages/storybook playwright:install && concurrently -k -s first -n \"STORYBOOK,A11Y-TEST\" -c \"magenta,green\" \"npm run --workspace packages/storybook prod-static -- --silent\" \"wait-on tcp:6006 && npm run --workspace packages/storybook test-storybook\""
   },
-  "dependencies": {
-    "http-server": "14.1.1"
-  },
-  "packageManager": "pnpm@9.4.0+sha256.b6fd0bfda555e7e584ad7e56b30c68b01d5a04f9ee93989f4b93ca8473c49c74"
+  "packageManager": "pnpm@10.3.0+sha512.ee592eda8815a8a293c206bb0917c4bb0ff274c50def7cbc17be05ec641fc2d1b02490ce660061356bd0d126a4d7eb2ec8830e6959fb8a447571c631d5a2442d"
 }

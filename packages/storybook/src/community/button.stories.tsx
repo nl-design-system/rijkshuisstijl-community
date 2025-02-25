@@ -1,11 +1,17 @@
 /* @license CC0-1.0 */
 
 import { IconButton } from '@rijkshuisstijl-community/components-react';
+import { Button, Icon } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
-import { Button, Icon } from '@utrecht/component-library-react';
+import readme from '@utrecht/components/button/README.md?raw';
+import anatomyDocs from '@utrecht/components/button/docs/anatomy.nl.md?raw';
+import htmlDocs from '@utrecht/components/button/docs/technology-html.nl.md?raw';
+import visualDesignDocs from '@utrecht/components/button/docs/visual-design.nl.md?raw';
+import wcagDocs from '@utrecht/components/button/docs/wcag.nl.md?raw';
 import { PropsWithChildren } from 'react';
-import readme from './button.md?raw';
+import rhcReadme from './button.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface ButtonStoryProps {
   appearance: string;
@@ -39,7 +45,7 @@ const meta = {
       control: { type: 'select' },
       options: ['', 'primary-action-button', 'secondary-action-button', 'subtle-button'],
       table: {
-        category: 'Property',
+        category: 'Variant',
       },
       defaultValue: '',
     },
@@ -56,7 +62,7 @@ const meta = {
     },
     disabled: {
       table: {
-        category: 'Property',
+        category: 'Props',
       },
       defaultValue: false,
     },
@@ -66,7 +72,7 @@ const meta = {
         name: 'boolean',
       },
       table: {
-        category: 'Demo',
+        category: 'Props',
       },
       defaultValue: false,
     },
@@ -76,25 +82,34 @@ const meta = {
         name: 'boolean',
       },
       table: {
-        category: 'Demo',
+        category: 'Props',
       },
       defaultValue: false,
     },
   },
   args: {
-    children: '',
     appearance: '',
+    children: 'Label',
     disabled: false,
     iconLeft: false,
     iconRight: false,
   },
   tags: ['autodocs'],
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme, anatomyDocs, visualDesignDocs, htmlDocs, rhcReadme, wcagDocs]),
       },
     },
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/455',
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=153-1138&p=f&t=bIUNfPQ6Tcm5rDPk-0',
+    nldesignsystem: 'https://nldesignsystem.nl/button',
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen (voor de IconButton) en styling van de Rijkshuisstijl Community.',
   },
   render: ButtonStory,
 } as Meta<typeof ButtonStory>;
@@ -147,7 +162,9 @@ export const IconRight: StoryObj<typeof meta> = {
 export const IconOnly: StoryObj<typeof IconButton> = {
   render: () => (
     <IconButton label="calendar">
-      <IconCalendarEvent></IconCalendarEvent>
+      <Icon>
+        <IconCalendarEvent></IconCalendarEvent>
+      </Icon>
     </IconButton>
   ),
 };

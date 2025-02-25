@@ -1,136 +1,54 @@
 import {
-  FormField,
-  FormFieldDescription,
-  FormFieldProps,
-  FormLabel,
-  Textarea,
-  TextareaProps,
+  FormFieldTextarea as UtrechtFormFieldTextarea,
+  FormFieldTextareaProps as UtrechtFormFieldTextareaProps,
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
-import { FormFieldErrorMessage } from './FormFieldErrorMessage';
+import { Ref, useId } from 'react';
+import { Icon } from './Icon';
 
-export { Textarea, type TextareaProps };
-
-export interface FormFieldTextareaProps
-  extends Omit<FormFieldProps, 'onInput' | 'onBlur' | 'onFocus' | 'onChange'>,
-    Pick<
-      TextareaProps,
-      | 'onInput'
-      | 'onBlur'
-      | 'onFocus'
-      | 'onChange'
-      | 'autoComplete'
-      | 'cols'
-      | 'defaultValue'
-      | 'disabled'
-      | 'invalid'
-      | 'maxLength'
-      | 'minLength'
-      | 'name'
-      | 'placeholder'
-      | 'readOnly'
-      | 'required'
-      | 'rows'
-      | 'value'
-    > {
-  errorMessage?: string;
-  inputRef?: Ref<HTMLTextAreaElement>;
-  inputDir?: 'auto' | 'ltr' | 'rtl';
-  status?: ReactNode;
+export interface FormFieldTextareaProps extends UtrechtFormFieldTextareaProps {
+  ref?: Ref<HTMLDivElement>;
 }
 
-export const FormFieldTextarea = forwardRef(
-  (
-    {
-      autoComplete,
-      cols,
-      description,
-      defaultValue,
-      name,
-      disabled,
-      label,
-      errorMessage,
-      inputRef,
-      inputDir,
-      invalid,
-      maxLength,
-      minLength,
-      placeholder,
-      readOnly,
-      required,
-      rows,
-      spellCheck,
-      status,
-      value,
-      onChange,
-      onFocus,
-      onInput,
-      onBlur,
-      ...restProps
-    }: PropsWithChildren<FormFieldTextareaProps>,
-    ref: ForwardedRef<HTMLDivElement>,
-  ) => {
-    const inputId = useId();
-    const descriptionId = useId();
-    const statusId = useId();
-    const errorMessageId = useId();
+export const FormFieldTextarea = ({
+  ref,
+  errorMessage,
+  description,
+  status,
+  invalid,
+  ...restProps
+}: FormFieldTextareaProps) => {
+  const inputId = useId();
+  const descriptionId = useId();
+  const statusId = useId();
+  const errorMessageId = useId();
 
-    return (
-      <FormField invalid={invalid} ref={ref} type={'textarea'} {...restProps}>
-        <div className="utrecht-form-field__label">
-          <FormLabel htmlFor={inputId}>{label}</FormLabel>
-        </div>
-        {description && (
-          <FormFieldDescription className="utrecht-form-field__description" id={descriptionId}>
-            {description}
-          </FormFieldDescription>
-        )}
-        {invalid && errorMessage && (
-          <FormFieldErrorMessage className="utrecht-form-field__error-message" id={errorMessageId}>
-            {errorMessage}
-          </FormFieldErrorMessage>
-        )}
-        <div className="utrecht-form-field__input">
-          <Textarea
-            autoComplete={autoComplete}
-            cols={cols}
-            defaultValue={defaultValue}
-            dir={inputDir || 'auto'}
-            disabled={disabled}
-            id={inputId}
-            invalid={invalid}
-            maxLength={maxLength}
-            minLength={minLength}
-            name={name}
-            placeholder={placeholder}
-            readOnly={readOnly}
-            ref={inputRef}
-            required={required}
-            rows={rows}
-            spellCheck={spellCheck}
-            value={value}
-            aria-describedby={
-              clsx({
-                [descriptionId]: description,
-                [errorMessageId]: invalid,
-                [statusId]: status,
-              }) || undefined
-            }
-            onBlur={onBlur}
-            onChange={onChange}
-            onFocus={onFocus}
-            onInput={onInput}
-          />
-        </div>
-        {status && (
-          <div className="utrecht-form-field__status" id={statusId}>
-            {status}
-          </div>
-        )}
-      </FormField>
+  const errorMsg = () =>
+    errorMessage && (
+      <span className={'utrecht-form-field-error-message--icon-container'}>
+        <Icon className={'utrecht-form-field-error-message--icon-container-icon'} icon={'alert-circle'}></Icon>{' '}
+        {errorMessage}
+      </span>
     );
-  },
-);
+
+  return (
+    <UtrechtFormFieldTextarea
+      description={description}
+      errorMessage={errorMsg()}
+      id={inputId}
+      invalid={invalid}
+      ref={ref}
+      status={status}
+      aria-describedby={
+        clsx({
+          [descriptionId]: description,
+          [errorMessageId]: invalid,
+          [statusId]: status,
+        }) || undefined
+      }
+      {...restProps}
+    />
+  );
+};
 
 FormFieldTextarea.displayName = 'FormFieldTextarea';

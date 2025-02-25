@@ -1,0 +1,31 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@use "mixin";
+
+.rhc-logo {
+  @include mixin.rhc-logo;
+}
+
+.rhc-logo__image {
+  @include mixin.rhc-logo__image;
+}
+
+.rhc-logo__image .utrecht-icon,
+.rhc-logo__image .rhc-icon {
+  @include mixin.rhc-logo__icon;
+}
+
+.rhc-logo__caption {
+  @include mixin.rhc-logo__caption;
+}
+
+.rhc-logo__title {
+  @include mixin.rhc-logo__title;
+}
+
+.rhc-logo__subtitle {
+  @include mixin.rhc-logo__subtitle;
+  @include mixin.rhc-logo__title;
+}

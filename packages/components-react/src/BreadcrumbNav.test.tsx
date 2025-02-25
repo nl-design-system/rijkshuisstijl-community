@@ -1,10 +1,9 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
-import { render, screen } from '@testing-library/react';
-import NextLink from 'next/link';
+import { cleanup, render, screen } from '@testing-library/react';
 import { AnchorHTMLAttributes, createRef, PropsWithChildren } from 'react';
-import { BreadcrumbNavLink } from './BreadcrumbNav';
-import { BreadcrumbNav } from './index';
+import { afterEach, describe, expect, it } from 'vitest';
+import { BreadcrumbNav, BreadcrumbNavLink } from './BreadcrumbNav';
 
 const CustomLink = ({ children, ...restProps }: PropsWithChildren<AnchorHTMLAttributes<HTMLAnchorElement>>) => {
   return <a {...restProps}>{children}</a>;
@@ -128,7 +127,7 @@ describe('Breadcrumb navigation', () => {
     expect(breadcrumbNav).toHaveClass('utrecht-breadcrumb-nav');
   });
 
-  it('supports ForwardRef in React', () => {
+  it('supports ref in React', () => {
     const ref = createRef<HTMLOListElement>();
 
     const { container } = render(<BreadcrumbNav ref={ref} />);
@@ -158,20 +157,6 @@ describe('Breadcrumb navigation', () => {
       expect(link).toBeInTheDocument();
       expect(link).toHaveAttribute('href', '/default');
       expect(link.tagName).toBe('A');
-    });
-
-    describe('with Next.js component', () => {
-      it('renders', () => {
-        const { getByRole } = render(
-          <BreadcrumbNavLink Link={NextLink} className="utrecht-link utrecht-link--html-a" href="/next-link">
-            Next.js link
-          </BreadcrumbNavLink>,
-        );
-        const link = getByRole('link');
-
-        expect(link).toBeInTheDocument();
-        expect(link).toHaveAttribute('href', '/next-link');
-      });
     });
   });
 
@@ -253,3 +238,5 @@ describe('Breadcrumb navigation', () => {
     });
   });
 });
+
+afterEach(() => cleanup());

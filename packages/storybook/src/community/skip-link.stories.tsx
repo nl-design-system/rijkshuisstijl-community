@@ -2,6 +2,7 @@ import { SkipLink, type SkipLinkProps } from '@rijkshuisstijl-community/componen
 import { Meta, StoryObj } from '@storybook/react';
 import clsx from 'clsx';
 import readme from './skip-link.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface SkipLinkStoryProps extends SkipLinkProps {
   visibility?: string | 'hidden' | 'visible';
@@ -13,7 +14,7 @@ const SkipLinkStory = ({ visibility, visibleOnFocus, ...restProps }: SkipLinkSto
     className={clsx({
       'rhc-skip-link--visible-on-focus': visibleOnFocus,
       'rhc-skip-link--hidden': visibility === 'hidden',
-      'utrecht-skip-link--visible': visibility === 'visible',
+      'rhc-skip-link--visible': visibility === 'visible',
     })}
     {...restProps}
   />
@@ -54,11 +55,15 @@ const meta = {
     visibleOnFocus: false,
   },
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
   },
   render: SkipLinkStory,
 } satisfies Meta<typeof SkipLinkStory>;

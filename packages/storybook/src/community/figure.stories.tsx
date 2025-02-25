@@ -2,6 +2,7 @@ import { Figure, FigureCaption, Image } from '@rijkshuisstijl-community/componen
 import { Args, Meta, StoryObj } from '@storybook/react/*';
 import { CSSProperties } from 'react';
 import readme from './figure.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/Figure',
@@ -84,11 +85,18 @@ const meta = {
     );
   },
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
-        component: readme,
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
   },
 } as Meta<typeof Figure>;
 

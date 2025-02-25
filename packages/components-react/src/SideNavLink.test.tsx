@@ -1,5 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import { cleanup, render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { createRef } from 'react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { SideNavLink } from './SideNavLink';
 
 describe('SideNavLink', () => {
@@ -11,9 +13,10 @@ describe('SideNavLink', () => {
   });
 
   it('forwards ref correctly', () => {
-    render(<SideNavLink />);
+    const ref = createRef<HTMLAnchorElement>();
+    render(<SideNavLink ref={ref} />);
 
-    expect(screen.getByRole('link')).toBeInstanceOf(HTMLAnchorElement);
+    expect(ref.current).toBeInstanceOf(HTMLAnchorElement);
   });
 
   it('applies custom class name', () => {
@@ -35,3 +38,5 @@ describe('SideNavLink', () => {
     expect(screen.getByRole('link')).not.toHaveAttribute('aria-current');
   });
 });
+
+afterEach(() => cleanup());

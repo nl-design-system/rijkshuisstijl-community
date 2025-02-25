@@ -1,0 +1,36 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+
+@use "../link/mixin";
+
+@mixin rhc-button--icon-only {
+  --utrecht-button-padding-block-end: var(--rhc-icon-only-button-padding-block-end, inherit);
+  --utrecht-button-padding-block-start: var(--rhc-icon-only-button-padding-block-start, inherit);
+  --utrecht-button-padding-inline-end: var(--rhc-icon-only-button-padding-inline-end, inherit);
+  --utrecht-button-padding-inline-start: var(--rhc-icon-only-button-padding-inline-start, inherit);
+}
+
+@mixin rhc-button--focus-visible {
+  @include mixin.rhc-link--focus-visible;
+}
+
+@mixin invisible-but-accessible {
+  block-size: 1px;
+
+  /* Source: https://kittygiraudel.com/snippets/sr-only-class/ */
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  inline-size: 1px;
+  margin-block: -1px;
+  margin-inline: -1px;
+  overflow: hidden;
+  padding-block: 0;
+  padding-inline: 0;
+  position: absolute;
+  white-space: nowrap;
+}

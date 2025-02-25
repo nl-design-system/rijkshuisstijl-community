@@ -4,12 +4,13 @@ import {
   Fieldset,
   FieldsetLegend,
   type FieldsetProps,
-  FormFieldTextbox,
+  FormFieldTextInput,
 } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
 import readme from './fieldset.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface FieldsetStoryProps extends FieldsetProps {
   element?: string | 'div' | 'fieldset';
@@ -59,19 +60,26 @@ const meta = {
     invalid: false,
     children: (
       <>
-        <FormFieldTextbox label="Field A"></FormFieldTextbox>
-        <FormFieldTextbox label="Field B"></FormFieldTextbox>
-        <FormFieldTextbox label="Field C"></FormFieldTextbox>
+        <FormFieldTextInput label="Field A"></FormFieldTextInput>
+        <FormFieldTextInput label="Field B"></FormFieldTextInput>
+        <FormFieldTextInput label="Field C"></FormFieldTextInput>
       </>
     ),
     legend: 'Legend',
   },
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
-        component: readme,
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met alleen overgeschreven design tokens van de Rijkshuisstijl Community.',
   },
   render: FieldsetStory,
 } satisfies Meta<typeof FieldsetStory>;
@@ -85,7 +93,7 @@ export const Default: Story = {
     docs: {
       description: {
         story: `Markup using the \`<fieldset>\` and \`<legend>\` HTML elements, wrapped in \`<div>\` element to support full CSS styling. Styling via \`utrecht-form-fieldset\` class name.
-  
+
   \`<fieldset>\` is preferred as markup, because the automatic labelling via \`<legend>\` is less likely to break than \`aria-labelledby\`, and when the CSS can not be loaded, the visual representation is still clear to the user.`,
       },
     },

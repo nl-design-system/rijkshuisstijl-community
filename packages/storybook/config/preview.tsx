@@ -1,16 +1,24 @@
 import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-violet/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-mintgroen-focus/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-violet-oud/index.css';
 import '@rijkshuisstijl-community/digid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/mijnoverheid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
-import '@utrecht/component-library-css/dist/html.css';
-import '@utrecht/component-library-css/dist/index.css';
-
+import '@rijkshuisstijl-community/components-css/dist/index.css';
+import { Paragraph } from '@rijkshuisstijl-community/components-react';
 import { withThemeByClassName } from '@storybook/addon-themes';
+import { Controls, Description, Primary, Stories, useOf } from '@storybook/blocks';
 import { Preview } from '@storybook/react';
-import { UtrechtDocument } from '@utrecht/web-component-library-react';
+import { PageLayout } from '@utrecht/page-layout-react';
+import { Root } from '@utrecht/root-react';
+import { Fragment } from 'react';
+import { registerAllTwigTemplates } from '../src/components-twig/TwigCache';
+
+registerAllTwigTemplates();
 
 const preview: Preview = {
   decorators: [
@@ -21,10 +29,21 @@ const preview: Preview = {
         MijnOverheid: 'mijnoverheid-theme',
         Logius: 'logius-theme',
         RIVM: 'rivm-theme',
+        'Uitvoerend - violet': 'uitvoerend-violet',
+        'Uitvoerend - mintgroen -  ander fontweight - focus': 'uitvoerend-mintgroen-focus',
+        'Uitvoerend - violet - oud': 'uitvoerend-violet-oud',
       },
       defaultTheme: 'RijkshuisstijlCommunity',
     }),
-    (Story: any) => <UtrechtDocument>{Story()}</UtrechtDocument>,
+    (Story, options) => {
+      return options.parameters['isPage'] ? (
+        <Root Component="div">
+          <PageLayout>{Story()}</PageLayout>
+        </Root>
+      ) : (
+        Story()
+      );
+    },
   ],
   parameters: {
     previewTabs: {
@@ -41,33 +60,53 @@ const preview: Preview = {
     },
     status: {
       statuses: {
-        PRODUCTION: {
+        STABLE: {
           background: '#088008',
           color: '#ffffff',
           description:
-            'Used in production in a variety of situations, well tested, stable APIs, mostly patches and minor releases.',
+            'Component is stabiel en kan worden gebruikt. Kleine iteraties zullen mogelijk nog plaatsvinden.',
         },
-        BETA: {
-          background: '#3065ee',
-          color: '#ffffff',
-          description:
-            'Used in production in a specific situation, evolving APIs based on feedback, breaking changes are still likely.',
-        },
-        ALPHA: {
-          background: '#e0bc2e',
-          color: '#000000',
-          description:
-            'Used in prototypes and in projects that are still in development, breaking changes occur frequently and are not communicated.',
-        },
-        'WORK IN PROGRESS': {
+        UNSTABLE: {
           background: '#cc0000',
           color: '#ffffff',
-          description:
-            'Do not use in production. Does not follow semantic versioning and any published packages are for internal use only.',
+          description: 'Component is nieuw en mogelijk instabiel. Kan gebruikt worden, maar kan nog fouten bevatten.',
         },
       },
     },
     docs: {
+      page: () => {
+        const storyParameters: any = useOf<'story'>('story')?.story?.parameters;
+        const parameterLabels = {
+          nldesignsystem: 'NL Design System',
+          figma: 'Figma',
+          github: 'GitHub',
+        };
+        const links = (
+          <>
+            {['nldesignsystem', 'figma', 'github']
+              .filter((parameterKey) => storyParameters?.[parameterKey])
+              .map((parameterKey, index) => (
+                <Fragment key={parameterKey}>
+                  {index > 0 && ' | '}
+                  <a href={storyParameters[parameterKey]}>
+                    {parameterLabels[parameterKey as keyof typeof parameterLabels]}
+                  </a>
+                </Fragment>
+              ))}
+          </>
+        );
+        // Exclude `<Title>` because the title comes from the Markdown file
+        return (
+          <>
+            {links}
+            {storyParameters?.componentOrigin && <Paragraph>{storyParameters.componentOrigin}</Paragraph>}
+            <Description />
+            <Primary />
+            <Controls />
+            {!storyParameters?.isPage && <Stories />}
+          </>
+        );
+      },
       source: {
         state: 'open',
 
@@ -94,5 +133,4 @@ const preview: Preview = {
     },
   },
 };
-
 export default preview;

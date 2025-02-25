@@ -1,0 +1,21 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+.utrecht-form-field--radio {
+  --utrecht-form-field-label-margin-block-end: var(--rhc-form-field-radio-option-label-margin-block-end, inherit);
+  --utrecht-radio-button-margin-inline-end: var(--rhc-form-field-radio-option-column-gap, inherit);
+}
+
+.rhc-form-field-radio-option__input {
+  align-items: flex-start;
+  display: flex;
+  margin-block-start: var(--rhc-form-field-radio-option-input-margin-block-start, inherit);
+}
+
+.utrecht-form-field--radio .utrecht-form-field__label {
+  --utrecht-form-label-font-weight: var(--rhc-form-field-radio-option-font-weight, inherit);
+
+  display: inline-flex;
+}

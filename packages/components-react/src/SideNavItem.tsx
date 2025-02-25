@@ -1,14 +1,16 @@
 import clsx from 'clsx';
-import { forwardRef, HTMLAttributes } from 'react';
+import { HTMLAttributes, Ref } from 'react';
 
-export interface SideNavItemProps extends HTMLAttributes<HTMLLIElement> {}
+export interface SideNavItemProps extends HTMLAttributes<HTMLLIElement> {
+  ref?: Ref<HTMLLIElement>;
+}
 
-export const SideNavItem = forwardRef<HTMLLIElement, SideNavItemProps>((props, ref) => {
+export const SideNavItem = ({ ref, className, children, ...restProps }: SideNavItemProps) => {
   return (
-    <li {...props} className={clsx('rhc-side-nav__item', props.className)} ref={ref}>
-      {props.children}
+    <li className={clsx('rhc-side-nav__item', className)} ref={ref} role="listitem" {...restProps}>
+      {children}
     </li>
   );
-});
+};
 
 SideNavItem.displayName = 'SideNavItem';

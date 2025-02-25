@@ -1,11 +1,12 @@
-import { Textbox } from '@rijkshuisstijl-community/components-react';
+import { TextInput } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './text-input.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
-const meta: Meta<typeof Textbox> = {
+const meta: Meta<typeof TextInput> = {
   title: 'Rijkshuisstijl/Text Input',
   id: 'rhc-text-input',
-  component: Textbox,
+  component: TextInput,
   tags: ['autodocs'],
   argTypes: {
     required: {
@@ -76,7 +77,6 @@ const meta: Meta<typeof Textbox> = {
       description: 'Autocomplete',
       control: 'select',
       options: [
-        '',
         'additional-name',
         'address-level1',
         'address-level2',
@@ -159,16 +159,7 @@ const meta: Meta<typeof Textbox> = {
     type: {
       description: 'Type',
       control: 'select',
-      options: {
-        '': null,
-        email: 'email',
-        number: 'number',
-        password: 'password',
-        search: 'search',
-        tel: 'tel',
-        text: 'text',
-        url: 'url',
-      },
+      options: [null, 'email', 'number', 'password', 'search', 'tel', 'text', 'url'],
       table: {
         category: 'API',
         defaultValue: { summary: '' },
@@ -177,19 +168,14 @@ const meta: Meta<typeof Textbox> = {
     dir: {
       description: 'Text direction',
       control: { type: 'select' },
-      options: {
-        '': undefined,
-        auto: 'auto',
-        ltr: 'ltr',
-        rtl: 'rtl',
-      },
+      options: [undefined, 'auto', 'ltr', 'rtl'],
       table: {
         category: 'DOM',
         defaultValue: { summary: '' },
       },
     },
     inputRequired: {
-      description: 'Required (HTML validation)',
+      description: 'Input Required',
       control: 'boolean',
       table: {
         category: 'API',
@@ -257,11 +243,21 @@ const meta: Meta<typeof Textbox> = {
     max: undefined,
   },
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
-        component: readme,
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source (including with usage and wcag documentation)
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add Github issue link
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=859-981&node-type=CANVAS&t=VGu5hA1sXPDhCUwB-0',
+    nldesignsystem: 'https://www.nldesignsystem.nl/text-input/',
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht (daar heet het Textbox), met styling van de Rijkshuisstijl Community.',
   },
   render: (args) => {
     const {
@@ -286,12 +282,13 @@ const meta: Meta<typeof Textbox> = {
       max,
     } = args;
     return (
-      <Textbox
+      <TextInput
+        aria-label="text-input-label"
         autoComplete={autoComplete || undefined}
         defaultValue={defaultValue || undefined}
         dir={dir || undefined}
         disabled={disabled}
-        inputRequired={inputRequired}
+        inputRequired={inputRequired || undefined}
         invalid={invalid}
         max={max || undefined}
         maxLength={maxLength || undefined}
@@ -309,7 +306,7 @@ const meta: Meta<typeof Textbox> = {
       />
     );
   },
-} satisfies Meta<typeof Textbox>;
+} satisfies Meta<typeof TextInput>;
 
 export default meta;
 
@@ -325,6 +322,13 @@ export const Required: Story = {
   args: {
     name: 'subject',
     required: true,
+  },
+};
+
+export const InputRequired: Story = {
+  args: {
+    name: 'subject',
+    inputRequired: true,
   },
 };
 
@@ -364,6 +368,12 @@ export const AutoComplete: Story = {
     autoComplete: 'current-password',
     type: 'password',
   },
+  render: (args) => (
+    <form>
+      <input hidden autoComplete="username" type="text" />
+      <TextInput aria-label="text-input-label" autoComplete={args.autoComplete} name={args.name} type={args.type} />
+    </form>
+  ),
 };
 
 export const LeftToRightInput: Story = {

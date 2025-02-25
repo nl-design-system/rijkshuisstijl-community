@@ -2,8 +2,6 @@
 
 # Rijkshuisstijl Community alert component
 
-[NL design system](https://www.nldesignsystem.nl/alert/) | [Figma](https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1195-4201&t=n1djYpmvDCKmAEUi-0) | [GitHub](https://github.com/nl-design-system/rijkshuisstijl-community/issues/472)
-
 De alert component is er voor berichten die de gebruiker snel moet weten, omdat ze belangrijk zijn voor het uitvoeren van de huidige taak. De alert is alleen voor eenvoudige berichten. Gebruik in de alert geen buttons, geen formulier-componenten en geen complexe opmaak zoals tabellen.
 
 Let op: de alert component gebruiken kan essentieël zijn voor gebruikers van een schermvoorlezer, maar onjuist gebruik kan heel erg vervelend zijn.
@@ -18,7 +16,7 @@ import { Alert } from '@rijkshuisstijl-community/components-react';
 <Alert
   heading="Heading"
   headingLevel={3}
-  icon="info"
+  icon="info-circle"
   textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
   type="info"
 />;

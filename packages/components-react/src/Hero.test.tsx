@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
+import { afterEach, describe, expect, it } from 'vitest';
 import { Hero } from './Hero';
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
 describe('Hero', () => {
   it('renders the hero component with the provided heading and subHeading', () => {
@@ -28,7 +29,7 @@ describe('Hero', () => {
       />,
     );
 
-    const hero = screen.getByRole('img').closest('div');
+    const hero = screen.getByRole('img').closest('section');
 
     expect(hero).toHaveClass('rhc-hero--text-align-end');
   });
@@ -44,7 +45,7 @@ describe('Hero', () => {
       />,
     );
 
-    const hero = screen.getByRole('img').closest('div');
+    const hero = screen.getByRole('img').closest('section');
 
     expect(hero).toHaveClass('rhc-hero--aspect-ratio-4-3');
   });
@@ -60,7 +61,7 @@ describe('Hero', () => {
       />,
     );
 
-    const hero = screen.getByRole('img').closest('div');
+    const hero = screen.getByRole('img').closest('section');
 
     expect(hero).toHaveClass('rhc-hero--custom-border-radius-corner');
     expect(hero).toHaveClass('rhc-hero--border-radius-corner-start-end');
@@ -78,3 +79,5 @@ describe('Hero', () => {
     expect(button).toBeInTheDocument();
   });
 });
+
+afterEach(() => cleanup());

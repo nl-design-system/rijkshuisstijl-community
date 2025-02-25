@@ -1,6 +1,7 @@
 import { FormFieldSelect, SelectOption } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './form-field-select.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/Form Field/Form Field Select',
@@ -79,9 +80,9 @@ const meta = {
     },
     dir: {
       description: 'The direction of the form field',
+      options: ['ltr', 'rtl'],
       control: {
         type: 'select',
-        options: ['ltr', 'rtl'],
       },
     },
   },
@@ -131,11 +132,16 @@ const meta = {
   },
   tags: ['autodocs'],
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof FormFieldSelect>;
 
@@ -165,13 +171,13 @@ export const CustomOptions: Story = {
     disabled: false,
     invalid: false,
     children: [
-      <SelectOption id="optie1" value="optie 1">
+      <SelectOption id="optie1" key="option-1" value="optie 1">
         optie 1
       </SelectOption>,
-      <SelectOption id="optie2" value="optie 2">
+      <SelectOption id="optie2" key="option-2" value="optie 2">
         optie 2
       </SelectOption>,
-      <SelectOption id="optie3" value="optie 3">
+      <SelectOption id="optie3" key="option-3" value="optie 3">
         optie 3
       </SelectOption>,
     ],

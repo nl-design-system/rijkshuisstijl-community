@@ -1,0 +1,34 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@use "mixin";
+
+.rhc-blockquote {
+  @include mixin.rhc-blockquote;
+}
+
+.utrecht-blockquote__quote {
+  @include mixin.rhc-blockquote__quote;
+}
+
+.utrecht-blockquote__caption {
+  @include mixin.rhc-blockquote__caption;
+}
+
+.rhc-blockquote--blue-corner-border-variation {
+  @include mixin.rhc-blockquote-variation("blue-corner-border-variation");
+}
+
+.rhc-blockquote--pink-background-variation {
+  @include mixin.rhc-blockquote-variation("pink-background-variation");
+}
+
+.rhc-blockquote--pink-left-border-variation {
+  @include mixin.rhc-blockquote-variation("pink-left-border-variation");
+}
+
+.rhc-blockquote--pink-corner-border-variation {
+  @include mixin.rhc-blockquote-variation("pink-corner-border-variation");
+}

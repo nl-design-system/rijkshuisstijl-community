@@ -1,7 +1,14 @@
 'use client';
 
-import { Article, Button, ButtonGroup, Heading1, Link, Paragraph } from '@utrecht/component-library-react';
-import { Logo } from '@rijkshuisstijl-community/components-react';
+import {
+  Logo,
+  Article,
+  Button,
+  Heading,
+  Link,
+  Paragraph,
+  ActionGroup,
+} from '@rijkshuisstijl-community/components-react';
 import './page.css';
 
 export default function Home() {
@@ -15,18 +22,18 @@ en Milieu"
 Welzijn en Sport"
         ></Logo>
         <Article>
-          <Heading1>Risico&#39;s van stoffen</Heading1>
+          <Heading level={1}>Risico&#39;s van stoffen</Heading>
           <Paragraph>
             De informatie op deze website is vooral gericht op het bevoegd gezag van de Wet milieubeheer, de Waterwet,
             de inspecties en andere overheidsorganisaties. Voor vragen over risico&#39;s van stoffen, of opmerkingen
             over deze website kunt u terecht bij de{' '}
             <Link href="https://rvs.rivm.nl/onderwerpen/helpdesk">helpdesk</Link>.
           </Paragraph>
-          <ButtonGroup>
+          <ActionGroup>
             <Button type="submit" appearance="primary-action-button">
               Bla
             </Button>
-          </ButtonGroup>
+          </ActionGroup>
         </Article>
       </main>
     </>

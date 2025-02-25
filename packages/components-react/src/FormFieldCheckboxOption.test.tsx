@@ -1,6 +1,6 @@
-import '@testing-library/jest-dom';
-
-import { fireEvent, render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
+import { cleanup, fireEvent, render, screen } from '@testing-library/react';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { FormFieldCheckboxOption } from './FormFieldCheckboxOption';
 
 describe('FormFieldCheckboxOption', () => {
@@ -25,7 +25,7 @@ describe('FormFieldCheckboxOption', () => {
   });
 
   it('calls onChange when checkbox is clicked', () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
     render(<FormFieldCheckboxOption label="Test Checkbox" onChange={handleChange} />);
     fireEvent.click(screen.getByLabelText('Test Checkbox'));
     expect(handleChange).toHaveBeenCalledTimes(1);
@@ -46,3 +46,5 @@ describe('FormFieldCheckboxOption', () => {
     expect(screen.getByLabelText('Test Checkbox')).toHaveAttribute('aria-invalid', 'true');
   });
 });
+
+afterEach(() => cleanup());

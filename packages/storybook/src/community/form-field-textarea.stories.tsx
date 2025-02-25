@@ -1,6 +1,7 @@
 import { FormFieldTextarea } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './form-field-textarea.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/Form Field/Form Field Textarea',
@@ -9,6 +10,14 @@ const meta = {
   argTypes: {
     required: {
       description: 'Required',
+      control: 'boolean',
+      table: {
+        category: 'API',
+        defaultValue: { summary: 'false' },
+      },
+    },
+    inputRequired: {
+      description: 'Input Required',
       control: 'boolean',
       table: {
         category: 'API',
@@ -145,6 +154,7 @@ const meta = {
   },
   args: {
     required: false,
+    inputRequired: false,
     disabled: false,
     readOnly: false,
     invalid: false,
@@ -164,6 +174,7 @@ const meta = {
   render: (args) => {
     const {
       required,
+      inputRequired,
       disabled,
       readOnly,
       id,
@@ -191,6 +202,7 @@ const meta = {
         disabled={disabled || undefined}
         errorMessage={errorMessage || undefined}
         id={id || undefined}
+        inputRequired={inputRequired || undefined}
         invalid={invalid || undefined}
         label={label || undefined}
         maxLength={maxLength || undefined}
@@ -202,16 +214,24 @@ const meta = {
         rows={rows || undefined}
         status={status || undefined}
         value={value || undefined}
+        onChange={() => {}}
       />
     );
   },
   tags: ['autodocs'],
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
-        component: readme,
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
+        component: mergeMarkdown([readme]),
       },
     },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof FormFieldTextarea>;
 
@@ -298,5 +318,13 @@ export const Required: Story = {
     name: 'subject',
     label: 'Onderwerp',
     required: true,
+  },
+};
+
+export const InputRequired: Story = {
+  args: {
+    name: 'subject',
+    label: 'Onderwerp',
+    inputRequired: true,
   },
 };

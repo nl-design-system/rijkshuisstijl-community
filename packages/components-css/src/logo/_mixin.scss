@@ -1,0 +1,58 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@mixin rhc-logo {
+  display: grid;
+  font-family: var(--rhc-logo-font-family);
+  font-size: var(--rhc-logo-title-font-size, 1em);
+  font-weight: var(--rhc-logo-title-font-weight);
+  gap: 0 var(--rhc-logo-column-gap, inherit);
+  grid-auto-rows: var(--rhc-logo-image-inline-size);
+  grid-template-areas: ". image ." ". image caption";
+  grid-template-columns: 1fr var(--rhc-logo-image-inline-size) 1fr;
+  grid-template-rows: var(--rhc-logo-title-padding-block-start) 1fr;
+  line-height: var(--rhc-logo-title-line-height, 1);
+  margin-block-end: var(--rhc-logo-margin-block-end, 0);
+  margin-block-start: var(--rhc-logo-margin-block-start, 0);
+  margin-inline-end: var(--rhc-logo-margin-inline-end, 0);
+  margin-inline-start: var(--rhc-logo-margin-inline-start, 0);
+  min-block-size: calc(var(--rhc-logo-rows, 2) * var(--rhc-logo-image-inline-size));
+}
+
+@mixin rhc-logo__image {
+  align-items: center;
+  background-color: var(--rhc-logo-image-background-color, inherit);
+  block-size: var(--rhc-logo-image-block-size);
+  color: var(--rhc-logo-image-color, inherit);
+  display: flex;
+  flex-direction: column;
+  grid-area: image;
+  inline-size: var(--rhc-logo-image-inline-size);
+  justify-content: end;
+}
+
+@mixin rhc-logo__icon {
+  block-size: unset;
+  inline-size: unset;
+}
+
+@mixin rhc-logo__caption {
+  color: var(--rhc-logo-color, inherit);
+  grid-area: caption;
+  max-inline-size: var(--rhc-logo-caption-max-inline-size);
+}
+
+@mixin rhc-logo__title {
+  /* reset margin of HTML <h1> element */
+  margin-block-end: 0;
+  margin-block-start: 0;
+  white-space: pre-line;
+}
+
+@mixin rhc-logo__subtitle {
+  font-size: var(--rhc-logo-subtitle-font-size, 1em);
+  font-weight: var(--rhc-logo-subtitle-font-weight);
+  line-height: var(--rhc-logo-subtitle-line-height, 1);
+}

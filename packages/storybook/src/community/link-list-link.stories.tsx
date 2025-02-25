@@ -1,4 +1,4 @@
-import { Icon, LinkListLink } from '@rijkshuisstijl-community/components-react';
+import { Icon, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react/*';
 
 const meta = {
@@ -18,6 +18,20 @@ const meta = {
       },
     },
   },
+  parameters: {
+    // TODO: add documentation from Utrecht, but not until readme is correctly structurized in the Utrecht documentation source
+    status: {
+      type: 'STABLE',
+    },
+    // TODO: add Figma, GitHub and NL DesignSystem links
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, de design tokens kunnen indien nodig nog overschreven worden.',
+  },
+  render: (args) => (
+    <LinkList>
+      <LinkListLink {...args} />
+    </LinkList>
+  ),
 } satisfies Meta<typeof LinkListLink>;
 
 export default meta;

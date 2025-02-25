@@ -3,6 +3,7 @@
 import { Alert } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './alert.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/Alert',
@@ -52,11 +53,21 @@ const meta = {
   },
   tags: ['autodocs'],
   parameters: {
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
-        component: readme,
+        // TODO: disconnect "Usage" from the current readme, import the readme from Utrecht afterwards and combine with our own Usage
+        component: mergeMarkdown([readme]),
       },
     },
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1195-4201&t=n1djYpmvDCKmAEUi-0',
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/472',
+    nldesignsystem: 'https://www.nldesignsystem.nl/alert/',
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
 } as Meta<typeof Alert>;
 
