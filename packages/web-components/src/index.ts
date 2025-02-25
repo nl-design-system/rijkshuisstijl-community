@@ -30,6 +30,7 @@ import { type FormFieldTextInputAttributes, FormFieldTextInputWebComponent } fro
 import { type FormFieldTextareaAttributes, FormFieldTextareaWebComponent } from './components/FormFieldTextarea';
 import { HeroWebComponent, type HeroWebComponentAttributes } from './components/Hero';
 import { IconWebComponent, type IconWebComponentAttributes } from './components/Icon';
+import { LinkWebComponent, type LinkWebComponentAttributes } from './components/Link';
 
 export { AccordionWebComponent, type AccordionWebComponentAttributes };
 export { ActionGroupWebComponent, type ActionGroupWebComponentAttributes };
@@ -55,6 +56,7 @@ export { type FormFieldTextInputAttributes, FormFieldTextInputWebComponent };
 export { type FormFieldTextareaAttributes, FormFieldTextareaWebComponent };
 export { HeroWebComponent, type HeroWebComponentAttributes };
 export { IconWebComponent, type IconWebComponentAttributes };
+export { LinkWebComponent, type LinkWebComponentAttributes };
 
 declare global {
   namespace JSX {

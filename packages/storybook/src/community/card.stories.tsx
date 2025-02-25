@@ -28,7 +28,6 @@ const meta = {
     imageSrc: {
       description: 'Image source URL',
       control: { type: 'text' },
-      defaultValue: '',
       table: {
         category: 'Props',
       },
@@ -36,7 +35,6 @@ const meta = {
     imageAlt: {
       description: 'Image alt text',
       control: { type: 'text' },
-      defaultValue: '',
       table: {
         category: 'Props',
       },
@@ -44,7 +42,6 @@ const meta = {
     description: {
       description: 'Card content',
       control: { type: 'text' },
-      defaultValue: '',
       if: { arg: 'appearance', neq: 'horizontal' },
       table: {
         category: 'Props',
@@ -53,16 +50,14 @@ const meta = {
     linkLabel: {
       description: 'Link label',
       control: { type: 'text' },
-      defaultValue: '',
       if: { arg: 'appearance', eq: 'default' },
       table: {
         category: 'Props',
       },
     },
-    metaData: {
+    metadata: {
       description: 'Metadata',
       control: { type: 'text' },
-      defaultValue: '',
       if: { arg: 'appearance', neq: 'horizontal' },
       table: {
         category: 'Props',
@@ -71,7 +66,6 @@ const meta = {
     title: {
       description: 'Anchor title (hover text) and aria-label attributes',
       control: { type: 'text' },
-      defaultValue: '',
       table: {
         category: 'Props',
       },
@@ -79,7 +73,6 @@ const meta = {
     href: {
       description: 'Link',
       control: { type: 'text' },
-      defaultValue: '',
       table: {
         category: 'Props',
       },
@@ -93,7 +86,7 @@ const meta = {
     href: '#',
     imageSrc: './placeholder.jpg',
     linkLabel: 'Link label',
-    metaData: 'Metadata',
+    metadata: 'Metadata',
     title: 'Card Title',
   },
   tags: ['autodocs'],

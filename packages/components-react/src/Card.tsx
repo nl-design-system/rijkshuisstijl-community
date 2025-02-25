@@ -72,14 +72,17 @@ const DefaultCard = ({
         <div className="rhc-card__metadata">{metadata}</div>
         {children}
       </div>
-      <div className="rhc-card__footer">
-        <div className="rhc-card__link rhc-card__anchor">
-          <Link aria-label={title} href={href} title={title}>
-            {linkLabel}
-          </Link>
+      {(linkLabel || button) && (
+        <div className="rhc-card__footer">
+          <div className="rhc-card__link rhc-card__anchor"></div>
+          {linkLabel && (
+            <Link aria-label={title} href={href} title={title}>
+              {linkLabel}
+            </Link>
+          )}
+          {button && <div className="rhc-card__button">{button}</div>}
         </div>
-        <div className="rhc-card__button">{button}</div>
-      </div>
+      )}
     </div>
   );
 };

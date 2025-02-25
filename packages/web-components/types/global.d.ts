@@ -22,6 +22,7 @@ import {
   FormFieldTextInputAttributes,
   HeroWebComponentAttributes,
   IconWebComponentAttributes,
+  LinkWebComponentAttributes,
 } from '../src';
 
 declare global {
@@ -52,6 +53,7 @@ declare global {
       'rhc-form-textarea': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & FormFieldTextareaAttributes;
       'rhc-hero': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & HeroWebComponentAttributes;
       'rhc-icon': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & IconWebComponentAttributes;
+      'rhc-link': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & LinkWebComponentAttributes;
     }
   }
 }
