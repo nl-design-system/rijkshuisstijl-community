@@ -1,14 +1,7 @@
 /* @license CC0-1.0 */
 
-import twigTemplate from '@rijkshuisstijl-community/components-twig/src/OrderedList.twig?raw';
+import TwigOrderedList from '@rijkshuisstijl-community/components-twig/src/OrderedList.twig';
 import type { Meta, StoryObj } from '@storybook/react';
-import { createTwigComponent } from './TwigRenderer';
-
-interface TwigOrderedListProps {
-  items: string[];
-}
-
-const TwigOrderedList = createTwigComponent<TwigOrderedListProps>(twigTemplate);
 
 const meta = {
   title: 'Twig Components/Ordered List',

@@ -16,9 +16,6 @@ import { Preview } from '@storybook/react';
 import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
 import { Fragment } from 'react';
-import { registerAllTwigTemplates } from '../src/components-twig/TwigCache';
-
-registerAllTwigTemplates();
 
 const preview: Preview = {
   decorators: [
