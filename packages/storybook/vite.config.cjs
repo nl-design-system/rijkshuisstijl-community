@@ -7,7 +7,7 @@ export default defineConfig({
     // Support for Twig templates in Storybook with live reload and namespaces
     twig({
       namespaces: {
-        nlds: join(__dirname, '../components-twig/src'),
+        rhc: join(__dirname, '../components-twig/src'),
       },
       framework: 'react',
     }),
