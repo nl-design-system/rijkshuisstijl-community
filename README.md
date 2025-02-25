@@ -176,6 +176,7 @@ Vanuit`packages/components-react` krijg je een gedetailleerder overzicht van tes
 | :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `components-css`   | Hier kunnen CSS-componenten toegevoegd worden die nog niet bestaan in de NL Design System-community.                                               |
 | `components-react` | Optioneel voor het toevoegen van een React-wrapper aan een CSS-component als die nog niet bestaat.                                                 |
+| `components-twig`  | Optioneel voor het toevoegen van een Twig-wrapper aan een CSS-component als die nog niet bestaat.                                                  |
 | `design-tokens`    | Hier worden de rijkshuisstijl-thema’s beheerd, voor gebruik met NL Design System zonder thema. Opmerking deze zouden naar proprietary moeten gaan. |
 | `storybook`        | Extra componenten en pagina-sjablonen kunnen worden toegevoegd als story voor documentatie en visuele regressietesten.                             |
 
