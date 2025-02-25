@@ -1,4 +1,3 @@
-{% from "attributes.twig" import parse_attributes %}
 {%- set attributes = attributes|default({'class': []})|merge({
   'class': attributes.class|default(['utrecht-icon']),
   'role': 'presentation',
@@ -17,8 +16,8 @@
   'stroke-linejoin': 'round'
 })
 -%}
-<span{{ parse_attributes(attributes) }}>
-  <svg{{ parse_attributes(svg_attributes) }}>
+<span{{ attributes }}>
+  <svg{{ svg_attributes }}>
     <use xlink:href="node_modules/@tabler/icons-sprite/dist/tabler-sprite.svg#tabler-{{ icon }}" />
   </svg>
 </span>

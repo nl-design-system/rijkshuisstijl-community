@@ -409,6 +409,16 @@ importers:
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css
+    devDependencies:
+      drupal-attribute:
+        specifier: 1.1.0
+        version: 1.1.0
+      drupal-twig-extensions:
+        specifier: 1.0.0-beta.5
+        version: 1.0.0-beta.5
+      twig:
+        specifier: 1.17.1
+        version: 1.17.1
 
   packages/font:
     dependencies:
@@ -595,6 +605,9 @@ importers:
       vite:
         specifier: 6.1.0
         version: 6.1.0(@types/node@20.17.6)(sass@1.84.0)(terser@5.36.0)(yaml@2.7.0)
+      vite-plugin-twig-drupal:
+        specifier: 1.6.0
+        version: 1.6.0(vite@6.1.0(@types/node@20.17.6)(sass@1.84.0)(terser@5.36.0)(yaml@2.7.0))
 
   packages/web-components:
     dependencies:
@@ -5275,6 +5288,12 @@ packages:
     resolution: {integrity: sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==}
     engines: {node: '>=12'}
 
+  drupal-attribute@1.1.0:
+    resolution: {integrity: sha512-xVSqSAXk/3Thi1+CyLbcghi7gIWEZYQsA65C4PoFr3EtI1jUPj76xfnCIQspEi4RXj0rGO+dpmp9lvC7SAcWmQ==}
+
+  drupal-twig-extensions@1.0.0-beta.5:
+    resolution: {integrity: sha512-TrijTIs6wAwMmAa6eikQDyHTLNVizHPptpMd2BsRWDGpRozfH4OdY75ZQXbfnQmH5vl9kydKUfp57lUkcgQZBQ==}
+
   dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
@@ -7123,6 +7142,9 @@ packages:
 
   lodash.chunk@4.2.0:
     resolution: {integrity: sha512-ZzydJKfUHJwHa+hF5X66zLFCBrWn5GeF28OHEr4WVWtNDXlQ/IjWKPBiikqKo2ne0+v6JgCgJ0GzJp8k8bHC7w==}
+
+  lodash.clonedeep@4.5.0:
+    resolution: {integrity: sha512-H5ZhCF25riFd9uB5UCkVKo61m3S/xZk1x4wA6yp/L3RFP6Z/eHH1ymQcGLo7J3GMPfm0V/7m1tryHuGVxpqEBQ==}
 
   lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
@@ -9880,6 +9902,11 @@ packages:
     peerDependenciesMeta:
       vite:
         optional: true
+
+  vite-plugin-twig-drupal@1.6.0:
+    resolution: {integrity: sha512-f1U1u+qrc2zdbJogqEi9lXcAOODx94n7Qochc9kgPiavB00aZHlO59DmONolSaZj6cHlN4SgOHUCa/N2JHjRrA==}
+    peerDependencies:
+      vite: ^4.4.11 || ^5 || ^6
 
   vite-prerender-plugin@0.5.6:
     resolution: {integrity: sha512-ELG0pflVXWNVGaHme8g0rZB7xFnytf1U6fYLep3NUC4knGmOHtEc2R7DIlnCKeYGUGkzfMcvJOasK4C0dulKbQ==}
@@ -15767,6 +15794,14 @@ snapshots:
 
   dotenv@16.4.7: {}
 
+  drupal-attribute@1.1.0: {}
+
+  drupal-twig-extensions@1.0.0-beta.5:
+    dependencies:
+      drupal-attribute: 1.1.0
+      locutus: 2.0.32
+      lodash.clonedeep: 4.5.0
+
   dunder-proto@1.0.1:
     dependencies:
       call-bind-apply-helpers: 1.0.1
@@ -18286,6 +18321,8 @@ snapshots:
   lodash.camelcase@4.3.0: {}
 
   lodash.chunk@4.2.0: {}
+
+  lodash.clonedeep@4.5.0: {}
 
   lodash.debounce@4.0.8: {}
 
@@ -21755,6 +21792,13 @@ snapshots:
       - '@types/node'
       - rollup
       - supports-color
+
+  vite-plugin-twig-drupal@1.6.0(vite@6.1.0(@types/node@20.17.6)(sass@1.84.0)(terser@5.36.0)(yaml@2.7.0)):
+    dependencies:
+      drupal-attribute: 1.1.0
+      drupal-twig-extensions: 1.0.0-beta.5
+      twig: 1.17.1
+      vite: 6.1.0(@types/node@20.17.6)(sass@1.84.0)(terser@5.36.0)(yaml@2.7.0)
 
   vite-prerender-plugin@0.5.6:
     dependencies:
