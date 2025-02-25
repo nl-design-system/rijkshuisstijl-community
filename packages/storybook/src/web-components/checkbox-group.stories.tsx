@@ -36,15 +36,15 @@ export default meta;
 export const Default = {
   args: {
     children: [
-      createElement('rhc-checkbox-option', {
+      createElement('rhc-form-checkbox-option', {
         key: 'checkbox-1',
         label: 'Checkbox 1',
       }),
-      createElement('rhc-checkbox-option', {
+      createElement('rhc-form-checkbox-option', {
         key: 'checkbox-2',
         label: 'Checkbox 2',
       }),
-      createElement('rhc-checkbox-option', {
+      createElement('rhc-form-checkbox-option', {
         key: 'checkbox-2',
         label: 'Checkbox 2',
       }),

@@ -7,7 +7,7 @@ import readme from '../community/form-field-checkbox-option.md?raw';
 FormFieldCheckboxOptionWebComponent.define();
 
 const CheckboxWrapper = ({ label, description, invalid, errorMessage, disabled, ...restProps }: any) => {
-  return createElement('rhc-checkbox-option', {
+  return createElement('rhc-form-checkbox-option', {
     label,
     description,
     invalid: invalid?.toString(),
