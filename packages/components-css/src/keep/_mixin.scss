@@ -1,85 +1,139 @@
-@mixin rhc-keep--reset-border-radius {
-  border-radius: 0;
+@use "sass:string";
+
+@mixin colored-edges-variant($corner, $color) {
+  @include border-width($corner, var(--rhc-keep-colored-variant-#{$color}-corner-border-width));
+
+  border-color: var(--rhc-keep-colored-variant-#{$color}-corner-border-color);
+  border-radius: var(--rhc-keep-colored-variant-#{$color}-corner-border-radius);
+  border-style: var(--rhc-keep-colored-variant-#{$color}-corner-border-style);
+  padding: var(--rhc-colored-variant-#{$color}-corner-padding);
 }
 
-@mixin rhc-keep--border-radius($corner, $factor: 1) {
-  @if $corner == "top-left" {
-    border-start-start-radius: calc(var(--rhc-size-half-lint) * #{$factor});
-  } @else if $corner == "top-right" {
-    border-start-end-radius: calc(var(--rhc-size-half-lint) * #{$factor});
-  } @else if $corner == "bottom-left" {
-    border-end-start-radius: calc(var(--rhc-size-half-lint) * #{$factor});
-  } @else if $corner == "bottom-right" {
-    border-end-end-radius: calc(var(--rhc-size-half-lint) * #{$factor});
-  }
+@mixin colored-background-variant($corner, $color) {
+  @include border-width($corner, var(--rhc-keep-colored-variant-#{$color}-full-background-border-width));
+
+  background-color: var(--rhc-keep-colored-variant-#{$color}-full-background-background-color);
+  border-radius: var(--rhc-keep-colored-variant-#{$color}-full-background-border-radius);
+  border-style: var(--rhc-keep-colored-variant-#{$color}-full-background-border-style);
+  padding: var(--rhc-keep-colored-variant-#{$color}-full-background-padding);
 }
 
-@mixin rhc-keep--corner($corner, $size) {
-  @include rhc-keep--reset-border-radius;
+@mixin colored-rectangle-edge($side, $color) {
+  border-color: var(--rhc-keep-colored-variant-#{$color}-rectangle-border-border-color);
+  border-style: var(--rhc-keep-colored-variant-#{$color}-rectangle-border-border-style);
 
-  @if $size == "s" {
-    @include rhc-keep--border-radius($corner, 1);
-  } @else if $size == "m" {
-    @include rhc-keep--border-radius($corner, 2);
-  } @else if $size == "l" {
-    @include rhc-keep--border-radius($corner, 3);
+  // Reset all border widths
+  border-block-start-width: 0;
+  border-block-end-width: 0;
+  border-inline-start-width: 0;
+  border-inline-end-width: 0;
+
+  @if string.index($side, "block") == 1 {
+    padding: var(--rhc-keep-colored-variant-#{$color}-rectangle-border-adjacent-padding);
+  } @else if string.index($side, "inline") == 1 {
+    padding: var(--rhc-keep-colored-variant-#{$color}-rectangle-border-perpendicular-padding);
   }
+
+  border-#{$side}-width: var(--rhc-keep-colored-variant-#{$color}-rectangle-border-border-width);
 }
 
-@mixin rhc-keep__child--horizontal($size) {
-  @if $size == "xs" {
-    inline-size: 25%;
-  } @else if $size == "sm" {
-    inline-size: 33%;
-  } @else if $size == "md" {
-    inline-size: 50%;
-  } @else if $size == "lg" {
-    inline-size: 66%;
-  } @else if $size == "xl" {
-    inline-size: 75%;
-  } @else if $size == "full" {
-    border-radius: 0;
-    inline-size: 100%;
-  }
-}
+// Map corners to their corresponding border properties and opposites
+$corner-map: (
+  "start-start": (
+    "properties": (
+      "border-block-start-width",
+      "border-inline-start-width",
+    ),
+    "opposite": (
+      "border-block-end-width",
+      "border-inline-end-width",
+    ),
+  ),
+  "start-end": (
+    "properties": (
+      "border-block-start-width",
+      "border-inline-end-width",
+    ),
+    "opposite": (
+      "border-block-end-width",
+      "border-inline-start-width",
+    ),
+  ),
+  "end-start": (
+    "properties": (
+      "border-block-end-width",
+      "border-inline-start-width",
+    ),
+    "opposite": (
+      "border-block-start-width",
+      "border-inline-end-width",
+    ),
+  ),
+  "end-end": (
+    "properties": (
+      "border-block-end-width",
+      "border-inline-end-width",
+    ),
+    "opposite": (
+      "border-block-start-width",
+      "border-inline-start-width",
+    ),
+  ),
+  "top-left": (
+    "properties": (
+      "border-block-start-width",
+      "border-inline-start-width",
+    ),
+    "opposite": (
+      "border-block-end-width",
+      "border-inline-end-width",
+    ),
+  ),
+  "top-right": (
+    "properties": (
+      "border-block-start-width",
+      "border-inline-end-width",
+    ),
+    "opposite": (
+      "border-block-end-width",
+      "border-inline-start-width",
+    ),
+  ),
+  "bottom-left": (
+    "properties": (
+      "border-block-end-width",
+      "border-inline-start-width",
+    ),
+    "opposite": (
+      "border-block-start-width",
+      "border-inline-end-width",
+    ),
+  ),
+  "bottom-right": (
+    "properties": (
+      "border-block-end-width",
+      "border-inline-end-width",
+    ),
+    "opposite": (
+      "border-block-start-width",
+      "border-inline-start-width",
+    ),
+  ),
+);
 
-@mixin rhc-keep__child--vertical($size) {
-  @if $size == "xs" {
-    block-size: 25%;
-  } @else if $size == "sm" {
-    block-size: 33%;
-  } @else if $size == "md" {
-    block-size: 50%;
-  } @else if $size == "lg" {
-    block-size: 66%;
-  } @else if $size == "xl" {
-    block-size: 75%;
-  } @else if $size == "full" {
-    block-size: 100%;
-    border-radius: 0;
-  }
-}
+// Mixin to set border width for a given corner and reset the opposite corner
+@mixin border-width($corner, $width) {
+  $corner-data: map-get($corner-map, $corner);
 
-@mixin rhc-keep__child($position) {
-  @include rhc-keep--reset-border-radius;
+  @if $corner-data {
+    // Apply border widths to the specified corner
+    @each $prop in map-get($corner-data, "properties") {
+      #{$prop}: $width;
+    }
 
-  box-sizing: border-box;
-  position: absolute;
-
-  @if $position == "top-left" {
-    inset-block-start: 0;
-    inset-inline-start: 0;
-  }
-  @if $position == "top-right" {
-    inset-block-start: 0;
-    inset-inline-end: 0;
-  }
-  @if $position == "bottom-left" {
-    inset-block-end: 0;
-    inset-inline-start: 0;
-  }
-  @if $position == "bottom-right" {
-    inset-block-end: 0;
-    inset-inline-end: 0;
+    // Reset opposite corner widths if required
+    @each $prop in map-get($corner-data, "opposite") {
+      #{$prop}: 0;
+    }
   }
 }
