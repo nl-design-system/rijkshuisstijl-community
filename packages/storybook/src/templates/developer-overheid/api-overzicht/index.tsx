@@ -16,7 +16,6 @@ import {
   LinkList,
   LinkListLink,
   PageContent,
-  PageHeader,
   Paragraph,
   Textarea,
 } from '@rijkshuisstijl-community/components-react';
@@ -28,21 +27,6 @@ import { PageBody } from '@utrecht/page-body-react';
 export default function DevOvhAPIoverzicht() {
   return (
     <>
-      <PageHeader>
-        {/* <Logo organisation="Rijkshuisstijl Community">
-          <Icon className={'dutch-map'} icon={'nederland-map'} />
-        </Logo>
-        <NavBar
-          items={[
-            { id: '1', href: '/', label: 'Rich Text' },
-            { id: '2', href: '/form', label: 'Form' },
-            { id: '3', href: '/details', label: 'Details' },
-            { id: '4', href: '/collage', label: 'Collage' },
-            { id: '5', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
-          ]}
-        ></NavBar> */}
-      </PageHeader>
-
       <PageBody className="rhc-templates-page rhc-templates-main-content">
         <PageContent className="rhc-templates-page-content">
           <Article>
