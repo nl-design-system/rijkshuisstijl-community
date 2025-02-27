@@ -1,7 +1,7 @@
 <!-- TODO: This is a dummy component created to setup support for nested Twig templates. It needs to be replaced with an official template -->
 <ol>
   {% for item in items %}
-    {% include 'OrderedListItem.twig' with {
+    {% include '@rhc/OrderedListItem.twig' with {
       content: item
     } %}
   {% endfor %}
