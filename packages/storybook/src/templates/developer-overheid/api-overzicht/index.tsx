@@ -51,8 +51,8 @@ export default function DevOvhAPIoverzicht() {
           </HeadingGroup>
           <Textarea aria-label="textarea-label" name="subject" placeholder="Voer een zoekterm in"></Textarea>
 
-          <section className="container">
-            <div className="grid-container__left">
+          <section className="rhc-container">
+            <div className="rhc-grid-container__left">
               <aside>
                 <FieldsetLegend>API type</FieldsetLegend>
                 <FormFieldCheckboxGroup>
@@ -91,8 +91,8 @@ export default function DevOvhAPIoverzicht() {
               </aside>
             </div>
 
-            <div className="grid-container__right">
-              <div className="api-toevoegen">
+            <div className="rhc-grid-container__right">
+              <div className="rhc-api-toevoegen">
                 <Paragraph>119 APIs</Paragraph>
                 <Button>
                   <Icon>
