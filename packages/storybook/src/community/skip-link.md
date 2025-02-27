@@ -52,7 +52,7 @@ Als je de skip link een vaste locatie geeft met CSS `position`, dan kan de link 
 Niet:
 
 ```css
-.utrecht-skip-link {
+.rhc-skip-link {
   position: absolute;
   /* … */
 }
@@ -61,7 +61,7 @@ Niet:
 Wel:
 
 ```css
-.utrecht-skip-link {
+.rhc-skip-link {
   position: fixed;
   /* … */
 }

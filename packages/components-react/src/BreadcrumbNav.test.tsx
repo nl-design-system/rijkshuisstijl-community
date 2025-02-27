@@ -1,8 +1,8 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import { AnchorHTMLAttributes, createRef, PropsWithChildren } from 'react';
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it } from 'vitest';
 import { BreadcrumbNav, BreadcrumbNavLink } from './BreadcrumbNav';
 
 const CustomLink = ({ children, ...restProps }: PropsWithChildren<AnchorHTMLAttributes<HTMLAnchorElement>>) => {
@@ -238,3 +238,5 @@ describe('Breadcrumb navigation', () => {
     });
   });
 });
+
+afterEach(() => cleanup());

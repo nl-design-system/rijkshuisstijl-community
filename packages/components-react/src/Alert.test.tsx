@@ -1,6 +1,6 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 import { cleanup, render, screen } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, test } from 'vitest';
 import { Alert } from './Alert';
 
 describe('Alert', () => {
@@ -33,3 +33,5 @@ test.each([['info'], ['ok'], ['warning'], ['error']])(
     cleanup();
   },
 );
+
+afterEach(() => cleanup());

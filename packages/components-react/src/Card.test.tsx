@@ -1,8 +1,8 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
-import { render } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 import { ReactElement } from 'react';
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it } from 'vitest';
 import { Card, FullBleedCard, HorizontalImageCard } from '.';
 
 const linkTest = (component: ReactElement, href: string, title: string) => {
@@ -22,7 +22,11 @@ describe('Card', () => {
       expect(navBar).toBeVisible();
     });
     it('renders a link with the correct href and title', () => {
-      linkTest(<Card heading="Heading" href="/example" title="Example Title" />, '/example', 'Example Title');
+      linkTest(
+        <Card heading="Heading" href="/example" linkLabel={'Example Label'} title="Example Title" />,
+        '/example',
+        'Example Title',
+      );
     });
   });
 
@@ -58,3 +62,5 @@ describe('Card', () => {
     });
   });
 });
+
+afterEach(() => cleanup());
