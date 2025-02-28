@@ -1,5 +1,9 @@
 import { Checkbox } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
+import anatomy from '@utrecht/components/checkbox/docs/anatomy.en.md?raw';
+import references from '@utrecht/components/checkbox/docs/references.nl.md?raw';
+import technologypdf from '@utrecht/components/checkbox/docs/technology-pdf.nl.md?raw';
+import wcag from '@utrecht/components/checkbox/docs/wcag.nl.md?raw';
 import readme from './checkbox.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
@@ -14,7 +18,7 @@ const meta = {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
-        component: mergeMarkdown([readme]),
+        component: mergeMarkdown([readme, anatomy, technologypdf, references, wcag]),
       },
     },
     figma:
@@ -28,10 +32,6 @@ const meta = {
     checked: {
       name: 'checked',
       type: { name: 'boolean', required: false },
-    },
-    onChange: {
-      name: 'onChange',
-      type: { name: 'function', required: false },
     },
     disabled: {
       name: 'disabled',
