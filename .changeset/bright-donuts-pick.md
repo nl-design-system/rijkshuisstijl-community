@@ -5,4 +5,4 @@
 '@rijkshuisstijl-community/rhc-templates': patch
 ---
 
-Update the packages and libraries. Deleted the RIVM app
+Update the packages and libraries.
