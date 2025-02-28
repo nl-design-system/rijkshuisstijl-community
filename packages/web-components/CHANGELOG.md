@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/web-components
 
+## 1.1.1
+
+### Patch Changes
+
+- 723c927: Update the packages and libraries.
+
 ## 1.1.0
 
 ### Minor Changes

@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/components-react
 
+## 1.0.1
+
+### Patch Changes
+
+- 723c927: Update the packages and libraries.
+- 66667f8: Link in card-footer should be wrapped in div instead of being preceded by empty div
+
 ## 1.0.0
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-css
 
+## 1.0.1
+
+### Patch Changes
+
+- 723c927: Update the packages and libraries.
+
 ## 1.0.0
 
 ### Patch Changes
