@@ -1,9 +1,10 @@
 {%- if level is empty -%}
 {%- set level = 1 -%}
 {%- endif -%}
+{%- set classes = ['nl-heading'] -%}
 {%- if appearance is not empty -%}
-{%- set attributes = attributes.addClass('nl-heading--level-' ~ appearance) -%}
+{%- set classes = classes|merge(['nl-heading--level-' ~ appearance]) -%}
 {%- else -%}
-{%- set attributes = attributes.addClass('nl-heading--level-' ~ level) -%}
+{%- set classes = classes|merge(['nl-heading--level-' ~ level]) -%}
 {%- endif -%}
-<h{{ level }}{{ attributes }}>{{ children }}</h{{ level }}>
+<h{{ level }}{{ attributes.addClass(classes) }}>{{ children }}</h{{ level }}>

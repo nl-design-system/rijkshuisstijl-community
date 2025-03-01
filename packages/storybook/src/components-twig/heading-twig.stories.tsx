@@ -3,6 +3,7 @@
 import TwigHeading from '@rijkshuisstijl-community/components-twig/src/Heading.twig';
 import type { Meta, StoryObj } from '@storybook/react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
+import DrupalAttribute from 'drupal-attribute';
 import readme from '../community/heading.md?raw';
 
 const meta = {
@@ -40,9 +41,7 @@ export const TwigHeading1: StoryObj<typeof meta> = {
   args: {
     level: 1,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
-    defaultAttributes: {
-      class: ['nl-heading'],
-    },
+    attributes: new DrupalAttribute,
   },
   name: 'Heading 1',
 };
@@ -51,9 +50,7 @@ export const TwigHeading2: StoryObj<typeof meta> = {
   args: {
     level: 2,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
-    defaultAttributes: {
-      class: ['nl-heading'],
-    },
+    attributes: new DrupalAttribute,
   },
   name: 'Heading 2',
 };
@@ -62,9 +59,7 @@ export const TwigHeading3: StoryObj<typeof meta> = {
   args: {
     level: 3,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
-    defaultAttributes: {
-      class: ['nl-heading'],
-    },
+    attributes: new DrupalAttribute,
   },
   name: 'Heading 3',
 };
@@ -73,9 +68,7 @@ export const TwigHeading4: StoryObj<typeof meta> = {
   args: {
     level: 4,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
-    defaultAttributes: {
-      class: ['nl-heading'],
-    },
+    attributes: new DrupalAttribute,
   },
   name: 'Heading 4',
 };
@@ -84,9 +77,7 @@ export const TwigHeading5: StoryObj<typeof meta> = {
   args: {
     level: 5,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
-    defaultAttributes: {
-      class: ['nl-heading'],
-    },
+    attributes: new DrupalAttribute,
   },
   name: 'Heading 5',
 };
@@ -95,9 +86,7 @@ export const TwigHeading6: StoryObj<typeof meta> = {
   args: {
     level: 6,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
-    defaultAttributes: {
-      class: ['nl-heading'],
-    },
+    attributes: new DrupalAttribute,
   },
   name: 'Heading 6',
 };
@@ -107,9 +96,7 @@ export const TwigHeading5Appearance: StoryObj<typeof meta> = {
     level: 1,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
     appearance: 5,
-    defaultAttributes: {
-      class: ['nl-heading'],
-    },
+    attributes: new DrupalAttribute,
   },
   name: 'Heading 5 (in appearance)',
 };
