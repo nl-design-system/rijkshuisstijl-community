@@ -3,9 +3,9 @@
 import TwigIcon from '@rijkshuisstijl-community/components-twig/src/Icon.twig';
 import { iconSet } from '@rijkshuisstijl-community/components-twig/src/icon-sets/default-icons/icon-set';
 import type { Meta, StoryObj } from '@storybook/react';
+import DrupalAttribute from 'drupal-attribute';
 import readme from './icon-twig.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import DrupalAttribute from 'drupal-attribute';
 
 const icons = Object.values(iconSet);
 
@@ -46,14 +46,14 @@ const svg_attributes = new DrupalAttribute([
   ['stroke', 'currentColor'],
   ['stroke-width', 2],
   ['stroke-linecap', 'round'],
-  ['stroke-linejoin', 'round']
+  ['stroke-linejoin', 'round'],
 ]);
 
 export const Default: StoryObj<typeof meta> = {
   args: {
     icon: 'home',
-    attributes: new DrupalAttribute,
-    svg_attributes: svg_attributes
+    attributes: new DrupalAttribute(),
+    svg_attributes: svg_attributes,
   },
   name: 'Home',
 };
@@ -61,8 +61,8 @@ export const Default: StoryObj<typeof meta> = {
 export const CustomIcon: StoryObj<typeof meta> = {
   args: {
     icon: 'brand-x',
-    attributes: new DrupalAttribute,
-    svg_attributes: svg_attributes
+    attributes: new DrupalAttribute(),
+    svg_attributes: svg_attributes,
   },
   name: 'Custom icon',
 };
