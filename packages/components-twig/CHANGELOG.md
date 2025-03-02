@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/components-twig
 
+## 1.1.1
+
+### Patch Changes
+
+- bf359ed: Added nl-heading and nl-heading--level-\* classes to heading
+- bf359ed: Split attribute logic for svg attributes on icon between component and parent
+  Use drupal attribute to set classes and attributes in icon
+
 ## 1.1.0
 
 ### Minor Changes
