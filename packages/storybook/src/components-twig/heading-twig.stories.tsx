@@ -3,8 +3,8 @@
 import TwigHeading from '@rijkshuisstijl-community/components-twig/src/Heading.twig';
 import type { Meta, StoryObj } from '@storybook/react';
 import DrupalAttribute from 'drupal-attribute';
+import readme from './heading-twig.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/heading.md?raw';
 
 const meta = {
   title: 'Twig Components/Heading',
