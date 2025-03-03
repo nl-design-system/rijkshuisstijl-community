@@ -1,7 +1,5 @@
 ---
-"@rijkshuisstijl-community/components-twig": patch
-"@rijkshuisstijl-community/storybook": patch
+'@rijkshuisstijl-community/components-twig': patch
 ---
 
 - Add Paragraph Twig template
-- Add story for Storybook
