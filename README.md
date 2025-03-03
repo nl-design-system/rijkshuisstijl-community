@@ -2,6 +2,10 @@
 
 # Rijkshuisstijl Community Componenten
 
+**Direct aan de slag met [CSS](packages/components-css/README.md) | [React](packages/components-react/README.md) | [Web Components](packages/web-components/README.md) | [Twig](packages/components-twig/README.md)**
+
+---
+
 _Dit project wordt **niet** gesteund door het Ministerie van Algemene Zaken._
 
 **Het toepassen van design-elementen uit dit project is strikt verboden voor organisaties die geen deel uitmaken van de
@@ -35,56 +39,17 @@ juiste versie al is geïnstalleerd, of nadat hij is geïnstalleerd, wordt hij in
 
 De componenten gebruiken scss, zorg dat jouw project scss-bestanden kan verwerken.
 
-## Aan de slag zonder framework
+## Aan de slag
 
-Binnenkort komen er componenten die te gebruiken zijn zonder een framework.
+De componenten van de Rijkshuisstijl Community zijn te gebruiken met en zonder framework. Bekijk de README van elke package voor informatie over implementatie.
 
-## Aan de slag met React-componenten
-
-Om de React-componenten van de Rijkshuisstijl-community te gebruiken, installeer je het pakket dat beschikbaar in
-de [npm Registry](https://www.npmjs.com/package/@rijkshuisstijl-community/components-react).
-
-```npm
-npm install --save-dev @rijkshuisstijl-community/components-react
-```
-
-Dit installeert de React-componenten. Om deze componenten te gebruiken, kun je ze importeren in jouw app.
-
-```tsx
-'use client'; // Nodig in sommige projecten
-
-import { Button } from '@rijkshuisstijl-community/components-react';
-
-<Button>Click Here!</Button>;
-```
-
-Sommige componenten gebruiken de [useRef](https://react.dev/reference/react/useRef) hook, die alleen werkt in Client
-Componenten. Voeg `"use client"` toe bovenaan het bestand om dit op te lossen.
-
-### Thema toepassen
-
-De React-componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je project toe te voegen, installeer je
-het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens)
-
-```npm
-npm install --save-dev @rijkshuisstijl-community/design-tokens
-```
-
-Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.css`-bestand uit de `dist` map van het
-pakket, en omring het deel van je applicatie waar je het thema wilt toepassen met de Rijkshuisstijl-thema: `rhc-theme`.
-
-```tsx
-import '@rijkshuisstijl-community/design-tokens/dist/index.css'; // design tokens importeren
-import '@rijkshuisstijl-community/components-css/dist/index.css'; // css importeren
-
-function App() {
-  return (
-    <div className="rhc-theme">
-      <Button>Click Here!</Button>
-    </div>
-  );
-}
-```
+| Package                                                   | Purpose                                                                                                                                                                            |
+| :-------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`components-css`](packages/components-css/README.md)     | Hier kunnen CSS-componenten toegevoegd worden die nog niet bestaan in de NL Design System-community.                                                                               |
+| [`components-react`](packages/components-react/README.md) | Optioneel voor het toevoegen van een React-wrapper aan een CSS-component als die nog niet bestaat.                                                                                 |
+| [`web-components`](packages/web-components/README.md)     | Optioneel voor het toevoegen van een Web Component wrapper aan een CSS-component als die nog niet bestaat.                                                                         |
+| [`components-twig`](packages/components-twig/README.md)   | Optioneel voor het toevoegen van een Twig-wrapper aan een CSS-component als die nog niet bestaat.                                                                                  |
+| [`font`](packages/font/README.md)                         | Dit npm pakketje met fonts kun je gebruiken als alternatief op de officiële Rijkshuisstijl fonts, voor situaties waar je geen toestemming hebt om de officiële fonts te gebruiken. |
 
 ## Licentie
 
@@ -111,13 +76,7 @@ iconen.
 
 **_Lettertypen_**
 
-```npm
-npm install -D @rijkshuisstijl-community/font
-```
-
-```tsx
-import '@rijkshuisstijl-community/font/src/index.mjs';
-```
+Bekijk de [packages/font/README.md](packages/font/README.md) voor de meerdere manieren om de lettertypen te installeren voor jouw project.
 
 **_Logo_**
 
@@ -169,16 +128,6 @@ Vanuit`packages/components-react` krijg je een gedetailleerder overzicht van tes
 | Command         | Action                      |
 | :-------------- | :-------------------------- |
 | `pnpm run test` | Voert alle test suites uit. |
-
-### Packages
-
-| Package            | Purpose                                                                                                                                            |
-| :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `components-css`   | Hier kunnen CSS-componenten toegevoegd worden die nog niet bestaan in de NL Design System-community.                                               |
-| `components-react` | Optioneel voor het toevoegen van een React-wrapper aan een CSS-component als die nog niet bestaat.                                                 |
-| `components-twig`  | Optioneel voor het toevoegen van een Twig-wrapper aan een CSS-component als die nog niet bestaat.                                                  |
-| `design-tokens`    | Hier worden de rijkshuisstijl-thema’s beheerd, voor gebruik met NL Design System zonder thema. Opmerking deze zouden naar proprietary moeten gaan. |
-| `storybook`        | Extra componenten en pagina-sjablonen kunnen worden toegevoegd als story voor documentatie en visuele regressietesten.                             |
 
 ### Proprietary
 
