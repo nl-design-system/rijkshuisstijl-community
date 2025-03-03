@@ -62,7 +62,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const TwigDefault: Story = {
   args: {
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
     attributes: new DrupalAttribute(),
@@ -70,10 +70,11 @@ export const Default: Story = {
   name: 'Paragraph',
 };
 
-export const Lead: Story = {
+export const TwigLead: Story = {
   args: {
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
     purpose: 'lead',
     attributes: new DrupalAttribute(),
   },
+  name: "Lead"
 };
