@@ -76,5 +76,5 @@ export const TwigLead: Story = {
     purpose: 'lead',
     attributes: new DrupalAttribute(),
   },
-  name: "Lead"
+  name: 'Lead',
 };
