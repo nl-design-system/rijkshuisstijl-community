@@ -1,0 +1,5 @@
+{%- set classes = [
+  'nl-paragraph',
+  purpose and purpose == 'lead' ? 'nl-paragraph--lead' : ''
+] -%}
+<p{{ attributes.addClass(classes) }}>{{ children }}</p>
