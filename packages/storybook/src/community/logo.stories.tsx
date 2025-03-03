@@ -57,6 +57,7 @@ const meta = {
       type: { name: 'string', required: false },
     },
     imageBackgroundColor: {
+      name: '--rhc-logo-image-background-color',
       control: 'color',
       description: 'Changes background color of the image',
       table: {
@@ -64,6 +65,7 @@ const meta = {
       },
     },
     imageIconColor: {
+      name: '--rhc-logo-image-color',
       control: 'color',
       description: 'Changes color of the image icon',
       table: {
@@ -71,6 +73,7 @@ const meta = {
       },
     },
     textColor: {
+      name: '--rhc-logo-color',
       control: 'color',
       description: 'Changes text color',
       table: {

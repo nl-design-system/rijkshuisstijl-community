@@ -1,40 +1,10 @@
-@use "sass:string";
+@use "sass:map";
 
-@mixin colored-edges-variant($corner, $color) {
-  @include border-width($corner, var(--rhc-keep-colored-variant-#{$color}-corner-border-width));
+@mixin add-border($corner, $color, $width) {
+  @include border-width($corner, $width);
 
-  border-color: var(--rhc-keep-colored-variant-#{$color}-corner-border-color);
-  border-radius: var(--rhc-keep-colored-variant-#{$color}-corner-border-radius);
-  border-style: var(--rhc-keep-colored-variant-#{$color}-corner-border-style);
-  padding: var(--rhc-colored-variant-#{$color}-corner-padding);
-}
-
-@mixin colored-background-variant($corner, $color) {
-  @include border-width($corner, var(--rhc-keep-colored-variant-#{$color}-full-background-border-width));
-
-  background-color: var(--rhc-keep-colored-variant-#{$color}-full-background-background-color);
-  border-radius: var(--rhc-keep-colored-variant-#{$color}-full-background-border-radius);
-  border-style: var(--rhc-keep-colored-variant-#{$color}-full-background-border-style);
-  padding: var(--rhc-keep-colored-variant-#{$color}-full-background-padding);
-}
-
-@mixin colored-rectangle-edge($side, $color) {
-  border-color: var(--rhc-keep-colored-variant-#{$color}-rectangle-border-border-color);
-  border-style: var(--rhc-keep-colored-variant-#{$color}-rectangle-border-border-style);
-
-  // Reset all border widths
-  border-block-start-width: 0;
-  border-block-end-width: 0;
-  border-inline-start-width: 0;
-  border-inline-end-width: 0;
-
-  @if string.index($side, "block") == 1 {
-    padding: var(--rhc-keep-colored-variant-#{$color}-rectangle-border-adjacent-padding);
-  } @else if string.index($side, "inline") == 1 {
-    padding: var(--rhc-keep-colored-variant-#{$color}-rectangle-border-perpendicular-padding);
-  }
-
-  border-#{$side}-width: var(--rhc-keep-colored-variant-#{$color}-rectangle-border-border-width);
+  border-color: $color;
+  border-style: var(--rhc-keep-curved-border-border-style);
 }
 
 // Map corners to their corresponding border properties and opposites
@@ -123,17 +93,32 @@ $corner-map: (
 
 // Mixin to set border width for a given corner and reset the opposite corner
 @mixin border-width($corner, $width) {
-  $corner-data: map-get($corner-map, $corner);
+  @include reset-border-width;
+  $corner-data: map.get($corner-map, $corner);
 
   @if $corner-data {
     // Apply border widths to the specified corner
-    @each $prop in map-get($corner-data, "properties") {
+    @each $prop in map.get($corner-data, "properties") {
       #{$prop}: $width;
     }
 
     // Reset opposite corner widths if required
-    @each $prop in map-get($corner-data, "opposite") {
+    @each $prop in map.get($corner-data, "opposite") {
       #{$prop}: 0;
     }
   }
+}
+
+@mixin reset-border-width {
+  border-block-start-width: 0;
+  border-block-end-width: 0;
+  border-inline-start-width: 0;
+  border-inline-end-width: 0;
+}
+
+@mixin reset-border-radius {
+  border-end-end-radius: 0;
+  border-end-start-radius: 0;
+  border-start-end-radius: 0;
+  border-start-start-radius: 0;
 }
