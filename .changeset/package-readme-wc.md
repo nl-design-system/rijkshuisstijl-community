@@ -2,4 +2,4 @@
 '@rijkshuisstijl-community/web-components': patch
 ---
 
-Removed deprecated global file
+Added implementation documentation to package README.

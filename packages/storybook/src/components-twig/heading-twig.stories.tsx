@@ -1,19 +1,10 @@
 /* @license CC0-1.0 */
 
-import twigTemplate from '@rijkshuisstijl-community/components-twig/src/Heading.twig?raw';
+import TwigHeading from '@rijkshuisstijl-community/components-twig/src/Heading.twig';
 import type { Meta, StoryObj } from '@storybook/react';
-import { createTwigComponent } from './TwigRenderer';
+import DrupalAttribute from 'drupal-attribute';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../community/heading.md?raw';
-
-interface TwigHeadingProps {
-  appearance?: string;
-  level: number;
-  children: string;
-  attributes?: object;
-}
-
-const TwigHeading = createTwigComponent<TwigHeadingProps>(twigTemplate);
 
 const meta = {
   title: 'Twig Components/Heading',
@@ -50,10 +41,7 @@ export const TwigHeading1: StoryObj<typeof meta> = {
   args: {
     level: 1,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
-    attributes: {
-      class: ['my-heading-1'],
-    },
-    appearance: 'utrecht-heading-3',
+    attributes: new DrupalAttribute(),
   },
   name: 'Heading 1',
 };
@@ -62,6 +50,7 @@ export const TwigHeading2: StoryObj<typeof meta> = {
   args: {
     level: 2,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+    attributes: new DrupalAttribute(),
   },
   name: 'Heading 2',
 };
@@ -70,6 +59,7 @@ export const TwigHeading3: StoryObj<typeof meta> = {
   args: {
     level: 3,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+    attributes: new DrupalAttribute(),
   },
   name: 'Heading 3',
 };
@@ -78,6 +68,7 @@ export const TwigHeading4: StoryObj<typeof meta> = {
   args: {
     level: 4,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+    attributes: new DrupalAttribute(),
   },
   name: 'Heading 4',
 };
@@ -86,6 +77,7 @@ export const TwigHeading5: StoryObj<typeof meta> = {
   args: {
     level: 5,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+    attributes: new DrupalAttribute(),
   },
   name: 'Heading 5',
 };
@@ -94,6 +86,17 @@ export const TwigHeading6: StoryObj<typeof meta> = {
   args: {
     level: 6,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+    attributes: new DrupalAttribute(),
   },
   name: 'Heading 6',
+};
+
+export const TwigHeading5Appearance: StoryObj<typeof meta> = {
+  args: {
+    level: 1,
+    children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
+    appearance: 5,
+    attributes: new DrupalAttribute(),
+  },
+  name: 'Heading 5 (in appearance)',
 };

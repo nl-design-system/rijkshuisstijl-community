@@ -1,18 +1,13 @@
 /* @license CC0-1.0 */
-import twigTemplate from '@rijkshuisstijl-community/components-twig/src/Icon.twig?raw';
+
+import TwigIcon from '@rijkshuisstijl-community/components-twig/src/Icon.twig';
 import { iconSet } from '@rijkshuisstijl-community/components-twig/src/icon-sets/default-icons/icon-set';
 import type { Meta, StoryObj } from '@storybook/react';
-import { createTwigComponent } from './TwigRenderer';
+import DrupalAttribute from 'drupal-attribute';
 import readme from './icon-twig.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const icons = Object.values(iconSet);
-
-interface TwigIconProps {
-  icon: string;
-}
-
-const TwigIcon = createTwigComponent<TwigIconProps>(twigTemplate);
 
 const meta = {
   title: 'Twig Components/Icon',
@@ -41,9 +36,24 @@ const meta = {
 
 export default meta;
 
+const svg_attributes = new DrupalAttribute([
+  ['class', ['icon', 'icon-tabler']],
+  ['xmlns', 'http://www.w3.org/2000/svg'],
+  ['width', 24],
+  ['height', 24],
+  ['viewBox', '0 0 24 24'],
+  ['fill', 'none'],
+  ['stroke', 'currentColor'],
+  ['stroke-width', 2],
+  ['stroke-linecap', 'round'],
+  ['stroke-linejoin', 'round'],
+]);
+
 export const Default: StoryObj<typeof meta> = {
   args: {
     icon: 'home',
+    attributes: new DrupalAttribute(),
+    svg_attributes: svg_attributes,
   },
   name: 'Home',
 };
@@ -51,6 +61,8 @@ export const Default: StoryObj<typeof meta> = {
 export const CustomIcon: StoryObj<typeof meta> = {
   args: {
     icon: 'brand-x',
+    attributes: new DrupalAttribute(),
+    svg_attributes: svg_attributes,
   },
   name: 'Custom icon',
 };
