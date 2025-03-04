@@ -1,14 +1,7 @@
 @use "sass:map";
 
-@mixin add-border($corner, $color, $width) {
-  @include border-width($corner, $width);
-
-  --_rhc-rounded-corner-border-color: $color;
-  --_rhc-rounded-corner-border-style: var(--rhc-rounded-corner-border-style, solid);
-}
-
 // Map corners to their corresponding border properties and opposites
-$corner-map: (
+$rhc-rounded-border-corner-map: (
   "start-start": (
     "properties": (
       "border-block-start-width",
@@ -89,31 +82,39 @@ $corner-map: (
       "border-inline-start-width",
     ),
   ),
-);
+) !default;
+
+@mixin add-border($corner, $color, $width) {
+  @include border-width($corner, $width);
+
+  --_rhc-rounded-corner-border-color: $color;
+  --_rhc-rounded-corner-border-style: var(--rhc-rounded-corner-border-style, solid);
+}
 
 // Mixin to set border width for a given corner and reset the opposite corner
 @mixin border-width($corner, $width) {
+  $rhc-rounded-border-corner-data: map.get($rhc-rounded-border-corner-map, $corner) !default;
+
   @include reset-border-width;
-  $corner-data: map.get($corner-map, $corner);
 
   @if $corner-data {
     // Apply border widths to the specified corner
-    @each $prop in map.get($corner-data, "properties") {
+    @each $prop in map.get($rhc-rounded-border-corner-data, "properties") {
       #{$prop}: $width;
     }
 
     // Reset opposite corner widths if required
-    @each $prop in map.get($corner-data, "opposite") {
+    @each $prop in map.get($rhc-rounded-border-corner-data, "opposite") {
       #{$prop}: 0;
     }
   }
 }
 
 @mixin reset-border-width {
-  border-block-start-width: 0;
   border-block-end-width: 0;
-  border-inline-start-width: 0;
+  border-block-start-width: 0;
   border-inline-end-width: 0;
+  border-inline-start-width: 0;
 }
 
 @mixin reset-border-radius {
