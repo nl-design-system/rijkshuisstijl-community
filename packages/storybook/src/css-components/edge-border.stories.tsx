@@ -19,7 +19,7 @@ const edgeBorderComponent = ({
   const className = useMemo(() => {
     return clsx('rhc-edge-border', {
       [`rhc-edge-border--color-${color}`]: color,
-      [`rhc-edge-border--edge-${side}`]: side,
+      [`rhc-edge-border--side-${side}`]: side,
     });
   }, [color, side, borderWidthToken, colorToken, adjacentPaddingToken, perpendicularPaddingToken]);
 
@@ -39,18 +39,25 @@ const edgeBorderComponent = ({
 };
 
 const meta = {
-  title: 'CSS Components/edge-border',
+  title: 'CSS Components/Edge Border',
   id: 'rhc-edge-border-css',
   component: edgeBorderComponent,
   argTypes: {
     color: {
+      name: 'rhc-edge-border--color-{color}',
       control: 'select',
-      options: ['blue', 'pink'],
+      options: [undefined, 'blue', 'pink'],
+      table: {
+        category: 'Class names',
+      },
     },
     side: {
+      name: 'rhc-edge-border--side-{side}',
       control: 'select',
-      options: ['block-start', 'block-end', 'inline-start', 'inline-end'],
-      if: { arg: 'variant', eq: 'edge' },
+      options: [undefined, 'block-start', 'block-end', 'inline-start', 'inline-end'],
+      table: {
+        category: 'Class names',
+      },
     },
     borderWidthToken: {
       name: '--rhc-edge-border-border-width',
@@ -88,12 +95,7 @@ const meta = {
     showHtml: true,
   },
   args: {
-    size: 'md',
-    variant: 'border',
-    color: 'blue',
-    corner: 'start-start',
     side: 'inline-start',
-    thickBorder: false,
   },
 };
 
@@ -101,7 +103,6 @@ export default meta;
 
 export const PinkEdge = {
   args: {
-    variant: 'edge',
     color: 'pink',
   },
 };

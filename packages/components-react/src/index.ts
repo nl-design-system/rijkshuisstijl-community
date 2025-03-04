@@ -77,7 +77,6 @@ export { HeadingGroup, type HeadingGroupProps } from './HeadingGroup';
 export { Hero, type HeroProps } from './Hero';
 export { Icon, type IconProps, type RHCIconID, getIconSet, registerIconSet } from './Icon';
 export { Image, type ImageProps } from './Image';
-export { Keep } from './Keep';
 export { Link, type LinkProps } from './Link';
 export { LinkList, LinkListLink, type LinkListLinkProps, type LinkListProps } from './LinkList';
 export { LinkListCard } from './LinkListCard';

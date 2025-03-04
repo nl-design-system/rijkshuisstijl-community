@@ -3,8 +3,8 @@
 @mixin add-border($corner, $color, $width) {
   @include border-width($corner, $width);
 
-  border-color: $color;
-  border-style: var(--rhc-keep-curved-border-border-style);
+  --_rhc-rounded-corner-border-color: $color;
+  --_rhc-rounded-corner-border-style: var(--rhc-rounded-corner-border-style, solid);
 }
 
 // Map corners to their corresponding border properties and opposites
