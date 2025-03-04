@@ -31,6 +31,12 @@ Gebruik in JavaScript frameworks zoals React en Angular de volgende code:
 import '@rijkshuisstijl-community/font/src/index.mjs';
 ```
 
+Gebruik in SCSS de volgende code:
+
+```scss
+@import '@rijkshuisstijl-community/font/src/index.scss';
+```
+
 ## Op zoek naar de officiële lettertypes?
 
 De officiële lettertypes kun je downloaden via [rijkshuisstijl.nl](https://www.rijkshuisstijl.nl/publiek/modules/product/DigitalStyleGuide/default/index.aspx?ItemId=6745), als je voldoende rechten hebt. Bijvoorbeeld als je bij de Rijksoverheid werkt en je ingelogd bent via Citrix.
