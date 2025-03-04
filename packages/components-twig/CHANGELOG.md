@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/components-twig
 
+## 1.1.2
+
+### Patch Changes
+
+- b9a4945: Added implementation documentation to package README.
+- Updated dependencies [b9a4945]
+  - @rijkshuisstijl-community/components-css@1.0.2
+
 ## 1.1.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/web-components
 
+## 1.1.2
+
+### Patch Changes
+
+- b9a4945: Added implementation documentation to package README.
+
 ## 1.1.1
 
 ### Patch Changes
