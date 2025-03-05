@@ -1,5 +1,5 @@
 import { CardSearch } from '@rijkshuisstijl-community/components-react';
-import type { Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import readme from './card.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
@@ -21,20 +21,6 @@ const meta = {
       description: 'Card heading',
       control: { type: 'text' },
       defaultValue: 'Card Heading',
-      table: {
-        category: 'Props',
-      },
-    },
-    imageSrc: {
-      description: 'Image source URL',
-      control: { type: 'text' },
-      table: {
-        category: 'Props',
-      },
-    },
-    imageAlt: {
-      description: 'Image alt text',
-      control: { type: 'text' },
       table: {
         category: 'Props',
       },
@@ -83,6 +69,7 @@ const meta = {
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     heading: 'Card Heading',
+    subheading: 'Nieuwe tijden',
     href: '#',
     linkLabel: 'Link label',
     metadata: 'Metadata',
@@ -108,8 +95,41 @@ const meta = {
 
 export default meta;
 
-export const Default = {
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
   args: {
-    appearance: 'default',
+    heading: 'Card Search Heading',
+    description: undefined,
+    href: '',
+    subheading: undefined,
   },
+  render: (args) => (
+    <ol>
+      <li>
+        <CardSearch
+          description="Alle Nederlandstalige Statistieken van CBS ontsloten via oData versie 4 CBS CIJFERS OPEN DATA WORDT IN 2025 GRONDIG VERNIEUWD CBS Cijfers Open Data gaat in 2025 grondig op de schop. We stappen over van OData naar SDMX. Tool gebruikers en software ontwikkelaars..."
+          heading="CBS Cijfers Open Data"
+          href={args.href}
+          subheading="Centraal Bureau voor de Statistiek"
+        />
+      </li>
+      <li>
+        <CardSearch
+          description="Met behulp van de CBS Open Data API kun je Articles, Pages, Figures, Events en Flash content van de CBS website ophalen via oData versie 4"
+          heading="CBS Content Open Data"
+          href={args.href}
+          subheading="Centraal Bureau voor de Statistiek"
+        />
+      </li>
+      <li>
+        <CardSearch
+          description="De zoekmachine van het CBS helpt je om artikelen en tabellen te vinden op de website van het CBS."
+          heading="CBS Search Engine"
+          href={args.href}
+          subheading="Centraal Bureau voor de Statistiek"
+        />
+      </li>
+    </ol>
+  ),
 };
