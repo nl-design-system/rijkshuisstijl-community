@@ -40,6 +40,7 @@ export {
   HorizontalImageCard,
   type HorizontalImageCardProps,
 } from './Card';
+export { CardSearch } from './CardSearch';
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
 export { CodeInput } from './CodeInput';
