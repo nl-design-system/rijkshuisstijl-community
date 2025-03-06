@@ -9,6 +9,7 @@ interface CardSearchProps {
   heading: ReactNode;
   subheading: ReactNode;
   description: ReactNode;
+  metadata?: string;
   ref?: Ref<HTMLDivElement>;
 }
 
@@ -20,24 +21,24 @@ export const CardSearch = ({
   description,
   href,
   title,
+  metadata,
   children,
   ...restProps
 }: PropsWithChildren<CardSearchProps>) => {
   return (
-    <div className={clsx('rhc-card-search', 'rhc-card-search--default', className)} ref={ref} {...restProps}>
-      <div className="rhc-card-search__content">
-        <div className="rhc-card-earch__heading">{heading}</div>
-        <div className="rhc-card-search__subheading">{subheading}</div>
-        <div className="rhc-card-search__description">{description}</div>
-        {/* <div className="rhc-card-search__icon">{icon}</div> */}
-        {/* <div className="rhc-card-search__metadata">{metadata}</div> */}
+    <div className={clsx('rhc-card', 'rhc-card--default', className)} ref={ref} {...restProps}>
+      <div className="rhc-card__content">
+        <div className="rhc-card__heading">{heading}</div>
+        <div className="rhc-card__subheading">{subheading}</div>
+        <div className="rhc-card__description">{description}</div>
+        <div className="rhc-card__metadata">{metadata}</div>
       </div>
       {children}
-      <div className="rhc-card-search__footer">
-        <div className="rhc-card-search__link rhc-card__anchor">
+      <div className="rhc-card__footer">
+        <div className="rhc-card__link rhc-card__anchor">
           <Link aria-label={title} href={href} title={title}></Link>
         </div>
-        {/* {button && <div className="rhc-card-search__button">{button}</div>} */}
+        {/* {button && <div className="rhc-card__button">{button}</div>} */}
       </div>
     </div>
   );
