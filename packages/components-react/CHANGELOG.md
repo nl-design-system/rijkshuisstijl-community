@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/components-react
 
+## 1.0.2
+
+### Patch Changes
+
+- 1dc03fb: Wekelijkse package updates voor Rijkshuisstijl-componenten en design tokens (week 10)
+- b9a4945: Moved implementation documentation from repository README to package README.
+
 ## 1.0.1
 
 ### Patch Changes
