@@ -1,7 +1,22 @@
 {%- set attributes = attributes.addClass('utrecht-icon') -%}
 {%- set attributes = attributes.setAttribute('role', 'presentation') -%}
 {%- set attributes = attributes.setAttribute('aria-hidden', 'true') -%}
-{%- set svg_attributes = svg_attributes.addClass('icon-tabler-' ~ icon) -%}
+{% set svg_properties = {
+  'class': ['icon', 'icon-tabler', 'icon-tabler-' ~ icon],
+  'xmlns': 'http://www.w3.org/2000/svg',
+  'width': 24,
+  'height': 24,
+  'viewBox': '0 0 24 24',
+  'fill': 'none',
+  'stroke': 'currentColor',
+  'stroke-width': 2,
+  'stroke-linecap': 'round',
+  'stroke-linejoin': 'round',
+}
+%}
+{% for key,property in svg_properties %}
+  {% set svg_attributes = svg_attributes.setAttribute(key, property) %}
+{% endfor %}
 <span{{ attributes }}>
   <svg{{ svg_attributes }}>
     <use xlink:href="node_modules/@tabler/icons-sprite/dist/tabler-sprite.svg#tabler-{{ icon }}" />
