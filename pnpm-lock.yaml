@@ -191,6 +191,9 @@ importers:
 
   packages/components-react:
     dependencies:
+      '@nl-design-system-candidate/link-react':
+        specifier: 1.1.0
+        version: 1.1.0(@babel/runtime@7.26.9)(react@19.0.0)
       '@nl-design-system-candidate/skip-link-react':
         specifier: 1.0.0
         version: 1.0.0(@babel/runtime@7.26.9)(react@19.0.0)
@@ -2219,6 +2222,12 @@ packages:
 
   '@nl-design-system-candidate/link-css@1.0.0':
     resolution: {integrity: sha512-D0QK1cNRK39XHss4UNxQJiJ3+XHxACS3+khOc9SRYp7KR/t5+E6l+oncM2+ATBmE6fcS7dl+q0FSw9g1lH/VbA==}
+
+  '@nl-design-system-candidate/link-react@1.1.0':
+    resolution: {integrity: sha512-UZjQOq2bqHyNrWJRuNfemetH+B6B+Dv/ISImeKMFyj/eZF0sZQCpBIyx/j0KEV9gTbItOLbWp97kvj/Ugut3MQ==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
 
   '@nl-design-system-candidate/number-badge-css@1.1.0':
     resolution: {integrity: sha512-y0Xiogm7U+WQ4lCny+SDD2AdMnPYc0fALWNMyzWyE6OHMEDFrKe1P9cnDcuapb6RK0GTUt/O0s8ocSyIOKecFg==}
@@ -12435,6 +12444,12 @@ snapshots:
       react: 19.0.0
 
   '@nl-design-system-candidate/link-css@1.0.0': {}
+
+  '@nl-design-system-candidate/link-react@1.1.0(@babel/runtime@7.26.9)(react@19.0.0)':
+    dependencies:
+      '@babel/runtime': 7.26.9
+      clsx: 2.1.1
+      react: 19.0.0
 
   '@nl-design-system-candidate/number-badge-css@1.1.0': {}
 
