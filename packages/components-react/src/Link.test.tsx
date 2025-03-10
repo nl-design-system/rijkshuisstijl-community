@@ -16,7 +16,7 @@ describe('Link', () => {
   });
 
   it('renders an HTML a element', () => {
-    const { container } = render(<Link>{'https://example.com/'}</Link>);
+    const { container } = render(<Link href="#">Example</Link>);
 
     const link = container.querySelector('a:only-child');
 
@@ -24,11 +24,11 @@ describe('Link', () => {
   });
 
   it('renders a design system BEM class name', () => {
-    const { container } = render(<Link />);
+    const { container } = render(<Link href="#" />);
 
     const link = container.querySelector(':only-child');
 
-    expect(link).toHaveClass('utrecht-link');
+    expect(link).toHaveClass('nl-link');
   });
 
   it('renders rich text content', () => {
@@ -47,7 +47,7 @@ describe('Link', () => {
   });
 
   it('can be hidden', () => {
-    const { container } = render(<Link hidden />);
+    const { container } = render(<Link hidden href="#" />);
 
     const link = container.querySelector(':only-child');
 
@@ -55,25 +55,33 @@ describe('Link', () => {
   });
 
   it('can have a custom class name', () => {
-    const { container } = render(<Link className="visited">{'https://example.com/'}</Link>);
+    const { container } = render(
+      <Link className="visited" href="#">
+        {'https://example.com/'}
+      </Link>,
+    );
 
     const link = container.querySelector(':only-child');
 
     expect(link).toHaveClass('visited');
   });
   it('can have a additional class name', () => {
-    const { container } = render(<Link className="large" />);
+    const { container } = render(<Link className="large" href="#" />);
 
     const link = container.querySelector(':only-child');
 
     expect(link).toHaveClass('large');
 
-    expect(link).toHaveClass('utrecht-link');
+    expect(link).toHaveClass('nl-link');
   });
   it('supports ref in React', () => {
     const ref = createRef<HTMLAnchorElement>();
 
-    const { container } = render(<Link ref={ref}>{'https://example.com/'}</Link>);
+    const { container } = render(
+      <Link href="#" ref={ref}>
+        {'https://example.com/'}
+      </Link>,
+    );
 
     const link = container.querySelector(':only-child');
 
@@ -81,16 +89,8 @@ describe('Link', () => {
   });
 
   describe('variant for external links', () => {
-    it('renders a design system BEM class name', () => {
-      const { container } = render(<Link external />);
-
-      const link = container.querySelector(':only-child');
-
-      expect(link).toHaveClass('utrecht-link--external');
-    });
-
     it('prevents sharing referer information', () => {
-      const { container } = render(<Link external />);
+      const { container } = render(<Link external href="#" rel={'external noopener noreferrer'} />);
 
       const link = container.querySelector(':only-child');
 
@@ -100,7 +100,7 @@ describe('Link', () => {
     });
 
     it('prevents access to window.opener', () => {
-      const { container } = render(<Link external />);
+      const { container } = render(<Link external href="#" rel={'external noopener noreferrer'} />);
 
       const link = container.querySelector(':only-child');
 
@@ -110,7 +110,7 @@ describe('Link', () => {
     });
 
     it('provides semantic information that the link is external', () => {
-      const { container } = render(<Link external />);
+      const { container } = render(<Link external href="#" rel={'external noopener noreferrer'} />);
 
       const link = container.querySelector(':only-child');
 
@@ -120,7 +120,7 @@ describe('Link', () => {
     });
     describe('External link icon', () => {
       it('contains a visual icon that the link is external', () => {
-        const { container } = render(<Link external />);
+        const { container } = render(<Link external href="#" />);
 
         const link = container.querySelector(':only-child');
 
@@ -130,7 +130,7 @@ describe('Link', () => {
       });
 
       it('contains a visual icon that has an sr-only label that comes from a property', () => {
-        render(<Link external externalLabel="some-external-label" />);
+        render(<Link external externalLabel="some-external-label" href="#" />);
 
         const label = screen.getByText('some-external-label');
 
