@@ -77,7 +77,7 @@ export const TwigInformative: StoryObj<typeof meta> = {
     textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
     attributes: new DrupalAttribute(),
   },
-  name: "Informative"
+  name: 'Informative',
 };
 
 export const TwigNegative: StoryObj<typeof meta> = {
@@ -87,7 +87,7 @@ export const TwigNegative: StoryObj<typeof meta> = {
     textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
     attributes: new DrupalAttribute(),
   },
-  name: "Negative"
+  name: 'Negative',
 };
 
 export const TwigPositive: StoryObj<typeof meta> = {
@@ -97,7 +97,7 @@ export const TwigPositive: StoryObj<typeof meta> = {
     textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
     attributes: new DrupalAttribute(),
   },
-  name: "Positive"
+  name: 'Positive',
 };
 
 export const TwigWarning: StoryObj<typeof meta> = {
@@ -107,5 +107,5 @@ export const TwigWarning: StoryObj<typeof meta> = {
     textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
     attributes: new DrupalAttribute(),
   },
-  name: "Warning"
+  name: 'Warning',
 };

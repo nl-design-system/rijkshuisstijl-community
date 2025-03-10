@@ -1,44 +1,40 @@
 {%- set role = 'status' -%}
+{%- set icon = 'info-circle' -%}
+{%- if type == 'error' -%}
+{%- set icon = 'alert-circle' -%}
+{%- endif -%}
+{%- if type == 'ok' -%}
+{%- set icon = 'circle-check' -%}
+{%- endif -%}
+{%- if type == 'warning' -%}
+{%- set icon = 'alert-triangle' -%}
+{%- endif -%}
 {%- if type not 'info' -%}
-  {%- set role = 'alert' -%}
+{%- set role = 'alert' -%}
 {%- endif -%}
 {%- set attributes = attributes.setAttribute('role', role) -%}
 {%- set attributes = attributes.addClass('utrecht-alert__message') -%}
-<div class="utrecht-alert utrecht-alert--info rhc-alert">
+<div class="utrecht-alert utrecht-alert--{{ type }} rhc-alert">
   <div class="utrecht-alert__content">
     <div {{ attributes }}>
       <div class="rhc-alert__icon-container rhc-alert__icon-container--{{ type }}">
-
         {% include '@rhc/Icon.twig' with {
-          icon: 'info-circle'
+          attributes: create_attribute(),
+          icon: icon
         } %}
-
-{#        <span class="utrecht-icon" role="presentation" aria-hidden="true">#}
-{#          <svg#}
-{#            xmlns="http://www.w3.org/2000/svg"#}
-{#            width="24"#}
-{#            height="24"#}
-{#            viewBox="0 0 24 24"#}
-{#            fill="none"#}
-{#            stroke="currentColor"#}
-{#            stroke-width="2"#}
-{#            stroke-linecap="round"#}
-{#            stroke-linejoin="round"#}
-{#            class="tabler-icon tabler-icon-info-circle"#}
-{#          >#}
-{#            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>#}
-{#            <path d="M12 9h.01"></path>#}
-{#            <path d="M11 12h1v4h1"></path>#}
-{#          </svg>#}
-{#        </span>#}
-
       </div>
       <div>
-        <h3 class="nl-heading nl-heading--level-5 rhc-heading">Heading</h3>
-        <p class="nl-paragraph">
-          Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do
-          eiusmod *
-        </p>
+        {% include '@rhc/Heading.twig' with {
+          attributes: create_attribute(),
+          level: 3,
+          appearance: 5,
+          children: heading
+        } %}
+
+        {% include '@rhc/Paragraph.twig' with {
+          attributes: create_attribute(),
+          children: textContent
+        } %}
       </div>
     </div>
   </div>
