@@ -46,7 +46,7 @@ const LinkStory = ({
     href={href}
     className={clsx(
       {
-        'utrecht-link--external': external,
+        'nl-link--external': external,
       },
       className,
     )}
