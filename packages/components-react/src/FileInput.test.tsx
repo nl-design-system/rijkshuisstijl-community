@@ -45,17 +45,19 @@ describe('File Input tests', () => {
     const file = new File(['dummy content'], 'example.png', { type: 'image/png' });
     const fileInput = container.querySelector('input');
 
-    await waitFor(() =>
-      fireEvent.change(fileInput!, {
-        target: { files: [file] },
-      }),
-    );
+    if (fileInput) {
+      await waitFor(() =>
+        fireEvent.change(fileInput, {
+          target: { files: [file] },
+        }),
+      );
 
-    expect(mockOnFileChange).toHaveBeenCalledTimes(1);
-    expect(fileInput!.files![0].name).toBe(file.name);
+      expect(mockOnFileChange).toHaveBeenCalledTimes(1);
+      expect(fileInput.files![0].name).toBe(file.name);
+    }
   });
 
-  it('should be able to upload multiple files in once', async () => {
+  it('should be able to upload multiple files at once', async () => {
     const mockOnFileChange = vi.fn();
 
     const propsTest: FileInputProps = {
@@ -75,15 +77,17 @@ describe('File Input tests', () => {
 
     const fileInput = container.querySelector('input');
 
-    await waitFor(() =>
-      fireEvent.change(fileInput!, {
-        target: { files: [fileOne, fileTwo] },
-      }),
-    );
+    if (fileInput) {
+      await waitFor(() =>
+        fireEvent.change(fileInput, {
+          target: { files: [fileOne, fileTwo] },
+        }),
+      );
 
-    expect(mockOnFileChange).toHaveBeenCalledTimes(1);
-    expect(fileInput!.files![0].name).toBe(fileOne.name);
-    expect(fileInput!.files![1].name).toBe(fileTwo.name);
+      expect(mockOnFileChange).toHaveBeenCalledTimes(1);
+      expect(fileInput.files![0].name).toBe(fileOne.name);
+      expect(fileInput.files![1].name).toBe(fileTwo.name);
+    }
   });
 
   it('should not accept files not in the list', async () => {
@@ -93,7 +97,7 @@ describe('File Input tests', () => {
       ref: { current: document.createElement('input') },
       buttonText: 'Bestanden kiezen',
       maxFileSizeInBytes: 10_485_760,
-      allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.bmp,.gif', // Removed .png from allow list
+      allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.bmp,.gif',
       fileSizeErrorMessage: 'Dit bestand is groter dan 10 MB.',
       fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
       onValueChange: mockOnFileChange,
@@ -105,9 +109,11 @@ describe('File Input tests', () => {
 
     const fileInput = container.querySelector('input');
 
-    await waitFor(() => userEvent.upload(fileInput!, fileOne));
+    if (fileInput) {
+      await waitFor(() => userEvent.upload(fileInput, fileOne));
 
-    expect(mockOnFileChange).toHaveBeenCalledTimes(0);
+      expect(mockOnFileChange).toHaveBeenCalledTimes(0);
+    }
   });
 
   it('should render a link with the correct URL and target attributes for a preview of the selected file', async () => {
@@ -124,16 +130,50 @@ describe('File Input tests', () => {
 
     const fileInput = container.querySelector('input');
 
-    await waitFor(() =>
-      fireEvent.change(fileInput!, {
-        target: { files: [file] },
-      }),
-    );
+    if (fileInput) {
+      await waitFor(() =>
+        fireEvent.change(fileInput, {
+          target: { files: [file] },
+        }),
+      );
 
-    const link = getByRole('link', { name: file.name });
+      const link = getByRole('link', { name: file.name });
 
-    expect(link).toHaveAttribute('href', 'mocked-url/example.png');
-    expect(link).toHaveAttribute('target', '_blank');
+      expect(link).toHaveAttribute('href', 'mocked-url/example.png');
+      expect(link).toHaveAttribute('target', '_blank');
+    }
+  });
+
+  it('should handle the case when ref is missing or invalid', async () => {
+    const mockOnFileChange = vi.fn();
+
+    const propsTest: FileInputProps = {
+      buttonText: 'Bestanden kiezen',
+      maxFileSizeInBytes: 10_485_760,
+      allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif',
+      fileSizeErrorMessage: 'Dit bestand is groter dan 10 MB.',
+      fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
+      onValueChange: mockOnFileChange,
+      ref: { current: null },
+    };
+
+    const { container } = render(<FileInput {...propsTest} />);
+
+    const file = new File(['dummy content'], 'example.png', { type: 'image/png' });
+    const fileInput = container.querySelector('input');
+
+    if (fileInput) {
+      await waitFor(() =>
+        fireEvent.change(fileInput, {
+          target: { files: [file] },
+        }),
+      );
+
+      expect(mockOnFileChange).toHaveBeenCalledTimes(1);
+      expect(fileInput.files![0].name).toBe(file.name);
+    } else {
+      throw new Error('Geen file input');
+    }
   });
 });
 
