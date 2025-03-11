@@ -25,7 +25,7 @@
       </div>
       <div>
         {% include '@rhc/Heading.twig' with {
-          attributes: create_attribute(),
+          attributes: create_attribute({'class':['rhc-heading']}),
           level: 3,
           appearance: 5,
           children: heading

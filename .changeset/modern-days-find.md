@@ -1,5 +1,5 @@
 ---
-'@rijkshuisstijl-community/components-twig': patch
+'@rijkshuisstijl-community/components-twig': minor
 ---
 
 Added "Alert" component in Twig.
