@@ -105,31 +105,13 @@ export const Default: Story = {
     subheading: undefined,
   },
   render: (args) => (
-    <ol>
-      <li>
-        <CardSearch
-          description="Alle Nederlandstalige Statistieken van CBS ontsloten via oData versie 4 CBS CIJFERS OPEN DATA WORDT IN 2025 GRONDIG VERNIEUWD CBS Cijfers Open Data gaat in 2025 grondig op de schop. We stappen over van OData naar SDMX. Tool gebruikers en software ontwikkelaars..."
-          heading="CBS Cijfers Open Data"
-          href={args.href}
-          subheading="Centraal Bureau voor de Statistiek"
-        />
-      </li>
-      <li>
-        <CardSearch
-          description="Met behulp van de CBS Open Data API kun je Articles, Pages, Figures, Events en Flash content van de CBS website ophalen via oData versie 4"
-          heading="CBS Content Open Data"
-          href={args.href}
-          subheading="Centraal Bureau voor de Statistiek"
-        />
-      </li>
-      <li>
-        <CardSearch
-          description="De zoekmachine van het CBS helpt je om artikelen en tabellen te vinden op de website van het CBS."
-          heading="CBS Search Engine"
-          href={args.href}
-          subheading="Centraal Bureau voor de Statistiek"
-        />
-      </li>
-    </ol>
+    <div>
+      <CardSearch
+        description="Alle Nederlandstalige Statistieken van CBS ontsloten via oData versie 4 CBS CIJFERS OPEN DATA WORDT IN 2025 GRONDIG VERNIEUWD CBS Cijfers Open Data gaat in 2025 grondig op de schop. We stappen over van OData naar SDMX. Tool gebruikers en software ontwikkelaars..."
+        heading="CBS Cijfers Open Data"
+        href={args.href}
+        subheading="Centraal Bureau voor de Statistiek"
+      />
+    </div>
   ),
 };
