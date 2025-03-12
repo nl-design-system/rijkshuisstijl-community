@@ -31,12 +31,7 @@ describe('File Input tests', () => {
     const mockOnFileChange = vi.fn();
 
     const propsTest: FileInputProps = {
-      ref: { current: document.createElement('input') },
-      buttonText: 'Bestanden kiezen',
-      maxFileSizeInBytes: 10_485_760,
-      allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif',
-      fileSizeErrorMessage: 'Dit bestand is groter dan 10 MB.',
-      fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
+      ...defaultProps,
       onValueChange: mockOnFileChange,
     };
 
@@ -61,12 +56,7 @@ describe('File Input tests', () => {
     const mockOnFileChange = vi.fn();
 
     const propsTest: FileInputProps = {
-      ref: { current: document.createElement('input') },
-      buttonText: 'Bestanden kiezen',
-      maxFileSizeInBytes: 10_485_760,
-      allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif',
-      fileSizeErrorMessage: 'Dit bestand is groter dan 10 MB.',
-      fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
+      ...defaultProps,
       onValueChange: mockOnFileChange,
     };
 
@@ -94,12 +84,8 @@ describe('File Input tests', () => {
     const mockOnFileChange = vi.fn();
 
     const propsTest: FileInputProps = {
-      ref: { current: document.createElement('input') },
-      buttonText: 'Bestanden kiezen',
-      maxFileSizeInBytes: 10_485_760,
+      ...defaultProps,
       allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.bmp,.gif',
-      fileSizeErrorMessage: 'Dit bestand is groter dan 10 MB.',
-      fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
       onValueChange: mockOnFileChange,
     };
 
@@ -148,11 +134,7 @@ describe('File Input tests', () => {
     const mockOnFileChange = vi.fn();
 
     const propsTest: FileInputProps = {
-      buttonText: 'Bestanden kiezen',
-      maxFileSizeInBytes: 10_485_760,
-      allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif',
-      fileSizeErrorMessage: 'Dit bestand is groter dan 10 MB.',
-      fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
+      ...defaultProps,
       onValueChange: mockOnFileChange,
       ref: { current: null },
     };
