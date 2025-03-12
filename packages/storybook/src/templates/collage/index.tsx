@@ -11,6 +11,11 @@ import {
   FormFieldRadio,
   FormFieldTextarea,
   FormFieldTextInput,
+  FormSummary,
+  FormSummaryActions,
+  FormSummaryItem,
+  FormSummaryKey,
+  FormSummaryValue,
   Heading,
   Icon,
   IconButton,
@@ -167,26 +172,23 @@ export default function Collage() {
                     label="Label"
                     statusId="status-id"
                   />
-                  {/* Will be replaced with <SummaryList/> */}
-                  {/* <DataList>
-                    <DataListItem>
-                      <DataListKey>Key</DataListKey>
-                      <DataListValue>Value</DataListValue>
-                      <DataListActions>
+                  <FormSummary>
+                    <FormSummaryItem>
+                      <FormSummaryKey>Key</FormSummaryKey>
+                      <FormSummaryValue>Value</FormSummaryValue>
+                      <FormSummaryActions>
                         <Link href="#">Label</Link>
-                      </DataListActions>
-                    </DataListItem>
-                    <Separator></Separator>
-                    <DataListItem>
-                      <DataListKey>Key</DataListKey>
-                      <DataListValue>Value</DataListValue>
-                    </DataListItem>
-                    <Separator></Separator>
-                    <DataListItem>
-                      <DataListKey>Key</DataListKey>
-                      <DataListValue>Value</DataListValue>
-                    </DataListItem>
-                  </DataList> */}
+                      </FormSummaryActions>
+                    </FormSummaryItem>
+                    <FormSummaryItem>
+                      <FormSummaryKey>Key</FormSummaryKey>
+                      <FormSummaryValue>Value</FormSummaryValue>
+                    </FormSummaryItem>
+                    <FormSummaryItem>
+                      <FormSummaryKey>Key</FormSummaryKey>
+                      <FormSummaryValue>Value</FormSummaryValue>
+                    </FormSummaryItem>
+                  </FormSummary>
                   <div>
                     Toggletip component:
                     <Toggletip>Hier zou een korte introductie kunnen staan.</Toggletip>

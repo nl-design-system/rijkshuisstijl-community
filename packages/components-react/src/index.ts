@@ -46,18 +46,6 @@ export { CodeInput } from './CodeInput';
 export { CodeInputGroup } from './CodeInputGroup';
 export { ColumnLayout, type ColumnLayoutProps } from './ColumnLayout';
 export { type CustomFormFieldProps, FormField } from './FormField';
-export {
-  DataList,
-  DataListActions,
-  type DataListActionsProps,
-  DataListItem,
-  type DataListItemProps,
-  DataListKey,
-  type DataListKeyProps,
-  type DataListProps,
-  DataListValue,
-  type DataListValueProps,
-} from './DataList';
 export { DotBadge, type DotBadgeProps } from './DotBadge';
 export { Fieldset, FieldsetLegend, type FieldsetLegendProps, type FieldsetProps } from './Fieldset';
 export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from './Figure';
@@ -72,6 +60,18 @@ export { FormFieldRadioGroup, type FormFieldRadioGroupProps } from './FormFieldR
 export { FormFieldSelect, type FormFieldSelectProps, SelectOption, type SelectOptionProps } from './FormFieldSelect';
 export { FormFieldTextInput, type FormFieldTextInputProps } from './FormFieldTextInput';
 export { FormFieldTextarea, type FormFieldTextareaProps } from './FormFieldTextarea';
+export {
+  FormSummary,
+  FormSummaryActions,
+  type FormSummaryActionsProps,
+  FormSummaryItem,
+  type FormSummaryItemProps,
+  FormSummaryKey,
+  type FormSummaryKeyProps,
+  type FormSummaryProps,
+  FormSummaryValue,
+  type FormSummaryValueProps,
+} from './FormSummary';
 export { Heading, type HeadingLevel, type HeadingProps, headingLevels } from './Heading';
 export { HeadingGroup, type HeadingGroupProps } from './HeadingGroup';
 export { Hero, type HeroProps } from './Hero';
