@@ -180,12 +180,10 @@ export default function Collage() {
                         <Link href="#">Label</Link>
                       </FormSummaryActions>
                     </FormSummaryItem>
-                    <Separator></Separator>
                     <FormSummaryItem>
                       <FormSummaryKey>Key</FormSummaryKey>
                       <FormSummaryValue>Value</FormSummaryValue>
                     </FormSummaryItem>
-                    <Separator></Separator>
                     <FormSummaryItem>
                       <FormSummaryKey>Key</FormSummaryKey>
                       <FormSummaryValue>Value</FormSummaryValue>
