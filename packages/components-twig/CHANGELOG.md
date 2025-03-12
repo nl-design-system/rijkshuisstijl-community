@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-twig
 
+## 1.2.0
+
+### Minor Changes
+
+- f08e050: Added "Alert" component in Twig.
+
 ## 1.1.2
 
 ### Patch Changes
