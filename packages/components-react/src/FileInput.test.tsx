@@ -45,16 +45,16 @@ describe('File Input tests', () => {
     const file = new File(['dummy content'], 'example.png', { type: 'image/png' });
     const fileInput = container.querySelector('input');
 
-    if (fileInput) {
-      await waitFor(() =>
-        fireEvent.change(fileInput, {
-          target: { files: [file] },
-        }),
-      );
+    expect(fileInput).not.toBeNull();
 
-      expect(mockOnFileChange).toHaveBeenCalledTimes(1);
-      expect(fileInput.files![0].name).toBe(file.name);
-    }
+    await waitFor(() =>
+      fireEvent.change(fileInput!, {
+        target: { files: [file] },
+      }),
+    );
+
+    expect(mockOnFileChange).toHaveBeenCalledTimes(1);
+    expect(fileInput!.files![0].name).toBe(file.name);
   });
 
   it('should be able to upload multiple files at once', async () => {
@@ -77,17 +77,17 @@ describe('File Input tests', () => {
 
     const fileInput = container.querySelector('input');
 
-    if (fileInput) {
-      await waitFor(() =>
-        fireEvent.change(fileInput, {
-          target: { files: [fileOne, fileTwo] },
-        }),
-      );
+    expect(fileInput).not.toBeNull();
 
-      expect(mockOnFileChange).toHaveBeenCalledTimes(1);
-      expect(fileInput.files![0].name).toBe(fileOne.name);
-      expect(fileInput.files![1].name).toBe(fileTwo.name);
-    }
+    await waitFor(() =>
+      fireEvent.change(fileInput!, {
+        target: { files: [fileOne, fileTwo] },
+      }),
+    );
+
+    expect(mockOnFileChange).toHaveBeenCalledTimes(1);
+    expect(fileInput!.files![0].name).toBe(fileOne.name);
+    expect(fileInput!.files![1].name).toBe(fileTwo.name);
   });
 
   it('should not accept files not in the list', async () => {
@@ -109,11 +109,11 @@ describe('File Input tests', () => {
 
     const fileInput = container.querySelector('input');
 
-    if (fileInput) {
-      await waitFor(() => userEvent.upload(fileInput, fileOne));
+    expect(fileInput).not.toBeNull();
 
-      expect(mockOnFileChange).toHaveBeenCalledTimes(0);
-    }
+    await waitFor(() => userEvent.upload(fileInput!, fileOne));
+
+    expect(mockOnFileChange).toHaveBeenCalledTimes(0);
   });
 
   it('should render a link with the correct URL and target attributes for a preview of the selected file', async () => {
@@ -130,18 +130,18 @@ describe('File Input tests', () => {
 
     const fileInput = container.querySelector('input');
 
-    if (fileInput) {
-      await waitFor(() =>
-        fireEvent.change(fileInput, {
-          target: { files: [file] },
-        }),
-      );
+    expect(fileInput).not.toBeNull();
 
-      const link = getByRole('link', { name: file.name });
+    await waitFor(() =>
+      fireEvent.change(fileInput!, {
+        target: { files: [file] },
+      }),
+    );
 
-      expect(link).toHaveAttribute('href', 'mocked-url/example.png');
-      expect(link).toHaveAttribute('target', '_blank');
-    }
+    const link = getByRole('link', { name: file.name });
+
+    expect(link).toHaveAttribute('href', 'mocked-url/example.png');
+    expect(link).toHaveAttribute('target', '_blank');
   });
 
   it('should handle the case when ref is missing or invalid', async () => {
@@ -162,18 +162,16 @@ describe('File Input tests', () => {
     const file = new File(['dummy content'], 'example.png', { type: 'image/png' });
     const fileInput = container.querySelector('input');
 
-    if (fileInput) {
-      await waitFor(() =>
-        fireEvent.change(fileInput, {
-          target: { files: [file] },
-        }),
-      );
+    expect(fileInput).not.toBeNull();
 
-      expect(mockOnFileChange).toHaveBeenCalledTimes(1);
-      expect(fileInput.files![0].name).toBe(file.name);
-    } else {
-      throw new Error('Geen file input');
-    }
+    await waitFor(() =>
+      fireEvent.change(fileInput!, {
+        target: { files: [file] },
+      }),
+    );
+
+    expect(mockOnFileChange).toHaveBeenCalledTimes(1);
+    expect(fileInput!.files![0].name).toBe(file.name);
   });
 });
 

@@ -79,7 +79,7 @@ const FileInput = forwardRef<HTMLDivElement, PropsWithChildren<FileInputProps>>(
               file={item}
               fileSizeErrorMessage={fileSizeErrorMessage}
               fileTypeErrorMessage={fileTypeErrorMessage}
-              key={item.name} // Using unique file name for key
+              key={item.name}
               maxFileSizeInBytes={maxFileSizeInBytes}
               onDelete={(fileToRemove: File) => setFiles(files.filter((file) => file !== fileToRemove))}
             />
