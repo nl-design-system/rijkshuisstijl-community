@@ -19,7 +19,6 @@ const RoundedCornerComponent = ({
   radiusToken,
 }: {
   size: string;
-  variant: 'border' | 'background' | 'edge';
   borderColor?: string;
   backgroundColor?: string;
   corner: string;
