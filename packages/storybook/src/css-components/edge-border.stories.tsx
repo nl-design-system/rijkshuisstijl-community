@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { CSSProperties, useMemo } from 'react';
 
-const edgeBorderComponent = ({
+const EdgeBorderComponent = ({
   color,
   side,
   borderWidthToken,
@@ -41,7 +41,7 @@ const edgeBorderComponent = ({
 const meta = {
   title: 'CSS Components/Edge Border',
   id: 'rhc-edge-border-css',
-  component: edgeBorderComponent,
+  component: EdgeBorderComponent,
   argTypes: {
     color: {
       name: 'rhc-edge-border--color-{color}',

@@ -3,7 +3,7 @@ import { CSSProperties, useMemo } from 'react';
 import readme from './rounded-border.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
-const roundedCornerComponent = ({
+const RoundedCornerComponent = ({
   size,
   borderColor,
   backgroundColor,
@@ -77,7 +77,7 @@ const roundedCornerComponent = ({
 const meta = {
   title: 'CSS Components/Rounded Corner',
   id: 'rhc-rounded-corner-css',
-  component: roundedCornerComponent,
+  component: RoundedCornerComponent,
   argTypes: {
     borderColor: {
       name: 'rhc-rounded-corner--border-color-{color}',

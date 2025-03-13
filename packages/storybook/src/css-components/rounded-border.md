@@ -1,4 +1,5 @@
 <!-- @license CC0-1.0 -->
+<!-- markdownlint-disable MD033 -->
 
 # Rijkshuisstijl Community rounded border
 
@@ -171,10 +172,11 @@ Er zijn verschillende rounded border utility classes voor verschillende toepassi
 <img
   class="rhc-rounded-corner rhc-rounded-corner--corner-start-start rhc-rounded-corner--no-padding"
   src="example.jpg"
+  ...
 />
 ```
 
-<img class="rhc-rounded-corner rhc-rounded-corner--corner-start-start rhc-rounded-corner--no-padding" src="./placeholder.jpg" width="300" height="100">
+<img class="rhc-rounded-corner rhc-rounded-corner--corner-start-start rhc-rounded-corner--no-padding" src="./placeholder.jpg" width="300" height="100" alt="Veld met bloemen">
 
 ### Een gekleurde border met een afgerond hoekje
 
