@@ -101,153 +101,173 @@ export default function DevOvhAPIoverzicht() {
                   API toevoegen
                 </Button>
               </div>
-
-              <Card
-                className="rhc-templates-card"
-                description="Centraal Bureau voor de Statistiek."
-                heading="CBS Cijfers Open Data"
-                href="#"
-                imageAlt="Placeholder Image"
-                imageSrc="./placeholder.jpg"
-                metadata="Alle Nederlandstailige Statistieken van CBS ontsloten via oData versie 4"
-                title="CBS Cijfers Open Data"
-              >
-                <BadgeList>
-                  <DataBadge className="rhc-templates-databadge">OData</DataBadge>
-                </BadgeList>
-              </Card>
-
-              <Card
-                className="rhc-templates-card"
-                description="Centraal Bureau voor de Statistiek"
-                heading="CBS Content Open Data"
-                href="#"
-                imageAlt="Placeholder Image"
-                imageSrc="./placeholder.jpg"
-                metadata="Met behulp van de CBS Open Data API kun je Articles, Pages, Figures, Events en Flash content van de CBS"
-                title="CBS Content Open Data"
-              >
-                <BadgeList>
-                  <DataBadge className="rhc-templates-databadge">OData</DataBadge>
-                </BadgeList>
-              </Card>
-              <Card
-                className="rhc-templates-card"
-                description="Centraal Bureau voor de Statistiek"
-                heading="CBS Search Engine"
-                href="#"
-                imageAlt="Placeholder Image"
-                imageSrc="./placeholder.jpg"
-                metadata="De zoekmachine van het CBS helpt je om artikelen en tabellen te vinden op de website van het CBS."
-                title="Card Title"
-              >
-                <BadgeList>
-                  <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
-                </BadgeList>
-              </Card>
-              <Card
-                className="rhc-templates-card"
-                description="Centraal Justitieel Incassobureau"
-                heading="VO Rijk (Citizen financial Claims Process)"
-                href="#"
-                imageAlt="Placeholder Image"
-                imageSrc="./placeholder.jpg"
-                metadata="API waarmee burgers een overzicht van hun financiële verplichtingen bij een (overheids) organisatie kunnen opvragen"
-                title="Card Title"
-              >
-                <BadgeList>
-                  <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
-                </BadgeList>
-              </Card>
-              <Card
-                className="rhc-templates-card"
-                description="Uitvoeringsorganisatie Bedrijfsvoering Rijk"
-                heading="CSO Vacature API"
-                href="#"
-                imageAlt="Placeholder Image"
-                imageSrc="./placeholder.jpg"
-                metadata="De functionaliteit van de Vacature-API bestaat uit het tellen, ophalen en filteren van het vacature-aanbod, het ophalen van data met betrekking tot het gebruikte vacatureformaat en het opslaan van nieuwe vacatures van de website WerkenvoorNederland.nl, WerkenbijdeOverheid.nl en Mobiliteitbank.nl"
-                title="Card Title"
-              >
-                <BadgeList>
-                  <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
-                </BadgeList>
-              </Card>
-              <Card
-                className="rhc-templates-card"
-                description="De Nederlandsche Bank"
-                heading="DNB API Services"
-                href="#"
-                imageAlt="Placeholder Image"
-                imageSrc="./placeholder.jpg"
-                metadata="DNB API Services maakt het mogelijk om verschillende APIs van de Nederlandsche Bank te benaderen."
-                title="Card Title"
-              >
-                <BadgeList>
-                  <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
-                </BadgeList>
-              </Card>
-              <Card
-                className="rhc-templates-card"
-                description="Dienst voor het kadaster en de openbare registers"
-                heading="Behandeldienst configuratie beheren"
-                href="#"
-                imageAlt="Placeholder Image"
-                imageSrc="./placeholder.jpg"
-                metadata="Een REST API voor het beheren van de behandeldienstconfiguraties. Hierin kan een bevoegd gezag een activiteit waarvoor zij verantwoordelijk is koppelen aan een behandeldienst."
-                title="Card Title"
-              >
-                <BadgeList>
-                  <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
-                  <DataBadge className="rhc-templates-databadge">dso</DataBadge> {/* ANDERE DATABADGE */}
-                </BadgeList>
-              </Card>
-              <Card
-                className="rhc-templates-card"
-                description="Dienst voor het kadaster en de openbare registers"
-                heading="Catalogus opvargen"
-                href="#"
-                imageAlt="Placeholder Image"
-                imageSrc="./placeholder.jpg"
-                metadata="Met deze REST API kunnen begrippen en definities worden opgevraagd uit de stelselcatalogus."
-                title="Card Title"
-              >
-                <BadgeList>
-                  <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
-                  <DataBadge className="rhc-templates-databadge">dso</DataBadge> {/* ANDERE DATABADGE */}
-                </BadgeList>
-              </Card>
-              <Card
-                className="rhc-templates-card"
-                description="Dienst voor het kadaster en de openbare registers"
-                heading="Geo-validatieservice"
-                href="#"
-                imageAlt="Placeholder Image"
-                imageSrc="./placeholder.jpg"
-                metadata="Met deze REST API kunnen geometrische gegevens (werkingsgebieden of locaties) gevalideerd worden tegen GML 3.2.2 SF2."
-                title="Card Title"
-              >
-                <BadgeList>
-                  <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
-                  <DataBadge className="rhc-templates-databadge">dso</DataBadge> {/* ANDERE DATABADGE */}
-                  <DataBadge className="rhc-templates-databadge">geo</DataBadge> {/* ANDERE DATABADGE */}
-                </BadgeList>
-              </Card>
-              <Card
-                className="rhc-templates-card"
-                description="Dienst voor het kadaster en de openbare registers"
-                heading="Omgevingsdocument downloaden"
-                href="#"
-                imageAlt="Placeholder Image"
-                imageSrc="./placeholder.jpg"
-                metadata="Met deze REST API kan de vigerende regelingversie van een Omgevingsdocument uit het Digitaal Stelsel Omgevingswet (DSO) in een zip bestand worden gedownload met daarin de juridische tekst, de GIO’s en de OW-objecten."
-                title="Card Title"
-              >
-                <BadgeList>
-                  <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
-                  <DataBadge className="rhc-templates-databadge">dso</DataBadge> {/* ANDERE DATABADGE */}
-                </BadgeList>
-              </Card>
+              <ol className="rhc-ordered-list">
+                <li>
+                  <Card
+                    className="rhc-templates-card"
+                    description="Centraal Bureau voor de Statistiek."
+                    heading="CBS Cijfers Open Data"
+                    href="#"
+                    imageAlt="Placeholder Image"
+                    imageSrc="./placeholder.jpg"
+                    metadata="Alle Nederlandstailige Statistieken van CBS ontsloten via oData versie 4"
+                    title="CBS Cijfers Open Data"
+                  >
+                    <BadgeList>
+                      <DataBadge className="rhc-templates-databadge">OData</DataBadge>
+                    </BadgeList>
+                  </Card>
+                </li>
+                <li>
+                  <Card
+                    className="rhc-templates-card"
+                    description="Centraal Bureau voor de Statistiek"
+                    heading="CBS Content Open Data"
+                    href="#"
+                    imageAlt="Placeholder Image"
+                    imageSrc="./placeholder.jpg"
+                    metadata="Met behulp van de CBS Open Data API kun je Articles, Pages, Figures, Events en Flash content van de CBS"
+                    title="CBS Content Open Data"
+                  >
+                    <BadgeList>
+                      <DataBadge className="rhc-templates-databadge">OData</DataBadge>
+                    </BadgeList>
+                  </Card>
+                </li>
+                <li>
+                  <Card
+                    className="rhc-templates-card"
+                    description="Centraal Bureau voor de Statistiek"
+                    heading="CBS Search Engine"
+                    href="#"
+                    imageAlt="Placeholder Image"
+                    imageSrc="./placeholder.jpg"
+                    metadata="De zoekmachine van het CBS helpt je om artikelen en tabellen te vinden op de website van het CBS."
+                    title="Card Title"
+                  >
+                    <BadgeList>
+                      <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+                    </BadgeList>
+                  </Card>
+                </li>
+                <li>
+                  <Card
+                    className="rhc-templates-card"
+                    description="Centraal Justitieel Incassobureau"
+                    heading="VO Rijk (Citizen financial Claims Process)"
+                    href="#"
+                    imageAlt="Placeholder Image"
+                    imageSrc="./placeholder.jpg"
+                    metadata="API waarmee burgers een overzicht van hun financiële verplichtingen bij een (overheids) organisatie kunnen opvragen"
+                    title="Card Title"
+                  >
+                    <BadgeList>
+                      <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+                    </BadgeList>
+                  </Card>
+                </li>
+                <li>
+                  <Card
+                    className="rhc-templates-card"
+                    description="Uitvoeringsorganisatie Bedrijfsvoering Rijk"
+                    heading="CSO Vacature API"
+                    href="#"
+                    imageAlt="Placeholder Image"
+                    imageSrc="./placeholder.jpg"
+                    metadata="De functionaliteit van de Vacature-API bestaat uit het tellen, ophalen en filteren van het vacature-aanbod, het ophalen van data met betrekking tot het gebruikte vacatureformaat en het opslaan van nieuwe vacatures van de website WerkenvoorNederland.nl, WerkenbijdeOverheid.nl en Mobiliteitbank.nl"
+                    title="Card Title"
+                  >
+                    <BadgeList>
+                      <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+                    </BadgeList>
+                  </Card>
+                </li>
+                <li>
+                  <Card
+                    className="rhc-templates-card"
+                    description="De Nederlandsche Bank"
+                    heading="DNB API Services"
+                    href="#"
+                    imageAlt="Placeholder Image"
+                    imageSrc="./placeholder.jpg"
+                    metadata="DNB API Services maakt het mogelijk om verschillende APIs van de Nederlandsche Bank te benaderen."
+                    title="Card Title"
+                  >
+                    <BadgeList>
+                      <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+                    </BadgeList>
+                  </Card>
+                </li>
+                <li>
+                  <Card
+                    className="rhc-templates-card"
+                    description="Dienst voor het kadaster en de openbare registers"
+                    heading="Behandeldienst configuratie beheren"
+                    href="#"
+                    imageAlt="Placeholder Image"
+                    imageSrc="./placeholder.jpg"
+                    metadata="Een REST API voor het beheren van de behandeldienstconfiguraties. Hierin kan een bevoegd gezag een activiteit waarvoor zij verantwoordelijk is koppelen aan een behandeldienst."
+                    title="Card Title"
+                  >
+                    <BadgeList className="rhc-badge-space">
+                      <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+                      <DataBadge className="rhc-templates-databadge">dso</DataBadge> {/* ANDERE DATABADGE */}
+                    </BadgeList>
+                  </Card>
+                </li>
+                <li>
+                  <Card
+                    className="rhc-templates-card"
+                    description="Dienst voor het kadaster en de openbare registers"
+                    heading="Catalogus opvargen"
+                    href="#"
+                    imageAlt="Placeholder Image"
+                    imageSrc="./placeholder.jpg"
+                    metadata="Met deze REST API kunnen begrippen en definities worden opgevraagd uit de stelselcatalogus."
+                    title="Card Title"
+                  >
+                    <BadgeList className="rhc-badge-space">
+                      <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+                      <DataBadge className="rhc-templates-databadge">dso</DataBadge> {/* ANDERE DATABADGE */}
+                    </BadgeList>
+                  </Card>
+                </li>
+                <li>
+                  <Card
+                    className="rhc-templates-card"
+                    description="Dienst voor het kadaster en de openbare registers"
+                    heading="Geo-validatieservice"
+                    href="#"
+                    imageAlt="Placeholder Image"
+                    imageSrc="./placeholder.jpg"
+                    metadata="Met deze REST API kunnen geometrische gegevens (werkingsgebieden of locaties) gevalideerd worden tegen GML 3.2.2 SF2."
+                    title="Card Title"
+                  >
+                    <BadgeList className="rhc-badge-space">
+                      <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+                      <DataBadge className="rhc-templates-databadge">dso</DataBadge> {/* ANDERE DATABADGE */}
+                      <DataBadge className="rhc-templates-databadge">geo</DataBadge> {/* ANDERE DATABADGE */}
+                    </BadgeList>
+                  </Card>
+                </li>
+                <li>
+                  <Card
+                    className="rhc-templates-card"
+                    description="Dienst voor het kadaster en de openbare registers"
+                    heading="Omgevingsdocument downloaden"
+                    href="#"
+                    imageAlt="Placeholder Image"
+                    imageSrc="./placeholder.jpg"
+                    metadata="Met deze REST API kan de vigerende regelingversie van een Omgevingsdocument uit het Digitaal Stelsel Omgevingswet (DSO) in een zip bestand worden gedownload met daarin de juridische tekst, de GIO’s en de OW-objecten."
+                    title="Card Title"
+                  >
+                    <BadgeList className="rhc-badge-space">
+                      <DataBadge className="rhc-templates-databadge">REST/JSON</DataBadge>
+                      <DataBadge className="rhc-templates-databadge">dso</DataBadge> {/* ANDERE DATABADGE */}
+                    </BadgeList>
+                  </Card>
+                </li>
+              </ol>
             </div>
           </section>
         </PageContent>
