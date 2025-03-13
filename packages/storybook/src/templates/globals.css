@@ -162,6 +162,10 @@ h1 {
   position: relative;
 }
 
+.rhc-badge-space {
+  gap: 5px !important;
+}
+
 .rhc-templates-card {
   column-gap: var(--rhc-space-200);
   display: flex;
@@ -184,6 +188,7 @@ h1 {
 .rhc-grid-container__right {
   display: flex;
   flex-direction: column;
+  padding-inline-start: 20px;
 }
 
 .rhc-templates-button {
@@ -200,4 +205,9 @@ h1 {
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+.rhc-ordered-list {
+  list-style-type: none;
+  padding-inline-start: 0;
 }
