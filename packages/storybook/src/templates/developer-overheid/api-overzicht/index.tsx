@@ -68,7 +68,6 @@ export default function DevOvhAPIoverzicht() {
                 <FormFieldCheckboxGroup>
                   <FormFieldCheckboxOption label="Algemeene Zaken (1)"></FormFieldCheckboxOption>
                   <FormFieldCheckboxOption label="Binnenlandse Zaken en Koninkrijksrelaties (5)"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="Binnenlandse Zaken en Koninkrijksrelaties (1)"></FormFieldCheckboxOption>
                   <FormFieldCheckboxOption label="Buitenlandse Zaken (1)"></FormFieldCheckboxOption>
                   <FormFieldCheckboxOption label="Centraal Bureau voor de Statistiek (1)"></FormFieldCheckboxOption>
                   <FormFieldCheckboxOption label="Centraal Justitieel Incassobureau (1)"></FormFieldCheckboxOption>
