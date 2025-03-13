@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/web-components
 
+## 1.1.3
+
+### Patch Changes
+
+- 41ddbbb: Removed unused packages
+
 ## 1.1.2
 
 ### Patch Changes
