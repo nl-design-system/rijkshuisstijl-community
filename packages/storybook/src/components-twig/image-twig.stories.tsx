@@ -28,12 +28,12 @@ export default meta;
 
 export const TwigImage1: StoryObj<typeof meta> = {
   args: {
-    attributes: new DrupalAttribute({
-      width: 763,
-      height: 640,
-      src: './placeholder.jpg',
-      alt: 'Multicolored tulip field',
-    }),
+    attributes: new DrupalAttribute([
+      ['width', 763],
+      ['height', 640],
+      ['src', './placeholder.jpg'],
+      ['alt', 'Multicolored tulip field'],
+    ]),
   },
   name: 'Image 1',
 };
