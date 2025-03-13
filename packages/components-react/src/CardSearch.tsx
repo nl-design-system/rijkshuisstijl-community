@@ -28,7 +28,7 @@ export const CardSearch = ({
   return (
     <div className={clsx('rhc-card-search', 'rhc-card-search--default', className)} ref={ref} {...restProps}>
       <div className="rhc-card-search__content">
-        <div className="rhc-card-search__link ">
+        <div className="rhc-card-search__link">
           <Link aria-label={title} href={href} title={title}>
             <div className="rhc-card-search__heading">{heading}</div>
           </Link>
@@ -36,14 +36,13 @@ export const CardSearch = ({
             <div className="rhc-card-search__subheading">{subheading}</div>
           </Link>
         </div>
-
         <div className="rhc-card-search__description">{description}</div>
         <div className="rhc-card-search__metadata">{metadata}</div>
       </div>
       {children}
-      <div className="rhc-card-search__footer">
-        {/* {button && <div className="rhc-card__button">{button}</div>} */}
-      </div>
+      <div className="rhc-card-search__footer"></div>
+      {/* {button && <div className="rhc-card__button">{button}</div>} */}
+      {/* <Link aria-label={title} href={href} title={title}></Link> */}
     </div>
   );
 };
