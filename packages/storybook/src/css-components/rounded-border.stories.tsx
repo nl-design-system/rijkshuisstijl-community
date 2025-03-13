@@ -1,5 +1,7 @@
 import clsx from 'clsx';
 import { CSSProperties, useMemo } from 'react';
+import readme from './rounded-border.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const roundedCornerComponent = ({
   size,
@@ -7,9 +9,13 @@ const roundedCornerComponent = ({
   backgroundColor,
   corner,
   thickBorder = false,
+  noPadding = false,
   backgroundColorToken,
   borderColorToken,
   borderWidthToken,
+  paddingBlockToken,
+  paddingInlineToken,
+  paddingToken,
   radiusToken,
 }: {
   size: string;
@@ -18,9 +24,13 @@ const roundedCornerComponent = ({
   backgroundColor?: string;
   corner: string;
   thickBorder?: boolean;
+  noPadding?: boolean;
   backgroundColorToken?: string;
   borderColorToken?: string;
   borderWidthToken?: string;
+  paddingBlockToken?: string;
+  paddingInlineToken?: string;
+  paddingToken?: string;
   radiusToken?: string;
 }) => {
   const className = useMemo(() => {
@@ -30,8 +40,21 @@ const roundedCornerComponent = ({
       [`rhc-rounded-corner--border-color-${borderColor}`]: borderColor,
       [`rhc-rounded-corner--background-color-${backgroundColor}`]: backgroundColor,
       'rhc-rounded-corner--thick-border': thickBorder,
+      'rhc-rounded-corner--no-padding': noPadding,
     });
-  }, [size, borderColor, backgroundColor, corner, thickBorder, borderWidthToken, radiusToken]);
+  }, [
+    size,
+    borderColor,
+    backgroundColor,
+    corner,
+    thickBorder,
+    noPadding,
+    borderWidthToken,
+    paddingBlockToken,
+    paddingInlineToken,
+    paddingToken,
+    radiusToken,
+  ]);
 
   return (
     <div
@@ -41,6 +64,9 @@ const roundedCornerComponent = ({
           '--rhc-rounded-corner-background-color': backgroundColorToken,
           '--rhc-rounded-corner-border-color': borderColorToken,
           '--rhc-rounded-corner-border-width': borderWidthToken,
+          '--rhc-rounded-corner-padding-block': paddingBlockToken,
+          '--rhc-rounded-corner-padding-inline': paddingInlineToken,
+          '--rhc-rounded-corner-padding': paddingToken,
           '--rhc-rounded-corner-radius': radiusToken,
         } as CSSProperties
       }
@@ -92,6 +118,13 @@ const meta = {
         category: 'Class names',
       },
     },
+    noPadding: {
+      name: 'rhc-rounded-corner--no-padding',
+      control: 'boolean',
+      table: {
+        category: 'Class names',
+      },
+    },
     backgroundColorToken: {
       name: '--rhc-rounded-corner-background-color',
       control: 'color',
@@ -113,6 +146,27 @@ const meta = {
         category: 'Optional Design Tokens',
       },
     },
+    paddingBlockToken: {
+      name: '--rhc-rounded-corner-padding-block',
+      control: 'text',
+      table: {
+        category: 'Optional Design Tokens',
+      },
+    },
+    paddingInlineToken: {
+      name: '--rhc-rounded-corner-padding-inline',
+      control: 'text',
+      table: {
+        category: 'Optional Design Tokens',
+      },
+    },
+    paddingToken: {
+      name: '--rhc-rounded-corner-padding',
+      control: 'text',
+      table: {
+        category: 'Optional Design Tokens',
+      },
+    },
     radiusToken: {
       name: '--rhc-rounded-corner-radius',
       control: 'text',
@@ -125,6 +179,11 @@ const meta = {
     controls: {
       expanded: true,
     },
+    docs: {
+      description: {
+        component: mergeMarkdown([readme]),
+      },
+    },
     showHtml: true,
   },
   args: {
@@ -132,6 +191,7 @@ const meta = {
     borderColor: 'blue',
     corner: 'start-start',
     thickBorder: false,
+    noPadding: false,
   },
 };
 

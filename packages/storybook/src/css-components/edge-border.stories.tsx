@@ -93,6 +93,12 @@ const meta = {
       expanded: true,
     },
     showHtml: true,
+    docs: {
+      description: {
+        // TODO: add documentation
+        // component: mergeMarkdown([readme]),
+      },
+    },
   },
   args: {
     side: 'inline-start',

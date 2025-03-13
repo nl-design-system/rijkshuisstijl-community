@@ -97,7 +97,7 @@ $rhc-rounded-border-corner-map: (
 
   @include reset-border-width;
 
-  @if $corner-data {
+  @if $rhc-rounded-border-corner-data {
     // Apply border widths to the specified corner
     @each $prop in map.get($rhc-rounded-border-corner-data, "properties") {
       #{$prop}: $width;

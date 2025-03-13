@@ -5,7 +5,7 @@ $rhc-rounded-border-colors: ("blue", "pink") !default;
 .rhc-rounded-corner {
   --_rhc-rounded-corner-border-color: var(--rhc-rounded-corner-border-color);
   --_rhc-rounded-corner-border-width: var(--rhc-rounded-corner-border-width, 0);
-  --_rhc-rounded-corner-radius: var(--rhc-rounded-corner-radius, --rhc-rounded-corner-size-md);
+  --_rhc-rounded-corner-radius: var(--rhc-rounded-corner-radius, var(--rhc-rounded-corner-size-md));
 
   @include mixin.reset-border-radius;
 
@@ -14,6 +14,11 @@ $rhc-rounded-border-colors: ("blue", "pink") !default;
   border-style: var(--_rhc-rounded-corner-border-style);
   padding-block: var(--rhc-rounded-corner-padding-block, var(--rhc-rounded-corner-padding));
   padding-inline: var(--rhc-rounded-corner-padding-inline, var(--rhc-rounded-corner-padding));
+
+  &.rhc-rounded-corner--no-padding {
+    padding-block: 0;
+    padding-inline: 0;
+  }
 
   &.rhc-rounded-corner--size {
     @each $size in ("sm", "md", "lg") {
@@ -24,7 +29,7 @@ $rhc-rounded-border-colors: ("blue", "pink") !default;
   }
 
   &.rhc-rounded-corner--background-color {
-    @each $color in $colors {
+    @each $color in $rhc-rounded-border-colors {
       &-#{$color} {
         --_rhc-rounded-corner-background-color: var(
           --rhc-rounded-corner-color-#{$color},
@@ -40,7 +45,7 @@ $rhc-rounded-border-colors: ("blue", "pink") !default;
         border-#{$corner}-radius: var(--_rhc-rounded-corner-radius);
 
         &.rhc-rounded-corner--border {
-          @each $color in $colors {
+          @each $color in $rhc-rounded-border-colors {
             &,
             &-color-#{$color} {
               &.rhc-rounded-corner--thick-border {
