@@ -34,5 +34,9 @@ Onderstaand staat omschreven hoe je dit component gebruikt in verschillende fram
 ### Twig
 
 ```twig
-{% include '@rhc/heading.twig' %}
+{% include '@rhc/Heading.twig' with {
+  level: 1,
+  appearance: 3,
+  children: 'Lorem ipsum'
+} %}
 ```
