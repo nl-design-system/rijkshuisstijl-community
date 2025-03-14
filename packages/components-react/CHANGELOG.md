@@ -1,5 +1,21 @@
 # @rijkshuisstijl-community/components-react
 
+## 1.0.3
+
+### Patch Changes
+
+- 63ef863: Refactored DataList to Form Summary.
+  De reden is dat NL Design System de component Form Summary noemt ipv DataList en hierbij verwijst naar Utrecht's data-list. RHC blijft dit component gewoon importeren vanuit Utrecht maar vanaf nu export onder de naam Form Summary.
+- 41ddbbb: Removed unused packages
+- 4c2ca4b: Improved checkbox docs by importing the related docs from Utrecht and translating them to Dutch
+
+## 1.0.2
+
+### Patch Changes
+
+- 1dc03fb: Wekelijkse package updates voor Rijkshuisstijl-componenten en design tokens (week 10)
+- b9a4945: Moved implementation documentation from repository README to package README.
+
 ## 1.0.1
 
 ### Patch Changes

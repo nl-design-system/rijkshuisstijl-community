@@ -1,5 +1,18 @@
 # @rijkshuisstijl-community/web-components
 
+## 1.1.3
+
+### Patch Changes
+
+- 41ddbbb: Removed unused packages
+
+## 1.1.2
+
+### Patch Changes
+
+- 1dc03fb: Wekelijkse package updates voor Rijkshuisstijl-componenten en design tokens (week 10)
+- b9a4945: Added implementation documentation to package README.
+
 ## 1.1.1
 
 ### Patch Changes
