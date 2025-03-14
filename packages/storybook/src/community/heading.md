@@ -19,7 +19,11 @@ Dit wijzigt de HTML-tag naar het overeenkomende niveau, bijvoorbeeld: `level` me
 **appearanceLevel (optioneel)**  
 Dit wijzigt geen onderliggend HTML-element, maar verandert wel het uiterlijk. Dit is nog steeds een `<h1>` en wordt zo ook door screenreaders gelezen, maar ziet er visueel uit als een `<h3>`.
 
-## Gebruik React
+## Gebruik
+
+Onderstaand staat omschreven hoe je dit component gebruikt in verschillende frameworks.
+
+### React
 
 ```tsx
 <Heading appearanceLevel={3} level={1}>
@@ -27,7 +31,7 @@ Dit wijzigt geen onderliggend HTML-element, maar verandert wel het uiterlijk. Di
 </Heading>
 ```
 
-## Gebruik Twig
+### Twig
 
 ```twig
 {% include '@rhc/heading.twig' %}

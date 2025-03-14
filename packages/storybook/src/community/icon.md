@@ -4,7 +4,11 @@
 
 Dit component is een wrapper om een SVG element. Door dit component te gebruiken heeft deze constant dezelfde styling en grootte.
 
-## Gebruik React
+## Gebruik
+
+Onderstaand staat omschreven hoe je dit component gebruikt in verschillende frameworks.
+
+### React
 
 Dit component kan op verschillende manieren worden gebruikt. Hieronder staan de verschillende manieren beschreven, beginnend met de makkelijkste manier.
 
@@ -43,7 +47,7 @@ registerIconSet({
 
 ```
 
-## Gebruik Twig
+### Twig
 
 Het Twig icon component kan maar op 1 manier worden gebruikt veregeleken met het [React icon component](?path=/docs/rhc-icon--docs).
 
