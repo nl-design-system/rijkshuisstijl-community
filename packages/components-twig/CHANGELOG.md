@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-twig
 
+## 1.3.0
+
+### Minor Changes
+
+- 9c4303a: Create image component in Twig
+
 ## 1.2.0
 
 ### Minor Changes
