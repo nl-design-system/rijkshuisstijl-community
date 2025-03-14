@@ -10,7 +10,36 @@ const meta = {
   title: 'Twig Components/Image',
   id: 'rhc-twig-image',
   component: TwigImage,
-  argTypes: {},
+  argTypes: {
+    src: {
+      description: 'Image source',
+      control: { type: 'text' },
+      table: {
+        category: 'Property',
+      },
+    },
+    alt: {
+      description: 'Image alt text',
+      control: { type: 'text' },
+      table: {
+        category: 'Property',
+      },
+    },
+    width: {
+      description: 'Image width',
+      control: { type: 'number' },
+      table: {
+        category: 'Property',
+      },
+    },
+    height: {
+      description: 'Image height',
+      control: { type: 'number' },
+      table: {
+        category: 'Property',
+      },
+    },
+  },
   parameters: {
     status: {
       type: 'STABLE',
@@ -28,12 +57,11 @@ export default meta;
 
 export const TwigImage1: StoryObj<typeof meta> = {
   args: {
-    attributes: new DrupalAttribute([
-      ['width', 763],
-      ['height', 640],
-      ['src', './placeholder.jpg'],
-      ['alt', 'Multicolored tulip field'],
-    ]),
+    attributes: new DrupalAttribute(),
+    width: 763,
+    height: 640,
+    src: './placeholder.jpg',
+    alt: 'Multicolored tulip field',
   },
-  name: 'Image 1',
+  name: 'Image',
 };

@@ -1,6 +1,5 @@
-<img {{ attributes.addClass(['utrecht-image', 'utrecht-img--photo']) }}
-  alt="Multicolored tulip field"
-  height="763"
-  width="640"
-  src="./placeholder.jpg"
-/>
+{%- if src is defined -%}{%- set attributes = attributes.setAttribute('src', src) -%}{%- endif -%}
+{%- if alt is defined -%}{%- set attributes = attributes.setAttribute('alt', alt) -%}{%- endif -%}
+{%- if width is defined -%}{%- set attributes = attributes.setAttribute('width', width) -%}{%- endif -%}
+{%- if height is defined -%}{%- set attributes = attributes.setAttribute('height', height) -%}{%- endif -%}
+<img {{ attributes.addClass(['utrecht-image', 'utrecht-img--photo']) }} />
