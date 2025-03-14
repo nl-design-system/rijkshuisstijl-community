@@ -14,10 +14,12 @@
 ### De heading component beschikt over properties `level` en `appearanceLevel`
 
 **level (verplicht)**  
-Dit wijzigt de HTML-tag naar het overeenkomende niveau, bijvoorbeeld: `level={1}` transformeert de HTML naar de `<h1>`-tag, `level={2}` naar `<h2>` enzovoort.
+Dit wijzigt de HTML-tag naar het overeenkomende niveau, bijvoorbeeld: `level` met waarde `1` transformeert de HTML naar de `<h1>`-tag, `level` met waarde `2` naar `<h2>` enzovoort.
 
 **appearanceLevel (optioneel)**  
 Dit wijzigt geen onderliggend HTML-element, maar verandert wel het uiterlijk. Dit is nog steeds een `<h1>` en wordt zo ook door screenreaders gelezen, maar ziet er visueel uit als een `<h3>`.
+
+## Gebruik React
 
 ```tsx
 <Heading appearanceLevel={3} level={1}>
@@ -25,4 +27,8 @@ Dit wijzigt geen onderliggend HTML-element, maar verandert wel het uiterlijk. Di
 </Heading>
 ```
 
----
+## Gebruik Twig
+
+```twig
+{% include '@rhc/heading.twig' %}
+```

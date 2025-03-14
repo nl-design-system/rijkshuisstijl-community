@@ -4,7 +4,7 @@
 
 Dit component is een wrapper om een SVG element. Door dit component te gebruiken heeft deze constant dezelfde styling en grootte.
 
-## Usage
+## Gebruik React
 
 Dit component kan op verschillende manieren worden gebruikt. Hieronder staan de verschillende manieren beschreven, beginnend met de makkelijkste manier.
 
@@ -41,4 +41,14 @@ registerIconSet({
 <Icon icon="nog-een-icon" />
 <Icon icon="en-een-derde-icon" />
 
+```
+
+## Gebruik Twig
+
+Het Twig icon component kan maar op 1 manier worden gebruikt veregeleken met het [React icon component](?path=/docs/rhc-icon--docs).
+
+Standaard is er de optie om een icon property mee te geven met dit component, wat staat voor een van de ondersteunde icon IDs uit de [icon set](?path=/docs/rhc-templates-default-icon-set--docs) van de Rijkshuisstijl Community.
+
+```twig
+{% include '@rhc/icon.twig' %}
 ```
