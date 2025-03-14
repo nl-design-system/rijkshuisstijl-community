@@ -2,6 +2,9 @@
 
 import TwigImage from '@rijkshuisstijl-community/components-twig/src/Image.twig';
 import type { Meta, StoryObj } from '@storybook/react';
+import referenceDocs from '@utrecht/components/img/docs/references.nl.md?raw';
+import htmlDocs from '@utrecht/components/img/docs/technology-html.nl.md?raw';
+import wcagDocs from '@utrecht/components/img/docs/wcag.nl.md?raw';
 import DrupalAttribute from 'drupal-attribute';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../community/image.md?raw';
@@ -40,16 +43,18 @@ const meta = {
       },
     },
   },
+  tags: ['autodocs'],
   parameters: {
     status: {
       type: 'STABLE',
     },
     docs: {
       description: {
-        component: mergeMarkdown([readme]),
+        component: mergeMarkdown([readme, htmlDocs, referenceDocs, wcagDocs]),
       },
     },
-    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, maar de photo property altijd geset, daardoor is hij altijd max-height en max-width 100%.',
   },
 } satisfies Meta<typeof TwigImage>;
 
