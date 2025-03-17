@@ -1126,7 +1126,11 @@
               "borderRadiusTopLeft": "{rhc.rounded-corner.md.border-radius}",
               "borderRadiusTopRight": "0",
               "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "0"
+              "borderRadiusBottomLeft": "0",
+              "borderWidthTop": "1",
+              "borderWidthRight": "0",
+              "borderWidthBottom": "0",
+              "borderWidthLeft": "1"
             },
             "type": "composition"
           },
@@ -1237,7 +1241,11 @@
               "borderRadiusTopLeft": "0",
               "borderRadiusTopRight": "{rhc.rounded-corner.md.border-radius}",
               "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "0"
+              "borderRadiusBottomLeft": "0",
+              "borderWidthTop": "1",
+              "borderWidthRight": "1",
+              "borderWidthBottom": "0",
+              "borderWidthLeft": "0"
             },
             "type": "composition"
           },
@@ -1266,7 +1274,11 @@
               "borderRadiusTopLeft": "0",
               "borderRadiusTopRight": "0",
               "borderRadiusBottomRight": "{rhc.rounded-corner.md.border-radius}",
-              "borderRadiusBottomLeft": "0"
+              "borderRadiusBottomLeft": "0",
+              "borderWidthTop": "0",
+              "borderWidthRight": "1",
+              "borderWidthBottom": "1",
+              "borderWidthLeft": "0"
             },
             "type": "composition"
           },
@@ -1295,7 +1307,11 @@
               "borderRadiusTopLeft": "0",
               "borderRadiusTopRight": "0",
               "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "{rhc.rounded-corner.md.border-radius}"
+              "borderRadiusBottomLeft": "{rhc.rounded-corner.md.border-radius}",
+              "borderWidthTop": "0",
+              "borderWidthBottom": "1",
+              "borderWidthLeft": "1",
+              "borderWidthRight": "0"
             },
             "type": "composition"
           },
@@ -1314,6 +1330,17 @@
               "borderRadiusTopRight": "0",
               "borderRadiusBottomRight": "0",
               "borderRadiusBottomLeft": "{rhc.rounded-corner.xl.border-radius}"
+            },
+            "type": "composition"
+          }
+        }
+      },
+      "color-set": {
+        "lintblauw": {
+          "border": {
+            "value": {
+              "borderColor": "{rhc.color.lintblauw.500}",
+              "fill": "{rhc.color.wit}"
             },
             "type": "composition"
           }
