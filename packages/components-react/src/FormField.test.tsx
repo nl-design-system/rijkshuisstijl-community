@@ -48,7 +48,7 @@ describe('FormField', () => {
   it('renders children elements', () => {
     render(
       <FormField {...defaultProps}>
-        <input data-testid="child-element" />
+        <div data-testid="child-element" />
       </FormField>,
     );
     expect(screen.getByTestId('child-element')).toBeInTheDocument();

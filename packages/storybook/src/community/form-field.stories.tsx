@@ -4,7 +4,6 @@ import {
   FormFieldCheckboxOption,
   FormFieldRadio,
   FormFieldRadioGroup,
-  FormFieldTextInput,
 } from '@rijkshuisstijl-community/components-react';
 import { type Meta, type StoryObj } from '@storybook/react';
 import readme from './form-field.md?raw';
@@ -78,16 +77,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     label: 'Onderwerp',
-    input: <FormFieldTextInput label={undefined} />,
-    statusId: 'status',
-    errorMessageId: 'error',
-    descriptionId: 'description',
-  },
-};
-
-export const WithCheckboxGroup: Story = {
-  args: {
-    label: 'Onderwerp',
     description: 'Beschrijving van het onderwerp',
     input: (
       <FormFieldCheckboxGroup>
@@ -122,11 +111,17 @@ export const WithRadioGroup: Story = {
 export const Invalid: Story = {
   args: {
     label: 'Onderwerp',
-    input: <FormFieldTextInput label={undefined} />,
+    input: (
+      <FormFieldRadioGroup>
+        <FormFieldRadio label="Option 1" name="radio-demo" value="option1" />
+        <FormFieldRadio label="Option 2" name="radio-demo" value="option2" />
+        <FormFieldRadio label="Option 3" name="radio-demo" value="option3" />
+      </FormFieldRadioGroup>
+    ),
     statusId: 'status',
     errorMessageId: 'error',
+    descriptionId: 'description',
     errorMessage: 'Dit is een foutmelding',
     invalid: true,
-    descriptionId: 'description',
   },
 };
