@@ -1099,37 +1099,55 @@
       }
     }
   },
-  "common/keep": {
+  "common/rounded-corner": {
     "rhc": {
-      "keep": {
-        "size": {
-          "xs": {
-            "border-radius": {
-              "value": "{rhc.size.half-lint}",
-              "type": "borderRadius"
-            }
-          },
-          "md": {
-            "border-radius": {
-              "value": "{rhc.size.lint}",
-              "type": "borderRadius"
-            }
-          },
-          "xl": {
-            "border-radius": {
-              "value": "{rhc.size.2-lint}",
-              "type": "borderRadius"
-            }
+      "rounded-corner": {
+        "xs": {
+          "border-radius": {
+            "value": "{rhc.size.half-lint}",
+            "type": "borderRadius"
           }
         },
-        "topleft": {
-          "value": {
-            "borderRadiusTopLeft": "{rhc.keep.size.md.border-radius}",
-            "borderRadiusTopRight": "0",
-            "borderRadiusBottomRight": "0",
-            "borderRadiusBottomLeft": "0"
+        "md": {
+          "border-radius": {
+            "value": "{rhc.size.lint}",
+            "type": "borderRadius"
+          }
+        },
+        "xl": {
+          "border-radius": {
+            "value": "{rhc.size.2-lint}",
+            "type": "borderRadius"
+          }
+        },
+        "top-left": {
+          "md": {
+            "value": {
+              "borderRadiusTopLeft": "{rhc.rounded-corner.md.border-radius}",
+              "borderRadiusTopRight": "0",
+              "borderRadiusBottomRight": "0",
+              "borderRadiusBottomLeft": "0"
+            },
+            "type": "composition"
           },
-          "type": "composition"
+          "xs": {
+            "value": {
+              "borderRadiusTopLeft": "{rhc.rounded-corner.xs.border-radius}",
+              "borderRadiusTopRight": "0",
+              "borderRadiusBottomRight": "0",
+              "borderRadiusBottomLeft": "0"
+            },
+            "type": "composition"
+          },
+          "xl": {
+            "value": {
+              "borderRadiusTopLeft": "{rhc.rounded-corner.xl.border-radius}",
+              "borderRadiusTopRight": "0",
+              "borderRadiusBottomRight": "0",
+              "borderRadiusBottomLeft": "0"
+            },
+            "type": "composition"
+          }
         },
         "position": {
           "top-left": {
@@ -1212,6 +1230,93 @@
         "border-color": {
           "value": "{rhc.color.primary.500}",
           "type": "color"
+        },
+        "top-right": {
+          "md": {
+            "value": {
+              "borderRadiusTopLeft": "0",
+              "borderRadiusTopRight": "{rhc.rounded-corner.md.border-radius}",
+              "borderRadiusBottomRight": "0",
+              "borderRadiusBottomLeft": "0"
+            },
+            "type": "composition"
+          },
+          "xs": {
+            "value": {
+              "borderRadiusTopLeft": "0",
+              "borderRadiusTopRight": "{rhc.rounded-corner.xs.border-radius}",
+              "borderRadiusBottomRight": "0",
+              "borderRadiusBottomLeft": "0"
+            },
+            "type": "composition"
+          },
+          "xl": {
+            "value": {
+              "borderRadiusTopLeft": "0",
+              "borderRadiusTopRight": "{rhc.rounded-corner.xl.border-radius}",
+              "borderRadiusBottomRight": "0",
+              "borderRadiusBottomLeft": "0"
+            },
+            "type": "composition"
+          }
+        },
+        "bottom-right": {
+          "md": {
+            "value": {
+              "borderRadiusTopLeft": "0",
+              "borderRadiusTopRight": "0",
+              "borderRadiusBottomRight": "{rhc.rounded-corner.md.border-radius}",
+              "borderRadiusBottomLeft": "0"
+            },
+            "type": "composition"
+          },
+          "xs": {
+            "value": {
+              "borderRadiusTopLeft": "0",
+              "borderRadiusTopRight": "0",
+              "borderRadiusBottomRight": "{rhc.rounded-corner.xs.border-radius}",
+              "borderRadiusBottomLeft": "0"
+            },
+            "type": "composition"
+          },
+          "xl": {
+            "value": {
+              "borderRadiusTopLeft": "0",
+              "borderRadiusTopRight": "0",
+              "borderRadiusBottomRight": "{rhc.rounded-corner.xl.border-radius}",
+              "borderRadiusBottomLeft": "0"
+            },
+            "type": "composition"
+          }
+        },
+        "bottom-left": {
+          "md": {
+            "value": {
+              "borderRadiusTopLeft": "0",
+              "borderRadiusTopRight": "0",
+              "borderRadiusBottomRight": "0",
+              "borderRadiusBottomLeft": "{rhc.rounded-corner.md.border-radius}"
+            },
+            "type": "composition"
+          },
+          "xs": {
+            "value": {
+              "borderRadiusTopLeft": "0",
+              "borderRadiusTopRight": "0",
+              "borderRadiusBottomRight": "0",
+              "borderRadiusBottomLeft": "{rhc.rounded-corner.xs.border-radius}"
+            },
+            "type": "composition"
+          },
+          "xl": {
+            "value": {
+              "borderRadiusTopLeft": "0",
+              "borderRadiusTopRight": "0",
+              "borderRadiusBottomRight": "0",
+              "borderRadiusBottomLeft": "{rhc.rounded-corner.xl.border-radius}"
+            },
+            "type": "composition"
+          }
         }
       }
     }
@@ -7286,7 +7391,6 @@
         "common/font": "enabled",
         "common/focus": "enabled",
         "common/border": "enabled",
-        "common/keep": "enabled",
         "utrecht/focus": "enabled",
         "utrecht/pointer-target": "enabled",
         "utrecht/rich-text": "enabled",
@@ -7351,7 +7455,8 @@
         "components/unordered-list": "enabled",
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "common/rounded-corner": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -7371,7 +7476,6 @@
         "common/font": "enabled",
         "common/focus": "enabled",
         "common/border": "enabled",
-        "common/keep": "enabled",
         "utrecht/focus": "enabled",
         "utrecht/pointer-target": "enabled",
         "utrecht/rich-text": "enabled",
@@ -7437,7 +7541,8 @@
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "common/rounded-corner": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -7457,7 +7562,6 @@
         "common/font": "enabled",
         "common/focus": "enabled",
         "common/border": "enabled",
-        "common/keep": "enabled",
         "utrecht/focus": "enabled",
         "utrecht/pointer-target": "enabled",
         "utrecht/rich-text": "enabled",
@@ -7524,7 +7628,8 @@
         "components/sub-nav-bar": "enabled",
         "overwrites/oude rijkshuisstijl/border": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "common/rounded-corner": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -7544,7 +7649,6 @@
         "common/font": "enabled",
         "common/focus": "enabled",
         "common/border": "enabled",
-        "common/keep": "enabled",
         "utrecht/focus": "enabled",
         "utrecht/pointer-target": "enabled",
         "utrecht/rich-text": "enabled",
@@ -7612,7 +7716,8 @@
         "overwrites/focus/background": "enabled",
         "overwrites/focus/outline-color": "enabled",
         "overwrites/primaire kleur/mintgroen": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "common/rounded-corner": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -7630,7 +7735,7 @@
       "common/font",
       "common/focus",
       "common/border",
-      "common/keep",
+      "common/rounded-corner",
       "utrecht/focus",
       "utrecht/pointer-target",
       "utrecht/rich-text",
