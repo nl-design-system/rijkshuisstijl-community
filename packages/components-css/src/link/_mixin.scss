@@ -30,12 +30,16 @@
 
 @mixin rhc-link--active {
   --nl-link-text-decoration: var(--nl-link-active-text-decoration, inherit);
+  --nl-link-text-decoration-line: var(--nl-link-active-text-decoration, inherit);
 }
 
 @mixin rhc-link--focus-visible {
+  --nl-link-text-decoration-line: var(--nl-link-focus-text-decoration, inherit);
+
   z-index: var(--utrecht-stack-focus-z-index, 1);
 }
 
 @mixin rhc-link--focus {
+  --nl-link-text-decoration-line: var(--nl-link-focus-text-decoration, inherit);
   --_nl-link-state-text-decoration: none;
 }
