@@ -61,8 +61,11 @@ const meta = {
       },
     },
     // TODO: add GitHub issue and NL DesignSystem links
+    nldesignsystem: 'https://nldesignsystem.nl/checkbox-group',
     figma:
-      '(https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=958-1925&node-type=canvas&t=HiNKOQhf1hQtLZrr-0',
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=954-2226&p=f&t=W7gmQ0rB1py9AmaO-0',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/CheckboxGroup.tsx',
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof FormFieldCheckboxGroup>;
