@@ -5,10 +5,10 @@
 
 .utrecht-link-list__link {
   --utrecht-link-icon-inset-block-start: var(--utrecht-link-list-icon-inset-block-start, inherit);
-  --utrecht-link-column-gap: var(--utrecht-link-list-item-column-gap, inherit);
   --utrecht-link-text-decoration: var(--rhc-link-list-text-decoration);
 
   align-items: flex-start;
+  column-gap: var(--utrecht-link-list-item-column-gap, inherit);
 }
 
 .utrecht-link-list__item {
