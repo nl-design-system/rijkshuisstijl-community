@@ -12,14 +12,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "/ng-package.json"
+            "project": "./ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "/tsconfig.lib.prod.json"
+              "tsConfig": "./tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "/tsconfig.lib.json"
+              "tsConfig": "./tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
