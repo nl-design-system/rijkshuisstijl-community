@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/components-css
 
+## 1.0.3
+
+### Patch Changes
+
+- 90f6b1d: Dependency updates (week 11)
+- 145d80d: The Link React component has been imported from the Candidate repository, upgrading its status from 'community' to 'candidate'.
+
 ## 1.0.2
 
 ### Patch Changes
