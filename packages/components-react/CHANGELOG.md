@@ -1,5 +1,14 @@
 # @rijkshuisstijl-community/components-react
 
+## 1.0.4
+
+### Patch Changes
+
+- 90f6b1d: Dependency updates (week 11)
+- e4b0c15: Fixed image no longer being optional in default card variant and fixed wrong heading and metadata colors
+- 76554a8: Added FormField Unit Tests
+- 145d80d: The Link React component has been imported from the Candidate repository, upgrading its status from 'community' to 'candidate'.
+
 ## 1.0.3
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 1.1.0
+
+### Minor Changes
+
+- e533251: Split up NL and Utrecht components into separate component properties for easier toggling in Token Studio
+
+### Patch Changes
+
+- 5925dd1: Added fallback so that the design tokens are usable with Utrecht based components
+
 ## 1.0.1
 
 ### Patch Changes
