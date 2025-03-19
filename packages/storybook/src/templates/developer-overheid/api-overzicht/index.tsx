@@ -6,10 +6,12 @@ import {
   BreadcrumbNavSeparator,
   Button,
   Card,
+  Fieldset,
   FieldsetLegend,
   Footer,
   FormFieldCheckboxGroup,
   FormFieldCheckboxOption,
+  FormFieldTextarea,
   Heading,
   HeadingGroup,
   Icon,
@@ -17,12 +19,10 @@ import {
   LinkListLink,
   PageContent,
   Paragraph,
-  Textarea,
 } from '@rijkshuisstijl-community/components-react';
 import { IconArrowDown, IconPlus } from '@tabler/icons-react';
 import { BadgeList, DataBadge } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
-// import { UtrechtButtonGroup } from '@utrecht/web-component-library-react';
 
 export default function DevOvhAPIoverzicht() {
   return (
@@ -47,48 +47,57 @@ export default function DevOvhAPIoverzicht() {
           <HeadingGroup>
             <Heading level={1}>Zoek APIs</Heading>
             <Paragraph>Overzicht van open APIs van Nederlandse overheidsorganisatie</Paragraph>
-            <Paragraph>Vind APIs</Paragraph>
           </HeadingGroup>
-          <Textarea aria-label="textarea-label" name="subject" placeholder="Voer een zoekterm in"></Textarea>
+
+          <FormFieldTextarea
+            className="rhc-textarea-spacing"
+            description="Voer een zoekterm in"
+            label="Vind APIs"
+            name="Zoek APIs"
+          ></FormFieldTextarea>
 
           <section className="rhc-container">
-            <div className="rhc-grid-container__left">
-              <aside>
-                <FieldsetLegend>API type</FieldsetLegend>
-                <FormFieldCheckboxGroup>
-                  <FormFieldCheckboxOption label="GraphQL (1)"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="OData (4)"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="REST/JSON (87)"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="REST/XML (19)"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="Onbekend (4)"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="WFS (3)"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="WMS (1)"></FormFieldCheckboxOption>
-                </FormFieldCheckboxGroup>
-                <FieldsetLegend>Organisatie</FieldsetLegend>
-                <FormFieldCheckboxGroup>
-                  <FormFieldCheckboxOption label="Algemeene Zaken (1)"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="Binnenlandse Zaken en Koninkrijksrelaties (5)"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="Buitenlandse Zaken (1)"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="Centraal Bureau voor de Statistiek (1)"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="Centraal Justitieel Incassobureau (1)"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="Coöperatie Servicehuis Parkeer en Verblijfsrechten UA (1)"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="Dienst voor het kadaster en de openbare registers (1)"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="Gemeente Amsterdam (1)"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="Gemeente Eindhover (1)"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="Gemeente Enschede (1)"></FormFieldCheckboxOption>
-                </FormFieldCheckboxGroup>
+            <form>
+              <div className="rhc-grid-container__left">
+                <aside>
+                  <Fieldset>
+                    <FieldsetLegend>API type</FieldsetLegend>
+                    <FormFieldCheckboxGroup>
+                      <FormFieldCheckboxOption label="GraphQL (1)"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="OData (4)"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="REST/JSON (87)"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="REST/XML (19)"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="Onbekend (4)"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="WFS (3)"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="WMS (1)"></FormFieldCheckboxOption>
+                    </FormFieldCheckboxGroup>
+                    <FieldsetLegend>Organisatie</FieldsetLegend>
+                    <FormFieldCheckboxGroup>
+                      <FormFieldCheckboxOption label="Algemeene Zaken (1)"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="Binnenlandse Zaken en Koninkrijksrelaties (5)"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="Buitenlandse Zaken (1)"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="Centraal Bureau voor de Statistiek (1)"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="Centraal Justitieel Incassobureau (1)"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="Coöperatie Servicehuis Parkeer en Verblijfsrechten UA (1)"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="Dienst voor het kadaster en de openbare registers (1)"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="Gemeente Amsterdam (1)"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="Gemeente Eindhover (1)"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="Gemeente Enschede (1)"></FormFieldCheckboxOption>
+                    </FormFieldCheckboxGroup>
+                  </Fieldset>
 
-                <ActionGroup className="rhc-templates-button">
-                  <Button appearance="primary-action-button">
-                    Meer opties
-                    <Icon>
-                      <IconArrowDown />
-                    </Icon>
-                  </Button>
-                  <Button>Filter</Button>
-                </ActionGroup>
-              </aside>
-            </div>
+                  <ActionGroup className="rhc-templates-button">
+                    <Button appearance="primary-action-button">
+                      Meer opties
+                      <Icon>
+                        <IconArrowDown />
+                      </Icon>
+                    </Button>
+                    <Button type="submit">Filter</Button>
+                  </ActionGroup>
+                </aside>
+              </div>
+            </form>
 
             <div className="rhc-grid-container__right">
               <div className="rhc-api-toevoegen">
