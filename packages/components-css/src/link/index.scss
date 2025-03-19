@@ -4,41 +4,42 @@
  */
 @use "../button/mixin" as button-mixin;
 @use "mixin";
+@use "../../node_modules/@nl-design-system-candidate/link-css/dist/link.css";
 
-.utrecht-rich-text .utrecht-link {
-  margin-block-end: var(--utrecht-link-margin-block-end);
+.utrecht-rich-text .nl-link {
+  margin-block-end: var(--nl-link-margin-block-end);
 }
 
-.utrecht-link:any-link {
+.nl-link:any-link {
   @include mixin.rhc-link--any-link;
 }
 
-.utrecht-link:any-link .utrecht-icon {
+.nl-link:any-link .utrecht-icon {
   @include mixin.rhc-link--icon;
 }
 
-.utrecht-link:visited,
-.utrecht-link--visted {
+.nl-link:visited,
+.nl-link--visted {
   @include mixin.rhc-link--visited;
 }
 
-.utrecht-link:visited .utrecht-icon {
+.nl-link:visited .nl-icon {
   @include mixin.rhc-link--visited-icon;
 }
 
-.utrecht-link:active,
-.utrecht-link--active {
+.nl-link:active,
+.nl-link--active {
   @include mixin.rhc-link--active;
 }
 
-.utrecht-link:focus-visible,
-.utrecht-link--focus-visible,
-.utrecht-link:focus,
-.utrecht-link--focus {
+.nl-link:focus-visible,
+.nl-link--focus-visible,
+.nl-link:focus,
+.nl-link--focus {
   @include mixin.rhc-link--focus-visible;
   @include mixin.rhc-link--focus;
 }
 
-.utrecht-link .rhc-link__sr-only {
+.nl-link .rhc-link__sr-only {
   @include button-mixin.invisible-but-accessible;
 }

@@ -184,7 +184,7 @@ export const FocusVisible: Story = {
   args: {
     href: '#',
     children: 'Label',
-    className: 'utrecht-link--focus-visible',
+    className: 'utrecht-link--focus-visible nl-link--focus-visible',
   },
 };
 

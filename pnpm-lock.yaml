@@ -107,7 +107,7 @@ importers:
     dependencies:
       next:
         specifier: 15.2.0
-        version: 15.2.0(@playwright/test@1.50.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.85.1)
+        version: 15.2.0(@babel/core@7.26.9)(@playwright/test@1.50.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.85.1)
       react:
         specifier: 19.0.0
         version: 19.0.0
@@ -166,6 +166,9 @@ importers:
       '@nl-design-system-candidate/heading-css':
         specifier: 1.0.0
         version: 1.0.0
+      '@nl-design-system-candidate/link-css':
+        specifier: 1.0.0
+        version: 1.0.0
       '@nl-design-system-candidate/number-badge-css':
         specifier: 1.1.0
         version: 1.1.0
@@ -188,6 +191,9 @@ importers:
 
   packages/components-react:
     dependencies:
+      '@nl-design-system-candidate/link-react':
+        specifier: 1.1.0
+        version: 1.1.0(@babel/runtime@7.26.9)(react@19.0.0)
       '@nl-design-system-candidate/skip-link-react':
         specifier: 1.0.0
         version: 1.0.0(@babel/runtime@7.26.9)(react@19.0.0)
@@ -2210,6 +2216,15 @@ packages:
 
   '@nl-design-system-candidate/heading-react@1.0.0':
     resolution: {integrity: sha512-tJ6JGokl7AY7tEZ0vYDhIUCAzL1Sz7TapTLJ/DOfAb4koVY5IUdbnNjII0OJn6a4fQON8m/Ngly2ezErG0ojsQ==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18
+
+  '@nl-design-system-candidate/link-css@1.0.0':
+    resolution: {integrity: sha512-D0QK1cNRK39XHss4UNxQJiJ3+XHxACS3+khOc9SRYp7KR/t5+E6l+oncM2+ATBmE6fcS7dl+q0FSw9g1lH/VbA==}
+
+  '@nl-design-system-candidate/link-react@1.1.0':
+    resolution: {integrity: sha512-UZjQOq2bqHyNrWJRuNfemetH+B6B+Dv/ISImeKMFyj/eZF0sZQCpBIyx/j0KEV9gTbItOLbWp97kvj/Ugut3MQ==}
     peerDependencies:
       '@babel/runtime': ^7
       react: ^18
@@ -12428,6 +12443,14 @@ snapshots:
       clsx: 2.1.1
       react: 19.0.0
 
+  '@nl-design-system-candidate/link-css@1.0.0': {}
+
+  '@nl-design-system-candidate/link-react@1.1.0(@babel/runtime@7.26.9)(react@19.0.0)':
+    dependencies:
+      '@babel/runtime': 7.26.9
+      clsx: 2.1.1
+      react: 19.0.0
+
   '@nl-design-system-candidate/number-badge-css@1.1.0': {}
 
   '@nl-design-system-candidate/number-badge-react@1.1.0(@babel/runtime@7.26.9)(react@19.0.0)':
@@ -19355,7 +19378,7 @@ snapshots:
     dependencies:
       type-fest: 2.19.0
 
-  next@15.2.0(@playwright/test@1.50.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.85.1):
+  next@15.2.0(@babel/core@7.26.9)(@playwright/test@1.50.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.85.1):
     dependencies:
       '@next/env': 15.2.0
       '@swc/counter': 0.1.3
