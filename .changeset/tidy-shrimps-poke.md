@@ -3,4 +3,4 @@
 '@rijkshuisstijl-community/components-css': patch
 ---
 
-Updated Link to Candidate
+The Link React component has been imported from the Candidate repository, upgrading its status from 'community' to 'candidate'.
