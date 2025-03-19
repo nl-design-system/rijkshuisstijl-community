@@ -29,6 +29,7 @@ describe('Card', () => {
         'Example Title',
       );
     });
+
     describe('optional properties', () => {
       describe('imageSrc', () => {
         it('renders an image if imageSrc is provided', () => {

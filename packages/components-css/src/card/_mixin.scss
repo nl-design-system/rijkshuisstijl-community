@@ -18,10 +18,11 @@
   border-color: var(--rhc-card-as-link-border-color, #cbd5e1);
   border-style: solid;
   border-width: var(--rhc-card-as-link-border-width, 1px);
-  color: var(--rhc-card-as-link-color, #154273);
+  color: var(--rhc-card-as-link-color, #0f172a);
 }
 
 @mixin rhc-card--full-bleed {
+  --rhc-card-as-link-heading-color: var(--rhc-card-as-link-full-bleed-color, white);
   --rhc-card-as-link-metadata-color: var(
     --rhc-card-as-link-full-bleed-metadata-color,
     var(--rhc-card-as-link-full-bleed-color, white)
@@ -31,6 +32,9 @@
 }
 
 @mixin rhc-card--horizontal {
+  --rhc-card-as-link-heading-color: var(--rhc-card-as-link-horizontal-color, white);
+
+  color: var(--rhc-card-as-link-horizontal-color, white);
   flex-direction: row;
   gap: 0;
   max-block-size: var(--rhc-card-as-link-horizontal-max-block-size);
@@ -120,6 +124,7 @@
 
 @mixin rhc-card__heading {
   align-items: center;
+  color: var(--rhc-card-as-link-heading-color, #154273);
   display: flex;
   font-size: var(--rhc-card-as-link-heading-font-size, 24px);
   font-weight: var(--rhc-card-as-link-heading-font-weight, 700);
