@@ -2138,7 +2138,7 @@
           "type": "fontFamilies"
         },
         "font-size": {
-          "value": "{rhc.font-size.paragraph.default}",
+          "value": "16px",
           "type": "fontSizes"
         },
         "font-weight": {
@@ -2266,7 +2266,7 @@
               "type": "color"
             },
             "border-color": {
-              "value": "{rhc.color.primary.200}",
+              "value": "{rhc.color.none}",
               "type": "color"
             },
             "color": {
@@ -2327,11 +2327,11 @@
         "secondary-action": {
           "hover": {
             "background-color": {
-              "value": "{rhc.color.primary.100}",
+              "value": "{rhc.color.cool-grey.200}",
               "type": "color"
             },
             "border-color": {
-              "value": "{rhc.color.none}",
+              "value": "{rhc.color.primary.500}",
               "type": "color"
             },
             "color": {
@@ -2357,7 +2357,7 @@
               "type": "color"
             },
             "border-color": {
-              "value": "{rhc.color.primary.300}",
+              "value": "{rhc.color.primary.200}",
               "type": "color"
             },
             "color": {
@@ -2367,7 +2367,7 @@
           },
           "focus": {
             "background-color": {
-              "value": "{rhc.color.primary.100}",
+              "value": "{rhc.color.cool-grey.200}",
               "type": "color"
             },
             "border-color": {
@@ -7727,6 +7727,51 @@
       }
     }
   },
+  "overwrites/primaire kleur/oranje": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "value": "{rhc.color.oranje.50}",
+            "type": "color"
+          },
+          "100": {
+            "value": "{rhc.color.oranje.100}",
+            "type": "color"
+          },
+          "200": {
+            "value": "{rhc.color.oranje.200}",
+            "type": "color"
+          },
+          "300": {
+            "value": "{rhc.color.oranje.300}",
+            "type": "color"
+          },
+          "400": {
+            "value": "{rhc.color.oranje.400}",
+            "type": "color"
+          },
+          "500": {
+            "value": "{rhc.color.oranje.500}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{rhc.color.primary.500}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "darken",
+                  "value": "0.3",
+                  "space": "lch"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "$themes": [
     {
       "id": "05865788a086eeac7ffc4514736ccd777f1ff95c",
@@ -7813,7 +7858,8 @@
         "components/unordered-list": "enabled",
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "overwrites/primaire kleur/oranje": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -7904,7 +7950,8 @@
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "overwrites/primaire kleur/oranje": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -7996,7 +8043,8 @@
         "components/sub-nav-bar": "enabled",
         "overwrites/oude rijkshuisstijl/border": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "overwrites/primaire kleur/oranje": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8089,7 +8137,8 @@
         "overwrites/focus/background": "enabled",
         "overwrites/focus/outline-color": "enabled",
         "overwrites/primaire kleur/mintgroen": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "overwrites/primaire kleur/oranje": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8182,7 +8231,8 @@
       "overwrites/focus/outline-color",
       "overwrites/oude rijkshuisstijl/border",
       "overwrites/primaire kleur/mintgroen",
-      "overwrites/primaire kleur/violet"
+      "overwrites/primaire kleur/violet",
+      "overwrites/primaire kleur/oranje"
     ]
   }
 }
