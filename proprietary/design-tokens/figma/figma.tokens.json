@@ -2322,6 +2322,29 @@
           "line-height": {
             "value": "1.875rem",
             "type": "lineHeights"
+          },
+          "pressed": {
+            "background-color": {
+              "value": "{rhc.color.primary.500}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "0.4",
+                    "space": "lch"
+                  }
+                }
+              }
+            },
+            "border-color": {
+              "value": "transparent",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.wit}",
+              "type": "color"
+            }
           }
         },
         "secondary-action": {
@@ -2404,6 +2427,20 @@
           "line-height": {
             "value": "1.875rem",
             "type": "lineHeights"
+          },
+          "pressed": {
+            "background-color": {
+              "value": "{rhc.color.cool-grey.300}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "transparent",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.primary.500}",
+              "type": "color"
+            }
           }
         },
         "subtle": {
@@ -2457,7 +2494,7 @@
           },
           "focus": {
             "background-color": {
-              "value": "{rhc.color.primary.50}",
+              "value": "{rhc.color.none}",
               "type": "color"
             },
             "border-color": {
@@ -2465,7 +2502,7 @@
               "type": "color"
             },
             "color": {
-              "value": "{rhc.color.primary.500}",
+              "value": "{rhc.color.primary.hover}",
               "type": "color"
             }
           },
@@ -2495,6 +2532,43 @@
           "line-height": {
             "value": "1.875rem",
             "type": "lineHeights"
+          },
+          "pressed": {
+            "background-color": {
+              "value": "{rhc.color.none}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "transparent",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.primary.500}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "0.4",
+                    "space": "lch"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "pressed": {
+          "background-color": {
+            "value": "{rhc.color.donkergeel.200}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "color": {
+            "value": "{rhc.color.cool-grey.800}",
+            "type": "color"
           }
         }
       }
@@ -7858,8 +7932,7 @@
         "components/unordered-list": "enabled",
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
-        "components/pre-heading": "enabled",
-        "overwrites/primaire kleur/oranje": "disabled"
+        "components/pre-heading": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -7950,8 +8023,7 @@
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
-        "components/pre-heading": "enabled",
-        "overwrites/primaire kleur/oranje": "disabled"
+        "components/pre-heading": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8043,8 +8115,7 @@
         "components/sub-nav-bar": "enabled",
         "overwrites/oude rijkshuisstijl/border": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
-        "components/pre-heading": "enabled",
-        "overwrites/primaire kleur/oranje": "disabled"
+        "components/pre-heading": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8137,8 +8208,7 @@
         "overwrites/focus/background": "enabled",
         "overwrites/focus/outline-color": "enabled",
         "overwrites/primaire kleur/mintgroen": "enabled",
-        "components/pre-heading": "enabled",
-        "overwrites/primaire kleur/oranje": "disabled"
+        "components/pre-heading": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
