@@ -2142,7 +2142,7 @@
           "type": "fontSizes"
         },
         "font-weight": {
-          "value": "{rhc.font-weight.bold}",
+          "value": "{rhc.font-weight.regular}",
           "type": "fontWeights"
         },
         "line-height": {
@@ -2289,7 +2289,7 @@
             }
           },
           "font-weight": {
-            "value": "{rhc.font-weight.bold}",
+            "value": "{rhc.font-weight.regular}",
             "type": "fontWeights"
           },
           "active": {
@@ -2380,7 +2380,7 @@
             }
           },
           "font-weight": {
-            "value": "{rhc.font-weight.bold}",
+            "value": "{rhc.font-weight.regular}",
             "type": "fontWeights"
           },
           "active": {
@@ -2412,7 +2412,7 @@
             "type": "fontSizes"
           },
           "font-weight": {
-            "value": "{rhc.font-weight.bold}",
+            "value": "{rhc.font-weight.regular}",
             "type": "fontWeights"
           },
           "hover": {
@@ -5480,58 +5480,6 @@
       }
     }
   },
-  "components/paragraph/nl": {
-    "nl": {
-      "paragraph": {
-        "color": {
-          "value": "{rhc.color.foreground.default}",
-          "type": "color"
-        },
-        "font-family": {
-          "value": "{rhc.font-family.primary}",
-          "type": "fontFamilies"
-        },
-        "font-size": {
-          "value": "{rhc.font-size.paragraph.default}",
-          "type": "fontSizes"
-        },
-        "font-weight": {
-          "value": "{rhc.font-weight.regular}",
-          "type": "fontWeights"
-        },
-        "line-height": {
-          "value": "{rhc.line-height.paragraph}",
-          "type": "lineHeights"
-        },
-        "margin-block-end": {
-          "value": "{rhc.space.0}",
-          "type": "spacing"
-        },
-        "margin-block-start": {
-          "value": "{rhc.space.0}",
-          "type": "spacing"
-        },
-        "lead": {
-          "color": {
-            "value": "{rhc.color.foreground.default}",
-            "type": "color"
-          },
-          "font-size": {
-            "value": "{rhc.font-size.paragraph.intro}",
-            "type": "fontSizes"
-          },
-          "font-weight": {
-            "value": "{rhc.font-weight.regular}",
-            "type": "fontWeights"
-          },
-          "line-height": {
-            "value": "{rhc.line-height.paragraph}",
-            "type": "lineHeights"
-          }
-        }
-      }
-    }
-  },
   "components/paragraph/utrecht": {
     "utrecht": {
       "paragraph": {
@@ -5578,6 +5526,58 @@
           },
           "line-height": {
             "value": "{nl.paragraph.lead.line-height}",
+            "type": "lineHeights"
+          }
+        }
+      }
+    }
+  },
+  "components/paragraph/nl": {
+    "nl": {
+      "paragraph": {
+        "color": {
+          "value": "{rhc.color.foreground.default}",
+          "type": "color"
+        },
+        "font-family": {
+          "value": "{rhc.font-family.primary}",
+          "type": "fontFamilies"
+        },
+        "font-size": {
+          "value": "{rhc.font-size.paragraph.default}",
+          "type": "fontSizes"
+        },
+        "font-weight": {
+          "value": "{rhc.font-weight.regular}",
+          "type": "fontWeights"
+        },
+        "line-height": {
+          "value": "{rhc.line-height.paragraph}",
+          "type": "lineHeights"
+        },
+        "margin-block-end": {
+          "value": "{rhc.space.0}",
+          "type": "spacing"
+        },
+        "margin-block-start": {
+          "value": "{rhc.space.0}",
+          "type": "spacing"
+        },
+        "lead": {
+          "color": {
+            "value": "{rhc.color.foreground.default}",
+            "type": "color"
+          },
+          "font-size": {
+            "value": "{rhc.font-size.paragraph.intro}",
+            "type": "fontSizes"
+          },
+          "font-weight": {
+            "value": "{rhc.font-weight.regular}",
+            "type": "fontWeights"
+          },
+          "line-height": {
+            "value": "{rhc.line-height.paragraph}",
             "type": "lineHeights"
           }
         }
@@ -6109,130 +6109,6 @@
       }
     }
   },
-  "components/skip-link/nl": {
-    "nl": {
-      "skip-link": {
-        "font-weight": {
-          "value": "{rhc.font-weight.bold}",
-          "type": "fontWeights"
-        },
-        "font-family": {
-          "value": "{rhc.font-family.primary}",
-          "type": "fontFamilies"
-        },
-        "font-size": {
-          "value": "{rhc.font-size.paragraph.default}",
-          "type": "fontSizes"
-        },
-        "line-height": {
-          "value": "{rhc.line-height.paragraph}",
-          "type": "lineHeights"
-        },
-        "min-block-size": {
-          "value": "{rhc.size.target}",
-          "type": "sizing"
-        },
-        "min-inline-size": {
-          "value": "{rhc.size.target}",
-          "type": "sizing"
-        },
-        "padding-block-end": {
-          "value": "{rhc.space.150}",
-          "type": "spacing"
-        },
-        "padding-block-start": {
-          "value": "{rhc.space.150}",
-          "type": "spacing"
-        },
-        "padding-inline-end": {
-          "value": "{rhc.space.200}",
-          "type": "spacing"
-        },
-        "padding-inline-start": {
-          "value": "{rhc.space.200}",
-          "type": "spacing"
-        },
-        "focus": {
-          "background-color": {
-            "value": "{rhc.color.canvas}",
-            "type": "color"
-          },
-          "border-color": {
-            "value": "{rhc.color.lintblauw.500}",
-            "type": "color"
-          },
-          "border-style": {
-            "value": "solid",
-            "type": "borderStyle"
-          },
-          "border-width": {
-            "value": "{rhc.border-width.m}",
-            "type": "borderWidth"
-          },
-          "color": {
-            "value": "{rhc.color.foreground.default}",
-            "type": "color"
-          },
-          "text-decoration": {
-            "value": "None",
-            "type": "textDecoration"
-          }
-        },
-        "focus-visible": {
-          "outline-color": {
-            "value": "{rhc.color.zwart}",
-            "type": "color"
-          }
-        },
-        "background-color": {
-          "value": "{rhc.color.lintblauw.500}",
-          "type": "color"
-        },
-        "border-color": {
-          "value": "transparent",
-          "type": "color"
-        },
-        "color": {
-          "value": "{rhc.color.wit}",
-          "type": "color"
-        },
-        "border-width": {
-          "value": "{rhc.border-width.m}",
-          "type": "borderWidth"
-        },
-        "box-block-end-shadow": {
-          "offset-x": {
-            "value": "0",
-            "type": "other"
-          },
-          "offset-y": {
-            "value": "16px",
-            "type": "other"
-          },
-          "blur-radius": {
-            "value": "48px",
-            "type": "other"
-          },
-          "spread-radius": {
-            "value": "0",
-            "type": "other"
-          },
-          "color": {
-            "value": "#0000001a",
-            "type": "color"
-          }
-        },
-        "text-decoration": {
-          "value": "underline",
-          "type": "textDecoration"
-        },
-        "text-underline-offset": {
-          "value": "{utrecht.link.text-underline-offset}",
-          "type": "other"
-        }
-      }
-    }
-  },
   "components/skip-link/utrecht": {
     "utrecht": {
       "skip-link": {
@@ -6352,6 +6228,130 @@
         },
         "text-underline-offset": {
           "value": "{nl.skip-link.text-underline-offset}",
+          "type": "other"
+        }
+      }
+    }
+  },
+  "components/skip-link/nl": {
+    "nl": {
+      "skip-link": {
+        "font-weight": {
+          "value": "{rhc.font-weight.bold}",
+          "type": "fontWeights"
+        },
+        "font-family": {
+          "value": "{rhc.font-family.primary}",
+          "type": "fontFamilies"
+        },
+        "font-size": {
+          "value": "{rhc.font-size.paragraph.default}",
+          "type": "fontSizes"
+        },
+        "line-height": {
+          "value": "{rhc.line-height.paragraph}",
+          "type": "lineHeights"
+        },
+        "min-block-size": {
+          "value": "{rhc.size.target}",
+          "type": "sizing"
+        },
+        "min-inline-size": {
+          "value": "{rhc.size.target}",
+          "type": "sizing"
+        },
+        "padding-block-end": {
+          "value": "{rhc.space.150}",
+          "type": "spacing"
+        },
+        "padding-block-start": {
+          "value": "{rhc.space.150}",
+          "type": "spacing"
+        },
+        "padding-inline-end": {
+          "value": "{rhc.space.200}",
+          "type": "spacing"
+        },
+        "padding-inline-start": {
+          "value": "{rhc.space.200}",
+          "type": "spacing"
+        },
+        "focus": {
+          "background-color": {
+            "value": "{rhc.color.canvas}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{rhc.color.lintblauw.500}",
+            "type": "color"
+          },
+          "border-style": {
+            "value": "solid",
+            "type": "borderStyle"
+          },
+          "border-width": {
+            "value": "{rhc.border-width.m}",
+            "type": "borderWidth"
+          },
+          "color": {
+            "value": "{rhc.color.foreground.default}",
+            "type": "color"
+          },
+          "text-decoration": {
+            "value": "None",
+            "type": "textDecoration"
+          }
+        },
+        "focus-visible": {
+          "outline-color": {
+            "value": "{rhc.color.zwart}",
+            "type": "color"
+          }
+        },
+        "background-color": {
+          "value": "{rhc.color.lintblauw.500}",
+          "type": "color"
+        },
+        "border-color": {
+          "value": "transparent",
+          "type": "color"
+        },
+        "color": {
+          "value": "{rhc.color.wit}",
+          "type": "color"
+        },
+        "border-width": {
+          "value": "{rhc.border-width.m}",
+          "type": "borderWidth"
+        },
+        "box-block-end-shadow": {
+          "offset-x": {
+            "value": "0",
+            "type": "other"
+          },
+          "offset-y": {
+            "value": "16px",
+            "type": "other"
+          },
+          "blur-radius": {
+            "value": "48px",
+            "type": "other"
+          },
+          "spread-radius": {
+            "value": "0",
+            "type": "other"
+          },
+          "color": {
+            "value": "#0000001a",
+            "type": "color"
+          }
+        },
+        "text-decoration": {
+          "value": "underline",
+          "type": "textDecoration"
+        },
+        "text-underline-offset": {
+          "value": "{utrecht.link.text-underline-offset}",
           "type": "other"
         }
       }
