@@ -23,6 +23,12 @@ const config: StorybookConfig = {
   docs: {
     autodocs: true,
   },
+  refs: {
+    angular: {
+      title: 'Angular',
+      url: 'http://localhost:6008',
+    },
+  },
 };
 
 export default config;

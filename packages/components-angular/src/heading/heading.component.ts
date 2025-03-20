@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import '@nl-design-system-candidate/heading-css/heading.css';
 
 @Component({
   selector: 'lib-heading',
