@@ -1,3 +1,24 @@
-<h1 class="nl-heading nl-heading--level-1">
+<ng-container [ngSwitch]="headingLevel()">
+  <h1 [class]="'nl-heading nl-heading--level-' + stylingLevel()" *ngSwitchCase="1">
+    <ng-container [ngTemplateOutlet]="content" />
+  </h1>
+  <h2 [class]="'nl-heading nl-heading--level-' + stylingLevel()" *ngSwitchCase="2">
+    <ng-container [ngTemplateOutlet]="content" />
+  </h2>
+  <h3 [class]="'nl-heading nl-heading--level-' + stylingLevel()" *ngSwitchCase="3">
+    <ng-container [ngTemplateOutlet]="content" />
+  </h3>
+  <h4 [class]="'nl-heading nl-heading--level-' + stylingLevel()" *ngSwitchCase="4">
+    <ng-container [ngTemplateOutlet]="content" />
+  </h4>
+  <h5 [class]="'nl-heading nl-heading--level-' + stylingLevel()" *ngSwitchCase="5">
+    <ng-container [ngTemplateOutlet]="content" />
+  </h5>
+  <h6 [class]="'nl-heading nl-heading--level-' + stylingLevel()" *ngSwitchCase="6">
+    <ng-container [ngTemplateOutlet]="content" />
+  </h6>
+</ng-container>
+
+<ng-template #content>
   <ng-content></ng-content>
-</h1>
+</ng-template>
