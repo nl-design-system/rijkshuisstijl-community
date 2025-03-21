@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-react
 
+## 1.0.5
+
+### Patch Changes
+
+- 9a2b88f: Updated Checkbox Group docs and added an example to the Collage template.
+
 ## 1.0.4
 
 ### Patch Changes
