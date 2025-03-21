@@ -7711,32 +7711,77 @@
       }
     }
   },
-  "overwrites/primaire kleur/mintgroen": {
+  "overwrites/primaire kleur/groen": {
     "rhc": {
       "color": {
         "primary": {
           "50": {
-            "value": "{rhc.color.mintgroen.50}",
+            "value": "{rhc.color.groen.50}",
             "type": "color"
           },
           "100": {
-            "value": "{rhc.color.mintgroen.100}",
+            "value": "{rhc.color.groen.100}",
             "type": "color"
           },
           "200": {
-            "value": "{rhc.color.mintgroen.200}",
+            "value": "{rhc.color.groen.200}",
             "type": "color"
           },
           "300": {
-            "value": "{rhc.color.mintgroen.300}",
+            "value": "{rhc.color.groen.300}",
             "type": "color"
           },
           "400": {
-            "value": "{rhc.color.mintgroen.400}",
+            "value": "{rhc.color.groen.400}",
             "type": "color"
           },
           "500": {
-            "value": "{rhc.color.mintgroen.500}",
+            "value": "{rhc.color.groen.500}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{rhc.color.primary.500}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "darken",
+                  "value": "0.3",
+                  "space": "lch"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "overwrites/primaire kleur/paars": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "value": "{rhc.color.paars.50}",
+            "type": "color"
+          },
+          "100": {
+            "value": "{rhc.color.paars.100}",
+            "type": "color"
+          },
+          "200": {
+            "value": "{rhc.color.paars.200}",
+            "type": "color"
+          },
+          "300": {
+            "value": "{rhc.color.paars.300}",
+            "type": "color"
+          },
+          "400": {
+            "value": "{rhc.color.paars.400}",
+            "type": "color"
+          },
+          "500": {
+            "value": "{rhc.color.paars.500}",
             "type": "color"
           },
           "hover": {
@@ -7846,6 +7891,51 @@
       }
     }
   },
+  "overwrites/primaire kleur/mintgroen": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "value": "{rhc.color.mintgroen.50}",
+            "type": "color"
+          },
+          "100": {
+            "value": "{rhc.color.mintgroen.100}",
+            "type": "color"
+          },
+          "200": {
+            "value": "{rhc.color.mintgroen.200}",
+            "type": "color"
+          },
+          "300": {
+            "value": "{rhc.color.mintgroen.300}",
+            "type": "color"
+          },
+          "400": {
+            "value": "{rhc.color.mintgroen.400}",
+            "type": "color"
+          },
+          "500": {
+            "value": "{rhc.color.mintgroen.500}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{rhc.color.primary.500}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "darken",
+                  "value": "0.3",
+                  "space": "lch"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "$themes": [
     {
       "id": "05865788a086eeac7ffc4514736ccd777f1ff95c",
@@ -7932,7 +8022,10 @@
         "components/unordered-list": "enabled",
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "overwrites/primaire kleur/paars": "disabled",
+        "overwrites/primaire kleur/groen": "disabled",
+        "overwrites/primaire kleur/oranje": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8023,7 +8116,10 @@
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "overwrites/primaire kleur/paars": "disabled",
+        "overwrites/primaire kleur/groen": "disabled",
+        "overwrites/primaire kleur/oranje": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8115,7 +8211,10 @@
         "components/sub-nav-bar": "enabled",
         "overwrites/oude rijkshuisstijl/border": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "overwrites/primaire kleur/paars": "disabled",
+        "overwrites/primaire kleur/groen": "disabled",
+        "overwrites/primaire kleur/oranje": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8208,7 +8307,10 @@
         "overwrites/focus/background": "enabled",
         "overwrites/focus/outline-color": "enabled",
         "overwrites/primaire kleur/mintgroen": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "overwrites/primaire kleur/paars": "disabled",
+        "overwrites/primaire kleur/groen": "disabled",
+        "overwrites/primaire kleur/oranje": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8300,9 +8402,11 @@
       "overwrites/focus/background",
       "overwrites/focus/outline-color",
       "overwrites/oude rijkshuisstijl/border",
-      "overwrites/primaire kleur/mintgroen",
+      "overwrites/primaire kleur/groen",
+      "overwrites/primaire kleur/paars",
       "overwrites/primaire kleur/violet",
-      "overwrites/primaire kleur/oranje"
+      "overwrites/primaire kleur/oranje",
+      "overwrites/primaire kleur/mintgroen"
     ]
   }
 }
