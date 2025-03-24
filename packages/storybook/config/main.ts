@@ -23,11 +23,22 @@ const config: StorybookConfig = {
   docs: {
     autodocs: true,
   },
-  refs: {
-    angular: {
-      title: 'Angular',
-      url: 'http://localhost:6008',
-    },
+  refs: (config, { configType }) => {
+    if (configType === 'DEVELOPMENT') {
+      return {
+        angular: {
+          title: 'Angular',
+          url: 'http://localhost:6008',
+        },
+      };
+    }
+    return {
+      //TODO Angular production URL
+      angular: {
+        title: 'Angular',
+        url: 'http://localhost:6008',
+      },
+    };
   },
 };
 
