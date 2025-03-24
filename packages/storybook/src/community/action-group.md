@@ -6,21 +6,55 @@
 - Gebruik van knoppen: Wanneer een actie belangrijker is dan de andere, geef de belangrijkste actie een prominente stijl (bijvoorbeeld een primaire knop).
 - ARIA-rol: De role="group" is van toepassing op de container, om aan te geven dat de acties samen horen. Elke individuele actie heeft de role="button" voor knoppen, of role="link" voor links.
 
-## Zo moet het niet
+## Anatomie
 
-Plaats geen ongepaste acties in een action group die geen gerelateerde acties zijn. Dit zou verwarring kunnen veroorzaken bij de gebruiker en de toegankelijkheid van de interface verminderen.
+De `ActionGroup` component bestaat uit de volgende elementen:
 
-## Usage
+- Container (ActionGroup): Dit is de container van de groep, die alle actie-elementen bevat en bepaalt hoe de acties gepositioneerd worden (horizontaal of verticaal).
+- Acties (Buttons): Elke actie binnen de groep is een knop (Button).
+- Appearance: Elke knop moet een duidelijke stijl hebben. Primaire acties krijgen een opvallende stijl, terwijl secundaire acties een minder prominente stijl hebben.
 
-```tsx
-import { ActionGroup } from '@rijkshuisstijl-community/components-react';
+## Voorbeelden met verkeerde implementatie
 
+Hier zijn enkele veelvoorkomende fouten bij het implementeren van ActionGroup en hoe deze kunnen worden vermeden:
+
+- Niet gerelateerde acties groeperen: Plaats geen acties samen die geen verband met elkaar hebben.
+
+```jsx
 <ActionGroup direction="row">
-  <Button appearance="primary-action-button" key="primary-action-button">
-    Save and continue
-  </Button>
-  <Button appearance="secondary-action-button" key="secondary-action-button">
-    Back
-  </Button>
-</ActionGroup>;
+  <Button appearance="primary-action-button">Save</Button>
+  <Button appearance="secondary-action-button">Delete User</Button>
+</ActionGroup>
+```
+
+- Verkeerde children gebruiken
+
+```jsx
+// Verkeerd
+<ActionGroup direction="row">
+  <div>Ongeldig element</div>
+  <Button appearance="primary-action-button">Save</Button>
+</ActionGroup>
+
+// Correct
+<ActionGroup direction="row">
+  <Button appearance="primary-action-button">Save</Button>
+  <Button appearance="secondary-action-button">Cancel</Button>
+</ActionGroup>
+```
+
+- Acties zonder duidelijke appearance: Elke actie moet een duidelijke stijl hebben zodat gebruikers het belang van de actie kunnen herkennen.
+
+```jsx
+// Verkeerd
+<ActionGroup direction="row">
+  <Button>Save</Button>
+  <Button>Cancel</Button>
+</ActionGroup>
+
+// Correct
+<ActionGroup direction="row">
+  <Button appearance="primary-action-button">Save</Button>
+  <Button appearance="secondary-action-button">Cancel</Button>
+</ActionGroup>
 ```
