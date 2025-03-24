@@ -4,6 +4,7 @@ import {
   Article,
   Blockquote,
   Button,
+  CheckboxGroup,
   CodeInputGroup,
   FormField,
   FormFieldCheckboxGroup,
@@ -154,6 +155,13 @@ export default function Collage() {
                     <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
                     <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
                   </FormFieldCheckboxGroup>
+                  <div>
+                    Checkbox Group buiten Form:
+                    <CheckboxGroup>
+                      <FormFieldCheckboxOption label="Checkbox 1"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="Checkbox 1"></FormFieldCheckboxOption>
+                    </CheckboxGroup>
+                  </div>
                   <Alert heading="Heading" headingLevel={2} type="error">
                     <LinkList>
                       <LinkListLink href="#">Label</LinkListLink>

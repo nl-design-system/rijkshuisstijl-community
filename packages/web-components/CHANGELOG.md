@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/web-components
 
+## 1.1.4
+
+### Patch Changes
+
+- 90f6b1d: Dependency updates (week 11)
+
 ## 1.1.3
 
 ### Patch Changes
