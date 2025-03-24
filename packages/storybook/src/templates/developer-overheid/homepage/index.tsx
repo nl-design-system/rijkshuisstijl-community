@@ -16,6 +16,7 @@ import {
   NavBar,
   PageContent,
   PageHeader,
+  TextInput,
 } from '@rijkshuisstijl-community/components-react';
 import {} from // IconArrowRight,
 // IconClipboardCheck,
@@ -24,6 +25,7 @@ import {} from // IconArrowRight,
 // IconPrompt, //Placeholder Dev.Ovh logo
 // IconTerminal2,
 '@tabler/icons-react';
+// import { Paragraph } from '@utrecht/component-library-react';
 // import { Heading, Heading1, Paragraph } from '@utrecht/component-library-react';
 // import { BadgeList, DataBadge } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
@@ -34,7 +36,11 @@ export default function DevOvhHomepage() {
     <>
       <PageHeader>
         <Figure>
-          <Logo organisation="Developer Overheid">
+          <Logo organisation={undefined}>
+            <Image alt="Rijksoverheid Logo" src="https://developer.overheid.nl/img/logo-rijksoverheid.svg" />
+          </Logo>
+
+          <Logo organisation="developer.overheid.nl" subtitle="Ontwikkelaarsportaal van de Nederlandse overheid">
             <Image
               alt="Developer Overheid logo"
               height={25}
@@ -43,14 +49,24 @@ export default function DevOvhHomepage() {
             />
           </Logo>
         </Figure>
+
         <NavBar
+          endItems={[
+            { id: '1', href: '/', label: 'Forum' },
+            { id: '2', href: '/', label: 'APIs' },
+            { id: '3', href: '/', label: 'Open Source' },
+            { id: '4', href: '/', label: 'Open Data' },
+            { id: '5', href: '/', label: 'Geodata' },
+          ]}
           items={[
-            { id: '1', href: '/', label: 'API‘s' },
-            { id: '2', href: '/', label: 'Repositories' },
-            { id: '3', href: '/', label: 'Kennisbank' },
-            { id: '4', href: '/', label: 'Community' },
+            { id: '1', href: '/developer-overheid/homepage', label: 'Home' },
+            { id: '2', href: '/', label: 'Kennisbank' },
+            { id: '3', href: '/', label: 'Communities' },
+            { id: '4', href: '/', label: 'Blog' },
           ]}
         ></NavBar>
+
+        <TextInput aria-label="text-input-label" name="subject" placeholder="Zoek"></TextInput>
       </PageHeader>
 
       <PageBody className="rhc-templates-main-content">
