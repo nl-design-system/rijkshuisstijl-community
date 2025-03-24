@@ -3,33 +3,18 @@ import {
   Figure,
   Footer,
   Icon,
-  // Heading,
-  // HeadingGroup,
-  // Hero,
-  // Icon,
   Image,
   LinkList,
   LinkListLink,
-  // LinkListCard,
-  // Link,
   Logo,
   NavBar,
   PageContent,
   PageHeader,
   TextInput,
 } from '@rijkshuisstijl-community/components-react';
-import {} from // IconArrowRight,
-// IconClipboardCheck,
-// IconFolders,
-// IconJetpack,
-// IconPrompt, //Placeholder Dev.Ovh logo
-// IconTerminal2,
-'@tabler/icons-react';
-// import { Paragraph } from '@utrecht/component-library-react';
 // import { Heading, Heading1, Paragraph } from '@utrecht/component-library-react';
 // import { BadgeList, DataBadge } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
-// TODO: DataBadge, Heading, Link NL Design System Candidate gebruiken (+ RHC styling)
 
 export default function DevOvhHomepage() {
   return (
