@@ -191,3 +191,14 @@ h1 {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+@media (width < 700px) {
+  .rhc-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rhc-dev-logo {
+  align-items: end;
+  display: grid;
+}
