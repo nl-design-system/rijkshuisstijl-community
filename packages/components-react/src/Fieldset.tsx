@@ -5,9 +5,10 @@ import {
   FieldsetProps as UtrechtFieldsetProps,
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { PropsWithChildren, ReactNode } from 'react';
+import { PropsWithChildren, ReactNode, Ref } from 'react';
 
 export interface FieldsetProps extends UtrechtFieldsetProps {
+  ref?: Ref<HTMLDivElement>;
   element?: string | 'div' | 'fieldset';
   legend?: ReactNode;
   legendId?: string;
@@ -15,6 +16,7 @@ export interface FieldsetProps extends UtrechtFieldsetProps {
 }
 
 export const Fieldset = ({
+  ref,
   children,
   legend,
   legendId,
@@ -25,6 +27,7 @@ export const Fieldset = ({
 }: PropsWithChildren<FieldsetProps>) => {
   return (
     <UtrechtFieldSet
+      ref={ref}
       className={clsx({
         'utrecht-form-fieldset--section': section,
       })}
