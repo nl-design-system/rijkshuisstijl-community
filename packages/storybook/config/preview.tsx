@@ -8,6 +8,7 @@ import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/mijnoverheid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
+import '@rijkshuisstijl-community/cjib-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Paragraph } from '@rijkshuisstijl-community/components-react';
 import { withThemeByClassName } from '@storybook/addon-themes';
@@ -26,6 +27,7 @@ const preview: Preview = {
         MijnOverheid: 'mijnoverheid-theme',
         Logius: 'logius-theme',
         RIVM: 'rivm-theme',
+        CJIB: 'cjib-theme',
         'Uitvoerend - violet': 'uitvoerend-violet',
         'Uitvoerend - mintgroen -  ander fontweight - focus': 'uitvoerend-mintgroen-focus',
         'Uitvoerend - violet - oud': 'uitvoerend-violet-oud',
