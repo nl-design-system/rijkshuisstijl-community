@@ -45,6 +45,36 @@ Deze attributen willen mensen soms ook gebruiken:
 
 De tokens voor `background-color` en `border` werken niet goed als alleen een `<fieldset>` wordt gebruikt. Voor goed resultaat is een extra `div` nodig. De HTML component heeft daarom geen goede ondersteuning voor `background-color` en `border`.
 
+## Voorbeelden met verkeerde implementatie
+
+- Verkeerd gebruik van niet ondersteunde elementen
+
+```jsx
+// Verkeerd
+<Fieldset>
+  <span>Ongeldig element</span>
+</Fieldset>
+
+// Correct
+<Fieldset legend="Persoonlijke gegevens">
+  <input type="text" placeholder="Naam" />
+</Fieldset>
+```
+
+- Vergeten van een `legend`
+
+```jsx
+// Verkeerd
+<Fieldset>
+  <input type="checkbox" />
+</Fieldset>
+
+// Correct
+<Fieldset legend="Voorwaarden">
+  <input type="checkbox" />
+</Fieldset>
+```
+
 ## Relevante WCAG regels
 
 - [WCAG eis 1.3.5](https://www.w3.org/TR/WCAG21/#identify-input-purpose)

@@ -1,70 +1,17 @@
 /* @license CC0-1.0 */
 
-import {
-  Fieldset,
-  FieldsetLegend,
-  type FieldsetProps,
-  FormFieldTextInput,
-} from '@rijkshuisstijl-community/components-react';
+import { Fieldset, FormFieldTextInput } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
-import clsx from 'clsx';
-import { ReactNode } from 'react';
 import readme from './fieldset.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-
-interface FieldsetStoryProps extends FieldsetProps {
-  element?: string | 'div' | 'fieldset';
-  legend?: ReactNode;
-  legendId?: string;
-  section?: boolean;
-}
-
-const FieldsetStory = ({
-  children,
-  legend,
-  legendId,
-  section,
-  disabled,
-  invalid,
-  ...restProps
-}: FieldsetStoryProps) => {
-  return (
-    <Fieldset
-      className={clsx({
-        'utrecht-form-fieldset--section': section,
-      })}
-      {...restProps}
-    >
-      {legend && (
-        <FieldsetLegend
-          id={legendId}
-          className={clsx({
-            'utrecht-form-fieldset__legend--disabled': disabled,
-            'utrecht-form-fieldset__legend--invalid': invalid,
-          })}
-        >
-          {legend}
-        </FieldsetLegend>
-      )}
-      {children}
-    </Fieldset>
-  );
-};
 
 const meta = {
   title: 'Rijkshuisstijl/Fieldset',
   id: 'rhc-fieldset',
-  component: FieldsetStory,
+  component: Fieldset,
   args: {
     disabled: false,
     invalid: false,
-    children: (
-      <>
-        <FormFieldTextInput label="Field A"></FormFieldTextInput>
-        <FormFieldTextInput label="Field B"></FormFieldTextInput>
-        <FormFieldTextInput label="Field C"></FormFieldTextInput>
-      </>
-    ),
     legend: 'Legend',
   },
   parameters: {
@@ -77,34 +24,78 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=16708-112&p=f&t=eVuza9JCLr8AObbU-0',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Fieldset.tsx',
+    nldesignsystem: 'https://nldesignsystem.nl/fieldset',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met alleen overgeschreven design tokens van de Rijkshuisstijl Community.',
   },
-  render: FieldsetStory,
-} satisfies Meta<typeof FieldsetStory>;
+} satisfies Meta<typeof Fieldset>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  name: 'Default',
+  args: {
+    disabled: false,
+    invalid: false,
+    legend: 'Legend',
+    children: (
+      <>
+        <FormFieldTextInput label="Field A" />
+        <FormFieldTextInput label="Field B" />
+        <FormFieldTextInput label="Field C" />
+      </>
+    ),
+  },
+  render: (args) => (
+    <Fieldset disabled={args.disabled} legend={args.legend}>
+      <FormFieldTextInput disabled={args.disabled} invalid={args.invalid} label="Field A" />
+      <FormFieldTextInput disabled={args.disabled} invalid={args.invalid} label="Field B" />
+      <FormFieldTextInput disabled={args.disabled} invalid={args.invalid} label="Field C" />
+    </Fieldset>
+  ),
+};
+
+export const Disabled: Story = {
+  args: {
+    ...Default.args,
+    disabled: true,
+    children: (
+      <>
+        <FormFieldTextInput disabled label="Field A" />
+        <FormFieldTextInput disabled label="Field B" />
+        <FormFieldTextInput disabled label="Field C" />
+      </>
+    ),
+  },
+  name: 'Invalid',
   parameters: {
     docs: {
       description: {
-        story: `Markup using the \`<fieldset>\` and \`<legend>\` HTML elements, wrapped in \`<div>\` element to support full CSS styling. Styling via \`utrecht-form-fieldset\` class name.
-
-  \`<fieldset>\` is preferred as markup, because the automatic labelling via \`<legend>\` is less likely to break than \`aria-labelledby\`, and when the CSS can not be loaded, the visual representation is still clear to the user.`,
+        story: 'Styling via the `.utrecht-form-fieldset__legend--disabled` class names.',
       },
     },
   },
 };
 
-export const Disabled: Story = {
+export const PartiallyDisabled: Story = {
   args: {
+    ...Default.args,
     disabled: true,
+    children: (
+      <>
+        <FormFieldTextInput disabled label="Field A" />
+        <FormFieldTextInput label="Field B" />
+        <FormFieldTextInput label="Field C" />
+      </>
+    ),
   },
-  name: 'Disabled',
+  name: 'Partially Invalid',
   parameters: {
     docs: {
       description: {
@@ -118,8 +109,37 @@ export const Invalid: Story = {
   args: {
     ...Default.args,
     invalid: true,
+    children: (
+      <>
+        <FormFieldTextInput invalid label="Field A" />
+        <FormFieldTextInput invalid label="Field B" />
+        <FormFieldTextInput invalid label="Field C" />
+      </>
+    ),
   },
   name: 'Invalid',
+  parameters: {
+    docs: {
+      description: {
+        story: 'Styling via the `.utrecht-form-fieldset__legend--invalid` class names.',
+      },
+    },
+  },
+};
+
+export const PartiallyInvalid: Story = {
+  args: {
+    ...Default.args,
+    invalid: true,
+    children: (
+      <>
+        <FormFieldTextInput invalid label="Field A" />
+        <FormFieldTextInput label="Field B" />
+        <FormFieldTextInput label="Field C" />
+      </>
+    ),
+  },
+  name: 'Partially Invalid',
   parameters: {
     docs: {
       description: {
