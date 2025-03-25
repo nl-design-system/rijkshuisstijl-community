@@ -1044,11 +1044,11 @@
             "type": "color"
           },
           "300": {
-            "value": "#42145f",
+            "value": "#9a81aa",
             "type": "color"
           },
           "400": {
-            "value": "#3B1255",
+            "value": "#42145f",
             "type": "color"
           }
         },
@@ -5173,6 +5173,29 @@
       }
     }
   },
+  "theme/CJIB": {
+    "logius": {
+      "color": {
+        "brand": {
+          "default": {
+            "value": "{logius.color.paars.400}",
+            "type": "color",
+            "description": "Change this color to your brand"
+          },
+          "subdued": {
+            "value": "{logius.color.paars.100}",
+            "type": "color",
+            "description": "Change this color to your brand"
+          },
+          "hover": {
+            "value": "{logius.color.paars.300}",
+            "type": "color",
+            "description": "Change this color to your brand"
+          }
+        }
+      }
+    }
+  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
@@ -5213,7 +5236,8 @@
       "components/text-input",
       "components/unordered-list",
       "theme/DigiD",
-      "theme/MijnOverheid"
+      "theme/MijnOverheid",
+      "theme/CJIB"
     ]
   }
 }
