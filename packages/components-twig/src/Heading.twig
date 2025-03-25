@@ -1,7 +1,7 @@
 {%- if level is empty -%}
 {%- set level = 1 -%}
 {%- endif -%}
-{%- set classes = ['nl-heading'] -%}
+{%- set classes = ['nl-heading', 'rhc-heading'] -%}
 {%- if appearance is not empty -%}
 {%- set classes = classes|merge(['nl-heading--level-' ~ appearance]) -%}
 {%- else -%}

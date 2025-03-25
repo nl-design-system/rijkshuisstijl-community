@@ -4,8 +4,8 @@ import TwigIcon from '@rijkshuisstijl-community/components-twig/src/Icon.twig';
 import { iconSet } from '@rijkshuisstijl-community/components-twig/src/icon-sets/default-icons/icon-set';
 import type { Meta, StoryObj } from '@storybook/react';
 import DrupalAttribute from 'drupal-attribute';
-import readme from './icon-twig.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
+import readme from '../community/icon.md?raw';
 
 const icons = Object.values(iconSet);
 

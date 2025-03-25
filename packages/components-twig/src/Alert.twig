@@ -1,0 +1,41 @@
+{%- set role = 'status' -%}
+{%- set icon = 'info-circle' -%}
+{%- if type == 'error' -%}
+{%- set icon = 'alert-circle' -%}
+{%- endif -%}
+{%- if type == 'ok' -%}
+{%- set icon = 'circle-check' -%}
+{%- endif -%}
+{%- if type == 'warning' -%}
+{%- set icon = 'alert-triangle' -%}
+{%- endif -%}
+{%- if type not 'info' -%}
+{%- set role = 'alert' -%}
+{%- endif -%}
+{%- set attributes = attributes.setAttribute('role', role) -%}
+{%- set attributes = attributes.addClass('utrecht-alert__message') -%}
+<div class="utrecht-alert utrecht-alert--{{ type }} rhc-alert">
+  <div class="utrecht-alert__content">
+    <div {{ attributes }}>
+      <div class="rhc-alert__icon-container rhc-alert__icon-container--{{ type }}">
+        {% include '@rhc/Icon.twig' with {
+          attributes: create_attribute(),
+          icon: icon
+        } %}
+      </div>
+      <div>
+        {% include '@rhc/Heading.twig' with {
+          attributes: create_attribute(),
+          level: 3,
+          appearance: 5,
+          children: heading
+        } %}
+
+        {% include '@rhc/Paragraph.twig' with {
+          attributes: create_attribute(),
+          children: textContent
+        } %}
+      </div>
+    </div>
+  </div>
+</div>

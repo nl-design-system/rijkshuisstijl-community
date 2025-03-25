@@ -4,6 +4,7 @@ import {
   Article,
   Blockquote,
   Button,
+  CheckboxGroup,
   CodeInputGroup,
   FormField,
   FormFieldCheckboxGroup,
@@ -11,6 +12,11 @@ import {
   FormFieldRadio,
   FormFieldTextarea,
   FormFieldTextInput,
+  FormSummary,
+  FormSummaryActions,
+  FormSummaryItem,
+  FormSummaryKey,
+  FormSummaryValue,
   Heading,
   Icon,
   IconButton,
@@ -149,6 +155,13 @@ export default function Collage() {
                     <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
                     <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
                   </FormFieldCheckboxGroup>
+                  <div>
+                    Checkbox Group buiten Form:
+                    <CheckboxGroup>
+                      <FormFieldCheckboxOption label="Checkbox 1"></FormFieldCheckboxOption>
+                      <FormFieldCheckboxOption label="Checkbox 1"></FormFieldCheckboxOption>
+                    </CheckboxGroup>
+                  </div>
                   <Alert heading="Heading" headingLevel={2} type="error">
                     <LinkList>
                       <LinkListLink href="#">Label</LinkListLink>
@@ -167,26 +180,23 @@ export default function Collage() {
                     label="Label"
                     statusId="status-id"
                   />
-                  {/* Will be replaced with <SummaryList/> */}
-                  {/* <DataList>
-                    <DataListItem>
-                      <DataListKey>Key</DataListKey>
-                      <DataListValue>Value</DataListValue>
-                      <DataListActions>
+                  <FormSummary>
+                    <FormSummaryItem>
+                      <FormSummaryKey>Key</FormSummaryKey>
+                      <FormSummaryValue>Value</FormSummaryValue>
+                      <FormSummaryActions>
                         <Link href="#">Label</Link>
-                      </DataListActions>
-                    </DataListItem>
-                    <Separator></Separator>
-                    <DataListItem>
-                      <DataListKey>Key</DataListKey>
-                      <DataListValue>Value</DataListValue>
-                    </DataListItem>
-                    <Separator></Separator>
-                    <DataListItem>
-                      <DataListKey>Key</DataListKey>
-                      <DataListValue>Value</DataListValue>
-                    </DataListItem>
-                  </DataList> */}
+                      </FormSummaryActions>
+                    </FormSummaryItem>
+                    <FormSummaryItem>
+                      <FormSummaryKey>Key</FormSummaryKey>
+                      <FormSummaryValue>Value</FormSummaryValue>
+                    </FormSummaryItem>
+                    <FormSummaryItem>
+                      <FormSummaryKey>Key</FormSummaryKey>
+                      <FormSummaryValue>Value</FormSummaryValue>
+                    </FormSummaryItem>
+                  </FormSummary>
                   <div>
                     Toggletip component:
                     <Toggletip>Hier zou een korte introductie kunnen staan.</Toggletip>

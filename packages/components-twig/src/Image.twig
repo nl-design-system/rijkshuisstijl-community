@@ -1,0 +1,5 @@
+{%- if src is defined -%}{%- set attributes = attributes.setAttribute('src', src) -%}{%- endif -%}
+{%- if alt is defined -%}{%- set attributes = attributes.setAttribute('alt', alt) -%}{%- else -%}{%- set attributes = attributes.setAttribute('alt', '') -%}{%- endif -%}
+{%- if width is defined -%}{%- set attributes = attributes.setAttribute('width', width) -%}{%- endif -%}
+{%- if height is defined -%}{%- set attributes = attributes.setAttribute('height', height) -%}{%- endif -%}
+<img {{ attributes.addClass(['utrecht-img', 'utrecht-img--photo']) }} />

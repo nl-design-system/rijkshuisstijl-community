@@ -6,6 +6,8 @@ import {
 } from '@rijkshuisstijl-community/design-tokens/dist';
 import { Meta, StoryObj } from '@storybook/react';
 import { CSSProperties } from 'react';
+import readme from './logo.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface LogoCSSProperties extends CSSProperties {
   '--rhc-logo-color': string;
@@ -57,29 +59,36 @@ const meta = {
       type: { name: 'string', required: false },
     },
     imageBackgroundColor: {
+      name: '--rhc-logo-image-background-color',
       control: 'color',
       description: 'Changes background color of the image',
       table: {
-        category: 'Demo',
+        category: 'Design tokens',
       },
     },
     imageIconColor: {
+      name: '--rhc-logo-image-color',
       control: 'color',
       description: 'Changes color of the image icon',
       table: {
-        category: 'Demo',
+        category: 'Design tokens',
       },
     },
     textColor: {
+      name: '--rhc-logo-color',
       control: 'color',
       description: 'Changes text color',
       table: {
-        category: 'Demo',
+        category: 'Design tokens',
       },
     },
   },
   parameters: {
-    // TODO: add documentation
+    docs: {
+      description: {
+        component: mergeMarkdown([readme]),
+      },
+    },
     status: {
       type: 'STABLE',
     },

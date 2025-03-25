@@ -38,6 +38,7 @@ const meta = {
     errorMessage: {
       control: 'text',
       description: 'Adds an error message',
+      if: { arg: 'invalid', eq: true },
       table: {
         category: 'API',
         defaultValue: { summary: '' },
@@ -85,9 +86,12 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add GitHub issue and NL DesignSystem links
+
+    nldesignsystem: 'https://nldesignsystem.nl/checkbox',
     figma:
-      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1031-2917&node-type=canvas&t=HiNKOQhf1hQtLZrr-0',
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=944-1535&p=f&t=2e0BRXk8XeiTCHGA-0',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/FormFieldCheckboxOption.tsx',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht (daar heet het FormFieldCheckbox), met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },

@@ -2,7 +2,7 @@
 
 import { Icon, Link } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
+import { IconCalendarEvent } from '@tabler/icons-react';
 import readme from '@utrecht/components/link/README.md?raw';
 import anatomyDocs from '@utrecht/components/link/docs/anatomy.nl.md?raw';
 import contentDocs from '@utrecht/components/link/docs/content.nl.md?raw';
@@ -20,56 +20,12 @@ import technologyHtmlDocs from '@utrecht/components/link/docs/technology-html.nl
 import usageDocs from '@utrecht/components/link/docs/usage.nl.md?raw';
 import visualDesignDocs from '@utrecht/components/link/docs/visual-design.nl.md?raw';
 import wcagDocs from '@utrecht/components/link/docs/wcag.nl.md?raw';
-import clsx from 'clsx';
-import { PropsWithChildren } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-interface LinkStoryProps {
-  href: string;
-  iconLeft?: boolean;
-  iconRight?: boolean;
-  external?: boolean;
-  externalLabel?: string;
-  className?: string;
-}
-
-const LinkStory = ({
-  href,
-  children,
-  iconLeft,
-  iconRight,
-  external,
-  className,
-  ...props
-}: PropsWithChildren<LinkStoryProps>) => (
-  <Link
-    external={external}
-    href={href}
-    className={clsx(
-      {
-        'utrecht-link--external': external,
-      },
-      className,
-    )}
-    {...props}
-  >
-    {iconLeft && (
-      <Icon>
-        <IconCalendarEvent />
-      </Icon>
-    )}
-    {children}
-    {iconRight && (
-      <Icon>
-        <IconArrowRight />
-      </Icon>
-    )}
-  </Link>
-);
 
 const meta = {
   title: 'Rijkshuisstijl/Link',
   id: 'rhc-link',
-  component: LinkStory,
+  component: Link,
   argTypes: {
     href: {
       description: 'Url to link to',
@@ -166,8 +122,8 @@ const meta = {
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
-  render: LinkStory,
-} as Meta<typeof LinkStory>;
+  render: Link,
+} as Meta<typeof Link>;
 
 export default meta;
 
@@ -183,16 +139,14 @@ export const Default: Story = {
 export const IconLeft: Story = {
   args: {
     href: '#',
-    children: 'Label',
-    iconLeft: true,
+    children: [<IconCalendarEvent />, 'Label'],
   },
 };
 
 export const IconRight: Story = {
   args: {
     href: '#',
-    children: 'Label',
-    iconRight: true,
+    children: ['Label', <Icon icon={'pijl-naar-rechts'} />],
   },
 };
 
@@ -230,7 +184,7 @@ export const FocusVisible: Story = {
   args: {
     href: '#',
     children: 'Label',
-    className: 'utrecht-link--focus-visible',
+    className: 'utrecht-link--focus-visible nl-link--focus-visible',
   },
 };
 

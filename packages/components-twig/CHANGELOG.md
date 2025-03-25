@@ -1,5 +1,36 @@
 # @rijkshuisstijl-community/components-twig
 
+## 1.3.1
+
+### Patch Changes
+
+- Updated dependencies [90f6b1d]
+- Updated dependencies [145d80d]
+  - @rijkshuisstijl-community/components-css@1.0.3
+
+## 1.3.0
+
+### Minor Changes
+
+- 9c4303a: Create image component in Twig
+
+## 1.2.0
+
+### Minor Changes
+
+- f08e050: Added "Alert" component in Twig.
+
+## 1.1.2
+
+### Patch Changes
+
+- 1dc03fb: Wekelijkse package updates voor Rijkshuisstijl-componenten en design tokens (week 10)
+- b9a4945: Added implementation documentation to package README.
+- f398137: - Add Paragraph Twig template
+- Updated dependencies [1dc03fb]
+- Updated dependencies [b9a4945]
+  - @rijkshuisstijl-community/components-css@1.0.2
+
 ## 1.1.1
 
 ### Patch Changes
