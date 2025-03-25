@@ -16,22 +16,30 @@ import {
 // import { BadgeList, DataBadge } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 
+<html lang="nl" />;
+
 export default function DevOvhHomepage() {
   return (
     <>
       <PageHeader>
+        <title>Developer Overheid - Homepage</title>
+
         <Figure>
           <Logo organisation={undefined}>
             <Image alt="Rijksoverheid Logo" src="https://developer.overheid.nl/img/logo-rijksoverheid.svg" />
           </Logo>
 
-          <Logo organisation="developer.overheid.nl" subtitle="Ontwikkelaarsportaal van de Nederlandse overheid">
+          <Logo
+            className="rhc-dev-logo"
+            organisation="developer.overheid.nl"
+            subtitle="Ontwikkelaarsportaal van de Nederlandse overheid"
+          >
             <Image
               alt="Developer Overheid logo"
-              height={25}
-              src=" https://developer.overheid.nl/static/images/logo.e5300da726cb.svg"
-              width={25}
-            />
+              height={35}
+              src="https://developer.overheid.nl/img/logo-don.svg"
+              width={35}
+            ></Image>
           </Logo>
         </Figure>
 
@@ -53,9 +61,8 @@ export default function DevOvhHomepage() {
 
         <TextInput aria-label="text-input-label" name="subject" placeholder="Zoek"></TextInput>
       </PageHeader>
-
       <PageBody className="rhc-templates-main-content">
-        <div>
+        <main>
           <PageContent className="rhc-templates-page-content">
             {/* <Hero
               aspectRatio="16 / 9"
@@ -123,7 +130,7 @@ export default function DevOvhHomepage() {
               ></Card>
             </section>
           </PageContent>
-        </div>
+        </main>
       </PageBody>
 
       <Footer
