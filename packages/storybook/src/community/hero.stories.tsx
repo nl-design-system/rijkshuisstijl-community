@@ -52,9 +52,10 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add GitHub issue and NL DesignSystem links
+    // TODO: add nldesignsystem page when it's available (not yet available on 25/03/25).
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=15708-524&node-type=canvas&t=fXG4KjJRXbo2PG2J-0',
+    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/466',
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof Hero>;
@@ -84,5 +85,27 @@ export const CustomChildren: Story = {
         <LinkListLink href="#">Link 3</LinkListLink>
       </LinkListCard>
     ),
+  },
+} satisfies Story;
+
+export const TextAlignRight: Story = {
+  args: {
+    imageSrc:
+      'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
+    imageAlt: 'Tullip field',
+    heading: 'Heading',
+    subHeading: 'Hero with the text area aligned to the right (end)',
+    textAlign: 'end',
+  },
+} satisfies Story;
+
+export const AspectRatioFourToThree: Story = {
+  args: {
+    aspectRatio: '4 / 3',
+    imageSrc:
+      'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
+    imageAlt: 'Tullip field',
+    heading: 'Heading',
+    subHeading: 'Hero with the aspect ratio of 4:3',
   },
 } satisfies Story;
