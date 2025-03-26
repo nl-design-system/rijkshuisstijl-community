@@ -2136,7 +2136,7 @@
           "type": "fontFamilies"
         },
         "font-size": {
-          "value": "16px",
+          "value": "{rhc.font-size.paragraph.default}",
           "type": "fontSizes"
         },
         "font-weight": {
@@ -7727,6 +7727,82 @@
       }
     }
   },
+  "overwrites/responsive/tablet": {
+    "rhc": {
+      "font-size": {
+        "heading": {
+          "level-1": {
+            "value": "{rhc.font-size.xl.tablet}",
+            "type": "fontSizes"
+          },
+          "level-2": {
+            "value": "{rhc.font-size.lg.tablet}",
+            "type": "fontSizes"
+          },
+          "level-3": {
+            "value": "{rhc.font-size.md.tablet}",
+            "type": "fontSizes"
+          },
+          "level-4": {
+            "value": "{rhc.font-size.sm.tablet}",
+            "type": "fontSizes"
+          },
+          "level-5": {
+            "value": "{rhc.font-size.xs.tablet}",
+            "type": "fontSizes"
+          }
+        },
+        "paragraph": {
+          "intro": {
+            "value": "{rhc.font-size.sm.tablet}",
+            "type": "fontSizes"
+          },
+          "default": {
+            "value": "{rhc.font-size.xs.tablet}",
+            "type": "fontSizes"
+          }
+        }
+      }
+    }
+  },
+  "overwrites/responsive/mobile": {
+    "rhc": {
+      "font-size": {
+        "heading": {
+          "level-1": {
+            "value": "{rhc.font-size.xl.mobile}",
+            "type": "fontSizes"
+          },
+          "level-2": {
+            "value": "{rhc.font-size.lg.mobile}",
+            "type": "fontSizes"
+          },
+          "level-3": {
+            "value": "{rhc.font-size.md.mobile}",
+            "type": "fontSizes"
+          },
+          "level-4": {
+            "value": "{rhc.font-size.sm.mobile}",
+            "type": "fontSizes"
+          },
+          "level-5": {
+            "value": "{rhc.font-size.xs.mobile}",
+            "type": "fontSizes"
+          }
+        },
+        "paragraph": {
+          "intro": {
+            "value": "{rhc.font-size.sm.mobile}",
+            "type": "fontSizes"
+          },
+          "default": {
+            "value": "{rhc.font-size.xs.mobile}",
+            "type": "fontSizes"
+          }
+        }
+      }
+    }
+  },
   "overwrites/primaire kleur/groen": {
     "rhc": {
       "color": {
@@ -7903,6 +7979,193 @@
               }
             }
           }
+        }
+      }
+    }
+  },
+  "overwrites/primaire kleur/oranje/button": {
+    "utrecht": {
+      "button": {
+        "secondary-action": {
+          "hover": {
+            "background-color": {
+              "value": "{rhc.color.cool-grey.200}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "{rhc.color.cool-grey.800}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.cool-grey.800}",
+              "type": "color"
+            }
+          },
+          "background-color": {
+            "value": "{rhc.color.none}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{rhc.color.cool-grey.700}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{rhc.color.cool-grey.700}",
+            "type": "color"
+          },
+          "disabled": {
+            "background-color": {
+              "value": "{rhc.color.none}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "{rhc.color.cool-grey.400}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.cool-grey.400}",
+              "type": "color"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "value": "{rhc.color.cool-grey.200}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "transparent",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.cool-grey.800}",
+              "type": "color"
+            }
+          },
+          "active": {
+            "background-color": {
+              "value": "{rhc.color.primary.200}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "{rhc.color.primary.500}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.primary.500}",
+              "type": "color"
+            }
+          },
+          "pressed": {
+            "background-color": {
+              "value": "{rhc.color.cool-grey.300}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "{rhc.color.cool-grey.800}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.cool-grey.800}",
+              "type": "color"
+            }
+          }
+        },
+        "subtle": {
+          "hover": {
+            "background-color": {
+              "value": "{rhc.color.cool-grey.200}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "transparent",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.cool-grey.800}",
+              "type": "color"
+            }
+          },
+          "background-color": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "color": {
+            "value": "{rhc.color.cool-grey.700}",
+            "type": "color"
+          },
+          "disabled": {
+            "background-color": {
+              "value": "{rhc.color.none}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "{rhc.color.none}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.cool-grey.400}",
+              "type": "color"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "value": "{rhc.color.cool-grey.200}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "transparent",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.cool-grey.800}",
+              "type": "color"
+            }
+          },
+          "active": {
+            "background-color": {
+              "value": "{rhc.color.none}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "transparent",
+              "type": "color"
+            },
+            "color": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "0.4",
+                    "space": "srgb"
+                  }
+                }
+              },
+              "value": "{rhc.color.primary.500}",
+              "type": "color"
+            }
+          },
+          "pressed": {
+            "background-color": {
+              "value": "{rhc.color.cool-grey.300}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "transparent",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.cool-grey.900}",
+              "type": "color"
+            }
+          }
+        },
+        "font-size": {
+          "value": "20px",
+          "type": "fontSizes"
         }
       }
     }
@@ -8357,7 +8620,10 @@
         "components/unordered-list": "enabled",
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "overwrites/primaire kleur/oranje/button": "disabled",
+        "overwrites/responsive/tablet": "disabled",
+        "overwrites/responsive/mobile": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8448,7 +8714,10 @@
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "overwrites/primaire kleur/oranje/button": "disabled",
+        "overwrites/responsive/tablet": "disabled",
+        "overwrites/responsive/mobile": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8540,7 +8809,10 @@
         "components/sub-nav-bar": "enabled",
         "overwrites/oude rijkshuisstijl/border": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "overwrites/primaire kleur/oranje/button": "disabled",
+        "overwrites/responsive/tablet": "disabled",
+        "overwrites/responsive/mobile": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8633,7 +8905,10 @@
         "overwrites/focus/background": "enabled",
         "overwrites/focus/outline-color": "enabled",
         "components/pre-heading": "enabled",
-        "overwrites/primaire kleur/mintgroen": "enabled"
+        "overwrites/primaire kleur/mintgroen": "enabled",
+        "overwrites/primaire kleur/oranje/button": "disabled",
+        "overwrites/responsive/tablet": "disabled",
+        "overwrites/responsive/mobile": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8725,10 +9000,13 @@
       "overwrites/focus/background",
       "overwrites/focus/outline-color",
       "overwrites/oude rijkshuisstijl/border",
+      "overwrites/responsive/tablet",
+      "overwrites/responsive/mobile",
       "overwrites/primaire kleur/groen",
       "overwrites/primaire kleur/paars",
       "overwrites/primaire kleur/violet",
       "overwrites/primaire kleur/oranje",
+      "overwrites/primaire kleur/oranje/button",
       "overwrites/primaire kleur/mintgroen",
       "overwrites/primaire kleur/mintgroen/button",
       "overwrites/afwijkende keuzes/button"
