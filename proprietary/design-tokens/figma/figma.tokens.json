@@ -849,14 +849,12 @@
             "type": "color",
             "description": "Gebruik voor content die extra context biedt, maar niet essentieel is om de interface te begrijpen."
           },
-          "onEmphasis": {
-            "parent": "mode/light",
-            "value": "{rhc.color.wit}",
-            "type": "color",
-            "description": "Tekst en iconen die op een sterke achtergrond staan. Zoals het label in de primaire button of links in de footer."
-          },
           "link": {
             "value": "{rhc.color.donkerblauw.500}",
+            "type": "color"
+          },
+          "onEmphasis": {
+            "value": "{rhc.color.wit}",
             "type": "color"
           }
         },
@@ -2244,7 +2242,7 @@
               "type": "color"
             },
             "color": {
-              "value": "{rhc.color.wit}",
+              "value": "{rhc.color.foreground.onEmphasis}",
               "type": "color"
             }
           },
@@ -2257,7 +2255,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.wit}",
+            "value": "{rhc.color.foreground.onEmphasis}",
             "type": "color"
           },
           "disabled": {
@@ -2284,7 +2282,7 @@
               "type": "color"
             },
             "color": {
-              "value": "{rhc.color.wit}",
+              "value": "{rhc.color.foreground.onEmphasis}",
               "type": "color"
             }
           },
@@ -2311,7 +2309,7 @@
               "type": "color"
             },
             "color": {
-              "value": "{rhc.color.wit}",
+              "value": "{rhc.color.foreground.onEmphasis}",
               "type": "color"
             }
           },
@@ -2342,7 +2340,7 @@
               "type": "color"
             },
             "color": {
-              "value": "{rhc.color.wit}",
+              "value": "{rhc.color.foreground.onEmphasis}",
               "type": "color"
             }
           }
@@ -7950,6 +7948,204 @@
               }
             }
           }
+        },
+        "foreground": {
+          "onEmphasis": {
+            "value": "{rhc.color.zwart}",
+            "type": "color",
+            "description": "Tekst en iconen die op een sterke achtergrond staan. Zoals het label in de primaire button of links in de footer."
+          }
+        }
+      }
+    }
+  },
+  "overwrites/primaire kleur/mintgroen/button": {
+    "utrecht": {
+      "button": {
+        "secondary-action": {
+          "hover": {
+            "background-color": {
+              "value": "{rhc.color.primary.100}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "{rhc.color.cool-grey.800}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.cool-grey.800}",
+              "type": "color"
+            }
+          },
+          "background-color": {
+            "value": "{rhc.color.none}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{rhc.color.cool-grey.700}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{rhc.color.cool-grey.700}",
+            "type": "color"
+          },
+          "disabled": {
+            "background-color": {
+              "value": "{rhc.color.none}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "{rhc.color.cool-grey.400}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.cool-grey.400}",
+              "type": "color"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "value": "{rhc.color.primary.100}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "transparent",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.cool-grey.800}",
+              "type": "color"
+            }
+          },
+          "active": {
+            "background-color": {
+              "value": "{rhc.color.primary.200}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "{rhc.color.primary.500}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.primary.500}",
+              "type": "color"
+            }
+          },
+          "pressed": {
+            "background-color": {
+              "value": "{rhc.color.primary.200}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "{rhc.color.cool-grey.800}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.cool-grey.800}",
+              "type": "color"
+            }
+          }
+        },
+        "subtle": {
+          "hover": {
+            "background-color": {
+              "value": "{rhc.color.primary.50}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "transparent",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.cool-grey.800}",
+              "type": "color"
+            }
+          },
+          "background-color": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "color": {
+            "value": "{rhc.color.cool-grey.700}",
+            "type": "color"
+          },
+          "disabled": {
+            "background-color": {
+              "value": "{rhc.color.none}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "{rhc.color.none}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.cool-grey.400}",
+              "type": "color"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "value": "{rhc.color.primary.50}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "transparent",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.cool-grey.800}",
+              "type": "color"
+            }
+          },
+          "active": {
+            "background-color": {
+              "value": "{rhc.color.none}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "transparent",
+              "type": "color"
+            },
+            "color": {
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "0.4",
+                    "space": "srgb"
+                  }
+                }
+              },
+              "value": "{rhc.color.primary.500}",
+              "type": "color"
+            }
+          },
+          "pressed": {
+            "background-color": {
+              "value": "{rhc.color.primary.100}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "transparent",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.cool-grey.900}",
+              "type": "color"
+            }
+          }
+        },
+        "primary-action": {
+          "disabled": {
+            "color": {
+              "value": "{rhc.color.cool-grey.400}",
+              "type": "color"
+            }
+          }
         }
       }
     }
@@ -8161,7 +8357,10 @@
         "components/unordered-list": "enabled",
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "overwrites/primaire kleur/oranje": "disabled",
+        "overwrites/primaire kleur/mintgroen": "disabled",
+        "overwrites/primaire kleur/mintgroen/button": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8252,7 +8451,10 @@
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "overwrites/primaire kleur/oranje": "disabled",
+        "overwrites/primaire kleur/mintgroen": "disabled",
+        "overwrites/primaire kleur/mintgroen/button": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8344,7 +8546,10 @@
         "components/sub-nav-bar": "enabled",
         "overwrites/oude rijkshuisstijl/border": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
-        "components/pre-heading": "enabled"
+        "components/pre-heading": "enabled",
+        "overwrites/primaire kleur/oranje": "disabled",
+        "overwrites/primaire kleur/mintgroen": "disabled",
+        "overwrites/primaire kleur/mintgroen/button": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8436,8 +8641,10 @@
         "components/sub-nav-bar": "enabled",
         "overwrites/focus/background": "enabled",
         "overwrites/focus/outline-color": "enabled",
+        "components/pre-heading": "enabled",
+        "overwrites/primaire kleur/oranje": "disabled",
         "overwrites/primaire kleur/mintgroen": "enabled",
-        "components/pre-heading": "enabled"
+        "overwrites/primaire kleur/mintgroen/button": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8534,6 +8741,7 @@
       "overwrites/primaire kleur/violet",
       "overwrites/primaire kleur/oranje",
       "overwrites/primaire kleur/mintgroen",
+      "overwrites/primaire kleur/mintgroen/button",
       "overwrites/afwijkende keuzes/button"
     ]
   }
