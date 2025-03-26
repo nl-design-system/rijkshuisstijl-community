@@ -31,7 +31,7 @@ export default function DevOvhAPIoverzicht() {
         <PageContent className="rhc-templates-page-content">
           <Article>
             <div className="rhc-margin-block-end-wrapper">
-              <BreadcrumbNav>
+              <BreadcrumbNav className="rhc-breadcrum">
                 <BreadcrumbNavLink href="/" index={0} rel="home">
                   Home
                 </BreadcrumbNavLink>
