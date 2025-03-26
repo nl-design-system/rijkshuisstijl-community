@@ -1,4 +1,4 @@
-<ng-container [ngSwitch]="headingLevel()">
+<ng-container [ngSwitch]="headingLevel">
   <h1 [class]="'nl-heading nl-heading--level-' + stylingLevel()" *ngSwitchCase="1">
     <ng-container [ngTemplateOutlet]="content" />
   </h1>

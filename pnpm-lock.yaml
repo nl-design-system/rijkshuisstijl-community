@@ -107,7 +107,7 @@ importers:
     dependencies:
       next:
         specifier: 15.2.0
-        version: 15.2.0(@playwright/test@1.51.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.86.0)
+        version: 15.2.0(@babel/core@7.26.10)(@playwright/test@1.51.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.86.0)
       react:
         specifier: 19.0.0
         version: 19.0.0
@@ -203,6 +203,9 @@ importers:
       '@types/jasmine':
         specifier: 5.1.0
         version: 5.1.0
+      '@types/jest':
+        specifier: 29.5.14
+        version: 29.5.14
       jasmine-core:
         specifier: 5.6.0
         version: 5.6.0
@@ -19651,7 +19654,7 @@ snapshots:
 
   acorn-globals@7.0.1:
     dependencies:
-      acorn: 8.14.0
+      acorn: 8.14.1
       acorn-walk: 8.3.4
     optional: true
 
@@ -19665,7 +19668,7 @@ snapshots:
 
   acorn-walk@8.3.4:
     dependencies:
-      acorn: 8.14.0
+      acorn: 8.14.1
     optional: true
 
   acorn@8.14.0: {}
@@ -24248,7 +24251,7 @@ snapshots:
   jsdom@20.0.3:
     dependencies:
       abab: 2.0.6
-      acorn: 8.14.0
+      acorn: 8.14.1
       acorn-globals: 7.0.1
       cssom: 0.5.0
       cssstyle: 2.3.0
@@ -25519,7 +25522,7 @@ snapshots:
     dependencies:
       type-fest: 2.19.0
 
-  next@15.2.0(@playwright/test@1.51.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.86.0):
+  next@15.2.0(@babel/core@7.26.10)(@playwright/test@1.51.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.86.0):
     dependencies:
       '@next/env': 15.2.0
       '@swc/counter': 0.1.3

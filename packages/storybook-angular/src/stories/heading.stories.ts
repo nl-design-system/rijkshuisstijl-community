@@ -35,6 +35,6 @@ type Story = StoryObj<HeadingComponent>;
 export const Primary: Story = {
   render: ({ ...args }) => ({
     props: args,
-    template: `<div class="rhc-theme"><lib-heading ${argsToTemplate(args)}>Test</lib-heading></div>`,
+    template: `<div class="rhc-theme"><community-heading ${argsToTemplate(args)}>Test</community-heading></div>`,
   }),
 };

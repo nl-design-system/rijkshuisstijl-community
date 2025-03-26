@@ -1,19 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 export type HeadingLevels = 1 | 2 | 3 | 4 | 5 | 6;
 
 @Component({
-  selector: 'lib-heading',
+  selector: 'community-heading',
   imports: [CommonModule],
   templateUrl: './heading.component.html',
   styleUrl: './heading.component.css',
 })
 export class HeadingComponent {
-  readonly headingLevel = input.required<HeadingLevels>();
-  readonly appearanceLevel = input<HeadingLevels>();
+  @Input({ required: true }) headingLevel!: HeadingLevels;
+  @Input() appearanceLevel?: HeadingLevels;
 
-  stylingLevel = computed(() => {
-    return this.appearanceLevel() ?? this.headingLevel();
-  });
+  stylingLevel = () => this.appearanceLevel ?? this.headingLevel;
 }
