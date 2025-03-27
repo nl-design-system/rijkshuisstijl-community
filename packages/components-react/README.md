@@ -7,7 +7,7 @@ _Dit project wordt **niet** gesteund door het Ministerie van Algemene Zaken._
 **Het toepassen van design-elementen uit dit project is strikt verboden voor organisaties die geen deel uitmaken van de
 centrale overheid van Nederland.**
 
-Deze package is onderdeel van het [Rijkshuisstijl Community](../../README.md) project.
+Deze package is onderdeel van het [Rijkshuisstijl Community](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/README.md) project.
 
 ## Aan de slag met React-componenten
 
@@ -54,4 +54,4 @@ function App() {
 }
 ```
 
-Bekijk de [packages/font/README.md](packages/font/README.md) voor de meerdere manieren om de lettertypen te installeren voor jouw project.
+Bekijk de [packages/font/README.md](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/font/README.md) voor de meerdere manieren om de lettertypen te installeren voor jouw project.
