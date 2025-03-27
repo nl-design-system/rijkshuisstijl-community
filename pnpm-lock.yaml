@@ -391,9 +391,6 @@ importers:
       '@rijkshuisstijl-community/assets':
         specifier: workspace:*
         version: link:../../proprietary/assets
-      '@rijkshuisstijl-community/cjib-design-tokens':
-        specifier: workspace:*
-        version: link:../../proprietary/cjib-design-tokens
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css
@@ -604,27 +601,6 @@ importers:
         version: 4.5.3(@types/node@22.9.0)(rollup@4.36.0)(typescript@5.8.2)(vite@6.2.2(@types/node@22.9.0)(sass@1.86.0)(terser@5.36.0)(yaml@2.7.0))
 
   proprietary/assets: {}
-
-  proprietary/cjib-design-tokens:
-    devDependencies:
-      chokidar-cli:
-        specifier: 3.0.0
-        version: 3.0.0
-      http-server:
-        specifier: 14.1.1
-        version: 14.1.1
-      npm-run-all:
-        specifier: 4.1.5
-        version: 4.1.5
-      rimraf:
-        specifier: 6.0.1
-        version: 6.0.1
-      style-dictionary:
-        specifier: 3.9.2
-        version: 3.9.2
-      token-transformer:
-        specifier: 0.0.33
-        version: 0.0.33
 
   proprietary/design-tokens:
     devDependencies:

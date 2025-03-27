@@ -3,12 +3,15 @@ import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-violet/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-mintgroen-focus/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-violet-oud/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/cjib-theme/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/digid-theme/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/logius-theme/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/mijnoverheid-theme/index.css';
 import '@rijkshuisstijl-community/digid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/mijnoverheid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
-import '@rijkshuisstijl-community/cjib-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Paragraph } from '@rijkshuisstijl-community/components-react';
 import { withThemeByClassName } from '@storybook/addon-themes';
@@ -23,10 +26,13 @@ const preview: Preview = {
     withThemeByClassName({
       themes: {
         RijkshuisstijlCommunity: 'rhc-theme',
+        'DigiD - oud': 'digid-theme-old',
         DigiD: 'digid-theme',
+        'MijnOverheid - oud': 'mijnoverheid-theme-old',
         MijnOverheid: 'mijnoverheid-theme',
+        'Logius - oud': 'logius-theme-old',
         Logius: 'logius-theme',
-        RIVM: 'rivm-theme',
+        'RIVM - oud en nog niet verplaatst': 'rivm-theme-old',
         CJIB: 'cjib-theme',
         'Uitvoerend - violet': 'uitvoerend-violet',
         'Uitvoerend - mintgroen -  ander fontweight - focus': 'uitvoerend-mintgroen-focus',
