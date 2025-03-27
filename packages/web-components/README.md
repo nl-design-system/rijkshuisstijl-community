@@ -33,10 +33,10 @@ Vervolgens kun je de componenten in je HTML gebruiken:
 
 ### Thema toepassen
 
-De Web Components hebben geen eigen styling. Om de Rijkshuisstijl aan je project toe te voegen, installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens).
+De Web Components hebben geen eigen styling. Om de Rijkshuisstijl aan je project toe te voegen, installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens) en het [components-css npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-css).
 
 ```bash
-npm install --save-dev @rijkshuisstijl-community/design-tokens
+npm install --save-dev @rijkshuisstijl-community/design-tokens @rijkshuisstijl-community/components-css
 ```
 
 Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.css`-bestand uit de `dist` map van het

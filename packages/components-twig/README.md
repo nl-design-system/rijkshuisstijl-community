@@ -25,10 +25,10 @@ Om deze componenten te gebruiken, kun je ze importeren in jouw omgeving met behu
 
 ### Thema toepassen
 
-Om de Rijkshuisstijl aan je project toe te voegen, installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens).
+De Twig-componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je project toe te voegen, installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens) en het [components-css npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-css).
 
 ```bash
-npm install --save-dev @rijkshuisstijl-community/design-tokens
+npm install --save-dev @rijkshuisstijl-community/design-tokens @rijkshuisstijl-community/components-css
 ```
 
 Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.css`-bestand uit de `dist` map van het
