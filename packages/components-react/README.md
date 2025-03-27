@@ -32,10 +32,10 @@ Componenten. Voeg `"use client"` toe bovenaan het bestand om dit op te lossen.
 
 ### Thema toepassen
 
-De React-componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je project toe te voegen, installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens) en het [components-css npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-css).
+De React-componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je project toe te voegen, installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens).
 
 ```bash
-npm install --save-dev @rijkshuisstijl-community/design-tokens @rijkshuisstijl-community/components-css
+npm install --save-dev @rijkshuisstijl-community/design-tokens
 ```
 
 Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.css`-bestand uit de `dist` map van het
