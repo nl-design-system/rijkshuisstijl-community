@@ -2,7 +2,7 @@
 
 # Rijkshuisstijl Community Componenten
 
-**Direct aan de slag met [CSS](packages/components-css/README.md) | [React](packages/components-react/README.md) | [Web Components](packages/web-components/README.md) | [Twig](packages/components-twig/README.md)**
+**Direct aan de slag met [CSS](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/README.md) | [React](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/README.md) | [Web Components](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/README.md) | [Twig](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/README.md)**
 
 ---
 
@@ -43,13 +43,13 @@ De componenten gebruiken scss, zorg dat jouw project scss-bestanden kan verwerke
 
 De componenten van de Rijkshuisstijl Community zijn te gebruiken met en zonder framework. Bekijk de README van elke package voor informatie over implementatie.
 
-| Package                                                   | Purpose                                                                                                                                                                            |
-| :-------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`components-css`](packages/components-css/README.md)     | Hier kunnen CSS-componenten toegevoegd worden die nog niet bestaan in de NL Design System-community.                                                                               |
-| [`components-react`](packages/components-react/README.md) | Optioneel voor het toevoegen van een React-wrapper aan een CSS-component als die nog niet bestaat.                                                                                 |
-| [`web-components`](packages/web-components/README.md)     | Optioneel voor het toevoegen van een Web Component wrapper aan een CSS-component als die nog niet bestaat.                                                                         |
-| [`components-twig`](packages/components-twig/README.md)   | Optioneel voor het toevoegen van een Twig-wrapper aan een CSS-component als die nog niet bestaat.                                                                                  |
-| [`font`](packages/font/README.md)                         | Dit npm pakketje met fonts kun je gebruiken als alternatief op de officiële Rijkshuisstijl fonts, voor situaties waar je geen toestemming hebt om de officiële fonts te gebruiken. |
+| Package                                                                                                                        | Purpose                                                                                                                                                                            |
+| :----------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [components-css](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/README.md)     | Hier kunnen CSS-componenten toegevoegd worden die nog niet bestaan in de NL Design System-community.                                                                               |
+| [components-react](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/README.md) | Optioneel voor het toevoegen van een React-wrapper aan een CSS-component als die nog niet bestaat.                                                                                 |
+| [web-components](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/README.md)     | Optioneel voor het toevoegen van een Web Component wrapper aan een CSS-component als die nog niet bestaat.                                                                         |
+| [components-twig](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/README.md)   | Optioneel voor het toevoegen van een Twig-wrapper aan een CSS-component als die nog niet bestaat.                                                                                  |
+| [font](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/font/README.md)                         | Dit npm pakketje met fonts kun je gebruiken als alternatief op de officiële Rijkshuisstijl fonts, voor situaties waar je geen toestemming hebt om de officiële fonts te gebruiken. |
 
 ## Licentie
 
@@ -76,7 +76,7 @@ iconen.
 
 **_Lettertypen_**
 
-Bekijk de [packages/font/README.md](packages/font/README.md) voor de meerdere manieren om de lettertypen te installeren voor jouw project.
+Bekijk de [packages/font/README.md](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/font/README.md) voor de meerdere manieren om de lettertypen te installeren voor jouw project.
 
 **_Logo_**
 
