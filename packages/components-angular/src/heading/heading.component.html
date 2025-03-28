@@ -14,9 +14,6 @@
   <h5 [class]="'nl-heading nl-heading--level-' + stylingLevel()" *ngSwitchCase="5">
     <ng-container [ngTemplateOutlet]="content" />
   </h5>
-  <h6 [class]="'nl-heading nl-heading--level-' + stylingLevel()" *ngSwitchCase="6">
-    <ng-container [ngTemplateOutlet]="content" />
-  </h6>
 </ng-container>
 
 <ng-template #content>

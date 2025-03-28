@@ -8,9 +8,7 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "clean": "rimraf dist/",
     "storybook": "ng run angular-latest:storybook --port 6008",
     "build-storybook": "ng run angular-latest:build-storybook"
   },
@@ -38,6 +36,7 @@
     "@storybook/addon-essentials": "8.6.7",
     "@storybook/addon-interactions": "8.6.7",
     "@storybook/addon-onboarding": "8.6.7",
+    "@storybook/addon-webpack5-compiler-babel": "3.0.5",
     "@storybook/angular": "8.6.7",
     "@storybook/blocks": "8.6.7",
     "@storybook/test": "8.6.7",

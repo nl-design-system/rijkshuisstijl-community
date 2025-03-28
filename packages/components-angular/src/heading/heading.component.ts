@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
-export type HeadingLevels = 1 | 2 | 3 | 4 | 5 | 6;
+export const headingLevels = [1, 2, 3, 4, 5] as const;
+export type HeadingLevel = (typeof headingLevels)[number];
 
 @Component({
   selector: 'community-heading',
@@ -10,8 +11,8 @@ export type HeadingLevels = 1 | 2 | 3 | 4 | 5 | 6;
   styleUrl: './heading.component.css',
 })
 export class HeadingComponent {
-  @Input({ required: true }) headingLevel!: HeadingLevels;
-  @Input() appearanceLevel?: HeadingLevels;
+  @Input({ required: true }) headingLevel!: HeadingLevel;
+  @Input() appearanceLevel?: HeadingLevel;
 
   stylingLevel = () => this.appearanceLevel ?? this.headingLevel;
 }

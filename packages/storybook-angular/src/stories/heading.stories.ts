@@ -1,40 +1,77 @@
-import { HeadingComponent } from '@rijkshuisstijl-community/components-angular';
-import { argsToTemplate, type Meta, type StoryObj } from '@storybook/angular';
+import { HeadingComponent, headingLevels } from '@rijkshuisstijl-community/components-angular';
+import { type Meta, type StoryObj } from '@storybook/angular';
 
 const meta: Meta<HeadingComponent> = {
-  title: 'Example/Heading',
+  title: 'Rijkshuisstijl-angular/Heading',
+  id: 'rhc-angular-heading',
   component: HeadingComponent,
-  tags: ['autodocs'],
   argTypes: {
     headingLevel: {
-      control: {
-        type: 'number',
-        min: 1,
-        max: 6,
-        step: 1,
-      },
+      description: 'Heading level',
+      options: headingLevels,
+      control: { type: 'select' },
+      required: true,
     },
     appearanceLevel: {
-      control: {
-        type: 'number',
-        min: 1,
-        max: 6,
-        step: 1,
-      },
+      options: headingLevels,
+      control: { type: 'select' },
     },
   },
   args: {
-    headingLevel: 3,
+    headingLevel: 1,
   },
+  render: ({ headingLevel, appearanceLevel }) => ({
+    template: `<community-heading [headingLevel]=${headingLevel} ${appearanceLevel ? `[appearanceLevel]=${appearanceLevel}` : ''}>
+    Lorem ipsum dolor
+    </community-heading>`,
+    props: {
+      headingLevel,
+      appearanceLevel,
+    },
+  }),
 };
 
 export default meta;
-type Story = StoryObj<HeadingComponent>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
-  render: ({ ...args }) => ({
-    props: args,
-    template: `<div class="rhc-theme"><community-heading ${argsToTemplate(args)}>Test</community-heading></div>`,
-  }),
+export const Heading1: StoryObj<HeadingComponent> = {
+  args: {
+    headingLevel: 1,
+  },
+  name: 'Heading 1',
+};
+
+export const Heading2: StoryObj<HeadingComponent> = {
+  args: {
+    headingLevel: 2,
+  },
+  name: 'Heading 2',
+};
+
+export const Heading3: StoryObj<HeadingComponent> = {
+  args: {
+    headingLevel: 3,
+  },
+  name: 'Heading 3',
+};
+
+export const Heading4: StoryObj<HeadingComponent> = {
+  args: {
+    headingLevel: 4,
+  },
+  name: 'Heading 4',
+};
+
+export const Heading5: StoryObj<HeadingComponent> = {
+  args: {
+    headingLevel: 5,
+  },
+  name: 'Heading 5',
+};
+
+export const AppearanceLevel1: StoryObj<HeadingComponent> = {
+  args: {
+    headingLevel: 5,
+    appearanceLevel: 1,
+  },
+  name: 'Appearance Level 1',
 };
