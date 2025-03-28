@@ -54,13 +54,13 @@ const preview: Preview = {
       storySort: {
         order: [
           'Rijkshuisstijl Community',
-          ['README'],
+          ['README', 'CHANGELOG'],
           'Rijkshuisstijl',
-          ['README'],
+          ['README', 'CHANGELOG'],
           'Web Components',
-          ['README'],
+          ['README', 'CHANGELOG'],
           'Twig Components',
-          ['README'],
+          ['README', 'CHANGELOG'],
           'Templates',
         ],
       },
