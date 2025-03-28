@@ -1,5 +1,16 @@
 # @rijkshuisstijl-community/components-react
 
+## 1.0.5
+
+### Patch Changes
+
+- d33a0cf: Exported the Fieldset component from RHC, added Storybook stories, and documented best practices.
+- cc11bef: Exported the Figure component from RHC, added border-radius functionality, and documented best practices.
+- 259bc52: Fixed ref issues in the file input component since updating to React 19. Re-added useRef.
+- b505c9b: Update README to fix broken relative links to files in the repository.
+- 9eeb7b7: Dependency updates (week 12)
+- 9a2b88f: Updated Checkbox Group docs and added an example to the Collage template.
+
 ## 1.0.4
 
 ### Patch Changes
