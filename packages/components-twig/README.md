@@ -7,7 +7,7 @@ _Dit project wordt **niet** gesteund door het Ministerie van Algemene Zaken._
 **Het toepassen van design-elementen uit dit project is strikt verboden voor organisaties die geen deel uitmaken van de
 centrale overheid van Nederland.**
 
-Deze package is onderdeel van het [Rijkshuisstijl Community](../../README.md) project.
+Deze package is onderdeel van het [Rijkshuisstijl Community](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/README.md) project.
 
 ## Aan de slag met Twig-componenten
 
@@ -25,10 +25,10 @@ Om deze componenten te gebruiken, kun je ze importeren in jouw omgeving met behu
 
 ### Thema toepassen
 
-Om de Rijkshuisstijl aan je project toe te voegen, installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens).
+De Twig-componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je project toe te voegen, installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens) en het [components-css npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-css).
 
 ```bash
-npm install --save-dev @rijkshuisstijl-community/design-tokens
+npm install --save-dev @rijkshuisstijl-community/design-tokens @rijkshuisstijl-community/components-css
 ```
 
 Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.css`-bestand uit de `dist` map van het
@@ -39,4 +39,4 @@ pakket, en omring het deel van je applicatie waar je het thema wilt toepassen me
 @import '@rijkshuisstijl-community/components-css/dist/index.css'; // css importeren
 ```
 
-Bekijk de [packages/font/README.md](packages/font/README.md) voor de meerdere manieren om de lettertypen te installeren voor jouw project.
+Bekijk de [packages/font/README.md](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/font/README.md) voor de meerdere manieren om de lettertypen te installeren voor jouw project.

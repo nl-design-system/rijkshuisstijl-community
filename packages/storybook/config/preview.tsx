@@ -52,7 +52,17 @@ const preview: Preview = {
     options: {
       panelPosition: 'right',
       storySort: {
-        order: ['Rijkshuisstijl Community', ['README'], 'Componenten'],
+        order: [
+          'Rijkshuisstijl Community',
+          ['README', 'CHANGELOG'],
+          'Rijkshuisstijl',
+          ['README', 'CHANGELOG'],
+          'Web Components',
+          ['README', 'CHANGELOG'],
+          'Twig Components',
+          ['README', 'CHANGELOG'],
+          'Templates',
+        ],
       },
     },
     status: {
