@@ -1,4 +1,4 @@
-import { ChangeEvent, PropsWithChildren, Ref, RefObject, useEffect, useState } from 'react';
+import { ChangeEvent, PropsWithChildren, Ref, useEffect, useRef, useState } from 'react';
 import { Button, ButtonProps } from './Button';
 import { File } from './File';
 import { Paragraph } from './Paragraph';
@@ -30,7 +30,7 @@ export const FileInput = ({
   defaultFiles,
 }: PropsWithChildren<FileInputProps>) => {
   const [files, setFiles] = useState<File[]>([]);
-  const inputElement = ref as RefObject<HTMLInputElement>;
+  const inputElement = useRef<HTMLInputElement>(null);
 
   const onChange = (newFiles: FileList | null) => {
     if (newFiles) {
@@ -64,7 +64,7 @@ export const FileInput = ({
       <div className="rhc-file-input__button-feedback-container">
         <Button
           appearance={buttonAppearance ?? 'secondary-action-button'}
-          onClick={() => inputElement?.current.click()}
+          onClick={() => inputElement?.current?.click()}
         >
           {buttonText}
         </Button>

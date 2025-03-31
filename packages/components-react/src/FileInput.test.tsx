@@ -31,12 +31,7 @@ describe('File Input tests', () => {
     const mockOnFileChange = vi.fn();
 
     const propsTest: FileInputProps = {
-      ref: { current: document.createElement('input') },
-      buttonText: 'Bestanden kiezen',
-      maxFileSizeInBytes: 10_485_760,
-      allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif',
-      fileSizeErrorMessage: 'Dit bestand is groter dan 10 MB.',
-      fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
+      ...defaultProps,
       onValueChange: mockOnFileChange,
     };
 
@@ -44,6 +39,8 @@ describe('File Input tests', () => {
 
     const file = new File(['dummy content'], 'example.png', { type: 'image/png' });
     const fileInput = container.querySelector('input');
+
+    expect(fileInput).not.toBeNull();
 
     await waitFor(() =>
       fireEvent.change(fileInput!, {
@@ -55,16 +52,11 @@ describe('File Input tests', () => {
     expect(fileInput!.files![0].name).toBe(file.name);
   });
 
-  it('should be able to upload multiple files in once', async () => {
+  it('should be able to upload multiple files at once', async () => {
     const mockOnFileChange = vi.fn();
 
     const propsTest: FileInputProps = {
-      ref: { current: document.createElement('input') },
-      buttonText: 'Bestanden kiezen',
-      maxFileSizeInBytes: 10_485_760,
-      allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.png,.bmp,.gif',
-      fileSizeErrorMessage: 'Dit bestand is groter dan 10 MB.',
-      fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
+      ...defaultProps,
       onValueChange: mockOnFileChange,
     };
 
@@ -74,6 +66,8 @@ describe('File Input tests', () => {
     const fileTwo = new File(['dummy content'], 'exampleTwo.png', { type: 'image/png' });
 
     const fileInput = container.querySelector('input');
+
+    expect(fileInput).not.toBeNull();
 
     await waitFor(() =>
       fireEvent.change(fileInput!, {
@@ -90,12 +84,8 @@ describe('File Input tests', () => {
     const mockOnFileChange = vi.fn();
 
     const propsTest: FileInputProps = {
-      ref: { current: document.createElement('input') },
-      buttonText: 'Bestanden kiezen',
-      maxFileSizeInBytes: 10_485_760,
-      allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.bmp,.gif', // Removed .png from allow list
-      fileSizeErrorMessage: 'Dit bestand is groter dan 10 MB.',
-      fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
+      ...defaultProps,
+      allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.bmp,.gif',
       onValueChange: mockOnFileChange,
     };
 
@@ -104,6 +94,8 @@ describe('File Input tests', () => {
     const fileOne = new File(['dummy content'], 'exampleOne.png', { type: 'image/png' });
 
     const fileInput = container.querySelector('input');
+
+    expect(fileInput).not.toBeNull();
 
     await waitFor(() => userEvent.upload(fileInput!, fileOne));
 
@@ -124,6 +116,8 @@ describe('File Input tests', () => {
 
     const fileInput = container.querySelector('input');
 
+    expect(fileInput).not.toBeNull();
+
     await waitFor(() =>
       fireEvent.change(fileInput!, {
         target: { files: [file] },
@@ -134,6 +128,32 @@ describe('File Input tests', () => {
 
     expect(link).toHaveAttribute('href', 'mocked-url/example.png');
     expect(link).toHaveAttribute('target', '_blank');
+  });
+
+  it('should handle the case when ref is missing or invalid', async () => {
+    const mockOnFileChange = vi.fn();
+
+    const propsTest: FileInputProps = {
+      ...defaultProps,
+      onValueChange: mockOnFileChange,
+      ref: { current: null },
+    };
+
+    const { container } = render(<FileInput {...propsTest} />);
+
+    const file = new File(['dummy content'], 'example.png', { type: 'image/png' });
+    const fileInput = container.querySelector('input');
+
+    expect(fileInput).not.toBeNull();
+
+    await waitFor(() =>
+      fireEvent.change(fileInput!, {
+        target: { files: [file] },
+      }),
+    );
+
+    expect(mockOnFileChange).toHaveBeenCalledTimes(1);
+    expect(fileInput!.files![0].name).toBe(file.name);
   });
 });
 

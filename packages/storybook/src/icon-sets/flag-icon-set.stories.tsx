@@ -4,7 +4,7 @@ import readme from './flag-icon-set.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Icon Sets/Flag Icon Set',
+  title: 'Rijkshuisstijl Community/Icon Sets/Flag Icon Set',
   id: 'rhc-templates-flag-icon-set',
   component: IconSet,
   parameters: {

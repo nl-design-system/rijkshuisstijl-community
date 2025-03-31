@@ -1,6 +1,5 @@
 import { Figure, FigureCaption, Image } from '@rijkshuisstijl-community/components-react';
-import { Args, Meta, StoryObj } from '@storybook/react/*';
-import { CSSProperties } from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 import readme from './figure.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
@@ -8,25 +7,7 @@ const meta = {
   title: 'Rijkshuisstijl/Figure',
   id: 'rhc-figure',
   component: Figure,
-  args: {
-    caption: 'Bijschrift (figcaption) van afbeelding.',
-    imageSrc: './placeholder.jpg',
-    borderEndEndRadius: 0,
-    borderEndStartRadius: 0,
-    borderStartEndRadius: 0,
-    borderStartStartRadius: 0,
-  },
   argTypes: {
-    caption: {
-      type: { name: 'string', required: true },
-    },
-    imageSrc: {
-      type: { name: 'string' },
-      description: 'Source of the demo image',
-      table: {
-        category: 'Demo',
-      },
-    },
     borderEndEndRadius: {
       type: { name: 'string', required: false },
       control: { type: 'range', min: 0, max: 80, step: 8 },
@@ -60,30 +41,6 @@ const meta = {
       },
     },
   },
-  render: ({
-    caption,
-    imageSrc,
-    borderEndEndRadius,
-    borderEndStartRadius,
-    borderStartEndRadius,
-    borderStartStartRadius,
-  }: Args) => {
-    return (
-      <Figure
-        style={
-          {
-            '--utrecht-figure-img-border-end-end-radius': `${borderEndEndRadius}px`,
-            '--utrecht-figure-img-border-end-start-radius': `${borderEndStartRadius}px`,
-            '--utrecht-figure-img-border-start-end-radius': `${borderStartEndRadius}px`,
-            '--utrecht-figure-img-border-start-start-radius': `${borderStartStartRadius}px`,
-          } as unknown as CSSProperties
-        }
-      >
-        <Image alt="Multicolored tulip field" height={763} src={imageSrc} width={640} />
-        <FigureCaption>{caption}</FigureCaption>
-      </Figure>
-    );
-  },
   parameters: {
     status: {
       type: 'STABLE',
@@ -94,7 +51,9 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Figure.tsx',
+    nldesignsystem: 'https://nldesignsystem.nl/figure',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
   },
@@ -102,6 +61,11 @@ const meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-export const DefaultFigure: Story = {};
+export const DefaultFigure: StoryObj<typeof meta> = {
+  args: {
+    children: [
+      <Image alt="Multicolored tulip field" height={763} src="./placeholder.jpg" width={640} />,
+      <FigureCaption>{'Bijschrift (figcaption) van afbeelding.'}</FigureCaption>,
+    ],
+  },
+};
