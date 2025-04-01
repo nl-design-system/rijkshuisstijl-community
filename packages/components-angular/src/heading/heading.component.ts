@@ -5,7 +5,7 @@ export const headingLevels = [1, 2, 3, 4, 5] as const;
 export type HeadingLevel = (typeof headingLevels)[number];
 
 @Component({
-  selector: 'community-heading',
+  selector: 'rhc-heading',
   imports: [CommonModule],
   templateUrl: './heading.component.html',
   styleUrl: './heading.component.css',

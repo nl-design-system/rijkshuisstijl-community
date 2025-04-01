@@ -21,10 +21,10 @@ describe('HeadingComponent', () => {
   });
 
   it('should use the correct heading level', () => {
-    for (let i of [1, 2, 3, 4, 5] as HeadingLevel[]) {
-      component.headingLevel = i;
+    for (let level of [1, 2, 3, 4, 5] as HeadingLevel[]) {
+      component.headingLevel = level;
       fixture.detectChanges();
-      const element = fixture.nativeElement.querySelector(`h${i}`);
+      const element = fixture.nativeElement.querySelector(`h${level}`);
       expect(element).toBeTruthy();
     }
   });

@@ -21,9 +21,9 @@ const meta: Meta<HeadingComponent> = {
     headingLevel: 1,
   },
   render: ({ headingLevel, appearanceLevel }) => ({
-    template: `<community-heading [headingLevel]=${headingLevel} ${appearanceLevel ? `[appearanceLevel]=${appearanceLevel}` : ''}>
+    template: `<rhc-heading [headingLevel]=${headingLevel} ${appearanceLevel ? `[appearanceLevel]=${appearanceLevel}` : ''}>
     Lorem ipsum dolor
-    </community-heading>`,
+    </rhc-heading>`,
     props: {
       headingLevel,
       appearanceLevel,
