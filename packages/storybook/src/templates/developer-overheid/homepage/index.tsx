@@ -10,9 +10,10 @@ import {
   NavBar,
   PageContent,
   PageHeader,
-  TextInput,
+  // TextInput,
 } from '@rijkshuisstijl-community/components-react';
-// import { Heading, Heading1, Paragraph } from '@utrecht/component-library-react';
+import { IconSearch } from '@tabler/icons-react';
+import { Button, Heading, Paragraph } from '@utrecht/component-library-react';
 // import { BadgeList, DataBadge } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 
@@ -25,22 +26,24 @@ export default function DevOvhHomepage() {
         <title>Developer Overheid - Homepage</title>
 
         <Figure>
-          <Logo organisation={undefined}>
-            <Image alt="Rijksoverheid Logo" src="https://developer.overheid.nl/img/logo-rijksoverheid.svg" />
+          <Logo organisation="" subtitle="">
+            <Icon icon="nederland-map" />
           </Logo>
 
-          <Logo
-            className="rhc-dev-logo"
-            organisation="developer.overheid.nl"
-            subtitle="Ontwikkelaarsportaal van de Nederlandse overheid"
-          >
-            <Image
-              alt="Developer Overheid logo"
-              height={35}
-              src="https://developer.overheid.nl/img/logo-don.svg"
-              width={35}
-            ></Image>
-          </Logo>
+          <div className="rhc-logo-container">
+            <div className="rhc-logo-heading">
+              <Image
+                alt="Developer Overheid logo"
+                height={35}
+                src="https://developer.overheid.nl/img/logo-don.svg"
+                width={35}
+              ></Image>
+              <Heading className="rhc-logo-main-heading" level={1}>
+                developers.overheid.nl
+              </Heading>
+            </div>
+            <Paragraph className="rhc-logo-paragraph">Ontwikkelaarsportaal van de Nederlandse overheid</Paragraph>
+          </div>
         </Figure>
 
         <NavBar
@@ -57,10 +60,14 @@ export default function DevOvhHomepage() {
             { id: '3', href: '/', label: 'Communities' },
             { id: '4', href: '/', label: 'Blog' },
           ]}
-        ></NavBar>
-
-        <TextInput aria-label="text-input-label" name="subject" placeholder="Zoek"></TextInput>
+        >
+          <Button appearance="">
+            <IconSearch></IconSearch>
+          </Button>
+          {/* <TextInput aria-label="text-input-label" name="subject" placeholder="Zoek"></TextInput> */}
+        </NavBar>
       </PageHeader>
+
       <PageBody className="rhc-templates-main-content">
         <main>
           <PageContent className="rhc-templates-page-content">
