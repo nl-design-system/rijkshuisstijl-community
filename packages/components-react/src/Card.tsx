@@ -67,6 +67,8 @@ const DefaultCard = ({
   return (
     <div className={clsx('rhc-card', 'rhc-card--default', className)} ref={ref} {...restProps}>
       <div className="rhc-card__content">
+        {/* De heading moet vóór de afbeelding komen in de DOM, 
+          zodat screen readers de informatie op de juiste manier kunnen presenteren aan gebruikers. */}
         <div className="rhc-card__heading">{heading}</div>
         {imageSrc && (
           <div className="rhc-card__image-container" data-testid="rhc-card__image-container">
@@ -118,6 +120,8 @@ export const FullBleedCard = ({
       <a aria-label={title} href={href} title={title}></a>
     </span>
     <div className="rhc-card__content">
+      {/* De heading moet vóór de afbeelding komen in de DOM, 
+          zodat screen readers de informatie op de juiste manier kunnen presenteren aan gebruikers. */}
       <div className="rhc-card__heading">{heading}</div>
       <div className="rhc-card__description">{description}</div>
       <div className="rhc-card__metadata">{metadata}</div>
@@ -145,6 +149,8 @@ export const HorizontalImageCard = ({
       <a aria-label={title} href={href} title={title}></a>
     </span>
     <div className="rhc-card__content">
+      {/* De heading moet vóór de afbeelding komen in de DOM, 
+          zodat screen readers de informatie op de juiste manier kunnen presenteren aan gebruikers. */}
       <div className="rhc-card__heading">{heading}</div>
       {children}
     </div>
