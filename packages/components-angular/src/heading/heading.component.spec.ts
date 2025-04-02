@@ -22,7 +22,7 @@ describe('HeadingComponent', () => {
 
   it('should use the correct heading level', () => {
     for (let level of [1, 2, 3, 4, 5] as HeadingLevel[]) {
-      component.headingLevel = level;
+      component.level = level;
       fixture.detectChanges();
       const element = fixture.nativeElement.querySelector(`h${level}`);
       expect(element).toBeTruthy();
@@ -30,7 +30,7 @@ describe('HeadingComponent', () => {
   });
 
   it('should apply the css class according to appearance level', () => {
-    component.headingLevel = 5;
+    component.level = 5;
     component.appearanceLevel = 2;
     fixture.detectChanges();
     const element = fixture.debugElement.query(By.css('.nl-heading--level-2'));
@@ -38,14 +38,14 @@ describe('HeadingComponent', () => {
   });
 
   it('should contain the nl-heading class', () => {
-    component.headingLevel = 3;
+    component.level = 3;
     fixture.detectChanges();
     const element = fixture.debugElement.query(By.css('.nl-heading'));
     expect(element).toBeTruthy();
   });
 
   it('should render rich text content', () => {
-    component.headingLevel = 1;
+    component.level = 1;
     fixture.detectChanges();
     const headingDebugElement = fixture.debugElement.query(By.css('.nl-heading--level-1'));
     headingDebugElement.nativeElement.innerHTML = '<strong>Breaking</strong> news';

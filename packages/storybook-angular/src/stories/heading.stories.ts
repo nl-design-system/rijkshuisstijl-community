@@ -6,7 +6,7 @@ const meta: Meta<HeadingComponent> = {
   id: 'rhc-angular-heading',
   component: HeadingComponent,
   argTypes: {
-    headingLevel: {
+    level: {
       description: 'Heading level',
       options: headingLevels,
       control: { type: 'select' },
@@ -18,14 +18,14 @@ const meta: Meta<HeadingComponent> = {
     },
   },
   args: {
-    headingLevel: 1,
+    level: 1,
   },
-  render: ({ headingLevel, appearanceLevel }) => ({
-    template: `<rhc-heading [headingLevel]=${headingLevel} ${appearanceLevel ? `[appearanceLevel]=${appearanceLevel}` : ''}>
+  render: ({ level, appearanceLevel }) => ({
+    template: `<rhc-heading [level]=${level} ${appearanceLevel ? `[appearanceLevel]=${appearanceLevel}` : ''}>
     Lorem ipsum dolor
     </rhc-heading>`,
     props: {
-      headingLevel,
+      level,
       appearanceLevel,
     },
   }),
@@ -35,42 +35,42 @@ export default meta;
 
 export const Heading1: StoryObj<HeadingComponent> = {
   args: {
-    headingLevel: 1,
+    level: 1,
   },
   name: 'Heading 1',
 };
 
 export const Heading2: StoryObj<HeadingComponent> = {
   args: {
-    headingLevel: 2,
+    level: 2,
   },
   name: 'Heading 2',
 };
 
 export const Heading3: StoryObj<HeadingComponent> = {
   args: {
-    headingLevel: 3,
+    level: 3,
   },
   name: 'Heading 3',
 };
 
 export const Heading4: StoryObj<HeadingComponent> = {
   args: {
-    headingLevel: 4,
+    level: 4,
   },
   name: 'Heading 4',
 };
 
 export const Heading5: StoryObj<HeadingComponent> = {
   args: {
-    headingLevel: 5,
+    level: 5,
   },
   name: 'Heading 5',
 };
 
 export const AppearanceLevel1: StoryObj<HeadingComponent> = {
   args: {
-    headingLevel: 5,
+    level: 5,
     appearanceLevel: 1,
   },
   name: 'Appearance Level 1',

@@ -1,20 +1,30 @@
-<ng-container [ngSwitch]="headingLevel">
-  <h1 [class]="'nl-heading nl-heading--level-' + stylingLevel()" *ngSwitchCase="1">
-    <ng-container [ngTemplateOutlet]="content" />
-  </h1>
-  <h2 [class]="'nl-heading nl-heading--level-' + stylingLevel()" *ngSwitchCase="2">
-    <ng-container [ngTemplateOutlet]="content" />
-  </h2>
-  <h3 [class]="'nl-heading nl-heading--level-' + stylingLevel()" *ngSwitchCase="3">
-    <ng-container [ngTemplateOutlet]="content" />
-  </h3>
-  <h4 [class]="'nl-heading nl-heading--level-' + stylingLevel()" *ngSwitchCase="4">
-    <ng-container [ngTemplateOutlet]="content" />
-  </h4>
-  <h5 [class]="'nl-heading nl-heading--level-' + stylingLevel()" *ngSwitchCase="5">
-    <ng-container [ngTemplateOutlet]="content" />
-  </h5>
-</ng-container>
+@switch (level) {
+  @case (1) {
+    <h1 class="{{ computedClasses() }}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </h1>
+  }
+  @case (2) {
+    <h2 class="{{ computedClasses() }}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </h2>
+  }
+  @case (3) {
+    <h3 class="{{ computedClasses() }}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </h3>
+  }
+  @case (4) {
+    <h4 class="{{ computedClasses() }}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </h4>
+  }
+  @case (5) {
+    <h5 class="{{ computedClasses() }}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </h5>
+  }
+}
 
 <ng-template #content>
   <ng-content></ng-content>

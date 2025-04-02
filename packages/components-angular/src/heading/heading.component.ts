@@ -11,8 +11,9 @@ export type HeadingLevel = (typeof headingLevels)[number];
   styleUrl: './heading.component.css',
 })
 export class HeadingComponent {
-  @Input({ required: true }) headingLevel!: HeadingLevel;
+  @Input({ required: true }) level!: HeadingLevel;
   @Input() appearanceLevel?: HeadingLevel;
 
-  stylingLevel = () => this.appearanceLevel ?? this.headingLevel;
+  stylingLevel = () => this.appearanceLevel ?? this.level;
+  computedClasses = () => `nl-heading nl-heading--level-${this.stylingLevel()}`;
 }
