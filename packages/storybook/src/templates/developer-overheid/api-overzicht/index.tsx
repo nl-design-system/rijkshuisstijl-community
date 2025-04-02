@@ -93,7 +93,9 @@ export default function DevOvhAPIoverzicht() {
                         <IconArrowDown />
                       </Icon>
                     </Button>
-                    <Button type="submit">Filter</Button>
+                    <Button appearance="secondary-action-button" type="submit">
+                      Filter
+                    </Button>
                   </ActionGroup>
                 </aside>
               </div>
@@ -102,7 +104,7 @@ export default function DevOvhAPIoverzicht() {
             <div className="rhc-grid-container__right">
               <div className="rhc-api-toevoegen">
                 <Paragraph>119 APIs</Paragraph>
-                <Button>
+                <Button appearance="secondary-action-button">
                   <Icon>
                     <IconPlus />
                   </Icon>
