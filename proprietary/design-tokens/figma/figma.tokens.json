@@ -1099,7 +1099,85 @@
       }
     }
   },
-  "common/rounded-corner": {
+  "common/rounded-corner-current": {
+    "rhc": {
+      "keep": {
+        "top-left": {
+          "borderRadiusTopLeft": {
+            "value": "{rhc.border-radius.keep}",
+            "type": "borderRadius"
+          },
+          "borderRadiusTopRight": {
+            "value": "0",
+            "type": "borderRadius"
+          },
+          "borderRadiusBottomRight": {
+            "value": "0",
+            "type": "borderRadius"
+          },
+          "borderRadiusBottomLeft": {
+            "value": "0",
+            "type": "borderRadius"
+          }
+        },
+        "top-right": {
+          "borderRadiusTopRight": {
+            "value": "{rhc.border-radius.keep}",
+            "type": "borderRadius"
+          },
+          "borderRadiusTopLeft": {
+            "value": "0",
+            "type": "borderRadius"
+          },
+          "borderRadiusBottomRight": {
+            "value": "0",
+            "type": "borderRadius"
+          },
+          "borderRadiusBottomLeft": {
+            "value": "0",
+            "type": "borderRadius"
+          }
+        },
+        "bottom-right": {
+          "borderRadiusTopLeft": {
+            "value": "0",
+            "type": "borderRadius"
+          },
+          "borderRadiusTopRight": {
+            "value": "0",
+            "type": "borderRadius"
+          },
+          "borderRadiusBottomRight": {
+            "value": "{rhc.border-radius.keep}",
+            "type": "borderRadius"
+          },
+          "borderRadiusBottomLeft": {
+            "value": "0",
+            "type": "borderRadius"
+          }
+        },
+        "bottom-left": {
+          "borderRadiusTopLeft": {
+            "value": "0",
+            "type": "borderRadius"
+          },
+          "borderRadiusTopRight": {
+            "value": "0",
+            "type": "borderRadius"
+          },
+          "borderRadiusBottomRight": {
+            "value": "0",
+            "type": "borderRadius"
+          },
+          "borderRadiusBottomLeft": {
+            "value": "{rhc.border-radius.keep}",
+            "type": "borderRadius"
+          }
+        }
+      }
+    }
+  },
+  "common/rounded-corner-new": {
     "rhc": {
       "rounded-corner": {
         "xs": {
@@ -1118,503 +1196,11 @@
           "border-radius": {
             "value": "{rhc.size.2-lint}",
             "type": "borderRadius"
-          }
-        },
-        "top-left": {
-          "md": {
-            "value": {
-              "borderRadiusTopLeft": "{rhc.rounded-corner.md.border-radius}",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "0",
-              "borderWidthTop": "1",
-              "borderWidthRight": "0",
-              "borderWidthBottom": "0",
-              "borderWidthLeft": "1"
-            },
-            "type": "composition"
-          },
-          "xs": {
-            "value": {
-              "borderRadiusTopLeft": "{rhc.rounded-corner.xs.border-radius}",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "0"
-            },
-            "type": "composition"
-          },
-          "xl": {
-            "value": {
-              "borderRadiusTopLeft": "{rhc.rounded-corner.xl.border-radius}",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "0"
-            },
-            "type": "composition"
           }
         },
         "border-width": {
           "value": "{rhc.border-width.m}",
           "type": "borderWidth"
-        },
-        "border-color": {
-          "value": "{rhc.color.primary.500}",
-          "type": "color"
-        },
-        "top-right": {
-          "md": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "{rhc.rounded-corner.md.border-radius}",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "0",
-              "borderWidthTop": "1",
-              "borderWidthRight": "1",
-              "borderWidthBottom": "0",
-              "borderWidthLeft": "0"
-            },
-            "type": "composition"
-          },
-          "xs": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "{rhc.rounded-corner.xs.border-radius}",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "0"
-            },
-            "type": "composition"
-          },
-          "xl": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "{rhc.rounded-corner.xl.border-radius}",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "0"
-            },
-            "type": "composition"
-          }
-        },
-        "bottom-right": {
-          "md": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "{rhc.rounded-corner.md.border-radius}",
-              "borderRadiusBottomLeft": "0",
-              "borderWidthTop": "0",
-              "borderWidthRight": "1",
-              "borderWidthBottom": "1",
-              "borderWidthLeft": "0"
-            },
-            "type": "composition"
-          },
-          "xs": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "{rhc.rounded-corner.xs.border-radius}",
-              "borderRadiusBottomLeft": "0"
-            },
-            "type": "composition"
-          },
-          "xl": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "{rhc.rounded-corner.xl.border-radius}",
-              "borderRadiusBottomLeft": "0"
-            },
-            "type": "composition"
-          }
-        },
-        "bottom-left": {
-          "md": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "{rhc.rounded-corner.md.border-radius}",
-              "borderWidthTop": "0",
-              "borderWidthBottom": "1",
-              "borderWidthLeft": "1",
-              "borderWidthRight": "0"
-            },
-            "type": "composition"
-          },
-          "xs": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "{rhc.rounded-corner.xs.border-radius}"
-            },
-            "type": "composition"
-          },
-          "xl": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "{rhc.rounded-corner.xl.border-radius}"
-            },
-            "type": "composition"
-          }
-        }
-      },
-      "color-set": {
-        "lintblauw": {
-          "border": {
-            "value": {
-              "borderColor": "{rhc.color.lintblauw.500}",
-              "fill": "{rhc.color.wit}"
-            },
-            "type": "composition"
-          }
-        }
-      }
-    }
-  },
-  "common/rounded-corner/top-left": {
-    "rhc": {
-      "rounded-corner": {
-        "position": {
-          "border-radius-top-left": {
-            "value": "48px",
-            "type": "borderRadius"
-          },
-          "border-radius-top-right": {
-            "value": "0",
-            "type": "borderRadius"
-          },
-          "border-radius-bottom-right": {
-            "value": "0",
-            "type": "borderRadius"
-          },
-          "border-radius-bottom-left": {
-            "value": "0",
-            "type": "borderRadius"
-          }
-        }
-      }
-    }
-  },
-  "common/rounded-corner/top-right": {
-    "rhc": {
-      "rounded-corner": {
-        "position": {
-          "border-radius-top-left": {
-            "value": "0",
-            "type": "borderRadius"
-          },
-          "border-radius-top-right": {
-            "value": "48px",
-            "type": "borderRadius"
-          },
-          "border-radius-bottom-right": {
-            "value": "0",
-            "type": "borderRadius"
-          },
-          "border-radius-bottom-left": {
-            "value": "0",
-            "type": "borderRadius"
-          }
-        }
-      }
-    }
-  },
-  "common/rounded-corner/bottom-right": {
-    "rhc": {
-      "rounded-corner": {
-        "position": {
-          "border-radius-top-left": {
-            "value": "0",
-            "type": "borderRadius"
-          },
-          "border-radius-top-right": {
-            "value": "0",
-            "type": "borderRadius"
-          },
-          "border-radius-bottom-right": {
-            "value": "48px",
-            "type": "borderRadius"
-          },
-          "border-radius-bottom-left": {
-            "value": "0",
-            "type": "borderRadius"
-          }
-        }
-      }
-    }
-  },
-  "common/rounded-corner/bottom-left": {
-    "rhc": {
-      "rounded-corner": {
-        "position": {
-          "border-radius-top-left": {
-            "value": "0",
-            "type": "borderRadius"
-          },
-          "border-radius-top-right": {
-            "value": "0",
-            "type": "borderRadius"
-          },
-          "border-radius-bottom-right": {
-            "value": "0",
-            "type": "borderRadius"
-          },
-          "border-radius-bottom-left": {
-            "value": "48px",
-            "type": "borderRadius"
-          }
-        }
-      }
-    }
-  },
-  "common/rounded-corner_oud": {
-    "rhc": {
-      "rounded-corner": {
-        "xs": {
-          "border-radius": {
-            "value": "{rhc.size.half-lint}",
-            "type": "borderRadius"
-          }
-        },
-        "md": {
-          "border-radius": {
-            "value": "{rhc.size.lint}",
-            "type": "borderRadius"
-          }
-        },
-        "xl": {
-          "border-radius": {
-            "value": "{rhc.size.2-lint}",
-            "type": "borderRadius"
-          }
-        },
-        "top-left": {
-          "md": {
-            "value": {
-              "borderRadiusTopLeft": "{rhc.rounded-corner.md.border-radius}",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "0",
-              "borderWidthTop": "1",
-              "borderWidthRight": "0",
-              "borderWidthBottom": "0",
-              "borderWidthLeft": "1"
-            },
-            "type": "composition"
-          },
-          "xs": {
-            "value": {
-              "borderRadiusTopLeft": "{rhc.rounded-corner.xs.border-radius}",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "0"
-            },
-            "type": "composition"
-          },
-          "xl": {
-            "value": {
-              "borderRadiusTopLeft": "{rhc.rounded-corner.xl.border-radius}",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "0"
-            },
-            "type": "composition"
-          }
-        },
-        "position": {
-          "top-left": {
-            "border-radius-top-left": {
-              "value": "48px",
-              "type": "borderRadius"
-            },
-            "border-radius-top-right": {
-              "value": "0",
-              "type": "borderRadius"
-            },
-            "border-radius-bottom-right": {
-              "value": "0",
-              "type": "borderRadius"
-            },
-            "border-radius-bottom-left": {
-              "value": "0",
-              "type": "borderRadius"
-            }
-          },
-          "top-right": {
-            "border-radius-top-left": {
-              "value": "0",
-              "type": "borderRadius"
-            },
-            "border-radius-top-right": {
-              "value": "48px",
-              "type": "borderRadius"
-            },
-            "border-radius-bottom-right": {
-              "value": "0",
-              "type": "borderRadius"
-            },
-            "border-radius-bottom-left": {
-              "value": "0",
-              "type": "borderRadius"
-            }
-          },
-          "bottom-right": {
-            "border-radius-top-left": {
-              "value": "0",
-              "type": "borderRadius"
-            },
-            "border-radius-top-right": {
-              "value": "0",
-              "type": "borderRadius"
-            },
-            "border-radius-bottom-right": {
-              "value": "48px",
-              "type": "borderRadius"
-            },
-            "border-radius-bottom-left": {
-              "value": "0",
-              "type": "borderRadius"
-            }
-          },
-          "bottom-left": {
-            "border-radius-top-left": {
-              "value": "0",
-              "type": "borderRadius"
-            },
-            "border-radius-top-right": {
-              "value": "0",
-              "type": "borderRadius"
-            },
-            "border-radius-bottom-right": {
-              "value": "0",
-              "type": "borderRadius"
-            },
-            "border-radius-bottom-left": {
-              "value": "48px",
-              "type": "borderRadius"
-            }
-          }
-        },
-        "border-width": {
-          "value": "{rhc.border-width.default}",
-          "type": "borderWidth"
-        },
-        "border-color": {
-          "value": "{rhc.color.primary.500}",
-          "type": "color"
-        },
-        "top-right": {
-          "md": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "{rhc.rounded-corner.md.border-radius}",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "0",
-              "borderWidthTop": "1",
-              "borderWidthRight": "1",
-              "borderWidthBottom": "0",
-              "borderWidthLeft": "0"
-            },
-            "type": "composition"
-          },
-          "xs": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "{rhc.rounded-corner.xs.border-radius}",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "0"
-            },
-            "type": "composition"
-          },
-          "xl": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "{rhc.rounded-corner.xl.border-radius}",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "0"
-            },
-            "type": "composition"
-          }
-        },
-        "bottom-right": {
-          "md": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "{rhc.rounded-corner.md.border-radius}",
-              "borderRadiusBottomLeft": "0",
-              "borderWidthTop": "0",
-              "borderWidthRight": "1",
-              "borderWidthBottom": "1",
-              "borderWidthLeft": "0"
-            },
-            "type": "composition"
-          },
-          "xs": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "{rhc.rounded-corner.xs.border-radius}",
-              "borderRadiusBottomLeft": "0"
-            },
-            "type": "composition"
-          },
-          "xl": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "{rhc.rounded-corner.xl.border-radius}",
-              "borderRadiusBottomLeft": "0"
-            },
-            "type": "composition"
-          }
-        },
-        "bottom-left": {
-          "md": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "{rhc.rounded-corner.md.border-radius}",
-              "borderWidthTop": "0",
-              "borderWidthBottom": "1",
-              "borderWidthLeft": "1",
-              "borderWidthRight": "0"
-            },
-            "type": "composition"
-          },
-          "xs": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "{rhc.rounded-corner.xs.border-radius}"
-            },
-            "type": "composition"
-          },
-          "xl": {
-            "value": {
-              "borderRadiusTopLeft": "0",
-              "borderRadiusTopRight": "0",
-              "borderRadiusBottomRight": "0",
-              "borderRadiusBottomLeft": "{rhc.rounded-corner.xl.border-radius}"
-            },
-            "type": "composition"
-          }
-        }
-      },
-      "color-set": {
-        "lintblauw": {
-          "border": {
-            "value": {
-              "borderColor": "{rhc.color.lintblauw.500}",
-              "fill": "{rhc.color.wit}"
-            },
-            "type": "composition"
-          }
         }
       }
     }
@@ -7811,9 +7397,9 @@
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
         "components/pre-heading": "enabled",
-        "common/rounded-corner": "enabled",
         "components/blockquote-current": "enabled",
-        "components/blockquote-new": "disabled"
+        "common/rounded-corner-current": "disabled",
+        "common/rounded-corner-new": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -7898,9 +7484,9 @@
         "components/sub-nav-bar": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
         "components/pre-heading": "enabled",
-        "common/rounded-corner": "enabled",
         "components/blockquote-current": "enabled",
-        "components/blockquote-new": "disabled"
+        "common/rounded-corner-current": "disabled",
+        "common/rounded-corner-new": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -7986,9 +7572,9 @@
         "overwrites/oude rijkshuisstijl/border": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
         "components/pre-heading": "enabled",
-        "common/rounded-corner": "enabled",
         "components/blockquote-current": "enabled",
-        "components/blockquote-new": "disabled"
+        "common/rounded-corner-current": "disabled",
+        "common/rounded-corner-new": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8075,9 +7661,9 @@
         "overwrites/focus/outline-color": "enabled",
         "overwrites/primaire kleur/mintgroen": "enabled",
         "components/pre-heading": "enabled",
-        "common/rounded-corner": "enabled",
         "components/blockquote-current": "enabled",
-        "components/blockquote-new": "disabled"
+        "common/rounded-corner-current": "disabled",
+        "common/rounded-corner-new": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8095,12 +7681,8 @@
       "common/font",
       "common/focus",
       "common/border",
-      "common/rounded-corner",
-      "common/rounded-corner/top-left",
-      "common/rounded-corner/top-right",
-      "common/rounded-corner/bottom-right",
-      "common/rounded-corner/bottom-left",
-      "common/rounded-corner_oud",
+      "common/rounded-corner-current",
+      "common/rounded-corner-new",
       "utrecht/focus",
       "utrecht/pointer-target",
       "utrecht/rich-text",
