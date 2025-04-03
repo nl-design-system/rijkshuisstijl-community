@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/components-css
 
+## 1.0.4
+
+### Patch Changes
+
+- b505c9b: Update README to fix broken relative links to files in the repository.
+- 9eeb7b7: Dependency updates (week 12)
+- 5cf3cd0: Fixed the alignment of the pre-footer element to the center.
+
 ## 1.0.3
 
 ### Patch Changes
