@@ -855,11 +855,23 @@
             "type": "color",
             "description": "Tekst en iconen die op een primary color achtergrond komen te staan"
           },
+          "on-lintblauw": {
+            "parent": "mode/light",
+            "value": "{rhc.color.wit}",
+            "type": "color",
+            "description": "Tekst en iconen die op een lintblauwe achtergrond kleur komen te staan"
+          },
+          "on-accent": {
+            "parent": "mode/light",
+            "value": "{rhc.color.wit}",
+            "type": "color",
+            "description": "Tekst en iconen die op de accent achtergrond kleur komen te staan"
+          },
           "onEmphasis": {
             "parent": "mode/light",
             "value": "{rhc.color.wit}",
             "type": "color",
-            "description": "Deze niet meer gebruiken. Is vervangen voor foreground.on-primary"
+            "description": "Deze niet meer gebruiken. Is vervangen voor foreground.on-primary, foreground.on-lintblauw en foreground.on-accent"
           },
           "link": {
             "value": "{rhc.color.donkerblauw.500}",
@@ -3545,7 +3557,7 @@
           "type": "color"
         },
         "color": {
-          "value": "{rhc.color.foreground.on-primary}",
+          "value": "{rhc.color.foreground.on-lintblauw}",
           "type": "color"
         },
         "padding-block-start": {
@@ -4096,7 +4108,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.on-primary}",
+            "value": "{rhc.color.foreground.on-lintblauw}",
             "type": "color"
           },
           "row-gap": {
@@ -4773,7 +4785,7 @@
             "type": "borderRadius"
           },
           "color": {
-            "value": "{rhc.color.foreground.on-primary}",
+            "value": "{rhc.color.wit}",
             "type": "color"
           }
         },
@@ -7484,8 +7496,7 @@
         "components/blockquote-current": "enabled",
         "common/rounded-corner-new": "enabled",
         "common/rounded-corner-current": "enabled",
-        "components/blockquote-new": "enabled",
-        "overwrites/oude rijkshuisstijl/blockquote": "disabled"
+        "components/blockquote-new": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -7573,8 +7584,7 @@
         "components/blockquote-current": "enabled",
         "common/rounded-corner-new": "enabled",
         "common/rounded-corner-current": "enabled",
-        "components/blockquote-new": "enabled",
-        "overwrites/oude rijkshuisstijl/blockquote": "disabled"
+        "components/blockquote-new": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -7663,8 +7673,7 @@
         "components/blockquote-current": "enabled",
         "common/rounded-corner-new": "enabled",
         "common/rounded-corner-current": "enabled",
-        "components/blockquote-new": "enabled",
-        "overwrites/oude rijkshuisstijl/blockquote": "disabled"
+        "components/blockquote-new": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -7754,8 +7763,7 @@
         "components/blockquote-current": "enabled",
         "common/rounded-corner-new": "enabled",
         "common/rounded-corner-current": "enabled",
-        "components/blockquote-new": "enabled",
-        "overwrites/oude rijkshuisstijl/blockquote": "disabled"
+        "components/blockquote-new": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
