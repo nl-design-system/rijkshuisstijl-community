@@ -1,0 +1,47 @@
+{
+  "name": "@rijkshuisstijl-community/storybook-angular",
+  "version": "0.0.0",
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
+    "directory": "packages/storybook-angular"
+  },
+  "scripts": {
+    "ng": "ng",
+    "clean": "rimraf dist/",
+    "storybook": "ng run angular-latest:storybook --port 6008",
+    "build-storybook": "ng run angular-latest:build-storybook --output-dir dist/",
+    "prod-static": "http-server --port 6006 dist/"
+  },
+  "dependencies": {
+    "@angular/common": "19.2.0",
+    "@angular/compiler": "19.2.0",
+    "@angular/core": "19.2.0",
+    "@angular/forms": "19.2.0",
+    "@angular/platform-browser": "19.2.0",
+    "@angular/platform-browser-dynamic": "19.2.0",
+    "@angular/router": "19.2.0",
+    "rxjs": "7.8.0",
+    "tslib": "2.3.0",
+    "zone.js": "0.15.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "19.2.3",
+    "@angular/cli": "19.2.3",
+    "@angular/compiler-cli": "19.2.0",
+    "@chromatic-com/storybook": "3",
+    "@rijkshuisstijl-community/components-angular": "workspace:*",
+    "@rijkshuisstijl-community/components-css": "workspace:*",
+    "@rijkshuisstijl-community/design-tokens": "workspace:*",
+    "@storybook/addon-essentials": "8.6.7",
+    "@storybook/addon-interactions": "8.6.7",
+    "@storybook/addon-onboarding": "8.6.7",
+    "@storybook/addon-webpack5-compiler-babel": "3.0.5",
+    "@storybook/angular": "8.6.7",
+    "@storybook/blocks": "8.6.7",
+    "@storybook/test": "8.6.7",
+    "storybook": "8.6.7",
+    "typescript": "5.7.2"
+  }
+}

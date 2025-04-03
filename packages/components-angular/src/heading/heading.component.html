@@ -1,0 +1,31 @@
+@switch (level) {
+  @case (1) {
+    <h1 class="{{ computedClasses() }}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </h1>
+  }
+  @case (2) {
+    <h2 class="{{ computedClasses() }}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </h2>
+  }
+  @case (3) {
+    <h3 class="{{ computedClasses() }}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </h3>
+  }
+  @case (4) {
+    <h4 class="{{ computedClasses() }}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </h4>
+  }
+  @case (5) {
+    <h5 class="{{ computedClasses() }}">
+      <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </h5>
+  }
+}
+
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>
