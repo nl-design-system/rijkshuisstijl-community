@@ -2,8 +2,6 @@
 
 # Design Tokens for the RIVM Design System
 
-# Design Tokens for the Logius Design System
-
 **Applying design elements from this project is strictly prohibited for organisations that are not part of the central Government of The Netherlands.**
 
 This project is part of a community iniative to use [NL Design System](https://nldesignsystem.nl) components for projects that need to adhere to Rijkshuisstijl. Organisations from the central Government of the Netherlands (for example: [Belastingdienst](https://www.belastingdienst.nl/), [DUO](https://www.duo.nl), [Logius](http://logius.nl), [SVB](https://www.svb.nl/)), as well as those who are contracted by them to develop websites and apps, are able to collaborate via this project.
