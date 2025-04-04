@@ -62,7 +62,7 @@ const preview: Preview = {
       storySort: {
         order: [
           'Rijkshuisstijl Community',
-          ['README', '*', 'Icon Sets', 'Design Tokens', ['README', 'CHANGELOG']],
+          ['README', '*', 'Icon Sets', 'Design Tokens', ['Standaard Thema']],
           'Rijkshuisstijl',
           ['README', 'CHANGELOG'],
           'Web Components',
