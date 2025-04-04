@@ -96,6 +96,7 @@ export default function DevOvhHomepage() {
 
             <section className="rhc-cards-container">
               <Card
+                className="rhc-card-size"
                 description="Tutorials, tools, code voorbeelden en meer. Alles wat je nodig hebt om aan de slag te gaan met software van en voor de overheid."
                 heading="Kennisbank"
                 href="#"
@@ -106,6 +107,7 @@ export default function DevOvhHomepage() {
                 title="Kennisbank"
               ></Card>
               <Card
+                className="rhc-card-size"
                 description="Ga in gesprek met andere developers en vind hier getting started guides, tutorials en tools."
                 heading="Onze community"
                 href="#"
@@ -116,6 +118,7 @@ export default function DevOvhHomepage() {
                 title="Onze community"
               ></Card>
               <Card
+                className="rhc-card-size"
                 description="Bekijk welke API‘s er allemaal zijn en kom er achter hoe je jouw oplossing hier op kan laten aansluiten."
                 heading="Vind een API"
                 href="#"
@@ -126,6 +129,7 @@ export default function DevOvhHomepage() {
                 title="Vind een API"
               ></Card>
               <Card
+                className="rhc-card-size"
                 description="Vind bestaande repositories om bij aan te haken en ontdek wat er binnen welke organisatie beschikbaar is."
                 heading="Vind een repository"
                 href="#"
