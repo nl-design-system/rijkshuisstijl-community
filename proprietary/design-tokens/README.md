@@ -13,9 +13,41 @@ Nederland (
 bijvoorbeeld: [Belastingdienst](https://www.belastingdienst.nl/), [DUO](https://www.duo.nl), [Logius](http://logius.nl), [SVB](https://www.svb.nl/))
 en degenen die door hen zijn ingehuurd voor het ontwikkelen van websites en apps, kunnen via dit project samenwerken.
 
+# Tokens gebruiken in eigen project
+
+Hieronder vind je instructies hoe je de standaard Rijkshuisstijl-community tokens in je project kan toepassen.
+
+1. Installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens).
+
+   ```bash
+   npm install --save-dev @rijkshuisstijl-community/design-tokens
+
+   # En als je CSS classes wilt importeren
+   npm install --save-dev @rijkshuisstijl-community/components-css
+   ```
+
+   Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.css`-bestand uit de `dist` map van het
+   pakket, en omring het deel van je applicatie waar je het thema wilt toepassen. Het Rijkshuisstijl-thema is bijvoorbeeld: `rhc-theme`.
+
+2. Pas het thema toe in je project, hieronder een voorbeeld in HTML
+
+   ```html
+   <!-- Als je het default Rijkshuisstijl community thema wilt gebruiken, gebruik .rhc-theme -->
+   <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css" />
+   <!-- Of als je een eigen thema wilt importeren, gebruik het thema naam als class name -->
+   <link rel="stylesheet" href="@rijkshuisstijl-community/design-tokens/dist/<thema naam>/index.css" />
+   <!-- Mogelijk wil je ook de CSS classes importeren als je Rijkshuijsstijl-community componenten gebruikt -->
+   <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/components-css/dist/index.css" />
+
+   <body class="rhc-theme">
+       <button class="rhc-button">Click Here!</button>
+     </div>
+   </body>
+   ```
+
 # Nieuw thema toevoegen
 
-Er zijn verschillende bedrijfsthema's in deze token set waarvoor (gedeeltelijke) support is.
+Er zijn al verschillende bedrijfsthema's in de @rijkshuisstijl-community/design-tokens package waarvoor (gedeeltelijke) support is vanuit de Rijkshuisstijl-community. Hieronder volgt een uitleg hoe nog meer thema's kunnen worden toegevoegd
 
 ## Nieuwe thema tokens
 
@@ -136,36 +168,4 @@ Er zijn verschillende bedrijfsthema's in deze token set waarvoor (gedeeltelijke)
      // ...
    };
    export default preview;
-   ```
-
-# Thema gebruiken in eigen project
-
-Hieronder vind je instructies hoe je thema's daadwerkelijk in je project kan toepassen.
-
-1. Installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens).
-
-   ```bash
-   npm install --save-dev @rijkshuisstijl-community/design-tokens
-
-   # En als je CSS classes wilt importeren
-   npm install --save-dev @rijkshuisstijl-community/components-css
-   ```
-
-   Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.css`-bestand uit de `dist` map van het
-   pakket, en omring het deel van je applicatie waar je het thema wilt toepassen. Het Rijkshuisstijl-thema is bijvoorbeeld: `rhc-theme`.
-
-2. Pas het thema toe in je project, hieronder een voorbeeld in HTML
-
-   ```html
-   <!-- Als je het default Rijkshuisstijl community thema wilt gebruiken, gebruik .rhc-theme -->
-   <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css" />
-   <!-- Of als je een eigen thema wilt importeren, gebruik het thema naam als class name -->
-   <link rel="stylesheet" href="@rijkshuisstijl-community/design-tokens/dist/<thema naam>/index.css" />
-   <!-- Meestal wil je ook de CSS classes importeren als je Rijkshuijsstijl-community componenten gebruikt -->
-   <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/components-css/dist/index.css" />
-
-   <body class="<thema naam als class name>">
-       <button class="rhc-button">Click Here!</button>
-     </div>
-   </body>
    ```
