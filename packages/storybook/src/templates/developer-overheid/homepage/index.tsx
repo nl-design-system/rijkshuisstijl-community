@@ -73,11 +73,10 @@ export default function DevOvhHomepage() {
           <PageContent className="rhc-templates-page-content">
             {/* <Hero
               aspectRatio="16 / 9"
-              heading="Informatie, bronnen en tools van de overheid voor ontwikkelaars door Kennisplatform API's, Digilab, Opensourcewerken, Binnenlandse Zaken, Geonovum, Belastingdienst, Kadaster en andere overheidsinstanties."
+              heading="Informatie, bronnen en tools van de overheid voor ontwikkelaars door Kennisplatform API's, Digilab, Opensourcewerken, Binnenlandse Zaken, Geonovum, Belastingdienst, Kadaster en andere overheidsinstanties.."
               headingLevel={1}
               imageAlt="Sterrenhemel"
-              imageSrc="https://media.istockphoto.com/id/1369277204/vector/turquoise-green-starry-sky-illustration.jpg?s=612x612&w=0&k=20&c=zt_-oaVq_8yNHVe61pZQZ2nQXY6j0QiY6u09oScn8xU="
-              subHeading="Eén centrale plek voor de developer die voor of met de overheid ontwikkelt"
+              imageSrc=""
             ></Hero> */}
 
             {/* <Hero
@@ -145,64 +144,56 @@ export default function DevOvhHomepage() {
       </PageBody>
 
       <Footer
+        backtotop
         appearanceLevel={4}
-        heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+        background="primary-filled"
+        heading="Mede mogelijk gemaakt door:"
         columns={[
           {
+            appearanceLevel: 4,
             heading: 'Community',
             children: [
               <LinkList key="1">
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Contact
+                  Discourse
                 </LinkListLink>
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Abonneren
+                  Slack
                 </LinkListLink>
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  RSS
+                  GitHub
                 </LinkListLink>
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Vacatures
+                  Mastodon
                 </LinkListLink>
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Sitemap
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Help
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Archief
+                  LinkedIn
                 </LinkListLink>
               </LinkList>,
             ],
           },
           {
+            appearanceLevel: 4,
             heading: 'Overig',
             children: (
               <LinkList key="2">
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Over deze organisatie
+                  Bijdragen
                 </LinkListLink>
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Wetten en regelingen
+                  Implementatie ondersteuning{' '}
                 </LinkListLink>
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Copyright
+                  Contact
                 </LinkListLink>
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Privacy
+                  Privacyverklaring
                 </LinkListLink>
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Cookies
+                  Toegankelijkheids verklaring
                 </LinkListLink>
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Toegankelijkheid
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Open data
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Kwetsbaarheid melden
+                  Sitearchief
                 </LinkListLink>
               </LinkList>
             ),
