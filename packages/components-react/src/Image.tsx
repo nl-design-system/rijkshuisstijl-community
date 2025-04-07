@@ -3,7 +3,7 @@ import { Ref } from 'react';
 
 export interface ImageProps extends UtrechtImageProps {
   ref?: Ref<HTMLImageElement>;
-  alt?: string;
+  alt: string;
 }
 
 export const Image = ({ ref, className, alt, ...restProps }: ImageProps) =>
