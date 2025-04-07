@@ -1,9 +1,9 @@
 import { Image } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/img/README.md?raw';
 import referenceDocs from '@utrecht/components/img/docs/references.nl.md?raw';
 import htmlDocs from '@utrecht/components/img/docs/technology-html.nl.md?raw';
 import wcagDocs from '@utrecht/components/img/docs/wcag.nl.md?raw';
+import readme from './image.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
@@ -50,7 +50,11 @@ const meta = {
         component: mergeMarkdown([readme, htmlDocs, referenceDocs, wcagDocs]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    nldesignsystem: 'https://nldesignsystem.nl/image',
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1303-6078&p=f&t=qOUC6V0a7o4DPaSw-0',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Image.tsx',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, maar de photo property altijd geset, daardoor is hij altijd max-height en max-width 100%.',
   },

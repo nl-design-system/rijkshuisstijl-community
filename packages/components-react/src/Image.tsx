@@ -3,10 +3,10 @@ import { Ref } from 'react';
 
 export interface ImageProps extends UtrechtImageProps {
   ref?: Ref<HTMLImageElement>;
+  alt: string;
 }
 
-export const Image = ({ ref, className, ...restProps }: ImageProps) => (
-  <UtrechtImage {...restProps} photo className={className} ref={ref} />
-);
+export const Image = ({ ref, className, alt, ...restProps }: ImageProps) =>
+  alt && <UtrechtImage alt={alt} {...restProps} photo className={className} ref={ref} />;
 
 Image.displayName = 'Image';
