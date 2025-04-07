@@ -9,6 +9,10 @@
 
   align-items: flex-start;
   column-gap: var(--utrecht-link-list-item-column-gap, inherit);
+
+  .utrecht-icon {
+    flex-shrink: 0;
+  }
 }
 
 .utrecht-link-list__link:visited {
