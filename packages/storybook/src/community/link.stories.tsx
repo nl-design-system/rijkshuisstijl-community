@@ -66,26 +66,6 @@ const meta = {
       },
       defaultValue: '',
     },
-    iconLeft: {
-      description: 'Icon Left',
-      type: {
-        name: 'boolean',
-      },
-      table: {
-        category: 'Demo',
-      },
-      defaultValue: false,
-    },
-    iconRight: {
-      description: 'Icon Right',
-      type: {
-        name: 'boolean',
-      },
-      table: {
-        category: 'Demo',
-      },
-      defaultValue: false,
-    },
   },
   args: {
     children: '',
@@ -118,7 +98,11 @@ const meta = {
         ]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=153-1056&p=f&t=Vqau7APnb0CBKrLh-0',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Link.tsx',
+    nldesignsystem: 'https://nldesignsystem.nl/link',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
