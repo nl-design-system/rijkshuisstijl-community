@@ -23,14 +23,16 @@ export interface FullBleedCardProps extends Omit<HorizontalImageCardProps, 'appe
   metadata?: ReactNode;
 }
 
-export interface CardProps extends Partial<Omit<FullBleedCardProps, 'appearance'>> {
+export interface BaseCardProps extends Partial<Omit<FullBleedCardProps, 'appearance'>> {
   appearance?: 'default';
   button?: ReactNode;
   icon?: ReactNode;
   linkLabel?: string;
-  imageSrc?: string;
-  imageAlt?: string;
 }
+
+export type CardProps =
+  | (BaseCardProps & { imageSrc?: undefined; imageAlt?: undefined })
+  | (BaseCardProps & { imageSrc: string; imageAlt: string });
 
 export const Card = (props: PropsWithChildren<CardProps | FullBleedCardProps | HorizontalImageCardProps>) => {
   const { appearance, ref, ...cardProps } = props;
