@@ -63,7 +63,7 @@ Lees de [NOTICE file](NOTICE.md) voor informatie over eigen assets in deze repos
 Copyright geldt voor het Rijkshuisstijl-logo en merkidentiteit. Gebruik hiervan is strikt verboden, behalve voor het
 ontwikkelen van websites en apps voor de Rijksoverheid.
 
-### Fonts
+### Fonts and fonts
 
 [De lettertypen voor de Rijkshuisstijl](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-online/webfonts)
 zijn [speciaal ontworpen voor de Rijksoverheid](https://www.rijkshuisstijl.nl/basiselementen/documenten/verzamelingen-afbeeldingen/2014/06/01/achtergrondartikel-rijkshuisstijl-webfonts)
