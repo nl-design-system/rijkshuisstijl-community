@@ -14,7 +14,7 @@ interface CardPropsBase {
 export interface HorizontalImageCardProps extends CardPropsBase {
   appearance?: 'horizontal';
   imageSrc: string;
-  imageAlt?: string;
+  imageAlt: string;
 }
 
 export interface FullBleedCardProps extends Omit<HorizontalImageCardProps, 'appearance'> {
@@ -23,12 +23,16 @@ export interface FullBleedCardProps extends Omit<HorizontalImageCardProps, 'appe
   metadata?: ReactNode;
 }
 
-export interface CardProps extends Partial<Omit<FullBleedCardProps, 'appearance'>> {
+export interface BaseCardProps extends Partial<Omit<FullBleedCardProps, 'appearance'>> {
   appearance?: 'default';
   button?: ReactNode;
   icon?: ReactNode;
   linkLabel?: string;
 }
+
+export type CardProps =
+  | (BaseCardProps & { imageSrc?: undefined; imageAlt?: undefined })
+  | (BaseCardProps & { imageSrc: string; imageAlt: string });
 
 export const Card = (props: PropsWithChildren<CardProps | FullBleedCardProps | HorizontalImageCardProps>) => {
   const { appearance, ref, ...cardProps } = props;
@@ -63,7 +67,7 @@ const DefaultCard = ({
   return (
     <div className={clsx('rhc-card', 'rhc-card--default', className)} ref={ref} {...restProps}>
       <div className="rhc-card__content">
-        {imageSrc && (
+        {imageSrc && imageAlt && (
           <div className="rhc-card__image-container" data-testid="rhc-card__image-container">
             {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
           </div>

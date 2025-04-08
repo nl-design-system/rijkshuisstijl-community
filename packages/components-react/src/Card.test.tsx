@@ -81,7 +81,7 @@ describe('Card', () => {
 
   describe('FullBleedCard', () => {
     it('renders a visible element', () => {
-      const { container } = render(<FullBleedCard heading="Heading" href="#" imageSrc="#" />);
+      const { container } = render(<FullBleedCard heading="Heading" href="#" imageAlt="Test" imageSrc="#" />);
       const navBar = container.querySelector(':only-child');
       expect(navBar).toBeInTheDocument();
       expect(navBar).toBeVisible();
@@ -89,7 +89,7 @@ describe('Card', () => {
 
     it('renders a link with the correct href and title', () => {
       linkTest(
-        <FullBleedCard heading="Heading" href="/example" imageSrc="#" title="Example Title" />,
+        <FullBleedCard heading="Heading" href="/example" imageAlt="Test" imageSrc="#" title="Example Title" />,
         '/example',
         'Example Title',
       );
@@ -98,7 +98,7 @@ describe('Card', () => {
 
   describe('HorizontalImageCard', () => {
     it('renders a visible element', () => {
-      const { container } = render(<HorizontalImageCard heading="Heading" href="#" imageSrc="#" />);
+      const { container } = render(<HorizontalImageCard heading="Heading" href="#" imageAlt="Test" imageSrc="#" />);
       const navBar = container.querySelector(':only-child');
       expect(navBar).toBeInTheDocument();
       expect(navBar).toBeVisible();
@@ -106,7 +106,7 @@ describe('Card', () => {
 
     it('renders a link with the correct href and title', () => {
       linkTest(
-        <HorizontalImageCard heading="Heading" href="/example" imageSrc="#" title="Example Title" />,
+        <HorizontalImageCard heading="Heading" href="/example" imageAlt="Test" imageSrc="#" title="Example Title" />,
         '/example',
         'Example Title',
       );
