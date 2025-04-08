@@ -5,8 +5,10 @@ import {
   LinkListLink,
   type LinkListProps,
 } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react/*';
+import { Meta, StoryObj } from '@storybook/react';
 import { PropsWithChildren } from 'react';
+import readme from './link-list.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface LinkListStoryProps extends LinkListProps {
   hasIcons?: boolean;
@@ -31,7 +33,17 @@ const meta = {
   id: 'rhc-link-list',
   component: LinkListStory,
   args: {
-    children: '',
+    children: [
+      <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+        Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
+      </LinkListLink>,
+      <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+        Link 2
+      </LinkListLink>,
+      <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+        Link 3
+      </LinkListLink>,
+    ],
   },
   argTypes: {
     hasIcons: {
@@ -49,7 +61,17 @@ const meta = {
     status: {
       type: 'UNSTABLE',
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    docs: {
+      description: {
+        // TODO: disconnect "Usage" from the current readme, import the readme from Utrecht afterwards and combine with our own Usage
+        component: mergeMarkdown([readme]),
+      },
+    },
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=15853-939&p=f&t=vEy2lEagbZuewco0-0',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/LinkList.tsx',
+    nldesignsystem: 'https://nldesignsystem.nl/link-list',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
   },
