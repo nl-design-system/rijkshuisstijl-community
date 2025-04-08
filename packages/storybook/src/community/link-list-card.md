@@ -10,6 +10,8 @@ De **LinkListCard** component biedt een manier om een **card** weer te geven met
 - **`heading`** (`string`)
   De tekst die weergegeven wordt binnen de heading.
 
+## Anatomie
+
 LinkListCard-component bestaat uit de volgende subcomponenten:
 
 - `Heading` Voor de weergave van de heading op basis van het doorgegeven niveau.
@@ -26,4 +28,20 @@ import { LinkListCard } from '@rijkshuisstijl-community/components-react';
 <LinkListCard headingLevel={3} heading="Heading Text">
   {children}
 </LinkListCard>;
+```
+
+## Voorbeelden met verkeerde implementatie
+
+- Geen heading meegegeven
+
+```jsx
+<LinkListCard headingLevel={3}>
+  <LinkListLink href="#">Link zonder heading</LinkListLink>
+</LinkListCard>
+```
+
+- Geen children meegegeven
+
+```jsx
+<LinkListCard headingLevel={3} heading="Lege lijst" />
 ```
