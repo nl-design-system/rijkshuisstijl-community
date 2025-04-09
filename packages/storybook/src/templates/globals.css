@@ -18,6 +18,31 @@ h1 {
   background-color: #f2f4f6;
 }
 
+.rhc-templates-databadge {
+  /* --utrecht-data-badge-background-color: blue;
+  --utrecht-data-badge-color: red; */
+  background-color: #fff !important;
+  color: darkblue;
+  max-inline-size: 12em;
+  padding-block: 0.5em;
+  padding-inline: 0.5em;
+}
+
+.rhc-badgelist-databadge {
+  background-color: #fff !important;
+  border: solid 1px grey;
+  border-radius: 13px;
+  color: grey;
+  max-inline-size: 12em;
+  padding-block: 0.25rem;
+  padding-inline: 0.75rem;
+}
+
+.rhc-badgelist {
+  display: flex;
+  gap: 0.3rem !important;
+}
+
 .rhc-templates-unstarted {
   border: 2px dashed red;
 }
@@ -49,6 +74,11 @@ h1 {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+.rhc-templates-page-body {
+  margin-inline: auto;
+  max-inline-size: 1280px;
 }
 
 .rhc-templates-page-content {
@@ -103,12 +133,18 @@ h1 {
 .rhc-templates-card-container {
   column-gap: var(--rhc-space-300);
   display: flex;
+  flex-wrap: wrap;
   margin-block-end: var(--rhc-space-400);
   margin-block-start: var(--rhc-space-300);
   row-gap: var(--rhc-space-300);
   @media (width <= 780px) {
     flex-direction: column;
   }
+}
+
+.rhc-card--full-bleed {
+  background-color: #f2f4f6;
+  color: #154273 !important;
 }
 
 .rhc-side-nav {
@@ -146,4 +182,65 @@ h1 {
 
 .rhc-nav-bar__list {
   flex-wrap: wrap;
+}
+
+.rhc-cards-container {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+@media (width < 1350px) {
+  .rhc-cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (width < 700px) {
+  .rhc-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rhc-dev-logo {
+  align-items: end;
+  display: grid;
+}
+
+.rhc-logo-container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@media (width < 800px) {
+  .rhc-logo-container {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.rhc-header-wrapper {
+  margin-inline: auto;
+  max-inline-size: 1260px;
+}
+
+.rhc-logo-heading {
+  align-items: flex-end;
+  display: flex;
+  font-size: 1rem !important;
+  gap: 10px;
+}
+
+.rhc-logo-main-heading {
+  font-size: 1.5rem !important;
+}
+.rhc-logo-paragraph {
+  font-size: 1rem !important;
+}
+
+.rhc-card-box {
+  inline-size: 305px !important;
 }
