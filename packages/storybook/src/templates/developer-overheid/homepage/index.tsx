@@ -22,9 +22,8 @@ import { PageBody } from '@utrecht/page-body-react';
 export default function DevOvhHomepage() {
   return (
     <>
-      <PageHeader>
+      <PageHeader className="rhc-header-wrapper">
         <title>Developer Overheid - Homepage</title>
-
         <Figure>
           <Logo organisation="" subtitle="">
             <Icon icon="nederland-map" />
@@ -45,30 +44,30 @@ export default function DevOvhHomepage() {
             <Paragraph className="rhc-logo-paragraph">Ontwikkelaarsportaal van de Nederlandse overheid</Paragraph>
           </div>
         </Figure>
-
-        <NavBar
-          endItems={[
-            { id: '1', href: '/', label: 'Forum' },
-            { id: '2', href: '/', label: 'APIs' },
-            { id: '3', href: '/', label: 'Open Source' },
-            { id: '4', href: '/', label: 'Open Data' },
-            { id: '5', href: '/', label: 'Geodata' },
-          ]}
-          items={[
-            { id: '1', href: '/developer-overheid/homepage', label: 'Home' },
-            { id: '2', href: '/', label: 'Kennisbank' },
-            { id: '3', href: '/', label: 'Communities' },
-            { id: '4', href: '/', label: 'Blog' },
-          ]}
-        >
-          <Button appearance="">
-            <IconSearch></IconSearch>
-          </Button>
-          {/* <TextInput aria-label="text-input-label" name="subject" placeholder="Zoek"></TextInput> */}
-        </NavBar>
       </PageHeader>
 
-      <PageBody className="rhc-templates-main-content">
+      <NavBar
+        endItems={[
+          { id: '1', href: '/', label: 'Forum' },
+          { id: '2', href: '/', label: 'APIs' },
+          { id: '3', href: '/', label: 'Open Source' },
+          { id: '4', href: '/', label: 'Open Data' },
+          { id: '5', href: '/', label: 'Geodata' },
+        ]}
+        items={[
+          { id: '1', href: '/developer-overheid/homepage', label: 'Home' },
+          { id: '2', href: '/', label: 'Kennisbank' },
+          { id: '3', href: '/', label: 'Communities' },
+          { id: '4', href: '/', label: 'Blog' },
+        ]}
+      >
+        <Button appearance="">
+          <IconSearch></IconSearch>
+        </Button>
+        {/* <TextInput aria-label="text-input-label" name="subject" placeholder="Zoek"></TextInput> */}
+      </NavBar>
+
+      <PageBody className="rhc-templates-main-content rhc-templates-page-body">
         <main>
           <PageContent className="rhc-templates-page-content">
             {/* <Hero
@@ -95,7 +94,7 @@ export default function DevOvhHomepage() {
 
             <section className="rhc-cards-container">
               <Card
-                className="rhc-card-size"
+                className="rhc-card-box"
                 description="Tutorials, tools, code voorbeelden en meer. Alles wat je nodig hebt om aan de slag te gaan met software van en voor de overheid."
                 heading="Kennisbank"
                 href="#"
@@ -106,7 +105,7 @@ export default function DevOvhHomepage() {
                 title="Kennisbank"
               ></Card>
               <Card
-                className="rhc-card-size"
+                className="rhc-card-box"
                 description="Ga in gesprek met andere developers en vind hier getting started guides, tutorials en tools."
                 heading="Onze community"
                 href="#"
@@ -117,7 +116,7 @@ export default function DevOvhHomepage() {
                 title="Onze community"
               ></Card>
               <Card
-                className="rhc-card-size"
+                className="rhc-card-box"
                 description="Bekijk welke API‘s er allemaal zijn en kom er achter hoe je jouw oplossing hier op kan laten aansluiten."
                 heading="Vind een API"
                 href="#"
@@ -128,7 +127,7 @@ export default function DevOvhHomepage() {
                 title="Vind een API"
               ></Card>
               <Card
-                className="rhc-card-size"
+                className="rhc-card-box"
                 description="Vind bestaande repositories om bij aan te haken en ontdek wat er binnen welke organisatie beschikbaar is."
                 heading="Vind een repository"
                 href="#"
