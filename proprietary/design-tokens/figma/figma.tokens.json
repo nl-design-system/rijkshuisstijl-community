@@ -2213,15 +2213,15 @@
         },
         "active": {
           "background-color": {
-            "value": "{rhc.color.cool-grey.300}",
+            "value": "{rhc.color.cool-grey.800}",
             "type": "color"
           },
           "border-color": {
-            "value": "{rhc.color.cool-grey.900}",
+            "value": "{rhc.color.none}",
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.cool-grey.900}",
+            "value": "{rhc.color.wit}",
             "type": "color"
           }
         },
@@ -2417,10 +2417,19 @@
             },
             "border-color": {
               "value": "{rhc.color.primary.500}",
-              "type": "color"
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "0.4",
+                    "space": "lch"
+                  }
+                }
+              }
             },
             "color": {
-              "value": "{rhc.color.primary.500}",
+              "value": "{rhc.color.primary.hover}",
               "type": "color"
             }
           },
@@ -7901,10 +7910,19 @@
             },
             "border-color": {
               "value": "{rhc.color.primary.500}",
-              "type": "color"
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "darken",
+                    "value": "0.4",
+                    "space": "lch"
+                  }
+                }
+              }
             },
             "color": {
-              "value": "{rhc.color.primary.500}",
+              "value": "{rhc.color.cool-grey.800}",
               "type": "color"
             }
           },
@@ -7980,7 +7998,7 @@
           },
           "active": {
             "background-color": {
-              "value": "{rhc.color.none}",
+              "value": "{rhc.color.primary.200}",
               "type": "color"
             },
             "border-color": {
@@ -7988,16 +8006,7 @@
               "type": "color"
             },
             "color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.4",
-                    "space": "srgb"
-                  }
-                }
-              },
-              "value": "{rhc.color.primary.500}",
+              "value": "{rhc.color.cool-grey.800}",
               "type": "color"
             }
           },
@@ -8071,7 +8080,7 @@
         },
         "foreground": {
           "onEmphasis": {
-            "value": "{rhc.color.zwart}",
+            "value": "{rhc.color.foreground.default}",
             "type": "color",
             "description": "Tekst en iconen die op een sterke achtergrond staan. Zoals het label in de primaire button of links in de footer."
           }
@@ -8139,15 +8148,15 @@
           },
           "active": {
             "background-color": {
-              "value": "{rhc.color.primary.200}",
+              "value": "{rhc.color.cool-grey.300}",
               "type": "color"
             },
             "border-color": {
-              "value": "{rhc.color.primary.500}",
+              "value": "{rhc.color.cool-grey.800}",
               "type": "color"
             },
             "color": {
-              "value": "{rhc.color.primary.500}",
+              "value": "{rhc.color.cool-grey.800}",
               "type": "color"
             }
           },
@@ -8223,7 +8232,7 @@
           },
           "active": {
             "background-color": {
-              "value": "{rhc.color.none}",
+              "value": "{rhc.color.cool-grey.300}",
               "type": "color"
             },
             "border-color": {
@@ -8231,16 +8240,7 @@
               "type": "color"
             },
             "color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.4",
-                    "space": "srgb"
-                  }
-                }
-              },
-              "value": "{rhc.color.primary.500}",
+              "value": "{rhc.color.cool-grey.900}",
               "type": "color"
             }
           },
