@@ -2,5 +2,5 @@
 '@rijkshuisstijl-community/design-tokens': minor
 ---
 
-- Extra overwrites toegevoegd om thema’s te kunnen variëren, inclusief ondersteuning voor responsiveness, aanvullende primaire kleuren en het terugzetten van eerder onderbouwde afwijkingen naar de standaard Rijkshuisstijl.
-- Default button stijling als regenboog gestijld, om duidelijk te maken dat je een apperance moet kiezen.
+- Overwrites toegevoegd om thema’s te kunnen variëren. Toegevoegd is: responsiveness, extra primaire kleuren en de optie om niet af te wijken van de Rijkshuisstijl voorbeelden.
+- Default button stijling aangepast.
