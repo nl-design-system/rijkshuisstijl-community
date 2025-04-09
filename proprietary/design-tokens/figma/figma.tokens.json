@@ -7552,51 +7552,6 @@
       }
     }
   },
-  "overwrites/primaire kleur/oranje": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "value": "{rhc.color.oranje.50}",
-            "type": "color"
-          },
-          "100": {
-            "value": "{rhc.color.oranje.100}",
-            "type": "color"
-          },
-          "200": {
-            "value": "{rhc.color.oranje.200}",
-            "type": "color"
-          },
-          "300": {
-            "value": "{rhc.color.oranje.300}",
-            "type": "color"
-          },
-          "400": {
-            "value": "{rhc.color.oranje.400}",
-            "type": "color"
-          },
-          "500": {
-            "value": "{rhc.color.oranje.500}",
-            "type": "color"
-          },
-          "hover": {
-            "value": "{rhc.color.primary.500}",
-            "type": "color",
-            "$extensions": {
-              "studio.tokens": {
-                "modify": {
-                  "type": "darken",
-                  "value": "0.3",
-                  "space": "lch"
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  },
   "overwrites/primaire kleur/groen": {
     "rhc": {
       "color": {
@@ -7687,32 +7642,32 @@
       }
     }
   },
-  "overwrites/primaire kleur/roze": {
+  "overwrites/primaire kleur/oranje": {
     "rhc": {
       "color": {
         "primary": {
           "50": {
-            "value": "{rhc.color.roze.50}",
+            "value": "{rhc.color.oranje.50}",
             "type": "color"
           },
           "100": {
-            "value": "{rhc.color.roze.100}",
+            "value": "{rhc.color.oranje.100}",
             "type": "color"
           },
           "200": {
-            "value": "{rhc.color.roze.200}",
+            "value": "{rhc.color.oranje.200}",
             "type": "color"
           },
           "300": {
-            "value": "{rhc.color.roze.300}",
+            "value": "{rhc.color.oranje.300}",
             "type": "color"
           },
           "400": {
-            "value": "{rhc.color.roze.400}",
+            "value": "{rhc.color.oranje.400}",
             "type": "color"
           },
           "500": {
-            "value": "{rhc.color.roze.500}",
+            "value": "{rhc.color.oranje.500}",
             "type": "color"
           },
           "hover": {
@@ -7758,6 +7713,51 @@
           },
           "500": {
             "value": "{rhc.color.paars.500}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{rhc.color.primary.500}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "darken",
+                  "value": "0.3",
+                  "space": "lch"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "overwrites/primaire kleur/roze": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "value": "{rhc.color.roze.50}",
+            "type": "color"
+          },
+          "100": {
+            "value": "{rhc.color.roze.100}",
+            "type": "color"
+          },
+          "200": {
+            "value": "{rhc.color.roze.200}",
+            "type": "color"
+          },
+          "300": {
+            "value": "{rhc.color.roze.300}",
+            "type": "color"
+          },
+          "400": {
+            "value": "{rhc.color.roze.400}",
+            "type": "color"
+          },
+          "500": {
+            "value": "{rhc.color.roze.500}",
             "type": "color"
           },
           "hover": {
@@ -9124,12 +9124,7 @@
         "components/unordered-list": "enabled",
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
-        "components/pre-heading": "enabled",
-        "overwrites/primaire kleur/contrast fix/button label groter": "disabled",
-        "overwrites/primaire kleur/contrast fix/non primary button labels coolgrey": "disabled",
-        "overwrites/primaire kleur/oranje": "disabled",
-        "overwrites/primaire kleur/mintgroen": "disabled",
-        "overwrites/primaire kleur/roze": "disabled"
+        "components/pre-heading": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9220,12 +9215,7 @@
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
-        "components/pre-heading": "enabled",
-        "overwrites/primaire kleur/contrast fix/button label groter": "disabled",
-        "overwrites/primaire kleur/contrast fix/non primary button labels coolgrey": "disabled",
-        "overwrites/primaire kleur/oranje": "disabled",
-        "overwrites/primaire kleur/mintgroen": "disabled",
-        "overwrites/primaire kleur/roze": "disabled"
+        "components/pre-heading": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9317,12 +9307,7 @@
         "components/sub-nav-bar": "enabled",
         "overwrites/oude rijkshuisstijl/border": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
-        "components/pre-heading": "enabled",
-        "overwrites/primaire kleur/contrast fix/button label groter": "disabled",
-        "overwrites/primaire kleur/contrast fix/non primary button labels coolgrey": "disabled",
-        "overwrites/primaire kleur/oranje": "disabled",
-        "overwrites/primaire kleur/mintgroen": "disabled",
-        "overwrites/primaire kleur/roze": "disabled"
+        "components/pre-heading": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9415,11 +9400,7 @@
         "overwrites/focus/background": "enabled",
         "overwrites/focus/outline-color": "enabled",
         "components/pre-heading": "enabled",
-        "overwrites/primaire kleur/contrast fix/button label groter": "disabled",
-        "overwrites/primaire kleur/contrast fix/non primary button labels coolgrey": "disabled",
-        "overwrites/primaire kleur/oranje": "disabled",
-        "overwrites/primaire kleur/mintgroen": "enabled",
-        "overwrites/primaire kleur/roze": "disabled"
+        "overwrites/primaire kleur/mintgroen": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9508,11 +9489,11 @@
       "components/toggletip",
       "components/toolbar-button",
       "components/unordered-list",
-      "overwrites/primaire kleur/oranje",
       "overwrites/primaire kleur/groen",
       "overwrites/primaire kleur/mintgroen",
-      "overwrites/primaire kleur/roze",
+      "overwrites/primaire kleur/oranje",
       "overwrites/primaire kleur/paars",
+      "overwrites/primaire kleur/roze",
       "overwrites/primaire kleur/violet",
       "overwrites/primaire kleur/contrast fix/foreground op lichte kleur",
       "overwrites/primaire kleur/contrast fix/non primary button labels coolgrey",
