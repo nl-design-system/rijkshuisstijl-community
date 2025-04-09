@@ -76,6 +76,11 @@ h1 {
   justify-content: center;
 }
 
+.rhc-templates-page-body {
+  margin-inline: auto;
+  max-inline-size: 1280px;
+}
+
 .rhc-templates-page-content {
   --utrecht-page-content-padding-block-end: var(--rhc-space-600);
   --utrecht-page-content-padding-block-start: var(--rhc-space-600);
@@ -186,7 +191,7 @@ h1 {
   justify-content: center;
 }
 
-@media (width < 1400px) {
+@media (width < 1350px) {
   .rhc-cards-container {
     grid-template-columns: 1fr 1fr;
   }
@@ -210,6 +215,18 @@ h1 {
   justify-content: flex-start;
 }
 
+@media (width < 800px) {
+  .rhc-logo-container {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.rhc-header-wrapper {
+  margin-inline: auto;
+  max-inline-size: 1260px;
+}
+
 .rhc-logo-heading {
   align-items: flex-end;
   display: flex;
@@ -224,9 +241,6 @@ h1 {
   font-size: 1rem !important;
 }
 
-@media (width < 700px) {
-  .rhc-logo-container {
-    align-items: center;
-    text-align: center;
-  }
+.rhc-card-box {
+  inline-size: 305px !important;
 }
