@@ -10,6 +10,10 @@
   margin-block-end: var(--nl-link-margin-block-end);
 }
 
+.nl-link svg {
+  flex-shrink: 0;
+}
+
 .nl-link:any-link {
   @include mixin.rhc-link--any-link;
 }
