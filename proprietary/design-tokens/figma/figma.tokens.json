@@ -849,17 +849,23 @@
             "type": "color",
             "description": "Gebruik voor content die extra context biedt, maar niet essentieel is om de interface te begrijpen."
           },
-          "on-dark-color": {
+          "on-primary": {
             "parent": "mode/light",
             "value": "{rhc.color.wit}",
             "type": "color",
-            "description": "Tekst en iconen die op een donkere achtergrondkleur komen te staan"
+            "description": "Tekst en iconen die op een primary color achtergrond komen te staan"
           },
-          "on-light-color": {
+          "on-lintblauw": {
             "parent": "mode/light",
-            "value": "{rhc.color.zwart}",
+            "value": "{rhc.color.wit}",
             "type": "color",
-            "description": "Tekst en iconen die op een lichte achtergrondkleur komen te staan"
+            "description": "Tekst en iconen die op een lintblauwe achtergrond kleur komen te staan"
+          },
+          "on-accent": {
+            "parent": "mode/light",
+            "value": "{rhc.color.wit}",
+            "type": "color",
+            "description": "Tekst en iconen die op de accent achtergrond kleur komen te staan"
           },
           "onEmphasis": {
             "parent": "mode/light",
@@ -998,26 +1004,6 @@
             },
             "value": "{rhc.color.primary.500}",
             "type": "color"
-          }
-        }
-      }
-    }
-  },
-  "common/color-underwater": {
-    "rhc": {
-      "color": {
-        "foreground": {
-          "on-primary": {
-            "parent": "mode/light",
-            "value": "{rhc.color.foreground.on-dark-color}",
-            "type": "color",
-            "description": "Tekst en iconen die op een primary color achtergrond komen te staan"
-          },
-          "on-accent": {
-            "parent": "mode/light",
-            "value": "{rhc.color.foreground.on-light-color}",
-            "type": "color",
-            "description": "Tekst en iconen die op de accent achtergrond kleur komen te staan"
           }
         }
       }
@@ -3571,7 +3557,7 @@
           "type": "color"
         },
         "color": {
-          "value": "{rhc.color.foreground.on-dark-color}",
+          "value": "{rhc.color.foreground.on-lintblauw}",
           "type": "color"
         },
         "padding-block-start": {
@@ -4122,7 +4108,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.on-dark-color}",
+            "value": "{rhc.color.foreground.on-lintblauw}",
             "type": "color"
           },
           "row-gap": {
@@ -7791,7 +7777,6 @@
       "brand/font",
       "brand/size",
       "common/color",
-      "common/color-underwater",
       "common/size",
       "common/font",
       "common/focus",
