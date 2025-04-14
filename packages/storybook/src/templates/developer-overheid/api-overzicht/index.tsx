@@ -287,66 +287,23 @@ export default function DevOvhAPIoverzicht() {
 
       <Footer
         appearanceLevel={4}
-        heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+        heading="Organisaties"
         columns={[
           {
-            heading: 'Service',
+            heading: 'Links',
             children: [
               <LinkList key="1">
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Contact
                 </LinkListLink>
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Abonneren
+                  API dashboard
                 </LinkListLink>
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  RSS
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Vacatures
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Sitemap
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Help
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Archief
+                  Privacyverklaring
                 </LinkListLink>
               </LinkList>,
             ],
-          },
-          {
-            heading: 'Over deze site',
-            children: (
-              <LinkList key="2">
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Over deze organisatie
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Wetten en regelingen
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Copyright
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Privacy
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Cookies
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Toegankelijkheid
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Open data
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Kwetsbaarheid melden
-                </LinkListLink>
-              </LinkList>
-            ),
           },
         ]}
       />
