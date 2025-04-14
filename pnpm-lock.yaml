@@ -446,6 +446,9 @@ importers:
       '@fontsource/fira-sans':
         specifier: 5.1.1
         version: 5.1.1
+      sass:
+        specifier: 1.86.0
+        version: 1.86.0
 
   packages/storybook:
     devDependencies:
@@ -11695,11 +11698,6 @@ packages:
 
   sass@1.85.0:
     resolution: {integrity: sha512-3ToiC1xZ1Y8aU7+CkgCI/tqyuPXEmYGJXO7H4uqp0xkLXUqp88rQQ4j1HmP37xSJLbCJPaIiv+cT1y+grssrww==}
-    engines: {node: '>=14.0.0'}
-    hasBin: true
-
-  sass@1.85.1:
-    resolution: {integrity: sha512-Uk8WpxM5v+0cMR0XjX9KfRIacmSG86RH4DCCZjLU2rFh5tyutt9siAXJ7G+YfxQ99Q6wrRMbMlVl6KqUms71ag==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -26009,7 +26007,7 @@ snapshots:
       piscina: 4.9.1
       postcss: 8.5.3
       rxjs: 7.8.1
-      sass: 1.85.1
+      sass: 1.86.0
       tslib: 2.3.0
       typescript: 5.7.2
     optionalDependencies:
@@ -27891,14 +27889,6 @@ snapshots:
     optionalDependencies:
       '@parcel/watcher': 2.5.0
 
-  sass@1.85.1:
-    dependencies:
-      chokidar: 4.0.1
-      immutable: 5.0.3
-      source-map-js: 1.2.1
-    optionalDependencies:
-      '@parcel/watcher': 2.5.0
-
   sass@1.86.0:
     dependencies:
       chokidar: 4.0.1
@@ -29486,7 +29476,7 @@ snapshots:
 
   vite@6.2.3(@types/node@22.9.0)(jiti@1.21.7)(less@4.2.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.0):
     dependencies:
-      esbuild: 0.25.0
+      esbuild: 0.25.1
       postcss: 8.5.3
       rollup: 4.37.0
     optionalDependencies:

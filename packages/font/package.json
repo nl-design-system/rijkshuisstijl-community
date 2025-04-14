@@ -20,7 +20,11 @@
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
     "directory": "packages/font"
   },
+  "scripts": {
+    "build:css": "sass --pkg-importer=node src/index.scss dist/index.css"
+  },
   "dependencies": {
-    "@fontsource/fira-sans": "5.1.1"
+    "@fontsource/fira-sans": "5.1.1",
+    "sass": "1.86.0"
   }
 }
