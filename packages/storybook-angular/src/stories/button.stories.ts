@@ -1,5 +1,7 @@
 import { ButtonComponent } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, type StoryObj } from '@storybook/angular';
+import { provideTablerIcons, TablerIconComponent } from 'angular-tabler-icons';
+import { IconArrowRight, IconCalendarEvent } from 'angular-tabler-icons/icons';
 
 const meta: Meta<ButtonComponent> = {
   title: 'Rijkshuisstijl-angular/Button',
@@ -27,9 +29,14 @@ const meta: Meta<ButtonComponent> = {
     disabled: false,
   },
   render: ({ disabled, appearance }) => ({
-    template: `<rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">Submit</rhc-button>`,
+    template: `
+      <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
+        Label
+      </rhc-button>
+    `,
     props: {
       appearance,
+      disabled,
     },
   }),
 };
@@ -51,38 +58,75 @@ export const Primary: StoryObj<ButtonComponent> = {
   name: 'Primary',
 };
 
-// export const Heading2: StoryObj<HeadingComponent> = {
-//   args: {
-//     level: 2,
-//   },
-//   name: 'Heading 2',
-// };
+export const Subtle: StoryObj<ButtonComponent> = {
+  args: {
+    appearance: 'subtle',
+  },
+  name: 'Subtle',
+};
 
-// export const Heading3: StoryObj<HeadingComponent> = {
-//   args: {
-//     level: 3,
-//   },
-//   name: 'Heading 3',
-// };
+export const IconLeft: StoryObj<ButtonComponent> = {
+  args: {
+    appearance: '',
+  },
+  render: ({ disabled, appearance }) => ({
+    template: `
+      <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
+        <i-tabler name="calendar-event"></i-tabler> Label
+      </rhc-button>
+    `,
+    props: {
+      appearance,
+      disabled,
+    },
+    moduleMetadata: {
+      imports: [TablerIconComponent],
+      providers: [provideTablerIcons({ IconCalendarEvent })],
+    },
+  }),
+  name: 'Icon Left',
+};
 
-// export const Heading4: StoryObj<HeadingComponent> = {
-//   args: {
-//     level: 4,
-//   },
-//   name: 'Heading 4',
-// };
+export const IconRight: StoryObj<ButtonComponent> = {
+  args: {
+    appearance: 'primary-action',
+  },
+  render: ({ disabled, appearance }) => ({
+    template: `
+      <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
+        Label <i-tabler name="arrow-right"></i-tabler> 
+      </rhc-button>
+    `,
+    props: {
+      appearance,
+      disabled,
+    },
+    moduleMetadata: {
+      imports: [TablerIconComponent],
+      providers: [provideTablerIcons({ IconArrowRight })],
+    },
+  }),
+  name: 'Icon Right',
+};
 
-// export const Heading5: StoryObj<HeadingComponent> = {
-//   args: {
-//     level: 5,
-//   },
-//   name: 'Heading 5',
-// };
-
-// export const AppearanceLevel1: StoryObj<HeadingComponent> = {
-//   args: {
-//     level: 5,
-//     appearanceLevel: 1,
-//   },
-//   name: 'Appearance Level 1',
-// };
+export const IconOnly: StoryObj<ButtonComponent> = {
+  args: {
+    appearance: 'subtle',
+  },
+  render: ({ disabled, appearance }) => ({
+    template: `
+      <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
+        <i-tabler name="calendar-event"></i-tabler> 
+      </rhc-button>
+    `,
+    props: {
+      appearance,
+      disabled,
+    },
+    moduleMetadata: {
+      imports: [TablerIconComponent],
+      providers: [provideTablerIcons({ IconCalendarEvent })],
+    },
+  }),
+  name: 'Icon Only',
+};

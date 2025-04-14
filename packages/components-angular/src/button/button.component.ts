@@ -5,7 +5,6 @@ import { Component, Input } from '@angular/core';
   selector: 'rhc-button',
   imports: [CommonModule],
   templateUrl: './button.component.html',
-  styleUrl: './button.component.css',
 })
 export class ButtonComponent {
   @Input() appearance?: '' | 'primary-action' | 'secondary-action' | 'subtle' = '';
