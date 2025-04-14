@@ -1,0 +1,7 @@
+<button class="{{ computedClasses() }}" [disabled]="disabled">
+  <ng-container [ngTemplateOutlet]="content"></ng-container>
+</button>
+
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>
