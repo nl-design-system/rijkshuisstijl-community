@@ -37,6 +37,12 @@ Gebruik in SCSS de volgende code:
 @import '@rijkshuisstijl-community/font/src/index.scss';
 ```
 
+Het is ook mogelijk om css te importeren:
+
+```js
+import '@rijkshuisstijl-community/font/dist/index.css
+```
+
 ## Op zoek naar de officiële lettertypes?
 
 De officiële lettertypes kun je downloaden via [rijkshuisstijl.nl](https://www.rijkshuisstijl.nl/publiek/modules/product/DigitalStyleGuide/default/index.aspx?ItemId=6745), als je voldoende rechten hebt. Bijvoorbeeld als je bij de Rijksoverheid werkt en je ingelogd bent via Citrix.
@@ -48,3 +54,58 @@ Dat is niet de bedoeling. De officiële manier is om aan de font files te komen 
 ### Fonts opslaan GitHub
 
 Dat is niet de bedoeling. Als je de officiële fonts opslaat in een publieke GitHub repository, dan kun je e-mails verwachten met een vriendelijk doch dwingend verzoek om ze er weer te verwijderen.
+
+### De officiële lettertypes gebruiken
+
+Heb je wel toegang tot de officiële lettertypes via [rijkshuisstijl.nl](https://www.rijkshuisstijl.nl/publiek/modules/product/DigitalStyleGuide/default/index.aspx?ItemId=6745)? Dan kun je deze in je applicatie gebruiken! Hiervoor moet je een aantal stappen\* doorlopen:
+
+#### Stap 1
+
+De font files beschikbaar maken binnen jouw applicatie. In Javascript frameworks doe je dit meestal door de bestanden toe te voegen aan de `public/` map.
+
+#### Stap 2
+
+De custom fonts in css registreren met de `@fontface` rule, bijvoorbeld door dit toe te voegen aan `index.css`:
+
+```css
+@font-face {
+  font-family: 'Sans';
+  src: url('/RijksoverheidSansText-Regular_2_0.otf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Sans';
+  src: url('/RijksoverheidSansText-Bold_2_0.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Sans Head';
+  src: url('/RijksoverheidSansHeading-Regular_2_0.otf');
+}
+```
+
+#### Stap 3
+
+Ten slotte moet je de juiste font-family koppelen aan de css variabelen die componenten ook gebruiken. Dit kan je doen door een eigen [thema](https://nldesignsystem.nl/handboek/developer/thema-maken) te maken met behulp van custom tokens die met behulp van een buildstap de variabelen overschrijven of door de css variabelen handmatig in te stellen. Hier nog een voorbeeld van custom tokens:
+
+```json
+{
+  "rhc": {
+    "font-family": {
+      "primary": {
+        "value": "Sans",
+        "type": "fontFamilies"
+      },
+      "secondary": {
+        "value": "RijksoverheidSerifWeb",
+        "type": "fontFamilies"
+      }
+    }
+  }
+  ...
+}
+```
+
+> \* De implementatie van deze stappen kan verschillen op basis van je ontwikkelomgeving.
