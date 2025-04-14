@@ -15,9 +15,11 @@ import {
   Heading,
   HeadingGroup,
   Icon,
+  Image,
   LinkList,
   LinkListLink,
   PageContent,
+  PageHeader,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
 import { IconArrowDown, IconPlus } from '@tabler/icons-react';
@@ -27,6 +29,24 @@ import { PageBody } from '@utrecht/page-body-react';
 export default function DevOvhAPIoverzicht() {
   return (
     <>
+      <PageHeader className="rhc-api-header-wrapper">
+        <title>Developer Overheid - API</title>
+
+        <div className="rhc-api-logo-container">
+          <div className="rhc-api-logo-heading">
+            <Image
+              alt="Developer Overheid logo"
+              height={35}
+              src="https://developer.overheid.nl/img/logo-don.svg"
+              width={35}
+            ></Image>
+            <Heading className="rhc-api-logo-main-heading" level={1}>
+              Developer Overheid API Register
+            </Heading>
+          </div>
+        </div>
+      </PageHeader>
+
       <PageBody className="rhc-templates-page rhc-templates-main-content">
         <PageContent className="rhc-templates-page-content">
           <Article>
