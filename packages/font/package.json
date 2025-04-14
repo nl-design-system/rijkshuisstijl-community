@@ -13,7 +13,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "files": [
-    "src"
+    "src",
+    "dist"
   ],
   "repository": {
     "type": "git+ssh",
@@ -21,10 +22,15 @@
     "directory": "packages/font"
   },
   "scripts": {
-    "build:css": "sass --pkg-importer=node src/index.scss dist/index.css"
+    "build": "npm-run-all build:**",
+    "build:css": "sass --load-path=node_modules --no-source-map --style=compressed src/index.scss dist/index.css",
+    "build:copy": "cpx \"node_modules/@fontsource/fira-sans/files/**/*\" dist/files"
   },
   "dependencies": {
     "@fontsource/fira-sans": "5.1.1",
     "sass": "1.86.0"
+  },
+  "devDependencies": {
+    "cpx": "1.5.0"
   }
 }
