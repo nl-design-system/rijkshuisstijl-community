@@ -79,38 +79,58 @@ describe('Card', () => {
     });
   });
 
-  describe('FullBleedCard', () => {
-    it('renders a visible element', () => {
-      const { container } = render(<FullBleedCard heading="Heading" href="#" imageAlt="Test" imageSrc="#" />);
-      const navBar = container.querySelector(':only-child');
-      expect(navBar).toBeInTheDocument();
-      expect(navBar).toBeVisible();
-    });
+  describe('accessibility', () => {
+    it('renders heading before image in the DOM to ensure correct reading order', () => {
+      // In de HTML-structuur (DOM) staat de heading voor de afbeelding.
+      // Dit zorgt ervoor dat screenreaders de content in de juiste volgorde kunnen voorlezen.
+      // De visuele volgorde kan los daarvan met CSS worden aangepast, zonder impact op toegankelijkheid.
 
-    it('renders a link with the correct href and title', () => {
-      linkTest(
-        <FullBleedCard heading="Heading" href="/example" imageAlt="Test" imageSrc="#" title="Example Title" />,
-        '/example',
-        'Example Title',
-      );
+      const { getByText, getByAltText } = render(<Card heading="Heading" imageAlt="An example image" imageSrc="#" />);
+
+      const headingElement = getByText('Heading');
+      const imageElement = getByAltText('An example image');
+
+      // Controleer of beide elementen zichtbaar zijn
+      expect(headingElement).toBeVisible();
+      expect(imageElement).toBeVisible();
+
+      // Controleer of de heading vóór de afbeelding staat in de DOM-structuur
+      expect(headingElement.compareDocumentPosition(imageElement)).toBe(Node.DOCUMENT_POSITION_PRECEDING);
     });
   });
+});
 
-  describe('HorizontalImageCard', () => {
-    it('renders a visible element', () => {
-      const { container } = render(<HorizontalImageCard heading="Heading" href="#" imageAlt="Test" imageSrc="#" />);
-      const navBar = container.querySelector(':only-child');
-      expect(navBar).toBeInTheDocument();
-      expect(navBar).toBeVisible();
-    });
+describe('FullBleedCard', () => {
+  it('renders a visible element', () => {
+    const { container } = render(<FullBleedCard heading="Heading" href="#" imageAlt="Test" imageSrc="#" />);
+    const navBar = container.querySelector(':only-child');
+    expect(navBar).toBeInTheDocument();
+    expect(navBar).toBeVisible();
+  });
 
-    it('renders a link with the correct href and title', () => {
-      linkTest(
-        <HorizontalImageCard heading="Heading" href="/example" imageAlt="Test" imageSrc="#" title="Example Title" />,
-        '/example',
-        'Example Title',
-      );
-    });
+  it('renders a link with the correct href and title', () => {
+    linkTest(
+      <FullBleedCard heading="Heading" href="/example" imageAlt="Test" imageSrc="#" title="Example Title" />,
+      '/example',
+      'Example Title',
+    );
+  });
+});
+
+describe('HorizontalImageCard', () => {
+  it('renders a visible element', () => {
+    const { container } = render(<HorizontalImageCard heading="Heading" href="#" imageAlt="Test" imageSrc="#" />);
+    const navBar = container.querySelector(':only-child');
+    expect(navBar).toBeInTheDocument();
+    expect(navBar).toBeVisible();
+  });
+
+  it('renders a link with the correct href and title', () => {
+    linkTest(
+      <HorizontalImageCard heading="Heading" href="/example" imageAlt="Test" imageSrc="#" title="Example Title" />,
+      '/example',
+      'Example Title',
+    );
   });
 });
 
