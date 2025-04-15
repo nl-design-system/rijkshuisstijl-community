@@ -67,7 +67,7 @@ ontwikkelen van websites en apps voor de Rijksoverheid.
 
 [De lettertypen voor de Rijkshuisstijl](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-online/webfonts)
 zijn [speciaal ontworpen voor de Rijksoverheid](https://www.rijkshuisstijl.nl/basiselementen/documenten/verzamelingen-afbeeldingen/2014/06/01/achtergrondartikel-rijkshuisstijl-webfonts)
-en zijn niet open source. Gebruik tot toestemming, systeemlettertypen zoals Arial, Verdana of Times New Roman of het [@rijkshuisstijl-community/](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/font/README.md) font.
+en zijn niet open source. Gebruik tot toestemming, systeemlettertypen zoals Arial, Verdana of Times New Roman of het [@rijkshuisstijl-community/font](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/font/README.md).
 
 #### Open source varianten
 
