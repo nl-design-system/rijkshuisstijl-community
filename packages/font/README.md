@@ -40,7 +40,7 @@ Gebruik in SCSS de volgende code:
 Het is ook mogelijk om de CSS te importeren:
 
 ```js
-import '@rijkshuisstijl-community/font/dist/index.css
+import '@rijkshuisstijl-community/font/dist/index.css';
 ```
 
 ## Op zoek naar de officiële lettertypes?
