@@ -57,7 +57,7 @@ Dat is niet de bedoeling. Als je de officiële fonts opslaat in een publieke Git
 
 ### De officiële lettertypes gebruiken
 
-Heb je wel toegang tot de officiële lettertypes via [rijkshuisstijl.nl](https://www.rijkshuisstijl.nl/publiek/modules/product/DigitalStyleGuide/default/index.aspx?ItemId=6745)? Dan kun je deze in je applicatie gebruiken! Hiervoor moet je een aantal stappen\* doorlopen:
+Heb je wel toestemming om de officiële lettertypes van [rijkshuisstijl.nl](https://www.rijkshuisstijl.nl/publiek/modules/product/DigitalStyleGuide/default/index.aspx?ItemId=6745) te gebruiken? Dan kun je deze in je applicatie gebruiken! Hiervoor moet je een aantal stappen doorlopen. De implementatie van deze stappen kan verschillen op basis van je ontwikkelomgeving.
 
 #### Stap 1
 
