@@ -13,7 +13,6 @@ export class ParagraphComponent {
   @Input() appearance?: AppearanceType;
 
   computedClass = () => {
-    console.log('appearance =' + this.appearance);
     switch (this.appearance) {
       case 'lead':
         return 'nl-paragraph nl-paragraph--lead';
