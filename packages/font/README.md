@@ -37,7 +37,7 @@ Gebruik in SCSS de volgende code:
 @import '@rijkshuisstijl-community/font/src/index.scss';
 ```
 
-Het is ook mogelijk om css te importeren:
+Het is ook mogelijk om de CSS te importeren:
 
 ```js
 import '@rijkshuisstijl-community/font/dist/index.css
