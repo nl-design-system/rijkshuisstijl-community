@@ -65,7 +65,7 @@ De font files beschikbaar maken binnen jouw applicatie. In Javascript frameworks
 
 #### Stap 2
 
-De custom fonts in css registreren met de `@fontface` rule, bijvoorbeld door dit toe te voegen aan `index.css`:
+De custom fonts in de CSS registreren met de `@fontface` rule, bijvoorbeeld door dit toe te voegen aan `index.css`:
 
 ```css
 @font-face {
