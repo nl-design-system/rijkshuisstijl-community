@@ -88,7 +88,7 @@ De custom fonts in de CSS registreren met de `@fontface` rule, bijvoorbeeld door
 
 #### Stap 3
 
-Ten slotte moet je de juiste font-family koppelen aan de css variabelen die componenten ook gebruiken. Dit kan je doen door een eigen [thema](https://nldesignsystem.nl/handboek/developer/thema-maken) te maken met behulp van custom tokens die met behulp van een buildstap de variabelen overschrijven of door de css variabelen handmatig in te stellen. Hier nog een voorbeeld van custom tokens:
+Tenslotte moet je de juiste font-family koppelen aan de CSS variabelen die componenten ook gebruiken. Dit kan je doen door een eigen [thema](https://nldesignsystem.nl/handboek/developer/thema-maken) te maken met behulp van custom tokens die met behulp van een build-stap de variabelen overschrijven. Of door de CSS variabelen handmatig in te stellen. Hier nog een voorbeeld van custom tokens:
 
 ```json
 {
