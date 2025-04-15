@@ -108,4 +108,3 @@ Ten slotte moet je de juiste font-family koppelen aan de css variabelen die comp
 }
 ```
 
-> \* De implementatie van deze stappen kan verschillen op basis van je ontwikkelomgeving.
