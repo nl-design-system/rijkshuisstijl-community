@@ -1,7 +1,6 @@
 import { ButtonComponent } from '@rijkshuisstijl-community/components-angular';
+import { IconComponent } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, type StoryObj } from '@storybook/angular';
-import { provideTablerIcons, TablerIconComponent } from 'angular-tabler-icons';
-import { IconArrowRight, IconCalendarEvent } from 'angular-tabler-icons/icons';
 
 const meta: Meta<ButtonComponent> = {
   title: 'Rijkshuisstijl-angular/Button',
@@ -72,7 +71,7 @@ export const IconLeft: StoryObj<ButtonComponent> = {
   render: ({ disabled, appearance }) => ({
     template: `
       <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
-        <i-tabler name="calendar-event"></i-tabler> Label
+        <rhc-icon icon="calendar-event" /> Label
       </rhc-button>
     `,
     props: {
@@ -80,8 +79,7 @@ export const IconLeft: StoryObj<ButtonComponent> = {
       disabled,
     },
     moduleMetadata: {
-      imports: [TablerIconComponent],
-      providers: [provideTablerIcons({ IconCalendarEvent })],
+      imports: [IconComponent],
     },
   }),
   name: 'Icon Left',
@@ -94,7 +92,7 @@ export const IconRight: StoryObj<ButtonComponent> = {
   render: ({ disabled, appearance }) => ({
     template: `
       <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
-        Label <i-tabler name="arrow-right"></i-tabler> 
+        Label <rhc-icon icon="arrow-right" />
       </rhc-button>
     `,
     props: {
@@ -102,8 +100,7 @@ export const IconRight: StoryObj<ButtonComponent> = {
       disabled,
     },
     moduleMetadata: {
-      imports: [TablerIconComponent],
-      providers: [provideTablerIcons({ IconArrowRight })],
+      imports: [IconComponent],
     },
   }),
   name: 'Icon Right',
@@ -116,7 +113,7 @@ export const IconOnly: StoryObj<ButtonComponent> = {
   render: ({ disabled, appearance }) => ({
     template: `
       <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
-        <i-tabler name="calendar-event"></i-tabler> 
+        <rhc-icon icon="calendar-event" />
       </rhc-button>
     `,
     props: {
@@ -124,8 +121,7 @@ export const IconOnly: StoryObj<ButtonComponent> = {
       disabled,
     },
     moduleMetadata: {
-      imports: [TablerIconComponent],
-      providers: [provideTablerIcons({ IconCalendarEvent })],
+      imports: [IconComponent],
     },
   }),
   name: 'Icon Only',

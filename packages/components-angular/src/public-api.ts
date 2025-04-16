@@ -6,3 +6,4 @@ export * from './paragraph/paragraph.component';
 export * from './link/link.component';
 export * from './button/button.component';
 export * from './action-group/action-group.component';
+export * from './icon/public-api';
