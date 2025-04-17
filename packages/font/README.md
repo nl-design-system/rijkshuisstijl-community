@@ -37,10 +37,19 @@ Gebruik in SCSS de volgende code:
 @import '@rijkshuisstijl-community/font/src/index.scss';
 ```
 
-Het is ook mogelijk om de CSS te importeren:
+In plain HTML heb je twee opties. Als je een CDN gebruikt, dan kun je de CSS zo importeren:
 
-```js
-import '@rijkshuisstijl-community/font/dist/index.css';
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@nl-design-system-candidate/code-block-css@1/dist/code-block.css"
+/>
+```
+
+Gebruik je geen CDN, dan kun je de CSS uit node_modules/ importeren:
+
+```html
+<link rel="stylesheet" href="node_modules/@nl-design-system-candidate/code-block-css/dist/code-block.css" />
 ```
 
 ## Op zoek naar de officiële lettertypes?
