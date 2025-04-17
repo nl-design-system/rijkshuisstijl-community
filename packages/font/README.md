@@ -65,24 +65,71 @@ De font files beschikbaar maken binnen jouw applicatie. In Javascript frameworks
 
 #### Stap 2
 
-De custom fonts in de CSS registreren met de `@fontface` rule, bijvoorbeeld door dit toe te voegen aan `index.css`:
+De custom fonts in de CSS registreren met de `@font-face` rule, bijvoorbeeld door dit toe te voegen aan `index.css`:
 
 ```css
 @font-face {
-  font-family: 'Sans';
-  src: url('/RijksoverheidSansText-Regular_2_0.otf');
-  font-weight: normal;
+  font-family: 'RijksSans';
+  src: url('/RijksSans.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Sans';
-  src: url('/RijksoverheidSansText-Bold_2_0.otf');
-  font-weight: bold;
+  font-family: 'RijksSans';
+  src: url('/RijksSans.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Sans Head';
-  src: url('/RijksoverheidSansHeading-Regular_2_0.otf');
+  font-family: 'RijksSans';
+  src: url('/RijksSans.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RijksSans';
+  src: url('/RijksSans.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RijksSansHead';
+  src: url('/RijksSansHead.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RijksSansHead';
+  src: url('/RijksSansHead.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RijksSansHead';
+  src: url('/RijksSansHead.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RijksSansHead';
+  src: url('/RijksSansHead.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
 }
 ```
 
@@ -107,4 +154,3 @@ Tenslotte moet je de juiste font-family koppelen aan de CSS variabelen die compo
   ...
 }
 ```
-
