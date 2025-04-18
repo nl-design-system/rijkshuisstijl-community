@@ -95,7 +95,7 @@ describe('Card', () => {
       expect(imageElement).toBeVisible();
 
       // Controleer of de heading vóór de afbeelding staat in de DOM-structuur
-      expect(headingElement.compareDocumentPosition(imageElement)).toBe(Node.DOCUMENT_POSITION_PRECEDING);
+      expect(headingElement.compareDocumentPosition(imageElement)).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
     });
   });
 });
