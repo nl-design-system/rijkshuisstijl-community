@@ -67,13 +67,13 @@ const DefaultCard = ({
   return (
     <div className={clsx('rhc-card', 'rhc-card--default', className)} ref={ref} {...restProps}>
       <div className="rhc-card__content">
-        {imageSrc && imageAlt && (
+        <div className="rhc-card__heading">{heading}</div>
+        {imageSrc && (
           <div className="rhc-card__image-container" data-testid="rhc-card__image-container">
             {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
           </div>
         )}
         <div className="rhc-card__icon">{icon}</div>
-        <div className="rhc-card__heading">{heading}</div>
         <div className="rhc-card__description">{description}</div>
         <div className="rhc-card__metadata">{metadata}</div>
         {children}
@@ -117,13 +117,13 @@ export const FullBleedCard = ({
     <span className="rhc-card__anchor">
       <a aria-label={title} href={href} title={title}></a>
     </span>
-    {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
     <div className="rhc-card__content">
       <div className="rhc-card__heading">{heading}</div>
       <div className="rhc-card__description">{description}</div>
       <div className="rhc-card__metadata">{metadata}</div>
       {children}
     </div>
+    {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
   </div>
 );
 
@@ -144,12 +144,12 @@ export const HorizontalImageCard = ({
     <span className="rhc-card__anchor">
       <a aria-label={title} href={href} title={title}></a>
     </span>
-    <div className="rhc-card__image-container">
-      <Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />
-    </div>
     <div className="rhc-card__content">
       <div className="rhc-card__heading">{heading}</div>
       {children}
+    </div>
+    <div className="rhc-card__image-container">
+      <Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />
     </div>
   </div>
 );
