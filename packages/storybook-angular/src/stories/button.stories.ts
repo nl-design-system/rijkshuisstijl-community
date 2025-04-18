@@ -2,6 +2,7 @@ import { ButtonComponent } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, type StoryObj } from '@storybook/angular';
 import { provideTablerIcons, TablerIconComponent } from 'angular-tabler-icons';
 import { IconArrowRight, IconCalendarEvent } from 'angular-tabler-icons/icons';
+import readme from './button.md';
 
 const meta: Meta<ButtonComponent> = {
   title: 'Rijkshuisstijl-angular/Button',
@@ -27,6 +28,13 @@ const meta: Meta<ButtonComponent> = {
   args: {
     appearance: '',
     disabled: false,
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
   },
   render: ({ disabled, appearance }) => ({
     template: `
