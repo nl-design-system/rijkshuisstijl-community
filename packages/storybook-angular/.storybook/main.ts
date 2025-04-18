@@ -17,6 +17,7 @@ const config: StorybookConfig = {
     getAbsolutePath('@chromatic-com/storybook'),
     getAbsolutePath('@storybook/addon-interactions'),
     getAbsolutePath('@storybook/addon-webpack5-compiler-babel'),
+    getAbsolutePath('storybook-addon-pseudo-states'),
   ],
   framework: {
     name: getAbsolutePath('@storybook/angular'),
