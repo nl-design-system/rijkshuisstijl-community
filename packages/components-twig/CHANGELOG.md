@@ -1,5 +1,18 @@
 # @rijkshuisstijl-community/components-twig
 
+## 1.3.2
+
+### Patch Changes
+
+- b505c9b: Update README to fix broken relative links to files in the repository.
+- b505c9b: Update README on installing and importing styling when applying theme.
+- 9eeb7b7: Dependency updates (week 12)
+- Updated dependencies [292ceb3]
+- Updated dependencies [b505c9b]
+- Updated dependencies [9eeb7b7]
+- Updated dependencies [5cf3cd0]
+  - @rijkshuisstijl-community/components-css@1.1.0
+
 ## 1.3.1
 
 ### Patch Changes
