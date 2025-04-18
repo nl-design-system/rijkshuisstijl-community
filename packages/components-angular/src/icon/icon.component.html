@@ -1,3 +1,6 @@
 <span class="utrecht-icon">
-  <i-tabler [name]="rhcIconRender" />
+  @if (icon) {
+    <i-tabler [name]="computedIconRender()" />
+  }
+  <ng-content />
 </span>

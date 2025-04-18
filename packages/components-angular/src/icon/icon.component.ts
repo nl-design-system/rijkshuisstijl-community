@@ -11,8 +11,8 @@ import { RHCIconID } from './RHCIconIDs';
   styleUrl: './icon.component.css',
 })
 export class IconComponent {
-  @Input({ required: true }) icon!: string;
-  iconSet: Partial<Record<RHCIconID, string>> = {
+  @Input({ required: false }) icon?: string;
+  static iconSet: Partial<Record<RHCIconID, string>> = {
     activiteit: 'calendar-check',
     'agile-werken': 'arrow-iteration',
     'alert-circle': 'alert-circle',
@@ -97,8 +97,9 @@ export class IconComponent {
     vraagteken: 'question-mark',
     zoek: 'search',
   };
-  rhcIconRender: string = '';
-  ngOnInit() {
-    this.rhcIconRender = this.iconSet[this.icon as RHCIconID] ?? this.icon;
+  computedIconRender = () => IconComponent.iconSet[this.icon as RHCIconID] || '';
+
+  static iconSetKeys(): RHCIconID[] {
+    return Object.keys(IconComponent.iconSet) as RHCIconID[];
   }
 }

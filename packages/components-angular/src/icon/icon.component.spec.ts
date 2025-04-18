@@ -30,6 +30,7 @@ describe('IconComponent', () => {
 
   it('should map custom icon to Tabler icon', () => {
     const iconComponent = fixture.debugElement.children[0].componentInstance as IconComponent;
-    expect(iconComponent.rhcIconRender).toBe('calendar-check');
+    const renderedIcon = iconComponent.computedIconRender();
+    expect(renderedIcon).toBe('calendar-check');
   });
 });

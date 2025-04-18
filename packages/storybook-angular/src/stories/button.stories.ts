@@ -71,7 +71,7 @@ export const IconLeft: StoryObj<ButtonComponent> = {
   render: ({ disabled, appearance }) => ({
     template: `
       <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
-        <rhc-icon icon="calendar-event" /> Label
+        <rhc-icon icon="kalender" /> Label
       </rhc-button>
     `,
     props: {
@@ -92,7 +92,7 @@ export const IconRight: StoryObj<ButtonComponent> = {
   render: ({ disabled, appearance }) => ({
     template: `
       <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
-        Label <rhc-icon icon="arrow-right" />
+        Label <rhc-icon icon="pijl-naar-rechts" />
       </rhc-button>
     `,
     props: {
@@ -113,7 +113,7 @@ export const IconOnly: StoryObj<ButtonComponent> = {
   render: ({ disabled, appearance }) => ({
     template: `
       <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
-        <rhc-icon icon="calendar-event" />
+        <rhc-icon icon="kalender" />
       </rhc-button>
     `,
     props: {
