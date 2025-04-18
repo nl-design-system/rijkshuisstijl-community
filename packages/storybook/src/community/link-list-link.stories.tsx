@@ -46,6 +46,14 @@ export const Default: Story = {
   },
 };
 
+export const NoIcon: Story = {
+  render: () => (
+    <LinkList>
+      <LinkListLink href="#">Label</LinkListLink>
+    </LinkList>
+  ),
+};
+
 export const Hover: Story = {
   parameters: {
     pseudo: { hover: true },

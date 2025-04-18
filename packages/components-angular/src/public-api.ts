@@ -14,3 +14,6 @@ export * from './unordered-list/unordered-list.component';
 export * from './unordered-list-item/unordered-list-item.component';
 export * from './column-layout/column-layout.component';
 export * from './logo/logo.component';
+export * from './link-list-link/link-list-link.component';
+export * from './link-list/link-list.component';
+export * from './link-list-item/link-list-item.component';
