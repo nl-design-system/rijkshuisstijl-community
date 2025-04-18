@@ -11,6 +11,13 @@ class TestHostComponent {
   icon = 'kalender';
 }
 
+@Component({
+  template: `<rhc-icon>Extra content</rhc-icon>`,
+  standalone: true,
+  imports: [IconComponent],
+})
+class TestSlotComponent {}
+
 describe('IconComponent', () => {
   let fixture: ComponentFixture<TestHostComponent>;
 
@@ -28,9 +35,27 @@ describe('IconComponent', () => {
     expect(iconElement).toBeTruthy();
   });
 
-  it('should map custom icon to Tabler icon', () => {
+  it('should map icon input to correct Tabler icon', () => {
     const iconComponent = fixture.debugElement.children[0].componentInstance as IconComponent;
     const renderedIcon = iconComponent.computedIconRender();
     expect(renderedIcon).toBe('calendar-check');
+  });
+});
+
+describe('IconComponent content projection', () => {
+  let fixture: ComponentFixture<TestSlotComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [TestSlotComponent],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(TestSlotComponent);
+    fixture.detectChanges();
+  });
+
+  it('should project content into the component slot', () => {
+    const iconElement = fixture.nativeElement.querySelector('rhc-icon');
+    expect(iconElement.textContent).toContain('Extra content');
   });
 });
