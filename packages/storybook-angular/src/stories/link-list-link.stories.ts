@@ -29,10 +29,10 @@ const meta: Meta<StoryType> = {
   },
   render: ({ href, label }) => ({
     template: `
-      <rhc-link-list-link href="${href}">
+      <li rhc-link-list-link href="${href}">
         <rhc-icon icon='chevron-right' />
         ${label}
-      </rhc-link-list-link>
+      </li>
     `,
   }),
 };
@@ -47,9 +47,9 @@ export const NoIcon: StoryObj<StoryType> = {
   name: 'No Icon',
   render: ({ href, label }) => ({
     template: `
-      <rhc-link-list-link href="${href}">
+      <li rhc-link-list-link href="${href}">
         ${label}
-      </rhc-link-list-link>
+      </li>
     `,
   }),
 };

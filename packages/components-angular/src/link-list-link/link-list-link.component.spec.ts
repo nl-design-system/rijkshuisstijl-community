@@ -5,10 +5,10 @@ import { IconComponent } from '../icon/icon.component';
 
 @Component({
   template: `
-    <rhc-link-list-link href="#">
+    <li rhc-link-list-link href="#">
       <rhc-icon icon="chevron-right" />
       Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
-    </rhc-link-list-link>
+    </li>
   `,
   imports: [LinkListLinkComponent, IconComponent],
 })

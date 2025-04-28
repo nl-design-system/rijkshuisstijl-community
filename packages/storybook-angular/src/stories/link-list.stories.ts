@@ -25,17 +25,18 @@ const meta: Meta<StoryType> = {
   render: ({ hasIcons }) => ({
     template: `
       <rhc-link-list>
-        <rhc-link-list-link href="#">
+        <li rhc-link-list-link href="#">
           ${hasIcons ? "<rhc-icon icon='chevron-right' />" : ''}
           Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
-        </rhc-link-list-link>
-        <rhc-link-list-link href="#">
+        </li>
+        <li rhc-link-list-link href="#">
           ${hasIcons ? "<rhc-icon icon='chevron-right' />" : ''}
-          Link 2</rhc-link-list-link>
-        <rhc-link-list-link href="#">
+          Link 2
+        </li>
+        <li rhc-link-list-link href="#">
           ${hasIcons ? "<rhc-icon icon='chevron-right' />" : ''}
           Link 3
-        </rhc-link-list-link>
+        </li>
       </rhc-link-list>
     `,
   }),
@@ -45,4 +46,17 @@ export default meta;
 
 export const Default: StoryObj<LinkListComponent> = {
   name: 'Default',
+};
+
+export const LinkListWithLinksViaInput: StoryObj<LinkListComponent> = {
+  render: () => ({
+    template: `
+    <rhc-link-list [linkListLinks]="[
+      { href: '#', label: 'Label 1', icon: 'chevron-right'},
+      { href: '#', label: 'Label 2', icon: 'instellingen'},
+      { href: '#', label: 'Label 3'},
+    ]">
+    </rhc-link-list>
+    `,
+  }),
 };
