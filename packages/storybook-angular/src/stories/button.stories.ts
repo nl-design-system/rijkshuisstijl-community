@@ -29,9 +29,9 @@ const meta: Meta<ButtonComponent> = {
   },
   render: ({ disabled, appearance }) => ({
     template: `
-      <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
+      <button rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
         Label
-      </rhc-button>
+      </button>
     `,
     props: {
       appearance,
@@ -57,6 +57,13 @@ export const Primary: StoryObj<ButtonComponent> = {
   name: 'Primary',
 };
 
+export const Secondary: StoryObj<ButtonComponent> = {
+  args: {
+    appearance: 'secondary-action',
+  },
+  name: 'Secondary',
+};
+
 export const Subtle: StoryObj<ButtonComponent> = {
   args: {
     appearance: 'subtle',
@@ -70,9 +77,9 @@ export const IconLeft: StoryObj<ButtonComponent> = {
   },
   render: ({ disabled, appearance }) => ({
     template: `
-      <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
+      <button rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
         <rhc-icon icon="kalender" /> Label
-      </rhc-button>
+      </button>
     `,
     props: {
       appearance,
@@ -91,9 +98,9 @@ export const IconRight: StoryObj<ButtonComponent> = {
   },
   render: ({ disabled, appearance }) => ({
     template: `
-      <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
+      <button rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
         Label <rhc-icon icon="pijl-naar-rechts" />
-      </rhc-button>
+      </button>
     `,
     props: {
       appearance,
@@ -112,9 +119,9 @@ export const IconOnly: StoryObj<ButtonComponent> = {
   },
   render: ({ disabled, appearance }) => ({
     template: `
-      <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
+      <button rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
         <rhc-icon icon="kalender" />
-      </rhc-button>
+      </button>
     `,
     props: {
       appearance,
