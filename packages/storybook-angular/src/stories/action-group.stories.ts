@@ -17,13 +17,13 @@ const meta: Meta<ActionGroupComponent> = {
     direction: 'column',
   },
   render: ({ direction }) => ({
-    template: `<rhc-action-group direction="${direction}"> 
-        <rhc-button appearance='primary-action'>
+    template: `<rhc-action-group direction="${direction}">
+        <button rhc-button appearance='primary-action'>
             Save and continue
-        </rhc-button>
-        <rhc-button appearance='secondary-action'>
+        </button>
+        <button rhc-button appearance='secondary-action'>
             Back
-        </rhc-button>
+        </button>
     </rhc-action-group>`,
     props: {
       direction,
