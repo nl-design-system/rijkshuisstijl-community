@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/font
 
+## 1.1.0
+
+### Minor Changes
+
+- d914771: Added the option to import dist/index.css
+
 ## 1.0.1
 
 ### Patch Changes

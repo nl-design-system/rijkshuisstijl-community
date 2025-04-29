@@ -1,5 +1,23 @@
 # @rijkshuisstijl-community/components-react
 
+## 1.1.0
+
+### Minor Changes
+
+- 292ceb3: Adjusted DOM order of `card` component to improve screen reader accessibility per WCAG guidelines, placing headings before images. Visual layout preserved using flex order.
+
+### Patch Changes
+
+- bb22959: Refined link list component, added docs and unit tests
+- d33a0cf: Exported the Fieldset component from RHC, added Storybook stories, and documented best practices.
+- d9043b4: Refined link-list-card component, added docs and unit tests
+- bb41c62: Refined image component: image will not render if alt attribute is not added. Added docs to the component
+- cc11bef: Exported the Figure component from RHC, added border-radius functionality, and documented best practices.
+- 259bc52: Fixed ref issues in the file input component since updating to React 19. Re-added useRef.
+- b505c9b: Update README to fix broken relative links to files in the repository.
+- 9eeb7b7: Dependency updates (week 12)
+- 9a2b88f: Updated Checkbox Group docs and added an example to the Collage template.
+
 ## 1.0.4
 
 ### Patch Changes
