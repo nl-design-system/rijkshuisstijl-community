@@ -3,6 +3,9 @@ import { componentWrapperDecorator, type Preview } from '@storybook/angular';
 const preview: Preview = {
   parameters: {
     docs: {
+      page: () => (
+       
+      ),
       source: {
         excludeDecorators: true,
       },
@@ -18,3 +21,4 @@ const preview: Preview = {
 };
 
 export default preview;
+
