@@ -72,13 +72,13 @@
   --nl-paragraph-font-weight: var(--rhc-navigation-list-item-label-font-weight, var(--rhc-font-weight-bold));
   --nl-paragraph-line-height: var(--rhc-navigation-list-item-label-line-height, var(--rhc-line-height-md));
 
-  color: var(--rhc-navigation-list-item-heading-color, var(--rhc-color-foreground-lint));
+  color: var(--rhc-navigation-list-item-heading-color);
   font-family: var(--rhc-navigation-list-item-label-font-family, var(--rhc-font-family-primary)), sans-serif;
   grid-area: label;
   margin-block: 0;
 }
 @mixin rhc-navigation-list__item__description {
-  --nl-paragraph-color: var(--rhc-color-foreground-subdued);
+  --nl-paragraph-color: var(--rhc-navigation-list-item-color);
   --nl-paragraph-font-size: var(--rhc-navigation-list-item-content-font-size, var(--rhc-font-size-sm-desktop));
 
   grid-area: content;
@@ -89,8 +89,6 @@
 }
 
 @mixin rhc-navigation-list__item__end-icon {
-  --utrecht-icon-color: var(--rhc-color-foreground-lint);
-
   align-self: center;
   grid-area: end-icon;
   justify-self: end;
