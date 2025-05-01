@@ -9,3 +9,4 @@ export * from './action-group/action-group.component';
 export * from './icon/public-api';
 export * from './link-list-link/link-list-link.component';
 export * from './link-list/link-list.component';
+export * from './link-list-item/link-list-item.component';

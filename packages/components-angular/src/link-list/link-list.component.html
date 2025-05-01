@@ -1,11 +1,3 @@
 <ul class="utrecht-link-list utrecht-link-list--html-ul">
   <ng-content></ng-content>
-  @for (linkList of linkListLinks; track linkList) {
-    <li rhc-link-list-link href="{{ linkList.href }}">
-      @if (linkList.icon) {
-        <rhc-icon icon="{{ linkList.icon }}" />
-      }
-      {{ linkList.label }}
-    </li>
-  }
 </ul>
