@@ -68,21 +68,21 @@
   margin-block: 0;
 }
 @mixin rhc-message-list__item__description {
-  --nl-paragraph-color: var(--rhc-color-foreground-subdued, inherit);
+  --nl-paragraph-color: var(--rhc-message-list-item-color, inherit);
   --nl-paragraph-font-size: var(--rhc-message-list-item-content-font-size);
 
   grid-area: description;
   margin-block: 0;
 }
 @mixin rhc-message-list__item__meta-data {
-  --nl-paragraph-color: var(--rhc-color-foreground-subdued, inherit);
+  --nl-paragraph-color: var(--rhc-message-list-item-color, inherit);
   --nl-paragraph-font-size: var(--rhc-message-list-item-content-font-size);
 
   grid-area: meta;
   margin-block: 0;
 }
 @mixin rhc-navigation-list__item__end-icon {
-  --utrecht-icon-color: var(--rhc-color-foreground-lint, inherit);
+  --utrecht-icon-color: var(--rhc-navigation-list-item-color, inherit);
 
   grid-area: icon;
   min-block-size: var(--rhc-message-list-item-icon-font-size);
