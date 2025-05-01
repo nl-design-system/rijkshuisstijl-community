@@ -26,9 +26,10 @@
     "test": "jest --coverage --verbose"
   },
   "dependencies": {
-    "tslib": "2.3.0"
+    "tslib": "2.3.0",
+    "angular-tabler-icons": "3.26.0"
   },
-  "devDependencies": {
+  "peerDependencies": {
     "@angular-devkit/build-angular": "19.2.0",
     "@angular/cli": "19.2.3",
     "@angular/common": "19.2.0",
@@ -38,7 +39,9 @@
     "@angular/forms": "19.2.0",
     "@angular/platform-browser": "19.2.0",
     "@angular/platform-browser-dynamic": "19.2.0",
-    "@angular/router": "19.2.0",
+    "@angular/router": "19.2.0"
+  },
+  "devDependencies": {
     "@nl-design-system-candidate/heading-css": "1.0.0",
     "@nl-design-system-candidate/link-css": "1.0.1",
     "@nl-design-system-candidate/paragraph-css": "2.0.1",
@@ -46,12 +49,20 @@
     "@testing-library/jest-dom": "5.17.0",
     "@types/jest": "29.5.14",
     "@types/testing-library__jest-dom": "5.14.9",
-    "angular-tabler-icons": "3.26.0",
     "jest": "29.7.0",
     "jest-preset-angular": "14.5.4",
     "ng-packagr": "19.2.0",
     "rxjs": "7.8.0",
     "typescript": "5.7.2",
     "zone.js": "0.15.0"
+  },
+  "exports": {
+    "./package.json": {
+      "default": "./dist/package.json"
+    },
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/fesm2022/rijkshuisstijl-community-components-angular.mjs"
+    }
   }
 }
