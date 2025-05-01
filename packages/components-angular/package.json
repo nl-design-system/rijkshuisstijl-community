@@ -56,13 +56,7 @@
     "typescript": "5.7.2",
     "zone.js": "0.15.0"
   },
-  "exports": {
-    "./package.json": {
-      "default": "./dist/package.json"
-    },
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/fesm2022/rijkshuisstijl-community-components-angular.mjs"
-    }
-  }
+  "files": [
+    "dist/"
+  ]
 }
