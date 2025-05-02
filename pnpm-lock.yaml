@@ -694,6 +694,9 @@ importers:
       '@angular/compiler-cli':
         specifier: 19.2.0
         version: 19.2.0(@angular/compiler@19.2.0(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0)))(typescript@5.7.2)
+      '@angular/elements':
+        specifier: 19.2.9
+        version: 19.2.9(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0))(rxjs@7.8.0)
       '@chromatic-com/storybook':
         specifier: '3'
         version: 3.2.6(react@19.0.0)(storybook@8.6.7(prettier@3.5.3))
@@ -730,6 +733,9 @@ importers:
       '@types/react':
         specifier: 19.1.2
         version: 19.1.2
+      '@webcomponents/custom-elements':
+        specifier: 1.6.0
+        version: 1.6.0
       angular-tabler-icons:
         specifier: 3.26.0
         version: 3.26.0(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0))(rxjs@7.8.0))(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0))
@@ -1123,6 +1129,13 @@ packages:
     peerDependencies:
       rxjs: ^6.5.3 || ^7.4.0
       zone.js: ~0.15.0
+
+  '@angular/elements@19.2.9':
+    resolution: {integrity: sha512-xG4hFF8n63R4678d+RtEW7wOjzOuUb4cUuV3RhG2PBuP8uu41bhAGeHhWQjk53xLfgtYXrOnem6M8e45I8dNpw==}
+    engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0}
+    peerDependencies:
+      '@angular/core': 19.2.9
+      rxjs: ^6.5.3 || ^7.4.0
 
   '@angular/forms@19.2.0':
     resolution: {integrity: sha512-/GHQgiDPUr1vMXCB1O8c+O70DcoZykDBzOICCaz3kTu46rp48g6E6iaZVJoozI0iBwB8+rnuTPQnLWJ46w+wVg==}
@@ -5641,6 +5654,9 @@ packages:
 
   '@webassemblyjs/wast-printer@1.14.1':
     resolution: {integrity: sha512-kPSSXE6De1XOR820C90RIo2ogvZG+c3KiHzqUoO/F34Y2shGzesfqv7o57xrxovZJH/MetF5UjroJ/R/3isoiw==}
+
+  '@webcomponents/custom-elements@1.6.0':
+    resolution: {integrity: sha512-CqTpxOlUCPWRNUPZDxT5v2NnHXA4oox612iUGnmTUGQFhZ1Gkj8kirtl/2wcF6MqX7+PqqicZzOCBKKfIn0dww==}
 
   '@whitespace/storybook-addon-html@6.1.1':
     resolution: {integrity: sha512-sq/9c6s4PXugl//Q5iFwKoHF3tBDTEfJQubb62HWspF+CqBrDLHVEh7VYoEjubm5LjihxdFV3+mjj8Ck6bnoHQ==}
@@ -13948,6 +13964,12 @@ snapshots:
       tslib: 2.8.1
       zone.js: 0.15.0
 
+  '@angular/elements@19.2.9(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0))(rxjs@7.8.0)':
+    dependencies:
+      '@angular/core': 19.2.0(rxjs@7.8.0)(zone.js@0.15.0)
+      rxjs: 7.8.0
+      tslib: 2.8.1
+
   '@angular/forms@19.2.0(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0))(rxjs@7.8.0))(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0))(@angular/platform-browser@19.2.0(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0))(rxjs@7.8.0))(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0)))(rxjs@7.8.0)':
     dependencies:
       '@angular/common': 19.2.0(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0))(rxjs@7.8.0)
@@ -20045,6 +20067,8 @@ snapshots:
     dependencies:
       '@webassemblyjs/ast': 1.14.1
       '@xtuc/long': 4.2.2
+
+  '@webcomponents/custom-elements@1.6.0': {}
 
   '@whitespace/storybook-addon-html@6.1.1(prettier@3.5.3)(react-syntax-highlighter@15.6.1(react@19.0.0))':
     dependencies:

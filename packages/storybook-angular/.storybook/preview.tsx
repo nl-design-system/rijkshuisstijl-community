@@ -4,6 +4,7 @@ import { Controls, Description, Primary } from '@storybook/blocks';
 const preview: Preview = {
   parameters: {
     docs: {
+      inlineStories: true,
       page: () => {
         return (
           <>
