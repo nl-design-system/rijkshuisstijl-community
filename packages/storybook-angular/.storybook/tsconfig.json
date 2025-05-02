@@ -1,11 +1,12 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
+    "jsx": "react-jsx",
     "types": ["node"],
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true
   },
   "exclude": ["../src/test.ts", "../src/**/*.spec.ts"],
-  "include": ["../src/**/*.stories.*", "preview.ts"],
+  "include": ["../src/**/*.stories.*", "preview.tsx"],
   "files": ["./typings.d.ts"]
 }
