@@ -7,3 +7,5 @@ export * from './link/link.component';
 export * from './button/button.component';
 export * from './action-group/action-group.component';
 export * from './icon/public-api';
+export * from './unordered-list/unordered-list.component';
+export * from './unordered-list-item/unordered-list-item.component';
