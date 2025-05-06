@@ -10,10 +10,11 @@ import {
   NavBar,
   PageContent,
   PageHeader,
+  SkipLink,
   // TextInput,
 } from '@rijkshuisstijl-community/components-react';
-import { IconSearch } from '@tabler/icons-react';
-import { Button, Heading, Paragraph } from '@utrecht/component-library-react';
+import { IconArrowUp, IconSearch } from '@tabler/icons-react';
+import { Button, Heading, Paragraph, ScrollLink } from '@utrecht/component-library-react';
 // import { BadgeList, DataBadge } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 
@@ -22,6 +23,9 @@ import { PageBody } from '@utrecht/page-body-react';
 export default function DevOvhHomepage() {
   return (
     <>
+      <SkipLink className="rhc-skip-link--visible" href="#main" id="top">
+        Ga naar hoofdinhoud
+      </SkipLink>
       <PageHeader className="rhc-header-wrapper">
         <title>Developer Overheid - Homepage</title>
         <Figure>
@@ -68,7 +72,7 @@ export default function DevOvhHomepage() {
       </NavBar>
 
       <PageBody className="rhc-templates-main-content rhc-templates-page-body">
-        <main>
+        <main id="main">
           <PageContent className="rhc-templates-page-content">
             {/* <Hero
               aspectRatio="16 / 9"
@@ -140,10 +144,13 @@ export default function DevOvhHomepage() {
             </section>
           </PageContent>
         </main>
+        <ScrollLink appearance="subtle-button" href="#top">
+          Terug naar boven <IconArrowUp />
+        </ScrollLink>
       </PageBody>
 
       <Footer
-        backtotop
+        // backtotop
         appearanceLevel={4}
         background="primary-filled"
         heading="Mede mogelijk gemaakt door:"
