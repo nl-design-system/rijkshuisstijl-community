@@ -7,6 +7,6 @@ export interface ImageProps extends UtrechtImageProps {
 }
 
 export const Image = ({ ref, className, alt, ...restProps }: ImageProps) =>
-  alt && <UtrechtImage alt={alt} {...restProps} photo className={className} ref={ref} />;
+  <UtrechtImage alt={alt} {...restProps} photo className={className} ref={ref} />;
 
 Image.displayName = 'Image';
