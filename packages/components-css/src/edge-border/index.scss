@@ -1,0 +1,44 @@
+@use "sass:string";
+
+@mixin add-edge($side, $color) {
+  @include reset-border-width;
+
+  border-#{$side}-color: $color;
+  border-#{$side}-style: var(--rhc-edge-border-border-style);
+  border-#{$side}-width: var(--rhc-edge-border-border-width);
+
+  @if string.index($side, "block") == 1 {
+    padding-block: var(--rhc-edge-border-adjacent-padding);
+    padding-inline: var(--rhc-edge-border-perpendicular-padding);
+  } @else if string.index($side, "inline") == 1 {
+    padding-block: var(--rhc-edge-border-perpendicular-padding);
+    padding-inline: var(--rhc-edge-border-adjacent-padding);
+  }
+}
+
+@mixin reset-border-width {
+  border-block-end-width: 0;
+  border-block-start-width: 0;
+  border-inline-end-width: 0;
+  border-inline-start-width: 0;
+}
+
+.rhc-edge-border {
+  --_rhc-edge-border-color: var(--rhc-edge-border-color);
+
+  &.rhc-edge-border--color {
+    @each $color in ("blue", "pink") {
+      &-#{$color} {
+        --_rhc-edge-border-color: var(--rhc-edge-border-color-#{$color});
+      }
+    }
+  }
+
+  &.rhc-edge-border--side {
+    @each $side in ("block-start", "block-end", "inline-start", "inline-end") {
+      &-#{$side} {
+        @include add-edge($side, var(--_rhc-edge-border-color));
+      }
+    }
+  }
+}
