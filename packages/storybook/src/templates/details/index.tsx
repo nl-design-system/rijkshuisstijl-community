@@ -36,11 +36,7 @@ export default function Details() {
         ></NavBar>
       </PageHeader>
       <PageBody className="rhc-templates-page">
-        <Hero
-          className="rhc-hero-details-template"
-          imageAlt="Tullip field"
-          imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg"
-        >
+        <Hero className="rhc-hero-details-template" imageAlt="Tullip field" imageSrc="./placeholder.jpg">
           <LinkListCard heading="Veel bekeken" headingLevel={2}>
             <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
               Wat zijn de wettelijke regels voor mijn werktijden en rusttijden?
@@ -118,7 +114,7 @@ export default function Details() {
                       heading="Bijbaan, vakantiewerk en stage door jongeren"
                       href="#"
                       imageAlt="Tullip field"
-                      imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
+                      imageSrc="./placeholder.jpg"
                       linkLabel="Lees meer"
                       title="Tekst over de link"
                     ></Card>
@@ -126,7 +122,7 @@ export default function Details() {
                       heading="Vakantiedagen en vakantiegeld"
                       href="#"
                       imageAlt="Tullip field"
-                      imageSrc="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
+                      imageSrc="./placeholder.jpg"
                       linkLabel="Lees meer"
                       title="Tekst over de link"
                     ></Card>

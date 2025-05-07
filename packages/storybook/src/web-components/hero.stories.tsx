@@ -91,8 +91,7 @@ const meta = {
     textAlign: 'start',
     borderRadiusCorner: 'start-start',
     headingLevel: 3,
-    imageSrc:
-      'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
+    imageSrc: './placeholder.jpg',
   },
   tags: ['autodocs'],
   parameters: {

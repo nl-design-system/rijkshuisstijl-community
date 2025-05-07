@@ -60,12 +60,7 @@ export default function Page() {
                   <Heading level={1}>Titel van de pagina</Heading>
                   <Paragraph purpose="lead">Hier zou een korte introductie van de pagina kunnen staan.</Paragraph>
                   <Figure>
-                    <Image
-                      alt="Multicolored tulip field"
-                      height="763"
-                      src="https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/0bfd32af3f34ff7ce62f4769fbec8895720dde75/proprietary/assets/src/placeholder.jpg"
-                      width="640"
-                    ></Image>
+                    <Image alt="Multicolored tulip field" height="763" src="./placeholder.jpg" width="640"></Image>
                     <FigureCaption>Bijschrift (figcaption) van een afbeelding)</FigureCaption>
                   </Figure>
                 </div>
