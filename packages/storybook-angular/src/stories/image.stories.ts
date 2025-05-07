@@ -30,10 +30,10 @@ const meta: Meta<StoryType> = {
     },
   },
   args: {
-    src: 'https://placehold.co/150x150',
-    alt: 'Placeholder image',
-    width: 150,
-    height: 150,
+    src: './placeholder.jpg',
+    alt: 'Multicolored tulip field',
+    width: 640,
+    height: 763,
   },
   render: ({ src, alt, width, height }) => ({
     template: `<img rhc-image src="${src}" alt="${alt}" width="${width}" height="${height}" />`,

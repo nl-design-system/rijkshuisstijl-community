@@ -8,9 +8,9 @@ const meta: Meta<FigureComponent> = {
   render: () => ({
     template: `
     <figure rhc-figure>
-    <img rhc-image src="https://placehold.co/150x150" alt="Placeholder image" width="150" height="150" />
+    <img rhc-image src="./placeholder.jpg" alt="Multicolored tulip field" width="640" height="763" />
     <figcaption rhc-figure-caption>
-      <p>Placeholder image</p>
+      <p>Bijschrift (figcaption) van afbeelding.</p>
     </figcaption>
     </figure>`,
     moduleMetadata: {
