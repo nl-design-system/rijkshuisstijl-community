@@ -1,19 +1,11 @@
 import { componentWrapperDecorator, type Preview } from '@storybook/angular';
-import { Controls, Description, Primary } from '@storybook/blocks';
+import OverviewPage from './overview.mdx';
 
 const preview: Preview = {
   parameters: {
     docs: {
       inlineStories: true,
-      page: () => {
-        return (
-          <>
-            <Description />
-            <Primary />
-            <Controls />
-          </>
-        );
-      },
+      page: OverviewPage,
       source: {
         excludeDecorators: true,
       },

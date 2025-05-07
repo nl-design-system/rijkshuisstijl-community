@@ -4,9 +4,10 @@
     "jsx": "react-jsx",
     "types": ["node"],
     "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "skipLibCheck": true
   },
   "exclude": ["../src/test.ts", "../src/**/*.spec.ts"],
-  "include": ["../src/**/*.stories.*", "preview.tsx"],
+  "include": ["../src/**/*.stories.*", "preview.ts", "../**/*.tsx", "./mdx.d.ts"],
   "files": ["./typings.d.ts"]
 }
