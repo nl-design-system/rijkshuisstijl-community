@@ -36,7 +36,7 @@ export default function Details() {
         ></NavBar>
       </PageHeader>
       <PageBody className="rhc-templates-page">
-        <Hero className="rhc-hero-details-template" imageAlt="Tullip field" imageSrc="./placeholder.jpg">
+        <Hero className="rhc-hero-details-template" imageAlt="Tullip field" imageSrc="/placeholder.jpg">
           <LinkListCard heading="Veel bekeken" headingLevel={2}>
             <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
               Wat zijn de wettelijke regels voor mijn werktijden en rusttijden?
@@ -114,7 +114,7 @@ export default function Details() {
                       heading="Bijbaan, vakantiewerk en stage door jongeren"
                       href="#"
                       imageAlt="Tullip field"
-                      imageSrc="./placeholder.jpg"
+                      imageSrc="/placeholder.jpg"
                       linkLabel="Lees meer"
                       title="Tekst over de link"
                     ></Card>
@@ -122,7 +122,7 @@ export default function Details() {
                       heading="Vakantiedagen en vakantiegeld"
                       href="#"
                       imageAlt="Tullip field"
-                      imageSrc="./placeholder.jpg"
+                      imageSrc="/placeholder.jpg"
                       linkLabel="Lees meer"
                       title="Tekst over de link"
                     ></Card>

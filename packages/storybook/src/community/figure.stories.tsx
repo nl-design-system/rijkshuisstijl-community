@@ -64,7 +64,7 @@ export default meta;
 export const DefaultFigure: StoryObj<typeof meta> = {
   args: {
     children: [
-      <Image alt="Multicolored tulip field" height={763} src="./placeholder.jpg" width={640} />,
+      <Image alt="Multicolored tulip field" height={763} src="/placeholder.jpg" width={640} />,
       <FigureCaption>{'Bijschrift (figcaption) van afbeelding.'}</FigureCaption>,
     ],
   },

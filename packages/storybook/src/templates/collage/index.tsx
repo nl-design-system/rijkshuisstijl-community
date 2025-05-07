@@ -75,7 +75,7 @@ export default function Collage() {
                     <span>Invisible text</span>
                   </VisuallyHidden>
                   <Heading level={1}>Componenten collage NL Design System</Heading>
-                  <Image alt="Multicolored tulip field" height="763" src="./placeholder.jpg" width="640"></Image>
+                  <Image alt="Multicolored tulip field" height="763" src="/placeholder.jpg" width="640"></Image>
                   <Paragraph purpose="lead">
                     In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
                   </Paragraph>

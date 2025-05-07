@@ -91,7 +91,7 @@ const meta = {
     textAlign: 'start',
     borderRadiusCorner: 'start-start',
     headingLevel: 3,
-    imageSrc: './placeholder.jpg',
+    imageSrc: '/placeholder.jpg',
   },
   tags: ['autodocs'],
   parameters: {

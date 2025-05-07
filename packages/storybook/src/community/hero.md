@@ -25,7 +25,7 @@ De `Hero` component bestaat uit de volgende elementen:
 
 <Hero
   imageAlt="Tulip field",
-  imageSrc="./placeholder.jpg"
+  imageSrc="/placeholder.jpg"
 >
   <h1>Heading</h1>
 </Hero>;
@@ -36,7 +36,7 @@ De `Hero` component bestaat uit de volgende elementen:
 // Zowel `heading` als `subHeading` zijn optioneel, maar als je een `subHeading` toevoegt,
 // moet je ook een `heading` toevoegen. Een Hero component met alleen een `subHeading` is niet toegestaan.
 
-<Hero imageAlt="Tulip field" imageSrc="./placeholder.jpg" subHeading="Subtext zonder heading" />
+<Hero imageAlt="Tulip field" imageSrc="/placeholder.jpg" subHeading="Subtext zonder heading" />
 ```
 
 ## Usage
@@ -46,7 +46,7 @@ De `Hero` component bestaat uit de volgende elementen:
 ```tsx
 import { Hero } from '@rijkshuisstijl-community/components-react';
 
-<Hero heading="Heading" imageAlt="Tulip field" imageSrc="./placeholder.jpg" subHeading="Subtext" />;
+<Hero heading="Heading" imageAlt="Tulip field" imageSrc="/placeholder.jpg" subHeading="Subtext" />;
 ```
 
 - Voor een hero met een custom call-to-action:
@@ -54,7 +54,7 @@ import { Hero } from '@rijkshuisstijl-community/components-react';
 ```tsx
 import { Hero } from '@rijkshuisstijl-community/components-react';
 
-<Hero imageAlt="Tulip field" imageSrc="./placeholder.jpg">
+<Hero imageAlt="Tulip field" imageSrc="/placeholder.jpg">
   <LinkListCard heading="Custom call-to-action" headingLevel={2}>
     <LinkListLink href="#">Link 1</LinkListLink>
     <LinkListLink href="#">Link 2</LinkListLink>
