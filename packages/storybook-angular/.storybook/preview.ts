@@ -4,7 +4,6 @@ import OverviewPage from './overview.mdx';
 const preview: Preview = {
   parameters: {
     docs: {
-      inlineStories: true,
       page: OverviewPage,
       source: {
         excludeDecorators: true,
