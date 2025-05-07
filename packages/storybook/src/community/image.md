@@ -16,7 +16,7 @@
 ```jsx
 import { Image } from '@rijkshuisstijl-community/components-react';
 
-<Image src="./placeholder.jpg" alt="Multicolored tulip field" width={640} height={763} />;
+<Image src="/placeholder.jpg" alt="Multicolored tulip field" width={640} height={763} />;
 ```
 
 ## Props
@@ -34,5 +34,5 @@ import { Image } from '@rijkshuisstijl-community/components-react';
 - Geen `alt` attribuut opgegeven
 
 ```jsx
-<Image src="./placeholder.jpg" width={640} height={480} />
+<Image src="/placeholder.jpg" width={640} height={480} />
 ```
