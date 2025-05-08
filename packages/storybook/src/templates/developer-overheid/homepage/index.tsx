@@ -23,7 +23,7 @@ import { PageBody } from '@utrecht/page-body-react';
 export default function DevOvhHomepage() {
   return (
     <>
-      <SkipLink className="rhc-skip-link--visible" href="#main" id="top">
+      <SkipLink className="rhc-skip-link--visible-on-focus" href="#main" id="top">
         Ga naar hoofdinhoud
       </SkipLink>
       <PageHeader className="rhc-header-wrapper">
