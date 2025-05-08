@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 1.2.0
+
+### Minor Changes
+
+- 86c37f5: - Overwrites toegevoegd om thema’s te kunnen variëren. Toegevoegd is: responsiveness, extra primaire kleuren en de optie om niet af te wijken van de Rijkshuisstijl voorbeelden.
+  - Default button stijling aangepast.
+
 ## 1.1.0
 
 ### Minor Changes

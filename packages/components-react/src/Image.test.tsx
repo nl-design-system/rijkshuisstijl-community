@@ -5,7 +5,7 @@ import { Image } from './Image';
 
 describe('Image', () => {
   it('renders a visible element', () => {
-    const { container } = render(<Image alt="Multicolored tulip field" src="./placeholder.jpg" />);
+    const { container } = render(<Image alt="Multicolored tulip field" src="/placeholder.jpg" />);
 
     const image = container.querySelector(':only-child');
 
@@ -14,7 +14,7 @@ describe('Image', () => {
   });
 
   it("doesn't render the image if alt is not given", () => {
-    const { container } = render(<Image alt="" src="./placeholder.jpg" />);
+    const { container } = render(<Image alt="" src="/placeholder.jpg" />);
 
     const image = container.querySelector('img');
 

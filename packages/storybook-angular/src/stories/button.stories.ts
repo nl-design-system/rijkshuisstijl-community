@@ -1,7 +1,6 @@
 import { ButtonComponent } from '@rijkshuisstijl-community/components-angular';
+import { IconComponent } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, type StoryObj } from '@storybook/angular';
-import { provideTablerIcons, TablerIconComponent } from 'angular-tabler-icons';
-import { IconArrowRight, IconCalendarEvent } from 'angular-tabler-icons/icons';
 import readme from './button.md';
 
 const meta: Meta<ButtonComponent> = {
@@ -38,9 +37,9 @@ const meta: Meta<ButtonComponent> = {
   },
   render: ({ disabled, appearance }) => ({
     template: `
-      <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
+      <button rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
         Label
-      </rhc-button>
+      </button>
     `,
     props: {
       appearance,
@@ -66,6 +65,13 @@ export const Primary: StoryObj<ButtonComponent> = {
   name: 'Primary',
 };
 
+export const Secondary: StoryObj<ButtonComponent> = {
+  args: {
+    appearance: 'secondary-action',
+  },
+  name: 'Secondary',
+};
+
 export const Subtle: StoryObj<ButtonComponent> = {
   args: {
     appearance: 'subtle',
@@ -79,17 +85,16 @@ export const IconLeft: StoryObj<ButtonComponent> = {
   },
   render: ({ disabled, appearance }) => ({
     template: `
-      <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
-        <i-tabler name="calendar-event"></i-tabler> Label
-      </rhc-button>
+      <button rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
+        <rhc-icon icon="kalender" /> Label
+      </button>
     `,
     props: {
       appearance,
       disabled,
     },
     moduleMetadata: {
-      imports: [TablerIconComponent],
-      providers: [provideTablerIcons({ IconCalendarEvent })],
+      imports: [IconComponent],
     },
   }),
   name: 'Icon Left',
@@ -101,17 +106,16 @@ export const IconRight: StoryObj<ButtonComponent> = {
   },
   render: ({ disabled, appearance }) => ({
     template: `
-      <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
-        Label <i-tabler name="arrow-right"></i-tabler> 
-      </rhc-button>
+      <button rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
+        Label <rhc-icon icon="pijl-naar-rechts" />
+      </button>
     `,
     props: {
       appearance,
       disabled,
     },
     moduleMetadata: {
-      imports: [TablerIconComponent],
-      providers: [provideTablerIcons({ IconArrowRight })],
+      imports: [IconComponent],
     },
   }),
   name: 'Icon Right',
@@ -123,17 +127,16 @@ export const IconOnly: StoryObj<ButtonComponent> = {
   },
   render: ({ disabled, appearance }) => ({
     template: `
-      <rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
-        <i-tabler name="calendar-event"></i-tabler> 
-      </rhc-button>
+      <button rhc-button [appearance]="'${appearance}'" [disabled]="${disabled}">
+        <rhc-icon icon="kalender" />
+      </button>
     `,
     props: {
       appearance,
       disabled,
     },
     moduleMetadata: {
-      imports: [TablerIconComponent],
-      providers: [provideTablerIcons({ IconCalendarEvent })],
+      imports: [IconComponent],
     },
   }),
   name: 'Icon Only',

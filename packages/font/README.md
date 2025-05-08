@@ -37,6 +37,21 @@ Gebruik in SCSS de volgende code:
 @import '@rijkshuisstijl-community/font/src/index.scss';
 ```
 
+In plain HTML heb je twee opties. Als je een CDN gebruikt, dan kun je de CSS zo importeren:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@nl-design-system-candidate/code-block-css@1/dist/code-block.css"
+/>
+```
+
+Gebruik je geen CDN, dan kun je de CSS uit node_modules/ importeren:
+
+```html
+<link rel="stylesheet" href="node_modules/@nl-design-system-candidate/code-block-css/dist/code-block.css" />
+```
+
 ## Op zoek naar de officiële lettertypes?
 
 De officiële lettertypes kun je downloaden via [rijkshuisstijl.nl](https://www.rijkshuisstijl.nl/publiek/modules/product/DigitalStyleGuide/default/index.aspx?ItemId=6745), als je voldoende rechten hebt. Bijvoorbeeld als je bij de Rijksoverheid werkt en je ingelogd bent via Citrix.
@@ -48,3 +63,103 @@ Dat is niet de bedoeling. De officiële manier is om aan de font files te komen 
 ### Fonts opslaan GitHub
 
 Dat is niet de bedoeling. Als je de officiële fonts opslaat in een publieke GitHub repository, dan kun je e-mails verwachten met een vriendelijk doch dwingend verzoek om ze er weer te verwijderen.
+
+### De officiële lettertypes gebruiken
+
+Heb je wel toestemming om de officiële lettertypes van [rijkshuisstijl.nl](https://www.rijkshuisstijl.nl/publiek/modules/product/DigitalStyleGuide/default/index.aspx?ItemId=6745) te gebruiken? Dan kun je deze in je applicatie gebruiken! Hiervoor moet je een aantal stappen doorlopen. De implementatie van deze stappen kan verschillen op basis van je ontwikkelomgeving.
+
+#### Stap 1
+
+De font files beschikbaar maken binnen jouw applicatie. In Javascript frameworks doe je dit meestal door de bestanden toe te voegen aan de `public/` map.
+
+#### Stap 2
+
+De custom fonts in de CSS registreren met de `@font-face` rule, bijvoorbeeld door dit toe te voegen aan `index.css`:
+
+```css
+@font-face {
+  font-family: 'RijksSans';
+  src: url('/RijksSans.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RijksSans';
+  src: url('/RijksSans.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RijksSans';
+  src: url('/RijksSans.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RijksSans';
+  src: url('/RijksSans.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RijksSansHead';
+  src: url('/RijksSansHead.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RijksSansHead';
+  src: url('/RijksSansHead.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RijksSansHead';
+  src: url('/RijksSansHead.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RijksSansHead';
+  src: url('/RijksSansHead.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+```
+
+#### Stap 3
+
+Tenslotte moet je de juiste font-family koppelen aan de CSS variabelen die componenten ook gebruiken. Dit kan je doen door een eigen [thema](https://nldesignsystem.nl/handboek/developer/thema-maken) te maken met behulp van custom tokens die met behulp van een build-stap de variabelen overschrijven. Of door de CSS variabelen handmatig in te stellen. Hier nog een voorbeeld van custom tokens:
+
+```json
+{
+  "rhc": {
+    "font-family": {
+      "primary": {
+        "value": "Sans",
+        "type": "fontFamilies"
+      },
+      "secondary": {
+        "value": "RijksoverheidSerifWeb",
+        "type": "fontFamilies"
+      }
+    }
+  }
+  ...
+}
+```
