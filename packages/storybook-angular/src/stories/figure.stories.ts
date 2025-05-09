@@ -1,4 +1,4 @@
-import { FigureCaptionComponent, FigureComponent } from '@rijkshuisstijl-community/components-angular';
+import { FigureCaptionComponent, FigureComponent, ImageComponent } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, type StoryObj } from '@storybook/angular';
 
 const meta: Meta<FigureComponent> = {
@@ -14,7 +14,7 @@ const meta: Meta<FigureComponent> = {
     </figcaption>
     </figure>`,
     moduleMetadata: {
-      imports: [FigureCaptionComponent],
+      imports: [FigureCaptionComponent, ImageComponent],
     },
   }),
   args: {
