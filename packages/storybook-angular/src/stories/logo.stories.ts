@@ -27,7 +27,7 @@ const meta: Meta<LogoComponent> = {
     subtitle: 'Voorbeeld ondertitel',
   },
   render: ({ organisation, subtitle }) => ({
-    template: `<figure rhc-logo [organisation]="'${organisation}'" [subtitle]="'${subtitle}'">
+    template: `<figure rhc-logo [organisation]="'${organisation}'" ${subtitle ? `subtitle="'${subtitle}'"` : ''}>
     <rhc-icon><rhc-dutch-map-icon/></rhc-icon>
     </figure>`,
   }),
@@ -36,3 +36,10 @@ const meta: Meta<LogoComponent> = {
 export default meta;
 
 export const Default: StoryObj<LogoComponent> = {};
+
+export const NoSubtitle: StoryObj<LogoComponent> = {
+  args: {
+    organisation: 'Voorbeeld organisatie',
+    subtitle: null,
+  },
+};
