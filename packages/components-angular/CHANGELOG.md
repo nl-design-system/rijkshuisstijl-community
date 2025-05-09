@@ -1,5 +1,17 @@
 # @rijkshuisstijl-community/components-angular
 
+## 1.1.0
+
+### Minor Changes
+
+- 53c9e49: Refactor the rhc-button component so it now uses an attribute selector which allows the component to support native <button> attributes
+
+### Patch Changes
+
+- 122039f: Fixed bug: removed dutch map icon from the tabler icons mapper
+- 99dd213: Package Updates
+- e82c853: Fix: angular-components & angular-storybook downgrade
+
 ## 1.0.0
 
 ### Major Changes
