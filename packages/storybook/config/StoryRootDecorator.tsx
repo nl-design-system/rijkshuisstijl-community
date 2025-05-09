@@ -39,5 +39,3 @@ export const StoryRootDecorator: Decorator = (Story, context) => {
     </div>
   );
 };
-
-// ? Werkt alleen voor Storybook? Of ook voor app?
