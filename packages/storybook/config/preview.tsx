@@ -25,7 +25,7 @@ const preview: Preview = {
   decorators: [
     withThemeByClassName({
       themes: {
-        RijkshuisstijlCommunity: 'rhc-theme',
+        RijkshuisstijlCommunity: 'rhc-theme (Standaard Thema)',
         'DigiD - oud': 'digid-theme-old',
         'MijnOverheid - oud': 'mijnoverheid-theme-old',
         'Logius - oud': 'logius-theme-old',
