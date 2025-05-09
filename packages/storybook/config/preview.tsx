@@ -16,6 +16,7 @@ import { Preview } from '@storybook/react';
 import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
 import { Fragment } from 'react';
+import { StoryRootDecorator } from 'src/StoryRootDecorator'; //? Moet deze nog in een aparte folder/op een andere plek?
 
 const preview: Preview = {
   decorators: [
@@ -41,6 +42,7 @@ const preview: Preview = {
         Story()
       );
     },
+    StoryRootDecorator,
   ],
   parameters: {
     previewTabs: {

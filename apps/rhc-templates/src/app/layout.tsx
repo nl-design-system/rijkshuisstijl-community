@@ -9,9 +9,12 @@ import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
 import Head from 'next/head';
 
+// ? Hier ook nog op Root de lang/dir instellen? = alleen voor app?
+// ? Of is instellen in Storybook voldoende (inherit?)
+// ? Of is dit als fallback?
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
-    <Root>
+    <Root lang="nl" dir="ltr">
       <Head>
         <title>Rijkshuisstijl demo - Index</title>
       </Head>
