@@ -1,0 +1,36 @@
+<div
+  [ngClass]="{
+    'utrecht-form-field': true,
+    'utrecht-form-field--invalid': invalid,
+    'utrecht-form-field--checkbox': type === 'checkbox',
+    'utrecht-form-field--radio': type === 'radio',
+    'utrecht-form-field--text': type === 'text',
+  }"
+  [class]="class"
+>
+  @if (showLabel) {
+    <div class="utrecht-form-field__label">
+      <ng-content select="[rhc-label]"></ng-content>
+    </div>
+  }
+
+  @if (showDescription) {
+    <div class="utrecht-form-field__description">
+      <ng-content select="[rhc-description]"></ng-content>
+    </div>
+  }
+
+  @if (showInput) {
+    <div class="utrecht-form-field__input">
+      <ng-content select="[rhc-input]"></ng-content>
+    </div>
+  }
+
+  @if (invalid) {
+    <div class="utrecht-form-field__error-message">
+      <ng-content select="[rhc-error-message]"></ng-content>
+    </div>
+  }
+
+  <ng-content></ng-content>
+</div>
