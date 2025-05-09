@@ -1,8 +1,12 @@
 import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-violet/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-mintgroen-focus/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-mintgroen/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-violet-oud/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-paars/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-oranje/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index.css';
 import '@rijkshuisstijl-community/digid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';
@@ -21,13 +25,17 @@ const preview: Preview = {
   decorators: [
     withThemeByClassName({
       themes: {
-        RijkshuisstijlCommunity: 'rhc-theme',
-        DigiD: 'digid-theme',
-        MijnOverheid: 'mijnoverheid-theme',
-        Logius: 'logius-theme',
-        RIVM: 'rivm-theme',
+        RijkshuisstijlCommunity: 'rhc-theme (Standaard Thema)',
+        'DigiD - oud': 'digid-theme-old',
+        'MijnOverheid - oud': 'mijnoverheid-theme-old',
+        'Logius - oud': 'logius-theme-old',
+        'RIVM - oud en nog niet verplaatst': 'rivm-theme-old',
+        'Uitvoerend - paars': 'uitvoerend-paars',
+        'Uitvoerend - hemelblauw': 'uitvoerend-hemelblauw',
+        'Uitvoerend - groen': 'uitvoerend-groen',
+        'Uitvoerend - oranje': 'uitvoerend-oranje',
         'Uitvoerend - violet': 'uitvoerend-violet',
-        'Uitvoerend - mintgroen -  ander fontweight - focus': 'uitvoerend-mintgroen-focus',
+        'Uitvoerend - mintgroen': 'uitvoerend-mintgroen',
         'Uitvoerend - violet - oud': 'uitvoerend-violet-oud',
       },
       defaultTheme: 'RijkshuisstijlCommunity',
@@ -54,7 +62,7 @@ const preview: Preview = {
       storySort: {
         order: [
           'Rijkshuisstijl Community',
-          ['README', 'CHANGELOG'],
+          ['README', '*', 'Icon Sets', 'Design Tokens', ['Standaard Thema']],
           'Rijkshuisstijl',
           ['README', 'CHANGELOG'],
           'Web Components',
