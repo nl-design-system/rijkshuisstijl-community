@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-react
 
+## 1.1.1
+
+### Patch Changes
+
+- 99dd213: Package Updates
+
 ## 1.1.0
 
 ### Minor Changes
