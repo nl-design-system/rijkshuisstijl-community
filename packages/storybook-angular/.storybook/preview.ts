@@ -1,8 +1,10 @@
 import { componentWrapperDecorator, type Preview } from '@storybook/angular';
+import OverviewPage from './overview.mdx';
 
 const preview: Preview = {
   parameters: {
     docs: {
+      page: OverviewPage,
       source: {
         excludeDecorators: true,
       },
