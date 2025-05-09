@@ -18,8 +18,6 @@ import { Button, Heading, Paragraph, ScrollLink } from '@utrecht/component-libra
 // import { BadgeList, DataBadge } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 
-<html lang="nl" />;
-
 export default function DevOvhHomepage() {
   return (
     <>
