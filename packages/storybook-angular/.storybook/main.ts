@@ -18,6 +18,7 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-interactions'),
     getAbsolutePath('@storybook/addon-webpack5-compiler-babel'),
   ],
+  staticDirs: ['../../../proprietary/assets/src'],
   framework: {
     name: getAbsolutePath('@storybook/angular'),
     options: {},
