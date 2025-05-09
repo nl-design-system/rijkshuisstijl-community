@@ -3,5 +3,7 @@
 </div>
 <figcaption class="rhc-logo__caption">
   <p class="rhc-logo__title">{{ organisation }}</p>
-  <p *ngIf="subtitle" class="rhc-logo__subtitle">{{ subtitle }}</p>
+  @if (subtitle) {
+    <p class="rhc-logo__subtitle">{{ subtitle }}</p>
+  }
 </figcaption>
