@@ -1,0 +1,38 @@
+import { DutchMapIconComponent, IconComponent, LogoComponent } from '@rijkshuisstijl-community/components-angular';
+import { type Meta, moduleMetadata, type StoryObj } from '@storybook/angular';
+
+const meta: Meta<LogoComponent> = {
+  decorators: [
+    moduleMetadata({
+      imports: [DutchMapIconComponent, IconComponent],
+    }),
+  ],
+  title: 'Rijkshuisstijl-angular/Logo',
+  id: 'rhc-angular-logo',
+  component: LogoComponent,
+  argTypes: {
+    organisation: {
+      description: 'Organisation name',
+      control: { type: 'text' },
+      required: true,
+    },
+    subtitle: {
+      description: 'Subtitle of the logo',
+      control: { type: 'text' },
+      required: false,
+    },
+  },
+  args: {
+    organisation: 'Voorbeeld organisatie',
+    subtitle: 'Voorbeeld ondertitel',
+  },
+  render: ({ organisation, subtitle }) => ({
+    template: `<figure rhc-logo [organisation]="'${organisation}'" [subtitle]="'${subtitle}'">
+    <rhc-icon><rhc-dutch-map-icon/></rhc-icon>
+    </figure>`,
+  }),
+};
+
+export default meta;
+
+export const Default: StoryObj<LogoComponent> = {};
