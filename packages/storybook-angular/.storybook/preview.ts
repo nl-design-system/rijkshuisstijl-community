@@ -1,4 +1,5 @@
-import { componentWrapperDecorator, type Preview } from '@storybook/angular';
+import { type Preview } from '@storybook/angular';
+import { withThemeByClassName } from '@storybook/addon-themes';
 import OverviewPage from './overview.mdx';
 
 const preview: Preview = {
@@ -16,7 +17,21 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [componentWrapperDecorator((story) => `<div class="rhc-theme">${story}</div>`)],
+  decorators: [
+    withThemeByClassName({
+      themes: {
+        RijkshuisstijlCommunity: 'rhc-theme',
+        DigiD: 'digid-theme',
+        MijnOverheid: 'mijnoverheid-theme',
+        Logius: 'logius-theme',
+        RIVM: 'rivm-theme',
+        'Uitvoerend - violet': 'uitvoerend-violet',
+        'Uitvoerend - mintgroen -  ander fontweight - focus': 'uitvoerend-mintgroen-focus',
+        'Uitvoerend - violet - oud': 'uitvoerend-violet-oud',
+      },
+      defaultTheme: 'RijkshuisstijlCommunity',
+    }),
+  ],
 };
 
 export default preview;
