@@ -65,7 +65,7 @@ export const TwigImage1: StoryObj<typeof meta> = {
     attributes: new DrupalAttribute(),
     width: 763,
     height: 640,
-    src: './placeholder.jpg',
+    src: '/placeholder.jpg',
     alt: 'Multicolored tulip field',
   },
   name: 'Image',

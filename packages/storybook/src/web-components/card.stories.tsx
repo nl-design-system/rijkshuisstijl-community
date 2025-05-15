@@ -93,7 +93,7 @@ const meta = {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     heading: 'Card Heading',
     href: '#',
-    imageSrc: './placeholder.jpg',
+    imageSrc: '/placeholder.jpg',
     linkLabel: 'Link label',
     metaData: 'Metadata',
     title: 'Card Title',
