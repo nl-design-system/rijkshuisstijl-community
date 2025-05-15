@@ -22,6 +22,9 @@ const meta = {
     },
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
+    // TODO: add NL Design System link and Figma link
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/OrderedList.tsx',
   },
 } satisfies Meta<typeof OrderedList>;
 

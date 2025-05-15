@@ -84,6 +84,10 @@ export const Default: Story = {
         story: `Styling met de \`.rhc-skip-link\` en \`.rhc-skip-link--visible-on-focus\` class naam.`,
       },
     },
+    // TODO: add Figma and NL DesignSystem links
+    componentOrigin: 'Dit component is overgenomen vanuit de NL-Design system candidate repo.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/SkipLink.tsx',
   },
 };
 

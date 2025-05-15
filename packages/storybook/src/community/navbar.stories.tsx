@@ -1,17 +1,25 @@
 import { NavBar, type NavBarItemProps } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
+import readme from './navbar.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/NavBar',
   id: 'rhc-nav-bar',
   component: NavBar,
   parameters: {
-    // TODO: add documentation
+    docs: {
+      description: {
+        component: mergeMarkdown([readme]),
+      },
+    },
     status: {
       type: 'UNSTABLE',
     },
     // TODO: add Figma, GitHub and NL DesignSystem links
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/NavBar.tsx',
   },
 } satisfies Meta<typeof NavBar>;
 
