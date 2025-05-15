@@ -10,4 +10,5 @@ export * from './image/image.component';
 export * from './figure/figure.component';
 export * from './figure-caption/figure-caption.component';
 export * from './icon/public-api';
+export * from './column-layout/column-layout.component';
 export * from './logo/logo.component';
