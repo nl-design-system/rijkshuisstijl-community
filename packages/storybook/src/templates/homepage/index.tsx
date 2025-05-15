@@ -36,7 +36,7 @@ export default function Page() {
             { id: '3', href: '/details', label: 'Details' },
             { id: '4', href: '/collage', label: 'Collage' },
             { id: '5', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
-            { id: '6', href: '/', label: 'Zoekresultaten' },
+            { id: '6', href: '/', label: 'Componenten' },
             { id: '', href: '/', label: 'Homepage' },
           ]}
         ></NavBar>
