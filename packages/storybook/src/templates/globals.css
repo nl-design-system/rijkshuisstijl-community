@@ -103,11 +103,31 @@ h1 {
 .rhc-templates-card-container {
   column-gap: var(--rhc-space-300);
   display: flex;
+  flex: wrap;
   margin-block-end: var(--rhc-space-400);
   margin-block-start: var(--rhc-space-300);
   row-gap: var(--rhc-space-300);
   @media (width <= 780px) {
     flex-direction: column;
+  }
+}
+
+.rhc-cards-container {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+}
+
+@media (width < 1350px) {
+  .rhc-cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (width < 700px) {
+  .rhc-cards-container {
+    grid-template-columns: 1fr;
   }
 }
 
