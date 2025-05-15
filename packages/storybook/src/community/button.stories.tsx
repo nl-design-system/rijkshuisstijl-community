@@ -116,6 +116,12 @@ const meta = {
 
 export default meta;
 
+export const Default: StoryObj<typeof meta> = {
+  args: {
+    children: 'Label',
+  },
+};
+
 export const PrimaryAction: StoryObj<typeof meta> = {
   args: {
     children: 'Label',
