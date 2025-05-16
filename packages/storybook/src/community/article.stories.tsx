@@ -35,7 +35,8 @@ const meta = {
       },
     },
     // TODO: add Figma link
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/566',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Article.tsx',
     nldesignsystem: 'https://www.nldesignsystem.nl/article/',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met alleen overgeschreven design tokens van de Rijkshuisstijl Community.',

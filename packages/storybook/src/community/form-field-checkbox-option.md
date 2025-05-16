@@ -1,6 +1,6 @@
 <!-- @license CC0-1.0 -->
 
-# Rijkshuisstijl Community FormFieldCheckbox component
+# Rijkshuisstijl Community FormFieldCheckboxOption component
 
 De `FormFieldCheckboxOption` component is een uitbreidingscomponent van `FormFieldCheckbox` uit de `@utrecht/component-library-react`. Deze component voegt extra functionaliteit toe, zoals foutmeldingen met een icoon en toegankelijke beschrijvingen.
 

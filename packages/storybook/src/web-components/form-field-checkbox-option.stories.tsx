@@ -99,11 +99,13 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add GitHub issue and NL DesignSystem links
+    // TODO: add NL DesignSystem link
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1031-2917&node-type=canvas&t=HiNKOQhf1hQtLZrr-0',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht (daar heet het FormFieldCheckbox), met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/FormFieldCheckboxOption.tsx',
   },
 } as Meta<typeof FormFieldCheckboxOptionWebComponent>;
 

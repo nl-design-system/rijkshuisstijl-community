@@ -104,7 +104,8 @@ const meta = {
         component: mergeMarkdown([readme, anatomyDocs, visualDesignDocs, htmlDocs, rhcReadme, wcagDocs]),
       },
     },
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/455',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Button.tsx',
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=153-1138&p=f&t=bIUNfPQ6Tcm5rDPk-0',
     nldesignsystem: 'https://nldesignsystem.nl/button',

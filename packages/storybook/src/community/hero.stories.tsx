@@ -55,7 +55,8 @@ const meta = {
     // TODO: add nldesignsystem page when it's available (not yet available on 25/03/25).
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=15708-524&node-type=canvas&t=fXG4KjJRXbo2PG2J-0',
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/466',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Hero.tsx',
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof Hero>;

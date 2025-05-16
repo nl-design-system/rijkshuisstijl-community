@@ -19,7 +19,8 @@ const meta = {
     // TODO: add NL Design System link when there is a page for NavigationList
     figma:
       'https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/Local---Rijkshuisstijl---Bibliotheek?node-id=4074-1580&node-type=canvas&t=HuDzyBW9wHdB2QVh-0',
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/557',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/NavigationList.tsx',
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
   argTypes: {},

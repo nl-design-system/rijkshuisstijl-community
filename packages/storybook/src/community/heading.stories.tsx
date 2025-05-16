@@ -33,7 +33,8 @@ const meta = {
     },
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=153-1039&t=9KlJWkn6GEOm2sN1-11',
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/469',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Heading.tsx',
     nldesignsystem: 'https://nldesignsystem.nl/heading/',
     componentOrigin:
       'Dit component is overgenomen van de NL Design System Heading Candidate met extra functionaliteit, en met overgeschreven design tokens van de Rijkshuisstijl Community.',

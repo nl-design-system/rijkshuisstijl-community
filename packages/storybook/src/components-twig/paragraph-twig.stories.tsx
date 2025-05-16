@@ -55,6 +55,9 @@ const meta = {
       },
     },
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+    //Todo: voeg NL-Design system & Figma links toe
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/src/Paragraph.twig',
   },
 } satisfies Meta<typeof TwigParagraph>;
 

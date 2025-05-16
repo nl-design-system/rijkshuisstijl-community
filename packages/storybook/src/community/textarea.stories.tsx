@@ -188,12 +188,13 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add Github issue link
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=969-2047&node-type=CANVAS&t=VGu5hA1sXPDhCUwB-0',
     nldesignsystem: 'https://www.nldesignsystem.nl/textarea/',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Textarea.tsx',
   },
 } satisfies Meta<typeof Textarea>;
 

@@ -11,6 +11,8 @@ const meta = {
     status: { type: 'UNSTABLE' },
     docs: { description: { component: mergeMarkdown([readme]) } },
     componentOrigin: 'Dit component is overgenomen van de Gemeente Utrecht.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/ColumnLayout.tsx',
   },
   args: {
     children: '',

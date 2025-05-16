@@ -58,7 +58,8 @@ const meta = {
     },
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1561-6448&t=texUKkpCqzgFVuch-0',
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/465',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/TableHeaderCell.tsx',
     nldesignsystem: 'https://www.nldesignsystem.nl/table/',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',

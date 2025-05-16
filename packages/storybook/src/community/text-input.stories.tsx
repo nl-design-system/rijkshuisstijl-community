@@ -258,6 +258,8 @@ const meta: Meta<typeof TextInput> = {
     nldesignsystem: 'https://www.nldesignsystem.nl/text-input/',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht (daar heet het Textbox), met styling van de Rijkshuisstijl Community.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/TextInput.tsx',
   },
   render: (args) => {
     const {
