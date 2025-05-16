@@ -2239,7 +2239,7 @@
           "type": "color"
         },
         "color": {
-          "value": "{rhc.color.wit}",
+          "value": "{rhc.color.foreground.on-dark-color}",
           "type": "color"
         },
         "border-radius": {
@@ -2316,7 +2316,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.wit}",
+            "value": "{rhc.color.foreground.on-dark-color}",
             "type": "color"
           }
         },
@@ -2330,7 +2330,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.wit}",
+            "value": "{rhc.color.foreground.on-dark-color}",
             "type": "color"
           }
         },
@@ -2344,7 +2344,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.wit}",
+            "value": "{rhc.color.foreground.on-dark-color}",
             "type": "color"
           }
         },
@@ -2721,7 +2721,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.wit}",
+            "value": "{rhc.color.foreground.on-dark-color}",
             "type": "color"
           }
         }
@@ -8013,12 +8013,72 @@
     }
   },
   "overwrites/primaire kleur/contrast fix/foreground op lichte kleur": {
-    "rhc": {
-      "color": {
-        "foreground": {
-          "on-dark-color": {
-            "value": "{rhc.color.zwart}",
+    "utrecht": {
+      "button": {
+        "primary-action": {
+          "color": {
+            "value": "{rhc.color.foreground.on-light-color}",
             "type": "color"
+          },
+          "active": {
+            "color": {
+              "value": "{rhc.color.foreground.on-light-color}",
+              "type": "color"
+            }
+          },
+          "hover": {
+            "color": {
+              "value": "{rhc.color.foreground.on-light-color}",
+              "type": "color"
+            }
+          },
+          "focus": {
+            "color": {
+              "value": "{rhc.color.foreground.on-light-color}",
+              "type": "color"
+            }
+          },
+          "pressed": {
+            "color": {
+              "value": "{rhc.color.foreground.on-light-color}",
+              "type": "color"
+            }
+          }
+        }
+      }
+    },
+    "rhc": {
+      "card-as-link": {
+        "horizontal": {
+          "color": {
+            "value": "{rhc.color.foreground.on-light-color}",
+            "type": "color"
+          }
+        }
+      },
+      "hero": {
+        "message": {
+          "color": {
+            "value": "{rhc.color.foreground.on-light-color}",
+            "type": "color"
+          }
+        }
+      },
+      "nav-bar": {
+        "link": {
+          "active": {
+            "color": {
+              "value": "{rhc.color.foreground.on-light-color}",
+              "type": "color"
+            }
+          }
+        },
+        "icon": {
+          "active": {
+            "color": {
+              "value": "{rhc.color.foreground.on-light-color}",
+              "type": "color"
+            }
           }
         }
       }
