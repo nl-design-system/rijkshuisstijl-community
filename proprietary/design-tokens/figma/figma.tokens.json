@@ -1793,7 +1793,7 @@
       }
     }
   },
-  "components/blockquote": {
+  "components/blockquote-oud": {
     "utrecht": {
       "blockquote": {
         "caption": {
@@ -2002,6 +2002,92 @@
           "padding": {
             "value": "{rhc.space.500}",
             "type": "spacing"
+          }
+        }
+      }
+    },
+    "rhc": {
+      "keep": {
+        "_comment": {
+          "value": "⚠️ Deze tokens zijn legacy en worden vervangen door de tokenset components/blockquote.",
+          "type": "other"
+        }
+      }
+    }
+  },
+  "components/blockquote": {
+    "utrecht": {
+      "blockquote": {
+        "background-color": {
+          "value": "transparent",
+          "type": "color"
+        },
+        "border-inline-start-width": {
+          "value": "0",
+          "type": "dimension"
+        },
+        "border-color": {
+          "value": "transparent",
+          "type": "color"
+        },
+        "border-radius": {
+          "value": "0",
+          "type": "dimension"
+        },
+        "border-width": {
+          "value": "0",
+          "type": "dimension"
+        },
+        "color": {
+          "value": "{rhc.color.lintblauw.500}",
+          "type": "color"
+        },
+        "font-size": {
+          "value": "{rhc.font-size.paragraph.default}",
+          "type": "fontSizes"
+        },
+        "font-family": {
+          "value": "{rhc.font-family.primary}",
+          "type": "fontFamilies"
+        },
+        "padding-block-end": {
+          "value": "{rhc.space.400}",
+          "type": "dimension"
+        },
+        "padding-block-start": {
+          "value": "{rhc.space.400}",
+          "type": "dimension"
+        },
+        "padding-inline-end": {
+          "value": "{rhc.space.400}",
+          "type": "dimension"
+        },
+        "padding-inline-start": {
+          "value": "{rhc.space.400}",
+          "type": "dimension"
+        },
+        "row-gap": {
+          "value": "{rhc.space.150}",
+          "type": "dimension"
+        },
+        "attribution": {
+          "color": {
+            "value": "{rhc.color.lintblauw.500}",
+            "type": "color"
+          },
+          "font-size": {
+            "value": "{rhc.font-size.paragraph.default}",
+            "type": "fontSizes"
+          }
+        },
+        "content": {
+          "color": {
+            "value": "{rhc.color.lintblauw.500}",
+            "type": "color"
+          },
+          "font-size": {
+            "value": "{rhc.font-size.paragraph.default}",
+            "type": "fontSizes"
           }
         }
       }
@@ -8750,6 +8836,84 @@
       }
     }
   },
+  "overwrites/oude rijkshuisstijl/blockqoute": {
+    "utrecht": {
+      "blockquote": {
+        "background-color": {
+          "value": "transparent",
+          "type": "color"
+        },
+        "border-inline-start-width": {
+          "value": "12px",
+          "type": "dimension"
+        },
+        "border-color": {
+          "value": "{rhc.color.primary.500}",
+          "type": "color"
+        },
+        "border-radius": {
+          "value": "0",
+          "type": "dimension"
+        },
+        "border-width": {
+          "value": "0",
+          "type": "dimension"
+        },
+        "color": {
+          "value": "{rhc.color.lintblauw.500}",
+          "type": "color"
+        },
+        "font-size": {
+          "value": "{rhc.font-size.paragraph.default}",
+          "type": "fontSizes"
+        },
+        "font-family": {
+          "value": "{rhc.font-family.primary}",
+          "type": "fontFamilies"
+        },
+        "padding-block-end": {
+          "value": "{rhc.space.300}",
+          "type": "dimension"
+        },
+        "padding-block-start": {
+          "value": "{rhc.space.300}",
+          "type": "dimension"
+        },
+        "padding-inline-end": {
+          "value": "{rhc.space.500}",
+          "type": "dimension"
+        },
+        "padding-inline-start": {
+          "value": "{rhc.space.500}",
+          "type": "dimension"
+        },
+        "row-gap": {
+          "value": "{rhc.space.150}",
+          "type": "dimension"
+        },
+        "attribution": {
+          "color": {
+            "value": "{rhc.color.lintblauw.500}",
+            "type": "color"
+          },
+          "font-size": {
+            "value": "{rhc.font-size.paragraph.default}",
+            "type": "fontSizes"
+          }
+        },
+        "content": {
+          "color": {
+            "value": "{rhc.color.lintblauw.500}",
+            "type": "color"
+          },
+          "font-size": {
+            "value": "{rhc.font-size.paragraph.intro}",
+            "type": "fontSizes"
+          }
+        }
+      }
+    }
+  },
   "overwrites/oude rijkshuisstijl/border": {
     "rhc": {
       "border-radius": {
@@ -8990,7 +9154,6 @@
         "components/article": "enabled",
         "components/avatar": "enabled",
         "components/backdrop": "enabled",
-        "components/blockquote": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
@@ -9080,7 +9243,6 @@
         "components/article": "enabled",
         "components/avatar": "enabled",
         "components/backdrop": "enabled",
-        "components/blockquote": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
@@ -9171,7 +9333,6 @@
         "components/article": "enabled",
         "components/avatar": "enabled",
         "components/backdrop": "enabled",
-        "components/blockquote": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
@@ -9263,7 +9424,6 @@
         "components/article": "enabled",
         "components/avatar": "enabled",
         "components/backdrop": "enabled",
-        "components/blockquote": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
@@ -9354,7 +9514,6 @@
         "components/article": "enabled",
         "components/avatar": "enabled",
         "components/backdrop": "enabled",
-        "components/blockquote": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
@@ -9445,7 +9604,6 @@
         "components/article": "enabled",
         "components/avatar": "enabled",
         "components/backdrop": "enabled",
-        "components/blockquote": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
@@ -9536,7 +9694,6 @@
         "components/article": "enabled",
         "components/avatar": "enabled",
         "components/backdrop": "enabled",
-        "components/blockquote": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
@@ -9627,7 +9784,6 @@
         "components/article": "enabled",
         "components/avatar": "enabled",
         "components/backdrop": "enabled",
-        "components/blockquote": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
@@ -9718,6 +9874,7 @@
       "components/article",
       "components/avatar",
       "components/backdrop",
+      "components/blockquote-oud",
       "components/blockquote",
       "components/breadcrumb",
       "components/button",
@@ -9795,6 +9952,7 @@
       "overwrites/accent/donkergeel",
       "overwrites/accent/donkergroen",
       "overwrites/heading-color/primairy",
+      "overwrites/oude rijkshuisstijl/blockqoute",
       "overwrites/oude rijkshuisstijl/border",
       "overwrites/responsive/mobile",
       "overwrites/responsive/tablet",
