@@ -13,6 +13,7 @@ import {
   SubNavBar,
 } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react/dist';
+import SharedDisclaimer from '../shared/disclaimer';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
@@ -57,6 +58,7 @@ export default function Details() {
           ]}
         />
         <SharedMainPageContent>
+          <SharedDisclaimer />
           <Article>
             <div className="rhc-margin-block-end-wrapper">
               <Paragraph purpose="lead">
