@@ -1,5 +1,5 @@
 import { Icon, Link, Logo, NavBar, PageHeader, SkipLink } from '@rijkshuisstijl-community/components-react';
-import './index.css';
+import './header.css';
 
 export default function SharedHeader() {
   return (
