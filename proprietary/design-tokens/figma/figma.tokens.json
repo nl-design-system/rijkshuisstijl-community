@@ -8045,6 +8045,12 @@
             }
           }
         }
+      },
+      "page-footer": {
+        "color": {
+          "value": "{rhc.color.foreground.on-light-color}",
+          "type": "color"
+        }
       }
     },
     "rhc": {
@@ -8901,7 +8907,84 @@
       }
     }
   },
-  "overwrites/footer-color/primairy": {},
+  "overwrites/footer/lintblauw-background": {
+    "utrecht": {
+      "page-footer": {
+        "background-color": {
+          "value": "{rhc.color.lintblauw.500}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{rhc.color.foreground.on-dark-color}",
+          "type": "color"
+        }
+      }
+    },
+    "rhc": {
+      "page-footer": {
+        "border": {
+          "block-start": {
+            "color": {
+              "value": "{rhc.color.lintblauw.500}",
+              "type": "color"
+            }
+          }
+        }
+      }
+    }
+  },
+  "overwrites/footer/lintblauw-outline": {
+    "utrecht": {
+      "page-footer": {
+        "background-color": {
+          "value": "{rhc.color.wit}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{rhc.color.lintblauw.500}",
+          "type": "color"
+        }
+      }
+    },
+    "rhc": {
+      "page-footer": {
+        "border": {
+          "block-start": {
+            "color": {
+              "value": "{rhc.color.lintblauw.500}",
+              "type": "color"
+            }
+          }
+        }
+      }
+    }
+  },
+  "overwrites/footer/primary-outline": {
+    "utrecht": {
+      "page-footer": {
+        "background-color": {
+          "value": "{rhc.color.wit}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{rhc.color.lintblauw.500}",
+          "type": "color"
+        }
+      }
+    },
+    "rhc": {
+      "page-footer": {
+        "border": {
+          "block-start": {
+            "color": {
+              "value": "{rhc.color.primary.500}",
+              "type": "color"
+            }
+          }
+        }
+      }
+    }
+  },
   "overwrites/oude rijkshuisstijl/blockqoute": {
     "utrecht": {
       "blockquote": {
@@ -9284,7 +9367,10 @@
         "common/rounded-corner": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
-        "components/column-layout": "enabled"
+        "components/column-layout": "enabled",
+        "overwrites/footer/lintblauw-background": "disabled",
+        "overwrites/footer/lintblauw-outline": "disabled",
+        "overwrites/footer/primary-outline": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9378,7 +9464,10 @@
         "common/rounded-corner": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
-        "components/column-layout": "enabled"
+        "components/column-layout": "enabled",
+        "overwrites/footer/lintblauw-background": "disabled",
+        "overwrites/footer/lintblauw-outline": "disabled",
+        "overwrites/footer/primary-outline": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9474,7 +9563,10 @@
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
-        "overwrites/oude rijkshuisstijl/blockqoute": "enabled"
+        "overwrites/oude rijkshuisstijl/blockqoute": "enabled",
+        "overwrites/footer/lintblauw-background": "disabled",
+        "overwrites/footer/lintblauw-outline": "disabled",
+        "overwrites/footer/primary-outline": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9568,7 +9660,10 @@
         "common/rounded-corner": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
-        "components/column-layout": "enabled"
+        "components/column-layout": "enabled",
+        "overwrites/footer/lintblauw-background": "disabled",
+        "overwrites/footer/lintblauw-outline": "disabled",
+        "overwrites/footer/primary-outline": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9662,7 +9757,10 @@
         "common/rounded-corner": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
-        "components/column-layout": "enabled"
+        "components/column-layout": "enabled",
+        "overwrites/footer/lintblauw-background": "disabled",
+        "overwrites/footer/lintblauw-outline": "disabled",
+        "overwrites/footer/primary-outline": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9756,7 +9854,10 @@
         "common/rounded-corner": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
-        "components/column-layout": "enabled"
+        "components/column-layout": "enabled",
+        "overwrites/footer/lintblauw-background": "disabled",
+        "overwrites/footer/lintblauw-outline": "disabled",
+        "overwrites/footer/primary-outline": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9850,7 +9951,10 @@
         "common/rounded-corner": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
-        "components/column-layout": "enabled"
+        "components/column-layout": "enabled",
+        "overwrites/footer/lintblauw-background": "disabled",
+        "overwrites/footer/lintblauw-outline": "disabled",
+        "overwrites/footer/primary-outline": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9944,7 +10048,10 @@
         "common/rounded-corner": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
-        "components/column-layout": "enabled"
+        "components/column-layout": "enabled",
+        "overwrites/footer/lintblauw-background": "disabled",
+        "overwrites/footer/lintblauw-outline": "disabled",
+        "overwrites/footer/primary-outline": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10051,7 +10158,9 @@
       "overwrites/accent/donkergeel",
       "overwrites/accent/donkergroen",
       "overwrites/heading-color/primairy",
-      "overwrites/footer-color/primairy",
+      "overwrites/footer/lintblauw-background",
+      "overwrites/footer/lintblauw-outline",
+      "overwrites/footer/primary-outline",
       "overwrites/oude rijkshuisstijl/blockqoute",
       "overwrites/oude rijkshuisstijl/border",
       "overwrites/responsive/mobile",
