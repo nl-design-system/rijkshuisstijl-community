@@ -6,19 +6,13 @@ import {
   ButtonLink,
   Figure,
   FigureCaption,
-  Footer,
   Heading,
   Icon,
   Image,
   Link,
-  LinkList,
-  LinkListLink,
-  Logo,
-  NavBar,
   OrderedList,
   OrderedListItem,
   PageContent,
-  PageHeader,
   Paragraph,
   Separator,
   Table,
@@ -33,24 +27,13 @@ import {
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
+import SharedFooter from '../shared/footer';
+import SharedHeader from '../shared/header';
 
 export default function Page() {
   return (
     <>
-      <PageHeader>
-        <Logo organisation="Rijkshuisstijl Community">
-          <Icon className={'dutch-map'} icon={'nederland-map'} />
-        </Logo>
-        <NavBar
-          items={[
-            { id: '1', href: '/', label: 'Rich Text' },
-            { id: '2', href: '/form', label: 'Form' },
-            { id: '3', href: '/details', label: 'Details' },
-            { id: '4', href: '/collage', label: 'Collage' },
-            { id: '5', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
-          ]}
-        ></NavBar>
-      </PageHeader>
+      <SharedHeader />
       <PageBody className="rhc-templates-page">
         <div className="rhc-templates-main-content">
           <PageContent className="rhc-templates-page-content rhc-templates-background-color-white">
@@ -224,71 +207,7 @@ export default function Page() {
           </PageContent>
         </div>
       </PageBody>
-      <Footer
-        appearanceLevel={4}
-        heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-        columns={[
-          {
-            heading: 'Service',
-            children: [
-              <LinkList key="1">
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Contact
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Abonneren
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  RSS
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Vacatures
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Sitemap
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Help
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Archief
-                </LinkListLink>
-              </LinkList>,
-            ],
-          },
-          {
-            heading: 'Over deze site',
-            children: (
-              <LinkList key="2">
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Over deze organisatie
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Wetten en regelingen
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Copyright
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Privacy
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Cookies
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Toegankelijkheid
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Open data
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Kwetsbaarheid melden
-                </LinkListLink>
-              </LinkList>
-            ),
-          },
-        ]}
-      />
+      <SharedFooter />
     </>
   );
 }
