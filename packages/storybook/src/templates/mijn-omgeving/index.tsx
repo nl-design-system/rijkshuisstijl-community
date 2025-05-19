@@ -8,7 +8,6 @@ import {
   NavigationList,
   NavigationListItem,
   NumberBadge,
-  PageContent,
   Separator,
   SideNav,
   SideNavItem,
@@ -18,13 +17,14 @@ import {
 import { PageBody } from '@utrecht/page-body-react/dist';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
+import SharedMainPageContent from '../shared/main-page-content';
 
 export default function MijnOmgeving() {
   return (
     <>
       <SharedHeader />
-      <PageBody className="rhc-templates-page  rhc-templates-background-color-white">
-        <PageContent className="rhc-templates-page-container">
+      <PageBody className="rhc-templates-page rhc-templates-background-color-white">
+        <SharedMainPageContent>
           <SideNav className={'rhc-side-nav'}>
             <SideNavList>
               <SideNavItem>
@@ -182,7 +182,7 @@ export default function MijnOmgeving() {
               </Link>
             </div>
           </section>
-        </PageContent>
+        </SharedMainPageContent>
       </PageBody>
       <SharedFooter />
     </>
