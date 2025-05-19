@@ -1,46 +1,21 @@
 import {
   Button,
   Card,
-  Footer,
   Heading,
   Hero,
-  Icon,
-  LinkList,
   LinkListCard,
-  LinkListLink,
-  Logo,
-  NavBar,
   PageContent,
-  PageHeader,
   Paragraph,
-  SkipLink,
 } from '@rijkshuisstijl-community/components-react';
-import { IconArrowUp } from '@tabler/icons-react';
-import { ScrollLink, SpotlightSection } from '@utrecht/component-library-react';
+import { SpotlightSection } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
+import SharedFooter from '../shared/footer';
+import SharedHeader from '../shared/header';
 
 export default function Page() {
   return (
     <>
-      <PageHeader>
-        <Logo organisation="Rijkshuisstijl Community">
-          <Icon className={'dutch-map'} icon={'nederland-map'} />
-        </Logo>
-        <SkipLink className="rhc-skip-link--visible-on-focus" href="#main" id="top">
-          Ga naar hoofdinhoud
-        </SkipLink>
-        <NavBar
-          items={[
-            { id: '1', href: '/rich-text', label: 'Rich Text' },
-            { id: '2', href: '/form', label: 'Form' },
-            { id: '3', href: '/details', label: 'Details' },
-            { id: '4', href: '/collage', label: 'Collage' },
-            { id: '5', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
-            { id: '6', href: '/', label: 'Componenten' },
-            { id: '', href: '/', label: 'Homepage' },
-          ]}
-        ></NavBar>
-      </PageHeader>
+      <SharedHeader />
       <PageBody className="rhc-templates-page">
         <div className="rhc-templates-main-content" id="main">
           <PageContent className="rhc-templates-page-content rhc-templates-background-color-white">
@@ -219,60 +194,7 @@ export default function Page() {
           </PageContent>
         </div>
       </PageBody>
-      <ScrollLink appearance="subtle-button" href="#top">
-        Terug naar boven <IconArrowUp />
-      </ScrollLink>
-
-      <Footer
-        appearanceLevel={4}
-        heading="Let op: Dit is geen officiële website van de Rijkshuisstijl. Deze website is een community-initiatief en wordt niet ondersteund door de officiële Rijkshuisstijl."
-        columns={[
-          {
-            heading: 'Service',
-            children: [
-              <LinkList key="1">
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Contact
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Item
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Item
-                </LinkListLink>
-              </LinkList>,
-            ],
-          },
-          {
-            heading: 'Over deze site',
-            children: (
-              <LinkList key="2">
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Over deze organisatie
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Copyright
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Privacy
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Cookies
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Toegankelijkheid
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Open data
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Kwetsbaarheid melden
-                </LinkListLink>
-              </LinkList>
-            ),
-          },
-        ]}
-      />
+      <SharedFooter />
     </>
   );
 }
