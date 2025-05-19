@@ -15,12 +15,13 @@ import {
 import { PageBody } from '@utrecht/page-body-react/dist';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
+import SharedMainPageContent from '../shared/main-page-content';
 
 export default function Details() {
   return (
     <>
       <SharedHeader />
-      <PageBody className="rhc-templates-page">
+      <PageBody className="rhc-templates-page rhc-templates-background-color-white">
         <Hero className="rhc-hero-details-template" imageAlt="Tullip field" imageSrc="/placeholder.jpg">
           <LinkListCard heading="Veel bekeken" headingLevel={2}>
             <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
@@ -55,68 +56,64 @@ export default function Details() {
             ],
           ]}
         />
-        <div className="rhc-templates-background-color-white">
-          <div className="rhc-templates-main-content">
-            <div className="utrecht-page-content rhc-templates-page-content rhc-templates-page-palin">
-              <Article>
-                <div className="rhc-margin-block-end-wrapper">
-                  <Paragraph purpose="lead">
-                    De Arbeidstijdenwet geeft regels voor werktijden, pauzes en rusttijden van werknemers. Met deze
-                    regels wil de Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de combinatie
-                    van werk, privé en zorgtaken gemakkelijker maken.
-                  </Paragraph>
-                  <Separator></Separator>
-                  <div className="rhc-templates-spacing-3">
-                    <Heading level={2}>Vraag en antwoord</Heading>
-                    <ColumnLayout>
-                      <div className="rhc-linklist-collection">
-                        <LinkList>
-                          <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                            Wat zijn de regels bij consignatie?
-                          </LinkListLink>
-                          <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                            Hoe vaak mag ik nachtdienst hebben?
-                          </LinkListLink>
-                          <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                            Welke brochures zijn er over Arbeidstijdenwet?
-                          </LinkListLink>
-                        </LinkList>
-                        <LinkList>
-                          <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                            Wanneer geldt de Arbeidstijdenwet niet (of gedeeltelijk) voor mij?
-                          </LinkListLink>
-                          <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                            Meer vragen en antwoorden
-                          </LinkListLink>
-                        </LinkList>
-                      </div>
-                    </ColumnLayout>
+        <SharedMainPageContent>
+          <Article>
+            <div className="rhc-margin-block-end-wrapper">
+              <Paragraph purpose="lead">
+                De Arbeidstijdenwet geeft regels voor werktijden, pauzes en rusttijden van werknemers. Met deze regels
+                wil de Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de combinatie van werk,
+                privé en zorgtaken gemakkelijker maken.
+              </Paragraph>
+              <Separator></Separator>
+              <div className="rhc-templates-spacing-3">
+                <Heading level={2}>Vraag en antwoord</Heading>
+                <ColumnLayout>
+                  <div className="rhc-linklist-collection">
+                    <LinkList>
+                      <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                        Wat zijn de regels bij consignatie?
+                      </LinkListLink>
+                      <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                        Hoe vaak mag ik nachtdienst hebben?
+                      </LinkListLink>
+                      <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                        Welke brochures zijn er over Arbeidstijdenwet?
+                      </LinkListLink>
+                    </LinkList>
+                    <LinkList>
+                      <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                        Wanneer geldt de Arbeidstijdenwet niet (of gedeeltelijk) voor mij?
+                      </LinkListLink>
+                      <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                        Meer vragen en antwoorden
+                      </LinkListLink>
+                    </LinkList>
                   </div>
-                  <Separator></Separator>
-                  <Heading level={2}>Uitgelicht</Heading>
-                  <div className="rhc-templates-card-container">
-                    <Card
-                      heading="Bijbaan, vakantiewerk en stage door jongeren"
-                      href="#"
-                      imageAlt="Tullip field"
-                      imageSrc="/placeholder.jpg"
-                      linkLabel="Lees meer"
-                      title="Tekst over de link"
-                    ></Card>
-                    <Card
-                      heading="Vakantiedagen en vakantiegeld"
-                      href="#"
-                      imageAlt="Tullip field"
-                      imageSrc="/placeholder.jpg"
-                      linkLabel="Lees meer"
-                      title="Tekst over de link"
-                    ></Card>
-                  </div>
-                </div>
-              </Article>
+                </ColumnLayout>
+              </div>
+              <Separator></Separator>
+              <Heading level={2}>Uitgelicht</Heading>
+              <div className="rhc-templates-card-container">
+                <Card
+                  heading="Bijbaan, vakantiewerk en stage door jongeren"
+                  href="#"
+                  imageAlt="Tullip field"
+                  imageSrc="/placeholder.jpg"
+                  linkLabel="Lees meer"
+                  title="Tekst over de link"
+                ></Card>
+                <Card
+                  heading="Vakantiedagen en vakantiegeld"
+                  href="#"
+                  imageAlt="Tullip field"
+                  imageSrc="/placeholder.jpg"
+                  linkLabel="Lees meer"
+                  title="Tekst over de link"
+                ></Card>
+              </div>
             </div>
-          </div>
-        </div>
+          </Article>
+        </SharedMainPageContent>
       </PageBody>
       <SharedFooter />
     </>
