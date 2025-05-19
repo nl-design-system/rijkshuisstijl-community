@@ -17,6 +17,7 @@ import {
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react/dist';
+import SharedDisclaimer from '../shared/disclaimer';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
@@ -27,6 +28,7 @@ export default function Form() {
       <SharedHeader />
       <PageBody className="rhc-templates-page rhc-templates-background-color-white">
         <SharedMainPageContent>
+          <SharedDisclaimer />
           <Article>
             <div className="rhc-margin-block-end-wrapper">
               <BreadcrumbNav>

@@ -1,5 +1,4 @@
-import { Button, Card, Heading, Hero, LinkListCard, Paragraph } from '@rijkshuisstijl-community/components-react';
-import { SpotlightSection } from '@utrecht/component-library-react';
+import { Button, Card, Heading, Hero, LinkListCard } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
@@ -11,14 +10,6 @@ export default function Page() {
       <SharedHeader />
       <PageBody className="rhc-templates-page rhc-templates-background-color-white">
         <SharedMainPageContent>
-          <SpotlightSection type="info">
-            <Heading level={3}>Let op, dit is een voorbeeldpagina!</Heading>
-            <Paragraph>
-              De inhoud is uitsluitend bedoeld ter illustratie van het gebruik van RHC componenten binnen een bepaalde
-              pagina. Deze pagina vertegenwoordigt geen officiële informatie en functionaliteiten werken misschien niet
-              altijd zoals verwacht.{' '}
-            </Paragraph>
-          </SpotlightSection>
           <Hero
             heading="Rijkshuisstijl Community"
             headingLevel={1}
