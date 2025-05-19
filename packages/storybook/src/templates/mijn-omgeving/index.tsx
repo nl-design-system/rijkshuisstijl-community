@@ -1,20 +1,14 @@
 import {
   AccordionProvider,
-  Footer,
   Heading,
   Icon,
   Link,
-  LinkList,
-  LinkListLink,
-  Logo,
   MessageList,
   MessageListItem,
-  NavBar,
   NavigationList,
   NavigationListItem,
   NumberBadge,
   PageContent,
-  PageHeader,
   Separator,
   SideNav,
   SideNavItem,
@@ -22,24 +16,13 @@ import {
   SideNavList,
 } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react/dist';
+import SharedFooter from '../shared/footer';
+import SharedHeader from '../shared/header';
 
 export default function MijnOmgeving() {
   return (
     <>
-      <PageHeader>
-        <Logo organisation="Rijkshuisstijl Community">
-          <Icon className={'dutch-map'} icon={'nederland-map'} />
-        </Logo>
-        <NavBar
-          items={[
-            { id: '1', href: '/', label: 'Rich Text' },
-            { id: '2', href: '/form', label: 'Form' },
-            { id: '3', href: '/details', label: 'Details' },
-            { id: '4', href: '/collage', label: 'Collage' },
-            { id: '5', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
-          ]}
-        ></NavBar>
-      </PageHeader>
+      <SharedHeader />
       <PageBody className="rhc-templates-page  rhc-templates-background-color-white">
         <PageContent className="rhc-templates-page-container">
           <SideNav className={'rhc-side-nav'}>
@@ -201,75 +184,7 @@ export default function MijnOmgeving() {
           </section>
         </PageContent>
       </PageBody>
-      <Footer
-        appearanceLevel={4}
-        background="primary-outlined"
-        backtotop={true}
-        heading="De Rijksoverheid. Voor Nederland"
-        preFooter={true}
-        preFooterMessage="Water, Energie en Maatschappij"
-        columns={[
-          {
-            heading: 'Service',
-            children: [
-              <LinkList key="1">
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Contact
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Abonneren
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  RSS
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Vacatures
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Sitemap
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Help
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Archief
-                </LinkListLink>
-              </LinkList>,
-            ],
-          },
-          {
-            heading: 'Over deze site',
-            children: (
-              <LinkList key="2">
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Over deze organisatie
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Wetten en regelingen
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Copyright
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Privacy
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Cookies
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Toegankelijkheid
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Open data
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Kwetsbaarheid melden
-                </LinkListLink>
-              </LinkList>
-            ),
-          },
-        ]}
-      />
+      <SharedFooter />
     </>
   );
 }

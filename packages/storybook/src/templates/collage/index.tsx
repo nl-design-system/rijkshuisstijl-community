@@ -18,17 +18,13 @@ import {
   FormSummaryKey,
   FormSummaryValue,
   Heading,
-  Icon,
   IconButton,
   Image,
   Link,
   LinkList,
   LinkListLink,
-  Logo,
-  NavBar,
   OrderedList,
   OrderedListItem,
-  PageHeader,
   Paragraph,
   Separator,
   Table,
@@ -47,24 +43,13 @@ import {
 } from '@rijkshuisstijl-community/components-react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react/dist/esm/tabler-icons-react';
 import { PageBody } from '@utrecht/page-body-react/dist';
+import SharedFooter from '../shared/footer';
+import SharedHeader from '../shared/header';
 
 export default function Collage() {
   return (
     <>
-      <PageHeader>
-        <Logo organisation="Rijkshuisstijl Community">
-          <Icon className={'dutch-map'} icon={'nederland-map'} />
-        </Logo>
-        <NavBar
-          items={[
-            { id: '1', href: '/', label: 'Rich Text' },
-            { id: '2', href: '/form', label: 'Form' },
-            { id: '3', href: '/details', label: 'Details' },
-            { id: '4', href: '/collage', label: 'Collage' },
-            { id: '5', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
-          ]}
-        ></NavBar>
-      </PageHeader>
+      <SharedHeader />
       <PageBody className="rhc-templates-page">
         <div className="rhc-templates-background-color-white">
           <div className="rhc-templates-main-content">
@@ -291,6 +276,7 @@ export default function Collage() {
           </div>
         </div>
       </PageBody>
+      <SharedFooter />
     </>
   );
 }
