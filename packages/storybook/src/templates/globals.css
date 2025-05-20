@@ -147,3 +147,49 @@ h1 {
 .rhc-nav-bar__list {
   flex-wrap: wrap;
 }
+
+/* Componenten Template Marwa CSS */
+
+.rhc-templates-databadge {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 10px;
+  display: inline-flex;
+  padding-block: 0.25rem;
+  padding-inline: 0.75rem;
+  position: relative;
+}
+
+.rhc-templates-card {
+  column-gap: var(--rhc-space-200);
+  display: flex;
+  flex-wrap: wrap;
+  margin-block-end: var(--rhc-space-200);
+  margin-block-start: var(--rhc-space-200);
+  min-inline-size: 100% !important;
+}
+
+.rhc-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-block-start: var(--rhc-space-500);
+}
+
+.rhc-grid-container__left {
+  display: flex;
+}
+
+.rhc-grid-container__right {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 20px;
+}
+
+.rhc-ordered-list {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.rhc-textinput-spacing {
+  padding-block-start: var(--rhc-space-300);
+}
