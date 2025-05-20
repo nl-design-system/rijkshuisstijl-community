@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react/*';
+import type { Meta, StoryObj } from '@storybook/react';
 import Page from './collage';
 import './globals.css';
 
@@ -6,6 +6,7 @@ const meta: Meta = {
   title: 'Templates/Collage',
   component: Page,
   parameters: {
+    layout: 'fullscreen',
     status: {
       type: 'UNSTABLE',
     },

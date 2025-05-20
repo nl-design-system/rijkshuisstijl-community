@@ -1,4 +1,3 @@
-'use client';
 import { PropsWithChildren } from 'react';
 import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
@@ -7,14 +6,18 @@ import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/storybook/src/templates/globals.css';
 import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
-import Head from 'next/head';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Onofficieel Rijkshuisstijl Design System | Rijkshuisstijl Community',
+    template: '%s | Rijkshuisstijl Community',
+  },
+};
 
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
-    <Root>
-      <Head>
-        <title>Rijkshuisstijl demo - Index</title>
-      </Head>
+    <Root lang="nl" dir="ltr">
       <body className="rhc-theme">
         <PageLayout>{children}</PageLayout>
       </body>

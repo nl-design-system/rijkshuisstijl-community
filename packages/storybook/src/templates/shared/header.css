@@ -1,0 +1,28 @@
+/**
+* Temporary demo solution for acceptable contrast on nav bar link hover.
+* TODO: fix in design tokens?
+*/
+:root body {
+  --rhc-nav-bar-link-hover-background-color: #dce3ea;
+}
+
+/**
+* Temporary demo solution for acceptably responsive nav bar.
+* TODO: Discuss responsive design with design team.
+*/
+.rhc-nav-bar {
+  flex-wrap: wrap;
+}
+.rhc-nav-bar .rhc-nav-bar__list {
+  flex-wrap: wrap;
+}
+@media (width <= 780px) {
+  .rhc-nav-bar .nl-link:any-link {
+    --rhc-nav-bar-link-padding-block-end: 0.5rem;
+    --rhc-nav-bar-link-padding-block-start: 0.5rem;
+    --rhc-nav-bar-link-padding-inline-end: 0.5rem;
+    --rhc-nav-bar-link-padding-inline-start: 0.5rem;
+
+    font-size: var(--rhc-font-size-xs-mobile);
+  }
+}

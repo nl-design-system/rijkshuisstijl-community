@@ -1,5 +1,5 @@
 import { Icon, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react/*';
+import { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'Rijkshuisstijl/Link List/Link List Link',

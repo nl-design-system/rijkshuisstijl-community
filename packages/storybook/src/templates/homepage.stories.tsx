@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react';
 import './globals.css';
-import MijnOmgeving from './mijn-omgeving';
+import Homepage from './homepage';
 
 const meta = {
-  title: 'Templates/Mijn Omgeving',
-  id: 'rhc-templates-mijn-omgeving',
-  component: MijnOmgeving,
+  title: 'Templates/Homepage',
+  id: 'rhc-templates-homepage',
+  component: Homepage,
   parameters: {
     layout: 'fullscreen',
     status: {
@@ -13,7 +13,7 @@ const meta = {
     },
     isPage: true,
   },
-} satisfies Meta<typeof MijnOmgeving>;
+} satisfies Meta<typeof Homepage>;
 
 export default meta;
 
