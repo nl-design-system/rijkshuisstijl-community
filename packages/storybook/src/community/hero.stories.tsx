@@ -55,7 +55,8 @@ const meta = {
     // TODO: add nldesignsystem page when it's available (not yet available on 25/03/25).
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=15708-524&node-type=canvas&t=fXG4KjJRXbo2PG2J-0',
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/466',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Hero.tsx',
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof Hero>;
@@ -65,8 +66,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
-    imageSrc:
-      'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
+    imageSrc: '/placeholder.jpg',
     imageAlt: 'Tullip field',
     heading: 'Heading',
     subHeading: 'Subtext',
@@ -75,8 +75,7 @@ export const Default: Story = {
 
 export const CustomChildren: Story = {
   args: {
-    imageSrc:
-      'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
+    imageSrc: '/placeholder.jpg',
     imageAlt: 'Tullip field',
     children: (
       <LinkListCard heading="Hello World" headingLevel={2}>
@@ -90,8 +89,7 @@ export const CustomChildren: Story = {
 
 export const TextAlignRight: Story = {
   args: {
-    imageSrc:
-      'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
+    imageSrc: '/placeholder.jpg',
     imageAlt: 'Tullip field',
     heading: 'Heading',
     subHeading: 'Hero with the text area aligned to the right (end)',
@@ -102,8 +100,7 @@ export const TextAlignRight: Story = {
 export const AspectRatioFourToThree: Story = {
   args: {
     aspectRatio: '4 / 3',
-    imageSrc:
-      'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
+    imageSrc: '/placeholder.jpg',
     imageAlt: 'Tullip field',
     heading: 'Heading',
     subHeading: 'Hero with the aspect ratio of 4:3',

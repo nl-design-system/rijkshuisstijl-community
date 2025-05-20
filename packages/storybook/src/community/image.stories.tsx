@@ -69,7 +69,7 @@ export const Default: Story = {
     alt: 'Multicolored tulip field',
     height: 763,
     width: 640,
-    src: './placeholder.jpg',
+    src: '/placeholder.jpg',
   },
   name: 'Image',
 };

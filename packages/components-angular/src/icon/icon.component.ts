@@ -61,7 +61,6 @@ export class IconComponent {
     mail: 'mail',
     meer: 'dots-vertical',
     menu: 'menu-2',
-    'nederland-map': 'dutch-map-icon',
     nieuws: 'news',
     paperclip: 'paperclip',
     'permanent-beta': 'backhoe',

@@ -93,7 +93,7 @@ const meta = {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     heading: 'Card Heading',
     href: '#',
-    imageSrc: './placeholder.jpg',
+    imageSrc: '/placeholder.jpg',
     linkLabel: 'Link label',
     metaData: 'Metadata',
     title: 'Card Title',
@@ -108,7 +108,8 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/561',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/Card.tsx',
     figma:
       'https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/Local---Rijkshuisstijl---Bibliotheek?node-id=472-1420&p=f&t=fuaKEQHb4FZ444xP-0',
     nldesignsystem: 'https://nldesignsystem.nl/card-as-link',
