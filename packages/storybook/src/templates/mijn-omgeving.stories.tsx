@@ -7,6 +7,7 @@ const meta = {
   id: 'rhc-templates-mijn-omgeving',
   component: MijnOmgeving,
   parameters: {
+    layout: 'fullscreen',
     status: {
       type: 'UNSTABLE',
     },

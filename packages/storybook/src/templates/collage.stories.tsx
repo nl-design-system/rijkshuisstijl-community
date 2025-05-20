@@ -6,6 +6,7 @@ const meta: Meta = {
   title: 'Templates/Collage',
   component: Page,
   parameters: {
+    layout: 'fullscreen',
     status: {
       type: 'UNSTABLE',
     },

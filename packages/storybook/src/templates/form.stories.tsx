@@ -6,6 +6,7 @@ const meta: Meta = {
   title: 'Templates/Form',
   component: Page,
   parameters: {
+    layout: 'fullscreen',
     status: {
       type: 'UNSTABLE',
     },
