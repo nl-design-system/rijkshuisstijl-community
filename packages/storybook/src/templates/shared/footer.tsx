@@ -1,6 +1,7 @@
 import { Footer, Icon, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
 import { IconArrowUp } from '@tabler/icons-react';
-import { ScrollLink } from '@utrecht/component-library-react';
+import { Paragraph, ScrollLink } from '@utrecht/component-library-react';
+import './footer.css';
 
 export default function SharedFooter() {
   return (
@@ -8,15 +9,33 @@ export default function SharedFooter() {
       <ScrollLink appearance="subtle-button" href="#top">
         Terug naar boven <IconArrowUp />
       </ScrollLink>
-
       <Footer
         appearanceLevel={4}
-        heading="Dit is geen officiële website van de makers van de Rijkshuisstijl. Dit project wordt niet gesteund door het Ministerie van Algemene Zaken."
+        background="primary-filled"
+        className="rhc-sr-only"
+        heading="Footer"
         columns={[
           {
+            heading: 'Disclaimer',
+            children: (
+              <>
+                <Paragraph>
+                  Dit is geen officiële website van de makers van de Rijkshuisstijl. Dit project wordt niet gesteund
+                  door het Ministerie van Algemene Zaken.
+                </Paragraph>
+                <LinkList key="1">
+                  <LinkListLink href="https://www.rijkshuisstijl.nl/" icon={<Icon icon={'chevron-right'} />}>
+                    De officiële Rijkshuisstijl website
+                  </LinkListLink>
+                </LinkList>
+              </>
+            ),
+          },
+          {
+            appearanceLevel: 3,
             heading: 'Over de Rijkshuisstijl Community',
             children: [
-              <LinkList key="1">
+              <LinkList key="2">
                 <LinkListLink
                   href="https://github.com/nl-design-system/rijkshuisstijl-community"
                   icon={<Icon icon={'chevron-right'} />}
@@ -66,7 +85,7 @@ export default function SharedFooter() {
           {
             heading: 'Contact',
             children: (
-              <LinkList key="2">
+              <LinkList key="3">
                 <LinkListLink href="https://praatmee.codefor.nl/" icon={<Icon icon={'chevron-right'} />}>
                   Code for NL Slack #nl-design-system-developers
                 </LinkListLink>
@@ -90,6 +109,7 @@ export default function SharedFooter() {
           },
         ]}
       />
+      ,
     </>
   );
 }
