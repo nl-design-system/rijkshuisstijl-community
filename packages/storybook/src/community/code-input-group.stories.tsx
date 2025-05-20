@@ -1,5 +1,5 @@
 import { CodeInputGroup } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react/*';
+import { Meta, StoryObj } from '@storybook/react';
 import readme from './code-input-group.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
