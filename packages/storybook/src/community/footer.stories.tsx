@@ -1,4 +1,11 @@
-import { ColumnLayout, Footer, Icon, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
+import {
+  ColumnLayout,
+  Footer,
+  Icon,
+  LinkList,
+  LinkListLink,
+  Paragraph,
+} from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './footer.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
@@ -108,16 +115,21 @@ export const DefaultFooter: Story = {
       {
         heading: 'Over deze site',
         appearanceLevel: 3,
-        children: _toLinkList([
-          'Over deze organisatie',
-          'Wetten en regelingen',
-          'Copyright',
-          'Privacy',
-          'Cookies',
-          'Toegankelijkheid',
-          'Open data',
-          'Kwetsbaarheid melden',
-        ]),
+        children: (
+          <>
+            <Paragraph>Een behulpzame paragraaf.</Paragraph>
+            {_toLinkList([
+              'Over deze organisatie',
+              'Wetten en regelingen',
+              'Copyright',
+              'Privacy',
+              'Cookies',
+              'Toegankelijkheid',
+              'Open data',
+              'Kwetsbaarheid melden',
+            ])}
+          </>
+        ),
       },
     ],
   },
@@ -133,6 +145,7 @@ export const PrimaryOutlinedFooter: Story = {
 
     children: (
       <ColumnLayout>
+        <Paragraph>Een behulpzame paragraaf.</Paragraph>
         {_toLinkList([
           'Over deze organisatie',
           'Wetten en regelingen',
@@ -162,6 +175,7 @@ export const PrimaryOutlinedFooterSubFooter: Story = {
     ),
     children: (
       <ColumnLayout>
+        <Paragraph>Een behulpzame paragraaf.</Paragraph>
         {_toLinkList([
           'Over deze organisatie',
           'Wetten en regelingen',
@@ -184,6 +198,7 @@ export const ColumnLayoutFooter: Story = {
     background: 'primary-filled',
     children: (
       <ColumnLayout>
+        <Paragraph>Een behulpzame paragraaf.</Paragraph>
         {_toLinkList([
           'Over deze organisatie',
           'Wetten en regelingen',
