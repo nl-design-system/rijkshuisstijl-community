@@ -131,13 +131,13 @@ export default function Page() {
                 linkLabel="Bekijk de Rijkshuisstijl Community Storybook"
               />
               <Card
-                description="We werken toe naar één centrale JSON met design tokens, waarmee je eenvoudig componenten uit het NL Design System kunt stijlen volgens jouw Rijkshuisstijl-deelidentiteit. Voor het inzichtelijker maken van designkeuzes, gebruiken we GitHub Discussions. Feedback op de hierin voorgestelde keuzes (ook bijv. een korte 'akkoord') is zeer welkom. Het delen van reeds zelfgemaakte designkeuzes wordt ook gewaardeerd."
+                description="Voor het inzichtelijker maken van designkeuzes, gebruiken we GitHub Discussions. Feedback op de hierin voorgestelde keuzes (ook bijv. een korte 'akkoord') is zeer welkom. Het delen van reeds zelfgemaakte designkeuzes wordt ook gewaardeerd."
                 heading="Rijkshuisstijl styling implementatie GitHub discussies"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/discussions/1505"
                 linkLabel="Ga naar de Rijkshuisstijl styling implementatie GitHub discussies"
               />
               <Card
-                description="Wij leggen de Rijkshuisstijl ontwerpkeuzes vast in herbruikbaar en schaalbaar formaat, welke je kan gebruiken voor jouw eigen thema, componenten, etc"
+                description="We werken toe naar één centrale JSON met design tokens, waarmee je eenvoudig componenten uit het NL Design System kunt stijlen volgens jouw Rijkshuisstijl-deelidentiteit."
                 heading="Design Tokens"
                 href="https://www.nldesignsystem.nl/handboek/design-tokens/"
                 linkLabel="Lees alles over design tokens"
@@ -155,22 +155,22 @@ export default function Page() {
                 linkLabel="Lees hoe je mee ontwikkelt aan het de Rijkshuisstijl Community"
               />
               <Card
-                description="Vanuit het NL Design System bieden we deze Figma bibliotheek met componenten aan. De componenten worden ontwikkeld op basis van het estafettemodel. Help Wanted componenten zijn nog niet in code beschikbaar. Maar daar kan jij met jouw organisatie verandering in brengen! Ga je als organisatie een component ontwikkelen? Laat dan een comment achter. Zo kan iedereen zien wie waar mee bezig is."
-                heading="Figma: NL Design System Rijkshuisstijl Bibliotheek"
+                description="Een duplicaat van de Voorbeeld bibliotheek van het NL Design System, waarin de design tokens van het RHC-project zijn toegepast. Deze setup maakt het mogelijk om stijlkeuzes te testen en inzichtelijk te maken. Door de design tokens via Token Studio in te laden, kun je tussen thema's schakelen en beoordelen of de stijl aansluit bij jouw organisatie."
+                heading="NL Design System Rijkshuisstijl Figma Bibliotheek"
                 href="https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?m=auto"
-                linkLabel="Bekijk de Rijkshuisstijl bibliotheek in Figma"
+                linkLabel="Bekijk de NL Design System Rijkshuisstijl Bibliotheek in Figma"
               />
               <Card
-                description="Dit is de lokale bibliotheek van het NL Design System, voorzien van het Voorbeeld thema. Vrijwel alle componenten hier zijn ‘Experimental’. Dat betekend dat ze vooralsnog geen onderdeel uit maken van de componenten die worden ontwikkeld op basis van het estafettemodel. Gebruik deze componenten dus enkel ter inspiratie."
-                heading="Figma: Local Rijkshuisstijl Bibliotheek"
+                description="Een kopie van de NLDS-bibliotheek met RHC-design tokens, om stijlkeuzes te testen en inzichtelijk te maken. Vrijwel alle componenten hier zijn 'Experimental'. Dat betekend dat ze vooralsnog geen onderdeel uit maken van de componenten die worden ontwikkeld op basis van het estafettemodel. Gebruik deze componenten dus ter inspiratie."
+                heading="Rijkshuisstijl Figma Bibliotheek"
                 href="https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/Local---Rijkshuisstijl---Bibliotheek?m=auto"
-                linkLabel="Bekijk de Rijkshuisstijl lokale bibliotheek in Figma"
+                linkLabel="Bekijk de Rijkshuisstijl Bibliotheek in Figma"
               />
               <Card
-                description="Templates (en patronen), gebaseerd op het Voorbeeld thema en opgebouwd met componenten uit de Voorbeeld Bibliotheek (Local en NL Design System). Deze templates zijn in ontwikkeling, gebruik ze alleen ter inspiratie voor je prototypes en onderzoek. Het delen van jouw inzichten helpt ons deze templates beter te maken."
-                heading="Figma: NL Design System Rijkshuisstijl Templates"
+                description="Beide bibliotheken zijn gekoppeld aan dit Figma bestand met templates en patronen voor gehele pagina's. Bestaande overheidswebsites zijn nagebouwd met NLDS-componenten en RHC-tokens, om te toetsen of stijl en componenten aansluiten bij de praktijk."
+                heading="Rijkshuisstijl Figma Templates"
                 href="https://www.figma.com/design/H4hSqpPbvFMLklDZgswwgd/NLDS---Rijkshuisstijl---Templates?m=auto&t=3Q7KyAIW8lqYHupW-6"
-                linkLabel="Bekijk de Rijkshuisstijl Community templates in Figma"
+                linkLabel="Bekijk de Rijkshuisstijl Templates in Figma"
               />
               <Card
                 description="Met deze aanpak maken we de beste en meest bruikbare componenten, patronen en richtlijnen te maken. Elk nieuw onderdeel volgt het estafette model en beweegt zich in een samenwerking tussen het kernteam en de community van begin tot eind door dit model."
