@@ -112,22 +112,34 @@ h1 {
   }
 }
 
-.rhc-cards-container {
+/**
+  * Mimic the non-existing Card Group
+  * which is a responsive grid for cards.
+  * Where the number of columns is flexible.
+  */
+.rhc-card-group {
+  /* Overwrites the fixed sizing of the cards */
+  --rhc-card-as-link-horizontal-max-block-size: unset;
+  --rhc-card-as-link-inline-size: 100%;
+
+  /* Use the same gap as the column layout */
+  --rhc-card-group-column-gap: var(--utrecht-column-layout-gap);
+
   display: grid;
-  gap: 1em;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: var(--rhc-card-group-column-gap, 1em);
+  grid-template-columns: 1fr;
   justify-content: center;
 }
 
-@media (width < 1350px) {
-  .rhc-cards-container {
+@media (width > 768px) {
+  .rhc-card-group {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (width < 700px) {
-  .rhc-cards-container {
-    grid-template-columns: 1fr;
+@media (width > 1024px) {
+  .rhc-card-group {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
