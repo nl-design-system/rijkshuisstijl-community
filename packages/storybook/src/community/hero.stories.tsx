@@ -42,6 +42,13 @@ const meta = {
         type: { summary: 'string' },
       },
     },
+    imageSrc: {
+      description: 'Image source URL',
+      control: { type: 'text' },
+      table: {
+        type: { summary: 'string' },
+      },
+    },
     imageAlt: {
       description: 'Image alt text',
       control: { type: 'text' },
