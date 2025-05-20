@@ -21,12 +21,13 @@ import SharedDisclaimer from '../shared/disclaimer';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
+import './index.css';
 
 export default function MijnOmgeving() {
   return (
     <>
       <SharedHeader />
-      <PageBody className="rhc-templates-page rhc-templates-background-color-white">
+      <PageBody className="rhc-templates-page rhc-templates-page--mijn-omgeving rhc-templates-background-color-white">
         <SharedMainPageContent>
           <SharedDisclaimer />
           <SideNav className={'rhc-side-nav'}>

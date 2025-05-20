@@ -19,6 +19,7 @@ import SharedDisclaimer from '../shared/disclaimer';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
+import './index.css';
 
 export default function Details() {
   return (
