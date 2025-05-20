@@ -15,11 +15,17 @@ export default function SharedHeader() {
           endItems={[
             {
               id: 'end1',
+              target: '_blank',
               href: 'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?m=auto',
               label: 'Figma',
             },
-            { id: 'end2', href: 'https://github.com/nl-design-system/rijkshuisstijl-community', label: 'GitHub' },
-            { id: 'end3', href: 'https://rijkshuisstijl-community.vercel.app/', label: 'Storybook' },
+            {
+              id: 'end2',
+              target: '_blank',
+              href: 'https://github.com/nl-design-system/rijkshuisstijl-community',
+              label: 'GitHub',
+            },
+            { id: 'end3', target: '_blank', href: 'https://rijkshuisstijl-community.vercel.app/', label: 'Storybook' },
           ]}
           items={[
             { id: 'start1', href: '/', label: 'Homepage' },

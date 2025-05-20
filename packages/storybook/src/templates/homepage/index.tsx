@@ -62,6 +62,7 @@ export default function Page() {
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
+                target="_blank"
                 title="Lees hoe je in het algemeen van start gaat met de Rijkshuisstijl Community"
               />
               <Card
@@ -71,6 +72,7 @@ export default function Page() {
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
+                target="_blank"
                 title="Lees hoe je enkel de CSS van de Rijkshuisstijl Community kunt gebruiken"
               />
               <Card
@@ -80,6 +82,7 @@ export default function Page() {
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
+                target="_blank"
                 title="Lees hoe je de React-componenten van de Rijkshuisstijl Community kunt gebruiken"
               />
               <Card
@@ -89,6 +92,7 @@ export default function Page() {
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
+                target="_blank"
                 title="Lees hoe je de Web Components van de Rijkshuisstijl Community kunt gebruiken"
               />
               <Card
@@ -98,6 +102,7 @@ export default function Page() {
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
+                target="_blank"
                 title="Lees hoe je de Angular-componenten van de Rijkshuisstijl Community kunt gebruiken"
               />
               <Card
@@ -107,6 +112,7 @@ export default function Page() {
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
+                target="_blank"
                 title="Lees hoe je de Twig-componenten van de Rijkshuisstijl Community kunt gebruiken"
               />
               <Card
@@ -116,6 +122,7 @@ export default function Page() {
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
+                target="_blank"
                 title="Lees hoe je de Design Tokens van de Rijkshuisstijl Community kunt gebruiken"
               />
             </div>
@@ -129,54 +136,63 @@ export default function Page() {
                 heading="Rijkshuisstijl Community Storybook"
                 href="https://rijkshuisstijl-community.vercel.app/"
                 linkLabel="Bekijk de Rijkshuisstijl Community Storybook"
+                target="_blank"
               />
               <Card
                 description="Voor het inzichtelijker maken van designkeuzes, gebruiken we GitHub Discussions. Feedback op de hierin voorgestelde keuzes (ook bijv. een korte 'akkoord') is zeer welkom. Het delen van reeds zelfgemaakte designkeuzes wordt ook gewaardeerd."
                 heading="Rijkshuisstijl styling implementatie GitHub discussies"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/discussions/1505"
                 linkLabel="Ga naar de Rijkshuisstijl styling implementatie GitHub discussies"
+                target="_blank"
               />
               <Card
                 description="We werken toe naar één centrale JSON met design tokens, waarmee je eenvoudig componenten uit het NL Design System kunt stijlen volgens jouw Rijkshuisstijl-deelidentiteit."
                 heading="Design Tokens"
                 href="https://www.nldesignsystem.nl/handboek/design-tokens/"
                 linkLabel="Lees alles over design tokens"
+                target="_blank"
               />
               <Card
                 description="Mee designen aan het NL Design System of gebruik maken van bestaande Figma componenten? Als designer vind je hier alle documentatie die je nodig hebt."
                 heading="Designer Handboek"
                 href="https://www.nldesignsystem.nl/handboek/designer/overzicht"
                 linkLabel="Lees hoe je mee ontwerpt aan het NL Design System"
+                target="_blank"
               />
               <Card
                 description="Mee ontwikkelen aan NL Design System of gebruik maken van bestaande componenten? Als developer vind je hier alle documentatie die je nodig hebt om te beginnen."
                 heading="Developer Handboek"
                 href="https://www.nldesignsystem.nl/handboek/developer/overzicht"
                 linkLabel="Lees hoe je mee ontwikkelt aan het de Rijkshuisstijl Community"
+                target="_blank"
               />
               <Card
                 description="Een duplicaat van de Voorbeeld bibliotheek van het NL Design System, waarin de design tokens van het RHC-project zijn toegepast. Deze setup maakt het mogelijk om stijlkeuzes te testen en inzichtelijk te maken. Door de design tokens via Token Studio in te laden, kun je tussen thema's schakelen en beoordelen of de stijl aansluit bij jouw organisatie."
                 heading="NL Design System Rijkshuisstijl Figma Bibliotheek"
                 href="https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?m=auto"
                 linkLabel="Bekijk de NL Design System Rijkshuisstijl Bibliotheek in Figma"
+                target="_blank"
               />
               <Card
                 description="Een kopie van de NLDS-bibliotheek met RHC-design tokens, om stijlkeuzes te testen en inzichtelijk te maken. Vrijwel alle componenten hier zijn 'Experimental'. Dat betekend dat ze vooralsnog geen onderdeel uit maken van de componenten die worden ontwikkeld op basis van het estafettemodel. Gebruik deze componenten dus ter inspiratie."
                 heading="Rijkshuisstijl Figma Bibliotheek"
                 href="https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/Local---Rijkshuisstijl---Bibliotheek?m=auto"
                 linkLabel="Bekijk de Rijkshuisstijl Bibliotheek in Figma"
+                target="_blank"
               />
               <Card
                 description="Beide bibliotheken zijn gekoppeld aan dit Figma bestand met templates en patronen voor gehele pagina's. Bestaande overheidswebsites zijn nagebouwd met NLDS-componenten en RHC-tokens, om te toetsen of stijl en componenten aansluiten bij de praktijk."
                 heading="Rijkshuisstijl Figma Templates"
                 href="https://www.figma.com/design/H4hSqpPbvFMLklDZgswwgd/NLDS---Rijkshuisstijl---Templates?m=auto&t=3Q7KyAIW8lqYHupW-6"
                 linkLabel="Bekijk de Rijkshuisstijl Templates in Figma"
+                target="_blank"
               />
               <Card
                 description="Met deze aanpak maken we de beste en meest bruikbare componenten, patronen en richtlijnen te maken. Elk nieuw onderdeel volgt het estafette model en beweegt zich in een samenwerking tussen het kernteam en de community van begin tot eind door dit model."
                 heading="Estafettemodel"
                 href="https://www.nldesignsystem.nl/handboek/estafettemodel/"
                 linkLabel="Lees over het estafettemodel van NL Design System"
+                target="_blank"
               />
             </div>
           </section>
@@ -192,6 +208,7 @@ export default function Page() {
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
+                target="_blank"
               />
               <Card
                 appearance="full-bleed"
@@ -201,6 +218,7 @@ export default function Page() {
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
+                target="_blank"
               />
               <Card
                 appearance="full-bleed"
@@ -210,6 +228,7 @@ export default function Page() {
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
+                target="_blank"
               />
               <Card
                 appearance="full-bleed"
@@ -219,6 +238,7 @@ export default function Page() {
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
+                target="_blank"
               />
             </div>
           </section>
