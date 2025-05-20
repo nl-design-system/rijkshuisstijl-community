@@ -1,3 +1,5 @@
+'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
+
 import { Card, ColumnLayout, Heading, Hero, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
 import SharedFooter from '../shared/footer';
