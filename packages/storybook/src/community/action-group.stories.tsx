@@ -28,7 +28,8 @@ const meta = {
       },
     },
     nldesignsystem: 'https://www.nldesignsystem.nl/action-group/',
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/479',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/ActionGroup.tsx',
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=4626-10492&p=f&t=MHYw4lXBHCryrwek-0',
     componentOrigin:
