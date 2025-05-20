@@ -22,8 +22,8 @@ export default function Page() {
           <section className="rhc-cards-container">
             <Card
               appearance="default"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              heading="Altijd webtoegankelijk"
+              description="Een uitgebreide bibliotheek van herbruikbare componenten. Platform-onafhankelijk met de nieuwe Rijkshuisstijl."
+              heading="Efficiënt"
               href="#"
               imageAlt="TODO:alt word optioneel met andere PR"
               imageSrc="/placeholder.jpg"
@@ -31,8 +31,8 @@ export default function Page() {
             />
             <Card
               appearance="default"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              heading="Samen Open Source"
+              description="De community deelt regelmatig kennis, ervaring, updates en verbeteringen."
+              heading="Breed gedragen"
               href="#"
               imageAlt="TODO:alt word optioneel met andere PR"
               imageSrc="/placeholder.jpg"
@@ -40,8 +40,8 @@ export default function Page() {
             />
             <Card
               appearance="default"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              heading="Consistent en efficiënt"
+              description="Consistente gebruikservaring met herbruikbare voorbeeldpagina's"
+              heading="Gebruiksvriendelijk"
               href="#"
               imageAlt="TODO:alt word optioneel met andere PR"
               imageSrc="/placeholder.jpg"
