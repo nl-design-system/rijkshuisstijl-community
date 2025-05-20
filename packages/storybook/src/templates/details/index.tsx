@@ -97,7 +97,7 @@ export default function Details() {
               </div>
               <Separator></Separator>
               <Heading level={2}>Uitgelicht</Heading>
-              <div className="rhc-templates-card-container">
+              <div className="rhc-card-group">
                 <Card
                   heading="Bijbaan, vakantiewerk en stage door jongeren"
                   href="#"
