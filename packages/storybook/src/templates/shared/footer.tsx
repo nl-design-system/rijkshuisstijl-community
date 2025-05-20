@@ -1,17 +1,14 @@
 import { Footer, Icon, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
-import { IconArrowUp } from '@tabler/icons-react';
-import { Paragraph, ScrollLink } from '@utrecht/component-library-react';
+import { Paragraph } from '@utrecht/component-library-react';
 import './footer.css';
 
 export default function SharedFooter() {
   return (
     <>
-      <ScrollLink appearance="subtle-button" href="#top">
-        Terug naar boven <IconArrowUp />
-      </ScrollLink>
       <Footer
         appearanceLevel={4}
         background="primary-filled"
+        backtotop={true}
         className="rhc-sr-only"
         heading="Footer"
         columns={[
