@@ -73,3 +73,14 @@ export const Default: Story = {
   },
   name: 'Image',
 };
+
+export const Decorative: Story = {
+  args: {
+    alt: '',
+    presentation: true,
+    height: 763,
+    width: 640,
+    src: './placeholder.jpg',
+  },
+  name: 'Decorative',
+};
