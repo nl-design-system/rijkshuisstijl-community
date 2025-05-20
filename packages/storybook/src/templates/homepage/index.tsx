@@ -120,7 +120,7 @@ export default function Page() {
             <Heading level={2}>Lees en leer</Heading>
             <div className="rhc-cards-container">
               <Card
-                description="Storybook is een overzicht van al onze componenten in verschillende frameworks, handig voor zowel designers als developers om snel te zien hoe iets eruitziet en werkt."
+                description="Storybook is een overzicht van al onze componenten en templates in verschillende frameworks, handig voor zowel designers als developers om snel te zien hoe iets eruitziet en werkt."
                 heading="Rijkshuisstijl Community Storybook"
                 href="https://rijkshuisstijl-community.vercel.app/"
                 linkLabel="Bekijk de Rijkshuisstijl Community Storybook"
