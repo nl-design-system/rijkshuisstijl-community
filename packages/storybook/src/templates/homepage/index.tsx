@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <>
       <SharedHeader />
-      <PageBody className="rhc-templates-page rhc-templates-background-color-white">
+      <PageBody className="rhc-templates-page">
         <SharedMainPageContent>
           <Hero
             heading="Onofficieel Rijkshuisstijl Design System"
