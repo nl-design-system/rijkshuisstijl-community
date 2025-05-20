@@ -1,6 +1,6 @@
 <!-- @license CC0-1.0 -->
 
-# Rijkshuisstijl Community Message List component
+# Rijkshuisstijl Community Message List Item component
 
 ## Usage
 

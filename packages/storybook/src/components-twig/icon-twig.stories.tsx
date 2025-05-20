@@ -31,6 +31,9 @@ const meta = {
     status: {
       type: 'STABLE',
     },
+    //Todo: voeg NL-Design system & Figma links toe
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/src/Icon.twig',
   },
 } satisfies Meta<typeof TwigIcon>;
 

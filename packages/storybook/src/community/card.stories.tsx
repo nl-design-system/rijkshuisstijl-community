@@ -39,6 +39,14 @@ const meta = {
         category: 'Props',
       },
     },
+    imagePresentation: {
+      description: 'Image is decorative',
+      control: { type: 'boolean' },
+      table: {
+        category: 'Props',
+        type: { summary: 'boolean' },
+      },
+    },
     description: {
       description: 'Card content',
       control: { type: 'text' },
@@ -99,7 +107,8 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/561',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Card.tsx',
     figma:
       'https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/Local---Rijkshuisstijl---Bibliotheek?node-id=472-1420&p=f&t=fuaKEQHb4FZ444xP-0',
     nldesignsystem: 'https://nldesignsystem.nl/card-as-link',
