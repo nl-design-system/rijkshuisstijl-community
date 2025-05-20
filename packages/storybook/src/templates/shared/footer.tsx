@@ -72,9 +72,6 @@ export default function SharedFooter({ isLightTheme }: { isLightTheme?: boolean 
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
                   Over de Rijkshuisstijl Community Sprint op NL Design System
                 </LinkListLink>
-                <LinkListLink href="https://www.rijkshuisstijl.nl/" icon={<Icon icon={'chevron-right'} />}>
-                  De officiële Rijkshuisstijl website
-                </LinkListLink>
               </LinkList>,
             ],
           },
