@@ -4,6 +4,7 @@ import './globals.css';
 
 const meta: Meta = {
   title: 'Templates/Rich Text',
+  id: 'rhc-templates-rich-text',
   component: Page,
   parameters: {
     layout: 'fullscreen',
