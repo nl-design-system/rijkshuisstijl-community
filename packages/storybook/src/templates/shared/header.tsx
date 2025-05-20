@@ -1,4 +1,4 @@
-import { Icon, Link, Logo, NavBar, PageHeader, SkipLink } from '@rijkshuisstijl-community/components-react';
+import { Icon, Logo, NavBar, PageHeader, SkipLink } from '@rijkshuisstijl-community/components-react';
 import './header.css';
 
 export default function SharedHeader() {
@@ -9,9 +9,7 @@ export default function SharedHeader() {
       </SkipLink>
       <PageHeader>
         <Logo organisation="Rijkshuisstijl Community" subtitle="Onofficieel Rijkshuisstijl Design System">
-          <Link className="rhc-logo__link" href="/">
-            <Icon className={'dutch-map'} icon={'nederland-map'} />
-          </Link>
+          <Icon className={'dutch-map'} icon={'nederland-map'} />
         </Logo>
         <NavBar
           endItems={[
