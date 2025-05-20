@@ -10,7 +10,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Rijkshuisstijl Community',
+    default: 'Onofficieel Rijkshuisstijl Design System | Rijkshuisstijl Community',
     template: '%s | Rijkshuisstijl Community',
   },
 };
