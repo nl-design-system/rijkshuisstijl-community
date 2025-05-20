@@ -11,7 +11,7 @@ import Head from 'next/head';
 
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
-    <Root>
+    <Root lang="nl" dir="ltr">
       <Head>
         <title>Rijkshuisstijl demo - Index</title>
       </Head>
