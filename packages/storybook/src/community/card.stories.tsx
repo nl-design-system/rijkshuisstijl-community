@@ -39,6 +39,14 @@ const meta = {
         category: 'Props',
       },
     },
+    imagePresentation: {
+      description: 'Image is decorative',
+      control: { type: 'boolean' },
+      table: {
+        category: 'Props',
+        type: { summary: 'boolean' },
+      },
+    },
     description: {
       description: 'Card content',
       control: { type: 'text' },

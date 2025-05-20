@@ -27,7 +27,8 @@ const meta = {
     },
     presentation: {
       description: 'Image is decorative',
-      control: { type: 'boolean' },
+      type: { name: 'boolean' },
+      control: 'boolean',
       table: {
         category: 'Property',
       },
