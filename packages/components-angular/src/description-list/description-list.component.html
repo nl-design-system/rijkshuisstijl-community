@@ -1,0 +1,17 @@
+<div class="denhaag-description-list-container">
+  @if (caption) {
+    <h3 id="h3" class="denhaag-description-list__caption">
+      {{ caption }}
+    </h3>
+  }
+  <dl class="denhaag-description-list">
+    @for (item of items; track $index) {
+      <div class="denhaag-description-list-item">
+        <dt class="denhaag-description-list__title">{{ item.title }}</dt>
+        <dd class="denhaag-description-list__detail">
+          {{ item.detail }}
+        </dd>
+      </div>
+    }
+  </dl>
+</div>
