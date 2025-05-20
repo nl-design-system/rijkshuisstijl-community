@@ -1,5 +1,4 @@
-import { Card, Heading, Hero } from '@rijkshuisstijl-community/components-react';
-import { Paragraph } from '@utrecht/component-library-react';
+import { Card, ColumnLayout, Heading, Hero, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
@@ -16,8 +15,17 @@ export default function Page() {
             headingLevel={1}
             imageAlt="Tullip field"
             imageSrc="/placeholder.jpg"
-            subHeading="De Rijkshuisstijl Community (RHC) maakt deel uit van een samenwerkingsverband om NL Design System-componenten te gebruiken voor projecten die moeten voldoen aan de Rijkshuisstijl. De community bestaat uit organisaties van de centrale overheid van Nederland en degenen die door hen zijn ingehuurd voor het ontwikkelen van websites en apps."
           />
+          <ColumnLayout>
+            <Paragraph>
+              De Rijkshuisstijl Community (RHC) maakt deel uit van een samenwerkingsverband om NL Design
+              System-componenten te gebruiken voor projecten die moeten voldoen aan de Rijkshuisstijl.
+            </Paragraph>
+            <Paragraph>
+              De community bestaat uit organisaties van de centrale overheid van Nederland en degenen die door hen zijn
+              ingehuurd voor het ontwikkelen van websites en apps.
+            </Paragraph>
+          </ColumnLayout>
           {/* Dit worden Marwa's improved cards */}
           <section className="rhc-cards-container">
             <Card
