@@ -25,6 +25,13 @@ const meta = {
         category: 'Property',
       },
     },
+    presentation: {
+      description: 'Image is decorative',
+      control: { type: 'boolean' },
+      table: {
+        category: 'Property',
+      },
+    },
     width: {
       description: 'Image width',
       control: { type: 'number' },
