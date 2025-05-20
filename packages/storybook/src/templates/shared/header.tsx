@@ -8,7 +8,7 @@ export default function SharedHeader() {
         Ga naar hoofdinhoud
       </SkipLink>
       <PageHeader>
-        <Logo organisation="Rijkshuisstijl Community" subtitle="Onofficieel Rijkshuisstijl Design System">
+        <Logo organisation="Rijkshuisstijl Community">
           <Icon className={'dutch-map'} icon={'nederland-map'} />
         </Logo>
         <NavBar
