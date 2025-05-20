@@ -2,12 +2,12 @@ import { Footer, Icon, LinkList, LinkListLink } from '@rijkshuisstijl-community/
 import { Paragraph } from '@utrecht/component-library-react';
 import './footer.css';
 
-export default function SharedFooter() {
+export default function SharedFooter({ isLightTheme }: { isLightTheme?: boolean }) {
   return (
     <>
       <Footer
         appearanceLevel={4}
-        background="primary-filled"
+        background={isLightTheme ? 'primary-outlined' : 'primary-filled'}
         backtotop={true}
         className="rhc-sr-only"
         heading="Footer"

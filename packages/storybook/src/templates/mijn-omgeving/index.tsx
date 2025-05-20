@@ -189,7 +189,7 @@ export default function MijnOmgeving() {
           </section>
         </SharedMainPageContent>
       </PageBody>
-      <SharedFooter />
+      <SharedFooter isLightTheme={true} />
     </>
   );
 }
