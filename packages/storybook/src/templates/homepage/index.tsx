@@ -29,7 +29,7 @@ export default function Page() {
             </Paragraph>
           </ColumnLayout>
           {/* Dit worden Marwa's improved cards */}
-          <section className="rhc-cards-container">
+          <div className="rhc-card-group">
             <Card
               appearance="default"
               description="Een uitgebreide bibliotheek van herbruikbare componenten. Platform-onafhankelijk met de nieuwe Rijkshuisstijl."
@@ -45,7 +45,7 @@ export default function Page() {
               description="Consistente gebruikservaring met herbruikbare voorbeeldpagina's"
               heading="Gebruiksvriendelijk"
             />
-          </section>
+          </div>
 
           <section>
             <Heading level={2}>In de praktijk</Heading>
@@ -54,7 +54,7 @@ export default function Page() {
               frameworks. Voor een dieper begrip en uitgebreide documentatie verwijzen we je graag naar de &quot;lees en
               leer&quot; section.
             </Paragraph>
-            <div className="rhc-cards-container">
+            <div className="rhc-card-group">
               <Card
                 appearance="horizontal"
                 heading="Aan de slag"
@@ -116,7 +116,7 @@ export default function Page() {
 
           <section>
             <Heading level={2}>Lees en leer</Heading>
-            <div className="rhc-cards-container">
+            <div className="rhc-card-group">
               <Card
                 description="Storybook is een overzicht van al onze componenten en templates in verschillende frameworks, handig voor zowel designers als developers om snel te zien hoe iets eruitziet en werkt."
                 heading="Rijkshuisstijl Community Storybook"
@@ -176,7 +176,7 @@ export default function Page() {
 
           <section>
             <Heading level={2}>Kom in contact</Heading>
-            <div className="rhc-cards-container">
+            <div className="rhc-card-group">
               <Card
                 appearance="full-bleed"
                 description="Volg en neem deel aan de slowchat van de huidige sprint op Code for NL Slack in #nl-design-system-developers"
