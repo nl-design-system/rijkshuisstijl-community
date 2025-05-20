@@ -7,6 +7,7 @@ const meta = {
   id: 'rhc-templates-homepage',
   component: Homepage,
   parameters: {
+    layout: 'fullscreen',
     status: {
       type: 'UNSTABLE',
     },
