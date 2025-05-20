@@ -23,9 +23,11 @@ const meta = {
     status: {
       type: 'STABLE',
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    // TODO: add Figma and NL DesignSystem links
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, de design tokens kunnen indien nodig nog overschreven worden.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/LinkList.tsx',
   },
   render: (args) => (
     <LinkList>
@@ -44,6 +46,14 @@ export const Default: Story = {
     href: '#',
     icon: <Icon icon={'chevron-right'} />,
   },
+};
+
+export const NoIcon: Story = {
+  render: () => (
+    <LinkList>
+      <LinkListLink href="#">Label</LinkListLink>
+    </LinkList>
+  ),
 };
 
 export const Hover: Story = {

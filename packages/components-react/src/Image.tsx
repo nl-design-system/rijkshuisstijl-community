@@ -3,10 +3,17 @@ import { Ref } from 'react';
 
 export interface ImageProps extends UtrechtImageProps {
   ref?: Ref<HTMLImageElement>;
-  alt: string;
+  alt?: string;
+  presentation?: boolean;
 }
 
-export const Image = ({ ref, className, alt, ...restProps }: ImageProps) =>
-  alt && <UtrechtImage alt={alt} {...restProps} photo className={className} ref={ref} />;
+export const Image = ({ ref, className, alt, presentation, ...restProps }: ImageProps) => {
+  if (!presentation && !alt) {
+    console.warn('Images must always have an alt-text, unless the image is presentational.');
+    return null;
+  }
+
+  return <UtrechtImage alt={presentation ? '' : alt} {...restProps} photo className={className} ref={ref} />;
+};
 
 Image.displayName = 'Image';

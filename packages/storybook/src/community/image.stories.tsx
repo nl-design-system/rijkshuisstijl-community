@@ -25,6 +25,14 @@ const meta = {
         category: 'Property',
       },
     },
+    presentation: {
+      description: 'Image is decorative',
+      type: { name: 'boolean' },
+      control: 'boolean',
+      table: {
+        category: 'Property',
+      },
+    },
     width: {
       description: 'Image width',
       control: { type: 'number' },
@@ -72,4 +80,15 @@ export const Default: Story = {
     src: '/placeholder.jpg',
   },
   name: 'Image',
+};
+
+export const Decorative: Story = {
+  args: {
+    alt: '',
+    presentation: true,
+    height: 763,
+    width: 640,
+    src: './placeholder.jpg',
+  },
+  name: 'Decorative',
 };

@@ -40,7 +40,8 @@ const meta: Meta<StoryProps> = {
     // TODO: add NL Design System link when there is a page for LinkListCard
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1195-4201&t=n1djYpmvDCKmAEUi-0',
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/472',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/LinkListCard.tsx',
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 };

@@ -19,7 +19,8 @@ const meta = {
     // TODO: add NL Design System link when there is a page for CodeInput
     figma:
       'https://www.figma.com/design/H4hSqpPbvFMLklDZgswwgd/NLDS---Rijkshuisstijl---Templates?node-id=4652-10195&node-type=frame&t=b4RSbycsPxEdIHZ6-0',
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/823',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/CodeInputGroup.tsx',
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
   argTypes: {

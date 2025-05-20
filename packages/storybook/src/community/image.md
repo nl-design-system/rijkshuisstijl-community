@@ -21,17 +21,18 @@ import { Image } from '@rijkshuisstijl-community/components-react';
 
 ## Props
 
-| Prop        | Type   | Beschrijving                                                            |
-| ----------- | ------ | ----------------------------------------------------------------------- |
-| `src`       | string | Verwijzing naar de afbeeldingsbron                                      |
-| `alt`       | string | Alternatieve tekst voor de afbeelding (verplicht voor toegankelijkheid) |
-| `width`     | number | (optioneel) Breedte van de afbeelding                                   |
-| `height`    | number | (optioneel) Hoogte van de afbeelding                                    |
-| `className` | string | (optioneel) Extra CSS-klasse(n) voor styling                            |
+| Prop           | Type    | Beschrijving                                                                                                                        |
+| -------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `src`          | string  | Verwijzing naar de afbeeldingsbron                                                                                                  |
+| `alt`          | string  | (optioneel) Alternatieve tekst voor de afbeelding (verplicht voor toegankelijkheid indien `presentation` niet `true` is)            |
+| `presentation` | boolean | (optioneel) De afbeelding is decoratief en bevat expliciet geen `alt` (verplicht voor toegankelijkheid indien `alt` niet gezet is ) |
+| `width`        | number  | (optioneel) Breedte van de afbeelding                                                                                               |
+| `height`       | number  | (optioneel) Hoogte van de afbeelding                                                                                                |
+| `className`    | string  | (optioneel) Extra CSS-klasse(n) voor styling                                                                                        |
 
 ## Voorbeelden met verkeerde implementatie
 
-- Geen `alt` attribuut opgegeven
+- Geen `alt` attribuut opgegeven en geen `presentation` attribuut opgegeven
 
 ```jsx
 <Image src="/placeholder.jpg" width={640} height={480} />

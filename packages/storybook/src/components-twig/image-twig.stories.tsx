@@ -55,6 +55,9 @@ const meta = {
     },
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, maar de photo property altijd geset, daardoor is hij altijd max-height en max-width 100%.',
+    //Todo: voeg NL-Design system & Figma links toe
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/src/Image.twig',
   },
 } satisfies Meta<typeof TwigImage>;
 

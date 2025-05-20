@@ -67,7 +67,8 @@ const meta = {
         component: mergeMarkdown([readme, usageDocs]),
       },
     },
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/456',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Accordion.tsx',
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1261-4784&p=f&t=SHnEVcZMmxKnZVS8-0',
     nldesignsystem: 'https://www.nldesignsystem.nl/accordion/',
