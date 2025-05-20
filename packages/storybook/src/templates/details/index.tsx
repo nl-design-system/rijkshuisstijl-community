@@ -1,3 +1,5 @@
+'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
+
 import {
   Article,
   Card,
