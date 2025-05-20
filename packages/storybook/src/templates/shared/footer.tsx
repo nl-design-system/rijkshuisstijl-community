@@ -8,50 +8,82 @@ export default function SharedFooter() {
       <ScrollLink appearance="subtle-button" href="#top">
         Terug naar boven <IconArrowUp />
       </ScrollLink>
+
       <Footer
         appearanceLevel={4}
-        heading="Let op: Dit is geen officiële website van de Rijkshuisstijl. Deze website is een community-initiatief en wordt niet ondersteund door de officiële Rijkshuisstijl."
+        heading="Dit is geen officiële website van de makers van de Rijkshuisstijl. Dit project wordt niet gesteund door het Ministerie van Algemene Zaken."
         columns={[
           {
-            heading: 'Service',
+            heading: 'Over de Rijkshuisstijl Community',
             children: [
               <LinkList key="1">
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Contact
+                <LinkListLink
+                  href="https://github.com/nl-design-system/rijkshuisstijl-community"
+                  icon={<Icon icon={'chevron-right'} />}
+                >
+                  Rijkshuisstijl Community op GitHub
                 </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Item
+                <LinkListLink
+                  href="https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?m=auto"
+                  icon={<Icon icon={'chevron-right'} />}
+                >
+                  NLDS Rijkshuisstijl Bibliotheek in Figma
                 </LinkListLink>
+                <LinkListLink
+                  href="https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/Local---Rijkshuisstijl---Bibliotheek?m=auto"
+                  icon={<Icon icon={'chevron-right'} />}
+                >
+                  Local Rijkshuisstijl Bibliotheek in Figma
+                </LinkListLink>
+                <LinkListLink
+                  href="https://www.figma.com/design/H4hSqpPbvFMLklDZgswwgd/NLDS---Rijkshuisstijl---Templates?m=auto&t=3Q7KyAIW8lqYHupW-6"
+                  icon={<Icon icon={'chevron-right'} />}
+                >
+                  NLDS Rijkshuisstijl Templates in Figma
+                </LinkListLink>
+                <LinkListLink
+                  href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/proprietary/design-tokens/README.md"
+                  icon={<Icon icon={'chevron-right'} />}
+                >
+                  Rijkshuisstilj Community Design Tokens
+                </LinkListLink>
+                <LinkListLink
+                  href="https://rijkshuisstijl-community.vercel.app/"
+                  icon={<Icon icon={'chevron-right'} />}
+                >
+                  Rijkshuisstijl Community Storybook
+                </LinkListLink>
+                {/* TODO: onderstaande link updaten zodra nieuwe community sprint pagina live is */}
                 <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Item
+                  Over de Rijkshuisstijl Community Sprint op NL Design System
+                </LinkListLink>
+                <LinkListLink href="https://www.rijkshuisstijl.nl/" icon={<Icon icon={'chevron-right'} />}>
+                  De officiële Rijkshuisstijl website
                 </LinkListLink>
               </LinkList>,
             ],
           },
           {
-            heading: 'Over deze site',
+            heading: 'Contact',
             children: (
               <LinkList key="2">
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Over deze organisatie
+                <LinkListLink href="https://praatmee.codefor.nl/" icon={<Icon icon={'chevron-right'} />}>
+                  Code for NL Slack #nl-design-system-developers
                 </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Copyright
+                <LinkListLink
+                  href="https://github.com/nl-design-system/rijkshuisstijl-community/discussions/1505"
+                  icon={<Icon icon={'chevron-right'} />}
+                >
+                  Rijkshuisstijl styling discussies
                 </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Privacy
+                <LinkListLink
+                  href="https://github.com/nl-design-system/rijkshuisstijl-community/graphs/contributors"
+                  icon={<Icon icon={'chevron-right'} />}
+                >
+                  Contributors op GitHub
                 </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Cookies
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Toegankelijkheid
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Open data
-                </LinkListLink>
-                <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-                  Kwetsbaarheid melden
+                <LinkListLink href="https://nldesignsystem.nl/project/kernteam/" icon={<Icon icon={'chevron-right'} />}>
+                  NL Design System kernteam
                 </LinkListLink>
               </LinkList>
             ),
