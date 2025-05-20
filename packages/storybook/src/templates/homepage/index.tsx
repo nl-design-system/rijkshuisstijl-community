@@ -59,7 +59,8 @@ export default function Page() {
                 appearance="horizontal"
                 heading="Aan de slag"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/README.md"
-                imageAlt="TODO:alt word optioneel met andere PR"
+                imageAlt=""
+                imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 title="Lees hoe je in het algemeen van start gaat met de Rijkshuisstijl Community"
               />
@@ -67,7 +68,8 @@ export default function Page() {
                 appearance="horizontal"
                 heading="CSS"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/README.md"
-                imageAlt="TODO:alt word optioneel met andere PR"
+                imageAlt=""
+                imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 title="Lees hoe je enkel de CSS van de Rijkshuisstijl Community kunt gebruiken"
               />
@@ -75,7 +77,8 @@ export default function Page() {
                 appearance="horizontal"
                 heading="React"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/README.md"
-                imageAlt="TODO:alt word optioneel met andere PR"
+                imageAlt=""
+                imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 title="Lees hoe je de React-componenten van de Rijkshuisstijl Community kunt gebruiken"
               />
@@ -83,7 +86,8 @@ export default function Page() {
                 appearance="horizontal"
                 heading="Web Components"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/README.md"
-                imageAlt="TODO:alt word optioneel met andere PR"
+                imageAlt=""
+                imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 title="Lees hoe je de Web Components van de Rijkshuisstijl Community kunt gebruiken"
               />
@@ -91,7 +95,8 @@ export default function Page() {
                 appearance="horizontal"
                 heading="Angular"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-angular/README.md"
-                imageAlt="TODO:alt word optioneel met andere PR"
+                imageAlt=""
+                imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 title="Lees hoe je de Angular-componenten van de Rijkshuisstijl Community kunt gebruiken"
               />
@@ -99,7 +104,8 @@ export default function Page() {
                 appearance="horizontal"
                 heading="Twig"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/README.md"
-                imageAlt="TODO:alt word optioneel met andere PR"
+                imageAlt=""
+                imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 title="Lees hoe je de Twig-componenten van de Rijkshuisstijl Community kunt gebruiken"
               />
@@ -107,7 +113,8 @@ export default function Page() {
                 appearance="horizontal"
                 heading="Design Tokens"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/proprietary/design-tokens/README.md"
-                imageAlt="TODO:alt word optioneel met andere PR"
+                imageAlt=""
+                imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 title="Lees hoe je de Design Tokens van de Rijkshuisstijl Community kunt gebruiken"
               />
@@ -182,7 +189,8 @@ export default function Page() {
                 description="Volg en neem deel aan de slowchat van de huidige sprint op Code for NL Slack in #nl-design-system-developers"
                 heading="Slack"
                 href="https://praatmee.codefor.nl/"
-                imageAlt="TODO:alt word optioneel met andere PR"
+                imageAlt=""
+                imagePresentation={true}
                 imageSrc="/placeholder.jpg"
               />
               <Card
@@ -190,7 +198,8 @@ export default function Page() {
                 description="Neem deel aan de Rijkshuisstijl styling discussies etc etc."
                 heading="GitHub Discussies"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/discussions/1505"
-                imageAlt="TODO:alt word optioneel met andere PR"
+                imageAlt=""
+                imagePresentation={true}
                 imageSrc="/placeholder.jpg"
               />
               <Card
@@ -198,7 +207,8 @@ export default function Page() {
                 description="Neem contact op met de contributors op GitHub etc etc."
                 heading="GitHub Contributors"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/graphs/contributors"
-                imageAlt="TODO:alt word optioneel met andere PR"
+                imageAlt=""
+                imagePresentation={true}
                 imageSrc="/placeholder.jpg"
               />
               <Card
@@ -206,7 +216,8 @@ export default function Page() {
                 description="Of neem contact op met het NL Design System kernteam."
                 heading="Kernteam"
                 href="https://nldesignsystem.nl/project/kernteam/"
-                imageAlt="TODO:alt word optioneel met andere PR"
+                imageAlt=""
+                imagePresentation={true}
                 imageSrc="/placeholder.jpg"
               />
             </div>
