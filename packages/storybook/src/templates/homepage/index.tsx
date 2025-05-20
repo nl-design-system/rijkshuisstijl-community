@@ -13,7 +13,7 @@ export default function Page() {
       <PageBody className="rhc-templates-page rhc-templates-background-color-white">
         <SharedMainPageContent>
           <Hero
-            heading="Rijkshuisstijl Community"
+            heading="Onofficieel Rijkshuisstijl Design System"
             headingLevel={1}
             imageAlt="Tullip field"
             imageSrc="/placeholder.jpg"
