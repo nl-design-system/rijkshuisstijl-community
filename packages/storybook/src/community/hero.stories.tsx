@@ -42,6 +42,28 @@ const meta = {
         type: { summary: 'string' },
       },
     },
+    imageSrc: {
+      description: 'Image source URL',
+      control: { type: 'text' },
+      table: {
+        type: { summary: 'string' },
+      },
+    },
+    imageAlt: {
+      description: 'Image alt text',
+      control: { type: 'text' },
+      defaultValue: '',
+      table: {
+        type: { summary: 'string' },
+      },
+    },
+    imagePresentation: {
+      description: 'Image is decorative',
+      control: { type: 'boolean' },
+      table: {
+        type: { summary: 'boolean' },
+      },
+    },
   },
   parameters: {
     status: {

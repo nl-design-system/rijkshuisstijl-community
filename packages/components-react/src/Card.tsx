@@ -14,7 +14,8 @@ interface CardPropsBase {
 export interface HorizontalImageCardProps extends CardPropsBase {
   appearance?: 'horizontal';
   imageSrc: string;
-  imageAlt: string;
+  imageAlt?: string;
+  imagePresentation?: boolean;
 }
 
 export interface FullBleedCardProps extends Omit<HorizontalImageCardProps, 'appearance'> {
@@ -56,6 +57,7 @@ const DefaultCard = ({
   icon,
   description,
   imageAlt,
+  imagePresentation,
   metadata,
   linkLabel,
   button,
@@ -70,7 +72,7 @@ const DefaultCard = ({
         <div className="rhc-card__heading">{heading}</div>
         {imageSrc && (
           <div className="rhc-card__image-container" data-testid="rhc-card__image-container">
-            {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
+            {<Image alt={imageAlt} className="rhc-card__image" presentation={imagePresentation} src={imageSrc} />}
           </div>
         )}
         <div className="rhc-card__icon">{icon}</div>
@@ -105,6 +107,7 @@ export const FullBleedCard = ({
   href,
   title,
   imageSrc,
+  imagePresentation,
   heading,
   children,
   description,
@@ -123,7 +126,7 @@ export const FullBleedCard = ({
       <div className="rhc-card__metadata">{metadata}</div>
       {children}
     </div>
-    {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
+    {<Image alt={imageAlt} className="rhc-card__image" presentation={imagePresentation} src={imageSrc} />}
   </div>
 );
 
@@ -135,6 +138,7 @@ export const HorizontalImageCard = ({
   title,
   imageSrc,
   imageAlt,
+  imagePresentation,
   heading,
   children,
   className,
@@ -149,7 +153,7 @@ export const HorizontalImageCard = ({
       {children}
     </div>
     <div className="rhc-card__image-container">
-      <Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />
+      <Image alt={imageAlt} className="rhc-card__image" presentation={imagePresentation} src={imageSrc} />
     </div>
   </div>
 );
