@@ -32,28 +32,16 @@ export default function Page() {
               appearance="default"
               description="Een uitgebreide bibliotheek van herbruikbare componenten. Platform-onafhankelijk met de nieuwe Rijkshuisstijl."
               heading="Efficiënt"
-              href="#"
-              imageAlt="TODO:alt word optioneel met andere PR"
-              imageSrc="/placeholder.jpg"
-              title="cardtitlee"
             />
             <Card
               appearance="default"
               description="De community deelt regelmatig kennis, ervaring, updates en verbeteringen."
               heading="Breed gedragen"
-              href="#"
-              imageAlt="TODO:alt word optioneel met andere PR"
-              imageSrc="/placeholder.jpg"
-              title="cardtitlee"
             />
             <Card
               appearance="default"
               description="Consistente gebruikservaring met herbruikbare voorbeeldpagina's"
               heading="Gebruiksvriendelijk"
-              href="#"
-              imageAlt="TODO:alt word optioneel met andere PR"
-              imageSrc="/placeholder.jpg"
-              title="cardtitlee"
             />
           </section>
 
