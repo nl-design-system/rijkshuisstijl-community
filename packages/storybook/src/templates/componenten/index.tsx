@@ -117,7 +117,12 @@ export default function Componenten() {
 
             <div aria-atomic="true" aria-live="polite" className="rhc-grid-container__right">
               {noResults ? (
-                <Paragraph>Geen resultaten gevonden.</Paragraph>
+                <>
+                  <Heading appearanceLevel={3} level={2}>
+                    Geen resultaten gevonden
+                  </Heading>
+                  <Paragraph>Probeer andere zoektermen of filters.</Paragraph>
+                </>
               ) : (
                 <ol className="rhc-ordered-list">
                   {filteredComponents.length > 0 &&
