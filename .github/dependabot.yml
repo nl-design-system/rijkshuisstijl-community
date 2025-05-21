@@ -5,8 +5,6 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
-    reviewers:
-      - "nl-design-system/kernteam-dependabot"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -17,5 +15,3 @@ updates:
           - "version-update:semver-major"
     versioning-strategy: "increase-if-necessary"
     open-pull-requests-limit: 20
-    reviewers:
-      - "nl-design-system/kernteam-dependabot"
