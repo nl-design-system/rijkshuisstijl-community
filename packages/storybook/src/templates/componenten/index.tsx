@@ -30,7 +30,6 @@ export default function Componenten() {
   const frameworkOptions = ['CSS', 'React', 'Angular', 'Web Components', 'Twig'];
 
   const handleFrameworkChange = (framework: string) => {
-    console.log(framework);
     setSelectedFrameworks((prevSelectedFrameworks) =>
       prevSelectedFrameworks.includes(framework)
         ? prevSelectedFrameworks.filter((f) => f !== framework)
@@ -70,7 +69,6 @@ export default function Componenten() {
   }, [searchTerm]);
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.value);
     setSearchTerm(event.target.value);
   };
 
