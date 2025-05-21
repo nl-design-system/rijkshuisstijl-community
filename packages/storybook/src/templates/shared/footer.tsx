@@ -126,7 +126,6 @@ export default function SharedFooter({ isLightTheme }: { isLightTheme?: boolean 
           },
         ]}
       />
-      ,
     </>
   );
 }
