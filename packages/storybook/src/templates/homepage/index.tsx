@@ -53,7 +53,7 @@ export default function Page() {
             </Card>
           </div>
 
-          <section>
+          <section className="rhc-templates-spacing-1">
             <Heading level={2}>In de praktijk</Heading>
             <Paragraph>
               Klaar om er direct van start te gaan? Hieronder vind je de README&apos;s van de beschikbare tools en
@@ -134,7 +134,7 @@ export default function Page() {
             </div>
           </section>
 
-          <section>
+          <section className="rhc-templates-spacing-1">
             <Heading level={2}>Lees en leer</Heading>
             <div className="rhc-card-group">
               <Card
@@ -203,7 +203,7 @@ export default function Page() {
             </div>
           </section>
 
-          <section>
+          <section className="rhc-templates-spacing-1">
             <Heading level={2}>Kom in contact</Heading>
             <div className="rhc-card-group">
               <Card
