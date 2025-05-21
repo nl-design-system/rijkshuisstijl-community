@@ -102,7 +102,7 @@ export default function Collage() {
               <Blockquote attribution="— Pippi Langkous">
                 Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan
               </Blockquote>
-              <Separator></Separator>
+              <Separator />
               <Link href="#">
                 {`Hello, I'm a link `}
                 <IconArrowRight />
