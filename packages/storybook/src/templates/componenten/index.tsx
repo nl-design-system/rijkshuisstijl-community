@@ -124,8 +124,7 @@ export default function Componenten() {
                           target="_blank"
                           title={component.title}
                         >
-                          {/* TODO: design tokens van badge list implementeren, zodat de spacing werkt */}
-                          <BadgeList>
+                          <BadgeList className="rhc-templates-badgelist">
                             {component.frameworks.map((framework) => (
                               <DataBadge className="rhc-templates-databadge" key={framework}>
                                 {framework}
