@@ -30,7 +30,7 @@ export default function Page() {
           </ColumnLayout>
           {/* Dit worden Marwa's improved cards */}
           <div className="rhc-card-group">
-            <Card>
+            <Card className="rhc-card-no-link">
               <Heading appearanceLevel={4} level={2}>
                 Efficiënt
               </Heading>
@@ -39,13 +39,13 @@ export default function Page() {
                 Rijkshuisstijl.
               </Paragraph>
             </Card>
-            <Card>
+            <Card className="rhc-card-no-link">
               <Heading appearanceLevel={4} level={2}>
                 Breed gedragen
               </Heading>
               <Paragraph>De community deelt regelmatig kennis, ervaring, updates en verbeteringen.</Paragraph>
             </Card>
-            <Card>
+            <Card className="rhc-card-no-link">
               <Heading appearanceLevel={4} level={2}>
                 Gebruiksvriendelijk
               </Heading>
