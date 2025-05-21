@@ -63,39 +63,37 @@ export default function Details() {
         <SharedMainPageContent>
           <SharedDisclaimer />
           <Article>
-            <div className="rhc-margin-block-end-wrapper">
+            <div className="rhc-templates-spacing-1">
               <Paragraph purpose="lead">
                 De Arbeidstijdenwet geeft regels voor werktijden, pauzes en rusttijden van werknemers. Met deze regels
                 wil de Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de combinatie van werk,
                 privé en zorgtaken gemakkelijker maken.
               </Paragraph>
               <Separator />
-              <div className="rhc-templates-spacing-3">
-                <Heading level={2}>Vraag en antwoord</Heading>
-                <ColumnLayout>
-                  <div className="rhc-linklist-collection">
-                    <LinkList>
-                      <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                        Wat zijn de regels bij consignatie?
-                      </LinkListLink>
-                      <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                        Hoe vaak mag ik nachtdienst hebben?
-                      </LinkListLink>
-                      <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                        Welke brochures zijn er over Arbeidstijdenwet?
-                      </LinkListLink>
-                    </LinkList>
-                    <LinkList>
-                      <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                        Wanneer geldt de Arbeidstijdenwet niet (of gedeeltelijk) voor mij?
-                      </LinkListLink>
-                      <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                        Meer vragen en antwoorden
-                      </LinkListLink>
-                    </LinkList>
-                  </div>
-                </ColumnLayout>
-              </div>
+              <Heading level={2}>Vraag en antwoord</Heading>
+              <ColumnLayout>
+                <div className="rhc-linklist-collection">
+                  <LinkList>
+                    <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                      Wat zijn de regels bij consignatie?
+                    </LinkListLink>
+                    <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                      Hoe vaak mag ik nachtdienst hebben?
+                    </LinkListLink>
+                    <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                      Welke brochures zijn er over Arbeidstijdenwet?
+                    </LinkListLink>
+                  </LinkList>
+                  <LinkList>
+                    <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                      Wanneer geldt de Arbeidstijdenwet niet (of gedeeltelijk) voor mij?
+                    </LinkListLink>
+                    <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                      Meer vragen en antwoorden
+                    </LinkListLink>
+                  </LinkList>
+                </div>
+              </ColumnLayout>
               <Separator />
               <Heading level={2}>Uitgelicht</Heading>
               <div className="rhc-card-group">
