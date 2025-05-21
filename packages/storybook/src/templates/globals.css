@@ -114,6 +114,14 @@ body {
   }
 }
 
+.rhc-card--full-bleed {
+  z-index: 1;
+}
+
+.rhc-card-no-link:hover {
+  background-color: white !important;
+}
+
 /**
  * Temporary solution as Utrecht Figure on its own doesn't unset the user agent stylesheet of margin-inline 40px.
  * TODO: Discuss intended solution with team.

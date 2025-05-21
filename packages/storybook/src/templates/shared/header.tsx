@@ -1,7 +1,15 @@
 import { Icon, Logo, NavBar, PageHeader, SkipLink } from '@rijkshuisstijl-community/components-react';
 import './header.css';
+import { useEffect } from 'react';
 
+// TODO change this temporary hacky solution to a decent one after demo
 export default function SharedHeader() {
+  useEffect(() => {
+    const pathname = window.location.pathname;
+    document.querySelectorAll('.rhc-nav-bar__link').forEach(($link) => {
+      $link.classList.toggle('rhc-nav-bar__link--current', $link.getAttribute('href') === pathname);
+    });
+  }, []);
   return (
     <>
       <SkipLink className="rhc-skip-link--visible-on-focus" href="#main" id="top">
@@ -29,12 +37,12 @@ export default function SharedHeader() {
           ]}
           items={[
             { id: 'start1', href: '/', label: 'Homepage' },
-            { id: 'start2', href: '/rich-text', label: 'Rich Text' },
-            { id: 'start3', href: '/form', label: 'Form' },
-            { id: 'start4', href: '/details', label: 'Details' },
-            { id: 'start5', href: '/collage', label: 'Collage' },
-            { id: 'start6', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
-            { id: 'start7', href: '/componenten', label: 'Componenten' },
+            { id: 'start2', href: '/rich-text/', label: 'Rich Text' },
+            { id: 'start3', href: '/form/', label: 'Form' },
+            { id: 'start4', href: '/details/', label: 'Details' },
+            { id: 'start5', href: '/collage/', label: 'Collage' },
+            { id: 'start6', href: '/mijn-omgeving/', label: 'Mijn Omgeving' },
+            { id: 'start7', href: '/componenten/', label: 'Componenten' },
           ]}
         ></NavBar>
       </PageHeader>
