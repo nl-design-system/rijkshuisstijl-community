@@ -26,3 +26,23 @@
     font-size: var(--rhc-font-size-xs-mobile);
   }
 }
+
+/**
+/* Temporary demo solution for acceptable contrast on current nav bar link (+ hover and focus-visible states). 
+/* TODO: fix in design tokens? 
+*/
+.rhc-nav-bar__link--current {
+  background-color: var(--nl-link-color);
+}
+
+.rhc-nav-bar__link--current .rhc-nav-bar__label {
+  color: white;
+}
+
+.rhc-nav-bar__link--current:hover .rhc-nav-bar__label {
+  color: var(--utrecht-link-visited-color);
+}
+
+.rhc-nav-bar__link--current:focus-visible .rhc-nav-bar__label {
+  color: var(--utrecht-link-visited-color);
+}
