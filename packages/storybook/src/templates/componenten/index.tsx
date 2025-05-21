@@ -69,16 +69,16 @@ export default function Componenten() {
       <PageBody className="rhc-templates-page">
         <SharedMainPageContent>
           <HeadingGroup>
-            <Heading level={1}>Componenten</Heading>
+            <Heading level={1}>Componenten overzicht</Heading>
             <Paragraph>
-              De componenten van NL Design System worden met een estafette aanpak gemaakt en kunnen dus verschillende
-              statussen hebben.
+              Filter op zoekterm en framework om componenten uit de Rijkshuisstijl Community te vinden. Bekijk direct de
+              component in Storybook door de link in het zoekresultaat te volgen.
             </Paragraph>
           </HeadingGroup>
 
           <FormFieldTextInput
             id="componentSearchInput"
-            label="Zoek componenten"
+            label="Voer een zoekterm in"
             name="Zoek componenten"
             placeholder=""
             type="text"
