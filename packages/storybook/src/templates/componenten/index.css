@@ -42,6 +42,21 @@
   flex-direction: column;
 }
 
+/**
+ * Wraps the checkboxes in an unordered list.
+ * TODO: This might be a thing that needs to happen in the actual component?
+ */
+.utrecht-unordered-list {
+  --utrecht-unordered-list-padding-inline-start: 0;
+  --utrecht-unordered-list-item-margin-block-end: 0;
+  --utrecht-unordered-list-item-margin-block-start: 0;
+  --utrecht-unordered-list-item-padding-inline-start: 0;
+}
+
+.utrecht-unordered-list .utrecht-unordered-list__item::marker {
+  content: "";
+}
+
 .rhc-ordered-list {
   /**
    * This prevents the Card as Link from overflowing the container on mobile,

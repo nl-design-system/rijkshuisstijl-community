@@ -10,6 +10,8 @@ import {
   Heading,
   HeadingGroup,
   Paragraph,
+  UnorderedList,
+  UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
 import { BadgeList, DataBadge } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
@@ -101,14 +103,17 @@ export default function Componenten() {
                   <Fieldset>
                     <FieldsetLegend>Framework</FieldsetLegend>
                     <FormFieldCheckboxGroup>
-                      {frameworkOptions.length > 0 &&
-                        frameworkOptions.map((option) => (
-                          <FormFieldCheckboxOption
-                            key={option}
-                            label={option}
-                            onChange={() => handleFrameworkChange(option)}
-                          ></FormFieldCheckboxOption>
-                        ))}
+                      <UnorderedList>
+                        {frameworkOptions.length > 0 &&
+                          frameworkOptions.map((option) => (
+                            <UnorderedListItem key={option}>
+                              <FormFieldCheckboxOption
+                                label={option}
+                                onChange={() => handleFrameworkChange(option)}
+                              ></FormFieldCheckboxOption>
+                            </UnorderedListItem>
+                          ))}
+                      </UnorderedList>
                     </FormFieldCheckboxGroup>
                   </Fieldset>
                 </aside>
