@@ -106,7 +106,7 @@ export default function Componenten() {
               </div>
             </form>
 
-            <div aria-live="polite" className="rhc-grid-container__right">
+            <div aria-atomic="true" aria-live="polite" className="rhc-grid-container__right">
               {noResults ? (
                 <Paragraph>Geen resultaten gevonden.</Paragraph>
               ) : (
