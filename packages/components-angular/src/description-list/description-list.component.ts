@@ -4,7 +4,6 @@ import { Component, Input } from '@angular/core';
   selector: 'rhc-description-list',
   imports: [],
   templateUrl: './description-list.component.html',
-  styleUrl: './description-list.component.css',
 })
 export class DescriptionListComponent {
   @Input() caption?: string | null;
