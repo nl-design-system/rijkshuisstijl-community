@@ -25,7 +25,7 @@ export default function Componenten() {
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState(searchTerm);
   const [selectedFrameworks, setSelectedFrameworks] = useState<string[]>([]);
   const [filteredComponents, setFilteredComponents] = useState(allComponentsData);
-  const [noResults, setNoResults] = useState(false);
+  const [resultCount, setResultCount] = useState(filteredComponents.length);
 
   const frameworkOptions = ['CSS', 'React', 'Angular', 'Web Components', 'Twig'];
 
@@ -55,7 +55,7 @@ export default function Componenten() {
     }
 
     setFilteredComponents(componentsToFilter);
-    setNoResults(componentsToFilter.length === 0);
+    setResultCount(componentsToFilter.length);
   }, [debouncedSearchTerm, selectedFrameworks]);
 
   useEffect(() => {
@@ -116,7 +116,7 @@ export default function Componenten() {
             </form>
 
             <div aria-atomic="true" aria-live="polite" className="rhc-grid-container__right">
-              {noResults ? (
+              {resultCount === 0 ? (
                 <>
                   <Heading appearanceLevel={3} level={2}>
                     Geen resultaten gevonden
@@ -124,30 +124,36 @@ export default function Componenten() {
                   <Paragraph>Probeer andere zoektermen of filters.</Paragraph>
                 </>
               ) : (
-                <ol className="rhc-ordered-list">
-                  {filteredComponents.length > 0 &&
-                    filteredComponents.map((component) => (
-                      <li key={component.heading}>
-                        <Card
-                          className="rhc-templates-card"
-                          description={component.description}
-                          heading={component.heading}
-                          href={component.href}
-                          linkLabel={component.linkLabel}
-                          target="_blank"
-                          title={component.title}
-                        >
-                          <BadgeList className="rhc-templates-badgelist">
-                            {component.frameworks.map((framework) => (
-                              <DataBadge className="rhc-templates-databadge" key={framework}>
-                                {framework}
-                              </DataBadge>
-                            ))}
-                          </BadgeList>
-                        </Card>
-                      </li>
-                    ))}
-                </ol>
+                <>
+                  <Heading appearanceLevel={3} level={2}>
+                    Zoekresultaten ({resultCount} componenten gevonden)
+                  </Heading>
+
+                  <ol className="rhc-ordered-list">
+                    {filteredComponents.length > 0 &&
+                      filteredComponents.map((component) => (
+                        <li key={component.heading}>
+                          <Card
+                            className="rhc-templates-card"
+                            description={component.description}
+                            heading={component.heading}
+                            href={component.href}
+                            linkLabel={component.linkLabel}
+                            target="_blank"
+                            title={component.title}
+                          >
+                            <BadgeList className="rhc-templates-badgelist">
+                              {component.frameworks.map((framework) => (
+                                <DataBadge className="rhc-templates-databadge" key={framework}>
+                                  {framework}
+                                </DataBadge>
+                              ))}
+                            </BadgeList>
+                          </Card>
+                        </li>
+                      ))}
+                  </ol>
+                </>
               )}
             </div>
           </div>
