@@ -30,21 +30,27 @@ export default function Page() {
           </ColumnLayout>
           {/* Dit worden Marwa's improved cards */}
           <div className="rhc-card-group">
-            <Card
-              appearance="default"
-              description="Een uitgebreide bibliotheek van herbruikbare componenten. Platform-onafhankelijk met de nieuwe Rijkshuisstijl."
-              heading="Efficiënt"
-            />
-            <Card
-              appearance="default"
-              description="De community deelt regelmatig kennis, ervaring, updates en verbeteringen."
-              heading="Breed gedragen"
-            />
-            <Card
-              appearance="default"
-              description="Consistente gebruikservaring met herbruikbare voorbeeldpagina's"
-              heading="Gebruiksvriendelijk"
-            />
+            <Card>
+              <Heading appearanceLevel={4} level={2}>
+                Efficiënt
+              </Heading>
+              <Paragraph>
+                Een uitgebreide bibliotheek van herbruikbare componenten. Platform-onafhankelijk met de nieuwe
+                Rijkshuisstijl.
+              </Paragraph>
+            </Card>
+            <Card>
+              <Heading appearanceLevel={4} level={2}>
+                Breed gedragen
+              </Heading>
+              <Paragraph>De community deelt regelmatig kennis, ervaring, updates en verbeteringen.</Paragraph>
+            </Card>
+            <Card>
+              <Heading appearanceLevel={4} level={2}>
+                Gebruiksvriendelijk
+              </Heading>
+              <Paragraph>Consistente gebruikservaring met herbruikbare voorbeeldpagina&apos;s</Paragraph>
+            </Card>
           </div>
 
           <section>
