@@ -71,7 +71,7 @@ const DefaultCard = ({
   return (
     <div className={clsx('rhc-card', 'rhc-card--default', className)} ref={ref} {...restProps}>
       <div className="rhc-card__content">
-        <p className="rhc-card__heading">{heading}</p>
+        <h3 className="rhc-card__heading">{heading}</h3>
         {imageSrc && (
           <div className="rhc-card__image-container" data-testid="rhc-card__image-container">
             {<Image alt={imageAlt} className="rhc-card__image" presentation={imagePresentation} src={imageSrc} />}
@@ -124,7 +124,7 @@ export const FullBleedCard = ({
       <a aria-label={title} href={href} target={target} title={title}></a>
     </span>
     <div className="rhc-card__content">
-      <p className="rhc-card__heading">{heading}</p>
+      <h3 className="rhc-card__heading">{heading}</h3>
       {description && <p className="rhc-card__description">{description}</p>}
       <div className="rhc-card__metadata">{metadata}</div>
       {children}
@@ -153,7 +153,7 @@ export const HorizontalImageCard = ({
       <a aria-label={title} href={href} target={target} title={title}></a>
     </span>
     <div className="rhc-card__content">
-      <p className="rhc-card__heading">{heading}</p>
+      <h3 className="rhc-card__heading">{heading}</h3>
       {children}
     </div>
     <div className="rhc-card__image-container">
