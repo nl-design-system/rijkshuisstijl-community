@@ -23,7 +23,7 @@ describe('DescriptionListComponent', () => {
     component.caption = 'Test Caption';
     fixture.detectChanges();
 
-    const captionElement = fixture.nativeElement.querySelector('h3');
+    const captionElement = fixture.nativeElement.querySelector('.denhaag-description-list__caption');
     expect(captionElement).toBeTruthy();
     expect(captionElement.textContent).toContain('Test Caption');
   });
@@ -32,7 +32,7 @@ describe('DescriptionListComponent', () => {
     component.caption = null;
     fixture.detectChanges();
 
-    const captionElement = fixture.nativeElement.querySelector('h3');
+    const captionElement = fixture.nativeElement.querySelector('.denhaag-description-list__caption');
     expect(captionElement).toBeFalsy();
   });
 
