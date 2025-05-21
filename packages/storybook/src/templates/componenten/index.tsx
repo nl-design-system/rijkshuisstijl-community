@@ -1,3 +1,5 @@
+'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
+
 import {
   Card,
   Fieldset,
@@ -7,14 +9,16 @@ import {
   FormFieldTextInput,
   Heading,
   HeadingGroup,
-  PageContent,
-  PageHeader,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
 import { BadgeList, DataBadge } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { allComponentsData } from './components-data';
+import SharedFooter from '../shared/footer';
+import SharedHeader from '../shared/header';
+import SharedMainPageContent from '../shared/main-page-content';
+import './index.css';
 
 export default function Componenten() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -59,12 +63,9 @@ export default function Componenten() {
 
   return (
     <>
-      <PageHeader>
-        <title>Componenten</title>
-      </PageHeader>
-
-      <PageBody className="rhc-templates-page rhc-templates-main-content">
-        <PageContent className="rhc-templates-page-content">
+      <SharedHeader />
+      <PageBody className="rhc-templates-page">
+        <SharedMainPageContent>
           <HeadingGroup>
             <Heading level={1}>Componenten</Heading>
             <Paragraph>
@@ -74,7 +75,6 @@ export default function Componenten() {
           </HeadingGroup>
 
           <FormFieldTextInput
-            className="rhc-textinput-spacing"
             id="componentSearchInput"
             label="Zoek componenten"
             name="Zoek componenten"
@@ -93,13 +93,11 @@ export default function Componenten() {
                     <FormFieldCheckboxGroup>
                       {frameworkOptions.length > 0 &&
                         frameworkOptions.map((option) => (
-                          <>
-                            <FormFieldCheckboxOption
-                              label={option}
-                              onChange={() => handleFrameworkChange(option)}
-                            ></FormFieldCheckboxOption>
-                            <></>
-                          </>
+                          <FormFieldCheckboxOption
+                            key={option}
+                            label={option}
+                            onChange={() => handleFrameworkChange(option)}
+                          ></FormFieldCheckboxOption>
                         ))}
                     </FormFieldCheckboxGroup>
                   </Fieldset>
@@ -111,28 +109,33 @@ export default function Componenten() {
               <ol className="rhc-ordered-list">
                 {filteredComponents.length > 0 &&
                   filteredComponents.map((component) => (
-                    <>
-                      <li>
-                        <Card
-                          className="rhc-templates-card"
-                          description={component.description}
-                          heading={component.heading}
-                          href="#"
-                          metadata=""
-                          title={component.title}
-                        >
-                          <BadgeList>
-                            <DataBadge className="rhc-templates-databadge">Community</DataBadge>
-                          </BadgeList>
-                        </Card>
-                      </li>
-                    </>
+                    <li key={component.heading}>
+                      <Card
+                        className="rhc-templates-card"
+                        description={component.description}
+                        heading={component.heading}
+                        href={component.href}
+                        linkLabel={component.linkLabel}
+                        target="_blank"
+                        title={component.title}
+                      >
+                        {/* TODO: design tokens van badge list implementeren, zodat de spacing werkt */}
+                        <BadgeList>
+                          {component.frameworks.map((framework) => (
+                            <DataBadge className="rhc-templates-databadge" key={framework}>
+                              {framework}
+                            </DataBadge>
+                          ))}
+                        </BadgeList>
+                      </Card>
+                    </li>
                   ))}
               </ol>
             </div>
           </section>
-        </PageContent>
+        </SharedMainPageContent>
       </PageBody>
+      <SharedFooter />
     </>
   );
 }

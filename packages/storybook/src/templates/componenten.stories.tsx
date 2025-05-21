@@ -1,11 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/react/*';
-import Componenten from './componenten';
+import type { Meta, StoryObj } from '@storybook/react';
+import Page from './componenten';
 import './globals.css';
 
 const meta: Meta = {
   title: 'Templates/Componenten',
-  component: Componenten,
+  component: Page,
   parameters: {
+    layout: 'fullscreen',
     status: {
       type: 'UNSTABLE',
     },
@@ -14,6 +15,6 @@ const meta: Meta = {
 };
 export default meta;
 
-type Story = StoryObj<typeof Componenten>;
+type Story = StoryObj<typeof Page>;
 
 export const Default: Story = {};

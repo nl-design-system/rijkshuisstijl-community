@@ -1,0 +1,44 @@
+/* Componenten Template Marwa CSS */
+
+.rhc-templates-databadge {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 10px;
+  display: inline-flex;
+  padding-block: 0.25rem;
+  padding-inline: 0.75rem;
+  position: relative;
+}
+
+.rhc-templates-card {
+  column-gap: var(--rhc-space-200);
+  display: flex;
+  flex-wrap: wrap;
+  margin-block-end: var(--rhc-space-200);
+  margin-block-start: var(--rhc-space-200);
+  min-inline-size: 100% !important;
+}
+
+.rhc-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+
+  @media (width <= 780px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rhc-grid-container__left {
+  display: flex;
+}
+
+.rhc-grid-container__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.rhc-ordered-list {
+  list-style-type: none;
+  padding-inline-start: 0;
+}

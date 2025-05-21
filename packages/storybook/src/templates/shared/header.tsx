@@ -34,7 +34,7 @@ export default function SharedHeader() {
             { id: 'start4', href: '/details', label: 'Details' },
             { id: 'start5', href: '/collage', label: 'Collage' },
             { id: 'start6', href: '/mijn-omgeving', label: 'Mijn Omgeving' },
-            { id: 'start7', href: '/', label: 'Componenten' },
+            { id: 'start7', href: '/componenten', label: 'Componenten' },
           ]}
         ></NavBar>
       </PageHeader>
