@@ -114,12 +114,23 @@ body {
   }
 }
 
+/**
+ * Temporary fixes or overrides for the card component
+ * based on actual usage.
+ * TODO: Discuss with design for alignement and proper solutions.
+ */
 .rhc-card--full-bleed {
   z-index: 1;
 }
 
 .rhc-card-no-link:hover {
   background-color: white !important;
+}
+
+.rhc-card.rhc-card--full-bleed:has(a:focus-visible),
+.rhc-card.rhc-card--horizontal:has(a:focus-visible) {
+  outline: -webkit-focus-ring-color outset 3px;
+  outline-offset: 2px;
 }
 
 /**
