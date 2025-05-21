@@ -69,7 +69,7 @@ export default function Details() {
                 wil de Rijksoverheid werknemers beschermen tegen te lange werkdagen. Maar ook de combinatie van werk,
                 privé en zorgtaken gemakkelijker maken.
               </Paragraph>
-              <Separator></Separator>
+              <Separator />
               <div className="rhc-templates-spacing-3">
                 <Heading level={2}>Vraag en antwoord</Heading>
                 <ColumnLayout>
@@ -96,7 +96,7 @@ export default function Details() {
                   </div>
                 </ColumnLayout>
               </div>
-              <Separator></Separator>
+              <Separator />
               <Heading level={2}>Uitgelicht</Heading>
               <div className="rhc-card-group">
                 <Card
