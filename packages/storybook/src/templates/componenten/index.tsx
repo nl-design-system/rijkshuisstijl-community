@@ -24,6 +24,7 @@ export default function Componenten() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedFrameworks, setSelectedFrameworks] = useState<string[]>([]);
   const [filteredComponents, setFilteredComponents] = useState(allComponentsData);
+  const [noResults, setNoResults] = useState(false);
 
   const frameworkOptions = ['CSS', 'React', 'Angular', 'Web Components', 'Twig'];
 
@@ -54,6 +55,7 @@ export default function Componenten() {
     }
 
     setFilteredComponents(componentsToFilter);
+    setNoResults(componentsToFilter.length === 0);
   }, [searchTerm, selectedFrameworks]);
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -105,32 +107,36 @@ export default function Componenten() {
               </div>
             </form>
 
-            <div className="rhc-grid-container__right">
-              <ol className="rhc-ordered-list">
-                {filteredComponents.length > 0 &&
-                  filteredComponents.map((component) => (
-                    <li key={component.heading}>
-                      <Card
-                        className="rhc-templates-card"
-                        description={component.description}
-                        heading={component.heading}
-                        href={component.href}
-                        linkLabel={component.linkLabel}
-                        target="_blank"
-                        title={component.title}
-                      >
-                        {/* TODO: design tokens van badge list implementeren, zodat de spacing werkt */}
-                        <BadgeList>
-                          {component.frameworks.map((framework) => (
-                            <DataBadge className="rhc-templates-databadge" key={framework}>
-                              {framework}
-                            </DataBadge>
-                          ))}
-                        </BadgeList>
-                      </Card>
-                    </li>
-                  ))}
-              </ol>
+            <div aria-live="polite" className="rhc-grid-container__right">
+              {noResults ? (
+                <Paragraph>Geen resultaten gevonden.</Paragraph>
+              ) : (
+                <ol className="rhc-ordered-list">
+                  {filteredComponents.length > 0 &&
+                    filteredComponents.map((component) => (
+                      <li key={component.heading}>
+                        <Card
+                          className="rhc-templates-card"
+                          description={component.description}
+                          heading={component.heading}
+                          href={component.href}
+                          linkLabel={component.linkLabel}
+                          target="_blank"
+                          title={component.title}
+                        >
+                          {/* TODO: design tokens van badge list implementeren, zodat de spacing werkt */}
+                          <BadgeList>
+                            {component.frameworks.map((framework) => (
+                              <DataBadge className="rhc-templates-databadge" key={framework}>
+                                {framework}
+                              </DataBadge>
+                            ))}
+                          </BadgeList>
+                        </Card>
+                      </li>
+                    ))}
+                </ol>
+              )}
             </div>
           </section>
         </SharedMainPageContent>
