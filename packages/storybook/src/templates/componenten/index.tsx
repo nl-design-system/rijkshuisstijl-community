@@ -22,6 +22,7 @@ import './index.css';
 
 export default function Componenten() {
   const [searchTerm, setSearchTerm] = useState('');
+  const [debouncedSearchTerm, setDebouncedSearchTerm] = useState(searchTerm);
   const [selectedFrameworks, setSelectedFrameworks] = useState<string[]>([]);
   const [filteredComponents, setFilteredComponents] = useState(allComponentsData);
   const [noResults, setNoResults] = useState(false);
@@ -40,11 +41,11 @@ export default function Componenten() {
   useEffect(() => {
     let componentsToFilter = allComponentsData;
 
-    if (searchTerm) {
+    if (debouncedSearchTerm) {
       componentsToFilter = componentsToFilter.filter(
         (component) =>
-          component.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          component.description.toLowerCase().includes(searchTerm.toLowerCase()),
+          component.title.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
+          component.description.toLowerCase().includes(debouncedSearchTerm.toLowerCase()),
       );
     }
 
@@ -56,7 +57,17 @@ export default function Componenten() {
 
     setFilteredComponents(componentsToFilter);
     setNoResults(componentsToFilter.length === 0);
-  }, [searchTerm, selectedFrameworks]);
+  }, [debouncedSearchTerm, selectedFrameworks]);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedSearchTerm(searchTerm);
+    }, 200);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [searchTerm]);
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     console.log(event.target.value);
