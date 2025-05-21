@@ -12,10 +12,10 @@ export default function SharedHeader() {
   }, []);
   return (
     <>
-      <SkipLink className="rhc-skip-link--visible-on-focus" href="#main" id="top">
-        Ga naar hoofdinhoud
-      </SkipLink>
       <PageHeader>
+        <SkipLink className="rhc-skip-link--visible-on-focus" href="#main" id="top">
+          Ga naar hoofdinhoud
+        </SkipLink>
         <Logo organisation="Rijkshuisstijl Community">
           <Icon className={'dutch-map'} icon={'nederland-map'} />
         </Logo>
