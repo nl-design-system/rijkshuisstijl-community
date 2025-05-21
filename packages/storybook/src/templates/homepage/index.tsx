@@ -215,26 +215,29 @@ export default function Page() {
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 target="_blank"
+                title="Volg en neem deel aan de slowchat van de huidige sprint op Slack"
               />
               <Card
                 appearance="full-bleed"
-                description="Neem deel aan de Rijkshuisstijl styling discussies etc etc."
+                description="Neem deel aan de Rijkshuisstijl styling discussies"
                 heading="GitHub Discussies"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/discussions/1505"
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 target="_blank"
+                title="Neem deel aan de Rijkshuisstijl styling discussies"
               />
               <Card
                 appearance="full-bleed"
-                description="Neem contact op met de contributors op GitHub etc etc."
+                description="Neem contact op met de contributors op GitHub."
                 heading="GitHub Contributors"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/graphs/contributors"
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 target="_blank"
+                title="Neem contact op met de contributors op GitHub"
               />
               <Card
                 appearance="full-bleed"
@@ -245,6 +248,7 @@ export default function Page() {
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 target="_blank"
+                title="Neem contact op met het NL Design System kernteam"
               />
             </div>
           </section>
