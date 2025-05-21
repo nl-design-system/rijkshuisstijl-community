@@ -15,51 +15,42 @@ import {
 } from '@rijkshuisstijl-community/components-react';
 import { BadgeList, DataBadge } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
-import { ChangeEvent, useEffect, useState } from 'react';
-import { allComponentsData } from './components-data';
+import { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react';
+import { allComponentsData, ComponentData } from './components-data';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
 import './index.css';
 
+const frameworkOptions: string[] = ['CSS', 'React', 'Angular', 'Web Components', 'Twig'];
+
+const filterComponents = (data: ComponentData[], searchTerm: string, frameworks: string[]) => {
+  return data.filter((component) => {
+    const searchMatch =
+      component.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      component.description.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const frameworkMatch = frameworks.length === 0 || frameworks.some((f) => component.frameworks.includes(f));
+
+    return searchMatch && frameworkMatch;
+  });
+};
+
 export default function Componenten() {
   const [searchTerm, setSearchTerm] = useState('');
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState(searchTerm);
   const [selectedFrameworks, setSelectedFrameworks] = useState<string[]>([]);
-  const [filteredComponents, setFilteredComponents] = useState(allComponentsData);
-  const [resultCount, setResultCount] = useState(filteredComponents.length);
 
-  const frameworkOptions = ['CSS', 'React', 'Angular', 'Web Components', 'Twig'];
+  const filteredComponents = useMemo(
+    () => filterComponents(allComponentsData, debouncedSearchTerm, selectedFrameworks),
+    [debouncedSearchTerm, selectedFrameworks],
+  );
 
-  const handleFrameworkChange = (framework: string) => {
-    setSelectedFrameworks((prevSelectedFrameworks) =>
-      prevSelectedFrameworks.includes(framework)
-        ? prevSelectedFrameworks.filter((f) => f !== framework)
-        : [...prevSelectedFrameworks, framework],
+  const handleFrameworkChange = useCallback((framework: string) => {
+    setSelectedFrameworks((prev) =>
+      prev.includes(framework) ? prev.filter((f) => f !== framework) : [...prev, framework],
     );
-  };
-
-  useEffect(() => {
-    let componentsToFilter = allComponentsData;
-
-    if (debouncedSearchTerm) {
-      componentsToFilter = componentsToFilter.filter(
-        (component) =>
-          component.title.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
-          component.description.toLowerCase().includes(debouncedSearchTerm.toLowerCase()),
-      );
-    }
-
-    if (selectedFrameworks.length > 0) {
-      componentsToFilter = componentsToFilter.filter((component) =>
-        selectedFrameworks.some((framework) => component.frameworks.includes(framework)),
-      );
-    }
-
-    setFilteredComponents(componentsToFilter);
-    setResultCount(componentsToFilter.length);
-  }, [debouncedSearchTerm, selectedFrameworks]);
-
+  }, []);
   useEffect(() => {
     const handler = setTimeout(() => {
       setDebouncedSearchTerm(searchTerm);
@@ -94,7 +85,7 @@ export default function Componenten() {
             type="text"
             value={searchTerm}
             onChange={handleSearchChange}
-          ></FormFieldTextInput>
+          />
 
           <div className="rhc-container">
             <form>
@@ -104,15 +95,11 @@ export default function Componenten() {
                     <FieldsetLegend>Framework</FieldsetLegend>
                     <FormFieldCheckboxGroup>
                       <UnorderedList>
-                        {frameworkOptions.length > 0 &&
-                          frameworkOptions.map((option) => (
-                            <UnorderedListItem key={option}>
-                              <FormFieldCheckboxOption
-                                label={option}
-                                onChange={() => handleFrameworkChange(option)}
-                              ></FormFieldCheckboxOption>
-                            </UnorderedListItem>
-                          ))}
+                        {frameworkOptions.map((option) => (
+                          <UnorderedListItem key={option}>
+                            <FormFieldCheckboxOption label={option} onChange={() => handleFrameworkChange(option)} />
+                          </UnorderedListItem>
+                        ))}
                       </UnorderedList>
                     </FormFieldCheckboxGroup>
                   </Fieldset>
@@ -121,7 +108,7 @@ export default function Componenten() {
             </form>
 
             <div aria-atomic="true" aria-live="polite" className="rhc-grid-container__right">
-              {resultCount === 0 ? (
+              {filteredComponents.length === 0 ? (
                 <>
                   <Heading appearanceLevel={3} level={2}>
                     Geen resultaten gevonden
@@ -131,32 +118,30 @@ export default function Componenten() {
               ) : (
                 <>
                   <Heading appearanceLevel={3} level={2}>
-                    Zoekresultaten ({resultCount} componenten gevonden)
+                    Zoekresultaten ({filteredComponents.length} componenten gevonden)
                   </Heading>
-
                   <ol className="rhc-ordered-list">
-                    {filteredComponents.length > 0 &&
-                      filteredComponents.map((component) => (
-                        <li key={component.heading}>
-                          <Card
-                            className="rhc-templates-card"
-                            description={component.description}
-                            heading={component.heading}
-                            href={component.href}
-                            linkLabel={component.linkLabel}
-                            target="_blank"
-                            title={component.title}
-                          >
-                            <BadgeList className="rhc-templates-badgelist">
-                              {component.frameworks.map((framework) => (
-                                <DataBadge className="rhc-templates-databadge" key={framework}>
-                                  {framework}
-                                </DataBadge>
-                              ))}
-                            </BadgeList>
-                          </Card>
-                        </li>
-                      ))}
+                    {filteredComponents.map((component) => (
+                      <li key={component.heading}>
+                        <Card
+                          className="rhc-templates-card"
+                          description={component.description}
+                          heading={component.heading}
+                          href={component.href}
+                          linkLabel={component.linkLabel}
+                          target="_blank"
+                          title={component.title}
+                        >
+                          <BadgeList className="rhc-templates-badgelist">
+                            {component.frameworks.map((framework) => (
+                              <DataBadge className="rhc-templates-databadge" key={framework}>
+                                {framework}
+                              </DataBadge>
+                            ))}
+                          </BadgeList>
+                        </Card>
+                      </li>
+                    ))}
                   </ol>
                 </>
               )}

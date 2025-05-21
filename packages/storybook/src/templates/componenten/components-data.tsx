@@ -1,4 +1,14 @@
-export const allComponentsData = [
+export type ComponentData = {
+  id: string;
+  title: string;
+  heading: string;
+  description: string;
+  href: string;
+  linkLabel: string;
+  frameworks: string[];
+};
+
+export const allComponentsData: ComponentData[] = [
   {
     id: 'accordion',
     title: 'Bekijk de Accordion component in Storybook',
