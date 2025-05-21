@@ -134,3 +134,12 @@ body {
   margin-block-end: var(--rhc-space-0);
   margin-block-start: var(--rhc-space-0);
 }
+
+/**
+ * Temporary solution for not causing content jump in Skip Link.
+ * TODO: Discuss intended solution with team; what's the intent of overriding candidate behavior here?
+ */
+.rhc-skip-link--focus,
+.rhc-skip-link:focus {
+  position: fixed !important;
+}
