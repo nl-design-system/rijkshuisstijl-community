@@ -23,3 +23,7 @@ export * from './text-input/text-input.component';
 export * from './link-list-link/link-list-link.component';
 export * from './link-list/link-list.component';
 export * from './link-list-item/link-list-item.component';
+export * from './navbar/navbar.component';
+export * from './navbar-item/navbar-item.component';
+export * from './navbar-item/heading-item.directive';
+export * from './navbar-item/end-item.directive';
