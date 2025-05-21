@@ -43,6 +43,14 @@
 }
 
 .rhc-ordered-list {
+  /**
+   * This prevents the Card as Link from overflowing the container on mobile,
+   * as the --rhc-card-as-link-inline-size is set to 328px, as well as the fallback is set to 328px.
+   * This means the issue will always occur on smallest mobile devices which are 320px.
+   * TODO: Discuss the reasoning behind this value with the design team.
+   */
+  --rhc-card-as-link-inline-size: 100%;
+
   list-style-type: none;
   padding-inline-start: 0;
 }
