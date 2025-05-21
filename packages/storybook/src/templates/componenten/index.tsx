@@ -80,7 +80,6 @@ export default function Componenten() {
             id="componentSearchInput"
             label="Voer een zoekterm in"
             name="Zoek componenten"
-            placeholder=""
             type="text"
             value={searchTerm}
             onChange={handleSearchChange}
