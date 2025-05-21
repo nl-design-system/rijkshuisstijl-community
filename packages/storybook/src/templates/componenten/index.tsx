@@ -85,7 +85,7 @@ export default function Componenten() {
             onChange={handleSearchChange}
           ></FormFieldTextInput>
 
-          <section className="rhc-container">
+          <div className="rhc-container">
             <form>
               <div className="rhc-grid-container__left">
                 <aside>
@@ -136,7 +136,7 @@ export default function Componenten() {
                 </ol>
               )}
             </div>
-          </section>
+          </div>
         </SharedMainPageContent>
       </PageBody>
       <SharedFooter />
