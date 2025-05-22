@@ -125,12 +125,16 @@ export default function Componenten() {
                       <li key={component.heading}>
                         <Card
                           className="rhc-templates-card"
-                          description={component.description}
-                          heading={component.heading}
+                          description={<Paragraph>{component.description}</Paragraph>}
                           href={component.href}
                           linkLabel={component.linkLabel}
                           target="_blank"
                           title={component.title}
+                          heading={
+                            <Heading appearanceLevel={4} level={2}>
+                              {component.heading}
+                            </Heading>
+                          }
                         >
                           <BadgeList className="rhc-templates-badgelist">
                             {component.frameworks.map((framework) => (
