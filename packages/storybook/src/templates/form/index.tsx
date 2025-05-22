@@ -3,9 +3,6 @@
 import {
   AccordionProvider,
   Article,
-  BreadcrumbNav,
-  BreadcrumbNavLink,
-  BreadcrumbNavSeparator,
   Button,
   Fieldset,
   FieldsetLegend,
@@ -14,7 +11,6 @@ import {
   FormFieldTextarea,
   FormFieldTextInput,
   Heading,
-  Icon,
   Link,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
@@ -33,23 +29,6 @@ export default function Form() {
           <SharedDisclaimer />
           <Article>
             <div className="rhc-margin-block-end-wrapper">
-              <BreadcrumbNav>
-                <BreadcrumbNavLink href="/" index={0} rel="home">
-                  Home
-                </BreadcrumbNavLink>
-                <BreadcrumbNavSeparator>
-                  <Icon icon={'chevron-right'} />
-                </BreadcrumbNavSeparator>
-                <BreadcrumbNavLink href="/" index={1}>
-                  Home 1
-                </BreadcrumbNavLink>
-                <BreadcrumbNavSeparator>
-                  <Icon icon={'chevron-right'} />
-                </BreadcrumbNavSeparator>
-                <BreadcrumbNavLink href="/" index={2} rel="up">
-                  Home 2
-                </BreadcrumbNavLink>
-              </BreadcrumbNav>
               <Heading level={1}>Formulier voor vragen over Sisa</Heading>
               <Paragraph>Heeft u vragen over Single information, Single audit (SiSa)?</Paragraph>
               <Paragraph>Gebruik dan het formulier hieronder.</Paragraph>

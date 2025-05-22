@@ -4,6 +4,7 @@ import './globals.css';
 
 const meta: Meta = {
   title: 'Templates/Form',
+  id: 'rhc-templates-form',
   component: Page,
   parameters: {
     layout: 'fullscreen',
