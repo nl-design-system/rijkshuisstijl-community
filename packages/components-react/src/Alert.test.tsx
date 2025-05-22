@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom/vitest';
-import { cleanup, render } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, test } from 'vitest';
 import { Alert } from './Alert';
 
@@ -14,6 +14,24 @@ describe('Alert', () => {
     );
     const alert = container.querySelector('.rhc-alert');
     expect(alert).toBeInTheDocument();
+  });
+
+  it.each([
+    ['info', 'status'],
+    ['ok', 'status'],
+    ['warning', 'alert'],
+    ['error', 'alert'],
+  ])('should set role="%s" when type is %s', (type, expectedRole) => {
+    render(
+      <Alert
+        heading="Heading"
+        textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
+        type={type as 'info' | 'ok' | 'warning' | 'error'}
+      />,
+    );
+    const alert = screen.getByRole(expectedRole);
+    expect(alert).toBeInTheDocument();
+    cleanup();
   });
 
   test.each([['info'], ['ok'], ['warning'], ['error']])(
