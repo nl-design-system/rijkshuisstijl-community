@@ -5,8 +5,10 @@ import '@rijkshuisstijl-community/components-css/dist/index.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/storybook/src/templates/globals.css';
 import { PageLayout } from '@utrecht/page-layout-react';
+import { Body } from '@utrecht/body-react';
 import { Root } from '@utrecht/root-react';
 import type { Metadata } from 'next';
+import './layout.css';
 
 export const metadata: Metadata = {
   title: {
@@ -17,10 +19,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
-    <Root lang="nl" dir="ltr">
-      <body className="rhc-theme">
+    <Root lang="nl" dir="ltr" className="rhc-theme">
+      <Body>
         <PageLayout>{children}</PageLayout>
-      </body>
+      </Body>
     </Root>
   );
 }
