@@ -1,6 +1,6 @@
 'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
 
-import { Card, ColumnLayout, Heading, Hero, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { Card, ColumnLayout, Heading, Hero, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
@@ -20,12 +20,13 @@ export default function Page() {
           />
           <ColumnLayout>
             <Paragraph>
-              De Rijkshuisstijl Community (RHC) maakt deel uit van een samenwerkingsverband om NL Design
-              System-componenten te gebruiken voor projecten die moeten voldoen aan de Rijkshuisstijl.
+              De Rijkshuisstijl Community is een samenwerkingsverband om{' '}
+              <Link href="https://www.nldesignsystem.nl/componenten/">NL Design System-componenten</Link> te gebruiken
+              voor projecten die moeten voldoen aan de Rijkshuisstijl.
             </Paragraph>
             <Paragraph>
-              De community bestaat uit organisaties van de centrale overheid van Nederland en degenen die door hen zijn
-              ingehuurd voor het ontwikkelen van websites en apps.
+              De community bestaat uit organisaties van de centrale overheid van Nederland en leveranciers die zijn
+              ingehuurd voor het ontwikkelen van websites en apps. Doe jij ook mee?
             </Paragraph>
           </ColumnLayout>
           {/* Dit worden Marwa's improved cards */}
@@ -84,6 +85,20 @@ export default function Page() {
                 heading={
                   <Heading appearanceLevel={4} level={3}>
                     Aan de slag
+                  </Heading>
+                }
+              />
+              <Card
+                appearance="horizontal"
+                href="https://github.com/orgs/nl-design-system/projects/59"
+                imageAlt=""
+                imagePresentation={true}
+                imageSrc="/placeholder.jpg"
+                target="_blank"
+                title="Bekijk het Sprint Bord van de Rijkshuisstijl Community op GitHub"
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    Sprint bord
                   </Heading>
                 }
               />

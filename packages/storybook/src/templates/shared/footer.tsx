@@ -69,7 +69,7 @@ export default function SharedFooter({ isLightTheme }: { isLightTheme?: boolean 
                   icon={<Icon icon={'chevron-right'} />}
                   target="_blank"
                 >
-                  Rijkshuisstilj Community Design Tokens
+                  Rijkshuisstijl Community Design Tokens
                 </LinkListLink>
                 <LinkListLink
                   href="https://rijkshuisstijl-community.vercel.app/"
@@ -98,7 +98,7 @@ export default function SharedFooter({ isLightTheme }: { isLightTheme?: boolean 
                   icon={<Icon icon={'chevron-right'} />}
                   target="_blank"
                 >
-                  Code for NL Slack #nl-design-system-developers
+                  Slack #nl-design-system-developers (Code for NL)
                 </LinkListLink>
                 <LinkListLink
                   href="https://github.com/nl-design-system/rijkshuisstijl-community/discussions/1505"

@@ -37,12 +37,8 @@ export default function SharedHeader() {
           ]}
           items={[
             { id: 'start1', href: '/', label: 'Homepage' },
-            { id: 'start2', href: '/rich-text/', label: 'Rich Text' },
-            { id: 'start3', href: '/form/', label: 'Form' },
-            { id: 'start4', href: '/details/', label: 'Details' },
-            { id: 'start5', href: '/collage/', label: 'Collage' },
-            { id: 'start6', href: '/mijn-omgeving/', label: 'Mijn Omgeving' },
             { id: 'start7', href: '/componenten/', label: 'Componenten' },
+            { id: 'voorbeelden', href: '/voorbeelden/', label: 'Voorbeelden' },
           ]}
         ></NavBar>
       </PageHeader>
