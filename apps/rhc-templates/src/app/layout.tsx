@@ -12,7 +12,7 @@ import './layout.css';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Onofficieel Rijkshuisstijl Design System | Rijkshuisstijl Community',
+    default: 'Rijkshuisstijl Community Design System | Rijkshuisstijl Community',
     template: '%s | Rijkshuisstijl Community',
   },
 };
