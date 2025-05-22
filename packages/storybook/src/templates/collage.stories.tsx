@@ -4,6 +4,7 @@ import './globals.css';
 
 const meta: Meta = {
   title: 'Templates/Collage',
+  id: 'rhc-templates-collage',
   component: Page,
   parameters: {
     layout: 'fullscreen',
