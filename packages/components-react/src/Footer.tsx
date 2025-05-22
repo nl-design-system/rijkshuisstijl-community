@@ -31,7 +31,7 @@ const scrollBackToTop = (event: React.MouseEvent<HTMLAnchorElement>) => {
   if (!target) return;
   const $target = document.querySelector(target) as HTMLElement;
   if (!$target) return;
-  $target.focus(); // Ensure target is focusable, ie via tabindex={-1} on #main
+  $target.focus({ preventScroll: true }); // Ensure target is focusable, ie via tabindex={-1} on #main
 };
 
 export const Footer = ({
