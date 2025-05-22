@@ -30,25 +30,37 @@ export default function Page() {
           </ColumnLayout>
           {/* Dit worden Marwa's improved cards */}
           <div className="rhc-card-group">
-            <Card className="rhc-card-no-link">
-              <Heading appearanceLevel={4} level={2}>
-                Efficiënt
-              </Heading>
+            <Card
+              className="rhc-card-no-link"
+              heading={
+                <Heading appearanceLevel={4} level={2}>
+                  Efficiënt
+                </Heading>
+              }
+            >
               <Paragraph>
                 Een uitgebreide bibliotheek van herbruikbare componenten. Platform-onafhankelijk met de nieuwe
                 Rijkshuisstijl.
               </Paragraph>
             </Card>
-            <Card className="rhc-card-no-link">
-              <Heading appearanceLevel={4} level={2}>
-                Breed gedragen
-              </Heading>
+            <Card
+              className="rhc-card-no-link"
+              heading={
+                <Heading appearanceLevel={4} level={2}>
+                  Breed gedragen
+                </Heading>
+              }
+            >
               <Paragraph>De community deelt regelmatig kennis, ervaring, updates en verbeteringen.</Paragraph>
             </Card>
-            <Card className="rhc-card-no-link">
-              <Heading appearanceLevel={4} level={2}>
-                Gebruiksvriendelijk
-              </Heading>
+            <Card
+              className="rhc-card-no-link"
+              heading={
+                <Heading appearanceLevel={4} level={2}>
+                  Gebruiksvriendelijk
+                </Heading>
+              }
+            >
               <Paragraph>Consistente gebruikservaring met herbruikbare voorbeeldpagina&apos;s</Paragraph>
             </Card>
           </div>
@@ -63,73 +75,101 @@ export default function Page() {
             <div className="rhc-card-group">
               <Card
                 appearance="horizontal"
-                heading="Aan de slag"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/README.md"
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 target="_blank"
                 title="Lees hoe je in het algemeen van start gaat met de Rijkshuisstijl Community"
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    Aan de slag
+                  </Heading>
+                }
               />
               <Card
                 appearance="horizontal"
-                heading="CSS"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/README.md"
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 target="_blank"
                 title="Lees hoe je enkel de CSS van de Rijkshuisstijl Community kunt gebruiken"
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    CSS
+                  </Heading>
+                }
               />
               <Card
                 appearance="horizontal"
-                heading="React"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/README.md"
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 target="_blank"
                 title="Lees hoe je de React-componenten van de Rijkshuisstijl Community kunt gebruiken"
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    React
+                  </Heading>
+                }
               />
               <Card
                 appearance="horizontal"
-                heading="Web Components"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/README.md"
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 target="_blank"
                 title="Lees hoe je de Web Components van de Rijkshuisstijl Community kunt gebruiken"
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    Web Components
+                  </Heading>
+                }
               />
               <Card
                 appearance="horizontal"
-                heading="Angular"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-angular/README.md"
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 target="_blank"
                 title="Lees hoe je de Angular-componenten van de Rijkshuisstijl Community kunt gebruiken"
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    Angular
+                  </Heading>
+                }
               />
               <Card
                 appearance="horizontal"
-                heading="Twig"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/README.md"
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 target="_blank"
                 title="Lees hoe je de Twig-componenten van de Rijkshuisstijl Community kunt gebruiken"
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    Twig
+                  </Heading>
+                }
               />
               <Card
                 appearance="horizontal"
-                heading="Design Tokens"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/proprietary/design-tokens/README.md"
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 target="_blank"
                 title="Lees hoe je de Design Tokens van de Rijkshuisstijl Community kunt gebruiken"
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    Design Tokens
+                  </Heading>
+                }
               />
             </div>
           </section>
@@ -138,67 +178,155 @@ export default function Page() {
             <Heading level={2}>Lees en leer</Heading>
             <div className="rhc-card-group">
               <Card
-                description="Storybook is een overzicht van al onze componenten en templates in verschillende frameworks, handig voor zowel designers als developers om snel te zien hoe iets eruitziet en werkt."
-                heading="Rijkshuisstijl Community Storybook"
                 href="https://rijkshuisstijl-community.vercel.app/"
                 linkLabel="Bekijk de Rijkshuisstijl Community Storybook"
                 target="_blank"
+                description={
+                  <Paragraph>
+                    Storybook is een overzicht van al onze componenten en templates in verschillende frameworks, handig
+                    voor zowel designers als developers om snel te zien hoe iets eruitziet en werkt.
+                  </Paragraph>
+                }
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    Rijkshuisstijl Community Storybook
+                  </Heading>
+                }
               />
               <Card
-                description="Voor het inzichtelijker maken van designkeuzes, gebruiken we GitHub Discussions. Feedback op de hierin voorgestelde keuzes (ook bijv. een korte 'akkoord') is zeer welkom. Het delen van reeds zelfgemaakte designkeuzes wordt ook gewaardeerd."
-                heading="Rijkshuisstijl styling implementatie GitHub discussies"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/discussions/1505"
                 linkLabel="Ga naar de Rijkshuisstijl styling implementatie GitHub discussies"
                 target="_blank"
+                description={
+                  <Paragraph>
+                    Voor het inzichtelijker maken van designkeuzes, gebruiken we GitHub Discussions. Feedback op de
+                    hierin voorgestelde keuzes (ook bijv. een korte &apos;akkoord&apos;) is zeer welkom. Het delen van
+                    reeds zelfgemaakte designkeuzes wordt ook gewaardeerd.
+                  </Paragraph>
+                }
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    Rijkshuisstijl styling implementatie GitHub discussies
+                  </Heading>
+                }
               />
               <Card
-                description="We werken toe naar één centrale JSON met design tokens, waarmee je eenvoudig componenten uit het NL Design System kunt stijlen volgens jouw Rijkshuisstijl-deelidentiteit."
-                heading="Design Tokens"
                 href="https://www.nldesignsystem.nl/handboek/design-tokens/"
                 linkLabel="Lees alles over design tokens"
                 target="_blank"
+                description={
+                  <Paragraph>
+                    We werken toe naar één centrale JSON met design tokens, waarmee je eenvoudig componenten uit het NL
+                    Design System kunt stijlen volgens jouw Rijkshuisstijl-deelidentiteit.
+                  </Paragraph>
+                }
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    Design Tokens
+                  </Heading>
+                }
               />
               <Card
-                description="Mee designen aan het NL Design System of gebruik maken van bestaande Figma componenten? Als designer vind je hier alle documentatie die je nodig hebt."
-                heading="Designer Handboek"
                 href="https://www.nldesignsystem.nl/handboek/designer/overzicht"
                 linkLabel="Lees hoe je mee ontwerpt aan het NL Design System"
                 target="_blank"
+                description={
+                  <Paragraph>
+                    Mee designen aan het NL Design System of gebruik maken van bestaande Figma componenten? Als designer
+                    vind je hier alle documentatie die je nodig hebt.
+                  </Paragraph>
+                }
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    Designer Handboek
+                  </Heading>
+                }
               />
               <Card
-                description="Mee ontwikkelen aan NL Design System of gebruik maken van bestaande componenten? Als developer vind je hier alle documentatie die je nodig hebt om te beginnen."
-                heading="Developer Handboek"
                 href="https://www.nldesignsystem.nl/handboek/developer/overzicht"
                 linkLabel="Lees hoe je mee ontwikkelt aan het de Rijkshuisstijl Community"
                 target="_blank"
+                description={
+                  <Paragraph>
+                    Mee ontwikkelen aan NL Design System of gebruik maken van bestaande componenten? Als developer vind
+                    je hier alle documentatie die je nodig hebt om te beginnen.
+                  </Paragraph>
+                }
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    Developer Handboek
+                  </Heading>
+                }
               />
               <Card
-                description="Een duplicaat van de Voorbeeld bibliotheek van het NL Design System, waarin de design tokens van het RHC-project zijn toegepast. Deze setup maakt het mogelijk om stijlkeuzes te testen en inzichtelijk te maken. Door de design tokens via Token Studio in te laden, kun je tussen thema's schakelen en beoordelen of de stijl aansluit bij jouw organisatie."
-                heading="NL Design System Rijkshuisstijl Figma Bibliotheek"
                 href="https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?m=auto"
                 linkLabel="Bekijk de NL Design System Rijkshuisstijl Bibliotheek in Figma"
                 target="_blank"
+                description={
+                  <Paragraph>
+                    Een duplicaat van de Voorbeeld bibliotheek van het NL Design System, waarin de design tokens van het
+                    RHC-project zijn toegepast. Deze setup maakt het mogelijk om stijlkeuzes te testen en inzichtelijk
+                    te maken. Door de design tokens via Token Studio in te laden, kun je tussen thema&apos;s schakelen
+                    en beoordelen of de stijl aansluit bij jouw organisatie.
+                  </Paragraph>
+                }
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    NL Design System Rijkshuisstijl Figma Bibliotheek
+                  </Heading>
+                }
               />
               <Card
-                description="Een kopie van de NLDS-bibliotheek met RHC-design tokens, om stijlkeuzes te testen en inzichtelijk te maken. Vrijwel alle componenten hier zijn 'Experimental'. Dat betekend dat ze vooralsnog geen onderdeel uit maken van de componenten die worden ontwikkeld op basis van het estafettemodel. Gebruik deze componenten dus ter inspiratie."
-                heading="Rijkshuisstijl Figma Bibliotheek"
                 href="https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/Local---Rijkshuisstijl---Bibliotheek?m=auto"
                 linkLabel="Bekijk de Rijkshuisstijl Bibliotheek in Figma"
                 target="_blank"
+                description={
+                  <Paragraph>
+                    Een kopie van de NLDS-bibliotheek met RHC-design tokens, om stijlkeuzes te testen en inzichtelijk te
+                    maken. Vrijwel alle componenten hier zijn &apos;Experimental&apos;. Dat betekend dat ze vooralsnog
+                    geen onderdeel uit maken van de componenten die worden ontwikkeld op basis van het estafettemodel.
+                    Gebruik deze componenten dus ter inspiratie.
+                  </Paragraph>
+                }
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    Rijkshuisstijl Figma Bibliotheek
+                  </Heading>
+                }
               />
               <Card
-                description="Beide bibliotheken zijn gekoppeld aan dit Figma bestand met templates en patronen voor gehele pagina's. Bestaande overheidswebsites zijn nagebouwd met NLDS-componenten en RHC-tokens, om te toetsen of stijl en componenten aansluiten bij de praktijk."
-                heading="Rijkshuisstijl Figma Templates"
                 href="https://www.figma.com/design/H4hSqpPbvFMLklDZgswwgd/NLDS---Rijkshuisstijl---Templates?m=auto&t=3Q7KyAIW8lqYHupW-6"
                 linkLabel="Bekijk de Rijkshuisstijl Templates in Figma"
                 target="_blank"
+                description={
+                  <Paragraph>
+                    Beide bibliotheken zijn gekoppeld aan dit Figma bestand met templates en patronen voor gehele
+                    pagina&apos;s. Bestaande overheidswebsites zijn nagebouwd met NLDS-componenten en RHC-tokens, om te
+                    toetsen of stijl en componenten aansluiten bij de praktijk.
+                  </Paragraph>
+                }
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    Rijkshuisstijl Figma Templates
+                  </Heading>
+                }
               />
               <Card
-                description="Met deze aanpak maken we de beste en meest bruikbare componenten, patronen en richtlijnen te maken. Elk nieuw onderdeel volgt het estafette model en beweegt zich in een samenwerking tussen het kernteam en de community van begin tot eind door dit model."
-                heading="Estafettemodel"
                 href="https://www.nldesignsystem.nl/handboek/estafettemodel/"
                 linkLabel="Lees over het estafettemodel van NL Design System"
                 target="_blank"
+                description={
+                  <Paragraph>
+                    Met deze aanpak maken we de beste en meest bruikbare componenten, patronen en richtlijnen te maken.
+                    Elk nieuw onderdeel volgt het estafette model en beweegt zich in een samenwerking tussen het
+                    kernteam en de community van begin tot eind door dit model.
+                  </Paragraph>
+                }
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    Estafettemodel
+                  </Heading>
+                }
               />
             </div>
           </section>
@@ -208,47 +336,68 @@ export default function Page() {
             <div className="rhc-card-group">
               <Card
                 appearance="full-bleed"
-                description="Volg en neem deel aan de slowchat van de huidige sprint op Code for NL Slack in #nl-design-system-developers"
-                heading="Slack"
                 href="https://praatmee.codefor.nl/"
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 target="_blank"
                 title="Volg en neem deel aan de slowchat van de huidige sprint op Slack"
+                description={
+                  <Paragraph>
+                    Volg en neem deel aan de slowchat van de huidige sprint op Code for NL Slack in
+                    #nl-design-system-developers
+                  </Paragraph>
+                }
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    Slack
+                  </Heading>
+                }
               />
               <Card
                 appearance="full-bleed"
-                description="Neem deel aan de Rijkshuisstijl styling discussies"
-                heading="GitHub Discussies"
+                description={<Paragraph>Neem deel aan de Rijkshuisstijl styling discussies</Paragraph>}
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/discussions/1505"
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 target="_blank"
                 title="Neem deel aan de Rijkshuisstijl styling discussies"
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    GitHub Discussies
+                  </Heading>
+                }
               />
               <Card
                 appearance="full-bleed"
-                description="Neem contact op met de contributors op GitHub."
-                heading="GitHub Contributors"
+                description={<Paragraph>Neem contact op met de contributors op GitHub.</Paragraph>}
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/graphs/contributors"
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 target="_blank"
                 title="Neem contact op met de contributors op GitHub"
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    GitHub Contributors
+                  </Heading>
+                }
               />
               <Card
                 appearance="full-bleed"
-                description="Of neem contact op met het NL Design System kernteam."
-                heading="Kernteam"
+                description={<Paragraph>Of neem contact op met het NL Design System kernteam.</Paragraph>}
                 href="https://nldesignsystem.nl/project/kernteam/"
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
                 target="_blank"
                 title="Neem contact op met het NL Design System kernteam"
+                heading={
+                  <Heading appearanceLevel={4} level={3}>
+                    Kernteam
+                  </Heading>
+                }
               />
             </div>
           </section>

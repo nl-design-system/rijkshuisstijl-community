@@ -126,10 +126,23 @@ body {
   background-color: white !important;
 }
 
+.rhc-card.rhc-card--full-bleed .rhc-card__heading h3,
+.rhc-card.rhc-card--horizontal .rhc-card__heading h3 {
+  color: inherit;
+}
+
+.rhc-card.rhc-card--full-bleed .rhc-card__description p {
+  color: inherit;
+}
+
 .rhc-card.rhc-card--full-bleed:has(a:focus-visible),
 .rhc-card.rhc-card--horizontal:has(a:focus-visible) {
   outline: -webkit-focus-ring-color outset 3px;
   outline-offset: 2px;
+}
+
+.rhc-card:not(:has(a)):hover .rhc-card__heading {
+  text-decoration: none !important;
 }
 
 /**
