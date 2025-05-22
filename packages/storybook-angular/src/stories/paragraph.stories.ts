@@ -1,5 +1,5 @@
-import { appearanceOptions, ParagraphComponent } from '@rijkshuisstijl-community/components-angular';
-import { type Meta, type StoryObj } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
+import { appearanceOptions, ParagraphComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<ParagraphComponent> = {
   title: 'Rijkshuisstijl-angular/Paragraph',

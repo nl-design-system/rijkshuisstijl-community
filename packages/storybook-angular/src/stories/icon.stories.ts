@@ -1,6 +1,5 @@
-import { IconComponent } from '@rijkshuisstijl-community/components-angular';
-import { NlFlagComponent } from '@rijkshuisstijl-community/components-angular';
-import { type Meta, type StoryObj } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
+import { IconComponent, NlFlagComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<IconComponent> = {
   title: 'Rijkshuisstijl-angular/Icon',
@@ -50,7 +49,7 @@ export const Flag: StoryObj<IconComponent> = {
   render: () => ({
     template: `
          <rhc-icon>
-            <rhc-nl-flag /> 
+            <rhc-nl-flag />
          </rhc-icon>
       `,
     moduleMetadata: {
