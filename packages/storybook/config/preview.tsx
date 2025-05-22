@@ -19,6 +19,7 @@ import { Controls, Description, Primary, Stories, useOf } from '@storybook/block
 import { Preview } from '@storybook/react';
 import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
+import { StoryRootDecorator } from 'config/StoryRootDecorator';
 import { Fragment } from 'react';
 
 const preview: Preview = {
@@ -49,6 +50,7 @@ const preview: Preview = {
         Story()
       );
     },
+    StoryRootDecorator,
   ],
   parameters: {
     previewTabs: {
