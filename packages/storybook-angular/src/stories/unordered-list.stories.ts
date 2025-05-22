@@ -1,5 +1,5 @@
-import { UnorderedListComponent, UnorderedListItemComponent } from '@rijkshuisstijl-community/components-angular';
-import { type Meta, type StoryObj } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
+import { UnorderedListComponent, UnorderedListItemComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<UnorderedListComponent> = {
   title: 'Rijkshuisstijl-angular/Unordered list',

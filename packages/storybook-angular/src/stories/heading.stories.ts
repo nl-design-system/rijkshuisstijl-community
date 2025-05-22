@@ -1,5 +1,5 @@
-import { HeadingComponent, headingLevels } from '@rijkshuisstijl-community/components-angular';
-import { type Meta, type StoryObj } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
+import { HeadingComponent, headingLevels } from '../../../components-angular/src/public-api';
 
 const meta: Meta<HeadingComponent> = {
   title: 'Rijkshuisstijl-angular/Heading',

@@ -1,5 +1,6 @@
-import { DutchMapIconComponent, IconComponent, LogoComponent } from '@rijkshuisstijl-community/components-angular';
-import { type Meta, moduleMetadata, type StoryObj } from '@storybook/angular';
+import { moduleMetadata } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
+import { DutchMapIconComponent, IconComponent, LogoComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<LogoComponent> = {
   decorators: [

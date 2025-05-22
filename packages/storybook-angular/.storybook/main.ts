@@ -20,6 +20,10 @@ const config: StorybookConfig = {
     getAbsolutePath('storybook-addon-pseudo-states'),
     getAbsolutePath('@storybook/addon-themes'),
   ],
+  core: {
+    disableTelemetry: true,
+    disableWhatsNewNotifications: true,
+  },
   staticDirs: ['../../../proprietary/assets/src'],
   framework: {
     name: getAbsolutePath('@storybook/angular'),
