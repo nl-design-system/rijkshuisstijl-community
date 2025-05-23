@@ -1,7 +1,6 @@
-import { ButtonComponent } from '@rijkshuisstijl-community/components-angular';
-import { IconComponent } from '@rijkshuisstijl-community/components-angular';
-import { type Meta, type StoryObj } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
 import readme from './button.md';
+import { ButtonComponent, IconComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<ButtonComponent> = {
   title: 'Rijkshuisstijl-angular/Button',

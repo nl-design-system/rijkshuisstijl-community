@@ -1,5 +1,5 @@
-import { FigureCaptionComponent, FigureComponent, ImageComponent } from '@rijkshuisstijl-community/components-angular';
-import { type Meta, type StoryObj } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
+import { FigureCaptionComponent, FigureComponent, ImageComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<FigureComponent> = {
   title: 'Rijkshuisstijl-angular/Figure',

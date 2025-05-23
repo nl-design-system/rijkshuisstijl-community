@@ -1,0 +1,23 @@
+/**
+ * Temporary solution for layout,
+ * already pre-existing in templates.
+ * This should have a more global solution in the component library.
+ * Already came up a couple of times in the past, TODO: discuss.
+ */
+
+.rhc-templates-page--mijn-omgeving .rhc-templates-page-content {
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-inline-size: 1100px;
+}
+
+/**
+ * Custom Side Nav styling, pre-existing in templates.
+ * TODO: Discuss with team and design if this type of logic needs to be in some type of component, or otherwise.
+ */
+.rhc-side-nav {
+  min-inline-size: 230px;
+  @media (width <= 780px) {
+    --rhc-sidenav-display: none;
+  }
+}
