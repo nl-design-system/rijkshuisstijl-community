@@ -26,7 +26,7 @@
           <rhc-link-list>
             @for (item of column.items; track $index) {
               <li rhc-link-list-item>
-                <a rhc-link-list-link [href]="item.href">
+                <a rhc-link-list-link [href]="item.href" [attr.href]="item.href">
                   <rhc-icon icon="chevron-right" />
                   {{ item.label }}
                 </a>
@@ -43,15 +43,14 @@
       [class]="
         'rhc-page-subfooter' +
         (background ? ' rhc-page-footer--' + background : '') +
-        (background === 'primary' ? ' rhc-page-footer--primary-filled' : '')
+        (background ? ' rhc-page-footer--primary-filled' : '')
       "
     >
       <div class="rhc-page-subfooter__content rhc-page-footer__wrapper">
         <rhc-link-list>
           @for (subFooterItem of subFooter?.items; track $index) {
             <li rhc-link-list-item>
-              <a rhc-link-list-link [href]="subFooterItem.href">
-                <rhc-icon icon="chevron-right" />
+              <a rhc-link-list-link [href]="subFooterItem.href" [attr.href]="subFooterItem.href">
                 {{ subFooterItem.label }}
               </a>
             </li>

@@ -33,7 +33,6 @@ export interface subFooter {
     LinkListLinkComponent,
   ],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css',
 })
 export class FooterComponent {
   @Input() background?: string;
