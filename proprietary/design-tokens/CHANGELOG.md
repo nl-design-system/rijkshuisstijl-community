@@ -1,5 +1,32 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 2.0.0
+
+### Major Changes
+
+- 158d711: Added 'Uitvoerend - Paars' Theme
+  Deprecated @rijkshuisstijl-community/mijnoverheid-design-tokens
+  Deprecated @rijkshuisstijl-community/logius-design-tokens
+  Deprecated @rijkshuisstijl-community/digid-design-tokens
+  Deprecated @rijkshuisstijl-community/rivm-design-tokens
+  These themes are now found in: @rijkshuisstijl-community/design-tokens
+- 5209b0c: ### Nieuwe tokens
+
+  - `rhc.color.foreground.on-light-color` toegevoegd
+  - Rounded corner tokens toegevoegd
+  - Nieuwe tokenset `components/blockquote` toegevoegd
+
+  ### Hernoemingen en refactor
+
+  - `rhc.color.foregrond.onEmphisis` hernoemd naar `rhc.color.foreground.on-dark-color`. (oude naam blijft tijdelijk beschikbaar om bugs te voorkomen)
+  - `rhc.border-radius.keep` vervangen door de nieuwe rounded corner tokens
+  - Tokenset `common/keep` hernoemd naar `common/keep-oud`
+  - Tokenset `components/blockquote` verplaatst naar `components/blockquote-oud` (legacy totdat het component is geüpdatet)
+
+  ### Overige
+
+  - Stijl en design tokens voor het `blockquote` component geüpdatet
+
 ## 1.2.0
 
 ### Minor Changes

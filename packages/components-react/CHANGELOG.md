@@ -1,5 +1,20 @@
 # @rijkshuisstijl-community/components-react
 
+## 1.2.0
+
+### Minor Changes
+
+- 0697b02: Allow empty alt attribute on Image component if presentation boolean is true
+- 893b3e3: - Add optional `target` property to accompany `href` property in Card component.
+  - Set `href` value of "Scroll back to top" in Footer component to `#main`.
+  - When scrolling back to top in Footer component, set focus to link's `href` value, instead of keeping focus in the Footer.
+  - Add optional `target` property to accompany `href` property in NavBar component.
+- 8395a93: Update dependencies.
+
+### Patch Changes
+
+- 99dd213: Package Updates
+
 ## 1.1.0
 
 ### Minor Changes
