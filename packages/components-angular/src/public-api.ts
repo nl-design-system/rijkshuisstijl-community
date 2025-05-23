@@ -23,3 +23,4 @@ export * from './text-input/text-input.component';
 export * from './link-list-link/link-list-link.component';
 export * from './link-list/link-list.component';
 export * from './link-list-item/link-list-item.component';
+export * from './description-list/description-list.component';
