@@ -4556,24 +4556,6 @@
             "type": "textDecoration"
           }
         },
-        "focus": {
-          "background-color": {
-            "value": "{rhc.color.none}",
-            "type": "color"
-          },
-          "color": {
-            "value": "{rhc.color.foreground.link}",
-            "type": "color"
-          },
-          "text-decoration": {
-            "value": "None",
-            "type": "textDecoration"
-          },
-          "text-decoration-thickness": {
-            "value": "auto",
-            "type": "other"
-          }
-        },
         "hover": {
           "color": {
             "$extensions": {
@@ -4617,10 +4599,6 @@
             "type": "sizing"
           }
         },
-        "column-gap": {
-          "value": "{rhc.space.50}",
-          "type": "spacing"
-        },
         "text-decoration-thickness": {
           "value": "auto",
           "type": "other"
@@ -4628,6 +4606,34 @@
         "text-underline-offset": {
           "value": "{rhc.space.25}",
           "type": "other"
+        }
+      }
+    }
+  },
+  "components/link/rhc": {
+    "rhc": {
+      "link": {
+        "focus": {
+          "background-color": {
+            "value": "{rhc.color.none}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{rhc.color.foreground.link}",
+            "type": "color"
+          },
+          "text-decoration": {
+            "value": "None",
+            "type": "textDecoration"
+          },
+          "text-decoration-thickness": {
+            "value": "auto",
+            "type": "other"
+          }
+        },
+        "column-gap": {
+          "value": "{rhc.space.50}",
+          "type": "spacing"
         },
         "font-family": {
           "value": "{rhc.font-family.primary}",
@@ -4671,19 +4677,19 @@
         },
         "focus": {
           "background-color": {
-            "value": "{nl.link.focus.background-color}",
+            "value": "{rhc.link.focus.background-color}",
             "type": "color"
           },
           "color": {
-            "value": "{nl.link.focus.color}",
+            "value": "{rhc.link.focus.color}",
             "type": "color"
           },
           "text-decoration": {
-            "value": "{nl.link.focus.text-decoration}",
+            "value": "{rhc.link.focus.text-decoration}",
             "type": "textDecoration"
           },
           "text-decoration-thickness": {
-            "value": "{nl.link.focus.text-decoration-thickness}",
+            "value": "{rhc.link.focus.text-decoration-thickness}",
             "type": "other"
           }
         },
@@ -4722,7 +4728,7 @@
           }
         },
         "column-gap": {
-          "value": "{nl.link.column-gap}",
+          "value": "{rhc.link.column-gap}",
           "type": "spacing"
         },
         "text-decoration-thickness": {
@@ -4734,19 +4740,19 @@
           "type": "other"
         },
         "font-family": {
-          "value": "{nl.link.font-family}",
+          "value": "{rhc.link.font-family}",
           "type": "fontFamilies"
         },
         "font-weight": {
-          "value": "{nl.link.font-weight}",
+          "value": "{rhc.link.font-weight}",
           "type": "fontWeights"
         },
         "font-size": {
-          "value": "{nl.link.font-size}",
+          "value": "{rhc.link.font-size}",
           "type": "fontSizes"
         },
         "line-height": {
-          "value": "{nl.link.line-height}",
+          "value": "{rhc.link.line-height}",
           "type": "lineHeights"
         }
       }
@@ -9248,6 +9254,7 @@
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
+        "components/link/rhc": "enabled",
         "components/link/nl": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
@@ -9341,6 +9348,7 @@
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
+        "components/link/rhc": "enabled",
         "components/link/nl": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
@@ -9435,6 +9443,7 @@
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
+        "components/link/rhc": "enabled",
         "components/link/nl": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
@@ -9531,6 +9540,7 @@
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
+        "components/link/rhc": "enabled",
         "components/link/nl": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
@@ -9625,6 +9635,7 @@
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
+        "components/link/rhc": "enabled",
         "components/link/nl": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
@@ -9719,6 +9730,7 @@
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
+        "components/link/rhc": "enabled",
         "components/link/nl": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
@@ -9813,6 +9825,7 @@
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
+        "components/link/rhc": "enabled",
         "components/link/nl": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
@@ -9907,6 +9920,7 @@
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
+        "components/link/rhc": "enabled",
         "components/link/nl": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
@@ -10005,6 +10019,7 @@
       "components/icon-only-button",
       "components/link/nl",
       "components/link/utrecht",
+      "components/link/rhc",
       "components/link-list",
       "components/link-list-card",
       "components/logo",
