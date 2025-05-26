@@ -1,21 +1,41 @@
+import { IconComponent, NavbarComponent, NavbarItemComponent } from '@rijkshuisstijl-community/components-angular';
 import { Meta, StoryObj } from '@storybook/angular';
 
 const meta: Meta = {
   title: 'Templates/helloworld',
   id: 'rhc-angular-helloworld',
   render: () => ({
+    moduleMetadata: {
+      imports: [NavbarComponent, NavbarItemComponent, IconComponent],
+    },
     template: `
-    <p>Hallo wereld!</p>
-    <p>Dit is een template story.</p>
-    <p>Hier kan je een template story maken.</p>
-    <p>Dit is een voorbeeld van een template story.</p>
-    <p>Hier kan je een template story maken.</p>
-    <p>Dit is een voorbeeld van een template story.</p>
-    <p>Hier kan je een template story maken.</p>
-    <p>Dit is een voorbeeld van een template story.</p>
-    <p>Hier kan je een template story maken.</p>
+    <rhc-navbar [showEndItems]="true">
+        <li rhc-navbar-item href="#">
+            <rhc-icon icon="home" />
+            Uw overzicht
+        </li>
+        <li rhc-navbar-item href="#">
+            <rhc-icon icon="zoek" />
+            Boete zoeken
+        </li>
+        <li rhc-navbar-item href="#">
+            <rhc-icon icon="currency-euro" />
+            Betalingsregeling
+        </li>
+        <li rhc-navbar-item rhcEndItem href="#">
+          <rhc-icon icon="user" />
+          Uitloggen
+        </li>
+      </rhc-navbar>
     `,
   }),
+  parameters: {
+    docs: {
+      page: null,
+    },
+    isPage: true,
+    layout: 'fullscreen',
+  },
 };
 
 export default meta;
