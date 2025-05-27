@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PageLayoutComponent } from '../shared/shell/page-layout.component';
+import { PageLayoutComponent } from '../shared/page-layout/page-layout.component';
 
 @Component({
   selector: 'boete-zoeken-template',
