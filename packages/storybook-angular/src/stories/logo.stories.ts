@@ -8,7 +8,7 @@ const meta: Meta<LogoComponent> = {
       imports: [DutchMapIconComponent, IconComponent],
     }),
   ],
-  title: 'Rijkshuisstijl-angular/Logo',
+  title: 'Rijkshuisstijl/Logo',
   id: 'rhc-angular-logo',
   component: LogoComponent,
   argTypes: {

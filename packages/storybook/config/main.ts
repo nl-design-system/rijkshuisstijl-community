@@ -23,6 +23,23 @@ const config: StorybookConfig = {
   docs: {
     autodocs: true,
   },
+  refs: (_, { configType }) => {
+    if (configType === 'DEVELOPMENT') {
+      return {
+        angular: {
+          title: 'Angular Components',
+          url: 'http://localhost:6008',
+        },
+      };
+    } else {
+      return {
+        angular: {
+          title: 'Angular Components',
+          url: 'https://rijkshuisstijl-community-storybook-angular.vercel.app/',
+        },
+      };
+    }
+  },
 };
 
 export default config;

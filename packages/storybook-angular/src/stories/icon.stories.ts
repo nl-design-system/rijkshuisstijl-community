@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { IconComponent, NlFlagComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<IconComponent> = {
-  title: 'Rijkshuisstijl-angular/Icon',
+  title: 'Rijkshuisstijl/Icon',
   id: 'rhc-angular-icon',
   component: IconComponent,
   argTypes: {

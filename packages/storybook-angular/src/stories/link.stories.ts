@@ -7,7 +7,7 @@ const meta: Meta<LinkComponent> = {
       imports: [ParagraphComponent],
     }),
   ],
-  title: 'Rijkshuisstijl-angular/Link',
+  title: 'Rijkshuisstijl/Link',
   id: 'rhc-angular-link',
   component: LinkComponent,
   argTypes: {
