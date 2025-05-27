@@ -46,6 +46,16 @@ export default function Componenten() {
     [debouncedSearchTerm, selectedFrameworks],
   );
 
+  const getResultsText = (count: number): string => {
+    if (count === 0) {
+      return 'Geen componenten gevonden';
+    } else if (count === 1) {
+      return '1 component gevonden';
+    } else {
+      return `${count} componenten gevonden`;
+    }
+  };
+
   const handleFrameworkChange = useCallback((framework: string) => {
     setSelectedFrameworks((prev) =>
       prev.includes(framework) ? prev.filter((f) => f !== framework) : [...prev, framework],
@@ -110,16 +120,22 @@ export default function Componenten() {
             <div aria-atomic="true" aria-live="polite" className="rhc-grid-container__right">
               {filteredComponents.length === 0 ? (
                 <>
-                  <Heading appearanceLevel={3} level={2}>
-                    Geen resultaten gevonden
-                  </Heading>
-                  <Paragraph>Probeer andere zoektermen of filters.</Paragraph>
+                  <HeadingGroup>
+                    <Heading appearanceLevel={3} level={2}>
+                      Geen resultaten gevonden
+                    </Heading>
+                    <Paragraph>Probeer andere zoektermen of filters.</Paragraph>
+                  </HeadingGroup>
                 </>
               ) : (
                 <>
-                  <Heading appearanceLevel={3} level={2}>
-                    Zoekresultaten ({filteredComponents.length} componenten gevonden)
-                  </Heading>
+                  <HeadingGroup>
+                    <Heading appearanceLevel={3} level={2}>
+                      Zoekresultaten
+                    </Heading>
+                    <Paragraph role="status">{getResultsText(filteredComponents.length)}</Paragraph>
+                  </HeadingGroup>
+
                   <ol className="rhc-ordered-list">
                     {filteredComponents.map((component) => (
                       <li key={component.heading}>
