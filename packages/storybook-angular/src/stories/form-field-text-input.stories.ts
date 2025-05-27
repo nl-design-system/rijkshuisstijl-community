@@ -3,7 +3,7 @@ import { FormFieldTextInputComponent } from '@rijkshuisstijl-community/component
 import { type Meta, type StoryObj } from '@storybook/angular';
 
 const meta: Meta<FormFieldTextInputComponent> = {
-  title: 'Rijkshuisstijl-angular/Form field text input',
+  title: 'Rijkshuisstijl/Form field text input',
   id: 'rhc-angular-form-field-text-input',
   component: FormFieldTextInputComponent,
   argTypes: {

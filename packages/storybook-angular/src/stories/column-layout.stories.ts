@@ -6,7 +6,7 @@ import {
 } from '../../../components-angular/src/public-api';
 
 const meta: Meta<ColumnLayoutComponent> = {
-  title: 'Rijkshuisstijl-angular/Column layout',
+  title: 'Rijkshuisstijl/Column layout',
   id: 'rhc-angular-column-layout',
   component: ColumnLayoutComponent,
   argTypes: {

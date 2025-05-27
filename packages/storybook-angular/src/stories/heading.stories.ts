@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { HeadingComponent, headingLevels } from '../../../components-angular/src/public-api';
 
 const meta: Meta<HeadingComponent> = {
-  title: 'Rijkshuisstijl-angular/Heading',
+  title: 'Rijkshuisstijl/Heading',
   id: 'rhc-angular-heading',
   component: HeadingComponent,
   argTypes: {

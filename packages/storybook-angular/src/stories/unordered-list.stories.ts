@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { UnorderedListComponent, UnorderedListItemComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<UnorderedListComponent> = {
-  title: 'Rijkshuisstijl-angular/Unordered list',
+  title: 'Rijkshuisstijl/Unordered list',
   id: 'rhc-angular-unordered-list',
   component: UnorderedListComponent,
   render: () => ({

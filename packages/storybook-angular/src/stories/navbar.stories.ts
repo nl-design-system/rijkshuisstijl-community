@@ -8,7 +8,7 @@ import {
 import { type Meta, moduleMetadata, type StoryObj } from '@storybook/angular';
 
 const meta: Meta<NavbarComponent> = {
-  title: 'Rijkshuisstijl-angular/Navbar',
+  title: 'Rijkshuisstijl/Navbar',
   id: 'rhc-navbar',
   component: NavbarComponent,
   decorators: [

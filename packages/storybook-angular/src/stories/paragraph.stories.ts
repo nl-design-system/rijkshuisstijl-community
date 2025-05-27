@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { appearanceOptions, ParagraphComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<ParagraphComponent> = {
-  title: 'Rijkshuisstijl-angular/Paragraph',
+  title: 'Rijkshuisstijl/Paragraph',
   id: 'rhc-angular-paragraph',
   component: ParagraphComponent,
   argTypes: {
