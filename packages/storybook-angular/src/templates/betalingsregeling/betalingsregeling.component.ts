@@ -5,11 +5,12 @@ import {
   LinkComponent,
   ParagraphComponent,
 } from '@rijkshuisstijl-community/components-angular';
-import { ShellComponent } from '../shared/shell/shell.component';
+import { PageLayoutComponent } from '../shared/shell/page-layout.component';
 
 @Component({
   selector: 'betalingsregeling-template',
-  imports: [ShellComponent, HeadingComponent, ParagraphComponent, LinkComponent, IconComponent],
+  imports: [PageLayoutComponent, HeadingComponent, ParagraphComponent, LinkComponent, IconComponent],
   templateUrl: './betalingsregeling.component.html',
+  styleUrl: './betalingsregeling.component.css',
 })
 export class BetalingsregelingTemplate {}
