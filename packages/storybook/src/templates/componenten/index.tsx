@@ -46,9 +46,9 @@ export default function Componenten() {
     [debouncedSearchTerm, selectedFrameworks],
   );
 
-  const getResultsText = (count: number): string => {
+  const getStatusText = (count: number): string => {
     if (count === 0) {
-      return 'Geen componenten gevonden';
+      return 'Geen componenten gevonden, probeer andere zoektermen of filters.';
     } else if (count === 1) {
       return '1 component gevonden';
     } else {
@@ -117,53 +117,42 @@ export default function Componenten() {
               </div>
             </form>
 
-            <div aria-atomic="true" aria-live="polite" className="rhc-grid-container__right">
-              {filteredComponents.length === 0 ? (
-                <>
-                  <HeadingGroup>
-                    <Heading appearanceLevel={3} level={2}>
-                      Geen resultaten gevonden
-                    </Heading>
-                    <Paragraph>Probeer andere zoektermen of filters.</Paragraph>
-                  </HeadingGroup>
-                </>
-              ) : (
-                <>
-                  <HeadingGroup>
-                    <Heading appearanceLevel={3} level={2}>
-                      Zoekresultaten
-                    </Heading>
-                    <Paragraph role="status">{getResultsText(filteredComponents.length)}</Paragraph>
-                  </HeadingGroup>
+            <div aria-atomic="true" className="rhc-grid-container__right">
+              <HeadingGroup>
+                <Heading appearanceLevel={3} level={2}>
+                  {filteredComponents.length === 0 ? 'Zoekresultaten' : 'Zoekresultaten'}
+                </Heading>
+                <Paragraph role="status">{getStatusText(filteredComponents.length)}</Paragraph>
+              </HeadingGroup>
 
-                  <ol className="rhc-ordered-list">
-                    {filteredComponents.map((component) => (
-                      <li key={component.heading}>
-                        <Card
-                          className="rhc-templates-card"
-                          description={<Paragraph>{component.description}</Paragraph>}
-                          href={component.href}
-                          linkLabel={component.linkLabel}
-                          target="_blank"
-                          title={component.title}
-                          heading={
-                            <Heading appearanceLevel={4} level={2}>
-                              {component.heading}
-                            </Heading>
-                          }
-                        >
-                          <BadgeList className="rhc-templates-badgelist">
-                            {component.frameworks.map((framework) => (
-                              <DataBadge className="rhc-templates-databadge" key={framework}>
-                                {framework}
-                              </DataBadge>
-                            ))}
-                          </BadgeList>
-                        </Card>
-                      </li>
-                    ))}
-                  </ol>
-                </>
+              {filteredComponents.length > 0 && (
+                <ol className="rhc-ordered-list">
+                  {filteredComponents.map((component) => (
+                    <li key={component.heading}>
+                      <Card
+                        className="rhc-templates-card"
+                        description={<Paragraph>{component.description}</Paragraph>}
+                        href={component.href}
+                        linkLabel={component.linkLabel}
+                        target="_blank"
+                        title={component.title}
+                        heading={
+                          <Heading appearanceLevel={4} level={2}>
+                            {component.heading}
+                          </Heading>
+                        }
+                      >
+                        <BadgeList className="rhc-templates-badgelist">
+                          {component.frameworks.map((framework) => (
+                            <DataBadge className="rhc-templates-databadge" key={framework}>
+                              {framework}
+                            </DataBadge>
+                          ))}
+                        </BadgeList>
+                      </Card>
+                    </li>
+                  ))}
+                </ol>
               )}
             </div>
           </div>
