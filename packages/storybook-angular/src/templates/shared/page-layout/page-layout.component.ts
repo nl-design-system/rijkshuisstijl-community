@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {
   DutchMapIconComponent,
+  FooterComponent,
   IconComponent,
   LogoComponent,
   NavbarComponent,
@@ -9,7 +10,7 @@ import {
 
 @Component({
   selector: 'page-layout-component',
-  imports: [IconComponent, NavbarComponent, NavbarItemComponent, LogoComponent, DutchMapIconComponent],
+  imports: [IconComponent, NavbarComponent, NavbarItemComponent, LogoComponent, DutchMapIconComponent, FooterComponent],
   templateUrl: './page-layout.component.html',
   styleUrls: ['./page-layout.component.css'],
 })
