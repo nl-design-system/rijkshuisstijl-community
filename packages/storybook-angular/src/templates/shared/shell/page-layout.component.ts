@@ -4,9 +4,9 @@ import { NavbarComponent } from '../../../../../components-angular/src/navbar/na
 import { NavbarItemComponent } from '../../../../../components-angular/src/navbar-item/navbar-item.component';
 
 @Component({
-  selector: 'shell-component',
+  selector: 'page-layout-component',
   imports: [IconComponent, NavbarComponent, NavbarItemComponent],
-  templateUrl: './shell.component.html',
-  styleUrls: ['./shell.component.css'],
+  templateUrl: './page-layout.component.html',
+  styleUrls: ['./page-layout.component.css'],
 })
-export class ShellComponent {}
+export class PageLayoutComponent {}
