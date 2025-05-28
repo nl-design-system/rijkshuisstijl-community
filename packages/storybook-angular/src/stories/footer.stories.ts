@@ -2,7 +2,7 @@ import { FooterComponent } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, type StoryObj } from '@storybook/angular';
 
 const meta: Meta<FooterComponent> = {
-  title: 'Rijkshuisstijl-angular/Footer',
+  title: 'Rijkshuisstijl/Footer',
   id: 'rhc-angular-footer',
   component: FooterComponent,
   argTypes: {
