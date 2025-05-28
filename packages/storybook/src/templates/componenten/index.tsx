@@ -13,7 +13,8 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
-import { BadgeList, DataBadge } from '@utrecht/component-library-react';
+import { IconPlus } from '@tabler/icons-react';
+import { BadgeList, Button, DataBadge, Icon } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 import { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react';
 import { allComponentsData, ComponentData } from './components-data';
@@ -108,6 +109,16 @@ export default function Componenten() {
             </form>
 
             <div aria-atomic="true" aria-live="polite" className="rhc-grid-container__right">
+              <div className="rhc-componenten-toevoegen">
+                <Paragraph>10 componenten</Paragraph>
+                <Button appearance="secondary-action-button">
+                  <Icon>
+                    <IconPlus />
+                  </Icon>
+                  Component toevoegen
+                </Button>
+              </div>
+
               {filteredComponents.length === 0 ? (
                 <>
                   <Heading appearanceLevel={3} level={2}>
