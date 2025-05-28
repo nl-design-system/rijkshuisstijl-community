@@ -65,40 +65,46 @@ const meta: Meta<FooterComponent> = {
     background: 'primary-filled',
     backtotop: true,
   },
-  render: ({ heading, background, backtotop, preFooter, preFooterMessage }) => ({
+  render: ({ heading, background, backtotop, preFooter, preFooterMessage, appearanceLevel }) => ({
     template: `
       <footer rhc-footer
-        [preFooter]="'${preFooter}'"
+        [preFooter]="${preFooter}"
         [preFooterMessage]="'${preFooterMessage}'"
         [background]="'${background}'"
-        [backtotop]="'${backtotop}'"
+        [backtotop]="${backtotop}"
         [heading]="'${heading}'"
-        [columns]="[
+        [appearanceLevel] = "${appearanceLevel}"
+         [columns]="[
           {
-            heading: 'Column 1',
-            appearanceLevel: 4,
+            heading: 'Service',
+            appearanceLevel: 3,
             items: [
-              { href: 'https://www.google.com', label: 'Google' },
-              { href: 'https://www.google.com', label: 'Google' },
-              { href: 'https://www.google.com', label: 'Google' },
-              { href: 'https://www.google.com', label: 'Google' },
-              
+              { href: '#', label: 'Contact' },
+              { href: '#', label: 'Abonneren' },
+              { href: '#', label: 'RSS' },
+              { href: '#', label: 'Vacatures' },
+              { href: '#', label: 'Sitemap' },
+              { href: '#', label: 'Help' },
+              { href: '#', label: 'Archief' },
             ]
           },
           {
-            heading: 'Column 2',
-            appearanceLevel: 4,
+            heading: 'Over deze site',
+            appearanceLevel: 3,
             items: [
-              { href: 'https://nldesignsystem.nl/', label: 'Nl Design System' },
-              { href: 'https://nldesignsystem.nl/', label: 'Nl Design System' },
-              { href: 'https://nldesignsystem.nl/', label: 'Nl Design System' },
-              { href: 'https://nldesignsystem.nl/', label: 'Nl Design System' },
+              { href: '#', label: 'Over deze organisatie' },
+              { href: '#', label: 'Wetten en regelingen' },
+              { href: '#', label: 'Privacy' },
+              { href: '#', label: 'Cookies' },
+              { href: '#', label: 'Toegankelijkheid' },
+              { href: '#', label: 'Open data' },
+              { href: '#', label: 'Kwetsbaarheid melden' },
             ]
           }
         ]"
         [subFooter]="{
           items: [
-            { href: 'https://nldesignsystem.nl/', label: 'Nl Design System' }
+            { href: '#', label: 'Privacy' }
           ]
         }"
       >

@@ -16,13 +16,16 @@
   <div class="rhc-page-footer__content rhc-page-footer__wrapper">
     @if (heading) {
       <div class="rhc-page-footer__title">
-        <rhc-heading [level]="3" [appearanceLevel]="appearanceLevel">{{ heading }}</rhc-heading>
+        <rhc-heading [level]="2" [appearanceLevel]="appearanceLevel">{{ heading }}</rhc-heading>
       </div>
     }
     <rhc-column-layout>
       @for (column of columns; track $index) {
         <div class="rhc-page-footer__section">
-          <rhc-heading [level]="3" [appearanceLevel]="column.appearanceLevel">{{ column.heading }}</rhc-heading>
+          <rhc-heading [level]="heading ? 3 : 2" [appearanceLevel]="column.appearanceLevel">{{
+            column.heading
+          }}</rhc-heading>
+
           <rhc-link-list>
             @for (item of column.items; track $index) {
               <li rhc-link-list-item>
@@ -58,8 +61,8 @@
         </rhc-link-list>
 
         @if (backtotop) {
-          <a class="rhc-page-subfooter__backtotop" href="#">
-            Terug naar boven <rhc-icon icon="pijl-omhoog" (click)="scrollBackToTop($event)"
+          <a class="rhc-page-subfooter__backtotop" href="#" (click)="scrollBackToTop($event)">
+            Terug naar boven <rhc-icon icon="pijl-omhoog"
           /></a>
         }
       </div>
