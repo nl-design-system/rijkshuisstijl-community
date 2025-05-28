@@ -1,14 +1,15 @@
+import { moduleMetadata } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
 import {
   IconComponent,
   LinkListItemComponent,
   LinkListLinkComponent,
-} from '@rijkshuisstijl-community/components-angular';
-import { type Meta, moduleMetadata, type StoryObj } from '@storybook/angular';
+} from '../../../components-angular/src/public-api';
 
 type StoryType = LinkListLinkComponent & { label?: string };
 
 const meta: Meta<StoryType> = {
-  title: 'Rijkshuisstijl-angular/Link List/Link list link',
+  title: 'Rijkshuisstijl/Link List/Link list link',
   id: 'rhc-angular-link-list-link',
   component: LinkListLinkComponent,
   decorators: [

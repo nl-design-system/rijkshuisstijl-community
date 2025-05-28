@@ -1,8 +1,8 @@
-import { FigureCaptionComponent, FigureComponent, ImageComponent } from '@rijkshuisstijl-community/components-angular';
-import { type Meta, type StoryObj } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
+import { FigureCaptionComponent, FigureComponent, ImageComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<FigureComponent> = {
-  title: 'Rijkshuisstijl-angular/Figure',
+  title: 'Rijkshuisstijl/Figure',
   id: 'rhc-angular-figure',
   component: FigureComponent,
   render: ({ borderEndEndRadius, borderEndStartRadius, borderStartEndRadius, borderStartStartRadius }) => ({

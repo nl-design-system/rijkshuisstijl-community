@@ -25,7 +25,8 @@ const meta = {
     },
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1862-9575&t=YSjs9i2uQ5Eq3wto-0',
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/443',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/BreadcrumbNav.tsx',
     nldesignsystem: 'https://www.nldesignsystem.nl/breadcrumb-navigation/',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',

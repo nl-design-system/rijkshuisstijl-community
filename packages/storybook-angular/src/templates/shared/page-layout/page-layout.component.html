@@ -1,0 +1,28 @@
+<figure rhc-logo organisation="Rijkshuisstijl Community">
+  <rhc-icon><rhc-dutch-map-icon /></rhc-icon>
+</figure>
+<rhc-navbar [showEndItems]="true">
+  <li rhc-navbar-item href="#">
+    <rhc-icon icon="home" />
+    Uw overzicht
+  </li>
+  <li rhc-navbar-item href="#">
+    <rhc-icon icon="zoek" />
+    Boete zoeken
+  </li>
+  <li rhc-navbar-item href="#">
+    <rhc-icon icon="currency-euro" />
+    Betalingsregeling
+  </li>
+  <li rhc-navbar-item rhcEndItem href="#">
+    <rhc-icon icon="user" />
+    Uitloggen
+  </li>
+</rhc-navbar>
+<!--TODO: Temporary spacing solution-->
+<div class="rhc-page-body-container">
+  <div class="rhc-page-body-children">
+    <ng-content></ng-content>
+  </div>
+</div>
+<!--TODO: Footer-->

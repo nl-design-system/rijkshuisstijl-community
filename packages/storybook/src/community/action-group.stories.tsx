@@ -1,5 +1,5 @@
 import { ActionGroup, Button } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react/*';
+import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/button-group/README.md?raw';
 import usageDocs from './action-group.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
@@ -28,7 +28,8 @@ const meta = {
       },
     },
     nldesignsystem: 'https://www.nldesignsystem.nl/action-group/',
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/479',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/ActionGroup.tsx',
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=4626-10492&p=f&t=MHYw4lXBHCryrwek-0',
     componentOrigin:

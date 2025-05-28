@@ -1,5 +1,5 @@
 import { Article, ColumnLayout, Heading } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react/*';
+import { Meta, StoryObj } from '@storybook/react';
 import readme from './column-layout.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
@@ -11,6 +11,8 @@ const meta = {
     status: { type: 'UNSTABLE' },
     docs: { description: { component: mergeMarkdown([readme]) } },
     componentOrigin: 'Dit component is overgenomen van de Gemeente Utrecht.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/ColumnLayout.tsx',
   },
   args: {
     children: '',

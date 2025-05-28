@@ -5,6 +5,7 @@ import { Link } from './Link';
 
 interface CardPropsBase {
   href: string;
+  target?: string;
   title?: string;
   className?: string;
   heading: ReactNode;
@@ -14,7 +15,8 @@ interface CardPropsBase {
 export interface HorizontalImageCardProps extends CardPropsBase {
   appearance?: 'horizontal';
   imageSrc: string;
-  imageAlt: string;
+  imageAlt?: string;
+  imagePresentation?: boolean;
 }
 
 export interface FullBleedCardProps extends Omit<HorizontalImageCardProps, 'appearance'> {
@@ -56,10 +58,12 @@ const DefaultCard = ({
   icon,
   description,
   imageAlt,
+  imagePresentation,
   metadata,
   linkLabel,
   button,
   href,
+  target,
   title,
   children,
   ...restProps
@@ -70,7 +74,7 @@ const DefaultCard = ({
         <div className="rhc-card__heading">{heading}</div>
         {imageSrc && (
           <div className="rhc-card__image-container" data-testid="rhc-card__image-container">
-            {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
+            {<Image alt={imageAlt} className="rhc-card__image" presentation={imagePresentation} src={imageSrc} />}
           </div>
         )}
         <div className="rhc-card__icon">{icon}</div>
@@ -82,7 +86,7 @@ const DefaultCard = ({
         <div className="rhc-card__footer">
           {linkLabel && (
             <div className="rhc-card__link rhc-card__anchor" data-testid="rhc-card__link">
-              <Link aria-label={title} href={href} title={title}>
+              <Link aria-label={title} href={href} target={target} title={title}>
                 {linkLabel}
               </Link>
             </div>
@@ -103,8 +107,10 @@ DefaultCard.displayName = 'DefaultCard';
 export const FullBleedCard = ({
   ref,
   href,
+  target,
   title,
   imageSrc,
+  imagePresentation,
   heading,
   children,
   description,
@@ -115,7 +121,7 @@ export const FullBleedCard = ({
 }: PropsWithChildren<FullBleedCardProps>) => (
   <div className={clsx('rhc-card', 'rhc-card--full-bleed', className)} ref={ref} {...restProps}>
     <span className="rhc-card__anchor">
-      <a aria-label={title} href={href} title={title}></a>
+      <a aria-label={title} href={href} target={target} title={title}></a>
     </span>
     <div className="rhc-card__content">
       <div className="rhc-card__heading">{heading}</div>
@@ -123,7 +129,7 @@ export const FullBleedCard = ({
       <div className="rhc-card__metadata">{metadata}</div>
       {children}
     </div>
-    {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
+    {<Image alt={imageAlt} className="rhc-card__image" presentation={imagePresentation} src={imageSrc} />}
   </div>
 );
 
@@ -132,9 +138,11 @@ FullBleedCard.displayName = 'FullBleedCard';
 export const HorizontalImageCard = ({
   ref,
   href,
+  target,
   title,
   imageSrc,
   imageAlt,
+  imagePresentation,
   heading,
   children,
   className,
@@ -142,14 +150,14 @@ export const HorizontalImageCard = ({
 }: PropsWithChildren<HorizontalImageCardProps>) => (
   <div className={clsx('rhc-card', 'rhc-card--horizontal', className)} ref={ref} {...restProps}>
     <span className="rhc-card__anchor">
-      <a aria-label={title} href={href} title={title}></a>
+      <a aria-label={title} href={href} target={target} title={title}></a>
     </span>
     <div className="rhc-card__content">
       <div className="rhc-card__heading">{heading}</div>
       {children}
     </div>
     <div className="rhc-card__image-container">
-      <Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />
+      <Image alt={imageAlt} className="rhc-card__image" presentation={imagePresentation} src={imageSrc} />
     </div>
   </div>
 );

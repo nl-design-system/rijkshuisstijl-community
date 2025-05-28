@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/web-components
 
+## 1.1.6
+
+### Patch Changes
+
+- 99dd213: Package Updates
+
 ## 1.1.5
 
 ### Patch Changes

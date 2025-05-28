@@ -1,11 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/react/*';
+import type { Meta, StoryObj } from '@storybook/react';
 import Page from './collage';
 import './globals.css';
 
 const meta: Meta = {
   title: 'Templates/Collage',
+  id: 'rhc-templates-collage',
   component: Page,
   parameters: {
+    layout: 'fullscreen',
     status: {
       type: 'UNSTABLE',
     },

@@ -13,12 +13,36 @@ describe('Image', () => {
     expect(image).toBeVisible();
   });
 
-  it("doesn't render the image if alt is not given", () => {
-    const { container } = render(<Image alt="" src="/placeholder.jpg" />);
+  it("doesn't render the image if alt is not given and presentation is not true", () => {
+    const { container } = render(<Image alt="" src="./placeholder.jpg" />);
 
     const image = container.querySelector('img');
 
     expect(image).not.toBeInTheDocument();
+  });
+
+  it('renders the image if alt is not given and presentation is true', () => {
+    const { container } = render(<Image alt="" presentation={true} src="./placeholder.jpg" />);
+
+    const image = container.querySelector('img');
+
+    expect(image).toBeInTheDocument();
+  });
+
+  it('renders the image with an empty alt attribute if alt is not given and presentation is true', () => {
+    const { container } = render(<Image alt="" presentation={true} src="./placeholder.jpg" />);
+
+    const image = container.querySelector('img');
+
+    expect(image).toHaveAttribute('alt', '');
+  });
+
+  it('renders the image with given alt attribute', () => {
+    const { container } = render(<Image alt="Hello World" src="./placeholder.jpg" />);
+
+    const image = container.querySelector('img');
+
+    expect(image).toHaveAttribute('alt', 'Hello World');
   });
 });
 

@@ -1,12 +1,12 @@
+import type { Meta, StoryObj } from '@storybook/angular';
 import {
   ColumnLayoutComponent,
   HeadingComponent,
   ParagraphComponent,
-} from '@rijkshuisstijl-community/components-angular';
-import { type Meta, type StoryObj } from '@storybook/angular';
+} from '../../../components-angular/src/public-api';
 
 const meta: Meta<ColumnLayoutComponent> = {
-  title: 'Rijkshuisstijl-angular/Column layout',
+  title: 'Rijkshuisstijl/Column layout',
   id: 'rhc-angular-column-layout',
   component: ColumnLayoutComponent,
   argTypes: {

@@ -1,5 +1,5 @@
 import { FileInput, UnorderedList, UnorderedListItem } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react/*';
+import { Meta, StoryObj } from '@storybook/react';
 import { FormLabel } from '@utrecht/component-library-react';
 import readme from './file-input.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
@@ -23,8 +23,10 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    // TODO: add Figma and NL DesignSystem links
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/FileInput.tsx',
   },
 } satisfies Meta<typeof FileInput>;
 

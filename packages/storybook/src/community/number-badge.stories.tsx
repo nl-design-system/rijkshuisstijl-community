@@ -32,7 +32,7 @@ const meta = {
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1233-4274&t=AHS0qWRed9fEffkN-0',
     github:
-      'https://github.com/orgs/nl-design-system/projects/59/views/1?filterQuery=badge&pane=issue&itemId=81192772&issue=nl-design-system%7Crijkshuisstijl-community%7C681',
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/NumberBadge.tsx',
   },
 } satisfies Meta<typeof NumberBadge>;
 export default meta;

@@ -1,5 +1,5 @@
 import { Icon, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react/*';
+import { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'Rijkshuisstijl/Link List/Link List Link',
@@ -23,9 +23,11 @@ const meta = {
     status: {
       type: 'STABLE',
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    // TODO: add Figma and NL DesignSystem links
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, de design tokens kunnen indien nodig nog overschreven worden.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/LinkList.tsx',
   },
   render: (args) => (
     <LinkList>

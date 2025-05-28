@@ -1,9 +1,8 @@
-import { ActionGroupComponent } from '@rijkshuisstijl-community/components-angular';
-import { ButtonComponent } from '@rijkshuisstijl-community/components-angular';
-import { type Meta, type StoryObj } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
+import { ActionGroupComponent, ButtonComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<ActionGroupComponent> = {
-  title: 'Rijkshuisstijl-angular/Action Group',
+  title: 'Rijkshuisstijl/Action Group',
   id: 'rhc-angular-action-group',
   component: ActionGroupComponent,
   argTypes: {
