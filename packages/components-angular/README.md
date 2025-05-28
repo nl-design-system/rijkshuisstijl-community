@@ -17,7 +17,7 @@ Om de Angular-componenten van de Rijkshuisstijl-community te gebruiken, installe
 npm install --save-dev @rijkshuisstijl-community/components-angular
 ```
 
-Dit installeert de Angular-componenten. Om deze componenten te gebruiken, kun je ze importeren in jouw app. Dit kan in componenten of in modules.
+Dit installeert de Angular-componenten. Om deze componenten te gebruiken, kun je ze importeren in jouw app.
 
 ```ts
 import { ButtonComponent } from '@rijkshuisstijl-community/components-angular';
@@ -35,14 +35,14 @@ export class AppComponent {
 
 ### Thema toepassen
 
-De React-componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je project toe te voegen, installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens) en het [components-css package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-css).
+De Angular-componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je project toe te voegen, installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens) en het [components-css npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-css).
 
 ```bash
 npm install --save-dev @rijkshuisstijl-community/design-tokens
 npm install --save-dev @rijkshuisstijl-community/components-css
 ```
 
-Deze pakketten bevat de CSS-variabelen van het design systeem en de CSS-classes die de componenten aan de variabelen koppelen. Importeer het `index.css`-bestand uit de `dist` mappen van de pakketten, en omring het deel van je applicatie waar je het thema wilt toepassen met de Rijkshuisstijl-thema: `rhc-theme`.
+Deze pakketten bevat de CSS-variabelen van het design systeem en de CSS-classes die de componenten aan de variabelen koppelen. Importeer het `index.css`-bestand uit de `dist` mappen van de pakketten, en omring het deel van je applicatie waar je het thema wilt toepassen met het Rijkshuisstijl-thema: `rhc-theme`.
 
 ```ts
 import { Component } from '@angular/core';
