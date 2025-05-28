@@ -9,6 +9,7 @@ import {
   FormFieldTextInput,
   Heading,
   HeadingGroup,
+  NumberBadge,
   Paragraph,
   UnorderedList,
   UnorderedListItem,
@@ -46,6 +47,16 @@ export default function Componenten() {
     () => filterComponents(allComponentsData, debouncedSearchTerm, selectedFrameworks),
     [debouncedSearchTerm, selectedFrameworks],
   );
+
+  const frameworkCounts = useMemo(() => {
+    const counts: { [key: string]: number } = {};
+
+    frameworkOptions.forEach((framework) => {
+      counts[framework] = allComponentsData.filter((component) => component.frameworks.includes(framework)).length;
+    });
+
+    return counts;
+  }, []);
 
   const handleFrameworkChange = useCallback((framework: string) => {
     setSelectedFrameworks((prev) =>
@@ -98,7 +109,20 @@ export default function Componenten() {
                       <UnorderedList>
                         {frameworkOptions.map((option) => (
                           <UnorderedListItem key={option}>
-                            <FormFieldCheckboxOption label={option} onChange={() => handleFrameworkChange(option)} />
+                            <FormFieldCheckboxOption
+                              label={
+                                <>
+                                  {option}
+                                  <NumberBadge
+                                    aria-label={`${frameworkCounts[option]} ${frameworkCounts[option] === 1 ? 'component' : 'componenten'}`}
+                                    className="rhc-checkbox-count-badge"
+                                  >
+                                    {frameworkCounts[option]}
+                                  </NumberBadge>
+                                </>
+                              }
+                              onChange={() => handleFrameworkChange(option)}
+                            />
                           </UnorderedListItem>
                         ))}
                       </UnorderedList>
