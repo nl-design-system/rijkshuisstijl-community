@@ -14,7 +14,7 @@ import {
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
 import { IconPlus } from '@tabler/icons-react';
-import { BadgeList, Button, DataBadge, Icon } from '@utrecht/component-library-react';
+import { BadgeList, ButtonLink, DataBadge, Icon } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 import { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react';
 import { allComponentsData, ComponentData } from './components-data';
@@ -110,13 +110,13 @@ export default function Componenten() {
 
             <div aria-atomic="true" aria-live="polite" className="rhc-grid-container__right">
               <div className="rhc-componenten-toevoegen">
-                <Paragraph>10 componenten</Paragraph>
-                <Button appearance="secondary-action-button">
+                {/* TODO: change to correct href */}
+                <ButtonLink appearance="secondary-action-button" href="/">
                   <Icon>
                     <IconPlus />
                   </Icon>
                   Component toevoegen
-                </Button>
+                </ButtonLink>
               </div>
 
               {filteredComponents.length === 0 ? (
