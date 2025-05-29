@@ -9,7 +9,7 @@
 
 .utrecht-breadcrumb-nav {
   &__link {
-    --utrecht-link-icon-inset-block-start: var(--utrecht-breadcrumb-nav-link-icon-inset-block-start, inherit);
+    --utrecht-link-icon-inset-block-start: var(--rhc-breadcrumb-nav-link-icon-inset-block-start, inherit);
 
     &--current {
       --utrecht-link-text-decoration-color: var(--utrecht-link-text-decoration-color);
@@ -18,14 +18,14 @@
       color: var(--utrecht-breadcrumb-nav-link-current-color);
     }
     &--active {
-      --utrecht-link-text-decoration: var(--utrecht-breadcrumb-nav-link-active-text-decoration, underline);
+      --utrecht-link-text-decoration: var(--rhc-breadcrumb-nav-link-active-text-decoration, underline);
 
-      color: var(--utrecht-breadcrumb-nav-link-active-color);
-      text-decoration-color: var(--utrecht-breadcrumb-nav-link-active-color);
+      color: var(--rhc-breadcrumb-nav-link-active-color);
+      text-decoration-color: var(--rhc-breadcrumb-nav-link-active-color);
     }
   }
   &__separator {
-    --utrecht-breadcrumb-nav-separator-icon-size: var(--utrecht-breadcrumb-nav-divider-size, 14px);
-    --utrecht-breadcrumb-nav-separator-color: --utrecht-breadcrumb-nav-divider-color;
+    --utrecht-breadcrumb-nav-separator-icon-size: var(--rhc-breadcrumb-nav-divider-size, 14px);
+    --utrecht-breadcrumb-nav-separator-color: --rhc-breadcrumb-nav-divider-color;
   }
 }

@@ -2105,16 +2105,8 @@
     }
   },
   "components/breadcrumb": {
-    "utrecht": {
+    "rhc": {
       "breadcrumb-nav": {
-        "line-height": {
-          "value": "1.4",
-          "type": "lineHeights"
-        },
-        "font-size": {
-          "value": "{rhc.font-size.paragraph.default}",
-          "type": "fontSizes"
-        },
         "link": {
           "icon": {
             "size": {
@@ -2146,10 +2138,6 @@
             "value": "{rhc.space.0}",
             "type": "spacing"
           },
-          "color": {
-            "value": "{rhc.color.foreground.link}",
-            "type": "color"
-          },
           "active": {
             "color": {
               "value": "{rhc.color.paars.500}",
@@ -2159,6 +2147,46 @@
               "value": "None",
               "type": "textDecoration"
             }
+          }
+        },
+        "divider": {
+          "size": {
+            "value": "{rhc.size.icon.functional}",
+            "type": "sizing"
+          },
+          "color": {
+            "value": "{rhc.color.foreground.subdued}",
+            "type": "color"
+          },
+          "inset-block-start": {
+            "value": "0",
+            "type": "spacing"
+          }
+        },
+        "margin-inline": {
+          "value": "{rhc.space.100}",
+          "type": "spacing"
+        },
+        "font-weight": {
+          "value": "{rhc.font-weight.regular}",
+          "type": "fontWeights"
+        }
+      }
+    },
+    "utrecht": {
+      "breadcrumb-nav": {
+        "line-height": {
+          "value": "1.4",
+          "type": "lineHeights"
+        },
+        "font-size": {
+          "value": "{rhc.font-size.paragraph.default}",
+          "type": "fontSizes"
+        },
+        "link": {
+          "color": {
+            "value": "{rhc.color.foreground.link}",
+            "type": "color"
           },
           "focus": {
             "background-color": {
@@ -2204,31 +2232,9 @@
             "type": "textDecoration"
           }
         },
-        "divider": {
-          "size": {
-            "value": "{rhc.size.icon.functional}",
-            "type": "sizing"
-          },
-          "color": {
-            "value": "{rhc.color.foreground.subdued}",
-            "type": "color"
-          },
-          "inset-block-start": {
-            "value": "0",
-            "type": "spacing"
-          }
-        },
-        "margin-inline": {
-          "value": "{rhc.space.100}",
-          "type": "spacing"
-        },
         "font-family": {
           "value": "{rhc.font-family.primary}",
           "type": "fontFamilies"
-        },
-        "font-weight": {
-          "value": "{rhc.font-weight.regular}",
-          "type": "fontWeights"
         }
       }
     }
