@@ -1513,7 +1513,7 @@
     }
   },
   "components/alert": {
-    "utrecht": {
+    "rhc": {
       "alert": {
         "heading": {
           "font-family": {
@@ -1533,6 +1533,20 @@
             "type": "fontSizes"
           }
         },
+        "message": {
+          "line-height": {
+            "value": "{rhc.line-height.md}",
+            "type": "lineHeights"
+          },
+          "column-gap": {
+            "value": "{rhc.space.100}",
+            "type": "spacing"
+          }
+        }
+      }
+    },
+    "utrecht": {
+      "alert": {
         "column-gap": {
           "value": "{rhc.space.100}",
           "type": "spacing"
@@ -1665,16 +1679,6 @@
           "size": {
             "value": "{rhc.size.icon.functional}",
             "type": "sizing"
-          }
-        },
-        "message": {
-          "line-height": {
-            "value": "{rhc.line-height.md}",
-            "type": "lineHeights"
-          },
-          "column-gap": {
-            "value": "{rhc.space.100}",
-            "type": "spacing"
           }
         },
         "border-radius": {
