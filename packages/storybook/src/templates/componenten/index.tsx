@@ -21,6 +21,7 @@ import { PageBody } from '@utrecht/page-body-react';
 import { ChangeEvent, useCallback, useMemo, useRef, useState } from 'react';
 import React from 'react';
 import { allComponentsData, ComponentData } from './components-data';
+import { ExpandableCheckboxGroup } from './expandableCheckboxGroup';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
@@ -160,6 +161,20 @@ export default function Componenten() {
                 </aside>
               </div>
             </form>
+            <aside>
+              <search>
+                <form onSubmit={(e) => e.preventDefault()}>
+                  <ExpandableCheckboxGroup
+                    legend="Framework"
+                    maxVisible={3}
+                    options={frameworkOptions}
+                    selectedOptions={selectedFrameworks}
+                    onOptionChange={handleFrameworkChange}
+                  />
+                </form>
+              </search>
+            </aside>
+
             <div aria-atomic="true" aria-live="polite" className="rhc-grid-container__right">
               <div className="rhc-componenten-toevoegen">
                 {/* TODO: change to correct href */}
