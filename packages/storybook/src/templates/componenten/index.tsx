@@ -120,7 +120,7 @@ export default function Componenten() {
             <div className="rhc-grid-end">
               <HeadingGroup>
                 <Heading appearanceLevel={3} level={2}>
-                  {filteredComponents.length === 0 ? 'Zoekresultaten' : 'Zoekresultaten'}
+                  Zoekresultaten
                 </Heading>
                 <Paragraph role="status">{getStatusText(filteredComponents.length)}</Paragraph>
               </HeadingGroup>
