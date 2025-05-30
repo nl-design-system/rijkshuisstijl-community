@@ -115,7 +115,7 @@ export default function Componenten() {
                                 <>
                                   {option}
                                   <NumberBadge
-                                    aria-label={`${frameworkCounts[option]} ${frameworkCounts[option] === 1 ? 'component' : 'componenten'}`}
+                                    aria-label={`${option} (${frameworkCounts[option]} ${frameworkCounts[option] === 1 ? 'component' : 'componenten'})`}
                                     className="rhc-checkbox-number-badge"
                                   >
                                     {frameworkCounts[option]}
