@@ -48,16 +48,17 @@ export default function Componenten() {
     [debouncedSearchTerm, selectedFrameworks],
   );
 
-  const frameworkCounts = useMemo(() => {
-    const counts: { [key: string]: number } = {};
-
-    frameworkOptions.forEach((framework) => {
-      counts[framework] = allComponentsData.filter((component) => component.frameworks.includes(framework)).length;
-    });
-
-    return counts;
-  }, []);
-
+  const frameworkCounts: { [key: string]: number } = useMemo(
+    () =>
+      frameworkOptions.reduce(
+        (counts, framework) => {
+          counts[framework] = allComponentsData.filter((component) => component.frameworks.includes(framework)).length;
+          return counts;
+        },
+        {} as { [key: string]: number },
+      ),
+    [frameworkOptions, allComponentsData],
+  );
   const handleFrameworkChange = useCallback((framework: string) => {
     setSelectedFrameworks((prev) =>
       prev.includes(framework) ? prev.filter((f) => f !== framework) : [...prev, framework],
@@ -115,7 +116,7 @@ export default function Componenten() {
                                   {option}
                                   <NumberBadge
                                     aria-label={`${frameworkCounts[option]} ${frameworkCounts[option] === 1 ? 'component' : 'componenten'}`}
-                                    className="rhc-checkbox-count-badge"
+                                    className="rhc-checkbox-number-badge"
                                   >
                                     {frameworkCounts[option]}
                                   </NumberBadge>
