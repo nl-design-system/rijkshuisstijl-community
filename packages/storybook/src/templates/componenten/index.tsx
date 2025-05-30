@@ -99,7 +99,7 @@ export default function Componenten() {
 
           <div className="rhc-container">
             <form>
-              <div className="rhc-grid-container__left">
+              <div className="rhc-grid-container__start">
                 <aside>
                   <Fieldset>
                     <FieldsetLegend>Framework</FieldsetLegend>
@@ -117,7 +117,7 @@ export default function Componenten() {
               </div>
             </form>
 
-            <div aria-atomic="true" className="rhc-grid-container__right">
+            <div className="rhc-grid-end">
               <HeadingGroup>
                 <Heading appearanceLevel={3} level={2}>
                   {filteredComponents.length === 0 ? 'Zoekresultaten' : 'Zoekresultaten'}
