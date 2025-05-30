@@ -27,3 +27,4 @@ export * from './navbar/navbar.component';
 export * from './navbar-item/navbar-item.component';
 export * from './navbar-item/heading-item.directive';
 export * from './navbar-item/end-item.directive';
+export * from './footer/footer.component';

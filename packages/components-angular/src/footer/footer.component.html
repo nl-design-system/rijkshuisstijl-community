@@ -1,0 +1,71 @@
+@if (preFooter) {
+  <div class="rhc-page-prefooter">
+    @if (preFooterMessage) {
+      <span class="rhc-page-prefooter__content">{{ preFooterMessage }}</span>
+    }
+  </div>
+}
+
+<footer
+  [class]="
+    'utrecht-page-footer rhc-page-footer' +
+    (background ? ' rhc-page-footer--' + background : '') +
+    (background === 'primary' ? ' rhc-page-footer--primary-filled' : '')
+  "
+>
+  <div class="rhc-page-footer__content rhc-page-footer__wrapper">
+    @if (heading) {
+      <div class="rhc-page-footer__title">
+        <rhc-heading [level]="2" [appearanceLevel]="appearanceLevel">{{ heading }}</rhc-heading>
+      </div>
+    }
+    <rhc-column-layout>
+      @for (column of columns; track $index) {
+        <div class="rhc-page-footer__section">
+          <rhc-heading [level]="heading ? 3 : 2" [appearanceLevel]="column.appearanceLevel">{{
+            column.heading
+          }}</rhc-heading>
+
+          <rhc-link-list>
+            @for (item of column.items; track $index) {
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="item.href" [attr.href]="item.href">
+                  <rhc-icon icon="chevron-right" />
+                  {{ item.label }}
+                </a>
+              </li>
+            }
+          </rhc-link-list>
+        </div>
+      }
+    </rhc-column-layout>
+  </div>
+
+  @if (backtotop || subFooter) {
+    <div
+      [class]="
+        'rhc-page-subfooter' +
+        (background ? ' rhc-page-footer--' + background : '') +
+        (background ? ' rhc-page-footer--primary-filled' : '')
+      "
+    >
+      <div class="rhc-page-subfooter__content rhc-page-footer__wrapper">
+        <rhc-link-list>
+          @for (subFooterItem of subFooter?.items; track $index) {
+            <li rhc-link-list-item>
+              <a rhc-link-list-link [href]="subFooterItem.href" [attr.href]="subFooterItem.href">
+                {{ subFooterItem.label }}
+              </a>
+            </li>
+          }
+        </rhc-link-list>
+
+        @if (backtotop) {
+          <a class="rhc-page-subfooter__backtotop" href="#main" (click)="scrollBackToTop($event)">
+            Terug naar boven <rhc-icon icon="pijl-omhoog"
+          /></a>
+        }
+      </div>
+    </div>
+  }
+</footer>
