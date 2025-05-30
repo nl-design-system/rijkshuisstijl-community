@@ -1,13 +1,24 @@
-/* Componenten Template Marwa CSS */
+/* Componenten Template */
 
 .utrecht-heading-group {
   gap: 0.75rem;
 }
 
+.rhc-form-label {
+  color: var(--rhc-color-primary-500) !important;
+}
+
+.utrecht-form-label {
+  color: var(--rhc-color-primary-500) !important;
+}
+
 .rhc-templates-databadge {
   align-items: center;
-  border: 1px solid;
+  background-color: var(--rhc-color-primary-50) !important;
+  border-color: var(--rhc-color-primary-500) !important;
   border-radius: 10px;
+  color: var(--rhc-color-primary-500) !important;
+  cursor: pointer;
   display: inline-flex;
   padding-block: 0.25rem;
   padding-inline: 0.75rem;
@@ -16,6 +27,9 @@
 
 .rhc-templates-badgelist {
   gap: var(--rhc-space-100) !important;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1; /* hogere z-index zodat data badges klikbaar zijn binnen de card as link */
 }
 
 .rhc-templates-card {
@@ -100,4 +114,101 @@
 .rhc-search-form .utrecht-form-field input {
   border-radius: 4px 0 0 4px !important;
   position: relative !important;
+}
+
+.rhc-active-filters {
+  align-items: flex-start;
+  border: transparent;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-space-100, 0.5rem);
+  margin-block: var(--rhc-space-200, 1rem);
+  padding-block: var(--rhc-space-200, 1rem);
+}
+
+.rhc-active-filters__list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--rhc-space-100) !important;
+  margin-block: 0;
+  margin-inline: 0;
+}
+
+.rhc-active-filters__badge::after {
+  content: "✕";
+  font-size: 0.875em;
+  justify-content: center;
+  margin-inline-start: 0.5rem;
+  opacity: 80%;
+}
+
+.rhc-active-filters__badge:hover::after {
+  opacity: 100%;
+}
+
+/* Visual indicator icons */
+.rhc-templates-databadge::after {
+  font-size: 0.75em;
+  margin-inline-start: 0.5rem;
+  opacity: 60%;
+}
+
+.rhc-templates-databadge--selected::after {
+  content: "✓";
+  display: inline-block;
+  opacity: 100%;
+  text-align: center;
+  vertical-align: text-top;
+}
+
+/* Hover effects */
+.rhc-templates-databadge:hover {
+  background-color: var(--rhc-color-primary-500) !important;
+  border-color: var(--rhc-color-primary-50) !important;
+  color: var(--rhc-color-wit) !important;
+}
+
+.rhc-templates-databadge:hover::after {
+  opacity: 100%;
+}
+
+/* Focus styles */
+.rhc-templates-databadge:focus {
+  outline-color: var(--rhc-color-zwart);
+  outline-offset: var(--rhc-space-25);
+  outline-style: solid;
+  outline-width: var(--rhc-border-width-m);
+}
+
+/* Screenreader support */
+.rhc-templates-databadge__sr-only {
+  block-size: 1px;
+  clip: rect(0, 0, 0, 0);
+  inline-size: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+@media (width <= 780px) {
+  .rhc-active-filters {
+    padding-block: var(--rhc-space-150, 0.75rem);
+    padding-inline: var(--rhc-space-150, 0.75rem);
+  }
+
+  .rhc-active-filters__header .utrecht-heading {
+    font-size: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rhc-templates-databadge {
+    transition: all 200ms ease-in-out;
+  }
+
+  .rhc-templates-databadge::after {
+    transition: opacity 200ms ease-in-out;
+  }
 }

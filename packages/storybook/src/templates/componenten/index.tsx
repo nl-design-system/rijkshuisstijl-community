@@ -10,10 +10,10 @@ import {
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
 import { IconPlus, IconSearch } from '@tabler/icons-react';
-import { BadgeList, ButtonLink, DataBadge, Icon } from '@utrecht/component-library-react';
+import { BadgeList, ButtonLink, Icon } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
-import { ChangeEvent, useCallback, useMemo, useRef, useState } from 'react';
-import React from 'react';
+import React, { ChangeEvent, FC, useCallback, useMemo, useRef, useState } from 'react';
+import { DataBadgeButton } from './DataBadgeButton';
 import { allComponentsData, ComponentData } from './components-data';
 import { ExpandableCheckboxGroup } from './expandableCheckboxGroup';
 import SharedFooter from '../shared/footer';
@@ -35,7 +35,41 @@ const filterComponents = (data: ComponentData[], searchTerm: string, frameworks:
   });
 };
 
+interface ActiveFiltersBadgeListProps {
+  // eslint-disable-next-line no-unused-vars
+  onRemoveFilter: (framework: string) => void;
+  selectedFrameworks: string[];
+}
+
+const ActiveFiltersBadgeList: FC<ActiveFiltersBadgeListProps> = ({ onRemoveFilter, selectedFrameworks }) => {
+  if (selectedFrameworks.length === 0) return null;
+
+  return (
+    <div aria-labelledby="actieve-filters-heading" className="rhc-active-filters" role="region">
+      <div className="rhc-active-filters__header">
+        <Heading appearanceLevel={5} id="actieve-filters-heading" level={3}>
+          Actieve filters
+        </Heading>
+      </div>
+      <BadgeList className="rhc-active-filters__list">
+        {selectedFrameworks.map((framework) => (
+          <DataBadgeButton
+            className="rhc-active-filters__badge"
+            key={`active-${framework}`}
+            pressed={true}
+            value={framework}
+            onClick={onRemoveFilter}
+          >
+            {framework}
+          </DataBadgeButton>
+        ))}
+      </BadgeList>
+    </div>
+  );
+};
+
 export default function Componenten() {
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [submittedSearchTerm, setSubmittedSearchTerm] = useState('');
   const [selectedFrameworks, setSelectedFrameworks] = useState<string[]>([]);
@@ -43,9 +77,19 @@ export default function Componenten() {
 
   const resultsRef = useRef<HTMLDivElement>(null);
 
+  // Combine both checkbox selections and active filters for component filtering
+  const allSelectedFrameworks = useMemo(() => {
+    const combined = [...selectedFrameworks, ...activeFilters];
+    const unique = [...new Set(combined)]; // Remove duplicates
+    console.log('Debug - selectedFrameworks:', selectedFrameworks);
+    console.log('Debug - activeFilters:', activeFilters);
+    console.log('Debug - combined frameworks:', unique);
+    return unique;
+  }, [selectedFrameworks, activeFilters]);
+
   const filteredComponents = useMemo(
-    () => filterComponents(allComponentsData, submittedSearchTerm, selectedFrameworks),
-    [submittedSearchTerm, selectedFrameworks],
+    () => filterComponents(allComponentsData, submittedSearchTerm, allSelectedFrameworks),
+    [submittedSearchTerm, allSelectedFrameworks],
   );
 
   const frameworkCounts: { [key: string]: number } = useMemo(
@@ -77,10 +121,23 @@ export default function Componenten() {
     }
   };
 
-  const handleFrameworkChange = useCallback((framework: string) => {
+  // Handle checkbox changes (doesn't affect active filters)
+  const handleCheckboxChange = useCallback((framework: string) => {
     setStagedFrameworks((prev) =>
       prev.includes(framework) ? prev.filter((f) => f !== framework) : [...prev, framework],
     );
+    setSelectedFrameworks((prev) => {
+      const isCurrentlySelected = prev.includes(framework);
+      if (isCurrentlySelected) {
+        // If unchecking, also remove from active filters
+        setActiveFilters((activePrev) => activePrev.filter((f) => f !== framework));
+        return prev.filter((f) => f !== framework);
+      } else {
+        // If checking, also add to active filters
+        setActiveFilters((activePrev) => (activePrev.includes(framework) ? activePrev : [...activePrev, framework]));
+        return [...prev, framework];
+      }
+    });
   }, []);
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -97,6 +154,36 @@ export default function Componenten() {
     },
     [stagedFrameworks],
   );
+
+  // Handle DataBadge clicks (creates active filters and syncs checkboxes)
+  const handleDataBadgeClick = useCallback((framework: string) => {
+    setActiveFilters((prev) => {
+      const isCurrentlyActive = prev.includes(framework);
+      if (isCurrentlyActive) {
+        // Remove from active filters
+        return prev.filter((f) => f !== framework);
+      } else {
+        // Add to active filters
+        return [...prev, framework];
+      }
+    });
+
+    // Also sync the checkbox state
+    setSelectedFrameworks((prev) => {
+      const isCurrentlySelected = prev.includes(framework);
+      if (isCurrentlySelected) {
+        return prev.filter((f) => f !== framework);
+      } else {
+        return [...prev, framework];
+      }
+    });
+  }, []);
+
+  const handleRemoveActiveFilter = useCallback((framework: string) => {
+    setActiveFilters((prev) => prev.filter((f) => f !== framework));
+    // Also uncheck the corresponding checkbox
+    setSelectedFrameworks((prev) => prev.filter((f) => f !== framework));
+  }, []);
 
   return (
     <>
@@ -129,6 +216,8 @@ export default function Componenten() {
             </form>
           </search>
 
+          <ActiveFiltersBadgeList selectedFrameworks={activeFilters} onRemoveFilter={handleRemoveActiveFilter} />
+
           <div className="rhc-container">
             <aside>
               <search>
@@ -151,7 +240,7 @@ export default function Componenten() {
                       ),
                       value: option,
                     }))}
-                    onOptionChange={handleFrameworkChange}
+                    onOptionChange={handleCheckboxChange}
                   />
                   <Button appearance="secondary-action-button" type="submit">
                     Filter
@@ -198,9 +287,14 @@ export default function Componenten() {
                         >
                           <BadgeList className="rhc-templates-badgelist">
                             {component.frameworks.map((framework) => (
-                              <DataBadge className="rhc-templates-databadge" key={framework}>
+                              <DataBadgeButton
+                                key={framework}
+                                pressed={activeFilters.includes(framework)}
+                                value={framework}
+                                onClick={handleDataBadgeClick}
+                              >
                                 {framework}
-                              </DataBadge>
+                              </DataBadgeButton>
                             ))}
                           </BadgeList>
                         </Card>
