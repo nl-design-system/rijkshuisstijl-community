@@ -6,16 +6,21 @@
 
 .rhc-templates-databadge {
   align-items: center;
-  border: 1px solid;
+  border: var(--nl-number-badge-border-color);
   border-radius: 10px;
+  cursor: pointer;
   display: inline-flex;
   padding-block: 0.25rem;
   padding-inline: 0.75rem;
   position: relative;
+  transition: all 200ms ease-in-out;
 }
 
 .rhc-templates-badgelist {
   gap: var(--rhc-space-100) !important;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1; /* hogere z-index zodat data badges klikbaar zijn binnen de card as link */
 }
 
 .rhc-templates-card {
@@ -72,4 +77,139 @@
 
   list-style-type: none;
   padding-inline-start: 0;
+}
+
+/* =========================
+   ACTIVE FILTERS SECTION
+   ========================= */
+
+.rhc-active-filters {
+  align-items: flex-start;
+  background-color: var(--utrecht-color-grey-50, #f8f9fa);
+  border: 1px solid var(--utrecht-color-grey-200, #e9ecef);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-space-100, 0.5rem);
+  margin-block: var(--rhc-space-200, 1rem);
+  padding-block: var(--rhc-space-200, 1rem);
+  padding-inline: var(--rhc-space-200, 1rem);
+}
+
+.rhc-active-filters__header {
+  align-items: center;
+  display: flex;
+  margin-block: 0;
+  margin-inline: 0;
+}
+
+.rhc-active-filters__header .utrecht-heading {
+  font-size: var(--utrecht-heading-4-font-size, 1.125rem);
+  font-weight: var(--utrecht-heading-4-font-weight, 600);
+  margin-block: 0;
+  margin-inline: 0;
+}
+
+.rhc-active-filters__list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--rhc-space-100, 0.5rem) !important;
+  margin-block: 0;
+  margin-inline: 0;
+}
+
+.rhc-active-filters__badge {
+  background-color: var(--utrecht-color-primary-500, #06c);
+  border-color: var(--utrecht-color-primary-600, #0052a3);
+  color: var(--utrecht-color-white, #fff);
+}
+
+.rhc-active-filters__badge::after {
+  content: "✕";
+  font-size: 0.875em;
+  justify-content: center;
+  margin-inline-start: 0.5rem;
+  opacity: 80%;
+}
+
+.rhc-active-filters__badge:hover {
+  background-color: var(--utrecht-color-danger-500, #dc3545);
+  border-color: var(--utrecht-color-danger-600, #c82333);
+}
+
+.rhc-active-filters__badge:hover::after {
+  opacity: 100%;
+}
+
+/* ADD VISUAL INDICATOR ICONS */
+.rhc-templates-databadge::after {
+  font-size: 0.75em;
+  margin-inline-start: 0.5rem;
+  opacity: 60%;
+  transition: opacity 200ms ease-in-out;
+}
+
+.rhc-templates-databadge--selected::after {
+  content: "✓";
+  display: inline-block;
+  opacity: 100%;
+  text-align: center;
+  vertical-align: text-top;
+}
+
+/* ADD HOVER EFFECTS */
+.rhc-templates-databadge:hover {
+  background-color: var(--rhc-nav-bar-link-hover-background-color);
+  border-color: var(--utrecht-color-primary-600, #154273);
+  color: var(--utrecht-color-primary-600, #154273);
+}
+
+.rhc-templates-databadge:hover::after {
+  opacity: 100%;
+}
+
+/* ADD FOCUS STYLES */
+.rhc-templates-databadge:focus {
+  box-shadow: 0 0 0 2px var(--utrecht-color-primary-500, #06c);
+  outline: none;
+}
+
+/* ADD ACTIVE STYLES */
+.rhc-templates-databadge:active {
+  transform: translateY(0);
+}
+
+/* ADD SELECTED STATE STYLES */
+.rhc-templates-databadge--selected {
+  background-color: var(--utrecht-color-primary-600, #0052a3);
+  border-color: var(--utrecht-color-primary-600, #0052a3);
+  color: var(--utrecht-color-white, #fff);
+}
+
+.rhc-templates-databadge--selected:hover {
+  background-color: var(--utrecht-color-primary-600, #0052a3);
+  border-color: var(--utrecht-color-primary-700, #003d7a);
+  color: var(--utrecht-color-white, #fff);
+}
+
+/* ADD SCREEN READER SUPPORT */
+.rhc-templates-databadge__sr-only {
+  block-size: 1px;
+  clip: rect(0, 0, 0, 0);
+  inline-size: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+@media (width <= 780px) {
+  .rhc-active-filters {
+    padding-block: var(--rhc-space-150, 0.75rem);
+    padding-inline: var(--rhc-space-150, 0.75rem);
+  }
+
+  .rhc-active-filters__header .utrecht-heading {
+    font-size: 1rem;
+  }
 }
