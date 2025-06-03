@@ -82,3 +82,22 @@
   list-style-type: none;
   padding-inline-start: 0;
 }
+
+.rhc-search-form {
+  align-items: flex-end;
+  display: flex;
+}
+
+.rhc-search-form .utrecht-form-field {
+  min-inline-size: 300px;
+}
+
+.rhc-search-button {
+  border-radius: 0 4px 4px 0 !important;
+}
+
+.rhc-search-form .utrecht-textbox,
+.rhc-search-form .utrecht-form-field input {
+  border-radius: 4px 0 0 4px !important;
+  position: relative !important;
+}
