@@ -3478,6 +3478,12 @@
           }
         },
         "item": {
+          "row": {
+            "flex-direction": {
+              "value": "row",
+              "type": "flexDirection"
+            }
+          },
           "border-width": {
             "value": "{rhc.border-width.default}",
             "type": "borderWidth"
@@ -3486,9 +3492,21 @@
             "value": "{rhc.color.cool-grey.300}",
             "type": "color"
           },
+          "border-block-end-style": {
+            "value": "solid",
+            "type": "borderStyle"
+          },
           "color": {
             "value": "{rhc.color.foreground.default}",
             "type": "color"
+          },
+          "display": {
+            "value": "flex",
+            "type": "display"
+          },
+          "flex-direction": {
+            "value": "column",
+            "type": "flexDirection"
           }
         },
         "font-size": {
