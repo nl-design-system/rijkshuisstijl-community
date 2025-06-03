@@ -691,7 +691,7 @@
           "type": "fontWeights"
         },
         "semi-bold": {
-          "value": "550",
+          "value": "600",
           "type": "fontWeights"
         },
         "bold": {
@@ -9361,8 +9361,24 @@
           "type": "fontWeights"
         },
         "strong": {
-          "value": "{rhc.font-weight.semi-bold}",
+          "value": "600",
           "type": "fontWeights"
+        }
+      }
+    }
+  },
+  "overwrites/open-source/font": {
+    "rhc": {
+      "font-weight": {
+        "semi-bold": {
+          "value": "550",
+          "type": "fontWeights"
+        }
+      },
+      "font-family": {
+        "primary": {
+          "value": "RijksSans, Arial, Verdana, sans-serif",
+          "type": "fontFamilies"
         }
       }
     }
@@ -9577,8 +9593,7 @@
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
-        "components/data-summary": "enabled",
-        "overwrites/font-weight/bzk": "disabled"
+        "components/data-summary": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9672,8 +9687,7 @@
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
-        "components/data-summary": "enabled",
-        "overwrites/font-weight/bzk": "disabled"
+        "components/data-summary": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9769,8 +9783,7 @@
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "overwrites/oude rijkshuisstijl/blockqoute": "enabled",
-        "components/data-summary": "enabled",
-        "overwrites/font-weight/bzk": "disabled"
+        "components/data-summary": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9864,8 +9877,7 @@
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
-        "components/data-summary": "enabled",
-        "overwrites/font-weight/bzk": "disabled"
+        "components/data-summary": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9959,8 +9971,7 @@
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
-        "components/data-summary": "enabled",
-        "overwrites/font-weight/bzk": "disabled"
+        "components/data-summary": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10054,8 +10065,7 @@
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
-        "components/data-summary": "enabled",
-        "overwrites/font-weight/bzk": "disabled"
+        "components/data-summary": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10149,8 +10159,7 @@
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
-        "components/data-summary": "enabled",
-        "overwrites/font-weight/bzk": "disabled"
+        "components/data-summary": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10244,8 +10253,7 @@
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
-        "components/data-summary": "enabled",
-        "overwrites/font-weight/bzk": "disabled"
+        "components/data-summary": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10363,6 +10371,7 @@
       "overwrites/responsive/mobile",
       "overwrites/responsive/tablet",
       "overwrites/font-weight/bzk",
+      "overwrites/open-source/font",
       "overwrites/afwijkende keuzes/button"
     ]
   }
