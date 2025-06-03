@@ -135,6 +135,7 @@ export default function Componenten() {
                         {frameworkOptions.map((option) => (
                           <UnorderedListItem key={option}>
                             <FormFieldCheckboxOption
+                              checked={stagedFrameworks.includes(option)}
                               label={
                                 <>
                                   {option}
@@ -146,8 +147,6 @@ export default function Componenten() {
                                   </NumberBadge>
                                 </>
                               }
-                              checked={stagedFrameworks.includes(option)}
-                              label={option}
                               onChange={() => handleFrameworkChange(option)}
                             />
                           </UnorderedListItem>
