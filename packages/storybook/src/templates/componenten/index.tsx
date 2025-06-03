@@ -9,6 +9,7 @@ import {
   FormFieldTextInput,
   Heading,
   HeadingGroup,
+  NumberBadge,
   Paragraph,
   UnorderedList,
   UnorderedListItem,
@@ -47,6 +48,17 @@ export default function Componenten() {
     [debouncedSearchTerm, selectedFrameworks],
   );
 
+  const frameworkCounts: { [key: string]: number } = useMemo(
+    () =>
+      frameworkOptions.reduce(
+        (counts, framework) => {
+          counts[framework] = allComponentsData.filter((component) => component.frameworks.includes(framework)).length;
+          return counts;
+        },
+        {} as { [key: string]: number },
+      ),
+    [frameworkOptions, allComponentsData],
+  );
   const handleFrameworkChange = useCallback((framework: string) => {
     setSelectedFrameworks((prev) =>
       prev.includes(framework) ? prev.filter((f) => f !== framework) : [...prev, framework],
@@ -98,7 +110,20 @@ export default function Componenten() {
                       <UnorderedList>
                         {frameworkOptions.map((option) => (
                           <UnorderedListItem key={option}>
-                            <FormFieldCheckboxOption label={option} onChange={() => handleFrameworkChange(option)} />
+                            <FormFieldCheckboxOption
+                              label={
+                                <>
+                                  {option}
+                                  <NumberBadge
+                                    aria-label={`${option} (${frameworkCounts[option]} ${frameworkCounts[option] === 1 ? 'component' : 'componenten'})`}
+                                    className="rhc-checkbox-number-badge"
+                                  >
+                                    {frameworkCounts[option]}
+                                  </NumberBadge>
+                                </>
+                              }
+                              onChange={() => handleFrameworkChange(option)}
+                            />
                           </UnorderedListItem>
                         ))}
                       </UnorderedList>
