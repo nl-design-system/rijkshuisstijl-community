@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
+import readme from './figure.md';
 import { FigureCaptionComponent, FigureComponent, ImageComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<FigureComponent> = {
@@ -22,6 +23,13 @@ const meta: Meta<FigureComponent> = {
     borderEndStartRadius: undefined,
     borderStartEndRadius: undefined,
     borderStartStartRadius: undefined,
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
   },
   argTypes: {
     borderEndEndRadius: {

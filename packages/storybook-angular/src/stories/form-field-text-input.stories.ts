@@ -1,11 +1,19 @@
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { FormFieldTextInputComponent } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, type StoryObj } from '@storybook/angular';
+import readme from './form-field-text-input.md';
 
 const meta: Meta<FormFieldTextInputComponent> = {
   title: 'Rijkshuisstijl/Form field text input',
   id: 'rhc-angular-form-field-text-input',
   component: FormFieldTextInputComponent,
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
+  },
   argTypes: {
     inputId: {
       table: {

@@ -1,5 +1,6 @@
 import { FooterComponent } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, type StoryObj } from '@storybook/angular';
+import readme from './footer.md';
 
 const meta: Meta<FooterComponent> = {
   title: 'Rijkshuisstijl/Footer',
@@ -64,6 +65,13 @@ const meta: Meta<FooterComponent> = {
     preFooterMessage: 'Pre Footer Message',
     background: 'primary-filled',
     backtotop: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
   },
   render: ({ heading, background, backtotop, preFooter, preFooterMessage, appearanceLevel }) => ({
     template: `
