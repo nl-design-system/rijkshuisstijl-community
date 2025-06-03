@@ -25,4 +25,40 @@
     <ng-content></ng-content>
   </div>
 </div>
-<!--TODO: Footer-->
+<footer
+  rhc-footer
+  [backtotop]="true"
+  [heading]="'Heading'"
+  [appearanceLevel]="3"
+  [columns]="[
+    {
+      heading: 'Service',
+      appearanceLevel: 3,
+      items: [
+        { href: '#', label: 'Contact' },
+        { href: '#', label: 'Abonneren' },
+        { href: '#', label: 'RSS' },
+        { href: '#', label: 'Vacatures' },
+        { href: '#', label: 'Sitemap' },
+        { href: '#', label: 'Help' },
+        { href: '#', label: 'Archief' },
+      ],
+    },
+    {
+      heading: 'Over deze site',
+      appearanceLevel: 3,
+      items: [
+        { href: '#', label: 'Over deze organisatie' },
+        { href: '#', label: 'Wetten en regelingen' },
+        { href: '#', label: 'Privacy' },
+        { href: '#', label: 'Cookies' },
+        { href: '#', label: 'Toegankelijkheid' },
+        { href: '#', label: 'Open data' },
+        { href: '#', label: 'Kwetsbaarheid melden' },
+      ],
+    },
+  ]"
+  [subFooter]="{
+    items: [{ href: '#', label: 'Privacy' }],
+  }"
+></footer>
