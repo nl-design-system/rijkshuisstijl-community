@@ -1,5 +1,5 @@
 ---
-'@rijkshuisstijl-community/<package-name>': minor
+'@rijkshuisstijl-community/design-tokens': minor
 ---
 
 Toegevoegd: rhc.font-weight.default en rhc.font-weight.strong aan de common laag, zodat deelidentiteiten eenvoudiger hun font-weight kunnen instellen.
