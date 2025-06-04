@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './image.component.html',
   host: {
-    '[class.utrecht-image]': 'true',
-    '[class.utrecht-image--photo]': 'true',
+    '[class.utrecht-img]': 'true',
+    '[class.utrecht-img--photo]': 'true',
   },
 })
 export class ImageComponent {}
