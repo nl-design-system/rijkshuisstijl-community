@@ -45,7 +45,6 @@ export const ClickableDataBadge: React.FC<ClickableDataBadgeProps> = ({
       aria-pressed={isSelected}
       role="button"
       tabIndex={0}
-      title={`${isSelected ? 'Verwijder' : 'Voeg toe'} ${value} filter`}
       className={clsx(
         'rhc-templates-databadge',
         {
