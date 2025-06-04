@@ -57,8 +57,8 @@ const ActiveFiltersBadgeList: FC<ActiveFiltersBadgeListProps> = ({ onRemoveFilte
         {selectedFrameworks.map((framework) => (
           <DataBadgeButton
             className="rhc-active-filters__badge"
-            isSelected={true}
             key={`active-${framework}`}
+            pressed={true}
             value={framework}
             onClick={onRemoveFilter}
           >
@@ -231,8 +231,8 @@ export default function Componenten() {
                           <BadgeList className="rhc-templates-badgelist">
                             {component.frameworks.map((framework) => (
                               <DataBadgeButton
-                                isSelected={activeFilters.includes(framework)}
                                 key={framework}
+                                pressed={activeFilters.includes(framework)}
                                 value={framework}
                                 onClick={handleDataBadgeClick}
                               >

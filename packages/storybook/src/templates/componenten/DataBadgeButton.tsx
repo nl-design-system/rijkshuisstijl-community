@@ -5,7 +5,7 @@ import { KeyboardEvent, MouseEvent, ReactNode } from 'react';
 export interface DataBadgeButtonProps {
   children: ReactNode;
   className?: string;
-  isSelected?: boolean;
+  pressed?: boolean;
   // eslint-disable-next-line no-unused-vars
   onClick?: (value: string) => void;
   value: string;
@@ -14,7 +14,7 @@ export interface DataBadgeButtonProps {
 export const DataBadgeButton = ({
   children,
   className = '',
-  isSelected = false,
+  pressed = false,
   onClick,
   value,
 }: DataBadgeButtonProps) => {
@@ -41,14 +41,14 @@ export const DataBadgeButton = ({
   return (
     <DataBadge
       aria-describedby={`${value}-badge-help`}
-      aria-label={`${isSelected ? 'Verwijder' : 'Voeg toe'} ${value} filter`}
-      aria-pressed={isSelected}
+      aria-label={`${pressed ? 'Verwijder' : 'Voeg toe'} ${value} filter`}
+      aria-pressed={pressed}
       role="button"
       tabIndex={0}
       className={clsx(
         'rhc-templates-databadge',
         {
-          'rhc-templates-databadge--selected': isSelected,
+          'rhc-templates-databadge--selected': pressed,
         },
         className,
       )}
@@ -57,7 +57,7 @@ export const DataBadgeButton = ({
     >
       {children}
       <span className="rhc-templates-databadge__sr-only" id={`${value}-badge-help`}>
-        - Klik om filter te {isSelected ? 'verwijderen' : 'toevoegen'}
+        - Klik om filter te {pressed ? 'verwijderen' : 'toevoegen'}
       </span>
     </DataBadge>
   );
