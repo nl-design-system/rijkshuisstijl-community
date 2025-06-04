@@ -13,7 +13,6 @@
   padding-block: 0.25rem;
   padding-inline: 0.75rem;
   position: relative;
-  transition: all 200ms ease-in-out;
 }
 
 .rhc-templates-badgelist {
@@ -147,7 +146,6 @@
   font-size: 0.75em;
   margin-inline-start: 0.5rem;
   opacity: 60%;
-  transition: opacity 200ms ease-in-out;
 }
 
 .rhc-templates-databadge--selected::after {
@@ -211,5 +209,15 @@
 
   .rhc-active-filters__header .utrecht-heading {
     font-size: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rhc-templates-databadge {
+    transition: all 200ms ease-in-out;
+  }
+
+  .rhc-templates-databadge::after {
+    transition: opacity 200ms ease-in-out;
   }
 }
