@@ -3,17 +3,11 @@
 import {
   Button,
   Card,
-  Fieldset,
-  FieldsetLegend,
-  FormFieldCheckboxGroup,
-  FormFieldCheckboxOption,
   FormFieldTextInput,
   Heading,
   HeadingGroup,
   NumberBadge,
   Paragraph,
-  UnorderedList,
-  UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
 import { IconPlus, IconSearch } from '@tabler/icons-react';
 import { BadgeList, ButtonLink, DataBadge, Icon } from '@utrecht/component-library-react';
@@ -21,6 +15,7 @@ import { PageBody } from '@utrecht/page-body-react';
 import { ChangeEvent, useCallback, useMemo, useRef, useState } from 'react';
 import React from 'react';
 import { allComponentsData, ComponentData } from './components-data';
+import { ExpandableCheckboxGroup } from './expandableCheckboxGroup';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
@@ -125,41 +120,36 @@ export default function Componenten() {
           </search>
 
           <div className="rhc-container">
-            <form aria-labelledby="main-heading" onSubmit={handleFilterSubmit}>
-              <div className="rhc-grid-container__left">
-                <aside>
-                  <Fieldset>
-                    <FieldsetLegend>Framework</FieldsetLegend>
-                    <FormFieldCheckboxGroup>
-                      <UnorderedList>
-                        {frameworkOptions.map((option) => (
-                          <UnorderedListItem key={option}>
-                            <FormFieldCheckboxOption
-                              checked={stagedFrameworks.includes(option)}
-                              label={
-                                <>
-                                  {option}
-                                  <NumberBadge
-                                    aria-label={`${option} (${frameworkCounts[option]} ${frameworkCounts[option] === 1 ? 'component' : 'componenten'})`}
-                                    className="rhc-checkbox-number-badge"
-                                  >
-                                    {frameworkCounts[option]}
-                                  </NumberBadge>
-                                </>
-                              }
-                              onChange={() => handleFrameworkChange(option)}
-                            />
-                          </UnorderedListItem>
-                        ))}
-                      </UnorderedList>
-                    </FormFieldCheckboxGroup>
-                  </Fieldset>
+            <aside>
+              <search>
+                <form onSubmit={handleFilterSubmit}>
+                  <ExpandableCheckboxGroup
+                    legend="Framework"
+                    maxVisible={3}
+                    selectedOptions={selectedFrameworks}
+                    options={frameworkOptions.map((option) => ({
+                      label: (
+                        <>
+                          {option}
+                          <NumberBadge
+                            aria-label={`${option} (${frameworkCounts[option]} ${frameworkCounts[option] === 1 ? 'component' : 'componenten'})`}
+                            className="rhc-checkbox-number-badge"
+                          >
+                            {frameworkCounts[option]}
+                          </NumberBadge>
+                        </>
+                      ),
+                      value: option,
+                    }))}
+                    onOptionChange={handleFrameworkChange}
+                  />
                   <Button appearance="secondary-action-button" type="submit">
                     Filter
                   </Button>
-                </aside>
-              </div>
-            </form>
+                </form>
+              </search>
+            </aside>
+
             <div aria-atomic="true" aria-live="polite" className="rhc-grid-container__right">
               <div className="rhc-componenten-toevoegen">
                 {/* TODO: change to correct href */}
