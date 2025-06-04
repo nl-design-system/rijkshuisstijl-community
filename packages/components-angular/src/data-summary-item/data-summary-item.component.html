@@ -1,0 +1,31 @@
+<div
+  [ngClass]="{ 'rhc-data-summary__item-row': appearance === 'Row', 'rhc-data-summary__item': appearance === 'Column' }"
+>
+  <dt
+    [ngClass]="{
+      'rhc-data-summary__item-key-row': appearance === 'Row',
+      'rhc-data-summary__item-key': appearance === 'Column',
+    }"
+  >
+    {{ key }}
+  </dt>
+  <dd
+    [ngClass]="{
+      'rhc-data-summary__item-value-row': appearance === 'Row',
+      'rhc-data-summary__item-value': appearance === 'Column',
+    }"
+  >
+    {{ value }}
+  </dd>
+  @if (href && actionLabel) {
+    <rhc-link
+      [href]="href"
+      [ngClass]="{
+        'rhc-data-summary__item-action-row': appearance === 'Row',
+        'rhc-data-summary__item-action': appearance === 'Column',
+      }"
+    >
+      {{ actionLabel }}
+    </rhc-link>
+  }
+</div>

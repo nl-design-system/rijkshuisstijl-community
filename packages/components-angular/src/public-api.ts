@@ -29,3 +29,4 @@ export * from './navbar-item/heading-item.directive';
 export * from './navbar-item/end-item.directive';
 export * from './footer/footer.component';
 export * from './data-summary/data-summary.component';
+export * from './data-summary-item/data-summary-item.component';
