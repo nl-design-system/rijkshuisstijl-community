@@ -127,8 +127,8 @@ export default function Componenten() {
 
               {filteredComponents.length > 0 && (
                 <ol className="rhc-ordered-list">
-                  {filteredComponents.map((component) => (
-                    <li key={component.heading}>
+                  {filteredComponents.map((component, index, array) => (
+                    <li aria-posinset={index + 1} aria-setsize={array.length} key={component.heading}>
                       <Card
                         className="rhc-templates-card"
                         description={<Paragraph>{component.description}</Paragraph>}
