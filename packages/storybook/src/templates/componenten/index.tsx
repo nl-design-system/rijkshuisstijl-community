@@ -16,7 +16,7 @@ import {
 import { BadgeList } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 import { ChangeEvent, FC, useCallback, useEffect, useMemo, useState } from 'react';
-import { ClickableDataBadge } from './clickableDataBadge';
+import { DataBadgeButton } from './DataBadgeButton';
 import { allComponentsData, ComponentData } from './components-data';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
@@ -55,7 +55,7 @@ const ActiveFiltersBadgeList: FC<ActiveFiltersBadgeListProps> = ({ onRemoveFilte
       </div>
       <BadgeList className="rhc-active-filters__list">
         {selectedFrameworks.map((framework) => (
-          <ClickableDataBadge
+          <DataBadgeButton
             className="rhc-active-filters__badge"
             isSelected={true}
             key={`active-${framework}`}
@@ -63,7 +63,7 @@ const ActiveFiltersBadgeList: FC<ActiveFiltersBadgeListProps> = ({ onRemoveFilte
             onClick={onRemoveFilter}
           >
             {framework}
-          </ClickableDataBadge>
+          </DataBadgeButton>
         ))}
       </BadgeList>
     </div>
@@ -230,14 +230,14 @@ export default function Componenten() {
                         >
                           <BadgeList className="rhc-templates-badgelist">
                             {component.frameworks.map((framework) => (
-                              <ClickableDataBadge
+                              <DataBadgeButton
                                 isSelected={activeFilters.includes(framework)}
                                 key={framework}
                                 value={framework}
                                 onClick={handleDataBadgeClick}
                               >
                                 {framework}
-                              </ClickableDataBadge>
+                              </DataBadgeButton>
                             ))}
                           </BadgeList>
                         </Card>

@@ -2,7 +2,7 @@ import { DataBadge } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { KeyboardEvent, MouseEvent, ReactNode } from 'react';
 
-interface ClickableDataBadgeProps {
+export interface DataBadgeButtonProps {
   children: ReactNode;
   className?: string;
   isSelected?: boolean;
@@ -11,13 +11,13 @@ interface ClickableDataBadgeProps {
   value: string;
 }
 
-export const ClickableDataBadge = ({
+export const DataBadgeButton = ({
   children,
   className = '',
   isSelected = false,
   onClick,
   value,
-}: ClickableDataBadgeProps) => {
+}: DataBadgeButtonProps) => {
   const handleClick = (event: MouseEvent) => {
     event.preventDefault();
     event.stopPropagation();
