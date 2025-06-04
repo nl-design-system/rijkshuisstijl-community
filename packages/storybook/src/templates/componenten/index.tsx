@@ -47,9 +47,9 @@ const ActiveFiltersBadgeList: FC<ActiveFiltersBadgeListProps> = ({ onRemoveFilte
   if (selectedFrameworks.length === 0) return null;
 
   return (
-    <div aria-label="Actieve filters" className="rhc-active-filters" role="region">
+    <div aria-labelledby="actieve-filters-heading" className="rhc-active-filters" role="region">
       <div className="rhc-active-filters__header">
-        <Heading appearanceLevel={4} level={3}>
+        <Heading appearanceLevel={4} id="actieve-filters-heading" level={3}>
           Actieve filters:
         </Heading>
       </div>
