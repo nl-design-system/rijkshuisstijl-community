@@ -40,18 +40,18 @@ export const ClickableDataBadge: React.FC<ClickableDataBadgeProps> = ({
   return (
     <DataBadge
       aria-describedby={`${value}-badge-help`}
-      aria-label={`${isSelected ? 'Remove' : 'Add'} ${value} filter`}
+      aria-label={`${isSelected ? 'Verwijder' : 'Voeg toe'} ${value} filter`}
       aria-pressed={isSelected}
       className={`rhc-templates-databadge ${isSelected ? 'rhc-templates-databadge--selected' : ''} ${className}`.trim()}
       role="button"
       tabIndex={0}
-      title={`${isSelected ? 'Remove' : 'Add'} ${value} filter`}
+      title={`${isSelected ? 'Verwijder' : 'Voeg toe'} ${value} filter`}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
     >
       {children}
       <span className="rhc-templates-databadge__sr-only" id={`${value}-badge-help`}>
-        - Click to {isSelected ? 'remove' : 'add'} filter
+        - Click to {isSelected ? 'verwijderen' : 'toevoegen'} filter
       </span>
     </DataBadge>
   );
