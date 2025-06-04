@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
+import readme from './action-group.md';
 import { ActionGroupComponent, ButtonComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<ActionGroupComponent> = {
@@ -14,6 +15,13 @@ const meta: Meta<ActionGroupComponent> = {
   },
   args: {
     direction: 'column',
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
   },
   render: ({ direction }) => ({
     template: `<rhc-action-group direction="${direction}">

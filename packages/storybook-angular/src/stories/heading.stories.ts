@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
+import readme from './heading.md';
 import { HeadingComponent, headingLevels } from '../../../components-angular/src/public-api';
 
 const meta: Meta<HeadingComponent> = {
@@ -19,6 +20,13 @@ const meta: Meta<HeadingComponent> = {
   },
   args: {
     level: 1,
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
   },
   render: ({ level, appearanceLevel }) => ({
     template: `<rhc-heading [level]=${level} ${appearanceLevel ? `[appearanceLevel]=${appearanceLevel}` : ''}>

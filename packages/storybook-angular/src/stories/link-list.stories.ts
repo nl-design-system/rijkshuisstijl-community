@@ -1,5 +1,6 @@
 import { moduleMetadata } from '@storybook/angular';
 import type { Meta, StoryObj } from '@storybook/angular';
+import readme from './link-list.md';
 import {
   ColumnLayoutComponent,
   IconComponent,
@@ -28,6 +29,13 @@ const meta: Meta<StoryType> = {
   },
   args: {
     hasIcons: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
   },
   render: ({ hasIcons }) => ({
     template: `

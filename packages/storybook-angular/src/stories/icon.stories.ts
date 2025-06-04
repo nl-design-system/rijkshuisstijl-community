@@ -1,10 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/angular';
+import readme from './icon.md';
 import { IconComponent, NlFlagComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<IconComponent> = {
   title: 'Rijkshuisstijl/Icon',
   id: 'rhc-angular-icon',
   component: IconComponent,
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
+  },
   argTypes: {
     icon: {
       description: 'Icon name from Tabler Icons',

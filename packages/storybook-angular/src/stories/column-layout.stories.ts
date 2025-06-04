@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
+import readme from './column-layout.md';
 import {
   ColumnLayoutComponent,
   HeadingComponent,
@@ -17,6 +18,13 @@ const meta: Meta<ColumnLayoutComponent> = {
   },
   args: {
     rule: false,
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
   },
   render: ({ rule }) => ({
     template: `

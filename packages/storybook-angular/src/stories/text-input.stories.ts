@@ -1,5 +1,6 @@
 import { TextInputComponent } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, type StoryObj } from '@storybook/angular';
+import readme from './text-input.md';
 
 type StoryType = TextInputComponent & {
   type: string;
@@ -34,7 +35,13 @@ const meta: Meta<StoryType> = {
     readonly: false,
     type: 'text',
   },
-  parameters: {},
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
+  },
   render: ({ disabled, required, readonly, invalid, type }) => ({
     template: `
     <input rhc-text-input
