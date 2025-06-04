@@ -11,13 +11,13 @@ interface ClickableDataBadgeProps {
   value: string;
 }
 
-export const ClickableDataBadge: React.FC<ClickableDataBadgeProps> = ({
+export const ClickableDataBadge = ({
   children,
   className = '',
   isSelected = false,
   onClick,
   value,
-}) => {
+}: ClickableDataBadgeProps) => {
   const handleClick = (event: React.MouseEvent) => {
     event.preventDefault();
     event.stopPropagation();
