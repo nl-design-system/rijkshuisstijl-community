@@ -1,9 +1,9 @@
 import { DataBadge } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import React from 'react';
+import { KeyboardEvent, MouseEvent, ReactNode } from 'react';
 
 interface ClickableDataBadgeProps {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   isSelected?: boolean;
   // eslint-disable-next-line no-unused-vars
@@ -18,7 +18,7 @@ export const ClickableDataBadge = ({
   onClick,
   value,
 }: ClickableDataBadgeProps) => {
-  const handleClick = (event: React.MouseEvent) => {
+  const handleClick = (event: MouseEvent) => {
     event.preventDefault();
     event.stopPropagation();
     // Force focus away from parent link to prevent navigation
@@ -28,7 +28,7 @@ export const ClickableDataBadge = ({
     }
   };
 
-  const handleKeyDown = (event: React.KeyboardEvent) => {
+  const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       event.stopPropagation();
