@@ -84,8 +84,8 @@
 
 .rhc-active-filters {
   align-items: flex-start;
-  background-color: var(--utrecht-color-grey-50, #f8f9fa);
-  border: 1px solid var(--utrecht-color-grey-200, #e9ecef);
+  background-color: var(--utrecht-color-grey-50);
+  border: 1px solid var(--utrecht-color-grey-200);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -114,9 +114,9 @@
 }
 
 .rhc-active-filters__badge {
-  background-color: var(--utrecht-color-primary-500, #06c);
-  border-color: var(--utrecht-color-primary-600, #0052a3);
-  color: var(--utrecht-color-white, #fff);
+  background-color: var(--utrecht-color-primary-500);
+  border-color: var(--utrecht-color-primary-600);
+  color: var(--utrecht-color-white);
 }
 
 .rhc-active-filters__badge::after {
@@ -128,8 +128,8 @@
 }
 
 .rhc-active-filters__badge:hover {
-  background-color: var(--utrecht-color-danger-500, #dc3545);
-  border-color: var(--utrecht-color-danger-600, #c82333);
+  background-color: var(--utrecht-color-danger-500);
+  border-color: var(--utrecht-color-danger-600);
 }
 
 .rhc-active-filters__badge:hover::after {
@@ -154,8 +154,8 @@
 /* ADD HOVER EFFECTS */
 .rhc-templates-databadge:hover {
   background-color: var(--rhc-nav-bar-link-hover-background-color);
-  border-color: var(--utrecht-color-primary-600, #154273);
-  color: var(--utrecht-color-primary-600, #154273);
+  border-color: var(--utrecht-color-primary-600);
+  color: var(--utrecht-color-primary-600);
 }
 
 .rhc-templates-databadge:hover::after {
@@ -164,26 +164,21 @@
 
 /* ADD FOCUS STYLES */
 .rhc-templates-databadge:focus {
-  box-shadow: 0 0 0 2px var(--utrecht-color-primary-500, #06c);
+  box-shadow: 0 0 0 2px var(--utrecht-color-primary-500);
   outline: none;
-}
-
-/* ADD ACTIVE STYLES */
-.rhc-templates-databadge:active {
-  transform: translateY(0);
 }
 
 /* ADD SELECTED STATE STYLES */
 .rhc-templates-databadge--selected {
-  background-color: var(--utrecht-color-primary-600, #0052a3);
-  border-color: var(--utrecht-color-primary-600, #0052a3);
-  color: var(--utrecht-color-white, #fff);
+  background-color: var(--utrecht-color-primary-600);
+  border-color: var(--utrecht-color-primary-600);
+  color: var(--utrecht-color-white);
 }
 
 .rhc-templates-databadge--selected:hover {
-  background-color: var(--utrecht-color-primary-600, #0052a3);
-  border-color: var(--utrecht-color-primary-700, #003d7a);
-  color: var(--utrecht-color-white, #fff);
+  background-color: var(--utrecht-color-primary-600);
+  border-color: var(--utrecht-color-primary-700);
+  color: var(--utrecht-color-white);
 }
 
 /* ADD SCREEN READER SUPPORT */
