@@ -3,17 +3,11 @@
 import {
   Button,
   Card,
-  Fieldset,
-  FieldsetLegend,
-  FormFieldCheckboxGroup,
-  FormFieldCheckboxOption,
   FormFieldTextInput,
   Heading,
   HeadingGroup,
   NumberBadge,
   Paragraph,
-  UnorderedList,
-  UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
 import { IconPlus, IconSearch } from '@tabler/icons-react';
 import { BadgeList, ButtonLink, DataBadge, Icon } from '@utrecht/component-library-react';
@@ -126,51 +120,32 @@ export default function Componenten() {
           </search>
 
           <div className="rhc-container">
-            <form aria-labelledby="main-heading" onSubmit={handleFilterSubmit}>
-              <div className="rhc-grid-container__left">
-                <aside>
-                  <Fieldset>
-                    <FieldsetLegend>Framework</FieldsetLegend>
-                    <FormFieldCheckboxGroup>
-                      <UnorderedList>
-                        {frameworkOptions.map((option) => (
-                          <UnorderedListItem key={option}>
-                            <FormFieldCheckboxOption
-                              checked={stagedFrameworks.includes(option)}
-                              label={
-                                <>
-                                  {option}
-                                  <NumberBadge
-                                    aria-label={`${option} (${frameworkCounts[option]} ${frameworkCounts[option] === 1 ? 'component' : 'componenten'})`}
-                                    className="rhc-checkbox-number-badge"
-                                  >
-                                    {frameworkCounts[option]}
-                                  </NumberBadge>
-                                </>
-                              }
-                              onChange={() => handleFrameworkChange(option)}
-                            />
-                          </UnorderedListItem>
-                        ))}
-                      </UnorderedList>
-                    </FormFieldCheckboxGroup>
-                  </Fieldset>
-                  <Button appearance="secondary-action-button" type="submit">
-                    Filter
-                  </Button>
-                </aside>
-              </div>
-            </form>
             <aside>
               <search>
-                <form onSubmit={(e) => e.preventDefault()}>
+                <form onSubmit={handleFilterSubmit}>
                   <ExpandableCheckboxGroup
                     legend="Framework"
                     maxVisible={3}
-                    options={frameworkOptions}
                     selectedOptions={selectedFrameworks}
+                    options={frameworkOptions.map((option) => ({
+                      label: (
+                        <>
+                          {option}
+                          <NumberBadge
+                            aria-label={`${option} (${frameworkCounts[option]} ${frameworkCounts[option] === 1 ? 'component' : 'componenten'})`}
+                            className="rhc-checkbox-number-badge"
+                          >
+                            {frameworkCounts[option]}
+                          </NumberBadge>
+                        </>
+                      ),
+                      value: option,
+                    }))}
                     onOptionChange={handleFrameworkChange}
                   />
+                  <Button appearance="secondary-action-button" type="submit">
+                    Filter
+                  </Button>
                 </form>
               </search>
             </aside>

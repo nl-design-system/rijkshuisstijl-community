@@ -7,8 +7,12 @@ import {
 import './expandable-checkbox-group.css';
 import { ReactNode } from 'react';
 
+interface Option {
+  value: string;
+  label: ReactNode;
+}
 interface ExpandableCheckboxGroupProps {
-  options: string[];
+  options: Option[];
   selectedOptions: string[];
   // eslint-disable-next-line no-unused-vars
   onOptionChange: (_option: string) => void;
@@ -29,12 +33,12 @@ export function ExpandableCheckboxGroup({
   const actualExtraOptions = options.slice(actualMaxVisible);
   const actualShowExpandable = actualExtraOptions.length >= 1;
 
-  const renderCheckboxOption = (option: string) => (
-    <div key={option}>
+  const renderCheckboxOption = ({ label, value }: Option) => (
+    <div key={value}>
       <FormFieldCheckboxOption
-        checked={selectedOptions.includes(option)}
-        label={option}
-        onChange={() => onOptionChange(option)}
+        defaultChecked={selectedOptions.includes(value)}
+        label={label}
+        onChange={() => onOptionChange(value)}
       />
     </div>
   );
