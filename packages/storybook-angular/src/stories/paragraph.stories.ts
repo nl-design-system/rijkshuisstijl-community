@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
+import readme from './paragraph.md';
 import { appearanceOptions, ParagraphComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<ParagraphComponent> = {
@@ -14,6 +15,13 @@ const meta: Meta<ParagraphComponent> = {
   },
   args: {
     appearance: undefined,
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
   },
   render: ({ appearance }) => ({
     template: `<rhc-paragraph [appearance]="'${appearance}'" >

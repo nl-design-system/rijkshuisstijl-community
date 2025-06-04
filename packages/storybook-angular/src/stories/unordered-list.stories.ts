@@ -1,10 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/angular';
+import readme from './unordered-list.md';
 import { UnorderedListComponent, UnorderedListItemComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<UnorderedListComponent> = {
   title: 'Rijkshuisstijl/Unordered list',
   id: 'rhc-angular-unordered-list',
   component: UnorderedListComponent,
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
+  },
   render: () => ({
     template: `
     <ul rhc-unordered-list>

@@ -1,5 +1,6 @@
 import { moduleMetadata } from '@storybook/angular';
 import type { Meta, StoryObj } from '@storybook/angular';
+import readme from './link-list-link.md';
 import {
   IconComponent,
   LinkListItemComponent,
@@ -31,6 +32,13 @@ const meta: Meta<StoryType> = {
   args: {
     href: '#',
     label: 'Label',
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
   },
   render: ({ href, label }) => ({
     template: `

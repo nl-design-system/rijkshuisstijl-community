@@ -67,9 +67,9 @@ export class FormFieldTextInputComponent implements ControlValueAccessor {
   private onTouched: Function = () => {};
 
   onValueChange(event: Event): void {
-    const value = (event.target as HTMLInputElement).value;
-    this.value = value;
-    this.onChange(value);
+    const input = event.target as HTMLInputElement;
+    this.value = input.value;
+    this.onChange(this.value);
   }
 
   markAsTouched(): void {

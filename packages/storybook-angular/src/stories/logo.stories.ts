@@ -1,5 +1,6 @@
 import { moduleMetadata } from '@storybook/angular';
 import type { Meta, StoryObj } from '@storybook/angular';
+import readme from './logo.md';
 import { DutchMapIconComponent, IconComponent, LogoComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<LogoComponent> = {
@@ -26,6 +27,13 @@ const meta: Meta<LogoComponent> = {
   args: {
     organisation: 'Voorbeeld organisatie',
     subtitle: 'Voorbeeld ondertitel',
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
   },
   render: ({ organisation, subtitle }) => ({
     template: `<figure rhc-logo [organisation]="'${organisation}'" ${subtitle ? `subtitle="'${subtitle}'"` : ''}>

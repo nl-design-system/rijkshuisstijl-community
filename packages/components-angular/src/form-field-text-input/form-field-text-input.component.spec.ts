@@ -99,4 +99,10 @@ describe('FormFieldTextInputInForm', () => {
     input.dispatchEvent(new Event('input'));
     expect(component.form.get('username')?.value).toBe('my-username');
   });
+
+  it('updates the form control value when changing the value programmatically', () => {
+    expect(component.form.get('username')?.value).toBe('');
+    component.form.controls.username.setValue('my-username');
+    expect(component.form.get('username')?.value).toBe('my-username');
+  });
 });
