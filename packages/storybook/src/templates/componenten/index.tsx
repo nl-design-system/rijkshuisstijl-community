@@ -1,5 +1,6 @@
 'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
 
+import { Pagination } from '@amsterdam/design-system-react';
 import {
   Button,
   Card,
@@ -20,6 +21,7 @@ import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
 import './index.css';
+import '@amsterdam/design-system-css/dist/index.css';
 
 const frameworkOptions: string[] = ['CSS', 'React', 'Angular', 'Web Components', 'Twig'];
 
@@ -208,6 +210,14 @@ export default function Componenten() {
                     ))}
                   </ol>
                 )}
+                <Pagination
+                  maxVisiblePages={5}
+                  page={1}
+                  totalPages={10}
+                  linkTemplate={function Xs(pageNumber) {
+                    return 'url' + pageNumber;
+                  }}
+                />
               </div>
             </div>
           </div>
