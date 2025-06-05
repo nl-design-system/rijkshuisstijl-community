@@ -1,7 +1,7 @@
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { FormFieldTextInputComponent } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, type StoryObj } from '@storybook/angular';
 import readme from './form-field-text-input.md';
+import { FormFieldTextInputComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<FormFieldTextInputComponent> = {
   title: 'Rijkshuisstijl/Form field text input',
