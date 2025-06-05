@@ -1,6 +1,6 @@
-import { type Meta, type StoryObj } from '@storybook/angular';
+import { type Meta, moduleMetadata, type StoryObj } from '@storybook/angular';
 import readme from './data-summary-item.md';
-import { DataSummaryItemComponent } from '../../../components-angular/src/public-api';
+import { DataSummaryComponent, DataSummaryItemComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<DataSummaryItemComponent> = {
   title: 'Rijkshuisstijl/Data Summary Item',
@@ -13,6 +13,11 @@ const meta: Meta<DataSummaryItemComponent> = {
       },
     },
   },
+  decorators: [
+    moduleMetadata({
+      imports: [DataSummaryComponent, DataSummaryItemComponent],
+    }),
+  ],
   args: {
     key: 'Beest van Bodmin',
     value: 'Een grote katachtige die voorkomt op Bodmin Moor.',
@@ -45,7 +50,7 @@ const meta: Meta<DataSummaryItemComponent> = {
   },
   render: ({ key, value, href, actionLabel, appearance }) => ({
     template: `
-      <rhc-data-summary-item [key]="'${key}'" [value]="'${value}'" [href]="'${href}'" [actionLabel]="'${actionLabel}'" [appearance]="'${appearance}'"></rhc-data-summary-item>
+      <rhc-data-summary><rhc-data-summary-item [key]="'${key}'" [value]="'${value}'" [href]="'${href}'" [actionLabel]="'${actionLabel}'" [appearance]="'${appearance}'"></rhc-data-summary-item></rhc-data-summary>
     `,
     props: {
       key,
