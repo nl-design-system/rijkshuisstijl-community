@@ -1,6 +1,6 @@
-import { TextInputComponent } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, type StoryObj } from '@storybook/angular';
 import readme from './text-input.md';
+import { TextInputComponent } from '../../../components-angular/src/public-api';
 
 type StoryType = TextInputComponent & {
   type: string;
