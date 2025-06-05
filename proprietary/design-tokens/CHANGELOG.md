@@ -1,5 +1,17 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 2.1.0
+
+### Minor Changes
+
+- 14334a4: Tokenset `components/summary-list` hernoemd naar `component/data-summary`.
+- 76ebb9f: - Heading kleur aangepast van primary naar lintblauw.
+  - Nieuwe overwrites toegevoegd voor footer- en navbar-stijlen, met de volgende opties:
+    - Full color met lintblauwe achtergrond
+    - Full color met primary achtergrond
+    - Witte achtergrond met border in primary kleur
+    - Witte achtergrond met border in lintblauwe kleur
+
 ## 2.0.0
 
 ### Major Changes
