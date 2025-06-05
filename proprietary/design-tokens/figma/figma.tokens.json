@@ -691,7 +691,7 @@
           "type": "fontWeights"
         },
         "semi-bold": {
-          "value": "600",
+          "value": "550",
           "type": "fontWeights"
         },
         "bold": {
@@ -713,7 +713,7 @@
       },
       "font-family": {
         "primary": {
-          "value": "Fira Sans, Arial, Verdana, sans-serif",
+          "value": "RijksoverheidSansWeb, Fira Sans, Arial, Verdana, sans-serif",
           "type": "fontFamilies"
         },
         "secondary": {
@@ -1048,10 +1048,6 @@
           },
           "default": {
             "value": "{rhc.font-size.xs.desktop}",
-            "type": "fontSizes"
-          },
-          "small": {
-            "value": "{rhc.font-size.xs.tablet}",
             "type": "fontSizes"
           }
         }
@@ -3332,7 +3328,7 @@
           "type": "spacing"
         },
         "padding-block": {
-          "value": "{rhc.space.0}",
+          "value": "{rhc.space.100}",
           "type": "spacing"
         }
       }
@@ -5220,7 +5216,7 @@
           },
           "content": {
             "font-size": {
-              "value": "{rhc.font-size.body.small}",
+              "value": "{rhc.font-size.body.default}",
               "type": "fontSizes"
             },
             "column-gap": {
@@ -5418,7 +5414,7 @@
           },
           "content": {
             "font-size": {
-              "value": "{rhc.font-size.body.small}",
+              "value": "{rhc.font-size.body.default}",
               "type": "fontSizes"
             },
             "column-gap": {
@@ -9361,24 +9357,8 @@
           "type": "fontWeights"
         },
         "strong": {
-          "value": "600",
+          "value": "{rhc.font-weight.semi-bold}",
           "type": "fontWeights"
-        }
-      }
-    }
-  },
-  "overwrites/open-source/font": {
-    "rhc": {
-      "font-weight": {
-        "semi-bold": {
-          "value": "550",
-          "type": "fontWeights"
-        }
-      },
-      "font-family": {
-        "primary": {
-          "value": "RijksSans, Arial, Verdana, sans-serif",
-          "type": "fontFamilies"
         }
       }
     }
@@ -10371,7 +10351,6 @@
       "overwrites/responsive/mobile",
       "overwrites/responsive/tablet",
       "overwrites/font-weight/bzk",
-      "overwrites/open-source/font",
       "overwrites/afwijkende keuzes/button"
     ]
   }
