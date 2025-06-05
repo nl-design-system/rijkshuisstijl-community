@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/components-angular
 
+## 1.2.0
+
+### Minor Changes
+
+- 1a44957: Added Angular Footer component
+- fdb336f: Changed Angular dependencies to version: ~19.2.0
+
 ## 1.1.0
 
 ### Minor Changes
