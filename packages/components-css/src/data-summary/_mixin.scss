@@ -12,6 +12,7 @@
   display: var(--rhc-data-summary-item-display);
   flex-direction: var(--rhc-data-summary-item-flex-direction);
 }
+
 @mixin rhc-data-summary__item-row {
   border-block-end-style: var(--rhc-data-summary-item-border-block-end-style);
   border-color: var(--rhc-data-summary-item-border-color);
@@ -19,7 +20,12 @@
   color: var(--rhc-data-summary-item-color);
   display: var(--rhc-data-summary-item-display);
   flex-direction: var(--rhc-data-summary-item-row-flex-direction);
+
+  @media (width <= 768px) {
+    flex-direction: column;
+  }
 }
+
 @mixin rhc-data-summary__item-action {
   padding-block-end: var(--rhc-data-summary-item-action-padding-block-end);
   padding-block-start: var(--rhc-data-summary-item-action-padding-block-start);
