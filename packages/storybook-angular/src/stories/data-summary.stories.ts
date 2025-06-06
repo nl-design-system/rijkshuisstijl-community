@@ -47,15 +47,14 @@ const meta: Meta<DataSummaryStoryComponent> = {
       },
       {
         key: 'Morgawr',
-        value: 'Een zeeslang.',
-        href: '#',
-        actionLabel: '',
+        value:
+          'In de folklore van Cornwall is de Morgawr een zeeslang die naar verluidt in de zee bij Falmouth Bay leeft, maar een academisch artikel uit 2022 beschrijft hoe het verhaal begon als een hoax.',
       },
       {
         key: 'Uilenman',
         value: 'Een reusachtig uilachtig wezen.',
         href: '#',
-        actionLabel: 'Lees de uitgebreide getuigenissen en de mogelijke verklaringen achter dit fenomeen',
+        actionLabel: 'Lees meer over de Uilenman',
       },
     ];
 
@@ -66,7 +65,7 @@ const meta: Meta<DataSummaryStoryComponent> = {
             .map(
               ({ key, value, href, actionLabel }) =>
                 `<rhc-data-summary-item key="${key}" value="${value}"${
-                  withActions ? ` href="${href}" actionLabel="${actionLabel}"` : ''
+                  withActions && href && actionLabel ? ` href="${href}" actionLabel="${actionLabel}"` : ''
                 }></rhc-data-summary-item>`,
             )
             .join('')}
