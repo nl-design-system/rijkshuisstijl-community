@@ -29,6 +29,10 @@
   padding-block-start: var(--_rhc-data-summary-item-action-padding-block-start);
   padding-inline-end: var(--_rhc-data-summary-item-action-padding-inline-end);
   padding-inline-start: var(--_rhc-data-summary-item-action-padding-inline-start);
+
+  @media (width > 768px) {
+    flex-basis: 20%;
+  }
 }
 
 @mixin rhc-data-summary--column__item-action {
@@ -77,9 +81,6 @@
     --_rhc-data-summary-item-key-padding-inline-start: var(--rhc-data-summary-item-key-row-padding-inline-start);
 
     flex-basis: 20%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-wrap: nowrap;
   }
 }
 
