@@ -6,7 +6,6 @@ import { LinkComponent } from '../link/link.component';
   selector: 'rhc-data-summary-item',
   imports: [CommonModule, LinkComponent],
   templateUrl: './data-summary-item.component.html',
-  styleUrl: './data-summary-item.component.css',
 })
 export class DataSummaryItemComponent {
   @Input() key: string = '';

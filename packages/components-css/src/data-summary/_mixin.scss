@@ -34,6 +34,7 @@
 }
 
 @mixin rhc-data-summary__item-action-row {
+  margin-inline-start: auto;
   padding-block-end: var(--rhc-data-summary-item-action-row-padding-block-end);
   padding-block-start: var(--rhc-data-summary-item-action-row-padding-block-start);
   padding-inline-end: var(--rhc-data-summary-item-action-row-padding-inline-end);
@@ -49,15 +50,20 @@
 }
 
 @mixin rhc-data-summary__item-key-row {
+  flex-basis: 20%;
   font-weight: var(--rhc-data-summary-item-key-font-weight);
+  overflow: hidden;
   padding-block-end: var(--rhc-data-summary-item-key-row-padding-block-end);
   padding-block-start: var(--rhc-data-summary-item-key-row-padding-block-start);
   padding-inline-end: var(--rhc-data-summary-item-key-row-padding-inline-end);
   padding-inline-start: var(--rhc-data-summary-item-key-row-padding-inline-start);
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
 }
 
 @mixin rhc-data-summary__item-value {
   font-weight: var(--rhc-data-summary-item-value-font-weight);
+  margin-inline-start: 0;
   padding-block-end: var(--rhc-data-summary-item-value-padding-block-end);
   padding-block-start: var(--rhc-data-summary-item-value-padding-block-start);
   padding-inline-end: var(--rhc-data-summary-item-value-padding-inline-end);
@@ -66,6 +72,7 @@
 
 @mixin rhc-data-summary__item-value-row {
   font-weight: var(--rhc-data-summary-item-value-row-font-weight);
+  margin-inline-start: 0;
   padding-block-end: var(--rhc-data-summary-item-value-row-padding-block-end);
   padding-block-start: var(--rhc-data-summary-item-value-row-padding-block-start);
   padding-inline-end: var(--rhc-data-summary-item-value-row-padding-inline-end);
