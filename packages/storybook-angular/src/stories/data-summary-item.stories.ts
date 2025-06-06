@@ -2,7 +2,7 @@ import { type Meta, moduleMetadata, type StoryObj } from '@storybook/angular';
 import readme from './data-summary-item.md';
 import { DataSummaryComponent, DataSummaryItemComponent } from '../../../components-angular/src/public-api';
 
-const meta: Meta<DataSummaryItemComponent> = {
+const meta: Meta<DataSummaryItemComponent & DataSummaryComponent> = {
   title: 'Rijkshuisstijl/Data Summary Item',
   id: 'rhc-data-summary-item',
   component: DataSummaryItemComponent,
@@ -50,7 +50,7 @@ const meta: Meta<DataSummaryItemComponent> = {
   },
   render: ({ key, value, href, actionLabel, appearance }) => ({
     template: `
-      <rhc-data-summary><rhc-data-summary-item [key]="'${key}'" [value]="'${value}'" [href]="'${href}'" [actionLabel]="'${actionLabel}'" [appearance]="'${appearance}'"></rhc-data-summary-item></rhc-data-summary>
+      <rhc-data-summary [appearance]="'${appearance}'"><rhc-data-summary-item [key]="'${key}'" [value]="'${value}'" [href]="'${href}'" [actionLabel]="'${actionLabel}'"></rhc-data-summary-item></rhc-data-summary>
     `,
     props: {
       key,
@@ -64,4 +64,4 @@ const meta: Meta<DataSummaryItemComponent> = {
 
 export default meta;
 
-export const Default: StoryObj<DataSummaryItemComponent> = {};
+export const Default: StoryObj<DataSummaryItemComponent & DataSummaryComponent> = {};

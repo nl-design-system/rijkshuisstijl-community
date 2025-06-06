@@ -12,5 +12,4 @@ export class DataSummaryItemComponent {
   @Input() value: string = '';
   @Input() href?: string;
   @Input() actionLabel?: string;
-  @Input() appearance: 'Column' | 'Row' = 'Column';
 }

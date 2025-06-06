@@ -1,3 +1,7 @@
-<dl class="rhc-data-summary">
+<dl [ngClass]="{
+  'rhc-data-summary': true,
+  'rhc-data-summary--column': appearance === 'Column',
+  'rhc-data-summary--row': appearance === 'Row',
+}">
   <ng-content></ng-content>
 </dl>

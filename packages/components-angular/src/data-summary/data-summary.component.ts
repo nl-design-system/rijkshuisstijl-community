@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'rhc-data-summary',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './data-summary.component.html',
 })
-export class DataSummaryComponent {}
+export class DataSummaryComponent {
+  @Input() appearance: 'Column' | 'Row' = 'Column';
+}

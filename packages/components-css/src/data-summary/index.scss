@@ -3,27 +3,51 @@
 .rhc-data-summary {
   @include mixin.rhc-data-summary;
 }
+
 .rhc-data-summary__item {
   @include mixin.rhc-data-summary__item;
 }
-.rhc-data-summary__item-row {
-  @include mixin.rhc-data-summary__item-row;
+
+.rhc-data-summary--column .rhc-data-summary__item {
+  @include mixin.rhc-data-summary--column__item;
 }
+
+.rhc-data-summary--row .rhc-data-summary__item {
+  @include mixin.rhc-data-summary--row__item;
+}
+
 .rhc-data-summary__item-action {
   @include mixin.rhc-data-summary__item-action;
 }
-.rhc-data-summary__item-action-row {
-  @include mixin.rhc-data-summary__item-action-row;
+
+.rhc-data-summary--column .rhc-data-summary__item-action {
+  @include mixin.rhc-data-summary--column__item-action;
 }
+
+.rhc-data-summary--row .rhc-data-summary__item-action {
+  @include mixin.rhc-data-summary--row__item-action;
+}
+
 .rhc-data-summary__item-key {
   @include mixin.rhc-data-summary__item-key;
 }
-.rhc-data-summary__item-key-row {
-  @include mixin.rhc-data-summary__item-key-row;
+
+.rhc-data-summary--column .rhc-data-summary__item-key {
+  @include mixin.rhc-data-summary--column__item-key;
 }
+
+.rhc-data-summary--row .rhc-data-summary__item-key {
+  @include mixin.rhc-data-summary--row__item-key;
+}
+
 .rhc-data-summary__item-value {
   @include mixin.rhc-data-summary__item-value;
 }
-.rhc-data-summary__item-value-row {
-  @include mixin.rhc-data-summary__item-value-row;
+
+.rhc-data-summary--column .rhc-data-summary__item-value {
+  @include mixin.rhc-data-summary--column__item-value;
+}
+
+.rhc-data-summary--row .rhc-data-summary__item-value {
+  @include mixin.rhc-data-summary--row__item-value;
 }
