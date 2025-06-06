@@ -34,11 +34,13 @@
 }
 
 @mixin rhc-data-summary__item-action-row {
+  flex-basis: 20%;
   margin-inline-start: auto;
   padding-block-end: var(--rhc-data-summary-item-action-row-padding-block-end);
   padding-block-start: var(--rhc-data-summary-item-action-row-padding-block-start);
   padding-inline-end: var(--rhc-data-summary-item-action-row-padding-inline-end);
   padding-inline-start: var(--rhc-data-summary-item-action-row-padding-inline-start);
+  text-align: end;
 }
 
 @mixin rhc-data-summary__item-key {
@@ -52,13 +54,10 @@
 @mixin rhc-data-summary__item-key-row {
   flex-basis: 20%;
   font-weight: var(--rhc-data-summary-item-key-font-weight);
-  overflow: hidden;
   padding-block-end: var(--rhc-data-summary-item-key-row-padding-block-end);
   padding-block-start: var(--rhc-data-summary-item-key-row-padding-block-start);
   padding-inline-end: var(--rhc-data-summary-item-key-row-padding-inline-end);
   padding-inline-start: var(--rhc-data-summary-item-key-row-padding-inline-start);
-  text-overflow: ellipsis;
-  text-wrap: nowrap;
 }
 
 @mixin rhc-data-summary__item-value {
@@ -71,6 +70,7 @@
 }
 
 @mixin rhc-data-summary__item-value-row {
+  flex: 1;
   font-weight: var(--rhc-data-summary-item-value-row-font-weight);
   margin-inline-start: 0;
   padding-block-end: var(--rhc-data-summary-item-value-row-padding-block-end);

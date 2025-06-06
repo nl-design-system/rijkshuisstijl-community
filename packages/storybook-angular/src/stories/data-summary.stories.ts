@@ -48,9 +48,9 @@ export const RowsWithActions: StoryObj<DataSummaryComponent> = {
   render: () => ({
     template: `
       <rhc-data-summary>
-        <rhc-data-summary-item key="Beest van Bodmin" value="Een grote katachtige die voorkomt op Bodmin Moor." href="#" actionLabel="Lees meer over het Beest van Bodmin" appearance="Row"></rhc-data-summary-item>
-        <rhc-data-summary-item key="Morgawr" value="Een zeeslang." href="#" actionLabel="Lees meer over Morgawr" appearance="Row"></rhc-data-summary-item>
-        <rhc-data-summary-item key="Uilenman" value="Een reusachtig uilachtig wezen." href="#" actionLabel="Lees meer over Uilenman" appearance="Row"></rhc-data-summary-item>
+        <rhc-data-summary-item key="Beest van Bodmin" value="Een grote katachtige die voorkomt op Bodmin Moor." href="#" actionLabel="Lees meer" appearance="Row"></rhc-data-summary-item>
+        <rhc-data-summary-item key="Morgawr" value="Een zeeslang." href="#" actionLabel="Lees meer" appearance="Row"></rhc-data-summary-item>
+        <rhc-data-summary-item key="Uilenman" value="Een reusachtig uilachtig wezen." href="#" actionLabel="Lees meer" appearance="Row"></rhc-data-summary-item>
       </rhc-data-summary>
     `,
   }),
@@ -60,9 +60,9 @@ export const ColumnsWithActions: StoryObj<DataSummaryComponent> = {
   render: () => ({
     template: `
       <rhc-data-summary>
-        <rhc-data-summary-item key="Beest van Bodmin" value="Een grote katachtige die voorkomt op Bodmin Moor." href="#" actionLabel="Lees meer over het Beest van Bodmin" appearance="Column"></rhc-data-summary-item>
-        <rhc-data-summary-item key="Morgawr" value="Een zeeslang." href="#" actionLabel="Lees meer over Morgawr" appearance="Column"></rhc-data-summary-item>
-        <rhc-data-summary-item key="Uilenman" value="Een reusachtig uilachtig wezen." href="#" actionLabel="Lees meer over Uilenman" appearance="Column"></rhc-data-summary-item>
+        <rhc-data-summary-item key="Beest van Bodmin" value="Een grote katachtige die voorkomt op Bodmin Moor." href="#" actionLabel="Lees meer" appearance="Column"></rhc-data-summary-item>
+        <rhc-data-summary-item key="Morgawr" value="Een zeeslang." href="#" actionLabel="Lees meer" appearance="Column"></rhc-data-summary-item>
+        <rhc-data-summary-item key="Uilenman" value="Een reusachtig uilachtig wezen." href="#" actionLabel="Lees meer" appearance="Column"></rhc-data-summary-item>
       </rhc-data-summary>
     `,
   }),
