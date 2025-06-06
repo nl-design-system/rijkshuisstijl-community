@@ -1,5 +1,6 @@
 import { LinkComponent, ParagraphComponent } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, moduleMetadata, type StoryObj } from '@storybook/angular';
+import readme from './link.md';
 
 const meta: Meta<LinkComponent> = {
   decorators: [
@@ -7,7 +8,7 @@ const meta: Meta<LinkComponent> = {
       imports: [ParagraphComponent],
     }),
   ],
-  title: 'Rijkshuisstijl-angular/Link',
+  title: 'Rijkshuisstijl/Link',
   id: 'rhc-angular-link',
   component: LinkComponent,
   argTypes: {
@@ -19,6 +20,13 @@ const meta: Meta<LinkComponent> = {
   },
   args: {
     href: 'https://nldesignsystem.nl/',
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
   },
   render: ({ href }) => ({
     template: `<rhc-link [href]="'${href}'" >

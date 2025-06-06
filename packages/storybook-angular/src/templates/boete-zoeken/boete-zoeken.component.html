@@ -1,0 +1,42 @@
+<page-layout-component>
+  <div class="rhc-container">
+    <rhc-heading [level]="1">Boete zoeken</rhc-heading>
+    <rhc-paragraph>
+      Hebt u een boete ontvangen op naam van een bedrijf? Als u onderstaande gegevens invult, wordt deze boete zichtbaar
+      in uw overzicht.
+    </rhc-paragraph>
+    <form [formGroup]="form">
+      <rhc-form-field-text-input
+        formControlName="cjibNummer"
+        inputId="cjib-nummer"
+        type="number"
+        label="CJIB-nummer"
+        [showDescription]="true"
+        description="Vul het CJIB-nummer in zonder spaties."
+        [required]="true"
+      />
+      <rhc-form-field-text-input
+        formControlName="datum"
+        inputId="datum"
+        type="date"
+        label="Datum"
+        [showDescription]="true"
+        description="Vul de datum van de overtreding in als volgt: dd-mm-jjjj"
+        [required]="true"
+      />
+      <rhc-form-field-text-input
+        formControlName="tijd"
+        inputId="tijd"
+        type="time"
+        label="Tijd"
+        [showDescription]="true"
+        description="Vul het tijdstip van de overtreding is als volgt: uu:mm"
+        [required]="true"
+      />
+      <button rhc-button type="submit" [disabled]="form.invalid">
+        <rhc-icon icon="zoek" />
+        Zoeken
+      </button>
+    </form>
+  </div>
+</page-layout-component>

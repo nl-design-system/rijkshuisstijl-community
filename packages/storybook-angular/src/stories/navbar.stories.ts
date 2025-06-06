@@ -6,9 +6,10 @@ import {
   NavbarItemComponent,
 } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, moduleMetadata, type StoryObj } from '@storybook/angular';
+import readme from './navbar.md';
 
 const meta: Meta<NavbarComponent> = {
-  title: 'Rijkshuisstijl-angular/Navbar',
+  title: 'Rijkshuisstijl/Navbar',
   id: 'rhc-navbar',
   component: NavbarComponent,
   decorators: [
@@ -23,6 +24,13 @@ const meta: Meta<NavbarComponent> = {
   },
   args: {
     showEndItems: false,
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
   },
   render: ({ showEndItems }) => ({
     template: `

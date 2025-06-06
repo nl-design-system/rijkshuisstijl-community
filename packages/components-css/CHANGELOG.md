@@ -1,5 +1,17 @@
 # @rijkshuisstijl-community/components-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 093b285: Added LinkList and LinkListLink components in Angular
+- 893b3e3: Consider styling for Paragraph component in Footer.
+- 8395a93: Update dependencies.
+
+### Patch Changes
+
+- 99dd213: Package Updates
+
 ## 1.1.0
 
 ### Minor Changes

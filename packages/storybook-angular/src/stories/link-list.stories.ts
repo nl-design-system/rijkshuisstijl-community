@@ -1,5 +1,6 @@
 import { moduleMetadata } from '@storybook/angular';
 import type { Meta, StoryObj } from '@storybook/angular';
+import readme from './link-list.md';
 import {
   ColumnLayoutComponent,
   IconComponent,
@@ -11,7 +12,7 @@ import {
 type StoryType = LinkListComponent & { hasIcons?: boolean };
 
 const meta: Meta<StoryType> = {
-  title: 'Rijkshuisstijl-angular/Link list',
+  title: 'Rijkshuisstijl/Link list',
   id: 'rhc-angular-link-list',
   component: LinkListComponent,
   decorators: [
@@ -28,6 +29,13 @@ const meta: Meta<StoryType> = {
   },
   args: {
     hasIcons: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
   },
   render: ({ hasIcons }) => ({
     template: `

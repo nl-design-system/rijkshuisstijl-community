@@ -2,4 +2,4 @@
 '@rijkshuisstijl-community/components-angular': minor
 ---
 
-Create the ColumnLayout-component in Angular
+Added Angular Footer component

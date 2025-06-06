@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
+import readme from './column-layout.md';
 import {
   ColumnLayoutComponent,
   HeadingComponent,
@@ -6,7 +7,7 @@ import {
 } from '../../../components-angular/src/public-api';
 
 const meta: Meta<ColumnLayoutComponent> = {
-  title: 'Rijkshuisstijl-angular/Column layout',
+  title: 'Rijkshuisstijl/Column layout',
   id: 'rhc-angular-column-layout',
   component: ColumnLayoutComponent,
   argTypes: {
@@ -17,6 +18,13 @@ const meta: Meta<ColumnLayoutComponent> = {
   },
   args: {
     rule: false,
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
   },
   render: ({ rule }) => ({
     template: `

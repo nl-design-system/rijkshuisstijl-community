@@ -1,5 +1,6 @@
 import { moduleMetadata } from '@storybook/angular';
 import type { Meta, StoryObj } from '@storybook/angular';
+import readme from './link-list-link.md';
 import {
   IconComponent,
   LinkListItemComponent,
@@ -9,7 +10,7 @@ import {
 type StoryType = LinkListLinkComponent & { label?: string };
 
 const meta: Meta<StoryType> = {
-  title: 'Rijkshuisstijl-angular/Link List/Link list link',
+  title: 'Rijkshuisstijl/Link List/Link list link',
   id: 'rhc-angular-link-list-link',
   component: LinkListLinkComponent,
   decorators: [
@@ -31,6 +32,13 @@ const meta: Meta<StoryType> = {
   args: {
     href: '#',
     label: 'Label',
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
   },
   render: ({ href, label }) => ({
     template: `

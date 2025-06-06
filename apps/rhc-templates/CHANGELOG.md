@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/rhc-templates
 
+## 2.0.0
+
+### Major Changes
+
+- 893b3e3: Expand the app with a descriptive homepage and a useful components overview.
+
 ## 1.0.2
 
 ### Patch Changes

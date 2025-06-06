@@ -1,0 +1,64 @@
+<figure rhc-logo organisation="Rijkshuisstijl Community">
+  <rhc-icon><rhc-dutch-map-icon /></rhc-icon>
+</figure>
+<rhc-navbar [showEndItems]="true">
+  <li rhc-navbar-item href="#">
+    <rhc-icon icon="home" />
+    Uw overzicht
+  </li>
+  <li rhc-navbar-item href="#">
+    <rhc-icon icon="zoek" />
+    Boete zoeken
+  </li>
+  <li rhc-navbar-item href="#">
+    <rhc-icon icon="currency-euro" />
+    Betalingsregeling
+  </li>
+  <li rhc-navbar-item rhcEndItem href="#">
+    <rhc-icon icon="user" />
+    Uitloggen
+  </li>
+</rhc-navbar>
+<!--TODO: Temporary spacing solution-->
+<div class="rhc-page-body-container">
+  <div class="rhc-page-body-children">
+    <ng-content></ng-content>
+  </div>
+</div>
+<footer
+  rhc-footer
+  [backtotop]="true"
+  [heading]="'Heading'"
+  [appearanceLevel]="3"
+  [columns]="[
+    {
+      heading: 'Service',
+      appearanceLevel: 3,
+      items: [
+        { href: '#', label: 'Contact' },
+        { href: '#', label: 'Abonneren' },
+        { href: '#', label: 'RSS' },
+        { href: '#', label: 'Vacatures' },
+        { href: '#', label: 'Sitemap' },
+        { href: '#', label: 'Help' },
+        { href: '#', label: 'Archief' },
+      ],
+    },
+    {
+      heading: 'Over deze site',
+      appearanceLevel: 3,
+      items: [
+        { href: '#', label: 'Over deze organisatie' },
+        { href: '#', label: 'Wetten en regelingen' },
+        { href: '#', label: 'Privacy' },
+        { href: '#', label: 'Cookies' },
+        { href: '#', label: 'Toegankelijkheid' },
+        { href: '#', label: 'Open data' },
+        { href: '#', label: 'Kwetsbaarheid melden' },
+      ],
+    },
+  ]"
+  [subFooter]="{
+    items: [{ href: '#', label: 'Privacy' }],
+  }"
+></footer>

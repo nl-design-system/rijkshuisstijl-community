@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/angular';
+import readme from './figure.md';
 import { FigureCaptionComponent, FigureComponent, ImageComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<FigureComponent> = {
-  title: 'Rijkshuisstijl-angular/Figure',
+  title: 'Rijkshuisstijl/Figure',
   id: 'rhc-angular-figure',
   component: FigureComponent,
   render: ({ borderEndEndRadius, borderEndStartRadius, borderStartEndRadius, borderStartStartRadius }) => ({
@@ -22,6 +23,13 @@ const meta: Meta<FigureComponent> = {
     borderEndStartRadius: undefined,
     borderStartEndRadius: undefined,
     borderStartStartRadius: undefined,
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
   },
   argTypes: {
     borderEndEndRadius: {
