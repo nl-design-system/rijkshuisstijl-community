@@ -3274,7 +3274,7 @@
       }
     }
   },
-  "components/counter-badge/nl": {
+  "components/counter-badge": {
     "nl": {
       "number-badge": {
         "font-size": {
@@ -3330,6 +3330,14 @@
           "type": "spacing"
         }
       }
+    },
+    "rhc": {
+      "number-badge": {
+        "line-height": {
+          "value": "{rhc.line-height.paragraph}",
+          "type": "lineHeights"
+        }
+      }
     }
   },
   "components/counter-badge/utrecht": {
@@ -3340,7 +3348,7 @@
           "type": "fontSizes"
         },
         "line-height": {
-          "value": "{nl.number-badge.line-height}",
+          "value": "{rhc.number-badge.line-height}",
           "type": "lineHeights"
         },
         "min-block-size": {
@@ -4675,7 +4683,7 @@
       }
     }
   },
-  "components/link/nl": {
+  "components/link": {
     "nl": {
       "link": {
         "color": {
@@ -4694,24 +4702,6 @@
           "text-decoration": {
             "value": "None",
             "type": "textDecoration"
-          }
-        },
-        "focus": {
-          "background-color": {
-            "value": "{rhc.color.none}",
-            "type": "color"
-          },
-          "color": {
-            "value": "{rhc.color.foreground.link}",
-            "type": "color"
-          },
-          "text-decoration": {
-            "value": "None",
-            "type": "textDecoration"
-          },
-          "text-decoration-thickness": {
-            "value": "auto",
-            "type": "other"
           }
         },
         "hover": {
@@ -4757,10 +4747,6 @@
             "type": "sizing"
           }
         },
-        "column-gap": {
-          "value": "{rhc.space.50}",
-          "type": "spacing"
-        },
         "text-decoration-thickness": {
           "value": "auto",
           "type": "other"
@@ -4768,6 +4754,32 @@
         "text-underline-offset": {
           "value": "{rhc.space.25}",
           "type": "other"
+        }
+      }
+    },
+    "rhc": {
+      "link": {
+        "focus": {
+          "background-color": {
+            "value": "{rhc.color.none}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{rhc.color.foreground.link}",
+            "type": "color"
+          },
+          "text-decoration": {
+            "value": "None",
+            "type": "textDecoration"
+          },
+          "text-decoration-thickness": {
+            "value": "auto",
+            "type": "other"
+          }
+        },
+        "column-gap": {
+          "value": "{rhc.space.50}",
+          "type": "spacing"
         },
         "font-family": {
           "value": "{rhc.font-family.primary}",
@@ -4811,19 +4823,19 @@
         },
         "focus": {
           "background-color": {
-            "value": "{nl.link.focus.background-color}",
+            "value": "{rhc.link.focus.background-color}",
             "type": "color"
           },
           "color": {
-            "value": "{nl.link.focus.color}",
+            "value": "{rhc.link.focus.color}",
             "type": "color"
           },
           "text-decoration": {
-            "value": "{nl.link.focus.text-decoration}",
+            "value": "{rhc.link.focus.text-decoration}",
             "type": "textDecoration"
           },
           "text-decoration-thickness": {
-            "value": "{nl.link.focus.text-decoration-thickness}",
+            "value": "{rhc.link.focus.text-decoration-thickness}",
             "type": "other"
           }
         },
@@ -4862,7 +4874,7 @@
           }
         },
         "column-gap": {
-          "value": "{nl.link.column-gap}",
+          "value": "{rhc.link.column-gap}",
           "type": "spacing"
         },
         "text-decoration-thickness": {
@@ -4874,19 +4886,19 @@
           "type": "other"
         },
         "font-family": {
-          "value": "{nl.link.font-family}",
+          "value": "{rhc.link.font-family}",
           "type": "fontFamilies"
         },
         "font-weight": {
-          "value": "{nl.link.font-weight}",
+          "value": "{rhc.link.font-weight}",
           "type": "fontWeights"
         },
         "font-size": {
-          "value": "{nl.link.font-size}",
+          "value": "{rhc.link.font-size}",
           "type": "fontSizes"
         },
         "line-height": {
-          "value": "{nl.link.line-height}",
+          "value": "{rhc.link.line-height}",
           "type": "lineHeights"
         }
       }
@@ -6540,33 +6552,33 @@
         },
         "focus": {
           "background-color": {
-            "value": "{nl.skip-link.focus.background-color}",
+            "value": "{rhc.skip-link.focus.background-color}",
             "type": "color"
           },
           "border-color": {
-            "value": "{nl.skip-link.focus.border-color}",
+            "value": "{rhc.skip-link.focus.border-color}",
             "type": "color"
           },
           "border-style": {
-            "value": "{nl.skip-link.focus.border-style}",
+            "value": "{rhc.skip-link.focus.border-style}",
             "type": "borderStyle"
           },
           "border-width": {
-            "value": "{nl.skip-link.focus.border-width}",
+            "value": "{rhc.skip-link.focus.border-width}",
             "type": "borderWidth"
           },
           "color": {
-            "value": "{nl.skip-link.focus.color}",
+            "value": "{rhc.skip-link.focus.color}",
             "type": "color"
           },
           "text-decoration": {
-            "value": "{nl.skip-link.focus.text-decoration}",
+            "value": "{rhc.skip-link.focus.text-decoration}",
             "type": "textDecoration"
           }
         },
         "focus-visible": {
           "outline-color": {
-            "value": "{nl.skip-link.focus-visible.outline-color}",
+            "value": "{rhc.skip-link.focus-visible.outline-color}",
             "type": "color"
           }
         },
@@ -6575,7 +6587,7 @@
           "type": "color"
         },
         "border-color": {
-          "value": "{nl.skip-link.border-color}",
+          "value": "{rhc.skip-link.border-color}",
           "type": "color"
         },
         "color": {
@@ -6583,28 +6595,28 @@
           "type": "color"
         },
         "border-width": {
-          "value": "{nl.skip-link.border-width}",
+          "value": "{rhc.skip-link.border-width}",
           "type": "borderWidth"
         },
         "box-block-end-shadow": {
           "offset-x": {
-            "value": "{nl.skip-link.box-block-end-shadow.offset-x}",
+            "value": "{rhc.skip-link.box-block-end-shadow.offset-x}",
             "type": "other"
           },
           "offset-y": {
-            "value": "{nl.skip-link.box-block-end-shadow.offset-y}",
+            "value": "{rhc.skip-link.box-block-end-shadow.offset-y}",
             "type": "other"
           },
           "blur-radius": {
-            "value": "{nl.skip-link.box-block-end-shadow.blur-radius}",
+            "value": "{rhc.skip-link.box-block-end-shadow.blur-radius}",
             "type": "other"
           },
           "spread-radius": {
-            "value": "{nl.skip-link.box-block-end-shadow.spread-radius}",
+            "value": "{rhc.skip-link.box-block-end-shadow.spread-radius}",
             "type": "other"
           },
           "color": {
-            "value": "{nl.skip-link.box-block-end-shadow.color}",
+            "value": "{rhc.skip-link.box-block-end-shadow.color}",
             "type": "color"
           }
         },
@@ -6619,7 +6631,7 @@
       }
     }
   },
-  "components/skip-link/nl": {
+  "components/skip-link": {
     "nl": {
       "skip-link": {
         "font-weight": {
@@ -6662,6 +6674,26 @@
           "value": "{rhc.space.200}",
           "type": "spacing"
         },
+        "background-color": {
+          "value": "{rhc.color.primary.500}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{rhc.color.wit}",
+          "type": "color"
+        },
+        "text-decoration": {
+          "value": "underline",
+          "type": "textDecoration"
+        },
+        "text-underline-offset": {
+          "value": "{utrecht.link.text-underline-offset}",
+          "type": "other"
+        }
+      }
+    },
+    "rhc": {
+      "skip-link": {
         "focus": {
           "background-color": {
             "value": "{rhc.color.canvas}",
@@ -6694,16 +6726,8 @@
             "type": "color"
           }
         },
-        "background-color": {
-          "value": "{rhc.color.primary.500}",
-          "type": "color"
-        },
         "border-color": {
           "value": "transparent",
-          "type": "color"
-        },
-        "color": {
-          "value": "{rhc.color.wit}",
           "type": "color"
         },
         "border-width": {
@@ -6731,14 +6755,6 @@
             "value": "#0000001a",
             "type": "color"
           }
-        },
-        "text-decoration": {
-          "value": "underline",
-          "type": "textDecoration"
-        },
-        "text-underline-offset": {
-          "value": "{utrecht.link.text-underline-offset}",
-          "type": "other"
         }
       }
     }
@@ -9502,7 +9518,7 @@
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/counter-badge/utrecht": "enabled",
-        "components/counter-badge/nl": "enabled",
+        "components/counter-badge": "enabled",
         "components/dot-badge": "enabled",
         "components/drawer": "enabled",
         "components/fieldset": "enabled",
@@ -9522,7 +9538,7 @@
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
-        "components/link/nl": "enabled",
+        "components/link": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
@@ -9541,7 +9557,7 @@
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link/utrecht": "enabled",
-        "components/skip-link/nl": "enabled",
+        "components/skip-link": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
         "components/task-list": "enabled",
@@ -9595,7 +9611,7 @@
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/counter-badge/utrecht": "enabled",
-        "components/counter-badge/nl": "enabled",
+        "components/counter-badge": "enabled",
         "components/dot-badge": "enabled",
         "components/drawer": "enabled",
         "components/fieldset": "enabled",
@@ -9615,7 +9631,7 @@
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
-        "components/link/nl": "enabled",
+        "components/link": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
@@ -9634,7 +9650,7 @@
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link/utrecht": "enabled",
-        "components/skip-link/nl": "enabled",
+        "components/skip-link": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
         "components/task-list": "enabled",
@@ -9689,7 +9705,7 @@
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/counter-badge/utrecht": "enabled",
-        "components/counter-badge/nl": "enabled",
+        "components/counter-badge": "enabled",
         "components/dot-badge": "enabled",
         "components/drawer": "enabled",
         "components/fieldset": "enabled",
@@ -9709,7 +9725,7 @@
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
-        "components/link/nl": "enabled",
+        "components/link": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
@@ -9728,7 +9744,7 @@
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link/utrecht": "enabled",
-        "components/skip-link/nl": "enabled",
+        "components/skip-link": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
         "components/task-list": "enabled",
@@ -9785,7 +9801,7 @@
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/counter-badge/utrecht": "enabled",
-        "components/counter-badge/nl": "enabled",
+        "components/counter-badge": "enabled",
         "components/dot-badge": "enabled",
         "components/drawer": "enabled",
         "components/fieldset": "enabled",
@@ -9805,7 +9821,7 @@
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
-        "components/link/nl": "enabled",
+        "components/link": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
@@ -9824,7 +9840,7 @@
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link/utrecht": "enabled",
-        "components/skip-link/nl": "enabled",
+        "components/skip-link": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
         "components/task-list": "enabled",
@@ -9879,7 +9895,7 @@
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/counter-badge/utrecht": "enabled",
-        "components/counter-badge/nl": "enabled",
+        "components/counter-badge": "enabled",
         "components/dot-badge": "enabled",
         "components/drawer": "enabled",
         "components/fieldset": "enabled",
@@ -9899,7 +9915,7 @@
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
-        "components/link/nl": "enabled",
+        "components/link": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
@@ -9918,7 +9934,7 @@
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link/utrecht": "enabled",
-        "components/skip-link/nl": "enabled",
+        "components/skip-link": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
         "components/task-list": "enabled",
@@ -9973,7 +9989,7 @@
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/counter-badge/utrecht": "enabled",
-        "components/counter-badge/nl": "enabled",
+        "components/counter-badge": "enabled",
         "components/dot-badge": "enabled",
         "components/drawer": "enabled",
         "components/fieldset": "enabled",
@@ -9993,7 +10009,7 @@
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
-        "components/link/nl": "enabled",
+        "components/link": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
@@ -10012,7 +10028,7 @@
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link/utrecht": "enabled",
-        "components/skip-link/nl": "enabled",
+        "components/skip-link": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
         "components/task-list": "enabled",
@@ -10067,7 +10083,7 @@
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/counter-badge/utrecht": "enabled",
-        "components/counter-badge/nl": "enabled",
+        "components/counter-badge": "enabled",
         "components/dot-badge": "enabled",
         "components/drawer": "enabled",
         "components/fieldset": "enabled",
@@ -10087,7 +10103,7 @@
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
-        "components/link/nl": "enabled",
+        "components/link": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
@@ -10106,7 +10122,7 @@
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link/utrecht": "enabled",
-        "components/skip-link/nl": "enabled",
+        "components/skip-link": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
         "components/task-list": "enabled",
@@ -10161,7 +10177,7 @@
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/counter-badge/utrecht": "enabled",
-        "components/counter-badge/nl": "enabled",
+        "components/counter-badge": "enabled",
         "components/dot-badge": "enabled",
         "components/drawer": "enabled",
         "components/fieldset": "enabled",
@@ -10181,7 +10197,7 @@
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
-        "components/link/nl": "enabled",
+        "components/link": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
@@ -10200,7 +10216,7 @@
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link/utrecht": "enabled",
-        "components/skip-link/nl": "enabled",
+        "components/skip-link": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
         "components/task-list": "enabled",
@@ -10256,7 +10272,7 @@
       "components/checkbox-group",
       "components/code-input-group",
       "components/code-input",
-      "components/counter-badge/nl",
+      "components/counter-badge",
       "components/counter-badge/utrecht",
       "components/data-summary",
       "components/drawer",
@@ -10278,7 +10294,7 @@
       "components/hero",
       "components/icon",
       "components/icon-only-button",
-      "components/link/nl",
+      "components/link",
       "components/link/utrecht",
       "components/link-list",
       "components/link-list-card",
@@ -10298,7 +10314,7 @@
       "components/separator",
       "components/side-nav",
       "components/skip-link/utrecht",
-      "components/skip-link/nl",
+      "components/skip-link",
       "components/status-badge",
       "components/sub-nav-bar",
       "components/table",
