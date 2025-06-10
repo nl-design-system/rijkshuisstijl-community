@@ -211,9 +211,9 @@ export default function Componenten() {
                   </ol>
                 )}
                 <Pagination
-                  maxVisiblePages={5}
+                  maxVisiblePages={2}
                   page={1}
-                  totalPages={10}
+                  totalPages={2}
                   linkTemplate={function Xs(pageNumber) {
                     return 'url' + pageNumber;
                   }}
