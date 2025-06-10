@@ -6,8 +6,8 @@
     {{ value }}
   </dd>
   @if (href && actionLabel) {
-  <rhc-link [href]="href" class="rhc-data-summary__item-action">
-    {{ actionLabel }}
-  </rhc-link>
+    <rhc-link [href]="href" [target]="target" class="rhc-data-summary__item-action">
+      {{ actionLabel }}
+    </rhc-link>
   }
 </div>

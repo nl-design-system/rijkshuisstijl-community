@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class LinkComponent {
   @Input({ required: true }) href!: string;
+  @Input() target?: '_self' | '_blank' | '_parent' | '_top' | '_unfencedTop' = '_self';
 }

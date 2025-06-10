@@ -11,5 +11,6 @@ export class DataSummaryItemComponent {
   @Input() key: string = '';
   @Input() value: string = '';
   @Input() href?: string;
+  @Input() target?: '_self' | '_blank' | '_parent' | '_top' | '_unfencedTop' = '_self';
   @Input() actionLabel?: string;
 }
