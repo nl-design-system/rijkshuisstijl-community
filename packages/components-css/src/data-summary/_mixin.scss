@@ -17,7 +17,7 @@
 }
 
 @mixin rhc-data-summary--row__item {
-  flex-direction: column;
+  @include rhc-data-summary--column__item;
 
   @media (width > 768px) {
     flex-direction: row;
