@@ -1,0 +1,13 @@
+<div class="rhc-data-summary__item">
+  <dt class="rhc-data-summary__item-key">
+    {{ key }}
+  </dt>
+  <dd class="rhc-data-summary__item-value">
+    {{ value }}
+  </dd>
+  @if (href && actionLabel) {
+    <rhc-link [href]="href" [target]="target" class="rhc-data-summary__item-action">
+      {{ actionLabel }}
+    </rhc-link>
+  }
+</div>

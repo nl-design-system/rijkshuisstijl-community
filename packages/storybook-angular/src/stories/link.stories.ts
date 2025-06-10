@@ -17,9 +17,14 @@ const meta: Meta<LinkComponent> = {
       control: { type: 'text' },
       required: true,
     },
+    target: {
+      control: 'select',
+      options: ['_self', '_blank', '_parent', '_top', '_unfencedTop'],
+    },
   },
   args: {
     href: 'https://nldesignsystem.nl/',
+    target: '_self',
   },
   parameters: {
     docs: {
@@ -28,12 +33,13 @@ const meta: Meta<LinkComponent> = {
       },
     },
   },
-  render: ({ href }) => ({
-    template: `<rhc-link [href]="'${href}'" >
+  render: ({ href, target }) => ({
+    template: `<rhc-link [href]="'${href}'" [target]="target">
     NL-Design System
     </rhc-link>`,
     props: {
       href,
+      target,
     },
   }),
 };
@@ -54,6 +60,21 @@ export const InAParagraph: StoryObj<LinkComponent> = {
     </rhc-paragraph>`,
     props: {
       href,
+    },
+  }),
+};
+
+export const OpenInAnotherTab: StoryObj<LinkComponent> = {
+  args: {
+    href: 'https://nldesignsystem.nl/project/over-nl-design-system/',
+    target: '_blank',
+  },
+  render: ({ href, target }) => ({
+    template: `
+    <rhc-link [href]="'${href}'" [target]="target">NL-Design System</rhc-link>`,
+    props: {
+      href,
+      target,
     },
   }),
 };
