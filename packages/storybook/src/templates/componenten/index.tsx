@@ -50,6 +50,8 @@ export default function Componenten() {
     [submittedSearchTerm, selectedFrameworks],
   );
 
+  // const maxComponentsPerPage = 5;
+
   const frameworkCounts: { [key: string]: number } = useMemo(
     () =>
       frameworkOptions.reduce(
@@ -183,7 +185,7 @@ export default function Componenten() {
 
                 {filteredComponents.length > 0 && (
                   <ol className="rhc-ordered-list">
-                    {filteredComponents.map((component, index, array) => (
+                    {filteredComponents.slice(0, 5).map((component, index, array) => (
                       <li aria-posinset={index + 1} aria-setsize={array.length} key={component.heading}>
                         <Card
                           className="rhc-templates-card"
