@@ -67,6 +67,16 @@ export default function Componenten() {
     }
   };
 
+  const getStatusText = (count: number): string => {
+    if (count === 0) {
+      return 'Geen componenten gevonden, probeer andere zoektermen of filters.';
+    } else if (count === 1) {
+      return '1 component gevonden';
+    } else {
+      return `${count} componenten gevonden`;
+    }
+  };
+
   const handleFrameworkChange = useCallback((framework: string) => {
     setStagedFrameworks((prev) =>
       prev.includes(framework) ? prev.filter((f) => f !== framework) : [...prev, framework],
@@ -150,7 +160,7 @@ export default function Componenten() {
               </search>
             </aside>
 
-            <div aria-atomic="true" aria-live="polite" className="rhc-grid-container__right">
+            <div className="rhc-grid-container__end">
               <div className="rhc-componenten-toevoegen">
                 {/* TODO: change to correct href */}
                 <ButtonLink appearance="secondary-action-button" href="/">
@@ -161,47 +171,42 @@ export default function Componenten() {
                 </ButtonLink>
               </div>
 
-              <div className="rhc-grid-container__right" ref={resultsRef} tabIndex={-1}>
-                {filteredComponents.length === 0 ? (
-                  <>
-                    <Heading appearanceLevel={3} level={2}>
-                      Geen resultaten gevonden
-                    </Heading>
-                    <Paragraph>Probeer andere zoektermen of filters.</Paragraph>
-                  </>
-                ) : (
-                  <>
-                    <Heading appearanceLevel={3} level={2}>
-                      Zoekresultaten ({filteredComponents.length} componenten gevonden)
-                    </Heading>
-                    <ol className="rhc-ordered-list">
-                      {filteredComponents.map((component) => (
-                        <li key={component.heading}>
-                          <Card
-                            className="rhc-templates-card"
-                            description={<Paragraph>{component.description}</Paragraph>}
-                            href={component.href}
-                            linkLabel={component.linkLabel}
-                            target="_blank"
-                            title={component.title}
-                            heading={
-                              <Heading appearanceLevel={4} level={2}>
-                                {component.heading}
-                              </Heading>
-                            }
-                          >
-                            <BadgeList className="rhc-templates-badgelist">
-                              {component.frameworks.map((framework) => (
-                                <DataBadge className="rhc-templates-databadge" key={framework}>
-                                  {framework}
-                                </DataBadge>
-                              ))}
-                            </BadgeList>
-                          </Card>
-                        </li>
-                      ))}
-                    </ol>
-                  </>
+              <div className="rhc-grid-container__end" ref={resultsRef} tabIndex={-1}>
+                <HeadingGroup>
+                  <Heading appearanceLevel={3} level={2}>
+                    Zoekresultaten
+                  </Heading>
+                  <Paragraph role="status">{getStatusText(filteredComponents.length)}</Paragraph>
+                </HeadingGroup>
+
+                {filteredComponents.length > 0 && (
+                  <ol className="rhc-ordered-list">
+                    {filteredComponents.map((component, index, array) => (
+                      <li aria-posinset={index + 1} aria-setsize={array.length} key={component.heading}>
+                        <Card
+                          className="rhc-templates-card"
+                          description={<Paragraph>{component.description}</Paragraph>}
+                          href={component.href}
+                          linkLabel={component.linkLabel}
+                          target="_blank"
+                          title={component.title}
+                          heading={
+                            <Heading appearanceLevel={4} level={2}>
+                              {component.heading}
+                            </Heading>
+                          }
+                        >
+                          <BadgeList className="rhc-templates-badgelist">
+                            {component.frameworks.map((framework) => (
+                              <DataBadge className="rhc-templates-databadge" key={framework}>
+                                {framework}
+                              </DataBadge>
+                            ))}
+                          </BadgeList>
+                        </Card>
+                      </li>
+                    ))}
+                  </ol>
                 )}
               </div>
             </div>
