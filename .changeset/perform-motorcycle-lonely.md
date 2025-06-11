@@ -7,6 +7,7 @@
 - De paragraph font tokens op de common-laag zijn hernoemd naar `body`, zodat ze breder toepasbaar zijn.
 - De token `rhc.paragraph.small` is verwijderd.
 - Verwijzingen naar `rhc.paragraph.small` zijn vervangen door `rhc.body.default`, wat betekent dat de `font-size` van componenten als `counterbadge`, `navigation-list` en `message-list` is gewijzigd van 18px naar 20px.
+- `rhc.font-family.primary` value is aangepast, het font RijksoverheidSansWeb is eruit gehaald omdat dit een closed-source font is en wij Fira Sans gebruiken ter illustratie.
 
 ### Wat betekent dit voor jou?
 
