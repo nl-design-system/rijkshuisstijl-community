@@ -690,12 +690,12 @@
           "value": "800",
           "type": "fontWeights"
         },
-        "bold": {
-          "value": "700",
+        "semi-bold": {
+          "value": "550",
           "type": "fontWeights"
         },
-        "semi-bold": {
-          "value": "600",
+        "bold": {
+          "value": "700",
           "type": "fontWeights"
         },
         "regular": {
@@ -713,7 +713,7 @@
       },
       "font-family": {
         "primary": {
-          "value": "'Fira Sans', Arial, Verdana, sans-serif",
+          "value": "RijksoverheidSansWeb, Fira Sans, Arial, Verdana, sans-serif",
           "type": "fontFamilies"
         },
         "secondary": {
@@ -1574,7 +1574,7 @@
           "type": "color"
         },
         "color": {
-          "value": "{rhc.color.foreground.default}",
+          "value": "{rhc.color.foreground.on-light-color}",
           "type": "color"
         },
         "info": {
@@ -1587,7 +1587,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.default}",
+            "value": "{rhc.color.foreground.on-light-color}",
             "type": "color"
           }
         },
@@ -1601,7 +1601,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.default}",
+            "value": "{rhc.color.foreground.on-light-color}",
             "type": "color"
           }
         },
@@ -1615,7 +1615,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.default}",
+            "value": "{rhc.color.foreground.on-light-color}",
             "type": "color"
           }
         },
@@ -1629,7 +1629,7 @@
             "type": "color"
           },
           "color": {
-            "value": "{rhc.color.foreground.default}",
+            "value": "{rhc.color.foreground.on-light-color}",
             "type": "color"
           }
         },
@@ -3284,7 +3284,7 @@
           "type": "fontSizes"
         },
         "line-height": {
-          "value": "{rhc.line-height.sm}",
+          "value": "{rhc.line-height.body}",
           "type": "lineHeights"
         },
         "min-block-size": {
@@ -3328,7 +3328,7 @@
           "type": "spacing"
         },
         "padding-block": {
-          "value": "{rhc.space.25}",
+          "value": "{rhc.space.100}",
           "type": "spacing"
         }
       }
@@ -9298,7 +9298,7 @@
             "type": "fontSizes"
           }
         },
-        "body": {
+        "paragraph": {
           "intro": {
             "value": "{rhc.font-size.sm.mobile}",
             "type": "fontSizes"
@@ -9336,7 +9336,7 @@
             "type": "fontSizes"
           }
         },
-        "body": {
+        "paragraph": {
           "intro": {
             "value": "{rhc.font-size.sm.tablet}",
             "type": "fontSizes"
@@ -9359,16 +9359,6 @@
         "strong": {
           "value": "{rhc.font-weight.semi-bold}",
           "type": "fontWeights"
-        }
-      }
-    }
-  },
-  "overwrites/closed-source/font": {
-    "rhc": {
-      "font-family": {
-        "primary": {
-          "value": "RijksSans, Arial, Verdana, sans-serif",
-          "type": "fontFamilies"
         }
       }
     }
@@ -10361,7 +10351,6 @@
       "overwrites/responsive/mobile",
       "overwrites/responsive/tablet",
       "overwrites/font-weight/bzk",
-      "overwrites/closed-source/font",
       "overwrites/afwijkende keuzes/button"
     ]
   }
