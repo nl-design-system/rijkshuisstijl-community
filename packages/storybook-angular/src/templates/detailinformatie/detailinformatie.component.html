@@ -1,11 +1,11 @@
 <page-layout-component>
   <div class="rhc-container">
     <rhc-action-group direction="row">
-      <button rhc-button appearance="secondary-action" [disabled]="false">
+      <button rhc-button appearance="secondary-action">
         <rhc-icon icon="terug" />
         Terug
       </button>
-      <button rhc-button appearance="secondary-action" [disabled]="false">
+      <button rhc-button appearance="secondary-action">
         <rhc-icon>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@
         </rhc-icon>
         Foto bekijken
       </button>
-      <button rhc-button appearance="secondary-action" [disabled]="false">
+      <button rhc-button appearance="secondary-action">
         <rhc-icon icon="briefcase" />
         Beroep
       </button>
@@ -44,7 +44,7 @@
 
     <div class="rhc-gray-rectangle">
       <div>
-        <rhc-heading [level]="4">Algemeen</rhc-heading>
+        <rhc-heading [level]="3" [appearanceLevel]="4">Algemeen</rhc-heading>
         <rhc-data-summary appearance="Row">
           <rhc-data-summary-item key="CJIB-nummer" value="1234567890" />
           <rhc-data-summary-item key="Verzenddatum" value="11 oktober 2024" />
@@ -52,7 +52,7 @@
       </div>
 
       <div>
-        <rhc-heading [level]="4">Informatie over de boete</rhc-heading>
+        <rhc-heading [level]="3" [appearanceLevel]="4">Informatie over de boete</rhc-heading>
         <rhc-data-summary appearance="Row">
           <rhc-data-summary-item
             key="Omschrijving"
@@ -73,7 +73,7 @@
       </div>
 
       <div>
-        <rhc-heading [level]="4">Hoeveelheid</rhc-heading>
+        <rhc-heading [level]="3" [appearanceLevel]="4">Hoeveelheid</rhc-heading>
         <rhc-data-summary appearance="Row">
           <rhc-data-summary-item key="Toegestaan" value="100 km/h" />
           <rhc-data-summary-item key="Gemeten" value="108 km/h" />
@@ -82,7 +82,7 @@
       </div>
 
       <div>
-        <rhc-heading [level]="4">Bedragen</rhc-heading>
+        <rhc-heading [level]="3" [appearanceLevel]="4">Bedragen</rhc-heading>
         <rhc-data-summary appearance="Row">
           <rhc-data-summary-item key="Bedrag boete" value="€26,00" />
           <rhc-data-summary-item key="Administratiekosten" value="€9,00" />
@@ -92,22 +92,24 @@
       </div>
 
       <div>
-        <rhc-heading [level]="4">Betaalinformatie</rhc-heading>
+        <rhc-heading [level]="3" [appearanceLevel]="4">Betaalinformatie</rhc-heading>
         <rhc-data-summary appearance="Row">
           <rhc-data-summary-item key="IBAN" value="123456789ABCD" />
           <rhc-data-summary-item key="Betalingskenmerk" value="Dit is een betalingskenmerk" />
         </rhc-data-summary>
       </div>
 
-      <rhc-heading [level]="3">Aanvullende documenten</rhc-heading>
-      <rhc-paragraph>
-        U kunt hieronder verschillende aanvullende documenten bekijken die horen bij uw overtreding, zoals een
-        ijkrapport of een certificaat van de opsporingsambtenaar.
-      </rhc-paragraph>
-      <rhc-link href="#" class="rhc-download-link">
-        <rhc-icon icon="downloaden" />
-        cjib.nl/documenten
-      </rhc-link>
+      <div>
+        <rhc-heading [level]="3" [appearanceLevel]="4">Aanvullende documenten</rhc-heading>
+        <rhc-paragraph>
+          U kunt hieronder verschillende aanvullende documenten bekijken die horen bij uw overtreding, zoals een
+          ijkrapport of een certificaat van de opsporingsambtenaar.
+        </rhc-paragraph>
+        <rhc-link href="#" class="rhc-download-link">
+          <rhc-icon icon="downloaden" />
+          cjib.nl/documenten
+        </rhc-link>
+      </div>
     </div>
   </div>
 </page-layout-component>
