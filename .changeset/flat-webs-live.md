@@ -1,8 +1,5 @@
 ---
-'@rijkshuisstijl-community/components-angular': minor
-'@rijkshuisstijl-community/storybook-angular': minor
-'@rijkshuisstijl-community/design-tokens': minor
-'@rijkshuisstijl-community/components-css': minor
+'@rijkshuisstijl-community/components-angular': patch
 ---
 
-Detailinformatiepagina toegevoegd als template. De componenten Icon en Link anders gestyled zodat ze bruikbaar zijn in zowel buttons als paragrafen.
+Gebruik `display: contents` voor de host van de Icon Angular component, zodat de Angular wrapper geen conflict veroorzaakt tussen de component en zijn parent.
