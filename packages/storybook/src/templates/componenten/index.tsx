@@ -10,7 +10,7 @@ import {
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
 import { IconPlus, IconSearch } from '@tabler/icons-react';
-import { BadgeList, ButtonLink, Icon } from '@utrecht/component-library-react';
+import { BadgeList, ButtonLink, DataBadge, Icon } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 import { ChangeEvent, FormEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { DataBadgeButton } from './DataBadgeButton';
@@ -257,31 +257,41 @@ export default function Componenten() {
             </Paragraph>
           </HeadingGroup>
 
-          <search aria-labelledby="search-heading" role="search">
-            <h2 className="rhc-sr-only" id="search-heading">
-              Zoeken
-            </h2>
-            <form className="rhc-search-form" onSubmit={handleSearchSubmit}>
-              <FormFieldTextInput
-                aria-describedby="search-help"
-                className="rhc-search-form__label"
-                id="componentSearchInput"
-                label="Voer een zoekterm in"
-                name="q"
-                type="text"
-                value={searchTerm}
-                onChange={handleSearchChange}
-              />
-              <div className="rhc-sr-only" id="search-help">
-                Zoek in componentnamen en beschrijvingen. Druk op Enter om te zoeken.
-              </div>
-              <Button aria-label="Zoeken" className="rhc-search-button" type="submit">
+          <div className="rhc-search-container">
+            <search aria-labelledby="search-heading" role="search">
+              <h2 className="rhc-sr-only" id="search-heading">
+                Zoeken
+              </h2>
+              <form className="rhc-search-form" onSubmit={handleSearchSubmit}>
+                <FormFieldTextInput
+                  aria-describedby="search-help"
+                  className="rhc-search-form__label"
+                  id="componentSearchInput"
+                  label="Voer een zoekterm in"
+                  name="q"
+                  type="text"
+                  value={searchTerm}
+                  onChange={handleSearchChange}
+                />
+                <div className="rhc-sr-only" id="search-help">
+                  Zoek in componentnamen en beschrijvingen. Druk op Enter om te zoeken.
+                </div>
+                <Button aria-label="Zoeken" className="rhc-search-button" type="submit">
+                  <Icon>
+                    <IconSearch />
+                  </Icon>
+                </Button>
+              </form>
+            </search>
+            <div className="rhc-componenten-toevoegen">
+              <ButtonLink appearance="secondary-action-button" href="/">
                 <Icon>
-                  <IconSearch />
+                  <IconPlus />
                 </Icon>
-              </Button>
-            </form>
-          </search>
+                Component toevoegen
+              </ButtonLink>
+            </div>
+          </div>
 
           <ActiveFiltersBadgeList selectedFrameworks={selectedFrameworks} onRemoveFilter={handleRemoveActiveFilter} />
 
@@ -328,67 +338,43 @@ export default function Componenten() {
               </search>
             </aside>
 
-            <div className="rhc-grid-container__end">
-              <div className="rhc-componenten-toevoegen">
-                {/* TODO: change to correct href */}
-                <ButtonLink appearance="secondary-action-button" href="/">
-                  <Icon>
-                    <IconPlus />
-                  </Icon>
-                  Component toevoegen
-                </ButtonLink>
-              </div>
+            <div className="rhc-grid-container__end" ref={resultsRef} tabIndex={-1}>
+              <HeadingGroup>
+                <Heading appearanceLevel={3} level={2}>
+                  Zoekresultaten
+                </Heading>
+                <Paragraph role="status">{getStatusText(filteredComponents.length)}</Paragraph>
+              </HeadingGroup>
 
-              <div className="rhc-grid-container__end" ref={resultsRef} tabIndex={-1}>
-                <HeadingGroup>
-                  <Heading appearanceLevel={3} id="results-heading" level={2}>
-                    Zoekresultaten
-                  </Heading>
-                  <Paragraph role="status">{getStatusText(filteredComponents.length)}</Paragraph>
-                </HeadingGroup>
-
-                {filteredComponents.length > 0 && (
-                  <ol aria-labelledby="results-heading" className="rhc-ordered-list">
-                    {filteredComponents.map((component, index, array) => (
-                      <li aria-posinset={index + 1} aria-setsize={array.length} key={component.heading}>
-                        <CardAsLink
-                          className="rhc-templates-card"
-                          description={<Paragraph>{component.description}</Paragraph>}
-                          href={component.href}
-                          linkLabel={component.linkLabel}
-                          target="_blank"
-                          title={component.title}
-                          heading={
-                            <Heading appearanceLevel={4} level={2}>
-                              {component.heading}
-                            </Heading>
-                          }
-                        >
-                          <BadgeList
-                            aria-label={`Framework opties voor ${component.heading}`}
-                            className="rhc-templates-badgelist"
-                            role="group"
-                          >
-                            {component.frameworks.map((framework) => (
-                              <DataBadgeButton
-                                aria-label={`${framework} filter ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
-                                helperText={`- Klik om filter te ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
-                                key={framework}
-                                pressed={selectedFrameworks.includes(framework)}
-                                showHelperText={true}
-                                value={framework}
-                                onClick={() => handleDataBadgeClick(framework)} // FIXED: Direct call instead of data-value extraction
-                              >
-                                {framework}
-                              </DataBadgeButton>
-                            ))}
-                          </BadgeList>
-                        </CardAsLink>
-                      </li>
-                    ))}
-                  </ol>
-                )}
-              </div>
+              {filteredComponents.length > 0 && (
+                <ol className="rhc-ordered-list">
+                  {filteredComponents.map((component, index, array) => (
+                    <li aria-posinset={index + 1} aria-setsize={array.length} key={component.heading}>
+                      <CardAsLink
+                        className="rhc-templates-card"
+                        description={<Paragraph>{component.description}</Paragraph>}
+                        href={component.href}
+                        linkLabel={component.linkLabel}
+                        target="_blank"
+                        title={component.title}
+                        heading={
+                          <Heading appearanceLevel={4} level={2}>
+                            {component.heading}
+                          </Heading>
+                        }
+                      >
+                        <BadgeList className="rhc-templates-badgelist">
+                          {component.frameworks.map((framework) => (
+                            <DataBadge className="rhc-templates-databadge" key={framework}>
+                              {framework}
+                            </DataBadge>
+                          ))}
+                        </BadgeList>
+                      </CardAsLink>
+                    </li>
+                  ))}
+                </ol>
+              )}
             </div>
           </div>
         </SharedMainPageContent>
