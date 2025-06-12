@@ -69,7 +69,6 @@ const ActiveFiltersBadgeList: FC<ActiveFiltersBadgeListProps> = ({ onRemoveFilte
 };
 
 export default function Componenten() {
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [submittedSearchTerm, setSubmittedSearchTerm] = useState('');
   const [selectedFrameworks, setSelectedFrameworks] = useState<string[]>([]);
@@ -77,19 +76,9 @@ export default function Componenten() {
 
   const resultsRef = useRef<HTMLDivElement>(null);
 
-  // Combine both checkbox selections and active filters for component filtering
-  const allSelectedFrameworks = useMemo(() => {
-    const combined = [...selectedFrameworks, ...activeFilters];
-    const unique = [...new Set(combined)]; // Remove duplicates
-    console.log('Debug - selectedFrameworks:', selectedFrameworks);
-    console.log('Debug - activeFilters:', activeFilters);
-    console.log('Debug - combined frameworks:', unique);
-    return unique;
-  }, [selectedFrameworks, activeFilters]);
-
   const filteredComponents = useMemo(
-    () => filterComponents(allComponentsData, submittedSearchTerm, allSelectedFrameworks),
-    [submittedSearchTerm, allSelectedFrameworks],
+    () => filterComponents(allComponentsData, submittedSearchTerm, selectedFrameworks),
+    [submittedSearchTerm, selectedFrameworks],
   );
 
   const frameworkCounts: { [key: string]: number } = useMemo(
@@ -103,6 +92,7 @@ export default function Componenten() {
       ),
     [frameworkOptions, allComponentsData],
   );
+
   const handleSearchSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     setSubmittedSearchTerm(searchTerm);
@@ -121,21 +111,14 @@ export default function Componenten() {
     }
   };
 
-  // Handle checkbox changes (doesn't affect active filters)
-  const handleCheckboxChange = useCallback((framework: string) => {
-    setStagedFrameworks((prev) =>
-      prev.includes(framework) ? prev.filter((f) => f !== framework) : [...prev, framework],
-    );
-    setSelectedFrameworks((prev) => {
-      const isCurrentlySelected = prev.includes(framework);
-      if (isCurrentlySelected) {
-        // If unchecking, also remove from active filters
-        setActiveFilters((activePrev) => activePrev.filter((f) => f !== framework));
-        return prev.filter((f) => f !== framework);
+  // Handle checkbox changes (only stages the selection, doesn't apply filters)
+  const handleCheckboxChange = useCallback((framework: string): void => {
+    setStagedFrameworks((previousStagedFrameworks: string[]) => {
+      const isFrameworkCurrentlyStaged: boolean = previousStagedFrameworks.includes(framework);
+      if (isFrameworkCurrentlyStaged) {
+        return previousStagedFrameworks.filter((stagedFramework: string) => stagedFramework !== framework);
       } else {
-        // If checking, also add to active filters
-        setActiveFilters((activePrev) => (activePrev.includes(framework) ? activePrev : [...activePrev, framework]));
-        return [...prev, framework];
+        return [...previousStagedFrameworks, framework];
       }
     });
   }, []);
@@ -144,10 +127,14 @@ export default function Componenten() {
     setSearchTerm(event.target.value);
   };
 
+  // Apply the staged framework selections when filter button is clicked
   const handleFilterSubmit = useCallback(
-    (event: React.FormEvent) => {
+    (event: React.FormEvent<HTMLFormElement>): void => {
       event.preventDefault();
+
+      // Simply apply staged frameworks to selectedFrameworks
       setSelectedFrameworks(stagedFrameworks);
+
       if (resultsRef.current) {
         resultsRef.current.focus({ preventScroll: true });
       }
@@ -155,34 +142,39 @@ export default function Componenten() {
     [stagedFrameworks],
   );
 
-  // Handle DataBadge clicks (creates active filters and syncs checkboxes)
-  const handleDataBadgeClick = useCallback((framework: string) => {
-    setActiveFilters((prev) => {
-      const isCurrentlyActive = prev.includes(framework);
-      if (isCurrentlyActive) {
-        // Remove from active filters
-        return prev.filter((f) => f !== framework);
+  // Handle DataBadge clicks (immediate filtering via dataBadgeFilters)
+  const handleDataBadgeClick = useCallback((framework: string): void => {
+    setSelectedFrameworks((previousSelectedFrameworks: string[]) => {
+      const isFrameworkCurrentlyActive: boolean = previousSelectedFrameworks.includes(framework);
+      if (isFrameworkCurrentlyActive) {
+        return previousSelectedFrameworks.filter((activeFramework: string) => activeFramework !== framework);
       } else {
-        // Add to active filters
-        return [...prev, framework];
+        return [...previousSelectedFrameworks, framework];
       }
     });
 
-    // Also sync the checkbox state
-    setSelectedFrameworks((prev) => {
-      const isCurrentlySelected = prev.includes(framework);
-      if (isCurrentlySelected) {
-        return prev.filter((f) => f !== framework);
+    // Also add to stagedFrameworks so checkbox shows as checked
+    setStagedFrameworks((previousStagedFrameworks: string[]) => {
+      const isFrameworkCurrentlyStaged: boolean = previousStagedFrameworks.includes(framework);
+      if (isFrameworkCurrentlyStaged) {
+        return previousStagedFrameworks.filter((stagedFramework: string) => stagedFramework !== framework);
       } else {
-        return [...prev, framework];
+        return [...previousStagedFrameworks, framework];
       }
     });
   }, []);
 
-  const handleRemoveActiveFilter = useCallback((framework: string) => {
-    setActiveFilters((prev) => prev.filter((f) => f !== framework));
-    // Also uncheck the corresponding checkbox
-    setSelectedFrameworks((prev) => prev.filter((f) => f !== framework));
+  // Remove filter and sync with all states
+  const handleRemoveActiveFilter = useCallback((framework: string): void => {
+    // Remove from selectedFrameworks (checkbox-applied filters)
+    setSelectedFrameworks((previousSelectedFrameworks: string[]) =>
+      previousSelectedFrameworks.filter((selectedFramework: string) => selectedFramework !== framework),
+    );
+
+    // Remove from stagedFrameworks (so checkbox unchecks)
+    setStagedFrameworks((previousStagedFrameworks: string[]) =>
+      previousStagedFrameworks.filter((stagedFramework: string) => stagedFramework !== framework),
+    );
   }, []);
 
   return (
@@ -216,7 +208,7 @@ export default function Componenten() {
             </form>
           </search>
 
-          <ActiveFiltersBadgeList selectedFrameworks={activeFilters} onRemoveFilter={handleRemoveActiveFilter} />
+          <ActiveFiltersBadgeList selectedFrameworks={selectedFrameworks} onRemoveFilter={handleRemoveActiveFilter} />
 
           <div className="rhc-container">
             <aside>
@@ -225,7 +217,7 @@ export default function Componenten() {
                   <ExpandableCheckboxGroup
                     legend="Framework"
                     maxVisible={3}
-                    selectedOptions={selectedFrameworks}
+                    selectedOptions={stagedFrameworks}
                     options={frameworkOptions.map((option) => ({
                       label: (
                         <>
@@ -289,7 +281,7 @@ export default function Componenten() {
                             {component.frameworks.map((framework) => (
                               <DataBadgeButton
                                 key={framework}
-                                pressed={activeFilters.includes(framework)}
+                                pressed={selectedFrameworks.includes(framework)}
                                 value={framework}
                                 onClick={handleDataBadgeClick}
                               >
