@@ -43,7 +43,9 @@ export default function Componenten() {
   const [selectedFrameworks, setSelectedFrameworks] = useState<string[]>([]);
   const [stagedFrameworks, setStagedFrameworks] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const LinkComponent = (props: AnchorHTMLAttributes<HTMLAnchorElement>) => <a {...props} onClick={onClickTest} />;
+  const LinkComponent = (props: AnchorHTMLAttributes<HTMLAnchorElement>) => (
+    <a {...props} onClick={onPaginationLinkClick} />
+  );
 
   const resultsRef = useRef<HTMLDivElement>(null);
 
@@ -53,7 +55,7 @@ export default function Componenten() {
   );
 
   const maxComponentsPerPage = 5;
-  const onClickTest = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const onPaginationLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const href = e.currentTarget.href;
     const pageNumber = href.substring(href.lastIndexOf('/') + 1, href.length);
@@ -227,7 +229,7 @@ export default function Componenten() {
                 )}
                 <Pagination
                   linkComponent={LinkComponent}
-                  maxVisiblePages={2}
+                  maxVisiblePages={5}
                   page={currentPage + 1}
                   totalPages={Math.ceil(filteredComponents.length / maxComponentsPerPage)}
                   linkTemplate={function Xs(pageNumber) {
