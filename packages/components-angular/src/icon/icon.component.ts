@@ -8,6 +8,7 @@ import { RHCIconID } from './RHCIconIDs';
   imports: [TablerIconComponent],
   templateUrl: './icon.component.html',
   providers: [provideTablerIcons(TablerIcons)],
+  styleUrl: './icon.component.css',
 })
 export class IconComponent {
   @Input({ required: false }) icon?: string;

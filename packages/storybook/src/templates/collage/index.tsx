@@ -20,6 +20,7 @@ import {
   FormSummaryKey,
   FormSummaryValue,
   Heading,
+  Icon,
   IconButton,
   Image,
   Link,
@@ -105,7 +106,9 @@ export default function Collage() {
               <Separator />
               <Link href="#">
                 {`Hello, I'm a link `}
-                <IconArrowRight />
+                <Icon>
+                  <IconArrowRight />
+                </Icon>
               </Link>
               <Button appearance="primary-action-button">Primary button</Button>
               <Button appearance="secondary-action-button">Secondary button</Button>
