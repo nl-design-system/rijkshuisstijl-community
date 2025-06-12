@@ -13,7 +13,7 @@ import {
 import { IconPlus, IconSearch } from '@tabler/icons-react';
 import { BadgeList, ButtonLink, DataBadge, Icon } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
-import { ChangeEvent, useCallback, useMemo, useRef, useState } from 'react';
+import { AnchorHTMLAttributes, ChangeEvent, useCallback, useMemo, useRef, useState } from 'react';
 import React from 'react';
 import { allComponentsData, ComponentData } from './components-data';
 import { ExpandableCheckboxGroup } from './expandableCheckboxGroup';
@@ -42,7 +42,8 @@ export default function Componenten() {
   const [submittedSearchTerm, setSubmittedSearchTerm] = useState('');
   const [selectedFrameworks, setSelectedFrameworks] = useState<string[]>([]);
   const [stagedFrameworks, setStagedFrameworks] = useState<string[]>([]);
-  const [currentPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(0);
+  const LinkComponent = (props: AnchorHTMLAttributes<HTMLAnchorElement>) => <a {...props} onClick={onClickTest} />;
 
   const resultsRef = useRef<HTMLDivElement>(null);
 
@@ -52,6 +53,12 @@ export default function Componenten() {
   );
 
   const maxComponentsPerPage = 5;
+  const onClickTest = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const pageNumber = href.substring(href.lastIndexOf('/') + 1, href.length);
+    setCurrentPage(parseInt(pageNumber, 10) - 1);
+  };
 
   const frameworkCounts: { [key: string]: number } = useMemo(
     () =>
@@ -219,11 +226,12 @@ export default function Componenten() {
                   </ol>
                 )}
                 <Pagination
+                  linkComponent={LinkComponent}
                   maxVisiblePages={2}
-                  page={1}
-                  totalPages={2}
+                  page={currentPage + 1}
+                  totalPages={Math.ceil(filteredComponents.length / maxComponentsPerPage)}
                   linkTemplate={function Xs(pageNumber) {
-                    return 'url' + pageNumber;
+                    return '/' + pageNumber;
                   }}
                 />
               </div>
