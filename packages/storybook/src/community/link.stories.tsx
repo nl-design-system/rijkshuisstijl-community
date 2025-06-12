@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Icon, Link } from '@rijkshuisstijl-community/components-react';
+import { Icon, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconCalendarEvent } from '@tabler/icons-react';
 import readme from '@utrecht/components/link/README.md?raw';
@@ -179,5 +179,23 @@ export const Visited: Story = {
   args: {
     href: 'https://example.com/',
     children: 'Label',
+  },
+};
+
+export const LinkInParagraph: Story = {
+  args: {
+    href: 'https://example.com/',
+  },
+  render({ href }) {
+    return (
+      <Paragraph>
+        In deze paragraaf staat een <Link href={href}>link naar een voorbeeldsite</Link> en{' '}
+        <Link href={href}>
+          <Icon icon={'pijl-naar-rechts'} />
+          link met een icoon
+        </Link>
+        .
+      </Paragraph>
+    );
   },
 };
