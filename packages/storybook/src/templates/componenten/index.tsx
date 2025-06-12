@@ -42,6 +42,7 @@ export default function Componenten() {
   const [submittedSearchTerm, setSubmittedSearchTerm] = useState('');
   const [selectedFrameworks, setSelectedFrameworks] = useState<string[]>([]);
   const [stagedFrameworks, setStagedFrameworks] = useState<string[]>([]);
+  const [currentPage] = useState(0);
 
   const resultsRef = useRef<HTMLDivElement>(null);
 
@@ -50,7 +51,7 @@ export default function Componenten() {
     [submittedSearchTerm, selectedFrameworks],
   );
 
-  // const maxComponentsPerPage = 5;
+  const maxComponentsPerPage = 5;
 
   const frameworkCounts: { [key: string]: number } = useMemo(
     () =>
@@ -185,31 +186,36 @@ export default function Componenten() {
 
                 {filteredComponents.length > 0 && (
                   <ol className="rhc-ordered-list">
-                    {filteredComponents.slice(0, 5).map((component, index, array) => (
-                      <li aria-posinset={index + 1} aria-setsize={array.length} key={component.heading}>
-                        <Card
-                          className="rhc-templates-card"
-                          description={<Paragraph>{component.description}</Paragraph>}
-                          href={component.href}
-                          linkLabel={component.linkLabel}
-                          target="_blank"
-                          title={component.title}
-                          heading={
-                            <Heading appearanceLevel={4} level={2}>
-                              {component.heading}
-                            </Heading>
-                          }
-                        >
-                          <BadgeList className="rhc-templates-badgelist">
-                            {component.frameworks.map((framework) => (
-                              <DataBadge className="rhc-templates-databadge" key={framework}>
-                                {framework}
-                              </DataBadge>
-                            ))}
-                          </BadgeList>
-                        </Card>
-                      </li>
-                    ))}
+                    {filteredComponents
+                      .slice(
+                        currentPage * maxComponentsPerPage,
+                        currentPage * maxComponentsPerPage + maxComponentsPerPage,
+                      )
+                      .map((component, index, array) => (
+                        <li aria-posinset={index + 1} aria-setsize={array.length} key={component.heading}>
+                          <Card
+                            className="rhc-templates-card"
+                            description={<Paragraph>{component.description}</Paragraph>}
+                            href={component.href}
+                            linkLabel={component.linkLabel}
+                            target="_blank"
+                            title={component.title}
+                            heading={
+                              <Heading appearanceLevel={4} level={2}>
+                                {component.heading}
+                              </Heading>
+                            }
+                          >
+                            <BadgeList className="rhc-templates-badgelist">
+                              {component.frameworks.map((framework) => (
+                                <DataBadge className="rhc-templates-databadge" key={framework}>
+                                  {framework}
+                                </DataBadge>
+                              ))}
+                            </BadgeList>
+                          </Card>
+                        </li>
+                      ))}
                   </ol>
                 )}
                 <Pagination
