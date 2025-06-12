@@ -258,31 +258,41 @@ export default function Componenten() {
             </Paragraph>
           </HeadingGroup>
 
-          <search aria-labelledby="search-heading" role="search">
-            <h2 className="rhc-sr-only" id="search-heading">
-              Zoeken
-            </h2>
-            <form className="rhc-search-form" onSubmit={handleSearchSubmit}>
-              <FormFieldTextInput
-                aria-describedby="search-help"
-                className="rhc-search-form__label"
-                id="componentSearchInput"
-                label="Voer een zoekterm in"
-                name="q"
-                type="text"
-                value={searchTerm}
-                onChange={handleSearchChange}
-              />
-              <div className="rhc-sr-only" id="search-help">
-                Zoek in componentnamen en beschrijvingen. Druk op Enter om te zoeken.
-              </div>
-              <Button aria-label="Zoeken" className="rhc-search-button" type="submit">
+          <div className="rhc-search-container">
+            <search aria-labelledby="search-heading" role="search">
+              <h2 className="rhc-sr-only" id="search-heading">
+                Zoeken
+              </h2>
+              <form className="rhc-search-form" onSubmit={handleSearchSubmit}>
+                <FormFieldTextInput
+                  aria-describedby="search-help"
+                  className="rhc-search-form__label"
+                  id="componentSearchInput"
+                  label="Voer een zoekterm in"
+                  name="q"
+                  type="text"
+                  value={searchTerm}
+                  onChange={handleSearchChange}
+                />
+                <div className="rhc-sr-only" id="search-help">
+                  Zoek in componentnamen en beschrijvingen. Druk op Enter om te zoeken.
+                </div>
+                <Button aria-label="Zoeken" className="rhc-search-button" type="submit">
+                  <Icon>
+                    <IconSearch />
+                  </Icon>
+                </Button>
+              </form>
+            </search>
+            <div className="rhc-componenten-toevoegen">
+              <ButtonLink appearance="secondary-action-button" href="/">
                 <Icon>
-                  <IconSearch />
+                  <IconPlus />
                 </Icon>
-              </Button>
-            </form>
-          </search>
+                Component toevoegen
+              </ButtonLink>
+            </div>
+          </div>
 
           <ActiveFiltersBadgeList selectedFrameworks={selectedFrameworks} onRemoveFilter={handleRemoveActiveFilter} />
 
@@ -329,16 +339,13 @@ export default function Componenten() {
               </search>
             </aside>
 
-            <div className="rhc-grid-container__end">
-              <div className="rhc-componenten-toevoegen">
-                {/* TODO: change to correct href */}
-                <ButtonLink appearance="secondary-action-button" href="/">
-                  <Icon>
-                    <IconPlus />
-                  </Icon>
-                  Component toevoegen
-                </ButtonLink>
-              </div>
+            <div className="rhc-grid-container__end" ref={resultsRef} tabIndex={-1}>
+              <HeadingGroup>
+                <Heading appearanceLevel={3} level={2}>
+                  Zoekresultaten
+                </Heading>
+                <Paragraph role="status">{getStatusText(filteredComponents.length)}</Paragraph>
+              </HeadingGroup>
 
               <div className="rhc-grid-container__end" ref={resultsRef} tabIndex={-1}>
                 <HeadingGroup>
