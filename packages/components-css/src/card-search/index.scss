@@ -1,0 +1,75 @@
+@use "mixin";
+
+.rhc-card-search {
+  @include mixin.rhc-card-search;
+  .utrecht-img:not(img[width]) {
+    block-size: 100%;
+    inline-size: 100%;
+  }
+}
+
+.rhc-card-search div:empty {
+  @include mixin.rhc-card-search__empty-element;
+}
+
+.rhc-card-search--default {
+  @include mixin.rhc-card-search--default;
+}
+
+.rhc-card-search__heading {
+  @include mixin.rhc-card-search__heading;
+}
+
+.rhc-card-search__subheading {
+  @include mixin.rhc-card-search__subheading;
+}
+
+.rhc-card-search__metadata {
+  @include mixin.rhc-card-search__metadata;
+}
+
+.rhc-card-search__content {
+  @include mixin.rhc-card-search__content;
+}
+
+.rhc-card-search__link {
+  @include mixin.rhc-card-search__link;
+}
+
+// CARDSEARCH STATES //
+// .rhc-card-search:active {
+//   @include mixin.rhc-card-search--active;
+// }
+// .rhc-card-search--default:focus {
+//   @include mixin.rhc-card-search--default--focus;
+// }
+// .rhc-card-search--default:hover {
+//   @include mixin.rhc-card-search--default--hover;
+// }
+
+// HEADING STATES //
+.rhc-card-search:active .rhc-card-search__heading {
+  @include mixin.rhc-card-search__heading--active;
+}
+.rhc-card-search:focus .rhc-card-search__heading {
+  @include mixin.rhc-card-search__heading--active;
+}
+.rhc-card-search:hover .rhc-card-search__heading {
+  @include mixin.rhc-card-search__heading--active;
+}
+
+// SUBHEADING STATES //
+.rhc-card-search:hover .rhc-card-search__subheading {
+  @include mixin.rhc-card-search__subheading--active;
+}
+
+// LINK STATES //
+.rhc-card-search:active .rhc-card-search__link {
+  @include mixin.rhc-card-search__link--active;
+}
+.rhc-card-search:focus .rhc-card-search__link {
+  @include mixin.rhc-card-search__link--focus;
+}
+.rhc-card-search:hover .rhc-card-search__link {
+  @include mixin.rhc-card-search__link--hover;
+}
