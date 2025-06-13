@@ -50,7 +50,10 @@ const meta: Meta<DataSummaryItemComponent & DataSummaryComponent> = {
   },
   render: ({ key, value, href, actionLabel, appearance }) => ({
     template: `
-      <rhc-data-summary [appearance]="'${appearance}'"><rhc-data-summary-item [key]="'${key}'" [value]="'${value}'" [href]="'${href}'" [actionLabel]="'${actionLabel}'"></rhc-data-summary-item></rhc-data-summary>
+      <rhc-data-summary [appearance]="'${appearance}'">
+        <div rhc-data-summary-item [key]="'${key}'" [value]="'${value}'" [href]="'${href}'" [actionLabel]="'${actionLabel}'">
+        </div>
+      </rhc-data-summary>
     `,
     props: {
       key,

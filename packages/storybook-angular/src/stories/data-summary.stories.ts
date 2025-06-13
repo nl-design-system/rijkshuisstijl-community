@@ -64,9 +64,9 @@ const meta: Meta<DataSummaryStoryComponent> = {
           ${items
             .map(
               ({ key, value, href, actionLabel }) =>
-                `<rhc-data-summary-item key="${key}" value="${value}"${
+                `<div rhc-data-summary-item key="${key}" value="${value}"${
                   withActions && href && actionLabel ? ` href="${href}" actionLabel="${actionLabel}"` : ''
-                }></rhc-data-summary-item>`,
+                }></div>`,
             )
             .join('')}
         </rhc-data-summary>

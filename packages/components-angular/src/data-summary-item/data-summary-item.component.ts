@@ -3,9 +3,12 @@ import { Component, Input } from '@angular/core';
 import { LinkComponent } from '../link/link.component';
 
 @Component({
-  selector: 'rhc-data-summary-item',
+  selector: 'div[rhc-data-summary-item]',
   imports: [CommonModule, LinkComponent],
   templateUrl: './data-summary-item.component.html',
+  host: {
+    '[class.rhc-data-summary__item]': 'true',
+  },
 })
 export class DataSummaryItemComponent {
   @Input() key: string = '';
