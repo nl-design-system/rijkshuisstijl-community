@@ -2,4 +2,4 @@
 '@rijkshuisstijl-community/components-angular': minor
 ---
 
-Fix invalid html in data-summary by using an attribute selector
+Fix invalid markup in Data Summary component by using an attribute selector instead of a component selector.
