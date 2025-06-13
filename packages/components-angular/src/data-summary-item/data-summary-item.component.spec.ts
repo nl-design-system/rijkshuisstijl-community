@@ -5,7 +5,7 @@ import { DataSummaryItemComponent } from './data-summary-item.component';
 @Component({
   imports: [DataSummaryItemComponent],
   template: `
-    <rhc-data-summary-item key="Mijn key" value="Mijn value" href="#" actionLabel="Lees meer" target="_self" />
+    <div rhc-data-summary-item key="Mijn key" value="Mijn value" href="#" actionLabel="Lees meer" target="_self"></div>
   `,
 })
 class DataSummaryItemWithAction {}
@@ -40,7 +40,7 @@ describe('DataSummaryItemComponentWithAction', () => {
 
 @Component({
   imports: [DataSummaryItemComponent],
-  template: ` <rhc-data-summary-item key="Mijn key" value="Mijn value" /> `,
+  template: `<div rhc-data-summary-item key="Mijn key" value="Mijn value"></div>`,
 })
 class DataSummaryItemWithoutAction {}
 

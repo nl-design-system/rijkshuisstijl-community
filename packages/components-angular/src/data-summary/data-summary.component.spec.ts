@@ -7,14 +7,22 @@ import { DataSummaryItemComponent } from '../data-summary-item/data-summary-item
   imports: [DataSummaryComponent, DataSummaryItemComponent],
   template: `
     <rhc-data-summary [appearance]="appearance">
-      <rhc-data-summary-item key="Mijn key" value="Mijn value" href="#" actionLabel="Lees meer" target="_self" />
-      <rhc-data-summary-item
+      <div
+        rhc-data-summary-item
+        key="Mijn key"
+        value="Mijn value"
+        href="#"
+        actionLabel="Lees meer"
+        target="_self"
+      ></div>
+      <div
+        rhc-data-summary-item
         key="Mijn tweede key"
         value="Mijn tweede value"
         href="#"
         actionLabel="Lees meer"
         target="_self"
-      />
+      ></div>
     </rhc-data-summary>
   `,
 })
@@ -51,7 +59,7 @@ describe('DataSummaryComponent', () => {
   });
 
   it('should render its two children correctly', () => {
-    const items = fixture.nativeElement.querySelectorAll('rhc-data-summary-item');
+    const items = fixture.nativeElement.querySelectorAll('div[rhc-data-summary-item]');
     expect(items.length).toBe(2);
   });
 });
