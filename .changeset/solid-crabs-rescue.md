@@ -2,4 +2,4 @@
 '@rijkshuisstijl-community/design-tokens': patch
 ---
 
-Button miste cursor: pointer
+Voeg tokenset toe voor `cursor` op de Button component.
