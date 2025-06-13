@@ -1325,6 +1325,48 @@
     }
   },
   "components/accordion": {
+    "utrecht": {
+      "action": {
+        "activate": {
+          "cursor": {
+            "value": "pointer",
+            "type": "other"
+          }
+        },
+        "busy": {
+          "cursor": {
+            "value": "wait",
+            "type": "other"
+          }
+        },
+        "disabled": {
+          "cursor": {
+            "value": "not-allowed",
+            "type": "other"
+          }
+        },
+        "inert": {
+          "cursor": {
+            "value": "default",
+            "type": "other"
+          }
+        },
+        "navigate": {
+          "cursor": {
+            "value": "pointer",
+            "type": "other"
+          }
+        },
+        "submit": {
+          "cursor": {
+            "value": "pointer",
+            "type": "other"
+          }
+        }
+      }
+    }
+  },
+  "components/action": {
     "rhc": {
       "accordion": {
         "button": {
@@ -9587,7 +9629,8 @@
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
-        "components/data-summary": "enabled"
+        "components/data-summary": "enabled",
+        "components/action": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9681,7 +9724,8 @@
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
-        "components/data-summary": "enabled"
+        "components/data-summary": "enabled",
+        "components/action": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9777,7 +9821,8 @@
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "overwrites/oude rijkshuisstijl/blockqoute": "enabled",
-        "components/data-summary": "enabled"
+        "components/data-summary": "enabled",
+        "components/action": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9871,7 +9916,8 @@
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
-        "components/data-summary": "enabled"
+        "components/data-summary": "enabled",
+        "components/action": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9965,7 +10011,8 @@
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
-        "components/data-summary": "enabled"
+        "components/data-summary": "enabled",
+        "components/action": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10059,7 +10106,8 @@
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
-        "components/data-summary": "enabled"
+        "components/data-summary": "enabled",
+        "components/action": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10153,7 +10201,8 @@
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
-        "components/data-summary": "enabled"
+        "components/data-summary": "enabled",
+        "components/action": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10247,7 +10296,8 @@
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
-        "components/data-summary": "enabled"
+        "components/data-summary": "enabled",
+        "components/action": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10272,6 +10322,7 @@
       "utrecht/rich-text",
       "utrecht/document",
       "components/accordion",
+      "components/action",
       "components/alert",
       "components/article",
       "components/avatar",
