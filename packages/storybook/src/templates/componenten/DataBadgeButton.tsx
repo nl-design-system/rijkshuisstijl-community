@@ -1,13 +1,9 @@
-import { DataBadge } from '@utrecht/component-library-react';
+import { DataBadge, type DataBadgeProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { KeyboardEvent, MouseEvent, PropsWithChildren } from 'react';
 
-export interface DataBadgeButtonProps extends PropsWithChildren {
-  className?: string;
+export interface DataBadgeButtonProps extends DataBadgeProps {
   pressed?: boolean;
-  // eslint-disable-next-line no-unused-vars
-  onClick?: (value: string) => void;
-  value: string;
 }
 
 export const DataBadgeButton = ({
@@ -16,13 +12,14 @@ export const DataBadgeButton = ({
   pressed = false,
   onClick,
   value,
-}: DataBadgeButtonProps) => {
+  ...restProps
+}: PropsWithChildren<DataBadgeButtonProps>) => {
   const handleClick = (event: MouseEvent) => {
     event.preventDefault();
     event.stopPropagation();
     (event.target as HTMLElement).focus();
     if (onClick) {
-      onClick(value);
+      onClick(event);
     }
   };
 
@@ -31,7 +28,7 @@ export const DataBadgeButton = ({
       event.preventDefault();
       event.stopPropagation();
       if (onClick) {
-        onClick(value);
+        onClick(event);
       }
     }
   };
@@ -52,6 +49,7 @@ export const DataBadgeButton = ({
       )}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
+      {...restProps}
     >
       {children}
       <span className="rhc-templates-databadge__sr-only" id={`${value}-badge-help`}>
