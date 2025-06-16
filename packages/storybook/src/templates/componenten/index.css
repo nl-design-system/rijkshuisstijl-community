@@ -101,3 +101,23 @@
   border-radius: 4px 0 0 4px !important;
   position: relative !important;
 }
+
+.rhc-search-container {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  padding-block-end: 2em;
+}
+
+@media (width <= 780px) {
+  .rhc-search-container {
+    align-items: stretch;
+    flex-direction: column;
+    padding-block-end: 0;
+  }
+  .rhc-componenten-toevoegen {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-block-start: 1em;
+  }
+}

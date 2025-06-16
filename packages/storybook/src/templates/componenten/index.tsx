@@ -113,21 +113,32 @@ export default function Componenten() {
             </Paragraph>
           </HeadingGroup>
 
-          <search>
-            <form className="rhc-search-form" onSubmit={handleSearchSubmit}>
-              <FormFieldTextInput
-                id="componentSearchInput"
-                label="Voer een zoekterm in"
-                name="q"
-                type="text"
-                value={searchTerm}
-                onChange={handleSearchChange}
-              />
-              <Button aria-label="Zoeken" className="rhc-search-button" type="submit">
-                <IconSearch />
-              </Button>
-            </form>
-          </search>
+          <div className="rhc-search-container">
+            <search>
+              <form className="rhc-search-form" onSubmit={handleSearchSubmit}>
+                <FormFieldTextInput
+                  id="componentSearchInput"
+                  label="Voer een zoekterm in"
+                  name="q"
+                  type="text"
+                  value={searchTerm}
+                  onChange={handleSearchChange}
+                />
+                <Button aria-label="Zoeken" className="rhc-search-button" type="submit">
+                  <IconSearch />
+                </Button>
+              </form>
+            </search>
+
+            <div className="rhc-componenten-toevoegen">
+              <ButtonLink appearance="secondary-action-button" href="/">
+                <Icon>
+                  <IconPlus />
+                </Icon>
+                Component toevoegen
+              </ButtonLink>
+            </div>
+          </div>
 
           <div className="rhc-container">
             <aside>
@@ -160,55 +171,43 @@ export default function Componenten() {
               </search>
             </aside>
 
-            <div className="rhc-grid-container__end">
-              <div className="rhc-componenten-toevoegen">
-                {/* TODO: change to correct href */}
-                <ButtonLink appearance="secondary-action-button" href="/">
-                  <Icon>
-                    <IconPlus />
-                  </Icon>
-                  Component toevoegen
-                </ButtonLink>
-              </div>
+            <div className="rhc-grid-container__end" ref={resultsRef} tabIndex={-1}>
+              <HeadingGroup>
+                <Heading appearanceLevel={3} level={2}>
+                  Zoekresultaten
+                </Heading>
+                <Paragraph role="status">{getStatusText(filteredComponents.length)}</Paragraph>
+              </HeadingGroup>
 
-              <div className="rhc-grid-container__end" ref={resultsRef} tabIndex={-1}>
-                <HeadingGroup>
-                  <Heading appearanceLevel={3} level={2}>
-                    Zoekresultaten
-                  </Heading>
-                  <Paragraph role="status">{getStatusText(filteredComponents.length)}</Paragraph>
-                </HeadingGroup>
-
-                {filteredComponents.length > 0 && (
-                  <ol className="rhc-ordered-list">
-                    {filteredComponents.map((component, index, array) => (
-                      <li aria-posinset={index + 1} aria-setsize={array.length} key={component.heading}>
-                        <Card
-                          className="rhc-templates-card"
-                          description={<Paragraph>{component.description}</Paragraph>}
-                          href={component.href}
-                          linkLabel={component.linkLabel}
-                          target="_blank"
-                          title={component.title}
-                          heading={
-                            <Heading appearanceLevel={4} level={2}>
-                              {component.heading}
-                            </Heading>
-                          }
-                        >
-                          <BadgeList className="rhc-templates-badgelist">
-                            {component.frameworks.map((framework) => (
-                              <DataBadge className="rhc-templates-databadge" key={framework}>
-                                {framework}
-                              </DataBadge>
-                            ))}
-                          </BadgeList>
-                        </Card>
-                      </li>
-                    ))}
-                  </ol>
-                )}
-              </div>
+              {filteredComponents.length > 0 && (
+                <ol className="rhc-ordered-list">
+                  {filteredComponents.map((component, index, array) => (
+                    <li aria-posinset={index + 1} aria-setsize={array.length} key={component.heading}>
+                      <Card
+                        className="rhc-templates-card"
+                        description={<Paragraph>{component.description}</Paragraph>}
+                        href={component.href}
+                        linkLabel={component.linkLabel}
+                        target="_blank"
+                        title={component.title}
+                        heading={
+                          <Heading appearanceLevel={4} level={2}>
+                            {component.heading}
+                          </Heading>
+                        }
+                      >
+                        <BadgeList className="rhc-templates-badgelist">
+                          {component.frameworks.map((framework) => (
+                            <DataBadge className="rhc-templates-databadge" key={framework}>
+                              {framework}
+                            </DataBadge>
+                          ))}
+                        </BadgeList>
+                      </Card>
+                    </li>
+                  ))}
+                </ol>
+              )}
             </div>
           </div>
         </SharedMainPageContent>
