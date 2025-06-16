@@ -1,6 +1,6 @@
 <!-- @license CC0-1.0 -->
 
-# Rijkshuisstijl Community card component
+# Rijkshuisstijl Community Card As Link component
 
 Gebruik een card op een overzichtspagina om te linken naar een artikelpagina, zoals een nieuwsartikel, een vacature of een zoekresultaat.
 De card bevat doorgaans de titel, inleiding en een afbeelding van de content.
