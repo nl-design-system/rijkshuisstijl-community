@@ -4,6 +4,7 @@ import { KeyboardEvent, MouseEvent, PropsWithChildren } from 'react';
 
 export interface DataBadgeButtonProps extends DataBadgeProps {
   pressed?: boolean;
+  value: string;
 }
 
 export const DataBadgeButton = ({
@@ -14,21 +15,12 @@ export const DataBadgeButton = ({
   value,
   ...restProps
 }: PropsWithChildren<DataBadgeButtonProps>) => {
-  const handleClick = (event: MouseEvent) => {
-    event.preventDefault();
-    event.stopPropagation();
-    (event.target as HTMLElement).focus();
-    if (onClick) {
-      onClick(event);
-    }
-  };
-
-  const handleKeyDown = (event: KeyboardEvent) => {
+  const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       event.stopPropagation();
       if (onClick) {
-        onClick(event);
+        onClick(event as unknown as MouseEvent<HTMLElement>);
       }
     }
   };
@@ -38,6 +30,7 @@ export const DataBadgeButton = ({
       aria-describedby={`${value}-badge-help`}
       aria-label={`${pressed ? 'Verwijder' : 'Voeg toe'} ${value} filter`}
       aria-pressed={pressed}
+      data-value={value}
       role="button"
       tabIndex={0}
       className={clsx(
@@ -47,7 +40,7 @@ export const DataBadgeButton = ({
         },
         className,
       )}
-      onClick={handleClick}
+      onClick={onClick}
       onKeyDown={handleKeyDown}
       {...restProps}
     >

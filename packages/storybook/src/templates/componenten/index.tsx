@@ -59,7 +59,10 @@ const ActiveFiltersBadgeList = ({ onRemoveFilter, selectedFrameworks }: ActiveFi
             key={`active-${framework}`}
             pressed={true}
             value={framework}
-            onClick={onRemoveFilter}
+            onClick={(e) => {
+              const target = e.currentTarget as HTMLElement;
+              onRemoveFilter(target.getAttribute('data-value') || '');
+            }}
           >
             {framework}
           </DataBadgeButton>
@@ -370,10 +373,14 @@ export default function Componenten() {
                             {component.frameworks.map((framework) => (
                               <DataBadgeButton
                                 aria-label={`${framework} filter ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
+                                data-value={framework}
                                 key={framework}
                                 pressed={selectedFrameworks.includes(framework)}
                                 value={framework}
-                                onClick={handleDataBadgeClick}
+                                onClick={(e) => {
+                                  const target = e.currentTarget as HTMLElement;
+                                  handleDataBadgeClick(target.getAttribute('data-value') || '');
+                                }}
                               >
                                 {framework}
                               </DataBadgeButton>
