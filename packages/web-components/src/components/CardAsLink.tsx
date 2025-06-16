@@ -15,8 +15,8 @@ export type CardAsLinkWebComponentAttributes = CardAsLinkProps;
 export type FullBleedCardAsLinkPropsWebComponentAttributes = FullBleedCardAsLinkProps;
 export type HorizontalImageCardAsLinkPropsWebComponentAttributes = HorizontalImageCardAsLinkProps;
 
-export class CardAsLinkdWebComponent extends BaseWebComponent {
-  static override readonly tagName: string = 'rhc-card';
+export class CardAsLinkWebComponent extends BaseWebComponent {
+  static override readonly tagName: string = 'rhc-card-as-link';
 
   constructor() {
     super(stylesheet);
