@@ -47,8 +47,8 @@ export const allComponentsData: ComponentData[] = [
   },
   {
     id: 'breadcrumb-navigation',
-    title: 'Breadcrumb Navigation',
-    heading: 'Bekijk de Breadcrumb Navigation component in Storybook',
+    title: 'Bekijk de Breadcrumb Navigation component in Storybook',
+    heading: 'Breadcrumb Navigation',
     description:
       'Toont de locatie van de pagina binnen de hiërarchie van een website en biedt de mogelijkheid om tussen niveaus te navigeren.',
     href: 'https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-breadcrumb-nav--docs',
