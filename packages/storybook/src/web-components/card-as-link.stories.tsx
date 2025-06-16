@@ -1,7 +1,7 @@
 import { CardAsLinkWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta } from '@storybook/web-components';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/card.md?raw';
+import readme from '../community/card-as-link.md?raw';
 
 CardAsLinkWebComponent.define();
 
