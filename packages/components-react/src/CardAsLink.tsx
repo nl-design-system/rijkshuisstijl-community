@@ -70,30 +70,37 @@ const DefaultCardAsLink = ({
   ...restProps
 }: PropsWithChildren<CardAsLinkProps>) => {
   return (
-    <div className={clsx('rhc-card', 'rhc-card--default', className)} ref={ref} {...restProps}>
-      <div className="rhc-card__content">
-        <div className="rhc-card__heading">{heading}</div>
+    <div className={clsx('rhc-card-as-link', 'rhc-card-as-link--default', className)} ref={ref} {...restProps}>
+      <div className="rhc-card-as-link__content">
+        <div className="rhc-card-as-link__heading">{heading}</div>
         {imageSrc && (
-          <div className="rhc-card__image-container" data-testid="rhc-card__image-container">
-            {<Image alt={imageAlt} className="rhc-card__image" presentation={imagePresentation} src={imageSrc} />}
+          <div className="rhc-card-as-link__image-container" data-testid="rhc-card-as-link__image-container">
+            {
+              <Image
+                alt={imageAlt}
+                className="rhc-card-as-link__image"
+                presentation={imagePresentation}
+                src={imageSrc}
+              />
+            }
           </div>
         )}
-        <div className="rhc-card__icon">{icon}</div>
-        <div className="rhc-card__description">{description}</div>
-        <div className="rhc-card__metadata">{metadata}</div>
+        <div className="rhc-card-as-link__icon">{icon}</div>
+        <div className="rhc-card-as-link__description">{description}</div>
+        <div className="rhc-card-as-link__metadata">{metadata}</div>
         {children}
       </div>
       {(linkLabel || button) && (
-        <div className="rhc-card__footer">
+        <div className="rhc-card-as-link__footer">
           {linkLabel && (
-            <div className="rhc-card__link rhc-card__anchor" data-testid="rhc-card__link">
+            <div className="rhc-card-as-link__link rhc-card-as-link__anchor" data-testid="rhc-card-as-link__link">
               <Link aria-label={title} href={href} target={target} title={title}>
                 {linkLabel}
               </Link>
             </div>
           )}
           {button && (
-            <div className="rhc-card__button" data-testid="rhc-card__button">
+            <div className="rhc-card-as-link__button" data-testid="rhc-card-as-link__button">
               {button}
             </div>
           )}
@@ -120,17 +127,17 @@ export const FullBleedCardAsLink = ({
   imageAlt,
   ...restProps
 }: PropsWithChildren<FullBleedCardAsLinkProps>) => (
-  <div className={clsx('rhc-card', 'rhc-card--full-bleed', className)} ref={ref} {...restProps}>
-    <span className="rhc-card__anchor">
+  <div className={clsx('rhc-card-as-link', 'rhc-card-as-link--full-bleed', className)} ref={ref} {...restProps}>
+    <span className="rhc-card-as-link__anchor">
       <a aria-label={title} href={href} target={target} title={title}></a>
     </span>
-    <div className="rhc-card__content">
-      <div className="rhc-card__heading">{heading}</div>
-      <div className="rhc-card__description">{description}</div>
-      <div className="rhc-card__metadata">{metadata}</div>
+    <div className="rhc-card-as-link__content">
+      <div className="rhc-card-as-link__heading">{heading}</div>
+      <div className="rhc-card-as-link__description">{description}</div>
+      <div className="rhc-card-as-link__metadata">{metadata}</div>
       {children}
     </div>
-    {<Image alt={imageAlt} className="rhc-card__image" presentation={imagePresentation} src={imageSrc} />}
+    {<Image alt={imageAlt} className="rhc-card-as-link__image" presentation={imagePresentation} src={imageSrc} />}
   </div>
 );
 
@@ -149,16 +156,16 @@ export const HorizontalImageCardAsLink = ({
   className,
   ...restProps
 }: PropsWithChildren<HorizontalImageCardAsLinkProps>) => (
-  <div className={clsx('rhc-card', 'rhc-card--horizontal', className)} ref={ref} {...restProps}>
-    <span className="rhc-card__anchor">
+  <div className={clsx('rhc-card-as-link', 'rhc-card-as-link--horizontal', className)} ref={ref} {...restProps}>
+    <span className="rhc-card-as-link__anchor">
       <a aria-label={title} href={href} target={target} title={title}></a>
     </span>
-    <div className="rhc-card__content">
-      <div className="rhc-card__heading">{heading}</div>
+    <div className="rhc-card-as-link__content">
+      <div className="rhc-card-as-link__heading">{heading}</div>
       {children}
     </div>
-    <div className="rhc-card__image-container">
-      <Image alt={imageAlt} className="rhc-card__image" presentation={imagePresentation} src={imageSrc} />
+    <div className="rhc-card-as-link__image-container">
+      <Image alt={imageAlt} className="rhc-card-as-link__image" presentation={imagePresentation} src={imageSrc} />
     </div>
   </div>
 );

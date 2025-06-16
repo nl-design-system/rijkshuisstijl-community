@@ -69,7 +69,7 @@ declare global {
       'rhc-blockquote': WebComponentAttributes<BlockquoteWebComponentAttributes>;
       'rhc-breadcrumb-nav': WebComponentAttributes<BreadcrumbNavWebComponentAttributes>;
       'rhc-button': WebComponentAttributes<ButtonWebComponentAttributes>;
-      'rhc-card': WebComponentAttributes<CardAsLinkWebComponentAttributes>;
+      'rhc-card-as-link': WebComponentAttributes<CardAsLinkWebComponentAttributes>;
       'rhc-checkbox-group': WebComponentAttributes<CheckboxGroupWebComponentAttributes>;
       'rhc-checkbox': WebComponentAttributes<CheckboxWebComponentAttributes>;
       'rhc-form-checkbox-group': WebComponentAttributes<FormFieldCheckboxGroupAttributes>;

@@ -96,7 +96,7 @@ export default function Details() {
               </ColumnLayout>
               <Separator />
               <Heading level={2}>Uitgelicht</Heading>
-              <div className="rhc-card-group">
+              <div className="rhc-card-as-link-group">
                 <CardAsLink
                   heading="Bijbaan, vakantiewerk en stage door jongeren"
                   href="#"

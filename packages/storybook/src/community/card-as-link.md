@@ -22,19 +22,19 @@ De link is verplicht.
 Niet:
 
 ```html
-<a className="rhc-card">
-  <div className="rhc-card__content">...</div>
+<a className="rhc-card-as-link">
+  <div className="rhc-card-as-link__content">...</div>
 </a>
 ```
 
 Wel:
 
 ```html
-<div className="rhc-card">
-  <span className="rhc-card__anchor">
+<div className="rhc-card-as-link">
+  <span className="rhc-card-as-link__anchor">
     <a aria-label="aria-label" href="href" />
   </span>
-  <div className="rhc-card__content">...</div>
+  <div className="rhc-card-as-link__content">...</div>
 </div>
 ```
 

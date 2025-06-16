@@ -36,21 +36,21 @@ describe('Card', () => {
           const { getByTestId } = render(
             <CardAsLink heading="Heading" href="#" imageAlt="Just for testing" imageSrc="#" />,
           );
-          const imageContainer = getByTestId('rhc-card__image-container');
+          const imageContainer = getByTestId('rhc-card-as-link__image-container');
           expect(imageContainer).toBeInTheDocument();
         });
 
         it('does not render an image if imageSrc is not provided', () => {
           const { queryByTestId } = render(<CardAsLink heading="Heading" href="#" />);
 
-          expect(queryByTestId('rhc-card__image-container')).not.toBeInTheDocument();
+          expect(queryByTestId('rhc-card-as-link__image-container')).not.toBeInTheDocument();
         });
       });
 
       describe('linkLabel', () => {
         it('renders a footer with a link and link label with the correct label', () => {
           const { queryByTestId } = render(<CardAsLink heading="Heading" href="#" linkLabel="Example Label" />);
-          const link = queryByTestId('rhc-card__link');
+          const link = queryByTestId('rhc-card-as-link__link');
 
           expect(link).toBeInTheDocument();
         });
@@ -58,7 +58,7 @@ describe('Card', () => {
         it('does not render a footer with a link and link label if linkLabel is not provided', () => {
           const { queryByTestId } = render(<CardAsLink heading="Heading" href="#" />);
 
-          expect(queryByTestId('rhc-card__link')).not.toBeInTheDocument();
+          expect(queryByTestId('rhc-card-as-link__link')).not.toBeInTheDocument();
         });
       });
 
@@ -67,7 +67,7 @@ describe('Card', () => {
           const { queryByTestId } = render(
             <CardAsLink button={<button>Example Button</button>} heading="Heading" href="#" />,
           );
-          const button = queryByTestId('rhc-card__button');
+          const button = queryByTestId('rhc-card-as-link__button');
 
           expect(button).toBeInTheDocument();
         });
@@ -75,7 +75,7 @@ describe('Card', () => {
         it('does not render a footer with a button if button is not provided', () => {
           const { queryByTestId } = render(<CardAsLink heading="Heading" href="#" />);
 
-          expect(queryByTestId('rhc-card__button')).not.toBeInTheDocument();
+          expect(queryByTestId('rhc-card-as-link__button')).not.toBeInTheDocument();
         });
       });
     });

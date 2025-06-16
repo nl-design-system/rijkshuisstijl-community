@@ -30,9 +30,9 @@ export default function Page() {
             </Paragraph>
           </ColumnLayout>
           {/* Dit worden Marwa's improved cards */}
-          <div className="rhc-card-group">
+          <div className="rhc-card-as-link-group">
             <CardAsLink
-              className="rhc-card-no-link"
+              className="rhc-card-as-link-no-link"
               heading={
                 <Heading appearanceLevel={4} level={2}>
                   Efficiënt
@@ -45,7 +45,7 @@ export default function Page() {
               </Paragraph>
             </CardAsLink>
             <CardAsLink
-              className="rhc-card-no-link"
+              className="rhc-card-as-link-no-link"
               heading={
                 <Heading appearanceLevel={4} level={2}>
                   Breed gedragen
@@ -55,7 +55,7 @@ export default function Page() {
               <Paragraph>De community deelt regelmatig kennis, ervaring, updates en verbeteringen.</Paragraph>
             </CardAsLink>
             <CardAsLink
-              className="rhc-card-no-link"
+              className="rhc-card-as-link-no-link"
               heading={
                 <Heading appearanceLevel={4} level={2}>
                   Gebruiksvriendelijk
@@ -73,7 +73,7 @@ export default function Page() {
               frameworks. Voor een dieper begrip en uitgebreide documentatie verwijzen we je graag naar de &quot;lees en
               leer&quot; section.
             </Paragraph>
-            <div className="rhc-card-group">
+            <div className="rhc-card-as-link-group">
               <CardAsLink
                 appearance="horizontal"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/README.md"
@@ -191,7 +191,7 @@ export default function Page() {
 
           <section className="rhc-templates-spacing-1">
             <Heading level={2}>Lees en leer</Heading>
-            <div className="rhc-card-group">
+            <div className="rhc-card-as-link-group">
               <CardAsLink
                 href="https://rijkshuisstijl-community.vercel.app/"
                 linkLabel="Bekijk de Rijkshuisstijl Community Storybook"
@@ -348,7 +348,7 @@ export default function Page() {
 
           <section className="rhc-templates-spacing-1">
             <Heading level={2}>Kom in contact</Heading>
-            <div className="rhc-card-group">
+            <div className="rhc-card-as-link-group">
               <CardAsLink
                 appearance="full-bleed"
                 href="https://praatmee.codefor.nl/"
