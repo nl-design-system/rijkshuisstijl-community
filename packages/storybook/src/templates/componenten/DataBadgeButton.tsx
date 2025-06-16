@@ -5,6 +5,8 @@ import { KeyboardEvent, MouseEvent, PropsWithChildren } from 'react';
 export interface DataBadgeButtonProps extends DataBadgeProps {
   pressed?: boolean;
   value: string;
+  helperTextWhenPressed?: string;
+  helperTextWhenNotPressed?: string;
 }
 
 export const DataBadgeButton = ({
@@ -13,6 +15,8 @@ export const DataBadgeButton = ({
   pressed = false,
   onClick,
   value,
+  helperTextWhenPressed = 'verwijderen',
+  helperTextWhenNotPressed = 'toevoegen',
   ...restProps
 }: PropsWithChildren<DataBadgeButtonProps>) => {
   const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
@@ -46,7 +50,7 @@ export const DataBadgeButton = ({
     >
       {children}
       <span className="rhc-templates-databadge__sr-only" id={`${value}-badge-help`}>
-        - Klik om filter te {pressed ? 'verwijderen' : 'toevoegen'}
+        {pressed ? helperTextWhenPressed : helperTextWhenNotPressed}
       </span>
     </DataBadge>
   );
