@@ -42,19 +42,25 @@ npm install --save-dev @rijkshuisstijl-community/design-tokens
 npm install --save-dev @rijkshuisstijl-community/components-css
 ```
 
-Deze pakketten bevat de CSS-variabelen van het design systeem en de CSS-classes die de componenten aan de variabelen koppelen. Importeer het `index.css`-bestand uit de `dist` mappen van de pakketten, en omring het deel van je applicatie waar je het thema wilt toepassen met het Rijkshuisstijl-thema: `rhc-theme`.
+Deze pakketten bevatten de CSS-variabelen van het design systeem en de CSS-classes die de componenten aan de variabelen koppelen.
+Importeer de `index.css`-bestanden uit de `dist` mappen van de pakketten, en omring het deel van je applicatie waar je het thema wilt toepassen met het Rijkshuisstijl-thema: `rhc-theme`.
+
+Voeg de volgende css toe aan `styles.css` (het bestand waar je global styles hebt staan).
+
+```css
+@import url('@rijkshuisstijl-community/design-tokens/dist/index.css');
+@import url('@rijkshuisstijl-community/components-css/dist/index.css');
+```
 
 ```ts
 import { Component } from '@angular/core';
 import { ButtonComponent } from '@rijkshuisstijl-community/components-angular';
-import '@rijkshuisstijl-community/design-tokens/dist/index.css'; // design tokens importeren
-import '@rijkshuisstijl-community/components-css/dist/index.css'; // css importeren
 
 @Component({
   selector: 'app-root',
   imports: [ButtonComponent],
   template: `
-    <main class="main" class="rhc-theme">
+    <main class="rhc-theme">
       <button rhc-button [appearance]="'primary-action'" [disabled]="false">hello world</button>
     </main>
   `,
