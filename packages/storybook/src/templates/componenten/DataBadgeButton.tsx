@@ -1,9 +1,8 @@
 import { DataBadge } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { KeyboardEvent, MouseEvent, ReactNode } from 'react';
+import { KeyboardEvent, MouseEvent, PropsWithChildren } from 'react';
 
-export interface DataBadgeButtonProps {
-  children: ReactNode;
+export interface DataBadgeButtonProps extends PropsWithChildren {
   className?: string;
   pressed?: boolean;
   // eslint-disable-next-line no-unused-vars
@@ -21,7 +20,6 @@ export const DataBadgeButton = ({
   const handleClick = (event: MouseEvent) => {
     event.preventDefault();
     event.stopPropagation();
-    // Force focus away from parent link to prevent navigation
     (event.target as HTMLElement).focus();
     if (onClick) {
       onClick(value);
@@ -48,7 +46,7 @@ export const DataBadgeButton = ({
       className={clsx(
         'rhc-templates-databadge',
         {
-          'rhc-templates-databadge--selected': pressed,
+          'rhc-templates-databadge--pressed': pressed,
         },
         className,
       )}
