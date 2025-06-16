@@ -27,7 +27,6 @@
 
 .rhc-templates-badgelist {
   gap: var(--rhc-space-100) !important;
-  pointer-events: auto;
   position: relative;
   z-index: 1; /* hogere z-index zodat data badges klikbaar zijn binnen de card as link */
 }
@@ -137,41 +136,15 @@
 }
 
 .rhc-active-filters__badge::after {
-  content: "✕";
-  font-size: 0.875em;
   justify-content: center;
-  margin-inline-start: 0.5rem;
-  opacity: 80%;
+  margin-inline-start: var(--rhc-space-25);
 }
 
-.rhc-active-filters__badge:hover::after {
-  opacity: 100%;
-}
-
-/* Visual indicator icons */
-.rhc-templates-databadge::after {
-  font-size: 0.75em;
-  margin-inline-start: 0.5rem;
-  opacity: 60%;
-}
-
-.rhc-templates-databadge--selected::after {
+.rhc-templates-databadge--pressed::after {
   content: "✓";
   display: inline-block;
-  opacity: 100%;
   text-align: center;
   vertical-align: text-top;
-}
-
-/* Hover effects */
-.rhc-templates-databadge:hover {
-  background-color: var(--rhc-color-primary-500) !important;
-  border-color: var(--rhc-color-primary-50) !important;
-  color: var(--rhc-color-wit) !important;
-}
-
-.rhc-templates-databadge:hover::after {
-  opacity: 100%;
 }
 
 /* Focus styles */
@@ -180,6 +153,13 @@
   outline-offset: var(--rhc-space-25);
   outline-style: solid;
   outline-width: var(--rhc-border-width-m);
+}
+
+/* Hover effects */
+.rhc-templates-databadge:hover {
+  background-color: var(--rhc-color-primary-500) !important;
+  border-color: var(--rhc-color-primary-50) !important;
+  color: var(--rhc-color-wit) !important;
 }
 
 /* Screenreader support */
@@ -196,16 +176,6 @@
   .rhc-active-filters {
     padding-block: var(--rhc-space-150, 0.75rem);
     padding-inline: var(--rhc-space-150, 0.75rem);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .rhc-templates-databadge {
-    transition: all 200ms ease-in-out;
-  }
-
-  .rhc-templates-databadge::after {
-    transition: opacity 200ms ease-in-out;
   }
 }
 

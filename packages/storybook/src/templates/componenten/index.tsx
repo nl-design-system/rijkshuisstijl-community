@@ -12,7 +12,7 @@ import {
 import { IconPlus, IconSearch } from '@tabler/icons-react';
 import { BadgeList, ButtonLink, Icon } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
-import React, { ChangeEvent, FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { ChangeEvent, FormEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { DataBadgeButton } from './DataBadgeButton';
 import { allComponentsData, ComponentData } from './components-data';
 import { ExpandableCheckboxGroup } from './expandableCheckboxGroup';
@@ -41,7 +41,7 @@ interface ActiveFiltersBadgeListProps {
   selectedFrameworks: string[];
 }
 
-const ActiveFiltersBadgeList: FC<ActiveFiltersBadgeListProps> = ({ onRemoveFilter, selectedFrameworks }) => {
+const ActiveFiltersBadgeList = ({ onRemoveFilter, selectedFrameworks }: ActiveFiltersBadgeListProps) => {
   if (selectedFrameworks.length === 0) return null;
 
   return (
@@ -116,7 +116,7 @@ export default function Componenten() {
     }
   }, [selectedFrameworks, filteredComponents.length, announceChange]);
 
-  const handleSearchSubmit = (event: React.FormEvent) => {
+  const handleSearchSubmit = (event: FormEvent) => {
     event.preventDefault();
     setSubmittedSearchTerm(searchTerm);
 
@@ -168,7 +168,7 @@ export default function Componenten() {
 
   // Apply the staged framework selections when filter button is clicked
   const handleFilterSubmit = useCallback(
-    (event: React.FormEvent<HTMLFormElement>): void => {
+    (event: FormEvent<HTMLFormElement>): void => {
       event.preventDefault();
 
       const previousCount = selectedFrameworks.length;
@@ -241,7 +241,7 @@ export default function Componenten() {
       <PageBody className="rhc-templates-page">
         <SharedMainPageContent>
           {/* Screen reader announcements */}
-          <div aria-atomic="true" aria-live="polite" className="rhc-sr-only" ref={announcementRef} role="status">
+          <div className="rhc-sr-only" ref={announcementRef} role="status">
             {announceMessage}
           </div>
 
@@ -262,6 +262,7 @@ export default function Componenten() {
             <form className="rhc-search-form" onSubmit={handleSearchSubmit}>
               <FormFieldTextInput
                 aria-describedby="search-help"
+                className="rhc-search-form__label"
                 id="componentSearchInput"
                 label="Voer een zoekterm in"
                 name="q"
@@ -273,7 +274,9 @@ export default function Componenten() {
                 Zoek in componentnamen en beschrijvingen. Druk op Enter om te zoeken.
               </div>
               <Button aria-label="Zoeken" className="rhc-search-button" type="submit">
-                <IconSearch aria-hidden="true" />
+                <Icon>
+                  <IconSearch />
+                </Icon>
               </Button>
             </form>
           </search>
@@ -326,12 +329,8 @@ export default function Componenten() {
             <div className="rhc-grid-container__end">
               <div className="rhc-componenten-toevoegen">
                 {/* TODO: change to correct href */}
-                <ButtonLink
-                  appearance="secondary-action-button"
-                  aria-label="Nieuw component toevoegen aan de bibliotheek"
-                  href="/"
-                >
-                  <Icon aria-hidden="true">
+                <ButtonLink appearance="secondary-action-button" href="/">
+                  <Icon>
                     <IconPlus />
                   </Icon>
                   Component toevoegen
@@ -343,9 +342,7 @@ export default function Componenten() {
                   <Heading appearanceLevel={3} id="results-heading" level={2}>
                     Zoekresultaten
                   </Heading>
-                  <Paragraph aria-live="polite" role="status">
-                    {getStatusText(filteredComponents.length)}
-                  </Paragraph>
+                  <Paragraph role="status">{getStatusText(filteredComponents.length)}</Paragraph>
                 </HeadingGroup>
 
                 {filteredComponents.length > 0 && (
