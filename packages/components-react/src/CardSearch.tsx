@@ -9,8 +9,6 @@ interface CardSearchProps {
   className?: string;
   heading: ReactNode;
   subheading?: ReactNode;
-  headingHref?: string;
-  subheadingHref?: string;
   description?: ReactNode;
   metadata?: string;
   ref?: Ref<HTMLDivElement>;
