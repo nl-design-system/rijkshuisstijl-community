@@ -33,13 +33,13 @@ export {
   SubtleButton,
 } from './Button';
 export {
-  Card,
-  type CardProps,
-  FullBleedCard,
-  type FullBleedCardProps,
-  HorizontalImageCard,
-  type HorizontalImageCardProps,
-} from './Card';
+  CardAsLink,
+  type CardAsLinkProps,
+  FullBleedCardAsLink,
+  type FullBleedCardAsLinkProps,
+  HorizontalImageCardAsLink,
+  type HorizontalImageCardAsLinkProps,
+} from './CardAsLink';
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
 export { CodeInput } from './CodeInput';

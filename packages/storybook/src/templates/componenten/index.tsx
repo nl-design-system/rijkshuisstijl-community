@@ -2,7 +2,7 @@
 
 import {
   Button,
-  Card,
+  CardAsLink,
   FormFieldTextInput,
   Heading,
   HeadingGroup,
@@ -183,7 +183,7 @@ export default function Componenten() {
                   <ol className="rhc-ordered-list">
                     {filteredComponents.map((component, index, array) => (
                       <li aria-posinset={index + 1} aria-setsize={array.length} key={component.heading}>
-                        <Card
+                        <CardAsLink
                           className="rhc-templates-card"
                           description={<Paragraph>{component.description}</Paragraph>}
                           href={component.href}
@@ -203,7 +203,7 @@ export default function Componenten() {
                               </DataBadge>
                             ))}
                           </BadgeList>
-                        </Card>
+                        </CardAsLink>
                       </li>
                     ))}
                   </ol>
