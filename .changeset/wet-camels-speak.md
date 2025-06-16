@@ -1,5 +1,5 @@
 ---
-'@rijkshuisstijl-community/components-angular': major
+'@rijkshuisstijl-community/components-angular': minor
 ---
 
 Add Data Summary Angular component.
