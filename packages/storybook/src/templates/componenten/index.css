@@ -13,11 +13,12 @@
 }
 
 .rhc-templates-databadge {
+  --utrecht-data-badge-background-color: var(--rhc-color-primary-50);
+  --utrecht-data-badge-border-color: var(--rhc-color-primary-500);
+  --utrecht-data-badge-color: var(--rhc-color-primary-500);
+
   align-items: center;
-  background-color: var(--rhc-color-primary-50) !important;
-  border-color: var(--rhc-color-primary-500) !important;
   border-radius: 10px;
-  color: var(--rhc-color-primary-500) !important;
   cursor: pointer;
   display: inline-flex;
   padding-block: 0.25rem;
@@ -147,19 +148,11 @@
   vertical-align: text-top;
 }
 
-/* Focus styles */
-.rhc-templates-databadge:focus {
-  outline-color: var(--rhc-color-zwart);
-  outline-offset: var(--rhc-space-25);
-  outline-style: solid;
-  outline-width: var(--rhc-border-width-m);
-}
-
 /* Hover effects */
-.rhc-templates-databadge:hover {
-  background-color: var(--rhc-color-primary-500) !important;
-  border-color: var(--rhc-color-primary-50) !important;
-  color: var(--rhc-color-wit) !important;
+.utrecht-data-badge.rhc-templates-databadge:hover {
+  --utrecht-data-badge-background-color: var(--rhc-color-primary-500);
+  --utrecht-data-badge-border-color: var(--rhc-color-primary-50);
+  --utrecht-data-badge-color: var(--rhc-color-wit);
 }
 
 /* Screenreader support */
