@@ -1,5 +1,18 @@
 # @rijkshuisstijl-community/components-angular
 
+## 1.2.0
+
+### Minor Changes
+
+- 1a44957: Added Angular Footer component
+- fdb336f: Changed Angular dependencies to version: ~19.2.0
+- 3b66ded: Fix invalid markup in Data Summary component by using an attribute selector instead of a component selector.
+- c7034fd: Add Data Summary Angular component.
+
+### Patch Changes
+
+- 280d76c: Gebruik `display: contents` voor de host van de Icon Angular component, zodat de Angular wrapper geen conflict veroorzaakt tussen de component en zijn parent.
+
 ## 1.1.0
 
 ### Minor Changes
