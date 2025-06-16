@@ -56,13 +56,12 @@ const ActiveFiltersBadgeList = ({ onRemoveFilter, selectedFrameworks }: ActiveFi
           <DataBadgeButton
             aria-label={`${framework} filter verwijderen`}
             className="rhc-active-filters__badge"
+            helperText="- Klik om filter te verwijderen"
             key={`active-${framework}`}
             pressed={true}
+            showHelperText={true}
             value={framework}
-            onClick={(e) => {
-              const target = e.currentTarget as HTMLElement;
-              onRemoveFilter(target.getAttribute('data-value') || '');
-            }}
+            onClick={() => onRemoveFilter(framework)}
           >
             {framework}
           </DataBadgeButton>
@@ -373,14 +372,12 @@ export default function Componenten() {
                             {component.frameworks.map((framework) => (
                               <DataBadgeButton
                                 aria-label={`${framework} filter ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
-                                data-value={framework}
+                                helperText={`- Klik om filter te ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
                                 key={framework}
                                 pressed={selectedFrameworks.includes(framework)}
+                                showHelperText={true}
                                 value={framework}
-                                onClick={(e) => {
-                                  const target = e.currentTarget as HTMLElement;
-                                  handleDataBadgeClick(target.getAttribute('data-value') || '');
-                                }}
+                                onClick={() => handleDataBadgeClick(framework)} // FIXED: Direct call instead of data-value extraction
                               >
                                 {framework}
                               </DataBadgeButton>
