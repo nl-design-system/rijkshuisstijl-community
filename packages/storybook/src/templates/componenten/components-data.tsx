@@ -78,7 +78,7 @@ export const allComponentsData: ComponentData[] = [
     title: 'Bekijk de Card as Link component in Storybook',
     heading: 'Card as Link',
     description: 'Korte sectie die als geheel een link is naar een gerelateerde pagina.',
-    href: 'https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-card--docs',
+    href: 'https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-card-as-link--docs',
     linkLabel: 'Bekijk in Storybook',
     frameworks: ['CSS', 'React', 'Web Components'],
   },

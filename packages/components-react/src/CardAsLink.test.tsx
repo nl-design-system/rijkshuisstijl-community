@@ -13,8 +13,8 @@ const linkTest = (component: ReactElement, href: string, title: string) => {
   expect(link).toHaveAttribute('title', title);
 };
 
-describe('Card', () => {
-  describe('Default card', () => {
+describe('CardAsLink', () => {
+  describe('Default CardAsLink', () => {
     it('renders a visible element', () => {
       const { container } = render(<CardAsLink heading="Heading" href="#" />);
       const navBar = container.querySelector(':only-child');
@@ -104,7 +104,7 @@ describe('Card', () => {
   });
 });
 
-describe('FullBleedCard', () => {
+describe('FullBleedCardAsLink', () => {
   it('renders a visible element', () => {
     const { container } = render(<FullBleedCardAsLink heading="Heading" href="#" imageAlt="Test" imageSrc="#" />);
     const navBar = container.querySelector(':only-child');
@@ -121,7 +121,7 @@ describe('FullBleedCard', () => {
   });
 });
 
-describe('HorizontalImageCard', () => {
+describe('HorizontalImageCardAsLink', () => {
   it('renders a visible element', () => {
     const { container } = render(<HorizontalImageCardAsLink heading="Heading" href="#" imageAlt="Test" imageSrc="#" />);
     const navBar = container.querySelector(':only-child');
