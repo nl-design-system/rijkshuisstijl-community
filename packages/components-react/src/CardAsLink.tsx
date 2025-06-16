@@ -31,11 +31,10 @@ export interface BaseCardAsLinkProps extends Partial<Omit<FullBleedCardAsLinkPro
   icon?: ReactNode;
   linkLabel?: string;
 }
-
-export type CardAsLinkProps =
-  | (BaseCardAsLinkProps & { imageSrc?: undefined; imageAlt?: undefined })
-  | (BaseCardAsLinkProps & { imageSrc: string; imageAlt: string });
-
+export interface CardAsLinkProps extends BaseCardAsLinkProps {
+  imageSrc?: string;
+  imageAlt?: string;
+}
 export const CardAsLink = (
   props: PropsWithChildren<CardAsLinkProps | FullBleedCardAsLinkProps | HorizontalImageCardAsLinkProps>,
 ) => {
