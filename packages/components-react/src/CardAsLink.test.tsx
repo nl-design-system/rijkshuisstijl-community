@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/vitest';
 import { cleanup, render } from '@testing-library/react';
 import { ReactElement } from 'react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { Card, FullBleedCard, HorizontalImageCard } from '.';
+import { CardAsLink, FullBleedCardAsLink, HorizontalImageCardAsLink } from './CardAsLink';
 
 const linkTest = (component: ReactElement, href: string, title: string) => {
   const { getByRole } = render(component);
@@ -16,7 +16,7 @@ const linkTest = (component: ReactElement, href: string, title: string) => {
 describe('Card', () => {
   describe('Default card', () => {
     it('renders a visible element', () => {
-      const { container } = render(<Card heading="Heading" href="#" />);
+      const { container } = render(<CardAsLink heading="Heading" href="#" />);
       const navBar = container.querySelector(':only-child');
       expect(navBar).toBeInTheDocument();
       expect(navBar).toBeVisible();
@@ -24,7 +24,7 @@ describe('Card', () => {
 
     it('renders a link with the correct href and title', () => {
       linkTest(
-        <Card heading="Heading" href="/example" linkLabel={'Example Label'} title="Example Title" />,
+        <CardAsLink heading="Heading" href="/example" linkLabel={'Example Label'} title="Example Title" />,
         '/example',
         'Example Title',
       );
@@ -33,13 +33,15 @@ describe('Card', () => {
     describe('optional properties', () => {
       describe('imageSrc', () => {
         it('renders an image if imageSrc is provided', () => {
-          const { getByTestId } = render(<Card heading="Heading" href="#" imageAlt="Just for testing" imageSrc="#" />);
+          const { getByTestId } = render(
+            <CardAsLink heading="Heading" href="#" imageAlt="Just for testing" imageSrc="#" />,
+          );
           const imageContainer = getByTestId('rhc-card__image-container');
           expect(imageContainer).toBeInTheDocument();
         });
 
         it('does not render an image if imageSrc is not provided', () => {
-          const { queryByTestId } = render(<Card heading="Heading" href="#" />);
+          const { queryByTestId } = render(<CardAsLink heading="Heading" href="#" />);
 
           expect(queryByTestId('rhc-card__image-container')).not.toBeInTheDocument();
         });
@@ -47,14 +49,14 @@ describe('Card', () => {
 
       describe('linkLabel', () => {
         it('renders a footer with a link and link label with the correct label', () => {
-          const { queryByTestId } = render(<Card heading="Heading" href="#" linkLabel="Example Label" />);
+          const { queryByTestId } = render(<CardAsLink heading="Heading" href="#" linkLabel="Example Label" />);
           const link = queryByTestId('rhc-card__link');
 
           expect(link).toBeInTheDocument();
         });
 
         it('does not render a footer with a link and link label if linkLabel is not provided', () => {
-          const { queryByTestId } = render(<Card heading="Heading" href="#" />);
+          const { queryByTestId } = render(<CardAsLink heading="Heading" href="#" />);
 
           expect(queryByTestId('rhc-card__link')).not.toBeInTheDocument();
         });
@@ -63,7 +65,7 @@ describe('Card', () => {
       describe('button', () => {
         it('renders a footer with a button if button is provided', () => {
           const { queryByTestId } = render(
-            <Card button={<button>Example Button</button>} heading="Heading" href="#" />,
+            <CardAsLink button={<button>Example Button</button>} heading="Heading" href="#" />,
           );
           const button = queryByTestId('rhc-card__button');
 
@@ -71,7 +73,7 @@ describe('Card', () => {
         });
 
         it('does not render a footer with a button if button is not provided', () => {
-          const { queryByTestId } = render(<Card heading="Heading" href="#" />);
+          const { queryByTestId } = render(<CardAsLink heading="Heading" href="#" />);
 
           expect(queryByTestId('rhc-card__button')).not.toBeInTheDocument();
         });
@@ -85,7 +87,9 @@ describe('Card', () => {
       // Dit zorgt ervoor dat screenreaders de content in de juiste volgorde kunnen voorlezen.
       // De visuele volgorde kan los daarvan met CSS worden aangepast, zonder impact op toegankelijkheid.
 
-      const { getByText, getByAltText } = render(<Card heading="Heading" imageAlt="An example image" imageSrc="#" />);
+      const { getByText, getByAltText } = render(
+        <CardAsLink heading="Heading" imageAlt="An example image" imageSrc="#" />,
+      );
 
       const headingElement = getByText('Heading');
       const imageElement = getByAltText('An example image');
@@ -102,7 +106,7 @@ describe('Card', () => {
 
 describe('FullBleedCard', () => {
   it('renders a visible element', () => {
-    const { container } = render(<FullBleedCard heading="Heading" href="#" imageAlt="Test" imageSrc="#" />);
+    const { container } = render(<FullBleedCardAsLink heading="Heading" href="#" imageAlt="Test" imageSrc="#" />);
     const navBar = container.querySelector(':only-child');
     expect(navBar).toBeInTheDocument();
     expect(navBar).toBeVisible();
@@ -110,7 +114,7 @@ describe('FullBleedCard', () => {
 
   it('renders a link with the correct href and title', () => {
     linkTest(
-      <FullBleedCard heading="Heading" href="/example" imageAlt="Test" imageSrc="#" title="Example Title" />,
+      <FullBleedCardAsLink heading="Heading" href="/example" imageAlt="Test" imageSrc="#" title="Example Title" />,
       '/example',
       'Example Title',
     );
@@ -119,7 +123,7 @@ describe('FullBleedCard', () => {
 
 describe('HorizontalImageCard', () => {
   it('renders a visible element', () => {
-    const { container } = render(<HorizontalImageCard heading="Heading" href="#" imageAlt="Test" imageSrc="#" />);
+    const { container } = render(<HorizontalImageCardAsLink heading="Heading" href="#" imageAlt="Test" imageSrc="#" />);
     const navBar = container.querySelector(':only-child');
     expect(navBar).toBeInTheDocument();
     expect(navBar).toBeVisible();
@@ -127,7 +131,13 @@ describe('HorizontalImageCard', () => {
 
   it('renders a link with the correct href and title', () => {
     linkTest(
-      <HorizontalImageCard heading="Heading" href="/example" imageAlt="Test" imageSrc="#" title="Example Title" />,
+      <HorizontalImageCardAsLink
+        heading="Heading"
+        href="/example"
+        imageAlt="Test"
+        imageSrc="#"
+        title="Example Title"
+      />,
       '/example',
       'Example Title',
     );

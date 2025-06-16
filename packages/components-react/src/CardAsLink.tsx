@@ -3,7 +3,7 @@ import { PropsWithChildren, ReactNode, Ref } from 'react';
 import { Image } from './Image';
 import { Link } from './Link';
 
-interface CardPropsBase {
+interface CardAsLinkPropsBase {
   href: string;
   target?: string;
   title?: string;
@@ -12,45 +12,47 @@ interface CardPropsBase {
   ref?: Ref<HTMLDivElement>;
 }
 
-export interface HorizontalImageCardProps extends CardPropsBase {
+export interface HorizontalImageCardAsLinkProps extends CardAsLinkPropsBase {
   appearance?: 'horizontal';
   imageSrc: string;
   imageAlt?: string;
   imagePresentation?: boolean;
 }
 
-export interface FullBleedCardProps extends Omit<HorizontalImageCardProps, 'appearance'> {
+export interface FullBleedCardAsLinkProps extends Omit<HorizontalImageCardAsLinkProps, 'appearance'> {
   appearance?: 'full-bleed';
   description?: ReactNode;
   metadata?: ReactNode;
 }
 
-export interface BaseCardProps extends Partial<Omit<FullBleedCardProps, 'appearance'>> {
+export interface BaseCardAsLinkProps extends Partial<Omit<FullBleedCardAsLinkProps, 'appearance'>> {
   appearance?: 'default';
   button?: ReactNode;
   icon?: ReactNode;
   linkLabel?: string;
 }
 
-export type CardProps =
-  | (BaseCardProps & { imageSrc?: undefined; imageAlt?: undefined })
-  | (BaseCardProps & { imageSrc: string; imageAlt: string });
+export type CardAsLinkProps =
+  | (BaseCardAsLinkProps & { imageSrc?: undefined; imageAlt?: undefined })
+  | (BaseCardAsLinkProps & { imageSrc: string; imageAlt: string });
 
-export const Card = (props: PropsWithChildren<CardProps | FullBleedCardProps | HorizontalImageCardProps>) => {
+export const CardAsLink = (
+  props: PropsWithChildren<CardAsLinkProps | FullBleedCardAsLinkProps | HorizontalImageCardAsLinkProps>,
+) => {
   const { appearance, ref, ...cardProps } = props;
   switch (appearance) {
     case 'full-bleed':
-      return <FullBleedCard {...(cardProps as FullBleedCardProps)} ref={ref} />;
+      return <FullBleedCardAsLink {...(cardProps as FullBleedCardAsLinkProps)} ref={ref} />;
     case 'horizontal':
-      return <HorizontalImageCard {...(cardProps as HorizontalImageCardProps)} ref={ref} />;
+      return <HorizontalImageCardAsLink {...(cardProps as HorizontalImageCardAsLinkProps)} ref={ref} />;
     default:
-      return <DefaultCard {...(cardProps as CardProps)} ref={ref} />;
+      return <DefaultCardAsLink {...(cardProps as CardAsLinkProps)} ref={ref} />;
   }
 };
 
-Card.displayName = 'Card';
+CardAsLink.displayName = 'CardAsLink';
 
-const DefaultCard = ({
+const DefaultCardAsLink = ({
   ref,
   heading,
   className,
@@ -67,7 +69,7 @@ const DefaultCard = ({
   title,
   children,
   ...restProps
-}: PropsWithChildren<CardProps>) => {
+}: PropsWithChildren<CardAsLinkProps>) => {
   return (
     <div className={clsx('rhc-card', 'rhc-card--default', className)} ref={ref} {...restProps}>
       <div className="rhc-card__content">
@@ -102,9 +104,9 @@ const DefaultCard = ({
   );
 };
 
-DefaultCard.displayName = 'DefaultCard';
+DefaultCardAsLink.displayName = 'DefaultCardAsLink';
 
-export const FullBleedCard = ({
+export const FullBleedCardAsLink = ({
   ref,
   href,
   target,
@@ -118,7 +120,7 @@ export const FullBleedCard = ({
   className,
   imageAlt,
   ...restProps
-}: PropsWithChildren<FullBleedCardProps>) => (
+}: PropsWithChildren<FullBleedCardAsLinkProps>) => (
   <div className={clsx('rhc-card', 'rhc-card--full-bleed', className)} ref={ref} {...restProps}>
     <span className="rhc-card__anchor">
       <a aria-label={title} href={href} target={target} title={title}></a>
@@ -133,9 +135,9 @@ export const FullBleedCard = ({
   </div>
 );
 
-FullBleedCard.displayName = 'FullBleedCard';
+FullBleedCardAsLink.displayName = 'FullBleedCardAsLink';
 
-export const HorizontalImageCard = ({
+export const HorizontalImageCardAsLink = ({
   ref,
   href,
   target,
@@ -147,7 +149,7 @@ export const HorizontalImageCard = ({
   children,
   className,
   ...restProps
-}: PropsWithChildren<HorizontalImageCardProps>) => (
+}: PropsWithChildren<HorizontalImageCardAsLinkProps>) => (
   <div className={clsx('rhc-card', 'rhc-card--horizontal', className)} ref={ref} {...restProps}>
     <span className="rhc-card__anchor">
       <a aria-label={title} href={href} target={target} title={title}></a>
@@ -162,4 +164,4 @@ export const HorizontalImageCard = ({
   </div>
 );
 
-HorizontalImageCard.displayName = 'HorizontalImageCard';
+HorizontalImageCardAsLink.displayName = 'HorizontalImageCardAsLink';
