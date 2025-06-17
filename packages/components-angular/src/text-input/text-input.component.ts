@@ -13,7 +13,8 @@ import { Component, Input } from '@angular/core';
     '[class.utrecht-textbox--required]': 'required',
     '[attr.aria-invalid]': 'invalid || undefined',
     '[attr.disabled]': 'disabled ? "disabled": null',
-    '[attr.required]': 'required ? "required": null',
+    '[attr.required]': 'inputRequired ? "required": null',
+    '[attr.aria-required]': 'required ? "true" : null',
     '[attr.readonly]': 'readonly ? "readonly" : null',
   },
 })
@@ -21,5 +22,6 @@ export class TextInputComponent {
   @Input() disabled? = false;
   @Input() invalid? = false;
   @Input() required? = false;
+  @Input() inputRequired? = false;
   @Input() readonly? = false;
 }

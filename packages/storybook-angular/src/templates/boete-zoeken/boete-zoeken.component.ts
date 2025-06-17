@@ -28,7 +28,7 @@ export class BoeteZoekenTemplate {
       datum: new FormControl('', [Validators.required]),
       tijd: new FormControl('', [Validators.required]),
     },
-    { updateOn: 'submit' },
+    { updateOn: 'blur' },
   );
 
   get cjibNummer() {
