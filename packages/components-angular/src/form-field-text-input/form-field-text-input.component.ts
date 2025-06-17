@@ -45,7 +45,7 @@ export class FormFieldTextInputComponent implements ControlValueAccessor {
   @Input() errorMessage?: string;
   @Input() description?: string;
   @Input() status?: string;
-  @Input() required?: boolean = false;
+  @Input() required?: boolean = false; // kan vgm weg aangezien we nu Validators.Required gebruiken
   @Input() readonly?: boolean = false;
   @Input() dir?: 'auto' | 'ltr' | 'rtl' = 'auto';
   @Input() name?: string;

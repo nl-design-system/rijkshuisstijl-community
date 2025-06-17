@@ -13,7 +13,8 @@
         label="CJIB-nummer"
         [showDescription]="true"
         description="Vul het CJIB-nummer in zonder spaties."
-        [required]="true"
+        [invalid]="cjibNummer.invalid && cjibNummer.touched"
+        errorMessage="Het CJIB-nummer is verplicht."
       />
       <rhc-form-field-text-input
         formControlName="datum"
@@ -22,7 +23,8 @@
         label="Datum"
         [showDescription]="true"
         description="Vul de datum van de overtreding in als volgt: dd-mm-jjjj"
-        [required]="true"
+        [invalid]="datum.invalid && datum.touched"
+        errorMessage="De datum van overtreding is verplicht."
       />
       <rhc-form-field-text-input
         formControlName="tijd"
@@ -31,7 +33,8 @@
         label="Tijd"
         [showDescription]="true"
         description="Vul het tijdstip van de overtreding is als volgt: uu:mm"
-        [required]="true"
+        [invalid]="tijd.invalid && tijd.touched"
+        errorMessage="Het tijdstip van overtreding is verplicht."
       />
       <button rhc-button type="submit" [disabled]="form.invalid">
         <rhc-icon icon="zoek" />
