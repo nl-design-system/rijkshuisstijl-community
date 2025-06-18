@@ -30,7 +30,6 @@ const meta: Meta<DataSummaryStoryComponent> = {
     appearance: {
       control: 'select',
       options: ['Column', 'Row'],
-      description: 'The appearance of the data summary items, either as columns or rows.',
     },
     withActions: {
       control: 'boolean',
