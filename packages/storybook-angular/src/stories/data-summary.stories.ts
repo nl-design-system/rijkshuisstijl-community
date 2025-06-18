@@ -43,7 +43,7 @@ const meta: Meta<DataSummaryStoryComponent> = {
         key: 'Beest van Bodmin',
         value: 'Een grote katachtige die voorkomt op Bodmin Moor.',
         href: '#',
-        actionLabel: 'Lees meer',
+        actionLabel: 'Lees meer over het Beest van Bodmin',
       },
       {
         key: 'Morgawr',
