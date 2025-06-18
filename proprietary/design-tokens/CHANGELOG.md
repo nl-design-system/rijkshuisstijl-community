@@ -1,5 +1,17 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 3.1.0
+
+### Minor Changes
+
+- 790ead0: Rename "Card" component to "Card as Link" component, to match definition of NL Design System "Card as Link" and in preparation of incoming "Card (not as Link)" component.
+
+### Patch Changes
+
+- b29ea7b: - H6 design tokens toegevoegd
+- 02ca6dc: - line-height van H4 en H5 aangepast van 125% naar 150% voor betere leesbaarheid
+  - Tokenschrijfwijze voor nl-headings gewijzigd van . naar - (bijv. nl.heading-level-x → nl.heading.level-x)
+
 ## 3.0.0
 
 ### Major Changes
