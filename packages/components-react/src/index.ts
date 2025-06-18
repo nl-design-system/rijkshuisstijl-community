@@ -46,6 +46,8 @@ export { CodeInput } from './CodeInput';
 export { CodeInputGroup } from './CodeInputGroup';
 export { ColumnLayout, type ColumnLayoutProps } from './ColumnLayout';
 export { type CustomFormFieldProps, FormField } from './FormField';
+export { DataSummary, type DataSummaryProps } from './DataSummary';
+export { DataSummaryItem, type DataSummaryItemProps } from './DataSummaryItem';
 export { DotBadge, type DotBadgeProps } from './DotBadge';
 export { Fieldset, FieldsetLegend, type FieldsetLegendProps, type FieldsetProps } from './Fieldset';
 export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from './Figure';
