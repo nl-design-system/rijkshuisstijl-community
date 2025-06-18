@@ -30,7 +30,6 @@ const meta: Meta<DataSummaryStoryComponent> = {
     appearance: {
       control: 'select',
       options: ['Column', 'Row'],
-      description: 'The appearance of the data summary items, either as columns or rows.',
     },
     withActions: {
       control: 'boolean',
@@ -43,7 +42,7 @@ const meta: Meta<DataSummaryStoryComponent> = {
         key: 'Beest van Bodmin',
         value: 'Een grote katachtige die voorkomt op Bodmin Moor.',
         href: '#',
-        actionLabel: 'Lees meer',
+        actionLabel: 'Lees meer over het Beest van Bodmin',
       },
       {
         key: 'Morgawr',
