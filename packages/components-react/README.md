@@ -31,8 +31,8 @@ import { Button } from '@rijkshuisstijl-community/components-react';
 
 function App() {
   return (
+    {/* geef alle thema tokens mee an child components voor styling */}
     <div className="rhc-theme">
-      {/* geef alle thema tokens mee an child components */}
       <Button>Click Here!</Button>
     </div>
   );
