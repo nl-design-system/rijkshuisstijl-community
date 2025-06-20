@@ -26,9 +26,11 @@ export function DataSummaryItem({
       <dt className="rhc-data-summary__item-key">{itemKey}</dt>
       <dd className="rhc-data-summary__item-value">{itemValue}</dd>
       {href && target && actionLabel && (
-        <Link className="rhc-data-summary__item-action" href={href} target={target}>
-          {actionLabel}
-        </Link>
+        <dd className="rhc-data-summary__item-action">
+          <Link href={href} target={target}>
+            {actionLabel}
+          </Link>
+        </dd>
       )}
     </div>
   );
