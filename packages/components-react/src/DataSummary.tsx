@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, Ref } from 'react';
 
 export interface DataSummaryProps extends HTMLAttributes<HTMLDListElement> {
-  appearance: 'column' | 'row';
+  appearance?: 'column' | 'row';
   ref?: Ref<HTMLDListElement>;
 }
 
@@ -14,7 +14,11 @@ export function DataSummary({
   ...restProps
 }: PropsWithChildren<DataSummaryProps>) {
   return (
-    <dl className={clsx('rhc-data-summary', `rhc-data-summary--${appearance}`, className)} ref={ref} {...restProps}>
+    <dl
+      className={clsx('rhc-data-summary', `rhc-data-summary--${appearance ?? 'column'}`, className)}
+      ref={ref}
+      {...restProps}
+    >
       {children}
     </dl>
   );

@@ -1,5 +1,7 @@
 import { DataSummary, DataSummaryItem } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
+import readme from './data-summary-item.md?raw';
+import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/DataSummaryItem',
@@ -7,9 +9,14 @@ const meta = {
   component: DataSummaryItem,
   parameters: {
     status: { type: 'UNSTABLE' },
-    componentOrigin: 'Dit component is ontwikkeld door de Rijkshuisstijl community.',
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/DataSummaryItem.tsx',
+    docs: {
+      description: {
+        component: mergeMarkdown([readme]),
+      },
+    },
   },
   args: {
     itemKey: 'Beest van Bodmin',
