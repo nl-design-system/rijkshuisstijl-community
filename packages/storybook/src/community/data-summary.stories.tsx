@@ -1,4 +1,4 @@
-import { DataSummary, DataSummaryItem } from '@rijkshuisstijl-community/components-react';
+import { DataSummary, DataSummaryItem, Icon } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './data-summary.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
@@ -25,9 +25,12 @@ const meta = {
     appearance: 'column',
     children: [
       <>
-        <DataSummaryItem actionLabel="Action" href="#" itemKey="Key" itemValue="Value" />
-        <DataSummaryItem actionLabel="Action" href="#" itemKey="Key" itemValue="Value" />
-        <DataSummaryItem actionLabel="Action" href="#" itemKey="Key" itemValue="Value" />
+        <DataSummaryItem itemKey="Soort" itemValue="Reuzenpanda" />
+        <DataSummaryItem href="#" itemKey="Rijk" itemValue="Animalia (Dieren)">
+          Bekijk alle dieren
+          <Icon icon="externe-link" />
+        </DataSummaryItem>
+        <DataSummaryItem itemKey="Klasse" itemValue="Mammalia (Zoogdieren)" />
       </>,
     ],
   },
@@ -57,9 +60,9 @@ export const NoActions: Story = {
     appearance: 'row',
     children: [
       <>
-        <DataSummaryItem itemKey="Key" itemValue="Value" />
-        <DataSummaryItem itemKey="Key" itemValue="Value" />
-        <DataSummaryItem itemKey="Key" itemValue="Value" />
+        <DataSummaryItem itemKey="Soort" itemValue="Reuzenpanda" />
+        <DataSummaryItem itemKey="Rijk" itemValue="Animalia (Dieren)" />
+        <DataSummaryItem itemKey="Klasse" itemValue="Mammalia (Zoogdieren)" />
       </>,
     ],
   },
@@ -70,9 +73,9 @@ export const NoActionsColumn: Story = {
     appearance: 'column',
     children: [
       <>
-        <DataSummaryItem itemKey="Key" itemValue="Value" />
-        <DataSummaryItem itemKey="Key" itemValue="Value" />
-        <DataSummaryItem itemKey="Key" itemValue="Value" />
+        <DataSummaryItem itemKey="Soort" itemValue="Reuzenpanda" />
+        <DataSummaryItem itemKey="Rijk" itemValue="Animalia (Dieren)" />
+        <DataSummaryItem itemKey="Klasse" itemValue="Mammalia (Zoogdieren)" />
       </>,
     ],
   },

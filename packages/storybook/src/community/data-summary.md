@@ -10,8 +10,8 @@ Lijst met eigenschappen en bijbehorende data over een onderwerp.
 import { DataSummary, DataSummaryItem } from '@rijkshuisstijl-community/components-react';
 
 <DataSummary>
-  <DataSummaryItem itemKey="Key" itemValue="Value" actionLabel="Action" href="/action" />
-  <DataSummaryItem itemKey="Key" itemValue="Value" actionLabel="Action" href="/action" />
-  <DataSummaryItem itemKey="Key" itemValue="Value" actionLabel="Action" href="/action" />
+  <DataSummaryItem itemKey="Soort" itemValue="Reuzenpanda" />
+  <DataSummaryItem actionLabel="Bekijk alle dieren" href="#" itemKey="Rijk" itemValue="Animalia (Dieren)" />
+  <DataSummaryItem itemKey="Klasse" itemValue="Mammalia (Zoogdieren)" />
 </DataSummary>;
 ```

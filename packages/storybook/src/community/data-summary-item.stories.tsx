@@ -19,10 +19,9 @@ const meta = {
     },
   },
   args: {
-    itemKey: 'Beest van Bodmin',
-    itemValue: 'Een grote katachtige die voorkomt op Bodmin Moor.',
+    itemKey: 'Soort',
+    itemValue: 'Reuzenpanda',
     href: '#',
-    actionLabel: 'Lees meer over het Beest van Bodmin',
     target: '_self',
   },
   argTypes: {
@@ -33,7 +32,7 @@ const meta = {
   },
   render: (args) => (
     <DataSummary appearance="column">
-      <DataSummaryItem {...args} />
+      <DataSummaryItem {...args}>Lees meer over de Reuzenpanda</DataSummaryItem>
     </DataSummary>
   ),
 } satisfies Meta<typeof DataSummaryItem>;
@@ -43,3 +42,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const Row: Story = {
+  render: (args) => (
+    <DataSummary appearance="row">
+      <DataSummaryItem {...args}>Lees meer over de Reuzenpanda</DataSummaryItem>
+    </DataSummary>
+  ),
+};

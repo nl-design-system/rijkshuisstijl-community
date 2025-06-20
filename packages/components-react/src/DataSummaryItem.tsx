@@ -7,7 +7,6 @@ export interface DataSummaryItemProps extends HTMLAttributes<HTMLDivElement> {
   itemValue: string;
   href?: string;
   target?: '_self' | '_blank' | '_parent' | '_top' | '_unfencedTop';
-  actionLabel?: string;
   ref?: Ref<HTMLDivElement>;
 }
 
@@ -18,17 +17,17 @@ export function DataSummaryItem({
   itemValue,
   href,
   target = '_self',
-  actionLabel,
+  children,
   ...restProps
 }: PropsWithChildren<DataSummaryItemProps>) {
   return (
     <div className={clsx('rhc-data-summary__item', className)} ref={ref} {...restProps}>
       <dt className="rhc-data-summary__item-key">{itemKey}</dt>
       <dd className="rhc-data-summary__item-value">{itemValue}</dd>
-      {href && target && actionLabel && (
+      {href && target && (
         <dd className="rhc-data-summary__item-action">
           <Link href={href} target={target}>
-            {actionLabel}
+            {children}
           </Link>
         </dd>
       )}
