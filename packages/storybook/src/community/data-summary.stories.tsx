@@ -22,8 +22,14 @@ const meta = {
     },
   },
   args: {
-    children: '',
     appearance: 'column',
+    children: [
+      <>
+        <DataSummaryItem actionLabel="Action" href="#" itemKey="Key" itemValue="Value" />
+        <DataSummaryItem actionLabel="Action" href="#" itemKey="Key" itemValue="Value" />
+        <DataSummaryItem actionLabel="Action" href="#" itemKey="Key" itemValue="Value" />
+      </>,
+    ],
   },
   argTypes: {
     appearance: {
@@ -38,13 +44,35 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Default: Story = {};
+
+export const Rows: Story = {
   args: {
+    appearance: 'row',
+  },
+};
+
+export const NoActions: Story = {
+  args: {
+    appearance: 'row',
     children: [
       <>
-        <DataSummaryItem actionLabel="Action" href="#" itemKey="Key" itemValue="Value" />
-        <DataSummaryItem actionLabel="Action" href="#" itemKey="Key" itemValue="Value" />
-        <DataSummaryItem actionLabel="Action" href="#" itemKey="Key" itemValue="Value" />
+        <DataSummaryItem itemKey="Key" itemValue="Value" />
+        <DataSummaryItem itemKey="Key" itemValue="Value" />
+        <DataSummaryItem itemKey="Key" itemValue="Value" />
+      </>,
+    ],
+  },
+};
+
+export const NoActionsColumn: Story = {
+  args: {
+    appearance: 'column',
+    children: [
+      <>
+        <DataSummaryItem itemKey="Key" itemValue="Value" />
+        <DataSummaryItem itemKey="Key" itemValue="Value" />
+        <DataSummaryItem itemKey="Key" itemValue="Value" />
       </>,
     ],
   },
