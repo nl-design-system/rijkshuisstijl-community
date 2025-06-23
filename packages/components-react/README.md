@@ -13,7 +13,7 @@ Deze package is onderdeel van het [Rijkshuisstijl Community](https://github.com/
 
 Om de React-componenten van de Rijkshuisstijl-community te gebruiken, installeer je het [components-react npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-react).
 
-De React-componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je project toe te voegen, installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens) en [component css npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-css)
+De React-componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je project toe te voegen, installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens) en [component-css npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-css).
 
 > [!NOTE]  
 > Let erop dat je beide de `@rijkshuisstijl-community/design-tokens/dist/index.css` importeert **en** de component een child is van een element waar de `rhc-theme` op is toegepast. Anders zie je de component zonder styling.
