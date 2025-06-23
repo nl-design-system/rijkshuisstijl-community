@@ -22,7 +22,7 @@ De React-componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je proj
 npm install --save-dev @rijkshuisstijl-community/components-react @rijkshuisstijl-community/components-css @rijkshuisstijl-community/design-tokens
 ```
 
-Dit installeert de React-componenten. Om deze componenten te gebruiken, kun je ze importeren in jouw app.
+Dit installeert de React-componenten, de design tokens en de styling. Om deze te gebruiken, importeer je ze in jouw app.
 
 ```tsx
 import '@rijkshuisstijl-community/design-tokens/dist/index.css'; // design tokens importeren
