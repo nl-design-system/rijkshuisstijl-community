@@ -9582,6 +9582,64 @@
       }
     }
   },
+  "overwrites/koop/link": {
+    "nl": {
+      "link": {
+        "active": {
+          "text-decoration": {
+            "value": "underline",
+            "type": "textDecoration"
+          },
+          "color": {
+            "value": "#800080",
+            "type": "color"
+          }
+        },
+        "focus": {
+          "text-decoration": {
+            "value": "underline",
+            "type": "textDecoration"
+          },
+          "text-decoration-thickness": {
+            "value": "1px",
+            "type": "other"
+          }
+        },
+        "hover": {
+          "text-decoration": {
+            "value": "underline",
+            "type": "textDecoration"
+          },
+          "text-decoration-thickness": {
+            "value": "2px",
+            "type": "other"
+          },
+          "color": {
+            "value": "#0F2E51",
+            "type": "color"
+          }
+        },
+        "text-decoration": {
+          "value": "underline",
+          "type": "textDecoration"
+        },
+        "text-decoration-thickness": {
+          "value": "1px",
+          "type": "other"
+        },
+        "text-underline-offset": {
+          "value": "{rhc.space.25}",
+          "type": "other"
+        },
+        "visited": {
+          "color": {
+            "value": "#800080",
+            "type": "color"
+          }
+        }
+      }
+    }
+  },
   "$themes": [
     {
       "id": "05865788a086eeac7ffc4514736ccd777f1ff95c",
@@ -9672,7 +9730,8 @@
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
-        "components/action": "enabled"
+        "components/action": "enabled",
+        "overwrites/koop/link": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9767,7 +9826,8 @@
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
-        "components/action": "enabled"
+        "components/action": "enabled",
+        "overwrites/koop/link": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9864,7 +9924,8 @@
         "components/column-layout": "enabled",
         "overwrites/oude rijkshuisstijl/blockqoute": "enabled",
         "components/data-summary": "enabled",
-        "components/action": "enabled"
+        "components/action": "enabled",
+        "overwrites/koop/link": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9959,7 +10020,8 @@
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
-        "components/action": "enabled"
+        "components/action": "enabled",
+        "overwrites/koop/link": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10054,7 +10116,8 @@
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
-        "components/action": "enabled"
+        "components/action": "enabled",
+        "overwrites/koop/link": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10149,7 +10212,8 @@
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
-        "components/action": "enabled"
+        "components/action": "enabled",
+        "overwrites/koop/link": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10244,7 +10308,8 @@
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
-        "components/action": "enabled"
+        "components/action": "enabled",
+        "overwrites/koop/link": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10339,7 +10404,8 @@
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
-        "components/action": "enabled"
+        "components/action": "enabled",
+        "overwrites/koop/link": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10436,7 +10502,8 @@
         "components/column-layout": "enabled",
         "overwrites/footer/lintblauw-background": "enabled",
         "overwrites/nav-bar/lintblauw-outline": "enabled",
-        "overwrites/closed-source/font": "enabled"
+        "overwrites/closed-source/font": "enabled",
+        "overwrites/koop/link": "disabled"
       },
       "group": "Rijkshuisstijl"
     }
@@ -10555,7 +10622,8 @@
       "overwrites/responsive/tablet",
       "overwrites/font-weight/bzk",
       "overwrites/closed-source/font",
-      "overwrites/afwijkende keuzes/button"
+      "overwrites/afwijkende keuzes/button",
+      "overwrites/koop/link"
     ]
   }
 }
