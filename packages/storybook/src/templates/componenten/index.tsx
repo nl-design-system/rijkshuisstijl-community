@@ -3,6 +3,7 @@
 import {
   Button,
   CardAsLink,
+  DataBadgeButton,
   FormFieldTextInput,
   Heading,
   HeadingGroup,
@@ -13,7 +14,6 @@ import { IconPlus, IconSearch } from '@tabler/icons-react';
 import { BadgeList, ButtonLink, Icon } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 import { ChangeEvent, FormEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { DataBadgeButton } from './DataBadgeButton';
 import { allComponentsData, ComponentData } from './components-data';
 import { ExpandableCheckboxGroup } from './expandableCheckboxGroup';
 import SharedFooter from '../shared/footer';
