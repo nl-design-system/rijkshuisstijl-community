@@ -199,3 +199,13 @@ export const LinkInParagraph: Story = {
     );
   },
 };
+
+export const KOOPLink: Story = {
+  args: {
+    href: '#',
+    children: 'Label',
+  },
+  globals: {
+    theme: 'KOOP',
+  },
+};
