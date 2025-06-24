@@ -1,6 +1,6 @@
 import { CardSearch } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from './card.md?raw';
+import readme from './card-search.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
