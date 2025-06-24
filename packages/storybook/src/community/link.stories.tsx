@@ -153,6 +153,16 @@ export const Active: Story = {
   },
 };
 
+export const Hover: Story = {
+  parameters: {
+    pseudo: { hover: true },
+  },
+  args: {
+    href: '#',
+    children: 'Label',
+  },
+};
+
 export const Focus: Story = {
   parameters: {
     pseudo: { focus: true },
@@ -197,15 +207,5 @@ export const LinkInParagraph: Story = {
         .
       </Paragraph>
     );
-  },
-};
-
-export const KOOPLink: Story = {
-  args: {
-    href: '#',
-    children: 'Label',
-  },
-  globals: {
-    theme: 'KOOP',
   },
 };
