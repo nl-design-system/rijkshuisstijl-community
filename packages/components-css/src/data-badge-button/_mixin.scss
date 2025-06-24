@@ -1,0 +1,42 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@mixin rhc-databadge-button {
+  --utrecht-data-badge-background-color: var(--rhc-color-primary-50);
+  --utrecht-data-badge-border-color: var(--rhc-color-primary-500);
+  --utrecht-data-badge-color: var(--rhc-color-primary-500);
+
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  padding-block: 0.25rem;
+  padding-inline: 0.75rem;
+  position: relative;
+
+  &:hover {
+    --utrecht-data-badge-background-color: var(--rhc-color-primary-500);
+    --utrecht-data-badge-border-color: var(--rhc-color-primary-50);
+    --utrecht-data-badge-color: var(--rhc-color-wit);
+  }
+}
+
+@mixin rhc-databadge-button--pressed {
+  &::after {
+    content: "✓";
+    display: inline-block;
+    text-align: center;
+    vertical-align: text-top;
+  }
+}
+
+@mixin rhc-databadge-button__sr-only {
+  block-size: 1px;
+  clip: rect(0, 0, 0, 0);
+  inline-size: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
