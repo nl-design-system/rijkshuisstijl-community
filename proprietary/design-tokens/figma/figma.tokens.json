@@ -4772,10 +4772,6 @@
           "value": "{rhc.color.foreground.link}",
           "type": "color"
         },
-        "text-decoration-color": {
-          "value": "none",
-          "type": "color"
-        },
         "active": {
           "color": {
             "value": "{rhc.color.paars.500}",
@@ -4833,7 +4829,7 @@
             "type": "color"
           }
         },
-        "text-decoration": {
+        "text-decoration-line": {
           "value": "underline",
           "type": "textDecoration"
         },
@@ -4938,7 +4934,7 @@
           }
         },
         "text-decoration": {
-          "value": "{nl.link.text-decoration}",
+          "value": "{nl.link.text-decoration-line}",
           "type": "textDecoration"
         },
         "icon": {
@@ -10497,7 +10493,8 @@
         "overwrites/closed-source/font": "enabled",
         "overwrites/koop/link": "enabled"
       },
-      "group": "Rijkshuisstijl"
+      "group": "Rijkshuisstijl",
+      "$figmaVariableReferences": {}
     }
   ],
   "$metadata": {
