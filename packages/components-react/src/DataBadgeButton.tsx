@@ -30,9 +30,9 @@ export const DataBadgeButton = ({
       role="button"
       tabIndex={0}
       className={clsx(
-        'rhc-databadge-button',
+        'rhc-data-badge-button',
         {
-          'rhc-databadge-button--pressed': pressed,
+          'rhc-data-badge-button--pressed': pressed,
         },
         className,
       )}
@@ -40,7 +40,7 @@ export const DataBadgeButton = ({
     >
       {children}
       {showHelperText && helperText && actualHelperId && (
-        <span className="rhc-databadge-button__sr-only" id={actualHelperId}>
+        <span className="rhc-data-badge-button__sr-only" id={actualHelperId}>
           {helperText}
         </span>
       )}
