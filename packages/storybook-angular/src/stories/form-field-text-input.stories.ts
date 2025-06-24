@@ -56,6 +56,11 @@ const meta: Meta<FormFieldTextInputComponent> = {
         category: 'Props',
       },
     },
+    inputRequired: {
+      table: {
+        category: 'Props',
+      },
+    },
     readonly: {
       table: {
         category: 'Props',
@@ -217,6 +222,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
     description: 'Beschrijving',
     status: undefined,
     required: false,
+    inputRequired: false,
     readonly: false,
     type: 'text',
     dir: 'auto',
@@ -240,6 +246,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
     label,
     errorMessage,
     required,
+    inputRequired,
     readonly,
     dir,
     name,
@@ -267,6 +274,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
           [errorMessage]="errorMessage"
           [readonly]="readonly"
           [required]="required"
+          [inputRequired]="inputRequired"
           [dir]="dir"
           [name]="name"
           [autocomplete]="autocomplete"
@@ -293,6 +301,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
       label,
       errorMessage,
       required,
+      inputRequired,
       readonly,
       dir,
       name,
