@@ -70,17 +70,17 @@
   text-decoration: none;
 }
 
-@mixin rhc-card-search__subheading--active {
-  text-decoration: var(--rhc-card-as-link-active-text-decoration, underline);
-}
-@mixin rhc-card-search__subheading--hover {
-  text-decoration: var(--rhc-card-as-link-hover-text-decoration, underline);
-}
+// @mixin rhc-card-search__subheading--active {
+//   text-decoration: var(--rhc-card-as-link-active-text-decoration, underline);
+// }
+// @mixin rhc-card-search__subheading--hover {
+//   text-decoration: var(--rhc-card-as-link-hover-text-decoration, underline);
+// }
 
 // CARD LINK //
 @mixin rhc-card-search__link {
   color: var(--rhc-card-as-link-link-color, #01689b);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 @mixin rhc-card-search__link--active {

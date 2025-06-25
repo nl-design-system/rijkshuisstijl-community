@@ -59,9 +59,9 @@
 }
 
 // SUBHEADING STATES //
-.rhc-card-search:hover .rhc-card-search__subheading {
-  @include mixin.rhc-card-search__subheading--active;
-}
+// .rhc-card-search:hover .rhc-card-search__subheading {
+//   @include mixin.rhc-card-search__subheading--active;
+// }
 
 // LINK STATES //
 .rhc-card-search:active .rhc-card-search__link {
@@ -72,4 +72,8 @@
 }
 .rhc-card-search:hover .rhc-card-search__link {
   @include mixin.rhc-card-search__link--hover;
+}
+
+.rhc-card-search__footer {
+  @include mixin.rhc-card-search__content;
 }
