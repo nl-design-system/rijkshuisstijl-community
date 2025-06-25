@@ -52,4 +52,26 @@ Voor de themas maken we gebruik van de volgende 2 packages: [design-tokens npm p
 Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.css`-bestand uit de `dist` map van het
 pakket, en omring het deel van je applicatie waar je het thema wilt toepassen met het Rijkshuisstijl-thema met de `rhc-theme` class.
 
+#### Thema wijzigen
+
+Om een andere thema toe te passen moet je het importeren van `import '@rijkshuisstijl-community/design-tokens/dist/{thema}/index.css';` en de class aanpassen naar de desbetreffende thema.
+Zie het volgende voorbeeld om de KOOP thema toe te passen:
+
+```tsx
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css'; // design tokens importeren
+import '@rijkshuisstijl-community/components-css/dist/index.css'; // css importeren
+import { Button } from '@rijkshuisstijl-community/components-react'; // React-component importeren
+
+function App() {
+  return (
+    <div className="uitvoerend-groen">
+      {/* geef alle thema tokens mee aan child components voor styling */}
+      <Button appearance="primary-action-button">Click Here!</Button>
+    </div>
+  );
+}
+
+export default App;
+```
+
 Bekijk de [packages/font/README.md](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/font/README.md) voor de meerdere manieren om de lettertypen te installeren voor jouw project.
