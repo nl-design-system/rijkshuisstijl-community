@@ -10,7 +10,7 @@ import {
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
 import { IconPlus, IconSearch } from '@tabler/icons-react';
-import { BadgeList, ButtonLink, DataBadge, Icon } from '@utrecht/component-library-react';
+import { BadgeList, ButtonLink, Icon } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 import { ChangeEvent, FormEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { DataBadgeButton } from './DataBadgeButton';
@@ -347,7 +347,7 @@ export default function Componenten() {
               </HeadingGroup>
 
               {filteredComponents.length > 0 && (
-                <ol className="rhc-ordered-list">
+                <ol aria-labelledby="results-heading" className="rhc-ordered-list">
                   {filteredComponents.map((component, index, array) => (
                     <li aria-posinset={index + 1} aria-setsize={array.length} key={component.heading}>
                       <CardAsLink
@@ -363,11 +363,23 @@ export default function Componenten() {
                           </Heading>
                         }
                       >
-                        <BadgeList className="rhc-templates-badgelist">
+                        <BadgeList
+                          aria-label={`Framework opties voor ${component.heading}`}
+                          className="rhc-templates-badgelist"
+                          role="group"
+                        >
                           {component.frameworks.map((framework) => (
-                            <DataBadge className="rhc-templates-databadge" key={framework}>
+                            <DataBadgeButton
+                              aria-label={`${framework} filter ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
+                              helperText={`- Klik om filter te ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
+                              key={framework}
+                              pressed={selectedFrameworks.includes(framework)}
+                              showHelperText={true}
+                              value={framework}
+                              onClick={() => handleDataBadgeClick(framework)} // FIXED: Direct call instead of data-value extraction
+                            >
                               {framework}
-                            </DataBadge>
+                            </DataBadgeButton>
                           ))}
                         </BadgeList>
                       </CardAsLink>
