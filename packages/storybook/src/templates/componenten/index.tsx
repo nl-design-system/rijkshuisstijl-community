@@ -13,8 +13,16 @@ import {
 import { IconPlus, IconSearch } from '@tabler/icons-react';
 import { BadgeList, ButtonLink, Icon } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
-import { AnchorHTMLAttributes, ChangeEvent, FormEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import React from 'react';
+import React, {
+  AnchorHTMLAttributes,
+  ChangeEvent,
+  FormEvent,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { DataBadgeButton } from './DataBadgeButton';
 import { allComponentsData, ComponentData } from './components-data';
 import { ExpandableCheckboxGroup } from './expandableCheckboxGroup';
