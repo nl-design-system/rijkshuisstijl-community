@@ -38,7 +38,7 @@ const meta = {
   component: DataBadgeButtonStory,
   argTypes: {
     children: {
-      description: 'Button text content',
+      description: 'Data Badge Button text content',
       type: {
         name: 'string',
         required: true,
@@ -49,7 +49,7 @@ const meta = {
       defaultValue: 'Label',
     },
     pressed: {
-      description: 'Whether the button is pressed/active',
+      description: 'Of de Data Badge Button pressed/actief is',
       type: {
         name: 'boolean',
       },
@@ -59,7 +59,7 @@ const meta = {
       defaultValue: false,
     },
     helperText: {
-      description: 'Accessible helper text for screen readers',
+      description: 'Toegankelijke helper tekst voor screen readers',
       type: {
         name: 'string',
       },
@@ -68,7 +68,7 @@ const meta = {
       },
     },
     showHelperText: {
-      description: 'Whether to show the helper text',
+      description: 'Of de helper tekst getoond moet worden',
       type: {
         name: 'boolean',
       },
@@ -78,7 +78,7 @@ const meta = {
       defaultValue: false,
     },
     helperId: {
-      description: 'ID for the helper text element',
+      description: 'ID voor het helper tekst element',
       type: {
         name: 'string',
       },
@@ -95,7 +95,7 @@ const meta = {
   tags: ['autodocs'],
   parameters: {
     status: {
-      type: 'WORK IN PROGRESS',
+      type: 'UNSTABLE',
     },
     docs: {
       description: {
@@ -128,7 +128,7 @@ export const Pressed: Story = {
 export const WithHelperText: Story = {
   args: {
     children: 'Category',
-    helperText: 'Click to filter by category',
+    helperText: 'Klik om te filteren op categorie',
     showHelperText: true,
     helperId: 'category-helper',
   },
@@ -141,7 +141,7 @@ export const MultipleButtons: Story = {
       <DataBadgeButton pressed>Documents</DataBadgeButton>
       <DataBadgeButton>Images</DataBadgeButton>
       <DataBadgeButton>Videos</DataBadgeButton>
-      <DataBadgeButton helperId="recent-helper" helperText="Filter by recent uploads" showHelperText={true}>
+      <DataBadgeButton helperId="recent-helper" helperText="Filter op recente uploads" showHelperText={true}>
         Recent
       </DataBadgeButton>
     </div>
