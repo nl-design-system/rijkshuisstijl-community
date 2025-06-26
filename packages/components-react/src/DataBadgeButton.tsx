@@ -1,17 +1,19 @@
-import { DataBadge, type DataBadgeProps } from '@utrecht/component-library-react';
+import { DataBadge, DataBadgeProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { PropsWithChildren, ReactNode } from 'react';
+import { PropsWithChildren, ReactNode, Ref } from 'react';
 
 export interface DataBadgeButtonProps extends DataBadgeProps {
   pressed?: boolean;
   helperText?: ReactNode;
   showHelperText?: boolean;
   helperId?: string;
+  ref?: Ref<HTMLElement>;
 }
 
 export const DataBadgeButton = ({
+  ref,
   children,
-  className = '',
+  className,
   pressed = false,
   helperText,
   showHelperText = false,
@@ -24,12 +26,13 @@ export const DataBadgeButton = ({
     <DataBadge
       aria-describedby={actualHelperId}
       aria-pressed={pressed}
+      ref={ref}
       role="button"
       tabIndex={0}
       className={clsx(
-        'rhc-templates-databadge',
+        'rhc-data-badge-button',
         {
-          'rhc-templates-databadge--pressed': pressed,
+          'rhc-data-badge-button--pressed': pressed,
         },
         className,
       )}
@@ -37,10 +40,12 @@ export const DataBadgeButton = ({
     >
       {children}
       {showHelperText && helperText && actualHelperId && (
-        <span className="rhc-templates-databadge__sr-only" id={actualHelperId}>
+        <span className="rhc-data-badge-button__sr-only" id={actualHelperId}>
           {helperText}
         </span>
       )}
     </DataBadge>
   );
 };
+
+DataBadgeButton.displayName = 'DataBadgeButton';

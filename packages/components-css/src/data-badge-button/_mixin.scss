@@ -1,0 +1,53 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@mixin rhc-data-badge-button {
+  --utrecht-data-badge-background-color: var(--rhc-color-primary-50);
+  --utrecht-data-badge-border-color: var(--rhc-color-primary-500);
+  --utrecht-data-badge-color: var(--rhc-color-primary-500);
+
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  padding-block: 0.25rem;
+  padding-inline: 0.75rem;
+  position: relative;
+
+  &:hover {
+    --utrecht-data-badge-background-color: var(--rhc-color-primary-500);
+    --utrecht-data-badge-border-color: var(--rhc-color-primary-50);
+    --utrecht-data-badge-color: var(--rhc-color-wit);
+  }
+}
+
+@mixin rhc-data-badge-button--pressed {
+  &::after {
+    content: "✓";
+    display: inline-block;
+    text-align: center;
+    vertical-align: text-top;
+  }
+}
+
+@mixin rhc-data-badge-button__sr-only {
+  block-size: 1px !important;
+
+  /* Source: https://kittygiraudel.com/snippets/sr-only-class/ */
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  inline-size: 1px !important;
+
+  /* stylelint-disable-next-line property-disallowed-list */
+  margin: -1px !important;
+  overflow: hidden !important;
+
+  /* stylelint-disable-next-line property-disallowed-list */
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+}
