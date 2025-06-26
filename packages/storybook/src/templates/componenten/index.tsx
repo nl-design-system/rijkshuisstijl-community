@@ -283,7 +283,7 @@ export default function Componenten() {
                 </Button>
               </form>
             </search>
-            <div className="rhc-componenten-toevoegen">
+            <div className="rhc-search-container__add-component">
               <ButtonLink appearance="secondary-action-button" href="/">
                 <Icon>
                   <IconPlus />
