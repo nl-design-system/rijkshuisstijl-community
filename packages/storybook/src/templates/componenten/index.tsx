@@ -1,6 +1,6 @@
 'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
 
-import { Pagination } from '@amsterdam/design-system-react';
+import { Pagination } from '@rijkshuisstijl-community/components-react';
 import {
   Button,
   Card,
@@ -15,8 +15,16 @@ import {
 import { IconCheck, IconPlus, IconSearch } from '@tabler/icons-react';
 import { BadgeList, ButtonLink, Icon } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
-import { AnchorHTMLAttributes, ChangeEvent, FormEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import React from 'react';
+import React, {
+  AnchorHTMLAttributes,
+  ChangeEvent,
+  FormEvent,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { allComponentsData, ComponentData } from './components-data';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
