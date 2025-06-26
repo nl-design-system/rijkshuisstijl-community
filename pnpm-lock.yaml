@@ -245,6 +245,9 @@ importers:
 
   packages/components-css:
     dependencies:
+      '@amsterdam/design-system-css':
+        specifier: 1.0.1
+        version: 1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.0)
       '@nl-design-system-candidate/heading-css':
         specifier: 1.1.0
         version: 1.1.0
@@ -276,6 +279,9 @@ importers:
 
   packages/components-react:
     dependencies:
+      '@amsterdam/design-system-react':
+        specifier: 1.0.0
+        version: 1.0.0(@amsterdam/design-system-css@1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@nl-design-system-candidate/link-react':
         specifier: 1.1.1
         version: 1.1.1(@babel/runtime@7.27.1)(react@19.1.0)
@@ -939,6 +945,12 @@ packages:
       '@amsterdam/design-system-assets': 1.0.0
       '@amsterdam/design-system-tokens': 1.0.0
 
+  '@amsterdam/design-system-css@1.0.1':
+    resolution: {integrity: sha512-nO1QCqNC0UXEdNESeJBJ8qLnYH4zPXNLWDuD+HRoLanM8NUsLexTVt2EQ9GVT0qYW1EQGgyeou9TouLVfkqPKw==}
+    peerDependencies:
+      '@amsterdam/design-system-assets': 1.0.0
+      '@amsterdam/design-system-tokens': 1.0.1
+
   '@amsterdam/design-system-react-icons@1.0.0':
     resolution: {integrity: sha512-rgY7haz069mYWPFJaXqsOFFqZQt+1sMOR9WpxybJB0SmAXevlkdEY5X12CtCCzbeBtzRXgCJxTouYjl+5dZblw==}
     peerDependencies:
@@ -954,10 +966,6 @@ packages:
 
   '@amsterdam/design-system-tokens@1.0.0':
     resolution: {integrity: sha512-uJqMZyGxoF/dxDhVpjOJAQBWIPpjOU2LiXn2IaBDyPJHH/PLRDdvKkRam2CY0YIhE82s/33B0rNtmG1XDcKkgA==}
-
-  '@angular-devkit/architect@0.1902.0':
-    resolution: {integrity: sha512-F/3O38QOYCwNqECNQauKb56GYdST9SrRSiqTNc5xpnUL//A09kaucmKSZ2VJAVY7K/rktSQn5viiQ3rTJLiZgA==}
-    engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
 
   '@angular-devkit/architect@0.1902.10':
     resolution: {integrity: sha512-Oa0mJi/SgBFLpZTzyO1KfkrS8dKvFnOl8pxJNb51s5i+yUSBNQOC7H6ulq4sSPjswzPe2vcizoKIxBkdLjwJDA==}
@@ -5398,6 +5406,7 @@ packages:
 
   '@utrecht/components@7.4.0':
     resolution: {integrity: sha512-LWFJjJ7TF0eaoWq5TGrg7rNYnG+G5yIEJhuiwFlbICwSx2n+gZVbAE1dAW8YG2mGqveXZk38hBC2FWNE1tj1BQ==}
+    deprecated: 'The @utrecht/components package has been deprecated. To migrate: the SCSS files are now only available in the npm package for the specific component. For example: @utrecht/button-css/src/_mixin.scss. The entire component library is now available in @utrecht/component-library-css/dist/index.css.'
 
   '@utrecht/currency-data-css@1.3.1':
     resolution: {integrity: sha512-QXXcRjRxnAab/jXqOWciokv0bCaVxxAOlF6hQC3OW76w4aaVVSXWRE3mBw+7g3AQ7nLGsfloTGwTshenF0g6+w==}
@@ -10461,6 +10470,7 @@ packages:
   node-domexception@1.0.0:
     resolution: {integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==}
     engines: {node: '>=10.5.0'}
+    deprecated: Use your platform's native DOMException instead
 
   node-fetch-native@1.6.4:
     resolution: {integrity: sha512-IhOigYzAKHd244OC0JIMIUrjzctirCmPkaIfhDeGcEETWof5zKYUW7e7MYvChGWh/4CJeXEgsRyGzuF334rOOQ==}
@@ -12883,6 +12893,7 @@ packages:
 
   token-transformer@0.0.33:
     resolution: {integrity: sha512-0h7Cvo8trUcv6sZPyA+iNHsFEwIhN4FhXtYqgndHQNYub+dTDW8ZCQURBNDNa0PvJ8Xg2wqG1V/5WSwV0l6yOw==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     hasBin: true
 
   tough-cookie@4.1.4:
@@ -13829,6 +13840,11 @@ snapshots:
       '@amsterdam/design-system-assets': 1.0.0
       '@amsterdam/design-system-tokens': 1.0.0
 
+  '@amsterdam/design-system-css@1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.0)':
+    dependencies:
+      '@amsterdam/design-system-assets': 1.0.0
+      '@amsterdam/design-system-tokens': 1.0.0
+
   '@amsterdam/design-system-react-icons@1.0.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       react: 19.1.0
@@ -13843,14 +13859,16 @@ snapshots:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
 
-  '@amsterdam/design-system-tokens@1.0.0': {}
-
-  '@angular-devkit/architect@0.1902.0(chokidar@4.0.1)':
+  '@amsterdam/design-system-react@1.0.0(@amsterdam/design-system-css@1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@angular-devkit/core': 19.2.0(chokidar@4.0.1)
-      rxjs: 7.8.1
-    transitivePeerDependencies:
-      - chokidar
+      '@amsterdam/design-system-css': 1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.0)
+      '@amsterdam/design-system-react-icons': 1.0.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@babel/runtime': 7.27.1
+      clsx: 2.1.1
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+
+  '@amsterdam/design-system-tokens@1.0.0': {}
 
   '@angular-devkit/architect@0.1902.10(chokidar@4.0.1)':
     dependencies:
