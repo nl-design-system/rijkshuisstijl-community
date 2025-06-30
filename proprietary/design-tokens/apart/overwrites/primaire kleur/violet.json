@@ -1,0 +1,45 @@
+{
+  "rhc": {
+    "color": {
+      "primary": {
+        "50": {
+          "value": "{rhc.color.violet.50}",
+          "type": "color"
+        },
+        "100": {
+          "value": "{rhc.color.violet.100}",
+          "type": "color"
+        },
+        "200": {
+          "value": "{rhc.color.violet.200}",
+          "type": "color"
+        },
+        "300": {
+          "value": "{rhc.color.violet.300}",
+          "type": "color"
+        },
+        "400": {
+          "value": "{rhc.color.violet.400}",
+          "type": "color"
+        },
+        "500": {
+          "value": "{rhc.color.violet.500}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{rhc.color.primary.500}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "darken",
+                "value": "0.3",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
