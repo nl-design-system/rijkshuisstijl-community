@@ -7,28 +7,20 @@
   --utrecht-data-badge-background-color: var(--rhc-color-primary-50);
   --utrecht-data-badge-border-color: var(--rhc-color-primary-500);
   --utrecht-data-badge-color: var(--rhc-color-primary-500);
+  --utrecht-data-badge-border-radius: 10px;
+  --utrecht-data-badge-padding-block: var(--rhc-space-25);
+  --utrecht-data-badge-padding-inline: 0.75rem;
 
   align-items: center;
-  border-radius: 10px;
+  column-gap: var(--rhc-space-25); // TODO: column-gap: var(--rhc-button-column-gap);
   cursor: pointer;
   display: inline-flex;
-  padding-block: 0.25rem;
-  padding-inline: 0.75rem;
   position: relative;
 
   &:hover {
     --utrecht-data-badge-background-color: var(--rhc-color-primary-500);
     --utrecht-data-badge-border-color: var(--rhc-color-primary-50);
     --utrecht-data-badge-color: var(--rhc-color-wit);
-  }
-}
-
-@mixin rhc-data-badge-button--pressed {
-  &::after {
-    content: "✓";
-    display: inline-block;
-    text-align: center;
-    vertical-align: text-top;
   }
 }
 
