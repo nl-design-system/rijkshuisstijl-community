@@ -1,36 +1,13 @@
 /* @license CC0-1.0 */
 
-import { DataBadgeButton } from '@rijkshuisstijl-community/components-react';
+import { DataBadgeButton, DataBadgeButtonProps } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
+import { IconCheck } from '@tabler/icons-react';
 import { PropsWithChildren } from 'react';
 import readme from './data-badge-button.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
-interface DataBadgeButtonStoryProps {
-  pressed?: boolean;
-  helperText?: string;
-  showHelperText?: boolean;
-  helperId?: string;
-}
-
-const DataBadgeButtonStory = ({
-  children,
-  pressed,
-  helperText,
-  showHelperText,
-  helperId,
-  ...props
-}: PropsWithChildren<DataBadgeButtonStoryProps>) => (
-  <DataBadgeButton
-    helperId={helperId}
-    helperText={helperText}
-    pressed={pressed}
-    showHelperText={showHelperText}
-    {...props}
-  >
-    {children}
-  </DataBadgeButton>
-);
+const DataBadgeButtonStory = (props: PropsWithChildren<DataBadgeButtonProps>) => <DataBadgeButton {...props} />;
 
 const meta = {
   title: 'Rijkshuisstijl/DataBadgeButton',
@@ -58,8 +35,31 @@ const meta = {
       },
       defaultValue: false,
     },
+    icon: {
+      description: 'Icon om in de Data Badge Button te plaatsen',
+      control: false,
+      table: {
+        category: 'Props',
+      },
+    },
+    iconPosition: {
+      description: 'Icon positie - voor of na de tekst (alleen relevant wanneer Icon gebruikt wordt)',
+      control: {
+        type: 'select',
+      },
+      options: ['before', 'after'],
+      table: {
+        category: 'Props',
+      },
+    },
     helperText: {
       description: 'Toegankelijke helper tekst voor screen readers',
+      type: {
+        name: 'string',
+      },
+    },
+    label: {
+      description: 'Alternatieve manier om tekst als prop mee te geven in plaats van als children',
       type: {
         name: 'string',
       },
@@ -118,10 +118,21 @@ export const Default: Story = {
   },
 };
 
-export const Pressed: Story = {
+export const WithIconBefore: Story = {
   args: {
-    children: 'Active Filter',
+    children: 'With Icon Before',
     pressed: true,
+    icon: <IconCheck />,
+    iconPosition: 'before',
+  },
+};
+
+export const WithIconAfter: Story = {
+  args: {
+    children: 'With Icon After',
+    pressed: true,
+    icon: <IconCheck />,
+    iconPosition: 'after',
   },
 };
 
@@ -138,12 +149,17 @@ export const MultipleButtons: Story = {
   render: () => (
     <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
       <DataBadgeButton>All Items</DataBadgeButton>
-      <DataBadgeButton pressed>Documents</DataBadgeButton>
-      <DataBadgeButton>Images</DataBadgeButton>
-      <DataBadgeButton>Videos</DataBadgeButton>
-      <DataBadgeButton helperId="recent-helper" helperText="Filter op recente uploads" showHelperText={true}>
-        Recent
+      <DataBadgeButton>Videos </DataBadgeButton>
+      <DataBadgeButton pressed icon={<IconCheck />}>
+        Documents
       </DataBadgeButton>
+      <DataBadgeButton>Images</DataBadgeButton>
+      <DataBadgeButton
+        helperId="recent-helper"
+        helperText="Filter op recente uploads"
+        label="Recent"
+        showHelperText={true}
+      ></DataBadgeButton>
     </div>
   ),
 };
