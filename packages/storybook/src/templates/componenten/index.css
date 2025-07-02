@@ -12,24 +12,10 @@
   color: var(--rhc-color-primary-500) !important;
 }
 
-.rhc-templates-databadge {
-  --utrecht-data-badge-background-color: var(--rhc-color-primary-50);
-  --utrecht-data-badge-border-color: var(--rhc-color-primary-500);
-  --utrecht-data-badge-color: var(--rhc-color-primary-500);
-
-  align-items: center;
-  border-radius: 10px;
-  cursor: pointer;
-  display: inline-flex;
-  padding-block: 0.25rem;
-  padding-inline: 0.75rem;
-  position: relative;
-}
-
 .rhc-templates-badgelist {
   gap: var(--rhc-space-100) !important;
   position: relative;
-  z-index: 1; /* hogere z-index zodat data badges klikbaar zijn binnen de card as link */
+  z-index: 1; /* higher z-index so badges are clickable within card as link */
 }
 
 .rhc-templates-card {
