@@ -164,10 +164,6 @@ importers:
         specifier: 5.7.3
         version: 5.7.3
 
-  apps/rhc-templates/dist: {}
-
-  apps/rhc-templates/dist/types: {}
-
   packages/components-angular:
     dependencies:
       '@angular-devkit/build-angular':
@@ -428,6 +424,12 @@ importers:
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css
+      react:
+        specifier: '*'
+        version: 19.1.0
+      react-dom:
+        specifier: '*'
+        version: 19.1.0(react@19.1.0)
     devDependencies:
       '@nl-design-system/tsconfig':
         specifier: 1.0.3
