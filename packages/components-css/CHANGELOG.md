@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/components-css
 
+## 2.1.0
+
+### Minor Changes
+
+- 790ead0: Rename "Card" component to "Card as Link" component, to match definition of NL Design System "Card as Link" and in preparation of incoming "Card (not as Link)" component.
+
+### Patch Changes
+
+- 9916255: Improve UX by always reserving space for optional action in Data Summary component.
+
 ## 2.0.0
 
 ### Major Changes

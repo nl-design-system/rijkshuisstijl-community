@@ -1,5 +1,16 @@
 # @rijkshuisstijl-community/components-react
 
+## 2.0.0
+
+### Major Changes
+
+- 67ea521: - Expliciet defaultIconSet en flagIconSet exporteren in index.
+  - Expliciet README, CHANGELOG en de ESM, CJS en TypeScript types definieren in `exports` van de package.json voor compatibiliteit met bundlers en tooling.
+
+### Minor Changes
+
+- 790ead0: Rename "Card" component to "Card as Link" component, to match definition of NL Design System "Card as Link" and in preparation of incoming "Card (not as Link)" component.
+
 ## 1.2.0
 
 ### Minor Changes

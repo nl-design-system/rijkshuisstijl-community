@@ -1,5 +1,25 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 3.1.0
+
+### Minor Changes
+
+- 860e977: - Thema van KOOP aangevuld met afwijkende link-stijling
+- 790ead0: Rename "Card" component to "Card as Link" component, to match definition of NL Design System "Card as Link" and in preparation of incoming "Card (not as Link)" component.
+- 4c1b34a: - Thema toegevoegd voor KOOP
+
+### Patch Changes
+
+- 83f2985: Vervang niet bestaand Design Token type "borderStyle" met "other".
+- 860e977: Link tokens bijgewerkt:
+
+  - `nl.link.text-decoration-color` verwijderd zodat de underline meekleurt met de state kleur
+  - `nl.link.hover.text-decoration` hernoemd naar `nl.link.hover.text-decoration-line` zodat de underline bij hover verdwijnt
+
+- b29ea7b: - H6 design tokens toegevoegd
+- 02ca6dc: - line-height van H4 en H5 aangepast van 125% naar 150% voor betere leesbaarheid
+  - Tokenschrijfwijze voor nl-headings gewijzigd van . naar - (bijv. nl.heading-level-x → nl.heading.level-x)
+
 ## 3.0.0
 
 ### Major Changes
