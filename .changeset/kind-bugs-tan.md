@@ -1,5 +1,6 @@
 ---
-'@rijkshuisstijl-community/components-react': patch
+'@rijkshuisstijl-community/components-react': major
 ---
 
-Een `exports` veld toegevoegd aan package.json om ESM, CJS en TypeScript types expliciet te definieren voor compatibiliteit met bundlers en tooling.
+- Expliciet iconSet exporteren in index.
+- Expliciet README, CHANGELOG en de ESM, CJS en TypeScript types definieren in `exports` van de package.json voor compatibiliteit met bundlers en tooling.

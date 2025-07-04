@@ -3,7 +3,7 @@ import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 import { RHCIconID } from './icon-sets/default-icons/RHCIconIDs';
 import { iconSet as defaultIconSet } from './icon-sets/default-icons/icon-set';
 
-let iconSet: Record<string, ReactNode> = defaultIconSet;
+export let iconSet: Record<string, ReactNode> = defaultIconSet;
 
 export const registerIconSet = (newIconSet: typeof iconSet) => {
   iconSet = { ...iconSet, ...newIconSet };
