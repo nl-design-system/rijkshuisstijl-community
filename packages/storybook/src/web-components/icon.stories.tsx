@@ -1,5 +1,4 @@
-import { getIconSet, registerIconSet } from '@rijkshuisstijl-community/components-react';
-import { iconSet } from '@rijkshuisstijl-community/components-react/src/icon-sets/flag-icons/icon-set';
+import { getIconSet, defaultIconSet as iconSet, registerIconSet } from '@rijkshuisstijl-community/components-react';
 import { IconWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { IconBrandX } from '@tabler/icons-react';
