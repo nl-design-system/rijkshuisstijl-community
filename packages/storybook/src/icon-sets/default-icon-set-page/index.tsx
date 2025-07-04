@@ -1,4 +1,4 @@
-import { Icon, iconSet } from '@rijkshuisstijl-community/components-react';
+import { Icon, defaultIconSet as iconSet } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
 import '../index.css';
 

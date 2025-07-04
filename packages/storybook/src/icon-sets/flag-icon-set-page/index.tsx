@@ -1,4 +1,4 @@
-import { Heading, Icon, iconSet, registerIconSet } from '@rijkshuisstijl-community/components-react';
+import { Heading, Icon, flagIconSet as iconSet, registerIconSet } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
 import '../index.css';
 

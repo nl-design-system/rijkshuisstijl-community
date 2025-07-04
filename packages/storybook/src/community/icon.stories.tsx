@@ -1,4 +1,9 @@
-import { getIconSet, Icon, iconSet, registerIconSet } from '@rijkshuisstijl-community/components-react';
+import {
+  getIconSet,
+  Icon,
+  defaultIconSet as iconSet,
+  registerIconSet,
+} from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import { IconBrandX } from '@tabler/icons-react';
 import readme from './icon.md?raw';
