@@ -1,11 +1,13 @@
-import { getIconSet, defaultIconSet as iconSet, registerIconSet } from '@rijkshuisstijl-community/components-react';
+import { defaultIconSet, flagIconSet, getIconSet, registerIconSet } from '@rijkshuisstijl-community/components-react';
 import { IconWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { IconBrandX } from '@tabler/icons-react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../community/icon.md?raw';
 
-registerIconSet(iconSet);
+registerIconSet(defaultIconSet);
+registerIconSet(flagIconSet);
+
 IconWebComponent.define();
 
 const meta = {

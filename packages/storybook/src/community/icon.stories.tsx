@@ -1,7 +1,8 @@
 import {
+  defaultIconSet,
+  flagIconSet,
   getIconSet,
   Icon,
-  defaultIconSet as iconSet,
   registerIconSet,
 } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
@@ -9,7 +10,8 @@ import { IconBrandX } from '@tabler/icons-react';
 import readme from './icon.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
-registerIconSet(iconSet);
+registerIconSet(defaultIconSet);
+registerIconSet(flagIconSet);
 
 const meta = {
   title: 'Rijkshuisstijl/Icon',
