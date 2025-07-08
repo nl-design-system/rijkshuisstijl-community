@@ -10,6 +10,18 @@ describe('DataSummary', () => {
     expect(dataSummary).toBeInTheDocument();
     expect(dataSummary).toBeVisible();
   });
+
+  it('should add the correct class when appearance is set to column', () => {
+    const { container } = render(<DataSummary appearance="column" />);
+    const dataSummary = container.querySelector(':only-child');
+    expect(dataSummary).toHaveClass('rhc-data-summary--column');
+  });
+
+  it('should add the correct class when appearance is set to row', () => {
+    const { container } = render(<DataSummary appearance="row" />);
+    const dataSummary = container.querySelector(':only-child');
+    expect(dataSummary).toHaveClass('rhc-data-summary--row');
+  });
 });
 
 afterEach(() => cleanup());

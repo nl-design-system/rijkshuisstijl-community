@@ -10,6 +10,23 @@ describe('DataSummaryItem', () => {
     expect(dataSummaryItem).toBeInTheDocument();
     expect(dataSummaryItem).toBeVisible();
   });
+
+  it('renders a visible link', () => {
+    const { container } = render(
+      <DataSummaryItem href="#" itemKey="Key" itemValue="Value">
+        Link
+      </DataSummaryItem>,
+    );
+    const dataSummaryItem = container.querySelector(':only-child');
+    expect(dataSummaryItem).toBeInTheDocument();
+    expect(dataSummaryItem).toBeVisible();
+    expect(dataSummaryItem).toBeTruthy();
+    if (dataSummaryItem) {
+      const link = dataSummaryItem.querySelector('a');
+      expect(link).toBeInTheDocument();
+      expect(link).toHaveTextContent('Link');
+    }
+  });
 });
 
 afterEach(() => cleanup());
