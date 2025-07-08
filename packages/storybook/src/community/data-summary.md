@@ -11,7 +11,10 @@ import { DataSummary, DataSummaryItem } from '@rijkshuisstijl-community/componen
 
 <DataSummary>
   <DataSummaryItem itemKey="Soort" itemValue="Reuzenpanda" />
-  <DataSummaryItem actionLabel="Bekijk alle dieren" href="#" itemKey="Rijk" itemValue="Animalia (Dieren)" />
+  <DataSummaryItem href="#" itemKey="Rijk" itemValue="Animalia (Dieren)">
+    Bekijk alle dieren
+    <Icon icon="externe-link" />
+  </DataSummaryItem>
   <DataSummaryItem itemKey="Klasse" itemValue="Mammalia (Zoogdieren)" />
 </DataSummary>;
 ```
