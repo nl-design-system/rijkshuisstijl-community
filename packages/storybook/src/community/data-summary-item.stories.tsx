@@ -5,7 +5,7 @@ import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/DataSummaryItem',
-  id: 'rhc-dataSummaryItem',
+  id: 'rhc-data-summary-item',
   component: DataSummaryItem,
   parameters: {
     status: { type: 'UNSTABLE' },
