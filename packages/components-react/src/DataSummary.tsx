@@ -10,12 +10,12 @@ export function DataSummary({
   ref,
   className,
   children,
-  appearance,
+  appearance = 'column',
   ...restProps
 }: PropsWithChildren<DataSummaryProps>) {
   return (
     <dl
-      className={clsx('rhc-data-summary', `rhc-data-summary--${appearance ?? 'column'}`, className)}
+      className={clsx('rhc-data-summary', `rhc-data-summary--${appearance}`, className)}
       ref={ref}
       {...restProps}
     >
