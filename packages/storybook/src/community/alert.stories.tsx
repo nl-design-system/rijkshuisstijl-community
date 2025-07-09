@@ -1,8 +1,10 @@
 /* @license CC0-1.0 */
 
-import { Alert } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
+import { Paragraph } from '@utrecht/component-library-react';
 import readme from './alert.md?raw';
+import { Alert } from '../../../components-react/src/Alert';
+import { Heading } from '../../../components-react/src/Heading';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
@@ -18,38 +20,19 @@ const meta = {
         category: 'Property',
       },
     },
-    heading: {
-      description: 'Alert heading - used in default webcomponent slot',
-      type: {
-        name: 'string',
-      },
-      table: {
-        category: 'Demo',
-      },
-    },
-    headingLevel: {
-      description: 'Alert heading level',
-      control: { type: 'select' },
-      options: [1, 2, 3, 4, 5],
-      table: {
-        category: 'Demo',
-      },
-    },
-    textContent: {
-      description: 'Alert content - used in default webcomponent slot',
-      type: {
-        name: 'string',
-      },
-      table: {
-        category: 'Demo',
-      },
-    },
   },
   args: {
     type: 'info',
-    heading: 'Heading',
-    headingLevel: 3,
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children: [
+      <Heading appearanceLevel={5} level={2}>
+        Dus..
+      </Heading>,
+      <Paragraph>
+        Sedert jaren vraag ik mij af, waartoe zulke dingen dienen, en ik sta verbaasd over de onbeschaamdheid, waarmee
+        een dichter of romanverteller u iets op de mouw durft spelden, dat nooit gebeurd is, en meestal niet gebeuren
+        kan.
+      </Paragraph>,
+    ],
   },
   tags: ['autodocs'],
   parameters: {
@@ -77,31 +60,30 @@ export default meta;
 export const Informative: StoryObj<typeof meta> = {
   args: {
     type: 'info',
-    heading: 'Heading',
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
   },
 };
 
 export const Negative: StoryObj<typeof meta> = {
   args: {
     type: 'error',
-    heading: 'Heading',
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
   },
 };
 
 export const Positive: StoryObj<typeof meta> = {
   args: {
     type: 'ok',
-    heading: 'Heading',
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children: (
+      <Paragraph>
+        Als ik in mijn vak -- ik ben makelaar in koffie, en woon op de Lauriergracht No 37 -- aan een principaal -- een
+        principaal is iemand die koffie verkoopt -- een opgave deed, waarin maar een klein gedeelte der onwaarheden
+        voorkwam, die in gedichten en romans de hoofdzaak uitmaken, zou hij terstond Busselinck &amp; Waterman nemen.
+      </Paragraph>
+    ),
   },
 };
 
 export const Warning: StoryObj<typeof meta> = {
   args: {
     type: 'warning',
-    heading: 'Heading',
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
   },
 };

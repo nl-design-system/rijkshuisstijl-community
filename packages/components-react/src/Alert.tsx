@@ -1,58 +1,25 @@
-import { Alert as UtrechtAlert } from '@utrecht/component-library-react';
+import { type AlertType, Alert as UtrechtAlert } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { PropsWithChildren, ReactNode, Ref } from 'react';
-import { Heading, type HeadingLevel } from './Heading';
-import { Icon } from './Icon';
-import { Paragraph } from './Paragraph';
+import { PropsWithChildren, Ref } from 'react';
+import { Icon, type RHCIconID } from './Icon';
 export interface AlertProps {
   ref?: Ref<HTMLDivElement>;
-  type: 'info' | 'ok' | 'warning' | 'error';
-  heading?: ReactNode;
-  headingLevel?: HeadingLevel;
-  headingAppearanceLevel?: HeadingLevel;
-  textContent?: ReactNode;
+  type: AlertType;
 }
-export const Alert = ({
-  ref,
-  type,
-  heading,
-  headingLevel = 3,
-  headingAppearanceLevel = 5,
-  textContent,
-  children,
-  ...restProps
-}: PropsWithChildren<AlertProps>) => {
+const iconMap: Record<AlertType, RHCIconID> = {
+  info: 'info-circle',
+  ok: 'circle-check',
+  warning: 'let-op',
+  error: 'alert-circle',
+};
+const defaultIcon: RHCIconID = 'alert-circle';
+export const Alert = ({ ref, type, children, ...restProps }: PropsWithChildren<AlertProps>) => {
   return (
     <UtrechtAlert className="rhc-alert" ref={ref} type={type} {...restProps}>
-      <div
-        className={clsx('rhc-alert__icon-container', {
-          'rhc-alert__icon-container--ok': type === 'ok',
-          'rhc-alert__icon-container--error': type === 'error',
-          'rhc-alert__icon-container--warning': type === 'warning',
-          'rhc-alert__icon-container--info': type === 'info',
-        })}
-      >
-        <Icon
-          icon={
-            type === 'info'
-              ? 'info-circle'
-              : type === 'ok'
-                ? 'circle-check'
-                : type === 'warning'
-                  ? 'let-op'
-                  : 'alert-circle'
-          }
-        />
+      <div className={clsx('rhc-alert__icon-container', `rhc-alert__icon-container--${type}`)}>
+        <Icon icon={iconMap[type] || defaultIcon} />
       </div>
-      <div>
-        {heading && (
-          <Heading appearanceLevel={headingAppearanceLevel} level={headingLevel}>
-            {heading}
-          </Heading>
-        )}
-        <Paragraph>{textContent}</Paragraph>
-        {children}
-      </div>
+      <div>{children}</div>
     </UtrechtAlert>
   );
 };
