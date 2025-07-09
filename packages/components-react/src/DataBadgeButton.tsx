@@ -28,7 +28,7 @@ export const DataBadgeButton = ({
 }: PropsWithChildren<DataBadgeButtonProps>) => {
   const actualHelperId = showHelperText && helperId ? helperId : undefined;
   const textContent = label ? <span>{label}</span> : children;
-  const actualIconPosition = icon ? iconPosition || 'before' : undefined;
+  const actualIconPosition = icon && (iconPosition ?? 'before');
 
   return (
     <DataBadge

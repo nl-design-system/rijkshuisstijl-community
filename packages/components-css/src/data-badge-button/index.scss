@@ -9,6 +9,11 @@
   @include mixin.rhc-data-badge-button;
 }
 
-.rhc-data-badge-button__sr-only {
+.rhc-data-badge-button .rhc-data-badge-button__sr-only {
   @include mixin.rhc-data-badge-button__sr-only;
+}
+
+.rhc-data-badge-button:focus-visible,
+.rhc-data-badge-button--focus-visible {
+  @include mixin.rhc-data-badge-button--focus-visible;
 }

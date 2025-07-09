@@ -3,6 +3,9 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
+@use "../button/mixin" as button-mixin;
+@use "../link/mixin" as link-mixin;
+
 @mixin rhc-data-badge-button {
   --utrecht-data-badge-background-color: var(--rhc-color-primary-50);
   --utrecht-data-badge-border-color: var(--rhc-color-primary-500);
@@ -12,7 +15,10 @@
   --utrecht-data-badge-padding-inline: 0.75rem;
 
   align-items: center;
-  column-gap: var(--rhc-space-25); // TODO: column-gap: var(--rhc-button-column-gap);
+  column-gap: var(
+    --rhc-space-25
+  ); // TODO: column-gap: var(--rhc-data-badge-button-column-gap) - als het niet bij utrecht kan;
+
   cursor: pointer;
   display: inline-flex;
   position: relative;
@@ -25,21 +31,9 @@
 }
 
 @mixin rhc-data-badge-button__sr-only {
-  block-size: 1px !important;
+  @include button-mixin.invisible-but-accessible;
+}
 
-  /* Source: https://kittygiraudel.com/snippets/sr-only-class/ */
-  border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-  -webkit-clip-path: inset(50%) !important;
-  clip-path: inset(50%) !important;
-  inline-size: 1px !important;
-
-  /* stylelint-disable-next-line property-disallowed-list */
-  margin: -1px !important;
-  overflow: hidden !important;
-
-  /* stylelint-disable-next-line property-disallowed-list */
-  padding: 0 !important;
-  position: absolute !important;
-  white-space: nowrap !important;
+@mixin rhc-data-badge-button--focus-visible {
+  @include link-mixin.rhc-link--focus-visible;
 }
