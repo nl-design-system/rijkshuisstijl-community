@@ -7,26 +7,34 @@
 @use "../link/mixin" as link-mixin;
 
 @mixin rhc-data-badge-button {
-  --utrecht-data-badge-background-color: var(--rhc-color-primary-50);
-  --utrecht-data-badge-border-color: var(--rhc-color-primary-500);
-  --utrecht-data-badge-color: var(--rhc-color-primary-500);
-  --utrecht-data-badge-border-radius: 10px;
-  --utrecht-data-badge-padding-block: var(--rhc-space-25);
-  --utrecht-data-badge-padding-inline: 0.75rem;
+  // TODO replace by JSON design tokens
+  --rhc-data-badge-button-background-color: var(--rhc-color-primary-50);
+  --rhc-data-badge-button-background-color-hover: var(--rhc-color-primary-500);
+  --rhc-data-badge-button-border-color: var(--rhc-color-primary-500);
+  --rhc-data-badge-button-border-color-hover: var(--rhc-color-primary-50);
+  --rhc-data-badge-button-color: var(--rhc-color-primary-500);
+  --rhc-data-badge-button-color-hover: var(--rhc-color-wit);
+  --rhc-data-badge-button-border-radius: 10px;
+  --rhc-data-badge-button-padding-block: var(--rhc-space-25);
+  --rhc-data-badge-button-padding-inline: 0.75rem;
+  --rhc-data-badge-button-column-gap: var(--rhc-space-25);
+  --utrecht-data-badge-background-color: var(--rhc-data-badge-button-background-color);
+  --utrecht-data-badge-border-color: var(--rhc-data-badge-button-border-color);
+  --utrecht-data-badge-color: var(--rhc-data-badge-button-color);
+  --utrecht-data-badge-border-radius: var(--rhc-data-badge-button-border-radius);
+  --utrecht-data-badge-padding-block: var(--rhc-data-badge-button-padding-block);
+  --utrecht-data-badge-padding-inline: var(--rhc-data-badge-button-padding-inline);
 
   align-items: center;
-  column-gap: var(
-    --rhc-space-25
-  ); // TODO: column-gap: var(--rhc-data-badge-button-column-gap) - als het niet bij utrecht kan;
-
+  column-gap: var(--rhc-data-badge-button-column-gap); // TODO: als het niet bij utrecht kan;
   cursor: pointer;
   display: inline-flex;
   position: relative;
 
   &:hover {
-    --utrecht-data-badge-background-color: var(--rhc-color-primary-500);
-    --utrecht-data-badge-border-color: var(--rhc-color-primary-50);
-    --utrecht-data-badge-color: var(--rhc-color-wit);
+    --utrecht-data-badge-background-color: var(--rhc-data-badge-button-background-color-hover);
+    --utrecht-data-badge-border-color: var(--rhc-data-badge-button-border-color-hover);
+    --utrecht-data-badge-color: var(--rhc-data-badge-button-color-hover);
   }
 }
 

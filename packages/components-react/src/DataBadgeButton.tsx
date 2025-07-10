@@ -6,7 +6,7 @@ export interface DataBadgeButtonProps extends DataBadgeProps {
   pressed?: boolean;
   helperText?: ReactNode;
   icon?: ReactNode;
-  iconPosition?: 'before' | 'after';
+  iconAlign?: 'start' | 'end';
   label?: ReactNode;
   showHelperText?: boolean;
   helperId?: string;
@@ -18,7 +18,7 @@ export const DataBadgeButton = ({
   children,
   className,
   icon,
-  iconPosition,
+  iconAlign = 'start',
   label,
   pressed = false,
   helperText,
@@ -27,8 +27,7 @@ export const DataBadgeButton = ({
   ...restProps
 }: PropsWithChildren<DataBadgeButtonProps>) => {
   const actualHelperId = showHelperText && helperId ? helperId : undefined;
-  const textContent = label ? <span>{label}</span> : children;
-  const actualIconPosition = icon && (iconPosition ?? 'before');
+  const textContent = label || children;
 
   return (
     <DataBadge
@@ -40,19 +39,10 @@ export const DataBadgeButton = ({
       tabIndex={0}
       {...restProps}
     >
-      {!icon && textContent}
-      {icon && actualIconPosition === 'before' && (
-        <>
-          {icon}
-          {textContent}
-        </>
-      )}
-      {icon && actualIconPosition === 'after' && (
-        <>
-          {textContent}
-          {icon}
-        </>
-      )}
+      {iconAlign === 'start' && icon}
+      <span className={'rhc-data-badge-button__label'}>{textContent}</span>
+      {iconAlign === 'end' && icon}
+
       {showHelperText && helperText && actualHelperId && (
         <span className="rhc-data-badge-button__sr-only" id={actualHelperId}>
           {helperText}

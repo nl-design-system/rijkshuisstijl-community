@@ -42,12 +42,12 @@ const meta = {
         category: 'Props',
       },
     },
-    iconPosition: {
+    iconAlign: {
       description: 'Icon positie - voor of na de tekst (alleen relevant wanneer Icon gebruikt wordt)',
       control: {
         type: 'select',
       },
-      options: ['before', 'after'],
+      options: ['start', 'end'],
       table: {
         category: 'Props',
       },
@@ -123,7 +123,7 @@ export const WithIconBefore: Story = {
     children: 'With Icon Before',
     pressed: true,
     icon: <IconCheck />,
-    iconPosition: 'before',
+    iconAlign: 'start',
   },
 };
 
@@ -132,7 +132,7 @@ export const WithIconAfter: Story = {
     children: 'With Icon After',
     pressed: true,
     icon: <IconCheck />,
-    iconPosition: 'after',
+    iconAlign: 'end',
   },
 };
 
