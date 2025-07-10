@@ -4995,24 +4995,8 @@
     }
   },
   "components/link-list": {
-    "rhc": {
-      "link-list": {
-        "text-decoration": {
-          "type": "textDecoration",
-          "value": "None"
-        }
-      }
-    },
     "utrecht": {
       "link-list": {
-        "margin-block-end": {
-          "type": "dimension",
-          "value": "{rhc.space.0}"
-        },
-        "margin-block-start": {
-          "type": "dimension",
-          "value": "{rhc.space.0}"
-        },
         "row-gap": {
           "type": "dimension",
           "value": "{rhc.space.100}"
@@ -5031,10 +5015,24 @@
           "column-gap": {
             "type": "dimension",
             "value": "{rhc.space.100}"
-          },
+          }
+        },
+        "link": {
           "text-decoration": {
             "type": "textDecoration",
             "value": "None"
+          }
+        }
+      }
+    },
+    "todo": {
+      "link-list": {
+        "link": {
+          "hover": {
+            "text-decoration": {
+              "value": "underline",
+              "type": "textDecoration"
+            }
           }
         }
       }
