@@ -1071,28 +1071,28 @@
     }
   },
   "common/focus": {
-    "rhc": {
-      "color": {
-        "focus": {
-          "outline": {
-            "value": "{rhc.color.zwart}",
-            "type": "color"
-          }
+    "basis": {
+      "outline-color": {
+        "value": "{rhc.color.zwart}",
+        "type": "color"
+      },
+      "inverse": {
+        "outline-color": {
+          "value": "{rhc.color.wit}",
+          "type": "color"
         }
       },
-      "focus": {
-        "outline-offset": {
-          "value": "{rhc.space.25}",
-          "type": "spacing"
-        },
-        "outline-style": {
-          "value": "solid",
-          "type": "other"
-        },
-        "outline-width": {
-          "value": "{rhc.border-width.m}",
-          "type": "borderWidth"
-        }
+      "outline-offset": {
+        "value": "{rhc.space.25}",
+        "type": "other"
+      },
+      "outline-style": {
+        "value": "solid",
+        "type": "other"
+      },
+      "outline-width": {
+        "value": "{rhc.border-width.m}",
+        "type": "dimensions"
       }
     }
   },
@@ -1224,19 +1224,19 @@
     "utrecht": {
       "focus": {
         "outline-color": {
-          "value": "{rhc.color.focus.outline}",
+          "value": "{basis.focus.outline-color}",
           "type": "color"
         },
         "outline-offset": {
-          "value": "{rhc.focus.outline-offset}",
+          "value": "{basis.focus.outline-offset}",
           "type": "spacing"
         },
         "outline-style": {
-          "value": "{rhc.focus.outline-style}",
+          "value": "{basis.focus.outline-style}",
           "type": "other"
         },
         "outline-width": {
-          "value": "{rhc.focus.outline-width}",
+          "value": "{basis.focus.outline-width}",
           "type": "borderWidth"
         },
         "inverse": {
