@@ -128,6 +128,16 @@ Vanuit`packages/components-react` krijg je een gedetailleerder overzicht van tes
 | :-------------- | :-------------------------- |
 | `pnpm run test` | Voert alle test suites uit. |
 
+### Storybook runnen
+
+Het commando voor storybook is niet nog volledig hot reloading. Voorlopig zijn daar slechts een paar tijdelijke
+oplossingen voor:
+
+- imports met relatief pad beginnen, bijv. `import {...} from '../../../components-react'` in plaats van
+  `import {...} from '@rijkshuisstijl-community/components-react'`
+- in plaats van een complete build met `pnpm run build`, een gescopete build draaien met `--filter`, bijvoorbeeld
+  `pnpm --filter @rijkshuisstijl-community/components-react build`
+
 ### Proprietary
 
 Branding, lettertypen en andere assets moeten vaak niet deel uitmaken van de EUPL-licentie. Door deze in de
