@@ -831,6 +831,44 @@
       }
     }
   },
+  "common/basis": {
+    "basis": {
+      "color": {
+        "default": {
+          "bg-document": {
+            "value": "{rhc.color.canvas}",
+            "type": "color"
+          }
+        }
+      },
+      "text": {
+        "font-family": {
+          "default": {
+            "value": "{rhc.font-family.primary}",
+            "type": "fontFamilies"
+          }
+        },
+        "font-weight": {
+          "default": {
+            "value": "{rhc.font-weight.default}",
+            "type": "fontWeights"
+          }
+        },
+        "font-size": {
+          "md": {
+            "value": "{rhc.font-size.body.default}",
+            "type": "fontSizes"
+          }
+        },
+        "line-height": {
+          "md": {
+            "value": "{rhc.line-height.md}",
+            "type": "lineHeights"
+          }
+        }
+      }
+    }
+  },
   "common/color": {
     "rhc": {
       "color": {
@@ -9692,7 +9730,8 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "common/basis": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9787,7 +9826,8 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "common/basis": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9884,7 +9924,8 @@
         "overwrites/oude rijkshuisstijl/blockqoute": "enabled",
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "common/basis": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9979,7 +10020,8 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "common/basis": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10074,7 +10116,8 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "common/basis": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10169,7 +10212,8 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "common/basis": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10264,7 +10308,8 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "common/basis": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10359,7 +10404,8 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "common/basis": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10457,7 +10503,8 @@
         "overwrites/closed-source/font": "enabled",
         "overwrites/koop/link": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "common/basis": "disabled"
       },
       "group": "Rijkshuisstijl",
       "$figmaVariableReferences": {}
@@ -10470,6 +10517,7 @@
       "brand/border",
       "brand/font",
       "brand/size",
+      "common/basis",
       "common/color",
       "common/size",
       "common/font",
