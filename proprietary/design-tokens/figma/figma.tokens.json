@@ -5034,7 +5034,7 @@
       }
     }
   },
-  "components/link-list": {
+  "components/link-list/base": {
     "utrecht": {
       "link-list": {
         "row-gap": {
@@ -5076,6 +5076,38 @@
               "type": "textDecoration"
             }
           }
+        }
+      }
+    }
+  },
+  "components/link-list/deprecated": {
+    "utrecht": {
+      "link-list": {
+        "margin-block-start": {
+          "value": "{rhc.space.0}",
+          "type": "dimension"
+        },
+        "margin-block-end": {
+          "value": "{rhc.space.0}",
+          "type": "dimension"
+        },
+        "item": {
+          "column-gap": {
+            "value": "{rhc.space.100}",
+            "type": "dimension"
+          },
+          "text-decoration": {
+            "value": "None",
+            "type": "textDecoration"
+          }
+        }
+      }
+    },
+    "rhc": {
+      "link-list": {
+        "text-decoration": {
+          "value": "None",
+          "type": "textDecoration"
         }
       }
     }
@@ -9734,7 +9766,6 @@
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
         "components/link/nl": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/modal-dialog": "enabled",
@@ -9770,7 +9801,9 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "components/link-list/deprecated": "disabled",
+        "components/link-list/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9828,7 +9861,6 @@
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
         "components/link/nl": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/modal-dialog": "enabled",
@@ -9865,7 +9897,9 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "components/link-list/deprecated": "disabled",
+        "components/link-list/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9923,7 +9957,6 @@
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
         "components/link/nl": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/modal-dialog": "enabled",
@@ -9962,7 +9995,9 @@
         "overwrites/oude rijkshuisstijl/blockqoute": "enabled",
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "components/link-list/deprecated": "disabled",
+        "components/link-list/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10020,7 +10055,6 @@
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
         "components/link/nl": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/modal-dialog": "enabled",
@@ -10057,7 +10091,9 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "components/link-list/deprecated": "disabled",
+        "components/link-list/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10115,7 +10151,6 @@
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
         "components/link/nl": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/modal-dialog": "enabled",
@@ -10152,7 +10187,9 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "components/link-list/deprecated": "disabled",
+        "components/link-list/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10210,7 +10247,6 @@
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
         "components/link/nl": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/modal-dialog": "enabled",
@@ -10247,7 +10283,9 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "components/link-list/deprecated": "disabled",
+        "components/link-list/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10305,7 +10343,6 @@
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
         "components/link/nl": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/modal-dialog": "enabled",
@@ -10342,7 +10379,9 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "components/link-list/deprecated": "disabled",
+        "components/link-list/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10400,7 +10439,6 @@
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
         "components/link/nl": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/modal-dialog": "enabled",
@@ -10437,7 +10475,9 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "components/link-list/deprecated": "disabled",
+        "components/link-list/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10501,7 +10541,6 @@
         "components/icon-only-button": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/modal-dialog": "enabled",
@@ -10535,7 +10574,9 @@
         "overwrites/closed-source/font": "enabled",
         "overwrites/koop/link": "enabled",
         "components/accordion": "enabled",
-        "utrecht/action": "enabled"
+        "utrecht/action": "enabled",
+        "components/link-list/deprecated": "disabled",
+        "components/link-list/base": "enabled"
       },
       "group": "Rijkshuisstijl",
       "$figmaVariableReferences": {}
@@ -10600,7 +10641,8 @@
       "components/icon-only-button",
       "components/link/nl",
       "components/link/utrecht",
-      "components/link-list",
+      "components/link-list/base",
+      "components/link-list/deprecated",
       "components/link-list-card",
       "components/logo",
       "components/modal-dialog",
