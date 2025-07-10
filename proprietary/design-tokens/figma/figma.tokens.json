@@ -1072,27 +1072,29 @@
   },
   "common/focus": {
     "basis": {
-      "outline-color": {
-        "value": "{rhc.color.zwart}",
-        "type": "color"
-      },
-      "inverse": {
+      "focus": {
         "outline-color": {
-          "value": "{rhc.color.wit}",
+          "value": "{rhc.color.zwart}",
           "type": "color"
+        },
+        "inverse": {
+          "outline-color": {
+            "value": "{rhc.color.wit}",
+            "type": "color"
+          }
+        },
+        "outline-offset": {
+          "value": "{rhc.space.25}",
+          "type": "other"
+        },
+        "outline-style": {
+          "value": "solid",
+          "type": "other"
+        },
+        "outline-width": {
+          "value": "{rhc.border-width.m}",
+          "type": "dimension"
         }
-      },
-      "outline-offset": {
-        "value": "{rhc.space.25}",
-        "type": "other"
-      },
-      "outline-style": {
-        "value": "solid",
-        "type": "other"
-      },
-      "outline-width": {
-        "value": "{rhc.border-width.m}",
-        "type": "dimension"
       }
     }
   },
@@ -1241,7 +1243,7 @@
         },
         "inverse": {
           "outline-color": {
-            "value": "{rhc.color.wit}",
+            "value": "{basis.focus.inverse.outline-color}",
             "type": "color"
           }
         }
