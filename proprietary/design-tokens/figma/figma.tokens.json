@@ -5037,70 +5037,70 @@
   "components/link/deprecated": {
     "nl": {
       "link": {
-        "icon": {
-          "size": {
-            "value": "{rhc.size.icon.functional}",
-            "type": "dimension"
-          },
-          "inset-block-start": {
-            "value": "{rhc.space.50}",
-            "type": "dimension"
-          }
-        },
         "column-gap": {
-          "value": "{rhc.space.50}",
-          "type": "dimension"
-        },
-        "visited": {
-          "color": {
-            "value": "{rhc.color.foreground.link}",
-            "type": "color"
-          }
-        },
-        "focus": {
-          "background-color": {
-            "value": "{rhc.color.none}",
-            "type": "color"
-          },
-          "color": {
-            "value": "{rhc.color.foreground.link}",
-            "type": "color"
-          },
-          "text-decoration-thickness": {
-            "value": "{nl.link.text-decoration-thickness}",
-            "type": "other"
-          },
-          "text-decoration": {
-            "value": "None",
-            "type": "textDecoration"
-          }
+          "type": "dimension",
+          "value": "{rhc.space.50}"
         },
         "font-family": {
-          "value": "{rhc.font-family.primary}",
-          "type": "fontFamilies"
-        },
-        "font-weight": {
-          "value": "{rhc.font-weight.default}",
-          "type": "fontWeights"
-        },
-        "line-height": {
-          "value": "{rhc.line-height.body}",
-          "type": "lineHeights"
+          "type": "fontFamilies",
+          "value": "{rhc.font-family.primary}"
         },
         "font-size": {
-          "value": "{rhc.font-size.body.default}",
-          "type": "fontSizes"
+          "type": "fontSizes",
+          "value": "{rhc.font-size.body.default}"
         },
-        "hover": {
-          "text-decoration-thickness": {
-            "value": "{nl.link.text-decoration-thickness}",
-            "type": "other"
+        "font-weight": {
+          "type": "fontWeights",
+          "value": "{rhc.font-weight.default}"
+        },
+        "line-height": {
+          "type": "lineHeights",
+          "value": "{rhc.line-height.body}"
+        },
+        "icon": {
+          "inset-block-start": {
+            "type": "dimension",
+            "value": "{rhc.space.50}"
+          },
+          "size": {
+            "type": "dimension",
+            "value": "{rhc.size.icon.functional}"
           }
         },
         "active": {
           "text-decoration": {
-            "value": "{nl.link.text-decoration-line}",
-            "type": "textDecoration"
+            "type": "textDecoration",
+            "value": "{nl.link.text-decoration-line}"
+          }
+        },
+        "hover": {
+          "text-decoration-thickness": {
+            "type": "other",
+            "value": "{nl.link.text-decoration-thickness}"
+          }
+        },
+        "focus": {
+          "background-color": {
+            "type": "color",
+            "value": "{rhc.color.none}"
+          },
+          "color": {
+            "type": "color",
+            "value": "{rhc.color.foreground.link}"
+          },
+          "text-decoration": {
+            "type": "textDecoration",
+            "value": "None"
+          },
+          "text-decoration-thickness": {
+            "type": "other",
+            "value": "{nl.link.text-decoration-thickness}"
+          }
+        },
+        "visited": {
+          "color": {
+            "type": "color",
+            "value": "{rhc.color.foreground.link}"
           }
         }
       }
@@ -5108,41 +5108,41 @@
     "utrecht": {
       "link": {
         "font-family": {
-          "value": "{rhc.font-family.primary}",
-          "type": "fontFamilies"
-        },
-        "font-weight": {
-          "value": "{rhc.font-weight.default}",
-          "type": "fontWeights"
-        },
-        "line-height": {
-          "value": "{rhc.line-height.body}",
-          "type": "lineHeights"
+          "type": "fontFamilies",
+          "value": "{rhc.font-family.primary}"
         },
         "font-size": {
-          "value": "{rhc.font-size.body.default}",
-          "type": "fontSizes"
+          "type": "fontSizes",
+          "value": "{rhc.font-size.body.default}"
+        },
+        "font-weight": {
+          "type": "fontWeights",
+          "value": "{rhc.font-weight.default}"
+        },
+        "line-height": {
+          "type": "lineHeights",
+          "value": "{rhc.line-height.body}"
         },
         "icon": {
           "inset-block-start": {
-            "value": "{rhc.space.50}",
-            "type": "dimension"
+            "type": "dimension",
+            "value": "{rhc.space.50}"
           }
         },
         "active": {
           "text-decoration": {
-            "value": "{nl.link.text-decoration-line}",
-            "type": "textDecoration"
+            "type": "textDecoration",
+            "value": "{nl.link.text-decoration-line}"
           }
         },
         "focus": {
           "text-decoration": {
-            "value": "None",
-            "type": "textDecoration"
+            "type": "textDecoration",
+            "value": "None"
           },
           "text-decoration-thickness": {
-            "value": "{nl.link.text-decoration-thickness}",
-            "type": "other"
+            "type": "other",
+            "value": "{nl.link.text-decoration-thickness}"
           }
         }
       }
@@ -5195,33 +5195,33 @@
     }
   },
   "components/link-list/deprecated": {
-    "utrecht": {
-      "link-list": {
-        "margin-block-start": {
-          "value": "{rhc.space.0}",
-          "type": "dimension"
-        },
-        "margin-block-end": {
-          "value": "{rhc.space.0}",
-          "type": "dimension"
-        },
-        "item": {
-          "column-gap": {
-            "value": "{rhc.space.100}",
-            "type": "dimension"
-          },
-          "text-decoration": {
-            "value": "None",
-            "type": "textDecoration"
-          }
-        }
-      }
-    },
     "rhc": {
       "link-list": {
         "text-decoration": {
-          "value": "None",
-          "type": "textDecoration"
+          "type": "textDecoration",
+          "value": "None"
+        }
+      }
+    },
+    "utrecht": {
+      "link-list": {
+        "margin-block-end": {
+          "type": "dimension",
+          "value": "{rhc.space.0}"
+        },
+        "margin-block-start": {
+          "type": "dimension",
+          "value": "{rhc.space.0}"
+        },
+        "item": {
+          "column-gap": {
+            "type": "dimension",
+            "value": "{rhc.space.100}"
+          },
+          "text-decoration": {
+            "type": "textDecoration",
+            "value": "None"
+          }
         }
       }
     }
@@ -9916,8 +9916,7 @@
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled",
-        "components/link/deprecated": "disabled"
+        "components/link-list/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10012,8 +10011,7 @@
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled",
-        "components/link/deprecated": "disabled"
+        "components/link-list/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10110,8 +10108,7 @@
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled",
-        "components/link/deprecated": "disabled"
+        "components/link-list/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10206,8 +10203,7 @@
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled",
-        "components/link/deprecated": "disabled"
+        "components/link-list/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10302,8 +10298,7 @@
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled",
-        "components/link/deprecated": "disabled"
+        "components/link-list/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10398,8 +10393,7 @@
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled",
-        "components/link/deprecated": "disabled"
+        "components/link-list/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10494,8 +10488,7 @@
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled",
-        "components/link/deprecated": "disabled"
+        "components/link-list/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10590,8 +10583,7 @@
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled",
-        "components/link/deprecated": "disabled"
+        "components/link-list/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10689,8 +10681,7 @@
         "overwrites/koop/link": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled",
-        "components/link/deprecated": "disabled"
+        "components/link-list/base": "enabled"
       },
       "group": "Rijkshuisstijl",
       "$figmaVariableReferences": {}
