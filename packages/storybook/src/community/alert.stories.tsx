@@ -19,7 +19,7 @@ const meta = {
       },
     },
     heading: {
-      description: 'Alert heading - used in default webcomponent slot',
+      description: 'Alert heading',
       type: {
         name: 'string',
       },
@@ -36,7 +36,7 @@ const meta = {
       },
     },
     textContent: {
-      description: 'Alert content - used in default webcomponent slot',
+      description: 'Alert content',
       type: {
         name: 'string',
       },
