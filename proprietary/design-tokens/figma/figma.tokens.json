@@ -838,6 +838,18 @@
           "bg-document": {
             "value": "{rhc.color.canvas}",
             "type": "color"
+          },
+          "color-document": {
+            "value": "{rhc.color.foreground.default}",
+            "type": "color"
+          },
+          "color-subtle": {
+            "value": "{rhc.color.foreground.subdued}",
+            "type": "color"
+          },
+          "border-subtle": {
+            "value": "{rhc.color.border.subdued}",
+            "type": "color"
           }
         }
       },
@@ -865,6 +877,26 @@
             "value": "{rhc.line-height.md}",
             "type": "lineHeights"
           }
+        }
+      },
+      "heading": {
+        "color": {
+          "value": "{rhc.color.lintblauw.500}",
+          "type": "color"
+        },
+        "font-family": {
+          "value": "{rhc.font-family.primary}",
+          "type": "fontFamilies"
+        },
+        "font-weight": {
+          "value": "{rhc.font-weight.strong}",
+          "type": "fontWeights"
+        }
+      },
+      "border-width": {
+        "sm": {
+          "value": "{rhc.border-width.default}",
+          "type": "borderWidth"
         }
       }
     }
