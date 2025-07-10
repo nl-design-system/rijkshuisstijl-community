@@ -2222,131 +2222,131 @@
       }
     }
   },
-  "components/breadcrumb": {
+  "components/breadcrumb-nav/base": {
     "utrecht": {
       "breadcrumb-nav": {
-        "line-height": {
-          "value": "1.4",
-          "type": "lineHeights"
+        "font-family": {
+          "type": "fontFamilies",
+          "value": "{rhc.font-family.primary}"
         },
         "font-size": {
-          "value": "{rhc.font-size.body.default}",
-          "type": "fontSizes"
+          "type": "fontSizes",
+          "value": "{rhc.font-size.body.default}"
+        },
+        "font-weight": {
+          "type": "fontWeights",
+          "value": "{rhc.font-weight.default}"
+        },
+        "line-height": {
+          "type": "lineHeights",
+          "value": "1.4"
+        },
+        "margin-inline": {
+          "type": "dimension",
+          "value": "{rhc.space.100}"
+        },
+        "divider": {
+          "color": {
+            "type": "color",
+            "value": "{rhc.color.foreground.subdued}"
+          },
+          "inset-block-start": {
+            "type": "dimension",
+            "value": "0"
+          },
+          "size": {
+            "type": "dimension",
+            "value": "{rhc.size.icon.functional}"
+          }
         },
         "link": {
-          "icon": {
-            "size": {
-              "value": "{rhc.size.icon.functional}",
-              "type": "dimension"
-            },
-            "margin-inline": {
-              "value": "{rhc.space.50}",
-              "type": "dimension"
-            },
-            "inset-block-start": {
-              "value": "0",
-              "type": "dimension"
-            }
+          "color": {
+            "type": "color",
+            "value": "{rhc.color.foreground.link}"
           },
           "padding-block-end": {
-            "value": "{rhc.space.150}",
-            "type": "dimension"
+            "type": "dimension",
+            "value": "{rhc.space.150}"
           },
           "padding-block-start": {
-            "value": "{rhc.space.150}",
-            "type": "dimension"
+            "type": "dimension",
+            "value": "{rhc.space.150}"
           },
           "padding-inline-end": {
-            "value": "{rhc.space.0}",
-            "type": "dimension"
+            "type": "dimension",
+            "value": "{rhc.space.0}"
           },
           "padding-inline-start": {
-            "value": "{rhc.space.0}",
-            "type": "dimension"
+            "type": "dimension",
+            "value": "{rhc.space.0}"
           },
-          "color": {
-            "value": "{rhc.color.foreground.link}",
-            "type": "color"
+          "text-decoration": {
+            "type": "textDecoration",
+            "value": "underline"
+          },
+          "current": {
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.foreground.subdued}"
+            }
+          },
+          "icon": {
+            "inset-block-start": {
+              "type": "dimension",
+              "value": "0"
+            },
+            "margin-inline": {
+              "type": "dimension",
+              "value": "{rhc.space.50}"
+            },
+            "size": {
+              "type": "dimension",
+              "value": "{rhc.size.icon.functional}"
+            }
           },
           "active": {
             "color": {
-              "value": "{rhc.color.paars.500}",
-              "type": "color"
+              "type": "color",
+              "value": "{rhc.color.paars.500}"
             },
             "text-decoration": {
-              "value": "None",
-              "type": "textDecoration"
+              "type": "textDecoration",
+              "value": "None"
             }
           },
           "focus": {
             "background-color": {
-              "value": "transparent",
-              "type": "color"
+              "type": "color",
+              "value": "transparent"
             },
             "color": {
-              "value": "{rhc.color.foreground.link}",
-              "type": "color"
+              "type": "color",
+              "value": "{rhc.color.foreground.link}"
             },
             "text-decoration": {
-              "value": "None",
-              "type": "textDecoration"
+              "type": "textDecoration",
+              "value": "None"
             }
           },
           "hover": {
+            "text-decoration": {
+              "type": "textDecoration",
+              "value": "None"
+            },
             "color": {
-              "value": "{rhc.color.foreground.link}",
               "type": "color",
+              "value": "{rhc.color.foreground.link}",
               "$extensions": {
                 "studio.tokens": {
                   "modify": {
+                    "space": "srgb",
                     "type": "darken",
-                    "value": "0.3",
-                    "space": "srgb"
+                    "value": "0.3"
                   }
                 }
               }
-            },
-            "text-decoration": {
-              "value": "None",
-              "type": "textDecoration"
             }
-          },
-          "current": {
-            "color": {
-              "value": "{rhc.color.foreground.subdued}",
-              "type": "color"
-            }
-          },
-          "text-decoration": {
-            "value": "underline",
-            "type": "textDecoration"
           }
-        },
-        "divider": {
-          "size": {
-            "value": "{rhc.size.icon.functional}",
-            "type": "dimension"
-          },
-          "color": {
-            "value": "{rhc.color.foreground.subdued}",
-            "type": "color"
-          },
-          "inset-block-start": {
-            "value": "0",
-            "type": "dimension"
-          }
-        },
-        "margin-inline": {
-          "value": "{rhc.space.100}",
-          "type": "dimension"
-        },
-        "font-family": {
-          "value": "{rhc.font-family.primary}",
-          "type": "fontFamilies"
-        },
-        "font-weight": {
-          "value": "{rhc.font-weight.default}",
-          "type": "fontWeights"
         }
       }
     }
@@ -9850,7 +9850,6 @@
         "components/article": "enabled",
         "components/avatar": "enabled",
         "components/backdrop": "enabled",
-        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
         "components/card-as-link": "enabled",
@@ -9916,7 +9915,8 @@
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled"
+        "components/link-list/base": "enabled",
+        "components/breadcrumb-nav/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9944,7 +9944,6 @@
         "components/article": "enabled",
         "components/avatar": "enabled",
         "components/backdrop": "enabled",
-        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
         "components/card-as-link": "enabled",
@@ -10011,7 +10010,8 @@
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled"
+        "components/link-list/base": "enabled",
+        "components/breadcrumb-nav/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10039,7 +10039,6 @@
         "components/article": "enabled",
         "components/avatar": "enabled",
         "components/backdrop": "enabled",
-        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
         "components/card-as-link": "enabled",
@@ -10108,7 +10107,8 @@
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled"
+        "components/link-list/base": "enabled",
+        "components/breadcrumb-nav/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10136,7 +10136,6 @@
         "components/article": "enabled",
         "components/avatar": "enabled",
         "components/backdrop": "enabled",
-        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
         "components/card-as-link": "enabled",
@@ -10203,7 +10202,8 @@
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled"
+        "components/link-list/base": "enabled",
+        "components/breadcrumb-nav/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10231,7 +10231,6 @@
         "components/article": "enabled",
         "components/avatar": "enabled",
         "components/backdrop": "enabled",
-        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
         "components/card-as-link": "enabled",
@@ -10298,7 +10297,8 @@
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled"
+        "components/link-list/base": "enabled",
+        "components/breadcrumb-nav/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10326,7 +10326,6 @@
         "components/article": "enabled",
         "components/avatar": "enabled",
         "components/backdrop": "enabled",
-        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
         "components/card-as-link": "enabled",
@@ -10393,7 +10392,8 @@
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled"
+        "components/link-list/base": "enabled",
+        "components/breadcrumb-nav/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10421,7 +10421,6 @@
         "components/article": "enabled",
         "components/avatar": "enabled",
         "components/backdrop": "enabled",
-        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
         "components/card-as-link": "enabled",
@@ -10488,7 +10487,8 @@
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled"
+        "components/link-list/base": "enabled",
+        "components/breadcrumb-nav/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10516,7 +10516,6 @@
         "components/article": "enabled",
         "components/avatar": "enabled",
         "components/backdrop": "enabled",
-        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
         "components/card-as-link": "enabled",
@@ -10583,7 +10582,8 @@
         "components/data-summary": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled"
+        "components/link-list/base": "enabled",
+        "components/breadcrumb-nav/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10615,7 +10615,6 @@
         "components/backdrop": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
-        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/button-group": "enabled",
         "components/card-as-link": "enabled",
@@ -10681,7 +10680,8 @@
         "overwrites/koop/link": "enabled",
         "components/accordion": "enabled",
         "utrecht/action": "enabled",
-        "components/link-list/base": "enabled"
+        "components/link-list/base": "enabled",
+        "components/breadcrumb-nav/base": "enabled"
       },
       "group": "Rijkshuisstijl",
       "$figmaVariableReferences": {}
@@ -10714,7 +10714,7 @@
       "components/backdrop",
       "components/blockquote-oud",
       "components/blockquote",
-      "components/breadcrumb",
+      "components/breadcrumb-nav/base",
       "components/button",
       "components/button-group",
       "components/card-as-link",
