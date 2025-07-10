@@ -24,7 +24,7 @@ export function DataSummaryItem({
     <div className={clsx('rhc-data-summary__item', className)} ref={ref} {...restProps}>
       <dt className="rhc-data-summary__item-key">{itemKey}</dt>
       <dd className="rhc-data-summary__item-value">{itemValue}</dd>
-      {href && target && (
+      {href && children && (
         <dd className="rhc-data-summary__item-action">
           <Link href={href} target={target}>
             {children}
