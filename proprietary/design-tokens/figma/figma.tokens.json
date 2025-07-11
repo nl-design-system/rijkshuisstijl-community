@@ -2233,37 +2233,15 @@
           "type": "fontSizes",
           "value": "{rhc.font-size.body.default}"
         },
-        "font-weight": {
-          "type": "fontWeights",
-          "value": "{rhc.font-weight.default}"
-        },
         "line-height": {
           "type": "lineHeights",
           "value": "1.4"
         },
-        "margin-inline": {
+        "min-block-size": {
           "type": "dimension",
           "value": "{rhc.space.100}"
         },
-        "divider": {
-          "color": {
-            "type": "color",
-            "value": "{rhc.color.foreground.subdued}"
-          },
-          "inset-block-start": {
-            "type": "dimension",
-            "value": "0"
-          },
-          "size": {
-            "type": "dimension",
-            "value": "{rhc.size.icon.functional}"
-          }
-        },
-        "link": {
-          "color": {
-            "type": "color",
-            "value": "{rhc.color.foreground.link}"
-          },
+        "item": {
           "padding-block-end": {
             "type": "dimension",
             "value": "{rhc.space.150}"
@@ -2280,38 +2258,63 @@
             "type": "dimension",
             "value": "{rhc.space.0}"
           },
+          "first": {
+            "padding-inline-start": {
+              "type": "dimension",
+              "value": "{rhc.space.0}"
+            }
+          }
+        },
+        "separator": {
+          "color": {
+            "type": "color",
+            "value": "{rhc.color.foreground.subdued}"
+          },
+          "icon": {
+            "size": {
+              "type": "dimension",
+              "value": "{rhc.size.icon.functional}"
+            }
+          }
+        },
+        "link": {
+          "color": {
+            "type": "color",
+            "value": "{rhc.color.foreground.link}"
+          },
           "text-decoration": {
             "type": "textDecoration",
             "value": "underline"
           },
           "current": {
-            "color": {
-              "type": "color",
-              "value": "{rhc.color.foreground.subdued}"
-            }
-          },
-          "icon": {
-            "inset-block-start": {
-              "type": "dimension",
-              "value": "0"
-            },
-            "margin-inline": {
-              "type": "dimension",
-              "value": "{rhc.space.50}"
-            },
-            "size": {
-              "type": "dimension",
-              "value": "{rhc.size.icon.functional}"
+            "font-weight": {
+              "type": "fontWeights",
+              "value": "{rhc.font-weight.default}"
             }
           },
           "active": {
-            "color": {
-              "type": "color",
-              "value": "{rhc.color.paars.500}"
-            },
             "text-decoration": {
               "type": "textDecoration",
               "value": "None"
+            },
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.foreground.link}",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "space": "lch",
+                    "type": "darken",
+                    "value": "0.4"
+                  }
+                }
+              }
+            }
+          },
+          "disabled": {
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.foreground.subdued}"
             }
           },
           "focus": {
