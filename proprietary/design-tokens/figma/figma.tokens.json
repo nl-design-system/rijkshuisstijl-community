@@ -1185,26 +1185,26 @@
   },
   "common/focus": {
     "rhc": {
+      "focus": {
+        "outline-offset": {
+          "type": "dimension",
+          "value": "{rhc.space.25}"
+        },
+        "outline-style": {
+          "type": "other",
+          "value": "solid"
+        },
+        "outline-width": {
+          "type": "dimension",
+          "value": "{rhc.border-width.m}"
+        }
+      },
       "color": {
         "focus": {
           "outline": {
-            "value": "{rhc.color.zwart}",
-            "type": "color"
+            "type": "color",
+            "value": "{rhc.color.zwart}"
           }
-        }
-      },
-      "focus": {
-        "outline-offset": {
-          "value": "{rhc.space.25}",
-          "type": "spacing"
-        },
-        "outline-style": {
-          "value": "solid",
-          "type": "other"
-        },
-        "outline-width": {
-          "value": "{rhc.border-width.m}",
-          "type": "borderWidth"
         }
       }
     }
@@ -1413,15 +1413,15 @@
           "type": "color"
         },
         "outline-offset": {
-          "value": "{basis.focus.outline-offset}",
+          "value": "{rhc.focus.outline-offset}",
           "type": "dimension"
         },
         "outline-style": {
-          "value": "{basis.focus.outline-style}",
+          "value": "{rhc.focus.outline-style}",
           "type": "other"
         },
         "outline-width": {
-          "value": "{basis.focus.outline-width}",
+          "value": "{rhc.focus.outline-width}",
           "type": "dimension"
         },
         "inverse": {
