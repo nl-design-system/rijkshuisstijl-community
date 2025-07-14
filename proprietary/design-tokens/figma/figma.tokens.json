@@ -859,6 +859,12 @@
             "value": "{rhc.color.cool-grey.100}",
             "type": "color"
           }
+        },
+        "highlight": {
+          "bg-default": {
+            "value": "{rhc.color.feedback.warning.subdued}",
+            "type": "color"
+          }
         }
       },
       "text": {
@@ -909,6 +915,31 @@
         "sm": {
           "value": "{rhc.border-width.default}",
           "type": "borderWidth"
+        }
+      },
+      "box-shadow": {
+        "md": {
+          "value": {
+            "x": "0",
+            "y": "8",
+            "blur": "16",
+            "spread": "0",
+            "color": "{rhc.color.cool-grey.500}",
+            "type": "dropShadow"
+          },
+          "type": "boxShadow"
+        }
+      },
+      "focus": {
+        "outline-color": {
+          "value": "{rhc.color.zwart}",
+          "type": "color"
+        },
+        "inverse": {
+          "outline-color": {
+            "value": "{rhc.color.wit}",
+            "type": "color"
+          }
         }
       }
     }
