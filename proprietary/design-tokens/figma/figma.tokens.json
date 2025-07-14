@@ -1448,46 +1448,6 @@
       }
     }
   },
-  "components/action-group/base": {
-    "utrecht": {
-      "button-group": {
-        "background-color": {
-          "type": "color",
-          "value": "transparent"
-        },
-        "column-gap": {
-          "type": "dimension",
-          "value": "{rhc.space.100}"
-        },
-        "padding-block-end": {
-          "type": "dimension",
-          "value": "0px"
-        },
-        "padding-block-start": {
-          "type": "dimension",
-          "value": "0px"
-        },
-        "row-gap": {
-          "type": "dimension",
-          "value": "{rhc.space.100}"
-        }
-      }
-    }
-  },
-  "components/action-group/deprecated": {
-    "utrecht": {
-      "button-group": {
-        "margin-block-end": {
-          "type": "dimension",
-          "value": "0px"
-        },
-        "margin-block-start": {
-          "type": "dimension",
-          "value": "0px"
-        }
-      }
-    }
-  },
   "components/action": {
     "rhc": {
       "accordion": {
@@ -1672,6 +1632,46 @@
               "type": "spacing"
             }
           }
+        }
+      }
+    }
+  },
+  "components/action-group/base": {
+    "utrecht": {
+      "button-group": {
+        "background-color": {
+          "type": "color",
+          "value": "transparent"
+        },
+        "column-gap": {
+          "type": "dimension",
+          "value": "{rhc.space.100}"
+        },
+        "padding-block-end": {
+          "type": "dimension",
+          "value": "0px"
+        },
+        "padding-block-start": {
+          "type": "dimension",
+          "value": "0px"
+        },
+        "row-gap": {
+          "type": "dimension",
+          "value": "{rhc.space.100}"
+        }
+      }
+    }
+  },
+  "components/action-group/deprecated": {
+    "utrecht": {
+      "button-group": {
+        "margin-block-end": {
+          "type": "dimension",
+          "value": "0px"
+        },
+        "margin-block-start": {
+          "type": "dimension",
+          "value": "0px"
         }
       }
     }
@@ -9805,8 +9805,7 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/action": "enabled",
-        "components/action-group/base": "enabled",
-        "components/action-group/deprecated": "disabled"
+        "components/action-group/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9900,8 +9899,7 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/action": "enabled",
-        "components/action-group/base": "enabled",
-        "components/action-group/deprecated": "disabled"
+        "components/action-group/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9997,8 +9995,7 @@
         "overwrites/oude rijkshuisstijl/blockqoute": "enabled",
         "components/data-summary": "enabled",
         "components/action": "enabled",
-        "components/action-group/base": "enabled",
-        "components/action-group/deprecated": "disabled"
+        "components/action-group/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10092,8 +10089,7 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/action": "enabled",
-        "components/action-group/base": "enabled",
-        "components/action-group/deprecated": "disabled"
+        "components/action-group/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10187,8 +10183,7 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/action": "enabled",
-        "components/action-group/base": "enabled",
-        "components/action-group/deprecated": "disabled"
+        "components/action-group/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10282,8 +10277,7 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/action": "enabled",
-        "components/action-group/base": "enabled",
-        "components/action-group/deprecated": "disabled"
+        "components/action-group/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10377,8 +10371,7 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/action": "enabled",
-        "components/action-group/base": "enabled",
-        "components/action-group/deprecated": "disabled"
+        "components/action-group/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10472,8 +10465,7 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/action": "enabled",
-        "components/action-group/base": "enabled",
-        "components/action-group/deprecated": "disabled"
+        "components/action-group/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10570,8 +10562,7 @@
         "overwrites/nav-bar/lintblauw-outline": "enabled",
         "overwrites/closed-source/font": "enabled",
         "overwrites/koop/link": "enabled",
-        "components/action-group/base": "enabled",
-        "components/action-group/deprecated": "disabled"
+        "components/action-group/base": "enabled"
       },
       "group": "Rijkshuisstijl",
       "$figmaVariableReferences": {}
@@ -10597,9 +10588,9 @@
       "utrecht/rich-text",
       "utrecht/document",
       "components/accordion",
+      "components/action",
       "components/action-group/base",
       "components/action-group/deprecated",
-      "components/action",
       "components/alert",
       "components/article",
       "components/avatar",
