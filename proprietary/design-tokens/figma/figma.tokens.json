@@ -1220,6 +1220,78 @@
       }
     }
   },
+  "utrecht/action": {
+    "utrecht": {
+      "action": {
+        "activate": {
+          "cursor": {
+            "value": "pointer",
+            "type": "other"
+          }
+        },
+        "busy": {
+          "cursor": {
+            "value": "wait",
+            "type": "other"
+          }
+        },
+        "disabled": {
+          "cursor": {
+            "value": "not-allowed",
+            "type": "other"
+          }
+        },
+        "inert": {
+          "cursor": {
+            "value": "default",
+            "type": "other"
+          }
+        },
+        "navigate": {
+          "cursor": {
+            "value": "pointer",
+            "type": "other"
+          }
+        },
+        "submit": {
+          "cursor": {
+            "value": "pointer",
+            "type": "other"
+          }
+        }
+      }
+    }
+  },
+  "utrecht/document": {
+    "utrecht": {
+      "document": {
+        "background-color": {
+          "value": "{rhc.color.wit}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{rhc.color.foreground.default}",
+          "type": "color"
+        },
+        "font-family": {
+          "value": "{rhc.font-family.primary}",
+          "type": "fontFamilies"
+        },
+        "font-size": {
+          "value": "{rhc.font-size.body.default}",
+          "type": "fontSizes"
+        },
+        "line-height": {
+          "value": "{rhc.line-height.md}",
+          "type": "lineHeights"
+        },
+        "font-weight": {
+          "value": "{rhc.font-weight.default}",
+          "type": "fontWeights"
+        }
+      }
+    }
+  },
   "utrecht/focus": {
     "utrecht": {
       "focus": {
@@ -1289,78 +1361,6 @@
           "margin-block-end": {
             "value": "{rhc.space.0}",
             "type": "spacing"
-          }
-        }
-      }
-    }
-  },
-  "utrecht/document": {
-    "utrecht": {
-      "document": {
-        "background-color": {
-          "value": "{rhc.color.wit}",
-          "type": "color"
-        },
-        "color": {
-          "value": "{rhc.color.foreground.default}",
-          "type": "color"
-        },
-        "font-family": {
-          "value": "{rhc.font-family.primary}",
-          "type": "fontFamilies"
-        },
-        "font-size": {
-          "value": "{rhc.font-size.body.default}",
-          "type": "fontSizes"
-        },
-        "line-height": {
-          "value": "{rhc.line-height.md}",
-          "type": "lineHeights"
-        },
-        "font-weight": {
-          "value": "{rhc.font-weight.default}",
-          "type": "fontWeights"
-        }
-      }
-    }
-  },
-  "utrecht/action": {
-    "utrecht": {
-      "action": {
-        "activate": {
-          "cursor": {
-            "value": "pointer",
-            "type": "other"
-          }
-        },
-        "busy": {
-          "cursor": {
-            "value": "wait",
-            "type": "other"
-          }
-        },
-        "disabled": {
-          "cursor": {
-            "value": "not-allowed",
-            "type": "other"
-          }
-        },
-        "inert": {
-          "cursor": {
-            "value": "default",
-            "type": "other"
-          }
-        },
-        "navigate": {
-          "cursor": {
-            "value": "pointer",
-            "type": "other"
-          }
-        },
-        "submit": {
-          "cursor": {
-            "value": "pointer",
-            "type": "other"
           }
         }
       }
@@ -9634,11 +9634,11 @@
       "common/border",
       "common/keep-oud",
       "common/rounded-corner",
+      "utrecht/action",
+      "utrecht/document",
       "utrecht/focus",
       "utrecht/pointer-target",
       "utrecht/rich-text",
-      "utrecht/document",
-      "utrecht/action",
       "components/accordion",
       "components/alert",
       "components/article",
