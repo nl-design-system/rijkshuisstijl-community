@@ -1110,7 +1110,35 @@
       }
     }
   },
-  "common/keep-oud": {
+  "common/rounded-corner/base": {
+    "rhc": {
+      "rounded-corner": {
+        "xs": {
+          "border-radius": {
+            "value": "{rhc.size.half-lint}",
+            "type": "dimension"
+          }
+        },
+        "md": {
+          "border-radius": {
+            "value": "{rhc.size.lint}",
+            "type": "dimension"
+          }
+        },
+        "xl": {
+          "border-radius": {
+            "value": "{rhc.size.2-lint}",
+            "type": "dimension"
+          }
+        },
+        "border-width": {
+          "value": "{rhc.border-width.m}",
+          "type": "dimension"
+        }
+      }
+    }
+  },
+  "common/rounded-corner/deprecated": {
     "rhc": {
       "keep": {
         "_comment": {
@@ -1188,34 +1216,6 @@
             "value": "{rhc.rounded-corner.md.border-radius}",
             "type": "dimension"
           }
-        }
-      }
-    }
-  },
-  "common/rounded-corner": {
-    "rhc": {
-      "rounded-corner": {
-        "xs": {
-          "border-radius": {
-            "value": "{rhc.size.half-lint}",
-            "type": "dimension"
-          }
-        },
-        "md": {
-          "border-radius": {
-            "value": "{rhc.size.lint}",
-            "type": "dimension"
-          }
-        },
-        "xl": {
-          "border-radius": {
-            "value": "{rhc.size.2-lint}",
-            "type": "dimension"
-          }
-        },
-        "border-width": {
-          "value": "{rhc.border-width.m}",
-          "type": "dimension"
         }
       }
     }
@@ -8898,14 +8898,14 @@
         "components/unordered-list": "enabled",
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
-        "common/keep-oud": "enabled",
-        "common/rounded-corner": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "utrecht/action": "enabled",
-        "components/accordion": "enabled"
+        "components/accordion": "enabled",
+        "common/rounded-corner/base": "enabled",
+        "common/rounded-corner/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8986,14 +8986,14 @@
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
-        "common/keep-oud": "enabled",
-        "common/rounded-corner": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "utrecht/action": "enabled",
-        "components/accordion": "enabled"
+        "components/accordion": "enabled",
+        "common/rounded-corner/base": "enabled",
+        "common/rounded-corner/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9075,15 +9075,15 @@
         "components/sub-nav-bar": "enabled",
         "overwrites/oude rijkshuisstijl/border": "enabled",
         "overwrites/primaire kleur/violet": "enabled",
-        "common/keep-oud": "enabled",
-        "common/rounded-corner": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "overwrites/oude rijkshuisstijl/blockqoute": "enabled",
         "components/data-summary": "enabled",
         "utrecht/action": "enabled",
-        "components/accordion": "enabled"
+        "components/accordion": "enabled",
+        "common/rounded-corner/base": "enabled",
+        "common/rounded-corner/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9164,14 +9164,14 @@
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
         "overwrites/primaire kleur/mintgroen": "enabled",
-        "common/keep-oud": "enabled",
-        "common/rounded-corner": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "utrecht/action": "enabled",
-        "components/accordion": "enabled"
+        "components/accordion": "enabled",
+        "common/rounded-corner/base": "enabled",
+        "common/rounded-corner/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9252,14 +9252,14 @@
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
         "overwrites/primaire kleur/paars": "enabled",
-        "common/keep-oud": "enabled",
-        "common/rounded-corner": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "utrecht/action": "enabled",
-        "components/accordion": "enabled"
+        "components/accordion": "enabled",
+        "common/rounded-corner/base": "enabled",
+        "common/rounded-corner/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9340,14 +9340,14 @@
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
         "overwrites/primaire kleur/oranje": "enabled",
-        "common/keep-oud": "enabled",
-        "common/rounded-corner": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "utrecht/action": "enabled",
-        "components/accordion": "enabled"
+        "components/accordion": "enabled",
+        "common/rounded-corner/base": "enabled",
+        "common/rounded-corner/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9428,14 +9428,14 @@
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
         "overwrites/primaire kleur/groen": "enabled",
-        "common/keep-oud": "enabled",
-        "common/rounded-corner": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "utrecht/action": "enabled",
-        "components/accordion": "enabled"
+        "components/accordion": "enabled",
+        "common/rounded-corner/base": "enabled",
+        "common/rounded-corner/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9516,14 +9516,14 @@
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
         "overwrites/primaire kleur/hemelblauw": "enabled",
-        "common/keep-oud": "enabled",
-        "common/rounded-corner": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "utrecht/action": "enabled",
-        "components/accordion": "enabled"
+        "components/accordion": "enabled",
+        "common/rounded-corner/base": "enabled",
+        "common/rounded-corner/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9543,8 +9543,6 @@
         "common/font": "enabled",
         "common/focus": "enabled",
         "common/border": "enabled",
-        "common/keep-oud": "enabled",
-        "common/rounded-corner": "enabled",
         "utrecht/focus": "enabled",
         "utrecht/pointer-target": "enabled",
         "utrecht/rich-text": "enabled",
@@ -9614,7 +9612,9 @@
         "overwrites/closed-source/font": "enabled",
         "overwrites/koop/link": "enabled",
         "utrecht/action": "enabled",
-        "components/accordion": "enabled"
+        "components/accordion": "enabled",
+        "common/rounded-corner/base": "enabled",
+        "common/rounded-corner/deprecated": "enabled"
       },
       "group": "Rijkshuisstijl",
       "$figmaVariableReferences": {}
@@ -9632,8 +9632,8 @@
       "common/font",
       "common/focus",
       "common/border",
-      "common/keep-oud",
-      "common/rounded-corner",
+      "common/rounded-corner/base",
+      "common/rounded-corner/deprecated",
       "utrecht/action",
       "utrecht/document",
       "utrecht/focus",
