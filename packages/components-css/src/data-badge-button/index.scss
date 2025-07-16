@@ -1,0 +1,23 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@use "mixin";
+
+.rhc-data-badge-button {
+  @include mixin.rhc-data-badge-button;
+
+  &:hover {
+    @include mixin.rhc-data-badge-button--hover;
+  }
+}
+
+.rhc-data-badge-button .rhc-data-badge-button__sr-only {
+  @include mixin.rhc-data-badge-button__sr-only;
+}
+
+.rhc-data-badge-button:focus-visible,
+.rhc-data-badge-button--focus-visible {
+  @include mixin.rhc-data-badge-button--focus-visible;
+}

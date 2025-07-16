@@ -3323,6 +3323,52 @@
       }
     }
   },
+  "components/data-badge": {
+    "utrecht": {
+      "data-badge": {
+        "background-color": {
+          "value": "{rhc.color.primary.50}",
+          "type": "color"
+        },
+        "border-radius": {
+          "value": "10px",
+          "type": "dimension"
+        },
+        "color":{
+          "value": "{rhc.color.primary.500}",
+          "type": "color"
+        },
+        "padding-block": {
+          "value": "{rhc.space.25}",
+          "type": "dimension"
+        },
+        "padding-inline": {
+          "value": "0.75rem",
+          "type": "dimension"
+        }
+      }
+    }
+  },
+  "components/data-badge-button": {
+    "rhc": {
+      "data-badge-button": {
+        "column-gap": {
+          "value": "{rhc.space.25}",
+          "type": "dimension"
+        },
+        "hover": {
+          "background-color": {
+            "value": "{rhc.color.primary.500}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{rhc.color.wit}",
+            "type": "color"
+          }
+        }
+      }
+    }
+  },
   "components/data-summary": {
     "rhc": {
       "data-summary": {
@@ -9649,6 +9695,8 @@
       "components/code-input",
       "components/counter-badge/nl",
       "components/counter-badge/utrecht",
+      "components/data-badge",
+      "components/data-badge-button",
       "components/data-summary",
       "components/dot-badge",
       "components/fieldset",
