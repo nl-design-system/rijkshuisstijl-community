@@ -5032,24 +5032,18 @@
       }
     }
   },
-  "components/link-list": {
-    "rhc": {
-      "link-list": {
-        "text-decoration": {
-          "type": "textDecoration",
-          "value": "None"
-        }
-      }
-    },
+  "components/link-list/base": {
     "utrecht": {
       "link-list": {
         "margin-block-end": {
           "type": "dimension",
-          "value": "{rhc.space.0}"
+          "value": "{rhc.space.0}",
+          "description": "[code-only]"
         },
         "margin-block-start": {
           "type": "dimension",
-          "value": "{rhc.space.0}"
+          "value": "{rhc.space.0}",
+          "description": "[code-only]"
         },
         "row-gap": {
           "type": "dimension",
@@ -5061,11 +5055,11 @@
             "value": "0.188rem"
           },
           "size": {
-            "type": "sizing",
+            "type": "dimension",
             "value": "{rhc.size.icon.functional}"
           }
         },
-        "item": {
+        "link": {
           "column-gap": {
             "type": "dimension",
             "value": "{rhc.space.100}"
@@ -5073,6 +5067,46 @@
           "text-decoration": {
             "type": "textDecoration",
             "value": "None"
+          }
+        },
+        "font-weight": {
+          "value": "{rhc.font-weight.default}",
+          "type": "fontWeights"
+        }
+      }
+    },
+    "todo": {
+      "link-list": {
+        "link": {
+          "hover": {
+            "text-decoration": {
+              "value": "underline",
+              "type": "textDecoration"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components/link-list/deprecated": {
+    "rhc": {
+      "link-list": {
+        "text-decoration": {
+          "type": "textDecoration",
+          "value": "None"
+        }
+      }
+    },
+    "utrecht": {
+      "link-list": {
+        "item": {
+          "text-decoration": {
+            "type": "textDecoration",
+            "value": "None"
+          },
+          "column-gap": {
+            "value": "{rhc.space.100}",
+            "type": "dimension"
           }
         }
       }
@@ -9231,7 +9265,6 @@
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
         "components/link/nl": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
@@ -9267,7 +9300,9 @@
         "utrecht/action": "enabled",
         "components/accordion": "enabled",
         "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled"
+        "common/rounded-corner/deprecated": "enabled",
+        "components/link-list/base": "enabled",
+        "components/link-list/deprecated": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9320,7 +9355,6 @@
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
         "components/link/nl": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
@@ -9357,7 +9391,9 @@
         "utrecht/action": "enabled",
         "components/accordion": "enabled",
         "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled"
+        "common/rounded-corner/deprecated": "enabled",
+        "components/link-list/base": "enabled",
+        "components/link-list/deprecated": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9410,7 +9446,6 @@
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
         "components/link/nl": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
@@ -9449,7 +9484,9 @@
         "utrecht/action": "enabled",
         "components/accordion": "enabled",
         "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled"
+        "common/rounded-corner/deprecated": "enabled",
+        "components/link-list/base": "enabled",
+        "components/link-list/deprecated": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9502,7 +9539,6 @@
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
         "components/link/nl": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
@@ -9539,7 +9575,9 @@
         "utrecht/action": "enabled",
         "components/accordion": "enabled",
         "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled"
+        "common/rounded-corner/deprecated": "enabled",
+        "components/link-list/base": "enabled",
+        "components/link-list/deprecated": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9592,7 +9630,6 @@
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
         "components/link/nl": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
@@ -9629,7 +9666,9 @@
         "utrecht/action": "enabled",
         "components/accordion": "enabled",
         "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled"
+        "common/rounded-corner/deprecated": "enabled",
+        "components/link-list/base": "enabled",
+        "components/link-list/deprecated": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9682,7 +9721,6 @@
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
         "components/link/nl": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
@@ -9719,7 +9757,9 @@
         "utrecht/action": "enabled",
         "components/accordion": "enabled",
         "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled"
+        "common/rounded-corner/deprecated": "enabled",
+        "components/link-list/base": "enabled",
+        "components/link-list/deprecated": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9772,7 +9812,6 @@
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
         "components/link/nl": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
@@ -9809,7 +9848,9 @@
         "utrecht/action": "enabled",
         "components/accordion": "enabled",
         "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled"
+        "common/rounded-corner/deprecated": "enabled",
+        "components/link-list/base": "enabled",
+        "components/link-list/deprecated": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9862,7 +9903,6 @@
         "components/icon-only-button": "enabled",
         "components/link/utrecht": "enabled",
         "components/link/nl": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
@@ -9899,7 +9939,9 @@
         "utrecht/action": "enabled",
         "components/accordion": "enabled",
         "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled"
+        "common/rounded-corner/deprecated": "enabled",
+        "components/link-list/base": "enabled",
+        "components/link-list/deprecated": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9956,7 +9998,6 @@
         "components/icon-only-button": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
-        "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
@@ -9992,7 +10033,9 @@
         "utrecht/action": "enabled",
         "components/accordion": "enabled",
         "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled"
+        "common/rounded-corner/deprecated": "enabled",
+        "components/link-list/base": "enabled",
+        "components/link-list/deprecated": "disabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10058,7 +10101,8 @@
       "components/link/nl",
       "components/link/utrecht",
       "components/link/deprecated",
-      "components/link-list",
+      "components/link-list/base",
+      "components/link-list/deprecated",
       "components/link-list-card",
       "components/logo",
       "components/message-list",
