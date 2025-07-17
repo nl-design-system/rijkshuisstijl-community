@@ -1,5 +1,20 @@
 # @rijkshuisstijl-community/components-css
 
+## 3.0.0
+
+### Major Changes
+
+- f4a37da: Alert text color now follows design
+
+### Minor Changes
+
+- f8f4bab: - Add DataDadgeButton
+- 790ead0: Rename "Card" component to "Card as Link" component, to match definition of NL Design System "Card as Link" and in preparation of incoming "Card (not as Link)" component.
+
+### Patch Changes
+
+- 9916255: Improve UX by always reserving space for optional action in Data Summary component.
+
 ## 2.0.0
 
 ### Major Changes
