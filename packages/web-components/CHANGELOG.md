@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/web-components
 
+## 1.2.0
+
+### Minor Changes
+
+- 790ead0: Rename "Card" component to "Card as Link" component, to match definition of NL Design System "Card as Link" and in preparation of incoming "Card (not as Link)" component.
+
 ## 1.1.6
 
 ### Patch Changes
