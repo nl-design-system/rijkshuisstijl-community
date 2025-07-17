@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
-import { Alert } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './alert.md?raw';
+import { Alert } from '../../../components-react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
@@ -19,7 +19,7 @@ const meta = {
       },
     },
     heading: {
-      description: 'Alert heading - used in default webcomponent slot',
+      description: 'Alert heading',
       type: {
         name: 'string',
       },
@@ -36,7 +36,7 @@ const meta = {
       },
     },
     textContent: {
-      description: 'Alert content - used in default webcomponent slot',
+      description: 'Alert content',
       type: {
         name: 'string',
       },
