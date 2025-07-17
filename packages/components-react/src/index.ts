@@ -48,6 +48,7 @@ export { ColumnLayout, type ColumnLayoutProps } from './ColumnLayout';
 export { type CustomFormFieldProps, FormField } from './FormField';
 export { DataBadgeButton, type DataBadgeButtonProps } from './DataBadgeButton';
 export { DotBadge, type DotBadgeProps } from './DotBadge';
+export { ExpandableCheckboxGroup, type ExpandableCheckboxGroupProps } from './ExpandableCheckboxGroup';
 export { Fieldset, FieldsetLegend, type FieldsetLegendProps, type FieldsetProps } from './Fieldset';
 export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from './Figure';
 export { File } from './File';

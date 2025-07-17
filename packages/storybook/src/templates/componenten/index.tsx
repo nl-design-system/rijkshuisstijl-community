@@ -4,6 +4,7 @@ import {
   Button,
   CardAsLink,
   DataBadgeButton,
+  ExpandableCheckboxGroup,
   FormFieldTextInput,
   Heading,
   HeadingGroup,
@@ -15,7 +16,6 @@ import { BadgeList, ButtonLink, Icon } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 import { ChangeEvent, FormEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { allComponentsData, ComponentData } from './components-data';
-import { ExpandableCheckboxGroup } from './expandableCheckboxGroup';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
