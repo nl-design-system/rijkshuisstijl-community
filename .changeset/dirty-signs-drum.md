@@ -3,4 +3,4 @@
 '@rijkshuisstijl-community/components-css': minor
 ---
 
-Update Utrecht component references
+Update Utrecht dependencies
