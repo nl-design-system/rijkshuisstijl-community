@@ -1,5 +1,5 @@
 ---
-'@rijkshuisstijl-community/<package-name>': patch
+'@rijkshuisstijl-community/design-tokens': patch
 ---
 
 - Accordion token update
