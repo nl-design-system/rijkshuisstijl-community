@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 4.0.1
+
+### Patch Changes
+
+- 808f3c7: - Accordion token update
+  - Accordion stijling gelijk getrokken met Figma design, blauwe border om de section.
+
 ## 4.0.0
 
 ### Major Changes
