@@ -1,5 +1,24 @@
 # @rijkshuisstijl-community/components-twig
 
+## 1.3.5
+
+### Patch Changes
+
+- d20a098: Voeg `react` als peer dependency toe aan `components-twig` om Storybook builds succesvol te laten verlopen in Chromatic.
+- Updated dependencies [f4a37da]
+- Updated dependencies [f8f4bab]
+- Updated dependencies [9916255]
+- Updated dependencies [790ead0]
+  - @rijkshuisstijl-community/components-css@3.0.0
+
+## 1.3.4
+
+### Patch Changes
+
+- Updated dependencies [280d76c]
+- Updated dependencies [c7034fd]
+  - @rijkshuisstijl-community/components-css@2.0.0
+
 ## 1.3.3
 
 ### Patch Changes

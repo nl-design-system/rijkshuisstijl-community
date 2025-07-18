@@ -1,12 +1,12 @@
-import { Card } from '@rijkshuisstijl-community/components-react';
+import { CardAsLink } from '@rijkshuisstijl-community/components-react';
 import type { Meta } from '@storybook/react';
-import readme from './card.md?raw';
+import readme from './card-as-link.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Card',
-  id: 'rhc-card',
-  component: Card,
+  title: 'Rijkshuisstijl/Card as Link',
+  id: 'rhc-card-as-link',
+  component: CardAsLink,
   argTypes: {
     appearance: {
       description: 'Card appearance',
@@ -108,13 +108,13 @@ const meta = {
       },
     },
     github:
-      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Card.tsx',
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/CardAsLink.tsx',
     figma:
       'https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/Local---Rijkshuisstijl---Bibliotheek?node-id=472-1420&p=f&t=fuaKEQHb4FZ444xP-0',
     nldesignsystem: 'https://nldesignsystem.nl/card-as-link',
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
-} as Meta<typeof Card>;
+} as Meta<typeof CardAsLink>;
 
 export default meta;
 

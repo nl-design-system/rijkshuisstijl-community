@@ -1,6 +1,6 @@
 <!-- @license CC0-1.0 -->
 
-# Rijkshuisstijl Community card component
+# Rijkshuisstijl Community Card As Link component
 
 Gebruik een card op een overzichtspagina om te linken naar een artikelpagina, zoals een nieuwsartikel, een vacature of een zoekresultaat.
 De card bevat doorgaans de titel, inleiding en een afbeelding van de content.
@@ -22,19 +22,19 @@ De link is verplicht.
 Niet:
 
 ```html
-<a className="rhc-card">
-  <div className="rhc-card__content">...</div>
+<a className="rhc-card-as-link">
+  <div className="rhc-card-as-link__content">...</div>
 </a>
 ```
 
 Wel:
 
 ```html
-<div className="rhc-card">
-  <span className="rhc-card__anchor">
+<div className="rhc-card-as-link">
+  <span className="rhc-card-as-link__anchor">
     <a aria-label="aria-label" href="href" />
   </span>
-  <div className="rhc-card__content">...</div>
+  <div className="rhc-card-as-link__content">...</div>
 </div>
 ```
 

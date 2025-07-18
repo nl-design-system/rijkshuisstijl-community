@@ -1,14 +1,14 @@
-import { CardWebComponent } from '@rijkshuisstijl-community/web-components';
+import { CardAsLinkWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta } from '@storybook/web-components';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/card.md?raw';
+import readme from '../community/card-as-link.md?raw';
 
-CardWebComponent.define();
+CardAsLinkWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Card',
-  id: 'rhc-card-web',
-  component: 'rhc-card',
+  title: 'Web Components/Card as Link',
+  id: 'rhc-card-as-link-web',
+  component: 'rhc-card-as-link',
   argTypes: {
     appearance: {
       description: 'Card appearance',
@@ -109,13 +109,13 @@ const meta = {
       },
     },
     github:
-      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/Card.tsx',
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/CardAsLink.tsx',
     figma:
       'https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/Local---Rijkshuisstijl---Bibliotheek?node-id=472-1420&p=f&t=fuaKEQHb4FZ444xP-0',
     nldesignsystem: 'https://nldesignsystem.nl/card-as-link',
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
-} as Meta<typeof CardWebComponent>;
+} as Meta<typeof CardAsLinkWebComponent>;
 
 export default meta;
 

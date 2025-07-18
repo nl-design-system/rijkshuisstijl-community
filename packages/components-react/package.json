@@ -1,6 +1,6 @@
 {
   "name": "@rijkshuisstijl-community/components-react",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "author": "Community for NL Design System",
   "description": "React component library for the Rijkshuisstijl Community repository, based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -30,6 +30,15 @@
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    },
+    "./CHANGELOG.md": "./CHANGELOG.md",
+    "./README.md": "./README.md"
+  },
   "files": [
     "dist/"
   ],
@@ -56,7 +65,7 @@
     "@types/jest": "29.5.14",
     "@types/lodash.chunk": "4.2.9",
     "@types/react": "19.0.10",
-    "@utrecht/component-library-react": "10.1.0",
+    "@utrecht/component-library-react": "10.2.1",
     "@utrecht/link-react": "1.0.6",
     "@utrecht/radio-button-react": "1.0.6",
     "@vitejs/plugin-react": "4.4.1",

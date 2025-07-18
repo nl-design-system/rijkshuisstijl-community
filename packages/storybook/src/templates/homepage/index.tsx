@@ -1,6 +1,6 @@
 'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
 
-import { Card, ColumnLayout, Heading, Hero, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { CardAsLink, ColumnLayout, Heading, Hero, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
@@ -30,9 +30,9 @@ export default function Page() {
             </Paragraph>
           </ColumnLayout>
           {/* Dit worden Marwa's improved cards */}
-          <div className="rhc-card-group">
-            <Card
-              className="rhc-card-no-link"
+          <div className="rhc-card-as-link-group">
+            <CardAsLink
+              className="rhc-card-as-link-no-link"
               heading={
                 <Heading appearanceLevel={4} level={2}>
                   Efficiënt
@@ -43,9 +43,9 @@ export default function Page() {
                 Een uitgebreide bibliotheek van herbruikbare componenten. Platform-onafhankelijk met de nieuwe
                 Rijkshuisstijl.
               </Paragraph>
-            </Card>
-            <Card
-              className="rhc-card-no-link"
+            </CardAsLink>
+            <CardAsLink
+              className="rhc-card-as-link-no-link"
               heading={
                 <Heading appearanceLevel={4} level={2}>
                   Breed gedragen
@@ -53,9 +53,9 @@ export default function Page() {
               }
             >
               <Paragraph>De community deelt regelmatig kennis, ervaring, updates en verbeteringen.</Paragraph>
-            </Card>
-            <Card
-              className="rhc-card-no-link"
+            </CardAsLink>
+            <CardAsLink
+              className="rhc-card-as-link-no-link"
               heading={
                 <Heading appearanceLevel={4} level={2}>
                   Gebruiksvriendelijk
@@ -63,7 +63,7 @@ export default function Page() {
               }
             >
               <Paragraph>Consistente gebruikservaring met herbruikbare voorbeeldpagina&apos;s</Paragraph>
-            </Card>
+            </CardAsLink>
           </div>
 
           <section className="rhc-templates-spacing-1">
@@ -73,8 +73,8 @@ export default function Page() {
               frameworks. Voor een dieper begrip en uitgebreide documentatie verwijzen we je graag naar de &quot;lees en
               leer&quot; section.
             </Paragraph>
-            <div className="rhc-card-group">
-              <Card
+            <div className="rhc-card-as-link-group">
+              <CardAsLink
                 appearance="horizontal"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/README.md"
                 imageAlt=""
@@ -88,7 +88,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 appearance="horizontal"
                 href="https://github.com/orgs/nl-design-system/projects/59"
                 imageAlt=""
@@ -102,7 +102,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 appearance="horizontal"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/README.md"
                 imageAlt=""
@@ -116,7 +116,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 appearance="horizontal"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/README.md"
                 imageAlt=""
@@ -130,7 +130,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 appearance="horizontal"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/README.md"
                 imageAlt=""
@@ -144,7 +144,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 appearance="horizontal"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-angular/README.md"
                 imageAlt=""
@@ -158,7 +158,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 appearance="horizontal"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/README.md"
                 imageAlt=""
@@ -172,7 +172,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 appearance="horizontal"
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/proprietary/design-tokens/README.md"
                 imageAlt=""
@@ -191,8 +191,8 @@ export default function Page() {
 
           <section className="rhc-templates-spacing-1">
             <Heading level={2}>Lees en leer</Heading>
-            <div className="rhc-card-group">
-              <Card
+            <div className="rhc-card-as-link-group">
+              <CardAsLink
                 href="https://rijkshuisstijl-community.vercel.app/"
                 linkLabel="Bekijk de Rijkshuisstijl Community Storybook"
                 target="_blank"
@@ -208,7 +208,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/discussions/1505"
                 linkLabel="Ga naar de Rijkshuisstijl styling implementatie GitHub discussies"
                 target="_blank"
@@ -225,7 +225,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 href="https://www.nldesignsystem.nl/handboek/design-tokens/"
                 linkLabel="Lees alles over design tokens"
                 target="_blank"
@@ -241,7 +241,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 href="https://www.nldesignsystem.nl/handboek/designer/overzicht"
                 linkLabel="Lees hoe je mee ontwerpt aan het NL Design System"
                 target="_blank"
@@ -257,7 +257,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 href="https://www.nldesignsystem.nl/handboek/developer/overzicht"
                 linkLabel="Lees hoe je mee ontwikkelt aan het de Rijkshuisstijl Community"
                 target="_blank"
@@ -273,7 +273,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 href="https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?m=auto"
                 linkLabel="Bekijk de NL Design System Rijkshuisstijl Bibliotheek in Figma"
                 target="_blank"
@@ -291,7 +291,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 href="https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/Local---Rijkshuisstijl---Bibliotheek?m=auto"
                 linkLabel="Bekijk de Rijkshuisstijl Bibliotheek in Figma"
                 target="_blank"
@@ -309,7 +309,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 href="https://www.figma.com/design/H4hSqpPbvFMLklDZgswwgd/NLDS---Rijkshuisstijl---Templates?m=auto&t=3Q7KyAIW8lqYHupW-6"
                 linkLabel="Bekijk de Rijkshuisstijl Templates in Figma"
                 target="_blank"
@@ -326,7 +326,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 href="https://www.nldesignsystem.nl/handboek/estafettemodel/"
                 linkLabel="Lees over het estafettemodel van NL Design System"
                 target="_blank"
@@ -348,8 +348,8 @@ export default function Page() {
 
           <section className="rhc-templates-spacing-1">
             <Heading level={2}>Kom in contact</Heading>
-            <div className="rhc-card-group">
-              <Card
+            <div className="rhc-card-as-link-group">
+              <CardAsLink
                 appearance="full-bleed"
                 href="https://praatmee.codefor.nl/"
                 imageAlt=""
@@ -369,7 +369,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 appearance="full-bleed"
                 description={<Paragraph>Neem deel aan de Rijkshuisstijl styling discussies</Paragraph>}
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/discussions/1505"
@@ -384,7 +384,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 appearance="full-bleed"
                 description={<Paragraph>Neem contact op met de contributors op GitHub.</Paragraph>}
                 href="https://github.com/nl-design-system/rijkshuisstijl-community/graphs/contributors"
@@ -399,7 +399,7 @@ export default function Page() {
                   </Heading>
                 }
               />
-              <Card
+              <CardAsLink
                 appearance="full-bleed"
                 description={<Paragraph>Of neem contact op met het NL Design System kernteam.</Paragraph>}
                 href="https://nldesignsystem.nl/project/kernteam/"

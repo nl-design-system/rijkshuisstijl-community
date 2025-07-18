@@ -87,7 +87,7 @@ body {
  * which is a responsive grid for cards.
  * Where the number of columns is flexible.
  */
-.rhc-card-group {
+.rhc-card-as-link-group {
   /* Overwrites the fixed sizing of the cards */
   --rhc-card-as-link-horizontal-max-block-size: unset;
   --rhc-card-as-link-inline-size: 100%;
@@ -102,13 +102,13 @@ body {
 }
 
 @media (width > 768px) {
-  .rhc-card-group {
+  .rhc-card-as-link-group {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (width > 1024px) {
-  .rhc-card-group {
+  .rhc-card-as-link-group {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -118,30 +118,30 @@ body {
  * based on actual usage.
  * TODO: Discuss with design for alignement and proper solutions.
  */
-.rhc-card--full-bleed {
+.rhc-card-as-link--full-bleed {
   z-index: 1;
 }
 
-.rhc-card-no-link:hover {
+.rhc-card-as-link-no-link:hover {
   background-color: white !important;
 }
 
-.rhc-card.rhc-card--full-bleed .rhc-card__heading h3,
-.rhc-card.rhc-card--horizontal .rhc-card__heading h3 {
+.rhc-card-as-link.rhc-card-as-link--full-bleed .rhc-card-as-link__heading h3,
+.rhc-card-as-link.rhc-card-as-link--horizontal .rhc-card-as-link__heading h3 {
   color: inherit;
 }
 
-.rhc-card.rhc-card--full-bleed .rhc-card__description p {
+.rhc-card-as-link.rhc-card-as-link--full-bleed .rhc-card-as-link__description p {
   color: inherit;
 }
 
-.rhc-card.rhc-card--full-bleed:has(a:focus-visible),
-.rhc-card.rhc-card--horizontal:has(a:focus-visible) {
+.rhc-card-as-link.rhc-card-as-link--full-bleed:has(a:focus-visible),
+.rhc-card-as-link.rhc-card-as-link--horizontal:has(a:focus-visible) {
   outline: -webkit-focus-ring-color outset 3px;
   outline-offset: 2px;
 }
 
-.rhc-card:not(:has(a)):hover .rhc-card__heading {
+.rhc-card-as-link:not(:has(a)):hover .rhc-card-as-link__heading {
   text-decoration: none !important;
 }
 
@@ -165,4 +165,24 @@ body {
 .rhc-skip-link--focus,
 .rhc-skip-link:focus {
   position: fixed !important;
+}
+
+/**
+ * Implementation copied from Utrecht focus ring
+ * https://github.com/nl-design-system/utrecht/blob/main/components/focus-ring/src/_mixin.scss
+ */
+:focus-visible {
+  /* - The browser default focus ring should apply when these CSS custom properties are not set.
+   * - Make the `box-shadow` value available, so components that have their own `box-shadow`
+   *   can combine it with the focus ring box shadow.
+   */
+  --_utrecht-focus-ring-box-shadow: 0 0 0 var(--utrecht-focus-outline-width, 0)
+    var(--utrecht-focus-inverse-outline-color, transparent);
+
+  box-shadow: var(--_utrecht-focus-ring-box-shadow);
+  outline-color: var(--utrecht-focus-outline-color, revert);
+  outline-offset: var(--utrecht-focus-outline-offset, revert);
+  outline-style: var(--utrecht-focus-outline-style, revert);
+  outline-width: var(--utrecht-focus-outline-width, revert);
+  z-index: 1;
 }

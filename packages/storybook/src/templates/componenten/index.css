@@ -1,21 +1,21 @@
-/* Componenten Template Marwa CSS */
+/* Componenten Template */
 
 .utrecht-heading-group {
   gap: 0.75rem;
 }
 
-.rhc-templates-databadge {
-  align-items: center;
-  border: 1px solid;
-  border-radius: 10px;
-  display: inline-flex;
-  padding-block: 0.25rem;
-  padding-inline: 0.75rem;
-  position: relative;
+.utrecht-form-label {
+  color: var(--rhc-color-primary-500) !important;
+}
+
+.utrecht-form-fieldset__legend {
+  color: var(--rhc-color-primary-500) !important;
 }
 
 .rhc-templates-badgelist {
   gap: var(--rhc-space-100) !important;
+  position: relative;
+  z-index: 1; /* higher z-index so badges are clickable within card as link */
 }
 
 .rhc-templates-card {
@@ -100,4 +100,50 @@
 .rhc-search-form .utrecht-form-field input {
   border-radius: 4px 0 0 4px !important;
   position: relative !important;
+}
+
+.rhc-active-filters {
+  align-items: flex-start;
+  border: transparent;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-space-100, 0.5rem);
+  margin-block: var(--rhc-space-200, 1rem);
+  padding-block: var(--rhc-space-200, 1rem);
+}
+
+.rhc-active-filters__list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--rhc-space-100) !important;
+  margin-block: 0;
+  margin-inline: 0;
+}
+
+.rhc-active-filters__badge::after {
+  justify-content: center;
+  margin-inline-start: var(--rhc-space-25);
+}
+
+@media (width <= 780px) {
+  .rhc-active-filters {
+    padding-block: var(--rhc-space-150, 0.75rem);
+    padding-inline: var(--rhc-space-150, 0.75rem);
+  }
+}
+
+.rhc-sr-only {
+  block-size: 1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  inline-size: 1px;
+  margin-block: -1px;
+  margin-inline: -1px;
+  overflow: hidden;
+  padding-block: 0;
+  padding-inline: 0;
+  position: absolute;
+  white-space: nowrap;
 }

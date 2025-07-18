@@ -2,7 +2,7 @@
 
 import {
   Article,
-  Card,
+  CardAsLink,
   ColumnLayout,
   Heading,
   Hero,
@@ -105,23 +105,23 @@ export default function Details() {
               </ColumnLayout>
               <Separator />
               <Heading level={2}>Uitgelicht</Heading>
-              <div className="rhc-card-group">
-                <Card
+              <div className="rhc-card-as-link-group">
+                <CardAsLink
                   heading="Bijbaan, vakantiewerk en stage door jongeren"
                   href="#"
                   imageAlt="Tullip field"
                   imageSrc="/placeholder.jpg"
                   linkLabel="Lees meer"
                   title="Tekst over de link"
-                ></Card>
-                <Card
+                ></CardAsLink>
+                <CardAsLink
                   heading="Vakantiedagen en vakantiegeld"
                   href="#"
                   imageAlt="Tullip field"
                   imageSrc="/placeholder.jpg"
                   linkLabel="Lees meer"
                   title="Tekst over de link"
-                ></Card>
+                ></CardAsLink>
               </div>
             </div>
           </Article>

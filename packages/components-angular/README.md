@@ -11,35 +11,15 @@ Deze package is onderdeel van het [Rijkshuisstijl Community](../../README.md) pr
 
 ## Aan de slag met Angular-componenten
 
-Om de Angular-componenten van de Rijkshuisstijl-community te gebruiken, installeer je het [components-angular npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-angular).
+Om de Angular-componenten van de Rijkshuisstijl Community te gebruiken, installeer je het [components-angular npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-angular).
+
+De Angular-componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je project toe te voegen, installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens) en [component-css npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-css).
+
+> [!NOTE]  
+> Let erop dat je zowel `@rijkshuisstijl-community/design-tokens/dist/index.css` als `@rijkshuisstijl-community/components-css/dist/index.css` importeert in je globale `styles.css` of `styles.scss` **en** dat je componenten gebruikt binnen een element met de `rhc-theme` class. Anders zie je de componenten zonder styling.
 
 ```bash
-npm install --save-dev @rijkshuisstijl-community/components-angular
-```
-
-Dit installeert de Angular-componenten. Om deze componenten te gebruiken, kun je ze importeren in jouw app.
-
-```ts
-import { ButtonComponent } from '@rijkshuisstijl-community/components-angular';
-
-@Component({
-  selector: 'app-root',
-  imports: [ButtonComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
-})
-export class AppComponent {
-  title = 'angular-test';
-}
-```
-
-### Thema toepassen
-
-De Angular-componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je project toe te voegen, installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens) en het [components-css npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-css).
-
-```bash
-npm install --save-dev @rijkshuisstijl-community/design-tokens
-npm install --save-dev @rijkshuisstijl-community/components-css
+npm install --save-dev @rijkshuisstijl-community/components-angular @rijkshuisstijl-community/components-css @rijkshuisstijl-community/design-tokens
 ```
 
 Deze pakketten bevatten de CSS-variabelen van het design systeem en de CSS-classes die de componenten aan de variabelen koppelen.
@@ -51,6 +31,8 @@ Voeg de volgende css toe aan `styles.css` (het bestand waar je global styles heb
 @import url('@rijkshuisstijl-community/design-tokens/dist/index.css');
 @import url('@rijkshuisstijl-community/components-css/dist/index.css');
 ```
+
+Dit installeert de Angular-componenten, de design tokens en de styling. Om deze te gebruiken, importeer je de CSS-bestanden in je globale stylesheet en de Angular modules in je app.
 
 ```ts
 import { Component } from '@angular/core';
@@ -65,7 +47,16 @@ import { ButtonComponent } from '@rijkshuisstijl-community/components-angular';
     </main>
   `,
 })
-export class AppComponent {}
+export class App {
+  protected title = 'angular-readme';
+}
 ```
+
+### Thema toepassen
+
+Voor de themas maken we gebruik van de volgende 2 packages: [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens) en [component-css npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-css).
+
+Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.css`-bestand uit de `dist` map van het
+pakket, en omring het deel van je applicatie waar je het thema wilt toepassen met het Rijkshuisstijl-thema met de `rhc-theme` class.
 
 Bekijk de [packages/font/README.md](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/font/README.md) voor de meerdere manieren om de lettertypen te installeren voor jouw project.
