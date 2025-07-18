@@ -18,22 +18,9 @@
   @include mixin.rhc-link--any-link;
 }
 
-.nl-link:any-link .utrecht-icon {
-  @include mixin.rhc-link--icon;
-}
-
 .nl-link:visited,
 .nl-link--visted {
   @include mixin.rhc-link--visited;
-}
-
-.nl-link:visited .nl-icon {
-  @include mixin.rhc-link--visited-icon;
-}
-
-.nl-link:active,
-.nl-link--active {
-  @include mixin.rhc-link--active;
 }
 
 .nl-link:focus-visible,
