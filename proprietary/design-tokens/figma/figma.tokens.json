@@ -6283,21 +6283,21 @@
   "components/separator": {
     "utrecht": {
       "separator": {
-        "color": {
-          "value": "{rhc.color.cool-grey.300}",
-          "type": "color"
-        },
         "block-size": {
-          "value": "{rhc.border-width.m}",
-          "type": "sizing"
+          "type": "dimension",
+          "value": "{rhc.border-width.m}"
+        },
+        "color": {
+          "type": "color",
+          "value": "{rhc.color.cool-grey.300}"
         },
         "margin-block-end": {
-          "value": "{rhc.space.150}",
-          "type": "spacing"
+          "type": "dimension",
+          "value": "{rhc.space.150}"
         },
         "margin-block-start": {
-          "value": "{rhc.space.150}",
-          "type": "spacing"
+          "type": "dimension",
+          "value": "{rhc.space.150}"
         }
       }
     }
