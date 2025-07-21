@@ -25,13 +25,11 @@ npm install --save-dev @rijkshuisstijl-community/components-angular @rijkshuisst
 Dit installeert de Angular-componenten, de design tokens en de styling. Om deze te gebruiken, importeer je de CSS-bestanden in je globale stylesheet en de Angular modules in je app.
 
 ```css
-/* src/styles.css */
 @import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 @import '@rijkshuisstijl-community/components-css/dist/index.css';
 ```
 
 ```ts
-/* src/app/app.ts */
 import { Component } from '@angular/core';
 import { ButtonComponent } from '@rijkshuisstijl-community/components-angular';
 
@@ -62,13 +60,11 @@ Om een ander thema toe te passen moet je het importeren van `import '@rijkshuiss
 Zie het volgende voorbeeld om het uitvoerend-groen thema toe te passen:
 
 ```css
-/* src/styles.css */
 @import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
 @import '@rijkshuisstijl-community/components-css/dist/index.css';
 ```
 
 ```ts
-/* src/app/app.ts */
 import { Component } from '@angular/core';
 import { ButtonComponent } from '@rijkshuisstijl-community/components-angular';
 
