@@ -3763,7 +3763,35 @@
       }
     }
   },
-  "components/figure": {
+  "components/figure/base": {
+    "utrecht": {
+      "figure": {
+        "caption": {
+          "color": {
+            "type": "color",
+            "value": "{rhc.color.foreground.default}"
+          },
+          "font-size": {
+            "type": "fontSizes",
+            "value": "{rhc.font-size.body.default}"
+          },
+          "line-height": {
+            "type": "lineHeights",
+            "value": "{rhc.line-height.body}"
+          }
+        }
+      }
+    },
+    "todo": {
+      "figure": {
+        "row-gap": {
+          "value": "{rhc.space.100}",
+          "type": "dimension"
+        }
+      }
+    }
+  },
+  "components/figure/deprecated": {
     "utrecht": {
       "figure": {
         "caption": {
@@ -3774,18 +3802,6 @@
           "border-width": {
             "type": "dimension",
             "value": "4px"
-          },
-          "color": {
-            "type": "color",
-            "value": "{rhc.color.primary.500}"
-          },
-          "font-size": {
-            "type": "fontSizes",
-            "value": "{rhc.font-size.xs.desktop}"
-          },
-          "line-height": {
-            "type": "lineHeights",
-            "value": "{rhc.line-height.body}"
           },
           "padding-block-end": {
             "type": "dimension",
@@ -9446,7 +9462,6 @@
         "components/code-input": "enabled",
         "components/dot-badge": "enabled",
         "components/fieldset": "enabled",
-        "components/figure": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
         "components/form-field": "enabled",
@@ -9513,7 +9528,8 @@
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
-        "components/number-badge/utrecht": "enabled"
+        "components/number-badge/utrecht": "enabled",
+        "components/figure/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9545,7 +9561,6 @@
         "components/code-input": "enabled",
         "components/dot-badge": "enabled",
         "components/fieldset": "enabled",
-        "components/figure": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
         "components/form-field": "enabled",
@@ -9613,7 +9628,8 @@
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
-        "components/number-badge/utrecht": "enabled"
+        "components/number-badge/utrecht": "enabled",
+        "components/figure/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9645,7 +9661,6 @@
         "components/code-input": "enabled",
         "components/dot-badge": "enabled",
         "components/fieldset": "enabled",
-        "components/figure": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
         "components/form-field": "enabled",
@@ -9713,7 +9728,8 @@
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
-        "components/number-badge/utrecht": "enabled"
+        "components/number-badge/utrecht": "enabled",
+        "components/figure/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9745,7 +9761,6 @@
         "components/code-input": "enabled",
         "components/dot-badge": "enabled",
         "components/fieldset": "enabled",
-        "components/figure": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
         "components/form-field": "enabled",
@@ -9813,7 +9828,8 @@
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
-        "components/number-badge/utrecht": "enabled"
+        "components/number-badge/utrecht": "enabled",
+        "components/figure/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9845,7 +9861,6 @@
         "components/code-input": "enabled",
         "components/dot-badge": "enabled",
         "components/fieldset": "enabled",
-        "components/figure": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
         "components/form-field": "enabled",
@@ -9913,7 +9928,8 @@
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
-        "components/number-badge/utrecht": "enabled"
+        "components/number-badge/utrecht": "enabled",
+        "components/figure/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9945,7 +9961,6 @@
         "components/code-input": "enabled",
         "components/dot-badge": "enabled",
         "components/fieldset": "enabled",
-        "components/figure": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
         "components/form-field": "enabled",
@@ -10013,7 +10028,8 @@
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
-        "components/number-badge/utrecht": "enabled"
+        "components/number-badge/utrecht": "enabled",
+        "components/figure/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10045,7 +10061,6 @@
         "components/code-input": "enabled",
         "components/dot-badge": "enabled",
         "components/fieldset": "enabled",
-        "components/figure": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
         "components/form-field": "enabled",
@@ -10113,7 +10128,8 @@
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
-        "components/number-badge/utrecht": "enabled"
+        "components/number-badge/utrecht": "enabled",
+        "components/figure/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10145,7 +10161,6 @@
         "components/code-input": "enabled",
         "components/dot-badge": "enabled",
         "components/fieldset": "enabled",
-        "components/figure": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
         "components/form-field": "enabled",
@@ -10213,7 +10228,8 @@
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
-        "components/number-badge/utrecht": "enabled"
+        "components/number-badge/utrecht": "enabled",
+        "components/figure/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10246,7 +10262,6 @@
         "components/data-summary": "enabled",
         "components/dot-badge": "enabled",
         "components/fieldset": "enabled",
-        "components/figure": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
         "components/form-field": "enabled",
@@ -10316,7 +10331,8 @@
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
-        "components/number-badge/utrecht": "enabled"
+        "components/number-badge/utrecht": "enabled",
+        "components/figure/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10364,7 +10380,8 @@
       "components/data-summary",
       "components/dot-badge",
       "components/fieldset",
-      "components/figure",
+      "components/figure/base",
+      "components/figure/deprecated",
       "components/file-input",
       "components/footer",
       "components/form-field",
