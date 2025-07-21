@@ -3,17 +3,17 @@
 import {
   Button,
   CardAsLink,
+  DataBadgeButton,
   FormFieldTextInput,
   Heading,
   HeadingGroup,
   NumberBadge,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
-import { IconPlus, IconSearch } from '@tabler/icons-react';
+import { IconCheck, IconPlus, IconSearch } from '@tabler/icons-react';
 import { BadgeList, ButtonLink, Icon } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 import { ChangeEvent, FormEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { DataBadgeButton } from './DataBadgeButton';
 import { allComponentsData, ComponentData } from './components-data';
 import { ExpandableCheckboxGroup } from './expandableCheckboxGroup';
 import SharedFooter from '../shared/footer';
@@ -57,9 +57,10 @@ const ActiveFiltersBadgeList = ({ onRemoveFilter, selectedFrameworks }: ActiveFi
             aria-label={`${framework} filter verwijderen`}
             className="rhc-active-filters__badge"
             helperText="- Klik om filter te verwijderen"
+            icon={<IconCheck />}
+            iconAlign={'end'}
             key={`active-${framework}`}
             pressed={true}
-            showHelperText={true}
             value={framework}
             onClick={() => onRemoveFilter(framework)}
           >
@@ -375,7 +376,6 @@ export default function Componenten() {
                                 helperText={`- Klik om filter te ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
                                 key={framework}
                                 pressed={selectedFrameworks.includes(framework)}
-                                showHelperText={true}
                                 value={framework}
                                 onClick={() => handleDataBadgeClick(framework)} // FIXED: Direct call instead of data-value extraction
                               >
