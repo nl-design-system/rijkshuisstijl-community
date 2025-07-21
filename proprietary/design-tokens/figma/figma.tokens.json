@@ -5615,10 +5615,6 @@
           "type": "fontWeights",
           "value": "{rhc.font-weight.strong}"
         },
-        "line-height": {
-          "type": "lineHeights",
-          "value": "{rhc.line-height.sm}"
-        },
         "min-block-size": {
           "type": "dimension",
           "value": "{rhc.size.half-lint}"
@@ -5673,10 +5669,6 @@
           "type": "fontWeights",
           "value": "{nl.number-badge.font-weight}"
         },
-        "line-height": {
-          "type": "lineHeights",
-          "value": "{nl.number-badge.line-height}"
-        },
         "min-block-size": {
           "type": "dimension",
           "value": "{nl.number-badge.min-block-size}"
@@ -5692,6 +5684,24 @@
         "padding-inline": {
           "type": "dimension",
           "value": "{nl.number-badge.padding-inline}"
+        }
+      }
+    }
+  },
+  "components/number-badge/deprecated": {
+    "nl": {
+      "number-badge": {
+        "line-height": {
+          "type": "lineHeights",
+          "value": "{rhc.line-height.sm}"
+        }
+      }
+    },
+    "utrecht": {
+      "number-badge": {
+        "line-height": {
+          "type": "lineHeights",
+          "value": "{rhc.line-height.sm}"
         }
       }
     }
@@ -10382,6 +10392,7 @@
       "components/navigation-list",
       "components/number-badge/nl",
       "components/number-badge/utrecht",
+      "components/number-badge/deprecated",
       "components/ordered-list/base",
       "components/ordered-list/deprecated",
       "components/paragraph/nl",
