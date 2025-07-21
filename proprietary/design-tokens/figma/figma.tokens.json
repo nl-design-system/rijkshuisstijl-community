@@ -1801,7 +1801,7 @@
       }
     }
   },
-  "components/alert": {
+  "components/alert/base": {
     "utrecht": {
       "alert": {
         "background-color": {
@@ -1829,10 +1829,12 @@
           "value": "{rhc.space.100}"
         },
         "margin-block-end": {
+          "description": "[code-only]",
           "type": "dimension",
           "value": "{rhc.space.150}"
         },
         "margin-block-start": {
+          "description": "[code-only]",
           "type": "dimension",
           "value": "{rhc.space.150}"
         },
@@ -1852,6 +1854,12 @@
           "type": "dimension",
           "value": "{rhc.space.200}"
         },
+        "content": {
+          "row-gap": {
+            "type": "dimension",
+            "value": "{rhc.space.100}"
+          }
+        },
         "error": {
           "background-color": {
             "type": "color",
@@ -1864,24 +1872,6 @@
           "color": {
             "type": "color",
             "value": "{rhc.color.foreground.on-light-color}"
-          }
-        },
-        "heading": {
-          "font-family": {
-            "type": "fontFamilies",
-            "value": "{rhc.font-family.primary}"
-          },
-          "font-size": {
-            "type": "fontSizes",
-            "value": "{rhc.font-size.heading.level-5}"
-          },
-          "font-weight": {
-            "type": "fontWeights",
-            "value": "{rhc.font-weight.strong}"
-          },
-          "line-height": {
-            "type": "lineHeights",
-            "value": "{rhc.line-height.md}"
           }
         },
         "info": {
@@ -1899,13 +1889,9 @@
           }
         },
         "message": {
-          "column-gap": {
+          "row-gap": {
             "type": "dimension",
             "value": "{rhc.space.100}"
-          },
-          "line-height": {
-            "type": "lineHeights",
-            "value": "{rhc.line-height.md}"
           }
         },
         "ok": {
@@ -1937,6 +1923,10 @@
           }
         },
         "icon": {
+          "color": {
+            "type": "color",
+            "value": "{rhc.color.feedback.info.default}"
+          },
           "inset-block-start": {
             "type": "dimension",
             "value": "3px"
@@ -1968,6 +1958,40 @@
               "type": "color",
               "value": "{rhc.color.feedback.warning.default}"
             }
+          }
+        }
+      }
+    }
+  },
+  "components/alert/deprecated": {
+    "utrecht": {
+      "alert": {
+        "heading": {
+          "font-family": {
+            "type": "fontFamilies",
+            "value": "{rhc.font-family.primary}"
+          },
+          "font-size": {
+            "type": "fontSizes",
+            "value": "{rhc.font-size.heading.level-5}"
+          },
+          "font-weight": {
+            "type": "fontWeights",
+            "value": "{rhc.font-weight.strong}"
+          },
+          "line-height": {
+            "type": "lineHeights",
+            "value": "{rhc.line-height.md}"
+          }
+        },
+        "message": {
+          "column-gap": {
+            "type": "dimension",
+            "value": "{rhc.space.100}"
+          },
+          "line-height": {
+            "type": "lineHeights",
+            "value": "{rhc.line-height.md}"
           }
         }
       }
@@ -9446,7 +9470,6 @@
         "utrecht/pointer-target": "enabled",
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
-        "components/alert": "enabled",
         "components/article": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox": "enabled",
@@ -9519,7 +9542,8 @@
         "components/link/deprecated": "enabled",
         "components/link-list/deprecated": "enabled",
         "components/skip-link/deprecated": "enabled",
-        "components/accordion/base": "enabled"
+        "components/accordion/base": "enabled",
+        "components/alert/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9543,7 +9567,6 @@
         "utrecht/pointer-target": "enabled",
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
-        "components/alert": "enabled",
         "components/article": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox": "enabled",
@@ -9617,7 +9640,8 @@
         "components/link/deprecated": "enabled",
         "components/link-list/deprecated": "enabled",
         "components/skip-link/deprecated": "enabled",
-        "components/accordion/base": "enabled"
+        "components/accordion/base": "enabled",
+        "components/alert/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9641,7 +9665,6 @@
         "utrecht/pointer-target": "enabled",
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
-        "components/alert": "enabled",
         "components/article": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox": "enabled",
@@ -9717,7 +9740,8 @@
         "components/link/deprecated": "enabled",
         "components/link-list/deprecated": "enabled",
         "components/skip-link/deprecated": "enabled",
-        "components/accordion/base": "enabled"
+        "components/accordion/base": "enabled",
+        "components/alert/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9741,7 +9765,6 @@
         "utrecht/pointer-target": "enabled",
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
-        "components/alert": "enabled",
         "components/article": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox": "enabled",
@@ -9815,7 +9838,8 @@
         "components/link/deprecated": "enabled",
         "components/link-list/deprecated": "enabled",
         "components/skip-link/deprecated": "enabled",
-        "components/accordion/base": "enabled"
+        "components/accordion/base": "enabled",
+        "components/alert/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9839,7 +9863,6 @@
         "utrecht/pointer-target": "enabled",
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
-        "components/alert": "enabled",
         "components/article": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox": "enabled",
@@ -9913,7 +9936,8 @@
         "components/link/deprecated": "enabled",
         "components/link-list/deprecated": "enabled",
         "components/skip-link/deprecated": "enabled",
-        "components/accordion/base": "enabled"
+        "components/accordion/base": "enabled",
+        "components/alert/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9937,7 +9961,6 @@
         "utrecht/pointer-target": "enabled",
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
-        "components/alert": "enabled",
         "components/article": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox": "enabled",
@@ -10011,7 +10034,8 @@
         "components/link/deprecated": "enabled",
         "components/link-list/deprecated": "enabled",
         "components/skip-link/deprecated": "enabled",
-        "components/accordion/base": "enabled"
+        "components/accordion/base": "enabled",
+        "components/alert/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10035,7 +10059,6 @@
         "utrecht/pointer-target": "enabled",
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
-        "components/alert": "enabled",
         "components/article": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox": "enabled",
@@ -10109,7 +10132,8 @@
         "components/link/deprecated": "enabled",
         "components/link-list/deprecated": "enabled",
         "components/skip-link/deprecated": "enabled",
-        "components/accordion/base": "enabled"
+        "components/accordion/base": "enabled",
+        "components/alert/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10133,7 +10157,6 @@
         "utrecht/pointer-target": "enabled",
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
-        "components/alert": "enabled",
         "components/article": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox": "enabled",
@@ -10207,7 +10230,8 @@
         "components/link/deprecated": "enabled",
         "components/link-list/deprecated": "enabled",
         "components/skip-link/deprecated": "enabled",
-        "components/accordion/base": "enabled"
+        "components/accordion/base": "enabled",
+        "components/alert/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10231,7 +10255,6 @@
         "utrecht/pointer-target": "enabled",
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
-        "components/alert": "enabled",
         "components/article": "enabled",
         "components/blockquote-oud": "enabled",
         "components/blockquote": "enabled",
@@ -10308,7 +10331,8 @@
         "components/link/deprecated": "enabled",
         "components/link-list/deprecated": "enabled",
         "components/skip-link/deprecated": "enabled",
-        "components/accordion/base": "enabled"
+        "components/accordion/base": "enabled",
+        "components/alert/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10337,7 +10361,8 @@
       "components/accordion/base",
       "components/accordion/deprecated",
       "components/action-group",
-      "components/alert",
+      "components/alert/base",
+      "components/alert/deprecated",
       "components/article",
       "components/blockquote-oud",
       "components/blockquote",
