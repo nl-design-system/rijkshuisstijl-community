@@ -31,10 +31,6 @@
   inline-size: 100%;
 }
 
-.rhc-page-footer--primary-filled {
-  --utrecht-page-footer-background-color: var(--rhc-color-primary-500);
-}
-
 .rhc-page-footer--primary-filled.rhc-page-subfooter {
   border-block-start-color: var(--rhc-page-footer-border-block-start-color);
   border-block-start-style: var(--rhc-page-footer-border-block-start-style);
@@ -127,7 +123,7 @@
 }
 
 .rhc-page-prefooter::before {
-  background-color: var(--rhc-color-primary-500);
+  background-color: var(--utrecht-page-footer-background-color);
   block-size: 1.5rem;
   content: "";
   inline-size: 2rem;
