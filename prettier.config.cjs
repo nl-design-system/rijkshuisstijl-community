@@ -17,5 +17,11 @@ module.exports = {
         singleQuote: false,
       },
     },
+    {
+      files: ['*.tokens.json'],
+      options: {
+        plugins: ['prettier-plugin-sort-json'],
+      },
+    },
   ],
 };
