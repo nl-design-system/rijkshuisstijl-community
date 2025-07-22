@@ -6040,7 +6040,7 @@
       }
     }
   },
-  "components/radio-button": {
+  "components/radio-button/base": {
     "utrecht": {
       "radio-button": {
         "background-color": {
@@ -6049,11 +6049,11 @@
         },
         "border-color": {
           "type": "color",
-          "value": "{rhc.color.primary.500}"
+          "value": "{rhc.color.lintblauw.500}"
         },
-        "border-radius": {
-          "type": "dimension",
-          "value": "{rhc.border-radius.circle}"
+        "color": {
+          "type": "color",
+          "value": "{utrecht.radio-button.border-color}"
         },
         "border-width": {
           "type": "dimension",
@@ -6063,7 +6063,7 @@
           "type": "dimension",
           "value": "{rhc.size.half-lint}"
         },
-        "dot": {
+        "icon": {
           "size": {
             "type": "dimension",
             "value": "{rhc.size.quarter-lint}"
@@ -6078,6 +6078,10 @@
             "type": "color",
             "value": "{rhc.color.feedback.error.default}"
           },
+          "color": {
+            "type": "color",
+            "value": "{utrecht.radio-button.invalid.border-color}"
+          },
           "border-width": {
             "type": "dimension",
             "value": "{rhc.border-width.default}"
@@ -6091,6 +6095,10 @@
           "border-color": {
             "type": "color",
             "value": "{rhc.color.primary.400}"
+          },
+          "color": {
+            "type": "color",
+            "value": "{utrecht.radio-button.active.border-color}"
           },
           "border-width": {
             "type": "dimension",
@@ -6108,7 +6116,7 @@
           },
           "color": {
             "type": "color",
-            "value": "{rhc.color.cool-grey.600}"
+            "value": "{utrecht.radio-button.disabled.border-color}"
           }
         },
         "hover": {
@@ -6119,6 +6127,10 @@
           "border-color": {
             "type": "color",
             "value": "{rhc.color.primary.300}"
+          },
+          "color": {
+            "type": "color",
+            "value": "{utrecht.radio-button.hover.border-color}"
           },
           "border-width": {
             "type": "dimension",
@@ -6133,6 +6145,10 @@
           "border-color": {
             "type": "color",
             "value": "{rhc.color.primary.500}"
+          },
+          "color": {
+            "type": "color",
+            "value": "{utrecht.radio-button.focus.border-color}"
           },
           "border-width": {
             "type": "dimension",
@@ -6189,21 +6205,9 @@
             }
           },
           "hover": {
-            "background-color": {
-              "type": "color",
-              "value": "{rhc.color.primary.300}"
-            },
-            "border-color": {
-              "type": "color",
-              "value": "transparent"
-            },
             "border-width": {
               "type": "dimension",
               "value": "{rhc.border-width.default}"
-            },
-            "color": {
-              "type": "color",
-              "value": "{rhc.color.wit}"
             }
           },
           "focus": {
@@ -6222,6 +6226,58 @@
             "color": {
               "type": "color",
               "value": "{rhc.color.primary.500}"
+            }
+          }
+        }
+      }
+    },
+    "todo": {
+      "radio-button": {
+        "checked": {
+          "hover": {
+            "background-color": {
+              "type": "color",
+              "value": "{rhc.color.primary.300}"
+            },
+            "border-color": {
+              "type": "color",
+              "value": "transparent"
+            },
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.wit}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components/radio-button/deprecated": {
+    "utrecht": {
+      "radio-button": {
+        "border-radius": {
+          "type": "dimension",
+          "value": "{rhc.border-radius.circle}"
+        },
+        "dot": {
+          "size": {
+            "type": "dimension",
+            "value": "{rhc.size.quarter-lint}"
+          }
+        },
+        "checked": {
+          "hover": {
+            "background-color": {
+              "type": "color",
+              "value": "{rhc.color.primary.300}"
+            },
+            "border-color": {
+              "type": "color",
+              "value": "transparent"
+            },
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.wit}"
             }
           }
         }
@@ -9690,7 +9746,7 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button": "enabled"
+        "components/radio-button/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9795,7 +9851,7 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button": "enabled"
+        "components/radio-button/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9902,7 +9958,7 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button": "enabled"
+        "components/radio-button/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10007,7 +10063,7 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button": "enabled"
+        "components/radio-button/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10112,7 +10168,7 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button": "enabled"
+        "components/radio-button/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10217,7 +10273,7 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button": "enabled"
+        "components/radio-button/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10322,7 +10378,7 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button": "enabled"
+        "components/radio-button/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10427,7 +10483,7 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button": "enabled"
+        "components/radio-button/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10535,7 +10591,7 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button": "enabled"
+        "components/radio-button/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10621,7 +10677,8 @@
       "components/paragraph/utrecht",
       "components/paragraph/deprecated",
       "components/pre-heading",
-      "components/radio-button",
+      "components/radio-button/base",
+      "components/radio-button/deprecated",
       "components/radio-group",
       "components/select",
       "components/separator",
