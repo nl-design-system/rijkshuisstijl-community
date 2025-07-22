@@ -4123,42 +4123,88 @@
       }
     }
   },
-  "components/form-field-error-message": {
+  "components/form-field-error-message/base": {
+    "utrecht": {
+      "form-field-error-message": {
+        "background-color": {
+          "type": "color",
+          "value": "{rhc.color.none}"
+        },
+        "color": {
+          "type": "color",
+          "value": "{rhc.color.feedback.error.default}"
+        },
+        "font-family": {
+          "type": "fontFamilies",
+          "value": "{rhc.font-family.primary}"
+        },
+        "font-size": {
+          "type": "fontSizes",
+          "value": "{rhc.font-size.body.default}"
+        },
+        "font-weight": {
+          "type": "fontWeights",
+          "value": "{rhc.font-weight.default}"
+        },
+        "line-height": {
+          "type": "lineHeights",
+          "value": "{rhc.line-height.body}"
+        },
+        "margin-block-end": {
+          "description": "[code-only]",
+          "type": "dimension",
+          "value": "{rhc.space.100}"
+        },
+        "margin-block-start": {
+          "description": "[code-only]",
+          "type": "dimension",
+          "value": "{rhc.space.0}"
+        },
+        "padding-block-end": {
+          "type": "dimension",
+          "value": "{rhc.space.100}"
+        },
+        "padding-block-start": {
+          "type": "dimension",
+          "value": "{rhc.space.0}"
+        },
+        "padding-inline-end": {
+          "type": "dimension",
+          "value": "{rhc.space.0}"
+        },
+        "padding-inline-start": {
+          "type": "dimension",
+          "value": "{rhc.space.0}"
+        }
+      }
+    },
+    "todo": {
+      "form-field-error-message": {
+        "column-gap": {
+          "type": "dimension",
+          "value": "{rhc.space.100}"
+        },
+        "icon": {
+          "size": {
+            "type": "dimension",
+            "value": "{rhc.size.icon.functional}"
+          }
+        }
+      }
+    }
+  },
+  "components/form-field-error-message/deprecated": {
     "utrecht": {
       "form-field-error-message": {
         "icon": {
-          "size": {
-            "value": "{rhc.size.icon.functional}",
-            "type": "sizing"
-          },
           "margin-inline-end": {
-            "value": "{rhc.space.100}",
-            "type": "spacing"
+            "type": "dimension",
+            "value": "{rhc.space.100}"
+          },
+          "size": {
+            "type": "dimension",
+            "value": "{rhc.size.icon.functional}"
           }
-        },
-        "color": {
-          "value": "{rhc.color.feedback.error.default}",
-          "type": "color"
-        },
-        "font-family": {
-          "value": "{rhc.font-family.primary}",
-          "type": "fontFamilies"
-        },
-        "font-size": {
-          "value": "{rhc.font-size.body.default}",
-          "type": "fontSizes"
-        },
-        "font-weight": {
-          "value": "{rhc.font-weight.default}",
-          "type": "fontWeights"
-        },
-        "margin-block-end": {
-          "value": "{rhc.space.100}",
-          "type": "spacing"
-        },
-        "padding-block-end": {
-          "value": "{rhc.space.100}",
-          "type": "spacing"
         }
       }
     }
@@ -9474,7 +9520,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
@@ -9539,7 +9584,8 @@
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
-        "components/form-field-description/base": "enabled"
+        "components/form-field-description/base": "enabled",
+        "components/form-field-error-message/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9575,7 +9621,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
@@ -9641,7 +9686,8 @@
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
-        "components/form-field-description/base": "enabled"
+        "components/form-field-description/base": "enabled",
+        "components/form-field-error-message/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9677,7 +9723,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
@@ -9745,7 +9790,8 @@
         "components/alert/deprecated": "enabled",
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
-        "components/form-field-description/base": "enabled"
+        "components/form-field-description/base": "enabled",
+        "components/form-field-error-message/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9781,7 +9827,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
@@ -9847,7 +9892,8 @@
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
-        "components/form-field-description/base": "enabled"
+        "components/form-field-description/base": "enabled",
+        "components/form-field-error-message/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9883,7 +9929,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
@@ -9949,7 +9994,8 @@
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
-        "components/form-field-description/base": "enabled"
+        "components/form-field-description/base": "enabled",
+        "components/form-field-error-message/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9985,7 +10031,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
@@ -10051,7 +10096,8 @@
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
-        "components/form-field-description/base": "enabled"
+        "components/form-field-description/base": "enabled",
+        "components/form-field-error-message/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10087,7 +10133,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
@@ -10153,7 +10198,8 @@
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
-        "components/form-field-description/base": "enabled"
+        "components/form-field-description/base": "enabled",
+        "components/form-field-error-message/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10189,7 +10235,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
@@ -10255,7 +10300,8 @@
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
-        "components/form-field-description/base": "enabled"
+        "components/form-field-description/base": "enabled",
+        "components/form-field-error-message/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10292,7 +10338,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
@@ -10360,7 +10405,8 @@
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
-        "components/form-field-description/base": "enabled"
+        "components/form-field-description/base": "enabled",
+        "components/form-field-error-message/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10416,7 +10462,8 @@
       "components/form-field-checkbox-option",
       "components/form-field-description/base",
       "components/form-field-description/deprecated",
-      "components/form-field-error-message",
+      "components/form-field-error-message/base",
+      "components/form-field-error-message/deprecated",
       "components/form-field-label",
       "components/form-field-option-label",
       "components/form-field-radio-option",
