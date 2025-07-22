@@ -4081,7 +4081,7 @@
       }
     }
   },
-  "components/form-field-description": {
+  "components/form-field-description/base": {
     "utrecht": {
       "form-field-description": {
         "color": {
@@ -4102,15 +4102,23 @@
         },
         "margin-block-end": {
           "type": "dimension",
-          "value": "{rhc.space.100}"
+          "value": "{rhc.space.100}",
+          "description": "[code-only]"
         },
         "margin-block-start": {
           "type": "dimension",
-          "value": "-{rhc.space.100}"
-        },
+          "value": "-{rhc.space.100}",
+          "description": "[code-only]"
+        }
+      }
+    }
+  },
+  "components/form-field-description/deprecated": {
+    "utrecht": {
+      "form-field-description": {
         "padding-block-end": {
-          "type": "dimension",
-          "value": "{rhc.space.100}"
+          "value": "{rhc.space.100}",
+          "type": "dimension"
         }
       }
     }
@@ -9466,7 +9474,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
@@ -9531,7 +9538,8 @@
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/number-badge/deprecated": "enabled"
+        "components/number-badge/deprecated": "enabled",
+        "components/form-field-description/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9567,7 +9575,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
@@ -9633,7 +9640,8 @@
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/number-badge/deprecated": "enabled"
+        "components/number-badge/deprecated": "enabled",
+        "components/form-field-description/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9669,7 +9677,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
@@ -9737,7 +9744,8 @@
         "components/accordion/deprecated": "enabled",
         "components/alert/deprecated": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/number-badge/deprecated": "enabled"
+        "components/number-badge/deprecated": "enabled",
+        "components/form-field-description/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9773,7 +9781,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
@@ -9839,7 +9846,8 @@
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/number-badge/deprecated": "enabled"
+        "components/number-badge/deprecated": "enabled",
+        "components/form-field-description/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9875,7 +9883,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
@@ -9941,7 +9948,8 @@
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/number-badge/deprecated": "enabled"
+        "components/number-badge/deprecated": "enabled",
+        "components/form-field-description/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9977,7 +9985,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
@@ -10043,7 +10050,8 @@
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/number-badge/deprecated": "enabled"
+        "components/number-badge/deprecated": "enabled",
+        "components/form-field-description/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10079,7 +10087,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
@@ -10145,7 +10152,8 @@
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/number-badge/deprecated": "enabled"
+        "components/number-badge/deprecated": "enabled",
+        "components/form-field-description/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10181,7 +10189,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
@@ -10247,7 +10254,8 @@
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/number-badge/deprecated": "enabled"
+        "components/number-badge/deprecated": "enabled",
+        "components/form-field-description/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10284,7 +10292,6 @@
         "components/footer": "enabled",
         "components/form-field": "enabled",
         "components/form-field-checkbox-option": "enabled",
-        "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
         "components/form-field-label": "enabled",
         "components/form-field-option-label": "enabled",
@@ -10352,7 +10359,8 @@
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/number-badge/deprecated": "enabled"
+        "components/number-badge/deprecated": "enabled",
+        "components/form-field-description/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10406,7 +10414,8 @@
       "components/footer",
       "components/form-field",
       "components/form-field-checkbox-option",
-      "components/form-field-description",
+      "components/form-field-description/base",
+      "components/form-field-description/deprecated",
       "components/form-field-error-message",
       "components/form-field-label",
       "components/form-field-option-label",
