@@ -7161,14 +7161,32 @@
       }
     }
   },
-  "components/textarea": {
+  "components/textarea/base": {
+    "todo": {
+      "textarea": {
+        "hover": {
+          "background-color": {
+            "type": "color",
+            "value": "{rhc.color.canvas}"
+          },
+          "border-color": {
+            "type": "color",
+            "value": "{rhc.color.primary.300}"
+          },
+          "color": {
+            "type": "color",
+            "value": "{rhc.color.foreground.default}"
+          }
+        }
+      }
+    },
     "utrecht": {
       "textarea": {
         "background-color": {
           "type": "color",
           "value": "{rhc.color.canvas}"
         },
-        "border-bottom-width": {
+        "border-block-end-width": {
           "type": "dimension",
           "value": "{rhc.border-width.default}"
         },
@@ -7208,6 +7226,10 @@
           "type": "dimension",
           "value": "400px"
         },
+        "min-block-size": {
+          "type": "dimension",
+          "value": "{rhc.size.target}"
+        },
         "padding-block-end": {
           "type": "dimension",
           "value": "{rhc.space.100}"
@@ -7228,6 +7250,10 @@
           "background-color": {
             "type": "color",
             "value": "{rhc.color.feedback.error.subdued}"
+          },
+          "border-block-end-width": {
+            "type": "dimension",
+            "value": "{rhc.border-width.default}"
           },
           "border-color": {
             "type": "color",
@@ -7276,6 +7302,30 @@
             "value": "{rhc.color.cool-grey.600}"
           }
         },
+        "focus": {
+          "background-color": {
+            "type": "color",
+            "value": "{rhc.color.canvas}"
+          },
+          "border-color": {
+            "type": "color",
+            "value": "{rhc.color.primary.500}"
+          },
+          "color": {
+            "type": "color",
+            "value": "{rhc.color.foreground.default}"
+          }
+        }
+      }
+    }
+  },
+  "components/textarea/deprecated": {
+    "utrecht": {
+      "textarea": {
+        "border-bottom-width": {
+          "type": "dimension",
+          "value": "{rhc.border-width.default}"
+        },
         "hover": {
           "background-color": {
             "type": "color",
@@ -7295,21 +7345,9 @@
           }
         },
         "focus": {
-          "background-color": {
-            "type": "color",
-            "value": "{rhc.color.canvas}"
-          },
-          "border-color": {
-            "type": "color",
-            "value": "{rhc.color.primary.500}"
-          },
           "border-width": {
             "type": "dimension",
             "value": "{rhc.border-width.m}"
-          },
-          "color": {
-            "type": "color",
-            "value": "{rhc.color.foreground.default}"
           }
         }
       }
@@ -9541,7 +9579,6 @@
         "components/skip-link/nl": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
-        "components/textarea": "enabled",
         "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/icon": "enabled",
@@ -9579,7 +9616,8 @@
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled"
+        "components/form-field-error-message/base": "enabled",
+        "components/textarea/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9642,7 +9680,6 @@
         "components/skip-link/nl": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
-        "components/textarea": "enabled",
         "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/icon": "enabled",
@@ -9681,7 +9718,8 @@
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled"
+        "components/form-field-error-message/base": "enabled",
+        "components/textarea/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9744,7 +9782,6 @@
         "components/skip-link/nl": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
-        "components/textarea": "enabled",
         "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/icon": "enabled",
@@ -9785,7 +9822,8 @@
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled"
+        "components/form-field-error-message/base": "enabled",
+        "components/textarea/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9848,7 +9886,6 @@
         "components/skip-link/nl": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
-        "components/textarea": "enabled",
         "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/icon": "enabled",
@@ -9887,7 +9924,8 @@
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled"
+        "components/form-field-error-message/base": "enabled",
+        "components/textarea/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9950,7 +9988,6 @@
         "components/skip-link/nl": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
-        "components/textarea": "enabled",
         "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/icon": "enabled",
@@ -9989,7 +10026,8 @@
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled"
+        "components/form-field-error-message/base": "enabled",
+        "components/textarea/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10052,7 +10090,6 @@
         "components/skip-link/nl": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
-        "components/textarea": "enabled",
         "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/icon": "enabled",
@@ -10091,7 +10128,8 @@
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled"
+        "components/form-field-error-message/base": "enabled",
+        "components/textarea/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10154,7 +10192,6 @@
         "components/skip-link/nl": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
-        "components/textarea": "enabled",
         "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/icon": "enabled",
@@ -10193,7 +10230,8 @@
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled"
+        "components/form-field-error-message/base": "enabled",
+        "components/textarea/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10256,7 +10294,6 @@
         "components/skip-link/nl": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
-        "components/textarea": "enabled",
         "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/icon": "enabled",
@@ -10295,7 +10332,8 @@
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled"
+        "components/form-field-error-message/base": "enabled",
+        "components/textarea/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10361,7 +10399,6 @@
         "components/status-badge": "enabled",
         "components/sub-nav-bar": "enabled",
         "components/table": "enabled",
-        "components/textarea": "enabled",
         "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/column-layout": "enabled",
@@ -10400,7 +10437,8 @@
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled"
+        "components/form-field-error-message/base": "enabled",
+        "components/textarea/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10497,7 +10535,8 @@
       "components/status-badge",
       "components/sub-nav-bar",
       "components/table",
-      "components/textarea",
+      "components/textarea/base",
+      "components/textarea/deprecated",
       "components/text-input",
       "components/toggletip",
       "components/unordered-list/base",
