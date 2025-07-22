@@ -7389,7 +7389,25 @@
       }
     }
   },
-  "components/text-input": {
+  "components/text-input/base": {
+    "todo": {
+      "textbox": {
+        "hover": {
+          "background-color": {
+            "type": "color",
+            "value": "{rhc.color.canvas}"
+          },
+          "border-color": {
+            "type": "color",
+            "value": "{rhc.color.lintblauw.300}"
+          },
+          "color": {
+            "type": "color",
+            "value": "{rhc.color.foreground.default}"
+          }
+        }
+      }
+    },
     "utrecht": {
       "textbox": {
         "background-color": {
@@ -7436,6 +7454,10 @@
           "type": "dimension",
           "value": "400px"
         },
+        "min-block-size": {
+          "type": "dimension",
+          "value": "{rhc.size.target}"
+        },
         "padding-block-end": {
           "type": "dimension",
           "value": "{rhc.space.100}"
@@ -7456,6 +7478,10 @@
           "background-color": {
             "type": "color",
             "value": "{rhc.color.feedback.error.subdued}"
+          },
+          "border-block-end-width": {
+            "type": "dimension",
+            "value": "{rhc.border-width.default}"
           },
           "border-color": {
             "type": "color",
@@ -7504,6 +7530,26 @@
             "value": "{rhc.color.cool-grey.600}"
           }
         },
+        "focus": {
+          "background-color": {
+            "type": "color",
+            "value": "{rhc.color.canvas}"
+          },
+          "border-color": {
+            "type": "color",
+            "value": "{rhc.color.lintblauw.500}"
+          },
+          "color": {
+            "type": "color",
+            "value": "{rhc.color.foreground.default}"
+          }
+        }
+      }
+    }
+  },
+  "components/text-input/deprecated": {
+    "utrecht": {
+      "textbox": {
         "hover": {
           "background-color": {
             "type": "color",
@@ -7523,21 +7569,9 @@
           }
         },
         "focus": {
-          "background-color": {
-            "type": "color",
-            "value": "{rhc.color.canvas}"
-          },
-          "border-color": {
-            "type": "color",
-            "value": "{rhc.color.lintblauw.500}"
-          },
           "border-width": {
             "type": "dimension",
             "value": "{rhc.border-width.m}"
-          },
-          "color": {
-            "type": "color",
-            "value": "{rhc.color.foreground.default}"
           }
         }
       }
@@ -9613,7 +9647,6 @@
         "components/skip-link/nl": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
-        "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
@@ -9656,7 +9689,8 @@
         "components/form-field-description/deprecated": "enabled",
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled"
+        "components/textarea/deprecated": "enabled",
+        "components/text-input/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9717,7 +9751,6 @@
         "components/skip-link/nl": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
-        "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
@@ -9761,7 +9794,8 @@
         "components/form-field-description/deprecated": "enabled",
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled"
+        "components/textarea/deprecated": "enabled",
+        "components/text-input/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9822,7 +9856,6 @@
         "components/skip-link/nl": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
-        "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
@@ -9868,7 +9901,8 @@
         "components/form-field-description/deprecated": "enabled",
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled"
+        "components/textarea/deprecated": "enabled",
+        "components/text-input/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9929,7 +9963,6 @@
         "components/skip-link/nl": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
-        "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
@@ -9973,7 +10006,8 @@
         "components/form-field-description/deprecated": "enabled",
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled"
+        "components/textarea/deprecated": "enabled",
+        "components/text-input/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10034,7 +10068,6 @@
         "components/skip-link/nl": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
-        "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
@@ -10078,7 +10111,8 @@
         "components/form-field-description/deprecated": "enabled",
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled"
+        "components/textarea/deprecated": "enabled",
+        "components/text-input/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10139,7 +10173,6 @@
         "components/skip-link/nl": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
-        "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
@@ -10183,7 +10216,8 @@
         "components/form-field-description/deprecated": "enabled",
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled"
+        "components/textarea/deprecated": "enabled",
+        "components/text-input/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10244,7 +10278,6 @@
         "components/skip-link/nl": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
-        "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
@@ -10288,7 +10321,8 @@
         "components/form-field-description/deprecated": "enabled",
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled"
+        "components/textarea/deprecated": "enabled",
+        "components/text-input/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10349,7 +10383,6 @@
         "components/skip-link/nl": "enabled",
         "components/status-badge": "enabled",
         "components/table": "enabled",
-        "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/icon": "enabled",
         "components/sub-nav-bar": "enabled",
@@ -10393,7 +10426,8 @@
         "components/form-field-description/deprecated": "enabled",
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled"
+        "components/textarea/deprecated": "enabled",
+        "components/text-input/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10457,7 +10491,6 @@
         "components/status-badge": "enabled",
         "components/sub-nav-bar": "enabled",
         "components/table": "enabled",
-        "components/text-input": "enabled",
         "components/toggletip": "enabled",
         "components/column-layout": "enabled",
         "overwrites/footer/lintblauw-background": "enabled",
@@ -10501,7 +10534,8 @@
         "components/form-field-description/deprecated": "enabled",
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled"
+        "components/textarea/deprecated": "enabled",
+        "components/text-input/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10600,7 +10634,8 @@
       "components/table",
       "components/textarea/base",
       "components/textarea/deprecated",
-      "components/text-input",
+      "components/text-input/base",
+      "components/text-input/deprecated",
       "components/toggletip",
       "components/unordered-list/base",
       "components/unordered-list/deprecated",
