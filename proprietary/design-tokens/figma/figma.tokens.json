@@ -4203,6 +4203,86 @@
       }
     }
   },
+  "components/form-field-label/utrecht": {
+    "utrecht": {
+      "form-label": {
+        "color": {
+          "type": "color",
+          "value": "{rhc.color.foreground.default}"
+        },
+        "font-size": {
+          "type": "fontSizes",
+          "value": "{rhc.font-size.body.default}"
+        },
+        "font-weight": {
+          "type": "fontWeights",
+          "value": "{rhc.font-weight.strong}"
+        },
+        "checkbox": {
+          "color": {
+            "type": "color",
+            "value": "{rhc.color.foreground.default}"
+          },
+          "font-weight": {
+            "type": "fontWeights",
+            "value": "{rhc.font-weight.default}"
+          }
+        },
+        "radio": {
+          "color": {
+            "type": "color",
+            "value": "{rhc.color.foreground.default}"
+          },
+          "font-weight": {
+            "type": "fontWeights",
+            "value": "{rhc.font-weight.default}"
+          }
+        },
+        "checked": {
+          "font-weight": {
+            "type": "fontWeights",
+            "value": "{basis.text.font-weight.default}"
+          }
+        },
+        "disabled": {
+          "color": {
+            "type": "color",
+            "value": "{rhc.color.border.subdued}"
+          }
+        }
+      }
+    }
+  },
+  "components/form-field-label/todo": {
+    "todo": {
+      "form-field-label": {
+        "color": {
+          "value": "{rhc.color.foreground.default}",
+          "type": "color"
+        },
+        "column-gap": {
+          "value": "{rhc.space.100}",
+          "type": "dimension"
+        },
+        "font-family": {
+          "value": "{rhc.font-family.primary}",
+          "type": "fontFamilies"
+        },
+        "font-size": {
+          "value": "{rhc.font-size.body.default}",
+          "type": "fontSizes"
+        },
+        "font-weight": {
+          "value": "{rhc.font-weight.strong}",
+          "type": "fontWeights"
+        },
+        "line-height": {
+          "value": "{rhc.line-height.body}",
+          "type": "lineHeights"
+        }
+      }
+    }
+  },
   "components/form-field-option-label": {
     "todo": {
       "form-field-option-label": {
@@ -4263,24 +4343,6 @@
               "type": "spacing"
             }
           }
-        }
-      }
-    }
-  },
-  "components/form-label": {
-    "utrecht": {
-      "form-label": {
-        "color": {
-          "value": "{rhc.color.foreground.default}",
-          "type": "color"
-        },
-        "font-size": {
-          "value": "{rhc.font-size.body.default}",
-          "type": "fontSizes"
-        },
-        "font-weight": {
-          "value": "{rhc.font-weight.strong}",
-          "type": "fontWeights"
         }
       }
     }
@@ -9528,7 +9590,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-label": "enabled",
         "components/heading/utrecht": "enabled",
         "components/heading/nl": "enabled",
         "components/hero": "enabled",
@@ -9590,7 +9651,12 @@
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
         "components/form-field-error-message/base": "enabled",
-        "components/textarea/base": "enabled"
+        "components/textarea/base": "enabled",
+        "components/form-field-label/utrecht": "enabled",
+        "components/form-field-description/deprecated": "enabled",
+        "components/form-field-error-message/deprecated": "enabled",
+        "components/form-field-label/todo": "enabled",
+        "components/textarea/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9628,7 +9694,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-label": "enabled",
         "components/heading/utrecht": "enabled",
         "components/heading/nl": "enabled",
         "components/hero": "enabled",
@@ -9691,7 +9756,12 @@
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
         "components/form-field-error-message/base": "enabled",
-        "components/textarea/base": "enabled"
+        "components/textarea/base": "enabled",
+        "components/form-field-label/utrecht": "enabled",
+        "components/form-field-description/deprecated": "enabled",
+        "components/form-field-error-message/deprecated": "enabled",
+        "components/form-field-label/todo": "enabled",
+        "components/textarea/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9729,7 +9799,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-label": "enabled",
         "components/heading/utrecht": "enabled",
         "components/heading/nl": "enabled",
         "components/hero": "enabled",
@@ -9794,7 +9863,12 @@
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
         "components/form-field-error-message/base": "enabled",
-        "components/textarea/base": "enabled"
+        "components/textarea/base": "enabled",
+        "components/form-field-label/utrecht": "enabled",
+        "components/form-field-description/deprecated": "enabled",
+        "components/form-field-error-message/deprecated": "enabled",
+        "components/form-field-label/todo": "enabled",
+        "components/textarea/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9832,7 +9906,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-label": "enabled",
         "components/heading/utrecht": "enabled",
         "components/heading/nl": "enabled",
         "components/hero": "enabled",
@@ -9895,7 +9968,12 @@
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
         "components/form-field-error-message/base": "enabled",
-        "components/textarea/base": "enabled"
+        "components/textarea/base": "enabled",
+        "components/form-field-label/utrecht": "enabled",
+        "components/form-field-description/deprecated": "enabled",
+        "components/form-field-error-message/deprecated": "enabled",
+        "components/form-field-label/todo": "enabled",
+        "components/textarea/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9933,7 +10011,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-label": "enabled",
         "components/heading/utrecht": "enabled",
         "components/heading/nl": "enabled",
         "components/hero": "enabled",
@@ -9996,7 +10073,12 @@
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
         "components/form-field-error-message/base": "enabled",
-        "components/textarea/base": "enabled"
+        "components/textarea/base": "enabled",
+        "components/form-field-label/utrecht": "enabled",
+        "components/form-field-description/deprecated": "enabled",
+        "components/form-field-error-message/deprecated": "enabled",
+        "components/form-field-label/todo": "enabled",
+        "components/textarea/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10034,7 +10116,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-label": "enabled",
         "components/heading/utrecht": "enabled",
         "components/heading/nl": "enabled",
         "components/hero": "enabled",
@@ -10097,7 +10178,12 @@
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
         "components/form-field-error-message/base": "enabled",
-        "components/textarea/base": "enabled"
+        "components/textarea/base": "enabled",
+        "components/form-field-label/utrecht": "enabled",
+        "components/form-field-description/deprecated": "enabled",
+        "components/form-field-error-message/deprecated": "enabled",
+        "components/form-field-label/todo": "enabled",
+        "components/textarea/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10135,7 +10221,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-label": "enabled",
         "components/heading/utrecht": "enabled",
         "components/heading/nl": "enabled",
         "components/hero": "enabled",
@@ -10198,7 +10283,12 @@
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
         "components/form-field-error-message/base": "enabled",
-        "components/textarea/base": "enabled"
+        "components/textarea/base": "enabled",
+        "components/form-field-label/utrecht": "enabled",
+        "components/form-field-description/deprecated": "enabled",
+        "components/form-field-error-message/deprecated": "enabled",
+        "components/form-field-label/todo": "enabled",
+        "components/textarea/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10236,7 +10326,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-label": "enabled",
         "components/heading/utrecht": "enabled",
         "components/heading/nl": "enabled",
         "components/hero": "enabled",
@@ -10299,7 +10388,12 @@
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
         "components/form-field-error-message/base": "enabled",
-        "components/textarea/base": "enabled"
+        "components/textarea/base": "enabled",
+        "components/form-field-label/utrecht": "enabled",
+        "components/form-field-description/deprecated": "enabled",
+        "components/form-field-error-message/deprecated": "enabled",
+        "components/form-field-label/todo": "enabled",
+        "components/textarea/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10338,7 +10432,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-label": "enabled",
         "components/heading/nl": "enabled",
         "components/heading/utrecht": "enabled",
         "components/hero": "enabled",
@@ -10403,7 +10496,12 @@
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
         "components/form-field-error-message/base": "enabled",
-        "components/textarea/base": "enabled"
+        "components/textarea/base": "enabled",
+        "components/form-field-label/utrecht": "enabled",
+        "components/form-field-description/deprecated": "enabled",
+        "components/form-field-error-message/deprecated": "enabled",
+        "components/form-field-label/todo": "enabled",
+        "components/textarea/deprecated": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10461,9 +10559,10 @@
       "components/form-field-description/deprecated",
       "components/form-field-error-message/base",
       "components/form-field-error-message/deprecated",
+      "components/form-field-label/utrecht",
+      "components/form-field-label/todo",
       "components/form-field-option-label",
       "components/form-field-radio-option",
-      "components/form-label",
       "components/heading/nl",
       "components/heading/utrecht",
       "components/hero",
