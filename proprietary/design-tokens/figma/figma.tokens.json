@@ -6040,190 +6040,190 @@
       }
     }
   },
-  "components/radio": {
+  "components/radio-button": {
     "utrecht": {
       "radio-button": {
-        "active": {
-          "border-width": {
-            "value": "{rhc.border-width.default}",
-            "type": "borderWidth"
-          },
-          "background-color": {
-            "value": "{rhc.color.canvas}",
-            "type": "color"
-          },
-          "border-color": {
-            "value": "{rhc.color.primary.400}",
-            "type": "color"
-          }
+        "background-color": {
+          "type": "color",
+          "value": "{rhc.color.canvas}"
+        },
+        "border-color": {
+          "type": "color",
+          "value": "{rhc.color.primary.500}"
+        },
+        "border-radius": {
+          "type": "dimension",
+          "value": "{rhc.border-radius.circle}"
+        },
+        "border-width": {
+          "type": "dimension",
+          "value": "{rhc.border-width.default}"
         },
         "size": {
-          "value": "{rhc.size.half-lint}",
-          "type": "sizing"
+          "type": "dimension",
+          "value": "{rhc.size.half-lint}"
         },
         "dot": {
           "size": {
-            "value": "{rhc.size.quarter-lint}",
-            "type": "sizing"
+            "type": "dimension",
+            "value": "{rhc.size.quarter-lint}"
           }
-        },
-        "background-color": {
-          "value": "{rhc.color.canvas}",
-          "type": "color"
-        },
-        "border-color": {
-          "value": "{rhc.color.primary.500}",
-          "type": "color"
         },
         "invalid": {
           "background-color": {
-            "value": "{rhc.color.feedback.error.subdued}",
-            "type": "color"
+            "type": "color",
+            "value": "{rhc.color.feedback.error.subdued}"
           },
           "border-color": {
-            "value": "{rhc.color.feedback.error.default}",
-            "type": "color"
+            "type": "color",
+            "value": "{rhc.color.feedback.error.default}"
           },
           "border-width": {
-            "value": "{rhc.border-width.default}",
-            "type": "borderWidth"
+            "type": "dimension",
+            "value": "{rhc.border-width.default}"
           }
         },
-        "focus": {
+        "active": {
           "background-color": {
-            "value": "{rhc.color.canvas}",
-            "type": "color"
+            "type": "color",
+            "value": "{rhc.color.canvas}"
           },
           "border-color": {
-            "value": "{rhc.color.primary.500}",
-            "type": "color"
+            "type": "color",
+            "value": "{rhc.color.primary.400}"
           },
           "border-width": {
-            "value": "{rhc.border-width.m}",
-            "type": "borderWidth"
+            "type": "dimension",
+            "value": "{rhc.border-width.default}"
           }
         },
         "disabled": {
           "background-color": {
-            "value": "{rhc.color.cool-grey.300}",
-            "type": "color"
+            "type": "color",
+            "value": "{rhc.color.cool-grey.300}"
           },
           "border-color": {
-            "value": "{rhc.color.cool-grey.400}",
-            "type": "color"
+            "type": "color",
+            "value": "{rhc.color.cool-grey.400}"
           },
           "color": {
-            "value": "{rhc.color.cool-grey.600}",
-            "type": "color"
-          }
-        },
-        "checked": {
-          "background-color": {
-            "value": "{rhc.color.primary.500}",
-            "type": "color"
-          },
-          "border-color": {
-            "value": "transparent",
-            "type": "color"
-          },
-          "color": {
-            "value": "{rhc.color.wit}",
-            "type": "color"
-          },
-          "hover": {
-            "background-color": {
-              "value": "{rhc.color.primary.300}",
-              "type": "color"
-            },
-            "border-color": {
-              "value": "transparent",
-              "type": "color"
-            },
-            "color": {
-              "value": "{rhc.color.wit}",
-              "type": "color"
-            },
-            "border-width": {
-              "value": "{rhc.border-width.default}",
-              "type": "borderWidth"
-            }
-          },
-          "active": {
-            "background-color": {
-              "value": "{rhc.color.primary.400}",
-              "type": "color"
-            },
-            "border-color": {
-              "value": "transparent",
-              "type": "color"
-            },
-            "color": {
-              "value": "{rhc.color.wit}",
-              "type": "color"
-            },
-            "border-width": {
-              "value": "{rhc.border-width.default}",
-              "type": "borderWidth"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "value": "{rhc.color.canvas}",
-              "type": "color"
-            },
-            "border-color": {
-              "value": "{rhc.color.primary.500}",
-              "type": "color"
-            },
-            "color": {
-              "value": "{rhc.color.primary.500}",
-              "type": "color"
-            },
-            "border-width": {
-              "value": "{rhc.border-width.m}",
-              "type": "borderWidth"
-            }
-          },
-          "disabled": {
-            "background-color": {
-              "value": "{rhc.color.cool-grey.300}",
-              "type": "color"
-            },
-            "border-color": {
-              "value": "{rhc.color.cool-grey.400}",
-              "type": "color"
-            },
-            "color": {
-              "value": "{rhc.color.cool-grey.600}",
-              "type": "color"
-            }
-          },
-          "border-width": {
-            "value": "{rhc.border-width.default}",
-            "type": "borderWidth"
+            "type": "color",
+            "value": "{rhc.color.cool-grey.600}"
           }
         },
         "hover": {
           "background-color": {
-            "value": "{rhc.color.canvas}",
-            "type": "color"
+            "type": "color",
+            "value": "{rhc.color.canvas}"
           },
           "border-color": {
-            "value": "{rhc.color.primary.300}",
-            "type": "color"
+            "type": "color",
+            "value": "{rhc.color.primary.300}"
           },
           "border-width": {
-            "value": "{rhc.border-width.default}",
-            "type": "borderWidth"
+            "type": "dimension",
+            "value": "{rhc.border-width.default}"
           }
         },
-        "border-radius": {
-          "value": "{rhc.border-radius.circle}",
-          "type": "borderRadius"
+        "focus": {
+          "background-color": {
+            "type": "color",
+            "value": "{rhc.color.canvas}"
+          },
+          "border-color": {
+            "type": "color",
+            "value": "{rhc.color.primary.500}"
+          },
+          "border-width": {
+            "type": "dimension",
+            "value": "{rhc.border-width.m}"
+          }
         },
-        "border-width": {
-          "value": "{rhc.border-width.default}",
-          "type": "borderWidth"
+        "checked": {
+          "background-color": {
+            "type": "color",
+            "value": "{rhc.color.primary.500}"
+          },
+          "border-color": {
+            "type": "color",
+            "value": "transparent"
+          },
+          "border-width": {
+            "type": "dimension",
+            "value": "{rhc.border-width.default}"
+          },
+          "color": {
+            "type": "color",
+            "value": "{rhc.color.wit}"
+          },
+          "active": {
+            "background-color": {
+              "type": "color",
+              "value": "{rhc.color.primary.400}"
+            },
+            "border-color": {
+              "type": "color",
+              "value": "transparent"
+            },
+            "border-width": {
+              "type": "dimension",
+              "value": "{rhc.border-width.default}"
+            },
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.wit}"
+            }
+          },
+          "disabled": {
+            "background-color": {
+              "type": "color",
+              "value": "{rhc.color.cool-grey.300}"
+            },
+            "border-color": {
+              "type": "color",
+              "value": "{rhc.color.cool-grey.400}"
+            },
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.cool-grey.600}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "type": "color",
+              "value": "{rhc.color.primary.300}"
+            },
+            "border-color": {
+              "type": "color",
+              "value": "transparent"
+            },
+            "border-width": {
+              "type": "dimension",
+              "value": "{rhc.border-width.default}"
+            },
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.wit}"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "type": "color",
+              "value": "{rhc.color.canvas}"
+            },
+            "border-color": {
+              "type": "color",
+              "value": "{rhc.color.primary.500}"
+            },
+            "border-width": {
+              "type": "dimension",
+              "value": "{rhc.border-width.m}"
+            },
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.primary.500}"
+            }
+          }
         }
       }
     }
@@ -9638,7 +9638,6 @@
         "components/paragraph/utrecht": "enabled",
         "components/paragraph/nl": "enabled",
         "components/pre-heading": "enabled",
-        "components/radio": "enabled",
         "components/radio-group": "enabled",
         "components/select": "enabled",
         "components/separator": "enabled",
@@ -9690,7 +9689,8 @@
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
-        "components/text-input/base": "enabled"
+        "components/text-input/base": "enabled",
+        "components/radio-button": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9742,7 +9742,6 @@
         "components/paragraph/utrecht": "enabled",
         "components/pre-heading": "enabled",
         "components/paragraph/nl": "enabled",
-        "components/radio": "enabled",
         "components/radio-group": "enabled",
         "components/select": "enabled",
         "components/separator": "enabled",
@@ -9795,7 +9794,8 @@
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
-        "components/text-input/base": "enabled"
+        "components/text-input/base": "enabled",
+        "components/radio-button": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9847,7 +9847,6 @@
         "components/paragraph/utrecht": "enabled",
         "components/paragraph/nl": "enabled",
         "components/pre-heading": "enabled",
-        "components/radio": "enabled",
         "components/radio-group": "enabled",
         "components/select": "enabled",
         "components/separator": "enabled",
@@ -9902,7 +9901,8 @@
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
-        "components/text-input/base": "enabled"
+        "components/text-input/base": "enabled",
+        "components/radio-button": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9954,7 +9954,6 @@
         "components/paragraph/utrecht": "enabled",
         "components/paragraph/nl": "enabled",
         "components/pre-heading": "enabled",
-        "components/radio": "enabled",
         "components/radio-group": "enabled",
         "components/select": "enabled",
         "components/separator": "enabled",
@@ -10007,7 +10006,8 @@
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
-        "components/text-input/base": "enabled"
+        "components/text-input/base": "enabled",
+        "components/radio-button": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10059,7 +10059,6 @@
         "components/paragraph/utrecht": "enabled",
         "components/paragraph/nl": "enabled",
         "components/pre-heading": "enabled",
-        "components/radio": "enabled",
         "components/radio-group": "enabled",
         "components/select": "enabled",
         "components/separator": "enabled",
@@ -10112,7 +10111,8 @@
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
-        "components/text-input/base": "enabled"
+        "components/text-input/base": "enabled",
+        "components/radio-button": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10164,7 +10164,6 @@
         "components/paragraph/utrecht": "enabled",
         "components/paragraph/nl": "enabled",
         "components/pre-heading": "enabled",
-        "components/radio": "enabled",
         "components/radio-group": "enabled",
         "components/select": "enabled",
         "components/separator": "enabled",
@@ -10217,7 +10216,8 @@
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
-        "components/text-input/base": "enabled"
+        "components/text-input/base": "enabled",
+        "components/radio-button": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10269,7 +10269,6 @@
         "components/paragraph/utrecht": "enabled",
         "components/paragraph/nl": "enabled",
         "components/pre-heading": "enabled",
-        "components/radio": "enabled",
         "components/radio-group": "enabled",
         "components/select": "enabled",
         "components/separator": "enabled",
@@ -10322,7 +10321,8 @@
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
-        "components/text-input/base": "enabled"
+        "components/text-input/base": "enabled",
+        "components/radio-button": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10374,7 +10374,6 @@
         "components/paragraph/utrecht": "enabled",
         "components/paragraph/nl": "enabled",
         "components/pre-heading": "enabled",
-        "components/radio": "enabled",
         "components/radio-group": "enabled",
         "components/select": "enabled",
         "components/separator": "enabled",
@@ -10427,7 +10426,8 @@
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
-        "components/text-input/base": "enabled"
+        "components/text-input/base": "enabled",
+        "components/radio-button": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10481,7 +10481,6 @@
         "components/paragraph/utrecht": "enabled",
         "components/paragraph/nl": "enabled",
         "components/pre-heading": "enabled",
-        "components/radio": "enabled",
         "components/radio-group": "enabled",
         "components/select": "enabled",
         "components/separator": "enabled",
@@ -10535,7 +10534,8 @@
         "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
-        "components/text-input/base": "enabled"
+        "components/text-input/base": "enabled",
+        "components/radio-button": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10621,7 +10621,7 @@
       "components/paragraph/utrecht",
       "components/paragraph/deprecated",
       "components/pre-heading",
-      "components/radio",
+      "components/radio-button",
       "components/radio-group",
       "components/select",
       "components/separator",
