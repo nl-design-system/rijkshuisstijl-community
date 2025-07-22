@@ -12,6 +12,9 @@ import wcagDocs from '@utrecht/components/button/docs/wcag.nl.md?raw';
 import { PropsWithChildren } from 'react';
 import rhcReadme from './button.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { createDesignTokensStory, createVisualRegressionStory, VisualRegressionWrapper } from '../utils';
+import { InteractiveStates, PropertyStates } from './button-visual/States';
+import { Appearances, Sizes } from './button-visual/Variants';
 
 interface ButtonStoryProps {
   appearance: string;
@@ -169,3 +172,52 @@ export const IconOnly: StoryObj<typeof IconButton> = {
     </IconButton>
   ),
 };
+
+export const DesignTokens = createDesignTokensStory(meta);
+export const Visual = createVisualRegressionStory(() => (
+  <>
+    <h4 className="utrecht-heading-3">Uitvoerend</h4>
+    <h5 className="utrecht-heading-4">paars</h5>
+    <VisualRegressionWrapper className={`uitvoerend-paars`}>
+      <Appearances />
+      <Sizes />
+      <InteractiveStates />
+      <PropertyStates />
+    </VisualRegressionWrapper>
+    <h5 className="utrecht-heading-4">hemelblauw</h5>
+    <VisualRegressionWrapper className={`uitvoerend-hemelblauw`}>
+      <Appearances />
+      <Sizes />
+      <InteractiveStates />
+      <PropertyStates />
+    </VisualRegressionWrapper>
+    <h5 className="utrecht-heading-4">groen</h5>
+    <VisualRegressionWrapper className={`uitvoerend-groen`}>
+      <Appearances />
+      <Sizes />
+      <InteractiveStates />
+      <PropertyStates />
+    </VisualRegressionWrapper>
+    <h5 className="utrecht-heading-4">oranje</h5>
+    <VisualRegressionWrapper className={`uitvoerend-oranje`}>
+      <Appearances />
+      <Sizes />
+      <InteractiveStates />
+      <PropertyStates />
+    </VisualRegressionWrapper>
+    <h5 className="utrecht-heading-4">violet</h5>
+    <VisualRegressionWrapper className={`uitvoerend-violet`}>
+      <Appearances />
+      <Sizes />
+      <InteractiveStates />
+      <PropertyStates />
+    </VisualRegressionWrapper>
+    <h5 className="utrecht-heading-4">mintgroen</h5>
+    <VisualRegressionWrapper className={`uitvoerend-mintgroen`}>
+      <Appearances />
+      <Sizes />
+      <InteractiveStates />
+      <PropertyStates />
+    </VisualRegressionWrapper>
+  </>
+));
