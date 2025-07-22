@@ -21,6 +21,7 @@ module.exports = {
       files: ['*.tokens.json'],
       options: {
         plugins: ['prettier-plugin-sort-json'],
+        jsonRecursiveSort: true,
       },
     },
   ],
