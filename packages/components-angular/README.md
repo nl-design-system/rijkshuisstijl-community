@@ -22,16 +22,6 @@ De Angular-componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je pr
 npm install --save-dev @rijkshuisstijl-community/components-angular @rijkshuisstijl-community/components-css @rijkshuisstijl-community/design-tokens
 ```
 
-Deze pakketten bevatten de CSS-variabelen van het design systeem en de CSS-classes die de componenten aan de variabelen koppelen.
-Importeer de `index.css`-bestanden uit de `dist` mappen van de pakketten, en omring het deel van je applicatie waar je het thema wilt toepassen met het Rijkshuisstijl-thema: `rhc-theme`.
-
-Voeg de volgende css toe aan `styles.css` (het bestand waar je global styles hebt staan).
-
-```css
-@import url('@rijkshuisstijl-community/design-tokens/dist/index.css');
-@import url('@rijkshuisstijl-community/components-css/dist/index.css');
-```
-
 Dit installeert de Angular-componenten, de design tokens en de styling. Om deze te gebruiken, importeer je de CSS-bestanden in je globale stylesheet en de Angular modules in je app.
 
 ```ts
