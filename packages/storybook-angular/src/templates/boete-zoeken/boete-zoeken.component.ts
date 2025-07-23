@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ButtonComponent } from '@rijkshuisstijl-community/components-angular/src/button/button.component';
-import { FormFieldTextInputComponent } from '@rijkshuisstijl-community/components-angular/src/form-field-text-input/form-field-text-input.component';
-import { HeadingComponent } from '@rijkshuisstijl-community/components-angular/src/heading/heading.component';
-import { IconComponent } from '@rijkshuisstijl-community/components-angular/src/icon/icon.component';
-import { ParagraphComponent } from '@rijkshuisstijl-community/components-angular/src/paragraph/paragraph.component';
+import { ButtonComponent } from '../../../../components-angular/src/button/button.component';
+import { FormFieldTextInputComponent } from '../../../../components-angular/src/form-field-text-input/form-field-text-input.component';
+import { HeadingComponent } from '../../../../components-angular/src/heading/heading.component';
+import { IconComponent } from '../../../../components-angular/src/icon/icon.component';
+import { ParagraphComponent } from '../../../../components-angular/src/paragraph/paragraph.component';
 import { PageLayoutComponent } from '../shared/page-layout/page-layout.component';
 
 @Component({

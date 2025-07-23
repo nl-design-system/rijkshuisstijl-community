@@ -55,11 +55,17 @@ const meta: Meta<FormFieldTextInputComponent> = {
       table: {
         category: 'Props',
       },
+      control: { type: 'boolean' },
+      description:
+        'Whether the input is required. Maps to the HTML `aria-required` attribute. Use this if you want to use Angular validation (recommended).',
     },
     inputRequired: {
       table: {
         category: 'Props',
       },
+      control: { type: 'boolean' },
+      description:
+        'Maps to the HTML `required` attribute. Use this if you want to use HTML validation (not recommended).',
     },
     readonly: {
       table: {
@@ -561,39 +567,6 @@ export const Readonly: StoryObj<FormFieldTextInputComponent> = {
       label,
       readonly,
       value,
-    },
-    moduleMetadata: {
-      imports: [ReactiveFormsModule],
-    },
-  }),
-};
-
-export const Required: StoryObj<FormFieldTextInputComponent> = {
-  name: 'Required',
-  args: {
-    name: 'subject',
-    label: 'Onderwerp',
-    required: true,
-  },
-  render: ({ name, label, required }) => ({
-    template: `
-    <form [formGroup]="form">
-      <rhc-form-field-text-input
-        formControlName="textInput"
-        inputId="required"
-        [name]="name"
-        [label]="label"
-        [required]="required"
-      />
-    </form>
-    `,
-    props: {
-      form: new FormGroup({
-        textInput: new FormControl(''),
-      }),
-      name,
-      label,
-      required,
     },
     moduleMetadata: {
       imports: [ReactiveFormsModule],

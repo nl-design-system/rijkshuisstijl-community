@@ -21,7 +21,15 @@ import { Component, Input } from '@angular/core';
 export class TextInputComponent {
   @Input() disabled? = false;
   @Input() invalid? = false;
+  /**
+   * Whether the input is required. Maps to the HTML `aria-required` attribute.
+   * Use this if you want to use Angular validation (recommended).
+   */
   @Input() required? = false;
+  /**
+   * Maps to the HTML `required` attribute.
+   * Use this if you want to use HTML validation (not recommended).
+   */
   @Input() inputRequired? = false;
   @Input() readonly? = false;
 }
