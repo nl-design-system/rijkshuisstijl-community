@@ -4184,32 +4184,34 @@
   "components/form-field": {
     "utrecht": {
       "form-field": {
-        "margin-block-start": {
-          "value": "{rhc.space.100}",
-          "type": "spacing"
-        },
         "margin-block-end": {
+          "type": "dimension",
           "value": "{rhc.space.100}",
-          "type": "spacing"
+          "description": "[code-only]"
+        },
+        "margin-block-start": {
+          "type": "dimension",
+          "value": "{rhc.space.100}",
+          "description": "[code-only]"
         },
         "invalid": {
           "border-inline-start-color": {
-            "value": "{rhc.color.feedback.error.default}",
-            "type": "color"
+            "type": "color",
+            "value": "{rhc.color.feedback.error.default}"
           },
           "border-inline-start-width": {
-            "value": "{rhc.border-width.none}",
-            "type": "borderWidth"
+            "type": "dimension",
+            "value": "{rhc.border-width.none}"
           },
           "padding-inline-start": {
-            "value": "{rhc.space.0}",
-            "type": "spacing"
+            "type": "dimension",
+            "value": "{rhc.space.0}"
           }
         },
         "label": {
           "margin-block-end": {
-            "value": "{rhc.space.100}",
-            "type": "spacing"
+            "type": "dimension",
+            "value": "{rhc.space.100}"
           }
         }
       }
