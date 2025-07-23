@@ -24,9 +24,9 @@ import { PageLayoutComponent } from '../shared/page-layout/page-layout.component
 export class BoeteZoekenTemplate {
   form = new FormGroup(
     {
-      cjibNummer: new FormControl('', [Validators.required, Validators.pattern('^[0-9]+$')]),
-      datum: new FormControl('', [Validators.required, Validators.pattern('^\\d{4}-\\d{2}-\\d{2}$')]),
-      tijd: new FormControl('', [Validators.required, Validators.pattern('^([01]\\d|2[0-3]):[0-5]\\d$')]),
+      cjibNummer: new FormControl('', [Validators.required]),
+      datum: new FormControl('', [Validators.required]),
+      tijd: new FormControl('', [Validators.required]),
     },
     { updateOn: 'blur' },
   );
