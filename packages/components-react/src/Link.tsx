@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { PropsWithChildren, ReactNode, Ref } from 'react';
 import { Icon } from './Icon';
 
-export interface LinkProps extends CandidateLinkProps {
+export interface LinkProps extends Omit<CandidateLinkProps, 'disabled'> {
   external?: boolean;
   externalLabel?: ReactNode;
   ref?: Ref<HTMLAnchorElement>;
@@ -17,12 +17,12 @@ export const Link = ({
   externalLabel,
   ...restProps
 }: PropsWithChildren<LinkProps>) => (
-  <CandidateLink {...restProps} className={clsx('rhc-link', className)} ref={ref}>
+  <CandidateLink {...restProps} className={clsx('rhc-link', className)} ref={ref} disabled={false}>
     {children}
     {external && (
       <>
         <span className="rhc-link__sr-only">{externalLabel}</span>
-        <Icon icon={'externe-link'} />
+        <Icon icon="externe-link" />
       </>
     )}
   </CandidateLink>

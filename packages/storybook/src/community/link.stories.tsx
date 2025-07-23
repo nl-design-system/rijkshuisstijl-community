@@ -104,7 +104,7 @@ const meta = {
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Link.tsx',
     nldesignsystem: 'https://nldesignsystem.nl/link',
     componentOrigin:
-      'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
+      'Dit component is overgenomen van het NL Design System, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
   render: Link,
 } as Meta<typeof Link>;
@@ -123,23 +123,23 @@ export const Default: Story = {
 export const IconLeft: Story = {
   args: {
     href: '#',
-    children: [<IconCalendarEvent />, 'Label'],
+    children: [<IconCalendarEvent />, 'Nieuwe afspraak'],
   },
 };
 
 export const IconRight: Story = {
   args: {
     href: '#',
-    children: ['Label', <Icon icon={'pijl-naar-rechts'} />],
+    children: ['Verder', <Icon icon="pijl-naar-rechts" />],
   },
 };
 
 export const External: Story = {
   args: {
     href: '#',
-    children: 'Label',
+    children: 'Krantenartikel',
     external: true,
-    externalLabel: 'example external label',
+    externalLabel: 'deze link gaat naar ad.nl',
   },
 };
 
@@ -178,7 +178,7 @@ export const FocusVisible: Story = {
   args: {
     href: '#',
     children: 'Label',
-    className: 'utrecht-link--focus-visible nl-link--focus-visible',
+    className: 'nl-link--focus-visible',
   },
 };
 
@@ -199,12 +199,16 @@ export const LinkInParagraph: Story = {
   render({ href }) {
     return (
       <Paragraph>
-        In deze paragraaf staat een <Link href={href}>link naar een voorbeeldsite</Link> en{' '}
+        Het was in het voorjaar 1345, dat een talrijk aantal van naburen en vreemdelingen naar Haarlem was toegestroomd,
+        ter bijwoning van een plechtig feest, hetwelk binnen zijn muren door Graaf Willem den Vierden stond gegeven te
+        worden. In deze paragraaf staat een <Link href={href}>link naar een voorbeeldsite</Link> en{' '}
         <Link href={href}>
           <Icon icon={'pijl-naar-rechts'} />
           link met een icoon
         </Link>
-        .
+        . Onder die steden, welke vanouds aan de grafelijke kroon van Holland gelijk zoovele edelgesteenten flonkerden,
+        en wier macht en rijkdom tot een hechten steun verstrekten aan des Landsheer gezag, was Haarlem, gelijk genoeg
+        bekend is, een der voornaamste.
       </Paragraph>
     );
   },
