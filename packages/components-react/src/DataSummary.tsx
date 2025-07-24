@@ -14,11 +14,7 @@ export function DataSummary({
   ...restProps
 }: PropsWithChildren<DataSummaryProps>) {
   return (
-    <dl
-      className={clsx('rhc-data-summary', `rhc-data-summary--${appearance}`, className)}
-      ref={ref}
-      {...restProps}
-    >
+    <dl className={clsx('rhc-data-summary', `rhc-data-summary--${appearance}`, className)} ref={ref} {...restProps}>
       {children}
     </dl>
   );

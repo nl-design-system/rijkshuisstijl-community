@@ -19,6 +19,13 @@ const meta: Meta<StoryType> = {
     },
     required: {
       control: 'boolean',
+      description:
+        'Whether the input is required. Maps to the HTML `aria-required` attribute. Use this if you want to use Angular validation (recommended).',
+    },
+    inputRequired: {
+      control: 'boolean',
+      description:
+        'Maps to the HTML `required` attribute. Use this if you want to use HTML validation (not recommended).',
     },
     disabled: {
       control: 'boolean',
@@ -31,6 +38,7 @@ const meta: Meta<StoryType> = {
   args: {
     invalid: false,
     required: false,
+    inputRequired: false,
     disabled: false,
     readonly: false,
     type: 'text',
@@ -69,12 +77,6 @@ export const Default: StoryObj<StoryType> = {
     disabled: false,
   },
   name: 'Default',
-};
-
-export const Required: StoryObj<StoryType> = {
-  args: {
-    required: true,
-  },
 };
 
 export const Disabled: StoryObj<StoryType> = {
