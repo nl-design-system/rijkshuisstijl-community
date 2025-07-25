@@ -1,5 +1,19 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 4.0.1
+
+### Patch Changes
+
+- 808f3c7: - Accordion token update
+  - Accordion stijling gelijk getrokken met Figma design, blauwe border om de section.
+- b54d387: - Alert component token update, nav nieuwe Figma
+  - Blockquote component token update, nav nieuwe Figma
+  - NumberBadge component tokens update, nav nieuwe Figma
+  - Figure component token update, nav nieuwe Figma
+- 36ab047: Fix: update forgotten tokenset applications
+- a77a809: Removed unused tokens.
+- 2ea003d: Tokenupdate nav nieuwe Figma van diverse formelementen: Checkbox, Form Field, Form field Description, Form Field Error Message, Form Field Label, Radio Butoon, Select, Text Area, Text Input
+
 ## 4.0.0
 
 ### Major Changes
