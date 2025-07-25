@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/components-angular
 
+## 1.2.1
+
+### Patch Changes
+
+- 9e83410: Added "how to switch theme" instructions in the README.
+- dbb8167: The `rhc-data-summary` action is now wrapped in a `<dd>` tag
+
 ## 1.2.0
 
 ### Minor Changes

@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/components-react
 
+## 2.1.0
+
+### Minor Changes
+
+- a1502a5: Update Utrecht dependencies
+
+### Patch Changes
+
+- 9e83410: Added "how to switch theme" instructions in the README.
+
 ## 2.0.0
 
 ### Major Changes
