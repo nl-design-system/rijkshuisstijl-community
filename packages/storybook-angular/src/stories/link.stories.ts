@@ -21,6 +21,10 @@ const meta: Meta<LinkComponent> = {
       control: 'select',
       options: ['_self', '_blank', '_parent', '_top', '_unfencedTop'],
     },
+    inline: {
+      type: 'boolean',
+      description: 'Whether to render the link inside of running text or not',
+    },
   },
   args: {
     href: 'https://nldesignsystem.nl/',
@@ -55,7 +59,7 @@ export const LinkInParagraph: StoryObj<LinkComponent> = {
   render: ({ href }) => ({
     template: `
     <rhc-paragraph>
-        NL Design System maakt toegankelijk, inclusief en gebruiksvriendelijk ontwikkelen makkelijk. Op <rhc-link [href]="'${href}'" >deze pagina</rhc-link> lees je meer over wat dat technisch betekent. Voor meer informatie over het project zelf, zie ook
+        NL Design System maakt toegankelijk, inclusief en gebruiksvriendelijk ontwikkelen makkelijk. Op <rhc-link [href]="'${href}'" inline="true">deze pagina</rhc-link> lees je meer over wat dat technisch betekent. Voor meer informatie over het project zelf, zie ook
         <rhc-link [href]="'${href}'" ><rhc-icon icon='home' />Over NL-Design System</rhc-link>.
     </rhc-paragraph>`,
     props: {
