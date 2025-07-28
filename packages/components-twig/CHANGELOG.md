@@ -1,5 +1,14 @@
 # @rijkshuisstijl-community/components-twig
 
+## 1.3.6
+
+### Patch Changes
+
+- 9e83410: Fixed Twig peer dependency on React to run Chromatic snapshots locally.
+- Updated dependencies [9e83410]
+- Updated dependencies [a1502a5]
+  - @rijkshuisstijl-community/components-css@3.1.0
+
 ## 1.3.5
 
 ### Patch Changes
