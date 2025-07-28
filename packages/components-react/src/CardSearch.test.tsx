@@ -14,28 +14,27 @@ const linkTest = (component: ReactElement, href: string, title: string) => {
 };
 
 describe('CardSearch', () => {
-  describe('Default card', () => {
-    it('renders a visible element', () => {
-      const { container } = render(
-        <CardSearch description="Description" heading="Heading" href="#" subheading="Subheading" />,
-      );
-      const card = container.querySelector('.rhc-card-search');
-      expect(card).toBeInTheDocument();
-      expect(card).toBeVisible();
-    });
-    it('renders a link with the correct href and title', () => {
-      linkTest(
-        <CardSearch
-          description="Description"
-          heading="Heading"
-          href="/example"
-          subheading="Subheading"
-          title="Example Title"
-        />,
-        '/example',
-        'Example Title',
-      );
-    });
+  it('renders a visible element', () => {
+    const { container } = render(
+      <CardSearch description="Description" heading="Heading" href="#" subheading="Subheading" />,
+    );
+    const card = container.querySelector('.rhc-card-search');
+    expect(card).toBeInTheDocument();
+    expect(card).toBeVisible();
+  });
+
+  it('renders a link with the correct href and title', () => {
+    linkTest(
+      <CardSearch
+        description="Description"
+        heading="Heading"
+        href="/example"
+        subheading="Subheading"
+        title="Example Title"
+      />,
+      '/example',
+      'Example Title',
+    );
   });
 });
 

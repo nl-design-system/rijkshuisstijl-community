@@ -4,7 +4,7 @@ import readme from './card-search.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/CardSearch',
+  title: 'Rijkshuisstijl/Card Search',
   id: 'rhc-card-search',
   component: CardSearch,
   argTypes: {
@@ -101,18 +101,12 @@ export const Default: Story = {
   args: {
     heading: 'Card Search Heading',
     description: undefined,
-    href: '',
+    href: '#',
     subheading: undefined,
   },
   render: (args) => (
     <div>
-      <CardSearch
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        heading="Card Heading"
-        href={args['href']}
-        metadata="Metadata"
-        subheading="Card Subheading"
-      />
+      <CardSearch heading={undefined} {...args} />
     </div>
   ),
 };
