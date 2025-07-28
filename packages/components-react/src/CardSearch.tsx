@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import { forwardRef, type HTMLAttributes, JSX, type ReactNode, useId } from 'react';
+import { forwardRef, type HTMLAttributes, JSX, type ReactNode } from 'react';
 import { Link } from './Link';
 
 export interface CardSearchProps extends HTMLAttributes<HTMLDivElement> {
@@ -44,14 +44,12 @@ export const CardSearch = forwardRef<HTMLDivElement, CardSearchProps>(
     },
     ref,
   ) => {
-    const headingId = useId();
-
     return (
       <div className={clsx('rhc-card-search', 'rhc-card-search--default', className)} ref={ref} {...rest}>
         {image && <div className="rhc-card-search__image">{image}</div>}
 
         <div className="rhc-card-search__content">
-          <HTMLHeading className="rhc-card-search__heading" id={headingId} level={headingLevel}>
+          <HTMLHeading className="rhc-card-search__heading" level={headingLevel}>
             {href ? (
               <Link className="rhc-card-search__link" href={href} target={target}>
                 {heading}
