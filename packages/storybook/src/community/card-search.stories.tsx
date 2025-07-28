@@ -99,10 +99,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    heading: 'Card Search Heading',
-    description: undefined,
+    heading: 'Card Heading',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     href: '#',
-    subheading: undefined,
+    subheading: 'Card Subheading',
   },
   render: (args) => (
     <div>
