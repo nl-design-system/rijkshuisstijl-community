@@ -45,7 +45,16 @@ export class FormFieldTextInputComponent implements ControlValueAccessor {
   @Input() errorMessage?: string;
   @Input() description?: string;
   @Input() status?: string;
+  /**
+   * Whether the input is required. Maps to the HTML `aria-required` attribute.
+   * Use this if you want to use Angular validation (recommended).
+   */
   @Input() required?: boolean = false;
+  /**
+   * Maps to the HTML `required` attribute.
+   * Use this if you want to use HTML validation (not recommended).
+   */
+  @Input() inputRequired?: boolean = false;
   @Input() readonly?: boolean = false;
   @Input() dir?: 'auto' | 'ltr' | 'rtl' = 'auto';
   @Input() name?: string;
