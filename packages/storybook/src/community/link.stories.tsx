@@ -201,8 +201,12 @@ export const LinkInParagraph: Story = {
       <Paragraph>
         Het was in het voorjaar 1345, dat een talrijk aantal van naburen en vreemdelingen naar Haarlem was toegestroomd,
         ter bijwoning van een plechtig feest, hetwelk binnen zijn muren door Graaf Willem den Vierden stond gegeven te
-        worden. In deze paragraaf staat een <Link href={href}>link naar een voorbeeldsite</Link> en{' '}
-        <Link href={href}>
+        worden. In deze paragraaf staat een{' '}
+        <Link inline href={href}>
+          link naar een voorbeeldsite
+        </Link>{' '}
+        en{' '}
+        <Link inline href={href}>
           <Icon icon={'pijl-naar-rechts'} />
           link met een icoon
         </Link>

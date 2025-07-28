@@ -7,6 +7,7 @@ export interface LinkProps extends Omit<CandidateLinkProps, 'disabled'> {
   external?: boolean;
   externalLabel?: ReactNode;
   ref?: Ref<HTMLAnchorElement>;
+  inline?: boolean;
 }
 
 export const Link = ({
@@ -15,9 +16,15 @@ export const Link = ({
   className,
   external,
   externalLabel,
+  inline,
   ...restProps
 }: PropsWithChildren<LinkProps>) => (
-  <CandidateLink {...restProps} className={clsx('rhc-link', className)} ref={ref} disabled={false}>
+  <CandidateLink
+    {...restProps}
+    className={clsx('rhc-link', { 'rhc-link--inline': inline }, className)}
+    disabled={false}
+    ref={ref}
+  >
     {children}
     {external && (
       <>
