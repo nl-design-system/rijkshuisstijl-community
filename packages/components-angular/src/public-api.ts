@@ -9,7 +9,7 @@ export * from './action-group/action-group.component';
 export * from './image/image.component';
 export * from './figure/figure.component';
 export * from './figure-caption/figure-caption.component';
-export * from './icon/public-api';
+export * from './icon/icon.component';
 export * from './unordered-list/unordered-list.component';
 export * from './unordered-list-item/unordered-list-item.component';
 export * from './column-layout/column-layout.component';
