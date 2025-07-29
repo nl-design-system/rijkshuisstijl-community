@@ -347,55 +347,46 @@ export default function Componenten() {
                 <Paragraph role="status">{getStatusText(filteredComponents.length)}</Paragraph>
               </HeadingGroup>
 
-              <div className="rhc-grid-container__end" ref={resultsRef} tabIndex={-1}>
-                <HeadingGroup>
-                  <Heading appearanceLevel={3} id="results-heading" level={2}>
-                    Zoekresultaten
-                  </Heading>
-                  <Paragraph role="status">{getStatusText(filteredComponents.length)}</Paragraph>
-                </HeadingGroup>
-
-                {filteredComponents.length > 0 && (
-                  <ol aria-labelledby="results-heading" className="rhc-ordered-list">
-                    {filteredComponents.map((component, index, array) => (
-                      <li aria-posinset={index + 1} aria-setsize={array.length} key={component.heading}>
-                        <CardAsLink
-                          className="rhc-templates-card"
-                          description={<Paragraph>{component.description}</Paragraph>}
-                          href={component.href}
-                          linkLabel={component.linkLabel}
-                          target="_blank"
-                          title={component.title}
-                          heading={
-                            <Heading appearanceLevel={4} level={2}>
-                              {component.heading}
-                            </Heading>
-                          }
+              {filteredComponents.length > 0 && (
+                <ol aria-labelledby="results-heading" className="rhc-ordered-list">
+                  {filteredComponents.map((component, index, array) => (
+                    <li aria-posinset={index + 1} aria-setsize={array.length} key={component.heading}>
+                      <CardAsLink
+                        className="rhc-templates-card"
+                        description={<Paragraph>{component.description}</Paragraph>}
+                        href={component.href}
+                        linkLabel={component.linkLabel}
+                        target="_blank"
+                        title={component.title}
+                        heading={
+                          <Heading appearanceLevel={4} level={2}>
+                            {component.heading}
+                          </Heading>
+                        }
+                      >
+                        <BadgeList
+                          aria-label={`Framework opties voor ${component.heading}`}
+                          className="rhc-templates-badgelist"
+                          role="group"
                         >
-                          <BadgeList
-                            aria-label={`Framework opties voor ${component.heading}`}
-                            className="rhc-templates-badgelist"
-                            role="group"
-                          >
-                            {component.frameworks.map((framework) => (
-                              <DataBadgeButton
-                                aria-label={`${framework} filter ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
-                                helperText={`- Klik om filter te ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
-                                key={framework}
-                                pressed={selectedFrameworks.includes(framework)}
-                                value={framework}
-                                onClick={() => handleDataBadgeClick(framework)} // FIXED: Direct call instead of data-value extraction
-                              >
-                                {framework}
-                              </DataBadgeButton>
-                            ))}
-                          </BadgeList>
-                        </CardAsLink>
-                      </li>
-                    ))}
-                  </ol>
-                )}
-              </div>
+                          {component.frameworks.map((framework) => (
+                            <DataBadgeButton
+                              aria-label={`${framework} filter ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
+                              helperText={`- Klik om filter te ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
+                              key={framework}
+                              pressed={selectedFrameworks.includes(framework)}
+                              value={framework}
+                              onClick={() => handleDataBadgeClick(framework)} // FIXED: Direct call instead of data-value extraction
+                            >
+                              {framework}
+                            </DataBadgeButton>
+                          ))}
+                        </BadgeList>
+                      </CardAsLink>
+                    </li>
+                  ))}
+                </ol>
+              )}
             </div>
           </div>
         </SharedMainPageContent>
