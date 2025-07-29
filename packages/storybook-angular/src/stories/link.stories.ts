@@ -60,7 +60,7 @@ export const LinkInParagraph: StoryObj<LinkComponent> = {
     template: `
     <rhc-paragraph>
         NL Design System maakt toegankelijk, inclusief en gebruiksvriendelijk ontwikkelen makkelijk. Op <rhc-link [href]="'${href}'" inline="true">deze pagina</rhc-link> lees je meer over wat dat technisch betekent. Voor meer informatie over het project zelf, zie ook
-        <rhc-link [href]="'${href}'" ><rhc-icon icon='home' />Over NL-Design System</rhc-link>.
+        <rhc-link [href]="'${href}'" inline="true"><rhc-icon icon='home' />Over NL-Design System</rhc-link>.
     </rhc-paragraph>`,
     props: {
       href,
