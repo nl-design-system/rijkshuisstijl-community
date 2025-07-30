@@ -123,21 +123,21 @@ export const Default: Story = {
 export const IconLeft: Story = {
   args: {
     href: '#',
-    children: [<IconCalendarEvent />, 'Label'],
+    children: [<IconCalendarEvent />, 'Nieuwe afspraak'],
   },
 };
 
 export const IconRight: Story = {
   args: {
     href: '#',
-    children: ['Label', <Icon icon="pijl-naar-rechts" />],
+    children: ['Verder', <Icon icon="pijl-naar-rechts" />],
   },
 };
 
 export const External: Story = {
   args: {
     href: '#',
-    children: 'Label',
+    children: 'Krantenartikel',
     external: true,
     externalLabel: 'deze link gaat naar ad.nl',
   },
