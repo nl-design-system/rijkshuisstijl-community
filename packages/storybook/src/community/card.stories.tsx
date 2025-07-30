@@ -1,12 +1,12 @@
-import { CardSearch } from '@rijkshuisstijl-community/components-react';
+import { Card } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from './card-search.md?raw';
+import readme from './card.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Card Search',
-  id: 'rhc-card-search',
-  component: CardSearch,
+  title: 'Rijkshuisstijl/Card',
+  id: 'rhc-card',
+  component: Card,
   argTypes: {
     appearance: {
       description: 'Card appearance',
@@ -91,7 +91,7 @@ const meta = {
     nldesignsystem: 'https://nldesignsystem.nl/card-as-link',
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
-} as Meta<typeof CardSearch>;
+} as Meta<typeof Card>;
 
 export default meta;
 
@@ -107,7 +107,7 @@ export const Default: Story = {
   },
   render: (args) => (
     <div>
-      <CardSearch heading={undefined} {...args} />
+      <Card heading={undefined} {...args} />
     </div>
   ),
 };

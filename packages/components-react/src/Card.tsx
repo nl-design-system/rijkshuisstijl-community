@@ -3,7 +3,7 @@ import React from 'react';
 import { forwardRef, type HTMLAttributes, JSX, type ReactNode } from 'react';
 import { Link } from './Link';
 
-export interface CardSearchProps extends HTMLAttributes<HTMLDivElement> {
+export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   heading: ReactNode;
   headingLevel?: 1 | 2 | 3 | 4 | 5 | 6;
   subheading?: ReactNode;
@@ -26,7 +26,7 @@ const HTMLHeading = ({
   return React.createElement(Tag, rest, children);
 };
 
-export const CardSearch = forwardRef<HTMLDivElement, CardSearchProps>(
+export const Card = forwardRef<HTMLDivElement, CardProps>(
   (
     {
       heading,
@@ -45,13 +45,13 @@ export const CardSearch = forwardRef<HTMLDivElement, CardSearchProps>(
     ref,
   ) => {
     return (
-      <div className={clsx('rhc-card-search', 'rhc-card-search--default', className)} ref={ref} {...rest}>
-        {image && <div className="rhc-card-search__image">{image}</div>}
+      <div className={clsx('rhc-card', 'rhc-card--default', className)} ref={ref} {...rest}>
+        {image && <div className="rhc-card__image">{image}</div>}
 
-        <div className="rhc-card-search__content">
-          <HTMLHeading className="rhc-card-search__heading" level={headingLevel}>
+        <div className="rhc-card__content">
+          <HTMLHeading className="rhc-card__heading" level={headingLevel}>
             {href ? (
-              <Link className="rhc-card-search__link" href={href} target={target}>
+              <Link className="rhc-card__link" href={href} target={target}>
                 {heading}
               </Link>
             ) : (
@@ -59,18 +59,18 @@ export const CardSearch = forwardRef<HTMLDivElement, CardSearchProps>(
             )}
           </HTMLHeading>
 
-          {subheading && <p className="rhc-card-search__subheading">{subheading}</p>}
+          {subheading && <p className="rhc-card__subheading">{subheading}</p>}
 
-          {description && <p className="rhc-card-search__description">{description}</p>}
+          {description && <p className="rhc-card__description">{description}</p>}
 
-          {metadata && <p className="rhc-card-search__metadata">{metadata}</p>}
+          {metadata && <p className="rhc-card__metadata">{metadata}</p>}
 
           {children}
         </div>
 
         {linkLabel && (
-          <div className="rhc-card-search__footer">
-            <div className="rhc-card-search__link" data-testid="rhc-card-search__link">
+          <div className="rhc-card__footer">
+            <div className="rhc-card__link" data-testid="rhc-card__link">
               <Link href={href} target={target}>
                 {linkLabel}
               </Link>
@@ -82,4 +82,4 @@ export const CardSearch = forwardRef<HTMLDivElement, CardSearchProps>(
   },
 );
 
-CardSearch.displayName = 'CardSearch';
+Card.displayName = 'Card';

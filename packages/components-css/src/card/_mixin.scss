@@ -1,4 +1,4 @@
-@mixin rhc-card-search {
+@mixin rhc-card {
   @include rounded-border-corners;
 
   box-sizing: border-box;
@@ -13,7 +13,7 @@
   text-decoration: none;
 }
 
-@mixin rhc-card-search--default {
+@mixin rhc-card--default {
   background-color: var(--rhc-card-as-link-background-color, white);
   border-color: var(--rhc-card-as-link-border-color, #cbd5e1);
   border-style: solid;
@@ -21,7 +21,7 @@
   color: var(--rhc-card-as-link-color, #154273);
 }
 
-@mixin rhc-card-search__content {
+@mixin rhc-card__content {
   display: flex;
   flex-direction: column;
   padding-block-end: var(--rhc-card-as-link-padding-block-end, 16px);
@@ -31,7 +31,7 @@
   row-gap: var(--rhc-card-as-link-row-gap, 12px);
 }
 
-@mixin rhc-card-search__heading {
+@mixin rhc-card__heading {
   align-items: center;
   display: flex;
   font-size: var(--rhc-card-as-link-heading-font-size, 24px);
@@ -39,42 +39,42 @@
   text-decoration: none;
 }
 
-@mixin rhc-card-search__heading--active {
+@mixin rhc-card__heading--active {
   text-decoration: var(--rhc-card-as-link-active-text-decoration, underline);
 }
-@mixin rhc-card-search__heading--hover {
+@mixin rhc-card__heading--hover {
   text-decoration: var(--rhc-card-as-link-hover-text-decoration, underline);
 }
-@mixin rhc-card-search__heading--focus {
+@mixin rhc-card__heading--focus {
   text-decoration: var(--rhc-card-as-link-focus-text-decoration, underline);
 }
 
-@mixin rhc-card-search__subheading {
+@mixin rhc-card__subheading {
   align-items: center;
   display: flex;
   font-size: var(--rhc-font-size-lg);
   text-decoration: none;
 }
 
-@mixin rhc-card-search__link {
+@mixin rhc-card__link {
   color: var(--rhc-card-as-link-link-color, #01689b);
   text-decoration: none !important;
 }
 
-@mixin rhc-card-search__link--active {
+@mixin rhc-card__link--active {
   --utrecht-link-color: var(--rhc-card-as-link-link-active-color, #42145f);
 
   color: var(--rhc-card-as-link-link-active-color, #42145f);
   text-decoration: var(--rhc-card-as-link-link-active-text-decoration, none);
 }
-@mixin rhc-card-search__link--hover {
+@mixin rhc-card__link--hover {
   text-decoration: var(--rhc-card-as-link-link-hover-text-decoration, none);
 }
-@mixin rhc-card-search__link--focus {
+@mixin rhc-card__link--focus {
   text-decoration: var(--rhc-card-as-link-link-focus-text-decoration, none);
 }
 
-@mixin rhc-card-search__metadata {
+@mixin rhc-card__metadata {
   color: var(--rhc-card-as-link-metadata-color, #154273);
 }
 
