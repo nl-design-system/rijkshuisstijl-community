@@ -32,18 +32,6 @@
   @include mixin.rhc-card__link;
 }
 
-// CARD STATES //
-// .rhc-card:active {
-//   @include mixin.rhc-card--active;
-// }
-// .rhc-card--default:focus {
-//   @include mixin.rhc-card--default--focus;
-// }
-// .rhc-card--default:hover {
-//   @include mixin.rhc-card--default--hover;
-// }
-
-// HEADING STATES //
 .rhc-card:active .rhc-card__heading {
   @include mixin.rhc-card__heading--active;
 }
@@ -54,12 +42,6 @@
   @include mixin.rhc-card__heading--active;
 }
 
-// SUBHEADING STATES //
-// .rhc-card:hover .rhc-card__subheading {
-//   @include mixin.rhc-card__subheading--active;
-// }
-
-// LINK STATES //
 .rhc-card:active .rhc-card__link {
   @include mixin.rhc-card__link--active;
 }
