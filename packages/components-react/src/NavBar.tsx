@@ -105,14 +105,32 @@ export const NavBar = ({
       <nav className={clsx('rhc-nav-bar', className)} ref={ref} {...restProps}>
         <ul className="rhc-nav-bar__list">
           {headingItem && <NavBarItem className="rhc-nav-bar__heading" {...headingItem} />}
-          {items.map(({ id, href, target, label, icon, subList }) => (
-            <NavBarItem href={href} icon={icon} id={id} key={id} label={label} subList={subList} target={target} />
+          {items.map(({ id, href, target, label, icon, subList, ...itemRestProps }) => (
+            <NavBarItem
+              href={href}
+              icon={icon}
+              id={id}
+              key={id}
+              label={label}
+              subList={subList}
+              target={target}
+              {...itemRestProps}
+            />
           ))}
         </ul>
         {endItems && (
           <ul className="rhc-nav-bar__list rhc-nav-bar__list--end">
-            {endItems.map(({ id, href, target, label, icon, subList }) => (
-              <NavBarItem href={href} icon={icon} id={id} key={id} label={label} subList={subList} target={target} />
+            {endItems.map(({ id, href, target, label, icon, subList, ...endItemRestProps }) => (
+              <NavBarItem
+                href={href}
+                icon={icon}
+                id={id}
+                key={id}
+                label={label}
+                subList={subList}
+                target={target}
+                {...endItemRestProps}
+              />
             ))}
           </ul>
         )}
