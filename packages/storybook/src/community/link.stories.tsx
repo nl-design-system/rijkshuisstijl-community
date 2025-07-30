@@ -2,7 +2,6 @@
 
 import { Icon, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { IconCalendarEvent } from '@tabler/icons-react';
 import readme from '@utrecht/components/link/README.md?raw';
 import anatomyDocs from '@utrecht/components/link/docs/anatomy.nl.md?raw';
 import contentDocs from '@utrecht/components/link/docs/content.nl.md?raw';
@@ -123,14 +122,14 @@ export const Default: Story = {
 export const IconLeft: Story = {
   args: {
     href: '#',
-    children: [<IconCalendarEvent />, 'Nieuwe afspraak'],
+    children: [<Icon className="rhc-link--icon" icon="kalender" />, 'Nieuwe afspraak'],
   },
 };
 
 export const IconRight: Story = {
   args: {
     href: '#',
-    children: ['Verder', <Icon icon="pijl-naar-rechts" />],
+    children: ['Verder', <Icon className="rhc-link--icon" icon="pijl-naar-rechts" />],
   },
 };
 

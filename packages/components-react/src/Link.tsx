@@ -29,7 +29,7 @@ export const Link = ({
     {external && (
       <>
         <span className="rhc-link__sr-only">{externalLabel}</span>
-        <Icon icon="externe-link" />
+        <Icon className="rhc-link--icon" icon="externe-link" />
       </>
     )}
   </CandidateLink>
