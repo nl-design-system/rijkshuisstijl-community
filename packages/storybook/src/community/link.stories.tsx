@@ -205,7 +205,7 @@ export const LinkInParagraph: Story = {
         <Link inline href={href}>
           link naar een voorbeeldsite
         </Link>{' '}
-        en{' '}
+        en een{' '}
         <Link inline href={href}>
           <Icon icon={'pijl-naar-rechts'} />
           link met een icoon
