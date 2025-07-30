@@ -59,9 +59,12 @@ export const CardSearch = forwardRef<HTMLDivElement, CardSearchProps>(
             )}
           </HTMLHeading>
 
-          {subheading && <div className="rhc-card-search__subheading">{subheading}</div>}
-          {description && <div className="rhc-card-search__description">{description}</div>}
-          {metadata && <div className="rhc-card-search__metadata">{metadata}</div>}
+          {subheading && <p className="rhc-card-search__subheading">{subheading}</p>}
+
+          {description && <p className="rhc-card-search__description">{description}</p>}
+
+          {metadata && <p className="rhc-card-search__metadata">{metadata}</p>}
+
           {children}
         </div>
 
