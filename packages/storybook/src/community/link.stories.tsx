@@ -123,21 +123,21 @@ export const Default: Story = {
 export const IconLeft: Story = {
   args: {
     href: '#',
-    children: [<IconCalendarEvent />, 'Nieuwe afspraak'],
+    children: [<IconCalendarEvent />, 'Label'],
   },
 };
 
 export const IconRight: Story = {
   args: {
     href: '#',
-    children: ['Verder', <Icon icon="pijl-naar-rechts" />],
+    children: ['Label', <Icon icon="pijl-naar-rechts" />],
   },
 };
 
 export const External: Story = {
   args: {
     href: '#',
-    children: 'Krantenartikel',
+    children: 'Label',
     external: true,
     externalLabel: 'deze link gaat naar ad.nl',
   },
@@ -205,10 +205,9 @@ export const LinkInParagraph: Story = {
         <Link inline href={href}>
           link naar een voorbeeldsite
         </Link>{' '}
-        en een{' '}
+        en nog een{' '}
         <Link inline href={href}>
-          <Icon icon={'pijl-naar-rechts'} />
-          link met een icoon
+          link zonder icoon
         </Link>
         . Onder die steden, welke vanouds aan de grafelijke kroon van Holland gelijk zoovele edelgesteenten flonkerden,
         en wier macht en rijkdom tot een hechten steun verstrekten aan des Landsheer gezag, was Haarlem, gelijk genoeg
