@@ -1,0 +1,75 @@
+@use "mixin";
+
+.rhc-card {
+  @include mixin.rhc-card;
+  .utrecht-img:not(img[width]) {
+    block-size: 100%;
+    inline-size: 100%;
+  }
+}
+
+.rhc-card--default {
+  @include mixin.rhc-card--default;
+}
+
+.rhc-card__heading {
+  @include mixin.rhc-card__heading;
+}
+
+.rhc-card__subheading {
+  @include mixin.rhc-card__subheading;
+}
+
+.rhc-card__metadata {
+  @include mixin.rhc-card__metadata;
+}
+
+.rhc-card__content {
+  @include mixin.rhc-card__content;
+}
+
+.rhc-card__link {
+  @include mixin.rhc-card__link;
+}
+
+// CARD STATES //
+// .rhc-card:active {
+//   @include mixin.rhc-card--active;
+// }
+// .rhc-card--default:focus {
+//   @include mixin.rhc-card--default--focus;
+// }
+// .rhc-card--default:hover {
+//   @include mixin.rhc-card--default--hover;
+// }
+
+// HEADING STATES //
+.rhc-card:active .rhc-card__heading {
+  @include mixin.rhc-card__heading--active;
+}
+.rhc-card:focus .rhc-card__heading {
+  @include mixin.rhc-card__heading--active;
+}
+.rhc-card:hover .rhc-card__heading {
+  @include mixin.rhc-card__heading--active;
+}
+
+// SUBHEADING STATES //
+// .rhc-card:hover .rhc-card__subheading {
+//   @include mixin.rhc-card__subheading--active;
+// }
+
+// LINK STATES //
+.rhc-card:active .rhc-card__link {
+  @include mixin.rhc-card__link--active;
+}
+.rhc-card:focus .rhc-card__link {
+  @include mixin.rhc-card__link--focus;
+}
+.rhc-card:hover .rhc-card__link {
+  @include mixin.rhc-card__link--hover;
+}
+
+.rhc-card__footer {
+  @include mixin.rhc-card__content;
+}

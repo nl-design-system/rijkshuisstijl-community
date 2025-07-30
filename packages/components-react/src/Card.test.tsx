@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/vitest';
 import { cleanup, render } from '@testing-library/react';
 import { ReactElement } from 'react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { CardSearch } from './CardSearch';
+import { Card } from './Card';
 
 const linkTest = (component: ReactElement, href: string, title: string) => {
   const { getByRole } = render(component);
@@ -13,19 +13,17 @@ const linkTest = (component: ReactElement, href: string, title: string) => {
   expect(link).toHaveAttribute('title', title);
 };
 
-describe('CardSearch', () => {
+describe('Card', () => {
   it('renders a visible element', () => {
-    const { container } = render(
-      <CardSearch description="Description" heading="Heading" href="#" subheading="Subheading" />,
-    );
-    const card = container.querySelector('.rhc-card-search');
+    const { container } = render(<Card description="Description" heading="Heading" href="#" subheading="Subheading" />);
+    const card = container.querySelector('.rhc-card');
     expect(card).toBeInTheDocument();
     expect(card).toBeVisible();
   });
 
   it('renders a link with the correct href and title', () => {
     linkTest(
-      <CardSearch
+      <Card
         description="Description"
         heading="Heading"
         href="/example"
