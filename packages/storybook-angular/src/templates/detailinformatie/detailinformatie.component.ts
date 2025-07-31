@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TablerIconComponent } from 'angular-tabler-icons';
 import {
   ActionGroupComponent,
   ButtonComponent,
@@ -24,6 +25,7 @@ import { PageLayoutComponent } from '../shared/page-layout/page-layout.component
     LinkComponent,
     DataSummaryComponent,
     DataSummaryItemComponent,
+    TablerIconComponent,
   ],
   styleUrl: './detailinformatie.component.css',
 })
