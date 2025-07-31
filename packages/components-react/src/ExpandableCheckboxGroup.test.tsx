@@ -4,29 +4,27 @@ import { userEvent } from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import { ExpandableCheckboxGroup } from './ExpandableCheckboxGroup';
 
-// groups all tests
 describe('ExpandableCheckboxGroup', () => {
+  const testOptions = [
+    { value: 'value', label: 'React' },
+    { value: 'value2', label: 'CSS' },
+    { value: 'value3', label: 'Angular' },
+    { value: 'value4', label: 'Web Component' },
+    { value: 'value5', label: 'Vue' },
+  ];
   it('renders successfully', () => {
     const { container } = render(
       <ExpandableCheckboxGroup
         legend="Test"
         maxVisible={3}
+        options={testOptions}
         selectedOptions={[]}
-        options={[
-          { value: 'value', label: 'React' },
-          { value: 'value2', label: 'CSS' },
-          { value: 'value3', label: 'Angular' },
-          { value: 'value4', label: 'Web Component' },
-          { value: 'value5', label: 'Vue' },
-        ]}
         onOptionChange={vi.fn()}
       />,
     );
     const expandableCheckboxGroup = container.querySelector('details');
     expect(expandableCheckboxGroup).toBeInTheDocument();
   });
-
-  // screen.debug();
 
   // test: can have an expanded state
   it('can be expanded when summary is clicked', async () => {
@@ -35,14 +33,8 @@ describe('ExpandableCheckboxGroup', () => {
       <ExpandableCheckboxGroup
         legend="Test"
         maxVisible={3}
+        options={testOptions}
         selectedOptions={[]}
-        options={[
-          { value: 'value', label: 'React' },
-          { value: 'value2', label: 'CSS' },
-          { value: 'value3', label: 'Angular' },
-          { value: 'value4', label: 'Web Component' },
-          { value: 'value5', label: 'Vue' },
-        ]}
         onOptionChange={vi.fn()}
       />,
     );
@@ -57,21 +49,15 @@ describe('ExpandableCheckboxGroup', () => {
     expect(details).toHaveAttribute('open');
   });
 
-  // can use custom classnames
+  // test: can use custom classnames
   it('applies custom classnames', async () => {
     const { container } = render(
       <ExpandableCheckboxGroup
         className={'rhc-custom-classname'}
         legend="Test"
         maxVisible={3}
+        options={testOptions}
         selectedOptions={[]}
-        options={[
-          { value: 'value', label: 'React' },
-          { value: 'value2', label: 'CSS' },
-          { value: 'value3', label: 'Angular' },
-          { value: 'value4', label: 'Web Component' },
-          { value: 'value5', label: 'Vue' },
-        ]}
         onOptionChange={vi.fn()}
       />,
     );
@@ -80,5 +66,28 @@ describe('ExpandableCheckboxGroup', () => {
     expect(expandableCheckboxGroup).toBeInTheDocument();
 
     expect(expandableCheckboxGroup).toHaveClass('rhc-custom-classname');
+  });
+
+  // test: only shows maxVisible options when not expanded
+  it('shows only maxVisible options when collapsed', () => {
+    const { container } = render(
+      <ExpandableCheckboxGroup
+        className={'rhc-custom-classname'}
+        legend="Test"
+        maxVisible={3}
+        options={testOptions}
+        selectedOptions={[]}
+        onOptionChange={vi.fn()}
+      />,
+    );
+
+    const details = container.querySelector('details');
+    expect(details).not.toHaveAttribute('open');
+
+    const allCheckboxes = container.querySelectorAll('input[type="checkbox"]');
+    expect(allCheckboxes).toHaveLength(testOptions.length);
+
+    expect(allCheckboxes[0]).toBeVisible();
+    expect(allCheckboxes[allCheckboxes.length - 1]).not.toBeVisible();
   });
 });
