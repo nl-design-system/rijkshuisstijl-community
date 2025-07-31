@@ -105,32 +105,14 @@ export const NavBar = ({
       <nav className={clsx('rhc-nav-bar', className)} ref={ref} {...restProps}>
         <ul className="rhc-nav-bar__list">
           {headingItem && <NavBarItem className="rhc-nav-bar__heading" {...headingItem} />}
-          {items.map(({ id, href, target, label, icon, subList, ...itemRestProps }) => (
-            <NavBarItem
-              href={href}
-              icon={icon}
-              id={id}
-              key={id}
-              label={label}
-              subList={subList}
-              target={target}
-              {...itemRestProps}
-            />
+          {items.map((item) => (
+            <NavBarItem key={item.id} {...item} />
           ))}
         </ul>
         {endItems && (
           <ul className="rhc-nav-bar__list rhc-nav-bar__list--end">
-            {endItems.map(({ id, href, target, label, icon, subList, ...endItemRestProps }) => (
-              <NavBarItem
-                href={href}
-                icon={icon}
-                id={id}
-                key={id}
-                label={label}
-                subList={subList}
-                target={target}
-                {...endItemRestProps}
-              />
+            {endItems.map((enditem) => (
+              <NavBarItem key={enditem.id} {...enditem} />
             ))}
           </ul>
         )}
@@ -147,8 +129,8 @@ export const SubNavBar = ({ ref, children, className, columns, ...restProps }: P
     <div className={clsx('rhc-sub-nav-bar', className)} ref={ref} {...restProps}>
       <div className="rhc-sub-nav-bar__content">
         <ColumnLayout>
-          {columns.map((column: NavBarLinkProps[], index: number) => (
-            <div className="rhc-sub-nav-bar__list" key={index}>
+          {columns.map((column: NavBarLinkProps[]) => (
+            <div className="rhc-sub-nav-bar__list" key={column.map((item) => item.id).join('-')}>
               <LinkList>
                 {column.map(({ id, href, target, label }) => (
                   <LinkListLink href={href} icon={<Icon icon={'chevron-right'} />} key={id} target={target}>

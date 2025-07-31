@@ -12,9 +12,7 @@ describe('NavBar', () => {
     expect(navBar).toBeInTheDocument();
     expect(navBar).toBeVisible();
   });
-});
 
-describe('NavBarItem', () => {
   it('renders a nav bar item element', () => {
     render(
       <NavBar
@@ -30,6 +28,26 @@ describe('NavBarItem', () => {
 
     const navBarItem = screen.getByRole('link', {
       name: /test item/i,
+    });
+    expect(navBarItem).toBeVisible();
+  });
+
+  it('renders a nav bar end item element', () => {
+    render(
+      <NavBar
+        items={[]}
+        endItems={[
+          {
+            id: 'test-end-item',
+            href: '#',
+            label: 'Test End Item',
+          },
+        ]}
+      />,
+    );
+
+    const navBarItem = screen.getByRole('link', {
+      name: /test end item/i,
     });
     expect(navBarItem).toBeVisible();
   });
@@ -51,5 +69,4 @@ describe('NavBarItem', () => {
     expect(navBarItem).toHaveClass('custom-class');
   });
 });
-
 afterEach(() => cleanup());
