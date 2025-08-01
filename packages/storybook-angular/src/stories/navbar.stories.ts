@@ -6,6 +6,8 @@ import {
   NavbarItemComponent,
 } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, moduleMetadata, type StoryObj } from '@storybook/angular';
+import { provideTablerIcons, TablerIconComponent } from 'angular-tabler-icons';
+import { IconCalendarCheck, IconHome, IconSearch, IconTransfer, IconUser } from 'angular-tabler-icons/icons';
 import readme from './navbar.md';
 
 const meta: Meta<NavbarComponent> = {
@@ -14,7 +16,16 @@ const meta: Meta<NavbarComponent> = {
   component: NavbarComponent,
   decorators: [
     moduleMetadata({
-      imports: [NavbarItemComponent, HeadingItemDirective],
+      imports: [NavbarItemComponent, HeadingItemDirective, TablerIconComponent],
+      providers: [
+        provideTablerIcons({
+          IconHome,
+          IconUser,
+          IconSearch,
+          IconCalendarCheck,
+          IconTransfer,
+        }),
+      ],
     }),
   ],
   argTypes: {
@@ -67,19 +78,27 @@ export const WithIcons: StoryObj<NavbarComponent> = {
     template: `
     <rhc-navbar>
         <li rhc-navbar-item href="#">
-            <rhc-icon icon="home" />
+            <rhc-icon>
+              <i-tabler name="home"/>
+            </rhc-icon>
             Link
         </li>
         <li rhc-navbar-item href="#">
-            <rhc-icon icon="zoek" />
+            <rhc-icon>
+              <i-tabler name="search"/>
+            </rhc-icon>
             Link
         </li>
         <li rhc-navbar-item href="#">
-            <rhc-icon icon="gegevensuitwisseling" />
+            <rhc-icon>
+              <i-tabler name="transfer"/>
+            </rhc-icon>
             Link
         </li>
         <li rhc-navbar-item href="#">
-            <rhc-icon icon="user" />
+            <rhc-icon>
+              <i-tabler name="user"/>
+            </rhc-icon>
             Link
         </li>
     </rhc-navbar>
@@ -99,15 +118,21 @@ export const WithHeading: StoryObj<NavbarComponent> = {
             Heading
         </li>
         <li rhc-navbar-item href="#">
-            <rhc-icon icon="zoek" />
+            <rhc-icon>
+              <i-tabler name="search"/>
+            </rhc-icon>
             Link
         </li>
         <li rhc-navbar-item href="#">
-            <rhc-icon icon="gegevensuitwisseling" />
+            <rhc-icon>
+              <i-tabler name="transfer"/>
+            </rhc-icon>
             Link
         </li>
         <li rhc-navbar-item href="#">
-            <rhc-icon icon="user" />
+            <rhc-icon>
+              <i-tabler name="user"/>
+            </rhc-icon>
             Link
         </li>
     </rhc-navbar>
@@ -124,23 +149,33 @@ export const WithEndItems: StoryObj<NavbarComponent> = {
     template: `
     <rhc-navbar [showEndItems]="true">
         <li rhc-navbar-item href="#">
-            <rhc-icon icon="home" />
+            <rhc-icon>
+              <i-tabler name="home"/>
+            </rhc-icon>
             Link
         </li>
         <li rhc-navbar-item href="#">
-            <rhc-icon icon="zoek" />
+            <rhc-icon>
+              <i-tabler name="search"/>
+            </rhc-icon>
             Link
         </li>
         <li rhc-navbar-item href="#">
-            <rhc-icon icon="gegevensuitwisseling" />
+            <rhc-icon>
+              <i-tabler name="transfer"/>
+            </rhc-icon>
             Link
         </li>
         <li rhc-navbar-item rhcEndItem href="#">
-            <rhc-icon icon="user" />
+            <rhc-icon>
+              <i-tabler name="user"/>
+            </rhc-icon>
             Link
         </li>
         <li rhc-navbar-item rhcEndItem href="#">
-            <rhc-icon icon="kalender" />
+            <rhc-icon>
+              <i-tabler name="calendar-check"/>
+            </rhc-icon>
             Link
         </li>
     </rhc-navbar>
