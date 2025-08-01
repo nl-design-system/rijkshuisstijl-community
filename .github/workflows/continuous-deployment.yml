@@ -135,6 +135,7 @@ jobs:
           autoAcceptChanges: main
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           storybookBuildDir: packages/storybook/dist/
+          exitOnceUploaded: true
 
   publish-website:
     runs-on: ubuntu-latest
