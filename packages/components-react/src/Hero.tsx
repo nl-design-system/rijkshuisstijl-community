@@ -40,7 +40,7 @@ export const Hero = ({
   heading,
   subHeading,
   headingLevel = 3,
-  headingAppearanceLevel = 3,
+  headingAppearanceLevel = headingLevel,
   borderRadiusCorner,
   aspectRatio = '16 / 9',
   ...restProps
