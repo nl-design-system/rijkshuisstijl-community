@@ -17,16 +17,6 @@
   inline-size: 1em;
 }
 
-@mixin rhc-link--visited {
-  --nl-link-text-decoration-color: var(--nl-link-visited-color, inherit);
-
-  color: var(--utrecht-link-visited-color, inherit);
-}
-
-@mixin rhc-link--visited-icon {
-  color: var(--nl-link-visited-color, inherit);
-}
-
 @mixin rhc-link--focus-visible {
   --nl-link-text-decoration-line: var(--nl-link-focus-text-decoration, inherit);
 
