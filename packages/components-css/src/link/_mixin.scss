@@ -17,6 +17,10 @@
   inline-size: 1em;
 }
 
+@mixin rhc-link--focus-visible {
+  z-index: 1;
+}
+
 @mixin rhc-link--inline {
   display: inline;
 }
