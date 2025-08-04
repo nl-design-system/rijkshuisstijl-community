@@ -67,6 +67,53 @@ describe('Hero', () => {
     expect(hero).toHaveClass('rhc-hero--border-radius-corner-start-end');
   });
 
+  it('applies the right headingAppearanceLevel class if provided', () => {
+    render(
+      <Hero
+        heading="Test Heading"
+        headingAppearanceLevel={5}
+        imageAlt="Test Alt Text"
+        imageSrc="test-image.jpg"
+        subHeading="Test subHeading"
+      />,
+    );
+
+    const heading = screen.getByRole('heading');
+
+    expect(heading).toHaveClass('nl-heading--level-5');
+  });
+
+  it('does not change header level when applying headingAppearanceLevel', () => {
+    render(
+      <Hero
+        heading="Test Heading"
+        headingAppearanceLevel={5}
+        imageAlt="Test Alt Text"
+        imageSrc="test-image.jpg"
+        subHeading="Test subHeading"
+      />,
+    );
+
+    const heading = screen.queryByRole('heading', { level: 5 });
+    expect(heading).not.toBeInTheDocument();
+  });
+
+  it('applies the right headingAppearanceLevel class if headingLevel is provided', () => {
+    render(
+      <Hero
+        heading="Test Heading"
+        headingLevel={5}
+        imageAlt="Test Alt Text"
+        imageSrc="test-image.jpg"
+        subHeading="Test subHeading"
+      />,
+    );
+
+    const heading = screen.getByRole('heading');
+
+    expect(heading).toHaveClass('nl-heading--level-5');
+  });
+
   it('renders children inside the hero component', () => {
     render(
       <Hero heading="Test Heading" imageAlt="Test Alt Text" imageSrc="test-image.jpg" subHeading="Test subHeading">
