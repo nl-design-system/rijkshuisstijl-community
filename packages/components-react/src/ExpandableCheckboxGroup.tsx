@@ -1,40 +1,42 @@
-import {
-  Fieldset,
-  FieldsetLegend,
-  FormFieldCheckboxGroup,
-  FormFieldCheckboxOption,
-} from '@rijkshuisstijl-community/components-react';
-import './expandable-checkbox-group.css';
-import React, { ReactNode, useState } from 'react';
+import clsx from 'clsx';
+import React, { PropsWithChildren, ReactNode, useState } from 'react';
+import { Fieldset, FieldsetLegend } from './Fieldset';
+import { FormFieldCheckboxGroup, FormFieldCheckboxGroupProps } from './FormFieldCheckboxGroup';
+import { FormFieldCheckboxOption } from './FormFieldCheckboxOption';
 
 interface Option {
   value: string;
   label: ReactNode;
 }
-interface ExpandableCheckboxGroupProps {
+export interface ExpandableCheckboxGroupProps extends FormFieldCheckboxGroupProps {
   options: Option[];
   selectedOptions: string[];
   // eslint-disable-next-line no-unused-vars
   onOptionChange: (_option: string) => void;
   maxVisible?: number;
   legend: ReactNode;
+  expandText?: string;
+  closeText?: string;
+  extraOptionsText?: string;
 }
 
-export function ExpandableCheckboxGroup({
+export const ExpandableCheckboxGroup = ({
+  expandText = 'Meer opties',
+  extraOptionsText = 'Extra opties',
+  closeText = 'Minder opties',
   options,
   selectedOptions,
   onOptionChange,
   maxVisible = Infinity,
   legend,
-}: ExpandableCheckboxGroupProps) {
+  className,
+  ...restProps
+}: PropsWithChildren<ExpandableCheckboxGroupProps>) => {
   const [isExpanded, setIsExpanded] = useState(false);
-
   const actualMaxVisible = Math.max(Math.min(maxVisible, options.length), 0);
-
   const actualVisibleOptions = options.slice(0, actualMaxVisible);
   const actualExtraOptions = options.slice(actualMaxVisible);
   const actualShowExpandable = actualExtraOptions.length >= 1;
-
   const handleToggle = (event: React.SyntheticEvent<HTMLDetailsElement>) => {
     setIsExpanded(event.currentTarget.open);
   };
@@ -52,26 +54,22 @@ export function ExpandableCheckboxGroup({
   return (
     <Fieldset>
       <FieldsetLegend>{legend}</FieldsetLegend>
-      <FormFieldCheckboxGroup>
+      <FormFieldCheckboxGroup {...restProps}>
         <div>
           {actualVisibleOptions.map((option) => renderCheckboxOption(option))}
 
           {actualShowExpandable && (
-            <details className="rhc-expandable-checkbox-group__details" onToggle={handleToggle}>
+            <details className={clsx('rhc-expandable-checkbox-group__details', className)} onToggle={handleToggle}>
               <summary
                 aria-expanded={isExpanded}
-                className="rhc-expandable-checkbox-group__summary"
-                aria-label={
-                  isExpanded
-                    ? `Minder opties - klik om ${actualExtraOptions.length} extra framework opties te verbergen`
-                    : `Meer opties - klik om ${actualExtraOptions.length} extra framework opties te tonen`
-                }
+                aria-label={isExpanded ? closeText : `${expandText} (${actualExtraOptions.length})`}
+                className={clsx('rhc-expandable-checkbox-group__summary', className)}
               >
-                {isExpanded ? `Minder opties` : `Meer opties (${actualExtraOptions.length})`}
+                {isExpanded ? closeText : `${expandText} (${actualExtraOptions.length})`}
               </summary>
               <div
-                aria-label="Extra framework opties"
-                className="rhc-expandable-checkbox-group__extra-list"
+                aria-label={extraOptionsText}
+                className={clsx('rhc-expandable-checkbox-group__extra-list', className)}
                 role="group"
               >
                 {actualExtraOptions.map((option) => renderCheckboxOption(option))}
@@ -82,4 +80,6 @@ export function ExpandableCheckboxGroup({
       </FormFieldCheckboxGroup>
     </Fieldset>
   );
-}
+};
+
+ExpandableCheckboxGroup.displayName = 'ExpandableCheckboxGroup';

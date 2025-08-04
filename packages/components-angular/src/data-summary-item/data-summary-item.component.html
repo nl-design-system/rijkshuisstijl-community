@@ -6,8 +6,10 @@
     {{ value }}
   </dd>
   @if (href && actionLabel) {
-    <rhc-link [href]="href" [target]="target" class="rhc-data-summary__item-action">
-      {{ actionLabel }}
-    </rhc-link>
+    <dd class="rhc-data-summary__item-action">
+      <rhc-link [href]="href" [target]="target">
+        {{ actionLabel }}
+      </rhc-link>
+    </dd>
   }
 </ng-content>
