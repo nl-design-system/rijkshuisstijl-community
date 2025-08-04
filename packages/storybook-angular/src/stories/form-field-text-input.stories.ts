@@ -55,6 +55,17 @@ const meta: Meta<FormFieldTextInputComponent> = {
       table: {
         category: 'Props',
       },
+      control: { type: 'boolean' },
+      description:
+        'Whether the input is required. Maps to the HTML `aria-required` attribute. Use this if you want to use Angular validation (recommended).',
+    },
+    inputRequired: {
+      table: {
+        category: 'Props',
+      },
+      control: { type: 'boolean' },
+      description:
+        'Maps to the HTML `required` attribute. Use this if you want to use HTML validation (not recommended).',
     },
     readonly: {
       table: {
@@ -217,6 +228,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
     description: 'Beschrijving',
     status: undefined,
     required: false,
+    inputRequired: false,
     readonly: false,
     type: 'text',
     dir: 'auto',
@@ -240,6 +252,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
     label,
     errorMessage,
     required,
+    inputRequired,
     readonly,
     dir,
     name,
@@ -267,6 +280,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
           [errorMessage]="errorMessage"
           [readonly]="readonly"
           [required]="required"
+          [inputRequired]="inputRequired"
           [dir]="dir"
           [name]="name"
           [autocomplete]="autocomplete"
@@ -293,6 +307,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
       label,
       errorMessage,
       required,
+      inputRequired,
       readonly,
       dir,
       name,
@@ -552,39 +567,6 @@ export const Readonly: StoryObj<FormFieldTextInputComponent> = {
       label,
       readonly,
       value,
-    },
-    moduleMetadata: {
-      imports: [ReactiveFormsModule],
-    },
-  }),
-};
-
-export const Required: StoryObj<FormFieldTextInputComponent> = {
-  name: 'Required',
-  args: {
-    name: 'subject',
-    label: 'Onderwerp',
-    required: true,
-  },
-  render: ({ name, label, required }) => ({
-    template: `
-    <form [formGroup]="form">
-      <rhc-form-field-text-input
-        formControlName="textInput"
-        inputId="required"
-        [name]="name"
-        [label]="label"
-        [required]="required"
-      />
-    </form>
-    `,
-    props: {
-      form: new FormGroup({
-        textInput: new FormControl(''),
-      }),
-      name,
-      label,
-      required,
     },
     moduleMetadata: {
       imports: [ReactiveFormsModule],

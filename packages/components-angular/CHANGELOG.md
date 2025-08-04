@@ -1,5 +1,31 @@
 # @rijkshuisstijl-community/components-angular
 
+## 2.0.0
+
+### Major Changes
+
+- d3d4062: Removed the `icon` input from `<rhc-icon/>` component. The `icon` component no longer comes bundled with tabler icons, meaning you will have to supply your own icons.
+- 101881c: `<rhc-form-field-text-input>` and `<rhc-text-input>` Components' required input has been changed to inputRequired. The required input now sets `aria-required` on the native HTML input. If you wish to put `required` on the native HTML input you should now use `inputRequired`.
+- 923d857: Alleen NL link gebruiken
+
+  - Zorgen dat RHC link alleen NL link gebruikt
+    - NL link's `disabled` prop niet toestaan (altijd op `false` zetten) (angular versie ondersteunde dit toch al niet)
+  - Documentatie aan Angular readme.md toegevoegd
+  - Prop `inline` toegevoegd, die de standaard `display: inline-flex` terugzet naar `display: inline`
+    - Storybookvoorbeeld toegevoegd
+  - Ongebruike classname `.nl-link--visted` gefixt naar `.nl-link--visited`
+
+### Patch Changes
+
+- ff1a1c0: Re added accidentally removed icons from `<rhc-footer>` and `rhc-form-field-error-message`.
+
+## 1.2.1
+
+### Patch Changes
+
+- 9e83410: Added "how to switch theme" instructions in the README.
+- dbb8167: The `rhc-data-summary` action is now wrapped in a `<dd>` tag
+
 ## 1.2.0
 
 ### Minor Changes

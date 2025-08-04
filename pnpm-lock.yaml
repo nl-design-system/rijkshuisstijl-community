@@ -21,6 +21,9 @@ importers:
       '@changesets/cli':
         specifier: 2.29.2
         version: 2.29.2
+      '@chromatic-com/storybook':
+        specifier: 4.0.1
+        version: 4.0.1(storybook@8.6.12(prettier@3.5.3))
       '@lerna-lite/cli':
         specifier: 3.12.3
         version: 3.12.3(@lerna-lite/publish@3.12.3)(@lerna-lite/run@3.12.3)(@lerna-lite/version@3.12.3(@lerna-lite/publish@3.12.3)(@lerna-lite/run@3.12.3)(@types/node@20.17.6)(typescript@5.8.3))(@types/node@20.17.6)(typescript@5.8.3)
@@ -39,6 +42,9 @@ importers:
       '@typescript-eslint/parser':
         specifier: 8.31.1
         version: 8.31.1(eslint@8.57.0)(typescript@5.8.3)
+      chromatic:
+        specifier: 13.1.2
+        version: 13.1.2
       concurrently:
         specifier: 9.1.2
         version: 9.1.2
@@ -164,6 +170,10 @@ importers:
         specifier: 5.7.3
         version: 5.7.3
 
+  apps/rhc-templates/dist: {}
+
+  apps/rhc-templates/dist/types: {}
+
   packages/components-angular:
     dependencies:
       '@angular-devkit/build-angular':
@@ -261,8 +271,8 @@ importers:
         specifier: 1.0.2
         version: 1.0.2
       '@utrecht/component-library-css':
-        specifier: 7.4.0
-        version: 7.4.0
+        specifier: 7.4.1
+        version: 7.4.1
     devDependencies:
       '@utrecht/focus-ring-css':
         specifier: 2.3.1
@@ -684,6 +694,9 @@ importers:
       '@angular/router':
         specifier: 19.2.0
         version: 19.2.0(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0))(rxjs@7.8.0))(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0))(@angular/platform-browser@19.2.0(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0))(rxjs@7.8.0))(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0)))(rxjs@7.8.0)
+      angular-tabler-icons:
+        specifier: 3.26.0
+        version: 3.26.0(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0))(rxjs@7.8.0))(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0))
       rxjs:
         specifier: 7.8.0
         version: 7.8.0
@@ -763,9 +776,6 @@ importers:
       '@types/react':
         specifier: 19.1.3
         version: 19.1.3
-      angular-tabler-icons:
-        specifier: 3.26.0
-        version: 3.26.0(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0))(rxjs@7.8.0))(@angular/core@19.2.0(rxjs@7.8.0)(zone.js@0.15.0))
       react:
         specifier: 19.0.0
         version: 19.0.0
@@ -2419,6 +2429,12 @@ packages:
     peerDependencies:
       storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
+  '@chromatic-com/storybook@4.0.1':
+    resolution: {integrity: sha512-GQXe5lyZl3yLewLJQyFXEpOp2h+mfN2bPrzYaOFNCJjO4Js9deKbRHTOSaiP2FRwZqDLdQwy2+SEGeXPZ94yYw==}
+    engines: {node: '>=20.0.0', yarn: '>=1.22.18'}
+    peerDependencies:
+      storybook: ^0.0.0-0 || ^9.0.0 || ^9.1.0-0
+
   '@colors/colors@1.5.0':
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
     engines: {node: '>=0.1.90'}
@@ -3444,6 +3460,9 @@ packages:
   '@napi-rs/nice@1.0.1':
     resolution: {integrity: sha512-zM0mVWSXE0a0h9aKACLwKmD6nHcRiKrPpCfvaKqG1CqDEyjEawId0ocXxVzPMCAm6kkWr2P025msfxXEnt8UGQ==}
     engines: {node: '>= 10'}
+
+  '@neoconfetti/react@1.0.0':
+    resolution: {integrity: sha512-klcSooChXXOzIm+SE5IISIAn3bYzYfPjbX7D7HoqZL84oAfgREeSg5vSIaSFH+DaGzzvImTyWe1OyrJ67vik4A==}
 
   '@next/env@15.2.0':
     resolution: {integrity: sha512-eMgJu1RBXxxqqnuRJQh5RozhskoNUDHBFybvi+Z+yK9qzKeG7dadhv/Vp1YooSZmCnegf7JxWuapV77necLZNA==}
@@ -5343,8 +5362,8 @@ packages:
       react: '18'
       react-dom: '18'
 
-  '@utrecht/component-library-css@7.4.0':
-    resolution: {integrity: sha512-rwjDHujybo2R8apoUpgVwBSrw0d26ZU4P6oephj+GCIqoehUlZglTBRR62NcvYfP2tVhPYznDkaVy23S4w8PFQ==}
+  '@utrecht/component-library-css@7.4.1':
+    resolution: {integrity: sha512-aTaYN5IXd1NX6iDQWm3mXXSCTts1tw/PFArth64hXEn32yy/2RxSbLSY6xFO9pzSaaia7SDLwwJPCYtn/QBh/A==}
 
   '@utrecht/component-library-react@10.2.1':
     resolution: {integrity: sha512-hPR7mvVbu0EBYPH7wPZCS77GvIKmTxbvQBJukEfYeRv74Onbtasw2RuBWKhb05j9/JIwWsEs7ek8c/CByOYFRA==}
@@ -5365,7 +5384,6 @@ packages:
 
   '@utrecht/components@7.4.0':
     resolution: {integrity: sha512-LWFJjJ7TF0eaoWq5TGrg7rNYnG+G5yIEJhuiwFlbICwSx2n+gZVbAE1dAW8YG2mGqveXZk38hBC2FWNE1tj1BQ==}
-    deprecated: 'The @utrecht/components package has been deprecated. To migrate: the SCSS files are now only available in the npm package for the specific component. For example: @utrecht/button-css/src/_mixin.scss. The entire component library is now available in @utrecht/component-library-css/dist/index.css.'
 
   '@utrecht/currency-data-css@1.3.1':
     resolution: {integrity: sha512-QXXcRjRxnAab/jXqOWciokv0bCaVxxAOlF6hQC3OW76w4aaVVSXWRE3mBw+7g3AQ7nLGsfloTGwTshenF0g6+w==}
@@ -5715,6 +5733,9 @@ packages:
 
   '@utrecht/textbox-css@1.7.1':
     resolution: {integrity: sha512-MBM/NfMgdMSsaVJvE1Yk48Z0aAby2Bz4Vyt9CSFV38UZQU3C/kPwuQde3oJePCBnVJPx+K1YM8WhGcHF+c0Y4g==}
+
+  '@utrecht/textbox-css@2.0.0':
+    resolution: {integrity: sha512-z4ewJ6WxC3TMTG2jR4I7k73O5NijdjE/ydR1lovzPr4/Wa27l3I7pM0qjymSarKtc5IapfXsFhIpwV/kKbPPSA==}
 
   '@utrecht/textbox-react@1.0.8':
     resolution: {integrity: sha512-o/pTcqCUoqOgHPP2rt9tMY6j0F2D2663wQGV7ATD32m4xKqQaAYVYq6gQTWUYgWCIfsteHVGaWpA0LcoAyzZ+A==}
@@ -6665,6 +6686,30 @@ packages:
 
   chromatic@11.28.2:
     resolution: {integrity: sha512-aCmUPcZUs4/p9zRZdMreOoO/5JqO2DiJC3md1/vRx8dlMRcmR/YI5ZbgXZcai2absVR+6hsXZ5XiPxV2sboTuQ==}
+    hasBin: true
+    peerDependencies:
+      '@chromatic-com/cypress': ^0.*.* || ^1.0.0
+      '@chromatic-com/playwright': ^0.*.* || ^1.0.0
+    peerDependenciesMeta:
+      '@chromatic-com/cypress':
+        optional: true
+      '@chromatic-com/playwright':
+        optional: true
+
+  chromatic@12.2.0:
+    resolution: {integrity: sha512-GswmBW9ZptAoTns1BMyjbm55Z7EsIJnUvYKdQqXIBZIKbGErmpA+p4c0BYA+nzw5B0M+rb3Iqp1IaH8TFwIQew==}
+    hasBin: true
+    peerDependencies:
+      '@chromatic-com/cypress': ^0.*.* || ^1.0.0
+      '@chromatic-com/playwright': ^0.*.* || ^1.0.0
+    peerDependenciesMeta:
+      '@chromatic-com/cypress':
+        optional: true
+      '@chromatic-com/playwright':
+        optional: true
+
+  chromatic@13.1.2:
+    resolution: {integrity: sha512-jgVptQabJHOnzmmvLjbtfutREkWGhDDk2gVqMH6N+V7z56oIy4Sd2/U7ZxNvnVFPinZQMSjSdUce4b6JIP64Dg==}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.*.* || ^1.0.0
@@ -10426,7 +10471,6 @@ packages:
   node-domexception@1.0.0:
     resolution: {integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==}
     engines: {node: '>=10.5.0'}
-    deprecated: Use your platform's native DOMException instead
 
   node-fetch-native@1.6.4:
     resolution: {integrity: sha512-IhOigYzAKHd244OC0JIMIUrjzctirCmPkaIfhDeGcEETWof5zKYUW7e7MYvChGWh/4CJeXEgsRyGzuF334rOOQ==}
@@ -12849,7 +12893,6 @@ packages:
 
   token-transformer@0.0.33:
     resolution: {integrity: sha512-0h7Cvo8trUcv6sZPyA+iNHsFEwIhN4FhXtYqgndHQNYub+dTDW8ZCQURBNDNa0PvJ8Xg2wqG1V/5WSwV0l6yOw==}
-    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     hasBin: true
 
   tough-cookie@4.1.4:
@@ -16090,6 +16133,18 @@ snapshots:
       - '@chromatic-com/playwright'
       - react
 
+  '@chromatic-com/storybook@4.0.1(storybook@8.6.12(prettier@3.5.3))':
+    dependencies:
+      '@neoconfetti/react': 1.0.0
+      chromatic: 12.2.0
+      filesize: 10.1.6
+      jsonfile: 6.1.0
+      storybook: 8.6.12(prettier@3.5.3)
+      strip-ansi: 7.1.0
+    transitivePeerDependencies:
+      - '@chromatic-com/cypress'
+      - '@chromatic-com/playwright'
+
   '@colors/colors@1.5.0':
     optional: true
 
@@ -17340,6 +17395,8 @@ snapshots:
       '@napi-rs/nice-win32-ia32-msvc': 1.0.1
       '@napi-rs/nice-win32-x64-msvc': 1.0.1
     optional: true
+
+  '@neoconfetti/react@1.0.0': {}
 
   '@next/env@15.2.0': {}
 
@@ -19585,7 +19642,7 @@ snapshots:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
 
-  '@utrecht/component-library-css@7.4.0':
+  '@utrecht/component-library-css@7.4.1':
     dependencies:
       '@utrecht/accordion-css': 2.0.0
       '@utrecht/alert-css': 2.4.0
@@ -19677,7 +19734,7 @@ snapshots:
       '@utrecht/table-css': 1.6.1
       '@utrecht/table-of-contents-css': 0.3.1
       '@utrecht/textarea-css': 2.3.2
-      '@utrecht/textbox-css': 1.7.1
+      '@utrecht/textbox-css': 2.0.0
       '@utrecht/tooltip-css': 1.0.0
       '@utrecht/top-task-link-css': 1.4.1
       '@utrecht/top-task-nav-css': 1.3.1
@@ -20108,6 +20165,8 @@ snapshots:
   '@utrecht/textarea-css@2.3.2': {}
 
   '@utrecht/textbox-css@1.7.1': {}
+
+  '@utrecht/textbox-css@2.0.0': {}
 
   '@utrecht/textbox-react@1.0.8(@babel/runtime@7.27.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
@@ -21352,6 +21411,10 @@ snapshots:
   chownr@3.0.0: {}
 
   chromatic@11.28.2: {}
+
+  chromatic@12.2.0: {}
+
+  chromatic@13.1.2: {}
 
   chrome-trace-event@1.0.4: {}
 
