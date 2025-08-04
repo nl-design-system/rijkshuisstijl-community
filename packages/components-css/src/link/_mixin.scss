@@ -4,8 +4,6 @@
  */
 
 @mixin rhc-link--any-link {
-  --utrecht-icon-inset-block-start: var(--nl-link-icon-inset-block-start, inherit);
-
   align-items: baseline;
   column-gap: var(--rhc-link-column-gap, inherit);
   display: inline-flex;
@@ -27,11 +25,6 @@
 
 @mixin rhc-link--visited-icon {
   color: var(--nl-link-visited-color, inherit);
-}
-
-@mixin rhc-link--active {
-  --nl-link-text-decoration: var(--nl-link-active-text-decoration, inherit);
-  --nl-link-text-decoration-line: var(--nl-link-active-text-decoration, inherit);
 }
 
 @mixin rhc-link--focus-visible {
