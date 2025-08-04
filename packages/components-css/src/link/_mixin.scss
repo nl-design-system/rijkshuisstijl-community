@@ -18,11 +18,7 @@
 }
 
 @mixin rhc-link--focus-visible {
-  z-index: var(--utrecht-stack-focus-z-index, 1);
-}
-
-@mixin rhc-link--focus {
-  --_nl-link-state-text-decoration: none;
+  z-index: 1;
 }
 
 @mixin rhc-link--inline {
