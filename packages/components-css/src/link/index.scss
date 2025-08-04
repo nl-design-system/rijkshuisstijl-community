@@ -22,21 +22,11 @@
   @include mixin.rhc-link--icon;
 }
 
-.nl-link:visited,
-.nl-link--visited {
-  @include mixin.rhc-link--visited;
-}
-
-.nl-link:visited .nl-icon {
-  @include mixin.rhc-link--visited-icon;
-}
-
 .nl-link:focus-visible,
 .nl-link--focus-visible,
 .nl-link:focus,
 .nl-link--focus {
   @include mixin.rhc-link--focus-visible;
-  @include mixin.rhc-link--focus;
 }
 
 .nl-link .rhc-link__sr-only {
