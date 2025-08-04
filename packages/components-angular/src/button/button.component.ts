@@ -1,9 +1,8 @@
-import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'button[rhc-button]',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './button.component.html',
   host: {
     '[class.utrecht-button]': 'true',

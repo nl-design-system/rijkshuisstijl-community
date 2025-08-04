@@ -1,9 +1,8 @@
-import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'figure[rhc-logo]',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './logo.component.html',
   host: { '[class.rhc-logo]': 'true' },
 })
