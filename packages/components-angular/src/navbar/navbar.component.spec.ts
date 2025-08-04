@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NavbarComponent } from './navbar.component';
-import { IconComponent } from '../icon/icon.component';
 import { EndItemDirective } from '../navbar-item/end-item.directive';
 import { HeadingItemDirective } from '../navbar-item/heading-item.directive';
 import { NavbarItemComponent } from '../navbar-item/navbar-item.component';
@@ -10,17 +9,11 @@ import { NavbarItemComponent } from '../navbar-item/navbar-item.component';
   template: `
     <rhc-navbar [showEndItems]="showEndItems">
       <li rhc-navbar-item rhcHeadingItem href="#">Heading</li>
-      <li rhc-navbar-item href="#">
-        <rhc-icon icon="home" />
-        Home
-      </li>
-      <li rhc-navbar-item rhcEndItem href="#">
-        <rhc-icon icon="user" />
-        Account
-      </li>
+      <li rhc-navbar-item href="#">Home</li>
+      <li rhc-navbar-item rhcEndItem href="#">Account</li>
     </rhc-navbar>
   `,
-  imports: [NavbarItemComponent, IconComponent, NavbarComponent, HeadingItemDirective, EndItemDirective],
+  imports: [NavbarItemComponent, NavbarComponent, HeadingItemDirective, EndItemDirective],
 })
 class Navbar {
   @Input() showEndItems?: boolean = false;

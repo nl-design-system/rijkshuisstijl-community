@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/rhc-templates
 
+## 2.0.1
+
+### Patch Changes
+
+- fa98d0f: updated nav bar component to filter through any extra props provided and updated example website
+
 ## 2.0.0
 
 ### Major Changes

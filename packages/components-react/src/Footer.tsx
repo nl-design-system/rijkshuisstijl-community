@@ -1,7 +1,6 @@
 import { PageFooterProps, PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { PropsWithChildren, ReactNode, Ref } from 'react';
-import React from 'react';
+import { MouseEvent, PropsWithChildren, ReactNode, Ref } from 'react';
 import { ColumnLayout } from './ColumnLayout';
 import { Heading, HeadingLevel } from './Heading';
 import { Icon } from './Icon';
@@ -24,7 +23,7 @@ interface ColumnProps {
   children: ReactNode;
 }
 
-const scrollBackToTop = (event: React.MouseEvent<HTMLAnchorElement>) => {
+const scrollBackToTop = (event: MouseEvent<HTMLAnchorElement>) => {
   event.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
   const target = event.currentTarget.getAttribute('href');
