@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 4.1.0
+
+### Minor Changes
+
+- 08d4354: add expandable checkbox group
+
 ## 4.0.1
 
 ### Patch Changes

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { TablerIconComponent } from 'angular-tabler-icons';
 import { ButtonComponent } from '../../../../components-angular/src/button/button.component';
 import { FormFieldTextInputComponent } from '../../../../components-angular/src/form-field-text-input/form-field-text-input.component';
 import { HeadingComponent } from '../../../../components-angular/src/heading/heading.component';
@@ -17,6 +18,7 @@ import { PageLayoutComponent } from '../shared/page-layout/page-layout.component
     FormFieldTextInputComponent,
     ButtonComponent,
     IconComponent,
+    TablerIconComponent,
   ],
   templateUrl: './boete-zoeken.component.html',
   styleUrl: './boete-zoeken.component.css',

@@ -1,0 +1,27 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@use "../visually-hidden/mixin" as visually-hidden;
+@use "@utrecht/focus-ring-css/src/mixin" as utrecht-focus-mixin;
+
+@mixin rhc-expandable-checkbox-group__details {
+  margin-block-start: var(--rhc-expandable-checkbox-group-details-margin-block-start);
+}
+
+@mixin rhc-expandable-checkbox-group__summary {
+  color: var(--rhc-expandable-checkbox-group-summary-color);
+  cursor: pointer;
+  inline-size: max-content;
+  margin-block-end: var(--rhc-expandable-checkbox-group-summary-margin-block-end);
+  margin-block-start: var(--rhc-expandable-checkbox-group-summary-margin-block-start);
+  text-decoration: var(--rhc-expandable-checkbox-group-summary-text-decoration);
+}
+
+@mixin rhc-expandable-checkbox-group__sr-only {
+  @include visually-hidden.rhc-visually-hidden;
+}
+
+@mixin rhc-expandable-checkbox-group__summary--focus-visible {
+  @include utrecht-focus-mixin.utrecht-focus-visible;
+}
