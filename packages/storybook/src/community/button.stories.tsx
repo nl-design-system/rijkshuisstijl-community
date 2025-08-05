@@ -1,7 +1,6 @@
 /* @license CC0-1.0 */
 
-import { IconButton } from '@rijkshuisstijl-community/components-react';
-import { Button, Icon } from '@rijkshuisstijl-community/components-react';
+import { Button, Icon, IconButton } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
 import readme from '@utrecht/components/button/README.md?raw';
@@ -115,36 +114,37 @@ const meta = {
   render: ButtonStory,
 } as Meta<typeof ButtonStory>;
 
+type Story = StoryObj<typeof meta>;
 export default meta;
 
-export const Default: StoryObj<typeof meta> = {
+export const Default: Story = {
   args: {
     children: 'Label',
   },
 };
 
-export const PrimaryAction: StoryObj<typeof meta> = {
+export const PrimaryAction: Story = {
   args: {
     children: 'Label',
     appearance: 'primary-action-button',
   },
 };
 
-export const SecondaryAction: StoryObj<typeof meta> = {
+export const SecondaryAction: Story = {
   args: {
     children: 'Label',
     appearance: 'secondary-action-button',
   },
 };
 
-export const Subtle: StoryObj<typeof meta> = {
+export const Subtle: Story = {
   args: {
     children: 'Label',
     appearance: 'subtle-button',
   },
 };
 
-export const IconLeft: StoryObj<typeof meta> = {
+export const IconLeft: Story = {
   args: {
     children: 'Label',
     appearance: 'secondary-action-button',
@@ -152,7 +152,7 @@ export const IconLeft: StoryObj<typeof meta> = {
   },
 };
 
-export const IconRight: StoryObj<typeof meta> = {
+export const IconRight: Story = {
   args: {
     children: 'Label',
     appearance: 'primary-action-button',
@@ -160,7 +160,50 @@ export const IconRight: StoryObj<typeof meta> = {
   },
 };
 
-export const IconOnly: StoryObj<typeof IconButton> = {
+export const Active: Story = {
+  args: {
+    children: 'Active',
+  },
+  parameters: {
+    pseudo: {
+      active: true,
+    },
+  },
+};
+
+export const Pressed: Story = {
+  args: {
+    pressed: true,
+    children: 'Pressed',
+  },
+};
+
+export const Hover: Story = {
+  args: {
+    children: 'Hover',
+  },
+  parameters: {
+    pseudo: {
+      hover: true,
+    },
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+    children: 'Disabled',
+  },
+};
+
+export const Busy: Story = {
+  args: {
+    busy: true,
+    children: 'Im busy',
+  },
+};
+
+export const IconOnly: Story = {
   render: () => (
     <IconButton label="calendar">
       <Icon>

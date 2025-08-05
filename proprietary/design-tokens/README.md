@@ -11,7 +11,7 @@ Dit project maakt deel uit van een samenwerkingsverband om [NL Design System](ht
 Nederland (bijvoorbeeld: [Belastingdienst](https://www.belastingdienst.nl/), [DUO](https://www.duo.nl), [Logius](http://logius.nl), [SVB](https://www.svb.nl/))
 en degenen die door hen zijn ingehuurd voor het ontwikkelen van websites en apps, kunnen via dit project samenwerken.
 
-# Tokens gebruiken in eigen project
+## Tokens gebruiken in eigen project
 
 Hieronder vind je instructies hoe je de standaard Rijkshuisstijl-community tokens in je project kan toepassen.
 
@@ -42,7 +42,7 @@ Hieronder vind je instructies hoe je de standaard Rijkshuisstijl-community token
    </body>
    ```
 
-# Nieuw thema toevoegen
+## Nieuw thema toevoegen
 
 Er zijn al verschillende bedrijfsthema's in de @rijkshuisstijl-community/design-tokens package waarvoor (gedeeltelijke) support is vanuit de Rijkshuisstijl-community. Hieronder volgt een uitleg hoe nog meer thema's kunnen worden toegevoegd
 

@@ -6,7 +6,7 @@ Deze component is deel van [FormField](https://www.figma.com/design/txFX5MGRf4O9
 
 ## FormFieldRadioGroup met [FormFieldRadio](/docs/rijkhuisstijl-form-field-radio--docs)
 
-# Usage
+### Usage
 
 ```jsx
 import { FormFieldRadioGroup, FormFieldRadio } from '@rijkshuisstijl-community/components-react';
