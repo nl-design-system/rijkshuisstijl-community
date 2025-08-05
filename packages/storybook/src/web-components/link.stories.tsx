@@ -128,14 +128,6 @@ export const Default = {
   },
 } as StoryObj<typeof meta>;
 
-export const External = {
-  args: {
-    children: 'Link',
-    href: '#',
-    external: true,
-  },
-} as StoryObj<typeof meta>;
-
 export const iconLeft = {
   args: {
     children: [createElement('rhc-icon', { icon: 'home' }), 'Link'],

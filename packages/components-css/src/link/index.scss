@@ -2,7 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-@use "../button/mixin" as button-mixin;
+
 @use "mixin";
 @use "../../node_modules/@nl-design-system-candidate/link-css/dist/link.css";
 
@@ -20,10 +20,6 @@
 
 .nl-link:any-link .utrecht-icon {
   @include mixin.rhc-link--icon;
-}
-
-.nl-link .rhc-link__sr-only {
-  @include button-mixin.invisible-but-accessible;
 }
 
 .nl-link:any-link.rhc-link--inline {

@@ -36,24 +36,6 @@ const meta = {
         category: 'Property',
       },
     },
-    external: {
-      description: 'Whether the link is external',
-      type: {
-        name: 'boolean',
-      },
-      table: {
-        category: 'Property',
-      },
-    },
-    externalLabel: {
-      description: 'SR only label for external link icon',
-      type: {
-        name: 'string',
-      },
-      table: {
-        category: 'Property',
-      },
-    },
     children: {
       description: 'Link text - default webcomponent slot',
       type: {
@@ -130,15 +112,6 @@ export const IconRight: Story = {
   args: {
     href: '#',
     children: ['Verder', <Icon className="rhc-link--icon" icon="pijl-naar-rechts" />],
-  },
-};
-
-export const External: Story = {
-  args: {
-    href: '#',
-    children: 'Krantenartikel',
-    external: true,
-    externalLabel: 'deze link gaat naar ad.nl',
   },
 };
 
