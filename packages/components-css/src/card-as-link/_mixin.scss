@@ -73,14 +73,13 @@
 }
 
 @mixin rhc-card-as-link__content {
-  display: flex;
+  @include container-content;
+
   flex: 1;
-  flex-direction: column;
-  padding-block-end: var(--rhc-card-as-link-padding-block-end, 16px);
-  padding-block-start: var(--rhc-card-as-link-padding-block-start, 16px);
-  padding-inline-end: var(--rhc-card-as-link-padding-inline-end, 16px);
-  padding-inline-start: var(--rhc-card-as-link-padding-inline-start, 16px);
-  row-gap: var(--rhc-card-as-link-row-gap, 12px);
+}
+
+@mixin rhc-card-as-link__footer {
+  @include container-content;
 }
 
 @mixin rhc-card-as-link--horizontal__content {
@@ -182,6 +181,16 @@
 
 @mixin rhc-card-as-link__metadata {
   color: var(--rhc-card-as-link-metadata-color, #154273);
+}
+
+@mixin container-content {
+  display: flex;
+  flex-direction: column;
+  padding-block-end: var(--rhc-card-as-link-padding-block-end, 16px);
+  padding-block-start: var(--rhc-card-as-link-padding-block-start, 16px);
+  padding-inline-end: var(--rhc-card-as-link-padding-inline-end, 16px);
+  padding-inline-start: var(--rhc-card-as-link-padding-inline-start, 16px);
+  row-gap: var(--rhc-card-as-link-row-gap, 12px);
 }
 
 @mixin rounded-border-corners {
