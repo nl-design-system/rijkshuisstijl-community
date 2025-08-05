@@ -22,13 +22,6 @@
   @include mixin.rhc-link--icon;
 }
 
-.nl-link:focus-visible,
-.nl-link--focus-visible,
-.nl-link:focus,
-.nl-link--focus {
-  @include mixin.rhc-link--focus-visible;
-}
-
 .nl-link .rhc-link__sr-only {
   @include button-mixin.invisible-but-accessible;
 }

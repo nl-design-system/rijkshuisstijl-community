@@ -4,17 +4,11 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-@use "../link/mixin";
-
 @mixin rhc-button--icon-only {
   --utrecht-button-padding-block-end: var(--rhc-icon-only-button-padding-block-end, inherit);
   --utrecht-button-padding-block-start: var(--rhc-icon-only-button-padding-block-start, inherit);
   --utrecht-button-padding-inline-end: var(--rhc-icon-only-button-padding-inline-end, inherit);
   --utrecht-button-padding-inline-start: var(--rhc-icon-only-button-padding-inline-start, inherit);
-}
-
-@mixin rhc-button--focus-visible {
-  @include mixin.rhc-link--focus-visible;
 }
 
 @mixin invisible-but-accessible {

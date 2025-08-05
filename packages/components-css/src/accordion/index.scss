@@ -3,8 +3,6 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@use "../button/mixin";
-
 .utrecht-accordion {
   color: var(--rhc-accordion-color, inherit);
   display: flex;
@@ -50,11 +48,6 @@
   --utrecht-button-padding-inline-start: var(--rhc-accordion-button-padding-inline-start, inherit);
 
   align-items: start;
-}
-
-.utrecht-accordion__button:focus-visible,
-.utrecht-accordion__button--focus-visible {
-  @include mixin.rhc-button--focus-visible;
 }
 
 .utrecht-accordion__button-icon {
