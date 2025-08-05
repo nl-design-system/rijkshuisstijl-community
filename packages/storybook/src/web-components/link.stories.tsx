@@ -130,14 +130,14 @@ export const Default = {
 
 export const iconLeft = {
   args: {
-    children: [createElement('rhc-icon', { icon: 'home' }), 'Link'],
+    children: [createElement('rhc-icon', { icon: 'home', classname: 'rhc-link--icon' }), 'Link'],
     href: '#',
   },
 } as StoryObj<typeof meta>;
 
 export const iconRight = {
   args: {
-    children: ['Link', createElement('rhc-icon', { icon: 'chevron-right' })],
+    children: ['Link', createElement('rhc-icon', { icon: 'chevron-right', classname: 'rhc-link--icon' })],
     href: '#',
   },
 } as StoryObj<typeof meta>;
