@@ -1,6 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Icon, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
+import type { LinkProps } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/link/README.md?raw';
 import anatomyDocs from '@utrecht/components/link/docs/anatomy.nl.md?raw';
@@ -21,10 +22,17 @@ import visualDesignDocs from '@utrecht/components/link/docs/visual-design.nl.md?
 import wcagDocs from '@utrecht/components/link/docs/wcag.nl.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
+const LinkInParagraphByDefault = (props: LinkProps) => (
+  <Paragraph>
+    <Link {...props} />
+  </Paragraph>
+);
+
 const meta = {
   title: 'Rijkshuisstijl/Link',
   id: 'rhc-link',
   component: Link,
+  render: LinkInParagraphByDefault,
   argTypes: {
     href: {
       description: 'Waar de link naartoe leidt',
@@ -90,7 +98,6 @@ const meta = {
     componentOrigin:
       'Dit component is overgenomen van het NL Design System, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
-  render: Link,
 } as Meta<typeof Link>;
 
 export default meta;
