@@ -9,6 +9,7 @@ const config: StorybookConfig = {
     '@chromatic-com/storybook',
     '@etchteam/storybook-addon-status',
     '@storybook/addon-a11y',
+    '@storybook/addon-controls',
     '@storybook/addon-actions',
     '@storybook/addon-docs',
     '@storybook/addon-interactions',

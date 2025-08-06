@@ -60,7 +60,6 @@ const preview: Preview = {
     },
     controls: { expanded: false },
     options: {
-      panelPosition: 'right',
       storySort: {
         order: [
           'Rijkshuisstijl Community',
