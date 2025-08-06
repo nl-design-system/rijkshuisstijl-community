@@ -1,3 +1,4 @@
+import { Paragraph } from '@rijkshuisstijl-community/components-react';
 import { LinkWebComponent } from '@rijkshuisstijl-community/web-components';
 import { IconWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/react';
@@ -24,14 +25,16 @@ import { mergeMarkdown } from '../../helpers/merge-markdown';
 LinkWebComponent.define();
 IconWebComponent.define();
 
-const LinkWrapper = ({ external, externalLabel, classname, ...restProps }: any) => {
-  return createElement('rhc-link', {
-    external: external?.toString(),
-    externalLabel,
-    classname,
-    ...restProps,
-  });
-};
+const LinkWrapper = ({ external, externalLabel, classname, ...restProps }: any) => (
+  <Paragraph>
+    {createElement('rhc-link', {
+      external: external?.toString(),
+      externalLabel,
+      classname,
+      ...restProps,
+    })}
+  </Paragraph>
+);
 
 const meta = {
   title: 'Web Components/Link',
