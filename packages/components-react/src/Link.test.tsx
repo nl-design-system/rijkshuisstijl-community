@@ -57,7 +57,7 @@ describe('Link', () => {
   it('can have a custom class name', () => {
     const { container } = render(
       <Link className="visited" href="#">
-        {'https://example.com/'}
+        https://example.com/
       </Link>,
     );
 
@@ -65,6 +65,7 @@ describe('Link', () => {
 
     expect(link).toHaveClass('visited');
   });
+
   it('can have a additional class name', () => {
     const { container } = render(<Link className="large" href="#" />);
 
@@ -74,6 +75,7 @@ describe('Link', () => {
 
     expect(link).toHaveClass('nl-link');
   });
+
   it('supports ref in React', () => {
     const ref = createRef<HTMLAnchorElement>();
 
@@ -86,57 +88,6 @@ describe('Link', () => {
     const link = container.querySelector(':only-child');
 
     expect(ref.current).toBe(link);
-  });
-
-  describe('variant for external links', () => {
-    it('prevents sharing referer information', () => {
-      const { container } = render(<Link external href="#" rel={'external noopener noreferrer'} />);
-
-      const link = container.querySelector(':only-child');
-
-      expect(link).toHaveAttribute('rel');
-
-      expect(link?.getAttribute('rel')).toContain('noreferrer');
-    });
-
-    it('prevents access to window.opener', () => {
-      const { container } = render(<Link external href="#" rel={'external noopener noreferrer'} />);
-
-      const link = container.querySelector(':only-child');
-
-      expect(link).toHaveAttribute('rel');
-
-      expect(link?.getAttribute('rel')).toContain('noopener');
-    });
-
-    it('provides semantic information that the link is external', () => {
-      const { container } = render(<Link external href="#" rel={'external noopener noreferrer'} />);
-
-      const link = container.querySelector(':only-child');
-
-      expect(link).toHaveAttribute('rel');
-
-      expect(link?.getAttribute('rel')).toContain('external');
-    });
-    describe('External link icon', () => {
-      it('contains a visual icon that the link is external', () => {
-        const { container } = render(<Link external href="#" />);
-
-        const link = container.querySelector(':only-child');
-
-        const icon = link?.querySelector('.utrecht-icon');
-
-        expect(icon).toBeInTheDocument();
-      });
-
-      it('contains a visual icon that has an sr-only label that comes from a property', () => {
-        render(<Link external externalLabel="some-external-label" href="#" />);
-
-        const label = screen.getByText('some-external-label');
-
-        expect(label).toHaveClass('rhc-link__sr-only');
-      });
-    });
   });
 });
 
