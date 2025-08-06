@@ -27,25 +27,28 @@ const meta = {
   component: Link,
   argTypes: {
     href: {
-      description: 'Url to link to',
+      description: 'Waar de link naartoe leidt',
       type: {
         name: 'string',
         required: true,
-      },
-      table: {
-        category: 'Property',
       },
     },
     children: {
-      description: 'Link text - default webcomponent slot',
+      description: 'Klikbaar deel van de link, dus een tekst of afbeelding',
       type: {
         name: 'string',
         required: true,
       },
-      table: {
-        category: 'Webcomponent Slot',
-      },
       defaultValue: '',
+    },
+    className: {
+      description: 'Eigen classnames om toe te voegen aan de standaard-classnames van het component',
+      type: 'string',
+    },
+    inline: {
+      description: 'Of de link onderdeel uitmaakt van lopende tekst',
+      type: 'boolean',
+      defaultValue: false,
     },
   },
   args: {
