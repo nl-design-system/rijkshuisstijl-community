@@ -21,6 +21,7 @@ import usageDocs from '@utrecht/components/link/docs/usage.nl.md?raw';
 import visualDesignDocs from '@utrecht/components/link/docs/visual-design.nl.md?raw';
 import wcagDocs from '@utrecht/components/link/docs/wcag.nl.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
+import iconInline from '../documentation/link/icon-inline.nl.md?raw';
 
 const LinkInParagraphByDefault = (props: LinkProps) => (
   <Paragraph>
@@ -87,6 +88,7 @@ const meta = {
           failureNoHrefDocs,
           referencesDocs,
           wcagDocs,
+          iconInline,
         ]),
       },
     },
