@@ -6,10 +6,6 @@
 @use "mixin";
 @use "../../node_modules/@nl-design-system-candidate/link-css/dist/link.css";
 
-.nl-link svg {
-  flex-shrink: 0;
-}
-
 .nl-link:any-link {
   @include mixin.rhc-link--any-link;
 }
