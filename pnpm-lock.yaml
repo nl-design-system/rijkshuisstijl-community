@@ -486,13 +486,6 @@ importers:
         version: 1.5.0
 
   packages/storybook:
-    dependencies:
-      '@amsterdam/design-system-css':
-        specifier: 1.0.0
-        version: 1.0.0(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.1)
-      '@amsterdam/design-system-react':
-        specifier: 1.0.0
-        version: 1.0.0(@amsterdam/design-system-css@1.0.0(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
     devDependencies:
       '@chromatic-com/storybook':
         specifier: 3.2.7
@@ -951,12 +944,6 @@ packages:
 
   '@amsterdam/design-system-assets@1.0.0':
     resolution: {integrity: sha512-OajcVs/wvJVds8i+OO8M2nCigzAlxlBMS2ljXMq5nXTUOWPv7LO7sC2p/S3L6yk7UcDABFwI6EQJdUfaU7HY+w==}
-
-  '@amsterdam/design-system-css@1.0.0':
-    resolution: {integrity: sha512-6IPdMcdAWsxnx+XW54A/LgZgD4S8sQ5Lp3cW2F84RuGiFRx3S+Z+niCDh8PcK7XqjxLlo1Bu6B4TvtKpCc6G5Q==}
-    peerDependencies:
-      '@amsterdam/design-system-assets': 1.0.0
-      '@amsterdam/design-system-tokens': 1.0.0
 
   '@amsterdam/design-system-css@1.0.1':
     resolution: {integrity: sha512-nO1QCqNC0UXEdNESeJBJ8qLnYH4zPXNLWDuD+HRoLanM8NUsLexTVt2EQ9GVT0qYW1EQGgyeou9TouLVfkqPKw==}
@@ -13482,11 +13469,6 @@ snapshots:
 
   '@amsterdam/design-system-assets@1.0.0': {}
 
-  '@amsterdam/design-system-css@1.0.0(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.1)':
-    dependencies:
-      '@amsterdam/design-system-assets': 1.0.0
-      '@amsterdam/design-system-tokens': 1.0.1
-
   '@amsterdam/design-system-css@1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.0)':
     dependencies:
       '@amsterdam/design-system-assets': 1.0.0
@@ -13494,15 +13476,6 @@ snapshots:
 
   '@amsterdam/design-system-react-icons@1.0.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      react: 19.1.1
-      react-dom: 19.1.1(react@19.1.1)
-
-  '@amsterdam/design-system-react@1.0.0(@amsterdam/design-system-css@1.0.0(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
-    dependencies:
-      '@amsterdam/design-system-css': 1.0.0(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.1)
-      '@amsterdam/design-system-react-icons': 1.0.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@babel/runtime': 7.27.1
-      clsx: 2.1.1
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 

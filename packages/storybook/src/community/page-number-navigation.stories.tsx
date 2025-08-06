@@ -1,11 +1,11 @@
-import { Pagination } from '@rijkshuisstijl-community/components-react';
+import { PageNumberNavigation } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from './pagination.md?raw';
+import readme from './page-number-navigation.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Pagination',
-  component: Pagination,
+  title: 'Rijkshuisstijl/PageNumberNavigation',
+  component: PageNumberNavigation,
   args: {
     linkTemplate: (page: number) => `/${page}`,
     maxVisiblePages: 5,
@@ -28,7 +28,7 @@ const meta = {
     },
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Pagination>;
+} satisfies Meta<typeof PageNumberNavigation>;
 
 export default meta;
 
