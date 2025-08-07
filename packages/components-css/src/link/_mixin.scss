@@ -15,6 +15,8 @@
   inline-size: 1em;
 }
 
+/* For rhc-link, `inline-flex` was chosen as default, to enable control on positioning of an icon.
+   To have a link in running text, please enable `inline` property and don't combine it with an icon. */
 @mixin rhc-link--inline {
   display: inline;
 }
