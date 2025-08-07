@@ -1,11 +1,18 @@
 # @rijkshuisstijl-community/components-react
 
+## 3.0.1
+
+### Patch Changes
+
+- fe88675: Update heading dependency and removed unused tokens
+- 3d9999c: Update patch & minor dependencies
+- 834dbde: Reverted breaking changes to angular storybook and add controls to stories
+
 ## 3.0.0
 
 ### Major Changes
 
 - 923d857: Alleen NL link gebruiken
-
   - Zorgen dat RHC link alleen NL link gebruikt
     - NL link's `disabled` prop niet toestaan (altijd op `false` zetten) (angular versie ondersteunde dit toch al niet)
   - Documentatie aan Angular readme.md toegevoegd
