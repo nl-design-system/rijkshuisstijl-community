@@ -1,5 +1,14 @@
 # @rijkshuisstijl-community/components-twig
 
+## 1.3.8
+
+### Patch Changes
+
+- 3d9999c: Update patch & minor dependencies
+- Updated dependencies [39e082e]
+- Updated dependencies [3d9999c]
+  - @rijkshuisstijl-community/components-css@4.0.1
+
 ## 1.3.7
 
 ### Patch Changes
