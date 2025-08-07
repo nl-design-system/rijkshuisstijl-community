@@ -2533,7 +2533,7 @@
           },
           "border-color": {
             "type": "color",
-            "value": "transparent"
+            "value": "{rhc.color.none}"
           },
           "color": {
             "type": "color",
@@ -2561,7 +2561,7 @@
           },
           "border-color": {
             "type": "color",
-            "value": "transparent"
+            "value": "{rhc.color.none}"
           },
           "color": {
             "type": "color",
@@ -2589,7 +2589,7 @@
           },
           "border-color": {
             "type": "color",
-            "value": "transparent"
+            "value": "{rhc.color.none}"
           },
           "color": {
             "type": "color",
@@ -2603,7 +2603,7 @@
           },
           "border-color": {
             "type": "color",
-            "value": "transparent"
+            "value": "{rhc.color.none}"
           },
           "color": {
             "type": "color",
@@ -2642,7 +2642,7 @@
             },
             "border-color": {
               "type": "color",
-              "value": "transparent"
+            "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2656,7 +2656,7 @@
             },
             "border-color": {
               "type": "color",
-              "value": "transparent"
+            "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2666,7 +2666,7 @@
           "pressed": {
             "border-color": {
               "type": "color",
-              "value": "transparent"
+            "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2689,7 +2689,7 @@
           "active": {
             "border-color": {
               "type": "color",
-              "value": "transparent"
+            "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2770,7 +2770,7 @@
             },
             "border-color": {
               "type": "color",
-              "value": "transparent"
+            "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2836,11 +2836,11 @@
         "subtle": {
           "background-color": {
             "type": "color",
-            "value": "transparent"
+            "value": "{rhc.color.none}"
           },
           "border-color": {
             "type": "color",
-            "value": "transparent"
+            "value": "{rhc.color.none}"
           },
           "color": {
             "type": "color",
@@ -2893,7 +2893,7 @@
             },
             "border-color": {
               "type": "color",
-              "value": "transparent"
+            "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2907,7 +2907,7 @@
             },
             "border-color": {
               "type": "color",
-              "value": "transparent"
+            "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2930,7 +2930,7 @@
             },
             "border-color": {
               "type": "color",
-              "value": "transparent"
+            "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -3844,6 +3844,36 @@
       }
     }
   },
+   "components/expandable-checkbox-group": {
+    "rhc": {
+      "expandable-checkbox-group": {
+        "details": {
+          "margin-block-start": {
+            "value": "{rhc.space.100}",
+            "type": "dimension"
+          }
+        },
+        "summary": {
+          "color": {
+            "value": "{rhc.color.foreground.link}",
+            "type": "color"
+          },
+          "margin-block-end": {
+            "value": "{rhc.space.100}",
+            "type": "dimension"
+          },
+          "margin-block-start": {
+            "value": "{rhc.space.100}",
+            "type": "dimension"
+          },
+          "text-decoration": {
+            "type": "textDecoration",
+            "value": "underline"
+          }
+        }
+      }
+    }
+  },
   "components/fieldset": {
     "utrecht": {
       "form-fieldset": {
@@ -4691,202 +4721,6 @@
             "type": "dimension",
             "value": "{rhc.space.0}"
           }
-        }
-      }
-    }
-  },
-  "components/heading/utrecht": {
-    "utrecht": {
-      "heading-1": {
-        "color": {
-          "type": "color",
-          "value": "{nl.heading.level-1.color}"
-        },
-        "font-family": {
-          "type": "fontFamilies",
-          "value": "{nl.heading.level-1.font-family}"
-        },
-        "font-size": {
-          "type": "fontSizes",
-          "value": "{nl.heading.level-1.font-size}"
-        },
-        "font-weight": {
-          "type": "fontWeights",
-          "value": "{nl.heading.level-1.font-weight}"
-        },
-        "line-height": {
-          "type": "lineHeights",
-          "value": "{nl.heading.level-1.line-height}"
-        },
-        "margin-block-end": {
-          "type": "dimension",
-          "value": "{nl.heading.level-1.margin-block-end}",
-          "description": "[code-only]"
-        },
-        "margin-block-start": {
-          "type": "dimension",
-          "value": "{nl.heading.level-1.margin-block-start}",
-          "description": "[code-only]"
-        }
-      },
-      "heading-2": {
-        "color": {
-          "type": "color",
-          "value": "{nl.heading.level-2.color}"
-        },
-        "font-family": {
-          "type": "fontFamilies",
-          "value": "{nl.heading.level-2.font-family}"
-        },
-        "font-size": {
-          "type": "fontSizes",
-          "value": "{nl.heading.level-2.font-size}"
-        },
-        "font-weight": {
-          "type": "fontWeights",
-          "value": "{nl.heading.level-2.font-weight}"
-        },
-        "line-height": {
-          "type": "lineHeights",
-          "value": "{nl.heading.level-2.line-height}"
-        },
-        "margin-block-end": {
-          "type": "dimension",
-          "value": "{nl.heading.level-2.margin-block-end}",
-          "description": "[code-only]"
-        },
-        "margin-block-start": {
-          "type": "dimension",
-          "value": "{nl.heading.level-2.margin-block-start}",
-          "description": "[code-only]"
-        }
-      },
-      "heading-3": {
-        "color": {
-          "type": "color",
-          "value": "{nl.heading.level-3.color}"
-        },
-        "font-family": {
-          "type": "fontFamilies",
-          "value": "{nl.heading.level-3.font-family}"
-        },
-        "font-size": {
-          "type": "fontSizes",
-          "value": "{nl.heading.level-3.font-size}"
-        },
-        "font-weight": {
-          "type": "fontWeights",
-          "value": "{nl.heading.level-3.font-weight}"
-        },
-        "line-height": {
-          "type": "lineHeights",
-          "value": "{nl.heading.level-3.line-height}"
-        },
-        "margin-block-end": {
-          "type": "dimension",
-          "value": "{nl.heading.level-3.margin-block-end}",
-          "description": "[code-only]"
-        },
-        "margin-block-start": {
-          "type": "dimension",
-          "value": "{nl.heading.level-3.margin-block-start}",
-          "description": "[code-only]"
-        }
-      },
-      "heading-4": {
-        "color": {
-          "type": "color",
-          "value": "{nl.heading.level-4.color}"
-        },
-        "font-family": {
-          "type": "fontFamilies",
-          "value": "{nl.heading.level-4.font-family}"
-        },
-        "font-size": {
-          "type": "fontSizes",
-          "value": "{nl.heading.level-4.font-size}"
-        },
-        "font-weight": {
-          "type": "fontWeights",
-          "value": "{nl.heading.level-4.font-weight}"
-        },
-        "line-height": {
-          "type": "lineHeights",
-          "value": "{nl.heading.level-4.line-height}"
-        },
-        "margin-block-end": {
-          "type": "dimension",
-          "value": "{nl.heading.level-4.margin-block-end}",
-          "description": "[code-only]"
-        },
-        "margin-block-start": {
-          "type": "dimension",
-          "value": "{nl.heading.level-4.margin-block-start}",
-          "description": "[code-only]"
-        }
-      },
-      "heading-5": {
-        "color": {
-          "type": "color",
-          "value": "{nl.heading.level-5.color}"
-        },
-        "font-family": {
-          "type": "fontFamilies",
-          "value": "{nl.heading.level-5.font-family}"
-        },
-        "font-size": {
-          "type": "fontSizes",
-          "value": "{nl.heading.level-5.font-size}"
-        },
-        "font-weight": {
-          "type": "fontWeights",
-          "value": "{nl.heading.level-5.font-weight}"
-        },
-        "line-height": {
-          "type": "lineHeights",
-          "value": "{nl.heading.level-5.line-height}"
-        },
-        "margin-block-end": {
-          "type": "dimension",
-          "value": "{nl.heading.level-5.margin-block-end}",
-          "description": "[code-only]"
-        },
-        "margin-block-start": {
-          "type": "dimension",
-          "value": "{nl.heading.level-5.margin-block-start}",
-          "description": "[code-only]"
-        }
-      },
-      "heading-6": {
-        "color": {
-          "type": "color",
-          "value": "{nl.heading.level-6.color}"
-        },
-        "font-family": {
-          "type": "fontFamilies",
-          "value": "{nl.heading.level-6.font-family}"
-        },
-        "font-size": {
-          "type": "fontSizes",
-          "value": "{nl.heading.level-6.font-size}"
-        },
-        "font-weight": {
-          "type": "fontWeights",
-          "value": "{nl.heading.level-6.font-weight}"
-        },
-        "line-height": {
-          "type": "lineHeights",
-          "value": "{nl.heading.level-6.line-height}"
-        },
-        "margin-block-end": {
-          "type": "dimension",
-          "value": "{nl.heading.level-6.margin-block-end}",
-          "description": "[code-only]"
-        },
-        "margin-block-start": {
-          "type": "dimension",
-          "value": "{nl.heading.level-6.margin-block-start}",
-          "description": "[code-only]"
         }
       }
     }
@@ -6075,90 +5909,6 @@
             "type": "dimension",
             "value": "{rhc.space.0}",
             "description": "[code only]"
-          }
-        }
-      }
-    }
-  },
-  "components/paragraph/utrecht": {
-    "utrecht": {
-      "paragraph": {
-        "color": {
-          "type": "color",
-          "value": "{nl.paragraph.color}"
-        },
-        "font-family": {
-          "type": "fontFamilies",
-          "value": "{nl.paragraph.font-family}"
-        },
-        "font-size": {
-          "type": "fontSizes",
-          "value": "{nl.paragraph.font-size}"
-        },
-        "font-weight": {
-          "type": "fontWeights",
-          "value": "{nl.paragraph.font-weight}"
-        },
-        "line-height": {
-          "type": "lineHeights",
-          "value": "{nl.paragraph.line-height}"
-        },
-        "lead": {
-          "color": {
-            "type": "color",
-            "value": "{nl.paragraph.color}"
-          },
-          "font-size": {
-            "type": "fontSizes",
-            "value": "{nl.paragraph.lead.font-size}"
-          },
-          "font-weight": {
-            "type": "fontWeights",
-            "value": "{nl.paragraph.lead.font-weight}"
-          },
-          "line-height": {
-            "type": "lineHeights",
-            "value": "{nl.paragraph.lead.line-height}"
-          }
-        },
-        "small": {
-          "font-size": {
-            "type": "fontSizes",
-            "value": "{nl.paragraph.lead.font-size}"
-          },
-          "color": {
-            "type": "color",
-            "value": "{nl.paragraph.color}"
-          },
-          "font-weight": {
-            "type": "fontWeights",
-            "value": "{nl.paragraph.lead.font-weight}"
-          },
-          "line-height": {
-            "type": "lineHeights",
-            "value": "{nl.paragraph.lead.line-height}"
-          }
-        },
-        "margin-block-end": {
-          "type": "dimension",
-          "value": "{nl.paragraph.margin-block-end}",
-          "description": "[code-only]"
-        },
-        "margin-block-start": {
-          "type": "dimension",
-          "value": "{nl.paragraph.margin-block-start}",
-          "description": "[code-only]"
-        }
-      }
-    }
-  },
-  "components/paragraph/deprecated": {
-    "nl": {
-      "paragraph": {
-        "lead": {
-          "color": {
-            "value": "{rhc.color.foreground.default}",
-            "type": "color"
           }
         }
       }
@@ -9882,7 +9632,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/heading/utrecht": "enabled",
         "components/heading/nl": "enabled",
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
@@ -9893,7 +9642,6 @@
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
         "components/navigation-list": "enabled",
-        "components/paragraph/utrecht": "enabled",
         "components/paragraph/nl": "enabled",
         "components/pre-heading": "enabled",
         "components/radio-group": "enabled",
@@ -9909,7 +9657,6 @@
         "components/column-layout": "enabled",
         "components/data-summary": "enabled",
         "components/action-group": "enabled",
-        "components/paragraph/deprecated": "enabled",
         "components/ordered-list/base": "enabled",
         "components/unordered-list/base": "enabled",
         "components/ordered-list/deprecated": "enabled",
@@ -9990,7 +9737,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/heading/utrecht": "enabled",
         "components/heading/nl": "enabled",
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
@@ -10001,7 +9747,6 @@
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
         "components/navigation-list": "enabled",
-        "components/paragraph/utrecht": "enabled",
         "components/pre-heading": "enabled",
         "components/paragraph/nl": "enabled",
         "components/radio-group": "enabled",
@@ -10021,7 +9766,6 @@
         "components/ordered-list/base": "enabled",
         "components/unordered-list/base": "enabled",
         "components/ordered-list/deprecated": "enabled",
-        "components/paragraph/deprecated": "enabled",
         "components/unordered-list/deprecated": "enabled",
         "utrecht/action": "enabled",
         "common/rounded-corner/base": "enabled",
@@ -10099,7 +9843,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/heading/utrecht": "enabled",
         "components/heading/nl": "enabled",
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
@@ -10110,7 +9853,6 @@
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
         "components/navigation-list": "enabled",
-        "components/paragraph/utrecht": "enabled",
         "components/paragraph/nl": "enabled",
         "components/pre-heading": "enabled",
         "components/radio-group": "enabled",
@@ -10131,7 +9873,6 @@
         "components/action-group": "enabled",
         "components/ordered-list/base": "enabled",
         "components/unordered-list/base": "enabled",
-        "components/paragraph/deprecated": "enabled",
         "components/ordered-list/deprecated": "enabled",
         "components/unordered-list/deprecated": "enabled",
         "utrecht/action": "enabled",
@@ -10210,7 +9951,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/heading/utrecht": "enabled",
         "components/heading/nl": "enabled",
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
@@ -10221,7 +9961,6 @@
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
         "components/navigation-list": "enabled",
-        "components/paragraph/utrecht": "enabled",
         "components/paragraph/nl": "enabled",
         "components/pre-heading": "enabled",
         "components/radio-group": "enabled",
@@ -10241,7 +9980,6 @@
         "components/ordered-list/base": "enabled",
         "components/unordered-list/base": "enabled",
         "components/ordered-list/deprecated": "enabled",
-        "components/paragraph/deprecated": "enabled",
         "components/unordered-list/deprecated": "enabled",
         "utrecht/action": "enabled",
         "common/rounded-corner/base": "enabled",
@@ -10319,7 +10057,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/heading/utrecht": "enabled",
         "components/heading/nl": "enabled",
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
@@ -10330,7 +10067,6 @@
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
         "components/navigation-list": "enabled",
-        "components/paragraph/utrecht": "enabled",
         "components/paragraph/nl": "enabled",
         "components/pre-heading": "enabled",
         "components/radio-group": "enabled",
@@ -10350,7 +10086,6 @@
         "components/ordered-list/base": "enabled",
         "components/unordered-list/base": "enabled",
         "components/ordered-list/deprecated": "enabled",
-        "components/paragraph/deprecated": "enabled",
         "components/unordered-list/deprecated": "enabled",
         "utrecht/action": "enabled",
         "common/rounded-corner/base": "enabled",
@@ -10428,7 +10163,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/heading/utrecht": "enabled",
         "components/heading/nl": "enabled",
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
@@ -10439,7 +10173,6 @@
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
         "components/navigation-list": "enabled",
-        "components/paragraph/utrecht": "enabled",
         "components/paragraph/nl": "enabled",
         "components/pre-heading": "enabled",
         "components/radio-group": "enabled",
@@ -10459,7 +10192,6 @@
         "components/ordered-list/base": "enabled",
         "components/unordered-list/base": "enabled",
         "components/ordered-list/deprecated": "enabled",
-        "components/paragraph/deprecated": "enabled",
         "components/unordered-list/deprecated": "enabled",
         "utrecht/action": "enabled",
         "common/rounded-corner/base": "enabled",
@@ -10537,7 +10269,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/heading/utrecht": "enabled",
         "components/heading/nl": "enabled",
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
@@ -10548,7 +10279,6 @@
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
         "components/navigation-list": "enabled",
-        "components/paragraph/utrecht": "enabled",
         "components/paragraph/nl": "enabled",
         "components/pre-heading": "enabled",
         "components/radio-group": "enabled",
@@ -10568,7 +10298,6 @@
         "components/ordered-list/base": "enabled",
         "components/unordered-list/base": "enabled",
         "components/ordered-list/deprecated": "enabled",
-        "components/paragraph/deprecated": "enabled",
         "components/unordered-list/deprecated": "enabled",
         "utrecht/action": "enabled",
         "common/rounded-corner/base": "enabled",
@@ -10646,7 +10375,6 @@
         "components/form-field-checkbox-option": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/heading/utrecht": "enabled",
         "components/heading/nl": "enabled",
         "components/hero": "enabled",
         "components/icon-only-button": "enabled",
@@ -10657,7 +10385,6 @@
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
         "components/navigation-list": "enabled",
-        "components/paragraph/utrecht": "enabled",
         "components/paragraph/nl": "enabled",
         "components/pre-heading": "enabled",
         "components/radio-group": "enabled",
@@ -10677,7 +10404,6 @@
         "components/ordered-list/base": "enabled",
         "components/unordered-list/base": "enabled",
         "components/ordered-list/deprecated": "enabled",
-        "components/paragraph/deprecated": "enabled",
         "components/unordered-list/deprecated": "enabled",
         "utrecht/action": "enabled",
         "common/rounded-corner/base": "enabled",
@@ -10757,7 +10483,6 @@
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
         "components/heading/nl": "enabled",
-        "components/heading/utrecht": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
         "components/icon-only-button": "enabled",
@@ -10768,7 +10493,6 @@
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
         "components/navigation-list": "enabled",
-        "components/paragraph/utrecht": "enabled",
         "components/paragraph/nl": "enabled",
         "components/pre-heading": "enabled",
         "components/radio-group": "enabled",
@@ -10789,7 +10513,6 @@
         "components/ordered-list/base": "enabled",
         "components/unordered-list/base": "enabled",
         "components/ordered-list/deprecated": "enabled",
-        "components/paragraph/deprecated": "enabled",
         "components/unordered-list/deprecated": "enabled",
         "utrecht/action": "enabled",
         "common/rounded-corner/base": "enabled",
@@ -10895,7 +10618,6 @@
       "components/form-field-option-label",
       "components/form-field-radio-option",
       "components/heading/nl",
-      "components/heading/utrecht",
       "components/hero",
       "components/icon",
       "components/icon-only-button",
@@ -10915,8 +10637,6 @@
       "components/ordered-list/base",
       "components/ordered-list/deprecated",
       "components/paragraph/nl",
-      "components/paragraph/utrecht",
-      "components/paragraph/deprecated",
       "components/pre-heading",
       "components/radio-button/base",
       "components/radio-button/deprecated",

@@ -83,3 +83,17 @@ export class App {
 ```
 
 Bekijk de [packages/font/README.md](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/font/README.md) voor de meerdere manieren om de lettertypen te installeren voor jouw project.
+
+## Development
+
+Om de storybook lokaal te runnen, gebruik je:
+
+```bash
+pnpm --filter @rijkshuisstijl-community/storybook-angular storybook
+```
+
+om de storybook te verversen, moet je eerst de storybook server interrumperen en dan het volgende commando draaien:
+
+```bash
+pnpm --filter @rijkshuisstijl-community/components-angular build
+```

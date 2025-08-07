@@ -2,4 +2,4 @@
 '@rijkshuisstijl-community/design-tokens': patch
 ---
 
-Removed unused tokens.
+chore: Remove unused deprecated paragraph token

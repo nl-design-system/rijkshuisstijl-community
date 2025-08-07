@@ -1,6 +1,4 @@
-import { Hero } from '@rijkshuisstijl-community/components-react';
-import { LinkListCard } from '@rijkshuisstijl-community/components-react';
-import { LinkListLink } from '@rijkshuisstijl-community/components-react';
+import { Hero, LinkListCard, LinkListLink } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from './hero.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';

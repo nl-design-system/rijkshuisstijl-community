@@ -23,7 +23,7 @@
 }
 
 .nl-link:visited,
-.nl-link--visted {
+.nl-link--visited {
   @include mixin.rhc-link--visited;
 }
 
@@ -46,4 +46,8 @@
 
 .nl-link .rhc-link__sr-only {
   @include button-mixin.invisible-but-accessible;
+}
+
+.nl-link:any-link.rhc-link--inline {
+  @include mixin.rhc-link--inline;
 }
