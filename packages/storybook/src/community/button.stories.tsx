@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { IconButton } from '@rijkshuisstijl-community/components-react';
+import { Heading, IconButton } from '@rijkshuisstijl-community/components-react';
 import { Button, Icon } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
@@ -176,43 +176,69 @@ export const IconOnly: StoryObj<typeof IconButton> = {
 export const DesignTokens = createDesignTokensStory(meta);
 export const Visual = createVisualRegressionStory(() => (
   <>
-    <h4 className="utrecht-heading-3">Uitvoerend</h4>
-    <h5 className="utrecht-heading-4">paars</h5>
+    <Heading appearanceLevel={2} level={1}>
+      Button
+    </Heading>
+    <Heading appearanceLevel={3} level={2}>
+      KOOP
+    </Heading>
+    <VisualRegressionWrapper className={`koop`}>
+      <Appearances />
+      <Sizes />
+      <InteractiveStates />
+      <PropertyStates />
+    </VisualRegressionWrapper>
+    <Heading appearanceLevel={3} level={2}>
+      Uitvoerend
+    </Heading>
+    <Heading appearanceLevel={4} level={3}>
+      Paars
+    </Heading>
     <VisualRegressionWrapper className={`uitvoerend-paars`}>
       <Appearances />
       <Sizes />
       <InteractiveStates />
       <PropertyStates />
     </VisualRegressionWrapper>
-    <h5 className="utrecht-heading-4">hemelblauw</h5>
+    <Heading appearanceLevel={4} level={3}>
+      Hemelblauw
+    </Heading>
     <VisualRegressionWrapper className={`uitvoerend-hemelblauw`}>
       <Appearances />
       <Sizes />
       <InteractiveStates />
       <PropertyStates />
     </VisualRegressionWrapper>
-    <h5 className="utrecht-heading-4">groen</h5>
+    <Heading appearanceLevel={4} level={3}>
+      Groen
+    </Heading>
     <VisualRegressionWrapper className={`uitvoerend-groen`}>
       <Appearances />
       <Sizes />
       <InteractiveStates />
       <PropertyStates />
     </VisualRegressionWrapper>
-    <h5 className="utrecht-heading-4">oranje</h5>
+    <Heading appearanceLevel={4} level={3}>
+      Oranje
+    </Heading>
     <VisualRegressionWrapper className={`uitvoerend-oranje`}>
       <Appearances />
       <Sizes />
       <InteractiveStates />
       <PropertyStates />
     </VisualRegressionWrapper>
-    <h5 className="utrecht-heading-4">violet</h5>
+    <Heading appearanceLevel={4} level={3}>
+      Violet
+    </Heading>
     <VisualRegressionWrapper className={`uitvoerend-violet`}>
       <Appearances />
       <Sizes />
       <InteractiveStates />
       <PropertyStates />
     </VisualRegressionWrapper>
-    <h5 className="utrecht-heading-4">mintgroen</h5>
+    <Heading appearanceLevel={4} level={3}>
+      Mintgroen
+    </Heading>
     <VisualRegressionWrapper className={`uitvoerend-mintgroen`}>
       <Appearances />
       <Sizes />
