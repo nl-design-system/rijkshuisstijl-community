@@ -4,7 +4,6 @@
  */
 
 .utrecht-link-list__link {
-  --utrecht-link-icon-inset-block-start: var(--utrecht-link-list-icon-inset-block-start, inherit);
   --utrecht-link-text-decoration: var(--rhc-link-list-text-decoration);
 
   align-items: flex-start;
@@ -13,10 +12,6 @@
   .utrecht-icon {
     flex-shrink: 0;
   }
-}
-
-.utrecht-link-list__link:visited {
-  --utrecht-link-color: var(--nl-link-visited-color);
 }
 
 .utrecht-link-list__item {
@@ -30,6 +25,6 @@
 }
 
 .utrecht-link-list__item .nl-link {
-  --nl-link-column-gap: var(--utrecht-link-list-item-column-gap);
+  --rhc-link-column-gap: var(--utrecht-link-list-item-column-gap);
   --nl-link-text-decoration-line: var(--rhc-link-list-text-decoration);
 }

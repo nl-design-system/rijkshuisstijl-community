@@ -13,7 +13,7 @@ const meta: Meta<LinkComponent> = {
   component: LinkComponent,
   argTypes: {
     href: {
-      description: 'Link href',
+      description: 'Waar de link naartoe leidt',
       control: { type: 'text' },
       required: true,
     },
@@ -23,7 +23,7 @@ const meta: Meta<LinkComponent> = {
     },
     inline: {
       type: 'boolean',
-      description: 'Whether to render the link inside of running text or not',
+      description: 'Of de link onderdeel uitmaakt van lopende tekst',
     },
   },
   args: {
@@ -38,9 +38,9 @@ const meta: Meta<LinkComponent> = {
     },
   },
   render: ({ href, target }) => ({
-    template: `<rhc-link [href]="'${href}'" [target]="${target}">
+    template: `<rhc-paragraph><rhc-link [href]="'${href}'" [target]="${target}">
     NL-Design System
-    </rhc-link>`,
+    </rhc-link></rhc-paragraph>`,
     props: {
       href,
       target,
@@ -64,21 +64,6 @@ export const LinkInParagraph: StoryObj<LinkComponent> = {
     </rhc-paragraph>`,
     props: {
       href,
-    },
-  }),
-};
-
-export const OpenInAnotherTab: StoryObj<LinkComponent> = {
-  args: {
-    href: 'https://nldesignsystem.nl/project/over-nl-design-system/',
-    target: '_blank',
-  },
-  render: ({ href, target }) => ({
-    template: `
-    <rhc-link [href]="'${href}'" [target]="${target}">NL-Design System</rhc-link>`,
-    props: {
-      href,
-      target,
     },
   }),
 };
