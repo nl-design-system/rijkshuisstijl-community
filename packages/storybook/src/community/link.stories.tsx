@@ -19,7 +19,7 @@ import technologyHtmlDocs from '@utrecht/components/link/docs/technology-html.nl
 import usageDocs from '@utrecht/components/link/docs/usage.nl.md?raw';
 import visualDesignDocs from '@utrecht/components/link/docs/visual-design.nl.md?raw';
 import wcagDocs from '@utrecht/components/link/docs/wcag.nl.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown, replaceMarkdown } from '../../helpers/merge-markdown';
 import iconInline from '../documentation/link/icon-inline.nl.md?raw';
 
 const meta = {
@@ -62,26 +62,31 @@ const meta = {
     },
     docs: {
       description: {
-        component: mergeMarkdown([
-          readme,
-          interactionDocs,
-          usageDocs,
-          relatedComponentsDocs,
-          visualDesignDocs,
-          contentDocs,
-          anatomyDocs,
-          technologyHtmlDocs,
-          privacyDocs,
-          failurePerceivableFocusDocs,
-          failureNoContextGoalDocs,
-          failureNoLangDocs,
-          failureNoAriaCurrentDocs,
-          failureUnecessaryHomeLinkDocs,
-          failureNoHrefDocs,
-          referencesDocs,
-          wcagDocs,
-          iconInline,
-        ]),
+        component: replaceMarkdown(
+          mergeMarkdown([
+            readme,
+            interactionDocs,
+            usageDocs,
+            relatedComponentsDocs,
+            visualDesignDocs,
+            contentDocs,
+            anatomyDocs,
+            technologyHtmlDocs,
+            privacyDocs,
+            failurePerceivableFocusDocs,
+            failureNoContextGoalDocs,
+            failureNoLangDocs,
+            failureNoAriaCurrentDocs,
+            failureUnecessaryHomeLinkDocs,
+            failureNoHrefDocs,
+            referencesDocs,
+            wcagDocs,
+            iconInline,
+          ]),
+          'utrecht',
+          'rhc',
+          true,
+        ).replace('utrecht', 'rhc'),
       },
     },
     figma:
@@ -110,12 +115,22 @@ export const IconLeft: Story = {
     href: '#',
     children: [<Icon className="rhc-link--icon" icon="kalender" />, 'Nieuwe afspraak'],
   },
+  argTypes: {
+    children: {
+      control: false,
+    },
+  },
 };
 
 export const IconRight: Story = {
   args: {
     href: '#',
     children: ['Verder', <Icon className="rhc-link--icon" icon="pijl-naar-rechts" />],
+  },
+  argTypes: {
+    children: {
+      control: false,
+    },
   },
 };
 
