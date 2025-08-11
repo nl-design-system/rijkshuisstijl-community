@@ -24,6 +24,7 @@ import { Fragment } from 'react';
 
 const preview: Preview = {
   decorators: [
+    (Story: any) => <div className="utrecht-document">{Story()}</div>,
     withThemeByClassName({
       themes: {
         RijkshuisstijlCommunity: 'rhc-theme (Standaard Thema)',
