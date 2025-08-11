@@ -2642,7 +2642,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2656,7 +2656,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2666,7 +2666,7 @@
           "pressed": {
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2689,7 +2689,7 @@
           "active": {
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2770,7 +2770,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2893,7 +2893,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2907,7 +2907,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2930,7 +2930,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -3844,36 +3844,6 @@
       }
     }
   },
-   "components/expandable-checkbox-group": {
-    "rhc": {
-      "expandable-checkbox-group": {
-        "details": {
-          "margin-block-start": {
-            "value": "{rhc.space.100}",
-            "type": "dimension"
-          }
-        },
-        "summary": {
-          "color": {
-            "value": "{rhc.color.foreground.link}",
-            "type": "color"
-          },
-          "margin-block-end": {
-            "value": "{rhc.space.100}",
-            "type": "dimension"
-          },
-          "margin-block-start": {
-            "value": "{rhc.space.100}",
-            "type": "dimension"
-          },
-          "text-decoration": {
-            "type": "textDecoration",
-            "value": "underline"
-          }
-        }
-      }
-    }
-  },
   "components/fieldset": {
     "utrecht": {
       "form-fieldset": {
@@ -4219,11 +4189,11 @@
           },
           "border-inline-start-width": {
             "type": "dimension",
-            "value": "{rhc.border-width.none}"
+            "value": "{rhc.border-width.m}"
           },
           "padding-inline-start": {
             "type": "dimension",
-            "value": "{rhc.space.0}"
+            "value": "{rhc.space.200}"
           }
         }
       }
@@ -4427,7 +4397,7 @@
         "disabled": {
           "color": {
             "type": "color",
-            "value": "{rhc.color.border.subdued}"
+            "value": "{rhc.color.foreground.subdued}"
           }
         }
       }
@@ -7751,6 +7721,36 @@
       }
     }
   },
+  "components/expandable-checkbox-group": {
+    "rhc": {
+      "expandable-checkbox-group": {
+        "details": {
+          "margin-block-start": {
+            "value": "{rhc.space.100}",
+            "type": "dimension"
+          }
+        },
+        "summary": {
+          "color": {
+            "value": "{rhc.color.foreground.link}",
+            "type": "color"
+          },
+          "margin-block-end": {
+            "value": "{rhc.space.100}",
+            "type": "dimension"
+          },
+          "margin-block-start": {
+            "value": "{rhc.space.100}",
+            "type": "dimension"
+          },
+          "text-decoration": {
+            "type": "textDecoration",
+            "value": "underline"
+          }
+        }
+      }
+    }
+  },
   "overwrites/primaire kleur/groen": {
     "rhc": {
       "color": {
@@ -10659,6 +10659,7 @@
       "components/unordered-list/base",
       "components/unordered-list/deprecated",
       "components/column-layout",
+      "components/expandable-checkbox-group",
       "overwrites/primaire kleur/groen",
       "overwrites/primaire kleur/mintgroen",
       "overwrites/primaire kleur/oranje",
