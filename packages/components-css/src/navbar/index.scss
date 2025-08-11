@@ -1,6 +1,9 @@
 .rhc-nav-bar__container {
   align-items: center;
   background-color: var(--rhc-nav-bar-background-color);
+  border-block-end-color: var(--rhc-nav-bar-border-color);
+  border-block-end-style: solid;
+  border-block-end-width: var(--rhc-nav-bar-border-block-end-width);
   display: flex;
   inline-size: var(--rhc-nav-bar-container-inline-size);
   justify-content: center;
@@ -9,7 +12,6 @@
 .rhc-nav-bar {
   align-items: center;
   background-color: var(--rhc-nav-bar-background-color);
-  border-block-end-width: var(--rhc-nav-bar-border-block-end-width);
   color: var(--rhc-nav-bar-color);
   column-gap: var(--rhc-nav-bar-content-column-gap);
   display: flex;
