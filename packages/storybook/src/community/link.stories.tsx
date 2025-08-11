@@ -123,34 +123,14 @@ export const Default: Story = {
 export const IconLeft: Story = {
   args: {
     href: '#',
-    children: (
-      <>
-        <IconCalendarEvent />
-        Nieuwe afspraak
-      </>
-    ),
-  },
-  argTypes: {
-    children: {
-      control: false,
-    },
+    children: [<IconCalendarEvent />, 'Nieuwe afspraak'],
   },
 };
 
 export const IconRight: Story = {
   args: {
     href: '#',
-    children: (
-      <>
-        Verder
-        <Icon icon="pijl-naar-rechts" />
-      </>
-    ),
-  },
-  argTypes: {
-    children: {
-      control: false,
-    },
+    children: ['Verder', <Icon icon="pijl-naar-rechts" />],
   },
 };
 
@@ -215,9 +195,6 @@ export const Visited: Story = {
 export const LinkInParagraph: Story = {
   args: {
     href: 'https://example.com/',
-  },
-  parameters: {
-    controls: { disable: true },
   },
   render({ href }) {
     return (
