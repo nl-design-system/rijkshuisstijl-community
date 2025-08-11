@@ -28,7 +28,7 @@
     "generate": "node src/wrapper/createSpacingCSS.js && prettier --write ./src/wrapper",
     "build": "pnpm run generate && pnpm run build:css",
     "build:css": "vite build",
-    "watch:css": "vite build --watch"
+    "watch": "vite build --watch"
   },
   "dependencies": {
     "@nl-design-system-candidate/heading-css": "1.1.0",
