@@ -189,7 +189,7 @@ export const LinkInParagraph: Story = {
   },
   render({ href }) {
     return (
-      <Paragraph>
+      <Paragraph style={{ width: '423px' }}>
         Het was in het voorjaar 1345, dat een talrijk aantal van naburen en vreemdelingen naar Haarlem was toegestroomd,
         ter bijwoning van een plechtig feest, hetwelk binnen zijn muren door Graaf Willem den Vierden stond gegeven te
         worden. In deze paragraaf staat een{' '}
