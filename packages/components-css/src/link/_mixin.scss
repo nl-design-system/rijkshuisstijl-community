@@ -10,9 +10,10 @@
 }
 
 @mixin rhc-link--icon {
+  --utrecht-icon-size: 1em;
+
   align-self: center;
-  font-size: 1em;
-  inline-size: 1em;
+  line-height: 1.25em;
 }
 
 /* For rhc-link, `inline-flex` was chosen as default, to enable control on positioning of an icon.
