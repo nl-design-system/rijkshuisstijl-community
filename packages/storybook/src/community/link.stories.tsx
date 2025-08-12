@@ -113,7 +113,7 @@ export const Default: Story = {
 export const IconLeft: Story = {
   args: {
     href: '#',
-    children: [<Icon className="rhc-link--icon" icon="kalender" />, 'Nieuwe afspraak'],
+    children: [<Icon icon="kalender" />, 'Nieuwe afspraak'],
   },
   argTypes: {
     children: {
@@ -125,7 +125,7 @@ export const IconLeft: Story = {
 export const IconRight: Story = {
   args: {
     href: '#',
-    children: ['Verder', <Icon className="rhc-link--icon" icon="pijl-naar-rechts" />],
+    children: ['Verder', <Icon icon="pijl-naar-rechts" />],
   },
   argTypes: {
     children: {
