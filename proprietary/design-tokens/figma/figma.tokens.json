@@ -4470,27 +4470,28 @@
       "form-field-radio-option": {
         "column-gap": {
           "value": "{rhc.space.100}",
-          "type": "dimensions"
+          "type": "dimension"
         },
         "font-weight": {
           "value": "{rhc.font-weight.default}",
           "type": "fontWeights"
         },
         "row-gap": {
-          "value": "{rhc.space.600}",
-          "type": "dimensions"
+          "value": "{rhc.space.100}",
+          "type": "dimension"
         },
         "label": {
           "margin-block-end": {
-            "value": "{rhc.space.0}",
-            "type": "dimensions"
+            "value": "{rhc.space.600}",
+            "type": "dimension"
           }
         },
         "input": {
           "margin": {
             "block-start": {
-              "value": "{rhc.space.400}",
-              "type": "dimensions"
+              "value": "0.188rem",
+              "type": "dimension",
+              "description": "= (font-size * line-height - block-size radio) / 2"
             }
           }
         }
