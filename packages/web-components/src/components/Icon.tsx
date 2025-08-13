@@ -2,6 +2,7 @@ import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?
 import { Icon, IconProps } from '@rijkshuisstijl-community/components-react';
 import { render } from 'preact';
 import { BaseWebComponent } from './BaseComponent';
+import iconStylesheet from './Icon.css?inline';
 
 export type IconWebComponentAttributes = IconProps;
 
@@ -9,7 +10,7 @@ export class IconWebComponent extends BaseWebComponent {
   static override readonly tagName: string = 'rhc-icon';
 
   constructor() {
-    super(stylesheet);
+    super(stylesheet + iconStylesheet);
   }
 
   render(): void {
