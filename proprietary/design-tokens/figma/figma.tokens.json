@@ -2642,7 +2642,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2656,7 +2656,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2666,7 +2666,7 @@
           "pressed": {
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2689,7 +2689,7 @@
           "active": {
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2770,7 +2770,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2893,7 +2893,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2907,7 +2907,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2930,7 +2930,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -3840,36 +3840,6 @@
         "size": {
           "value": "{rhc.size.quarter-lint}",
           "type": "size"
-        }
-      }
-    }
-  },
-   "components/expandable-checkbox-group": {
-    "rhc": {
-      "expandable-checkbox-group": {
-        "details": {
-          "margin-block-start": {
-            "value": "{rhc.space.100}",
-            "type": "dimension"
-          }
-        },
-        "summary": {
-          "color": {
-            "value": "{rhc.color.foreground.link}",
-            "type": "color"
-          },
-          "margin-block-end": {
-            "value": "{rhc.space.100}",
-            "type": "dimension"
-          },
-          "margin-block-start": {
-            "value": "{rhc.space.100}",
-            "type": "dimension"
-          },
-          "text-decoration": {
-            "type": "textDecoration",
-            "value": "underline"
-          }
         }
       }
     }
@@ -4849,6 +4819,24 @@
         "padding-inline-start": {
           "value": "{rhc.space.150}",
           "type": "spacing"
+        }
+      }
+    }
+  },
+  "components/language-navigation": {
+    "rhc": {
+      "language-navigation": {
+        "font-family": {
+          "value": "{rhc.font-family.primary}",
+          "type": "fontFamilies"
+        },
+        "font-size": {
+          "value": "{rhc.font-size.body.default}",
+          "type": "fontSizes"
+        },
+        "line-height": {
+          "value": "{rhc.line-height.body}",
+          "type": "lineHeights"
         }
       }
     }
@@ -7751,6 +7739,36 @@
       }
     }
   },
+  "components/expandable-checkbox-group": {
+    "rhc": {
+      "expandable-checkbox-group": {
+        "details": {
+          "margin-block-start": {
+            "value": "{rhc.space.100}",
+            "type": "dimension"
+          }
+        },
+        "summary": {
+          "color": {
+            "value": "{rhc.color.foreground.link}",
+            "type": "color"
+          },
+          "margin-block-end": {
+            "value": "{rhc.space.100}",
+            "type": "dimension"
+          },
+          "margin-block-start": {
+            "value": "{rhc.space.100}",
+            "type": "dimension"
+          },
+          "text-decoration": {
+            "type": "textDecoration",
+            "value": "underline"
+          }
+        }
+      }
+    }
+  },
   "overwrites/primaire kleur/groen": {
     "rhc": {
       "color": {
@@ -10621,6 +10639,7 @@
       "components/hero",
       "components/icon",
       "components/icon-only-button",
+      "components/language-navigation",
       "components/link/nl",
       "components/link/utrecht",
       "components/link/deprecated",
@@ -10659,6 +10678,7 @@
       "components/unordered-list/base",
       "components/unordered-list/deprecated",
       "components/column-layout",
+      "components/expandable-checkbox-group",
       "overwrites/primaire kleur/groen",
       "overwrites/primaire kleur/mintgroen",
       "overwrites/primaire kleur/oranje",
