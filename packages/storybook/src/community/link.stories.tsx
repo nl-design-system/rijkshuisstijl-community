@@ -2,7 +2,6 @@
 
 import { Icon, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { IconCalendarEvent } from '@tabler/icons-react';
 import readme from '@utrecht/components/link/README.md?raw';
 import anatomyDocs from '@utrecht/components/link/docs/anatomy.nl.md?raw';
 import contentDocs from '@utrecht/components/link/docs/content.nl.md?raw';
@@ -20,7 +19,8 @@ import technologyHtmlDocs from '@utrecht/components/link/docs/technology-html.nl
 import usageDocs from '@utrecht/components/link/docs/usage.nl.md?raw';
 import visualDesignDocs from '@utrecht/components/link/docs/visual-design.nl.md?raw';
 import wcagDocs from '@utrecht/components/link/docs/wcag.nl.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown, replaceMarkdown } from '../../helpers/merge-markdown';
+import iconInline from '../documentation/link/icon-inline.nl.md?raw';
 
 const meta = {
   title: 'Rijkshuisstijl/Link',
@@ -28,43 +28,28 @@ const meta = {
   component: Link,
   argTypes: {
     href: {
-      description: 'Url to link to',
+      description: 'Waar de link naartoe leidt',
       type: {
         name: 'string',
         required: true,
-      },
-      table: {
-        category: 'Property',
-      },
-    },
-    external: {
-      description: 'Whether the link is external',
-      type: {
-        name: 'boolean',
-      },
-      table: {
-        category: 'Property',
-      },
-    },
-    externalLabel: {
-      description: 'SR only label for external link icon',
-      type: {
-        name: 'string',
-      },
-      table: {
-        category: 'Property',
       },
     },
     children: {
-      description: 'Link text - default webcomponent slot',
+      description: 'Klikbaar deel van de link, dus een tekst of afbeelding',
       type: {
         name: 'string',
         required: true,
       },
-      table: {
-        category: 'Webcomponent Slot',
-      },
       defaultValue: '',
+    },
+    className: {
+      description: 'Eigen classnames om toe te voegen aan de standaard-classnames van het component',
+      type: 'string',
+    },
+    inline: {
+      description: 'Of de link onderdeel uitmaakt van lopende tekst',
+      type: 'boolean',
+      defaultValue: false,
     },
   },
   args: {
@@ -77,36 +62,41 @@ const meta = {
     },
     docs: {
       description: {
-        component: mergeMarkdown([
-          readme,
-          interactionDocs,
-          usageDocs,
-          relatedComponentsDocs,
-          visualDesignDocs,
-          contentDocs,
-          anatomyDocs,
-          technologyHtmlDocs,
-          privacyDocs,
-          failurePerceivableFocusDocs,
-          failureNoContextGoalDocs,
-          failureNoLangDocs,
-          failureNoAriaCurrentDocs,
-          failureUnecessaryHomeLinkDocs,
-          failureNoHrefDocs,
-          referencesDocs,
-          wcagDocs,
-        ]),
+        component: replaceMarkdown(
+          mergeMarkdown([
+            readme,
+            interactionDocs,
+            usageDocs,
+            relatedComponentsDocs,
+            visualDesignDocs,
+            contentDocs,
+            anatomyDocs,
+            technologyHtmlDocs,
+            privacyDocs,
+            failurePerceivableFocusDocs,
+            failureNoContextGoalDocs,
+            failureNoLangDocs,
+            failureNoAriaCurrentDocs,
+            failureUnecessaryHomeLinkDocs,
+            failureNoHrefDocs,
+            referencesDocs,
+            wcagDocs,
+            iconInline,
+          ]),
+          'utrecht',
+          'rhc',
+          true,
+        ).replace('utrecht', 'rhc'),
       },
     },
     figma:
-      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=153-1056&p=f&t=Vqau7APnb0CBKrLh-0',
+      'https://www.figma.com/design/Q5Imc7Xi9KnBQhcYI3Hytj/-WIP--NL-Design-System---Bibliotheek?node-id=197-664&p=f&t=nB0V3gAhWfpilaKv-0',
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Link.tsx',
     nldesignsystem: 'https://nldesignsystem.nl/link',
     componentOrigin:
       'Dit component is overgenomen van het NL Design System, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
-  render: Link,
 } as Meta<typeof Link>;
 
 export default meta;
@@ -123,7 +113,12 @@ export const Default: Story = {
 export const IconLeft: Story = {
   args: {
     href: '#',
-    children: [<IconCalendarEvent />, 'Nieuwe afspraak'],
+    children: [<Icon icon="kalender" />, 'Nieuwe afspraak'],
+  },
+  argTypes: {
+    children: {
+      control: false,
+    },
   },
 };
 
@@ -132,14 +127,10 @@ export const IconRight: Story = {
     href: '#',
     children: ['Verder', <Icon icon="pijl-naar-rechts" />],
   },
-};
-
-export const External: Story = {
-  args: {
-    href: '#',
-    children: 'Krantenartikel',
-    external: true,
-    externalLabel: 'deze link gaat naar ad.nl',
+  argTypes: {
+    children: {
+      control: false,
+    },
   },
 };
 
@@ -198,7 +189,7 @@ export const LinkInParagraph: Story = {
   },
   render({ href }) {
     return (
-      <Paragraph>
+      <Paragraph style={{ width: '423px' }}>
         Het was in het voorjaar 1345, dat een talrijk aantal van naburen en vreemdelingen naar Haarlem was toegestroomd,
         ter bijwoning van een plechtig feest, hetwelk binnen zijn muren door Graaf Willem den Vierden stond gegeven te
         worden. In deze paragraaf staat een{' '}

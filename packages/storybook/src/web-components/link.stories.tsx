@@ -24,14 +24,13 @@ import { mergeMarkdown } from '../../helpers/merge-markdown';
 LinkWebComponent.define();
 IconWebComponent.define();
 
-const LinkWrapper = ({ external, externalLabel, classname, ...restProps }: any) => {
-  return createElement('rhc-link', {
+const LinkWrapper = ({ external, externalLabel, classname, ...restProps }: any) =>
+  createElement('rhc-link', {
     external: external?.toString(),
     externalLabel,
     classname,
     ...restProps,
   });
-};
 
 const meta = {
   title: 'Web Components/Link',
@@ -128,24 +127,16 @@ export const Default = {
   },
 } as StoryObj<typeof meta>;
 
-export const External = {
-  args: {
-    children: 'Link',
-    href: '#',
-    external: true,
-  },
-} as StoryObj<typeof meta>;
-
 export const iconLeft = {
   args: {
-    children: [createElement('rhc-icon', { icon: 'home' }), 'Link'],
+    children: [createElement('rhc-icon', { icon: 'home', classname: 'rhc-link__icon' }), 'Link'],
     href: '#',
   },
 } as StoryObj<typeof meta>;
 
 export const iconRight = {
   args: {
-    children: ['Link', createElement('rhc-icon', { icon: 'chevron-right' })],
+    children: ['Link', createElement('rhc-icon', { icon: 'chevron-right', classname: 'rhc-link__icon' })],
     href: '#',
   },
 } as StoryObj<typeof meta>;
