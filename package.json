@@ -57,7 +57,6 @@
     "stylelint": "16.23.0",
     "stylelint-config-standard-scss": "13.1.0",
     "stylelint-order": "7.0.0",
-    "token-transformer": "0.0.33",
     "typescript": "5.8.3",
     "wait-on": "8.0.4"
   },
@@ -76,7 +75,9 @@
     "lint-fix:css": "stylelint --fix '**/*.{css,scss}'",
     "lint-fix:js": "eslint --ext .js,.cjs,.mjs,.json,.jsx,.mdx,.ts,.tsx --fix --report-unused-disable-directives .",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
+    "lint-staged": "lint-staged",
     "lint-workspaces": "lerna run --no-bail lint",
+    "pre-commit": "lint-staged",
     "prepare": "husky",
     "prettier": "prettier --write .",
     "publish": "lerna publish from-package --yes",

@@ -1,7 +1,7 @@
-import { tokenTransformer } from '../token-transformer.mjs';
+import { tokenTransformer } from './src/token-transformer.mjs';
 
 tokenTransformer({
-  input: './src/figma.tokens.json',
-  output: './tmp/figma.tokens.json',
+  input: new URL('./src/figma.tokens.json', import.meta.url).pathname,
+  output: new URL('./tmp/figma.tokens.json', import.meta.url).pathname,
   themes: ['Logius'],
 });

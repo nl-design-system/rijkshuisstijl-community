@@ -4,10 +4,10 @@
 
 ## Usage
 
-Dit component is te gebruiken door de `Drawer` te importeren. De component twee (verplichte) properties genaamd `isOpen` en `onClose`.
+Dit component is te gebruiken door de `Drawer` te importeren. Default is het `open=false` en is het aligned op `inline-start`.
 
 ```tsx
 import { Drawer } from '@rijkshuisstijl-community/components-react';
 
-<Drawer isOpen={true} onClose={() => {}} />;
+<Drawer open={true} modal={false} align={'block-end' | 'block-start' | 'inline-end' | 'inline-start'} />;
 ```
