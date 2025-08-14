@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
+import { Alert } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './alert.md?raw';
-import { Alert } from '../../../components-react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {

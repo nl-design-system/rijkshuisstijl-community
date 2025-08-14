@@ -2,50 +2,17 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-@use "../button/mixin" as button-mixin;
+
 @use "mixin";
 @use "../../node_modules/@nl-design-system-candidate/link-css/dist/link.css";
-
-.utrecht-rich-text .nl-link {
-  margin-block-end: var(--nl-link-margin-block-end);
-}
-
-.nl-link svg {
-  flex-shrink: 0;
-}
 
 .nl-link:any-link {
   @include mixin.rhc-link--any-link;
 }
 
-.nl-link:any-link .utrecht-icon {
-  @include mixin.rhc-link--icon;
-}
-
-.nl-link:visited,
-.nl-link--visited {
-  @include mixin.rhc-link--visited;
-}
-
-.nl-link:visited .nl-icon {
-  @include mixin.rhc-link--visited-icon;
-}
-
-.nl-link:active,
-.nl-link--active {
-  @include mixin.rhc-link--active;
-}
-
-.nl-link:focus-visible,
-.nl-link--focus-visible,
-.nl-link:focus,
-.nl-link--focus {
-  @include mixin.rhc-link--focus-visible;
-  @include mixin.rhc-link--focus;
-}
-
-.nl-link .rhc-link__sr-only {
-  @include button-mixin.invisible-but-accessible;
+.nl-link .utrecht-icon,
+.rhc-link__icon {
+  @include mixin.rhc-link__icon;
 }
 
 .nl-link:any-link.rhc-link--inline {

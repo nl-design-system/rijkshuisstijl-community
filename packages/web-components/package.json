@@ -27,6 +27,7 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "vite build",
+    "watch": "vite build --watch",
     "clean": "rimraf dist/",
     "start": "vite"
   },

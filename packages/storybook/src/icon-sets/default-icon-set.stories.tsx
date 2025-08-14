@@ -16,7 +16,6 @@ const meta = {
     status: {
       type: 'UNSTABLE',
     },
-    isPage: true,
   },
 } satisfies Meta<typeof IconSet>;
 

@@ -14,8 +14,13 @@ import remarkNormalizeHeadings from 'remark-normalize-headings';
  * - Ensures case-insensitive and global replacements across the entire markdown text.
  */
 
-export const replaceMarkdown = (markdown: string, target: string, replacement: string): string => {
-  const regex = new RegExp(`(?<=^|[\\s\\p{P}])${target}(?=[\\s\\p{P}]|$)`, 'giu');
+export const replaceMarkdown = (
+  markdown: string,
+  target: string,
+  replacement: string,
+  caseSensitive: boolean = false,
+): string => {
+  const regex = new RegExp(`(?<=^|[\\s\\p{P}])${target}(?=[\\s\\p{P}]|$)`, `g${caseSensitive ? 'i' : ''}u`);
   return markdown.replace(regex, replacement);
 };
 
