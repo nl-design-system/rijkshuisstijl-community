@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/font
 
+## 1.1.1
+
+### Patch Changes
+
+- 3d9999c: Update patch & minor dependencies
+
 ## 1.1.0
 
 ### Minor Changes

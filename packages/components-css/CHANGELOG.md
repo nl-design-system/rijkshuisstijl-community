@@ -1,11 +1,27 @@
 # @rijkshuisstijl-community/components-css
 
+## 5.0.0
+
+### Major Changes
+
+- 0057047: chore: remove unused and deprecated Link tokens
+  - Use NL link component as cleanly as possible.
+  - Do not support NL `disabled` prop/state for Link.
+  - Add support for Icon in Link.
+  - Replace "utrecht" with "rhc" in markdown documentation for Link.
+
+### Patch Changes
+
+- bf73b50: Fix hot reloading voor local development.
+- 6b3a5aa: Remove fixed width from Card As Link component to delegate sizing to layout
+- 39e082e: Added bottom border for nav bar
+- 3d9999c: Update patch & minor dependencies
+
 ## 4.0.0
 
 ### Major Changes
 
 - 923d857: Alleen NL link gebruiken
-
   - Zorgen dat RHC link alleen NL link gebruikt
     - NL link's `disabled` prop niet toestaan (altijd op `false` zetten) (angular versie ondersteunde dit toch al niet)
   - Documentatie aan Angular readme.md toegevoegd
