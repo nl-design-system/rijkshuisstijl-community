@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/web-components
 
+## 1.2.1
+
+### Patch Changes
+
+- bf73b50: Fix hot reloading voor local development.
+- 3d9999c: Update patch & minor dependencies
+
 ## 1.2.0
 
 ### Minor Changes
