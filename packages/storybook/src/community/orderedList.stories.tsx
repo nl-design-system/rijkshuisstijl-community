@@ -16,15 +16,17 @@ const meta = {
     },
     docs: {
       description: {
-        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
+        // TODO: restructure this, but not until readme is correctly structured in the Utrecht documentation source
         component: mergeMarkdown([readme]),
       },
     },
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
-    // TODO: add NL Design System link and Figma link
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/OrderedList.tsx',
+    nldesignsystem: 'https://nldesignsystem.nl/ordered-list/',
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NL-Design-System----Bibliotheek---Rijkshuisstijl?node-id=823-571',
   },
 } satisfies Meta<typeof OrderedList>;
 
