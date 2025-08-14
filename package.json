@@ -91,7 +91,8 @@
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.cjs",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.cjs",
     "update-major": "npm-check-updates --configFileName .ncurc.major.cjs",
-    "watch:storybook": "npm run --workspace packages/storybook storybook",
+    "watch:storybook": "lerna run storybook --parallel",
+    "watch:packages": "lerna run watch --parallel",
     "watch:style-dictionary": "lerna run watch:style-dictionary",
     "test-storybook:ci": "npm run --workspace packages/storybook playwright:install && concurrently -k -s first -n \"STORYBOOK,A11Y-TEST\" -c \"magenta,green\" \"npm run --workspace packages/storybook prod-static -- --silent\" \"wait-on tcp:6006 && npm run --workspace packages/storybook test-storybook\""
   },

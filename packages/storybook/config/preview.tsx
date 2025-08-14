@@ -59,7 +59,7 @@ const preview: Preview = {
       'storybook/docs/panel': { title: 'API' },
       canvas: { title: 'Design Tokens' },
     },
-    controls: { expanded: false },
+    controls: { exclude: ['children'] },
     options: {
       storySort: {
         order: [
