@@ -3,4 +3,4 @@
 '@rijkshuisstijl-community/components-css': patch
 ---
 
-cleaned up depreciated tokens for ordered list
+Cleaned up deprecated tokens for ordered list.
