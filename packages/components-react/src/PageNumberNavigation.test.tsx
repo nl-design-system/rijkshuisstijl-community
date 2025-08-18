@@ -22,7 +22,7 @@ describe('Pagination', () => {
       <PageNumberNavigation linkTemplate={(page: number) => `/${page}`} maxVisiblePages={5} page={1} totalPages={10} />,
     );
 
-    const page2Link = getByRole('link', { name: '2' });
+    const page2Link = getByRole('link', { name: 'Ga naar pagina 2' });
 
     expect(page2Link).toBeInTheDocument();
     expect(page2Link).toHaveAttribute('href', '/2');
