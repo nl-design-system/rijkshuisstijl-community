@@ -25,14 +25,6 @@ const meta = {
         category: 'Props',
       },
     },
-    description: {
-      description: 'Card content',
-      control: { type: 'text' },
-      if: { arg: 'appearance', neq: 'horizontal' },
-      table: {
-        category: 'Props',
-      },
-    },
     linkLabel: {
       description: 'Link label',
       control: { type: 'text' },
@@ -41,8 +33,8 @@ const meta = {
         category: 'Props',
       },
     },
-    metadata: {
-      description: 'Metadata',
+    description: {
+      description: 'Card content',
       control: { type: 'text' },
       if: { arg: 'appearance', neq: 'horizontal' },
       table: {
@@ -52,6 +44,14 @@ const meta = {
     title: {
       description: 'Anchor title (hover text) and aria-label attributes',
       control: { type: 'text' },
+      table: {
+        category: 'Props',
+      },
+    },
+    metadata: {
+      description: 'Metadata',
+      control: { type: 'text' },
+      if: { arg: 'appearance', neq: 'horizontal' },
       table: {
         category: 'Props',
       },
