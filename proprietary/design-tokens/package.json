@@ -18,7 +18,7 @@
     "directory": "proprietary/design-tokens"
   },
   "scripts": {
-    "clean": "rimraf dist/* src/generated/*",
+    "clean": "rimraf dist/ src/generated/",
     "build": "npm-run-all clean build:figma-tokens build:style-dictionary",
     "build:figma-tokens": "node ./token-transformer.mjs",
     "build:style-dictionary": "node build.mjs",

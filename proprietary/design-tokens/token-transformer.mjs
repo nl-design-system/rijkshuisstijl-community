@@ -17,8 +17,6 @@ const transformerOptions = {
 
 const excludes = [
   'components/avatar',
-  'components/backdrop',
-  'components/drawer',
   'components/form-field-option-label',
   'components/modal-dialog',
   'components/pagination',
