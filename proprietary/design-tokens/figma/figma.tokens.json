@@ -2642,7 +2642,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2656,7 +2656,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2666,7 +2666,7 @@
           "pressed": {
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2689,7 +2689,7 @@
           "active": {
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2770,7 +2770,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2893,7 +2893,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2907,7 +2907,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -2930,7 +2930,7 @@
             },
             "border-color": {
               "type": "color",
-            "value": "{rhc.color.none}"
+              "value": "{rhc.color.none}"
             },
             "color": {
               "type": "color",
@@ -3840,7 +3840,7 @@
       }
     }
   },
-   "components/expandable-checkbox-group": {
+  "components/expandable-checkbox-group": {
     "rhc": {
       "expandable-checkbox-group": {
         "details": {
@@ -7517,7 +7517,7 @@
       }
     }
   },
-  "components/unordered-list/base": {
+  "components/unordered-list": {
     "utrecht": {
       "unordered-list": {
         "font-size": {
@@ -7563,28 +7563,14 @@
           }
         }
       }
-    }
-  },
-  "components/unordered-list/deprecated": {
-    "utrecht": {
+    },
+    "rhc": {
       "unordered-list": {
-        "color": {
-          "type": "color",
-          "value": "{rhc.color.foreground.default}"
-        },
-        "marker": {
-          "border-color": {
-            "type": "color",
-            "value": "{rhc.color.foreground.default}"
+        "nested": {
+          "margin-inline-start": {
+            "type": "dimension",
+            "value": "{rhc.space.0}"
           }
-        },
-        "font-family": {
-          "value": "{rhc.font-family.primary}",
-          "type": "fontFamilies"
-        },
-        "font-weight": {
-          "value": "{rhc.font-weight.default}",
-          "type": "fontWeights"
         }
       }
     }
@@ -9518,8 +9504,7 @@
         "components/data-summary": "enabled",
         "components/action-group": "enabled",
         "components/ordered-list": "enabled",
-        "components/unordered-list/base": "enabled",
-        "components/unordered-list/deprecated": "enabled",
+        "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
@@ -9621,8 +9606,7 @@
         "components/data-summary": "enabled",
         "components/action-group": "enabled",
         "components/ordered-list": "enabled",
-        "components/unordered-list/base": "enabled",
-        "components/unordered-list/deprecated": "enabled",
+        "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
@@ -9726,8 +9710,7 @@
         "components/data-summary": "enabled",
         "components/action-group": "enabled",
         "components/ordered-list": "enabled",
-        "components/unordered-list/base": "enabled",
-        "components/unordered-list/deprecated": "enabled",
+        "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
@@ -9829,8 +9812,7 @@
         "components/data-summary": "enabled",
         "components/action-group": "enabled",
         "components/ordered-list": "enabled",
-        "components/unordered-list/base": "enabled",
-        "components/unordered-list/deprecated": "enabled",
+        "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
@@ -9932,8 +9914,7 @@
         "components/data-summary": "enabled",
         "components/action-group": "enabled",
         "components/ordered-list": "enabled",
-        "components/unordered-list/base": "enabled",
-        "components/unordered-list/deprecated": "enabled",
+        "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
@@ -10035,8 +10016,7 @@
         "components/data-summary": "enabled",
         "components/action-group": "enabled",
         "components/ordered-list": "enabled",
-        "components/unordered-list/base": "enabled",
-        "components/unordered-list/deprecated": "enabled",
+        "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
@@ -10138,8 +10118,7 @@
         "components/data-summary": "enabled",
         "components/action-group": "enabled",
         "components/ordered-list": "enabled",
-        "components/unordered-list/base": "enabled",
-        "components/unordered-list/deprecated": "enabled",
+        "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
@@ -10241,8 +10220,7 @@
         "components/data-summary": "enabled",
         "components/action-group": "enabled",
         "components/ordered-list": "enabled",
-        "components/unordered-list/base": "enabled",
-        "components/unordered-list/deprecated": "enabled",
+        "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
@@ -10347,8 +10325,7 @@
         "components/action-group": "enabled",
         "overwrites/koop/link": "enabled",
         "components/ordered-list": "enabled",
-        "components/unordered-list/base": "enabled",
-        "components/unordered-list/deprecated": "enabled",
+        "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
@@ -10486,8 +10463,7 @@
       "components/text-input/base",
       "components/text-input/deprecated",
       "components/toggletip",
-      "components/unordered-list/base",
-      "components/unordered-list/deprecated",
+      "components/unordered-list",
       "components/column-layout",
       "overwrites/primaire kleur/groen",
       "overwrites/primaire kleur/mintgroen",

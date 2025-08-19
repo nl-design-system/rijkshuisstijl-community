@@ -2,26 +2,8 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-
-.utrecht-unordered-list {
-  color: var(--utrecht-unordered-list-color);
-  font-family: var(--utrecht-unordered-list-font-family);
-  font-size: var(--utrecht-unordered-list-font-size);
-  font-weight: var(--utrecht-unordered-list-font-weight);
-  line-height: var(--utrecht-unordered-list-line-height);
-  padding-inline-start: var(--utrecht-unordered-list-padding-inline-start);
-}
-
-.utrecht-unordered-list__item {
-  margin-block-end: var(--utrecht-unordered-list-item-margin-block-end);
-  margin-block-start: var(--utrecht-unordered-list-item-margin-block-start);
-  padding-inline-start: var(--utrecht-unordered-list-item-padding-inline-start);
-}
+@use "mixin";
 
 .utrecht-unordered-list--nested {
-  margin-inline-start: 0;
-}
-
-.utrecht-unordered-list--nested > .utrecht-unordered-list__item::marker {
-  content: "○";
+  @include mixin.rhc-unordered-list--nested;
 }
