@@ -16,11 +16,13 @@ const meta = {
     },
     docs: {
       description: {
-        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source (including with usage and wcag documentation)
+        // TODO: restructure this, but not until readme is correctly structured in the Utrecht documentation source (including with usage and wcag documentation)
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    nldesignsystem: 'https://nldesignsystem.nl/unordered-list/',
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NL-Design-System----Bibliotheek---Rijkshuisstijl?node-id=828-920',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
     github:
