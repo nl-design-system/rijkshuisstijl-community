@@ -2263,7 +2263,7 @@
       }
     }
   },
-  "components/breadcrumb/base": {
+  "components/breadcrumb": {
     "utrecht": {
       "breadcrumb-nav": {
         "font-family": {
@@ -2390,63 +2390,23 @@
                 }
               }
             }
+          },
+          "icon": {
+            "size": {
+              "type": "dimension",
+              "value": "{rhc.size.icon.functional}"
+            }
           }
         }
       }
-    }
-  },
-  "components/breadcrumb/deprecated": {
-    "utrecht": {
+    },
+    "rhc": {
       "breadcrumb-nav": {
-        "divider": {
-          "color": {
-            "type": "color",
-            "value": "{rhc.color.foreground.subdued}"
-          },
-          "inset-block-start": {
-            "type": "dimension",
-            "value": "0"
-          },
-          "size": {
-            "type": "dimension",
-            "value": "{rhc.size.icon.functional}"
-          }
-        },
         "link": {
-          "padding-block-end": {
-            "type": "dimension",
-            "value": "{rhc.space.150}"
-          },
-          "padding-block-start": {
-            "type": "dimension",
-            "value": "{rhc.space.150}"
-          },
-          "padding-inline-end": {
-            "type": "dimension",
-            "value": "{rhc.space.0}"
-          },
-          "padding-inline-start": {
-            "type": "dimension",
-            "value": "{rhc.space.0}"
-          },
           "current": {
             "color": {
               "type": "color",
               "value": "{rhc.color.foreground.subdued}"
-            }
-          },
-          "icon": {
-            "inset-block-start": {
-              "type": "dimension",
-              "value": "0"
-            },
-            "margin-inline": {
-              "type": "dimension",
-              "value": "{rhc.space.50}"
-            },
-            "size": {
-              "type": "dimension",
-              "value": "{rhc.size.icon.functional}"
             }
           }
         }
@@ -9509,8 +9469,7 @@
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
         "components/link-list/base": "enabled",
-        "components/breadcrumb/base": "enabled",
-        "components/breadcrumb/deprecated": "enabled",
+        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
@@ -9611,8 +9570,7 @@
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
         "components/link-list/base": "enabled",
-        "components/breadcrumb/base": "enabled",
-        "components/breadcrumb/deprecated": "enabled",
+        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
@@ -9715,8 +9673,7 @@
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
         "components/link-list/base": "enabled",
-        "components/breadcrumb/base": "enabled",
-        "components/breadcrumb/deprecated": "enabled",
+        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
@@ -9817,8 +9774,7 @@
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
         "components/link-list/base": "enabled",
-        "components/breadcrumb/base": "enabled",
-        "components/breadcrumb/deprecated": "enabled",
+        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
@@ -9919,8 +9875,7 @@
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
         "components/link-list/base": "enabled",
-        "components/breadcrumb/base": "enabled",
-        "components/breadcrumb/deprecated": "enabled",
+        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
@@ -10021,8 +9976,7 @@
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
         "components/link-list/base": "enabled",
-        "components/breadcrumb/base": "enabled",
-        "components/breadcrumb/deprecated": "enabled",
+        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
@@ -10123,8 +10077,7 @@
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
         "components/link-list/base": "enabled",
-        "components/breadcrumb/base": "enabled",
-        "components/breadcrumb/deprecated": "enabled",
+        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
@@ -10225,8 +10178,7 @@
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
         "components/link-list/base": "enabled",
-        "components/breadcrumb/base": "enabled",
-        "components/breadcrumb/deprecated": "enabled",
+        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
@@ -10330,8 +10282,7 @@
         "common/rounded-corner/base": "enabled",
         "common/rounded-corner/deprecated": "enabled",
         "components/link-list/base": "enabled",
-        "components/breadcrumb/base": "enabled",
-        "components/breadcrumb/deprecated": "enabled",
+        "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
@@ -10398,8 +10349,7 @@
       "components/article",
       "components/blockquote/base",
       "components/blockquote/deprecated",
-      "components/breadcrumb/base",
-      "components/breadcrumb/deprecated",
+      "components/breadcrumb",
       "components/button",
       "components/card-as-link",
       "components/checkbox/base",
