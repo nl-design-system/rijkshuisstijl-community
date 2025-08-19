@@ -5,7 +5,7 @@ import { Drawer } from './Drawer';
 
 describe('Drawer testcases', () => {
   it('should render successfully', () => {
-    render(<Drawer open={true}/>);
+    render(<Drawer open={true} />);
     const drawer = screen.getByRole('dialog');
     expect(drawer).toBeInTheDocument();
   });
