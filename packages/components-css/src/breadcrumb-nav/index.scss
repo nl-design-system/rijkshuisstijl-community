@@ -3,14 +3,9 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-.utrecht-breadcrumb-nav .utrecht-link:any-link {
-  line-height: var(--utrecht-breadcrumb-nav-line-height, inherit);
-}
-
 .utrecht-breadcrumb-nav {
   &__link {
     &--current {
-      --utrecht-link-text-decoration-color: var(--utrecht-link-text-decoration-color);
       --utrecht-link-text-decoration: none;
 
       color: var(--rhc-breadcrumb-nav-link-current-color);
@@ -18,8 +13,6 @@
 
     &--active {
       --utrecht-link-text-decoration: var(--utrecht-breadcrumb-nav-link-active-text-decoration, underline);
-
-      text-decoration-color: var(--utrecht-breadcrumb-nav-link-active-color);
     }
   }
 }
