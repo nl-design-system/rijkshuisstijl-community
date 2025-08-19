@@ -4,11 +4,6 @@
  */
 @use "mixin";
 
-.rhc-button:focus-visible,
-.rhc-button--focus-visible {
-  @include mixin.rhc-button--focus-visible;
-}
-
 .rhc-button--icon-only {
   @include mixin.rhc-button--icon-only;
 }

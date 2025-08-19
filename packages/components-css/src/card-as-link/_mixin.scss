@@ -7,7 +7,7 @@
   flex-direction: column;
   font-family: var(--rhc-font-family-primary, inherit);
   font-size: var(--rhc-font-size-xs-desktop, inherit);
-  inline-size: var(--rhc-card-as-link-inline-size, 328px);
+  inline-size: 100%;
   line-height: var(--rhc-line-height-md, inherit);
   position: relative;
   text-decoration: none;
@@ -73,13 +73,13 @@
 }
 
 @mixin rhc-card-as-link__content {
-  display: flex;
-  flex-direction: column;
-  padding-block-end: var(--rhc-card-as-link-padding-block-end, 16px);
-  padding-block-start: var(--rhc-card-as-link-padding-block-start, 16px);
-  padding-inline-end: var(--rhc-card-as-link-padding-inline-end, 16px);
-  padding-inline-start: var(--rhc-card-as-link-padding-inline-start, 16px);
-  row-gap: var(--rhc-card-as-link-row-gap, 12px);
+  @include container-content;
+
+  flex: 1;
+}
+
+@mixin rhc-card-as-link__footer {
+  @include container-content;
 }
 
 @mixin rhc-card-as-link--horizontal__content {
@@ -112,7 +112,7 @@
 
   block-size: 100%;
   filter: brightness(var(--rhc-card-as-link-full-bleed-opacity, 0.5));
-  inline-size: var(--rhc-card-as-link-inline-size, 328px);
+  inline-size: 100%;
   position: absolute;
   z-index: -1;
 }
@@ -181,6 +181,16 @@
 
 @mixin rhc-card-as-link__metadata {
   color: var(--rhc-card-as-link-metadata-color, #154273);
+}
+
+@mixin container-content {
+  display: flex;
+  flex-direction: column;
+  padding-block-end: var(--rhc-card-as-link-padding-block-end, 16px);
+  padding-block-start: var(--rhc-card-as-link-padding-block-start, 16px);
+  padding-inline-end: var(--rhc-card-as-link-padding-inline-end, 16px);
+  padding-inline-start: var(--rhc-card-as-link-padding-inline-start, 16px);
+  row-gap: var(--rhc-card-as-link-row-gap, 12px);
 }
 
 @mixin rounded-border-corners {

@@ -69,9 +69,7 @@ export default function Page() {
               <div className="rhc-templates-spacing-2">
                 <Heading level={3}>Dit is een H3</Heading>
                 <Paragraph>Dit is een paragraaf.</Paragraph>
-                <Link external={true} externalLabel="example external label" href="example.com">
-                  Een externe link
-                </Link>
+                <Link href="https://example.com">Een link</Link>
                 <Table>
                   <TableCaption>Caption van tabel</TableCaption>
                   <TableHeader>

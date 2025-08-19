@@ -1,77 +1,55 @@
-title: "Rijkshuisstijl interpretatie "
+title: "{Naam van het onderdeel}"
 body:
-  - type: markdown
+  - type: textarea
+    id: rijkshuisstijl-interpretatie
     attributes:
+      label: Rijkshuisstijl interpretatie
       value: |
-        # {Naam onderdeel, zoals: Button - Rijkshuisstijl keuzes}
-        _Laatste update: {datum, zoals: 14-4-2025}_  
+        In deze discussie verzamelen, bespreken en documenteren we de ontwerpkeuzes voor dit onderdeel binnen de nieuwe Rijkshuisstijl. Het doel is om meer uniformiteit te creëren tussen verschillende Rijksoverheidswebsites en gezamenlijk tot één ontwerp te komen. Zie de [overkoepelende richtlijnen](https://github.com/nl-design-system/rijkshuisstijl-community/discussions/1505) en denk gerust mee!
 
-        ## Keuzes en overwegingen
+        _Voeg hier een visuele referentie toe, zodat in één oogopslag duidelijk is over welk component, patroon, template of onderdeel het gaat._
 
-        <!---
-        Noteer hier per onderwerp welke ontwerpkeuze is gemaakt, waarom deze keuze is gemaakt, én op basis van welke informatie of bron (zoals onderzoek, huisstijl of WCAG-richtlijnen).
-        Gebruik de onderstaande structuur en voeg onderwerpen toe die relevant zijn, zoals kleurgebruik, focusstijl of afgeronde hoeken. Combineer de keuze, de reden en eventuele onderbouwing in één korte alinea per punt. 
-        -->
+        ## Relevante links
 
-  - type: markdown
-    attributes:
-      value: |
-        ### Kleurgebruik
-        {Welke kleur is gebruikt? Voldoet deze aan WCAG? Afwijking toegepast?}
+        _Voeg hier gerust extra handige links toe, of laat er één of meerdere weg als ze niet van toepassing zijn._
 
-  - type: markdown
-    attributes:
-      value: |
-        ### Typografie
-        {Welke tekstgrootte is gekozen? Valt dit onder “grote tekst”? Is het schaalbaar?}
+        - [NL Design System GitHub - Component Discussion](https://github.com/orgs/nl-design-system/discussions/categories/component-suggestions)
+        - [NL Design System GitHub - Backlog](https://github.com/nl-design-system/backlog/issues/101)
+        - [Figma component](link-naar-figma)
+        - [Rijkshuisstijl richtlijnen](link-naar-richtlijnen)
 
-  - type: markdown
-    attributes:
-      value: |
-        ### Toegankelijkheid
-        {Hoe is met contrast, focus, leesbaarheid etc. rekening gehouden?}
+        ## Gevonden informatie
 
-  - type: markdown
-    attributes:
-      value: |
-        ### Interactie/gedrag
-        {Wat gebeurt er bij hover/focus/active? Afwijkingen van huisstijl?}
+        _Beschrijf welke informatie je hebt gevonden over dit onderdeel en link ernaar indien mogelijk._
 
-  - type: markdown
-    attributes:
-      value: |
-        ### Afgeronde hoeken
-        {Wat is de border-radius (bijv. 4px, 8px)? Komt dit overeen met huisstijl of tokens? Waarom is voor deze vorm gekozen? Heeft het invloed op herkenbaarheid of gebruiksvriendelijkheid?}
+        ## Varianten of types
 
-  - type: markdown
-    attributes:
-      value: |
-        ### Uitlijning en spacing
-        {Welke paddings zijn gebruikt? Hoe is gekozen voor uitlijning (links, gecentreerd)? Wat is de visuele of functionele reden hiervoor? Zijn hier tokens voor gebruikt?}
+        _Leg vast welke keuze is gemaakt, waarom en op basis van welke bron (bijvoorbeeld onderzoek, huisstijl of WCAG). Laat dit onderwerp weg als het niet van toepassing is. Denk aan: welke varianten zijn er (bijvoorbeeld Primary Action, Secondary Action)? Welke types zijn er (bijvoorbeeld Success, Error, Warning)?_
 
-  - type: markdown
-    attributes:
-      value: |
-        <!---
-        Voeg hier gerust extra regels toe voor onderwerpen zoals: iconen, font-weight, padding etc.
-        -->
+        ## Kleur
 
-  - type: markdown
-    attributes:
-      value: |
+        _Leg vast welke keuze is gemaakt, waarom en op basis van welke bron. Laat dit onderwerp weg als het niet van toepassing is. Denk aan: welke kleur is gebruikt? Voldoet deze aan WCAG? Is er een afwijking toegepast?_
+
+        ## Typografie
+
+        _Leg vast welke keuze is gemaakt, waarom en op basis van welke bron. Laat dit onderwerp weg als het niet van toepassing is. Denk aan: welke font-size en font-weight zijn gekozen?_
+
+        ## Border
+
+        _Leg vast welke keuze is gemaakt, waarom en op basis van welke bron. Laat dit onderwerp weg als het niet van toepassing is. Denk aan: wat is de border-width of border-radius (bijvoorbeeld 4px, 8px)? Komt dit overeen met de huisstijl of tokens? Heeft het invloed op herkenbaarheid of gebruiksvriendelijkheid?_
+
+        ## Uitlijning en spacing
+
+        _Leg vast welke keuze is gemaakt, waarom en op basis van welke bron. Laat dit onderwerp weg als het niet van toepassing is. Denk aan: welke paddings zijn gebruikt? Hoe is de uitlijning bepaald (links, gecentreerd)? Wat is de visuele of functionele reden hiervoor? Zijn er tokens gebruikt?_
+
+        ## Styling van states
+
+        _Leg vast welke keuze is gemaakt, waarom en op basis van welke bron. Laat dit onderwerp weg als het niet van toepassing is. Denk aan: hoe ziet de styling eruit voor active, hover en focus-visible? Voldoet deze aan WCAG?_
+
+        ## {naam-onderwerp}
+
+        _Voeg hier gerust extra onderwerpen toe, zoals iconen, rounded-corner of andere details._
+
         ## Vragen of discussiepunten
 
-        - [Bijvoorbeeld: Wat zijn ervaringen bij andere organisaties met deze component?]
-        - [Bijvoorbeeld: Is deze keuze herkenbaar of juist afwijkend voor jullie praktijk?]
-        - [Bijvoorbeeld: Hoe kunnen we deze keuze het beste borgen in de richtlijnen of design tokens?]
-
-  - type: markdown
-    attributes:
-      value: |
-        ## Handige links
-
-        - **Figma component:** [Link naar Figma]  
-        - **Rijkshuisstijl website:** [Link naar betreffende pagina]  
-        - **WCAG-richtlijnen (indien van toepassing):** [Bijv. Contrast – WCAG 1.4.3](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)  
-        - **Design tokens:** `[noem hier relevante tokens uit Token Studio]`
-        - ...
+        _Noteer hier openstaande vragen of beslissingen die nog besproken moeten worden._
