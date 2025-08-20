@@ -2,7 +2,7 @@
 
 import {
   Button,
-  CardAsLink,
+  Card,
   DataBadgeButton,
   ExpandableCheckboxGroup,
   FormFieldTextInput,
@@ -354,7 +354,7 @@ export default function Componenten() {
                 <ol aria-labelledby="results-heading" className="rhc-ordered-list">
                   {filteredComponents.map((component, index, array) => (
                     <li aria-posinset={index + 1} aria-setsize={array.length} key={component.heading}>
-                      <CardAsLink
+                      <Card
                         className="rhc-templates-card"
                         description={<Paragraph>{component.description}</Paragraph>}
                         href={component.href}
@@ -385,7 +385,7 @@ export default function Componenten() {
                             </DataBadgeButton>
                           ))}
                         </BadgeList>
-                      </CardAsLink>
+                      </Card>
                     </li>
                   ))}
                 </ol>

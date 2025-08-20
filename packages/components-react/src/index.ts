@@ -32,6 +32,7 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from './Button';
+export { Card } from './Card';
 export {
   CardAsLink,
   type CardAsLinkProps,
