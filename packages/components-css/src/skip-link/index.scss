@@ -8,15 +8,3 @@
 .rhc-skip-link {
   @include mixin.rhc-skip-link;
 }
-
-.rhc-skip-link--focus,
-.rhc-skip-link:focus {
-  @include mixin.rhc-skip-link;
-
-  position: revert;
-}
-
-.rhc-skip-link--focus-visible,
-.rhc-skip-link:focus-visible {
-  @include mixin.rhc-skip-link;
-}
