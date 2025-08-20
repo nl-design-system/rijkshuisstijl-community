@@ -4,9 +4,6 @@
  */
 
 @mixin rhc-skip-link {
-  --nl-skip-link-font-size: var(--rhc-font-size-xs-desktop, inherit);
-  --nl-skip-link-line-height: var(--rhc-line-height-md, inherit);
-
   box-shadow: var(--rhc-skip-link-box-block-end-shadow-offset-x) var(--rhc-skip-link-box-block-end-shadow-offset-y)
     var(--rhc-skip-link-box-block-end-shadow-blur-radius) var(--rhc-skip-link-box-block-end-shadow-spread-radius)
     var(--rhc-skip-link-box-block-end-shadow-color);
