@@ -92,7 +92,18 @@ export default function Componenten() {
 
   // Memoize LinkComponent to prevent unnecessary re-renders
   const LinkComponent = useCallback(
-    (props: AnchorHTMLAttributes<HTMLAnchorElement>) => <a {...props} onClick={onPaginationLinkClick} />,
+    (props: AnchorHTMLAttributes<HTMLAnchorElement>) => (
+      <a
+        {...props}
+        onClick={onPaginationLinkClick}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            onPaginationLinkClick(event as any);
+          }
+        }}
+      />
+    ),
     [],
   );
 
