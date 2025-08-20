@@ -91,22 +91,6 @@ export const RightToLeft: Story = {
   },
 };
 
-export const Focus: Story = {
-  args: {
-    href: '#main',
-    children: 'Skip to main content',
-  },
-  name: 'Focus',
-  parameters: {
-    docs: {
-      description: {
-        story: `Styling met de \`.rhc-skip-link--focus\` class naam.`,
-      },
-    },
-    pseudo: { focus: true },
-  },
-};
-
 export const FocusVisible: Story = {
   args: {
     href: '#main',
@@ -114,11 +98,6 @@ export const FocusVisible: Story = {
   },
   name: 'Focus visible',
   parameters: {
-    docs: {
-      description: {
-        story: `Styling met de \`.rhc-skip-link--focus-visible\` class naam.`,
-      },
-    },
     pseudo: { focus: true, focusVisible: true },
   },
 };
