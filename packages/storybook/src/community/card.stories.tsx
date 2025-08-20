@@ -105,9 +105,4 @@ export const Default: Story = {
     href: '#',
     subheading: 'Card Subheading',
   },
-  render: (args) => (
-    <div>
-      <Card heading={undefined} {...args} />
-    </div>
-  ),
 };
