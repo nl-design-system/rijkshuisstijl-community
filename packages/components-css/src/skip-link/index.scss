@@ -13,17 +13,10 @@
 .rhc-skip-link:focus {
   @include mixin.rhc-skip-link;
 
-  outline: var(--nl-skip-link-focus-outline-color, revert) var(--nl-skip-link-focus-outline-style, revert)
-    var(--nl-skip-link-focus-outline-width, revert);
-  outline-offset: var(--nl-skip-link-focus-outline-offset, revert);
   position: revert;
 }
 
 .rhc-skip-link--focus-visible,
 .rhc-skip-link:focus-visible {
   @include mixin.rhc-skip-link;
-
-  outline: var(--nl-skip-link-focus-visible-outline-color) var(--nl-skip-link-focus-visible-outline-style)
-    var(--nl-skip-link-focus-visible-outline-width);
-  outline-offset: var(--nl-skip-link-focus-visible-outline-offset);
 }
