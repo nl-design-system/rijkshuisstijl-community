@@ -6,22 +6,11 @@ import clsx from 'clsx';
 import { PropsWithChildren, Ref } from 'react';
 
 export interface SkipLinkProps extends NLSkipLinkProps {
-  visibleOnFocus?: boolean;
   ref?: Ref<HTMLAnchorElement>;
 }
 
-export const SkipLink = ({
-  ref,
-  children,
-  className,
-  visibleOnFocus,
-  ...restProps
-}: PropsWithChildren<SkipLinkProps>) => (
-  <NLSkipLink
-    className={clsx('rhc-skip-link', { 'rhc-skip-link--visible-on-focus': visibleOnFocus }, className)}
-    ref={ref}
-    {...restProps}
-  >
+export const SkipLink = ({ ref, children, className, ...restProps }: PropsWithChildren<SkipLinkProps>) => (
+  <NLSkipLink className={clsx('rhc-skip-link', className)} ref={ref} {...restProps}>
     {children}
   </NLSkipLink>
 );
