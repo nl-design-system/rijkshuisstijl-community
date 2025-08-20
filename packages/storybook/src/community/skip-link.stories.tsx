@@ -2,7 +2,6 @@ import { SkipLink, type SkipLinkProps } from '@rijkshuisstijl-community/componen
 import { Meta, StoryObj } from '@storybook/react';
 import clsx from 'clsx';
 import readme from './skip-link.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface SkipLinkStoryProps extends SkipLinkProps {
   visibility?: string | 'hidden' | 'visible';
@@ -60,7 +59,7 @@ const meta = {
     },
     docs: {
       description: {
-        component: mergeMarkdown([readme]),
+        component: readme,
       },
     },
     // TODO: add Figma, GitHub and NL DesignSystem links
