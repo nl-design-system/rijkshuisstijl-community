@@ -14,6 +14,7 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   href?: string;
   target?: string;
   linkLabel?: string;
+  title?: string;
 }
 
 const HTMLHeading = ({
@@ -38,6 +39,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
       href,
       target,
       linkLabel,
+      title,
       className,
       children,
       ...rest
