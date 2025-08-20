@@ -53,7 +53,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
         <div className="rhc-card__content">
           <HTMLHeading className="rhc-card__heading" level={headingLevel}>
             {href ? (
-              <Link className="rhc-card__link" href={href} target={target}>
+              <Link className="rhc-card__link" href={href} target={target} title={title}>
                 {heading}
               </Link>
             ) : (
@@ -73,7 +73,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
         {linkLabel && (
           <div className="rhc-card__footer">
             <div className="rhc-card__link" data-testid="rhc-card__link">
-              <Link href={href} target={target}>
+              <Link href={href} target={target} title={title}>
                 {linkLabel}
               </Link>
             </div>
