@@ -42,7 +42,10 @@ const meta = {
         component: readme,
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    figma: 'https://www.figma.com/design/2cCxjvY0jNjdhp7wkZVBnr/button?node-id=2217-10122&m=dev',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/SkipLink.tsx',
+    nldesignsystem: 'https://nldesignsystem.nl/skip-link/',
   },
   render: StoryWrapper,
 } satisfies Meta<typeof SkipLink>;
