@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Icon, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { Heading, Icon, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/link/README.md?raw';
 import anatomyDocs from '@utrecht/components/link/docs/anatomy.nl.md?raw';
@@ -21,6 +21,8 @@ import visualDesignDocs from '@utrecht/components/link/docs/visual-design.nl.md?
 import wcagDocs from '@utrecht/components/link/docs/wcag.nl.md?raw';
 import { mergeMarkdown, replaceMarkdown } from '../../helpers/merge-markdown';
 import iconInline from '../documentation/link/icon-inline.nl.md?raw';
+import { createVisualRegressionStory, VisualRegressionWrapper } from '../utils';
+import { VisualStates } from './link-visual/States';
 
 const meta = {
   title: 'Rijkshuisstijl/Link',
@@ -207,3 +209,56 @@ export const LinkInParagraph: Story = {
     );
   },
 };
+
+export const Visual = createVisualRegressionStory(() => (
+  <>
+    <Heading appearanceLevel={2} level={1}>
+      Link
+    </Heading>
+    <Heading appearanceLevel={3} level={2}>
+      KOOP
+    </Heading>
+    <VisualRegressionWrapper className={`koop`}>
+      <VisualStates />
+    </VisualRegressionWrapper>
+    <Heading appearanceLevel={3} level={2}>
+      Uitvoerend
+    </Heading>
+    <Heading appearanceLevel={4} level={3}>
+      Paars
+    </Heading>
+    <VisualRegressionWrapper className={`uitvoerend-paars`}>
+      <VisualStates />
+    </VisualRegressionWrapper>
+    <Heading appearanceLevel={4} level={3}>
+      Hemelblauw
+    </Heading>
+    <VisualRegressionWrapper className={`uitvoerend-hemelblauw`}>
+      <VisualStates />
+    </VisualRegressionWrapper>
+    <Heading appearanceLevel={4} level={3}>
+      Groen
+    </Heading>
+    <VisualRegressionWrapper className={`uitvoerend-groen`}>
+      <VisualStates />
+    </VisualRegressionWrapper>
+    <Heading appearanceLevel={4} level={3}>
+      Oranje
+    </Heading>
+    <VisualRegressionWrapper className={`uitvoerend-oranje`}>
+      <VisualStates />
+    </VisualRegressionWrapper>
+    <Heading appearanceLevel={4} level={3}>
+      Violet
+    </Heading>
+    <VisualRegressionWrapper className={`uitvoerend-violet`}>
+      <VisualStates />
+    </VisualRegressionWrapper>
+    <Heading appearanceLevel={4} level={3}>
+      Mintgroen
+    </Heading>
+    <VisualRegressionWrapper className={`uitvoerend-mintgroen`}>
+      <VisualStates />
+    </VisualRegressionWrapper>
+  </>
+));

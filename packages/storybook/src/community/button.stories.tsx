@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Button, Icon, IconButton } from '@rijkshuisstijl-community/components-react';
+import { Button, Heading, Icon, IconButton } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
 import readme from '@utrecht/components/button/README.md?raw';
@@ -11,6 +11,9 @@ import wcagDocs from '@utrecht/components/button/docs/wcag.nl.md?raw';
 import { PropsWithChildren } from 'react';
 import rhcReadme from './button.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { createVisualRegressionStory, VisualRegressionWrapper } from '../utils';
+import { InteractiveStates, PropertyStates } from './button-visual/States';
+import { Appearances, Sizes } from './button-visual/Variants';
 
 interface ButtonStoryProps {
   appearance: string;
@@ -212,3 +215,77 @@ export const IconOnly: Story = {
     </IconButton>
   ),
 };
+
+export const Visual = createVisualRegressionStory(() => (
+  <>
+    <Heading appearanceLevel={2} level={1}>
+      Button
+    </Heading>
+    <Heading appearanceLevel={3} level={2}>
+      KOOP
+    </Heading>
+    <VisualRegressionWrapper className={`koop`}>
+      <Appearances />
+      <Sizes />
+      <InteractiveStates />
+      <PropertyStates />
+    </VisualRegressionWrapper>
+    <Heading appearanceLevel={3} level={2}>
+      Uitvoerend
+    </Heading>
+    <Heading appearanceLevel={4} level={3}>
+      Paars
+    </Heading>
+    <VisualRegressionWrapper className={`uitvoerend-paars`}>
+      <Appearances />
+      <Sizes />
+      <InteractiveStates />
+      <PropertyStates />
+    </VisualRegressionWrapper>
+    <Heading appearanceLevel={4} level={3}>
+      Hemelblauw
+    </Heading>
+    <VisualRegressionWrapper className={`uitvoerend-hemelblauw`}>
+      <Appearances />
+      <Sizes />
+      <InteractiveStates />
+      <PropertyStates />
+    </VisualRegressionWrapper>
+    <Heading appearanceLevel={4} level={3}>
+      Groen
+    </Heading>
+    <VisualRegressionWrapper className={`uitvoerend-groen`}>
+      <Appearances />
+      <Sizes />
+      <InteractiveStates />
+      <PropertyStates />
+    </VisualRegressionWrapper>
+    <Heading appearanceLevel={4} level={3}>
+      Oranje
+    </Heading>
+    <VisualRegressionWrapper className={`uitvoerend-oranje`}>
+      <Appearances />
+      <Sizes />
+      <InteractiveStates />
+      <PropertyStates />
+    </VisualRegressionWrapper>
+    <Heading appearanceLevel={4} level={3}>
+      Violet
+    </Heading>
+    <VisualRegressionWrapper className={`uitvoerend-violet`}>
+      <Appearances />
+      <Sizes />
+      <InteractiveStates />
+      <PropertyStates />
+    </VisualRegressionWrapper>
+    <Heading appearanceLevel={4} level={3}>
+      Mintgroen
+    </Heading>
+    <VisualRegressionWrapper className={`uitvoerend-mintgroen`}>
+      <Appearances />
+      <Sizes />
+      <InteractiveStates />
+      <PropertyStates />
+    </VisualRegressionWrapper>
+  </>
+));
