@@ -11,7 +11,7 @@ import wcagDocs from '@utrecht/components/button/docs/wcag.nl.md?raw';
 import { PropsWithChildren } from 'react';
 import rhcReadme from './button.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import { createDesignTokensStory, createVisualRegressionStory, VisualRegressionWrapper } from '../utils';
+import { createVisualRegressionStory, VisualRegressionWrapper } from '../utils';
 import { InteractiveStates, PropertyStates } from './button-visual/States';
 import { Appearances, Sizes } from './button-visual/Variants';
 
@@ -216,7 +216,6 @@ export const IconOnly: Story = {
   ),
 };
 
-export const DesignTokens = createDesignTokensStory(meta);
 export const Visual = createVisualRegressionStory(() => (
   <>
     <Heading appearanceLevel={2} level={1}>

@@ -21,7 +21,7 @@ import visualDesignDocs from '@utrecht/components/link/docs/visual-design.nl.md?
 import wcagDocs from '@utrecht/components/link/docs/wcag.nl.md?raw';
 import { mergeMarkdown, replaceMarkdown } from '../../helpers/merge-markdown';
 import iconInline from '../documentation/link/icon-inline.nl.md?raw';
-import { createDesignTokensStory, createVisualRegressionStory, VisualRegressionWrapper } from '../utils';
+import { createVisualRegressionStory, VisualRegressionWrapper } from '../utils';
 import { VisualStates } from './link-visual/States';
 
 const meta = {
@@ -209,8 +209,6 @@ export const LinkInParagraph: Story = {
     );
   },
 };
-
-export const DesignTokens = createDesignTokensStory(meta);
 
 export const Visual = createVisualRegressionStory(() => (
   <>
