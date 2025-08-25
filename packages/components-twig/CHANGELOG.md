@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/components-twig
 
+## 1.3.9
+
+### Patch Changes
+
+- Updated dependencies [35dcda9]
+  - @rijkshuisstijl-community/components-css@5.1.0
+
 ## 1.3.8
 
 ### Patch Changes
