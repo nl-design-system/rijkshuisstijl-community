@@ -3,39 +3,3 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 @use "../../node_modules/@nl-design-system-candidate/skip-link-css/dist/skip-link.css";
-@use "mixin";
-
-.rhc-skip-link {
-  @include mixin.rhc-skip-link;
-}
-
-.rhc-skip-link--hidden,
-.rhc-skip-link--visible-on-focus {
-  inset-block-start: -9999px;
-  position: fixed;
-}
-
-.rhc-skip-link--focus,
-.rhc-skip-link:focus {
-  @include mixin.rhc-skip-link;
-
-  background-color: var(--nl-skip-link-focus-background-color, inherit);
-  border-color: var(--nl-skip-link-focus-border-color, inherit);
-  border-style: var(--nl-skip-link-focus-border-style, inherit);
-  border-width: var(--nl-skip-link-focus-border-width, inherit);
-  color: var(--nl-skip-link-focus-color, inherit);
-  outline: var(--nl-skip-link-focus-outline-color, revert) var(--nl-skip-link-focus-outline-style, revert)
-    var(--nl-skip-link-focus-outline-width, revert);
-  outline-offset: var(--nl-skip-link-focus-outline-offset, revert);
-  position: revert;
-  text-decoration: var(--nl-skip-link-focus-text-decoration, inherit);
-}
-
-.rhc-skip-link--focus-visible,
-.rhc-skip-link:focus-visible {
-  @include mixin.rhc-skip-link;
-
-  outline: var(--nl-skip-link-focus-visible-outline-color) var(--nl-skip-link-focus-visible-outline-style)
-    var(--nl-skip-link-focus-visible-outline-width);
-  outline-offset: var(--nl-skip-link-focus-visible-outline-offset);
-}
