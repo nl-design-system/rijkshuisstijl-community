@@ -1,5 +1,50 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 5.0.0
+
+### Major Changes
+
+- 0057047: chore: remove unused and deprecated Link tokens
+  - Use NL link component as cleanly as possible.
+  - Do not support NL `disabled` prop/state for Link.
+  - Add support for Icon in Link.
+  - Replace "utrecht" with "rhc" in markdown documentation for Link.
+
+- f89c576: Removed the following tokens for unordered list as these are inherited from the document:
+  --utrecht-unordered-list-color
+  --utrecht-unordered-list-marker-border-color
+  --utrecht-unordered-list-font-weight
+  --utrecht-unordered-list-font-family
+
+  Added the following token to control nested lists
+  --rhc-unordered-list-nested-margin-inline-start
+
+  Nested lists now have the same marker as root lists to have less going on
+
+- f24efc1: Clear deprecated tokens for Breadcrumb
+
+### Minor Changes
+
+- 93b9259: Add new Card component for flexible card display
+
+  **WHAT**: Added a new `Card` component alongside the existing `CardAsLink` component
+  **WHY**: The existing `CardAsLink` was too restrictive for cases where cards don't need to be clickable links
+  **HOW**: Import and use the new `Card` component for non-interactive card displays
+
+### Patch Changes
+
+- 2828f3e: chore: Remove unused deprecated paragraph token
+- cd3758e: Cleaned up deprecated tokens for ordered list to be more in line with the base component used in Utrecht.
+  Tokens that wont be applied to ordered list anymore:
+  --utrecht-ordered-list-color
+  --utrecht-ordered-list-font-weight
+  --utrecht-ordered-list-margin-inline-start
+- bf73b50: Fix hot reloading voor local development.
+- 6b3a5aa: Remove fixed width from Card As Link component to delegate sizing to layout
+- fe88675: Update heading dependency and removed unused tokens
+- acca7a7: Removed unused deprecated tokens
+- 04a4ec5: updated design tokens to be set on the common layer instead of component layer
+
 ## 4.1.0
 
 ### Minor Changes
@@ -50,7 +95,6 @@
   - Token update unordered list
 - 83f2985: Vervang niet bestaand Design Token type "borderStyle" met "other".
 - 860e977: Link tokens bijgewerkt:
-
   - `nl.link.text-decoration-color` verwijderd zodat de underline meekleurt met de state kleur
   - `nl.link.hover.text-decoration` hernoemd naar `nl.link.hover.text-decoration-line` zodat de underline bij hover verdwijnt
 
@@ -66,7 +110,6 @@
 ### Major Changes
 
 - 04beca8: Breaking changes: toevoeging en aanpassing van font-weight tokens op de common laag.
-
   - De paragraph font tokens op de common-laag zijn hernoemd naar `body`, zodat ze breder toepasbaar zijn.
   - De token `rhc.paragraph.small` is verwijderd.
   - Verwijzingen naar `rhc.paragraph.small` zijn vervangen door `rhc.body.default`, wat betekent dat de `font-size` van componenten als `counterbadge`, `navigation-list` en `message-list` is gewijzigd van 18px naar 20px.
@@ -109,20 +152,17 @@
   Deprecated @rijkshuisstijl-community/rivm-design-tokens
   These themes are now found in: @rijkshuisstijl-community/design-tokens
 - 5209b0c: ### Nieuwe tokens
-
   - `rhc.color.foreground.on-light-color` toegevoegd
   - Rounded corner tokens toegevoegd
   - Nieuwe tokenset `components/blockquote` toegevoegd
 
   ### Hernoemingen en refactor
-
   - `rhc.color.foregrond.onEmphisis` hernoemd naar `rhc.color.foreground.on-dark-color`. (oude naam blijft tijdelijk beschikbaar om bugs te voorkomen)
   - `rhc.border-radius.keep` vervangen door de nieuwe rounded corner tokens
   - Tokenset `common/keep` hernoemd naar `common/keep-oud`
   - Tokenset `components/blockquote` verplaatst naar `components/blockquote-oud` (legacy totdat het component is geüpdatet)
 
   ### Overige
-
   - Stijl en design tokens voor het `blockquote` component geüpdatet
 
 ## 1.2.0

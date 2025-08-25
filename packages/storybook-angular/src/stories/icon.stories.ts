@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
 import readme from './icon.md';
 import { IconComponent } from '../../../components-angular/src/public-api';
 
@@ -15,13 +15,15 @@ const meta: Meta<IconComponent> = {
   },
   render: () => ({
     template: `
-                 <rhc-icon>
-              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 30 30">
-                <path d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z"></path>
-              </svg>
-           </rhc-icon>
+      <rhc-icon>
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
+      </rhc-icon>
     `,
   }),
 };
 
 export default meta;
+
+export const Default: StoryObj<IconComponent> = {
+  name: 'Default',
+};

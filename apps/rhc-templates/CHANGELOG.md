@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/rhc-templates
 
+## 2.0.2
+
+### Patch Changes
+
+- 3d9999c: Update patch & minor dependencies
+
 ## 2.0.1
 
 ### Patch Changes
