@@ -1478,7 +1478,7 @@
       }
     }
   },
-  "components/accordion/base": {
+  "components/accordion": {
     "todo": {
       "accordion": {
         "button": {
@@ -1660,116 +1660,6 @@
             "value": "{rhc.space.0}",
             "type": "dimension",
             "description": "[code-only]"
-          }
-        }
-      }
-    }
-  },
-  "components/accordion/deprecated": {
-    "rhc": {
-      "accordion": {
-        "border-radius": {
-          "type": "dimension",
-          "value": "0px"
-        },
-        "color": {
-          "type": "color",
-          "value": "{rhc.color.foreground.default}"
-        },
-        "header": {
-          "margin": {
-            "type": "dimension",
-            "value": "0"
-          }
-        },
-        "section": {
-          "border-block-end-width": {
-            "type": "dimension",
-            "value": "{rhc.border-width.default}"
-          },
-          "border-color": {
-            "type": "color",
-            "value": "{rhc.color.border.subdued}"
-          },
-          "border-width": {
-            "type": "dimension",
-            "value": "{rhc.border-width.default}"
-          }
-        },
-        "button": {
-          "padding-block-end": {
-            "type": "dimension",
-            "value": "{rhc.space.150}"
-          },
-          "padding-block-start": {
-            "type": "dimension",
-            "value": "{rhc.space.150}"
-          },
-          "padding-inline-end": {
-            "type": "dimension",
-            "value": "{rhc.space.200}"
-          },
-          "padding-inline-start": {
-            "type": "dimension",
-            "value": "{rhc.space.200}"
-          },
-          "expanded": {
-            "background-color": {
-              "type": "color",
-              "value": "{rhc.color.canvas}"
-            },
-            "color": {
-              "type": "color",
-              "value": "{rhc.color.foreground.default}"
-            }
-          },
-          "icon": {
-            "margin-block": {
-              "type": "dimension",
-              "value": "{rhc.space.50}"
-            }
-          },
-          "font-family": {
-            "type": "fontFamilies",
-            "value": "{rhc.font-family.primary}"
-          },
-          "font-weight": {
-            "type": "fontWeights",
-            "value": "{rhc.font-weight.default}"
-          },
-          "font-size": {
-            "type": "fontSizes",
-            "value": "{rhc.font-size.body.default}"
-          },
-          "line-height": {
-            "value": "{rhc.line-height.md}",
-            "type": "lineHeights"
-          }
-        }
-      }
-    },
-    "utrecht": {
-      "accordion": {
-        "button": {
-          "active": {
-            "row-gap": {
-              "type": "dimension",
-              "value": "0"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "type": "color",
-              "value": "{rhc.color.primary.50}"
-            },
-            "border-color": {
-              "type": "color",
-              "value": "{rhc.color.primary.500}"
-            },
-            "color": {
-              "type": "color",
-              "value": "{rhc.color.foreground.default}"
-            }
           }
         }
       }
@@ -9789,9 +9679,8 @@
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
-        "components/accordion/base": "enabled",
+        "components/accordion": "enabled",
         "components/alert/base": "enabled",
-        "components/accordion/deprecated": "enabled",
         "components/alert/deprecated": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
@@ -9888,9 +9777,8 @@
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
-        "components/accordion/base": "enabled",
+        "components/accordion": "enabled",
         "components/alert/base": "enabled",
-        "components/accordion/deprecated": "enabled",
         "components/alert/deprecated": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
@@ -9989,14 +9877,13 @@
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
-        "components/accordion/base": "enabled",
+        "components/accordion": "enabled",
         "components/alert/base": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
-        "components/accordion/deprecated": "enabled",
         "components/alert/deprecated": "enabled",
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
@@ -10088,9 +9975,8 @@
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
-        "components/accordion/base": "enabled",
+        "components/accordion": "enabled",
         "components/alert/base": "enabled",
-        "components/accordion/deprecated": "enabled",
         "components/alert/deprecated": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
@@ -10187,9 +10073,8 @@
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
-        "components/accordion/base": "enabled",
+        "components/accordion": "enabled",
         "components/alert/base": "enabled",
-        "components/accordion/deprecated": "enabled",
         "components/alert/deprecated": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
@@ -10286,10 +10171,9 @@
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
-        "components/accordion/base": "enabled",
+        "components/accordion": "enabled",
         "components/alert/base": "enabled",
         "components/alert/deprecated": "enabled",
-        "components/accordion/deprecated": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
@@ -10385,9 +10269,8 @@
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
-        "components/accordion/base": "enabled",
+        "components/accordion": "enabled",
         "components/alert/base": "enabled",
-        "components/accordion/deprecated": "enabled",
         "components/alert/deprecated": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
@@ -10484,9 +10367,8 @@
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
-        "components/accordion/base": "enabled",
+        "components/accordion": "enabled",
         "components/alert/base": "enabled",
-        "components/accordion/deprecated": "enabled",
         "components/alert/deprecated": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
@@ -10586,9 +10468,8 @@
         "components/button": "enabled",
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
-        "components/accordion/base": "enabled",
+        "components/accordion": "enabled",
         "components/alert/base": "enabled",
-        "components/accordion/deprecated": "enabled",
         "components/alert/deprecated": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
@@ -10640,8 +10521,7 @@
       "utrecht/focus",
       "utrecht/pointer-target",
       "utrecht/rich-text",
-      "components/accordion/base",
-      "components/accordion/deprecated",
+      "components/accordion",
       "components/action-group",
       "components/alert/base",
       "components/alert/deprecated",
