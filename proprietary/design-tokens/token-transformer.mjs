@@ -21,7 +21,7 @@ const excludes = [
   'components/drawer',
   'components/form-field-option-label',
   'components/modal-dialog',
-  'components/pagination',
+  'components/pagination/todo',
   'components/status-badge',
   'components/summary-list',
   'components/task-list',

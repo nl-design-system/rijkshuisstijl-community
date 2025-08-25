@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/components-angular
 
+## 2.0.1
+
+### Patch Changes
+
+- 3d9999c: Update patch & minor dependencies
+- 834dbde: Reverted breaking changes to angular storybook and add controls to stories
+
 ## 2.0.0
 
 ### Major Changes
@@ -7,7 +14,6 @@
 - d3d4062: Removed the `icon` input from `<rhc-icon/>` component. The `icon` component no longer comes bundled with tabler icons, meaning you will have to supply your own icons.
 - 101881c: `<rhc-form-field-text-input>` and `<rhc-text-input>` Components' required input has been changed to inputRequired. The required input now sets `aria-required` on the native HTML input. If you wish to put `required` on the native HTML input you should now use `inputRequired`.
 - 923d857: Alleen NL link gebruiken
-
   - Zorgen dat RHC link alleen NL link gebruikt
     - NL link's `disabled` prop niet toestaan (altijd op `false` zetten) (angular versie ondersteunde dit toch al niet)
   - Documentatie aan Angular readme.md toegevoegd
