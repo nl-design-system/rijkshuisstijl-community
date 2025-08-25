@@ -9,10 +9,8 @@ export interface SkipLinkProps extends NLSkipLinkProps {
   ref?: Ref<HTMLAnchorElement>;
 }
 
-export const SkipLink = ({ ref, children, className, ...restProps }: PropsWithChildren<SkipLinkProps>) => (
-  <NLSkipLink className={clsx('rhc-skip-link', className)} ref={ref} {...restProps}>
-    {children}
-  </NLSkipLink>
+export const SkipLink = ({ className, ...restProps }: PropsWithChildren<SkipLinkProps>) => (
+  <NLSkipLink className={clsx('rhc-skip-link', className)} {...restProps} />
 );
 
 SkipLink.displayName = 'SkipLink';
