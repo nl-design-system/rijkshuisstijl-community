@@ -15,14 +15,10 @@ export class LinkWebComponent extends BaseWebComponent {
   render(): void {
     if (!this.shadowRoot) return;
 
-    const { classname, href, ...restProps } = this.props;
+    const { classname, ...restProps } = this.props;
 
     render(
-      <Link
-        className={(classname as LinkWebComponentAttributes['className']) ?? undefined}
-        href={href as LinkWebComponentAttributes['href']}
-        {...restProps}
-      >
+      <Link className={(classname as LinkWebComponentAttributes['className']) ?? undefined} {...restProps}>
         <slot />
       </Link>,
       this.shadowRoot,
