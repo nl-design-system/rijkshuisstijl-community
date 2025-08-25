@@ -2,34 +2,3 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-
-.utrecht-accordion {
-  display: flex;
-  flex-direction: column;
-  margin-block-end: var(--utrecht-accordion-margin-block-end);
-  row-gap: var(--utrecht-accordion-row-gap, inherit);
-}
-
-.utrecht-accordion__section {
-  border-style: solid;
-}
-
-.utrecht-button.utrecht-accordion__button {
-  align-items: start;
-}
-
-.utrecht-accordion__button-icon {
-  align-items: center;
-  block-size: var(--utrecht-accordion-button-icon-size);
-  display: flex;
-  fill: var(--utrecht-accordion-button-color, inherit);
-  inline-size: var(--utrecht-accordion-button-icon-size);
-  justify-content: center;
-}
-
-.utrecht-accordion__panel {
-  font-family: var(--rhc-font-family-primary, inherit);
-  font-size: var(--rhc-font-size-xs-desktop, inherit);
-  font-weight: var(--rhc-font-weight-regular, inherit);
-  line-height: var(--rhc-line-height-md, inherit);
-}
