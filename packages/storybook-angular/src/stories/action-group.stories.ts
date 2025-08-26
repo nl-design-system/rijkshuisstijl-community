@@ -27,6 +27,13 @@ const meta: Meta<ActionGroupComponent> = {
         ]),
       },
     },
+    nldesignsystem: 'https://www.nldesignsystem.nl/action-group/',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/ActionGroup.tsx',
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=4626-10492&p=f&t=MHYw4lXBHCryrwek-0',
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht (daar heeft het de naam ButtonGroup), met styling van de Rijkshuisstijl Community.',
   },
   render: ({ direction }) => ({
     template: `<rhc-action-group direction="${direction}">
