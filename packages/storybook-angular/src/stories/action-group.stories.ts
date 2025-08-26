@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import readme from './action-group.md';
 import { ActionGroupComponent, ButtonComponent } from '../../../components-angular/src/public-api';
+import { mergeMarkdown, replaceMarkdown } from '../../../storybook/helpers/merge-markdown';
+import usageDocs from '../../../storybook/src/community/action-group.md';
 
 const meta: Meta<ActionGroupComponent> = {
   title: 'Rijkshuisstijl/Action Group',
@@ -19,7 +21,10 @@ const meta: Meta<ActionGroupComponent> = {
   parameters: {
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([
+          replaceMarkdown(readme, 'Button Group', 'Action Group', true).replace('Button Group', 'Action Group'),
+          usageDocs,
+        ]),
       },
     },
   },

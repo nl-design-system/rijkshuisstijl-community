@@ -1,7 +1,8 @@
 import { ActionGroupWebComponent, ButtonWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown, replaceMarkdown } from '../../helpers/merge-markdown';
+import usageDocs from '../community/action-group.md?raw';
 import readme from '../community/action-group.md?raw';
 
 ActionGroupWebComponent.define();
@@ -29,7 +30,10 @@ const meta = {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
-        component: mergeMarkdown([readme]),
+        component: mergeMarkdown([
+          replaceMarkdown(readme, 'Button Group', 'Action Group', true).replace('Button Group', 'Action Group'),
+          usageDocs,
+        ]),
       },
     },
     // TODO: add Figma and NL DesignSystem links
