@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Alert } from '@rijkshuisstijl-community/components-react';
+import { Alert, Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from './alert.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
@@ -18,38 +18,25 @@ const meta = {
         category: 'Property',
       },
     },
-    heading: {
-      description: 'Alert heading',
-      type: {
-        name: 'string',
-      },
+    icon: {
+      description: 'Alert icon',
+      type: { name: 'string' },
       table: {
-        category: 'Demo',
-      },
-    },
-    headingLevel: {
-      description: 'Alert heading level',
-      control: { type: 'select' },
-      options: [1, 2, 3, 4, 5],
-      table: {
-        category: 'Demo',
-      },
-    },
-    textContent: {
-      description: 'Alert content',
-      type: {
-        name: 'string',
-      },
-      table: {
-        category: 'Demo',
+        category: 'Property',
       },
     },
   },
   args: {
     type: 'info',
-    heading: 'Heading',
-    headingLevel: 3,
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children: [
+      <Heading key="heading" level={3}>
+        Heading
+      </Heading>,
+      <Paragraph key="paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </Paragraph>,
+    ],
   },
   tags: ['autodocs'],
   parameters: {
@@ -77,31 +64,58 @@ export default meta;
 export const Informative: StoryObj<typeof meta> = {
   args: {
     type: 'info',
-    heading: 'Heading',
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children: [
+      <Heading key="heading" level={3}>
+        Heading
+      </Heading>,
+      <Paragraph key="paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </Paragraph>,
+    ],
   },
 };
 
 export const Negative: StoryObj<typeof meta> = {
   args: {
     type: 'error',
-    heading: 'Heading',
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children: [
+      <Heading key="heading" level={3}>
+        Heading
+      </Heading>,
+      <Paragraph key="paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </Paragraph>,
+    ],
   },
 };
-
 export const Positive: StoryObj<typeof meta> = {
   args: {
     type: 'ok',
-    heading: 'Heading',
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children: [
+      <Heading key="heading" level={3}>
+        Heading
+      </Heading>,
+      <Paragraph key="paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </Paragraph>,
+    ],
   },
 };
 
 export const Warning: StoryObj<typeof meta> = {
   args: {
     type: 'warning',
-    heading: 'Heading',
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children: [
+      <Heading key="heading" level={3}>
+        Heading
+      </Heading>,
+      <Paragraph key="paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </Paragraph>,
+    ],
   },
 };
