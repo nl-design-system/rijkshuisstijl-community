@@ -1,8 +1,16 @@
 .utrecht-button-group {
   column-gap: var(--rhc-space-100, 0.5rem);
   row-gap: var(--rhc-space-100, 0.5rem);
+
+  &--column {
+    --utrecht-button-max-inline-size: none;
+
+    align-items: stretch;
+  }
+
   @media (width <= 768px) {
     flex-direction: column;
+
     .utrecht-button,
     .utrecht-button-link {
       min-inline-size: 100%;
