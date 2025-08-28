@@ -93,13 +93,3 @@ export const TwigWarning: StoryObj<typeof meta> = {
   },
   name: 'Warning',
 };
-
-export const TwigFlexibleContent: StoryObj<typeof meta> = {
-  args: {
-    type: 'info',
-    children:
-      '<h2 class="nl-heading rhc-heading nl-heading--level-2">Custom Heading Level</h2><p class="nl-paragraph">This example shows the flexibility of using children instead of fixed props.</p><p class="nl-paragraph">You can now include multiple paragraphs, different heading levels, or other content as needed.</p>',
-    attributes: new DrupalAttribute(),
-  },
-  name: 'Flexible Content',
-};
