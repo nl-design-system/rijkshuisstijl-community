@@ -51,7 +51,9 @@ export default meta;
 export const Informative = {
   args: {
     children: [
-      <Heading level={3}>Heading</Heading>,
+      <Heading appearanceLevel={5} level={3}>
+        Heading
+      </Heading>,
       <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod *</Paragraph>,
     ],
   },
@@ -61,7 +63,9 @@ export const Negative = {
   args: {
     type: 'error',
     children: [
-      <Heading level={3}>Heading</Heading>,
+      <Heading appearanceLevel={5} level={3}>
+        Heading
+      </Heading>,
       <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod *</Paragraph>,
     ],
   },
@@ -71,7 +75,9 @@ export const Positive = {
   args: {
     type: 'ok',
     children: [
-      <Heading level={3}>Heading</Heading>,
+      <Heading appearanceLevel={5} level={3}>
+        Heading
+      </Heading>,
       <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod *</Paragraph>,
     ],
   },
@@ -81,7 +87,9 @@ export const Warning = {
   args: {
     type: 'warning',
     children: [
-      <Heading level={3}>Heading</Heading>,
+      <Heading appearanceLevel={5} level={3}>
+        Heading
+      </Heading>,
       <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod *</Paragraph>,
     ],
   },

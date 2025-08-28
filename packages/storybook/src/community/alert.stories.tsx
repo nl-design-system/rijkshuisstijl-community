@@ -65,7 +65,7 @@ export const Informative: StoryObj<typeof meta> = {
   args: {
     type: 'info',
     children: [
-      <Heading key="heading" level={3}>
+      <Heading appearanceLevel={5} key="heading" level={3}>
         Heading
       </Heading>,
       <Paragraph key="paragraph">
@@ -80,7 +80,7 @@ export const Negative: StoryObj<typeof meta> = {
   args: {
     type: 'error',
     children: [
-      <Heading key="heading" level={3}>
+      <Heading appearanceLevel={5} key="heading" level={3}>
         Heading
       </Heading>,
       <Paragraph key="paragraph">
@@ -94,7 +94,7 @@ export const Positive: StoryObj<typeof meta> = {
   args: {
     type: 'ok',
     children: [
-      <Heading key="heading" level={3}>
+      <Heading appearanceLevel={5} key="heading" level={3}>
         Heading
       </Heading>,
       <Paragraph key="paragraph">
@@ -109,7 +109,7 @@ export const Warning: StoryObj<typeof meta> = {
   args: {
     type: 'warning',
     children: [
-      <Heading key="heading" level={3}>
+      <Heading appearanceLevel={5} key="heading" level={3}>
         Heading
       </Heading>,
       <Paragraph key="paragraph">
