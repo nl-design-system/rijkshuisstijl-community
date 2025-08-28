@@ -152,11 +152,13 @@ export default function Collage() {
                 <Heading appearanceLevel={5} level={2}>
                   Heading
                 </Heading>
-                <LinkList>
-                  <LinkListLink href="#">Label</LinkListLink>
-                  <LinkListLink href="#">Label</LinkListLink>
-                  <LinkListLink href="#">Label</LinkListLink>
-                </LinkList>
+                <Paragraph>
+                  <LinkList>
+                    <LinkListLink href="#">Label</LinkListLink>
+                    <LinkListLink href="#">Label</LinkListLink>
+                    <LinkListLink href="#">Label</LinkListLink>
+                  </LinkList>
+                </Paragraph>
               </Alert>
               <FormField
                 description="Description"
