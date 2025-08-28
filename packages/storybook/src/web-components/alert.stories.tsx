@@ -54,7 +54,7 @@ export const Informative = {
       <Heading appearanceLevel={5} level={3}>
         Heading
       </Heading>,
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod *</Paragraph>,
+      <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>,
     ],
   },
 } as StoryObj<typeof meta>;
@@ -66,7 +66,7 @@ export const Negative = {
       <Heading appearanceLevel={5} level={3}>
         Heading
       </Heading>,
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod *</Paragraph>,
+      <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>,
     ],
   },
 } as StoryObj<typeof meta>;
@@ -78,7 +78,7 @@ export const Positive = {
       <Heading appearanceLevel={5} level={3}>
         Heading
       </Heading>,
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod *</Paragraph>,
+      <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>,
     ],
   },
 } as StoryObj<typeof meta>;
@@ -90,7 +90,7 @@ export const Warning = {
       <Heading appearanceLevel={5} level={3}>
         Heading
       </Heading>,
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod *</Paragraph>,
+      <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>,
     ],
   },
 } as StoryObj<typeof meta>;

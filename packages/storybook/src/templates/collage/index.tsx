@@ -149,7 +149,9 @@ export default function Collage() {
                 </CheckboxGroup>
               </div>
               <Alert type="error">
-                <Heading level={2}>Heading</Heading>
+                <Heading appearanceLevel={5} level={2}>
+                  Heading
+                </Heading>
                 <LinkList>
                   <LinkListLink href="#">Label</LinkListLink>
                   <LinkListLink href="#">Label</LinkListLink>
@@ -190,7 +192,9 @@ export default function Collage() {
               </div>
               <div>
                 <Alert type="info">
-                  <Heading level={2}>Heading</Heading>
+                  <Heading appearanceLevel={5} level={2}>
+                    Heading
+                  </Heading>
                   <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
                 </Alert>
               </div>
@@ -201,19 +205,25 @@ export default function Collage() {
               </div>
               <div>
                 <Alert type="error">
-                  <Heading level={2}>Heading</Heading>
+                  <Heading appearanceLevel={5} level={2}>
+                    Heading
+                  </Heading>
                   <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
                 </Alert>
               </div>
               <div>
                 <Alert type="ok">
-                  <Heading level={2}>Heading</Heading>
+                  <Heading appearanceLevel={5} level={2}>
+                    Heading
+                  </Heading>
                   <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
                 </Alert>
               </div>
               <div>
                 <Alert type="warning">
-                  <Heading level={2}>Heading</Heading>
+                  <Heading appearanceLevel={5} level={2}>
+                    Heading
+                  </Heading>
                   <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
                 </Alert>
               </div>

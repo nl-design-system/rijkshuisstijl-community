@@ -33,8 +33,7 @@ const meta = {
         Heading
       </Heading>,
       <Paragraph key="paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
       </Paragraph>,
     ],
   },
@@ -69,8 +68,7 @@ export const Informative: StoryObj<typeof meta> = {
         Heading
       </Heading>,
       <Paragraph key="paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
       </Paragraph>,
     ],
   },
@@ -84,8 +82,7 @@ export const Negative: StoryObj<typeof meta> = {
         Heading
       </Heading>,
       <Paragraph key="paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
       </Paragraph>,
     ],
   },
@@ -98,8 +95,7 @@ export const Positive: StoryObj<typeof meta> = {
         Heading
       </Heading>,
       <Paragraph key="paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
       </Paragraph>,
     ],
   },
@@ -113,8 +109,7 @@ export const Warning: StoryObj<typeof meta> = {
         Heading
       </Heading>,
       <Paragraph key="paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *
       </Paragraph>,
     ],
   },
