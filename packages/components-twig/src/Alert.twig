@@ -23,16 +23,7 @@
   </div>
   <div class="utrecht-alert__content">
     <div {{ attributes }}>  
-      {% include '@rhc/Heading.twig' with {
-        attributes: create_attribute(),
-        level: 3,
-        appearance: 5,
-        children: heading
-      } %}
-      {% include '@rhc/Paragraph.twig' with {
-        attributes: create_attribute(),
-        children: textContent
-      } %}
+      {{ children|raw }}
     </div>
   </div>
 </div>
