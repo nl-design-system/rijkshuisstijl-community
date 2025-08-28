@@ -148,7 +148,8 @@ export default function Collage() {
                   <FormFieldCheckboxOption label="Checkbox 1"></FormFieldCheckboxOption>
                 </CheckboxGroup>
               </div>
-              <Alert heading="Heading" headingLevel={2} type="error">
+              <Alert type="error">
+                <Heading level={2}>Heading</Heading>
                 <LinkList>
                   <LinkListLink href="#">Label</LinkListLink>
                   <LinkListLink href="#">Label</LinkListLink>
@@ -188,39 +189,33 @@ export default function Collage() {
                 <Toggletip>Hier zou een korte introductie kunnen staan.</Toggletip>
               </div>
               <div>
-                <Alert
-                  heading="Heading"
-                  headingLevel={2}
-                  textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
-                  type="info"
-                />
+                <Alert type="info">
+                  <Heading level={2}>Heading</Heading>
+                  <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+                </Alert>
               </div>
               <div>
-                <Alert textContent="Hier zou een korte introductie kunnen staan." type="info"></Alert>
+                <Alert type="info">
+                  <Paragraph>Hier zou een korte introductie kunnen staan.</Paragraph>
+                </Alert>
               </div>
               <div>
-                <Alert
-                  heading="Heading"
-                  headingLevel={2}
-                  textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
-                  type="error"
-                />
+                <Alert type="error">
+                  <Heading level={2}>Heading</Heading>
+                  <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+                </Alert>
               </div>
               <div>
-                <Alert
-                  heading="Heading"
-                  headingLevel={2}
-                  textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
-                  type="ok"
-                />
+                <Alert type="ok">
+                  <Heading level={2}>Heading</Heading>
+                  <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+                </Alert>
               </div>
               <div>
-                <Alert
-                  heading="Heading"
-                  headingLevel={2}
-                  textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
-                  type="warning"
-                />
+                <Alert type="warning">
+                  <Heading level={2}>Heading</Heading>
+                  <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+                </Alert>
               </div>
               <AccordionProvider
                 sections={[

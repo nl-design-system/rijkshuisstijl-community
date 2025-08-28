@@ -13,11 +13,8 @@ Gebruik niet een alert voor een algemene aankondiging die op meerdere pagina's s
 ```tsx
 import { Alert } from '@rijkshuisstijl-community/components-react';
 
-<Alert
-  heading="Heading"
-  headingLevel={3}
-  icon="info-circle"
-  textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
-  type="info"
-/>;
+<Alert type="info">
+  <Heading level={3}>Heading</Heading>
+  <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+</Alert>;
 ```
