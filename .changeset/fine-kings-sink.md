@@ -1,5 +1,7 @@
 ---
 '@rijkshuisstijl-community/components-react': major
+'@rijkshuisstijl-community/web-components': major
+'@rijkshuisstijl-community/components-twig': major
 '@rijkshuisstijl-community/components-css': major
 '@rijkshuisstijl-community/design-tokens': major
 ---
