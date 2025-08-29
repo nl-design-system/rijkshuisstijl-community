@@ -20,7 +20,7 @@ const AccordionStory = ({ expanded, label, body, icon, sections }: AccordionStor
 );
 
 const meta = {
-  title: 'Rijkshuisstijl/Accordion',
+  title: 'Accordion',
   id: 'rhc-accordion',
   args: {
     label: '',

@@ -10,7 +10,7 @@ import readme from '../community/hero.md?raw';
 ButtonWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Button',
+  title: 'Button',
   id: 'rhc-button-web',
   component: 'rhc-button',
   argTypes: {

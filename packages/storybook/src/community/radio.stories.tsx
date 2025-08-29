@@ -29,7 +29,7 @@ const RadioStory = ({ active, focus, focusVisible, name, ...args }: RadioStoryPr
 );
 
 const meta = {
-  title: 'Rijkshuisstijl/Radio button',
+  title: 'Radio button',
   id: 'rhc-radio',
   component: RadioStory,
   args: {

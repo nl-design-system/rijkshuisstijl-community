@@ -6,7 +6,7 @@ import readme from './heading.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Heading',
+  title: 'Heading',
   id: 'rhc-heading',
   component: Heading,
   argTypes: {

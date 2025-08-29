@@ -24,7 +24,7 @@ const TableCell = ({ children, alignCell, ...restProps }: TableCellProps) => {
 };
 
 export default {
-  title: 'Rijkshuisstijl/Table/Table Cell',
+  title: 'Table/Table Cell',
   id: 'rhc-table-cell',
   component: TableCell,
   tags: ['autodocs'],

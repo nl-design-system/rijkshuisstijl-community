@@ -4,7 +4,7 @@ import readme from './form-field-select.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Form Field/Form Field Select',
+  title: 'Form Field/Form Field Select',
   id: 'rhc-form-field-select',
   component: FormFieldSelect,
   argTypes: {

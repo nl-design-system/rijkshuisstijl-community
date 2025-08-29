@@ -39,7 +39,7 @@ const LogoStory = ({ imageBackgroundColor, textColor, imageIconColor, ...args }:
 );
 
 const meta = {
-  title: 'Rijkshuisstijl/Logo',
+  title: 'Logo',
   id: 'rhc-logo',
   component: LogoStory,
   args: {

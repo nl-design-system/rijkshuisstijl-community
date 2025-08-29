@@ -4,7 +4,7 @@ import readme from './data-summary.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/DataSummary',
+  title: 'DataSummary',
   id: 'rhc-dataSummary',
   component: DataSummary,
   parameters: {

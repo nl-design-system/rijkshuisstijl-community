@@ -6,7 +6,7 @@ import readme from './page-header.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/PageHeader',
+  title: 'PageHeader',
   id: 'rhc-page-header',
   component: PageHeader,
   args: {

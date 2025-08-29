@@ -6,7 +6,7 @@ import readme from './pre-heading.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/PreHeading',
+  title: 'PreHeading',
   id: 'rhc-pre-heading',
   component: PreHeading,
   argTypes: {},

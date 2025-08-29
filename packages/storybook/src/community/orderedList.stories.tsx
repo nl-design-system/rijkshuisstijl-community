@@ -4,7 +4,7 @@ import readme from './orderedList.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Ordered List',
+  title: 'Ordered List',
   id: 'rhc-ordered-list',
   component: OrderedList,
   args: {

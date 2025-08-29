@@ -9,7 +9,7 @@ import readme from '../community/alert.md?raw';
 AlertWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Alert',
+  title: 'Alert',
   id: 'rhc-alert-web',
   component: 'rhc-alert',
   argTypes: {

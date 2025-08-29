@@ -4,7 +4,38 @@ const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
   },
-  stories: ['../src/**/*stories.@(js|jsx|ts|tsx)', '../src/**/*.mdx'],
+  stories: [
+    {
+      directory: '../src/documentation',
+      titlePrefix: 'Rijkshuisstijl Community',
+      files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
+    },
+    {
+      directory: '../src/icon-sets',
+      titlePrefix: 'Rijkshuisstijl Community',
+      files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
+    },
+    {
+      directory: '../src/community',
+      titlePrefix: 'Rijkshuisstijl',
+      files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
+    },
+    {
+      directory: '../src/web-components',
+      titlePrefix: 'Web Components',
+      files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
+    },
+    {
+      directory: '../src/components-twig',
+      titlePrefix: 'Twig Components',
+      files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
+    },
+    {
+      directory: '../src/templates',
+      titlePrefix: 'Templates',
+      files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
+    },
+  ],
   addons: [
     '@chromatic-com/storybook',
     '@etchteam/storybook-addon-status',

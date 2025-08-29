@@ -10,7 +10,7 @@ import readme from './form-field.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Form Field/Form Field',
+  title: 'Form Field/Form Field',
   id: 'rhc-form-field',
   component: FormField,
   argTypes: {

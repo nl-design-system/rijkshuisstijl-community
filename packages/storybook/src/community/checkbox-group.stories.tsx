@@ -4,7 +4,7 @@ import readme from './checkbox-group.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/CheckboxGroup',
+  title: 'CheckboxGroup',
   id: 'rhc-checkbox-group',
   component: CheckboxGroup,
   parameters: {

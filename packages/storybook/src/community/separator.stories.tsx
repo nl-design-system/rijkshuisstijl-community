@@ -4,7 +4,7 @@ import readme from './separator.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Separator',
+  title: 'Separator',
   id: 'rhc-separator',
   component: Separator,
   parameters: {

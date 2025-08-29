@@ -6,7 +6,7 @@ import readme from '../community/hero.md?raw';
 HeroWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Hero',
+  title: 'Hero',
   id: 'rhc-hero-web',
   component: 'rhc-hero',
   argTypes: {

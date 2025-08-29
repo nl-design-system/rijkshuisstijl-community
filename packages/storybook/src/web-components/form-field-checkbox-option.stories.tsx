@@ -18,7 +18,7 @@ const CheckboxWrapper = ({ label, description, invalid, errorMessage, disabled, 
 };
 
 const meta = {
-  title: 'Web Components/Form Field/Form Field Checkbox Option',
+  title: 'Form Field/Form Field Checkbox Option',
   id: 'rhc-form-field-checkbox-option-web',
   component: CheckboxWrapper,
   argTypes: {

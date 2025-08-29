@@ -11,7 +11,7 @@ import readme from './side-nav.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/SideNav',
+  title: 'SideNav',
   id: 'rhc-sideNav',
   component: SideNav,
   tags: ['autodocs'],

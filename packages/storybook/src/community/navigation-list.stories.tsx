@@ -5,7 +5,7 @@ import readme from './navigation-list.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/NavigationList',
+  title: 'NavigationList',
   component: NavigationList,
   parameters: {
     status: {

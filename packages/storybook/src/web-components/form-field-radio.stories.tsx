@@ -31,7 +31,7 @@ const RadioWrapper = ({
 };
 
 const meta = {
-  title: 'Web Components/Form field/Form Field Radio',
+  title: 'Form field/Form Field Radio',
   id: 'rhc-form-field-radio-web',
   component: RadioWrapper,
   args: {

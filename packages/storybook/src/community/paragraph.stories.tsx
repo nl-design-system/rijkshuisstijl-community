@@ -6,7 +6,7 @@ import readme from './paragraph.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Paragraph',
+  title: 'Paragraph',
   id: 'rhc-paragraph',
   component: Paragraph,
   argTypes: {

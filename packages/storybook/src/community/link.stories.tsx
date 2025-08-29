@@ -23,7 +23,7 @@ import { mergeMarkdown, replaceMarkdown } from '../../helpers/merge-markdown';
 import iconInline from '../documentation/link/icon-inline.nl.md?raw';
 
 const meta = {
-  title: 'Rijkshuisstijl/Link',
+  title: 'Link',
   id: 'rhc-link',
   component: Link,
   argTypes: {

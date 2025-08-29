@@ -17,7 +17,7 @@ const AccordionWrapper = ({ appearance, icon, sections, heading, headingLevel }:
 };
 
 const meta = {
-  title: 'Web Components/Accordion',
+  title: 'Accordion',
   id: 'rhc-accordion-web',
   component: AccordionWrapper,
   argTypes: {

@@ -9,7 +9,7 @@ import readme from '@utrecht/components/breadcrumb-nav/README.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Breadcrumb navigation',
+  title: 'Breadcrumb navigation',
   id: 'rhc-breadcrumb-nav',
   component: BreadcrumbNav,
   argTypes: {},

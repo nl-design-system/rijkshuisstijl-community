@@ -11,7 +11,7 @@ registerIconSet(flagIconSet);
 IconWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Icon',
+  title: 'Icon',
   id: 'rhc-icon-web',
   component: 'rhc-icon',
   argTypes: {

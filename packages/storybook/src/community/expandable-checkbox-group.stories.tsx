@@ -11,7 +11,7 @@ const ExpandableCheckboxGroupStory = (props: PropsWithChildren<ExpandableCheckbo
 );
 
 const meta = {
-  title: 'Rijkshuisstijl/ExpandableCheckboxGroup',
+  title: 'ExpandableCheckboxGroup',
   id: 'rhc-expandable-checkbox-group',
   component: ExpandableCheckboxGroupStory,
   argTypes: {

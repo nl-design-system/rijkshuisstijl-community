@@ -6,7 +6,7 @@ import { mergeMarkdown } from '../../helpers/merge-markdown';
 import { replaceMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/ActionGroup',
+  title: 'ActionGroup',
   id: 'rhc-action-group',
   component: ActionGroup,
   argTypes: {

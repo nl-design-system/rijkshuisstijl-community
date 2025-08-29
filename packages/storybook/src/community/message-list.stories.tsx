@@ -4,7 +4,7 @@ import readme from './message-list.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Message List',
+  title: 'Message List',
   id: 'rhc-message-list',
   component: MessageList,
   args: {},

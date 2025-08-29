@@ -6,7 +6,7 @@ import readme from '../community/blockquote.md?raw';
 BlockquoteWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Blockquote',
+  title: 'Blockquote',
   id: 'rhc-blockquote-web',
   component: 'rhc-blockquote',
   argTypes: {

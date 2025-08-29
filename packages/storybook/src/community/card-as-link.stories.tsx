@@ -4,7 +4,7 @@ import readme from './card-as-link.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Card as Link',
+  title: 'Card as Link',
   id: 'rhc-card-as-link',
   component: CardAsLink,
   argTypes: {

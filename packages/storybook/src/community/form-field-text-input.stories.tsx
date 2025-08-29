@@ -6,7 +6,7 @@ import readme from './form-field-text-input.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Form Field/Form Field Text Input',
+  title: 'Form Field/Form Field Text Input',
   id: 'rhc-form-field-text-input',
   component: FormFieldTextInput,
   argTypes: {

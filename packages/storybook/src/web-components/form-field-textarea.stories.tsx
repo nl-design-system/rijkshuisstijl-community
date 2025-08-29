@@ -33,7 +33,7 @@ const TextareaWrapper = ({
 };
 
 const meta = {
-  title: 'Web Components/Form Field/Form Field Textarea',
+  title: 'Form Field/Form Field Textarea',
   id: 'rhc-form-field-textarea-web',
   component: TextareaWrapper,
   argTypes: {

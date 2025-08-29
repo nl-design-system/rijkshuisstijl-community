@@ -24,7 +24,7 @@ const TableHeaderCell = ({ children, withSorting, alignCell, scope, ...restProps
 };
 
 const meta = {
-  title: 'Rijkshuisstijl/Table/Table Header Cell',
+  title: 'Table/Table Header Cell',
   id: 'rhc-table-header-cell',
   component: TableHeaderCell,
   tags: ['autodocs'],

@@ -8,7 +8,7 @@ import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../community/paragraph.md?raw';
 
 const meta = {
-  title: 'Twig Components/Paragraph',
+  title: 'Paragraph',
   id: 'rhc-twig-paragraph',
   component: TwigParagraph,
   argTypes: {

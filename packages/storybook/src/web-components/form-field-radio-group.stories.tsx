@@ -20,7 +20,7 @@ const RadioGroupWrapper = ({ label, description, errormessage, status, invalid, 
 };
 
 const meta = {
-  title: 'Web Components/Form Field/Form Field Radio Group',
+  title: 'Form Field/Form Field Radio Group',
   id: 'rhc-form-field-radio-group-web',
   component: RadioGroupWrapper,
   argTypes: {
