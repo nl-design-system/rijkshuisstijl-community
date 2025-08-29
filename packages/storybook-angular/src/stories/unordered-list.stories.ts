@@ -3,7 +3,7 @@ import readme from './unordered-list.md';
 import { UnorderedListComponent, UnorderedListItemComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<UnorderedListComponent> = {
-  title: 'Rijkshuisstijl/Unordered List',
+  title: 'Unordered List',
   id: 'rhc-angular-unordered-list',
   component: UnorderedListComponent,
   parameters: {

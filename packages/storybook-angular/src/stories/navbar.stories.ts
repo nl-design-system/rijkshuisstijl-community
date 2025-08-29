@@ -11,7 +11,7 @@ import { IconCalendarCheck, IconHome, IconSearch, IconTransfer, IconUser } from 
 import readme from './navbar.md';
 
 const meta: Meta<NavbarComponent> = {
-  title: 'Rijkshuisstijl/Navigation Bar',
+  title: 'Navigation Bar',
   id: 'rhc-navbar',
   component: NavbarComponent,
   decorators: [

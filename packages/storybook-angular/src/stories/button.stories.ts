@@ -3,7 +3,7 @@ import readme from './button.md';
 import { ButtonComponent, IconComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<ButtonComponent> = {
-  title: 'Rijkshuisstijl/Button',
+  title: 'Button',
   id: 'rhc-angular-button',
   component: ButtonComponent,
   argTypes: {

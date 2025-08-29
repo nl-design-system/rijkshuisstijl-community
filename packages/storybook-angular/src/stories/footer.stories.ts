@@ -3,7 +3,7 @@ import { type Meta, type StoryObj } from '@storybook/angular';
 import readme from './footer.md';
 
 const meta: Meta<FooterComponent> = {
-  title: 'Rijkshuisstijl/Footer',
+  title: 'Footer',
   id: 'rhc-angular-footer',
   component: FooterComponent,
   argTypes: {

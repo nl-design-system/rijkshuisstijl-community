@@ -3,7 +3,7 @@ import readme from './data-summary-item.md';
 import { DataSummaryComponent, DataSummaryItemComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<DataSummaryItemComponent & DataSummaryComponent> = {
-  title: 'Rijkshuisstijl/Data Summary Item',
+  title: 'Data Summary Item',
   id: 'rhc-data-summary-item',
   component: DataSummaryItemComponent,
   parameters: {

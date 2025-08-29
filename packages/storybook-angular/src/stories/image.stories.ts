@@ -5,7 +5,7 @@ import { ImageComponent } from '../../../components-angular/src/public-api';
 type StoryType = ImageComponent & { src: string; alt: string; width: number; height: number };
 
 const meta: Meta<StoryType> = {
-  title: 'Rijkshuisstijl/Image',
+  title: 'Image',
   id: 'rhc-angular-image',
   component: ImageComponent,
   parameters: {

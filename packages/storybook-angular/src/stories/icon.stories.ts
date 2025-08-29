@@ -3,7 +3,7 @@ import readme from './icon.md';
 import { IconComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<IconComponent> = {
-  title: 'Rijkshuisstijl/Icon',
+  title: 'Icon',
   id: 'rhc-angular-icon',
   component: IconComponent,
   parameters: {
