@@ -17,7 +17,7 @@ const config: StorybookConfig = {
     },
     {
       directory: '../src/community',
-      titlePrefix: 'Rijkshuisstijl',
+      titlePrefix: 'React Components',
       files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
     },
     {
