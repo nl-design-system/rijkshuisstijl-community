@@ -31,7 +31,7 @@ const CheckboxWrapper = ({
 };
 
 const meta = {
-  title: 'Web Components/Checkbox',
+  title: 'Checkbox',
   id: 'rhc-checkbox-web',
   component: CheckboxWrapper,
   parameters: {

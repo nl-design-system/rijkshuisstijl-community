@@ -10,7 +10,7 @@ const StoryWrapper = (props: SkipLinkProps) => (
 );
 
 const meta = {
-  title: 'Rijkshuisstijl/Skip link',
+  title: 'Skip link',
   id: 'rijkshuisstijl-skip-link',
   component: SkipLink,
   argTypes: {

@@ -5,7 +5,7 @@ import readme from './file-input.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/FileInput',
+  title: 'FileInput',
   id: 'rhc-fileInput',
   component: FileInput,
   argTypes: {

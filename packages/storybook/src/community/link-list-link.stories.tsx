@@ -2,7 +2,7 @@ import { Icon, LinkList, LinkListLink } from '@rijkshuisstijl-community/componen
 import { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Rijkshuisstijl/Link List/Link List Link',
+  title: 'Link List/Link List Link',
   id: 'rijkshuisstijl-link-list-link',
   component: LinkListLink,
   args: {

@@ -3,7 +3,7 @@ import Page from './form';
 import './globals.css';
 
 const meta: Meta = {
-  title: 'Templates/Form',
+  title: 'Form',
   id: 'rhc-templates-form',
   component: Page,
   parameters: {

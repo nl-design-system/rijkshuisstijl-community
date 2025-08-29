@@ -23,7 +23,7 @@ const CheckboxGroupWrapper = ({ label, description, errormessage, status, invali
 };
 
 const meta = {
-  title: 'Web Components/Form Field/Form Field Checkbox Group',
+  title: 'Form Field/Form Field Checkbox Group',
   id: 'rhc-form-field-checkbox-group-web',
   component: CheckboxGroupWrapper,
   argTypes: {

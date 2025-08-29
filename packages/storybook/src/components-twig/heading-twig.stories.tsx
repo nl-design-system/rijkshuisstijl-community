@@ -7,7 +7,7 @@ import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../community/heading.md?raw';
 
 const meta = {
-  title: 'Twig Components/Heading',
+  title: 'Heading',
   id: 'rhc-twig-heading',
   component: TwigHeading,
   argTypes: {

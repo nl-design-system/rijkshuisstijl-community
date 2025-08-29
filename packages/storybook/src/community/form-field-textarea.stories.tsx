@@ -4,7 +4,7 @@ import readme from './form-field-textarea.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Form Field/Form Field Textarea',
+  title: 'Form Field/Form Field Textarea',
   id: 'rhc-form-field-textarea',
   component: FormFieldTextarea,
   argTypes: {

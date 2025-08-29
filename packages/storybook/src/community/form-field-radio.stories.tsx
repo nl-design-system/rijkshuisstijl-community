@@ -6,7 +6,7 @@ import readme from './form-field-radio.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Form field/Form Field Radio',
+  title: 'Form field/Form Field Radio',
   id: 'rhc-form-field-radio',
   component: FormFieldRadio,
   args: {

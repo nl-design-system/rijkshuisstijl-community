@@ -8,7 +8,7 @@ ActionGroupWebComponent.define();
 ButtonWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Action Group',
+  title: 'Action Group',
   id: 'rhc-action-group-web',
   component: 'rhc-action-group',
   argTypes: {

@@ -11,7 +11,7 @@ import readme from './footer.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Footer',
+  title: 'Footer',
   id: 'rhc-footer',
   component: Footer,
   parameters: {

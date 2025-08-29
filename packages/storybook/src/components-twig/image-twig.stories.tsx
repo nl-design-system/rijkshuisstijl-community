@@ -10,7 +10,7 @@ import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../community/image.md?raw';
 
 const meta = {
-  title: 'Twig Components/Image',
+  title: 'Image',
   id: 'rhc-twig-image',
   component: TwigImage,
   argTypes: {

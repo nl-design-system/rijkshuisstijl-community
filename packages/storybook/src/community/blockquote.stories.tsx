@@ -6,7 +6,7 @@ import readme from './blockquote.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Blockquote',
+  title: 'Blockquote',
   id: 'rhc-blockquote',
   component: Blockquote,
   argTypes: {

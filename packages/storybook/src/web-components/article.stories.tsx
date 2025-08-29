@@ -8,7 +8,7 @@ import readme from '../community/article.md?raw';
 ArticleWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Article',
+  title: 'Article',
   id: 'rhc-article-web',
   component: 'rhc-article',
   argTypes: {},

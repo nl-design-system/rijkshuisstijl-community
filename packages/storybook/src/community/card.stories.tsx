@@ -4,7 +4,7 @@ import readme from './card.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Card',
+  title: 'Card',
   id: 'rhc-card',
   component: Card,
   argTypes: {

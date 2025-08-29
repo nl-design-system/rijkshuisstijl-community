@@ -6,7 +6,7 @@ import readme from './article.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Article',
+  title: 'Article',
   id: 'rhc-article',
   component: Article,
   argTypes: {},

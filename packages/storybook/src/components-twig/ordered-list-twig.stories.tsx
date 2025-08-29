@@ -4,7 +4,7 @@ import TwigOrderedList from '@rijkshuisstijl-community/components-twig/src/Order
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Twig Components/Ordered List',
+  title: 'Ordered List',
   id: 'rhc-twig-ordered-list',
   component: TwigOrderedList,
   parameters: {

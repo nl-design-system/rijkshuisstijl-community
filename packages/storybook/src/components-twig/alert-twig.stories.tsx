@@ -7,7 +7,7 @@ import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../community/alert.md?raw';
 
 const meta = {
-  title: 'Twig Components/Alert',
+  title: 'Alert',
   id: 'rhc-twig-alert',
   component: TwigAlert,
   argTypes: {

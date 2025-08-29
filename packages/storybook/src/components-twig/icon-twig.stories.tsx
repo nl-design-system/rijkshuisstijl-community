@@ -10,7 +10,7 @@ import readme from '../community/icon.md?raw';
 const icons = Object.values(iconSet);
 
 const meta = {
-  title: 'Twig Components/Icon',
+  title: 'Icon',
   id: 'rhc-twig-icon',
   component: TwigIcon,
   argTypes: {

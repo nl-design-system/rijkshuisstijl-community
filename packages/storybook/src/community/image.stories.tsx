@@ -7,7 +7,7 @@ import readme from './image.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Image',
+  title: 'Image',
   id: 'rhc-image',
   component: Image,
   argTypes: {

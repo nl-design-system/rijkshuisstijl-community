@@ -9,7 +9,7 @@ import readme from './navigation-list-item.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/NavigationList/NavigationListItem',
+  title: 'NavigationList/NavigationListItem',
   component: NavigationListItem,
   parameters: {
     status: {

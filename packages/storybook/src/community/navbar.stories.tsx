@@ -4,7 +4,7 @@ import readme from './navbar.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/NavBar',
+  title: 'NavBar',
   id: 'rhc-nav-bar',
   component: NavBar,
   parameters: {

@@ -4,7 +4,7 @@ import readme from './number-badge.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Number Badge',
+  title: 'Number Badge',
   id: 'rhc-counter-badge',
   component: NumberBadge,
   tags: ['autodocs'],

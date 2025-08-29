@@ -8,7 +8,7 @@ import readme from './checkbox.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Checkbox',
+  title: 'Checkbox',
   id: 'rhc-checkbox',
   component: Checkbox,
   parameters: {

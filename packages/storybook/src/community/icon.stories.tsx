@@ -14,7 +14,7 @@ registerIconSet(defaultIconSet);
 registerIconSet(flagIconSet);
 
 const meta = {
-  title: 'Rijkshuisstijl/Icon',
+  title: 'Icon',
   id: 'rhc-icon',
   component: Icon,
   argTypes: {

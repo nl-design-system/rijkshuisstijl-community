@@ -2,7 +2,7 @@ import { type NavBarLinkProps, SubNavBar } from '@rijkshuisstijl-community/compo
 import { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Rijkshuisstijl/NavBar/SubNavBar',
+  title: 'NavBar/SubNavBar',
   id: 'rhc-sub-nav-bar',
   component: SubNavBar,
   parameters: {

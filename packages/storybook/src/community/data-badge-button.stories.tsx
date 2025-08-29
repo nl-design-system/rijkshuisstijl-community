@@ -10,7 +10,7 @@ import { mergeMarkdown } from '../../helpers/merge-markdown';
 const DataBadgeButtonStory = (props: PropsWithChildren<DataBadgeButtonProps>) => <DataBadgeButton {...props} />;
 
 const meta = {
-  title: 'Rijkshuisstijl/DataBadgeButton',
+  title: 'DataBadgeButton',
   id: 'rhc-data-badge-button',
   component: DataBadgeButtonStory,
   argTypes: {

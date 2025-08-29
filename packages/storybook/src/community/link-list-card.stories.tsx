@@ -6,7 +6,7 @@ import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 type StoryProps = ComponentProps<typeof LinkListCard>;
 const meta: Meta<StoryProps> = {
-  title: 'Rijkshuisstijl/Link List Card',
+  title: 'Link List Card',
   id: 'rijkshuisstijl-link-list-card',
   component: LinkListCard,
   argTypes: {

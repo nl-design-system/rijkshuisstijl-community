@@ -4,7 +4,7 @@ import readme from './form-field-radio-group.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Form Field/Form Field Radio Group',
+  title: 'Form Field/Form Field Radio Group',
   id: 'rhc-form-field-radio-group',
   component: FormFieldRadioGroup,
   argTypes: {

@@ -4,7 +4,7 @@ import readme from './dot-badge.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Dot Badge',
+  title: 'Dot Badge',
   id: 'rhc-dot-badge',
   component: DotBadge,
   argTypes: {

@@ -4,7 +4,7 @@ import readme from './column-layout.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/ColumnLayout',
+  title: 'ColumnLayout',
   id: 'rhc-columnLayout',
   component: ColumnLayout,
   parameters: {

@@ -4,7 +4,7 @@ import readme from './orderedListItem.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Ordered List/Ordered List Item',
+  title: 'Ordered List/Ordered List Item',
   id: 'rhc-ordered-list-item',
   component: OrderedListItem,
   decorators: [(Story) => <OrderedList>{Story()}</OrderedList>],

@@ -4,7 +4,7 @@ import readme from './figure.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Figure',
+  title: 'Figure',
   id: 'rhc-figure',
   component: Figure,
   argTypes: {

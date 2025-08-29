@@ -33,7 +33,7 @@ const LinkWrapper = ({ external, externalLabel, classname, ...restProps }: any) 
   });
 
 const meta = {
-  title: 'Web Components/Link',
+  title: 'Link',
   id: 'rhc-link-web',
   component: LinkWrapper,
   argTypes: {

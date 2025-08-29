@@ -4,7 +4,7 @@ import readme from './hero.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Hero',
+  title: 'Hero',
   id: 'rhc-hero',
   component: Hero,
   argTypes: {

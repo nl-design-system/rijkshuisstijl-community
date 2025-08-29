@@ -14,7 +14,7 @@ import readme from './table.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Table',
+  title: 'Table',
   id: 'rhc-table',
   component: Table,
   tags: ['autodocs'],

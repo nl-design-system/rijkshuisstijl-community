@@ -6,7 +6,7 @@ import readme from './fieldset.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Fieldset',
+  title: 'Fieldset',
   id: 'rhc-fieldset',
   component: Fieldset,
   args: {

@@ -4,7 +4,7 @@ import readme from './form-field-checkbox-option.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Form Field/Form Field Checkbox Option',
+  title: 'Form Field/Form Field Checkbox Option',
   id: 'rhc-form-field-checkbox-option',
   component: FormFieldCheckboxOption,
   argTypes: {

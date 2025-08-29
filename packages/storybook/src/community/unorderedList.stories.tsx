@@ -4,7 +4,7 @@ import readme from './unorderedList.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Unordered List',
+  title: 'Unordered List',
   id: 'rhc-unordered-list',
   component: UnorderedList,
   args: {

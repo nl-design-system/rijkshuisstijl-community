@@ -6,7 +6,7 @@ import readme from './alert.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Alert',
+  title: 'Alert',
   id: 'rhc-alert',
   component: Alert,
   argTypes: {

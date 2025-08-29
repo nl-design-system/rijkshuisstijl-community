@@ -4,7 +4,7 @@ import readme from './code-input-group.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/CodeInputGroup',
+  title: 'CodeInputGroup',
   id: 'rhc-codeInput-group',
   component: CodeInputGroup,
   parameters: {

@@ -4,7 +4,7 @@ import readme from './toggletip.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl/Toggletip',
+  title: 'Toggletip',
   id: 'rhc-toggletip',
   component: Toggletip,
   args: {

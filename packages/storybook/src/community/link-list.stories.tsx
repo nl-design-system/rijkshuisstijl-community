@@ -29,7 +29,7 @@ const LinkListStory = ({ hasIcons = true, ...props }: PropsWithChildren<LinkList
 );
 
 const meta = {
-  title: 'Rijkshuisstijl/Link List',
+  title: 'Link List',
   id: 'rhc-link-list',
   component: LinkListStory,
   args: {

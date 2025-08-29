@@ -4,7 +4,7 @@ import readme from './text-input.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta: Meta<typeof TextInput> = {
-  title: 'Rijkshuisstijl/Text Input',
+  title: 'Text Input',
   id: 'rhc-text-input',
   component: TextInput,
   tags: ['autodocs'],
