@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/angular';
 import { BoeteZoekenTemplate } from './boete-zoeken/boete-zoeken.component';
 
 const meta: Meta = {
-  title: 'Templates/Boete zoeken',
+  title: 'Boete zoeken',
   id: 'rhc-templates-boete-zoeken',
   render: () => ({
     moduleMetadata: {

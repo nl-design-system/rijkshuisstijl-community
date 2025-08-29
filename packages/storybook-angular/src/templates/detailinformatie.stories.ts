@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/angular';
 import { DetailinformatieTemplate } from './detailinformatie/detailinformatie.component';
 
 const meta: Meta = {
-  title: 'Templates/Detailinformatie',
+  title: 'Detailinformatie',
   id: 'rhc-templates-detailinformatie',
   render: () => ({
     moduleMetadata: {
