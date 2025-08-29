@@ -11,7 +11,7 @@ import {
 type StoryType = LinkListLinkComponent & { label?: string };
 
 const meta: Meta<StoryType> = {
-  title: 'Link List/Link list link',
+  title: 'Link List/Link List Link',
   id: 'rhc-angular-link-list-link',
   component: LinkListLinkComponent,
   decorators: [
