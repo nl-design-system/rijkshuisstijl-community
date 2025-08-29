@@ -71,7 +71,7 @@ const preview: Preview = {
           ['README', 'CHANGELOG'],
           'Twig Components',
           ['README', 'CHANGELOG'],
-          'Templates',
+          'React Templates',
         ],
       },
     },

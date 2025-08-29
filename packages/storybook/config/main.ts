@@ -32,7 +32,7 @@ const config: StorybookConfig = {
     },
     {
       directory: '../src/templates',
-      titlePrefix: 'Templates',
+      titlePrefix: 'React Templates',
       files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
     },
   ],
