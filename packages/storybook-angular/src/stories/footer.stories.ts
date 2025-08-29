@@ -3,7 +3,7 @@ import readme from './footer.md';
 import { FooterComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<FooterComponent> = {
-  title: 'Rijkshuisstijl/Footer',
+  title: 'Footer',
   id: 'rhc-angular-footer',
   component: FooterComponent,
   argTypes: {

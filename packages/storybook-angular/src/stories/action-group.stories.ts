@@ -3,7 +3,7 @@ import readme from './action-group.md';
 import { ActionGroupComponent, ButtonComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<ActionGroupComponent> = {
-  title: 'Rijkshuisstijl/Action Group',
+  title: 'Action Group',
   id: 'rhc-angular-action-group',
   component: ActionGroupComponent,
   argTypes: {

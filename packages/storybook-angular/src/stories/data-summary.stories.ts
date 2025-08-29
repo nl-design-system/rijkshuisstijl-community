@@ -7,7 +7,7 @@ interface DataSummaryStoryComponent extends DataSummaryComponent {
 }
 
 const meta: Meta<DataSummaryStoryComponent> = {
-  title: 'Rijkshuisstijl/Data Summary',
+  title: 'Data Summary',
   id: 'rhc-data-summary',
   component: DataSummaryComponent,
   parameters: {

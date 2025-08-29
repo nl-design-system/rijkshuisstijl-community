@@ -3,7 +3,7 @@ import readme from './figure.md';
 import { FigureCaptionComponent, FigureComponent, ImageComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<FigureComponent> = {
-  title: 'Rijkshuisstijl/Figure',
+  title: 'Figure',
   id: 'rhc-angular-figure',
   component: FigureComponent,
   render: ({ borderEndEndRadius, borderEndStartRadius, borderStartEndRadius, borderStartStartRadius }) => ({

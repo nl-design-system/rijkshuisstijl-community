@@ -3,7 +3,7 @@ import readme from './heading.md';
 import { HeadingComponent, headingLevels } from '../../../components-angular/src/public-api';
 
 const meta: Meta<HeadingComponent> = {
-  title: 'Rijkshuisstijl/Heading',
+  title: 'Heading',
   id: 'rhc-angular-heading',
   component: HeadingComponent,
   argTypes: {

@@ -3,7 +3,7 @@ import readme from './paragraph.md';
 import { appearanceOptions, ParagraphComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<ParagraphComponent> = {
-  title: 'Rijkshuisstijl/Paragraph',
+  title: 'Paragraph',
   id: 'rhc-angular-paragraph',
   component: ParagraphComponent,
   argTypes: {
