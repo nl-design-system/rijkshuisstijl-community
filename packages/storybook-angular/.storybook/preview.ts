@@ -16,6 +16,11 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    options: {
+      storySort: {
+        order: ['Angular Components', ['README', 'CHANGELOG'], 'Angular Templates'],
+      },
+    },
   },
   decorators: [
     componentWrapperDecorator((story) => `<div class="utrecht-document">${story}</div>`),
