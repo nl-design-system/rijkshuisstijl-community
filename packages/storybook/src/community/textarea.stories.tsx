@@ -4,7 +4,7 @@ import readme from './textarea.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Textarea',
+  title: 'Text Area',
   id: 'rhc-textarea',
   component: Textarea,
   argTypes: {

@@ -1,3 +1,3 @@
-# Navbar
+# Navigation Bar
 
-Met het _navbar_ component kan gemakkelijk een gestylde navigatiebalk gemaakt worden.
+Met het _Navigation Bar_ component kan gemakkelijk een gestylde navigatiebalk gemaakt worden.

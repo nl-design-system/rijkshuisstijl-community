@@ -6,7 +6,7 @@ import readme from './page-header.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'PageHeader',
+  title: 'Page Header',
   id: 'rhc-page-header',
   component: PageHeader,
   args: {

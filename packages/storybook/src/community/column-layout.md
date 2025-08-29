@@ -1,8 +1,8 @@
 <!-- @license CC0-1.0 -->
 
-# Rijkshuisstijl Community column layout component
+# Rijkshuisstijl Community Column Layout component
 
-De column layout verdeeld content over meerdere kolommen
+De Column Layout verdeeld content over meerdere kolommen
 
 ## Usage
 
@@ -10,7 +10,7 @@ De column layout verdeeld content over meerdere kolommen
 import { ColumnLayout } from '@rijkshuisstijl-community/components-react';
 
 <ColumnLayout>
-  <Heading level={2}>Column layout example</Heading>,
+  <Heading level={2}>Column Layout example</Heading>,
   <Article>
     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum magnam magni expedita modi sit quasi, natus nobis
     sint hic, eum illum quis laboriosam pariatur quo alias eaque qui quae recusandae?

@@ -1,3 +1,3 @@
-# Column layout
+# Column Layout
 
-De _column layout_ verdeelt content over meerdere kolommen.
+De _Column Layout_ verdeelt content over meerdere kolommen.

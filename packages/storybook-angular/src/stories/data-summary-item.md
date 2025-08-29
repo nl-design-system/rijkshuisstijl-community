@@ -1,3 +1,3 @@
 # Data Summary Item
 
-Het data summary item geeft een gelabeld stukje data weer.
+Het Data Summary Item geeft een gelabeld stukje data weer.

@@ -11,7 +11,7 @@ CheckboxGroupWebComponent.define();
 FormFieldCheckboxOptionWebComponent.define();
 
 const meta = {
-  title: 'CheckboxGroup',
+  title: 'Checkbox Group',
   id: 'rhc-checkbox-group-web',
   component: 'rhc-checkbox-group',
   parameters: {

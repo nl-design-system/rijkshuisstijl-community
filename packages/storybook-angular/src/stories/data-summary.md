@@ -1,3 +1,3 @@
 # Data Summary
 
-De data summary is een wrapper om data summary item's. Samen kunnen ze diverse data weergeven.
+De Data Summary is een wrapper om Data Summary Item's. Samen kunnen ze diverse data weergeven.
