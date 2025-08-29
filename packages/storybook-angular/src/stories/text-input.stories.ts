@@ -7,7 +7,7 @@ type StoryType = TextInputComponent & {
 };
 
 const meta: Meta<StoryType> = {
-  title: 'Rijkshuisstijl/Text input',
+  title: 'Rijkshuisstijl/Text Input',
   id: 'rhc-text-input',
   component: TextInputComponent,
   argTypes: {

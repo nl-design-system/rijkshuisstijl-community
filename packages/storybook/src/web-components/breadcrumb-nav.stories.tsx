@@ -13,7 +13,7 @@ const BreadcrumbNavWrapper = ({ elements }: any) => {
 };
 
 const meta = {
-  title: 'Breadcrumb navigation',
+  title: 'Breadcrumb Navigation',
   id: 'rhc-breadcrumb-nav-web',
   component: BreadcrumbNavWrapper,
   argTypes: {},

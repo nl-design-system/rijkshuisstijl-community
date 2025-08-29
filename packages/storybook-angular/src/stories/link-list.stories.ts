@@ -12,7 +12,7 @@ import {
 type StoryType = LinkListComponent & { hasIcons?: boolean };
 
 const meta: Meta<StoryType> = {
-  title: 'Rijkshuisstijl/Link list',
+  title: 'Rijkshuisstijl/Link List',
   id: 'rhc-angular-link-list',
   component: LinkListComponent,
   decorators: [

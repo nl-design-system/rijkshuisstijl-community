@@ -7,7 +7,7 @@ import {
 } from '../../../components-angular/src/public-api';
 
 const meta: Meta<ColumnLayoutComponent> = {
-  title: 'Rijkshuisstijl/Column layout',
+  title: 'Rijkshuisstijl/Column Layout',
   id: 'rhc-angular-column-layout',
   component: ColumnLayoutComponent,
   argTypes: {
@@ -29,7 +29,7 @@ const meta: Meta<ColumnLayoutComponent> = {
   render: ({ rule }) => ({
     template: `
     <rhc-column-layout [rule]="${rule}">
-        <rhc-heading [level]="2">Column layout</rhc-heading>
+        <rhc-heading [level]="2">Column Layout</rhc-heading>
         <rhc-paragraph>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum magnam magni expedita modi sit quasi, natus nobis sint hic, eum illum quis laboriosam pariatur quo alias eaque qui quae recusandae?
         </rhc-paragraph>

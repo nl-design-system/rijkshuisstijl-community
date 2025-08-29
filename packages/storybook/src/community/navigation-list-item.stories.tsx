@@ -9,7 +9,7 @@ import readme from './navigation-list-item.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'NavigationList/NavigationListItem',
+  title: 'Navigation List/Navigation List Item',
   component: NavigationListItem,
   parameters: {
     status: {

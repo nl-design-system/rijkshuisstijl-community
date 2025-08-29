@@ -4,7 +4,7 @@ import readme from './side-nav-link.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'SideNav/SideNavLink',
+  title: 'Side Navigation/Side Navigation Link',
   id: 'rhc-sideNavLink',
   component: SideNavLink,
   tags: ['autodocs'],

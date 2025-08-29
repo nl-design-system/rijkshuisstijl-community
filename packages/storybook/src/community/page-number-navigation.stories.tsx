@@ -4,7 +4,7 @@ import readme from './page-number-navigation.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'PageNumberNavigation',
+  title: 'Page Number Navigation',
   component: PageNumberNavigation,
   args: {
     linkTemplate: (page: number) => `/${page}`,

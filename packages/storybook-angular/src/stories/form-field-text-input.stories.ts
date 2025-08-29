@@ -4,7 +4,7 @@ import readme from './form-field-text-input.md';
 import { FormFieldTextInputComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<FormFieldTextInputComponent> = {
-  title: 'Rijkshuisstijl/Form field text input',
+  title: 'Rijkshuisstijl/Form Field Text Input',
   id: 'rhc-angular-form-field-text-input',
   component: FormFieldTextInputComponent,
   parameters: {

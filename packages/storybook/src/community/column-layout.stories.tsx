@@ -4,7 +4,7 @@ import readme from './column-layout.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'ColumnLayout',
+  title: 'Column Layout',
   id: 'rhc-columnLayout',
   component: ColumnLayout,
   parameters: {
@@ -27,7 +27,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: [
-      <Heading level={2}>Column layout</Heading>,
+      <Heading level={2}>Column Layout</Heading>,
       <Article>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum magnam magni expedita modi sit quasi, natus
         nobis sint hic, eum illum quis laboriosam pariatur quo alias eaque qui quae recusandae?

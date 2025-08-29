@@ -11,7 +11,7 @@ import {
 } from '../../../components-angular/src/public-api';
 
 const meta: Meta<NavbarComponent> = {
-  title: 'Rijkshuisstijl/Navbar',
+  title: 'Rijkshuisstijl/Navigation Bar',
   id: 'rhc-navbar',
   component: NavbarComponent,
   decorators: [
