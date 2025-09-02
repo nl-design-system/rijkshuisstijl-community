@@ -78,6 +78,7 @@ export const iconSet: Partial<Record<RHCIconID, ReactNode>> = {
   toegankelijkheid: <TablerIcons.IconEye />,
   toelichting: <TablerIcons.IconSquare />,
   'uit-aanknop': <TablerIcons.IconPower />,
+  uitloggen: <TablerIcons.IconLogout2 />,
   upload: <TablerIcons.IconUpload />,
   user: <TablerIcons.IconUser />,
   versleutelen: <TablerIcons.IconCloudLock />,
