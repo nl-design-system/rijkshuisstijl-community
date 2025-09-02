@@ -1,5 +1,6 @@
 /* @license CC0-1.0 */
 
+import { Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { AlertWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
@@ -20,38 +21,9 @@ const meta = {
         category: 'Property',
       },
     },
-    heading: {
-      description: 'Alert heading - used in default webcomponent slot',
-      type: {
-        name: 'string',
-      },
-      table: {
-        category: 'Demo',
-      },
-    },
-    headingLevel: {
-      description: 'Alert heading level',
-      control: { type: 'select' },
-      options: [1, 2, 3, 4, 5],
-      table: {
-        category: 'Demo',
-      },
-    },
-    messageText: {
-      description: 'Alert content - used in default webcomponent slot',
-      type: {
-        name: 'string',
-      },
-      table: {
-        category: 'Demo',
-      },
-    },
   },
   args: {
     type: 'info',
-    heading: 'Heading',
-    headingLevel: 3,
-    messageText: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
   },
   tags: ['autodocs'],
   parameters: {
@@ -78,32 +50,47 @@ export default meta;
 
 export const Informative = {
   args: {
-    type: 'info',
-    heading: 'Heading',
-    messageText: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children: [
+      <Heading appearanceLevel={5} level={3}>
+        Heading
+      </Heading>,
+      <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>,
+    ],
   },
 } as StoryObj<typeof meta>;
 
 export const Negative = {
   args: {
     type: 'error',
-    heading: 'Heading',
-    messageText: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children: [
+      <Heading appearanceLevel={5} level={3}>
+        Heading
+      </Heading>,
+      <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>,
+    ],
   },
 } as StoryObj<typeof meta>;
 
 export const Positive = {
   args: {
     type: 'ok',
-    heading: 'Heading',
-    messageText: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children: [
+      <Heading appearanceLevel={5} level={3}>
+        Heading
+      </Heading>,
+      <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>,
+    ],
   },
 } as StoryObj<typeof meta>;
 
 export const Warning = {
   args: {
     type: 'warning',
-    heading: 'Heading',
-    messageText: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children: [
+      <Heading appearanceLevel={5} level={3}>
+        Heading
+      </Heading>,
+      <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>,
+    ],
   },
 } as StoryObj<typeof meta>;

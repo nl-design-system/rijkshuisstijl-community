@@ -2,4 +2,4 @@
 '@rijkshuisstijl-community/design-tokens': patch
 ---
 
-chore: Remove unused deprecated paragraph token
+Remove deprecated tokens for Number Badge.

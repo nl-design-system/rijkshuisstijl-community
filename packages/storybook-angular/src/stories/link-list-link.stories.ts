@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import readme from './link-list-link.md';
 import {
   IconComponent,
+  LinkListComponent,
   LinkListItemComponent,
   LinkListLinkComponent,
 } from '../../../components-angular/src/public-api';
@@ -15,7 +16,7 @@ const meta: Meta<StoryType> = {
   component: LinkListLinkComponent,
   decorators: [
     moduleMetadata({
-      imports: [IconComponent, LinkListItemComponent, LinkListLinkComponent],
+      imports: [IconComponent, LinkListItemComponent, LinkListLinkComponent, LinkListComponent],
     }),
   ],
   argTypes: {
@@ -45,7 +46,9 @@ const meta: Meta<StoryType> = {
     <rhc-link-list>
       <li rhc-link-list-item>
         <a rhc-link-list-link href="${href}">
-          <rhc-icon icon='chevron-right' />
+          <rhc-icon icon>
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="tabler-icon tabler-icon-chevron-right "><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+          </rhc-icon>
           ${label}
         </a>
       </li>

@@ -72,6 +72,7 @@ export const iconSet: Partial<Record<string, string>> = {
   toegankelijkheid: 'eye',
   toelichting: 'square',
   'uit-aanknop': 'power',
+  uitloggen: 'logout2',
   upload: 'upload',
   user: 'user',
   versleutelen: 'cloud-lock',

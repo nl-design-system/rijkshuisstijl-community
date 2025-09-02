@@ -15,16 +15,8 @@ export class AlertWebComponent extends BaseWebComponent {
   render(): void {
     if (!this.shadowRoot) return;
 
-    const { heading, type, headinglevel, messagetext, ...restProps } = this.props;
-
     render(
-      <Alert
-        heading={(heading as AlertWebComponentAttributes['heading']) ?? 'default heading'}
-        headingLevel={(headinglevel && Number(headinglevel)) as AlertWebComponentAttributes['headingLevel']}
-        textContent={(messagetext as AlertWebComponentAttributes['textContent']) ?? 'This is a default alert message.'}
-        type={(type as AlertWebComponentAttributes['type']) ?? 'info'}
-        {...restProps}
-      >
+      <Alert {...this.props}>
         <slot />
       </Alert>,
       this.shadowRoot,
