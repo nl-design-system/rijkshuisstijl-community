@@ -2,4 +2,4 @@
 '@rijkshuisstijl-community/design-tokens': patch
 ---
 
-chore: remove deprecated tokens for NumberBadge
+Remove deprecated tokens for Number Badge.
