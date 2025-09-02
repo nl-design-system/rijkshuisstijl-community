@@ -1,11 +1,21 @@
 # @rijkshuisstijl-community/storybook-angular
 
+## 1.1.0
+
+### Minor Changes
+
+- 81ec8d4: Added Default story for Icon
+
+### Patch Changes
+
+- 3d9999c: Update patch & minor dependencies
+- 834dbde: Reverted breaking changes to angular storybook and add controls to stories
+
 ## 1.0.0
 
 ### Major Changes
 
 - 923d857: Alleen NL link gebruiken
-
   - Zorgen dat RHC link alleen NL link gebruikt
     - NL link's `disabled` prop niet toestaan (altijd op `false` zetten) (angular versie ondersteunde dit toch al niet)
   - Documentatie aan Angular readme.md toegevoegd

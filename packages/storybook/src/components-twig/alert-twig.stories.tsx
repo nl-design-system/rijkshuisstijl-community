@@ -19,38 +19,20 @@ const meta = {
         category: 'Property',
       },
     },
-    heading: {
-      description: 'Alert heading - used in default webcomponent slot',
+    children: {
+      description: 'Alert content - heading and paragraph content',
       type: {
         name: 'string',
       },
       table: {
-        category: 'Demo',
-      },
-    },
-    headingLevel: {
-      description: 'Alert heading level',
-      control: { type: 'select' },
-      options: [1, 2, 3, 4, 5],
-      table: {
-        category: 'Demo',
-      },
-    },
-    textContent: {
-      description: 'Alert content - used in default webcomponent slot',
-      type: {
-        name: 'string',
-      },
-      table: {
-        category: 'Demo',
+        category: 'Property',
       },
     },
   },
   args: {
     type: 'info',
-    heading: 'Heading',
-    headingLevel: 3,
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children:
+      '<h3 class="nl-heading rhc-heading nl-heading--level-5">Heading</h3><p class="nl-paragraph">Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</p>',
   },
   parameters: {
     status: {
@@ -75,8 +57,8 @@ export default meta;
 export const TwigInformative: StoryObj<typeof meta> = {
   args: {
     type: 'info',
-    heading: 'Heading',
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children:
+      '<h3 class="nl-heading rhc-heading nl-heading--level-5">Heading</h3><p class="nl-paragraph">Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</p>',
     attributes: new DrupalAttribute(),
   },
   name: 'Informative',
@@ -85,8 +67,8 @@ export const TwigInformative: StoryObj<typeof meta> = {
 export const TwigNegative: StoryObj<typeof meta> = {
   args: {
     type: 'error',
-    heading: 'Heading',
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children:
+      '<h3 class="nl-heading rhc-heading nl-heading--level-5">Heading</h3><p class="nl-paragraph">Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</p>',
     attributes: new DrupalAttribute(),
   },
   name: 'Negative',
@@ -95,8 +77,8 @@ export const TwigNegative: StoryObj<typeof meta> = {
 export const TwigPositive: StoryObj<typeof meta> = {
   args: {
     type: 'ok',
-    heading: 'Heading',
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children:
+      '<h3 class="nl-heading rhc-heading nl-heading--level-5">Heading</h3><p class="nl-paragraph">Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</p>',
     attributes: new DrupalAttribute(),
   },
   name: 'Positive',
@@ -105,8 +87,8 @@ export const TwigPositive: StoryObj<typeof meta> = {
 export const TwigWarning: StoryObj<typeof meta> = {
   args: {
     type: 'warning',
-    heading: 'Heading',
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children:
+      '<h3 class="nl-heading rhc-heading nl-heading--level-5">Heading</h3><p class="nl-paragraph">Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</p>',
     attributes: new DrupalAttribute(),
   },
   name: 'Warning',

@@ -1,0 +1,9 @@
+@mixin rhc-alert {
+  // As we use the nl paragraph and heading instead of the Utrecht one we need to properly map the alert overwrites
+  --nl-heading-level-1-color: var(--_utrecht-alert-color, var(--utrecht-alert-color));
+  --nl-heading-level-2-color: var(--_utrecht-alert-color, var(--utrecht-alert-color));
+  --nl-heading-level-3-color: var(--_utrecht-alert-color, var(--utrecht-alert-color));
+  --nl-heading-level-4-color: var(--_utrecht-alert-color, var(--utrecht-alert-color));
+  --nl-heading-level-5-color: var(--_utrecht-alert-color, var(--utrecht-alert-color));
+  --nl-paragraph-color: var(--_utrecht-alert-color, var(--utrecht-alert-color));
+}

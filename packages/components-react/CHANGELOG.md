@@ -1,11 +1,52 @@
 # @rijkshuisstijl-community/components-react
 
+## 4.1.0
+
+### Minor Changes
+
+- 35dcda9: Add PageNumberNavigation component in rhc storybook
+
+## 4.0.0
+
+### Major Changes
+
+- 0057047: chore: remove unused and deprecated Link tokens
+  - Use NL link component as cleanly as possible.
+  - Do not support NL `disabled` prop/state for Link.
+  - Add support for Icon in Link.
+  - Replace "utrecht" with "rhc" in markdown documentation for Link.
+
+- f89c576: Removed the following tokens for unordered list as these are inherited from the document:
+  --utrecht-unordered-list-color
+  --utrecht-unordered-list-marker-border-color
+  --utrecht-unordered-list-font-weight
+  --utrecht-unordered-list-font-family
+
+  Added the following token to control nested lists
+  --rhc-unordered-list-nested-margin-inline-start
+
+  Nested lists now have the same marker as root lists to have less going on
+
+### Minor Changes
+
+- 93b9259: Add new Card component for flexible card display
+
+  **WHAT**: Added a new `Card` component alongside the existing `CardAsLink` component
+  **WHY**: The existing `CardAsLink` was too restrictive for cases where cards don't need to be clickable links
+  **HOW**: Import and use the new `Card` component for non-interactive card displays
+
+### Patch Changes
+
+- bf73b50: Fix hot reloading voor local development.
+- fe88675: Update heading dependency and removed unused tokens
+- 3d9999c: Update patch & minor dependencies
+- 834dbde: Reverted breaking changes to angular storybook and add controls to stories
+
 ## 3.0.0
 
 ### Major Changes
 
 - 923d857: Alleen NL link gebruiken
-
   - Zorgen dat RHC link alleen NL link gebruikt
     - NL link's `disabled` prop niet toestaan (altijd op `false` zetten) (angular versie ondersteunde dit toch al niet)
   - Documentatie aan Angular readme.md toegevoegd

@@ -6,7 +6,8 @@ import { Component, Input } from '@angular/core';
   templateUrl: './link-list-link.component.html',
   host: {
     '[class.utrecht-link-list__link]': 'true',
-    '[class.nl-link]': 'true',
+    '[class.utrecht-link]': 'true',
+    '[utrecht-link--html-a]': 'true',
   },
 })
 export class LinkListLinkComponent {
