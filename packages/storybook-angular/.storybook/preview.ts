@@ -32,7 +32,6 @@ const preview: Preview = {
         'Uitvoerend - violet': 'uitvoerend-violet',
         'Uitvoerend - mintgroen': 'uitvoerend-mintgroen',
         'Uitvoerend - violet - oud': 'uitvoerend-violet-oud',
-        KOOP: 'koop',
       },
       defaultTheme: 'RijkshuisstijlCommunity',
     }),

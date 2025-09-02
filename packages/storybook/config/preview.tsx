@@ -7,7 +7,6 @@ import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-paars/index.css'
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-oranje/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/koop/index.css';
 import '@rijkshuisstijl-community/digid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';
@@ -39,7 +38,6 @@ const preview: Preview = {
         'Uitvoerend - violet': 'uitvoerend-violet',
         'Uitvoerend - mintgroen': 'uitvoerend-mintgroen',
         'Uitvoerend - violet - oud': 'uitvoerend-violet-oud',
-        KOOP: 'koop',
       },
       defaultTheme: 'RijkshuisstijlCommunity',
     }),
