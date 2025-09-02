@@ -1,4 +1,4 @@
-import { Drawer } from '@rijkshuisstijl-community/components-react';
+import { Drawer, Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import readme from './drawer.md?raw';
@@ -53,14 +53,14 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: [
-      <h1>Lorem ipsum</h1>,
-      <p>
+      <Heading level={1}>Lorem ipsum</Heading>,
+      <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum.
-      </p>,
+      </Paragraph>,
     ],
     open: true,
   },
@@ -104,13 +104,13 @@ export const OverflowY: Story = {
     children: Array(10)
       .fill(0)
       .map(() => (
-        <p>
+        <Paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
           est laborum.
-        </p>
+        </Paragraph>
       )),
     open: true,
   },
