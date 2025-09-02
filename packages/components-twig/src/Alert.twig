@@ -14,28 +14,16 @@
 {%- endif -%}
 {%- set attributes = attributes.setAttribute('role', role) -%}
 {%- set attributes = attributes.addClass('utrecht-alert__message') -%}
-<div class="utrecht-alert utrecht-alert--{{ type }} rhc-alert">
+<div class="utrecht-alert utrecht-alert--{{ type }}">
+  <div class="utrecht-alert__icon">
+    {% include '@rhc/Icon.twig' with {
+      attributes: create_attribute(),
+      icon: icon
+    } %}
+  </div>
   <div class="utrecht-alert__content">
-    <div {{ attributes }}>
-      <div class="rhc-alert__icon-container rhc-alert__icon-container--{{ type }}">
-        {% include '@rhc/Icon.twig' with {
-          attributes: create_attribute(),
-          icon: icon
-        } %}
-      </div>
-      <div>
-        {% include '@rhc/Heading.twig' with {
-          attributes: create_attribute(),
-          level: 3,
-          appearance: 5,
-          children: heading
-        } %}
-
-        {% include '@rhc/Paragraph.twig' with {
-          attributes: create_attribute(),
-          children: textContent
-        } %}
-      </div>
+    <div {{ attributes }}>  
+      {{ children|raw }}
     </div>
   </div>
 </div>

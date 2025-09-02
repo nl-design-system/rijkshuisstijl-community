@@ -1691,7 +1691,7 @@
       }
     }
   },
-  "components/alert/base": {
+  "components/alert": {
     "utrecht": {
       "alert": {
         "background-color": {
@@ -1848,40 +1848,6 @@
               "type": "color",
               "value": "{rhc.color.feedback.warning.default}"
             }
-          }
-        }
-      }
-    }
-  },
-  "components/alert/deprecated": {
-    "utrecht": {
-      "alert": {
-        "heading": {
-          "font-family": {
-            "type": "fontFamilies",
-            "value": "{rhc.font-family.primary}"
-          },
-          "font-size": {
-            "type": "fontSizes",
-            "value": "{rhc.font-size.heading.level-5}"
-          },
-          "font-weight": {
-            "type": "fontWeights",
-            "value": "{rhc.font-weight.strong}"
-          },
-          "line-height": {
-            "type": "lineHeights",
-            "value": "{rhc.line-height.md}"
-          }
-        },
-        "message": {
-          "column-gap": {
-            "type": "dimension",
-            "value": "{rhc.space.100}"
-          },
-          "line-height": {
-            "type": "lineHeights",
-            "value": "{rhc.line-height.md}"
           }
         }
       }
@@ -5793,21 +5759,43 @@
   "components/pagination": {
     "ams": {
       "pagination": {
-        "font-family": { "value": "{rhc.font-family.primary}" },
-        "font-size": { "value": "{utrecht.document.font-size}" },
-        "font-weight": { "value": "{utrecht.document.font-weight}" },
-        "line-height": { "value": "{utrecht.document.line-height}" },
+        "font-family": {
+          "value": "{rhc.font-family.primary}"
+        },
+        "font-size": {
+          "value": "{utrecht.document.font-size}"
+        },
+        "font-weight": {
+          "value": "{utrecht.document.font-weight}"
+        },
+        "line-height": {
+          "value": "{utrecht.document.line-height}"
+        },
         "link": {
-          "color": { "value": "{nl.link.color}" },
-          "gap": { "value": "{rhc.space.50}" },
-          "outline-offset": { "value": "{utrecht.focus.outline-offset}" },
-          "padding-inline": { "value": "{rhc.space.50}" },
+          "color": {
+            "value": "{nl.link.color}"
+          },
+          "gap": {
+            "value": "{rhc.space.50}"
+          },
+          "outline-offset": {
+            "value": "{utrecht.focus.outline-offset}"
+          },
+          "padding-inline": {
+            "value": "{rhc.space.50}"
+          },
           "current": {
-            "font-weight": { "value": "{rhc.font-weight.bold}" }
+            "font-weight": {
+              "value": "{rhc.font-weight.bold}"
+            }
           },
           "hover": {
-            "color": { "value": "{nl.link.hover.color}" },
-            "text-decoration-line": { "value": "underline" }
+            "color": {
+              "value": "{nl.link.hover.color}"
+            },
+            "text-decoration-line": {
+              "value": "underline"
+            }
           }
         }
       }
@@ -9680,8 +9668,7 @@
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
-        "components/alert/base": "enabled",
-        "components/alert/deprecated": "enabled",
+        "components/alert": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
@@ -9778,8 +9765,7 @@
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
-        "components/alert/base": "enabled",
-        "components/alert/deprecated": "enabled",
+        "components/alert": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
@@ -9878,13 +9864,12 @@
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
-        "components/alert/base": "enabled",
+        "components/alert": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
-        "components/alert/deprecated": "enabled",
         "components/figure/deprecated": "enabled",
         "components/number-badge/deprecated": "enabled",
         "components/form-field-description/base": "enabled",
@@ -9976,8 +9961,7 @@
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
-        "components/alert/base": "enabled",
-        "components/alert/deprecated": "enabled",
+        "components/alert": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
@@ -10074,8 +10058,7 @@
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
-        "components/alert/base": "enabled",
-        "components/alert/deprecated": "enabled",
+        "components/alert": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
@@ -10172,8 +10155,7 @@
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
-        "components/alert/base": "enabled",
-        "components/alert/deprecated": "enabled",
+        "components/alert": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
@@ -10270,8 +10252,7 @@
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
-        "components/alert/base": "enabled",
-        "components/alert/deprecated": "enabled",
+        "components/alert": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
@@ -10368,8 +10349,7 @@
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
-        "components/alert/base": "enabled",
-        "components/alert/deprecated": "enabled",
+        "components/alert": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
@@ -10469,8 +10449,7 @@
         "components/data-badge": "enabled",
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
-        "components/alert/base": "enabled",
-        "components/alert/deprecated": "enabled",
+        "components/alert": "enabled",
         "components/blockquote/base": "enabled",
         "components/blockquote/deprecated": "enabled",
         "components/number-badge/nl": "enabled",
@@ -10523,8 +10502,7 @@
       "utrecht/rich-text",
       "components/accordion",
       "components/action-group",
-      "components/alert/base",
-      "components/alert/deprecated",
+      "components/alert",
       "components/article",
       "components/blockquote/base",
       "components/blockquote/deprecated",

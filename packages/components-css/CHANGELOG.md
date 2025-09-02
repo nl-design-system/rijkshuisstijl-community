@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-css
 
+## 5.1.0
+
+### Minor Changes
+
+- 35dcda9: Add PageNumberNavigation component in rhc storybook
+
 ## 5.0.0
 
 ### Major Changes
