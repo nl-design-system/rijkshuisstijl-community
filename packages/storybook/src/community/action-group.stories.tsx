@@ -13,7 +13,7 @@ const meta = {
     direction: {
       description: 'Layout of the action group',
       control: 'select',
-      options: ['column', 'row'],
+      options: ['column', 'row', 'column-stretch'],
     },
   },
   tags: ['autodocs'],
@@ -24,7 +24,12 @@ const meta = {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source. Use our own documentation to correctly show its name as "Action Group" instead of "Button Group"
-        component: mergeMarkdown([replaceMarkdown(readme, 'Button Group', 'Action Group'), usageDocs]),
+        component: replaceMarkdown(
+          mergeMarkdown([readme, usageDocs], 'Button Group', 'Action Group')
+            .replace('Button Group', 'Action Group')
+            .replace('Button group', 'Action group')
+            .replace('button group', 'action group'),
+        ),
       },
     },
     nldesignsystem: 'https://www.nldesignsystem.nl/action-group/',

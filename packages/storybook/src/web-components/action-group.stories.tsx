@@ -15,7 +15,7 @@ const meta = {
     direction: {
       description: 'Layout of the action group',
       control: 'select',
-      options: ['column', 'row'],
+      options: ['column', 'row', 'column-stretch'],
       table: {
         defaultValue: { summary: 'row' },
       },
