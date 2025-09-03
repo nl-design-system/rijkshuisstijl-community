@@ -1,6 +1,6 @@
-import { FooterComponent } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, type StoryObj } from '@storybook/angular';
 import readme from './footer.md';
+import { FooterComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<FooterComponent> = {
   title: 'Rijkshuisstijl/Footer',
