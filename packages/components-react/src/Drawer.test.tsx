@@ -9,6 +9,12 @@ describe('Drawer testcases', () => {
     const drawer = screen.getByRole('dialog');
     expect(drawer).toBeInTheDocument();
   });
+
+  it('should not be visible', () => {
+    render(<Drawer open={false} />);
+    const drawer = screen.getByRole('dialog', { hidden: true });
+    expect(drawer).not.toBeVisible();
+  });
 });
 
 afterEach(() => cleanup());
