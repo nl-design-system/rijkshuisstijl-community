@@ -6,3 +6,5 @@
 ---
 
 Updated Action Group to new version from Utrecht
+
+- added column-stretch option for direction prop
