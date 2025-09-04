@@ -20,10 +20,10 @@ describe('ActionGroupComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have "utrecht-button-group--row" class by default', () => {
+  it('should have "utrecht-action-group--row" class by default', () => {
     const divEl = fixture.debugElement.query(By.css('div')).nativeElement;
-    expect(divEl.classList).toContain('utrecht-button-group--row');
-    expect(divEl.classList).not.toContain('utrecht-button-group--column');
+    expect(divEl.classList).toContain('utrecht-action-group--row');
+    expect(divEl.classList).not.toContain('utrecht-action-group--column');
   });
 
   it('should apply "column" direction class when input is column', () => {
@@ -31,8 +31,8 @@ describe('ActionGroupComponent', () => {
     fixture.detectChanges();
 
     const divEl = fixture.debugElement.query(By.css('div')).nativeElement;
-    expect(divEl.classList).toContain('utrecht-button-group--column');
-    expect(divEl.classList).not.toContain('utrecht-button-group--row');
+    expect(divEl.classList).toContain('utrecht-action-group--column');
+    expect(divEl.classList).not.toContain('utrecht-action-group--row');
   });
 
   it('should apply "row" direction class when input is row', () => {
@@ -40,7 +40,7 @@ describe('ActionGroupComponent', () => {
     fixture.detectChanges();
 
     const divEl = fixture.debugElement.query(By.css('div')).nativeElement;
-    expect(divEl.classList).toContain('utrecht-button-group--row');
-    expect(divEl.classList).not.toContain('utrecht-button-group--column');
+    expect(divEl.classList).toContain('utrecht-action-group--row');
+    expect(divEl.classList).not.toContain('utrecht-action-group--column');
   });
 });
