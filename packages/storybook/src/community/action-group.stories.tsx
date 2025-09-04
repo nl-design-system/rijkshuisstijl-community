@@ -2,8 +2,7 @@ import { ActionGroup, Button } from '@rijkshuisstijl-community/components-react'
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/button-group/README.md?raw';
 import usageDocs from './action-group.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import { replaceMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown, replaceMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Rijkshuisstijl/ActionGroup',
@@ -24,12 +23,10 @@ const meta = {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source. Use our own documentation to correctly show its name as "Action Group" instead of "Button Group"
-        component: replaceMarkdown(
-          mergeMarkdown([readme, usageDocs], 'Button Group', 'Action Group')
-            .replace('Button Group', 'Action Group')
-            .replace('Button group', 'Action group')
-            .replace('button group', 'action group'),
-        ),
+        component: replaceMarkdown(mergeMarkdown([readme, usageDocs], 'Button Group', 'Action Group'), true)
+          .replace('Button Group', 'Action Group')
+          .replace('Button group', 'Action group')
+          .replace('button group', 'action group'),
       },
     },
     nldesignsystem: 'https://www.nldesignsystem.nl/action-group/',
@@ -71,5 +68,18 @@ export const Column: Story = {
       </Button>,
     ],
   },
-  name: 'Column',
+};
+
+export const ColumnStretch: Story = {
+  args: {
+    direction: 'column-stretch',
+    children: [
+      <Button appearance="primary-action-button" key="primary-action-button">
+        Save and continue
+      </Button>,
+      <Button appearance="secondary-action-button" key="secondary-action-button">
+        Back
+      </Button>,
+    ],
+  },
 };
