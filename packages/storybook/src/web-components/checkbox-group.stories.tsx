@@ -5,13 +5,13 @@ import {
 import { Meta, StoryObj } from '@storybook/web-components';
 import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/checkbox-group.md?raw';
+import readme from '../components-react/checkbox-group.md?raw';
 
 CheckboxGroupWebComponent.define();
 FormFieldCheckboxOptionWebComponent.define();
 
 const meta = {
-  title: 'Web Components/CheckboxGroup',
+  title: 'Checkbox Group',
   id: 'rhc-checkbox-group-web',
   component: 'rhc-checkbox-group',
   parameters: {

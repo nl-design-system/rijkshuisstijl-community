@@ -3,7 +3,7 @@ import './globals.css';
 import MijnOmgeving from './mijn-omgeving';
 
 const meta = {
-  title: 'Templates/Mijn Omgeving',
+  title: 'Mijn Omgeving',
   id: 'rhc-templates-mijn-omgeving',
   component: MijnOmgeving,
   parameters: {

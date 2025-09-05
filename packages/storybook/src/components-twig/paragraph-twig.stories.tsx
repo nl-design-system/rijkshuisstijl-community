@@ -5,10 +5,10 @@ import '@rijkshuisstijl-community/components-css/src/paragraph/index.scss';
 import type { Meta, StoryObj } from '@storybook/react';
 import DrupalAttribute from 'drupal-attribute';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/paragraph.md?raw';
+import readme from '../components-react/paragraph.md?raw';
 
 const meta = {
-  title: 'Twig Components/Paragraph',
+  title: 'Paragraph',
   id: 'rhc-twig-paragraph',
   component: TwigParagraph,
   argTypes: {

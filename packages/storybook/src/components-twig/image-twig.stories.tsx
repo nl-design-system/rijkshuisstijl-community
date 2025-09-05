@@ -7,10 +7,10 @@ import htmlDocs from '@utrecht/components/img/docs/technology-html.nl.md?raw';
 import wcagDocs from '@utrecht/components/img/docs/wcag.nl.md?raw';
 import DrupalAttribute from 'drupal-attribute';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/image.md?raw';
+import readme from '../components-react/image.md?raw';
 
 const meta = {
-  title: 'Twig Components/Image',
+  title: 'Image',
   id: 'rhc-twig-image',
   component: TwigImage,
   argTypes: {

@@ -1,12 +1,12 @@
 import { HeroWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/hero.md?raw';
+import readme from '../components-react/hero.md?raw';
 
 HeroWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Hero',
+  title: 'Hero',
   id: 'rhc-hero-web',
   component: 'rhc-hero',
   argTypes: {

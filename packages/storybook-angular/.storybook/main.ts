@@ -10,7 +10,18 @@ function getAbsolutePath(value: string): any {
   return dirname(require.resolve(join(value, 'package.json')));
 }
 const config: StorybookConfig = {
-  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: [
+    {
+      directory: '../src/components',
+      titlePrefix: 'Angular Components',
+      files: '**/*.{stories.@(js|jsx|mjs|ts|tsx),mdx}',
+    },
+    {
+      directory: '../src/templates',
+      titlePrefix: 'Angular Templates',
+      files: '**/*.{stories.@(js|jsx|mjs|ts|tsx),mdx}',
+    },
+  ],
   addons: [
     getAbsolutePath('@storybook/addon-essentials'),
     getAbsolutePath('@storybook/addon-onboarding'),

@@ -3,7 +3,7 @@ import Page from './collage';
 import './globals.css';
 
 const meta: Meta = {
-  title: 'Templates/Collage',
+  title: 'Collage',
   id: 'rhc-templates-collage',
   component: Page,
   parameters: {
