@@ -3,7 +3,7 @@
 import { ArticleWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/article.md?raw';
+import readme from '../components-react/article.md?raw';
 
 ArticleWebComponent.define();
 

@@ -4,7 +4,7 @@ import TwigAlert from '@rijkshuisstijl-community/components-twig/src/Alert.twig'
 import type { Meta, StoryObj } from '@storybook/react';
 import DrupalAttribute from 'drupal-attribute';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/alert.md?raw';
+import readme from '../components-react/alert.md?raw';
 
 const meta = {
   title: 'Alert',

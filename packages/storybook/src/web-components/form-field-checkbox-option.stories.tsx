@@ -2,7 +2,7 @@ import { FormFieldCheckboxOptionWebComponent } from '@rijkshuisstijl-community/w
 import type { Meta, StoryObj } from '@storybook/react';
 import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-checkbox-option.md?raw';
+import readme from '../components-react/form-field-checkbox-option.md?raw';
 
 FormFieldCheckboxOptionWebComponent.define();
 

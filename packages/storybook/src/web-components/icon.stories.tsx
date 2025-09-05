@@ -3,7 +3,7 @@ import { IconWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { IconBrandX } from '@tabler/icons-react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/icon.md?raw';
+import readme from '../components-react/icon.md?raw';
 
 registerIconSet(defaultIconSet);
 registerIconSet(flagIconSet);

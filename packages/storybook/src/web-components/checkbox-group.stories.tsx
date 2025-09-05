@@ -5,7 +5,7 @@ import {
 import { Meta, StoryObj } from '@storybook/web-components';
 import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/checkbox-group.md?raw';
+import readme from '../components-react/checkbox-group.md?raw';
 
 CheckboxGroupWebComponent.define();
 FormFieldCheckboxOptionWebComponent.define();

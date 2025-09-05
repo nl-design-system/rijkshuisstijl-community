@@ -2,7 +2,7 @@ import { FormFieldSelectWebComponent } from '@rijkshuisstijl-community/web-compo
 import type { Meta, StoryObj } from '@storybook/react';
 import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-select.md?raw';
+import readme from '../components-react/form-field-select.md?raw';
 
 FormFieldSelectWebComponent.define();
 

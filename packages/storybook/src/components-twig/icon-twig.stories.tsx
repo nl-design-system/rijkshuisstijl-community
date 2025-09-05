@@ -5,7 +5,7 @@ import { iconSet } from '@rijkshuisstijl-community/components-twig/src/icon-sets
 import type { Meta, StoryObj } from '@storybook/react';
 import DrupalAttribute from 'drupal-attribute';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/icon.md?raw';
+import readme from '../components-react/icon.md?raw';
 
 const icons = Object.values(iconSet);
 

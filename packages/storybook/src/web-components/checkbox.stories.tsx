@@ -2,7 +2,7 @@ import { CheckboxWebComponent } from '@rijkshuisstijl-community/web-components';
 import { Meta, StoryObj } from '@storybook/react';
 import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/checkbox.md?raw';
+import readme from '../components-react/checkbox.md?raw';
 
 CheckboxWebComponent.define();
 

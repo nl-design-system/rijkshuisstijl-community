@@ -2,7 +2,7 @@ import { ActionGroupWebComponent, ButtonWebComponent } from '@rijkshuisstijl-com
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/action-group.md?raw';
+import readme from '../components-react/action-group.md?raw';
 
 ActionGroupWebComponent.define();
 ButtonWebComponent.define();

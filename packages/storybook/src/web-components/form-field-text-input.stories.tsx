@@ -2,7 +2,7 @@ import { FormFieldTextInputWebComponent } from '@rijkshuisstijl-community/web-co
 import type { Meta, StoryObj } from '@storybook/react';
 import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-text-input.md?raw';
+import readme from '../components-react/form-field-text-input.md?raw';
 
 FormFieldTextInputWebComponent.define();
 

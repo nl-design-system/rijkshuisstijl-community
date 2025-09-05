@@ -16,7 +16,7 @@ const config: StorybookConfig = {
       files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
     },
     {
-      directory: '../src/community',
+      directory: '../src/components-react',
       titlePrefix: 'React Components',
       files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
     },

@@ -4,7 +4,7 @@ import { Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { AlertWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/alert.md?raw';
+import readme from '../components-react/alert.md?raw';
 
 AlertWebComponent.define();
 

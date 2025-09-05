@@ -1,7 +1,7 @@
 import { BlockquoteWebComponent } from '@rijkshuisstijl-community/web-components';
 import { Meta, StoryObj } from '@storybook/web-components';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/blockquote.md?raw';
+import readme from '../components-react/blockquote.md?raw';
 
 BlockquoteWebComponent.define();
 

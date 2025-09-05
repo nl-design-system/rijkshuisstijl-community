@@ -2,7 +2,7 @@ import { FormFieldRadioWebComponent } from '@rijkshuisstijl-community/web-compon
 import type { Meta, StoryObj } from '@storybook/react';
 import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-radio.md?raw';
+import readme from '../components-react/form-field-radio.md?raw';
 
 FormFieldRadioWebComponent.define();
 

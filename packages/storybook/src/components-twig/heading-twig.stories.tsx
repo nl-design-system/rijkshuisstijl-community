@@ -4,7 +4,7 @@ import TwigHeading from '@rijkshuisstijl-community/components-twig/src/Heading.t
 import type { Meta, StoryObj } from '@storybook/react';
 import DrupalAttribute from 'drupal-attribute';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/heading.md?raw';
+import readme from '../components-react/heading.md?raw';
 
 const meta = {
   title: 'Heading',
