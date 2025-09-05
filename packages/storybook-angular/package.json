@@ -12,6 +12,7 @@
     "clean": "rimraf dist/",
     "storybook": "ng run angular-latest:storybook --port 6008",
     "build": "ng run angular-latest:build-storybook --output-dir dist/",
+    "build-storybook": "pnpm build",
     "prod-static": "http-server --port 6006 dist/"
   },
   "dependencies": {
