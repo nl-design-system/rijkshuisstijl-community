@@ -1,6 +1,6 @@
-import { IconComponent, LinkComponent, ParagraphComponent } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, moduleMetadata, type StoryObj } from '@storybook/angular';
 import readme from './link.md';
+import { IconComponent, LinkComponent, ParagraphComponent } from '../../../components-angular/src/public-api';
 
 const meta: Meta<LinkComponent> = {
   decorators: [
