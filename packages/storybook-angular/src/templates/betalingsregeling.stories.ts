@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/angular';
 import { BetalingsregelingTemplate } from './betalingsregeling/betalingsregeling.component';
 
 const meta: Meta = {
-  title: 'Templates/Betalingsregeling',
+  title: 'Betalingsregeling',
   id: 'rhc-templates-betalingsregeling',
   render: () => ({
     moduleMetadata: {

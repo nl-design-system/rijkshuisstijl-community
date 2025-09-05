@@ -4,7 +4,7 @@ import readme from './default-icon-set.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl Community/Icon Sets/Default Icon Set',
+  title: 'Icon Sets/Default Icon Set',
   id: 'rhc-templates-default-icon-set',
   component: IconSet,
   parameters: {

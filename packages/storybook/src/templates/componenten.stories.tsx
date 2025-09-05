@@ -3,7 +3,7 @@ import Page from './componenten';
 import './globals.css';
 
 const meta: Meta = {
-  title: 'Templates/Componenten',
+  title: 'Componenten',
   id: 'rhc-templates-componenten',
   component: Page,
   parameters: {

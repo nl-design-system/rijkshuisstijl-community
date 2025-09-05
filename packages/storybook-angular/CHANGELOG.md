@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/storybook-angular
 
+## 1.2.0
+
+### Minor Changes
+
+- 03a4cd2: Link list link story now uses correct content projection slot for the icon
+
 ## 1.1.0
 
 ### Minor Changes

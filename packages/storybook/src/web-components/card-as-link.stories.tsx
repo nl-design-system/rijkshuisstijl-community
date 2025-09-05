@@ -1,12 +1,12 @@
 import { CardAsLinkWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta } from '@storybook/web-components';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/card-as-link.md?raw';
+import readme from '../components-react/card-as-link.md?raw';
 
 CardAsLinkWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Card as Link',
+  title: 'Card as Link',
   id: 'rhc-card-as-link-web',
   component: 'rhc-card-as-link',
   argTypes: {
