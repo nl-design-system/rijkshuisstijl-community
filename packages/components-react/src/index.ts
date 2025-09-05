@@ -51,6 +51,7 @@ export { DataBadgeButton, type DataBadgeButtonProps } from './DataBadgeButton';
 export { DataSummary, type DataSummaryProps } from './DataSummary';
 export { DataSummaryItem, type DataSummaryItemProps } from './DataSummaryItem';
 export { DotBadge, type DotBadgeProps } from './DotBadge';
+export { Drawer, type DrawerProps } from './Drawer';
 export { ExpandableCheckboxGroup, type ExpandableCheckboxGroupProps } from './ExpandableCheckboxGroup';
 export { Fieldset, FieldsetLegend, type FieldsetLegendProps, type FieldsetProps } from './Fieldset';
 export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from './Figure';
