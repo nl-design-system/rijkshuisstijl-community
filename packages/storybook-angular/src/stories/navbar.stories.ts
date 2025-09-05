@@ -45,7 +45,7 @@ const meta: Meta<NavbarComponent> = {
   },
   render: ({ showEndItems }) => ({
     template: `
-    <rhc-navbar [showEndItems]="showEndItems">
+    <rhc-navbar [showEndItems]=${showEndItems}>
         <li rhc-navbar-item href="#">
             Link
         </li>
