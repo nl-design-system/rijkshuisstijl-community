@@ -8,7 +8,7 @@
 >
   <label rhc-form-label [for]="inputId">{{ label }}</label>
   <rhc-form-field-description>{{ description }}</rhc-form-field-description>
-  <rhc-form-field-error-message>{{ errorMessage }}</rhc-form-field-error-message>
+  <rhc-form-field-error-message><ng-content select="[icon]" icon></ng-content>{{ errorMessage }}</rhc-form-field-error-message>
   <input
     rhc-text-input
     (input)="onValueChange($event)"
