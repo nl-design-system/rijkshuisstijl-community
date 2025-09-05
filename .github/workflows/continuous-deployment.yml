@@ -148,7 +148,7 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           storybookBuildDir: packages/storybook/dist/
           exitOnceUploaded: true
-                
+
       - name: Publish to Chromatic
         uses: chromaui/action@4d8ebd13658d795114f8051e25c28d66f14886c6 # 13.1.2
         if: ${{ github.actor != 'dependabot[bot]' }}

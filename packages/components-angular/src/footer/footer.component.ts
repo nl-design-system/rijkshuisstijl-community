@@ -7,21 +7,6 @@ import { LinkListComponent } from '../link-list/link-list.component';
 import { LinkListItemComponent } from '../link-list-item/link-list-item.component';
 import { LinkListLinkComponent } from '../link-list-link/link-list-link.component';
 
-export interface ColumnItem {
-  label: string;
-  href: string;
-}
-
-export interface Column {
-  heading: string;
-  appearanceLevel: HeadingLevel;
-  items: ColumnItem[];
-}
-
-export interface subFooter {
-  items: ColumnItem[];
-}
-
 @Component({
   selector: 'footer[rhc-footer]',
   imports: [
@@ -41,9 +26,7 @@ export class FooterComponent {
   @Input() preFooterMessage?: string;
   @Input() heading?: string;
   @Input() appearanceLevel: HeadingLevel = 3;
-  @Input() columns?: Column[];
   @Input() backtotop?: boolean;
-  @Input() subFooter?: subFooter;
 
   scrollBackToTop = (event: MouseEvent) => {
     event.preventDefault();
