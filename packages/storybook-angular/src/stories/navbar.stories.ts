@@ -1,14 +1,14 @@
+import { type Meta, moduleMetadata, type StoryObj } from '@storybook/angular';
+import { provideTablerIcons, TablerIconComponent } from 'angular-tabler-icons';
+import { IconCalendarCheck, IconHome, IconSearch, IconTransfer, IconUser } from 'angular-tabler-icons/icons';
+import readme from './navbar.md';
 import {
   EndItemDirective,
   HeadingItemDirective,
   IconComponent,
   NavbarComponent,
   NavbarItemComponent,
-} from '@rijkshuisstijl-community/components-angular';
-import { type Meta, moduleMetadata, type StoryObj } from '@storybook/angular';
-import { provideTablerIcons, TablerIconComponent } from 'angular-tabler-icons';
-import { IconCalendarCheck, IconHome, IconSearch, IconTransfer, IconUser } from 'angular-tabler-icons/icons';
-import readme from './navbar.md';
+} from '../../../components-angular/src/public-api';
 
 const meta: Meta<NavbarComponent> = {
   title: 'Rijkshuisstijl/Navbar',
