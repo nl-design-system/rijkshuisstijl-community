@@ -20,44 +20,11 @@
       </div>
     }
     <rhc-column-layout>
-      @for (column of columns; track $index) {
-        <div class="rhc-page-footer__section">
-          <rhc-heading [level]="heading ? 3 : 2" [appearanceLevel]="column.appearanceLevel">{{
-            column.heading
-          }}</rhc-heading>
-
-          <rhc-link-list>
-            @for (item of column.items; track $index) {
-              <li rhc-link-list-item>
-                <a rhc-link-list-link [href]="item.href" [attr.href]="item.href">
-                  <rhc-icon icon
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M9 6l6 6l-6 6" />
-                    </svg>
-                  </rhc-icon>
-                  {{ item.label }}
-                </a>
-              </li>
-            }
-          </rhc-link-list>
-        </div>
-      }
+      <ng-content select="[columns]"></ng-content>
     </rhc-column-layout>
   </div>
 
-  @if (backtotop || subFooter) {
+  @if (backtotop) {
     <div
       [class]="
         'rhc-page-subfooter' +
@@ -67,13 +34,7 @@
     >
       <div class="rhc-page-subfooter__content rhc-page-footer__wrapper">
         <rhc-link-list>
-          @for (subFooterItem of subFooter?.items; track $index) {
-            <li rhc-link-list-item>
-              <a rhc-link-list-link [href]="subFooterItem.href" [attr.href]="subFooterItem.href">
-                {{ subFooterItem.label }}
-              </a>
-            </li>
-          }
+          <ng-content select="[subFooterItems]"></ng-content>
         </rhc-link-list>
 
         @if (backtotop) {
