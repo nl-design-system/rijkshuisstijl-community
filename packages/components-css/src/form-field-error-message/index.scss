@@ -4,12 +4,16 @@
  */
 .utrecht-form-field-error-message {
   &--icon-container {
+    /* stylelint-disable-next-line custom-property-pattern */
+    column-gap: var(--todo-form-field-error-message-column-gap);
     display: flex;
-    &-icon {
-      --utrecht-icon-size: var(--utrecht-form-field-error-message-icon-size, 24px);
 
-      margin-inline-end: var(--utrecht-form-field-error-message-icon-margin-inline-end, 0.5rem);
-      min-inline-size: var(--utrecht-form-field-error-message-icon-min-width, 24px);
+    &-icon {
+      /* stylelint-disable-next-line custom-property-pattern */
+      --utrecht-icon-size: var(--todo-form-field-error-message-icon-size);
+
+      /* stylelint-disable-next-line custom-property-pattern */
+      min-inline-size: var(--todo-form-field-error-message-icon-size);
     }
   }
 }
