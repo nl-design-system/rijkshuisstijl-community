@@ -1,10 +1,9 @@
 import { Drawer, Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
 import readme from './drawer.md?raw';
 
 const meta = {
-  title: 'Rijkshuisstijl/Drawer',
+  title: 'Drawer',
   id: 'rhc-drawer',
   component: Drawer,
   decorators: [(Story) => <div style={{ minHeight: '256px' }}>{Story()}</div>],
