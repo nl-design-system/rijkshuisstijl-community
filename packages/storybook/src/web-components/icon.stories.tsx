@@ -3,7 +3,7 @@ import { IconWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { IconBrandX } from '@tabler/icons-react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/icon.md?raw';
+import readme from '../components-react/icon.md?raw';
 
 registerIconSet(defaultIconSet);
 registerIconSet(flagIconSet);
@@ -11,7 +11,7 @@ registerIconSet(flagIconSet);
 IconWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Icon',
+  title: 'Icon',
   id: 'rhc-icon-web',
   component: 'rhc-icon',
   argTypes: {

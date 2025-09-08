@@ -4,7 +4,38 @@ const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
   },
-  stories: ['../src/**/*stories.@(js|jsx|ts|tsx)', '../src/**/*.mdx'],
+  stories: [
+    {
+      directory: '../src/documentation',
+      titlePrefix: 'Rijkshuisstijl Community',
+      files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
+    },
+    {
+      directory: '../src/icon-sets',
+      titlePrefix: 'Rijkshuisstijl Community',
+      files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
+    },
+    {
+      directory: '../src/components-react',
+      titlePrefix: 'React Components',
+      files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
+    },
+    {
+      directory: '../src/web-components',
+      titlePrefix: 'Web Components',
+      files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
+    },
+    {
+      directory: '../src/components-twig',
+      titlePrefix: 'Twig Components',
+      files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
+    },
+    {
+      directory: '../src/templates',
+      titlePrefix: 'React Templates',
+      files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
+    },
+  ],
   addons: [
     '@chromatic-com/storybook',
     '@etchteam/storybook-addon-status',
@@ -24,23 +55,15 @@ const config: StorybookConfig = {
   docs: {
     autodocs: true,
   },
-  refs: (_, { configType }) => {
-    if (configType === 'DEVELOPMENT') {
-      return {
-        angular: {
-          title: 'Angular Components',
-          url: 'http://localhost:6008',
-        },
-      };
-    } else {
-      return {
-        angular: {
-          title: 'Angular Components',
-          url: 'https://rijkshuisstijl-community-storybook-angular.vercel.app/',
-        },
-      };
-    }
-  },
+  refs: (_, { configType }) => ({
+    angular: {
+      title: 'Angular Storybook',
+      url:
+        configType === 'DEVELOPMENT'
+          ? 'http://localhost:6008'
+          : 'https://rijkshuisstijl-community-storybook-angular.vercel.app/',
+    },
+  }),
 };
 
 export default config;

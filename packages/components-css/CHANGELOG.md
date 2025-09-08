@@ -1,5 +1,29 @@
 # @rijkshuisstijl-community/components-css
 
+## 6.0.0
+
+### Major Changes
+
+- 8e508f9: Removed the following tokens:
+  Used but unnecessary:
+  --utrecht-alert-heading-line-height
+  --utrecht-alert-message-line-height
+
+  Unused:
+  --utrecht-alert-heading-font-family
+  --utrecht-alert-heading-font-size
+  --utrecht-alert-heading-font-weight
+
+  Reworked the Alert react component to allow users to add content like heading and paragraph in the children instead of duplicating heading props in the alert directly.
+  Added icon overwrite support in case you want a different icon on a specific alert type.
+
+- 29bfdd5: Removed deprecated tokens for Accordion
+- 965c2a4: Removed deprecated tokens and much custom code for SkipLink
+  - Kept only the box-shadow properties and moved those to rhc-\* namespace
+  - Removed visibleOnFocus prop and class, assuming this is always the behaviour
+  - Also cleaned the storybook, with just a default, rtl, and focused state
+  - Added links in storybook
+
 ## 5.1.0
 
 ### Minor Changes

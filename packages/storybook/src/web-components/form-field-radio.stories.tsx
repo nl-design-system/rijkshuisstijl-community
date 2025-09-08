@@ -2,7 +2,7 @@ import { FormFieldRadioWebComponent } from '@rijkshuisstijl-community/web-compon
 import type { Meta, StoryObj } from '@storybook/react';
 import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-radio.md?raw';
+import readme from '../components-react/form-field-radio.md?raw';
 
 FormFieldRadioWebComponent.define();
 
@@ -31,7 +31,7 @@ const RadioWrapper = ({
 };
 
 const meta = {
-  title: 'Web Components/Form field/Form Field Radio',
+  title: 'Form field/Form Field Radio',
   id: 'rhc-form-field-radio-web',
   component: RadioWrapper,
   args: {

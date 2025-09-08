@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/components-angular
 
+## 3.0.0
+
+### Major Changes
+
+- 03a4cd2: Link list link now uses Utrecht Link css class instead of the candidate nl-link css class
+
+### Patch Changes
+
+- 9dede3b: The chevron icons inside the footer now get placed in the proper place in the DOM.
+
 ## 2.0.1
 
 ### Patch Changes

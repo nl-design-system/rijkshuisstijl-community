@@ -2,7 +2,7 @@ import { FormFieldRadioGroupWebComponent, FormFieldRadioWebComponent } from '@ri
 import type { Meta, StoryObj } from '@storybook/react';
 import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-radio-group.md?raw';
+import readme from '../components-react/form-field-radio-group.md?raw';
 
 FormFieldRadioGroupWebComponent.define();
 FormFieldRadioWebComponent.define();
@@ -20,7 +20,7 @@ const RadioGroupWrapper = ({ label, description, errormessage, status, invalid, 
 };
 
 const meta = {
-  title: 'Web Components/Form Field/Form Field Radio Group',
+  title: 'Form Field/Form Field Radio Group',
   id: 'rhc-form-field-radio-group-web',
   component: RadioGroupWrapper,
   argTypes: {

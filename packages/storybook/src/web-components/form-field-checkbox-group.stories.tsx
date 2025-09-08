@@ -5,7 +5,7 @@ import {
 import type { Meta, StoryObj } from '@storybook/react';
 import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-checkbox-group.md?raw';
+import readme from '../components-react/form-field-checkbox-group.md?raw';
 
 FormFieldCheckboxGroupWebComponent.define();
 FormFieldCheckboxOptionWebComponent.define();
@@ -23,7 +23,7 @@ const CheckboxGroupWrapper = ({ label, description, errormessage, status, invali
 };
 
 const meta = {
-  title: 'Web Components/Form Field/Form Field Checkbox Group',
+  title: 'Form Field/Form Field Checkbox Group',
   id: 'rhc-form-field-checkbox-group-web',
   component: CheckboxGroupWrapper,
   argTypes: {
