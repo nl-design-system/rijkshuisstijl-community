@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-react
 
+## 6.0.1
+
+### Patch Changes
+
+- c832e55: In development environments the package.json was referencing non existing files.
+
 ## 6.0.0
 
 ### Major Changes
