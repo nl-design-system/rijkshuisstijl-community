@@ -1,11 +1,37 @@
-import { type Meta, type StoryObj } from '@storybook/angular';
+import { type Meta, moduleMetadata, type StoryObj } from '@storybook/angular';
+import { provideTablerIcons, TablerIconComponent } from 'angular-tabler-icons';
+import { IconChevronRight } from 'angular-tabler-icons/icons';
 import readme from './footer.md';
-import { FooterComponent } from '../../../components-angular/src/public-api';
+import {
+  FooterComponent,
+  HeadingComponent,
+  IconComponent,
+  LinkListComponent,
+  LinkListItemComponent,
+  LinkListLinkComponent,
+} from '../../../components-angular/src/public-api';
 
 const meta: Meta<FooterComponent> = {
   title: 'Footer',
   id: 'rhc-angular-footer',
   component: FooterComponent,
+  decorators: [
+    moduleMetadata({
+      imports: [
+        LinkListItemComponent,
+        LinkListLinkComponent,
+        LinkListComponent,
+        HeadingComponent,
+        TablerIconComponent,
+        IconComponent,
+      ],
+      providers: [
+        provideTablerIcons({
+          IconChevronRight,
+        }),
+      ],
+    }),
+  ],
   argTypes: {
     heading: {
       description: 'Heading',
@@ -82,40 +108,99 @@ const meta: Meta<FooterComponent> = {
         [backtotop]="${backtotop}"
         [heading]="'${heading}'"
         [appearanceLevel] = "${appearanceLevel}"
-         [columns]="[
-          {
-            heading: 'Service',
-            appearanceLevel: 3,
-            items: [
-              { href: '#', label: 'Contact' },
-              { href: '#', label: 'Abonneren' },
-              { href: '#', label: 'RSS' },
-              { href: '#', label: 'Vacatures' },
-              { href: '#', label: 'Sitemap' },
-              { href: '#', label: 'Help' },
-              { href: '#', label: 'Archief' },
-            ]
-          },
-          {
-            heading: 'Over deze site',
-            appearanceLevel: 3,
-            items: [
-              { href: '#', label: 'Over deze organisatie' },
-              { href: '#', label: 'Wetten en regelingen' },
-              { href: '#', label: 'Privacy' },
-              { href: '#', label: 'Cookies' },
-              { href: '#', label: 'Toegankelijkheid' },
-              { href: '#', label: 'Open data' },
-              { href: '#', label: 'Kwetsbaarheid melden' },
-            ]
-          }
-        ]"
-        [subFooter]="{
-          items: [
-            { href: '#', label: 'Privacy' }
-          ]
-        }"
       >
+        <div class="rhc-page-footer__section" columns>
+          <rhc-heading [level]="${heading ? 3 : 2}" [appearanceLevel]="${appearanceLevel}">
+            Service
+          </rhc-heading>
+            <rhc-link-list>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Contact
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>                
+                  Abonneren
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  RSS
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Vacatures
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Sitemap
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Help
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Archief
+                </a>
+              </li>                                   
+          </rhc-link-list>
+        </div>
+        <div class="rhc-page-footer__section" columns>
+          <rhc-heading [level]="heading ? 3 : 2" [appearanceLevel]="${appearanceLevel}">
+            Over deze site
+          </rhc-heading>
+          <rhc-link-list>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Over deze organisatie
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Wetten en regelingen
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Privacy
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Cookies
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Open data
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Kwetsbaarheid melden
+                </a>
+              </li>                                   
+          </rhc-link-list>
+        </div>
       </footer>
     `,
     props: {
