@@ -34,12 +34,9 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "development": "./src/index.ts",
-      "default": {
-        "types": "./dist/index.d.ts",
-        "import": "./dist/index.esm.js",
-        "require": "./dist/index.cjs.js"
-      }
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
     },
     "./CHANGELOG.md": "./CHANGELOG.md",
     "./README.md": "./README.md"
