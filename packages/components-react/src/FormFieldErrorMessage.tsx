@@ -15,8 +15,8 @@ export const FormFieldErrorMessage = ({
   ...restProps
 }: PropsWithChildren<FormFieldErrorMessageProps>) => (
   <UtrechtFormFieldErrorMessage ref={ref} {...restProps}>
-    <span className={'utrecht-form-field-error-message--icon-container'}>
-      <Icon className={'utrecht-form-field-error-message--icon-container-icon'} icon={'alert-circle'}></Icon> {children}
+    <span className="utrecht-form-field-error-message--icon-container">
+      <Icon className="utrecht-form-field-error-message--icon-container-icon" icon="alert-circle" /> {children}
     </span>
   </UtrechtFormFieldErrorMessage>
 );
