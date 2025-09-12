@@ -1,0 +1,21 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+@use "@utrecht/document-css/src/mixin" as document;
+@use "@utrecht/focus-ring-css/src/mixin" as focus-ring;
+
+.rhc-document {
+  @include document.utrecht-document;
+
+  a,
+  input,
+  textarea,
+  select,
+  button {
+    &:focus,
+    &:focus-visible {
+      @include focus-ring.utrecht-focus-visible;
+    }
+  }
+}
