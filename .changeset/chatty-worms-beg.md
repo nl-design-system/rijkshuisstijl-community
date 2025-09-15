@@ -2,4 +2,4 @@
 '@rijkshuisstijl-community/components-react': patch
 ---
 
-Improved developer experiance for this monorepo
+Improved developer experience for this monorepo
