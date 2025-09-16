@@ -1,5 +1,22 @@
 # @rijkshuisstijl-community/components-react
 
+## 6.0.1
+
+### Patch Changes
+
+- c832e55: In development environments the package.json was referencing non existing files.
+
+## 6.0.0
+
+### Major Changes
+
+- 8e189de: Updated Action Group to new version from Utrecht
+  - added column-stretch option for direction prop
+
+### Minor Changes
+
+- 884d990: Added Utrecht Drawer and fixed an A11y test bug: "Scrollable region must have keyboard access"
+
 ## 5.0.0
 
 ### Major Changes

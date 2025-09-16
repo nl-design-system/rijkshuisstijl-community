@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/rivm-design-tokens
 
+## 2.0.1
+
+### Patch Changes
+
+- 884d990: Added Utrecht Drawer and fixed an A11y test bug: "Scrollable region must have keyboard access"
+
 ## 2.0.0
 
 ### Major Changes

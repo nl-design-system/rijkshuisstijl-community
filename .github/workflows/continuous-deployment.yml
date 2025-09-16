@@ -154,7 +154,7 @@ jobs:
         if: ${{ github.actor != 'dependabot[bot]' }}
         with:
           autoAcceptChanges: main
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          projectToken: ${{ secrets.ANGULAR_CHROMATIC_PROJECT_TOKEN }}
           storybookBuildDir: packages/storybook-angular/dist/
           exitOnceUploaded: true
 

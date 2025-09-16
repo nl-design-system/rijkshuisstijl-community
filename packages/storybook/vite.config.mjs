@@ -12,4 +12,8 @@ export default defineConfig({
       framework: 'react',
     }),
   ],
+  resolve: {
+    // we set the rhc:source so that the react package resolves directly to the source files for development in this monorepo
+    conditions: ['rhc:source', 'import', 'require', 'default'],
+  },
 });
