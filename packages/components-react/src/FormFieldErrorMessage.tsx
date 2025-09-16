@@ -1,24 +1,5 @@
-import {
-  FormFieldErrorMessage as UtrechtFormFieldErrorMessage,
-  FormFieldErrorMessageProps as UtrechtFormFieldErrorMessageProps,
-} from '@utrecht/component-library-react';
-import { PropsWithChildren, Ref } from 'react';
-import { Icon } from './Icon';
+import { FormFieldErrorMessage as UtrechtFormFieldErrorMessage } from '@utrecht/component-library-react';
 
-export interface FormFieldErrorMessageProps extends UtrechtFormFieldErrorMessageProps {
-  ref?: Ref<HTMLDivElement>;
-}
-
-export const FormFieldErrorMessage = ({
-  ref,
-  children,
-  ...restProps
-}: PropsWithChildren<FormFieldErrorMessageProps>) => (
-  <UtrechtFormFieldErrorMessage ref={ref} {...restProps}>
-    <span className="utrecht-form-field-error-message--icon-container">
-      <Icon className="utrecht-form-field-error-message--icon-container-icon" icon="alert-circle" /> {children}
-    </span>
-  </UtrechtFormFieldErrorMessage>
-);
+export const FormFieldErrorMessage = UtrechtFormFieldErrorMessage;
 
 FormFieldErrorMessage.displayName = 'FormFieldErrorMessage';
