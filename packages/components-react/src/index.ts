@@ -60,7 +60,7 @@ export { FileInput, type FileInputProps } from './FileInput';
 export { Footer } from './Footer';
 export { FormFieldCheckboxGroup, type FormFieldCheckboxGroupProps } from './FormFieldCheckboxGroup';
 export { FormFieldCheckboxOption, type FormFieldCheckboxOptionProps } from './FormFieldCheckboxOption';
-export { FormFieldErrorMessage } from './FormFieldErrorMessage';
+export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from './FormFieldErrorMessage';
 export { FormFieldRadio, type FormFieldRadioProps } from './FormFieldRadio';
 export { FormFieldRadioGroup, type FormFieldRadioGroupProps } from './FormFieldRadioGroup';
 export { FormFieldSelect, type FormFieldSelectProps, SelectOption, type SelectOptionProps } from './FormFieldSelect';

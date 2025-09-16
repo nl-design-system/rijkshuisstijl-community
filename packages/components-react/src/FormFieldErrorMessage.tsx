@@ -1,1 +1,1 @@
-export { FormFieldErrorMessage } from '@utrecht/component-library-react';
+export { FormFieldErrorMessage, type FormFieldErrorMessageProps } from '@utrecht/component-library-react';
