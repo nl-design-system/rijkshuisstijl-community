@@ -10,12 +10,9 @@ export interface FormFieldTextInputProps extends UtrechtFormFieldTextInputProps 
 }
 
 export const FormFieldTextInput = ({
-  ref,
   invalid,
-  errorMessage,
   description,
   status,
-  children,
   ...restProps
 }: PropsWithChildren<FormFieldTextInputProps>) => {
   const inputId = useId();
@@ -26,10 +23,8 @@ export const FormFieldTextInput = ({
   return (
     <UtrechtFormFieldTextInput
       description={description}
-      errorMessage={errorMessage}
       id={inputId}
       invalid={invalid}
-      ref={ref}
       status={status}
       aria-describedby={
         clsx({
@@ -39,9 +34,7 @@ export const FormFieldTextInput = ({
         }) || undefined
       }
       {...restProps}
-    >
-      {children}
-    </UtrechtFormFieldTextInput>
+    />
   );
 };
 
