@@ -5,7 +5,7 @@
 '@rijkshuisstijl-community/web-components': major
 ---
 
-Cleaned up the blockquote component and seperated out the rounded corner from the component.
+Cleaned up the blockquote component and separated out the rounded corner from the component.
 The following tokens have been removed:
 
 - --utrecht-blockquote-border-block-end-width
