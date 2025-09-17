@@ -32,7 +32,7 @@ describe('FormField', () => {
   it('renders error message when invalid', () => {
     render(<FormField {...defaultProps} invalid errorMessage="Error occurred" />);
     expect(screen.getByText('Error occurred')).toBeInTheDocument();
-    expect(screen.getByText('Error occurred')).toBeInstanceOf(HTMLSpanElement);
+    expect(screen.getByText('Error occurred')).toBeInstanceOf(HTMLDivElement);
   });
 
   it('renders status message when provided', () => {
