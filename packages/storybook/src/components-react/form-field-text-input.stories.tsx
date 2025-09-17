@@ -287,6 +287,56 @@ const meta = {
     placeholder: '',
     size: undefined,
   },
+  render: (args) => {
+    const {
+      description,
+      disabled,
+      id,
+      invalid,
+      errorMessage,
+      status,
+      inputRequired,
+      label,
+      name,
+      required,
+      defaultValue,
+      type,
+      autoComplete,
+      minLength,
+      maxLength,
+      readOnly,
+      dir,
+      inputDir,
+      placeholder,
+      value,
+      size,
+    } = args;
+    return (
+      <FormFieldTextInput
+        autoComplete={autoComplete || undefined}
+        defaultValue={defaultValue || undefined}
+        description={description || undefined}
+        dir={dir || undefined}
+        disabled={disabled}
+        errorMessage={errorMessage || undefined}
+        id={id || undefined}
+        inputDir={inputDir || undefined}
+        inputRequired={inputRequired}
+        invalid={invalid}
+        label={label || undefined}
+        maxLength={maxLength || undefined}
+        minLength={minLength || undefined}
+        name={name || undefined}
+        placeholder={placeholder || undefined}
+        readOnly={readOnly || undefined}
+        required={required}
+        size={size || undefined}
+        status={status || undefined}
+        type={type || undefined}
+        value={value || undefined}
+      />
+    );
+  },
   tags: ['autodocs'],
   parameters: {
     status: {
