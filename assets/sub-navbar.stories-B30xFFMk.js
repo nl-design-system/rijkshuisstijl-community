@@ -1,0 +1,5 @@
+import{S as a}from"./NavBar-P6oNUihE.js";import"./jsx-runtime-D_zvdyIk.js";import"./clsx-B-dksMZM.js";import"./Heading-CljAu67s.js";import"./objectWithoutProperties-CbCxjZzm.js";import"./index-BJzegUt9.js";import"./_commonjsHelpers-D6-XlEtG.js";import"./Icon-DaUz-GJB.js";import"./index-DlGjRi2o.js";import"./IconCheck-BO4gZjWf.js";import"./Link-b8deH1hb.js";const h={title:"Navigation Bar/Sub Navigation Bar",id:"rhc-sub-nav-bar",component:a,parameters:{status:{type:"STABLE"},componentOrigin:"Dit component is volledig ontwikkeld door de Rijkshuisstijl Community."}},i=[[{label:"Label",href:"#",id:"li-1"},{label:"Label",href:"#",id:"li-2"},{label:"Label",href:"#",id:"li-3"}],[{label:"Label",href:"#",id:"li-4"}]],r={args:{columns:i}};var e,o,t;r.parameters={...r.parameters,docs:{...(e=r.parameters)==null?void 0:e.docs,source:{originalSource:`{
+  args: {
+    columns
+  }
+}`,...(t=(o=r.parameters)==null?void 0:o.docs)==null?void 0:t.source}}};const v=["Default"];export{r as Default,v as __namedExportsOrder,h as default};
