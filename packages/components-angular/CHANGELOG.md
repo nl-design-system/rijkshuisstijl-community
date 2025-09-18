@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-angular
 
+## 5.0.0
+
+### Major Changes
+
+- aadf35e: Removed the icon from form field error message
+
 ## 4.0.0
 
 ### Major Changes
