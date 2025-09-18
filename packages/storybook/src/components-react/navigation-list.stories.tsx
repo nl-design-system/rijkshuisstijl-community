@@ -1,6 +1,6 @@
 import { NavigationList, NavigationListItem } from '@rijkshuisstijl-community/components-react';
 import { NavigationListProps } from '@rijkshuisstijl-community/components-react/dist/NavigationList';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './navigation-list.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 

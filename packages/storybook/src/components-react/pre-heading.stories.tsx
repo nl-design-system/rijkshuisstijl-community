@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Heading, PreHeading } from '@rijkshuisstijl-community/components-react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './pre-heading.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 

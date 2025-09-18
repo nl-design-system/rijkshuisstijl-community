@@ -16,8 +16,8 @@ import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Paragraph } from '@rijkshuisstijl-community/components-react';
 import { withThemeByClassName } from '@storybook/addon-themes';
-import { Controls, Description, Primary, Stories, useOf } from '@storybook/blocks';
-import { Preview } from '@storybook/react';
+import { Controls, Description, Primary, Stories, useOf } from '@storybook/addon-docs/blocks';
+import { Preview } from '@storybook/react-vite';
 import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
 import { Fragment } from 'react';
@@ -53,6 +53,7 @@ const preview: Preview = {
       );
     },
   ],
+
   parameters: {
     previewTabs: {
       'storybookjs/notes/panel': { title: 'Documentation' },
@@ -149,5 +150,7 @@ const preview: Preview = {
       },
     },
   },
+
+  tags: ['autodocs'],
 };
 export default preview;

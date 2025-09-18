@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Blockquote } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './blockquote.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 

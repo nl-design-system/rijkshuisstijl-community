@@ -1,9 +1,14 @@
+import { createRequire } from 'node:module';
+import { dirname, join } from 'node:path';
 import type { StorybookConfig } from '@storybook/react-vite';
+
+const require = createRequire(import.meta.url);
 
 const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
   },
+
   stories: [
     {
       directory: '../src/documentation',
@@ -36,25 +41,21 @@ const config: StorybookConfig = {
       files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
     },
   ],
+
   addons: [
-    '@chromatic-com/storybook',
-    '@etchteam/storybook-addon-status',
-    '@storybook/addon-a11y',
-    '@storybook/addon-controls',
-    '@storybook/addon-actions',
-    '@storybook/addon-docs',
-    '@storybook/addon-interactions',
-    '@storybook/addon-links',
-    '@storybook/addon-themes',
-    '@storybook/addon-viewport',
-    '@whitespace/storybook-addon-html',
-    'storybook-addon-pseudo-states',
+    getAbsolutePath('@chromatic-com/storybook'),
+    getAbsolutePath('@etchteam/storybook-addon-status'),
+    getAbsolutePath('@storybook/addon-a11y'),
+    getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath('@storybook/addon-links'),
+    getAbsolutePath('@storybook/addon-themes'),
+    getAbsolutePath('@whitespace/storybook-addon-html'),
+    getAbsolutePath('storybook-addon-pseudo-states'),
   ],
-  framework: '@storybook/react-vite',
+
+  framework: getAbsolutePath('@storybook/react-vite'),
   staticDirs: ['../../../proprietary/assets/src'],
-  docs: {
-    autodocs: true,
-  },
+
   refs: (_, { configType }) => ({
     angular: {
       title: 'Angular Storybook',
@@ -67,3 +68,7 @@ const config: StorybookConfig = {
 };
 
 export default config;
+
+function getAbsolutePath(value: string): any {
+  return dirname(require.resolve(join(value, 'package.json')));
+}

@@ -22,26 +22,26 @@ const config: StorybookConfig = {
       files: '**/*.{stories.@(js|jsx|mjs|ts|tsx),mdx}',
     },
   ],
+
   addons: [
-    getAbsolutePath('@storybook/addon-essentials'),
     getAbsolutePath('@storybook/addon-onboarding'),
     getAbsolutePath('@chromatic-com/storybook'),
-    getAbsolutePath('@storybook/addon-interactions'),
     getAbsolutePath('@storybook/addon-webpack5-compiler-babel'),
     getAbsolutePath('storybook-addon-pseudo-states'),
     getAbsolutePath('@storybook/addon-themes'),
+    getAbsolutePath('@storybook/addon-docs'),
   ],
+
   core: {
     disableTelemetry: true,
     disableWhatsNewNotifications: true,
   },
+
   staticDirs: ['../../../proprietary/assets/src'],
+
   framework: {
     name: getAbsolutePath('@storybook/angular'),
     options: {},
-  },
-  docs: {
-    autodocs: true,
   },
 };
 export default config;

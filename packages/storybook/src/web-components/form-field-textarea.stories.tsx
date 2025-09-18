@@ -1,5 +1,5 @@
 import { FormFieldTextareaWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../components-react/form-field-textarea.md?raw';

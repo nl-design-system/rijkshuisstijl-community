@@ -22,6 +22,7 @@ const preview: Preview = {
       },
     },
   },
+
   decorators: [
     componentWrapperDecorator((story) => `<div class="utrecht-document">${story}</div>`),
     withThemeByClassName({
@@ -43,6 +44,8 @@ const preview: Preview = {
       defaultTheme: 'RijkshuisstijlCommunity',
     }),
   ],
+
+  tags: ['autodocs'],
 };
 
 export default preview;
