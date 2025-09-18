@@ -43,28 +43,33 @@ const config: StorybookConfig = {
   ],
 
   addons: [
-    getAbsolutePath('@chromatic-com/storybook'),
-    getAbsolutePath('@etchteam/storybook-addon-status'),
-    getAbsolutePath('@storybook/addon-a11y'),
-    getAbsolutePath('@storybook/addon-docs'),
-    getAbsolutePath('@storybook/addon-links'),
-    getAbsolutePath('@storybook/addon-themes'),
-    getAbsolutePath('@whitespace/storybook-addon-html'),
-    getAbsolutePath('storybook-addon-pseudo-states'),
+    '@chromatic-com/storybook',
+    '@storybook/addon-a11y',
+    '@storybook/addon-docs',
+    '@storybook/addon-links',
+    '@storybook/addon-themes',
+    '@whitespace/storybook-addon-html',
+    'storybook-addon-pseudo-states',
+    '@storybook/addon-interactions',
   ],
 
-  framework: getAbsolutePath('@storybook/react-vite'),
+  framework: {
+    name: '@storybook/react-vite',
+    options: {},
+  },
   staticDirs: ['../../../proprietary/assets/src'],
 
-  refs: (_, { configType }) => ({
-    angular: {
-      title: 'Angular Storybook',
-      url:
-        configType === 'DEVELOPMENT'
-          ? 'http://localhost:6008'
-          : 'https://rijkshuisstijl-community-storybook-angular.vercel.app/',
-    },
-  }),
+  // TODO revert before merging!!!
+
+  // refs: (_, { configType }) => ({
+  //   angular: {
+  //     title: 'Angular Storybook',
+  //     url:
+  //       configType === 'DEVELOPMENT'
+  //         ? 'http://localhost:6008'
+  //         : 'https://rijkshuisstijl-community-storybook-angular.vercel.app/',
+  //   },
+  // }),
 };
 
 export default config;
