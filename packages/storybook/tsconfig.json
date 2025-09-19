@@ -11,6 +11,6 @@
     }
   },
   "extends": "../../tsconfig.json",
-  "include": ["src/**/*.ts", "src/**/*.tsx", "config/main.ts", "config/preview.tsx", "config/Prettify.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", ".storybook/**/*.tsx", ".storybook/**/*.ts"],
   "exclude": ["**/node_modules/*"]
 }

@@ -24,10 +24,10 @@ const config: StorybookConfig = {
   ],
 
   addons: [
-    getAbsolutePath('@storybook/addon-onboarding'),
     getAbsolutePath('@chromatic-com/storybook'),
     getAbsolutePath('@storybook/addon-webpack5-compiler-babel'),
     getAbsolutePath('storybook-addon-pseudo-states'),
+    getAbsolutePath('@whitespace/storybook-addon-html'),
     getAbsolutePath('@storybook/addon-themes'),
     getAbsolutePath('@storybook/addon-docs'),
   ],

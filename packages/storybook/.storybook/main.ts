@@ -48,8 +48,8 @@ const config: StorybookConfig = {
     '@storybook/addon-docs',
     '@storybook/addon-links',
     '@storybook/addon-themes',
-    '@whitespace/storybook-addon-html',
     'storybook-addon-pseudo-states',
+    '@whitespace/storybook-addon-html',
     '@storybook/addon-interactions',
   ],
 
@@ -73,7 +73,3 @@ const config: StorybookConfig = {
 };
 
 export default config;
-
-function getAbsolutePath(value: string): any {
-  return dirname(require.resolve(join(value, 'package.json')));
-}

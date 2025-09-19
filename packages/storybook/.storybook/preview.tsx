@@ -21,6 +21,7 @@ import { Preview } from '@storybook/react-vite';
 import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
 import { Fragment } from 'react';
+import { syncPrettify } from './Prettify';
 
 const preview: Preview = {
   decorators: [
@@ -55,6 +56,15 @@ const preview: Preview = {
   ],
 
   parameters: {
+    html: {
+      transform: syncPrettify,
+    },
+    actions: {
+      disable: true,
+    },
+    interactions: {
+      disable: true,
+    },
     previewTabs: {
       'storybookjs/notes/panel': { title: 'Documentation' },
       'storybook/docs/panel': { title: 'API' },
@@ -125,32 +135,9 @@ const preview: Preview = {
           </>
         );
       },
-      source: {
-        state: 'open',
-
-        /*
-            Uncomment the transformer to show underlying CSS and HTML
-        */
-
-        // transform(src: string, storyContext: StoryContext) {
-        //   const render =
-        //     typeof storyContext.component === 'function'
-        //       ? storyContext.component
-        //       : typeof storyContext.component?.render === 'function'
-        //         ? storyContext.component?.render
-        //         : null;
-
-        //   if (render) {
-        //     const srcString = renderToStaticMarkup(render(storyContext.args));
-
-        //     return Prettify({ ugly: srcString });
-        //   }
-        //   return src;
-        // },
-      },
+      codePanel: true,
     },
   },
-
   tags: ['autodocs'],
 };
 export default preview;

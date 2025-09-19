@@ -9,6 +9,7 @@ const preview: Preview = {
       source: {
         excludeDecorators: true,
       },
+      codePanel: true,
     },
     controls: {
       matchers: {
