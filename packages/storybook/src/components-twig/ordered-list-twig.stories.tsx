@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import TwigOrderedList from '@rijkshuisstijl-community/components-twig/src/OrderedList.twig';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'Ordered List',

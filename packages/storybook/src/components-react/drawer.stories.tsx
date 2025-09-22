@@ -1,5 +1,5 @@
 import { Drawer, Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './drawer.md?raw';
 
 const meta = {

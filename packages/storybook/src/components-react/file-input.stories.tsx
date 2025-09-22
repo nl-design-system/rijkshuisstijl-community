@@ -1,5 +1,5 @@
 import { FileInput, UnorderedList, UnorderedListItem } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { FormLabel } from '@utrecht/component-library-react';
 import readme from './file-input.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';

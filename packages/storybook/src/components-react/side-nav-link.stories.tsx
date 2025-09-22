@@ -1,5 +1,5 @@
 import { getIconSet, SideNavLink } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './side-nav-link.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 

@@ -1,5 +1,5 @@
 import { SkipLink, type SkipLinkProps } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './skip-link.md?raw';
 
 // set fixed height and width so that the automatic hiding works

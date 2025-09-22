@@ -6,7 +6,7 @@ import {
   LinkListLink,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './footer.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
