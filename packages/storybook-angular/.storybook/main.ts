@@ -1,4 +1,9 @@
 import type { StorybookConfig } from '@storybook/angular';
+import { dirname, join } from 'path';
+
+// Utility to resolve the absolute path of a package
+// https://storybook.js.org/docs/faq#how-do-i-fix-module-resolution-in-special-environments
+const getAbsolutePath = (value: string): string => dirname(require.resolve(join(value, 'package.json')));
 
 const config: StorybookConfig = {
   stories: [
@@ -15,12 +20,12 @@ const config: StorybookConfig = {
   ],
 
   addons: [
-    '@chromatic-com/storybook',
-    '@storybook/addon-webpack5-compiler-babel',
-    'storybook-addon-pseudo-states',
+    getAbsolutePath('@chromatic-com/storybook'),
+    getAbsolutePath('@storybook/addon-webpack5-compiler-babel'),
+    getAbsolutePath('storybook-addon-pseudo-states'),
     '@whitespace/storybook-addon-html',
-    '@storybook/addon-themes',
-    '@storybook/addon-docs',
+    getAbsolutePath('@storybook/addon-themes'),
+    getAbsolutePath('@storybook/addon-docs'),
   ],
 
   core: {

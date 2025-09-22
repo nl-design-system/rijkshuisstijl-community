@@ -1,4 +1,9 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import { dirname, join, resolve } from 'path';
+
+// Utility to resolve the absolute path of a package
+// https://storybook.js.org/docs/faq#how-do-i-fix-module-resolution-in-special-environments
+const getAbsolutePath = (value: string): string => dirname(require.resolve(join(value, 'package.json')));
 
 const config: StorybookConfig = {
   core: {
@@ -40,22 +45,49 @@ const config: StorybookConfig = {
   ],
 
   addons: [
-    '@chromatic-com/storybook',
-    '@storybook/addon-a11y',
-    '@storybook/addon-docs',
-    '@storybook/addon-links',
-    '@storybook/addon-themes',
-    'storybook-addon-pseudo-states',
+    getAbsolutePath('@chromatic-com/storybook'),
+    getAbsolutePath('@storybook/addon-a11y'),
+    getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath('@storybook/addon-links'),
+    getAbsolutePath('@storybook/addon-themes'),
+    getAbsolutePath('storybook-addon-pseudo-states'),
     '@whitespace/storybook-addon-html',
   ],
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+  },
 
   framework: {
-    name: '@storybook/react-vite',
+    name: getAbsolutePath('@storybook/react-vite'),
     options: {},
   },
-  staticDirs: ['../../../proprietary/assets/src'],
-
-  // TODO revert before merging!!!
+  staticDirs: [getAbsolutePath('../../../proprietary/assets/src')],
+  viteFinal: async (config) => {
+    const { mergeConfig } = await import('vite');
+    return mergeConfig(config, {
+      define: {
+        global: 'globalThis',
+        'process.env': {},
+      },
+      resolve: {
+        alias: {
+          '~@utrecht': resolve(__dirname, '../node_modules/@utrecht'),
+          path: require.resolve('path-browserify'),
+        },
+      },
+      assetsInclude: ['**/*.md'],
+      css: {
+        preprocessorOptions: {
+          scss: {
+            // Temporary fix for the SCSS @import deprecation in Storybook 9
+            // Remove once all @utrecht packages have been migrated to @use
+            silenceDeprecations: ['import'],
+            includePaths: [resolve(__dirname, '../node_modules/@utrecht')],
+          },
+        },
+      },
+    });
+  },
 
   // refs: (_, { configType }) => ({
   //   angular: {

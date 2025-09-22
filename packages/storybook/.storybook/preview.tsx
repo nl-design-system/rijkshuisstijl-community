@@ -22,7 +22,6 @@ import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
 import { Fragment } from 'react';
 import { syncPrettify } from './Prettify';
-import { ThemeProvider, themes } from '@storybook/theming';
 
 const preview: Preview = {
   decorators: [
