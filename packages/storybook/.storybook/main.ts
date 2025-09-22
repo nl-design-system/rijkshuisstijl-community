@@ -1,5 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-vite';
-import { dirname, join, resolve } from 'path';
+import { dirname, join } from 'path';
 
 // Utility to resolve the absolute path of a package
 // https://storybook.js.org/docs/faq#how-do-i-fix-module-resolution-in-special-environments
@@ -61,33 +61,7 @@ const config: StorybookConfig = {
     name: getAbsolutePath('@storybook/react-vite'),
     options: {},
   },
-  staticDirs: [getAbsolutePath('../../../proprietary/assets/src')],
-  viteFinal: async (config) => {
-    const { mergeConfig } = await import('vite');
-    return mergeConfig(config, {
-      define: {
-        global: 'globalThis',
-        'process.env': {},
-      },
-      resolve: {
-        alias: {
-          '~@utrecht': resolve(__dirname, '../node_modules/@utrecht'),
-          path: require.resolve('path-browserify'),
-        },
-      },
-      assetsInclude: ['**/*.md'],
-      css: {
-        preprocessorOptions: {
-          scss: {
-            // Temporary fix for the SCSS @import deprecation in Storybook 9
-            // Remove once all @utrecht packages have been migrated to @use
-            silenceDeprecations: ['import'],
-            includePaths: [resolve(__dirname, '../node_modules/@utrecht')],
-          },
-        },
-      },
-    });
-  },
+  staticDirs: ['../../../proprietary/assets/src'],
 
   // refs: (_, { configType }) => ({
   //   angular: {
