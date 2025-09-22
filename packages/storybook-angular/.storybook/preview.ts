@@ -1,9 +1,13 @@
 import { componentWrapperDecorator, type Preview } from '@storybook/angular';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import OverviewPage from './overview.mdx';
+import { syncPrettify } from './prettify';
 
 const preview: Preview = {
   parameters: {
+    html: {
+      transform: syncPrettify,
+    },
     docs: {
       page: OverviewPage,
       source: {

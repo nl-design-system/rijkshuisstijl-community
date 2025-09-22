@@ -21,7 +21,7 @@ import { Preview } from '@storybook/react-vite';
 import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
 import { Fragment } from 'react';
-import { syncPrettify } from './Prettify';
+import { syncPrettify } from './prettify';
 
 const preview: Preview = {
   decorators: [
@@ -135,6 +135,9 @@ const preview: Preview = {
       codePanel: true,
       source: {
         excludeDecorators: true,
+        // Show code by default.
+        // Stories without concise code snippets can hide the code at Story level.
+        state: 'open',
       },
     },
   },
