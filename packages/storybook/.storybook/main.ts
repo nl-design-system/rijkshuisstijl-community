@@ -63,15 +63,15 @@ const config: StorybookConfig = {
   },
   staticDirs: ['../../../proprietary/assets/src'],
 
-  // refs: (_, { configType }) => ({
-  //   angular: {
-  //     title: 'Angular Storybook',
-  //     url:
-  //       configType === 'DEVELOPMENT'
-  //         ? 'http://localhost:6008'
-  //         : 'https://rijkshuisstijl-community-storybook-angular.vercel.app/',
-  //   },
-  // }),
+  refs: (_, { configType }) => ({
+    angular: {
+      title: 'Angular Storybook',
+      url:
+        configType === 'DEVELOPMENT'
+          ? 'http://localhost:6008'
+          : 'https://rijkshuisstijl-community-storybook-angular.vercel.app/',
+    },
+  }),
 };
 
 export default config;
