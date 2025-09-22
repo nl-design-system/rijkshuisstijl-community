@@ -53,9 +53,6 @@ const config: StorybookConfig = {
     getAbsolutePath('storybook-addon-pseudo-states'),
     '@whitespace/storybook-addon-html',
   ],
-  typescript: {
-    reactDocgen: 'react-docgen-typescript',
-  },
 
   framework: {
     name: getAbsolutePath('@storybook/react-vite'),

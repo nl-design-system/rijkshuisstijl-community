@@ -36,7 +36,7 @@ const config: StorybookConfig = {
   staticDirs: ['../../../proprietary/assets/src'],
 
   framework: {
-    name: '@storybook/angular',
+    name: getAbsolutePath('@storybook/angular'),
     options: {},
   },
 };
