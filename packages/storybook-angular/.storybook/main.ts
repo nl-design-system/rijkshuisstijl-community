@@ -1,14 +1,5 @@
 import type { StorybookConfig } from '@storybook/angular';
 
-import { join, dirname } from 'path';
-
-/**
- * This function is used to resolve the absolute path of a package.
- * It is needed in projects that use Yarn PnP or are set up within a monorepo.
- */
-function getAbsolutePath(value: string): any {
-  return dirname(require.resolve(join(value, 'package.json')));
-}
 const config: StorybookConfig = {
   stories: [
     {
@@ -24,12 +15,12 @@ const config: StorybookConfig = {
   ],
 
   addons: [
-    getAbsolutePath('@chromatic-com/storybook'),
-    getAbsolutePath('@storybook/addon-webpack5-compiler-babel'),
-    getAbsolutePath('storybook-addon-pseudo-states'),
-    getAbsolutePath('@whitespace/storybook-addon-html'),
-    getAbsolutePath('@storybook/addon-themes'),
-    getAbsolutePath('@storybook/addon-docs'),
+    '@chromatic-com/storybook',
+    '@storybook/addon-webpack5-compiler-babel',
+    'storybook-addon-pseudo-states',
+    '@whitespace/storybook-addon-html',
+    '@storybook/addon-themes',
+    '@storybook/addon-docs',
   ],
 
   core: {
@@ -40,7 +31,7 @@ const config: StorybookConfig = {
   staticDirs: ['../../../proprietary/assets/src'],
 
   framework: {
-    name: getAbsolutePath('@storybook/angular'),
+    name: '@storybook/angular',
     options: {},
   },
 };

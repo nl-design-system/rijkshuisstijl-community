@@ -1,12 +1,9 @@
-import { createRequire } from 'node:module';
-import { dirname, join } from 'node:path';
 import type { StorybookConfig } from '@storybook/react-vite';
-
-const require = createRequire(import.meta.url);
 
 const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
+    disableWhatsNewNotifications: true,
   },
 
   stories: [
@@ -50,7 +47,6 @@ const config: StorybookConfig = {
     '@storybook/addon-themes',
     'storybook-addon-pseudo-states',
     '@whitespace/storybook-addon-html',
-    '@storybook/addon-interactions',
   ],
 
   framework: {
