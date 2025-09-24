@@ -582,6 +582,12 @@
           "value": "#000",
           "type": "color"
         },
+        "transparent": {
+          "30": {
+            "value": "rgba(0,0,0,0.3)",
+            "type":"color"
+          }
+        },
         "none": {
           "value": "transparent",
           "type": "color"
@@ -974,6 +980,10 @@
             "value": "{rhc.color.zwart}",
             "type": "color"
           }
+        },
+        "backdrop":{
+          "value": "{rhc.color.transparent.30}",
+          "type": "color"
         },
         "border": {
           "default": {
@@ -1667,10 +1677,10 @@
   },
   "components/action-group": {
     "utrecht": {
-      "button-group": {
+      "action-group": {
         "background-color": {
           "type": "color",
-          "value": "transparent"
+          "value": "{rhc.color.none}"
         },
         "column-gap": {
           "type": "dimension",
@@ -1678,11 +1688,11 @@
         },
         "padding-block-end": {
           "type": "dimension",
-          "value": "0px"
+          "value": "{rhc.space.0}"
         },
         "padding-block-start": {
           "type": "dimension",
-          "value": "0px"
+          "value": "{rhc.space.0}"
         },
         "row-gap": {
           "type": "dimension",
@@ -1859,6 +1869,35 @@
         "max-inline-size": {
           "value": "75ch",
           "type": "spacing"
+        }
+      }
+    }
+  },
+  "components/backdrop": {
+    "utrecht": {
+      "backdrop": {
+        "background-color": {
+          "value": "{rhc.color.backdrop}",
+          "type": "color"
+        },
+        "color": {
+          "value": "{rhc.color.foreground.default}",
+          "type": "color"
+        },
+        "opacity": {
+          "value": "0.8",
+          "type": "opacity"
+        },
+        "fade-in": {
+          "animation-duration": {
+            "value": "400ms"
+          }
+        },
+        "reduced-transparency": {
+          "opacity": {
+            "value": "0.98",
+            "type": "opacity"
+          }
         }
       }
     }
@@ -3856,6 +3895,56 @@
         "size": {
           "value": "{rhc.size.quarter-lint}",
           "type": "size"
+        }
+      }
+    }
+  },
+  "components/drawer": {
+    "utrecht": {
+      "drawer": {
+        "max-inline-size": {
+          "value": "256px",
+          "type": "spacing"
+        },
+        "z-index": {
+          "type": "dimension",
+          "value": "1"
+        },
+        "background-color": {
+          "value": "{rhc.color.wit}",
+          "type": "color"
+        },
+        "border-color": {
+          "value": "{rhc.color.border.default}",
+          "type": "color"
+        },
+        "border-width": {
+          "type": "dimension",
+          "value": "{rhc.border-width.none}"
+        },
+        "color": {
+          "value": "{rhc.color.foreground.default}",
+          "type": "color"
+        },
+        "max-block-size": {
+          "value": "240px",
+          "type": "dimension"
+        },
+        "padding-block-start": {
+          "value": "{rhc.space.200}",
+          "type": "spacing"
+        },
+        "padding-block-end": {
+          "value": "{rhc.space.200}",
+          "type": "spacing"
+        },
+        "padding-inline-start": {
+          "value": "{rhc.space.200}",
+          "type": "spacing"
+        },
+        "padding-inline-end": {
+          "value": "{rhc.space.200}",
+          "type": "spacing"
         }
       }
     }
@@ -9615,11 +9704,13 @@
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
         "components/article": "enabled",
+        "components/backdrop": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/dot-badge": "enabled",
+        "components/drawer": "enabled",
         "components/fieldset": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
@@ -9710,11 +9801,13 @@
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
         "components/article": "enabled",
+        "components/backdrop": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/dot-badge": "enabled",
+        "components/drawer": "enabled",
         "components/fieldset": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
@@ -9806,11 +9899,13 @@
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
         "components/article": "enabled",
+        "components/backdrop": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/dot-badge": "enabled",
+        "components/drawer": "enabled",
         "components/fieldset": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
@@ -9904,11 +9999,13 @@
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
         "components/article": "enabled",
+        "components/backdrop": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/dot-badge": "enabled",
+        "components/drawer": "enabled",
         "components/fieldset": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
@@ -10000,11 +10097,13 @@
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
         "components/article": "enabled",
+        "components/backdrop": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/dot-badge": "enabled",
+        "components/drawer": "enabled",
         "components/fieldset": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
@@ -10096,11 +10195,13 @@
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
         "components/article": "enabled",
+        "components/backdrop": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/dot-badge": "enabled",
+        "components/drawer": "enabled",
         "components/fieldset": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
@@ -10192,11 +10293,13 @@
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
         "components/article": "enabled",
+        "components/backdrop": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/dot-badge": "enabled",
+        "components/drawer": "enabled",
         "components/fieldset": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
@@ -10288,11 +10391,13 @@
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
         "components/article": "enabled",
+        "components/backdrop": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/dot-badge": "enabled",
+        "components/drawer": "enabled",
         "components/fieldset": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
@@ -10384,12 +10489,14 @@
         "utrecht/rich-text": "enabled",
         "utrecht/document": "enabled",
         "components/article": "enabled",
+        "components/backdrop": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
         "components/code-input-group": "enabled",
         "components/code-input": "enabled",
         "components/data-summary": "enabled",
         "components/dot-badge": "enabled",
+        "components/drawer": "enabled",
         "components/fieldset": "enabled",
         "components/file-input": "enabled",
         "components/footer": "enabled",
@@ -10488,6 +10595,7 @@
       "components/action-group",
       "components/alert",
       "components/article",
+      "components/backdrop",
       "components/blockquote/base",
       "components/blockquote/deprecated",
       "components/breadcrumb",
@@ -10503,6 +10611,7 @@
       "components/data-badge-button",
       "components/data-summary",
       "components/dot-badge",
+      "components/drawer",
       "components/fieldset",
       "components/figure/base",
       "components/figure/deprecated",
