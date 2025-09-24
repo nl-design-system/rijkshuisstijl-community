@@ -3,6 +3,7 @@ import { provideTablerIcons, TablerIconComponent } from 'angular-tabler-icons';
 import { IconChevronRight } from 'angular-tabler-icons/icons';
 import readme from './footer.md';
 import {
+  BackToTopComponent,
   FooterComponent,
   HeadingComponent,
   IconComponent,
@@ -24,6 +25,7 @@ const meta: Meta<FooterComponent> = {
         HeadingComponent,
         TablerIconComponent,
         IconComponent,
+        BackToTopComponent,
       ],
       providers: [
         provideTablerIcons({
@@ -59,14 +61,6 @@ const meta: Meta<FooterComponent> = {
       },
     },
 
-    backtotop: {
-      description: 'Toon de "Terug naar boven" knop.',
-      control: { type: 'boolean' },
-      table: {
-        type: { summary: 'boolean' },
-      },
-    },
-
     preFooter: {
       description: 'Het balkje die boven de footer wordt getoond.',
       defaultValue: false,
@@ -84,13 +78,21 @@ const meta: Meta<FooterComponent> = {
         type: { summary: 'string' },
       },
     },
+    subFooter: {
+      description: 'Het balkje die onder de footer wordt getoond.',
+      defaultValue: true,
+      control: { type: 'boolean' },
+      table: {
+        type: { summary: 'boolean' },
+      },
+    },
   },
   args: {
     heading: 'Heading',
     preFooter: true,
     preFooterMessage: 'Pre Footer Message',
     background: 'primary-filled',
-    backtotop: true,
+    subFooter: true,
   },
   parameters: {
     docs: {
@@ -99,15 +101,15 @@ const meta: Meta<FooterComponent> = {
       },
     },
   },
-  render: ({ heading, background, backtotop, preFooter, preFooterMessage, appearanceLevel }) => ({
+  render: ({ heading, background, preFooter, preFooterMessage, appearanceLevel, subFooter }) => ({
     template: `
       <footer rhc-footer
         [preFooter]="${preFooter}"
         [preFooterMessage]="'${preFooterMessage}'"
         [background]="'${background}'"
-        [backtotop]="${backtotop}"
         [heading]="'${heading}'"
         [appearanceLevel] = "${appearanceLevel}"
+        [subFooter]="${subFooter}"
       >
         <div class="rhc-page-footer__section" columns>
           <rhc-heading [level]="${heading ? 3 : 2}" [appearanceLevel]="${appearanceLevel}">
@@ -201,12 +203,34 @@ const meta: Meta<FooterComponent> = {
               </li>                                   
           </rhc-link-list>
         </div>
+        <rhc-link-list subFooter></rhc-link-list>
+        <rhc-back-to-top subFooter>
+            Terug naar boven
+            <rhc-icon>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-up"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 5l0 14" />
+                <path d="M16 9l-4 -4" />
+                <path d="M8 9l4 -4" />
+              </svg>
+            </rhc-icon>
+        </rhc-back-to-top>
       </footer>
     `,
     props: {
       heading,
       background,
-      backtotop,
       preFooter,
       preFooterMessage,
     },
