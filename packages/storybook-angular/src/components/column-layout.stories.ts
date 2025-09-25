@@ -43,6 +43,4 @@ const meta: Meta<ColumnLayoutComponent> = {
 
 export default meta;
 
-export const Default: StoryObj<ColumnLayoutComponent> = {
-  name: 'Default',
-};
+export const Default: StoryObj<ColumnLayoutComponent> = {};
