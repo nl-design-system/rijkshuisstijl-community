@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/components-angular
 
+## 4.0.0
+
+### Major Changes
+
+- 8e189de: Updated Action Group to new version from Utrecht
+  - added column-stretch option for direction prop
+
 ## 3.0.0
 
 ### Major Changes

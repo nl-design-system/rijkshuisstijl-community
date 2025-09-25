@@ -14,15 +14,6 @@ const meta = {
       name: 'attribution',
       type: { name: 'string', required: false },
     },
-    variation: {
-      name: 'variation',
-      type: { name: 'string', required: false },
-      control: {
-        type: 'select',
-      },
-      options: ['', 'blue-corner-border', 'pink-background', 'pink-left-border', 'pink-corner-border'],
-      defaultValue: '',
-    },
   },
   args: {
     children: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
@@ -57,37 +48,5 @@ export const Attribution = {
   args: {
     children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
     attribution: '— Pippi Langkous',
-  },
-} as StoryObj<typeof meta>;
-
-export const blueCornerBorder = {
-  args: {
-    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
-    attribution: '— Pippi Langkous',
-    variation: 'blue-corner-border',
-  },
-} as StoryObj<typeof meta>;
-
-export const pinkBackground = {
-  args: {
-    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
-    attribution: '— Pippi Langkous',
-    variation: 'pink-background',
-  },
-} as StoryObj<typeof meta>;
-
-export const pinkLeftBorder = {
-  args: {
-    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
-    attribution: '— Pippi Langkous',
-    variation: 'pink-left-border',
-  },
-} as StoryObj<typeof meta>;
-
-export const pinkCornerBorder = {
-  args: {
-    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
-    attribution: '— Pippi Langkous',
-    variation: 'pink-corner-border',
   },
 } as StoryObj<typeof meta>;

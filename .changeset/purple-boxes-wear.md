@@ -5,6 +5,4 @@
 '@rijkshuisstijl-community/components-css': major
 ---
 
-Updated Action Group to new version from Utrecht
-
-- added column-stretch option for direction prop
+Removed the icon from form field error message
