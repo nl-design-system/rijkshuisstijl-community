@@ -6,13 +6,7 @@
   </div>
 }
 
-<footer
-  [class]="
-    'utrecht-page-footer rhc-page-footer' +
-    (background ? ' rhc-page-footer--' + background : '') +
-    (background === 'primary' ? ' rhc-page-footer--primary-filled' : '')
-  "
->
+<footer [class]="`utrecht-page-footer rhc-page-footer ${backgroundClass}`">
   <div class="rhc-page-footer__content rhc-page-footer__wrapper">
     @if (heading) {
       <div class="rhc-page-footer__title">
@@ -25,13 +19,7 @@
   </div>
 
   @if (subFooter) {
-    <div
-      [class]="
-        'rhc-page-subfooter' +
-        (background ? ' rhc-page-footer--' + background : '') +
-        (background ? ' rhc-page-footer--primary-filled' : '')
-      "
-    >
+    <div [class]="`rhc-page-subfooter ${backgroundClass}`">
       <div class="rhc-page-subfooter__content rhc-page-footer__wrapper">
         <ng-content select="[subFooter]"></ng-content>
       </div>

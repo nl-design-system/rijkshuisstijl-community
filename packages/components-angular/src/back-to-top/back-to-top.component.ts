@@ -4,6 +4,13 @@ import { Component } from '@angular/core';
   selector: 'rhc-back-to-top',
   imports: [],
   templateUrl: './back-to-top.component.html',
+  styles: [
+    `
+      :host {
+        margin-left: auto;
+      }
+    `,
+  ],
 })
 export class BackToTopComponent {
   scrollBackToTop = (event: MouseEvent) => {

@@ -10,10 +10,14 @@ import { type HeadingLevel } from '../heading/heading.component';
   styleUrl: './footer.component.css',
 })
 export class FooterComponent {
-  @Input() background?: string;
+  @Input() background: 'primary-filled' | 'primary-outlined' = 'primary-filled';
   @Input() preFooter?: boolean;
   @Input() preFooterMessage?: string;
   @Input() heading?: string;
   @Input() appearanceLevel: HeadingLevel = 3;
   @Input() subFooter?: boolean;
+
+  get backgroundClass(): string {
+    return `rhc-page-footer--${this.background}`;
+  }
 }

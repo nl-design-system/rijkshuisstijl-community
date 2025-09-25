@@ -108,7 +108,7 @@ const meta: Meta<FooterComponent> = {
         [preFooter]="${preFooter}"
         [preFooterMessage]="'${preFooterMessage}'"
         [background]="'${background}'"
-        [heading]="'${heading}'"
+        ${heading ? '[heading] = "\'' + heading + '\'"' : ''}
         [appearanceLevel] = "${appearanceLevel}"
         [subFooter]="${subFooter}"
       >
@@ -204,7 +204,6 @@ const meta: Meta<FooterComponent> = {
               </li>                                   
           </rhc-link-list>
         </div>
-        <rhc-link-list subFooter></rhc-link-list>
         <rhc-back-to-top subFooter>
             Terug naar boven
             <rhc-icon icon><i-tabler name="arrow-narrow-up"/></rhc-icon>
@@ -224,4 +223,28 @@ export default meta;
 
 export const Default: StoryObj<FooterComponent> = {
   args: {},
+};
+
+export const NoPreFooter: StoryObj<FooterComponent> = {
+  args: {
+    preFooter: false,
+  },
+};
+
+export const NoSubFooter: StoryObj<FooterComponent> = {
+  args: {
+    subFooter: false,
+  },
+};
+
+export const PrimaryOutlined: StoryObj<FooterComponent> = {
+  args: {
+    background: 'primary-outlined',
+  },
+};
+
+export const NoHeading: StoryObj<FooterComponent> = {
+  args: {
+    heading: undefined,
+  },
 };
