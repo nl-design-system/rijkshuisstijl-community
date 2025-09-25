@@ -331,7 +331,6 @@ const meta: Meta<FormFieldTextInputComponent> = {
 export default meta;
 
 export const Default: StoryObj<FormFieldTextInputComponent> = {
-  name: 'Default',
   args: {
     name: 'subject',
     label: 'Onderwerp',
@@ -340,7 +339,6 @@ export const Default: StoryObj<FormFieldTextInputComponent> = {
 };
 
 export const Email: StoryObj<FormFieldTextInputComponent> = {
-  name: 'Email',
   render: () => ({
     template: `
     <form [formGroup]="form">
@@ -365,7 +363,6 @@ export const Email: StoryObj<FormFieldTextInputComponent> = {
 };
 
 export const Description: StoryObj<FormFieldTextInputComponent> = {
-  name: 'Description',
   args: {
     name: 'subject',
     label: 'Onderwerp',
@@ -399,7 +396,6 @@ export const Description: StoryObj<FormFieldTextInputComponent> = {
 };
 
 export const ErrorMessage: StoryObj<FormFieldTextInputComponent> = {
-  name: 'ErrorMessage',
   args: {
     name: 'subject',
     label: 'Onderwerp',
@@ -435,7 +431,6 @@ export const ErrorMessage: StoryObj<FormFieldTextInputComponent> = {
 };
 
 export const Status: StoryObj<FormFieldTextInputComponent> = {
-  name: 'Status',
   args: {
     name: 'subject',
     label: 'Onderwerp',
@@ -470,7 +465,6 @@ export const Status: StoryObj<FormFieldTextInputComponent> = {
 };
 
 export const Password: StoryObj<FormFieldTextInputComponent> = {
-  name: 'Password',
   args: {
     name: 'subject',
     label: 'Wachtwoord',
@@ -506,7 +500,6 @@ export const Password: StoryObj<FormFieldTextInputComponent> = {
 };
 
 export const Disabled: StoryObj<FormFieldTextInputComponent> = {
-  name: 'Disabled',
   args: {
     name: 'subject',
     label: 'Onderwerp',
@@ -540,7 +533,6 @@ export const Disabled: StoryObj<FormFieldTextInputComponent> = {
 };
 
 export const Readonly: StoryObj<FormFieldTextInputComponent> = {
-  name: 'Readonly',
   args: {
     name: 'subject',
     label: 'Onderwerp',
@@ -575,7 +567,6 @@ export const Readonly: StoryObj<FormFieldTextInputComponent> = {
 };
 
 export const Placeholder: StoryObj<FormFieldTextInputComponent> = {
-  name: 'Placeholder',
   args: {
     name: 'subject',
     label: 'Onderwerp',

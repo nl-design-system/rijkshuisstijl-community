@@ -1,6 +1,6 @@
 import { LinkWebComponent } from '@rijkshuisstijl-community/web-components';
 import { IconWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/link/README.md?raw';
 import anatomyDocs from '@utrecht/components/link/docs/anatomy.nl.md?raw';
 import contentDocs from '@utrecht/components/link/docs/content.nl.md?raw';
@@ -127,14 +127,14 @@ export const Default = {
   },
 } as StoryObj<typeof meta>;
 
-export const iconLeft = {
+export const IconLeft = {
   args: {
     children: [createElement('rhc-icon', { icon: 'home', classname: 'rhc-link__icon' }), 'Link'],
     href: '#',
   },
 } as StoryObj<typeof meta>;
 
-export const iconRight = {
+export const IconRight = {
   args: {
     children: ['Link', createElement('rhc-icon', { icon: 'chevron-right', classname: 'rhc-link__icon' })],
     href: '#',

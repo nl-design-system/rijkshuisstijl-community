@@ -1,5 +1,5 @@
 import { UnorderedList, UnorderedListItem } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './unorderedList.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 

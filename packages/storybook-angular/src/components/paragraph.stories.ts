@@ -40,5 +40,4 @@ export const Lead: StoryObj<ParagraphComponent> = {
   args: {
     appearance: 'lead',
   },
-  name: 'Lead',
 };

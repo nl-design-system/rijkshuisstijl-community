@@ -54,28 +54,24 @@ export const Default: StoryObj<ButtonComponent> = {
     appearance: '',
     disabled: false,
   },
-  name: 'Default',
 };
 
 export const Primary: StoryObj<ButtonComponent> = {
   args: {
     appearance: 'primary-action',
   },
-  name: 'Primary',
 };
 
 export const Secondary: StoryObj<ButtonComponent> = {
   args: {
     appearance: 'secondary-action',
   },
-  name: 'Secondary',
 };
 
 export const Subtle: StoryObj<ButtonComponent> = {
   args: {
     appearance: 'subtle',
   },
-  name: 'Subtle',
 };
 
 export const IconLeft: StoryObj<ButtonComponent> = {
@@ -98,7 +94,6 @@ export const IconLeft: StoryObj<ButtonComponent> = {
       imports: [IconComponent],
     },
   }),
-  name: 'Icon Left',
 };
 
 export const IconRight: StoryObj<ButtonComponent> = {
@@ -119,7 +114,6 @@ export const IconRight: StoryObj<ButtonComponent> = {
       imports: [IconComponent],
     },
   }),
-  name: 'Icon Right',
 };
 
 export const IconOnly: StoryObj<ButtonComponent> = {
@@ -142,5 +136,4 @@ export const IconOnly: StoryObj<ButtonComponent> = {
       imports: [IconComponent],
     },
   }),
-  name: 'Icon Only',
 };

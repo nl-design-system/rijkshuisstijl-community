@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Heading, PageHeader } from '@rijkshuisstijl-community/components-react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './page-header.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 

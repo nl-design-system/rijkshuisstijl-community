@@ -1,5 +1,5 @@
 import { LinkListCard, LinkListLink } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { ComponentProps } from 'react';
 import readme from './link-list-card.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
