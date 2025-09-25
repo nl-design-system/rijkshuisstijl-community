@@ -1890,7 +1890,8 @@
         },
         "fade-in": {
           "animation-duration": {
-            "value": "400ms"
+            "value": "400ms",
+            "type": "other"
           }
         },
         "reduced-transparency": {
@@ -9457,7 +9458,8 @@
       }
     }
   },
-  "overwrites/koop/link": {
+  "logius/digid/own-overwrites": {},
+  "logius/koop/link": {
     "nl": {
       "link": {
         "active": {
@@ -9503,6 +9505,54 @@
       }
     }
   },
+  "logius/mo/own-overwrites": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "value": "{rhc.color.hemelblauw.50}",
+            "type": "color"
+          },
+          "100": {
+            "value": "{rhc.color.hemelblauw.100}",
+            "type": "color"
+          },
+          "200": {
+            "value": "{rhc.color.hemelblauw.200}",
+            "type": "color"
+          },
+          "300": {
+            "value": "{rhc.color.hemelblauw.300}",
+            "type": "color"
+          },
+          "400": {
+            "value": "{rhc.color.hemelblauw.400}",
+            "type": "color"
+          },
+          "500": {
+            "value": "{rhc.color.hemelblauw.500}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{rhc.color.primary.500}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "darken",
+                  "value": "0.3",
+                  "space": "lch"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "logius/mo/own-component": {},
+  "rvo/own-overwrites": {},
+  "rvo/own-components": {},
   "$themes": [
     {
       "id": "05865788a086eeac7ffc4514736ccd777f1ff95c",
@@ -10325,7 +10375,6 @@
         "overwrites/nav-bar/lintblauw-outline": "enabled",
         "overwrites/closed-source/font": "enabled",
         "components/action-group": "enabled",
-        "overwrites/koop/link": "enabled",
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
@@ -10358,7 +10407,8 @@
         "components/form-field/deprecated": "enabled",
         "components/radio-button/deprecated": "enabled",
         "components/select/deprecated": "enabled",
-        "components/text-input/deprecated": "enabled"
+        "components/text-input/deprecated": "enabled",
+        "logius/koop/link": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10485,7 +10535,12 @@
       "overwrites/font-weight/bzk",
       "overwrites/closed-source/font",
       "overwrites/afwijkende keuzes/button",
-      "overwrites/koop/link"
+      "logius/digid/own-overwrites",
+      "logius/koop/link",
+      "logius/mo/own-overwrites",
+      "logius/mo/own-component",
+      "rvo/own-overwrites",
+      "rvo/own-components"
     ]
   }
 }
