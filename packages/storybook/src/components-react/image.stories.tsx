@@ -90,5 +90,4 @@ export const Decorative: Story = {
     width: 640,
     src: './placeholder.jpg',
   },
-  name: 'Decorative',
 };

@@ -113,5 +113,4 @@ export const OverflowY: Story = {
       )),
     open: true,
   },
-  name: 'Overflow Y',
 };

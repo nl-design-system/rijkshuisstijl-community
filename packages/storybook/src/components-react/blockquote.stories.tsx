@@ -46,7 +46,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 export const Attribution: Story = {
-  name: 'Attribution',
   args: {
     children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
     attribution: '— Pippi Langkous',

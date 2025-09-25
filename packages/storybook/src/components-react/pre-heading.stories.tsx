@@ -33,7 +33,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  name: 'Default',
   args: {
     children: 'Stap 1 van 8',
     heading: <Heading level={2}>Introductie</Heading>,
