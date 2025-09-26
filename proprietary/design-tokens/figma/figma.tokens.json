@@ -582,12 +582,6 @@
           "value": "#000",
           "type": "color"
         },
-        "transparent": {
-          "30": {
-            "value": "rgba(0,0,0,0.3)",
-            "type":"color"
-          }
-        },
         "none": {
           "value": "transparent",
           "type": "color"
@@ -831,7 +825,7 @@
           "type": "dimension"
         },
         "3-lint": {
-          "value": "1440px",
+          "value": "144px",
           "type": "dimension"
         }
       }
@@ -980,10 +974,6 @@
             "value": "{rhc.color.zwart}",
             "type": "color"
           }
-        },
-        "backdrop":{
-          "value": "{rhc.color.transparent.30}",
-          "type": "color"
         },
         "border": {
           "default": {
@@ -1877,7 +1867,7 @@
     "utrecht": {
       "backdrop": {
         "background-color": {
-          "value": "{rhc.color.backdrop}",
+          "value": "rgba(0,0,0,0.3)",
           "type": "color"
         },
         "color": {
@@ -1890,7 +1880,8 @@
         },
         "fade-in": {
           "animation-duration": {
-            "value": "400ms"
+            "value": "400ms",
+            "type": "other"
           }
         },
         "reduced-transparency": {
@@ -1902,7 +1893,7 @@
       }
     }
   },
-  "components/blockquote/base": {
+  "components/blockquote": {
     "utrecht": {
       "blockquote": {
         "background-color": {
@@ -1978,182 +1969,24 @@
           }
         }
       }
-    }
-  },
-  "components/blockquote/deprecated": {
-    "rhc": {
-      "keep": {
-        "_comment": {
-          "type": "other",
-          "value": "⚠️ Deze tokens zijn legacy en worden vervangen door de tokenset components/blockquote."
-        }
-      }
     },
-    "utrecht": {
+    "rhc": {
       "blockquote": {
-        "border-block-end-width": {
-          "type": "dimension",
-          "value": "0"
-        },
-        "border-block-start-width": {
-          "type": "dimension",
-          "value": "0"
-        },
-        "border-end-end-radius": {
-          "type": "dimension",
-          "value": "0"
-        },
-        "border-end-start-radius": {
-          "type": "dimension",
-          "value": "0"
-        },
-        "border-inline-end-width": {
-          "type": "dimension",
-          "value": "0"
-        },
-        "border-start-end-radius": {
-          "type": "dimension",
-          "value": "0"
-        },
-        "border-start-start-radius": {
-          "type": "dimension",
-          "value": "0"
-        },
         "margin-block-end": {
-          "type": "dimension",
-          "value": "0"
+          "value": "{rhc.space.0}",
+          "type": "dimension"
         },
         "margin-block-start": {
-          "type": "dimension",
-          "value": "0"
+          "value": "{rhc.space.0}",
+          "type": "dimension"
         },
         "margin-inline-end": {
-          "type": "dimension",
-          "value": "0"
+          "value": "{rhc.space.0}",
+          "type": "dimension"
         },
         "margin-inline-start": {
-          "type": "dimension",
-          "value": "0"
-        },
-        "blue-corner-border-variation": {
-          "border-block-end-width": {
-            "type": "dimension",
-            "value": "{rhc.border-width.m}"
-          },
-          "border-color": {
-            "type": "color",
-            "value": "{rhc.color.primary.500}"
-          },
-          "border-end-end-radius": {
-            "type": "dimension",
-            "value": "3rem"
-          },
-          "border-inline-end-width": {
-            "type": "dimension",
-            "value": "{rhc.border-width.m}"
-          }
-        },
-        "caption": {
-          "color": {
-            "type": "color",
-            "value": "{rhc.color.lintblauw.500}"
-          },
-          "font-family": {
-            "type": "fontFamilies",
-            "value": "{rhc.font-family.primary}"
-          },
-          "font-size": {
-            "type": "fontSizes",
-            "value": "{rhc.font-size.body.default}"
-          },
-          "font-weight": {
-            "type": "fontWeights",
-            "value": "{rhc.font-weight.default}"
-          },
-          "line-height": {
-            "type": "lineHeights",
-            "value": "{rhc.line-height.body}"
-          },
-          "padding-block-start": {
-            "type": "dimension",
-            "value": "{rhc.space.150}"
-          }
-        },
-        "content": {
-          "font-family": {
-            "type": "fontFamilies",
-            "value": "{rhc.font-family.primary}"
-          },
-          "font-weight": {
-            "type": "fontWeights",
-            "value": "{rhc.font-weight.default}"
-          },
-          "line-height": {
-            "type": "lineHeights",
-            "value": "{rhc.line-height.body}"
-          }
-        },
-        "pink-background-variation": {
-          "background-color": {
-            "type": "color",
-            "value": "{rhc.color.roze.300}"
-          },
-          "border-end-start-radius": {
-            "type": "dimension",
-            "value": "3rem"
-          },
-          "padding": {
-            "type": "dimension",
-            "value": "{rhc.space.500}"
-          }
-        },
-        "pink-corner-border-variation": {
-          "border-block-start-width": {
-            "type": "dimension",
-            "value": "0.25rem"
-          },
-          "border-color": {
-            "type": "color",
-            "value": "{rhc.color.roze.300}"
-          },
-          "border-inline-start-width": {
-            "type": "dimension",
-            "value": "0.25rem"
-          },
-          "border-start-start-radius": {
-            "type": "dimension",
-            "value": "3rem"
-          },
-          "padding": {
-            "type": "dimension",
-            "value": "{rhc.space.500}"
-          }
-        },
-        "pink-left-border-variation": {
-          "border-color": {
-            "type": "color",
-            "value": "{rhc.color.roze.300}"
-          },
-          "border-inline-start-width": {
-            "type": "dimension",
-            "value": "0.75rem"
-          },
-          "padding-block-end": {
-            "type": "dimension",
-            "value": "{rhc.space.300}"
-          },
-          "padding-block-start": {
-            "type": "dimension",
-            "value": "{rhc.space.300}"
-          },
-          "padding-inline-end": {
-            "type": "dimension",
-            "value": "{rhc.space.500}"
-          },
-          "padding-inline-start": {
-            "type": "dimension",
-            "value": "{rhc.space.500}"
-          }
+          "value": "{rhc.space.0}",
+          "type": "dimension"
         }
       }
     }
@@ -4330,7 +4163,7 @@
       }
     }
   },
-  "components/form-field-description/base": {
+  "components/form-field-description": {
     "utrecht": {
       "form-field-description": {
         "color": {
@@ -4362,17 +4195,7 @@
       }
     }
   },
-  "components/form-field-description/deprecated": {
-    "utrecht": {
-      "form-field-description": {
-        "padding-block-end": {
-          "value": "{rhc.space.100}",
-          "type": "dimension"
-        }
-      }
-    }
-  },
-  "components/form-field-error-message/base": {
+  "components/form-field-error-message": {
     "utrecht": {
       "form-field-error-message": {
         "background-color": {
@@ -4434,22 +4257,6 @@
           "value": "{rhc.space.100}"
         },
         "icon": {
-          "size": {
-            "type": "dimension",
-            "value": "{rhc.size.icon.functional}"
-          }
-        }
-      }
-    }
-  },
-  "components/form-field-error-message/deprecated": {
-    "utrecht": {
-      "form-field-error-message": {
-        "icon": {
-          "margin-inline-end": {
-            "type": "dimension",
-            "value": "{rhc.space.100}"
-          },
           "size": {
             "type": "dimension",
             "value": "{rhc.size.icon.functional}"
@@ -5478,6 +5285,10 @@
           "column-gap": {
             "value": "{rhc.space.100}",
             "type": "spacing"
+          },
+          "font-size": {
+            "value": "{rhc.font-size.body.default}",
+            "type": "fontSizes"
           }
         },
         "heading": {
@@ -9753,18 +9564,15 @@
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
         "components/alert": "enabled",
-        "components/blockquote/base": "enabled",
-        "components/blockquote/deprecated": "enabled",
+        "components/blockquote": "enabled",
         "components/number-badge/nl": "enabled",
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled",
+        "components/form-field-description": "enabled",
+        "components/form-field-error-message": "enabled",
         "components/textarea/base": "enabled",
         "components/form-field-label/utrecht": "enabled",
-        "components/form-field-description/deprecated": "enabled",
-        "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
@@ -9851,18 +9659,15 @@
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
         "components/alert": "enabled",
-        "components/blockquote/base": "enabled",
-        "components/blockquote/deprecated": "enabled",
+        "components/blockquote": "enabled",
         "components/number-badge/nl": "enabled",
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled",
+        "components/form-field-description": "enabled",
+        "components/form-field-error-message": "enabled",
         "components/textarea/base": "enabled",
         "components/form-field-label/utrecht": "enabled",
-        "components/form-field-description/deprecated": "enabled",
-        "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
@@ -9951,18 +9756,15 @@
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
         "components/alert": "enabled",
-        "components/blockquote/base": "enabled",
-        "components/blockquote/deprecated": "enabled",
+        "components/blockquote": "enabled",
         "components/number-badge/nl": "enabled",
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled",
+        "components/form-field-description": "enabled",
+        "components/form-field-error-message": "enabled",
         "components/textarea/base": "enabled",
         "components/form-field-label/utrecht": "enabled",
-        "components/form-field-description/deprecated": "enabled",
-        "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
@@ -10049,18 +9851,15 @@
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
         "components/alert": "enabled",
-        "components/blockquote/base": "enabled",
-        "components/blockquote/deprecated": "enabled",
+        "components/blockquote": "enabled",
         "components/number-badge/nl": "enabled",
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled",
+        "components/form-field-description": "enabled",
+        "components/form-field-error-message": "enabled",
         "components/textarea/base": "enabled",
         "components/form-field-label/utrecht": "enabled",
-        "components/form-field-description/deprecated": "enabled",
-        "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
@@ -10147,18 +9946,15 @@
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
         "components/alert": "enabled",
-        "components/blockquote/base": "enabled",
-        "components/blockquote/deprecated": "enabled",
+        "components/blockquote": "enabled",
         "components/number-badge/nl": "enabled",
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled",
+        "components/form-field-description": "enabled",
+        "components/form-field-error-message": "enabled",
         "components/textarea/base": "enabled",
         "components/form-field-label/utrecht": "enabled",
-        "components/form-field-description/deprecated": "enabled",
-        "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
@@ -10245,18 +10041,15 @@
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
         "components/alert": "enabled",
-        "components/blockquote/base": "enabled",
-        "components/blockquote/deprecated": "enabled",
+        "components/blockquote": "enabled",
         "components/number-badge/nl": "enabled",
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled",
+        "components/form-field-description": "enabled",
+        "components/form-field-error-message": "enabled",
         "components/textarea/base": "enabled",
         "components/form-field-label/utrecht": "enabled",
-        "components/form-field-description/deprecated": "enabled",
-        "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
@@ -10343,18 +10136,15 @@
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
         "components/alert": "enabled",
-        "components/blockquote/base": "enabled",
-        "components/blockquote/deprecated": "enabled",
+        "components/blockquote": "enabled",
         "components/number-badge/nl": "enabled",
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled",
+        "components/form-field-description": "enabled",
+        "components/form-field-error-message": "enabled",
         "components/textarea/base": "enabled",
         "components/form-field-label/utrecht": "enabled",
-        "components/form-field-description/deprecated": "enabled",
-        "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
@@ -10441,18 +10231,15 @@
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
         "components/alert": "enabled",
-        "components/blockquote/base": "enabled",
-        "components/blockquote/deprecated": "enabled",
+        "components/blockquote": "enabled",
         "components/number-badge/nl": "enabled",
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled",
+        "components/form-field-description": "enabled",
+        "components/form-field-error-message": "enabled",
         "components/textarea/base": "enabled",
         "components/form-field-label/utrecht": "enabled",
-        "components/form-field-description/deprecated": "enabled",
-        "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
@@ -10542,18 +10329,15 @@
         "components/data-badge-button": "enabled",
         "components/accordion": "enabled",
         "components/alert": "enabled",
-        "components/blockquote/base": "enabled",
-        "components/blockquote/deprecated": "enabled",
+        "components/blockquote": "enabled",
         "components/number-badge/nl": "enabled",
         "components/number-badge/utrecht": "enabled",
         "components/figure/base": "enabled",
         "components/figure/deprecated": "enabled",
-        "components/form-field-description/base": "enabled",
-        "components/form-field-error-message/base": "enabled",
+        "components/form-field-description": "enabled",
+        "components/form-field-error-message": "enabled",
         "components/textarea/base": "enabled",
         "components/form-field-label/utrecht": "enabled",
-        "components/form-field-description/deprecated": "enabled",
-        "components/form-field-error-message/deprecated": "enabled",
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
@@ -10596,8 +10380,7 @@
       "components/alert",
       "components/article",
       "components/backdrop",
-      "components/blockquote/base",
-      "components/blockquote/deprecated",
+      "components/blockquote",
       "components/breadcrumb",
       "components/button",
       "components/card-as-link",
@@ -10620,10 +10403,8 @@
       "components/form-field/base",
       "components/form-field/deprecated",
       "components/form-field-checkbox-option",
-      "components/form-field-description/base",
-      "components/form-field-description/deprecated",
-      "components/form-field-error-message/base",
-      "components/form-field-error-message/deprecated",
+      "components/form-field-description",
+      "components/form-field-error-message",
       "components/form-field-label/utrecht",
       "components/form-field-label/todo",
       "components/form-field-option-label",
