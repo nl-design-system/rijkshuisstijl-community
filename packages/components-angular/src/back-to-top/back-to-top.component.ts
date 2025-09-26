@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 @Component({
   selector: 'rhc-back-to-top',
@@ -11,11 +11,19 @@ import { Component } from '@angular/core';
       }
     `,
   ],
+  providers: [
+    {
+      provide: Window,
+      useValue: window,
+    },
+  ],
 })
 export class BackToTopComponent {
+  private window = inject(Window);
+
   scrollBackToTop = (event: MouseEvent) => {
     event.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    this.window.scrollTo({ top: 0, behavior: 'smooth' });
     const targetElement = event.currentTarget as HTMLAnchorElement;
     const targetSelector = targetElement.getAttribute('href');
     if (!targetSelector) return;
