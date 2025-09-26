@@ -417,7 +417,7 @@ export const ErrorMessage: StoryObj<FormFieldTextInputComponent> = {
         [invalid]="invalid"
         [errorMessage]="errorMessage"
       >
-        <rhc-icon class="utrecht-form-field-error-message--icon-container-icon" icon>
+        <rhc-icon class="utrecht-form-field-error-message--icon-container-icon" error-icon>
           <svg
             xmlns="<http://www.w3.org/2000/svg>"
             width="24"

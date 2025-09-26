@@ -16,7 +16,11 @@
         [invalid]="cjibNummer.invalid && cjibNummer.touched"
         [required]="true"
         errorMessage="Het CJIB-nummer is verplicht."
-      />
+      >
+        <rhc-icon class="utrecht-form-field-error-message--icon-container-icon" error-icon>
+          <i-tabler name="exclamation-circle" />
+        </rhc-icon>
+      </rhc-form-field-text-input>
       <rhc-form-field-text-input
         formControlName="datum"
         inputId="datum"
@@ -27,7 +31,11 @@
         [invalid]="datum.invalid && datum.touched"
         [required]="true"
         errorMessage="De datum van overtreding is verplicht."
-      />
+      >
+        <rhc-icon class="utrecht-form-field-error-message--icon-container-icon" error-icon>
+          <i-tabler name="exclamation-circle" />
+        </rhc-icon>
+      </rhc-form-field-text-input>
       <rhc-form-field-text-input
         formControlName="tijd"
         inputId="tijd"
@@ -38,7 +46,11 @@
         [invalid]="tijd.invalid && tijd.touched"
         [required]="true"
         errorMessage="Het tijdstip van overtreding is verplicht."
-      />
+      >
+        <rhc-icon class="utrecht-form-field-error-message--icon-container-icon" error-icon>
+          <i-tabler name="exclamation-circle" />
+        </rhc-icon>
+      </rhc-form-field-text-input>
       <button rhc-button type="submit" [disabled]="form.invalid">
         <rhc-icon>
           <i-tabler name="search"></i-tabler>

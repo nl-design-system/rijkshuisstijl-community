@@ -13,6 +13,7 @@ import {
   IconCamera,
   IconCurrencyEuro,
   IconDownload,
+  IconExclamationCircle,
   IconExternalLink,
   IconHome,
   IconSearch,
@@ -35,6 +36,7 @@ import {
       IconBriefcase,
       IconArrowNarrowLeft,
       IconExternalLink,
+      IconExclamationCircle,
     }),
   ],
 })
