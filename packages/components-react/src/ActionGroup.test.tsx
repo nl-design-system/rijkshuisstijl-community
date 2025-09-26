@@ -51,7 +51,7 @@ describe('Action group', () => {
 
     const actionGroup = container.querySelector(':only-child');
 
-    expect(actionGroup).toHaveClass('utrecht-button-group');
+    expect(actionGroup).toHaveClass('utrecht-action-group');
   });
 
   it('can be hidden', () => {
