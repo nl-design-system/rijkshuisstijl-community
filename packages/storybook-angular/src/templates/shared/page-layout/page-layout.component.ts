@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
 import {
+  BackToTopComponent,
   FooterComponent,
+  HeadingComponent,
   IconComponent,
+  LinkListComponent,
+  LinkListItemComponent,
+  LinkListLinkComponent,
   LogoComponent,
   NavbarComponent,
   NavbarItemComponent,
@@ -9,8 +14,10 @@ import {
 import { provideTablerIcons, TablerIconComponent } from 'angular-tabler-icons';
 import {
   IconArrowNarrowLeft,
+  IconArrowNarrowUp,
   IconBriefcase,
   IconCamera,
+  IconChevronRight,
   IconCurrencyEuro,
   IconDownload,
   IconExternalLink,
@@ -21,7 +28,19 @@ import {
 
 @Component({
   selector: 'page-layout-component',
-  imports: [IconComponent, NavbarComponent, NavbarItemComponent, LogoComponent, FooterComponent, TablerIconComponent],
+  imports: [
+    IconComponent,
+    NavbarComponent,
+    NavbarItemComponent,
+    LogoComponent,
+    FooterComponent,
+    TablerIconComponent,
+    HeadingComponent,
+    LinkListComponent,
+    LinkListLinkComponent,
+    LinkListItemComponent,
+    BackToTopComponent,
+  ],
   templateUrl: './page-layout.component.html',
   styleUrls: ['./page-layout.component.css'],
   providers: [
@@ -35,6 +54,8 @@ import {
       IconBriefcase,
       IconArrowNarrowLeft,
       IconExternalLink,
+      IconChevronRight,
+      IconArrowNarrowUp,
     }),
   ],
 })

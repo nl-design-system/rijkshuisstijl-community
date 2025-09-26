@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Column, FooterComponent, subFooter } from './footer.component';
+import { FooterComponent } from './footer.component';
 import { ColumnLayoutComponent } from '../column-layout/column-layout.component';
 import { HeadingComponent } from '../heading/heading.component';
 import { IconComponent } from '../icon/icon.component';
@@ -34,25 +34,12 @@ import { LinkListLinkComponent } from '../link-list-link/link-list-link.componen
   ],
 })
 class FooterTestHostComponent {
-  @Input() background = 'primary';
+  @Input() background: 'primary-filled' | 'primary-outlined' = 'primary-filled';
   @Input() preFooter = true;
   @Input() preFooterMessage = 'Extra info above footer';
   @Input() heading = 'Footer heading';
   @Input() appearanceLevel = 3;
-  @Input() columns: Column[] = [
-    {
-      heading: 'Column 1',
-      appearanceLevel: 3,
-      items: [
-        { label: 'Link A', href: '/a' },
-        { label: 'Link B', href: '/b' },
-      ],
-    },
-  ];
-  @Input() subFooter: subFooter = {
-    items: [{ label: 'Sub link', href: '/sub' }],
-  };
-  @Input() backtotop = true;
+  @Input() subFooter = true;
 }
 describe('FooterComponent in host context', () => {
   let fixture: ComponentFixture<FooterTestHostComponent>;
@@ -75,21 +62,25 @@ describe('FooterComponent in host context', () => {
   it('should render the pre-footer message', () => {
     const span = fixture.nativeElement.querySelector('.rhc-page-prefooter__content');
     expect(span.textContent).toContain('Extra info above footer');
+
+    component.preFooter = false;
+    fixture.detectChanges();
+    const spanAfterChange = fixture.nativeElement.querySelector('.rhc-page-prefooter__content');
+    expect(spanAfterChange).toBeFalsy();
   });
 
-  it('should display the heading and one column section', () => {
+  it('should display the heading', () => {
     const heading = fixture.nativeElement.querySelector('.rhc-page-footer__title rhc-heading');
     expect(heading?.textContent).toContain('Footer heading');
-
-    const columnHeading = fixture.nativeElement.querySelector('.rhc-page-footer__section rhc-heading');
-    expect(columnHeading?.textContent).toContain('Column 1');
   });
 
-  it('should display subFooter and back-to-top link', () => {
-    const subFooterLink = fixture.nativeElement.querySelector('.rhc-page-subfooter__content a');
-    expect(subFooterLink?.textContent).toContain('Sub link');
+  it('should display subFooter based on input', () => {
+    const subFooterLink = fixture.nativeElement.querySelector('.rhc-page-subfooter');
+    expect(subFooterLink).toBeTruthy();
 
-    const backToTop = fixture.nativeElement.querySelector('.rhc-page-subfooter__backtotop');
-    expect(backToTop?.textContent).toContain('Terug naar boven');
+    component.subFooter = false;
+    fixture.detectChanges();
+    const subFooterLinkAfterChange = fixture.nativeElement.querySelector('.rhc-page-subfooter');
+    expect(subFooterLinkAfterChange).toBeFalsy();
   });
 });
