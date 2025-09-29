@@ -9,7 +9,7 @@
   <label rhc-form-label [for]="inputId">{{ label }}</label>
   <rhc-form-field-description>{{ description }}</rhc-form-field-description>
   <rhc-form-field-error-message>
-    <ng-content select="[error-icon]" icon></ng-content>{{ errorMessage }}
+    {{ errorMessage }}
   </rhc-form-field-error-message>
   <input
     rhc-text-input
