@@ -83,7 +83,7 @@ async function buildBaseTokens() {
     },
   });
 
-  StyleDictionaryBase.buildAllPlatforms();
+  await StyleDictionaryBase.buildAllPlatforms();
 }
 
 // This will build the themes
@@ -113,7 +113,7 @@ async function buildThemes() {
     });
 
     // Build this specific theme
-    StyleDictionaryTheme.buildAllPlatforms();
+    await StyleDictionaryTheme.buildAllPlatforms();
   }
 }
 
