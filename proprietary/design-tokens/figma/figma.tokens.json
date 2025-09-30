@@ -582,12 +582,6 @@
           "value": "#000",
           "type": "color"
         },
-        "transparent": {
-          "30": {
-            "value": "rgba(0,0,0,0.3)",
-            "type": "color"
-          }
-        },
         "none": {
           "value": "transparent",
           "type": "color"
@@ -980,10 +974,6 @@
             "value": "{rhc.color.zwart}",
             "type": "color"
           }
-        },
-        "backdrop": {
-          "value": "{rhc.color.transparent.30}",
-          "type": "color"
         },
         "border": {
           "default": {
@@ -1877,7 +1867,7 @@
     "utrecht": {
       "backdrop": {
         "background-color": {
-          "value": "{rhc.color.backdrop}",
+          "value": "rgba(0,0,0,0.3)",
           "type": "color"
         },
         "color": {
@@ -1890,7 +1880,8 @@
         },
         "fade-in": {
           "animation-duration": {
-            "value": "400ms"
+            "value": "400ms",
+            "type": "other"
           }
         },
         "reduced-transparency": {
