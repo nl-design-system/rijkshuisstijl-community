@@ -12,7 +12,7 @@ const normalizeThemeName = (name) => {
 const getPlatformsConfig = (buildPath, themeName) => {
   return {
     javascript: {
-      transforms: ['attribute/cti', 'name/cti/camel', 'color/hsl-4'],
+      transforms: ['attribute/cti', 'name/camel', 'color/hsl-4'],
       transformGroup: 'js',
       buildPath,
       files: [
@@ -43,7 +43,7 @@ const getPlatformsConfig = (buildPath, themeName) => {
       ],
     },
     Web: {
-      transforms: ['attribute/cti', 'name/cti/kebab', 'color/hsl-4'],
+      transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4'],
       buildPath,
       files: [
         {
@@ -76,12 +76,13 @@ const getPlatformsConfig = (buildPath, themeName) => {
 // This will build the base tokens without the themes and without the overwrites
 async function buildBaseTokens() {
   const config = getPlatformsConfig('dist/', 'rhc-theme');
-  const StyleDictionaryBase = StyleDictionary.extend({
+  const StyleDictionaryBase = new StyleDictionary({
     source: ['./src/**/base.tokens.json'],
     platforms: {
       ...config,
     },
   });
+  await StyleDictionaryBase.hasInitialized;
 
   await StyleDictionaryBase.buildAllPlatforms();
 }
