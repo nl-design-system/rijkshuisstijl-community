@@ -94,7 +94,8 @@ async function buildThemes() {
 
   // Process each theme separately
   for (const [theme, themeData] of Object.entries(themes)) {
-    const themesDir = `./src/generated/${normalizeThemeName(theme)}`;
+    const themeName = normalizeThemeName(theme);
+    const themesDir = `./src/generated/${themeName}`;
 
     // Create the theme directory if it doesn't exist
     if (!existsSync(themesDir)) {
@@ -104,10 +105,10 @@ async function buildThemes() {
     // Write individual theme tokens
     await writeFile(path.join(themesDir, `tokens.json`), JSON.stringify(themeData.tokens, null, 2));
 
-    const config = getPlatformsConfig(`dist/${normalizeThemeName(theme)}/`, normalizeThemeName(theme));
+    const config = getPlatformsConfig(`dist/${themeName}/`, themeName);
     // Create a separate Style Dictionary instance for each theme
     const StyleDictionaryTheme = new StyleDictionary({
-      source: [`./src/generated/${normalizeThemeName(theme)}/tokens.json`],
+      source: [`./src/generated/${themeName}/tokens.json`],
       platforms: {
         ...config,
       },
