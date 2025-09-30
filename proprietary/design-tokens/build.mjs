@@ -106,12 +106,13 @@ async function buildThemes() {
 
     const config = getPlatformsConfig(`dist/${normalizeThemeName(theme)}/`, normalizeThemeName(theme));
     // Create a separate Style Dictionary instance for each theme
-    const StyleDictionaryTheme = StyleDictionary.extend({
+    const StyleDictionaryTheme = new StyleDictionary({
       source: [`./src/generated/${normalizeThemeName(theme)}/tokens.json`],
       platforms: {
         ...config,
       },
     });
+    await StyleDictionaryTheme.hasInitialized;
 
     // Build this specific theme
     await StyleDictionaryTheme.buildAllPlatforms();
