@@ -86,9 +86,9 @@ export const Error: StoryObj<typeof meta> = {
   args: {
     label: 'Select option',
     children: [
-      <FormFieldCheckboxOption invalid key="1" label="Checkbox 1" />,
-      <FormFieldCheckboxOption invalid key="2" label="Checkbox 2" />,
-      <FormFieldCheckboxOption invalid key="3" label="Checkbox 3" />,
+      <FormFieldCheckboxOption key="1" label="Checkbox 1" />,
+      <FormFieldCheckboxOption key="2" label="Checkbox 2" />,
+      <FormFieldCheckboxOption key="3" label="Checkbox 3" />,
     ],
     errorMessage: 'This is an error message',
     invalid: true,
