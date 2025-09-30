@@ -77,6 +77,7 @@ const getPlatformsConfig = (buildPath, themeName) => {
 async function buildBaseTokens() {
   const config = getPlatformsConfig('dist/', 'rhc-theme');
   const StyleDictionaryBase = new StyleDictionary({
+    log: { verbosity: 'verbose' },
     source: ['./src/**/base.tokens.json'],
     platforms: {
       ...config,
@@ -108,6 +109,7 @@ async function buildThemes() {
     const config = getPlatformsConfig(`dist/${themeName}/`, themeName);
     // Create a separate Style Dictionary instance for each theme
     const StyleDictionaryTheme = new StyleDictionary({
+      log: { verbosity: 'verbose' },
       source: [`./src/generated/${themeName}/tokens.json`],
       platforms: {
         ...config,

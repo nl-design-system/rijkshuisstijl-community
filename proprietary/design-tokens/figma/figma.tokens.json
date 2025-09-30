@@ -959,7 +959,8 @@
           "subdued": {
             "parent": "mode/light",
             "$type": "color",
-            "$value": "{rhc.color.cool-grey.700}"
+            "$value": "{rhc.color.cool-grey.700}",
+            "$description": "Gebruik voor content die extra context biedt, maar niet essentieel is om de interface te begrijpen."
           },
           "link": {
             "$type": "color",
@@ -978,12 +979,14 @@
           "default": {
             "parent": "mode/light",
             "$type": "color",
-            "$value": "{rhc.color.cool-grey.500}"
+            "$value": "{rhc.color.cool-grey.500}",
+            "$description": "Border kleur"
           },
           "subdued": {
             "parent": "mode/light",
             "$type": "color",
-            "$value": "{rhc.color.cool-grey.400}"
+            "$value": "{rhc.color.cool-grey.400}",
+            "$description": "Subtiele border"
           },
           "strong": {
             "parent": "mode/light",
@@ -994,55 +997,64 @@
         "canvas": {
           "parent": "mode/light",
           "$type": "color",
-          "$value": "{rhc.color.wit}"
+          "$value": "{rhc.color.wit}",
+          "$description": "Gebruik deze kleur voor de achtergrond van de website, hierbovenop komen de background kleuren."
         },
         "feedback": {
           "success": {
             "default": {
               "parent": "mode/light",
               "$type": "color",
-              "$value": "{rhc.color.groen.500}"
+              "$value": "{rhc.color.groen.500}",
+              "$description": "Gebruik deze kleur om een positieve boodschap te benadrukken."
             },
             "subdued": {
               "parent": "mode/light",
               "$type": "color",
-              "$value": "{rhc.color.groen.50}"
+              "$value": "{rhc.color.groen.50}",
+              "$description": "Gebruik deze kleur om een positieve boodschap te highlighten."
             }
           },
           "info": {
             "default": {
               "parent": "mode/light",
               "$type": "color",
-              "$value": "{rhc.color.hemelblauw.500}"
+              "$value": "{rhc.color.hemelblauw.500}",
+              "$description": "Gebruik deze kleur om een informatieve boodschap te benadrukken."
             },
             "subdued": {
               "parent": "mode/light",
               "$type": "color",
-              "$value": "{rhc.color.hemelblauw.50}"
+              "$value": "{rhc.color.hemelblauw.50}",
+              "$description": "Gebruik deze kleur om een informatieve boodschap te highlighten."
             }
           },
           "error": {
             "default": {
               "parent": "mode/light",
               "$type": "color",
-              "$value": "{rhc.color.rood.500}"
+              "$value": "{rhc.color.rood.500}",
+              "$description": "Gebruik deze kleur om een negatieve boodschap te benadrukken."
             },
             "subdued": {
               "parent": "mode/light",
               "$type": "color",
-              "$value": "{rhc.color.rood.50}"
+              "$value": "{rhc.color.rood.50}",
+              "$description": "Gebruik deze kleur om een negatieve boodschap te highlighten."
             }
           },
           "warning": {
             "default": {
               "parent": "mode/light",
               "$type": "color",
-              "$value": "{rhc.color.donkergeel.500}"
+              "$value": "{rhc.color.donkergeel.500}",
+              "$description": "Gebruik deze kleur om een waarschuwing te benadrukken."
             },
             "subdued": {
               "parent": "mode/light",
               "$type": "color",
-              "$value": "{rhc.color.donkergeel.50}"
+              "$value": "{rhc.color.donkergeel.50}",
+              "$description": "Gebruik deze kleur om een waarschuwing te highlighten."
             }
           }
         },
@@ -1493,7 +1505,8 @@
       "accordion": {
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.0}"
+          "$value": "{rhc.space.0}",
+          "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
@@ -1640,11 +1653,13 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "{rhc.space.0}"
+            "$value": "{rhc.space.0}",
+            "$description": "[code-only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.space.0}"
+            "$value": "{rhc.space.0}",
+            "$description": "[code-only]"
           }
         }
       }
@@ -1705,11 +1720,13 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.150}"
+          "$value": "{rhc.space.150}",
+          "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.150}"
+          "$value": "{rhc.space.150}",
+          "$description": "[code-only]"
         },
         "padding-block-end": {
           "$type": "dimension",
@@ -2622,11 +2639,13 @@
       "button-group": {
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.0}"
+          "$value": "{rhc.space.0}",
+          "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.0}"
+          "$value": "{rhc.space.0}",
+          "$description": "[code-only]"
         }
       }
     }
@@ -3790,7 +3809,8 @@
           "disabled": {
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.foreground.subdued}"
+              "$value": "{rhc.color.foreground.subdued}",
+              "$description": "Do not use a disabled state"
             }
           }
         },
@@ -4092,11 +4112,13 @@
       "form-field": {
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.100}"
+          "$value": "{rhc.space.100}",
+          "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.100}"
+          "$value": "{rhc.space.100}",
+          "$description": "[code-only]"
         },
         "invalid": {
           "border-inline-start-color": {
@@ -4162,11 +4184,13 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.100}"
+          "$value": "{rhc.space.100}",
+          "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "-{rhc.space.100}"
+          "$value": "-{rhc.space.100}",
+          "$description": "[code-only]"
         }
       }
     }
@@ -4200,11 +4224,13 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.100}"
+          "$value": "{rhc.space.100}",
+          "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.0}"
+          "$value": "{rhc.space.0}",
+          "$description": "[code-only]"
         },
         "padding-block-end": {
           "$type": "dimension",
@@ -4409,11 +4435,13 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "{rhc.space.0}"
+            "$value": "{rhc.space.0}",
+            "$description": "[code only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.space.0}"
+            "$value": "{rhc.space.0}",
+            "$description": "[code only]"
           }
         },
         "level-2": {
@@ -4439,11 +4467,13 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "{rhc.space.0}"
+            "$value": "{rhc.space.0}",
+            "$description": "[code only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.space.0}"
+            "$value": "{rhc.space.0}",
+            "$description": "[code only]"
           }
         },
         "level-3": {
@@ -4469,11 +4499,13 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "{rhc.space.0}"
+            "$value": "{rhc.space.0}",
+            "$description": "[code-only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.space.0}"
+            "$value": "{rhc.space.0}",
+            "$description": "[code-only]"
           }
         },
         "level-4": {
@@ -4499,11 +4531,13 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "{rhc.space.0}"
+            "$value": "{rhc.space.0}",
+            "$description": "[code only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.space.0}"
+            "$value": "{rhc.space.0}",
+            "$description": "[code only]"
           }
         },
         "level-5": {
@@ -4529,11 +4563,13 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "{rhc.space.0}"
+            "$value": "{rhc.space.0}",
+            "$description": "[code only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.space.0}"
+            "$value": "{rhc.space.0}",
+            "$description": "[code only]"
           }
         },
         "level-6": {
@@ -4559,11 +4595,13 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "{rhc.space.0}"
+            "$value": "{rhc.space.0}",
+            "$description": "[code only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.space.0}"
+            "$value": "{rhc.space.0}",
+            "$description": "[code only]"
           }
         }
       }
@@ -4714,16 +4752,19 @@
         },
         "text-decoration-thickness": {
           "$type": "other",
-          "$value": "0.0625em"
+          "$value": "0.0625em",
+          "$description": "[code-only]"
         },
         "text-underline-offset": {
           "$type": "other",
-          "$value": "{rhc.space.25}"
+          "$value": "{rhc.space.25}",
+          "$description": "[code-only]"
         },
         "current": {
           "cursor": {
             "$type": "other",
-            "$value": "default"
+            "$value": "default",
+            "$description": "[code-only]"
           }
         },
         "active": {
@@ -4748,7 +4789,8 @@
           },
           "cursor": {
             "$type": "other",
-            "$value": "disabled"
+            "$value": "disabled",
+            "$description": "[code-only]"
           }
         },
         "hover": {
@@ -4758,7 +4800,8 @@
           },
           "text-decoration-thickness": {
             "$type": "other",
-            "$value": "auto"
+            "$value": "auto",
+            "$description": "[code-only]"
           },
           "color": {
             "$extensions": {
@@ -4816,11 +4859,13 @@
         },
         "text-decoration-thickness": {
           "$type": "other",
-          "$value": "0.0625em"
+          "$value": "0.0625em",
+          "$description": "[code-only]"
         },
         "text-underline-offset": {
           "$type": "other",
-          "$value": "{rhc.space.25}"
+          "$value": "{rhc.space.25}",
+          "$description": "[code-only]"
         },
         "icon": {
           "size": {
@@ -4863,7 +4908,8 @@
           },
           "text-decoration-thickness": {
             "$type": "other",
-            "$value": "0.1875em"
+            "$value": "0.1875em",
+            "$description": "[code-only]"
           }
         },
         "focus": {
@@ -4883,7 +4929,8 @@
           },
           "text-decoration-thickness": {
             "$type": "other",
-            "$value": "0.0625em"
+            "$value": "0.0625em",
+            "$description": "[code-only]"
           }
         },
         "visited": {
@@ -4900,11 +4947,13 @@
       "link-list": {
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.0}"
+          "$value": "{rhc.space.0}",
+          "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.0}"
+          "$value": "{rhc.space.0}",
+          "$description": "[code-only]"
         },
         "row-gap": {
           "$type": "dimension",
@@ -5508,11 +5557,13 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.50}"
+          "$value": "{rhc.space.50}",
+          "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.50}"
+          "$value": "{rhc.space.50}",
+          "$description": "[code-only]"
         },
         "padding-inline-start": {
           "$type": "dimension",
@@ -5582,11 +5633,13 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.0}"
+          "$value": "{rhc.space.0}",
+          "$description": "[code only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.0}"
+          "$value": "{rhc.space.0}",
+          "$description": "[code only]"
         },
         "lead": {
           "font-size": {
@@ -5603,11 +5656,13 @@
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "{rhc.space.0}"
+            "$value": "{rhc.space.0}",
+            "$description": "[code only]"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.space.0}"
+            "$value": "{rhc.space.0}",
+            "$description": "[code only]"
           }
         }
       }
@@ -6112,11 +6167,13 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.150}"
+          "$value": "{rhc.space.150}",
+          "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.150}"
+          "$value": "{rhc.space.150}",
+          "$description": "[code-only]"
         }
       }
     }
@@ -6277,11 +6334,13 @@
         },
         "text-decoration-thickness": {
           "$type": "other",
-          "$value": "0.0625em"
+          "$value": "0.0625em",
+          "$description": "[code-only]"
         },
         "text-underline-offset": {
           "$type": "other",
-          "$value": "{utrecht.link.text-underline-offset}"
+          "$value": "{utrecht.link.text-underline-offset}",
+          "$description": "[code-only]"
         },
         "line-height": {
           "$type": "lineHeights",
@@ -7125,11 +7184,13 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.50}"
+          "$value": "{rhc.space.50}",
+          "$description": "[code-only]"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.50}"
+          "$value": "{rhc.space.50}",
+          "$description": "[code-only]"
         },
         "padding-inline-start": {
           "$type": "dimension",
