@@ -87,7 +87,7 @@ async function buildBaseTokens() {
       ...config,
     },
   });
-  register(StyleDictionaryBase);
+  register(StyleDictionaryBase, { excludeParentKeys: true });
   await StyleDictionaryBase.hasInitialized;
 
   await StyleDictionaryBase.buildAllPlatforms();
@@ -121,7 +121,7 @@ async function buildThemes() {
         ...config,
       },
     });
-    register(StyleDictionaryTheme);
+    register(StyleDictionaryTheme, { excludeParentKeys: true });
     await StyleDictionaryTheme.hasInitialized;
 
     // Build this specific theme
