@@ -3,6 +3,8 @@ import { readFile, writeFile } from 'node:fs/promises';
 import path from 'path';
 import StyleDictionary from 'style-dictionary';
 
+import { register } from '@tokens-studio/sd-transforms';
+
 // Will take the theme name and remove all spaces and make it lowercase
 const normalizeThemeName = (name) => {
   return name.toLowerCase().replace(/\s+/g, '');
@@ -12,8 +14,8 @@ const normalizeThemeName = (name) => {
 const getPlatformsConfig = (buildPath, themeName) => {
   return {
     javascript: {
+      transformGroup: 'tokens-studio',
       transforms: ['attribute/cti', 'name/camel', 'color/hsl-4'],
-      transformGroup: 'js',
       buildPath,
       files: [
         {
@@ -43,6 +45,7 @@ const getPlatformsConfig = (buildPath, themeName) => {
       ],
     },
     Web: {
+      transformGroup: 'tokens-studio',
       transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4'],
       buildPath,
       files: [
@@ -79,10 +82,12 @@ async function buildBaseTokens() {
   const StyleDictionaryBase = new StyleDictionary({
     log: { verbosity: 'verbose' },
     source: ['./src/**/base.tokens.json'],
+    preprocessors: ['tokens-studio'],
     platforms: {
       ...config,
     },
   });
+  register(StyleDictionaryBase);
   await StyleDictionaryBase.hasInitialized;
 
   await StyleDictionaryBase.buildAllPlatforms();
@@ -111,10 +116,12 @@ async function buildThemes() {
     const StyleDictionaryTheme = new StyleDictionary({
       log: { verbosity: 'verbose' },
       source: [`./src/generated/${themeName}/tokens.json`],
+      preprocessors: ['tokens-studio'],
       platforms: {
         ...config,
       },
     });
+    register(StyleDictionaryTheme);
     await StyleDictionaryTheme.hasInitialized;
 
     // Build this specific theme
