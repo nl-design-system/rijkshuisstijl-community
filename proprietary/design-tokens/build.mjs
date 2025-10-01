@@ -10,6 +10,17 @@ const normalizeThemeName = (name) => {
   return name.toLowerCase().replace(/\s+/g, '');
 };
 
+const excludes = [
+  'components/avatar',
+  'components/form-field-option-label',
+  'components/modal-dialog',
+  'components/pagination/todo',
+  'components/status-badge',
+  'components/summary-list',
+  'components/task-list',
+  'components/toolbar-button',
+];
+
 // Get the platforms config
 const getPlatformsConfig = (buildPath, themeName) => {
   return {
@@ -17,6 +28,7 @@ const getPlatformsConfig = (buildPath, themeName) => {
       transformGroup: 'tokens-studio',
       transforms: ['attribute/cti', 'name/camel', 'color/hsl-4'],
       buildPath,
+      excludes,
       files: [
         {
           format: 'typescript/es6-declarations',
@@ -44,10 +56,11 @@ const getPlatformsConfig = (buildPath, themeName) => {
         },
       ],
     },
-    Web: {
+    web: {
       transformGroup: 'tokens-studio',
       transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4'],
       buildPath,
+      excludes,
       files: [
         {
           destination: 'root.css',

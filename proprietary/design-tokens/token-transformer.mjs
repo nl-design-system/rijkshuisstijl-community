@@ -15,17 +15,6 @@ const transformerOptions = {
   // resolveReferences: true,
 };
 
-const excludes = [
-  'components/avatar',
-  'components/form-field-option-label',
-  'components/modal-dialog',
-  'components/pagination/todo',
-  'components/status-badge',
-  'components/summary-list',
-  'components/task-list',
-  'components/toolbar-button',
-];
-
 // Split tokens into separate files
 async function transformAndSplitTokens() {
   // Read the raw JSON file directly
@@ -36,14 +25,10 @@ async function transformAndSplitTokens() {
   // Not sure if other designers might not be able to modify the themes created by paid plugin so getting the base tokens is a good fallback
   const baseTokens = {};
   Object.entries(tokens).forEach(([key, value]) => {
-    if (!key.startsWith('$') && !key.startsWith('overwrites/') && !key.startsWith('tokenSetOrder')) {
+    if (!key.startsWith('$themes')) {
       baseTokens[key] = value;
     }
   });
-
-  // Transform base tokens
-  //let resolved = transformTokens(baseTokens, [], excludes, transformerOptions);
-  //delete resolved['tokenSetOrder'];
 
   // Process themes to add the enabled components
   const themes = tokens.$themes || [];
@@ -59,9 +44,6 @@ async function transformAndSplitTokens() {
         }
       }
     });
-
-    // Transform the theme tokens
-    //const transformedThemeTokens = transformTokens(themeTokens, [], excludes, transformerOptions);
 
     processedThemes[theme.name] = {
       id: theme.id,
