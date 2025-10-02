@@ -274,7 +274,7 @@ export default function Page() {
                 }
               />
               <CardAsLink
-                href="https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?m=auto"
+                href="https://www.figma.com/design/Q5Imc7Xi9KnBQhcYI3Hytj/NL-Design-System---Bibliotheek---Rijkshuisstijl-Community"
                 linkLabel="Bekijk de NL Design System Rijkshuisstijl Bibliotheek in Figma"
                 target="_blank"
                 description={
@@ -292,25 +292,7 @@ export default function Page() {
                 }
               />
               <CardAsLink
-                href="https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/Local---Rijkshuisstijl---Bibliotheek?m=auto"
-                linkLabel="Bekijk de Rijkshuisstijl Bibliotheek in Figma"
-                target="_blank"
-                description={
-                  <Paragraph>
-                    Een kopie van de NLDS-bibliotheek met RHC-design tokens, om stijlkeuzes te testen en inzichtelijk te
-                    maken. Vrijwel alle componenten hier zijn &apos;Experimental&apos;. Dat betekend dat ze vooralsnog
-                    geen onderdeel uit maken van de componenten die worden ontwikkeld op basis van het estafettemodel.
-                    Gebruik deze componenten dus ter inspiratie.
-                  </Paragraph>
-                }
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    Rijkshuisstijl Figma Bibliotheek
-                  </Heading>
-                }
-              />
-              <CardAsLink
-                href="https://www.figma.com/design/H4hSqpPbvFMLklDZgswwgd/NLDS---Rijkshuisstijl---Templates?m=auto&t=3Q7KyAIW8lqYHupW-6"
+                href="https://www.figma.com/design/H4hSqpPbvFMLklDZgswwgd/NL-Design-System---Templates---Rijkshuisstijl"
                 linkLabel="Bekijk de Rijkshuisstijl Templates in Figma"
                 target="_blank"
                 description={
