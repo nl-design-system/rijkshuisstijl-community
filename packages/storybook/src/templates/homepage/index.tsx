@@ -304,7 +304,7 @@ export default function Page() {
                 }
                 heading={
                   <Heading appearanceLevel={4} level={3}>
-                    Rijkshuisstijl Figma Templates
+                    NL Design System Rijkshuisstijl Figma Templates
                   </Heading>
                 }
               />
