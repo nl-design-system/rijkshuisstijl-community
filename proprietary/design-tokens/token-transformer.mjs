@@ -25,7 +25,7 @@ async function transformAndSplitTokens() {
   // Not sure if other designers might not be able to modify the themes created by paid plugin so getting the base tokens is a good fallback
   const baseTokens = {};
   Object.entries(tokens).forEach(([key, value]) => {
-    if (!key.startsWith('$themes')) {
+    if (!key.startsWith('$themes') && !key.startsWith('overwrites/')) {
       baseTokens[key] = value;
     }
   });
