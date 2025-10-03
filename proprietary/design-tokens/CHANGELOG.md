@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 8.0.1
+
+### Patch Changes
+
+- 9c88f77: Cleaned up token naming convention
+
 ## 8.0.0
 
 ### Major Changes
