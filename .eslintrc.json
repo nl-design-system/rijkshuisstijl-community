@@ -68,9 +68,23 @@
       },
       "plugins": ["@typescript-eslint", "sort-exports"],
       "rules": {
-        "sort-exports/sort-exports": ["error", { "sortDir": "asc", "pattern": "**/index.ts" }],
-        "react/jsx-sort-props": ["error", { "callbacksLast": true, "shorthandFirst": true, "multiline": "last" }]
+        "sort-exports/sort-exports": [
+          "error",
+          {
+            "sortDir": "asc",
+            "pattern": "**/index.ts"
+          }
+        ],
+        "react/jsx-sort-props": [
+          "error",
+          {
+            "callbacksLast": true,
+            "shorthandFirst": true,
+            "multiline": "last"
+          }
+        ]
       }
     }
-  ]
+  ],
+  "extends": ["plugin:storybook/recommended"]
 }

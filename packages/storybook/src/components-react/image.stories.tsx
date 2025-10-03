@@ -1,5 +1,5 @@
 import { Image } from '@rijkshuisstijl-community/components-react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import referenceDocs from '@utrecht/components/img/docs/references.nl.md?raw';
 import htmlDocs from '@utrecht/components/img/docs/technology-html.nl.md?raw';
 import wcagDocs from '@utrecht/components/img/docs/wcag.nl.md?raw';
@@ -90,5 +90,4 @@ export const Decorative: Story = {
     width: 640,
     src: './placeholder.jpg',
   },
-  name: 'Decorative',
 };

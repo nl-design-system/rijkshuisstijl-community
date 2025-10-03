@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Radio, type RadioProps } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/radio-button/README.md?raw';
 import anatomyDocs from '@utrecht/components/radio-button/docs/anatomy.nl.md?raw';
 import visualDesignDocs from '@utrecht/components/radio-button/docs/visual-design.nl.md?raw';
@@ -105,12 +105,9 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  name: 'Default',
-};
+export const Default: Story = {};
 
 export const Active: Story = {
-  name: 'Active',
   args: {
     active: true,
     focus: true,
@@ -125,35 +122,30 @@ export const Active: Story = {
 };
 
 export const Hover: Story = {
-  name: 'Hover',
   parameters: {
     pseudo: { hover: true },
   },
 };
 
 export const Focus: Story = {
-  name: 'Focus',
   parameters: {
     pseudo: { focus: true },
   },
 };
 
 export const FocusVisible: Story = {
-  name: 'Focus Visible',
   parameters: {
     pseudo: { focus: true, focusVisible: true },
   },
 };
 
 export const Disabled: Story = {
-  name: 'Disabled',
   args: {
     disabled: true,
   },
 };
 
 export const Invalid: Story = {
-  name: 'Invalid',
   args: {
     invalid: true,
   },

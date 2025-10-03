@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Blockquote } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './blockquote.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
@@ -46,7 +46,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 export const Attribution: Story = {
-  name: 'Attribution',
   args: {
     children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
     attribution: '— Pippi Langkous',

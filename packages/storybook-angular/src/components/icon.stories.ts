@@ -24,6 +24,4 @@ const meta: Meta<IconComponent> = {
 
 export default meta;
 
-export const Default: StoryObj<IconComponent> = {
-  name: 'Default',
-};
+export const Default: StoryObj<IconComponent> = {};

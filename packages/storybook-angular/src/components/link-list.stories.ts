@@ -65,12 +65,9 @@ const meta: Meta<StoryType> = {
 
 export default meta;
 
-export const Default: StoryObj<LinkListComponent> = {
-  name: 'Default',
-};
+export const Default: StoryObj<LinkListComponent> = {};
 
 export const ColumnsLayout: StoryObj<LinkListComponent> = {
-  name: 'Columns Layout',
   render: () => ({
     template: `
     <rhc-column-layout>

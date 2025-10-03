@@ -1,14 +1,10 @@
 import type { StorybookConfig } from '@storybook/angular';
+import { dirname, join } from 'path';
 
-import { join, dirname } from 'path';
+// Utility to resolve the absolute path of a package
+// https://storybook.js.org/docs/faq#how-do-i-fix-module-resolution-in-special-environments
+const getAbsolutePath = (value: string): string => dirname(require.resolve(join(value, 'package.json')));
 
-/**
- * This function is used to resolve the absolute path of a package.
- * It is needed in projects that use Yarn PnP or are set up within a monorepo.
- */
-function getAbsolutePath(value: string): any {
-  return dirname(require.resolve(join(value, 'package.json')));
-}
 const config: StorybookConfig = {
   stories: [
     {
@@ -22,26 +18,26 @@ const config: StorybookConfig = {
       files: '**/*.{stories.@(js|jsx|mjs|ts|tsx),mdx}',
     },
   ],
+
   addons: [
-    getAbsolutePath('@storybook/addon-essentials'),
-    getAbsolutePath('@storybook/addon-onboarding'),
     getAbsolutePath('@chromatic-com/storybook'),
-    getAbsolutePath('@storybook/addon-interactions'),
     getAbsolutePath('@storybook/addon-webpack5-compiler-babel'),
     getAbsolutePath('storybook-addon-pseudo-states'),
+    '@whitespace/storybook-addon-html',
     getAbsolutePath('@storybook/addon-themes'),
+    getAbsolutePath('@storybook/addon-docs'),
   ],
+
   core: {
     disableTelemetry: true,
     disableWhatsNewNotifications: true,
   },
+
   staticDirs: ['../../../proprietary/assets/src'],
+
   framework: {
     name: getAbsolutePath('@storybook/angular'),
     options: {},
-  },
-  docs: {
-    autodocs: true,
   },
 };
 export default config;

@@ -1,5 +1,5 @@
 import { Checkbox } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import anatomy from '@utrecht/components/checkbox/docs/anatomy.en.md?raw';
 import references from '@utrecht/components/checkbox/docs/references.nl.md?raw';
 import technologypdf from '@utrecht/components/checkbox/docs/technology-pdf.nl.md?raw';

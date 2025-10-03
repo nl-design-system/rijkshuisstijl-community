@@ -1,5 +1,5 @@
 import { ButtonWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/web-components';
+import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import anatomyDocs from '@utrecht/components/button/docs/anatomy.nl.md?raw';
 import htmlDocs from '@utrecht/components/button/docs/technology-html.nl.md?raw';
 import visualDesignDocs from '@utrecht/components/button/docs/visual-design.nl.md?raw';

@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { DataBadgeButton, DataBadgeButtonProps } from '@rijkshuisstijl-community/components-react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { IconCheck } from '@tabler/icons-react';
 import { PropsWithChildren } from 'react';
 import readme from './data-badge-button.md?raw';

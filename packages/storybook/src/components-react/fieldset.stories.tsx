@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Fieldset, FormFieldTextInput } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './fieldset.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
@@ -39,7 +39,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  name: 'Default',
   args: {
     disabled: false,
     invalid: false,
@@ -117,7 +116,6 @@ export const Invalid: Story = {
       </>
     ),
   },
-  name: 'Invalid',
   parameters: {
     docs: {
       description: {
@@ -139,7 +137,6 @@ export const PartiallyInvalid: Story = {
       </>
     ),
   },
-  name: 'Partially Invalid',
   parameters: {
     docs: {
       description: {

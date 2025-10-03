@@ -59,12 +59,9 @@ const meta: Meta<StoryType> = {
 
 export default meta;
 
-export const Default: StoryObj<StoryType> = {
-  name: 'Default',
-};
+export const Default: StoryObj<StoryType> = {};
 
 export const NoIcon: StoryObj<StoryType> = {
-  name: 'No Icon',
   render: ({ href, label }) => ({
     template: `
     <rhc-link-list>
@@ -82,26 +79,22 @@ export const Hover: StoryObj<StoryType> = {
   parameters: {
     pseudo: { hover: true },
   },
-  name: 'Hover',
 };
 
 export const Active: StoryObj<StoryType> = {
   parameters: {
     pseudo: { active: true },
   },
-  name: 'Active',
 };
 
 export const Focus: StoryObj<StoryType> = {
   parameters: {
     pseudo: { focus: true },
   },
-  name: 'Focus',
 };
 
 export const Visited: StoryObj<StoryType> = {
   parameters: {
     pseudo: { visited: true },
   },
-  name: 'Visited',
 };
