@@ -1,7 +1,7 @@
 import type { StorybookConfig } from '@storybook/react-vite';
 import { dirname, join } from 'path';
 
-// Utility to resolve the absolute path of a package
+// Utility to resolve the absolute path of a package needed in projects that use Yarn PnP or are set up within a monorepo
 // https://storybook.js.org/docs/faq#how-do-i-fix-module-resolution-in-special-environments
 const getAbsolutePath = (value: string): string => dirname(require.resolve(join(value, 'package.json')));
 
@@ -51,7 +51,7 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('@storybook/addon-themes'),
     getAbsolutePath('storybook-addon-pseudo-states'),
-    '@whitespace/storybook-addon-html',
+    '@whitespace/storybook-addon-html', // uses a CJS export, so we can't use getAbsolutePath here
   ],
 
   framework: {
