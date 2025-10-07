@@ -3,7 +3,7 @@ export const formatHtml = (html: string) => {
   const singleLineHtml = html.replace(/>\s+</g, '><').trim();
 
   // Split the HTML into an array of tags and text content
-  const tokens = singleLineHtml.split(/(<[^>]+>)/).filter(Boolean);
+  const tokens = singleLineHtml.split(/(<[^>]*>)/).filter(Boolean);
 
   let formattedHtml = '';
   let indentLevel = 0;
