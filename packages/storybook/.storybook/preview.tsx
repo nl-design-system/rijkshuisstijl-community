@@ -73,6 +73,8 @@ const preview: Preview = {
         order: [
           'Rijkshuisstijl Community',
           ['README', '*', 'Icon Sets', 'Design Tokens', ['Standaard Thema']],
+          'CSS Components',
+          ['README', 'CHANGELOG'],
           'React Components',
           ['README', 'CHANGELOG'],
           'Web Components',

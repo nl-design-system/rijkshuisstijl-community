@@ -19,6 +19,11 @@ const config: StorybookConfig = {
       files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
     },
     {
+      directory: '../src/components-css',
+      titlePrefix: 'CSS Components',
+      files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
+    },
+    {
       directory: '../src/components-react',
       titlePrefix: 'React Components',
       files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
