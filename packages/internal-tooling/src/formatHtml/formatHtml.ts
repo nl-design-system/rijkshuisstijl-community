@@ -1,4 +1,4 @@
-export function syncPrettify(html: string) {
+export const formatHtml = (html: string) => {
   // Remove existing newlines and extra spaces between tags
   const singleLineHtml = html.replace(/>\s+</g, '><').trim();
 
@@ -16,7 +16,9 @@ export function syncPrettify(html: string) {
     if (!isTag) {
       // For text content, just add it with the current indentation
       if (token.trim()) {
-        formattedHtml += indent.repeat(indentLevel) + token.trim() + '\n';
+        // Prevent indentLevel from going below zero
+        const safeIndentLevel = Math.max(0, indentLevel);
+        formattedHtml += indent.repeat(safeIndentLevel) + token.trim() + '\n';
       }
       continue;
     }
@@ -29,19 +31,17 @@ export function syncPrettify(html: string) {
       indentLevel--;
     }
 
+    // Prevent indentLevel from going below zero before using it
+    const safeIndentLevel = Math.max(0, indentLevel);
+
     // Add the indented line
-    formattedHtml += indent.repeat(indentLevel) + token + '\n';
+    formattedHtml += indent.repeat(safeIndentLevel) + token + '\n';
 
     // For opening tags (that are not self-closing), increase indent level
     if (!isClosingTag && !isSelfClosingTag) {
       indentLevel++;
     }
-
-    // Prevent indentLevel from going below zero
-    if (indentLevel < 0) {
-      indentLevel = 0;
-    }
   }
 
   return formattedHtml;
-}
+};

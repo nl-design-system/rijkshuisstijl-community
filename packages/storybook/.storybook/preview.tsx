@@ -21,7 +21,7 @@ import { Preview } from '@storybook/react-vite';
 import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
 import { Fragment } from 'react';
-import { syncPrettify } from './prettify';
+import { formatHtml } from '@rijkshuisstijl-community/internal-tooling';
 
 const preview: Preview = {
   decorators: [
@@ -57,7 +57,7 @@ const preview: Preview = {
 
   parameters: {
     html: {
-      transform: syncPrettify,
+      transform: formatHtml,
     },
     actions: {
       disable: true,

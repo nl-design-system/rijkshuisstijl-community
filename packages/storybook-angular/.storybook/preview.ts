@@ -1,12 +1,12 @@
 import { componentWrapperDecorator, type Preview } from '@storybook/angular';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import OverviewPage from './overview.mdx';
-import { syncPrettify } from './prettify';
+import { formatHtml } from '@rijkshuisstijl-community/internal-tooling';
 
 const preview: Preview = {
   parameters: {
     html: {
-      transform: syncPrettify,
+      transform: formatHtml,
     },
     docs: {
       page: OverviewPage,

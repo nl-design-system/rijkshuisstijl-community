@@ -1,0 +1,33 @@
+{
+  "name": "@rijkshuisstijl-community/internal-tooling",
+  "version": "1.0.0",
+  "description": "Internal tooling for the Rijkshuisstijl Community monorepo. Not intended for public use.",
+  "main": "index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "test": "vitest run --coverage --reporter verbose"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
+    "directory": "packages/internal-tooling"
+  },
+  "author": "Community for NL Design System",
+  "license": "EUPL-1.2",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "packageManager": "pnpm@10.6.5",
+  "devDependencies": {
+    "@types/node": "22.10.1",
+    "@vitest/coverage-v8": "3.2.4",
+    "vitest": "3.2.4"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts",
+      "require": "./src/index.ts"
+    }
+  }
+}
