@@ -1,5 +1,5 @@
 import type { StorybookConfig } from '@storybook/angular';
-import { getAbsolutePath } from '@rijkshuisstijl-community/internal-tooling';
+import { getAbsolutePath } from '@rijkshuisstijl-community/internal-tooling/getAbsolutePath';
 
 const config: StorybookConfig = {
   stories: [

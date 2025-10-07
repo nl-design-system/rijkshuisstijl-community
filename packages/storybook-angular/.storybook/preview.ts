@@ -1,7 +1,7 @@
 import { componentWrapperDecorator, type Preview } from '@storybook/angular';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import OverviewPage from './overview.mdx';
-import { formatHtml } from '@rijkshuisstijl-community/internal-tooling';
+import { formatHtml } from '@rijkshuisstijl-community/internal-tooling/formatHtml';
 
 const preview: Preview = {
   parameters: {

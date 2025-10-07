@@ -1,5 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-vite';
-import { getAbsolutePath } from '@rijkshuisstijl-community/internal-tooling';
+import { getAbsolutePath } from '@rijkshuisstijl-community/internal-tooling/getAbsolutePath';
 
 const config: StorybookConfig = {
   core: {

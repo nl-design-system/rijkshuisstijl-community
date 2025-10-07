@@ -21,7 +21,7 @@ import { Preview } from '@storybook/react-vite';
 import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
 import { Fragment } from 'react';
-import { formatHtml } from '@rijkshuisstijl-community/internal-tooling';
+import { formatHtml } from '@rijkshuisstijl-community/internal-tooling/formatHtml';
 
 const preview: Preview = {
   decorators: [
