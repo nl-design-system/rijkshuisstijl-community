@@ -24,6 +24,9 @@
 .utrecht-checkbox--custom.utrecht-checkbox--html-input[aria-invalid="true"]:hover {
   @include mixin.utrecht-checkbox--invalid;
 }
+.utrecht-form-label--checkbox .utrecht-checkbox {
+  margin-inline-end: var(--rhc-space-150);
+}
 
 .rhc-checkbox-group {
   display: flex;

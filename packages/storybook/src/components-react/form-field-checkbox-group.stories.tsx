@@ -1,5 +1,6 @@
-import { FormFieldCheckboxGroup, FormFieldCheckboxOption } from '@rijkshuisstijl-community/components-react';
+import { FormFieldCheckboxGroup } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
+import { Checkbox, FormLabel } from '@utrecht/component-library-react';
 import readme from './form-field-checkbox-group.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
@@ -75,9 +76,18 @@ export const Default: StoryObj<typeof meta> = {
   args: {
     label: 'Select option',
     children: [
-      <FormFieldCheckboxOption key="1" label="Checkbox 1" />,
-      <FormFieldCheckboxOption key="2" label="Checkbox 2" />,
-      <FormFieldCheckboxOption key="3" label="Checkbox 3" />,
+      <FormLabel key="1" type="checkbox">
+        <Checkbox />
+        Checkbox 1
+      </FormLabel>,
+      <FormLabel key="2" type="checkbox">
+        <Checkbox />
+        Checkbox 2
+      </FormLabel>,
+      <FormLabel key="3" type="checkbox">
+        <Checkbox />
+        Checkbox 3
+      </FormLabel>,
     ],
   },
 };
@@ -86,9 +96,18 @@ export const Error: StoryObj<typeof meta> = {
   args: {
     label: 'Select option',
     children: [
-      <FormFieldCheckboxOption invalid key="1" label="Checkbox 1" />,
-      <FormFieldCheckboxOption invalid key="2" label="Checkbox 2" />,
-      <FormFieldCheckboxOption invalid key="3" label="Checkbox 3" />,
+      <FormLabel key="1" type="checkbox">
+        <Checkbox invalid />
+        Checkbox 1
+      </FormLabel>,
+      <FormLabel key="2" type="checkbox">
+        <Checkbox invalid />
+        Checkbox 2
+      </FormLabel>,
+      <FormLabel key="3" type="checkbox">
+        <Checkbox invalid />
+        Checkbox 3
+      </FormLabel>,
     ],
     errorMessage: 'This is an error message',
     invalid: true,
@@ -113,9 +132,15 @@ export const RightToLeft: StoryObj<typeof meta> = {
     description: 'هذا هو الوصف',
     status: 'هذه هي رسالة الحالة',
     children: [
-      <FormFieldCheckboxOption key="1" label="خيار 1" />,
-      <FormFieldCheckboxOption key="2" label="خيار 2" />,
-      <FormFieldCheckboxOption key="3" label="خيار 3" />,
+      <FormLabel key="1" type="checkbox">
+        <Checkbox />1 خيار
+      </FormLabel>,
+      <FormLabel key="2" type="checkbox">
+        <Checkbox />2 خيار
+      </FormLabel>,
+      <FormLabel key="3" type="checkbox">
+        <Checkbox />3 خيار
+      </FormLabel>,
     ],
     dir: 'rtl',
   },

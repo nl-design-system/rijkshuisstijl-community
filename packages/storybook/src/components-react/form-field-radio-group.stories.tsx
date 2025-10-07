@@ -1,5 +1,6 @@
-import { FormFieldRadio, FormFieldRadioGroup } from '@rijkshuisstijl-community/components-react';
+import { FormFieldRadioGroup, Radio } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
+import { FormLabel } from '@utrecht/component-library-react';
 import readme from './form-field-radio-group.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
@@ -76,9 +77,18 @@ export const Default: StoryObj<typeof meta> = {
     label: 'Select option',
     children: (
       <>
-        <FormFieldRadio label="Option 1" name="radio-demo" value="option1" />
-        <FormFieldRadio label="Option 2" name="radio-demo" value="option2" />
-        <FormFieldRadio label="Option 3" name="radio-demo" value="option3" />
+        <FormLabel type="radio">
+          <Radio name="radio-demo" value="option1" />
+          Option 1
+        </FormLabel>
+        <FormLabel type="radio">
+          <Radio name="radio-demo" value="option2" />
+          Option 2
+        </FormLabel>
+        <FormLabel type="radio">
+          <Radio name="radio-demo" value="option3" />
+          Option 3
+        </FormLabel>
       </>
     ),
   },
@@ -89,9 +99,18 @@ export const Error: StoryObj<typeof meta> = {
     label: 'Select option',
     children: (
       <>
-        <FormFieldRadio invalid label="Option 1" name="radio-demo" value="option1" />
-        <FormFieldRadio invalid label="Option 2" name="radio-demo" value="option2" />
-        <FormFieldRadio invalid label="Option 3" name="radio-demo" value="option3" />
+        <FormLabel type="radio">
+          <Radio invalid name="radio-demo" value="option1" />
+          Option 1
+        </FormLabel>
+        <FormLabel type="radio">
+          <Radio invalid name="radio-demo" value="option2" />
+          Option 2
+        </FormLabel>
+        <FormLabel type="radio">
+          <Radio invalid name="radio-demo" value="option3" />
+          Option 3
+        </FormLabel>
       </>
     ),
     errorMessage: 'This is an error message',
@@ -120,9 +139,15 @@ export const RightToLeft: StoryObj<typeof meta> = {
     status: <span>هذه هي رسالة الحالة</span>,
     children: (
       <>
-        <FormFieldRadio label="خيار 1" name="radio-demo" value="option1" />
-        <FormFieldRadio label="خيار 2" name="radio-demo" value="option2" />
-        <FormFieldRadio label="خيار 3" name="radio-demo" value="option3" />
+        <FormLabel type="radio">
+          <Radio name="radio-demo" value="option1" />1 خيار
+        </FormLabel>
+        <FormLabel type="radio">
+          <Radio name="radio-demo" value="option2" />2 خيار
+        </FormLabel>
+        <FormLabel type="radio">
+          <Radio name="radio-demo" value="option3" />3 خيار
+        </FormLabel>
       </>
     ),
   },

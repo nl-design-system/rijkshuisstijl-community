@@ -17,6 +17,10 @@
   --utrecht-radio-button-checked-color: var(--utrecht-radio-button-disabled-color, inherit);
 }
 
+.utrecht-form-label--radio .utrecht-radio-button {
+  margin-inline-end: var(--rhc-space-100);
+}
+
 .utrecht-radio-button:invalid,
 .utrecht-radio-button--invalid {
   --utrecht-radio-button-background-color: var(--utrecht-radio-button-invalid-background-color, inherit);

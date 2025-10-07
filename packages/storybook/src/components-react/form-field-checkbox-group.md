@@ -13,12 +13,22 @@ Het doel van de `FormFieldCheckboxGroup` component is om een gestructureerde en 
 ## Usage
 
 ```jsx
-import { FormFieldCheckboxGroup, FormFieldCheckbox } from '@rijkshuisstijl-community/components-react';
+import { FormFieldCheckboxGroup } from '@rijkshuisstijl-community/components-react';
+import { Checkbox, FormLabel } from '@utrecht/component-library-react';
 
 <FormFieldCheckboxGroup>
-  <FormFieldCheckbox label="Checkbox 1" />
-  <FormFieldCheckbox label="Checkbox 2" />
-  <FormFieldCheckbox label="Checkbox 3" />
+  <FormLabel key="1" type="checkbox">
+    <Checkbox />
+    Checkbox 1
+  </FormLabel>
+  <FormLabel key="2" type="checkbox">
+    <Checkbox />
+    Checkbox 2
+  </FormLabel>
+  <FormLabel key="3" type="checkbox">
+    <Checkbox />
+    Checkbox 3
+  </FormLabel>
 </FormFieldCheckboxGroup>;
 ```
 
@@ -29,21 +39,30 @@ import { FormFieldCheckboxGroup, FormFieldCheckbox } from '@rijkshuisstijl-commu
 ```jsx
 <FormFieldCheckboxGroup>
   <div>Ongeldig element</div>
-  <FormFieldCheckbox label="Checkbox 1" />
+  <FormLabel key="1" type="checkbox">
+    <Checkbox />
+    Checkbox 1
+  </FormLabel>
 </FormFieldCheckboxGroup>
 ```
 
-- Ontbrekende label prop in `FormFieldCheckbox`
+- Ontbrekend label in `FormFieldCheckbox`
 
 ```jsx
 <FormFieldCheckboxGroup>
-  <FormFieldCheckbox />
+  <Checkbox />
 </FormFieldCheckboxGroup>
 ```
 
 - Geen `FormFieldCheckboxGroup` gebruiken
 
 ```jsx
-<FormFieldCheckbox label="Checkbox 1" />
-<FormFieldCheckbox label="Checkbox 2" />
+<FormLabel key="1" type="checkbox">
+  <Checkbox />
+  Checkbox 1
+</FormLabel>
+<FormLabel key="2" type="checkbox">
+  <Checkbox />
+  Checkbox 2
+</FormLabel>
 ```

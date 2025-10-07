@@ -9,12 +9,22 @@ Deze component is deel van [FormField](https://www.figma.com/design/txFX5MGRf4O9
 ### Usage
 
 ```jsx
-import { FormFieldRadioGroup, FormFieldRadio } from '@rijkshuisstijl-community/components-react';
+import { FormFieldRadioGroup, Radio } from '@rijkshuisstijl-community/components-react';
+import { FormLabel } from '@utrecht/component-library-react';
 
 <FormFieldRadioGroup>
-  <FormFieldRadio name="radio-group-name" label="Radio 1" />
-  <FormFieldRadio name="radio-group-name" label="Radio 2" />
-  <FormFieldRadio name="radio-group-name" label="Radio 3" />
+  <FormLabel type="radio">
+    <Radio name="radio-demo" value="option1" />
+    Option 1
+  </FormLabel>
+  <FormLabel type="radio">
+    <Radio name="radio-demo" value="option2" />
+    Option 2
+  </FormLabel>
+  <FormLabel type="radio">
+    <Radio name="radio-demo" value="option3" />
+    Option 3
+  </FormLabel>
 </FormFieldRadioGroup>;
 ```
 
