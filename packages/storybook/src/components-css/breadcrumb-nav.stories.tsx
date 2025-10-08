@@ -15,4 +15,4 @@ export default {
   id: 'css-breadcrumb-nav',
 };
 
-export { Default } from '../components-react/breadcrumb-nav.stories';
+export { Default, Current, Separator, Active, DisabledAndCurrent } from '../components-react/breadcrumb-nav.stories';
