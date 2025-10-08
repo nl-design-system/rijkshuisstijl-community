@@ -62,11 +62,6 @@ const preview: Preview = {
     actions: {
       disable: true,
     },
-    previewTabs: {
-      'storybookjs/notes/panel': { title: 'Documentation' },
-      'storybook/docs/panel': { title: 'API' },
-      canvas: { title: 'Design Tokens' },
-    },
     controls: { exclude: ['children'] },
     options: {
       storySort: {
@@ -140,7 +135,9 @@ const preview: Preview = {
         // Show code by default.
         // Stories without concise code snippets can hide the code at Story level.
         state: 'open',
+        sourceState: 'hidden',
       },
+      withSource: 'hidden',
     },
   },
   tags: ['autodocs'],

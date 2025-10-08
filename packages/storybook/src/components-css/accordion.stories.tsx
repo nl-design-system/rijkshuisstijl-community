@@ -3,10 +3,13 @@ import { merge } from 'lodash-es';
 import reactMeta from '../components-react/accordion.stories';
 
 export default {
-  ...merge(reactMeta, {
+  ...merge({}, reactMeta, {
     parameters: {
       docs: {
         codePanel: false,
+        canvas: {
+          sourceState: 'none',
+        },
         description: {
           component: readme,
         },
