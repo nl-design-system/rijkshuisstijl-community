@@ -1,0 +1,10 @@
+import reactMeta from '../components-react/dot-badge.stories';
+import { mergeCssMeta } from '../helpers/mergeCssMeta';
+
+export default {
+  ...mergeCssMeta(reactMeta),
+  title: 'Dot Badge',
+  id: 'css-dot-badge',
+};
+
+export { Default } from '../components-react/dot-badge.stories';
