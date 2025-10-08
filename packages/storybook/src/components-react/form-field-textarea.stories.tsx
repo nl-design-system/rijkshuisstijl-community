@@ -140,12 +140,7 @@ const meta = {
     dir: {
       description: 'Text direction',
       control: { type: 'select' },
-      options: {
-        '': undefined,
-        auto: 'auto',
-        ltr: 'ltr',
-        rtl: 'rtl',
-      },
+      options: ['', 'auto', 'ltr', 'rtl'],
       table: {
         category: 'DOM',
         defaultValue: { summary: '' },

@@ -224,16 +224,7 @@ const meta = {
     type: {
       description: 'Type',
       control: 'select',
-      options: {
-        '': null,
-        email: 'email',
-        number: 'number',
-        password: 'password',
-        search: 'search',
-        tel: 'tel',
-        text: 'text',
-        url: 'url',
-      },
+      options: ['', 'email', 'number', 'password', 'search', 'tel', 'text', 'url'],
       table: {
         category: 'API',
         defaultValue: { summary: '' },
@@ -242,12 +233,7 @@ const meta = {
     dir: {
       description: 'Text direction',
       control: { type: 'select' },
-      options: {
-        '': undefined,
-        auto: 'auto',
-        ltr: 'ltr',
-        rtl: 'rtl',
-      },
+      options: ['', 'auto', 'ltr', 'rtl'],
       table: {
         category: 'DOM',
         defaultValue: { summary: '' },
@@ -256,12 +242,7 @@ const meta = {
     inputDir: {
       description: 'Text direction',
       control: { type: 'select' },
-      options: {
-        '': undefined,
-        auto: 'auto',
-        ltr: 'ltr',
-        rtl: 'rtl',
-      },
+      options: ['', 'auto', 'ltr', 'rtl'],
       table: {
         category: 'API',
         defaultValue: { summary: '' },
