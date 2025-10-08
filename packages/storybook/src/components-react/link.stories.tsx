@@ -19,8 +19,8 @@ import technologyHtmlDocs from '@utrecht/components/link/docs/technology-html.nl
 import usageDocs from '@utrecht/components/link/docs/usage.nl.md?raw';
 import visualDesignDocs from '@utrecht/components/link/docs/visual-design.nl.md?raw';
 import wcagDocs from '@utrecht/components/link/docs/wcag.nl.md?raw';
-import { mergeMarkdown, replaceMarkdown } from '../../helpers/merge-markdown';
 import iconInline from '../documentation/components/link/icon-inline.nl.md?raw';
+import { mergeMarkdown, replaceMarkdown } from '../helpers/merge-markdown';
 
 const meta = {
   title: 'Link',

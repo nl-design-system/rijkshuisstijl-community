@@ -10,7 +10,7 @@ import visualDesignDocs from '@utrecht/components/button/docs/visual-design.nl.m
 import wcagDocs from '@utrecht/components/button/docs/wcag.nl.md?raw';
 import { PropsWithChildren } from 'react';
 import rhcReadme from './button.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 interface ButtonStoryProps {
   appearance: string;

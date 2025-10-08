@@ -6,8 +6,8 @@ import referenceDocs from '@utrecht/components/img/docs/references.nl.md?raw';
 import htmlDocs from '@utrecht/components/img/docs/technology-html.nl.md?raw';
 import wcagDocs from '@utrecht/components/img/docs/wcag.nl.md?raw';
 import DrupalAttribute from 'drupal-attribute';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../components-react/image.md?raw';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const meta = {
   title: 'Image',

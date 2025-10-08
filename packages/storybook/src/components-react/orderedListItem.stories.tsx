@@ -1,7 +1,7 @@
 import { OrderedList, OrderedListItem } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './orderedListItem.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const meta = {
   title: 'Ordered List/Ordered List Item',

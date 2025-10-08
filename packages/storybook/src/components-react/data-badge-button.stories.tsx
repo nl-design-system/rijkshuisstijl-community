@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { IconCheck } from '@tabler/icons-react';
 import { PropsWithChildren } from 'react';
 import readme from './data-badge-button.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const DataBadgeButtonStory = (props: PropsWithChildren<DataBadgeButtonProps>) => <DataBadgeButton {...props} />;
 

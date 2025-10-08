@@ -3,7 +3,7 @@
 import { Heading, PageHeader } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './page-header.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const meta = {
   title: 'Page Header',

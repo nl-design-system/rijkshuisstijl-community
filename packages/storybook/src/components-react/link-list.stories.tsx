@@ -8,7 +8,7 @@ import {
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { PropsWithChildren } from 'react';
 import readme from './link-list.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 interface LinkListStoryProps extends LinkListProps {
   hasIcons?: boolean;

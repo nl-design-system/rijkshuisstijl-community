@@ -2,7 +2,7 @@ import { AccordionWebComponent, AccordionWebComponentAttributes } from '@rijkshu
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/accordion/README.md?raw';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 AccordionWebComponent.define();
 

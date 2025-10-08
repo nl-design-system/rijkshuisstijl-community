@@ -1,7 +1,7 @@
 import { Hero, LinkListCard, LinkListLink } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './hero.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const meta = {
   title: 'Hero',

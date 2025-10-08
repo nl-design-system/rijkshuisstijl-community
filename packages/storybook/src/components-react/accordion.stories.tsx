@@ -4,7 +4,7 @@ import readme from '@utrecht/components/accordion/README.md?raw';
 import { UtrechtIconChevronDown } from '@utrecht/web-component-library-react';
 import { ReactNode } from 'react';
 import usageDocs from './accordion-usage.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 interface AccordionStoryProps {
   label: string;

@@ -1,7 +1,7 @@
 import { HeroWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../components-react/hero.md?raw';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 HeroWebComponent.define();
 

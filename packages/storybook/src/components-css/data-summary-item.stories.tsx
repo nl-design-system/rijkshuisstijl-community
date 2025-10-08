@@ -1,17 +1,8 @@
-import { merge } from 'lodash-es';
 import reactMeta from '../components-react/data-summary-item.stories';
+import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
-  ...merge({}, reactMeta, {
-    parameters: {
-      docs: {
-        codePanel: false,
-        canvas: {
-          sourceState: 'none',
-        },
-      },
-    },
-  }),
+  ...mergeCssMeta(reactMeta),
   title: 'Data Summary Item',
   id: 'css-data-summary-item',
 };

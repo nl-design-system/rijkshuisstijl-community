@@ -2,7 +2,7 @@ import { LinkListCard, LinkListLink } from '@rijkshuisstijl-community/components
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { ComponentProps } from 'react';
 import readme from './link-list-card.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 type StoryProps = ComponentProps<typeof LinkListCard>;
 const meta: Meta<StoryProps> = {

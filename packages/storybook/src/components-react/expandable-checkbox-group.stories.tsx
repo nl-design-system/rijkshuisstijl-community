@@ -4,7 +4,7 @@ import { ExpandableCheckboxGroup, ExpandableCheckboxGroupProps } from '@rijkshui
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { PropsWithChildren, useEffect } from 'react';
 import readme from './expandable-checkbox-group.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const ExpandableCheckboxGroupStory = (props: PropsWithChildren<ExpandableCheckboxGroupProps>) => (
   <ExpandableCheckboxGroup {...props} />

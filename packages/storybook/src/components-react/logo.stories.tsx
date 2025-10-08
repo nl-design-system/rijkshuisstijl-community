@@ -7,7 +7,7 @@ import {
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { CSSProperties } from 'react';
 import readme from './logo.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 interface LogoCSSProperties extends CSSProperties {
   '--rhc-logo-color': string;

@@ -7,7 +7,7 @@ import {
 } from '@rijkshuisstijl-community/components-react';
 import { type Meta, type StoryObj } from '@storybook/react-vite';
 import readme from './form-field.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const meta = {
   title: 'Form Field/Form Field',

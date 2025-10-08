@@ -5,7 +5,7 @@ import references from '@utrecht/components/checkbox/docs/references.nl.md?raw';
 import technologypdf from '@utrecht/components/checkbox/docs/technology-pdf.nl.md?raw';
 import wcag from '@utrecht/components/checkbox/docs/wcag.nl.md?raw';
 import readme from './checkbox.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const meta = {
   title: 'Checkbox',

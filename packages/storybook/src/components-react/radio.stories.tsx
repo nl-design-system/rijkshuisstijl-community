@@ -6,7 +6,7 @@ import readme from '@utrecht/components/radio-button/README.md?raw';
 import anatomyDocs from '@utrecht/components/radio-button/docs/anatomy.nl.md?raw';
 import visualDesignDocs from '@utrecht/components/radio-button/docs/visual-design.nl.md?raw';
 import clsx from 'clsx';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 interface RadioStoryProps extends RadioProps {
   focus?: boolean;

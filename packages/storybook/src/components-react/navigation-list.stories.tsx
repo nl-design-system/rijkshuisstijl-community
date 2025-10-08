@@ -2,7 +2,7 @@ import { NavigationList, NavigationListItem } from '@rijkshuisstijl-community/co
 import { NavigationListProps } from '@rijkshuisstijl-community/components-react/dist/NavigationList';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './navigation-list.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const meta = {
   title: 'Navigation List',

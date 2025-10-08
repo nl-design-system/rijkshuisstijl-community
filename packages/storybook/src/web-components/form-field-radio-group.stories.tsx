@@ -1,8 +1,8 @@
 import { FormFieldRadioGroupWebComponent, FormFieldRadioWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../components-react/form-field-radio-group.md?raw';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 FormFieldRadioGroupWebComponent.define();
 FormFieldRadioWebComponent.define();

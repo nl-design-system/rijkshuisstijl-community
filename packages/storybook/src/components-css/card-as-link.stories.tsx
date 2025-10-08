@@ -1,17 +1,8 @@
-import { merge } from 'lodash-es';
 import reactMeta from '../components-react/card-as-link.stories';
+import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
-  ...merge({}, reactMeta, {
-    parameters: {
-      docs: {
-        codePanel: false,
-        canvas: {
-          sourceState: 'none',
-        },
-      },
-    },
-  }),
+  ...mergeCssMeta(reactMeta),
   title: 'Card as Link',
   id: 'css-card-as-link',
 };

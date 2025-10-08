@@ -3,7 +3,7 @@ import '@rijkshuisstijl-community/components-css/index.scss';
 import { FormFieldRadio } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './radio-group.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const RadioGroupStory = () => (
   <div className="rhc-radio-group">

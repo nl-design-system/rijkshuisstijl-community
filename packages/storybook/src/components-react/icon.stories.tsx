@@ -8,7 +8,7 @@ import {
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { IconBrandX } from '@tabler/icons-react';
 import readme from './icon.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { mergeMarkdown } from '../helpers/merge-markdown';
 
 registerIconSet(defaultIconSet);
 registerIconSet(flagIconSet);
