@@ -12,6 +12,7 @@ export default {
       },
     },
   }),
+  title: 'Article',
   id: 'css-article',
 };
 

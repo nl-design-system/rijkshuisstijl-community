@@ -12,6 +12,7 @@ export default {
       },
     },
   }),
+  title: 'Checkbox',
   id: 'css-checkbox',
 };
 

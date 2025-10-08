@@ -12,6 +12,7 @@ export default {
       },
     },
   }),
+  title: 'Card as Link',
   id: 'css-card-as-link',
 };
 

@@ -16,6 +16,7 @@ export default {
       },
     },
   }),
+  title: 'Accordion',
   id: 'css-accordion',
 };
 

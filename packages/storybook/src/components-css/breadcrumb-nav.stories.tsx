@@ -12,6 +12,7 @@ export default {
       },
     },
   }),
+  title: 'Breadcrumb Navigation',
   id: 'css-breadcrumb-nav',
 };
 

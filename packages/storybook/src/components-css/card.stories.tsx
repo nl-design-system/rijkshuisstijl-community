@@ -12,6 +12,7 @@ export default {
       },
     },
   }),
+  title: 'Card',
   id: 'css-card',
 };
 

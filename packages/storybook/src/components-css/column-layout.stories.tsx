@@ -12,6 +12,7 @@ export default {
       },
     },
   }),
+  title: 'Column Layout',
   id: 'css-column-layout',
 };
 

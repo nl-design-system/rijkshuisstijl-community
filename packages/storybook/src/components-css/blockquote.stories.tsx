@@ -12,6 +12,7 @@ export default {
       },
     },
   }),
+  title: 'Blockquote',
   id: 'css-blockquote',
 };
 

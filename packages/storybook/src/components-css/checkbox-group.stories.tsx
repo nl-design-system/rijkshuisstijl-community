@@ -12,6 +12,7 @@ export default {
       },
     },
   }),
+  title: 'Checkbox Group',
   id: 'css-checkbox-group',
 };
 

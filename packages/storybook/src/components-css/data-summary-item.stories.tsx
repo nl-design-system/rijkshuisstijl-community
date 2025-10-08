@@ -12,6 +12,7 @@ export default {
       },
     },
   }),
+  title: 'Data Summary Item',
   id: 'css-data-summary-item',
 };
 

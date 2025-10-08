@@ -12,6 +12,7 @@ export default {
       },
     },
   }),
+  title: 'Alert',
   id: 'css-alert',
 };
 

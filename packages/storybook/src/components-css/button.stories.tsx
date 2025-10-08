@@ -12,6 +12,7 @@ export default {
       },
     },
   }),
+  title: 'Button',
   id: 'css-button',
 };
 

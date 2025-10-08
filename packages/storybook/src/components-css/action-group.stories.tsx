@@ -12,6 +12,7 @@ export default {
       },
     },
   }),
+  title: 'Action Group',
   id: 'css-action-group',
 };
 

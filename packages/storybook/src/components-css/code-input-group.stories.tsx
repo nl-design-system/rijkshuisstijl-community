@@ -12,6 +12,7 @@ export default {
       },
     },
   }),
+  title: 'Code Input Group',
   id: 'css-code-input-group',
 };
 

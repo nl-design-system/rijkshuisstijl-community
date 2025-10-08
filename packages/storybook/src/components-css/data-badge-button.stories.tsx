@@ -12,6 +12,7 @@ export default {
       },
     },
   }),
+  title: 'Data Badge Button',
   id: 'css-data-badge-button',
 };
 
