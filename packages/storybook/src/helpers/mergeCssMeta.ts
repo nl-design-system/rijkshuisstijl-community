@@ -16,6 +16,7 @@ export const mergeCssMeta = <Base extends Meta<any>, Overwrite extends Meta<any>
     reactMeta,
     {
       parameters: {
+        chromatic: { disableSnapshot: true }, // as these are reexports of react components
         docs: {
           codePanel: false,
           canvas: {
