@@ -130,14 +130,14 @@ const preview: Preview = {
         );
       },
       codePanel: true,
-      source: {
-        excludeDecorators: true,
+      canvas: {
         // Show code by default.
         // Stories without concise code snippets can hide the code at Story level.
-        state: 'open',
-        sourceState: 'hidden',
+        sourceState: 'shown',
       },
-      withSource: 'hidden',
+      source: {
+        excludeDecorators: true,
+      },
     },
   },
   tags: ['autodocs'],
