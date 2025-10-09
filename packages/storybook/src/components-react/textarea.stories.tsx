@@ -1,7 +1,7 @@
 import { Textarea } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from './textarea.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
+import readme from '../documentation/components/textarea.md?raw';
 
 const meta = {
   title: 'Text Area',

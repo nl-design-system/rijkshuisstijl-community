@@ -1,7 +1,7 @@
 import { TextInput } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from './text-input.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
+import readme from '../documentation/components/text-input.md?raw';
 
 const meta: Meta<typeof TextInput> = {
   title: 'Text Input',
