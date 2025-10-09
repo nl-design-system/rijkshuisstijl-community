@@ -1,7 +1,7 @@
 import { Toggletip } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../documentation/components/toggle-tip/toggletip.md?raw';
+import readme from '../documentation/components/toggletip.md?raw';
 
 const meta = {
   title: 'Toggletip',

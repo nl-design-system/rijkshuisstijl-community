@@ -1,7 +1,7 @@
 import { UnorderedList, UnorderedListItem } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../documentation/components/unordered-list-item/unorderedListItem.md?raw';
+import readme from '../documentation/components/unorderedListItem.md?raw';
 
 const meta = {
   title: 'Unordered List/Unordered List Item',

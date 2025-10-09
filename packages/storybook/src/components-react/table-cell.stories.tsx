@@ -6,8 +6,9 @@ import {
   TableRow,
 } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react';
-import readme from './table-cell.md?raw';
+import usage from './table-cell-usage.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
+import readme from '../documentation/components/table-cell.md?raw';
 
 const TableCell = ({ children, alignCell, ...restProps }: TableCellProps) => {
   return (
@@ -42,7 +43,7 @@ export default {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
-        component: mergeMarkdown([readme]),
+        component: mergeMarkdown([readme, usage]),
       },
     },
     figma:

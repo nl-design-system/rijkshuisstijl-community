@@ -1,8 +1,6 @@
 <!-- @license CC0-1.0 -->
 
-# Rijkshuisstijl Community TableCell component
-
-## Usage
+# React usage
 
 ```jsx
 import { TableCell } from '@rijkshuisstijl/community-components';
