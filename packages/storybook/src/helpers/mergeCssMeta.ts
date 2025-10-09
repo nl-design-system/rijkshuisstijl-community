@@ -7,13 +7,14 @@ import * as ReactDOMServer from 'react-dom/server';
 /**
  * Merges React component metadata with CSS-specific overrides.
  * @param reactMeta The original React component metadata.
- * @param OverwriteMeta Optional metadata to overwrite the original.
+ * @param overwriteMeta Optional metadata to overwrite the original.
  * @returns The merged metadata.
  */
 export const mergeCssMeta = <Base extends Meta<any>, Overwrite extends Meta<any>>(
   reactMeta: Base,
-  OverwriteMeta?: Overwrite,
+  overwriteMeta?: Overwrite,
 ) => {
+  // configure generic metadata overwrite for CSS components
   const genericMeta: Meta<any> = {
     parameters: {
       chromatic: { disableSnapshot: true }, // as these are reexports of react components
@@ -39,5 +40,5 @@ export const mergeCssMeta = <Base extends Meta<any>, Overwrite extends Meta<any>
     },
   };
 
-  return merge({}, reactMeta, genericMeta, OverwriteMeta);
+  return merge({}, reactMeta, genericMeta, overwriteMeta);
 };
