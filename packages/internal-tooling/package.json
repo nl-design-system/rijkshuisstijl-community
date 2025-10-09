@@ -4,6 +4,11 @@
   "description": "Internal tooling for the Rijkshuisstijl Community monorepo. Not intended for public use.",
   "main": "index.js",
   "types": "src/index.ts",
+  "private": true,
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "test": "vitest run --coverage --reporter verbose"
   },
