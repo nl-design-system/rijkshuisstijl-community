@@ -1,14 +1,19 @@
 import { componentWrapperDecorator, type Preview } from '@storybook/angular';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import OverviewPage from './overview.mdx';
+import { formatHtml } from '@rijkshuisstijl-community/internal-tooling/formatHtml';
 
 const preview: Preview = {
   parameters: {
+    html: {
+      transform: formatHtml,
+    },
     docs: {
       page: OverviewPage,
       source: {
         excludeDecorators: true,
       },
+      codePanel: true,
     },
     controls: {
       matchers: {
@@ -22,6 +27,7 @@ const preview: Preview = {
       },
     },
   },
+
   decorators: [
     componentWrapperDecorator((story) => `<div class="utrecht-document">${story}</div>`),
     withThemeByClassName({
@@ -43,6 +49,8 @@ const preview: Preview = {
       defaultTheme: 'RijkshuisstijlCommunity',
     }),
   ],
+
+  tags: ['autodocs'],
 };
 
 export default preview;

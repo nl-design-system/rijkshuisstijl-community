@@ -1,9 +1,12 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import { getAbsolutePath } from '@rijkshuisstijl-community/internal-tooling/getAbsolutePath';
 
 const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
+    disableWhatsNewNotifications: true,
   },
+
   stories: [
     {
       directory: '../src/documentation',
@@ -36,25 +39,23 @@ const config: StorybookConfig = {
       files: '**/*.{stories.@(js|jsx|ts|tsx),mdx}',
     },
   ],
+
   addons: [
-    '@chromatic-com/storybook',
-    '@etchteam/storybook-addon-status',
-    '@storybook/addon-a11y',
-    '@storybook/addon-controls',
-    '@storybook/addon-actions',
-    '@storybook/addon-docs',
-    '@storybook/addon-interactions',
-    '@storybook/addon-links',
-    '@storybook/addon-themes',
-    '@storybook/addon-viewport',
-    '@whitespace/storybook-addon-html',
-    'storybook-addon-pseudo-states',
+    getAbsolutePath('@chromatic-com/storybook'),
+    getAbsolutePath('@storybook/addon-a11y'),
+    getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath('@storybook/addon-links'),
+    getAbsolutePath('@storybook/addon-themes'),
+    getAbsolutePath('storybook-addon-pseudo-states'),
+    '@whitespace/storybook-addon-html', // uses a CJS export, so we can't use getAbsolutePath here
   ],
-  framework: '@storybook/react-vite',
-  staticDirs: ['../../../proprietary/assets/src'],
-  docs: {
-    autodocs: true,
+
+  framework: {
+    name: getAbsolutePath('@storybook/react-vite'),
+    options: {},
   },
+  staticDirs: ['../../../proprietary/assets/src'],
+
   refs: (_, { configType }) => ({
     angular: {
       title: 'Angular Storybook',

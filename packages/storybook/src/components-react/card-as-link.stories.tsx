@@ -1,5 +1,5 @@
 import { CardAsLink } from '@rijkshuisstijl-community/components-react';
-import type { Meta } from '@storybook/react';
+import type { Meta } from '@storybook/react-vite';
 import readme from './card-as-link.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 

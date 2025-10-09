@@ -16,11 +16,12 @@ import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Paragraph } from '@rijkshuisstijl-community/components-react';
 import { withThemeByClassName } from '@storybook/addon-themes';
-import { Controls, Description, Primary, Stories, useOf } from '@storybook/blocks';
-import { Preview } from '@storybook/react';
+import { Controls, Description, Primary, Stories, useOf } from '@storybook/addon-docs/blocks';
+import { Preview } from '@storybook/react-vite';
 import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
 import { Fragment } from 'react';
+import { formatHtml } from '@rijkshuisstijl-community/internal-tooling/formatHtml';
 
 const preview: Preview = {
   decorators: [
@@ -53,7 +54,14 @@ const preview: Preview = {
       );
     },
   ],
+
   parameters: {
+    html: {
+      transform: formatHtml,
+    },
+    actions: {
+      disable: true,
+    },
     previewTabs: {
       'storybookjs/notes/panel': { title: 'Documentation' },
       'storybook/docs/panel': { title: 'API' },
@@ -124,30 +132,15 @@ const preview: Preview = {
           </>
         );
       },
+      codePanel: true,
       source: {
+        excludeDecorators: true,
+        // Show code by default.
+        // Stories without concise code snippets can hide the code at Story level.
         state: 'open',
-
-        /*
-            Uncomment the transformer to show underlying CSS and HTML
-        */
-
-        // transform(src: string, storyContext: StoryContext) {
-        //   const render =
-        //     typeof storyContext.component === 'function'
-        //       ? storyContext.component
-        //       : typeof storyContext.component?.render === 'function'
-        //         ? storyContext.component?.render
-        //         : null;
-
-        //   if (render) {
-        //     const srcString = renderToStaticMarkup(render(storyContext.args));
-
-        //     return Prettify({ ugly: srcString });
-        //   }
-        //   return src;
-        // },
       },
     },
   },
+  tags: ['autodocs'],
 };
 export default preview;
