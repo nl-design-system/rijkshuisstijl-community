@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>@storybook/core - Storybook</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>storybook - Storybook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
@@ -46,31 +46,21 @@
     <link href="./sb-manager/runtime.js" rel="modulepreload" />
 
     
-    <link href="./sb-addons/storybook-core-core-server-presets-0/common-manager-bundle.js" rel="modulepreload" />
+    <link href="./sb-addons/storybook-core-server-presets-0/common-manager-bundle.js" rel="modulepreload" />
     
     <link href="./sb-addons/chromatic-com-storybook-1/manager-bundle.js" rel="modulepreload" />
     
-    <link href="./sb-addons/etchteam-status-2/manager-bundle.js" rel="modulepreload" />
+    <link href="./sb-addons/a11y-2/manager-bundle.js" rel="modulepreload" />
     
-    <link href="./sb-addons/a11y-3/manager-bundle.js" rel="modulepreload" />
+    <link href="./sb-addons/docs-3/manager-bundle.js" rel="modulepreload" />
     
-    <link href="./sb-addons/controls-4/manager-bundle.js" rel="modulepreload" />
+    <link href="./sb-addons/links-4/manager-bundle.js" rel="modulepreload" />
     
-    <link href="./sb-addons/actions-5/manager-bundle.js" rel="modulepreload" />
+    <link href="./sb-addons/themes-5/manager-bundle.js" rel="modulepreload" />
     
-    <link href="./sb-addons/docs-6/manager-bundle.js" rel="modulepreload" />
+    <link href="./sb-addons/pseudo-states-6/manager-bundle.js" rel="modulepreload" />
     
-    <link href="./sb-addons/interactions-7/manager-bundle.js" rel="modulepreload" />
-    
-    <link href="./sb-addons/links-8/manager-bundle.js" rel="modulepreload" />
-    
-    <link href="./sb-addons/themes-9/manager-bundle.js" rel="modulepreload" />
-    
-    <link href="./sb-addons/viewport-10/manager-bundle.js" rel="modulepreload" />
-    
-    <link href="./sb-addons/whitespace-html-11/manager-bundle.js" rel="modulepreload" />
-    
-    <link href="./sb-addons/pseudo-states-12/manager-bundle.js" rel="modulepreload" />
+    <link href="./sb-addons/whitespace-html-7/manager-bundle.js" rel="modulepreload" />
        
 
     <style>
@@ -91,7 +81,15 @@
           window['FEATURES'] = {
   "argTypeTargetsV7": true,
   "legacyDecoratorFileOrder": false,
-  "disallowImplicitActionsInRenderV8": true
+  "disallowImplicitActionsInRenderV8": true,
+  "viewport": true,
+  "highlight": true,
+  "controls": true,
+  "interactions": true,
+  "actions": true,
+  "backgrounds": true,
+  "outline": true,
+  "measure": true
 };
         
       
@@ -112,8 +110,7 @@
       
         
           window['DOCS_OPTIONS'] = {
-  "defaultName": "Docs",
-  "autodocs": true
+  "defaultName": "Docs"
 };
         
       
@@ -149,7 +146,7 @@
         
       
         
-          window['STORYBOOK_FRAMEWORK'] = "@storybook/react-vite";
+          window['STORYBOOK_FRAMEWORK'] = "/home/runner/work/rijkshuisstijl-community/rijkshuisstijl-community/node_modules/.pnpm/@storybook+react-vite@9.1.6_react-dom@19.1.1_react@19.1.1__react@19.1.1_rollup@4.46.2_s_2889c5b6b0a042ca990f90eced6475b7/node_modules/@storybook/react-vite";
         
       
     </script>
@@ -157,35 +154,25 @@
 
     <script type="module">
       import './sb-manager/globals-runtime.js';
+
       
-      
-        import './sb-addons/storybook-core-core-server-presets-0/common-manager-bundle.js';
+        import './sb-addons/storybook-core-server-presets-0/common-manager-bundle.js';
       
         import './sb-addons/chromatic-com-storybook-1/manager-bundle.js';
       
-        import './sb-addons/etchteam-status-2/manager-bundle.js';
+        import './sb-addons/a11y-2/manager-bundle.js';
       
-        import './sb-addons/a11y-3/manager-bundle.js';
+        import './sb-addons/docs-3/manager-bundle.js';
       
-        import './sb-addons/controls-4/manager-bundle.js';
+        import './sb-addons/links-4/manager-bundle.js';
       
-        import './sb-addons/actions-5/manager-bundle.js';
+        import './sb-addons/themes-5/manager-bundle.js';
       
-        import './sb-addons/docs-6/manager-bundle.js';
+        import './sb-addons/pseudo-states-6/manager-bundle.js';
       
-        import './sb-addons/interactions-7/manager-bundle.js';
+        import './sb-addons/whitespace-html-7/manager-bundle.js';
       
-        import './sb-addons/links-8/manager-bundle.js';
-      
-        import './sb-addons/themes-9/manager-bundle.js';
-      
-        import './sb-addons/viewport-10/manager-bundle.js';
-      
-        import './sb-addons/whitespace-html-11/manager-bundle.js';
-      
-        import './sb-addons/pseudo-states-12/manager-bundle.js';
-      
-      
+
       import './sb-manager/runtime.js';
     </script>
   </body>
