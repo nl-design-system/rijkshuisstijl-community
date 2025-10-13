@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Heading, headingLevels } from '@rijkshuisstijl-community/components-react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './heading.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 
@@ -48,7 +48,6 @@ export const Heading1: StoryObj<typeof meta> = {
     level: 1,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
   },
-  name: 'Heading 1',
 };
 
 export const Heading2: StoryObj<typeof meta> = {
@@ -56,7 +55,6 @@ export const Heading2: StoryObj<typeof meta> = {
     level: 2,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
   },
-  name: 'Heading 2',
 };
 
 export const Heading3: StoryObj<typeof meta> = {
@@ -64,7 +62,6 @@ export const Heading3: StoryObj<typeof meta> = {
     level: 3,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
   },
-  name: 'Heading 3',
 };
 
 export const Heading4: StoryObj<typeof meta> = {
@@ -72,7 +69,6 @@ export const Heading4: StoryObj<typeof meta> = {
     level: 4,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
   },
-  name: 'Heading 4',
 };
 
 export const Heading5: StoryObj<typeof meta> = {
@@ -80,7 +76,6 @@ export const Heading5: StoryObj<typeof meta> = {
     level: 5,
     children: 'Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod',
   },
-  name: 'Heading 5',
 };
 
 export const Heading5Appearance: StoryObj<typeof meta> = {

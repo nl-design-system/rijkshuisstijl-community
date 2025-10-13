@@ -1,5 +1,5 @@
 import { AccordionProvider, AccordionSectionProps } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/accordion/README.md?raw';
 import { UtrechtIconChevronDown } from '@utrecht/web-component-library-react';
 import { ReactNode } from 'react';

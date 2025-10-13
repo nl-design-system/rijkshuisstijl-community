@@ -1,5 +1,5 @@
 import { ActionGroup, Button } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/button-group/README.md?raw';
 import usageDocs from './action-group.md?raw';
 import { mergeMarkdown, replaceMarkdown } from '../../helpers/merge-markdown';
