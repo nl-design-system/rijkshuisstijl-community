@@ -33,10 +33,6 @@ const preview: Preview = {
     withThemeByClassName({
       themes: {
         RijkshuisstijlCommunity: 'rhc-theme',
-        'DigiD - oud': 'digid-theme-old',
-        'MijnOverheid - oud': 'mijnoverheid-theme-old',
-        'Logius - oud': 'logius-theme-old',
-        'RIVM - oud en nog niet verplaatst': 'rivm-theme-old',
         'Uitvoerend - paars': 'uitvoerend-paars',
         'Uitvoerend - hemelblauw': 'uitvoerend-hemelblauw',
         'Uitvoerend - groen': 'uitvoerend-groen',

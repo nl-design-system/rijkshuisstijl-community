@@ -8,11 +8,7 @@ import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-oranje/index.css
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/koop/index.css';
-import '@rijkshuisstijl-community/digid-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
-import '@rijkshuisstijl-community/logius-design-tokens/dist/theme.css';
-import '@rijkshuisstijl-community/mijnoverheid-design-tokens/dist/theme.css';
-import '@rijkshuisstijl-community/rivm-design-tokens/dist/theme.css';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Paragraph } from '@rijkshuisstijl-community/components-react';
 import { withThemeByClassName } from '@storybook/addon-themes';
@@ -29,10 +25,6 @@ const preview: Preview = {
     withThemeByClassName({
       themes: {
         RijkshuisstijlCommunity: 'rhc-theme (Standaard Thema)',
-        'DigiD - oud': 'digid-theme-old',
-        'MijnOverheid - oud': 'mijnoverheid-theme-old',
-        'Logius - oud': 'logius-theme-old',
-        'RIVM - oud en nog niet verplaatst': 'rivm-theme-old',
         'Uitvoerend - paars': 'uitvoerend-paars',
         'Uitvoerend - hemelblauw': 'uitvoerend-hemelblauw',
         'Uitvoerend - groen': 'uitvoerend-groen',
