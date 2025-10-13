@@ -7,10 +7,10 @@ ActionGroupWebComponent.define();
 ButtonWebComponent.define();
 
 const meta = {
+  ...reactMeta,
   title: 'Action Group',
   id: 'rhc-action-group-web',
   component: 'rhc-action-group',
-  ...reactMeta,
 } as Meta<typeof ActionGroupWebComponent>;
 
 export default meta;
