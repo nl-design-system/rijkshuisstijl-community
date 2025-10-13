@@ -20,6 +20,7 @@ const AccordionStory = ({ expanded, label, body, icon, sections }: AccordionStor
 );
 
 const meta = {
+  component: AccordionStory,
   title: 'Accordion',
   id: 'rhc-accordion',
   args: {
