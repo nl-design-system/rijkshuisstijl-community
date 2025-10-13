@@ -5,7 +5,7 @@ import {
   TableHeaderCellProps,
   TableRow,
 } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './table-header-cell.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 

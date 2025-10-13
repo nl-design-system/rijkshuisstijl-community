@@ -2,4 +2,4 @@
 '@rijkshuisstijl-community/design-tokens': patch
 ---
 
-Removed deprecated tokens for Form Field Description
+Cleaned up token naming convention

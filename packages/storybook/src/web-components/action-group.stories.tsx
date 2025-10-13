@@ -1,5 +1,5 @@
 import { ActionGroupWebComponent, ButtonWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/web-components';
+import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { createElement } from 'react';
 import { mergeMarkdown, replaceMarkdown } from '../../helpers/merge-markdown';
 import usageDocs from '../components-react/action-group.md?raw';
