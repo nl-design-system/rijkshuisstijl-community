@@ -85,8 +85,7 @@ const meta = {
           ]),
           'utrecht',
           'rhc',
-          true,
-        ).replace('utrecht', 'rhc'),
+        ),
       },
     },
     figma:
