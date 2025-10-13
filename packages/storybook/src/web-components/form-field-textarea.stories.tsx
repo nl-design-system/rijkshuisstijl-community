@@ -1,8 +1,8 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { FormFieldTextareaWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
 import readme from '../components-react/form-field-textarea.md?raw';
-import { mergeMarkdown } from '../helpers/merge-markdown';
 
 FormFieldTextareaWebComponent.define();
 

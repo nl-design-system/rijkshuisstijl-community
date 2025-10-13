@@ -2,10 +2,10 @@
 
 import TwigIcon from '@rijkshuisstijl-community/components-twig/src/Icon.twig';
 import { iconSet } from '@rijkshuisstijl-community/components-twig/src/icon-sets/default-icons/icon-set';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import DrupalAttribute from 'drupal-attribute';
 import readme from '../components-react/icon.md?raw';
-import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const icons = Object.values(iconSet);
 

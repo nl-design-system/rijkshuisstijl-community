@@ -1,8 +1,8 @@
 import { ActionGroup, Button } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown, replaceMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/button-group/README.md?raw';
 import usageDocs from './action-group.md?raw';
-import { mergeMarkdown, replaceMarkdown } from '../helpers/merge-markdown';
 
 const meta = {
   title: 'Action Group',
@@ -23,10 +23,7 @@ const meta = {
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source. Use our own documentation to correctly show its name as "Action Group" instead of "Button Group"
-        component: replaceMarkdown(mergeMarkdown([readme, usageDocs], 'Button Group', 'Action Group'), true)
-          .replace('Button Group', 'Action Group')
-          .replace('Button group', 'Action group')
-          .replace('button group', 'action group'),
+        component: replaceMarkdown(mergeMarkdown([readme, usageDocs]), 'Button Group', 'Action Group'),
       },
     },
     nldesignsystem: 'https://www.nldesignsystem.nl/action-group/',

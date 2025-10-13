@@ -1,9 +1,9 @@
+import { mergeMarkdown, replaceMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { ActionGroupWebComponent, ButtonWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { createElement } from 'react';
 import usageDocs from '../components-react/action-group.md?raw';
 import readme from '../components-react/action-group.md?raw';
-import { mergeMarkdown, replaceMarkdown } from '../helpers/merge-markdown';
 
 ActionGroupWebComponent.define();
 ButtonWebComponent.define();

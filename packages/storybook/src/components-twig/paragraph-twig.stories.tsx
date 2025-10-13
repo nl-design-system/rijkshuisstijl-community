@@ -2,10 +2,10 @@
 
 import TwigParagraph from '@rijkshuisstijl-community/components-twig/src/Paragraph.twig';
 import '@rijkshuisstijl-community/components-css/src/paragraph/index.scss';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import DrupalAttribute from 'drupal-attribute';
 import readme from '../components-react/paragraph.md?raw';
-import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const meta = {
   title: 'Paragraph',

@@ -1,7 +1,7 @@
 import { OrderedList, OrderedListItem } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './orderedList.md?raw';
-import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const meta = {
   title: 'Ordered List',

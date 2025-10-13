@@ -1,6 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Button, Icon, IconButton } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
 import readme from '@utrecht/components/button/README.md?raw';
@@ -10,7 +11,6 @@ import visualDesignDocs from '@utrecht/components/button/docs/visual-design.nl.m
 import wcagDocs from '@utrecht/components/button/docs/wcag.nl.md?raw';
 import { PropsWithChildren } from 'react';
 import rhcReadme from './button.md?raw';
-import { mergeMarkdown } from '../helpers/merge-markdown';
 
 interface ButtonStoryProps {
   appearance: string;

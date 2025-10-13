@@ -1,9 +1,9 @@
 /* @license CC0-1.0 */
 
 import { FormFieldTextInput } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './form-field-text-input.md?raw';
-import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const meta = {
   title: 'Form Field/Form Field Text Input',

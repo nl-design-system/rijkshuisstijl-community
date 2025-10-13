@@ -1,3 +1,4 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import {
   CheckboxGroupWebComponent,
   FormFieldCheckboxOptionWebComponent,
@@ -5,7 +6,6 @@ import {
 import { Meta, StoryObj } from '@storybook/web-components-vite';
 import { createElement } from 'react';
 import readme from '../components-react/checkbox-group.md?raw';
-import { mergeMarkdown } from '../helpers/merge-markdown';
 
 CheckboxGroupWebComponent.define();
 FormFieldCheckboxOptionWebComponent.define();

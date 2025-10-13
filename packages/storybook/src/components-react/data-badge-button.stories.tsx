@@ -1,11 +1,11 @@
 /* @license CC0-1.0 */
 
 import { DataBadgeButton, DataBadgeButtonProps } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { IconCheck } from '@tabler/icons-react';
 import { PropsWithChildren } from 'react';
 import readme from './data-badge-button.md?raw';
-import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const DataBadgeButtonStory = (props: PropsWithChildren<DataBadgeButtonProps>) => <DataBadgeButton {...props} />;
 

@@ -1,10 +1,10 @@
 /* @license CC0-1.0 */
 
 import { Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { AlertWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import readme from '../components-react/alert.md?raw';
-import { mergeMarkdown } from '../helpers/merge-markdown';
 
 AlertWebComponent.define();
 

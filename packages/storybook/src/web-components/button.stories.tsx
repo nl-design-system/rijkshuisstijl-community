@@ -1,3 +1,4 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { ButtonWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import anatomyDocs from '@utrecht/components/button/docs/anatomy.nl.md?raw';
@@ -5,7 +6,6 @@ import htmlDocs from '@utrecht/components/button/docs/technology-html.nl.md?raw'
 import visualDesignDocs from '@utrecht/components/button/docs/visual-design.nl.md?raw';
 import wcagDocs from '@utrecht/components/button/docs/wcag.nl.md?raw';
 import readme from '../components-react/hero.md?raw';
-import { mergeMarkdown } from '../helpers/merge-markdown';
 
 ButtonWebComponent.define();
 

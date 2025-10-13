@@ -1,10 +1,10 @@
 /* @license CC0-1.0 */
 
 import TwigHeading from '@rijkshuisstijl-community/components-twig/src/Heading.twig';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import DrupalAttribute from 'drupal-attribute';
 import readme from '../components-react/heading.md?raw';
-import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const meta = {
   title: 'Heading',

@@ -1,7 +1,7 @@
 import { PageNumberNavigation } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './page-number-navigation.md?raw';
-import { mergeMarkdown } from '../helpers/merge-markdown';
 
 const meta = {
   title: 'Page Number Navigation',
