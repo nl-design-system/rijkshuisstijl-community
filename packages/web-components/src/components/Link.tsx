@@ -15,7 +15,7 @@ export class LinkWebComponent extends BaseWebComponent {
   render(): void {
     if (!this.shadowRoot) return;
 
-    const { classname, ...restProps } = this.props;
+    const { classname, ...restProps } = this.props as LinkWebComponentAttributes & { classname?: string };
 
     render(
       <Link className={(classname as LinkWebComponentAttributes['className']) ?? undefined} {...restProps}>
