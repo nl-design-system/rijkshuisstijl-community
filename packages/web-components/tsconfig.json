@@ -7,7 +7,13 @@
     "target": "esnext",
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "react": ["./node_modules/preact/compat/"],
+      "react/jsx-runtime": ["./node_modules/preact/jsx-runtime"],
+      "react-dom": ["./node_modules/preact/compat/"],
+      "react-dom/*": ["./node_modules/preact/compat/*"]
+    }
   },
   "include": ["**/*.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["**/node_modules/*", "dist", "loader", "**/*.spec.ts", "**/*.spec.tsx"]
