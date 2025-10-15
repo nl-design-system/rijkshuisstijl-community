@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/page-header.stories';
+import * as ReactStories from '../components-react/page-header.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,4 @@ export default {
   id: 'css-page-header',
 };
 
-export { Default } from '../components-react/page-header.stories';
+export const Default = ReactStories.Default;

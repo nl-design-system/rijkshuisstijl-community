@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/column-layout.stories';
+import * as ReactStories from '../components-react/column-layout.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,4 @@ export default {
   id: 'css-column-layout',
 };
 
-export { Default } from '../components-react/column-layout.stories';
+export const Default = ReactStories.Default;

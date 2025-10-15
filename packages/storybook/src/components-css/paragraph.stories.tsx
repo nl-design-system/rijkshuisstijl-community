@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/paragraph.stories';
+import * as ReactStories from '../components-react/paragraph.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,5 @@ export default {
   id: 'css-paragraph',
 };
 
-export { Default, Lead } from '../components-react/paragraph.stories';
+export const Default = ReactStories.Default;
+export const Lead = ReactStories.Lead;

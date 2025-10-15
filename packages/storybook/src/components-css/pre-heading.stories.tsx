@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/pre-heading.stories';
+import * as ReactStories from '../components-react/pre-heading.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,4 @@ export default {
   id: 'css-pre-heading',
 };
 
-export { Default } from '../components-react/pre-heading.stories';
+export const Default = ReactStories.Default;

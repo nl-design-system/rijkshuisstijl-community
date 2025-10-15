@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/unorderedList.stories';
+import * as ReactStories from '../components-react/unorderedList.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,5 @@ export default {
   id: 'css-unordered-list',
 };
 
-export { DefaultUnorderedList, NestedUnorderedList } from '../components-react/unorderedList.stories';
+export const DefaultUnorderedList = ReactStories.DefaultUnorderedList;
+export const NestedUnorderedList = ReactStories.NestedUnorderedList;

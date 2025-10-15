@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/link-list-link.stories';
+import * as ReactStories from '../components-react/link-list-link.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,9 @@ export default {
   id: 'css-link-list-link',
 };
 
-export { Default, NoIcon, Hover, Active, Focus, Visited } from '../components-react/link-list-link.stories';
+export const Default = ReactStories.Default;
+export const NoIcon = ReactStories.NoIcon;
+export const Hover = ReactStories.Hover;
+export const Active = ReactStories.Active;
+export const Focus = ReactStories.Focus;
+export const Visited = ReactStories.Visited;

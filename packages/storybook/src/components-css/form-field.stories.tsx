@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/form-field.stories';
+import * as ReactStories from '../components-react/form-field.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,6 @@ export default {
   id: 'css-form-field',
 };
 
-export { Default, WithRadioGroup, Invalid } from '../components-react/form-field.stories';
+export const Default = ReactStories.Default;
+export const WithRadioGroup = ReactStories.WithRadioGroup;
+export const Invalid = ReactStories.Invalid;

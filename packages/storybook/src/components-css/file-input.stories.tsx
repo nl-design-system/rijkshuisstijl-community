@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/file-input.stories';
+import * as ReactStories from '../components-react/file-input.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,6 @@ export default {
   id: 'css-file-input',
 };
 
-export { Default, MetCustomElementenLijst, DefaultFiles } from '../components-react/file-input.stories';
+export const Default = ReactStories.Default;
+export const MetCustomElementenLijst = ReactStories.MetCustomElementenLijst;
+export const DefaultFiles = ReactStories.DefaultFiles;

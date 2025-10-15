@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/table-cell.stories';
+import * as ReactStories from '../components-react/table-cell.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,4 @@ export default {
   id: 'css-table-cell',
 };
 
-export { Default } from '../components-react/table-cell.stories';
+export const Default = ReactStories.Default;

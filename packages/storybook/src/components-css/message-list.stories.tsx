@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/message-list.stories';
+import * as ReactStories from '../components-react/message-list.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,5 @@ export default {
   id: 'css-message-list',
 };
 
-export { Default, SmallContainer } from '../components-react/message-list.stories';
+export const Default = ReactStories.Default;
+export const SmallContainer = ReactStories.SmallContainer;

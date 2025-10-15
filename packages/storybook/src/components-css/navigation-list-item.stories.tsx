@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/navigation-list-item.stories';
+import * as ReactStories from '../components-react/navigation-list-item.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,7 @@ export default {
   id: 'css-navigation-list-item',
 };
 
-export { Default, WithCustomIcon, Hover, Focus } from '../components-react/navigation-list-item.stories';
+export const Default = ReactStories.Default;
+export const WithCustomIcon = ReactStories.WithCustomIcon;
+export const Hover = ReactStories.Hover;
+export const Focus = ReactStories.Focus;

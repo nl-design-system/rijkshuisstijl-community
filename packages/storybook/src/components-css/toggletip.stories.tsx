@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/toggletip.stories';
+import * as ReactStories from '../components-react/toggletip.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,4 @@ export default {
   id: 'css-toggletip',
 };
 
-export { Default } from '../components-react/toggletip.stories';
+export const Default = ReactStories.Default;

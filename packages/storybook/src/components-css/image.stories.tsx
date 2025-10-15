@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/image.stories';
+import * as ReactStories from '../components-react/image.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,5 @@ export default {
   id: 'css-image',
 };
 
-export { Default, Decorative } from '../components-react/image.stories';
+export const Default = ReactStories.Default;
+export const Decorative = ReactStories.Decorative;

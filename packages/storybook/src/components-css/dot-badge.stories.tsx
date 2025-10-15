@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/dot-badge.stories';
+import * as ReactStories from '../components-react/dot-badge.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,4 @@ export default {
   id: 'css-dot-badge',
 };
 
-export { Default } from '../components-react/dot-badge.stories';
+export const Default = ReactStories.Default;

@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/hero.stories';
+import * as ReactStories from '../components-react/hero.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,7 @@ export default {
   id: 'css-hero',
 };
 
-export { Default, CustomChildren, TextAlignRight, AspectRatioFourToThree } from '../components-react/hero.stories';
+export const Default = ReactStories.Default;
+export const CustomChildren = ReactStories.CustomChildren;
+export const TextAlignRight = ReactStories.TextAlignRight;
+export const AspectRatioFourToThree = ReactStories.AspectRatioFourToThree;

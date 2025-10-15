@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/blockquote.stories';
+import * as ReactStories from '../components-react/blockquote.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,5 @@ export default {
   id: 'css-blockquote',
 };
 
-export { Default, Attribution } from '../components-react/blockquote.stories';
+export const Default = ReactStories.Default;
+export const Attribution = ReactStories.Attribution;

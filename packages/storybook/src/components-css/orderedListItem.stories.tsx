@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/orderedListItem.stories';
+import * as ReactStories from '../components-react/orderedListItem.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,4 @@ export default {
   id: 'css-ordered-list-item',
 };
 
-export { Default } from '../components-react/orderedListItem.stories';
+export const Default = ReactStories.Default;

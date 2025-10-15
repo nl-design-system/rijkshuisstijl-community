@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/textarea.stories';
+import * as ReactStories from '../components-react/textarea.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,13 +8,11 @@ export default {
   id: 'css-textarea',
 };
 
-export {
-  Default,
-  ReadOnly,
-  Disabled,
-  Required,
-  InputRequired,
-  Invalid,
-  Placeholder,
-  RightToLeft,
-} from '../components-react/textarea.stories';
+export const Default = ReactStories.Default;
+export const ReadOnly = ReactStories.ReadOnly;
+export const Disabled = ReactStories.Disabled;
+export const Required = ReactStories.Required;
+export const InputRequired = ReactStories.InputRequired;
+export const Invalid = ReactStories.Invalid;
+export const Placeholder = ReactStories.Placeholder;
+export const RightToLeft = ReactStories.RightToLeft;

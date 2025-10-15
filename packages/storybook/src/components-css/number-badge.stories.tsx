@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/number-badge.stories';
+import * as ReactStories from '../components-react/number-badge.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,5 @@ export default {
   id: 'css-number-badge',
 };
 
-export { Default, WithValue } from '../components-react/number-badge.stories';
+export const Default = ReactStories.Default;
+export const WithValue = ReactStories.WithValue;

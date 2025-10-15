@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/article.stories';
+import * as ReactStories from '../components-react/article.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,4 @@ export default {
   id: 'css-article',
 };
 
-export { Default } from '../components-react/article.stories';
+export const Default = ReactStories.Default;

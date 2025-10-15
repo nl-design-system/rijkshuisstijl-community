@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/skip-link.stories';
+import * as ReactStories from '../components-react/skip-link.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,6 @@ export default {
   id: 'css-skip-link',
 };
 
-export { Default, RightToLeft, FocusVisible } from '../components-react/skip-link.stories';
+export const Default = ReactStories.Default;
+export const RightToLeft = ReactStories.RightToLeft;
+export const FocusVisible = ReactStories.FocusVisible;

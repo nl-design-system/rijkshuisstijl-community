@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/navbar.stories';
+import * as ReactStories from '../components-react/navbar.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,6 @@ export default {
   id: 'css-navbar',
 };
 
-export { Default, WithHeading, WithEndItems } from '../components-react/navbar.stories';
+export const Default = ReactStories.Default;
+export const WithHeading = ReactStories.WithHeading;
+export const WithEndItems = ReactStories.WithEndItems;

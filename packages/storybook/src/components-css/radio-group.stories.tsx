@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/radio-group.stories';
+import * as ReactStories from '../components-react/radio-group.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,4 @@ export default {
   id: 'css-radio-group',
 };
 
-export { Default } from '../components-react/radio-group.stories';
+export const Default = ReactStories.Default;

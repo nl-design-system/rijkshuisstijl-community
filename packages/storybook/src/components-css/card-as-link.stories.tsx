@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/card-as-link.stories';
+import * as ReactStories from '../components-react/card-as-link.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,6 @@ export default {
   id: 'css-card-as-link',
 };
 
-export { Default, FullBleed, Horizontal } from '../components-react/card-as-link.stories';
+export const Default = ReactStories.Default;
+export const FullBleed = ReactStories.FullBleed;
+export const Horizontal = ReactStories.Horizontal;

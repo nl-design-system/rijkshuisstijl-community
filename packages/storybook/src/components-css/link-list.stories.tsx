@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/link-list.stories';
+import * as ReactStories from '../components-react/link-list.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,5 @@ export default {
   id: 'css-link-list',
 };
 
-export { Default, ColumnsLayout } from '../components-react/link-list.stories';
+export const Default = ReactStories.Default;
+export const ColumnsLayout = ReactStories.ColumnsLayout;

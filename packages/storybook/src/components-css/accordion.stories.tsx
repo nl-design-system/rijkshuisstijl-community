@@ -1,5 +1,6 @@
 import readme from '@utrecht/components/accordion/README.md?raw';
 import reactMeta from '../components-react/accordion.stories';
+import * as ReactStories from '../components-react/accordion.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -16,4 +17,6 @@ export default {
   id: 'css-accordion',
 };
 
-export { Default, AccordionWithSections, RTL } from '../components-react/accordion.stories';
+export const Default = ReactStories.Default;
+export const AccordionWithSections = ReactStories.AccordionWithSections;
+export const RTL = ReactStories.RTL;

@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/checkbox-group.stories';
+import * as ReactStories from '../components-react/checkbox-group.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,4 @@ export default {
   id: 'css-checkbox-group',
 };
 
-export { Default } from '../components-react/checkbox-group.stories';
+export const Default = ReactStories.Default;

@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/action-group.stories';
+import * as ReactStories from '../components-react/action-group.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,6 @@ export default {
   id: 'css-action-group',
 };
 
-export { Column, ColumnStretch, Row } from '../components-react/action-group.stories';
+export const Column = ReactStories.Column;
+export const ColumnStretch = ReactStories.ColumnStretch;
+export const Row = ReactStories.Row;

@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/form-field-radio.stories';
+import * as ReactStories from '../components-react/form-field-radio.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,4 @@ export default {
   id: 'css-form-field-radio',
 };
 
-export { Default } from '../components-react/form-field-radio.stories';
+export const Default = ReactStories.Default;

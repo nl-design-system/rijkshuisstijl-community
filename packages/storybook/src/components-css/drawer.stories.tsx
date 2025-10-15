@@ -1,4 +1,5 @@
 import reactMeta from '../components-react/drawer.stories';
+import * as ReactStories from '../components-react/drawer.stories';
 import { mergeCssMeta } from '../helpers/mergeCssMeta';
 
 export default {
@@ -7,4 +8,9 @@ export default {
   id: 'css-drawer',
 };
 
-export { Default, InlineStart, InlineEnd, BlockStart, BlockEnd, OverflowY } from '../components-react/drawer.stories';
+export const Default = ReactStories.Default;
+export const InlineStart = ReactStories.InlineStart;
+export const InlineEnd = ReactStories.InlineEnd;
+export const BlockStart = ReactStories.BlockStart;
+export const BlockEnd = ReactStories.BlockEnd;
+export const OverflowY = ReactStories.OverflowY;
