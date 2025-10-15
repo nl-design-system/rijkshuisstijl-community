@@ -24,6 +24,7 @@ export const mergeCssMeta = <Base extends Meta<any>, Overwrite extends Meta<any>
           sourceState: 'shown',
         },
         source: {
+          language: 'html',
           // transform the react code to formatted html
           transform: (code: string, storyContext: StoryContext) => {
             const render = storyContext.component;
