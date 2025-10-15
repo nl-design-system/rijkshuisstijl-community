@@ -1,5 +1,4 @@
 import { NavigationList, NavigationListItem } from '@rijkshuisstijl-community/components-react';
-import { NavigationListProps } from '@rijkshuisstijl-community/components-react/dist/NavigationList';
 import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './navigation-list.md?raw';
@@ -31,33 +30,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: (args: NavigationListProps) => (
-    <NavigationList {...args}>
-      <NavigationListItem
-        description="Uw gegevens, familie en identiteitsbewijs"
-        href={'#'}
-        icon="user"
-        label="Identiteit"
-      />
-      <NavigationListItem
-        description="Uw inkomen, toeslagen, bijdragen en belastingen"
-        href={'#'}
-        icon="currency-euro"
-        label="Financiën"
-      />
-      <NavigationListItem
-        description="Uw pensioen, arbeidsgegevens en uitkeringen"
-        href={'#'}
-        icon="briefcase"
-        label="Werk"
-      />
-    </NavigationList>
-  ),
-};
-export const SmallContainer: Story = {
-  render: (args: NavigationListProps) => (
-    <div style={{ width: '380px' }}>
-      <NavigationList {...args}>
+  args: {
+    children: (
+      <>
         <NavigationListItem
           description="Uw gegevens, familie en identiteitsbewijs"
           href={'#'}
@@ -76,7 +51,40 @@ export const SmallContainer: Story = {
           icon="briefcase"
           label="Werk"
         />
-      </NavigationList>
-    </div>
-  ),
+      </>
+    ),
+  },
+};
+export const SmallContainer: Story = {
+  args: {
+    children: (
+      <>
+        <NavigationListItem
+          description="Uw gegevens, familie en identiteitsbewijs"
+          href={'#'}
+          icon="user"
+          label="Identiteit"
+        />
+        <NavigationListItem
+          description="Uw inkomen, toeslagen, bijdragen en belastingen"
+          href={'#'}
+          icon="currency-euro"
+          label="Financiën"
+        />
+        <NavigationListItem
+          description="Uw pensioen, arbeidsgegevens en uitkeringen"
+          href={'#'}
+          icon="briefcase"
+          label="Werk"
+        />
+      </>
+    ),
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ width: '380px' }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
