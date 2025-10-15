@@ -99,37 +99,6 @@ const meta = {
     defaultValue: '',
     dir: '',
   },
-  render: (args) => {
-    const {
-      dir,
-      label,
-      defaultValue,
-      options,
-      children,
-      name,
-      description,
-      errorMessage,
-      required,
-      disabled,
-      invalid,
-    } = args;
-    return (
-      <FormFieldSelect
-        defaultValue={defaultValue || undefined}
-        description={description || undefined}
-        dir={dir || undefined}
-        disabled={disabled || undefined}
-        errorMessage={errorMessage || undefined}
-        invalid={invalid || undefined}
-        label={label || undefined}
-        name={name || undefined}
-        options={options || undefined}
-        required={required || undefined}
-      >
-        {!options?.length && children}
-      </FormFieldSelect>
-    );
-  },
   tags: ['autodocs'],
   parameters: {
     status: {
