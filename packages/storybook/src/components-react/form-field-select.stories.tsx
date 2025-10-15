@@ -1,5 +1,5 @@
 import { FormFieldSelect, SelectOption } from '@rijkshuisstijl-community/components-react';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './form-field-select.md?raw';
 import { mergeMarkdown } from '../../helpers/merge-markdown';
 

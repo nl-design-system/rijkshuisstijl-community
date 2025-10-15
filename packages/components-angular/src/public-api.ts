@@ -30,3 +30,4 @@ export * from './navbar-item/end-item.directive';
 export * from './footer/footer.component';
 export * from './data-summary/data-summary.component';
 export * from './data-summary-item/data-summary-item.component';
+export * from './back-to-top/back-to-top.component';

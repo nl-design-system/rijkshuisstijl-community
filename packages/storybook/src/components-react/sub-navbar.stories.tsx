@@ -1,5 +1,5 @@
 import { type NavBarLinkProps, SubNavBar } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
   title: 'Navigation Bar/Sub Navigation Bar',

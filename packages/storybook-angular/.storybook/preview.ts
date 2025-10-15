@@ -1,14 +1,19 @@
 import { componentWrapperDecorator, type Preview } from '@storybook/angular';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import OverviewPage from './overview.mdx';
+import { formatHtml } from '@rijkshuisstijl-community/internal-tooling/formatHtml';
 
 const preview: Preview = {
   parameters: {
+    html: {
+      transform: formatHtml,
+    },
     docs: {
       page: OverviewPage,
       source: {
         excludeDecorators: true,
       },
+      codePanel: true,
     },
     controls: {
       matchers: {
@@ -22,15 +27,12 @@ const preview: Preview = {
       },
     },
   },
+
   decorators: [
     componentWrapperDecorator((story) => `<div class="utrecht-document">${story}</div>`),
     withThemeByClassName({
       themes: {
         RijkshuisstijlCommunity: 'rhc-theme',
-        'DigiD - oud': 'digid-theme-old',
-        'MijnOverheid - oud': 'mijnoverheid-theme-old',
-        'Logius - oud': 'logius-theme-old',
-        'RIVM - oud en nog niet verplaatst': 'rivm-theme-old',
         'Uitvoerend - paars': 'uitvoerend-paars',
         'Uitvoerend - hemelblauw': 'uitvoerend-hemelblauw',
         'Uitvoerend - groen': 'uitvoerend-groen',
@@ -43,6 +45,8 @@ const preview: Preview = {
       defaultTheme: 'RijkshuisstijlCommunity',
     }),
   ],
+
+  tags: ['autodocs'],
 };
 
 export default preview;
