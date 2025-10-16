@@ -9,7 +9,6 @@ import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css'
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/koop/index.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
-import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Paragraph } from '@rijkshuisstijl-community/components-react';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import { Controls, Description, Primary, Stories, useOf } from '@storybook/addon-docs/blocks';
