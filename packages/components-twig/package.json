@@ -24,7 +24,8 @@
     "build:components": "cpx \"src/**/*.twig\" dist/",
     "build:typescript": "tsc",
     "clean": "rimraf dist/",
-    "lint": "tsc --project ./tsconfig.json --noEmit"
+    "lint": "tsc --project ./tsconfig.json --noEmit",
+    "typecheck": "tsc --noEmit"
   },
   "files": [
     "dist/"

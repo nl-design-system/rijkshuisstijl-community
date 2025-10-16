@@ -25,6 +25,7 @@
     "clean": "rimraf dist/ pages/",
     "lint": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
     "test": "vitest run --coverage --reporter verbose",
+    "typecheck": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
     "watch": "npm-run-all watch:**",
     "watch:components": "rollup --config rollup.config.mjs --watch",
     "watch:test": "vitest --coverage --watch"

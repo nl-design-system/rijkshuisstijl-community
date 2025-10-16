@@ -10,7 +10,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "test": "vitest run --coverage --reporter verbose"
+    "test": "vitest run --coverage --reporter verbose",
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git+ssh",
