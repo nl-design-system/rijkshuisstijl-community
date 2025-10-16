@@ -110,7 +110,7 @@ export const Default = {
   },
 } as StoryObj<typeof meta>;
 
-export const Error = {
+export const Invalid = {
   args: {
     label: 'Select option',
     children: [

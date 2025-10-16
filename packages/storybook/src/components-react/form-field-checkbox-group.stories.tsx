@@ -82,7 +82,7 @@ export const Default: StoryObj<typeof meta> = {
   },
 };
 
-export const Error: StoryObj<typeof meta> = {
+export const Invalid: StoryObj<typeof meta> = {
   args: {
     label: 'Select option',
     children: [

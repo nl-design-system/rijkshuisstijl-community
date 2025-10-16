@@ -9,7 +9,7 @@ export default {
 };
 
 export const Default = ReactStories.Default;
-export const Error = ReactStories.Error;
+export const Invalid = ReactStories.Invalid;
 export const Description = ReactStories.Description;
 export const Status = ReactStories.Status;
 export const RightToLeft = ReactStories.RightToLeft;
