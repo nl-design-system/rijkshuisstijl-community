@@ -117,7 +117,7 @@ jobs:
           cache: pnpm
 
       - name: "Restore build artifact: Storybook"
-        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
         with:
           name: storybook
           path: packages/storybook/dist/
@@ -129,7 +129,7 @@ jobs:
           path: packages/storybook-angular/dist/
 
       - name: "Restore build artifact: CSS"
-        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
         with:
           name: css
           path: packages/components-css/dist/
@@ -168,7 +168,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: "Restore build artifact: Storybook"
-        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
         with:
           name: storybook
           path: packages/storybook/dist/
@@ -201,7 +201,7 @@ jobs:
           cache: pnpm
 
       - name: "Restore build artifact: Storybook"
-        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
         with:
           name: storybook
           path: packages/storybook/dist/
