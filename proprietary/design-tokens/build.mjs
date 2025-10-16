@@ -2,6 +2,7 @@ import { existsSync, mkdirSync } from 'fs';
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'path';
 import StyleDictionary from 'style-dictionary';
+import { transforms, transformTypes } from 'style-dictionary/enums';
 
 import { register } from '@tokens-studio/sd-transforms';
 
@@ -20,6 +21,21 @@ const excludes = [
   'components/task-list',
   'components/toolbar-button',
 ];
+
+const hooks = {
+  transforms: {
+    negative: {
+      name: 'negative',
+      type: transformTypes.value,
+      transitive: true,
+      filter: (token) => token.$value.startsWith('-'),
+      transform: (token) => {
+        token.value = `calc(-1 * ${token.original.value.substring(1)})`;
+        return token;
+      },
+    },
+  },
+};
 
 // Get the platforms config
 const getPlatformsConfig = (buildPath, themeName) => {
@@ -58,7 +74,7 @@ const getPlatformsConfig = (buildPath, themeName) => {
     },
     web: {
       transformGroup: 'tokens-studio',
-      transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4'],
+      transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4', 'negative'],
       buildPath,
       excludes,
       files: [
@@ -96,11 +112,13 @@ async function buildBaseTokens() {
     log: { verbosity: 'verbose' },
     source: ['./src/**/base.tokens.json'],
     preprocessors: ['tokens-studio'],
+    hooks,
     platforms: {
       ...config,
     },
   });
   register(StyleDictionaryBase, { excludeParentKeys: true });
+  StyleDictionaryBase.registerTransform({});
   await StyleDictionaryBase.hasInitialized;
 
   await StyleDictionaryBase.buildAllPlatforms();
@@ -130,6 +148,7 @@ async function buildThemes() {
       log: { verbosity: 'verbose' },
       source: [`./src/generated/${themeName}/tokens.json`],
       preprocessors: ['tokens-studio'],
+      hooks,
       platforms: {
         ...config,
       },
