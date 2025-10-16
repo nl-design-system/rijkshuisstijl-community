@@ -72,27 +72,25 @@ export default function Details() {
               <Separator />
               <Heading level={2}>Vraag en antwoord</Heading>
               <ColumnLayout>
-                <div className="rhc-linklist-collection">
-                  <LinkList>
-                    <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                      Wat zijn de regels bij consignatie?
-                    </LinkListLink>
-                    <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                      Hoe vaak mag ik nachtdienst hebben?
-                    </LinkListLink>
-                    <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                      Welke brochures zijn er over Arbeidstijdenwet?
-                    </LinkListLink>
-                  </LinkList>
-                  <LinkList>
-                    <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                      Wanneer geldt de Arbeidstijdenwet niet (of gedeeltelijk) voor mij?
-                    </LinkListLink>
-                    <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                      Meer vragen en antwoorden
-                    </LinkListLink>
-                  </LinkList>
-                </div>
+                <LinkList>
+                  <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                    Wat zijn de regels bij consignatie?
+                  </LinkListLink>
+                  <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                    Hoe vaak mag ik nachtdienst hebben?
+                  </LinkListLink>
+                  <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                    Welke brochures zijn er over Arbeidstijdenwet?
+                  </LinkListLink>
+                </LinkList>
+                <LinkList>
+                  <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                    Wanneer geldt de Arbeidstijdenwet niet (of gedeeltelijk) voor mij?
+                  </LinkListLink>
+                  <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                    Meer vragen en antwoorden
+                  </LinkListLink>
+                </LinkList>
               </ColumnLayout>
               <Separator />
               <Heading level={2}>Uitgelicht</Heading>
