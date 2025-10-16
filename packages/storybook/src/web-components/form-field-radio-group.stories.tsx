@@ -1,7 +1,7 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { FormFieldRadioGroupWebComponent, FormFieldRadioWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../components-react/form-field-radio-group.md?raw';
 
 FormFieldRadioGroupWebComponent.define();
@@ -116,7 +116,7 @@ export const Default = {
   },
 } as StoryObj<typeof meta>;
 
-export const Error = {
+export const Invalid = {
   args: {
     label: 'Select option',
     children: [

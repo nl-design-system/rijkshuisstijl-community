@@ -1,9 +1,9 @@
 /* @license CC0-1.0 */
 
 import { FormFieldTextInput } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './form-field-text-input.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Form Field/Form Field Text Input',
@@ -224,16 +224,7 @@ const meta = {
     type: {
       description: 'Type',
       control: 'select',
-      options: {
-        '': null,
-        email: 'email',
-        number: 'number',
-        password: 'password',
-        search: 'search',
-        tel: 'tel',
-        text: 'text',
-        url: 'url',
-      },
+      options: ['', 'email', 'number', 'password', 'search', 'tel', 'text', 'url'],
       table: {
         category: 'API',
         defaultValue: { summary: '' },
@@ -242,12 +233,7 @@ const meta = {
     dir: {
       description: 'Text direction',
       control: { type: 'select' },
-      options: {
-        '': undefined,
-        auto: 'auto',
-        ltr: 'ltr',
-        rtl: 'rtl',
-      },
+      options: ['', 'auto', 'ltr', 'rtl'],
       table: {
         category: 'DOM',
         defaultValue: { summary: '' },
@@ -256,12 +242,7 @@ const meta = {
     inputDir: {
       description: 'Text direction',
       control: { type: 'select' },
-      options: {
-        '': undefined,
-        auto: 'auto',
-        ltr: 'ltr',
-        rtl: 'rtl',
-      },
+      options: ['', 'auto', 'ltr', 'rtl'],
       table: {
         category: 'API',
         defaultValue: { summary: '' },

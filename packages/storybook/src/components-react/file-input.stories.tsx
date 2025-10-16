@@ -1,8 +1,8 @@
 import { FileInput, UnorderedList, UnorderedListItem } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { FormLabel } from '@utrecht/component-library-react';
 import readme from './file-input.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'File Input',
