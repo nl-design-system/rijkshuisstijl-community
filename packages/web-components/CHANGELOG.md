@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/web-components
 
+## 3.1.0
+
+### Minor Changes
+
+- 91a9ca7: Added inputInvalid prop to FormFIeldRadio and FormFIeldCheckboxOption
+
 ## 3.0.0
 
 ### Major Changes

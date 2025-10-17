@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/components-react
 
+## 7.1.0
+
+### Minor Changes
+
+- 91a9ca7: FormFieldCheckboxOption & FormFieldRadio now have an `inputInvalid` prop
+
+### Patch Changes
+
+- 762e2ae: The ref property for the FileInput component has been changed from required to optional.
+
 ## 7.0.0
 
 ### Major Changes
