@@ -78,6 +78,10 @@ jobs:
           BASE_URL: "/utrecht/"
         run: pnpm run --if-present build
 
+      # Due to dependency on type definitions, typechecking must be done after build
+      - name: "Continuous Integration: typecheck"
+        run: pnpm run --if-present typecheck
+
       - name: "Retain build artifact: Storybook"
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
