@@ -114,6 +114,13 @@ export const Disabled: Story = {
   },
 };
 
+export const InputInvalid: Story = {
+  args: {
+    label: 'Checkbox',
+    inputInvalid: true,
+  },
+};
+
 export const Invalid: Story = {
   args: {
     label: 'Checkbox',
