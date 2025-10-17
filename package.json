@@ -67,6 +67,7 @@
     "clean": "rimraf dist/ && lerna run clean",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
     "lint:css": "stylelint --allow-empty-input '**/*.{css,scss}'",
+    "lint:ts": "pnpm typecheck",
     "lint:js": "eslint --ext .js,.cjs,.mjs,.json,.jsx,.mdx,.ts,.tsx --report-unused-disable-directives .",
     "lint:md": "markdownlint '**/*.md'",
     "lint:package-json": "npmPkgJsonLint '**/package.json'",
