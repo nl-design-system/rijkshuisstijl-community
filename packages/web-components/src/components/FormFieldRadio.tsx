@@ -15,7 +15,7 @@ export class FormFieldRadioWebComponent extends BaseWebComponent {
   render(): void {
     if (!this.shadowRoot) return;
 
-    const { label, description, errormessage, status, invalid, inputInvalid, disabled, checked, dir, ...restProps } =
+    const { label, description, errormessage, status, invalid, inputinvalid, disabled, checked, dir, ...restProps } =
       this.props;
 
     render(
@@ -25,7 +25,7 @@ export class FormFieldRadioWebComponent extends BaseWebComponent {
         dir={(dir as FormFieldRadioAttributes['dir']) ?? undefined}
         disabled={(disabled === 'true') as FormFieldRadioAttributes['disabled']}
         errorMessage={(errormessage as FormFieldRadioAttributes['errorMessage']) ?? undefined}
-        inputInvalid={(inputInvalid === 'true') as FormFieldRadioAttributes['inputInvalid']}
+        inputInvalid={(inputinvalid === 'true') as FormFieldRadioAttributes['inputInvalid']}
         invalid={(invalid === 'true') as FormFieldRadioAttributes['invalid']}
         label={(label as FormFieldRadioAttributes['label']) ?? undefined}
         status={(status as FormFieldRadioAttributes['status']) ?? undefined}
