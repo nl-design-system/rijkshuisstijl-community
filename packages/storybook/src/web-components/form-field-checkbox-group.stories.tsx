@@ -104,7 +104,7 @@ export const Default = {
       }),
       createElement('rhc-form-checkbox-option', {
         key: 'checkbox-3',
-        label: 'Checkbox 2',
+        label: 'Checkbox 3',
       }),
     ],
   },
@@ -117,17 +117,17 @@ export const Invalid = {
       createElement('rhc-form-checkbox-option', {
         key: 'checkbox-4',
         label: 'Checkbox 1',
-        invalid: 'true',
+        inputInvalid: 'true',
       }),
       createElement('rhc-form-checkbox-option', {
         key: 'checkbox-5',
         label: 'Checkbox 2',
-        invalid: 'true',
+        inputInvalid: 'true',
       }),
       createElement('rhc-form-checkbox-option', {
         key: 'checkbox-6',
-        label: 'Checkbox 2',
-        invalid: 'true',
+        label: 'Checkbox 3',
+        inputInvalid: 'true',
       }),
     ],
     errorMessage: 'This is an error message',
@@ -170,7 +170,7 @@ export const Status = {
       }),
       createElement('rhc-form-checkbox-option', {
         key: 'checkbox-12',
-        label: 'Checkbox 2',
+        label: 'Checkbox 3',
       }),
     ],
     status: 'This is a status',

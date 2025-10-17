@@ -9,6 +9,7 @@ export interface FormFieldCheckboxOptionProps extends FormFieldCheckboxProps {
 export const FormFieldCheckboxOption = ({
   description,
   invalid,
+  inputInvalid,
   errorMessage,
   ...restProps
 }: FormFieldCheckboxOptionProps) => {
@@ -22,6 +23,7 @@ export const FormFieldCheckboxOption = ({
       description={description}
       errorMessage={errorMessage}
       id={id}
+      inputInvalid={inputInvalid}
       invalid={invalid}
       aria-describedby={
         clsx({
