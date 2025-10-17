@@ -113,9 +113,9 @@ export const Invalid: Story = {
     label: 'Onderwerp',
     input: (
       <FormFieldRadioGroup>
-        <FormFieldRadio label="Option 1" name="radio-demo" value="option1" />
-        <FormFieldRadio label="Option 2" name="radio-demo" value="option2" />
-        <FormFieldRadio label="Option 3" name="radio-demo" value="option3" />
+        <FormFieldRadio inputInvalid label="Option 1" name="radio-demo" value="option1" />
+        <FormFieldRadio inputInvalid label="Option 3" name="radio-demo" value="option3" />
+        <FormFieldRadio inputInvalid label="Option 2" name="radio-demo" value="option2" />
       </FormFieldRadioGroup>
     ),
     statusId: 'status',
