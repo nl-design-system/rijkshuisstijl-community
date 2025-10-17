@@ -15,11 +15,10 @@ export class AccordionWebComponent extends BaseWebComponent {
   render(): void {
     if (!this.shadowRoot) return;
 
-    const { appearance, heading, icon, headinglevel, sections, ...restProps } = this.props;
+    const { heading, icon, headinglevel, sections, ...restProps } = this.props;
 
     render(
       <AccordionProvider
-        appearance={appearance ?? undefined}
         heading={heading ?? undefined}
         icon={icon && <Icon icon={icon as RHCIconID} />}
         sections={(sections && JSON.parse(sections as string)) as AccordionWebComponentAttributes['sections']}

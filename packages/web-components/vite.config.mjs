@@ -13,11 +13,7 @@ export default defineConfig({
     },
   },
   resolve: {
-    alias: {
-      react: 'preact',
-      'react-dom': 'preact',
-      'react/jsx-runtime': 'preact/jsx-runtime',
-    },
+    dedupe: ['preact', 'preact/compat', 'preact/jsx-runtime'],
   },
   plugins: [
     preact(),

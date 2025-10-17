@@ -24,7 +24,8 @@
     "clean": "rimraf dist/ .next/",
     "lint": "next lint",
     "lint:ts": "tsc --noEmit --project tsconfig.json",
-    "start": "http-server dist/"
+    "start": "http-server dist/",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "next": "15.5.5",
