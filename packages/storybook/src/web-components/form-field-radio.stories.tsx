@@ -12,6 +12,7 @@ const RadioWrapper = ({
   errormessage,
   status,
   invalid,
+  inputInvalid,
   dir,
   disabled,
   checked,
@@ -26,6 +27,7 @@ const RadioWrapper = ({
     checked: checked?.toString(),
     disabled: disabled?.toString(),
     invalid: invalid?.toString(),
+    inputInvalid: inputInvalid?.toString(),
     ...restProps,
   });
 };
@@ -38,6 +40,7 @@ const meta = {
     checked: false,
     disabled: false,
     invalid: false,
+    inputInvalid: false,
     name: '',
   },
   argTypes: {
@@ -51,6 +54,10 @@ const meta = {
     },
     invalid: {
       description: 'Invalid',
+      control: 'boolean',
+    },
+    inputInvalid: {
+      description: 'Marks the input element as invalid',
       control: 'boolean',
     },
     name: {
