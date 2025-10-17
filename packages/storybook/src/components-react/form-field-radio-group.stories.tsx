@@ -89,9 +89,9 @@ export const Invalid: StoryObj<typeof meta> = {
     label: 'Select option',
     children: (
       <>
-        <FormFieldRadio label="Option 1" name="radio-demo" value="option1" />
-        <FormFieldRadio label="Option 2" name="radio-demo" value="option2" />
-        <FormFieldRadio label="Option 3" name="radio-demo" value="option3" />
+        <FormFieldRadio inputInvalid label="Option 1" name="radio-demo" value="option1" />
+        <FormFieldRadio inputInvalid label="Option 2" name="radio-demo" value="option2" />
+        <FormFieldRadio inputInvalid label="Option 3" name="radio-demo" value="option3" />
       </>
     ),
     errorMessage: 'This is an error message',

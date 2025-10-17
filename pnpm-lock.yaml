@@ -359,8 +359,8 @@ importers:
         specifier: 19.1.9
         version: 19.1.9
       '@utrecht/component-library-react':
-        specifier: 10.3.2
-        version: 10.3.2(@babel/runtime@7.28.2)(date-fns@2.30.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+        specifier: 10.3.5
+        version: 10.3.5(@babel/runtime@7.28.2)(date-fns@2.30.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@utrecht/radio-button-react':
         specifier: 1.0.7
         version: 1.0.7(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -4421,8 +4421,14 @@ packages:
   '@utrecht/accordion-css@2.0.0':
     resolution: {integrity: sha512-U+NI6SXu5ULPjD+UDrdjh9f5AY+Hc3h5gIaqisDkogvmEDX7lkdOVxby0PrkBcVkEuiq9AIg9/RT0U3uFc7vwg==}
 
+  '@utrecht/accordion-css@3.0.0':
+    resolution: {integrity: sha512-HAodDr7gN1dslFlWcSvycWG6z7hlE0x/SJNG83LVVppgdew8SbKvI+gz3sfqPflS76J/fjI+m78yH4BqcykJUw==}
+
   '@utrecht/action-group-css@2.0.0':
     resolution: {integrity: sha512-4tx8qwAjuz35FMcmo46EL9pyIh4qbJ8tjswBthPje2ZEHqcCWignKO66suA1rApP9R+Lzf7uaXgEQ82dTb8u1w==}
+
+  '@utrecht/action-group-css@3.0.0':
+    resolution: {integrity: sha512-sNHlllu5fYIt0AHsyJxRNTdhfu6n4aD/C+pb5Oxm6Vzbpf5FDuyMIj4XwkldokrI5mUUA1ow9Bwj/w9j2vlXrw==}
 
   '@utrecht/action-group-react@1.1.1':
     resolution: {integrity: sha512-Dhm/A+vpT+2hYEyzE/ZFV0SqR4BX3Abme6LUB6wa/cGXmmlmtheFH0IYSC8nHolxbSu3sBvedJqIaf8PW7qR9A==}
@@ -4431,32 +4437,66 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/action-group-react@1.1.2':
+    resolution: {integrity: sha512-KPry2WbxX/gEHBrsb5FmfrPyY2aFiYUgi6IUmICNoAmVovevpAtTDX+mGEyMzSyfJo4v07JUB+gRVD9mLd74Lg==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/alert-css@2.4.0':
     resolution: {integrity: sha512-2vrm2Y8yNIPu1VNmEGP7BJkxEFaSPobQ+hcPkQs2TJiPybzX+ut7ZCcm3KaxmE6LSVjIOLSbLXe2YW/fP2g/Rw==}
+
+  '@utrecht/alert-css@3.0.0':
+    resolution: {integrity: sha512-SWbXEC3UKFsosD4Bp5RofRdOiE55jvcQENt9ZYt95pLrdMNAMmGX1TIbXgr+SUVYvNvW+cSM/2A8nJbP8NA0qQ==}
 
   '@utrecht/alert-dialog-css@1.4.2':
     resolution: {integrity: sha512-fnL692KHBh3POeyu9IxOjbZ/9Alb/ppjbt+uQ0ukyfhd8NUS9BYmwJTr9j5LUZdg9Kep/nHMbAN1zSptQ0DICQ==}
 
+  '@utrecht/alert-dialog-css@2.0.0':
+    resolution: {integrity: sha512-0YgeeTWoT2SMsF9FcWqyZ96uJFVt7QQuKW5H4Y4SSLKyRJkhivySaUBUAT7rg9gYwOI/eJF2t5njOrgCiX3Iyw==}
+
   '@utrecht/alternate-lang-nav-css@1.3.1':
     resolution: {integrity: sha512-MY0qHM+tt1Q9v6SG+lTzDNh3xNs0eO9lpvzUWbwpR7z0fmRq/65+gYhZwFCiAKaWou+A1Uog082V0fSTslNkKw==}
+
+  '@utrecht/alternate-lang-nav-css@2.0.0':
+    resolution: {integrity: sha512-wwxaKt5kyKn2mz3VubXmi5KB6JZ4z6aA6Kmja+0O4oysTc9JnUYZddX441Lme3zOoW86iy/n756YJNw32bJV1g==}
 
   '@utrecht/article-css@1.5.1':
     resolution: {integrity: sha512-zCRB9L0BTXCYmwNLI6NGlfds4+heXji4yEo79dF/t2O3xGGbMA1hy1zI20Plf6z36P9gnONaYRruqpnFamQFew==}
 
+  '@utrecht/article-css@2.0.0':
+    resolution: {integrity: sha512-CQ+Aqv8reIg6Bs7NduE+NF5g7vPaOtNKivxOjbQ7Jec2qYPmY1dPlK9vfuDkHDS6/tzD1Y/fYtcrUt9gEksl/Q==}
+
   '@utrecht/backdrop-css@1.4.1':
     resolution: {integrity: sha512-nUUSDod9nYkGlwjvVxHplOjdYnrtqewqXOrO9A7PHLyUm43thQ8XBorhAG0IDtFxHT46JfofMxuCIMZr7PZHFQ==}
+
+  '@utrecht/backdrop-css@2.0.0':
+    resolution: {integrity: sha512-UNtzfTqhbTk6g7OX8h9RhrT26VHWCph9dtSB6EkCFgtbyzNgqZwJdsIwlEFvYS+ZQkCCuNP0e/dJVXDhBlkYng==}
 
   '@utrecht/badge-counter-css@1.4.1':
     resolution: {integrity: sha512-pEyVTH9CrFxNaNfIuFxgGBl5Q3ZecU4jsYJL+2JBXTzJbgy9dI47CvDMQzEkASkBCR4qEPeMB6f5b4XQRBOipQ==}
 
+  '@utrecht/badge-counter-css@2.0.0':
+    resolution: {integrity: sha512-nGnTW1+vx0P1pIsdR/lhQApl8kBX56hJLSvGOkrZ/a0QcZjQcAeoFKIP1+AhF0FS5MNSOnAB2InAZCZ4g1Epgg==}
+
   '@utrecht/badge-list-css@2.2.1':
     resolution: {integrity: sha512-C1HCRQ12CTuuFvmbcUEYsI8SuXe1X7y/oC9OyHznfyIJYkINm9NZ/30WIu99fgd/GkwjFyQoy24J990zteM3PQ==}
+
+  '@utrecht/badge-list-css@3.0.0':
+    resolution: {integrity: sha512-Rgy5evg56dpVXWUrtcF04Qn8T68zht+m0ywvjzlyAMgnN+6E8DG9OSQD8YXrRjff/+ydyjaq2trFwbmJIyl5dg==}
 
   '@utrecht/badge-status-css@1.4.1':
     resolution: {integrity: sha512-lXb/pi0tlrvz8dyYMyH2Q8FFKVnPd8+K5lQJCEY3oiG23PL/Cr+6YJl0oZx93e01Cc0Y2q6PriaLRPIJxh4T7Q==}
 
+  '@utrecht/badge-status-css@2.0.0':
+    resolution: {integrity: sha512-xiKqSCzPqdKwRMsgRfev6xSRB/fPn30ucPOT7Jp+OkimJ4MT3J47iv1wG70XKGF/Vdyqpo0CwOMJQgtiReiaSA==}
+
   '@utrecht/blockquote-css@1.6.1':
     resolution: {integrity: sha512-rebGL4ykw9ck+WuRpQd8vhbVN3QTJhsiico3C3JWbYfG/vvafCDkTI7A6AkuNZvg95V3lMJqn2mkA7fj8s0YWw==}
+
+  '@utrecht/blockquote-css@2.0.0':
+    resolution: {integrity: sha512-mrckiiEsOokfGQ94+IggSUAHWErrop9uzyQ/6k2rpS8cWKZwoDm3/WMwZwqkU6qmttvL5PKrdqY8yLn+A7QMhw==}
 
   '@utrecht/body-css@1.2.1':
     resolution: {integrity: sha512-YKB/y3Z+OjiDp39HTInrEme8ZOV+fffeHLybWTqCQjiP4JdPyiwUo82p7TYoyGe/isSGOSJQqVByhniadZI8mg==}
@@ -4471,12 +4511,21 @@ packages:
   '@utrecht/breadcrumb-nav-css@1.5.1':
     resolution: {integrity: sha512-C6da4Wo4cUSa0oag5riOYs1u4iFKuOJIvjdk93dUN/iW+h3YoWi0PNOiWnY0HbzecH5UxbwSCbqAitH5pmfogg==}
 
+  '@utrecht/breadcrumb-nav-css@2.0.0':
+    resolution: {integrity: sha512-3W70O662go34AOJYfl7rBf+XGL/JSFsUsy3OulqUHImM2UhanzymWFAhOyXb/A0CiYyVdb9uq9PqnzNFuQB8fQ==}
+
   '@utrecht/button-css@2.3.1':
     resolution: {integrity: sha512-gjCVKTzsV/2TOTrYANHFP1f9RqXc/6lY+gC37q9KaEJZ55+37mVKeNubCO1ntFRJeGY+4oCT5ti2rtX4jqDjqg==}
+
+  '@utrecht/button-css@3.0.0':
+    resolution: {integrity: sha512-iwKhmYE/AVKdxTyeQefiP3Wlpkeg/K+PaOXlG2D9tMh6pp+ndz+0yr65T9jSGVZeU/wjoafu9tGAXoe959ql5w==}
 
   '@utrecht/button-group-css@1.5.0':
     resolution: {integrity: sha512-8HGQ+CPDoxFM7n+ArsCixFEpw0Uykf4YxLc18L3tE5yw2+pBdrLVieh+wBghg2QtfsQJs5tpLZbw76wyaVENmg==}
     deprecated: Deprecated. Replaced by @utrecht/action-group-css.
+
+  '@utrecht/button-group-css@2.0.0':
+    resolution: {integrity: sha512-s6VtfphxURhiSnXUoTljhlJDoTZB1z/bqAAtQ6uqhzpKMiJ3B9OohCbNptBHATwbjHQlHSpr8m2grHK7a0W+cA==}
 
   '@utrecht/button-group-react@1.1.0':
     resolution: {integrity: sha512-iq8mIs24o1yaGV4v4jG2OPQLCZ/v10AjMAQVp1enOqfeQQsIjaeI2NCyaT5tDbFG5vkTeHuch+2rgE+dMHGdCA==}
@@ -4486,8 +4535,18 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/button-group-react@1.1.1':
+    resolution: {integrity: sha512-atDWFb16Yk0SEyQ6wpBxeHuHgAUF8a3nyR8+zqFzrm08ZD+Tr5qzD1l0eoQDy9Y7LWtT/gy0aAeDAr+div9aXQ==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/button-link-css@1.3.1':
     resolution: {integrity: sha512-jatHsTpTO25Jy3BWPNlcgiyZ9S0nRdu9CGz7E+qucgcmzAI99BN+vDGzrhRj+HS/UcgTP3TgTggjzcBx8q+Q2A==}
+
+  '@utrecht/button-link-css@2.0.0':
+    resolution: {integrity: sha512-hXzyNgKpprFUKpzD/VGyahcZQWkTtGDGqw6o76dDsDWqhICzWwq7QEGOnhZSGTVReGsCVP4lGk825+mbiy9UNw==}
 
   '@utrecht/button-react@2.0.7':
     resolution: {integrity: sha512-mJ6rO4+86FitY3y5XO/ov+1YQkruIQYWuEVNgO+EShG70vm8pT8cuU7ReauKJq0JUgxKeaNYWdyBWha9Sz64/Q==}
@@ -4496,8 +4555,18 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/button-react@2.0.8':
+    resolution: {integrity: sha512-tFNbq6W/HJ1BmHQaCJcmiol9iehHKDtBBj8Lh+yXjlNMt5ovpfltcUd0Qc74lsD7lbjFomWHulmQg25RqBGfAg==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/calendar-css@1.4.1':
     resolution: {integrity: sha512-6syL8tX3TbJxWJGOR2xeNrssIHjmoDuif6hz4V4JzV666pxd4akWqTnJ3XSgxt8WXAwglMeJnB/ynSQDGF4wog==}
+
+  '@utrecht/calendar-css@2.0.0':
+    resolution: {integrity: sha512-+pOuNQU7uSrl3ME8RLpj9JSkWbATLraMs/gx8Stu9LON0pA/URPJDWBjBvEJZGbmjgQIFpjZFWkW/VCdqedUqw==}
 
   '@utrecht/calendar-react@1.0.11':
     resolution: {integrity: sha512-SeiiPEznxzBXhYrjMYg1oXJ+sUt/1JdQ7qVw5EanyChlZ/qMkb+7FVWxIWmEZneLHtB//RA3s68XfzsSE0/puw==}
@@ -4506,8 +4575,18 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/calendar-react@1.0.12':
+    resolution: {integrity: sha512-v3Qyiu9sQBBAbmfRQfqyWHFhm3DbXG7GeWoCZAr0OM3pYUWRap9UEoKlhjuM1SXd7SCw481JXz7nCr1dQ0CDgw==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/card-css@0.1.0':
     resolution: {integrity: sha512-0hVZEzoLccDdTiFipWOT6rOwGuuEkCf8BqcdY8OPl4jPcShbAVfPpqIlsu5xgn6q1fPmrpQ75pFzYarEpccYdw==}
+
+  '@utrecht/card-css@1.0.0':
+    resolution: {integrity: sha512-8mInljwxqW56e2G/5bD6/MfNW1aJEPCR6F/u7O3QuHZZV5ApyeRy6DBnTDDLN0wg+ks3yixB1F30UgiiC2Kc8Q==}
 
   '@utrecht/card-react@0.0.1':
     resolution: {integrity: sha512-gixswYEwgW0BTk4RecoAV8H0f9w938DphNSCu4e3Z5+ePNt4ZoaG2W3hRuJXTImP+NPXiLkAKRgzbq+qXjxU7Q==}
@@ -4516,8 +4595,18 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/card-react@0.0.2':
+    resolution: {integrity: sha512-PzeMcdpMVjKCZiQ9K+V4Mm6kcXxKTkrPsgD4yYcm9GKI97QkU9wHsl2SUiN32Wsr2Yn8e5r4RMWJ2jlE7FRqcg==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/checkbox-css@1.6.1':
     resolution: {integrity: sha512-P/S3XvYVW+3sgOAub68eZC/Fn8HlJmG9wl5Owky/NyDnRihb811EicdyzEzc8ldpwuxD7n/YNmJLMyj5pRL5NA==}
+
+  '@utrecht/checkbox-css@2.0.0':
+    resolution: {integrity: sha512-rDwa2t5a1Mc2oskqLgnoA64xlroaoHss/Rd9SmiIimC6/KC/HnVJ6hUSv0ilJwRcrAEUwKNcbeV/ANUOwa/4jQ==}
 
   '@utrecht/checkbox-react@1.0.8':
     resolution: {integrity: sha512-Kv1qf3nEOZA+Y0Z5+pKYpDMOBfpL2eXqeAeedj0UTYXX6Tkvq3lUK8eB4CLuSNgBV+ejSUj3CuZoEiOENK4Fdg==}
@@ -4526,23 +4615,52 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/checkbox-react@1.0.9':
+    resolution: {integrity: sha512-0tFCpi1V4pA65A+nEaZ1WnOwkZZxBa28Pkqimc3WFiZzGC8giLVVUd0A9Hc9KpWhThCaEo8me5w4P3cJNDotaw==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/code-block-css@1.5.1':
     resolution: {integrity: sha512-kE42aOvgcqrVqE6Mbh+qhAwKAMSMDaHrLcgjfwPKNc1wGlDkIgilPnxg4kQtNibBu6Anf6HGLj9vq6cQMCsTOQ==}
+
+  '@utrecht/code-block-css@2.0.0':
+    resolution: {integrity: sha512-ziOGwKxEHN+obbkoQnpXX0D8HQKNVXgiK618ORQNafOgesCnLJ1i2bJbLfY+Uy4BHzNZ5B+0ZsiPOPB9617uyw==}
 
   '@utrecht/code-css@1.5.1':
     resolution: {integrity: sha512-QN9vSjNuVrGWTHDTLMrmctlFifINemRGI6GR4Bz9yoxu8L2VahlH2FkKV00I6xpR0oWa5Ol2bttII5VbA+vXRg==}
 
+  '@utrecht/code-css@2.0.0':
+    resolution: {integrity: sha512-kq0j6HbXMPO/TSbmjiv4U6XBvkMp7Ea2i3t1YMrmsr2btZVGP0lWqdQ9Iapxao72Rx6Qg9+gBJEY4nKvIfsXuA==}
+
   '@utrecht/color-sample-css@1.4.1':
     resolution: {integrity: sha512-iHLcajGTvg+A+J7uhEVcO8y0mJhdhuKrHFaTDgvCy7zvyhknqKiI5Pil09TEQqtDesX8cL0zt3iXuPQ8RVuK+Q==}
+
+  '@utrecht/color-sample-css@2.0.0':
+    resolution: {integrity: sha512-WeJv3JDANgIVJHm5maAPAMJoiughE3mwx3njAp9iLj7KCGpfPdpfuzpWL6ZbjxkD/2vx5KoJxzINwVOTRkkwzA==}
 
   '@utrecht/column-layout-css@1.5.1':
     resolution: {integrity: sha512-t1qT2fxdqkVF0/fra32jt0XDe2D1sVbDB9HOFSYcedQ13w20IYaaeogHiM57nZ5QbjHhbFFM5SaSWBw35O3ICg==}
 
+  '@utrecht/column-layout-css@2.0.0':
+    resolution: {integrity: sha512-lMprsMJxIpyvapnsuiTyt8DjGq6TeFgxMpbJ9SsWsSmVfdX/R0JTB1DFmbXAHhZgksQDA725bDuQSE+MUTf8ZA==}
+
   '@utrecht/combobox-css@1.4.1':
     resolution: {integrity: sha512-U3s8srLcTPjkn6pbzOudVsvUBwun4vLdhjQ2jyHGjsA/GDAU2Z2geGuLsYSFSJtsThMQ5QqfDtWj9tyYRKMByw==}
 
+  '@utrecht/combobox-css@2.0.0':
+    resolution: {integrity: sha512-oEWVrpEJPfejkws8jCvXblROGipBNVvpJSclW3d2j/P7FoRfJNRIinnuZ3oUKB7bPRMtJOnLjo+8IZ2G8Es/jA==}
+
   '@utrecht/combobox-react@0.0.8':
     resolution: {integrity: sha512-JOKu+G2iAW7yCWOA9u19OlM1CL7jkUQRvl3lLuQWdOmZSU0WXC3KJcxi6Q1LCatZa8sSvss4wjFpCDMYTEm8/A==}
+    peerDependencies:
+      '@babel/runtime': ^7.23.6
+      react: '18'
+      react-dom: '18'
+
+  '@utrecht/combobox-react@0.0.9':
+    resolution: {integrity: sha512-PICGkdJbUQmdkjex4ce+H6P+N7wey3iv1i4fCHW7aDpKOpI9l37JpdH0pvTsfy3hswVP8eGZAYcZDeUWTU2+nA==}
     peerDependencies:
       '@babel/runtime': ^7.23.6
       react: '18'
@@ -4568,6 +4686,23 @@ packages:
       vega:
         optional: true
 
+  '@utrecht/component-library-react@10.3.5':
+    resolution: {integrity: sha512-sKD9FFAaRAxB9tcBnjKWYaLPsL6BNHhekuV3VXF9F/42wXwLM/HRVoXqpnJS711fElugTqCqdFmD2AK9ZmLMXg==}
+    peerDependencies:
+      '@babel/runtime': ^7.23.6
+      date-fns: ^2.30.0
+      react: '18'
+      react-dom: '18'
+      react-vega: ^7.6.0
+      vega: ^5.25.0
+    peerDependenciesMeta:
+      date-fns:
+        optional: true
+      react-vega:
+        optional: true
+      vega:
+        optional: true
+
   '@utrecht/components@7.4.0':
     resolution: {integrity: sha512-LWFJjJ7TF0eaoWq5TGrg7rNYnG+G5yIEJhuiwFlbICwSx2n+gZVbAE1dAW8YG2mGqveXZk38hBC2FWNE1tj1BQ==}
     deprecated: 'The @utrecht/components package has been deprecated. To migrate: the SCSS files are now only available in the npm package for the specific component. For example: @utrecht/button-css/src/_mixin.scss. The entire component library is now available in @utrecht/component-library-css/dist/index.css.'
@@ -4575,11 +4710,20 @@ packages:
   '@utrecht/currency-data-css@1.3.1':
     resolution: {integrity: sha512-QXXcRjRxnAab/jXqOWciokv0bCaVxxAOlF6hQC3OW76w4aaVVSXWRE3mBw+7g3AQ7nLGsfloTGwTshenF0g6+w==}
 
+  '@utrecht/currency-data-css@2.0.0':
+    resolution: {integrity: sha512-0BEBp0U3/TwLbDCoJaTLSoJJhh1XUXKL6vQcc80+FYkThn3+9hSKkYMPILfLbFv9a/MEfcxQ6SFXa1z5W88dfQ==}
+
   '@utrecht/custom-checkbox-css@1.3.2':
     resolution: {integrity: sha512-DvrmyGnC7y0xTdCqGu4dpP1bdraPNvWYC8uzS8CAzH/w8mBVti4rctP5mTXa7i5nFQN3BWLu8WF8FRpnRTMdJQ==}
 
+  '@utrecht/custom-checkbox-css@2.0.0':
+    resolution: {integrity: sha512-jPQibQrlqVMjCaNBH7BS3uPxdbRyejIxxjeCx6V5lo8ZAI6UDDbIpLC4I+PjKvfWjK7mcwdtZlQcg9xJIOntbQ==}
+
   '@utrecht/data-badge-css@1.0.1':
     resolution: {integrity: sha512-GGr4d7duJCsiiZVh3S15AoMnCM+7pO8pNOgsfeyItuD0Xv5Uxymd4TJaxahhgLrjt3HlusIJPhEo0NPUQLrHJw==}
+
+  '@utrecht/data-badge-css@2.0.0':
+    resolution: {integrity: sha512-aIDsW7Io8b49tWry+ZFfBb8daks++DDjTuRcjnIDzdHgPWsihTj4zeXl8/hp4kEC68qZMmvmrI3e3FH+yLsVqA==}
 
   '@utrecht/data-badge-react@1.0.4':
     resolution: {integrity: sha512-AKhXZGt345af8KBQyDmtJN/8C676NiyM64fYGJlV05L9Y/VyOpQi3ozPh+AUs1TA4K2jjI0jQWXi167KqgCb9w==}
@@ -4588,11 +4732,24 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/data-badge-react@1.0.5':
+    resolution: {integrity: sha512-Yqi6EUTOoTJSOTr7qv5f5ekxeaLdm/4JKGhvjyovg60d9vMIJH7sUyzLI8NHbmUikXNmvlNwx1a9OnIFnBke0A==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/data-list-css@1.4.1':
     resolution: {integrity: sha512-MK+is1wSfaiT1mW8GKUottDQUbDymV0wJotlPDnaV97uV45xF2lpXyBWzmDLynESCQtQDHgGTVBPZvHzMVlF9g==}
 
+  '@utrecht/data-list-css@2.0.0':
+    resolution: {integrity: sha512-/EQCVcouNoiIpDErAYObyZXIMC+mmCJnJqgvPbBsblhQ2ILF/ufa75m1+bgdQ5H6cGfWvWl+oQ0+WDZcz9eJCg==}
+
   '@utrecht/data-placeholder-css@1.4.1':
     resolution: {integrity: sha512-QaeWM63VGXfk5oT4idafkRmh1WwMfixgH+hfd89yW2dgjYnLjdJuJYpqsxBHVaBIsHzmhyC0FCNfGxMlz/qbkQ==}
+
+  '@utrecht/data-placeholder-css@2.0.0':
+    resolution: {integrity: sha512-dYy2oixlDO0WW7KVQtFjjr9eyg5G8b2EjW6x44A10yVe0y0mL0FnlQq8z2qX/Kdmpp4V8Q1Yy9WcsfRJR5sN/A==}
 
   '@utrecht/digid-button-css@1.4.1':
     resolution: {integrity: sha512-j/eU6dHgxehFjFAr5/PMqnE2j5ePnk0TcnsZvICK4dGbolbOBZf9APV50UCG/U1VL+FxOlrgUgwrVWxmFYxDlw==}
@@ -4600,11 +4757,20 @@ packages:
   '@utrecht/document-css@1.5.1':
     resolution: {integrity: sha512-ZXE4qzk0/MCxphcoqjgNooOcMxobR0JzqvpuZllNvtYgMcL1NMLCZ0KIj1dpQsUruLjO+bqGNYsF52McqUBi5g==}
 
+  '@utrecht/document-css@2.0.0':
+    resolution: {integrity: sha512-/zh2B3siX3GFI5lLdgAE8KxN8R1Bj59QuNwX2cwDetFu5OJv7TZ6D+t3HtT9jcVLFXbxXw4HrCjz/xz88NFQeg==}
+
   '@utrecht/drawer-css@1.4.1':
     resolution: {integrity: sha512-xVP3QNOOpapJXQVfdnrb+igZqyEDdNK4Wf8hIHNrMHfGqwxelwW9caVl58HV4pSa4KTwtN7Vs7QUwfOq0Bm1NQ==}
 
+  '@utrecht/drawer-css@2.0.0':
+    resolution: {integrity: sha512-gd7XRV4WQ2k44z+Fzuj0/Dddmgt+aUzuX8qOegeKDqH+UUCsRc256m8IWBs7Fd5lMKi2ksw01s+YqSzF178hAQ==}
+
   '@utrecht/emphasis-css@1.5.1':
     resolution: {integrity: sha512-qVwLe1+k23Xwzd26MTwErjh7piIUm3c2siZ7aaEpvC1wZ+PFgf4vs7xNWJXLz89plRJ4/5sivFLUfHY2uVP+Ow==}
+
+  '@utrecht/emphasis-css@2.0.0':
+    resolution: {integrity: sha512-4nyJ0/Rqec539KtvWlJo72qyBEPtlDzBHzcaQFd143HIT6MTN0i/96LOsSMI9MuG7XjEOJvbIcmiE+vd6Cn/fg==}
 
   '@utrecht/fieldset-react@1.0.7':
     resolution: {integrity: sha512-OilAF6SLn0fC5YbGbFfl6Ea6zfPD2yrE6L6SvtLjT+Gdbxx/e/XOk78+LmcQvY+cT2GlHxLzxM/YchsNBhOTOA==}
@@ -4613,11 +4779,24 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/fieldset-react@1.0.8':
+    resolution: {integrity: sha512-A2kOUzXFB2FX0RlUp+U+rqhDVqgHGkSgPham6Mtbe2RC5pDZ/pWYYVtgPMEtsL6FthteiHZkYK+8r03sCIOVzw==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/figure-css@1.5.1':
     resolution: {integrity: sha512-KzkIIyGo3wAYXFkDeBV+S2m6InKqPLUpVy8EjBPRTB8WexiLfDKpYf1gAVhgbL+236fB30yWLkzukGO/AAUFBw==}
 
+  '@utrecht/figure-css@2.0.0':
+    resolution: {integrity: sha512-7KCkNHc+G1IBzFGQ8Xcik0ptUTWkGwYYsdSO8nYx4D96UQk3d3CmGPeFM9yWov30pQnWE3JiwtTAIND9bXRl6g==}
+
   '@utrecht/focus-ring-css@2.3.1':
     resolution: {integrity: sha512-mmZeNnp2VeYVrnG0uhgkLcX2nVuMW0+oZjJ7lCI1FFODpj3ORmtTi7N5UNjhM3Pyppg5LdDwqMM6jF9clPg5Yg==}
+
+  '@utrecht/focus-ring-css@3.0.0':
+    resolution: {integrity: sha512-w47pvrVpgfvEgU56RrSaR3mlONFTq87iuDqufhAzJ/x3QRA90REP1ESz+wtcI42ip/az7fjYk/XI/UTe00WotA==}
 
   '@utrecht/form-css@1.5.1':
     resolution: {integrity: sha512-jRec11YkKtPmbLpW7bjkqHTb9XTCxB4VBxFMurCqpQJ+ISni0CKTBhGTCfZGLhWsNEVLpuIuL0UxhFNyE/ZS+w==}
@@ -4629,11 +4808,24 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/form-field-checkbox-react@1.1.1':
+    resolution: {integrity: sha512-TNPEcGUV9Aj5aq+4KWESBuRp2QbuNrTF0smsw7B3JdvoLuqVMgwQSofbWygJiVYaS2vYAUyxplVdNrNcLQhmmw==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/form-field-css@1.5.1':
     resolution: {integrity: sha512-EILCtMcMk3LgTT5pUjna0vKA5S77Av1+fgqgfApEWU7y0wcC8UcYdD7Ujl3goJShhO02Fo7AYM3befJQgYBtuQ==}
 
+  '@utrecht/form-field-css@2.0.0':
+    resolution: {integrity: sha512-LlY6h0gDyWqm/3RbGszzIN7C8UkUf6erUE1II6qSzDbO/dWskq8pB0Knu5diVtJlwDUZurtj8XgFzsADt0cPtA==}
+
   '@utrecht/form-field-description-css@1.5.1':
     resolution: {integrity: sha512-oaLNNNl0rEKVmK3FvxAaYfAzrzhE3Ahsj2JweDCzkvihyN8lWRT0YZP4DQh04RNU5JuQ1VbNFxRp4SZh0jDPoQ==}
+
+  '@utrecht/form-field-description-css@2.0.0':
+    resolution: {integrity: sha512-pLE33w/5UpdfmvNERYbxTN55arnjNK8kXQAfKYE5ANNOllT+ByiUOz4f17zCNz/bFX9HYEiDBhzTsDRBjFmZkQ==}
 
   '@utrecht/form-field-description-react@1.0.7':
     resolution: {integrity: sha512-laLmOKJXl0vUF3w1eJT9QENUgGz72mWPwdZOebGZfsH0pKKFLcvlXUcXQ+cMnCJyKcBjEdxeUN8DA75UqbKo5g==}
@@ -4642,11 +4834,28 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/form-field-description-react@1.0.8':
+    resolution: {integrity: sha512-DteVrWF+qjjbt5CWuynZc2mDb0h9cmDIDra3H46xyfgDPDf3hYHUu6XVid7hfHOUj9KrhN0oQMzc3h2jFZ192w==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/form-field-error-message-css@1.5.1':
     resolution: {integrity: sha512-YuAaTsvxC4fWzIflFmnE1wvrDxXnDvtPbomifzy7fMUjXAHSE+I8XRfnMoibGZjRzz6NyBtitrwerai2nUTBww==}
 
+  '@utrecht/form-field-error-message-css@2.0.0':
+    resolution: {integrity: sha512-mvFqQoXMDK/r3zC2ePyPmMGJ2p+35Mrdzo7fLVJx6GvwsVQGXPJyen/bIBv/949j6q03daxX7UJxBG59cETnwg==}
+
   '@utrecht/form-field-error-message-react@1.0.7':
     resolution: {integrity: sha512-SNgHTANBkoYv72VpdGOU9Q2NJHSYNAbqWxaFjKM9sXT4EVTemKwL+vSEuc9YmEECwK10saMRTz8eq59ytzHkbQ==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
+  '@utrecht/form-field-error-message-react@1.0.8':
+    resolution: {integrity: sha512-d+YZOBh4CeunSHPst1tM6bk0BN243wmumcI1bfW+lVIiqi2SQvifSiRsfcC4U2njva4WZXZ4yrQsv39YfO2M6g==}
     peerDependencies:
       '@babel/runtime': '*'
       react: '18'
@@ -4659,11 +4868,24 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/form-field-react@1.0.8':
+    resolution: {integrity: sha512-KLP6o9KYp1qmVQXP5ZAD6WHt8QUiHi8LcI9u27f8i8fmK0ndIEOKZyAz6Wlfpq2zwNnpzoq1EMzxKDd8WZZ9rQ==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/form-fieldset-css@1.5.1':
     resolution: {integrity: sha512-ORVxcAXSbPLr0dLuj26XhKY+3/YSdUSjj5r7V8cTYXbh32KJwaoAOrAREFo0Jm1i8vJpwxAwsptb7o9Lmhpw8Q==}
 
+  '@utrecht/form-fieldset-css@2.0.0':
+    resolution: {integrity: sha512-hooI/QUQ7x0N8ZWJpisfIRN8xxv8LNwqeA2MQ/LNWgwRWuE8LYojizaIEV94ry0Yp1zM1J66Ry5W04r3MI4pnw==}
+
   '@utrecht/form-label-css@1.6.1':
     resolution: {integrity: sha512-h9d0FpM/VRbeVnr9zd/9Mbr+paKHa2OaJn0eP2ncCBHlLveb3Mww3rl+u6t0vw0lB8mrUAtjDWCLAjKNc8d0Gg==}
+
+  '@utrecht/form-label-css@2.0.0':
+    resolution: {integrity: sha512-MvO2CtIwtDdCWBMBqtZLjsKZFiovGGJWRROi2UzWrnSedBmhq1kzG6vhDyMtWVKYeISjROsZf/JLHLxgS8w06A==}
 
   '@utrecht/form-label-react@1.0.7':
     resolution: {integrity: sha512-rzc5tlLvtRcBFUjZkSqOAdn6C3mHdv3+IITfo/ZXL+HDN6XGzHR+/Rk6ACKfo9hDXad2jJV8bIClWEp9U/yhpg==}
@@ -4672,53 +4894,108 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/form-label-react@1.0.8':
+    resolution: {integrity: sha512-rq0f67e0nIANgoxhFzqoPM9udtSdo7qWxEydtuleUNL58MrkUOEe8peB1PPwvnw+6NaNxjwEHj607P4H1Zf2Sg==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/form-toggle-css@1.5.1':
     resolution: {integrity: sha512-WV8sXe/Jt4Ol/0ynjbFkqdMbDQQBY7JBmEHPQJJkoRmfS9SU9EgPbGcZjH2e8++lumXQiKxc1WddWcnJAT77Eg==}
+
+  '@utrecht/form-toggle-css@2.0.0':
+    resolution: {integrity: sha512-i2Rbm+Nq7S0nF+Cql7RO4omq6qSiAk8irFFgPAH9N3Jq/uyzytmPs0OCe92apyZGyLp8vm0Cm79+9CBSL6YdjQ==}
 
   '@utrecht/heading-1-css@1.5.1':
     resolution: {integrity: sha512-ihsXPIhPKW9CXlgnPJQxeuF05wQhxPIDEqStGarn89EnBDon9KCMzoiUEA19UiX06XBs8rv3pAduw2qfFX9wnQ==}
 
+  '@utrecht/heading-1-css@2.0.0':
+    resolution: {integrity: sha512-WyZvfi5PvEwXka0mJTmYUZcv6wMuvu8Opa8cJLFR1Er2LbZmOHNy6cSHog0RDNuRsCRWQw/6okvSpLdx2GKsew==}
+
   '@utrecht/heading-2-css@1.5.1':
     resolution: {integrity: sha512-Wf83HNvo61dFvSXC+4z6ey3NafsZ85SVmAf3YTQmUY9qY9aElHTTnv1ag9hgPKSFEAh2mE5Rl+Yb/UT8x5TXYg==}
+
+  '@utrecht/heading-2-css@2.0.0':
+    resolution: {integrity: sha512-v07WbW8rI2+pkLIPugPj1il/KjXIWZYBJGUIjjQvrdyPtrt7fmlbZXnvENJGCzL4AKvelAaEw4+LDJw/tAhqfQ==}
 
   '@utrecht/heading-3-css@1.5.1':
     resolution: {integrity: sha512-oxVgWdaTLTRp2y1Sxhcu2xwDqaF0SEhjzlsuTylG6TI4r/fbTpenCcAjuDceUEkCmlIUKERpKgdJVuajmbJpRg==}
 
+  '@utrecht/heading-3-css@2.0.0':
+    resolution: {integrity: sha512-FpwqmGRRCPbwfdJyioQwfHQ3+06bNdNzyrbHNR16CVzrkbjuFgkPN8azobW0IPsDuFoZO5N82QxVYLhpzIAzBA==}
+
   '@utrecht/heading-4-css@1.5.1':
     resolution: {integrity: sha512-KJNOoZ8cFCz/glrsc9n5FM5vsiHtMQsOe1ekxGzHMmE38aTrdZ5L81bvKeWbzztvbpxXm5DzT+tS5DqvVYJ93g==}
+
+  '@utrecht/heading-4-css@2.0.0':
+    resolution: {integrity: sha512-udrSbvW/7ZqkrqkqmblGdFqYLtddVLc35PmdeA1yL+GRL1U5E99ewOXq7hI4BihMTOeurrsHNESt7O5K36OeJg==}
 
   '@utrecht/heading-5-css@1.5.1':
     resolution: {integrity: sha512-eN+BKXyoa2UxTKORxOAoeyMZQ1c4thi5+qlaxuPkQg5SDHuq0IZsTXaDWPRaoa05J+85ez0SnoEC0LAJ1f/Bcw==}
 
+  '@utrecht/heading-5-css@2.0.0':
+    resolution: {integrity: sha512-ZfuKKAEItHHSK3HZ/B0r2Yx5ZdcD2dTM91D+2kNeYP1QrbejLUswtY9q3KaUG01/dNItmV1aE9RGpZXbGgf06w==}
+
   '@utrecht/heading-6-css@1.5.1':
     resolution: {integrity: sha512-4r3Kd+Hej5ugLdiVCKlcN6xdXxzL8X/saW0pfK+3qPqGmhU3TV3r2axJqxLA9Q5NTDabZZuZeDZiqfwKcVsWIA==}
+
+  '@utrecht/heading-6-css@2.0.0':
+    resolution: {integrity: sha512-lcY2ezyHvBuO9dkI4NSeSQ71Pu2FKwsYdzEbe8msQIxkGEAEc/JZu9wrEmdsQTmeN4QCVctqwUPbPFvPHPgAbg==}
 
   '@utrecht/heading-group-css@1.5.1':
     resolution: {integrity: sha512-INFePIMQevIK1GGlyfPe1bccrtEDg8hSfkIYt6Ts+l4ptb5yILFhPrYT+odW2Pq+F9h9HPJ0c545kZnik4VhWA==}
 
+  '@utrecht/heading-group-css@2.0.0':
+    resolution: {integrity: sha512-/Cn+OYKz5cn1z0DbrQXNjDwl+2ps4sd0kSKr4HWLY80KBCyNbIvftdW3wwSqT+68j0eZnQgDxOVO0Ch/QEdr8g==}
+
   '@utrecht/html-content-css@1.4.1':
     resolution: {integrity: sha512-PoahtxFSwDqKrMXcyp0yQeIZ+g7J+KVvYtw9POkiorIiRDC+NOWQtNBkP1Pb1vT30WtY+u1yMeEfzs1//dC9Lw==}
+
+  '@utrecht/html-content-css@2.0.0':
+    resolution: {integrity: sha512-1qZvSTqu6Hwvy2+ahnrNY6/gSNHpRHeQ5LIo90K7UYuFsh1Ev2YlK+G5Jvg4NqymPDs7QTjorOso3VYawzsRRA==}
 
   '@utrecht/iban-data-css@1.3.1':
     resolution: {integrity: sha512-NbFZUG/ZSmwiJeiHtMVlkZaPxU+Dw/Uc03UZI1Y8NvCoEe7q+ozKhBqY5161pMaGyVCuLgF872DvZxh3bQOtMA==}
 
+  '@utrecht/iban-data-css@2.0.0':
+    resolution: {integrity: sha512-B/taisey0Hb98vis8N93ERDKU1k7jsVb17xCUeceYFXRWRlqdsaKhI0cU//UcCIan++hxfaBFuTopFDMnMqAHA==}
+
   '@utrecht/icon-css@2.0.1':
     resolution: {integrity: sha512-zdoeqPlVO7bWq/XgrgMMykAwiHBgyFmLpx/LcvfF39EnRUyUq/ZnViV1vIPsiA4F3Nnwqvr6D+06IuSDYzvmZg==}
+
+  '@utrecht/icon-css@3.0.0':
+    resolution: {integrity: sha512-9W73Y0lwlgMcWMmITxjPPeCeZ+ZnRlMcFAqPeLbEwyJBJXJGXCNcGq4A/8QjPu49W3jnVoj8gkfMGqTsqcdrBA==}
 
   '@utrecht/img-css@1.3.1':
     resolution: {integrity: sha512-d6l6Irm0Hi+S6mUT2CEEuJ9W1lNPZp6YSl3pFO3aZXl8gxVOFpI5eqqQO/61e0k/K7APJB/Hn7C35zRRZLkqgQ==}
 
+  '@utrecht/img-css@2.0.0':
+    resolution: {integrity: sha512-PVWytSZ7Ed08yKruoV1ggWDIP9rZqWWsS9VpvEv+hAAL4Z4dUcry0qP2iCq2PHXsoG+obmjdGid1cfda4/nyJg==}
+
   '@utrecht/index-char-nav-css@1.4.1':
     resolution: {integrity: sha512-uHMlZweA8YO9JCkPfDMnxQuSXvLq/3orj0SMmH1kltJbUQcN9VsvG3moF6e20Oe57bMgTMXod+QnuvB4RArzBQ==}
+
+  '@utrecht/index-char-nav-css@2.0.0':
+    resolution: {integrity: sha512-pZqCWbf7oKfK0BReg0BPqCk3KstOv6CPYzR4AElELyral+ju2tBRQwz9Mo6jG4TNnqoGrQrQgy3nX0dQDCjAwA==}
 
   '@utrecht/link-button-css@1.4.1':
     resolution: {integrity: sha512-Mj8TTxUIc7ZQm6S2t/wHFhP1+43fWdr9MmLL1pHfZ+0le1Xn7EfMLMldVRLl5oDKbsXjxB5l+wfJoKeyv0cBfg==}
 
+  '@utrecht/link-button-css@2.0.0':
+    resolution: {integrity: sha512-uTQthzWAaYZBoUrAxAIldjgKDF9T7o0OiYgTVSDRDmJeCzz0ATX1VYr4TfAJ/Hk4PRpPZbhyYLb/rfcHbG/KTw==}
+
   '@utrecht/link-css@1.6.1':
     resolution: {integrity: sha512-99cJTMztRvcgDDCM/EGvjtzBQ6k7Fh8/sv6bHS8lQxoCHgm88m0fUfns1RJkrLEFhYVsbdPxqYTn7npZhsAUtA==}
 
+  '@utrecht/link-css@2.0.0':
+    resolution: {integrity: sha512-WjbI+nB8RvpcpovXNRNH/LSA4UadDK1BRV3ut2i/L/jbCNMB1Fp8OL5ljKmkNrPrXOUZNXWcls9GA/+4kMIMZQ==}
+
   '@utrecht/link-list-css@2.3.1':
     resolution: {integrity: sha512-KUzAe2dUd1sdoSLXFyqv1DjsjyXi9gJyHONGCEcQAkxpHYA4O569XQQnH4v9KVhGgJNRKmtXgcDJswMW09t5Xg==}
+
+  '@utrecht/link-list-css@3.0.0':
+    resolution: {integrity: sha512-/eY5RWp2gizi7vjgMDzLyPMrPRL69tXPXk5OHhRWUMar64hWjuVBqh1SgOmn8wLexXj+hfNcvYPBxTmcxB8bsQ==}
 
   '@utrecht/link-react@1.0.7':
     resolution: {integrity: sha512-U4mQ1AnrjN7LV2txBrghjgnS73eExdIsmuVUCvwqR/+9XvuG1u6fvQfanUVXVvvyX4TVbSqJHwZ8GeKW9TthSg==}
@@ -4727,17 +5004,40 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/link-react@1.0.8':
+    resolution: {integrity: sha512-F4wVXLe3nwJXW5HwvZtvFt0BUrwYiDEPaiQt3JK7iJ6XHaeJrJxqAc6gs7KWdEd9/OU40FsCXOz9XqZdcK5c/A==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/link-social-css@1.4.1':
     resolution: {integrity: sha512-j+I2mncqYN7ftHXm4+qC8w/JP3Nj/qJNpJ2KknCV5pAY7x4EU1IU3IlgeTiyfRsyN3S+QN8nYsNAwGtu/Re3/Q==}
+
+  '@utrecht/link-social-css@2.0.0':
+    resolution: {integrity: sha512-8mx18h5YNUOLFAXEURCkQl9BzJx+ktZQPy8CndDgenP2i0I1n53JpKnPYTXguGr4plPlN4byRIiDLxE5DZ+oNA==}
 
   '@utrecht/list-social-css@1.4.1':
     resolution: {integrity: sha512-Obovdz48uLQCm8/NqH2RK+FzIiWLUs3aXV4HKHU1F5DM32kL/j4ZiwjTiPXUGmnsMWlgfQw8ApRJb6nNWuf1EA==}
 
+  '@utrecht/list-social-css@2.0.0':
+    resolution: {integrity: sha512-zud7GGcmcEDNipvArQB+rk+osi0ZWqGPZYOMnxkMuCogiI7/giqXXVDfiX4D0Hh+UOzzC0RYiHhADjUZOoiqmg==}
+
   '@utrecht/listbox-css@1.5.2':
     resolution: {integrity: sha512-6zA5AEx0jJx3juZcM1wzw38hl0mychmrpdZd91K4zUWE8fFAAa30wg6xxFNNiC4LiatqgR+ahwch4NfUddHpNA==}
 
+  '@utrecht/listbox-css@2.0.0':
+    resolution: {integrity: sha512-A0y75xOybgT6YNwgIRZwGSywSQHfz3Wwj1G0cqE6dPa39nwFWsQ7fS0wIR3btRzh4ph9wDMCAHF655yODeU8jA==}
+
   '@utrecht/listbox-react@1.0.10':
     resolution: {integrity: sha512-wFkhA2fpxCCFcjgv7wzjUmbdBL1kieK0wVGjEXM4vL6qWE8VVTI8U23yK6Lka1u6H0NNbYDlm6ZESj70Vk2m8w==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
+  '@utrecht/listbox-react@1.0.11':
+    resolution: {integrity: sha512-4zSCUkW994UBBvYBz3zrYlMqVCtrEf/Vi26U1OAfHw14v3WgFxIaFDMWQiXPejyZUA9bJB1DMH/1xbbXEq6ICA==}
     peerDependencies:
       '@babel/runtime': '*'
       react: '18'
@@ -4749,23 +5049,41 @@ packages:
   '@utrecht/logo-css@1.4.1':
     resolution: {integrity: sha512-6ImqbLcRPhqVUP3toKG9rryoWWQTDKx/LmUgFQIe4OwPaJC/y7YM2pArdMtxiimJ/2hHODG2xfsHmkd+3qxBSQ==}
 
+  '@utrecht/logo-css@2.0.0':
+    resolution: {integrity: sha512-+aCukX1qsCbTYCH4EL7LdQbWPs/Mtq+7xUzoxBeyCccKd1s44vQ+FEz5Gf2Ct48gtnmVLIny/XmAW3RZ1OCH8A==}
+
   '@utrecht/logo-image-css@1.4.1':
     resolution: {integrity: sha512-LIlxXGVZ8/9mWpPZw4Hmjdpe9Ax5KvcKBG0BJiPC1M4Cj8BQ6FPRdcc+iDllbT16OwBcCXqyDpUmlVto5RCpXg==}
 
   '@utrecht/map-control-button-css@2.2.1':
     resolution: {integrity: sha512-zZyLH123Pmhc86oc5BRwLhaoPQy9vCzdWyfn5n8LIFxDyR+y2s5tMxvFvieiVnYPimjlxuOecmM4IhwHttcSpw==}
 
+  '@utrecht/map-control-button-css@3.0.0':
+    resolution: {integrity: sha512-pfVRUyjvoTua8B2iB1XF+0ELT1V497I4uQHgA2zBXQkRlDgilzcjRPhZOejbc/SQnHu0CfYl6LQQeXex0VGS5A==}
+
   '@utrecht/map-marker-css@1.4.1':
     resolution: {integrity: sha512-vOTETT6R2buILbzZ7ViCnuIFqYtoXILE8mGtUwJmFsK0pRTM/KUS3+SfvqSajTAiDZ5kjTzJcWQJBQjyiOTi/Q==}
+
+  '@utrecht/map-marker-css@2.0.0':
+    resolution: {integrity: sha512-4hfBu8dA3k2a2ywDdgXImZTsBNpQM6s/mhWVqCOfFRn36rOl+JeR6j7Foi94lMgRIs3SGCowAe1DfwCJJgnXRA==}
 
   '@utrecht/mark-css@1.5.1':
     resolution: {integrity: sha512-hPiiBuL1uM+U0PNlhVm6dZnO2afbyz5tRngxqak38q0vx/mAhomDCRinDA3fTSKSqoJPzRLHYkKg+eOTeeT1ow==}
 
+  '@utrecht/mark-css@2.0.0':
+    resolution: {integrity: sha512-WZrheLn3sYDxWTNJgH8ywNel6fDi6RInhOUgefy+iyPW1PnMAx1PsE2yQOB5TGmeuq6+EEtj2hvhZ0S1YKlJeA==}
+
   '@utrecht/multiline-data-css@1.3.1':
     resolution: {integrity: sha512-2AJ1Xaet5kqNmMQhZEz98F+gf06SmExcGgy4KllKhvuQbi4snCdv6CUKyQS1my/arT1ehWrgmfmQ9pSAeBhwqA==}
 
+  '@utrecht/multiline-data-css@2.0.0':
+    resolution: {integrity: sha512-ImjzOX6G5tJQh/kznirTfg29xYoC5aUDfBdl4k2pvBxeMWdOaRDFzcDKAIBw2hkU0dScL02AK2uoUL1x2tghrQ==}
+
   '@utrecht/nav-bar-css@1.4.1':
     resolution: {integrity: sha512-wKpUeblwDlEzb0dEiH5YoLsysTsrqgcxbb+KmyZ+lcWlK9PNvKIIBhlA9TZUZV+eLsWWH7xr7mSRU1hUMyYryw==}
+
+  '@utrecht/nav-bar-css@2.0.0':
+    resolution: {integrity: sha512-6YSc71r8F00A6rRwW6vKAXZG83ja6yhwOlK/y7puCYsL0mJtdZ1cFAQu2Amo4dPHmPgw01e36PCQFE/Xwr134w==}
 
   '@utrecht/nav-list-css@1.3.1':
     resolution: {integrity: sha512-98fkAKiGBL5xH400oHFD6IoQZy3/fdQNFIDxP/HPKz94TJrAeD5smQz6/qWN9QNAj8tT3nuP+5DQSgK3uMqSNw==}
@@ -4773,11 +5091,20 @@ packages:
   '@utrecht/number-badge-css@2.3.1':
     resolution: {integrity: sha512-19YBkbO8CqHrkjZESyIE4lcbilawirkiU4aDiJ4w411geBibDqoHOrM1+uKAlIaCBEUJp9UnFMX8X34Il2xryQ==}
 
+  '@utrecht/number-badge-css@3.0.0':
+    resolution: {integrity: sha512-hfFM3JwwNwuQ1UHNWpEe4NfWkDjQP4xFyG+O1R41juhSiobj0noE6sKkXJ2qEqFNIhGhAsk9zdO/6yIIpY6Ebg==}
+
   '@utrecht/number-data-css@1.4.1':
     resolution: {integrity: sha512-Tgg3bZIYy8aUn3Q/TAfoIZTbbnSHZYPSzbVBFYduaDgV3e7hTeJpPmAl/DWZVh8PJ+ZuudQmcON0+mAuvuBtRA==}
 
+  '@utrecht/number-data-css@2.0.0':
+    resolution: {integrity: sha512-sMHm6dKgcQI000xiXW3eELErHjhwSlPPx4XNhO2o9FvzPoTjRWfaguHXC5diU4vRGcgoKbTx6oqpntv0qmQxEA==}
+
   '@utrecht/open-forms-container-css@1.0.2':
     resolution: {integrity: sha512-TCgRhMLHP1lVQklNrUGHX5+ryh8bJwlBSeNHWD3RiQRAjvoeO+EbYga7OFX7v3C7y1N3Z15z9MYL08FEcWRD8A==}
+
+  '@utrecht/open-forms-container-css@2.0.0':
+    resolution: {integrity: sha512-KIJMr/C1VtYAWMolOrsVSHGwW1jQqjfah/zOu+8VVdGXKD5QsV6U/0Zu8Eb9dc9Bpzj1gMm/jPp68dvUTOpoOQ==}
 
   '@utrecht/open-forms-container-react@1.0.2':
     resolution: {integrity: sha512-DWrwExl640tTG7D7G35lbbDDOZO5GUtGyusgxpRiGpRcPC1dfFuW+cLkysM9sQYNJ9HCKe9LmQFvye4+kwYZpg==}
@@ -4786,8 +5113,18 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/open-forms-container-react@1.0.3':
+    resolution: {integrity: sha512-dr5o9vFgadW5vVJObTePdYW55hTp2QBMGzuyZOXXXtfN4SQ9wETi1+W48pmyib6OY1vdi2WrNTjcaZ9Ww+PdMA==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/ordered-list-css@2.0.0':
     resolution: {integrity: sha512-hNGGSb5N0VnBtxQIuBaqNeS2p380rMecbGgH0olWgGGEaYvITbhHgXM3Xg+5O2fDsMCT0BQ2EOyML3DiOcomcQ==}
+
+  '@utrecht/ordered-list-css@3.0.0':
+    resolution: {integrity: sha512-SINRINiPfpimXNo1WiPPlpUoLraKVm0NzW/LIQC3qcKt/k7l7SlWz4lAPEUSLpJsvrJVbybiQ5bS9vtc2mxjYA==}
 
   '@utrecht/page-body-css@0.1.1':
     resolution: {integrity: sha512-uJFUi2IFjRCV/O4NmhRUBGk4cM3+p+D+eumkCwn6mLv+20/vQAhZqfb0Fj/TTx7R/kSY0Oa8izualDaPB/iZzQ==}
@@ -4802,14 +5139,26 @@ packages:
   '@utrecht/page-content-css@1.4.1':
     resolution: {integrity: sha512-v6jPlYUV1kcMCwmQdvbCppbkeUSWm6DkgwB1pchB03niQDCUR1LS46CBCgAR1uNUE5TOb1SH7w4vmn5/pcgWFw==}
 
+  '@utrecht/page-content-css@2.0.0':
+    resolution: {integrity: sha512-HvJYh5GTk4SPtljtEEgta2uu5DUuC+NYJdyedwnt4db6dX6MLpjw1gpy/NHZDl79fue9NKLvRx4EEvQXG9T3kg==}
+
   '@utrecht/page-css@1.4.1':
     resolution: {integrity: sha512-D8OmqtZb9uP+7wKCIUL7O8zLOXwhOXydinNQ5BFmM1E9zkRtao2X1Lq9Juo54R0DNP62CI6lI9DGcL+vSy/I0Q==}
+
+  '@utrecht/page-css@2.0.0':
+    resolution: {integrity: sha512-pL1DP+1HVFwF0BQstUnVg+HymwSz6OJqee1GN5jP3qIlxeJp3udd7xjU0Vgr3tXID6fP3QA75Lz/Fi5NFVs3Yw==}
 
   '@utrecht/page-footer-css@2.1.1':
     resolution: {integrity: sha512-ib4BqRk5avAdtxAPgMJaljnp15wfCJRv7dQABVQvs8jcB6Y/BGVgNq1srpjWjFmkcdtIELtwPpnB2Y7jcUUqOQ==}
 
+  '@utrecht/page-footer-css@3.0.0':
+    resolution: {integrity: sha512-mQ0W2ix3Dejzs046oMwwimd0WdaFLm/i7jEnfQNcrj28psZcfeL773GmJZLgMnNXHLbWrEfpYZycjxhJ3ID8OA==}
+
   '@utrecht/page-header-css@1.5.1':
     resolution: {integrity: sha512-5hQw6VCXf0tq0LdKhI2BnmMzyTIMvxVS48yguK2trgfzigHAhPCSpmgEeWGiZF6GM9eCNbPThmfEPTgXvyVgkA==}
+
+  '@utrecht/page-header-css@2.0.0':
+    resolution: {integrity: sha512-el4GiLtlOZzcCMDUC4mICdRQFxKheyVhMhfnqxHlnuy/dMsxOo5yh7A06rhrRpLHfHyxCcQnoexR5QM6J9kJ6g==}
 
   '@utrecht/page-layout-css@1.1.1':
     resolution: {integrity: sha512-pFiRgDmB0F4s23JIJf0akynHVfBt7l4rv9t9gvpTeOxSdx3KTNZsxSNT5PyQwIf5mlEHWidp6yxn3fvQXlMKmw==}
@@ -4824,17 +5173,32 @@ packages:
   '@utrecht/pagination-css@1.4.1':
     resolution: {integrity: sha512-MpJWfGVQH4n31ukASPQE0dUY2vwHf7Q5SSojBnxJVhxo5IZ1gkRH30VlTrZ89pAr0oBKmfjVJzFSZIj1O4inHA==}
 
+  '@utrecht/pagination-css@2.0.0':
+    resolution: {integrity: sha512-/0ht8p6rZlhzSFhbHPvSyN/lctXB7fhgcyiLSoWfxTAk/oz+SX7mvzdPSvLp1L1V/r/inSMK2/+WrcSxjfhuQg==}
+
   '@utrecht/paragraph-css@2.3.1':
     resolution: {integrity: sha512-sbOs8y2UZOfNp7CI9S2catbBb/FSQ8PwpyH3WNZ5LDcuF0fZgKoqijunrrpS5FPviTMmkLLCJIwajyZRqEzicA==}
+
+  '@utrecht/paragraph-css@3.0.0':
+    resolution: {integrity: sha512-Jy8+hXSHR0c0DpZ1FjiuEXBIjiIFFEEtiXjaPoE4El42Ig61972HK+iUnMiN6EvSCtYq8EkWjjLysWp7M4VM6Q==}
 
   '@utrecht/pre-heading-css@1.4.1':
     resolution: {integrity: sha512-bCW5XmqhjhoVdYWPAN0HEaTlJEOyezt2kX1qgNSVlQZ191uzfrJYr8bOsxM3XrClJTXlMHLZ0DQfC0sHtQwK2Q==}
 
+  '@utrecht/pre-heading-css@2.0.0':
+    resolution: {integrity: sha512-VwOrLDVlCh6mn2KkFM0vDK/Uf1k1jehVGOL+AJHsCZ5ZBZUs1gfCSR+VLgrs5b2eXjbmzu2Wq0yetuIQZdRKCQ==}
+
   '@utrecht/preserve-data-css@1.3.1':
     resolution: {integrity: sha512-O4TdW3df2AJGHunXB5AzEGDi8u8RsdmSbhyVMO5XeVIjiCVztajiyXnRqfuFX7+OA0EZ5E3NUSjPuXnSEJnkQA==}
 
+  '@utrecht/preserve-data-css@2.0.0':
+    resolution: {integrity: sha512-733vC2yYb5bDNshJJxi30oFSRo2ss596jI4deh1vi6ti6z6T37mHW4LuVWTYk+w+CsRfH5VW/efNuXev0BNb0A==}
+
   '@utrecht/radio-button-css@1.6.1':
     resolution: {integrity: sha512-AQVGKD100iVjBan4mIx/QOBflgZUdZpNVRxrrCE8eXwgzXCSGlg++Veqx9Z+88vH38CEl+evQynVBdssIydVAA==}
+
+  '@utrecht/radio-button-css@2.0.0':
+    resolution: {integrity: sha512-k6et7G0OrYwN0FsIlbD0XQoshWTuPniUfQnfIC/JOQRkymL8Nu9VrXPCSh7BEfQye20D7Ffulyq4prlpmyw4Cg==}
 
   '@utrecht/radio-button-react@1.0.7':
     resolution: {integrity: sha512-bvb2s5MOmc+kCX2y/hS7zbVWORwg0+D1PVWzKz8604A5/FYkAYJfKm8xronK8mx5r2OCP9zd2PMnUjh3yb9s0g==}
@@ -4843,8 +5207,18 @@ packages:
       react: '18'
       react-dom: '18'
 
+  '@utrecht/radio-button-react@1.0.8':
+    resolution: {integrity: sha512-H3vlcy2YylZwvjowuVa+oDg8qCTLC6kAYVQ2pRLfgfMl0hLgvv+eM0ShpY9YeCSt7mBeTQw1KoD5aHQJiWydEw==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: '18'
+      react-dom: '18'
+
   '@utrecht/rich-text-css@1.4.0':
     resolution: {integrity: sha512-F+gWm4tJ/RDS3cTZGJBmPGzyTZQ3oGWOgcgxrS5LDEv0FpJ+om2TtZ7hPoWXxJ7qRjJ26qaUHr6TqugrsBiWnw==}
+
+  '@utrecht/rich-text-css@2.0.0':
+    resolution: {integrity: sha512-JeUMylAb9V+Yd1XbO0pouqXRukHSty4bDcLT87akRM6hHpqo140CckJH/O7CDeU/XpZ7Xv3QBx/d86mnOkxX3Q==}
 
   '@utrecht/root-css@1.2.1':
     resolution: {integrity: sha512-zgHxu5aeT1XOIJ3yI0EGYqQF7ZsJWG8DyKtt2t12+qMGRW/kxuUQMX9nk9CbE3nnku1TXEEPa3Zt7dV2/p8MQw==}
@@ -4859,38 +5233,81 @@ packages:
   '@utrecht/search-bar-css@2.2.1':
     resolution: {integrity: sha512-25ejBTRmghiBEkDkEhomXkbky1OPYrHeGe8Tu0NMSPJiW4PdmCdXb3hg/2OyyBBMHHglwHNWqC5f91IqfPjEbA==}
 
+  '@utrecht/search-bar-css@3.0.0':
+    resolution: {integrity: sha512-2phAkKQGjLBnVMhIerQH6CjNkehPo9psmBsd2YyLiHp/jTgRDbjwaJiS7EV8YaolXfRNVR7ayDT9Bc5R6pw+gg==}
+
   '@utrecht/select-css@1.8.1':
     resolution: {integrity: sha512-jgniVh7+z64xvXOj92vF12RNyi4GFOQ+Zwce4EgUQIJA8if27iRFyipa6bgCAiBrsRxQLOaVljuvbLEU0Emz5g==}
+
+  '@utrecht/select-css@2.0.0':
+    resolution: {integrity: sha512-9WSTgrCmp18SBVXvPSwu3bGeBWYW2W62PVC6TIl+iUjPLxnbL9THwCV9MXzkpgNFHi6L/ZMO+C2awpeXwOEpgg==}
 
   '@utrecht/separator-css@1.5.1':
     resolution: {integrity: sha512-uzamK3Ry8fv9qDZ10p8kHK65TkuLI8oZkwysLwk21apdP8Lihee0M2Fy3vPMAVg/hGVVYvB740x8mm3ezDL+4g==}
 
+  '@utrecht/separator-css@2.0.0':
+    resolution: {integrity: sha512-qHtNkPxiXJy/jskjhKHhv3W69sTvUUj8aTraHffUuUSaFQONguf+DmwPmZyRGcx/anhZUq6u/35jRKr+DNasOw==}
+
   '@utrecht/skip-link-css@1.5.1':
     resolution: {integrity: sha512-dMibzoTNSyNSwhup0GIRe86FJIGdWYY3ax684M0Fx+/qQNJubsziu9qGMTeLp+DVw+wLXZ7XZlhhdDxmnwlqYA==}
+
+  '@utrecht/skip-link-css@2.0.0':
+    resolution: {integrity: sha512-BkthjfxULzgcEN7JeNn58L9JH4HF+1X823qr7sKIyUH0XY0Dax9+Uoqdpb/YVR3v6n+0icQuR6ACQO46/dJybA==}
 
   '@utrecht/spotlight-section-css@1.6.1':
     resolution: {integrity: sha512-sbaBDiPaozjqz7irQj+McIrGWNAGBFPHlKl3phApCb/ljoccdo//fDdPnlAgp1Hhwz2sSkj77ISdg0NKfwvimA==}
 
+  '@utrecht/spotlight-section-css@2.0.0':
+    resolution: {integrity: sha512-h4m7yoz2z8SUVGARUFdn11ZojqiDhdYvBSMVJPFrrQjh57LRwuDOp9Z2gsrcteG3kgiHtZZKMlPINQkgCjK3dQ==}
+
   '@utrecht/subscript-css@1.3.1':
     resolution: {integrity: sha512-dXID0YHJCudknXkItRmhEAsbtev+7ZM1ZuaWCY9Agr9VfkxMU1Yz6gXRvZAIL9s3gdFXFhakXlmcw41gEph3jQ==}
+
+  '@utrecht/subscript-css@2.0.0':
+    resolution: {integrity: sha512-nDuewjCC1wFH/UX56dB6TV13KXQ9Ocy4syBAdXxG2AyqMniiUcwZi4f/bp0CtNUPHaMYpt5+0ZnxL2ZhG+/iCA==}
 
   '@utrecht/superscript-css@1.3.1':
     resolution: {integrity: sha512-2eKYNGhcTGlGWyzaSwyqs58K58gwLG1rpSmA2USeH7vNHQNRTXrRSqhOXvnaG0HbGMy5XWhv761SpnkbR09TCQ==}
 
+  '@utrecht/superscript-css@2.0.0':
+    resolution: {integrity: sha512-2RZQ2npsyDfoelpNk6kE5hKPb7/z+pXCPsw43fFBecyDQuj4XlOrbuY70aXAz3cj46Cig7cNYfPiB2zBYGTauw==}
+
   '@utrecht/surface-css@1.4.1':
     resolution: {integrity: sha512-PH80aFdNFpODzruBBRKq52nGmMnwMiyJDRt+JkOMAR1II+iNI0relXTOm0x6MOmNnqejSYufkh81Xdfcocv2wA==}
+
+  '@utrecht/surface-css@2.0.0':
+    resolution: {integrity: sha512-pLCFBvmtEISRihmG/+r+EXUzJvRr9GwJOFD6wn2zuVYnTR4eBklnU/+5JjS+mYHLPLX/cTyjQQw3CT0gh7r4vA==}
 
   '@utrecht/table-css@1.6.1':
     resolution: {integrity: sha512-IEEB3JX19/FxAOyZHA/88h1GROSYsr3YxDIXsP+ea3sVUSyEcoUP0jgiKjcRV198Ad3p3+T07p79HhIuS+AhLw==}
 
+  '@utrecht/table-css@2.0.0':
+    resolution: {integrity: sha512-JI5tWe+IaerfcMr3cFnzH4tfQJJ7iFXv83FD6S3/Ooj2yAUV/46DWyxM3zBEG4qy0Ut+igtd5YMshPTwhfHY5w==}
+
   '@utrecht/table-of-contents-css@0.3.1':
     resolution: {integrity: sha512-+H4WklPRgZAyLALEe8PXEvB+0oli26sz0fS/NF91H1nZwIti8+T7b7rDLJ6e9M6hF6IVF9lvjfiSZHByeQDJnQ==}
+
+  '@utrecht/table-of-contents-css@1.0.0':
+    resolution: {integrity: sha512-SmD3E58BAJKEIxKORImi2ni1/GuGa4nB2jnGfo5usknhnktGlHpa90AxFcWQkxQD10nmmJXytG6ONFa82ahDzQ==}
 
   '@utrecht/textarea-css@2.3.2':
     resolution: {integrity: sha512-//1PLWGMvTqS6exirU0OUO3l9odc7S2Wg1kg4I82v5oeoniUbn2gNgVfvDonPx4l9IywPNhIjlMM/9VfgU8T+Q==}
 
+  '@utrecht/textarea-css@3.0.0':
+    resolution: {integrity: sha512-GoFavJAj5TnHL+zanD8waOTLetJcTI3YwzJMhyfpB9wzZOLM/lZGS8WTiykU3wD3WsZxgGZ4jPPLoYyBUM71ew==}
+
   '@utrecht/textbox-css@2.0.0':
     resolution: {integrity: sha512-z4ewJ6WxC3TMTG2jR4I7k73O5NijdjE/ydR1lovzPr4/Wa27l3I7pM0qjymSarKtc5IapfXsFhIpwV/kKbPPSA==}
+
+  '@utrecht/textbox-css@3.0.0':
+    resolution: {integrity: sha512-tPunSElukpQuYwGNLXoboLe2vfV1ZWXKqGZX/3cmOQzYxqkc+l/aK//DOALIe9CU5HvGbyuHijaUmxkcNFFOXg==}
+
+  '@utrecht/textbox-react@1.0.10':
+    resolution: {integrity: sha512-Aku/2YMcOSx5jsUBuU7QKzrOiC6JkGWK8CfLyP1xkDmdqL7+n1x/EznN4mrcm/N7jPqQJTfLFxX1dJg8O09nkQ==}
+    peerDependencies:
+      '@babel/runtime': ^7.23.6
+      react: '18'
+      react-dom: '18'
 
   '@utrecht/textbox-react@1.0.9':
     resolution: {integrity: sha512-/O0oskpZ9ICuciJLPWjXLOFT9SxqrQsTGr8E+cwByjxY5Kilpud6rRvcBemaWS+JYLKCMARMMQhzBP8sM3IPYg==}
@@ -4905,14 +5322,23 @@ packages:
   '@utrecht/top-task-link-css@1.4.1':
     resolution: {integrity: sha512-3vQT0x7Eqm9P790qnT7ukt1btMsG+mRZ6Hb+HCTAXXTdKBgeRUHdtkrBXZBF7C8gD7XgoSiotcYQzRLNKluJFA==}
 
+  '@utrecht/top-task-link-css@2.0.0':
+    resolution: {integrity: sha512-PaUMnb02HMXTdvw+nPg33jaOHWJfCVsWYa4incGh+ve+N+/ClFQ6UlnTXUDaruETA9BTm2rPamYMBpwNDOl8Yg==}
+
   '@utrecht/top-task-nav-css@1.3.1':
     resolution: {integrity: sha512-AIwQwLEA//Fsyb3sNJj2+lQSZxRq/PVb9S8k719lX7LX5tEH6PkZKgsE/QW34I2RMUOZ7MTvpkxbvHObxhYkjw==}
 
   '@utrecht/unordered-list-css@1.5.1':
     resolution: {integrity: sha512-BvpymaFp0CKdcqApqdj4nKhn/99MJ2i+ilYvPS2cgyYJCEZk8eH4GXiHZBX7YzwzLhV95oURnG3DM6RsZ9Ixmg==}
 
+  '@utrecht/unordered-list-css@2.0.0':
+    resolution: {integrity: sha512-wFsyn3q1cy2Ns8l9Hl3/i3X/7iP6HnhKMUlEtKL6RKvmh58bQ39pTjSuaGtktpZgC46W5iEC32mxlSEhVGxU3w==}
+
   '@utrecht/url-data-css@1.3.1':
     resolution: {integrity: sha512-hns7O3znPXnGaURecDKcrHL9gJDVJI+pQpHNbN5rJmtnAQbHE8YTg8MD8jOeEUEq6w3FUHPHVq5Neo4PEZQ3oA==}
+
+  '@utrecht/url-data-css@2.0.0':
+    resolution: {integrity: sha512-GIMij9Tkq3l4HVqbzqs0jYPIMvBHegH8bHoBUe/bDAIkxqhuS2Pxtj1L9ZpT3k3dMK4GWGvglhS1+GlA8Qi4Zg==}
 
   '@utrecht/vega-visualization-css@1.4.1':
     resolution: {integrity: sha512-A8hhTx9r3J7RexQ1ruhyXhBcA21DZHDO+fUP7Q2otKB216StukK09qlfM9ZaSmwmpFs7l/4vWFZw2cMbct+Lhg==}
@@ -17766,7 +18192,11 @@ snapshots:
 
   '@utrecht/accordion-css@2.0.0': {}
 
+  '@utrecht/accordion-css@3.0.0': {}
+
   '@utrecht/action-group-css@2.0.0': {}
+
+  '@utrecht/action-group-css@3.0.0': {}
 
   '@utrecht/action-group-react@1.1.1(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -17776,23 +18206,49 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
+  '@utrecht/action-group-react@1.1.2(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/action-group-css': 3.0.0
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
   '@utrecht/alert-css@2.4.0': {}
+
+  '@utrecht/alert-css@3.0.0': {}
 
   '@utrecht/alert-dialog-css@1.4.2': {}
 
+  '@utrecht/alert-dialog-css@2.0.0': {}
+
   '@utrecht/alternate-lang-nav-css@1.3.1': {}
+
+  '@utrecht/alternate-lang-nav-css@2.0.0': {}
 
   '@utrecht/article-css@1.5.1': {}
 
+  '@utrecht/article-css@2.0.0': {}
+
   '@utrecht/backdrop-css@1.4.1': {}
+
+  '@utrecht/backdrop-css@2.0.0': {}
 
   '@utrecht/badge-counter-css@1.4.1': {}
 
+  '@utrecht/badge-counter-css@2.0.0': {}
+
   '@utrecht/badge-list-css@2.2.1': {}
+
+  '@utrecht/badge-list-css@3.0.0': {}
 
   '@utrecht/badge-status-css@1.4.1': {}
 
+  '@utrecht/badge-status-css@2.0.0': {}
+
   '@utrecht/blockquote-css@1.6.1': {}
+
+  '@utrecht/blockquote-css@2.0.0': {}
 
   '@utrecht/body-css@1.2.1': {}
 
@@ -17806,9 +18262,15 @@ snapshots:
 
   '@utrecht/breadcrumb-nav-css@1.5.1': {}
 
+  '@utrecht/breadcrumb-nav-css@2.0.0': {}
+
   '@utrecht/button-css@2.3.1': {}
 
+  '@utrecht/button-css@3.0.0': {}
+
   '@utrecht/button-group-css@1.5.0': {}
+
+  '@utrecht/button-group-css@2.0.0': {}
 
   '@utrecht/button-group-react@1.1.0(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -17818,7 +18280,17 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
+  '@utrecht/button-group-react@1.1.1(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/button-group-css': 2.0.0
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
   '@utrecht/button-link-css@1.3.1': {}
+
+  '@utrecht/button-link-css@2.0.0': {}
 
   '@utrecht/button-react@2.0.7(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -17828,7 +18300,17 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
+  '@utrecht/button-react@2.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/button-css': 3.0.0
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
   '@utrecht/calendar-css@1.4.1': {}
+
+  '@utrecht/calendar-css@2.0.0': {}
 
   '@utrecht/calendar-react@1.0.11(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -17841,9 +18323,24 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
+  '@utrecht/calendar-react@1.0.12(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/button-react': 2.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/calendar-css': 2.0.0
+      clsx: 2.1.1
+      date-fns: 2.30.0
+      lodash-es: 4.17.21
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
   '@utrecht/card-css@0.1.0':
     dependencies:
       '@utrecht/img-css': 1.3.1
+
+  '@utrecht/card-css@1.0.0':
+    dependencies:
+      '@utrecht/img-css': 2.0.0
 
   '@utrecht/card-react@0.0.1(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -17854,7 +18351,18 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
+  '@utrecht/card-react@0.0.2(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/card-css': 1.0.0
+      '@utrecht/link-react': 1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
   '@utrecht/checkbox-css@1.6.1': {}
+
+  '@utrecht/checkbox-css@2.0.0': {}
 
   '@utrecht/checkbox-react@1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -17865,20 +18373,47 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
+  '@utrecht/checkbox-react@1.0.9(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/checkbox-css': 2.0.0
+      '@utrecht/custom-checkbox-css': 2.0.0
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
   '@utrecht/code-block-css@1.5.1': {}
+
+  '@utrecht/code-block-css@2.0.0': {}
 
   '@utrecht/code-css@1.5.1': {}
 
+  '@utrecht/code-css@2.0.0': {}
+
   '@utrecht/color-sample-css@1.4.1': {}
+
+  '@utrecht/color-sample-css@2.0.0': {}
 
   '@utrecht/column-layout-css@1.5.1': {}
 
+  '@utrecht/column-layout-css@2.0.0': {}
+
   '@utrecht/combobox-css@1.4.1': {}
+
+  '@utrecht/combobox-css@2.0.0': {}
 
   '@utrecht/combobox-react@0.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       '@babel/runtime': 7.28.2
       '@utrecht/combobox-css': 1.4.1
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
+  '@utrecht/combobox-react@0.0.9(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/combobox-css': 2.0.0
       clsx: 2.1.1
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
@@ -18096,15 +18631,133 @@ snapshots:
     optionalDependencies:
       date-fns: 2.30.0
 
+  '@utrecht/component-library-react@10.3.5(@babel/runtime@7.28.2)(date-fns@2.30.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/accordion-css': 3.0.0
+      '@utrecht/action-group-react': 1.1.2(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/alert-css': 3.0.0
+      '@utrecht/alert-dialog-css': 2.0.0
+      '@utrecht/alternate-lang-nav-css': 2.0.0
+      '@utrecht/article-css': 2.0.0
+      '@utrecht/backdrop-css': 2.0.0
+      '@utrecht/badge-counter-css': 2.0.0
+      '@utrecht/badge-list-css': 3.0.0
+      '@utrecht/badge-status-css': 2.0.0
+      '@utrecht/blockquote-css': 2.0.0
+      '@utrecht/breadcrumb-nav-css': 2.0.0
+      '@utrecht/button-group-react': 1.1.1(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/button-link-css': 2.0.0
+      '@utrecht/button-react': 2.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/calendar-react': 1.0.12(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/card-css': 1.0.0
+      '@utrecht/card-react': 0.0.2(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/checkbox-react': 1.0.9(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/code-block-css': 2.0.0
+      '@utrecht/code-css': 2.0.0
+      '@utrecht/color-sample-css': 2.0.0
+      '@utrecht/column-layout-css': 2.0.0
+      '@utrecht/combobox-react': 0.0.9(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/currency-data-css': 2.0.0
+      '@utrecht/custom-checkbox-css': 2.0.0
+      '@utrecht/data-badge-css': 2.0.0
+      '@utrecht/data-badge-react': 1.0.5(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/data-list-css': 2.0.0
+      '@utrecht/data-placeholder-css': 2.0.0
+      '@utrecht/digid-button-css': 1.4.1
+      '@utrecht/document-css': 2.0.0
+      '@utrecht/drawer-css': 2.0.0
+      '@utrecht/emphasis-css': 2.0.0
+      '@utrecht/fieldset-react': 1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/figure-css': 2.0.0
+      '@utrecht/focus-ring-css': 3.0.0
+      '@utrecht/form-field-checkbox-react': 1.1.1(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/form-field-description-react': 1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/form-field-error-message-react': 1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/form-field-react': 1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/form-label-react': 1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/form-toggle-css': 2.0.0
+      '@utrecht/heading-1-css': 2.0.0
+      '@utrecht/heading-2-css': 2.0.0
+      '@utrecht/heading-3-css': 2.0.0
+      '@utrecht/heading-4-css': 2.0.0
+      '@utrecht/heading-5-css': 2.0.0
+      '@utrecht/heading-6-css': 2.0.0
+      '@utrecht/heading-group-css': 2.0.0
+      '@utrecht/html-content-css': 2.0.0
+      '@utrecht/iban-data-css': 2.0.0
+      '@utrecht/icon-css': 3.0.0
+      '@utrecht/img-css': 2.0.0
+      '@utrecht/index-char-nav-css': 2.0.0
+      '@utrecht/link-button-css': 2.0.0
+      '@utrecht/link-list-css': 3.0.0
+      '@utrecht/link-react': 1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/link-social-css': 2.0.0
+      '@utrecht/list-social-css': 2.0.0
+      '@utrecht/listbox-react': 1.0.11(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/logo-button-css': 1.4.1
+      '@utrecht/logo-css': 2.0.0
+      '@utrecht/logo-image-css': 1.4.1
+      '@utrecht/map-control-button-css': 3.0.0
+      '@utrecht/map-marker-css': 2.0.0
+      '@utrecht/mark-css': 2.0.0
+      '@utrecht/multiline-data-css': 2.0.0
+      '@utrecht/nav-bar-css': 2.0.0
+      '@utrecht/nav-list-css': 1.3.1
+      '@utrecht/number-badge-css': 3.0.0
+      '@utrecht/number-data-css': 2.0.0
+      '@utrecht/open-forms-container-css': 2.0.0
+      '@utrecht/open-forms-container-react': 1.0.3(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/ordered-list-css': 3.0.0
+      '@utrecht/page-content-css': 2.0.0
+      '@utrecht/page-css': 2.0.0
+      '@utrecht/page-footer-css': 3.0.0
+      '@utrecht/page-header-css': 2.0.0
+      '@utrecht/pagination-css': 2.0.0
+      '@utrecht/paragraph-css': 3.0.0
+      '@utrecht/pre-heading-css': 2.0.0
+      '@utrecht/preserve-data-css': 2.0.0
+      '@utrecht/radio-button-react': 1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/rich-text-css': 2.0.0
+      '@utrecht/search-bar-css': 3.0.0
+      '@utrecht/select-css': 2.0.0
+      '@utrecht/separator-css': 2.0.0
+      '@utrecht/skip-link-css': 2.0.0
+      '@utrecht/spotlight-section-css': 2.0.0
+      '@utrecht/subscript-css': 2.0.0
+      '@utrecht/superscript-css': 2.0.0
+      '@utrecht/surface-css': 2.0.0
+      '@utrecht/table-css': 2.0.0
+      '@utrecht/table-of-contents-css': 1.0.0
+      '@utrecht/textarea-css': 3.0.0
+      '@utrecht/textbox-react': 1.0.10(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/top-task-link-css': 2.0.0
+      '@utrecht/top-task-nav-css': 1.3.1
+      '@utrecht/unordered-list-css': 2.0.0
+      '@utrecht/url-data-css': 2.0.0
+      '@utrecht/vega-visualization-css': 1.4.1
+      clsx: 2.1.1
+      lodash.chunk: 4.2.0
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+    optionalDependencies:
+      date-fns: 2.30.0
+
   '@utrecht/components@7.4.0':
     dependencies:
       clsx: 2.1.1
 
   '@utrecht/currency-data-css@1.3.1': {}
 
+  '@utrecht/currency-data-css@2.0.0': {}
+
   '@utrecht/custom-checkbox-css@1.3.2': {}
 
+  '@utrecht/custom-checkbox-css@2.0.0': {}
+
   '@utrecht/data-badge-css@1.0.1': {}
+
+  '@utrecht/data-badge-css@2.0.0': {}
 
   '@utrecht/data-badge-react@1.0.4(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -18114,17 +18767,35 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
+  '@utrecht/data-badge-react@1.0.5(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/data-badge-css': 2.0.0
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
   '@utrecht/data-list-css@1.4.1': {}
 
+  '@utrecht/data-list-css@2.0.0': {}
+
   '@utrecht/data-placeholder-css@1.4.1': {}
+
+  '@utrecht/data-placeholder-css@2.0.0': {}
 
   '@utrecht/digid-button-css@1.4.1': {}
 
   '@utrecht/document-css@1.5.1': {}
 
+  '@utrecht/document-css@2.0.0': {}
+
   '@utrecht/drawer-css@1.4.1': {}
 
+  '@utrecht/drawer-css@2.0.0': {}
+
   '@utrecht/emphasis-css@1.5.1': {}
+
+  '@utrecht/emphasis-css@2.0.0': {}
 
   '@utrecht/fieldset-react@1.0.7(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -18134,9 +18805,21 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
+  '@utrecht/fieldset-react@1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/form-fieldset-css': 2.0.0
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
   '@utrecht/figure-css@1.5.1': {}
 
+  '@utrecht/figure-css@2.0.0': {}
+
   '@utrecht/focus-ring-css@2.3.1': {}
+
+  '@utrecht/focus-ring-css@3.0.0': {}
 
   '@utrecht/form-css@1.5.1': {}
 
@@ -18152,9 +18835,25 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
+  '@utrecht/form-field-checkbox-react@1.1.1(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/checkbox-react': 1.0.9(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/form-field-description-react': 1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/form-field-error-message-react': 1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/form-field-react': 1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@utrecht/form-label-react': 1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
   '@utrecht/form-field-css@1.5.1': {}
 
+  '@utrecht/form-field-css@2.0.0': {}
+
   '@utrecht/form-field-description-css@1.5.1': {}
+
+  '@utrecht/form-field-description-css@2.0.0': {}
 
   '@utrecht/form-field-description-react@1.0.7(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -18164,12 +18863,30 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
+  '@utrecht/form-field-description-react@1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/form-field-description-css': 2.0.0
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
   '@utrecht/form-field-error-message-css@1.5.1': {}
+
+  '@utrecht/form-field-error-message-css@2.0.0': {}
 
   '@utrecht/form-field-error-message-react@1.0.7(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       '@babel/runtime': 7.28.2
       '@utrecht/form-field-error-message-css': 1.5.1
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
+  '@utrecht/form-field-error-message-react@1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/form-field-error-message-css': 2.0.0
       clsx: 2.1.1
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
@@ -18182,9 +18899,21 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
+  '@utrecht/form-field-react@1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/form-field-css': 2.0.0
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
   '@utrecht/form-fieldset-css@1.5.1': {}
 
+  '@utrecht/form-fieldset-css@2.0.0': {}
+
   '@utrecht/form-label-css@1.6.1': {}
+
+  '@utrecht/form-label-css@2.0.0': {}
 
   '@utrecht/form-label-react@1.0.7(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -18194,37 +18923,77 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
+  '@utrecht/form-label-react@1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/form-label-css': 2.0.0
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
   '@utrecht/form-toggle-css@1.5.1': {}
+
+  '@utrecht/form-toggle-css@2.0.0': {}
 
   '@utrecht/heading-1-css@1.5.1': {}
 
+  '@utrecht/heading-1-css@2.0.0': {}
+
   '@utrecht/heading-2-css@1.5.1': {}
+
+  '@utrecht/heading-2-css@2.0.0': {}
 
   '@utrecht/heading-3-css@1.5.1': {}
 
+  '@utrecht/heading-3-css@2.0.0': {}
+
   '@utrecht/heading-4-css@1.5.1': {}
+
+  '@utrecht/heading-4-css@2.0.0': {}
 
   '@utrecht/heading-5-css@1.5.1': {}
 
+  '@utrecht/heading-5-css@2.0.0': {}
+
   '@utrecht/heading-6-css@1.5.1': {}
+
+  '@utrecht/heading-6-css@2.0.0': {}
 
   '@utrecht/heading-group-css@1.5.1': {}
 
+  '@utrecht/heading-group-css@2.0.0': {}
+
   '@utrecht/html-content-css@1.4.1': {}
+
+  '@utrecht/html-content-css@2.0.0': {}
 
   '@utrecht/iban-data-css@1.3.1': {}
 
+  '@utrecht/iban-data-css@2.0.0': {}
+
   '@utrecht/icon-css@2.0.1': {}
+
+  '@utrecht/icon-css@3.0.0': {}
 
   '@utrecht/img-css@1.3.1': {}
 
+  '@utrecht/img-css@2.0.0': {}
+
   '@utrecht/index-char-nav-css@1.4.1': {}
+
+  '@utrecht/index-char-nav-css@2.0.0': {}
 
   '@utrecht/link-button-css@1.4.1': {}
 
+  '@utrecht/link-button-css@2.0.0': {}
+
   '@utrecht/link-css@1.6.1': {}
 
+  '@utrecht/link-css@2.0.0': {}
+
   '@utrecht/link-list-css@2.3.1': {}
+
+  '@utrecht/link-list-css@3.0.0': {}
 
   '@utrecht/link-react@1.0.7(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -18234,11 +19003,25 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
+  '@utrecht/link-react@1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/link-css': 2.0.0
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
   '@utrecht/link-social-css@1.4.1': {}
+
+  '@utrecht/link-social-css@2.0.0': {}
 
   '@utrecht/list-social-css@1.4.1': {}
 
+  '@utrecht/list-social-css@2.0.0': {}
+
   '@utrecht/listbox-css@1.5.2': {}
+
+  '@utrecht/listbox-css@2.0.0': {}
 
   '@utrecht/listbox-react@1.0.10(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -18248,32 +19031,61 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
+  '@utrecht/listbox-react@1.0.11(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/listbox-css': 2.0.0
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
   '@utrecht/logo-button-css@1.4.1': {}
 
   '@utrecht/logo-css@1.4.1': {}
+
+  '@utrecht/logo-css@2.0.0': {}
 
   '@utrecht/logo-image-css@1.4.1': {}
 
   '@utrecht/map-control-button-css@2.2.1': {}
 
+  '@utrecht/map-control-button-css@3.0.0': {}
+
   '@utrecht/map-marker-css@1.4.1': {}
+
+  '@utrecht/map-marker-css@2.0.0': {}
 
   '@utrecht/mark-css@1.5.1': {}
 
+  '@utrecht/mark-css@2.0.0': {}
+
   '@utrecht/multiline-data-css@1.3.1': {}
 
+  '@utrecht/multiline-data-css@2.0.0': {}
+
   '@utrecht/nav-bar-css@1.4.1': {}
+
+  '@utrecht/nav-bar-css@2.0.0': {}
 
   '@utrecht/nav-list-css@1.3.1': {}
 
   '@utrecht/number-badge-css@2.3.1': {}
 
+  '@utrecht/number-badge-css@3.0.0': {}
+
   '@utrecht/number-data-css@1.4.1': {}
+
+  '@utrecht/number-data-css@2.0.0': {}
 
   '@utrecht/open-forms-container-css@1.0.2':
     dependencies:
       '@utrecht/focus-ring-css': 2.3.1
       '@utrecht/textbox-css': 2.0.0
+
+  '@utrecht/open-forms-container-css@2.0.0':
+    dependencies:
+      '@utrecht/focus-ring-css': 3.0.0
+      '@utrecht/textbox-css': 3.0.0
 
   '@utrecht/open-forms-container-react@1.0.2(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -18283,7 +19095,17 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
+  '@utrecht/open-forms-container-react@1.0.3(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/open-forms-container-css': 2.0.0
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
   '@utrecht/ordered-list-css@2.0.0': {}
+
+  '@utrecht/ordered-list-css@3.0.0': {}
 
   '@utrecht/page-body-css@0.1.1': {}
 
@@ -18297,11 +19119,19 @@ snapshots:
 
   '@utrecht/page-content-css@1.4.1': {}
 
+  '@utrecht/page-content-css@2.0.0': {}
+
   '@utrecht/page-css@1.4.1': {}
+
+  '@utrecht/page-css@2.0.0': {}
 
   '@utrecht/page-footer-css@2.1.1': {}
 
+  '@utrecht/page-footer-css@3.0.0': {}
+
   '@utrecht/page-header-css@1.5.1': {}
+
+  '@utrecht/page-header-css@2.0.0': {}
 
   '@utrecht/page-layout-css@1.1.1': {}
 
@@ -18315,13 +19145,23 @@ snapshots:
 
   '@utrecht/pagination-css@1.4.1': {}
 
+  '@utrecht/pagination-css@2.0.0': {}
+
   '@utrecht/paragraph-css@2.3.1': {}
+
+  '@utrecht/paragraph-css@3.0.0': {}
 
   '@utrecht/pre-heading-css@1.4.1': {}
 
+  '@utrecht/pre-heading-css@2.0.0': {}
+
   '@utrecht/preserve-data-css@1.3.1': {}
 
+  '@utrecht/preserve-data-css@2.0.0': {}
+
   '@utrecht/radio-button-css@1.6.1': {}
+
+  '@utrecht/radio-button-css@2.0.0': {}
 
   '@utrecht/radio-button-react@1.0.7(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -18331,7 +19171,17 @@ snapshots:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
+  '@utrecht/radio-button-react@1.0.8(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/radio-button-css': 2.0.0
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+
   '@utrecht/rich-text-css@1.4.0': {}
+
+  '@utrecht/rich-text-css@2.0.0': {}
 
   '@utrecht/root-css@1.2.1': {}
 
@@ -18345,27 +19195,59 @@ snapshots:
 
   '@utrecht/search-bar-css@2.2.1': {}
 
+  '@utrecht/search-bar-css@3.0.0': {}
+
   '@utrecht/select-css@1.8.1': {}
+
+  '@utrecht/select-css@2.0.0': {}
 
   '@utrecht/separator-css@1.5.1': {}
 
+  '@utrecht/separator-css@2.0.0': {}
+
   '@utrecht/skip-link-css@1.5.1': {}
+
+  '@utrecht/skip-link-css@2.0.0': {}
 
   '@utrecht/spotlight-section-css@1.6.1': {}
 
+  '@utrecht/spotlight-section-css@2.0.0': {}
+
   '@utrecht/subscript-css@1.3.1': {}
+
+  '@utrecht/subscript-css@2.0.0': {}
 
   '@utrecht/superscript-css@1.3.1': {}
 
+  '@utrecht/superscript-css@2.0.0': {}
+
   '@utrecht/surface-css@1.4.1': {}
+
+  '@utrecht/surface-css@2.0.0': {}
 
   '@utrecht/table-css@1.6.1': {}
 
+  '@utrecht/table-css@2.0.0': {}
+
   '@utrecht/table-of-contents-css@0.3.1': {}
+
+  '@utrecht/table-of-contents-css@1.0.0': {}
 
   '@utrecht/textarea-css@2.3.2': {}
 
+  '@utrecht/textarea-css@3.0.0': {}
+
   '@utrecht/textbox-css@2.0.0': {}
+
+  '@utrecht/textbox-css@3.0.0': {}
+
+  '@utrecht/textbox-react@1.0.10(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@utrecht/textbox-css': 3.0.0
+      clsx: 2.1.1
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
   '@utrecht/textbox-react@1.0.9(@babel/runtime@7.28.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
@@ -18379,11 +19261,17 @@ snapshots:
 
   '@utrecht/top-task-link-css@1.4.1': {}
 
+  '@utrecht/top-task-link-css@2.0.0': {}
+
   '@utrecht/top-task-nav-css@1.3.1': {}
 
   '@utrecht/unordered-list-css@1.5.1': {}
 
+  '@utrecht/unordered-list-css@2.0.0': {}
+
   '@utrecht/url-data-css@1.3.1': {}
+
+  '@utrecht/url-data-css@2.0.0': {}
 
   '@utrecht/vega-visualization-css@1.4.1': {}
 
