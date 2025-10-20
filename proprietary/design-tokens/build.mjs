@@ -22,20 +22,13 @@ const excludes = [
   'components/toolbar-button',
 ];
 
-const hooks = {
-  transforms: {
-    negative: {
-      name: 'negative',
-      type: transformTypes.value,
-      transitive: true,
-      filter: (token) => token.$value.startsWith('-'),
-      transform: (token) => {
-        token.value = `calc(-1 * ${token.original.value.substring(1)})`;
-        return token;
-      },
-    },
-  },
-};
+StyleDictionary.registerTransform({
+  name: 'custom/negative',
+  type: transformTypes.value,
+  transitive: true,
+  filter: (token) => token.$value.startsWith('-'),
+  transform: (token) => `calc(-1 * ${token.original.value.substring(1)})`,
+});
 
 // Get the platforms config
 const getPlatformsConfig = (buildPath, themeName) => {
@@ -74,7 +67,7 @@ const getPlatformsConfig = (buildPath, themeName) => {
     },
     web: {
       transformGroup: 'tokens-studio',
-      transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4', 'negative'],
+      transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4', 'custom/negative'],
       buildPath,
       excludes,
       files: [
@@ -112,7 +105,6 @@ async function buildBaseTokens() {
     log: { verbosity: 'verbose' },
     source: ['./src/**/base.tokens.json'],
     preprocessors: ['tokens-studio'],
-    hooks,
     platforms: {
       ...config,
     },
@@ -148,7 +140,6 @@ async function buildThemes() {
       log: { verbosity: 'verbose' },
       source: [`./src/generated/${themeName}/tokens.json`],
       preprocessors: ['tokens-studio'],
-      hooks,
       platforms: {
         ...config,
       },
