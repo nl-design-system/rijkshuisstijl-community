@@ -5,9 +5,9 @@ import {
   type TableCellProps,
   TableRow,
 } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './table-cell.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const TableCell = ({ children, alignCell, ...restProps }: TableCellProps) => {
   return (

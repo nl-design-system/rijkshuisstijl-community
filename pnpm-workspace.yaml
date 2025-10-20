@@ -24,6 +24,7 @@ minimumReleaseAgeExclude:
   - '@nl-design-system-candidate/*'
   - '@nl-design-system-community/*'
   - '@nl-design-system-unstable/*'
+  - '@utrecht/*'
 
 # Configure pnpm to save exact version numbers (not including ^ or ~) in package.json. Lock dependencies to specific
 # versions to ensure reproducible installs and prevent automatic upgrades to newer minor or patch releases.
@@ -32,4 +33,3 @@ savePrefix: ''
 
 # Configure pnpm to not fail when there are missing or invalid peer dependencies in the tree.
 strictPeerDependencies: false
-

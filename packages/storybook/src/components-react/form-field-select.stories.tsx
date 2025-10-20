@@ -1,7 +1,7 @@
 import { FormFieldSelect, SelectOption } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './form-field-select.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Form Field/Form Field Select',
@@ -98,37 +98,6 @@ const meta = {
     options: [],
     defaultValue: '',
     dir: '',
-  },
-  render: (args) => {
-    const {
-      dir,
-      label,
-      defaultValue,
-      options,
-      children,
-      name,
-      description,
-      errorMessage,
-      required,
-      disabled,
-      invalid,
-    } = args;
-    return (
-      <FormFieldSelect
-        defaultValue={defaultValue || undefined}
-        description={description || undefined}
-        dir={dir || undefined}
-        disabled={disabled || undefined}
-        errorMessage={errorMessage || undefined}
-        invalid={invalid || undefined}
-        label={label || undefined}
-        name={name || undefined}
-        options={options || undefined}
-        required={required || undefined}
-      >
-        {!options?.length && children}
-      </FormFieldSelect>
-    );
   },
   tags: ['autodocs'],
   parameters: {

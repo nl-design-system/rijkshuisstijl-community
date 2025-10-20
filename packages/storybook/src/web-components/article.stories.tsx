@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { ArticleWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../components-react/article.md?raw';
 
 ArticleWebComponent.define();

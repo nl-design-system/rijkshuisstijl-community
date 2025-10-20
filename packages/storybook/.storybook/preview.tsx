@@ -54,17 +54,14 @@ const preview: Preview = {
     actions: {
       disable: true,
     },
-    previewTabs: {
-      'storybookjs/notes/panel': { title: 'Documentation' },
-      'storybook/docs/panel': { title: 'API' },
-      canvas: { title: 'Design Tokens' },
-    },
     controls: { exclude: ['children'] },
     options: {
       storySort: {
         order: [
           'Rijkshuisstijl Community',
           ['README', '*', 'Icon Sets', 'Design Tokens', ['Standaard Thema']],
+          'CSS Components',
+          ['README', 'CHANGELOG'],
           'React Components',
           ['README', 'CHANGELOG'],
           'Web Components',
@@ -125,11 +122,13 @@ const preview: Preview = {
         );
       },
       codePanel: true,
-      source: {
-        excludeDecorators: true,
+      canvas: {
         // Show code by default.
         // Stories without concise code snippets can hide the code at Story level.
-        state: 'open',
+        sourceState: 'shown',
+      },
+      source: {
+        excludeDecorators: true,
       },
     },
   },

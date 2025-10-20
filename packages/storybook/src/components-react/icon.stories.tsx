@@ -5,10 +5,10 @@ import {
   Icon,
   registerIconSet,
 } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { IconBrandX } from '@tabler/icons-react';
 import readme from './icon.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 registerIconSet(defaultIconSet);
 registerIconSet(flagIconSet);

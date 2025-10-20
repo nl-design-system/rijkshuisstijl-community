@@ -15,13 +15,14 @@ export class FormFieldCheckboxOptionWebComponent extends BaseWebComponent {
   render(): void {
     if (!this.shadowRoot) return;
 
-    const { label, description, invalid, errormessage, disabled, ...restProps } = this.props;
+    const { label, description, invalid, inputinvalid, errormessage, disabled, ...restProps } = this.props;
 
     render(
       <FormFieldCheckboxOption
         description={(description as FormFieldCheckboxOptionAttributes['description']) ?? undefined}
         disabled={(disabled === 'true') as FormFieldCheckboxOptionAttributes['disabled']}
         errorMessage={(errormessage as FormFieldCheckboxOptionAttributes['errorMessage']) ?? undefined}
+        inputInvalid={(inputinvalid === 'true') as FormFieldCheckboxOptionAttributes['inputInvalid']}
         invalid={(invalid === 'true') as FormFieldCheckboxOptionAttributes['invalid']}
         label={(label as FormFieldCheckboxOptionAttributes['label']) ?? undefined}
         {...restProps}
