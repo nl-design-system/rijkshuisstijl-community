@@ -2,15 +2,14 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
-      "@utrecht/page-body-react": ["node_modules/@utrecht/page-body-react/src"],
-      "@utrecht/page-layout-react": ["node_modules/@utrecht/page-body-react/src"],
-      "@utrecht/root-react": ["node_modules/@utrecht/page-body-react/src"],
-      "@rijkshuisstijl-community/components-twig": ["@rijkshuisstijl-community/components-twig/types/twig.d.ts"]
+      "@rijkshuisstijl-community/components-react": ["../components-react/src/index.ts"],
+      "@rijkshuisstijl-community/components-twig/*": ["../components-twig/*"]
     }
   },
   "extends": "../../tsconfig.json",
-  "include": ["src/**/*.ts", "src/**/*.tsx", ".storybook/**/*.tsx", ".storybook/**/*.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", ".storybook/**/*.tsx", ".storybook/**/*.ts", "./types/twig.d.ts"],
   "exclude": ["**/node_modules/*"]
 }

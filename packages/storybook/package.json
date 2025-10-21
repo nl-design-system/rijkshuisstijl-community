@@ -26,7 +26,8 @@
     "storybook": "storybook dev --port 6006",
     "prod-static": "http-server --port 6006 dist/",
     "test-storybook": "test-storybook --maxWorkers=2",
-    "playwright:install": "playwright install --with-deps chromium --only-shell"
+    "playwright:install": "playwright install --with-deps chromium --only-shell",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "4.1.1",
