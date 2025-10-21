@@ -23,7 +23,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test-results": "jest --json --outputFile=dist/.jest-test-results.json --silent",
-    "test": "jest --coverage --verbose"
+    "test": "jest --coverage --verbose",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "tslib": "2.3.0",

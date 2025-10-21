@@ -1,7 +1,7 @@
 import { FormFieldRadio, FormFieldRadioGroup } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './form-field-radio-group.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Form Field/Form Field Radio Group',
@@ -84,14 +84,14 @@ export const Default: StoryObj<typeof meta> = {
   },
 };
 
-export const Error: StoryObj<typeof meta> = {
+export const Invalid: StoryObj<typeof meta> = {
   args: {
     label: 'Select option',
     children: (
       <>
-        <FormFieldRadio label="Option 1" name="radio-demo" value="option1" />
-        <FormFieldRadio label="Option 2" name="radio-demo" value="option2" />
-        <FormFieldRadio label="Option 3" name="radio-demo" value="option3" />
+        <FormFieldRadio inputInvalid label="Option 1" name="radio-demo" value="option1" />
+        <FormFieldRadio inputInvalid label="Option 2" name="radio-demo" value="option2" />
+        <FormFieldRadio inputInvalid label="Option 3" name="radio-demo" value="option3" />
       </>
     ),
     errorMessage: 'This is an error message',

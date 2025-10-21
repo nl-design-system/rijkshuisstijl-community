@@ -1,12 +1,12 @@
 /* @license CC0-1.0 */
 
 import { Radio, type RadioProps } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/radio-button/README.md?raw';
 import anatomyDocs from '@utrecht/components/radio-button/docs/anatomy.nl.md?raw';
 import visualDesignDocs from '@utrecht/components/radio-button/docs/visual-design.nl.md?raw';
 import clsx from 'clsx';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 interface RadioStoryProps extends RadioProps {
   focus?: boolean;

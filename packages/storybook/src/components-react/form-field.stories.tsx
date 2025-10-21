@@ -5,9 +5,9 @@ import {
   FormFieldRadio,
   FormFieldRadioGroup,
 } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { type Meta, type StoryObj } from '@storybook/react-vite';
 import readme from './form-field.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Form Field/Form Field',
@@ -113,9 +113,9 @@ export const Invalid: Story = {
     label: 'Onderwerp',
     input: (
       <FormFieldRadioGroup>
-        <FormFieldRadio label="Option 1" name="radio-demo" value="option1" />
-        <FormFieldRadio label="Option 2" name="radio-demo" value="option2" />
-        <FormFieldRadio label="Option 3" name="radio-demo" value="option3" />
+        <FormFieldRadio inputInvalid label="Option 1" name="radio-demo" value="option1" />
+        <FormFieldRadio inputInvalid label="Option 3" name="radio-demo" value="option3" />
+        <FormFieldRadio inputInvalid label="Option 2" name="radio-demo" value="option2" />
       </FormFieldRadioGroup>
     ),
     statusId: 'status',

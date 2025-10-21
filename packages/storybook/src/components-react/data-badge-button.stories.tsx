@@ -1,18 +1,15 @@
 /* @license CC0-1.0 */
 
-import { DataBadgeButton, DataBadgeButtonProps } from '@rijkshuisstijl-community/components-react';
+import { DataBadgeButton } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { IconCheck } from '@tabler/icons-react';
-import { PropsWithChildren } from 'react';
 import readme from './data-badge-button.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-
-const DataBadgeButtonStory = (props: PropsWithChildren<DataBadgeButtonProps>) => <DataBadgeButton {...props} />;
 
 const meta = {
   title: 'Data Badge Button',
   id: 'rhc-data-badge-button',
-  component: DataBadgeButtonStory,
+  component: DataBadgeButton,
   argTypes: {
     children: {
       description: 'Data Badge Button text content',
@@ -76,8 +73,7 @@ const meta = {
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/DataBadgeButton.tsx',
   },
-  render: DataBadgeButtonStory,
-} as Meta<typeof DataBadgeButtonStory>;
+} as Meta<typeof DataBadgeButton>;
 
 export default meta;
 

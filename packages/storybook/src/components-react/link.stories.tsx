@@ -1,6 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Icon, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown, replaceMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/link/README.md?raw';
 import anatomyDocs from '@utrecht/components/link/docs/anatomy.nl.md?raw';
@@ -19,7 +20,6 @@ import technologyHtmlDocs from '@utrecht/components/link/docs/technology-html.nl
 import usageDocs from '@utrecht/components/link/docs/usage.nl.md?raw';
 import visualDesignDocs from '@utrecht/components/link/docs/visual-design.nl.md?raw';
 import wcagDocs from '@utrecht/components/link/docs/wcag.nl.md?raw';
-import { mergeMarkdown, replaceMarkdown } from '../../helpers/merge-markdown';
 import iconInline from '../documentation/components/link/icon-inline.nl.md?raw';
 
 const meta = {
@@ -85,8 +85,7 @@ const meta = {
           ]),
           'utrecht',
           'rhc',
-          true,
-        ).replace('utrecht', 'rhc'),
+        ),
       },
     },
     figma:

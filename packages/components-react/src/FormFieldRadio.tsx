@@ -9,6 +9,7 @@ export interface FormFieldRadioProps extends RadioProps {
   status?: ReactNode;
   description?: ReactNode;
   input?: ReactNode;
+  inputInvalid?: boolean;
   label: ReactNode;
   type?: string;
   defaultValue?: string;
@@ -23,6 +24,7 @@ export const FormFieldRadio = ({
   radioRef,
   status,
   invalid,
+  inputInvalid,
   input,
   dir,
   ...restProps
@@ -37,7 +39,7 @@ export const FormFieldRadio = ({
       <Radio
         dir={dir}
         id={id}
-        invalid={invalid}
+        invalid={inputInvalid || invalid}
         ref={radioRef}
         aria-describedby={
           clsx({

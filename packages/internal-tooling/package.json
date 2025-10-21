@@ -10,7 +10,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "test": "vitest run --coverage --reporter verbose"
+    "test": "vitest run --coverage --reporter verbose",
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git+ssh",
@@ -22,14 +23,18 @@
   "keywords": [
     "nl-design-system"
   ],
+  "dependencies": {
+    "remark": "15.0.1",
+    "remark-normalize-headings": "4.0.0"
+  },
   "devDependencies": {
     "@types/node": "22.10.1",
     "@vitest/coverage-v8": "3.2.4",
     "vitest": "3.2.4"
   },
   "exports": {
-    ".": "./src/index.ts",
     "./getAbsolutePath": "./src/getAbsolutePath/index.ts",
-    "./formatHtml": "./src/formatHtml/index.ts"
+    "./formatHtml": "./src/formatHtml/index.ts",
+    "./markdownUtils": "./src/markdownUtils/index.ts"
   }
 }
