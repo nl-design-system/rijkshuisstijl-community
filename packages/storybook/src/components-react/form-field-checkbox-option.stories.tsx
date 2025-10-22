@@ -1,7 +1,7 @@
 import { FormFieldCheckboxOption } from '@rijkshuisstijl-community/components-react';
-import type { Meta, StoryObj } from '@storybook/react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './form-field-checkbox-option.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Form Field/Form Field Checkbox Option',
@@ -111,6 +111,13 @@ export const Disabled: Story = {
   args: {
     label: 'Checkbox',
     disabled: true,
+  },
+};
+
+export const InputInvalid: Story = {
+  args: {
+    label: 'Checkbox',
+    inputInvalid: true,
   },
 };
 

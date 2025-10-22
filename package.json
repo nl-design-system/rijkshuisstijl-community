@@ -15,7 +15,7 @@
   },
   "engines": {
     "//": "Update @types/node to match the highest node version here",
-    "node": ">=20 <=22",
+    "node": ">=20 <=24",
     "pnpm": "^10.16.0"
   },
   "workspaces": [
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "2.29.5",
-    "@chromatic-com/storybook": "4.1.0",
+    "@chromatic-com/storybook": "4.1.1",
     "@lerna-lite/cli": "4.6.2",
     "@lerna-lite/publish": "4.6.2",
     "@lerna-lite/run": "4.6.2",
@@ -87,6 +87,7 @@
     "test": "npm run test-workspaces",
     "test-update": "npm-run-all --sequential clean lint build test",
     "test-workspaces": "lerna run --no-bail test",
+    "typecheck": "lerna run --no-bail typecheck",
     "prewatch:storybook": "lerna run build:stencil && lerna run build:style-dictionary",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.cjs",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.cjs",

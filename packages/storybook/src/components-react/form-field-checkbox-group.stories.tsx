@@ -1,7 +1,7 @@
 import { FormFieldCheckboxGroup, FormFieldCheckboxOption } from '@rijkshuisstijl-community/components-react';
-import type { Meta, StoryObj } from '@storybook/react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './form-field-checkbox-group.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Form Field/Form Field Checkbox Group',
@@ -82,13 +82,13 @@ export const Default: StoryObj<typeof meta> = {
   },
 };
 
-export const Error: StoryObj<typeof meta> = {
+export const Invalid: StoryObj<typeof meta> = {
   args: {
     label: 'Select option',
     children: [
-      <FormFieldCheckboxOption invalid key="1" label="Checkbox 1" />,
-      <FormFieldCheckboxOption invalid key="2" label="Checkbox 2" />,
-      <FormFieldCheckboxOption invalid key="3" label="Checkbox 3" />,
+      <FormFieldCheckboxOption inputInvalid key="1" label="Checkbox 1" />,
+      <FormFieldCheckboxOption inputInvalid key="2" label="Checkbox 2" />,
+      <FormFieldCheckboxOption inputInvalid key="3" label="Checkbox 3" />,
     ],
     errorMessage: 'This is an error message',
     invalid: true,

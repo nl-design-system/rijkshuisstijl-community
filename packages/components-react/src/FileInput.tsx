@@ -4,7 +4,7 @@ import { File } from './File';
 import { Paragraph } from './Paragraph';
 
 export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
-  ref: Ref<HTMLInputElement>;
+  ref?: Ref<HTMLInputElement>;
   buttonText: string;
   buttonAppearance?: ButtonProps['appearance'];
   maxFileSizeInBytes: number;

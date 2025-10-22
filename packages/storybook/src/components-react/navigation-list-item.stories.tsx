@@ -4,9 +4,9 @@ import {
   NavigationListItem,
   NavigationListItemProps,
 } from '@rijkshuisstijl-community/components-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './navigation-list-item.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Navigation List/Navigation List Item',

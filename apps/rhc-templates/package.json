@@ -24,10 +24,11 @@
     "clean": "rimraf dist/ .next/",
     "lint": "next lint",
     "lint:ts": "tsc --noEmit --project tsconfig.json",
-    "start": "http-server dist/"
+    "start": "http-server dist/",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "next": "15.4.5",
+    "next": "15.5.5",
     "react": "19.1.1",
     "react-dom": "19.1.1"
   },
@@ -46,7 +47,7 @@
     "@utrecht/page-layout-react": "1.0.6",
     "@utrecht/root-react": "1.0.6",
     "eslint": "9.32.0",
-    "eslint-config-next": "15.4.5",
-    "typescript": "5.8.3"
+    "eslint-config-next": "15.5.5",
+    "typescript": "5.9.3"
   }
 }

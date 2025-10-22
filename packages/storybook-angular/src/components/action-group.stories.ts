@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import readme from './action-group.md';
 import { ActionGroupComponent, ButtonComponent } from '../../../components-angular/src/public-api';
-import { mergeMarkdown, replaceMarkdown } from '../../../storybook/helpers/merge-markdown';
+import { mergeMarkdown, replaceMarkdown } from '../../../internal-tooling/src/markdownUtils';
 import usageDocs from '../../../storybook/src/components-react/action-group.md';
 
 const meta: Meta<ActionGroupComponent> = {
@@ -21,10 +21,7 @@ const meta: Meta<ActionGroupComponent> = {
   parameters: {
     docs: {
       description: {
-        component: mergeMarkdown([
-          replaceMarkdown(readme, 'Button Group', 'Action Group', true).replace('Button Group', 'Action Group'),
-          usageDocs,
-        ]),
+        component: replaceMarkdown(mergeMarkdown([readme, usageDocs]), 'Button Group', 'Action Group'),
       },
     },
     nldesignsystem: 'https://www.nldesignsystem.nl/action-group/',

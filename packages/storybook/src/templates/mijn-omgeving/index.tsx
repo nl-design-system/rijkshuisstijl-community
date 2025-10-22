@@ -16,7 +16,7 @@ import {
   SideNavLink,
   SideNavList,
 } from '@rijkshuisstijl-community/components-react';
-import { PageBody } from '@utrecht/page-body-react/dist';
+import { PageBody } from '@utrecht/page-body-react';
 import SharedDisclaimer from '../shared/disclaimer';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';

@@ -1,8 +1,8 @@
 import { defaultIconSet, flagIconSet, getIconSet, registerIconSet } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { IconWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/web-components';
+import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { IconBrandX } from '@tabler/icons-react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 import readme from '../components-react/icon.md?raw';
 
 registerIconSet(defaultIconSet);

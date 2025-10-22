@@ -1,7 +1,8 @@
 /* @license CC0-1.0 */
 
-import { Button, Icon, IconButton } from '@rijkshuisstijl-community/components-react';
-import type { Meta, StoryObj } from '@storybook/react';
+import { Button, ButtonProps, Icon, IconButton } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
 import readme from '@utrecht/components/button/README.md?raw';
 import anatomyDocs from '@utrecht/components/button/docs/anatomy.nl.md?raw';
@@ -10,16 +11,14 @@ import visualDesignDocs from '@utrecht/components/button/docs/visual-design.nl.m
 import wcagDocs from '@utrecht/components/button/docs/wcag.nl.md?raw';
 import { PropsWithChildren } from 'react';
 import rhcReadme from './button.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
-interface ButtonStoryProps {
-  appearance: string;
+interface ButtonStoryProps extends ButtonProps {
   iconLeft?: boolean;
   iconRight?: boolean;
 }
 
-const ButtonStory = ({ appearance, children, iconLeft, iconRight, ...props }: PropsWithChildren<ButtonStoryProps>) => (
-  <Button appearance={appearance} {...props}>
+const ButtonStory = ({ children, iconLeft, iconRight, ...props }: PropsWithChildren<ButtonStoryProps>) => (
+  <Button {...props}>
     {iconLeft && (
       <Icon>
         <IconCalendarEvent></IconCalendarEvent>
@@ -111,7 +110,6 @@ const meta = {
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen (voor de IconButton) en styling van de Rijkshuisstijl Community.',
   },
-  render: ButtonStory,
 } as Meta<typeof ButtonStory>;
 
 type Story = StoryObj<typeof meta>;

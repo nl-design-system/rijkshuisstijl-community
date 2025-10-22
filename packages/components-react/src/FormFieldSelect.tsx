@@ -15,7 +15,16 @@ export interface FormFieldSelectProps
   extends Omit<FormFieldProps, 'onInput' | 'onBlur' | 'onFocus' | 'onChange'>,
     Pick<
       SelectProps,
-      'value' | 'onInput' | 'onBlur' | 'onFocus' | 'onChange' | 'defaultValue' | 'disabled' | 'name' | 'invalid'
+      | 'value'
+      | 'onInput'
+      | 'onBlur'
+      | 'onFocus'
+      | 'onChange'
+      | 'defaultValue'
+      | 'disabled'
+      | 'name'
+      | 'invalid'
+      | 'required'
     > {
   errorMessage?: string;
   selectRef?: Ref<HTMLSelectElement>;

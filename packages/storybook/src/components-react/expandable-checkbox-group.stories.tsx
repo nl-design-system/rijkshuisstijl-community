@@ -1,10 +1,10 @@
 /* @license CC0-1.0 */
 
 import { ExpandableCheckboxGroup, ExpandableCheckboxGroupProps } from '@rijkshuisstijl-community/components-react';
-import type { Meta, StoryObj } from '@storybook/react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { PropsWithChildren, useEffect } from 'react';
 import readme from './expandable-checkbox-group.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const ExpandableCheckboxGroupStory = (props: PropsWithChildren<ExpandableCheckboxGroupProps>) => (
   <ExpandableCheckboxGroup {...props} />
