@@ -246,6 +246,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [lint, test]
     if: ${{ github.ref == 'refs/heads/main' }}
+    environment: publish
+
+    permissions:
+      id-token: write
 
     steps:
       - name: Checkout release branch
@@ -267,6 +271,11 @@ jobs:
 
       - name: "Continuous Deployment: build"
         run: pnpm run --if-present build
+
+      - name: Set up Node.js that is compatible with OIDC
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: 24
 
       - name: "Continuous Deployment: update versions and publish to NPM"
         uses: changesets/action@e0145edc7d9d8679003495b11f87bd8ef63c0cba # v1.5.3
