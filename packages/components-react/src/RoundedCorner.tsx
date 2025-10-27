@@ -12,7 +12,7 @@ type SuggestedTokens = {
 type OverwriteTokens = Partial<SuggestedTokens & Record<string, string>>;
 
 export type RoundedCornerProps<T extends ElementType> = {
-  size?: Size; // We make size optional to allow for custom styling via CSS overwriteTokens
+  size?: Size; // We need to make size optional as otherwise --rhc-rounded-corner-radius will always be overridden by size class
   corner: Corner;
   as?: T;
   overwriteTokens?: OverwriteTokens;
