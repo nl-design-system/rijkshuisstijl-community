@@ -1,66 +1,22 @@
 @use "mixin";
 
-$rhc-rounded-border-colors: ("blue", "pink") !default;
-
 .rhc-rounded-corner {
-  --_rhc-rounded-corner-border-color: var(--rhc-rounded-corner-border-color);
-  --_rhc-rounded-corner-border-width: var(--rhc-rounded-corner-border-width, 0);
   --_rhc-rounded-corner-radius: var(--rhc-rounded-corner-radius, var(--rhc-rounded-corner-size-md));
-
+  @include mixin.rhc-rounded-corner;
   @include mixin.reset-border-radius;
 
-  background-color: var(--rhc-rounded-corner-background-color, var(--_rhc-rounded-corner-background-color));
-  border-color: var(--rhc-rounded-corner-border-color, var(--_rhc-rounded-corner-border-color));
-  border-style: var(--_rhc-rounded-corner-border-style);
-  padding-block: var(--rhc-rounded-corner-padding-block, var(--rhc-rounded-corner-padding));
-  padding-inline: var(--rhc-rounded-corner-padding-inline, var(--rhc-rounded-corner-padding));
-
-  &.rhc-rounded-corner--no-padding {
-    padding-block: 0;
-    padding-inline: 0;
-  }
-
   &.rhc-rounded-corner--size {
-    @each $size in ("sm", "md", "lg") {
+    @each $size in mixin.$rhc-rounded-corner-sizes {
       &-#{$size} {
         --_rhc-rounded-corner-radius: var(--rhc-rounded-corner-size-#{$size});
       }
     }
   }
 
-  &.rhc-rounded-corner--background-color {
-    @each $color in $rhc-rounded-border-colors {
-      &-#{$color} {
-        --_rhc-rounded-corner-background-color: var(
-          --rhc-rounded-corner-color-#{$color},
-          var(--rhc-rounded-corner-background-color)
-        );
-      }
-    }
-  }
-
   &.rhc-rounded-corner--corner {
-    @each $corner in ("start-start", "start-end", "end-start", "end-end") {
+    @each $corner in mixin.$rhc-rounded-border-corners {
       &-#{$corner} {
         border-#{$corner}-radius: var(--_rhc-rounded-corner-radius);
-
-        &.rhc-rounded-corner--border {
-          @each $color in $rhc-rounded-border-colors {
-            &,
-            &-color-#{$color} {
-              &.rhc-rounded-corner--thick-border {
-                --_rhc-rounded-corner-border-width: var(--rhc-rounded-corner-border-thick-width);
-              }
-              @include mixin.add-border(
-                $corner,
-                var(--_rhc-rounded-corner-border-color),
-                var(--_rhc-rounded-corner-border-width)
-              );
-
-              --_rhc-rounded-corner-border-color: var(--rhc-rounded-corner-color-#{$color});
-            }
-          }
-        }
       }
     }
   }
