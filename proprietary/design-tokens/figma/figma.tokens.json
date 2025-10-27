@@ -1222,80 +1222,6 @@
       }
     }
   },
-  "common/rounded-corner": {
-    "rhc": {
-      "rounded-corner": {
-        "overflow": {
-            "value": "hidden",
-            "type": "other"          
-        },
-        "xs": {
-          "border-radius": {
-            "value": "{rhc.size.half-lint}",
-            "type": "borderRadius"
-          }
-        },
-        "md": {
-          "border-radius": {
-            "value": "{rhc.size.lint}",
-            "type": "borderRadius"
-          }
-        },
-        "xl": {
-          "border-radius": {
-            "value": "{rhc.size.2-lint}",
-            "type": "borderRadius"
-          }
-        },
-        "size": {
-          "sm": {
-            "value": "{rhc.size.half-lint}",
-            "type": "sizing"
-          },
-          "md": {
-            "value": "{rhc.size.lint}",
-            "type": "sizing"
-          },
-          "lg": {
-            "value": "{rhc.size.half-lint} * 3",
-            "type": "sizing"
-          }
-        }
-      }
-    }
-  },
-  "common/edge-border": {
-    "rhc": {
-      "edge-border": {
-        "border-style": {
-          "value": "solid",
-          "type": "borderStyle"
-        },
-        "border-width": {
-          "value": "0.75rem",
-          "type": "borderWidth"
-        },
-        "adjacent-padding": {
-          "value": "{rhc.space.500}",
-          "type": "spacing"
-        },
-        "perpendicular-padding": {
-          "value": "{rhc.space.300}",
-          "type": "spacing"
-        },
-        "color": {
-          "blue": {
-            "value": "{rhc.color.primary.500}",
-            "type": "color"
-          },
-          "pink": {
-            "value": "{rhc.color.roze.300}",
-            "type": "color"
-          }
-        }
-      }
-    }
-  },
   "utrecht/action": {
     "utrecht": {
       "action": {
@@ -5892,6 +5818,30 @@
         "row-gap": {
           "value": "{rhc.space.200}",
           "type": "spacing"
+        }
+      }
+    }
+  },
+  "components/rounded-corner": {
+    "rhc": {
+      "rounded-corner": {
+        "overflow": {
+            "value": "hidden",
+            "type": "other"          
+        },
+        "size": {
+          "sm": {
+            "value": "{rhc.size.half-lint}",
+            "type": "sizing"
+          },
+          "md": {
+            "value": "{rhc.size.lint}",
+            "type": "sizing"
+          },
+          "lg": {
+            "value": "{rhc.size.half-lint} * 3",
+            "type": "sizing"
+          }
         }
       }
     }
