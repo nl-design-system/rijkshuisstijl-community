@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/components-angular
 
+## 6.0.0
+
+### Major Changes
+
+- a44da6e: FormFieldErrorMessage no longer has a slot for an icon
+
+### Patch Changes
+
+- 10ec55a: Release package with npm provenance.
+
 ## 5.0.0
 
 ### Major Changes
