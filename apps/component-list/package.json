@@ -1,0 +1,31 @@
+{
+  "name": "@rijkshuisstijl-community/figma-component-export",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
+    "directory": "apps/component-list"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "getdata-rhc-figma": "node src/getdata-rhc-figma.js",
+    "getdata-rhc-storybook": "node src/getdata-rhc-storybook.cjs",
+    "getdata-nlds-website": "node src/getdata-nlds-website.cjs",
+    "createtable": "node src/createTable.cjs",
+    "build": "npm run getdata-rhc-figma && npm run getdata-rhc-storybook && npm run getdata-nlds-website && npm run createtable"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "EUPL-1.2",
+  "description": "",
+  "dependencies": {
+    "axios": "1.11.0",
+    "cheerio": "1.1.2",
+    "dotenv": "17.2.1",
+    "fs": "0.0.1-security",
+    "node-fetch": "3.3.2",
+    "path": "0.12.7"
+  }
+}
