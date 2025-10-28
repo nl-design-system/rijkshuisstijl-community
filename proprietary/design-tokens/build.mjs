@@ -22,12 +22,25 @@ const excludes = [
   'components/toolbar-button',
 ];
 
+register(StyleDictionary, { excludeParentKeys: true });
+
 StyleDictionary.registerTransform({
   name: 'custom/negative',
   type: transformTypes.value,
-  transitive: true,
-  filter: (token) => token.$value.startsWith('-'),
-  transform: (token) => `calc(-1 * ${token.original.value.substring(1)})`,
+  transitive: false,
+  filter: (token, options) => {
+    const holds = typeof token.original.$value === 'string' && token.original.$value.startsWith('-');
+    if (holds) {
+      console.log(token, options);
+    }
+    return holds;
+  },
+  transform: (token) => {
+    console.log('---- Yowwwww ----');
+    const res = `calc(-1 * ${token.original.$value.substring(1)})`;
+    console.log(res);
+    return token.$value;
+  },
 });
 
 // Get the platforms config
@@ -67,7 +80,7 @@ const getPlatformsConfig = (buildPath, themeName) => {
     },
     web: {
       transformGroup: 'tokens-studio',
-      transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4', 'custom/negative'],
+      transforms: ['custom/negative', 'attribute/cti', 'name/kebab', 'color/hsl-4'],
       buildPath,
       excludes,
       files: [
@@ -109,10 +122,9 @@ async function buildBaseTokens() {
       ...config,
     },
   });
-  register(StyleDictionaryBase, { excludeParentKeys: true });
-  StyleDictionaryBase.registerTransform({});
   await StyleDictionaryBase.hasInitialized;
 
+  await StyleDictionaryBase.cleanAllPlatforms();
   await StyleDictionaryBase.buildAllPlatforms();
 }
 
@@ -144,10 +156,10 @@ async function buildThemes() {
         ...config,
       },
     });
-    register(StyleDictionaryTheme, { excludeParentKeys: true });
     await StyleDictionaryTheme.hasInitialized;
 
     // Build this specific theme
+    await StyleDictionaryTheme.cleanAllPlatforms();
     await StyleDictionaryTheme.buildAllPlatforms();
   }
 }
@@ -155,7 +167,7 @@ async function buildThemes() {
 async function build() {
   try {
     await buildBaseTokens();
-    await buildThemes();
+    //await buildThemes();
   } catch (error) {
     console.error(error);
   }

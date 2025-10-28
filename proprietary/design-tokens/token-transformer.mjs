@@ -1,8 +1,6 @@
 import { existsSync, mkdirSync } from 'fs';
 import { readFile, writeFile } from 'node:fs/promises';
 
-import { transformTokens } from 'token-transformer';
-
 // the commented options and their values are default values from the token-transformer package
 const transformerOptions = {
   // expandTypography: true,
