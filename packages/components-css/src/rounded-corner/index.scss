@@ -3,7 +3,7 @@
 .rhc-rounded-corner {
   --_rhc-rounded-corner-radius: var(--rhc-rounded-corner-radius, var(--rhc-rounded-corner-size-md));
   @include mixin.rhc-rounded-corner;
-  @include mixin.reset-border-radius;
+  @include mixin.rhc-reset-border-radius;
 
   &.rhc-rounded-corner--size {
     @each $size in mixin.$rhc-rounded-corner-sizes {
