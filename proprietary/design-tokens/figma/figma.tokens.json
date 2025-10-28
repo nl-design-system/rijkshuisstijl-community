@@ -1222,116 +1222,6 @@
       }
     }
   },
-  "common/rounded-corner/base": {
-    "rhc": {
-      "rounded-corner": {
-        "xs": {
-          "border-radius": {
-            "value": "{rhc.size.half-lint}",
-            "type": "dimension"
-          }
-        },
-        "md": {
-          "border-radius": {
-            "value": "{rhc.size.lint}",
-            "type": "dimension"
-          }
-        },
-        "xl": {
-          "border-radius": {
-            "value": "{rhc.size.2-lint}",
-            "type": "dimension"
-          }
-        },
-        "border-width": {
-          "value": "{rhc.border-width.m}",
-          "type": "dimension"
-        }
-      }
-    }
-  },
-  "common/rounded-corner/deprecated": {
-    "rhc": {
-      "keep": {
-        "_comment": {
-          "value": "⚠️ Deze tokens zijn legacy en worden vervangen door de tokenset common/rounded-corner.",
-          "type": "other"
-        },
-        "top-left": {
-          "borderRadiusTopLeft": {
-            "value": "{rhc.rounded-corner.md.border-radius}",
-            "type": "dimension"
-          },
-          "borderRadiusTopRight": {
-            "value": "0",
-            "type": "dimension"
-          },
-          "borderRadiusBottomRight": {
-            "value": "0",
-            "type": "dimension"
-          },
-          "borderRadiusBottomLeft": {
-            "value": "0",
-            "type": "dimension"
-          }
-        },
-        "top-right": {
-          "borderRadiusTopRight": {
-            "value": "{rhc.rounded-corner.md.border-radius}",
-            "type": "dimension"
-          },
-          "borderRadiusTopLeft": {
-            "value": "0",
-            "type": "dimension"
-          },
-          "borderRadiusBottomRight": {
-            "value": "0",
-            "type": "dimension"
-          },
-          "borderRadiusBottomLeft": {
-            "value": "0",
-            "type": "dimension"
-          }
-        },
-        "bottom-right": {
-          "borderRadiusTopLeft": {
-            "value": "0",
-            "type": "dimension"
-          },
-          "borderRadiusTopRight": {
-            "value": "0",
-            "type": "dimension"
-          },
-          "borderRadiusBottomRight": {
-            "value": "{rhc.rounded-corner.md.border-radius}",
-            "type": "dimension"
-          },
-          "borderRadiusBottomLeft": {
-            "value": "0",
-            "type": "dimension"
-          }
-        },
-        "bottom-left": {
-          "borderRadiusTopLeft": {
-            "value": "0",
-            "type": "dimension"
-          },
-          "borderRadiusTopRight": {
-            "value": "0",
-            "type": "dimension"
-          },
-          "borderRadiusBottomRight": {
-            "value": "0",
-            "type": "dimension"
-          },
-          "borderRadiusBottomLeft": {
-            "value": "{rhc.rounded-corner.md.border-radius}",
-            "type": "dimension"
-          }
-        }
-      }
-    }
-  },
   "utrecht/action": {
     "utrecht": {
       "action": {
@@ -5932,6 +5822,30 @@
       }
     }
   },
+  "components/rounded-corner": {
+    "rhc": {
+      "rounded-corner": {
+        "overflow": {
+            "value": "hidden",
+            "type": "other"          
+        },
+        "size": {
+          "sm": {
+            "value": "{rhc.size.half-lint}",
+            "type": "sizing"
+          },
+          "md": {
+            "value": "{rhc.size.lint}",
+            "type": "sizing"
+          },
+          "lg": {
+            "value": "{rhc.size.half-lint} * 3",
+            "type": "sizing"
+          }
+        }
+      }
+    }
+  },
   "components/select/base": {
     "utrecht": {
       "select": {
@@ -9487,8 +9401,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -9515,6 +9427,7 @@
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
         "components/radio-button/deprecated": "enabled",
+        "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -9582,8 +9495,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -9610,6 +9521,7 @@
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
         "components/radio-button/deprecated": "enabled",
+        "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -9679,8 +9591,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -9701,6 +9611,7 @@
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button/base": "enabled",
+        "components/rounded-corner": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
         "components/form-field/base": "enabled",
@@ -9774,8 +9685,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -9802,6 +9711,7 @@
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
         "components/radio-button/deprecated": "enabled",
+        "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -9869,8 +9779,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -9897,6 +9805,7 @@
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
         "components/radio-button/deprecated": "enabled",
+        "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -9964,8 +9873,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -9992,6 +9899,7 @@
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
         "components/radio-button/deprecated": "enabled",
+        "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -10059,8 +9967,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -10087,6 +9993,7 @@
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
         "components/radio-button/deprecated": "enabled",
+        "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -10154,8 +10061,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -10182,6 +10087,7 @@
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
         "components/radio-button/deprecated": "enabled",
+        "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -10251,8 +10157,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -10279,6 +10183,7 @@
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
         "components/radio-button/deprecated": "enabled",
+        "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -10299,8 +10204,6 @@
       "common/font",
       "common/focus",
       "common/border",
-      "common/rounded-corner/base",
-      "common/rounded-corner/deprecated",
       "utrecht/action",
       "utrecht/document",
       "utrecht/focus",
@@ -10360,6 +10263,7 @@
       "components/radio-button/base",
       "components/radio-button/deprecated",
       "components/radio-group",
+      "components/rounded-corner",
       "components/select/base",
       "components/select/deprecated",
       "components/separator",
