@@ -19,11 +19,11 @@ const meta = {
   },
   args: {
     corner: 'start-start',
-    children: [
+    children: (
       <div style={{ padding: '3rem 1rem', backgroundColor: 'var(--rhc-color-primary-500)' }}>
         <span style={{ color: 'white' }}>Rounded Corner Content</span>
-      </div>,
-    ],
+      </div>
+    ),
   },
   argTypes: {
     overwriteTokens: {
@@ -75,13 +75,13 @@ export const ImageBackground = {
       backgroundSize: 'cover',
       backgroundPosition: 'center',
     },
-    children: [
+    children: (
       <RoundedCorner corner="start-end" size="md" style={{ margin: '13rem 3rem 0rem 0rem' }}>
         <div style={{ padding: '3rem 1rem', backgroundColor: 'var(--rhc-color-primary-500)' }}>
           <span style={{ color: 'white' }}>Rounded Corner Content</span>
         </div>
-      </RoundedCorner>,
-    ],
+      </RoundedCorner>
+    ),
   },
 };
 
