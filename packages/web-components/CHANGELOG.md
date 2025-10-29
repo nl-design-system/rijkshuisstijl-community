@@ -1,5 +1,17 @@
 # @rijkshuisstijl-community/web-components
 
+## 3.1.0
+
+### Minor Changes
+
+- 91a9ca7: Added inputInvalid prop to FormFIeldRadio and FormFIeldCheckboxOption
+
+### Patch Changes
+
+- 10ec55a: Release package with npm provenance.
+- c35bd3f: Added missing required prop type on FormFieldSelect
+  Removed unused prop on accordion web component.
+
 ## 3.0.0
 
 ### Major Changes

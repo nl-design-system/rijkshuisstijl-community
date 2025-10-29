@@ -1,5 +1,14 @@
 # @rijkshuisstijl-community/components-twig
 
+## 2.0.3
+
+### Patch Changes
+
+- 10ec55a: Release package with npm provenance.
+- Updated dependencies [ae57d51]
+- Updated dependencies [10ec55a]
+  - @rijkshuisstijl-community/components-css@8.0.1
+
 ## 2.0.2
 
 ### Patch Changes

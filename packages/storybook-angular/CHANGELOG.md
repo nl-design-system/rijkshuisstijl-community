@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/storybook-angular
 
+## 1.2.1
+
+### Patch Changes
+
+- 10ec55a: Release package with npm provenance.
+
 ## 1.2.0
 
 ### Minor Changes

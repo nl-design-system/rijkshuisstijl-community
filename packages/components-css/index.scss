@@ -3,9 +3,6 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-@use "@utrecht/component-library-css/dist/index.css";
-@use "@utrecht/component-library-css/dist/html.css";
-
 @use "src/accordion/index" as accordion;
 @use "src/action-group/index" as actionGroup;
 @use "src/alert/index" as alert;
@@ -44,6 +41,7 @@
 @use "src/pre-heading/index" as preHeading;
 @use "src/radio/index" as radio;
 @use "src/radio-group/index" as radioGroup;
+@use "src/rounded-corner/index" as roundedCorner;
 @use "src/select/index" as select;
 @use "src/separator/index" as separator;
 @use "src/side-nav/index" as sideNav;
@@ -56,3 +54,46 @@
 @use "src/visually-hidden/index" as visually-hidden;
 @use "src/wrapper/index" as wrapper;
 @use "src/data-summary/index" as dataSummary;
+
+@import "@utrecht/accordion-css/dist/index.css";
+@import "@utrecht/action-group-css/dist/index.css";
+@import "@utrecht/alert-css/dist/index.css";
+@import "@utrecht/badge-list-css/dist/index.css";
+@import "@utrecht/button-css/dist/index.css";
+@import "@utrecht/button-link-css/dist/index.css";
+@import "@utrecht/document-css/dist/index.css";
+@import "@utrecht/article-css/dist/index.css";
+@import "@utrecht/data-badge-css/dist/index.css";
+@import "@utrecht/data-list-css/dist/index.css";
+@import "@utrecht/blockquote-css/dist/index.css";
+@import "@utrecht/breadcrumb-nav-css/dist/index.css";
+@import "@utrecht/checkbox-css/dist/index.css";
+@import "@utrecht/custom-checkbox-css/dist/index.css";
+@import "@utrecht/column-layout-css/dist/index.css";
+@import "@utrecht/drawer-css/dist/index.css";
+@import "@utrecht/figure-css/dist/index.css";
+@import "@utrecht/form-field-css/dist/index.css";
+@import "@utrecht/form-field-description-css/dist/index.css";
+@import "@utrecht/form-field-error-message-css/dist/index.css";
+@import "@utrecht/form-fieldset-css/dist/index.css";
+@import "@utrecht/form-label-css/dist/index.css";
+@import "@utrecht/icon-css/dist/index.css";
+@import "@utrecht/heading-group-css/dist/index.css";
+@import "@utrecht/img-css/dist/index.css";
+@import "@utrecht/link-css/dist/index.css";
+@import "@utrecht/link-list-css/dist/index.css";
+@import "@utrecht/ordered-list-css/dist/index.css";
+@import "@utrecht/page-body-css/dist/index.css";
+@import "@utrecht/page-content-css/dist/index.css";
+@import "@utrecht/page-footer-css/dist/index.css";
+@import "@utrecht/page-header-css/dist/index.css";
+@import "@utrecht/page-layout-css/dist/index.css";
+@import "@utrecht/paragraph-css/dist/index.css";
+@import "@utrecht/pre-heading-css/dist/index.css";
+@import "@utrecht/radio-button-css/dist/index.css";
+@import "@utrecht/select-css/dist/index.css";
+@import "@utrecht/separator-css/dist/index.css";
+@import "@utrecht/table-css/dist/index.css";
+@import "@utrecht/textbox-css/dist/index.css";
+@import "@utrecht/textarea-css/dist/index.css";
+@import "@utrecht/unordered-list-css/dist/index.css";
