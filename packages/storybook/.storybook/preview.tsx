@@ -18,6 +18,7 @@ import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
 import { Fragment } from 'react';
 import { formatHtml } from '@rijkshuisstijl-community/internal-tooling/formatHtml';
+import { StoryRootDecorator } from './StoryRootDecorator';
 
 const preview: Preview = {
   decorators: [
@@ -45,6 +46,7 @@ const preview: Preview = {
         Story()
       );
     },
+    StoryRootDecorator,
   ],
 
   parameters: {

@@ -1,5 +1,17 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 9.0.0
+
+### Major Changes
+
+- 91a9ca7: Invalid FormFields now have a red border to the left of the FormField
+- e486b7a: Koop specifieke link overwrite verwijderd zodat het gelijk loopt met het generieke thema.
+
+### Patch Changes
+
+- 10ec55a: Release package with npm provenance.
+- 9c88f77: Cleaned up token naming convention
+
 ## 8.0.0
 
 ### Major Changes

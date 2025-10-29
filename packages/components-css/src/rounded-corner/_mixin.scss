@@ -1,0 +1,15 @@
+@use "sass:map";
+
+$rhc-rounded-border-corners: ("start-start", "start-end", "end-start", "end-end") !default;
+$rhc-rounded-corner-sizes: ("sm", "md", "lg") !default;
+
+@mixin rhc-rounded-corner {
+  overflow: var(--rhc-rounded-corner-overflow);
+}
+
+@mixin rhc-reset-border-radius {
+  border-end-end-radius: 0;
+  border-end-start-radius: 0;
+  border-start-end-radius: 0;
+  border-start-start-radius: 0;
+}

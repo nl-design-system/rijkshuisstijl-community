@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/components-css
 
+## 8.0.1
+
+### Patch Changes
+
+- ae57d51: refactor utrechtcomponent library css vervangen met utrecht components
+- 10ec55a: Release package with npm provenance.
+
 ## 8.0.0
 
 ### Major Changes
