@@ -2,4 +2,4 @@
 '@rijkshuisstijl-community/design-tokens': patch
 ---
 
-Cleaned up token naming convention
+radio button removed deprecated tokens

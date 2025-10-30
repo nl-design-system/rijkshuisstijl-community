@@ -1,6 +1,6 @@
 {
   "name": "@rijkshuisstijl-community/storybook-angular",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": true,
   "repository": {
     "type": "git+ssh",
@@ -13,7 +13,8 @@
     "storybook": "ng run angular-latest:storybook --port 6008",
     "build": "ng run angular-latest:build-storybook --output-dir dist/",
     "build-storybook": "pnpm build",
-    "prod-static": "http-server --port 6006 dist/"
+    "prod-static": "http-server --port 6006 dist/",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@angular/common": "19.2.0",

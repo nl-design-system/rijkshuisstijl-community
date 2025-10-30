@@ -6,9 +6,8 @@ import { createElement } from 'react';
 
 AccordionWebComponent.define();
 
-const AccordionWrapper = ({ appearance, icon, sections, heading, headingLevel }: AccordionWebComponentAttributes) => {
+const AccordionWrapper = ({ icon, sections, heading, headingLevel }: AccordionWebComponentAttributes) => {
   return createElement('rhc-accordion', {
-    appearance: appearance,
     icon: icon?.toString(),
     sections: JSON.stringify(sections),
     heading: heading,

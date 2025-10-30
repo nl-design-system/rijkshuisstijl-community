@@ -1,6 +1,6 @@
 {
   "name": "@rijkshuisstijl-community/components-twig",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "author": "Community for NL Design System",
   "description": "Twig component library for the Rijkshuisstijl Community repository, based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -24,7 +24,8 @@
     "build:components": "cpx \"src/**/*.twig\" dist/",
     "build:typescript": "tsc",
     "clean": "rimraf dist/",
-    "lint": "tsc --project ./tsconfig.json --noEmit"
+    "lint": "tsc --project ./tsconfig.json --noEmit",
+    "typecheck": "tsc --noEmit"
   },
   "files": [
     "dist/"

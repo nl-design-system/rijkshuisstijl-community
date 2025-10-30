@@ -1,6 +1,6 @@
 {
   "name": "@rijkshuisstijl-community/rhc-templates",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "author": "Community for NL Design System",
   "description": "Storybook based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -24,7 +24,8 @@
     "clean": "rimraf dist/ .next/",
     "lint": "next lint",
     "lint:ts": "tsc --noEmit --project tsconfig.json",
-    "start": "http-server dist/"
+    "start": "http-server dist/",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "next": "15.5.5",

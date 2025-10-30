@@ -1222,116 +1222,6 @@
       }
     }
   },
-  "common/rounded-corner/base": {
-    "rhc": {
-      "rounded-corner": {
-        "xs": {
-          "border-radius": {
-            "$type": "dimension",
-            "$value": "{rhc.size.half-lint}"
-          }
-        },
-        "md": {
-          "border-radius": {
-            "$type": "dimension",
-            "$value": "{rhc.size.lint}"
-          }
-        },
-        "xl": {
-          "border-radius": {
-            "$type": "dimension",
-            "$value": "{rhc.size.2-lint}"
-          }
-        },
-        "border-width": {
-          "$type": "dimension",
-          "$value": "{rhc.border-width.m}"
-        }
-      }
-    }
-  },
-  "common/rounded-corner/deprecated": {
-    "rhc": {
-      "keep": {
-        "_comment": {
-          "$type": "other",
-          "$value": "⚠️ Deze tokens zijn legacy en worden vervangen door de tokenset common/rounded-corner."
-        },
-        "top-left": {
-          "borderRadiusTopLeft": {
-            "$type": "dimension",
-            "$value": "{rhc.rounded-corner.md.border-radius}"
-          },
-          "borderRadiusTopRight": {
-            "$type": "dimension",
-            "$value": "0"
-          },
-          "borderRadiusBottomRight": {
-            "$type": "dimension",
-            "$value": "0"
-          },
-          "borderRadiusBottomLeft": {
-            "$type": "dimension",
-            "$value": "0"
-          }
-        },
-        "top-right": {
-          "borderRadiusTopRight": {
-            "$type": "dimension",
-            "$value": "{rhc.rounded-corner.md.border-radius}"
-          },
-          "borderRadiusTopLeft": {
-            "$type": "dimension",
-            "$value": "0"
-          },
-          "borderRadiusBottomRight": {
-            "$type": "dimension",
-            "$value": "0"
-          },
-          "borderRadiusBottomLeft": {
-            "$type": "dimension",
-            "$value": "0"
-          }
-        },
-        "bottom-right": {
-          "borderRadiusTopLeft": {
-            "$type": "dimension",
-            "$value": "0"
-          },
-          "borderRadiusTopRight": {
-            "$type": "dimension",
-            "$value": "0"
-          },
-          "borderRadiusBottomRight": {
-            "$type": "dimension",
-            "$value": "{rhc.rounded-corner.md.border-radius}"
-          },
-          "borderRadiusBottomLeft": {
-            "$type": "dimension",
-            "$value": "0"
-          }
-        },
-        "bottom-left": {
-          "borderRadiusTopLeft": {
-            "$type": "dimension",
-            "$value": "0"
-          },
-          "borderRadiusTopRight": {
-            "$type": "dimension",
-            "$value": "0"
-          },
-          "borderRadiusBottomRight": {
-            "$type": "dimension",
-            "$value": "0"
-          },
-          "borderRadiusBottomLeft": {
-            "$type": "dimension",
-            "$value": "{rhc.rounded-corner.md.border-radius}"
-          }
-        }
-      }
-    }
-  },
   "utrecht/action": {
     "utrecht": {
       "action": {
@@ -5672,7 +5562,7 @@
       }
     }
   },
-  "components/radio-button/base": {
+  "components/radio-button": {
     "utrecht": {
       "radio-button": {
         "background-color": {
@@ -5882,38 +5772,6 @@
       }
     }
   },
-  "components/radio-button/deprecated": {
-    "utrecht": {
-      "radio-button": {
-        "border-radius": {
-          "$type": "dimension",
-          "$value": "{rhc.border-radius.circle}"
-        },
-        "dot": {
-          "size": {
-            "$type": "dimension",
-            "$value": "{rhc.size.quarter-lint}"
-          }
-        },
-        "checked": {
-          "disabled": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.300}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.400}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.600}"
-            }
-          }
-        }
-      }
-    }
-  },
   "components/radio-group": {
     "rhc": {
       "radio-group": {
@@ -5928,6 +5786,30 @@
         "row-gap": {
           "$type": "spacing",
           "$value": "{rhc.space.200}"
+        }
+      }
+    }
+  },
+  "components/rounded-corner": {
+    "rhc": {
+      "rounded-corner": {
+        "overflow": {
+          "$type": "other",
+          "$value": "hidden"
+        },
+        "size": {
+          "sm": {
+            "$type": "sizing",
+            "$value": "{rhc.size.half-lint}"
+          },
+          "md": {
+            "$type": "sizing",
+            "$value": "{rhc.size.lint}"
+          },
+          "lg": {
+            "$type": "sizing",
+            "$value": "{rhc.size.half-lint} * 3"
+          }
         }
       }
     }
@@ -7310,6 +7192,314 @@
               "$type": "other",
               "$value": "underline"
             }
+          }
+        }
+      }
+    }
+  },
+  "components/pagination/todo": {
+    "todo": {
+      "pagination": {
+        "relative-link": {
+          "border-width": {
+            "$type": "borderWidth",
+            "$value": "{voorbeeld.border-width.sm}"
+          },
+          "icon": {
+            "margin-inline": {
+              "$type": "spacing",
+              "$value": "{voorbeeld.space.text.beetle}"
+            },
+            "size": {
+              "$type": "sizing",
+              "$value": "{rhc.icon.functional.size}"
+            }
+          },
+          "padding-block-end": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.block.snail}"
+          },
+          "padding-block-start": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.block.snail}"
+          },
+          "padding-inline-start": {
+            "$type": "spacing",
+            "$value": "0px"
+          },
+          "padding-inline-end": {
+            "$type": "spacing",
+            "$value": "0px"
+          },
+          "background-color": {
+            "$type": "color",
+            "$value": "transparent"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "transparent"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.interaction.color}"
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.interaction.active.color}"
+            },
+            "text-decoration": {
+              "$type": "textDecoration",
+              "$value": "underline"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.focus.background-color}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.focus.color}"
+            },
+            "text-decoration": {
+              "$type": "textDecoration",
+              "$value": "None"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.interaction.hover.color}"
+            },
+            "text-decoration": {
+              "$type": "textDecoration",
+              "$value": "underline"
+            }
+          },
+          "text-decoration": {
+            "$type": "textDecoration",
+            "$value": "None"
+          },
+          "border-radius": {
+            "$type": "borderRadius",
+            "$value": "0px"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.document.font-weight}"
+          },
+          "min-block-size": {
+            "$type": "sizing",
+            "$value": "{utrecht.pointer-target.min-size}"
+          },
+          "min-inline-size": {
+            "$type": "sizing",
+            "$value": "{utrecht.pointer-target.min-size}"
+          },
+          "disabled": {
+            "background-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{voorbeeld.color.gray.500}"
+            }
+          }
+        },
+        "page-link": {
+          "border-width": {
+            "$type": "borderWidth",
+            "$value": "{voorbeeld.border-width.sm}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.document.font-weight}"
+          },
+          "current": {
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{utrecht.document.strong.font-weight}"
+            },
+            "text-decoration": {
+              "$type": "textDecoration",
+              "$value": "None"
+            },
+            "background-color": {
+              "$type": "color",
+              "$value": "{voorbeeld.color.gray.100}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.document.color}"
+            }
+          },
+          "border-radius": {
+            "$type": "borderRadius",
+            "$value": "0px"
+          },
+          "padding-block-end": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.block.snail}"
+          },
+          "padding-block-start": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.block.snail}"
+          },
+          "padding-inline-end": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.inline.snail}"
+          },
+          "padding-inline-start": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.inline.snail}"
+          },
+          "focus": {
+            "text-decoration": {
+              "$type": "textDecoration",
+              "$value": "None"
+            },
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.focus.background-color}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.focus.color}"
+            }
+          },
+          "hover": {
+            "text-decoration": {
+              "$type": "textDecoration",
+              "$value": "underline"
+            },
+            "background-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.interaction.hover.color}"
+            }
+          },
+          "text-decoration": {
+            "$type": "textDecoration",
+            "$value": "None"
+          },
+          "active": {
+            "text-decoration": {
+              "$type": "textDecoration",
+              "$value": "underline"
+            },
+            "background-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.interaction.active.color}"
+            }
+          },
+          "background-color": {
+            "$type": "color",
+            "$value": "transparent"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "transparent"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.interaction.color}"
+          },
+          "min-block-size": {
+            "$type": "sizing",
+            "$value": "{utrecht.pointer-target.min-size}"
+          },
+          "min-inline-size": {
+            "$type": "sizing",
+            "$value": "{utrecht.pointer-target.min-size}"
+          }
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{rhc.font-family.primary}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{utrecht.document.line-height}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{utrecht.document.font-size}"
+        },
+        "ellipses": {
+          "padding-block-end": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.block.snail}"
+          },
+          "padding-block-start": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.block.snail}"
+          },
+          "padding-inline-end": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.inline.ant}"
+          },
+          "padding-inline-start": {
+            "$type": "spacing",
+            "$value": "{voorbeeld.space.inline.ant}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.document.subtle.color}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.document.font-weight}"
+          }
+        },
+        "description": {
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.document.color}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{utrecht.document.font-weight}"
           }
         }
       }
@@ -9179,8 +9369,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -9200,13 +9388,13 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button/base": "enabled",
+        "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
         "components/form-field/base": "enabled",
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
-        "components/radio-button/deprecated": "enabled",
+        "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -9274,8 +9462,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -9295,13 +9481,13 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button/base": "enabled",
+        "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
         "components/form-field/base": "enabled",
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
-        "components/radio-button/deprecated": "enabled",
+        "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -9371,8 +9557,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -9392,13 +9576,13 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button/base": "enabled",
+        "components/radio-button": "enabled",
+        "components/rounded-corner": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
         "components/form-field/base": "enabled",
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
-        "components/radio-button/deprecated": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -9466,8 +9650,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -9487,13 +9669,13 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button/base": "enabled",
+        "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
         "components/form-field/base": "enabled",
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
-        "components/radio-button/deprecated": "enabled",
+        "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -9561,8 +9743,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -9582,13 +9762,13 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button/base": "enabled",
+        "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
         "components/form-field/base": "enabled",
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
-        "components/radio-button/deprecated": "enabled",
+        "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -9656,8 +9836,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -9677,13 +9855,13 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button/base": "enabled",
+        "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
         "components/form-field/base": "enabled",
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
-        "components/radio-button/deprecated": "enabled",
+        "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -9751,8 +9929,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -9772,13 +9948,13 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button/base": "enabled",
+        "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
         "components/form-field/base": "enabled",
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
-        "components/radio-button/deprecated": "enabled",
+        "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -9846,8 +10022,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -9867,13 +10041,13 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button/base": "enabled",
+        "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
         "components/form-field/base": "enabled",
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
-        "components/radio-button/deprecated": "enabled",
+        "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -9943,8 +10117,6 @@
         "components/ordered-list": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
-        "common/rounded-corner/base": "enabled",
-        "common/rounded-corner/deprecated": "enabled",
         "components/link-list": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
@@ -9964,13 +10136,13 @@
         "components/form-field-label/todo": "enabled",
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
-        "components/radio-button/base": "enabled",
+        "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
         "components/form-field/base": "enabled",
         "components/checkbox/deprecated": "enabled",
         "components/form-field/deprecated": "enabled",
-        "components/radio-button/deprecated": "enabled",
+        "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -9991,8 +10163,6 @@
       "common/font",
       "common/focus",
       "common/border",
-      "common/rounded-corner/base",
-      "common/rounded-corner/deprecated",
       "utrecht/action",
       "utrecht/document",
       "utrecht/focus",
@@ -10049,9 +10219,9 @@
       "components/ordered-list",
       "components/paragraph",
       "components/pre-heading",
-      "components/radio-button/base",
-      "components/radio-button/deprecated",
+      "components/radio-button",
       "components/radio-group",
+      "components/rounded-corner",
       "components/select/base",
       "components/select/deprecated",
       "components/separator",
