@@ -167,7 +167,7 @@ async function buildThemes() {
 async function build() {
   try {
     await buildBaseTokens();
-    //await buildThemes();
+    await buildThemes();
   } catch (error) {
     console.error(error);
   }
