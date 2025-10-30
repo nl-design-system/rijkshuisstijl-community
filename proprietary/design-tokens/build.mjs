@@ -24,25 +24,6 @@ const excludes = [
 
 register(StyleDictionary, { excludeParentKeys: true });
 
-StyleDictionary.registerTransform({
-  name: 'custom/negative',
-  type: transformTypes.value,
-  transitive: false,
-  filter: (token, options) => {
-    const holds = typeof token.original.$value === 'string' && token.original.$value.startsWith('-');
-    if (holds) {
-      console.log(token, options);
-    }
-    return holds;
-  },
-  transform: (token) => {
-    console.log('---- Yowwwww ----');
-    const res = `calc(-1 * ${token.original.$value.substring(1)})`;
-    console.log(res);
-    return token.$value;
-  },
-});
-
 // Get the platforms config
 const getPlatformsConfig = (buildPath, themeName) => {
   return {
@@ -80,7 +61,7 @@ const getPlatformsConfig = (buildPath, themeName) => {
     },
     web: {
       transformGroup: 'tokens-studio',
-      transforms: ['custom/negative', 'attribute/cti', 'name/kebab', 'color/hsl-4'],
+      transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4'],
       buildPath,
       excludes,
       files: [
