@@ -685,111 +685,123 @@
   },
   "brand/font": {
     "rhc": {
-      "font-weight": {
-        "extra-bold": {
-          "value": "800",
-          "type": "fontWeights"
-        },
-        "bold": {
-          "value": "700",
-          "type": "fontWeights"
-        },
-        "semi-bold": {
-          "value": "600",
-          "type": "fontWeights"
-        },
-        "regular": {
-          "value": "400",
-          "type": "fontWeights"
-        },
-        "light": {
-          "value": "300",
-          "type": "fontWeights"
-        },
-        "thin": {
-          "value": "200",
-          "type": "fontWeights"
-        }
-      },
-      "font-family": {
-        "primary": {
-          "value": "'Fira Sans', Arial, Verdana, sans-serif",
-          "type": "fontFamilies"
-        },
-        "secondary": {
-          "value": "RijksoverheidSerifWeb, 'Times New Roman', serif",
-          "type": "fontFamilies"
-        }
-      },
-      "font-size": {
-        "md": {
-          "desktop": {
-            "value": "1.25rem",
-            "type": "fontSizes"
+      "text": {
+        "font-weight": {
+          "extra-bold": {
+            "value": "800",
+            "type": "fontWeights"
           },
-          "tablet": {
-            "value": "1.125rem",
-            "type": "fontSizes"
+          "bold": {
+            "value": "700",
+            "type": "fontWeights"
           },
-          "mobile": {
-            "value": "1rem",
-            "type": "fontSizes"
+          "semi-bold": {
+            "value": "600",
+            "type": "fontWeights"
+          },
+          "regular": {
+            "value": "400",
+            "type": "fontWeights"
+          },
+          "light": {
+            "value": "300",
+            "type": "fontWeights"
+          },
+          "thin": {
+            "value": "200",
+            "type": "fontWeights"
           }
         },
-        "lg": {
-          "desktop": {
-            "value": "1.5rem",
-            "type": "fontSizes"
+        "font-family": {
+          "default": {
+            "value": "'Fira Sans', Arial, Verdana, sans-serif",
+            "type": "fontFamilies"
           },
-          "tablet": {
-            "value": "1.35rem",
-            "type": "fontSizes"
-          },
-          "mobile": {
-            "value": "1.2rem",
-            "type": "fontSizes"
+          "serif": {
+            "value": "RijksoverheidSerifWeb, 'Times New Roman', serif",
+            "type": "fontFamilies"
           }
         },
-        "xl": {
-          "desktop": {
-            "value": "1.875rem",
-            "type": "fontSizes"
+        "font-size": {
+          "md": {
+            "desktop": {
+              "value": "1.25rem",
+              "type": "fontSizes"
+            },
+            "tablet": {
+              "value": "1.125rem",
+              "type": "fontSizes"
+            },
+            "mobile": {
+              "value": "1rem",
+              "type": "fontSizes"
+            }
           },
-          "tablet": {
-            "value": "1.688rem",
-            "type": "fontSizes"
+          "lg": {
+            "desktop": {
+              "value": "1.5rem",
+              "type": "fontSizes"
+            },
+            "tablet": {
+              "value": "1.35rem",
+              "type": "fontSizes"
+            },
+            "mobile": {
+              "value": "1.2rem",
+              "type": "fontSizes"
+            }
           },
-          "mobile": {
-            "value": "1.5rem",
-            "type": "fontSizes"
+          "xl": {
+            "desktop": {
+              "value": "1.875rem",
+              "type": "fontSizes"
+            },
+            "tablet": {
+              "value": "1.688rem",
+              "type": "fontSizes"
+            },
+            "mobile": {
+              "value": "1.5rem",
+              "type": "fontSizes"
+            }
+          },
+          "2xl": {
+            "desktop": {
+              "value": "2.5rem",
+              "type": "fontSizes"
+            },
+            "tablet": {
+              "value": "2.25rem",
+              "type": "fontSizes"
+            },
+            "mobile": {
+              "value": "2rem",
+              "type": "fontSizes"
+            }
+          },
+          "3xl": {
+            "desktop": {
+              "value": "3.125rem",
+              "type": "fontSizes"
+            },
+            "tablet": {
+              "value": "2.813rem",
+              "type": "fontSizes"
+            },
+            "mobile": {
+              "value": "2.5rem",
+              "type": "fontSizes"
+            }
           }
         },
-        "2xl": {
-          "desktop": {
-            "value": "2.5rem",
-            "type": "fontSizes"
+        "line-height": {
+          "sm": {
+            "value": "125%",
+            "type": "lineHeights"
           },
-          "tablet": {
-            "value": "2.25rem",
-            "type": "fontSizes"
-          },
-          "mobile": {
-            "value": "2rem",
-            "type": "fontSizes"
-          }
-        },
-        "3xl": {
-          "desktop": {
-            "value": "3.125rem",
-            "type": "fontSizes"
-          },
-          "tablet": {
-            "value": "2.813rem",
-            "type": "fontSizes"
-          },
-          "mobile": {
-            "value": "2.5rem",
-            "type": "fontSizes"
+          "md": {
+            "value": "150%",
+            "type": "lineHeights"
           }
         }
       }
@@ -860,7 +872,7 @@
       "text": {
         "font-family": {
           "default": {
-            "value": "{rhc.font-family.primary}",
+            "value": "{rhc.text.font-family.default}",
             "type": "fontFamilies"
           }
         },
@@ -870,13 +882,13 @@
             "type": "fontWeights"
           },
           "bold": {
-            "value": "{rhc.text.font-weight.bold}",
+            "value": "{rhc.text.font-weight.strong}",
             "type": "fontWeights"
           }
         },
         "font-size": {
           "md": {
-            "value": "{rhc.font-size.body.default}",
+            "value": "{rhc.text.font-size.body.default}",
             "type": "fontSizes"
           }
         },
@@ -893,11 +905,11 @@
           "type": "color"
         },
         "font-family": {
-          "value": "{rhc.font-family.primary}",
+          "value": "{rhc.text.font-family.default}",
           "type": "fontFamilies"
         },
         "font-weight": {
-          "value": "{rhc.text.font-weight.bold}",
+          "value": "{rhc.text.font-weight.strong}",
           "type": "fontWeights"
         }
       },
@@ -1120,59 +1132,49 @@
   },
   "common/font": {
     "rhc": {
-      "font-size": {
-        "heading": {
-          "level-1": {
-            "value": "{rhc.font-size.3xl.desktop}",
-            "type": "fontSizes"
+      "text": {
+        "font-size": {
+          "heading": {
+            "level-1": {
+              "value": "{rhc.text.font-size.3xl.desktop}",
+              "type": "fontSizes"
+            },
+            "level-2": {
+              "value": "{rhc.text.font-size.2xl.desktop}",
+              "type": "fontSizes"
+            },
+            "level-3": {
+              "value": "{rhc.text.font-size.xl.desktop}",
+              "type": "fontSizes"
+            },
+            "level-4": {
+              "value": "{rhc.text.font-size.lg.desktop}",
+              "type": "fontSizes"
+            },
+            "level-5": {
+              "value": "{rhc.text.font-size.md.desktop}",
+              "type": "fontSizes"
+            }
           },
-          "level-2": {
-            "value": "{rhc.font-size.2xl.desktop}",
-            "type": "fontSizes"
-          },
-          "level-3": {
-            "value": "{rhc.font-size.xl.desktop}",
-            "type": "fontSizes"
-          },
-          "level-4": {
-            "value": "{rhc.font-size.lg.desktop}",
-            "type": "fontSizes"
-          },
-          "level-5": {
-            "value": "{rhc.font-size.md.desktop}",
-            "type": "fontSizes"
+          "body": {
+            "intro": {
+              "value": "{rhc.text.font-size.lg.desktop}",
+              "type": "fontSizes"
+            },
+            "default": {
+              "value": "{rhc.text.font-size.md.desktop}",
+              "type": "fontSizes"
+            }
           }
         },
-        "body": {
-          "intro": {
-            "value": "{rhc.font-size.lg.desktop}",
-            "type": "fontSizes"
-          },
-          "default": {
-            "value": "{rhc.font-size.md.desktop}",
-            "type": "fontSizes"
-          }
-        }
-      },
-      "text": {
         "font-weight": {
           "default": {
-            "value": "{rhc.font-weight.regular}",
+            "value": "{rhc.text.font-weight.regular}",
             "type": "fontWeights"
           },
-          "bold": {
-            "value": "{rhc.font-weight.bold}",
+          "strong": {
+            "value": "{rhc.text.font-weight.bold}",
             "type": "fontWeights"
-          }
-        },
-        "line-height": {
-          "sm": {
-            "value": "125%",
-            "type": "lineHeights"
-          },
-          "md": {
-            "value": "150%",
-            "type": "lineHeights"
           }
         }
       }
@@ -1274,11 +1276,11 @@
           "type": "color"
         },
         "font-family": {
-          "value": "{rhc.font-family.primary}",
+          "value": "{rhc.text.font-family.default}",
           "type": "fontFamilies"
         },
         "font-size": {
-          "value": "{rhc.font-size.body.default}",
+          "value": "{rhc.text.font-size.body.default}",
           "type": "fontSizes"
         },
         "line-height": {
@@ -1809,11 +1811,11 @@
           "type": "color"
         },
         "font-size": {
-          "value": "{rhc.font-size.body.default}",
+          "value": "{rhc.text.font-size.body.default}",
           "type": "fontSizes"
         },
         "font-family": {
-          "value": "{rhc.font-family.primary}",
+          "value": "{rhc.text.font-family.default}",
           "type": "fontFamilies"
         },
         "padding-block-end": {
@@ -1842,7 +1844,7 @@
             "type": "color"
           },
           "font-size": {
-            "value": "{rhc.font-size.body.default}",
+            "value": "{rhc.text.font-size.body.default}",
             "type": "fontSizes"
           }
         },
@@ -1852,7 +1854,7 @@
             "type": "color"
           },
           "font-size": {
-            "value": "{rhc.font-size.body.default}",
+            "value": "{rhc.text.font-size.body.default}",
             "type": "fontSizes"
           }
         }
@@ -1884,11 +1886,11 @@
       "breadcrumb-nav": {
         "font-family": {
           "type": "fontFamilies",
-          "value": "{rhc.font-family.primary}"
+          "value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "type": "fontSizes",
-          "value": "{rhc.font-size.body.default}"
+          "value": "{rhc.text.font-size.body.default}"
         },
         "line-height": {
           "type": "lineHeights",
@@ -2058,15 +2060,15 @@
         },
         "font-family": {
           "type": "fontFamilies",
-          "value": "{rhc.font-family.primary}"
+          "value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "type": "fontSizes",
-          "value": "{rhc.font-size.body.default}"
+          "value": "{rhc.text.font-size.body.default}"
         },
         "font-weight": {
           "type": "fontWeights",
-          "value": "{rhc.text.font-weight.bold}"
+          "value": "{rhc.text.font-weight.strong}"
         },
         "line-height": {
           "type": "lineHeights",
@@ -2191,7 +2193,7 @@
           },
           "font-weight": {
             "type": "fontWeights",
-            "value": "{rhc.text.font-weight.bold}"
+            "value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "type": "lineHeights",
@@ -2305,7 +2307,7 @@
           },
           "font-weight": {
             "type": "fontWeights",
-            "value": "{rhc.text.font-weight.bold}"
+            "value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "type": "lineHeights",
@@ -2428,7 +2430,7 @@
           },
           "font-weight": {
             "type": "fontWeights",
-            "value": "{rhc.text.font-weight.bold}"
+            "value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "type": "lineHeights",
@@ -2687,11 +2689,11 @@
             "type": "spacing"
           },
           "font-size": {
-            "value": "{rhc.font-size.heading.level-4}",
+            "value": "{rhc.text.font-size.heading.level-4}",
             "type": "fontSizes"
           },
           "font-weight": {
-            "value": "{rhc.text.font-weight.bold}",
+            "value": "{rhc.text.font-weight.strong}",
             "type": "fontWeights"
           }
         },
@@ -3315,11 +3317,11 @@
             "type": "spacing"
           },
           "font-size": {
-            "value": "{rhc.font-size.heading.level-4}",
+            "value": "{rhc.text.font-size.heading.level-4}",
             "type": "fontSizes"
           },
           "font-weight": {
-            "value": "{rhc.text.font-weight.bold}",
+            "value": "{rhc.text.font-weight.strong}",
             "type": "fontWeights"
           }
         },
@@ -3454,7 +3456,7 @@
     "rhc": {
       "data-summary": {
         "font-family": {
-          "value": "{rhc.font-family.primary}",
+          "value": "{rhc.text.font-family.default}",
           "type": "fontFamilies"
         },
         "item-value": {
@@ -3499,7 +3501,7 @@
         },
         "item-key": {
           "font-weight": {
-            "value": "{rhc.text.font-weight.bold}",
+            "value": "{rhc.text.font-weight.strong}",
             "type": "fontWeights"
           },
           "row": {
@@ -3556,7 +3558,7 @@
           }
         },
         "font-size": {
-          "value": "{rhc.font-size.body.default}",
+          "value": "{rhc.text.font-size.body.default}",
           "type": "fontSizes"
         },
         "line-height": {
@@ -3679,15 +3681,15 @@
             "type": "color"
           },
           "font-family": {
-            "value": "{rhc.font-family.primary}",
+            "value": "{rhc.text.font-family.default}",
             "type": "fontFamilies"
           },
           "font-size": {
-            "value": "{rhc.font-size.body.default}",
+            "value": "{rhc.text.font-size.body.default}",
             "type": "fontSizes"
           },
           "font-weight": {
-            "value": "{rhc.text.font-weight.bold}",
+            "value": "{rhc.text.font-weight.strong}",
             "type": "fontWeights"
           },
           "line-height": {
@@ -3741,7 +3743,7 @@
           },
           "font-size": {
             "type": "fontSizes",
-            "value": "{rhc.font-size.body.default}"
+            "value": "{rhc.text.font-size.body.default}"
           },
           "line-height": {
             "type": "lineHeights",
@@ -4060,11 +4062,11 @@
         },
         "font-family": {
           "type": "fontFamilies",
-          "value": "{rhc.font-family.primary}"
+          "value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "type": "fontSizes",
-          "value": "{rhc.font-size.body.default}"
+          "value": "{rhc.text.font-size.body.default}"
         },
         "line-height": {
           "type": "lineHeights",
@@ -4096,11 +4098,11 @@
         },
         "font-family": {
           "type": "fontFamilies",
-          "value": "{rhc.font-family.primary}"
+          "value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "type": "fontSizes",
-          "value": "{rhc.font-size.body.default}"
+          "value": "{rhc.text.font-size.body.default}"
         },
         "font-weight": {
           "type": "fontWeights",
@@ -4162,11 +4164,11 @@
         },
         "font-size": {
           "type": "fontSizes",
-          "value": "{rhc.font-size.body.default}"
+          "value": "{rhc.text.font-size.body.default}"
         },
         "font-weight": {
           "type": "fontWeights",
-          "value": "{rhc.text.font-weight.bold}"
+          "value": "{rhc.text.font-weight.strong}"
         },
         "checkbox": {
           "color": {
@@ -4215,15 +4217,15 @@
           "type": "dimension"
         },
         "font-family": {
-          "value": "{rhc.font-family.primary}",
+          "value": "{rhc.text.font-family.default}",
           "type": "fontFamilies"
         },
         "font-size": {
-          "value": "{rhc.font-size.body.default}",
+          "value": "{rhc.text.font-size.body.default}",
           "type": "fontSizes"
         },
         "font-weight": {
-          "value": "{rhc.text.font-weight.bold}",
+          "value": "{rhc.text.font-weight.strong}",
           "type": "fontWeights"
         },
         "line-height": {
@@ -4241,7 +4243,7 @@
           "type": "color"
         },
         "font-size": {
-          "value": "{rhc.font-size.body.default}",
+          "value": "{rhc.text.font-size.body.default}",
           "type": "fontSizes"
         },
         "line-height": {
@@ -4249,7 +4251,7 @@
           "type": "lineHeights"
         },
         "font-family": {
-          "value": "{rhc.font-family.primary}",
+          "value": "{rhc.text.font-family.default}",
           "type": "fontFamilies"
         },
         "font-weight": {
@@ -4307,15 +4309,15 @@
           },
           "font-family": {
             "type": "fontFamilies",
-            "value": "{rhc.font-family.primary}"
+            "value": "{rhc.text.font-family.default}"
           },
           "font-size": {
             "type": "fontSizes",
-            "value": "{rhc.font-size.heading.level-1}"
+            "value": "{rhc.text.font-size.heading.level-1}"
           },
           "font-weight": {
             "type": "fontWeights",
-            "value": "{rhc.text.font-weight.bold}"
+            "value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "type": "lineHeights",
@@ -4339,15 +4341,15 @@
           },
           "font-family": {
             "type": "fontFamilies",
-            "value": "{rhc.font-family.primary}"
+            "value": "{rhc.text.font-family.default}"
           },
           "font-size": {
             "type": "fontSizes",
-            "value": "{rhc.font-size.heading.level-2}"
+            "value": "{rhc.text.font-size.heading.level-2}"
           },
           "font-weight": {
             "type": "fontWeights",
-            "value": "{rhc.text.font-weight.bold}"
+            "value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "type": "lineHeights",
@@ -4371,15 +4373,15 @@
           },
           "font-family": {
             "type": "fontFamilies",
-            "value": "{rhc.font-family.primary}"
+            "value": "{rhc.text.font-family.default}"
           },
           "font-size": {
             "type": "fontSizes",
-            "value": "{rhc.font-size.heading.level-3}"
+            "value": "{rhc.text.font-size.heading.level-3}"
           },
           "font-weight": {
             "type": "fontWeights",
-            "value": "{rhc.text.font-weight.bold}"
+            "value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "type": "lineHeights",
@@ -4403,15 +4405,15 @@
           },
           "font-family": {
             "type": "fontFamilies",
-            "value": "{rhc.font-family.primary}"
+            "value": "{rhc.text.font-family.default}"
           },
           "font-size": {
             "type": "fontSizes",
-            "value": "{rhc.font-size.heading.level-4}"
+            "value": "{rhc.text.font-size.heading.level-4}"
           },
           "font-weight": {
             "type": "fontWeights",
-            "value": "{rhc.text.font-weight.bold}"
+            "value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "type": "lineHeights",
@@ -4435,15 +4437,15 @@
           },
           "font-family": {
             "type": "fontFamilies",
-            "value": "{rhc.font-family.primary}"
+            "value": "{rhc.text.font-family.default}"
           },
           "font-size": {
             "type": "fontSizes",
-            "value": "{rhc.font-size.heading.level-5}"
+            "value": "{rhc.text.font-size.heading.level-5}"
           },
           "font-weight": {
             "type": "fontWeights",
-            "value": "{rhc.text.font-weight.bold}"
+            "value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "type": "lineHeights",
@@ -4467,15 +4469,15 @@
           },
           "font-family": {
             "type": "fontFamilies",
-            "value": "{rhc.font-family.primary}"
+            "value": "{rhc.text.font-family.default}"
           },
           "font-size": {
             "type": "fontSizes",
-            "value": "{rhc.font-size.heading.level-5}"
+            "value": "{rhc.text.font-size.heading.level-5}"
           },
           "font-weight": {
             "type": "fontWeights",
-            "value": "{rhc.text.font-weight.bold}"
+            "value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "type": "lineHeights",
@@ -4500,7 +4502,7 @@
       "hero": {
         "heading": {
           "font-weight": {
-            "value": "{rhc.text.font-weight.bold}",
+            "value": "{rhc.text.font-weight.strong}",
             "type": "fontWeights"
           },
           "line-height": {
@@ -4508,11 +4510,11 @@
             "type": "lineHeights"
           },
           "font-size": {
-            "value": "{rhc.font-size.heading.level-3}",
+            "value": "{rhc.text.font-size.heading.level-3}",
             "type": "fontSizes"
           },
           "font-family": {
-            "value": "{rhc.font-family.primary}",
+            "value": "{rhc.text.font-family.default}",
             "type": "fontFamilies"
           }
         },
@@ -4526,11 +4528,11 @@
             "type": "lineHeights"
           },
           "font-size": {
-            "value": "{rhc.font-size.body.default}",
+            "value": "{rhc.text.font-size.body.default}",
             "type": "fontSizes"
           },
           "font-family": {
-            "value": "{rhc.font-family.primary}",
+            "value": "{rhc.text.font-family.default}",
             "type": "fontFamilies"
           }
         },
@@ -4719,7 +4721,7 @@
       "link": {
         "icon": {
           "size": {
-            "value": "{rhc.font-size.body.default}",
+            "value": "{rhc.text.font-size.body.default}",
             "type": "dimension"
           }
         }
@@ -4957,7 +4959,7 @@
         },
         "subtitle": {
           "font-weight": {
-            "value": "{rhc.font-weight.regular}",
+            "value": "{rhc.text.font-weight.regular}",
             "type": "fontWeights"
           },
           "line-height": {
@@ -4974,7 +4976,7 @@
           "type": "spacing"
         },
         "font-family": {
-          "value": "{rhc.font-family.primary}",
+          "value": "{rhc.text.font-family.default}",
           "type": "fontFamilies"
         },
         "color": {
@@ -5032,7 +5034,7 @@
           },
           "content": {
             "font-size": {
-              "value": "{rhc.font-size.body.default}",
+              "value": "{rhc.text.font-size.body.default}",
               "type": "fontSizes"
             },
             "column-gap": {
@@ -5046,15 +5048,15 @@
           },
           "label": {
             "font-family": {
-              "value": "{rhc.font-family.primary}",
+              "value": "{rhc.text.font-family.default}",
               "type": "font-family"
             },
             "font-size": {
-              "value": "{rhc.font-size.body.default}",
+              "value": "{rhc.text.font-size.body.default}",
               "type": "font-size"
             },
             "font-weight": {
-              "value": "{rhc.text.font-weight.bold}",
+              "value": "{rhc.text.font-weight.strong}",
               "type": "font-weight"
             },
             "line-height": {
@@ -5175,13 +5177,13 @@
             "type": "spacing"
           },
           "font-size": {
-            "value": "{rhc.font-size.body.default}",
+            "value": "{rhc.text.font-size.body.default}",
             "type": "fontSizes"
           }
         },
         "heading": {
           "font-weight": {
-            "value": "{rhc.text.font-weight.bold}",
+            "value": "{rhc.text.font-weight.strong}",
             "type": "fontWeights"
           }
         },
@@ -5234,7 +5236,7 @@
           },
           "content": {
             "font-size": {
-              "value": "{rhc.font-size.body.default}",
+              "value": "{rhc.text.font-size.body.default}",
               "type": "fontSizes"
             },
             "column-gap": {
@@ -5248,15 +5250,15 @@
           },
           "label": {
             "font-family": {
-              "value": "{rhc.font-family.primary}",
+              "value": "{rhc.text.font-family.default}",
               "type": "font-family"
             },
             "font-size": {
-              "value": "{rhc.font-size.xl.desktop}",
+              "value": "{rhc.text.font-size.xl.desktop}",
               "type": "font-size"
             },
             "font-weight": {
-              "value": "{rhc.text.font-weight.bold}",
+              "value": "{rhc.text.font-weight.strong}",
               "type": "font-weight"
             },
             "line-height": {
@@ -5349,15 +5351,15 @@
         },
         "font-family": {
           "type": "fontFamilies",
-          "value": "{rhc.font-family.primary}"
+          "value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "type": "fontSizes",
-          "value": "{rhc.font-size.body.default}"
+          "value": "{rhc.text.font-size.body.default}"
         },
         "font-weight": {
           "type": "fontWeights",
-          "value": "{rhc.text.font-weight.bold}"
+          "value": "{rhc.text.font-weight.strong}"
         },
         "min-block-size": {
           "type": "dimension",
@@ -5437,7 +5439,7 @@
       "ordered-list": {
         "font-size": {
           "type": "fontSizes",
-          "value": "{rhc.font-size.body.default}"
+          "value": "{rhc.text.font-size.body.default}"
         },
         "line-height": {
           "type": "lineHeights",
@@ -5483,11 +5485,11 @@
         },
         "font-family": {
           "type": "fontFamilies",
-          "value": "{rhc.font-family.primary}"
+          "value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "type": "fontSizes",
-          "value": "{rhc.font-size.body.default}"
+          "value": "{rhc.text.font-size.body.default}"
         },
         "font-weight": {
           "type": "fontWeights",
@@ -5510,7 +5512,7 @@
         "lead": {
           "font-size": {
             "type": "fontSizes",
-            "value": "{rhc.font-size.body.intro}"
+            "value": "{rhc.text.font-size.body.intro}"
           },
           "font-weight": {
             "type": "fontWeights",
@@ -5542,11 +5544,11 @@
           "type": "color"
         },
         "font-family": {
-          "value": "{rhc.font-family.primary}",
+          "value": "{rhc.text.font-family.default}",
           "type": "fontFamilies"
         },
         "font-weight": {
-          "value": "{rhc.text.font-weight.bold}",
+          "value": "{rhc.text.font-weight.strong}",
           "type": "fontWeights"
         },
         "line-height": {
@@ -5554,7 +5556,7 @@
           "type": "lineHeights"
         },
         "font-size": {
-          "value": "{rhc.font-size.md.mobile}",
+          "value": "{rhc.text.font-size.md.mobile}",
           "type": "fontSizes"
         }
       }
@@ -5841,11 +5843,11 @@
         },
         "font-family": {
           "type": "fontFamilies",
-          "value": "{rhc.font-family.primary}"
+          "value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "type": "fontSizes",
-          "value": "{rhc.font-size.body.default}"
+          "value": "{rhc.text.font-size.body.default}"
         },
         "font-weight": {
           "type": "fontWeights",
@@ -6059,11 +6061,11 @@
             }
           },
           "font-size": {
-            "value": "{rhc.font-size.body.default}",
+            "value": "{rhc.text.font-size.body.default}",
             "type": "fontSizes"
           },
           "font-family": {
-            "value": "{rhc.font-family.primary}",
+            "value": "{rhc.text.font-family.default}",
             "type": "fontFamilies"
           },
           "font-weight": {
@@ -6072,7 +6074,7 @@
           },
           "current": {
             "font-weight": {
-              "value": "{rhc.text.font-weight.bold}",
+              "value": "{rhc.text.font-weight.strong}",
               "type": "fontWeights"
             },
             "color": {
@@ -6205,7 +6207,7 @@
           "type": "lineHeights"
         },
         "font-size": {
-          "value": "{rhc.font-size.body.default}",
+          "value": "{rhc.text.font-size.body.default}",
           "type": "fontSizes"
         }
       }
@@ -6215,7 +6217,7 @@
     "utrecht": {
       "status-badge": {
         "font-size": {
-          "value": "{rhc.font-size.body.default}",
+          "value": "{rhc.text.font-size.body.default}",
           "type": "fontSizes"
         },
         "line-height": {
@@ -6223,7 +6225,7 @@
           "type": "lineHeights"
         },
         "font-weight": {
-          "value": "{rhc.text.font-weight.bold}",
+          "value": "{rhc.text.font-weight.strong}",
           "type": "fontWeights"
         },
         "border-width": {
@@ -6231,7 +6233,7 @@
           "type": "borderWidth"
         },
         "font-family": {
-          "value": "{rhc.font-family.primary}",
+          "value": "{rhc.text.font-family.default}",
           "type": "fontFamilies"
         },
         "border-radius": {
@@ -6380,15 +6382,15 @@
             "type": "color"
           },
           "font-family": {
-            "value": "{rhc.font-family.primary}",
+            "value": "{rhc.text.font-family.default}",
             "type": "fontFamilies"
           },
           "font-weight": {
-            "value": "{rhc.text.font-weight.bold}",
+            "value": "{rhc.text.font-weight.strong}",
             "type": "fontWeights"
           },
           "font-size": {
-            "value": "{rhc.font-size.body.default}",
+            "value": "{rhc.text.font-size.body.default}",
             "type": "fontSizes"
           }
         },
@@ -6406,15 +6408,15 @@
             "type": "color"
           },
           "font-family": {
-            "value": "{rhc.font-family.primary}",
+            "value": "{rhc.text.font-family.default}",
             "type": "fontFamilies"
           },
           "font-weight": {
-            "value": "{rhc.text.font-weight.bold}",
+            "value": "{rhc.text.font-weight.strong}",
             "type": "fontWeights"
           },
           "font-size": {
-            "value": "{rhc.font-size.heading.level-3}",
+            "value": "{rhc.text.font-size.heading.level-3}",
             "type": "fontSizes"
           }
         },
@@ -6446,7 +6448,7 @@
             "type": "color"
           },
           "font-family": {
-            "value": "{rhc.font-family.primary}",
+            "value": "{rhc.text.font-family.default}",
             "type": "fontFamilies"
           },
           "font-weight": {
@@ -6458,7 +6460,7 @@
             "type": "lineHeights"
           },
           "font-size": {
-            "value": "{rhc.font-size.body.default}",
+            "value": "{rhc.text.font-size.body.default}",
             "type": "fontSizes"
           }
         },
@@ -6506,11 +6508,11 @@
         },
         "footer-cell": {
           "font-weight": {
-            "value": "{rhc.text.font-weight.bold}",
+            "value": "{rhc.text.font-weight.strong}",
             "type": "fontWeights"
           },
           "font-size": {
-            "value": "{rhc.font-size.body.default}",
+            "value": "{rhc.text.font-size.body.default}",
             "type": "fontSizes"
           },
           "color": {
@@ -6518,7 +6520,7 @@
             "type": "color"
           },
           "font-family": {
-            "value": "{rhc.font-family.primary}",
+            "value": "{rhc.text.font-family.default}",
             "type": "fontFamilies"
           },
           "line-height": {
@@ -6573,7 +6575,7 @@
           }
         },
         "font-size": {
-          "value": "{rhc.font-size.md.desktop}",
+          "value": "{rhc.text.font-size.md.desktop}",
           "type": "fontSizes"
         }
       }
@@ -6626,11 +6628,11 @@
         },
         "font-family": {
           "type": "fontFamilies",
-          "value": "{rhc.font-family.primary}"
+          "value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "type": "fontSizes",
-          "value": "{rhc.font-size.body.default}"
+          "value": "{rhc.text.font-size.body.default}"
         },
         "font-weight": {
           "type": "fontWeights",
@@ -6818,11 +6820,11 @@
         },
         "font-family": {
           "type": "fontFamilies",
-          "value": "{rhc.font-family.primary}"
+          "value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "type": "fontSizes",
-          "value": "{rhc.font-size.body.default}"
+          "value": "{rhc.text.font-size.body.default}"
         },
         "font-weight": {
           "type": "fontWeights",
@@ -7034,7 +7036,7 @@
       "unordered-list": {
         "font-size": {
           "type": "fontSizes",
-          "value": "{rhc.font-size.body.default}"
+          "value": "{rhc.text.font-size.body.default}"
         },
         "line-height": {
           "type": "lineHeights",
@@ -7143,7 +7145,7 @@
     "ams": {
       "pagination": {
         "font-family": {
-          "value": "{rhc.font-family.primary}",
+          "value": "{rhc.text.font-family.default}",
           "type": "other"
         },
         "font-size": {
@@ -7177,7 +7179,7 @@
           },
           "current": {
             "font-weight": {
-              "value": "{rhc.font-weight.bold}",
+              "value": "{rhc.text.font-weight.bold}",
               "type": "other"
             }
           },
@@ -7453,7 +7455,7 @@
           }
         },
         "font-family": {
-          "value": "{rhc.font-family.primary}",
+          "value": "{rhc.text.font-family.default}",
           "type": "fontFamilies"
         },
         "line-height": {
@@ -9017,11 +9019,11 @@
           "type": "color"
         },
         "font-size": {
-          "value": "{rhc.font-size.body.default}",
+          "value": "{rhc.text.font-size.body.default}",
           "type": "fontSizes"
         },
         "font-family": {
-          "value": "{rhc.font-family.primary}",
+          "value": "{rhc.text.font-family.default}",
           "type": "fontFamilies"
         },
         "padding-block-end": {
@@ -9050,7 +9052,7 @@
             "type": "color"
           },
           "font-size": {
-            "value": "{rhc.font-size.body.default}",
+            "value": "{rhc.text.font-size.body.default}",
             "type": "fontSizes"
           }
         },
@@ -9060,7 +9062,7 @@
             "type": "color"
           },
           "font-size": {
-            "value": "{rhc.font-size.body.intro}",
+            "value": "{rhc.text.font-size.body.intro}",
             "type": "fontSizes"
           }
         }
@@ -9090,33 +9092,33 @@
       "font-size": {
         "heading": {
           "level-1": {
-            "value": "{rhc.font-size.3xl.mobile}",
+            "value": "{rhc.text.font-size.3xl.mobile}",
             "type": "fontSizes"
           },
           "level-2": {
-            "value": "{rhc.font-size.2xl.mobile}",
+            "value": "{rhc.text.font-size.2xl.mobile}",
             "type": "fontSizes"
           },
           "level-3": {
-            "value": "{rhc.font-size.xl.mobile}",
+            "value": "{rhc.text.font-size.xl.mobile}",
             "type": "fontSizes"
           },
           "level-4": {
-            "value": "{rhc.font-size.lg.mobile}",
+            "value": "{rhc.text.font-size.lg.mobile}",
             "type": "fontSizes"
           },
           "level-5": {
-            "value": "{rhc.font-size.md.mobile}",
+            "value": "{rhc.text.font-size.md.mobile}",
             "type": "fontSizes"
           }
         },
         "body": {
           "intro": {
-            "value": "{rhc.font-size.lg.mobile}",
+            "value": "{rhc.text.font-size.lg.mobile}",
             "type": "fontSizes"
           },
           "default": {
-            "value": "{rhc.font-size.md.mobile}",
+            "value": "{rhc.text.font-size.md.mobile}",
             "type": "fontSizes"
           }
         }
@@ -9128,33 +9130,33 @@
       "font-size": {
         "heading": {
           "level-1": {
-            "value": "{rhc.font-size.3xl.tablet}",
+            "value": "{rhc.text.font-size.3xl.tablet}",
             "type": "fontSizes"
           },
           "level-2": {
-            "value": "{rhc.font-size.2xl.tablet}",
+            "value": "{rhc.text.font-size.2xl.tablet}",
             "type": "fontSizes"
           },
           "level-3": {
-            "value": "{rhc.font-size.xl.tablet}",
+            "value": "{rhc.text.font-size.xl.tablet}",
             "type": "fontSizes"
           },
           "level-4": {
-            "value": "{rhc.font-size.lg.tablet}",
+            "value": "{rhc.text.font-size.lg.tablet}",
             "type": "fontSizes"
           },
           "level-5": {
-            "value": "{rhc.font-size.md.tablet}",
+            "value": "{rhc.text.font-size.md.tablet}",
             "type": "fontSizes"
           }
         },
         "body": {
           "intro": {
-            "value": "{rhc.font-size.lg.tablet}",
+            "value": "{rhc.text.font-size.lg.tablet}",
             "type": "fontSizes"
           },
           "default": {
-            "value": "{rhc.font-size.md.tablet}",
+            "value": "{rhc.text.font-size.md.tablet}",
             "type": "fontSizes"
           }
         }
@@ -9165,11 +9167,11 @@
     "rhc": {
       "font-weight": {
         "default": {
-          "value": "{rhc.font-weight.light}",
+          "value": "{rhc.text.font-weight.light}",
           "type": "fontWeights"
         },
         "strong": {
-          "value": "{rhc.font-weight.semi-bold}",
+          "value": "{rhc.text.font-weight.semi-bold}",
           "type": "fontWeights"
         }
       }
