@@ -41,7 +41,7 @@ const getPlatformsConfig = (buildPath, themeName) => {
   return {
     javascript: {
       transformGroup: 'tokens-studio',
-      transforms: ['attribute/cti', 'name/camel', 'color/hsl-4'],
+      transforms: ['attribute/cti', 'name/camel'],
       buildPath,
       excludes,
       files: [
@@ -73,7 +73,7 @@ const getPlatformsConfig = (buildPath, themeName) => {
     },
     web: {
       transformGroup: 'tokens-studio',
-      transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4'],
+      transforms: ['attribute/cti', 'name/kebab'],
       buildPath,
       excludes,
       files: [
