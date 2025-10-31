@@ -2,7 +2,6 @@ import { existsSync, mkdirSync } from 'fs';
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'path';
 import StyleDictionary from 'style-dictionary';
-import { transforms, transformTypes } from 'style-dictionary/enums';
 
 import { register } from '@tokens-studio/sd-transforms';
 
