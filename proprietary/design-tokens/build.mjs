@@ -11,6 +11,18 @@ const normalizeThemeName = (name) => {
   return name.toLowerCase().replace(/\s+/g, '');
 };
 
+const removeUnitlessLineHeightTransform = () => {
+  // During update to W3C DTCG format, we found that the tokens-studio transformGroup
+  // includes the transform "ts/size/lineheight" which transforms line-height token values declared with % into a unitless value.
+  // This caused minor UI changes in many of our components. We decided that this is not something we want to have happen automatically.
+  // Therefore we remove this specific transform from the transformGroup before building.
+  const indexOfLineHeightTransform =
+    StyleDictionary.hooks.transformGroups['tokens-studio'].indexOf('ts/size/lineheight');
+  if (indexOfLineHeightTransform !== -1) {
+    StyleDictionary.hooks.transformGroups['tokens-studio'].splice(indexOfLineHeightTransform, 1);
+  }
+};
+
 const excludes = [
   'components/avatar',
   'components/form-field-option-label',
@@ -105,16 +117,6 @@ async function buildBaseTokens() {
   });
   await StyleDictionaryBase.hasInitialized;
 
-  // During update to W3C DTCG format, we found that the tokens-studio transformGroup
-  // includes the transform "ts/size/lineheight" which transforms line-height token values declared with % into a unitless value.
-  // This caused minor UI changes in many of our components. We decided that this is not something we want to have happen automatically.
-  // Therefore we remove this specific transform from the transformGroup before building.
-  const indexOfLineHeightTransform =
-    StyleDictionary.hooks.transformGroups['tokens-studio'].indexOf('ts/size/lineheight');
-  if (indexOfLineHeightTransform !== -1) {
-    StyleDictionary.hooks.transformGroups['tokens-studio'].splice(indexOfLineHeightTransform, 1);
-  }
-
   await StyleDictionaryBase.cleanAllPlatforms();
   await StyleDictionaryBase.buildAllPlatforms();
 }
@@ -157,6 +159,7 @@ async function buildThemes() {
 
 async function build() {
   try {
+    removeUnitlessLineHeightTransform(); // This needs to happen before building anything
     await buildBaseTokens();
     await buildThemes();
   } catch (error) {
