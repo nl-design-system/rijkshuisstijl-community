@@ -73,7 +73,7 @@ const getPlatformsConfig = (buildPath, themeName) => {
     },
     web: {
       transformGroup: 'tokens-studio',
-      transforms: ['ts/resolveMath', 'attribute/cti', 'name/kebab', 'color/hsl-4'],
+      transforms: ['attribute/cti', 'name/kebab', 'color/hsl-4'],
       buildPath,
       excludes,
       files: [
