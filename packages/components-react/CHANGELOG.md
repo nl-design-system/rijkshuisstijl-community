@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-react
 
+## 7.2.0
+
+### Minor Changes
+
+- 5b7a72c: Added a rounded corner utility component in CSS and React
+
 ## 7.1.0
 
 ### Minor Changes
