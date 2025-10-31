@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 10.0.0
+
+### Major Changes
+
+- 5b7a72c: Removed rounded corner common tokens and added rounded corner component tokens as the rounded corner will be provided as a utility component instead of individual tokens.
+
+### Patch Changes
+
+- 9a27826: radio button removed deprecated tokens
+
 ## 9.0.0
 
 ### Major Changes

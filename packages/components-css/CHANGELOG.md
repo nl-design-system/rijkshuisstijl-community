@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-css
 
+## 8.1.0
+
+### Minor Changes
+
+- 5b7a72c: Added a rounded corner utility component in CSS and React
+
 ## 8.0.1
 
 ### Patch Changes
