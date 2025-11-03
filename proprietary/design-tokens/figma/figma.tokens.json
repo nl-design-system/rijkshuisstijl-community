@@ -4594,13 +4594,20 @@
           "value": "inherit",
           "type": "color"
         },
-        "size": {
-          "value": "{rhc.size.icon.md}",
-          "type": "sizing"
-        },
         "inset-block-start": {
           "value": "{rhc.space.0}",
-          "type": "spacing"
+          "type": "dimension"
+        },
+        "size": {
+          "value": "{rhc.size.icon.md}",
+          "type": "dimension"
+        },
+        "baseline": {
+          "inset-block-start": {
+            "value": "0px",
+            "type": "dimension",
+            "description": "[code-only]"
+          }
         }
       }
     }
