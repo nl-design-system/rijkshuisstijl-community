@@ -1,18 +1,6 @@
 import { existsSync, mkdirSync } from 'fs';
 import { readFile, writeFile } from 'node:fs/promises';
 
-// the commented options and their values are default values from the token-transformer package
-const transformerOptions = {
-  // expandTypography: true,
-  // expandShadow: true,
-  // expandComposition: true,
-  // expandBorder: true,
-  // preserveRawValue: false,
-  // throwErrorWhenNotResolved: true,
-  // Tried to set this to false, it worked in principle but there were breaking in the styles especially with spacing. I think it's better to keep it true
-  // resolveReferences: true,
-};
-
 // Split tokens into separate files
 async function transformAndSplitTokens() {
   // Read the raw JSON file directly
