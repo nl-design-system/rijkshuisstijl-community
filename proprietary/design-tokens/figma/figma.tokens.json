@@ -6581,7 +6581,7 @@
       }
     }
   },
-  "components/textarea/base": {
+  "components/textarea": {
     "todo": {
       "textarea": {
         "hover": {
@@ -6734,40 +6734,11 @@
           "color": {
             "type": "color",
             "value": "{rhc.color.foreground.default}"
-          }
-        }
-      }
-    }
-  },
-  "components/textarea/deprecated": {
-    "utrecht": {
-      "textarea": {
-        "border-bottom-width": {
-          "type": "dimension",
-          "value": "{rhc.border-width.default}"
-        },
-        "hover": {
-          "background-color": {
-            "type": "color",
-            "value": "{rhc.color.canvas}"
-          },
-          "border-color": {
-            "type": "color",
-            "value": "{rhc.color.primary.300}"
           },
           "border-width": {
             "type": "dimension",
-            "value": "{rhc.border-width.default}"
-          },
-          "color": {
-            "type": "color",
-            "value": "{rhc.color.foreground.default}"
-          }
-        },
-        "focus": {
-          "border-width": {
-            "type": "dimension",
-            "value": "{rhc.border-width.m}"
+            "value": "{rhc.border-width.m}",
+            "description": "[code-only]"
           }
         }
       }
@@ -9383,10 +9354,9 @@
         "components/figure/deprecated": "enabled",
         "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
-        "components/textarea/base": "enabled",
+        "components/textarea": "enabled",
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
@@ -9476,10 +9446,9 @@
         "components/figure/deprecated": "enabled",
         "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
-        "components/textarea/base": "enabled",
+        "components/textarea": "enabled",
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
@@ -9571,10 +9540,9 @@
         "components/figure/deprecated": "enabled",
         "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
-        "components/textarea/base": "enabled",
+        "components/textarea": "enabled",
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
         "components/rounded-corner": "enabled",
@@ -9664,10 +9632,9 @@
         "components/figure/deprecated": "enabled",
         "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
-        "components/textarea/base": "enabled",
+        "components/textarea": "enabled",
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
@@ -9757,10 +9724,9 @@
         "components/figure/deprecated": "enabled",
         "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
-        "components/textarea/base": "enabled",
+        "components/textarea": "enabled",
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
@@ -9850,10 +9816,9 @@
         "components/figure/deprecated": "enabled",
         "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
-        "components/textarea/base": "enabled",
+        "components/textarea": "enabled",
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
@@ -9943,10 +9908,9 @@
         "components/figure/deprecated": "enabled",
         "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
-        "components/textarea/base": "enabled",
+        "components/textarea": "enabled",
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
@@ -10036,10 +10000,9 @@
         "components/figure/deprecated": "enabled",
         "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
-        "components/textarea/base": "enabled",
+        "components/textarea": "enabled",
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
@@ -10131,10 +10094,9 @@
         "components/figure/deprecated": "enabled",
         "components/form-field-description": "enabled",
         "components/form-field-error-message": "enabled",
-        "components/textarea/base": "enabled",
+        "components/textarea": "enabled",
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-label/todo": "enabled",
-        "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
@@ -10230,8 +10192,7 @@
       "components/status-badge",
       "components/sub-nav-bar",
       "components/table",
-      "components/textarea/base",
-      "components/textarea/deprecated",
+      "components/textarea",
       "components/text-input/base",
       "components/text-input/deprecated",
       "components/toggletip",
