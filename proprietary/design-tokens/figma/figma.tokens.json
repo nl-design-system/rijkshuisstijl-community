@@ -4617,13 +4617,20 @@
           "value": "inherit",
           "type": "color"
         },
-        "size": {
-          "value": "{rhc.size.icon.md}",
-          "type": "sizing"
-        },
         "inset-block-start": {
           "value": "{rhc.space.0}",
-          "type": "spacing"
+          "type": "dimension"
+        },
+        "size": {
+          "value": "{rhc.size.icon.md}",
+          "type": "dimension"
+        },
+        "baseline": {
+          "inset-block-start": {
+            "value": "0px",
+            "type": "dimension",
+            "description": "[code-only]"
+          }
         }
       }
     }
@@ -4659,7 +4666,8 @@
         },
         "text-decoration-color": {
           "value": "inherit",
-          "type": "color"
+          "type": "color",
+          "description": "[code-only]"
         },
         "text-decoration-line": {
           "type": "textDecoration",
@@ -4892,11 +4900,11 @@
           "text-decoration": {
             "type": "textDecoration",
             "value": "None"
+          },
+          "font-weight": {
+            "value": "{rhc.font-weight.default}",
+            "type": "fontWeights"
           }
-        },
-        "font-weight": {
-          "value": "{rhc.font-weight.default}",
-          "type": "fontWeights"
         }
       }
     },
