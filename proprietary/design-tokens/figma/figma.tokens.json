@@ -5683,28 +5683,27 @@
   "components/rounded-corner": {
     "rhc": {
       "rounded-corner": {
-      "radius": {
-        "value": "unset",
-        "type": "borderRadius",
-        "description": "[code-only]"
-      },
         "overflow": {
+          "$value": "hidden",
           "$type": "other",
-          "$value": "hidden"
+          "$description": "[code-only]"
         },
-        "size": {
-          "sm": {
-            "$type": "dimension",
-            "$value": "{rhc.size.half-lint}"
-          },
-          "md": {
-            "$type": "dimension",
-            "$value": "{rhc.size.lint}"
-          },
-          "lg": {
-            "$type": "dimension",
+        "sm": {
+          "border-radius": {
+            "$value": "{rhc.size.half-lint}",
+            "$type": "dimension"
+          }
+        },
+        "md": {
+          "border-radius": {
+            "$value": "{rhc.size.lint}",
+            "$type": "dimension"
+          }
+        },
+        "lg": {
+          "border-radius": {
             "$value": "{rhc.size.2-lint}",
-            "$description": "Originally rhc.size.half-lint * 3"
+            "$type": "dimension"
           }
         }
       }

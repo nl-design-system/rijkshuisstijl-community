@@ -15,4 +15,6 @@ export type GetComponentDesignTokens<
 > = tokens extends `${prefix}${string}` ? tokens : never;
 
 // Type to overwrite design tokens for a specific component
-export type OverwriteTokens<prefix extends string> = Partial<Record<GetComponentDesignTokens<prefix>, string | number>>;
+export type OverwriteTokens<prefix extends string, extraTokens extends string = ''> = Partial<
+  Record<GetComponentDesignTokens<prefix> | extraTokens, string | number>
+>;
