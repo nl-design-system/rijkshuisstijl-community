@@ -4027,9 +4027,16 @@
       }
     }
   },
-  "components/form-field/base": {
+  "components/form-field": {
     "utrecht": {
       "form-field": {
+        "label": {
+          "margin-block-end": {
+            "description": "[code-only]",
+            "type": "dimension",
+            "value": "{rhc.space.100}"
+          }
+        },
         "margin-block-end": {
           "type": "dimension",
           "value": "{rhc.space.100}",
@@ -4052,18 +4059,6 @@
           "padding-inline-start": {
             "type": "dimension",
             "value": "{rhc.space.200}"
-          }
-        }
-      }
-    }
-  },
-  "components/form-field/deprecated": {
-    "utrecht": {
-      "form-field": {
-        "label": {
-          "margin-block-end": {
-            "type": "dimension",
-            "value": "{rhc.space.100}"
           }
         }
       }
@@ -9421,9 +9416,8 @@
         "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
-        "components/form-field/base": "enabled",
+        "components/form-field": "enabled",
         "components/checkbox/deprecated": "enabled",
-        "components/form-field/deprecated": "enabled",
         "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
@@ -9514,9 +9508,8 @@
         "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
-        "components/form-field/base": "enabled",
+        "components/form-field": "enabled",
         "components/checkbox/deprecated": "enabled",
-        "components/form-field/deprecated": "enabled",
         "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
@@ -9610,9 +9603,8 @@
         "components/rounded-corner": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
-        "components/form-field/base": "enabled",
+        "components/form-field": "enabled",
         "components/checkbox/deprecated": "enabled",
-        "components/form-field/deprecated": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -9702,9 +9694,8 @@
         "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
-        "components/form-field/base": "enabled",
+        "components/form-field": "enabled",
         "components/checkbox/deprecated": "enabled",
-        "components/form-field/deprecated": "enabled",
         "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
@@ -9795,9 +9786,8 @@
         "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
-        "components/form-field/base": "enabled",
+        "components/form-field": "enabled",
         "components/checkbox/deprecated": "enabled",
-        "components/form-field/deprecated": "enabled",
         "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
@@ -9888,9 +9878,8 @@
         "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
-        "components/form-field/base": "enabled",
+        "components/form-field": "enabled",
         "components/checkbox/deprecated": "enabled",
-        "components/form-field/deprecated": "enabled",
         "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
@@ -9981,9 +9970,8 @@
         "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
-        "components/form-field/base": "enabled",
+        "components/form-field": "enabled",
         "components/checkbox/deprecated": "enabled",
-        "components/form-field/deprecated": "enabled",
         "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
@@ -10074,9 +10062,8 @@
         "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
-        "components/form-field/base": "enabled",
+        "components/form-field": "enabled",
         "components/checkbox/deprecated": "enabled",
-        "components/form-field/deprecated": "enabled",
         "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
@@ -10169,9 +10156,8 @@
         "components/radio-button": "enabled",
         "components/checkbox/base": "enabled",
         "components/select/base": "enabled",
-        "components/form-field/base": "enabled",
+        "components/form-field": "enabled",
         "components/checkbox/deprecated": "enabled",
-        "components/form-field/deprecated": "enabled",
         "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
@@ -10223,8 +10209,7 @@
       "components/figure/deprecated",
       "components/file-input",
       "components/footer",
-      "components/form-field/base",
-      "components/form-field/deprecated",
+      "components/form-field",
       "components/form-field-checkbox-option",
       "components/form-field-description",
       "components/form-field-error-message",
