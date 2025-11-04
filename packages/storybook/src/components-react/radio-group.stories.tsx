@@ -18,7 +18,6 @@ const meta = {
   title: 'Radio Group',
   id: 'rhc-radio-group',
   component: RadioGroupStory,
-  render: RadioGroupStory,
   parameters: {
     docs: {
       description: {
