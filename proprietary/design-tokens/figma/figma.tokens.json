@@ -2770,7 +2770,7 @@
       }
     }
   },
-  "components/checkbox/base": {
+  "components/checkbox": {
     "utrecht": {
       "checkbox": {
         "background-color": {
@@ -2881,6 +2881,74 @@
           "color": {
             "type": "color",
             "value": "{rhc.color.wit}"
+          },
+          "active": {
+            "background-color": {
+              "type": "color",
+              "value": "{rhc.color.primary.400}"
+            },
+            "border-color": {
+              "type": "color",
+              "value": "transparent"
+            },
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.wit}"
+            },
+            "border-width": {
+              "type": "dimension",
+              "value": "{rhc.border-width.sm}"
+            }
+          },
+          "disabled": {
+            "background-color": {
+              "type": "color",
+              "value": "{rhc.color.cool-grey.300}"
+            },
+            "border-color": {
+              "type": "color",
+              "value": "{rhc.color.cool-grey.400}"
+            },
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.cool-grey.600}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "type": "color",
+              "value": "{rhc.color.primary.300}"
+            },
+            "border-color": {
+              "type": "color",
+              "value": "transparent"
+            },
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.wit}"
+            },
+            "border-width": {
+              "type": "dimension",
+              "value": "{rhc.border-width.sm}"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "type": "color",
+              "value": "{rhc.color.canvas}"
+            },
+            "border-color": {
+              "type": "color",
+              "value": "{rhc.color.primary.500}"
+            },
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.primary.500}"
+            },
+            "border-width": {
+              "type": "dimension",
+              "value": "{rhc.border-width.md}"
+            }
           }
         },
         "checked": {
@@ -2899,6 +2967,74 @@
           "color": {
             "type": "color",
             "value": "{rhc.color.wit}"
+          },
+          "active": {
+            "background-color": {
+              "type": "color",
+              "value": "{rhc.color.primary.400}"
+            },
+            "border-color": {
+              "type": "color",
+              "value": "transparent"
+            },
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.wit}"
+            },
+            "border-width": {
+              "type": "dimension",
+              "value": "{rhc.border-width.sm}"
+            }
+          },
+          "disabled": {
+            "background-color": {
+              "type": "color",
+              "value": "{rhc.color.cool-grey.300}"
+            },
+            "border-color": {
+              "type": "color",
+              "value": "{rhc.color.cool-grey.400}"
+            },
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.cool-grey.600}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "type": "color",
+              "value": "{rhc.color.primary.300}"
+            },
+            "border-color": {
+              "type": "color",
+              "value": "transparent"
+            },
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.wit}"
+            },
+            "border-width": {
+              "type": "dimension",
+              "value": "{rhc.border-width.sm}"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "type": "color",
+              "value": "{rhc.color.canvas}"
+            },
+            "border-color": {
+              "type": "color",
+              "value": "{rhc.color.primary.500}"
+            },
+            "color": {
+              "type": "color",
+              "value": "{rhc.color.primary.500}"
+            },
+            "border-width": {
+              "type": "dimension",
+              "value": "{rhc.border-width.md}"
+            }
           }
         }
       }
@@ -3042,152 +3178,6 @@
             "color": {
               "type": "color",
               "value": "{rhc.color.lintblauw.500}"
-            }
-          }
-        }
-      }
-    }
-  },
-  "components/checkbox/deprecated": {
-    "utrecht": {
-      "checkbox": {
-        "indeterminate": {
-          "active": {
-            "background-color": {
-              "type": "color",
-              "value": "{rhc.color.primary.400}"
-            },
-            "border-color": {
-              "type": "color",
-              "value": "transparent"
-            },
-            "color": {
-              "type": "color",
-              "value": "{rhc.color.wit}"
-            },
-            "border-width": {
-              "type": "dimension",
-              "value": "{rhc.border-width.sm}"
-            }
-          },
-          "disabled": {
-            "background-color": {
-              "type": "color",
-              "value": "{rhc.color.cool-grey.300}"
-            },
-            "border-color": {
-              "type": "color",
-              "value": "{rhc.color.cool-grey.400}"
-            },
-            "color": {
-              "type": "color",
-              "value": "{rhc.color.cool-grey.600}"
-            }
-          },
-          "hover": {
-            "background-color": {
-              "type": "color",
-              "value": "{rhc.color.primary.300}"
-            },
-            "border-color": {
-              "type": "color",
-              "value": "transparent"
-            },
-            "color": {
-              "type": "color",
-              "value": "{rhc.color.wit}"
-            },
-            "border-width": {
-              "type": "dimension",
-              "value": "{rhc.border-width.sm}"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "type": "color",
-              "value": "{rhc.color.canvas}"
-            },
-            "border-color": {
-              "type": "color",
-              "value": "{rhc.color.primary.500}"
-            },
-            "color": {
-              "type": "color",
-              "value": "{rhc.color.primary.500}"
-            },
-            "border-width": {
-              "type": "dimension",
-              "value": "{rhc.border-width.md}"
-            }
-          }
-        },
-        "checked": {
-          "active": {
-            "background-color": {
-              "type": "color",
-              "value": "{rhc.color.primary.400}"
-            },
-            "border-color": {
-              "type": "color",
-              "value": "transparent"
-            },
-            "color": {
-              "type": "color",
-              "value": "{rhc.color.wit}"
-            },
-            "border-width": {
-              "type": "dimension",
-              "value": "{rhc.border-width.sm}"
-            }
-          },
-          "disabled": {
-            "background-color": {
-              "type": "color",
-              "value": "{rhc.color.cool-grey.300}"
-            },
-            "border-color": {
-              "type": "color",
-              "value": "{rhc.color.cool-grey.400}"
-            },
-            "color": {
-              "type": "color",
-              "value": "{rhc.color.cool-grey.600}"
-            }
-          },
-          "hover": {
-            "background-color": {
-              "type": "color",
-              "value": "{rhc.color.primary.300}"
-            },
-            "border-color": {
-              "type": "color",
-              "value": "transparent"
-            },
-            "color": {
-              "type": "color",
-              "value": "{rhc.color.wit}"
-            },
-            "border-width": {
-              "type": "dimension",
-              "value": "{rhc.border-width.sm}"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "type": "color",
-              "value": "{rhc.color.canvas}"
-            },
-            "border-color": {
-              "type": "color",
-              "value": "{rhc.color.primary.500}"
-            },
-            "color": {
-              "type": "color",
-              "value": "{rhc.color.primary.500}"
-            },
-            "border-width": {
-              "type": "dimension",
-              "value": "{rhc.border-width.md}"
             }
           }
         }
@@ -9422,10 +9412,9 @@
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
-        "components/checkbox/base": "enabled",
+        "components/checkbox": "enabled",
         "components/select/base": "enabled",
         "components/form-field": "enabled",
-        "components/checkbox/deprecated": "enabled",
         "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
@@ -9514,10 +9503,9 @@
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
-        "components/checkbox/base": "enabled",
+        "components/checkbox": "enabled",
         "components/select/base": "enabled",
         "components/form-field": "enabled",
-        "components/checkbox/deprecated": "enabled",
         "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
@@ -9609,10 +9597,9 @@
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
         "components/rounded-corner": "enabled",
-        "components/checkbox/base": "enabled",
+        "components/checkbox": "enabled",
         "components/select/base": "enabled",
         "components/form-field": "enabled",
-        "components/checkbox/deprecated": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
       },
@@ -9700,10 +9687,9 @@
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
-        "components/checkbox/base": "enabled",
+        "components/checkbox": "enabled",
         "components/select/base": "enabled",
         "components/form-field": "enabled",
-        "components/checkbox/deprecated": "enabled",
         "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
@@ -9792,10 +9778,9 @@
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
-        "components/checkbox/base": "enabled",
+        "components/checkbox": "enabled",
         "components/select/base": "enabled",
         "components/form-field": "enabled",
-        "components/checkbox/deprecated": "enabled",
         "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
@@ -9884,10 +9869,9 @@
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
-        "components/checkbox/base": "enabled",
+        "components/checkbox": "enabled",
         "components/select/base": "enabled",
         "components/form-field": "enabled",
-        "components/checkbox/deprecated": "enabled",
         "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
@@ -9976,10 +9960,9 @@
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
-        "components/checkbox/base": "enabled",
+        "components/checkbox": "enabled",
         "components/select/base": "enabled",
         "components/form-field": "enabled",
-        "components/checkbox/deprecated": "enabled",
         "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
@@ -10068,10 +10051,9 @@
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
-        "components/checkbox/base": "enabled",
+        "components/checkbox": "enabled",
         "components/select/base": "enabled",
         "components/form-field": "enabled",
-        "components/checkbox/deprecated": "enabled",
         "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
@@ -10162,10 +10144,9 @@
         "components/textarea/deprecated": "enabled",
         "components/text-input/base": "enabled",
         "components/radio-button": "enabled",
-        "components/checkbox/base": "enabled",
+        "components/checkbox": "enabled",
         "components/select/base": "enabled",
         "components/form-field": "enabled",
-        "components/checkbox/deprecated": "enabled",
         "components/rounded-corner": "enabled",
         "components/select/deprecated": "enabled",
         "components/text-input/deprecated": "enabled"
@@ -10201,8 +10182,7 @@
       "components/breadcrumb",
       "components/button",
       "components/card-as-link",
-      "components/checkbox/base",
-      "components/checkbox/deprecated",
+      "components/checkbox",
       "components/card",
       "components/checkbox-group",
       "components/code-input-group",
