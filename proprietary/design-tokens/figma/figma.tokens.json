@@ -863,7 +863,7 @@
         "highlight": {
           "bg-default": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.warning.subtle}"
+            "$value": "{rhc.color.warning.subtle}"
           }
         }
       },
@@ -1000,62 +1000,60 @@
           "$value": "{rhc.color.wit}",
           "$description": "Gebruik deze kleur voor de achtergrond van de website, hierbovenop komen de background kleuren."
         },
-        "feedback": {
-          "success": {
-            "default": {
-              "parent": "mode/light",
-              "$type": "color",
-              "$value": "{rhc.color.groen.500}",
-              "$description": "Gebruik deze kleur om een positieve boodschap te benadrukken."
-            },
-            "subtle": {
-              "parent": "mode/light",
-              "$type": "color",
-              "$value": "{rhc.color.groen.50}",
-              "$description": "Gebruik deze kleur om een positieve boodschap te highlighten."
-            }
+        "positive": {
+          "default": {
+            "parent": "mode/light",
+            "$type": "color",
+            "$value": "{rhc.color.groen.500}",
+            "$description": "Gebruik deze kleur om een positieve boodschap te benadrukken."
           },
-          "info": {
-            "default": {
-              "parent": "mode/light",
-              "$type": "color",
-              "$value": "{rhc.color.hemelblauw.500}",
-              "$description": "Gebruik deze kleur om een informatieve boodschap te benadrukken."
-            },
-            "subtle": {
-              "parent": "mode/light",
-              "$type": "color",
-              "$value": "{rhc.color.hemelblauw.50}",
-              "$description": "Gebruik deze kleur om een informatieve boodschap te highlighten."
-            }
+          "subtle": {
+            "parent": "mode/light",
+            "$type": "color",
+            "$value": "{rhc.color.groen.50}",
+            "$description": "Gebruik deze kleur om een positieve boodschap te highlighten."
+          }
+        },
+        "info": {
+          "default": {
+            "parent": "mode/light",
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.500}",
+            "$description": "Gebruik deze kleur om een informatieve boodschap te benadrukken."
           },
-          "error": {
-            "default": {
-              "parent": "mode/light",
-              "$type": "color",
-              "$value": "{rhc.color.rood.500}",
-              "$description": "Gebruik deze kleur om een negatieve boodschap te benadrukken."
-            },
-            "subtle": {
-              "parent": "mode/light",
-              "$type": "color",
-              "$value": "{rhc.color.rood.50}",
-              "$description": "Gebruik deze kleur om een negatieve boodschap te highlighten."
-            }
+          "subtle": {
+            "parent": "mode/light",
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.50}",
+            "$description": "Gebruik deze kleur om een informatieve boodschap te highlighten."
+          }
+        },
+        "negative": {
+          "default": {
+            "parent": "mode/light",
+            "$type": "color",
+            "$value": "{rhc.color.rood.500}",
+            "$description": "Gebruik deze kleur om een negatieve boodschap te benadrukken."
           },
-          "warning": {
-            "default": {
-              "parent": "mode/light",
-              "$type": "color",
-              "$value": "{rhc.color.donkergeel.500}",
-              "$description": "Gebruik deze kleur om een waarschuwing te benadrukken."
-            },
-            "subtle": {
-              "parent": "mode/light",
-              "$type": "color",
-              "$value": "{rhc.color.donkergeel.50}",
-              "$description": "Gebruik deze kleur om een waarschuwing te highlighten."
-            }
+          "subtle": {
+            "parent": "mode/light",
+            "$type": "color",
+            "$value": "{rhc.color.rood.50}",
+            "$description": "Gebruik deze kleur om een negatieve boodschap te highlighten."
+          }
+        },
+        "warning": {
+          "default": {
+            "parent": "mode/light",
+            "$type": "color",
+            "$value": "{rhc.color.donkergeel.500}",
+            "$description": "Gebruik deze kleur om een waarschuwing te benadrukken."
+          },
+          "subtle": {
+            "parent": "mode/light",
+            "$type": "color",
+            "$value": "{rhc.color.donkergeel.50}",
+            "$description": "Gebruik deze kleur om een waarschuwing te highlighten."
           }
         },
         "accent": {
@@ -1580,7 +1578,7 @@
       "alert": {
         "background-color": {
           "$type": "color",
-          "$value": "{rhc.color.feedback.info.subtle}"
+          "$value": "{rhc.color.info.subtle}"
         },
         "border-color": {
           "$type": "color",
@@ -1637,7 +1635,7 @@
         "error": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.error.subtle}"
+            "$value": "{rhc.color.negative.subtle}"
           },
           "border-color": {
             "$type": "color",
@@ -1651,7 +1649,7 @@
         "info": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.info.subtle}"
+            "$value": "{rhc.color.info.subtle}"
           },
           "border-color": {
             "$type": "color",
@@ -1671,7 +1669,7 @@
         "ok": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.success.subtle}"
+            "$value": "{rhc.color.positive.subtle}"
           },
           "border-color": {
             "$type": "color",
@@ -1685,7 +1683,7 @@
         "warning": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.warning.subtle}"
+            "$value": "{rhc.color.warning.subtle}"
           },
           "border-color": {
             "$type": "color",
@@ -1699,7 +1697,7 @@
         "icon": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.info.default}"
+            "$value": "{rhc.color.info.default}"
           },
           "inset-block-start": {
             "$type": "dimension",
@@ -1712,25 +1710,25 @@
           "error": {
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.feedback.error.default}"
+              "$value": "{rhc.color.negative.default}"
             }
           },
           "info": {
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.feedback.info.default}"
+              "$value": "{rhc.color.info.default}"
             }
           },
           "ok": {
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.feedback.success.default}"
+              "$value": "{rhc.color.positive.default}"
             }
           },
           "warning": {
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.feedback.warning.default}"
+              "$value": "{rhc.color.warning.default}"
             }
           }
         }
@@ -2916,11 +2914,11 @@
         "invalid": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.error.subtle}"
+            "$value": "{rhc.color.negative.subtle}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.error.default}"
+            "$value": "{rhc.color.negative.default}"
           },
           "border-width": {
             "$type": "dimension",
@@ -3843,7 +3841,7 @@
         "error": {
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.error.default}"
+            "$value": "{rhc.color.negative.default}"
           }
         },
         "subtitle": {
@@ -4026,7 +4024,7 @@
         },
         "color": {
           "$type": "color",
-          "$value": "{rhc.color.feedback.error.default}"
+          "$value": "{rhc.color.negative.default}"
         },
         "font-family": {
           "$type": "fontFamilies",
@@ -4247,7 +4245,7 @@
         "invalid": {
           "border-inline-start-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.error.default}"
+            "$value": "{rhc.color.negative.default}"
           },
           "border-inline-start-width": {
             "$type": "dimension",
@@ -5592,11 +5590,11 @@
         "invalid": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.error.subtle}"
+            "$value": "{rhc.color.negative.subtle}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.error.default}"
+            "$value": "{rhc.color.negative.default}"
           },
           "color": {
             "$type": "color",
@@ -5883,7 +5881,7 @@
         "invalid": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.error.subtle}"
+            "$value": "{rhc.color.negative.subtle}"
           },
           "border-block-end-width": {
             "$type": "dimension",
@@ -5891,7 +5889,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.error.default}"
+            "$value": "{rhc.color.negative.default}"
           },
           "border-width": {
             "$type": "dimension",
@@ -6242,7 +6240,7 @@
         "informative": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.info.subtle}"
+            "$value": "{rhc.color.info.subtle}"
           },
           "border-color": {
             "$type": "color",
@@ -6256,7 +6254,7 @@
         "positive": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.success.subtle}"
+            "$value": "{rhc.color.positive.subtle}"
           },
           "border-color": {
             "$type": "color",
@@ -6270,7 +6268,7 @@
         "negative": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.error.subtle}"
+            "$value": "{rhc.color.negative.subtle}"
           },
           "border-color": {
             "$type": "color",
@@ -6284,7 +6282,7 @@
         "warning": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.warning.subtle}"
+            "$value": "{rhc.color.warning.subtle}"
           },
           "border-color": {
             "$type": "color",
@@ -6660,7 +6658,7 @@
         "invalid": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.error.subtle}"
+            "$value": "{rhc.color.negative.subtle}"
           },
           "border-block-end-width": {
             "$type": "dimension",
@@ -6668,7 +6666,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.error.default}"
+            "$value": "{rhc.color.negative.default}"
           },
           "border-width": {
             "$type": "dimension",
@@ -6848,7 +6846,7 @@
         "invalid": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.error.subtle}"
+            "$value": "{rhc.color.negative.subtle}"
           },
           "border-block-end-width": {
             "$type": "dimension",
@@ -6856,7 +6854,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.error.default}"
+            "$value": "{rhc.color.negative.default}"
           },
           "border-width": {
             "$type": "dimension",
@@ -6961,7 +6959,7 @@
         },
         "background-color": {
           "$type": "color",
-          "$value": "{rhc.color.feedback.info.default}"
+          "$value": "{rhc.color.info.default}"
         },
         "border-color": {
           "$type": "color",
@@ -6988,7 +6986,7 @@
         "active": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.info.default}"
+            "$value": "{rhc.color.info.default}"
           },
           "background-color": {
             "$type": "color",
@@ -6996,7 +6994,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.info.default}"
+            "$value": "{rhc.color.info.default}"
           }
         },
         "hover": {
@@ -7016,7 +7014,7 @@
           },
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.feedback.info.default}"
+            "$value": "{rhc.color.info.default}"
           }
         }
       }
