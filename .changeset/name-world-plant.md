@@ -53,6 +53,7 @@ responsive schaal is gewijzigd:
 
 Andere naam-wijzigingen:
 - naam `rhc.color.canvas` gewijzigd naar `rhc.color.bg-document`
+- naam `rhc.size.target` gewijzigd naar `rhc.size.pointer-target`
 
 Toegevoegde tokens:
 - `rhc.text.font-family.sans`
