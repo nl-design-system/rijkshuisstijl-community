@@ -50,6 +50,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: "build internal packages for linting"
+        run: pnpm --filter "@rijkshuisstijl-community/design-tokens" build
+
       - name: "Continuous Integration: lint"
         run: pnpm run --if-present lint
 
