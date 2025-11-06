@@ -3566,7 +3566,7 @@
           "$value": "{rhc.color.rood.500}"
         },
         "size": {
-          "$type": "size",
+          "$type": "dimension",
           "$value": "{rhc.size.quarter-lint}"
         }
       }
@@ -4532,17 +4532,24 @@
   "components/icon": {
     "utrecht": {
       "icon": {
+        "baseline": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0px",
+            "$description": "[code-only]"
+          }
+        },
         "color": {
           "$type": "color",
           "$value": "inherit"
         },
-        "size": {
-          "$type": "dimension",
-          "$value": "{rhc.size.icon.md}"
-        },
         "inset-block-start": {
           "$type": "dimension",
           "$value": "{rhc.space.0}"
+        },
+        "size": {
+          "$type": "dimension",
+          "$value": "{rhc.size.icon.md}"
         }
       }
     }
@@ -4578,7 +4585,8 @@
         },
         "text-decoration-color": {
           "$type": "color",
-          "$value": "inherit"
+          "$value": "inherit",
+          "$description": "[code-only]"
         },
         "text-decoration-line": {
           "$type": "textDecoration",
@@ -4779,11 +4787,11 @@
           "text-decoration": {
             "$type": "textDecoration",
             "$value": "None"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{rhc.font-weight.default}"
           }
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{rhc.font-weight.default}"
         }
       }
     },
@@ -4924,7 +4932,7 @@
           },
           "icon": {
             "size": {
-              "$type": "size",
+              "$type": "dimension",
               "$value": "{rhc.size.icon.md}"
             },
             "color": {
@@ -4933,7 +4941,7 @@
             }
           },
           "min-height": {
-            "$type": "size",
+            "$type": "dimension",
             "$value": "{rhc.size.target}"
           },
           "padding-block": {
@@ -5134,15 +5142,15 @@
         "item": {
           "icon": {
             "padding-inline": {
-              "$type": "space",
+              "$type": "dimension",
               "$value": "{rhc.space.100}"
             },
             "padding-block": {
-              "$type": "space",
+              "$type": "dimension",
               "$value": "{rhc.space.100}"
             },
             "size": {
-              "$type": "size",
+              "$type": "dimension",
               "$value": "{rhc.size.icon.md}"
             }
           },
@@ -5152,11 +5160,11 @@
               "$value": "{rhc.font-size.body.default}"
             },
             "column-gap": {
-              "$type": "space",
+              "$type": "dimension",
               "$value": "{rhc.space.100}"
             },
             "row-gap": {
-              "$type": "space",
+              "$type": "dimension",
               "$value": "{rhc.space.50}"
             }
           },
@@ -5219,19 +5227,19 @@
             }
           },
           "column-gap": {
-            "$type": "space",
+            "$type": "dimension",
             "$value": "{rhc.space.200}"
           },
           "min-height": {
-            "$type": "size",
+            "$type": "dimension",
             "$value": "{rhc.size.target}"
           },
           "padding-block": {
-            "$type": "space",
+            "$type": "dimension",
             "$value": "{rhc.space.150}"
           },
           "padding-inline": {
-            "$type": "space",
+            "$type": "dimension",
             "$value": "{rhc.space.200}"
           }
         }
