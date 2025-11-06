@@ -1226,6 +1226,20 @@
       }
     }
   },
+  "utrecht/body": {
+    "utrecht": {
+      "body": {
+        "color": {
+          "$value": "{rhc.color.foreground.default}",
+          "$type": "color"
+        },
+        "font-family": {
+          "$value": "{rhc.text.font-family.default}",
+          "$type": "fontFamilies"
+        }
+      }
+    }
+  },
   "utrecht/document": {
     "utrecht": {
       "document": {
@@ -1326,6 +1340,20 @@
             "$type": "dimension",
             "$value": "{rhc.space.0}"
           }
+        }
+      }
+    }
+  },
+  "utrecht/root": {
+    "utrecht": {
+      "root": {
+        "color": {
+          "$value": "{rhc.color.foreground.default}",
+          "$type": "color"
+        },
+        "font-family": {
+          "$value": "{rhc.text.font-family.default}",
+          "$type": "fontFamilies"
         }
       }
     }
@@ -3528,7 +3556,7 @@
           "$value": "{rhc.color.rood.500}"
         },
         "size": {
-          "$type": "size",
+          "$type": "dimension",
           "$value": "{rhc.size.quarter-lint}"
         }
       }
@@ -4199,9 +4227,15 @@
       }
     }
   },
-  "components/form-field/base": {
+  "components/form-field": {
     "utrecht": {
       "form-field": {
+        "label": {
+          "margin-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.100}"
+          }
+        },
         "margin-block-end": {
           "$type": "dimension",
           "$value": "{rhc.space.100}",
@@ -4224,18 +4258,6 @@
           "padding-inline-start": {
             "$type": "dimension",
             "$value": "{rhc.space.200}"
-          }
-        }
-      }
-    }
-  },
-  "components/form-field/deprecated": {
-    "utrecht": {
-      "form-field": {
-        "label": {
-          "margin-block-end": {
-            "$type": "dimension",
-            "$value": "{rhc.space.100}"
           }
         }
       }
@@ -4530,6 +4552,13 @@
   "components/icon": {
     "utrecht": {
       "icon": {
+        "baseline": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0px",
+            "$description": "[code-only]"
+          }
+        },
         "color": {
           "$type": "color",
           "$value": "inherit"
@@ -4602,11 +4631,11 @@
           "text-decoration": {
             "$type": "textDecoration",
             "$value": "None"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{rhc.font-weight.default}"
           }
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{rhc.font-weight.default}"
         }
       }
     },
@@ -4662,7 +4691,8 @@
         },
         "text-decoration-color": {
           "$type": "color",
-          "$value": "inherit"
+          "$value": "inherit",
+          "$description": "[code-only]"
         },
         "text-decoration-line": {
           "$type": "textDecoration",
@@ -5781,7 +5811,7 @@
       }
     }
   },
-  "components/select/base": {
+  "components/select": {
     "utrecht": {
       "select": {
         "background-color": {
@@ -5819,6 +5849,18 @@
         "font-weight": {
           "$type": "fontWeights",
           "$value": "{rhc.font-weight.default}"
+        },
+        "icon": {
+          "size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.icon.md}",
+            "$description": "[code-only]"
+          }
+        },
+        "image-background-position": {
+          "$type": "other",
+          "$value": "right 0.5rem center",
+          "$description": "[code-only]"
         },
         "line-height": {
           "$type": "lineHeights",
@@ -5903,79 +5945,13 @@
             "$type": "color",
             "$value": "{rhc.color.primary.500}"
           },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.default}"
-          }
-        }
-      }
-    }
-  },
-  "components/select/deprecated": {
-    "utrecht": {
-      "select": {
-        "border-bottom-width": {
-          "$type": "dimension",
-          "$value": "auto"
-        },
-        "border-radius": {
-          "$type": "dimension",
-          "$value": "{rhc.border-radius.sm}"
-        },
-        "border-width": {
-          "$type": "dimension",
-          "$value": "{rhc.border-width.sm}"
-        },
-        "image-background-position": {
-          "$type": "other",
-          "$value": "right 0.5rem center"
-        },
-        "max-inline-size": {
-          "$type": "dimension",
-          "$value": "400px"
-        },
-        "padding-block-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.100}"
-        },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.100}"
-        },
-        "padding-inline-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.150}"
-        },
-        "padding-inline-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.150}"
-        },
-        "icon": {
-          "size": {
-            "$type": "dimension",
-            "$value": "{rhc.size.icon.md}"
-          }
-        },
-        "invalid": {
           "border-width": {
             "$type": "dimension",
-            "$value": "{rhc.border-width.sm}"
+            "$value": "{rhc.border-width.md}"
           },
           "color": {
             "$type": "color",
             "$value": "{rhc.color.foreground.default}"
-          }
-        },
-        "hover": {
-          "border-width": {
-            "$type": "dimension",
-            "$value": "{rhc.border-width.sm}"
-          }
-        },
-        "focus": {
-          "border-width": {
-            "$type": "dimension",
-            "$value": "{rhc.border-width.md}"
           }
         }
       }
@@ -8845,8 +8821,7 @@
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-field/base": "enabled",
-        "components/form-field/deprecated": "enabled",
+        "components/form-field": "enabled",
         "components/heading": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
@@ -8868,8 +8843,7 @@
         "components/radio-button": "enabled",
         "components/radio-group": "enabled",
         "components/rounded-corner": "enabled",
-        "components/select/base": "enabled",
-        "components/select/deprecated": "enabled",
+        "components/select": "enabled",
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link": "enabled",
@@ -8940,8 +8914,7 @@
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-field/base": "enabled",
-        "components/form-field/deprecated": "enabled",
+        "components/form-field": "enabled",
         "components/heading": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
@@ -8963,8 +8936,7 @@
         "components/radio-button": "enabled",
         "components/radio-group": "enabled",
         "components/rounded-corner": "enabled",
-        "components/select/base": "enabled",
-        "components/select/deprecated": "enabled",
+        "components/select": "enabled",
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link": "enabled",
@@ -9036,8 +9008,7 @@
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-field/base": "enabled",
-        "components/form-field/deprecated": "enabled",
+        "components/form-field": "enabled",
         "components/heading": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
@@ -9059,8 +9030,7 @@
         "components/radio-button": "enabled",
         "components/radio-group": "enabled",
         "components/rounded-corner": "enabled",
-        "components/select/base": "enabled",
-        "components/select/deprecated": "enabled",
+        "components/select": "enabled",
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link": "enabled",
@@ -9134,8 +9104,7 @@
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-field/base": "enabled",
-        "components/form-field/deprecated": "enabled",
+        "components/form-field": "enabled",
         "components/heading": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
@@ -9157,8 +9126,7 @@
         "components/radio-button": "enabled",
         "components/radio-group": "enabled",
         "components/rounded-corner": "enabled",
-        "components/select/base": "enabled",
-        "components/select/deprecated": "enabled",
+        "components/select": "enabled",
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link": "enabled",
@@ -9230,8 +9198,7 @@
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-field/base": "enabled",
-        "components/form-field/deprecated": "enabled",
+        "components/form-field": "enabled",
         "components/heading": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
@@ -9253,8 +9220,7 @@
         "components/radio-button": "enabled",
         "components/radio-group": "enabled",
         "components/rounded-corner": "enabled",
-        "components/select/base": "enabled",
-        "components/select/deprecated": "enabled",
+        "components/select": "enabled",
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link": "enabled",
@@ -9326,8 +9292,7 @@
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-field/base": "enabled",
-        "components/form-field/deprecated": "enabled",
+        "components/form-field": "enabled",
         "components/heading": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
@@ -9349,8 +9314,7 @@
         "components/radio-button": "enabled",
         "components/radio-group": "enabled",
         "components/rounded-corner": "enabled",
-        "components/select/base": "enabled",
-        "components/select/deprecated": "enabled",
+        "components/select": "enabled",
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link": "enabled",
@@ -9422,8 +9386,7 @@
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-field/base": "enabled",
-        "components/form-field/deprecated": "enabled",
+        "components/form-field": "enabled",
         "components/heading": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
@@ -9445,8 +9408,7 @@
         "components/radio-button": "enabled",
         "components/radio-group": "enabled",
         "components/rounded-corner": "enabled",
-        "components/select/base": "enabled",
-        "components/select/deprecated": "enabled",
+        "components/select": "enabled",
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link": "enabled",
@@ -9518,8 +9480,7 @@
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-field/base": "enabled",
-        "components/form-field/deprecated": "enabled",
+        "components/form-field": "enabled",
         "components/heading": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
@@ -9541,8 +9502,7 @@
         "components/radio-button": "enabled",
         "components/radio-group": "enabled",
         "components/rounded-corner": "enabled",
-        "components/select/base": "enabled",
-        "components/select/deprecated": "enabled",
+        "components/select": "enabled",
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link": "enabled",
@@ -9614,8 +9574,7 @@
         "components/form-field-label/utrecht": "enabled",
         "components/form-field-option-label": "enabled",
         "components/form-field-radio-option": "enabled",
-        "components/form-field/base": "enabled",
-        "components/form-field/deprecated": "enabled",
+        "components/form-field": "enabled",
         "components/heading": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
@@ -9637,8 +9596,7 @@
         "components/radio-button": "enabled",
         "components/radio-group": "enabled",
         "components/rounded-corner": "enabled",
-        "components/select/base": "enabled",
-        "components/select/deprecated": "enabled",
+        "components/select": "enabled",
         "components/separator": "enabled",
         "components/side-nav": "enabled",
         "components/skip-link": "enabled",
@@ -9716,8 +9674,7 @@
       "components/form-field-label/utrecht",
       "components/form-field-option-label",
       "components/form-field-radio-option",
-      "components/form-field/base",
-      "components/form-field/deprecated",
+      "components/form-field",
       "components/heading",
       "components/hero",
       "components/icon",
@@ -9739,8 +9696,7 @@
       "components/radio-button",
       "components/radio-group",
       "components/rounded-corner",
-      "components/select/base",
-      "components/select/deprecated",
+      "components/select",
       "components/separator",
       "components/side-nav",
       "components/skip-link",
