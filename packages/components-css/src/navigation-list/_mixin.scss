@@ -68,7 +68,7 @@
 }
 
 @mixin rhc-navigation-list__item__label {
-  --nl-paragraph-font-size: var(--rhc-navigation-list-item-label-font-size, var(--rhc-font-size-md-desktop));
+  --nl-paragraph-font-size: var(--rhc-navigation-list-item-label-font-size, var(--rhc-text-font-size-md-desktop));
   --nl-paragraph-font-weight: var(--rhc-navigation-list-item-label-font-weight, var(--rhc-text-font-weight-bold));
   --nl-paragraph-line-height: var(--rhc-navigation-list-item-label-line-height, var(--rhc-text-line-height-md));
 
@@ -79,7 +79,7 @@
 }
 @mixin rhc-navigation-list__item__description {
   --nl-paragraph-color: var(--rhc-color-foreground-subtle);
-  --nl-paragraph-font-size: var(--rhc-navigation-list-item-content-font-size, var(--rhc-font-size-sm-desktop));
+  --nl-paragraph-font-size: var(--rhc-navigation-list-item-content-font-size, var(--rhc-text-font-size-sm-desktop));
 
   grid-area: content;
   margin-block: 0;

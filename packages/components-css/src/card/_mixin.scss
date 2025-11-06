@@ -6,7 +6,7 @@
   display: inline-flex;
   flex-direction: column;
   font-family: var(--rhc-text-font-family-default, inherit);
-  font-size: var(--rhc-font-size-xs-desktop, inherit);
+  font-size: var(--rhc-text-font-size-xs-desktop, inherit);
   inline-size: var(--rhc-card-inline-size, 328px);
   line-height: var(--rhc-text-line-height-md, inherit);
   position: relative;
@@ -63,7 +63,7 @@
 @mixin rhc-card__subheading {
   align-items: center;
   display: flex;
-  font-size: var(--rhc-font-size-lg);
+  font-size: var(--rhc-text-font-size-lg);
   text-decoration: none;
 }
 
