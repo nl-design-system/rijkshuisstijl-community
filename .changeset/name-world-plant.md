@@ -30,14 +30,14 @@ Groepering 'text' is toegevoegd aan de font tokens:
 - naam `rhc.font-family.primary` gewijzigd naar `rhc.text.font-family.default`
 - naam `rhc.font-family.secondary` gewijzigd naar `rhc.text.font-family.serif`
 
-Font-size schaal is gewijzigd - op common-niveau:
+Font-size schaal is gewijzigd:
 - naam `rhc.font-size.heading.level-5` & `rhc.font-size.body.default` gewijzigd naar `rhc.text.font-size.md`
 - naam `rhc.font-size.heading.level-4` & `rhc.font-size.body.intro` gewijzigd naar `rhc.text.font-size.lg`
 - naam `rhc.font-size.heading.level-3` gewijzigd naar `rhc.text.font-size.xl`
 - naam `rhc.font-size.heading.level-2` gewijzigd naar `rhc.text.font-size.2xl`
 - naam `rhc.font-size.heading.level-1` gewijzigd naar `rhc.text.font-size.3xl`
 
-responsive schaal is gewijzigd - op brand-niveau:
+responsive schaal is gewijzigd:
 - naam `rhc.font-size.xs.desktop` gewijzigd naar `rhc.text.font-size.max.md`
 - naam `rhc.font-size.xs.mobile` gewijzigd naar `rhc.text.font-size.min.md`
 - naam `rhc.font-size.sm.desktop` gewijzigd naar `rhc.text.font-size.max.lg`
