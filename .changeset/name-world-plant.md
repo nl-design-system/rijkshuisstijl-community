@@ -24,6 +24,8 @@ Groepering 'text' is toegevoegd aan de font tokens:
 - naam `rhc.font-weight.semi-bold` gewijzigd naar `rhc.text.font-weight.semi-bold`
 - naam `rhc.font-weight.regular` gewijzigd naar `rhc.text.font-weight.regular`
 - naam `rhc.font-weight.light` gewijzigd naar `rhc.text.font-weight.light`
+- naam `rhc.font-weight.default` gewijzigd naar `rhc.text.font-weight.default`
+- naam `rhc.font-weight.strong` gewijzigd naar `rhc.text.font-weight.strong`
 - naam `rhc.font-weight.thin` gewijzigd naar `rhc.text.font-weight.thin`
 - naam `rhc.line-height.sm` gewijzigd naar `rhc.text.line-height.sm`
 - naam `rhc.line-height.md` & `rhc.line-height.body` gewijzigd naar `rhc.text.line-height.md`
