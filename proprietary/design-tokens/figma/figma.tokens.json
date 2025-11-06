@@ -734,7 +734,7 @@
         }
       },
       "font-size": {
-        "xs": {
+        "md": {
           "desktop": {
             "$type": "fontSizes",
             "$value": "1.25rem"
@@ -748,7 +748,7 @@
             "$value": "1rem"
           }
         },
-        "sm": {
+        "lg": {
           "desktop": {
             "$type": "fontSizes",
             "$value": "1.5rem"
@@ -762,7 +762,7 @@
             "$value": "1.2rem"
           }
         },
-        "md": {
+        "xl": {
           "desktop": {
             "$type": "fontSizes",
             "$value": "1.875rem"
@@ -776,7 +776,7 @@
             "$value": "1.5rem"
           }
         },
-        "lg": {
+        "2xl": {
           "desktop": {
             "$type": "fontSizes",
             "$value": "2.5rem"
@@ -790,7 +790,7 @@
             "$value": "2rem"
           }
         },
-        "xl": {
+        "3xl": {
           "desktop": {
             "$type": "fontSizes",
             "$value": "3.125rem"
@@ -1124,43 +1124,35 @@
     "rhc": {
       "text": {
         "font-size": {
-          "4xl": {
+          "md": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.xl.desktop}"
+            "$value": "{rhc.font-size.md.desktop}"
           },
-          "3xl": {
-            "$type": "fontSizes",
-            "$value": "{rhc.font-size.lg.desktop}"
-          },
-          "2xl": {
+          "lg": {
             "$type": "fontSizes",
             "$value": "{rhc.font-size.md.desktop}"
           },
           "xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.sm.desktop}"
+            "$value": "{rhc.font-size.lg.desktop}"
           },
-          "lg": {
+          "2xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.sm.desktop}"
+            "$value": "{rhc.font-size.xl.desktop}"
           },
-          "md": {
+          "3xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.xs.desktop}"
+            "$value": "{rhc.font-size.2xl.desktop}"
+          },
+          "4xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.font-size.3xl.desktop}"
           }
         },
         "font-family": {
           "default": {
             "$type": "fontFamilies",
             "$value": "{rhc.text.font-family.sans}"
-          }
-        }
-      },
-      "font-size": {
-        "heading": {
-          "level-5": {
-            "$type": "fontSizes",
-            "$value": "{rhc.font-size.xs.desktop}"
           }
         }
       },
@@ -4417,7 +4409,7 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.heading.level-5}"
+            "$value": "{rhc.text.font-size.lg}"
           },
           "font-weight": {
             "$type": "fontWeights",
@@ -4449,7 +4441,7 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.heading.level-5}"
+            "$value": "{rhc.text.font-size.lg}"
           },
           "font-weight": {
             "$type": "fontWeights",
@@ -5199,7 +5191,7 @@
             },
             "font-size": {
               "$type": "font-size",
-              "$value": "{rhc.font-size.md.desktop}"
+              "$value": "{rhc.font-size.xl.desktop}"
             },
             "font-weight": {
               "$type": "font-weight",
@@ -5557,7 +5549,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{rhc.font-size.xs.mobile}"
+          "$value": "{rhc.font-size.md.mobile}"
         }
       }
     }
@@ -6569,7 +6561,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{rhc.font-size.xs.desktop}"
+          "$value": "{rhc.font-size.md.desktop}"
         }
       }
     }
@@ -8614,33 +8606,33 @@
         "heading": {
           "level-1": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.xl.mobile}"
+            "$value": "{rhc.font-size.3xl.mobile}"
           },
           "level-2": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.lg.mobile}"
+            "$value": "{rhc.font-size.2xl.mobile}"
           },
           "level-3": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.md.mobile}"
+            "$value": "{rhc.font-size.xl.mobile}"
           },
           "level-4": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.sm.mobile}"
+            "$value": "{rhc.font-size.lg.mobile}"
           },
           "level-5": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.xs.mobile}"
+            "$value": "{rhc.font-size.md.mobile}"
           }
         },
         "body": {
           "intro": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.sm.mobile}"
+            "$value": "{rhc.font-size.lg.mobile}"
           },
           "default": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.xs.mobile}"
+            "$value": "{rhc.font-size.md.mobile}"
           }
         }
       }
@@ -8652,33 +8644,33 @@
         "heading": {
           "level-1": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.xl.tablet}"
+            "$value": "{rhc.font-size.3xl.tablet}"
           },
           "level-2": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.lg.tablet}"
+            "$value": "{rhc.font-size.2xl.tablet}"
           },
           "level-3": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.md.tablet}"
+            "$value": "{rhc.font-size.xl.tablet}"
           },
           "level-4": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.sm.tablet}"
+            "$value": "{rhc.font-size.lg.tablet}"
           },
           "level-5": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.xs.tablet}"
+            "$value": "{rhc.font-size.md.tablet}"
           }
         },
         "body": {
           "intro": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.sm.tablet}"
+            "$value": "{rhc.font-size.lg.tablet}"
           },
           "default": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.xs.tablet}"
+            "$value": "{rhc.font-size.md.tablet}"
           }
         }
       }
