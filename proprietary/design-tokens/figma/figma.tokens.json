@@ -843,11 +843,11 @@
         "font-weight": {
           "default": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.default}"
+            "$value": "{rhc.text.font-weight.default}"
           },
           "bold": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           }
         },
         "font-size": {
@@ -874,7 +874,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{rhc.font-weight.strong}"
+          "$value": "{rhc.text.font-weight.strong}"
         }
       },
       "border-width": {
@@ -1128,16 +1128,16 @@
             "$type": "lineHeights",
             "$value": "150%"
           }
-        }
-      },
-      "font-weight": {
-        "default": {
-          "$type": "fontWeights",
-          "$value": "{rhc.text.font-weight.regular}"
         },
-        "strong": {
-          "$type": "fontWeights",
-          "$value": "{rhc.text.font-weight.bold}"
+        "font-weight": {
+          "default": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.regular}"
+          },
+          "strong": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.bold}"
+          }
         }
       }
     }
@@ -1226,20 +1226,6 @@
       }
     }
   },
-  "utrecht/body": {
-    "utrecht": {
-      "body": {
-        "color": {
-          "$value": "{rhc.color.foreground.default}",
-          "$type": "color"
-        },
-        "font-family": {
-          "$value": "{rhc.text.font-family.default}",
-          "$type": "fontFamilies"
-        }
-      }
-    }
-  },
   "utrecht/document": {
     "utrecht": {
       "document": {
@@ -1265,7 +1251,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{rhc.font-weight.default}"
+          "$value": "{rhc.text.font-weight.default}"
         }
       }
     }
@@ -1344,16 +1330,30 @@
       }
     }
   },
+  "utrecht/body": {
+    "utrecht": {
+      "body": {
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.foreground.default}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{rhc.text.font-family.default}"
+        }
+      }
+    }
+  },
   "utrecht/root": {
     "utrecht": {
       "root": {
         "color": {
-          "$value": "{rhc.color.foreground.default}",
-          "$type": "color"
+          "$type": "color",
+          "$value": "{rhc.color.foreground.default}"
         },
         "font-family": {
-          "$value": "{rhc.text.font-family.default}",
-          "$type": "fontFamilies"
+          "$type": "fontFamilies",
+          "$value": "{rhc.text.font-family.default}"
         }
       }
     }
@@ -1938,7 +1938,7 @@
           "current": {
             "font-weight": {
               "$type": "fontWeights",
-              "$value": "{rhc.font-weight.default}"
+              "$value": "{rhc.text.font-weight.default}"
             }
           },
           "active": {
@@ -2042,7 +2042,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{rhc.font-weight.strong}"
+          "$value": "{rhc.text.font-weight.strong}"
         },
         "line-height": {
           "$type": "lineHeights",
@@ -2167,7 +2167,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -2265,7 +2265,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -2364,7 +2364,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -2616,7 +2616,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           }
         },
         "horizontal": {
@@ -2816,7 +2816,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           }
         },
         "horizontal": {
@@ -3402,7 +3402,7 @@
         "item-value": {
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.default}"
+            "$value": "{rhc.text.font-weight.default}"
           },
           "row": {
             "padding-block-end": {
@@ -3442,7 +3442,7 @@
         "item-key": {
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           },
           "row": {
             "padding-block-end": {
@@ -3660,7 +3660,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -4034,7 +4034,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{rhc.font-weight.default}"
+          "$value": "{rhc.text.font-weight.default}"
         },
         "line-height": {
           "$type": "lineHeights",
@@ -4104,7 +4104,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{rhc.font-weight.strong}"
+          "$value": "{rhc.text.font-weight.strong}"
         },
         "line-height": {
           "$type": "lineHeights",
@@ -4126,7 +4126,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{rhc.font-weight.strong}"
+          "$value": "{rhc.text.font-weight.strong}"
         },
         "checkbox": {
           "color": {
@@ -4135,7 +4135,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.default}"
+            "$value": "{rhc.text.font-weight.default}"
           }
         },
         "radio": {
@@ -4145,13 +4145,13 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.default}"
+            "$value": "{rhc.text.font-weight.default}"
           }
         },
         "checked": {
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.default}"
+            "$value": "{rhc.text.font-weight.default}"
           }
         },
         "disabled": {
@@ -4184,7 +4184,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{rhc.font-weight.default}"
+          "$value": "{rhc.text.font-weight.default}"
         },
         "disabled": {
           "color": {
@@ -4204,7 +4204,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{rhc.font-weight.default}"
+          "$value": "{rhc.text.font-weight.default}"
         },
         "row-gap": {
           "$type": "dimension",
@@ -4281,7 +4281,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -4313,7 +4313,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -4345,7 +4345,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -4377,7 +4377,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -4409,7 +4409,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -4441,7 +4441,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -4467,7 +4467,7 @@
         "heading": {
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -4485,7 +4485,7 @@
         "sub-heading": {
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.default}"
+            "$value": "{rhc.text.font-weight.default}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -4634,7 +4634,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.default}"
+            "$value": "{rhc.text.font-weight.default}"
           }
         }
       }
@@ -4997,7 +4997,7 @@
             },
             "font-weight": {
               "$type": "font-weight",
-              "$value": "{rhc.font-weight.strong}"
+              "$value": "{rhc.text.font-weight.strong}"
             },
             "line-height": {
               "$type": "line-height",
@@ -5124,7 +5124,7 @@
         "heading": {
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           }
         },
         "background-color": {
@@ -5199,7 +5199,7 @@
             },
             "font-weight": {
               "$type": "font-weight",
-              "$value": "{rhc.font-weight.strong}"
+              "$value": "{rhc.text.font-weight.strong}"
             },
             "line-height": {
               "$type": "line-height",
@@ -5299,7 +5299,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{rhc.font-weight.strong}"
+          "$value": "{rhc.text.font-weight.strong}"
         },
         "min-block-size": {
           "$type": "dimension",
@@ -5489,7 +5489,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{rhc.font-weight.default}"
+          "$value": "{rhc.text.font-weight.default}"
         },
         "line-height": {
           "$type": "lineHeights",
@@ -5512,7 +5512,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.default}"
+            "$value": "{rhc.text.font-weight.default}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -5545,7 +5545,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{rhc.font-weight.strong}"
+          "$value": "{rhc.text.font-weight.strong}"
         },
         "line-height": {
           "$type": "lineHeights",
@@ -5848,7 +5848,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{rhc.font-weight.default}"
+          "$value": "{rhc.text.font-weight.default}"
         },
         "icon": {
           "size": {
@@ -6013,12 +6013,12 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.default}"
+            "$value": "{rhc.text.font-weight.default}"
           },
           "current": {
             "font-weight": {
               "$type": "fontWeights",
-              "$value": "{rhc.font-weight.strong}"
+              "$value": "{rhc.text.font-weight.strong}"
             },
             "color": {
               "$type": "color",
@@ -6161,7 +6161,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{rhc.font-weight.strong}"
+          "$value": "{rhc.text.font-weight.strong}"
         },
         "border-width": {
           "$type": "dimension",
@@ -6322,7 +6322,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           },
           "font-size": {
             "$type": "fontSizes",
@@ -6348,7 +6348,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           },
           "font-size": {
             "$type": "fontSizes",
@@ -6388,7 +6388,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.default}"
+            "$value": "{rhc.text.font-weight.default}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -6444,7 +6444,7 @@
         "footer-cell": {
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.strong}"
           },
           "font-size": {
             "$type": "fontSizes",
@@ -6571,7 +6571,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{rhc.font-weight.default}"
+          "$value": "{rhc.text.font-weight.default}"
         },
         "line-height": {
           "$type": "lineHeights",
@@ -6759,7 +6759,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{rhc.font-weight.default}"
+          "$value": "{rhc.text.font-weight.default}"
         },
         "line-height": {
           "$type": "lineHeights",
@@ -8655,12 +8655,12 @@
       "button": {
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{rhc.font-weight.default}"
+          "$value": "{rhc.text.font-weight.default}"
         },
         "primary-action": {
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.default}"
+            "$value": "{rhc.text.font-weight.default}"
           }
         },
         "secondary-action": {
@@ -8694,7 +8694,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.default}"
+            "$value": "{rhc.text.font-weight.default}"
           },
           "pressed": {
             "background-color": {
@@ -8714,7 +8714,7 @@
         "subtle": {
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.font-weight.default}"
+            "$value": "{rhc.text.font-weight.default}"
           },
           "hover": {
             "background-color": {
@@ -9640,6 +9640,8 @@
       "utrecht/focus",
       "utrecht/pointer-target",
       "utrecht/rich-text",
+      "utrecht/body",
+      "utrecht/root",
       "components/accordion",
       "components/action-group",
       "components/alert",
