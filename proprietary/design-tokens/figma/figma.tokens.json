@@ -711,14 +711,16 @@
           "$value": "200"
         }
       },
-      "font-family": {
-        "primary": {
-          "$type": "fontFamilies",
-          "$value": "'Fira Sans', Arial, Verdana, sans-serif"
-        },
-        "secondary": {
-          "$type": "fontFamilies",
-          "$value": "RijksoverheidSerifWeb, 'Times New Roman', serif"
+      "text": {
+        "font-family": {
+          "sans": {
+            "$type": "fontFamilies",
+            "$value": "'Fira Sans', Arial, Verdana, sans-serif"
+          },
+          "serif": {
+            "$type": "fontFamilies",
+            "$value": "RijksoverheidSerifWeb, 'Times New Roman', serif"
+          }
         }
       },
       "font-size": {
@@ -871,7 +873,7 @@
         "font-family": {
           "default": {
             "$type": "fontFamilies",
-            "$value": "{rhc.font-family.primary}"
+            "$value": "{rhc.text.font-family.default}"
           }
         },
         "font-weight": {
@@ -904,7 +906,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "font-weight": {
           "$type": "fontWeights",
@@ -1169,6 +1171,14 @@
           "$type": "lineHeights",
           "$value": "{rhc.line-height.md}"
         }
+      },
+      "text": {
+        "font-family": {
+          "default": {
+            "$type": "fontFamilies",
+            "$value": "{rhc.text.font-family.sans}"
+          }
+        }
       }
     }
   },
@@ -1269,7 +1279,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -1808,7 +1818,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "padding-block-end": {
           "$type": "dimension",
@@ -1878,7 +1888,7 @@
       "breadcrumb-nav": {
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -2036,7 +2046,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -3399,7 +3409,7 @@
       "data-summary": {
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "item-value": {
           "font-weight": {
@@ -3654,7 +3664,7 @@
           },
           "font-family": {
             "$type": "fontFamilies",
-            "$value": "{rhc.font-family.primary}"
+            "$value": "{rhc.text.font-family.default}"
           },
           "font-size": {
             "$type": "fontSizes",
@@ -3992,7 +4002,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -4028,7 +4038,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -4098,7 +4108,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -4182,7 +4192,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "font-weight": {
           "$type": "fontWeights",
@@ -4281,7 +4291,7 @@
           },
           "font-family": {
             "$type": "fontFamilies",
-            "$value": "{rhc.font-family.primary}"
+            "$value": "{rhc.text.font-family.default}"
           },
           "font-size": {
             "$type": "fontSizes",
@@ -4313,7 +4323,7 @@
           },
           "font-family": {
             "$type": "fontFamilies",
-            "$value": "{rhc.font-family.primary}"
+            "$value": "{rhc.text.font-family.default}"
           },
           "font-size": {
             "$type": "fontSizes",
@@ -4345,7 +4355,7 @@
           },
           "font-family": {
             "$type": "fontFamilies",
-            "$value": "{rhc.font-family.primary}"
+            "$value": "{rhc.text.font-family.default}"
           },
           "font-size": {
             "$type": "fontSizes",
@@ -4377,7 +4387,7 @@
           },
           "font-family": {
             "$type": "fontFamilies",
-            "$value": "{rhc.font-family.primary}"
+            "$value": "{rhc.text.font-family.default}"
           },
           "font-size": {
             "$type": "fontSizes",
@@ -4409,7 +4419,7 @@
           },
           "font-family": {
             "$type": "fontFamilies",
-            "$value": "{rhc.font-family.primary}"
+            "$value": "{rhc.text.font-family.default}"
           },
           "font-size": {
             "$type": "fontSizes",
@@ -4441,7 +4451,7 @@
           },
           "font-family": {
             "$type": "fontFamilies",
-            "$value": "{rhc.font-family.primary}"
+            "$value": "{rhc.text.font-family.default}"
           },
           "font-size": {
             "$type": "fontSizes",
@@ -4487,7 +4497,7 @@
           },
           "font-family": {
             "$type": "fontFamilies",
-            "$value": "{rhc.font-family.primary}"
+            "$value": "{rhc.text.font-family.default}"
           }
         },
         "sub-heading": {
@@ -4505,7 +4515,7 @@
           },
           "font-family": {
             "$type": "fontFamilies",
-            "$value": "{rhc.font-family.primary}"
+            "$value": "{rhc.text.font-family.default}"
           }
         },
         "message": {
@@ -4917,7 +4927,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "color": {
           "$type": "color",
@@ -4989,7 +4999,7 @@
           "label": {
             "font-family": {
               "$type": "font-family",
-              "$value": "{rhc.font-family.primary}"
+              "$value": "{rhc.text.font-family.default}"
             },
             "font-size": {
               "$type": "font-size",
@@ -5191,7 +5201,7 @@
           "label": {
             "font-family": {
               "$type": "font-family",
-              "$value": "{rhc.font-family.primary}"
+              "$value": "{rhc.text.font-family.default}"
             },
             "font-size": {
               "$type": "font-size",
@@ -5291,7 +5301,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -5421,7 +5431,7 @@
       "pagination": {
         "font-family": {
           "$type": "other",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "$type": "other",
@@ -5481,7 +5491,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -5541,7 +5551,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "font-weight": {
           "$type": "fontWeights",
@@ -5840,7 +5850,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -6063,7 +6073,7 @@
           },
           "font-family": {
             "$type": "fontFamilies",
-            "$value": "{rhc.font-family.primary}"
+            "$value": "{rhc.text.font-family.default}"
           },
           "font-weight": {
             "$type": "fontWeights",
@@ -6223,7 +6233,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "border-radius": {
           "$type": "dimension",
@@ -6372,7 +6382,7 @@
           },
           "font-family": {
             "$type": "fontFamilies",
-            "$value": "{rhc.font-family.primary}"
+            "$value": "{rhc.text.font-family.default}"
           },
           "font-weight": {
             "$type": "fontWeights",
@@ -6398,7 +6408,7 @@
           },
           "font-family": {
             "$type": "fontFamilies",
-            "$value": "{rhc.font-family.primary}"
+            "$value": "{rhc.text.font-family.default}"
           },
           "font-weight": {
             "$type": "fontWeights",
@@ -6438,7 +6448,7 @@
           },
           "font-family": {
             "$type": "fontFamilies",
-            "$value": "{rhc.font-family.primary}"
+            "$value": "{rhc.text.font-family.default}"
           },
           "font-weight": {
             "$type": "fontWeights",
@@ -6510,7 +6520,7 @@
           },
           "font-family": {
             "$type": "fontFamilies",
-            "$value": "{rhc.font-family.primary}"
+            "$value": "{rhc.text.font-family.default}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -6617,7 +6627,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -6805,7 +6815,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -8541,7 +8551,7 @@
         },
         "font-family": {
           "$type": "fontFamilies",
-          "$value": "{rhc.font-family.primary}"
+          "$value": "{rhc.text.font-family.default}"
         },
         "padding-block-end": {
           "$type": "dimension",
