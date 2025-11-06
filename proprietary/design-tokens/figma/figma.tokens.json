@@ -731,77 +731,51 @@
             "$type": "lineHeights",
             "$value": "150%"
           }
-        }
-      },
-      "font-size": {
-        "md": {
-          "desktop": {
-            "$type": "fontSizes",
-            "$value": "1.25rem"
-          },
-          "tablet": {
-            "$type": "fontSizes",
-            "$value": "1.125rem"
-          },
-          "mobile": {
-            "$type": "fontSizes",
-            "$value": "1rem"
-          }
         },
-        "lg": {
-          "desktop": {
-            "$type": "fontSizes",
-            "$value": "1.5rem"
+        "font-size": {
+          "max": {
+            "md": {
+              "$type": "fontSizes",
+              "$value": "1.25rem"
+            },
+            "lg": {
+              "$type": "fontSizes",
+              "$value": "1.5rem"
+            },
+            "xl": {
+              "$type": "fontSizes",
+              "$value": "1.875rem"
+            },
+            "2xl": {
+              "$type": "fontSizes",
+              "$value": "2.5rem"
+            },
+            "3xl": {
+              "$type": "fontSizes",
+              "$value": "3.125rem"
+            }
           },
-          "tablet": {
-            "$type": "fontSizes",
-            "$value": "1.35rem"
-          },
-          "mobile": {
-            "$type": "fontSizes",
-            "$value": "1.2rem"
-          }
-        },
-        "xl": {
-          "desktop": {
-            "$type": "fontSizes",
-            "$value": "1.875rem"
-          },
-          "tablet": {
-            "$type": "fontSizes",
-            "$value": "1.688rem"
-          },
-          "mobile": {
-            "$type": "fontSizes",
-            "$value": "1.5rem"
-          }
-        },
-        "2xl": {
-          "desktop": {
-            "$type": "fontSizes",
-            "$value": "2.5rem"
-          },
-          "tablet": {
-            "$type": "fontSizes",
-            "$value": "2.25rem"
-          },
-          "mobile": {
-            "$type": "fontSizes",
-            "$value": "2rem"
-          }
-        },
-        "3xl": {
-          "desktop": {
-            "$type": "fontSizes",
-            "$value": "3.125rem"
-          },
-          "tablet": {
-            "$type": "fontSizes",
-            "$value": "2.813rem"
-          },
-          "mobile": {
-            "$type": "fontSizes",
-            "$value": "2.5rem"
+          "min": {
+            "md": {
+              "$type": "fontSizes",
+              "$value": "1rem"
+            },
+            "lg": {
+              "$type": "fontSizes",
+              "$value": "1.2rem"
+            },
+            "xl": {
+              "$type": "fontSizes",
+              "$value": "1.5rem"
+            },
+            "2xl": {
+              "$type": "fontSizes",
+              "$value": "2rem"
+            },
+            "3xl": {
+              "$type": "fontSizes",
+              "$value": "2.5rem"
+            }
           }
         }
       }
@@ -1126,27 +1100,27 @@
         "font-size": {
           "md": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.md.desktop}"
+            "$value": "{rhc.text.font-size.max.md}"
           },
           "lg": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.md.desktop}"
+            "$value": "{rhc.text.font-size.max.md}"
           },
           "xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.lg.desktop}"
+            "$value": "{rhc.text.font-size.max.lg}"
           },
           "2xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.xl.desktop}"
+            "$value": "{rhc.text.font-size.max.xl}"
           },
           "3xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.2xl.desktop}"
+            "$value": "{rhc.text.font-size.max.2xl}"
           },
           "4xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.3xl.desktop}"
+            "$value": "{rhc.text.font-size.max.3xl}"
           }
         },
         "font-family": {
@@ -5191,7 +5165,7 @@
             },
             "font-size": {
               "$type": "font-size",
-              "$value": "{rhc.font-size.xl.desktop}"
+              "$value": "{rhc.text.font-size.max.xl}"
             },
             "font-weight": {
               "$type": "font-weight",
@@ -5549,7 +5523,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{rhc.font-size.md.mobile}"
+          "$value": "{rhc.text.font-size.min.md}"
         }
       }
     }
@@ -6561,7 +6535,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{rhc.font-size.md.desktop}"
+          "$value": "{rhc.text.font-size.max.md}"
         }
       }
     }
@@ -8606,33 +8580,33 @@
         "heading": {
           "level-1": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.3xl.mobile}"
+            "$value": "{rhc.text.font-size.min.3xl}"
           },
           "level-2": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.2xl.mobile}"
+            "$value": "{rhc.text.font-size.min.2xl}"
           },
           "level-3": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.xl.mobile}"
+            "$value": "{rhc.text.font-size.min.xl}"
           },
           "level-4": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.lg.mobile}"
+            "$value": "{rhc.text.font-size.min.lg}"
           },
           "level-5": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.md.mobile}"
+            "$value": "{rhc.text.font-size.min.md}"
           }
         },
         "body": {
           "intro": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.lg.mobile}"
+            "$value": "{rhc.text.font-size.min.lg}"
           },
           "default": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.md.mobile}"
+            "$value": "{rhc.text.font-size.min.md}"
           }
         }
       }
@@ -8644,33 +8618,33 @@
         "heading": {
           "level-1": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.3xl.tablet}"
+            "$value": "{rhc.text.font-size.3xl.tablet}"
           },
           "level-2": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.2xl.tablet}"
+            "$value": "{rhc.text.font-size.2xl.tablet}"
           },
           "level-3": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.xl.tablet}"
+            "$value": "{rhc.text.font-size.xl.tablet}"
           },
           "level-4": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.lg.tablet}"
+            "$value": "{rhc.text.font-size.lg.tablet}"
           },
           "level-5": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.md.tablet}"
+            "$value": "{rhc.text.font-size.md.tablet}"
           }
         },
         "body": {
           "intro": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.lg.tablet}"
+            "$value": "{rhc.text.font-size.lg.tablet}"
           },
           "default": {
             "$type": "fontSizes",
-            "$value": "{rhc.font-size.md.tablet}"
+            "$value": "{rhc.text.font-size.md.tablet}"
           }
         }
       }
