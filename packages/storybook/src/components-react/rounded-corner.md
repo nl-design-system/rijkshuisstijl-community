@@ -63,7 +63,7 @@ Deze tokens zijn gericht op de border radius en de kant van de hoek. De content 
   </tr>
   <tr>
     <td>.rhc-rounded-corner--size-lg</td>
-    <td>Anderhalve lint-breedte (--rhc-rounded-corner-lg-border-radius -> --rhc-size-3-lint -> 72px)</td>
+    <td>Twee lint-breedte (--rhc-rounded-corner-lg-border-radius -> --rhc-size-2-lint -> 96px)</td>
   </tr>
 </table>
 
