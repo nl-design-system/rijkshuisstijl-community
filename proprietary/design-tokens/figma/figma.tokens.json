@@ -8142,34 +8142,36 @@
   },
   "overwrites/heading-color/primary": {
     "nl": {
-      "heading-level-1": {
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.primary.500}"
-        }
-      },
-      "heading-level-2": {
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.primary.500}"
-        }
-      },
-      "heading-level-3": {
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.primary.500}"
-        }
-      },
-      "heading-level-4": {
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.primary.500}"
-        }
-      },
-      "heading-level-5": {
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.primary.500}"
+      "heading": {
+        "level-1": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
+          }
+        },
+        "level-2": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
+          }
+        },
+        "level-3": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
+          }
+        },
+        "level-4": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
+          }
+        },
+        "level-5": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
+          }
         }
       }
     }
@@ -8533,90 +8535,38 @@
       "border-radius": {
         "sm": {
           "$type": "dimension",
-          "$value": "0"
+          "$value": "0px"
         },
         "md": {
           "$type": "dimension",
-          "$value": "0"
-        },
-        "keep": {
-          "$type": "dimension",
-          "$value": "0"
+          "$value": "0px"
         }
       }
     }
   },
-  "overwrites/responsive/mobile": {
+  "overwrites/responsive/min": {
     "rhc": {
-      "font-size": {
-        "heading": {
-          "level-1": {
+      "text": {
+        "font-size": {
+          "md": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.3xl}"
+            "$value": "{rhc.text.font-size.min.md}"
           },
-          "level-2": {
+          "lg": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.2xl}"
+            "$value": "{rhc.text.font-size.min.lg}"
           },
-          "level-3": {
+          "xl": {
             "$type": "fontSizes",
             "$value": "{rhc.text.font-size.min.xl}"
           },
-          "level-4": {
+          "2xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.lg}"
+            "$value": "{rhc.text.font-size.min.2xl}"
           },
-          "level-5": {
+          "3xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.md}"
-          }
-        },
-        "body": {
-          "intro": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.lg}"
-          },
-          "default": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.md}"
-          }
-        }
-      }
-    }
-  },
-  "overwrites/responsive/tablet": {
-    "rhc": {
-      "font-size": {
-        "heading": {
-          "level-1": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.3xl.tablet}"
-          },
-          "level-2": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.2xl.tablet}"
-          },
-          "level-3": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.xl.tablet}"
-          },
-          "level-4": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.lg.tablet}"
-          },
-          "level-5": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.md.tablet}"
-          }
-        },
-        "body": {
-          "intro": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.lg.tablet}"
-          },
-          "default": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.md.tablet}"
+            "$value": "{rhc.text.font-size.min.3xl}"
           }
         }
       }
@@ -8624,24 +8574,28 @@
   },
   "overwrites/font-weight/bzk": {
     "rhc": {
-      "font-weight": {
-        "default": {
-          "$type": "fontWeights",
-          "$value": "{rhc.text.font-weight.light}"
-        },
-        "strong": {
-          "$type": "fontWeights",
-          "$value": "{rhc.text.font-weight.semi-bold}"
+      "text": {
+        "font-weight": {
+          "default": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.light}"
+          },
+          "strong": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.semi-bold}"
+          }
         }
       }
     }
   },
   "overwrites/closed-source/font": {
     "rhc": {
-      "font-family": {
-        "primary": {
-          "$type": "fontFamilies",
-          "$value": "RijksSans, Arial, Verdana, sans-serif"
+      "text": {
+        "font-family": {
+          "default": {
+            "$type": "fontFamilies",
+            "$value": "RijksSans, Arial, Verdana, sans-serif"
+          }
         }
       }
     }
@@ -9730,8 +9684,7 @@
       "overwrites/nav-bar/lintblauw-outline",
       "overwrites/oude rijkshuisstijl/blockqoute",
       "overwrites/oude rijkshuisstijl/border",
-      "overwrites/responsive/mobile",
-      "overwrites/responsive/tablet",
+      "overwrites/responsive/min",
       "overwrites/font-weight/bzk",
       "overwrites/closed-source/font",
       "overwrites/afwijkende keuzes/button"
