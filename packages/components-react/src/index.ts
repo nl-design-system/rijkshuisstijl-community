@@ -1,5 +1,3 @@
-import '@rijkshuisstijl-community/components-css/dist/index.css';
-
 // Export overwrites and new components
 export {
   Accordion,
