@@ -2,4 +2,8 @@
 '@rijkshuisstijl-community/design-tokens': major
 ---
 
-Removed rounded corner common tokens and added rounded corner component tokens as the rounded corner will be provided as a utility component instead of individual tokens.
+Updated rounded corner common tokens to the following values:
+--rhc-rounded-corner-overflow
+--rhc-rounded-corner-sm-border-radius
+--rhc-rounded-corner-md-border-radius
+--rhc-rounded-corner-lg-border-radius
