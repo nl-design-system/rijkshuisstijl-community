@@ -1064,7 +1064,7 @@
             "$value": "#162f50",
             "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
           },
-          "ative": {
+          "active": {
             "$type": "color",
             "$value": "#162945",
             "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
@@ -2227,8 +2227,7 @@
             },
             "background-color": {
               "$type": "color",
-              "$value": "#162945",
-              "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
+              "$value": "{rhc.color.primary.active}"
             }
           },
           "active": {
@@ -2242,8 +2241,7 @@
             },
             "background-color": {
               "$type": "color",
-              "$value": "#0d2845",
-              "$description": "Originally rhc.color.primary.500 darkened (srgb) by 0.3"
+              "$value": "{rhc.color.primary.active}"
             }
           }
         },
@@ -2321,13 +2319,11 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "#162945",
-              "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
+              "$value": "{rhc.color.primary.active}"
             },
             "color": {
               "$type": "color",
-              "$value": "#162945",
-              "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
+              "$value": "{rhc.color.primary.active}"
             }
           },
           "active": {
@@ -2337,12 +2333,11 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.hover}"
+              "$value": "{rhc.color.primary.active}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "#162945",
-              "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
+              "$value": "{rhc.color.primary.active}"
             }
           }
         },
@@ -2424,8 +2419,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "#162945",
-              "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
+              "$value": "{rhc.color.primary.active}"
             }
           },
           "active": {
@@ -2439,8 +2433,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "#0d2845",
-              "$description": "Originally rhc.color.primary.500 darkened (srgb) by 0.4"
+              "$value": "{rhc.color.primary.active}"
             }
           }
         }
@@ -7055,82 +7048,11 @@
           },
           "hover": {
             "$type": "color",
-            "$value": "#2C5D12",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
-          }
-        }
-      }
-    }
-  },
-  "overwrites/primaire kleur/mintgroen": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.50}"
+            "$value": "#2C5D12"
           },
-          "100": {
+          "active": {
             "$type": "color",
-            "$value": "{rhc.color.mintgroen.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "#528E7C",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
-          }
-        }
-      }
-    }
-  },
-  "overwrites/primaire kleur/oranje": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "#994E0E",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
+            "$value": "#275012"
           }
         }
       }
@@ -7166,8 +7088,91 @@
           },
           "hover": {
             "$type": "color",
-            "$value": "#1A5587",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
+            "$value": "#1A5587"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#1A4972"
+          }
+        }
+      }
+    }
+  },
+  "overwrites/primaire kleur/mintgroen": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#528E7C"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#477869"
+          }
+        }
+      }
+    }
+  },
+  "overwrites/primaire kleur/oranje": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#994E0E"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#82430F"
           }
         }
       }
@@ -7203,82 +7208,11 @@
           },
           "hover": {
             "$type": "color",
-            "$value": "#301243",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
-          }
-        }
-      }
-    }
-  },
-  "overwrites/primaire kleur/roze": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.roze.50}"
+            "$value": "#301243"
           },
-          "100": {
+          "active": {
             "$type": "color",
-            "$value": "{rhc.color.roze.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.roze.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.roze.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.roze.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.roze.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "#A2648A",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
-          }
-        }
-      }
-    }
-  },
-  "overwrites/primaire kleur/violet": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.violet.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.violet.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.violet.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.violet.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.violet.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.violet.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "#741344",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
+            "$value": "#2B113A"
           }
         }
       }
@@ -7314,8 +7248,91 @@
           },
           "hover": {
             "$type": "color",
-            "$value": "#8A1641",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
+            "$value": "#8A1641"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#761838"
+          }
+        }
+      }
+    }
+  },
+  "overwrites/primaire kleur/roze": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.roze.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.roze.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.roze.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.roze.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.roze.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.roze.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#A2648A"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#895675"
+          }
+        }
+      }
+    }
+  },
+  "overwrites/primaire kleur/violet": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.violet.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.violet.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.violet.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.violet.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.violet.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.violet.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#741344"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#63143A"
           }
         }
       }
@@ -9510,13 +9527,13 @@
       "components/toggletip",
       "components/unordered-list",
       "overwrites/primaire kleur/groen",
+      "overwrites/primaire kleur/hemelblauw",
       "overwrites/primaire kleur/mintgroen",
       "overwrites/primaire kleur/oranje",
-      "overwrites/primaire kleur/hemelblauw",
       "overwrites/primaire kleur/paars",
+      "overwrites/primaire kleur/robijn rood",
       "overwrites/primaire kleur/roze",
       "overwrites/primaire kleur/violet",
-      "overwrites/primaire kleur/robijn rood",
       "overwrites/primaire kleur/contrast fix/foreground op lichte kleur",
       "overwrites/primaire kleur/contrast fix/non primary button labels coolgrey",
       "overwrites/primaire kleur/contrast fix/alle buttons lintblauw",
