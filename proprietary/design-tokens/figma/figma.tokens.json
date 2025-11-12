@@ -8211,6 +8211,122 @@
       }
     }
   },
+  "overwrites/responsive/min": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "md": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.md}"
+          },
+          "lg": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.lg}"
+          },
+          "xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.xl}"
+          },
+          "2xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.2xl}"
+          },
+          "3xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.3xl}"
+          }
+        }
+      }
+    }
+  },
+  "overwrites/font-weight/bzk": {
+    "rhc": {
+      "text": {
+        "font-weight": {
+          "default": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.light}"
+          },
+          "strong": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.semi-bold}"
+          }
+        }
+      }
+    }
+  },
+  "overwrites/type-scale/information dense": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "max": {
+            "md": {
+              "$type": "fontSizes",
+              "$value": "1rem"
+            },
+            "lg": {
+              "$type": "fontSizes",
+              "$value": "1.2rem"
+            },
+            "xl": {
+              "$type": "fontSizes",
+              "$value": "1.5rem"
+            },
+            "2xl": {
+              "$type": "fontSizes",
+              "$value": "2rem"
+            },
+            "3xl": {
+              "$type": "fontSizes",
+              "$value": "2.5rem"
+            }
+          }
+        }
+      }
+    }
+  },
+  "overwrites/type-scale/promotion": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "max": {
+            "md": {
+              "$type": "fontSizes",
+              "$value": "1.25rem"
+            },
+            "lg": {
+              "$type": "fontSizes",
+              "$value": "1.5rem"
+            },
+            "xl": {
+              "$type": "fontSizes",
+              "$value": "2.25rem"
+            },
+            "2xl": {
+              "$type": "fontSizes",
+              "$value": "3rem"
+            },
+            "3xl": {
+              "$type": "fontSizes",
+              "$value": "4rem"
+            }
+          }
+        }
+      }
+    }
+  },
+  "overwrites/closed-source/font": {
+    "rhc": {
+      "text": {
+        "font-family": {
+          "default": {
+            "$type": "fontFamilies",
+            "$value": "RijksSans, Arial, Verdana, sans-serif"
+          }
+        }
+      }
+    }
+  },
   "overwrites/footer/lintblauw-background": {
     "utrecht": {
       "page-footer": {
@@ -8483,122 +8599,6 @@
         "border-color": {
           "$type": "color",
           "$value": "{rhc.color.lintblauw.500}"
-        }
-      }
-    }
-  },
-  "overwrites/responsive/min": {
-    "rhc": {
-      "text": {
-        "font-size": {
-          "md": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.md}"
-          },
-          "lg": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.lg}"
-          },
-          "xl": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.xl}"
-          },
-          "2xl": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.2xl}"
-          },
-          "3xl": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.3xl}"
-          }
-        }
-      }
-    }
-  },
-  "overwrites/font-weight/bzk": {
-    "rhc": {
-      "text": {
-        "font-weight": {
-          "default": {
-            "$type": "fontWeights",
-            "$value": "{rhc.text.font-weight.light}"
-          },
-          "strong": {
-            "$type": "fontWeights",
-            "$value": "{rhc.text.font-weight.semi-bold}"
-          }
-        }
-      }
-    }
-  },
-  "overwrites/type-scale/information dense": {
-    "rhc": {
-      "text": {
-        "font-size": {
-          "max": {
-            "md": {
-              "$type": "fontSizes",
-              "$value": "1rem"
-            },
-            "lg": {
-              "$type": "fontSizes",
-              "$value": "1.2rem"
-            },
-            "xl": {
-              "$type": "fontSizes",
-              "$value": "1.5rem"
-            },
-            "2xl": {
-              "$type": "fontSizes",
-              "$value": "2rem"
-            },
-            "3xl": {
-              "$type": "fontSizes",
-              "$value": "2.5rem"
-            }
-          }
-        }
-      }
-    }
-  },
-  "overwrites/type-scale/promotion": {
-    "rhc": {
-      "text": {
-        "font-size": {
-          "max": {
-            "md": {
-              "$type": "fontSizes",
-              "$value": "1.25rem"
-            },
-            "lg": {
-              "$type": "fontSizes",
-              "$value": "1.5rem"
-            },
-            "xl": {
-              "$type": "fontSizes",
-              "$value": "2.25rem"
-            },
-            "2xl": {
-              "$type": "fontSizes",
-              "$value": "3rem"
-            },
-            "3xl": {
-              "$type": "fontSizes",
-              "$value": "4rem"
-            }
-          }
-        }
-      }
-    }
-  },
-  "overwrites/closed-source/font": {
-    "rhc": {
-      "text": {
-        "font-family": {
-          "default": {
-            "$type": "fontFamilies",
-            "$value": "RijksSans, Arial, Verdana, sans-serif"
-          }
         }
       }
     }
@@ -9578,17 +9578,17 @@
       "overwrites/primaire kleur/contrast fix/button label groter",
       "overwrites/primaire kleur/contrast fix/non primary buttons coolgrey",
       "overwrites/heading-color/primary",
+      "overwrites/responsive/min",
+      "overwrites/font-weight/bzk",
+      "overwrites/type-scale/information dense",
+      "overwrites/type-scale/promotion",
+      "overwrites/closed-source/font",
       "overwrites/footer/lintblauw-background",
       "overwrites/footer/lintblauw-outline",
       "overwrites/footer/primary-outline",
       "overwrites/nav-bar/lintblauw-background",
       "overwrites/nav-bar/primary-background",
-      "overwrites/nav-bar/lintblauw-outline",
-      "overwrites/responsive/min",
-      "overwrites/font-weight/bzk",
-      "overwrites/type-scale/information dense",
-      "overwrites/type-scale/promotion",
-      "overwrites/closed-source/font"
+      "overwrites/nav-bar/lintblauw-outline"
     ]
   }
 }
