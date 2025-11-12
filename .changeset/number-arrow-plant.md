@@ -5,6 +5,7 @@
 Thema's geupdate
 - body + root enabled
 - Hover & active button kleuren van lint-blauw naar de thema kleuren
+- Aantal thema's Rijkssans als default font toegekend
   
 Overwrites tokensets geupdate en opgeruimd
 - Type-scale toegevoegd
