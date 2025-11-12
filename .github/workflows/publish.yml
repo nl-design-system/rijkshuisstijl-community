@@ -22,10 +22,9 @@ jobs:
         uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
 
       - name: Set up Node.js version
-        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: .nvmrc
-          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -42,10 +41,9 @@ jobs:
         uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
 
       - name: Set up Node.js version
-        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: .nvmrc
-          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -68,10 +66,9 @@ jobs:
         uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
 
       - name: Set up Node.js version
-        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: .nvmrc
-          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -86,20 +83,20 @@ jobs:
         run: pnpm run --if-present typecheck
 
       - name: "Retain build artifact: Storybook"
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
         with:
           name: storybook
           path: packages/storybook/dist/
           retention-days: 1
 
       - name: "Retain build artifact: CSS"
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
         with:
           name: css
           path: packages/components-css/dist/
 
       - name: "Retain build artifact: Storybook Angular"
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
         with:
           name: storybook-angular
           path: packages/storybook-angular/dist/
@@ -118,10 +115,9 @@ jobs:
         uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
 
       - name: Set up Node.js version
-        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: .nvmrc
-          cache: pnpm
 
       - name: "Restore build artifact: Storybook"
         uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
@@ -184,7 +180,7 @@ jobs:
           path: packages/storybook/dist/
 
       - name: Continuous Deployment to GitHub Pages
-        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
         with:
           path: packages/storybook/dist/
 
@@ -203,10 +199,9 @@ jobs:
         uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
 
       - name: Set up Node.js version
-        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: .nvmrc
-          cache: pnpm
 
       - name: "Restore build artifact: Storybook"
         uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
@@ -235,10 +230,9 @@ jobs:
         uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
 
       - name: Set up Node.js
-        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: .nvmrc
-          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -265,10 +259,9 @@ jobs:
         uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
 
       - name: Set up Node.js version
-        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version-file: .nvmrc
-          cache: pnpm
 
       - name: "Continuous Deployment: install"
         run: pnpm install --frozen-lockfile
@@ -277,7 +270,7 @@ jobs:
         run: pnpm run --if-present build
 
       - name: Set up Node.js that is compatible with OIDC
-        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version: 24
 
