@@ -8555,6 +8555,66 @@
       }
     }
   },
+  "overwrites/text-scale/information dense": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "max": {
+            "md": {
+              "$type": "fontSizes",
+              "$value": "1rem"
+            },
+            "lg": {
+              "$type": "fontSizes",
+              "$value": "1.2rem"
+            },
+            "xl": {
+              "$type": "fontSizes",
+              "$value": "1.5rem"
+            },
+            "2xl": {
+              "$type": "fontSizes",
+              "$value": "2rem"
+            },
+            "3xl": {
+              "$type": "fontSizes",
+              "$value": "2.5rem"
+            }
+          }
+        }
+      }
+    }
+  },
+  "overwrites/text-scale/promotion": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "max": {
+            "md": {
+              "$type": "fontSizes",
+              "$value": "1.25rem"
+            },
+            "lg": {
+              "$type": "fontSizes",
+              "$value": "1.5rem"
+            },
+            "xl": {
+              "$type": "fontSizes",
+              "$value": "2.25rem"
+            },
+            "2xl": {
+              "$type": "fontSizes",
+              "$value": "3rem"
+            },
+            "3xl": {
+              "$type": "fontSizes",
+              "$value": "4rem"
+            }
+          }
+        }
+      }
+    }
+  },
   "overwrites/closed-source/font": {
     "rhc": {
       "text": {
@@ -8948,7 +9008,8 @@
         "utrecht/rich-text": "enabled",
         "utrecht/body": "enabled",
         "utrecht/root": "enabled",
-        "overwrites/primaire kleur/contrast fix/foreground op lichte kleur": "enabled"
+        "overwrites/primaire kleur/contrast fix/foreground op lichte kleur": "enabled",
+        "overwrites/primaire kleur/contrast fix/non primary button labels coolgrey": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9551,6 +9612,8 @@
       "overwrites/nav-bar/lintblauw-outline",
       "overwrites/responsive/min",
       "overwrites/font-weight/bzk",
+      "overwrites/text-scale/information dense",
+      "overwrites/text-scale/promotion",
       "overwrites/closed-source/font"
     ]
   }
