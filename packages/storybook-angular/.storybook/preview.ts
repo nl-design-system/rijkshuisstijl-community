@@ -32,17 +32,15 @@ const preview: Preview = {
     componentWrapperDecorator((story) => `<div class="utrecht-document">${story}</div>`),
     withThemeByClassName({
       themes: {
-        RijkshuisstijlCommunity: 'rhc-theme',
+        'Kern - Lintblauw': 'rhc-theme',
         'Uitvoerend - paars': 'uitvoerend-paars',
         'Uitvoerend - hemelblauw': 'uitvoerend-hemelblauw',
         'Uitvoerend - groen': 'uitvoerend-groen',
         'Uitvoerend - oranje': 'uitvoerend-oranje',
-        'Uitvoerend - violet': 'uitvoerend-violet',
-        'Uitvoerend - mintgroen': 'uitvoerend-mintgroen',
-        'Uitvoerend - violet - oud': 'uitvoerend-violet-oud',
+        'Uitvoerend - robijn rood': 'uitvoerend-robijnrood',
         KOOP: 'koop',
       },
-      defaultTheme: 'RijkshuisstijlCommunity',
+      defaultTheme: 'Kern - Lintblauw',
     }),
   ],
 
