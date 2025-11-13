@@ -1,26 +1,20 @@
 import clsx from 'clsx';
-import { ComponentPropsWithoutRef, CSSProperties, ElementType } from 'react';
+import { ComponentPropsWithoutRef, ElementType } from 'react';
+import type { OverwriteTokens } from './types/tokenUtils';
 
 type Size = 'sm' | 'md' | 'lg';
-type Corner = 'start-start' | 'start-end' | 'end-start' | 'end-end';
-
-type SuggestedTokens = {
-  '--rhc-rounded-corner-radius': CSSProperties['borderRadius'];
-  '--rhc-rounded-corner-overflow': CSSProperties['overflow'];
-};
-
-type OverwriteTokens = Partial<SuggestedTokens & Record<string, string>>;
+type Position = 'start-start' | 'start-end' | 'end-start' | 'end-end';
 
 export type RoundedCornerProps<T extends ElementType> = {
-  size?: Size; // We need to make size optional as otherwise --rhc-rounded-corner-radius will always be overridden by size class
-  corner: Corner;
+  size?: Size; // We need to make size optional as otherwise --rhc-rounded-corner-border-radius will always be overridden by size class
+  position: Position;
   as?: T;
-  overwriteTokens?: OverwriteTokens;
+  overwriteTokens?: OverwriteTokens<'--rhc-rounded-corner-', '--rhc-rounded-corner-border-radius'>;
 } & ComponentPropsWithoutRef<T>;
 
 export const RoundedCorner = <T extends ElementType = 'div'>({
   size,
-  corner,
+  position,
   as,
   overwriteTokens,
   ...props
@@ -29,7 +23,7 @@ export const RoundedCorner = <T extends ElementType = 'div'>({
     'rhc-rounded-corner',
     {
       [`rhc-rounded-corner--size-${size}`]: size,
-      [`rhc-rounded-corner--corner-${corner}`]: corner,
+      [`rhc-rounded-corner--position-${position}`]: position,
     },
     props['className'],
   );
