@@ -25,11 +25,11 @@ const preview: Preview = {
     withThemeByClassName({
       themes: {
         'Kern - Lintblauw': 'rhc-theme',
-        'Uitvoerend - paars': 'uitvoerend-paars',
-        'Uitvoerend - hemelblauw': 'uitvoerend-hemelblauw',
-        'Uitvoerend - groen': 'uitvoerend-groen',
-        'Uitvoerend - oranje': 'uitvoerend-oranje',
-        'Uitvoerend - robijn rood': 'uitvoerend-robijnrood',
+        'Uitvoerend - Paars': 'uitvoerend-paars',
+        'Uitvoerend - Hemelblauw': 'uitvoerend-hemelblauw',
+        'Uitvoerend - Groen': 'uitvoerend-groen',
+        'Uitvoerend - Oranje': 'uitvoerend-oranje',
+        'Uitvoerend - Robijn Rood': 'uitvoerend-robijnrood',
         KOOP: 'koop',
       },
       defaultTheme: 'Kern - Lintblauw',
