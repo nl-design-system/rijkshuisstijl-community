@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/components-react
 
+## 7.2.0
+
+### Minor Changes
+
+- 5b7a72c: Added a rounded corner utility component in CSS and React
+
+### Patch Changes
+
+- 5c7a89c: Updated rounded corner overwrite tokens props to automatically infer associated tokens instead of hardcoding them
+
 ## 7.1.0
 
 ### Minor Changes
