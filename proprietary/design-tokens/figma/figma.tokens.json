@@ -724,6 +724,10 @@
         },
         "font-size": {
           "max": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "1rem"
+            },
             "md": {
               "$type": "fontSizes",
               "$value": "1.25rem"
@@ -734,7 +738,7 @@
             },
             "xl": {
               "$type": "fontSizes",
-              "$value": "1.875rem"
+              "$value": "2rem"
             },
             "2xl": {
               "$type": "fontSizes",
@@ -742,17 +746,25 @@
             },
             "3xl": {
               "$type": "fontSizes",
-              "$value": "3.125rem"
+              "$value": "3rem"
+            },
+            "4xl": {
+              "$type": "fontSizes",
+              "$value": "4rem"
             }
           },
           "min": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "0.875rem"
+            },
             "md": {
               "$type": "fontSizes",
               "$value": "1rem"
             },
             "lg": {
               "$type": "fontSizes",
-              "$value": "1.2rem"
+              "$value": "1.25rem"
             },
             "xl": {
               "$type": "fontSizes",
@@ -765,6 +777,10 @@
             "3xl": {
               "$type": "fontSizes",
               "$value": "2.5rem"
+            },
+            "4xl": {
+              "$type": "fontSizes",
+              "$value": "3rem"
             }
           }
         }
@@ -1189,26 +1205,26 @@
     "rhc": {
       "rounded-corner": {
         "overflow": {
-          "$value": "hidden",
           "$type": "other",
+          "$value": "hidden",
           "$description": "[code-only]"
         },
         "sm": {
           "border-radius": {
-            "$value": "{rhc.size.half-lint}",
-            "$type": "dimension"
+            "$type": "dimension",
+            "$value": "{rhc.size.half-lint}"
           }
         },
         "md": {
           "border-radius": {
-            "$value": "{rhc.size.lint}",
-            "$type": "dimension"
+            "$type": "dimension",
+            "$value": "{rhc.size.lint}"
           }
         },
         "lg": {
           "border-radius": {
-            "$value": "{rhc.size.2-lint}",
-            "$type": "dimension"
+            "$type": "dimension",
+            "$value": "{rhc.size.2-lint}"
           }
         }
       }
@@ -8264,13 +8280,17 @@
       "text": {
         "font-size": {
           "max": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "0.875rem"
+            },
             "md": {
               "$type": "fontSizes",
               "$value": "1rem"
             },
             "lg": {
               "$type": "fontSizes",
-              "$value": "1.2rem"
+              "$value": "1.25rem"
             },
             "xl": {
               "$type": "fontSizes",
@@ -8278,11 +8298,15 @@
             },
             "2xl": {
               "$type": "fontSizes",
-              "$value": "2rem"
+              "$value": "1.75rem"
             },
             "3xl": {
               "$type": "fontSizes",
               "$value": "2.5rem"
+            },
+            "4xl": {
+              "$type": "fontSizes",
+              "$value": "3rem"
             }
           }
         }
@@ -8294,6 +8318,10 @@
       "text": {
         "font-size": {
           "max": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "1rem"
+            },
             "md": {
               "$type": "fontSizes",
               "$value": "1.25rem"
@@ -8304,7 +8332,7 @@
             },
             "xl": {
               "$type": "fontSizes",
-              "$value": "2.25rem"
+              "$value": "2.5rem"
             },
             "2xl": {
               "$type": "fontSizes",
@@ -8312,7 +8340,11 @@
             },
             "3xl": {
               "$type": "fontSizes",
-              "$value": "4rem"
+              "$value": "3.5rem"
+            },
+            "4xl": {
+              "$type": "fontSizes",
+              "$value": "5rem"
             }
           }
         }
