@@ -1,7 +1,7 @@
 <!-- @license CC0-1.0 -->
 <!-- markdownlint-disable MD033 -->
 
-# Rijkshuisstijl Community rounded border
+# Rijkshuisstijl Community rounded corner
 
 Binnen de nieuwe rijkshuisstijl wordt op veel componenten een rond hoekje toegevoegd.
 Om het makkelijk te maken om dit hoekje toe te voegen, hebben we deze helper component gemaakt, die gebruikt kunnen worden om dit consistent toe te voegen.
@@ -9,7 +9,7 @@ Let op: je moet de hoekjes niet zomaar overal toevoegen, om een hoekje ergens to
 
 ## Gebruik
 
-Er zijn verschillende rounded border utility classes voor verschillende toepassingen. Je kunt op deze pagina ook zien hoe deze toepassingen er dan in de praktijk uit zien. Daarnaast kunnen deze classes verder worden aangepast door het overschrijven van de design tokens.
+Er zijn verschillende rounded corner utility classes voor verschillende toepassingen. Je kunt op deze pagina ook zien hoe deze toepassingen er dan in de praktijk uit zien. Daarnaast kunnen deze classes verder worden aangepast door het overschrijven van de design tokens.
 
 Deze tokens zijn gericht op de border radius en de kant van de hoek. De content vul je zelf in.
 
