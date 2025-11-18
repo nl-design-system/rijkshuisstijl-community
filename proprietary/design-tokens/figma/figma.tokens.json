@@ -6702,7 +6702,17 @@
       }
     }
   },
-  "components/textarea/base": {
+  "components/textarea": {
+    "rhc": {
+      "textarea": {
+        "focus": {
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{rhc.border-width.md}"
+          }
+        }
+      }
+    },
     "todo": {
       "textarea": {
         "hover": {
@@ -6855,40 +6865,6 @@
           "color": {
             "$type": "color",
             "$value": "{rhc.color.foreground.default}"
-          }
-        }
-      }
-    }
-  },
-  "components/textarea/deprecated": {
-    "utrecht": {
-      "textarea": {
-        "border-bottom-width": {
-          "$type": "dimension",
-          "$value": "{rhc.border-width.sm}"
-        },
-        "hover": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{rhc.color.bg-document}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{rhc.color.primary.300}"
-          },
-          "border-width": {
-            "$type": "dimension",
-            "$value": "{rhc.border-width.sm}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.default}"
-          }
-        },
-        "focus": {
-          "border-width": {
-            "$type": "dimension",
-            "$value": "{rhc.border-width.md}"
           }
         }
       }
@@ -8688,8 +8664,7 @@
         "components/table": "enabled",
         "components/text-input/base": "enabled",
         "components/text-input/deprecated": "enabled",
-        "components/textarea/base": "enabled",
-        "components/textarea/deprecated": "enabled",
+        "components/textarea": "enabled",
         "components/toggletip": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
@@ -8783,8 +8758,7 @@
         "components/table": "enabled",
         "components/text-input/base": "enabled",
         "components/text-input/deprecated": "enabled",
-        "components/textarea/base": "enabled",
-        "components/textarea/deprecated": "enabled",
+        "components/textarea": "enabled",
         "components/toggletip": "enabled",
         "components/unordered-list": "enabled",
         "overwrites/primaire kleur/groen": "enabled",
@@ -8880,8 +8854,7 @@
         "components/table": "enabled",
         "components/text-input/base": "enabled",
         "components/text-input/deprecated": "enabled",
-        "components/textarea/base": "enabled",
-        "components/textarea/deprecated": "enabled",
+        "components/textarea": "enabled",
         "components/toggletip": "enabled",
         "components/unordered-list": "enabled",
         "overwrites/primaire kleur/hemelblauw": "enabled",
@@ -8977,8 +8950,7 @@
         "components/table": "enabled",
         "components/text-input/base": "enabled",
         "components/text-input/deprecated": "enabled",
-        "components/textarea/base": "enabled",
-        "components/textarea/deprecated": "enabled",
+        "components/textarea": "enabled",
         "components/toggletip": "enabled",
         "components/unordered-list": "enabled",
         "overwrites/primaire kleur/oranje": "enabled",
@@ -9075,8 +9047,7 @@
         "components/table": "enabled",
         "components/text-input/base": "enabled",
         "components/text-input/deprecated": "enabled",
-        "components/textarea/base": "enabled",
-        "components/textarea/deprecated": "enabled",
+        "components/textarea": "enabled",
         "components/toggletip": "enabled",
         "components/unordered-list": "enabled",
         "overwrites/primaire kleur/paars": "enabled",
@@ -9172,8 +9143,7 @@
         "components/table": "enabled",
         "components/text-input/base": "enabled",
         "components/text-input/deprecated": "enabled",
-        "components/textarea/base": "enabled",
-        "components/textarea/deprecated": "enabled",
+        "components/textarea": "enabled",
         "components/toggletip": "enabled",
         "components/unordered-list": "enabled",
         "utrecht/action": "enabled",
@@ -9269,8 +9239,7 @@
         "components/table": "enabled",
         "components/text-input/base": "enabled",
         "components/text-input/deprecated": "enabled",
-        "components/textarea/base": "enabled",
-        "components/textarea/deprecated": "enabled",
+        "components/textarea": "enabled",
         "components/toggletip": "enabled",
         "components/unordered-list": "enabled",
         "overwrites/closed-source/font": "enabled",
@@ -9373,8 +9342,7 @@
       "components/table",
       "components/text-input/base",
       "components/text-input/deprecated",
-      "components/textarea/base",
-      "components/textarea/deprecated",
+      "components/textarea",
       "components/toggletip",
       "components/unordered-list",
       "overwrites/primaire kleur/groen",
