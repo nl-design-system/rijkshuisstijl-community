@@ -26,11 +26,11 @@
     "watch:style-dictionary": "chokidar 'src/**/*.tokens.json' 'figma/**/*.tokens.json' --follow-symlinks --command 'npm-run-all build:figma-tokens build:style-dictionary' --ignore '/src/generated/'"
   },
   "devDependencies": {
-    "@tokens-studio/sd-transforms": "2.0.1",
+    "@tokens-studio/sd-transforms": "2.0.2",
     "chokidar-cli": "3.0.0",
     "npm-run-all": "4.1.5",
-    "rimraf": "6.0.1",
-    "style-dictionary": "5.0.4",
+    "rimraf": "6.1.0",
+    "style-dictionary": "5.1.1",
     "token-transformer": "0.0.33"
   }
 }
