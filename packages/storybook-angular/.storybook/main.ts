@@ -35,5 +35,35 @@ const config: StorybookConfig = {
     name: getAbsolutePath('@storybook/angular'),
     options: {},
   },
+
+  // Configure webpack to handle markdown files as raw text strings
+  // This allows story files to import .md files directly for documentation
+  webpackFinal: async (config) => {
+    config.module = config.module || {};
+    config.module.rules = config.module.rules || [];
+
+    // Add rule to process .md files using raw-loader
+    // This converts markdown files to string exports that can be imported in TypeScript
+    config.module.rules.push({
+      test: /\.md$/,
+      type: 'javascript/auto', // Prevent webpack from treating this as an asset module
+      use: 'raw-loader',
+    });
+
+    // Prevent markdown files from being code-split into separate chunks
+    if (config.optimization) {
+      config.optimization.splitChunks = config.optimization.splitChunks || {};
+      if (typeof config.optimization.splitChunks === 'object') {
+        config.optimization.splitChunks.cacheGroups = config.optimization.splitChunks.cacheGroups || {};
+        config.optimization.splitChunks.cacheGroups.markdown = {
+          test: /\.md$/,
+          name: false, // Keep markdown inline with the importing module
+          enforce: true,
+        };
+      }
+    }
+
+    return config;
+  },
 };
 export default config;

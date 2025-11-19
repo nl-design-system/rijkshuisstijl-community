@@ -1,5 +1,6 @@
 import { componentWrapperDecorator, type Preview } from '@storybook/angular';
 import { withThemeByClassName } from '@storybook/addon-themes';
+import { themes } from '@storybook/theming';
 import OverviewPage from './overview.mdx';
 import { formatHtml } from '@rijkshuisstijl-community/internal-tooling/formatHtml';
 
@@ -9,6 +10,7 @@ const preview: Preview = {
       transform: formatHtml,
     },
     docs: {
+      theme: themes.light,
       page: OverviewPage,
       source: {
         excludeDecorators: true,
