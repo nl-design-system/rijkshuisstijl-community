@@ -18,6 +18,14 @@
     "node": ">=20 <=24",
     "pnpm": "^10.16.0"
   },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "angular-tabler-icons>@angular/common": "*",
+        "angular-tabler-icons>@angular/core": "*"
+      }
+    }
+  },
   "workspaces": [
     "./apps/*",
     "./packages/*",
