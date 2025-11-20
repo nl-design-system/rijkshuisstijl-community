@@ -1,4 +1,37 @@
 {
+  "brand/border": {
+    "rhc": {
+      "border-radius": {
+        "round": {
+          "parent": "core/default",
+          "$type": "dimension",
+          "$value": "999px"
+        },
+        "none": {
+          "parent": "core/default",
+          "$type": "dimension",
+          "$value": "0px"
+        }
+      },
+      "border-width": {
+        "sm": {
+          "parent": "core/default",
+          "$type": "dimension",
+          "$value": "1px"
+        },
+        "md": {
+          "parent": "core/default",
+          "$type": "dimension",
+          "$value": "2px"
+        },
+        "none": {
+          "parent": "core/default",
+          "$type": "dimension",
+          "$value": "0px"
+        }
+      }
+    }
+  },
   "brand/color": {
     "rhc": {
       "color": {
@@ -650,39 +683,6 @@
       }
     }
   },
-  "brand/border": {
-    "rhc": {
-      "border-radius": {
-        "round": {
-          "parent": "core/default",
-          "$type": "dimension",
-          "$value": "999px"
-        },
-        "none": {
-          "parent": "core/default",
-          "$type": "dimension",
-          "$value": "0px"
-        }
-      },
-      "border-width": {
-        "sm": {
-          "parent": "core/default",
-          "$type": "dimension",
-          "$value": "1px"
-        },
-        "md": {
-          "parent": "core/default",
-          "$type": "dimension",
-          "$value": "2px"
-        },
-        "none": {
-          "parent": "core/default",
-          "$type": "dimension",
-          "$value": "0px"
-        }
-      }
-    }
-  },
   "brand/font": {
     "rhc": {
       "text": {
@@ -797,119 +797,56 @@
       }
     }
   },
-  "common/basis": {
-    "basis": {
-      "color": {
-        "default": {
-          "bg-document": {
-            "$type": "color",
-            "$value": "{rhc.color.bg-document}"
-          },
-          "color-document": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.default}"
-          },
-          "color-subtle": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.subtle}"
-          },
-          "border-subtle": {
-            "$type": "color",
-            "$value": "{rhc.color.border.subtle}"
-          },
-          "border-default": {
-            "$type": "color",
-            "$value": "{rhc.color.border.default}"
-          },
-          "bg-subtle": {
-            "$type": "color",
-            "$value": "{rhc.color.cool-grey.100}"
-          }
-        },
-        "highlight": {
-          "bg-default": {
-            "$type": "color",
-            "$value": "{rhc.color.warning.subtle}"
-          }
-        }
-      },
+  "common/font": {
+    "rhc": {
       "text": {
-        "font-family": {
-          "default": {
-            "$type": "fontFamilies",
-            "$value": "{rhc.text.font-family.default}"
-          }
-        },
-        "font-weight": {
-          "default": {
-            "$type": "fontWeights",
-            "$value": "{rhc.text.font-weight.default}"
-          },
-          "bold": {
-            "$type": "fontWeights",
-            "$value": "{rhc.text.font-weight.strong}"
-          }
-        },
         "font-size": {
           "md": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.md}"
+            "$value": "{rhc.text.font-size.max.md}"
+          },
+          "lg": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.lg}"
+          },
+          "xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.xl}"
+          },
+          "2xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.2xl}"
+          },
+          "3xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.3xl}"
+          }
+        },
+        "font-family": {
+          "default": {
+            "$type": "fontFamilies",
+            "$value": "{rhc.text.font-family.sans}"
           }
         },
         "line-height": {
+          "sm": {
+            "$type": "lineHeights",
+            "$value": "125%"
+          },
           "md": {
             "$type": "lineHeights",
-            "$value": "{rhc.text.line-height.md}"
+            "$value": "150%"
           }
-        }
-      },
-      "heading": {
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.lintblauw.500}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{rhc.text.font-family.default}"
         },
         "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{rhc.text.font-weight.strong}"
-        }
-      },
-      "border-width": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "{rhc.border-width.sm}"
-        }
-      },
-      "box-shadow": {
-        "md": {
-          "$type": "boxShadow",
-          "$value": {
-            "x": "0",
-            "y": "8",
-            "blur": "16",
-            "spread": "0",
-            "color": "{rhc.color.cool-grey.500}",
-            "type": "dropShadow"
+          "default": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.regular}"
+          },
+          "strong": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.bold}"
           }
-        }
-      },
-      "focus": {
-        "outline-color": {
-          "$type": "color",
-          "$value": "{rhc.color.zwart}"
-        },
-        "inverse": {
-          "outline-color": {
-            "$type": "color",
-            "$value": "{rhc.color.wit}"
-          }
-        },
-        "outline-width": {
-          "$type": "dimension",
-          "$value": "{rhc.border-width.md}"
         }
       }
     }
@@ -1089,56 +1026,16 @@
       }
     }
   },
-  "common/font": {
+  "common/border": {
     "rhc": {
-      "text": {
-        "font-size": {
-          "md": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.md}"
-          },
-          "lg": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.lg}"
-          },
-          "xl": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.xl}"
-          },
-          "2xl": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.2xl}"
-          },
-          "3xl": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.3xl}"
-          }
+      "border-radius": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "2.5px"
         },
-        "font-family": {
-          "default": {
-            "$type": "fontFamilies",
-            "$value": "{rhc.text.font-family.sans}"
-          }
-        },
-        "line-height": {
-          "sm": {
-            "$type": "lineHeights",
-            "$value": "125%"
-          },
-          "md": {
-            "$type": "lineHeights",
-            "$value": "150%"
-          }
-        },
-        "font-weight": {
-          "default": {
-            "$type": "fontWeights",
-            "$value": "{rhc.text.font-weight.regular}"
-          },
-          "strong": {
-            "$type": "fontWeights",
-            "$value": "{rhc.text.font-weight.bold}"
-          }
+        "md": {
+          "$type": "dimension",
+          "$value": "5px"
         }
       }
     }
@@ -1171,51 +1068,184 @@
       }
     }
   },
-  "common/border": {
-    "rhc": {
-      "border-radius": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "2.5px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "5px"
-        }
-      }
-    }
-  },
   "common/rounded-corner": {
     "rhc": {
       "rounded-corner": {
         "overflow": {
-          "$value": "hidden",
           "$type": "other",
+          "$value": "hidden",
           "$description": "[code-only]"
         },
         "sm": {
           "border-radius": {
-            "$value": "{rhc.size.half-lint}",
-            "$type": "dimension"
+            "$type": "dimension",
+            "$value": "{rhc.size.half-lint}"
           }
         },
         "md": {
           "border-radius": {
-            "$value": "{rhc.size.lint}",
-            "$type": "dimension"
+            "$type": "dimension",
+            "$value": "{rhc.size.lint}"
           }
         },
         "lg": {
           "border-radius": {
-            "$value": "{rhc.size.2-lint}",
-            "$type": "dimension"
+            "$type": "dimension",
+            "$value": "{rhc.size.2-lint}"
           }
         }
       }
     }
   },
-  "utrecht/action": {
+  "common/basis": {
+    "basis": {
+      "color": {
+        "default": {
+          "bg-document": {
+            "$type": "color",
+            "$value": "{rhc.color.bg-document}"
+          },
+          "color-document": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.default}"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.subtle}"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.border.subtle}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{rhc.color.border.default}"
+          },
+          "bg-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.cool-grey.100}"
+          }
+        },
+        "highlight": {
+          "bg-default": {
+            "$type": "color",
+            "$value": "{rhc.color.warning.subtle}"
+          }
+        }
+      },
+      "text": {
+        "font-family": {
+          "default": {
+            "$type": "fontFamilies",
+            "$value": "{rhc.text.font-family.default}"
+          }
+        },
+        "font-weight": {
+          "default": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.default}"
+          },
+          "bold": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.strong}"
+          }
+        },
+        "font-size": {
+          "md": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.md}"
+          }
+        },
+        "line-height": {
+          "md": {
+            "$type": "lineHeights",
+            "$value": "{rhc.text.line-height.md}"
+          }
+        }
+      },
+      "heading": {
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.lintblauw.500}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{rhc.text.font-family.default}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{rhc.text.font-weight.strong}"
+        }
+      },
+      "border-width": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "{rhc.border-width.sm}"
+        }
+      },
+      "box-shadow": {
+        "md": {
+          "$type": "boxShadow",
+          "$value": {
+            "x": "0",
+            "y": "8",
+            "blur": "16",
+            "spread": "0",
+            "color": "{rhc.color.cool-grey.500}",
+            "type": "dropShadow"
+          }
+        }
+      },
+      "focus": {
+        "outline-color": {
+          "$type": "color",
+          "$value": "{rhc.color.zwart}"
+        },
+        "inverse": {
+          "outline-color": {
+            "$type": "color",
+            "$value": "{rhc.color.wit}"
+          }
+        },
+        "outline-width": {
+          "$type": "dimension",
+          "$value": "{rhc.border-width.md}"
+        }
+      }
+    }
+  },
+  "common/utrecht": {
     "utrecht": {
+      "focus": {
+        "outline-color": {
+          "$type": "color",
+          "$value": "{rhc.focus.outline-color}"
+        },
+        "outline-offset": {
+          "$type": "dimension",
+          "$value": "{rhc.focus.outline-offset}"
+        },
+        "outline-style": {
+          "$type": "other",
+          "$value": "{rhc.focus.outline-style}"
+        },
+        "outline-width": {
+          "$type": "dimension",
+          "$value": "{rhc.focus.outline-width}"
+        },
+        "inverse": {
+          "outline-color": {
+            "$type": "color",
+            "$value": "{rhc.color.wit}"
+          }
+        }
+      },
+      "pointer-target": {
+        "min-size": {
+          "$type": "dimension",
+          "$value": "{rhc.size.pointer-target}"
+        }
+      },
       "action": {
         "activate": {
           "cursor": {
@@ -1252,138 +1282,6 @@
             "$type": "other",
             "$value": "pointer"
           }
-        }
-      }
-    }
-  },
-  "utrecht/document": {
-    "utrecht": {
-      "document": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{rhc.color.wit}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.foreground.default}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{rhc.text.font-family.default}"
-        },
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{rhc.text.font-size.md}"
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{rhc.text.line-height.md}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{rhc.text.font-weight.default}"
-        }
-      }
-    }
-  },
-  "utrecht/focus": {
-    "utrecht": {
-      "focus": {
-        "outline-color": {
-          "$type": "color",
-          "$value": "{rhc.focus.outline-color}"
-        },
-        "outline-offset": {
-          "$type": "dimension",
-          "$value": "{rhc.focus.outline-offset}"
-        },
-        "outline-style": {
-          "$type": "other",
-          "$value": "{rhc.focus.outline-style}"
-        },
-        "outline-width": {
-          "$type": "dimension",
-          "$value": "{rhc.focus.outline-width}"
-        },
-        "inverse": {
-          "outline-color": {
-            "$type": "color",
-            "$value": "{rhc.color.wit}"
-          }
-        }
-      }
-    }
-  },
-  "utrecht/pointer-target": {
-    "utrecht": {
-      "pointer-target": {
-        "min-size": {
-          "$type": "dimension",
-          "$value": "{rhc.size.pointer-target}"
-        }
-      }
-    }
-  },
-  "utrecht/rich-text": {
-    "utrecht": {
-      "rich-text": {
-        "stranger": {
-          "margin-block-end": {
-            "$type": "dimension",
-            "$value": "{rhc.space.400}"
-          }
-        },
-        "acquaintance": {
-          "margin-block-end": {
-            "$type": "dimension",
-            "$value": "{rhc.space.200}"
-          }
-        },
-        "friend": {
-          "margin-block-end": {
-            "$type": "dimension",
-            "$value": "{rhc.space.100}"
-          }
-        },
-        "best-friend": {
-          "margin-block-end": {
-            "$type": "dimension",
-            "$value": "{rhc.space.50}"
-          }
-        },
-        "confidant": {
-          "margin-block-end": {
-            "$type": "dimension",
-            "$value": "{rhc.space.0}"
-          }
-        }
-      }
-    }
-  },
-  "utrecht/body": {
-    "utrecht": {
-      "body": {
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.foreground.default}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{rhc.text.font-family.default}"
-        }
-      }
-    }
-  },
-  "utrecht/root": {
-    "utrecht": {
-      "root": {
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.foreground.default}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{rhc.text.font-family.default}"
         }
       }
     }
@@ -1897,6 +1795,20 @@
         "margin-inline-start": {
           "$type": "dimension",
           "$value": "{rhc.space.0}"
+        }
+      }
+    }
+  },
+  "components/body": {
+    "utrecht": {
+      "body": {
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.foreground.default}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{rhc.text.font-family.default}"
         }
       }
     }
@@ -3563,6 +3475,36 @@
             "$type": "dimension",
             "$value": "{rhc.space.0}"
           }
+        }
+      }
+    }
+  },
+  "components/document": {
+    "utrecht": {
+      "document": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{rhc.color.wit}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.foreground.default}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{rhc.text.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{rhc.text.font-size.md}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{rhc.text.line-height.md}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{rhc.text.font-weight.default}"
         }
       }
     }
@@ -5805,6 +5747,56 @@
         "row-gap": {
           "$type": "dimension",
           "$value": "{rhc.space.200}"
+        }
+      }
+    }
+  },
+  "components/rich-text": {
+    "utrecht": {
+      "rich-text": {
+        "stranger": {
+          "margin-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.400}"
+          }
+        },
+        "acquaintance": {
+          "margin-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.200}"
+          }
+        },
+        "friend": {
+          "margin-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.100}"
+          }
+        },
+        "best-friend": {
+          "margin-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.50}"
+          }
+        },
+        "confidant": {
+          "margin-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.0}"
+          }
+        }
+      }
+    }
+  },
+  "components/root": {
+    "utrecht": {
+      "root": {
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.foreground.default}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{rhc.text.font-family.default}"
         }
       }
     }
@@ -8667,13 +8659,11 @@
         "components/textarea": "enabled",
         "components/toggletip": "enabled",
         "components/unordered-list": "enabled",
-        "utrecht/action": "enabled",
-        "utrecht/document": "enabled",
-        "utrecht/focus": "enabled",
-        "utrecht/pointer-target": "enabled",
-        "utrecht/rich-text": "enabled",
-        "utrecht/body": "enabled",
-        "utrecht/root": "enabled"
+        "components/root": "enabled",
+        "components/body": "enabled",
+        "components/rich-text": "enabled",
+        "components/document": "enabled",
+        "common/utrecht": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8762,14 +8752,12 @@
         "components/toggletip": "enabled",
         "components/unordered-list": "enabled",
         "overwrites/primaire kleur/groen": "enabled",
-        "utrecht/action": "enabled",
-        "utrecht/document": "enabled",
-        "utrecht/focus": "enabled",
-        "utrecht/pointer-target": "enabled",
-        "utrecht/rich-text": "enabled",
-        "utrecht/body": "enabled",
-        "utrecht/root": "enabled",
-        "overwrites/closed-source/font": "enabled"
+        "overwrites/closed-source/font": "enabled",
+        "components/root": "enabled",
+        "components/body": "enabled",
+        "components/rich-text": "enabled",
+        "components/document": "enabled",
+        "common/utrecht": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8858,14 +8846,12 @@
         "components/toggletip": "enabled",
         "components/unordered-list": "enabled",
         "overwrites/primaire kleur/hemelblauw": "enabled",
-        "utrecht/action": "enabled",
-        "utrecht/document": "enabled",
-        "utrecht/focus": "enabled",
-        "utrecht/pointer-target": "enabled",
-        "utrecht/rich-text": "enabled",
-        "utrecht/body": "enabled",
-        "utrecht/root": "enabled",
-        "overwrites/closed-source/font": "enabled"
+        "overwrites/closed-source/font": "enabled",
+        "components/root": "enabled",
+        "components/body": "enabled",
+        "components/rich-text": "enabled",
+        "components/document": "enabled",
+        "common/utrecht": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8954,15 +8940,13 @@
         "components/toggletip": "enabled",
         "components/unordered-list": "enabled",
         "overwrites/primaire kleur/oranje": "enabled",
-        "utrecht/action": "enabled",
-        "utrecht/document": "enabled",
-        "utrecht/focus": "enabled",
-        "utrecht/pointer-target": "enabled",
-        "utrecht/rich-text": "enabled",
-        "utrecht/body": "enabled",
-        "utrecht/root": "enabled",
         "overwrites/closed-source/font": "enabled",
-        "overwrites/primaire kleur/contrast fix/button label groter": "enabled"
+        "overwrites/primaire kleur/contrast fix/button label groter": "enabled",
+        "components/root": "enabled",
+        "components/body": "enabled",
+        "components/rich-text": "enabled",
+        "components/document": "enabled",
+        "common/utrecht": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9051,14 +9035,12 @@
         "components/toggletip": "enabled",
         "components/unordered-list": "enabled",
         "overwrites/primaire kleur/paars": "enabled",
-        "utrecht/action": "enabled",
-        "utrecht/document": "enabled",
-        "utrecht/focus": "enabled",
-        "utrecht/pointer-target": "enabled",
-        "utrecht/rich-text": "enabled",
-        "utrecht/body": "enabled",
-        "utrecht/root": "enabled",
-        "overwrites/closed-source/font": "enabled"
+        "overwrites/closed-source/font": "enabled",
+        "components/root": "enabled",
+        "components/body": "enabled",
+        "components/rich-text": "enabled",
+        "components/document": "enabled",
+        "common/utrecht": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9146,15 +9128,13 @@
         "components/textarea": "enabled",
         "components/toggletip": "enabled",
         "components/unordered-list": "enabled",
-        "utrecht/action": "enabled",
-        "utrecht/document": "enabled",
-        "utrecht/focus": "enabled",
-        "utrecht/pointer-target": "enabled",
-        "utrecht/rich-text": "enabled",
-        "utrecht/body": "enabled",
-        "utrecht/root": "enabled",
         "overwrites/closed-source/font": "enabled",
-        "overwrites/primaire kleur/robijn rood": "enabled"
+        "overwrites/primaire kleur/robijn rood": "enabled",
+        "components/root": "enabled",
+        "components/body": "enabled",
+        "components/rich-text": "enabled",
+        "components/document": "enabled",
+        "common/utrecht": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9245,13 +9225,11 @@
         "overwrites/closed-source/font": "enabled",
         "overwrites/footer/lintblauw-background": "enabled",
         "overwrites/nav-bar/lintblauw-outline": "enabled",
-        "utrecht/action": "enabled",
-        "utrecht/document": "enabled",
-        "utrecht/focus": "enabled",
-        "utrecht/pointer-target": "enabled",
-        "utrecht/rich-text": "enabled",
-        "utrecht/body": "enabled",
-        "utrecht/root": "enabled"
+        "components/root": "enabled",
+        "components/body": "enabled",
+        "components/rich-text": "enabled",
+        "components/document": "enabled",
+        "common/utrecht": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9259,31 +9237,26 @@
   ],
   "$metadata": {
     "tokenSetOrder": [
+      "brand/border",
       "brand/color",
       "brand/space",
-      "brand/border",
       "brand/font",
       "brand/size",
-      "common/basis",
+      "common/font",
       "common/color",
       "common/size",
-      "common/font",
-      "common/focus",
       "common/border",
+      "common/focus",
       "common/rounded-corner",
-      "utrecht/action",
-      "utrecht/document",
-      "utrecht/focus",
-      "utrecht/pointer-target",
-      "utrecht/rich-text",
-      "utrecht/body",
-      "utrecht/root",
+      "common/basis",
+      "common/utrecht",
       "components/accordion",
       "components/action-group",
       "components/alert",
       "components/article",
       "components/backdrop",
       "components/blockquote",
+      "components/body",
       "components/breadcrumb",
       "components/button",
       "components/card",
@@ -9297,6 +9270,7 @@
       "components/data-badge",
       "components/data-badge-button",
       "components/data-summary",
+      "components/document",
       "components/dot-badge",
       "components/drawer",
       "components/expandable-checkbox-group",
@@ -9333,6 +9307,8 @@
       "components/pre-heading",
       "components/radio-button",
       "components/radio-group",
+      "components/rich-text",
+      "components/root",
       "components/select",
       "components/separator",
       "components/side-nav",
