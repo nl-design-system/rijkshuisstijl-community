@@ -810,6 +810,20 @@
           "$type": "dimension",
           "$value": "144px"
         }
+      },
+      "icon": {
+        "min": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0rem"
+          }
+        },
+        "max": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0.188rem"
+          }
+        }
       }
     }
   },
@@ -1131,7 +1145,7 @@
         "icon": {
           "md": {
             "$type": "dimension",
-            "$value": "24px"
+            "$value": "1rem"
           }
         }
       },
@@ -1139,6 +1153,12 @@
         "inline-size": {
           "$type": "dimension",
           "$value": "{rhc.frame.small-viewport.inline-size}"
+        }
+      },
+      "icon": {
+        "inset-block-start": {
+          "$type": "dimension",
+          "$value": "{rhc.icon.min.inset-block-start}"
         }
       }
     }
@@ -1791,7 +1811,7 @@
           },
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "3px"
+            "$value": "{rhc.icon.inset-block-start}"
           },
           "size": {
             "$type": "dimension",
@@ -4701,7 +4721,7 @@
         "icon": {
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "0.188rem"
+            "$value": "{rhc.icon.inset-block-start}"
           },
           "size": {
             "$type": "dimension",
@@ -8315,6 +8335,12 @@
         "inline-size": {
           "$type": "fontSizes",
           "$value": "{rhc.frame.large-viewport.inline-size}"
+        }
+      },
+      "icon": {
+        "inset-block-start": {
+          "$type": "dimension",
+          "$value": "{rhc.icon.max.inset-block-start}"
         }
       }
     }
