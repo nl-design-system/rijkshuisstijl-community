@@ -809,19 +809,33 @@
         "3-lint": {
           "$type": "dimension",
           "$value": "144px"
+        },
+        "icon": {
+          "min": {
+            "md": {
+              "$type": "dimension",
+              "$value": "1.25rem"
+            }
+          },
+          "max": {
+            "md": {
+              "$type": "dimension",
+              "$value": "1.5rem"
+            }
+          }
         }
       },
       "icon": {
         "min": {
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "0.25rem"
+            "$value": "0.125rem"
           }
         },
         "max": {
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "0.313rem"
+            "$value": "0.188rem"
           }
         }
       }
@@ -1145,7 +1159,7 @@
         "icon": {
           "md": {
             "$type": "dimension",
-            "$value": "{rhc.text.font-size.md}"
+            "$value": "{rhc.size.icon.min.md}"
           }
         }
       },
@@ -8340,7 +8354,15 @@
       "icon": {
         "inset-block-start": {
           "$type": "dimension",
-          "$value": "{rhc.icon.max.inset-block-start}"
+          "$value": "{rhc.icon.min.inset-block-start}"
+        }
+      },
+      "size": {
+        "icon": {
+          "md": {
+            "$type": "dimension",
+            "$value": "{rhc.size.icon.min.md}"
+          }
         }
       }
     }
