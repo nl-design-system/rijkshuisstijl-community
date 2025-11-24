@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import './globals.css';
 import Homepage from './homepage';
 
@@ -19,4 +19,9 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  globals: {
+    dir: 'ltr',
+    lang: 'nl',
+  },
+};

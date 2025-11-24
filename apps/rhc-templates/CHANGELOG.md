@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/rhc-templates
 
+## 2.0.3
+
+### Patch Changes
+
+- 10ec55a: Release package with npm provenance.
+
 ## 2.0.2
 
 ### Patch Changes

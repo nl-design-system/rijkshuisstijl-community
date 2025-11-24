@@ -85,7 +85,6 @@ export const Rows: StoryObj<DataSummaryStoryComponent> = {
   args: {
     appearance: 'Row',
   },
-  name: 'Rows',
 };
 export const RowsWithActions: StoryObj<DataSummaryStoryComponent> = {
   args: {

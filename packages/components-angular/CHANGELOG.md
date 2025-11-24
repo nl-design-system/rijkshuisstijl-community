@@ -1,5 +1,23 @@
 # @rijkshuisstijl-community/components-angular
 
+## 6.0.0
+
+### Major Changes
+
+- a44da6e: FormFieldErrorMessage no longer has a slot for an icon
+
+### Patch Changes
+
+- 10ec55a: Release package with npm provenance.
+
+## 5.0.0
+
+### Major Changes
+
+- 5c302e2: You now have to provide your own error icon to Form field error message
+- 694edc6: Footer columns and subFooter content now have to be projected into `<ng-content/>` placeholders instead of configured via inputs.
+- aadf35e: Removed the icon from form field error message
+
 ## 4.0.0
 
 ### Major Changes

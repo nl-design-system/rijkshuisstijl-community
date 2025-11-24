@@ -76,7 +76,6 @@ export const Default: StoryObj<StoryType> = {
   args: {
     disabled: false,
   },
-  name: 'Default',
 };
 
 export const Disabled: StoryObj<StoryType> = {

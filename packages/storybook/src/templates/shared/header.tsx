@@ -43,7 +43,7 @@ export default function SharedHeader() {
           {
             id: 'end1',
             target: '_blank',
-            href: 'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?m=auto',
+            href: 'https://www.figma.com/design/Q5Imc7Xi9KnBQhcYI3Hytj/NL-Design-System---Bibliotheek---Rijkshuisstijl-Community',
             label: 'Figma',
           },
           {

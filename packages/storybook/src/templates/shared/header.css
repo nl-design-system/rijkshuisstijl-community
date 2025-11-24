@@ -23,13 +23,13 @@
     --rhc-nav-bar-link-padding-inline-end: 0.5rem;
     --rhc-nav-bar-link-padding-inline-start: 0.5rem;
 
-    font-size: var(--rhc-font-size-xs-mobile);
+    font-size: var(--rhc-text-font-size-min-md);
   }
 }
 
 /**
-/* Temporary demo solution for acceptable contrast on current nav bar link (+ hover and focus-visible states). 
-/* TODO: fix in design tokens? 
+/* Temporary demo solution for acceptable contrast on current nav bar link (+ hover and focus-visible states).
+/* TODO: fix in design tokens?
 */
 .rhc-nav-bar__link--current {
   background-color: var(--nl-link-color);

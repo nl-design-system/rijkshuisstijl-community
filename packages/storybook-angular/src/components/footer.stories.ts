@@ -1,11 +1,40 @@
-import { type Meta, type StoryObj } from '@storybook/angular';
+import { type Meta, moduleMetadata, type StoryObj } from '@storybook/angular';
+import { provideTablerIcons, TablerIconComponent } from 'angular-tabler-icons';
+import { IconArrowNarrowUp, IconChevronRight } from 'angular-tabler-icons/icons';
 import readme from './footer.md';
-import { FooterComponent } from '../../../components-angular/src/public-api';
+import {
+  BackToTopComponent,
+  FooterComponent,
+  HeadingComponent,
+  IconComponent,
+  LinkListComponent,
+  LinkListItemComponent,
+  LinkListLinkComponent,
+} from '../../../components-angular/src/public-api';
 
 const meta: Meta<FooterComponent> = {
   title: 'Footer',
   id: 'rhc-angular-footer',
   component: FooterComponent,
+  decorators: [
+    moduleMetadata({
+      imports: [
+        LinkListItemComponent,
+        LinkListLinkComponent,
+        LinkListComponent,
+        HeadingComponent,
+        TablerIconComponent,
+        IconComponent,
+        BackToTopComponent,
+      ],
+      providers: [
+        provideTablerIcons({
+          IconChevronRight,
+          IconArrowNarrowUp,
+        }),
+      ],
+    }),
+  ],
   argTypes: {
     heading: {
       description: 'Heading',
@@ -33,14 +62,6 @@ const meta: Meta<FooterComponent> = {
       },
     },
 
-    backtotop: {
-      description: 'Toon de "Terug naar boven" knop.',
-      control: { type: 'boolean' },
-      table: {
-        type: { summary: 'boolean' },
-      },
-    },
-
     preFooter: {
       description: 'Het balkje die boven de footer wordt getoond.',
       defaultValue: false,
@@ -58,13 +79,21 @@ const meta: Meta<FooterComponent> = {
         type: { summary: 'string' },
       },
     },
+    subFooter: {
+      description: 'Het balkje die onder de footer wordt getoond.',
+      defaultValue: true,
+      control: { type: 'boolean' },
+      table: {
+        type: { summary: 'boolean' },
+      },
+    },
   },
   args: {
     heading: 'Heading',
     preFooter: true,
     preFooterMessage: 'Pre Footer Message',
     background: 'primary-filled',
-    backtotop: true,
+    subFooter: true,
   },
   parameters: {
     docs: {
@@ -73,55 +102,117 @@ const meta: Meta<FooterComponent> = {
       },
     },
   },
-  render: ({ heading, background, backtotop, preFooter, preFooterMessage, appearanceLevel }) => ({
+  render: ({ heading, background, preFooter, preFooterMessage, appearanceLevel, subFooter }) => ({
     template: `
       <footer rhc-footer
         [preFooter]="${preFooter}"
         [preFooterMessage]="'${preFooterMessage}'"
         [background]="'${background}'"
-        [backtotop]="${backtotop}"
-        [heading]="'${heading}'"
+        ${heading ? '[heading] = "\'' + heading + '\'"' : ''}
         [appearanceLevel] = "${appearanceLevel}"
-         [columns]="[
-          {
-            heading: 'Service',
-            appearanceLevel: 3,
-            items: [
-              { href: '#', label: 'Contact' },
-              { href: '#', label: 'Abonneren' },
-              { href: '#', label: 'RSS' },
-              { href: '#', label: 'Vacatures' },
-              { href: '#', label: 'Sitemap' },
-              { href: '#', label: 'Help' },
-              { href: '#', label: 'Archief' },
-            ]
-          },
-          {
-            heading: 'Over deze site',
-            appearanceLevel: 3,
-            items: [
-              { href: '#', label: 'Over deze organisatie' },
-              { href: '#', label: 'Wetten en regelingen' },
-              { href: '#', label: 'Privacy' },
-              { href: '#', label: 'Cookies' },
-              { href: '#', label: 'Toegankelijkheid' },
-              { href: '#', label: 'Open data' },
-              { href: '#', label: 'Kwetsbaarheid melden' },
-            ]
-          }
-        ]"
-        [subFooter]="{
-          items: [
-            { href: '#', label: 'Privacy' }
-          ]
-        }"
+        [subFooter]="${subFooter}"
       >
+        <div class="rhc-page-footer__section" columns>
+          <rhc-heading [level]="${heading ? 3 : 2}" [appearanceLevel]="${appearanceLevel}">
+            Service
+          </rhc-heading>
+            <rhc-link-list>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Contact
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>                
+                  Abonneren
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  RSS
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Vacatures
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Sitemap
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Help
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Archief
+                </a>
+              </li>                                   
+          </rhc-link-list>
+        </div>
+        <div class="rhc-page-footer__section" columns>
+          <rhc-heading [level]="heading ? 3 : 2" [appearanceLevel]="${appearanceLevel}">
+            Over deze site
+          </rhc-heading>
+          <rhc-link-list>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Over deze organisatie
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Wetten en regelingen
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Privacy
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Cookies
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Open data
+                </a>
+              </li>
+              <li rhc-link-list-item>
+                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
+                  Kwetsbaarheid melden
+                </a>
+              </li>                                   
+          </rhc-link-list>
+        </div>
+        <rhc-back-to-top subFooter>
+            Terug naar boven
+            <rhc-icon icon><i-tabler name="arrow-narrow-up"/></rhc-icon>
+        </rhc-back-to-top>
       </footer>
     `,
     props: {
       heading,
       background,
-      backtotop,
       preFooter,
       preFooterMessage,
     },
@@ -132,4 +223,28 @@ export default meta;
 
 export const Default: StoryObj<FooterComponent> = {
   args: {},
+};
+
+export const NoPreFooter: StoryObj<FooterComponent> = {
+  args: {
+    preFooter: false,
+  },
+};
+
+export const NoSubFooter: StoryObj<FooterComponent> = {
+  args: {
+    subFooter: false,
+  },
+};
+
+export const PrimaryOutlined: StoryObj<FooterComponent> = {
+  args: {
+    background: 'primary-outlined',
+  },
+};
+
+export const NoHeading: StoryObj<FooterComponent> = {
+  args: {
+    heading: undefined,
+  },
 };

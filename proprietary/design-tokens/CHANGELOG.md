@@ -1,5 +1,89 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 9.0.0
+
+### Major Changes
+
+- 91a9ca7: Invalid FormFields now have a red border to the left of the FormField
+- e486b7a: Koop specifieke link overwrite verwijderd zodat het gelijk loopt met het generieke thema.
+
+### Patch Changes
+
+- 10ec55a: Release package with npm provenance.
+- 9c88f77: Cleaned up token naming convention
+
+## 8.0.0
+
+### Major Changes
+
+- b012c3e: Cleaned up the blockquote component and separated out the rounded corner from the component.
+  The following tokens have been removed:
+  - --utrecht-blockquote-border-block-end-width
+  - --utrecht-blockquote-border-block-start-width
+  - --utrecht-blockquote-border-end-end-radius
+  - --utrecht-blockquote-border-end-start-radius
+  - --utrecht-blockquote-border-inline-end-width
+  - --utrecht-blockquote-border-start-end-radius
+  - --utrecht-blockquote-border-start-start-radius
+  - --utrecht-blockquote-caption-color
+  - --utrecht-blockquote-caption-font-family
+  - --utrecht-blockquote-caption-font-size
+  - --utrecht-blockquote-caption-font-weight
+  - --utrecht-blockquote-caption-line-height
+  - --utrecht-blockquote-caption-padding-block-start
+  - --utrecht-blockquote-content-font-family
+  - --utrecht-blockquote-content-font-weight
+  - --utrecht-blockquote-content-line-height
+
+  Blue border variation:
+  - --utrecht-blockquote-blue-corner-border-variation-border-block-end-width
+  - --utrecht-blockquote-blue-corner-border-variation-border-color
+  - --utrecht-blockquote-blue-corner-border-variation-border-end-end-radius
+  - --utrecht-blockquote-blue-corner-border-variation-border-inline-end-width
+
+  Pink background variation:
+  - --utrecht-blockquote-pink-background-variation-background-color
+  - --utrecht-blockquote-pink-background-variation-border-end-start-radius
+  - --utrecht-blockquote-pink-background-variation-padding
+
+  Pink corner border variation:
+  - --utrecht-blockquote-pink-corner-border-variation-border-block-start-width
+  - --utrecht-blockquote-pink-corner-border-variation-border-color
+  - --utrecht-blockquote-pink-corner-border-variation-border-inline-start-width
+  - --utrecht-blockquote-pink-corner-border-variation-border-start-start-radius
+  - --utrecht-blockquote-pink-corner-border-variation-padding
+
+  Pink left border variation:
+  - --utrecht-blockquote-pink-left-border-variation-border-color
+  - --utrecht-blockquote-pink-left-border-variation-border-inline-start-width
+  - --utrecht-blockquote-pink-left-border-variation-padding-block-end
+  - --utrecht-blockquote-pink-left-border-variation-padding-block-start
+  - --utrecht-blockquote-pink-left-border-variation-padding-inline-end
+  - --utrecht-blockquote-pink-left-border-variation-padding-inline-start
+
+  The following tokens have been renamed:
+  - --utrecht-blockquote-margin-block-end
+  - --utrecht-blockquote-margin-block-start
+  - --utrecht-blockquote-margin-inline-end
+  - --utrecht-blockquote-margin-inline-start
+
+  to:
+  - --rhc-blockquote-margin-block-end
+  - --rhc-blockquote-margin-block-start
+  - --rhc-blockquote-margin-inline-end
+  - --rhc-blockquote-margin-inline-start
+
+- aadf35e: Removed the icon from form field error message
+
+### Minor Changes
+
+- e8dc080: Added a token to control the navbar fontsize and set the default to 20px
+
+### Patch Changes
+
+- 1512988: Removed deprecated tokens for Form Field Description
+- 063f846: Backdrop verwijderd als common token (incl. brandtoken ‘transparant 30’). Een backdrop is een component en daarom geen geldig common token.
+
 ## 7.0.0
 
 ### Major Changes

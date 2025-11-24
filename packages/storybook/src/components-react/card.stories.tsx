@@ -1,7 +1,7 @@
 import { Card } from '@rijkshuisstijl-community/components-react';
-import type { Meta, StoryObj } from '@storybook/react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './card.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Card',

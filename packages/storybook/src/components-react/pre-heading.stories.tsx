@@ -1,9 +1,9 @@
 /* @license CC0-1.0 */
 
 import { Heading, PreHeading } from '@rijkshuisstijl-community/components-react';
-import type { Meta, StoryObj } from '@storybook/react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './pre-heading.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
   title: 'Pre-heading',
@@ -33,7 +33,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  name: 'Default',
   args: {
     children: 'Stap 1 van 8',
     heading: <Heading level={2}>Introductie</Heading>,

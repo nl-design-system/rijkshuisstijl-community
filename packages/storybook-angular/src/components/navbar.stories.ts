@@ -68,12 +68,9 @@ const meta: Meta<NavbarComponent> = {
 
 export default meta;
 
-export const Default: StoryObj<NavbarComponent> = {
-  name: 'Default',
-};
+export const Default: StoryObj<NavbarComponent> = {};
 
 export const WithIcons: StoryObj<NavbarComponent> = {
-  name: 'With Icons',
   render: () => ({
     template: `
     <rhc-navbar>
@@ -110,7 +107,6 @@ export const WithIcons: StoryObj<NavbarComponent> = {
 };
 
 export const WithHeading: StoryObj<NavbarComponent> = {
-  name: 'With Heading',
   render: () => ({
     template: `
     <rhc-navbar>
@@ -144,7 +140,6 @@ export const WithHeading: StoryObj<NavbarComponent> = {
 };
 
 export const WithEndItems: StoryObj<NavbarComponent> = {
-  name: 'With End Items',
   render: () => ({
     template: `
     <rhc-navbar [showEndItems]="true">

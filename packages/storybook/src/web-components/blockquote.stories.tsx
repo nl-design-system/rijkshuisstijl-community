@@ -1,6 +1,6 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { BlockquoteWebComponent } from '@rijkshuisstijl-community/web-components';
-import { Meta, StoryObj } from '@storybook/web-components';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
+import { Meta, StoryObj } from '@storybook/web-components-vite';
 import readme from '../components-react/blockquote.md?raw';
 
 BlockquoteWebComponent.define();
@@ -13,15 +13,6 @@ const meta = {
     attribution: {
       name: 'attribution',
       type: { name: 'string', required: false },
-    },
-    variation: {
-      name: 'variation',
-      type: { name: 'string', required: false },
-      control: {
-        type: 'select',
-      },
-      options: ['', 'blue-corner-border', 'pink-background', 'pink-left-border', 'pink-corner-border'],
-      defaultValue: '',
     },
   },
   args: {
@@ -57,37 +48,5 @@ export const Attribution = {
   args: {
     children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
     attribution: '— Pippi Langkous',
-  },
-} as StoryObj<typeof meta>;
-
-export const blueCornerBorder = {
-  args: {
-    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
-    attribution: '— Pippi Langkous',
-    variation: 'blue-corner-border',
-  },
-} as StoryObj<typeof meta>;
-
-export const pinkBackground = {
-  args: {
-    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
-    attribution: '— Pippi Langkous',
-    variation: 'pink-background',
-  },
-} as StoryObj<typeof meta>;
-
-export const pinkLeftBorder = {
-  args: {
-    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
-    attribution: '— Pippi Langkous',
-    variation: 'pink-left-border',
-  },
-} as StoryObj<typeof meta>;
-
-export const pinkCornerBorder = {
-  args: {
-    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
-    attribution: '— Pippi Langkous',
-    variation: 'pink-corner-border',
   },
 } as StoryObj<typeof meta>;
