@@ -1,4 +1,4 @@
-import { LinkList, LinkListLink, Icon, Paragraph, Footer as RhcFooter } from "@rijkshuisstijl-community/components-react";
+import { LinkList, LinkListLink, Icon, Footer as RhcFooter } from "@rijkshuisstijl-community/components-react";
 
 export function Footer() {
   return (
