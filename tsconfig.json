@@ -18,7 +18,12 @@
     "noUnusedParameters": true,
     "sourceMap": true,
     "strict": true,
-    "target": "es2020"
+    "target": "es2020",
+    "baseUrl": ".",
+    "paths": {
+      "angular-tabler-icons": ["./node_modules/angular-tabler-icons"],
+      "angular-tabler-icons/*": ["./node_modules/angular-tabler-icons/*"]
+    }
   },
   "exclude": ["**/node_modules/*"]
 }

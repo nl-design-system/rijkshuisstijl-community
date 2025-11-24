@@ -8,7 +8,11 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "target": "ES2022",
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "paths": {
+      "angular-tabler-icons": ["../../node_modules/angular-tabler-icons"],
+      "angular-tabler-icons/*": ["../../node_modules/angular-tabler-icons/*"]
+    }
   },
   "exclude": ["**/node_modules/*", "src/test.ts", "src/**/*.spec.ts"],
   "include": [".storybook/typings.d.ts", "config/**/*", "config/**/*.ts", "src/**/*"]

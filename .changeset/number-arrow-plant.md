@@ -3,6 +3,7 @@
 ---
 
 Thema's bijgewerkt
+
 - `body` en `root` zijn enabled.
 - Hover & active kleuren van buttons aangepast van lint-blauw naar de thema kleuren
 - Alle uitvoerende thema's hebben nu RijksSans als default font.
@@ -16,8 +17,9 @@ Thema's bijgewerkt
   - Uitvoerend - mintgroen
 - Nieuwe toevoeging:
   - Uitvoerend - Robijn Rood
-  
+
 Overwrites tokensets bijgewerkt en opgeschoond
+
 - `type-scale` toegevoegd.
 - Accent kleuren verwijderd.
 - Oude rijkshuisstijl verwijderd.
@@ -25,6 +27,5 @@ Overwrites tokensets bijgewerkt en opgeschoond
 - Volgorde van de tokensets aangepast.
 
 Nieuwe token toegevoegd
+
 - Token `rhc.color.primary.active` is toegevoegd aan de common tokens.
-
-
