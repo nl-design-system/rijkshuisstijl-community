@@ -24,11 +24,3 @@
 .utrecht-checkbox--custom.utrecht-checkbox--html-input[aria-invalid="true"]:hover {
   @include mixin.utrecht-checkbox--invalid;
 }
-
-.rhc-checkbox-group {
-  display: flex;
-  flex-direction: column;
-  padding-block-end: var(--rhc-checkbox-group-padding-block-end);
-  padding-block-start: var(--rhc-checkbox-group-padding-block-start);
-  row-gap: var(--rhc-checkbox-group-row-gap);
-}

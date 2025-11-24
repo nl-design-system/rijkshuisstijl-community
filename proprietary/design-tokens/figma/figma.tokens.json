@@ -2903,7 +2903,7 @@
       }
     }
   },
-  "components/checkbox/base": {
+  "components/checkbox": {
     "utrecht": {
       "checkbox": {
         "background-color": {
@@ -3014,6 +3014,74 @@
           "color": {
             "$type": "color",
             "$value": "{rhc.color.wit}"
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.primary.400}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.wit}"
+            },
+            "border-width": {
+              "$type": "dimension",
+              "$value": "{rhc.border-width.sm}"
+            }
+          },
+          "disabled": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.cool-grey.300}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.cool-grey.400}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.cool-grey.600}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.primary.300}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.wit}"
+            },
+            "border-width": {
+              "$type": "dimension",
+              "$value": "{rhc.border-width.sm}"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.bg-document}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.primary.500}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.primary.500}"
+            },
+            "border-width": {
+              "$type": "dimension",
+              "$value": "{rhc.border-width.md}"
+            }
           }
         },
         "checked": {
@@ -3032,6 +3100,74 @@
           "color": {
             "$type": "color",
             "$value": "{rhc.color.wit}"
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.primary.400}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.wit}"
+            },
+            "border-width": {
+              "$type": "dimension",
+              "$value": "{rhc.border-width.sm}"
+            }
+          },
+          "disabled": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.cool-grey.300}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.cool-grey.400}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.cool-grey.600}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.primary.300}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "transparent"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.wit}"
+            },
+            "border-width": {
+              "$type": "dimension",
+              "$value": "{rhc.border-width.sm}"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.bg-document}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.primary.500}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.primary.500}"
+            },
+            "border-width": {
+              "$type": "dimension",
+              "$value": "{rhc.border-width.md}"
+            }
           }
         }
       }
@@ -3175,152 +3311,6 @@
             "color": {
               "$type": "color",
               "$value": "{rhc.color.lintblauw.500}"
-            }
-          }
-        }
-      }
-    }
-  },
-  "components/checkbox/deprecated": {
-    "utrecht": {
-      "checkbox": {
-        "indeterminate": {
-          "active": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.400}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "transparent"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.wit}"
-            },
-            "border-width": {
-              "$type": "dimension",
-              "$value": "{rhc.border-width.sm}"
-            }
-          },
-          "disabled": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.300}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.400}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.600}"
-            }
-          },
-          "hover": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.300}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "transparent"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.wit}"
-            },
-            "border-width": {
-              "$type": "dimension",
-              "$value": "{rhc.border-width.sm}"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.bg-document}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.500}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.500}"
-            },
-            "border-width": {
-              "$type": "dimension",
-              "$value": "{rhc.border-width.md}"
-            }
-          }
-        },
-        "checked": {
-          "active": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.400}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "transparent"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.wit}"
-            },
-            "border-width": {
-              "$type": "dimension",
-              "$value": "{rhc.border-width.sm}"
-            }
-          },
-          "disabled": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.300}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.400}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.600}"
-            }
-          },
-          "hover": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.300}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "transparent"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.wit}"
-            },
-            "border-width": {
-              "$type": "dimension",
-              "$value": "{rhc.border-width.sm}"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.bg-document}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.500}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.500}"
-            },
-            "border-width": {
-              "$type": "dimension",
-              "$value": "{rhc.border-width.md}"
             }
           }
         }
@@ -8611,8 +8601,7 @@
         "components/card": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
-        "components/checkbox/base": "enabled",
-        "components/checkbox/deprecated": "enabled",
+        "components/checkbox": "enabled",
         "components/code-input": "enabled",
         "components/code-input-group": "enabled",
         "components/column-layout": "enabled",
@@ -8705,8 +8694,7 @@
         "components/card": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
-        "components/checkbox/base": "enabled",
-        "components/checkbox/deprecated": "enabled",
+        "components/checkbox": "enabled",
         "components/code-input": "enabled",
         "components/code-input-group": "enabled",
         "components/column-layout": "enabled",
@@ -8801,8 +8789,7 @@
         "components/card": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
-        "components/checkbox/base": "enabled",
-        "components/checkbox/deprecated": "enabled",
+        "components/checkbox": "enabled",
         "components/code-input": "enabled",
         "components/code-input-group": "enabled",
         "components/column-layout": "enabled",
@@ -8897,8 +8884,7 @@
         "components/card": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
-        "components/checkbox/base": "enabled",
-        "components/checkbox/deprecated": "enabled",
+        "components/checkbox": "enabled",
         "components/code-input": "enabled",
         "components/code-input-group": "enabled",
         "components/column-layout": "enabled",
@@ -8994,8 +8980,7 @@
         "components/card": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
-        "components/checkbox/base": "enabled",
-        "components/checkbox/deprecated": "enabled",
+        "components/checkbox": "enabled",
         "components/code-input": "enabled",
         "components/code-input-group": "enabled",
         "components/column-layout": "enabled",
@@ -9090,8 +9075,7 @@
         "components/card": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
-        "components/checkbox/base": "enabled",
-        "components/checkbox/deprecated": "enabled",
+        "components/checkbox": "enabled",
         "components/code-input": "enabled",
         "components/code-input-group": "enabled",
         "components/column-layout": "enabled",
@@ -9186,8 +9170,7 @@
         "components/card": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
-        "components/checkbox/base": "enabled",
-        "components/checkbox/deprecated": "enabled",
+        "components/checkbox": "enabled",
         "components/code-input": "enabled",
         "components/code-input-group": "enabled",
         "components/column-layout": "enabled",
@@ -9289,8 +9272,7 @@
       "components/card",
       "components/card-as-link",
       "components/checkbox-group",
-      "components/checkbox/base",
-      "components/checkbox/deprecated",
+      "components/checkbox",
       "components/code-input",
       "components/code-input-group",
       "components/column-layout",

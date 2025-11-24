@@ -18,10 +18,10 @@ Hieronder vind je instructies hoe je de standaard Rijkshuisstijl-community token
 1. Installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens).
 
    ```bash
-   npm install --save-dev @rijkshuisstijl-community/design-tokens
+   npm install @rijkshuisstijl-community/design-tokens
 
    # En als je CSS classes wilt importeren
-   npm install --save-dev @rijkshuisstijl-community/components-css
+   npm install @rijkshuisstijl-community/components-css
    ```
 
    Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.css`-bestand uit de `dist` map van het pakket, en omring het deel van je applicatie waar je het thema wilt toepassen. Het Rijkshuisstijl-thema is bijvoorbeeld: `rhc-theme`.
