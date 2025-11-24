@@ -724,6 +724,10 @@
         },
         "font-size": {
           "max": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "1rem"
+            },
             "md": {
               "$type": "fontSizes",
               "$value": "1.25rem"
@@ -734,7 +738,7 @@
             },
             "xl": {
               "$type": "fontSizes",
-              "$value": "1.875rem"
+              "$value": "2rem"
             },
             "2xl": {
               "$type": "fontSizes",
@@ -742,17 +746,25 @@
             },
             "3xl": {
               "$type": "fontSizes",
-              "$value": "3.125rem"
+              "$value": "3rem"
+            },
+            "4xl": {
+              "$type": "fontSizes",
+              "$value": "4rem"
             }
           },
           "min": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "0.875rem"
+            },
             "md": {
               "$type": "fontSizes",
               "$value": "1rem"
             },
             "lg": {
               "$type": "fontSizes",
-              "$value": "1.2rem"
+              "$value": "1.25rem"
             },
             "xl": {
               "$type": "fontSizes",
@@ -765,6 +777,10 @@
             "3xl": {
               "$type": "fontSizes",
               "$value": "2.5rem"
+            },
+            "4xl": {
+              "$type": "fontSizes",
+              "$value": "3rem"
             }
           }
         }
@@ -793,6 +809,66 @@
         "3-lint": {
           "$type": "dimension",
           "$value": "144px"
+        },
+        "icon": {
+          "min": {
+            "md": {
+              "$type": "dimension",
+              "$value": "1.25rem"
+            }
+          },
+          "max": {
+            "md": {
+              "$type": "dimension",
+              "$value": "1.5rem"
+            }
+          }
+        }
+      },
+      "icon": {
+        "min": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0.125rem"
+          }
+        },
+        "max": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0.188rem"
+          }
+        }
+      }
+    }
+  },
+  "brand/experimental": {
+    "rhc": {
+      "size": {
+        "grid": {
+          "max-inline-size": {
+            "$type": "dimension",
+            "$value": "1200px"
+          }
+        },
+        "content": {
+          "max-inline-size": {
+            "$type": "dimension",
+            "$value": "800px"
+          }
+        }
+      },
+      "frame": {
+        "large-viewport": {
+          "inline-size": {
+            "$type": "dimension",
+            "$value": "1440px"
+          }
+        },
+        "small-viewport": {
+          "inline-size": {
+            "$type": "dimension",
+            "$value": "375px"
+          }
         }
       }
     }
@@ -1083,8 +1159,20 @@
         "icon": {
           "md": {
             "$type": "dimension",
-            "$value": "24px"
+            "$value": "{rhc.size.icon.min.md}"
           }
+        }
+      },
+      "page": {
+        "inline-size": {
+          "$type": "dimension",
+          "$value": "{rhc.frame.small-viewport.inline-size}"
+        }
+      },
+      "icon": {
+        "inset-block-start": {
+          "$type": "dimension",
+          "$value": "{rhc.icon.min.inset-block-start}"
         }
       }
     }
@@ -1093,25 +1181,33 @@
     "rhc": {
       "text": {
         "font-size": {
+          "sm": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.sm}"
+          },
           "md": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.md}"
+            "$value": "{rhc.text.font-size.min.md}"
           },
           "lg": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.lg}"
+            "$value": "{rhc.text.font-size.min.lg}"
           },
           "xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.xl}"
+            "$value": "{rhc.text.font-size.min.xl}"
           },
           "2xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.2xl}"
+            "$value": "{rhc.text.font-size.min.2xl}"
           },
           "3xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.3xl}"
+            "$value": "{rhc.text.font-size.min.3xl}"
+          },
+          "4xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.4xl}"
           }
         },
         "font-family": {
@@ -1189,26 +1285,26 @@
     "rhc": {
       "rounded-corner": {
         "overflow": {
-          "$value": "hidden",
           "$type": "other",
+          "$value": "hidden",
           "$description": "[code-only]"
         },
         "sm": {
           "border-radius": {
-            "$value": "{rhc.size.half-lint}",
-            "$type": "dimension"
+            "$type": "dimension",
+            "$value": "{rhc.size.half-lint}"
           }
         },
         "md": {
           "border-radius": {
-            "$value": "{rhc.size.lint}",
-            "$type": "dimension"
+            "$type": "dimension",
+            "$value": "{rhc.size.lint}"
           }
         },
         "lg": {
           "border-radius": {
-            "$value": "{rhc.size.2-lint}",
-            "$type": "dimension"
+            "$type": "dimension",
+            "$value": "{rhc.size.2-lint}"
           }
         }
       }
@@ -1729,7 +1825,7 @@
           },
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "3px"
+            "$value": "{rhc.icon.inset-block-start}"
           },
           "size": {
             "$type": "dimension",
@@ -4639,7 +4735,7 @@
         "icon": {
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "0.188rem"
+            "$value": "{rhc.icon.inset-block-start}"
           },
           "size": {
             "$type": "dimension",
@@ -8191,29 +8287,57 @@
       }
     }
   },
-  "overwrites/responsive/min": {
+  "overwrites/responsive/max": {
     "rhc": {
       "text": {
         "font-size": {
+          "sm": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.sm}"
+          },
           "md": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.md}"
+            "$value": "{rhc.text.font-size.max.md}"
           },
           "lg": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.lg}"
+            "$value": "{rhc.text.font-size.max.lg}"
           },
           "xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.xl}"
+            "$value": "{rhc.text.font-size.max.xl}"
           },
           "2xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.2xl}"
+            "$value": "{rhc.text.font-size.max.2xl}"
           },
           "3xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.3xl}"
+            "$value": "{rhc.text.font-size.max.3xl}"
+          },
+          "4xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.4xl}"
+          }
+        }
+      },
+      "page": {
+        "inline-size": {
+          "$type": "fontSizes",
+          "$value": "{rhc.frame.large-viewport.inline-size}"
+        }
+      },
+      "icon": {
+        "inset-block-start": {
+          "$type": "dimension",
+          "$value": "{rhc.icon.min.inset-block-start}"
+        }
+      },
+      "size": {
+        "icon": {
+          "md": {
+            "$type": "dimension",
+            "$value": "{rhc.size.icon.min.md}"
           }
         }
       }
@@ -8240,13 +8364,17 @@
       "text": {
         "font-size": {
           "max": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "0.875rem"
+            },
             "md": {
               "$type": "fontSizes",
               "$value": "1rem"
             },
             "lg": {
               "$type": "fontSizes",
-              "$value": "1.2rem"
+              "$value": "1.25rem"
             },
             "xl": {
               "$type": "fontSizes",
@@ -8254,11 +8382,15 @@
             },
             "2xl": {
               "$type": "fontSizes",
-              "$value": "2rem"
+              "$value": "1.75rem"
             },
             "3xl": {
               "$type": "fontSizes",
               "$value": "2.5rem"
+            },
+            "4xl": {
+              "$type": "fontSizes",
+              "$value": "3rem"
             }
           }
         }
@@ -8270,6 +8402,10 @@
       "text": {
         "font-size": {
           "max": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "1rem"
+            },
             "md": {
               "$type": "fontSizes",
               "$value": "1.25rem"
@@ -8280,7 +8416,7 @@
             },
             "xl": {
               "$type": "fontSizes",
-              "$value": "2.25rem"
+              "$value": "2.5rem"
             },
             "2xl": {
               "$type": "fontSizes",
@@ -8288,7 +8424,11 @@
             },
             "3xl": {
               "$type": "fontSizes",
-              "$value": "4rem"
+              "$value": "3.5rem"
+            },
+            "4xl": {
+              "$type": "fontSizes",
+              "$value": "5rem"
             }
           }
         }
@@ -8301,7 +8441,7 @@
         "font-family": {
           "default": {
             "$type": "fontFamilies",
-            "$value": "RijksSans, Arial, Verdana, sans-serif"
+            "$value": "RijksSansVF, RijksSans, Arial, Verdana, sans-serif"
           }
         }
       }
@@ -8673,7 +8813,8 @@
         "utrecht/pointer-target": "enabled",
         "utrecht/rich-text": "enabled",
         "utrecht/body": "enabled",
-        "utrecht/root": "enabled"
+        "utrecht/root": "enabled",
+        "brand/experimental": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8769,7 +8910,8 @@
         "utrecht/rich-text": "enabled",
         "utrecht/body": "enabled",
         "utrecht/root": "enabled",
-        "overwrites/closed-source/font": "enabled"
+        "overwrites/closed-source/font": "enabled",
+        "brand/experimental": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8865,7 +9007,8 @@
         "utrecht/rich-text": "enabled",
         "utrecht/body": "enabled",
         "utrecht/root": "enabled",
-        "overwrites/closed-source/font": "enabled"
+        "overwrites/closed-source/font": "enabled",
+        "brand/experimental": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8962,7 +9105,8 @@
         "utrecht/body": "enabled",
         "utrecht/root": "enabled",
         "overwrites/closed-source/font": "enabled",
-        "overwrites/primaire kleur/contrast fix/button label groter": "enabled"
+        "overwrites/primaire kleur/contrast fix/button label groter": "enabled",
+        "brand/experimental": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9058,7 +9202,8 @@
         "utrecht/rich-text": "enabled",
         "utrecht/body": "enabled",
         "utrecht/root": "enabled",
-        "overwrites/closed-source/font": "enabled"
+        "overwrites/closed-source/font": "enabled",
+        "brand/experimental": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9154,7 +9299,8 @@
         "utrecht/body": "enabled",
         "utrecht/root": "enabled",
         "overwrites/closed-source/font": "enabled",
-        "overwrites/primaire kleur/robijn rood": "enabled"
+        "overwrites/primaire kleur/robijn rood": "enabled",
+        "brand/experimental": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9251,7 +9397,8 @@
         "utrecht/pointer-target": "enabled",
         "utrecht/rich-text": "enabled",
         "utrecht/body": "enabled",
-        "utrecht/root": "enabled"
+        "utrecht/root": "enabled",
+        "brand/experimental": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9264,6 +9411,7 @@
       "brand/border",
       "brand/font",
       "brand/size",
+      "brand/experimental",
       "common/basis",
       "common/color",
       "common/size",
@@ -9359,7 +9507,7 @@
       "overwrites/primaire kleur/contrast fix/button label groter",
       "overwrites/primaire kleur/contrast fix/non primary buttons coolgrey",
       "overwrites/heading-color/primary",
-      "overwrites/responsive/min",
+      "overwrites/responsive/max",
       "overwrites/font-weight/bzk",
       "overwrites/type-scale/information dense",
       "overwrites/type-scale/promotion",
