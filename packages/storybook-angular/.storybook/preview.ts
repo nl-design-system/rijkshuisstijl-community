@@ -38,7 +38,7 @@ const preview: Preview = {
         'Uitvoerend - Groen': 'uitvoerend-groen',
         'Uitvoerend - Oranje': 'uitvoerend-oranje',
         'Uitvoerend - Robijn Rood': 'uitvoerend-robijnrood',
-        KOOP: 'koop',
+        'Uitvoerend - Lintblauw': 'uitvoerend-lintblauw',
       },
       defaultTheme: 'Kern - Lintblauw',
     }),

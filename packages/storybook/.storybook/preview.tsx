@@ -5,7 +5,7 @@ import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-paars/index.css'
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-oranje/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/koop/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-lintblauw/index.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Paragraph } from '@rijkshuisstijl-community/components-react';
@@ -30,7 +30,7 @@ const preview: Preview = {
         'Uitvoerend - Groen': 'uitvoerend-groen',
         'Uitvoerend - Oranje': 'uitvoerend-oranje',
         'Uitvoerend - Robijn Rood': 'uitvoerend-robijnrood',
-        KOOP: 'koop',
+        'Uitvoerend - Lintblauw': 'uitvoerend-lintblauw',
       },
       defaultTheme: 'Kern - Lintblauw',
     }),
