@@ -1,5 +1,4 @@
-import { Figure, FigureCaption, Image } from '@rijkshuisstijl-community/components-react';
-import { RoundedCorner } from '@rijkshuisstijl-community/components-react';
+import { Figure, FigureCaption, Image, RoundedCorner } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './figure.md?raw';
