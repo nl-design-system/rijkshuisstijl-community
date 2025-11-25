@@ -8,20 +8,13 @@ const meta = {
   title: 'Figure',
   id: 'rhc-figure',
   component: Figure,
-  argTypes: {
-    position: {
-      control: { type: 'select' },
-      options: ['start-start', 'start-end', 'end-start', 'end-end'],
-    },
-    size: {
-      control: { type: 'select' },
-      options: ['lg', 'md', 'sm'],
-    },
-  },
   parameters: {
-    status: { type: 'STABLE' },
+    status: {
+      type: 'STABLE',
+    },
     docs: {
       description: {
+        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
         component: mergeMarkdown([readme]),
       },
     },
@@ -37,16 +30,11 @@ export default meta;
 
 export const DefaultFigure: StoryObj<typeof meta> = {
   args: {
-    position: 'start-end',
-    size: 'md',
-  },
-  render: ({ position, size }) => (
-    <Figure>
-      <RoundedCorner position={position} size={size}>
+    children: [
+      <RoundedCorner position="start-end" size="md">
         <Image alt="Multicolored tulip field" height={763} src="/placeholder.jpg" width={640} />
-      </RoundedCorner>
-
-      <FigureCaption>Bijschrift (figcaption) van afbeelding.</FigureCaption>
-    </Figure>
-  ),
+      </RoundedCorner>,
+      <FigureCaption>{'Bijschrift (figcaption) van afbeelding.'}</FigureCaption>,
+    ],
+  },
 };
