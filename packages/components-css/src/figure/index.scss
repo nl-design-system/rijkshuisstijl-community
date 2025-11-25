@@ -9,3 +9,9 @@
   border-start-end-radius: var(--utrecht-figure-img-border-start-end-radius);
   border-start-start-radius: var(--utrecht-figure-img-border-start-start-radius);
 }
+
+/* Inline behaviour for rounded-corner to fix cornering on block elements */
+.utrecht-figure .rhc-rounded-corner {
+  display: inline-block;
+  vertical-align: top;
+}

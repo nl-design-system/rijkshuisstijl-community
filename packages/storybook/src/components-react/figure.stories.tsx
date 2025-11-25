@@ -1,4 +1,5 @@
 import { Figure, FigureCaption, Image } from '@rijkshuisstijl-community/components-react';
+import { RoundedCorner } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './figure.md?raw';
@@ -64,7 +65,9 @@ export default meta;
 export const DefaultFigure: StoryObj<typeof meta> = {
   args: {
     children: [
-      <Image alt="Multicolored tulip field" height={763} src="/placeholder.jpg" width={640} />,
+      <RoundedCorner position="start-end" size="md">
+        <Image alt="Multicolored tulip field" height={763} src="/placeholder.jpg" width={640} />
+      </RoundedCorner>,
       <FigureCaption>{'Bijschrift (figcaption) van afbeelding.'}</FigureCaption>,
     ],
   },
