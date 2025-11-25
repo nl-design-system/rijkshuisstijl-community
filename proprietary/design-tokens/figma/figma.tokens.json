@@ -1,4 +1,37 @@
 {
+  "brand/border": {
+    "rhc": {
+      "border-radius": {
+        "round": {
+          "parent": "core/default",
+          "$type": "dimension",
+          "$value": "999px"
+        },
+        "none": {
+          "parent": "core/default",
+          "$type": "dimension",
+          "$value": "0px"
+        }
+      },
+      "border-width": {
+        "sm": {
+          "parent": "core/default",
+          "$type": "dimension",
+          "$value": "1px"
+        },
+        "md": {
+          "parent": "core/default",
+          "$type": "dimension",
+          "$value": "2px"
+        },
+        "none": {
+          "parent": "core/default",
+          "$type": "dimension",
+          "$value": "0px"
+        }
+      }
+    }
+  },
   "brand/color": {
     "rhc": {
       "color": {
@@ -650,40 +683,33 @@
       }
     }
   },
-  "brand/border": {
+  "brand/size": {
     "rhc": {
-      "border-radius": {
-        "round": {
-          "parent": "core/default",
+      "size": {
+        "quarter-lint": {
           "$type": "dimension",
-          "$value": "999px"
+          "$value": "12px"
         },
-        "none": {
-          "parent": "core/default",
+        "half-lint": {
           "$type": "dimension",
-          "$value": "0px"
-        }
-      },
-      "border-width": {
-        "sm": {
-          "parent": "core/default",
-          "$type": "dimension",
-          "$value": "1px"
+          "$value": "24px"
         },
-        "md": {
-          "parent": "core/default",
+        "lint": {
           "$type": "dimension",
-          "$value": "2px"
+          "$value": "48px"
         },
-        "none": {
-          "parent": "core/default",
+        "2-lint": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "96px"
+        },
+        "3-lint": {
+          "$type": "dimension",
+          "$value": "144px"
         }
       }
     }
   },
-  "brand/font": {
+  "brand/text": {
     "rhc": {
       "text": {
         "font-weight": {
@@ -767,32 +793,6 @@
               "$value": "2.5rem"
             }
           }
-        }
-      }
-    }
-  },
-  "brand/size": {
-    "rhc": {
-      "size": {
-        "quarter-lint": {
-          "$type": "dimension",
-          "$value": "12px"
-        },
-        "half-lint": {
-          "$type": "dimension",
-          "$value": "24px"
-        },
-        "lint": {
-          "$type": "dimension",
-          "$value": "48px"
-        },
-        "2-lint": {
-          "$type": "dimension",
-          "$value": "96px"
-        },
-        "3-lint": {
-          "$type": "dimension",
-          "$value": "144px"
         }
       }
     }
@@ -910,6 +910,20 @@
         "outline-width": {
           "$type": "dimension",
           "$value": "{rhc.border-width.md}"
+        }
+      }
+    }
+  },
+  "common/border": {
+    "rhc": {
+      "border-radius": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "2.5px"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "5px"
         }
       }
     }
@@ -1073,6 +1087,63 @@
       }
     }
   },
+  "common/focus": {
+    "rhc": {
+      "focus": {
+        "outline-color": {
+          "$type": "color",
+          "$value": "{rhc.color.zwart}"
+        },
+        "inverse": {
+          "outline-color": {
+            "$type": "color",
+            "$value": "{rhc.color.wit}"
+          }
+        },
+        "outline-offset": {
+          "$type": "other",
+          "$value": "{rhc.space.25}"
+        },
+        "outline-style": {
+          "$type": "other",
+          "$value": "solid"
+        },
+        "outline-width": {
+          "$type": "dimension",
+          "$value": "{rhc.border-width.md}"
+        }
+      }
+    }
+  },
+  "common/rounded-corner": {
+    "rhc": {
+      "rounded-corner": {
+        "overflow": {
+          "$type": "other",
+          "$value": "hidden",
+          "$description": "[code-only]"
+        },
+        "sm": {
+          "border-radius": {
+            "$type": "dimension",
+            "$value": "{rhc.size.half-lint}"
+          }
+        },
+        "md": {
+          "border-radius": {
+            "$type": "dimension",
+            "$value": "{rhc.size.lint}"
+          }
+        },
+        "lg": {
+          "border-radius": {
+            "$type": "dimension",
+            "$value": "{rhc.size.2-lint}"
+          }
+        }
+      }
+    }
+  },
   "common/size": {
     "rhc": {
       "size": {
@@ -1089,7 +1160,7 @@
       }
     }
   },
-  "common/font": {
+  "common/text": {
     "rhc": {
       "text": {
         "font-size": {
@@ -1138,77 +1209,6 @@
           "strong": {
             "$type": "fontWeights",
             "$value": "{rhc.text.font-weight.bold}"
-          }
-        }
-      }
-    }
-  },
-  "common/focus": {
-    "rhc": {
-      "focus": {
-        "outline-color": {
-          "$type": "color",
-          "$value": "{rhc.color.zwart}"
-        },
-        "inverse": {
-          "outline-color": {
-            "$type": "color",
-            "$value": "{rhc.color.wit}"
-          }
-        },
-        "outline-offset": {
-          "$type": "other",
-          "$value": "{rhc.space.25}"
-        },
-        "outline-style": {
-          "$type": "other",
-          "$value": "solid"
-        },
-        "outline-width": {
-          "$type": "dimension",
-          "$value": "{rhc.border-width.md}"
-        }
-      }
-    }
-  },
-  "common/border": {
-    "rhc": {
-      "border-radius": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "2.5px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "5px"
-        }
-      }
-    }
-  },
-  "common/rounded-corner": {
-    "rhc": {
-      "rounded-corner": {
-        "overflow": {
-          "$type": "other",
-          "$value": "hidden",
-          "$description": "[code-only]"
-        },
-        "sm": {
-          "border-radius": {
-            "$type": "dimension",
-            "$value": "{rhc.size.half-lint}"
-          }
-        },
-        "md": {
-          "border-radius": {
-            "$type": "dimension",
-            "$value": "{rhc.size.lint}"
-          }
-        },
-        "lg": {
-          "border-radius": {
-            "$type": "dimension",
-            "$value": "{rhc.size.2-lint}"
           }
         }
       }
@@ -2375,6 +2375,26 @@
           "$type": "dimension",
           "$value": "{rhc.space.0}",
           "$description": "[code-only]"
+        }
+      }
+    },
+    "rhc": {
+      "icon-only-button": {
+        "padding-block-end": {
+          "$type": "dimension",
+          "$value": "{rhc.space.150}"
+        },
+        "padding-block-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.150}"
+        },
+        "padding-inline-end": {
+          "$type": "dimension",
+          "$value": "{rhc.space.150}"
+        },
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.150}"
         }
       }
     }
@@ -4171,28 +4191,6 @@
       }
     }
   },
-  "components/icon-only-button": {
-    "rhc": {
-      "icon-only-button": {
-        "padding-block-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.150}"
-        },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.150}"
-        },
-        "padding-inline-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.150}"
-        },
-        "padding-inline-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.150}"
-        }
-      }
-    }
-  },
   "components/link-list": {
     "utrecht": {
       "link-list": {
@@ -5464,7 +5462,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{rhc.text.font-size.min.md}"
+          "$value": "{rhc.text.font-size.md}"
         }
       }
     }
@@ -8515,13 +8513,11 @@
       "selectedTokenSets": {
         "brand/border": "enabled",
         "brand/color": "enabled",
-        "brand/font": "enabled",
         "brand/size": "enabled",
         "brand/space": "enabled",
         "common/border": "enabled",
         "common/color": "enabled",
         "common/focus": "enabled",
-        "common/font": "enabled",
         "common/rounded-corner": "enabled",
         "common/size": "enabled",
         "components/accordion": "enabled",
@@ -8557,7 +8553,6 @@
         "components/form-field-radio-option": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
-        "components/icon-only-button": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
@@ -8591,7 +8586,9 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "components/page-heading": "enabled",
-        "common/utrecht": "enabled"
+        "common/utrecht": "enabled",
+        "brand/text": "enabled",
+        "common/text": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8603,13 +8600,11 @@
       "selectedTokenSets": {
         "brand/border": "enabled",
         "brand/color": "enabled",
-        "brand/font": "enabled",
         "brand/size": "enabled",
         "brand/space": "enabled",
         "common/border": "enabled",
         "common/color": "enabled",
         "common/focus": "enabled",
-        "common/font": "enabled",
         "common/rounded-corner": "enabled",
         "common/size": "enabled",
         "components/accordion": "enabled",
@@ -8645,7 +8640,6 @@
         "components/form-field-radio-option": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
-        "components/icon-only-button": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
@@ -8681,7 +8675,9 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "components/page-heading": "enabled",
-        "common/utrecht": "enabled"
+        "common/utrecht": "enabled",
+        "brand/text": "enabled",
+        "common/text": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8693,13 +8689,11 @@
       "selectedTokenSets": {
         "brand/border": "enabled",
         "brand/color": "enabled",
-        "brand/font": "enabled",
         "brand/size": "enabled",
         "brand/space": "enabled",
         "common/border": "enabled",
         "common/color": "enabled",
         "common/focus": "enabled",
-        "common/font": "enabled",
         "common/rounded-corner": "enabled",
         "common/size": "enabled",
         "components/accordion": "enabled",
@@ -8735,7 +8729,6 @@
         "components/form-field-radio-option": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
-        "components/icon-only-button": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
@@ -8771,7 +8764,9 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "components/page-heading": "enabled",
-        "common/utrecht": "enabled"
+        "common/utrecht": "enabled",
+        "brand/text": "enabled",
+        "common/text": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8783,13 +8778,11 @@
       "selectedTokenSets": {
         "brand/border": "enabled",
         "brand/color": "enabled",
-        "brand/font": "enabled",
         "brand/size": "enabled",
         "brand/space": "enabled",
         "common/border": "enabled",
         "common/color": "enabled",
         "common/focus": "enabled",
-        "common/font": "enabled",
         "common/rounded-corner": "enabled",
         "common/size": "enabled",
         "components/accordion": "enabled",
@@ -8825,7 +8818,6 @@
         "components/form-field-radio-option": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
-        "components/icon-only-button": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
@@ -8862,7 +8854,9 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "components/page-heading": "enabled",
-        "common/utrecht": "enabled"
+        "common/utrecht": "enabled",
+        "brand/text": "enabled",
+        "common/text": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8874,13 +8868,11 @@
       "selectedTokenSets": {
         "brand/border": "enabled",
         "brand/color": "enabled",
-        "brand/font": "enabled",
         "brand/size": "enabled",
         "brand/space": "enabled",
         "common/border": "enabled",
         "common/color": "enabled",
         "common/focus": "enabled",
-        "common/font": "enabled",
         "common/rounded-corner": "enabled",
         "common/size": "enabled",
         "components/accordion": "enabled",
@@ -8916,7 +8908,6 @@
         "components/form-field-radio-option": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
-        "components/icon-only-button": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
@@ -8952,7 +8943,9 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "components/page-heading": "enabled",
-        "common/utrecht": "enabled"
+        "common/utrecht": "enabled",
+        "brand/text": "enabled",
+        "common/text": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8964,13 +8957,11 @@
       "selectedTokenSets": {
         "brand/border": "enabled",
         "brand/color": "enabled",
-        "brand/font": "enabled",
         "brand/size": "enabled",
         "brand/space": "enabled",
         "common/border": "enabled",
         "common/color": "enabled",
         "common/focus": "enabled",
-        "common/font": "enabled",
         "common/rounded-corner": "enabled",
         "common/size": "enabled",
         "components/accordion": "enabled",
@@ -9006,7 +8997,6 @@
         "components/form-field-radio-option": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
-        "components/icon-only-button": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
@@ -9042,7 +9032,9 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "components/page-heading": "enabled",
-        "common/utrecht": "enabled"
+        "common/utrecht": "enabled",
+        "brand/text": "enabled",
+        "common/text": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9054,13 +9046,11 @@
       "selectedTokenSets": {
         "brand/border": "enabled",
         "brand/color": "enabled",
-        "brand/font": "enabled",
         "brand/size": "enabled",
         "brand/space": "enabled",
         "common/border": "enabled",
         "common/color": "enabled",
         "common/focus": "enabled",
-        "common/font": "enabled",
         "common/rounded-corner": "enabled",
         "common/size": "enabled",
         "components/accordion": "enabled",
@@ -9096,7 +9086,6 @@
         "components/form-field-radio-option": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
-        "components/icon-only-button": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
@@ -9133,7 +9122,9 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "components/page-heading": "enabled",
-        "common/utrecht": "enabled"
+        "common/utrecht": "enabled",
+        "brand/text": "enabled",
+        "common/text": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9141,18 +9132,18 @@
   ],
   "$metadata": {
     "tokenSetOrder": [
+      "brand/border",
       "brand/color",
       "brand/space",
-      "brand/border",
-      "brand/font",
       "brand/size",
+      "brand/text",
       "common/basis",
-      "common/color",
-      "common/size",
-      "common/font",
-      "common/focus",
       "common/border",
+      "common/color",
+      "common/focus",
       "common/rounded-corner",
+      "common/size",
+      "common/text",
       "common/utrecht",
       "components/accordion",
       "components/action-group",
@@ -9189,7 +9180,6 @@
       "components/form-field-radio-option",
       "components/hero",
       "components/icon",
-      "components/icon-only-button",
       "components/link-list",
       "components/link-list-card",
       "components/link/nl",
