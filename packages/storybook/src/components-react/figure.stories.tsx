@@ -9,46 +9,19 @@ const meta = {
   id: 'rhc-figure',
   component: Figure,
   argTypes: {
-    borderEndEndRadius: {
-      type: { name: 'string', required: false },
-      control: { type: 'range', min: 0, max: 80, step: 8 },
-      description: 'Bottom right corner radius of the image in pixels',
-      table: {
-        category: 'Demo',
-      },
+    position: {
+      control: { type: 'select' },
+      options: ['start-start', 'start-end', 'end-start', 'end-end'],
     },
-    borderEndStartRadius: {
-      type: { name: 'string', required: false },
-      control: { type: 'range', min: 0, max: 80, step: 8 },
-      description: 'Bottom left corner radius of the image in pixels',
-      table: {
-        category: 'Demo',
-      },
-    },
-    borderStartEndRadius: {
-      type: { name: 'string', required: false },
-      control: { type: 'range', min: 0, max: 80, step: 8 },
-      description: 'Top right corner radius of the image in pixels',
-      table: {
-        category: 'Demo',
-      },
-    },
-    borderStartStartRadius: {
-      type: { name: 'string', required: false },
-      control: { type: 'range', min: 0, max: 80, step: 8 },
-      description: 'Top left corner radius of the image in pixels',
-      table: {
-        category: 'Demo',
-      },
+    size: {
+      control: { type: 'select' },
+      options: ['lg', 'md', 'sm'],
     },
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
+    status: { type: 'STABLE' },
     docs: {
       description: {
-        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
         component: mergeMarkdown([readme]),
       },
     },
@@ -64,11 +37,16 @@ export default meta;
 
 export const DefaultFigure: StoryObj<typeof meta> = {
   args: {
-    children: [
-      <RoundedCorner position="start-end" size="md">
-        <Image alt="Multicolored tulip field" height={763} src="/placeholder.jpg" width={640} />
-      </RoundedCorner>,
-      <FigureCaption>{'Bijschrift (figcaption) van afbeelding.'}</FigureCaption>,
-    ],
+    position: 'start-end',
+    size: 'md',
   },
+  render: ({ position, size }) => (
+    <Figure>
+      <RoundedCorner position={position} size={size}>
+        <Image alt="Multicolored tulip field" height={763} src="/placeholder.jpg" width={640} />
+      </RoundedCorner>
+
+      <FigureCaption>Bijschrift (figcaption) van afbeelding.</FigureCaption>
+    </Figure>
+  ),
 };

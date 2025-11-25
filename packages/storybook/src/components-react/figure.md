@@ -16,6 +16,8 @@ De Figure component bestaat uit de volgende elementen:
 
 - Bijschrift (FigureCaption): Een optioneel bijschrift voor de afbeelding.
 
+- RoundedCorner: Een optioneel element voor het afronden van een hoek (conform rijkshuisstijl)
+
 ## Voorbeelden met verkeerde implementatie
 
 - Verkeerd gebruik van niet ondersteunde elementen
@@ -31,4 +33,13 @@ De Figure component bestaat uit de volgende elementen:
   <Image alt="Voorbeeldafbeelding" src="./example.jpg" />
   <FigureCaption>Voorbeeld bijschrift</FigureCaption>
 </Figure>
+
+// Correct met een ronde hoek
+<Figure>
+  <RoundedCorner position="start-start" size="md">
+    <Image alt="Voorbeeldafbeelding" src="/example.jpg" />
+  </RoundedCorner>
+  <FigureCaption>Voorbeeld bijschrift</FigureCaption>
+</Figure>
+
 ```
