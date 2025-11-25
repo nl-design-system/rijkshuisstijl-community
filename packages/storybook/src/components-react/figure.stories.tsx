@@ -32,7 +32,7 @@ export const DefaultFigure: StoryObj<typeof meta> = {
   args: {
     children: [
       <RoundedCorner position="start-end" size="md">
-        <Image alt="Multicolored tulip field" height={763} src="/placeholder.jpg" width={640} />
+        <Image alt="Multicolored tulip field" src="/placeholder.jpg" width={640} />
       </RoundedCorner>,
       <FigureCaption>{'Bijschrift (figcaption) van afbeelding.'}</FigureCaption>,
     ],
