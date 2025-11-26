@@ -2,9 +2,6 @@ import { LinkList, LinkListLink, Icon, Footer as RhcFooter } from "@rijkshuissti
 
 export function Footer() {
   return (
-    // <div>
-    //     Footer
-    // </div>
     <RhcFooter
       appearanceLevel={3}
       background="primary-filled"
