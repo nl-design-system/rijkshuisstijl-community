@@ -8,15 +8,6 @@ const meta = {
   id: 'rhc-card',
   component: Card,
   argTypes: {
-    appearance: {
-      description: 'Card appearance',
-      control: { type: 'select' },
-      options: ['default'],
-      defaultValue: 'default',
-      table: {
-        category: 'Variant',
-      },
-    },
     heading: {
       description: 'Card heading',
       control: { type: 'text' },
@@ -28,7 +19,6 @@ const meta = {
     linkLabel: {
       description: 'Link label',
       control: { type: 'text' },
-      if: { arg: 'appearance', eq: 'default' },
       table: {
         category: 'Props',
       },
@@ -36,7 +26,6 @@ const meta = {
     description: {
       description: 'Card content',
       control: { type: 'text' },
-      if: { arg: 'appearance', neq: 'horizontal' },
       table: {
         category: 'Props',
       },
@@ -51,7 +40,6 @@ const meta = {
     metadata: {
       description: 'Metadata',
       control: { type: 'text' },
-      if: { arg: 'appearance', neq: 'horizontal' },
       table: {
         category: 'Props',
       },
@@ -65,7 +53,6 @@ const meta = {
     },
   },
   args: {
-    appearance: 'default',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     heading: 'Card Heading',
