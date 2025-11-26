@@ -3,7 +3,7 @@
 ---
 
 **Token-structuur opgeschoond en hernoemd**
-- `utrecht/*` tokens hernoemd naar `component/*` of `common/utrecht`.
+- `utrecht/*` tokens hernoemd naar `component/*` of verplaatst naar `common/vendor`.
 - `component/rhc-icon-only` tokens verplaatst naar `components/button`.
 - Alle `*/font` mappen hernoemd naar `*/text`.
 - `overwrites/*` hernoemd naar `overrides/*`.
