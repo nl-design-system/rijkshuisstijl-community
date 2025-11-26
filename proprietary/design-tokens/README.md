@@ -177,7 +177,11 @@ Voor elke nieuwe tokenset, zoals bijvoorbeeld `components/pagination/ams`:
     "ams": {
       "pagination": {
         "font-family": {
-          ..
+          "keys...": "values..."
+        }
+      }
+    }
+  }
 ```
 
 is ook een entry nodig in `.$metadata.tokenSetOrder`: (op alfabetische volgorde aub)
@@ -187,7 +191,9 @@ is ook een entry nodig in `.$metadata.tokenSetOrder`: (op alfabetische volgorde 
     "tokenSetOrder": [
       "brand/color",
       "components/pagination/ams",
-      ...
+      "etc..."
+    ]
+  }
 ```
 
 én in _elk_ thema `.$themes[x].selectedTokenSets`: (op alfabetische volgorde aub)
@@ -200,5 +206,8 @@ is ook een entry nodig in `.$metadata.tokenSetOrder`: (op alfabetische volgorde 
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
         "components/pagination/ams": "enabled",
-        ...
+        "other/groups...": "enabled"
+      }
+    }
+  ]
 ```
