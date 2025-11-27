@@ -26,6 +26,7 @@ Geef bij breaking changes aan **wat** er veranderd is, **waarom** de verandering
 package hun code moeten aanpassen.
 
 Voor meer informatie, zie ook:
+
 - [Design tokens versiebeheer](https://nldesignsystem.nl/handboek/designer/design-tokens-versiebeheer/) in het NL Design System designer handboek.
 - [Versionering beheren](https://nldesignsystem.nl/handboek/developer/changesets/) in het NL Design System developer handboek.
 - [SemVer: Major, Minor of Patch?](https://nldesignsystem.nl/handboek/developer/changes/) in het NL Design System developer handboek.
