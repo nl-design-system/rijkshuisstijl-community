@@ -3,6 +3,7 @@
 ---
 
 **Token-structuur opgeschoond en hernoemd**
+
 - `utrecht/*` tokens hernoemd naar `component/*` of verplaatst naar `common/vendor`.
 - `component/rhc-icon-only` tokens verplaatst naar `components/button`.
 - Alle `*/font` mappen hernoemd naar `*/text`.
@@ -19,9 +20,11 @@
 
 **Accent-tokens verwijderd**
 Accent-tokens verwijderd omdat ze niet in gebruik zijn en de waardes organisatie specifiek:
+
 - `rhc.color.accent-1`,
 - `rhc.color.accent-2`.
 
 **Thema's aangepast**
+
 - Thema `KOOP` hernoemd naar `Uitvoerend – Lintblauw` voor meer generieke naamgeving.
 - Thema `Uitvoerend - Oranje` non-primary button uitvoering aangepast voor toegankelijkheid.
