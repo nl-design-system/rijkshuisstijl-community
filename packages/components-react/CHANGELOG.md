@@ -1,5 +1,21 @@
 # @rijkshuisstijl-community/components-react
 
+## 8.0.0
+
+### Major Changes
+
+- 2f3f91c: figure; removed old way of border radius, now use RoundedCorner element
+
+### Minor Changes
+
+- 5b7a72c: Added a rounded corner utility component in CSS and React
+- cd80794: Update dependencies to include Utrecht component types so these do not need to be installed seperatly.
+
+### Patch Changes
+
+- cd80794: Updated readme's to install dependencies for build instead of dev.
+- 5c7a89c: Updated rounded corner overwrite tokens props to automatically infer associated tokens instead of hardcoding them
+
 ## 7.1.0
 
 ### Minor Changes

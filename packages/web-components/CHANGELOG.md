@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/web-components
 
+## 3.1.1
+
+### Patch Changes
+
+- cd80794: Updated readme's to install dependencies for build instead of dev.
+
 ## 3.1.0
 
 ### Minor Changes
