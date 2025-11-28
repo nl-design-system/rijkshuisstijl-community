@@ -21,7 +21,7 @@ import { StoryRootDecorator } from './StoryRootDecorator';
 
 const preview: Preview = {
   decorators: [
-    (Story: any) => <div className="utrecht-document">{Story()}</div>,
+    (Story: any) => <div className="rhc-document">{Story()}</div>,
     withThemeByClassName({
       themes: {
         'Kern - Lintblauw': 'rhc-theme',
