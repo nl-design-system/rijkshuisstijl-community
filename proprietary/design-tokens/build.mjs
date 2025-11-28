@@ -1,9 +1,10 @@
 import { existsSync, mkdirSync } from 'fs';
 import { readFile, writeFile } from 'node:fs/promises';
-import path from 'path';
+import { posix } from 'path';
 import StyleDictionary from 'style-dictionary';
-
 import { register } from '@tokens-studio/sd-transforms';
+
+import { fixCSSFile } from './cssFixers.mjs';
 
 // Will take the theme name and remove all spaces and make it lowercase
 const normalizeThemeName = (name) => {
@@ -21,6 +22,30 @@ const removeUnitlessLineHeightTransform = () => {
     StyleDictionary.hooks.transformGroups['tokens-studio'].splice(indexOfLineHeightTransform, 1);
   }
 };
+
+StyleDictionary.registerAction({
+  name: 'fixCSSTokens',
+  do: async function (_dictionary, config) {
+    const buildPath = config.buildPath || 'dist/';
+    const files = config.files || [];
+    // TS allows roundTo(), exponentiation (^) and basic calculations (without `calc()`) in their values, but these are not valid CSS.
+    for (const file of files) {
+      const filePath = posix.join(buildPath, file.destination);
+      console.log('🔧 fixing css:', filePath);
+      await fixCSSFile(filePath);
+    }
+  },
+  // No undo action available - files are deleted during cleanup.
+  undo: function () {},
+});
+
+// Custom header to add generation date
+StyleDictionary.registerFileHeader({
+  name: 'nlds-rhc-header',
+  fileHeader: function (defaultMessage) {
+    return [...defaultMessage, `Generated on ${new Date().toUTCString()}`];
+  },
+});
 
 const excludes = [
   'components/avatar',
@@ -43,6 +68,9 @@ const getPlatformsConfig = (buildPath, themeName) => {
       transforms: ['name/camel'],
       buildPath,
       excludes,
+      options: {
+        fileHeader: 'nlds-rhc-header',
+      },
       files: [
         {
           format: 'typescript/es6-declarations',
@@ -75,28 +103,26 @@ const getPlatformsConfig = (buildPath, themeName) => {
       transforms: ['name/kebab'],
       buildPath,
       excludes,
+      actions: ['fixCSSTokens'],
+      options: {
+        fileHeader: 'nlds-rhc-header',
+        outputReferences: true,
+      },
       files: [
         {
           destination: 'root.css',
           format: 'css/variables',
-          options: {
-            outputReferences: true,
-          },
         },
         {
           destination: 'index.css',
           format: 'css/variables',
           options: {
             selector: `.${themeName}`,
-            outputReferences: true,
           },
         },
         {
           destination: '_variables.scss',
           format: 'scss/variables',
-          options: {
-            outputReferences: true,
-          },
         },
       ],
     },
@@ -136,7 +162,7 @@ async function buildThemes() {
     }
 
     // Write individual theme tokens
-    await writeFile(path.join(themesDir, `tokens.json`), JSON.stringify(themeData.tokens, null, 2));
+    await writeFile(posix.join(themesDir, `tokens.json`), JSON.stringify(themeData.tokens, null, 2));
 
     const config = getPlatformsConfig(`dist/${themeName}/`, themeName);
     // Create a separate Style Dictionary instance for each theme
