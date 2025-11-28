@@ -5,7 +5,7 @@ import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-paars/index.css'
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-oranje/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/koop/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-lintblauw/index.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Paragraph } from '@rijkshuisstijl-community/components-react';
@@ -25,12 +25,12 @@ const preview: Preview = {
     withThemeByClassName({
       themes: {
         'Kern - Lintblauw': 'rhc-theme',
-        'Uitvoerend - Paars': 'uitvoerend-paars',
-        'Uitvoerend - Hemelblauw': 'uitvoerend-hemelblauw',
         'Uitvoerend - Groen': 'uitvoerend-groen',
+        'Uitvoerend - Hemelblauw': 'uitvoerend-hemelblauw',
+        'Uitvoerend - Lintblauw': 'uitvoerend-lintblauw',
         'Uitvoerend - Oranje': 'uitvoerend-oranje',
+        'Uitvoerend - Paars': 'uitvoerend-paars',
         'Uitvoerend - Robijn Rood': 'uitvoerend-robijnrood',
-        KOOP: 'koop',
       },
       defaultTheme: 'Kern - Lintblauw',
     }),
