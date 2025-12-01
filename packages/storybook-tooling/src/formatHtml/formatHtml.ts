@@ -1,3 +1,6 @@
+/**
+ * Returns a string of formatted html with proper indenting.
+ */
 export const formatHtml = (html: string) => {
   // Remove existing newlines and extra spaces between tags
   const singleLineHtml = html.replace(/>\s+</g, '><').trim();

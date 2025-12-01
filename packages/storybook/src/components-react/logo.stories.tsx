@@ -4,7 +4,7 @@ import {
   rhcLogoImageBackgroundColor,
   rhcLogoImageColor,
 } from '@rijkshuisstijl-community/design-tokens/dist';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { CSSProperties } from 'react';
 import readme from './logo.md?raw';

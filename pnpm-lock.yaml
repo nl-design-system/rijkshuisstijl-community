@@ -604,7 +604,7 @@ importers:
         specifier: 1.5.0
         version: 1.5.0
 
-  packages/internal-tooling:
+  packages/storybook-tooling:
     dependencies:
       remark:
         specifier: 15.0.1
@@ -665,9 +665,9 @@ importers:
       '@rijkshuisstijl-community/font':
         specifier: workspace:*
         version: link:../font
-      '@rijkshuisstijl-community/internal-tooling':
+      '@rijkshuisstijl-community/storybook-tooling':
         specifier: workspace:*
-        version: link:../internal-tooling
+        version: link:../storybook-tooling
       '@rijkshuisstijl-community/web-components':
         specifier: workspace:*
         version: link:../web-components
@@ -855,9 +855,9 @@ importers:
       '@rijkshuisstijl-community/font':
         specifier: workspace:*
         version: link:../font
-      '@rijkshuisstijl-community/internal-tooling':
+      '@rijkshuisstijl-community/storybook-tooling':
         specifier: workspace:*
-        version: link:../internal-tooling
+        version: link:../storybook-tooling
       '@storybook/addon-docs':
         specifier: 9.1.6
         version: 9.1.6(@types/react@19.1.9)(storybook@9.1.6(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@22.10.1)(typescript@5.8.3))(prettier@3.6.2)(vite@6.3.5(@types/node@22.10.1)(jiti@1.21.7)(less@4.2.2)(sass@1.89.2)(terser@5.39.0)(yaml@2.8.1)))(webpack-sources@3.2.3)

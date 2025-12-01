@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Radio, type RadioProps } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/radio-button/README.md?raw';
 import anatomyDocs from '@utrecht/components/radio-button/docs/anatomy.nl.md?raw';

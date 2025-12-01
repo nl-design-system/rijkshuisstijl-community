@@ -1,4 +1,4 @@
-# @rijkshuisstijl-community/internal-tooling
+# @rijkshuisstijl-community/storybook-tooling
 
 ## 1.0.1
 

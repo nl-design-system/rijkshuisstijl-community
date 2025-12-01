@@ -1,5 +1,5 @@
 import { TextInput } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './text-input.md?raw';
 

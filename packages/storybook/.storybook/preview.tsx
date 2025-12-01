@@ -16,7 +16,7 @@ import { Root } from '@utrecht/root-react';
 import { Fragment } from 'react';
 import { Controls, Description, Primary, Stories } from '@storybook/addon-docs/blocks';
 import { useOf } from '@storybook/addon-docs/blocks';
-import { formatHtml } from '@rijkshuisstijl-community/internal-tooling/formatHtml';
+import { formatHtml } from '@rijkshuisstijl-community/storybook-tooling/formatHtml';
 import { StoryRootDecorator } from './StoryRootDecorator';
 
 const preview: Preview = {

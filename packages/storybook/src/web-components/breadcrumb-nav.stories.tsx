@@ -1,4 +1,4 @@
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { BreadcrumbNavWebComponent } from '@rijkshuisstijl-community/web-components';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/breadcrumb-nav/README.md?raw';
