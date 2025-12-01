@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-angular
 
+## 6.0.1
+
+### Patch Changes
+
+- cd80794: Updated readme's to install dependencies for build instead of dev.
+
 ## 6.0.0
 
 ### Major Changes
