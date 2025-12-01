@@ -1,5 +1,157 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 10.0.0
+
+### Major Changes
+
+- 093f3af: Update token format version to W3C DCTG, read more at https://docs.tokens.studio/convert-to-dtcg-format.
+- 462686a: De brand en common tokens van RHC zijn naast de basis tokens gelegd. Hieruit zijn aantal naamwijzigen gekomen om de tokens beter aan te laten sluiten. Maak je direct gebruik van common tokens? Dan is dit een breaking change.
+
+  Subdued is gewijzigd in subtle:
+  - naam `rhc.color.foreground.subdued` gewijzigd naar `rhc.color.foreground.subtle`
+  - naam `rhc.color.border.subdued` gewijzigd naar `rhc.color.border.subtle`
+
+  Naamgeving feedback kleuren zijn aangepast:
+  - naam `rhc.color.feedback.success.default` gewijzigd naar `rhc.color.positive.default`
+  - naam `rhc.color.feedback.success.subdued` gewijzigd naar `rhc.color.positive.subtle`
+  - naam `rhc.color.feedback.info.default` gewijzigd naar `rhc.color.info.default`
+  - naam `rhc.color.feedback.info.subdued` gewijzigd naar `rhc.color.info.subtle`
+  - naam `rhc.color.feedback.error.default` gewijzigd naar `rhc.color.negative.default`
+  - naam `rhc.color.feedback.error.subdued` gewijzigd naar `rhc.color.negative.subtle`
+  - naam `rhc.color.feedback.warning.default` gewijzigd naar `rhc.color.warning.default`
+  - naam `rhc.color.feedback.warning.subdued` gewijzigd naar `rhc.color.warning.subtle`
+
+  Groepering 'text' is toegevoegd aan de font tokens:
+  - naam `rhc.font-weight.extra-bold` gewijzigd naar `rhc.text.font-weight.extra-bold`
+  - naam `rhc.font-weight.bold` gewijzigd naar `rhc.text.font-weight.bold`
+  - naam `rhc.font-weight.semi-bold` gewijzigd naar `rhc.text.font-weight.semi-bold`
+  - naam `rhc.font-weight.regular` gewijzigd naar `rhc.text.font-weight.regular`
+  - naam `rhc.font-weight.light` gewijzigd naar `rhc.text.font-weight.light`
+  - naam `rhc.font-weight.default` gewijzigd naar `rhc.text.font-weight.default`
+  - naam `rhc.font-weight.strong` gewijzigd naar `rhc.text.font-weight.strong`
+  - naam `rhc.font-weight.thin` gewijzigd naar `rhc.text.font-weight.thin`
+  - naam `rhc.line-height.sm` gewijzigd naar `rhc.text.line-height.sm`
+  - naam `rhc.line-height.md` & `rhc.line-height.body` gewijzigd naar `rhc.text.line-height.md`
+  - naam `rhc.font-family.primary` gewijzigd naar `rhc.text.font-family.default`
+  - naam `rhc.font-family.secondary` gewijzigd naar `rhc.text.font-family.serif`
+
+  Font-size schaal is gewijzigd:
+  - naam `rhc.font-size.heading.level-5` & `rhc.font-size.body.default` gewijzigd naar `rhc.text.font-size.md`
+  - naam `rhc.font-size.heading.level-4` & `rhc.font-size.body.intro` gewijzigd naar `rhc.text.font-size.lg`
+  - naam `rhc.font-size.heading.level-3` gewijzigd naar `rhc.text.font-size.xl`
+  - naam `rhc.font-size.heading.level-2` gewijzigd naar `rhc.text.font-size.2xl`
+  - naam `rhc.font-size.heading.level-1` gewijzigd naar `rhc.text.font-size.3xl`
+
+  responsive schaal is gewijzigd:
+  - naam `rhc.font-size.xs.desktop` gewijzigd naar `rhc.text.font-size.max.md`
+  - naam `rhc.font-size.xs.mobile` gewijzigd naar `rhc.text.font-size.min.md`
+  - naam `rhc.font-size.sm.desktop` gewijzigd naar `rhc.text.font-size.max.lg`
+  - naam `rhc.font-size.sm.mobile` gewijzigd naar `rhc.text.font-size.min.lg`
+  - naam `rhc.font-size.md.desktop` gewijzigd naar `rhc.text.font-size.max.xl`
+  - naam `rhc.font-size.md.mobile` gewijzigd naar `rhc.text.font-size.min.xl`
+  - naam `rhc.font-size.lg.desktop` gewijzigd naar `rhc.text.font-size.max.2xl`
+  - naam `rhc.font-size.lg.mobile` gewijzigd naar `rhc.text.font-size.min.2xl`
+  - naam `rhc.font-size.xl.desktop` gewijzigd naar `rhc.text.font-size.max.3xl`
+  - naam `rhc.font-size.xl.mobile` gewijzigd naar `rhc.text.font-size.min.3xl`
+
+  Andere naam-wijzigingen:
+  - naam `rhc.color.canvas` gewijzigd naar `rhc.color.bg-document`
+  - naam `rhc.size.target` gewijzigd naar `rhc.size.pointer-target`
+
+  Toegevoegde tokens:
+  - `rhc.text.font-family.sans`
+
+  Verwijderde tokens:
+  - `rhc.font-size.xs.tablet`
+  - `rhc.font-size.sm.tablet`
+  - `rhc.font-size.md.tablet`
+  - `rhc.font-size.lg.tablet`
+  - `rhc.font-size.xl.tablet`
+
+- b04f679: Thema's bijgewerkt
+  - `body` en `root` zijn enabled.
+  - Hover & active kleuren van buttons aangepast van lint-blauw naar de thema kleuren
+  - Alle uitvoerende thema's hebben nu RijksSans als default font.
+  - Thema's hernoemd volgens de naming convention `{type organisatie} - {naam primaire kleur}` bijvoorbeeld:
+    - Kern - Lintblauw
+    - Uitvoerend - Groen
+    - Uitvoerend - Oranje
+  - Verwijderd, deze thema’s waren voorbeelden en worden naar verwachting niet gebruikt:
+    - Uitvoerend - violet
+    - Uitvoerend - violet - oud
+    - Uitvoerend - mintgroen
+  - Nieuwe toevoeging:
+    - Uitvoerend - Robijn Rood
+
+  Overwrites tokensets bijgewerkt en opgeschoond
+  - `type-scale` toegevoegd.
+  - Accent kleuren verwijderd.
+  - Oude rijkshuisstijl verwijderd.
+  - Afwijkende button verwijderd.
+  - Volgorde van de tokensets aangepast.
+
+  Nieuwe token toegevoegd
+  - Token `rhc.color.primary.active` is toegevoegd aan de common tokens.
+
+- cd14679: De brand en common tokens van RHC zijn naast de basis tokens gelegd. Hieruit zijn aantal naamwijzigen gekomen om de tokens beter aan te laten sluiten. Maak je direct gebruik van common tokens? Dan is dit een breaking change.
+  - `rhc.color.none` gewijzigd naar `rhc.color.transparant`
+  - `rhc.color.focus.outline` gewijzigd naar `rhc.focus.outline-color`
+  - `rhc.focus.inverse.outline-color` is toegevoegd
+  - `rhc.size.icon.functional` gewijzigd naar `rhc.size.icon.md`
+  - `rhc.border-radius.circle` gewijzigd naar `rhc.border-radius.round`
+  - `rhc.border-width.default` gewijzigd naar `rhc.border-width.sm`
+  - `rhc.border-width.m` gewijzigd naar `rhc.border-width.md`
+
+- afe2d9c: **Token-structuur opgeschoond en hernoemd**
+  - `utrecht/*` tokens hernoemd naar `component/*` of verplaatst naar `common/vendor`.
+  - `component/rhc-icon-only` tokens verplaatst naar `components/button`.
+  - Alle `*/font` mappen hernoemd naar `*/text`.
+  - `overwrites/*` hernoemd naar `overrides/*`.
+  - Verwijderd:
+    - `utrecht/root`,
+    - `utrecht/body`,
+    - `components/form-field-label/todo`,
+    - `overwrites/footer/*`,
+    - `overwrites/nav-bar/*`.
+  - Hernoemd:
+    - `components/pagination/ams` → `components/page-number-navigation`,
+    - `components/footer` → `components/page-footer`.
+
+  **Accent-tokens verwijderd**
+  Accent-tokens verwijderd omdat ze niet in gebruik zijn en de waardes organisatie specifiek:
+  - `rhc.color.accent-1`,
+  - `rhc.color.accent-2`.
+
+  **Thema's aangepast**
+  - Thema `KOOP` hernoemd naar `Uitvoerend – Lintblauw` voor meer generieke naamgeving.
+  - Thema `Uitvoerend - Oranje` non-primary button uitvoering aangepast voor toegankelijkheid.
+
+- 5b7a72c: Updated rounded corner common tokens to the following values:
+  --rhc-rounded-corner-overflow
+  --rhc-rounded-corner-sm-border-radius
+  --rhc-rounded-corner-md-border-radius
+  --rhc-rounded-corner-lg-border-radius
+- afe2d9c: Koop thema hernoemd naar Uitvoerend lintblauw. Let op dat je de volgende import wijzeging moet doorvoeren als je de koop thema gebruikte:
+  van: `@import "@rijkshuisstijl-community/design-tokens/dist/koop/index.css";`
+  naar: `@import "@rijkshuisstijl-community/design-tokens/dist/uitvoerend-lintblauw/index.css";`
+
+### Minor Changes
+
+- 80fea49: - De volgende token is toegevoegd: `utrecht.icon.baseline.inset-block-start`
+  - Design token utrecht.link-list.font-weight hernoemd naar utrecht.link-list.link.font-weight
+- 3d1fbeb: standaard theme is nu hetzelfde als kern - lintblauw
+
+### Patch Changes
+
+- cd80794: Updated readme's to install dependencies for build instead of dev.
+- 9a27826: radio button removed deprecated tokens
+- 2062466: textarea tokens; deprecated verwijderd
+- e536c65: A token classified as deprecated was not deprecated (field field) - still in use by form-field-radio-option
+- 2f3f91c: figure; token en css cleanup
+- 5961ac6: checkbox; check on deprecated tokens
+- 17fe29e: select; removed deprecated tokens
+- bbba719: added tokens for utrecht/root&body to support root font
+
 ## 9.0.0
 
 ### Major Changes
