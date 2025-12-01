@@ -1,4 +1,4 @@
-import { formatHtml } from '@rijkshuisstijl-community/internal-tooling/formatHtml';
+import { formatHtml } from '@rijkshuisstijl-community/storybook-tooling/formatHtml';
 import { Meta, StoryContext } from '@storybook/react-vite';
 import { merge } from 'lodash-es';
 import { createElement, isValidElement } from 'react';

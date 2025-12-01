@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import readme from './action-group.md';
 import { ActionGroupComponent, ButtonComponent } from '../../../components-angular/src/public-api';
-import { mergeMarkdown, replaceMarkdown } from '../../../internal-tooling/src/markdownUtils';
+import { mergeMarkdown, replaceMarkdown } from '../../../storybook-tooling/src/markdownUtils';
 import usageDocs from '../../../storybook/src/components-react/action-group.md';
 
 const meta: Meta<ActionGroupComponent> = {

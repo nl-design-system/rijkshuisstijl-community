@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import TwigImage from '@rijkshuisstijl-community/components-twig/src/Image.twig';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import referenceDocs from '@utrecht/components/img/docs/references.nl.md?raw';
 import htmlDocs from '@utrecht/components/img/docs/technology-html.nl.md?raw';
