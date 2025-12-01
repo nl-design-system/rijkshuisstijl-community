@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/storybook-tooling
 
+## 1.1.1
+
+### Patch Changes
+
+- 961ebbc: Fixed publishing to be public.
+
 ## 1.1.0
 
 ### Minor Changes
