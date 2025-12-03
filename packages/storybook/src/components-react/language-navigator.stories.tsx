@@ -1,14 +1,14 @@
-import { Icon, LinkButton, Listbox, ListboxOption } from '@rijkshuisstijl-community/components-react';
+import { Icon, Link, LinkButton, Listbox, ListboxOption } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 
 const Talen = [
-  'English (Engels)',
-  'Español (Spaans)',
-  'Frysk (Fries)',
-  'Nederlands',
-  'Papiamento (Arubaans)',
-  'Papiamentu (Curaçaos)',
+  { name: 'English (Engels)', lang: 'en' },
+  { name: 'Español (Spaans)', lang: 'es' },
+  { name: 'Frysk (Fries)', lang: 'fy' },
+  { name: 'Nederlands', lang: 'nl' },
+  { name: 'Papiamento (Arubaans)', lang: 'pap' },
+  { name: 'Papiamentu (Curaçaos)', lang: 'pap' },
 ];
 
 const LanguageNavigator = () => {
@@ -21,16 +21,18 @@ const LanguageNavigator = () => {
       </LinkButton>
       {isOpen && (
         <Listbox>
-          {Talen.map((taal) => (
+          {Talen.map(({ name, lang }) => (
             <ListboxOption
-              key={taal}
-              selected={taal === selectedLanguage}
+              key={lang}
+              selected={name === selectedLanguage}
               onClick={() => {
-                setSelectedLanguage(taal);
+                setSelectedLanguage(name);
                 setIsOpen(false);
               }}
             >
-              {taal}
+              <Link className="rhc-language-navigation--link" href="#">
+                <span lang={lang}>{name}</span>
+              </Link>
             </ListboxOption>
           ))}
         </Listbox>
