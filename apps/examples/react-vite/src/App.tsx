@@ -8,15 +8,16 @@ import './App.css';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { LeesEnLeer } from './LeesEnLeer';
-import { KomInContact } from './KomInContact/KomInContact';
+// import { KomInContact } from './KomInContact/KomInContact';
 import { InDePraktijk } from './InDePraktijk';
+import { PageBody } from '@utrecht/page-body-react';
 
 
 function App() {
   return (
     <>
       <Header />
-      <div className='page-content-container'>
+      <PageBody>
         <PageContent className="page-content">
           {/* geef alle thema tokens mee aan child components voor styling */}
           <Image alt="Multicolored tulip field" height={425} src="src/placeholder.jpg" width={1280} />
@@ -38,10 +39,10 @@ function App() {
 
           <InDePraktijk />
           <LeesEnLeer />
-          <KomInContact />
+          {/* <KomInContact /> */}
           <Footer />
         </PageContent>
-      </div>
+      </PageBody>
     </>
   );
 }

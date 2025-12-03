@@ -1,1 +1,1 @@
-export {KomInContact} from "./KomInContact";
+// export {KomInContact} from "./KomInContact";

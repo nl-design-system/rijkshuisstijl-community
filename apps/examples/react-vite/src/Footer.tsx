@@ -1,4 +1,4 @@
-import { LinkList, LinkListLink, Icon, Footer as RhcFooter } from "@rijkshuisstijl-community/components-react";
+import { LinkList, LinkListLink, Icon, Footer as RhcFooter, Paragraph } from "@rijkshuisstijl-community/components-react";
 
 export function Footer() {
   return (
@@ -10,26 +10,41 @@ export function Footer() {
         {
           appearanceLevel: 3,
           children: (
-            <LinkList>
+            <>
+            <Paragraph>
+              Dit is geen officiële website van de makers van de Rijkshuisstijl. Dit project wordt niet gesteund door het Ministerie van Algemene Zaken.
+            </Paragraph>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                Contact
+                De officiele Rijkshuisstijl website
               </LinkListLink>
-              <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                Abonneren
-              </LinkListLink>
-              <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                RSS
-              </LinkListLink>
-              <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                Vacatures
-              </LinkListLink>
-              <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                Sitemap
-              </LinkListLink>
-            </LinkList>
+            </>
           ),
-          heading: 'Service',
+          heading: 'Disclaimer',
         },
+        {
+          appearanceLevel: 3,
+          children: (
+            <>
+              <LinkList>
+                <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                  Slack #nl-design-system-developers<br>
+                  </br>(Code for NL)
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                  Rijkshuisstijl styling discussies
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                  Contributors op Github 
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                  NL Design System Kernteam
+                </LinkListLink>
+              </LinkList>
+            </>
+          ),
+          heading: 'Contact',
+        },
+
         {
           appearanceLevel: 3,
           children: (
@@ -53,11 +68,6 @@ export function Footer() {
           heading: 'Over deze site',
         },
       ]}
-      subFooter={
-        <LinkList>
-          <LinkListLink href="#">Privacy</LinkListLink>
-        </LinkList>
-      }
     />
   );
 }
