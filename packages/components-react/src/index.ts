@@ -30,7 +30,6 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from './Button';
-export { ButtonLink, type ButtonLinkProps } from './ButtonLink';
 export { Card } from './Card';
 export {
   CardAsLink,
@@ -83,6 +82,7 @@ export { Hero, type HeroProps } from './Hero';
 export { Icon, type IconProps, type RHCIconID, getIconSet, registerIconSet } from './Icon';
 export { Image, type ImageProps } from './Image';
 export { Link, type LinkProps } from './Link';
+export { LinkButton, type LinkButtonProps } from './LinkButton';
 export { LinkList, LinkListLink, type LinkListLinkProps, type LinkListProps } from './LinkList';
 export { LinkListCard } from './LinkListCard';
 export { Logo, type LogoProps } from './Logo';
