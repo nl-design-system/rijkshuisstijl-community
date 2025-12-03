@@ -24,6 +24,8 @@ export {
 } from './BreadcrumbNav';
 export {
   Button,
+  ButtonLink,
+  type ButtonLinkProps,
   type ButtonProps,
   IconButton,
   PrimaryActionButton,

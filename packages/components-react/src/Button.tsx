@@ -1,5 +1,7 @@
 import {
   Button,
+  ButtonLink,
+  type ButtonLinkProps,
   type ButtonProps,
   PrimaryActionButton,
   SecondaryActionButton,
@@ -10,7 +12,15 @@ import { PropsWithChildren, Ref } from 'react';
 import { Icon } from './Icon';
 import { RHCIconID } from './icon-sets/default-icons/RHCIconIDs';
 
-export { Button, type ButtonProps, PrimaryActionButton, SecondaryActionButton, SubtleButton };
+export {
+  Button,
+  ButtonLink,
+  type ButtonProps,
+  type ButtonLinkProps,
+  PrimaryActionButton,
+  SecondaryActionButton,
+  SubtleButton,
+};
 
 export interface IconButtonProps extends ButtonProps {
   ref?: Ref<HTMLButtonElement>;
