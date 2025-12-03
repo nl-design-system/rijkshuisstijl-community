@@ -24,14 +24,13 @@ export {
 } from './BreadcrumbNav';
 export {
   Button,
-  ButtonLink,
-  type ButtonLinkProps,
   type ButtonProps,
   IconButton,
   PrimaryActionButton,
   SecondaryActionButton,
   SubtleButton,
 } from './Button';
+export { ButtonLink, type ButtonLinkProps } from './ButtonLink';
 export { Card } from './Card';
 export {
   CardAsLink,
