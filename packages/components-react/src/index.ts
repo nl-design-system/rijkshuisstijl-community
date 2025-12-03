@@ -87,7 +87,14 @@ export { Link, type LinkProps } from './Link';
 export { LinkButton, type LinkButtonProps } from './LinkButton';
 export { LinkList, LinkListLink, type LinkListLinkProps, type LinkListProps } from './LinkList';
 export { LinkListCard } from './LinkListCard';
-export { Listbox, type ListboxProps } from './Listbox';
+export {
+  Listbox,
+  ListboxOption,
+  ListboxOptionGroup,
+  type ListboxOptionGroupProps,
+  type ListboxOptionProps,
+  type ListboxProps,
+} from './Listbox';
 export { Logo, type LogoProps } from './Logo';
 export { MessageList, type MessageListProps } from './MessageList';
 export { MessageListItem, type MessageListItemProps } from './MessageListItem';
