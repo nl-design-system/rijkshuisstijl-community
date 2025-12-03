@@ -44,15 +44,6 @@ const meta = {
   id: 'rhc-language-navigator',
   component: LanguageNavigator,
   tags: ['autodocs'],
-  parameters: {
-    status: {
-      type: 'STABLE',
-    },
-    github:
-      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Listbox.tsx',
-    componentOrigin:
-      'Dit component is overgenomen van de Gemeente Utrecht met styling van de Rijkshuisstijl Community.',
-  },
 } as Meta<typeof LanguageNavigator>;
 
 type Story = StoryObj<typeof meta>;
