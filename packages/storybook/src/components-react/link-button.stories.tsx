@@ -1,4 +1,4 @@
-import { LinkButton } from '@rijkshuisstijl-community/components-react';
+import { Icon, LinkButton } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
@@ -27,5 +27,15 @@ export default meta;
 export const Default: Story = {
   args: {
     children: 'Label',
+  },
+};
+
+export const WithIcon: Story = {
+  args: {
+    children: (
+      <>
+        Label <Icon icon="chevron-down" />
+      </>
+    ),
   },
 };
