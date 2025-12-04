@@ -15,8 +15,8 @@ import { RHCIconID } from './icon-sets/default-icons/RHCIconIDs';
 export {
   Button,
   ButtonLink,
-  type ButtonLinkProps,
   type ButtonProps,
+  type ButtonLinkProps,
   PrimaryActionButton,
   SecondaryActionButton,
   SubtleButton,

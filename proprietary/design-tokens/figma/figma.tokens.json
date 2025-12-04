@@ -4317,6 +4317,44 @@
       }
     }
   },
+  "components/language-navigation": {
+    "rhc": {
+      "language-navigation": {
+        "link": {
+          "text-decoration-line": {
+            "$type": "textDecoration",
+            "$value": "none"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.zwart}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{rhc.space.400}"
+          },
+          "padding": {
+            "block-start": {
+              "$type": "dimension",
+              "$value": "{rhc.space.100}"
+            },
+            "block-end": {
+              "$type": "dimension",
+              "$value": "{rhc.space.100}"
+            },
+            "inline-start": {
+              "$type": "dimension",
+              "$value": "{rhc.space.200}"
+            },
+            "inline-end": {
+              "$type": "dimension",
+              "$value": "{rhc.space.200}"
+            }
+          }
+        }
+      }
+    }
+  },
   "components/link-list": {
     "utrecht": {
       "link-list": {
@@ -4574,6 +4612,60 @@
           "color": {
             "$type": "color",
             "$value": "{rhc.color.foreground.link}"
+          }
+        }
+      }
+    }
+  },
+  "components/listbox": {
+    "utrecht": {
+      "listbox": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{rhc.color.wit}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{rhc.color.border.subtle}"
+        },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{rhc.border-radius.md}"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{rhc.border-width.sm}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.zwart}"
+        },
+        "font-weight": {
+          "$type": "dimension",
+          "$value": "{rhc.text.font-weight.regular}"
+        },
+        "option": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{rhc.color.transparent}"
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.cool-grey.200}"
+            }
+          },
+          "selected": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.cool-grey.200}"
+            },
+            "hover": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{rhc.color.cool-grey.300}"
+              }
+            }
           }
         }
       }
@@ -8204,10 +8296,12 @@
         "components/form-field-radio-option": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
+        "components/language-navigation": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8290,10 +8384,12 @@
         "components/form-field-radio-option": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
+        "components/language-navigation": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8377,10 +8473,12 @@
         "components/form-field-radio-option": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
+        "components/language-navigation": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8465,10 +8563,12 @@
         "components/form-field-radio-option": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
+        "components/language-navigation": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8553,10 +8653,12 @@
         "components/form-field-radio-option": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
+        "components/language-navigation": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8643,10 +8745,12 @@
         "components/form-field-radio-option": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
+        "components/language-navigation": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8731,10 +8835,12 @@
         "components/form-field-radio-option": "enabled",
         "components/hero": "enabled",
         "components/icon": "enabled",
+        "components/language-navigation": "enabled",
         "components/link-list": "enabled",
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8823,10 +8929,12 @@
       "components/heading",
       "components/hero",
       "components/icon",
+      "components/language-navigation",
       "components/link-list",
       "components/link-list-card",
       "components/link/nl",
       "components/link/utrecht",
+      "components/listbox",
       "components/logo",
       "components/message-list",
       "components/nav-bar",
