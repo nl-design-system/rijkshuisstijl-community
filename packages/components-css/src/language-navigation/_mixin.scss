@@ -6,7 +6,11 @@
   // listbox max width adjustment
 }
 
-@mixin rhc-language-navigation--link__selected {
+@mixin rhc-language-navigation--list-item {
+  // styles as default text with background
+}
+
+@mixin rhc-language-navigation--list-item__selected {
   // styles as default text with background
 }
 
@@ -19,7 +23,8 @@
   );
   --nl-link-color: var(--rhc-language-navigation-link-color, var(--rhc-color-zwart));
 
-  line-height: 2rem;
+  flex-grow: 1;
+  line-height: var(--rhc-language-navigation-link-line-height, 2rem);
   padding-block-end: var(--rhc-language-navigation-listbox-block-padding-end, var(--rhc-space-100));
   padding-block-start: var(--rhc-language-navigation-listbox-block-padding-start, var(--rhc-space-100));
   padding-inline-end: var(--rhc-language-navigation-listbox-inline-padding-end, var(--rhc-space-200));

@@ -2,7 +2,7 @@ import { Icon, Link, LinkButton, Listbox, ListboxOption } from '@rijkshuisstijl-
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 
-const Talen = [
+const Languages = [
   { name: 'English (Engels)', lang: 'en' },
   { name: 'Español (Spaans)', lang: 'es' },
   { name: 'Frysk (Fries)', lang: 'fy' },
@@ -20,10 +20,12 @@ const LanguageNavigator = () => {
         {selectedLanguage} <Icon icon={isOpen ? 'chevron-up' : 'chevron-down'} />
       </LinkButton>
       {isOpen && (
-        <Listbox>
-          {Talen.map(({ name, lang }) => (
+        <Listbox className="rhc-language-navigation--listbox" role="list">
+          {Languages.map(({ name, lang }) => (
             <ListboxOption
+              aria-selected={undefined}
               key={lang}
+              role="listitem"
               selected={name === selectedLanguage}
               onClick={() => {
                 setSelectedLanguage(name);
