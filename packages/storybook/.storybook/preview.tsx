@@ -56,6 +56,7 @@ const preview: Preview = {
     controls: { exclude: ['children'] },
     options: {
       storySort: {
+        method: 'alphabetical',
         order: [
           'Rijkshuisstijl Community',
           ['README', '*', 'Icon Sets', 'Design Tokens', ['Standaard Thema']],
