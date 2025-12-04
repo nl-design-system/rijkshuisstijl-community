@@ -34,12 +34,6 @@ describe('IconComponent', () => {
     const iconElement = fixture.nativeElement.querySelector('rhc-icon');
     expect(iconElement).toBeTruthy();
   });
-
-  it('should map icon input to correct Tabler icon', () => {
-    const iconComponent = fixture.debugElement.children[0].componentInstance as IconComponent;
-    const renderedIcon = iconComponent.computedIconRender();
-    expect(renderedIcon).toBe('calendar-check');
-  });
 });
 
 describe('IconComponent content projection', () => {

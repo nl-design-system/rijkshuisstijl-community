@@ -1,0 +1,41 @@
+<rhc-form-field
+  type="text"
+  [invalid]="invalid"
+  [showDescription]="showDescription"
+  [showInput]="true"
+  [showLabel]="true"
+  [dir]="dir"
+>
+  <label rhc-form-label [for]="inputId">{{ label }}</label>
+  <rhc-form-field-description>{{ description }}</rhc-form-field-description>
+  <rhc-form-field-error-message>
+    {{ errorMessage }}
+  </rhc-form-field-error-message>
+  <input
+    rhc-text-input
+    (input)="onValueChange($event)"
+    (blur)="markAsTouched()"
+    [id]="inputId"
+    [invalid]="invalid"
+    [disabled]="disabled"
+    [readonly]="readonly"
+    [required]="required"
+    [inputRequired]="inputRequired"
+    [attr.dir]="dir"
+    [attr.name]="name"
+    [attr.autocomplete]="autocomplete"
+    [attr.placeholder]="placeholder"
+    [attr.size]="size"
+    [attr.minlength]="minLength"
+    [attr.maxlength]="maxLength"
+    [attr.min]="min"
+    [attr.max]="max"
+    [attr.step]="step"
+    [attr.type]="type"
+  />
+  @if (status) {
+    <div class="utrecht-form-field__status">
+      {{ status }}
+    </div>
+  }
+</rhc-form-field>

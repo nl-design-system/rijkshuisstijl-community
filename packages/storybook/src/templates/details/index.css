@@ -1,7 +1,16 @@
+/**
+* Hero Aspect Ratio should be adjustable via component props.
+* Currently component says the prop is optional, but the default is 16:9 and class is always set even if the prop is unset.
+* TODO: Discuss with design if aspect ratio should be forced as it currently is via the component, or if it should truly be optional.
+*/
 .rhc-hero-details-template.rhc-hero--aspect-ratio-16-9 {
   aspect-ratio: auto;
 }
 
+/**
+ * Custom Hero styling, pre-existing in templates.
+ * TODO: Discuss with team and design if this is intended, and if so, if it should be moved to the component.
+ */
 .rhc-hero {
   & img {
     block-size: 100%;
@@ -42,6 +51,10 @@
   }
 }
 
+/**
+ * Custom subnavbar styling, pre-existing in templates.
+ * TODO: Discuss with team and design if this is intended, and if so, if it should be moved to the component.
+ */
 .rhc-subnavbar-details-template .rhc-sub-nav-bar__content {
   box-sizing: border-box;
   max-inline-size: 64rem;
@@ -53,13 +66,10 @@
   }
 }
 
-.rhc-templates-spacing-3 {
-  display: flex;
-  flex-direction: column;
-  gap: var(--rhc-space-300);
-  margin-block-end: var(--rhc-space-400);
-}
-
+/**
+ * Custom linklist-collection component, pre-existing in templates.
+ * TODO: Discuss with team and design if this should become a component, like what we're intending for CardGroup to wrap Cards.
+ */
 .rhc-linklist-collection {
   column-gap: var(--rhc-space-300);
   display: flex;
@@ -67,29 +77,4 @@
   @media (width <= 780px) {
     flex-direction: column;
   }
-}
-
-.rhc-templates-page-content.rhc-templates-page-palin {
-  margin-block-end: var(--rhc-space-0);
-  margin-block-start: var(--rhc-space-0);
-}
-
-.rhc-subfooter-details {
-  display: flex;
-  flex-direction: row;
-  gap: var(--rhc-space-300);
-  padding-block: 0;
-  padding-inline: 0;
-  & * {
-    display: flex;
-    justify-content: center;
-  }
-  @media (width <= 780px) {
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-.utrecht-page-layout {
-  align-items: stretch;
 }

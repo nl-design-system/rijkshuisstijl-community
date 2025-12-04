@@ -1,157 +1,87 @@
 import clsx from 'clsx';
-import { PropsWithChildren, ReactNode, Ref } from 'react';
-import { Image } from './Image';
+import React from 'react';
+import { forwardRef, type HTMLAttributes, JSX, type ReactNode } from 'react';
 import { Link } from './Link';
 
-interface CardPropsBase {
-  href: string;
-  title?: string;
-  className?: string;
+export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   heading: ReactNode;
-  ref?: Ref<HTMLDivElement>;
-}
-
-export interface HorizontalImageCardProps extends CardPropsBase {
-  appearance?: 'horizontal';
-  imageSrc: string;
-  imageAlt: string;
-}
-
-export interface FullBleedCardProps extends Omit<HorizontalImageCardProps, 'appearance'> {
-  appearance?: 'full-bleed';
+  headingLevel?: 1 | 2 | 3 | 4 | 5 | 6;
+  subheading?: ReactNode;
   description?: ReactNode;
-  metadata?: ReactNode;
-}
-
-export interface BaseCardProps extends Partial<Omit<FullBleedCardProps, 'appearance'>> {
-  appearance?: 'default';
-  button?: ReactNode;
-  icon?: ReactNode;
+  children?: ReactNode;
+  metadata?: string;
+  image?: ReactNode;
+  href?: string;
+  target?: string;
   linkLabel?: string;
+  title?: string;
 }
 
-export type CardProps =
-  | (BaseCardProps & { imageSrc?: undefined; imageAlt?: undefined })
-  | (BaseCardProps & { imageSrc: string; imageAlt: string });
+const HTMLHeading = ({
+  level = 2,
+  children,
+  ...rest
+}: { level: number; children: ReactNode } & HTMLAttributes<HTMLHeadingElement>) => {
+  const Tag = `h${level}` as keyof JSX.IntrinsicElements;
 
-export const Card = (props: PropsWithChildren<CardProps | FullBleedCardProps | HorizontalImageCardProps>) => {
-  const { appearance, ref, ...cardProps } = props;
-  switch (appearance) {
-    case 'full-bleed':
-      return <FullBleedCard {...(cardProps as FullBleedCardProps)} ref={ref} />;
-    case 'horizontal':
-      return <HorizontalImageCard {...(cardProps as HorizontalImageCardProps)} ref={ref} />;
-    default:
-      return <DefaultCard {...(cardProps as CardProps)} ref={ref} />;
-  }
+  return React.createElement(Tag, rest, children);
 };
 
-Card.displayName = 'Card';
+export const Card = forwardRef<HTMLDivElement, CardProps>(
+  (
+    {
+      heading,
+      headingLevel = 2,
+      subheading,
+      description,
+      metadata,
+      image,
+      href,
+      target,
+      linkLabel,
+      title,
+      className,
+      children,
+      ...rest
+    },
+    ref,
+  ) => {
+    return (
+      <div className={clsx('rhc-card', 'rhc-card--default', className)} ref={ref} {...rest}>
+        {image && <div className="rhc-card__image">{image}</div>}
 
-const DefaultCard = ({
-  ref,
-  heading,
-  className,
-  imageSrc,
-  icon,
-  description,
-  imageAlt,
-  metadata,
-  linkLabel,
-  button,
-  href,
-  title,
-  children,
-  ...restProps
-}: PropsWithChildren<CardProps>) => {
-  return (
-    <div className={clsx('rhc-card', 'rhc-card--default', className)} ref={ref} {...restProps}>
-      <div className="rhc-card__content">
-        <div className="rhc-card__heading">{heading}</div>
-        {imageSrc && (
-          <div className="rhc-card__image-container" data-testid="rhc-card__image-container">
-            {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
-          </div>
-        )}
-        <div className="rhc-card__icon">{icon}</div>
-        <div className="rhc-card__description">{description}</div>
-        <div className="rhc-card__metadata">{metadata}</div>
-        {children}
-      </div>
-      {(linkLabel || button) && (
-        <div className="rhc-card__footer">
-          {linkLabel && (
-            <div className="rhc-card__link rhc-card__anchor" data-testid="rhc-card__link">
-              <Link aria-label={title} href={href} title={title}>
+        <div className="rhc-card__content">
+          <HTMLHeading className="rhc-card__heading" level={headingLevel}>
+            {href ? (
+              <Link className="rhc-card__link" href={href} target={target} title={title}>
+                {heading}
+              </Link>
+            ) : (
+              heading
+            )}
+          </HTMLHeading>
+
+          {subheading && <p className="rhc-card__subheading">{subheading}</p>}
+
+          {description && <p className="rhc-card__description">{description}</p>}
+
+          {metadata && <p className="rhc-card__metadata">{metadata}</p>}
+
+          {children}
+        </div>
+
+        {linkLabel && (
+          <div className="rhc-card__footer">
+            <div className="rhc-card__link" data-testid="rhc-card__link">
+              <Link href={href} target={target} title={title}>
                 {linkLabel}
               </Link>
             </div>
-          )}
-          {button && (
-            <div className="rhc-card__button" data-testid="rhc-card__button">
-              {button}
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  );
-};
-
-DefaultCard.displayName = 'DefaultCard';
-
-export const FullBleedCard = ({
-  ref,
-  href,
-  title,
-  imageSrc,
-  heading,
-  children,
-  description,
-  metadata,
-  className,
-  imageAlt,
-  ...restProps
-}: PropsWithChildren<FullBleedCardProps>) => (
-  <div className={clsx('rhc-card', 'rhc-card--full-bleed', className)} ref={ref} {...restProps}>
-    <span className="rhc-card__anchor">
-      <a aria-label={title} href={href} title={title}></a>
-    </span>
-    <div className="rhc-card__content">
-      <div className="rhc-card__heading">{heading}</div>
-      <div className="rhc-card__description">{description}</div>
-      <div className="rhc-card__metadata">{metadata}</div>
-      {children}
-    </div>
-    {<Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />}
-  </div>
+          </div>
+        )}
+      </div>
+    );
+  },
 );
 
-FullBleedCard.displayName = 'FullBleedCard';
-
-export const HorizontalImageCard = ({
-  ref,
-  href,
-  title,
-  imageSrc,
-  imageAlt,
-  heading,
-  children,
-  className,
-  ...restProps
-}: PropsWithChildren<HorizontalImageCardProps>) => (
-  <div className={clsx('rhc-card', 'rhc-card--horizontal', className)} ref={ref} {...restProps}>
-    <span className="rhc-card__anchor">
-      <a aria-label={title} href={href} title={title}></a>
-    </span>
-    <div className="rhc-card__content">
-      <div className="rhc-card__heading">{heading}</div>
-      {children}
-    </div>
-    <div className="rhc-card__image-container">
-      <Image alt={imageAlt} className="rhc-card__image" src={imageSrc} />
-    </div>
-  </div>
-);
-
-HorizontalImageCard.displayName = 'HorizontalImageCard';
+Card.displayName = 'Card';

@@ -1,12 +1,12 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { HeroWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/web-components';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/hero.md?raw';
+import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import readme from '../components-react/hero.md?raw';
 
 HeroWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Hero',
+  title: 'Hero',
   id: 'rhc-hero-web',
   component: 'rhc-hero',
   argTypes: {
@@ -91,8 +91,7 @@ const meta = {
     textAlign: 'start',
     borderRadiusCorner: 'start-start',
     headingLevel: 3,
-    imageSrc:
-      'https://raw.githubusercontent.com/nl-design-system/rijkshuisstijl-community/main/proprietary/assets/src/placeholder.jpg',
+    imageSrc: '/placeholder.jpg',
   },
   tags: ['autodocs'],
   parameters: {
@@ -104,10 +103,12 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add GitHub issue and NL DesignSystem links
+    // TODO: add NL DesignSystem link
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=15708-524&node-type=canvas&t=fXG4KjJRXbo2PG2J-0',
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/Hero.tsx',
   },
 } as Meta<typeof HeroWebComponent>;
 

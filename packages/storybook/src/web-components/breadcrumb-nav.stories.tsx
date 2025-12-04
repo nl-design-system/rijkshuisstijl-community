@@ -1,8 +1,8 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { BreadcrumbNavWebComponent } from '@rijkshuisstijl-community/web-components';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/breadcrumb-nav/README.md?raw';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 BreadcrumbNavWebComponent.define();
 
@@ -13,7 +13,7 @@ const BreadcrumbNavWrapper = ({ elements }: any) => {
 };
 
 const meta = {
-  title: 'Web Components/Breadcrumb navigation',
+  title: 'Breadcrumb Navigation',
   id: 'rhc-breadcrumb-nav-web',
   component: BreadcrumbNavWrapper,
   argTypes: {},
@@ -29,7 +29,8 @@ const meta = {
     },
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1862-9575&t=YSjs9i2uQ5Eq3wto-0',
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/443',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/BreadcrumbNav.tsx',
     nldesignsystem: 'https://www.nldesignsystem.nl/breadcrumb-navigation/',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',

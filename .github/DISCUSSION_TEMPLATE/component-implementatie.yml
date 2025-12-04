@@ -1,0 +1,76 @@
+title: "{Naam van de component}"
+body:
+  - type: textarea
+    id: component-implementatie
+    attributes:
+      label: Component implementatie
+      value: |
+        In deze discussie definiëren en bespreken we de specificaties en implementatiekeuzes van dit component. Het doel is om één consistente en reproduceerbare beschrijving te schrijven, waarmee elke developer, onafhankelijk van programmeertaal of framework, hetzelfde component kan bouwen.
+
+        _Voeg hier een visuele referentie toe, zodat in één oogopslag duidelijk is over welk component het gaat._
+
+        ## Relevante links
+
+        _Vervang deze links door de links naar het specifieke component, als die bestaan._
+
+        - [NL Design System GitHub - Component discussie](https://github.com/orgs/nl-design-system/discussions/categories/component-suggestions)
+        - [NL Design System GitHub - Backlog](https://github.com/nl-design-system/backlog/issues/101)
+        - [Rijkshuisstijl Community GitHub - Rijkshuisstijl 2025 interpretatie](https://github.com/nl-design-system/rijkshuisstijl-community/discussions/categories/rijkshuisstijl-2025-interpretatie)
+
+        ## Korte omschrijving
+
+        _Beschrijf in één of twee zinnen wat dit component doet en waarvoor het bedoeld is. Wijkt dit af van NL Design System GitHub component Discussion? Geef dat dan aan en leg uit waarom._
+
+        **Voorbeeld**: Korte sectie die als geheel een link is naar een gerelateerde pagina.
+
+        ## Basis per framework
+
+        - Is dit component geïmporteerd uit een andere organisatie? Welke en waarom?
+        - Of is dit een geheel nieuw component? Wat is de reden om het zelf te ontwikkelen?
+        - Dit kan verschillen per framework. Leg hier de keuzes vast zodat we hier op terug kunnen blikken.
+
+        ## Naamgeving
+
+        _Leg vast welke naamgeving wordt gebruikt, afgestemd op de context (documentatie, CSS, frameworks). Dit bevordert herkenning en consistentie._
+
+        | Gebruik       | Naam                                  |
+        | ------------- | ------------------------------------- |
+        | Documentatie  | **Voorbeeld**: Card as Link           |
+        | CSS-klasse    | **Voorbeeld**: `.rhc-card-as-link`    |
+        | React         | **Voorbeeld**: `<CardAsLink />`       |
+        | Angular       | **Voorbeeld**: `<rhc-card-as-link />` |
+        | Web Component | **Voorbeeld**: `<card-as-link />`     |
+
+        ## Design tokens
+
+        _Beschrijf welke design tokens de component gebruikt of beschikbaar stelt via Tokens Studio._
+
+        ## Gedrag
+
+        _Beschrijf het verwachte gedrag van het component in verschillende staten (hover, focus, active, disabled). Geef ook aan hoe het zich gedraagt bij toetsenbordnavigatie of responsieve weergave._
+
+        ## Eigenschappen
+
+        _Leg alle relevante properties vast die nodig zijn voor een consistente implementatie._
+
+        | Eigenschap | Type    | Beschrijving                             | Verplicht | Standaard |
+        | ---------- | ------- | ---------------------------------------- | --------- | --------- |
+        | `label`    | string  | De tekst die in de component verschijnt. | Ja        | –         |
+        | `variant`  | string  | Bijvoorbeeld: `primary`, `secondary`.    | Nee       | `primary` |
+        | `disabled` | boolean | Maakt de component niet-interactief.     | Nee       | `false`   |
+        | `onClick`  | functie | Wordt aangeroepen bij interactie.        | Nee       | –         |
+
+        > Voeg alle benodigde properties toe, inclusief types, defaults en of ze verplicht zijn.
+
+        ## Implementatie keuzes
+
+        _Geef context bij technische of functionele keuzes. Benoem ook afwijkingen van standaarden of andere implementaties als die er zijn. Voeg hier onderwerpen aan toe indien van toepassing._
+
+        ### Afwijkingen
+
+        - Benoem afwijkingen ten opzichte van bestaande implementaties of richtlijnen (bijv. NL Design System, Rijkshuisstijl).
+        - Licht toe waarom deze keuzes zijn gemaakt.
+
+        ## Vragen of discussiepunten
+
+        _Noteer hier openstaande vragen of beslissingen die nog besproken moeten worden._

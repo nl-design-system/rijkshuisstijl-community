@@ -1,16 +1,16 @@
 /* @license CC0-1.0 */
 
 import TwigImage from '@rijkshuisstijl-community/components-twig/src/Image.twig';
-import type { Meta, StoryObj } from '@storybook/react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import referenceDocs from '@utrecht/components/img/docs/references.nl.md?raw';
 import htmlDocs from '@utrecht/components/img/docs/technology-html.nl.md?raw';
 import wcagDocs from '@utrecht/components/img/docs/wcag.nl.md?raw';
 import DrupalAttribute from 'drupal-attribute';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/image.md?raw';
+import readme from '../components-react/image.md?raw';
 
 const meta = {
-  title: 'Twig Components/Image',
+  title: 'Image',
   id: 'rhc-twig-image',
   component: TwigImage,
   argTypes: {
@@ -55,6 +55,9 @@ const meta = {
     },
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, maar de photo property altijd geset, daardoor is hij altijd max-height en max-width 100%.',
+    //Todo: voeg NL-Design system & Figma links toe
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/src/Image.twig',
   },
 } satisfies Meta<typeof TwigImage>;
 
@@ -65,7 +68,7 @@ export const TwigImage1: StoryObj<typeof meta> = {
     attributes: new DrupalAttribute(),
     width: 763,
     height: 640,
-    src: './placeholder.jpg',
+    src: '/placeholder.jpg',
     alt: 'Multicolored tulip field',
   },
   name: 'Image',

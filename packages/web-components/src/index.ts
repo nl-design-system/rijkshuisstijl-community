@@ -12,7 +12,7 @@ import {
   type BreadcrumbNavWebComponentAttributes,
 } from './components/BreadcrumbNav';
 import { ButtonWebComponent, type ButtonWebComponentAttributes } from './components/Button';
-import { CardWebComponent, type CardWebComponentAttributes } from './components/Card';
+import { CardAsLinkWebComponent, type CardAsLinkWebComponentAttributes } from './components/CardAsLink';
 import { CheckboxWebComponent, type CheckboxWebComponentAttributes } from './components/Checkbox';
 import { CheckboxGroupWebComponent, type CheckboxGroupWebComponentAttributes } from './components/CheckboxGroup';
 import {
@@ -44,7 +44,7 @@ export {
   type BreadcrumbNavWebComponentAttributes,
 };
 export { ButtonWebComponent, type ButtonWebComponentAttributes };
-export { CardWebComponent, type CardWebComponentAttributes };
+export { CardAsLinkWebComponent, type CardAsLinkWebComponentAttributes };
 export { CheckboxGroupWebComponent, type CheckboxGroupWebComponentAttributes };
 export { CheckboxWebComponent, type CheckboxWebComponentAttributes };
 export { type FormFieldCheckboxGroupAttributes, FormFieldCheckboxGroupWebComponent };
@@ -69,7 +69,7 @@ declare global {
       'rhc-blockquote': WebComponentAttributes<BlockquoteWebComponentAttributes>;
       'rhc-breadcrumb-nav': WebComponentAttributes<BreadcrumbNavWebComponentAttributes>;
       'rhc-button': WebComponentAttributes<ButtonWebComponentAttributes>;
-      'rhc-card': WebComponentAttributes<CardWebComponentAttributes>;
+      'rhc-card-as-link': WebComponentAttributes<CardAsLinkWebComponentAttributes>;
       'rhc-checkbox-group': WebComponentAttributes<CheckboxGroupWebComponentAttributes>;
       'rhc-checkbox': WebComponentAttributes<CheckboxWebComponentAttributes>;
       'rhc-form-checkbox-group': WebComponentAttributes<FormFieldCheckboxGroupAttributes>;

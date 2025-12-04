@@ -1,7 +1,6 @@
 import { PageFooterProps, PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { PropsWithChildren, ReactNode, Ref } from 'react';
-import React from 'react';
+import { MouseEvent, PropsWithChildren, ReactNode, Ref } from 'react';
 import { ColumnLayout } from './ColumnLayout';
 import { Heading, HeadingLevel } from './Heading';
 import { Icon } from './Icon';
@@ -24,9 +23,14 @@ interface ColumnProps {
   children: ReactNode;
 }
 
-const scrollBackToTop = (event: React.MouseEvent<HTMLAnchorElement>) => {
+const scrollBackToTop = (event: MouseEvent<HTMLAnchorElement>) => {
   event.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  const target = event.currentTarget.getAttribute('href');
+  if (!target) return;
+  const $target = document.querySelector(target) as HTMLElement;
+  if (!$target) return;
+  $target.focus({ preventScroll: true }); // Ensure target is focusable, ie via tabindex={-1} on #main
 };
 
 export const Footer = ({
@@ -89,7 +93,7 @@ export const Footer = ({
           <div className="rhc-page-subfooter__content rhc-page-footer__wrapper">
             {subFooter}
             {backtotop && (
-              <a className="rhc-page-subfooter__backtotop" href="#" onClick={scrollBackToTop}>
+              <a className="rhc-page-subfooter__backtotop" href="#main" onClick={scrollBackToTop}>
                 Terug naar boven <Icon icon="pijl-omhoog" />
               </a>
             )}

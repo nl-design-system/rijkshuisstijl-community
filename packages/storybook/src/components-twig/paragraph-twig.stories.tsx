@@ -2,13 +2,13 @@
 
 import TwigParagraph from '@rijkshuisstijl-community/components-twig/src/Paragraph.twig';
 import '@rijkshuisstijl-community/components-css/src/paragraph/index.scss';
-import type { Meta, StoryObj } from '@storybook/react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import DrupalAttribute from 'drupal-attribute';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/paragraph.md?raw';
+import readme from '../components-react/paragraph.md?raw';
 
 const meta = {
-  title: 'Twig Components/Paragraph',
+  title: 'Paragraph',
   id: 'rhc-twig-paragraph',
   component: TwigParagraph,
   argTypes: {
@@ -55,6 +55,9 @@ const meta = {
       },
     },
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+    //Todo: voeg NL-Design system & Figma links toe
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/src/Paragraph.twig',
   },
 } satisfies Meta<typeof TwigParagraph>;
 

@@ -1,14 +1,14 @@
 /* @license CC0-1.0 */
 
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { ArticleWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/web-components';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/article.md?raw';
+import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import readme from '../components-react/article.md?raw';
 
 ArticleWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Article',
+  title: 'Article',
   id: 'rhc-article-web',
   component: 'rhc-article',
   argTypes: {},
@@ -37,7 +37,8 @@ const meta = {
       },
     },
     // TODO: add Figma link
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/566',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/Article.tsx',
     nldesignsystem: 'https://www.nldesignsystem.nl/article/',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met alleen overgeschreven design tokens van de Rijkshuisstijl Community.',

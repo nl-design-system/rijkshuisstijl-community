@@ -32,21 +32,27 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from './Button';
+export { Card } from './Card';
 export {
-  Card,
-  type CardProps,
-  FullBleedCard,
-  type FullBleedCardProps,
-  HorizontalImageCard,
-  type HorizontalImageCardProps,
-} from './Card';
+  CardAsLink,
+  type CardAsLinkProps,
+  FullBleedCardAsLink,
+  type FullBleedCardAsLinkProps,
+  HorizontalImageCardAsLink,
+  type HorizontalImageCardAsLinkProps,
+} from './CardAsLink';
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
 export { CodeInput } from './CodeInput';
 export { CodeInputGroup } from './CodeInputGroup';
 export { ColumnLayout, type ColumnLayoutProps } from './ColumnLayout';
 export { type CustomFormFieldProps, FormField } from './FormField';
+export { DataBadgeButton, type DataBadgeButtonProps } from './DataBadgeButton';
+export { DataSummary, type DataSummaryProps } from './DataSummary';
+export { DataSummaryItem, type DataSummaryItemProps } from './DataSummaryItem';
 export { DotBadge, type DotBadgeProps } from './DotBadge';
+export { Drawer, type DrawerProps } from './Drawer';
+export { ExpandableCheckboxGroup, type ExpandableCheckboxGroupProps } from './ExpandableCheckboxGroup';
 export { Fieldset, FieldsetLegend, type FieldsetLegendProps, type FieldsetProps } from './Fieldset';
 export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from './Figure';
 export { File } from './File';
@@ -97,10 +103,12 @@ export { NumberBadge, type NumberBadgeProps } from './NumberBadge';
 export { OrderedList, OrderedListItem, type OrderedListItemProps, type OrderedListProps } from './OrderedList';
 export { PageContent, type PageContentProps } from './PageContent';
 export { PageHeader, type PageHeaderProps } from './PageHeader';
+export { PageNumberNavigation, type PageNumberNavigationProps } from './PageNumberNavigation';
 export { Paragraph, type ParagraphProps } from './Paragraph';
 export { PreHeading, type PreHeadingProps } from './PreHeading';
 export { Radio, type RadioProps } from './Radio';
 export { RadioGroup, type RadioGroupProps } from './RadioGroup';
+export { RoundedCorner, type RoundedCornerProps } from './RoundedCorner';
 export { Separator, type SeparatorProps } from './Separator';
 export { SideNav, type SideNavProps } from './SideNav';
 export { SideNavItem, type SideNavItemProps } from './SideNavItem';
@@ -128,3 +136,5 @@ export { Toggletip, type ToggletipProps } from './Toggletip';
 export { UnorderedList, type UnorderedListProps } from './UnorderedList';
 export { UnorderedListItem, type UnorderedListItemProps } from './UnorderedListItem';
 export { VisuallyHidden } from './VisuallyHidden';
+export { iconSet as defaultIconSet } from './icon-sets/default-icons/icon-set';
+export { iconSet as flagIconSet } from './icon-sets/flag-icons/icon-set';

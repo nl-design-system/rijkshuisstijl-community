@@ -11,44 +11,86 @@ Deze package is onderdeel van het [Rijkshuisstijl Community](https://github.com/
 
 ## Aan de slag met Web Components
 
-Om de Web Components van de Rijkshuisstijl-community te gebruiken, installeer je het [web-components npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/web-components).
+Om de componenten van de Rijkshuisstijl-community te gebruiken, installeer je het [web-components npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/web-components).
+
+De componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je project toe te voegen, installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens) en [component-css npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-css).
+
+> [!NOTE]  
+> Let erop dat je beide de `@rijkshuisstijl-community/design-tokens/dist/index.css` importeert **en** de component een child is van een element waar de `rhc-theme` op is toegepast. Anders zie je de component zonder styling.
 
 ```bash
-npm install --save-dev @rijkshuisstijl-community/web-components
+npm install @rijkshuisstijl-community/web-components @rijkshuisstijl-community/components-css @rijkshuisstijl-community/design-tokens
 ```
 
-Dit installeert de Web Components. Om deze componenten te gebruiken, importeer je ze in je project en plaats je ze in de HTML.
-
-Importeer de Web Components in je project:
-
-```js
-import '@rijkshuisstijl-community/web-components';
-```
-
+Dit installeert de componenten, de design tokens en de styling. Om deze te gebruiken, importeer je ze in jouw app,
 Vervolgens kun je de componenten in je HTML gebruiken:
 
 ```html
-<rhc-button>Click Here!</rhc-button>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RHC web-components</title>
+    <!-- componenten importeren -->
+    <script type="module">
+      import { ButtonWebComponent } from '@rijkshuisstijl-community/web-components';
+
+      // NB: let op dat je hier elk te gebruiken component definieert
+      customElements.define('rhc-button', ButtonWebComponent);
+    </script>
+    <!-- design tokens importeren -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css"
+    />
+    <!-- css importeren -->
+    <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/components-css/dist/index.css" />
+  </head>
+  <body>
+    <!--geef alle thema tokens mee aan child components voor styling-->
+    <div class="rhc-theme">
+      <rhc-button>Click Here!</rhc-button>
+    </div>
+  </body>
+</html>
 ```
 
 ### Thema toepassen
 
-Om de Rijkshuisstijl aan je project toe te voegen, installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens).
-
-```bash
-npm install --save-dev @rijkshuisstijl-community/design-tokens
-```
+Voor de themas maken we gebruik van de volgende 2 packages: [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens) en [component-css npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-css).
 
 Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.css`-bestand uit de `dist` map van het
-pakket, en omring het deel van je applicatie waar je het thema wilt toepassen met de Rijkshuisstijl-thema: `rhc-theme`.
+pakket, en omring het deel van je applicatie waar je het thema wilt toepassen met het Rijkshuisstijl-thema met de `rhc-theme` class.
+
+#### Thema wijzigen
+
+Om een ander thema toe te passen moet je het importeren van `import '@rijkshuisstijl-community/design-tokens/dist/{thema}/index.css';` en de class aanpassen naar het desbetreffende thema.
+Zie het volgende voorbeeld om het uitvoerend-groen thema toe te passen:
 
 ```html
-<link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css" />
-<link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/components-css/dist/index.css" />
-
-<div class="rhc-theme">
-  <rhc-button>Click Here!</rhc-button>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RHC web-components</title>
+    <!-- componenten importeren -->
+    <script type="module">
+      import { ButtonWebComponent } from '@rijkshuisstijl-community/web-components';
+      customElements.define('rhc-button', ButtonWebComponent);
+    </script>
+    <!-- design tokens importeren -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css"
+    />
+    <!-- css importeren -->
+    <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/components-css/dist/index.css" />
+  </head>
+  <body>
+    <!--geef alle thema tokens mee aan child components voor styling-->
+    <div class="uitvoerend-groen">
+      <rhc-button>Click Here!</rhc-button>
+    </div>
+  </body>
+</html>
 ```
 
 Bekijk de [packages/font/README.md](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/font/README.md) voor de meerdere manieren om de lettertypen te installeren voor jouw project.

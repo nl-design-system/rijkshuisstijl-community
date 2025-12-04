@@ -1,30 +1,20 @@
 import { Link as CandidateLink, type LinkProps as CandidateLinkProps } from '@nl-design-system-candidate/link-react';
 import clsx from 'clsx';
-import { PropsWithChildren, ReactNode, Ref } from 'react';
-import { Icon } from './Icon';
+import { PropsWithChildren, Ref } from 'react';
 
-export interface LinkProps extends CandidateLinkProps {
-  external?: boolean;
-  externalLabel?: ReactNode;
+export interface LinkProps extends Omit<CandidateLinkProps, 'disabled'> {
   ref?: Ref<HTMLAnchorElement>;
+  inline?: boolean;
 }
 
-export const Link = ({
-  ref,
-  children,
-  className,
-  external,
-  externalLabel,
-  ...restProps
-}: PropsWithChildren<LinkProps>) => (
-  <CandidateLink {...restProps} className={clsx('rhc-link', className)} ref={ref}>
+export const Link = ({ ref, children, className, inline, ...restProps }: PropsWithChildren<LinkProps>) => (
+  <CandidateLink
+    {...restProps}
+    className={clsx('rhc-link', { 'rhc-link--inline': inline }, className)}
+    disabled={false}
+    ref={ref}
+  >
     {children}
-    {external && (
-      <>
-        <span className="rhc-link__sr-only">{externalLabel}</span>
-        <Icon icon={'externe-link'} />
-      </>
-    )}
   </CandidateLink>
 );
 

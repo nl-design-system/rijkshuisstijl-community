@@ -1,0 +1,28 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Community for NL Design System
+ */
+
+@use "../button/mixin" as button-mixin;
+@use "@utrecht/focus-ring-css/src/mixin" as utrecht-focus-mixin;
+
+@mixin rhc-data-badge-button {
+  align-items: center;
+  column-gap: var(--rhc-data-badge-button-column-gap);
+  cursor: pointer;
+  display: inline-flex;
+  position: relative;
+}
+
+@mixin rhc-data-badge-button--hover {
+  --utrecht-data-badge-background-color: var(--rhc-data-badge-button-hover-background-color);
+  --utrecht-data-badge-color: var(--rhc-data-badge-button-hover-color);
+}
+
+@mixin rhc-data-badge-button__sr-only {
+  @include button-mixin.invisible-but-accessible;
+}
+
+@mixin rhc-data-badge-button--focus-visible {
+  @include utrecht-focus-mixin.utrecht-focus-visible;
+}

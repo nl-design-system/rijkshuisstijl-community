@@ -1,0 +1,32 @@
+body:
+  - type: textarea
+    id: vraag
+    attributes:
+      label: Vraag
+      description: "Beschrijf hier concreet je vraag. Denk aan: wie, wat, waar, wanneer, waarom en hoe."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: |
+        Geef achtergrondinformatie die kan helpen bij het beantwoorden van je vraag. Denk hierbij aan:
+
+        - Waar in je project of organisatie gebruik je dit?
+        - Zijn er relevante links (bijvoorbeeld naar Storybook, een ontwerp in Figma, een bestaande implementatie of een testomgeving)?
+        - Wat heb je al onderzocht of gedaan?  Dit voorkomt dat mensen suggesties doen die je al hebt overwogen.
+        - Moet er iets gereproduceerd worden? Vermeld dan welk apparaat en welke browser je gebruikt, en welke stappen nodig zijn om het probleem te zien.
+
+  - type: textarea
+    id: vervolg
+    attributes:
+      label: Update of vervolgvraag
+      description: |
+        Gebruik dit veld om later een update te geven op je vraag, of een vervolgvraag te stellen op basis van de ontvangen antwoorden.
+
+        Voorbeelden van wat je hier kunt toevoegen:
+        - Is je oorspronkelijke vraag beantwoord? Beschrijf wat je hebt gedaan met de antwoorden.
+        - Zijn er nieuwe inzichten of vragen? Voeg die toe.
+        - Deel aanvullende informatie of nieuwe reproduceerbare stappen.

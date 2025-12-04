@@ -8,7 +8,8 @@ import { Paragraph } from './Paragraph';
 export interface HeroBaseProps extends HTMLAttributes<HTMLDivElement> {
   textAlign?: 'start' | 'end';
   imageSrc: string;
-  imageAlt: string;
+  imageAlt?: string;
+  imagePresentation?: boolean;
   headingLevel?: HeadingLevel;
   headingAppearanceLevel?: HeadingLevel;
   aspectRatio?: '16 / 9' | '1 / 1' | '4 / 3';
@@ -35,10 +36,11 @@ export const Hero = ({
   className,
   imageSrc,
   imageAlt,
+  imagePresentation,
   heading,
   subHeading,
   headingLevel = 3,
-  headingAppearanceLevel = 3,
+  headingAppearanceLevel = headingLevel,
   borderRadiusCorner,
   aspectRatio = '16 / 9',
   ...restProps
@@ -57,7 +59,7 @@ export const Hero = ({
       )}
       {...restProps}
     >
-      <Image alt={imageAlt} className="rhc-hero__image" src={imageSrc} />
+      <Image alt={imageAlt} className="rhc-hero__image" presentation={imagePresentation} src={imageSrc} />
       {heading && (
         <div className={clsx('rhc-hero__message')}>
           <HeadingGroup>

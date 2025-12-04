@@ -1,8 +1,8 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { FormFieldTextInputWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-text-input.md?raw';
+import readme from '../components-react/form-field-text-input.md?raw';
 
 FormFieldTextInputWebComponent.define();
 
@@ -33,7 +33,7 @@ const TextInputWrapper = ({
 };
 
 const meta = {
-  title: 'Web Components/Form Field/Form Field Text Input',
+  title: 'Form Field/Form Field Text Input',
   id: 'rhc-form-field-text-input-web',
   component: TextInputWrapper,
   argTypes: {
@@ -325,9 +325,11 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    // TODO: add Figma and NL DesignSystem links
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht (daar heeft het de naam FormFieldTextbox), met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/FormFieldTextInput.tsx',
   },
 } as Meta<typeof FormFieldTextInputWebComponent>;
 

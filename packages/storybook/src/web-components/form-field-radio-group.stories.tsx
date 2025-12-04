@@ -1,8 +1,8 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { FormFieldRadioGroupWebComponent, FormFieldRadioWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-radio-group.md?raw';
+import readme from '../components-react/form-field-radio-group.md?raw';
 
 FormFieldRadioGroupWebComponent.define();
 FormFieldRadioWebComponent.define();
@@ -20,7 +20,7 @@ const RadioGroupWrapper = ({ label, description, errormessage, status, invalid, 
 };
 
 const meta = {
-  title: 'Web Components/Form Field/Form Field Radio Group',
+  title: 'Form Field/Form Field Radio Group',
   id: 'rhc-form-field-radio-group-web',
   component: RadioGroupWrapper,
   argTypes: {
@@ -82,10 +82,12 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add GitHub issue and NL DesignSystem links
+    // TODO: add and NL DesignSystem link
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=958-1925&node-type=canvas&t=HiNKOQhf1hQtLZrr-0',
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/FormFieldRadioGroup.tsx',
   },
 } as Meta<typeof FormFieldRadioWebComponent>;
 
@@ -114,7 +116,7 @@ export const Default = {
   },
 } as StoryObj<typeof meta>;
 
-export const Error = {
+export const Invalid = {
   args: {
     label: 'Select option',
     children: [
@@ -122,19 +124,19 @@ export const Error = {
         label: 'Option 1',
         name: 'radio-demo',
         value: 'option1',
-        invalid: 'true',
+        inputInvalid: 'true',
       }),
       createElement('rhc-form-radio', {
         label: 'Option 2',
         name: 'radio-demo',
         value: 'option2',
-        invalid: 'true',
+        inputInvalid: 'true',
       }),
       createElement('rhc-form-radio', {
         label: 'Option 3',
         name: 'radio-demo',
         value: 'option3',
-        invalid: 'true',
+        inputInvalid: 'true',
       }),
     ],
     errorMessage: 'This is an error message',

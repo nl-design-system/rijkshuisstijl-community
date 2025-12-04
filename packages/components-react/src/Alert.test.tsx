@@ -1,37 +1,62 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render, screen } from '@testing-library/react';
+import { AlertType } from '@utrecht/component-library-react';
 import { afterEach, describe, expect, it, test } from 'vitest';
 import { Alert } from './Alert';
+import { Heading } from './Heading';
+import { Paragraph } from './Paragraph';
 
 describe('Alert', () => {
   it('should render successfully', () => {
     render(
-      <Alert
-        heading="Heading"
-        textContent="Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *"
-        type="info"
-      />,
+      <Alert type="info">
+        <Heading level={3}>Heading</Heading>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </Paragraph>
+      </Alert>,
     );
-    const alert = screen.getByRole('alert');
+    const alert = screen.getByRole('status');
     expect(alert).toBeInTheDocument();
   });
-});
 
-test.each([['info'], ['ok'], ['warning'], ['error']])(
-  'should apply the correct class based on the type prop: %s',
-  (type) => {
+  it.each([
+    ['info', 'status'],
+    ['ok', 'status'],
+    ['warning', 'alert'],
+    ['error', 'alert'],
+  ])('should set role="%s" when type is %s', (type, expectedRole) => {
     render(
-      <Alert heading="Test Heading" textContent="Test content" type={type as 'info' | 'ok' | 'warning' | 'error'} />,
+      <Alert type={type as AlertType}>
+        <Heading level={3}>Heading</Heading>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </Paragraph>
+      </Alert>,
     );
-
-    const alert = screen.getByRole('alert');
-    const iconContainer = alert.querySelector('.rhc-alert__icon-container');
-
-    expect(iconContainer).toHaveClass(`rhc-alert__icon-container`);
-    expect(iconContainer).toHaveClass(`rhc-alert__icon-container--${type}`);
-
+    const alert = screen.getByRole(expectedRole);
+    expect(alert).toBeInTheDocument();
     cleanup();
-  },
-);
+  });
 
-afterEach(() => cleanup());
+  test.each([['info'], ['ok'], ['warning'], ['error']])(
+    'should apply the correct class based on the type prop: %s',
+    (type) => {
+      const { container } = render(
+        <Alert type={type as AlertType}>
+          <Heading level={3}>Heading</Heading>
+          <Paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </Paragraph>
+        </Alert>,
+      );
+
+      const alert = container.querySelector('.utrecht-alert');
+      expect(alert).toHaveClass(`utrecht-alert--${type}`);
+    },
+  );
+  afterEach(() => cleanup());
+});

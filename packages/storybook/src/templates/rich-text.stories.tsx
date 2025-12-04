@@ -1,11 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/react/*';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import Page from './rich-text';
 import './globals.css';
 
 const meta: Meta = {
-  title: 'Templates/Rich Text',
+  title: 'Rich Text',
+  id: 'rhc-templates-rich-text',
   component: Page,
   parameters: {
+    layout: 'fullscreen',
     status: {
       type: 'UNSTABLE',
     },

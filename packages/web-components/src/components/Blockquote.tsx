@@ -14,15 +14,8 @@ export class BlockquoteWebComponent extends BaseWebComponent {
 
   render(): void {
     if (!this.shadowRoot) return;
-
-    const { attribution, variation, ...restProps } = this.props;
-
     render(
-      <Blockquote
-        attribution={(attribution as BlockquoteWebComponentAttributes['attribution']) ?? undefined}
-        variation={(variation as BlockquoteWebComponentAttributes['variation']) ?? undefined}
-        {...restProps}
-      >
+      <Blockquote {...(this.props as BlockquoteWebComponentAttributes)}>
         <slot />
       </Blockquote>,
       this.shadowRoot,

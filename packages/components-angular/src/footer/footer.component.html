@@ -1,0 +1,28 @@
+@if (preFooter) {
+  <div class="rhc-page-prefooter">
+    @if (preFooterMessage) {
+      <span class="rhc-page-prefooter__content">{{ preFooterMessage }}</span>
+    }
+  </div>
+}
+
+<footer [class]="`utrecht-page-footer rhc-page-footer ${backgroundClass}`">
+  <div class="rhc-page-footer__content rhc-page-footer__wrapper">
+    @if (heading) {
+      <div class="rhc-page-footer__title">
+        <rhc-heading [level]="2" [appearanceLevel]="appearanceLevel">{{ heading }}</rhc-heading>
+      </div>
+    }
+    <rhc-column-layout>
+      <ng-content select="[columns]"></ng-content>
+    </rhc-column-layout>
+  </div>
+
+  @if (subFooter) {
+    <div [class]="`rhc-page-subfooter ${backgroundClass}`">
+      <div class="rhc-page-subfooter__content rhc-page-footer__wrapper">
+        <ng-content select="[subFooter]"></ng-content>
+      </div>
+    </div>
+  }
+</footer>

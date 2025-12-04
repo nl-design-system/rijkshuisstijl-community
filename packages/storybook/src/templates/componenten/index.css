@@ -1,0 +1,173 @@
+/* Componenten Template */
+
+.utrecht-heading-group {
+  gap: 0.75rem;
+}
+
+.utrecht-form-label {
+  color: var(--rhc-color-primary-500) !important;
+}
+
+.utrecht-form-fieldset__legend {
+  color: var(--rhc-color-primary-500) !important;
+}
+
+.rhc-templates-badgelist {
+  gap: var(--rhc-space-100) !important;
+  position: relative;
+  z-index: 1; /* higher z-index so badges are clickable within card as link */
+}
+
+.rhc-templates-card {
+  column-gap: var(--rhc-space-200);
+  display: flex;
+  flex-wrap: wrap;
+  margin-block-end: var(--rhc-space-200);
+  margin-block-start: var(--rhc-space-200);
+  min-inline-size: 100% !important;
+}
+
+.rhc-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+
+  @media (width <= 780px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rhc-grid-container__start {
+  display: flex;
+}
+
+.rhc-grid-container__end {
+  display: flex;
+  flex-direction: column;
+}
+
+.rhc-componenten-toevoegen {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.rhc-checkbox-number-badge {
+  margin-inline-start: var(--rhc-space-100);
+}
+
+/**
+ * Wraps the checkboxes in an unordered list.
+ * TODO: This might be a thing that needs to happen in the actual component?
+ */
+.utrecht-unordered-list {
+  --utrecht-unordered-list-padding-inline-start: 0;
+  --utrecht-unordered-list-item-margin-block-end: 0;
+  --utrecht-unordered-list-item-margin-block-start: 0;
+  --utrecht-unordered-list-item-padding-inline-start: 0;
+}
+
+.utrecht-unordered-list .utrecht-unordered-list__item::marker {
+  content: "";
+}
+
+.rhc-ordered-list {
+  /**
+   * This prevents the Card as Link from overflowing the container on mobile,
+   * as the --rhc-card-as-link-inline-size is set to 328px, as well as the fallback is set to 328px.
+   * This means the issue will always occur on smallest mobile devices which are 320px.
+   * TODO: Discuss the reasoning behind this value with the design team.
+   */
+  --rhc-card-as-link-inline-size: 100%;
+
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.rhc-search-form {
+  align-items: flex-end;
+  display: flex;
+}
+
+.rhc-search-form .utrecht-form-field {
+  min-inline-size: 300px;
+}
+
+.rhc-search-button {
+  border-radius: 0 4px 4px 0 !important;
+}
+
+.rhc-search-form .utrecht-textbox,
+.rhc-search-form .utrecht-form-field input {
+  border-radius: 4px 0 0 4px !important;
+  position: relative !important;
+}
+
+.rhc-active-filters {
+  align-items: flex-start;
+  border: transparent;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-space-100, 0.5rem);
+  margin-block: var(--rhc-space-200, 1rem);
+  padding-block: var(--rhc-space-200, 1rem);
+}
+
+.rhc-active-filters__list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--rhc-space-100) !important;
+  margin-block: 0;
+  margin-inline: 0;
+}
+
+.rhc-active-filters__badge::after {
+  justify-content: center;
+  margin-inline-start: var(--rhc-space-25);
+}
+
+@media (width <= 780px) {
+  .rhc-active-filters {
+    padding-block: var(--rhc-space-150, 0.75rem);
+    padding-inline: var(--rhc-space-150, 0.75rem);
+  }
+}
+
+.rhc-sr-only {
+  block-size: 1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  inline-size: 1px;
+  margin-block: -1px;
+  margin-inline: -1px;
+  overflow: hidden;
+  padding-block: 0;
+  padding-inline: 0;
+  position: absolute;
+  white-space: nowrap;
+}
+.rhc-search-container {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  padding-block-end: 2em;
+}
+
+@media (width <= 780px) {
+  .rhc-search-container {
+    align-items: stretch;
+    flex-direction: column;
+    padding-block-end: var(--rhc-space-0);
+  }
+  .rhc-search-container__add-component {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-block-start: var(--rhc-space-200);
+  }
+  .rhc-componenten-toevoegen {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-block-start: 1em;
+  }
+}

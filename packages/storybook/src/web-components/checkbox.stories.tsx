@@ -1,8 +1,8 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { CheckboxWebComponent } from '@rijkshuisstijl-community/web-components';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/checkbox.md?raw';
+import readme from '../components-react/checkbox.md?raw';
 
 CheckboxWebComponent.define();
 
@@ -31,7 +31,7 @@ const CheckboxWrapper = ({
 };
 
 const meta = {
-  title: 'Web Components/Checkbox',
+  title: 'Checkbox',
   id: 'rhc-checkbox-web',
   component: CheckboxWrapper,
   parameters: {
@@ -46,7 +46,8 @@ const meta = {
     },
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=944-1535&node-type=canvas&t=HiNKOQhf1hQtLZrr-0',
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/462',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/Checkbox.tsx',
     nldesignsystem: 'https://www.nldesignsystem.nl/checkbox/',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',

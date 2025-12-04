@@ -1,13 +1,13 @@
 /* @license CC0-1.0 */
 
 import TwigHeading from '@rijkshuisstijl-community/components-twig/src/Heading.twig';
-import type { Meta, StoryObj } from '@storybook/react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import DrupalAttribute from 'drupal-attribute';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/heading.md?raw';
+import readme from '../components-react/heading.md?raw';
 
 const meta = {
-  title: 'Twig Components/Heading',
+  title: 'Heading',
   id: 'rhc-twig-heading',
   component: TwigHeading,
   argTypes: {
@@ -32,6 +32,9 @@ const meta = {
       },
     },
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+    //Todo: voeg NL-Design system & Figma links toe
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/src/Heading.twig',
   },
 } satisfies Meta<typeof TwigHeading>;
 

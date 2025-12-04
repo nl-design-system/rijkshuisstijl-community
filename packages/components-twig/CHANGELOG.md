@@ -1,5 +1,142 @@
 # @rijkshuisstijl-community/components-twig
 
+## 2.0.4
+
+### Patch Changes
+
+- cd80794: Updated readme's to install dependencies for build instead of dev.
+- Updated dependencies [cd80794]
+- Updated dependencies [2062466]
+- Updated dependencies [093f3af]
+- Updated dependencies [2f3f91c]
+- Updated dependencies [5b7a72c]
+- Updated dependencies [5961ac6]
+- Updated dependencies [462686a]
+  - @rijkshuisstijl-community/components-css@9.0.0
+
+## 2.0.3
+
+### Patch Changes
+
+- 10ec55a: Release package with npm provenance.
+- Updated dependencies [ae57d51]
+- Updated dependencies [10ec55a]
+  - @rijkshuisstijl-community/components-css@8.0.1
+
+## 2.0.2
+
+### Patch Changes
+
+- Updated dependencies [b012c3e]
+- Updated dependencies [e8dc080]
+- Updated dependencies [aadf35e]
+  - @rijkshuisstijl-community/components-css@8.0.0
+
+## 2.0.1
+
+### Patch Changes
+
+- Updated dependencies [8e189de]
+- Updated dependencies [884d990]
+  - @rijkshuisstijl-community/components-css@7.0.0
+
+## 2.0.0
+
+### Major Changes
+
+- 8e508f9: Removed the following tokens:
+  Used but unnecessary:
+  --utrecht-alert-heading-line-height
+  --utrecht-alert-message-line-height
+
+  Unused:
+  --utrecht-alert-heading-font-family
+  --utrecht-alert-heading-font-size
+  --utrecht-alert-heading-font-weight
+
+  Reworked the Alert react component to allow users to add content like heading and paragraph in the children instead of duplicating heading props in the alert directly.
+  Added icon overwrite support in case you want a different icon on a specific alert type.
+
+### Patch Changes
+
+- d2c235c: Uitloggen icoon toegevoegd
+- Updated dependencies [8e508f9]
+- Updated dependencies [29bfdd5]
+- Updated dependencies [965c2a4]
+  - @rijkshuisstijl-community/components-css@6.0.0
+
+## 1.3.9
+
+### Patch Changes
+
+- Updated dependencies [35dcda9]
+  - @rijkshuisstijl-community/components-css@5.1.0
+
+## 1.3.8
+
+### Patch Changes
+
+- 3d9999c: Update patch & minor dependencies
+- Updated dependencies [cd3758e]
+- Updated dependencies [bf73b50]
+- Updated dependencies [6b3a5aa]
+- Updated dependencies [39e082e]
+- Updated dependencies [93b9259]
+- Updated dependencies [3d9999c]
+- Updated dependencies [022af85]
+- Updated dependencies [0057047]
+- Updated dependencies [f89c576]
+- Updated dependencies [acca7a7]
+- Updated dependencies [f24efc1]
+  - @rijkshuisstijl-community/components-css@5.0.0
+
+## 1.3.7
+
+### Patch Changes
+
+- Updated dependencies [08d4354]
+- Updated dependencies [923d857]
+  - @rijkshuisstijl-community/components-css@4.0.0
+
+## 1.3.6
+
+### Patch Changes
+
+- 9e83410: Fixed Twig peer dependency on React to run Chromatic snapshots locally.
+- Updated dependencies [9e83410]
+- Updated dependencies [a1502a5]
+  - @rijkshuisstijl-community/components-css@3.1.0
+
+## 1.3.5
+
+### Patch Changes
+
+- d20a098: Voeg `react` als peer dependency toe aan `components-twig` om Storybook builds succesvol te laten verlopen in Chromatic.
+- Updated dependencies [f4a37da]
+- Updated dependencies [f8f4bab]
+- Updated dependencies [9916255]
+- Updated dependencies [790ead0]
+  - @rijkshuisstijl-community/components-css@3.0.0
+
+## 1.3.4
+
+### Patch Changes
+
+- Updated dependencies [280d76c]
+- Updated dependencies [c7034fd]
+  - @rijkshuisstijl-community/components-css@2.0.0
+
+## 1.3.3
+
+### Patch Changes
+
+- 99dd213: Package Updates
+- Updated dependencies [99dd213]
+- Updated dependencies [093b285]
+- Updated dependencies [893b3e3]
+- Updated dependencies [8395a93]
+  - @rijkshuisstijl-community/components-css@1.2.0
+
 ## 1.3.2
 
 ### Patch Changes

@@ -1,0 +1,121 @@
+@use "mixin";
+
+.rhc-card-as-link {
+  @include mixin.rhc-card-as-link;
+  .utrecht-img:not(img[width]) {
+    block-size: 100%;
+    inline-size: 100%;
+  }
+}
+
+.rhc-card-as-link__button {
+  @include mixin.rhc-card-as-link__button;
+}
+
+.rhc-card-as-link div:empty {
+  @include mixin.rhc-card-as-link__empty-element;
+}
+
+.rhc-card-as-link--default {
+  @include mixin.rhc-card-as-link--default;
+}
+
+.rhc-card-as-link--full-bleed {
+  @include mixin.rhc-card-as-link--full-bleed;
+}
+
+.rhc-card-as-link--horizontal {
+  @include mixin.rhc-card-as-link--horizontal;
+}
+
+.rhc-card-as-link__footer {
+  @include mixin.rhc-card-as-link__footer;
+}
+
+.rhc-card-as-link__image-container {
+  @include mixin.rhc-card-as-link__image-container;
+}
+
+.rhc-card-as-link__image {
+  @include mixin.rhc-card-as-link__image;
+}
+
+.rhc-card-as-link__heading {
+  @include mixin.rhc-card-as-link__heading;
+}
+
+.rhc-card-as-link__icon {
+  @include mixin.rhc-card-as-link__icon;
+}
+
+.rhc-card-as-link__metadata {
+  @include mixin.rhc-card-as-link__metadata;
+}
+
+.rhc-card-as-link__content {
+  @include mixin.rhc-card-as-link__content;
+}
+
+.rhc-card-as-link--horizontal .rhc-card-as-link__content {
+  @include mixin.rhc-card-as-link--horizontal__content;
+}
+
+.rhc-card-as-link--horizontal .rhc-card-as-link__heading {
+  @include mixin.rhc-card-as-link--horizontal__heading;
+}
+
+.rhc-card-as-link--horizontal .rhc-card-as-link__image {
+  @include mixin.rhc-card-as-link--horizontal__image;
+}
+
+.rhc-card-as-link--full-bleed .rhc-card-as-link__footer {
+  @include mixin.rhc-card-as-link--full-bleed__footer;
+}
+
+.rhc-card-as-link--full-bleed .rhc-card-as-link__image {
+  @include mixin.rhc-card-as-link--full-bleed__image;
+}
+
+.rhc-card-as-link__link {
+  @include mixin.rhc-card-as-link__link;
+}
+
+.rhc-card-as-link__anchor {
+  @include mixin.rhc-card-as-link__anchor;
+}
+
+.rhc-card-as-link:active {
+  @include mixin.rhc-card-as-link--active;
+}
+
+.rhc-card-as-link:active .rhc-card-as-link__heading {
+  @include mixin.rhc-card-as-link__heading--active;
+}
+
+.rhc-card-as-link:active .rhc-card-as-link__link {
+  @include mixin.rhc-card-as-link__link--active;
+}
+
+.rhc-card-as-link--default:focus {
+  @include mixin.rhc-card-as-link--default--focus;
+}
+
+.rhc-card-as-link:focus .rhc-card-as-link__heading {
+  @include mixin.rhc-card-as-link__heading--active;
+}
+
+.rhc-card-as-link:focus .rhc-card-as-link__link {
+  @include mixin.rhc-card-as-link__link--focus;
+}
+
+.rhc-card-as-link--default:hover {
+  @include mixin.rhc-card-as-link--default--hover;
+}
+
+.rhc-card-as-link:hover .rhc-card-as-link__heading {
+  @include mixin.rhc-card-as-link__heading--active;
+}
+
+.rhc-card-as-link:hover .rhc-card-as-link__link {
+  @include mixin.rhc-card-as-link__link--hover;
+}

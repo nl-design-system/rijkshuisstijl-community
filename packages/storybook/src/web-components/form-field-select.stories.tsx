@@ -1,8 +1,8 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { FormFieldSelectWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-select.md?raw';
+import readme from '../components-react/form-field-select.md?raw';
 
 FormFieldSelectWebComponent.define();
 
@@ -35,7 +35,7 @@ const SelectWrapper = ({
 };
 
 const meta = {
-  title: 'Web Components/Form Field/Form Field Select',
+  title: 'Form Field/Form Field Select',
   id: 'rhc-form-field-select-web',
   component: SelectWrapper,
   argTypes: {
@@ -132,8 +132,10 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    // TODO: add Figma and NL DesignSystem links
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/FormFieldSelect.tsx',
   },
 } as Meta<typeof FormFieldSelectWebComponent>;
 

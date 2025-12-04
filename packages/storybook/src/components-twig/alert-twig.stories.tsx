@@ -1,13 +1,13 @@
 /* @license CC0-1.0 */
 
 import TwigAlert from '@rijkshuisstijl-community/components-twig/src/Alert.twig';
-import type { Meta, StoryObj } from '@storybook/react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import DrupalAttribute from 'drupal-attribute';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/alert.md?raw';
+import readme from '../components-react/alert.md?raw';
 
 const meta = {
-  title: 'Twig Components/Alert',
+  title: 'Alert',
   id: 'rhc-twig-alert',
   component: TwigAlert,
   argTypes: {
@@ -19,38 +19,20 @@ const meta = {
         category: 'Property',
       },
     },
-    heading: {
-      description: 'Alert heading - used in default webcomponent slot',
+    children: {
+      description: 'Alert content - heading and paragraph content',
       type: {
         name: 'string',
       },
       table: {
-        category: 'Demo',
-      },
-    },
-    headingLevel: {
-      description: 'Alert heading level',
-      control: { type: 'select' },
-      options: [1, 2, 3, 4, 5],
-      table: {
-        category: 'Demo',
-      },
-    },
-    textContent: {
-      description: 'Alert content - used in default webcomponent slot',
-      type: {
-        name: 'string',
-      },
-      table: {
-        category: 'Demo',
+        category: 'Property',
       },
     },
   },
   args: {
     type: 'info',
-    heading: 'Heading',
-    headingLevel: 3,
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children:
+      '<h3 class="nl-heading rhc-heading nl-heading--level-5">Heading</h3><p class="nl-paragraph">Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</p>',
   },
   parameters: {
     status: {
@@ -64,6 +46,8 @@ const meta = {
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1195-4201&t=n1djYpmvDCKmAEUi-0',
     nldesignsystem: 'https://www.nldesignsystem.nl/alert/',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/src/Alert.twig',
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof TwigAlert>;
@@ -73,8 +57,8 @@ export default meta;
 export const TwigInformative: StoryObj<typeof meta> = {
   args: {
     type: 'info',
-    heading: 'Heading',
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children:
+      '<h3 class="nl-heading rhc-heading nl-heading--level-5">Heading</h3><p class="nl-paragraph">Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</p>',
     attributes: new DrupalAttribute(),
   },
   name: 'Informative',
@@ -83,8 +67,8 @@ export const TwigInformative: StoryObj<typeof meta> = {
 export const TwigNegative: StoryObj<typeof meta> = {
   args: {
     type: 'error',
-    heading: 'Heading',
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children:
+      '<h3 class="nl-heading rhc-heading nl-heading--level-5">Heading</h3><p class="nl-paragraph">Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</p>',
     attributes: new DrupalAttribute(),
   },
   name: 'Negative',
@@ -93,8 +77,8 @@ export const TwigNegative: StoryObj<typeof meta> = {
 export const TwigPositive: StoryObj<typeof meta> = {
   args: {
     type: 'ok',
-    heading: 'Heading',
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children:
+      '<h3 class="nl-heading rhc-heading nl-heading--level-5">Heading</h3><p class="nl-paragraph">Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</p>',
     attributes: new DrupalAttribute(),
   },
   name: 'Positive',
@@ -103,8 +87,8 @@ export const TwigPositive: StoryObj<typeof meta> = {
 export const TwigWarning: StoryObj<typeof meta> = {
   args: {
     type: 'warning',
-    heading: 'Heading',
-    textContent: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children:
+      '<h3 class="nl-heading rhc-heading nl-heading--level-5">Heading</h3><p class="nl-paragraph">Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</p>',
     attributes: new DrupalAttribute(),
   },
   name: 'Warning',

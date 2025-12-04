@@ -1,8 +1,8 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { FormFieldTextareaWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-textarea.md?raw';
+import readme from '../components-react/form-field-textarea.md?raw';
 
 FormFieldTextareaWebComponent.define();
 
@@ -33,7 +33,7 @@ const TextareaWrapper = ({
 };
 
 const meta = {
-  title: 'Web Components/Form Field/Form Field Textarea',
+  title: 'Form Field/Form Field Textarea',
   id: 'rhc-form-field-textarea-web',
   component: TextareaWrapper,
   argTypes: {
@@ -206,9 +206,11 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    // TODO: add Figma and NL DesignSystem links
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/FormFieldTextarea.tsx',
   },
 } as Meta<typeof FormFieldTextareaWebComponent>;
 

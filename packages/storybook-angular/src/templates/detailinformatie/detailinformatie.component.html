@@ -1,0 +1,103 @@
+<page-layout-component>
+  <div class="rhc-container">
+    <rhc-action-group direction="row">
+      <button rhc-button appearance="secondary-action">
+        <rhc-icon>
+          <i-tabler name="arrow-narrow-left"></i-tabler>
+        </rhc-icon>
+        Terug
+      </button>
+      <button rhc-button appearance="secondary-action">
+        <rhc-icon>
+          <i-tabler name="camera"></i-tabler>
+        </rhc-icon>
+        Foto bekijken
+      </button>
+      <button rhc-button appearance="secondary-action">
+        <rhc-icon><i-tabler name="briefcase"></i-tabler></rhc-icon>
+        Beroep
+      </button>
+    </rhc-action-group>
+
+    <rhc-heading [level]="1">Detailinformatie</rhc-heading>
+    <rhc-heading [level]="2">Wilt u de boete betalen?</rhc-heading>
+    <rhc-paragraph>
+      Omdat de boete op naam staat van een bedrijf, kunt u in het Digitaal Loket niet betalen. U kunt wel zelf het
+      openstaand bedrag overmaken. Bent u een leaserijder? Lees dan in de brief van uw leasemaatschappij of u de boete
+      via de leasemaatschappij of rechtstreeks aan het CJIB moet betalen.
+    </rhc-paragraph>
+
+    <div class="rhc-gray-rectangle">
+      <div>
+        <rhc-heading [level]="3" [appearanceLevel]="4">Algemeen</rhc-heading>
+        <rhc-data-summary appearance="Row">
+          <div rhc-data-summary-item key="CJIB-nummer" value="1234567890"></div>
+          <div rhc-data-summary-item key="Verzenddatum" value="11 oktober 2024"></div>
+        </rhc-data-summary>
+      </div>
+
+      <div>
+        <rhc-heading [level]="3" [appearanceLevel]="4">Informatie over de boete</rhc-heading>
+        <rhc-data-summary appearance="Row">
+          <div
+            rhc-data-summary-item
+            key="Omschrijving"
+            value="4 km per uur harder rijden dan mag op een autosnelweg buiten de bebouwde kom (verkeersbord A1)"
+          ></div>
+          <div rhc-data-summary-item key="Feitcode" value="VM004"></div>
+          <div rhc-data-summary-item key="Kenteken" value="ABCD1234"></div>
+          <div rhc-data-summary-item key="Gemeente" value="Medemblik"></div>
+          <div rhc-data-summary-item key="Plaats" value="Wognum"></div>
+          <div rhc-data-summary-item key="Locatie" value="A7 Re hmp 35.85. Borden bij 34.8"></div>
+          <div rhc-data-summary-item key="Datum" value=" 10 september 2024"></div>
+          <div rhc-data-summary-item key="Tijd" value="20:41"></div>
+          <div rhc-data-summary-item key="Fotofilmnummer" value="1234567890"></div>
+          <div rhc-data-summary-item key="Opsporingsinstantie" value="Politie / DLOC / Verkeershandhaving"></div>
+          <div rhc-data-summary-item key="Zaaknummer opsporingsinstantie" value="ABC123"></div>
+          <div rhc-data-summary-item key="Verbalisantnummer" value="1234567890"></div>
+        </rhc-data-summary>
+      </div>
+
+      <div>
+        <rhc-heading [level]="3" [appearanceLevel]="4">Hoeveelheid</rhc-heading>
+        <rhc-data-summary appearance="Row">
+          <div rhc-data-summary-item key="Toegestaan" value="100 km/h"></div>
+          <div rhc-data-summary-item key="Gemeten" value="108 km/h"></div>
+          <div rhc-data-summary-item key="Gecorrigeerd" value="104 km/h"></div>
+        </rhc-data-summary>
+      </div>
+
+      <div>
+        <rhc-heading [level]="3" [appearanceLevel]="4">Bedragen</rhc-heading>
+        <rhc-data-summary appearance="Row">
+          <div rhc-data-summary-item key="Bedrag boete" value="€26,00"></div>
+          <div rhc-data-summary-item key="Administratiekosten" value="€9,00"></div>
+          <div rhc-data-summary-item key="Betaald" value="€35,00"></div>
+          <div rhc-data-summary-item key="Te betalen" value="€0,00"></div>
+        </rhc-data-summary>
+      </div>
+
+      <div>
+        <rhc-heading [level]="3" [appearanceLevel]="4">Betaalinformatie</rhc-heading>
+        <rhc-data-summary appearance="Row">
+          <div rhc-data-summary-item key="IBAN" value="123456789ABCD"></div>
+          <div rhc-data-summary-item key="Betalingskenmerk" value="Dit is een betalingskenmerk"></div>
+        </rhc-data-summary>
+      </div>
+
+      <div>
+        <rhc-heading [level]="3" [appearanceLevel]="4">Aanvullende documenten</rhc-heading>
+        <rhc-paragraph>
+          U kunt hieronder verschillende aanvullende documenten bekijken die horen bij uw overtreding, zoals een
+          ijkrapport of een certificaat van de opsporingsambtenaar.
+        </rhc-paragraph>
+        <rhc-link href="#" class="rhc-download-link">
+          <rhc-icon>
+            <i-tabler name="download"></i-tabler>
+          </rhc-icon>
+          cjib.nl/documenten
+        </rhc-link>
+      </div>
+    </div>
+  </div>
+</page-layout-component>

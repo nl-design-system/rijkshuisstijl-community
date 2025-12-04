@@ -1,16 +1,17 @@
-import { getIconSet, registerIconSet } from '@rijkshuisstijl-community/components-react';
-import { iconSet } from '@rijkshuisstijl-community/components-react/src/icon-sets/flag-icons/icon-set';
+import { defaultIconSet, flagIconSet, getIconSet, registerIconSet } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { IconWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/web-components';
+import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { IconBrandX } from '@tabler/icons-react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/icon.md?raw';
+import readme from '../components-react/icon.md?raw';
 
-registerIconSet(iconSet);
+registerIconSet(defaultIconSet);
+registerIconSet(flagIconSet);
+
 IconWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Icon',
+  title: 'Icon',
   id: 'rhc-icon-web',
   component: 'rhc-icon',
   argTypes: {
@@ -30,9 +31,11 @@ const meta = {
     status: {
       type: 'STABLE',
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    // TODO: add Figma and NL DesignSystem links
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met extra functionaliteit voor het gebruiken van de iconenset van de Rijkshuisstijl Community.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/Icon.tsx',
   },
 } as Meta<typeof IconWebComponent>;
 

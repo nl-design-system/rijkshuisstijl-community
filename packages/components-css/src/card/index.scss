@@ -8,44 +8,16 @@
   }
 }
 
-.rhc-card__button {
-  @include mixin.rhc-card__button;
-}
-
-.rhc-card div:empty {
-  @include mixin.rhc-card__empty-element;
-}
-
 .rhc-card--default {
   @include mixin.rhc-card--default;
-}
-
-.rhc-card--full-bleed {
-  @include mixin.rhc-card--full-bleed;
-}
-
-.rhc-card--horizontal {
-  @include mixin.rhc-card--horizontal;
-}
-
-.rhc-card__footer {
-  @include mixin.rhc-card__content;
-}
-
-.rhc-card__image-container {
-  @include mixin.rhc-card__image-container;
-}
-
-.rhc-card__image {
-  @include mixin.rhc-card__image;
 }
 
 .rhc-card__heading {
   @include mixin.rhc-card__heading;
 }
 
-.rhc-card__icon {
-  @include mixin.rhc-card__icon;
+.rhc-card__subheading {
+  @include mixin.rhc-card__subheading;
 }
 
 .rhc-card__metadata {
@@ -56,66 +28,30 @@
   @include mixin.rhc-card__content;
 }
 
-.rhc-card--horizontal .rhc-card__content {
-  @include mixin.rhc-card--horizontal__content;
-}
-
-.rhc-card--horizontal .rhc-card__heading {
-  @include mixin.rhc-card--horizontal__heading;
-}
-
-.rhc-card--horizontal .rhc-card__image {
-  @include mixin.rhc-card--horizontal__image;
-}
-
-.rhc-card--full-bleed .rhc-card__footer {
-  @include mixin.rhc-card--full-bleed__footer;
-}
-
-.rhc-card--full-bleed .rhc-card__image {
-  @include mixin.rhc-card--full-bleed__image;
-}
-
 .rhc-card__link {
   @include mixin.rhc-card__link;
 }
 
-.rhc-card__anchor {
-  @include mixin.rhc-card__anchor;
-}
-
-.rhc-card:active {
-  @include mixin.rhc-card--active;
-}
-
 .rhc-card:active .rhc-card__heading {
+  @include mixin.rhc-card__heading--active;
+}
+.rhc-card:focus .rhc-card__heading {
+  @include mixin.rhc-card__heading--active;
+}
+.rhc-card:hover .rhc-card__heading {
   @include mixin.rhc-card__heading--active;
 }
 
 .rhc-card:active .rhc-card__link {
   @include mixin.rhc-card__link--active;
 }
-
-.rhc-card--default:focus {
-  @include mixin.rhc-card--default--focus;
-}
-
-.rhc-card:focus .rhc-card__heading {
-  @include mixin.rhc-card__heading--active;
-}
-
 .rhc-card:focus .rhc-card__link {
   @include mixin.rhc-card__link--focus;
 }
-
-.rhc-card--default:hover {
-  @include mixin.rhc-card--default--hover;
-}
-
-.rhc-card:hover .rhc-card__heading {
-  @include mixin.rhc-card__heading--active;
-}
-
 .rhc-card:hover .rhc-card__link {
   @include mixin.rhc-card__link--hover;
+}
+
+.rhc-card__footer {
+  @include mixin.rhc-card__content;
 }

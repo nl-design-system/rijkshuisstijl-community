@@ -8,4 +8,8 @@ import { Component, Input } from '@angular/core';
 })
 export class LinkComponent {
   @Input({ required: true }) href!: string;
+  @Input() inline?: boolean;
+  @Input() target?: '_self' | '_blank' | '_parent' | '_top' | '_unfencedTop' = '_self';
+
+  computedClasses = () => `nl-link rhc-link ${this.inline ? 'rhc-link--inline' : ''}`;
 }

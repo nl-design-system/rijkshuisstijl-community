@@ -1,0 +1,14 @@
+<div class="rhc-nav-bar__container">
+  <nav class="rhc-nav-bar">
+    <ul class="rhc-nav-bar__list">
+      <ng-content select="[rhc-navbar-item][rhcHeadingItem]"></ng-content>
+      <ng-content select="[rhc-navbar-item]:not([rhcEndItem])"></ng-content>
+    </ul>
+    @if (showEndItems) {
+      <ul class="rhc-nav-bar__list rhc-nav-bar__list--end">
+        <ng-content select="[rhc-navbar-item][rhcEndItem]"></ng-content>
+      </ul>
+    }
+    <ng-content></ng-content>
+  </nav>
+</div>

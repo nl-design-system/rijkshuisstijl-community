@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import IconSet from './flag-icon-set-page';
 import readme from './flag-icon-set.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl Community/Icon Sets/Flag Icon Set',
+  title: 'Icon Sets/Flag Icon Set',
   id: 'rhc-templates-flag-icon-set',
   component: IconSet,
   parameters: {
@@ -16,7 +16,6 @@ const meta = {
     status: {
       type: 'UNSTABLE',
     },
-    isPage: true,
   },
 } satisfies Meta<typeof IconSet>;
 

@@ -1,0 +1,31 @@
+/**
+Om ruimte tussen alle onderdelen van de template toe te voegen.
+ */
+.rhc-container > * {
+  display: block;
+  margin-block-end: var(--rhc-space-200);
+}
+
+/**
+Om de template er iets meer uit te laten zien zoals de huidige situatie van het CJIB (waar deze template op gebaseerd is).
+ */
+.rhc-gray-rectangle {
+  background-color: #f1f1f1;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+}
+
+/**
+Om ruimte toe te voegen tussen alle data-summaries.
+ */
+.rhc-gray-rectangle > div:not(:last-child) {
+  margin-block-end: 4rem;
+}
+
+/**
+Om ruimte toe te voegen boven de link.
+ */
+.rhc-download-link {
+  display: block;
+  margin-block-start: 1rem;
+}

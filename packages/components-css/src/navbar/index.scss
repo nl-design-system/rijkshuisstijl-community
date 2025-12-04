@@ -1,6 +1,9 @@
 .rhc-nav-bar__container {
   align-items: center;
   background-color: var(--rhc-nav-bar-background-color);
+  border-block-end-color: var(--rhc-nav-bar-border-color);
+  border-block-end-style: solid;
+  border-block-end-width: var(--rhc-nav-bar-border-block-end-width);
   display: flex;
   inline-size: var(--rhc-nav-bar-container-inline-size);
   justify-content: center;
@@ -9,12 +12,11 @@
 .rhc-nav-bar {
   align-items: center;
   background-color: var(--rhc-nav-bar-background-color);
-  border-block-end-width: var(--rhc-nav-bar-border-block-end-width);
   color: var(--rhc-nav-bar-color);
   column-gap: var(--rhc-nav-bar-content-column-gap);
   display: flex;
   flex: 1;
-  font-family: var(--rhc-font-family-primary, inherit);
+  font-family: var(--rhc-text-font-family-default, inherit);
   justify-content: space-between;
   max-inline-size: var(--rhc-nav-bar-max-inline-size);
   row-gap: var(--rhc-nav-bar-content-row-gap);
@@ -43,6 +45,7 @@
   --utrecht-link-visited-color: var(--rhc-nav-bar-color);
   --nl-link-color: var(--rhc-nav-bar-color);
 
+  font-size: var(--rhc-nav-bar-link-font-size);
   padding-block-end: var(--rhc-nav-bar-link-padding-block-end);
   padding-block-start: var(--rhc-nav-bar-link-padding-block-start);
   padding-inline-end: var(--rhc-nav-bar-link-padding-inline-end);

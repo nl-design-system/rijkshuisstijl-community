@@ -1,16 +1,17 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { FormFieldCheckboxOptionWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-checkbox-option.md?raw';
+import readme from '../components-react/form-field-checkbox-option.md?raw';
 
 FormFieldCheckboxOptionWebComponent.define();
 
-const CheckboxWrapper = ({ label, description, invalid, errorMessage, disabled, ...restProps }: any) => {
+const CheckboxWrapper = ({ label, description, invalid, inputInvalid, errorMessage, disabled, ...restProps }: any) => {
   return createElement('rhc-form-checkbox-option', {
     label,
     description,
     invalid: invalid?.toString(),
+    inputInvalid: inputInvalid?.toString(),
     disabled: disabled?.toString(),
     errorMessage,
     ...restProps,
@@ -18,7 +19,7 @@ const CheckboxWrapper = ({ label, description, invalid, errorMessage, disabled, 
 };
 
 const meta = {
-  title: 'Web Components/Form Field/Form Field Checkbox Option',
+  title: 'Form Field/Form Field Checkbox Option',
   id: 'rhc-form-field-checkbox-option-web',
   component: CheckboxWrapper,
   argTypes: {
@@ -39,6 +40,14 @@ const meta = {
       table: {
         category: 'API',
         defaultValue: { summary: '' },
+      },
+    },
+    inputInvalid: {
+      control: 'boolean',
+      description: 'Marks the input element as invalid',
+      table: {
+        category: 'API',
+        defaultValue: { summary: 'false' },
       },
     },
     invalid: {
@@ -99,11 +108,13 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add GitHub issue and NL DesignSystem links
+    // TODO: add NL DesignSystem link
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1031-2917&node-type=canvas&t=HiNKOQhf1hQtLZrr-0',
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht (daar heet het FormFieldCheckbox), met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/FormFieldCheckboxOption.tsx',
   },
 } as Meta<typeof FormFieldCheckboxOptionWebComponent>;
 
@@ -126,6 +137,13 @@ export const Invalid = {
   args: {
     label: 'Checkbox',
     invalid: true,
+  },
+} as StoryObj<typeof meta>;
+
+export const InputInvalid = {
+  args: {
+    label: 'Checkbox',
+    inputInvalid: true,
   },
 } as StoryObj<typeof meta>;
 

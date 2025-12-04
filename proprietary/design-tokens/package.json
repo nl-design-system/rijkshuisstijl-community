@@ -1,6 +1,6 @@
 {
   "name": "@rijkshuisstijl-community/design-tokens",
-  "version": "1.2.0",
+  "version": "10.0.0",
   "author": "Community for NL Design System",
   "description": "Example design tokens",
   "license": "SEE LICENSE IN LICENSE.md",
@@ -18,18 +18,19 @@
     "directory": "proprietary/design-tokens"
   },
   "scripts": {
-    "clean": "rimraf dist/* src/generated/*",
+    "clean": "rimraf dist/ src/generated/",
     "build": "npm-run-all clean build:figma-tokens build:style-dictionary",
     "build:figma-tokens": "node ./token-transformer.mjs",
     "build:style-dictionary": "node build.mjs",
     "watch": "npm-run-all watch:**",
-    "watch:style-dictionary": "chokidar --follow-symlinks --command 'npm-run-all clean build:figma-tokens build:style-dictionary' 'src/**/*.tokens.json'"
+    "watch:style-dictionary": "chokidar 'src/**/*.tokens.json' 'figma/**/*.tokens.json' --follow-symlinks --command 'npm-run-all build:figma-tokens build:style-dictionary' --ignore '/src/generated/'"
   },
   "devDependencies": {
+    "@tokens-studio/sd-transforms": "2.0.1",
     "chokidar-cli": "3.0.0",
     "npm-run-all": "4.1.5",
     "rimraf": "6.0.1",
-    "style-dictionary": "3.9.2",
+    "style-dictionary": "5.0.4",
     "token-transformer": "0.0.33"
   }
 }

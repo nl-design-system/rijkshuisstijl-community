@@ -1,54 +1,57 @@
-@import "./details/index.css";
-
-/* global CSS here */
 body {
-  display: flex;
-  flex-direction: column;
+  /* TODO: This temporary solution to reset margin on body should be native in the component library CSS */
   margin-block: 0;
   margin-inline: 0;
-  padding-block: 0;
-  padding-inline: 0;
 }
 
-h1 {
-  word-break: break-word;
+/**
+ * Temporary solution to set Utrecht page body background color,
+ * as we currently do not use it elsewhere in the component library
+ * and thus don't have the design tokens implemented.
+ * TODO: Probably implement it then? Tokens for the background color and the text color.
+ */
+.utrecht-page-body.rhc-templates-page {
+  --utrecht-page-body-background-color: #f2f4f6;
 }
 
-.rhc-templates-page {
-  background-color: #f2f4f6;
+.utrecht-page-body.rhc-templates-page.rhc-templates-background-color-white {
+  --utrecht-page-body-background-color: var(--rhc-color-wit);
 }
 
-.rhc-templates-unstarted {
-  border: 2px dashed red;
-}
-
-.rhc-templates-unfinished {
-  border: 2px dashed yellow;
-}
-
-.rhc-templates-explanation {
-  color: red;
-}
-.rhc-templates-dutch-map {
-  --utrecht-icon-size: 48px;
-}
-
-.rhc-templates-background-color-white {
-  background-color: var(--rhc-color-wit);
-}
-
-.rhc-templates-background-color-lint-blauw {
-  background-color: var(--rhc-color-lintblauw-500);
-}
-
+/**
+ * Temporary solution for spacings,
+ * already pre-existing in templates.
+ * This should have a more global solution in the component library.
+ * Already came up a couple of times in the past, TODO: discuss.
+ */
 .rhc-templates-spacing-2 {
   margin-block-end: var(--rhc-space-400);
 }
+
+.rhc-templates-spacing-1 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-space-200);
+}
+
+/**
+ * Temporary solution for layout,
+ * already pre-existing in templates.
+ * This should have a more global solution in the component library.
+ * Already came up a couple of times in the past, TODO: discuss.
+ */
 
 .rhc-templates-main-content {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+.rhc-page-main-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  row-gap: var(--rhc-space-700);
 }
 
 .rhc-templates-page-content {
@@ -57,7 +60,10 @@ h1 {
   --utrecht-page-padding-inline-end: var(--rhc-space-700);
   --utrecht-page-padding-inline-start: var(--rhc-space-700);
 
-  box-sizing: border-box;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
   inline-size: 100%;
   margin-block-end: 80px;
   margin-block-start: 80px;
@@ -76,74 +82,107 @@ h1 {
   }
 }
 
-.rhc-templates-page-container {
-  --utrecht-page-content-padding-block-end: var(--rhc-space-600);
-  --utrecht-page-content-padding-block-start: var(--rhc-space-600);
-  --utrecht-page-padding-inline-end: var(--rhc-space-700);
-  --utrecht-page-padding-inline-start: var(--rhc-space-700);
+/**
+ * Mimic the non-existing Card Group
+ * which is a responsive grid for cards.
+ * Where the number of columns is flexible.
+ */
+.rhc-card-as-link-group {
+  /* Overwrites the fixed sizing of the cards */
+  --rhc-card-as-link-horizontal-max-block-size: unset;
+  --rhc-card-as-link-inline-size: 100%;
 
-  column-gap: var(--rhc-space-700);
-  display: flex;
-  justify-self: center;
-  margin-inline: auto;
-  max-inline-size: 1100px;
-  @media (width <= 780px) {
-    --utrecht-page-content-padding-block-end: var(--rhc-space-400);
-    --utrecht-page-content-padding-block-start: var(--rhc-space-400);
-    --utrecht-page-padding-inline-end: var(--rhc-space-200);
-    --utrecht-page-padding-inline-start: var(--rhc-space-200);
+  /* Use the same gap as the column layout */
+  --rhc-card-group-column-gap: var(--utrecht-column-layout-gap);
+
+  display: grid;
+  gap: var(--rhc-card-group-column-gap, 1em);
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+@media (width > 768px) {
+  .rhc-card-as-link-group {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-.rhc-page-header {
-  --utrecht-page-padding-inline-start: var(--rhc-space-0);
-  --utrecht-page-padding-inline-end: var(--rhc-space-0);
-}
-
-.rhc-templates-card-container {
-  column-gap: var(--rhc-space-300);
-  display: flex;
-  margin-block-end: var(--rhc-space-400);
-  margin-block-start: var(--rhc-space-300);
-  row-gap: var(--rhc-space-300);
-  @media (width <= 780px) {
-    flex-direction: column;
+@media (width > 1024px) {
+  .rhc-card-as-link-group {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-.rhc-side-nav {
-  min-inline-size: 230px;
-  @media (width <= 780px) {
-    --rhc-sidenav-display: none;
-  }
+/**
+ * Temporary fixes or overrides for the card component
+ * based on actual usage.
+ * TODO: Discuss with design for alignement and proper solutions.
+ */
+.rhc-card-as-link--full-bleed {
+  z-index: 1;
 }
 
-.rhc-page-main-content {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  row-gap: var(--rhc-space-700);
+.rhc-card-as-link-no-link:hover {
+  background-color: white !important;
 }
 
-@media (width < 780px) {
-  .rhc-page-footer {
-    --utrecht-page-footer-padding-block-start: var(--rhc-space-400);
-    --utrecht-page-footer-padding-block-end: var(--rhc-space-400);
-    --utrecht-page-footer-padding-inline-start: var(--rhc-space-200);
-    --utrecht-page-footer-padding-inline-end: var(--rhc-space-200);
-  }
+.rhc-card-as-link.rhc-card-as-link--full-bleed .rhc-card-as-link__heading h3,
+.rhc-card-as-link.rhc-card-as-link--horizontal .rhc-card-as-link__heading h3 {
+  color: inherit;
 }
 
-.rhc-page-footer__content {
-  --rhc-page-footer-content-padding-inline-start: var(--rhc-space-0);
-  --rhc-page-footer-content-padding-inline-end: var(--rhc-space-0);
+.rhc-card-as-link.rhc-card-as-link--full-bleed .rhc-card-as-link__description p {
+  color: inherit;
 }
 
+.rhc-card-as-link.rhc-card-as-link--full-bleed:has(a:focus-visible),
+.rhc-card-as-link.rhc-card-as-link--horizontal:has(a:focus-visible) {
+  outline: -webkit-focus-ring-color outset 3px;
+  outline-offset: 2px;
+}
+
+.rhc-card-as-link:not(:has(a)):hover .rhc-card-as-link__heading {
+  text-decoration: none !important;
+}
+
+/**
+ * Temporary solution as Utrecht Figure on its own doesn't unset the user agent stylesheet of margin-inline 40px.
+ * TODO: Discuss intended solution with team.
+ */
 .utrecht-figure {
   margin-inline-end: var(--rhc-space-0);
   margin-inline-start: var(--rhc-space-0);
 }
+.utrecht-page-content.rhc-templates-page-content {
+  margin-block-end: var(--rhc-space-0);
+  margin-block-start: var(--rhc-space-0);
+}
 
-.rhc-nav-bar__list {
-  flex-wrap: wrap;
+/**
+ * Temporary solution for not causing content jump in Skip Link.
+ * TODO: Discuss intended solution with team; what's the intent of overriding candidate behavior here?
+ */
+.rhc-skip-link--focus,
+.rhc-skip-link:focus {
+  position: fixed !important;
+}
+
+/**
+ * Implementation copied from Utrecht focus ring
+ * https://github.com/nl-design-system/utrecht/blob/main/components/focus-ring/src/_mixin.scss
+ */
+:focus-visible {
+  /* - The browser default focus ring should apply when these CSS custom properties are not set.
+   * - Make the `box-shadow` value available, so components that have their own `box-shadow`
+   *   can combine it with the focus ring box shadow.
+   */
+  --_utrecht-focus-ring-box-shadow: 0 0 0 var(--utrecht-focus-outline-width, 0)
+    var(--utrecht-focus-inverse-outline-color, transparent);
+
+  box-shadow: var(--_utrecht-focus-ring-box-shadow);
+  outline-color: var(--utrecht-focus-outline-color, revert);
+  outline-offset: var(--utrecht-focus-outline-offset, revert);
+  outline-style: var(--utrecht-focus-outline-style, revert);
+  outline-width: var(--utrecht-focus-outline-width, revert);
+  z-index: 1;
 }

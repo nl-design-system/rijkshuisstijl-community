@@ -1,0 +1,46 @@
+/* stylelint-disable property-disallowed-list */
+
+.rhc-page-body-container {
+  display: flex;
+  justify-content: center;
+}
+
+.rhc-page-body-children {
+  max-width: 72rem;
+  padding: 2rem;
+  width: 100%;
+}
+
+/**
+* Temporary demo solution for acceptably responsive nav bar.
+* TODO: Discuss responsive design with design team.
+*/
+/* stylelint-disable-next-line */
+:host ::ng-deep .rhc-nav-bar {
+  flex-wrap: wrap;
+}
+
+/**
+* Temporary demo solution for acceptably responsive nav bar.
+* TODO: Discuss responsive design with design team.
+*/
+/* stylelint-disable-next-line */
+:host ::ng-deep .rhc-nav-bar .rhc-nav-bar__list {
+  flex-wrap: wrap;
+}
+
+@media (width <= 780px) {
+  /**
+  * Temporary demo solution for acceptably responsive nav bar.
+  * TODO: Discuss responsive design with design team.
+  */
+  /* stylelint-disable-next-line */
+  :host ::ng-deep .rhc-nav-bar .nl-link:any-link {
+    --rhc-nav-bar-link-padding-block-end: 0.5rem;
+    --rhc-nav-bar-link-padding-block-start: 0.5rem;
+    --rhc-nav-bar-link-padding-inline-end: 0.5rem;
+    --rhc-nav-bar-link-padding-inline-start: 0.5rem;
+
+    font-size: var(--rhc-text-font-size-min-md);
+  }
+}

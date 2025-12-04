@@ -17,6 +17,7 @@ export interface NavBarLinkProps {
   id: string;
   label: ReactNode;
   href: string;
+  target?: string;
 }
 
 export interface NavBarItemProps extends NavBarLinkProps, HTMLAttributes<HTMLLIElement> {
@@ -49,6 +50,7 @@ const NavBarItem = ({
   children,
   className,
   href,
+  target,
   label,
   icon,
   subList,
@@ -58,7 +60,7 @@ const NavBarItem = ({
 }: PropsWithChildren<NavBarItemProps>) => {
   return (
     <li className={clsx('rhc-nav-bar__item', className)} ref={ref} {...restProps}>
-      <Link className={clsx('rhc-nav-bar__link', bold && 'rhc-nav-bar__link--bold')} href={href}>
+      <Link className={clsx('rhc-nav-bar__link', bold && 'rhc-nav-bar__link--bold')} href={href} target={target}>
         {icon}
         <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__lable--sr-only')}>{label}</span>
       </Link>
@@ -70,9 +72,11 @@ const NavBarItem = ({
                 {heading}
               </Heading>
               <ul className="rhc-nav-bar__sub-list-section-list">
-                {items.map(({ id, href, label }) => (
+                {items.map(({ id, href, target, label }) => (
                   <li className="rhc-nav-bar__sub-list-section-item" key={id}>
-                    <Link href={href}>{label}</Link>
+                    <Link href={href} target={target}>
+                      {label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -101,14 +105,14 @@ export const NavBar = ({
       <nav className={clsx('rhc-nav-bar', className)} ref={ref} {...restProps}>
         <ul className="rhc-nav-bar__list">
           {headingItem && <NavBarItem className="rhc-nav-bar__heading" {...headingItem} />}
-          {items.map(({ id, href, label, icon, subList }) => (
-            <NavBarItem href={href} icon={icon} id={id} key={id} label={label} subList={subList} />
+          {items.map((item) => (
+            <NavBarItem key={item.id} {...item} />
           ))}
         </ul>
         {endItems && (
           <ul className="rhc-nav-bar__list rhc-nav-bar__list--end">
-            {endItems.map(({ id, href, label, icon, subList }) => (
-              <NavBarItem href={href} icon={icon} id={id} key={id} label={label} subList={subList} />
+            {endItems.map((enditem) => (
+              <NavBarItem key={enditem.id} {...enditem} />
             ))}
           </ul>
         )}
@@ -125,11 +129,11 @@ export const SubNavBar = ({ ref, children, className, columns, ...restProps }: P
     <div className={clsx('rhc-sub-nav-bar', className)} ref={ref} {...restProps}>
       <div className="rhc-sub-nav-bar__content">
         <ColumnLayout>
-          {columns.map((column: NavBarLinkProps[], index: number) => (
-            <div className="rhc-sub-nav-bar__list" key={index}>
+          {columns.map((column: NavBarLinkProps[]) => (
+            <div className="rhc-sub-nav-bar__list" key={column.map((item) => item.id).join('-')}>
               <LinkList>
-                {column.map(({ id, href, label }) => (
-                  <LinkListLink href={href} icon={<Icon icon={'chevron-right'} />} key={id}>
+                {column.map(({ id, href, target, label }) => (
+                  <LinkListLink href={href} icon={<Icon icon={'chevron-right'} />} key={id} target={target}>
                     {label}
                   </LinkListLink>
                 ))}

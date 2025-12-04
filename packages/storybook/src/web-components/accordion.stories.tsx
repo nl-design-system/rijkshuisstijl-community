@@ -1,14 +1,13 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { AccordionWebComponent, AccordionWebComponentAttributes } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/accordion/README.md?raw';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 AccordionWebComponent.define();
 
-const AccordionWrapper = ({ appearance, icon, sections, heading, headingLevel }: AccordionWebComponentAttributes) => {
+const AccordionWrapper = ({ icon, sections, heading, headingLevel }: AccordionWebComponentAttributes) => {
   return createElement('rhc-accordion', {
-    appearance: appearance,
     icon: icon?.toString(),
     sections: JSON.stringify(sections),
     heading: heading,
@@ -17,7 +16,7 @@ const AccordionWrapper = ({ appearance, icon, sections, heading, headingLevel }:
 };
 
 const meta = {
-  title: 'Web Components/Accordion',
+  title: 'Accordion',
   id: 'rhc-accordion-web',
   component: AccordionWrapper,
   argTypes: {
@@ -70,9 +69,11 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
+    // TODO: add Figma and NL DesignSystem links
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/Accordion.tsx',
   },
 } as Meta<AccordionWebComponentAttributes>;
 
@@ -82,18 +83,18 @@ export const Default = {
   args: {
     sections: [
       {
-        label: 'Lorem ipsum 1',
-        body: `Lorem ipsum dolor sit amet.`,
+        label: 'Lorem ipsum standaard',
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         expanded: true,
       },
       {
-        label: 'Lorem ipsum 2',
-        body: `Lorem ipsum dolor sit amet.`,
+        label: 'Hipster lorem ipsum',
+        body: "Humblebrag mixtape sus, cornhole woke mlkshk cardigan twee cronut. Health goth vape adaptogen actually vegan, viral austin kinfolk trust fund paleo PBR&B literally skateboard woke. Echo park ugh fit cupping affogato, lyft asymmetrical portland live-edge franzen you probably haven't heard of them meh VHS chambray. Narwhal fam prism slow-carb yes plz. Fam edison bulb kitsch disrupt deep v big mood, JOMO church-key pop-up chicharrones pork belly glossier. Pinterest freegan swag mumblecore prism.",
         expanded: false,
       },
       {
-        label: 'Lorem ipsum 3',
-        body: `Lorem ipsum dolor sit amet.`,
+        label: 'Nederlandse lorem ipsum',
+        body: 'De volle maan, tragisch dien avond, was reeds vroeg, nog in den laatsten dagschemer opgerezen als een immense, bloedroze bol, vlamde als een zonsondergang laag achter de tamarindeboomen der Lange Laan en steeg, langzaam zich louterende van hare tragische tint, in een vagen hemel op. Een doodsche stilte spande alom als een sluier van zwijgen, of, na de lange middagsiësta, de avondrust zonder overgang van leven begon.',
         expanded: false,
       },
     ],

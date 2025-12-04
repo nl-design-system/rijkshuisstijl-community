@@ -4,14 +4,12 @@
     "baseUrl": ".",
     "types": ["node"],
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
-    "paths": {
-      "@rijkshuisstijl-community/components-angular": ["../components-angular/src/public-api"]
-    },
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "target": "ES2022",
     "useDefineForClassFields": false
   },
   "exclude": ["**/node_modules/*", "src/test.ts", "src/**/*.spec.ts"],
-  "include": ["config/**/*", "config/**/*.ts", "src/**/*"]
+  "include": [".storybook/typings.d.ts", "config/**/*", "config/**/*.ts", "src/**/*"]
 }

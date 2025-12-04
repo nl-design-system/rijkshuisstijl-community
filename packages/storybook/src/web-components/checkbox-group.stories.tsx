@@ -1,17 +1,17 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import {
   CheckboxGroupWebComponent,
   FormFieldCheckboxOptionWebComponent,
 } from '@rijkshuisstijl-community/web-components';
-import { Meta, StoryObj } from '@storybook/web-components';
+import { Meta, StoryObj } from '@storybook/web-components-vite';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/checkbox-group.md?raw';
+import readme from '../components-react/checkbox-group.md?raw';
 
 CheckboxGroupWebComponent.define();
 FormFieldCheckboxOptionWebComponent.define();
 
 const meta = {
-  title: 'Web Components/CheckboxGroup',
+  title: 'Checkbox Group',
   id: 'rhc-checkbox-group-web',
   component: 'rhc-checkbox-group',
   parameters: {
@@ -25,7 +25,8 @@ const meta = {
     },
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=954-2226&node-type=canvas&t=HiNKOQhf1hQtLZrr-0',
-    github: 'https://github.com/nl-design-system/rijkshuisstijl-community/issues/462',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/CheckboxGroup.tsx',
     nldesignsystem: 'https://www.nldesignsystem.nl/checkbox-group/',
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },

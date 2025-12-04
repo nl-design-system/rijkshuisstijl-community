@@ -2,26 +2,167 @@
 
 # Rijkshuisstijl design tokens
 
-_This project is **not** endorsed by the Dutch Ministry of General Affairs._
+_Dit project wordt **niet** gesteund door het Ministerie van Algemene Zaken._
 
-**Applying design elements from this project is strictly prohibited for organisations that are not part of the central Government of The Netherlands.**
+**Het toepassen van design-elementen uit dit project is strikt verboden voor organisaties die geen deel uitmaken van de
+centrale overheid van Nederland.**
 
-This project is part of a community iniative to use [NL Design System](https://nldesignsystem.nl) components for projects that need to adhere to Rijkshuisstijl. Organisations from the central Government of the Netherlands (for example: [Belastingdienst](https://www.belastingdienst.nl/), [DUO](https://www.duo.nl), [Logius](http://logius.nl), [SVB](https://www.svb.nl/)), as well as those who are contracted by them to develop websites and apps, are able to collaborate via this project.
+Dit project maakt deel uit van een samenwerkingsverband om [NL Design System](https://nldesignsystem.nl)-componenten te gebruiken voor projecten die moeten voldoen aan de Rijkshuisstijl. Organisaties van de centrale overheid van
+Nederland (bijvoorbeeld: [Belastingdienst](https://www.belastingdienst.nl/), [DUO](https://www.duo.nl), [Logius](http://logius.nl), [SVB](https://www.svb.nl/))
+en degenen die door hen zijn ingehuurd voor het ontwikkelen van websites en apps, kunnen via dit project samenwerken.
 
-## License
+## Tokens gebruiken in eigen project
 
-This project contains both proprietary and free and open-source software licensed under the [European Union Public License (EUPL) v1.2](LICENSE.md).
+Hieronder vind je instructies hoe je de standaard Rijkshuisstijl-community tokens in je project kan toepassen.
 
-For information about proprietary assets in this repository, please carefully read the [NOTICE file](NOTICE.md).
+1. Installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens).
 
-### Logo and style guide
+   ```bash
+   npm install @rijkshuisstijl-community/design-tokens
 
-Copyright applies to the Rijkshuisstijl logo and Rijkhuisstijl brand identity. Use of logo and brand identity is strictly prohibited for any other use than developing websites and apps for the central Government of The Netherlands.
+   # En als je CSS classes wilt importeren
+   npm install @rijkshuisstijl-community/components-css
+   ```
 
-### Fonts
+   Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.css`-bestand uit de `dist` map van het pakket, en omring het deel van je applicatie waar je het thema wilt toepassen. Het Rijkshuisstijl-thema is bijvoorbeeld: `rhc-theme`.
 
-[Fonts used for the Rijkshuisstijl](https://www.rijkshuisstijl.nl/basiselementen/basiselementen-online/webfonts) are [designed specifcally for the central Government of The Netherlands](https://www.rijkshuisstijl.nl/basiselementen/documenten/verzamelingen-afbeeldingen/2014/06/01/achtergrondartikel-rijkshuisstijl-webfonts) and are not open source. Before applying the web fonts to your project, ensure you have permission from the Rijkshuisstijl. Until you have permission, use fallback fonts instead, such as the system fonts Arial, Verdana or Times New Roman.
+2. Pas het thema toe in je project, hieronder een voorbeeld in HTML
 
-## Permission
+   ```html
+   <!-- Als je het default Rijkshuisstijl community thema wilt gebruiken, gebruik .rhc-theme -->
+   <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css" />
+   <!-- Of als je een eigen thema wilt importeren, gebruik het thema naam als class name -->
+   <link rel="stylesheet" href="@rijkshuisstijl-community/design-tokens/dist/<thema naam>/index.css" />
+   <!-- Mogelijk wil je ook de CSS classes importeren als je Rijkshuijsstijl-community componenten gebruikt -->
+   <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/components-css/dist/index.css" />
 
-When you are developing a website for the central Government of the Netherlands, you request permission by [contacting the Ministry of General Affairs](https://www.rijkshuisstijl.nl/contact).
+   <body class="rhc-theme">
+       <button class="rhc-button">Click Here!</button>
+     </div>
+   </body>
+   ```
+
+## Nieuw thema toevoegen
+
+Er zijn al verschillende bedrijfsthema's in de @rijkshuisstijl-community/design-tokens package waarvoor (gedeeltelijke) support is vanuit de Rijkshuisstijl-community. Hieronder volgt een uitleg hoe nog meer thema's kunnen worden toegevoegd
+
+## Nieuwe thema tokens
+
+1. Voeg de nieuwe tokens toe aan het [design tokens bestand](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/proprietary/design-tokens/figma/figma.tokens.json). Mogelijk is het voor designers handiger om dit direct in Figma te doen. Zie hieronder in hoe je een thema direct in JSON toe kan voegen:
+
+   ```json
+   {
+     // ...
+
+     // Definieer specifieke set tokens die je wilt overschrijven met een duidelijke naam. Voeg indien nodig meerdere overwrites sets toe.
+     "overwrites/primaire kleur/mintgroen": {
+       // Geef aan welke tokens overschreven moeten worden
+       "rhc": {
+         "color": {
+           "primary": {
+             "50": {
+               "value": "{rhc.color.mintgroen.50}",
+               "type": "color"
+             },
+             "100": {
+               "value": "{rhc.color.mintgroen.100}",
+               "type": "color"
+             },
+             "200": {
+               "value": "{rhc.color.mintgroen.200}",
+               "type": "color"
+             },
+             "300": {
+               "value": "{rhc.color.mintgroen.300}",
+               "type": "color"
+             },
+             "400": {
+               "value": "{rhc.color.mintgroen.400}",
+               "type": "color"
+             },
+             "500": {
+               "value": "{rhc.color.mintgroen.500}",
+               "type": "color"
+             },
+             "hover": {
+               "value": "{rhc.color.primary.500}",
+               "type": "color",
+               "$extensions": {
+                 "studio.tokens": {
+                   "modify": {
+                     "type": "darken",
+                     "value": "0.3",
+                     "space": "lch"
+                   }
+                 }
+               }
+             }
+           }
+         }
+       }
+     },
+     // Nog een overwrite
+     "overwrites/border/geen border radius": {
+       "rhc": {
+         "border-radius": {
+           "sm": {
+             "value": "0",
+             "type": "borderRadius"
+           },
+           "md": {
+             "value": "0",
+             "type": "borderRadius"
+           },
+           "lg": {
+             "value": "0",
+             "type": "borderRadius"
+           }
+         }
+       }
+     },
+     // ...
+
+     "$themes": [
+       // ...
+       {
+         "id": "<thema ID>", // Wordt niet gebruikt door een build step, maar wel voor Figma
+         "name": "<thema naam>", // Dit wordt ook de class name voor het thema
+         "$figmaStyleReferences": {},
+         "selectedTokenSets": {
+           // Voeg eerst de sets toe die dit thema support
+           "<token set 1>": "enabled",
+           "<token set 2>": "enabled",
+           "<etcetera...>": "enabled",
+           // Voeg daarna de overwrites toe die je wilt toevoegen aan je thema
+           "overwrites/primaire kleur/mintgroen": "enabled",
+           "overwrites/border/geen border radius": "enabled"
+         }
+       }
+     ]
+   }
+   ```
+
+2. Voeg het nieuwe thema toe in de [storybook preview.tsx](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/storybook/config/preview.tsx)
+
+   ```tsx
+   // ...
+   // Voeg import toe
+   import '@rijkshuisstijl-community/design-tokens/dist/<thema naam>/index.css';
+   // ...
+
+   const preview: Preview = {
+     decorators: [
+       withThemeByClassName({
+         themes: {
+           // Voeg thema toe in storybook thema dropdown
+           '<Thema naam in dropdown>': '<thema naam>',
+           // ...
+         },
+         // ...
+       }),
+       // ...
+     ],
+     // ...
+   };
+   export default preview;
+   ```
