@@ -25,7 +25,7 @@ const LanguageNavigator = () => {
             <ListboxOption
               aria-selected={undefined}
               key={lang}
-              role="listitem"
+              role={undefined}
               selected={name === selectedLanguage}
               onClick={() => {
                 setSelectedLanguage(name);
