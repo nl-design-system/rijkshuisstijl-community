@@ -16,6 +16,7 @@ const TextareaWrapper = ({
   readOnly,
   minLength,
   maxLength,
+  ...restProps
 }: any) => {
   return createElement('rhc-form-textarea', {
     label,
@@ -27,6 +28,7 @@ const TextareaWrapper = ({
     maxlength: maxLength?.toString(),
     disabled: disabled?.toString(),
     invalid: invalid?.toString(),
+    ...restProps,
   });
 };
 
