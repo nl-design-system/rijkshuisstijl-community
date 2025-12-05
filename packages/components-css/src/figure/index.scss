@@ -10,15 +10,12 @@
   border-start-start-radius: var(--utrecht-figure-img-border-start-start-radius);
 }
 
-.utrecht-figure {
-  font-size: var(--rhc-text-font-size-max-md, inherit);
-  line-height: var(--rhc-text-line-height-md, inherit);
+/* Inline behaviour for rounded-corner to fix cornering on block elements */
+.utrecht-figure .rhc-rounded-corner {
+  display: inline-block;
+  vertical-align: top;
 }
 
-.utrecht-figure__caption {
-  border-inline-start: var(--utrecht-figure-caption-border-width) solid var(--utrecht-figure-caption-border-color);
-  font-family: var(--rhc-text-font-family-default, inherit);
-  padding-block-end: var(--utrecht-figure-caption-padding-block-end);
-  padding-block-start: var(--utrecht-figure-caption-padding-block-start);
-  padding-inline-start: var(--utrecht-figure-caption-padding-inline-start);
+.utrecht-figure .rhc-rounded-corner img {
+  border-radius: inherit;
 }

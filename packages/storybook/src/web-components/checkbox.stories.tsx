@@ -1,4 +1,4 @@
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { CheckboxWebComponent } from '@rijkshuisstijl-community/web-components';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';

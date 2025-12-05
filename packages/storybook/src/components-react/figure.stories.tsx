@@ -1,5 +1,5 @@
-import { Figure, FigureCaption, Image } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { Figure, FigureCaption, Image, RoundedCorner } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './figure.md?raw';
 
@@ -7,40 +7,6 @@ const meta = {
   title: 'Figure',
   id: 'rhc-figure',
   component: Figure,
-  argTypes: {
-    borderEndEndRadius: {
-      type: { name: 'string', required: false },
-      control: { type: 'range', min: 0, max: 80, step: 8 },
-      description: 'Bottom right corner radius of the image in pixels',
-      table: {
-        category: 'Demo',
-      },
-    },
-    borderEndStartRadius: {
-      type: { name: 'string', required: false },
-      control: { type: 'range', min: 0, max: 80, step: 8 },
-      description: 'Bottom left corner radius of the image in pixels',
-      table: {
-        category: 'Demo',
-      },
-    },
-    borderStartEndRadius: {
-      type: { name: 'string', required: false },
-      control: { type: 'range', min: 0, max: 80, step: 8 },
-      description: 'Top right corner radius of the image in pixels',
-      table: {
-        category: 'Demo',
-      },
-    },
-    borderStartStartRadius: {
-      type: { name: 'string', required: false },
-      control: { type: 'range', min: 0, max: 80, step: 8 },
-      description: 'Top left corner radius of the image in pixels',
-      table: {
-        category: 'Demo',
-      },
-    },
-  },
   parameters: {
     status: {
       type: 'STABLE',
@@ -64,7 +30,9 @@ export default meta;
 export const DefaultFigure: StoryObj<typeof meta> = {
   args: {
     children: [
-      <Image alt="Multicolored tulip field" height={763} src="/placeholder.jpg" width={640} />,
+      <RoundedCorner position="start-end" size="md">
+        <Image alt="Multicolored tulip field" src="/placeholder.jpg" width={640} />
+      </RoundedCorner>,
       <FigureCaption>{'Bijschrift (figcaption) van afbeelding.'}</FigureCaption>,
     ],
   },
