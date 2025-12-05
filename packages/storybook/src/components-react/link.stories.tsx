@@ -1,5 +1,3 @@
-/* @license CC0-1.0 */
-
 import { Icon, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown, replaceMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';

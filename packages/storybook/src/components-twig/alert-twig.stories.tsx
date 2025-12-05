@@ -1,5 +1,3 @@
-/* @license CC0-1.0 */
-
 import TwigAlert from '@rijkshuisstijl-community/components-twig/src/Alert.twig';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
