@@ -15,11 +15,7 @@ const meta = {
       options: ['column', 'row', 'column-stretch'],
     },
   },
-  tags: ['autodocs'],
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source. Use our own documentation to correctly show its name as "Action Group" instead of "Button Group"

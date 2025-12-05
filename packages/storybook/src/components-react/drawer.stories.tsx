@@ -34,9 +34,6 @@ const meta = {
     figma:
       'https://www.figma.com/design/3cORTNo1mrlNBUtU5a8YXK/NL-Design-System---Bibliotheek--Community-?node-id=6021-5140',
     componentOrigin: 'Dit component is overgenomen van Utrech Drawer',
-    status: {
-      type: 'WORK IN PROGRESS',
-    },
     docs: {
       description: {
         component: readme,

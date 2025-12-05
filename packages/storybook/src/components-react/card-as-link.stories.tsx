@@ -97,11 +97,7 @@ const meta = {
     metadata: 'Metadata',
     title: 'Card Title',
   },
-  tags: ['autodocs'],
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

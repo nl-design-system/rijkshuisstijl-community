@@ -58,9 +58,6 @@ const meta = {
   },
   parameters: {
     // TODO: add documentation from Utrecht, but not until readme is correctly structurized in the Utrecht documentation source
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         // TODO: disconnect "Usage" from the current readme, import the readme from Utrecht afterwards and combine with our own Usage

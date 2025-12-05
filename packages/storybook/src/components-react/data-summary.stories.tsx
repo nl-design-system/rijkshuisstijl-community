@@ -8,7 +8,6 @@ const meta = {
   id: 'rhc-dataSummary',
   component: DataSummary,
   parameters: {
-    status: { type: 'UNSTABLE' },
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/DataSummary.tsx',

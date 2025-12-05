@@ -12,9 +12,6 @@ const meta = {
   title: 'Navigation List/Navigation List Item',
   component: NavigationListItem,
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

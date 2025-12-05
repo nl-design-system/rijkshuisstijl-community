@@ -1,5 +1,3 @@
-/* @license CC0-1.0 */
-
 import { Alert, Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
@@ -37,11 +35,7 @@ const meta = {
       </Paragraph>,
     ],
   },
-  tags: ['autodocs'],
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: disconnect "Usage" from the current readme, import the readme from Utrecht afterwards and combine with our own Usage

@@ -14,12 +14,8 @@ const meta = {
   title: 'Side Navigation',
   id: 'rhc-sideNav',
   component: SideNav,
-  tags: ['autodocs'],
   argTypes: {},
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

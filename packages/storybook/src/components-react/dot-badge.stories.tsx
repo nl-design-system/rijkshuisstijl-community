@@ -16,9 +16,6 @@ const meta = {
     label: 'Nieuw bericht',
   },
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

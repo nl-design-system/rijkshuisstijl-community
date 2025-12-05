@@ -42,11 +42,7 @@ const meta = {
     },
   },
   args: {},
-  tags: ['autodocs'],
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme, anatomyDocs, visualDesignDocs, htmlDocs, wcagDocs]),

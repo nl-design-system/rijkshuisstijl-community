@@ -15,9 +15,6 @@ const meta = {
   id: 'rhc-checkbox-group-web',
   component: 'rhc-checkbox-group',
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

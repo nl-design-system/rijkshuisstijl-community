@@ -1,5 +1,3 @@
-/* @license CC0-1.0 */
-
 import TwigAlert from '@rijkshuisstijl-community/components-twig/src/Alert.twig';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
@@ -35,9 +33,6 @@ const meta = {
       '<h3 class="nl-heading rhc-heading nl-heading--level-5">Heading</h3><p class="nl-paragraph">Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</p>',
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

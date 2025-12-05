@@ -8,9 +8,6 @@ const meta = {
   component: Homepage,
   parameters: {
     layout: 'fullscreen',
-    status: {
-      type: 'UNSTABLE',
-    },
     isPage: true,
   },
 } satisfies Meta<typeof Homepage>;

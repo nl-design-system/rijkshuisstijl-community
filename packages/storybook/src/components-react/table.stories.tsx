@@ -17,14 +17,10 @@ const meta = {
   title: 'Table',
   id: 'rhc-table',
   component: Table,
-  tags: ['autodocs'],
   args: {
     dir: '',
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source

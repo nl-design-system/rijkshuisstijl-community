@@ -20,9 +20,6 @@ const meta = {
   },
   parameters: {
     // TODO: add documentation from Utrecht, but not until readme is correctly structurized in the Utrecht documentation source
-    status: {
-      type: 'STABLE',
-    },
     // TODO: add Figma and NL DesignSystem links
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, de design tokens kunnen indien nodig nog overschreven worden.',

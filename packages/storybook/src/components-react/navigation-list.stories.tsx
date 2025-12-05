@@ -7,9 +7,6 @@ const meta = {
   title: 'Navigation List',
   component: NavigationList,
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

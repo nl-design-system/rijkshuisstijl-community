@@ -8,9 +8,6 @@ const meta = {
   id: 'rhc-checkbox-group',
   component: CheckboxGroup,
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

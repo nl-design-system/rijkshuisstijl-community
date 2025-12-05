@@ -93,11 +93,7 @@ const meta = {
     headingLevel: 3,
     imageSrc: '/placeholder.jpg',
   },
-  tags: ['autodocs'],
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

@@ -74,9 +74,6 @@ const meta = {
     errorMessage: '',
   },
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),
