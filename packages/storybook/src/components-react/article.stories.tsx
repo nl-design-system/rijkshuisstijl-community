@@ -23,7 +23,6 @@ const meta = {
       </p>,
     ],
   },
-  tags: ['autodocs'],
   parameters: {
     status: {
       type: 'STABLE',

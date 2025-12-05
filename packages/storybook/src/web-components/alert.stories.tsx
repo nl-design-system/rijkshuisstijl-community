@@ -25,7 +25,6 @@ const meta = {
   args: {
     type: 'info',
   },
-  tags: ['autodocs'],
   parameters: {
     status: {
       type: 'STABLE',

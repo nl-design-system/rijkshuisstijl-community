@@ -7,7 +7,6 @@ const meta: Meta<typeof TextInput> = {
   title: 'Text Input',
   id: 'rhc-text-input',
   component: TextInput,
-  tags: ['autodocs'],
   argTypes: {
     required: {
       description: 'Required',

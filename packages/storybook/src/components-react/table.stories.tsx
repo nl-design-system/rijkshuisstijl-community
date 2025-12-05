@@ -17,7 +17,6 @@ const meta = {
   title: 'Table',
   id: 'rhc-table',
   component: Table,
-  tags: ['autodocs'],
   args: {
     dir: '',
   },

@@ -27,7 +27,6 @@ export default {
   title: 'Table/Table Cell',
   id: 'rhc-table-cell',
   component: TableCell,
-  tags: ['autodocs'],
   argTypes: {
     alignCell: {
       options: ['start', 'end', 'center'],

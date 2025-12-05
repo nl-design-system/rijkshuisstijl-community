@@ -27,7 +27,6 @@ const meta = {
   title: 'Table/Table Header Cell',
   id: 'rhc-table-header-cell',
   component: TableHeaderCell,
-  tags: ['autodocs'],
   argTypes: {
     withSorting: {
       type: 'boolean',

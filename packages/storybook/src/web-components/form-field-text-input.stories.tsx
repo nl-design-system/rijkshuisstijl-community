@@ -314,7 +314,6 @@ const meta = {
     placeholder: '',
     size: undefined,
   },
-  tags: ['autodocs'],
   parameters: {
     status: {
       type: 'STABLE',

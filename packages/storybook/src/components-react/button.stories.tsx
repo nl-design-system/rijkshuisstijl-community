@@ -92,7 +92,6 @@ const meta = {
     iconLeft: false,
     iconRight: false,
   },
-  tags: ['autodocs'],
   parameters: {
     status: {
       type: 'STABLE',

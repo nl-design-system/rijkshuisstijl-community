@@ -195,7 +195,6 @@ const meta = {
     cols: undefined,
     rows: undefined,
   },
-  tags: ['autodocs'],
   parameters: {
     status: {
       type: 'STABLE',

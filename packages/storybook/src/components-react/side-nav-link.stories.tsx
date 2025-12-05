@@ -7,7 +7,6 @@ const meta = {
   title: 'Side Navigation/Side Navigation Link',
   id: 'rhc-sideNavLink',
   component: SideNavLink,
-  tags: ['autodocs'],
   argTypes: {
     icon: {
       control: { type: 'select' },

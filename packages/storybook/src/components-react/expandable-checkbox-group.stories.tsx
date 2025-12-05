@@ -18,7 +18,6 @@ const meta = {
     children: {},
   },
 
-  tags: ['autodocs'],
   parameters: {
     status: {
       type: 'UNSTABLE',

@@ -42,7 +42,6 @@ const meta = {
     },
   },
   args: {},
-  tags: ['autodocs'],
   parameters: {
     status: {
       type: 'UNSTABLE',

@@ -122,7 +122,6 @@ const meta = {
     defaultValue: '',
     dir: '',
   },
-  tags: ['autodocs'],
   parameters: {
     status: {
       type: 'STABLE',

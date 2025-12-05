@@ -22,20 +22,18 @@ interface LogoStoryProps extends LogoProps {
 }
 
 const LogoStory = ({ imageBackgroundColor, textColor, imageIconColor, ...args }: LogoStoryProps) => (
-  <>
-    <Logo
-      {...args}
-      style={
-        {
-          '--rhc-logo-color': textColor || rhcLogoColor,
-          '--rhc-logo-image-background-color': imageBackgroundColor || rhcLogoImageBackgroundColor,
-          '--rhc-logo-image-color': imageIconColor || rhcLogoImageColor,
-        } as LogoCSSProperties
-      }
-    >
-      <Icon icon={'nederland-map'} />
-    </Logo>
-  </>
+  <Logo
+    {...args}
+    style={
+      {
+        '--rhc-logo-color': textColor || rhcLogoColor,
+        '--rhc-logo-image-background-color': imageBackgroundColor || rhcLogoImageBackgroundColor,
+        '--rhc-logo-image-color': imageIconColor || rhcLogoImageColor,
+      } as LogoCSSProperties
+    }
+  >
+    <Icon icon={'nederland-map'} />
+  </Logo>
 );
 
 const meta = {

@@ -98,7 +98,6 @@ const meta = {
     metaData: 'Metadata',
     title: 'Card Title',
   },
-  tags: ['autodocs'],
   parameters: {
     status: {
       type: 'UNSTABLE',

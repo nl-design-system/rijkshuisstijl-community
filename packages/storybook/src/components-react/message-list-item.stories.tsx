@@ -66,7 +66,6 @@ const meta = {
       </MessageList>
     );
   },
-  tags: ['autodocs'],
 } satisfies Meta<typeof MessageListItem>;
 
 export default meta;

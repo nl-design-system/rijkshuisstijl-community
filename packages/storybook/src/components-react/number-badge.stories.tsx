@@ -7,7 +7,6 @@ const meta = {
   title: 'Number Badge',
   id: 'rhc-counter-badge',
   component: NumberBadge,
-  tags: ['autodocs'],
   argTypes: {
     children: {
       description: 'Text content',

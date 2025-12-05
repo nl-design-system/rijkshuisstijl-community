@@ -37,7 +37,6 @@ const meta = {
       </Paragraph>,
     ],
   },
-  tags: ['autodocs'],
   parameters: {
     status: {
       type: 'STABLE',

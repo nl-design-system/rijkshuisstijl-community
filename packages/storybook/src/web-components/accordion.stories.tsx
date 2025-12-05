@@ -57,7 +57,6 @@ const meta = {
     heading: '',
     headingLevel: 0,
   },
-  tags: ['autodocs'],
   parameters: {
     tokensPrefix: 'utrecht-accordion',
     status: {

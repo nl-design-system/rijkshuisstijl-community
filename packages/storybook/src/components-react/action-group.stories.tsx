@@ -15,7 +15,6 @@ const meta = {
       options: ['column', 'row', 'column-stretch'],
     },
   },
-  tags: ['autodocs'],
   parameters: {
     status: {
       type: 'STABLE',

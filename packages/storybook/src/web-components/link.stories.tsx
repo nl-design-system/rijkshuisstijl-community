@@ -80,7 +80,6 @@ const meta = {
   args: {
     id: 'link',
   },
-  tags: ['autodocs'],
   parameters: {
     status: {
       type: 'STABLE',

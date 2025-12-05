@@ -60,7 +60,6 @@ const meta = {
     children: 'Filter Label',
     pressed: false,
   },
-  tags: ['autodocs'],
   parameters: {
     status: {
       type: 'UNSTABLE',

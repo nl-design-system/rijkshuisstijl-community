@@ -18,7 +18,6 @@ const meta = {
   args: {
     children: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
   },
-  tags: ['autodocs'],
   parameters: {
     status: {
       type: 'UNSTABLE',
