@@ -8,9 +8,9 @@ const meta = {
   id: 'rhc-message-list',
   component: MessageList,
   args: {},
-  render: () => {
+  render: ({ ...args }) => {
     return (
-      <MessageList>
+      <MessageList {...args}>
         <MessageListItem
           description={'Uw pensioenoverzicht'}
           href={'#'}

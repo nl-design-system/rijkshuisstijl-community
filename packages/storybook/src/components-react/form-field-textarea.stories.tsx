@@ -187,6 +187,7 @@ const meta = {
       status,
       cols,
       rows,
+      ...otherProps
     } = args;
     return (
       <FormFieldTextarea
@@ -210,6 +211,7 @@ const meta = {
         status={status || undefined}
         value={value || undefined}
         onChange={() => {}}
+        {...otherProps}
       />
     );
   },
