@@ -33,9 +33,6 @@ const meta = {
       '<h3 class="nl-heading rhc-heading nl-heading--level-5">Heading</h3><p class="nl-paragraph">Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</p>',
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

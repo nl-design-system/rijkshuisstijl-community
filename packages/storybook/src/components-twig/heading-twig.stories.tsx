@@ -21,9 +21,6 @@ const meta = {
     },
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

@@ -59,9 +59,6 @@ const meta = {
     pressed: false,
   },
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

@@ -6,9 +6,6 @@ const meta = {
   id: 'rhc-twig-ordered-list',
   component: TwigOrderedList,
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     componentOrigin:
       'Dit is een dummy component voor het toevoegen van support van nested Twig templates. Dit moet vervangen worden door het officiele component.',
   },

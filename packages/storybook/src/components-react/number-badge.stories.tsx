@@ -18,9 +18,6 @@ const meta = {
     },
   },
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source

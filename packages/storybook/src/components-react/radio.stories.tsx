@@ -82,9 +82,6 @@ const meta = {
     },
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: add usage documentation

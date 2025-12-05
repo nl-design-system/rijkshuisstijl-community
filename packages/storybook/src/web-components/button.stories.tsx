@@ -43,9 +43,6 @@ const meta = {
   },
   args: {},
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme, anatomyDocs, visualDesignDocs, htmlDocs, wcagDocs]),

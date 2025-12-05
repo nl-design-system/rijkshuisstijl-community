@@ -315,9 +315,6 @@ const meta = {
     size: undefined,
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source

@@ -81,9 +81,6 @@ const meta = {
     id: 'link',
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([

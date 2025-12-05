@@ -16,9 +16,6 @@ const meta = {
   component: SideNav,
   argTypes: {},
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

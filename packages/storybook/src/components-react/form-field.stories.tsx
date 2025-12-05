@@ -55,7 +55,6 @@ const meta = {
   },
   render: (args) => <FormField {...args} />,
   parameters: {
-    status: { type: 'STABLE' },
     docs: {
       description: { component: mergeMarkdown([readme]) },
     },

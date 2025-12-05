@@ -98,9 +98,6 @@ const meta = {
     title: 'Card Title',
   },
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

@@ -24,9 +24,6 @@ const meta = {
     type: 'info',
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: disconnect "Usage" from the current readme, import the readme from Utrecht afterwards and combine with our own Usage

@@ -8,9 +8,6 @@ const meta: Meta = {
   component: Page,
   parameters: {
     layout: 'fullscreen',
-    status: {
-      type: 'UNSTABLE',
-    },
     isPage: true,
   },
 };

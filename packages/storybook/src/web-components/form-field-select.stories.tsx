@@ -123,9 +123,6 @@ const meta = {
     dir: '',
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

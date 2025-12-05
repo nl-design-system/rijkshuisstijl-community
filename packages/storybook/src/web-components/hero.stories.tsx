@@ -94,9 +94,6 @@ const meta = {
     imageSrc: '/placeholder.jpg',
   },
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

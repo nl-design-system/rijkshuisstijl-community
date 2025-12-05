@@ -54,9 +54,6 @@ const meta = {
     children: '',
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: replaceMarkdown(
