@@ -41,7 +41,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    label: 'Radio group label',
+    label: 'Radio option',
     name: 'radio-group',
   },
 };
