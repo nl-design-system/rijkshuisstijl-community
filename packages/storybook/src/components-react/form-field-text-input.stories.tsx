@@ -291,7 +291,6 @@ const meta = {
       placeholder,
       value,
       size,
-      ...otherProps
     } = args;
     return (
       <FormFieldTextInput
@@ -316,7 +315,6 @@ const meta = {
         status={status || undefined}
         type={type || undefined}
         value={value || undefined}
-        {...otherProps}
       />
     );
   },
