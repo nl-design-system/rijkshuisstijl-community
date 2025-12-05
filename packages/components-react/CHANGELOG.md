@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/components-react
 
+## 8.0.1
+
+### Patch Changes
+
+- 12110ca: Upgrade React (fixes CVE-2025-55182, see https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components)
+- d474092: Updates `@testing-library/jest-dom` from 5.17.0 to 6.9.1.
+  Removes `@types/testing-library__jest-dom` because v6 now ships its own TypeScript types internally. No code changes required; tests and type checks continue to work the same.
+
 ## 8.0.0
 
 ### Major Changes
