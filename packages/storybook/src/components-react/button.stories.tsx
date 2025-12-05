@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Button, ButtonProps, Icon, IconButton } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
 import readme from '@utrecht/components/button/README.md?raw';

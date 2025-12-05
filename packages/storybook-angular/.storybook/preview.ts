@@ -1,7 +1,7 @@
 import { componentWrapperDecorator, type Preview } from '@storybook/angular';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import OverviewPage from './overview.mdx';
-import { formatHtml } from '@rijkshuisstijl-community/internal-tooling/formatHtml';
+import { formatHtml } from '@rijkshuisstijl-community/storybook-tooling/formatHtml';
 
 const preview: Preview = {
   parameters: {
@@ -23,6 +23,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
+        method: 'alphabetical',
         order: ['Angular Components', ['README', 'CHANGELOG'], 'Angular Templates'],
       },
     },
@@ -32,17 +33,15 @@ const preview: Preview = {
     componentWrapperDecorator((story) => `<div class="utrecht-document">${story}</div>`),
     withThemeByClassName({
       themes: {
-        RijkshuisstijlCommunity: 'rhc-theme',
-        'Uitvoerend - paars': 'uitvoerend-paars',
-        'Uitvoerend - hemelblauw': 'uitvoerend-hemelblauw',
-        'Uitvoerend - groen': 'uitvoerend-groen',
-        'Uitvoerend - oranje': 'uitvoerend-oranje',
-        'Uitvoerend - violet': 'uitvoerend-violet',
-        'Uitvoerend - mintgroen': 'uitvoerend-mintgroen',
-        'Uitvoerend - violet - oud': 'uitvoerend-violet-oud',
-        KOOP: 'koop',
+        'Kern - Lintblauw': 'rhc-theme',
+        'Uitvoerend - Groen': 'uitvoerend-groen',
+        'Uitvoerend - Hemelblauw': 'uitvoerend-hemelblauw',
+        'Uitvoerend - Lintblauw': 'uitvoerend-lintblauw',
+        'Uitvoerend - Oranje': 'uitvoerend-oranje',
+        'Uitvoerend - Paars': 'uitvoerend-paars',
+        'Uitvoerend - Robijn Rood': 'uitvoerend-robijnrood',
       },
-      defaultTheme: 'RijkshuisstijlCommunity',
+      defaultTheme: 'Kern - Lintblauw',
     }),
   ],
 

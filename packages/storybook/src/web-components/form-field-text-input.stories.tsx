@@ -1,4 +1,4 @@
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { FormFieldTextInputWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';

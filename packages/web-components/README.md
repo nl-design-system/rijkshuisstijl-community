@@ -19,7 +19,7 @@ De componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je project to
 > Let erop dat je beide de `@rijkshuisstijl-community/design-tokens/dist/index.css` importeert **en** de component een child is van een element waar de `rhc-theme` op is toegepast. Anders zie je de component zonder styling.
 
 ```bash
-npm install --save-dev @rijkshuisstijl-community/web-components @rijkshuisstijl-community/components-css @rijkshuisstijl-community/design-tokens
+npm install @rijkshuisstijl-community/web-components @rijkshuisstijl-community/components-css @rijkshuisstijl-community/design-tokens
 ```
 
 Dit installeert de componenten, de design tokens en de styling. Om deze te gebruiken, importeer je ze in jouw app,

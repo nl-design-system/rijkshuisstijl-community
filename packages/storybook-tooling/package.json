@@ -1,12 +1,11 @@
 {
-  "name": "@rijkshuisstijl-community/internal-tooling",
-  "version": "1.0.1",
-  "description": "Internal tooling for the Rijkshuisstijl Community monorepo. Not intended for public use.",
+  "name": "@rijkshuisstijl-community/storybook-tooling",
+  "version": "1.1.1",
+  "description": "Storybook tooling for the Rijkshuisstijl Community monorepo.",
   "main": "index.js",
   "types": "src/index.ts",
-  "private": true,
   "publishConfig": {
-    "access": "restricted",
+    "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
@@ -16,7 +15,7 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
-    "directory": "packages/internal-tooling"
+    "directory": "packages/storybook-tooling"
   },
   "author": "Community for NL Design System",
   "license": "EUPL-1.2",
@@ -33,7 +32,6 @@
     "vitest": "3.2.4"
   },
   "exports": {
-    "./getAbsolutePath": "./src/getAbsolutePath/index.ts",
     "./formatHtml": "./src/formatHtml/index.ts",
     "./markdownUtils": "./src/markdownUtils/index.ts"
   }

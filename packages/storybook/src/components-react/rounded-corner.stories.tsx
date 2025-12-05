@@ -1,5 +1,5 @@
 import { RoundedCorner } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import readme from './rounded-corner.md?raw';
 
 const meta = {
@@ -18,7 +18,7 @@ const meta = {
     showHtml: true,
   },
   args: {
-    corner: 'start-start',
+    position: 'start-start',
     children: (
       <div style={{ padding: '3rem 1rem', backgroundColor: 'var(--rhc-color-primary-500)' }}>
         <span style={{ color: 'white' }}>Rounded Corner Content</span>
@@ -32,7 +32,7 @@ const meta = {
         type: {
           summary: 'object',
           detail: `{
-  '--rhc-rounded-corner-radius': CSSProperties['borderRadius'];
+  '--rhc-rounded-corner-border-radius': CSSProperties['borderRadius'];
   '--rhc-rounded-corner-overflow': CSSProperties['overflow'];
 };`,
         },
@@ -55,7 +55,7 @@ export const BlueCurvedBorder = {};
 
 export const ImageInsideRoundedCorner = {
   args: {
-    corner: 'end-end',
+    position: 'end-end',
     as: 'img',
     style: { width: '300px', height: 'auto' },
     src: './placeholder.jpg',
@@ -66,7 +66,7 @@ export const ImageInsideRoundedCorner = {
 
 export const ImageBackground = {
   args: {
-    corner: 'start-start',
+    position: 'start-start',
     size: 'lg',
     style: {
       width: 'full',
@@ -76,7 +76,7 @@ export const ImageBackground = {
       backgroundPosition: 'center',
     },
     children: (
-      <RoundedCorner corner="start-end" size="md" style={{ margin: '13rem 3rem 0rem 0rem' }}>
+      <RoundedCorner position="start-end" size="md" style={{ margin: '13rem 3rem 0rem 0rem' }}>
         <div style={{ padding: '3rem 1rem', backgroundColor: 'var(--rhc-color-primary-500)' }}>
           <span style={{ color: 'white' }}>Rounded Corner Content</span>
         </div>
@@ -87,9 +87,9 @@ export const ImageBackground = {
 
 export const CustomTokens = {
   args: {
-    corner: 'end-start',
+    position: 'end-start',
     overwriteTokens: {
-      '--rhc-rounded-corner-radius': '1rem',
+      '--rhc-rounded-corner-border-radius': '1rem',
       '--rhc-rounded-corner-overflow': 'clip',
     },
   },

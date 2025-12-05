@@ -1,23 +1,22 @@
 import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-violet/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-mintgroen/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-violet-oud/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-robijnrood/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-paars/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-oranje/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/koop/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-lintblauw/index.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Paragraph } from '@rijkshuisstijl-community/components-react';
 import { withThemeByClassName } from '@storybook/addon-themes';
-import { Controls, Description, Primary, Stories, useOf } from '@storybook/addon-docs/blocks';
 import { Preview } from '@storybook/react-vite';
 import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
 import { Fragment } from 'react';
-import { formatHtml } from '@rijkshuisstijl-community/internal-tooling/formatHtml';
+import { Controls, Description, Primary, Stories } from '@storybook/addon-docs/blocks';
+import { useOf } from '@storybook/addon-docs/blocks';
+import { formatHtml } from '@rijkshuisstijl-community/storybook-tooling/formatHtml';
 import { StoryRootDecorator } from './StoryRootDecorator';
 
 const preview: Preview = {
@@ -25,17 +24,15 @@ const preview: Preview = {
     (Story: any) => <div className="utrecht-document">{Story()}</div>,
     withThemeByClassName({
       themes: {
-        RijkshuisstijlCommunity: 'rhc-theme (Standaard Thema)',
-        'Uitvoerend - paars': 'uitvoerend-paars',
-        'Uitvoerend - hemelblauw': 'uitvoerend-hemelblauw',
-        'Uitvoerend - groen': 'uitvoerend-groen',
-        'Uitvoerend - oranje': 'uitvoerend-oranje',
-        'Uitvoerend - violet': 'uitvoerend-violet',
-        'Uitvoerend - mintgroen': 'uitvoerend-mintgroen',
-        'Uitvoerend - violet - oud': 'uitvoerend-violet-oud',
-        KOOP: 'koop',
+        'Kern - Lintblauw': 'rhc-theme',
+        'Uitvoerend - Groen': 'uitvoerend-groen',
+        'Uitvoerend - Hemelblauw': 'uitvoerend-hemelblauw',
+        'Uitvoerend - Lintblauw': 'uitvoerend-lintblauw',
+        'Uitvoerend - Oranje': 'uitvoerend-oranje',
+        'Uitvoerend - Paars': 'uitvoerend-paars',
+        'Uitvoerend - Robijn Rood': 'uitvoerend-robijnrood',
       },
-      defaultTheme: 'RijkshuisstijlCommunity',
+      defaultTheme: 'Kern - Lintblauw',
     }),
     (Story, options) => {
       return options.parameters['isPage'] ? (
@@ -59,6 +56,7 @@ const preview: Preview = {
     controls: { exclude: ['children'] },
     options: {
       storySort: {
+        method: 'alphabetical',
         order: [
           'Rijkshuisstijl Community',
           ['README', '*', 'Icon Sets', 'Design Tokens', ['Standaard Thema']],

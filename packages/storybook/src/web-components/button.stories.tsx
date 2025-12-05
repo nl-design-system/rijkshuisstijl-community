@@ -1,4 +1,4 @@
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { ButtonWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import anatomyDocs from '@utrecht/components/button/docs/anatomy.nl.md?raw';

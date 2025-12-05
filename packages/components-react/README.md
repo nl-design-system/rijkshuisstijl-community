@@ -19,7 +19,7 @@ De React-componenten hebben geen eigen styling. Om de Rijkshuisstijl aan je proj
 > Let erop dat je beide de `@rijkshuisstijl-community/design-tokens/dist/index.css` importeert **en** de component een child is van een element waar de `rhc-theme` op is toegepast. Anders zie je de component zonder styling.
 
 ```bash
-npm install --save-dev @rijkshuisstijl-community/components-react @rijkshuisstijl-community/components-css @rijkshuisstijl-community/design-tokens
+npm install @rijkshuisstijl-community/components-react @rijkshuisstijl-community/components-css @rijkshuisstijl-community/design-tokens
 ```
 
 Dit installeert de React-componenten, de design tokens en de styling. Om deze te gebruiken, importeer je ze in jouw app.

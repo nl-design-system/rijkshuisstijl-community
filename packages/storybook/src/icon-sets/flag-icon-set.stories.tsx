@@ -1,4 +1,4 @@
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import IconSet from './flag-icon-set-page';
 import readme from './flag-icon-set.md?raw';
