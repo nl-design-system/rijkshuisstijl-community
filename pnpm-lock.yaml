@@ -113,7 +113,7 @@ importers:
     dependencies:
       next:
         specifier: 15.5.7
-        version: 15.5.7(@playwright/test@1.54.2)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.89.2)
+        version: 15.5.7(@babel/core@7.28.0)(@playwright/test@1.54.2)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.89.2)
       react:
         specifier: 19.2.1
         version: 19.2.1
@@ -614,8 +614,8 @@ importers:
         specifier: 4.1.1
         version: 4.1.1(storybook@9.1.6(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@22.10.1)(typescript@5.8.3))(prettier@3.6.2)(vite@6.3.5(@types/node@22.10.1)(jiti@1.21.7)(less@4.2.2)(sass@1.89.2)(terser@5.39.0)(yaml@2.8.1)))
       '@etchteam/storybook-addon-status':
-        specifier: 5.0.0
-        version: 5.0.0
+        specifier: 8.0.0
+        version: 8.0.0(storybook@9.1.6(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@22.10.1)(typescript@5.8.3))(prettier@3.6.2)(vite@6.3.5(@types/node@22.10.1)(jiti@1.21.7)(less@4.2.2)(sass@1.89.2)(terser@5.39.0)(yaml@2.8.1)))
       '@nl-rvo/assets':
         specifier: 1.0.0-alpha.360
         version: 1.0.0-alpha.360
@@ -723,7 +723,7 @@ importers:
         version: 1.1.0
       eslint-plugin-storybook:
         specifier: 9.1.6
-        version: 9.1.6(eslint@9.32.0(jiti@1.21.7))(storybook@9.1.6(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@22.10.1)(typescript@5.8.3))(prettier@3.6.2)(vite@6.3.5(@types/node@22.10.1)(jiti@1.21.7)(less@4.2.2)(sass@1.89.2)(terser@5.39.0)(yaml@2.8.1)))(typescript@5.8.3)
+        version: 9.1.6(eslint@8.57.1)(storybook@9.1.6(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@22.10.1)(typescript@5.8.3))(prettier@3.6.2)(vite@6.3.5(@types/node@22.10.1)(jiti@1.21.7)(less@4.2.2)(sass@1.89.2)(terser@5.39.0)(yaml@2.8.1)))(typescript@5.8.3)
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.10.1)
@@ -868,7 +868,7 @@ importers:
         version: 8.0.2(storybook@9.1.6(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@22.10.1)(typescript@5.8.3))(prettier@3.6.2)(vite@6.3.5(@types/node@22.10.1)(jiti@1.21.7)(less@4.2.2)(sass@1.89.2)(terser@5.39.0)(yaml@2.8.1)))
       eslint-plugin-storybook:
         specifier: 9.1.6
-        version: 9.1.6(eslint@9.32.0(jiti@1.21.7))(storybook@9.1.6(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@22.10.1)(typescript@5.8.3))(prettier@3.6.2)(vite@6.3.5(@types/node@22.10.1)(jiti@1.21.7)(less@4.2.2)(sass@1.89.2)(terser@5.39.0)(yaml@2.8.1)))(typescript@5.8.3)
+        version: 9.1.6(eslint@8.57.1)(storybook@9.1.6(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@22.10.1)(typescript@5.8.3))(prettier@3.6.2)(vite@6.3.5(@types/node@22.10.1)(jiti@1.21.7)(less@4.2.2)(sass@1.89.2)(terser@5.39.0)(yaml@2.8.1)))(typescript@5.8.3)
       react:
         specifier: 19.2.1
         version: 19.2.1
@@ -2289,8 +2289,10 @@ packages:
     resolution: {integrity: sha512-Z5kJ+wU3oA7MMIqVR9tyZRtjYPr4OC004Q4Rw7pgOKUOKkJfZ3O24nz3WYfGRpMDNmcOi3TwQOmgm7B7Tpii0w==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@etchteam/storybook-addon-status@5.0.0':
-    resolution: {integrity: sha512-0Dg94xQ3T+rYTi6ekFkaH0XU9k0IQOqidiSmwN47Oqw4u1qjxK6m7wV3j7C0deLEuf4U4PrAcsDfDjyehKne2A==}
+  '@etchteam/storybook-addon-status@8.0.0':
+    resolution: {integrity: sha512-PR0qiT5ndB32rfRi3a6QJE66sUuTD2GeJMmQFdaEOLjTWuJ/usdZ6hXXCmWadPLZXcg6wkvHGFQxDSOKNVjU9A==}
+    peerDependencies:
+      storybook: ^10.0.0
 
   '@fontsource/fira-sans@5.2.6':
     resolution: {integrity: sha512-WsqXZCzlbifRoOLppDr6pwMRrZ4U+e+mv+oRZLrZOvkTv/q63B1CIUW+lfaaJuP15YBhOV1OCxS+n1pP8d3IhQ==}
@@ -16324,9 +16326,10 @@ snapshots:
       '@eslint/core': 0.15.2
       levn: 0.4.1
 
-  '@etchteam/storybook-addon-status@5.0.0':
+  '@etchteam/storybook-addon-status@8.0.0(storybook@9.1.6(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@22.10.1)(typescript@5.8.3))(prettier@3.6.2)(vite@6.3.5(@types/node@22.10.1)(jiti@1.21.7)(less@4.2.2)(sass@1.89.2)(terser@5.39.0)(yaml@2.8.1)))':
     dependencies:
       lodash: 4.17.21
+      storybook: 9.1.6(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@22.10.1)(typescript@5.8.3))(prettier@3.6.2)(vite@6.3.5(@types/node@22.10.1)(jiti@1.21.7)(less@4.2.2)(sass@1.89.2)(terser@5.39.0)(yaml@2.8.1))
 
   '@fontsource/fira-sans@5.2.6': {}
 
@@ -19111,17 +19114,6 @@ snapshots:
       '@typescript-eslint/types': 8.38.0
       '@typescript-eslint/typescript-estree': 8.38.0(typescript@5.8.3)
       eslint: 8.57.1
-      typescript: 5.8.3
-    transitivePeerDependencies:
-      - supports-color
-
-  '@typescript-eslint/utils@8.38.0(eslint@9.32.0(jiti@1.21.7))(typescript@5.8.3)':
-    dependencies:
-      '@eslint-community/eslint-utils': 4.7.0(eslint@9.32.0(jiti@1.21.7))
-      '@typescript-eslint/scope-manager': 8.38.0
-      '@typescript-eslint/types': 8.38.0
-      '@typescript-eslint/typescript-estree': 8.38.0(typescript@5.8.3)
-      eslint: 9.32.0(jiti@1.21.7)
       typescript: 5.8.3
     transitivePeerDependencies:
       - supports-color
@@ -22526,10 +22518,10 @@ snapshots:
       eslint: 8.57.1
       minimatch: 9.0.5
 
-  eslint-plugin-storybook@9.1.6(eslint@9.32.0(jiti@1.21.7))(storybook@9.1.6(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@22.10.1)(typescript@5.8.3))(prettier@3.6.2)(vite@6.3.5(@types/node@22.10.1)(jiti@1.21.7)(less@4.2.2)(sass@1.89.2)(terser@5.39.0)(yaml@2.8.1)))(typescript@5.8.3):
+  eslint-plugin-storybook@9.1.6(eslint@8.57.1)(storybook@9.1.6(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@22.10.1)(typescript@5.8.3))(prettier@3.6.2)(vite@6.3.5(@types/node@22.10.1)(jiti@1.21.7)(less@4.2.2)(sass@1.89.2)(terser@5.39.0)(yaml@2.8.1)))(typescript@5.8.3):
     dependencies:
-      '@typescript-eslint/utils': 8.38.0(eslint@9.32.0(jiti@1.21.7))(typescript@5.8.3)
-      eslint: 9.32.0(jiti@1.21.7)
+      '@typescript-eslint/utils': 8.38.0(eslint@8.57.1)(typescript@5.8.3)
+      eslint: 8.57.1
       storybook: 9.1.6(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@22.10.1)(typescript@5.8.3))(prettier@3.6.2)(vite@6.3.5(@types/node@22.10.1)(jiti@1.21.7)(less@4.2.2)(sass@1.89.2)(terser@5.39.0)(yaml@2.8.1))
     transitivePeerDependencies:
       - supports-color
@@ -26030,7 +26022,7 @@ snapshots:
     dependencies:
       type-fest: 2.19.0
 
-  next@15.5.7(@playwright/test@1.54.2)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.89.2):
+  next@15.5.7(@babel/core@7.28.0)(@playwright/test@1.54.2)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)(sass@1.89.2):
     dependencies:
       '@next/env': 15.5.7
       '@swc/helpers': 0.5.15
@@ -26038,7 +26030,7 @@ snapshots:
       postcss: 8.4.31
       react: 19.2.1
       react-dom: 19.2.1(react@19.2.1)
-      styled-jsx: 5.1.6(react@19.2.1)
+      styled-jsx: 5.1.6(@babel/core@7.28.0)(react@19.2.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 15.5.7
       '@next/swc-darwin-x64': 15.5.7
@@ -28700,10 +28692,12 @@ snapshots:
     dependencies:
       webpack: 5.98.0(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.1)
 
-  styled-jsx@5.1.6(react@19.2.1):
+  styled-jsx@5.1.6(@babel/core@7.28.0)(react@19.2.1):
     dependencies:
       client-only: 0.0.1
       react: 19.2.1
+    optionalDependencies:
+      '@babel/core': 7.28.0
 
   stylehacks@5.1.1(postcss@8.5.6):
     dependencies:
