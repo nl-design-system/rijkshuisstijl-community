@@ -1,7 +1,6 @@
 /* @license CC0-1.0 */
 
 import TwigParagraph from '@rijkshuisstijl-community/components-twig/src/Paragraph.twig';
-import '@rijkshuisstijl-community/components-css/src/paragraph/index.scss';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import DrupalAttribute from 'drupal-attribute';
