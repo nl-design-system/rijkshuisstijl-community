@@ -1,5 +1,3 @@
-import '@rijkshuisstijl-community/components-css/index.scss';
-
 import { FormFieldRadio, type FormFieldRadioProps } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
@@ -24,9 +22,6 @@ const meta = {
       description: {
         component: mergeMarkdown([readme]),
       },
-    },
-    status: {
-      type: 'STABLE',
     },
     // TODO: add Figma and NL DesignSystem links
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',

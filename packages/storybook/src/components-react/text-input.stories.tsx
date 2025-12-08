@@ -7,7 +7,6 @@ const meta: Meta<typeof TextInput> = {
   title: 'Text Input',
   id: 'rhc-text-input',
   component: TextInput,
-  tags: ['autodocs'],
   argTypes: {
     required: {
       description: 'Required',
@@ -243,9 +242,6 @@ const meta: Meta<typeof TextInput> = {
     max: undefined,
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source (including with usage and wcag documentation)

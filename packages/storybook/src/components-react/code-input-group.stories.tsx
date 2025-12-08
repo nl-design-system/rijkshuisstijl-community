@@ -8,9 +8,6 @@ const meta = {
   id: 'rhc-codeInput-group',
   component: CodeInputGroup,
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

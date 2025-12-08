@@ -54,9 +54,7 @@ const meta = {
     invalid: false,
   },
   render: (args) => <FormField {...args} />,
-  tags: ['autodocs'],
   parameters: {
-    status: { type: 'STABLE' },
     docs: {
       description: { component: mergeMarkdown([readme]) },
     },

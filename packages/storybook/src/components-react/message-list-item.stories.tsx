@@ -44,9 +44,6 @@ const meta = {
     },
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),
@@ -66,7 +63,6 @@ const meta = {
       </MessageList>
     );
   },
-  tags: ['autodocs'],
 } satisfies Meta<typeof MessageListItem>;
 
 export default meta;

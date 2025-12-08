@@ -25,9 +25,6 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    status: {
-      type: 'STABLE',
-    },
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
     github:

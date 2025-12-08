@@ -27,7 +27,6 @@ const meta = {
       },
     },
   },
-  tags: ['autodocs'],
 } satisfies Meta<typeof PageNumberNavigation>;
 
 export default meta;

@@ -29,9 +29,6 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    status: {
-      type: 'STABLE',
-    },
     // TODO: add Figma and NL DesignSystem links
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met extra functionaliteit voor het gebruiken van de iconenset van de Rijkshuisstijl Community.',

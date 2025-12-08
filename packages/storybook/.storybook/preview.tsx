@@ -72,21 +72,6 @@ const preview: Preview = {
         ],
       },
     },
-    status: {
-      statuses: {
-        STABLE: {
-          background: '#088008',
-          color: '#ffffff',
-          description:
-            'Component is stabiel en kan worden gebruikt. Kleine iteraties zullen mogelijk nog plaatsvinden.',
-        },
-        UNSTABLE: {
-          background: '#cc0000',
-          color: '#ffffff',
-          description: 'Component is nieuw en mogelijk instabiel. Kan gebruikt worden, maar kan nog fouten bevatten.',
-        },
-      },
-    },
     docs: {
       page: () => {
         const storyParameters: any = useOf<'story'>('story')?.story?.parameters;
