@@ -1,21 +1,14 @@
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { BreadcrumbNavWebComponent } from '@rijkshuisstijl-community/web-components';
-import { Meta, StoryObj } from '@storybook/react-vite';
+import { Meta, StoryObj } from '@storybook/web-components-vite';
 import readme from '@utrecht/components/breadcrumb-nav/README.md?raw';
-import { createElement } from 'react';
 
 BreadcrumbNavWebComponent.define();
-
-const BreadcrumbNavWrapper = ({ elements }: any) => {
-  return createElement('rhc-breadcrumb-nav', {
-    elements: JSON.stringify(elements),
-  });
-};
 
 const meta = {
   title: 'Breadcrumb Navigation',
   id: 'rhc-breadcrumb-nav-web',
-  component: BreadcrumbNavWrapper,
+  component: 'rhc-breadcrumb-nav',
   argTypes: {},
   parameters: {
     status: {
