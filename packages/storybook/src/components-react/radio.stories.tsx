@@ -29,7 +29,8 @@ const RadioStory = ({ active, focus, focusVisible, name, ...args }: RadioStoryPr
 const meta = {
   title: 'Radio Button',
   id: 'rhc-radio',
-  component: RadioStory,
+  component: Radio,
+  render: RadioStory,
   args: {
     checked: false,
     disabled: false,
