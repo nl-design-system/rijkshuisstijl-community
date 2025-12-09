@@ -3,12 +3,12 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 
 const Languages = [
-  { name: 'English (Engels)', lang: 'en' },
-  { name: 'Español (Spaans)', lang: 'es' },
-  { name: 'Frysk (Fries)', lang: 'fy' },
-  { name: 'Nederlands', lang: 'nl' },
-  { name: 'Papiamento (Arubaans)', lang: 'pap' },
-  { name: 'Papiamentu (Curaçaos)', lang: 'pap' },
+  { languageName: 'English', localLanguageName: 'Engels', lang: 'en' },
+  { languageName: 'Español', localLanguageName: 'Spaans', lang: 'es' },
+  { languageName: 'Frysk', localLanguageName: 'Fries', lang: 'fy' },
+  { languageName: 'Nederlands', localLanguageName: 'Nederlands', lang: 'nl' },
+  { languageName: 'Papiamento', localLanguageName: 'Arubaans', lang: 'pap' },
+  { languageName: 'Papiamentu', localLanguageName: 'Curaçaos', lang: 'pap' },
 ];
 
 const LanguageNavigator = () => {
@@ -21,19 +21,23 @@ const LanguageNavigator = () => {
       </LinkButton>
       {isOpen && (
         <Listbox className="rhc-language-navigation--listbox" role="list">
-          {Languages.map(({ name, lang }) => (
+          {Languages.map(({ languageName, localLanguageName, lang }) => (
             <ListboxOption
               aria-selected={undefined}
+              className="rhc-language-navigation--list-item"
               key={lang}
               role={undefined}
-              selected={name === selectedLanguage}
+              selected={languageName === selectedLanguage}
               onClick={() => {
-                setSelectedLanguage(name);
+                setSelectedLanguage(languageName);
                 setIsOpen(false);
               }}
             >
               <Link className="rhc-language-navigation--link" href="#">
-                <span lang={lang}>{name}</span>
+                <span lang={lang}>{languageName}</span>
+                {languageName !== selectedLanguage && (
+                  <span className="rhc-language-navigation--local-language"> ({localLanguageName})</span>
+                )}
               </Link>
             </ListboxOption>
           ))}
