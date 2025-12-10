@@ -1,7 +1,5 @@
-/* @license CC0-1.0 */
-
 import { Radio, type RadioProps } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/radio-button/README.md?raw';
 import anatomyDocs from '@utrecht/components/radio-button/docs/anatomy.nl.md?raw';
@@ -31,7 +29,8 @@ const RadioStory = ({ active, focus, focusVisible, name, ...args }: RadioStoryPr
 const meta = {
   title: 'Radio Button',
   id: 'rhc-radio',
-  component: RadioStory,
+  component: Radio,
+  render: RadioStory,
   args: {
     checked: false,
     disabled: false,
@@ -84,9 +83,6 @@ const meta = {
     },
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: add usage documentation

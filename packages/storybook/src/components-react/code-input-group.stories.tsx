@@ -1,5 +1,5 @@
 import { CodeInputGroup } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './code-input-group.md?raw';
 
@@ -8,9 +8,6 @@ const meta = {
   id: 'rhc-codeInput-group',
   component: CodeInputGroup,
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

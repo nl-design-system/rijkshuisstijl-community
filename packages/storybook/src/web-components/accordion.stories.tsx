@@ -1,4 +1,4 @@
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { AccordionWebComponent, AccordionWebComponentAttributes } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/accordion/README.md?raw';
@@ -57,12 +57,8 @@ const meta = {
     heading: '',
     headingLevel: 0,
   },
-  tags: ['autodocs'],
   parameters: {
     tokensPrefix: 'utrecht-accordion',
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source

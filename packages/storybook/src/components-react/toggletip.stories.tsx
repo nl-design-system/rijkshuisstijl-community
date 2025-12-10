@@ -1,5 +1,5 @@
 import { Toggletip } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './toggletip.md?raw';
 
@@ -15,9 +15,6 @@ const meta = {
       description: {
         component: mergeMarkdown([readme]),
       },
-    },
-    status: {
-      type: 'UNSTABLE',
     },
     // TODO: add Figma, GitHub and NL DesignSystem links
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',

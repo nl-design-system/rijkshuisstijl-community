@@ -1,5 +1,5 @@
 import { DataSummary, DataSummaryItem, Icon } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './data-summary.md?raw';
 
@@ -8,7 +8,6 @@ const meta = {
   id: 'rhc-dataSummary',
   component: DataSummary,
   parameters: {
-    status: { type: 'UNSTABLE' },
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/DataSummary.tsx',

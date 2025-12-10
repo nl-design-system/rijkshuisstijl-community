@@ -1,5 +1,5 @@
 import { Checkbox } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import anatomy from '@utrecht/components/checkbox/docs/anatomy.en.md?raw';
 import references from '@utrecht/components/checkbox/docs/references.nl.md?raw';
@@ -12,9 +12,6 @@ const meta = {
   id: 'rhc-checkbox',
   component: Checkbox,
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source

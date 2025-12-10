@@ -10,9 +10,7 @@ const meta: Meta<FigureComponent> = {
     template: `
     <figure rhc-figure [borderEndEndRadius]=${borderEndEndRadius} [borderEndStartRadius]=${borderEndStartRadius} [borderStartEndRadius]=${borderStartEndRadius} [borderStartStartRadius]=${borderStartStartRadius}>
     <img rhc-image src="./placeholder.jpg" alt="Multicolored tulip field" width="640" height="763" />
-    <figcaption rhc-figure-caption>
-      <p>Bijschrift (figcaption) van afbeelding.</p>
-    </figcaption>
+    <figcaption rhc-figure-caption>Bijschrift (figcaption) van afbeelding.</figcaption>
     </figure>`,
     moduleMetadata: {
       imports: [FigureCaptionComponent, ImageComponent],

@@ -1,7 +1,5 @@
-/* @license CC0-1.0 */
-
 import { DataBadgeButton } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { IconCheck } from '@tabler/icons-react';
 import readme from './data-badge-button.md?raw';
@@ -60,11 +58,7 @@ const meta = {
     children: 'Filter Label',
     pressed: false,
   },
-  tags: ['autodocs'],
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

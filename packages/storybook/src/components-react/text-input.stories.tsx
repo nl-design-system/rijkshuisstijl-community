@@ -1,5 +1,5 @@
 import { TextInput } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './text-input.md?raw';
 
@@ -7,7 +7,6 @@ const meta: Meta<typeof TextInput> = {
   title: 'Text Input',
   id: 'rhc-text-input',
   component: TextInput,
-  tags: ['autodocs'],
   argTypes: {
     required: {
       description: 'Required',
@@ -243,9 +242,6 @@ const meta: Meta<typeof TextInput> = {
     max: undefined,
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source (including with usage and wcag documentation)

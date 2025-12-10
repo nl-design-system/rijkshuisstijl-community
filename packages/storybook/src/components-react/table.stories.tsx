@@ -9,7 +9,7 @@ import {
   TableHeaderCell,
   TableRow,
 } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './table.md?raw';
 
@@ -17,14 +17,10 @@ const meta = {
   title: 'Table',
   id: 'rhc-table',
   component: Table,
-  tags: ['autodocs'],
   args: {
     dir: '',
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source

@@ -5,7 +5,7 @@ import {
   TableHeaderCellProps,
   TableRow,
 } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './table-header-cell.md?raw';
 
@@ -27,7 +27,6 @@ const meta = {
   title: 'Table/Table Header Cell',
   id: 'rhc-table-header-cell',
   component: TableHeaderCell,
-  tags: ['autodocs'],
   argTypes: {
     withSorting: {
       type: 'boolean',
@@ -47,9 +46,6 @@ const meta = {
   },
   render: (args) => <TableHeaderCell {...args} />,
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source

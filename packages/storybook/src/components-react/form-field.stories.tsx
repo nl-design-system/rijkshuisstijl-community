@@ -5,7 +5,7 @@ import {
   FormFieldRadio,
   FormFieldRadioGroup,
 } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { type Meta, type StoryObj } from '@storybook/react-vite';
 import readme from './form-field.md?raw';
 
@@ -54,9 +54,7 @@ const meta = {
     invalid: false,
   },
   render: (args) => <FormField {...args} />,
-  tags: ['autodocs'],
   parameters: {
-    status: { type: 'STABLE' },
     docs: {
       description: { component: mergeMarkdown([readme]) },
     },

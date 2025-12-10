@@ -5,7 +5,7 @@ import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-paars/index.css'
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-oranje/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/koop/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-lintblauw/index.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Paragraph } from '@rijkshuisstijl-community/components-react';
@@ -16,7 +16,7 @@ import { Root } from '@utrecht/root-react';
 import { Fragment } from 'react';
 import { Controls, Description, Primary, Stories } from '@storybook/addon-docs/blocks';
 import { useOf } from '@storybook/addon-docs/blocks';
-import { formatHtml } from '@rijkshuisstijl-community/internal-tooling/formatHtml';
+import { formatHtml } from '@rijkshuisstijl-community/storybook-tooling/formatHtml';
 import { StoryRootDecorator } from './StoryRootDecorator';
 
 const preview: Preview = {
@@ -25,12 +25,12 @@ const preview: Preview = {
     withThemeByClassName({
       themes: {
         'Kern - Lintblauw': 'rhc-theme',
-        'Uitvoerend - Paars': 'uitvoerend-paars',
-        'Uitvoerend - Hemelblauw': 'uitvoerend-hemelblauw',
         'Uitvoerend - Groen': 'uitvoerend-groen',
+        'Uitvoerend - Hemelblauw': 'uitvoerend-hemelblauw',
+        'Uitvoerend - Lintblauw': 'uitvoerend-lintblauw',
         'Uitvoerend - Oranje': 'uitvoerend-oranje',
+        'Uitvoerend - Paars': 'uitvoerend-paars',
         'Uitvoerend - Robijn Rood': 'uitvoerend-robijnrood',
-        KOOP: 'koop',
       },
       defaultTheme: 'Kern - Lintblauw',
     }),
@@ -56,6 +56,7 @@ const preview: Preview = {
     controls: { exclude: ['children'] },
     options: {
       storySort: {
+        method: 'alphabetical',
         order: [
           'Rijkshuisstijl Community',
           ['README', '*', 'Icon Sets', 'Design Tokens', ['Standaard Thema']],
@@ -69,21 +70,6 @@ const preview: Preview = {
           ['README', 'CHANGELOG'],
           'React Templates',
         ],
-      },
-    },
-    status: {
-      statuses: {
-        STABLE: {
-          background: '#088008',
-          color: '#ffffff',
-          description:
-            'Component is stabiel en kan worden gebruikt. Kleine iteraties zullen mogelijk nog plaatsvinden.',
-        },
-        UNSTABLE: {
-          background: '#cc0000',
-          color: '#ffffff',
-          description: 'Component is nieuw en mogelijk instabiel. Kan gebruikt worden, maar kan nog fouten bevatten.',
-        },
       },
     },
     docs: {

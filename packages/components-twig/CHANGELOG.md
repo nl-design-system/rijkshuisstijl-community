@@ -1,5 +1,19 @@
 # @rijkshuisstijl-community/components-twig
 
+## 2.0.4
+
+### Patch Changes
+
+- cd80794: Updated readme's to install dependencies for build instead of dev.
+- Updated dependencies [cd80794]
+- Updated dependencies [2062466]
+- Updated dependencies [093f3af]
+- Updated dependencies [2f3f91c]
+- Updated dependencies [5b7a72c]
+- Updated dependencies [5961ac6]
+- Updated dependencies [462686a]
+  - @rijkshuisstijl-community/components-css@9.0.0
+
 ## 2.0.3
 
 ### Patch Changes

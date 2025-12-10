@@ -5,7 +5,7 @@ import {
   type TableCellProps,
   TableRow,
 } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './table-cell.md?raw';
 
@@ -27,7 +27,6 @@ export default {
   title: 'Table/Table Cell',
   id: 'rhc-table-cell',
   component: TableCell,
-  tags: ['autodocs'],
   argTypes: {
     alignCell: {
       options: ['start', 'end', 'center'],
@@ -36,9 +35,6 @@ export default {
   },
   render: (args) => <TableCell {...args} />,
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source

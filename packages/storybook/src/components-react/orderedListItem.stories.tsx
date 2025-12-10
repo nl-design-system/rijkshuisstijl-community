@@ -1,5 +1,5 @@
 import { OrderedList, OrderedListItem } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './orderedListItem.md?raw';
 
@@ -24,9 +24,6 @@ const meta = {
       description: {
         component: mergeMarkdown([readme]),
       },
-    },
-    status: {
-      type: 'STABLE',
     },
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',

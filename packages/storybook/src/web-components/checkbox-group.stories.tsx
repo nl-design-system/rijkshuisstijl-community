@@ -1,4 +1,4 @@
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import {
   CheckboxGroupWebComponent,
   FormFieldCheckboxOptionWebComponent,
@@ -15,9 +15,6 @@ const meta = {
   id: 'rhc-checkbox-group-web',
   component: 'rhc-checkbox-group',
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

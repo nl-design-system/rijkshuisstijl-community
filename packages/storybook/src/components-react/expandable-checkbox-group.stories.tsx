@@ -1,7 +1,5 @@
-/* @license CC0-1.0 */
-
 import { ExpandableCheckboxGroup, ExpandableCheckboxGroupProps } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { PropsWithChildren, useEffect } from 'react';
 import readme from './expandable-checkbox-group.md?raw';
@@ -18,11 +16,7 @@ const meta = {
     children: {},
   },
 
-  tags: ['autodocs'],
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

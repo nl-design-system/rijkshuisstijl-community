@@ -1,5 +1,5 @@
 import { MessageList, MessageListItem } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './message-list-item.md?raw';
 
@@ -44,9 +44,6 @@ const meta = {
     },
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),
@@ -66,7 +63,6 @@ const meta = {
       </MessageList>
     );
   },
-  tags: ['autodocs'],
 } satisfies Meta<typeof MessageListItem>;
 
 export default meta;

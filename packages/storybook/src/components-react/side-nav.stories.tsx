@@ -6,7 +6,7 @@ import {
   SideNavLink,
   SideNavList,
 } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './side-nav.md?raw';
 
@@ -14,12 +14,8 @@ const meta = {
   title: 'Side Navigation',
   id: 'rhc-sideNav',
   component: SideNav,
-  tags: ['autodocs'],
   argTypes: {},
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

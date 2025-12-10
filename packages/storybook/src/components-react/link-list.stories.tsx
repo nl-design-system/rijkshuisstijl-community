@@ -5,7 +5,7 @@ import {
   LinkListLink,
   type LinkListProps,
 } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { PropsWithChildren } from 'react';
 import readme from './link-list.md?raw';
@@ -58,9 +58,6 @@ const meta = {
   },
   parameters: {
     // TODO: add documentation from Utrecht, but not until readme is correctly structurized in the Utrecht documentation source
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         // TODO: disconnect "Usage" from the current readme, import the readme from Utrecht afterwards and combine with our own Usage

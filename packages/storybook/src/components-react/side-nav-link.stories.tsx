@@ -1,5 +1,5 @@
 import { getIconSet, SideNavLink } from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/internal-tooling/markdownUtils';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './side-nav-link.md?raw';
 
@@ -7,7 +7,6 @@ const meta = {
   title: 'Side Navigation/Side Navigation Link',
   id: 'rhc-sideNavLink',
   component: SideNavLink,
-  tags: ['autodocs'],
   argTypes: {
     icon: {
       control: { type: 'select' },
@@ -35,9 +34,6 @@ const meta = {
   },
 
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),
