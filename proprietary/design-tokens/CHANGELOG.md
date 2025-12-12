@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 10.0.1
+
+### Patch Changes
+
+- f5942a6: Parent key is verwijderd uit figma.tokens.json. Deze key is nooit in gebruik geweest, dit heeft geen impact.
+- e7b3d60: Add section about adding new token sets in documentation
+- 5f77bfa: Added transformations on CSS-tokens to allow for calculations with references, power (^) and sanitize any `roundTo` in tokens
+
 ## 10.0.0
 
 ### Major Changes

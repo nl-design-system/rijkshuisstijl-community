@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/components-angular
 
+## 6.0.2
+
+### Patch Changes
+
+- d474092: Updates `@testing-library/jest-dom` from 5.17.0 to 6.9.1.
+  Removes `@types/testing-library__jest-dom` because v6 now ships its own TypeScript types internally. No code changes required; tests and type checks continue to work the same.
+
 ## 6.0.1
 
 ### Patch Changes
