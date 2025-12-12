@@ -22,7 +22,7 @@
     "dev": "next dev",
     "build": "next build",
     "clean": "rimraf dist/ .next/",
-    "lint": "next lint",
+    "lint": "next lint .",
     "lint:ts": "tsc --noEmit --project tsconfig.json",
     "start": "http-server dist/",
     "typecheck": "tsc --noEmit"
