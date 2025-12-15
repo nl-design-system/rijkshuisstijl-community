@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/web-components
 
+## 3.1.2
+
+### Patch Changes
+
+- 3d2da94: Upgrade React to 19.2.3 (to fix https://react.dev/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components)
+
 ## 3.1.1
 
 ### Patch Changes

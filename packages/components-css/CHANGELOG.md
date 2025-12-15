@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-css
 
+## 10.0.0
+
+### Major Changes
+
+- abbe2ef: Added EUPL-1.2 license to Alert component
+
 ## 9.0.0
 
 ### Major Changes
