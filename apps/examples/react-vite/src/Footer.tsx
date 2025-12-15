@@ -1,10 +1,12 @@
 import { LinkList, LinkListLink, Icon, Footer as RhcFooter, Paragraph } from "@rijkshuisstijl-community/components-react";
+import './Footer.css';
 
 export function Footer() {
   return (
-    <RhcFooter
+    
+    <RhcFooter className='rhc-page-footer__layout'
       appearanceLevel={3}
-      background="primary-filled"
+      background="primary-filed"
       backtotop
       columns={[
         {
@@ -51,21 +53,24 @@ export function Footer() {
             <>
               <LinkList>
                 <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                  Over deze organisatie
+                  NLDS Rijkshuisstijl Bibliotheek in Figma
                 </LinkListLink>
                 <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                  Wetten en regelingen
+                  NLLDS Rijkshuisstijl Templates in Figma 
                 </LinkListLink>
                 <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                  Copyright
+                  Rijkshuisstijl Community Design Tokens 
                 </LinkListLink>
                 <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                  Privacy
+                  Rijkshuisstijl Community Storybook 
+                </LinkListLink>
+                <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+                  Over de Rijkshuisstijl Community Sprint op NL Design System 
                 </LinkListLink>
               </LinkList>
             </>
           ),
-          heading: 'Over deze site',
+          heading: 'Over de Rijkshuisstijl Community',
         },
       ]}
     />

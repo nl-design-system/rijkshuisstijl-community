@@ -1,4 +1,3 @@
-
 import '@rijkshuisstijl-community/design-tokens/dist/index.css'; // design tokens importeren
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Card, PageContent, Image } from '@rijkshuisstijl-community/components-react';
@@ -11,7 +10,6 @@ import { LeesEnLeer } from './LeesEnLeer';
 // import { KomInContact } from './KomInContact/KomInContact';
 import { InDePraktijk } from './InDePraktijk';
 import { PageBody } from '@utrecht/page-body-react';
-
 
 function App() {
   return (
@@ -40,8 +38,8 @@ function App() {
           <InDePraktijk />
           <LeesEnLeer />
           {/* <KomInContact /> */}
-          <Footer />
         </PageContent>
+        <Footer />
       </PageBody>
     </>
   );
