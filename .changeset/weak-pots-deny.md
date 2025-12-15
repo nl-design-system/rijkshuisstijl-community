@@ -3,7 +3,7 @@
 '@rijkshuisstijl-community/components-css': major
 ---
 
-De design tokens zijn gewijzigd, en deze wijzigingen zijn verwerkt in de CSS:
+Voor de Navigation List component zijn de design tokens gewijzigd en verwerkt in de CSS:
 
 - `rhc.navigation-list.icon.background-color` hernoemd naar `rhc.navigation-list.item.icon-start.background-color`.
 - `rhc.navigation-list.icon.border-radius` hernoemd naar `rhc.navigation-list.item.icon-start.border-radius`.
