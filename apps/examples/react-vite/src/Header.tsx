@@ -1,13 +1,6 @@
 import { Icon, Logo, NavBar, type NavBarItemProps, PageHeader } from '@rijkshuisstijl-community/components-react';
 
 export function Header() {
-  //   let currentPath = '';
-  //   if ('/' === '/') {
-  //     currentPath = 'rhc-nav-bar__link--current';
-  //   } else {
-  //     currentPath = '';
-  //   }
-
   const items: NavBarItemProps[] = [
     {
       id: 'start1',

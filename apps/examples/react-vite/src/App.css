@@ -9,7 +9,7 @@
 .card-doelen{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+    gap: 1rem;
     padding:48px 0;
     width: 100%;
 }
@@ -23,10 +23,24 @@
 
 .page-content{
   max-width: 1280px;
-  margin:0 auto;
+  margin:1px auto;
+  gap: 20px;
+ 
 }
 
 .page-content-container {
  background-color: #f3f3f3;
- padding: 48px 0;
+ padding: 48px ;
+ 
 }
+
+
+.column-layout__paragraph {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding:48px 0;
+    width: 100%;
+
+}
+
