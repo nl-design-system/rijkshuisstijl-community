@@ -42,11 +42,11 @@
 }
 
 @mixin rhc-navigation-list__item__start-icon {
-  --utrecht-icon-color: var(--rhc-navigation-list-icon-start-color, var(--rhc-color-foreground-subtle));
+  --utrecht-icon-color: var(--rhc-navigation-list-item-icon-start-color, var(--rhc-color-foreground-subtle));
 
-  background-color: var(--rhc-navigation-list-icon-start-background-color, var(--rhc-color-wit));
+  background-color: var(--rhc-navigation-list-item-icon-start-background-color, var(--rhc-color-wit));
   block-size: var(--rhc-navigation-list-item-icon-start-size);
-  border-radius: var(--rhc-navigation-list-icon-start-border-radius, var(--rhc-border-radius-circle));
+  border-radius: var(--rhc-navigation-list-item-icon-start-border-radius, var(--rhc-border-radius-circle));
   grid-area: start-icon;
   min-inline-size: var(--rhc-navigation-list-item-icon-start-size);
   padding-block: var(--rhc-navigation-list-item-icon-start-padding-block);
@@ -91,7 +91,7 @@
 }
 
 @mixin rhc-navigation-list__item__end-icon {
-  --utrecht-icon-color: var(--rhc-navigation-list-item-icon-end-color, var(--rhc-color-foreground-lint));
+  --utrecht-icon-color: var(--rhc-navigation-list-item-icon-end-color, var(--rhc-color-foreground-subtle));
 
   align-self: center;
   grid-area: end-icon;
