@@ -8,12 +8,15 @@ import {
   RefObject,
   useCallback,
   useContext,
+  useEffect,
   useId,
   useRef,
   useState,
 } from 'react';
 import { Icon } from './Icon';
+import { Link } from './Link';
 import { LinkButton, LinkButtonProps } from './LinkButton';
+import { Listbox, ListboxOption, ListboxOptionProps, ListboxProps } from './Listbox';
 
 /* -------------------------------------------------------------------------------------------------
  * Context
@@ -156,10 +159,9 @@ export const Trigger = ({
   showIcon = true,
   className,
   onClick,
-  ref,
+  ref: forwardedRef,
   ...restProps
 }: PropsWithChildren<LanguageNavigationTriggerProps>) => {
-  const forwardedRef = ref;
   const context = useLanguageNavigationContext('Trigger');
   const { open, onOpenToggle, contentId, triggerRef, selectedLanguage } = context;
 
@@ -194,3 +196,169 @@ export const Trigger = ({
   );
 };
 Trigger.displayName = 'LanguageNavigation.Trigger';
+
+/* -------------------------------------------------------------------------------------------------
+ * Content
+ * -----------------------------------------------------------------------------------------------*/
+
+export interface LanguageNavigationContentProps extends Omit<ListboxProps, 'ref'> {
+  /** Close content when clicking outside */
+  closeOnOutsideClick?: boolean;
+  ref?: Ref<HTMLDivElement>;
+}
+
+/**
+ * Container for language options. Only rendered when the navigation is open.
+ * Handles click-outside behavior and ARIA attributes.
+ */
+export const Content = ({
+  children,
+  closeOnOutsideClick = true,
+  className,
+  ref: forwardedRef,
+  ...restProps
+}: PropsWithChildren<LanguageNavigationContentProps>) => {
+  const context = useLanguageNavigationContext('Content');
+  const { open, onOpenChange, contentId, triggerRef } = context;
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  // Compose refs
+  const composedRef = (node: HTMLDivElement | null) => {
+    contentRef.current = node;
+    if (typeof forwardedRef === 'function') {
+      forwardedRef(node);
+    } else if (forwardedRef) {
+      forwardedRef.current = node;
+    }
+  };
+
+  // Handle click outside
+  useEffect(() => {
+    const handleClickOutside = (event: Event) => {
+      if (!open || !closeOnOutsideClick) return;
+      const target = event.target as Node;
+      const isOutsideContent = contentRef.current && !contentRef.current.contains(target);
+      const isOutsideTrigger = triggerRef.current && !triggerRef.current.contains(target);
+
+      if (isOutsideContent && isOutsideTrigger) {
+        onOpenChange(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [open, closeOnOutsideClick, onOpenChange, triggerRef]);
+
+  // Handle escape key
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (!open) return;
+      if (event.key === 'Escape') {
+        onOpenChange(false);
+        triggerRef.current?.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleEscape);
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [open, onOpenChange, triggerRef]);
+
+  if (!open) return null;
+
+  return (
+    <Listbox
+      className={clsx('rhc-language-navigation__content', className)}
+      data-state={open ? 'open' : 'closed'}
+      id={contentId}
+      ref={composedRef}
+      role="listbox"
+      {...restProps}
+    >
+      {children}
+    </Listbox>
+  );
+};
+Content.displayName = 'LanguageNavigation.Content';
+
+/* -------------------------------------------------------------------------------------------------
+ * Option
+ * -----------------------------------------------------------------------------------------------*/
+
+export interface LanguageNavigationOptionProps extends Omit<ListboxOptionProps, 'ref' | 'selected'> {
+  /** The language code (e.g., 'nl', 'en') */
+  lang: string;
+  /** The language name in that language (e.g., 'Nederlands', 'English') */
+  languageName: string;
+  /** The language name in the selected language (e.g., 'Dutch', 'Engels') */
+  localLanguageName?: string;
+  /** Link href for navigation */
+  href?: string;
+  /** Close content after selecting this option */
+  closeOnSelect?: boolean;
+  ref?: Ref<HTMLLIElement>;
+}
+
+/**
+ * Individual language option. Displays the language name and optionally the local translation.
+ * Handles selection state and close-on-select behavior.
+ */
+export const Option = ({
+  children,
+  lang,
+  languageName,
+  localLanguageName,
+  href = '#',
+  closeOnSelect = true,
+  className,
+  onClick,
+  ref,
+  ...restProps
+}: PropsWithChildren<LanguageNavigationOptionProps>) => {
+  const context = useLanguageNavigationContext('Option');
+  const { selectedLanguage, onLanguageChange, onOpenChange } = context;
+  const isSelected = languageName === selectedLanguage;
+
+  const handleClick = (event: MouseEvent<HTMLLIElement>) => {
+    onLanguageChange(languageName);
+    if (closeOnSelect) {
+      onOpenChange(false);
+    }
+    onClick?.(event);
+  };
+
+  return (
+    <ListboxOption
+      aria-selected={isSelected}
+      className={clsx('rhc-language-navigation__option', className)}
+      ref={ref}
+      selected={isSelected}
+      {...restProps}
+      onClick={handleClick}
+    >
+      {children ?? (
+        <Link className="rhc-language-navigation__link" href={href}>
+          <span lang={lang}>{languageName}</span>
+          {!isSelected && localLanguageName && (
+            <span className="rhc-language-navigation__local-language"> ({localLanguageName})</span>
+          )}
+        </Link>
+      )}
+    </ListboxOption>
+  );
+};
+Option.displayName = 'LanguageNavigation.Option';
+
+/* -------------------------------------------------------------------------------------------------
+ * Compound Component Export
+ * -----------------------------------------------------------------------------------------------*/
+
+export const LanguageNavigation = {
+  Root,
+  Trigger,
+  Content,
+  Option,
+};
