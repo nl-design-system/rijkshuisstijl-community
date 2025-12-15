@@ -55,6 +55,7 @@ const meta = {
     label: 'Label',
     href: '#',
     icon: 'activiteit',
+    iconCta: 'chevron-right',
   },
   render: (args: NavigationListItemProps) => (
     <NavigationList>
