@@ -1,10 +1,8 @@
 import clsx from 'clsx';
 import {
   createContext,
-  forwardRef,
   HTMLAttributes,
   MouseEvent,
-  MutableRefObject,
   PropsWithChildren,
   Ref,
   RefObject,
@@ -143,7 +141,7 @@ Root.displayName = 'LanguageNavigation.Root';
  * Trigger
  * -----------------------------------------------------------------------------------------------*/
 
-export interface LanguageNavigationTriggerProps extends Omit<LinkButtonProps, 'ref'> {
+export interface LanguageNavigationTriggerProps extends LinkButtonProps {
   /** Show chevron icon indicating open/closed state */
   showIcon?: boolean;
   ref?: Ref<HTMLButtonElement>;
@@ -151,42 +149,48 @@ export interface LanguageNavigationTriggerProps extends Omit<LinkButtonProps, 'r
 
 /**
  * Trigger button that toggles the language navigation content visibility.
- * Automatically displays the selected language and handles ARIA attributes.
+ * Automatically displays the selected language.
  */
-export const Trigger = forwardRef<HTMLButtonElement, PropsWithChildren<LanguageNavigationTriggerProps>>(
-  ({ children, showIcon = true, className, onClick, ...restProps }, forwardedRef) => {
-    const context = useLanguageNavigationContext('Trigger');
-    const { open, onOpenToggle, contentId, triggerRef, selectedLanguage } = context;
+export const Trigger = ({
+  children,
+  showIcon = true,
+  className,
+  onClick,
+  ref,
+  ...restProps
+}: PropsWithChildren<LanguageNavigationTriggerProps>) => {
+  const forwardedRef = ref;
+  const context = useLanguageNavigationContext('Trigger');
+  const { open, onOpenToggle, contentId, triggerRef, selectedLanguage } = context;
 
-    // Compose refs
-    const composedRef = (node: HTMLButtonElement | null) => {
-      (triggerRef as MutableRefObject<HTMLButtonElement | null>).current = node;
-      if (typeof forwardedRef === 'function') {
-        forwardedRef(node);
-      } else if (forwardedRef) {
-        forwardedRef.current = node;
-      }
-    };
+  // Compose refs
+  const composedRef = (node: HTMLButtonElement | null) => {
+    triggerRef.current = node;
+    if (typeof forwardedRef === 'function') {
+      forwardedRef(node);
+    } else if (forwardedRef) {
+      forwardedRef.current = node;
+    }
+  };
 
-    const handleClick = (event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
-      onOpenToggle();
-      onClick?.(event as MouseEvent<HTMLButtonElement>);
-    };
+  const handleClick = (event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+    onOpenToggle();
+    onClick?.(event as MouseEvent<HTMLButtonElement>);
+  };
 
-    return (
-      <LinkButton
-        aria-controls={contentId}
-        aria-expanded={open}
-        className={clsx('rhc-language-navigation__trigger', className)}
-        data-state={open ? 'open' : 'closed'}
-        ref={composedRef}
-        {...restProps}
-        onClick={handleClick}
-      >
-        {children ?? selectedLanguage}
-        {showIcon && <Icon icon={open ? 'chevron-up' : 'chevron-down'} />}
-      </LinkButton>
-    );
-  },
-);
+  return (
+    <LinkButton
+      aria-controls={contentId}
+      aria-expanded={open}
+      className={clsx('rhc-language-navigation__trigger', className)}
+      data-state={open ? 'open' : 'closed'}
+      ref={composedRef}
+      {...restProps}
+      onClick={handleClick}
+    >
+      {children ?? selectedLanguage}
+      {showIcon && <Icon icon={open ? 'chevron-up' : 'chevron-down'} />}
+    </LinkButton>
+  );
+};
 Trigger.displayName = 'LanguageNavigation.Trigger';
