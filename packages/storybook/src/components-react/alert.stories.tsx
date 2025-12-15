@@ -42,8 +42,7 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    figma:
-      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1195-4201&t=n1djYpmvDCKmAEUi-0',
+    figma: 'https://www.figma.com/design/Q5Imc7Xi9KnBQhcYI3Hytj/NL-Design-System---RHC-Bibliotheek?node-id=1179-3892',
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Alert.tsx',
     nldesignsystem: 'https://www.nldesignsystem.nl/alert/',
