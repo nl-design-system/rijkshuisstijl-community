@@ -1,3 +1,8 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2025 Community for NL Design System
+ */
+
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import {
   BreadcrumbNav,
