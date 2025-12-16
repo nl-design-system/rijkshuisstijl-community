@@ -14,7 +14,7 @@
   // styles as default text with background
 }
 
-@mixin rhc-language-navigation--link {
+@mixin rhc-language-navigation__link {
   // move to tokens later
   --nl-link-text-decoration-line: var(
     --rhc-language-navigation-link-text-decoration-line,
@@ -30,6 +30,6 @@
   padding-inline-start: var(--rhc-language-navigation-link-padding-inline-start, var(--rhc-space-200));
 }
 
-@mixin rhc-language-navigation--local-language {
+@mixin rhc-language-navigation__local-language {
   color: var(--rhc-language-navigation-local-language-color, var(--rhc-color-cool-grey-500));
 }
