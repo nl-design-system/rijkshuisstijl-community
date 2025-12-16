@@ -4775,66 +4775,34 @@
   "components/navigation-list": {
     "rhc": {
       "navigation-list": {
-        "icon": {
+        "item": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.foreground.default}"
+            "$value": "{rhc.color.bg-document}"
           },
-          "border-radius": {
-            "$type": "dimension",
-            "$value": "{rhc.border-radius.round}"
-          },
-          "color": {
+          "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
-          }
-        },
-        "item": {
-          "icon": {
-            "padding-inline": {
-              "$type": "dimension",
-              "$value": "{rhc.space.100}"
-            },
-            "padding-block": {
-              "$type": "dimension",
-              "$value": "{rhc.space.100}"
-            },
-            "size": {
-              "$type": "dimension",
-              "$value": "{rhc.size.icon.md}"
-            }
+            "$value": "{rhc.color.cool-grey.300}"
           },
-          "content": {
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "{rhc.text.font-size.md}"
-            },
-            "column-gap": {
-              "$type": "dimension",
-              "$value": "{rhc.space.100}"
-            },
-            "row-gap": {
-              "$type": "dimension",
-              "$value": "{rhc.space.50}"
-            }
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{rhc.border-width.sm}"
           },
-          "label": {
-            "font-family": {
-              "$type": "fontFamilies",
-              "$value": "{rhc.text.font-family.default}"
-            },
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "{rhc.text.font-size.xl}"
-            },
-            "font-weight": {
-              "$type": "fontWeights",
-              "$value": "{rhc.text.font-weight.strong}"
-            },
-            "line-height": {
-              "$type": "lineHeights",
-              "$value": "{rhc.text.line-height.md}"
-            }
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.200}"
+          },
+          "min-height": {
+            "$type": "dimension",
+            "$value": "{rhc.size.pointer-target}"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{rhc.space.150}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.200}"
           },
           "active": {
             "background-color": {
@@ -4854,43 +4822,85 @@
               "$value": "{rhc.color.primary.50}"
             }
           },
-          "background-color": {
-            "$type": "color",
-            "$value": "{rhc.color.bg-document}"
+          "content": {
+            "column-gap": {
+              "$type": "dimension",
+              "$value": "{rhc.space.100}",
+              "$description": "[code-only]"
+            },
+            "row-gap": {
+              "$type": "dimension",
+              "$value": "{rhc.space.50}",
+              "$description": "[code-only]"
+            }
           },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.subtle}"
+          "description": {
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.subtle}"
+            },
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "{rhc.text.font-size.md}"
+            },
+            "line-height": {
+              "$type": "lineHeights",
+              "$value": "{rhc.text.line-height.md}"
+            }
           },
-          "border-width": {
-            "$type": "dimension",
-            "$value": "{rhc.border-width.sm}"
+          "icon-end": {
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.subtle}"
+            }
           },
-          "border-color": {
-            "$type": "color",
-            "$value": "{rhc.color.cool-grey.300}"
+          "icon-start": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.default}"
+            },
+            "border-radius": {
+              "$type": "dimension",
+              "$value": "{rhc.border-radius.round}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.on-dark-color}"
+            },
+            "padding-block": {
+              "$type": "dimension",
+              "$value": "{rhc.space.100}"
+            },
+            "padding-inline": {
+              "$type": "dimension",
+              "$value": "{rhc.space.100}"
+            },
+            "size": {
+              "$type": "dimension",
+              "$value": "{rhc.size.icon.md}"
+            }
           },
-          "heading": {
+          "label": {
             "color": {
               "$type": "color",
               "$value": "{rhc.color.foreground.default}"
+            },
+            "font-family": {
+              "$type": "fontFamilies",
+              "$value": "{rhc.text.font-family.default}"
+            },
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "{rhc.text.font-size.xl}"
+            },
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{rhc.text.font-weight.strong}"
+            },
+            "line-height": {
+              "$type": "lineHeights",
+              "$value": "{rhc.text.line-height.md}"
             }
-          },
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{rhc.space.200}"
-          },
-          "min-height": {
-            "$type": "dimension",
-            "$value": "{rhc.size.pointer-target}"
-          },
-          "padding-block": {
-            "$type": "dimension",
-            "$value": "{rhc.space.150}"
-          },
-          "padding-inline": {
-            "$type": "dimension",
-            "$value": "{rhc.space.200}"
           }
         }
       }
