@@ -1,0 +1,8 @@
+{%- if id is defined -%}{%- set attributes = attributes.setAttribute('id', id) -%}{%- endif -%}
+{%- if name is defined -%}{%- set attributes = attributes.setAttribute('name', name) -%}{%- endif -%}
+{%- if type is defined -%}{%- set attributes = attributes.setAttribute('type', type) -%}{%- endif -%}
+{%- if value is defined -%}{%- set attributes = attributes.setAttribute('value', value) -%}{%- endif -%}
+{%- if pattern is defined -%}{%- set attributes = attributes.setAttribute('pattern', pattern) -%}{%- endif -%}
+{%- if required is defined and required == 'true' -%}{%- set attributes = attributes.setAttribute('required', 'required') -%}{%- endif -%}
+{%- if disabled is defined and disabled == 'true' -%}{%- set attributes = attributes.setAttribute('disabled', 'disabled') -%}{%- endif -%}
+<input {{ attributes }} />{{children }}
