@@ -2,3 +2,10 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
+
+@mixin rhc-blockquote__quote {
+  margin-block-end: var(--utrecht-blockquote-margin-block-end, var(--rhc-blockquote-margin-block-end));
+  margin-block-start: var(--utrecht-blockquote-margin-block-start, var(--rhc-blockquote-margin-block-start));
+  margin-inline-end: var(--utrecht-blockquote-margin-inline-end, var(--rhc-blockquote-margin-inline-end));
+  margin-inline-start: var(--utrecht-blockquote-margin-inline-start, var(--rhc-blockquote-margin-inline-start));
+}
