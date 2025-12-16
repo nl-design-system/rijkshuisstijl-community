@@ -4676,6 +4676,20 @@
               "background-color": {
                 "$type": "color",
                 "$value": "{rhc.color.cool-grey.300}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{rhc.color.foreground.default}"
+              }
+            },
+            "disabled": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{rhc.color.cool-grey.200}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{rhc.color.foreground.default}"
               }
             }
           },
@@ -4772,6 +4786,12 @@
           "line-height": {
             "$type": "lineHeights",
             "$value": "{rhc.text.line-height.md}"
+          }
+        },
+        "icon": {
+          "size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.icon.md}"
           }
         }
       }
