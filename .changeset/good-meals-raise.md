@@ -5,4 +5,4 @@
 '@rijkshuisstijl-community/web-components': major
 ---
 
-Added licenses to blockquote source code and removed unused class and tokens
+Added licenses to Blockquote source code
