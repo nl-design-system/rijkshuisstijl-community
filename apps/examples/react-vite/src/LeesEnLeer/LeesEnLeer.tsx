@@ -5,7 +5,7 @@ import { CardAsLink, Heading } from '@rijkshuisstijl-community/components-react'
 export function LeesEnLeer() {
   return (
     <>
-      <Heading appearanceLevel={1} level={1}>
+      <Heading appearanceLevel={2} level={2}>
         Lees en leer
       </Heading>
       

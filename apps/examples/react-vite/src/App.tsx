@@ -1,6 +1,6 @@
 import '@rijkshuisstijl-community/design-tokens/dist/index.css'; // design tokens importeren
 import '@rijkshuisstijl-community/components-css/dist/index.css';
-import { Card, PageContent, Hero, Paragraph, ColumnLayout, Link } from '@rijkshuisstijl-community/components-react';
+import { Card, PageContent, Hero, Paragraph, Link } from '@rijkshuisstijl-community/components-react';
 
 import './App.css';
 
@@ -23,17 +23,22 @@ function App() {
             imageAlt="Tullip field"
             imageSrc="src/placeholder.jpg"
           />
-
-          <ColumnLayout className='column-layout__paragraph'>
-            <Paragraph>De Rijkshuisstijl Community is een samenwerkingsverband om <Link
-    href="https://example.com/"
-    inline
-  >
-    NL Design System-componenten 
-  </Link> te gebruiken voor projecten die moeten voldoen aan de Rijkshuisstijl.
-          De community bestaat uit organisaties van de centrale overheid van Nederland en leveranciers die zijn ingehuurd voor het ontwikkelen van websites en apps. Doe jij ook mee?</Paragraph>
-          </ColumnLayout>
-          
+         
+            <div className="column-layout__paragraph" >
+              <Paragraph>
+                De Rijkshuisstijl Community is een samenwerkingsverband om{' '}
+                <Link href="https://example.com/" inline>
+                  NL Design System-componenten
+                </Link>{' '}
+                te gebruiken voor projecten die moeten voldoen aan de Rijkshuisstijl. 
+                </Paragraph>
+                <Paragraph>
+                De community bestaat uit
+                organisaties van de centrale overheid van Nederland en leveranciers die zijn ingehuurd voor het
+                ontwikkelen van websites en apps. Doe jij ook mee?
+              </Paragraph>
+            </div>
+      
 
           <div className="card-doelen">
             <Card
@@ -52,7 +57,7 @@ function App() {
 
           <InDePraktijk />
           <LeesEnLeer />
-          {/* <KomInContavt card as a link werkt niet /> */}
+          {/* <KomInContact card as a link werkt niet /> */}
         </PageContent>
         <Footer />
       </PageBody>

@@ -1,35 +1,8 @@
-import { Icon, Logo, NavBar, type NavBarItemProps, PageHeader } from '@rijkshuisstijl-community/components-react';
+import { Icon, Logo, NavBar , PageHeader } from '@rijkshuisstijl-community/components-react';
+
+import './index.css'
 
 export function Header() {
-  const items: NavBarItemProps[] = [
-    {
-      id: 'start1',
-      href: '/',
-      label: 'Homepage',
-      className: 'rhc-nav-bar__link--current',
-    },
-    {
-      id: 'start2',
-      href: '/',
-      label: 'Koop',
-    },
-    {
-      id: 'start3',
-      href: '/',
-      label: 'Documentatie',
-    },
-    {
-      id: 'start4',
-      href: '/',
-      label: 'Communicatie',
-    },
-    {
-      id: 'start5',
-      href: '/',
-      label: 'Regelingen',
-    },
-  ];
-
   return (
     <>
       <PageHeader>
@@ -44,8 +17,43 @@ export function Header() {
         >
           <Icon icon="nederland-map" />
         </Logo>
-
-        <NavBar items={items} />
+        <NavBar className='rhc-nav-bar'
+        endItems={[
+    {
+      href: '/',
+      id: 'end-first-link',
+      label: 'Figma'
+    },
+    {
+      href: '/',
+      id: 'end-second-link',
+      label: 'Github'
+    },
+    {
+      href: '/',
+      id: 'end-third-link',
+      label: 'Storybook'
+    }
+  ]}
+  items={[
+    {
+      href: '/',
+      id: 'first-link',
+      label: 'Homepage'
+    },
+    {
+      href: '/',
+      id: 'second-link',
+      label: 'Componenten'
+    },
+    {
+      href: '/',
+      id: 'third-link',
+      label: 'Voorbeelden'
+    }
+  ]}
+    
+        />
       </PageHeader>
     </>
   );
