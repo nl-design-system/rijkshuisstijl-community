@@ -21,7 +21,7 @@ function App() {
             borderRadiusCorner="start-start"
             heading="Rijkshuisstijl Community Design System"
             imageAlt="Tullip field"
-            imageSrc="src/placeholder.jpg"
+            imageSrc="src/assets/placeholder.jpg"
           />
 
           <div className="column-layout__paragraph">
