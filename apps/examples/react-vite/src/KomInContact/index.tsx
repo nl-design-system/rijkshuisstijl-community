@@ -1,1 +1,0 @@
-// export {KomInContact} from "./KomInContact";

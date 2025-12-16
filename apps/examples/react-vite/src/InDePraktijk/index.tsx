@@ -1,1 +1,1 @@
-export {InDePraktijk} from "./InDePraktijk";
+export { InDePraktijk } from './InDePraktijk';

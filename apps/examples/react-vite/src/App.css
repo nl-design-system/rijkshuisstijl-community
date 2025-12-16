@@ -4,43 +4,47 @@
   --rhc-card-active-text-decoration: none;
   --utrecht-page-body-background-color: #f3f3f3;
 }
-  
 
-.card-doelen{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    padding:48px 0;
-    width: 100%;
+body {
+  margin: 0;
 }
 
-/* .rhc-card{
-  inline-size: 100%!important;
+.card-doelen {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 48px 0;
+  width: 100%;
 }
-.rhc-card:hover .rhc-card__heading {
-  text-decoration: none!important;
-} */
 
-.page-content{
-  max-width: 1280px;
-  margin:1px auto;
+.page-content {
+  max-inline-size: 64rem;
+  margin: 0 auto;
   gap: 20px;
- 
+  --utrecht-page-content-padding-block-end: var(--rhc-space-400);
+  --utrecht-page-content-padding-block-start: var(--rhc-space-400);
+  --utrecht-page-padding-inline-end: var(--rhc-space-200);
+  --utrecht-page-padding-inline-start: var(--rhc-space-200);
+}
+
+@media (width >= 780px) {
+  .page-content {
+    --utrecht-page-content-padding-block-end: var(--rhc-space-600);
+    --utrecht-page-content-padding-block-start: var(--rhc-space-600);
+    --utrecht-page-padding-inline-end: var(--rhc-space-700);
+    --utrecht-page-padding-inline-start: var(--rhc-space-700);
+  }
 }
 
 .page-content-container {
- background-color: #f3f3f3;
- padding: 48px ;
- 
+  background-color: #f3f3f3;
+  padding: 48px;
 }
-
 
 .column-layout__paragraph {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    padding:24px 0;
-    width: 100%;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 24px 0;
+  width: 100%;
 }
-

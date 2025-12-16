@@ -1,1 +1,1 @@
-export {LeesEnLeer} from "./LeesEnLeer";
+export { LeesEnLeer } from './LeesEnLeer';

@@ -1,6 +1,5 @@
-import './LeesEnLeer.css'
+import './LeesEnLeer.css';
 import { CardAsLink, Heading } from '@rijkshuisstijl-community/components-react';
-
 
 export function LeesEnLeer() {
   return (
@@ -8,8 +7,8 @@ export function LeesEnLeer() {
       <Heading appearanceLevel={2} level={2}>
         Lees en leer
       </Heading>
-      
-      <div className='card-layout'>
+
+      <div className="card-layout">
         <CardAsLink
           description="We zijn blij dat je ons team komt versterken. Met deze app helpen we bij de voorbereiding op je eerste dag en de eerste weken dat je aan het werk bent. Zo vind je snel je weg binnen onze organisatie. Doorloop de app waar en wanneer jij wilt. Je ziet op deze pagina ook een aantal reminders staan, jouw buddy kan jou helpen met deze acties.
  "
