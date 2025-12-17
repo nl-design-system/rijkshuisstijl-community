@@ -1,3 +1,8 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2025 Community for NL Design System
+ */
+
 import clsx from 'clsx';
 import {
   createContext,
@@ -268,7 +273,7 @@ export const Content = ({
 
   return (
     <ul
-      className={clsx('rhc-language-navigation__content', className)}
+      className={clsx('rhc-language-navigation__list', className)}
       data-state={open ? 'open' : 'closed'}
       id={contentId}
       ref={composedRef}
@@ -329,9 +334,9 @@ export const Item = ({
     <li
       ref={ref}
       className={clsx(
-        'rhc-listbox__item rhc-listbox__item--html-li',
+        'rhc-language-navigation__list__item rhc-language-navigation__list__item--html-li',
         {
-          'rhc-listbox__item--selected': isSelected,
+          'rhc-language-navigation__list__item--selected': isSelected,
         },
         className,
       )}

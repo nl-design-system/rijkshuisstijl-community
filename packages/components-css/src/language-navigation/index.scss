@@ -1,20 +1,23 @@
 /**
  * @license EUPL-1.2
- * Copyright (c) 2021 Community for NL Design System
+ * Copyright (c) 2025 Community for NL Design System
  */
-// If needed to extend the Utrecht component add styles here.
 @use "mixin";
 
-.rhc-listbox__item {
-  @include mixin.rhc-listbox__item;
+.rhc-language-navigation__list {
+  @include mixin.rhc-language-navigation__list;
 }
 
-.rhc-listbox__item--html-li {
-  @include mixin.rhc-listbox__item--html-li;
+.rhc-language-navigation__list__item {
+  @include mixin.rhc-language-navigation__list__item;
 }
 
-.rhc-listbox__item--selected {
-  @include mixin.rhc-listbox__item--selected;
+.rhc-language-navigation__list__item--html-li {
+  @include mixin.rhc-language-navigation__list__item--html-li;
+}
+
+.rhc-language-navigation__list__item--selected {
+  @include mixin.rhc-language-navigation__list__item--selected;
 }
 
 .rhc-language-navigation__link {

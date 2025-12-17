@@ -1,18 +1,20 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2025 Community for NL Design System
+ */
+
 @use "@utrecht/listbox-css/src/mixin" as utrecht-listbox-mixin;
 
-@mixin rhc-language-navigation {
-  // listbox max width adjustment
+@mixin rhc-language-navigation__list {
+  @include utrecht-listbox-mixin.utrecht-listbox;
+  @include utrecht-listbox-mixin.reset-ul;
 }
 
-@mixin rhc-language-navigation--listbox {
-  // listbox max width adjustment
-}
-
-@mixin rhc-listbox__item {
+@mixin rhc-language-navigation__list__item {
   @include utrecht-listbox-mixin.utrecht-listbox__option;
 }
 
-@mixin rhc-listbox__item--html-li {
+@mixin rhc-language-navigation__list__item--html-li {
   @include utrecht-listbox-mixin.reset-li;
 
   &:hover {
@@ -24,7 +26,7 @@
   }
 }
 
-@mixin rhc-listbox__item--selected {
+@mixin rhc-language-navigation__list__item--selected {
   @include utrecht-listbox-mixin.utrecht-listbox__option--selected;
 }
 
