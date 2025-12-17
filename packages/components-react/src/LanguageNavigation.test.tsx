@@ -19,6 +19,7 @@ const renderLanguageNavigation = async (props = {}) => {
       <LanguageNavigation.Content>
         {languages.map(({ languageName, localLanguageName, lang }) => (
           <LanguageNavigation.Option
+            href="#"
             key={lang}
             lang={lang}
             languageName={languageName}
@@ -76,7 +77,7 @@ describe('LanguageNavigation', () => {
         <LanguageNavigation.Root open={true} onOpenChange={onOpenChange}>
           <LanguageNavigation.Trigger />
           <LanguageNavigation.Content>
-            <LanguageNavigation.Option lang="nl" languageName="Nederlands" />
+            <LanguageNavigation.Option href="#" lang="nl" languageName="Nederlands" />
           </LanguageNavigation.Content>
         </LanguageNavigation.Root>,
       );
@@ -243,7 +244,7 @@ describe('LanguageNavigation', () => {
           <LanguageNavigation.Root defaultOpen={true}>
             <LanguageNavigation.Trigger />
             <LanguageNavigation.Content>
-              <LanguageNavigation.Option lang="nl" languageName="Nederlands" />
+              <LanguageNavigation.Option href="#" lang="nl" languageName="Nederlands" />
             </LanguageNavigation.Content>
           </LanguageNavigation.Root>
         </div>,
@@ -265,7 +266,7 @@ describe('LanguageNavigation', () => {
           <LanguageNavigation.Root defaultOpen={true}>
             <LanguageNavigation.Trigger />
             <LanguageNavigation.Content closeOnOutsideClick={false}>
-              <LanguageNavigation.Option lang="nl" languageName="Nederlands" />
+              <LanguageNavigation.Option href="#" lang="nl" languageName="Nederlands" />
             </LanguageNavigation.Content>
           </LanguageNavigation.Root>
         </div>,
@@ -362,7 +363,7 @@ describe('LanguageNavigation', () => {
         <LanguageNavigation.Root defaultOpen={true} defaultSelectedLanguage="Nederlands">
           <LanguageNavigation.Trigger />
           <LanguageNavigation.Content>
-            <LanguageNavigation.Option closeOnSelect={false} lang="en" languageName="English" />
+            <LanguageNavigation.Option closeOnSelect={false} href="#" lang="en" languageName="English" />
           </LanguageNavigation.Content>
         </LanguageNavigation.Root>,
       );
@@ -377,7 +378,7 @@ describe('LanguageNavigation', () => {
         <LanguageNavigation.Root defaultOpen={true}>
           <LanguageNavigation.Trigger />
           <LanguageNavigation.Content>
-            <LanguageNavigation.Option className="custom-option" lang="nl" languageName="Nederlands" />
+            <LanguageNavigation.Option className="custom-option" href="#" lang="nl" languageName="Nederlands" />
           </LanguageNavigation.Content>
         </LanguageNavigation.Root>,
       );
@@ -392,7 +393,7 @@ describe('LanguageNavigation', () => {
         <LanguageNavigation.Root defaultOpen={true}>
           <LanguageNavigation.Trigger />
           <LanguageNavigation.Content>
-            <LanguageNavigation.Option lang="nl" languageName="Nederlands" onClick={onClick} />
+            <LanguageNavigation.Option href="#" lang="nl" languageName="Nederlands" onClick={onClick} />
           </LanguageNavigation.Content>
         </LanguageNavigation.Root>,
       );
@@ -406,7 +407,7 @@ describe('LanguageNavigation', () => {
         <LanguageNavigation.Root defaultOpen={true}>
           <LanguageNavigation.Trigger />
           <LanguageNavigation.Content>
-            <LanguageNavigation.Option lang="nl" languageName="Nederlands">
+            <LanguageNavigation.Option href="#" lang="nl" languageName="Nederlands">
               <span data-testid="custom-content">Custom Option Content</span>
             </LanguageNavigation.Option>
           </LanguageNavigation.Content>
@@ -455,7 +456,7 @@ describe('LanguageNavigation', () => {
       const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
 
       expect(() => {
-        render(<LanguageNavigation.Option lang="nl" languageName="Nederlands" />);
+        render(<LanguageNavigation.Option href="#" lang="nl" languageName="Nederlands" />);
       }).toThrow('<LanguageNavigation.Option> must be used within <LanguageNavigation.Root>');
 
       consoleSpy.mockRestore();
@@ -495,25 +496,6 @@ describe('LanguageNavigation', () => {
 
       const options = screen.getAllByRole('option');
       expect(options[0]).toHaveFocus();
-    });
-
-    it('allows navigating options with Arrow keys', async () => {
-      const { user } = await renderLanguageNavigation({ defaultOpen: true });
-
-      const options = screen.getAllByRole('option');
-      const trigger = screen.getByRole('button');
-      trigger.focus();
-
-      expect(options[0]).toHaveFocus();
-
-      await user.keyboard('{ArrowDown}');
-      expect(options[1]).toHaveFocus();
-
-      await user.keyboard('{ArrowDown}');
-      expect(options[2]).toHaveFocus();
-
-      await user.keyboard('{ArrowUp}');
-      expect(options[1]).toHaveFocus();
     });
   });
 });

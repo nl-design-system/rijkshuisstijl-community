@@ -162,8 +162,7 @@ export const Trigger = ({
   ref: forwardedRef,
   ...restProps
 }: PropsWithChildren<LanguageNavigationTriggerProps>) => {
-  const context = useLanguageNavigationContext('Trigger');
-  const { open, onOpenToggle, contentId, triggerRef, selectedLanguage } = context;
+  const { open, onOpenToggle, contentId, triggerRef, selectedLanguage } = useLanguageNavigationContext('Trigger');
 
   // Compose refs
   const composedRef = (node: HTMLButtonElement | null) => {
@@ -187,8 +186,8 @@ export const Trigger = ({
       className={clsx('rhc-language-navigation__trigger', className)}
       data-state={open ? 'open' : 'closed'}
       ref={composedRef}
-      {...restProps}
       onClick={handleClick}
+      {...restProps}
     >
       {children ?? selectedLanguage}
       {showIcon && <Icon icon={open ? 'chevron-up' : 'chevron-down'} />}
@@ -218,8 +217,7 @@ export const Content = ({
   ref: forwardedRef,
   ...restProps
 }: PropsWithChildren<LanguageNavigationContentProps>) => {
-  const context = useLanguageNavigationContext('Content');
-  const { open, onOpenChange, contentId, triggerRef } = context;
+  const { open, onOpenChange, contentId, triggerRef } = useLanguageNavigationContext('Content');
   const contentRef = useRef<HTMLDivElement>(null);
 
   // Compose refs
@@ -275,7 +273,6 @@ export const Content = ({
       data-state={open ? 'open' : 'closed'}
       id={contentId}
       ref={composedRef}
-      role="listbox"
       {...restProps}
     >
       {children}
@@ -296,7 +293,7 @@ export interface LanguageNavigationOptionProps extends Omit<ListboxOptionProps, 
   /** The language name in the selected language (e.g., 'Dutch', 'Engels') */
   localLanguageName?: string;
   /** Link href for navigation */
-  href?: string;
+  href: string;
   /** Close content after selecting this option */
   closeOnSelect?: boolean;
   ref?: Ref<HTMLLIElement>;
@@ -311,15 +308,14 @@ export const Option = ({
   lang,
   languageName,
   localLanguageName,
-  href = '#',
+  href,
   closeOnSelect = true,
   className,
   onClick,
   ref,
   ...restProps
 }: PropsWithChildren<LanguageNavigationOptionProps>) => {
-  const context = useLanguageNavigationContext('Option');
-  const { selectedLanguage, onLanguageChange, onOpenChange } = context;
+  const { selectedLanguage, onLanguageChange, onOpenChange } = useLanguageNavigationContext('Option');
   const isSelected = languageName === selectedLanguage;
 
   const handleClick = (event: MouseEvent<HTMLLIElement>) => {
@@ -336,8 +332,8 @@ export const Option = ({
       className={clsx('rhc-language-navigation__option', className)}
       ref={ref}
       selected={isSelected}
-      {...restProps}
       onClick={handleClick}
+      {...restProps}
     >
       {children ?? (
         <Link className="rhc-language-navigation__link" href={href}>
