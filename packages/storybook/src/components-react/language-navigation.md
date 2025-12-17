@@ -12,9 +12,9 @@ import { LanguageNavigation } from '@rijkshuisstijl-community/components-react';
 <LanguageNavigation.Root defaultSelectedLanguage="Nederlands">
   <LanguageNavigation.Trigger />
   <LanguageNavigation.Content>
-    <LanguageNavigation.Option lang="nl" languageName="Nederlands" />
-    <LanguageNavigation.Option lang="en" languageName="English" localLanguageName="Engels" />
-    <LanguageNavigation.Option lang="de" languageName="Deutsch" localLanguageName="Duits" />
+    <LanguageNavigation.Item lang="nl" languageName="Nederlands" />
+    <LanguageNavigation.Item lang="en" languageName="English" localLanguageName="Engels" />
+    <LanguageNavigation.Item lang="de" languageName="Deutsch" localLanguageName="Duits" />
   </LanguageNavigation.Content>
 </LanguageNavigation.Root>;
 ```
@@ -28,7 +28,7 @@ The Language Navigation uses a compound component pattern consisting of four par
 | `LanguageNavigation.Root`    | The container that manages state and provides context to child components |
 | `LanguageNavigation.Trigger` | The button that opens/closes the language list                            |
 | `LanguageNavigation.Content` | The dropdown container for language options                               |
-| `LanguageNavigation.Option`  | Individual language option                                                |
+| `LanguageNavigation.Item`    | Individual language option                                                |
 
 ## Controlled vs Uncontrolled
 
@@ -88,7 +88,7 @@ The dropdown container that holds the language options. Only renders when the na
 
 ---
 
-### LanguageNavigation.Option
+### LanguageNavigation.Item
 
 An individual language option within the dropdown.
 
@@ -124,8 +124,8 @@ The Language Navigation component follows accessibility best practices:
 <LanguageNavigation.Root defaultSelectedLanguage="Nederlands">
   <LanguageNavigation.Trigger />
   <LanguageNavigation.Content>
-    <LanguageNavigation.Option lang="nl" languageName="Nederlands" href="/nl" />
-    <LanguageNavigation.Option lang="en" languageName="English" localLanguageName="Engels" href="/en" />
+    <LanguageNavigation.Item lang="nl" languageName="Nederlands" href="/nl" />
+    <LanguageNavigation.Item lang="en" languageName="English" localLanguageName="Engels" href="/en" />
   </LanguageNavigation.Content>
 </LanguageNavigation.Root>
 ```
@@ -138,8 +138,8 @@ const [selectedLanguage, setSelectedLanguage] = useState('Nederlands');
 <LanguageNavigation.Root selectedLanguage={selectedLanguage} onLanguageChange={setSelectedLanguage}>
   <LanguageNavigation.Trigger />
   <LanguageNavigation.Content>
-    <LanguageNavigation.Option lang="nl" languageName="Nederlands" />
-    <LanguageNavigation.Option lang="en" languageName="English" localLanguageName="Engels" />
+    <LanguageNavigation.Item lang="nl" languageName="Nederlands" />
+    <LanguageNavigation.Item lang="en" languageName="English" localLanguageName="Engels" />
   </LanguageNavigation.Content>
 </LanguageNavigation.Root>;
 ```
