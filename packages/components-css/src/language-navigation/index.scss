@@ -5,6 +5,18 @@
 // If needed to extend the Utrecht component add styles here.
 @use "mixin";
 
+.rhc-listbox__item {
+  @include mixin.rhc-listbox__item;
+}
+
+.rhc-listbox__item--html-li {
+  @include mixin.rhc-listbox__item--html-li;
+}
+
+.rhc-listbox__item--selected {
+  @include mixin.rhc-listbox__item--selected;
+}
+
 .rhc-language-navigation__link {
   @include mixin.rhc-language-navigation__link;
 }

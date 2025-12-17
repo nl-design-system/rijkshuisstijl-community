@@ -1,3 +1,5 @@
+@use "@utrecht/listbox-css/src/mixin" as utrecht-listbox-mixin;
+
 @mixin rhc-language-navigation {
   // listbox max width adjustment
 }
@@ -6,12 +8,24 @@
   // listbox max width adjustment
 }
 
-@mixin rhc-language-navigation--list-item {
-  // styles as default text with background
+@mixin rhc-listbox__item {
+  @include utrecht-listbox-mixin.utrecht-listbox__option;
 }
 
-@mixin rhc-language-navigation--list-item__selected {
-  // styles as default text with background
+@mixin rhc-listbox__item--html-li {
+  @include utrecht-listbox-mixin.reset-li;
+
+  &:hover {
+    @include utrecht-listbox-mixin.utrecht-listbox__option--hover;
+  }
+
+  &:focus {
+    @include utrecht-listbox-mixin.utrecht-listbox__option--focus;
+  }
+}
+
+@mixin rhc-listbox__item--selected {
+  @include utrecht-listbox-mixin.utrecht-listbox__option--selected;
 }
 
 @mixin rhc-language-navigation__link {

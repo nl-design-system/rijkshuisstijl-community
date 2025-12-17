@@ -86,7 +86,7 @@ export { Image, type ImageProps } from './Image';
 export {
   LanguageNavigation,
   type LanguageNavigationContentProps,
-  type LanguageNavigationOptionProps,
+  type LanguageNavigationItemProps,
   type LanguageNavigationRootProps,
   type LanguageNavigationTriggerProps,
 } from './LanguageNavigation';

@@ -16,7 +16,6 @@ import {
 import { Icon } from './Icon';
 import { Link } from './Link';
 import { LinkButton, LinkButtonProps } from './LinkButton';
-import { ListboxOptionProps, ListboxProps } from './Listbox';
 
 /* -------------------------------------------------------------------------------------------------
  * Context
@@ -200,10 +199,10 @@ Trigger.displayName = 'LanguageNavigation.Trigger';
  * Content
  * -----------------------------------------------------------------------------------------------*/
 
-export interface LanguageNavigationContentProps extends Omit<ListboxProps, 'ref'> {
+export interface LanguageNavigationContentProps extends Omit<HTMLAttributes<HTMLUListElement>, 'id'> {
   /** Close content when clicking outside */
   closeOnOutsideClick?: boolean;
-  ref?: Ref<HTMLDivElement>;
+  ref?: Ref<HTMLUListElement>;
 }
 
 /**
@@ -218,10 +217,10 @@ export const Content = ({
   ...restProps
 }: PropsWithChildren<LanguageNavigationContentProps>) => {
   const { open, onOpenChange, contentId, triggerRef } = useLanguageNavigationContext('Content');
-  const contentRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLUListElement>(null);
 
   // Compose refs
-  const composedRef = (node: HTMLDivElement | null) => {
+  const composedRef = (node: HTMLUListElement | null) => {
     contentRef.current = node;
     if (typeof forwardedRef === 'function') {
       forwardedRef(node);
@@ -268,24 +267,24 @@ export const Content = ({
   if (!open) return null;
 
   return (
-    <div
+    <ul
       className={clsx('rhc-language-navigation__content', className)}
       data-state={open ? 'open' : 'closed'}
       id={contentId}
       ref={composedRef}
       {...restProps}
     >
-      <ul>{children}</ul>
-    </div>
+      {children}
+    </ul>
   );
 };
 Content.displayName = 'LanguageNavigation.Content';
 
 /* -------------------------------------------------------------------------------------------------
- * Option
+ * Item
  * -----------------------------------------------------------------------------------------------*/
 
-export interface LanguageNavigationOptionProps extends Omit<ListboxOptionProps, 'ref' | 'selected'> {
+export interface LanguageNavigationItemProps extends HTMLAttributes<HTMLLIElement> {
   /** The language code (e.g., 'nl', 'en') */
   lang: string;
   /** The language name in that language (e.g., 'Nederlands', 'English') */
@@ -294,16 +293,16 @@ export interface LanguageNavigationOptionProps extends Omit<ListboxOptionProps, 
   localLanguageName?: string;
   /** Link href for navigation */
   href: string;
-  /** Close content after selecting this option */
+  /** Close content after selecting this item */
   closeOnSelect?: boolean;
   ref?: Ref<HTMLLIElement>;
 }
 
 /**
- * Individual language option. Displays the language name and optionally the local translation.
+ * Individual language item. Displays the language name and optionally the local translation.
  * Handles selection state and close-on-select behavior.
  */
-export const Option = ({
+export const Item = ({
   children,
   lang,
   languageName,
@@ -314,8 +313,8 @@ export const Option = ({
   onClick,
   ref,
   ...restProps
-}: PropsWithChildren<LanguageNavigationOptionProps>) => {
-  const { selectedLanguage, onLanguageChange, onOpenChange } = useLanguageNavigationContext('Option');
+}: PropsWithChildren<LanguageNavigationItemProps>) => {
+  const { selectedLanguage, onLanguageChange, onOpenChange } = useLanguageNavigationContext('Item');
   const isSelected = languageName === selectedLanguage;
 
   const handleClick = (event: MouseEvent<HTMLLIElement>) => {
@@ -330,9 +329,9 @@ export const Option = ({
     <li
       ref={ref}
       className={clsx(
-        'utrecht-listbox__option utrecht-listbox__option--html-li',
+        'rhc-listbox__item rhc-listbox__item--html-li',
         {
-          'utrecht-listbox__option--selected': isSelected,
+          'rhc-listbox__item--selected': isSelected,
         },
         className,
       )}
@@ -340,7 +339,7 @@ export const Option = ({
       {...restProps}
     >
       {children ?? (
-        <Link className="rhc-language-navigation__link" href={href}>
+        <Link aria-current={isSelected ? 'page' : undefined} className="rhc-language-navigation__link" href={href}>
           <span lang={lang}>{languageName}</span>
           {!isSelected && localLanguageName && (
             <span className="rhc-language-navigation__local-language"> ({localLanguageName})</span>
@@ -350,7 +349,7 @@ export const Option = ({
     </li>
   );
 };
-Option.displayName = 'LanguageNavigation.Option';
+Item.displayName = 'LanguageNavigation.Item';
 
 /* -------------------------------------------------------------------------------------------------
  * Compound Component Export
@@ -360,5 +359,5 @@ export const LanguageNavigation = {
   Root,
   Trigger,
   Content,
-  Option,
+  Item,
 };
