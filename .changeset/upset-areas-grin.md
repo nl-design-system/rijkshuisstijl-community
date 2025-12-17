@@ -1,6 +1,6 @@
 ---
-'@rijkshuisstijl-community/components-react': minor
-'@rijkshuisstijl-community/web-components': minor
+'@rijkshuisstijl-community/components-react': major
+'@rijkshuisstijl-community/web-components': major
 ---
 
 Added licenses to the breadcrumb navigation source code.
