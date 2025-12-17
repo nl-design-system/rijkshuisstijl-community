@@ -143,15 +143,3 @@ const [selectedLanguage, setSelectedLanguage] = useState('Nederlands');
   </LanguageNavigation.Content>
 </LanguageNavigation.Root>;
 ```
-
-### Custom trigger content
-
-```jsx
-<LanguageNavigation.Root defaultSelectedLanguage="Nederlands">
-  <LanguageNavigation.Trigger>🌐 Choose language</LanguageNavigation.Trigger>
-  <LanguageNavigation.Content>
-    <LanguageNavigation.Option lang="nl" languageName="Nederlands" />
-    <LanguageNavigation.Option lang="en" languageName="English" />
-  </LanguageNavigation.Content>
-</LanguageNavigation.Root>
-```
