@@ -17,7 +17,7 @@ export function InDePraktijk() {
           heading="React"
           href="#"
           imageAlt="Placeholder Image"
-          imageSrc="src/placeholder.jpg"
+          imageSrc="src/assets/placeholder.jpg"
           title="Card Title"
         />
         <CardAsLink
@@ -25,7 +25,7 @@ export function InDePraktijk() {
           heading="CSS"
           href="#"
           imageAlt="Placeholder Image"
-          imageSrc="src/placeholder.jpg"
+          imageSrc="src/assets/placeholder.jpg"
           title="Card Title"
         />
         <CardAsLink
@@ -33,7 +33,7 @@ export function InDePraktijk() {
           heading="Web Components"
           href="#"
           imageAlt="Placeholder Image"
-          imageSrc="src/placeholder.jpg"
+          imageSrc="src/assets/placeholder.jpg"
           title="Card Title"
         />
 
@@ -42,7 +42,7 @@ export function InDePraktijk() {
           heading="Design Tokens"
           href="#"
           imageAlt="Placeholder Image"
-          imageSrc="src/placeholder.jpg"
+          imageSrc="src/assets/placeholder.jpg"
           title="Card Title"
         />
 
@@ -51,7 +51,7 @@ export function InDePraktijk() {
           heading="Spring bord"
           href="#"
           imageAlt="Placeholder Image"
-          imageSrc="src/placeholder.jpg"
+          imageSrc="src/assets/placeholder.jpg"
           title="Card Title"
         />
       </div>
