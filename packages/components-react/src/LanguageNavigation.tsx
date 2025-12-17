@@ -16,7 +16,7 @@ import {
 import { Icon } from './Icon';
 import { Link } from './Link';
 import { LinkButton, LinkButtonProps } from './LinkButton';
-import { Listbox, ListboxOption, ListboxOptionProps, ListboxProps } from './Listbox';
+import { ListboxOptionProps, ListboxProps } from './Listbox';
 
 /* -------------------------------------------------------------------------------------------------
  * Context
@@ -268,15 +268,15 @@ export const Content = ({
   if (!open) return null;
 
   return (
-    <Listbox
+    <div
       className={clsx('rhc-language-navigation__content', className)}
       data-state={open ? 'open' : 'closed'}
       id={contentId}
       ref={composedRef}
       {...restProps}
     >
-      {children}
-    </Listbox>
+      <ul>{children}</ul>
+    </div>
   );
 };
 Content.displayName = 'LanguageNavigation.Content';
@@ -327,11 +327,15 @@ export const Option = ({
   };
 
   return (
-    <ListboxOption
-      aria-selected={isSelected}
-      className={clsx('rhc-language-navigation__option', className)}
+    <li
       ref={ref}
-      selected={isSelected}
+      className={clsx(
+        'utrecht-listbox__option utrecht-listbox__option--html-li',
+        {
+          'utrecht-listbox__option--selected': isSelected,
+        },
+        className,
+      )}
       onClick={handleClick}
       {...restProps}
     >
@@ -343,7 +347,7 @@ export const Option = ({
           )}
         </Link>
       )}
-    </ListboxOption>
+    </li>
   );
 };
 Option.displayName = 'LanguageNavigation.Option';
