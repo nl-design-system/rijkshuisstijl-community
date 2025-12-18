@@ -152,9 +152,6 @@ export const EnglishDefault: Story = {
   ),
 };
 
-// leesrichting
-
-// Taal kiezen vs nederlands -> nederlands word herkend als taal
 export const RTLExample: Story = {
   render: (props) => (
     <div dir="rtl">

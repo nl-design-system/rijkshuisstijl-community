@@ -9,11 +9,7 @@ const meta = {
     children: 'Label',
     disabled: false,
   },
-  tags: ['autodocs'],
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Listbox.tsx',
     componentOrigin:
