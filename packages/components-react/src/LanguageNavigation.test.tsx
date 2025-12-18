@@ -483,18 +483,6 @@ describe('LanguageNavigation', () => {
 
       expect(screen.getByRole('list')).toBeInTheDocument();
     });
-
-    it.skip('focuses first option when opened via keyboard', async () => {
-      const { user } = await renderLanguageNavigation();
-
-      const trigger = screen.getByRole('button');
-      trigger.focus();
-
-      await user.keyboard('{Enter}');
-
-      const links = screen.getAllByRole('link');
-      expect(links[0]).toHaveFocus();
-    });
   });
 });
 
