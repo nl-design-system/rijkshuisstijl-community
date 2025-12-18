@@ -24,8 +24,8 @@ type Story = StoryObj<typeof meta>;
 export default meta;
 
 export const Default: Story = {
-  render: () => (
-    <LanguageNavigation.Root defaultSelectedLanguage="Nederlands">
+  render: (props) => (
+    <LanguageNavigation.Root defaultSelectedLanguage="Nederlands" {...props}>
       <LanguageNavigation.Trigger />
       <LanguageNavigation.Content>
         <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" />
@@ -37,8 +37,8 @@ export const Default: Story = {
 };
 
 export const DefaultOpen: Story = {
-  render: () => (
-    <LanguageNavigation.Root defaultOpen defaultSelectedLanguage="Nederlands">
+  render: (props) => (
+    <LanguageNavigation.Root defaultOpen defaultSelectedLanguage="Nederlands" {...props}>
       <LanguageNavigation.Trigger />
       <LanguageNavigation.Content>
         <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" />
@@ -50,8 +50,8 @@ export const DefaultOpen: Story = {
 };
 
 export const ManyLanguages: Story = {
-  render: () => (
-    <LanguageNavigation.Root defaultSelectedLanguage="Nederlands">
+  render: (props) => (
+    <LanguageNavigation.Root defaultSelectedLanguage="Nederlands" {...props}>
       <LanguageNavigation.Trigger />
       <LanguageNavigation.Content>
         <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" />
@@ -68,8 +68,8 @@ export const ManyLanguages: Story = {
 };
 
 export const WithoutIcon: Story = {
-  render: () => (
-    <LanguageNavigation.Root defaultSelectedLanguage="Nederlands">
+  render: (props) => (
+    <LanguageNavigation.Root defaultSelectedLanguage="Nederlands" {...props}>
       <LanguageNavigation.Trigger showIcon={false} />
       <LanguageNavigation.Content>
         <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" />
@@ -81,8 +81,8 @@ export const WithoutIcon: Story = {
 };
 
 export const KeepOpenOnSelect: Story = {
-  render: () => (
-    <LanguageNavigation.Root defaultOpen defaultSelectedLanguage="Nederlands">
+  render: (props) => (
+    <LanguageNavigation.Root defaultOpen defaultSelectedLanguage="Nederlands" {...props}>
       <LanguageNavigation.Trigger />
       <LanguageNavigation.Content>
         <LanguageNavigation.Item closeOnSelect={false} href="#" lang="nl" languageName="Nederlands" />
@@ -106,7 +106,7 @@ export const KeepOpenOnSelect: Story = {
 };
 
 export const Controlled: Story = {
-  render: function ControlledStory() {
+  render: (props) => {
     const [open, setOpen] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState('Nederlands');
 
@@ -125,6 +125,7 @@ export const Controlled: Story = {
           selectedLanguage={selectedLanguage}
           onLanguageChange={handleLanguageChange}
           onOpenChange={setOpen}
+          {...props}
         >
           <LanguageNavigation.Trigger />
           <LanguageNavigation.Content>
@@ -139,8 +140,8 @@ export const Controlled: Story = {
 };
 
 export const EnglishDefault: Story = {
-  render: () => (
-    <LanguageNavigation.Root defaultSelectedLanguage="English">
+  render: (props) => (
+    <LanguageNavigation.Root defaultSelectedLanguage="English" {...props}>
       <LanguageNavigation.Trigger />
       <LanguageNavigation.Content>
         <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" localLanguageName="Dutch" />
@@ -155,9 +156,9 @@ export const EnglishDefault: Story = {
 
 // Taal kiezen vs nederlands -> nederlands word herkend als taal
 export const RTLExample: Story = {
-  render: () => (
+  render: (props) => (
     <div dir="rtl">
-      <LanguageNavigation.Root defaultSelectedLanguage="العربية">
+      <LanguageNavigation.Root defaultSelectedLanguage="العربية" {...props}>
         <LanguageNavigation.Trigger />
         <LanguageNavigation.Content>
           <LanguageNavigation.Item href="#" lang="ar" languageName="العربية" />
