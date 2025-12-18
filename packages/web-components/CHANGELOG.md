@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/web-components
 
+## 4.0.0
+
+### Major Changes
+
+- bd3dd48: Added EUPL license to Accordion and Alert source code
+- 378973a: Added licenses to Blockquote source code
+- 251c67c: Added licensing information to Action group source files
+
 ## 3.1.2
 
 ### Patch Changes

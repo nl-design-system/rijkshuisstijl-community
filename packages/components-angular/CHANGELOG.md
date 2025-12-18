@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-angular
 
+## 7.0.0
+
+### Major Changes
+
+- 251c67c: Added licensing information to Action group source files
+
 ## 6.0.2
 
 ### Patch Changes
