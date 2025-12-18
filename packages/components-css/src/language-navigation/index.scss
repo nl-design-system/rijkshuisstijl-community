@@ -20,6 +20,10 @@
   @include mixin.rhc-language-navigation__list__item--selected;
 }
 
+.rhc-language-navigation__link:focus-visible {
+  @include mixin.rhc-language-navigation__link--focus-visible;
+}
+
 .rhc-language-navigation__link {
   @include mixin.rhc-language-navigation__link;
 }

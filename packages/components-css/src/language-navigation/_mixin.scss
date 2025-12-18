@@ -12,6 +12,11 @@
 
 @mixin rhc-language-navigation__list__item {
   @include utrecht-listbox-mixin.utrecht-listbox__option;
+
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
 }
 
 @mixin rhc-language-navigation__list__item--html-li {
@@ -30,20 +35,35 @@
   @include utrecht-listbox-mixin.utrecht-listbox__option--selected;
 }
 
+@mixin rhc-language-navigation__link--focus-visible {
+  @include utrecht-listbox-mixin.utrecht-listbox__option--focus-visible;
+}
+
 @mixin rhc-language-navigation__link {
   // move to tokens later
   --nl-link-text-decoration-line: var(
     --rhc-language-navigation-link-text-decoration-line,
     var(--nl-link-text-decoration-line)
   );
-  --nl-link-color: var(--rhc-language-navigation-link-color, var(--rhc-color-zwart));
+  --nl-link-color: var(--utrecht-listbox-option-color, var(--rhc-color-zwart));
 
   flex-grow: 1;
-  line-height: var(--rhc-language-navigation-link-line-height, var(--rhc-space-400));
-  padding-block-end: var(--rhc-language-navigation-link-padding-block-end, var(--rhc-space-100));
-  padding-block-start: var(--rhc-language-navigation-link-padding-block-start, var(--rhc-space-100));
-  padding-inline-end: var(--rhc-language-navigation-link-padding-inline-end, var(--rhc-space-200));
-  padding-inline-start: var(--rhc-language-navigation-link-padding-inline-start, var(--rhc-space-200));
+
+  // make the link fill the list item
+  line-height: calc(
+    var(--utrecht-listbox-option-min-block-size, var(--rhc-space-400)) - var(
+        --utrecht-listbox-option-padding-block-start,
+        var(--rhc-space-100)
+      ) - var(--utrecht-listbox-option-padding-block-end, var(--rhc-space-100))
+  );
+  padding-block-end: var(--utrecht-listbox-option-padding-block-end, var(--rhc-space-100));
+  padding-block-start: var(--utrecht-listbox-option-padding-block-start, var(--rhc-space-100));
+  padding-inline-end: var(--utrecht-listbox-option-padding-inline-end, var(--rhc-space-200));
+  padding-inline-start: var(--utrecht-listbox-option-padding-inline-start, var(--rhc-space-200));
+
+  :focus-visible {
+    @include utrecht-listbox-mixin.utrecht-listbox__option--focus-visible;
+  }
 }
 
 @mixin rhc-language-navigation__local-language {
