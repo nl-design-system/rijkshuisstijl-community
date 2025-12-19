@@ -1,16 +1,32 @@
 import '@testing-library/jest-dom/vitest';
-import { cleanup, render } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
 import { UnorderedList } from '.';
 
 describe('UnorderedList', () => {
   it('renders a visible element', () => {
-    const { container } = render(<UnorderedList />);
+    render(<UnorderedList />);
 
-    const unorderedList = container.querySelector(':only-child');
+    const unorderedList = screen.getByRole('list');
 
     expect(unorderedList).toBeInTheDocument();
     expect(unorderedList).toBeVisible();
+  });
+
+  it('applies custom classnames to <UnorderedList />', () => {
+    render(<UnorderedList className="custom-class" />);
+
+    const unorderedList = screen.getByRole('list');
+
+    expect(unorderedList).toHaveClass('custom-class');
+  });
+
+  it('applies nested classnames to <UnorderedList />', () => {
+    render(<UnorderedList nested />);
+
+    const unorderedList = screen.getByRole('list');
+
+    expect(unorderedList).toHaveClass('utrecht-unordered-list--nested');
   });
 });
 

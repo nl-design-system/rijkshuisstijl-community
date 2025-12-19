@@ -1,3 +1,7 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2025 Community for NL Design System
+ */
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { Alert, AlertProps } from '@rijkshuisstijl-community/components-react';
 import { render } from 'preact';
@@ -15,16 +19,8 @@ export class AlertWebComponent extends BaseWebComponent {
   render(): void {
     if (!this.shadowRoot) return;
 
-    const { heading, type, headinglevel, messagetext, ...restProps } = this.props;
-
     render(
-      <Alert
-        heading={(heading as AlertWebComponentAttributes['heading']) ?? 'default heading'}
-        headingLevel={(headinglevel && Number(headinglevel)) as AlertWebComponentAttributes['headingLevel']}
-        textContent={(messagetext as AlertWebComponentAttributes['textContent']) ?? 'This is a default alert message.'}
-        type={(type as AlertWebComponentAttributes['type']) ?? 'info'}
-        {...restProps}
-      >
+      <Alert {...this.props}>
         <slot />
       </Alert>,
       this.shadowRoot,

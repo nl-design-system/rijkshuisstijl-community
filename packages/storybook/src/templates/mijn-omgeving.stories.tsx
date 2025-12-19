@@ -1,16 +1,13 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import './globals.css';
 import MijnOmgeving from './mijn-omgeving';
 
 const meta = {
-  title: 'Templates/Mijn Omgeving',
+  title: 'Mijn Omgeving',
   id: 'rhc-templates-mijn-omgeving',
   component: MijnOmgeving,
   parameters: {
     layout: 'fullscreen',
-    status: {
-      type: 'UNSTABLE',
-    },
     isPage: true,
   },
 } satisfies Meta<typeof MijnOmgeving>;

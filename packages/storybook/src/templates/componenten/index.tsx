@@ -1,8 +1,9 @@
 'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
 
+import { PageNumberNavigation } from '@rijkshuisstijl-community/components-react';
 import {
   Button,
-  CardAsLink,
+  Card,
   DataBadgeButton,
   ExpandableCheckboxGroup,
   FormFieldTextInput,
@@ -14,7 +15,16 @@ import {
 import { IconCheck, IconPlus, IconSearch } from '@tabler/icons-react';
 import { BadgeList, ButtonLink, Icon } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
-import { ChangeEvent, FormEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+  AnchorHTMLAttributes,
+  ChangeEvent,
+  FormEvent,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { allComponentsData, ComponentData } from './components-data';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
@@ -78,6 +88,24 @@ export default function Componenten() {
   const [selectedFrameworks, setSelectedFrameworks] = useState<string[]>([]);
   const [stagedFrameworks, setStagedFrameworks] = useState<string[]>([]);
   const [announceMessage, setAnnounceMessage] = useState('');
+  const [currentPage, setCurrentPage] = useState(0);
+
+  // Memoize LinkComponent to prevent unnecessary re-renders
+  const LinkComponent = useCallback(
+    (props: AnchorHTMLAttributes<HTMLAnchorElement>) => (
+      <a
+        {...props}
+        onClick={onPaginationLinkClick}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            onPaginationLinkClick(event as any);
+          }
+        }}
+      />
+    ),
+    [],
+  );
 
   const resultsRef = useRef<HTMLDivElement>(null);
   const announcementRef = useRef<HTMLDivElement>(null);
@@ -86,6 +114,15 @@ export default function Componenten() {
     () => filterComponents(allComponentsData, submittedSearchTerm, selectedFrameworks),
     [submittedSearchTerm, selectedFrameworks],
   );
+
+  const maxComponentsPerPage = 5;
+
+  const onPaginationLinkClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const pageNumber = href.substring(href.lastIndexOf('/') + 1, href.length);
+    setCurrentPage(parseInt(pageNumber, 10) - 1);
+  }, []);
 
   const frameworkCounts: { [key: string]: number } = useMemo(
     () =>
@@ -344,7 +381,7 @@ export default function Componenten() {
 
             <div className="rhc-grid-container__end" ref={resultsRef} tabIndex={-1}>
               <HeadingGroup>
-                <Heading appearanceLevel={3} level={2}>
+                <Heading appearanceLevel={3} id="results-heading" level={2}>
                   Zoekresultaten
                 </Heading>
                 <Paragraph role="status">{getStatusText(filteredComponents.length)}</Paragraph>
@@ -352,44 +389,59 @@ export default function Componenten() {
 
               {filteredComponents.length > 0 && (
                 <ol aria-labelledby="results-heading" className="rhc-ordered-list">
-                  {filteredComponents.map((component, index, array) => (
-                    <li aria-posinset={index + 1} aria-setsize={array.length} key={component.heading}>
-                      <CardAsLink
-                        className="rhc-templates-card"
-                        description={<Paragraph>{component.description}</Paragraph>}
-                        href={component.href}
-                        linkLabel={component.linkLabel}
-                        target="_blank"
-                        title={component.title}
-                        heading={
-                          <Heading appearanceLevel={4} level={2}>
-                            {component.heading}
-                          </Heading>
-                        }
-                      >
-                        <BadgeList
-                          aria-label={`Framework opties voor ${component.heading}`}
-                          className="rhc-templates-badgelist"
-                          role="group"
+                  {filteredComponents
+                    .slice(
+                      currentPage * maxComponentsPerPage,
+                      currentPage * maxComponentsPerPage + maxComponentsPerPage,
+                    )
+                    .map((component, index, array) => (
+                      <li aria-posinset={index + 1} aria-setsize={array.length} key={component.heading}>
+                        <Card
+                          className="rhc-templates-card"
+                          description={<Paragraph>{component.description}</Paragraph>}
+                          href={component.href}
+                          linkLabel={component.linkLabel}
+                          target="_blank"
+                          title={component.title}
+                          heading={
+                            <Heading appearanceLevel={4} level={2}>
+                              {component.heading}
+                            </Heading>
+                          }
                         >
-                          {component.frameworks.map((framework) => (
-                            <DataBadgeButton
-                              aria-label={`${framework} filter ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
-                              helperText={`- Klik om filter te ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
-                              key={framework}
-                              pressed={selectedFrameworks.includes(framework)}
-                              value={framework}
-                              onClick={() => handleDataBadgeClick(framework)} // FIXED: Direct call instead of data-value extraction
-                            >
-                              {framework}
-                            </DataBadgeButton>
-                          ))}
-                        </BadgeList>
-                      </CardAsLink>
-                    </li>
-                  ))}
+                          <BadgeList
+                            aria-label={`Framework opties voor ${component.heading}`}
+                            className="rhc-templates-badgelist"
+                            role="group"
+                          >
+                            {component.frameworks.map((framework) => (
+                              <DataBadgeButton
+                                aria-label={`${framework} filter ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
+                                helperText={`- Klik om filter te ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
+                                key={framework}
+                                pressed={selectedFrameworks.includes(framework)}
+                                value={framework}
+                                onClick={() => handleDataBadgeClick(framework)}
+                              >
+                                {framework}
+                              </DataBadgeButton>
+                            ))}
+                          </BadgeList>
+                        </Card>
+                      </li>
+                    ))}
                 </ol>
               )}
+
+              <PageNumberNavigation
+                linkComponent={LinkComponent}
+                maxVisiblePages={5}
+                page={currentPage + 1}
+                totalPages={Math.ceil(filteredComponents.length / maxComponentsPerPage)}
+                linkTemplate={function Xs(pageNumber) {
+                  return '/' + pageNumber;
+                }}
+              />
             </div>
           </div>
         </SharedMainPageContent>

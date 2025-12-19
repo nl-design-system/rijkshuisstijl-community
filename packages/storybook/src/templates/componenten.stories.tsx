@@ -1,16 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import Page from './componenten';
 import './globals.css';
 
 const meta: Meta = {
-  title: 'Templates/Componenten',
+  title: 'Componenten',
   id: 'rhc-templates-componenten',
   component: Page,
   parameters: {
     layout: 'fullscreen',
-    status: {
-      type: 'UNSTABLE',
-    },
     isPage: true,
   },
 };

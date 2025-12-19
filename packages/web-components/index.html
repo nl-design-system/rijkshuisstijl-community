@@ -1,28 +1,63 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Component Test</title>
+    <title>Web Components Testpagina</title>
     <script type="module" src="./dist/index.mjs"></script>
     <script type="module">
       import { ButtonWebComponent } from './dist/index.mjs';
       ButtonWebComponent.define();
     </script>
     <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css" />
-  </head>
-  <body class="rhc-theme">
-    <rhc-button
-      appearance="secondary-action-button"
-      popoverTarget="myheader"
-      aria-disabled="true"
-      type="submit"
-      value="test"
-    >
-      label
-    </rhc-button>
+    <style>
+      .test-section {
+        border: var(--basis-border-width-sm) solid var(--basis-color-default-border-default);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+      }
 
-    <h1 popover id="myheader">Hello</h1>
-    <button popovertarget="myheader" value="Click me!">button</button>
+      .test-area {
+        margin-top: 1rem;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body class="rhc-theme">
+    <header>
+      <h1>Web Component Testpagina</h1>
+      <p>
+        Deze pagina wordt gebruikt om snel te testen of de
+        <code>@rijkshuisstijl-community/web-components</code> goed werken (zoals in Storybook of na een build). Het
+        voordeel is dat je niet eerst Storybook hoeft te starten om een component te testen.
+      </p>
+      <p>
+        Ga naar <code>packages/web-components</code> en voer uit <code>pnpm start</code> om deze pagina lokaal te
+        openen.
+      </p>
+    </header>
+
+    <section class="test-section">
+      <h2>Voorbeeldcomponent</h2>
+      <p>Hier kun je een voorbeeld van de <code>&lt;rhc-button&gt;</code> bekijken en testen:</p>
+
+      <div class="test-area">
+        <rhc-button
+          appearance="secondary-action-button"
+          popoverTarget="myheader"
+          aria-disabled="true"
+          type="submit"
+          value="test"
+        >
+          label
+        </rhc-button>
+
+        <h1 popover id="myheader">Hello</h1>
+        <button popovertarget="myheader" value="Click me!">button</button>
+      </div>
+    </section>
   </body>
 </html>

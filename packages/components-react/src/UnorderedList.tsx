@@ -10,18 +10,17 @@ export interface UnorderedListProps extends UtrechtUnorederedListProps {
   ref?: Ref<HTMLUListElement>;
 }
 
-export const UnorderedList = ({ ref, children, nested, ...restProps }: PropsWithChildren<UnorderedListProps>) => {
-  return (
-    <UtrechtUnorderedList
-      ref={ref}
-      {...restProps}
-      className={clsx({
+export const UnorderedList = ({ ref, nested, className, ...restProps }: PropsWithChildren<UnorderedListProps>) => (
+  <UtrechtUnorderedList
+    ref={ref}
+    {...restProps}
+    className={clsx(
+      {
         'utrecht-unordered-list--nested': nested,
-      })}
-    >
-      {children}
-    </UtrechtUnorderedList>
-  );
-};
+      },
+      className,
+    )}
+  />
+);
 
 UnorderedList.displayName = 'UnorderedList';

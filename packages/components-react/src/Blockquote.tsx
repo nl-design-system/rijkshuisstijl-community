@@ -1,31 +1,7 @@
-import {
-  Blockquote as UtrechtBlockquote,
-  BlockquoteProps as UtrechtBlockquoteProps,
-} from '@utrecht/component-library-react';
-import clsx from 'clsx';
-import { PropsWithChildren, Ref } from 'react';
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2025 Community for NL Design System
+ */
 
-export interface BlockquoteProps extends UtrechtBlockquoteProps {
-  variation?: 'blue-corner-border' | 'pink-background' | 'pink-left-border' | 'pink-corner-border';
-  ref?: Ref<HTMLQuoteElement>;
-}
-
-export const Blockquote = ({
-  ref,
-  className,
-  children,
-  attribution,
-  variation,
-  ...restProps
-}: PropsWithChildren<BlockquoteProps>) => (
-  <UtrechtBlockquote
-    attribution={attribution}
-    className={clsx('rhc-blockquote', variation && `rhc-blockquote--${variation}-variation`, className)}
-    ref={ref}
-    {...restProps}
-  >
-    <div className="rhc-blockquote__content utrecht-blockquote__content">{children}</div>
-  </UtrechtBlockquote>
-);
-
-Blockquote.displayName = 'Blockquote';
+export { Blockquote } from '@utrecht/component-library-react';
+export type { BlockquoteProps } from '@utrecht/component-library-react';

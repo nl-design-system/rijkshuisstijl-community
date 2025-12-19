@@ -1,16 +1,14 @@
-/* @license CC0-1.0 */
-
 import TwigIcon from '@rijkshuisstijl-community/components-twig/src/Icon.twig';
 import { iconSet } from '@rijkshuisstijl-community/components-twig/src/icon-sets/default-icons/icon-set';
-import type { Meta, StoryObj } from '@storybook/react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import DrupalAttribute from 'drupal-attribute';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/icon.md?raw';
+import readme from '../components-react/icon.md?raw';
 
 const icons = Object.values(iconSet);
 
 const meta = {
-  title: 'Twig Components/Icon',
+  title: 'Icon',
   id: 'rhc-twig-icon',
   component: TwigIcon,
   argTypes: {
@@ -27,9 +25,6 @@ const meta = {
       description: {
         component: mergeMarkdown([readme]),
       },
-    },
-    status: {
-      type: 'STABLE',
     },
     //Todo: voeg NL-Design system & Figma links toe
     github:

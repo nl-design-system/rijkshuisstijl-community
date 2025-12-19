@@ -1,3 +1,8 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2025 Community for NL Design System
+ */
+
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { Blockquote, BlockquoteProps } from '@rijkshuisstijl-community/components-react';
 import { render } from 'preact';
@@ -14,15 +19,8 @@ export class BlockquoteWebComponent extends BaseWebComponent {
 
   render(): void {
     if (!this.shadowRoot) return;
-
-    const { attribution, variation, ...restProps } = this.props;
-
     render(
-      <Blockquote
-        attribution={(attribution as BlockquoteWebComponentAttributes['attribution']) ?? undefined}
-        variation={(variation as BlockquoteWebComponentAttributes['variation']) ?? undefined}
-        {...restProps}
-      >
+      <Blockquote {...(this.props as BlockquoteWebComponentAttributes)}>
         <slot />
       </Blockquote>,
       this.shadowRoot,

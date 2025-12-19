@@ -1,8 +1,9 @@
-import { Button } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { Alert } from './Alert';
+import { Button } from './Button';
 import { Icon } from './Icon';
 import { Link } from './Link';
+import { Paragraph } from './Paragraph';
 
 interface FileProps {
   file: File;
@@ -69,7 +70,11 @@ export const File = ({
           </Button>
         </span>
       </div>
-      {error && <Alert textContent={errorMessage} type="error" />}
+      {error && (
+        <Alert type="error">
+          <Paragraph>{errorMessage}</Paragraph>
+        </Alert>
+      )}
     </div>
   );
 };

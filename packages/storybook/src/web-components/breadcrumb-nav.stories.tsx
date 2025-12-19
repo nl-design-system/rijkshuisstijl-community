@@ -1,8 +1,8 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { BreadcrumbNavWebComponent } from '@rijkshuisstijl-community/web-components';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/breadcrumb-nav/README.md?raw';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 BreadcrumbNavWebComponent.define();
 
@@ -13,14 +13,11 @@ const BreadcrumbNavWrapper = ({ elements }: any) => {
 };
 
 const meta = {
-  title: 'Web Components/Breadcrumb navigation',
+  title: 'Breadcrumb Navigation',
   id: 'rhc-breadcrumb-nav-web',
   component: BreadcrumbNavWrapper,
   argTypes: {},
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source

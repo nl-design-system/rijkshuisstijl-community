@@ -1,8 +1,8 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { CheckboxWebComponent } from '@rijkshuisstijl-community/web-components';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/checkbox.md?raw';
+import readme from '../components-react/checkbox.md?raw';
 
 CheckboxWebComponent.define();
 
@@ -31,13 +31,10 @@ const CheckboxWrapper = ({
 };
 
 const meta = {
-  title: 'Web Components/Checkbox',
+  title: 'Checkbox',
   id: 'rhc-checkbox-web',
   component: CheckboxWrapper,
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source

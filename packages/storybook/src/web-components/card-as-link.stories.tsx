@@ -1,12 +1,12 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { CardAsLinkWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta } from '@storybook/web-components';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/card-as-link.md?raw';
+import type { Meta } from '@storybook/web-components-vite';
+import readme from '../components-react/card-as-link.md?raw';
 
 CardAsLinkWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Card as Link',
+  title: 'Card as Link',
   id: 'rhc-card-as-link-web',
   component: 'rhc-card-as-link',
   argTypes: {
@@ -98,11 +98,7 @@ const meta = {
     metaData: 'Metadata',
     title: 'Card Title',
   },
-  tags: ['autodocs'],
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

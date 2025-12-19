@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import IconSet from './default-icon-set-page';
 import readme from './default-icon-set.md?raw';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
 
 const meta = {
-  title: 'Rijkshuisstijl Community/Icon Sets/Default Icon Set',
+  title: 'Icon Sets/Default Icon Set',
   id: 'rhc-templates-default-icon-set',
   component: IconSet,
   parameters: {
@@ -12,9 +12,6 @@ const meta = {
       description: {
         component: mergeMarkdown([readme]),
       },
-    },
-    status: {
-      type: 'UNSTABLE',
     },
   },
 } satisfies Meta<typeof IconSet>;

@@ -1,3 +1,8 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2025 Community for NL Design System
+ */
+
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
 import { AccordionProvider, AccordionProviderProps, Icon, RHCIconID } from '@rijkshuisstijl-community/components-react';
 import { render } from 'preact';
@@ -15,11 +20,10 @@ export class AccordionWebComponent extends BaseWebComponent {
   render(): void {
     if (!this.shadowRoot) return;
 
-    const { appearance, heading, icon, headinglevel, sections, ...restProps } = this.props;
+    const { heading, icon, headinglevel, sections, ...restProps } = this.props;
 
     render(
       <AccordionProvider
-        appearance={appearance ?? undefined}
         heading={heading ?? undefined}
         icon={icon && <Icon icon={icon as RHCIconID} />}
         sections={(sections && JSON.parse(sections as string)) as AccordionWebComponentAttributes['sections']}

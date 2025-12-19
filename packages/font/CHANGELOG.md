@@ -1,5 +1,17 @@
 # @rijkshuisstijl-community/font
 
+## 1.1.2
+
+### Patch Changes
+
+- 10ec55a: Release package with npm provenance.
+
+## 1.1.1
+
+### Patch Changes
+
+- 3d9999c: Update patch & minor dependencies
+
 ## 1.1.0
 
 ### Minor Changes

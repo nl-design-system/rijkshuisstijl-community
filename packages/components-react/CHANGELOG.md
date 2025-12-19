@@ -1,11 +1,206 @@
 # @rijkshuisstijl-community/components-react
 
+## 9.0.0
+
+### Major Changes
+
+- abbe2ef: Added EUPL-1.2 license to Alert component
+
+### Patch Changes
+
+- 12110ca: Upgrade React (fixes CVE-2025-55182, see https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components)
+- d474092: Updates `@testing-library/jest-dom` from 5.17.0 to 6.9.1.
+  Removes `@types/testing-library__jest-dom` because v6 now ships its own TypeScript types internally. No code changes required; tests and type checks continue to work the same.
+- 3d2da94: Upgrade React to 19.2.3 (to fix https://react.dev/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components)
+
+## 8.0.0
+
+### Major Changes
+
+- 2f3f91c: figure; removed old way of border radius, now use RoundedCorner element
+
+### Minor Changes
+
+- 5b7a72c: Added a rounded corner utility component in CSS and React
+- cd80794: Update dependencies to include Utrecht component types so these do not need to be installed seperatly.
+
+### Patch Changes
+
+- cd80794: Updated readme's to install dependencies for build instead of dev.
+- 5c7a89c: Updated rounded corner overwrite tokens props to automatically infer associated tokens instead of hardcoding them
+
+## 7.1.0
+
+### Minor Changes
+
+- 91a9ca7: FormFieldCheckboxOption & FormFieldRadio now have an `inputInvalid` prop
+- c35bd3f: Added missing required prop type on FormFieldSelect
+  Removed unused prop on accordion web component.
+
+### Patch Changes
+
+- 10ec55a: Release package with npm provenance.
+- 762e2ae: The ref property for the FileInput component has been changed from required to optional.
+
+## 7.0.0
+
+### Major Changes
+
+- b012c3e: Cleaned up the blockquote component and separated out the rounded corner from the component.
+  The following tokens have been removed:
+  - --utrecht-blockquote-border-block-end-width
+  - --utrecht-blockquote-border-block-start-width
+  - --utrecht-blockquote-border-end-end-radius
+  - --utrecht-blockquote-border-end-start-radius
+  - --utrecht-blockquote-border-inline-end-width
+  - --utrecht-blockquote-border-start-end-radius
+  - --utrecht-blockquote-border-start-start-radius
+  - --utrecht-blockquote-caption-color
+  - --utrecht-blockquote-caption-font-family
+  - --utrecht-blockquote-caption-font-size
+  - --utrecht-blockquote-caption-font-weight
+  - --utrecht-blockquote-caption-line-height
+  - --utrecht-blockquote-caption-padding-block-start
+  - --utrecht-blockquote-content-font-family
+  - --utrecht-blockquote-content-font-weight
+  - --utrecht-blockquote-content-line-height
+
+  Blue border variation:
+  - --utrecht-blockquote-blue-corner-border-variation-border-block-end-width
+  - --utrecht-blockquote-blue-corner-border-variation-border-color
+  - --utrecht-blockquote-blue-corner-border-variation-border-end-end-radius
+  - --utrecht-blockquote-blue-corner-border-variation-border-inline-end-width
+
+  Pink background variation:
+  - --utrecht-blockquote-pink-background-variation-background-color
+  - --utrecht-blockquote-pink-background-variation-border-end-start-radius
+  - --utrecht-blockquote-pink-background-variation-padding
+
+  Pink corner border variation:
+  - --utrecht-blockquote-pink-corner-border-variation-border-block-start-width
+  - --utrecht-blockquote-pink-corner-border-variation-border-color
+  - --utrecht-blockquote-pink-corner-border-variation-border-inline-start-width
+  - --utrecht-blockquote-pink-corner-border-variation-border-start-start-radius
+  - --utrecht-blockquote-pink-corner-border-variation-padding
+
+  Pink left border variation:
+  - --utrecht-blockquote-pink-left-border-variation-border-color
+  - --utrecht-blockquote-pink-left-border-variation-border-inline-start-width
+  - --utrecht-blockquote-pink-left-border-variation-padding-block-end
+  - --utrecht-blockquote-pink-left-border-variation-padding-block-start
+  - --utrecht-blockquote-pink-left-border-variation-padding-inline-end
+  - --utrecht-blockquote-pink-left-border-variation-padding-inline-start
+
+  The following tokens have been renamed:
+  - --utrecht-blockquote-margin-block-end
+  - --utrecht-blockquote-margin-block-start
+  - --utrecht-blockquote-margin-inline-end
+  - --utrecht-blockquote-margin-inline-start
+
+  to:
+  - --rhc-blockquote-margin-block-end
+  - --rhc-blockquote-margin-block-start
+  - --rhc-blockquote-margin-inline-end
+  - --rhc-blockquote-margin-inline-start
+
+- aadf35e: Removed the icon from form field error message
+
+### Patch Changes
+
+- 95ec931: Improved developer experience for this monorepo
+
+## 6.0.1
+
+### Patch Changes
+
+- c832e55: In development environments the package.json was referencing non existing files.
+
+## 6.0.0
+
+### Major Changes
+
+- 8e189de: Updated Action Group to new version from Utrecht
+  - added column-stretch option for direction prop
+
+### Minor Changes
+
+- 884d990: Added Utrecht Drawer and fixed an A11y test bug: "Scrollable region must have keyboard access"
+
+## 5.0.0
+
+### Major Changes
+
+- 8e508f9: Removed the following tokens:
+  Used but unnecessary:
+  --utrecht-alert-heading-line-height
+  --utrecht-alert-message-line-height
+
+  Unused:
+  --utrecht-alert-heading-font-family
+  --utrecht-alert-heading-font-size
+  --utrecht-alert-heading-font-weight
+
+  Reworked the Alert react component to allow users to add content like heading and paragraph in the children instead of duplicating heading props in the alert directly.
+  Added icon overwrite support in case you want a different icon on a specific alert type.
+
+- 29bfdd5: Removed deprecated tokens for Accordion
+- 965c2a4: Removed deprecated tokens and much custom code for SkipLink
+  - Kept only the box-shadow properties and moved those to rhc-\* namespace
+  - Removed visibleOnFocus prop and class, assuming this is always the behaviour
+  - Also cleaned the storybook, with just a default, rtl, and focused state
+  - Added links in storybook
+
+### Patch Changes
+
+- d2c235c: Uitloggen icoon toegevoegd
+
+## 4.1.0
+
+### Minor Changes
+
+- 35dcda9: Add PageNumberNavigation component in rhc storybook
+
+## 4.0.0
+
+### Major Changes
+
+- 0057047: chore: remove unused and deprecated Link tokens
+  - Use NL link component as cleanly as possible.
+  - Do not support NL `disabled` prop/state for Link.
+  - Add support for Icon in Link.
+  - Replace "utrecht" with "rhc" in markdown documentation for Link.
+
+- f89c576: Removed the following tokens for unordered list as these are inherited from the document:
+  --utrecht-unordered-list-color
+  --utrecht-unordered-list-marker-border-color
+  --utrecht-unordered-list-font-weight
+  --utrecht-unordered-list-font-family
+
+  Added the following token to control nested lists
+  --rhc-unordered-list-nested-margin-inline-start
+
+  Nested lists now have the same marker as root lists to have less going on
+
+### Minor Changes
+
+- 93b9259: Add new Card component for flexible card display
+
+  **WHAT**: Added a new `Card` component alongside the existing `CardAsLink` component
+  **WHY**: The existing `CardAsLink` was too restrictive for cases where cards don't need to be clickable links
+  **HOW**: Import and use the new `Card` component for non-interactive card displays
+
+### Patch Changes
+
+- bf73b50: Fix hot reloading voor local development.
+- fe88675: Update heading dependency and removed unused tokens
+- 3d9999c: Update patch & minor dependencies
+- 834dbde: Reverted breaking changes to angular storybook and add controls to stories
+
 ## 3.0.0
 
 ### Major Changes
 
 - 923d857: Alleen NL link gebruiken
-
   - Zorgen dat RHC link alleen NL link gebruikt
     - NL link's `disabled` prop niet toestaan (altijd op `false` zetten) (angular versie ondersteunde dit toch al niet)
   - Documentatie aan Angular readme.md toegevoegd

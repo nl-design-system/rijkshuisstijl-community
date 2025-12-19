@@ -1,8 +1,5 @@
-import {
-  ButtonGroup as ActionGroup,
-  type ButtonGroupProps as ActionGroupProps,
-} from '@utrecht/component-library-react';
-
-export { ActionGroup, type ActionGroupProps };
-
-ActionGroup.displayName = 'ActionGroup';
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2025 Community for NL Design System
+ */
+export { ActionGroup, type ActionGroupProps } from '@utrecht/component-library-react';

@@ -1,14 +1,12 @@
-/* @license CC0-1.0 */
-
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { ArticleWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/web-components';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/article.md?raw';
+import type { Meta, StoryObj } from '@storybook/web-components-vite';
+import readme from '../components-react/article.md?raw';
 
 ArticleWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Article',
+  title: 'Article',
   id: 'rhc-article-web',
   component: 'rhc-article',
   argTypes: {},
@@ -25,11 +23,7 @@ const meta = {
       </p>,
     ],
   },
-  tags: ['autodocs'],
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source

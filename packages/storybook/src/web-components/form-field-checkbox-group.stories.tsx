@@ -1,11 +1,11 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import {
   FormFieldCheckboxGroupWebComponent,
   FormFieldCheckboxOptionWebComponent,
 } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-checkbox-group.md?raw';
+import readme from '../components-react/form-field-checkbox-group.md?raw';
 
 FormFieldCheckboxGroupWebComponent.define();
 FormFieldCheckboxOptionWebComponent.define();
@@ -23,7 +23,7 @@ const CheckboxGroupWrapper = ({ label, description, errormessage, status, invali
 };
 
 const meta = {
-  title: 'Web Components/Form Field/Form Field Checkbox Group',
+  title: 'Form Field/Form Field Checkbox Group',
   id: 'rhc-form-field-checkbox-group-web',
   component: CheckboxGroupWrapper,
   argTypes: {
@@ -71,9 +71,6 @@ const meta = {
     },
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),
@@ -104,30 +101,30 @@ export const Default = {
       }),
       createElement('rhc-form-checkbox-option', {
         key: 'checkbox-3',
-        label: 'Checkbox 2',
+        label: 'Checkbox 3',
       }),
     ],
   },
 } as StoryObj<typeof meta>;
 
-export const Error = {
+export const Invalid = {
   args: {
     label: 'Select option',
     children: [
       createElement('rhc-form-checkbox-option', {
         key: 'checkbox-4',
         label: 'Checkbox 1',
-        invalid: 'true',
+        inputInvalid: 'true',
       }),
       createElement('rhc-form-checkbox-option', {
         key: 'checkbox-5',
         label: 'Checkbox 2',
-        invalid: 'true',
+        inputInvalid: 'true',
       }),
       createElement('rhc-form-checkbox-option', {
         key: 'checkbox-6',
-        label: 'Checkbox 2',
-        invalid: 'true',
+        label: 'Checkbox 3',
+        inputInvalid: 'true',
       }),
     ],
     errorMessage: 'This is an error message',
@@ -170,7 +167,7 @@ export const Status = {
       }),
       createElement('rhc-form-checkbox-option', {
         key: 'checkbox-12',
-        label: 'Checkbox 2',
+        label: 'Checkbox 3',
       }),
     ],
     status: 'This is a status',

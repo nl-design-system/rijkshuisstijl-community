@@ -1,0 +1,26 @@
+@use "mixin";
+
+.rhc-rounded-corner {
+  --_rhc-rounded-corner-border-radius: var(
+    --rhc-rounded-corner-border-radius,
+    var(--rhc-rounded-corner-md-border-radius)
+  );
+  @include mixin.rhc-rounded-corner;
+  @include mixin.rhc-reset-border-radius;
+
+  &.rhc-rounded-corner--size {
+    @each $size in mixin.$rhc-rounded-corner-sizes {
+      &-#{$size} {
+        --_rhc-rounded-corner-border-radius: var(--rhc-rounded-corner-#{$size}-border-radius);
+      }
+    }
+  }
+
+  &.rhc-rounded-corner--position {
+    @each $position in mixin.$rhc-rounded-corner-positions {
+      &-#{$position} {
+        border-#{$position}-radius: var(--_rhc-rounded-corner-border-radius);
+      }
+    }
+  }
+}

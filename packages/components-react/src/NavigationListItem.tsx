@@ -8,6 +8,7 @@ export interface NavigationListItemProps extends HTMLAttributes<HTMLLIElement> {
   label: ReactNode;
   description: ReactNode;
   icon: RHCIconID | ReactNode;
+  iconEnd?: RHCIconID | ReactNode;
   href: string;
   ref?: Ref<HTMLLIElement>;
 }
@@ -18,6 +19,7 @@ export const NavigationListItem = ({
   href,
   description,
   icon,
+  iconEnd = 'chevron-right',
   className,
   ...restProps
 }: NavigationListItemProps) => {
@@ -32,7 +34,11 @@ export const NavigationListItem = ({
         <span className={'rhc-navigation-list__item-content'}>
           <Paragraph className={'rhc-navigation-list__item__label'}>{label}</Paragraph>
           <Paragraph className={'rhc-navigation-list__item__description'}>{description}</Paragraph>
-          <Icon className={'rhc-navigation-list__item__end-icon'} icon={'chevron-right'} />
+          {typeof iconEnd === 'string' ? (
+            <Icon className={'rhc-navigation-list__item__end-icon'} icon={iconEnd as RHCIconID} />
+          ) : (
+            <Icon className={'rhc-navigation-list__item__end-icon'}>{iconEnd}</Icon>
+          )}
         </span>
       </a>
     </li>

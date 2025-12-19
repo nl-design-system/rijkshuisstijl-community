@@ -1,8 +1,8 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { FormFieldTextareaWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-textarea.md?raw';
+import readme from '../components-react/form-field-textarea.md?raw';
 
 FormFieldTextareaWebComponent.define();
 
@@ -33,7 +33,7 @@ const TextareaWrapper = ({
 };
 
 const meta = {
-  title: 'Web Components/Form Field/Form Field Textarea',
+  title: 'Form Field/Form Field Textarea',
   id: 'rhc-form-field-textarea-web',
   component: TextareaWrapper,
   argTypes: {
@@ -195,11 +195,7 @@ const meta = {
     cols: undefined,
     rows: undefined,
   },
-  tags: ['autodocs'],
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source

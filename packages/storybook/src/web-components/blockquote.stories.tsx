@@ -1,12 +1,12 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { BlockquoteWebComponent } from '@rijkshuisstijl-community/web-components';
-import { Meta, StoryObj } from '@storybook/web-components';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/blockquote.md?raw';
+import { Meta, StoryObj } from '@storybook/web-components-vite';
+import readme from '../components-react/blockquote.md?raw';
 
 BlockquoteWebComponent.define();
 
 const meta = {
-  title: 'Web Components/Blockquote',
+  title: 'Blockquote',
   id: 'rhc-blockquote-web',
   component: 'rhc-blockquote',
   argTypes: {
@@ -14,24 +14,11 @@ const meta = {
       name: 'attribution',
       type: { name: 'string', required: false },
     },
-    variation: {
-      name: 'variation',
-      type: { name: 'string', required: false },
-      control: {
-        type: 'select',
-      },
-      options: ['', 'blue-corner-border', 'pink-background', 'pink-left-border', 'pink-corner-border'],
-      defaultValue: '',
-    },
   },
   args: {
     children: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
   },
-  tags: ['autodocs'],
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
@@ -39,7 +26,7 @@ const meta = {
       },
     },
     figma:
-      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1349-6340&t=9KlJWkn6GEOm2sN1-11',
+      'https://www.figma.com/design/Q5Imc7Xi9KnBQhcYI3Hytj/NL-Design-System---RHC-Bibliotheek?node-id=1349-6340&p=f&t=FF0eLCbwS26n6eDF-0',
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/src/components/Blockquote.tsx',
     nldesignsystem: 'https://www.nldesignsystem.nl/blockquote',
@@ -57,37 +44,5 @@ export const Attribution = {
   args: {
     children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
     attribution: '— Pippi Langkous',
-  },
-} as StoryObj<typeof meta>;
-
-export const blueCornerBorder = {
-  args: {
-    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
-    attribution: '— Pippi Langkous',
-    variation: 'blue-corner-border',
-  },
-} as StoryObj<typeof meta>;
-
-export const pinkBackground = {
-  args: {
-    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
-    attribution: '— Pippi Langkous',
-    variation: 'pink-background',
-  },
-} as StoryObj<typeof meta>;
-
-export const pinkLeftBorder = {
-  args: {
-    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
-    attribution: '— Pippi Langkous',
-    variation: 'pink-left-border',
-  },
-} as StoryObj<typeof meta>;
-
-export const pinkCornerBorder = {
-  args: {
-    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
-    attribution: '— Pippi Langkous',
-    variation: 'pink-corner-border',
   },
 } as StoryObj<typeof meta>;

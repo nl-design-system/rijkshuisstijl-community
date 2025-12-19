@@ -1,16 +1,17 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { FormFieldCheckboxOptionWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-checkbox-option.md?raw';
+import readme from '../components-react/form-field-checkbox-option.md?raw';
 
 FormFieldCheckboxOptionWebComponent.define();
 
-const CheckboxWrapper = ({ label, description, invalid, errorMessage, disabled, ...restProps }: any) => {
+const CheckboxWrapper = ({ label, description, invalid, inputInvalid, errorMessage, disabled, ...restProps }: any) => {
   return createElement('rhc-form-checkbox-option', {
     label,
     description,
     invalid: invalid?.toString(),
+    inputInvalid: inputInvalid?.toString(),
     disabled: disabled?.toString(),
     errorMessage,
     ...restProps,
@@ -18,7 +19,7 @@ const CheckboxWrapper = ({ label, description, invalid, errorMessage, disabled, 
 };
 
 const meta = {
-  title: 'Web Components/Form Field/Form Field Checkbox Option',
+  title: 'Form Field/Form Field Checkbox Option',
   id: 'rhc-form-field-checkbox-option-web',
   component: CheckboxWrapper,
   argTypes: {
@@ -39,6 +40,14 @@ const meta = {
       table: {
         category: 'API',
         defaultValue: { summary: '' },
+      },
+    },
+    inputInvalid: {
+      control: 'boolean',
+      description: 'Marks the input element as invalid',
+      table: {
+        category: 'API',
+        defaultValue: { summary: 'false' },
       },
     },
     invalid: {
@@ -90,9 +99,6 @@ const meta = {
     },
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
@@ -128,6 +134,13 @@ export const Invalid = {
   args: {
     label: 'Checkbox',
     invalid: true,
+  },
+} as StoryObj<typeof meta>;
+
+export const InputInvalid = {
+  args: {
+    label: 'Checkbox',
+    inputInvalid: true,
   },
 } as StoryObj<typeof meta>;
 

@@ -44,21 +44,14 @@ export default function SharedFooter({ isLightTheme }: { isLightTheme?: boolean 
                   Rijkshuisstijl Community op GitHub
                 </LinkListLink>
                 <LinkListLink
-                  href="https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?m=auto"
+                  href="https://www.figma.com/design/Q5Imc7Xi9KnBQhcYI3Hytj/NL-Design-System---Bibliotheek---Rijkshuisstijl-Community"
                   icon={<Icon icon={'chevron-right'} />}
                   target="_blank"
                 >
                   NLDS Rijkshuisstijl Bibliotheek in Figma
                 </LinkListLink>
                 <LinkListLink
-                  href="https://www.figma.com/design/Nv5EsCW9ioWBUSi9m9JqOa/Local---Rijkshuisstijl---Bibliotheek?m=auto"
-                  icon={<Icon icon={'chevron-right'} />}
-                  target="_blank"
-                >
-                  Local Rijkshuisstijl Bibliotheek in Figma
-                </LinkListLink>
-                <LinkListLink
-                  href="https://www.figma.com/design/H4hSqpPbvFMLklDZgswwgd/NLDS---Rijkshuisstijl---Templates?m=auto&t=3Q7KyAIW8lqYHupW-6"
+                  href="https://www.figma.com/design/H4hSqpPbvFMLklDZgswwgd/NL-Design-System---Templates---Rijkshuisstijl"
                   icon={<Icon icon={'chevron-right'} />}
                   target="_blank"
                 >

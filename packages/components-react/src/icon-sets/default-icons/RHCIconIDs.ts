@@ -1002,6 +1002,7 @@ export const rhcIconIDs = [
   'uil',
   'uit-aanknop',
   'uitgang',
+  'uitloggen',
   'uitval-persoon',
   'uitval-persoon-ziekte',
   'uitval-stroomvoorziening',

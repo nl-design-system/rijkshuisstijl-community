@@ -18,10 +18,10 @@ Hieronder vind je instructies hoe je de standaard Rijkshuisstijl-community token
 1. Installeer je het [design-tokens npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens).
 
    ```bash
-   npm install --save-dev @rijkshuisstijl-community/design-tokens
+   npm install @rijkshuisstijl-community/design-tokens
 
    # En als je CSS classes wilt importeren
-   npm install --save-dev @rijkshuisstijl-community/components-css
+   npm install @rijkshuisstijl-community/components-css
    ```
 
    Dit pakket bevat de CSS-variabelen van het design systeem. Importeer het `index.css`-bestand uit de `dist` map van het pakket, en omring het deel van je applicatie waar je het thema wilt toepassen. Het Rijkshuisstijl-thema is bijvoorbeeld: `rhc-theme`.
@@ -44,7 +44,7 @@ Hieronder vind je instructies hoe je de standaard Rijkshuisstijl-community token
 
 ## Nieuw thema toevoegen
 
-Er zijn al verschillende bedrijfsthema's in de @rijkshuisstijl-community/design-tokens package waarvoor (gedeeltelijke) support is vanuit de Rijkshuisstijl-community. Hieronder volgt een uitleg hoe nog meer thema's kunnen worden toegevoegd
+Er zijn al verschillende bedrijfsthema's in de @rijkshuisstijl-community/design-tokens package waarvoor (gedeeltelijke) support is vanuit de Rijkshuisstijl-community. Hieronder volgt een uitleg hoe nog meer thema's kunnen worden toegevoegd.
 
 ## Nieuwe thema tokens
 
@@ -166,3 +166,48 @@ Er zijn al verschillende bedrijfsthema's in de @rijkshuisstijl-community/design-
    };
    export default preview;
    ```
+
+## Nieuwe token set toevoegen
+
+Als je tokensets toevoegt vanuit de code in `figma.tokens.json`, zitten daar regels aan vast.
+Voor elke nieuwe tokenset, zoals bijvoorbeeld `components/pagination/ams`:
+
+```json
+  "components/pagination/ams": {
+    "ams": {
+      "pagination": {
+        "font-family": {
+          "keys...": "values..."
+        }
+      }
+    }
+  }
+```
+
+is ook een entry nodig in `.$metadata.tokenSetOrder`: (op alfabetische volgorde aub)
+
+```json
+  "$metadata": {
+    "tokenSetOrder": [
+      "brand/color",
+      "components/pagination/ams",
+      "etc..."
+    ]
+  }
+```
+
+én in _elk_ thema `.$themes[x].selectedTokenSets`: (op alfabetische volgorde aub)
+
+```json
+  "$themes": [
+    {
+      "id": "05865788a086eeac7ffc4514736ccd777f1ff95c",
+      "name": "wetgevend",
+      "$figmaStyleReferences": {},
+      "selectedTokenSets": {
+        "components/pagination/ams": "enabled",
+        "other/groups...": "enabled"
+      }
+    }
+  ]
+```

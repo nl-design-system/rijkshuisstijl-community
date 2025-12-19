@@ -1,3 +1,8 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2025 Community for NL Design System
+ */
+
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -6,5 +11,5 @@ import { Component, Input } from '@angular/core';
   templateUrl: './action-group.component.html',
 })
 export class ActionGroupComponent {
-  @Input() direction: 'column' | 'row' = 'row';
+  @Input() direction: 'column' | 'row' | 'column-stretch' = 'row';
 }

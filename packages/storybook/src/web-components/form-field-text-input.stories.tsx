@@ -1,8 +1,8 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { FormFieldTextInputWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-text-input.md?raw';
+import readme from '../components-react/form-field-text-input.md?raw';
 
 FormFieldTextInputWebComponent.define();
 
@@ -33,7 +33,7 @@ const TextInputWrapper = ({
 };
 
 const meta = {
-  title: 'Web Components/Form Field/Form Field Text Input',
+  title: 'Form Field/Form Field Text Input',
   id: 'rhc-form-field-text-input-web',
   component: TextInputWrapper,
   argTypes: {
@@ -314,11 +314,7 @@ const meta = {
     placeholder: '',
     size: undefined,
   },
-  tags: ['autodocs'],
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source

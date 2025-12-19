@@ -32,6 +32,7 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from './Button';
+export { Card } from './Card';
 export {
   CardAsLink,
   type CardAsLinkProps,
@@ -50,6 +51,7 @@ export { DataBadgeButton, type DataBadgeButtonProps } from './DataBadgeButton';
 export { DataSummary, type DataSummaryProps } from './DataSummary';
 export { DataSummaryItem, type DataSummaryItemProps } from './DataSummaryItem';
 export { DotBadge, type DotBadgeProps } from './DotBadge';
+export { Drawer, type DrawerProps } from './Drawer';
 export { ExpandableCheckboxGroup, type ExpandableCheckboxGroupProps } from './ExpandableCheckboxGroup';
 export { Fieldset, FieldsetLegend, type FieldsetLegendProps, type FieldsetProps } from './Fieldset';
 export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from './Figure';
@@ -101,10 +103,12 @@ export { NumberBadge, type NumberBadgeProps } from './NumberBadge';
 export { OrderedList, OrderedListItem, type OrderedListItemProps, type OrderedListProps } from './OrderedList';
 export { PageContent, type PageContentProps } from './PageContent';
 export { PageHeader, type PageHeaderProps } from './PageHeader';
+export { PageNumberNavigation, type PageNumberNavigationProps } from './PageNumberNavigation';
 export { Paragraph, type ParagraphProps } from './Paragraph';
 export { PreHeading, type PreHeadingProps } from './PreHeading';
 export { Radio, type RadioProps } from './Radio';
 export { RadioGroup, type RadioGroupProps } from './RadioGroup';
+export { RoundedCorner, type RoundedCornerProps } from './RoundedCorner';
 export { Separator, type SeparatorProps } from './Separator';
 export { SideNav, type SideNavProps } from './SideNav';
 export { SideNavItem, type SideNavItemProps } from './SideNavItem';

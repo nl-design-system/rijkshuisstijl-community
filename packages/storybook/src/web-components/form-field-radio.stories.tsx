@@ -1,8 +1,8 @@
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { FormFieldRadioWebComponent } from '@rijkshuisstijl-community/web-components';
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { createElement } from 'react';
-import { mergeMarkdown } from '../../helpers/merge-markdown';
-import readme from '../community/form-field-radio.md?raw';
+import readme from '../components-react/form-field-radio.md?raw';
 
 FormFieldRadioWebComponent.define();
 
@@ -12,6 +12,7 @@ const RadioWrapper = ({
   errormessage,
   status,
   invalid,
+  inputInvalid,
   dir,
   disabled,
   checked,
@@ -26,18 +27,20 @@ const RadioWrapper = ({
     checked: checked?.toString(),
     disabled: disabled?.toString(),
     invalid: invalid?.toString(),
+    inputInvalid: inputInvalid?.toString(),
     ...restProps,
   });
 };
 
 const meta = {
-  title: 'Web Components/Form field/Form Field Radio',
+  title: 'Form field/Form Field Radio',
   id: 'rhc-form-field-radio-web',
   component: RadioWrapper,
   args: {
     checked: false,
     disabled: false,
     invalid: false,
+    inputInvalid: false,
     name: '',
   },
   argTypes: {
@@ -53,14 +56,15 @@ const meta = {
       description: 'Invalid',
       control: 'boolean',
     },
+    inputInvalid: {
+      description: 'Marks the input element as invalid',
+      control: 'boolean',
+    },
     name: {
       description: 'Radio group name. Use the same name for each radio option in a group.',
     },
   },
   parameters: {
-    status: {
-      type: 'UNSTABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),

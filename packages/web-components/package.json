@@ -1,6 +1,6 @@
 {
   "name": "@rijkshuisstijl-community/web-components",
-  "version": "1.2.0",
+  "version": "3.1.2",
   "author": "Community for NL Design System",
   "description": "Generic web components bundle based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -29,7 +29,8 @@
     "build": "vite build",
     "watch": "vite build --watch",
     "clean": "rimraf dist/",
-    "start": "vite"
+    "start": "vite",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@preact/preset-vite": "2.10.2",
