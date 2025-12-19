@@ -25,6 +25,15 @@ const meta = {
         category: 'Props',
       },
     },
+    headingLevel: {
+      description: 'Card heading level',
+      control: { type: 'select' },
+      options: ['1', '2', '3', '4', '5', '6'],
+      defaultValue: '',
+      table: {
+        category: 'Props',
+      },
+    },
     imageSrc: {
       description: 'Image source URL',
       control: { type: 'text' },
@@ -118,6 +127,14 @@ export const Default = {
   args: {
     appearance: 'default',
     imageAlt: 'Placeholder Image',
+  },
+};
+
+export const HeadingLevel = {
+  args: {
+    appearance: 'default',
+    imageAlt: 'Placeholder Image',
+    headingLevel: '2',
   },
 };
 

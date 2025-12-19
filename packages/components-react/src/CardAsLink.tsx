@@ -1,7 +1,9 @@
 import clsx from 'clsx';
-import { PropsWithChildren, ReactNode, Ref } from 'react';
+import React, { PropsWithChildren, ReactNode, Ref } from 'react';
 import { Image } from './Image';
 import { Link } from './Link';
+
+type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
 
 interface CardAsLinkPropsBase {
   href: string;
@@ -9,6 +11,7 @@ interface CardAsLinkPropsBase {
   title?: string;
   className?: string;
   heading: ReactNode;
+  headingLevel?: HeadingLevel;
   ref?: Ref<HTMLDivElement>;
 }
 
@@ -49,11 +52,26 @@ export const CardAsLink = (
   }
 };
 
+const CardHeading = ({
+  level,
+  children,
+  className,
+}: {
+  level?: 1 | 2 | 3 | 4 | 5 | 6;
+  children: ReactNode;
+  className?: string;
+}) => {
+  const HeadingTag: React.ElementType = level ? `h${level}` : 'div';
+
+  return <HeadingTag className={className}>{children}</HeadingTag>;
+};
+
 CardAsLink.displayName = 'CardAsLink';
 
 const DefaultCardAsLink = ({
   ref,
   heading,
+  headingLevel,
   className,
   imageSrc,
   icon,
@@ -72,7 +90,9 @@ const DefaultCardAsLink = ({
   return (
     <div className={clsx('rhc-card-as-link', 'rhc-card-as-link--default', className)} ref={ref} {...restProps}>
       <div className="rhc-card-as-link__content">
-        <div className="rhc-card-as-link__heading">{heading}</div>
+        <CardHeading className="rhc-card-as-link__heading" level={headingLevel}>
+          {heading}
+        </CardHeading>
         {imageSrc && (
           <div className="rhc-card-as-link__image-container" data-testid="rhc-card-as-link__image-container">
             {
