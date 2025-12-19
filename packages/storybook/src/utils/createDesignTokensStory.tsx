@@ -2,7 +2,7 @@
 // This file includes code from nl-design-system/lux
 // Licensed under the EUPL v1.2
 import { ComponentTokensSection } from '@nl-design-system-unstable/theme-toolkit';
-import type { StoryObj } from '@storybook/react';
+import type { StoryObj } from '@storybook/react-vite';
 
 type DesignToken = {
   comment?: string;

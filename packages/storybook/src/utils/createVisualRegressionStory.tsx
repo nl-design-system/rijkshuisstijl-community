@@ -1,6 +1,6 @@
 // This file includes code from nl-design-system/lux
 // Licensed under the EUPL v1.2
-import { StoryObj } from '@storybook/react';
+import { StoryObj } from '@storybook/react-vite';
 import React from 'react';
 import { PropsWithChildren, ReactElement } from 'react';
 
