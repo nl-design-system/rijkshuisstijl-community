@@ -9,5 +9,6 @@ export default {
 };
 
 export const Default = ReactStories.Default;
+export const HeadingLevel = ReactStories.HeadingLevel;
 export const FullBleed = ReactStories.FullBleed;
 export const Horizontal = ReactStories.Horizontal;
