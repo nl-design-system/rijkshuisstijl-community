@@ -4792,7 +4792,7 @@
             "$type": "dimension",
             "$value": "{rhc.space.200}"
           },
-          "min-height": {
+          "min-block-size": {
             "$type": "dimension",
             "$value": "{rhc.size.pointer-target}"
           },
@@ -4838,14 +4838,6 @@
             "color": {
               "$type": "color",
               "$value": "{rhc.color.foreground.subtle}"
-            },
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "{rhc.text.font-size.md}"
-            },
-            "line-height": {
-              "$type": "lineHeights",
-              "$value": "{rhc.text.line-height.md}"
             }
           },
           "icon-end": {
@@ -4885,6 +4877,72 @@
               "$type": "color",
               "$value": "{rhc.color.foreground.default}"
             },
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "{rhc.text.font-size.xl}"
+            },
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{rhc.text.font-weight.strong}"
+            },
+            "line-height": {
+              "$type": "lineHeights",
+              "$value": "{rhc.text.line-height.md}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components/navigation-list/deprecated": {
+    "rhc": {
+      "navigation-list": {
+        "item": {
+          "min-height": {
+            "$type": "dimension",
+            "$value": "{rhc.size.pointer-target}"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{rhc.space.150}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.200}"
+          },
+          "focus": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.primary.50}"
+            }
+          },
+          "description": {
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "{rhc.text.font-size.md}"
+            },
+            "line-height": {
+              "$type": "lineHeights",
+              "$value": "{rhc.text.line-height.md}"
+            }
+          },
+          "icon-end": {
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.subtle}"
+            }
+          },
+          "icon-start": {
+            "padding-block": {
+              "$type": "dimension",
+              "$value": "{rhc.space.100}"
+            },
+            "padding-inline": {
+              "$type": "dimension",
+              "$value": "{rhc.space.100}"
+            }
+          },
+          "label": {
             "font-family": {
               "$type": "fontFamilies",
               "$value": "{rhc.text.font-family.default}"
@@ -8750,6 +8808,7 @@
       "components/message-list",
       "components/nav-bar",
       "components/navigation-list",
+      "components/navigation-list/deprecated",
       "components/number-badge/nl",
       "components/number-badge/utrecht",
       "components/ordered-list",
