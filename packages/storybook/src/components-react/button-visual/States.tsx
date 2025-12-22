@@ -1,7 +1,7 @@
 import { Button } from '@rijkshuisstijl-community/components-react';
 import { Fragment } from 'react';
 
-const appearances = ['primary-action', 'secondary-action', 'subtle'];
+const appearances = ['default', 'primary-action', 'secondary-action', 'subtle'];
 
 export const InteractiveStates = () => (
   <>
