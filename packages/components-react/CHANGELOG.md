@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-react
 
+## 11.0.0
+
+### Major Changes
+
+- 337d2e8: Added licenses to the breadcrumb navigation source code.
+
 ## 10.0.0
 
 ### Major Changes
