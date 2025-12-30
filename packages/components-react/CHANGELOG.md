@@ -1,5 +1,17 @@
 # @rijkshuisstijl-community/components-react
 
+## 10.0.0
+
+### Major Changes
+
+- bd3dd48: Added EUPL license to Accordion and Alert source code
+- 378973a: Added licenses to Blockquote source code
+- 251c67c: Added licensing information to Action group source files
+
+### Minor Changes
+
+- 4a60cd0: Added `iconEnd` property to `NavigationListItem` component. The icon end used to be `chevron-end` and not customizable. Now it is optionally customizable. The default value is `chevron-end`. With this, it is not a breaking change and does not affect existing usage of the component.
+
 ## 9.0.0
 
 ### Major Changes
