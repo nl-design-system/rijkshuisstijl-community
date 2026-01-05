@@ -1,8 +1,8 @@
 import {
-  LinkList,
-  LinkListLink,
   Icon,
   Footer as RhcFooter,
+  LinkList,
+  LinkListLink,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
 import './Footer.css';
@@ -10,10 +10,10 @@ import './Footer.css';
 export function Footer() {
   return (
     <RhcFooter
-      className="rhc-page-footer__layout"
       appearanceLevel={3}
       background="primary-filled"
       backtotop
+      className="rhc-page-footer__layout"
       columns={[
         {
           appearanceLevel: 3,
