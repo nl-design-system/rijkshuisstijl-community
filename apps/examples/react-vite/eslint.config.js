@@ -1,25 +1,36 @@
-
+import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-import { defineConfig, globalIgnores } from 'eslint/config';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import globals from 'globals';
-import tseslint from 'typescript-eslint';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-export default defineConfig([
-  globalIgnores(['dist']),
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const repoRoot = path.resolve(__dirname, '../../..');
+
+const rootEslintrc = JSON.parse(fs.readFileSync(path.join(repoRoot, '.eslintrc.json'), 'utf8'));
+
+const compat = new FlatCompat({
+  baseDirectory: repoRoot,
+});
+
+const asArray = (value) => (Array.isArray(value) ? value : [value]);
+
+export default [
+  {
+    ignores: ['dist'],
+  },
+  js.configs.recommended,
+  ...asArray(reactHooks.configs['recommended-latest']),
+  ...asArray(reactRefresh.configs.vite),
+  ...compat.config(rootEslintrc),
   {
     files: ['**/*.{ts,tsx}'],
-    extends: [
-      js.configs.recommended,
-      tseslint.configs.recommended,
-      reactHooks.configs['recommended-latest'],
-      reactRefresh.configs.vite
-    ],
-
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
     },
   },
-]);
+];
