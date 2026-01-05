@@ -12,7 +12,7 @@ export function Footer() {
     <RhcFooter
       className="rhc-page-footer__layout"
       appearanceLevel={3}
-      background="primary-filed"
+      background="primary-filled"
       backtotop
       columns={[
         {

@@ -15,8 +15,8 @@ function App() {
   return (
     <>
       <Header />
-      <PageBody className="page-content__container">
-        <PageContent className="page-content">
+      <PageBody className="rhc-page-content__container">
+        <PageContent className="rhc-page-content">
           <Hero
             borderRadiusCorner="start-start"
             heading="Rijkshuisstijl Community Design System"
@@ -24,7 +24,7 @@ function App() {
             imageSrc="src/assets/placeholder.jpg"
           />
 
-          <div className="column-layout__paragraph">
+          <div className="rhc-column-layout__paragraph">
             <Paragraph>
               De Rijkshuisstijl Community is een samenwerkingsverband om{' '}
               <Link href="https://example.com/" inline>
@@ -38,7 +38,7 @@ function App() {
             </Paragraph>
           </div>
 
-          <div className="card-doelen">
+          <div className="rhc-card-doelen">
             <Card
               description="Een uitgebreide bibliotheek van herbruikbare componenten. Platform-onafhankelijk met de nieuwe Rijkshuisstijl."
               heading="Efficient"
