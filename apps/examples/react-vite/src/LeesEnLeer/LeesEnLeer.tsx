@@ -10,14 +10,13 @@ export function LeesEnLeer() {
 
       <div className="rhc-card-layout">
         <CardAsLink
-          description="We zijn blij dat je ons team komt versterken. Met deze app helpen we bij de voorbereiding op je eerste dag en de eerste weken dat je aan het werk bent. Zo vind je snel je weg binnen onze organisatie. Doorloop de app waar en wanneer jij wilt. Je ziet op deze pagina ook een aantal reminders staan, jouw buddy kan jou helpen met deze acties.
- "
+          description="We zijn blij dat je ons team komt versterken. Met deze app helpen we bij de voorbereiding op je eerste dag en de eerste weken dat je aan het werk bent. Zo vind je snel je weg binnen onze organisatie. Doorloop de app waar en wanneer jij wilt. Je ziet op deze pagina ook een aantal reminders staan, jouw buddy kan jou helpen met deze acties."
           heading="WELKOM!"
           href="#"
           linkLabel="Link label"
           metadata="Logius/KOOP"
           title="Card Title"
-        />
+      />
         <CardAsLink
           description="Mee ontwikkelen aan NL Design System of gebruik maken van bestaande compionenten? Als developer vind je hier alle documentatie die je nodig hebt om te beginnen."
           heading="Developer Handboek!"
@@ -36,8 +35,7 @@ export function LeesEnLeer() {
         />
 
         <CardAsLink
-          description="Voor het inzichtelijker maken vandesih=gn keuzes, gebruiken we GitHub Discussions. Feedback op de hierin voorgestelde keuzes(ook bijv. een korte 'akkord') is zeer welkom.Het delen van reeds zelfgemaakte design keuzeswordt ook
-         "
+          description="Voor het inzichtelijker maken vandesih=gn keuzes, gebruiken we GitHub Discussions. Feedback op de hierin voorgestelde keuzes(ook bijv. een korte 'akkord') is zeer welkom.Het delen van reeds zelfgemaakte design keuzeswordt ook"
           heading="Rijkshuisstijl styling implementatie GitHub discussies"
           href="#"
           linkLabel="Link label"

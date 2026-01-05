@@ -8,8 +8,8 @@ export function InDePraktijk() {
         In de praktijk
       </Heading>
       <Paragraph className="rhc-paragraph__padding">
-        Klaar om er direct van start te gaan? Hieronder vind je de README's van de beschikbare tools en frameworks. Voor
-        een dieper begrip en uitgebreide documentatie verwijzen we je graag naar de "lees en leer" section.
+        Klaar om er direct van start te gaan? Hieronder vind je de README&apos;s van de beschikbare tools en frameworks. Voor
+        een dieper begrip en uitgebreide documentatie verwijzen we je graag naar de &quot;lees en leer&quot; section.
       </Paragraph>
       <div className="rhc-card-praktijk">
         <CardAsLink

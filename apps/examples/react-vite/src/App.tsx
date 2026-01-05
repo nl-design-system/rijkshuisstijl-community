@@ -1,15 +1,12 @@
+import './App.css';
+import { Card, Hero, Link, PageContent, Paragraph} from '@rijkshuisstijl-community/components-react';
+import { PageBody } from '@utrecht/page-body-react';
+import { Footer } from './Footer';
+import { Header } from './Header';
+import { InDePraktijk } from './InDePraktijk';
+import { LeesEnLeer } from './LeesEnLeer';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
-import { Card, PageContent, Hero, Paragraph, Link } from '@rijkshuisstijl-community/components-react';
-
-import './App.css';
-
-import { Header } from './Header';
-import { Footer } from './Footer';
-import { LeesEnLeer } from './LeesEnLeer';
-
-import { InDePraktijk } from './InDePraktijk';
-import { PageBody } from '@utrecht/page-body-react';
 
 function App() {
   return (
@@ -27,7 +24,7 @@ function App() {
           <div className="rhc-column-layout__paragraph">
             <Paragraph>
               De Rijkshuisstijl Community is een samenwerkingsverband om{' '}
-              <Link href="https://example.com/" inline>
+              <Link inline href="https://example.com/">
                 NL Design System-componenten
               </Link>{' '}
               te gebruiken voor projecten die moeten voldoen aan de Rijkshuisstijl.
