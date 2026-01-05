@@ -223,7 +223,7 @@ jobs:
       run: pnpm install --frozen-lockfile
 
     - name: Install Playwright Browsers
-      run: npx playwright install chromium --with-deps
+      run: pnpm --filter "@rijkshuisstijl-community/react-vite" exec playwright install chromium --with-deps
 
     - name: Run Playwright tests
       run: pnpm test:e2e
