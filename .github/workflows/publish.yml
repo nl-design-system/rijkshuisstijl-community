@@ -104,6 +104,12 @@ jobs:
           path: packages/storybook/dist/
           retention-days: 1
 
+      - name: "Retain build artifact: Design Tokens"
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        with:
+          name: design-tokens
+          path: proprietary/design-tokens/dist/
+
       - name: "Retain build artifact: CSS"
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
@@ -207,6 +213,12 @@ jobs:
         node-version-file: .nvmrc
         cache: pnpm
 
+    - name: "Restore build artifact: Design Tokens"
+      uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
+      with:
+        name: design-tokens
+        path: proprietary/design-tokens/dist/
+        
     - name: "Restore build artifact: CSS"
       uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
       with:
