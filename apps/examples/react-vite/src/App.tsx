@@ -17,14 +17,14 @@ function App() {
           <Hero
             borderRadiusCorner="start-start"
             heading="Rijkshuisstijl Community Design System"
-            imageAlt="Tullip field"
+            imageAlt="Tulip field"
             imageSrc="src/assets/placeholder.jpg"
           />
 
           <div className="rhc-column-layout__paragraph">
             <Paragraph>
               De Rijkshuisstijl Community is een samenwerkingsverband om{' '}
-              <Link inline href="https://example.com/">
+              <Link inline href="#">
                 NL Design System-componenten
               </Link>{' '}
               te gebruiken voor projecten die moeten voldoen aan de Rijkshuisstijl.
@@ -49,7 +49,6 @@ function App() {
               heading="Gebruiksvriendelijk"
             />
           </div>
-
           <InDePraktijk />
           <LeesEnLeer />
         </PageContent>

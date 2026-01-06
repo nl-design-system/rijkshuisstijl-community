@@ -34,7 +34,6 @@ export function Footer() {
         {
           appearanceLevel: 3,
           children: (
-            <>
               <LinkList>
                 <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
                   NLDS Rijkshuisstijl Bibliotheek in Figma
@@ -52,14 +51,12 @@ export function Footer() {
                   Over de Rijkshuisstijl Community Sprint op NL Design System
                 </LinkListLink>
               </LinkList>
-            </>
           ),
           heading: 'Over de Rijkshuisstijl Community',
         },
         {
           appearanceLevel: 3,
           children: (
-            <>
               <LinkList>
                 <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
                   Slack #nl-design-system-developers<br></br>(Code for NL)
@@ -74,7 +71,6 @@ export function Footer() {
                   NL Design System Kernteam
                 </LinkListLink>
               </LinkList>
-            </>
           ),
           heading: 'Contact',
         },

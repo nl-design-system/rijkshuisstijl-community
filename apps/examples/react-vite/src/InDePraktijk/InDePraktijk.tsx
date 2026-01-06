@@ -4,7 +4,7 @@ import './InDePraktijk.css';
 export function InDePraktijk() {
   return (
     <>
-      <Heading appearanceLevel={2} level={2}>
+      <Heading level={2}>
         In de praktijk
       </Heading>
       <Paragraph className="rhc-paragraph__padding">
@@ -18,7 +18,7 @@ export function InDePraktijk() {
           href="#"
           imageAlt="Placeholder Image"
           imageSrc="src/assets/placeholder.jpg"
-          title="Card Title"
+          title="Lees hoe je de React-componenten van Rijkshuisstijl Community kunt gebruiken"
         />
         <CardAsLink
           appearance="horizontal"
@@ -26,7 +26,7 @@ export function InDePraktijk() {
           href="#"
           imageAlt="Placeholder Image"
           imageSrc="src/assets/placeholder.jpg"
-          title="Card Title"
+          title="Lees hoe je enkel de CSS van Rijkshuisstijl Community kunt gebruiken"
         />
         <CardAsLink
           appearance="horizontal"
@@ -34,7 +34,7 @@ export function InDePraktijk() {
           href="#"
           imageAlt="Placeholder Image"
           imageSrc="src/assets/placeholder.jpg"
-          title="Card Title"
+          title="Lees hoe je Web Components van Rijkshuisstijl Community kunt gebruiken"
         />
 
         <CardAsLink
@@ -43,16 +43,16 @@ export function InDePraktijk() {
           href="#"
           imageAlt="Placeholder Image"
           imageSrc="src/assets/placeholder.jpg"
-          title="Card Title"
+          title="Lees hoe je Design Tokens van Rijkshuisstijl Community kunt gebruiken"
         />
 
         <CardAsLink
           appearance="horizontal"
-          heading="Spring bord"
+          heading="Sprint bord"
           href="#"
           imageAlt="Placeholder Image"
           imageSrc="src/assets/placeholder.jpg"
-          title="Card Title"
+          title="Bekijk het Sprint Bord van Rijkshuisstijl Community on Github"
         />
       </div>
     </>
