@@ -13,7 +13,7 @@ export function Footer() {
       backtotop
       appearanceLevel={3}
       background="primary-filled"
-      className="prhc-page-footer__layout"
+      className="rhc-page-footer__layout"
       columns={[
         {
           appearanceLevel: 3,
