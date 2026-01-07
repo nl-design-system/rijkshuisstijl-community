@@ -5,8 +5,8 @@ import { useCallback, useState } from 'react';
 import readme from './language-navigation.md?raw';
 
 const meta = {
-  title: 'Language Navigator',
-  id: 'rhc-language-navigator',
+  title: 'Language Navigation',
+  id: 'rhc-language-navigation',
   component: LanguageNavigation.Root,
   parameters: {
     docs: {
