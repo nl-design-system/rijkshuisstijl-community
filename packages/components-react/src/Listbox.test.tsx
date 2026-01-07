@@ -7,8 +7,6 @@ describe('Listbox', () => {
     // Arrange & Act
     render(<Listbox />);
 
-    screen.logTestingPlaygroundURL();
-
     // Assert
     expect(screen.getByRole('listbox'));
   });

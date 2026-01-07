@@ -15,6 +15,7 @@ import {
   useContext,
   useEffect,
   useId,
+  useMemo,
   useRef,
   useState,
 } from 'react';
@@ -124,18 +125,22 @@ export const Root = ({
     [isSelectedLanguageControlled, onLanguageChangeProp],
   );
 
+  // Memoize context value
+  const value: LanguageNavigationContextValue = useMemo(
+    () => ({
+      open,
+      onOpenChange,
+      onOpenToggle,
+      selectedLanguage,
+      onLanguageChange,
+      contentId,
+      triggerRef,
+    }),
+    [open, onOpenChange, onOpenToggle, selectedLanguage, onLanguageChange, contentId],
+  );
+
   return (
-    <LanguageNavigationContext
-      value={{
-        open,
-        onOpenChange,
-        onOpenToggle,
-        selectedLanguage,
-        onLanguageChange,
-        contentId,
-        triggerRef,
-      }}
-    >
+    <LanguageNavigationContext value={value}>
       <div className={clsx('rhc-language-navigation', className)} ref={ref} {...restProps}>
         {children}
       </div>

@@ -97,7 +97,7 @@ An individual language option within the dropdown.
 | `lang`              | `string`             | **required** | The language code (e.g., `'nl'`, `'en'`, `'de'`). Used for the `lang` attribute on the language name.                                  |
 | `languageName`      | `string`             | **required** | The language name displayed in that language (e.g., `'Nederlands'`, `'English'`). Also used to match against the selected language.    |
 | `localLanguageName` | `string`             | -            | The language name in the currently selected language (e.g., `'Engels'` when Dutch is selected). Only shown for non-selected languages. |
-| `href`              | `string`             | `'#'`        | The URL to navigate to when selecting this language.                                                                                   |
+| `href`              | `string`             | **required** | The URL to navigate to when selecting this language.                                                                                   |
 | `closeOnSelect`     | `boolean`            | `true`       | Whether to close the dropdown after selecting this option.                                                                             |
 | `children`          | `ReactNode`          | -            | Custom content to render instead of the default language display.                                                                      |
 | `className`         | `string`             | -            | Additional CSS class names.                                                                                                            |
@@ -111,8 +111,7 @@ The Language Navigation component follows accessibility best practices:
 
 - The trigger button has `aria-expanded` to indicate the open state
 - The trigger button has `aria-controls` pointing to the content's ID
-- The content uses `role="listbox"` for the list container
-- Each option uses `aria-selected` to indicate the current selection
+- Each option uses `aria-current="page"` to indicate the current language
 - Pressing `Escape` closes the dropdown and returns focus to the trigger
 - Click outside detection closes the dropdown
 
