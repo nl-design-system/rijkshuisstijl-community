@@ -1,5 +1,3 @@
-/* @license CC0-1.0 */
-
 import { Alert, Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
@@ -37,19 +35,14 @@ const meta = {
       </Paragraph>,
     ],
   },
-  tags: ['autodocs'],
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: disconnect "Usage" from the current readme, import the readme from Utrecht afterwards and combine with our own Usage
         component: mergeMarkdown([readme]),
       },
     },
-    figma:
-      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1195-4201&t=n1djYpmvDCKmAEUi-0',
+    figma: 'https://www.figma.com/design/Q5Imc7Xi9KnBQhcYI3Hytj/NL-Design-System---RHC-Bibliotheek?node-id=1179-3892',
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Alert.tsx',
     nldesignsystem: 'https://www.nldesignsystem.nl/alert/',

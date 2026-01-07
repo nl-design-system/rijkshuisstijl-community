@@ -1,0 +1,48 @@
+{
+  "name": "@rijkshuisstijl-community/examples-react-vite",
+  "version": "0.1.0",
+  "author": "Community for NL Design System",
+  "description": "example React application using Vite and the NL Design System",
+  "type": "module",
+  "license": "EUPL-1.2",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
+    "directory": "apps/examples/react-vite"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "preview": "vite preview",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@rijkshuisstijl-community/components-css": "workspace:*",
+    "@rijkshuisstijl-community/components-react": "workspace:*",
+    "@rijkshuisstijl-community/design-tokens": "workspace:*",
+    "@utrecht/page-body-react": "1.0.6",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "3.3.3",
+    "@eslint/js": "8.57.1",
+    "@playwright/test": "1.54.2",
+    "@types/node": "24.10.0",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "4.7.0",
+    "eslint": "8.57.1",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-react-refresh": "0.4.24",
+    "globals": "16.5.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.46.3",
+    "vite": "6.3.5"
+  }
+}

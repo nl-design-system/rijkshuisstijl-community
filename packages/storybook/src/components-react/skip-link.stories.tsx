@@ -34,9 +34,6 @@ const meta = {
     href: '',
   },
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: readme,

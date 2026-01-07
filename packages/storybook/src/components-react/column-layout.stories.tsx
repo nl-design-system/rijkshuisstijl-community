@@ -8,7 +8,6 @@ const meta = {
   id: 'rhc-columnLayout',
   component: ColumnLayout,
   parameters: {
-    status: { type: 'UNSTABLE' },
     docs: { description: { component: mergeMarkdown([readme]) } },
     componentOrigin: 'Dit component is overgenomen van de Gemeente Utrecht.',
     github:

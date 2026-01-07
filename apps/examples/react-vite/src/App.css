@@ -1,0 +1,58 @@
+.rhc-root {
+  --rhc-card-active-text-decoration: none;
+  --rhc-card-inline-size: 100%;
+  --utrecht-page-body-background-color: #f2f4f6;
+
+  margin-block: 0;
+  margin-inline: auto;
+}
+
+body {
+  margin-block: 0;
+  margin-inline: 0;
+}
+
+.rhc-card-doelen {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  inline-size: 100%;
+  padding-block: 3rem;
+  padding-inline: 0;
+}
+
+.rhc-page-content {
+  --utrecht-page-content-padding-block-end: var(--rhc-space-400);
+  --utrecht-page-content-padding-block-start: var(--rhc-space-400);
+  --utrecht-page-padding-inline-end: var(--rhc-space-200);
+  --utrecht-page-padding-inline-start: var(--rhc-space-200);
+
+  gap: 1.25rem;
+  margin-block: 0;
+  margin-inline: auto;
+  max-inline-size: 64rem;
+}
+
+@media (width >= 48.75rem) {
+  .rhc-page-content {
+    --utrecht-page-content-padding-block-end: var(--rhc-space-600);
+    --utrecht-page-content-padding-block-start: var(--rhc-space-600);
+    --utrecht-page-padding-inline-end: var(--rhc-space-700);
+    --utrecht-page-padding-inline-start: var(--rhc-space-700);
+  }
+}
+
+.rhc-page-content-container {
+  background-color: #f3f3f3;
+  padding-block: 3rem;
+  padding-inline: 3rem;
+}
+
+.rhc-column-layout__paragraph {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  inline-size: 100%;
+  padding-block: 1.25rem;
+  padding-inline: 0;
+}

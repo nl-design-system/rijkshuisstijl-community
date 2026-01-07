@@ -16,9 +16,6 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    status: {
-      type: 'UNSTABLE',
-    },
     // TODO: add Figma, GitHub and NL DesignSystem links
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
     github:

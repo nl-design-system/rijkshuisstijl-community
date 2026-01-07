@@ -13,9 +13,6 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    status: {
-      type: 'UNSTABLE',
-    },
   },
 } satisfies Meta<typeof IconSet>;
 

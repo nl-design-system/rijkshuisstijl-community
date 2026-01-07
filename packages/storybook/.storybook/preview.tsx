@@ -56,6 +56,7 @@ const preview: Preview = {
     controls: { exclude: ['children'] },
     options: {
       storySort: {
+        method: 'alphabetical',
         order: [
           'Rijkshuisstijl Community',
           ['README', '*', 'Icon Sets', 'Design Tokens', ['Standaard Thema']],
@@ -69,21 +70,6 @@ const preview: Preview = {
           ['README', 'CHANGELOG'],
           'React Templates',
         ],
-      },
-    },
-    status: {
-      statuses: {
-        STABLE: {
-          background: '#088008',
-          color: '#ffffff',
-          description:
-            'Component is stabiel en kan worden gebruikt. Kleine iteraties zullen mogelijk nog plaatsvinden.',
-        },
-        UNSTABLE: {
-          background: '#cc0000',
-          color: '#ffffff',
-          description: 'Component is nieuw en mogelijk instabiel. Kan gebruikt worden, maar kan nog fouten bevatten.',
-        },
       },
     },
     docs: {

@@ -1,5 +1,30 @@
 # @rijkshuisstijl-community/components-react
 
+## 10.0.0
+
+### Major Changes
+
+- bd3dd48: Added EUPL license to Accordion and Alert source code
+- 378973a: Added licenses to Blockquote source code
+- 251c67c: Added licensing information to Action group source files
+
+### Minor Changes
+
+- 4a60cd0: Added `iconEnd` property to `NavigationListItem` component. The icon end used to be `chevron-end` and not customizable. Now it is optionally customizable. The default value is `chevron-end`. With this, it is not a breaking change and does not affect existing usage of the component.
+
+## 9.0.0
+
+### Major Changes
+
+- abbe2ef: Added EUPL-1.2 license to Alert component
+
+### Patch Changes
+
+- 12110ca: Upgrade React (fixes CVE-2025-55182, see https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components)
+- d474092: Updates `@testing-library/jest-dom` from 5.17.0 to 6.9.1.
+  Removes `@types/testing-library__jest-dom` because v6 now ships its own TypeScript types internally. No code changes required; tests and type checks continue to work the same.
+- 3d2da94: Upgrade React to 19.2.3 (to fix https://react.dev/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components)
+
 ## 8.0.0
 
 ### Major Changes

@@ -187,6 +187,7 @@ const meta = {
       status,
       cols,
       rows,
+      ...otherProps
     } = args;
     return (
       <FormFieldTextarea
@@ -210,14 +211,11 @@ const meta = {
         status={status || undefined}
         value={value || undefined}
         onChange={() => {}}
+        {...otherProps}
       />
     );
   },
-  tags: ['autodocs'],
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source

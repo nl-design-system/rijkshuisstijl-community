@@ -1,32 +1,27 @@
-import '@rijkshuisstijl-community/components-css/index.scss';
-
-import { FormFieldRadio } from '@rijkshuisstijl-community/components-react';
+import { FormFieldRadio, type FormFieldRadioProps } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './radio-group.md?raw';
 
-const RadioGroupStory = () => (
+const RadioGroupStory = ({ ...args }: FormFieldRadioProps) => (
   <div className="rhc-radio-group">
-    <FormFieldRadio label="Radio option" name="radio-option" />
-    <FormFieldRadio label="Radio option" name="radio-option" />
-    <FormFieldRadio label="Radio option" name="radio-option" />
-    <FormFieldRadio label="Radio option" name="radio-option" />
+    <FormFieldRadio {...args} />
+    <FormFieldRadio {...args} />
+    <FormFieldRadio {...args} />
+    <FormFieldRadio {...args} />
   </div>
 );
 
 const meta = {
   title: 'Radio Group',
   id: 'rhc-radio-group',
-  component: RadioGroupStory,
+  component: FormFieldRadio,
   render: RadioGroupStory,
   parameters: {
     docs: {
       description: {
         component: mergeMarkdown([readme]),
       },
-    },
-    status: {
-      type: 'STABLE',
     },
     // TODO: add Figma and NL DesignSystem links
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
@@ -39,4 +34,9 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    label: 'Radio option',
+    name: 'radio-group',
+  },
+};

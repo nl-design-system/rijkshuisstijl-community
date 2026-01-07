@@ -12,9 +12,6 @@ const meta = {
   title: 'Navigation List/Navigation List Item',
   component: NavigationListItem,
   parameters: {
-    status: {
-      type: 'STABLE',
-    },
     docs: {
       description: {
         component: mergeMarkdown([readme]),
@@ -79,6 +76,27 @@ export const WithCustomIcon: Story = {
           fill="white"
           fillRule="evenodd"
         />
+      </svg>
+    ),
+  },
+};
+
+export const WithCustomIconEnd: Story = {
+  args: {
+    iconEnd: (
+      <svg
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M17 7l-10 10"></path>
+        <path d="M8 7l9 0l0 9"></path>
       </svg>
     ),
   },

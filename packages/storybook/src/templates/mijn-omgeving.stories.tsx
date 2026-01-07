@@ -8,9 +8,6 @@ const meta = {
   component: MijnOmgeving,
   parameters: {
     layout: 'fullscreen',
-    status: {
-      type: 'UNSTABLE',
-    },
     isPage: true,
   },
 } satisfies Meta<typeof MijnOmgeving>;

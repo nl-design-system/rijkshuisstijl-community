@@ -1,5 +1,25 @@
 # @rijkshuisstijl-community/components-twig
 
+## 3.0.0
+
+### Major Changes
+
+- bd3dd48: Added EUPL license to Accordion and Alert source code
+
+### Patch Changes
+
+- Updated dependencies [378973a]
+- Updated dependencies [251c67c]
+- Updated dependencies [13de6a7]
+  - @rijkshuisstijl-community/components-css@11.0.0
+
+## 2.0.5
+
+### Patch Changes
+
+- Updated dependencies [abbe2ef]
+  - @rijkshuisstijl-community/components-css@10.0.0
+
 ## 2.0.4
 
 ### Patch Changes
