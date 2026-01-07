@@ -294,46 +294,79 @@ Content.displayName = 'LanguageNavigation.Content';
  * Item
  * -----------------------------------------------------------------------------------------------*/
 
-export interface LanguageNavigationItemProps extends HTMLAttributes<HTMLLIElement> {
+interface LanguageNavigationItemBaseProps {
   /** The language code (e.g., 'nl', 'en') */
   lang: string;
   /** The language name in that language (e.g., 'Nederlands', 'English') */
   languageName: string;
   /** The language name in the selected language (e.g., 'Dutch', 'Engels') */
   localLanguageName?: string;
-  /** Link href for navigation */
-  href: string;
   /** Close content after selecting this item */
   closeOnSelect?: boolean;
+  className?: string;
   ref?: Ref<HTMLLIElement>;
 }
+
+interface LanguageNavigationItemLinkProps extends LanguageNavigationItemBaseProps {
+  /** Link href for URL-based navigation */
+  href: string;
+  onClick?: never;
+}
+
+interface LanguageNavigationItemButtonProps extends LanguageNavigationItemBaseProps {
+  /** Click handler for programmatic navigation */
+  // eslint-disable-next-line no-unused-vars
+  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
+  href?: never;
+}
+
+export type LanguageNavigationItemProps = LanguageNavigationItemLinkProps | LanguageNavigationItemButtonProps;
 
 /**
  * Individual language item. Displays the language name and optionally the local translation.
  * Handles selection state and close-on-select behavior.
+ *
+ * Renders as a link when `href` is provided (for URL-based navigation),
+ * or as a button when `onClick` is provided (for programmatic navigation).
  */
 export const Item = ({
   children,
   lang,
   languageName,
   localLanguageName,
-  href,
   closeOnSelect = true,
   className,
-  onClick,
   ref,
   ...restProps
 }: PropsWithChildren<LanguageNavigationItemProps>) => {
   const { selectedLanguage, onLanguageChange, onOpenChange } = useLanguageNavigationContext('Item');
   const isSelected = languageName === selectedLanguage;
 
-  const handleClick = (event: MouseEvent<HTMLLIElement>) => {
+  const handleSelect = () => {
     onLanguageChange(languageName);
     if (closeOnSelect) {
       onOpenChange(false);
     }
-    onClick?.(event);
   };
+
+  const handleLinkClick = () => {
+    handleSelect();
+    // Don't prevent default - let the link navigate
+  };
+
+  const handleButtonClick = (event: MouseEvent<HTMLButtonElement>) => {
+    handleSelect();
+    restProps.onClick?.(event);
+  };
+
+  const content = children ?? (
+    <>
+      <span lang={lang}>{languageName}</span>
+      {!isSelected && localLanguageName && <span> ({localLanguageName})</span>}
+    </>
+  );
+
+  const isLink = 'href' in restProps && restProps.href !== undefined;
 
   return (
     <li
@@ -345,16 +378,25 @@ export const Item = ({
         },
         className,
       )}
-      onClick={handleClick}
-      {...restProps}
     >
-      {children ?? (
-        <Link aria-current={isSelected ? 'page' : undefined} className="rhc-language-navigation__link" href={href}>
-          <span lang={lang}>{languageName}</span>
-          {!isSelected && localLanguageName && (
-            <span className="rhc-language-navigation__local-language"> ({localLanguageName})</span>
-          )}
+      {isLink ? (
+        <Link
+          aria-current={isSelected ? 'page' : undefined}
+          className="rhc-language-navigation__link"
+          href={(restProps as LanguageNavigationItemLinkProps).href}
+          onClick={handleLinkClick}
+        >
+          {content}
         </Link>
+      ) : (
+        <button
+          aria-pressed={isSelected}
+          className="rhc-language-navigation__link rhc-link"
+          type="button"
+          onClick={handleButtonClick}
+        >
+          {content}
+        </button>
       )}
     </li>
   );

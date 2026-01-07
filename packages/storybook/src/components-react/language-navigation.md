@@ -90,18 +90,21 @@ The dropdown container that holds the language options. Only renders when the na
 
 ### LanguageNavigation.Item
 
-An individual language option within the dropdown.
+An individual language option within the dropdown. The component uses a discriminated union to render either as a **link** (for URL-based navigation) or a **button** (for programmatic navigation), depending on which prop is provided.
 
-| Prop                | Type                 | Default      | Description                                                                                                                            |
-| ------------------- | -------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `lang`              | `string`             | **required** | The language code (e.g., `'nl'`, `'en'`, `'de'`). Used for the `lang` attribute on the language name.                                  |
-| `languageName`      | `string`             | **required** | The language name displayed in that language (e.g., `'Nederlands'`, `'English'`). Also used to match against the selected language.    |
-| `localLanguageName` | `string`             | -            | The language name in the currently selected language (e.g., `'Engels'` when Dutch is selected). Only shown for non-selected languages. |
-| `href`              | `string`             | **required** | The URL to navigate to when selecting this language.                                                                                   |
-| `closeOnSelect`     | `boolean`            | `true`       | Whether to close the dropdown after selecting this option.                                                                             |
-| `children`          | `ReactNode`          | -            | Custom content to render instead of the default language display.                                                                      |
-| `className`         | `string`             | -            | Additional CSS class names.                                                                                                            |
-| `ref`               | `Ref<HTMLLIElement>` | -            | Ref to the option element.                                                                                                             |
+| Prop                | Type                                             | Default      | Description                                                                                                                            |
+| ------------------- | ------------------------------------------------ | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `lang`              | `string`                                         | **required** | The language code (e.g., `'nl'`, `'en'`, `'de'`). Used for the `lang` attribute on the language name.                                  |
+| `languageName`      | `string`                                         | **required** | The language name displayed in that language (e.g., `'Nederlands'`, `'English'`). Also used to match against the selected language.    |
+| `localLanguageName` | `string`                                         | -            | The language name in the currently selected language (e.g., `'Engels'` when Dutch is selected). Only shown for non-selected languages. |
+| `href`              | `string`                                         | -            | The URL to navigate to when selecting this language. **Renders as a link.** Cannot be used together with `onClick`.                    |
+| `onClick`           | `(event: MouseEvent<HTMLButtonElement>) => void` | -            | Click handler for programmatic navigation. **Renders as a button.** Cannot be used together with `href`.                               |
+| `closeOnSelect`     | `boolean`                                        | `true`       | Whether to close the dropdown after selecting this option.                                                                             |
+| `children`          | `ReactNode`                                      | -            | Custom content to render instead of the default language display.                                                                      |
+| `className`         | `string`                                         | -            | Additional CSS class names.                                                                                                            |
+| `ref`               | `Ref<HTMLLIElement>`                             | -            | Ref to the option element.                                                                                                             |
+
+> **Note:** You must provide either `href` or `onClick`, but not both. This ensures the correct semantic element is rendered for accessibility.
 
 ---
 
@@ -111,13 +114,18 @@ The Language Navigation component follows accessibility best practices:
 
 - The trigger button has `aria-expanded` to indicate the open state
 - The trigger button has `aria-controls` pointing to the content's ID
-- Each option uses `aria-current="page"` to indicate the current language
+- **Link items** use `aria-current="page"` to indicate the current language (appropriate for URL-based navigation)
+- **Button items** use `aria-pressed` to indicate the selected state (appropriate for programmatic navigation)
 - Pressing `Escape` closes the dropdown and returns focus to the trigger
 - Click outside detection closes the dropdown
 
+The component automatically uses the correct semantic element (`<a>` or `<button>`) based on whether `href` or `onClick` is provided, ensuring proper accessibility for both navigation patterns.
+
 ## Examples
 
-### With navigation links
+### With navigation links (URL-based)
+
+Use `href` when language switching is handled via URL navigation (e.g., `/nl`, `/en`).
 
 ```jsx
 <LanguageNavigation.Root defaultSelectedLanguage="Nederlands">
@@ -125,8 +133,36 @@ The Language Navigation component follows accessibility best practices:
   <LanguageNavigation.Content>
     <LanguageNavigation.Item lang="nl" languageName="Nederlands" href="/nl" />
     <LanguageNavigation.Item lang="en" languageName="English" localLanguageName="Engels" href="/en" />
+    <LanguageNavigation.Item lang="de" languageName="Deutsch" localLanguageName="Duits" href="/de" />
   </LanguageNavigation.Content>
 </LanguageNavigation.Root>
+```
+
+### With click handlers (programmatic)
+
+Use `onClick` when language switching is handled programmatically (e.g., i18n library, state management).
+
+```jsx
+const { setLocale } = useI18n();
+
+<LanguageNavigation.Root defaultSelectedLanguage="Nederlands">
+  <LanguageNavigation.Trigger />
+  <LanguageNavigation.Content>
+    <LanguageNavigation.Item lang="nl" languageName="Nederlands" onClick={() => setLocale('nl')} />
+    <LanguageNavigation.Item
+      lang="en"
+      languageName="English"
+      localLanguageName="Engels"
+      onClick={() => setLocale('en')}
+    />
+    <LanguageNavigation.Item
+      lang="de"
+      languageName="Deutsch"
+      localLanguageName="Duits"
+      onClick={() => setLocale('de')}
+    />
+  </LanguageNavigation.Content>
+</LanguageNavigation.Root>;
 ```
 
 ### Controlled usage
@@ -137,8 +173,8 @@ const [selectedLanguage, setSelectedLanguage] = useState('Nederlands');
 <LanguageNavigation.Root selectedLanguage={selectedLanguage} onLanguageChange={setSelectedLanguage}>
   <LanguageNavigation.Trigger />
   <LanguageNavigation.Content>
-    <LanguageNavigation.Item lang="nl" languageName="Nederlands" />
-    <LanguageNavigation.Item lang="en" languageName="English" localLanguageName="Engels" />
+    <LanguageNavigation.Item lang="nl" languageName="Nederlands" href="/nl" />
+    <LanguageNavigation.Item lang="en" languageName="English" localLanguageName="Engels" href="/en" />
   </LanguageNavigation.Content>
 </LanguageNavigation.Root>;
 ```

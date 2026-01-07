@@ -168,3 +168,76 @@ export const RTLExample: Story = {
     </div>
   ),
 };
+
+export const ButtonNavigation: Story = {
+  render: (props) => (
+    <LanguageNavigation.Root defaultSelectedLanguage="Nederlands" {...props}>
+      <LanguageNavigation.Trigger />
+      <LanguageNavigation.Content>
+        <LanguageNavigation.Item lang="nl" languageName="Nederlands" onClick={() => console.log('Switched to Dutch')} />
+        <LanguageNavigation.Item
+          lang="en"
+          languageName="English"
+          localLanguageName="Engels"
+          onClick={() => console.log('Switched to English')}
+        />
+        <LanguageNavigation.Item
+          lang="de"
+          languageName="Deutsch"
+          localLanguageName="Duits"
+          onClick={() => console.log('Switched to German')}
+        />
+      </LanguageNavigation.Content>
+    </LanguageNavigation.Root>
+  ),
+};
+
+const ControlledButtonNavigationTemplate = (props: LanguageNavigationRootProps) => {
+  const [open, setOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState('Nederlands');
+
+  const handleLanguageChange = useCallback((newLanguage: string) => {
+    setSelectedLanguage(newLanguage);
+    console.log(`Language changed to: ${newLanguage}`);
+  }, []);
+
+  return (
+    <div>
+      <p style={{ marginBottom: '1rem' }}>
+        Selected language: <strong>{selectedLanguage}</strong>
+      </p>
+      <LanguageNavigation.Root
+        open={open}
+        selectedLanguage={selectedLanguage}
+        onLanguageChange={handleLanguageChange}
+        onOpenChange={setOpen}
+        {...props}
+      >
+        <LanguageNavigation.Trigger />
+        <LanguageNavigation.Content>
+          <LanguageNavigation.Item
+            lang="nl"
+            languageName="Nederlands"
+            onClick={() => console.log('Switched to Dutch')}
+          />
+          <LanguageNavigation.Item
+            lang="en"
+            languageName="English"
+            localLanguageName="Engels"
+            onClick={() => console.log('Switched to English')}
+          />
+          <LanguageNavigation.Item
+            lang="de"
+            languageName="Deutsch"
+            localLanguageName="Duits"
+            onClick={() => console.log('Switched to German')}
+          />
+        </LanguageNavigation.Content>
+      </LanguageNavigation.Root>
+    </div>
+  );
+};
+
+export const ControlledButtonNavigation: Story = {
+  render: (props) => <ControlledButtonNavigationTemplate {...props} />,
+};
