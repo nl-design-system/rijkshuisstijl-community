@@ -8,6 +8,7 @@ const meta = {
   args: {
     children: 'Label',
     disabled: false,
+    'aria-label': 'Listbox example',
   },
   parameters: {
     github:
