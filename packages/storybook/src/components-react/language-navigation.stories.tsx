@@ -1,4 +1,4 @@
-import { LanguageNavigation } from '@rijkshuisstijl-community/components-react';
+import { LanguageNavigation, LanguageNavigationRootProps } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { useCallback, useState } from 'react';
@@ -105,38 +105,40 @@ export const KeepOpenOnSelect: Story = {
   ),
 };
 
+const ControlledTemplate = (props: LanguageNavigationRootProps) => {
+  const [open, setOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState('Nederlands');
+
+  const handleLanguageChange = useCallback((newLanguage: string) => {
+    setSelectedLanguage(newLanguage);
+    console.log(`Language changed to: ${newLanguage}`);
+  }, []);
+
+  return (
+    <div>
+      <p style={{ marginBottom: '1rem' }}>
+        Selected language: <strong>{selectedLanguage}</strong>
+      </p>
+      <LanguageNavigation.Root
+        open={open}
+        selectedLanguage={selectedLanguage}
+        onLanguageChange={handleLanguageChange}
+        onOpenChange={setOpen}
+        {...props}
+      >
+        <LanguageNavigation.Trigger />
+        <LanguageNavigation.Content>
+          <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" />
+          <LanguageNavigation.Item href="#" lang="en" languageName="English" localLanguageName="Engels" />
+          <LanguageNavigation.Item href="#" lang="de" languageName="Deutsch" localLanguageName="Duits" />
+        </LanguageNavigation.Content>
+      </LanguageNavigation.Root>
+    </div>
+  );
+};
+
 export const Controlled: Story = {
-  render: (props) => {
-    const [open, setOpen] = useState(false);
-    const [selectedLanguage, setSelectedLanguage] = useState('Nederlands');
-
-    const handleLanguageChange = useCallback((newLanguage: string) => {
-      setSelectedLanguage(newLanguage);
-      console.log(`Language changed to: ${newLanguage}`);
-    }, []);
-
-    return (
-      <div>
-        <p style={{ marginBottom: '1rem' }}>
-          Selected language: <strong>{selectedLanguage}</strong>
-        </p>
-        <LanguageNavigation.Root
-          open={open}
-          selectedLanguage={selectedLanguage}
-          onLanguageChange={handleLanguageChange}
-          onOpenChange={setOpen}
-          {...props}
-        >
-          <LanguageNavigation.Trigger />
-          <LanguageNavigation.Content>
-            <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" />
-            <LanguageNavigation.Item href="#" lang="en" languageName="English" localLanguageName="Engels" />
-            <LanguageNavigation.Item href="#" lang="de" languageName="Deutsch" localLanguageName="Duits" />
-          </LanguageNavigation.Content>
-        </LanguageNavigation.Root>
-      </div>
-    );
-  },
+  render: (props) => <ControlledTemplate {...props} />,
 };
 
 export const EnglishDefault: Story = {
