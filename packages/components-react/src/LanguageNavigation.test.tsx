@@ -12,7 +12,7 @@ const languages = [
 ];
 
 const renderLanguageNavigation = async (props = {}) => {
-  const user = await userEvent.setup();
+  const user = userEvent.setup();
   const utils = render(
     <LanguageNavigation.Root defaultSelectedLanguage="Nederlands" {...props}>
       <LanguageNavigation.Trigger />
@@ -30,6 +30,27 @@ const renderLanguageNavigation = async (props = {}) => {
     </LanguageNavigation.Root>,
   );
   return { ...utils, user };
+};
+
+const renderButtonLanguageNavigation = async (props = {}, onItemClick = vi.fn()) => {
+  const user = userEvent.setup();
+  const utils = render(
+    <LanguageNavigation.Root defaultSelectedLanguage="Nederlands" {...props}>
+      <LanguageNavigation.Trigger />
+      <LanguageNavigation.Content>
+        {languages.map(({ languageName, localLanguageName, lang }) => (
+          <LanguageNavigation.Item
+            key={lang}
+            lang={lang}
+            languageName={languageName}
+            localLanguageName={localLanguageName}
+            onClick={onItemClick}
+          />
+        ))}
+      </LanguageNavigation.Content>
+    </LanguageNavigation.Root>,
+  );
+  return { ...utils, user, onItemClick };
 };
 
 describe('LanguageNavigation', () => {
@@ -184,7 +205,7 @@ describe('LanguageNavigation', () => {
 
     it('calls custom onClick handler', async () => {
       const onClick = vi.fn();
-      const user = await userEvent.setup();
+      const user = userEvent.setup();
       render(
         <LanguageNavigation.Root>
           <LanguageNavigation.Trigger onClick={onClick} />
@@ -237,7 +258,7 @@ describe('LanguageNavigation', () => {
     });
 
     it('closes when clicking outside', async () => {
-      const user = await userEvent.setup();
+      const user = userEvent.setup();
       render(
         <div>
           <div data-testid="outside">Outside element</div>
@@ -259,7 +280,7 @@ describe('LanguageNavigation', () => {
     });
 
     it('does not close when clicking outside if closeOnOutsideClick is false', async () => {
-      const user = await userEvent.setup();
+      const user = userEvent.setup();
       render(
         <div>
           <div data-testid="outside">Outside element</div>
@@ -356,7 +377,7 @@ describe('LanguageNavigation', () => {
     });
 
     it('keeps content open when closeOnSelect is false', async () => {
-      const user = await userEvent.setup();
+      const user = userEvent.setup();
       render(
         <LanguageNavigation.Root defaultOpen={true} defaultSelectedLanguage="Nederlands">
           <LanguageNavigation.Trigger />
@@ -384,20 +405,10 @@ describe('LanguageNavigation', () => {
       expect(screen.getByRole('listitem').classList.contains('custom-list-item')).toBe(true);
     });
 
-    it('calls custom onClick handler', async () => {
-      const user = await userEvent.setup();
-      const onClick = vi.fn();
-      render(
-        <LanguageNavigation.Root defaultOpen={true}>
-          <LanguageNavigation.Trigger />
-          <LanguageNavigation.Content>
-            <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" onClick={onClick} />
-          </LanguageNavigation.Content>
-        </LanguageNavigation.Root>,
-      );
-
-      await user.click(screen.getByRole('link'));
-      expect(onClick).toHaveBeenCalledTimes(1);
+    it('renders as link when href is provided', async () => {
+      await renderLanguageNavigation({ defaultOpen: true });
+      const links = screen.getAllByRole('link');
+      expect(links).toHaveLength(3);
     });
 
     it('renders custom children instead of default content', () => {
@@ -425,6 +436,147 @@ describe('LanguageNavigation', () => {
 
       const enSpan = list.querySelector('span[lang="en"]');
       expect(enSpan).toHaveTextContent('English');
+    });
+  });
+
+  describe('Item (button mode)', () => {
+    it('renders items as buttons when onClick is provided', async () => {
+      await renderButtonLanguageNavigation({ defaultOpen: true });
+      // Get all buttons except the trigger
+      const buttons = screen.getAllByRole('button');
+      // 1 trigger + 3 language buttons
+      expect(buttons).toHaveLength(4);
+    });
+
+    it('displays language name in button mode', async () => {
+      await renderButtonLanguageNavigation({ defaultOpen: true });
+
+      expect(screen.getByText('English')).toBeInTheDocument();
+      expect(screen.getByText('Deutsch')).toBeInTheDocument();
+    });
+
+    it('displays local language name for non-selected button items', async () => {
+      await renderButtonLanguageNavigation({ defaultOpen: true, defaultSelectedLanguage: 'Nederlands' });
+      // Nederlands is selected, so no local name shown
+      expect(screen.queryByText('(Nederlands)')).not.toBeInTheDocument();
+      // Other languages show local names
+      expect(screen.getByText('(Engels)')).toBeInTheDocument();
+      expect(screen.getByText('(Duits)')).toBeInTheDocument();
+    });
+
+    it('marks selected button with aria-pressed', async () => {
+      await renderButtonLanguageNavigation({ defaultOpen: true, defaultSelectedLanguage: 'English' });
+      // Get all buttons with "English" - trigger and list item
+      const englishButtons = screen.getAllByRole('button', { name: /English/ });
+      // The list item button (second one) should have aria-pressed
+      const listItemButton = englishButtons.find((btn) => btn.hasAttribute('aria-pressed'));
+
+      expect(listItemButton).toHaveAttribute('aria-pressed', 'true');
+    });
+
+    it('non-selected buttons have aria-pressed false', async () => {
+      await renderButtonLanguageNavigation({ defaultOpen: true, defaultSelectedLanguage: 'English' });
+      const dutchButton = screen.getByRole('button', { name: /Nederlands/ });
+
+      expect(dutchButton).toHaveAttribute('aria-pressed', 'false');
+    });
+
+    it('calls onClick handler when button item is clicked', async () => {
+      const onClick = vi.fn();
+      const { user } = await renderButtonLanguageNavigation({ defaultOpen: true }, onClick);
+
+      const englishButton = screen.getByRole('button', { name: /English/ });
+      await user.click(englishButton);
+
+      expect(onClick).toHaveBeenCalledTimes(1);
+    });
+
+    it('changes selected language on button click', async () => {
+      const onLanguageChange = vi.fn();
+      const { user } = await renderButtonLanguageNavigation({ defaultOpen: true, onLanguageChange });
+
+      const englishButton = screen.getByRole('button', { name: /English/ });
+      await user.click(englishButton);
+
+      expect(onLanguageChange).toHaveBeenCalledWith('English');
+    });
+
+    it('closes content after button selection by default', async () => {
+      const { user } = await renderButtonLanguageNavigation({ defaultOpen: true });
+      const englishButton = screen.getByRole('button', { name: /English/ });
+      await user.click(englishButton);
+
+      expect(screen.queryByRole('list')).not.toBeInTheDocument();
+    });
+
+    it('keeps content open when closeOnSelect is false for button item', async () => {
+      const user = userEvent.setup();
+      const onClick = vi.fn();
+      render(
+        <LanguageNavigation.Root defaultOpen={true} defaultSelectedLanguage="Nederlands">
+          <LanguageNavigation.Trigger />
+          <LanguageNavigation.Content>
+            <LanguageNavigation.Item closeOnSelect={false} lang="en" languageName="English" onClick={onClick} />
+          </LanguageNavigation.Content>
+        </LanguageNavigation.Root>,
+      );
+
+      await user.click(screen.getByRole('button', { name: /English/ }));
+
+      expect(screen.getByRole('list')).toBeInTheDocument();
+    });
+
+    it('applies custom className to button item', () => {
+      const onClick = vi.fn();
+      render(
+        <LanguageNavigation.Root defaultOpen={true}>
+          <LanguageNavigation.Trigger />
+          <LanguageNavigation.Content>
+            <LanguageNavigation.Item
+              className="custom-button-item"
+              lang="nl"
+              languageName="Nederlands"
+              onClick={onClick}
+            />
+          </LanguageNavigation.Content>
+        </LanguageNavigation.Root>,
+      );
+
+      expect(screen.getByRole('listitem').classList.contains('custom-button-item')).toBe(true);
+    });
+
+    it('renders custom children in button mode', () => {
+      const onClick = vi.fn();
+      render(
+        <LanguageNavigation.Root defaultOpen={true}>
+          <LanguageNavigation.Trigger />
+          <LanguageNavigation.Content>
+            <LanguageNavigation.Item lang="nl" languageName="Nederlands" onClick={onClick}>
+              <span data-testid="custom-button-content">Custom Button Content</span>
+            </LanguageNavigation.Item>
+          </LanguageNavigation.Content>
+        </LanguageNavigation.Root>,
+      );
+
+      expect(screen.getByTestId('custom-button-content')).toBeInTheDocument();
+    });
+
+    it('sets lang attribute on language name span in button mode', async () => {
+      await renderButtonLanguageNavigation({ defaultOpen: true });
+
+      const list = screen.getByRole('list');
+      const nlSpan = list.querySelector('span[lang="nl"]');
+      expect(nlSpan).toHaveTextContent('Nederlands');
+
+      const enSpan = list.querySelector('span[lang="en"]');
+      expect(enSpan).toHaveTextContent('English');
+    });
+
+    it('button has type="button" attribute', async () => {
+      await renderButtonLanguageNavigation({ defaultOpen: true });
+      const englishButton = screen.getByRole('button', { name: /English/ });
+
+      expect(englishButton).toHaveAttribute('type', 'button');
     });
   });
 
