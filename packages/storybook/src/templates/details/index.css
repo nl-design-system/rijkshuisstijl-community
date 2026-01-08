@@ -71,9 +71,13 @@
  * TODO: Discuss with team and design if this should become a component, like what we're intending for CardGroup to wrap Cards.
  */
 .rhc-linklist-collection {
+  block-size: 32rem;
   column-gap: var(--rhc-space-300);
+  column-width: 400px;
   display: flex;
   flex-direction: row;
+
+  
   @media (width <= 780px) {
     flex-direction: column;
   }
