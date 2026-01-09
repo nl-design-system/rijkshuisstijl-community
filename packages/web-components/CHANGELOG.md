@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/web-components
 
+## 5.0.0
+
+### Major Changes
+
+- 337d2e8: Added licenses to the breadcrumb navigation source code.
+
 ## 4.0.0
 
 ### Major Changes
