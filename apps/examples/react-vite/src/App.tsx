@@ -1,5 +1,5 @@
 import './App.css';
-import { Card, Hero, Link, PageContent, Paragraph} from '@rijkshuisstijl-community/components-react';
+import { Card, Hero, Link, PageContent, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
 import { Footer } from './Footer';
 import { Header } from './Header';

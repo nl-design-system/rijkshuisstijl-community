@@ -152,6 +152,8 @@ export const rhcIconIDs = [
   'caribisch-nederland',
   'cateringbedrijven',
   'chevron-right',
+  'chevron-down',
+  'chevron-up',
   'chili-bonen-en-peper',
   'chip',
   'chirurg',

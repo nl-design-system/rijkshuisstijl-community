@@ -1,0 +1,81 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2025 Community for NL Design System
+ */
+
+@use "@utrecht/listbox-css/src/mixin" as utrecht-listbox-mixin;
+
+@mixin rhc-language-navigation__list {
+  @include utrecht-listbox-mixin.utrecht-listbox;
+  @include utrecht-listbox-mixin.reset-ul;
+}
+
+@mixin rhc-language-navigation__list__item {
+  @include utrecht-listbox-mixin.utrecht-listbox__option;
+
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+@mixin rhc-language-navigation__list__item--html-li {
+  @include utrecht-listbox-mixin.reset-li;
+
+  &:hover {
+    @include utrecht-listbox-mixin.utrecht-listbox__option--hover;
+  }
+
+  &:focus {
+    @include utrecht-listbox-mixin.utrecht-listbox__option--focus;
+  }
+}
+
+@mixin rhc-language-navigation__list__item--selected {
+  @include utrecht-listbox-mixin.utrecht-listbox__option--selected;
+}
+
+@mixin rhc-language-navigation__link--focus-visible {
+  @include utrecht-listbox-mixin.utrecht-listbox__option--focus-visible;
+}
+
+@mixin rhc-language-navigation__link {
+  // remove default link styles
+  --nl-link-text-decoration-line: none;
+  --nl-link-hover-text-decoration-line: none;
+
+  // set link colors based on listbox option colors
+  --nl-link-color: var(--utrecht-listbox-option-color, var(--rhc-color-zwart));
+  --nl-link-active-color: var(--utrecht-listbox-option-color, var(--rhc-color-zwart));
+  --nl-link-hover-color: var(--utrecht-listbox-option-hover-color, var(--rhc-color-zwart));
+
+  flex-grow: 1;
+
+  // make the link fill the list item
+  line-height: calc(
+    var(--utrecht-listbox-option-min-block-size, var(--rhc-space-400)) - var(
+        --utrecht-listbox-option-padding-block-start,
+        var(--rhc-space-100)
+      ) - var(--utrecht-listbox-option-padding-block-end, var(--rhc-space-100))
+  );
+  padding-block-end: var(--utrecht-listbox-option-padding-block-end, var(--rhc-space-100));
+  padding-block-start: var(--utrecht-listbox-option-padding-block-start, var(--rhc-space-100));
+  padding-inline-end: var(--utrecht-listbox-option-padding-inline-end, var(--rhc-space-200));
+  padding-inline-start: var(--utrecht-listbox-option-padding-inline-start, var(--rhc-space-200));
+}
+
+@mixin rhc-language-navigation__link--button {
+  // reset default button styles & match link colors
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: var(--utrecht-listbox-option-color, var(--rhc-color-zwart));
+  cursor: pointer;
+  font: inherit;
+  inline-size: 100%;
+  text-align: start;
+
+  &:hover {
+    color: var(--utrecht-listbox-option-hover-color, var(--rhc-color-zwart));
+  }
+}
