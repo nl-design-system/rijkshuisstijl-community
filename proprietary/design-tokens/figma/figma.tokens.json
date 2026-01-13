@@ -672,28 +672,36 @@
         },
         "font-size": {
           "max": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "1rem"
+            },
             "md": {
               "$type": "fontSizes",
-              "$value": "clamp(1rem, 0.875rem + 0.5vw, 1.25rem)"
+              "$value": "1.25rem"
             },
             "lg": {
               "$type": "fontSizes",
-              "$value": "clamp(1.2rem, 1.0188rem + 0.725vw, 1.5625rem)"
+              "$value": "1.5rem"
             },
             "xl": {
               "$type": "fontSizes",
-              "$value": "clamp(1.44rem, 1.1834rem + 1.0263vw, 1.9531rem)"
+              "$value": "1.875rem"
             },
             "2xl": {
               "$type": "fontSizes",
-              "$value": "clamp(1.728rem, 1.3713rem + 1.4268vw, 2.4414rem)"
+              "$value": "2.5rem"
             },
             "3xl": {
               "$type": "fontSizes",
-              "$value": "clamp(2.0736rem, 1.5845rem + 1.9563vw, 3.0518rem)"
+              "$value": "3.125rem"
             }
           },
           "min": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "0.9rem"
+            },
             "md": {
               "$type": "fontSizes",
               "$value": "1rem"
@@ -8050,6 +8058,10 @@
     "rhc": {
       "text": {
         "font-size": {
+          "sm": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.sm}"
+          },
           "md": {
             "$type": "fontSizes",
             "$value": "{rhc.text.font-size.min.md}"
@@ -8078,6 +8090,10 @@
     "rhc": {
       "text": {
         "font-size": {
+          "sm": {
+            "$type": "fontSizes",
+            "$value": "clamp(1rem, 0.875rem + 0.5vw, 1.25rem)"
+          },
           "md": {
             "$type": "fontSizes",
             "$value": "clamp(1rem, 0.875rem + 0.5vw, 1.25rem)"
@@ -8107,6 +8123,10 @@
       "text": {
         "font-size": {
           "max": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "1rem"
+            },
             "md": {
               "$type": "fontSizes",
               "$value": "1rem"
@@ -8136,6 +8156,10 @@
     "rhc": {
       "text": {
         "font-size": {
+          "sm": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.000rem, 0.875rem + 0.5000vw, 1.000rem)"
+          },
           "md": {
             "$type": "fontSizes",
             "$value": "clamp(1.000rem, 0.875rem + 0.5000vw, 1.000rem)"
@@ -8165,6 +8189,10 @@
       "text": {
         "font-size": {
           "max": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "1.25rem"
+            },
             "md": {
               "$type": "fontSizes",
               "$value": "1.25rem"
