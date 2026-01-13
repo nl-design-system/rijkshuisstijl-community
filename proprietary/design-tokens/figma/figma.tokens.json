@@ -1550,6 +1550,10 @@
         "max-inline-size": {
           "$type": "dimension",
           "$value": "75ch"
+        },
+        "font-size": {
+          "$type": "fontSize",
+          "$value": "{rhc.text.font-size.max.md}"
         }
       }
     }
@@ -2309,6 +2313,10 @@
           "$type": "dimension",
           "$value": "{rhc.space.200}"
         },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{rhc.text.font-size.max.md}"
+        },
         "inline-size": {
           "$type": "dimension",
           "$value": "328px"
@@ -2436,11 +2444,17 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.lg}"
+            "$value": "{rhc.text.font-size.max.lg}"
           },
           "font-weight": {
             "$type": "fontWeights",
             "$value": "{rhc.text.font-weight.strong}"
+          }
+        },
+        "subheading": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.lg}"
           }
         },
         "horizontal": {
@@ -2512,6 +2526,10 @@
         "column-gap": {
           "$type": "dimension",
           "$value": "{rhc.space.200}"
+        },
+        "font-size": {
+          "$type": "dimension",
+          "$value": "{rhc.text.font-size.max.md}"
         },
         "icon": {
           "color": {
@@ -2705,6 +2723,36 @@
     }
   },
   "components/checkbox": {
+    "rhc": {
+      "checkbox": {
+        "align-items": {
+          "$type": "dimension",
+          "$value": "flex-start"
+        },
+        "display": {
+          "$type": "dimension",
+          "$value": "flex"
+        },
+        "gap": {
+          "$type": "dimension",
+          "$value": "0.25em"
+        },
+        "label": {
+          "flex-shrink": {
+            "$type": "dimension",
+            "$value": "0"
+          },
+          "order": {
+            "$type": "dimension",
+            "$value": "0"
+          },
+          "margin-block-start": {
+            "$type": "dimension",
+            "$value": "0.1vw"
+          }
+        }
+      }
+    },
     "utrecht": {
       "checkbox": {
         "background-color": {
@@ -2725,7 +2773,7 @@
         },
         "size": {
           "$type": "dimension",
-          "$value": "{rhc.size.half-lint}"
+          "$value": "{rhc.text.font-size.max.md}"
         },
         "icon": {
           "size": {
@@ -3652,6 +3700,10 @@
   "components/form-field": {
     "utrecht": {
       "form-field": {
+        "font-size": {
+          "$type": "fontSize",
+          "$value": "{rhc.text.font-size.max.md}"
+        },
         "label": {
           "margin-block-end": {
             "$type": "dimension",
@@ -4253,6 +4305,12 @@
             "$value": "{rhc.size.icon.md}"
           }
         },
+        "item": {
+          "font-size": {
+            "$type": "fontSize",
+            "$value": "{rhc.text.font-size.max.md}"
+          }
+        },
         "link": {
           "column-gap": {
             "$type": "dimension",
@@ -4841,7 +4899,7 @@
             },
             "font-size": {
               "$type": "fontSizes",
-              "$value": "{rhc.text.font-size.md}"
+              "$value": "{rhc.text.font-size.max.md}"
             },
             "line-height": {
               "$type": "lineHeights",
@@ -4891,7 +4949,7 @@
             },
             "font-size": {
               "$type": "fontSizes",
-              "$value": "{rhc.text.font-size.xl}"
+              "$value": "{rhc.text.font-size.max.xl}"
             },
             "font-weight": {
               "$type": "fontWeights",
