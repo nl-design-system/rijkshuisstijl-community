@@ -934,23 +934,23 @@
         "font-size": {
           "md": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.md}"
+            "$value": "{rhc.text.font-size.md}"
           },
           "lg": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.lg}"
+            "$value": "{rhc.text.font-size.lg}"
           },
           "xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.xl}"
+            "$value": "{rhc.text.font-size.xl}"
           },
           "2xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.2xl}"
+            "$value": "{rhc.text.font-size.2xl}"
           },
           "3xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.3xl}"
+            "$value": "{rhc.text.font-size.3xl}"
           }
         },
         "font-family": {
@@ -1553,7 +1553,7 @@
         },
         "font-size": {
           "$type": "fontSize",
-          "$value": "{rhc.text.font-size.max.md}"
+          "$value": "{rhc.text.font-size.md}"
         }
       }
     }
@@ -2315,7 +2315,7 @@
         },
         "font-size": {
           "$type": "fontSizes",
-          "$value": "{rhc.text.font-size.max.md}"
+          "$value": "{rhc.text.font-size.md}"
         },
         "inline-size": {
           "$type": "dimension",
@@ -2444,7 +2444,7 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.lg}"
+            "$value": "{rhc.text.font-size.lg}"
           },
           "font-weight": {
             "$type": "fontWeights",
@@ -2454,7 +2454,7 @@
         "subheading": {
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.lg}"
+            "$value": "{rhc.text.font-size.lg}"
           }
         },
         "horizontal": {
@@ -2529,7 +2529,7 @@
         },
         "font-size": {
           "$type": "dimension",
-          "$value": "{rhc.text.font-size.max.md}"
+          "$value": "{rhc.text.font-size.md}"
         },
         "icon": {
           "color": {
@@ -2773,7 +2773,7 @@
         },
         "size": {
           "$type": "dimension",
-          "$value": "{rhc.text.font-size.max.md}"
+          "$value": "{rhc.text.font-size.md}"
         },
         "icon": {
           "size": {
@@ -3702,7 +3702,7 @@
       "form-field": {
         "font-size": {
           "$type": "fontSize",
-          "$value": "{rhc.text.font-size.max.md}"
+          "$value": "{rhc.text.font-size.md}"
         },
         "label": {
           "margin-block-end": {
@@ -4308,7 +4308,7 @@
         "item": {
           "font-size": {
             "$type": "fontSize",
-            "$value": "{rhc.text.font-size.max.md}"
+            "$value": "{rhc.text.font-size.md}"
           }
         },
         "link": {
@@ -4899,7 +4899,7 @@
             },
             "font-size": {
               "$type": "fontSizes",
-              "$value": "{rhc.text.font-size.max.md}"
+              "$value": "{rhc.text.font-size.md}"
             },
             "line-height": {
               "$type": "lineHeights",
@@ -4949,7 +4949,7 @@
             },
             "font-size": {
               "$type": "fontSizes",
-              "$value": "{rhc.text.font-size.max.xl}"
+              "$value": "{rhc.text.font-size.xl}"
             },
             "font-weight": {
               "$type": "fontWeights",
@@ -8074,7 +8074,35 @@
       }
     }
   },
-  "overrides/type-scale/information dense": {
+  "overrides/type-scale/default - voor dev": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "md": {
+            "$type": "fontSizes",
+            "$value": "clamp(1rem, 0.875rem + 0.5vw, 1.25rem)"
+          },
+          "lg": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.2rem, 1.0188rem + 0.725vw, 1.5625rem)"
+          },
+          "xl": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.44rem, 1.1834rem + 1.0263vw, 1.9531rem)"
+          },
+          "2xl": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.728rem, 1.3713rem + 1.4268vw, 2.4414rem)"
+          },
+          "3xl": {
+            "$type": "fontSizes",
+            "$value": "clamp(2.0736rem, 1.5845rem + 1.9563vw, 3.0518rem)"
+          }
+        }
+      }
+    }
+  },
+  "overrides/type-scale/information dense - voor designers": {
     "rhc": {
       "text": {
         "font-size": {
@@ -8099,6 +8127,34 @@
               "$type": "fontSizes",
               "$value": "2.5rem"
             }
+          }
+        }
+      }
+    }
+  },
+  "overrides/type-scale/information dense - voor dev": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "md": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.000rem, 0.875rem + 0.5000vw, 1.000rem)"
+          },
+          "lg": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.250rem, 1.0188rem + 0.7250vw, 1.250rem)"
+          },
+          "xl": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.500rem, 1.1834rem + 1.0263vw, 1.500rem)"
+          },
+          "2xl": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.750rem, 1.3713rem + 1.4268vw, 1.750rem)"
+          },
+          "3xl": {
+            "$type": "fontSizes",
+            "$value": "clamp(2.000rem, 1.5845rem + 1.9563vw, 2.000rem)"
           }
         }
       }
@@ -8847,7 +8903,9 @@
       "overrides/primaire kleur/contrast fix/non primary button labels coolgrey",
       "overrides/primaire kleur/contrast fix/non primary buttons coolgrey",
       "overrides/responsive/min",
-      "overrides/type-scale/information dense",
+      "overrides/type-scale/default - voor dev",
+      "overrides/type-scale/information dense - voor designers",
+      "overrides/type-scale/information dense - voor dev",
       "overrides/type-scale/promotion"
     ]
   }
