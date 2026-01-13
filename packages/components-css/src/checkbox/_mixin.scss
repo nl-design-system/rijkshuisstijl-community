@@ -1,3 +1,14 @@
+@mixin utrecht-checkbox-label--checkbox {
+  display: var(--rhc-checkbox-display);
+  align-items: var(--rhc-checkbox-flex-start);
+  gap: var(--rhc-checkbox-gap);
+}
+@mixin utrecht-checkbox-label--checkbox-label {
+  order: var(--rhc-checkbox-label-order);
+  margin-block-start: var(--rhc-checkbox-label-margin-block-start);
+  flex-shrink: var(--rhc-checkbox-label-flex-shrink);
+}
+
 @mixin utrecht-checkbox--checked {
   background-image: url('data:image/svg+xml,<svg width="5.5" height="7" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.7071 0.292893C17.0976 0.683417 17.0976 1.31658 16.7071 1.70711L6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071L0.292893 6.70711C-0.0976311 6.31658 -0.0976311 5.68342 0.292893 5.29289C0.683417 4.90237 1.31658 4.90237 1.70711 5.29289L6 9.58579L15.2929 0.292893C15.6834 -0.0976311 16.3166 -0.0976311 16.7071 0.292893Z" fill="white"/></svg>');
 }
