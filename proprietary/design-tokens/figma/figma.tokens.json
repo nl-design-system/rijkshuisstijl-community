@@ -674,53 +674,65 @@
           "max": {
             "sm": {
               "$type": "fontSizes",
-              "$value": "1rem"
+              "$value": "1rem",
+              "$description": "[figma-only]"
             },
             "md": {
               "$type": "fontSizes",
-              "$value": "1.25rem"
+              "$value": "1.25rem",
+              "$description": "[figma-only]"
             },
             "lg": {
               "$type": "fontSizes",
-              "$value": "1.5rem"
+              "$value": "1.5rem",
+              "$description": "[figma-only]"
             },
             "xl": {
               "$type": "fontSizes",
-              "$value": "1.875rem"
+              "$value": "2rem",
+              "$description": "[figma-only]"
             },
             "2xl": {
               "$type": "fontSizes",
-              "$value": "2.5rem"
+              "$value": "2.5rem",
+              "$description": "[figma-only]"
             },
             "3xl": {
               "$type": "fontSizes",
-              "$value": "3.125rem"
+              "$value": "3rem",
+              "$description": "[figma-only]"
             }
           },
           "min": {
             "sm": {
               "$type": "fontSizes",
-              "$value": "0.9rem"
+              "$value": "0.875rem",
+              "$description": "[figma-only]"
             },
             "md": {
               "$type": "fontSizes",
-              "$value": "1rem"
+              "$value": "1rem",
+              "$description": "[figma-only]"
             },
             "lg": {
               "$type": "fontSizes",
-              "$value": "1.2rem"
+              "$value": "1.25rem",
+              "$description": "[figma-only]"
             },
             "xl": {
               "$type": "fontSizes",
-              "$value": "1.5rem"
+              "$value": "1.5rem",
+              "$description": "[figma-only]"
             },
             "2xl": {
               "$type": "fontSizes",
-              "$value": "2rem"
+              "$value": "1.75rem",
+              "$description": "[figma-only]"
             },
             "3xl": {
               "$type": "fontSizes",
-              "$value": "2.5rem"
+              "$value": "2rem",
+              "$description": "[figma-only]"
             }
           }
         }
@@ -989,6 +1001,15 @@
           "strong": {
             "$type": "fontWeights",
             "$value": "{rhc.text.font-weight.bold}"
+          }
+        }
+      },
+      "line-height": {
+        "icon": {
+          "md": {
+            "$type": "dimension",
+            "$value": "{rhc.text.font-size.md} * 1.5",
+            "$description": "[figma-only] [temporary – until nl-icon]"
           }
         }
       }
@@ -8129,27 +8150,33 @@
           "max": {
             "sm": {
               "$type": "fontSizes",
-              "$value": "1rem"
+              "$value": "0.875rem",
+              "$description": "[figma-only]"
             },
             "md": {
               "$type": "fontSizes",
-              "$value": "1rem"
+              "$value": "1rem",
+              "$description": "[figma-only]"
             },
             "lg": {
               "$type": "fontSizes",
-              "$value": "1.2rem"
+              "$value": "1.25rem",
+              "$description": "[figma-only]"
             },
             "xl": {
               "$type": "fontSizes",
-              "$value": "1.5rem"
+              "$value": "1.5rem",
+              "$description": "[figma-only]"
             },
             "2xl": {
               "$type": "fontSizes",
-              "$value": "2rem"
+              "$value": "1.75rem",
+              "$description": "[figma-only]"
             },
             "3xl": {
               "$type": "fontSizes",
-              "$value": "2.5rem"
+              "$value": "2rem",
+              "$description": "[figma-only]"
             }
           }
         }
@@ -8183,40 +8210,6 @@
           "3xl": {
             "$type": "fontSizes",
             "$value": "clamp(2.000rem, 1.5845rem + 1.9563vw, 2.000rem)"
-          }
-        }
-      }
-    }
-  },
-  "overrides/type-scale/promotion": {
-    "rhc": {
-      "text": {
-        "font-size": {
-          "max": {
-            "sm": {
-              "$type": "fontSizes",
-              "$value": "1.25rem"
-            },
-            "md": {
-              "$type": "fontSizes",
-              "$value": "1.25rem"
-            },
-            "lg": {
-              "$type": "fontSizes",
-              "$value": "1.5rem"
-            },
-            "xl": {
-              "$type": "fontSizes",
-              "$value": "2.25rem"
-            },
-            "2xl": {
-              "$type": "fontSizes",
-              "$value": "3rem"
-            },
-            "3xl": {
-              "$type": "fontSizes",
-              "$value": "4rem"
-            }
           }
         }
       }
