@@ -2,7 +2,7 @@
 
 # Rijkshuisstijl Community Componenten - Web Components
 
-_Dit project wordt **niet** gesteund door het Ministerie van Algemene Zaken._
+_Dit project wordt **niet** gesteund door het Ministerie van Algemene Zaken_
 
 **Het toepassen van design-elementen uit dit project is strikt verboden voor organisaties die geen deel uitmaken van de
 centrale overheid van Nederland.**
