@@ -8090,7 +8090,7 @@
       }
     }
   },
-  "overrides/type-scale/default - voor code": {
+  "overrides/type-scale/default [code-only]": {
     "rhc": {
       "text": {
         "font-size": {
@@ -8104,7 +8104,7 @@
           },
           "lg": {
             "$type": "fontSizes",
-            "$value": "lamp(1.250rem, 1.0188rem + 0.7250vw, 1.500rem)"
+            "$value": "clamp(1.250rem, 1.0188rem + 0.7250vw, 1.500rem)"
           },
           "xl": {
             "$type": "fontSizes",
@@ -8122,7 +8122,7 @@
       }
     }
   },
-  "overrides/type-scale/information dense - voor figma": {
+  "overrides/type-scale/information dense [figma-only]": {
     "rhc": {
       "text": {
         "font-size": {
@@ -8156,7 +8156,7 @@
       }
     }
   },
-  "overrides/type-scale/information dense - voor code": {
+  "overrides/type-scale/information dense [code-only]": {
     "rhc": {
       "text": {
         "font-size": {
@@ -8305,7 +8305,7 @@
         "common/text": "enabled",
         "components/heading": "enabled",
         "common/vendor": "enabled",
-        "overwrite/type-scale/default - voor code": "enabled"
+        "overrides/type-scale/default [code-only]": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8393,7 +8393,7 @@
         "overrides/closed-source/font": "enabled",
         "components/heading": "enabled",
         "common/vendor": "enabled",
-        "overwrite/type-scale/default - voor code": "enabled"
+        "overrides/type-scale/default [code-only]": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8482,7 +8482,7 @@
         "overrides/primaire kleur/groen": "enabled",
         "components/heading": "enabled",
         "common/vendor": "enabled",
-        "overwrite/type-scale/default - voor code": "enabled"
+        "overrides/type-scale/default [code-only]": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8571,7 +8571,7 @@
         "overrides/primaire kleur/hemelblauw": "enabled",
         "components/heading": "enabled",
         "common/vendor": "enabled",
-        "overwrite/type-scale/default - voor code": "enabled"
+        "overrides/type-scale/default [code-only]": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8662,7 +8662,7 @@
         "overrides/primaire kleur/contrast fix/non primary buttons coolgrey": "enabled",
         "components/heading": "enabled",
         "common/vendor": "enabled",
-        "overwrite/type-scale/default - voor code": "enabled"
+        "overrides/type-scale/default [code-only]": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8751,7 +8751,7 @@
         "overrides/primaire kleur/paars": "enabled",
         "components/heading": "enabled",
         "common/vendor": "enabled",
-        "overwrite/type-scale/default - voor code": "enabled"
+        "overrides/type-scale/default [code-only]": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8840,7 +8840,7 @@
         "overrides/primaire kleur/robijn rood": "enabled",
         "components/heading": "enabled",
         "common/vendor": "enabled",
-        "overwrite/type-scale/default - voor code": "enabled"
+        "overrides/type-scale/default [code-only]": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8942,9 +8942,9 @@
       "overrides/primaire kleur/contrast fix/non primary button labels coolgrey",
       "overrides/primaire kleur/contrast fix/non primary buttons coolgrey",
       "overrides/responsive/min",
-      "overrides/type-scale/default - voor code",
-      "overrides/type-scale/information dense - voor figma",
-      "overrides/type-scale/information dense - voor code",
+      "overrides/type-scale/default [code-only]",
+      "overrides/type-scale/information dense [figma-only]",
+      "overrides/type-scale/information dense [code-only]",
       "overrides/type-scale/promotion"
     ]
   }
