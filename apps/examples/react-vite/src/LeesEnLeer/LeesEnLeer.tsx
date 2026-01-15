@@ -4,16 +4,14 @@ import { CardAsLink, Heading } from '@rijkshuisstijl-community/components-react'
 export function LeesEnLeer() {
   return (
     <>
-      <Heading level={2}>
-        Lees en leer
-      </Heading>
+      <Heading level={2}>Lees en leer</Heading>
       <div className="rhc-card-layout">
         <CardAsLink
           description="Een duplicaat van de Voorbeeld bibliotheek van Het NL Design System, waarin de design tokens van het RHC-project zijn toegepast. Deze setup maakt het mogelijk om stijl keuzes te testen en inzichtelijk te maken. Door de design tokens via Token Studio in te laden, kun je tussen thema's schakelen en beoordelen of de stijl aansluit bij jouw organisatie. "
           heading="NL Design System Rijkshuisstijl Figma Bibliotheek"
           href="#"
           linkLabel="Bekijk de NL Design System Rijkshuisstijl Bibliotheek in Figma"
-      />
+        />
         <CardAsLink
           description="Mee ontwikkelen aan NL Design System of gebruik maken van bestaande compionenten? Als developer vind je hier alle documentatie die je nodig hebt om te beginnen."
           heading="Developer Handboek!"

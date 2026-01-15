@@ -4488,6 +4488,186 @@
       }
     }
   },
+  "components/listbox": {
+    "utrecht": {
+      "listbox": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{rhc.color.wit}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{rhc.color.border.subtle}"
+        },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{rhc.border-radius.md}"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{rhc.border-width.sm}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.zwart}"
+        },
+        "font-weight": {
+          "$type": "dimension",
+          "$value": "{rhc.text.font-weight.regular}"
+        },
+        "option": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{rhc.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.default}"
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.cool-grey.200}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.default}"
+            }
+          },
+          "selected": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.cool-grey.200}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.default}"
+            },
+            "hover": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{rhc.color.cool-grey.300}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{rhc.color.foreground.default}"
+              }
+            },
+            "disabled": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{rhc.color.cool-grey.200}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{rhc.color.foreground.default}"
+              }
+            }
+          },
+          "min-block-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.pointer-target}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.100}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.200}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.200}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.100}"
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.cool-grey.400}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.default}"
+            }
+          },
+          "disabled": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.cool-grey.200}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.default}"
+            }
+          }
+        },
+        "inline-size": {
+          "$type": "dimension",
+          "$value": "16rem"
+        },
+        "max-block-size": {
+          "$type": "dimension",
+          "$value": "40rem"
+        },
+        "padding-block-end": {
+          "$type": "dimension",
+          "$value": "{rhc.space.0}"
+        },
+        "padding-inline-end": {
+          "$type": "dimension",
+          "$value": "{rhc.space.0}"
+        },
+        "padding-block-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.0}"
+        },
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.0}"
+        },
+        "group": {
+          "margin-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.0}",
+            "$description": "[code-only]"
+          }
+        },
+        "group-label": {
+          "margin-inline-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.0}",
+            "$description": "[code-only]"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{rhc.text.line-height.md}"
+          }
+        },
+        "icon": {
+          "size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.icon.md}"
+          }
+        }
+      }
+    }
+  },
   "components/logo": {
     "rhc": {
       "logo": {
@@ -8127,6 +8307,7 @@
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8213,6 +8394,7 @@
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8300,6 +8482,7 @@
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8388,6 +8571,7 @@
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8476,6 +8660,7 @@
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8566,6 +8751,7 @@
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8654,6 +8840,7 @@
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8746,6 +8933,7 @@
       "components/link-list-card",
       "components/link/nl",
       "components/link/utrecht",
+      "components/listbox",
       "components/logo",
       "components/message-list",
       "components/nav-bar",
