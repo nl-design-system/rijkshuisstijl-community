@@ -12,7 +12,7 @@ import {
   type BreadcrumbNavLinkProps as UtrechtBreadcrumbNavLinkProps,
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { PropsWithChildren, Ref } from 'react';
+import { Ref } from 'react';
 
 export { BreadcrumbNav, type BreadcrumbNavProps, BreadcrumbNavSeparator, type BreadcrumbNavSeparatorProps };
 
@@ -21,25 +21,16 @@ export interface BreadcrumbNavLinkProps extends UtrechtBreadcrumbNavLinkProps {
   ref?: Ref<HTMLAnchorElement>;
 }
 
-export const BreadcrumbNavLink = ({
-  ref,
-  children,
-  className,
-  href,
-  active,
-  current,
-  ...restProps
-}: PropsWithChildren<BreadcrumbNavLinkProps>) => {
+export const BreadcrumbNavLink = ({ children, className, active, current, ...restProps }: BreadcrumbNavLinkProps) => {
   return (
     <UtrechtBreadcrumbNavLink
-      href={href}
       className={clsx({
         'rhc-breadcrumb-nav__link--active': active,
         'rhc-breadcrumb-nav__link--current': current,
         className,
       })}
+      current={current}
       {...restProps}
-      ref={ref}
     >
       {children}
     </UtrechtBreadcrumbNavLink>
