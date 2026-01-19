@@ -24,13 +24,13 @@ export interface BreadcrumbNavLinkProps extends UtrechtBreadcrumbNavLinkProps {
 export const BreadcrumbNavLink = ({ children, className, active, current, ...restProps }: BreadcrumbNavLinkProps) => {
   return (
     <UtrechtBreadcrumbNavLink
+      current={current}
+      {...restProps}
       className={clsx({
         'rhc-breadcrumb-nav__link--active': active,
         'rhc-breadcrumb-nav__link--current': current,
         className,
       })}
-      current={current}
-      {...restProps}
     >
       {children}
     </UtrechtBreadcrumbNavLink>
