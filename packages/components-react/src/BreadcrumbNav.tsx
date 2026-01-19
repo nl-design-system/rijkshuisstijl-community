@@ -33,7 +33,7 @@ export const BreadcrumbNavLink = ({
     <UtrechtBreadcrumbNavLink
       href={href}
       className={clsx({
-        'utrecht-breadcrumb-nav__link--active': active,
+        'rhc-breadcrumb-nav__link--active': active,
         className,
       })}
       {...restProps}
