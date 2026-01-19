@@ -27,6 +27,7 @@ export const BreadcrumbNavLink = ({
   className,
   href,
   active,
+  current,
   ...restProps
 }: PropsWithChildren<BreadcrumbNavLinkProps>) => {
   return (
@@ -34,6 +35,7 @@ export const BreadcrumbNavLink = ({
       href={href}
       className={clsx({
         'rhc-breadcrumb-nav__link--active': active,
+        'rhc-breadcrumb-nav__link--current': current,
         className,
       })}
       {...restProps}
