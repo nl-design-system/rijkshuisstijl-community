@@ -9,7 +9,7 @@ import clsx from 'clsx';
 export type { BlockquoteProps } from '@utrecht/component-library-react';
 
 export const Blockquote = ({ className, ...restProps }: BlockquoteProps) => {
-  return <UtrechtBlockquote className={clsx('rhc-blockquote', className)} {...restProps} />;
+  return <UtrechtBlockquote className={clsx('rhc-blockquote__blockquote', className)} {...restProps} />;
 };
 
 Blockquote.displayName = 'Blockquote';
