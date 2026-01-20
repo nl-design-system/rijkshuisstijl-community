@@ -5,7 +5,7 @@
 
 @use "mixin";
 
-.rhc-checkbox {
+.rhc-checkbox.utrecht-checkbox {
   margin-block-start: var(--rhc-space-50);
   &--disabled {
     @include mixin.rhc-checkbox--disabled;
@@ -14,13 +14,13 @@
     @include mixin.rhc-checkbox--invalid;
   }
 }
-.rhc-checkbox--custom.rhc-checkbox--html-input,
-.rhc-custom-checkbox--html-input {
+.rhc-checkbox.utrecht-checkbox--custom.utrecht-checkbox--html-input,
+.rhc-checkbox.utrecht-custom-checkbox--html-input {
   @include mixin.rhc-custom-checkbox--html-input;
 }
-.rhc-checkbox--custom.rhc-checkbox--html-input:indeterminate {
+.rhc-checkbox.utrecht-checkbox--custom.utrecht-checkbox--html-input:indeterminate {
   @include mixin.rhc-checkbox--indeterminate;
 }
-.rhc-checkbox--custom.rhc-checkbox--html-input[aria-invalid="true"]:hover {
+.rhc-checkbox.utrecht-checkbox--custom.utrecht-checkbox--html-input[aria-invalid="true"]:hover {
   @include mixin.rhc-checkbox--invalid;
 }
