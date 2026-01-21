@@ -1,5 +1,18 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 11.1.0
+
+### Minor Changes
+
+- f0a77eb: Added the following components:
+  - link button (button styled as a link) (utrecht)
+  - listbox (utrecht)
+  - language navigation
+
+  Tokens have been added for each of these components.
+  The listbox and link button are reexported from utrecht with tokens styling from RHC.
+  The Language Navigation is a new component built in the community
+
 ## 11.0.0
 
 ### Major Changes

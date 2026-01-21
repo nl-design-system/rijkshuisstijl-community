@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-angular
 
+## 8.0.0
+
+### Major Changes
+
+- 72bf3ad: Upgrade Angular from 19 to 20
+
 ## 7.0.0
 
 ### Major Changes

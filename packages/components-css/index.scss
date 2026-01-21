@@ -10,6 +10,7 @@
 @use "src/blockquote/index" as blockquote;
 @use "src/breadcrumb-nav/index" as breadcrumb;
 @use "src/button/index" as button;
+@use "src/link-button/index" as linkButton;
 @use "src/card-as-link/index" as cardAsLink;
 @use "src/card/index" as card;
 @use "src/checkbox/index" as checkbox;
@@ -28,9 +29,11 @@
 @use "src/footer/index" as footer;
 @use "src/heading/index" as heading;
 @use "src/hero/index" as hero;
+@use "src/language-navigation/index" as languageNavigation;
 @use "src/link-list/index" as linkList;
 @use "src/link-list-card/index" as linkListCard;
 @use "src/link/index" as link;
+@use "src/listbox/index" as listbox;
 @use "src/logo/index" as logo;
 @use "src/navbar/index" as navbar;
 @use "src/message-list/index" as messageList;
@@ -82,6 +85,8 @@
 @import "@utrecht/heading-group-css/dist/index.css";
 @import "@utrecht/img-css/dist/index.css";
 @import "@utrecht/link-css/dist/index.css";
+@import "@utrecht/listbox-css/dist/index.css";
+@import "@utrecht/link-button-css/dist/index.css";
 @import "@utrecht/link-list-css/dist/index.css";
 @import "@utrecht/ordered-list-css/dist/index.css";
 @import "@utrecht/page-body-css/dist/index.css";
