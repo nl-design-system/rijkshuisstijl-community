@@ -27,8 +27,8 @@ pnpm install
 ## Run Dev Server
 
 - Navigate to this directory
-cd apps/examples/react-vite
-pnpm dev
+  cd apps/examples/react-vite
+  pnpm dev
 
 ## CI/CD Integration
 

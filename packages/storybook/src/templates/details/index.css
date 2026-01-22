@@ -67,14 +67,13 @@
 }
 
 /**
- * Custom linklist-collection component, pre-existing in templates.
- * TODO: Discuss with team and design if this should become a component, like what we're intending for CardGroup to wrap Cards.
+ * Provide spacing between linked list's in a column to match the list item gap.
  */
 .rhc-linklist-collection {
-  column-gap: var(--rhc-space-300);
-  display: flex;
-  flex-direction: row;
-  @media (width <= 780px) {
+
+  @media (width <= 930px) {
+    display: flex;
     flex-direction: column;
+    gap: 0.5rem;
   }
 }
