@@ -18,7 +18,7 @@
 {%- endif -%}
 {%- set attributes = attributes.setAttribute('role', role) -%}
 {%- set attributes = attributes.addClass('utrecht-alert__message') -%}
-<div class="utrecht-alert utrecht-alert--{{ type }}">
+<div class="utrecht-alert rhc-alert utrecht-alert--{{ type }}">
   <div class="utrecht-alert__icon">
     {% include '@rhc/Icon.twig' with {
       attributes: create_attribute(),
