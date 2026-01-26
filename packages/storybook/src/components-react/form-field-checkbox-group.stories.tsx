@@ -74,7 +74,10 @@ export const Default: StoryObj<typeof meta> = {
     children: [
       <FormFieldCheckboxOption key="1" label="Checkbox 1" />,
       <FormFieldCheckboxOption key="2" label="Checkbox 2" />,
-      <FormFieldCheckboxOption key="3" label="Checkbox 3" />,
+      <FormFieldCheckboxOption
+        key="3"
+        label="Checkbox 3 met een hele lange tekst die over twee regels valt om goed te kunnen testen om goed te kunnen testen om goed te kunnen testen"
+      />,
     ],
   },
 };

@@ -6,7 +6,7 @@
   display: inline-flex;
   flex-direction: column;
   font-family: var(--rhc-text-font-family-default, inherit);
-  font-size: var(--rhc-text-font-size-max-md, inherit);
+  font-size: var(--rhc-card-font-size, inherit);
   inline-size: var(--rhc-card-inline-size, 328px);
   line-height: var(--rhc-text-line-height-md, inherit);
   position: relative;
@@ -45,7 +45,7 @@
 @mixin rhc-card__heading {
   align-items: center;
   display: flex;
-  font-size: var(--rhc-card-heading-font-size, 24px);
+  font-size: var(--rhc-card-heading-font-size);
   font-weight: var(--rhc-card-heading-font-weight, 700);
   text-decoration: none;
 }
@@ -63,7 +63,7 @@
 @mixin rhc-card__subheading {
   align-items: center;
   display: flex;
-  font-size: var(--rhc-text-font-size-lg);
+  font-size: var(--rhc-card-subheading-font-size);
   text-decoration: none;
 }
 

@@ -6,13 +6,18 @@
 @use "mixin";
 
 .utrecht-checkbox {
-  margin-block-start: var(--rhc-space-50);
   &--disabled {
     @include mixin.utrecht-checkbox--disabled;
   }
   &--invalid {
     @include mixin.utrecht-checkbox--invalid;
   }
+}
+.utrecht-form-label--checkbox {
+  @include mixin.utrecht-checkbox-label--checkbox;
+}
+.utrecht-form-label--checkbox .utrecht-checkbox--custom {
+  @include mixin.utrecht-checkbox-label--checkbox-label;
 }
 .utrecht-checkbox--custom.utrecht-checkbox--html-input,
 .utrecht-custom-checkbox--html-input {

@@ -75,7 +75,11 @@ export const Default: StoryObj<typeof meta> = {
       <>
         <FormFieldRadio label="Option 1" name="radio-demo" value="option1" />
         <FormFieldRadio label="Option 2" name="radio-demo" value="option2" />
-        <FormFieldRadio label="Option 3" name="radio-demo" value="option3" />
+        <FormFieldRadio
+          label="Option 3 met een hele lange tekst die over twee regels valt om goed te kunnen testen om goed te kunnen testen om goed te kunnen testen"
+          name="radio-demo"
+          value="option3"
+        />
       </>
     ),
   },

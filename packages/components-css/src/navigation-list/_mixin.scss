@@ -69,7 +69,7 @@
   --nl-paragraph-color: var(--rhc-navigation-list-item-label-color, var(--rhc-color-foreground-lint));
   --nl-paragraph-font-family:
     var(--rhc-navigation-list-item-label-font-family, var(--rhc-text-font-family-default)), sans-serif;
-  --nl-paragraph-font-size: var(--rhc-navigation-list-item-label-font-size, var(--rhc-text-font-size-max-xl));
+  --nl-paragraph-font-size: var(--rhc-navigation-list-item-label-font-size);
   --nl-paragraph-font-weight: var(--rhc-navigation-list-item-label-font-weight, var(--rhc-text-font-weight-bold));
   --nl-paragraph-line-height: var(--rhc-navigation-list-item-label-line-height, var(--rhc-text-line-height-md));
   --nl-paragraph-margin-block-end: 0;
@@ -79,7 +79,7 @@
 }
 @mixin rhc-navigation-list__item__description {
   --nl-paragraph-color: var(--rhc-navigation-list-item-description-color, var(--rhc-color-foreground-subtle));
-  --nl-paragraph-font-size: var(--rhc-navigation-list-item-description-font-size, var(--rhc-text-font-size-max-lg));
+  --nl-paragraph-font-size: var(--rhc-navigation-list-item-description-font-size);
   --nl-paragraph-line-height: var(--rhc-navigation-list-item-description-line-height, inherit);
   --nl-paragraph-margin-block-end: 0;
   --nl-paragraph-margin-block-start: 0;
