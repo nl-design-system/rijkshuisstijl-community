@@ -9,5 +9,5 @@ export { FigureCaption, type FigureCaptionProps } from '@utrecht/component-libra
 export type FigureProps = UtrechtFigureProps;
 
 export const Figure = ({ className, ...props }: FigureProps) => {
-  return <UtrechtFigure className={clsx={('rhc-figure',className)} {...props}></UtrechtFigure>;
+  return <UtrechtFigure className={clsx('rhc-figure',className)} {...props}></UtrechtFigure>;
 };
