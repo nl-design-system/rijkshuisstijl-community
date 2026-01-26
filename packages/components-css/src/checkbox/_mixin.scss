@@ -1,12 +1,12 @@
 @mixin utrecht-checkbox-label--checkbox {
-  display: var(--rhc-checkbox-display);
   align-items: var(--rhc-checkbox-flex-start);
+  display: var(--rhc-checkbox-display);
   gap: var(--rhc-checkbox-gap);
 }
 @mixin utrecht-checkbox-label--checkbox-label {
-  order: var(--rhc-checkbox-label-order);
-  margin-block-start: var(--rhc-checkbox-label-margin-block-start);
   flex-shrink: var(--rhc-checkbox-label-flex-shrink);
+  margin-block-start: var(--rhc-checkbox-label-margin-block-start);
+  order: var(--rhc-checkbox-label-order);
 }
 
 @mixin utrecht-checkbox--checked {
