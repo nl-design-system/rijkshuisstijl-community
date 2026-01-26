@@ -44,7 +44,7 @@ export const FormField = ({
       {invalid && errorMessage && <FormFieldErrorMessage id={errorMessageId}>{errorMessage}</FormFieldErrorMessage>}
       {input}
       {status && (
-        <div className="utrecht-form-field__status" id={statusId}>
+        <div className="rhc-form-field__status" id={statusId}>
           {status}
         </div>
       )}
