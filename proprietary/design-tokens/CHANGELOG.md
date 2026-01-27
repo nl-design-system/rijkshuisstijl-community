@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 11.1.1
+
+### Patch Changes
+
+- 5e0baed: updated hover background color to improve contrast
+
 ## 11.1.0
 
 ### Minor Changes
