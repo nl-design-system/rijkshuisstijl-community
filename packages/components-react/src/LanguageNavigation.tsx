@@ -390,7 +390,7 @@ export const Item = ({
         </Link>
       ) : (
         <button
-          aria-pressed={isSelected}
+          aria-current={isSelected ? 'page' : undefined}
           className="rhc-language-navigation__link rhc-link"
           type="button"
           onClick={handleButtonClick}
