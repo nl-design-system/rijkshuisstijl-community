@@ -1,7 +1,8 @@
 import { type FormFieldProps, FormLabel, FormField as UtrechtFormField } from '@utrecht/component-library-react';
+import clsx from 'clsx';
 import { PropsWithChildren, ReactNode, Ref } from 'react';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
-import clsx from 'clsx';
+
 export interface CustomFormFieldProps extends FormFieldProps {
   label: ReactNode;
   description?: ReactNode;
