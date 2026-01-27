@@ -11,6 +11,7 @@ export const FormFieldCheckboxOption = ({
   invalid,
   inputInvalid,
   errorMessage,
+  className,
   ...restProps
 }: FormFieldCheckboxOptionProps) => {
   const id = useId();
@@ -19,7 +20,6 @@ export const FormFieldCheckboxOption = ({
 
   return (
     <FormFieldCheckbox
-      className="utrecht-form-field__checkbox rhc-form-label--checkbox"
       description={description}
       errorMessage={errorMessage}
       id={id}
@@ -31,6 +31,12 @@ export const FormFieldCheckboxOption = ({
           [errorMessageId]: invalid && errorMessage,
         }) || undefined
       }
+      className={clsx(
+        'utrecht-form-field__checkbox',
+        'rhc-form-label--checkbox',
+        'rhc-form-field-checkbox-option',
+        className,
+      )}
       {...restProps}
     />
   );
