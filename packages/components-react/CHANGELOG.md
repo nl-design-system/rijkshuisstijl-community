@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/components-react
 
+## 12.0.0
+
+### Major Changes
+
+- 388ace8: The cross-contamination issue with this component was resolved.
+- 9f94a0c: The cross-contamination issue in CSS files has been resolved for checkbox component.
+- d500197: The cross-contamination issue with this component was resolved by changing the class name to RHC.
+
 ## 11.0.0
 
 ### Major Changes
