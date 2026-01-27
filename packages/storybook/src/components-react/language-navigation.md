@@ -9,7 +9,7 @@ The Language Navigation component allows users to switch between different langu
 ```jsx
 import { LanguageNavigation } from '@rijkshuisstijl-community/components-react';
 
-<LanguageNavigation.Root defaultSelectedLanguage="Nederlands">
+<LanguageNavigation.Root aria-label="Taalkeuze" defaultSelectedLanguage="Nederlands">
   <LanguageNavigation.Trigger />
   <LanguageNavigation.Content>
     <LanguageNavigation.Item lang="nl" languageName="Nederlands" />
@@ -46,16 +46,17 @@ The component supports both controlled and uncontrolled modes:
 
 The root container that manages state and provides context to all child components.
 
-| Prop                      | Type                            | Default | Description                                                                    |
-| ------------------------- | ------------------------------- | ------- | ------------------------------------------------------------------------------ |
-| `open`                    | `boolean`                       | -       | Controlled open state. When provided, the component becomes controlled.        |
-| `defaultOpen`             | `boolean`                       | `false` | Default open state for uncontrolled usage.                                     |
-| `onOpenChange`            | `(newOpen: boolean) => void`    | -       | Callback fired when the open state changes.                                    |
-| `selectedLanguage`        | `string`                        | -       | Controlled selected language. When provided, the selection becomes controlled. |
-| `defaultSelectedLanguage` | `string`                        | -       | Default selected language for uncontrolled usage.                              |
-| `onLanguageChange`        | `(newLanguage: string) => void` | -       | Callback fired when the selected language changes.                             |
-| `className`               | `string`                        | -       | Additional CSS class names.                                                    |
-| `ref`                     | `Ref<HTMLDivElement>`           | -       | Ref to the root element.                                                       |
+| Prop                      | Type                            | Default               | Description                                                                       |
+| ------------------------- | ------------------------------- | --------------------- | --------------------------------------------------------------------------------- |
+| `open`                    | `boolean`                       | -                     | Controlled open state. When provided, the component becomes controlled.           |
+| `defaultOpen`             | `boolean`                       | `false`               | Default open state for uncontrolled usage.                                        |
+| `onOpenChange`            | `(newOpen: boolean) => void`    | -                     | Callback fired when the open state changes.                                       |
+| `selectedLanguage`        | `string`                        | -                     | Controlled selected language. When provided, the selection becomes controlled.    |
+| `defaultSelectedLanguage` | `string`                        | -                     | Default selected language for uncontrolled usage.                                 |
+| `onLanguageChange`        | `(newLanguage: string) => void` | -                     | Callback fired when the selected language changes.                                |
+| `className`               | `string`                        | -                     | Additional CSS class names.                                                       |
+| `aria-label`              | `string`                        | `Language Navigation` | Nav element aria-label to announce the language navigation in the local language. |
+| `ref`                     | `Ref<HTMLDivElement>`           | -                     | Ref to the root element.                                                          |
 
 ---
 
@@ -104,7 +105,7 @@ An individual language option within the dropdown. The component uses a discrimi
 | `className`         | `string`                                         | -            | Additional CSS class names.                                                                                                            |
 | `ref`               | `Ref<HTMLLIElement>`                             | -            | Ref to the option element.                                                                                                             |
 
-> **Note:** You must provide either `href` or `onClick`, but not both. This ensures the correct semantic element is rendered for accessibility.
+> **Note:** You must provide either `href` or `onClick`, but not both. This ensures the correct semantic element is rendered for accessibility. The preference goes to href as language navigation as translations are generally provided through alternative URL's.
 
 ---
 
@@ -112,10 +113,10 @@ An individual language option within the dropdown. The component uses a discrimi
 
 The Language Navigation component follows accessibility best practices:
 
+- The component is wrapped in a `nav` element with localized `aria-label="Language Navigation"`
 - The trigger button has `aria-expanded` to indicate the open state
 - The trigger button has `aria-controls` pointing to the content's ID
-- **Link items** use `aria-current="page"` to indicate the current language (appropriate for URL-based navigation)
-- **Button items** use `aria-pressed` to indicate the selected state (appropriate for programmatic navigation)
+- Use `aria-current="page"` to indicate the current language
 - Pressing `Escape` closes the dropdown and returns focus to the trigger
 - Click outside detection closes the dropdown
 
@@ -123,12 +124,12 @@ The component automatically uses the correct semantic element (`<a>` or `<button
 
 ## Examples
 
-### With navigation links (URL-based)
+### With navigation links (URL-based, preferred)
 
 Use `href` when language switching is handled via URL navigation (e.g., `/nl`, `/en`).
 
 ```jsx
-<LanguageNavigation.Root defaultSelectedLanguage="Nederlands">
+<LanguageNavigation.Root aria-label="Taalkeuze" defaultSelectedLanguage="Nederlands">
   <LanguageNavigation.Trigger />
   <LanguageNavigation.Content>
     <LanguageNavigation.Item lang="nl" languageName="Nederlands" href="/nl" />
@@ -145,7 +146,7 @@ Use `onClick` when language switching is handled programmatically (e.g., i18n li
 ```jsx
 const { setLocale } = useI18n();
 
-<LanguageNavigation.Root defaultSelectedLanguage="Nederlands">
+<LanguageNavigation.Root aria-label="Taalkeuze" defaultSelectedLanguage="Nederlands">
   <LanguageNavigation.Trigger />
   <LanguageNavigation.Content>
     <LanguageNavigation.Item lang="nl" languageName="Nederlands" onClick={() => setLocale('nl')} />
@@ -170,7 +171,11 @@ const { setLocale } = useI18n();
 ```jsx
 const [selectedLanguage, setSelectedLanguage] = useState('Nederlands');
 
-<LanguageNavigation.Root selectedLanguage={selectedLanguage} onLanguageChange={setSelectedLanguage}>
+<LanguageNavigation.Root
+  aria-label="Taalkeuze"
+  selectedLanguage={selectedLanguage}
+  onLanguageChange={setSelectedLanguage}
+>
   <LanguageNavigation.Trigger />
   <LanguageNavigation.Content>
     <LanguageNavigation.Item lang="nl" languageName="Nederlands" href="/nl" />
