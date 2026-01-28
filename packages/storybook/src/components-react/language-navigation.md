@@ -187,3 +187,28 @@ const [selectedLanguage, setSelectedLanguage] = useState('Nederlands');
   </LanguageNavigation.Content>
 </LanguageNavigation.Root>;
 ```
+
+## Patterns
+
+Best practices for implementing language navigation.
+
+### Placement
+
+**Desktop:** Place the language switcher in the top right or top left corner of the page. Research shows users consistently look to these locations when searching for language or country settings, as this is where utility navigation features are typically found.
+
+**Mobile:** On mobile devices, place the language switcher either above the fold or inside the navigation menu (hamburger menu). Avoid placing it only in the footer—mobile screens are small and pages tend to be long, making the footer hard to reach and discover.
+
+### Default Language Detection
+
+Automatically detect and set the user's language based on their browser's preference settings (`navigator.language` or `Accept-Language` header). This saves users an extra step and provides a seamless experience from the first visit.
+
+### Remembering User Preferences
+
+Once a user manually switches languages, remember their preference for subsequent visits. This can be done via:
+
+- **Cookies or localStorage** for anonymous users
+- **User profile settings** for authenticated users
+
+### Further reading
+
+- [Logius taalswitcher gebruikersonderzoek](https://gebruikersonderzoeken.nl/docs/onderzoek-bekijken/website-gebruik/logius-taalswitcher/)
