@@ -17,7 +17,7 @@ const meta = {
       'Dit component is overgenomen van de Gemeente Utrecht met styling van de Rijkshuisstijl Community.',
   },
   render: (args) => (
-    <Listbox>
+    <Listbox aria-label="Listbox example">
       <ListboxOption {...args} />
     </Listbox>
   ),
