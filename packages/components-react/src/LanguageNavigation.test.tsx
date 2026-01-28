@@ -66,9 +66,9 @@ describe('LanguageNavigation', () => {
     });
 
     it('forwards ref to the root element', async () => {
-      const ref = createRef<HTMLDivElement>();
+      const ref = createRef<HTMLElement>();
       await renderLanguageNavigation({ ref: ref });
-      expect(ref.current).toBeInstanceOf(HTMLDivElement);
+      expect(ref.current).toBeInstanceOf(HTMLElement);
       expect(ref.current?.classList.contains('rhc-language-navigation')).toBe(true);
     });
 
@@ -464,21 +464,21 @@ describe('LanguageNavigation', () => {
       expect(screen.getByText('(Duits)')).toBeInTheDocument();
     });
 
-    it('marks selected button with aria-pressed', async () => {
+    it('marks selected button with aria-current', async () => {
       await renderButtonLanguageNavigation({ defaultOpen: true, defaultSelectedLanguage: 'English' });
       // Get all buttons with "English" - trigger and list item
       const englishButtons = screen.getAllByRole('button', { name: /English/ });
-      // The list item button (second one) should have aria-pressed
-      const listItemButton = englishButtons.find((btn) => btn.hasAttribute('aria-pressed'));
+      // The list item button (second one) should have aria-current
+      const listItemButton = englishButtons.find((btn) => btn.hasAttribute('aria-current'));
 
-      expect(listItemButton).toHaveAttribute('aria-pressed', 'true');
+      expect(listItemButton).toHaveAttribute('aria-current', 'page');
     });
 
-    it('non-selected buttons have aria-pressed false', async () => {
+    it('non-selected buttons have aria-current false', async () => {
       await renderButtonLanguageNavigation({ defaultOpen: true, defaultSelectedLanguage: 'English' });
       const dutchButton = screen.getByRole('button', { name: /Nederlands/ });
 
-      expect(dutchButton).toHaveAttribute('aria-pressed', 'false');
+      expect(dutchButton).not.toHaveAttribute('aria-current');
     });
 
     it('calls onClick handler when button item is clicked', async () => {
