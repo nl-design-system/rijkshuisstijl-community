@@ -122,6 +122,10 @@ The Language Navigation component follows accessibility best practices:
 
 The component automatically uses the correct semantic element (`<a>` or `<button>`) based on whether `href` or `onClick` is provided, ensuring proper accessibility for both navigation patterns.
 
+### Keyboard Navigation
+
+While the Language Navigation is visually styled to resemble a select dropdown, its underlying structure is a `nav` element containing links or buttons. This means it does not support arrow key navigation between options like a native `<select>` element would. Users navigate through the options using `Tab` instead. Arrow key navigation could be a nice enhancement for a future release.
+
 ## Examples
 
 ### With navigation links (URL-based, preferred)
