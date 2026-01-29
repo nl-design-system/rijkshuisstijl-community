@@ -1,0 +1,37 @@
+{%- set classes = ['utrecht-button'] -%}
+
+{%- if appearance is not empty -%}
+{%- set classes = classes|merge(['utrecht-button--' ~ appearance]) -%}
+{%- endif -%}
+
+{%- if type == 'disabled'  -%}
+{%- set classes = classes|merge(['utrecht-button--' ~ type]) -%}
+{%- set attributes = attributes.setAttribute('disabled', '') -%}
+{%- endif -%}
+
+{%- if type == 'busy' -%}
+{%- set classes = classes|merge(['utrecht-button--' ~ type]) -%}
+{%- set attributes = attributes.setAttribute('aria-busy', 'true') -%}
+{%- endif -%}
+
+<button {{ attributes.addClass(classes) }} type="button">
+  {%- if iconLeft == 'true' or iconOnly == 'true' -%}
+    {% include '@rhc/Icon.twig' with {
+      attributes: create_attribute(),
+      icon: 'icon-calendar-event'
+    } %}
+  {%- endif -%}
+  {%- if iconOnly == 'true' -%}
+    <span class="sr-only"> 
+  {%- endif -%}
+  {{ children }}
+  {%- if iconOnly == 'true' -%}
+    </span>
+  {%- endif -%}
+  {%- if iconRight == 'true' -%}
+    {% include '@rhc/Icon.twig' with {
+      attributes: create_attribute(),
+      icon: 'icon-arrow-right'
+    } %}
+  {%- endif -%}
+</button>
