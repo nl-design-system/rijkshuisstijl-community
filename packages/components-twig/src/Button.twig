@@ -14,15 +14,19 @@
 {%- set attributes = attributes.setAttribute('aria-busy', 'true') -%}
 {%- endif -%}
 
+{%- if iconOnly == 'true' -%}
+{%- set classes = classes|merge(['rhc-button--icon-only']) -%}
+{%- endif -%}
+
 <button {{ attributes.addClass(classes) }} type="button">
   {%- if iconLeft == 'true' or iconOnly == 'true' -%}
     {% include '@rhc/Icon.twig' with {
       attributes: create_attribute(),
-      icon: 'icon-calendar-event'
+      icon: 'calendar-event'
     } %}
   {%- endif -%}
   {%- if iconOnly == 'true' -%}
-    <span class="sr-only"> 
+    <span class="rhc-button__sr-only"> 
   {%- endif -%}
   {{ children }}
   {%- if iconOnly == 'true' -%}
@@ -31,7 +35,7 @@
   {%- if iconRight == 'true' -%}
     {% include '@rhc/Icon.twig' with {
       attributes: create_attribute(),
-      icon: 'icon-arrow-right'
+      icon: 'arrow-right'
     } %}
   {%- endif -%}
 </button>

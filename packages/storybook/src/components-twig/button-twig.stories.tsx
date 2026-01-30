@@ -48,7 +48,7 @@ const meta = {
 export default meta;
 
 const iconLeft_svg_attributes = new DrupalAttribute([
-  ['class', ['icon', 'icon-tabler', 'tabler-icon', 'tabler-icon-calendar-event']],
+  ['class', ['tabler-icon', 'tabler-icon-calendar-event']],
   ['xmlns', 'http://www.w3.org/2000/svg'],
   ['width', 24],
   ['height', 24],
@@ -61,7 +61,7 @@ const iconLeft_svg_attributes = new DrupalAttribute([
 ]);
 
 const iconRight_svg_attributes = new DrupalAttribute([
-  ['class', ['icon', 'icon-tabler', 'tabler-icon', 'tabler-icon-arrow-narrow-right']],
+  ['class', ['tabler-icon', 'tabler-icon-arrow-narrow-right']],
   ['xmlns', 'http://www.w3.org/2000/svg'],
   ['width', 24],
   ['height', 24],
@@ -85,7 +85,7 @@ export const Default: StoryObj<typeof meta> = {
 
 export const PrimaryAction: StoryObj<typeof meta> = {
   args: {
-    appearance: 'primary-action-button',
+    appearance: 'primary-action',
     children: 'Label',
     attributes: new DrupalAttribute(),
   },
@@ -94,9 +94,10 @@ export const PrimaryAction: StoryObj<typeof meta> = {
 
 export const SecondaryAction: StoryObj<typeof meta> = {
   args: {
-    appearance: 'secondary-action-button',
+    appearance: 'secondary-action',
     children: 'Label',
     attributes: new DrupalAttribute(),
+    iconLeft: true,
   },
   name: 'SecondaryAction',
 };
@@ -112,6 +113,7 @@ export const Subtle: StoryObj<typeof meta> = {
 
 export const IconLeft: StoryObj<typeof meta> = {
   args: {
+    icon: 'calendar-event',
     children: 'Label',
     iconLeft: 'true',
     attributes: new DrupalAttribute(),
@@ -122,6 +124,7 @@ export const IconLeft: StoryObj<typeof meta> = {
 
 export const IconRight: StoryObj<typeof meta> = {
   args: {
+    icon: 'arrow-narrow-right',
     children: 'Label',
     iconRight: 'true',
     attributes: new DrupalAttribute(),
@@ -132,6 +135,7 @@ export const IconRight: StoryObj<typeof meta> = {
 
 export const IconOnly: StoryObj<typeof meta> = {
   args: {
+    icon: 'calendar-event',
     children: 'Label',
     iconOnly: 'true',
     attributes: new DrupalAttribute(),
