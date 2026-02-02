@@ -54,7 +54,7 @@ function useLanguageNavigationContext(componentName: string) {
  * Root
  * -----------------------------------------------------------------------------------------------*/
 
-export interface LanguageNavigationRootProps extends HTMLAttributes<HTMLDivElement> {
+export interface LanguageNavigationRootProps extends HTMLAttributes<HTMLElement> {
   /** Controlled open state */
   open?: boolean;
   /** Default open state for uncontrolled usage */
@@ -69,7 +69,7 @@ export interface LanguageNavigationRootProps extends HTMLAttributes<HTMLDivEleme
   /** Callback when selected language changes */
   // eslint-disable-next-line no-unused-vars
   onLanguageChange?: (_newLanguage: string) => void;
-  ref?: Ref<HTMLDivElement>;
+  ref?: Ref<HTMLElement>;
 }
 
 /**
@@ -86,6 +86,7 @@ export const Root = ({
   onLanguageChange: onLanguageChangeProp,
   className,
   ref,
+  'aria-label': navAriaLabel,
   ...restProps
 }: PropsWithChildren<LanguageNavigationRootProps>) => {
   // Controlled vs uncontrolled open state
@@ -141,9 +142,14 @@ export const Root = ({
 
   return (
     <LanguageNavigationContext value={value}>
-      <div className={clsx('rhc-language-navigation', className)} ref={ref} {...restProps}>
+      <nav
+        aria-label={navAriaLabel ?? 'Language selection'}
+        className={clsx('rhc-language-navigation', className)}
+        ref={ref}
+        {...restProps}
+      >
         {children}
-      </div>
+      </nav>
     </LanguageNavigationContext>
   );
 };
@@ -372,7 +378,8 @@ export const Item = ({
     <li
       ref={ref}
       className={clsx(
-        'rhc-language-navigation__list__item rhc-language-navigation__list__item--html-li',
+        'rhc-language-navigation__list__item',
+        'rhc-language-navigation__list__item--html-li',
         {
           'rhc-language-navigation__list__item--selected': isSelected,
         },
@@ -390,7 +397,7 @@ export const Item = ({
         </Link>
       ) : (
         <button
-          aria-pressed={isSelected}
+          aria-current={isSelected ? 'page' : undefined}
           className="rhc-language-navigation__link rhc-link"
           type="button"
           onClick={handleButtonClick}

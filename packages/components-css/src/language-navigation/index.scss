@@ -4,6 +4,10 @@
  */
 @use "mixin";
 
+.rhc-language-navigation__trigger {
+  @include mixin.rhc-language-navigation__trigger;
+}
+
 .rhc-language-navigation__list {
   @include mixin.rhc-language-navigation__list;
 }
@@ -12,12 +16,12 @@
   @include mixin.rhc-language-navigation__list__item;
 }
 
-.rhc-language-navigation__list__item--html-li {
-  @include mixin.rhc-language-navigation__list__item--html-li;
-}
-
 .rhc-language-navigation__list__item--selected {
   @include mixin.rhc-language-navigation__list__item--selected;
+}
+
+.rhc-language-navigation__list__item--html-li {
+  @include mixin.rhc-language-navigation__list__item--html-li;
 }
 
 .rhc-language-navigation__link:focus-visible {
