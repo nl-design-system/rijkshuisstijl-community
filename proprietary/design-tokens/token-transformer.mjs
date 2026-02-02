@@ -15,7 +15,7 @@ async function transformAndSplitTokens() {
     const themeTokens = {};
 
     Object.entries(theme.selectedTokenSets).forEach(([tokenSet, status]) => {
-      if (status === 'enabled') {
+      if (status === 'enabled' && !tokenSet.endsWith('[figma-only]')) {
         if (tokens[tokenSet]) {
           themeTokens[tokenSet] = tokens[tokenSet];
         }
