@@ -1,4 +1,5 @@
 import { type FormFieldProps, FormLabel, FormField as UtrechtFormField } from '@utrecht/component-library-react';
+import clsx from 'clsx';
 import { PropsWithChildren, ReactNode, Ref } from 'react';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 
@@ -34,7 +35,7 @@ export const FormField = ({
 
   return (
     <UtrechtFormField
-      className={className}
+      className={clsx('rhc-form-field', className)}
       description={description}
       dir={dir}
       invalid={invalid}

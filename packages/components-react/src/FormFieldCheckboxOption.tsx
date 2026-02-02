@@ -35,6 +35,7 @@ export const FormFieldCheckboxOption = ({
         'utrecht-form-field__checkbox',
         'rhc-form-label--checkbox',
         'rhc-form-field-checkbox-option',
+        'rhc-form-field',
         className,
       )}
       {...restProps}
