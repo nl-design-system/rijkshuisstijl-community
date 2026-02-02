@@ -15,12 +15,14 @@ async function transformAndSplitTokens() {
     const themeTokens = {};
 
     Object.entries(theme.selectedTokenSets).forEach(([tokenSet, status]) => {
-      if (status === 'enabled' || tokenSet.endsWith('[code-only]')) {
+      if (status === 'enabled') {
         if (tokens[tokenSet]) {
           themeTokens[tokenSet] = tokens[tokenSet];
         }
       }
     });
+    // Add default type scale here, because Figma does not understand `clamp(...)`
+    themeTokens['overrides/type-scale/default [code-only]'] = tokens['overrides/type-scale/default [code-only]'];
 
     processedThemes[theme.name] = {
       id: theme.id,
