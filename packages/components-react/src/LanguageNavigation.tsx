@@ -378,7 +378,8 @@ export const Item = ({
     <li
       ref={ref}
       className={clsx(
-        'rhc-language-navigation__list__item rhc-language-navigation__list__item--html-li',
+        'rhc-language-navigation__list__item',
+        'rhc-language-navigation__list__item--html-li',
         {
           'rhc-language-navigation__list__item--selected': isSelected,
         },

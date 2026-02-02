@@ -13,6 +13,7 @@ export const FormFieldTextInput = ({
   invalid,
   description,
   status,
+  className,
   ...restProps
 }: PropsWithChildren<FormFieldTextInputProps>) => {
   const inputId = useId();
@@ -33,6 +34,10 @@ export const FormFieldTextInput = ({
           [statusId]: status,
         }) || undefined
       }
+      className={clsx(
+        'rhc-form-field',
+        className,
+        )}
       {...restProps}
     />
   );

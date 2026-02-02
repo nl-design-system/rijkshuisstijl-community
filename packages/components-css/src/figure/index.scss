@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-.utrecht-figure img {
+.rhc-figure.utrecht-figure img {
   border-end-end-radius: var(--utrecht-figure-img-border-end-end-radius);
   border-end-start-radius: var(--utrecht-figure-img-border-end-start-radius);
   border-start-end-radius: var(--utrecht-figure-img-border-start-end-radius);
@@ -11,11 +11,11 @@
 }
 
 /* Inline behaviour for rounded-corner to fix cornering on block elements */
-.utrecht-figure .rhc-rounded-corner {
+.rhc-figure.utrecht-figure .rhc-rounded-corner {
   display: inline-block;
   vertical-align: top;
 }
 
-.utrecht-figure .rhc-rounded-corner img {
+.rhc-figure.utrecht-figure .rhc-rounded-corner img {
   border-radius: inherit;
 }
