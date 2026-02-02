@@ -10,7 +10,6 @@ import { HTMLAttributes } from 'react';
 
 export interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
   purpose?: NlParagraphPurpose;
-  className?: string;
 }
 
 export const Paragraph = ({ className, ...restProps }: ParagraphProps) => {
