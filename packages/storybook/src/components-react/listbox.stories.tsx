@@ -32,3 +32,34 @@ export const Default: Story = {
     ),
   },
 };
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+    children: (
+      <>
+        <ListboxOption>Option #1</ListboxOption>
+        <ListboxOption>Option #2</ListboxOption>
+        <ListboxOption>Option #3</ListboxOption>
+      </>
+    ),
+  },
+};
+
+export const WithLongText: Story = {
+  args: {
+    children: (
+      <>
+        <ListboxOption>
+          This is a very long option that is meant to test how the Listbox component handles overflow and text wrapping
+          within its options.
+        </ListboxOption>
+        <ListboxOption>
+          Another lengthy option to further evaluate the component&apos;s ability to manage extended text content
+          without breaking the layout or usability.
+        </ListboxOption>
+        <ListboxOption>Short Option</ListboxOption>
+      </>
+    ),
+  },
+};
