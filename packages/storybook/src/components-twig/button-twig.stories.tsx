@@ -12,24 +12,45 @@ const meta = {
     appearance: {
       description: 'Appearance',
       control: { type: 'select' },
-      options: [undefined, 'primary-action', 'secondary-action', 'subtle'],
+      options: ['', 'primary-action', 'secondary-action', 'subtle'],
+      table: {
+        category: 'Variant',
+      },
     },
-    type: {
-      description: 'Type',
-      control: { type: 'select' },
-      options: [undefined, 'disabled', 'busy'],
+    children: {
+      description: 'Button text - default webcomponent slot',
+      type: {
+        name: 'string',
+        required: true,
+      },
+      table: {
+        category: 'Webcomponent Slot',
+      },
+      defaultValue: '',
+    },
+    disabled: {
+      description: 'Disabled',
+      control: { type: 'boolean' },
+      table: {
+        category: 'Props',
+      },
+      defaultValue: false,
     },
     iconLeft: {
       description: 'Icon left',
       control: { type: 'boolean' },
+      table: {
+        category: 'Props',
+      },
+      defaultValue: true,
     },
     iconRight: {
       description: 'Icon right',
       control: { type: 'boolean' },
-    },
-    iconOnly: {
-      description: 'Icon only',
-      control: { type: 'boolean' },
+      table: {
+        category: 'Props',
+      },
+      defaultValue: false,
     },
   },
   parameters: {
@@ -47,99 +68,127 @@ const meta = {
 
 export default meta;
 
-const iconLeft_svg_attributes = new DrupalAttribute([
-  ['class', ['tabler-icon', 'tabler-icon-calendar-event']],
-  ['xmlns', 'http://www.w3.org/2000/svg'],
-  ['width', 24],
-  ['height', 24],
-  ['viewBox', '0 0 24 24'],
-  ['fill', 'none'],
-  ['stroke', 'currentColor'],
-  ['stroke-width', 2],
-  ['stroke-linecap', 'round'],
-  ['stroke-linejoin', 'round'],
-]);
-
-const iconRight_svg_attributes = new DrupalAttribute([
-  ['class', ['tabler-icon', 'tabler-icon-arrow-narrow-right']],
-  ['xmlns', 'http://www.w3.org/2000/svg'],
-  ['width', 24],
-  ['height', 24],
-  ['viewBox', '0 0 24 24'],
-  ['fill', 'none'],
-  ['stroke', 'currentColor'],
-  ['stroke-width', 2],
-  ['stroke-linecap', 'round'],
-  ['stroke-linejoin', 'round'],
-]);
-
 export const Default: StoryObj<typeof meta> = {
   args: {
     children: 'Label',
-    attributes: new DrupalAttribute(),
-    iconLeft: true,
+    iconLeft: false,
     iconRight: false,
+    disabled: false,
   },
-  name: 'Button',
 };
 
 export const PrimaryAction: StoryObj<typeof meta> = {
   args: {
     appearance: 'primary-action',
     children: 'Label',
-    attributes: new DrupalAttribute(),
+    disabled: false,
+    iconLeft: false,
+    iconRight: false,
   },
-  name: 'PrimaryAction',
 };
 
 export const SecondaryAction: StoryObj<typeof meta> = {
   args: {
     appearance: 'secondary-action',
     children: 'Label',
-    attributes: new DrupalAttribute(),
     iconLeft: true,
+    disabled: false,
+    iconRight: false,
   },
-  name: 'SecondaryAction',
 };
 
 export const Subtle: StoryObj<typeof meta> = {
   args: {
     appearance: 'subtle',
     children: 'Label',
-    attributes: new DrupalAttribute(),
+    disabled: false,
+    iconLeft: false,
+    iconRight: false,
   },
-  name: 'Subtle',
 };
 
 export const IconLeft: StoryObj<typeof meta> = {
   args: {
     icon: 'calendar-event',
     children: 'Label',
-    iconLeft: 'true',
-    attributes: new DrupalAttribute(),
-    svg_attributes: iconLeft_svg_attributes,
+    iconLeft: true,
+    disabled: false,
+    iconRight: false,
   },
-  name: 'IconLeft',
 };
 
 export const IconRight: StoryObj<typeof meta> = {
   args: {
     icon: 'arrow-narrow-right',
     children: 'Label',
-    iconRight: 'true',
-    attributes: new DrupalAttribute(),
-    svg_attributes: iconRight_svg_attributes,
+    iconRight: true,
+    disabled: false,
+    iconLeft: false,
   },
-  name: 'IconRight',
+};
+
+export const Active: StoryObj<typeof meta> = {
+  args: {
+    children: 'Active',
+    disabled: false,
+    iconLeft: false,
+    iconRight: false,
+  },
+  parameters: {
+    pseudo: {
+      active: true,
+    },
+  },
+};
+
+export const Pressed: StoryObj<typeof meta> = {
+  args: {
+    children: 'Pressed',
+    disabled: false,
+    iconLeft: false,
+    iconRight: false,
+    pressed: true
+  },
+};
+
+export const Hover: StoryObj<typeof meta> = {
+  args: {
+    children: 'Hover',
+    disabled: false,
+    iconLeft: false,
+    iconRight: false,
+  },
+  parameters: {
+    pseudo: {
+      hover: true,
+    },
+  },
+};
+
+export const Disabled: StoryObj<typeof meta> = {
+  args: {
+    children: 'Disabled',
+    disabled: true,
+    iconLeft: false,
+    iconRight: false,
+  },
+};
+
+export const Busy: StoryObj<typeof meta> = {
+  args: {
+    children: "I'm busy",
+    busy: true,
+    disabled: false,
+    iconLeft: false,
+    iconRight: false
+  },
 };
 
 export const IconOnly: StoryObj<typeof meta> = {
   args: {
-    icon: 'calendar-event',
-    children: 'Label',
-    iconOnly: 'true',
-    attributes: new DrupalAttribute(),
-    svg_attributes: iconLeft_svg_attributes,
+    iconOnly: true,
+    disabled: false,
+    iconLeft: false,
+    iconRight: false,
   },
-  name: 'IconOnly',
 };
