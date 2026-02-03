@@ -34,7 +34,7 @@ export const FormFieldRadioGroup = ({
   const errorMessageId = useId();
 
   const inputComponent: ReactNode = (
-    <div className="utrecht-form-field__input">
+    <div className="utrecht-form-field__input rhc-radio">
       <RadioGroup
         dir={dir}
         id={id}
