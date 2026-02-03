@@ -1,13 +1,10 @@
 @mixin rhc-checkbox-label--checkbox {
-  align-items: var(--rhc-checkbox-align-items);
-  display: var(--rhc-checkbox-display);
-  gap: var(--rhc-checkbox-gap);
+  display: flex;
 }
 
 @mixin rhc-checkbox-label--checkbox-label {
-  flex-shrink: var(--rhc-checkbox-label-flex-shrink);
   margin-block-start: var(--rhc-checkbox-label-margin-block-start);
-  order: var(--rhc-checkbox-label-order);
+  order: 0;
 }
 
 @mixin rhc-checkbox--checked {
