@@ -23,14 +23,12 @@ export interface IconProps extends UtrechtIconProps {
 }
 
 export const Icon = forwardRef(
-  ({ children, icon, className, ...restProps }: PropsWithChildren<IconProps>, ref: ForwardedRef<HTMLSpanElement>) => {
-    return (
-      <UtrechtIcon className={className} ref={ref} {...restProps}>
-        {icon && iconSet[icon]}
-        {children}
-      </UtrechtIcon>
-    );
-  },
+  ({ children, icon, ...restProps }: PropsWithChildren<IconProps>, ref: ForwardedRef<HTMLSpanElement>) => (
+    <UtrechtIcon ref={ref} {...restProps}>
+      {icon && iconSet[icon]}
+      {children}
+    </UtrechtIcon>
+  ),
 );
 
 Icon.displayName = 'Icon';

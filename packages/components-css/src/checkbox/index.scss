@@ -7,25 +7,25 @@
 
 .utrecht-checkbox {
   &--disabled {
-    @include mixin.utrecht-checkbox--disabled;
+    @include mixin.rhc-checkbox--disabled;
   }
   &--invalid {
-    @include mixin.utrecht-checkbox--invalid;
+    @include mixin.rhc-checkbox--invalid;
   }
 }
 .utrecht-form-label--checkbox {
-  @include mixin.utrecht-checkbox-label--checkbox;
+  @include mixin.rhc-checkbox-label--checkbox;
 }
 .utrecht-form-label--checkbox .utrecht-checkbox--custom {
-  @include mixin.utrecht-checkbox-label--checkbox-label;
+  @include mixin.rhc-checkbox-label--checkbox-label;
 }
 .utrecht-checkbox--custom.utrecht-checkbox--html-input,
 .utrecht-custom-checkbox--html-input {
-  @include mixin.utrecht-custom-checkbox--html-input;
+  @include mixin.rhc-custom-checkbox--html-input;
 }
 .utrecht-checkbox--custom.utrecht-checkbox--html-input:indeterminate {
-  @include mixin.utrecht-checkbox--indeterminate;
+  @include mixin.rhc-checkbox--indeterminate;
 }
 .utrecht-checkbox--custom.utrecht-checkbox--html-input[aria-invalid="true"]:hover {
-  @include mixin.utrecht-checkbox--invalid;
+  @include mixin.rhc-checkbox--invalid;
 }
