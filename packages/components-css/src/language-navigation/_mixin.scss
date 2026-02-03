@@ -40,6 +40,7 @@
 @mixin rhc-language-navigation__list__item--selected {
   --_utrecht-listbox-option-state-background-color: var(--utrecht-listbox-option-selected-background-color);
   --_utrecht-listbox-option-state-color: var(--utrecht-listbox-option-selected-color);
+  --_nl-link-state-color: var(--utrecht-listbox-option-selected-color);
 }
 
 @mixin rhc-language-navigation__link--focus-visible {
@@ -76,13 +77,9 @@
   appearance: none;
   background: transparent;
   border: 0;
-  color: var(--utrecht-listbox-option-color, var(--rhc-color-zwart));
+  color: inherit;
   cursor: pointer;
   font: inherit;
   inline-size: 100%;
   text-align: start;
-
-  &:hover {
-    color: var(--utrecht-listbox-option-hover-color, var(--rhc-color-zwart));
-  }
 }
