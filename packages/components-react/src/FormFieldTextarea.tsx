@@ -9,7 +9,13 @@ export interface FormFieldTextareaProps extends UtrechtFormFieldTextareaProps {
   ref?: Ref<HTMLDivElement>;
 }
 
-export const FormFieldTextarea = ({ description, status, invalid, ...restProps }: FormFieldTextareaProps) => {
+export const FormFieldTextarea = ({
+  description,
+  status,
+  invalid,
+  className,
+  ...restProps
+}: FormFieldTextareaProps) => {
   const inputId = useId();
   const descriptionId = useId();
   const statusId = useId();
@@ -17,6 +23,7 @@ export const FormFieldTextarea = ({ description, status, invalid, ...restProps }
 
   return (
     <UtrechtFormFieldTextarea
+      className={clsx('rhc-form-field', className)}
       description={description}
       id={inputId}
       invalid={invalid}

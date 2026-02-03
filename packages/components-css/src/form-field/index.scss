@@ -2,20 +2,20 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-.utrecht-form-field {
+.rhc-form-field.utrecht-form-field {
   font-size: var(--utrecht-form-field-font-size, inherit);
   line-height: var(--rhc-text-line-height-md, inherit);
 }
 
-.utrecht-rich-text .utrecht-form-field {
+.utrecht-rich-text .rhc-form-field.utrecht-form-field {
   margin-block-end: var(--utrecht-form-field-margin-block-end);
 }
 
-.utrecht-form-field__status {
+.rhc-form-field .utrecht-form-field__status {
   margin-block-end: var(--rhc-space-100, 0.5rem);
   margin-block-start: var(--rhc-space-100, 0.5rem);
 }
 
-.utrecht-form-field__description {
+.rhc-form-field .utrecht-form-field__description {
   --utrecht-form-field-description-margin-block-start: calc(-1 * var(--rhc-space-100));
 }

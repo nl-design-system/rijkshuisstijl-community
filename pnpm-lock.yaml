@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  locutus@>=2.0.12 <2.0.39: '>=2.0.39'
+
 importers:
 
   .:
@@ -9661,8 +9664,8 @@ packages:
     resolution: {integrity: sha512-gvVijfZvn7R+2qyPX8mAuKcFGDf6Nc61GdvGafQsHL0sBIxfKzA+usWn4GFC/bk+QdwPUD4kWFJLhElipq+0VA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  locutus@2.0.32:
-    resolution: {integrity: sha512-fr7OCpbE4xeefhHqfh6hM2/l9ZB3XvClHgtgFnQNImrM/nqL950o6FO98vmUH8GysfQRCcyBYtZ4C8GcY52Edw==}
+  locutus@2.0.39:
+    resolution: {integrity: sha512-v2iub44UtGpbIv+pFkkYhZ+JsbIM0bJsQcQ1+VayUNGVA/YhM8+CkBiRACcpuuE9Q0xI1pgNzGNwzZDCp1MCww==}
     engines: {node: '>= 10', yarn: '>= 1'}
 
   lodash-es@4.17.21:
@@ -22030,7 +22033,7 @@ snapshots:
   drupal-twig-extensions@1.0.0-beta.5:
     dependencies:
       drupal-attribute: 1.1.0
-      locutus: 2.0.32
+      locutus: 2.0.39
       lodash.clonedeep: 4.5.0
 
   dunder-proto@1.0.1:
@@ -25162,7 +25165,7 @@ snapshots:
     dependencies:
       p-locate: 6.0.0
 
-  locutus@2.0.32: {}
+  locutus@2.0.39: {}
 
   lodash-es@4.17.21: {}
 
@@ -29167,7 +29170,7 @@ snapshots:
   twig@1.17.1:
     dependencies:
       '@babel/runtime': 7.28.2
-      locutus: 2.0.32
+      locutus: 2.0.39
       minimatch: 3.0.8
       walk: 2.3.15
 
