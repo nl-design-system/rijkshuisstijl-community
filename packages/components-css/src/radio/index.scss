@@ -3,25 +3,27 @@
  * Copyright (c) 2021 Community for NL Design System
  */
 
-.rhc-radio utrecht-radio-button {
-  --utrecht-radio-button-icon-size: calc(var(--utrecht-radio-button-dot-size) * 0.5);
-}
+.rhc-radio {
+  utrecht-radio-button {
+    --utrecht-radio-button-icon-size: calc(var(--utrecht-radio-button-dot-size) * 0.5);
+  }
 
-.rhc-radio utrecht-radio-button:focus,
-.rhc-radio utrecht-radio-button--focus {
-  --utrecht-radio-button-checked-color: var(--utrecht-radio-button-checked-background-color, inherit);
-}
+  utrecht-radio-button:focus,
+  utrecht-radio-button--focus {
+    --utrecht-radio-button-checked-color: var(--utrecht-radio-button-checked-background-color, inherit);
+  }
 
-.rhc-radio utrecht-radio-button:disabled,
-.utrecht-radio-button--disabled {
-  --utrecht-radio-button-checked-color: var(--utrecht-radio-button-disabled-color, inherit);
-}
+  utrecht-radio-button:disabled,
+  utrecht-radio-button--disabled {
+    --utrecht-radio-button-checked-color: var(--utrecht-radio-button-disabled-color, inherit);
+  }
 
-.rhc-radio utrecht-radio-button:invalid,
-.utrecht-radio-button--invalid {
-  --utrecht-radio-button-background-color: var(--utrecht-radio-button-invalid-background-color, inherit);
-  &:hover,
-  &:focus {
-    background-color: var(--utrecht-radio-button-background-color);
+  utrecht-radio-button:invalid,
+  utrecht-radio-button--invalid {
+    --utrecht-radio-button-background-color: var(--utrecht-radio-button-invalid-background-color, inherit);
+    &:hover,
+    &:focus {
+      background-color: var(--utrecht-radio-button-background-color);
+    }
   }
 }
