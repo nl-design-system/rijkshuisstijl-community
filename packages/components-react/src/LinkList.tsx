@@ -2,13 +2,14 @@
  * @license EUPL-1.2
  * Copyright (c) 2025 Community for NL Design System
  */
-import { LinkListProps, LinkList as UtrechtLinkList } from '@utrecht/component-library-react';
+import { LinkList as UtrechtLinkList } from '@utrecht/component-library-react';
 import clsx from 'clsx';
+import { ComponentProps } from 'react';
 
 export { LinkListLink } from '@utrecht/component-library-react';
 export type { LinkListLinkProps, LinkListProps } from '@utrecht/component-library-react';
 
-export const LinkList = ({ className, ...restProps }: LinkListProps) => {
+export const LinkList = ({ className, ...restProps }: ComponentProps<typeof UtrechtLinkList>) => {
   return <UtrechtLinkList className={clsx('rhc-link-list', className)} {...restProps} />;
 };
 
