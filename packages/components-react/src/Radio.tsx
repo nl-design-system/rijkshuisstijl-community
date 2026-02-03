@@ -2,12 +2,13 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Community for NL Design System
  */
-import{ RadioButton, type RadioButtonProps } from '@utrecht/component-library-react';
+import{ RadioButton } from '@utrecht/component-library-react';
 import clsx from 'clsx';
+import { ComponentProps} from 'react';
 
 export type { RadioButtonProps } from  '@utrecht/component-library-react';
 
-export const Radio = ( {className, ...restProps } : RadioButtonProps) => {
+export const Radio = ( {className, ...restProps } : ComponentProps<typeof RadioButton>) => {
   return <RadioButton className={clsx('rhc-radio', className)} {...restProps}/>;
 };
 
