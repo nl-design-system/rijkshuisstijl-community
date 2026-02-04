@@ -57,7 +57,7 @@ export const FormFieldRadio = ({
   );
   return (
     <FormField
-      className="utrecht-form-field utrecht-form-field--radio rhc-radio "
+      className="utrecht-form-field utrecht-form-field--radio rhc-radio"
       description={description}
       descriptionId={descriptionId}
       dir={dir}
