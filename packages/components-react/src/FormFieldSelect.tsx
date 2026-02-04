@@ -79,7 +79,7 @@ export const FormFieldSelect = ({
         }) || undefined
       }
       className={clsx({
-        'utrecht-select--html-select-rtl': dir === 'rtl',
+        'rhc-select--html-select-rtl': dir === 'rtl',
       })}
       onBlur={onBlur}
       onChange={onChange}
