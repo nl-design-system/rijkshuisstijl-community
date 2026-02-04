@@ -4,17 +4,17 @@
  */
 
 import {
-  BreadcrumbNav,
   type BreadcrumbNavProps,
   BreadcrumbNavSeparator,
   type BreadcrumbNavSeparatorProps,
+  BreadcrumbNav as UtrechtBreadcrumbNav,
   BreadcrumbNavLink as UtrechtBreadcrumbNavLink,
   type BreadcrumbNavLinkProps as UtrechtBreadcrumbNavLinkProps,
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { Ref } from 'react';
 
-export { BreadcrumbNav, type BreadcrumbNavProps, BreadcrumbNavSeparator, type BreadcrumbNavSeparatorProps };
+export { type BreadcrumbNavProps, BreadcrumbNavSeparator, type BreadcrumbNavSeparatorProps };
 
 export interface BreadcrumbNavLinkProps extends UtrechtBreadcrumbNavLinkProps {
   active?: boolean;
@@ -38,3 +38,9 @@ export const BreadcrumbNavLink = ({ children, className, active, current, ...res
 };
 
 BreadcrumbNavLink.displayName = 'BreadcrumbNavLink';
+
+export const BreadcrumbNav = ({ className, ...restProps }: BreadcrumbNavProps) => (
+  <UtrechtBreadcrumbNav className={clsx('rhc-breadcrumb-nav', className)} {...restProps} />
+);
+
+BreadcrumbNav.displayName = 'BreadcrumbNav';
