@@ -29,6 +29,15 @@ async function transformAndSplitTokens() {
       tokens: themeTokens,
       group: theme.group,
     };
+    processedThemes[`${theme.name}-information-dense`] = {
+      id: theme.id,
+      tokens: {
+        ...themeTokens,
+        ['overrides/type-scale/information dense [code-only]']:
+          tokens['overrides/type-scale/information dense [code-only]'],
+      },
+      group: theme.group,
+    };
   });
 
   // Ensure directories exist
