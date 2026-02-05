@@ -1,0 +1,46 @@
+{%- set classes = ['utrecht-button'] -%}
+
+{%- if appearance is not empty -%}
+{%- set classes = classes|merge(['utrecht-button--' ~ appearance]) -%}
+{%- endif -%}
+
+{%- if disabled  -%}
+{%- set classes = classes|merge(['utrecht-button--disabled']) -%}
+{%- set attributes = attributes.setAttribute('disabled', '') -%}
+{%- endif -%}
+
+{%- if busy -%}
+{%- set classes = classes|merge(['utrecht-button--busy']) -%}
+{%- set attributes = attributes.setAttribute('aria-busy', 'true') -%}
+{%- endif -%}
+
+{%- if pressed -%}
+  {%- set classes = classes|merge(['utrecht-button--pressed']) -%}
+  {%- set attributes = attributes.setAttribute('aria-pressed', 'true') -%}
+{%- endif -%}
+
+{%- if iconOnly -%}
+{%- set classes = classes|merge(['rhc-button--icon-only']) -%}
+{%- endif -%}
+
+<button {{ attributes.addClass(classes) }} type="button">
+  {%- if iconLeft or iconOnly -%}
+    {% include '@rhc/Icon.twig' with {
+      attributes: create_attribute(),
+      icon: left_icon|default('calendar-event')
+    } %}
+  {%- endif -%}
+  {%- if iconOnly -%}
+    <span class="rhc-button__sr-only">
+  {%- endif -%}
+  {{ children }}
+  {%- if iconOnly -%}
+    </span>
+  {%- endif -%}
+  {%- if iconRight -%}
+    {% include '@rhc/Icon.twig' with {
+      attributes: create_attribute(),
+      icon: right_icon|default('arrow-right')
+    } %}
+  {%- endif -%}
+</button>
