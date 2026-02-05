@@ -14,7 +14,7 @@ export const Separator = ({ ref, invisible, className, ...restProps }: Separator
   return (
     <UtrechtSeparator
       ref={ref}
-      className={clsx(
+      className={clsx('rhc-separator',
         {
           'utrecht-separator--invisible': invisible,
         },
