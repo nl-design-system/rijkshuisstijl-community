@@ -1,5 +1,31 @@
 # @rijkshuisstijl-community/components-css
 
+## 13.0.0
+
+### Major Changes
+
+- 388ace8: The cross-contamination issue with this component was resolved.
+- 9f94a0c: The cross-contamination issue in CSS files has been resolved for checkbox component.
+- d500197: The cross-contamination issue with this component was resolved by changing the class name to RHC.
+
+### Minor Changes
+
+- af05e3e: Updated Language navigation selected state to be WCAG complient
+- 9ea6e7a: Applied type scale throughout
+- 6c2df50: The cross-contamination issue in CSS files has been resolved for this component.
+- 31c893c: The cross-contamination issue in CSS files has been resolved for this component.
+- dfafe3f: Updated language navigation styling to exclude unused disabled state and give a lighter look to the link button trigger.
+
+### Patch Changes
+
+- b08e677: The cross-contamination issue in CSS files has been resolved for this component.
+- 87d5172: The cross-contamination issue in CSS files has been resolved for this component.
+- 31157dc: The cross-contamination issue in CSS files has been resolved for this component.
+- ed4ef1c: The cross-contamination issue with this component was resolved.
+- ec7af44: The cross-contamination issue with this component was resolved.
+- 3d8a0c5: The cross-contamination issue in CSS files has been resolved for this component.
+- ae6a76f: The cross-contamination issue in CSS files has been resolved for this component.
+
 ## 12.0.0
 
 ### Major Changes
