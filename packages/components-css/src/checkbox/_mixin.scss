@@ -58,6 +58,7 @@
   background-image: url('data:image/svg+xml,<svg width="16" height="4" viewBox="0 0 16 4"  fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H1C0.447715 2 0 1.55228 0 1Z" fill="%23154273"/></svg>');
   border-color: var(--utrecht-checkbox-indeterminate-disabled-border-color);
 }
+
 @mixin rhc-custom-checkbox--html-input {
   &:checked {
     @include rhc-checkbox--checked;
@@ -87,6 +88,7 @@
     @include rhc-checkbox--disabled;
   }
 }
+
 @mixin rhc-checkbox--indeterminate {
   &:indeterminate,
   &:checked:indeterminate {
