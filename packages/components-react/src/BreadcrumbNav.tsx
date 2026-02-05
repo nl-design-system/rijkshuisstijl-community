@@ -15,7 +15,7 @@ import clsx from 'clsx';
 import { Ref } from 'react';
 
 type BreadcrumbNavProps = UtrechtBreadcrumbNavProps & {
-  ref?: React.Ref<HTMLOListElement>;
+  ref?: Ref<HTMLOListElement>;
 };
 
 export { type BreadcrumbNavProps, BreadcrumbNavSeparator, type BreadcrumbNavSeparatorProps };
