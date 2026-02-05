@@ -4,7 +4,7 @@
  */
 
 import { Textarea as UtrechtTextArea } from '@utrecht/component-library-react'; 
-import { TextareaProps } from '@utrecht/component-library-react/css-module';
+import { TextareaProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 
 export type { TextareaProps } from '@utrecht/component-library-react'; 
