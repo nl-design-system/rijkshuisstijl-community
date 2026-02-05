@@ -52,7 +52,7 @@ export const FormFieldRadio = ({
           'utrecht-radio-button--html-radio-button-rtl': dir === 'rtl',
         })}
         {...restProps}
-      ></Radio>
+      />
     </div>
   );
   return (

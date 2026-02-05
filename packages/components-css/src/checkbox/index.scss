@@ -15,6 +15,12 @@
     @include mixin.rhc-checkbox--invalid;
   }
 }
+.rhc-form-field-checkbox-option .utrecht-form-label--checkbox {
+  @include mixin.rhc-checkbox-label--checkbox;
+}
+.rhc-form-field-checkbox-option .utrecht-form-label--checkbox .utrecht-checkbox--custom {
+  @include mixin.rhc-checkbox-label--checkbox-label;
+}
 .rhc-checkbox.utrecht-checkbox--custom.utrecht-checkbox--html-input,
 .rhc-checkbox.utrecht-custom-checkbox--html-input,
 .rhc-form-field-checkbox-option .utrecht-checkbox--custom.utrecht-checkbox--html-input {

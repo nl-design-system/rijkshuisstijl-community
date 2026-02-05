@@ -23,6 +23,7 @@ export const FormFieldTextInput = ({
 
   return (
     <UtrechtFormFieldTextInput
+      className={clsx('rhc-form-field', className)}
       description={description}
       id={inputId}
       invalid={invalid}
@@ -34,10 +35,6 @@ export const FormFieldTextInput = ({
           [statusId]: status,
         }) || undefined
       }
-      className={clsx(
-        'rhc-form-field',
-        className,
-        )}
       {...restProps}
     />
   );
