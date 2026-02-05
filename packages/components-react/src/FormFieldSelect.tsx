@@ -78,7 +78,8 @@ export const FormFieldSelect = ({
           [statusId]: status,
         }) || undefined
       }
-      className={clsx({
+      className={clsx('rhc-select',
+      {
         'utrecht-select--html-select-rtl': dir === 'rtl',
       })}
       onBlur={onBlur}
