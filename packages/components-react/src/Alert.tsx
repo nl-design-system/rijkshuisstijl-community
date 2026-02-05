@@ -14,12 +14,14 @@ export interface AlertProps extends UtrechtAlertProps {
   type?: UtrechtAlertType;
   icon?: RHCIconID;
 }
+
 const iconMap: Record<UtrechtAlertType, RHCIconID> = {
   info: 'info-circle',
   ok: 'circle-check',
   warning: 'let-op',
   error: 'alert-circle',
 };
+
 export const Alert = ({ type, icon, ...restProps }: PropsWithChildren<AlertProps>) => {
   const rhcIcon = icon ? <Icon icon={icon} /> : type ? <Icon icon={iconMap[type]} /> : undefined;
   return <UtrechtAlert {...restProps} icon={rhcIcon} type={type} />;

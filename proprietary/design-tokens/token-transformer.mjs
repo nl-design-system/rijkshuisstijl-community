@@ -15,16 +15,27 @@ async function transformAndSplitTokens() {
     const themeTokens = {};
 
     Object.entries(theme.selectedTokenSets).forEach(([tokenSet, status]) => {
-      if (status === 'enabled') {
+      if (status === 'enabled' && !tokenSet.endsWith('[figma-only]')) {
         if (tokens[tokenSet]) {
           themeTokens[tokenSet] = tokens[tokenSet];
         }
       }
     });
+    // Add default type scale here, because Figma does not understand `clamp(...)`
+    themeTokens['overrides/type-scale/default [code-only]'] = tokens['overrides/type-scale/default [code-only]'];
 
     processedThemes[theme.name] = {
       id: theme.id,
       tokens: themeTokens,
+      group: theme.group,
+    };
+    processedThemes[`${theme.name}-information-dense`] = {
+      id: theme.id,
+      tokens: {
+        ...themeTokens,
+        ['overrides/type-scale/information dense [code-only]']:
+          tokens['overrides/type-scale/information dense [code-only]'],
+      },
       group: theme.group,
     };
   });

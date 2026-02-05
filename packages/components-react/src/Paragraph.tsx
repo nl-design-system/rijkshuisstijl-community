@@ -4,7 +4,8 @@
  */
 import {
   Paragraph as NlParagraph,
-  type ParagraphPurpose as NlParagraphPurpose } from '@nl-design-system-candidate/paragraph-react';
+  type ParagraphPurpose as NlParagraphPurpose,
+} from '@nl-design-system-candidate/paragraph-react';
 import clsx from 'clsx';
 import { HTMLAttributes } from 'react';
 
