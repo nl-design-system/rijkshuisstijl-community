@@ -1,0 +1,8 @@
+---
+'@rijkshuisstijl-community/components-react': patch
+'@rijkshuisstijl-community/design-tokens': patch
+'@rijkshuisstijl-community/components-css': patch
+'@rijkshuisstijl-community/storybook': patch
+---
+
+The cross-contamination issue in CSS files has been resolved for this component.
