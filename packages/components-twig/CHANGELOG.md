@@ -1,5 +1,27 @@
 # @rijkshuisstijl-community/components-twig
 
+## 3.0.2
+
+### Patch Changes
+
+- e967e01: Security patch: update loctus to avoid critical vulnerability
+- Updated dependencies [388ace8]
+- Updated dependencies [af05e3e]
+- Updated dependencies [b08e677]
+- Updated dependencies [87d5172]
+- Updated dependencies [9ea6e7a]
+- Updated dependencies [31157dc]
+- Updated dependencies [6c2df50]
+- Updated dependencies [ed4ef1c]
+- Updated dependencies [ec7af44]
+- Updated dependencies [9f94a0c]
+- Updated dependencies [31c893c]
+- Updated dependencies [3d8a0c5]
+- Updated dependencies [dfafe3f]
+- Updated dependencies [d500197]
+- Updated dependencies [ae6a76f]
+  - @rijkshuisstijl-community/components-css@13.0.0
+
 ## 3.0.1
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 12.0.0
+
+### Major Changes
+
+- dfafe3f: Updated language navigation styling to exclude unused disabled state and give a lighter look to the link button trigger.
+
+### Patch Changes
+
+- 5e0baed: updated hover background color to improve contrast
+- 87d5172: The cross-contamination issue in CSS files has been resolved for this component.
+- fed0988: fix: security patch for @isaacs/brace-expansion
+
 ## 11.1.0
 
 ### Minor Changes
