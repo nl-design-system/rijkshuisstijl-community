@@ -1,7 +1,6 @@
 import TwigButton from '@rijkshuisstijl-community/components-twig/src/Button.twig';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import DrupalAttribute from 'drupal-attribute';
 import readme from '../components-react/button.md?raw';
 
 const meta = {
