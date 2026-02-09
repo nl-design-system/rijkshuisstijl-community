@@ -74,7 +74,7 @@ describe('File Input tests', () => {
     const deleteButton = within(container).getByText('Verwijder');
     expect(deleteButton).not.toBeNull();
 
-    await waitFor(() => fireEvent.click(deleteButton!));
+    await waitFor(() => fireEvent.click(deleteButton));
     expect(mockOnFileChange).toHaveBeenCalledTimes(2);
   });
 
