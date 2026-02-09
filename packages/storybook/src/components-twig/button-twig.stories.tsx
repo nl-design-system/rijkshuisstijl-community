@@ -189,5 +189,6 @@ export const IconOnly: StoryObj<typeof meta> = {
     disabled: false,
     iconLeft: false,
     iconRight: false,
+    children: ' <span class="rhc-button__sr-only">Screen reader contents</span>',
   },
 };
