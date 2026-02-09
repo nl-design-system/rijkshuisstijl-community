@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom/vitest';
-import { cleanup, fireEvent, render, waitFor } from '@testing-library/react';
+import { cleanup, fireEvent, render, waitFor, within, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import { FileInput, FileInputProps } from './FileInput';
@@ -50,6 +50,32 @@ describe('File Input tests', () => {
 
     expect(mockOnFileChange).toHaveBeenCalledTimes(1);
     expect(fileInput!.files![0].name).toBe(file.name);
+  });
+
+  it('should be able to delete a selected file', async () => {
+    const mockOnFileChange = vi.fn();
+    const propsTest: FileInputProps = {
+      ...defaultProps,
+      onValueChange: mockOnFileChange,
+    };
+
+    const { container } = render(<FileInput {...propsTest} />);
+    const file = new File(['dummy content'], 'example.png', { type: 'image/png' });
+    const fileInput = container.querySelector('input');
+
+    await waitFor(() =>
+      fireEvent.change(fileInput!, {
+        target: { files: [file] },
+      }),
+    );
+
+    expect(mockOnFileChange).toHaveBeenCalledTimes(1);
+
+    const deleteButton = within(container).getByText('Verwijder');
+    expect(deleteButton).not.toBeNull();
+
+    await waitFor(() => fireEvent.click(deleteButton!));
+    expect(mockOnFileChange).toHaveBeenCalledTimes(2);
   });
 
   it('should be able to upload multiple files at once', async () => {

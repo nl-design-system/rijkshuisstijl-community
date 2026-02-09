@@ -11,8 +11,6 @@ export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
   allowedFileTypes: string;
   fileSizeErrorMessage: string;
   fileTypeErrorMessage: string;
-  // TODO: figure out why disabling is needed; works fine in editor but not in lint script for some reason
-  // eslint-disable-next-line no-unused-vars
   onValueChange?: (callbackFiles: File[]) => void;
   defaultFiles?: File[];
 }
@@ -39,6 +37,15 @@ export const FileInput = ({
       if (onValueChange) {
         onValueChange(updatedFiles);
       }
+    }
+  };
+
+  const onDelete = (fileToRemove: File) => {
+    const updatedFiles = files.filter((file) => file !== fileToRemove);
+    console.log('updatedFiles', updatedFiles);
+    setFiles(updatedFiles);
+    if (onValueChange) {
+      onValueChange(updatedFiles);
     }
   };
 
@@ -80,7 +87,7 @@ export const FileInput = ({
               fileTypeErrorMessage={fileTypeErrorMessage}
               key={files.indexOf(item)}
               maxFileSizeInBytes={maxFileSizeInBytes}
-              onDelete={(fileToRemove: File) => setFiles(files.filter((file) => file !== fileToRemove))}
+              onDelete={onDelete}
             />
           );
         })}
