@@ -6,12 +6,26 @@
 .utrecht-form-field--radio {
   --utrecht-form-field-label-margin-block-end: var(--rhc-form-field-radio-option-label-margin-block-end, inherit);
   --utrecht-radio-button-margin-inline-end: var(--rhc-form-field-radio-option-column-gap, inherit);
+
+  display: grid;
+  grid-template-areas:
+    "input label"
+    "input description";
+  grid-template-columns: min-content 1fr;
+}
+
+.rhc-form-field.utrecht-form-field__label {
+  grid-area: label;
+}
+
+.rhc-form-field.utrecht-form-field__description {
+  grid-area: description;
 }
 
 .rhc-form-field-radio-option__input {
-  align-items: flex-start;
-  display: flex;
-  margin-block-start: var(--rhc-form-field-radio-option-input-margin-block-start, inherit);
+  align-self: baseline;
+  grid-area: input;
+  line-height: var(--rhc-text-line-height-md, inherit);
 }
 
 .utrecht-form-field--radio .utrecht-form-field__label {
