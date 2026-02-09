@@ -42,7 +42,7 @@ export const FileInput = ({
 
   const onDelete = (fileToRemove: File) => {
     const updatedFiles = files.filter((file) => file !== fileToRemove);
-    console.log('updatedFiles', updatedFiles);
+
     setFiles(updatedFiles);
     if (onValueChange) {
       onValueChange(updatedFiles);
