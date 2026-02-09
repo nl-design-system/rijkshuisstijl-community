@@ -22,7 +22,7 @@ const iconMap: Record<UtrechtAlertType, RHCIconID> = {
   warning: 'let-op',
   error: 'alert-circle',
 };
-export const Alert = ({ type, icon, ...restProps }: PropsWithChildren<AlertProps>) => {
+export const Alert = ({ type, icon, className, ...restProps }: PropsWithChildren<AlertProps>) => {
   const rhcIcon = icon ? <Icon icon={icon} /> : type ? <Icon icon={iconMap[type]} /> : undefined;
   return <UtrechtAlert className={clsx('rhc-alert', className)} {...restProps} icon={rhcIcon} type={type} />;
 };
