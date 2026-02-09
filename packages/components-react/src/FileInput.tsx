@@ -42,6 +42,15 @@ export const FileInput = ({
     }
   };
 
+  const onDelete = (fileToRemove: File) => {
+    const updatedFiles = files.filter((file) => file !== fileToRemove);
+
+    setFiles(updatedFiles);
+    if (onValueChange) {
+      onValueChange(updatedFiles);
+    }
+  };
+
   useEffect(() => {
     if (defaultFiles) {
       setFiles(defaultFiles);
@@ -80,7 +89,7 @@ export const FileInput = ({
               fileTypeErrorMessage={fileTypeErrorMessage}
               key={files.indexOf(item)}
               maxFileSizeInBytes={maxFileSizeInBytes}
-              onDelete={(fileToRemove: File) => setFiles(files.filter((file) => file !== fileToRemove))}
+              onDelete={onDelete}
             />
           );
         })}
