@@ -12,7 +12,7 @@ export interface RadioGroupProps extends HTMLAttributes<HTMLDivElement> {
 export const RadioGroup = ({ ref, children, className, ...restProps }: PropsWithChildren<RadioGroupProps>) => {
   return (
     <div
-      className={clsx('rhc-radio-group', className)}
+      className={clsx('rhc-radio-group rhc-radio', className)}
       ref={ref}
       role={hasManyChildren(children) ? 'group' : undefined}
       {...restProps}

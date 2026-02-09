@@ -1,0 +1,37 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2025 Community for NL Design System
+ */
+@use "mixin";
+
+.rhc-language-navigation__trigger {
+  @include mixin.rhc-language-navigation__trigger;
+}
+
+.rhc-language-navigation__list {
+  @include mixin.rhc-language-navigation__list;
+}
+
+.rhc-language-navigation__list__item {
+  @include mixin.rhc-language-navigation__list__item;
+}
+
+.rhc-language-navigation__list__item--selected {
+  @include mixin.rhc-language-navigation__list__item--selected;
+}
+
+.rhc-language-navigation__list__item--html-li {
+  @include mixin.rhc-language-navigation__list__item--html-li;
+}
+
+.rhc-language-navigation__link:focus-visible {
+  @include mixin.rhc-language-navigation__link--focus-visible;
+}
+
+.rhc-language-navigation__link {
+  @include mixin.rhc-language-navigation__link;
+}
+
+button.rhc-language-navigation__link {
+  @include mixin.rhc-language-navigation__link--button;
+}

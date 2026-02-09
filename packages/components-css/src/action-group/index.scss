@@ -2,15 +2,3 @@
  * @license EUPL-1.2
  * Copyright (c) 2025 Community for NL Design System
  */
-
-.utrecht-button-group {
-  column-gap: var(--rhc-space-100, 0.5rem);
-  row-gap: var(--rhc-space-100, 0.5rem);
-  @media (width <= 768px) {
-    flex-direction: column;
-    .utrecht-button,
-    .utrecht-button-link {
-      min-inline-size: 100%;
-    }
-  }
-}

@@ -52,12 +52,12 @@ export const FormFieldRadio = ({
           'utrecht-radio-button--html-radio-button-rtl': dir === 'rtl',
         })}
         {...restProps}
-      ></Radio>
+      />
     </div>
   );
   return (
     <FormField
-      className="utrecht-form-field utrecht-form-field--radio"
+      className="utrecht-form-field utrecht-form-field--radio rhc-radio"
       description={description}
       descriptionId={descriptionId}
       dir={dir}

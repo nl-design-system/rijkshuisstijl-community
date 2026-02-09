@@ -672,47 +672,67 @@
         },
         "font-size": {
           "max": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "1rem",
+              "$description": "[figma-only]"
+            },
             "md": {
               "$type": "fontSizes",
-              "$value": "1.25rem"
+              "$value": "1.25rem",
+              "$description": "[figma-only]"
             },
             "lg": {
               "$type": "fontSizes",
-              "$value": "1.5rem"
+              "$value": "1.5rem",
+              "$description": "[figma-only]"
             },
             "xl": {
               "$type": "fontSizes",
-              "$value": "1.875rem"
+              "$value": "2rem",
+              "$description": "[figma-only]"
             },
             "2xl": {
               "$type": "fontSizes",
-              "$value": "2.5rem"
+              "$value": "2.5rem",
+              "$description": "[figma-only]"
             },
             "3xl": {
               "$type": "fontSizes",
-              "$value": "3.125rem"
+              "$value": "3rem",
+              "$description": "[figma-only]"
             }
           },
           "min": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "0.875rem",
+              "$description": "[figma-only]"
+            },
             "md": {
               "$type": "fontSizes",
-              "$value": "1rem"
+              "$value": "1rem",
+              "$description": "[figma-only]"
             },
             "lg": {
               "$type": "fontSizes",
-              "$value": "1.2rem"
+              "$value": "1.25rem",
+              "$description": "[figma-only]"
             },
             "xl": {
               "$type": "fontSizes",
-              "$value": "1.5rem"
+              "$value": "1.5rem",
+              "$description": "[figma-only]"
             },
             "2xl": {
               "$type": "fontSizes",
-              "$value": "2rem"
+              "$value": "1.75rem",
+              "$description": "[figma-only]"
             },
             "3xl": {
               "$type": "fontSizes",
-              "$value": "2.5rem"
+              "$value": "2rem",
+              "$description": "[figma-only]"
             }
           }
         }
@@ -932,6 +952,10 @@
     "rhc": {
       "text": {
         "font-size": {
+          "sm": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.sm}"
+          },
           "md": {
             "$type": "fontSizes",
             "$value": "{rhc.text.font-size.max.md}"
@@ -977,6 +1001,15 @@
           "strong": {
             "$type": "fontWeights",
             "$value": "{rhc.text.font-weight.bold}"
+          }
+        }
+      },
+      "line-height": {
+        "icon": {
+          "md": {
+            "$type": "dimension",
+            "$value": "{rhc.text.font-size.md} * 1.5",
+            "$description": "[figma-only] [temporary – until nl-icon]"
           }
         }
       }
@@ -1550,6 +1583,10 @@
         "max-inline-size": {
           "$type": "dimension",
           "$value": "75ch"
+        },
+        "font-size": {
+          "$type": "fontSize",
+          "$value": "{rhc.text.font-size.md}"
         }
       }
     }
@@ -2309,6 +2346,10 @@
           "$type": "dimension",
           "$value": "{rhc.space.200}"
         },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{rhc.text.font-size.md}"
+        },
         "inline-size": {
           "$type": "dimension",
           "$value": "328px"
@@ -2443,6 +2484,12 @@
             "$value": "{rhc.text.font-weight.strong}"
           }
         },
+        "subheading": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.lg}"
+          }
+        },
         "horizontal": {
           "background-color": {
             "$type": "color",
@@ -2512,6 +2559,10 @@
         "column-gap": {
           "$type": "dimension",
           "$value": "{rhc.space.200}"
+        },
+        "font-size": {
+          "$type": "dimension",
+          "$value": "{rhc.text.font-size.md}"
         },
         "icon": {
           "color": {
@@ -2705,6 +2756,16 @@
     }
   },
   "components/checkbox": {
+    "rhc": {
+      "checkbox": {
+        "label": {
+          "margin-block-start": {
+            "$type": "dimension",
+            "$value": "0.1vw"
+          }
+        }
+      }
+    },
     "utrecht": {
       "checkbox": {
         "background-color": {
@@ -3652,6 +3713,10 @@
   "components/form-field": {
     "utrecht": {
       "form-field": {
+        "font-size": {
+          "$type": "fontSize",
+          "$value": "{rhc.text.font-size.md}"
+        },
         "label": {
           "margin-block-end": {
             "$type": "dimension",
@@ -4253,6 +4318,12 @@
             "$value": "{rhc.size.icon.md}"
           }
         },
+        "item": {
+          "font-size": {
+            "$type": "fontSize",
+            "$value": "{rhc.text.font-size.md}"
+          }
+        },
         "link": {
           "column-gap": {
             "$type": "dimension",
@@ -4483,6 +4554,176 @@
           "color": {
             "$type": "color",
             "$value": "{rhc.color.foreground.link}"
+          }
+        }
+      }
+    }
+  },
+  "components/listbox": {
+    "utrecht": {
+      "listbox": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{rhc.color.wit}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{rhc.color.border.subtle}"
+        },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{rhc.border-radius.md}"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{rhc.border-width.sm}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.zwart}"
+        },
+        "font-weight": {
+          "$type": "dimension",
+          "$value": "{rhc.text.font-weight.regular}"
+        },
+        "option": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{rhc.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.default}"
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.cool-grey.200}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.default}"
+            }
+          },
+          "selected": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.lintblauw.500}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.on-dark-color}"
+            },
+            "hover": {
+              "background-color": {
+                "$type": "color",
+                "$value": "{rhc.color.cool-grey.200}"
+              },
+              "color": {
+                "$type": "color",
+                "$value": "{rhc.color.foreground.default}"
+              }
+            }
+          },
+          "min-block-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.pointer-target}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.100}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.200}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.200}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.100}"
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.cool-grey.400}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.default}"
+            }
+          },
+          "disabled": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.cool-grey.200}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.default}"
+            }
+          }
+        },
+        "inline-size": {
+          "$type": "dimension",
+          "$value": "16rem"
+        },
+        "max-block-size": {
+          "$type": "dimension",
+          "$value": "40rem"
+        },
+        "padding-block-end": {
+          "$type": "dimension",
+          "$value": "{rhc.space.0}"
+        },
+        "padding-inline-end": {
+          "$type": "dimension",
+          "$value": "{rhc.space.0}"
+        },
+        "padding-block-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.0}"
+        },
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.0}"
+        },
+        "group": {
+          "margin-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.0}",
+            "$description": "[code-only]"
+          }
+        },
+        "group-label": {
+          "margin-inline-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.0}",
+            "$description": "[code-only]"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{rhc.text.line-height.md}"
+          }
+        },
+        "icon": {
+          "size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.icon.md}"
           }
         }
       }
@@ -7992,6 +8233,10 @@
     "rhc": {
       "text": {
         "font-size": {
+          "sm": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.sm}"
+          },
           "md": {
             "$type": "fontSizes",
             "$value": "{rhc.text.font-size.min.md}"
@@ -8016,61 +8261,105 @@
       }
     }
   },
-  "overrides/type-scale/information dense": {
+  "overrides/type-scale/default [code-only]": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "sm": {
+            "$type": "fontSizes",
+            "$value": "clamp(0.875rem, 0.75rem + 0.3333vw, 1.000rem)"
+          },
+          "md": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.000rem, 0.875rem + 0.5000vw, 1.250rem)"
+          },
+          "lg": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.250rem, 1.0188rem + 0.7250vw, 1.500rem)"
+          },
+          "xl": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.500rem, 1.1834rem + 1.0263vw, 2.000rem)"
+          },
+          "2xl": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.750rem, 1.3713rem + 1.4268vw, 2.500rem)"
+          },
+          "3xl": {
+            "$type": "fontSizes",
+            "$value": "clamp(2.000rem, 1.5845rem + 1.9563vw, 3.000rem)"
+          }
+        }
+      }
+    }
+  },
+  "overrides/type-scale/information dense [figma-only]": {
     "rhc": {
       "text": {
         "font-size": {
           "max": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "0.875rem",
+              "$description": "[figma-only]"
+            },
             "md": {
               "$type": "fontSizes",
-              "$value": "1rem"
+              "$value": "1rem",
+              "$description": "[figma-only]"
             },
             "lg": {
               "$type": "fontSizes",
-              "$value": "1.2rem"
+              "$value": "1.25rem",
+              "$description": "[figma-only]"
             },
             "xl": {
               "$type": "fontSizes",
-              "$value": "1.5rem"
+              "$value": "1.5rem",
+              "$description": "[figma-only]"
             },
             "2xl": {
               "$type": "fontSizes",
-              "$value": "2rem"
+              "$value": "1.75rem",
+              "$description": "[figma-only]"
             },
             "3xl": {
               "$type": "fontSizes",
-              "$value": "2.5rem"
+              "$value": "2rem",
+              "$description": "[figma-only]"
             }
           }
         }
       }
     }
   },
-  "overrides/type-scale/promotion": {
+  "overrides/type-scale/information dense [code-only]": {
     "rhc": {
       "text": {
         "font-size": {
-          "max": {
-            "md": {
-              "$type": "fontSizes",
-              "$value": "1.25rem"
-            },
-            "lg": {
-              "$type": "fontSizes",
-              "$value": "1.5rem"
-            },
-            "xl": {
-              "$type": "fontSizes",
-              "$value": "2.25rem"
-            },
-            "2xl": {
-              "$type": "fontSizes",
-              "$value": "3rem"
-            },
-            "3xl": {
-              "$type": "fontSizes",
-              "$value": "4rem"
-            }
+          "sm": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.000rem, 0.875rem + 0.5000vw, 1.000rem)"
+          },
+          "md": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.000rem, 0.875rem + 0.5000vw, 1.000rem)"
+          },
+          "lg": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.250rem, 1.0188rem + 0.7250vw, 1.250rem)"
+          },
+          "xl": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.500rem, 1.1834rem + 1.0263vw, 1.500rem)"
+          },
+          "2xl": {
+            "$type": "fontSizes",
+            "$value": "clamp(1.750rem, 1.3713rem + 1.4268vw, 1.750rem)"
+          },
+          "3xl": {
+            "$type": "fontSizes",
+            "$value": "clamp(2.000rem, 1.5845rem + 1.9563vw, 2.000rem)"
           }
         }
       }
@@ -8127,6 +8416,7 @@
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8213,6 +8503,7 @@
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8300,6 +8591,7 @@
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8388,6 +8680,7 @@
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8476,6 +8769,7 @@
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8566,6 +8860,7 @@
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8654,6 +8949,7 @@
         "components/link-list-card": "enabled",
         "components/link/nl": "enabled",
         "components/link/utrecht": "enabled",
+        "components/listbox": "enabled",
         "components/logo": "enabled",
         "components/message-list": "enabled",
         "components/nav-bar": "enabled",
@@ -8746,6 +9042,7 @@
       "components/link-list-card",
       "components/link/nl",
       "components/link/utrecht",
+      "components/listbox",
       "components/logo",
       "components/message-list",
       "components/nav-bar",
@@ -8789,8 +9086,9 @@
       "overrides/primaire kleur/contrast fix/non primary button labels coolgrey",
       "overrides/primaire kleur/contrast fix/non primary buttons coolgrey",
       "overrides/responsive/min",
-      "overrides/type-scale/information dense",
-      "overrides/type-scale/promotion"
+      "overrides/type-scale/default [code-only]",
+      "overrides/type-scale/information dense [figma-only]",
+      "overrides/type-scale/information dense [code-only]"
     ]
   }
 }

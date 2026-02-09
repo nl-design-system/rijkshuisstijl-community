@@ -1,5 +1,22 @@
 # @rijkshuisstijl-community/components-react
 
+## 11.0.0
+
+### Major Changes
+
+- 337d2e8: Added licenses to the breadcrumb navigation source code.
+
+### Minor Changes
+
+- f0a77eb: Added the following components:
+  - link button (button styled as a link) (utrecht)
+  - listbox (utrecht)
+  - language navigation
+
+  Tokens have been added for each of these components.
+  The listbox and link button are reexported from utrecht with tokens styling from RHC.
+  The Language Navigation is a new component built in the community
+
 ## 10.0.0
 
 ### Major Changes
