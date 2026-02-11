@@ -1,3 +1,8 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
 import { type FormFieldProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { Children, PropsWithChildren, ReactNode, Ref, useId } from 'react';
