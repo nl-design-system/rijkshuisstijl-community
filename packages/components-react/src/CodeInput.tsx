@@ -1,9 +1,8 @@
-import { TextboxProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ForwardedRef } from 'react';
-import { TextInput } from './TextInput';
+import { TextInput, type TextInputProps } from './TextInput';
 
-export interface CodeInputProps extends TextboxProps {
+export interface CodeInputProps extends TextInputProps {
   capitalize?: boolean;
   ref: ForwardedRef<HTMLInputElement>;
 }
