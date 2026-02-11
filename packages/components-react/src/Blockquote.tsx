@@ -1,7 +1,8 @@
 /**
  * @license EUPL-1.2
- * Copyright (c) 2025 Community for NL Design System
+ * Copyright (c) 2026 Community for NL Design System
  */
+
 import { BlockquoteProps, Blockquote as UtrechtBlockquote } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 

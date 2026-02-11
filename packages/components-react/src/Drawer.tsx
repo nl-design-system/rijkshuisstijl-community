@@ -1,3 +1,8 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
 import { Drawer as UtrechtDrawer } from '@utrecht/component-library-react';
 import React from 'react';
 
