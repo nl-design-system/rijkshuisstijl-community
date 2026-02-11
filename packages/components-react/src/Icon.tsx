@@ -1,3 +1,8 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
 import { Icon as UtrechtIcon, type IconProps as UtrechtIconProps } from '@utrecht/component-library-react';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 import { RHCIconID } from './icon-sets/default-icons/RHCIconIDs';

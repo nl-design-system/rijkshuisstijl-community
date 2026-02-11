@@ -1,3 +1,8 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
 import { Image as UtrechtImage, type ImageProps as UtrechtImageProps } from '@utrecht/component-library-react';
 import { Ref } from 'react';
 

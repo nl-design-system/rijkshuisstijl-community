@@ -1,3 +1,8 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
 import clsx from 'clsx';
 import { HTMLAttributes, ReactNode, Ref } from 'react';
 import { Icon } from './Icon';

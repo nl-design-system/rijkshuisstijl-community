@@ -2,6 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2026 Community for NL Design System
  */
+
 import { Table as UtrechtTable } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ComponentProps } from 'react';

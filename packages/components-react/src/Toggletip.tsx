@@ -1,3 +1,8 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
 import clsx from 'clsx';
 import { DetailsHTMLAttributes, PropsWithChildren, ReactNode, Ref } from 'react';
 import { Alert } from './Alert';

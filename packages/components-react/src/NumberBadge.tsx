@@ -1,7 +1,8 @@
 /**
  * @license EUPL-1.2
- * Copyright (c) 2025 Community for NL Design System
+ * Copyright (c) 2026 Community for NL Design System
  */
+
 import { NumberBadge as NlNumberBadge, NumberBadgeProps } from '@nl-design-system-candidate/number-badge-react';
 import clsx from 'clsx';
 

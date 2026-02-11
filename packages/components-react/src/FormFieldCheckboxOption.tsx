@@ -1,3 +1,8 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
 import { FormFieldCheckbox, type FormFieldCheckboxProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { Ref, useId } from 'react';
