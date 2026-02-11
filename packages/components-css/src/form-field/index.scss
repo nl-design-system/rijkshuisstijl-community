@@ -1,7 +1,16 @@
 /**
  * @license EUPL-1.2
- * Copyright (c) 2021 Community for NL Design System
+ * Copyright (c) 2026 Community for NL Design System
  */
+
+.rhc-form-label--checkbox .utrecht-form-field__label--checkbox {
+  --utrecht-form-label-font-weight: var(--rhc-text-font-weight-regular, 400);
+
+  align-items: flex-start;
+  display: flex;
+  margin-block-end: var(--rhc-form-field-checkbox-option-margin-block-end, inherit);
+}
+
 .rhc-form-field.utrecht-form-field {
   font-size: var(--utrecht-form-field-font-size, inherit);
   line-height: var(--rhc-text-line-height-md, inherit);
@@ -12,10 +21,18 @@
 }
 
 .rhc-form-field .utrecht-form-field__status {
+  grid-column-end: status;
+  grid-column-start: status;
+  grid-row-end: status;
+  grid-row-start: status;
   margin-block-end: var(--rhc-space-100, 0.5rem);
   margin-block-start: var(--rhc-space-100, 0.5rem);
 }
 
 .rhc-form-field .utrecht-form-field__description {
   --utrecht-form-field-description-margin-block-start: calc(-1 * var(--rhc-space-100));
+}
+
+.rhc-form-field.utrecht-form-field--checkbox {
+  grid-template-areas: "input label" "input description" "input error-message" "input status";
 }
