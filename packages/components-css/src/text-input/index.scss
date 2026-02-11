@@ -1,6 +1,11 @@
-.utrecht-textbox:focus {
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+.rhc-text-input.utrecht-textbox:focus {
   border-width: var(--utrecht-textbox-focus-border-width, var(--rhc-border-width-m, 2px));
 }
-.utrecht-textbox--invalid:focus {
+.rhc-text-input.utrecht-textbox--invalid:focus {
   border-width: var(--utrecht-textbox-focus-border-width, var(--rhc-border-width-m, 2px));
 }
