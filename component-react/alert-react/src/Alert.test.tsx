@@ -3,8 +3,8 @@ import { cleanup, render, screen } from '@testing-library/react';
 import { AlertType } from '@utrecht/component-library-react';
 import { afterEach, describe, expect, it, test } from 'vitest';
 import { Alert } from './Alert';
-import { Heading } from './Heading';
-import { Paragraph } from './Paragraph';
+import { Heading } from '@rijkshuisstijl-community/components-react';
+import { Paragraph } from '@rijkshuisstijl-community/components-react';
 
 describe('Alert', () => {
   it('should render successfully', () => {

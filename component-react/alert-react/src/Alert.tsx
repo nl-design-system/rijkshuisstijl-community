@@ -10,7 +10,7 @@ import {
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
-import { Icon, type RHCIconID } from './Icon';
+import { Icon, type RHCIconID } from '@rijkshuisstijl-community/components-react';
 export interface AlertProps extends UtrechtAlertProps {
   type?: UtrechtAlertType;
   icon?: RHCIconID;
