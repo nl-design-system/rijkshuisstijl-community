@@ -5,8 +5,8 @@ import readme from '../components-react/link.md?raw';
 
 const meta = {
   title: 'Link',
-  id: 'rhc-twig-button',
-  component: TwigButton,
+  id: 'rhc-twig-link',
+  component: TwigLink,
   argTypes: {
     appearance: {
       description: 'Appearance',
