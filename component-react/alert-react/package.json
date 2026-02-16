@@ -1,0 +1,49 @@
+{
+  "version": "3.0.1",
+  "author": "Community for Rijkshuisstijl-Community Design System",
+  "description": "Alert component",
+  "license": "EUPL-1.2",
+  "name": "@rijkshuisstijl-community/alert-react",
+  "files": [
+    "dist/",
+    "docs/",
+    "src/",
+    "*.md"
+  ],
+  "main": "dist/index.css",
+  "scripts": {
+    "build": "rollup --config rollup.config.mjs",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "rijkshuisstijl-community-design-system"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
+    "directory": "component-react/alert-react"
+  },
+  "devDependencies": {
+    "@rijkshuisstijl-community/components-react": "11.0.0",
+    "@rollup/plugin-babel": "6.0.4",
+    "@rollup/plugin-commonjs": "28.0.6",
+    "@rollup/plugin-node-resolve": "16.0.1",
+    "@rollup/rollup-win32-x64-msvc": "4.57.1",
+    "clsx": "2.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "rollup": "4.46.2",
+    "rollup-plugin-filesize": "10.0.0",
+    "rollup-plugin-node-externals": "8.0.1",
+    "rollup-plugin-node-polyfills": "0.2.1",
+    "rollup-plugin-peer-deps-external": "2.2.4",
+    "rollup-plugin-postcss": "4.0.2",
+    "rollup-plugin-typescript2": "0.36.0"
+  },
+   "dependencies": {
+    "@utrecht/component-library-react": "10.3.5"
+  }
+}
