@@ -181,7 +181,7 @@ importers:
     dependencies:
       next:
         specifier: 15.5.9
-        version: 15.5.9(@babel/core@7.28.0)(@playwright/test@1.54.2)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.90.0)
+        version: 15.5.9(@playwright/test@1.54.2)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.90.0)
       react:
         specifier: 19.2.3
         version: 19.2.3
@@ -249,6 +249,12 @@ importers:
       '@utrecht/component-library-react':
         specifier: 10.3.5
         version: 10.3.5(@babel/runtime@7.28.3)(date-fns@2.30.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@vitejs/plugin-react':
+        specifier: 4.7.0
+        version: 4.7.0(vite@7.2.2(@types/node@24.10.0)(jiti@1.21.7)(less@4.4.0)(sass@1.90.0)(terser@5.43.1)(yaml@2.8.1))
+      '@vitest/coverage-v8':
+        specifier: 3.2.4
+        version: 3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.10.0)(jiti@1.21.7)(jsdom@20.0.3)(less@4.4.0)(msw@2.7.3(@types/node@24.10.0)(typescript@5.9.3))(sass@1.90.0)(terser@5.43.1)(yaml@2.8.1))
     devDependencies:
       '@rijkshuisstijl-community/components-react':
         specifier: 11.0.0
@@ -265,6 +271,27 @@ importers:
       '@rollup/rollup-win32-x64-msvc':
         specifier: 4.57.1
         version: 4.57.1
+      '@testing-library/dom':
+        specifier: 10.4.1
+        version: 10.4.1
+      '@testing-library/jest-dom':
+        specifier: 6.9.1
+        version: 6.9.1
+      '@testing-library/react':
+        specifier: 16.3.0
+        version: 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.3))(@types/react@19.2.3)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@testing-library/user-event':
+        specifier: 14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.1)
+      '@types/jest':
+        specifier: 29.5.14
+        version: 29.5.14
+      '@types/lodash.chunk':
+        specifier: 4.2.9
+        version: 4.2.9
+      '@types/react':
+        specifier: 19.2.3
+        version: 19.2.3
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -315,7 +342,7 @@ importers:
     dependencies:
       '@angular-devkit/build-angular':
         specifier: ~20.3.14
-        version: 20.3.14(@angular/compiler-cli@20.3.16(@angular/compiler@20.3.16)(typescript@5.8.3))(@angular/compiler@20.3.16)(@angular/core@20.3.16(@angular/compiler@20.3.16)(rxjs@7.8.0)(zone.js@0.15.0))(@angular/platform-browser@20.3.16(@angular/common@20.3.16(@angular/core@20.3.16(@angular/compiler@20.3.16)(rxjs@7.8.0)(zone.js@0.15.0))(rxjs@7.8.0))(@angular/core@20.3.16(@angular/compiler@20.3.16)(rxjs@7.8.0)(zone.js@0.15.0)))(@swc/core@1.10.1(@swc/helpers@0.5.15))(@types/node@24.10.0)(chokidar@4.0.1)(html-webpack-plugin@5.6.3(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))))(jest-environment-jsdom@29.7.0)(jest@29.7.0(@types/node@24.10.0))(jiti@1.21.7)(karma@6.4.0)(ng-packagr@20.3.2(@angular/compiler-cli@20.3.16(@angular/compiler@20.3.16)(typescript@5.8.3))(tslib@2.8.1)(typescript@5.8.3))(typescript@5.8.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.10.0)(jiti@1.21.7)(jsdom@20.0.3)(less@4.4.0)(msw@2.7.3(@types/node@24.10.0)(typescript@5.8.3))(sass@1.90.0)(terser@5.43.1)(yaml@2.8.1))(yaml@2.8.1)
+        version: 20.3.14(d0d967ee1a4a94e1c77ee3acb967d0a2)
       '@angular/cli':
         specifier: ~20.3.14
         version: 20.3.14(@types/node@24.10.0)(chokidar@4.0.1)(hono@4.11.3)
@@ -4115,6 +4142,11 @@ packages:
 
   '@rollup/rollup-win32-x64-msvc@4.52.3':
     resolution: {integrity: sha512-zGIbEVVXVtauFgl3MRwGWEN36P5ZGenHRMgNw88X5wEhEBpq0XrMEZwOn07+ICrwM17XO5xfMZqh0OldCH5VTA==}
+    cpu: [x64]
+    os: [win32]
+
+  '@rollup/rollup-win32-x64-msvc@4.57.1':
+    resolution: {integrity: sha512-mxRFDdHIWRxg3UfIIAwCm6NzvxG0jDX/wBN6KsQFTvKFqqg9vTrWUE68qEjHt19A5wwx5X5aUi2zuZT7YR0jrA==}
     cpu: [x64]
     os: [win32]
 
@@ -8386,6 +8418,7 @@ packages:
 
   glob@10.4.5:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@11.0.3:
@@ -14139,8 +14172,8 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  ? '@angular-devkit/build-angular@20.3.14(@angular/compiler-cli@20.3.16(@angular/compiler@20.3.16)(typescript@5.8.3))(@angular/compiler@20.3.16)(@angular/core@20.3.16(@angular/compiler@20.3.16)(rxjs@7.8.0)(zone.js@0.15.0))(@angular/platform-browser@20.3.16(@angular/common@20.3.16(@angular/core@20.3.16(@angular/compiler@20.3.16)(rxjs@7.8.0)(zone.js@0.15.0))(rxjs@7.8.0))(@angular/core@20.3.16(@angular/compiler@20.3.16)(rxjs@7.8.0)(zone.js@0.15.0)))(@swc/core@1.10.1(@swc/helpers@0.5.15))(@types/node@24.10.0)(chokidar@4.0.1)(html-webpack-plugin@5.6.3(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))))(jest-environment-jsdom@29.7.0)(jest@29.7.0(@types/node@24.10.0))(jiti@1.21.7)(karma@6.4.0)(ng-packagr@20.3.2(@angular/compiler-cli@20.3.16(@angular/compiler@20.3.16)(typescript@5.8.3))(tslib@2.8.1)(typescript@5.8.3))(typescript@5.8.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.10.0)(jiti@1.21.7)(jsdom@20.0.3)(less@4.4.0)(msw@2.7.3(@types/node@24.10.0)(typescript@5.8.3))(sass@1.90.0)(terser@5.43.1)(yaml@2.8.1))(yaml@2.8.1)'
-  : dependencies:
+  '@angular-devkit/build-angular@20.3.14(d0d967ee1a4a94e1c77ee3acb967d0a2)':
+    dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2003.14(chokidar@4.0.1)
       '@angular-devkit/build-webpack': 0.2003.14(chokidar@4.0.1)(webpack-dev-server@5.2.2(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.9)))(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.9))
@@ -14196,7 +14229,7 @@ snapshots:
       webpack-dev-middleware: 7.4.2(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.9))
       webpack-dev-server: 5.2.2(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.9))
       webpack-merge: 6.0.1
-      webpack-subresource-integrity: 5.1.0(html-webpack-plugin@5.6.3(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))))(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.9))
+      webpack-subresource-integrity: 5.1.0(html-webpack-plugin@5.6.3(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.9)))(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.9))
     optionalDependencies:
       '@angular/core': 20.3.16(@angular/compiler@20.3.16)(rxjs@7.8.0)(zone.js@0.15.0)
       '@angular/platform-browser': 20.3.16(@angular/common@20.3.16(@angular/core@20.3.16(@angular/compiler@20.3.16)(rxjs@7.8.0)(zone.js@0.15.0))(rxjs@7.8.0))(@angular/core@20.3.16(@angular/compiler@20.3.16)(rxjs@7.8.0)(zone.js@0.15.0))
@@ -14601,7 +14634,7 @@ snapshots:
     dependencies:
       '@babel/compat-data': 7.28.0
       '@babel/helper-validator-option': 7.27.1
-      browserslist: 4.25.2
+      browserslist: 4.28.1
       lru-cache: 5.1.1
       semver: 6.3.1
 
@@ -18240,6 +18273,8 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.52.3':
     optional: true
 
+  '@rollup/rollup-win32-x64-msvc@4.57.1': {}
+
   '@rollup/wasm-node@4.36.0':
     dependencies:
       '@types/estree': 1.0.6
@@ -20449,17 +20484,29 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@vitejs/plugin-react@4.7.0(vite@7.2.2(@types/node@24.10.0)(jiti@1.21.7)(less@4.4.0)(sass@1.90.0)(terser@5.43.1)(yaml@2.8.1))':
+    dependencies:
+      '@babel/core': 7.28.0
+      '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.28.0)
+      '@babel/plugin-transform-react-jsx-source': 7.27.1(@babel/core@7.28.0)
+      '@rolldown/pluginutils': 1.0.0-beta.27
+      '@types/babel__core': 7.20.5
+      react-refresh: 0.17.0
+      vite: 7.2.2(@types/node@24.10.0)(jiti@1.21.7)(less@4.4.0)(sass@1.90.0)(terser@5.43.1)(yaml@2.8.1)
+    transitivePeerDependencies:
+      - supports-color
+
   '@vitest/coverage-v8@3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@22.10.1)(jiti@1.21.7)(jsdom@20.0.3)(less@4.4.0)(msw@2.7.3(@types/node@22.10.1)(typescript@5.9.3))(sass@1.90.0)(terser@5.43.1)(yaml@2.8.1))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 1.0.2
       ast-v8-to-istanbul: 0.3.4
-      debug: 4.4.1
+      debug: 4.4.3
       istanbul-lib-coverage: 3.2.2
       istanbul-lib-report: 3.0.1
       istanbul-lib-source-maps: 5.0.6
       istanbul-reports: 3.1.7
-      magic-string: 0.30.17
+      magic-string: 0.30.21
       magicast: 0.3.5
       std-env: 3.9.0
       test-exclude: 7.0.1
@@ -20473,17 +20520,36 @@ snapshots:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 1.0.2
       ast-v8-to-istanbul: 0.3.4
-      debug: 4.4.1
+      debug: 4.4.3
       istanbul-lib-coverage: 3.2.2
       istanbul-lib-report: 3.0.1
       istanbul-lib-source-maps: 5.0.6
       istanbul-reports: 3.1.7
-      magic-string: 0.30.17
+      magic-string: 0.30.21
       magicast: 0.3.5
       std-env: 3.9.0
       test-exclude: 7.0.1
       tinyrainbow: 2.0.0
       vitest: 3.2.4(@types/debug@4.1.12)(@types/node@24.10.0)(jiti@1.21.7)(jsdom@20.0.3)(less@4.4.0)(msw@2.7.3(@types/node@24.10.0)(typescript@5.8.3))(sass@1.89.2)(terser@5.43.1)(yaml@2.8.1)
+    transitivePeerDependencies:
+      - supports-color
+
+  '@vitest/coverage-v8@3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.10.0)(jiti@1.21.7)(jsdom@20.0.3)(less@4.4.0)(msw@2.7.3(@types/node@24.10.0)(typescript@5.9.3))(sass@1.90.0)(terser@5.43.1)(yaml@2.8.1))':
+    dependencies:
+      '@ampproject/remapping': 2.3.0
+      '@bcoe/v8-coverage': 1.0.2
+      ast-v8-to-istanbul: 0.3.4
+      debug: 4.4.3
+      istanbul-lib-coverage: 3.2.2
+      istanbul-lib-report: 3.0.1
+      istanbul-lib-source-maps: 5.0.6
+      istanbul-reports: 3.1.7
+      magic-string: 0.30.21
+      magicast: 0.3.5
+      std-env: 3.9.0
+      test-exclude: 7.0.1
+      tinyrainbow: 2.0.0
+      vitest: 3.2.4(@types/debug@4.1.12)(@types/node@24.10.0)(jiti@1.21.7)(jsdom@20.0.3)(less@4.4.0)(msw@2.7.3(@types/node@24.10.0)(typescript@5.9.3))(sass@1.90.0)(terser@5.43.1)(yaml@2.8.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -22017,7 +22083,7 @@ snapshots:
 
   core-js-compat@3.45.0:
     dependencies:
-      browserslist: 4.25.2
+      browserslist: 4.28.1
 
   core-js@2.6.12: {}
 
@@ -24234,7 +24300,7 @@ snapshots:
     optionalDependencies:
       webpack: 5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.1)
 
-  html-webpack-plugin@5.6.3(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))):
+  html-webpack-plugin@5.6.3(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.9)):
     dependencies:
       '@types/html-minifier-terser': 6.1.0
       html-minifier-terser: 6.1.0
@@ -26731,7 +26797,7 @@ snapshots:
     dependencies:
       type-fest: 2.19.0
 
-  next@15.5.9(@babel/core@7.28.0)(@playwright/test@1.54.2)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.90.0):
+  next@15.5.9(@playwright/test@1.54.2)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.90.0):
     dependencies:
       '@next/env': 15.5.9
       '@swc/helpers': 0.5.15
@@ -26739,7 +26805,7 @@ snapshots:
       postcss: 8.4.31
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
-      styled-jsx: 5.1.6(@babel/core@7.28.0)(react@19.2.3)
+      styled-jsx: 5.1.6(react@19.2.3)
     optionalDependencies:
       '@next/swc-darwin-arm64': 15.5.7
       '@next/swc-darwin-x64': 15.5.7
@@ -29572,12 +29638,10 @@ snapshots:
     dependencies:
       webpack: 5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.1)
 
-  styled-jsx@5.1.6(@babel/core@7.28.0)(react@19.2.3):
+  styled-jsx@5.1.6(react@19.2.3):
     dependencies:
       client-only: 0.0.1
       react: 19.2.3
-    optionalDependencies:
-      '@babel/core': 7.28.0
 
   stylehacks@5.1.1(postcss@8.5.6):
     dependencies:
@@ -30443,7 +30507,7 @@ snapshots:
 
   vite@6.3.5(@types/node@22.10.1)(jiti@1.21.7)(less@4.4.0)(sass@1.90.0)(terser@5.43.1)(yaml@2.8.1):
     dependencies:
-      esbuild: 0.25.1
+      esbuild: 0.25.9
       fdir: 6.5.0(picomatch@4.0.3)
       picomatch: 4.0.3
       postcss: 8.5.6
@@ -30460,7 +30524,7 @@ snapshots:
 
   vite@6.3.5(@types/node@24.10.0)(jiti@1.21.7)(less@4.4.0)(sass@1.89.2)(terser@5.43.1)(yaml@2.8.1):
     dependencies:
-      esbuild: 0.25.1
+      esbuild: 0.25.9
       fdir: 6.5.0(picomatch@4.0.3)
       picomatch: 4.0.3
       postcss: 8.5.6
@@ -30477,7 +30541,7 @@ snapshots:
 
   vite@6.3.5(@types/node@24.10.0)(jiti@1.21.7)(less@4.4.0)(sass@1.90.0)(terser@5.43.1)(yaml@2.8.1):
     dependencies:
-      esbuild: 0.25.1
+      esbuild: 0.25.9
       fdir: 6.5.0(picomatch@4.0.3)
       picomatch: 4.0.3
       postcss: 8.5.6
@@ -30525,7 +30589,6 @@ snapshots:
       sass: 1.90.0
       terser: 5.43.1
       yaml: 2.8.1
-    optional: true
 
   vitest@3.2.4(@types/debug@4.1.12)(@types/node@22.10.1)(jiti@1.21.7)(jsdom@20.0.3)(less@4.4.0)(msw@2.7.3(@types/node@22.10.1)(typescript@5.9.3))(sass@1.90.0)(terser@5.43.1)(yaml@2.8.1):
     dependencies:
@@ -30910,12 +30973,12 @@ snapshots:
     optionalDependencies:
       html-webpack-plugin: 5.6.3(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.1))
 
-  webpack-subresource-integrity@5.1.0(html-webpack-plugin@5.6.3(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))))(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.9)):
+  webpack-subresource-integrity@5.1.0(html-webpack-plugin@5.6.3(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.9)))(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.9)):
     dependencies:
       typed-assert: 1.0.9
       webpack: 5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.9)
     optionalDependencies:
-      html-webpack-plugin: 5.6.3(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15)))
+      html-webpack-plugin: 5.6.3(webpack@5.101.2(@swc/core@1.10.1(@swc/helpers@0.5.15))(esbuild@0.25.9))
 
   webpack-virtual-modules@0.6.2: {}
 
