@@ -1,23 +1,16 @@
-import TwigButton from '@rijkshuisstijl-community/components-twig/src/Link.twig';
+import TwigLink from '@rijkshuisstijl-community/components-twig/src/Link.twig';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import readme from '../components-react/link.md?raw';
+// import readme from '../components-react/link.md?raw';
+import readme from '@utrecht/components/link/README.md?raw';
 
 const meta = {
   title: 'Link',
   id: 'rhc-twig-link',
   component: TwigLink,
   argTypes: {
-    appearance: {
-      description: 'Appearance',
-      control: { type: 'select' },
-      options: ['', 'primary-action', 'secondary-action', 'subtle'],
-      table: {
-        category: 'Variant',
-      },
-    },
     children: {
-      description: 'Button text - default webcomponent slot',
+      description: 'Link text - default webcomponent slot',
       type: {
         name: 'string',
         required: true,
@@ -27,21 +20,13 @@ const meta = {
       },
       defaultValue: '',
     },
-    disabled: {
-      description: 'Disabled',
-      control: { type: 'boolean' },
-      table: {
-        category: 'Props',
-      },
-      defaultValue: false,
-    },
     iconLeft: {
       description: 'Icon left',
       control: { type: 'boolean' },
       table: {
         category: 'Props',
       },
-      defaultValue: true,
+      defaultValue: false,
     },
     iconRight: {
       description: 'Icon right',
@@ -61,46 +46,15 @@ const meta = {
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
     //Todo: voeg NL-Design system & Figma links toe
     github:
-      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/src/Button.twig',
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-link/src/Link.twig',
   },
-} satisfies Meta<typeof TwigButton>;
+} satisfies Meta<typeof TwigLink>;
 
 export default meta;
 
 export const Default: StoryObj<typeof meta> = {
   args: {
     children: 'Label',
-    iconLeft: false,
-    iconRight: false,
-    disabled: false,
-  },
-};
-
-export const PrimaryAction: StoryObj<typeof meta> = {
-  args: {
-    appearance: 'primary-action',
-    children: 'Label',
-    disabled: false,
-    iconLeft: false,
-    iconRight: false,
-  },
-};
-
-export const SecondaryAction: StoryObj<typeof meta> = {
-  args: {
-    appearance: 'secondary-action',
-    children: 'Label',
-    iconLeft: true,
-    disabled: false,
-    iconRight: false,
-  },
-};
-
-export const Subtle: StoryObj<typeof meta> = {
-  args: {
-    appearance: 'subtle',
-    children: 'Label',
-    disabled: false,
     iconLeft: false,
     iconRight: false,
   },
@@ -111,7 +65,6 @@ export const IconLeft: StoryObj<typeof meta> = {
     icon: 'calendar-event',
     children: 'Label',
     iconLeft: true,
-    disabled: false,
     iconRight: false,
   },
 };
@@ -119,9 +72,8 @@ export const IconLeft: StoryObj<typeof meta> = {
 export const IconRight: StoryObj<typeof meta> = {
   args: {
     icon: 'arrow-narrow-right',
-    children: 'Label',
+    children: 'Verder',
     iconRight: true,
-    disabled: false,
     iconLeft: false,
   },
 };
@@ -140,16 +92,6 @@ export const Active: StoryObj<typeof meta> = {
   },
 };
 
-export const Pressed: StoryObj<typeof meta> = {
-  args: {
-    children: 'Pressed',
-    disabled: false,
-    iconLeft: false,
-    iconRight: false,
-    pressed: true
-  },
-};
-
 export const Hover: StoryObj<typeof meta> = {
   args: {
     children: 'Hover',
@@ -164,31 +106,39 @@ export const Hover: StoryObj<typeof meta> = {
   },
 };
 
-export const Disabled: StoryObj<typeof meta> = {
+export const Focus: StoryObj<typeof meta> = {
   args: {
-    children: 'Disabled',
-    disabled: true,
+    children: 'Label',
+    disabled: false,
+    iconLeft: false,
+    iconRight: false,
+  },
+  parameters: {
+    pseudo: {
+      focus: true,
+    },
+  },
+};
+
+export const FocusVisible: StoryObj<typeof meta> = {
+  args: {
+    children: 'Label',
+    disabled: false,
     iconLeft: false,
     iconRight: false,
   },
 };
 
-export const Busy: StoryObj<typeof meta> = {
+export const Visited: StoryObj<typeof meta> = {
   args: {
-    children: "I'm busy",
-    busy: true,
-    disabled: false,
-    iconLeft: false,
-    iconRight: false
-  },
-};
-
-export const IconOnly: StoryObj<typeof meta> = {
-  args: {
-    iconOnly: true,
+    children: 'Label',
     disabled: false,
     iconLeft: false,
     iconRight: false,
-    children: ' <span class="rhc-button__sr-only">Screen reader contents</span>',
+  },
+  parameters: {
+    pseudo: {
+      visited: true,
+    },
   },
 };
