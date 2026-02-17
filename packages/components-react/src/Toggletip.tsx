@@ -3,9 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { Alert } from '@rijkshuisstijl-community/alert-react';
 import clsx from 'clsx';
 import { DetailsHTMLAttributes, PropsWithChildren, ReactNode, Ref } from 'react';
-import { Alert } from './Alert';
 import { Icon } from './Icon';
 import { Paragraph } from './Paragraph';
 

@@ -11,7 +11,6 @@ export {
   type AccordionSectionProviderProps,
 } from './Accordion';
 export { ActionGroup, type ActionGroupProps } from './ActionGroup';
-export { Alert, type AlertProps } from './Alert';
 export { Article, type ArticleProps } from './Article';
 export { Blockquote, type BlockquoteProps } from './Blockquote';
 export {

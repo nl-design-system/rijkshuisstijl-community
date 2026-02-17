@@ -12,6 +12,19 @@
   ],
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "rhc:source": "./src/index.ts",
+      "default": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.esm.js",
+        "require": "./dist/index.cjs.js"
+      }
+    },
+    "./CHANGELOG.md": "./CHANGELOG.md",
+    "./README.md": "./README.md"
+  },
   "scripts": {
     "build": "rollup --config rollup.config.mjs",
     "clean": "rimraf dist",
