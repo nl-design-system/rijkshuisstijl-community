@@ -8,9 +8,9 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'Components React',
+      name: 'Alert',
       // the proper extensions will be added
-      fileName: 'components-react',
+      fileName: 'alert-react',
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
