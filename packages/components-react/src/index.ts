@@ -80,7 +80,6 @@ export {
 export { Heading, type HeadingLevel, type HeadingProps, headingLevels } from './Heading';
 export { HeadingGroup, type HeadingGroupProps } from './HeadingGroup';
 export { Hero, type HeroProps } from './Hero';
-export { Icon, type IconProps, type RHCIconID, getIconSet, registerIconSet } from './Icon';
 export { Image, type ImageProps } from './Image';
 export {
   LanguageNavigation,
@@ -151,5 +150,3 @@ export { Toggletip, type ToggletipProps } from './Toggletip';
 export { UnorderedList, type UnorderedListProps } from './UnorderedList';
 export { UnorderedListItem, type UnorderedListItemProps } from './UnorderedListItem';
 export { VisuallyHidden } from './VisuallyHidden';
-export { iconSet as defaultIconSet } from './icon-sets/default-icons/icon-set';
-export { iconSet as flagIconSet } from './icon-sets/flag-icons/icon-set';

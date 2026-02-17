@@ -3,6 +3,7 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { Icon } from '@rijkshuisstijl-community/icon-react';
 import {
   TableHeaderCell as UtrechtTableHeaderCell,
   TableHeaderCellProps as UtrechtTableHeaderCellProps,
@@ -10,7 +11,6 @@ import {
 import clsx from 'clsx';
 import { PropsWithChildren, Ref } from 'react';
 import { Button } from './Button';
-import { Icon } from './Icon';
 
 export interface TableHeaderCellProps extends UtrechtTableHeaderCellProps {
   withSorting?: boolean;

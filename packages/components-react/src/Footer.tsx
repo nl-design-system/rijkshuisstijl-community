@@ -3,12 +3,12 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { Icon } from '@rijkshuisstijl-community/icon-react';
 import { PageFooterProps, PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { MouseEvent, PropsWithChildren, ReactNode, Ref } from 'react';
 import { ColumnLayout } from './ColumnLayout';
 import { Heading, HeadingLevel } from './Heading';
-import { Icon } from './Icon';
 
 interface FooterProps extends PageFooterProps {
   heading?: ReactNode;

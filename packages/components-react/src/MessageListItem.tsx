@@ -3,10 +3,10 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { Icon } from '@rijkshuisstijl-community/icon-react';
 import clsx from 'clsx';
 import { HTMLAttributes, ReactNode, Ref } from 'react';
 import { DotBadge, DotBadgeProps } from './DotBadge';
-import { Icon } from './Icon';
 import { Paragraph } from './Paragraph';
 
 export interface MessageListItemProps extends HTMLAttributes<HTMLLIElement> {
