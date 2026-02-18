@@ -14,16 +14,36 @@
   "module": "./dist/index.esm.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": {
-      "rhc:source": "./src/index.ts",
-      "default": {
-        "types": "./dist/index.d.ts",
-        "import": "./dist/index.esm.js",
-        "require": "./dist/index.cjs.js"
-      }
-    },
     "./CHANGELOG.md": "./CHANGELOG.md",
-    "./README.md": "./README.md"
+    "./README.md": "./README.md",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./css": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.mjs"
+    },
+    "./dist": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/index": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/index.mjs": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/css": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.mjs"
+    },
+    "./dist/css.mjs": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.mjs"
+    }
   },
   "scripts": {
     "build": "rollup --config rollup.config.mjs",
