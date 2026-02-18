@@ -14,35 +14,11 @@
   "module": "./dist/index.esm.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    "./CHANGELOG.md": "./CHANGELOG.md",
-    "./README.md": "./README.md",
     ".": {
+      "rhc:source": "./src/index.ts",
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs"
-    },
-    "./css": {
-      "types": "./dist/css.d.ts",
-      "import": "./dist/css.mjs"
-    },
-    "./dist": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs"
-    },
-    "./dist/index": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs"
-    },
-    "./dist/index.mjs": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs"
-    },
-    "./dist/css": {
-      "types": "./dist/css.d.ts",
-      "import": "./dist/css.mjs"
-    },
-    "./dist/css.mjs": {
-      "types": "./dist/css.d.ts",
-      "import": "./dist/css.mjs"
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
     }
   },
   "scripts": {
