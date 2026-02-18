@@ -1,4 +1,5 @@
-import { Icon, LinkButton } from '@rijkshuisstijl-community/components-react';
+import { LinkButton } from '@rijkshuisstijl-community/components-react';
+import { Icon } from '@rijkshuisstijl-community/icon-react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {

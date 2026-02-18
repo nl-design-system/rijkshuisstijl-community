@@ -1,4 +1,5 @@
-import { Footer, Icon, LinkList, LinkListLink, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { Footer, LinkList, LinkListLink, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { Icon } from '@rijkshuisstijl-community/icon-react';
 import './footer.css';
 
 export default function SharedFooter({ isLightTheme }: { isLightTheme?: boolean }) {

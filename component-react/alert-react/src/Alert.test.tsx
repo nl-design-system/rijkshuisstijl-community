@@ -38,7 +38,6 @@ describe('Alert', () => {
     );
     const alert = screen.getByRole(expectedRole);
     expect(alert).toBeInTheDocument();
-    cleanup();
   });
 
   test.each([['info'], ['ok'], ['warning'], ['error']])(
@@ -59,5 +58,6 @@ describe('Alert', () => {
       expect(alert).toHaveClass(`utrecht-alert--${type}`);
     },
   );
+
   afterEach(() => cleanup());
 });

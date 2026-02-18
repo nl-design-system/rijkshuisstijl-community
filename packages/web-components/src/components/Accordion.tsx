@@ -4,7 +4,8 @@
  */
 
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
-import { AccordionProvider, AccordionProviderProps, Icon, RHCIconID } from '@rijkshuisstijl-community/components-react';
+import { AccordionProvider, AccordionProviderProps } from '@rijkshuisstijl-community/components-react';
+import { Icon, RHCIconID } from '@rijkshuisstijl-community/icon-react';
 import { render } from 'preact';
 import { BaseWebComponent } from './BaseComponent';
 
