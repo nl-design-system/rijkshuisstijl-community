@@ -246,6 +246,9 @@ importers:
 
   component-react/alert-react:
     dependencies:
+      '@rijkshuisstijl-community/icon-react':
+        specifier: workspace:*
+        version: link:../icon-react
       '@utrecht/component-library-react':
         specifier: 10.3.5
         version: 10.3.5(@babel/runtime@7.28.2)(date-fns@2.30.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -274,9 +277,6 @@ importers:
       '@babel/runtime':
         specifier: 7.28.2
         version: 7.28.2
-      '@rijkshuisstijl-community/components-react':
-        specifier: 11.0.0
-        version: 11.0.0(@amsterdam/design-system-css@1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.1))(@babel/runtime@7.28.2)(date-fns@2.30.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@rollup/plugin-babel':
         specifier: 6.0.4
         version: 6.0.4(@babel/core@7.28.0)(@types/babel__core@7.20.5)(rollup@4.46.2)
@@ -758,6 +758,9 @@ importers:
       '@rijkshuisstijl-community/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
+      '@rijkshuisstijl-community/icon-react':
+        specifier: workspace:*
+        version: link:../../component-react/icon-react
       '@rollup/plugin-babel':
         specifier: 6.0.4
         version: 6.0.4(@babel/core@7.28.0)(@types/babel__core@7.20.5)(rollup@4.46.2)
