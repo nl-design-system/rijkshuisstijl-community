@@ -1,1 +1,24 @@
-<a aria-disabled="false" class="nl-link rhc-link" href="#">{{ children }}</a>
+{%- set classes = ['nl-link rhc-link'] -%}
+
+{%- if inline  -%}
+  {%- set classes = classes|merge(['rhc-link--inline']) -%}
+{%- endif -%}
+{%- if className  -%}
+  {%- set classes = classes|merge([className]) -%}
+{%- endif -%}
+
+<a aria-disabled="false" {{ attributes.addClass(classes) }} href="#">
+  {%- if iconLeft -%}
+    {% include '@rhc/Icon.twig' with {
+      attributes: create_attribute(),
+      icon: left_icon|default('calendar-event')
+    } %}
+  {%- endif -%}
+  {{ children }}
+  {%- if iconRight -%}
+    {% include '@rhc/Icon.twig' with {
+      attributes: create_attribute(),
+      icon: right_icon|default('arrow-right')
+    } %}
+  {%- endif -%}
+</a>

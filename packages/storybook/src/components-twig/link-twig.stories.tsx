@@ -20,20 +20,34 @@ const meta = {
       },
       defaultValue: '',
     },
+    href: {
+      description: 'Link URL',
+      type: {
+        name: 'string',
+        required: true,
+      },
+      defaultValue: '#',
+    },
+    inline: {
+      description: 'inline',
+      control: { type: 'boolean' },
+      default: false,
+    },
+    className: {
+      description: 'Add class to the link',
+      type: {
+        name: 'string',
+      },
+      defaultValue: '',
+    },
     iconLeft: {
       description: 'Icon left',
       control: { type: 'boolean' },
-      table: {
-        category: 'Props',
-      },
       defaultValue: false,
     },
     iconRight: {
       description: 'Icon right',
       control: { type: 'boolean' },
-      table: {
-        category: 'Props',
-      },
       defaultValue: false,
     },
   },
@@ -63,7 +77,7 @@ export const Default: StoryObj<typeof meta> = {
 export const IconLeft: StoryObj<typeof meta> = {
   args: {
     icon: 'calendar-event',
-    children: 'Label',
+    children: 'Afspraak maken',
     iconLeft: true,
     iconRight: false,
   },
