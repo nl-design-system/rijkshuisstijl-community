@@ -10,21 +10,19 @@
     "src/",
     "*.md"
   ],
-  "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.esm.d.ts",
   "exports": {
     ".": {
       "rhc:source": "./src/index.ts",
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js"
+      "types": "./dist/index.esm.d.ts",
+      "import": "./dist/index.esm.js"
     }
   },
   "scripts": {
     "build": "rollup --config rollup.config.mjs",
     "clean": "rimraf dist",
-    "lint": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
+    "lint-build": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
     "test": "vitest run --coverage --reporter verbose"
   },
   "keywords": [

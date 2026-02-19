@@ -93,6 +93,12 @@ jobs:
           BASE_URL: "/utrecht/"
         run: pnpm run --if-present build
 
+      - name: "Continuous Integration: lint-build"
+        run: pnpm run --if-present lint-build
+
+      - name: "Continuous Integration: test-build"
+        run: pnpm run --if-present test-build
+
       # Due to dependency on type definitions, typechecking must be done after build
       - name: "Continuous Integration: typecheck"
         run: pnpm run --if-present typecheck
