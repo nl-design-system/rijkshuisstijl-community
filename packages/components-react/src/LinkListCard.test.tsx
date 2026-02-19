@@ -1,12 +1,11 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { Heading, LinkListCard } from '.';
+import { LinkListCard } from '.';
 
 describe('LinkListCard', () => {
   it('renders a visible element', () => {
-    const heading = <Heading level={1}></Heading>;
-    const { container } = render(<LinkListCard heading={heading} headingLevel={1} />);
+    const { container } = render(<LinkListCard heading="Heading" headingLevel={1} />);
 
     const linkListCard = container.querySelector(':only-child');
 

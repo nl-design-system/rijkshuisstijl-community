@@ -13,12 +13,10 @@ interface TableCaptionProps extends UtrechtTableCaptionProps {
   ref?: Ref<HTMLTableCaptionElement>;
 }
 
-export const TableCaption = ({ ref, dir, children, ...restProps }: PropsWithChildren<TableCaptionProps>) => {
-  return (
-    <UtrechtTableCaption className={dir === 'rtl' ? 'utrecht-table__caption--rtl' : ''} ref={ref} {...restProps}>
-      {children}
-    </UtrechtTableCaption>
-  );
-};
+export const TableCaption = ({ ref, dir, children, ...restProps }: PropsWithChildren<TableCaptionProps>) => (
+  <UtrechtTableCaption className={dir === 'rtl' ? 'utrecht-table__caption--rtl' : ''} ref={ref} {...restProps}>
+    {children}
+  </UtrechtTableCaption>
+);
 
 TableCaption.displayName = 'TableCaption';

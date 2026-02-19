@@ -5,9 +5,13 @@ import { TableCaption } from '.';
 
 describe('TableCaption', () => {
   it('renders a visible element', () => {
-    const { container } = render(<TableCaption />);
+    const { container } = render(
+      <table>
+        <TableCaption />
+      </table>,
+    );
 
-    const tableCaption = container.querySelector(':only-child');
+    const tableCaption = container.querySelector('table > :only-child');
 
     expect(tableCaption).toBeInTheDocument();
     expect(tableCaption).toBeVisible();
