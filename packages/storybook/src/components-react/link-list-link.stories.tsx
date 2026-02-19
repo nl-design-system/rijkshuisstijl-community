@@ -1,4 +1,5 @@
-import { Icon, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
+import { LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
+import { Icon } from '@rijkshuisstijl-community/icon-react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {

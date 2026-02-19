@@ -1,11 +1,5 @@
-import {
-  ColumnLayout,
-  Footer,
-  Icon,
-  LinkList,
-  LinkListLink,
-  Paragraph,
-} from '@rijkshuisstijl-community/components-react';
+import { ColumnLayout, Footer, LinkList, LinkListLink, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { Icon } from '@rijkshuisstijl-community/icon-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './footer.md?raw';

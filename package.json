@@ -20,6 +20,8 @@
   },
   "workspaces": [
     "./apps/**",
+    "./component-css/*",
+    "./component-react/*",
     "./packages/*",
     "./proprietary/*"
   ],
@@ -76,6 +78,7 @@
     "lint-fix:js": "eslint --ext .js,.cjs,.mjs,.json,.jsx,.mdx,.ts,.tsx --fix --report-unused-disable-directives .",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
     "lint-workspaces": "lerna run --no-bail lint",
+    "lint-build": "pnpm run --recursive lint-build",
     "prepare": "husky",
     "prettier": "prettier --write .",
     "publish": "lerna publish from-package --yes",
@@ -85,6 +88,7 @@
     "start:rhc-templates": "npm run --workspace apps/rhc-templates dev",
     "storybook": "npm-run-all --parallel watch:**",
     "test": "npm run test-workspaces",
+    "test-build": "npm run test-workspaces",
     "test-update": "npm-run-all --sequential clean lint build test",
     "test-workspaces": "lerna run --no-bail test",
     "test:e2e": "lerna run --no-bail test:e2e",

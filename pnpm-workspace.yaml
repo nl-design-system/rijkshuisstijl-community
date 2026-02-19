@@ -2,7 +2,8 @@
 
 packages:
   - "apps/**"
-  - "components/**"
+  - "component-css/*"
+  - "component-react/*"
   - "packages/*"
   - "proprietary/*"
 
@@ -44,7 +45,7 @@ savePrefix: ""
 
 overrides:
   locutus@>=2.0.12 <2.0.39: ">=2.0.39"
-  '@isaacs/brace-expansion@<=5.0.0': '>=5.0.1'
+  "@isaacs/brace-expansion@<=5.0.0": ">=5.0.1"
 
 # Configure pnpm to not fail when there are missing or invalid peer dependencies in the tree.
 strictPeerDependencies: false

@@ -1,5 +1,5 @@
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
-import { Icon, IconProps } from '@rijkshuisstijl-community/components-react';
+import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react';
 import { render } from 'preact';
 import { BaseWebComponent } from './BaseComponent';
 import iconStylesheet from './Icon.css?inline';

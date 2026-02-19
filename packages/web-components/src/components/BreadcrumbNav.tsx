@@ -11,8 +11,8 @@ import {
   BreadcrumbNavProps,
   BreadcrumbNavSeparator,
   BreadcrumbNavSeparatorProps,
-  Icon,
 } from '@rijkshuisstijl-community/components-react';
+import { Icon } from '@rijkshuisstijl-community/icon-react';
 import { render } from 'preact';
 import { BaseWebComponent } from './BaseComponent';
 

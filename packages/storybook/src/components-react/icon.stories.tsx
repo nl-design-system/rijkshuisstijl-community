@@ -1,10 +1,4 @@
-import {
-  defaultIconSet,
-  flagIconSet,
-  getIconSet,
-  Icon,
-  registerIconSet,
-} from '@rijkshuisstijl-community/components-react';
+import { defaultIconSet, flagIconSet, getIconSet, Icon, registerIconSet } from '@rijkshuisstijl-community/icon-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { IconBrandX } from '@tabler/icons-react';

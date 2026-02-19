@@ -3,6 +3,7 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { Icon } from '@rijkshuisstijl-community/icon-react';
 import clsx from 'clsx';
 import {
   createContext,
@@ -19,7 +20,6 @@ import {
   useRef,
   useState,
 } from 'react';
-import { Icon } from './Icon';
 import { Link } from './Link';
 import { LinkButton, LinkButtonProps } from './LinkButton';
 

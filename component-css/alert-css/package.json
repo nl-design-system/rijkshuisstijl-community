@@ -1,0 +1,32 @@
+{
+  "version": "3.0.1",
+  "author": "Community for Rijkshuisstijl-Community Design System",
+  "description": "Alert component",
+  "license": "EUPL-1.2",
+  "name": "@rijkshuisstijl-community/alert-css",
+  "files": [
+    "dist/",
+    "docs/",
+    "src/",
+    "*.md"
+  ],
+  "main": "dist/index.css",
+  "scripts": {
+    "build": "build-css-package",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@rijkshuisstijl-community/build-utils-css": "workspace:*"
+  },
+  "keywords": [
+    "rijkshuisstijl-community-design-system"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
+    "directory": "component-css/alert-css"
+  }
+}

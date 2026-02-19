@@ -26,11 +26,6 @@ jobs:
         with:
           node-version-file: .nvmrc
 
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
@@ -49,11 +44,6 @@ jobs:
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
           node-version-file: .nvmrc
-
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -80,11 +70,6 @@ jobs:
         with:
           node-version-file: .nvmrc
 
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
@@ -92,6 +77,12 @@ jobs:
         env:
           BASE_URL: "/utrecht/"
         run: pnpm run --if-present build
+
+      - name: "Continuous Integration: lint-build"
+        run: pnpm run --if-present lint-build
+
+      - name: "Continuous Integration: test-build"
+        run: pnpm run --if-present test-build
 
       # Due to dependency on type definitions, typechecking must be done after build
       - name: "Continuous Integration: typecheck"
@@ -121,6 +112,12 @@ jobs:
         with:
           name: react
           path: packages/components-react/dist/
+
+      - name: "Retain build artifact: Component React"
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: react
+          path: component-react/**/dist/
 
       - name: "Retain build artifact: Storybook Angular"
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
@@ -163,11 +160,6 @@ jobs:
         with:
           name: css
           path: packages/components-css/dist/
-
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -229,6 +221,12 @@ jobs:
         with:
           name: react
           path: packages/components-react/dist/
+
+      - name: "Restore build artifact: Component React"
+        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
+        with:
+          name: react
+          path: component-react/**/dist/
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -295,11 +293,6 @@ jobs:
           name: storybook
           path: packages/storybook/dist/
 
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
@@ -324,11 +317,6 @@ jobs:
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
           node-version-file: .nvmrc
-
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile

@@ -1,0 +1,24 @@
+{
+  "version": "0.0.4",
+  "author": "Community for NL Design System",
+  "description": "Utilities for CSS component npm packages",
+  "license": "EUPL-1.2",
+  "name": "@rijkshuisstijl-community/build-utils-css",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
+    "directory": "packages/build-utils-css"
+  },
+  "bin": {
+    "build-css-package": "./src/index.mjs"
+  },
+  "devDependencies": {
+    "cssnano": "7.0.7",
+    "postcss": "8.4.49",
+    "sass": "1.69.7"
+  }
+}

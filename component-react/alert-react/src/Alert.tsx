@@ -2,7 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2026 Community for NL Design System
  */
-
+import { Icon, type RHCIconID } from '@rijkshuisstijl-community/icon-react';
 import {
   Alert as UtrechtAlert,
   AlertProps as UtrechtAlertProps,
@@ -10,7 +10,7 @@ import {
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
-import { Icon, type RHCIconID } from './Icon';
+
 export interface AlertProps extends UtrechtAlertProps {
   type?: UtrechtAlertType;
   icon?: RHCIconID;

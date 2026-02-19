@@ -14,18 +14,16 @@ export interface TableCellProps extends UtrechtTableCellProps {
   ref?: Ref<HTMLTableCellElement>;
 }
 
-export const TableCell = ({ ref, children, alignCell, ...restProps }: PropsWithChildren<TableCellProps>) => {
-  return (
-    <UtrechtTableCell
-      ref={ref}
-      style={{
-        textAlign: alignCell,
-      }}
-      {...restProps}
-    >
-      {children}
-    </UtrechtTableCell>
-  );
-};
+export const TableCell = ({ ref, children, alignCell, ...restProps }: PropsWithChildren<TableCellProps>) => (
+  <UtrechtTableCell
+    ref={ref}
+    style={{
+      textAlign: alignCell,
+    }}
+    {...restProps}
+  >
+    {children}
+  </UtrechtTableCell>
+);
 
 TableCell.displayName = 'TableCell';
