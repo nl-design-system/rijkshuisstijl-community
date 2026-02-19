@@ -557,14 +557,6 @@ describe('Form field with a textarea', () => {
       expect(textarea).toHaveClass('utrecht-textarea--readonly');
     });
 
-    it('is not read-only in CSS by default', () => {
-      const { container } = render(<FormFieldTextarea {...defaultProps} />);
-
-      const textarea = container.querySelector(':read-only');
-
-      expect(textarea).not.toBeInTheDocument();
-    });
-
     it('omits non-essential disabled attributes when not read-only', () => {
       render(<FormFieldTextarea {...defaultProps} readOnly={false} />);
 

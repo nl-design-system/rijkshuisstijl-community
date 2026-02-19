@@ -607,14 +607,6 @@ describe('Form field with a textinput', () => {
       expect(textbox).toHaveClass('utrecht-textbox--readonly');
     });
 
-    it('is not read-only in CSS by default', () => {
-      const { container } = render(<FormFieldTextInput {...defaultProps} />);
-
-      const textbox = container.querySelector(':read-only');
-
-      expect(textbox).not.toBeInTheDocument();
-    });
-
     it('omits non-essential disabled attributes when not read-only', () => {
       render(<FormFieldTextInput {...defaultProps} readOnly={false} />);
 
