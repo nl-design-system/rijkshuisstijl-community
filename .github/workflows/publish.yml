@@ -113,6 +113,12 @@ jobs:
           name: react
           path: packages/components-react/dist/
 
+      - name: "Retain build artifact: Component React"
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: react
+          path: component-react/**/dist/
+
       - name: "Retain build artifact: Storybook Angular"
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
@@ -215,6 +221,12 @@ jobs:
         with:
           name: react
           path: packages/components-react/dist/
+
+      - name: "Restore build artifact: Component React"
+        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
+        with:
+          name: react
+          path: component-react/**/dist/
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
