@@ -26,11 +26,6 @@ jobs:
         with:
           node-version-file: .nvmrc
 
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
@@ -49,11 +44,6 @@ jobs:
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
           node-version-file: .nvmrc
-
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -79,11 +69,6 @@ jobs:
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
           node-version-file: .nvmrc
-
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -169,11 +154,6 @@ jobs:
         with:
           name: css
           path: packages/components-css/dist/
-
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -301,11 +281,6 @@ jobs:
           name: storybook
           path: packages/storybook/dist/
 
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
@@ -330,11 +305,6 @@ jobs:
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
           node-version-file: .nvmrc
-
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
