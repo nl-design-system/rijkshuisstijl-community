@@ -11,12 +11,14 @@
     "*.md"
   ],
   "module": "./dist/index.esm.js",
-  "types": "./dist/index.esm.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "rhc:source": "./src/index.ts",
-      "types": "./dist/index.esm.d.ts",
-      "import": "./dist/index.esm.js"
+      "default": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.esm.js"
+      }
     }
   },
   "scripts": {
