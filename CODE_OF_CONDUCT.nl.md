@@ -38,7 +38,7 @@ Voorbeelden van het vertegenwoordigen van onze community zijn onder meer het geb
 
 ## Handhaving
 
-Beledigend, intimiderend of anderszins onaanvaardbaar gedrag kan gerapporteerd worden aan de communityleiders die verantwoordelijk zijn voor handhaving via [kernteam@nldesignsystem.nl](mailto:kernteam@nldesignsystem.nl) of door rechtstreeks contact op te nemen met [leden van het kernteam](https://nldesignsystem.nl/project/kernteam) (via Slack of email).
+Beledigend, intimiderend of anderszins onaanvaardbaar gedrag kan gerapporteerd worden aan de communityleiders die verantwoordelijk zijn voor handhaving via [info@nldesignsystem.nl](mailto:info@nldesignsystem.nl) of door rechtstreeks contact op te nemen met [leden van het kernteam](https://nldesignsystem.nl/project/kernteam) (via Slack of email).
 Alle klachten zullen onmiddellijk en eerlijk worden beoordeeld en onderzocht.
 
 Alle communityleiders zijn verplicht om de privacy en veiligheid van de melder van een incident te respecteren.
