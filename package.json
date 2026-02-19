@@ -88,6 +88,7 @@
     "start:rhc-templates": "npm run --workspace apps/rhc-templates dev",
     "storybook": "npm-run-all --parallel watch:**",
     "test": "npm run test-workspaces",
+    "test-build": "npm run test-workspaces",
     "test-update": "npm-run-all --sequential clean lint build test",
     "test-workspaces": "lerna run --no-bail test",
     "test:e2e": "lerna run --no-bail test:e2e",

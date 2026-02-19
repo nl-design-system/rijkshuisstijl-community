@@ -25,7 +25,7 @@
     "build": "rollup --config rollup.config.mjs",
     "clean": "rimraf dist",
     "lint-build": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
-    "test": "vitest run --coverage --reporter verbose"
+    "test-build": "vitest run --coverage --reporter verbose"
   },
   "keywords": [
     "rijkshuisstijl-community-design-system"
