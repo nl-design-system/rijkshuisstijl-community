@@ -3,7 +3,8 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Icon, RHCIconID } from '@rijkshuisstijl-community/icon-react';
+import { Icon } from '@rijkshuisstijl-community/icon-react';
+import type { RHCIconID } from '@rijkshuisstijl-community/icon-react';
 import {
   Button,
   ButtonLink,

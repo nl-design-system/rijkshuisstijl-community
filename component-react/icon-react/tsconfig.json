@@ -4,6 +4,14 @@
     "baseUrl": ".",
     "rootDir": "./src/"
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/*.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/*.ts",
+    "src/*.tsx",
+    "src/icon-sets/**/*.svg",
+    "src/icon-sets/**/*.ts",
+    "src/icon-sets/**/*.tsx"
+  ],
   "exclude": ["**/node_modules/*"]
 }
