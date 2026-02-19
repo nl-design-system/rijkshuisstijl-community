@@ -23,7 +23,7 @@
     "build": "npm-run-all build:**",
     "build:components": "rollup --config rollup.config.mjs",
     "clean": "rimraf dist/ pages/",
-    "lint": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
+    "lint-build": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
     "test": "vitest run --coverage --reporter verbose",
     "typecheck": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
     "watch": "npm-run-all watch:**",
