@@ -11,10 +11,10 @@ import {
 import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
 
-export interface AlertProps extends UtrechtAlertProps {
+export type AlertProps = UtrechtAlertProps & {
   type?: UtrechtAlertType;
   icon?: RHCIconID;
-}
+};
 
 const iconMap: Record<UtrechtAlertType, RHCIconID> = {
   info: 'info-circle',
