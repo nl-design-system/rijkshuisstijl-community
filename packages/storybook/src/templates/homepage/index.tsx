@@ -20,9 +20,9 @@ export default function Page() {
           />
           <ColumnLayout>
             <Paragraph>
-              De Rijkshuisstijl Community is een samenwerkingsverband om{' '}
-              <Link href="https://www.nldesignsystem.nl/componenten/">NL Design System-componenten</Link> te gebruiken
-              voor projecten die moeten voldoen aan de Rijkshuisstijl.
+              De Rijkshuisstijl Community is een Open Source project van{' '}
+              <Link href="https://www.nldesignsystem.nl/componenten/">NL Design System-componenten</Link> voor projecten
+              die moeten voldoen aan de Rijkshuisstijl.
             </Paragraph>
             <Paragraph>
               De community bestaat uit organisaties van de centrale overheid van Nederland en leveranciers die zijn
