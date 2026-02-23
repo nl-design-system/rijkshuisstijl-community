@@ -1,0 +1,10 @@
+<figure {{ attributes.addClass(['utrecht-blockquote', 'rhc-blockquote']) }}>
+  <blockquote {{ attributes.addClass(['utrecht-blockquote__quote']) }}>
+    {{ children }}
+  </blockquote>
+  {% if attribution %}
+  <figcaption {{ attributes.addClass(['utrecht-blockquote__caption']) }}>
+    {{ attribution }}
+  </figcaption>
+  {% endif %}
+</figure>
