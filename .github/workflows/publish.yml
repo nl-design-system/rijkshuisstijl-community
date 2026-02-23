@@ -226,8 +226,7 @@ jobs:
         uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
         with:
           name: react-component-packages
-          path: component-react/**/dist/
-
+          path: component-react/
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
