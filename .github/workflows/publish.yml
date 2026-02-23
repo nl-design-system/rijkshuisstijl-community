@@ -113,10 +113,10 @@ jobs:
           name: react
           path: packages/components-react/dist/
 
-      - name: "Retain build artifact: Component React"
+      - name: "Retain build artifact: React Component Packages"
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
-          name: react
+          name: react-component-packages
           path: component-react/**/dist/
 
       - name: "Retain build artifact: Storybook Angular"
@@ -225,7 +225,7 @@ jobs:
       - name: "Restore build artifact: Component React"
         uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
         with:
-          name: react
+          name: react-component-packages
           path: component-react/**/dist/
 
       - name: Install dependencies
