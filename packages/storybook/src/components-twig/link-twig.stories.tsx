@@ -57,10 +57,13 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
-    //Todo: voeg NL-Design system & Figma links toe
+    figma:
+      'https://www.figma.com/design/Q5Imc7Xi9KnBQhcYI3Hytj/-WIP--NL-Design-System---Bibliotheek?node-id=197-664&p=f&t=nB0V3gAhWfpilaKv-0',
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-link/src/Link.twig',
+    nldesignsystem: 'https://nldesignsystem.nl/link',
+    componentOrigin:
+      'Dit component is overgenomen van het NL Design System, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof TwigLink>;
 
