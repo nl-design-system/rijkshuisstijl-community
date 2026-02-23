@@ -6,8 +6,9 @@
     <title>Web Components Testpagina</title>
     <script type="module" src="./dist/index.mjs"></script>
     <script type="module">
-      import { ButtonWebComponent } from './dist/index.mjs';
+      import { ButtonWebComponent, AlertWebComponent } from './dist/index.mjs';
       ButtonWebComponent.define();
+      AlertWebComponent.define();
     </script>
     <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/design-tokens/dist/index.css" />
     <style>
@@ -54,6 +55,10 @@
         >
           label
         </rhc-button>
+        <rhc-alert type="error">
+          <h3> Heading </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</p>
+        </rhc-alert>
 
         <h1 popover id="myheader">Hello</h1>
         <button popovertarget="myheader" value="Click me!">button</button>
