@@ -60,7 +60,7 @@ representative at an online or offline event.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement via
-[kernteam@nldesignsystem.nl](mailto:kernteam@nldesignsystem.nl)
+[info@nldesignsystem.nl](mailto:info@nldesignsystem.nl)
 or by contacting [the team](https://nldesignsystem.nl/project/kernteam) on Slack.
 All complaints will be reviewed and investigated promptly and fairly.
 
