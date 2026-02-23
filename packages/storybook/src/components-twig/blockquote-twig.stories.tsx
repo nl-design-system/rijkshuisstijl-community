@@ -19,10 +19,13 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
-    //Todo: voeg NL-Design system & Figma links toe
+    figma:
+      'https://www.figma.com/design/Q5Imc7Xi9KnBQhcYI3Hytj/NL-Design-System---RHC-Bibliotheek?node-id=1349-6340&p=f&t=FF0eLCbwS26n6eDF-0',
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/src/Blockquote.twig',
+    nldesignsystem: 'https://www.nldesignsystem.nl/blockquote',
+    componentOrigin:
+      'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof TwigBlockquote>;
 
