@@ -1,7 +1,6 @@
 import TwigLink from '@rijkshuisstijl-community/components-twig/src/Link.twig';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-// import readme from '../components-react/link.md?raw';
 import readme from '@utrecht/components/link/README.md?raw';
 
 const meta = {
