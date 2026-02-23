@@ -37,7 +37,7 @@ export const TwigBlockquoteDefault: StoryObj<typeof meta> = {
 
 export const TwigBlockquoteAttribution: StoryObj<typeof meta> = {
   args: {
-    children: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
+    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
     attribution: '— Pippi Langkous',
   },
   name: 'Attribution',
