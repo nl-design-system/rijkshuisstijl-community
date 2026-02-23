@@ -40,4 +40,7 @@ export const SeparatorDefault: Story = {
 
 export const SeparatorInvisible: Story = {
   name: 'Invisible',
+  args: {
+    invisible: true,
+  }
 };
