@@ -249,6 +249,9 @@ importers:
 
   component-react/alert-react:
     dependencies:
+      '@rijkshuisstijl-community/alert-css':
+        specifier: workspace:*
+        version: link:../../component-css/alert-css
       '@rijkshuisstijl-community/icon-react':
         specifier: workspace:*
         version: link:../icon-react
