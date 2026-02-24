@@ -158,3 +158,28 @@ export const Visited: StoryObj<typeof meta> = {
     },
   },
 };
+
+export const LinkInParagraph: StoryObj<typeof meta> = {
+  args: {
+    href: 'https://example.com/',
+  },
+  render({ href }) {
+    return (
+      <p class="nl-paragraph" style={{ width: '423px'}}>
+        Het was in het voorjaar 1345, dat een talrijk aantal van naburen en vreemdelingen naar Haarlem was toegestroomd,
+        ter bijwoning van een plechtig feest, hetwelk binnen zijn muren door Graaf Willem den Vierden stond gegeven te
+        worden. In deze paragraaf staat een{' '}
+        <a class="nl-link rhc-link rhc-link--inline" href={href}>
+          link naar een voorbeeldsite
+        </a>{' '}
+        en nog een{' '}
+        <a class="nl-link rhc-link rhc-link--inline" href={href}>
+          link zonder icoon
+        </a>
+        . Onder die steden, welke vanouds aan de grafelijke kroon van Holland gelijk zoovele edelgesteenten flonkerden,
+        en wier macht en rijkdom tot een hechten steun verstrekten aan des Landsheer gezag, was Haarlem, gelijk genoeg
+        bekend is, een der voornaamste.
+      </p>
+    );
+  }
+};
