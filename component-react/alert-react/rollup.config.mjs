@@ -1,7 +1,7 @@
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
-import { readFileSync } from 'fs';
+import { readFileSync } from 'node:fs';
 import filesize from 'rollup-plugin-filesize';
 import nodeExternal from 'rollup-plugin-node-externals';
 import nodePolyfills from 'rollup-plugin-node-polyfills';
