@@ -175,7 +175,7 @@ export const LinkInParagraph: StoryObj<typeof meta> = {
         en nog een{' '}
         <a className="nl-link rhc-link rhc-link--inline" href={href}>
           link zonder icoon
-        </a>{' '}
+        </a>
         . Onder die steden, welke vanouds aan de grafelijke kroon van Holland gelijk zoovele edelgesteenten flonkerden,
         en wier macht en rijkdom tot een hechten steun verstrekten aan des Landsheer gezag, was Haarlem, gelijk genoeg
         bekend is, een der voornaamste.
