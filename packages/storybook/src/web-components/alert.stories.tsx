@@ -44,47 +44,55 @@ export default meta;
 
 export const Informative = {
   args: {
-    children: [
-      <Heading appearanceLevel={5} level={3}>
-        Heading
-      </Heading>,
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>,
-    ],
+    children: (
+      <>
+        <Heading appearanceLevel={5} level={3}>
+          Heading
+        </Heading>
+        <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+      </>
+    ),
   },
 } as StoryObj<typeof meta>;
 
 export const Negative = {
   args: {
     type: 'error',
-    children: [
-      <Heading appearanceLevel={5} level={3}>
-        Heading
-      </Heading>,
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>,
-    ],
+    children: (
+      <>
+        <Heading appearanceLevel={5} level={3}>
+          Heading
+        </Heading>
+        <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+      </>
+    ),
   },
 } as StoryObj<typeof meta>;
 
 export const Positive = {
   args: {
     type: 'ok',
-    children: [
-      <Heading appearanceLevel={5} level={3}>
-        Heading
-      </Heading>,
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>,
-    ],
+    children: (
+      <>
+        <Heading appearanceLevel={5} level={3}>
+          Heading
+        </Heading>
+        <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+      </>
+    ),
   },
 } as StoryObj<typeof meta>;
 
 export const Warning = {
   args: {
     type: 'warning',
-    children: [
-      <Heading appearanceLevel={5} level={3}>
-        Heading
-      </Heading>,
-      <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>,
-    ],
+    children: (
+      <>
+        <Heading appearanceLevel={5} level={3}>
+          Heading
+        </Heading>
+        <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+      </>
+    ),
   },
 } as StoryObj<typeof meta>;
