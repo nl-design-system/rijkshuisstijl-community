@@ -24,6 +24,7 @@
   "scripts": {
     "build": "rollup --config rollup.config.mjs",
     "clean": "rimraf dist",
+    "watch": "rollup --config rollup.config.mjs --watch",
     "lint-build": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
     "test-build": "vitest run --coverage --reporter verbose"
   },
@@ -70,6 +71,10 @@
     "typescript": "5.8.3",
     "vite": "6.3.5",
     "vitest": "3.2.4"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
   },
   "dependencies": {
     "@rijkshuisstijl-community/icon-react": "workspace:*",

@@ -13,10 +13,14 @@
   "main": "dist/index.css",
   "scripts": {
     "build": "build-css-package",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "watch": "chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
   },
   "devDependencies": {
-    "@rijkshuisstijl-community/build-utils-css": "workspace:*"
+    "@rijkshuisstijl-community/build-utils-css": "workspace:*",
+    "@utrecht/alert-css": "2.4.0",
+    "@utrecht/icon-css": "2.0.1",
+    "chokidar-cli": "3.0.0"
   },
   "keywords": [
     "rijkshuisstijl-community-design-system"
