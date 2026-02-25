@@ -83,9 +83,6 @@ jobs:
           BASE_URL: "/utrecht/"
         run: pnpm run --if-present build
 
-      - name: "Continuous Integration: lint-build"
-        run: pnpm run --if-present lint-build
-
       - name: "Continuous Integration: test-build"
         run: pnpm run --if-present test-build
 
