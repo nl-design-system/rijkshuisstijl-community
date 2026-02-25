@@ -1004,11 +1004,16 @@
           }
         }
       },
-      "line-height": {
-        "icon": {
-          "md": {
+      "icon": {
+        "md": {
+          "line-height": {
             "$type": "dimension",
             "$value": "{rhc.text.font-size.md} * 1.5",
+            "$description": "[figma-only] [temporary – until nl-icon]"
+          },
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0.188rem",
             "$description": "[figma-only] [temporary – until nl-icon]"
           }
         }
@@ -3970,11 +3975,9 @@
           }
         },
         "input": {
-          "margin": {
-            "block-start": {
-              "$type": "dimension",
-              "$value": "{rhc.space.50}"
-            }
+          "margin-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.icon.md.inset-block-start}"
           }
         }
       }
@@ -4311,7 +4314,7 @@
         "icon": {
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "0.188rem"
+            "$value": "{rhc.icon.md.inset-block-start}"
           },
           "size": {
             "$type": "dimension",
@@ -8256,6 +8259,14 @@
           "3xl": {
             "$type": "fontSizes",
             "$value": "{rhc.text.font-size.min.3xl}"
+          }
+        }
+      },
+      "icon": {
+        "md": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0rem"
           }
         }
       }
