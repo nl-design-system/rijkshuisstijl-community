@@ -83,9 +83,6 @@ jobs:
           BASE_URL: "/utrecht/"
         run: pnpm run --if-present build
 
-      - name: "Continuous Integration: test-build"
-        run: pnpm run --if-present test-build
-
       # Due to dependency on type definitions, typechecking must be done after build
       - name: "Continuous Integration: typecheck"
         run: pnpm run --if-present typecheck
@@ -163,6 +160,18 @@ jobs:
           name: css
           path: packages/components-css/dist/
 
+      - name: "Restore build artifact: React"
+        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
+        with:
+          name: react
+          path: packages/components-react/dist/
+
+      - name: "Restore build artifact: Component React"
+        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
+        with:
+          name: react-component-packages
+          path: component-react/
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
@@ -229,6 +238,7 @@ jobs:
         with:
           name: react-component-packages
           path: component-react/
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
