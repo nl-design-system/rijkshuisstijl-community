@@ -26,13 +26,13 @@ jobs:
         with:
           node-version-file: .nvmrc
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
       - name: Check for known security issues with npm packages
         run: |
           echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
           pnpm audit --audit-level critical
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
   lint:
     runs-on: ubuntu-latest
