@@ -23,6 +23,7 @@
   },
   "scripts": {
     "build": "rollup --config rollup.config.mjs",
+    "watch": "rollup --config rollup.config.mjs --watch",
     "clean": "rimraf dist",
     "lint-build": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
     "test-build": "vitest run --coverage --reporter verbose"
