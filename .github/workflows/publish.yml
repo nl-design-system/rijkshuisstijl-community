@@ -100,13 +100,19 @@ jobs:
           name: design-tokens
           path: proprietary/design-tokens/dist/
 
-      - name: "Retain build artifact: CSS bundle components"
+      - name: "Retain build artifact: CSS components"
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
           name: css
           path: packages/components-css/dist/
 
-      - name: "Retain build artifact: React"
+      - name: "Retain build artifact: Individual CSS component packages"
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        with:
+          name: css-component-packages
+          path: component-css/**/dist/
+
+      - name: "Retain build artifact: React components"
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
           name: react
