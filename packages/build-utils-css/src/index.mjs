@@ -17,7 +17,7 @@ const webpackStyleImporter = {
         const resolvedPath = path.resolve('node_modules', normalizedUrl);
         return new URL(`file://${resolvedPath}`);
       } catch (error) {
-        console.warn(`Warning: Could not resolve ${url}`);
+        console.warn(`Warning: Could not resolve ${url} with error ${error}.`);
         return null;
       }
     }
