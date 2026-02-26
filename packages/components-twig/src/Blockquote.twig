@@ -1,0 +1,13 @@
+{%- set quote_class = 'utrecht-blockquote__quote' -%}
+{%- set caption_class = 'utrecht-blockquote__caption' -%}
+{%- set classes = ['utrecht-blockquote', 'rhc-blockquote'] -%}
+<figure {{ attributes.addClass(classes) }}>
+  <blockquote class="{{ quote_class }}">
+    {{ children }}
+  </blockquote>
+  {% if attribution %}
+  <figcaption class="{{ caption_class }}">
+    {{ attribution }}
+  </figcaption>
+  {% endif %}
+</figure>
