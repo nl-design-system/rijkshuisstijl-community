@@ -1,7 +1,5 @@
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 
-export * from '@rijkshuisstijl-community/alert-react';
-export * from '@rijkshuisstijl-community/icon-react';
 // Export overwrites and new components
 export {
   Accordion,
@@ -13,6 +11,7 @@ export {
   type AccordionSectionProviderProps,
 } from './Accordion';
 export { ActionGroup, type ActionGroupProps } from './ActionGroup';
+export { Alert, type AlertProps } from '@rijkshuisstijl-community/alert-react';
 export { Article, type ArticleProps } from './Article';
 export { Blockquote, type BlockquoteProps } from './Blockquote';
 export {
@@ -82,6 +81,15 @@ export {
 export { Heading, type HeadingLevel, type HeadingProps, headingLevels } from './Heading';
 export { HeadingGroup, type HeadingGroupProps } from './HeadingGroup';
 export { Hero, type HeroProps } from './Hero';
+export {
+  Icon,
+  type IconProps,
+  type RHCIconID,
+  defaultIconSet,
+  flagIconSet,
+  getIconSet,
+  registerIconSet,
+} from '@rijkshuisstijl-community/icon-react';
 export { Image, type ImageProps } from './Image';
 export {
   LanguageNavigation,
