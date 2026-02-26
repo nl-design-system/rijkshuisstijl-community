@@ -100,19 +100,25 @@ jobs:
           name: design-tokens
           path: proprietary/design-tokens/dist/
 
-      - name: "Retain build artifact: CSS"
+      - name: "Retain build artifact: CSS bundle components"
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
           name: css
           path: packages/components-css/dist/
 
-      - name: "Retain build artifact: React"
+      - name: "Retain build artifact: Individual CSS component packages"
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        with:
+          name: css-component-packages
+          path: component-css/**/dist/
+
+      - name: "Retain build artifact: React bundle components"
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: react
           path: packages/components-react/dist/
 
-      - name: "Retain build artifact: React Component Packages"
+      - name: "Retain build artifact: Individual React component packages"
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: react-component-packages
@@ -160,13 +166,19 @@ jobs:
           name: css
           path: packages/components-css/dist/
 
+      - name: "Restore build artifact: Individual CSS component packages"
+        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
+        with:
+          name: css-component-packages
+          path: component-css/
+
       - name: "Restore build artifact: React"
         uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
         with:
           name: react
           path: packages/components-react/dist/
 
-      - name: "Restore build artifact: Component React"
+      - name: "Restore build artifact: Individual React component packages"
         uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
         with:
           name: react-component-packages
@@ -227,13 +239,19 @@ jobs:
           name: css
           path: packages/components-css/dist/
 
+      - name: "Restore build artifact: Individual CSS component packages"
+        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
+        with:
+          name: css-component-packages
+          path: component-css/
+
       - name: "Restore build artifact: React"
         uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
         with:
           name: react
           path: packages/components-react/dist/
 
-      - name: "Restore build artifact: Component React"
+      - name: "Restore build artifact: Individual React component packages"
         uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
         with:
           name: react-component-packages
