@@ -1,5 +1,7 @@
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 
+export * from '@rijkshuisstijl-community/alert-react';
+export * from '@rijkshuisstijl-community/icon-react';
 // Export overwrites and new components
 export {
   Accordion,
