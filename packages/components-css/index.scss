@@ -5,6 +5,7 @@
 
 @use "src/accordion/index" as accordion;
 @use "src/action-group/index" as actionGroup;
+@use "@rijkshuisstijl-community/alert-css/src/index" as alert;
 @use "src/article/index" as article;
 @use "src/blockquote/index" as blockquote;
 @use "src/breadcrumb-nav/index" as breadcrumb;
@@ -60,6 +61,7 @@
 
 @import "@utrecht/accordion-css/dist/index.css";
 @import "@utrecht/action-group-css/dist/index.css";
+@import "@rijkshuisstijl-community/alert-css";
 @import "@utrecht/alert-css/dist/index.css";
 @import "@utrecht/badge-list-css/dist/index.css";
 @import "@utrecht/button-css/dist/index.css";
