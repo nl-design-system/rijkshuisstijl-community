@@ -26,6 +26,14 @@ const meta = {
         category: 'Property',
       },
     },
+    presentation: {
+      description: 'Image is decorative',
+      type: { name: 'boolean' },
+      control: 'boolean',
+      table: {
+        category: 'Property',
+      },
+    },
     width: {
       description: 'Image width',
       control: { type: 'number' },
@@ -57,7 +65,9 @@ const meta = {
 
 export default meta;
 
-export const TwigImage1: StoryObj<typeof meta> = {
+type Story = StoryObj<typeof meta>;
+
+export const TwigImage1: Story = {
   args: {
     attributes: new DrupalAttribute(),
     width: 763,
@@ -66,4 +76,16 @@ export const TwigImage1: StoryObj<typeof meta> = {
     alt: 'Multicolored tulip field',
   },
   name: 'Image',
+};
+
+export const TwigImage2: Story = {
+  args: {
+    attributes: new DrupalAttribute(),
+    width: 763,
+    height: 640,
+    src: '/placeholder.jpg',
+    alt: '',
+    presentation: true,
+  },
+  name: 'Decorative',
 };
