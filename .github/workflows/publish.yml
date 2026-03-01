@@ -176,7 +176,7 @@ jobs:
         run: pnpm run --if-present test
 
       - name: Publish to Chromatic
-        uses: chromaui/action@07791f8243f4cb2698bf4d00426baf4b2d1cb7e0 # 13.3.5
+        uses: chromaui/action@5ec258af08deb3e8c36653bd618cb7fe52090031 # 15.2.0
         if: ${{ github.actor != 'dependabot[bot]' }}
         with:
           autoAcceptChanges: main
@@ -185,7 +185,7 @@ jobs:
           exitOnceUploaded: true
 
       - name: Publish to Chromatic
-        uses: chromaui/action@07791f8243f4cb2698bf4d00426baf4b2d1cb7e0 # 13.3.5
+        uses: chromaui/action@5ec258af08deb3e8c36653bd618cb7fe52090031 # 15.2.0
         if: ${{ github.actor != 'dependabot[bot]' }}
         with:
           autoAcceptChanges: main
