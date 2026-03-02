@@ -88,32 +88,32 @@ jobs:
         run: pnpm run --if-present typecheck
 
       - name: "Retain build artifact: Storybook"
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: storybook
           path: packages/storybook/dist/
           retention-days: 1
 
       - name: "Retain build artifact: Design Tokens"
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: design-tokens
           path: proprietary/design-tokens/dist/
 
       - name: "Retain build artifact: CSS component packages"
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: css
           path: packages/components-css/*/dist/
 
       - name: "Retain build artifact: React component packages"
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: react
           path: packages/components-react/*/dist/
 
       - name: "Retain build artifact: Storybook Angular"
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: storybook-angular
           path: packages/storybook-angular/dist/
@@ -231,7 +231,7 @@ jobs:
         run: pnpm test:e2e
 
       - name: Upload report
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         if: ${{ !cancelled() }}
         with:
           name: playwright-report
