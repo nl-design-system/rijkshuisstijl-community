@@ -607,6 +607,14 @@ describe('Form field with a textinput', () => {
       expect(textbox).toHaveClass('utrecht-textbox--readonly');
     });
 
+    it('is not read-only in CSS by default', () => {
+      render(<FormFieldTextInput {...defaultProps} />);
+
+      const textarea = screen.getByRole('textbox');
+
+      expect(textarea).not.toHaveAttribute('readonly');
+    });
+
     it('omits non-essential disabled attributes when not read-only', () => {
       render(<FormFieldTextInput {...defaultProps} readOnly={false} />);
 
