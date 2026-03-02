@@ -1,4 +1,4 @@
-import '@utrecht/icon-css';
+import '@utrecht/icon-css/src/index.scss';
 
 export { Icon, getIconSet, registerIconSet } from './Icon';
 export type { IconProps, RHCIconID } from './Icon';
