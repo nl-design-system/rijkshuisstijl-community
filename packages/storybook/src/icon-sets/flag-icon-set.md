@@ -5,7 +5,7 @@ Onderstaande iconen komen uit een losse icon set van de Rijkshuisstijl Commmunit
 ## Usage
 
 ```tsx
-import { Icon, flagIconSet as iconSet, registerIconSet } from '@rijkshuisstijl-community/components-react';
+import { Icon, flagIconSet as iconSet, registerIconSet } from '@rijkshuisstijl-community/icon-react';
 
 registerIconSet(iconSet);
 

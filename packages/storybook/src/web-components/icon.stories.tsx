@@ -1,4 +1,4 @@
-import { defaultIconSet, flagIconSet, getIconSet, registerIconSet } from '@rijkshuisstijl-community/components-react';
+import { defaultIconSet, flagIconSet, getIconSet, registerIconSet } from '@rijkshuisstijl-community/icon-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { IconWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/web-components-vite';

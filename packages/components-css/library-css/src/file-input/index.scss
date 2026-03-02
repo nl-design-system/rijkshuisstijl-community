@@ -1,0 +1,32 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+.rhc-file-input {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--rhc-text-font-family-default, inherit);
+  line-height: var(--rhc-text-line-height-md, inherit);
+  row-gap: var(--rhc-file-input-row-gap);
+}
+
+.rhc-file-input__button-feedback-container {
+  display: flex;
+}
+
+.rhc-file-input__feedback {
+  --nl-paragraph-font-size: var(--rhc-file-input-feedback-font-size);
+  --nl-paragraph-color: var(--rhc-file-input-feedback-color);
+
+  align-items: center;
+  display: flex;
+  padding-inline-end: var(--rhc-file-padding-inline-end);
+  padding-inline-start: var(--rhc-file-padding-inline-start);
+}
+
+.rhc-file-input__files-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-file-column-gap);
+}

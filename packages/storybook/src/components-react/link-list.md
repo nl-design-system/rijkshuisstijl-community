@@ -17,7 +17,8 @@ Links zonder pijl als voorloopteken kunnen ook worden gebruikt, deze zijn vaak t
 - In dit voorbeeld worden drie links weergegeven, elk met een pijl-icoon (chevron-right). De links kunnen ook zonder iconen worden weergegeven door de icon prop weg te laten.
 
 ```jsx
-import { LinkList, LinkListLink, Icon } from '@rijkshuisstijl-community/components-react';
+import { Icon } from '@rijkshuisstijl-community/icon-react';
+import { LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
 
 <LinkList>
   <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>

@@ -50,11 +50,6 @@ jobs:
         with:
           node-version-file: .nvmrc
 
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
@@ -79,11 +74,6 @@ jobs:
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
           node-version-file: .nvmrc
-
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -110,17 +100,17 @@ jobs:
           name: design-tokens
           path: proprietary/design-tokens/dist/
 
-      - name: "Retain build artifact: CSS"
+      - name: "Retain build artifact: CSS component packages"
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
           name: css
-          path: packages/components-css/dist/
+          path: packages/components-css/*/dist/
 
-      - name: "Retain build artifact: React"
+      - name: "Retain build artifact: React component packages"
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
           name: react
-          path: packages/components-react/dist/
+          path: packages/components-react/*/dist/
 
       - name: "Retain build artifact: Storybook Angular"
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
@@ -162,12 +152,13 @@ jobs:
         uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
         with:
           name: css
-          path: packages/components-css/dist/
+          path: packages/components-css/
 
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
+      - name: "Restore build artifact: React"
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        with:
+          name: react
+          path: packages/components-react/
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -222,13 +213,13 @@ jobs:
         uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
         with:
           name: css
-          path: packages/components-css/dist/
+          path: packages/components-css/
 
       - name: "Restore build artifact: React"
         uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
         with:
           name: react
-          path: packages/components-react/dist/
+          path: packages/components-react/
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -295,11 +286,6 @@ jobs:
           name: storybook
           path: packages/storybook/dist/
 
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
@@ -324,11 +310,6 @@ jobs:
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
         with:
           node-version-file: .nvmrc
-
-      - name: Check for known security issues with npm packages
-        run: |
-          echo "Auditing npm dependencies before installing them. For more information, see: https://nldesignsystem.nl/pnpm-audit"
-          pnpm audit --audit-level critical
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile

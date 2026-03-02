@@ -2,8 +2,8 @@
  * @license EUPL-1.2
  * Copyright (c) 2025 Community for NL Design System
  */
-import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
-import { Alert, AlertProps } from '@rijkshuisstijl-community/components-react';
+import stylesheet from '@rijkshuisstijl-community/alert-css/dist/index.css?inline';
+import { Alert, AlertProps } from '@rijkshuisstijl-community/alert-react';
 import { render } from 'preact';
 import { BaseWebComponent } from './BaseComponent';
 

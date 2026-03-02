@@ -1,9 +1,5 @@
-import {
-  BreadcrumbNav,
-  BreadcrumbNavLink,
-  BreadcrumbNavSeparator,
-  Icon,
-} from '@rijkshuisstijl-community/components-react';
+import { BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from '@rijkshuisstijl-community/components-react';
+import { Icon } from '@rijkshuisstijl-community/icon-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/breadcrumb-nav/README.md?raw';

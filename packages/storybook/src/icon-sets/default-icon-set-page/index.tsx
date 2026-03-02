@@ -1,4 +1,4 @@
-import { Icon, defaultIconSet as iconSet } from '@rijkshuisstijl-community/components-react';
+import { Icon, defaultIconSet as iconSet } from '@rijkshuisstijl-community/icon-react';
 import '../index.css';
 
 export default function IconSet() {

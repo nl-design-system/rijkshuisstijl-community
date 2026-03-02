@@ -1,4 +1,5 @@
-import { Icon, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { Link, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { Icon } from '@rijkshuisstijl-community/icon-react';
 import { mergeMarkdown, replaceMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/link/README.md?raw';

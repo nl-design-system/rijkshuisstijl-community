@@ -1,4 +1,5 @@
-import { Heading, Icon, flagIconSet as iconSet, registerIconSet } from '@rijkshuisstijl-community/components-react';
+import { Heading } from '@rijkshuisstijl-community/components-react';
+import { Icon, flagIconSet as iconSet, registerIconSet } from '@rijkshuisstijl-community/icon-react';
 import '../index.css';
 
 registerIconSet(iconSet);

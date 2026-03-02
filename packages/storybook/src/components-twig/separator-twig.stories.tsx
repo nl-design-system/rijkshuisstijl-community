@@ -42,5 +42,5 @@ export const SeparatorInvisible: Story = {
   name: 'Invisible',
   args: {
     invisible: true,
-  }
+  },
 };

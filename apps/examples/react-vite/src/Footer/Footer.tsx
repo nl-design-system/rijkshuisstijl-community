@@ -1,10 +1,5 @@
-import {
-  Icon,
-  LinkList,
-  LinkListLink,
-  Paragraph,
-  Footer as RhcFooter,
-} from '@rijkshuisstijl-community/components-react';
+import { LinkList, LinkListLink, Paragraph, Footer as RhcFooter } from '@rijkshuisstijl-community/components-react';
+import { Icon } from '@rijkshuisstijl-community/icon-react';
 import './Footer.css';
 
 export function Footer() {

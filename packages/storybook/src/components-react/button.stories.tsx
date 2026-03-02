@@ -1,4 +1,5 @@
-import { Button, ButtonProps, Icon, IconButton } from '@rijkshuisstijl-community/components-react';
+import { Button, ButtonProps, IconButton } from '@rijkshuisstijl-community/components-react';
+import { Icon } from '@rijkshuisstijl-community/icon-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
