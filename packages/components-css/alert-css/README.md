@@ -5,7 +5,7 @@
 
 Dit package bevat de specifieke code voor het component. Als je alle rijkshuisstijl componenten wil kijk dan naar [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/README.md]. Voor verdere informatie over het inzet van de component kijk naar onze documentatie [https://rijkshuisstijl-community.vercel.app/?path=/docs/css-alert--docs]
 
-> [!NOTE] Dit component maakt gebruik van scss om duplicaat classes te voorkomen bij meerdere packages. Als je geen SCSS compiler hebt in je applicatie kijk dan naar  [(https://github.com/nl-design-system/rijkshuisstijl-community/tree/main/packages/components-css)].
+> [!NOTE] Als je meerdere componenten gebruikt dan kan je  het beste de scss files gebruiken. je kan de scss inladen van de /src/index.scss. dit zal voorkomen dat je duplicaat classes in je code krijgt.
 
 ## Installatie
 
@@ -17,6 +17,8 @@ pnpm add @rijkshuisstijl-community/alert-css
 
 ```html
 import '@rijkshuisstijl-community/alert-css';
+<!-- for scss useage see below -->
+<!-- import '@rijkshuisstijl-community/alert-css/src/index.scss'; -->
 
 <section class="rhc-alert" role="alert">
   <div class="rhc-alert__content">
@@ -26,9 +28,7 @@ import '@rijkshuisstijl-community/alert-css';
     </p>
   </div>
 </section>
- 
+
 # Rijkshuisstijl Community Componenten
  
 **Direct aan de slag met [CSS](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/README.md) | [React](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/README.md) | [Web Components](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/README.md) | [Twig](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/README.md)**
- 
----<

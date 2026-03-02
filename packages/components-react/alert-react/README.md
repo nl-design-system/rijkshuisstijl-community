@@ -16,11 +16,11 @@ pnpm add @rijkshuisstijl-community/alert-react
 ## Gebruik
 
 ```tsx
-import { Alert } from '@rijkshuisstijl-community/components-react';
+import { Alert } from '@rijkshuisstijl-community/alert-react';
  
 <Alert type="info">
-<Heading level={3}>Heading</Heading>
-<Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+    <Heading level={3}>Heading</Heading>
+    <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
 </Alert>;
 ```
 
