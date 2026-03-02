@@ -1,3 +1,3 @@
-import '@rijkshuisstijl-community/alert-css/src/index.scss';
+import '@rijkshuisstijl-community/alert-css';
 
 export { Alert, type AlertProps } from './Alert';

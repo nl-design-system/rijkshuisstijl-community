@@ -4,8 +4,8 @@
  */
 
 @use "mixin";
-@forward "@utrecht/alert-css/src/index";
-@forward "@utrecht/icon-css/src/index";
+@forward "@utrecht/alert-css/dist/index.css";
+@forward "@utrecht/icon-css/dist/index.css";
 
 .rhc-alert {
   @include mixin.rhc-alert;
