@@ -5,8 +5,6 @@
 
 Dit package bevat de specifieke code voor het component. Als je alle rijkshuisstijl componenten wil kijk dan naar [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/README.md]. Voor verdere informatie over het inzet van de component kijk naar onze documentatie [https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-icon--docs]
 
-> [!NOTE] Dit component maakt gebruik van scss om duplicaat classes te voorkomen bij meerdere packages. Als je geen SCSS compiler hebt in je applicatie kijk dan naar  [(https://github.com/nl-design-system/rijkshuisstijl-community/tree/main/packages/components-react)].
-
 ## Installatie
 
 ``` bash
@@ -23,7 +21,6 @@ Dit component kan op verschillende manieren worden gebruikt. Hieronder staan de 
 import { Icon } from '@rijkshuisstijl-community/icon-react';
 
 <Icon icon="home" />
-
 ```
 
 **Als tweede optie is het mogelijk om een SVG element/React Node mee te geven, dit hoeft dus geen icoon uit een icon set te zijn.
@@ -33,6 +30,7 @@ import { Icon } from from '@rijkshuisstijl-community/icon-react';
 import { IconBrandX } from '@tabler/icons-react';
 
 <Icon><IconBrandX /></Icon>
+```
 
 # Rijkshuisstijl Community Componenten
  
