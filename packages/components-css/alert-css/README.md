@@ -5,8 +5,6 @@
 
 Dit package bevat de specifieke code voor het component. Als je alle rijkshuisstijl componenten wil kijk dan naar [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/README.md]. Voor verdere informatie over het inzet van de component kijk naar onze documentatie [https://rijkshuisstijl-community.vercel.app/?path=/docs/css-alert--docs]
 
-> [!NOTE] Als je meerdere componenten gebruikt dan kan je  het beste de scss files gebruiken. je kan de scss inladen van de /src/index.scss. dit zal voorkomen dat je duplicaat classes in je code krijgt.
-
 ## Installatie
 
 ``` bash
@@ -17,8 +15,6 @@ pnpm add @rijkshuisstijl-community/alert-css
 
 ```html
 import '@rijkshuisstijl-community/alert-css';
-<!-- for scss useage see below -->
-<!-- import '@rijkshuisstijl-community/alert-css/src/index.scss'; -->
 
 <section class="rhc-alert" role="alert">
   <div class="rhc-alert__content">
