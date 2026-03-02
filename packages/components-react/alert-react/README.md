@@ -7,13 +7,13 @@ Dit package bevat de specifieke code voor het component. Als je alle rijkshuisst
 
 > [!NOTE] Dit component maakt gebruik van scss om duplicaat classes te voorkomen bij meerdere packages. Als je geen SCSS compiler hebt in je applicatie kijk dan naar  [(https://github.com/nl-design-system/rijkshuisstijl-community/tree/main/packages/components-react)].
 
-# Installatie
+## Installatie
 
 ``` bash
 pnpm add @rijkshuisstijl-community/alert-react
 ```
 
-# Gebruik
+## Gebruik
 
 ```tsx
 import { Alert } from '@rijkshuisstijl-community/components-react';
@@ -24,7 +24,7 @@ import { Alert } from '@rijkshuisstijl-community/components-react';
 </Alert>;
 ```
 
-# Rijkshuisstijl Community Componenten
+## Rijkshuisstijl Community Componenten
 
 **Direct aan de slag met [CSS](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/README.md) | [React](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/README.md) | [Web Components](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/README.md) | [Twig](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/README.md)**
 

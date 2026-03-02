@@ -7,13 +7,13 @@ Dit package bevat de specifieke code voor het component. Als je alle rijkshuisst
 
 > [!NOTE] Dit component maakt gebruik van scss om duplicaat classes te voorkomen bij meerdere packages. Als je geen SCSS compiler hebt in je applicatie kijk dan naar  [(https://github.com/nl-design-system/rijkshuisstijl-community/tree/main/packages/components-react)].
 
-# Installatie
+## Installatie
 
 ``` bash
 pnpm add @rijkshuisstijl-community/icon-react
 ```
 
-# Gebruik
+## Gebruik
 
 Dit component kan op verschillende manieren worden gebruikt. Hieronder staan de verschillende manieren beschreven, beginnend met de makkelijkste manier.
 

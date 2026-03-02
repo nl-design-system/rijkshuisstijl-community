@@ -7,13 +7,13 @@ Dit package bevat de specifieke code voor het component. Als je alle rijkshuisst
 
 > [!NOTE] Dit component maakt gebruik van scss om duplicaat classes te voorkomen bij meerdere packages. Als je geen SCSS compiler hebt in je applicatie kijk dan naar  [(https://github.com/nl-design-system/rijkshuisstijl-community/tree/main/packages/components-css)].
 
-# Installatie
+## Installatie
 
 ``` bash
 pnpm add @rijkshuisstijl-community/alert-css
 ```
 
-# Gebruik
+## Gebruik
 
 ```html
 import { Alert } from '@rijkshuisstijl-community/components-css';
