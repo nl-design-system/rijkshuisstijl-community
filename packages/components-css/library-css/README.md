@@ -9,6 +9,9 @@ centrale overheid van Nederland.**
 
 Deze package is onderdeel van het [Rijkshuisstijl Community](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/README.md) project.
 
+> [!NOTE]
+> De componenten zijn ook beschikbaar in individuele packages als er alleen maar een deel nodig zijn
+
 ## Aan de slag met CSS-componenten
 
 Om de CSS-componenten van de Rijkshuisstijl-community te gebruiken, installeer je het [components-css npm package](https://www.npmjs.com/package/@rijkshuisstijl-community/components-css).
