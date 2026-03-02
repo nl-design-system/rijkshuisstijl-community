@@ -1,4 +1,3 @@
-
 <!-- @license CC0-1.0 -->
 
 # Omschrijving
@@ -7,7 +6,7 @@ Dit package bevat de specifieke code voor het component. Als je alle rijkshuisst
 
 ## Installatie
 
-``` bash
+```bash
 pnpm add @rijkshuisstijl-community/alert-react
 ```
 
@@ -15,10 +14,10 @@ pnpm add @rijkshuisstijl-community/alert-react
 
 ```tsx
 import { Alert } from '@rijkshuisstijl-community/alert-react';
- 
+
 <Alert type="info">
-    <Heading level={3}>Heading</Heading>
-    <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
+  <Heading level={3}>Heading</Heading>
+  <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
 </Alert>;
 ```
 

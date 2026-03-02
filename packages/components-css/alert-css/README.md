@@ -1,4 +1,3 @@
-
 <!-- @license CC0-1.0 -->
 
 # Omschrijving
@@ -7,7 +6,7 @@ Dit package bevat de specifieke code voor het component. Als je alle rijkshuisst
 
 ## Installatie
 
-``` bash
+```bash
 pnpm add @rijkshuisstijl-community/alert-css
 ```
 
@@ -19,9 +18,7 @@ import '@rijkshuisstijl-community/alert-css';
 <section class="rhc-alert" role="alert">
   <div class="rhc-alert__content">
     <h2 class="rhc-alert__heading">Heading</h2>
-    <p class="rhc-alert__paragraph">
-      This is an information text.
-    </p>
+    <p class="rhc-alert__paragraph">This is an information text.</p>
   </div>
 </section>
 ```
