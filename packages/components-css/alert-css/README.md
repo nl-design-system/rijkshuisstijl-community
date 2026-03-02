@@ -16,7 +16,7 @@ pnpm add @rijkshuisstijl-community/alert-css
 ## Gebruik
 
 ```html
-import { Alert } from '@rijkshuisstijl-community/components-css';
+import '@rijkshuisstijl-community/alert-css';
 
 <section class="rhc-alert" role="alert">
   <div class="rhc-alert__content">
