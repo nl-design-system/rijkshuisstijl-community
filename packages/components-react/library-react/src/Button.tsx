@@ -40,11 +40,16 @@ export const IconButton = ({
   icon,
   ...restProps
 }: PropsWithChildren<IconButtonProps>) => (
-  <SubtleButton className={clsx('rhc-button', 'rhc-button--icon-only', className)} ref={ref} {...restProps}>
+  <Button
+    appearance="subtle-button"
+    className={clsx('rhc-button', 'rhc-button--icon-only', className)}
+    ref={ref}
+    {...restProps}
+  >
     <span className="rhc-button__sr-only">{label}</span>
     {icon && <Icon icon={icon} />}
     {children}
-  </SubtleButton>
+  </Button>
 );
 
 IconButton.displayName = 'IconButton';
