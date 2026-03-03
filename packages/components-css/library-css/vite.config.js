@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import path from 'node:path';
 import { defineConfig } from 'vite';
 
@@ -13,7 +12,7 @@ const webpackStyleImporter = {
         // Resolve from node_modules
         const resolvedPath = path.resolve('node_modules', normalizedUrl);
         return new URL(`file://${resolvedPath}`);
-      } catch (error) {
+      } catch {
         console.warn(`Warning: Could not resolve ${url}`);
         return null;
       }

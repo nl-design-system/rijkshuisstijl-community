@@ -17,7 +17,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint .",
     "preview": "vite preview",
     "test:e2e": "playwright test"
   },
@@ -32,15 +32,15 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.3.4",
-    "@eslint/js": "8.57.1",
+    "@eslint/js": "9.39.3",
     "@playwright/test": "1.58.2",
     "@types/node": "25.3.3",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "4.7.0",
-    "eslint": "8.57.1",
+    "eslint": "9.39.3",
     "eslint-plugin-react-hooks": "7.0.1",
-    "eslint-plugin-react-refresh": "0.4.24",
+    "eslint-plugin-react-refresh": "0.5.2",
     "globals": "17.4.0",
     "typescript": "5.9.3",
     "typescript-eslint": "8.56.1",
