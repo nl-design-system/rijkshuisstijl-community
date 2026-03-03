@@ -184,7 +184,7 @@ importers:
     dependencies:
       next:
         specifier: 15.5.9
-        version: 15.5.9(@babel/core@7.28.0)(@playwright/test@1.54.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.90.0)
+        version: 15.5.9(@playwright/test@1.54.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.90.0)
       react:
         specifier: 19.2.3
         version: 19.2.3
@@ -328,6 +328,18 @@ importers:
       zone.js:
         specifier: 0.15.0
         version: 0.15.0
+
+  packages/components-css/accordion-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      '@utrecht/accordion-css':
+        specifier: 3.0.1
+        version: 3.0.1
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
 
   packages/components-css/alert-css:
     devDependencies:
@@ -512,6 +524,106 @@ importers:
       vite:
         specifier: 6.3.5
         version: 6.3.5(@types/node@24.10.13)(jiti@1.21.7)(less@4.5.1)(lightningcss@1.31.1)(sass@1.90.0)(terser@5.46.0)(yaml@2.8.2)
+
+  packages/components-react/accordion-react:
+    dependencies:
+      '@rijkshuisstijl-community/accordion-css':
+        specifier: workspace:*
+        version: link:../../components-css/accordion-css
+      '@utrecht/component-library-react':
+        specifier: 10.3.5
+        version: 10.3.5(@babel/runtime@7.28.2)(date-fns@2.30.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@vitejs/plugin-react':
+        specifier: 4.7.0
+        version: 4.7.0(vite@6.3.5(@types/node@24.10.13)(jiti@1.21.7)(less@4.5.1)(lightningcss@1.31.1)(sass@1.90.0)(terser@5.46.0)(yaml@2.8.2))
+      '@vitest/coverage-v8':
+        specifier: 3.2.4
+        version: 3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.10.13)(jiti@1.21.7)(jsdom@20.0.3)(less@4.5.1)(lightningcss@1.31.1)(sass@1.90.0)(terser@5.46.0)(yaml@2.8.2))
+    devDependencies:
+      '@babel/core':
+        specifier: 7.28.0
+        version: 7.28.0
+      '@babel/plugin-transform-runtime':
+        specifier: 7.28.0
+        version: 7.28.0(@babel/core@7.28.0)
+      '@babel/preset-env':
+        specifier: 7.28.0
+        version: 7.28.0(@babel/core@7.28.0)
+      '@babel/preset-react':
+        specifier: 7.27.1
+        version: 7.27.1(@babel/core@7.28.0)
+      '@babel/preset-typescript':
+        specifier: 7.27.1
+        version: 7.27.1(@babel/core@7.28.0)
+      '@babel/runtime':
+        specifier: 7.28.2
+        version: 7.28.2
+      '@rollup/plugin-babel':
+        specifier: 6.0.4
+        version: 6.0.4(@babel/core@7.28.0)(@types/babel__core@7.20.5)(rollup@4.46.2)
+      '@rollup/plugin-commonjs':
+        specifier: 28.0.6
+        version: 28.0.6(rollup@4.46.2)
+      '@rollup/plugin-node-resolve':
+        specifier: 16.0.1
+        version: 16.0.1(rollup@4.46.2)
+      '@testing-library/dom':
+        specifier: 10.4.1
+        version: 10.4.1
+      '@testing-library/jest-dom':
+        specifier: 6.9.1
+        version: 6.9.1
+      '@testing-library/react':
+        specifier: 16.3.0
+        version: 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.3))(@types/react@19.2.3)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@testing-library/user-event':
+        specifier: 14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.1)
+      '@types/lodash.chunk':
+        specifier: 4.2.9
+        version: 4.2.9
+      '@types/react':
+        specifier: 19.2.3
+        version: 19.2.3
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      react:
+        specifier: 19.2.3
+        version: 19.2.3
+      react-dom:
+        specifier: 19.2.3
+        version: 19.2.3(react@19.2.3)
+      rollup:
+        specifier: 4.46.2
+        version: 4.46.2
+      rollup-plugin-filesize:
+        specifier: 10.0.0
+        version: 10.0.0
+      rollup-plugin-node-externals:
+        specifier: 8.0.1
+        version: 8.0.1(rollup@4.46.2)
+      rollup-plugin-node-polyfills:
+        specifier: 0.2.1
+        version: 0.2.1
+      rollup-plugin-peer-deps-external:
+        specifier: 2.2.4
+        version: 2.2.4(rollup@4.46.2)
+      rollup-plugin-postcss:
+        specifier: 4.0.2
+        version: 4.0.2(postcss@8.5.6)
+      rollup-plugin-typescript2:
+        specifier: 0.36.0
+        version: 0.36.0(rollup@4.46.2)(typescript@5.8.3)
+      typescript:
+        specifier: 5.8.3
+        version: 5.8.3
+      vite:
+        specifier: 6.3.5
+        version: 6.3.5(@types/node@24.10.13)(jiti@1.21.7)(less@4.5.1)(lightningcss@1.31.1)(sass@1.90.0)(terser@5.46.0)(yaml@2.8.2)
+      vitest:
+        specifier: 3.2.4
+        version: 3.2.4(@types/debug@4.1.12)(@types/node@24.10.13)(jiti@1.21.7)(jsdom@20.0.3)(less@4.5.1)(lightningcss@1.31.1)(sass@1.90.0)(terser@5.46.0)(yaml@2.8.2)
 
   packages/components-react/alert-react:
     dependencies:
@@ -5605,6 +5717,9 @@ packages:
 
   '@utrecht/accordion-css@3.0.0':
     resolution: {integrity: sha512-HAodDr7gN1dslFlWcSvycWG6z7hlE0x/SJNG83LVVppgdew8SbKvI+gz3sfqPflS76J/fjI+m78yH4BqcykJUw==}
+
+  '@utrecht/accordion-css@3.0.1':
+    resolution: {integrity: sha512-BWqGNjsJKzZ468gNbicMNyNoAwEAdN6msViCGURrW/tIsWRqoIcck3CozGuWdS9u7pakasfi6hhHvPbXcz4CoA==}
 
   '@utrecht/action-group-css@2.0.0':
     resolution: {integrity: sha512-4tx8qwAjuz35FMcmo46EL9pyIh4qbJ8tjswBthPje2ZEHqcCWignKO66suA1rApP9R+Lzf7uaXgEQ82dTb8u1w==}
@@ -20436,6 +20551,8 @@ snapshots:
 
   '@utrecht/accordion-css@3.0.0': {}
 
+  '@utrecht/accordion-css@3.0.1': {}
+
   '@utrecht/action-group-css@2.0.0': {}
 
   '@utrecht/action-group-css@3.0.0': {}
@@ -27819,7 +27936,7 @@ snapshots:
     dependencies:
       type-fest: 2.19.0
 
-  next@15.5.9(@babel/core@7.28.0)(@playwright/test@1.54.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.90.0):
+  next@15.5.9(@playwright/test@1.54.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.90.0):
     dependencies:
       '@next/env': 15.5.9
       '@swc/helpers': 0.5.15
@@ -27827,7 +27944,7 @@ snapshots:
       postcss: 8.4.31
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
-      styled-jsx: 5.1.6(@babel/core@7.28.0)(react@19.2.3)
+      styled-jsx: 5.1.6(react@19.2.3)
     optionalDependencies:
       '@next/swc-darwin-arm64': 15.5.7
       '@next/swc-darwin-x64': 15.5.7
@@ -30661,12 +30778,10 @@ snapshots:
     dependencies:
       webpack: 5.105.2(@swc/core@1.15.11)
 
-  styled-jsx@5.1.6(@babel/core@7.28.0)(react@19.2.3):
+  styled-jsx@5.1.6(react@19.2.3):
     dependencies:
       client-only: 0.0.1
       react: 19.2.3
-    optionalDependencies:
-      '@babel/core': 7.28.0
 
   stylehacks@5.1.1(postcss@8.5.6):
     dependencies:
