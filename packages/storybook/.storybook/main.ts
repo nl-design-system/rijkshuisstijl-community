@@ -1,6 +1,6 @@
 import type { StorybookConfig } from '@storybook/react-vite';
-import { createRequire } from 'module';
-import { dirname, join } from 'path';
+import { createRequire } from 'node:module';
+import { dirname, join } from 'node:path';
 // Utility to resolve the absolute path of a package needed in projects that use Yarn PnP or are set up within a monorepo
 // https://storybook.js.org/docs/faq#how-do-i-fix-module-resolution-in-special-environments
 const require = createRequire(import.meta.url);
