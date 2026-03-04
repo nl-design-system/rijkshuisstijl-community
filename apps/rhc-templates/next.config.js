@@ -1,4 +1,4 @@
-/* eslint-env node */
+/* global require, module */
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
