@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   host: {
     '[class.utrecht-link-list__link]': 'true',
     '[class.utrecht-link]': 'true',
-    '[utrecht-link--html-a]': 'true',
+    '[class.utrecht-link--html-a]': 'true',
   },
 })
 export class LinkListLinkComponent {

@@ -9,14 +9,14 @@ import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-lintblauw/index.
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Paragraph } from '@rijkshuisstijl-community/components-react';
+import { formatHtml } from '@rijkshuisstijl-community/storybook-tooling/formatHtml';
+import { Controls, Description, Primary, Stories } from '@storybook/addon-docs/blocks';
+import { useOf } from '@storybook/addon-docs/blocks';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import { Preview } from '@storybook/react-vite';
 import { PageLayout } from '@utrecht/page-layout-react';
 import { Root } from '@utrecht/root-react';
 import { Fragment } from 'react';
-import { Controls, Description, Primary, Stories } from '@storybook/addon-docs/blocks';
-import { useOf } from '@storybook/addon-docs/blocks';
-import { formatHtml } from '@rijkshuisstijl-community/storybook-tooling/formatHtml';
 import { StoryRootDecorator } from './StoryRootDecorator';
 
 const preview: Preview = {
