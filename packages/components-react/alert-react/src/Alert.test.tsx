@@ -1,10 +1,8 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render, screen } from '@testing-library/react';
 import { AlertType } from '@utrecht/component-library-react';
-import React from 'react';
 import { afterEach, describe, expect, it, test } from 'vitest';
 import { Alert } from './Alert';
-
 
 describe('Alert', () => {
   it('should render successfully', () => {
