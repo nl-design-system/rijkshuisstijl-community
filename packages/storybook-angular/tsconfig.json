@@ -8,7 +8,8 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "target": "ES2022",
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "skipLibCheck": true
   },
   "exclude": ["**/node_modules/*", "src/test.ts", "src/**/*.spec.ts"],
   "include": [".storybook/typings.d.ts", "config/**/*", "config/**/*.ts", "src/**/*"]
