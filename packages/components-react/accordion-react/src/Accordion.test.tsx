@@ -1,7 +1,9 @@
 import { cleanup, render } from '@testing-library/react';
-import { Accordion, AccordionProvider } from '@utrecht/component-library-react';
+import React from 'react';
 import '@testing-library/jest-dom/vitest';
 import { afterEach, describe, expect, it } from 'vitest';
+import { Accordion, AccordionProvider } from './Accordion';
+
 
 describe('Accordion', () => {
   it('renders a visible element', () => {
