@@ -347,7 +347,7 @@ jobs:
         run: pnpm run --if-present build
 
       - name: "Continuous Deployment: update versions and publish to NPM"
-        uses: changesets/action@c48e67d110a68bc90ccf1098e9646092baacaa87 # v1.6.0
+        uses: changesets/action@6a0a831ff30acef54f2c6aa1cbbc1096b066edaf # v1.7.0
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
