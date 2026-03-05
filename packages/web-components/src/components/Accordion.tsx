@@ -2,13 +2,11 @@
  * @license EUPL-1.2
  * Copyright (c) 2025 Community for NL Design System
  */
-
-import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
-import { AccordionProvider, AccordionProviderProps } from '@rijkshuisstijl-community/components-react';
-import { Icon, RHCIconID } from '@rijkshuisstijl-community/icon-react';
+import stylesheet from '@rijkshuisstijl-community/accordion-css/dist/index.css?inline';
+import { AccordionProvider, AccordionProviderProps, Icon, RHCIconID } from '@rijkshuisstijl-community/components-react';
 import { render } from 'preact';
 import { BaseWebComponent } from './BaseComponent';
-
+//test
 export type AccordionWebComponentAttributes = AccordionProviderProps;
 
 export class AccordionWebComponent extends BaseWebComponent {

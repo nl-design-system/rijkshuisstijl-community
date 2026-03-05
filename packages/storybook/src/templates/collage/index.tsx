@@ -1,8 +1,8 @@
 'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
 
-import { Alert } from '@rijkshuisstijl-community/alert-react';
 import {
   AccordionProvider,
+  Alert,
   Article,
   Blockquote,
   Button,
@@ -20,6 +20,7 @@ import {
   FormSummaryKey,
   FormSummaryValue,
   Heading,
+  Icon,
   IconButton,
   Image,
   Link,
@@ -43,7 +44,6 @@ import {
   UnorderedListItem,
   VisuallyHidden,
 } from '@rijkshuisstijl-community/components-react';
-import { Icon } from '@rijkshuisstijl-community/icon-react';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
 import { PageBody } from '@utrecht/page-body-react';
 import SharedDisclaimer from '../shared/disclaimer';
