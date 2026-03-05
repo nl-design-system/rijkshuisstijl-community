@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/web-components
 
+## 5.0.1
+
+### Patch Changes
+
+- fdf0f57: Update build tooling dependencies (Babel, Rollup, Vite, TypeScript, and other devDependencies).
+
 ## 5.0.0
 
 ### Major Changes
