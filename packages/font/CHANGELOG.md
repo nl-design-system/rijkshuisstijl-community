@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/font
 
+## 1.1.3
+
+### Patch Changes
+
+- fdf0f57: Update build tooling dependencies (Babel, Rollup, Vite, TypeScript, and other devDependencies).
+
 ## 1.1.2
 
 ### Patch Changes
