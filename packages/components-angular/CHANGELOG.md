@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-angular
 
+## 9.0.0
+
+### Major Changes
+
+- fdf0f57: Upgrade peer dependency requirement from Angular 20 to Angular 21. Consumers must upgrade to Angular 21 to use this version.
+
 ## 8.0.0
 
 ### Major Changes
