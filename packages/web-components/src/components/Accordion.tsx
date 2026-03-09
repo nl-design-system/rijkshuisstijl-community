@@ -6,7 +6,7 @@ import stylesheet from '@rijkshuisstijl-community/accordion-css/dist/index.css?i
 import { AccordionProvider, AccordionProviderProps, Icon, RHCIconID } from '@rijkshuisstijl-community/components-react';
 import { render } from 'preact';
 import { BaseWebComponent } from './BaseComponent';
-//test
+
 export type AccordionWebComponentAttributes = AccordionProviderProps;
 
 export class AccordionWebComponent extends BaseWebComponent {
