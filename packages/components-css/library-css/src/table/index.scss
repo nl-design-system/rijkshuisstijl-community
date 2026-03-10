@@ -37,6 +37,10 @@
 
       &-cell {
         --utrecht-table-cell-line-height: var(--rhc-text-line-height-md, inherit);
+
+        &-button {
+          justify-content: var(--_utrecht-table-cell-text-align, start);
+        }
       }
 
       &--cell {
