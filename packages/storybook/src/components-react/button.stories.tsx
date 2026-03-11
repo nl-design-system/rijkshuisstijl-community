@@ -85,7 +85,7 @@ const meta = {
     },
   },
   args: {
-    appearance: '',
+    appearance: undefined,
     children: 'Label',
     disabled: false,
     iconLeft: false,
