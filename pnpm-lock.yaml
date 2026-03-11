@@ -356,6 +356,18 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
 
+  packages/components-css/article-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      '@utrecht/article-css':
+        specifier: 1.5.1
+        version: 1.5.1
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
   packages/components-css/library-css:
     dependencies:
       '@amsterdam/design-system-css':
@@ -379,6 +391,9 @@ importers:
       '@rijkshuisstijl-community/alert-css':
         specifier: workspace:*
         version: link:../alert-css
+      '@rijkshuisstijl-community/article-css':
+        specifier: workspace:*
+        version: link:../article-css
       '@utrecht/accordion-css':
         specifier: 2.0.0
         version: 2.0.0
