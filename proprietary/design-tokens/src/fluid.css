@@ -1,0 +1,71 @@
+/*
+ * Prefer `vi` over `vw` when available.
+ * Like `inline-size` and other logical properties, `vi` is based on the `inline` axis,
+ * instead of making assumptions about the text direction.
+ * The `vi` unit is unfortunately not yet implemented by all evergreen browsers.
+ */
+
+@property --basis-viewport-current-width {
+  inherits: true;
+  initial-value: 0;
+  syntax: "<length>";
+}
+
+@property --basis-viewport-current-inline-size {
+  inherits: true;
+  initial-value: 0;
+  syntax: "<length>";
+}
+
+.rhc-theme--fluid,
+.rhc-theme--fluid-font,
+.rhc-theme--fluid-space {
+  --basis-viewport-current-width: 100vw;
+  --basis-viewport-current-inline-size: 100vi;
+  --basis-viewport-min-inline-size: 400px;
+  --basis-viewport-max-inline-size: 1200px;
+  --_basis-viewport-min-inline-size: tan(atan2(var(--basis-viewport-min-inline-size), 1px));
+  --_basis-viewport-max-inline-size: tan(atan2(var(--basis-viewport-max-inline-size), 1px));
+  --basis-viewport-size: tan(
+    atan2(var(--basis-viewport-current-inline-size, var(--basis-viewport-current-width)), 1px)
+  );
+  --basis-viewport-scale: calc(
+    (
+        clamp(
+            var(--_basis-viewport-min-inline-size),
+            var(--basis-viewport-size),
+            var(--_basis-viewport-max-inline-size)
+          ) -
+          var(--_basis-viewport-min-inline-size)
+      ) /
+      (var(--_basis-viewport-max-inline-size) - var(--_basis-viewport-min-inline-size))
+  );
+}
+
+.rhc-theme--fluid,
+.rhc-theme--fluid-font {
+  --rhc-text-font-size-sm: calc(
+    var(--rhc-text-font-size-min-sm) + (var(--rhc-text-font-size-max-sm) - var(--rhc-text-font-size-min-sm)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-text-font-size-md: calc(
+    var(--rhc-text-font-size-min-md) + (var(--rhc-text-font-size-max-md) - var(--rhc-text-font-size-min-md)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-text-font-size-lg: calc(
+    var(--rhc-text-font-size-min-lg) + (var(--rhc-text-font-size-max-lg) - var(--rhc-text-font-size-min-lg)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-text-font-size-xl: calc(
+    var(--rhc-text-font-size-min-xl) + (var(--rhc-text-font-size-max-xl) - var(--rhc-text-font-size-min-xl)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-text-font-size-2xl: calc(
+    var(--rhc-text-font-size-min-2xl) + (var(--rhc-text-font-size-max-2xl) - var(--rhc-text-font-size-min-2xl)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-text-font-size-3xl: calc(
+    var(--rhc-text-font-size-min-3xl) + (var(--rhc-text-font-size-max-3xl) - var(--rhc-text-font-size-min-3xl)) *
+      var(--basis-viewport-scale)
+  );
+}

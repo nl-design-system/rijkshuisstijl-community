@@ -6,6 +6,7 @@ import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-oranje/index.css
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-lintblauw/index.css';
+import '@rijkshuisstijl-community/design-tokens/src/fluid.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Paragraph } from '@rijkshuisstijl-community/components-react';
@@ -24,7 +25,7 @@ const preview: Preview = {
     (Story: any) => <div className="utrecht-document">{Story()}</div>,
     withThemeByClassName({
       themes: {
-        'Kern - Lintblauw': 'rhc-theme',
+        'Kern - Lintblauw': 'rhc-theme rhc-theme--fluid',
         'Uitvoerend - Groen': 'uitvoerend-groen',
         'Uitvoerend - Hemelblauw': 'uitvoerend-hemelblauw',
         'Uitvoerend - Lintblauw': 'uitvoerend-lintblauw',
