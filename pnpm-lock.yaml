@@ -379,6 +379,9 @@ importers:
       '@rijkshuisstijl-community/alert-css':
         specifier: workspace:*
         version: link:../alert-css
+      '@rijkshuisstijl-community/paragraph-css':
+        specifier: workspace:*
+        version: link:../paragraph-css
       '@utrecht/accordion-css':
         specifier: 2.0.0
         version: 2.0.0
@@ -524,6 +527,18 @@ importers:
       vite:
         specifier: 7.3.1
         version: 7.3.1(@types/node@25.3.3)(jiti@2.6.1)(less@4.5.1)(lightningcss@1.31.1)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2)
+
+  packages/components-css/paragraph-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      '@utrecht/paragraph-css':
+        specifier: 2.3.1
+        version: 2.3.1
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
 
   packages/components-react/alert-react:
     dependencies:
