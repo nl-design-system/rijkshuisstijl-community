@@ -3,13 +3,10 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Alert } from '@rijkshuisstijl-community/alert-react';
-import { Icon } from '@rijkshuisstijl-community/icon-react';
+import { Alert, Icon, Paragraph } from '@rijkshuisstijl-community/components-react';
 import clsx from 'clsx';
 import { Button } from './Button';
 import { Link } from './Link';
-import { Paragraph } from './Paragraph';
-
 interface FileProps {
   file: File;
   onDelete: any;
