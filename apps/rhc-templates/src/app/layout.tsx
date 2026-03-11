@@ -1,6 +1,7 @@
 import { PropsWithChildren } from 'react';
 import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
+import '@rijkshuisstijl-community/design-tokens/src/fluid.css';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/storybook/src/templates/globals.css';
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
-    <Root lang="nl" dir="ltr" className="rhc-theme">
+    <Root lang="nl" dir="ltr" className="rhc-theme rhc-theme--fluid">
       <Body>
         <PageLayout>{children}</PageLayout>
       </Body>
