@@ -21,7 +21,7 @@ export const outputGlobals = {
   'react-dom': 'ReactDOM',
 };
 
-export const config = (pkgJson) => [
+export const createRollupConfig = (pkgJson) => [
   {
     input: 'src/index.ts',
     output: [
@@ -60,4 +60,4 @@ export const config = (pkgJson) => [
   },
 ];
 
-export default config(packageJson);
+export default createRollupConfig(packageJson);
