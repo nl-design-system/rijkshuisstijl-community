@@ -9,7 +9,7 @@ export {
   AccordionSection,
   type AccordionSectionProps,
   type AccordionSectionProviderProps,
-} from './Accordion';
+} from '@rijkshuisstijl-community/accordion-react';
 export { ActionGroup, type ActionGroupProps } from './ActionGroup';
 export { Alert, type AlertProps } from '@rijkshuisstijl-community/alert-react';
 export { Article, type ArticleProps } from './Article';

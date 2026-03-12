@@ -1,9 +1,9 @@
 {
-  "version": "2.0.0",
+  "version": "1.0.0",
   "author": "Community for Rijkshuisstijl-Community Design System",
-  "description": "Alert component",
+  "description": "Accordion component",
   "license": "EUPL-1.2",
-  "name": "@rijkshuisstijl-community/alert-react",
+  "name": "@rijkshuisstijl-community/accordion-react",
   "files": [
     "dist/",
     "docs/",
@@ -37,7 +37,7 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
-    "directory": "packages/components-react/alert-react"
+    "directory": "packages/components-react/accordion-react"
   },
   "devDependencies": {
     "@babel/core": "7.29.0",
@@ -76,8 +76,7 @@
     "react-dom": ">=18.2.0"
   },
   "dependencies": {
-    "@rijkshuisstijl-community/icon-react": "workspace:*",
-    "@rijkshuisstijl-community/alert-css": "workspace:*",
+    "@rijkshuisstijl-community/accordion-css": "workspace:*",
     "@utrecht/component-library-react": "13.0.1",
     "@vitejs/plugin-react": "4.7.0",
     "@vitest/coverage-v8": "3.2.4"

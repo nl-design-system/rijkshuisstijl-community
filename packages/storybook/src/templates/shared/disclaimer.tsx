@@ -1,5 +1,4 @@
-import { Alert } from '@rijkshuisstijl-community/alert-react';
-import { Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { Alert, Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
 
 export default function SharedDisclaimer() {
   return (

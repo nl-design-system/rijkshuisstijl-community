@@ -1,7 +1,7 @@
-import '@testing-library/jest-dom/vitest';
 import { cleanup, render } from '@testing-library/react';
+import '@testing-library/jest-dom/vitest';
 import { afterEach, describe, expect, it } from 'vitest';
-import { Accordion, AccordionProvider } from '.';
+import { Accordion, AccordionProvider } from './Accordion';
 
 describe('Accordion', () => {
   it('renders a visible element', () => {
