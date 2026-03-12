@@ -8,6 +8,8 @@ updates:
     groups:
       github-actions:
         applies-to: "version-updates"
+        patterns:
+          - "*"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
