@@ -1,0 +1,85 @@
+{
+  "version": "1.0.0",
+  "author": "Community for Rijkshuisstijl-Community Design System",
+  "description": "Paragraph component",
+  "license": "EUPL-1.2",
+  "name": "@rijkshuisstijl-community/paragraph-react",
+  "files": [
+    "dist/",
+    "docs/",
+    "src/",
+    "*.md"
+  ],
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "rhc:source": "./src/index.ts",
+      "default": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.esm.js"
+      }
+    }
+  },
+  "scripts": {
+    "build": "rollup --config rollup.config.mjs",
+    "clean": "rimraf dist",
+    "watch": "rollup --config rollup.config.mjs --watch",
+    "typecheck": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
+    "test": "vitest run --coverage --reporter verbose"
+  },
+  "keywords": [
+    "rijkshuisstijl-community-design-system"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
+    "directory": "packages/components-react/paragraph-react"
+  },
+  "devDependencies": {
+    "@babel/core": "7.29.0",
+    "@babel/plugin-transform-runtime": "7.29.0",
+    "@babel/preset-env": "7.29.0",
+    "@babel/preset-react": "7.28.5",
+    "@babel/preset-typescript": "7.28.5",
+    "@babel/runtime": "7.28.6",
+    "@rollup/plugin-babel": "6.1.0",
+    "@rollup/plugin-commonjs": "29.0.0",
+    "@rollup/plugin-node-resolve": "16.0.3",
+    "@testing-library/dom": "10.4.1",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.2",
+    "@testing-library/user-event": "14.6.1",
+    "@types/lodash.chunk": "4.2.9",
+    "@types/react": "19.2.14",
+    "@vitejs/plugin-react": "4.7.0",
+    "@vitest/coverage-v8": "3.2.4",
+    "clsx": "2.1.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "rollup": "4.59.0",
+    "rollup-plugin-filesize": "10.0.0",
+    "rollup-plugin-node-externals": "8.1.2",
+    "rollup-plugin-node-polyfills": "0.2.1",
+    "rollup-plugin-peer-deps-external": "2.2.4",
+    "rollup-plugin-postcss": "4.0.2",
+    "rollup-plugin-typescript2": "0.36.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.1",
+    "vitest": "3.2.4"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
+  },
+  "dependencies": {
+    "@rijkshuisstijl-community/paragraph-css": "workspace:*",
+    "@nl-design-system-candidate/paragraph-react": "2.2.2" ,
+    "@utrecht/component-library-react": "13.0.1",
+    "@vitejs/plugin-react": "4.7.0",
+    "@vitest/coverage-v8": "3.2.4"
+  }
+}

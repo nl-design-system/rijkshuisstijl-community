@@ -3,12 +3,12 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Icon } from '@rijkshuisstijl-community/icon-react';
+import { Icon, Paragraph } from '@rijkshuisstijl-community/components-react';
 import clsx from 'clsx';
 import { HTMLAttributes, ReactNode, Ref } from 'react';
 import { DotBadge, DotBadgeProps } from './DotBadge';
-import { Paragraph } from './Paragraph';
 
+export { Alert, type AlertProps } from './Alert';
 export interface MessageListItemProps extends HTMLAttributes<HTMLLIElement> {
   label: ReactNode;
   description: ReactNode;

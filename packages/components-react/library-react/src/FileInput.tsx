@@ -2,11 +2,10 @@
  * @license EUPL-1.2
  * Copyright (c) 2026 Community for NL Design System
  */
-
+import { Paragraph } from '@rijkshuisstijl-community/components-react';
 import { ChangeEvent, PropsWithChildren, Ref, useEffect, useRef, useState } from 'react';
 import { Button, ButtonProps } from './Button';
 import { File } from './File';
-import { Paragraph } from './Paragraph';
 
 export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
   ref?: Ref<HTMLInputElement>;
