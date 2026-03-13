@@ -1,5 +1,16 @@
 # @rijkshuisstijl-community/components-react
 
+## 13.0.0
+
+### Major Changes
+
+- 762aded: Add `rhc-unordered-list--nested` class to `utrecht-unordered-list--nested` to fix CSS Contamination for Unordered List.
+
+### Patch Changes
+
+- Updated dependencies [d9dd8bf]
+  - @rijkshuisstijl-community/accordion-react@2.0.0
+
 ## 12.0.0
 
 ### Major Changes
