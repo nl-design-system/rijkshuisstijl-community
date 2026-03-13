@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/examples-react-vite
 
+## 0.1.3
+
+### Patch Changes
+
+- Updated dependencies [762aded]
+  - @rijkshuisstijl-community/components-react@13.0.0
+  - @rijkshuisstijl-community/components-css@14.0.0
+
 ## 0.1.2
 
 ### Patch Changes
