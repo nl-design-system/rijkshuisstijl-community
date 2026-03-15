@@ -14,6 +14,7 @@ export { ActionGroup, type ActionGroupProps } from './ActionGroup';
 export { Alert, type AlertProps } from '@rijkshuisstijl-community/alert-react';
 export { Article, type ArticleProps } from './Article';
 export { Blockquote, type BlockquoteProps } from './Blockquote';
+export { Body, type BodyBodyProps, type DivBodyProps } from './Body';
 export {
   BreadcrumbNav,
   BreadcrumbNavLink,
@@ -50,6 +51,7 @@ export { type CustomFormFieldProps, FormField } from './FormField';
 export { DataBadgeButton, type DataBadgeButtonProps } from './DataBadgeButton';
 export { DataSummary, type DataSummaryProps } from './DataSummary';
 export { DataSummaryItem, type DataSummaryItemProps } from './DataSummaryItem';
+export { type DivRootProps, type HtmlRootProps, Root } from './Root';
 export { DotBadge, type DotBadgeProps } from './DotBadge';
 export { Drawer, type DrawerProps } from './Drawer';
 export { ExpandableCheckboxGroup, type ExpandableCheckboxGroupProps } from './ExpandableCheckboxGroup';
@@ -125,8 +127,10 @@ export { NavigationList, type NavigationListProps } from './NavigationList';
 export { NavigationListItem, type NavigationListItemProps } from './NavigationListItem';
 export { NumberBadge, type NumberBadgeProps } from './NumberBadge';
 export { OrderedList, OrderedListItem, type OrderedListItemProps, type OrderedListProps } from './OrderedList';
+export { PageBody, type PageBodyProps } from './PageBody';
 export { PageContent, type PageContentProps } from './PageContent';
 export { PageHeader, type PageHeaderProps } from './PageHeader';
+export { PageLayout, type PageLayoutProps } from './PageLayout';
 export { PageNumberNavigation, type PageNumberNavigationProps } from './PageNumberNavigation';
 export { Paragraph, type ParagraphProps } from './Paragraph';
 export { PreHeading, type PreHeadingProps } from './PreHeading';
