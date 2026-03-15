@@ -43,6 +43,10 @@ minimumReleaseAgeExclude:
 saveExact: true
 savePrefix: ""
 
+auditConfig:
+  ignoreGhsas:
+    - GHSA-vh9h-29pq-r5m8
+
 overrides:
   locutus@>=2.0.12 <2.0.39: ">=2.0.39"
   "@isaacs/brace-expansion@<=5.0.0": ">=5.0.1"
