@@ -30,7 +30,6 @@ const preview: Preview = {
   },
 
   decorators: [
-    // componentWrapperDecorator((story) => `<div class="utrecht-document">${story}</div>`),
     withThemeByClassName({
       themes: {
         'Kern - Lintblauw': 'rhc-theme',
