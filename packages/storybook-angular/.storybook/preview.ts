@@ -1,6 +1,6 @@
 import { formatHtml } from '@rijkshuisstijl-community/storybook-tooling/formatHtml';
 import { withThemeByClassName } from '@storybook/addon-themes';
-import { componentWrapperDecorator, type Preview } from '@storybook/angular';
+import { type Preview } from '@storybook/angular';
 import OverviewPage from './overview.mdx';
 
 const preview: Preview = {
@@ -30,7 +30,7 @@ const preview: Preview = {
   },
 
   decorators: [
-    componentWrapperDecorator((story) => `<div class="utrecht-document">${story}</div>`),
+    // componentWrapperDecorator((story) => `<div class="utrecht-document">${story}</div>`),
     withThemeByClassName({
       themes: {
         'Kern - Lintblauw': 'rhc-theme',
