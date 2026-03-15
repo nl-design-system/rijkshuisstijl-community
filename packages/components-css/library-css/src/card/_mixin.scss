@@ -19,11 +19,11 @@
 }
 
 @mixin rhc-card--default {
-  background-color: var(--rhc-card-background-color, white);
-  border-color: var(--rhc-card-border-color, #cbd5e1);
+  background-color: var(--rhc-card-background-color);
+  border-color: var(--rhc-card-border-color);
   border-style: solid;
   border-width: var(--rhc-card-border-width, 1px);
-  color: var(--rhc-card-color, #154273);
+  color: var(--rhc-card-color);
 }
 
 @mixin rhc-card__content {
@@ -73,14 +73,14 @@
 }
 
 @mixin rhc-card__link {
-  color: var(--rhc-card-link-color, #01689b);
+  color: var(--rhc-card-link-color);
   text-decoration: none !important;
 }
 
 @mixin rhc-card__link--active {
-  --utrecht-link-color: var(--rhc-card-link-active-color, #42145f);
+  --utrecht-link-color: var(--rhc-card-link-active-color);
 
-  color: var(--rhc-card-link-active-color, #42145f);
+  color: var(--rhc-card-link-active-color);
   text-decoration: var(--rhc-card-link-active-text-decoration, none);
 }
 @mixin rhc-card__link--hover {
@@ -91,7 +91,7 @@
 }
 
 @mixin rhc-card__metadata {
-  color: var(--rhc-card-metadata-color, #154273);
+  color: var(--rhc-card-metadata-color);
 }
 
 @mixin rounded-border-corners {
