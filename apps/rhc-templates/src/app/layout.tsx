@@ -13,6 +13,7 @@ import '../../../../proprietary/assets/src/font.css';
 import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/design-tokens/src/fluid.css';
+import '@rijkshuisstijl-community/design-tokens/src/dark-mode.css';
 import '@rijkshuisstijl-community/design-tokens/src/top-secret.css';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';

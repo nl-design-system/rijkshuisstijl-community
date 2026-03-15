@@ -130,7 +130,7 @@ const baseTokens = {
     },
   },
 };
-const designTokens = colors.reduce(
+const designTokensX = colors.reduce(
   (designTokens, { color, label }) => {
     return items.reduce((designTokens, n) => {
       const slug = label.toLowerCase();
@@ -138,16 +138,16 @@ const designTokens = colors.reduce(
       const darkValue = `color-mix(in lab, ${color} ${n * 100}%, var(--black, black) ${100 - n * 100}%)`;
       const lightPath = [prefix, 'color', 'light', slug, `tint-${Math.round(n * 100)}`];
       const darkPath = [prefix, 'color', 'dark', slug, `tint-${Math.round(n * 100).toString()}`];
-      setPath(designTokens, lightPath, { $type: 'color', $value: lightValue }, Object);
-      setPath(designTokens, darkPath, { $type: 'color', $value: darkValue }, Object);
+      setPath(designTokens, lightPath, { $type: 'color', $value: lightValue });
+      setPath(designTokens, darkPath, { $type: 'color', $value: darkValue });
       return designTokens;
     }, designTokens);
   },
   { ...baseTokens },
 );
-
+console.log(JSON.stringify(designTokensX, null, 2));
 const designTokens2 = colors.reduce(
-  (designTokens, { color, label }) => {
+  (state, { color, label }) => {
     const white = new Color('white');
     const black = new Color('black');
     let whiteRange = white.range(color, {
@@ -159,16 +159,16 @@ const designTokens2 = colors.reduce(
       outputSpace: 'srgb',
     });
 
-    return items.reduce((designTokens, n) => {
+    return items.reduce((state, n) => {
       const slug = label.toLowerCase();
       const lightValue = whiteRange(n).toString({ format: 'hex' });
       const darkValue = blackRange(n).toString({ format: 'hex' });
       const lightPath = [prefix, 'color', 'light', slug, `tint-${Math.round(n * 100)}`];
       const darkPath = [prefix, 'color', 'dark', slug, `tint-${Math.round(n * 100).toString()}`];
-      setPath(designTokens, lightPath, { $type: 'color', $value: lightValue });
-      setPath(designTokens, darkPath, { $type: 'color', $value: darkValue });
-      return designTokens;
-    }, designTokens);
+      setPath(state, lightPath, { $type: 'color', $value: lightValue });
+      setPath(state, darkPath, { $type: 'color', $value: darkValue });
+      return state;
+    }, state);
   },
   { ...baseTokens },
 );
@@ -207,6 +207,56 @@ export class ExampleColorGrid extends LitElement {
       .utrecht-color-sample {
         --utrecht-color-sample-default-border-color: var(--utrecht-color-sample-light-border-color, #fff);
       }
+    }
+    :host {
+      --basis-color-root-background-color: white;
+      --basis-color-root-color: black;
+      --rhc-new-color-coolgray-tint-500: #64748b;
+      --rhc-new-color-coolgray-tint-900: color-mix(
+        in lab,
+        var(--rhc-new-color-coolgray-tint-500) 15%,
+        var(--rhc-new-color-dark-lintblauw-tint-15, var(--rhc-new-color-zwart)) 85%
+      );
+      --rhc-new-color-coolgray-tint-800: color-mix(
+        in lab,
+        var(--rhc-new-color-coolgray-tint-500) 30%,
+        var(--rhc-new-color-dark-lintblauw-tint-15, var(--rhc-new-color-zwart)) 70%
+      );
+      --rhc-new-color-coolgray-tint-700: color-mix(
+        in lab,
+        var(--rhc-new-color-coolgray-tint-500) 45%,
+        var(--rhc-new-color-dark-lintblauw-tint-15, var(--rhc-new-color-zwart)) 55%
+      );
+      --rhc-new-color-coolgray-tint-600: color-mix(
+        in lab,
+        var(--rhc-new-color-coolgray-tint-500) 60%,
+        var(--rhc-new-color-dark-lintblauw-tint-15, var(--rhc-new-color-zwart)) 40%
+      );
+      --rhc-new-color-coolgray-tint-400: color-mix(
+        in lab,
+        var(--rhc-new-color-coolgray-tint-500) 65%,
+        var(--basis-color-root-background-color, var(--rhc-new-color-wit)) 35%
+      );
+      --rhc-new-color-coolgray-tint-300: color-mix(
+        in lab,
+        var(--rhc-new-color-coolgray-tint-500) 29%,
+        var(--basis-color-root-background-color, var(--rhc-new-color-wit)) 71%
+      );
+      --rhc-new-color-coolgray-tint-200: color-mix(
+        in lab,
+        var(--rhc-new-color-coolgray-tint-500) 15%,
+        var(--basis-color-root-background-color, var(--rhc-new-color-wit)) 85%
+      );
+      --rhc-new-color-coolgray-tint-100: color-mix(
+        in lab,
+        var(--rhc-new-color-coolgray-tint-500) 8%,
+        var(--basis-color-root-background-color, var(--rhc-new-color-wit)) 92%
+      );
+      --rhc-new-color-coolgray-tint-050: color-mix(
+        in lab,
+        var(--rhc-new-color-coolgray-tint-500) 4%,
+        var(--basis-color-root-background-color, var(--rhc-new-color-wit)) 96%
+      );
     }
   `;
 
@@ -260,54 +310,67 @@ export class ExampleColorGrid extends LitElement {
     console.log(this.style.cssText);
 
     return html`<table>
-      <thead>
-        <tr>
-          <th></th>
-          ${colors.map(({ label }) => html`<th>${label}</th>`)}
-        </tr>
-      </thead>
-      <tbody>
-        ${items.map(
-          /*
+        <thead>
+          <tr>
+            <th></th>
+            ${colors.map(({ label }) => html`<th>${label}</th>`)}
+          </tr>
+        </thead>
+        <tbody>
+          ${items.map(
+            /*
                             xstyle="color: oklab(from ${color} calc(l) calc(a) calc(b) / calc(${item}))"
                             xxstyle="color: oklab(from ${color} ${item} calc(a) calc(b) / calc(alpha))"
                             xstyle="color: oklab(from ${color} calc(l * (2 - ${item})) calc(a) calc(b) / calc(alpha))"
                             ystyle="color: oklch(from ${color} calc(l * (2 - ${item})) calc(c) calc(h) / calc(alpha))"*/
-          (item) =>
-            html`<tr>
-              <th>${item * 100}</th>
-              ${colors.map(({ color, label }) => {
-                const slug = label.toLowerCase();
-                return html`<td>
-                  <data
-                    class="utrecht-color-sample"
-                    style="--color: var(--${prefix}-color-light-${slug}-tint-${Math.round(
-                      item * 100,
-                    )}); color: var(--color); display: inline-flex; align-items: flex-end; justify-content: center;"
-                  >
-                    <span style="color: contrast-color(var(--color));"
-                      ><code>var(--${prefix}-color-${slug}-${Math.round(item * 100)})</code></span
+            (item) =>
+              html`<tr>
+                <th>${item * 100}</th>
+                ${colors.map(({ color, label }) => {
+                  const slug = label.toLowerCase();
+                  return html`<td>
+                    <data
+                      class="utrecht-color-sample"
+                      style="--color: var(--${prefix}-color-light-${slug}-tint-${Math.round(
+                        item * 100,
+                      )}); color: var(--color); display: inline-flex; align-items: flex-end; justify-content: center;"
                     >
-                    <span hidden style="color: contrast-color(var(--color));">${Math.round(item * 100)}%</span></data
-                  >
-                </td>`;
-              })}${colors.map(({ color, label }) => {
-                const slug = label.toLowerCase();
-                const cssVariable = `var(--${prefix}-color-dark-${slug}-tint-${Math.round(item * 100)})`;
-                return html`<td>
-                  <data
-                    class="utrecht-color-sample"
-                    style="--color: ${cssVariable}; color: var(--color); display: inline-flex; align-items: flex-end; justify-content: center;"
-                  >
-                    <span style="color: contrast-color(var(--color));"><code>${cssVariable}</code></span>
-                    <span hidden style="color: contrast-color(var(--color));">${Math.round(item * 100)}%</span></data
-                  >
-                </td>`;
-              })}
-            </tr>`,
-        )}
-      </tbody>
-    </table>`;
+                      <span style="color: contrast-color(var(--color));"
+                        ><code>var(--${prefix}-color-${slug}-${Math.round(item * 100)})</code></span
+                      >
+                      <span hidden style="color: contrast-color(var(--color));">${Math.round(item * 100)}%</span></data
+                    >
+                  </td>`;
+                })}${colors.map(({ color, label }) => {
+                  const slug = label.toLowerCase();
+                  const cssVariable = `var(--${prefix}-color-dark-${slug}-tint-${Math.round(item * 100)})`;
+                  return html`<td>
+                    <data
+                      class="utrecht-color-sample"
+                      style="--color: ${cssVariable}; color: var(--color); display: inline-flex; align-items: flex-end; justify-content: center;"
+                    >
+                      <span style="color: contrast-color(var(--color));"><code>${cssVariable}</code></span>
+                      <span hidden style="color: contrast-color(var(--color));">${Math.round(item * 100)}%</span></data
+                    >
+                  </td>`;
+                })}
+              </tr>`,
+          )}
+        </tbody>
+      </table>
+
+      <div>
+        <div><data class="utrecht-color-sample" style="color: var(--rhc-new-color-coolgray-tint-900);"></data></div>
+        <div><data class="utrecht-color-sample" style="color: var(--rhc-new-color-coolgray-tint-800);"></data></div>
+        <div><data class="utrecht-color-sample" style="color: var(--rhc-new-color-coolgray-tint-700);"></data></div>
+        <div><data class="utrecht-color-sample" style="color: var(--rhc-new-color-coolgray-tint-600);"></data></div>
+        <div><data class="utrecht-color-sample" style="color: var(--rhc-new-color-coolgray-tint-500);"></data></div>
+        <div><data class="utrecht-color-sample" style="color: var(--rhc-new-color-coolgray-tint-400);"></data></div>
+        <div><data class="utrecht-color-sample" style="color: var(--rhc-new-color-coolgray-tint-300);"></data></div>
+        <div><data class="utrecht-color-sample" style="color: var(--rhc-new-color-coolgray-tint-200);"></data></div>
+        <div><data class="utrecht-color-sample" style="color: var(--rhc-new-color-coolgray-tint-100);"></data></div>
+        <div><data class="utrecht-color-sample" style="color: var(--rhc-new-color-coolgray-tint-050);"></data></div>
+      </div>`;
   }
 }
 
@@ -429,6 +492,8 @@ export class ExampleMigrationTable extends LitElement {
           )}
         </tbody>
       </table>
+      <h2>New calculated brand tokens</h2>
+      <pre>${JSON.stringify(designTokensX, null, '  ')}</pre>
       <h2>New brand tokens</h2>
       <pre>${JSON.stringify(designTokens2, null, '  ')}</pre>
       <h2>Migration alias tokens</h2>
