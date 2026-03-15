@@ -93,12 +93,7 @@
   --rhc-norday-space-12: 3.5rem;
   --rhc-norday-space-14: 4rem;
 
-  --rhc-space-0: 0rem;
-  --rhc-space-25: 0.125rem;
-  --rhc-space-50: 0.25rem;
-  --rhc-space-100: 0.5rem;
-  --rhc-space-150: 0.75rem;
-
+  /* Override `rhc-space-*` tokens with Norday fluid tokens */
   --rhc-space-0: 0rem;
   --rhc-space-25: calc(var(--rhc-norday-space-xs) * 0.25);
   --rhc-space-50: calc(var(--rhc-norday-space-xs) * 0.5);
@@ -110,7 +105,6 @@
   --rhc-space-500: var(--rhc-norday-space-2xl);
   --rhc-space-600: var(--rhc-norday-space-3xl);
   --rhc-space-700: var(--rhc-norday-space-4xl);
-
   --rhc-norday-space-min-xs: var(--rhc-norday-space-1);
   --rhc-norday-space-min-sm: var(--rhc-norday-space-1);
   --rhc-norday-space-min-md: var(--rhc-norday-space-2);
@@ -119,7 +113,6 @@
   --rhc-norday-space-min-2xl: var(--rhc-norday-space-6);
   --rhc-norday-space-min-3xl: var(--rhc-norday-space-10);
   --rhc-norday-space-min-4xl: var(--rhc-norday-space-12);
-
   --rhc-norday-space-max-xs: var(--rhc-norday-space-2);
   --rhc-norday-space-max-sm: var(--rhc-norday-space-3);
   --rhc-norday-space-max-md: var(--rhc-norday-space-4);
@@ -129,6 +122,9 @@
   --rhc-norday-space-max-3xl: var(--rhc-norday-space-12);
   --rhc-norday-space-max-4xl: var(--rhc-norday-space-14);
 
+  /* fluid t-shirt size tokens.
+   * In short: `space-[size]` is a value between `space-min-[size]` and `space-max-[size]`
+   */
   --rhc-norday-space-xs: calc(
     var(--rhc-norday-space-min-xs) + (var(--rhc-norday-space-max-xs) - var(--rhc-norday-space-min-xs)) *
       var(--basis-viewport-scale)

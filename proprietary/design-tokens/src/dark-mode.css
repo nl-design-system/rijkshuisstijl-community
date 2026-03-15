@@ -468,13 +468,6 @@
     var(--basis-color-root-background-color, white) 85%
   );
   --rhc-new-color-dark-lintblauw-tint-100: #154273;
-
-  --rhc-new-color-dark-lintblauw-tint-100: color-mix(
-    in lab,
-    var(--rhc-new-color-light-lintblauw-tint-100) 90%,
-    white 10%
-  );
-  --rhc-new-color-dark-lintblauw-tint-100: Red;
   --rhc-new-color-dark-lintblauw-tint-75: color-mix(
     in lab,
     var(--rhc-new-color-dark-lintblauw-tint-100) 75%,
@@ -944,7 +937,7 @@
   );
 }
 
-.rhc-theme {
+.rhc-theme--light-mode {
   --basis-color-root-light-background-color: white;
   --basis-color-root-dark-background-color: black;
   --basis-color-root-background-color: white;
@@ -958,7 +951,7 @@
   }
 }
 
-.rhc-theme {
+.rhc-theme--dark-mode {
   --rhc-new-color-coolgray-tint-500: #64748b;
   --rhc-new-color-coolgray-tint-900: color-mix(
     in lab,
@@ -1008,7 +1001,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .rhc-theme {
+  .rhc-theme--dark-mode {
     --rhc-new-color-coolgray-tint-050: #0f172a;
     --rhc-new-color-coolgray-tint-100: #1e293b;
     --rhc-new-color-coolgray-tint-200: #334155;

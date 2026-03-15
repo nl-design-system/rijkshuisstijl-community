@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
-    <Root lang="nl" dir="ltr" className="rhc-theme rhc-theme--fluid rhc-theme--top-secret">
+    <Root lang="nl" dir="ltr" className="rhc-theme rhc-theme--fluid rhc-theme--dark-mode rhc-theme--top-secret">
       <Body>
         <PageLayout>{children}</PageLayout>
       </Body>
