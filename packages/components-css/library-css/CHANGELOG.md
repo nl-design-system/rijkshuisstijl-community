@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-css
 
+## 14.1.0
+
+### Minor Changes
+
+- 1ec5646: Add Root and Body components to CSS component.
+
 ## 14.0.0
 
 ### Major Changes

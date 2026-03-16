@@ -1,5 +1,18 @@
 # @rijkshuisstijl-community/components-react
 
+## 13.1.0
+
+### Minor Changes
+
+- 8e7f161: Add Root, Body, Page Body and Page Layout components.
+
+### Patch Changes
+
+- Updated dependencies [3abfdb7]
+  - @rijkshuisstijl-community/accordion-react@3.0.0
+  - @rijkshuisstijl-community/alert-react@3.0.0
+  - @rijkshuisstijl-community/icon-react@3.0.0
+
 ## 13.0.0
 
 ### Major Changes

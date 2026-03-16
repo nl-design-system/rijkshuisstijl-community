@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/icon-react
 
+## 3.0.0
+
+### Major Changes
+
+- 3abfdb7: Added explicit module resolution to the packages
+
 ## 2.0.0
 
 ### Major Changes

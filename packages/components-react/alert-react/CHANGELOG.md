@@ -1,5 +1,16 @@
 # @rijkshuisstijl-community/alert-react
 
+## 3.0.0
+
+### Major Changes
+
+- 3abfdb7: Added explicit module resolution to the packages
+
+### Patch Changes
+
+- Updated dependencies [3abfdb7]
+  - @rijkshuisstijl-community/icon-react@3.0.0
+
 ## 2.0.0
 
 ### Major Changes
