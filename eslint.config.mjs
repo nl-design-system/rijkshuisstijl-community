@@ -104,6 +104,8 @@ export default defineConfig([
       ...react.configs.flat.recommended.rules,
       ...prettier.rules,
       ...sharedRules,
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'error',
     },
   },
 
