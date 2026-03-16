@@ -3,11 +3,11 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { posix } from 'node:path';
 import StyleDictionary from 'style-dictionary';
 
-import { fixCSSFile } from './cssFixers.mjs';
+import { fixCSSFile } from './cssFixers.mts';
 import { registerTokenStudioTransformGroup } from './src/transforms/styleDictionaryTransforms.mts';
 
 // Will take the theme name and remove all spaces and make it lowercase
-const normalizeThemeName = (name) => {
+const normalizeThemeName = (name: string): string => {
   return name.toLowerCase().replaceAll(/\s+/g, '');
 };
 
@@ -62,7 +62,7 @@ const excludes = [
 registerTokenStudioTransformGroup(StyleDictionary);
 
 // Get the platforms config
-const getPlatformsConfig = (buildPath, themeName) => {
+const getPlatformsConfig = (buildPath: string, themeName: string) => {
   return {
     javascript: {
       transformGroup: 'tokens-studio',

@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { fixCalc, fixExponentiation, fixRoundTo } from './cssFixers.mjs';
+import { fixCalc, fixExponentiation, fixRoundTo } from './cssFixers.mts';
 
 describe('css fixers', () => {
   describe('fixCalc', () => {

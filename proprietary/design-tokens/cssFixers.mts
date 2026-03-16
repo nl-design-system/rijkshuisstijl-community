@@ -1,4 +1,4 @@
-import { readFile, writeFile } from 'fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 
 // When using `outputReferences: true` in Style Dictionary (see `build.mjs`), any calculations/transforms are overwritten by the css-var-names.
 // So you'll end up with invalid CSS like:
@@ -8,18 +8,18 @@ import { readFile, writeFile } from 'fs/promises';
 
 const varRegex = /(?<prefix>^\s*--[^:]+:\s*)(?<value>[^;]+?)(?<suffix>\s*;)/gm;
 
-export async function fixCSSFile(filePath) {
+export async function fixCSSFile(filePath: string): Promise<void> {
   let content = await readFile(filePath, 'utf-8');
 
-  content = await fixRoundTo(content);
-  content = await fixExponentiation(content);
-  content = await fixCalc(content);
+  content = fixRoundTo(content);
+  content = fixExponentiation(content);
+  content = fixCalc(content);
 
   await writeFile(filePath, content);
 }
 
 // This will wrap any calculations in `calc()`.
-export function fixCalc(content) {
+export function fixCalc(content: string): string {
   const operatorRegex = /(?:\s\+\s|\s-\s|\/|\*)/;
 
   return content.replace(varRegex, (match, prefix, value, suffix) => {
@@ -32,7 +32,7 @@ export function fixCalc(content) {
 }
 
 // Exponentiation (^) is not supported in CSS, so we need to convert it to pow(base, exponent)
-export function fixExponentiation(content) {
+export function fixExponentiation(content: string): string {
   const exponentiationRegex =
     /([0-9]*\.?[0-9]+(?:[a-z%]+)?|var\([^)]+\))\s*\^\s*([0-9]*\.?[0-9]+(?:[a-z%]+)?|var\([^)]+\))/g;
 
@@ -41,7 +41,7 @@ export function fixExponentiation(content) {
       return match;
     }
 
-    const fixedValue = value.replace(exponentiationRegex, (_match, base, exponent) => {
+    const fixedValue = value.replaceAll(exponentiationRegex, (_match, base, exponent) => {
       return `pow(${base}, ${exponent})`;
     });
 
@@ -52,7 +52,7 @@ export function fixExponentiation(content) {
 // This will strip out any roundTo() calls, as CSS doesn't support it.
 // It does allow round(), but that needs a rounding interval, which is unknown at this point.
 // See https://developer.mozilla.org/en-US/docs/Web/CSS/round
-export function fixRoundTo(content) {
+export function fixRoundTo(content: string): string {
   return content.replace(varRegex, (match, prefix, value, suffix) => {
     if (!value.includes('roundTo(')) {
       return match;
