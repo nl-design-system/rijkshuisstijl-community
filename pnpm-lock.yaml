@@ -1473,6 +1473,12 @@ importers:
 
   packages/web-components:
     dependencies:
+      '@rijkshuisstijl-community/accordion-css':
+        specifier: workspace:*
+        version: link:../components-css/accordion-css
+      '@rijkshuisstijl-community/alert-css':
+        specifier: workspace:*
+        version: link:../components-css/alert-css
       preact:
         specifier: 10.28.4
         version: 10.28.4
