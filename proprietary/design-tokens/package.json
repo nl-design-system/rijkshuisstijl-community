@@ -21,7 +21,7 @@
     "clean": "rimraf dist/ src/generated/",
     "build": "npm-run-all clean build:figma-tokens build:style-dictionary",
     "build:figma-tokens": "node ./token-transformer.mjs",
-    "build:style-dictionary": "node build.mjs",
+    "build:style-dictionary": "node --experimental-strip-types ./build.mts",
     "watch": "npm-run-all watch:**",
     "watch:style-dictionary": "npm-run-all build:figma-tokens build:style-dictionary && chokidar 'src/**/*.tokens.json' 'figma/**/*.tokens.json' --follow-symlinks --command 'npm-run-all build:figma-tokens build:style-dictionary' --ignore '/src/generated/'",
     "test": "vitest run"

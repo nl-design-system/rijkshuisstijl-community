@@ -8,7 +8,7 @@ import { registerTokenStudioTransformGroup } from './src/transforms/styleDiction
 
 // Will take the theme name and remove all spaces and make it lowercase
 const normalizeThemeName = (name: string): string => {
-  return name.toLowerCase().replaceAll(/\s+/g, '');
+  return name.toLowerCase().replace(/\s+/g, '');
 };
 
 const removeUnitlessLineHeightTransform = () => {
@@ -30,6 +30,10 @@ StyleDictionary.registerAction({
     const files = config.files || [];
     // TS allows roundTo(), exponentiation (^) and basic calculations (without `calc()`) in their values, but these are not valid CSS.
     for (const file of files) {
+      if (!file.destination) {
+        throw new Error(`Expected a destination for build file in "${buildPath}".`);
+      }
+
       const filePath = posix.join(buildPath, file.destination);
       console.log('🔧 fixing css:', filePath);
       await fixCSSFile(filePath);
@@ -42,7 +46,7 @@ StyleDictionary.registerAction({
 // Custom header to add generation date
 StyleDictionary.registerFileHeader({
   name: 'nlds-rhc-header',
-  fileHeader: function (defaultMessage) {
+  fileHeader: function (defaultMessage = []) {
     return [...defaultMessage, `Generated on ${new Date().toUTCString()}`];
   },
 });
@@ -150,7 +154,7 @@ async function buildBaseTokens() {
 // This will build the themes
 async function buildThemes() {
   const themesJson = await readFile('./src/generated/themes.json', 'utf-8');
-  const themes = JSON.parse(themesJson);
+  const themes: Record<string, { tokens: unknown }> = JSON.parse(themesJson);
 
   // Process each theme separately
   for (const [theme, themeData] of Object.entries(themes)) {

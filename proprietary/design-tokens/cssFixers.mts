@@ -1,6 +1,6 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
-// When using `outputReferences: true` in Style Dictionary (see `build.mjs`), any calculations/transforms are overwritten by the css-var-names.
+// When using `outputReferences: true` in Style Dictionary (see `build.mts`), any calculations/transforms are overwritten by the css-var-names.
 // So you'll end up with invalid CSS like:
 // `--my-var: var(--my-length) + 20px;` - see: https://github.com/style-dictionary/style-dictionary/issues/1055
 // We will need to fix any invalid stuff from Tokens Studio (TS) here as a post-build step.
@@ -41,7 +41,7 @@ export function fixExponentiation(content: string): string {
       return match;
     }
 
-    const fixedValue = value.replaceAll(exponentiationRegex, (_match, base, exponent) => {
+    const fixedValue = value.replace(exponentiationRegex, (_match: string, base: string, exponent: string) => {
       return `pow(${base}, ${exponent})`;
     });
 

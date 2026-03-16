@@ -3,8 +3,11 @@
   "compilerOptions": {
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
+    "noEmit": true,
     "target": "ES2022",
-    "types": ["node"]
+    "types": ["node"],
+    "allowImportingTsExtensions": true,
+    "skipLibCheck": true
   },
   "include": ["**/*.mts", "**/*.ts", "token-transformer.mjs"],
   "exclude": ["node_modules", "dist"]
