@@ -1,14 +1,14 @@
-import { existsSync, mkdirSync } from 'fs';
+import { existsSync, mkdirSync } from 'node:fs';
 import { readFile, writeFile } from 'node:fs/promises';
-import { posix } from 'path';
+import { posix } from 'node:path';
 import StyleDictionary from 'style-dictionary';
-import { register } from '@tokens-studio/sd-transforms';
 
 import { fixCSSFile } from './cssFixers.mjs';
+import { registerSafeSizeRemTransform } from './src/transforms/styleDictionaryTransforms.mts';
 
 // Will take the theme name and remove all spaces and make it lowercase
 const normalizeThemeName = (name) => {
-  return name.toLowerCase().replace(/\s+/g, '');
+  return name.toLowerCase().replaceAll(/\s+/g, '');
 };
 
 const removeUnitlessLineHeightTransform = () => {
@@ -58,7 +58,8 @@ const excludes = [
   'components/toolbar-button',
 ];
 
-register(StyleDictionary, { excludeParentKeys: true });
+// register token-studio transforms
+registerTokenStudioTransformGroup(StyleDictionary);
 
 // Get the platforms config
 const getPlatformsConfig = (buildPath, themeName) => {
@@ -183,13 +184,12 @@ async function buildThemes() {
 }
 
 async function build() {
-  try {
-    removeUnitlessLineHeightTransform(); // This needs to happen before building anything
-    await buildBaseTokens();
-    await buildThemes();
-  } catch (error) {
-    console.error(error);
-  }
+  removeUnitlessLineHeightTransform(); // This needs to happen before building anything
+  await buildBaseTokens();
+  await buildThemes();
 }
 
-build();
+await build().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
