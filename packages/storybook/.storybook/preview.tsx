@@ -8,23 +8,21 @@ import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-lintblauw/index.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
-import { Paragraph } from '@rijkshuisstijl-community/components-react';
+import { Body, PageLayout, Paragraph, Root } from '@rijkshuisstijl-community/components-react';
 import { formatHtml } from '@rijkshuisstijl-community/storybook-tooling/formatHtml';
 import { Controls, Description, Primary, Stories } from '@storybook/addon-docs/blocks';
 import { useOf } from '@storybook/addon-docs/blocks';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import { Preview } from '@storybook/react-vite';
-import { PageLayout } from '@utrecht/page-layout-react';
-import { Root } from '@utrecht/root-react';
+import { Document } from '@utrecht/component-library-react';
 import { Fragment } from 'react';
 import { StoryRootDecorator } from './StoryRootDecorator';
 
 const preview: Preview = {
   decorators: [
-    (Story: any) => <div className="utrecht-document">{Story()}</div>,
     withThemeByClassName({
       themes: {
-        'Kern - Lintblauw': 'rhc-theme',
+        'Kern - Lintblauw': 'rhc-theme rhc-theme--fluid',
         'Uitvoerend - Groen': 'uitvoerend-groen',
         'Uitvoerend - Hemelblauw': 'uitvoerend-hemelblauw',
         'Uitvoerend - Lintblauw': 'uitvoerend-lintblauw',
@@ -37,10 +35,12 @@ const preview: Preview = {
     (Story, options) => {
       return options.parameters['isPage'] ? (
         <Root Component="div">
-          <PageLayout>{Story()}</PageLayout>
+          <Body Component="div">
+            <PageLayout>{Story()}</PageLayout>
+          </Body>
         </Root>
       ) : (
-        Story()
+        <Document>{Story()}</Document>
       );
     },
     StoryRootDecorator,
