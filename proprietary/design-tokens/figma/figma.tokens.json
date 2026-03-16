@@ -756,6 +756,18 @@
   "common/color": {
     "rhc": {
       "color": {
+        "donkerblauw": {
+          "600": {
+            "$type": "color",
+            "$value": "#01496c",
+            "$description": "Originally rhc.color.donkerblauw.500 darkened (srgb) with modify by 0.3"
+          },
+          "700": {
+            "$type": "color",
+            "$value": "#163f5b",
+            "$description": "Originally rhc.color.donkerblauw.500 darkened (lch) by 0.4"
+          }
+        },
         "foreground": {
           "default": {
             "$type": "color",
@@ -768,6 +780,14 @@
           "link": {
             "$type": "color",
             "$value": "{rhc.color.donkerblauw.500}"
+          },
+          "link-active": {
+            "$type": "color",
+            "$value": "{rhc.color.donkerblauw.700}"
+          },
+          "link-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.donkerblauw.600}"
           },
           "on-dark-color": {
             "$type": "color",
@@ -1821,8 +1841,7 @@
           "active": {
             "color": {
               "$type": "color",
-              "$value": "#163f5b",
-              "$description": "Originally rhc.color.foreground.link darkened (lch) by 0.4"
+              "$value": "{rhc.color.foreground.link-active}"
             },
             "text-decoration": {
               "$type": "textDecoration",
@@ -1856,8 +1875,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "#01496c",
-              "$description": "Originally rhc.color.foreground.link darkened (srgb) by 0.3"
+              "$value": "{rhc.color.foreground.link-hover}"
             }
           },
           "icon": {
@@ -4473,8 +4491,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "#01496C",
-            "$description": "Originally rhc.color.foreground.link darkened (srgb) with modify by 0.3"
+            "$value": "{rhc.color.foreground.link-hover}"
           }
         }
       }
@@ -4536,15 +4553,13 @@
         "active": {
           "color": {
             "$type": "color",
-            "$value": "#1A4972",
-            "$description": "Originally rhc.color.hemelblauw.500 darkened (lch) with modify by 0.4"
+            "$value": "{rhc.color.foreground.link-active}"
           }
         },
         "hover": {
           "color": {
             "$type": "color",
-            "$value": "#01496C",
-            "$description": "Originally rhc.color.foreground.link darkened (srgb) with modify by 0.3"
+            "$value": "{rhc.color.foreground.link-hover}"
           },
           "text-decoration": {
             "$type": "textDecoration",
@@ -6208,8 +6223,7 @@
           "hover": {
             "color": {
               "$type": "color",
-              "$value": "#15496a",
-              "$description": "Originally rhc.color.foreground.link darkened (lch) by 0.3"
+              "$value": "{rhc.color.foreground.link-hover}"
             },
             "text-decoration": {
               "$type": "textDecoration",
