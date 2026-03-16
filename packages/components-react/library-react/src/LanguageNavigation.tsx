@@ -29,11 +29,9 @@ import { LinkButton, LinkButtonProps } from './LinkButton';
 
 type LanguageNavigationContextValue = {
   open: boolean;
-  // eslint-disable-next-line no-unused-vars
   onOpenChange: (_newOpen: boolean) => void;
   onOpenToggle: () => void;
   selectedLanguage: string | undefined;
-  // eslint-disable-next-line no-unused-vars
   onLanguageChange: (_newLanguage: string) => void;
   contentId: string;
   triggerRef: RefObject<HTMLButtonElement | null>;
@@ -60,14 +58,12 @@ export interface LanguageNavigationRootProps extends HTMLAttributes<HTMLElement>
   /** Default open state for uncontrolled usage */
   defaultOpen?: boolean;
   /** Callback when open state changes */
-  // eslint-disable-next-line no-unused-vars
   onOpenChange?: (_newOpen: boolean) => void;
   /** Controlled selected language */
   selectedLanguage?: string;
   /** Default selected language for uncontrolled usage */
   defaultSelectedLanguage?: string;
   /** Callback when selected language changes */
-  // eslint-disable-next-line no-unused-vars
   onLanguageChange?: (_newLanguage: string) => void;
   ref?: Ref<HTMLElement>;
 }
