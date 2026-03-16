@@ -1,10 +1,9 @@
-import { Logo, LogoProps } from '@rijkshuisstijl-community/components-react';
+import { Icon, Logo, LogoProps } from '@rijkshuisstijl-community/components-react';
 import {
   rhcLogoColor,
   rhcLogoImageBackgroundColor,
   rhcLogoImageColor,
 } from '@rijkshuisstijl-community/design-tokens/dist';
-import { Icon } from '@rijkshuisstijl-community/icon-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { CSSProperties } from 'react';
