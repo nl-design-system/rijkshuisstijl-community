@@ -22,7 +22,7 @@ async function transformAndSplitTokens() {
       }
     });
     // Add default type scale here, because Figma does not understand `clamp(...)`
-    themeTokens['overrides/type-scale/default [code-only]'] = tokens['overrides/type-scale/default [code-only]'];
+    // themeTokens['overrides/type-scale/default [code-only]'] = tokens['overrides/type-scale/default [code-only]'];
 
     processedThemes[theme.name] = {
       id: theme.id,

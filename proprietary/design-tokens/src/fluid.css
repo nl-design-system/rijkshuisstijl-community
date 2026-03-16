@@ -1,0 +1,160 @@
+/*
+ * Prefer `vi` over `vw` when available.
+ * Like `inline-size` and other logical properties, `vi` is based on the `inline` axis,
+ * instead of making assumptions about the text direction.
+ * The `vi` unit is unfortunately not yet implemented by all evergreen browsers.
+ */
+
+@property --basis-viewport-current-width {
+  inherits: true;
+  initial-value: 0;
+  syntax: "<length>";
+}
+
+@property --basis-viewport-current-inline-size {
+  inherits: true;
+  initial-value: 0;
+  syntax: "<length>";
+}
+
+.rhc-theme {
+  font-size-adjust: 0.5;
+}
+
+/**
+ * `.rhc-theme--fluid` is to enable all types of fluid sizing
+ * `.rhc-theme--fluid-font` is to enable fluid font-size
+ * `.rhc-theme--fluid-space` is to enable fluid spacing (paddings, margins, etc.)
+ */
+.rhc-theme--fluid,
+.rhc-theme--fluid-font,
+.rhc-theme--fluid-space {
+  --basis-viewport-current-width: 100vw;
+  --basis-viewport-current-inline-size: 100vi;
+  --basis-viewport-min-inline-size: 400px;
+  --basis-viewport-max-inline-size: 1200px;
+  --_basis-viewport-min-inline-size: tan(atan2(var(--basis-viewport-min-inline-size), 1px));
+  --_basis-viewport-max-inline-size: tan(atan2(var(--basis-viewport-max-inline-size), 1px));
+  --basis-viewport-size: tan(
+    atan2(var(--basis-viewport-current-inline-size, var(--basis-viewport-current-width)), 1px)
+  );
+  --basis-viewport-scale: calc(
+    (
+        clamp(
+            var(--_basis-viewport-min-inline-size),
+            var(--basis-viewport-size),
+            var(--_basis-viewport-max-inline-size)
+          ) -
+          var(--_basis-viewport-min-inline-size)
+      ) /
+      (var(--_basis-viewport-max-inline-size) - var(--_basis-viewport-min-inline-size))
+  );
+}
+
+.rhc-theme--fluid,
+.rhc-theme--fluid-font {
+  --rhc-text-font-size-sm: calc(
+    var(--rhc-text-font-size-min-sm) + (var(--rhc-text-font-size-max-sm) - var(--rhc-text-font-size-min-sm)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-text-font-size-md: calc(
+    var(--rhc-text-font-size-min-md) + (var(--rhc-text-font-size-max-md) - var(--rhc-text-font-size-min-md)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-text-font-size-lg: calc(
+    var(--rhc-text-font-size-min-lg) + (var(--rhc-text-font-size-max-lg) - var(--rhc-text-font-size-min-lg)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-text-font-size-xl: calc(
+    var(--rhc-text-font-size-min-xl) + (var(--rhc-text-font-size-max-xl) - var(--rhc-text-font-size-min-xl)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-text-font-size-2xl: calc(
+    var(--rhc-text-font-size-min-2xl) + (var(--rhc-text-font-size-max-2xl) - var(--rhc-text-font-size-min-2xl)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-text-font-size-3xl: calc(
+    var(--rhc-text-font-size-min-3xl) + (var(--rhc-text-font-size-max-3xl) - var(--rhc-text-font-size-min-3xl)) *
+      var(--basis-viewport-scale)
+  );
+}
+
+.rhc-theme--fluid,
+.rhc-theme--fluid-space {
+  --rhc-norday-space-0: 0;
+  --rhc-norday-space-1: 0.25rem;
+  --rhc-norday-space-2: 0.5rem;
+  --rhc-norday-space-3: 0.75rem;
+  --rhc-norday-space-4: 1rem;
+  --rhc-norday-space-5: 1.25rem;
+  --rhc-norday-space-6: 1.5rem;
+  --rhc-norday-space-8: 2rem;
+  --rhc-norday-space-10: 3rem;
+  --rhc-norday-space-12: 3.5rem;
+  --rhc-norday-space-14: 4rem;
+
+  /* Override `rhc-space-*` tokens with Norday fluid tokens */
+  --rhc-space-0: 0rem;
+  --rhc-space-25: calc(var(--rhc-norday-space-xs) * 0.25);
+  --rhc-space-50: calc(var(--rhc-norday-space-xs) * 0.5);
+  --rhc-space-100: var(--rhc-norday-space-xs);
+  --rhc-space-150: calc(var(--rhc-norday-space-md) * 0.75);
+  --rhc-space-200: var(--rhc-norday-space-md);
+  --rhc-space-300: var(--rhc-norday-space-lg);
+  --rhc-space-400: var(--rhc-norday-space-xl);
+  --rhc-space-500: var(--rhc-norday-space-2xl);
+  --rhc-space-600: var(--rhc-norday-space-3xl);
+  --rhc-space-700: var(--rhc-norday-space-4xl);
+  --rhc-norday-space-min-xs: var(--rhc-norday-space-1);
+  --rhc-norday-space-min-sm: var(--rhc-norday-space-1);
+  --rhc-norday-space-min-md: var(--rhc-norday-space-2);
+  --rhc-norday-space-min-lg: var(--rhc-norday-space-3);
+  --rhc-norday-space-min-xl: var(--rhc-norday-space-4);
+  --rhc-norday-space-min-2xl: var(--rhc-norday-space-6);
+  --rhc-norday-space-min-3xl: var(--rhc-norday-space-10);
+  --rhc-norday-space-min-4xl: var(--rhc-norday-space-12);
+  --rhc-norday-space-max-xs: var(--rhc-norday-space-2);
+  --rhc-norday-space-max-sm: var(--rhc-norday-space-3);
+  --rhc-norday-space-max-md: var(--rhc-norday-space-4);
+  --rhc-norday-space-max-lg: var(--rhc-norday-space-5);
+  --rhc-norday-space-max-xl: var(--rhc-norday-space-6);
+  --rhc-norday-space-max-2xl: var(--rhc-norday-space-8);
+  --rhc-norday-space-max-3xl: var(--rhc-norday-space-12);
+  --rhc-norday-space-max-4xl: var(--rhc-norday-space-14);
+
+  /* fluid t-shirt size tokens.
+   * In short: `space-[size]` is a value between `space-min-[size]` and `space-max-[size]`
+   */
+  --rhc-norday-space-xs: calc(
+    var(--rhc-norday-space-min-xs) + (var(--rhc-norday-space-max-xs) - var(--rhc-norday-space-min-xs)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-norday-space-sm: calc(
+    var(--rhc-norday-space-min-sm) + (var(--rhc-norday-space-max-sm) - var(--rhc-norday-space-min-sm)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-norday-space-md: calc(
+    var(--rhc-norday-space-min-md) + (var(--rhc-norday-space-max-md) - var(--rhc-norday-space-min-md)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-norday-space-lg: calc(
+    var(--rhc-norday-space-min-lg) + (var(--rhc-norday-space-max-lg) - var(--rhc-norday-space-min-lg)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-norday-space-xl: calc(
+    var(--rhc-norday-space-min-xl) + (var(--rhc-norday-space-max-xl) - var(--rhc-norday-space-min-xl)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-norday-space-2xl: calc(
+    var(--rhc-norday-space-min-2xl) + (var(--rhc-norday-space-max-2xl) - var(--rhc-norday-space-min-2xl)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-norday-space-3xl: calc(
+    var(--rhc-norday-space-min-3xl) + (var(--rhc-norday-space-max-3xl) - var(--rhc-norday-space-min-3xl)) *
+      var(--basis-viewport-scale)
+  );
+  --rhc-norday-space-4xl: calc(
+    var(--rhc-norday-space-min-4xl) + (var(--rhc-norday-space-max-4xl) - var(--rhc-norday-space-min-4xl)) *
+      var(--basis-viewport-scale)
+  );
+}

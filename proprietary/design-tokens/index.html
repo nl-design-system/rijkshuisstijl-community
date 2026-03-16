@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="nl" dir="ltr" class="voorbeeld-themex">
+  <head>
+    <meta charset="utf-8" />
+    <title>Prototype met CSS componenten</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "lit": "https://esm.sh/lit@3.3.2",
+          "lit/": "https://esm.sh/lit@3.3.2/",
+          "lodash-es/": "https://esm.sh/lodash-es@4.17.23/"
+        }
+      }
+    </script>
+    <style>
+      :root {
+      }
+    </style>
+    <script type="module" src="./index.mjs"></script>
+    <!-- Voorbeeld Theme -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@nl-design-system-unstable/voorbeeld-design-tokens@8/dist/theme.css"
+    />
+    <style>
+      :root {
+        --utrecht-color-sample-block-size: 10em;
+        --utrecht-color-sample-inline-size: var(--utrecht-color-sample-block-size);
+      }
+    </style>
+
+    <!-- Web Fonts -->
+    <link rel="stylesheet" href="https://unpkg.com/@fontsource/noto-sans@5" />
+    <link rel="stylesheet" href="https://unpkg.com/@fontsource/noto-sans-mono@5" />
+    <link rel="stylesheet" href="https://unpkg.com/@fontsource/noto-serif@5" />
+    <link rel="stylesheet" href="https://unpkg.com/@fontsource/noto-serif@5/700.css" />
+
+    <!-- CSS components -->
+    <link rel="stylesheet" href="https://unpkg.com/@nl-design-system-candidate/heading-css@1/dist/heading.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@nl-design-system-candidate/paragraph-css@1/dist/paragraph.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@nl-design-system-candidate/link-css@1/dist/link.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@nl-design-system-candidate/button-css@1/dist/button.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@nl-design-system-candidate/mark-css@1/dist/mark.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@nl-design-system-candidate/color-sample-css@1/dist/color-sample.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/@utrecht/component-library-css@9/dist/index.css" />
+  </head>
+  <body>
+    <h1 class="nl-heading nl-heading--level-1">Prototype met CSS componenten</h1>
+    <example-color-grid></example-color-grid>
+    <example-migration-table></example-migration-table>
+  </body>
+</html>

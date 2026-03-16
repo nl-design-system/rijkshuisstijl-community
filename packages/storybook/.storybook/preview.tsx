@@ -1,4 +1,5 @@
 import '@nl-rvo/assets/fonts/index.css';
+import '../../../proprietary/assets/src/font.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-robijnrood/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-paars/index.css';
@@ -6,9 +7,10 @@ import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-oranje/index.css
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-lintblauw/index.css';
+import '@rijkshuisstijl-community/design-tokens/src/fluid.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
-import { Paragraph } from '@rijkshuisstijl-community/components-react';
+import { Body, Paragraph } from '@rijkshuisstijl-community/components-react';
 import { formatHtml } from '@rijkshuisstijl-community/storybook-tooling/formatHtml';
 import { Controls, Description, Primary, Stories } from '@storybook/addon-docs/blocks';
 import { useOf } from '@storybook/addon-docs/blocks';
@@ -21,10 +23,10 @@ import { StoryRootDecorator } from './StoryRootDecorator';
 
 const preview: Preview = {
   decorators: [
-    (Story: any) => <div className="utrecht-document">{Story()}</div>,
+    // (Story: any) => <div className="utrecht-document">{Story()}</div>,
     withThemeByClassName({
       themes: {
-        'Kern - Lintblauw': 'rhc-theme',
+        'Kern - Lintblauw': 'rhc-theme rhc-theme--fluid',
         'Uitvoerend - Groen': 'uitvoerend-groen',
         'Uitvoerend - Hemelblauw': 'uitvoerend-hemelblauw',
         'Uitvoerend - Lintblauw': 'uitvoerend-lintblauw',
@@ -37,7 +39,9 @@ const preview: Preview = {
     (Story, options) => {
       return options.parameters['isPage'] ? (
         <Root Component="div">
-          <PageLayout>{Story()}</PageLayout>
+          <Body Component="div">
+            <PageLayout>{Story()}</PageLayout>
+          </Body>
         </Root>
       ) : (
         Story()
