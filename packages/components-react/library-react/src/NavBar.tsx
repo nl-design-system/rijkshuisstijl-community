@@ -3,7 +3,7 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Icon, IconProps } from '@rijkshuisstijl-community/components-react';
+import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref } from 'react';
 import { ColumnLayout } from './ColumnLayout';
