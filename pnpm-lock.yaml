@@ -884,6 +884,9 @@ importers:
       '@rijkshuisstijl-community/icon-react':
         specifier: workspace:*
         version: link:../icon-react
+      '@rijkshuisstijl-community/paragraph-react':
+        specifier: workspace:*
+        version: link:../paragraph-react
       '@utrecht/component-library-react':
         specifier: 13.0.1
         version: 13.0.1(@babel/runtime@7.28.6)(date-fns@2.30.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -918,9 +921,6 @@ importers:
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../../components-css/library-css
-      '@rijkshuisstijl-community/components-react':
-        specifier: workspace:*
-        version: 'link:'
       '@rijkshuisstijl-community/design-tokens':
         specifier: workspace:*
         version: link:../../../proprietary/design-tokens
@@ -1026,9 +1026,6 @@ importers:
       '@rijkshuisstijl-community/paragraph-css':
         specifier: workspace:*
         version: link:../../components-css/paragraph-css
-      '@utrecht/component-library-react':
-        specifier: 13.0.1
-        version: 13.0.1(@babel/runtime@7.28.6)(date-fns@2.30.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@vitejs/plugin-react':
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.1(@types/node@25.3.3)(jiti@2.6.1)(less@4.5.1)(lightningcss@1.31.1)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))

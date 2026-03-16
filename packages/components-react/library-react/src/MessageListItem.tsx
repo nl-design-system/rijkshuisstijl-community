@@ -8,7 +8,7 @@ import clsx from 'clsx';
 import { HTMLAttributes, ReactNode, Ref } from 'react';
 import { DotBadge, DotBadgeProps } from './DotBadge';
 
-export { Alert, type AlertProps } from './Alert';
+export { Alert, type AlertProps } from '@rijkshuisstijl-community/components-react';
 export interface MessageListItemProps extends HTMLAttributes<HTMLLIElement> {
   label: ReactNode;
   description: ReactNode;
