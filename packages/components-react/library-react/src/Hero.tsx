@@ -3,9 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Paragraph } from '@rijkshuisstijl-community/components-react';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactNode, Ref } from 'react';
+import { Paragraph } from '.';
 import { Heading, HeadingLevel } from './Heading';
 import { HeadingGroup } from './HeadingGroup';
 import { Image } from './Image';

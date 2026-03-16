@@ -3,8 +3,8 @@
  * Copyright (c) 2025 Community for NL Design System
  */
 import stylesheet from '@rijkshuisstijl-community/alert-css/dist/index.css?inline';
-import { Alert, AlertProps } from '@rijkshuisstijl-community/components-react';
 import { render } from 'preact';
+import { Alert, AlertProps } from '.';
 import { BaseWebComponent } from './BaseComponent';
 
 export type AlertWebComponentAttributes = AlertProps;
