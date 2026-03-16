@@ -6,6 +6,7 @@ import {
   ColumnLayout,
   Heading,
   Hero,
+  Icon,
   LinkList,
   LinkListCard,
   LinkListLink,
@@ -13,7 +14,6 @@ import {
   Separator,
   SubNavBar,
 } from '@rijkshuisstijl-community/components-react';
-import { Icon } from '@rijkshuisstijl-community/icon-react';
 import { PageBody } from '@utrecht/page-body-react';
 import SharedDisclaimer from '../shared/disclaimer';
 import SharedFooter from '../shared/footer';
