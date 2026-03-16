@@ -26,7 +26,7 @@
     "storybook": "storybook dev --port 6006",
     "prod-static": "http-server --port 6006 dist/",
     "test-storybook": "test-storybook --maxWorkers=2",
-    "playwright:install": "npx playwright install --with-deps chromium --only-shell",
+    "playwright:install": "playwright install --with-deps chromium --only-shell",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
@@ -53,6 +53,7 @@
     "@storybook/addon-themes": "9.1.19",
     "@storybook/cli": "9.1.19",
     "@storybook/react-vite": "9.1.19",
+    "@storybook/test-runner": "0.24.2",
     "@storybook/web-components-vite": "9.1.19",
     "@tabler/icons-react": "3.38.0",
     "@tabler/icons-sprite": "3.38.0",
