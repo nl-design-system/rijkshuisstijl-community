@@ -8,7 +8,7 @@ import { registerTokenStudioTransformGroup } from './src/transforms/styleDiction
 
 // Will take the theme name and remove all spaces and make it lowercase
 const normalizeThemeName = (name: string): string => {
-  return name.toLowerCase().replace(/\s+/g, '');
+  return name.toLowerCase().replaceAll(/\s+/g, '');
 };
 
 const removeUnitlessLineHeightTransform = () => {

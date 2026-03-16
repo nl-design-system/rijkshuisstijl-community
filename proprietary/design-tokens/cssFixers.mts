@@ -22,7 +22,7 @@ export async function fixCSSFile(filePath: string): Promise<void> {
 export function fixCalc(content: string): string {
   const operatorRegex = /(?:\s\+\s|\s-\s|\/|\*)/;
 
-  return content.replace(varRegex, (match, prefix, value, suffix) => {
+  return content.replaceAll(varRegex, (match, prefix, value, suffix) => {
     if (!value.match(operatorRegex)) {
       return match;
     }
@@ -36,12 +36,12 @@ export function fixExponentiation(content: string): string {
   const exponentiationRegex =
     /([0-9]*\.?[0-9]+(?:[a-z%]+)?|var\([^)]+\))\s*\^\s*([0-9]*\.?[0-9]+(?:[a-z%]+)?|var\([^)]+\))/g;
 
-  return content.replace(varRegex, (match, prefix, value, suffix) => {
+  return content.replaceAll(varRegex, (match, prefix, value, suffix) => {
     if (!value.includes('^')) {
       return match;
     }
 
-    const fixedValue = value.replace(exponentiationRegex, (_match: string, base: string, exponent: string) => {
+    const fixedValue = value.replaceAll(exponentiationRegex, (_match: string, base: string, exponent: string) => {
       return `pow(${base}, ${exponent})`;
     });
 
@@ -53,7 +53,7 @@ export function fixExponentiation(content: string): string {
 // It does allow round(), but that needs a rounding interval, which is unknown at this point.
 // See https://developer.mozilla.org/en-US/docs/Web/CSS/round
 export function fixRoundTo(content: string): string {
-  return content.replace(varRegex, (match, prefix, value, suffix) => {
+  return content.replaceAll(varRegex, (match, prefix, value, suffix) => {
     if (!value.includes('roundTo(')) {
       return match;
     }
