@@ -1,4 +1,4 @@
-export type flagIconIDs =
+export type FlagIconIDs =
   | 'bg-flag'
   | 'de-flag'
   | 'es-flag'
