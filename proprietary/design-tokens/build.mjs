@@ -4,7 +4,7 @@ import { posix } from 'node:path';
 import StyleDictionary from 'style-dictionary';
 
 import { fixCSSFile } from './cssFixers.mjs';
-import { registerSafeSizeRemTransform } from './src/transforms/styleDictionaryTransforms.mts';
+import { registerTokenStudioTransformGroup } from './src/transforms/styleDictionaryTransforms.mts';
 
 // Will take the theme name and remove all spaces and make it lowercase
 const normalizeThemeName = (name) => {
