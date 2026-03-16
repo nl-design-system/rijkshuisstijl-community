@@ -3,8 +3,8 @@
  * Copyright (c) 2025 Community for NL Design System
  */
 import stylesheet from '@rijkshuisstijl-community/accordion-css/dist/index.css?inline';
+import { AccordionProvider, AccordionProviderProps, Icon, RHCIconID } from '@rijkshuisstijl-community/components-react';
 import { render } from 'preact';
-import { AccordionProvider, AccordionProviderProps, Icon, RHCIconID } from '.';
 import { BaseWebComponent } from './BaseComponent';
 
 export type AccordionWebComponentAttributes = AccordionProviderProps;
