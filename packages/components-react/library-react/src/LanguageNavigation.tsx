@@ -317,7 +317,6 @@ interface LanguageNavigationItemLinkProps extends LanguageNavigationItemBaseProp
 
 interface LanguageNavigationItemButtonProps extends LanguageNavigationItemBaseProps {
   /** Click handler for programmatic navigation */
-  // eslint-disable-next-line no-unused-vars
   onClick: (event: MouseEvent<HTMLButtonElement>) => void;
   href?: never;
 }

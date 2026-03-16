@@ -46,7 +46,6 @@ const filterComponents = (data: ComponentData[], searchTerm: string, frameworks:
 };
 
 interface ActiveFiltersBadgeListProps {
-  // eslint-disable-next-line no-unused-vars
   onRemoveFilter: (framework: string) => void;
   selectedFrameworks: string[];
 }
