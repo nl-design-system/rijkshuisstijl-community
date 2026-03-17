@@ -937,6 +937,12 @@
             "$value": "#162945",
             "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
           }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
         }
       }
     }
@@ -976,6 +982,12 @@
           "active": {
             "$type": "color",
             "$value": "#275012"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
           }
         }
       }
@@ -1017,6 +1029,12 @@
             "$type": "color",
             "$value": "#477869"
           }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-light-color}"
+          }
         }
       }
     }
@@ -1056,6 +1074,12 @@
           "active": {
             "$type": "color",
             "$value": "#1A4972"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
           }
         }
       }
@@ -1292,6 +1316,10 @@
             "$value": "{rhc.color.donkerblauw.500}"
           },
           "on-dark-color": {
+            "$type": "color",
+            "$value": "{rhc.color.wit}"
+          },
+          "on-primary": {
             "$type": "color",
             "$value": "{rhc.color.wit}"
           },
