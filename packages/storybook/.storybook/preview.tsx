@@ -6,6 +6,9 @@ import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-oranje/index.css
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-lintblauw/index.css';
+import '@rijkshuisstijl-community/design-tokens/src/fluid.css';
+import '@rijkshuisstijl-community/design-tokens/src/fluid-font-size.css';
+import '@rijkshuisstijl-community/design-tokens/src/fluid-space.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Body, PageLayout, Paragraph, Root } from '@rijkshuisstijl-community/components-react';
@@ -22,7 +25,7 @@ const preview: Preview = {
   decorators: [
     withThemeByClassName({
       themes: {
-        'Kern - Lintblauw': 'rhc-theme rhc-theme--fluid',
+        'Kern - Lintblauw': 'rhc-theme rhc-theme--fluid-font-size',
         'Uitvoerend - Groen': 'uitvoerend-groen',
         'Uitvoerend - Hemelblauw': 'uitvoerend-hemelblauw',
         'Uitvoerend - Lintblauw': 'uitvoerend-lintblauw',
