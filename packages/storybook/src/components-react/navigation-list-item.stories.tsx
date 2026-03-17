@@ -3,7 +3,7 @@ import {
   NavigationListItem,
   NavigationListItemProps,
 } from '@rijkshuisstijl-community/components-react';
-import { getIconSet } from '@rijkshuisstijl-community/icon-react';
+import { getIconSet } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './navigation-list-item.md?raw';

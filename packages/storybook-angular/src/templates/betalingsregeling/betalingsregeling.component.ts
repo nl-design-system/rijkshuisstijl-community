@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { HeadingComponent, IconComponent, LinkComponent, ParagraphComponent } from '@rijkshuisstijl-community/components-angular';
 import { TablerIconComponent } from 'angular-tabler-icons';
-import { HeadingComponent, IconComponent, LinkComponent, ParagraphComponent } from '../../../../components-angular';
 import { PageLayoutComponent } from '../shared/page-layout/page-layout.component';
 
 @Component({

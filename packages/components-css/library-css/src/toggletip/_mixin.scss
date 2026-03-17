@@ -14,7 +14,7 @@
 @mixin rhc-toggletip__summary {
   cursor: pointer;
   display: inline-flex;
-  margin-block-end: var(--rhc-toggletip-gap, 16px);
+  margin-block-end: var(--rhc-toggletip-gap, var(--rhc-space-200));
   max-inline-size: var(--rhc-toggletip-size);
   size: var(--rhc-toggletip-size);
 }

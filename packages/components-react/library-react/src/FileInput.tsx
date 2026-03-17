@@ -4,9 +4,9 @@
  */
 
 import { ChangeEvent, PropsWithChildren, Ref, useEffect, useRef, useState } from 'react';
+import { Paragraph } from '.';
 import { Button, ButtonProps } from './Button';
 import { File } from './File';
-import { Paragraph } from './Paragraph';
 
 export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
   ref?: Ref<HTMLInputElement>;

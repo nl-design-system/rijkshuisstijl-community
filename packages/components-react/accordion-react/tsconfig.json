@@ -1,0 +1,9 @@
+{
+  "extends": "../library-react/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "./src/"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.svg"],
+  "exclude": ["**/node_modules/*"]
+}

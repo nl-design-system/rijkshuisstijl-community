@@ -1719,6 +1719,28 @@
       }
     }
   },
+  "components/body": {
+    "utrecht": {
+      "body": {
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{rhc.text.font-family.sans}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{rhc.text.font-size.md}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{rhc.text.font-weight.regular}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{rhc.text.line-height.md}"
+        }
+      }
+    }
+  },
   "components/breadcrumb": {
     "utrecht": {
       "breadcrumb-nav": {
@@ -5297,6 +5319,58 @@
       }
     }
   },
+  "components/page-body": {
+    "utrecht": {
+      "body": {
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{rhc.text.font-family.sans}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{rhc.text.font-size.md}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{rhc.text.font-weight.regular}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{rhc.text.line-height.md}"
+        },
+        "content": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{rhc.color.wit}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.cool-grey.900}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.600}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.600}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.700}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.700}"
+          },
+          "max-inline-size": {
+            "$type": "dimension",
+            "$value": "75rem"
+          }
+        }
+      }
+    }
+  },
   "components/page-footer": {
     "utrecht": {
       "page-footer": {
@@ -5408,6 +5482,37 @@
           "direction": {
             "$type": "flexDirection",
             "$value": "column"
+          }
+        }
+      }
+    }
+  },
+  "components/page-header": {
+    "utrecht": {
+      "page-header": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{rhc.color.wit}"
+        },
+        "border-block-end-color": {},
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.cool-grey.900}"
+        },
+        "padding-block-start": {},
+        "padding-block-end": {},
+        "padding-inline-start": {},
+        "padding-inline-end": {},
+        "content": {
+          "background-color": {},
+          "color": {},
+          "padding-block-start": {},
+          "padding-block-end": {},
+          "padding-inline-start": {},
+          "padding-inline-end": {},
+          "max-inline-size": {
+            "$type": "dimension",
+            "$value": "75rem"
           }
         }
       }
@@ -5815,6 +5920,24 @@
             "$type": "dimension",
             "$value": "{rhc.space.0}"
           }
+        }
+      }
+    }
+  },
+  "components/root": {
+    "utrecht": {
+      "root": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{rhc.color.wit}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.cool-grey.900}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{rhc.text.font-family.sans}"
         }
       }
     }
@@ -8386,6 +8509,7 @@
         "components/article": "enabled",
         "components/backdrop": "enabled",
         "components/blockquote": "enabled",
+        "components/body": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/card": "enabled",
@@ -8425,9 +8549,12 @@
         "components/number-badge/utrecht": "enabled",
         "components/ordered-list": "enabled",
         "components/paragraph": "enabled",
+        "components/page-body": "enabled",
+        "components/page-header": "enabled",
         "components/pre-heading": "enabled",
         "components/radio-button": "enabled",
         "components/radio-group": "enabled",
+        "components/root": "enabled",
         "components/select": "enabled",
         "components/separator": "enabled",
         "components/side-nav": "enabled",
@@ -8473,6 +8600,7 @@
         "components/article": "enabled",
         "components/backdrop": "enabled",
         "components/blockquote": "enabled",
+        "components/body": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/card": "enabled",
@@ -8512,9 +8640,12 @@
         "components/number-badge/utrecht": "enabled",
         "components/ordered-list": "enabled",
         "components/paragraph": "enabled",
+        "components/page-body": "enabled",
+        "components/page-header": "enabled",
         "components/pre-heading": "enabled",
         "components/radio-button": "enabled",
         "components/radio-group": "enabled",
+        "components/root": "enabled",
         "components/select": "enabled",
         "components/separator": "enabled",
         "components/side-nav": "enabled",
@@ -8561,6 +8692,7 @@
         "components/article": "enabled",
         "components/backdrop": "enabled",
         "components/blockquote": "enabled",
+        "components/body": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/card": "enabled",
@@ -8600,9 +8732,12 @@
         "components/number-badge/utrecht": "enabled",
         "components/ordered-list": "enabled",
         "components/paragraph": "enabled",
+        "components/page-body": "enabled",
+        "components/page-header": "enabled",
         "components/pre-heading": "enabled",
         "components/radio-button": "enabled",
         "components/radio-group": "enabled",
+        "components/root": "enabled",
         "components/select": "enabled",
         "components/separator": "enabled",
         "components/side-nav": "enabled",
@@ -8650,6 +8785,7 @@
         "components/article": "enabled",
         "components/backdrop": "enabled",
         "components/blockquote": "enabled",
+        "components/body": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/card": "enabled",
@@ -8689,9 +8825,12 @@
         "components/number-badge/utrecht": "enabled",
         "components/ordered-list": "enabled",
         "components/paragraph": "enabled",
+        "components/page-body": "enabled",
+        "components/page-header": "enabled",
         "components/pre-heading": "enabled",
         "components/radio-button": "enabled",
         "components/radio-group": "enabled",
+        "components/root": "enabled",
         "components/select": "enabled",
         "components/separator": "enabled",
         "components/side-nav": "enabled",
@@ -8739,6 +8878,7 @@
         "components/article": "enabled",
         "components/backdrop": "enabled",
         "components/blockquote": "enabled",
+        "components/body": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/card": "enabled",
@@ -8778,9 +8918,12 @@
         "components/number-badge/utrecht": "enabled",
         "components/ordered-list": "enabled",
         "components/paragraph": "enabled",
+        "components/page-body": "enabled",
+        "components/page-header": "enabled",
         "components/pre-heading": "enabled",
         "components/radio-button": "enabled",
         "components/radio-group": "enabled",
+        "components/root": "enabled",
         "components/select": "enabled",
         "components/separator": "enabled",
         "components/side-nav": "enabled",
@@ -8830,6 +8973,7 @@
         "components/article": "enabled",
         "components/backdrop": "enabled",
         "components/blockquote": "enabled",
+        "components/body": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/card": "enabled",
@@ -8869,9 +9013,12 @@
         "components/number-badge/utrecht": "enabled",
         "components/ordered-list": "enabled",
         "components/paragraph": "enabled",
+        "components/page-body": "enabled",
+        "components/page-header": "enabled",
         "components/pre-heading": "enabled",
         "components/radio-button": "enabled",
         "components/radio-group": "enabled",
+        "components/root": "enabled",
         "components/select": "enabled",
         "components/separator": "enabled",
         "components/side-nav": "enabled",
@@ -8919,6 +9066,7 @@
         "components/article": "enabled",
         "components/backdrop": "enabled",
         "components/blockquote": "enabled",
+        "components/body": "enabled",
         "components/breadcrumb": "enabled",
         "components/button": "enabled",
         "components/card": "enabled",
@@ -8958,9 +9106,12 @@
         "components/number-badge/utrecht": "enabled",
         "components/ordered-list": "enabled",
         "components/paragraph": "enabled",
+        "components/page-body": "enabled",
+        "components/page-header": "enabled",
         "components/pre-heading": "enabled",
         "components/radio-button": "enabled",
         "components/radio-group": "enabled",
+        "components/root": "enabled",
         "components/select": "enabled",
         "components/separator": "enabled",
         "components/side-nav": "enabled",
@@ -9009,6 +9160,7 @@
       "components/article",
       "components/backdrop",
       "components/blockquote",
+      "components/body",
       "components/breadcrumb",
       "components/button",
       "components/card",
@@ -9050,13 +9202,16 @@
       "components/number-badge/nl",
       "components/number-badge/utrecht",
       "components/ordered-list",
+      "components/page-body",
       "components/page-footer",
+      "components/body-header",
       "components/page-number-navigation",
       "components/paragraph",
       "components/pre-heading",
       "components/radio-button",
       "components/radio-group",
       "components/rich-text",
+      "components/root",
       "components/select",
       "components/separator",
       "components/side-nav",

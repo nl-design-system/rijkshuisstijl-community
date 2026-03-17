@@ -3,8 +3,6 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Icon } from '@rijkshuisstijl-community/icon-react';
-import type { RHCIconID } from '@rijkshuisstijl-community/icon-react';
 import {
   Button,
   ButtonLink,
@@ -16,6 +14,7 @@ import {
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { PropsWithChildren, Ref } from 'react';
+import { Icon, type RHCIconID} from '.';
 
 export {
   Button,

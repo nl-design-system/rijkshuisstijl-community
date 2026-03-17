@@ -11,15 +11,15 @@ Om de template er iets meer uit te laten zien zoals de huidige situatie van het 
  */
 .rhc-gray-rectangle {
   background-color: #f1f1f1;
-  padding-block: 1rem;
-  padding-inline: 1rem;
+  padding-block: var(--rhc-space-200);
+  padding-inline: var(--rhc-space-200);
 }
 
 /**
 Om ruimte toe te voegen tussen alle data-summaries.
  */
 .rhc-gray-rectangle > div:not(:last-child) {
-  margin-block-end: 4rem;
+  margin-block-end: var(--rhc-space-600, 4rem); /* replacement is not an exact match: 3.5rem vs 4rem */
 }
 
 /**
@@ -27,5 +27,5 @@ Om ruimte toe te voegen boven de link.
  */
 .rhc-download-link {
   display: block;
-  margin-block-start: 1rem;
+  margin-block-start: var(--rhc-space-200);
 }

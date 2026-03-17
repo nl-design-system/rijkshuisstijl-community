@@ -63,10 +63,10 @@ body {
   align-items: stretch;
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: var(--rhc-space-600);
   inline-size: 100%;
-  margin-block-end: 80px;
-  margin-block-start: 80px;
+  margin-block-end: var(--rhc-space-700, 80px); /* replacement is not an exact match: 56px vs 80px */
+  margin-block-start: var(--rhc-space-700, 80px); /* replacement is not an exact match: 56px vs 80px */
   max-inline-size: 64rem;
 }
 
@@ -96,7 +96,7 @@ body {
   --rhc-card-group-column-gap: var(--utrecht-column-layout-gap);
 
   display: grid;
-  gap: var(--rhc-card-group-column-gap, 1em);
+  gap: var(--rhc-card-group-column-gap, var(--rhc-space-200));
   grid-template-columns: 1fr;
   justify-content: center;
 }
@@ -138,7 +138,7 @@ body {
 .rhc-card-as-link.rhc-card-as-link--full-bleed:has(a:focus-visible),
 .rhc-card-as-link.rhc-card-as-link--horizontal:has(a:focus-visible) {
   outline: -webkit-focus-ring-color outset 3px;
-  outline-offset: 2px;
+  outline-offset: var(--rhc-border-width-md);
 }
 
 .rhc-card-as-link:not(:has(a)):hover .rhc-card-as-link__heading {
