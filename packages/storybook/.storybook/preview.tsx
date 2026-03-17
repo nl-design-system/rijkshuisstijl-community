@@ -6,6 +6,7 @@ import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-oranje/index.css
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-lintblauw/index.css';
+import '@rijkshuisstijl-community/design-tokens/src/fluid.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Body, PageLayout, Paragraph, Root } from '@rijkshuisstijl-community/components-react';
