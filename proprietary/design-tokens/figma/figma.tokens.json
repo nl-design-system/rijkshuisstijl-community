@@ -669,7 +669,13 @@
             "$type": "fontFamilies",
             "$value": "RijksoverheidSerifWeb, 'Times New Roman', serif"
           }
-        },
+        }
+      }
+    }
+  },
+  "common/type-scale/default": {
+    "rhc": {
+      "text": {
         "font-size": {
           "max": {
             "sm": {
@@ -734,6 +740,119 @@
               "$value": "2rem",
               "$description": "[figma-only]"
             }
+          }
+        }
+      }
+    }
+  },
+  "common/type-scale/information-dence": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "min": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "0.875rem",
+              "$description": "[figma-only]"
+            },
+            "md": {
+              "$type": "fontSizes",
+              "$value": "1rem",
+              "$description": "[figma-only]"
+            },
+            "lg": {
+              "$type": "fontSizes",
+              "$value": "1.25rem",
+              "$description": "[figma-only]"
+            },
+            "xl": {
+              "$type": "fontSizes",
+              "$value": "1.5rem",
+              "$description": "[figma-only]"
+            },
+            "2xl": {
+              "$type": "fontSizes",
+              "$value": "1.75rem",
+              "$description": "[figma-only]"
+            },
+            "3xl": {
+              "$type": "fontSizes",
+              "$value": "2rem",
+              "$description": "[figma-only]"
+            }
+          },
+          "max": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "0.875rem",
+              "$description": "[figma-only]"
+            },
+            "md": {
+              "$type": "fontSizes",
+              "$value": "1rem",
+              "$description": "[figma-only]"
+            },
+            "lg": {
+              "$type": "fontSizes",
+              "$value": "1.25rem",
+              "$description": "[figma-only]"
+            },
+            "xl": {
+              "$type": "fontSizes",
+              "$value": "1.5rem",
+              "$description": "[figma-only]"
+            },
+            "2xl": {
+              "$type": "fontSizes",
+              "$value": "1.75rem",
+              "$description": "[figma-only]"
+            },
+            "3xl": {
+              "$type": "fontSizes",
+              "$value": "2rem",
+              "$description": "[figma-only]"
+            }
+          }
+        }
+      }
+    }
+  },
+  "common/responsive/max": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "sm": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.sm}"
+          },
+          "md": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.md}"
+          },
+          "lg": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.lg}"
+          },
+          "xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.xl}"
+          },
+          "2xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.2xl}"
+          },
+          "3xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.3xl}"
+          }
+        }
+      },
+      "line-height": {
+        "icon": {
+          "md": {
+            "$type": "dimension",
+            "$value": "{rhc.text.font-size.md} * 1.5",
+            "$description": "[figma-only] [temporary – until nl-icon]"
           }
         }
       }
@@ -5487,37 +5606,6 @@
       }
     }
   },
-  "components/page-header": {
-    "utrecht": {
-      "page-header": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{rhc.color.wit}"
-        },
-        "border-block-end-color": {},
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.cool-grey.900}"
-        },
-        "padding-block-start": {},
-        "padding-block-end": {},
-        "padding-inline-start": {},
-        "padding-inline-end": {},
-        "content": {
-          "background-color": {},
-          "color": {},
-          "padding-block-start": {},
-          "padding-block-end": {},
-          "padding-inline-start": {},
-          "padding-inline-end": {},
-          "max-inline-size": {
-            "$type": "dimension",
-            "$value": "75rem"
-          }
-        }
-      }
-    }
-  },
   "components/page-number-navigation": {
     "ams": {
       "pagination": {
@@ -7126,6 +7214,26 @@
           "margin-inline-start": {
             "$type": "dimension",
             "$value": "{rhc.space.0}"
+          }
+        }
+      }
+    }
+  },
+  "components/page-header": {
+    "utrecht": {
+      "page-header": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{rhc.color.wit}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.cool-grey.900}"
+        },
+        "content": {
+          "max-inline-size": {
+            "$type": "dimension",
+            "$value": "75rem"
           }
         }
       }
@@ -9147,6 +9255,9 @@
       "brand/space",
       "brand/size",
       "brand/text",
+      "common/type-scale/default",
+      "common/type-scale/information-dence",
+      "common/responsive/max",
       "common/border",
       "common/color",
       "common/focus",
@@ -9204,7 +9315,6 @@
       "components/ordered-list",
       "components/page-body",
       "components/page-footer",
-      "components/body-header",
       "components/page-number-navigation",
       "components/paragraph",
       "components/pre-heading",
@@ -9224,6 +9334,7 @@
       "components/textarea",
       "components/toggletip",
       "components/unordered-list",
+      "components/page-header",
       "overrides/closed-source/font",
       "overrides/font-weight/bzk",
       "overrides/heading-color/primary",
