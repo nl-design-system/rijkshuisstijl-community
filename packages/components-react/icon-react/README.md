@@ -31,6 +31,10 @@ import { IconBrandX } from '@tabler/icons-react';
 <Icon><IconBrandX /></Icon>
 ```
 
+## Testing
+
+We bundelen de CSS direct mee met de componenten zodat je dit niet apart hoeft in te laden. Let wel op met unit tests die in de Node omgeving draaien niet altijd `.css` files default ondersteunen. bijvoorbeeld voor vitest moet je `pool: 'vmThreads',` aanzetten in de config.
+
 ## Rijkshuisstijl Community Componenten
 
 **Direct aan de slag met [CSS](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/README.md) | [React](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/README.md) | [Web Components](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/README.md) | [Twig](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/README.md)**
