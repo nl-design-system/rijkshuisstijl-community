@@ -1628,6 +1628,12 @@ importers:
       '@preact/preset-vite':
         specifier: 2.10.3
         version: 2.10.3(@babel/core@7.29.0)(preact@10.28.4)(rollup@4.59.0)(vite@7.3.1(@types/node@25.3.3)(jiti@2.6.1)(less@4.5.1)(lightningcss@1.31.1)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
+      '@rijkshuisstijl-community/alert-react':
+        specifier: workspace:*
+        version: link:../components-react/alert-react
+      '@rijkshuisstijl-community/article-react':
+        specifier: workspace:*
+        version: link:../components-react/article-react
       '@rijkshuisstijl-community/components-css':
         specifier: workspace:*
         version: link:../components-css/library-css
@@ -1637,6 +1643,9 @@ importers:
       '@rijkshuisstijl-community/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
+      '@rijkshuisstijl-community/icon-react':
+        specifier: workspace:*
+        version: link:../components-react/icon-react
       '@types/react':
         specifier: 19.2.14
         version: 19.2.14
