@@ -559,46 +559,57 @@
     "rhc": {
       "space": {
         "0": {
+          "$comment": "0px",
           "$type": "dimension",
           "$value": "0rem"
         },
         "25": {
+          "$comment": "2px",
           "$type": "dimension",
           "$value": "0.25 * 0.5rem"
         },
         "50": {
+          "$comment": "4px",
           "$type": "dimension",
           "$value": "0.5 * 0.5rem"
         },
         "100": {
+          "$comment": "8px",
           "$type": "dimension",
           "$value": "0.5rem"
         },
         "150": {
+          "$comment": "12px",
           "$type": "dimension",
           "$value": "1.5 * 0.5rem"
         },
         "200": {
+          "$comment": "16px",
           "$type": "dimension",
           "$value": "2 * 0.5rem"
         },
         "300": {
+          "$comment": "24px",
           "$type": "dimension",
           "$value": "3 * 0.5rem"
         },
         "400": {
+          "$comment": "32px",
           "$type": "dimension",
           "$value": "4 * 0.5rem"
         },
         "500": {
+          "$comment": "40px",
           "$type": "dimension",
           "$value": "5 * 0.5rem"
         },
         "600": {
+          "$comment": "48px",
           "$type": "dimension",
           "$value": "6 * 0.5rem"
         },
         "700": {
+          "$comment": "56px",
           "$type": "dimension",
           "$value": "7 * 0.5rem"
         }
@@ -663,11 +674,11 @@
         "font-family": {
           "sans": {
             "$type": "fontFamilies",
-            "$value": "'Fira Sans', Arial, Verdana, sans-serif"
+            "$value": "'Fira Sans', 'Arial', 'Verdana', sans-serif"
           },
           "serif": {
             "$type": "fontFamilies",
-            "$value": "RijksoverheidSerifWeb, 'Times New Roman', serif"
+            "$value": "'RijksoverheidSerifWeb', 'Times New Roman', serif"
           }
         },
         "font-size": {
@@ -756,6 +767,18 @@
   "common/color": {
     "rhc": {
       "color": {
+        "donkerblauw": {
+          "600": {
+            "$type": "color",
+            "$value": "#01496c",
+            "$description": "Originally rhc.color.donkerblauw.500 darkened (srgb) with modify by 0.3"
+          },
+          "700": {
+            "$type": "color",
+            "$value": "#163f5b",
+            "$description": "Originally rhc.color.donkerblauw.500 darkened (lch) by 0.4"
+          }
+        },
         "foreground": {
           "default": {
             "$type": "color",
@@ -768,6 +791,14 @@
           "link": {
             "$type": "color",
             "$value": "{rhc.color.donkerblauw.500}"
+          },
+          "link-active": {
+            "$type": "color",
+            "$value": "{rhc.color.donkerblauw.700}"
+          },
+          "link-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.donkerblauw.600}"
           },
           "on-dark-color": {
             "$type": "color",
@@ -1004,11 +1035,18 @@
           }
         }
       },
-      "line-height": {
-        "icon": {
-          "md": {
+      "icon": {
+        "md": {
+          "inset-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.text.font-size.md} * 1.5",
+            "$value": "0.188rem",
+            "$description": "[figma-only] [temporary – until nl-icon]"
+          }
+        },
+        "lg": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0.375rem",
             "$description": "[figma-only] [temporary – until nl-icon]"
           }
         }
@@ -1543,7 +1581,7 @@
           },
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "3px"
+            "$value": "{rhc.icon.md.inset-block-start}"
           },
           "size": {
             "$type": "dimension",
@@ -1626,7 +1664,7 @@
       "blockquote": {
         "background-color": {
           "$type": "color",
-          "$value": "transparent"
+          "$value": "{rhc.color.transparent}"
         },
         "border-inline-start-width": {
           "$type": "dimension",
@@ -1634,7 +1672,7 @@
         },
         "border-color": {
           "$type": "color",
-          "$value": "transparent"
+          "$value": "{rhc.color.transparent}"
         },
         "border-radius": {
           "$type": "dimension",
@@ -1814,8 +1852,7 @@
           "active": {
             "color": {
               "$type": "color",
-              "$value": "#163f5b",
-              "$description": "Originally rhc.color.foreground.link darkened (lch) by 0.4"
+              "$value": "{rhc.color.foreground.link-active}"
             },
             "text-decoration": {
               "$type": "textDecoration",
@@ -1831,7 +1868,7 @@
           "focus": {
             "background-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -1849,8 +1886,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "#01496c",
-              "$description": "Originally rhc.color.foreground.link darkened (srgb) by 0.3"
+              "$value": "{rhc.color.foreground.link-hover}"
             }
           },
           "icon": {
@@ -2256,7 +2292,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -2906,7 +2942,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -2938,7 +2974,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -2992,7 +3028,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -3024,7 +3060,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -3992,11 +4028,9 @@
           }
         },
         "input": {
-          "margin": {
-            "block-start": {
-              "$type": "dimension",
-              "$value": "{rhc.space.50}"
-            }
+          "margin-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.icon.md.inset-block-start}"
           }
         }
       }
@@ -4333,7 +4367,7 @@
         "icon": {
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "0.188rem"
+            "$value": "{rhc.icon.md.inset-block-start}"
           },
           "size": {
             "$type": "dimension",
@@ -4353,7 +4387,7 @@
           },
           "text-decoration": {
             "$type": "textDecoration",
-            "$value": "None"
+            "$value": "none"
           },
           "font-weight": {
             "$type": "fontWeights",
@@ -4468,8 +4502,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "#01496C",
-            "$description": "Originally rhc.color.foreground.link darkened (srgb) with modify by 0.3"
+            "$value": "{rhc.color.foreground.link-hover}"
           }
         }
       }
@@ -4531,15 +4564,13 @@
         "active": {
           "color": {
             "$type": "color",
-            "$value": "#1A4972",
-            "$description": "Originally rhc.color.hemelblauw.500 darkened (lch) with modify by 0.4"
+            "$value": "{rhc.color.foreground.link-active}"
           }
         },
         "hover": {
           "color": {
             "$type": "color",
-            "$value": "#01496C",
-            "$description": "Originally rhc.color.foreground.link darkened (srgb) with modify by 0.3"
+            "$value": "{rhc.color.foreground.link-hover}"
           },
           "text-decoration": {
             "$type": "textDecoration",
@@ -4564,7 +4595,7 @@
         "focus-visible": {
           "text-decoration": {
             "$type": "textDecoration",
-            "$value": "None"
+            "$value": "none"
           },
           "text-decoration-thickness": {
             "$type": "other",
@@ -5178,7 +5209,7 @@
         },
         "border-color": {
           "$type": "color",
-          "$value": "transparent"
+          "$value": "{rhc.color.transparent}"
         },
         "border-radius": {
           "$type": "dimension",
@@ -6197,14 +6228,13 @@
             },
             "text-decoration": {
               "$type": "textDecoration",
-              "$value": "None"
+              "$value": "none"
             }
           },
           "hover": {
             "color": {
               "$type": "color",
-              "$value": "#15496a",
-              "$description": "Originally rhc.color.foreground.link darkened (lch) by 0.3"
+              "$value": "{rhc.color.foreground.link-hover}"
             },
             "text-decoration": {
               "$type": "textDecoration",
@@ -6221,7 +6251,7 @@
           },
           "text-decoration": {
             "$type": "textDecoration",
-            "$value": "None"
+            "$value": "none"
           },
           "column-gap": {
             "$type": "dimension",
@@ -6321,7 +6351,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "transparent"
+            "$value": "{rhc.color.transparent}"
           },
           "color": {
             "$type": "color",
@@ -6335,7 +6365,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "transparent"
+            "$value": "{rhc.color.transparent}"
           },
           "color": {
             "$type": "color",
@@ -6349,7 +6379,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "transparent"
+            "$value": "{rhc.color.transparent}"
           },
           "color": {
             "$type": "color",
@@ -6363,7 +6393,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "transparent"
+            "$value": "{rhc.color.transparent}"
           },
           "color": {
             "$type": "color",
@@ -6376,7 +6406,7 @@
         },
         "border-color": {
           "$type": "color",
-          "$value": "transparent"
+          "$value": "{rhc.color.transparent}"
         },
         "color": {
           "$type": "color",
@@ -6390,7 +6420,7 @@
       "sub-nav-bar": {
         "background-color": {
           "$type": "color",
-          "$value": "#f2f4f6"
+          "$value": "{rhc.color.cool-grey.100}"
         },
         "column-gap": {
           "$type": "dimension",
@@ -6541,7 +6571,7 @@
           },
           "background-color": {
             "$type": "color",
-            "$value": "transparent"
+            "$value": "{rhc.color.transparent}"
           }
         },
         "footer": {
@@ -6555,7 +6585,7 @@
           },
           "background-color": {
             "$type": "color",
-            "$value": "transparent"
+            "$value": "{rhc.color.transparent}"
           }
         },
         "row": {
@@ -6569,7 +6599,7 @@
           },
           "background-color": {
             "$type": "color",
-            "$value": "transparent"
+            "$value": "{rhc.color.transparent}"
           }
         },
         "footer-cell": {
@@ -6965,7 +6995,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "transparent"
+            "$value": "{rhc.color.transparent}"
           },
           "color": {
             "$type": "color",
@@ -7535,7 +7565,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -7548,7 +7578,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "transparent"
+            "$value": "{rhc.color.transparent}"
           },
           "color": {
             "$type": "color",
@@ -7575,7 +7605,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -7598,7 +7628,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -7621,7 +7651,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -7695,7 +7725,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$extensions": {
@@ -7784,7 +7814,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$extensions": {
@@ -7802,11 +7832,11 @@
           },
           "background-color": {
             "$type": "color",
-            "$value": "transparent"
+            "$value": "{rhc.color.transparent}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "transparent"
+            "$value": "{rhc.color.transparent}"
           },
           "color": {
             "$type": "color",
@@ -7833,7 +7863,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$extensions": {
@@ -7856,7 +7886,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$extensions": {
@@ -7879,7 +7909,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$extensions": {
@@ -8038,7 +8068,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -8091,7 +8121,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -8100,11 +8130,11 @@
           },
           "background-color": {
             "$type": "color",
-            "$value": "transparent"
+            "$value": "{rhc.color.transparent}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "transparent"
+            "$value": "{rhc.color.transparent}"
           },
           "color": {
             "$type": "color",
@@ -8131,7 +8161,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -8145,7 +8175,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -8159,7 +8189,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -8229,7 +8259,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -8273,7 +8303,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -8282,11 +8312,11 @@
           },
           "background-color": {
             "$type": "color",
-            "$value": "transparent"
+            "$value": "{rhc.color.transparent}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "transparent"
+            "$value": "{rhc.color.transparent}"
           },
           "color": {
             "$type": "color",
@@ -8313,7 +8343,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -8327,7 +8357,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -8341,7 +8371,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "transparent"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -8379,6 +8409,22 @@
           "3xl": {
             "$type": "fontSizes",
             "$value": "{rhc.text.font-size.min.3xl}"
+          }
+        }
+      },
+      "icon": {
+        "md": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0rem",
+            "$description": "[figma-only] [temporary – until nl-icon]"
+          }
+        },
+        "lg": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0.188rem",
+            "$description": "[figma-only] [temporary – until nl-icon]"
           }
         }
       }
@@ -8451,6 +8497,22 @@
               "$value": "2rem",
               "$description": "[figma-only]"
             }
+          }
+        }
+      },
+      "icon": {
+        "md": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0rem",
+            "$description": "[figma-only] [temporary – until nl-icon]"
+          }
+        },
+        "lg": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0.188rem",
+            "$description": "[figma-only] [temporary – until nl-icon]"
           }
         }
       }
