@@ -23,7 +23,7 @@ import { Alert } from '@rijkshuisstijl-community/alert-react';
 
 ## Testing
 
-We bundelen de CSS direct mee met de componenten zodat je dit niet apart hoeft in te laden. Let wel op met unit tests die in de Node omgeving draaien niet altijd `.css` files default ondersteunen. bijvoorbeeld voor vitest moet je `pool: 'vmThreads',` aanzetten in de config.
+We bundelen de CSS direct mee met de componenten zodat je dit niet apart hoeft in te laden. Let wel op met unit tests die in de Node omgeving draaien niet altijd `.css` files default ondersteunen. bijvoorbeeld voor vitest moet je `pool: 'vmThreads',` aanzetten in de config als je de volgende error tegenkomt: `TypeError: Unknown file extension ".css"`
 
 ## Rijkshuisstijl Community Componenten
 
