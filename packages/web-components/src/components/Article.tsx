@@ -14,7 +14,6 @@ export class ArticleWebComponent extends BaseWebComponent {
 
   render(): void {
     if (!this.shadowRoot) return;
-<i></i>
     render(
       <Article {...this.props}>
         <slot />
