@@ -383,6 +383,18 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
 
+  packages/components-css/figure-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      '@utrecht/figure-css':
+        specifier: 1.6.0
+        version: 1.6.0
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
   packages/components-css/library-css:
     dependencies:
       '@amsterdam/design-system-css':
@@ -412,6 +424,9 @@ importers:
       '@rijkshuisstijl-community/article-css':
         specifier: workspace:*
         version: link:../article-css
+      '@rijkshuisstijl-community/figure-css':
+        specifier: workspace:*
+        version: link:../figure-css
       '@rijkshuisstijl-community/paragraph-css':
         specifier: workspace:*
         version: link:../paragraph-css
