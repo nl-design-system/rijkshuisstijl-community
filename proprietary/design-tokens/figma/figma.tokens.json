@@ -896,10 +896,10 @@
         }
       },
       "icon": {
-        "md": {
-          "inset-block-start": {
+        "inset-block-start": {
+          "md": {
             "$type": "dimension",
-            "$value": "0.188rem",
+            "$value": "{rhc.icon.inset-block-start.max.md}",
             "$description": "[figma-only] [temporary – until nl-icon]"
           }
         }
@@ -937,10 +937,10 @@
         }
       },
       "icon": {
-        "md": {
-          "inset-block-start": {
+        "inset-block-start": {
+          "md": {
             "$type": "dimension",
-            "$value": "0rem",
+            "$value": "{rhc.icon.inset-block-start.min.md}",
             "$description": "[figma-only] [temporary – until nl-icon]"
           }
         }
@@ -2325,7 +2325,7 @@
           },
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.icon.md.inset-block-start}"
+            "$value": "{rhc.icon.inset-block-start.md}"
           },
           "size": {
             "$type": "dimension",
@@ -4694,7 +4694,7 @@
         "input": {
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.icon.md.inset-block-start}"
+            "$value": "{rhc.icon.inset-block-start.md}"
           }
         }
       }
@@ -5031,7 +5031,7 @@
         "icon": {
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.icon.md.inset-block-start}"
+            "$value": "{rhc.icon.inset-block-start.md}"
           },
           "size": {
             "$type": "dimension",
@@ -8648,7 +8648,7 @@
         "rhc.text.font-size.xl": "fecb0270b284f1ce3aead1f4c15e3e146f4ead53",
         "rhc.text.font-size.2xl": "41ef983ee0607b7365262d3bf7abd432a8a4a4f4",
         "rhc.text.font-size.3xl": "a86c47599ae957ac82f976a406d3f9715af3163d",
-        "rhc.icon.md.inset-block-start": "2e1104cbaf9c3aa65a518db56302d3805b775fa5"
+        "rhc.icon.inset-block-start.md": "2e1104cbaf9c3aa65a518db56302d3805b775fa5"
       }
     },
     {
@@ -8668,7 +8668,7 @@
         "rhc.text.font-size.xl": "fecb0270b284f1ce3aead1f4c15e3e146f4ead53",
         "rhc.text.font-size.2xl": "41ef983ee0607b7365262d3bf7abd432a8a4a4f4",
         "rhc.text.font-size.3xl": "a86c47599ae957ac82f976a406d3f9715af3163d",
-        "rhc.icon.md.inset-block-start": "2e1104cbaf9c3aa65a518db56302d3805b775fa5"
+        "rhc.icon.inset-block-start.md": "2e1104cbaf9c3aa65a518db56302d3805b775fa5"
       }
     },
     {
@@ -8694,7 +8694,9 @@
         "rhc.text.font-size.max.xl": "0b457661b319c0e02150e6e91835d99e01f06c65",
         "rhc.text.font-size.max.2xl": "29141e7bb34c00bdeac89d02841c042b6b979491",
         "rhc.text.font-size.max.3xl": "00bb5f311c6fd628f98c1b9a82af3345aeef0436",
-        "rhc.size.pointer-target": "b23fd43199d899a8c68b3e354e99d158a8c0b514"
+        "rhc.size.pointer-target": "b23fd43199d899a8c68b3e354e99d158a8c0b514",
+        "rhc.icon.inset-block-start.min.md": "860e3ddc8343ac1cf7760f4c9069f2672c6b82a5",
+        "rhc.icon.inset-block-start.max.md": "0e312065862ce4e82440986e7141abe9dc670f22"
       }
     },
     {
@@ -8720,7 +8722,9 @@
         "rhc.text.font-size.min.xl": "6c6dba13468f354bbc054007b1dde302b2a29ef9",
         "rhc.text.font-size.min.2xl": "c49e10e4d521a6b97f6cc9f32af2a67c45dc42c5",
         "rhc.text.font-size.min.3xl": "133460429e65bed6d5519c1fce20eccb8c2be5f6",
-        "rhc.size.pointer-target": "b23fd43199d899a8c68b3e354e99d158a8c0b514"
+        "rhc.size.pointer-target": "b23fd43199d899a8c68b3e354e99d158a8c0b514",
+        "rhc.icon.inset-block-start.min.md": "860e3ddc8343ac1cf7760f4c9069f2672c6b82a5",
+        "rhc.icon.inset-block-start.max.md": "0e312065862ce4e82440986e7141abe9dc670f22"
       }
     },
     {
@@ -8924,89 +8928,6 @@
       },
       "$figmaVariableReferences": {},
       "group": "components"
-    },
-    {
-      "id": "44c0a0c364021e2f2ca66a503534a021d8ddd1d5",
-      "name": "groen",
-      "$figmaStyleReferences": {},
-      "selectedTokenSets": {
-        "common/theme/primary/groen": "enabled",
-        "common/theme/button-color/primary": "enabled",
-        "common/border": "enabled",
-        "common/color": "enabled",
-        "common/text": "enabled",
-        "components/accordion": "enabled",
-        "components/action-group": "enabled",
-        "components/alert": "enabled",
-        "components/article": "enabled",
-        "components/backdrop": "enabled",
-        "components/blockquote": "enabled",
-        "components/body": "enabled",
-        "components/breadcrumb": "enabled",
-        "components/button": "enabled",
-        "components/card": "enabled",
-        "components/card-as-link": "enabled",
-        "components/checkbox-group": "enabled",
-        "components/checkbox": "enabled",
-        "components/code-input": "enabled",
-        "components/code-input-group": "enabled",
-        "components/column-layout": "enabled",
-        "components/data-badge": "enabled",
-        "components/data-badge-button": "enabled",
-        "components/data-summary": "enabled",
-        "components/document": "enabled",
-        "components/dot-badge": "enabled",
-        "components/drawer": "enabled",
-        "components/expandable-checkbox-group": "enabled",
-        "components/fieldset": "enabled",
-        "components/figure": "enabled",
-        "components/file-input": "enabled",
-        "components/form-field": "enabled",
-        "components/form-field-checkbox-option": "enabled",
-        "components/form-field-description": "enabled",
-        "components/form-field-error-message": "enabled",
-        "components/form-field-label": "enabled",
-        "components/form-field-option-label": "enabled",
-        "components/form-field-radio-option": "enabled",
-        "components/heading": "enabled",
-        "components/hero": "enabled",
-        "components/icon": "enabled",
-        "components/link-list": "enabled",
-        "components/link-list-card": "enabled",
-        "components/link/nl": "enabled",
-        "components/link/utrecht": "enabled",
-        "components/listbox": "enabled",
-        "components/logo": "enabled",
-        "components/message-list": "enabled",
-        "components/nav-bar": "enabled",
-        "components/navigation-list": "enabled",
-        "components/number-badge/nl": "enabled",
-        "components/number-badge/utrecht": "enabled",
-        "components/ordered-list": "enabled",
-        "components/page-body": "enabled",
-        "components/page-footer": "enabled",
-        "components/page-number-navigation": "enabled",
-        "components/paragraph": "enabled",
-        "components/pre-heading": "enabled",
-        "components/radio-button": "enabled",
-        "components/radio-group": "enabled",
-        "components/rich-text": "enabled",
-        "components/root": "enabled",
-        "components/select": "enabled",
-        "components/separator": "enabled",
-        "components/side-nav": "enabled",
-        "components/skip-link": "enabled",
-        "components/status-badge": "enabled",
-        "components/sub-nav-bar": "enabled",
-        "components/table": "enabled",
-        "components/text-input/base": "enabled",
-        "components/text-input/deprecated": "enabled",
-        "components/textarea": "enabled",
-        "components/toggletip": "enabled",
-        "components/unordered-list": "enabled",
-        "components/page-header": "enabled"
-      },
-      "group": "primary"
     }
   ],
   "$metadata": {
