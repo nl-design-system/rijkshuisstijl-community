@@ -1,0 +1,46 @@
+/*
+ * Prefer `vi` over `vw` when available.
+ * Like `inline-size` and other logical properties, `vi` is based on the `inline` axis,
+ * instead of making assumptions about the text direction.
+ * The `vi` unit is unfortunately not yet implemented by all evergreen browsers.
+ */
+
+@property --basis-layout-viewport-width {
+  inherits: true;
+  initial-value: 0;
+  syntax: "<length>";
+}
+
+/**
+ * "Layout viewport" is based on the term in CSS:
+ * https://developer.mozilla.org/en-US/docs/Glossary/Layout_viewport
+ *
+ * As a design token it would be `basis.layout-viewport.inline-size`.
+ */
+@property --basis-layout-viewport-inline-size {
+  inherits: true;
+  initial-value: 0;
+  syntax: "<length>";
+}
+
+.basis-layout-container,
+.rhc-theme {
+  --basis-layout-viewport-width: 100vw;
+  --basis-layout-viewport-inline-size: 100vi;
+  --_basis-layout-container-min-inline-size: tan(atan2(var(--basis-layout-container-min-inline-size, 400px), 1px));
+  --_basis-layout-container-max-inline-size: tan(atan2(var(--basis-layout-container-max-inline-size, 1200px), 1px));
+  --basis-layout-container-size: tan(
+    atan2(var(--basis-layout-viewport-inline-size, var(--basis-layout-viewport-width)), 1px)
+  );
+  --basis-layout-container-scale: calc(
+    (
+        clamp(
+            var(--_basis-layout-container-min-inline-size),
+            var(--basis-layout-container-size),
+            var(--_basis-layout-container-max-inline-size)
+          ) -
+          var(--_basis-layout-container-min-inline-size)
+      ) /
+      (var(--_basis-layout-container-max-inline-size) - var(--_basis-layout-container-min-inline-size))
+  );
+}
