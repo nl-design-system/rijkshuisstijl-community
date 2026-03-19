@@ -1,6 +1,4 @@
-import { Logo, NavBar, PageHeader } from '@rijkshuisstijl-community/components-react';
-import { Icon } from '@rijkshuisstijl-community/icon-react';
-
+import { Icon, Logo, NavBar, PageHeader } from '@rijkshuisstijl-community/components-react';
 import './Header.css';
 
 export function Header() {

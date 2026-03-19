@@ -1,5 +1,10 @@
-import { ColumnLayout, LinkList, LinkListLink, type LinkListProps } from '@rijkshuisstijl-community/components-react';
-import { Icon } from '@rijkshuisstijl-community/icon-react';
+import {
+  ColumnLayout,
+  Icon,
+  LinkList,
+  LinkListLink,
+  type LinkListProps,
+} from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { PropsWithChildren } from 'react';

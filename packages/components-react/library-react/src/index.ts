@@ -132,7 +132,7 @@ export { PageContent, type PageContentProps } from './PageContent';
 export { PageHeader, type PageHeaderProps } from './PageHeader';
 export { PageLayout, type PageLayoutProps } from './PageLayout';
 export { PageNumberNavigation, type PageNumberNavigationProps } from './PageNumberNavigation';
-export { Paragraph, type ParagraphProps } from './Paragraph';
+export { Paragraph, type ParagraphProps } from '@rijkshuisstijl-community/paragraph-react';
 export { PreHeading, type PreHeadingProps } from './PreHeading';
 export { Radio, type RadioProps } from './Radio';
 export { RadioGroup, type RadioGroupProps } from './RadioGroup';
