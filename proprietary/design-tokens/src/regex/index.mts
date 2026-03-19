@@ -1,6 +1,6 @@
 // Matches a CSS custom property declaration and captures the declaration prefix,
 // the raw value, and the trailing semicolon separately for targeted rewrites.
-export const varRegex = /(?<prefix>^\s*--[^:]+:\s*)(?<value>[^;]+?)(?<suffix>\s*;)/gm;
+export const varRegex = /^(?<indentation>\s*)(?<variableName>--[-_a-zA-Z0-9]+)\s*:\s*(?<value>[^;]+?)\s*;/gm;
 
 // Detects math operators that indicate a value should be wrapped in calc().
 export const operatorRegex = /(?:\s\+\s|\s-\s|\/|\*)/;
