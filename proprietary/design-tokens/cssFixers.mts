@@ -34,7 +34,7 @@ export function fixCalc(content: string): string {
 // Exponentiation (^) is not supported in CSS, so we need to convert it to pow(base, exponent)
 export function fixExponentiation(content: string): string {
   const exponentiationRegex =
-    /([0-9]*\.?[0-9]+(?:[a-z%]+)?|var\([^)]+\))\s*\^\s*([0-9]*\.?[0-9]+(?:[a-z%]+)?|var\([^)]+\))/g;
+    /(\d*\.?\d+(?:[a-z%]+)?|var\([^)]+\))\s*\^\s*(\d*\.?\d+(?:[a-z%]+)?|var\([^)]+\))/g;
 
   return content.replaceAll(varRegex, (match, prefix, value, suffix) => {
     if (!value.includes('^')) {

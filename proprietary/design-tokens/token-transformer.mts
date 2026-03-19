@@ -153,7 +153,7 @@ export async function transformAndSplitTokens(): Promise<void> {
       id: theme.id,
       tokens: {
         ...themeTokens,
-        ...(tokens.tokenSets[INFORMATION_DENSE_TYPE_SCALE_TOKEN_SET] !== undefined
+        ...(tokens.tokenSets[INFORMATION_DENSE_TYPE_SCALE_TOKEN_SET]
           ? {
               [INFORMATION_DENSE_TYPE_SCALE_TOKEN_SET]: tokens.tokenSets[INFORMATION_DENSE_TYPE_SCALE_TOKEN_SET],
             }
