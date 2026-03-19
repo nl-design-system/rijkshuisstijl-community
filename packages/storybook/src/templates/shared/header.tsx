@@ -1,5 +1,4 @@
-import { Logo, NavBar, NavBarItemProps, PageHeader, SkipLink } from '@rijkshuisstijl-community/components-react';
-import { Icon } from '@rijkshuisstijl-community/icon-react';
+import { Icon, Logo, NavBar, NavBarItemProps, PageHeader, SkipLink } from '@rijkshuisstijl-community/components-react';
 import './header.css';
 import { useEffect, useState } from 'react';
 

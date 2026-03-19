@@ -6,7 +6,7 @@
 @use "@rijkshuisstijl-community/accordion-css/src/index" as accordion;
 @use "src/action-group/index" as actionGroup;
 @use "@rijkshuisstijl-community/alert-css/src/index" as alert;
-@use "src/article/index" as article;
+@use "@rijkshuisstijl-community/article-css/src/index" as article;
 @use "src/blockquote/index" as blockquote;
 @use "src/breadcrumb-nav/index" as breadcrumb;
 @use "src/button/index" as button;
@@ -40,7 +40,7 @@
 @use "src/navigation-list/index" as navigationList;
 @use "src/number-badge/index" as numberBadge;
 @use "src/ordered-list/index" as orderedList;
-@use "src/paragraph/index.scss" as paragraph;
+@use "@rijkshuisstijl-community/paragraph-css/src/index" as paragraph;
 @use "src/page-number-navigation/index" as pagination;
 @use "src/pre-heading/index" as preHeading;
 @use "src/radio/index" as radio;
@@ -70,6 +70,7 @@
 @import "@utrecht/article-css/dist/index.css";
 @import "@utrecht/data-badge-css/dist/index.css";
 @import "@utrecht/data-list-css/dist/index.css";
+@import "@utrecht/body-css/dist/index.css";
 @import "@utrecht/blockquote-css/dist/index.css";
 @import "@utrecht/breadcrumb-nav-css/dist/index.css";
 @import "@utrecht/checkbox-css/dist/index.css";
@@ -98,6 +99,7 @@
 @import "@utrecht/paragraph-css/dist/index.css";
 @import "@utrecht/pre-heading-css/dist/index.css";
 @import "@utrecht/radio-button-css/dist/index.css";
+@import "@utrecht/root-css/dist/index.css";
 @import "@utrecht/select-css/dist/index.css";
 @import "@utrecht/separator-css/dist/index.css";
 @import "@utrecht/table-css/dist/index.css";

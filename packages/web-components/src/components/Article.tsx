@@ -1,5 +1,5 @@
+import { Article, ArticleProps } from '@rijkshuisstijl-community/article-react';
 import stylesheet from '@rijkshuisstijl-community/components-css/dist/index.css?inline';
-import { Article, ArticleProps } from '@rijkshuisstijl-community/components-react';
 import { render } from 'preact';
 import { BaseWebComponent } from './BaseComponent';
 
@@ -14,7 +14,6 @@ export class ArticleWebComponent extends BaseWebComponent {
 
   render(): void {
     if (!this.shadowRoot) return;
-
     render(
       <Article {...this.props}>
         <slot />
