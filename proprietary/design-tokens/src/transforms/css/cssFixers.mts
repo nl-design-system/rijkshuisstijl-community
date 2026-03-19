@@ -44,6 +44,48 @@ export function fixExponentiation(content: string): string {
   });
 }
 
+const ROUND_TO_PREFIX = 'roundTo(';
+
+function findMatchingParenthesis(value: string, startIndex: number): number {
+  let index = startIndex;
+  let parenthesisDepth = 1;
+
+  while (index < value.length && parenthesisDepth > 0) {
+    if (value[index] === '(') {
+      parenthesisDepth++;
+    }
+
+    if (value[index] === ')') {
+      parenthesisDepth--;
+    }
+
+    index++;
+  }
+
+  return index;
+}
+
+function stripRoundToCalls(value: string): string {
+  let result = '';
+  let index = 0;
+
+  while (index < value.length) {
+    if (value.slice(index, index + ROUND_TO_PREFIX.length) !== ROUND_TO_PREFIX) {
+      result += value[index];
+      index++;
+      continue;
+    }
+
+    const roundToValueStart = index + ROUND_TO_PREFIX.length;
+    const roundToValueEnd = findMatchingParenthesis(value, roundToValueStart);
+
+    result += value.slice(roundToValueStart, roundToValueEnd - 1);
+    index = roundToValueEnd;
+  }
+
+  return result;
+}
+
 // This will strip out any roundTo() calls, as CSS doesn't support it.
 // It does allow round(), but that needs a rounding interval, which is unknown at this point.
 // See https://developer.mozilla.org/en-US/docs/Web/CSS/round
@@ -53,32 +95,6 @@ export function fixRoundTo(content: string): string {
       return match;
     }
 
-    // Handle nested parentheses by processing the string character by character
-    let fixedValue = value;
-    let result = '';
-    let i = 0;
-
-    while (i < fixedValue.length) {
-      if (fixedValue.slice(i, i + 8) === 'roundTo(') {
-        // Found roundTo(, now find the matching closing parenthesis
-        i += 8; // Skip "roundTo("
-        let parenCount = 1;
-        let start = i;
-
-        while (i < fixedValue.length && parenCount > 0) {
-          if (fixedValue[i] === '(') parenCount++;
-          if (fixedValue[i] === ')') parenCount--;
-          i++;
-        }
-
-        // Extract the content between parentheses and add to result
-        result += fixedValue.slice(start, i - 1);
-      } else {
-        result += fixedValue[i];
-        i++;
-      }
-    }
-
-    return `${prefix}${result}${suffix}`;
+    return `${prefix}${stripRoundToCalls(value)}${suffix}`;
   });
 }

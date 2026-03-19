@@ -94,5 +94,10 @@ describe('css fixers', () => {
       const output = '--some-var: calc(var(--base) * 2);';
       expect(fixRoundTo(input)).toBe(output);
     });
+    test('should preserve nested function contents while removing nested roundTo() wrappers', async () => {
+      const input = '--some-var: roundTo(calc(roundTo(var(--base) * 2) + 1rem));';
+      const output = '--some-var: calc(roundTo(var(--base) * 2) + 1rem);';
+      expect(fixRoundTo(input)).toBe(output);
+    });
   });
 });
