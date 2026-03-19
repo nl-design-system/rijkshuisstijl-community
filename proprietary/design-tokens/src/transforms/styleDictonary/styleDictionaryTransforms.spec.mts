@@ -11,6 +11,7 @@ describe('styleDictionaryTransforms', () => {
 
     test('passes through CSS keywords', () => {
       expect(skipRemTransform('auto')).toBe(true);
+      expect(skipRemTransform('Auto')).toBe(true);
       expect(skipRemTransform('fit-content')).toBe(true);
     });
 

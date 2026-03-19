@@ -21,7 +21,7 @@ export function skipRemTransform(rawValue: unknown): boolean {
     return false;
   }
 
-  const trimmedValue = rawValue.trim();
+  const trimmedValue = rawValue.trim().toLocaleLowerCase();
 
   if (trimmedValue === '') {
     return false;
