@@ -16,17 +16,13 @@ pnpm add @rijkshuisstijl-community/paragraph-react
 ### Voorbeeld 1
 
 ```tsx
-<Paragraph>
-  Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod
-</Paragraph>
+<Paragraph>Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod</Paragraph>
 ```
 
 ### Voorbeeld 2
 
 ```tsx
-<Paragraph purpose="lead">
-  Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod
-</Paragraph>
+<Paragraph purpose="lead">Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod</Paragraph>
 ```
 
 ## Rijkshuisstijl Community Componenten

@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import { AccordionWebComponent, type AccordionWebComponentAttributes } from './components/Accordion';
 import { ActionGroupWebComponent, type ActionGroupWebComponentAttributes } from './components/ActionGroup';

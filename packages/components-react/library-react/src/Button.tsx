@@ -14,7 +14,7 @@ import {
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { PropsWithChildren, Ref } from 'react';
-import { Icon, type RHCIconID} from '.';
+import { Icon, type RHCIconID } from '.';
 
 export {
   Button,

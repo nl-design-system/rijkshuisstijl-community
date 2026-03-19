@@ -1,14 +1,14 @@
-import { existsSync, mkdirSync } from 'fs';
+import { existsSync, mkdirSync } from 'node:fs';
 import { readFile, writeFile } from 'node:fs/promises';
-import { posix } from 'path';
+import { posix } from 'node:path';
 import StyleDictionary from 'style-dictionary';
-import { register } from '@tokens-studio/sd-transforms';
 
-import { fixCSSFile } from './cssFixers.mjs';
+import { fixCSSFile } from './src/transforms/css/cssFixers.mts';
+import { registerTokenStudioTransformGroup } from './src/transforms/styleDictonary/styleDictionaryTransforms.mts';
 
 // Will take the theme name and remove all spaces and make it lowercase
-const normalizeThemeName = (name) => {
-  return name.toLowerCase().replace(/\s+/g, '');
+const normalizeThemeName = (name: string): string => {
+  return name.toLowerCase().replaceAll(/\s+/g, '');
 };
 
 const removeUnitlessLineHeightTransform = () => {
@@ -30,6 +30,10 @@ StyleDictionary.registerAction({
     const files = config.files || [];
     // TS allows roundTo(), exponentiation (^) and basic calculations (without `calc()`) in their values, but these are not valid CSS.
     for (const file of files) {
+      if (!file.destination) {
+        throw new Error(`Expected a destination for build file in "${buildPath}".`);
+      }
+
       const filePath = posix.join(buildPath, file.destination);
       console.log('🔧 fixing css:', filePath);
       await fixCSSFile(filePath);
@@ -42,7 +46,7 @@ StyleDictionary.registerAction({
 // Custom header to add generation date
 StyleDictionary.registerFileHeader({
   name: 'nlds-rhc-header',
-  fileHeader: function (defaultMessage) {
+  fileHeader: function (defaultMessage = []) {
     return [...defaultMessage, `Generated on ${new Date().toUTCString()}`];
   },
 });
@@ -58,10 +62,11 @@ const excludes = [
   'components/toolbar-button',
 ];
 
-register(StyleDictionary, { excludeParentKeys: true });
+// register token-studio transforms
+registerTokenStudioTransformGroup(StyleDictionary);
 
 // Get the platforms config
-const getPlatformsConfig = (buildPath, themeName) => {
+const getPlatformsConfig = (buildPath: string, themeName: string) => {
   return {
     javascript: {
       transformGroup: 'tokens-studio',
@@ -149,7 +154,7 @@ async function buildBaseTokens() {
 // This will build the themes
 async function buildThemes() {
   const themesJson = await readFile('./src/generated/themes.json', 'utf-8');
-  const themes = JSON.parse(themesJson);
+  const themes: Record<string, { tokens: unknown }> = JSON.parse(themesJson);
 
   // Process each theme separately
   for (const [theme, themeData] of Object.entries(themes)) {
@@ -183,13 +188,12 @@ async function buildThemes() {
 }
 
 async function build() {
-  try {
-    removeUnitlessLineHeightTransform(); // This needs to happen before building anything
-    await buildBaseTokens();
-    await buildThemes();
-  } catch (error) {
-    console.error(error);
-  }
+  removeUnitlessLineHeightTransform(); // This needs to happen before building anything
+  await buildBaseTokens();
+  await buildThemes();
 }
 
-build();
+await build().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
