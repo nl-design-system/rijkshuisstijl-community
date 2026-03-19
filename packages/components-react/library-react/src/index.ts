@@ -12,7 +12,7 @@ export {
 } from '@rijkshuisstijl-community/accordion-react';
 export { ActionGroup, type ActionGroupProps } from './ActionGroup';
 export { Alert, type AlertProps } from '@rijkshuisstijl-community/alert-react';
-export { Article, type ArticleProps } from './Article';
+export { Article, type ArticleProps } from '@rijkshuisstijl-community/article-react';
 export { Blockquote, type BlockquoteProps } from './Blockquote';
 export { Body, type BodyBodyProps, type DivBodyProps } from './Body';
 export {
