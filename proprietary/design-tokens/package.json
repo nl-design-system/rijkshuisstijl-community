@@ -20,7 +20,7 @@
   "scripts": {
     "clean": "rimraf dist/ src/generated/",
     "build": "npm-run-all clean build:figma-tokens build:style-dictionary",
-    "build:figma-tokens": "node --experimental-strip-types ./token-transformer.mts",
+    "build:figma-tokens": "node --experimental-strip-types ./src/transforms/splitTokens/token-transformer.mts",
     "build:style-dictionary": "node --experimental-strip-types ./build.mts",
     "typecheck": "tsc --noEmit",
     "watch": "npm-run-all watch:**",

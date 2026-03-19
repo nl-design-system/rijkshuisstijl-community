@@ -1,12 +1,12 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
+import { exponentiationRegex, operatorRegex, varRegex } from '../../regex/index.mts';
+
 // When using `outputReferences: true` in Style Dictionary (see `build.mts`), any calculations/transforms are overwritten by the css-var-names.
 // So you'll end up with invalid CSS like:
 // `--my-var: var(--my-length) + 20px;` - see: https://github.com/style-dictionary/style-dictionary/issues/1055
 // We will need to fix any invalid stuff from Tokens Studio (TS) here as a post-build step.
 // This applies to both .css and .scss files.
-
-const varRegex = /(?<prefix>^\s*--[^:]+:\s*)(?<value>[^;]+?)(?<suffix>\s*;)/gm;
 
 export async function fixCSSFile(filePath: string): Promise<void> {
   let content = await readFile(filePath, 'utf-8');
@@ -20,8 +20,6 @@ export async function fixCSSFile(filePath: string): Promise<void> {
 
 // This will wrap any calculations in `calc()`.
 export function fixCalc(content: string): string {
-  const operatorRegex = /(?:\s\+\s|\s-\s|\/|\*)/;
-
   return content.replaceAll(varRegex, (match, prefix, value, suffix) => {
     if (!value.match(operatorRegex)) {
       return match;
@@ -33,9 +31,6 @@ export function fixCalc(content: string): string {
 
 // Exponentiation (^) is not supported in CSS, so we need to convert it to pow(base, exponent)
 export function fixExponentiation(content: string): string {
-  const exponentiationRegex =
-    /(\d*\.?\d+(?:[a-z%]+)?|var\([^)]+\))\s*\^\s*(\d*\.?\d+(?:[a-z%]+)?|var\([^)]+\))/g;
-
   return content.replaceAll(varRegex, (match, prefix, value, suffix) => {
     if (!value.includes('^')) {
       return match;

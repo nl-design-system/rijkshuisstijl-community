@@ -3,8 +3,8 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { posix } from 'node:path';
 import StyleDictionary from 'style-dictionary';
 
-import { fixCSSFile } from './cssFixers.mts';
-import { registerTokenStudioTransformGroup } from './src/transforms/styleDictionaryTransforms.mts';
+import { fixCSSFile } from './src/transforms/css/cssFixers.mts';
+import { registerTokenStudioTransformGroup } from './src/transforms/styleDictonary/styleDictionaryTransforms.mts';
 
 // Will take the theme name and remove all spaces and make it lowercase
 const normalizeThemeName = (name: string): string => {

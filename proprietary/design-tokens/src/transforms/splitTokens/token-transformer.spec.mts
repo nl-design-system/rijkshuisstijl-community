@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import { isJsonValue, parseThemeDefinition, parseTokensFile } from './token-transformer.mts';
+import { isJsonValue, parseThemeDefinition, parseTokensFile } from './token-transformer.mjs';
 
 describe('token transformer guards', () => {
   describe('isJsonValue', () => {
