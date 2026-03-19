@@ -1,5 +1,23 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 12.1.0
+
+### Minor Changes
+
+- 589942f: Add design tokens for new components: body, page-body, page-header and root.
+- 2eab729: Add fluid design class names: `rhc-theme--fluid`, `rhc-theme--fluid-font-size` and `rhc-theme--fluid-space`.
+
+### Patch Changes
+
+- 8bb5706: - Verwijderd: rhc.line-height.icon.md
+  - Toegevoegd: rhc.icon.md.inset-block-start & rhc.icon.lg.inset-block-start
+
+  In Figma kan een fixed height van een instance (component) niet worden aangepast
+  met design tokens. Daarom zijn de inset-block-start tokens toegevoegd als
+  vervanging van de line-height tokens, zodat de responsive font-size in Figma (fluid in code) werkt.
+
+- 92b5344: Consistently use brand tokens instead of hardcoded colors.
+
 ## 12.0.0
 
 ### Major Changes
