@@ -20,18 +20,18 @@ export async function fixCSSFile(filePath: string): Promise<void> {
 
 // This will wrap any calculations in `calc()`.
 export function fixCalc(content: string): string {
-  return content.replaceAll(varRegex, (match, prefix, value, suffix) => {
+  return content.replaceAll(varRegex, (match, indentation, variableName, value) => {
     if (!value.match(operatorRegex)) {
       return match;
     }
 
-    return `${prefix}calc(${value})${suffix}`;
+    return `${indentation}${variableName}: calc(${value});`;
   });
 }
 
 // Exponentiation (^) is not supported in CSS, so we need to convert it to pow(base, exponent)
 export function fixExponentiation(content: string): string {
-  return content.replaceAll(varRegex, (match, prefix, value, suffix) => {
+  return content.replaceAll(varRegex, (match, indentation, variableName, value) => {
     if (!value.includes('^')) {
       return match;
     }
@@ -40,7 +40,7 @@ export function fixExponentiation(content: string): string {
       return `pow(${base}, ${exponent})`;
     });
 
-    return `${prefix}${fixedValue}${suffix}`;
+    return `${indentation}${variableName}: ${fixedValue};`;
   });
 }
 
@@ -90,11 +90,11 @@ function stripRoundToCalls(value: string): string {
 // It does allow round(), but that needs a rounding interval, which is unknown at this point.
 // See https://developer.mozilla.org/en-US/docs/Web/CSS/round
 export function fixRoundTo(content: string): string {
-  return content.replaceAll(varRegex, (match, prefix, value, suffix) => {
+  return content.replaceAll(varRegex, (match, indentation, variableName, value) => {
     if (!value.includes('roundTo(')) {
       return match;
     }
 
-    return `${prefix}${stripRoundToCalls(value)}${suffix}`;
+    return `${indentation}${variableName}: ${stripRoundToCalls(value)};`;
   });
 }

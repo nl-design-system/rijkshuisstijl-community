@@ -8,9 +8,9 @@ describe('regex', () => {
       const match = new RegExp(varRegex.source, varRegex.flags).exec('  --spacing-md: var(--base) + 8px;');
 
       expect(match?.groups).toEqual({
-        prefix: '  --spacing-md: ',
+        indentation: '  ',
+        variableName: '--spacing-md',
         value: 'var(--base) + 8px',
-        suffix: ';',
       });
     });
 
