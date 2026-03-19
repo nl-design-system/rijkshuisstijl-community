@@ -5,7 +5,7 @@
 
 import clsx from 'clsx';
 import { PropsWithChildren, ReactNode, Ref } from 'react';
-import { Image } from './Image';
+import { Image } from '.';
 import { Link } from './Link';
 
 interface CardAsLinkPropsBase {
