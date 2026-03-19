@@ -13,8 +13,6 @@ pnpm add @rijkshuisstijl-community/article-react
 
 ## Gebruik
 
-### Voorbeeld 1
-
 ```tsx
 <Article>
   <p>
@@ -22,6 +20,10 @@ pnpm add @rijkshuisstijl-community/article-react
   </p>
 </Article>
 ```
+
+## Testing
+
+We bundelen de CSS direct mee met de componenten zodat je dit niet apart hoeft in te laden. Let wel op met unit tests die in de Node omgeving draaien: die ondersteunen niet altijd standaard `.css` files. Voor vitest moet je bijvoorbeeld `pool: 'vmThreads',` aanzetten in de config als je de volgende error tegenkomt: `TypeError: Unknown file extension ".css"`
 
 ## Rijkshuisstijl Community Componenten
 
