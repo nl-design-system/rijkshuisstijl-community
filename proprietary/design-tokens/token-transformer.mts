@@ -33,13 +33,8 @@ const isObject = (value: unknown): value is Record<string, unknown> => {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
 };
 
-const isJsonValue = (value: unknown): value is JsonValue => {
-  if (
-    value === null ||
-    typeof value === 'boolean' ||
-    typeof value === 'number' ||
-    typeof value === 'string'
-  ) {
+export const isJsonValue = (value: unknown): value is JsonValue => {
+  if (value === null || typeof value === 'boolean' || typeof value === 'number' || typeof value === 'string') {
     return true;
   }
 
@@ -54,7 +49,7 @@ const isJsonValue = (value: unknown): value is JsonValue => {
   return Object.values(value).every(isJsonValue);
 };
 
-const parseThemeDefinition = (value: unknown): ThemeDefinition => {
+export const parseThemeDefinition = (value: unknown): ThemeDefinition => {
   if (!isObject(value)) {
     throw new TypeError('Expected each theme definition to be an object.');
   }
@@ -87,7 +82,7 @@ const parseThemeDefinition = (value: unknown): ThemeDefinition => {
   };
 };
 
-const parseTokensFile = (json: string): TokensFile => {
+export const parseTokensFile = (json: string): TokensFile => {
   const parsed: unknown = JSON.parse(json);
 
   if (!isObject(parsed)) {
@@ -128,7 +123,7 @@ const addTokenSetIfPresent = (
 };
 
 // Split tokens into separate files
-async function transformAndSplitTokens(): Promise<void> {
+export async function transformAndSplitTokens(): Promise<void> {
   // Read the raw JSON file directly
   const json = await readFile('./figma/figma.tokens.json', 'utf-8');
   const tokens = parseTokensFile(json);
@@ -146,11 +141,7 @@ async function transformAndSplitTokens(): Promise<void> {
     });
 
     // Add default type scale here, because Figma does not understand `clamp(...)`
-    addTokenSetIfPresent(
-      themeTokens,
-      DEFAULT_TYPE_SCALE_TOKEN_SET,
-      tokens.tokenSets[DEFAULT_TYPE_SCALE_TOKEN_SET],
-    );
+    addTokenSetIfPresent(themeTokens, DEFAULT_TYPE_SCALE_TOKEN_SET, tokens.tokenSets[DEFAULT_TYPE_SCALE_TOKEN_SET]);
 
     processedThemes[theme.name] = {
       id: theme.id,
@@ -164,8 +155,7 @@ async function transformAndSplitTokens(): Promise<void> {
         ...themeTokens,
         ...(tokens.tokenSets[INFORMATION_DENSE_TYPE_SCALE_TOKEN_SET] !== undefined
           ? {
-              [INFORMATION_DENSE_TYPE_SCALE_TOKEN_SET]:
-                tokens.tokenSets[INFORMATION_DENSE_TYPE_SCALE_TOKEN_SET],
+              [INFORMATION_DENSE_TYPE_SCALE_TOKEN_SET]: tokens.tokenSets[INFORMATION_DENSE_TYPE_SCALE_TOKEN_SET],
             }
           : {}),
       },
