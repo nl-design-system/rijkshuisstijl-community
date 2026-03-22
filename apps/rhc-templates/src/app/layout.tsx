@@ -17,6 +17,7 @@ import './layout.css';
 import '@rijkshuisstijl-community/design-tokens/src/fluid.css';
 import '@rijkshuisstijl-community/design-tokens/src/fluid-font-size.css';
 import '@rijkshuisstijl-community/design-tokens/src/fluid-space.css';
+import '@rijkshuisstijl-community/design-tokens/src/dark-mode.css';
 
 export const metadata: Metadata = {
   title: {
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
-    <Root lang="nl" dir="ltr" className="rhc-theme rhc-theme--fluid-font-size">
+    <Root lang="nl" dir="ltr" className="rhc-theme rhc-theme--fluid-font-size rhc-theme--dark-mode">
       <Body>
         <PageLayout>{children}</PageLayout>
       </Body>
