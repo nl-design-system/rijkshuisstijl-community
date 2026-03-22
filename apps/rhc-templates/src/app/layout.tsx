@@ -27,13 +27,11 @@ export const metadata: Metadata = {
   },
 };
 
+export const themeModifiers = `basis-layout-container basis-layout-container--fluid-font-size basis-layout-container--fixed-hue basis-layout-container--fluid-space`;
+
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
-    <Root
-      lang="nl"
-      dir="ltr"
-      className="rhc-theme rhc-theme--fluid-font-size rhc-theme--dark-mode rhc-theme--fixed-hue"
-    >
+    <Root lang="nl" dir="ltr" className={`rhc-theme rhc-theme--dark-mode ${themeModifiers}`}>
       <Body>
         <PageLayout>{children}</PageLayout>
       </Body>
