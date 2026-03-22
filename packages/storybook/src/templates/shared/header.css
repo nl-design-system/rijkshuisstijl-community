@@ -35,8 +35,17 @@
   background-color: var(--nl-link-color);
 }
 
+/* Hardcoded color with terrible workaround for dark mode...
+ * Needs to be replaced with component level tokens for dark mode.
+ */
 .rhc-nav-bar__link--current .rhc-nav-bar__label {
   color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  .rhc-nav-bar__link--current .rhc-nav-bar__label {
+    color: white;
+  }
 }
 
 .rhc-nav-bar__link--current:hover .rhc-nav-bar__label {
