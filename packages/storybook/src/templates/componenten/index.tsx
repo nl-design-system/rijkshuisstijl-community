@@ -277,7 +277,7 @@ export default function Componenten() {
   return (
     <>
       <SharedHeader />
-      <PageBody className="rhc-templates-page">
+      <PageBody className="utrecht-page-body--rhc-tinted">
         <SharedMainPageContent>
           {/* Screen reader announcements */}
           <div className="rhc-sr-only" ref={announcementRef} role="status">

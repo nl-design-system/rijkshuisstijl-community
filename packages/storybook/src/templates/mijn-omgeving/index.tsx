@@ -26,7 +26,7 @@ export default function MijnOmgeving() {
   return (
     <>
       <SharedHeader />
-      <PageBody className="rhc-templates-page rhc-templates-page--mijn-omgeving rhc-templates-background-color-white">
+      <PageBody className="utrecht-page-body--rhc-mijn-omgeving">
         <SharedMainPageContent>
           <SharedDisclaimer />
           <SideNav className={'rhc-side-nav'}>
