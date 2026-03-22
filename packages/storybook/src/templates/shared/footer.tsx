@@ -7,7 +7,6 @@ export default function SharedFooter({ isLightTheme }: { isLightTheme?: boolean 
       appearanceLevel={4}
       background={isLightTheme ? 'primary-outlined' : 'primary-filled'}
       backtotop={true}
-      className="rhc-sr-only"
       heading="Footer"
       columns={[
         {
