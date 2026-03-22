@@ -55,7 +55,7 @@ export default function Collage() {
   return (
     <>
       <SharedHeader />
-      <PageBody className="rhc-templates-page rhc-templates-background-color-white">
+      <PageBody>
         <SharedMainPageContent>
           <SharedDisclaimer />
           <Article>

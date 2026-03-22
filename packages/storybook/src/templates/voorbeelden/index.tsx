@@ -25,7 +25,7 @@ export default function Details() {
   return (
     <>
       <SharedHeader />
-      <PageBody className="rhc-templates-page rhc-templates-background-color-white">
+      <PageBody>
         <Hero className="rhc-hero-details-template" imageAlt="Tullip field" imageSrc="/placeholder.jpg">
           <LinkListCard heading="Veel bekeken" headingLevel={2}>
             <LinkListLink href="/mijn-omgeving/" icon={<Icon icon="chevron-right" />}>
