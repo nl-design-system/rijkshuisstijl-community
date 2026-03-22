@@ -12,9 +12,9 @@ export interface SideNavProps extends HTMLAttributes<HTMLElement> {
 
 export const SideNav = ({ ref, className, children, ...restProps }: SideNavProps) => {
   return (
-    <aside className={clsx('rhc-side-nav', className)} ref={ref} {...restProps}>
+    <nav className={clsx('rhc-side-nav', className)} ref={ref} {...restProps}>
       {children}
-    </aside>
+    </nav>
   );
 };
 
