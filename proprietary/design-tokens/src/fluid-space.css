@@ -72,6 +72,17 @@
       var(--basis-layout-container-scale)
   );
 
+  /* fluid logo size tokens
+   */
+  --rhc-size-lint: calc(
+    var(--rhc-size-min-lint) + (var(--rhc-size-max-lint) - var(--rhc-size-min-lint)) *
+      var(--basis-layout-container-scale)
+  );
+  --rhc-size-quarter-lint: calc(0.25 * var(--rhc-size-lint));
+  --rhc-size-half-lint: calc(0.5 * var(--rhc-size-lint));
+  --rhc-size-2-lint: calc(2 * var(--rhc-size-lint));
+  --rhc-size-4-lint: calc(4 * var(--rhc-size-lint));
+
   /* Override `rhc-space-*` tokens with Norday fluid token.
    * The 25, 50 and 150 spaces don't have an equivalent in the Norday spacing grid.
    * There are approximations of those spacing tokens.
