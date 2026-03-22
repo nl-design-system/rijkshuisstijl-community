@@ -18,6 +18,12 @@ export default function SharedHeader() {
     },
     {
       id: 'start7',
+      href: '/design-tokens/',
+      label: 'Design Tokens',
+      className: pathname === '/design-tokens/' ? 'rhc-nav-bar__link--current' : '',
+    },
+    {
+      id: 'start7',
       href: '/componenten/',
       label: 'Componenten',
       className: pathname === '/componenten/' ? 'rhc-nav-bar__link--current' : '',
@@ -29,6 +35,7 @@ export default function SharedHeader() {
       className: pathname === '/voorbeelden/' ? 'rhc-nav-bar__link--current' : '',
     },
   ];
+
   return (
     <PageHeader>
       <SkipLink className="rhc-skip-link--visible-on-focus" href="#main" id="top">
