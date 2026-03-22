@@ -68,7 +68,7 @@ export const Footer = ({
         className,
       )}
     >
-      <div className="rhc-page-footer__content rhc-page-footer__wrapper">
+      <div className="rhc-page-footer__content utrecht-page-footer__content">
         {heading && (
           <div className="rhc-page-footer__title" key={'heading'}>
             <Heading appearanceLevel={appearanceLevel} level={2}>
@@ -95,7 +95,7 @@ export const Footer = ({
             background ? `rhc-page-footer--${background}` : 'rhc-page-footer--primary-filled',
           )}
         >
-          <div className="rhc-page-subfooter__content rhc-page-footer__wrapper">
+          <div className="rhc-page-subfooter__content rhc-page-footer__wrapper utrecht-page-footer__content">
             {subFooter}
             {backtotop && (
               <a className="rhc-page-subfooter__backtotop" href="#main" onClick={scrollBackToTop}>
