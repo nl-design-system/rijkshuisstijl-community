@@ -7,7 +7,7 @@
 }
 
 <footer [class]="`utrecht-page-footer rhc-page-footer ${backgroundClass}`">
-  <div class="rhc-page-footer__content rhc-page-footer__wrapper">
+  <div class="rhc-page-footer__content utrecht-page-footer__content">
     @if (heading) {
       <div class="rhc-page-footer__title">
         <rhc-heading [level]="2" [appearanceLevel]="appearanceLevel">{{ heading }}</rhc-heading>
@@ -20,7 +20,7 @@
 
   @if (subFooter) {
     <div [class]="`rhc-page-subfooter ${backgroundClass}`">
-      <div class="rhc-page-subfooter__content rhc-page-footer__wrapper">
+      <div class="rhc-page-subfooter__content utrecht-page-footer__content">
         <ng-content select="[subFooter]"></ng-content>
       </div>
     </div>
