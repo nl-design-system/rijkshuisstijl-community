@@ -26,7 +26,6 @@
     "./proprietary/*"
   ],
   "dependencies": {
-    "@storybook/test-runner": "0.24.2",
     "http-server": "14.1.1",
     "rimraf": "6.1.3"
   },
@@ -101,7 +100,7 @@
     "watch:storybook": "lerna run storybook --parallel",
     "watch:packages": "lerna run watch --parallel",
     "watch:style-dictionary": "lerna run watch:style-dictionary",
-    "test-storybook:ci": "npm run --workspace packages/storybook playwright:install && concurrently -k -s first -n \"STORYBOOK,A11Y-TEST\" -c \"magenta,green\" \"npm run --workspace packages/storybook prod-static -- --silent\" \"wait-on tcp:6006 && npm run --workspace packages/storybook test-storybook\""
+    "test-storybook:ci": "pnpm --filter @rijkshuisstijl-community/storybook run playwright:install && concurrently -k -s first -n \"STORYBOOK,A11Y-TEST\" -c \"magenta,green\" \"pnpm --filter @rijkshuisstijl-community/storybook run prod-static -- --silent\" \"wait-on tcp:6006 && pnpm --filter @rijkshuisstijl-community/storybook run test-storybook\""
   },
   "packageManager": "pnpm@10.30.1+sha512.3590e550d5384caa39bd5c7c739f72270234b2f6059e13018f975c313b1eb9fefcc09714048765d4d9efe961382c312e624572c0420762bdc5d5940cdf9be73a"
 }

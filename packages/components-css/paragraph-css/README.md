@@ -16,11 +16,8 @@ pnpm add @rijkshuisstijl-community/paragraph-css
 import '@rijkshuisstijl-community/paragraph-css';
 
 <div>
-    <p class="nl-paragraph rhc-paragraph">
-      Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod
-    </p>
+  <p class="nl-paragraph rhc-paragraph">Lorem ipsum dolor sit amet, consectetur ad isicing elit, sed do eiusmod</p>
 </div>
-
 ```
 
 ## Rijkshuisstijl Community Componenten
