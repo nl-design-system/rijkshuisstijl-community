@@ -19,7 +19,7 @@
     "directory": "packages/components-react/library-react"
   },
   "scripts": {
-    "prebuild": "npm run clean",
+    "prebuild": "pnpm run clean",
     "build": "npm-run-all build:**",
     "build:components": "rollup --config rollup.config.mjs",
     "clean": "rimraf dist/ pages/",

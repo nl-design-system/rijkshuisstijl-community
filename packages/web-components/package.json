@@ -25,7 +25,7 @@
     "directory": "packages/web-components"
   },
   "scripts": {
-    "prebuild": "npm run clean",
+    "prebuild": "pnpm run clean",
     "build": "vite build",
     "watch": "vite build --watch",
     "clean": "rimraf dist/",
