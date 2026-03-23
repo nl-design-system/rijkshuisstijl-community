@@ -5,8 +5,7 @@
 
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactNode, Ref } from 'react';
-import { Paragraph } from '.';
-import { Image } from '.';
+import { Image, Paragraph } from '.';
 import { Heading, HeadingLevel } from './Heading';
 import { HeadingGroup } from './HeadingGroup';
 
