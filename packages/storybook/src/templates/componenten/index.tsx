@@ -1,6 +1,5 @@
 'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
 
-import { PageNumberNavigation } from '@rijkshuisstijl-community/components-react';
 import {
   Button,
   Card,
@@ -10,6 +9,7 @@ import {
   Heading,
   HeadingGroup,
   NumberBadge,
+  PageNumberNavigation,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
 import { IconCheck, IconPlus, IconSearch } from '@tabler/icons-react';
@@ -46,7 +46,6 @@ const filterComponents = (data: ComponentData[], searchTerm: string, frameworks:
 };
 
 interface ActiveFiltersBadgeListProps {
-  // eslint-disable-next-line no-unused-vars
   onRemoveFilter: (framework: string) => void;
   selectedFrameworks: string[];
 }

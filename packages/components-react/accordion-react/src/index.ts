@@ -7,4 +7,5 @@ export {
   type AccordionProviderProps,
   AccordionSection,
   type AccordionSectionProps,
-  type AccordionSectionProviderProps } from './Accordion';
+  type AccordionSectionProviderProps,
+} from './Accordion';

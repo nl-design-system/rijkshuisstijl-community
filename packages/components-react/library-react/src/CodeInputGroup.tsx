@@ -12,8 +12,6 @@ import { Fieldset, FieldsetLegend } from './Fieldset';
 export interface CodeInputGroupProps extends Omit<CodeInputProps, 'ref' | 'onChange'> {
   codeLength: number;
   invalid?: boolean;
-  // TODO: figure out why disabling is needed; works fine in editor but not in lint script for some reason
-  // eslint-disable-next-line no-unused-vars
   onChange?: (code: string) => void;
   label?: ReactNode;
   legend?: ReactNode;

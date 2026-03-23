@@ -17,7 +17,8 @@ import { FormField } from './FormField';
 export { SelectOption, type SelectOptionProps };
 
 export interface FormFieldSelectProps
-  extends Omit<FormFieldProps, 'onInput' | 'onBlur' | 'onFocus' | 'onChange'>,
+  extends
+    Omit<FormFieldProps, 'onInput' | 'onBlur' | 'onFocus' | 'onChange'>,
     Pick<
       SelectProps,
       | 'value'

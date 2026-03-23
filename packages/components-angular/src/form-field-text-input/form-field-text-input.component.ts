@@ -89,7 +89,6 @@ export class FormFieldTextInputComponent implements ControlValueAccessor {
     this.value = value;
   }
 
-  // eslint-disable-next-line no-unused-vars
   registerOnChange(fn: (value: string) => void): void {
     this.onChange = fn;
   }
