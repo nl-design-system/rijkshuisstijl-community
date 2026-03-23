@@ -1,0 +1,29 @@
+.basis-layout-container--fluid,
+.basis-layout-container--fluid-font-size,
+.rhc-theme--fluid,
+.rhc-theme--fluid-font-size {
+  --rhc-text-font-size-sm: calc(
+    var(--rhc-text-font-size-min-sm) + (var(--rhc-text-font-size-max-sm) - var(--rhc-text-font-size-min-sm)) *
+      var(--basis-layout-container-scale)
+  );
+  --rhc-text-font-size-md: calc(
+    var(--rhc-text-font-size-min-md) + (var(--rhc-text-font-size-max-md) - var(--rhc-text-font-size-min-md)) *
+      var(--basis-layout-container-scale)
+  );
+  --rhc-text-font-size-lg: calc(
+    var(--rhc-text-font-size-min-lg) + (var(--rhc-text-font-size-max-lg) - var(--rhc-text-font-size-min-lg)) *
+      var(--basis-layout-container-scale)
+  );
+  --rhc-text-font-size-xl: calc(
+    var(--rhc-text-font-size-min-xl) + (var(--rhc-text-font-size-max-xl) - var(--rhc-text-font-size-min-xl)) *
+      var(--basis-layout-container-scale)
+  );
+  --rhc-text-font-size-2xl: calc(
+    var(--rhc-text-font-size-min-2xl) + (var(--rhc-text-font-size-max-2xl) - var(--rhc-text-font-size-min-2xl)) *
+      var(--basis-layout-container-scale)
+  );
+  --rhc-text-font-size-3xl: calc(
+    var(--rhc-text-font-size-min-3xl) + (var(--rhc-text-font-size-max-3xl) - var(--rhc-text-font-size-min-3xl)) *
+      var(--basis-layout-container-scale)
+  );
+}

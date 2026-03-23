@@ -2,23 +2,23 @@
   display: grid;
   font-family: var(--rhc-text-font-family-default, inherit);
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-  margin-block-start: 1rem;
+  margin-block-start: var(--rhc-space-200);
 }
 
 .rhc-icon-set-item {
   align-items: center;
   background-color: var(--rhc-color-white);
-  border: 1px solid black;
+  border: var(--rhc-border-width-sm) solid var(--rhc-color-zwart);
   border-radius: var(--rhc-border-radius-300);
   box-shadow: var(--rhc-shadow-100);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-block-end: 0.5rem;
+  margin-block-end: var(--rhc-space-100);
   margin-block-start: 0;
-  margin-inline-end: 0.5rem;
+  margin-inline-end: var(--rhc-space-100);
   margin-inline-start: 0;
-  padding-block: 0.5rem;
-  padding-inline: 0.5rem;
+  padding-block: var(--rhc-space-100);
+  padding-inline: var(--rhc-space-100);
   text-align: center;
 }

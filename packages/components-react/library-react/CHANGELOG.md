@@ -1,5 +1,29 @@
 # @rijkshuisstijl-community/components-react
 
+## 13.1.0
+
+### Minor Changes
+
+- 8e7f161: Add Root, Body, Page Body and Page Layout components.
+
+### Patch Changes
+
+- Updated dependencies [3abfdb7]
+  - @rijkshuisstijl-community/accordion-react@3.0.0
+  - @rijkshuisstijl-community/alert-react@3.0.0
+  - @rijkshuisstijl-community/icon-react@3.0.0
+
+## 13.0.0
+
+### Major Changes
+
+- 762aded: Add `rhc-unordered-list--nested` class to `utrecht-unordered-list--nested` to fix CSS Contamination for Unordered List.
+
+### Patch Changes
+
+- Updated dependencies [d9dd8bf]
+  - @rijkshuisstijl-community/accordion-react@2.0.0
+
 ## 12.0.0
 
 ### Major Changes

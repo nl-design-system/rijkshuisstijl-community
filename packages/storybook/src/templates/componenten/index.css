@@ -1,7 +1,7 @@
 /* Componenten Template */
 
 .utrecht-heading-group {
-  gap: 0.75rem;
+  gap: var(--rhc-space-150);
 }
 
 .utrecht-form-label {
@@ -29,7 +29,7 @@
 
 .rhc-container {
   display: grid;
-  gap: 20px;
+  gap: var(--rhc-space-200, 20px); /* not an exact match: from 20px to 16px */
   grid-template-columns: 1fr 1fr;
 
   @media (width <= 780px) {
@@ -108,9 +108,9 @@
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  gap: var(--rhc-space-100, 0.5rem);
-  margin-block: var(--rhc-space-200, 1rem);
-  padding-block: var(--rhc-space-200, 1rem);
+  gap: var(--rhc-space-100);
+  margin-block: var(--rhc-space-200);
+  padding-block: var(--rhc-space-200);
 }
 
 .rhc-active-filters__list {
@@ -129,8 +129,8 @@
 
 @media (width <= 780px) {
   .rhc-active-filters {
-    padding-block: var(--rhc-space-150, 0.75rem);
-    padding-inline: var(--rhc-space-150, 0.75rem);
+    padding-block: var(--rhc-space-150);
+    padding-inline: var(--rhc-space-150);
   }
 }
 
@@ -151,7 +151,7 @@
   align-items: flex-end;
   display: flex;
   justify-content: space-between;
-  padding-block-end: 2em;
+  padding-block-end: var(--rhc-space-400);
 }
 
 @media (width <= 780px) {
@@ -168,6 +168,6 @@
   .rhc-componenten-toevoegen {
     flex-direction: row;
     justify-content: flex-start;
-    padding-block-start: 1em;
+    padding-block-start: var(--rhc-space-200);
   }
 }

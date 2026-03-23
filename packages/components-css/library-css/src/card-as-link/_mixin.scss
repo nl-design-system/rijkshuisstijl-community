@@ -7,7 +7,7 @@
   @include rounded-border-corners;
 
   box-sizing: border-box;
-  column-gap: var(--rhc-card-as-link-column-gap, 16px);
+  column-gap: var(--rhc-card-as-link-column-gap, var(--rhc-space-200));
   display: inline-flex;
   flex-direction: column;
   font-family: var(--rhc-text-font-family-default, inherit);
@@ -19,47 +19,47 @@
 }
 
 @mixin rhc-card-as-link--default {
-  background-color: var(--rhc-card-as-link-background-color, white);
-  border-color: var(--rhc-card-as-link-border-color, #cbd5e1);
+  background-color: var(--rhc-card-as-link-background-color);
+  border-color: var(--rhc-card-as-link-border-color);
   border-style: solid;
-  border-width: var(--rhc-card-as-link-border-width, 1px);
-  color: var(--rhc-card-as-link-color, #0f172a);
+  border-width: var(--rhc-card-as-link-border-width, var(--rhc-border-width-sm));
+  color: var(--rhc-card-as-link-color);
 }
 
 @mixin rhc-card-as-link--full-bleed {
-  --rhc-card-as-link-heading-color: var(--rhc-card-as-link-full-bleed-color, white);
+  --rhc-card-as-link-heading-color: var(--rhc-card-as-link-full-bleed-color);
   --rhc-card-as-link-metadata-color: var(
     --rhc-card-as-link-full-bleed-metadata-color,
-    var(--rhc-card-as-link-full-bleed-color, white)
+    var(--rhc-card-as-link-full-bleed-color)
   );
 
-  color: var(--rhc-card-as-link-full-bleed-color, white);
+  color: var(--rhc-card-as-link-full-bleed-color);
 }
 
 @mixin rhc-card-as-link--horizontal {
-  --rhc-card-as-link-heading-color: var(--rhc-card-as-link-horizontal-color, white);
+  --rhc-card-as-link-heading-color: var(--rhc-card-as-link-horizontal-color);
 
-  color: var(--rhc-card-as-link-horizontal-color, white);
+  color: var(--rhc-card-as-link-horizontal-color);
   flex-direction: row;
   gap: 0;
   max-block-size: var(--rhc-card-as-link-horizontal-max-block-size);
 }
 
 @mixin rhc-card-as-link--active {
-  background-color: var(--rhc-card-as-link-active-background-color, #dce3ea);
+  background-color: var(--rhc-card-as-link-active-background-color);
 }
 
 @mixin rhc-card-as-link--default--focus {
-  background-color: var(--rhc-card-as-link-focus-background-color, #dce3ea);
+  background-color: var(--rhc-card-as-link-focus-background-color);
 }
 
 @mixin rhc-card-as-link--default--hover {
-  background-color: var(--rhc-card-as-link-hover-background-color, #f8fafc);
+  background-color: var(--rhc-card-as-link-hover-background-color);
 }
 
 @mixin rhc-card-as-link--full-bleed__footer {
-  padding-block-end: var(--rhc-card-as-link-full-bleed-padding-block-end, 16px);
-  padding-block-start: var(--rhc-card-as-link-full-bleed-padding-block-start, 16px);
+  padding-block-end: var(--rhc-card-as-link-full-bleed-padding-block-end, var(--rhc-space-200));
+  padding-block-start: var(--rhc-card-as-link-full-bleed-padding-block-start, var(--rhc-space-200));
   padding-inline-end: var(--rhc-card-as-link-full-bleed-padding-inline-end, 0);
   padding-inline-start: var(--rhc-card-as-link-full-bleed-padding-inline-start, 0);
 }
@@ -90,17 +90,17 @@
 @mixin rhc-card-as-link--horizontal__content {
   @include rounded-border-corners;
 
-  background-color: var(--rhc-card-as-link-horizontal-background-color, #154273);
+  background-color: var(--rhc-card-as-link-horizontal-background-color);
   border-end-start-radius: 0;
   border-start-start-radius: 0;
-  color: var(--rhc-card-as-link-horizontal-color, white);
-  column-gap: var(--rhc-card-as-link-column-gap, 16px);
+  color: var(--rhc-card-as-link-horizontal-color);
+  column-gap: var(--rhc-card-as-link-column-gap, var(--rhc-space-200));
   flex-direction: row;
   padding-block-end: var(--rhc-card-as-link-horizontal-padding-block-end, 0);
   padding-block-start: var(--rhc-card-as-link-horizontal-padding-block-start, 0);
   padding-inline-end: var(--rhc-card-as-link-horizontal-padding-inline-end, 0);
   padding-inline-start: var(--rhc-card-as-link-horizontal-padding-inline-start, 0);
-  row-gap: var(--rhc-card-as-link-row-gap, 12px);
+  row-gap: var(--rhc-card-as-link-row-gap, var(--rhc-space-150));
 }
 
 @mixin rhc-card-as-link--horizontal__heading {
@@ -133,9 +133,9 @@
 
 @mixin rhc-card-as-link__heading {
   align-items: center;
-  color: var(--rhc-card-as-link-heading-color, #154273);
+  color: var(--rhc-card-as-link-heading-color);
   display: flex;
-  font-size: var(--rhc-card-as-link-heading-font-size, 24px);
+  font-size: var(--rhc-card-as-link-heading-font-size, var(--rhc-space-300));
   font-weight: var(--rhc-card-as-link-heading-font-weight, 700);
 }
 
@@ -152,12 +152,12 @@
 }
 
 @mixin rhc-card-as-link__icon {
-  color: var(--rhc-card-as-link-icon-color, #154273);
+  color: var(--rhc-card-as-link-icon-color);
   size: var(--rhc-card-as-link-icon-size, 24px);
 }
 
 @mixin rhc-card-as-link__link {
-  color: var(--rhc-card-as-link-link-color, #01689b);
+  color: var(--rhc-card-as-link-link-color);
   text-decoration: var(--rhc-card-as-link-link-text-decoration, underline);
 }
 
@@ -170,9 +170,9 @@
 }
 
 @mixin rhc-card-as-link__link--active {
-  --utrecht-link-color: var(--rhc-card-as-link-link-active-color, #42145f);
+  --utrecht-link-color: var(--rhc-card-as-link-link-active-color);
 
-  color: var(--rhc-card-as-link-link-active-color, #42145f);
+  color: var(--rhc-card-as-link-link-active-color);
   text-decoration: var(--rhc-card-as-link-link-active-text-decoration, none);
 }
 
@@ -185,26 +185,35 @@
 }
 
 @mixin rhc-card-as-link__metadata {
-  color: var(--rhc-card-as-link-metadata-color, #154273);
+  color: var(--rhc-card-as-link-metadata-color);
 }
 
 @mixin container-content {
   display: flex;
   flex-direction: column;
-  padding-block-end: var(--rhc-card-as-link-padding-block-end, 16px);
-  padding-block-start: var(--rhc-card-as-link-padding-block-start, 16px);
-  padding-inline-end: var(--rhc-card-as-link-padding-inline-end, 16px);
-  padding-inline-start: var(--rhc-card-as-link-padding-inline-start, 16px);
-  row-gap: var(--rhc-card-as-link-row-gap, 12px);
+  padding-block-end: var(--rhc-card-as-link-padding-block-end, var(--rhc-space-200));
+  padding-block-start: var(--rhc-card-as-link-padding-block-start, var(--rhc-space-200));
+  padding-inline-end: var(--rhc-card-as-link-padding-inline-end, var(--rhc-space-200));
+  padding-inline-start: var(--rhc-card-as-link-padding-inline-start, var(--rhc-space-200));
+  row-gap: var(--rhc-card-as-link-row-gap, var(--rhc-space-150));
 }
 
 @mixin rounded-border-corners {
-  border-end-end-radius: var(--rhc-card-as-link-border-end-end-radius, var(--rhc-card-as-link-border-radius, 5px));
-  border-end-start-radius: var(--rhc-card-as-link-border-end-start-radius, var(--rhc-card-as-link-border-radius, 5px));
-  border-start-end-radius: var(--rhc-card-as-link-border-start-end-radius, var(--rhc-card-as-link-border-radius, 5px));
+  border-end-end-radius: var(
+    --rhc-card-as-link-border-end-end-radius,
+    var(--rhc-card-as-link-border-radius, var(--rhc-border-radius-md))
+  );
+  border-end-start-radius: var(
+    --rhc-card-as-link-border-end-start-radius,
+    var(--rhc-card-as-link-border-radius, var(--rhc-border-radius-md))
+  );
+  border-start-end-radius: var(
+    --rhc-card-as-link-border-start-end-radius,
+    var(--rhc-card-as-link-border-radius, var(--rhc-border-radius-md))
+  );
   border-start-start-radius: var(
     --rhc-card-as-link-border-start-start-radius,
-    var(--rhc-card-as-link-border-radius, 5px)
+    var(--rhc-card-as-link-border-radius, var(--rhc-border-radius-md))
   );
 }
 

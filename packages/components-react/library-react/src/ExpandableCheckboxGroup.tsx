@@ -16,7 +16,6 @@ interface Option {
 export interface ExpandableCheckboxGroupProps extends FormFieldCheckboxGroupProps {
   options: Option[];
   selectedOptions: string[];
-  // eslint-disable-next-line no-unused-vars
   onOptionChange: (_option: string) => void;
   maxVisible?: number;
   legend: ReactNode;

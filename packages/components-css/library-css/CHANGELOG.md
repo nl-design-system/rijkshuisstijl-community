@@ -1,5 +1,22 @@
 # @rijkshuisstijl-community/components-css
 
+## 14.1.0
+
+### Minor Changes
+
+- 1ec5646: Add Root and Body components to CSS component.
+
+## 14.0.0
+
+### Major Changes
+
+- 762aded: Add `rhc-unordered-list--nested` class to `utrecht-unordered-list--nested` to fix CSS Contamination for Unordered List.
+
+### Patch Changes
+
+- Updated dependencies [d9dd8bf]
+  - @rijkshuisstijl-community/accordion-css@2.0.0
+
 ## 13.0.0
 
 ### Major Changes
