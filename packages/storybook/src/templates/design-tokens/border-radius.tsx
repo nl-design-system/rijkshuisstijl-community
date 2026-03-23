@@ -60,23 +60,23 @@ export default function Page() {
                             <BorderRadiusSample value={value} />
                           </TableCell>
                           <TableCell className="utrecht-table__cell--rhc-middle">
-                            <CopyDesignTokenButton path={[...['rhc', 'border-radius'], name]} />
+                            <CopyDesignTokenButton path={['rhc', 'border-radius', name]} />
                           </TableCell>
                         </TableRow>
                       ))}
-                    {Object.entries([
-                      tokens['rhc']['size']['quarter-lint'],
-                      tokens['rhc']['size']['half-lint'],
-                      tokens['rhc']['size']['lint'],
-                      tokens['rhc']['size']['2-lint'],
-                      tokens['rhc']['size']['3-lint'],
-                    ]).map(([name, value]) => (
+                    {[
+                      { name: 'quarter-lint', value: tokens['rhc']['size']['quarter-lint'] },
+                      { name: 'half-lint', value: tokens['rhc']['size']['half-lint'] },
+                      { name: 'lint', value: tokens['rhc']['size']['lint'] },
+                      { name: '2-lint', value: tokens['rhc']['size']['2-lint'] },
+                      { name: '3-lint', value: tokens['rhc']['size']['3-lint'] },
+                    ].map(({ name, value }) => (
                       <TableRow key={name}>
                         <TableCell className="utrecht-table__cell--rhc-middle">
                           <BorderRadiusSample value={value} />
                         </TableCell>
                         <TableCell className="utrecht-table__cell--rhc-middle">
-                          <CopyDesignTokenButton path={[...['rhc', 'size'], name]} />
+                          <CopyDesignTokenButton path={['rhc', 'size', name]} />
                         </TableCell>
                       </TableRow>
                     ))}
