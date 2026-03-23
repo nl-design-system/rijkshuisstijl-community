@@ -1345,17 +1345,8 @@
         "primary-action": {
           "hover": {
             "background-color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.3",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.core.500}"
+              "$value": "{rhc.color.core.hover}"
             },
             "border-color": {
               "$type": "color",
@@ -1408,17 +1399,8 @@
           },
           "active": {
             "background-color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.4",
-                    "space": "srgb"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.core.500}"
+              "$value": "{rhc.color.core.active}"
             },
             "border-color": {
               "$type": "color",
@@ -1431,17 +1413,8 @@
           },
           "pressed": {
             "background-color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.4",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.core.500}"
+              "$value": "{rhc.color.core.active}"
             },
             "border-color": {
               "$type": "color",
@@ -1535,7 +1508,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.foreground.on-dark-color}"
+              "$value": "{rhc.color.foreground.on-primary}"
             },
             "background-color": {
               "$type": "color",
@@ -8808,27 +8781,27 @@
         "common/theme/button-color/core": "enabled"
       },
       "group": "button-color",
-      "$figmaCollectionId": "VariableCollectionId:36:793",
-      "$figmaModeId": "36:0",
+      "$figmaCollectionId": "VariableCollectionId:36:35222",
+      "$figmaModeId": "36:3",
       "$figmaVariableReferences": {
-        "utrecht.button.primary-action.color": "267b92e0f442d9e4dbb9f65be3f80003da06984c",
-        "utrecht.button.primary-action.active.color": "00d919f0a80a506f2993d8111f0bffa6e3394dbe",
-        "utrecht.button.primary-action.hover.color": "6553c4a4b71b05e7bc07633f63a8473539b5e1cc",
-        "utrecht.button.primary-action.focus.color": "4c4ff2304c7abb7e52507f402d44abf9a009bf1d",
-        "utrecht.button.primary-action.pressed.color": "6712376d9df132d8cc8486b329e34b853957a2ef",
-        "utrecht.button.primary-action.disabled.color": "e88d71f1651414eb3823f4ef09e2a62544a2424a",
-        "utrecht.button.primary-action.background-color": "207566642d95f361ed888a60248ce33a084dfa08",
-        "utrecht.button.primary-action.border-color": "0b50f3ca186587ff5e980ca4119fdfec2f4d3cc1",
-        "utrecht.button.primary-action.disabled.background-color": "a2c7bee1a8e755fe670d24c77767f38cb1eb6bb9",
-        "utrecht.button.primary-action.disabled.border-color": "e9f3920c109428737d185549db1b627e17fc5bf9",
-        "utrecht.button.primary-action.hover.background-color": "0414282b519f00c6e5640d5afcc9bb6ae52e7e2f",
-        "utrecht.button.primary-action.hover.border-color": "5f2030233637cebc102e32941e6c73d8831e0003",
-        "utrecht.button.primary-action.focus.background-color": "8d122bbd11d7630bccb84871cfdf25ec12b75e0a",
-        "utrecht.button.primary-action.focus.border-color": "834a99de7e2b1a53933b9afc9ae18d2532b42f5d",
-        "utrecht.button.primary-action.pressed.border-color": "71f301747bd189ba1debad71d64fd7e154a4778a",
-        "utrecht.button.primary-action.pressed.background-color": "7a6fffefaaac6f1c0665278e36eb9457b0dfca33",
-        "utrecht.button.primary-action.active.border-color": "803f344c01af9734e9ab5d2e5864feaf10de4f00",
-        "utrecht.button.primary-action.active.background-color": "52b2969e3de67fc9b992bf1ca763eb1554b444ab"
+        "utrecht.button.primary-action.color": "57b1e98d30bfd687bae5d7549087ba78150bd982",
+        "utrecht.button.primary-action.active.color": "9759f92b73a4ef0e8dbca651b9ba9dea67d08485",
+        "utrecht.button.primary-action.hover.color": "f6b9a50eedcb329f782e38eef6b92247d2bc500b",
+        "utrecht.button.primary-action.focus.color": "75de3f5dfe63e8023a7a5ce4b5f96709fb5e2af1",
+        "utrecht.button.primary-action.pressed.color": "1d5bc9880df62378bdf319d89709b8f1cb5df832",
+        "utrecht.button.primary-action.disabled.color": "4ad4e0777865ed310a7c441e74983d2b2fb0088a",
+        "utrecht.button.primary-action.background-color": "a9b332f030eb3c760082463e556e4ba18ba02092",
+        "utrecht.button.primary-action.border-color": "bd07ec2ea68b22d0dcb202e80eacd88ba1baf58e",
+        "utrecht.button.primary-action.disabled.background-color": "a88c6b78a9370f951fee193c399958ea270b943b",
+        "utrecht.button.primary-action.disabled.border-color": "29b058e8f2960ee8ed851d4521c3842c96abf71f",
+        "utrecht.button.primary-action.hover.background-color": "322cf81e1607485cd2631d9af59529d4ce7ff234",
+        "utrecht.button.primary-action.hover.border-color": "bc88451f33d09e709bb89880910ddbafe9b02d62",
+        "utrecht.button.primary-action.focus.background-color": "0d98ad173273dd8cd42fe169ea5575c21d0d5399",
+        "utrecht.button.primary-action.focus.border-color": "782c5a20b247ea95c51283dd8cd37745b13ff095",
+        "utrecht.button.primary-action.pressed.border-color": "c1963d61300b66e3271f33dca6111e2d5045619d",
+        "utrecht.button.primary-action.pressed.background-color": "da22e8e87202973b1d011f5458058514dbb535f1",
+        "utrecht.button.primary-action.active.border-color": "82523388ab54b5729fe1edf98a8092f4030a3c72",
+        "utrecht.button.primary-action.active.background-color": "b7e82f87e75735166cd3ab40b28ca7876ae8edf0"
       }
     },
     {
@@ -8839,27 +8812,27 @@
         "common/theme/button-color/primary": "enabled"
       },
       "group": "button-color",
-      "$figmaCollectionId": "VariableCollectionId:36:793",
-      "$figmaModeId": "36:1",
+      "$figmaCollectionId": "VariableCollectionId:36:35222",
+      "$figmaModeId": "36:4",
       "$figmaVariableReferences": {
-        "utrecht.button.primary-action.color": "267b92e0f442d9e4dbb9f65be3f80003da06984c",
-        "utrecht.button.primary-action.active.color": "00d919f0a80a506f2993d8111f0bffa6e3394dbe",
-        "utrecht.button.primary-action.hover.color": "6553c4a4b71b05e7bc07633f63a8473539b5e1cc",
-        "utrecht.button.primary-action.focus.color": "4c4ff2304c7abb7e52507f402d44abf9a009bf1d",
-        "utrecht.button.primary-action.pressed.color": "6712376d9df132d8cc8486b329e34b853957a2ef",
-        "utrecht.button.primary-action.disabled.color": "e88d71f1651414eb3823f4ef09e2a62544a2424a",
-        "utrecht.button.primary-action.hover.background-color": "0414282b519f00c6e5640d5afcc9bb6ae52e7e2f",
-        "utrecht.button.primary-action.hover.border-color": "5f2030233637cebc102e32941e6c73d8831e0003",
-        "utrecht.button.primary-action.background-color": "207566642d95f361ed888a60248ce33a084dfa08",
-        "utrecht.button.primary-action.border-color": "0b50f3ca186587ff5e980ca4119fdfec2f4d3cc1",
-        "utrecht.button.primary-action.disabled.background-color": "a2c7bee1a8e755fe670d24c77767f38cb1eb6bb9",
-        "utrecht.button.primary-action.disabled.border-color": "e9f3920c109428737d185549db1b627e17fc5bf9",
-        "utrecht.button.primary-action.focus.background-color": "8d122bbd11d7630bccb84871cfdf25ec12b75e0a",
-        "utrecht.button.primary-action.focus.border-color": "834a99de7e2b1a53933b9afc9ae18d2532b42f5d",
-        "utrecht.button.primary-action.active.background-color": "52b2969e3de67fc9b992bf1ca763eb1554b444ab",
-        "utrecht.button.primary-action.active.border-color": "803f344c01af9734e9ab5d2e5864feaf10de4f00",
-        "utrecht.button.primary-action.pressed.background-color": "7a6fffefaaac6f1c0665278e36eb9457b0dfca33",
-        "utrecht.button.primary-action.pressed.border-color": "71f301747bd189ba1debad71d64fd7e154a4778a"
+        "utrecht.button.primary-action.color": "57b1e98d30bfd687bae5d7549087ba78150bd982",
+        "utrecht.button.primary-action.active.color": "9759f92b73a4ef0e8dbca651b9ba9dea67d08485",
+        "utrecht.button.primary-action.hover.color": "f6b9a50eedcb329f782e38eef6b92247d2bc500b",
+        "utrecht.button.primary-action.focus.color": "75de3f5dfe63e8023a7a5ce4b5f96709fb5e2af1",
+        "utrecht.button.primary-action.pressed.color": "1d5bc9880df62378bdf319d89709b8f1cb5df832",
+        "utrecht.button.primary-action.disabled.color": "4ad4e0777865ed310a7c441e74983d2b2fb0088a",
+        "utrecht.button.primary-action.hover.background-color": "322cf81e1607485cd2631d9af59529d4ce7ff234",
+        "utrecht.button.primary-action.hover.border-color": "bc88451f33d09e709bb89880910ddbafe9b02d62",
+        "utrecht.button.primary-action.background-color": "a9b332f030eb3c760082463e556e4ba18ba02092",
+        "utrecht.button.primary-action.border-color": "bd07ec2ea68b22d0dcb202e80eacd88ba1baf58e",
+        "utrecht.button.primary-action.disabled.background-color": "a88c6b78a9370f951fee193c399958ea270b943b",
+        "utrecht.button.primary-action.disabled.border-color": "29b058e8f2960ee8ed851d4521c3842c96abf71f",
+        "utrecht.button.primary-action.focus.background-color": "0d98ad173273dd8cd42fe169ea5575c21d0d5399",
+        "utrecht.button.primary-action.focus.border-color": "782c5a20b247ea95c51283dd8cd37745b13ff095",
+        "utrecht.button.primary-action.active.background-color": "b7e82f87e75735166cd3ab40b28ca7876ae8edf0",
+        "utrecht.button.primary-action.active.border-color": "82523388ab54b5729fe1edf98a8092f4030a3c72",
+        "utrecht.button.primary-action.pressed.background-color": "da22e8e87202973b1d011f5458058514dbb535f1",
+        "utrecht.button.primary-action.pressed.border-color": "c1963d61300b66e3271f33dca6111e2d5045619d"
       }
     },
     {
@@ -8880,7 +8853,7 @@
         "rhc.color.primary.500": "958c5d9d89289c99c6c048d97fdf0ee9e4b420bc",
         "rhc.color.primary.hover": "06a8e9f6832b841f4288e23449d973bcc5750ac6",
         "rhc.color.primary.active": "37d87247c2aeb2106114dd5f7c7075c00ac68cb1",
-        "rhc.color.foreground.on-primary": "3f3bc89b1375c1660f1af9f8cf9c39433df693a5"
+        "rhc.color.foreground.on-primary": "cbbf3137aa4ad40ea32bbd70bd9c4b800c5aeddc"
       },
       "group": "primary-color"
     },
@@ -8902,7 +8875,7 @@
         "rhc.color.primary.500": "958c5d9d89289c99c6c048d97fdf0ee9e4b420bc",
         "rhc.color.primary.hover": "06a8e9f6832b841f4288e23449d973bcc5750ac6",
         "rhc.color.primary.active": "37d87247c2aeb2106114dd5f7c7075c00ac68cb1",
-        "rhc.color.foreground.on-primary": "3f3bc89b1375c1660f1af9f8cf9c39433df693a5"
+        "rhc.color.foreground.on-primary": "cbbf3137aa4ad40ea32bbd70bd9c4b800c5aeddc"
       },
       "group": "primary-color"
     },
@@ -8924,7 +8897,7 @@
         "rhc.color.primary.500": "958c5d9d89289c99c6c048d97fdf0ee9e4b420bc",
         "rhc.color.primary.hover": "06a8e9f6832b841f4288e23449d973bcc5750ac6",
         "rhc.color.primary.active": "37d87247c2aeb2106114dd5f7c7075c00ac68cb1",
-        "rhc.color.foreground.on-primary": "3f3bc89b1375c1660f1af9f8cf9c39433df693a5"
+        "rhc.color.foreground.on-primary": "cbbf3137aa4ad40ea32bbd70bd9c4b800c5aeddc"
       },
       "group": "primary-color"
     },
@@ -9025,7 +8998,8 @@
         "rhc.color.primary.400": "ccbfa7ddb2bbbef08492c774ea5fd45aac6cf3c3",
         "rhc.color.primary.500": "958c5d9d89289c99c6c048d97fdf0ee9e4b420bc",
         "rhc.color.primary.hover": "06a8e9f6832b841f4288e23449d973bcc5750ac6",
-        "rhc.color.primary.active": "37d87247c2aeb2106114dd5f7c7075c00ac68cb1"
+        "rhc.color.primary.active": "37d87247c2aeb2106114dd5f7c7075c00ac68cb1",
+        "rhc.color.foreground.on-primary": "cbbf3137aa4ad40ea32bbd70bd9c4b800c5aeddc"
       }
     }
   ],
