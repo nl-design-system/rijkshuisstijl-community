@@ -55,29 +55,41 @@ export default function Page() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {Object.entries(tokens['rhc']['space']).map(([name, value]) => (
+                    {[
+                      { name: '0', value: tokens['rhc']['space']['0'] },
+                      { name: '25', value: tokens['rhc']['space']['25'] },
+                      { name: '50', value: tokens['rhc']['space']['50'] },
+                      { name: '100', value: tokens['rhc']['space']['100'] },
+                      { name: '150', value: tokens['rhc']['space']['150'] },
+                      { name: '200', value: tokens['rhc']['space']['200'] },
+                      { name: '300', value: tokens['rhc']['space']['300'] },
+                      { name: '400', value: tokens['rhc']['space']['400'] },
+                      { name: '500', value: tokens['rhc']['space']['500'] },
+                      { name: '600', value: tokens['rhc']['space']['600'] },
+                      { name: '700', value: tokens['rhc']['space']['700'] },
+                    ].map(({ name, value }) => (
                       <TableRow key={name}>
                         <TableCell className="utrecht-table__cell--rhc-middle">
                           <SpaceSample value={value} />
                         </TableCell>
                         <TableCell className="utrecht-table__cell--rhc-middle">
-                          <CopyDesignTokenButton path={[...['rhc', 'space'], name]} />
+                          <CopyDesignTokenButton path={['rhc', 'space', name]} />
                         </TableCell>
                       </TableRow>
                     ))}
-                    {Object.entries([
-                      tokens['rhc']['size']['quarter-lint'],
-                      tokens['rhc']['size']['half-lint'],
-                      tokens['rhc']['size']['lint'],
-                      tokens['rhc']['size']['2-lint'],
-                      tokens['rhc']['size']['3-lint'],
-                    ]).map(([name, value]) => (
+                    {[
+                      { name: 'quarter-lint', value: tokens['rhc']['size']['quarter-lint'] },
+                      { name: 'half-lint', value: tokens['rhc']['size']['half-lint'] },
+                      { name: 'lint', value: tokens['rhc']['size']['lint'] },
+                      { name: '2-lint', value: tokens['rhc']['size']['2-lint'] },
+                      { name: '3-lint', value: tokens['rhc']['size']['3-lint'] },
+                    ].map(({ name, value }) => (
                       <TableRow key={name}>
                         <TableCell className="utrecht-table__cell--rhc-middle">
                           <SpaceSample value={value} />
                         </TableCell>
                         <TableCell className="utrecht-table__cell--rhc-middle">
-                          <CopyDesignTokenButton path={[...['rhc', 'space'], name]} />
+                          <CopyDesignTokenButton path={['rhc', 'space', name]} />
                         </TableCell>
                       </TableRow>
                     ))}

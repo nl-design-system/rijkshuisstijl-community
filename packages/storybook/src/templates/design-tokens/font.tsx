@@ -74,7 +74,7 @@ export default function Page() {
                           </FontSample>
                         </TableCell>
                         <TableCell className="utrecht-table__cell--rhc-middle">
-                          <CopyDesignTokenButton path={[...['rhc', 'text', 'font-size'], name]} />
+                          <CopyDesignTokenButton path={['rhc', 'text', 'font-size', name]} />
                         </TableCell>
                       </TableRow>
                     ))}
@@ -111,7 +111,7 @@ export default function Page() {
                             </LineHeightSample>
                           </TableCell>
                           <TableCell className="utrecht-table__cell--rhc-middle">
-                            <CopyDesignTokenButton path={[...['rhc', 'text', 'line-height'], name]} />
+                            <CopyDesignTokenButton path={['rhc', 'text', 'line-height', name]} />
                           </TableCell>
                         </TableRow>
                       ))}
@@ -158,7 +158,7 @@ export default function Page() {
                           </FontSample>
                         </TableCell>
                         <TableCell className="utrecht-table__cell--rhc-middle">
-                          <CopyDesignTokenButton path={[...['rhc', 'text', 'font-weight'], name]} />
+                          <CopyDesignTokenButton path={['rhc', 'text', 'font-weight', name]} />
                         </TableCell>
                       </TableRow>
                     ))}

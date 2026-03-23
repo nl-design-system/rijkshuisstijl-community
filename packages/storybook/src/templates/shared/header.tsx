@@ -11,30 +11,29 @@ export default function SharedHeader() {
 
   const items: NavBarItemProps[] = [
     {
-      id: 'start1',
       href: '/',
       label: 'Homepage',
       className: pathname === '/' ? 'rhc-nav-bar__link--current' : '',
     },
     {
-      id: 'start7',
       href: '/design-tokens/',
       label: 'Design Tokens',
       className: pathname === '/design-tokens/' ? 'rhc-nav-bar__link--current' : '',
     },
     {
-      id: 'start7',
       href: '/componenten/',
       label: 'Componenten',
       className: pathname === '/componenten/' ? 'rhc-nav-bar__link--current' : '',
     },
     {
-      id: 'voorbeelden',
       href: '/voorbeelden/',
       label: 'Voorbeelden',
       className: pathname === '/voorbeelden/' ? 'rhc-nav-bar__link--current' : '',
     },
-  ];
+  ].map(({ ...props }) => ({
+    ...props,
+    id: props.href,
+  }));
 
   return (
     <PageHeader>
