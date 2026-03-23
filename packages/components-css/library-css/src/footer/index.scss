@@ -23,7 +23,7 @@
   padding-block: 0;
   padding-inline: 0;
 
-  .rhc-heading:is(h1, h2, h3, h4, h5, h6, p) {
+  :is(.rhc-heading, .rhc-paragraph):is(h1, h2, h3, h4, h5, h6, p) {
     margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
 }
