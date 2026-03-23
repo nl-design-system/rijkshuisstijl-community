@@ -7846,78 +7846,6 @@
       }
     }
   },
-  "overrides/heading-color/primary": {
-    "nl": {
-      "heading": {
-        "level-1": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.primary.500}"
-          }
-        },
-        "level-2": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.primary.500}"
-          }
-        },
-        "level-3": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.primary.500}"
-          }
-        },
-        "level-4": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.primary.500}"
-          }
-        },
-        "level-5": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.primary.500}"
-          }
-        }
-      }
-    }
-  },
-  "overrides/heading-color/default": {
-    "nl": {
-      "heading": {
-        "level-1": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          }
-        },
-        "level-2": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          }
-        },
-        "level-3": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          }
-        },
-        "level-4": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          }
-        },
-        "level-5": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          }
-        }
-      }
-    }
-  },
   "overrides/primary-contrast fix/button label groter": {
     "utrecht": {
       "button": {
@@ -8451,6 +8379,78 @@
       }
     }
   },
+  "theme/heading-color/primary": {
+    "nl": {
+      "heading": {
+        "level-1": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
+          }
+        },
+        "level-2": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
+          }
+        },
+        "level-3": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
+          }
+        },
+        "level-4": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
+          }
+        },
+        "level-5": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
+          }
+        }
+      }
+    }
+  },
+  "theme/heading-color/default": {
+    "nl": {
+      "heading": {
+        "level-1": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        },
+        "level-2": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        },
+        "level-3": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        },
+        "level-4": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        },
+        "level-5": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        }
+      }
+    }
+  },
   "$themes": [
     {
       "id": "05865788a086eeac7ffc4514736ccd777f1ff95c",
@@ -8970,16 +8970,48 @@
       "name": "default",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
-        "overrides/heading-color/default": "enabled"
+        "theme/heading-color/primary": "enabled",
+        "components/heading": "source"
       },
-      "$figmaCollectionId": "VariableCollectionId:28:792",
-      "$figmaModeId": "28:0",
+      "$figmaCollectionId": "VariableCollectionId:34:829",
+      "$figmaModeId": "34:2",
       "$figmaVariableReferences": {
-        "nl.heading.level-1.color": "cfbcd38b2a6ec30bdaa41939f99ab15f38f5c970",
-        "nl.heading.level-2.color": "b579961c3bfc7c5cc5089f7042f8d92bd542c07c",
-        "nl.heading.level-3.color": "c53054ab8576d4295978803c987b48ff10b73777",
-        "nl.heading.level-4.color": "891ba887d4bc36b98fc08c2bd41bb34e2c0c5b00",
-        "nl.heading.level-5.color": "4fedbe24387fccf2572944bc71dec27d21533627"
+        "nl.heading.level-1.color": "80cd4da2c0905e078dc6e8313ad652bef0a009b6",
+        "nl.heading.level-2.color": "9d9220e16890d7c97469e278615195bf3eeb0a25",
+        "nl.heading.level-3.color": "291b3f559f8c3372c506b71a0b24494da40c0757",
+        "nl.heading.level-4.color": "23ee039f756e9f6c48a2f7605c69c40ae474f435",
+        "nl.heading.level-5.color": "f1aad661bbbcc72144f5c9ff85643fe8f4069799",
+        "nl.heading.level-1.font-family": "ecffa0b277b110b36212055558e2581039d7860d",
+        "nl.heading.level-1.font-size": "64470285a27f73c095759e8cf5f1be104c7c68f1",
+        "nl.heading.level-1.font-weight": "778fcf833ce832cadd4a1737803e101e61823737",
+        "nl.heading.level-1.margin-block-end": "741d02d270387050a9ef329890a7f00f4e8d9c53",
+        "nl.heading.level-1.margin-block-start": "292cfb18d3bb2d55a9c2fa7a3b2b209ab8e5e3de",
+        "nl.heading.level-2.font-family": "9a817c17a5b46a08efbabb4e4c32d47528d7c116",
+        "nl.heading.level-2.font-size": "218e95247c6204e7b90a88e5ed305386cc2dc3a0",
+        "nl.heading.level-2.font-weight": "8f60d8de59531c749e0bdf4e3a396fee5e0e3953",
+        "nl.heading.level-2.margin-block-end": "a30b50ab6104cf6136a0a9d80d540137a6b9f0ce",
+        "nl.heading.level-2.margin-block-start": "c83bb2a8fb9fa22f0d8cf8f6945ee03403121be7",
+        "nl.heading.level-3.font-family": "d243549a91963d4c010481e3395241595bd40d0f",
+        "nl.heading.level-3.font-size": "d85a60756ac2643f76abd4deff291b7995f7f4b6",
+        "nl.heading.level-3.font-weight": "820d4a67238084b5d15a182b83b714ab0f3fce29",
+        "nl.heading.level-3.margin-block-end": "3d2710aa7cb047665354c0fa506d1958b87e209f",
+        "nl.heading.level-3.margin-block-start": "047a342574852b7764d2674402f1cec7ab622031",
+        "nl.heading.level-4.font-family": "785f43ee086c5b40f3604ba413c7c8cfd41dd1e2",
+        "nl.heading.level-4.font-size": "555fa50cbba7928a5023d244b04550e614b4b59c",
+        "nl.heading.level-4.font-weight": "e7c0bc8a4d45ae025ba1aaa10de649ec9e79fbb9",
+        "nl.heading.level-4.margin-block-end": "55e4f7b8253693b5119bafbc3f542c04ca2791f9",
+        "nl.heading.level-4.margin-block-start": "8f4a79d090c9c1e2deb5003670a584737a9ffc0e",
+        "nl.heading.level-5.font-family": "5277620a3e60a5dc891c8e1add702250fb6971be",
+        "nl.heading.level-5.font-size": "d0fb059ac91cc0b26584c7c94cd6d58a2f224a13",
+        "nl.heading.level-5.font-weight": "fd7185af8b8e99a59468ec147ea207ad8bbe1743",
+        "nl.heading.level-5.margin-block-end": "284eb49959e365682a7f61db5f122da43b29761f",
+        "nl.heading.level-5.margin-block-start": "d19d934f454060a2a61b4464a1dfb8dbe74d9c19",
+        "nl.heading.level-6.color": "87d4ddff06d6e03a3cae1f0a68abd77b81168c6c",
+        "nl.heading.level-6.font-family": "4350091e0a45567807417ddde5c386c0045f34ad",
+        "nl.heading.level-6.font-size": "afdba48d9e13a8f908466893cafd6a9a2b60c9e6",
+        "nl.heading.level-6.font-weight": "daf5cfd52ea58c99759097a511254e30d82e7386",
+        "nl.heading.level-6.margin-block-end": "b2789c771639bd81c4f168c3bc3b0e772333e596",
+        "nl.heading.level-6.margin-block-start": "d21af5b0ae378afb0c4df00da801727b823b3f81"
       },
       "group": "heading"
     },
@@ -8988,17 +9020,17 @@
       "name": "primary",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
-        "overrides/heading-color/primary": "enabled"
+        "theme/heading-color/primary": "enabled"
       },
       "group": "heading",
-      "$figmaCollectionId": "VariableCollectionId:28:792",
-      "$figmaModeId": "28:1",
+      "$figmaCollectionId": "VariableCollectionId:34:866",
+      "$figmaModeId": "34:5",
       "$figmaVariableReferences": {
-        "nl.heading.level-1.color": "cfbcd38b2a6ec30bdaa41939f99ab15f38f5c970",
-        "nl.heading.level-2.color": "b579961c3bfc7c5cc5089f7042f8d92bd542c07c",
-        "nl.heading.level-3.color": "c53054ab8576d4295978803c987b48ff10b73777",
-        "nl.heading.level-4.color": "891ba887d4bc36b98fc08c2bd41bb34e2c0c5b00",
-        "nl.heading.level-5.color": "4fedbe24387fccf2572944bc71dec27d21533627"
+        "nl.heading.level-1.color": "1591676228947e73a29273ece499595671f498f7",
+        "nl.heading.level-2.color": "83adbd32415cfb8dff4f2767ca7bd9f2830f0953",
+        "nl.heading.level-3.color": "6b349b650aea296560a839307f6769025ce8c4ed",
+        "nl.heading.level-4.color": "1795bca1aaaf0ef4960647877c9c55083781a09c",
+        "nl.heading.level-5.color": "1fa7380046e0240c66160fd37cee5f16e00bebb4"
       }
     }
   ],
@@ -9103,14 +9135,14 @@
       "components/page-header",
       "overrides/closed-source/font",
       "overrides/font-weight/bzk",
-      "overrides/heading-color/primary",
-      "overrides/heading-color/default",
       "overrides/primary-contrast fix/button label groter",
       "overrides/primary-contrast fix/foreground op lichte kleur",
       "overrides/primary-contrast fix/non primary button labels coolgrey",
       "overrides/primary-contrast fix/non primary buttons coolgrey",
       "overrides/type-scale/default [code-only]",
-      "overrides/type-scale/information dense [code-only]"
+      "overrides/type-scale/information dense [code-only]",
+      "theme/heading-color/primary",
+      "theme/heading-color/default"
     ]
   }
 }
