@@ -19,7 +19,7 @@
     "directory": "packages/components-twig"
   },
   "scripts": {
-    "prebuild": "npm run clean && mkdir dist",
+    "prebuild": "pnpm run clean && mkdir dist",
     "build": "npm-run-all build:**",
     "build:components": "cpx \"src/**/*.twig\" dist/",
     "build:typescript": "tsc",
