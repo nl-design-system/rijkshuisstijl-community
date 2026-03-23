@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <>
       <SharedHeader />
-      <PageBody className="rhc-templates-page">
+      <PageBody>
         <SharedMainPageContent>
           <Article>
             <Heading level={1}>Pagina niet gevonden (404)</Heading>
