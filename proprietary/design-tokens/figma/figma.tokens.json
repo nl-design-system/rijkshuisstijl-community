@@ -7846,42 +7846,6 @@
       }
     }
   },
-  "overrides/heading-color/default": {
-    "nl": {
-      "heading": {
-        "level-1": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          }
-        },
-        "level-2": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          }
-        },
-        "level-3": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          }
-        },
-        "level-4": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          }
-        },
-        "level-5": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          }
-        }
-      }
-    }
-  },
   "overrides/heading-color/primary": {
     "nl": {
       "heading": {
@@ -7913,6 +7877,42 @@
           "color": {
             "$type": "color",
             "$value": "{rhc.color.primary.500}"
+          }
+        }
+      }
+    }
+  },
+  "overrides/heading-color/default": {
+    "nl": {
+      "heading": {
+        "level-1": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        },
+        "level-2": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        },
+        "level-3": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        },
+        "level-4": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        },
+        "level-5": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
           }
         }
       }
@@ -8970,19 +8970,18 @@
       "name": "default",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
-        "components/heading": "source",
-        "overrides/heading-color/primary": "enabled"
+        "overrides/heading-color/default": "enabled"
       },
-      "group": "heading",
-      "$figmaCollectionId": "VariableCollectionId:2002:641",
-      "$figmaModeId": "2002:0",
+      "$figmaCollectionId": "VariableCollectionId:28:792",
+      "$figmaModeId": "28:0",
       "$figmaVariableReferences": {
-        "nl.heading.level-1.color": "489d1fcfb038d6be28b7bf77dbab2d9127ce9164",
-        "nl.heading.level-2.color": "605130ce9ac1ba6bfb42569d6bf2a39e920883f4",
-        "nl.heading.level-3.color": "6c85c7713ca0fc1d174f70b2c89be18130eee007",
-        "nl.heading.level-4.color": "fda8a6d13a5d5f9554a92132d8be1e7b48ade680",
-        "nl.heading.level-5.color": "d51d6b3853ad591959fb04b3196d0632ee5827eb"
-      }
+        "nl.heading.level-1.color": "cfbcd38b2a6ec30bdaa41939f99ab15f38f5c970",
+        "nl.heading.level-2.color": "b579961c3bfc7c5cc5089f7042f8d92bd542c07c",
+        "nl.heading.level-3.color": "c53054ab8576d4295978803c987b48ff10b73777",
+        "nl.heading.level-4.color": "891ba887d4bc36b98fc08c2bd41bb34e2c0c5b00",
+        "nl.heading.level-5.color": "4fedbe24387fccf2572944bc71dec27d21533627"
+      },
+      "group": "heading"
     },
     {
       "id": "8665712205639dbec271814bc76c57a6b7cb9453",
@@ -8992,14 +8991,14 @@
         "overrides/heading-color/primary": "enabled"
       },
       "group": "heading",
-      "$figmaCollectionId": "VariableCollectionId:2002:641",
-      "$figmaModeId": "2002:1",
+      "$figmaCollectionId": "VariableCollectionId:28:792",
+      "$figmaModeId": "28:1",
       "$figmaVariableReferences": {
-        "nl.heading.level-1.color": "489d1fcfb038d6be28b7bf77dbab2d9127ce9164",
-        "nl.heading.level-2.color": "605130ce9ac1ba6bfb42569d6bf2a39e920883f4",
-        "nl.heading.level-3.color": "6c85c7713ca0fc1d174f70b2c89be18130eee007",
-        "nl.heading.level-4.color": "fda8a6d13a5d5f9554a92132d8be1e7b48ade680",
-        "nl.heading.level-5.color": "d51d6b3853ad591959fb04b3196d0632ee5827eb"
+        "nl.heading.level-1.color": "cfbcd38b2a6ec30bdaa41939f99ab15f38f5c970",
+        "nl.heading.level-2.color": "b579961c3bfc7c5cc5089f7042f8d92bd542c07c",
+        "nl.heading.level-3.color": "c53054ab8576d4295978803c987b48ff10b73777",
+        "nl.heading.level-4.color": "891ba887d4bc36b98fc08c2bd41bb34e2c0c5b00",
+        "nl.heading.level-5.color": "4fedbe24387fccf2572944bc71dec27d21533627"
       }
     }
   ],
@@ -9104,8 +9103,8 @@
       "components/page-header",
       "overrides/closed-source/font",
       "overrides/font-weight/bzk",
-      "overrides/heading-color/default",
       "overrides/heading-color/primary",
+      "overrides/heading-color/default",
       "overrides/primary-contrast fix/button label groter",
       "overrides/primary-contrast fix/foreground op lichte kleur",
       "overrides/primary-contrast fix/non primary button labels coolgrey",
