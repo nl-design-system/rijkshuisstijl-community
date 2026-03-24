@@ -56,7 +56,7 @@ export { DotBadge, type DotBadgeProps } from './DotBadge';
 export { Drawer, type DrawerProps } from './Drawer';
 export { ExpandableCheckboxGroup, type ExpandableCheckboxGroupProps } from './ExpandableCheckboxGroup';
 export { Fieldset, FieldsetLegend, type FieldsetLegendProps, type FieldsetProps } from './Fieldset';
-export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from './Figure';
+export { Figure, FigureCaption, type FigureCaptionProps, type FigureProps } from '@rijkshuisstijl-community/figure-react';
 export { File } from './File';
 export { FileInput, type FileInputProps } from './FileInput';
 export { Footer } from './Footer';
