@@ -93,7 +93,7 @@
     "test-workspaces": "pnpm run --recursive --no-bail test",
     "test:e2e": "pnpm run --no-bail --recursive test:e2e",
     "typecheck": "pnpm run --no-bail --recursive typecheck",
-    "prewatch:storybook": "pnpm run --recursive build:stencil && pnpm run --recursive build:style-dictionary",
+    "prewatch:storybook": "pnpm run --recursive --if-present build:stencil && pnpm run --recursive --if-present build:style-dictionary",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.cjs",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.cjs",
     "update-major": "npm-check-updates --configFileName .ncurc.major.cjs",
