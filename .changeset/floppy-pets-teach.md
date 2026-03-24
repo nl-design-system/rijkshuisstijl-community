@@ -4,7 +4,7 @@
 '@rijkshuisstijl-community/components-angular': major
 ---
 
-Updated css to avoid cross contamination. Due to this different rhc css has gotten higher specificity. affected components are:
+To avoid unwanted side effects different Rijkshuisstijl community css rules have gotten higher specificity and are only applied in combination with a `.rhc-*` class. Affected components were:
 
 - blockquote
 - footer
