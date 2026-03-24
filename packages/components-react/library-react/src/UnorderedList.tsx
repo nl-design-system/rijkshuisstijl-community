@@ -22,7 +22,6 @@ export const UnorderedList = ({ ref, nested, className, ...restProps }: PropsWit
     className={clsx(
       {
         'rhc-unordered-list--nested': nested,
-        'utrecht-unordered-list--nested': nested,
       },
       className,
     )}
