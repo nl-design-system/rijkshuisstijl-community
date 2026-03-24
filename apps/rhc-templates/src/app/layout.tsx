@@ -18,6 +18,7 @@ import '@rijkshuisstijl-community/design-tokens/src/fluid.css';
 import '@rijkshuisstijl-community/design-tokens/src/fluid-font-size.css';
 import '@rijkshuisstijl-community/design-tokens/src/fluid-space.css';
 import '@rijkshuisstijl-community/design-tokens/src/dark-mode.css';
+import '@rijkshuisstijl-community/design-tokens/src/color-oklch.css';
 
 export const metadata: Metadata = {
   title: {
@@ -26,9 +27,11 @@ export const metadata: Metadata = {
   },
 };
 
+export const themeModifiers = `basis-layout-container basis-layout-container--fluid-font-size basis-layout-container--fixed-hue basis-layout-container--fluid-space`;
+
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
-    <Root lang="nl" dir="ltr" className="rhc-theme rhc-theme--fluid-font-size rhc-theme--dark-mode">
+    <Root lang="nl" dir="ltr" className={`rhc-theme rhc-theme--dark-mode ${themeModifiers}`}>
       <Body>
         <PageLayout>{children}</PageLayout>
       </Body>

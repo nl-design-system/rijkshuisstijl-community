@@ -9,6 +9,7 @@ import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-lintblauw/index.
 import '@rijkshuisstijl-community/design-tokens/src/fluid.css';
 import '@rijkshuisstijl-community/design-tokens/src/fluid-font-size.css';
 import '@rijkshuisstijl-community/design-tokens/src/fluid-space.css';
+import '@rijkshuisstijl-community/design-tokens/src/color-oklch.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Body, PageLayout, Paragraph, Root } from '@rijkshuisstijl-community/components-react';
@@ -21,17 +22,19 @@ import { Document } from '@utrecht/component-library-react';
 import { Fragment } from 'react';
 import { StoryRootDecorator } from './StoryRootDecorator';
 
+const themeModifiers = `basis-layout-container basis-layout-container--fluid-font-size basis-layout-container--fixed-hue basis-layout-container--fluid-space`;
+
 const preview: Preview = {
   decorators: [
     withThemeByClassName({
       themes: {
-        'Kern - Lintblauw': 'rhc-theme rhc-theme--fluid-font-size',
-        'Uitvoerend - Groen': 'uitvoerend-groen',
-        'Uitvoerend - Hemelblauw': 'uitvoerend-hemelblauw',
-        'Uitvoerend - Lintblauw': 'uitvoerend-lintblauw',
-        'Uitvoerend - Oranje': 'uitvoerend-oranje',
-        'Uitvoerend - Paars': 'uitvoerend-paars',
-        'Uitvoerend - Robijn Rood': 'uitvoerend-robijnrood',
+        'Kern - Lintblauw': `rhc-theme ${themeModifiers}`,
+        'Uitvoerend - Groen': `uitvoerend-groen ${themeModifiers}`,
+        'Uitvoerend - Hemelblauw': `uitvoerend-hemelblauw ${themeModifiers}`,
+        'Uitvoerend - Lintblauw': `uitvoerend-lintblauw ${themeModifiers}`,
+        'Uitvoerend - Oranje': `uitvoerend-oranje ${themeModifiers}`,
+        'Uitvoerend - Paars': `uitvoerend-paars ${themeModifiers}`,
+        'Uitvoerend - Robijn Rood': `uitvoerend-robijnrood ${themeModifiers}`,
       },
       defaultTheme: 'Kern - Lintblauw',
     }),
