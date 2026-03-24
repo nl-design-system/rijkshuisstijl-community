@@ -4,19 +4,18 @@
  */
 
 .rhc-radio {
-  --utrecht-form-field-label-margin-block-end: var(--rhc-form-field-radio-option-label-margin-block-end, inherit);
-  --utrecht-radio-button-margin-inline-end: var(--rhc-form-field-radio-option-column-gap, inherit);
+  &.utrecht-form-field--radio {
+    --utrecht-form-field-label-margin-block-end: var(--rhc-form-field-radio-option-label-margin-block-end, inherit);
+    --utrecht-radio-button-margin-inline-end: var(--rhc-form-field-radio-option-column-gap, inherit);
 
-  display: grid;
-  grid-template-areas:
-    "input label"
-    "input description";
-  grid-template-columns: min-content 1fr;
+    display: grid;
+    grid-template-areas:
+      "input label"
+      "input description";
+    grid-template-columns: min-content 1fr;
+  }
 
   .utrecht-form-field__label {
-    --utrecht-form-label-font-weight: var(--rhc-form-field-radio-option-font-weight, inherit);
-
-    display: inline-flex;
     grid-area: label;
   }
 
@@ -28,5 +27,11 @@
     align-self: baseline;
     grid-area: input;
     line-height: var(--rhc-text-line-height-md, inherit);
+  }
+
+  &.utrecht-form-field--radio .utrecht-form-field__label {
+    --utrecht-form-label-font-weight: var(--rhc-form-field-radio-option-font-weight, inherit);
+
+    display: inline-flex;
   }
 }
