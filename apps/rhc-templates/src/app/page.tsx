@@ -1,6 +1,7 @@
 import PageContent from '@rijkshuisstijl-community/storybook/src/templates/homepage';
 import type { Metadata } from 'next';
 
+// test
 export const metadata: Metadata = {
   description: 'Homepage template voor de Rijkshuisstijl Community',
 };
