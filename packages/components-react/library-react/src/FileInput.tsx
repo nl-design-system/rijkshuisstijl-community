@@ -3,8 +3,8 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { Paragraph } from '@rijkshuisstijl-community/paragraph-react';
 import { ChangeEvent, PropsWithChildren, Ref, useEffect, useRef, useState } from 'react';
-import { Paragraph } from '.';
 import { Button, ButtonProps } from './Button';
 import { File } from './File';
 
@@ -16,8 +16,6 @@ export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
   allowedFileTypes: string;
   fileSizeErrorMessage: string;
   fileTypeErrorMessage: string;
-  // TODO: figure out why disabling is needed; works fine in editor but not in lint script for some reason
-  // eslint-disable-next-line no-unused-vars
   onValueChange?: (callbackFiles: File[]) => void;
   defaultFiles?: File[];
 }

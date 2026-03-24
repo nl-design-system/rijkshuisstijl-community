@@ -1,5 +1,3 @@
-import '@rijkshuisstijl-community/accordion-css';
-
 export {
   Accordion,
   type AccordionProps,
@@ -7,4 +5,5 @@ export {
   type AccordionProviderProps,
   AccordionSection,
   type AccordionSectionProps,
-  type AccordionSectionProviderProps } from './Accordion';
+  type AccordionSectionProviderProps,
+} from './Accordion';

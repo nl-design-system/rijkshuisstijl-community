@@ -4,18 +4,9 @@ body {
   margin-inline: 0;
 }
 
-/**
- * Temporary solution to set Utrecht page body background color,
- * as we currently do not use it elsewhere in the component library
- * and thus don't have the design tokens implemented.
- * TODO: Probably implement it then? Tokens for the background color and the text color.
- */
-.utrecht-page-body.rhc-templates-page {
-  --utrecht-page-body-background-color: #f2f4f6;
-}
-
-.utrecht-page-body.rhc-templates-page.rhc-templates-background-color-white {
-  --utrecht-page-body-background-color: var(--rhc-color-wit);
+.utrecht-page-body--rhc-tinted {
+  --utrecht-page-body-background-color: var(--rhc-color-cool-grey-100);
+  --utrecht-page-body-content-background-color: var(--rhc-color-cool-grey-100);
 }
 
 /**
@@ -123,7 +114,7 @@ body {
 }
 
 .rhc-card-as-link-no-link:hover {
-  background-color: white !important;
+  background-color: var(--rhc-color-white) !important;
 }
 
 .rhc-card-as-link.rhc-card-as-link--full-bleed .rhc-card-as-link__heading h3,

@@ -4,17 +4,18 @@
  */
 
 @use "mixin";
-@use "../../node_modules/@nl-design-system-candidate/link-css/dist/link.css";
+@use "@nl-design-system-candidate/link-css/dist/link.css";
+.rhc-link {
+  &.nl-link:any-link {
+    @include mixin.rhc-link--any-link;
+  }
 
-.nl-link:any-link {
-  @include mixin.rhc-link--any-link;
-}
+  &.nl-link .utrecht-icon,
+  &__icon {
+    @include mixin.rhc-link__icon;
+  }
 
-.nl-link .utrecht-icon,
-.rhc-link__icon {
-  @include mixin.rhc-link__icon;
-}
-
-.nl-link:any-link.rhc-link--inline {
-  @include mixin.rhc-link--inline;
+  &.nl-link:any-link.rhc-link--inline {
+    @include mixin.rhc-link--inline;
+  }
 }

@@ -13,15 +13,22 @@ pnpm add @rijkshuisstijl-community/article-react
 
 ## Gebruik
 
-### Voorbeeld 1
-
 ```tsx
 <Article>
   <p>
-    Lorem ipsum dolor sit amet. Aut amet quibusdam et atque soluta id unde provident non sequi dolor rem iusto expedita eum voluptates asperiores aut quae modi. 33 ipsa recusandae et repudiandae optio est ullam fugit sit dolores praesentium sed pariatur aspernatur. Et voluptatibus expedita aut odit sint vel eius dolores et nobis tempora et cupiditate rerum. Qui mollitia maiores non unde repellat a totam corrupti et tempore nihil est earum facilis hic odio nisi est eligendi quidem? Aut similique quasi non repellat expedita qui magni tempore ab aperiam voluptatum sit quia atque et enim alias ea voluptas internos. Qui quia eius vel alias dolores et expedita ipsum.
+    Lorem ipsum dolor sit amet. Aut amet quibusdam et atque soluta id unde provident non sequi dolor rem iusto expedita
+    eum voluptates asperiores aut quae modi. 33 ipsa recusandae et repudiandae optio est ullam fugit sit dolores
+    praesentium sed pariatur aspernatur. Et voluptatibus expedita aut odit sint vel eius dolores et nobis tempora et
+    cupiditate rerum. Qui mollitia maiores non unde repellat a totam corrupti et tempore nihil est earum facilis hic
+    odio nisi est eligendi quidem? Aut similique quasi non repellat expedita qui magni tempore ab aperiam voluptatum sit
+    quia atque et enim alias ea voluptas internos. Qui quia eius vel alias dolores et expedita ipsum.
   </p>
 </Article>
 ```
+
+## Testing
+
+We bundelen de CSS direct mee met de componenten zodat je dit niet apart hoeft in te laden. Let wel op met unit tests die in de Node omgeving draaien: die ondersteunen niet altijd standaard `.css` files. Voor vitest moet je bijvoorbeeld `pool: 'vmThreads',` aanzetten in de config als je de volgende error tegenkomt: `TypeError: Unknown file extension ".css"`
 
 ## Rijkshuisstijl Community Componenten
 

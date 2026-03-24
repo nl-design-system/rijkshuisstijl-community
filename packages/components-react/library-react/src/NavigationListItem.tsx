@@ -2,10 +2,11 @@
  * @license EUPL-1.2
  * Copyright (c) 2026 Community for NL Design System
  */
-
+import { Icon, RHCIconID } from '@rijkshuisstijl-community/icon-react';
+import { Paragraph } from '@rijkshuisstijl-community/paragraph-react';
 import clsx from 'clsx';
 import { HTMLAttributes, ReactNode, Ref } from 'react';
-import { Icon, Paragraph, RHCIconID } from '.';
+
 
 export interface NavigationListItemProps extends HTMLAttributes<HTMLLIElement> {
   label: ReactNode;

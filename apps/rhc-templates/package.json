@@ -18,7 +18,7 @@
     "directory": "apps/rhc-templates"
   },
   "scripts": {
-    "prebuild": "npm run clean",
+    "prebuild": "pnpm run clean",
     "dev": "next dev",
     "build": "next build",
     "clean": "rimraf dist/ .next/",

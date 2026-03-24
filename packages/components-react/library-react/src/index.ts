@@ -92,7 +92,7 @@ export {
   getIconSet,
   registerIconSet,
 } from '@rijkshuisstijl-community/icon-react';
-export { Image, type ImageProps } from './Image';
+export { Image, type ImageProps } from '@rijkshuisstijl-community/image-react';
 export {
   LanguageNavigation,
   type LanguageNavigationContentProps,

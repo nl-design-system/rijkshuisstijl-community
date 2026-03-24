@@ -26,7 +26,7 @@ describe('UnorderedList', () => {
 
     const unorderedList = screen.getByRole('list');
 
-    expect(unorderedList).toHaveClass('utrecht-unordered-list--nested');
+    expect(unorderedList).toHaveClass('rhc-unordered-list--nested');
   });
 });
 

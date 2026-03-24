@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { fixCalc, fixExponentiation, fixRoundTo } from './cssFixers.mjs';
+import { fixCalc, fixExponentiation, fixRoundTo } from './cssFixers.mts';
 
 describe('css fixers', () => {
   describe('fixCalc', () => {
@@ -92,6 +92,11 @@ describe('css fixers', () => {
     test('should remove roundTo() with calc function containing variables', async () => {
       const input = '--some-var: roundTo(calc(var(--base) * 2));';
       const output = '--some-var: calc(var(--base) * 2);';
+      expect(fixRoundTo(input)).toBe(output);
+    });
+    test('should preserve nested function contents while removing nested roundTo() wrappers', async () => {
+      const input = '--some-var: roundTo(calc(roundTo(var(--base) * 2) + 1rem));';
+      const output = '--some-var: calc(roundTo(var(--base) * 2) + 1rem);';
       expect(fixRoundTo(input)).toBe(output);
     });
   });

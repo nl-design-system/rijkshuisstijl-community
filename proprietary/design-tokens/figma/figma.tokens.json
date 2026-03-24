@@ -975,6 +975,11 @@
             "$type": "dimension",
             "$value": "24px"
           }
+        },
+        "page": {
+          "md": {
+            "$value": "80rem"
+          }
         }
       }
     }
@@ -4947,7 +4952,7 @@
         },
         "max-inline-size": {
           "$type": "dimension",
-          "$value": "1280px"
+          "$value": "{rhc.size.page.md}"
         },
         "padding-inline": {
           "$type": "dimension",
@@ -5352,7 +5357,7 @@
   },
   "components/page-body": {
     "utrecht": {
-      "body": {
+      "page-body": {
         "font-family": {
           "$type": "fontFamilies",
           "$value": "{rhc.text.font-family.sans}"
@@ -5380,23 +5385,23 @@
           },
           "padding-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.space.600}"
+            "$value": "{rhc.space.0}"
           },
           "padding-block-end": {
             "$type": "dimension",
-            "$value": "{rhc.space.600}"
+            "$value": "{rhc.space.0}"
           },
           "padding-inline-start": {
             "$type": "dimension",
-            "$value": "{rhc.space.700}"
+            "$value": "{rhc.space.0}"
           },
           "padding-inline-end": {
             "$type": "dimension",
-            "$value": "{rhc.space.700}"
+            "$value": "{rhc.space.0}"
           },
           "max-inline-size": {
             "$type": "dimension",
-            "$value": "75rem"
+            "$value": "{rhc.size.page.md}"
           }
         }
       }
@@ -5452,7 +5457,7 @@
         "content": {
           "max-inline-size": {
             "$type": "dimension",
-            "$value": "1280px"
+            "$value": "{rhc.size.page.md}"
           },
           "padding-inline-start": {
             "$type": "dimension",
@@ -5543,7 +5548,7 @@
           "padding-inline-end": {},
           "max-inline-size": {
             "$type": "dimension",
-            "$value": "75rem"
+            "$value": "{rhc.size.page.md}"
           }
         }
       }
@@ -6453,7 +6458,7 @@
           },
           "max-inline-size": {
             "$type": "dimension",
-            "$value": "1280px"
+            "$value": "{rhc.size.page.md}"
           },
           "list": {
             "row-gap": {
@@ -8727,7 +8732,7 @@
         "components/page-footer": "enabled",
         "brand/text": "enabled",
         "common/text": "enabled",
-        "overrides/closed-source/font": "enabled",
+        "overrides/closed-source/font": "disabled",
         "components/heading": "enabled",
         "common/vendor": "enabled"
       },
@@ -8819,7 +8824,7 @@
         "components/page-footer": "enabled",
         "brand/text": "enabled",
         "common/text": "enabled",
-        "overrides/closed-source/font": "enabled",
+        "overrides/closed-source/font": "disabled",
         "overrides/primaire kleur/groen": "enabled",
         "components/heading": "enabled",
         "common/vendor": "enabled"
@@ -8912,7 +8917,7 @@
         "components/page-footer": "enabled",
         "brand/text": "enabled",
         "common/text": "enabled",
-        "overrides/closed-source/font": "enabled",
+        "overrides/closed-source/font": "disabled",
         "overrides/primaire kleur/hemelblauw": "enabled",
         "components/heading": "enabled",
         "common/vendor": "enabled"
@@ -9005,7 +9010,7 @@
         "components/page-footer": "enabled",
         "brand/text": "enabled",
         "common/text": "enabled",
-        "overrides/closed-source/font": "enabled",
+        "overrides/closed-source/font": "disabled",
         "overrides/primaire kleur/oranje": "enabled",
         "overrides/primaire kleur/contrast fix/button label groter": "enabled",
         "overrides/primaire kleur/contrast fix/non primary buttons coolgrey": "enabled",
@@ -9100,7 +9105,7 @@
         "components/page-footer": "enabled",
         "brand/text": "enabled",
         "common/text": "enabled",
-        "overrides/closed-source/font": "enabled",
+        "overrides/closed-source/font": "disabled",
         "overrides/primaire kleur/paars": "enabled",
         "components/heading": "enabled",
         "common/vendor": "enabled"
@@ -9193,7 +9198,7 @@
         "components/page-footer": "enabled",
         "brand/text": "enabled",
         "common/text": "enabled",
-        "overrides/closed-source/font": "enabled",
+        "overrides/closed-source/font": "disabled",
         "overrides/primaire kleur/robijn rood": "enabled",
         "components/heading": "enabled",
         "common/vendor": "enabled"

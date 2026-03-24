@@ -8,7 +8,8 @@
 .rhc-radio-group {
   @include mixin.rhc-radio-group;
 }
-
-.utrecht-form-label {
-  line-height: var(--rhc-text-line-height-md, inherit);
+.rhc-form-field {
+  .utrecht-form-label {
+    line-height: var(--rhc-text-line-height-md, inherit);
+  }
 }
