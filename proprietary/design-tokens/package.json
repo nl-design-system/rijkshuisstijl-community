@@ -24,7 +24,7 @@
     "build:style-dictionary": "node --experimental-strip-types ./build.mts",
     "typecheck": "tsc --noEmit",
     "watch": "npm-run-all watch:**",
-    "watch:style-dictionary": "npm-run-all build:figma-tokens build:style-dictionary && chokidar 'src/**/*.tokens.json' 'figma/**/*.tokens.json' --follow-symlinks --command 'npm-run-all build:figma-tokens build:style-dictionary' --ignore '/src/generated/'",
+    "watch:style-dictionary": "chokidar 'src/**/*.tokens.json' 'figma/**/*.tokens.json' --follow-symlinks --command 'pnpm run build' --ignore '/src/generated/'",
     "test": "vitest run"
   },
   "devDependencies": {
