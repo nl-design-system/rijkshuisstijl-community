@@ -12,8 +12,8 @@
   flex-direction: column;
   font-family: var(--rhc-text-font-family-default, inherit);
   font-size: var(--rhc-card-font-size, inherit);
-  inline-size: var(--rhc-card-inline-size, 328px);
   line-height: var(--rhc-text-line-height-md, inherit);
+  max-inline-size: var(--rhc-card-inline-size);
   position: relative;
   text-decoration: none;
 }
