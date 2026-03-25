@@ -15,6 +15,7 @@ import { LinkListLinkComponent } from '../link-list-link/link-list-link.componen
       [background]="background"
       [preFooter]="preFooter"
       [preFooterMessage]="preFooterMessage"
+      [tagline]="tagline"
       [heading]="heading"
       [appearanceLevel]="appearanceLevel"
       [columns]="columns"
@@ -37,7 +38,7 @@ class FooterTestHostComponent {
   @Input() background: 'primary-filled' | 'primary-outlined' = 'primary-filled';
   @Input() preFooter = true;
   @Input() preFooterMessage = 'Extra info above footer';
-  @Input() heading = 'Footer heading';
+  @Input() tagline = 'Footer tagline';
   @Input() appearanceLevel = 3;
   @Input() subFooter = true;
 }
@@ -69,9 +70,9 @@ describe('FooterComponent in host context', () => {
     expect(spanAfterChange).toBeFalsy();
   });
 
-  it('should display the heading', () => {
-    const heading = fixture.nativeElement.querySelector('.rhc-page-footer__title rhc-heading');
-    expect(heading?.textContent).toContain('Footer heading');
+  it('should display the tagline', () => {
+    const heading = fixture.nativeElement.querySelector('.rhc-page-footer__tagline rhc-heading');
+    expect(heading?.textContent).toContain('Footer tagline');
   });
 
   it('should display subFooter based on input', () => {
