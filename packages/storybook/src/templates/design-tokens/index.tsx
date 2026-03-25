@@ -1,5 +1,6 @@
 'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
 
+import { CodeBlock } from '@nl-design-system-candidate/code-block-react';
 import {
   Article,
   Heading,
@@ -10,7 +11,7 @@ import {
   SideNavLink,
   SideNavList,
 } from '@rijkshuisstijl-community/components-react';
-import { Code, CodeBlock, URLData } from '@utrecht/component-library-react';
+import { Code, URLData } from '@utrecht/component-library-react';
 import { PageBodyContainer, PageBodyContent, PageBodyMain } from './PageBody';
 import { navigation } from './navigation';
 import SharedFooter from '../shared/footer';
