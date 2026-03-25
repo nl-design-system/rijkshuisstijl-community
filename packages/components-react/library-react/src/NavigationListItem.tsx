@@ -7,7 +7,6 @@ import { Paragraph } from '@rijkshuisstijl-community/paragraph-react';
 import clsx from 'clsx';
 import { HTMLAttributes, ReactNode, Ref } from 'react';
 
-
 export interface NavigationListItemProps extends HTMLAttributes<HTMLLIElement> {
   label: ReactNode;
   description: ReactNode;

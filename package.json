@@ -87,7 +87,7 @@
     "release": "lerna version prerelease --conventional-prerelease --no-changelog --no-private --yes",
     "start": "node_modules/http-server/bin packages/storybook/dist/",
     "start:rhc-templates": "pnpm run --dir apps/rhc-templates dev",
-    "storybook": "npm-run-all watch:**",
+    "storybook": "npm-run-all --parallel watch:**",
     "test": "pnpm run test-workspaces",
     "test-update": "npm-run-all --sequential clean lint build test",
     "test-workspaces": "pnpm run --recursive --no-bail test",
