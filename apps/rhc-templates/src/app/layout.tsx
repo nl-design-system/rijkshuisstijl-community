@@ -9,6 +9,7 @@ import { Root } from '@utrecht/root-react';
 import { PageLayout } from '@utrecht/page-layout-react';
 import type { Metadata } from 'next';
 import '@nl-rvo/assets/fonts/index.css';
+import '@nl-design-system-candidate/code-block-css/code-block.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
