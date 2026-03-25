@@ -978,6 +978,7 @@
         },
         "page": {
           "md": {
+            "$type": "other",
             "$value": "80rem"
           }
         }
@@ -4047,7 +4048,7 @@
         "level-1": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.primary.500}"
           },
           "font-family": {
             "$type": "fontFamilies",
@@ -5518,37 +5519,6 @@
           "direction": {
             "$type": "flexDirection",
             "$value": "column"
-          }
-        }
-      }
-    }
-  },
-  "components/page-header": {
-    "utrecht": {
-      "page-header": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{rhc.color.wit}"
-        },
-        "border-block-end-color": {},
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.cool-grey.900}"
-        },
-        "padding-block-start": {},
-        "padding-block-end": {},
-        "padding-inline-start": {},
-        "padding-inline-end": {},
-        "content": {
-          "background-color": {},
-          "color": {},
-          "padding-block-start": {},
-          "padding-block-end": {},
-          "padding-inline-start": {},
-          "padding-inline-end": {},
-          "max-inline-size": {
-            "$type": "dimension",
-            "$value": "{rhc.size.page.md}"
           }
         }
       }
@@ -7161,6 +7131,26 @@
           "margin-inline-start": {
             "$type": "dimension",
             "$value": "{rhc.space.0}"
+          }
+        }
+      }
+    }
+  },
+  "components/page-header": {
+    "utrecht": {
+      "page-header": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{rhc.color.wit}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.cool-grey.900}"
+        },
+        "content": {
+          "max-inline-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.page.md}"
           }
         }
       }
@@ -9271,7 +9261,6 @@
       "components/ordered-list",
       "components/page-body",
       "components/page-footer",
-      "components/body-header",
       "components/page-number-navigation",
       "components/paragraph",
       "components/pre-heading",
@@ -9291,6 +9280,7 @@
       "components/textarea",
       "components/toggletip",
       "components/unordered-list",
+      "components/page-header",
       "overrides/closed-source/font",
       "overrides/font-weight/bzk",
       "overrides/heading-color/primary",
