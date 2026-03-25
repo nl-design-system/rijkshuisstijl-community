@@ -6,7 +6,7 @@ export default function SharedFooter({ isLightTheme }: { isLightTheme?: boolean 
       appearanceLevel={4}
       background={isLightTheme ? 'primary-outlined' : 'primary-filled'}
       backtotop={true}
-      tagline="Footer tagline"
+      tagline="NL Design System voor de rijksoverheid"
       columns={[
         {
           heading: 'Disclaimer',
