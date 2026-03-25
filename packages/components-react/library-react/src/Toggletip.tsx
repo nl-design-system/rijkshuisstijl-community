@@ -8,7 +8,6 @@ import { Paragraph } from '@rijkshuisstijl-community/paragraph-react';
 import clsx from 'clsx';
 import { DetailsHTMLAttributes, PropsWithChildren, ReactNode, Ref } from 'react';
 
-
 export interface ToggletipProps extends DetailsHTMLAttributes<HTMLDetailsElement> {
   ref?: Ref<HTMLDetailsElement>;
 }
