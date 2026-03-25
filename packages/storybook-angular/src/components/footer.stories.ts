@@ -43,6 +43,13 @@ const meta: Meta<FooterComponent> = {
         type: { summary: 'string' },
       },
     },
+    tagline: {
+      description: 'Tagline',
+      control: { type: 'text' },
+      table: {
+        type: { summary: 'string' },
+      },
+    },
     appearanceLevel: {
       description: 'Het uiterlijk van de heading in de footer.',
       defaultValue: 3,
@@ -89,7 +96,7 @@ const meta: Meta<FooterComponent> = {
     },
   },
   args: {
-    heading: 'Heading',
+    tagline: 'Tagline',
     preFooter: true,
     preFooterMessage: 'Pre Footer Message',
     background: 'primary-filled',
@@ -102,13 +109,13 @@ const meta: Meta<FooterComponent> = {
       },
     },
   },
-  render: ({ heading, background, preFooter, preFooterMessage, appearanceLevel, subFooter }) => ({
+  render: ({ heading, tagline, background, preFooter, preFooterMessage, appearanceLevel, subFooter }) => ({
     template: `
       <footer rhc-footer
         [preFooter]="${preFooter}"
         [preFooterMessage]="'${preFooterMessage}'"
         [background]="'${background}'"
-        ${heading ? '[heading] = "\'' + heading + '\'"' : ''}
+        ${tagline ? '[tagline] = "\'' + tagline + '\'"' : ''}
         [appearanceLevel] = "${appearanceLevel}"
         [subFooter]="${subFooter}"
       >
@@ -125,7 +132,7 @@ const meta: Meta<FooterComponent> = {
               </li>
               <li rhc-link-list-item>
                 <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
-                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>                
+                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
                   Abonneren
                 </a>
               </li>
@@ -158,7 +165,7 @@ const meta: Meta<FooterComponent> = {
                   <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
                   Archief
                 </a>
-              </li>                                   
+              </li>
           </rhc-link-list>
         </div>
         <div class="rhc-page-footer__section" columns>
@@ -201,7 +208,7 @@ const meta: Meta<FooterComponent> = {
                   <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
                   Kwetsbaarheid melden
                 </a>
-              </li>                                   
+              </li>
           </rhc-link-list>
         </div>
         <rhc-back-to-top subFooter>

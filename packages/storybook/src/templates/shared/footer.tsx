@@ -7,7 +7,7 @@ export default function SharedFooter({ isLightTheme }: { isLightTheme?: boolean 
       appearanceLevel={4}
       background={isLightTheme ? 'primary-outlined' : 'primary-filled'}
       backtotop={true}
-      heading="Footer"
+      tagline="Footer tagline"
       columns={[
         {
           heading: 'Disclaimer',

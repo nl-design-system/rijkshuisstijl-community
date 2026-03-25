@@ -10,7 +10,7 @@ describe('Footer', () => {
     render(
       <Footer
         appearanceLevel={4}
-        heading="Footer heading"
+        tagline="Footer tagline"
         columns={[
           {
             heading: 'Service',
@@ -35,7 +35,7 @@ describe('Footer', () => {
         ]}
       />,
     );
-    expect(screen.getByText('Footer heading')).toBeInTheDocument();
+    expect(screen.getByText('Footer tagline')).toBeInTheDocument();
     expect(screen.getByText('Service')).toBeInTheDocument();
     expect(screen.getByText('Over deze site')).toBeInTheDocument();
     expect(screen.getByText('Contact')).toBeInTheDocument();
