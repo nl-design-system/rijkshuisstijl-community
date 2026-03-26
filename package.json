@@ -93,13 +93,13 @@
     "test-workspaces": "pnpm run --recursive --no-bail test",
     "test:e2e": "pnpm run --no-bail --recursive test:e2e",
     "typecheck": "pnpm run --no-bail --recursive typecheck",
-    "prewatch:storybook": "pnpm run --recursive build:stencil && pnpm run --recursive build:style-dictionary",
+    "prewatch:storybook": "pnpm run --recursive --if-present build:stencil && pnpm run --recursive --if-present build:style-dictionary",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.cjs",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.cjs",
     "update-major": "npm-check-updates --configFileName .ncurc.major.cjs",
     "watch:storybook": "pnpm run --parallel --recursive storybook",
     "watch:packages": "pnpm run --parallel --recursive watch",
-    "watch:style-dictionary": "pnpm run --recursive watch:style-dictionary",
+    "watch:sd": "pnpm run --recursive watch:style-dictionary",
     "test-storybook:ci": "pnpm --filter @rijkshuisstijl-community/storybook run playwright:install && concurrently -k -s first -n \"STORYBOOK,A11Y-TEST\" -c \"magenta,green\" \"pnpm --filter @rijkshuisstijl-community/storybook run prod-static -- --silent\" \"wait-on tcp:6006 && pnpm --filter @rijkshuisstijl-community/storybook run test-storybook\""
   },
   "packageManager": "pnpm@10.30.1+sha512.3590e550d5384caa39bd5c7c739f72270234b2f6059e13018f975c313b1eb9fefcc09714048765d4d9efe961382c312e624572c0420762bdc5d5940cdf9be73a"

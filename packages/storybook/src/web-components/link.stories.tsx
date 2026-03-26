@@ -1,6 +1,5 @@
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
-import { LinkWebComponent } from '@rijkshuisstijl-community/web-components';
-import { IconWebComponent } from '@rijkshuisstijl-community/web-components';
+import { IconWebComponent, LinkWebComponent } from '@rijkshuisstijl-community/web-components';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/components/link/README.md?raw';
 import anatomyDocs from '@utrecht/components/link/docs/anatomy.nl.md?raw';

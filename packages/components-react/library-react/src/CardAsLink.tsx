@@ -2,10 +2,9 @@
  * @license EUPL-1.2
  * Copyright (c) 2026 Community for NL Design System
  */
-
+import { Image } from '@rijkshuisstijl-community/image-react';
 import clsx from 'clsx';
 import { PropsWithChildren, ReactNode, Ref } from 'react';
-import { Image } from './Image';
 import { Link } from './Link';
 
 interface CardAsLinkPropsBase {
