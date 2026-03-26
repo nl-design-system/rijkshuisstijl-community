@@ -94,10 +94,13 @@ export {
 } from '@rijkshuisstijl-community/icon-react';
 export { Image, type ImageProps } from '@rijkshuisstijl-community/image-react';
 export {
-  LanguageNavigation,
+  Content as LanguageNavigationContent,
   type LanguageNavigationContentProps,
+  Item as LanguageNavigationItem,
   type LanguageNavigationItemProps,
+  Root as LanguageNavigationRoot,
   type LanguageNavigationRootProps,
+  Trigger as LanguageNavigationTrigger,
   type LanguageNavigationTriggerProps,
 } from './LanguageNavigation';
 export { Link, type LinkProps } from './Link';
