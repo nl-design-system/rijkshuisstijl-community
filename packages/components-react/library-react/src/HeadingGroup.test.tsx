@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { HeadingGroup } from '.';
+import { HeadingGroup } from './entrypoint';
 
 describe('Heading Group', () => {
   it('renders a visible element', () => {

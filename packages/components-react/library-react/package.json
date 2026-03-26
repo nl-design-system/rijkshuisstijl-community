@@ -31,14 +31,46 @@
   },
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/entrypoint/index.d.ts",
   "exports": {
     ".": {
-      "rhc:source": "./src/index.ts",
+      "rhc:source": "./src/entrypoint/index.ts",
       "default": {
-        "types": "./dist/index.d.ts",
+        "types": "./dist/entrypoint/index.d.ts",
         "import": "./dist/index.esm.js",
         "require": "./dist/index.cjs.js"
+      }
+    },
+    "./paragraph": {
+      "rhc:source": "./src/entrypoint/paragraph.ts",
+      "default": {
+        "types": "./dist/entrypoint/paragraph.d.ts",
+        "import": "./dist/paragraph.esm.js",
+        "require": "./dist/paragraph.cjs.js"
+      }
+    },
+    "./accordion": {
+      "rhc:source": "./src/entrypoint/accordion.ts",
+      "default": {
+        "types": "./dist/entrypoint/accordion.d.ts",
+        "import": "./dist/accordion.esm.js",
+        "require": "./dist/accordion.cjs.js"
+      }
+    },
+    "./skiplink": {
+      "rhc:source": "./src/entrypoint/SkipLink.tsx",
+      "default": {
+        "types": "./dist/entrypoint/SkipLink.d.ts",
+        "import": "./dist/skiplink.esm.js",
+        "require": "./dist/skiplink.cjs.js"
+      }
+    },
+    "./languagenavigation": {
+      "rhc:source": "./src/entrypoint/LanguageNavigation.tsx",
+      "default": {
+        "types": "./dist/entrypoint/LanguageNavigation.d.ts",
+        "import": "./dist/languagenavigation.esm.js",
+        "require": "./dist/languagenavigation.cjs.js"
       }
     },
     "./CHANGELOG.md": "./CHANGELOG.md",

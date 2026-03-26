@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { PageContent } from '.';
+import { PageContent } from './entrypoint';
 
 describe('PageContent', () => {
   it('renders a visible element', () => {

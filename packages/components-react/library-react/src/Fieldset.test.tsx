@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { Fieldset } from '.';
+import { Fieldset } from './entrypoint';
 
 describe('Fieldset', () => {
   it('renders a visible element', () => {

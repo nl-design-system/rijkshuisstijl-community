@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { Toggletip } from '.';
+import { Toggletip } from './entrypoint';
 
 describe('Toggletip', () => {
   it('renders a visible element', () => {

@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { LinkListCard } from '.';
+import { LinkListCard } from './entrypoint';
 
 describe('LinkListCard', () => {
   it('renders a visible element', () => {

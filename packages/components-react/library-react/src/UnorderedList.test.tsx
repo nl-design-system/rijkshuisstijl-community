@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { UnorderedList } from '.';
+import { UnorderedList } from './entrypoint';
 
 describe('UnorderedList', () => {
   it('renders a visible element', () => {

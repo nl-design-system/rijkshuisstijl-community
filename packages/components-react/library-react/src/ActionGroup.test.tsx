@@ -2,7 +2,7 @@ import '@testing-library/jest-dom/vitest';
 import { cleanup, render, screen } from '@testing-library/react';
 import { createRef } from 'react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { ActionGroup, Button } from './';
+import { ActionGroup, Button } from './entrypoint';
 
 describe('Action group', () => {
   it('renders a visible element', () => {

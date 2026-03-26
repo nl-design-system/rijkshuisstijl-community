@@ -3,7 +3,7 @@ import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { createRef } from 'react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { LanguageNavigation } from './LanguageNavigation';
+import { LanguageNavigation } from './entrypoint/LanguageNavigation';
 
 const languages = [
   { languageName: 'Nederlands', localLanguageName: 'Nederlands', lang: 'nl' },

@@ -45,8 +45,15 @@ export default App;
 ```
 
 > [!WARNING]  
-> Sommige componenten gebruiken client-side functionaliteiten zoals de [useRef](https://react.dev/reference/react/useRef) hook, die alleen werken in Client
-> Componenten. Voeg `"use client"` toe bovenaan het bestand om dit op te lossen. lees [hier](https://react.dev/reference/rsc/server-components) meer over server en client components in React.
+> De root import `@rijkshuisstijl-community/components-react` is bedoeld als volledige client bundle. Gebruik die import daarom alleen vanuit een Client Component of een bestand met `"use client"`.
+>
+> Voor server-side rendering in bijvoorbeeld Next.js App Router kun je server-veilige subpath imports gebruiken, zoals:
+>
+> ```tsx
+> import { Paragraph } from '@rijkshuisstijl-community/components-react/paragraph';
+> ```
+>
+> Lees [hier](https://react.dev/reference/rsc/server-components) meer over server en client components in React.
 
 ### Thema toepassen
 

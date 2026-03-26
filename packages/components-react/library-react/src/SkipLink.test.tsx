@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { SkipLink } from '.';
+import { SkipLink } from './entrypoint';
 
 describe('SkipLink', () => {
   it('renders a visible element', () => {

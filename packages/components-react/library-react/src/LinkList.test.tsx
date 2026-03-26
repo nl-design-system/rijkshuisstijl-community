@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { LinkList, LinkListLink } from '.';
+import { LinkList, LinkListLink } from './entrypoint';
 
 describe('LinkList', () => {
   it('renders a visible element', () => {

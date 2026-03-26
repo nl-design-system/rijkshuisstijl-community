@@ -3,9 +3,11 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { Alert } from '@rijkshuisstijl-community/alert-react';
+import { Icon } from '@rijkshuisstijl-community/icon-react';
+import { Paragraph } from '@rijkshuisstijl-community/paragraph-react';
 import clsx from 'clsx';
 import { DetailsHTMLAttributes, PropsWithChildren, ReactNode, Ref } from 'react';
-import { Alert, Icon, Paragraph } from '.';
 
 export interface ToggletipProps extends DetailsHTMLAttributes<HTMLDetailsElement> {
   ref?: Ref<HTMLDetailsElement>;
