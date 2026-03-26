@@ -25,12 +25,15 @@ export const createRollupConfig = (pkgJson) => [
   {
     input: 'src/index.ts',
     output: [
-      ...(pkgJson.main ? [{ file: pkgJson.main, format: 'cjs', sourcemap: true, globals: outputGlobals }] : []),
+      ...(pkgJson.main
+        ? [{ file: pkgJson.main, format: 'cjs', sourcemap: true, globals: outputGlobals, banner: "'use client';" }]
+        : []),
       {
         file: pkgJson.module,
         format: 'esm',
         sourcemap: true,
         globals: outputGlobals,
+        banner: "'use client';",
       },
     ],
     external: [/@babel\/runtime/, 'react-dom', 'react'],
