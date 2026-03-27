@@ -978,6 +978,7 @@
         },
         "page": {
           "md": {
+            "$type": "other",
             "$value": "80rem"
           }
         }
@@ -2847,6 +2848,10 @@
           "$type": "dimension",
           "$value": "{rhc.border-width.sm}"
         },
+        "margin-inline-end": {
+          "$type": "dimension",
+          "$value": "{rhc.space.100}"
+        },
         "size": {
           "$type": "dimension",
           "$value": "{rhc.size.half-lint}"
@@ -3780,12 +3785,6 @@
           "$type": "fontSize",
           "$value": "{rhc.text.font-size.md}"
         },
-        "label": {
-          "margin-block-end": {
-            "$type": "dimension",
-            "$value": "{rhc.space.100}"
-          }
-        },
         "margin-block-end": {
           "$type": "dimension",
           "$value": "{rhc.space.100}",
@@ -3848,13 +3847,11 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.100}",
-          "$description": "[code-only]"
+          "$value": "{rhc.space.100}"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "-{rhc.space.100}",
-          "$description": "[code-only]"
+          "$value": "-{rhc.space.100}"
         }
       }
     }
@@ -3888,13 +3885,11 @@
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.100}",
-          "$description": "[code-only]"
+          "$value": "{rhc.space.100}"
         },
         "margin-block-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.0}",
-          "$description": "[code-only]"
+          "$value": "{rhc.space.0}"
         },
         "padding-block-end": {
           "$type": "dimension",
@@ -3975,6 +3970,42 @@
             "$type": "color",
             "$value": "{rhc.color.border.subtle}"
           }
+        }
+      },
+      "form-field-label": {
+        "margin-block-end": {
+          "$type": "dimension",
+          "$value": "{rhc.space.100}"
+        }
+      }
+    }
+  },
+  "components/form-field-label-suffix": {
+    "todo": {
+      "form-field-label-suffix": {
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.foreground.subtle}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{rhc.text.font-family.sans}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{rhc.text.font-size.md}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{rhc.text.font-weight.regular}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{rhc.text.line-height.md}"
+        },
+        "margin-inline-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.100}"
         }
       }
     }
@@ -5523,37 +5554,6 @@
       }
     }
   },
-  "components/page-header": {
-    "utrecht": {
-      "page-header": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{rhc.color.wit}"
-        },
-        "border-block-end-color": {},
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.cool-grey.900}"
-        },
-        "padding-block-start": {},
-        "padding-block-end": {},
-        "padding-inline-start": {},
-        "padding-inline-end": {},
-        "content": {
-          "background-color": {},
-          "color": {},
-          "padding-block-start": {},
-          "padding-block-end": {},
-          "padding-inline-start": {},
-          "padding-inline-end": {},
-          "max-inline-size": {
-            "$type": "dimension",
-            "$value": "{rhc.size.page.md}"
-          }
-        }
-      }
-    }
-  },
   "components/page-number-navigation": {
     "ams": {
       "pagination": {
@@ -5714,6 +5714,10 @@
         "border-width": {
           "$type": "dimension",
           "$value": "{rhc.border-width.sm}"
+        },
+        "margin-inline-end": {
+          "$type": "dimension",
+          "$value": "{rhc.space.100}"
         },
         "size": {
           "$type": "dimension",
@@ -7161,6 +7165,26 @@
           "margin-inline-start": {
             "$type": "dimension",
             "$value": "{rhc.space.0}"
+          }
+        }
+      }
+    }
+  },
+  "components/page-header": {
+    "utrecht": {
+      "page-header": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{rhc.color.wit}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.cool-grey.900}"
+        },
+        "content": {
+          "max-inline-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.page.md}"
           }
         }
       }
@@ -8642,7 +8666,8 @@
         "brand/text": "enabled",
         "common/text": "enabled",
         "components/heading": "enabled",
-        "common/vendor": "enabled"
+        "common/vendor": "enabled",
+        "components/form-field-label-suffix": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8734,7 +8759,8 @@
         "common/text": "enabled",
         "overrides/closed-source/font": "enabled",
         "components/heading": "enabled",
-        "common/vendor": "enabled"
+        "common/vendor": "enabled",
+        "components/form-field-label-suffix": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8827,7 +8853,8 @@
         "overrides/closed-source/font": "enabled",
         "overrides/primaire kleur/groen": "enabled",
         "components/heading": "enabled",
-        "common/vendor": "enabled"
+        "common/vendor": "enabled",
+        "components/form-field-label-suffix": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -8920,7 +8947,8 @@
         "overrides/closed-source/font": "enabled",
         "overrides/primaire kleur/hemelblauw": "enabled",
         "components/heading": "enabled",
-        "common/vendor": "enabled"
+        "common/vendor": "enabled",
+        "components/form-field-label-suffix": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9015,7 +9043,8 @@
         "overrides/primaire kleur/contrast fix/button label groter": "enabled",
         "overrides/primaire kleur/contrast fix/non primary buttons coolgrey": "enabled",
         "components/heading": "enabled",
-        "common/vendor": "enabled"
+        "common/vendor": "enabled",
+        "components/form-field-label-suffix": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9108,7 +9137,8 @@
         "overrides/closed-source/font": "enabled",
         "overrides/primaire kleur/paars": "enabled",
         "components/heading": "enabled",
-        "common/vendor": "enabled"
+        "common/vendor": "enabled",
+        "components/form-field-label-suffix": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9201,7 +9231,8 @@
         "overrides/closed-source/font": "enabled",
         "overrides/primaire kleur/robijn rood": "enabled",
         "components/heading": "enabled",
-        "common/vendor": "enabled"
+        "common/vendor": "enabled",
+        "components/form-field-label-suffix": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -9252,6 +9283,7 @@
       "components/form-field-description",
       "components/form-field-error-message",
       "components/form-field-label",
+      "components/form-field-label-suffix",
       "components/form-field-option-label",
       "components/form-field-radio-option",
       "components/heading",
@@ -9271,7 +9303,6 @@
       "components/ordered-list",
       "components/page-body",
       "components/page-footer",
-      "components/body-header",
       "components/page-number-navigation",
       "components/paragraph",
       "components/pre-heading",
@@ -9291,6 +9322,7 @@
       "components/textarea",
       "components/toggletip",
       "components/unordered-list",
+      "components/page-header",
       "overrides/closed-source/font",
       "overrides/font-weight/bzk",
       "overrides/heading-color/primary",
