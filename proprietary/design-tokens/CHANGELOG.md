@@ -1,5 +1,29 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 12.1.0
+
+### Minor Changes
+
+- f744baa: Form token update nav NLDS Figma release 10.0.0, margin-inline-end tokens toegevoegd voor radio en checkbox.
+- 589942f: Add design tokens for new components: body, page-body, page-header and root.
+- 2eab729: Add fluid design class names: `rhc-theme--fluid`, `rhc-theme--fluid-font-size` and `rhc-theme--fluid-space`.
+- 44963ad: Add experimental dark mode class name.
+- 6f22760: Add `rhc.size.page.md` token to consistently configure the page width.
+
+### Patch Changes
+
+- 74f5725: Fix `utrecht.page-body` tokens, they were accidentally called `utrecht.body`.
+- 8bb5706: - Verwijderd: rhc.line-height.icon.md
+  - Toegevoegd: rhc.icon.md.inset-block-start & rhc.icon.lg.inset-block-start
+
+  In Figma kan een fixed height van een instance (component) niet worden aangepast
+  met design tokens. Daarom zijn de inset-block-start tokens toegevoegd als
+  vervanging van de line-height tokens, zodat de responsive font-size in Figma (fluid in code) werkt.
+
+- 92b5344: Consistently use brand tokens instead of hardcoded colors.
+- 6384558: Fixd errors that were repressed before styledictionary package update.
+- 4c7e9d3: CSS now uses `oklch()` colors instead of hex-colors.
+
 ## 12.0.0
 
 ### Major Changes
