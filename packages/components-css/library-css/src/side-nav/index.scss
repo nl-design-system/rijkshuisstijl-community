@@ -33,16 +33,10 @@
       color: var(--rhc-sidenav-link-active-color);
       text-decoration: var(--rhc-sidenav-link-active-text-decoration);
     }
-    &:focus {
+    &:focus-visible {
       background-color: var(--rhc-sidenav-link-focus-background-color);
       color: var(--rhc-sidenav-link-focus-color);
       text-decoration: var(--rhc-sidenav-link-focus-text-decoration);
-    }
-    &:focus-visible {
-      border-color: var(--rhc-sidenav-link-focus-border-color);
-      border-radius: var(--rhc-sidenav-link-focus-border-radius);
-      border-style: var(--rhc-sidenav-link-focus-border-style);
-      border-width: var(--rhc-sidenav-link-focus-border-width);
     }
     &:hover {
       color: var(--rhc-sidenav-link-hover-color);
