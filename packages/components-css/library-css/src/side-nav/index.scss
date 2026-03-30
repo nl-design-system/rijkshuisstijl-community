@@ -7,6 +7,9 @@
   display: var(--rhc-sidenav-display, flex);
   flex-direction: column;
   row-gap: var(--rhc-sidenav-row-gap);
+  &__heading {
+    display: none;
+  }
   &__list {
     list-style: none;
     margin-block: 0;
