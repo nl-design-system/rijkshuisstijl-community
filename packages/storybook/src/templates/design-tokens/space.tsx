@@ -30,7 +30,7 @@ export default function Page() {
       <SharedHeader />
       <PageBodyContainer>
         <PageBodyContent layout="side-nav">
-          <SideNav className={'rhc-side-nav'}>
+          <SideNav className="rhc-side-nav" heading="Submenu">
             <SideNavList>
               {navigation.map(({ href, label }) => (
                 <SideNavItem key={href}>
