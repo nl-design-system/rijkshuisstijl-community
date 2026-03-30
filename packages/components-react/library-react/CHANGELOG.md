@@ -1,5 +1,73 @@
 # @rijkshuisstijl-community/components-react
 
+## 14.0.0
+
+### Major Changes
+
+- 16d022f: To avoid unwanted side effects different Rijkshuisstijl community css rules have gotten higher specificity and are only applied in combination with a `.rhc-*` class. Affected components were:
+  - blockquote
+  - footer
+  - form field radio option
+  - heading
+  - link
+  - number-badge
+  - radio-group
+  - skip-link
+  - unordered-list
+
+- 70b6098: fixed ssr rendering issues
+
+  Due to how nextjs scans external dependencies for client components the language navigation needs to export each sub component separately and not as a single object with sub components as properties.
+  The following code snippet shows the old way of exporting the language navigation component and the new way of exporting it.
+
+  ```tsx
+  // old way
+  <LanguageNavigation.Root>
+    <LanguageNavigation.Item>...</LanguageNavigation.Item>
+  </LanguageNavigation.Root>
+  ```
+
+  ```tsx
+  // new way
+  <LanguageNavigationRoot>
+    <LanguageNavigationItem>...</LanguageNavigationItem>
+  </LanguageNavigationRoot>
+  ```
+
+- ecbf5a7: This is only breaking change for projects that use the Rijkshuisstijl Community components, but do not use the `@rijkshuisstijl-community/design-tokens` theme and misteriously do not yet use the common tokens.
+
+  When you use `@rijkshuisstijl-community/design-tokens` in combination with any of the following packages, everything will keep working.
+  - `@rijkshuisstijl-community/components-react`
+  - `@rijkshuisstijl-community/components-css`
+  - `@rijkshuisstijl-community/web-components`
+
+  Since components no longer have hardcoded fallback values for colors or dimensions, you will need to set the following required common design tokens:
+  - `rhc.border-radius.*`
+  - `rhc.border-width.*`
+  - `rhc.border-width.*`
+  - `rhc.color.*.*`
+  - `rhc.color.wit`
+  - `rhc.color.zwart`
+  - `rhc.space.*`
+
+### Minor Changes
+
+- d7df6f2: Update to new Utrecht Page Header component, with `__content` div.
+
+### Patch Changes
+
+- c5985e2: Add further documentation for test environment errors
+- Updated dependencies [a6025a3]
+- Updated dependencies [c5985e2]
+- Updated dependencies [04d1cf1]
+- Updated dependencies [6a2367c]
+  - @rijkshuisstijl-community/image-react@2.0.0
+  - @rijkshuisstijl-community/accordion-react@3.0.1
+  - @rijkshuisstijl-community/alert-react@3.0.1
+  - @rijkshuisstijl-community/icon-react@3.0.1
+  - @rijkshuisstijl-community/article-react@2.0.0
+  - @rijkshuisstijl-community/paragraph-react@2.0.0
+
 ## 13.1.0
 
 ### Minor Changes

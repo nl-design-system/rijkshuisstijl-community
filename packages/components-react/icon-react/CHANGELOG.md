@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/icon-react
 
+## 3.0.1
+
+### Patch Changes
+
+- c5985e2: Add further documentation for test environment errors
+
 ## 3.0.0
 
 ### Major Changes

@@ -1,5 +1,20 @@
 # @rijkshuisstijl-community/components-angular
 
+## 10.0.0
+
+### Major Changes
+
+- 16d022f: To avoid unwanted side effects different Rijkshuisstijl community css rules have gotten higher specificity and are only applied in combination with a `.rhc-*` class. Affected components were:
+  - blockquote
+  - footer
+  - form field radio option
+  - heading
+  - link
+  - number-badge
+  - radio-group
+  - skip-link
+  - unordered-list
+
 ## 9.0.0
 
 ### Major Changes
