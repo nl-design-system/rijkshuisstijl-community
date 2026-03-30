@@ -15,10 +15,10 @@ pnpm add @rijkshuisstijl-community/figure-css
 ```html
 import '@rijkshuisstijl-community/figure-css';
 
-<Figure>
-  <Image alt="Voorbeeldafbeelding" src="./example.jpg" />
+<figure>
+  <image alt="Voorbeeldafbeelding" src="./example.jpg" />
   <FigureCaption>Voorbeeld bijschrift</FigureCaption>
-</Figure>
+</figure>
 ```
 
 ## Rijkshuisstijl Community Componenten
