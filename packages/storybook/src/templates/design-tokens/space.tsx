@@ -70,7 +70,7 @@ export default function Page() {
                     ].map(({ name, value }) => (
                       <TableRow key={name}>
                         <TableCell className="utrecht-table__cell--rhc-middle">
-                          <SpaceSample value={value} />
+                          <SpaceSample value={`${value}`} />
                         </TableCell>
                         <TableCell className="utrecht-table__cell--rhc-middle">
                           <CopyDesignTokenButton path={['rhc', 'space', name]} />
