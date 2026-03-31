@@ -1,1 +1,1 @@
-export * from './concatenateSvgs';
+export * from './collapseSvgs';

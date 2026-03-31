@@ -1,4 +1,4 @@
-import { concatenateSvgs } from '@rijkshuisstijl-community/storybook-tooling/concatenateSvgs';
+import { collapseSvgs } from '@rijkshuisstijl-community/storybook-tooling/concatenateSvgs';
 import { formatHtml } from '@rijkshuisstijl-community/storybook-tooling/formatHtml';
 import { Meta, StoryContext } from '@storybook/react-vite';
 import { merge } from 'lodash-es';
@@ -33,7 +33,7 @@ export const mergeCssMeta = <Base extends Meta<any>, Overwrite extends Meta<any>
             if (render) {
               const element = isValidElement(render) ? render : createElement(render, storyContext.args);
               const html = ReactDOMServer.renderToStaticMarkup(element);
-              return formatHtml(concatenateSvgs(html));
+              return formatHtml(collapseSvgs(html));
             }
             return code;
           },
