@@ -5,6 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
+  handlebars@>=4.0.0 <4.7.9: '>=4.7.9'
   locutus@>=2.0.12 <2.0.39: '>=2.0.39'
   '@isaacs/brace-expansion@<=5.0.0': '>=5.0.1'
 
@@ -198,6 +199,9 @@ importers:
         specifier: 19.2.4
         version: 19.2.4(react@19.2.4)
     devDependencies:
+      '@nl-design-system-candidate/code-block-css':
+        specifier: 1.1.5
+        version: 1.1.5
       '@nl-rvo/assets':
         specifier: 1.0.0
         version: 1.0.0
@@ -1536,6 +1540,12 @@ importers:
       '@amsterdam/design-system-react':
         specifier: 1.1.0
         version: 1.1.0(@amsterdam/design-system-css@1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.1))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@nl-design-system-candidate/code-block-css':
+        specifier: 1.1.5
+        version: 1.1.5
+      '@nl-design-system-candidate/code-block-react':
+        specifier: 1.3.7
+        version: 1.3.7(@babel/runtime@7.28.6)(react@19.2.4)
     devDependencies:
       '@babel/core':
         specifier: 7.29.0
@@ -4759,6 +4769,15 @@ packages:
       '@angular/compiler-cli': ^21.0.0
       typescript: '>=5.9 <6.0'
       webpack: ^5.54.0
+
+  '@nl-design-system-candidate/code-block-css@1.1.5':
+    resolution: {integrity: sha512-8NdWxqzNvShKOwRi+SwRHQ/BfdzQh6q4M7sui9t6GGiwgsgnmsltuVLujkkIxQIV2pG/ZXaueYq/u7i7X8ygdg==}
+
+  '@nl-design-system-candidate/code-block-react@1.3.7':
+    resolution: {integrity: sha512-gpQySDLShzowkObZAf1WkTrKhT9KYas+ntq023IwT+86qdvIEc2BQQ38MBD6LZFdMCLE6WuVdh8R4BoWq5qNfA==}
+    peerDependencies:
+      '@babel/runtime': ^7
+      react: ^18 || ^19
 
   '@nl-design-system-candidate/heading-css@1.1.3':
     resolution: {integrity: sha512-s4ERGrHcsBkZlCc+qz8+XDB5rCpxvkxwxI2bg4OB2GDS0DU5LzjNMWhsV1I8IPOboTvWMabvrsscxVuj5Bijuw==}
@@ -9856,8 +9875,8 @@ packages:
   handle-thing@2.0.1:
     resolution: {integrity: sha512-9Qn4yBxelxoh2Ow62nP+Ka/kMnOXRi8BXnRaUwezLNhqelnN49xKz4F/dPP8OYLxLxq6JDtZb2i9XznUQbNPTg==}
 
-  handlebars@4.7.8:
-    resolution: {integrity: sha512-vafaFqs8MZkRrSX7sFVUdo3ap/eNiLnb4IakshzvP56X5Nr1iGKAIqdX6tMlm6HcNRIkr6AxO5jFEoJzzpT8aQ==}
+  handlebars@4.7.9:
+    resolution: {integrity: sha512-4E71E0rpOaQuJR2A3xDZ+GM1HyWYv1clR58tC8emQNeQe3RH7MAzSbat+V0wG78LQBo6m6bzSG/L4pBuCsgnUQ==}
     engines: {node: '>=0.4.7'}
     hasBin: true
 
@@ -18996,6 +19015,14 @@ snapshots:
       typescript: 5.9.3
       webpack: 5.105.2(esbuild@0.27.4)
 
+  '@nl-design-system-candidate/code-block-css@1.1.5': {}
+
+  '@nl-design-system-candidate/code-block-react@1.3.7(@babel/runtime@7.28.6)(react@19.2.4)':
+    dependencies:
+      '@babel/runtime': 7.28.6
+      clsx: 2.1.1
+      react: 19.2.4
+
   '@nl-design-system-candidate/heading-css@1.1.3': {}
 
   '@nl-design-system-candidate/heading-react@1.1.7(@babel/runtime@7.28.6)(react@19.2.4)':
@@ -23016,7 +23043,7 @@ snapshots:
   conventional-changelog-writer@8.2.0:
     dependencies:
       conventional-commits-filter: 5.0.0
-      handlebars: 4.7.8
+      handlebars: 4.7.9
       meow: 13.2.0
       semver: 7.7.4
 
@@ -25060,7 +25087,7 @@ snapshots:
 
   handle-thing@2.0.1: {}
 
-  handlebars@4.7.8:
+  handlebars@4.7.9:
     dependencies:
       minimist: 1.2.8
       neo-async: 2.6.2
@@ -31417,7 +31444,7 @@ snapshots:
     dependencies:
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
-      handlebars: 4.7.8
+      handlebars: 4.7.9
       jest: 30.2.0(@types/node@25.3.3)(esbuild-register@3.6.0(esbuild@0.27.4))
       json5: 2.2.3
       lodash.memoize: 4.1.2

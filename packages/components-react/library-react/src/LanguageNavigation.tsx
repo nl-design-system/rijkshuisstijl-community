@@ -408,10 +408,3 @@ Item.displayName = 'LanguageNavigation.Item';
 /* -------------------------------------------------------------------------------------------------
  * Compound Component Export
  * -----------------------------------------------------------------------------------------------*/
-
-export const LanguageNavigation = {
-  Root,
-  Trigger,
-  Content,
-  Item,
-};

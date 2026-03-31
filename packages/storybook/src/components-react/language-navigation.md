@@ -7,28 +7,33 @@ The Language Navigation component allows users to switch between different langu
 ## Usage
 
 ```jsx
-import { LanguageNavigation } from '@rijkshuisstijl-community/components-react';
+import {
+  LanguageNavigationRoot,
+  LanguageNavigationTrigger,
+  LanguageNavigationContent,
+  LanguageNavigationItem,
+} from '@rijkshuisstijl-community/components-react';
 
-<LanguageNavigation.Root aria-label="Taalkeuze" defaultSelectedLanguage="Nederlands">
-  <LanguageNavigation.Trigger />
-  <LanguageNavigation.Content>
-    <LanguageNavigation.Item lang="nl" languageName="Nederlands" />
-    <LanguageNavigation.Item lang="en" languageName="English" localLanguageName="Engels" />
-    <LanguageNavigation.Item lang="de" languageName="Deutsch" localLanguageName="Duits" />
-  </LanguageNavigation.Content>
-</LanguageNavigation.Root>;
+<LanguageNavigationRoot aria-label="Taalkeuze" defaultSelectedLanguage="Nederlands">
+  <LanguageNavigationTrigger />
+  <LanguageNavigationContent>
+    <LanguageNavigationItem lang="nl" languageName="Nederlands" />
+    <LanguageNavigationItem lang="en" languageName="English" localLanguageName="Engels" />
+    <LanguageNavigationItem lang="de" languageName="Deutsch" localLanguageName="Duits" />
+  </LanguageNavigationContent>
+</LanguageNavigationRoot>;
 ```
 
 ## Compound Components
 
 The Language Navigation uses a compound component pattern consisting of four parts:
 
-| Component                    | Description                                                               |
-| ---------------------------- | ------------------------------------------------------------------------- |
-| `LanguageNavigation.Root`    | The container that manages state and provides context to child components |
-| `LanguageNavigation.Trigger` | The button that opens/closes the language list                            |
-| `LanguageNavigation.Content` | The dropdown container for language options                               |
-| `LanguageNavigation.Item`    | Individual language option                                                |
+| Component                   | Description                                                               |
+| --------------------------- | ------------------------------------------------------------------------- |
+| `LanguageNavigationRoot`    | The container that manages state and provides context to child components |
+| `LanguageNavigationTrigger` | The button that opens/closes the language list                            |
+| `LanguageNavigationContent` | The dropdown container for language options                               |
+| `LanguageNavigationItem`    | Individual language option                                                |
 
 ## Controlled vs Uncontrolled
 
@@ -42,7 +47,7 @@ The component supports both controlled and uncontrolled modes:
 
 ## API Reference
 
-### LanguageNavigation.Root
+### LanguageNavigationRoot
 
 The root container that manages state and provides context to all child components.
 
@@ -60,7 +65,7 @@ The root container that manages state and provides context to all child componen
 
 ---
 
-### LanguageNavigation.Trigger
+### LanguageNavigationTrigger
 
 The button that toggles the visibility of the language options. By default, it displays the currently selected language.
 
@@ -73,7 +78,7 @@ The button that toggles the visibility of the language options. By default, it d
 
 ---
 
-### LanguageNavigation.Content
+### LanguageNavigationContent
 
 The dropdown container that holds the language options. Only renders when the navigation is open.
 
@@ -89,7 +94,7 @@ The dropdown container that holds the language options. Only renders when the na
 
 ---
 
-### LanguageNavigation.Item
+### LanguageNavigationItem
 
 An individual language option within the dropdown. The component uses a discriminated union to render either as a **link** (for URL-based navigation) or a **button** (for programmatic navigation), depending on which prop is provided.
 
@@ -133,14 +138,14 @@ While the Language Navigation is visually styled to resemble a select dropdown, 
 Use `href` when language switching is handled via URL navigation (e.g., `/nl`, `/en`).
 
 ```jsx
-<LanguageNavigation.Root aria-label="Taalkeuze" defaultSelectedLanguage="Nederlands">
-  <LanguageNavigation.Trigger />
-  <LanguageNavigation.Content>
-    <LanguageNavigation.Item lang="nl" languageName="Nederlands" href="/nl" />
-    <LanguageNavigation.Item lang="en" languageName="English" localLanguageName="Engels" href="/en" />
-    <LanguageNavigation.Item lang="de" languageName="Deutsch" localLanguageName="Duits" href="/de" />
-  </LanguageNavigation.Content>
-</LanguageNavigation.Root>
+<LanguageNavigationRoot aria-label="Taalkeuze" defaultSelectedLanguage="Nederlands">
+  <LanguageNavigationTrigger />
+  <LanguageNavigationContent>
+    <LanguageNavigationItem lang="nl" languageName="Nederlands" href="/nl" />
+    <LanguageNavigationItem lang="en" languageName="English" localLanguageName="Engels" href="/en" />
+    <LanguageNavigationItem lang="de" languageName="Deutsch" localLanguageName="Duits" href="/de" />
+  </LanguageNavigationContent>
+</LanguageNavigationRoot>
 ```
 
 ### With click handlers (programmatic)
@@ -150,24 +155,24 @@ Use `onClick` when language switching is handled programmatically (e.g., i18n li
 ```jsx
 const { setLocale } = useI18n();
 
-<LanguageNavigation.Root aria-label="Taalkeuze" defaultSelectedLanguage="Nederlands">
-  <LanguageNavigation.Trigger />
-  <LanguageNavigation.Content>
-    <LanguageNavigation.Item lang="nl" languageName="Nederlands" onClick={() => setLocale('nl')} />
-    <LanguageNavigation.Item
+<LanguageNavigationRoot aria-label="Taalkeuze" defaultSelectedLanguage="Nederlands">
+  <LanguageNavigationTrigger />
+  <LanguageNavigationContent>
+    <LanguageNavigationItem lang="nl" languageName="Nederlands" onClick={() => setLocale('nl')} />
+    <LanguageNavigationItem
       lang="en"
       languageName="English"
       localLanguageName="Engels"
       onClick={() => setLocale('en')}
     />
-    <LanguageNavigation.Item
+    <LanguageNavigationItem
       lang="de"
       languageName="Deutsch"
       localLanguageName="Duits"
       onClick={() => setLocale('de')}
     />
-  </LanguageNavigation.Content>
-</LanguageNavigation.Root>;
+  </LanguageNavigationContent>
+</LanguageNavigationRoot>;
 ```
 
 ### Controlled usage
@@ -175,17 +180,17 @@ const { setLocale } = useI18n();
 ```jsx
 const [selectedLanguage, setSelectedLanguage] = useState('Nederlands');
 
-<LanguageNavigation.Root
+<LanguageNavigationRoot
   aria-label="Taalkeuze"
   selectedLanguage={selectedLanguage}
   onLanguageChange={setSelectedLanguage}
 >
-  <LanguageNavigation.Trigger />
-  <LanguageNavigation.Content>
-    <LanguageNavigation.Item lang="nl" languageName="Nederlands" href="/nl" />
-    <LanguageNavigation.Item lang="en" languageName="English" localLanguageName="Engels" href="/en" />
-  </LanguageNavigation.Content>
-</LanguageNavigation.Root>;
+  <LanguageNavigationTrigger />
+  <LanguageNavigationContent>
+    <LanguageNavigationItem lang="nl" languageName="Nederlands" href="/nl" />
+    <LanguageNavigationItem lang="en" languageName="English" localLanguageName="Engels" href="/en" />
+  </LanguageNavigationContent>
+</LanguageNavigationRoot>;
 ```
 
 ## Patterns

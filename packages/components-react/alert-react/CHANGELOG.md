@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/alert-react
 
+## 3.0.1
+
+### Patch Changes
+
+- c5985e2: Add further documentation for test environment errors
+- Updated dependencies [c5985e2]
+  - @rijkshuisstijl-community/icon-react@3.0.1
+
 ## 3.0.0
 
 ### Major Changes
