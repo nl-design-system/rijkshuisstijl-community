@@ -4,8 +4,6 @@
  */
 
 import {
-  FigureCaption,
-  type FigureCaptionProps,
   Figure as UtrechtFigure,
   FigureProps as UtrechtFigureProps,
 } from '@utrecht/component-library-react';
