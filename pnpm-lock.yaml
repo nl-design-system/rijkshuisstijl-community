@@ -899,12 +899,18 @@ importers:
 
   packages/components-react/figure-react:
     dependencies:
+      '@rijkshuisstijl-community/figure-css':
+        specifier: workspace:*
+        version: link:../../components-css/figure-css
       '@utrecht/component-library-react':
         specifier: 13.0.1
         version: 13.0.1(@babel/runtime@7.28.6)(date-fns@2.30.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@utrecht/figure-css':
-        specifier: 1.6.0
-        version: 1.6.0
+      '@vitejs/plugin-react':
+        specifier: 4.7.0
+        version: 4.7.0(vite@7.3.1(@types/node@25.3.3)(jiti@2.6.1)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
+      '@vitest/coverage-v8':
+        specifier: 3.2.4
+        version: 3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@25.3.3)(jiti@2.6.1)(jsdom@26.1.0)(less@4.4.2)(msw@2.7.3(@types/node@25.3.3)(typescript@5.9.3))(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
     devDependencies:
       '@babel/core':
         specifier: 7.29.0
@@ -951,12 +957,6 @@ importers:
       '@types/react':
         specifier: 19.2.14
         version: 19.2.14
-      '@vitejs/plugin-react':
-        specifier: 4.7.0
-        version: 4.7.0(vite@7.3.1(@types/node@25.3.3)(jiti@2.6.1)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
-      '@vitest/coverage-v8':
-        specifier: 3.2.4
-        version: 3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@25.3.3)(jiti@2.6.1)(jsdom@26.1.0)(less@4.4.2)(msw@2.7.3(@types/node@25.3.3)(typescript@5.9.3))(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       clsx:
         specifier: 2.1.1
         version: 2.1.1
