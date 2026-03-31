@@ -53,11 +53,11 @@ export default function Page() {
                     {/* TODO: Sort border-radius values from small to large */}
                     {/* TODO: Probably reuse logic from github.com/nl-design-system/theme-wizard to compare `px` and `rem` values */}
                     {Object.entries(tokens['rhc']['border-radius'])
-                      .sort(([, valueA], [, valueB]) => parseFloat(valueA) - parseFloat(valueB))
+                      .sort(([, valueA], [, valueB]) => Number.parseFloat(`${valueA}`) - Number.parseFloat(`${valueB}`))
                       .map(([name, value]) => (
                         <TableRow key={name}>
                           <TableCell className="utrecht-table__cell--rhc-middle">
-                            <BorderRadiusSample value={value} />
+                            <BorderRadiusSample value={`${value}`} />
                           </TableCell>
                           <TableCell className="utrecht-table__cell--rhc-middle">
                             <CopyDesignTokenButton path={['rhc', 'border-radius', name]} />
