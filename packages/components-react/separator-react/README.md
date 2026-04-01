@@ -29,7 +29,6 @@ Separator, van de ARIA role="separator". "hr" van <hr> uit HTML is te onduidelij
 ### Voorbeeld 2
 
 Invisible
-
 ```tsx
 <div data-story-root="true">
 <div class="utrecht-document">
