@@ -18,10 +18,9 @@ Separator, van de ARIA role="separator". "hr" van `<hr>`uit HTML is te onduideli
 ### Voorbeeld 1
 
 ```tsx
-<div data-story-root="true">
+
 <div class="utrecht-document">
   <hr class="utrecht-separator rhc-separator">
-  </div>
 </div>
 
 ```
@@ -31,10 +30,9 @@ Separator, van de ARIA role="separator". "hr" van `<hr>`uit HTML is te onduideli
 Invisible
 
 ```tsx
-<div data-story-root="true">
+
 <div class="utrecht-document">
   <hr class="utrecht-separator rhc-separator utrecht-separator--invisible">
-  </div>
 </div>
 
 ```
