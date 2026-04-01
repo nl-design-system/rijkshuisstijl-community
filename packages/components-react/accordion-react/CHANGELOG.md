@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/accordion-react
 
+## 3.0.2
+
+### Patch Changes
+
+- 4127bdc: updated dependencies
+- 4330c62: updated dependencies
+
 ## 3.0.1
 
 ### Patch Changes

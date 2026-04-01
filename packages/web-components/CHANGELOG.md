@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/web-components
 
+## 6.0.1
+
+### Patch Changes
+
+- 4330c62: updated dependencies
+
 ## 6.0.0
 
 ### Major Changes
