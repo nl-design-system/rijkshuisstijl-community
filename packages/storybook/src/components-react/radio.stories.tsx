@@ -6,31 +6,29 @@ import anatomyDocs from '@utrecht/components/radio-button/docs/anatomy.nl.md?raw
 import visualDesignDocs from '@utrecht/components/radio-button/docs/visual-design.nl.md?raw';
 import clsx from 'clsx';
 
-interface RadioStoryProps extends RadioProps {
+interface RadioStoryArgs extends RadioProps {
   focus?: boolean;
   focusVisible?: boolean;
   active?: boolean;
 }
 
-const RadioStory = ({ active, focus, focusVisible, name, ...args }: RadioStoryProps) => (
-  <Radio
-    aria-label="radio-label"
-    name={name || undefined}
-    className={clsx({
-      'utrecht-radio-button--active': active,
-      'utrecht-radio-button--focus': focus,
-      'utrecht-radio-button--focus-visible': focusVisible,
-    })}
-    onChange={() => {}}
-    {...args}
-  />
-);
-
 const meta = {
   title: 'Radio Button',
   id: 'rhc-radio',
   component: Radio,
-  render: RadioStory,
+  render: ({ active, focus, focusVisible, name, ...args }: RadioStoryArgs) => (
+    <Radio
+      aria-label="radio-label"
+      name={name || undefined}
+      className={clsx({
+        'utrecht-radio-button--active': active,
+        'utrecht-radio-button--focus': focus,
+        'utrecht-radio-button--focus-visible': focusVisible,
+      })}
+      onChange={() => {}}
+      {...args}
+    />
+  ),
   args: {
     checked: false,
     disabled: false,
@@ -95,7 +93,7 @@ const meta = {
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Radio.tsx',
   },
-} satisfies Meta<typeof RadioStory>;
+} satisfies Meta<RadioStoryArgs>;
 
 export default meta;
 

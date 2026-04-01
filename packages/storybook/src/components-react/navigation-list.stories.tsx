@@ -19,7 +19,6 @@ const meta = {
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/NavigationList.tsx',
     componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
   },
-  argTypes: {},
 } satisfies Meta<typeof NavigationList>;
 
 export default meta;
