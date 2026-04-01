@@ -1,0 +1,9 @@
+{
+  "extends": "../library-react/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "./src/"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/*.ts", "vite.config.ts"],
+  "exclude": ["**/node_modules/*", "**/*.test.ts", "**/*.test.tsx"]
+}
