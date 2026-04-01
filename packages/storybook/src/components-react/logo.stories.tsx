@@ -1,4 +1,4 @@
-import { Icon, Logo, LogoProps } from '@rijkshuisstijl-community/components-react';
+import { Icon, Logo, type LogoProps } from '@rijkshuisstijl-community/components-react';
 import {
   rhcLogoColor,
   rhcLogoImageBackgroundColor,
@@ -15,31 +15,16 @@ interface LogoCSSProperties extends CSSProperties {
   '--rhc-logo-image-color': string;
 }
 
-interface LogoStoryProps extends LogoProps {
+interface LogoStoryArgs extends LogoProps {
   imageBackgroundColor?: string;
   imageIconColor?: string;
   textColor?: string;
 }
 
-const LogoStory = ({ imageBackgroundColor, textColor, imageIconColor, ...args }: LogoStoryProps) => (
-  <Logo
-    {...args}
-    style={
-      {
-        '--rhc-logo-color': textColor || rhcLogoColor,
-        '--rhc-logo-image-background-color': imageBackgroundColor || rhcLogoImageBackgroundColor,
-        '--rhc-logo-image-color': imageIconColor || rhcLogoImageColor,
-      } as LogoCSSProperties
-    }
-  >
-    <Icon icon={'nederland-map'} />
-  </Logo>
-);
-
 const meta = {
   title: 'Logo',
   id: 'rhc-logo',
-  component: LogoStory,
+  component: Logo,
   args: {
     organisation: '',
     subtitle: '',
@@ -48,14 +33,6 @@ const meta = {
     textColor: rhcLogoColor,
   },
   argTypes: {
-    organisation: {
-      name: 'organisation',
-      type: { name: 'string', required: true },
-    },
-    subtitle: {
-      name: 'subtitle',
-      type: { name: 'string', required: false },
-    },
     imageBackgroundColor: {
       name: '--rhc-logo-image-background-color',
       control: 'color',
@@ -92,8 +69,21 @@ const meta = {
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Logo.tsx',
   },
-  render: LogoStory,
-} satisfies Meta<typeof LogoStory>;
+  render: ({ imageBackgroundColor, textColor, imageIconColor, ...args }: LogoStoryArgs) => (
+    <Logo
+      {...args}
+      style={
+        {
+          '--rhc-logo-color': textColor || rhcLogoColor,
+          '--rhc-logo-image-background-color': imageBackgroundColor || rhcLogoImageBackgroundColor,
+          '--rhc-logo-image-color': imageIconColor || rhcLogoImageColor,
+        } as LogoCSSProperties
+      }
+    >
+      <Icon icon={'nederland-map'} />
+    </Logo>
+  ),
+} satisfies Meta<LogoStoryArgs>;
 
 export default meta;
 

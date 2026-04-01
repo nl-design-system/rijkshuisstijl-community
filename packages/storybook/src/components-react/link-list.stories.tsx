@@ -1,61 +1,12 @@
-import {
-  ColumnLayout,
-  Icon,
-  LinkList,
-  LinkListLink,
-  type LinkListProps,
-} from '@rijkshuisstijl-community/components-react';
+import { ColumnLayout, Icon, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { PropsWithChildren } from 'react';
 import readme from './link-list.md?raw';
-
-interface LinkListStoryProps extends LinkListProps {
-  hasIcons?: boolean;
-}
-
-const LinkListStory = ({ hasIcons = true, ...props }: PropsWithChildren<LinkListStoryProps>) => (
-  <LinkList {...props}>
-    <LinkListLink href="#" icon={hasIcons ? <Icon icon={'chevron-right'} /> : undefined}>
-      Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
-    </LinkListLink>
-    <LinkListLink href="#" icon={hasIcons ? <Icon icon={'chevron-right'} /> : undefined}>
-      Link 2
-    </LinkListLink>
-    <LinkListLink href="#" icon={hasIcons ? <Icon icon={'chevron-right'} /> : undefined}>
-      Link 3
-    </LinkListLink>
-  </LinkList>
-);
 
 const meta = {
   title: 'Link List',
   id: 'rhc-link-list',
-  component: LinkListStory,
-  args: {
-    children: [
-      <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-        Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
-      </LinkListLink>,
-      <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-        Link 2
-      </LinkListLink>,
-      <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-        Link 3
-      </LinkListLink>,
-    ],
-  },
-  argTypes: {
-    hasIcons: {
-      description: 'Whether the links have an icon',
-      type: {
-        name: 'boolean',
-      },
-      table: {
-        category: 'Demo',
-      },
-    },
-  },
+  component: LinkList,
   parameters: {
     // TODO: add documentation from Utrecht, but not until readme is correctly structurized in the Utrecht documentation source
     docs: {
@@ -72,15 +23,42 @@ const meta = {
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met styling van de Rijkshuisstijl Community.',
   },
-  render: LinkListStory,
-} satisfies Meta<typeof LinkListStory>;
+} satisfies Meta<typeof LinkList>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  render: (args) => (
+    <LinkList {...args}>
+      <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+        Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
+      </LinkListLink>
+      <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+        Link 2
+      </LinkListLink>
+      <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+        Link 3
+      </LinkListLink>
+    </LinkList>
+  ),
+};
 
 export const ColumnsLayout: Story = {
-  render: (args) => <ColumnLayout>{LinkListStory(args)}</ColumnLayout>,
+  render: (args) => (
+    <ColumnLayout>
+      <LinkList {...args}>
+        <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+          Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
+        </LinkListLink>
+        <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+          Link 2
+        </LinkListLink>
+        <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+          Link 3
+        </LinkListLink>
+      </LinkList>
+    </ColumnLayout>
+  ),
 };
