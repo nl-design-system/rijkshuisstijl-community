@@ -16,4 +16,9 @@ export default defineConfig({
     // we set the rhc:source so that the react package resolves directly to the source files for development in this monorepo
     conditions: ['rhc:source', 'import', 'require', 'default'],
   },
+  // Preserve function/class names in production builds so the Storybook code
+  // panel renders component names like <Button> instead of the minified version.
+  esbuild: {
+    keepNames: true,
+  },
 });
