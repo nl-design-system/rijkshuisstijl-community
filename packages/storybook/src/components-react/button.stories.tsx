@@ -1,4 +1,4 @@
-import { Button, ButtonProps, Icon, IconButton } from '@rijkshuisstijl-community/components-react';
+import { Button, Icon, IconButton, IconButtonProps } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
@@ -7,34 +7,11 @@ import anatomyDocs from '@utrecht/components/button/docs/anatomy.nl.md?raw';
 import htmlDocs from '@utrecht/components/button/docs/technology-html.nl.md?raw';
 import visualDesignDocs from '@utrecht/components/button/docs/visual-design.nl.md?raw';
 import wcagDocs from '@utrecht/components/button/docs/wcag.nl.md?raw';
-import { PropsWithChildren } from 'react';
 import rhcReadme from './button.md?raw';
-
-interface ButtonStoryProps extends ButtonProps {
-  iconLeft?: boolean;
-  iconRight?: boolean;
-}
-
-const ButtonStory = ({ children, iconLeft, iconRight, ...props }: PropsWithChildren<ButtonStoryProps>) => (
-  <Button {...props}>
-    {iconLeft && (
-      <Icon>
-        <IconCalendarEvent></IconCalendarEvent>
-      </Icon>
-    )}
-    {children}
-    {iconRight && (
-      <Icon>
-        <IconArrowRight></IconArrowRight>
-      </Icon>
-    )}
-  </Button>
-);
-
 const meta = {
   title: 'Button',
   id: 'rhc-button',
-  component: ButtonStory,
+  component: Button,
   argTypes: {
     appearance: {
       description: 'Button appearance',
@@ -43,52 +20,23 @@ const meta = {
       table: {
         category: 'Variant',
       },
-      defaultValue: '',
     },
     children: {
       description: 'Button text - default webcomponent slot',
-      type: {
-        name: 'string',
-        required: true,
-      },
       table: {
         category: 'Webcomponent Slot',
       },
-      defaultValue: '',
     },
     disabled: {
       table: {
         category: 'Props',
       },
-      defaultValue: false,
-    },
-    iconLeft: {
-      description: 'Icon Left',
-      type: {
-        name: 'boolean',
-      },
-      table: {
-        category: 'Props',
-      },
-      defaultValue: false,
-    },
-    iconRight: {
-      description: 'Icon Right',
-      type: {
-        name: 'boolean',
-      },
-      table: {
-        category: 'Props',
-      },
-      defaultValue: false,
     },
   },
   args: {
     appearance: undefined,
     children: 'Label',
     disabled: false,
-    iconLeft: false,
-    iconRight: false,
   },
   parameters: {
     docs: {
@@ -104,7 +52,7 @@ const meta = {
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen (voor de IconButton) en styling van de Rijkshuisstijl Community.',
   },
-} as Meta<typeof ButtonStory>;
+} satisfies Meta<typeof Button>;
 
 type Story = StoryObj<typeof meta>;
 export default meta;
@@ -138,18 +86,30 @@ export const Subtle: Story = {
 
 export const IconLeft: Story = {
   args: {
-    children: 'Label',
     appearance: 'secondary-action-button',
-    iconLeft: true,
   },
+  render: (args) => (
+    <Button {...args}>
+      <Icon>
+        <IconCalendarEvent />
+      </Icon>
+      Label
+    </Button>
+  ),
 };
 
 export const IconRight: Story = {
   args: {
-    children: 'Label',
     appearance: 'primary-action-button',
-    iconRight: true,
   },
+  render: (args) => (
+    <Button {...args}>
+      Label
+      <Icon>
+        <IconArrowRight />
+      </Icon>
+    </Button>
+  ),
 };
 
 export const Active: Story = {
@@ -196,11 +156,11 @@ export const Busy: Story = {
 };
 
 export const IconOnly: Story = {
-  render: () => (
-    <IconButton label="calendar">
-      <Icon>
-        <IconCalendarEvent></IconCalendarEvent>
-      </Icon>
-    </IconButton>
-  ),
+  args: {
+    appearance: 'subtle-button',
+    children: null,
+    icon: 'kalender',
+    label: 'calendar',
+  },
+  render: ({ icon, ...args }) => <IconButton {...args} icon={icon as IconButtonProps['icon']} />,
 };

@@ -12,7 +12,6 @@ const meta = {
   title: 'Breadcrumb Navigation',
   id: 'rhc-breadcrumb-nav',
   component: BreadcrumbNav,
-  argTypes: {},
   parameters: {
     docs: {
       description: {
