@@ -1,20 +1,13 @@
-import { ExpandableCheckboxGroup, ExpandableCheckboxGroupProps } from '@rijkshuisstijl-community/components-react';
+import { ExpandableCheckboxGroup } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { PropsWithChildren, useEffect } from 'react';
+import { useEffect } from 'react';
 import readme from './expandable-checkbox-group.md?raw';
-
-const ExpandableCheckboxGroupStory = (props: PropsWithChildren<ExpandableCheckboxGroupProps>) => (
-  <ExpandableCheckboxGroup {...props} />
-);
 
 const meta = {
   title: 'Expandable Checkbox Group',
   id: 'rhc-expandable-checkbox-group',
-  component: ExpandableCheckboxGroupStory,
-  argTypes: {
-    children: {},
-  },
+  component: ExpandableCheckboxGroup,
 
   parameters: {
     docs: {
@@ -25,8 +18,7 @@ const meta = {
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/ExpandableCheckboxGroup.tsx',
   },
-  render: ExpandableCheckboxGroupStory,
-} as Meta<typeof ExpandableCheckboxGroupStory>;
+} satisfies Meta<typeof ExpandableCheckboxGroup>;
 
 export default meta;
 
@@ -44,6 +36,7 @@ export const Default: Story = {
       { value: 'value5', label: 'Vue' },
     ],
     selectedOptions: [],
+    onOptionChange: () => {},
   },
 };
 
@@ -59,6 +52,7 @@ export const Open: Story = {
       { value: 'value5', label: 'Vue' },
     ],
     selectedOptions: [],
+    onOptionChange: () => {},
   },
   decorators: [
     (Story) => {
@@ -68,7 +62,7 @@ export const Open: Story = {
         if (details) {
           (details as HTMLDetailsElement).open = true;
         }
-      });
+      }, []);
 
       return (
         <div id="open-story">
