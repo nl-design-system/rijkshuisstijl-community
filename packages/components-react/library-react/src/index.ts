@@ -145,7 +145,7 @@ export { PreHeading, type PreHeadingProps } from './PreHeading';
 export { Radio, type RadioProps } from './Radio';
 export { RadioGroup, type RadioGroupProps } from './RadioGroup';
 export { RoundedCorner, type RoundedCornerProps } from './RoundedCorner';
-export { Separator, type SeparatorProps } from './Separator';
+export { Separator, type SeparatorProps } from '../../separator-react/src/Separator';
 export { SideNav, type SideNavProps } from './SideNav';
 export { SideNavItem, type SideNavItemProps } from './SideNavItem';
 export { SideNavLink, type SideNavLinkProps } from './SideNavLink';
