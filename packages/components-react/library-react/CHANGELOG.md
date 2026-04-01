@@ -1,5 +1,22 @@
 # @rijkshuisstijl-community/components-react
 
+## 14.0.1
+
+### Patch Changes
+
+- 4127bdc: updated dependencies
+- 4330c62: updated dependencies
+- Updated dependencies [aff0b4f]
+- Updated dependencies [4127bdc]
+- Updated dependencies [4330c62]
+  - @rijkshuisstijl-community/figure-react@1.0.0
+  - @rijkshuisstijl-community/accordion-react@3.0.2
+  - @rijkshuisstijl-community/paragraph-react@2.0.1
+  - @rijkshuisstijl-community/article-react@2.0.1
+  - @rijkshuisstijl-community/alert-react@3.0.2
+  - @rijkshuisstijl-community/image-react@2.0.1
+  - @rijkshuisstijl-community/icon-react@3.0.2
+
 ## 14.0.0
 
 ### Major Changes

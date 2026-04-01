@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/image-react
 
+## 2.0.1
+
+### Patch Changes
+
+- 4127bdc: updated dependencies
+- 4330c62: updated dependencies
+
 ## 2.0.0
 
 ### Major Changes

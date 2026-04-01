@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/components-css
 
+## 15.0.1
+
+### Patch Changes
+
+- 1b78575: Fix `rhc-card` to fit in viewports smaller than 320px
+- 1b78575: Fix `rhc-card` not to overflow containers of 320px, to comply with WCAG 1.4.10 Reflow.
+- 4330c62: updated dependencies
+- Updated dependencies [aff0b4f]
+  - @rijkshuisstijl-community/figure-css@1.0.0
+
 ## 15.0.0
 
 ### Major Changes

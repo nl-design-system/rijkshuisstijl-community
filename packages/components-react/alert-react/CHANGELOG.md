@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/alert-react
 
+## 3.0.2
+
+### Patch Changes
+
+- 4127bdc: updated dependencies
+- 4330c62: updated dependencies
+- Updated dependencies [4127bdc]
+- Updated dependencies [4330c62]
+  - @rijkshuisstijl-community/icon-react@3.0.2
+
 ## 3.0.1
 
 ### Patch Changes
