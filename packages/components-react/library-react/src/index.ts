@@ -33,7 +33,7 @@ export {
   PrimaryActionButton,
   SecondaryActionButton,
   SubtleButton,
-} from './Button';
+} from '@rijkshuisstijl-community/button-react';
 export { Card } from './Card';
 export {
   CardAsLink,
