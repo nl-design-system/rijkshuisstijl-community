@@ -7,7 +7,6 @@ const meta = {
   title: 'Message List',
   id: 'rhc-message-list',
   component: MessageList,
-  args: {},
   render: ({ ...args }) => {
     return (
       <MessageList {...args}>

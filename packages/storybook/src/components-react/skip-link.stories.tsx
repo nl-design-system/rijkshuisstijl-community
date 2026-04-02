@@ -1,13 +1,6 @@
-import { SkipLink, type SkipLinkProps } from '@rijkshuisstijl-community/components-react';
+import { SkipLink } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './skip-link.md?raw';
-
-// set fixed height and width so that the automatic hiding works
-const StoryWrapper = (props: SkipLinkProps) => (
-  <div style={{ width: '400px', height: '100px' }}>
-    <SkipLink {...props} />
-  </div>
-);
 
 const meta = {
   title: 'Skip link',
@@ -16,23 +9,17 @@ const meta = {
   argTypes: {
     children: {
       description: 'Link text',
-      type: {
-        name: 'string',
-        required: false,
-      },
     },
     href: {
       description: 'Target URL',
-      type: {
-        name: 'string',
-        required: true,
-      },
     },
   },
   args: {
     children: '',
     href: '',
   },
+  // set fixed height and width so that the automatic hiding works
+  decorators: [(Story) => <div style={{ width: '400px', height: '100px' }}>{Story()}</div>],
   parameters: {
     docs: {
       description: {
@@ -44,7 +31,6 @@ const meta = {
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/SkipLink.tsx',
     nldesignsystem: 'https://nldesignsystem.nl/skip-link/',
   },
-  render: StoryWrapper,
 } satisfies Meta<typeof SkipLink>;
 
 export default meta;

@@ -6,6 +6,7 @@ export default {
   ...mergeCssMeta(reactMeta),
   title: 'File Input',
   id: 'css-file-input',
+  tags: ['js'],
 };
 
 export const Default = ReactStories.Default;

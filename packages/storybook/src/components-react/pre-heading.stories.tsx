@@ -7,7 +7,6 @@ const meta = {
   title: 'Pre-heading',
   id: 'rhc-pre-heading',
   component: PreHeading,
-  argTypes: {},
   parameters: {
     docs: {
       description: {

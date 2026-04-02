@@ -3,20 +3,18 @@ import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markd
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './radio-group.md?raw';
 
-const RadioGroupStory = ({ ...args }: FormFieldRadioProps) => (
-  <div className="rhc-radio-group">
-    <FormFieldRadio {...args} />
-    <FormFieldRadio {...args} />
-    <FormFieldRadio {...args} />
-    <FormFieldRadio {...args} />
-  </div>
-);
-
 const meta = {
   title: 'Radio Group',
   id: 'rhc-radio-group',
   component: FormFieldRadio,
-  render: RadioGroupStory,
+  render: (args: FormFieldRadioProps) => (
+    <div className="rhc-radio-group">
+      <FormFieldRadio {...args} />
+      <FormFieldRadio {...args} />
+      <FormFieldRadio {...args} />
+      <FormFieldRadio {...args} />
+    </div>
+  ),
   parameters: {
     docs: {
       description: {
@@ -28,7 +26,7 @@ const meta = {
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/RadioGroup.tsx',
   },
-} satisfies Meta<typeof RadioGroupStory>;
+} satisfies Meta<typeof FormFieldRadio>;
 
 export default meta;
 

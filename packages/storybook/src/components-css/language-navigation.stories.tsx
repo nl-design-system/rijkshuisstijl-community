@@ -6,6 +6,7 @@ export default {
   ...mergeCssMeta(reactMeta),
   title: 'LanguageNavigation',
   id: 'css-language-navigation',
+  tags: ['js'],
 };
 
 export const Default = ReactStories.Default;

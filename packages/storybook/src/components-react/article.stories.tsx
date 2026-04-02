@@ -7,7 +7,6 @@ const meta = {
   title: 'Article',
   id: 'rhc-article',
   component: Article,
-  argTypes: {},
   args: {
     children: [
       <p key="article-text">
@@ -39,6 +38,4 @@ const meta = {
 
 export default meta;
 
-export const Default: StoryObj<typeof meta> = {
-  args: {},
-};
+export const Default: StoryObj<typeof meta> = {};

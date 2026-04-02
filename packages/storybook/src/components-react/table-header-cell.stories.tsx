@@ -28,9 +28,6 @@ const meta = {
   id: 'rhc-table-header-cell',
   component: TableHeaderCell,
   argTypes: {
-    withSorting: {
-      type: 'boolean',
-    },
     'aria-sort': {
       options: ['ascending', 'descending', 'none'],
       control: { type: 'select' },

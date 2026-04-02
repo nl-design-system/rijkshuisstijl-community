@@ -6,6 +6,7 @@ export default {
   ...mergeCssMeta(reactMeta),
   title: 'Drawer',
   id: 'css-drawer',
+  tags: ['js'],
 };
 
 export const Default = ReactStories.Default;
