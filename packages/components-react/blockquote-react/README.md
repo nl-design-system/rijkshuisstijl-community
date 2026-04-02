@@ -23,7 +23,7 @@ Quotes worden gebruikt om uitspraken te accentueren. De quote bestaat uit een ui
 ### Voorbeeld 2
 
 ```tsx
-<Blockquote attribution="— Pippi Langkous">"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"</Blockquote>
+<Blockquote attribution="— Pippi Langkous">Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan</Blockquote>
 ```
 
 ## Testing
