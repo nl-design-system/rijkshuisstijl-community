@@ -6,6 +6,7 @@ export default {
   ...mergeCssMeta(reactMeta),
   title: 'Code Input Group',
   id: 'css-code-input-group',
+  tags: ['js'],
 };
 
 export const Default = ReactStories.Default;
