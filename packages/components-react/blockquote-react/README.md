@@ -17,7 +17,7 @@ Quotes worden gebruikt om uitspraken te accentueren. De quote bestaat uit een ui
 ### Voorbeeld 1
 
 ```tsx
-<blockquote class="utrecht-blockquote__quote">"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"</blockquote>
+<blockquote class="utrecht-blockquote__quote">Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan</blockquote>
 ```
 
 ### Voorbeeld 2
