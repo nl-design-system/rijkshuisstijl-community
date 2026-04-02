@@ -26,8 +26,7 @@
     "build": "rollup --config rollup.config.mjs",
     "clean": "rimraf dist",
     "watch": "rollup --config rollup.config.mjs --watch",
-    "typecheck": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
-    "test": "vitest run --coverage --reporter verbose"
+    "typecheck": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json"
   },
   "keywords": [
     "rijkshuisstijl-community-design-system"
