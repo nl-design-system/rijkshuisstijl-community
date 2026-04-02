@@ -115,7 +115,7 @@ const meta: Meta<FooterComponent> = {
         [preFooter]="${preFooter}"
         [preFooterMessage]="'${preFooterMessage}'"
         [background]="'${background}'"
-        ${tagline ? '[tagline] = "\'' + tagline + '\'"' : ''}
+        ${tagline ? `[tagline] = "'${tagline}'"` : ''}
         [appearanceLevel] = "${appearanceLevel}"
         [subFooter]="${subFooter}"
       >
