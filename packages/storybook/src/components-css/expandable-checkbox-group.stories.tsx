@@ -6,6 +6,7 @@ export default {
   ...mergeCssMeta(reactMeta),
   title: 'Expandable Checkbox Group',
   id: 'css-expandable-checkbox-group',
+  tags: ['js'],
 };
 
 export const Default = ReactStories.Default;

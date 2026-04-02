@@ -15,6 +15,7 @@ export default {
   }),
   title: 'Accordion',
   id: 'css-accordion',
+  tags: ['js'],
 };
 
 export const Default = ReactStories.Default;
