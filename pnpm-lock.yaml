@@ -251,8 +251,6 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
 
-  apps/rhc-templates/dist/dev: {}
-
   packages/build-utils-css:
     devDependencies:
       cssnano:
@@ -500,8 +498,8 @@ importers:
         specifier: 1.0.1
         version: 1.0.1
       '@utrecht/data-list-css':
-        specifier: 1.4.1
-        version: 1.4.1
+        specifier: 2.0.1
+        version: 2.0.1
       '@utrecht/document-css':
         specifier: 1.5.1
         version: 1.5.1
@@ -6971,9 +6969,6 @@ packages:
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
 
-  '@utrecht/data-list-css@1.4.1':
-    resolution: {integrity: sha512-MK+is1wSfaiT1mW8GKUottDQUbDymV0wJotlPDnaV97uV45xF2lpXyBWzmDLynESCQtQDHgGTVBPZvHzMVlF9g==}
-
   '@utrecht/data-list-css@2.0.1':
     resolution: {integrity: sha512-uxr0P/0VkIhzkOuo3aVgBNiouMB97DNeLztZvOxFeQ8tpcgNOpNaGaVeAi6RfG6jmgJdEc0/RdD3p7Ge5Qt90w==}
 
@@ -9832,6 +9827,9 @@ packages:
   flatted@3.4.1:
     resolution: {integrity: sha512-IxfVbRFVlV8V/yRaGzk0UVIcsKKHMSfYw66T/u4nTwlWteQePsxe//LjudR1AMX4tZW3WFCh3Zqa/sjlqpbURQ==}
 
+  flatted@3.4.2:
+    resolution: {integrity: sha512-PjDse7RzhcPkIJwy5t7KPWQSZ9cAbzQXcafsetQoD7sOJRQlGikNbx7yZp2OotDnJyrDcbyRq3Ttb18iYOqkxA==}
+
   flow-parser@0.252.0:
     resolution: {integrity: sha512-z8hKPUjZ33VLn4HVntifqmEhmolUMopysnMNzazoDqo1GLUkBsreLNsxETlKJMPotUWStQnen6SGvUNe1j4Hlg==}
     engines: {node: '>=0.4.0'}
@@ -10078,7 +10076,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@8.1.0:
     resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
@@ -10145,8 +10143,8 @@ packages:
   graphmatch@1.1.1:
     resolution: {integrity: sha512-5ykVn/EXM1hF0XCaWh05VbYvEiOL2lY1kBxZtaYsyvjp7cmWOU1XsAdfQBwClraEofXDT197lFbXOEVMHpvQOg==}
 
-  graphql@16.13.1:
-    resolution: {integrity: sha512-gGgrVCoDKlIZ8fIqXBBb0pPKqDgki0Z/FSKNiQzSGj2uEYHr1tq5wmBegGwJx6QB5S5cM0khSBpi/JFHMCvsmQ==}
+  graphql@16.13.2:
+    resolution: {integrity: sha512-5bJ+nf/UCpAjHM8i06fl7eLyVC9iuNAjm9qzkiu2ZGhM0VscSvS6WDPfAwkdkBuoXGM9FJSbKl6wylMwP9Ktig==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
 
   gzip-size@6.0.0:
@@ -11623,6 +11621,9 @@ packages:
 
   lodash@4.17.23:
     resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
+
+  lodash@4.18.1:
+    resolution: {integrity: sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q==}
 
   log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
@@ -14201,8 +14202,8 @@ packages:
   socket.io-adapter@2.5.6:
     resolution: {integrity: sha512-DkkO/dz7MGln0dHn5bmN3pPy+JmywNICWrJqVWiVOyvXjWQFIv9c2h24JrQLLFJ2aQVQf/Cvl1vblnd4r2apLQ==}
 
-  socket.io-parser@4.2.5:
-    resolution: {integrity: sha512-bPMmpy/5WWKHea5Y/jYAP6k74A+hvmRCQaJuJB6I/ML5JZq/KfNieUVo/3Mh7SAqn7TyFdIo6wqYHInG1MU1bQ==}
+  socket.io-parser@4.2.6:
+    resolution: {integrity: sha512-asJqbVBDsBCJx0pTqw3WfesSY0iRX+2xzWEWzrpcH7L6fLzrhyF8WPI8UaeM4YCuDfpwA/cgsdugMsmtz8EJeg==}
     engines: {node: '>=10.0.0'}
 
   socket.io@4.8.3:
@@ -21551,8 +21552,6 @@ snapshots:
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
 
-  '@utrecht/data-list-css@1.4.1': {}
-
   '@utrecht/data-list-css@2.0.1': {}
 
   '@utrecht/data-placeholder-css@2.0.1': {}
@@ -25067,6 +25066,9 @@ snapshots:
 
   flatted@3.4.1: {}
 
+  flatted@3.4.2:
+    optional: true
+
   flow-parser@0.252.0: {}
 
   follow-redirects@1.15.11: {}
@@ -25405,7 +25407,7 @@ snapshots:
 
   graphmatch@1.1.1: {}
 
-  graphql@16.13.1:
+  graphql@16.13.2:
     optional: true
 
   gzip-size@6.0.0:
@@ -27093,7 +27095,7 @@ snapshots:
       graceful-fs: 4.2.11
       http-proxy: 1.18.1(debug@4.4.3)
       isbinaryfile: 4.0.10
-      lodash: 4.17.23
+      lodash: 4.18.1
       log4js: 6.9.1
       mime: 2.6.0
       minimatch: 3.1.5
@@ -27350,6 +27352,9 @@ snapshots:
 
   lodash@4.17.23: {}
 
+  lodash@4.18.1:
+    optional: true
+
   log-symbols@4.1.0:
     dependencies:
       chalk: 4.1.2
@@ -27372,7 +27377,7 @@ snapshots:
     dependencies:
       date-format: 4.0.14
       debug: 4.4.3
-      flatted: 3.4.1
+      flatted: 3.4.2
       rfdc: 1.4.1
       streamroller: 3.1.5
     transitivePeerDependencies:
@@ -28201,7 +28206,7 @@ snapshots:
       '@open-draft/until': 2.1.0
       '@types/cookie': 0.6.0
       '@types/statuses': 2.0.6
-      graphql: 16.13.1
+      graphql: 16.13.2
       headers-polyfill: 4.0.3
       is-node-process: 1.2.0
       outvariant: 1.4.3
@@ -30681,7 +30686,7 @@ snapshots:
       - utf-8-validate
     optional: true
 
-  socket.io-parser@4.2.5:
+  socket.io-parser@4.2.6:
     dependencies:
       '@socket.io/component-emitter': 3.1.2
       debug: 4.4.3
@@ -30697,7 +30702,7 @@ snapshots:
       debug: 4.4.3
       engine.io: 6.6.6
       socket.io-adapter: 2.5.6
-      socket.io-parser: 4.2.5
+      socket.io-parser: 4.2.6
     transitivePeerDependencies:
       - bufferutil
       - supports-color
