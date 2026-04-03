@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/components-react
 
+## 14.0.2
+
+### Patch Changes
+
+- 6915216: Update to latest Root component.
+- Updated dependencies [9882e13]
+- Updated dependencies [5d5eeaf]
+  - @rijkshuisstijl-community/blockquote-react@1.0.0
+  - @rijkshuisstijl-community/separator-react@1.0.0
+
 ## 14.0.1
 
 ### Patch Changes
