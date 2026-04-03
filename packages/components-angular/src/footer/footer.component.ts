@@ -14,6 +14,7 @@ export class FooterComponent {
   @Input() preFooter?: boolean;
   @Input() preFooterMessage?: string;
   @Input() heading?: string;
+  @Input() tagline?: string;
   @Input() appearanceLevel: HeadingLevel = 3;
   @Input() subFooter?: boolean;
 

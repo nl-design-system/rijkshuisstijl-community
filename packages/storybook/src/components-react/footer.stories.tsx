@@ -93,7 +93,7 @@ function _toLinkList(items: string[]) {
 
 export const DefaultFooter: Story = {
   args: {
-    heading: 'Footer heading',
+    tagline: 'Footer tagline',
     appearanceLevel: 3,
     background: 'primary-filled',
     backtotop: true,
@@ -134,7 +134,7 @@ export const DefaultFooter: Story = {
 
 export const PrimaryOutlinedFooter: Story = {
   args: {
-    heading: 'Footer heading',
+    tagline: 'Footer taglne',
     appearanceLevel: 3,
     background: 'primary-outlined',
     preFooterMessage: '',
@@ -160,7 +160,7 @@ export const PrimaryOutlinedFooter: Story = {
 
 export const PrimaryOutlinedFooterSubFooter: Story = {
   args: {
-    heading: 'Footer heading',
+    tagline: 'Footer tagline',
     appearanceLevel: 3,
     background: 'primary-outlined',
     preFooterMessage: 'Kwaliteit, vertrouwen en duurzaamheid',
@@ -190,7 +190,7 @@ export const PrimaryOutlinedFooterSubFooter: Story = {
 
 export const ColumnLayoutFooter: Story = {
   args: {
-    heading: 'Footer heading',
+    tagline: 'Footer tagline',
     appearanceLevel: 3,
     background: 'primary-filled',
     children: (

@@ -1,5 +1,4 @@
 import { Footer, Icon, LinkList, LinkListLink, Paragraph } from '@rijkshuisstijl-community/components-react';
-import './footer.css';
 
 export default function SharedFooter({ isLightTheme }: { isLightTheme?: boolean }) {
   return (
@@ -7,8 +6,7 @@ export default function SharedFooter({ isLightTheme }: { isLightTheme?: boolean 
       appearanceLevel={4}
       background={isLightTheme ? 'primary-outlined' : 'primary-filled'}
       backtotop={true}
-      className="rhc-sr-only"
-      heading="Footer"
+      tagline="NL Design System voor de rijksoverheid"
       columns={[
         {
           heading: 'Disclaimer',

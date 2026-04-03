@@ -4,17 +4,36 @@
  */
 
 import clsx from 'clsx';
-import { HTMLAttributes, Ref } from 'react';
+import type { HTMLAttributes, ReactNode, Ref } from 'react';
 
 export interface SideNavProps extends HTMLAttributes<HTMLElement> {
+  heading?: ReactNode;
+  headingId?: string;
   ref?: Ref<HTMLElement>;
 }
 
-export const SideNav = ({ ref, className, children, ...restProps }: SideNavProps) => {
+export const SideNav = ({
+  ref,
+  className,
+  children,
+  heading,
+  headingId = 'rhc-side-nav-heading',
+  ...restProps
+}: SideNavProps) => {
   return (
-    <aside className={clsx('rhc-side-nav', className)} ref={ref} {...restProps}>
+    <nav
+      aria-labelledby={heading && headingId ? headingId : undefined}
+      className={clsx('rhc-side-nav', className)}
+      ref={ref}
+      {...restProps}
+    >
+      {heading ? (
+        <h2 aria-hidden="true" className="rhc-side-nav__heading" id={headingId}>
+          {heading}
+        </h2>
+      ) : null}
       {children}
-    </aside>
+    </nav>
   );
 };
 

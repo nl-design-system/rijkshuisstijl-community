@@ -29,7 +29,7 @@ export default function MijnOmgeving() {
       <PageBody className="utrecht-page-body--rhc-mijn-omgeving">
         <SharedMainPageContent>
           <SharedDisclaimer />
-          <SideNav className={'rhc-side-nav'}>
+          <SideNav className="rhc-side-nav" heading="Submenu">
             <SideNavList>
               <SideNavItem>
                 <SideNavLink href="/#" icon="mail">
