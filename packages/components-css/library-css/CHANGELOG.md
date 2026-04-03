@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/components-css
 
+## 15.0.2
+
+### Patch Changes
+
+- 6915216: Update to latest Root component.
+- Updated dependencies [9882e13]
+- Updated dependencies [5d5eeaf]
+  - @rijkshuisstijl-community/blockquote-css@1.0.0
+  - @rijkshuisstijl-community/separator-css@1.0.0
+
 ## 15.0.1
 
 ### Patch Changes
