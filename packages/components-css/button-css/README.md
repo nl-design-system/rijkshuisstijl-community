@@ -16,10 +16,8 @@ pnpm add @rijkshuisstijl-community/button-css
 import '@rijkshuisstijl-community/button-css';
 
 <div class="utrecht-document">
-    <button class="utrecht-button" type="button">
-      Label
-    </button>
-
+  <button class="utrecht-button" type="button">Label</button>
+</div>
 ```
 
 ## Rijkshuisstijl Community Componenten

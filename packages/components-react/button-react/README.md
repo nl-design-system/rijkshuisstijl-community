@@ -19,12 +19,7 @@ Een button biedt de mogelijkheid om een actie uit te voeren.
 Primary Action
 
 ```tsx
-<Button
-  appearance="primary-action-button"
->
-  Label
-</Button>
-
+<Button appearance="primary-action-button">Label</Button>
 ```
 
 ### Voorbeeld 2
@@ -32,15 +27,12 @@ Primary Action
 Icon Right
 
 ```tsx
-<Button
-  appearance="primary-action-button"
->
+<Button appearance="primary-action-button">
   Label
   <Icon>
     <ArrowRight />
   </Icon>
 </Button>
-
 ```
 
 ## Testing
