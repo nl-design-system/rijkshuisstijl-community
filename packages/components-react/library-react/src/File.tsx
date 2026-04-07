@@ -4,10 +4,10 @@
  */
 
 import { Alert } from '@rijkshuisstijl-community/alert-react';
+import { Button } from '@rijkshuisstijl-community/button-react';
 import { Icon } from '@rijkshuisstijl-community/icon-react';
 import { Paragraph } from '@rijkshuisstijl-community/paragraph-react';
 import clsx from 'clsx';
-import { Button } from './Button';
 import { Link } from './Link';
 
 interface FileProps {
