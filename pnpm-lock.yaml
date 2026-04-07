@@ -251,8 +251,6 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
 
-  apps/rhc-templates/dist/dev: {}
-
   packages/build-utils-css:
     devDependencies:
       cssnano:
@@ -386,18 +384,6 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
 
-  packages/components-css/dot-badge-css:
-    devDependencies:
-      '@rijkshuisstijl-community/build-utils-css':
-        specifier: workspace:*
-        version: link:../../build-utils-css
-      '@utrecht/data-badge-css':
-        specifier: 1.0.1
-        version: 1.0.1
-      chokidar-cli:
-        specifier: 3.0.0
-        version: 3.0.0
-
   packages/components-css/blockquote-css:
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
@@ -406,6 +392,18 @@ importers:
       '@utrecht/blockquote-css':
         specifier: 1.6.1
         version: 1.6.1
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
+  packages/components-css/dot-badge-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      '@utrecht/data-badge-css':
+        specifier: 1.0.1
+        version: 1.0.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
