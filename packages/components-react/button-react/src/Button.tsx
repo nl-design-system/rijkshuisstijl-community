@@ -3,15 +3,7 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 import { Icon, type RHCIconID } from '@rijkshuisstijl-community/icon-react';
-import {
-  Button,
-  ButtonLink,
-  type ButtonLinkProps,
-  type ButtonProps,
-  PrimaryActionButton,
-  SecondaryActionButton,
-  SubtleButton,
-} from '@utrecht/component-library-react';
+import { Button, type ButtonProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { PropsWithChildren, Ref } from 'react';
 
@@ -23,7 +15,7 @@ export {
   PrimaryActionButton,
   SecondaryActionButton,
   SubtleButton,
-};
+} from '@utrecht/component-library-react';
 
 export interface IconButtonProps extends ButtonProps {
   ref?: Ref<HTMLButtonElement>;
