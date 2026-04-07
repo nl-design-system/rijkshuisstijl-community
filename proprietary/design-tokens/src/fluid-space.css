@@ -2,73 +2,42 @@
 .basis-layout-container--fluid-space,
 .rhc-theme--fluid,
 .rhc-theme--fluid-space {
-  /* This approach with `rhc-norday` variables is a temporary approach to test the new design tokens.
-   * The final design will be implemented in Design Tokens JSON. */
-  --rhc-norday-space-0: 0;
-  --rhc-norday-space-1: 0.25rem;
-  --rhc-norday-space-2: 0.5rem;
-  --rhc-norday-space-3: 0.75rem;
-  --rhc-norday-space-4: 1rem;
-  --rhc-norday-space-5: 1.25rem;
-  --rhc-norday-space-6: 1.5rem;
-  --rhc-norday-space-8: 2rem;
-  --rhc-norday-space-10: 3rem;
-  --rhc-norday-space-12: 3.5rem;
-  --rhc-norday-space-14: 4rem;
-
-  /* Small end of the scale */
-  --rhc-norday-space-min-xs: var(--rhc-norday-space-1);
-  --rhc-norday-space-min-sm: var(--rhc-norday-space-1);
-  --rhc-norday-space-min-md: var(--rhc-norday-space-2);
-  --rhc-norday-space-min-lg: var(--rhc-norday-space-3);
-  --rhc-norday-space-min-xl: var(--rhc-norday-space-4);
-  --rhc-norday-space-min-2xl: var(--rhc-norday-space-6);
-  --rhc-norday-space-min-3xl: var(--rhc-norday-space-10);
-  --rhc-norday-space-min-4xl: var(--rhc-norday-space-12);
-
-  /* Large end of the scale */
-  --rhc-norday-space-max-xs: var(--rhc-norday-space-2);
-  --rhc-norday-space-max-sm: var(--rhc-norday-space-3);
-  --rhc-norday-space-max-md: var(--rhc-norday-space-4);
-  --rhc-norday-space-max-lg: var(--rhc-norday-space-5);
-  --rhc-norday-space-max-xl: var(--rhc-norday-space-6);
-  --rhc-norday-space-max-2xl: var(--rhc-norday-space-8);
-  --rhc-norday-space-max-3xl: var(--rhc-norday-space-12);
-  --rhc-norday-space-max-4xl: var(--rhc-norday-space-14);
-
   /* fluid t-shirt size tokens.
    * In short: `space-[size]` is a value between `space-min-[size]` and `space-max-[size]`
    */
-  --rhc-norday-space-xs: calc(
-    var(--rhc-norday-space-min-xs) + (var(--rhc-norday-space-max-xs) - var(--rhc-norday-space-min-xs)) *
+  --rhc-space-2xs: calc(
+    var(--rhc-space-min-2xs) + (var(--rhc-space-max-2xs) - var(--rhc-space-min-2xs)) *
       var(--basis-layout-container-scale)
   );
-  --rhc-norday-space-sm: calc(
-    var(--rhc-norday-space-min-sm) + (var(--rhc-norday-space-max-sm) - var(--rhc-norday-space-min-sm)) *
+  --rhc-space-xs: calc(
+    var(--rhc-space-min-xs) + (var(--rhc-space-max-xs) - var(--rhc-space-min-xs)) * var(--basis-layout-container-scale)
+  );
+  --rhc-space-sm: calc(
+    var(--rhc-space-min-sm) + (var(--rhc-space-max-sm) - var(--rhc-space-min-sm)) * var(--basis-layout-container-scale)
+  );
+  --rhc-space-md: calc(
+    var(--rhc-space-min-md) + (var(--rhc-space-max-md) - var(--rhc-space-min-md)) * var(--basis-layout-container-scale)
+  );
+  --rhc-space-lg: calc(
+    var(--rhc-space-min-lg) + (var(--rhc-space-max-lg) - var(--rhc-space-min-lg)) * var(--basis-layout-container-scale)
+  );
+  --rhc-space-xl: calc(
+    var(--rhc-space-min-xl) + (var(--rhc-space-max-xl) - var(--rhc-space-min-xl)) * var(--basis-layout-container-scale)
+  );
+  --rhc-space-2xl: calc(
+    var(--rhc-space-min-2xl) + (var(--rhc-space-max-2xl) - var(--rhc-space-min-2xl)) *
       var(--basis-layout-container-scale)
   );
-  --rhc-norday-space-md: calc(
-    var(--rhc-norday-space-min-md) + (var(--rhc-norday-space-max-md) - var(--rhc-norday-space-min-md)) *
+  --rhc-space-3xl: calc(
+    var(--rhc-space-min-3xl) + (var(--rhc-space-max-3xl) - var(--rhc-space-min-3xl)) *
       var(--basis-layout-container-scale)
   );
-  --rhc-norday-space-lg: calc(
-    var(--rhc-norday-space-min-lg) + (var(--rhc-norday-space-max-lg) - var(--rhc-norday-space-min-lg)) *
+  --rhc-space-4xl: calc(
+    var(--rhc-space-min-4xl) + (var(--rhc-space-max-4xl) - var(--rhc-space-min-4xl)) *
       var(--basis-layout-container-scale)
   );
-  --rhc-norday-space-xl: calc(
-    var(--rhc-norday-space-min-xl) + (var(--rhc-norday-space-max-xl) - var(--rhc-norday-space-min-xl)) *
-      var(--basis-layout-container-scale)
-  );
-  --rhc-norday-space-2xl: calc(
-    var(--rhc-norday-space-min-2xl) + (var(--rhc-norday-space-max-2xl) - var(--rhc-norday-space-min-2xl)) *
-      var(--basis-layout-container-scale)
-  );
-  --rhc-norday-space-3xl: calc(
-    var(--rhc-norday-space-min-3xl) + (var(--rhc-norday-space-max-3xl) - var(--rhc-norday-space-min-3xl)) *
-      var(--basis-layout-container-scale)
-  );
-  --rhc-norday-space-4xl: calc(
-    var(--rhc-norday-space-min-4xl) + (var(--rhc-norday-space-max-4xl) - var(--rhc-norday-space-min-4xl)) *
+  --rhc-space-5xl: calc(
+    var(--rhc-space-min-5xl) + (var(--rhc-space-max-5xl) - var(--rhc-space-min-5xl)) *
       var(--basis-layout-container-scale)
   );
 
@@ -81,21 +50,6 @@
   --rhc-size-quarter-lint: calc(0.25 * var(--rhc-size-lint));
   --rhc-size-half-lint: calc(0.5 * var(--rhc-size-lint));
   --rhc-size-2-lint: calc(2 * var(--rhc-size-lint));
+  --rhc-size-3-lint: calc(3 * var(--rhc-size-lint));
   --rhc-size-4-lint: calc(4 * var(--rhc-size-lint));
-
-  /* Override `rhc-space-*` tokens with Norday fluid token.
-   * The 25, 50 and 150 spaces don't have an equivalent in the Norday spacing grid.
-   * There are approximations of those spacing tokens.
-   */
-  --rhc-space-0: 0rem;
-  --rhc-space-25: calc(var(--rhc-norday-space-xs) * 0.25);
-  --rhc-space-50: calc(var(--rhc-norday-space-xs) * 0.5);
-  --rhc-space-100: var(--rhc-norday-space-xs);
-  --rhc-space-150: calc(var(--rhc-norday-space-md) * 0.75);
-  --rhc-space-200: var(--rhc-norday-space-md);
-  --rhc-space-300: var(--rhc-norday-space-lg);
-  --rhc-space-400: var(--rhc-norday-space-xl);
-  --rhc-space-500: var(--rhc-norday-space-2xl);
-  --rhc-space-600: var(--rhc-norday-space-3xl);
-  --rhc-space-700: var(--rhc-norday-space-4xl);
 }
