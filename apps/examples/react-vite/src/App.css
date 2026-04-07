@@ -13,7 +13,7 @@ body {
 
 .rhc-card-doelen {
   display: grid;
-  gap: var(--rhc-space-200);
+  gap: var(--rhc-space-xl);
   grid-template-columns: 1fr 1fr 1fr;
   inline-size: 100%;
   padding-block: var(--rhc-space-5xl);
@@ -23,10 +23,10 @@ body {
 .rhc-page-content {
   --utrecht-page-content-padding-block-end: var(--rhc-space-3xl);
   --utrecht-page-content-padding-block-start: var(--rhc-space-3xl);
-  --utrecht-page-padding-inline-end: var(--rhc-space-200);
-  --utrecht-page-padding-inline-start: var(--rhc-space-200);
+  --utrecht-page-padding-inline-end: var(--rhc-space-xl);
+  --utrecht-page-padding-inline-start: var(--rhc-space-xl);
 
-  gap: var(--rhc-space-200, 1.25rem); /* replacement is not an exact match: 1rem vs 1.125rem */
+  gap: var(--rhc-space-xl, 1.25rem); /* replacement is not an exact match: 1rem vs 1.125rem */
   margin-block: 0;
   margin-inline: auto;
   max-inline-size: 64rem;
@@ -49,9 +49,9 @@ body {
 
 .rhc-column-layout__paragraph {
   display: grid;
-  gap: var(--rhc-space-200);
+  gap: var(--rhc-space-xl);
   grid-template-columns: 1fr 1fr;
   inline-size: 100%;
-  padding-block: var(--rhc-space-200, 1.25rem); /* not an exact match, unfortunately: replacing 20px with 16px */
+  padding-block: var(--rhc-space-xl, 1.25rem); /* not an exact match, unfortunately: replacing 20px with 16px */
   padding-inline: 0;
 }

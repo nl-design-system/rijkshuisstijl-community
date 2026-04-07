@@ -7,7 +7,7 @@
   @include rounded-border-corners;
 
   box-sizing: border-box;
-  column-gap: var(--rhc-card-column-gap, var(--rhc-space-200));
+  column-gap: var(--rhc-card-column-gap, var(--rhc-space-xl));
   display: inline-flex;
   flex-direction: column;
   font-family: var(--rhc-text-font-family-default, inherit);
@@ -29,10 +29,10 @@
 @mixin rhc-card__content {
   display: flex;
   flex-direction: column;
-  padding-block-end: var(--rhc-card-padding-block-end, var(--rhc-space-200));
-  padding-block-start: var(--rhc-card-padding-block-start, var(--rhc-space-200));
-  padding-inline-end: var(--rhc-card-padding-inline-end, var(--rhc-space-200));
-  padding-inline-start: var(--rhc-card-padding-inline-start, var(--rhc-space-200));
+  padding-block-end: var(--rhc-card-padding-block-end, var(--rhc-space-xl));
+  padding-block-start: var(--rhc-card-padding-block-start, var(--rhc-space-xl));
+  padding-inline-end: var(--rhc-card-padding-inline-end, var(--rhc-space-xl));
+  padding-inline-start: var(--rhc-card-padding-inline-start, var(--rhc-space-xl));
   row-gap: var(--rhc-card-row-gap, var(--rhc-space-150));
 
   h1,
