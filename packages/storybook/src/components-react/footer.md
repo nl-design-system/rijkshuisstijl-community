@@ -1,6 +1,6 @@
 # Rijkshuisstijl Community Footer component
 
-De footer bestaat uit kolommen met als eerste de titel en daarna `LinkList` componenten met handige bronnen.
+De footer bestaat uit kolommen met als eerste de tagline en daarna `LinkList` componenten met handige bronnen.
 
 De kolommen lijsten kunnen worden toegevoegd door middel van properties aan het `<Footer>` component.
 
@@ -22,5 +22,5 @@ columns={[
       heading: 'Service'
     }
   ]}
-  heading="Footer heading"
+  tagline="Footer tagline"
 ```

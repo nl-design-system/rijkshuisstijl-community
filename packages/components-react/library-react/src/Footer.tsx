@@ -12,6 +12,7 @@ import { Heading, HeadingLevel } from './Heading';
 
 interface FooterProps extends PageFooterProps {
   heading?: ReactNode;
+  headingId?: string;
   appearanceLevel?: HeadingLevel;
   columns?: ColumnProps[];
   background?: 'primary-filled' | 'primary-outlined';
@@ -20,6 +21,7 @@ interface FooterProps extends PageFooterProps {
   preFooter?: boolean;
   preFooterMessage?: ReactNode;
   ref?: Ref<HTMLDivElement>;
+  tagline?: ReactNode;
 }
 
 interface ColumnProps {
@@ -44,12 +46,14 @@ export const Footer = ({
   preFooterMessage,
   className,
   heading,
+  headingId = 'page-footer-heading',
   appearanceLevel = 3,
   columns,
   backtotop,
   subFooter,
   children,
   background,
+  tagline,
   ...restProps
 }: PropsWithChildren<FooterProps>) => (
   <>
@@ -60,6 +64,7 @@ export const Footer = ({
     )}
 
     <UtrechtPageFooter
+      aria-labelledby={heading ? headingId : undefined}
       {...restProps}
       ref={ref}
       className={clsx(
@@ -68,11 +73,16 @@ export const Footer = ({
         className,
       )}
     >
+      {heading ? (
+        <Heading hidden aria-hidden="true" id={headingId} level={2}>
+          {heading}
+        </Heading>
+      ) : null}
       <div className="rhc-page-footer__content rhc-page-footer__wrapper">
-        {heading && (
-          <div className="rhc-page-footer__title" key={'heading'}>
-            <Heading appearanceLevel={appearanceLevel} level={2}>
-              {heading}
+        {tagline && (
+          <div className="rhc-page-footer__tagline" key={'heading'}>
+            <Heading appearanceLevel={appearanceLevel} level={2} role="presentation">
+              {tagline}
             </Heading>
           </div>
         )}

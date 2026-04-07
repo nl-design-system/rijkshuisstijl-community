@@ -7,6 +7,9 @@
   display: var(--rhc-sidenav-display, flex);
   flex-direction: column;
   row-gap: var(--rhc-sidenav-row-gap);
+  &__heading {
+    display: none;
+  }
   &__list {
     list-style: none;
     margin-block: 0;
@@ -37,12 +40,6 @@
       background-color: var(--rhc-sidenav-link-focus-background-color);
       color: var(--rhc-sidenav-link-focus-color);
       text-decoration: var(--rhc-sidenav-link-focus-text-decoration);
-    }
-    &:focus-visible {
-      border-color: var(--rhc-sidenav-link-focus-border-color);
-      border-radius: var(--rhc-sidenav-link-focus-border-radius);
-      border-style: var(--rhc-sidenav-link-focus-border-style);
-      border-width: var(--rhc-sidenav-link-focus-border-width);
     }
     &:hover {
       color: var(--rhc-sidenav-link-hover-color);
