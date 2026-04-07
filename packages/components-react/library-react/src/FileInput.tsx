@@ -3,9 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { Button, ButtonProps } from '@rijkshuisstijl-community/button-react';
 import { Paragraph } from '@rijkshuisstijl-community/paragraph-react';
 import { ChangeEvent, PropsWithChildren, Ref, useEffect, useRef, useState } from 'react';
-import { Button, ButtonProps } from './Button';
 import { File } from './File';
 
 export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
