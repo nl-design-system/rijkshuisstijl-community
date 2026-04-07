@@ -13,7 +13,7 @@
 }
 
 .rhc-templates-badgelist {
-  gap: var(--rhc-space-100) !important;
+  gap: var(--rhc-space-md) !important;
   position: relative;
   z-index: 1; /* higher z-index so badges are clickable within card as link */
 }
@@ -52,7 +52,7 @@
 }
 
 .rhc-checkbox-number-badge {
-  margin-inline-start: var(--rhc-space-100);
+  margin-inline-start: var(--rhc-space-md);
 }
 
 /**
@@ -101,7 +101,7 @@
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  gap: var(--rhc-space-100);
+  gap: var(--rhc-space-md);
   margin-block: var(--rhc-space-xl);
   padding-block: var(--rhc-space-xl);
 }
@@ -110,7 +110,7 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--rhc-space-100) !important;
+  gap: var(--rhc-space-md) !important;
   margin-block: 0;
   margin-inline: 0;
 }
