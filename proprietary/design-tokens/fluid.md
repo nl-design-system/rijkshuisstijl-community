@@ -66,7 +66,7 @@ Vervang alle hardcoded lettergroottes in je CSS door CSS-variabelen. Bijvoorbeel
 Vervang alle hardcoded witruimtes in je CSS door CSS-variabelen. Bijvoorbeeld:
 
 - `margin-block-start: 16px;` wordt `font-size: var(--rhc-space-xl);`
-- `padding-inline-start: .5rem;` wordt `font-size: var(--rhc-space-100);`
+- `padding-inline-start: .5rem;` wordt `font-size: var(--rhc-space-md);`
 
 Als je een witruimte tegenkomt die geen exact equivalent heeft in het ontwerpsysteem, heb je twee opties:
 
