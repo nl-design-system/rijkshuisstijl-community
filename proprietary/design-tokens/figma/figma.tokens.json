@@ -1085,57 +1085,190 @@
         "0": {
           "$comment": "0px",
           "$type": "dimension",
-          "$value": "0rem"
+          "$value": "{rhc.space.none}"
         },
         "25": {
           "$comment": "2px",
           "$type": "dimension",
-          "$value": "0.25 * 0.5rem"
+          "$value": "{rhc.space.xs}"
         },
         "50": {
           "$comment": "4px",
           "$type": "dimension",
-          "$value": "0.5 * 0.5rem"
+          "$value": "{rhc.space.sm}"
         },
         "100": {
           "$comment": "8px",
           "$type": "dimension",
-          "$value": "0.5rem"
+          "$value": "{rhc.space.md}"
         },
         "150": {
           "$comment": "12px",
           "$type": "dimension",
-          "$value": "1.5 * 0.5rem"
+          "$value": "{rhc.space.lg}"
         },
         "200": {
           "$comment": "16px",
           "$type": "dimension",
-          "$value": "2 * 0.5rem"
+          "$value": "{rhc.space.xl}"
         },
         "300": {
           "$comment": "24px",
           "$type": "dimension",
-          "$value": "3 * 0.5rem"
+          "$value": "{rhc.space.2xl}"
         },
         "400": {
           "$comment": "32px",
           "$type": "dimension",
-          "$value": "4 * 0.5rem"
+          "$value": "{rhc.space.3xl}"
         },
         "500": {
           "$comment": "40px",
           "$type": "dimension",
-          "$value": "5 * 0.5rem"
+          "$value": "{rhc.space.4xl}"
         },
         "600": {
           "$comment": "48px",
           "$type": "dimension",
-          "$value": "6 * 0.5rem"
+          "$value": "{rhc.space.5xl}"
         },
-        "700": {
-          "$comment": "56px",
+        "none": {
           "$type": "dimension",
-          "$value": "7 * 0.5rem"
+          "$value": "0rem"
+        },
+        "2xs": {
+          "$type": "dimension",
+          "$value": "0.0625rem"
+        },
+        "xs": {
+          "$type": "dimension",
+          "$value": "0.125rem"
+        },
+        "sm": {
+          "$type": "dimension",
+          "$value": "0.25rem"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "0.5rem"
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "0.75rem"
+        },
+        "xl": {
+          "$type": "dimension",
+          "$value": "1rem"
+        },
+        "2xl": {
+          "$type": "dimension",
+          "$value": "1.5rem"
+        },
+        "3xl": {
+          "$type": "dimension",
+          "$value": "2rem"
+        },
+        "4xl": {
+          "$type": "dimension",
+          "$value": "2.5rem"
+        },
+        "5xl": {
+          "$type": "dimension",
+          "$value": "3rem"
+        },
+        "max": {
+          "2xs": {
+            "$type": "dimension",
+            "$value": "0.0625rem"
+          },
+          "xs": {
+            "$type": "dimension",
+            "$value": "0.125rem"
+          },
+          "sm": {
+            "$type": "dimension",
+            "$value": "0.25rem"
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "0.5rem"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "0.75rem"
+          },
+          "xl": {
+            "$type": "dimension",
+            "$value": "1rem"
+          },
+          "2xl": {
+            "$type": "dimension",
+            "$value": "1.5rem"
+          },
+          "3xl": {
+            "$type": "dimension",
+            "$value": "2rem"
+          },
+          "4xl": {
+            "$type": "dimension",
+            "$value": "2.5rem"
+          },
+          "5xl": {
+            "$type": "dimension",
+            "$value": "3rem"
+          }
+        },
+        "min": {
+          "2xs": {
+            "$type": "dimension",
+            "$value": "0.0625rem",
+            "$description": "max(1, 0.0625 / 1.25)"
+          },
+          "xs": {
+            "$type": "dimension",
+            "$value": "0.1rem",
+            "$description": "0.125rem / 1.25"
+          },
+          "sm": {
+            "$type": "dimension",
+            "$value": "0.2rem",
+            "$description": "0.25rem / 1.25"
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "0.41666667rem",
+            "$description": "0.5rem / 1.25"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "0.625rem",
+            "$description": "0.75rem / 1.25"
+          },
+          "xl": {
+            "$type": "dimension",
+            "$value": "0.8rem",
+            "$description": "1rem / 1.25"
+          },
+          "2xl": {
+            "$type": "dimension",
+            "$value": "1.2rem",
+            "$description": "1.5rem / 1.25"
+          },
+          "3xl": {
+            "$type": "dimension",
+            "$value": "1.6rem",
+            "$description": "2rem / 1.25"
+          },
+          "4xl": {
+            "$type": "dimension",
+            "$value": "2rem",
+            "$description": "2.5rem / 1.25"
+          },
+          "5xl": {
+            "$type": "dimension",
+            "$value": "2.4rem",
+            "$description": "3rem / 1.25"
+          }
         }
       }
     }
