@@ -19,17 +19,17 @@
 }
 
 .rhc-templates-card {
-  column-gap: var(--rhc-space-200);
+  column-gap: var(--rhc-space-xl);
   display: flex;
   flex-wrap: wrap;
-  margin-block-end: var(--rhc-space-200);
-  margin-block-start: var(--rhc-space-200);
+  margin-block-end: var(--rhc-space-xl);
+  margin-block-start: var(--rhc-space-xl);
   min-inline-size: 100% !important;
 }
 
 .rhc-container {
   display: grid;
-  gap: var(--rhc-space-200, 20px); /* not an exact match: from 20px to 16px */
+  gap: var(--rhc-space-xl, 20px); /* not an exact match: from 20px to 16px */
   grid-template-columns: 1fr 1fr;
 
   @media (width <= 780px) {
@@ -102,8 +102,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--rhc-space-100);
-  margin-block: var(--rhc-space-200);
-  padding-block: var(--rhc-space-200);
+  margin-block: var(--rhc-space-xl);
+  padding-block: var(--rhc-space-xl);
 }
 
 .rhc-active-filters__list {
@@ -156,11 +156,11 @@
   .rhc-search-container__add-component {
     flex-direction: row;
     justify-content: flex-start;
-    padding-block-start: var(--rhc-space-200);
+    padding-block-start: var(--rhc-space-xl);
   }
   .rhc-componenten-toevoegen {
     flex-direction: row;
     justify-content: flex-start;
-    padding-block-start: var(--rhc-space-200);
+    padding-block-start: var(--rhc-space-xl);
   }
 }
