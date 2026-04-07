@@ -73,7 +73,7 @@ export default function Page() {
     font-size: var(--rhc-text-font-size-lg);
     font-weight: var(--rhc-text-font-weight-regular);
     line-height: var(--rhc-text-font-size-md);
-    padding: var(--rhc-space-400);
+    padding: var(--rhc-space-3xl);
 }`}
                 </CodeBlock>
                 <Paragraph>
