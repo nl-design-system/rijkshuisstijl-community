@@ -1,7 +1,11 @@
-'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
+'use client';
 import {
   AccordionProvider,
+  ActionGroup,
+  ButtonLink,
+  Card,
   Heading,
+  HeadingLevel,
   Icon,
   Link,
   MessageList,
@@ -9,6 +13,7 @@ import {
   NavigationList,
   NavigationListItem,
   NumberBadge,
+  RHCIconID,
   Separator,
   SideNav,
   SideNavItem,
@@ -16,11 +21,102 @@ import {
   SideNavList,
 } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
+import { Fragment, ReactNode } from 'react';
 import SharedDisclaimer from '../shared/disclaimer';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
 import './index.css';
+
+export const sideNav: {
+  id: string;
+  items: {
+    href: string;
+    icon: RHCIconID;
+    label: string;
+    numberBadgeValue?: number;
+    numberBadgeLabel?: string;
+  }[];
+}[] = [
+  {
+    id: '1',
+    items: [{ href: '/mijn-omgeving/', icon: 'home', label: 'Overzicht' }],
+  },
+  {
+    id: '2',
+    items: [
+      {
+        href: '/mijn-omgeving-berichtenbox/',
+        icon: 'mail',
+        label: 'Berichtenbox',
+        numberBadgeValue: 4,
+        numberBadgeLabel: '4 berichten',
+      },
+      { href: '#', icon: 'inbox', label: 'MijnZaken' },
+    ],
+  },
+  {
+    id: '3',
+    items: [
+      { href: '/mijn-omgeving-identiteit/', icon: 'user', label: 'Identiteit' },
+      { href: '/mijn-omgeving-financien/', icon: 'currency-euro', label: 'Financiën' },
+      { href: '/mijn-omgeving-werk/', icon: 'briefcase', label: 'Werk' },
+      { href: '/mijn-omgeving-gezondheid/', icon: 'favoriet', label: 'Gezondheid' },
+      { href: '/mijn-omgeving-wonen/', icon: 'home', label: 'Wonen' },
+      { href: '/mijn-omgeving-vervoer/', icon: 'car', label: 'Vervoer' },
+      { href: '/mijn-omgeving-onderwijs/', icon: 'school', label: 'Onderwijs' },
+    ],
+  },
+  {
+    id: '4',
+    items: [{ href: '/mijn-omgeving-instellingen/', icon: 'instellingen', label: 'Instellingen' }],
+  },
+];
+
+export const useSideNav = ({ items }: { items: typeof sideNav }) => ({
+  children: items.map(({ id, items }, index) => (
+    <Fragment key={id}>
+      {index >= 1 ? <Separator invisible /> : null}
+      <SideNavList key={index}>
+        {items.map(({ href, icon, label, numberBadgeLabel, numberBadgeValue }) => (
+          <SideNavItem key={href}>
+            <SideNavLink href={href} icon={icon}>
+              {label}
+              {numberBadgeLabel && numberBadgeValue ? (
+                <NumberBadge label={numberBadgeLabel}>{numberBadgeValue}</NumberBadge>
+              ) : null}
+            </SideNavLink>
+          </SideNavItem>
+        ))}
+      </SideNavList>
+    </Fragment>
+  )),
+});
+
+export const useCards = ({
+  items,
+  headingLevel,
+}: {
+  items: {
+    href: string;
+    content: ReactNode;
+    heading: ReactNode;
+    linkLabel: string;
+    external?: boolean;
+  }[];
+  headingLevel: number;
+}) => ({
+  children: items.map(({ href, content, linkLabel, heading, external }) => (
+    <Card heading={heading} headingLevel={headingLevel as HeadingLevel} key={heading}>
+      {content}
+      <ActionGroup>
+        <ButtonLink appearance={external ? 'subtle-button' : 'primary-action-button'} href={href}>
+          {linkLabel}
+        </ButtonLink>
+      </ActionGroup>
+    </Card>
+  )),
+});
 
 export default function MijnOmgeving() {
   return (
@@ -29,67 +125,7 @@ export default function MijnOmgeving() {
       <PageBody className="utrecht-page-body--rhc-mijn-omgeving">
         <SharedMainPageContent>
           <SharedDisclaimer />
-          <SideNav className="rhc-side-nav" heading="Submenu">
-            <SideNavList>
-              <SideNavItem>
-                <SideNavLink href="/#" icon="mail">
-                  Berichtenbox
-                </SideNavLink>
-              </SideNavItem>
-              <SideNavItem>
-                <SideNavLink href="/#" icon="inbox">
-                  MijnZaken
-                  <NumberBadge>2</NumberBadge>
-                </SideNavLink>
-              </SideNavItem>
-            </SideNavList>
-            <Separator invisible />
-            <SideNavList>
-              <SideNavItem>
-                <SideNavLink href="/#" icon="user">
-                  Identiteit
-                </SideNavLink>
-              </SideNavItem>
-              <SideNavItem>
-                <SideNavLink href="/#" icon="currency-euro">
-                  Financiën
-                </SideNavLink>
-              </SideNavItem>
-              <SideNavItem>
-                <SideNavLink href="/#" icon="briefcase">
-                  Werk
-                </SideNavLink>
-              </SideNavItem>
-              <SideNavItem>
-                <SideNavLink href="/#" icon="favoriet">
-                  Gezondheid
-                </SideNavLink>
-              </SideNavItem>
-              <SideNavItem>
-                <SideNavLink href="/#" icon="home">
-                  Wonen
-                </SideNavLink>
-              </SideNavItem>
-              <SideNavItem>
-                <SideNavLink href="/#" icon="car">
-                  Vervoer
-                </SideNavLink>
-              </SideNavItem>
-              <SideNavItem>
-                <SideNavLink href="/#" icon="school">
-                  Onderwijs
-                </SideNavLink>
-              </SideNavItem>
-            </SideNavList>
-            <Separator invisible />
-            <SideNavList>
-              <SideNavItem>
-                <SideNavLink href="/#" icon="instellingen">
-                  Instellingen
-                </SideNavLink>
-              </SideNavItem>
-            </SideNavList>
-          </SideNav>
+          <SideNav className="rhc-side-nav" heading="Submenu" {...useSideNav({ items: sideNav })} />
           <section className={'rhc-page-main-content'}>
             <Heading level={1}>Welkom Bert Burger</Heading>
             <div>
@@ -123,38 +159,43 @@ export default function MijnOmgeving() {
               <NavigationList>
                 <NavigationListItem
                   description="Uw gegevens, familie en identiteitsbewijs"
-                  href={'#'}
+                  href="/mijn-omgeving-identiteit/"
                   icon="user"
                   label="Identiteit"
                 />
                 <NavigationListItem
                   description="Uw inkomen, toeslagen, bijdragen en belastingen"
-                  href={'#'}
+                  href="/mijn-omgeving-financien/"
                   icon="currency-euro"
                   label="Financiën"
                 />
                 <NavigationListItem
                   description="Uw pensioen, arbeidsgegevens en uitkeringen"
-                  href={'#'}
+                  href="/mijn-omgeving-werk/"
                   icon="briefcase"
                   label="Werk"
-                />{' '}
+                />
                 <NavigationListItem
                   description="Donorregister en Persoonsgebonden budget"
-                  href={'#'}
+                  href="/mijn-omgeving-gezondheid/"
                   icon="favoriet"
                   label="Gezondheid"
-                />{' '}
+                />
                 <NavigationListItem
                   description="Uw energielabel, kadastrale- en WOZ-gegevens"
-                  href={'#'}
+                  href="/mijn-omgeving-wonen/"
                   icon="home"
                   label="Wonen"
+                />
+                <NavigationListItem
+                  description="Uw voertuigen"
+                  href="/mijn-omgeving-vervoer/"
+                  icon="car"
+                  label="Vervoer"
                 />{' '}
-                <NavigationListItem description="Uw voertuigen" href={'#'} icon="car" label="Vervoer" />{' '}
                 <NavigationListItem
                   description="Uw diploma’s en studiefinanciering / studieschuld"
-                  href={'#'}
+                  href="/mijn-omgeving-onderwijs/"
                   icon="backpack"
                   label="Onderwijs"
                 />
