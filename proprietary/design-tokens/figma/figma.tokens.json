@@ -724,6 +724,14 @@
           "500": {
             "$type": "color",
             "$value": "oklch(49.37% 0.11351 240.39)"
+          },
+          "600": {
+            "$type": "color",
+            "$value": "oklch(38.54% 0.0857 238.6)"
+          },
+          "700": {
+            "$type": "color",
+            "$value": "oklch(35.32% 0.0666 242.1)"
           }
         },
         "mintgroen": {
@@ -1038,6 +1046,18 @@
             "$value": "oklch(53.943% 0.21669 5.2)"
           }
         },
+        "wit": {
+          "$type": "color",
+          "$value": "oklch(100% 0 0)"
+        },
+        "zwart": {
+          "$type": "color",
+          "$value": "oklch(0% 0 0)"
+        },
+        "transparent": {
+          "$type": "color",
+          "$value": "transparent"
+        },
         "lintblauw": {
           "50": {
             "$type": "color",
@@ -1062,19 +1082,15 @@
           "500": {
             "$type": "color",
             "$value": "oklch(37.619% 0.09695 253.44)"
+          },
+          "600": {
+            "$type": "color",
+            "$value": "oklch(30.37% 0.0676 256.1)"
+          },
+          "700": {
+            "$type": "color",
+            "$value": "oklch(28.03% 0.0577 258)"
           }
-        },
-        "wit": {
-          "$type": "color",
-          "$value": "oklch(100% 0 0)"
-        },
-        "zwart": {
-          "$type": "color",
-          "$value": "oklch(0% 0 0)"
-        },
-        "transparent": {
-          "$type": "color",
-          "$value": "transparent"
         }
       }
     }
@@ -1386,18 +1402,6 @@
   "common/color": {
     "rhc": {
       "color": {
-        "donkerblauw": {
-          "600": {
-            "$type": "color",
-            "$value": "oklch(38.54% 0.0857 238.6)",
-            "$description": "Originally rhc.color.donkerblauw.500 darkened (srgb) with modify by 0.3"
-          },
-          "700": {
-            "$type": "color",
-            "$value": "oklch(35.32% 0.0666 242.1)",
-            "$description": "Originally rhc.color.donkerblauw.500 darkened (lch) by 0.4"
-          }
-        },
         "foreground": {
           "default": {
             "$type": "color",
@@ -1422,6 +1426,10 @@
           "on-dark-color": {
             "$type": "color",
             "$value": "{rhc.color.wit}"
+          },
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
           },
           "on-light-color": {
             "$type": "color",
@@ -1513,13 +1521,45 @@
           },
           "hover": {
             "$type": "color",
-            "$value": "oklch(30.37% 0.0676 256.1)",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
+            "$value": "{rhc.color.lintblauw.600}"
           },
           "active": {
             "$type": "color",
-            "$value": "oklch(28.03% 0.0577 258)",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
+            "$value": "{rhc.color.lintblauw.700}"
+          }
+        },
+        "core": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.600}"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.700}"
           }
         }
       }
@@ -1747,7 +1787,7 @@
       "heading": {
         "color": {
           "$type": "color",
-          "$value": "{rhc.color.lintblauw.500}"
+          "$value": "{rhc.color.core.500}"
         },
         "font-family": {
           "$type": "fontFamilies",
@@ -2309,7 +2349,7 @@
         },
         "color": {
           "$type": "color",
-          "$value": "{rhc.color.lintblauw.500}"
+          "$value": "{rhc.color.core.500}"
         },
         "font-size": {
           "$type": "fontSizes",
@@ -2342,7 +2382,7 @@
         "attribution": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "font-size": {
             "$type": "fontSizes",
@@ -2352,7 +2392,7 @@
         "content": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "font-size": {
             "$type": "fontSizes",
@@ -2690,7 +2730,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
+            "$value": "{rhc.color.foreground.on-primary}"
           },
           "font-size": {
             "$type": "fontSizes",
@@ -2729,7 +2769,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.foreground.on-dark-color}"
+              "$value": "{rhc.color.foreground.on-primary}"
             }
           },
           "focus": {
@@ -2743,7 +2783,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.foreground.on-dark-color}"
+              "$value": "{rhc.color.foreground.on-primary}"
             }
           },
           "pressed": {
@@ -2753,7 +2793,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.foreground.on-dark-color}"
+              "$value": "{rhc.color.foreground.on-primary}"
             },
             "background-color": {
               "$type": "color",
@@ -2767,7 +2807,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.foreground.on-dark-color}"
+              "$value": "{rhc.color.foreground.on-primary}"
             },
             "background-color": {
               "$type": "color",
@@ -3040,7 +3080,7 @@
         "icon": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.primary.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "size": {
             "$type": "dimension",
@@ -3050,7 +3090,7 @@
         "link": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.donkerblauw.500}"
+            "$value": "{rhc.color.foreground.link}"
           },
           "text-decoration": {
             "$type": "textDecoration",
@@ -3124,7 +3164,7 @@
         "focus": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.primary.50}"
+            "$value": "{rhc.color.core.50}"
           },
           "text-decoration": {
             "$type": "textDecoration",
@@ -3152,7 +3192,7 @@
         "heading": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.primary.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "padding-block-start": {
             "$type": "dimension",
@@ -3176,7 +3216,7 @@
         "horizontal": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.primary.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "border-color": {
             "$type": "color",
@@ -3250,7 +3290,7 @@
         "icon": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.primary.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "size": {
             "$type": "dimension",
@@ -3260,7 +3300,7 @@
         "link": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.donkerblauw.500}"
+            "$value": "{rhc.color.foreground.link}"
           },
           "text-decoration": {
             "$type": "textDecoration",
@@ -3334,7 +3374,7 @@
         "focus": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.primary.50}"
+            "$value": "{rhc.color.core.50}"
           },
           "text-decoration": {
             "$type": "textDecoration",
@@ -3362,7 +3402,7 @@
         "heading": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.primary.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "padding-block-start": {
             "$type": "dimension",
@@ -3380,7 +3420,7 @@
         "horizontal": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.primary.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "border-color": {
             "$type": "color",
@@ -3457,7 +3497,7 @@
         },
         "border-color": {
           "$type": "color",
-          "$value": "{rhc.color.lintblauw.500}"
+          "$value": "{rhc.color.core.500}"
         },
         "border-radius": {
           "$type": "dimension",
@@ -3502,7 +3542,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.400}"
+            "$value": "{rhc.color.core.400}"
           },
           "border-width": {
             "$type": "dimension",
@@ -3526,7 +3566,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.300}"
+            "$value": "{rhc.color.core.300}"
           },
           "border-width": {
             "$type": "dimension",
@@ -3540,7 +3580,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "border-width": {
             "$type": "dimension",
@@ -3550,7 +3590,7 @@
         "indeterminate": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "border-color": {
             "$type": "color",
@@ -3599,7 +3639,7 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.300}"
+              "$value": "{rhc.color.core.300}"
             },
             "border-color": {
               "$type": "color",
@@ -3621,11 +3661,11 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.500}"
+              "$value": "{rhc.color.core.500}"
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.500}"
+              "$value": "{rhc.color.core.500}"
             },
             "border-width": {
               "$type": "dimension",
@@ -3636,7 +3676,7 @@
         "checked": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "border-color": {
             "$type": "color",
@@ -3707,11 +3747,11 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.500}"
+              "$value": "{rhc.color.core.500}"
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.500}"
+              "$value": "{rhc.color.core.500}"
             },
             "border-width": {
               "$type": "dimension",
@@ -3727,7 +3767,7 @@
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.400}"
+              "$value": "{rhc.color.core.400}"
             },
             "border-color": {
               "$type": "color",
@@ -3759,7 +3799,7 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.300}"
+              "$value": "{rhc.color.core.300}"
             },
             "border-color": {
               "$type": "color",
@@ -3781,7 +3821,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.500}"
             },
             "border-width": {
               "$type": "dimension",
@@ -3789,7 +3829,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.500}"
             }
           }
         },
@@ -3797,7 +3837,7 @@
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.400}"
+              "$value": "{rhc.color.core.400}"
             },
             "border-color": {
               "$type": "color",
@@ -3829,7 +3869,7 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.300}"
+              "$value": "{rhc.color.core.300}"
             },
             "border-color": {
               "$type": "color",
@@ -3851,7 +3891,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.500}"
             },
             "border-width": {
               "$type": "dimension",
@@ -3859,7 +3899,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.500}"
             }
           }
         }
@@ -3921,7 +3961,7 @@
         },
         "color": {
           "$type": "color",
-          "$value": "{rhc.color.primary.500}"
+          "$value": "{rhc.color.core.500}"
         },
         "padding-block": {
           "$type": "dimension",
@@ -3944,7 +3984,7 @@
         "hover": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.primary.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "color": {
             "$type": "color",
@@ -4352,7 +4392,7 @@
         },
         "border-color": {
           "$type": "color",
-          "$value": "{rhc.color.primary.500}"
+          "$value": "{rhc.color.core.500}"
         },
         "border-width": {
           "$type": "dimension",
@@ -4697,7 +4737,7 @@
         "level-1": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "font-family": {
             "$type": "fontFamilies",
@@ -4729,7 +4769,7 @@
         "level-2": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "font-family": {
             "$type": "fontFamilies",
@@ -4761,7 +4801,7 @@
         "level-3": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "font-family": {
             "$type": "fontFamilies",
@@ -4793,7 +4833,7 @@
         "level-4": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "font-family": {
             "$type": "fontFamilies",
@@ -4825,7 +4865,7 @@
         "level-5": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "font-family": {
             "$type": "fontFamilies",
@@ -4857,7 +4897,7 @@
         "level-6": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "font-family": {
             "$type": "fontFamilies",
@@ -4931,7 +4971,7 @@
         "message": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.primary.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "color": {
             "$type": "color",
@@ -5130,7 +5170,7 @@
         "active": {
           "color": {
             "$type": "color",
-            "$value": "oklch(39.49% 0.086 248.3)",
+            "$value": "{rhc.color.foreground.link-active}",
             "$description": "Originally rhc.color.hemelblauw.500 darkened (lch) with modify by 0.4"
           }
         },
@@ -5316,7 +5356,7 @@
           "selected": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.500}"
             },
             "color": {
               "$type": "color",
@@ -5455,7 +5495,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           }
         },
         "title": {
@@ -5500,7 +5540,7 @@
         },
         "color": {
           "$type": "color",
-          "$value": "{rhc.color.lintblauw.500}"
+          "$value": "{rhc.color.core.500}"
         }
       }
     }
@@ -5640,7 +5680,7 @@
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.500}"
+              "$value": "{rhc.color.core.500}"
             },
             "color": {
               "$type": "color",
@@ -5653,7 +5693,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.primary.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "focus": {
             "background-color": {
@@ -5662,7 +5702,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.500}"
+              "$value": "{rhc.color.core.500}"
             }
           },
           "hover": {
@@ -5672,7 +5712,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.500}"
+              "$value": "{rhc.color.core.500}"
             }
           },
           "padding-block-end": {
@@ -5712,11 +5752,11 @@
         },
         "color": {
           "$type": "color",
-          "$value": "{rhc.color.primary.500}"
+          "$value": "{rhc.color.core.500}"
         },
         "border-color": {
           "$type": "color",
-          "$value": "{rhc.color.primary.400}"
+          "$value": "{rhc.color.core.400}"
         }
       }
     }
@@ -5768,7 +5808,7 @@
           "focus": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.50}"
+              "$value": "{rhc.color.core.50}"
             }
           },
           "content": {
@@ -5860,7 +5900,7 @@
       "number-badge": {
         "background-color": {
           "$type": "color",
-          "$value": "{rhc.color.primary.500}"
+          "$value": "{rhc.color.core.500}"
         },
         "border-color": {
           "$type": "color",
@@ -6062,7 +6102,7 @@
       "page-footer": {
         "background-color": {
           "$type": "color",
-          "$value": "{rhc.color.primary.500}"
+          "$value": "{rhc.color.core.500}"
         },
         "color": {
           "$type": "color",
@@ -6128,7 +6168,7 @@
         },
         "border-block-start-color": {
           "$type": "color",
-          "$value": "{rhc.color.primary.300}"
+          "$value": "{rhc.color.core.300}"
         },
         "border-block-start-style": {
           "$type": "other",
@@ -6141,11 +6181,11 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.primary.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.primary.500}"
+            "$value": "{rhc.color.core.500}"
           }
         },
         "padding-block-start": {
@@ -6324,7 +6364,7 @@
         },
         "border-color": {
           "$type": "color",
-          "$value": "{rhc.color.lintblauw.500}"
+          "$value": "{rhc.color.core.500}"
         },
         "color": {
           "$type": "color",
@@ -6373,7 +6413,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.400}"
+            "$value": "{rhc.color.core.400}"
           },
           "color": {
             "$type": "color",
@@ -6405,7 +6445,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.300}"
+            "$value": "{rhc.color.core.300}"
           },
           "color": {
             "$type": "color",
@@ -6423,7 +6463,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "color": {
             "$type": "color",
@@ -6437,7 +6477,7 @@
         "checked": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "border-color": {
             "$type": "color",
@@ -6454,7 +6494,7 @@
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.400}"
+              "$value": "{rhc.color.core.400}"
             },
             "border-color": {
               "$type": "color",
@@ -6472,7 +6512,7 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.300}"
+              "$value": "{rhc.color.core.300}"
             },
             "border-color": {
               "$type": "color",
@@ -6494,7 +6534,7 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.500}"
             },
             "border-width": {
               "$type": "dimension",
@@ -6502,7 +6542,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.500}"
             }
           }
         }
@@ -6614,7 +6654,7 @@
         },
         "border-color": {
           "$type": "color",
-          "$value": "{rhc.color.primary.500}"
+          "$value": "{rhc.color.core.500}"
         },
         "border-radius": {
           "$type": "dimension",
@@ -6719,7 +6759,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.primary.300}"
+            "$value": "{rhc.color.core.300}"
           },
           "color": {
             "$type": "color",
@@ -6733,7 +6773,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.primary.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "border-width": {
             "$type": "dimension",
@@ -6844,11 +6884,11 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.500}"
+              "$value": "{rhc.color.core.500}"
             },
             "background-color": {
               "$type": "color",
-              "$value": "none"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -7315,7 +7355,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.300}"
+            "$value": "{rhc.color.core.300}"
           },
           "color": {
             "$type": "color",
@@ -7336,7 +7376,7 @@
         },
         "border-color": {
           "$type": "color",
-          "$value": "{rhc.color.lintblauw.500}"
+          "$value": "{rhc.color.core.500}"
         },
         "border-radius": {
           "$type": "dimension",
@@ -7453,7 +7493,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "color": {
             "$type": "color",
@@ -7473,7 +7513,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.300}"
+            "$value": "{rhc.color.core.300}"
           },
           "border-width": {
             "$type": "dimension",
@@ -7513,7 +7553,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.300}"
+            "$value": "{rhc.color.core.300}"
           },
           "color": {
             "$type": "color",
@@ -7534,7 +7574,7 @@
         },
         "border-color": {
           "$type": "color",
-          "$value": "{rhc.color.lintblauw.500}"
+          "$value": "{rhc.color.core.500}"
         },
         "border-radius": {
           "$type": "dimension",
@@ -7651,7 +7691,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "color": {
             "$type": "color",
@@ -7909,6 +7949,12 @@
             "$type": "color",
             "$value": "oklch(38.71% 0.1016 137.1)"
           }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
         }
       }
     }
@@ -7948,6 +7994,12 @@
           "active": {
             "$type": "color",
             "$value": "oklch(39.49% 0.086 248.3)"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
           }
         }
       }
@@ -7989,6 +8041,12 @@
             "$type": "color",
             "$value": "oklch(60.03% 0.0691 172.6)"
           }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-light-color}"
+          }
         }
       }
     }
@@ -8028,6 +8086,12 @@
           "active": {
             "$type": "color",
             "$value": "oklch(45.34% 0.1055 53.92)"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
           }
         }
       }
@@ -8069,6 +8133,12 @@
             "$type": "color",
             "$value": "oklch(23.97% 0.0791 311.1)"
           }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
         }
       }
     }
@@ -8108,6 +8178,12 @@
           "active": {
             "$type": "color",
             "$value": "oklch(38% 0.1293 5.781)"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
           }
         }
       }
@@ -8149,6 +8225,12 @@
             "$type": "color",
             "$value": "oklch(52.01% 0.0797 343.1)"
           }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-light-color}"
+          }
         }
       }
     }
@@ -8189,6 +8271,12 @@
             "$type": "color",
             "$value": "oklch(34.12% 0.1167 356.1)"
           }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
         }
       }
     }
@@ -8199,17 +8287,8 @@
         "primary-action": {
           "hover": {
             "background-color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.3",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.hover}"
             },
             "border-color": {
               "$type": "color",
@@ -8222,7 +8301,7 @@
           },
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "border-color": {
             "$type": "color",
@@ -8235,7 +8314,7 @@
           "disabled": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.100}"
+              "$value": "{rhc.color.core.100}"
             },
             "border-color": {
               "$type": "color",
@@ -8243,13 +8322,13 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.400}"
+              "$value": "{rhc.color.core.400}"
             }
           },
           "focus": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.500}"
             },
             "border-color": {
               "$type": "color",
@@ -8262,17 +8341,8 @@
           },
           "active": {
             "background-color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.4",
-                    "space": "srgb"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.active}"
             },
             "border-color": {
               "$type": "color",
@@ -8285,17 +8355,8 @@
           },
           "pressed": {
             "background-color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.4",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.active}"
             },
             "border-color": {
               "$type": "color",
@@ -8311,33 +8372,15 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.50}"
+              "$value": "{rhc.color.core.50}"
             },
             "border-color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.3",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.hover}"
             },
             "color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.3",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.hover}"
             }
           },
           "background-color": {
@@ -8346,11 +8389,11 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "disabled": {
             "background-color": {
@@ -8359,98 +8402,53 @@
             },
             "border-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.200}"
+              "$value": "{rhc.color.core.200}"
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.300}"
+              "$value": "{rhc.color.core.300}"
             }
           },
           "focus": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.50}"
+              "$value": "{rhc.color.core.50}"
             },
             "border-color": {
               "$type": "color",
               "$value": "{rhc.color.transparent}"
             },
             "color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.3",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.500}"
             }
           },
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.200}"
+              "$value": "{rhc.color.core.200}"
             },
             "border-color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.4",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.active}"
             },
             "color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.3",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.active}"
             }
           },
           "pressed": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.100}"
+              "$value": "{rhc.color.core.100}"
             },
             "border-color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.4",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.active}"
             },
             "color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.4",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.active}"
             }
           }
         },
@@ -8458,24 +8456,15 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.50}"
+              "$value": "{rhc.color.core.50}"
             },
             "border-color": {
               "$type": "color",
               "$value": "{rhc.color.transparent}"
             },
             "color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.3",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.hover}"
             }
           },
           "background-color": {
@@ -8488,7 +8477,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.core.500}"
           },
           "disabled": {
             "background-color": {
@@ -8501,76 +8490,49 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.100}"
+              "$value": "{rhc.color.core.100}"
             }
           },
           "focus": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.50}"
+              "$value": "{rhc.color.core.50}"
             },
             "border-color": {
               "$type": "color",
               "$value": "{rhc.color.transparent}"
             },
             "color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.3",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.500}"
             }
           },
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.200}"
+              "$value": "{rhc.color.core.200}"
             },
             "border-color": {
               "$type": "color",
               "$value": "{rhc.color.transparent}"
             },
             "color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.4",
-                    "space": "srgb"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.active}"
             }
           },
           "pressed": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.100}"
+              "$value": "{rhc.color.core.100}"
             },
             "border-color": {
               "$type": "color",
               "$value": "{rhc.color.transparent}"
             },
             "color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.4",
-                    "space": "lch"
-                  }
-                }
-              },
               "$type": "color",
-              "$value": "{rhc.color.lintblauw.500}"
+              "$value": "{rhc.color.core.active}"
             }
           }
         }
@@ -8583,84 +8545,6 @@
         "font-size": {
           "$type": "fontSizes",
           "$value": "20px"
-        }
-      }
-    }
-  },
-  "overrides/primaire kleur/contrast fix/foreground op lichte kleur": {
-    "utrecht": {
-      "button": {
-        "primary-action": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-light-color}"
-          },
-          "active": {
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.foreground.on-light-color}"
-            }
-          },
-          "hover": {
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.foreground.on-light-color}"
-            }
-          },
-          "focus": {
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.foreground.on-light-color}"
-            }
-          },
-          "pressed": {
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.foreground.on-light-color}"
-            }
-          }
-        }
-      },
-      "page-footer": {
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.foreground.on-light-color}"
-        }
-      }
-    },
-    "rhc": {
-      "card-as-link": {
-        "horizontal": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-light-color}"
-          }
-        }
-      },
-      "hero": {
-        "message": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-light-color}"
-          }
-        }
-      },
-      "nav-bar": {
-        "link": {
-          "active": {
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.foreground.on-light-color}"
-            }
-          }
-        },
-        "icon": {
-          "active": {
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.foreground.on-light-color}"
-            }
-          }
         }
       }
     }
@@ -9955,7 +9839,6 @@
       "overrides/primaire kleur/violet",
       "overrides/primaire kleur/contrast fix/alle buttons lintblauw",
       "overrides/primaire kleur/contrast fix/button label groter",
-      "overrides/primaire kleur/contrast fix/foreground op lichte kleur",
       "overrides/primaire kleur/contrast fix/non primary button labels coolgrey",
       "overrides/primaire kleur/contrast fix/non primary buttons coolgrey",
       "overrides/responsive/min",
