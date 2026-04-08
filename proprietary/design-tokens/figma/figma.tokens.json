@@ -6110,19 +6110,37 @@
         },
         "padding-block-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.5xl}"
+          "$value": "{rhc.space.none}"
         },
         "padding-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.5xl}"
+          "$value": "{rhc.space.none}"
         },
         "padding-inline-start": {
           "$type": "dimension",
-          "$value": "80px"
+          "$value": "{rhc.space.none}"
         },
         "padding-inline-end": {
           "$type": "dimension",
-          "$value": "80px"
+          "$value": "{rhc.space.none}"
+        },
+        "content": {
+          "max-inline-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.page.md}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.size.lint}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.size.lint}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.size.quarter-lint}"
+          }
         }
       }
     },
