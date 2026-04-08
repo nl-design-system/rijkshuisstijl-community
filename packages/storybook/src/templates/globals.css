@@ -1,9 +1,3 @@
-body {
-  /* TODO: This temporary solution to reset margin on body should be native in the component library CSS */
-  margin-block: 0;
-  margin-inline: 0;
-}
-
 .utrecht-page-body--rhc-tinted {
   --utrecht-page-body-background-color: var(--rhc-color-cool-grey-100);
   --utrecht-page-body-content-background-color: var(--rhc-color-cool-grey-100);
@@ -60,19 +54,6 @@ body {
   margin-block-start: var(--rhc-space-700, 80px); /* replacement is not an exact match: 56px vs 80px */
   max-inline-size: 64rem;
 }
-
-/*
-@media (width <= 780px) {
-  .rhc-templates-page-content {
-    --utrecht-page-content-padding-block-end: var(--rhc-space-3xl);
-    --utrecht-page-content-padding-block-start: var(--rhc-space-3xl);
-    --utrecht-page-padding-inline-end: var(--rhc-space-xl);
-    --utrecht-page-padding-inline-start: var(--rhc-space-xl);
-
-    margin-block-end: var(--rhc-space-none);
-    margin-block-start: var(--rhc-space-none);
-  }
-} */
 
 /**
  * Mimic the non-existing Card Group
@@ -152,24 +133,7 @@ body {
   text-decoration: none !important;
 }
 
-/**
- * Temporary solution as Utrecht Figure on its own doesn't unset the user agent stylesheet of margin-inline 40px.
- * TODO: Discuss intended solution with team.
- */
-.utrecht-figure {
-  margin-inline-end: var(--rhc-space-none);
-  margin-inline-start: var(--rhc-space-none);
-}
 .utrecht-page-content.rhc-templates-page-content {
   margin-block-end: var(--rhc-space-none);
   margin-block-start: var(--rhc-space-none);
-}
-
-/**
- * Temporary solution for not causing content jump in Skip Link.
- * TODO: Discuss intended solution with team; what's the intent of overriding candidate behavior here?
- */
-.rhc-skip-link--focus,
-.rhc-skip-link:focus {
-  position: fixed !important;
 }
