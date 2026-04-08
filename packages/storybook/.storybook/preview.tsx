@@ -16,7 +16,6 @@ import { Controls, Description, Primary, Stories } from '@storybook/addon-docs/b
 import { useOf } from '@storybook/addon-docs/blocks';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import { Preview } from '@storybook/react-vite';
-import { Document } from '@utrecht/component-library-react';
 import { Fragment } from 'react';
 import { StoryRootDecorator } from './StoryRootDecorator';
 
@@ -47,7 +46,7 @@ const preview: Preview = {
           </Body>
         </Root>
       ) : (
-        <Document>{Story()}</Document>
+        <Root Component="div">{Story()}</Root>
       );
     },
     StoryRootDecorator,
