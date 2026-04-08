@@ -73,30 +73,32 @@ export const Footer = ({
         className,
       )}
     >
-      {heading ? (
-        <Heading hidden aria-hidden="true" id={headingId} level={2}>
-          {heading}
-        </Heading>
-      ) : null}
-      <div className="rhc-page-footer__content rhc-page-footer__wrapper">
-        {tagline && (
-          <div className="rhc-page-footer__tagline" key={'heading'}>
-            <Heading appearanceLevel={appearanceLevel} level={2} role="presentation">
-              {tagline}
-            </Heading>
-          </div>
-        )}
-        <ColumnLayout>
-          {columns?.map(({ heading: columnHeading, children }: ColumnProps, index: number) => (
-            <div className="rhc-page-footer__section" key={index}>
-              <Heading appearanceLevel={appearanceLevel} level={heading ? 3 : 2}>
-                {columnHeading}
+      <div className="utrecht-page-footer__content">
+        {heading ? (
+          <Heading hidden aria-hidden="true" id={headingId} level={2}>
+            {heading}
+          </Heading>
+        ) : null}
+        <div className="rhc-page-footer-layout">
+          {tagline && (
+            <div className="rhc-page-footer__tagline" key={'heading'}>
+              <Heading appearanceLevel={appearanceLevel} level={2} role="presentation">
+                {tagline}
               </Heading>
-              {children}
             </div>
-          ))}
-          {children}
-        </ColumnLayout>
+          )}
+          <ColumnLayout>
+            {columns?.map(({ heading: columnHeading, children }: ColumnProps, index: number) => (
+              <div className="rhc-page-footer__section" key={index}>
+                <Heading appearanceLevel={appearanceLevel} level={heading ? 3 : 2}>
+                  {columnHeading}
+                </Heading>
+                {children}
+              </div>
+            ))}
+            {children}
+          </ColumnLayout>
+        </div>
       </div>
       {(backtotop || subFooter) && (
         <div
