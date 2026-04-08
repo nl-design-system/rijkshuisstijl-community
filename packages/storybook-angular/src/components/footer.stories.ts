@@ -1,3 +1,4 @@
+import { LinkComponent } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, moduleMetadata, type StoryObj } from '@storybook/angular';
 import { provideTablerIcons, TablerIconComponent } from 'angular-tabler-icons';
 import { IconArrowNarrowUp, IconChevronRight } from 'angular-tabler-icons/icons';
@@ -22,6 +23,7 @@ const meta: Meta<FooterComponent> = {
         LinkListItemComponent,
         LinkListLinkComponent,
         LinkListComponent,
+        LinkComponent,
         HeadingComponent,
         TablerIconComponent,
         IconComponent,
@@ -211,10 +213,10 @@ const meta: Meta<FooterComponent> = {
               </li>
           </rhc-link-list>
         </div>
-        <rhc-back-to-top subFooter>
+        <rhc-link href="#" subFooter>
             Terug naar boven
             <rhc-icon icon><i-tabler name="arrow-narrow-up"/></rhc-icon>
-        </rhc-back-to-top>
+        </rhc-link>
       </footer>
     `,
     props: {
