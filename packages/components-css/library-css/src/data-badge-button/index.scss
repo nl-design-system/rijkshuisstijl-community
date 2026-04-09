@@ -6,18 +6,18 @@
 @use "mixin";
 
 .rhc-data-badge-button {
-  @include mixin.rhc-data-badge-button;
+  @include rhc-data-badge-button;
 
   &:hover {
-    @include mixin.rhc-data-badge-button--hover;
+    @include rhc-data-badge-button--hover;
   }
 
   &--focus-visible,
   &:focus-visible {
-    @include mixin.rhc-data-badge-button--focus-visible;
+    @include rhc-data-badge-button--focus-visible;
   }
 
   &__sr-only {
-    @include mixin.rhc-data-badge-button__sr-only;
+    @include rhc-data-badge-button__sr-only;
   }
 }
