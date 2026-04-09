@@ -61,15 +61,15 @@
 
   // make the link fill the list item
   line-height: calc(
-    var(--utrecht-listbox-option-min-block-size, var(--rhc-space-400)) - var(
+    var(--utrecht-listbox-option-min-block-size, var(--rhc-space-3xl)) - var(
         --utrecht-listbox-option-padding-block-start,
-        var(--rhc-space-100)
-      ) - var(--utrecht-listbox-option-padding-block-end, var(--rhc-space-100))
+        var(--rhc-space-md)
+      ) - var(--utrecht-listbox-option-padding-block-end, var(--rhc-space-md))
   );
-  padding-block-end: var(--utrecht-listbox-option-padding-block-end, var(--rhc-space-100));
-  padding-block-start: var(--utrecht-listbox-option-padding-block-start, var(--rhc-space-100));
-  padding-inline-end: var(--utrecht-listbox-option-padding-inline-end, var(--rhc-space-200));
-  padding-inline-start: var(--utrecht-listbox-option-padding-inline-start, var(--rhc-space-200));
+  padding-block-end: var(--utrecht-listbox-option-padding-block-end, var(--rhc-space-md));
+  padding-block-start: var(--utrecht-listbox-option-padding-block-start, var(--rhc-space-md));
+  padding-inline-end: var(--utrecht-listbox-option-padding-inline-end, var(--rhc-space-xl));
+  padding-inline-start: var(--utrecht-listbox-option-padding-inline-start, var(--rhc-space-xl));
 }
 
 @mixin rhc-language-navigation__link--button {

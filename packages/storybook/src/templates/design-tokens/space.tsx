@@ -14,7 +14,6 @@ import {
   TableHeaderCell,
   TableRow,
 } from '@rijkshuisstijl-community/components-react';
-import tokens from '@rijkshuisstijl-community/design-tokens/dist/index.tokens.json';
 import { Code, Paragraph } from '@utrecht/component-library-react';
 import { CopyDesignTokenButton } from './CopyDesignTokenButton';
 import { PageBodyContainer, PageBodyContent, PageBodyMain } from './PageBody';
@@ -23,6 +22,45 @@ import { navigation } from './navigation';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import './index.css';
+
+type SpacingTable = Array<{
+  name: string;
+  path: Array<string>;
+}>;
+
+const TableRows = ({ rows }: { rows: SpacingTable }) =>
+  rows.map(({ name, path }) => (
+    <TableRow key={name}>
+      <TableCell className="utrecht-table__cell--rhc-middle">
+        <SpaceSample value={`var(--${path.join('-')})`} />
+      </TableCell>
+      <TableCell className="utrecht-table__cell--rhc-middle">
+        <CopyDesignTokenButton path={['rhc', 'space', name]} />
+      </TableCell>
+    </TableRow>
+  ));
+
+const tshirtSizesTable: SpacingTable = [
+  { name: 'none', path: ['rhc', 'space', 'none'] },
+  { name: '2xs', path: ['rhc', 'space', '2xs'] },
+  { name: 'xs', path: ['rhc', 'space', 'xs'] },
+  { name: 'sm', path: ['rhc', 'space', 'sm'] },
+  { name: 'md', path: ['rhc', 'space', 'md'] },
+  { name: 'lg', path: ['rhc', 'space', 'lg'] },
+  { name: 'xl', path: ['rhc', 'space', 'xl'] },
+  { name: '2xl', path: ['rhc', 'space', '2xl'] },
+  { name: '3xl', path: ['rhc', 'space', '3xl'] },
+  { name: '4xl', path: ['rhc', 'space', '4xl'] },
+  { name: '5xl', path: ['rhc', 'space', '5xl'] },
+];
+
+const lintSizesTable: SpacingTable = [
+  { name: 'quarter-lint', path: ['rhc', 'size', 'quarter-lint'] },
+  { name: 'half-lint', path: ['rhc', 'size', 'half-lint'] },
+  { name: 'lint', path: ['rhc', 'size', 'lint'] },
+  { name: '2-lint', path: ['rhc', 'size', '2-lint'] },
+  { name: '3-lint', path: ['rhc', 'size', '3-lint'] },
+];
 
 export default function Page() {
   return (
@@ -55,44 +93,8 @@ export default function Page() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {[
-                      { name: '0', value: tokens['rhc']['space']['0'] },
-                      { name: '25', value: tokens['rhc']['space']['25'] },
-                      { name: '50', value: tokens['rhc']['space']['50'] },
-                      { name: '100', value: tokens['rhc']['space']['100'] },
-                      { name: '150', value: tokens['rhc']['space']['150'] },
-                      { name: '200', value: tokens['rhc']['space']['200'] },
-                      { name: '300', value: tokens['rhc']['space']['300'] },
-                      { name: '400', value: tokens['rhc']['space']['400'] },
-                      { name: '500', value: tokens['rhc']['space']['500'] },
-                      { name: '600', value: tokens['rhc']['space']['600'] },
-                      { name: '700', value: tokens['rhc']['space']['700'] },
-                    ].map(({ name, value }) => (
-                      <TableRow key={name}>
-                        <TableCell className="utrecht-table__cell--rhc-middle">
-                          <SpaceSample value={`${value}`} />
-                        </TableCell>
-                        <TableCell className="utrecht-table__cell--rhc-middle">
-                          <CopyDesignTokenButton path={['rhc', 'space', name]} />
-                        </TableCell>
-                      </TableRow>
-                    ))}
-                    {[
-                      { name: 'quarter-lint', value: tokens['rhc']['size']['quarter-lint'] },
-                      { name: 'half-lint', value: tokens['rhc']['size']['half-lint'] },
-                      { name: 'lint', value: tokens['rhc']['size']['lint'] },
-                      { name: '2-lint', value: tokens['rhc']['size']['2-lint'] },
-                      { name: '3-lint', value: tokens['rhc']['size']['3-lint'] },
-                    ].map(({ name, value }) => (
-                      <TableRow key={name}>
-                        <TableCell className="utrecht-table__cell--rhc-middle">
-                          <SpaceSample value={value} />
-                        </TableCell>
-                        <TableCell className="utrecht-table__cell--rhc-middle">
-                          <CopyDesignTokenButton path={['rhc', 'space', name]} />
-                        </TableCell>
-                      </TableRow>
-                    ))}
+                    <TableRows rows={tshirtSizesTable} />
+                    <TableRows rows={lintSizesTable} />
                   </TableBody>
                 </Table>
               </div>
