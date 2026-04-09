@@ -96,7 +96,7 @@ export default function Componenten() {
         {...props}
         onClick={onPaginationLinkClick}
         onKeyDown={(event) => {
-          if (event.key === 'Enter' || event.key === ' ') {
+          if (event.key === 'Enter') {
             event.preventDefault();
             onPaginationLinkClick(event as any);
           }
