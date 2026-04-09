@@ -1,4 +1,4 @@
-# Rijkshuisstijl community template page
+# Webpage www.rijkshuisstijl-community.nl
 
 ## Getting Started
 
