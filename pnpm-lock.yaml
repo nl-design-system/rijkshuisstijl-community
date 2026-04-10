@@ -5,6 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
+  axios@<1.15.0: '>=1.15.0'
   handlebars@>=4.0.0 <4.7.9: '>=4.7.9'
   locutus@>=2.0.12 <2.0.39: '>=2.0.39'
   '@isaacs/brace-expansion@<=5.0.0': '>=5.0.1'
@@ -8017,11 +8018,8 @@ packages:
     peerDependencies:
       playwright: '>1.0.0'
 
-  axios@1.13.6:
-    resolution: {integrity: sha512-ChTCHMouEe2kn713WHbQGcuYrr6fXTBiu460OTwWrWob16g1bXn4vtz07Ope7ewMozJAnEquLk5lWQWtBig9DQ==}
-
-  axios@1.14.0:
-    resolution: {integrity: sha512-3Y8yrqLSwjuzpXuZ0oIYZ/XGgLwUIBU3uLvbcpb0pidD9ctpShJd43KSlEEkVQg6DS0G9NKyzOvBfUtDKEyHvQ==}
+  axios@1.15.0:
+    resolution: {integrity: sha512-wWyJDlAatxk30ZJer+GeCWS209sA42X+N5jU2jy6oHTp7ufw8uzUTVFBX9+wTfAlhiJXGS0Bq7X6efruWjuK9Q==}
 
   axobject-query@4.1.0:
     resolution: {integrity: sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==}
@@ -13614,9 +13612,6 @@ packages:
   proxy-addr@2.0.7:
     resolution: {integrity: sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==}
     engines: {node: '>= 0.10'}
-
-  proxy-from-env@1.1.0:
-    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
 
   proxy-from-env@2.1.0:
     resolution: {integrity: sha512-cJ+oHTW1VAEa8cJslgmUZrc+sjRKgAKl3Zyse6+PV38hZe/V6Z14TbCuXcan9F9ghlz4QrFr2c92TNF82UkYHA==}
@@ -22772,15 +22767,7 @@ snapshots:
       picocolors: 1.1.1
       playwright: 1.58.2
 
-  axios@1.13.6:
-    dependencies:
-      follow-redirects: 1.15.11(debug@4.4.3)
-      form-data: 4.0.5
-      proxy-from-env: 1.1.0
-    transitivePeerDependencies:
-      - debug
-
-  axios@1.14.0:
+  axios@1.15.0:
     dependencies:
       follow-redirects: 1.15.11(debug@4.4.3)
       form-data: 4.0.5
@@ -30009,8 +29996,6 @@ snapshots:
       forwarded: 0.2.0
       ipaddr.js: 1.9.1
 
-  proxy-from-env@1.1.0: {}
-
   proxy-from-env@2.1.0: {}
 
   prr@1.0.1:
@@ -32421,7 +32406,7 @@ snapshots:
 
   wait-on@7.2.0:
     dependencies:
-      axios: 1.14.0
+      axios: 1.15.0
       joi: 17.13.3
       lodash: 4.17.23
       minimist: 1.2.8
@@ -32431,7 +32416,7 @@ snapshots:
 
   wait-on@9.0.4:
     dependencies:
-      axios: 1.13.6
+      axios: 1.15.0
       joi: 18.0.2
       lodash: 4.17.23
       minimist: 1.2.8
