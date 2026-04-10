@@ -53,7 +53,7 @@ export { DataBadgeButton, type DataBadgeButtonProps } from './DataBadgeButton';
 export { DataSummary, type DataSummaryProps } from './DataSummary';
 export { DataSummaryItem, type DataSummaryItemProps } from './DataSummaryItem';
 export { type DivRootProps, type HtmlRootProps, Root } from './Root';
-export { DotBadge, type DotBadgeProps } from './DotBadge';
+export { DotBadge, type DotBadgeProps } from '@rijkshuisstijl-community/dot-badge-react';
 export { Drawer, type DrawerProps } from './Drawer';
 export { ExpandableCheckboxGroup, type ExpandableCheckboxGroupProps } from './ExpandableCheckboxGroup';
 export { Fieldset, FieldsetLegend, type FieldsetLegendProps, type FieldsetProps } from './Fieldset';

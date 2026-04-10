@@ -2,37 +2,20 @@
 
 # Omschrijving
 
-Dit package bevat de specifieke code voor het component. Als je alle rijkshuisstijl community componenten wil kijk dan naar [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/README.md]. Voor verdere informatie over het inzet van de component kijk naar onze documentatie [https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-button--docs]
+Dit package bevat de specifieke code voor het component. Als je alle rijkshuisstijl community componenten wil kijk dan naar [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/README.md]. Voor verdere informatie over het inzet van de component kijk naar onze documentatie [https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-dot-badge--docs]
 
 ## Installatie
 
 ```bash
-pnpm add @rijkshuisstijl-community/button-react
+pnpm add @rijkshuisstijl-community/dot-badge-react
 ```
 
 ## Gebruik
 
-Een button biedt de mogelijkheid om een actie uit te voeren.
-
-### Voorbeeld 1
-
-Primary Action
+Dit component is te gebruiken door de DotBadge te importeren. De component heeft één (verplichte) property genaamd label. De tekst die hierin wordt gezet is alleen zichtbaar voor screen readers.
 
 ```tsx
-<Button appearance="primary-action-button">Label</Button>
-```
-
-### Voorbeeld 2
-
-Icon Right
-
-```tsx
-<Button appearance="primary-action-button">
-  Label
-  <Icon>
-    <ArrowRight />
-  </Icon>
-</Button>
+<DotBadge label="Nieuw bericht" />
 ```
 
 ## Testing
