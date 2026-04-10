@@ -5,7 +5,6 @@ import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-paars/index.css'
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-oranje/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-lintblauw/index.css';
 import '@rijkshuisstijl-community/design-tokens/src/fluid.css';
 import '@rijkshuisstijl-community/design-tokens/src/fluid-font-size.css';
 import '@rijkshuisstijl-community/design-tokens/src/fluid-space.css';
@@ -34,7 +33,6 @@ const preview: Preview = {
         'Kern - Lintblauw': `rhc-theme ${themeModifiers}`,
         'Uitvoerend - Groen': `uitvoerend-groen ${themeModifiers}`,
         'Uitvoerend - Hemelblauw': `uitvoerend-hemelblauw ${themeModifiers}`,
-        'Uitvoerend - Lintblauw': `uitvoerend-lintblauw ${themeModifiers}`,
         'Uitvoerend - Oranje': `uitvoerend-oranje ${themeModifiers}`,
         'Uitvoerend - Paars': `uitvoerend-paars ${themeModifiers}`,
         'Uitvoerend - Robijn Rood': `uitvoerend-robijnrood ${themeModifiers}`,

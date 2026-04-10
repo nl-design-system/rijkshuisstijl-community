@@ -36,7 +36,6 @@ const preview: Preview = {
         'Kern - Lintblauw': 'rhc-theme',
         'Uitvoerend - Groen': 'uitvoerend-groen',
         'Uitvoerend - Hemelblauw': 'uitvoerend-hemelblauw',
-        'Uitvoerend - Lintblauw': 'uitvoerend-lintblauw',
         'Uitvoerend - Oranje': 'uitvoerend-oranje',
         'Uitvoerend - Paars': 'uitvoerend-paars',
         'Uitvoerend - Robijn Rood': 'uitvoerend-robijnrood',
