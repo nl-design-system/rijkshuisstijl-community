@@ -106,8 +106,8 @@ export const useCards = ({
   }[];
   headingLevel: number;
 }) => ({
-  children: items.map(({ href, content, linkLabel, heading, external }) => (
-    <Card heading={heading} headingLevel={headingLevel as HeadingLevel} key={heading}>
+  children: items.map(({ href, content, linkLabel, heading, external }, index) => (
+    <Card heading={heading} headingLevel={headingLevel as HeadingLevel} key={index}>
       {content}
       <ActionGroup>
         <ButtonLink appearance={external ? 'subtle-button' : 'primary-action-button'} href={href}>
