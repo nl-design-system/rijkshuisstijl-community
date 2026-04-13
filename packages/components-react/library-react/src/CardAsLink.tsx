@@ -3,9 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 import { Image } from '@rijkshuisstijl-community/image-react';
+import { Link } from '@rijkshuisstijl-community/link-react';
 import clsx from 'clsx';
 import { PropsWithChildren, ReactNode, Ref } from 'react';
-import { Link } from './Link';
 
 interface CardAsLinkPropsBase {
   href: string;
