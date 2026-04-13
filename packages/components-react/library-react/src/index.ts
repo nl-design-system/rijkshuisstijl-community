@@ -109,7 +109,7 @@ export {
   Trigger as LanguageNavigationTrigger,
   type LanguageNavigationTriggerProps,
 } from './LanguageNavigation';
-export { Link, type LinkProps } from './Link';
+export { Link, type LinkProps } from '@rijkshuisstijl-community/link-react';
 export { LinkButton, type LinkButtonProps } from './LinkButton';
 export { LinkList, LinkListLink, type LinkListLinkProps, type LinkListProps } from './LinkList';
 export { LinkListCard } from './LinkListCard';
