@@ -358,6 +358,18 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
 
+  packages/components-css/action-group-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      '@utrecht/action-group-css':
+        specifier: 2.0.0
+        version: 2.0.0
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
   packages/components-css/alert-css:
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
@@ -456,6 +468,9 @@ importers:
       '@rijkshuisstijl-community/accordion-css':
         specifier: workspace:*
         version: link:../accordion-css
+      '@rijkshuisstijl-community/action-group-css':
+        specifier: workspace:*
+        version: link:../action-group-css
       '@rijkshuisstijl-community/alert-css':
         specifier: workspace:*
         version: link:../alert-css
