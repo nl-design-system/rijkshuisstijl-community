@@ -474,6 +474,9 @@ importers:
       '@rijkshuisstijl-community/figure-css':
         specifier: workspace:*
         version: link:../figure-css
+      '@rijkshuisstijl-community/link-css':
+        specifier: workspace:*
+        version: link:../link-css
       '@rijkshuisstijl-community/paragraph-css':
         specifier: workspace:*
         version: link:../paragraph-css
@@ -634,6 +637,18 @@ importers:
       vite:
         specifier: 7.3.1
         version: 7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
+
+  packages/components-css/link-css:
+    devDependencies:
+      '@nl-design-system-candidate/link-css':
+        specifier: 2.0.3
+        version: 2.0.3
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
 
   packages/components-css/paragraph-css:
     devDependencies:
