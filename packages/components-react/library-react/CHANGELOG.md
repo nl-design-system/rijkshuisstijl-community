@@ -1,5 +1,29 @@
 # @rijkshuisstijl-community/components-react
 
+## 15.0.0
+
+### Major Changes
+
+- 71e84f2: `<Footer>` property `heading` is now renamed to `tagline`, and `heading` property now is for landmark name.
+
+### Minor Changes
+
+- 2ec3235: Add `heading` and `headingId` properties to `<SideNav>` for the navigation landmark heading.
+
+### Patch Changes
+
+- 6915216: Update to latest Root component.
+- a2bbb05: Remove unused breakpoint from `rhc-navigation-list__item__description`.
+- 6ef869c: Fix `SideNav` component to use correct landmark: `navigation`.
+- Updated dependencies [9882e13]
+- Updated dependencies [5d5eeaf]
+- Updated dependencies [609b8bd]
+- Updated dependencies [e7dc0ae]
+  - @rijkshuisstijl-community/blockquote-react@1.0.0
+  - @rijkshuisstijl-community/separator-react@1.0.0
+  - @rijkshuisstijl-community/button-react@1.0.0
+  - @rijkshuisstijl-community/dot-badge-react@1.0.0
+
 ## 14.0.1
 
 ### Patch Changes

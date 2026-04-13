@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-angular
 
+## 11.0.0
+
+### Major Changes
+
+- 71e84f2: `<rhc-footer>` property `heading` is now renamed to `tagline`, and `heading` property now is for landmark name.
+
 ## 10.0.1
 
 ### Patch Changes

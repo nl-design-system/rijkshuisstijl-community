@@ -1,5 +1,27 @@
 # @rijkshuisstijl-community/components-css
 
+## 16.0.0
+
+### Major Changes
+
+- 71e84f2: `rhc-page-footer__title` is renamed to `rhc-page-footer__tagline`
+
+### Minor Changes
+
+- 364a45e: Add `rhc-side-nav__heading` class name for a screen reader only landmark heading.
+
+### Patch Changes
+
+- 6915216: Update to latest Root component.
+- Updated dependencies [9882e13]
+- Updated dependencies [5d5eeaf]
+- Updated dependencies [609b8bd]
+- Updated dependencies [e7dc0ae]
+  - @rijkshuisstijl-community/blockquote-css@1.0.0
+  - @rijkshuisstijl-community/separator-css@1.0.0
+  - @rijkshuisstijl-community/button-css@1.0.0
+  - @rijkshuisstijl-community/dot-badge-css@1.0.0
+
 ## 15.0.1
 
 ### Patch Changes
