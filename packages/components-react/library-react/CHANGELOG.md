@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/components-react
 
+## 15.0.1
+
+### Patch Changes
+
+- Updated dependencies [35e7d11]
+  - @rijkshuisstijl-community/link-react@1.0.0
+
 ## 15.0.0
 
 ### Major Changes
