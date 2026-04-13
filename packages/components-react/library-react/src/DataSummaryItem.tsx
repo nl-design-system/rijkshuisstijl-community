@@ -3,9 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { Link } from '@rijkshuisstijl-community/link-react';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, Ref } from 'react';
-import { Link } from './Link';
 
 export interface DataSummaryItemProps extends HTMLAttributes<HTMLDivElement> {
   itemKey: string;
