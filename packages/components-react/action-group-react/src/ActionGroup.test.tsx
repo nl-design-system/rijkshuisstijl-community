@@ -1,12 +1,12 @@
 import { cleanup, render, screen } from '@testing-library/react';
-import React from 'react'; 
+import { PropsWithChildren} from 'react'; 
 import '@testing-library/jest-dom/vitest';
 import { createRef } from 'react';
 import { afterEach, describe, expect, it } from 'vitest';
 import { ActionGroup} from './ActionGroup';
 
-const Button = ({ children }: { children?: React.ReactNode }) => (
-  <Button>{children}</Button>
+const Button = ({ children }: PropsWithChildren) => (
+  <button>{children}</button>
 );
 
 describe('Action group', () => {
