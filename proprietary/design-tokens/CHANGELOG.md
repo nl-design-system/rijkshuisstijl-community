@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 14.0.0
+
+### Major Changes
+
+- a7f0a97: Thema `Uitvoerend - Lintblauw` verwijderd. Dit thema was identiek geworden aan `Kern - Lintblauw` en is daarom overbodig.
+
 ## 13.0.0
 
 ### Major Changes
