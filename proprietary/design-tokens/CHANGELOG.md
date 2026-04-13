@@ -1,5 +1,60 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 13.0.0
+
+### Major Changes
+
+- 94b4015: Rename the following tokens:
+  - Rename `rhc.space.0` to `rhc.space.none`
+  - Rename `rhc.space.25` to `rhc.space.xs`
+  - Rename `rhc.space.50` to `rhc.space.sm`
+  - Rename `rhc.space.100` to `rhc.space.md`
+  - Rename `rhc.space.150` to `rhc.space.lg`
+  - Rename `rhc.space.200` to `rhc.space.xl`
+  - Rename `rhc.space.300` to `rhc.space.2xl`
+  - Rename `rhc.space.400` to `rhc.space.3xl`
+  - Rename `rhc.space.500` to `rhc.space.4xl`
+  - Rename `rhc.space.600` to `rhc.space.5xl`
+
+  Remove the `rhc.space.700` token. You can replace it with `rhc.space.600` in most cases.
+
+  Add `rhc.space.2xs`.
+
+  Migrate with the following find/replace actions:
+  - Replace `var(--rhc-space-0)` with `var(--rhc-space-none)`
+  - Replace `var(--rhc-space-25)` with `var(--rhc-space-xs)`
+  - Replace `var(--rhc-space-50)` with `var(--rhc-space-sm)`
+  - Replace `var(--rhc-space-100)` with `var(--rhc-space-md)`
+  - Replace `var(--rhc-space-150)` with `var(--rhc-space-lg)`
+  - Replace `var(--rhc-space-200)` with `var(--rhc-space-xl)`
+  - Replace `var(--rhc-space-300)` with `var(--rhc-space-2xl)`
+  - Replace `var(--rhc-space-400)` with `var(--rhc-space-3xl)`
+  - Replace `var(--rhc-space-500)` with `var(--rhc-space-4xl)`
+  - Replace `var(--rhc-space-600)` with `var(--rhc-space-5xl)`
+
+- ef79cfc: - De closed source font override tokenset is verwijderd.
+  - De waarde van `rhc.text.font-family.default` is gewijzigd van `'RijksSans', 'Arial', 'Verdana', sans-serif` naar `'RijksSansVF', 'Fira Sans', 'Arial', 'Verdana', sans-serif`.
+  - `RijksSansVF` is te downloaden via rijkshuisstijl.nl.
+  - Font-weight tokens zijn als strings ingesteld zodat ze overeenkomen met de Figma font-weight namen van RijksSansVF en Fira Sans, Tokens Studio gebruikers zouden hierdoor geen
+    errors meer moeten krijgen. Voor code zijn overrides beschikbaar in de tokensets onder type-scale waarbij
+    font-weights als numbers worden doorgegeven.
+
+### Minor Changes
+
+- 94b4015: Add `rhc.space.*`, `rhc.space.min.*` and `rhc.space.max.*` t-shirt sized tokens for a fluid space scale'.
+- 05bcafc: Na afstemming met Norday (DPC samenwerking Rijkshuisstijl.nl) zijn de volgende common tokens toegevoegd, in voorbereiding op de herziene richtlijnen van Rijkshuisstijl.nl:
+  - `rhc.color.core.*` toegevoegd (`.50` t/m `.500`, `.hover`, `.active`) - voorheen verwees de kernkleur lintblauw direct naar de brand-laag, dit introduceert een common token als tussenlaag.
+  - `rhc.color.foreground.on-primary` toegevoegd — maakt het eenvoudiger om van primary kleur te wisselen zonder tekstkleur apart aan te passen.
+
+- f888d72: Add `rhc.size.min.lint` and `rhc.size.max.lint` design tokens for 40px to 48px range.
+- 60ff45d: Implement fluid design tokens for `rhc.size.lint` based sizes and spaces.
+
+  Enable the fluid design tokens using any of the following class names:
+  - `basis-layout-container--fluid`
+  - `basis-layout-container--fluid-space`
+  - `rhc-theme--fluid`
+  - `rhc-theme--fluid-space`
+
 ## 12.2.0
 
 ### Minor Changes

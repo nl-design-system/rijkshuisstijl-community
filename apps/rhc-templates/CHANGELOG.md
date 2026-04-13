@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/rhc-templates
 
+## 2.0.5
+
+### Patch Changes
+
+- 2b6db39: fix website info
+
 ## 2.0.4
 
 ### Patch Changes
