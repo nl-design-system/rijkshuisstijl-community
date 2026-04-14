@@ -15,7 +15,7 @@ pnpm add @rijkshuisstijl-community/action-group-react
 ### Voorbeeld 1
 
 ```tsx
-<ActionGroup>
+<ActionGroup direction="column">
   <Button appearance="primary-action-button">
     Save and continue
   </Button>
