@@ -397,6 +397,18 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
 
+  packages/components-css/breadcrumb-nav-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      '@utrecht/breadcrumb-nav-css':
+        specifier: 1.5.1
+        version: 1.5.1
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
   packages/components-css/button-css:
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
@@ -465,9 +477,9 @@ importers:
       '@rijkshuisstijl-community/blockquote-css':
         specifier: workspace:*
         version: link:../blockquote-css
-      '@rijkshuisstijl-community/button-css':
+      '@rijkshuisstijl-community/breadcrumb-nav-css':
         specifier: workspace:*
-        version: link:../button-css
+        version: link:../breadcrumb-nav-css
       '@rijkshuisstijl-community/dot-badge-css':
         specifier: workspace:*
         version: link:../dot-badge-css
