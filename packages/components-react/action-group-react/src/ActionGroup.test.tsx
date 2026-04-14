@@ -1,7 +1,6 @@
 import { cleanup, render, screen } from '@testing-library/react';
-import { PropsWithChildren} from 'react'; 
 import '@testing-library/jest-dom/vitest';
-import { createRef } from 'react';
+import { createRef,  PropsWithChildren } from 'react';
 import { afterEach, describe, expect, it } from 'vitest';
 import { ActionGroup} from './ActionGroup';
 
