@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/components-css
 
+## 16.0.1
+
+### Patch Changes
+
+- Updated dependencies [35e7d11]
+  - @rijkshuisstijl-community/link-css@1.0.0
+
 ## 16.0.0
 
 ### Major Changes
