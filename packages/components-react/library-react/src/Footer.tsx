@@ -10,7 +10,6 @@ import { HTMLAttributes, MouseEvent, PropsWithChildren, ReactNode, Ref } from 'r
 import { ColumnLayout } from './ColumnLayout';
 import { Heading, HeadingLevel } from './Heading';
 
-
 interface FooterProps extends HTMLAttributes<HTMLDivElement> {
   heading?: ReactNode;
   headingId?: string;
