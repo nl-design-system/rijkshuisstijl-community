@@ -1385,6 +1385,189 @@
       }
     }
   },
+  "common/type-scale/default": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "max": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "1rem",
+              "$description": "[figma-only]"
+            },
+            "md": {
+              "$type": "fontSizes",
+              "$value": "1.25rem",
+              "$description": "[figma-only]"
+            },
+            "lg": {
+              "$type": "fontSizes",
+              "$value": "1.5rem",
+              "$description": "[figma-only]"
+            },
+            "xl": {
+              "$type": "fontSizes",
+              "$value": "2rem",
+              "$description": "[figma-only]"
+            },
+            "2xl": {
+              "$type": "fontSizes",
+              "$value": "2.5rem",
+              "$description": "[figma-only]"
+            },
+            "3xl": {
+              "$type": "fontSizes",
+              "$value": "3rem",
+              "$description": "[figma-only]"
+            }
+          },
+          "min": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "0.875rem",
+              "$description": "[figma-only]"
+            },
+            "md": {
+              "$type": "fontSizes",
+              "$value": "1rem",
+              "$description": "[figma-only]"
+            },
+            "lg": {
+              "$type": "fontSizes",
+              "$value": "1.25rem",
+              "$description": "[figma-only]"
+            },
+            "xl": {
+              "$type": "fontSizes",
+              "$value": "1.5rem",
+              "$description": "[figma-only]"
+            },
+            "2xl": {
+              "$type": "fontSizes",
+              "$value": "1.75rem",
+              "$description": "[figma-only]"
+            },
+            "3xl": {
+              "$type": "fontSizes",
+              "$value": "2rem",
+              "$description": "[figma-only]"
+            }
+          }
+        }
+      },
+      "size": {
+        "pointer-target": {
+          "$type": "dimension",
+          "$value": "48px"
+        }
+      },
+      "icon": {
+        "inset-block-start": {
+          "min": {
+            "md": {
+              "$type": "dimension",
+              "$value": "0rem",
+              "$description": "[figma-only] [temporary – until nl-icon]"
+            }
+          },
+          "max": {
+            "md": {
+              "$type": "dimension",
+              "$value": "0.188rem",
+              "$description": "[figma-only] [temporary – until nl-icon]"
+            }
+          }
+        }
+      },
+      "space": {
+        "max": {
+          "2xs": {
+            "$type": "dimension",
+            "$value": "4px"
+          },
+          "xs": {
+            "$type": "dimension",
+            "$value": "8px"
+          },
+          "sm": {
+            "$type": "dimension",
+            "$value": "12px"
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "16px"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "20px"
+          },
+          "xl": {
+            "$type": "dimension",
+            "$value": "24px"
+          },
+          "2xl": {
+            "$type": "dimension",
+            "$value": "32px"
+          },
+          "3xl": {
+            "$type": "dimension",
+            "$value": "40px"
+          },
+          "4xl": {
+            "$type": "dimension",
+            "$value": "48px"
+          },
+          "5xl": {
+            "$type": "dimension",
+            "$value": "64px"
+          }
+        },
+        "min": {
+          "2xs": {
+            "$type": "dimension",
+            "$value": "0.125rem"
+          },
+          "xs": {
+            "$type": "dimension",
+            "$value": "0.125rem"
+          },
+          "sm": {
+            "$type": "dimension",
+            "$value": "0.25rem"
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "0.5rem"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "0.75rem"
+          },
+          "xl": {
+            "$type": "dimension",
+            "$value": "1rem"
+          },
+          "2xl": {
+            "$type": "dimension",
+            "$value": "1.5rem"
+          },
+          "3xl": {
+            "$type": "dimension",
+            "$value": "2rem"
+          },
+          "4xl": {
+            "$type": "dimension",
+            "$value": "2.5rem"
+          },
+          "5xl": {
+            "$type": "dimension",
+            "$value": "3rem"
+          }
+        }
+      }
+    }
+  },
+  "common/type-scale/information-dence": {},
   "common/border": {
     "rhc": {
       "border-radius": {
@@ -9692,6 +9875,8 @@
       "brand/space",
       "brand/size",
       "brand/text",
+      "common/type-scale/default",
+      "common/type-scale/information-dence",
       "common/border",
       "common/color",
       "common/focus",
