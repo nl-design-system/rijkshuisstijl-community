@@ -1567,7 +1567,362 @@
       }
     }
   },
-  "common/type-scale/information-dence": {},
+  "common/type-scale/information-dence": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "min": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "0.875rem",
+              "$description": "[figma-only]"
+            },
+            "md": {
+              "$type": "fontSizes",
+              "$value": "1rem",
+              "$description": "[figma-only]"
+            },
+            "lg": {
+              "$type": "fontSizes",
+              "$value": "1.25rem",
+              "$description": "[figma-only]"
+            },
+            "xl": {
+              "$type": "fontSizes",
+              "$value": "1.5rem",
+              "$description": "[figma-only]"
+            },
+            "2xl": {
+              "$type": "fontSizes",
+              "$value": "1.75rem",
+              "$description": "[figma-only]"
+            },
+            "3xl": {
+              "$type": "fontSizes",
+              "$value": "2rem",
+              "$description": "[figma-only]"
+            }
+          },
+          "max": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "0.875rem",
+              "$description": "[figma-only]"
+            },
+            "md": {
+              "$type": "fontSizes",
+              "$value": "1rem",
+              "$description": "[figma-only]"
+            },
+            "lg": {
+              "$type": "fontSizes",
+              "$value": "1.25rem",
+              "$description": "[figma-only]"
+            },
+            "xl": {
+              "$type": "fontSizes",
+              "$value": "1.5rem",
+              "$description": "[figma-only]"
+            },
+            "2xl": {
+              "$type": "fontSizes",
+              "$value": "1.75rem",
+              "$description": "[figma-only]"
+            },
+            "3xl": {
+              "$type": "fontSizes",
+              "$value": "2rem",
+              "$description": "[figma-only]"
+            }
+          }
+        }
+      },
+      "size": {
+        "pointer-target": {
+          "$type": "dimension",
+          "$value": "44px"
+        }
+      },
+      "icon": {
+        "inset-block-start": {
+          "min": {
+            "md": {
+              "$type": "dimension",
+              "$value": "0rem",
+              "$description": "[figma-only] [temporary – until nl-icon]"
+            }
+          },
+          "max": {
+            "md": {
+              "$type": "dimension",
+              "$value": "0rem",
+              "$description": "[figma-only] [temporary – until nl-icon]"
+            }
+          }
+        }
+      },
+      "space": {
+        "min": {
+          "2xs": {
+            "$type": "dimension",
+            "$value": "0.125rem"
+          },
+          "xs": {
+            "$type": "dimension",
+            "$value": "0.125rem"
+          },
+          "sm": {
+            "$type": "dimension",
+            "$value": "0.25rem"
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "0.5rem"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "0.75rem"
+          },
+          "xl": {
+            "$type": "dimension",
+            "$value": "1rem"
+          },
+          "2xl": {
+            "$type": "dimension",
+            "$value": "1.5rem"
+          },
+          "3xl": {
+            "$type": "dimension",
+            "$value": "2rem"
+          },
+          "4xl": {
+            "$type": "dimension",
+            "$value": "2.5rem"
+          },
+          "5xl": {
+            "$type": "dimension",
+            "$value": "3rem"
+          }
+        },
+        "max": {
+          "2xs": {
+            "$type": "dimension",
+            "$value": "0.125rem"
+          },
+          "xs": {
+            "$type": "dimension",
+            "$value": "0.125rem"
+          },
+          "sm": {
+            "$type": "dimension",
+            "$value": "0.25rem"
+          },
+          "md": {
+            "$type": "dimension",
+            "$value": "0.5rem"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "0.75rem"
+          },
+          "xl": {
+            "$type": "dimension",
+            "$value": "1rem"
+          },
+          "2xl": {
+            "$type": "dimension",
+            "$value": "1.5rem"
+          },
+          "3xl": {
+            "$type": "dimension",
+            "$value": "2rem"
+          },
+          "4xl": {
+            "$type": "dimension",
+            "$value": "2.5rem"
+          },
+          "5xl": {
+            "$type": "dimension",
+            "$value": "3rem"
+          }
+        }
+      }
+    }
+  },
+  "common/responsive/max": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "sm": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.sm}"
+          },
+          "md": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.md}"
+          },
+          "lg": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.lg}"
+          },
+          "xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.xl}"
+          },
+          "2xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.2xl}"
+          },
+          "3xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.3xl}"
+          }
+        }
+      },
+      "icon": {
+        "inset-block-start": {
+          "md": {
+            "$type": "dimension",
+            "$value": "{rhc.icon.inset-block-start.max.md}",
+            "$description": "[figma-only] [temporary – until nl-icon]"
+          }
+        }
+      },
+      "space": {
+        "none": {
+          "$type": "dimension",
+          "$value": "0rem"
+        },
+        "2xs": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.2xs}"
+        },
+        "xs": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.xs}"
+        },
+        "sm": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.sm}"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.md}"
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.lg}"
+        },
+        "xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.xl}"
+        },
+        "2xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.2xl}"
+        },
+        "3xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.3xl}"
+        },
+        "4xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.4xl}"
+        },
+        "5xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.5xl}"
+        }
+      }
+    }
+  },
+  "common/responsive/min": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "sm": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.sm}"
+          },
+          "md": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.md}"
+          },
+          "lg": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.lg}"
+          },
+          "xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.xl}"
+          },
+          "2xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.2xl}"
+          },
+          "3xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.3xl}"
+          }
+        }
+      },
+      "icon": {
+        "inset-block-start": {
+          "md": {
+            "$type": "dimension",
+            "$value": "{rhc.icon.inset-block-start.min.md}",
+            "$description": "[figma-only] [temporary – until nl-icon]"
+          }
+        }
+      },
+      "space": {
+        "none": {
+          "$type": "dimension",
+          "$value": "0rem"
+        },
+        "2xs": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.2xs}"
+        },
+        "xs": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.xs}"
+        },
+        "sm": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.sm}"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.md}"
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.lg}"
+        },
+        "xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.xl}"
+        },
+        "2xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.2xl}"
+        },
+        "3xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.3xl}"
+        },
+        "4xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.4xl}"
+        },
+        "5xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.5xl}"
+        }
+      }
+    }
+  },
   "common/border": {
     "rhc": {
       "border-radius": {
@@ -1743,6 +2098,100 @@
           "active": {
             "$type": "color",
             "$value": "{rhc.color.lintblauw.700}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary/core": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.core.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.core.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.core.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.core.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.core.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#162f50",
+            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#162945",
+            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary/groen": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#2C5D12"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#275012"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
           }
         }
       }
@@ -9877,8 +10326,12 @@
       "brand/text",
       "common/type-scale/default",
       "common/type-scale/information-dence",
+      "common/responsive/max",
+      "common/responsive/min",
       "common/border",
       "common/color",
+      "common/primary/core",
+      "common/primary/groen",
       "common/focus",
       "common/rounded-corner",
       "common/size",
