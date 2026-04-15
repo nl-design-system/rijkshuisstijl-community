@@ -242,7 +242,7 @@ export default function Page() {
                 }
               />
               <CardAsLink
-                href="https://www.nldesignsystem.nl/handboek/designer/overzicht"
+                href="https://www.nldesignsystem.nl/handboek/designer/introductie/"
                 linkLabel="Lees hoe je mee ontwerpt aan het NL Design System"
                 target="_blank"
                 description={
@@ -258,7 +258,7 @@ export default function Page() {
                 }
               />
               <CardAsLink
-                href="https://www.nldesignsystem.nl/handboek/developer/overzicht"
+                href="https://www.nldesignsystem.nl/handboek/developer/introductie/"
                 linkLabel="Lees hoe je mee ontwikkelt aan het de Rijkshuisstijl Community"
                 target="_blank"
                 description={
