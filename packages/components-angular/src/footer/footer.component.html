@@ -1,30 +1,36 @@
-@if (preFooter) {
-  <div class="rhc-page-prefooter">
-    @if (preFooterMessage) {
-      <span class="rhc-page-prefooter__content">{{ preFooterMessage }}</span>
-    }
-  </div>
-}
+<footer class="rhc-page-footer-container">
+  @if (preFooter) {
+    <div class="rhc-page-prefooter">
+      @if (preFooterMessage) {
+        <span class="rhc-page-prefooter__content">{{ preFooterMessage }}</span>
+      }
+    </div>
+  }
 
-<footer [class]="`utrecht-page-footer rhc-page-footer ${backgroundClass}`">
-  <div class="rhc-page-footer__content rhc-page-footer__wrapper">
-    @if (heading) {
-      <h2 aria-hidden="true" hidden>{{ heading }}</h2>
-    }
-    @if (tagline) {
-      <div class="rhc-page-footer__tagline">
-        <rhc-heading [level]="2" [appearanceLevel]="appearanceLevel" role="presentation">{{ tagline }}</rhc-heading>
+  <div [class]="`utrecht-page-footer rhc-page-footer ${backgroundClass}`">
+    <div class="utrecht-page-footer__content">
+      <div class="rhc-page-footer-layout">
+        @if (heading) {
+          <h2 aria-hidden="true" hidden>{{ heading }}</h2>
+        }
+        @if (tagline) {
+          <div class="rhc-page-footer__tagline">
+            <rhc-heading [level]="2" [appearanceLevel]="appearanceLevel" role="presentation">{{ tagline }}</rhc-heading>
+          </div>
+        }
+        <rhc-column-layout>
+          <ng-content select="[columns]"></ng-content>
+        </rhc-column-layout>
       </div>
-    }
-    <rhc-column-layout>
-      <ng-content select="[columns]"></ng-content>
-    </rhc-column-layout>
+    </div>
   </div>
 
   @if (subFooter) {
-    <div [class]="`rhc-page-subfooter ${backgroundClass}`">
-      <div class="rhc-page-subfooter__content rhc-page-footer__wrapper">
-        <ng-content select="[subFooter]"></ng-content>
+    <div [class]="`utrecht-page-footer rhc-page-footer rhc-page-footer--subfooter ${backgroundClass}`">
+      <div class="utrecht-page-footer__content">
+        <div class="rhc-page-subfooter-layout">
+          <ng-content select="[subFooter]"></ng-content>
+        </div>
       </div>
     </div>
   }

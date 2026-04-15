@@ -514,8 +514,8 @@ importers:
         specifier: 1.6.1
         version: 1.6.1
       '@utrecht/body-css':
-        specifier: 2.0.1
-        version: 2.0.1
+        specifier: 4.0.0
+        version: 4.0.0
       '@utrecht/breadcrumb-nav-css':
         specifier: 1.5.1
         version: 1.5.1
@@ -595,20 +595,20 @@ importers:
         specifier: 2.0.0
         version: 2.0.0
       '@utrecht/page-body-css':
-        specifier: 0.1.1
-        version: 0.1.1
+        specifier: 2.0.0
+        version: 2.0.0
       '@utrecht/page-content-css':
-        specifier: 1.4.1
-        version: 1.4.1
+        specifier: 3.0.0
+        version: 3.0.0
       '@utrecht/page-footer-css':
-        specifier: 2.1.1
-        version: 2.1.1
+        specifier: 4.0.0
+        version: 4.0.0
       '@utrecht/page-header-css':
-        specifier: 1.5.1
-        version: 1.5.1
+        specifier: 3.0.0
+        version: 3.0.0
       '@utrecht/page-layout-css':
-        specifier: 1.1.1
-        version: 1.1.1
+        specifier: 4.0.0
+        version: 4.0.0
       '@utrecht/paragraph-css':
         specifier: 2.3.1
         version: 2.3.1
@@ -619,8 +619,8 @@ importers:
         specifier: 1.6.1
         version: 1.6.1
       '@utrecht/root-css':
-        specifier: 3.1.1
-        version: 3.1.1
+        specifier: 4.1.0
+        version: 4.1.0
       '@utrecht/select-css':
         specifier: 1.8.1
         version: 1.8.1
@@ -1746,23 +1746,26 @@ importers:
         specifier: workspace:*
         version: link:../separator-react
       '@utrecht/body-react':
-        specifier: 0.0.9
-        version: 0.0.9(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: 0.0.11
+        version: 0.0.11(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@utrecht/component-library-react':
         specifier: 13.0.4
         version: 13.0.4(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@utrecht/page-body-react':
-        specifier: 1.0.10
-        version: 1.0.10(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@utrecht/page-header-react':
-        specifier: 1.0.9
-        version: 1.0.9(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@utrecht/page-layout-react':
-        specifier: 1.0.9
-        version: 1.0.9(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@utrecht/root-react':
         specifier: 1.0.11
         version: 1.0.11(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@utrecht/page-footer-react':
+        specifier: 1.0.11
+        version: 1.0.11(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@utrecht/page-header-react':
+        specifier: 1.0.10
+        version: 1.0.10(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@utrecht/page-layout-react':
+        specifier: 1.0.11
+        version: 1.0.11(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@utrecht/root-react':
+        specifier: 1.0.15
+        version: 1.0.15(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
     devDependencies:
       '@babel/core':
         specifier: 7.29.0
@@ -7241,6 +7244,16 @@ packages:
   '@utrecht/body-css@3.0.0':
     resolution: {integrity: sha512-OvKBtolyCBmIGwzLjCi5+Ut0rqzUsyEU07PYtw9lTTOJ22XsluChZ8w7FAICVVHBXC3sWJ1DdRo2hUngGZFyFQ==}
 
+  '@utrecht/body-css@4.0.0':
+    resolution: {integrity: sha512-mxI/wcihyEkVVDwp1kirWxcOmUlGH2pwJu3TYWZccnbgzjcQdA0r8SirGZ2IF9LH9cpQmJn4mPOXWFJQsxOskA==}
+
+  '@utrecht/body-react@0.0.11':
+    resolution: {integrity: sha512-dvFtUzBKfh5cKFpskwkvy02v5XeoNjUPQrB47O1LFPqJ5Nie1gMNJ8H8VdbSLAet3oFcbVNUnYwSsKXCSGP6NA==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+
   '@utrecht/body-react@0.0.9':
     resolution: {integrity: sha512-WgXbP1plrnYyxHzGa5PLCvGJtXPeqowhexplpgUMJruFDlMkTLc5e4F1AL8PWpppTFiQcHz9jwbeO5JMwFp7QQ==}
     peerDependencies:
@@ -7676,11 +7689,11 @@ packages:
   '@utrecht/ordered-list-css@3.0.1':
     resolution: {integrity: sha512-FTLzofVJlkl4ypJz2QoWTwepXN+yX3Y3exL+69SpiwjAXSkRYkJ1agd0W6BZVH+JQ60u8+uApOKQpgx2Bh3ImQ==}
 
-  '@utrecht/page-body-css@0.1.1':
-    resolution: {integrity: sha512-uJFUi2IFjRCV/O4NmhRUBGk4cM3+p+D+eumkCwn6mLv+20/vQAhZqfb0Fj/TTx7R/kSY0Oa8izualDaPB/iZzQ==}
-
   '@utrecht/page-body-css@1.0.1':
     resolution: {integrity: sha512-0keuwgUACGo52SA7Nvd31STGirZ/A1dkR/at5z8SpEXYdfMyRpPK1odH5MgB19Ig1Nie1Ke5oi+h++HcVg5Ksg==}
+
+  '@utrecht/page-body-css@2.0.0':
+    resolution: {integrity: sha512-+LOnBqFaR+8cYeS47gBI2NioAP+Czv0bCh3pUWJ7pPKp2govMLIFGfy59NLC8MKngl/7QiW3sjgGc2acsxNtBQ==}
 
   '@utrecht/page-body-react@1.0.10':
     resolution: {integrity: sha512-HBWjRhNxchvykObDCbc7Vzouuig5gV3A7sz8LNxLrwxv0YA5HjX5HqsCCiP94ggCzGVWISNzFrMYcwEu1ut7lw==}
@@ -7689,39 +7702,60 @@ packages:
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
 
-  '@utrecht/page-content-css@1.4.1':
-    resolution: {integrity: sha512-v6jPlYUV1kcMCwmQdvbCppbkeUSWm6DkgwB1pchB03niQDCUR1LS46CBCgAR1uNUE5TOb1SH7w4vmn5/pcgWFw==}
-
-  '@utrecht/page-content-css@2.0.1':
-    resolution: {integrity: sha512-Hgx63BEUbaGJyBQXpa97EN8ng0M9LTX3ddu9IQM+ar/rA2OGIM5oiGbwXUYhLwQp/HnhkFm/gpPGGTtQjpXC6w==}
-
-  '@utrecht/page-css@2.0.1':
-    resolution: {integrity: sha512-5c0wLiFvnfpTn8VfjoRHmND0DSw/CYD8ydkgdZNCFkSaXOqVrhcAN3I6jTMSR+Eg9mOu1T9bswRcxIKa8NUJUA==}
-
-  '@utrecht/page-footer-css@2.1.1':
-    resolution: {integrity: sha512-ib4BqRk5avAdtxAPgMJaljnp15wfCJRv7dQABVQvs8jcB6Y/BGVgNq1srpjWjFmkcdtIELtwPpnB2Y7jcUUqOQ==}
-
-  '@utrecht/page-footer-css@3.0.1':
-    resolution: {integrity: sha512-PEpyT+yIY7PCvzrjWFMMMmf4kIf5zg0tgnYWY/8f6IoJsVS7WZPU3V5bEzPRWaXXJRXk9b7JD6D2FR55GDn3Kw==}
-
-  '@utrecht/page-header-css@1.5.1':
-    resolution: {integrity: sha512-5hQw6VCXf0tq0LdKhI2BnmMzyTIMvxVS48yguK2trgfzigHAhPCSpmgEeWGiZF6GM9eCNbPThmfEPTgXvyVgkA==}
-
-  '@utrecht/page-header-css@2.0.1':
-    resolution: {integrity: sha512-HxONNJxBNwqEY/qDkx3U0wAVvirc/1l04i9L4dPscjf+Le6UWkJb4pfxXVO8b8yIT+wyj2YY0k8aeBUEIJPKjA==}
-
-  '@utrecht/page-header-react@1.0.9':
-    resolution: {integrity: sha512-sGc5UfjScNf+qDHnWSirpo32ceC5wfZgTnKaxi73KJ4dT9AIpMCNEdVWd3Pfrh2OgXrnzQmgKs0TwX1rED/FAw==}
+  '@utrecht/page-body-react@1.0.11':
+    resolution: {integrity: sha512-wf4zTJ+yu7r/bKTkBlTU1WzO9/Aou5+3Qaf6hET00g7llqhBlJIfarJpTNpRKYx2vC9adimWc46Px/6wxGjfOw==}
     peerDependencies:
       '@babel/runtime': '*'
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
 
-  '@utrecht/page-layout-css@1.1.1':
-    resolution: {integrity: sha512-pFiRgDmB0F4s23JIJf0akynHVfBt7l4rv9t9gvpTeOxSdx3KTNZsxSNT5PyQwIf5mlEHWidp6yxn3fvQXlMKmw==}
+  '@utrecht/page-content-css@2.0.1':
+    resolution: {integrity: sha512-Hgx63BEUbaGJyBQXpa97EN8ng0M9LTX3ddu9IQM+ar/rA2OGIM5oiGbwXUYhLwQp/HnhkFm/gpPGGTtQjpXC6w==}
+
+  '@utrecht/page-content-css@3.0.0':
+    resolution: {integrity: sha512-rGLQI1XQ8yXMKDg/IkVuLrXYcaLK8qDH5/IkkjCqfAQkDoU9xDyt0iIYjr0c/44qNLqfQ2G/1LODQkY9wxIDyA==}
+
+  '@utrecht/page-css@2.0.1':
+    resolution: {integrity: sha512-5c0wLiFvnfpTn8VfjoRHmND0DSw/CYD8ydkgdZNCFkSaXOqVrhcAN3I6jTMSR+Eg9mOu1T9bswRcxIKa8NUJUA==}
+
+  '@utrecht/page-footer-css@3.0.1':
+    resolution: {integrity: sha512-PEpyT+yIY7PCvzrjWFMMMmf4kIf5zg0tgnYWY/8f6IoJsVS7WZPU3V5bEzPRWaXXJRXk9b7JD6D2FR55GDn3Kw==}
+
+  '@utrecht/page-footer-css@4.0.0':
+    resolution: {integrity: sha512-242M01de3+WLuotK4kJqLaB03aNnD5xvVKpD3Fk8ZclX4+fB9Bd9FOoJrZIBhloFZOOUERnjBdsU32l6a4fqaQ==}
+
+  '@utrecht/page-footer-react@1.0.11':
+    resolution: {integrity: sha512-vgDDDxJgRKBvNq2iiNkELMlVMKnFRMTifGOA0amfqMDXTYuaCr2VQnkL0kuV+rcJmtoRXAynASQfURqRGKohyA==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+
+  '@utrecht/page-header-css@2.0.1':
+    resolution: {integrity: sha512-HxONNJxBNwqEY/qDkx3U0wAVvirc/1l04i9L4dPscjf+Le6UWkJb4pfxXVO8b8yIT+wyj2YY0k8aeBUEIJPKjA==}
+
+  '@utrecht/page-header-css@3.0.0':
+    resolution: {integrity: sha512-V6DblLWEGaaqupcQckYFK/tCpIQOCPRUpGfY00x8PAvpSPsHLmxHVBisM66jjfs4S2jjvsQIMz7oy0F5J91DrA==}
+
+  '@utrecht/page-header-react@1.0.10':
+    resolution: {integrity: sha512-BubnU4eG/keZQXu09GrRDitFu72Vr7crPawK2qLCurHS68k59TYrcgFuKUKrQBJ0Oi8gdSkOcvf2wfX1KLHB3w==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
 
   '@utrecht/page-layout-css@2.0.1':
     resolution: {integrity: sha512-FXLvM6A4Lex+Miz9cuDjFuoC+HeFBu78oMvFU88c4D01Jnso2gKaZHRy3XT8UqKJbE8z0rNzRTwoztOlBVqFIw==}
+
+  '@utrecht/page-layout-css@4.0.0':
+    resolution: {integrity: sha512-mCBhUGCUPegQko562HTHQsIb227Xp6+LwPXIRinvFOItmvHbOBG5Ec3reA7ZZSFYi+LRVXsZqoWE/SXcHMJTig==}
+
+  '@utrecht/page-layout-react@1.0.11':
+    resolution: {integrity: sha512-riHWUnBdGc8nX/0Iwf0ADcDWB8ZZehv24z8WoYokL2lwdwHU2U0nTrRyLhM1GSsZC6H53S6STuhSS2uunw+1hA==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
 
   '@utrecht/page-layout-react@1.0.9':
     resolution: {integrity: sha512-zzGb5ftmQdFx51TH8+qGgRlIjDr7kek1d7nVCyTdTF1YpLkvJ7aR2/ZuCHIvE0I6wIWT74N6CKa7UcgpYBN83g==}
@@ -7767,11 +7801,18 @@ packages:
   '@utrecht/root-css@3.1.0':
     resolution: {integrity: sha512-Xi96mZewr7ttbtaED/BGK/bNoLyIETVM8tXSNSgA22Xb/gxgtzhkjRlW0Q0sNe11fsqUzI1SJwj43lZDHZWBXg==}
 
-  '@utrecht/root-css@3.1.1':
-    resolution: {integrity: sha512-VVEgGAsb3a/Ubg0z08XGPN9o5h3G/pw01VaszFllH7VRRjBreLDrItsUv7xUCNjfdueAPS2zV2hR0NzOyM9FWg==}
+  '@utrecht/root-css@4.1.0':
+    resolution: {integrity: sha512-n2W52d/mSBgscTClpytczKSafdW8SBt1FiO7ysQRVXgDWgUFAzSUZ0M4ZGoTxzq/0oDYB0ol7j0pTUqHh6mQYg==}
 
   '@utrecht/root-react@1.0.11':
     resolution: {integrity: sha512-+DCYlt1/LoROsdFXYeLd48bol8M2Lr9+HBbGDMgokvG8W8pzheZNkHSocGfeYKATpEqEt25h5GKoQREW0qo6iw==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+
+  '@utrecht/root-react@1.0.15':
+    resolution: {integrity: sha512-WtNeiE74m+fghh7m38Pg+3qi1+O5Mgquo6Eh4N5rEnDdJvWRAoJ2DxnEiziRaaOmADydK/o/ETQl03KkcpIhMg==}
     peerDependencies:
       '@babel/runtime': '*'
       react: ^18.0.0 || ^19.0.0
@@ -21563,6 +21604,16 @@ snapshots:
 
   '@utrecht/body-css@3.0.0': {}
 
+  '@utrecht/body-css@4.0.0': {}
+
+  '@utrecht/body-react@0.0.11(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      '@babel/runtime': 7.29.2
+      '@utrecht/body-css': 4.0.0
+      clsx: 2.1.1
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+
   '@utrecht/body-react@0.0.9(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
       '@babel/runtime': 7.29.2
@@ -22489,9 +22540,9 @@ snapshots:
 
   '@utrecht/ordered-list-css@3.0.1': {}
 
-  '@utrecht/page-body-css@0.1.1': {}
-
   '@utrecht/page-body-css@1.0.1': {}
+
+  '@utrecht/page-body-css@2.0.0': {}
 
   '@utrecht/page-body-react@1.0.10(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
@@ -22501,31 +22552,55 @@ snapshots:
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
 
-  '@utrecht/page-content-css@1.4.1': {}
-
-  '@utrecht/page-content-css@2.0.1': {}
-
-  '@utrecht/page-css@2.0.1': {}
-
-  '@utrecht/page-footer-css@2.1.1': {}
-
-  '@utrecht/page-footer-css@3.0.1': {}
-
-  '@utrecht/page-header-css@1.5.1': {}
-
-  '@utrecht/page-header-css@2.0.1': {}
-
-  '@utrecht/page-header-react@1.0.9(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+  '@utrecht/page-body-react@1.0.11(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
       '@babel/runtime': 7.29.2
-      '@utrecht/page-header-css': 2.0.1
+      '@utrecht/page-body-css': 2.0.0
       clsx: 2.1.1
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
 
-  '@utrecht/page-layout-css@1.1.1': {}
+  '@utrecht/page-content-css@2.0.1': {}
+
+  '@utrecht/page-content-css@3.0.0': {}
+
+  '@utrecht/page-css@2.0.1': {}
+
+  '@utrecht/page-footer-css@3.0.1': {}
+
+  '@utrecht/page-footer-css@4.0.0': {}
+
+  '@utrecht/page-footer-react@1.0.11(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      '@babel/runtime': 7.29.2
+      '@utrecht/page-footer-css': 4.0.0
+      clsx: 2.1.1
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+
+  '@utrecht/page-header-css@2.0.1': {}
+
+  '@utrecht/page-header-css@3.0.0': {}
+
+  '@utrecht/page-header-react@1.0.10(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      '@babel/runtime': 7.29.2
+      '@utrecht/page-header-css': 3.0.0
+      clsx: 2.1.1
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   '@utrecht/page-layout-css@2.0.1': {}
+
+  '@utrecht/page-layout-css@4.0.0': {}
+
+  '@utrecht/page-layout-react@1.0.11(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      '@babel/runtime': 7.29.2
+      '@utrecht/page-layout-css': 4.0.0
+      clsx: 2.1.1
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   '@utrecht/page-layout-react@1.0.9(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
@@ -22571,12 +22646,20 @@ snapshots:
 
   '@utrecht/root-css@3.1.0': {}
 
-  '@utrecht/root-css@3.1.1': {}
+  '@utrecht/root-css@4.1.0': {}
 
   '@utrecht/root-react@1.0.11(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
       '@babel/runtime': 7.29.2
       '@utrecht/root-css': 3.1.0
+      clsx: 2.1.1
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+
+  '@utrecht/root-react@1.0.15(@babel/runtime@7.29.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      '@babel/runtime': 7.29.2
+      '@utrecht/root-css': 4.1.0
       clsx: 2.1.1
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)

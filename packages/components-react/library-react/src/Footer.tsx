@@ -4,13 +4,13 @@
  */
 
 import { Icon } from '@rijkshuisstijl-community/icon-react';
-import { PageFooterProps, PageFooter as UtrechtPageFooter } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { MouseEvent, PropsWithChildren, ReactNode, Ref } from 'react';
+import { HTMLAttributes, MouseEvent, PropsWithChildren, ReactNode, Ref } from 'react';
 import { ColumnLayout } from './ColumnLayout';
 import { Heading, HeadingLevel } from './Heading';
+import { Link } from './Link';
 
-interface FooterProps extends PageFooterProps {
+interface FooterProps extends HTMLAttributes<HTMLDivElement> {
   heading?: ReactNode;
   headingId?: string;
   appearanceLevel?: HeadingLevel;
@@ -56,67 +56,73 @@ export const Footer = ({
   tagline,
   ...restProps
 }: PropsWithChildren<FooterProps>) => (
-  <>
+  <footer aria-labelledby={heading ? headingId : undefined} className="rhc-page-footer-container">
     {preFooter && (
       <div className="rhc-page-prefooter">
         {preFooterMessage && <span className="rhc-page-prefooter__content">{preFooterMessage}</span>}
       </div>
     )}
 
-    <UtrechtPageFooter
-      aria-labelledby={heading ? headingId : undefined}
+    <div
       {...restProps}
       ref={ref}
       className={clsx(
+        'utrecht-page-footer',
         'rhc-page-footer',
         background ? `rhc-page-footer--${background}` : 'rhc-page-footer--primary-filled',
         className,
       )}
     >
-      {heading ? (
-        <Heading hidden aria-hidden="true" id={headingId} level={2}>
-          {heading}
-        </Heading>
-      ) : null}
-      <div className="rhc-page-footer__content rhc-page-footer__wrapper">
-        {tagline && (
-          <div className="rhc-page-footer__tagline" key={'heading'}>
-            <Heading appearanceLevel={appearanceLevel} level={2} role="presentation">
-              {tagline}
-            </Heading>
-          </div>
-        )}
-        <ColumnLayout>
-          {columns?.map(({ heading: columnHeading, children }: ColumnProps, index: number) => (
-            <div className="rhc-page-footer__section" key={index}>
-              <Heading appearanceLevel={appearanceLevel} level={heading ? 3 : 2}>
-                {columnHeading}
+      <div className="utrecht-page-footer__content">
+        {heading ? (
+          <Heading hidden aria-hidden="true" id={headingId} level={2}>
+            {heading}
+          </Heading>
+        ) : null}
+        <div className="rhc-page-footer-layout">
+          {tagline && (
+            <div className="rhc-page-footer__tagline" key={'heading'}>
+              <Heading appearanceLevel={appearanceLevel} level={2} role="presentation">
+                {tagline}
               </Heading>
-              {children}
             </div>
-          ))}
-          {children}
-        </ColumnLayout>
-      </div>
-      {(backtotop || subFooter) && (
-        <div
-          className={clsx(
-            'rhc-page-subfooter',
-            background ? `rhc-page-footer--${background}` : 'rhc-page-footer--primary-filled',
           )}
-        >
-          <div className="rhc-page-subfooter__content rhc-page-footer__wrapper">
+          <ColumnLayout>
+            {columns?.map(({ heading: columnHeading, children }: ColumnProps, index: number) => (
+              <div className="rhc-page-footer__section" key={index}>
+                <Heading appearanceLevel={appearanceLevel} level={heading ? 3 : 2}>
+                  {columnHeading}
+                </Heading>
+                {children}
+              </div>
+            ))}
+            {children}
+          </ColumnLayout>
+        </div>
+      </div>
+    </div>
+    {(backtotop || subFooter) && (
+      <div
+        className={clsx(
+          'utrecht-page-footer',
+          'rhc-page-footer',
+          'rhc-page-footer--subfooter',
+          background ? `rhc-page-footer--${background}` : 'rhc-page-footer--primary-filled',
+        )}
+      >
+        <div className="utrecht-page-footer__content">
+          <div className="rhc-page-subfooter-layout">
             {subFooter}
             {backtotop && (
-              <a className="rhc-page-subfooter__backtotop" href="#main" onClick={scrollBackToTop}>
+              <Link href="#main" onClick={scrollBackToTop}>
                 Terug naar boven <Icon icon="pijl-omhoog" />
-              </a>
+              </Link>
             )}
           </div>
         </div>
-      )}
-    </UtrechtPageFooter>
-  </>
+      </div>
+    )}
+  </footer>
 );
 
 Footer.displayName = 'Footer';

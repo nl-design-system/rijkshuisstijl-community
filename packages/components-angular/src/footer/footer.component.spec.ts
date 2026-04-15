@@ -76,12 +76,12 @@ describe('FooterComponent in host context', () => {
   });
 
   it('should display subFooter based on input', () => {
-    const subFooterLink = fixture.nativeElement.querySelector('.rhc-page-subfooter');
+    const subFooterLink = fixture.nativeElement.querySelector('.rhc-page-subfooter-layout');
     expect(subFooterLink).toBeTruthy();
 
     component.subFooter = false;
     fixture.detectChanges();
-    const subFooterLinkAfterChange = fixture.nativeElement.querySelector('.rhc-page-subfooter');
+    const subFooterLinkAfterChange = fixture.nativeElement.querySelector('.rhc-page-subfooter-layout');
     expect(subFooterLinkAfterChange).toBeFalsy();
   });
 });
