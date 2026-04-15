@@ -4,11 +4,12 @@
  */
 
 import { Icon } from '@rijkshuisstijl-community/icon-react';
+import { Link } from '@rijkshuisstijl-community/link-react';
 import clsx from 'clsx';
 import { HTMLAttributes, MouseEvent, PropsWithChildren, ReactNode, Ref } from 'react';
 import { ColumnLayout } from './ColumnLayout';
 import { Heading, HeadingLevel } from './Heading';
-import { Link } from './Link';
+
 
 interface FooterProps extends HTMLAttributes<HTMLDivElement> {
   heading?: ReactNode;
