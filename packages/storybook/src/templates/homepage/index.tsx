@@ -118,7 +118,7 @@ export default function Page() {
               />
               <CardAsLink
                 appearance="horizontal"
-                href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/README.md"
+                href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/library-react/README.md"
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
