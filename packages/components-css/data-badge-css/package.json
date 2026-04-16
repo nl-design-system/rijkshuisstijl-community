@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0",
+  "author": "Community for Rijkshuisstijl-Community Design System",
+  "description": "Data Badge component",
+  "license": "EUPL-1.2",
+  "name": "@rijkshuisstijl-community/data-badge-css",
+  "files": [
+    "dist/",
+    "docs/",
+    "src/",
+    "*.md"
+  ],
+  "main": "dist/index.css",
+  "scripts": {
+    "build": "build-css-package",
+    "clean": "rimraf dist",
+    "watch": "build-css-package && chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
+  },
+  "devDependencies": {
+    "@rijkshuisstijl-community/build-utils-css": "workspace:*",
+    "chokidar-cli": "3.0.0"
+  },
+  "keywords": [
+    "rijkshuisstijl-community-design-system"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
+    "directory": "packages/components-css/data-badge-css"
+  }
+}

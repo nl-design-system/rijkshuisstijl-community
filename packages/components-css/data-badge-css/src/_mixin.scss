@@ -1,0 +1,12 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+@mixin rhc-data-badge {
+  block-size: var(--rhc-data-badge-size, var(--rhc-size-quarter-lint));
+  border-radius: var(--rhc-data-badge-border-radius, var(--rhc-border-radius-circle));
+  color: var(--rhc-data-badge-color, var(--rhc-color-rood-500));
+  display: inline-flex;
+  inline-size: var(--rhc-data-badge-inline-size, var(--rhc-data-badge-size, var(--rhc-size-quarter-lint)));
+}
