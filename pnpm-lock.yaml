@@ -412,6 +412,15 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
 
+  packages/components-css/card-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
   packages/components-css/dot-badge-css:
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
@@ -468,6 +477,9 @@ importers:
       '@rijkshuisstijl-community/button-css':
         specifier: workspace:*
         version: link:../button-css
+      '@rijkshuisstijl-community/card-css':
+        specifier: workspace:*
+        version: link:../card-css
       '@rijkshuisstijl-community/dot-badge-css':
         specifier: workspace:*
         version: link:../dot-badge-css
