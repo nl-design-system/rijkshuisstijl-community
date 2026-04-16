@@ -10,7 +10,7 @@ export {
   type AccordionSectionProps,
   type AccordionSectionProviderProps,
 } from '@rijkshuisstijl-community/accordion-react';
-export { ActionGroup, type ActionGroupProps } from './ActionGroup';
+export { ActionGroup, type ActionGroupProps } from '@rijkshuisstijl-community/action-group-react';
 export { Alert, type AlertProps } from '@rijkshuisstijl-community/alert-react';
 export { Article, type ArticleProps } from '@rijkshuisstijl-community/article-react';
 export { Blockquote, type BlockquoteProps } from '@rijkshuisstijl-community/blockquote-react';
