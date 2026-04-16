@@ -541,8 +541,8 @@ importers:
         specifier: 9.0.4
         version: 9.0.4
       '@utrecht/custom-checkbox-css':
-        specifier: 1.3.2
-        version: 1.3.2
+        specifier: 2.0.1
+        version: 2.0.1
       '@utrecht/data-badge-css':
         specifier: 1.0.1
         version: 1.0.1
@@ -7402,9 +7402,6 @@ packages:
   '@utrecht/currency-data-css@2.0.1':
     resolution: {integrity: sha512-RjbY93rP5+LsNAlcA6krrzt/lwjtI+gMALqEsw9srHXJQvF3DcJUxlR/fUfS7H6EdMy26OxRJGJ+XQ4wL6P4hA==}
 
-  '@utrecht/custom-checkbox-css@1.3.2':
-    resolution: {integrity: sha512-DvrmyGnC7y0xTdCqGu4dpP1bdraPNvWYC8uzS8CAzH/w8mBVti4rctP5mTXa7i5nFQN3BWLu8WF8FRpnRTMdJQ==}
-
   '@utrecht/custom-checkbox-css@2.0.1':
     resolution: {integrity: sha512-Gt7D6cnCfotYK0P/VeTcGksIhTrCYo3PEx1LxPnj9X99uMNg57O13ZRRaR/7wqPHsdiUKD7B82pQ1FdjAuY7lA==}
 
@@ -10343,6 +10340,9 @@ packages:
   flatted@3.4.2:
     resolution: {integrity: sha512-PjDse7RzhcPkIJwy5t7KPWQSZ9cAbzQXcafsetQoD7sOJRQlGikNbx7yZp2OotDnJyrDcbyRq3Ttb18iYOqkxA==}
 
+  flatted@3.4.2:
+    resolution: {integrity: sha512-PjDse7RzhcPkIJwy5t7KPWQSZ9cAbzQXcafsetQoD7sOJRQlGikNbx7yZp2OotDnJyrDcbyRq3Ttb18iYOqkxA==}
+
   flow-parser@0.252.0:
     resolution: {integrity: sha512-z8hKPUjZ33VLn4HVntifqmEhmolUMopysnMNzazoDqo1GLUkBsreLNsxETlKJMPotUWStQnen6SGvUNe1j4Hlg==}
     engines: {node: '>=0.4.0'}
@@ -12126,6 +12126,9 @@ packages:
 
   lodash@4.17.23:
     resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
+
+  lodash@4.18.1:
+    resolution: {integrity: sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q==}
 
   log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
@@ -22096,8 +22099,6 @@ snapshots:
 
   '@utrecht/currency-data-css@2.0.1': {}
 
-  '@utrecht/custom-checkbox-css@1.3.2': {}
-
   '@utrecht/custom-checkbox-css@2.0.1': {}
 
   '@utrecht/data-badge-css@1.0.1': {}
@@ -25740,6 +25741,9 @@ snapshots:
 
   flatted@3.4.2: {}
 
+  flatted@3.4.2:
+    optional: true
+
   flow-parser@0.252.0: {}
 
   follow-redirects@1.15.11(debug@4.4.3):
@@ -27775,7 +27779,7 @@ snapshots:
       graceful-fs: 4.2.11
       http-proxy: 1.18.1(debug@4.4.3)
       isbinaryfile: 4.0.10
-      lodash: 4.17.23
+      lodash: 4.18.1
       log4js: 6.9.1
       mime: 2.6.0
       minimatch: 3.1.5
@@ -28044,6 +28048,9 @@ snapshots:
   lodash@4.17.21: {}
 
   lodash@4.17.23: {}
+
+  lodash@4.18.1:
+    optional: true
 
   log-symbols@4.1.0:
     dependencies:
