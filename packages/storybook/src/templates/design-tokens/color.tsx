@@ -158,10 +158,13 @@ export default function Page() {
                         </TableRow>
                       </TableHeader>
                       <TableBody>
-                        {Object.entries(tokens).map(([name, value]) => (
+                        {Object.entries(tokens).map(([name]) => (
                           <TableRow key={name}>
                             <TableCell className="utrecht-table__cell--rhc-fill utrecht-table__cell--rhc-color-sample">
-                              <ColorSample className="rhc-color-sample--table-cell" color={String(value) || ''} />
+                              <ColorSample
+                                className="rhc-color-sample--table-cell"
+                                color={`var(--${[...path, name].join('-')})`}
+                              />
                             </TableCell>
                             <TableCell className="utrecht-table__cell--rhc-middle">
                               <CopyDesignTokenButton path={[...path, name]} />

@@ -33,129 +33,421 @@
     --rhc-color-700-lightness: 0.75;
     --rhc-color-800-lightness: 0.8;
     --rhc-color-900-lightness: 0.9;
-    --rhc-color-cool-grey-50: oklch(var(--rhc-color-50-lightness) 0.003 var(--rhc-color-cool-grey-hue, 247.858));
-    --rhc-color-cool-grey-100: oklch(var(--rhc-color-100-lightness) 0.007 var(--rhc-color-cool-grey-hue, 247.896));
-    --rhc-color-cool-grey-200: oklch(var(--rhc-color-200-lightness) 0.013 var(--rhc-color-cool-grey-hue, 255.508));
-    --rhc-color-cool-grey-300: oklch(var(--rhc-color-300-lightness) 0.022 var(--rhc-color-cool-grey-hue, 252.894));
-    --rhc-color-cool-grey-400: oklch(var(--rhc-color-400-lightness) 0.04 var(--rhc-color-cool-grey-hue, 256.788));
-    --rhc-color-cool-grey-500: oklch(var(--rhc-color-500-lightness) 0.027 var(--rhc-color-cool-grey-hue, 264.364));
-    --rhc-color-cool-grey-600: oklch(var(--rhc-color-600-lightness) 0.043 var(--rhc-color-cool-grey-hue, 257.281));
-    --rhc-color-cool-grey-700: oklch(var(--rhc-color-700-lightness) 0.044 var(--rhc-color-cool-grey-hue, 257.287));
-    --rhc-color-cool-grey-800: oklch(var(--rhc-color-800-lightness) 0.041 var(--rhc-color-cool-grey-hue, 260.031));
-    --rhc-color-cool-grey-900: oklch(var(--rhc-color-900-lightness) 0.042 var(--rhc-color-cool-grey-hue, 265.755));
-    --rhc-color-lichtblauw-50: oklch(var(--rhc-color-50-lightness) 0.01044 var(--rhc-color-lichtblauw-hue, 231.63));
-    --rhc-color-lichtblauw-100: oklch(var(--rhc-color-100-lightness) 0.02104 var(--rhc-color-lichtblauw-hue, 231.42));
-    --rhc-color-lichtblauw-200: oklch(var(--rhc-color-200-lightness) 0.03181 var(--rhc-color-lichtblauw-hue, 231.19));
-    --rhc-color-lichtblauw-300: oklch(var(--rhc-color-300-lightness) 0.04276 var(--rhc-color-lichtblauw-hue, 230.92));
-    --rhc-color-lichtblauw-400: oklch(var(--rhc-color-400-lightness) 0.05394 var(--rhc-color-lichtblauw-hue, 230.62));
-    --rhc-color-lichtblauw-500: oklch(var(--rhc-color-500-lightness) 0.07312 var(--rhc-color-lichtblauw-hue, 230.01));
-    --rhc-color-violet-50: oklch(var(--rhc-color-50-lightness) 0.02788 var(--rhc-color-violet-hue, 355.89));
-    --rhc-color-violet-100: oklch(var(--rhc-color-100-lightness) 0.05612 var(--rhc-color-violet-hue, 355.9));
-    --rhc-color-violet-200: oklch(var(--rhc-color-200-lightness) 0.08481 var(--rhc-color-violet-hue, 355.91));
-    --rhc-color-violet-300: oklch(var(--rhc-color-300-lightness) 0.11406 var(--rhc-color-violet-hue, 355.91));
-    --rhc-color-violet-400: oklch(var(--rhc-color-400-lightness) 0.14403 var(--rhc-color-violet-hue, 355.92));
-    --rhc-color-violet-500: oklch(var(--rhc-color-500-lightness) 0.19619 var(--rhc-color-violet-hue, 355.91));
-    --rhc-color-paars-50: oklch(var(--rhc-color-50-lightness) 0.02007 var(--rhc-color-paars-hue, 315.24));
-    --rhc-color-paars-100: oklch(var(--rhc-color-100-lightness) 0.04013 var(--rhc-color-paars-hue, 314.83));
-    --rhc-color-paars-200: oklch(var(--rhc-color-200-lightness) 0.06012 var(--rhc-color-paars-hue, 314.28));
-    --rhc-color-paars-300: oklch(var(--rhc-color-300-lightness) 0.07991 var(--rhc-color-paars-hue, 313.54));
-    --rhc-color-paars-400: oklch(var(--rhc-color-400-lightness) 0.09917 var(--rhc-color-paars-hue, 312.44));
-    --rhc-color-paars-500: oklch(var(--rhc-color-500-lightness) 0.12693 var(--rhc-color-paars-hue, 308.6));
-    --rhc-color-hemelblauw-50: oklch(var(--rhc-color-50-lightness) 0.01956 var(--rhc-color-hemelblauw-hue, 259.24));
-    --rhc-color-hemelblauw-100: oklch(var(--rhc-color-100-lightness) 0.03966 var(--rhc-color-hemelblauw-hue, 258.06));
-    --rhc-color-hemelblauw-200: oklch(var(--rhc-color-200-lightness) 0.06043 var(--rhc-color-hemelblauw-hue, 256.6));
-    --rhc-color-hemelblauw-300: oklch(var(--rhc-color-300-lightness) 0.08205 var(--rhc-color-hemelblauw-hue, 254.75));
-    --rhc-color-hemelblauw-400: oklch(var(--rhc-color-400-lightness) 0.10487 var(--rhc-color-hemelblauw-hue, 252.37));
-    --rhc-color-hemelblauw-500: oklch(var(--rhc-color-500-lightness) 0.1475 var(--rhc-color-hemelblauw-hue, 246.59));
-    --rhc-color-hemelblauw-700: oklch(var(--rhc-color-700-lightness) 0.086 var(--rhc-color-hemelblauw-hue, 248.3));
-    --rhc-color-donkerblauw-50: oklch(var(--rhc-color-50-lightness) 0.01496 var(--rhc-color-donkerblauw-hue, 249.73));
-    --rhc-color-donkerblauw-100: oklch(var(--rhc-color-100-lightness) 0.03031 var(--rhc-color-donkerblauw-hue, 248.96));
-    --rhc-color-donkerblauw-200: oklch(var(--rhc-color-200-lightness) 0.04617 var(--rhc-color-donkerblauw-hue, 247.98));
-    --rhc-color-donkerblauw-300: oklch(var(--rhc-color-300-lightness) 0.06272 var(--rhc-color-donkerblauw-hue, 246.69));
-    --rhc-color-donkerblauw-400: oklch(var(--rhc-color-400-lightness) 0.08026 var(--rhc-color-donkerblauw-hue, 244.97));
-    --rhc-color-donkerblauw-500: oklch(var(--rhc-color-500-lightness) 0.11351 var(--rhc-color-donkerblauw-hue, 240.39));
-    --rhc-color-donkerblauw-600: oklch(var(--rhc-color-600-lightness) 0.0857 var(--rhc-color-donkerblauw-hue, 238.6));
-    --rhc-color-donkerblauw-700: oklch(var(--rhc-color-700-lightness) 0.0666 var(--rhc-color-donkerblauw-hue, 242.1));
-    --rhc-color-mintgroen-50: oklch(var(--rhc-color-50-lightness) 0.01502 var(--rhc-color-mintgroen-hue, 172.1));
-    --rhc-color-mintgroen-100: oklch(var(--rhc-color-100-lightness) 0.02995 var(--rhc-color-mintgroen-hue, 172.08));
-    --rhc-color-mintgroen-200: oklch(var(--rhc-color-200-lightness) 0.04475 var(--rhc-color-mintgroen-hue, 172.06));
-    --rhc-color-mintgroen-300: oklch(var(--rhc-color-300-lightness) 0.05943 var(--rhc-color-mintgroen-hue, 172.04));
-    --rhc-color-mintgroen-400: oklch(var(--rhc-color-400-lightness) 0.07397 var(--rhc-color-mintgroen-hue, 172.02));
-    --rhc-color-mintgroen-500: oklch(var(--rhc-color-500-lightness) 0.0978 var(--rhc-color-mintgroen-hue, 171.97));
-    --rhc-color-mosgroen-50: oklch(var(--rhc-color-50-lightness) 0.02168 var(--rhc-color-mosgroen-hue, 103.35));
-    --rhc-color-mosgroen-100: oklch(var(--rhc-color-100-lightness) 0.04296 var(--rhc-color-mosgroen-hue, 104.52));
-    --rhc-color-mosgroen-200: oklch(var(--rhc-color-200-lightness) 0.06364 var(--rhc-color-mosgroen-hue, 105.82));
-    --rhc-color-mosgroen-300: oklch(var(--rhc-color-300-lightness) 0.08332 var(--rhc-color-mosgroen-hue, 107.25));
-    --rhc-color-mosgroen-400: oklch(var(--rhc-color-400-lightness) 0.10134 var(--rhc-color-mosgroen-hue, 108.86));
-    --rhc-color-mosgroen-500: oklch(var(--rhc-color-500-lightness) 0.12413 var(--rhc-color-mosgroen-hue, 112.04));
-    --rhc-color-groen-50: oklch(var(--rhc-color-50-lightness) 0.02644 var(--rhc-color-groen-hue, 132.14));
-    --rhc-color-groen-100: oklch(var(--rhc-color-100-lightness) 0.05277 var(--rhc-color-groen-hue, 132.76));
-    --rhc-color-groen-200: oklch(var(--rhc-color-200-lightness) 0.07885 var(--rhc-color-groen-hue, 133.47));
-    --rhc-color-groen-300: oklch(var(--rhc-color-300-lightness) 0.10443 var(--rhc-color-groen-hue, 134.33));
-    --rhc-color-groen-400: oklch(var(--rhc-color-400-lightness) 0.12903 var(--rhc-color-groen-hue, 135.38));
-    --rhc-color-groen-500: oklch(var(--rhc-color-500-lightness) 0.16526 var(--rhc-color-groen-hue, 137.86));
-    --rhc-color-donkergroen-50: oklch(var(--rhc-color-50-lightness) 0.01209 var(--rhc-color-donkergroen-hue, 151.61));
-    --rhc-color-donkergroen-100: oklch(var(--rhc-color-100-lightness) 0.02414 var(--rhc-color-donkergroen-hue, 151.64));
-    --rhc-color-donkergroen-200: oklch(var(--rhc-color-200-lightness) 0.03613 var(--rhc-color-donkergroen-hue, 151.68));
-    --rhc-color-donkergroen-300: oklch(var(--rhc-color-300-lightness) 0.04801 var(--rhc-color-donkergroen-hue, 151.74));
-    --rhc-color-donkergroen-400: oklch(var(--rhc-color-400-lightness) 0.05974 var(--rhc-color-donkergroen-hue, 151.81));
-    --rhc-color-donkergroen-500: oklch(var(--rhc-color-500-lightness) 0.07856 var(--rhc-color-donkergroen-hue, 152.03));
-    --rhc-color-bruin-50: oklch(var(--rhc-color-50-lightness) 0.0212 var(--rhc-color-bruin-hue, 80.933));
-    --rhc-color-bruin-100: oklch(var(--rhc-color-100-lightness) 0.04166 var(--rhc-color-bruin-hue, 81.989));
-    --rhc-color-bruin-200: oklch(var(--rhc-color-200-lightness) 0.06112 var(--rhc-color-bruin-hue, 83.087));
-    --rhc-color-bruin-300: oklch(var(--rhc-color-300-lightness) 0.07915 var(--rhc-color-bruin-hue, 84.192));
-    --rhc-color-bruin-400: oklch(var(--rhc-color-400-lightness) 0.09509 var(--rhc-color-bruin-hue, 85.232));
-    --rhc-color-bruin-500: oklch(var(--rhc-color-500-lightness) 0.11349 var(--rhc-color-bruin-hue, 86.368));
-    --rhc-color-donkerbruin-50: oklch(var(--rhc-color-50-lightness) 0.01249 var(--rhc-color-donkerbruin-hue, 35.338));
-    --rhc-color-donkerbruin-100: oklch(var(--rhc-color-100-lightness) 0.02482 var(--rhc-color-donkerbruin-hue, 35.341));
-    --rhc-color-donkerbruin-200: oklch(var(--rhc-color-200-lightness) 0.03694 var(--rhc-color-donkerbruin-hue, 35.32));
-    --rhc-color-donkerbruin-300: oklch(var(--rhc-color-300-lightness) 0.04877 var(--rhc-color-donkerbruin-hue, 35.25));
-    --rhc-color-donkerbruin-400: oklch(var(--rhc-color-400-lightness) 0.06019 var(--rhc-color-donkerbruin-hue, 35.078));
-    --rhc-color-donkerbruin-500: oklch(var(--rhc-color-500-lightness) 0.0777 var(--rhc-color-donkerbruin-hue, 34.12));
-    --rhc-color-geel-50: oklch(var(--rhc-color-50-lightness) 0.03278 var(--rhc-color-geel-hue, 94.095));
-    --rhc-color-geel-100: oklch(var(--rhc-color-100-lightness) 0.06436 var(--rhc-color-geel-hue, 95.605));
-    --rhc-color-geel-200: oklch(var(--rhc-color-200-lightness) 0.09442 var(--rhc-color-geel-hue, 97.023));
-    --rhc-color-geel-300: oklch(var(--rhc-color-300-lightness) 0.12252 var(--rhc-color-geel-hue, 98.338));
-    --rhc-color-geel-400: oklch(var(--rhc-color-400-lightness) 0.14814 var(--rhc-color-geel-hue, 99.544));
-    --rhc-color-geel-500: oklch(var(--rhc-color-500-lightness) 0.18368 var(--rhc-color-geel-hue, 101.29));
-    --rhc-color-donkergeel-50: oklch(var(--rhc-color-50-lightness) 0.03176 var(--rhc-color-donkergeel-hue, 75.462));
-    --rhc-color-donkergeel-100: oklch(var(--rhc-color-100-lightness) 0.06189 var(--rhc-color-donkergeel-hue, 76.629));
-    --rhc-color-donkergeel-200: oklch(var(--rhc-color-200-lightness) 0.09007 var(--rhc-color-donkergeel-hue, 77.643));
-    --rhc-color-donkergeel-300: oklch(var(--rhc-color-300-lightness) 0.11588 var(--rhc-color-donkergeel-hue, 78.45));
-    --rhc-color-donkergeel-400: oklch(var(--rhc-color-400-lightness) 0.13875 var(--rhc-color-donkergeel-hue, 78.981));
-    --rhc-color-donkergeel-500: oklch(var(--rhc-color-500-lightness) 0.1685 var(--rhc-color-donkergeel-hue, 78.997));
-    --rhc-color-oranje-50: oklch(var(--rhc-color-50-lightness) 0.03181 var(--rhc-color-oranje-hue, 55.608));
-    --rhc-color-oranje-100: oklch(var(--rhc-color-100-lightness) 0.06198 var(--rhc-color-oranje-hue, 56.102));
-    --rhc-color-oranje-200: oklch(var(--rhc-color-200-lightness) 0.0902 var(--rhc-color-oranje-hue, 56.4));
-    --rhc-color-oranje-300: oklch(var(--rhc-color-300-lightness) 0.11609 var(--rhc-color-oranje-hue, 56.375));
-    --rhc-color-oranje-400: oklch(var(--rhc-color-400-lightness) 0.13908 var(--rhc-color-oranje-hue, 55.833));
-    --rhc-color-oranje-500: oklch(var(--rhc-color-500-lightness) 0.16914 var(--rhc-color-oranje-hue, 52.908));
-    --rhc-color-rood-50: oklch(var(--rhc-color-50-lightness) 0.03454 var(--rhc-color-rood-hue, 34.732));
-    --rhc-color-rood-100: oklch(var(--rhc-color-100-lightness) 0.06804 var(--rhc-color-rood-hue, 34.631));
-    --rhc-color-rood-200: oklch(var(--rhc-color-200-lightness) 0.10038 var(--rhc-color-rood-hue, 34.365));
-    --rhc-color-rood-300: oklch(var(--rhc-color-300-lightness) 0.1314 var(--rhc-color-rood-hue, 33.835));
-    --rhc-color-rood-400: oklch(var(--rhc-color-400-lightness) 0.16094 var(--rhc-color-rood-hue, 32.878));
-    --rhc-color-rood-500: oklch(var(--rhc-color-500-lightness) 0.20669 var(--rhc-color-rood-hue, 29.543));
-    --rhc-color-roze-50: oklch(var(--rhc-color-50-lightness) 0.01962 var(--rhc-color-roze-hue, 342.26));
-    --rhc-color-roze-100: oklch(var(--rhc-color-100-lightness) 0.03939 var(--rhc-color-roze-hue, 342.29));
-    --rhc-color-roze-200: oklch(var(--rhc-color-200-lightness) 0.05931 var(--rhc-color-roze-hue, 342.32));
-    --rhc-color-roze-300: oklch(var(--rhc-color-300-lightness) 0.07939 var(--rhc-color-roze-hue, 342.35));
-    --rhc-color-roze-400: oklch(var(--rhc-color-400-lightness) 0.09965 var(--rhc-color-roze-hue, 342.38));
-    --rhc-color-roze-500: oklch(var(--rhc-color-500-lightness) 0.13385 var(--rhc-color-roze-hue, 342.44));
-    --rhc-color-robijnrood-50: oklch(var(--rhc-color-50-lightness) 0.03136 var(--rhc-color-robijnrood-hue, 6.0286));
-    --rhc-color-robijnrood-100: oklch(var(--rhc-color-100-lightness) 0.063 var(--rhc-color-robijnrood-hue, 5.9412));
-    --rhc-color-robijnrood-200: oklch(var(--rhc-color-200-lightness) 0.09498 var(--rhc-color-robijnrood-hue, 5.8376));
-    --rhc-color-robijnrood-300: oklch(var(--rhc-color-300-lightness) 0.12739 var(--rhc-color-robijnrood-hue, 5.7126));
-    --rhc-color-robijnrood-400: oklch(var(--rhc-color-400-lightness) 0.1603 var(--rhc-color-robijnrood-hue, 5.5584));
-    --rhc-color-robijnrood-500: oklch(var(--rhc-color-500-lightness) 0.21669 var(--rhc-color-robijnrood-hue, 5.2));
-    --rhc-color-lintblauw-50: oklch(var(--rhc-color-50-lightness) 0.01318 var(--rhc-color-lintblauw-hue, 267.39));
-    --rhc-color-lintblauw-100: oklch(var(--rhc-color-100-lightness) 0.02657 var(--rhc-color-lintblauw-hue, 266.47));
-    --rhc-color-lintblauw-200: oklch(var(--rhc-color-200-lightness) 0.04026 var(--rhc-color-lintblauw-hue, 265.26));
-    --rhc-color-lintblauw-300: oklch(var(--rhc-color-300-lightness) 0.05436 var(--rhc-color-lintblauw-hue, 263.59));
-    --rhc-color-lintblauw-400: oklch(var(--rhc-color-400-lightness) 0.0691 var(--rhc-color-lintblauw-hue, 261.16));
-    --rhc-color-lintblauw-500: oklch(var(--rhc-color-500-lightness) 0.09695 var(--rhc-color-lintblauw-hue, 253.44));
-    --rhc-color-lintblauw-600: oklch(var(--rhc-color-600-lightness) 0.0676 var(--rhc-color-lintblauw-hue, 256.1));
-    --rhc-color-lintblauw-700: oklch(var(--rhc-color-700-lightness) 0.0577 var(--rhc-color-lintblauw-hue, 258));
+    --rhc-color-cool-grey-50: oklch(
+      from var(--rhc-color-light-cool-grey-50) var(--rhc-color-50-lightness) c var(--rhc-color-cool-grey-hue, 247.858)
+    );
+    --rhc-color-cool-grey-100: oklch(
+      from var(--rhc-color-light-cool-grey-100) var(--rhc-color-100-lightness) 0.007
+        var(--rhc-color-cool-grey-hue, 247.896)
+    );
+    --rhc-color-cool-grey-200: oklch(
+      from var(--rhc-color-light-cool-grey-200) var(--rhc-color-200-lightness) 0.013
+        var(--rhc-color-cool-grey-hue, 255.508)
+    );
+    --rhc-color-cool-grey-300: oklch(
+      from var(--rhc-color-light-cool-grey-300) var(--rhc-color-300-lightness) 0.022
+        var(--rhc-color-cool-grey-hue, 252.894)
+    );
+    --rhc-color-cool-grey-400: oklch(
+      from var(--rhc-color-light-cool-grey-400) var(--rhc-color-400-lightness) 0.04
+        var(--rhc-color-cool-grey-hue, 256.788)
+    );
+    --rhc-color-cool-grey-500: oklch(
+      from var(--rhc-color-light-cool-grey-500) var(--rhc-color-500-lightness) 0.027
+        var(--rhc-color-cool-grey-hue, 264.364)
+    );
+    --rhc-color-cool-grey-600: oklch(
+      from var(--rhc-color-light-cool-grey-600) var(--rhc-color-600-lightness) 0.043
+        var(--rhc-color-cool-grey-hue, 257.281)
+    );
+    --rhc-color-cool-grey-700: oklch(
+      from var(--rhc-color-light-cool-grey-700) var(--rhc-color-700-lightness) 0.044
+        var(--rhc-color-cool-grey-hue, 257.287)
+    );
+    --rhc-color-cool-grey-800: oklch(
+      from var(--rhc-color-light-cool-grey-800) var(--rhc-color-800-lightness) 0.041
+        var(--rhc-color-cool-grey-hue, 260.031)
+    );
+    --rhc-color-cool-grey-900: oklch(
+      from var(--rhc-color-light-cool-grey-900) var(--rhc-color-900-lightness) 0.042
+        var(--rhc-color-cool-grey-hue, 265.755)
+    );
+    --rhc-color-lichtblauw-50: oklch(
+      from var(--rhc-color-light-lichtblauw-50) var(--rhc-color-50-lightness) c var(--rhc-color-lichtblauw-hue, 231.63)
+    );
+    --rhc-color-lichtblauw-100: oklch(
+      from var(--rhc-color-light-lichtblauw-100) var(--rhc-color-100-lightness) c
+        var(--rhc-color-lichtblauw-hue, 231.42)
+    );
+    --rhc-color-lichtblauw-200: oklch(
+      from var(--rhc-color-light-lichtblauw-200) var(--rhc-color-200-lightness) c
+        var(--rhc-color-lichtblauw-hue, 231.19)
+    );
+    --rhc-color-lichtblauw-300: oklch(
+      from var(--rhc-color-light-lichtblauw-300) var(--rhc-color-300-lightness) c
+        var(--rhc-color-lichtblauw-hue, 230.92)
+    );
+    --rhc-color-lichtblauw-400: oklch(
+      from var(--rhc-color-light-lichtblauw-400) var(--rhc-color-400-lightness) c
+        var(--rhc-color-lichtblauw-hue, 230.62)
+    );
+    --rhc-color-lichtblauw-500: oklch(
+      from var(--rhc-color-light-lichtblauw-500) var(--rhc-color-500-lightness) c
+        var(--rhc-color-lichtblauw-hue, 230.01)
+    );
+    --rhc-color-violet-50: oklch(
+      from var(--rhc-color-light-violet-50) var(--rhc-color-50-lightness) c var(--rhc-color-violet-hue, 355.89)
+    );
+    --rhc-color-violet-100: oklch(
+      from var(--rhc-color-light-violet-100) var(--rhc-color-100-lightness) c var(--rhc-color-violet-hue, 355.9)
+    );
+    --rhc-color-violet-200: oklch(
+      from var(--rhc-color-light-violet-200) var(--rhc-color-200-lightness) c var(--rhc-color-violet-hue, 355.91)
+    );
+    --rhc-color-violet-300: oklch(
+      from var(--rhc-color-light-violet-300) var(--rhc-color-300-lightness) c var(--rhc-color-violet-hue, 355.91)
+    );
+    --rhc-color-violet-400: oklch(
+      from var(--rhc-color-light-violet-400) var(--rhc-color-400-lightness) c var(--rhc-color-violet-hue, 355.92)
+    );
+    --rhc-color-violet-500: oklch(
+      from var(--rhc-color-light-violet-500) var(--rhc-color-500-lightness) c var(--rhc-color-violet-hue, 355.91)
+    );
+    --rhc-color-paars-50: oklch(
+      from var(--rhc-color-light-paars-50) var(--rhc-color-50-lightness) c var(--rhc-color-paars-hue, 315.24)
+    );
+    --rhc-color-paars-100: oklch(
+      from var(--rhc-color-light-paars-100) var(--rhc-color-100-lightness) c var(--rhc-color-paars-hue, 314.83)
+    );
+    --rhc-color-paars-200: oklch(
+      from var(--rhc-color-light-paars-200) var(--rhc-color-200-lightness) c var(--rhc-color-paars-hue, 314.28)
+    );
+    --rhc-color-paars-300: oklch(
+      from var(--rhc-color-light-paars-300) var(--rhc-color-300-lightness) c var(--rhc-color-paars-hue, 313.54)
+    );
+    --rhc-color-paars-400: oklch(
+      from var(--rhc-color-light-paars-400) var(--rhc-color-400-lightness) c var(--rhc-color-paars-hue, 312.44)
+    );
+    --rhc-color-paars-500: oklch(
+      from var(--rhc-color-light-paars-500) var(--rhc-color-500-lightness) c var(--rhc-color-paars-hue, 308.6)
+    );
+    --rhc-color-hemelblauw-50: oklch(
+      from var(--rhc-color-light-hemelblauw-50) var(--rhc-color-50-lightness) c var(--rhc-color-hemelblauw-hue, 259.24)
+    );
+    --rhc-color-hemelblauw-100: oklch(
+      from var(--rhc-color-light-hemelblauw-100) var(--rhc-color-100-lightness) c
+        var(--rhc-color-hemelblauw-hue, 258.06)
+    );
+    --rhc-color-hemelblauw-200: oklch(
+      from var(--rhc-color-light-hemelblauw-200) var(--rhc-color-200-lightness) c var(--rhc-color-hemelblauw-hue, 256.6)
+    );
+    --rhc-color-hemelblauw-300: oklch(
+      from var(--rhc-color-light-hemelblauw-300) var(--rhc-color-300-lightness) c
+        var(--rhc-color-hemelblauw-hue, 254.75)
+    );
+    --rhc-color-hemelblauw-400: oklch(
+      from var(--rhc-color-light-hemelblauw-400) var(--rhc-color-400-lightness) c
+        var(--rhc-color-hemelblauw-hue, 252.37)
+    );
+    --rhc-color-hemelblauw-500: oklch(
+      from var(--rhc-color-light-hemelblauw-500) var(--rhc-color-500-lightness) c
+        var(--rhc-color-hemelblauw-hue, 246.59)
+    );
+    --rhc-color-hemelblauw-700: oklch(
+      from var(--rhc-color-light-hemelblauw-700) var(--rhc-color-700-lightness) c var(--rhc-color-hemelblauw-hue, 248.3)
+    );
+    --rhc-color-donkerblauw-50: oklch(
+      from var(--rhc-color-light-donkerblauw-50) var(--rhc-color-50-lightness) c
+        var(--rhc-color-donkerblauw-hue, 249.73)
+    );
+    --rhc-color-donkerblauw-100: oklch(
+      from var(--rhc-color-light-donkerblauw-100) var(--rhc-color-100-lightness) c
+        var(--rhc-color-donkerblauw-hue, 248.96)
+    );
+    --rhc-color-donkerblauw-200: oklch(
+      from var(--rhc-color-light-donkerblauw-200) var(--rhc-color-200-lightness) c
+        var(--rhc-color-donkerblauw-hue, 247.98)
+    );
+    --rhc-color-donkerblauw-300: oklch(
+      from var(--rhc-color-light-donkerblauw-300) var(--rhc-color-300-lightness) c
+        var(--rhc-color-donkerblauw-hue, 246.69)
+    );
+    --rhc-color-donkerblauw-400: oklch(
+      from var(--rhc-color-light-donkerblauw-400) var(--rhc-color-400-lightness) c
+        var(--rhc-color-donkerblauw-hue, 244.97)
+    );
+    --rhc-color-donkerblauw-500: oklch(
+      from var(--rhc-color-light-donkerblauw-500) var(--rhc-color-500-lightness) c
+        var(--rhc-color-donkerblauw-hue, 240.39)
+    );
+    --rhc-color-donkerblauw-600: oklch(
+      from var(--rhc-color-light-donkerblauw-500) var(--rhc-color-600-lightness) c
+        var(--rhc-color-donkerblauw-hue, 238.6)
+    );
+    --rhc-color-donkerblauw-700: oklch(
+      from var(--rhc-color-light-donkerblauw-700) var(--rhc-color-700-lightness) c
+        var(--rhc-color-donkerblauw-hue, 242.1)
+    );
+    --rhc-color-mintgroen-50: oklch(
+      from var(--rhc-color-light-mintgroen-50) var(--rhc-color-50-lightness) c var(--rhc-color-mintgroen-hue, 172.1)
+    );
+    --rhc-color-mintgroen-100: oklch(
+      from var(--rhc-color-light-mintgroen-100) var(--rhc-color-100-lightness) c var(--rhc-color-mintgroen-hue, 172.08)
+    );
+    --rhc-color-mintgroen-200: oklch(
+      from var(--rhc-color-light-mintgroen-200) var(--rhc-color-200-lightness) c var(--rhc-color-mintgroen-hue, 172.06)
+    );
+    --rhc-color-mintgroen-300: oklch(
+      from var(--rhc-color-light-mintgroen-300) var(--rhc-color-300-lightness) c var(--rhc-color-mintgroen-hue, 172.04)
+    );
+    --rhc-color-mintgroen-400: oklch(
+      from var(--rhc-color-light-mintgroen-400) var(--rhc-color-400-lightness) c var(--rhc-color-mintgroen-hue, 172.02)
+    );
+    --rhc-color-mintgroen-500: oklch(
+      from var(--rhc-color-light-mintgroen-500) var(--rhc-color-500-lightness) c var(--rhc-color-mintgroen-hue, 171.97)
+    );
+    --rhc-color-mosgroen-50: oklch(
+      from var(--rhc-color-light-mosgroen-50) var(--rhc-color-50-lightness) c var(--rhc-color-mosgroen-hue, 103.35)
+    );
+    --rhc-color-mosgroen-100: oklch(
+      from var(--rhc-color-light-mosgroen-100) var(--rhc-color-100-lightness) c var(--rhc-color-mosgroen-hue, 104.52)
+    );
+    --rhc-color-mosgroen-200: oklch(
+      from var(--rhc-color-light-mosgroen-200) var(--rhc-color-200-lightness) c var(--rhc-color-mosgroen-hue, 105.82)
+    );
+    --rhc-color-mosgroen-300: oklch(
+      from var(--rhc-color-light-mosgroen-300) var(--rhc-color-300-lightness) c var(--rhc-color-mosgroen-hue, 107.25)
+    );
+    --rhc-color-mosgroen-400: oklch(
+      from var(--rhc-color-light-mosgroen-400) var(--rhc-color-400-lightness) c var(--rhc-color-mosgroen-hue, 108.86)
+    );
+    --rhc-color-mosgroen-500: oklch(
+      from var(--rhc-color-light-mosgroen-500) var(--rhc-color-500-lightness) c var(--rhc-color-mosgroen-hue, 112.04)
+    );
+    --rhc-color-groen-50: oklch(
+      from var(--rhc-color-light-groen-50) var(--rhc-color-50-lightness) c var(--rhc-color-groen-hue, 132.14)
+    );
+    --rhc-color-groen-100: oklch(
+      from var(--rhc-color-light-groen-100) var(--rhc-color-100-lightness) c var(--rhc-color-groen-hue, 132.76)
+    );
+    --rhc-color-groen-200: oklch(
+      from var(--rhc-color-light-groen-200) var(--rhc-color-200-lightness) c var(--rhc-color-groen-hue, 133.47)
+    );
+    --rhc-color-groen-300: oklch(
+      from var(--rhc-color-light-groen-300) var(--rhc-color-300-lightness) c var(--rhc-color-groen-hue, 134.33)
+    );
+    --rhc-color-groen-400: oklch(
+      from var(--rhc-color-light-groen-400) var(--rhc-color-400-lightness) c var(--rhc-color-groen-hue, 135.38)
+    );
+    --rhc-color-groen-500: oklch(
+      from var(--rhc-color-light-groen-500) var(--rhc-color-500-lightness) c var(--rhc-color-groen-hue, 137.86)
+    );
+    --rhc-color-donkergroen-50: oklch(
+      from var(--rhc-color-light-donkergroen-50) var(--rhc-color-50-lightness) c
+        var(--rhc-color-donkergroen-hue, 151.61)
+    );
+    --rhc-color-donkergroen-100: oklch(
+      from var(--rhc-color-light-donkergroen-100) var(--rhc-color-100-lightness) c
+        var(--rhc-color-donkergroen-hue, 151.64)
+    );
+    --rhc-color-donkergroen-200: oklch(
+      from var(--rhc-color-light-donkergroen-200) var(--rhc-color-200-lightness) c
+        var(--rhc-color-donkergroen-hue, 151.68)
+    );
+    --rhc-color-donkergroen-300: oklch(
+      from var(--rhc-color-light-donkergroen-300) var(--rhc-color-300-lightness) c
+        var(--rhc-color-donkergroen-hue, 151.74)
+    );
+    --rhc-color-donkergroen-400: oklch(
+      from var(--rhc-color-light-donkergroen-400) var(--rhc-color-400-lightness) c
+        var(--rhc-color-donkergroen-hue, 151.81)
+    );
+    --rhc-color-donkergroen-500: oklch(
+      from var(--rhc-color-light-donkergroen-500) var(--rhc-color-500-lightness) c
+        var(--rhc-color-donkergroen-hue, 152.03)
+    );
+    --rhc-color-bruin-50: oklch(
+      from var(--rhc-color-light-bruin-50) var(--rhc-color-50-lightness) c var(--rhc-color-bruin-hue, 80.933)
+    );
+    --rhc-color-bruin-100: oklch(
+      from var(--rhc-color-light-bruin-100) var(--rhc-color-100-lightness) c var(--rhc-color-bruin-hue, 81.989)
+    );
+    --rhc-color-bruin-200: oklch(
+      from var(--rhc-color-light-bruin-200) var(--rhc-color-200-lightness) c var(--rhc-color-bruin-hue, 83.087)
+    );
+    --rhc-color-bruin-300: oklch(
+      from var(--rhc-color-light-bruin-300) var(--rhc-color-300-lightness) c var(--rhc-color-bruin-hue, 84.192)
+    );
+    --rhc-color-bruin-400: oklch(
+      from var(--rhc-color-light-bruin-400) var(--rhc-color-400-lightness) c var(--rhc-color-bruin-hue, 85.232)
+    );
+    --rhc-color-bruin-500: oklch(
+      from var(--rhc-color-light-bruin-500) var(--rhc-color-500-lightness) c var(--rhc-color-bruin-hue, 86.368)
+    );
+    --rhc-color-donkerbruin-50: oklch(
+      from var(--rhc-color-light-donkerbruin-50) var(--rhc-color-50-lightness) c
+        var(--rhc-color-donkerbruin-hue, 35.338)
+    );
+    --rhc-color-donkerbruin-100: oklch(
+      from var(--rhc-color-light-donkerbruin-100) var(--rhc-color-100-lightness) c
+        var(--rhc-color-donkerbruin-hue, 35.341)
+    );
+    --rhc-color-donkerbruin-200: oklch(
+      from var(--rhc-color-light-donkerbruin-200) var(--rhc-color-200-lightness) c
+        var(--rhc-color-donkerbruin-hue, 35.32)
+    );
+    --rhc-color-donkerbruin-300: oklch(
+      from var(--rhc-color-light-donkerbruin-300) var(--rhc-color-300-lightness) c
+        var(--rhc-color-donkerbruin-hue, 35.25)
+    );
+    --rhc-color-donkerbruin-400: oklch(
+      from var(--rhc-color-light-donkerbruin-400) var(--rhc-color-400-lightness) c
+        var(--rhc-color-donkerbruin-hue, 35.078)
+    );
+    --rhc-color-donkerbruin-500: oklch(
+      from var(--rhc-color-light-donkerbruin-500) var(--rhc-color-500-lightness) c
+        var(--rhc-color-donkerbruin-hue, 34.12)
+    );
+    --rhc-color-geel-50: oklch(
+      from var(--rhc-color-light-geel-50) var(--rhc-color-50-lightness) c var(--rhc-color-geel-hue, 94.095)
+    );
+    --rhc-color-geel-100: oklch(
+      from var(--rhc-color-light-geel-100) var(--rhc-color-100-lightness) c var(--rhc-color-geel-hue, 95.605)
+    );
+    --rhc-color-geel-200: oklch(
+      from var(--rhc-color-light-geel-200) var(--rhc-color-200-lightness) c var(--rhc-color-geel-hue, 97.023)
+    );
+    --rhc-color-geel-300: oklch(
+      from var(--rhc-color-light-geel-300) var(--rhc-color-300-lightness) c var(--rhc-color-geel-hue, 98.338)
+    );
+    --rhc-color-geel-400: oklch(
+      from var(--rhc-color-light-geel-400) var(--rhc-color-400-lightness) c var(--rhc-color-geel-hue, 99.544)
+    );
+    --rhc-color-geel-500: oklch(
+      from var(--rhc-color-light-geel-500) var(--rhc-color-500-lightness) c var(--rhc-color-geel-hue, 101.29)
+    );
+    --rhc-color-donkergeel-50: oklch(
+      from var(--rhc-color-light-donkergeel-50) var(--rhc-color-50-lightness) c var(--rhc-color-donkergeel-hue, 75.462)
+    );
+    --rhc-color-donkergeel-100: oklch(
+      from var(--rhc-color-light-donkergeel-100) var(--rhc-color-100-lightness) c
+        var(--rhc-color-donkergeel-hue, 76.629)
+    );
+    --rhc-color-donkergeel-200: oklch(
+      from var(--rhc-color-light-donkergeel-200) var(--rhc-color-200-lightness) c
+        var(--rhc-color-donkergeel-hue, 77.643)
+    );
+    --rhc-color-donkergeel-300: oklch(
+      from var(--rhc-color-light-donkergeel-300) var(--rhc-color-300-lightness) c var(--rhc-color-donkergeel-hue, 78.45)
+    );
+    --rhc-color-donkergeel-400: oklch(
+      from var(--rhc-color-light-donkergeel-400) var(--rhc-color-400-lightness) c
+        var(--rhc-color-donkergeel-hue, 78.981)
+    );
+    --rhc-color-donkergeel-500: oklch(
+      from var(--rhc-color-light-donkergeel-500) var(--rhc-color-500-lightness) c
+        var(--rhc-color-donkergeel-hue, 78.997)
+    );
+    --rhc-color-oranje-50: oklch(
+      from var(--rhc-color-light-oranje-50) var(--rhc-color-50-lightness) c var(--rhc-color-oranje-hue, 55.608)
+    );
+    --rhc-color-oranje-100: oklch(
+      from var(--rhc-color-light-oranje-100) var(--rhc-color-100-lightness) c var(--rhc-color-oranje-hue, 56.102)
+    );
+    --rhc-color-oranje-200: oklch(
+      from var(--rhc-color-light-oranje-200) var(--rhc-color-200-lightness) c var(--rhc-color-oranje-hue, 56.4)
+    );
+    --rhc-color-oranje-300: oklch(
+      from var(--rhc-color-light-oranje-300) var(--rhc-color-300-lightness) c var(--rhc-color-oranje-hue, 56.375)
+    );
+    --rhc-color-oranje-400: oklch(
+      from var(--rhc-color-light-oranje-400) var(--rhc-color-400-lightness) c var(--rhc-color-oranje-hue, 55.833)
+    );
+    --rhc-color-oranje-500: oklch(
+      from var(--rhc-color-light-oranje-500) var(--rhc-color-500-lightness) c var(--rhc-color-oranje-hue, 52.908)
+    );
+    --rhc-color-rood-50: oklch(
+      from var(--rhc-color-light-rood-50) var(--rhc-color-50-lightness) c var(--rhc-color-rood-hue, 34.732)
+    );
+    --rhc-color-rood-100: oklch(
+      from var(--rhc-color-light-rood-100) var(--rhc-color-100-lightness) c var(--rhc-color-rood-hue, 34.631)
+    );
+    --rhc-color-rood-200: oklch(
+      from var(--rhc-color-light-rood-200) var(--rhc-color-200-lightness) c var(--rhc-color-rood-hue, 34.365)
+    );
+    --rhc-color-rood-300: oklch(
+      from var(--rhc-color-light-rood-300) var(--rhc-color-300-lightness) c var(--rhc-color-rood-hue, 33.835)
+    );
+    --rhc-color-rood-400: oklch(
+      from var(--rhc-color-light-rood-400) var(--rhc-color-400-lightness) c var(--rhc-color-rood-hue, 32.878)
+    );
+    --rhc-color-rood-500: oklch(
+      from var(--rhc-color-light-rood-500) var(--rhc-color-500-lightness) c var(--rhc-color-rood-hue, 29.543)
+    );
+    --rhc-color-roze-50: oklch(
+      from var(--rhc-color-light-roze-50) var(--rhc-color-50-lightness) c var(--rhc-color-roze-hue, 342.26)
+    );
+    --rhc-color-roze-100: oklch(
+      from var(--rhc-color-light-roze-100) var(--rhc-color-100-lightness) c var(--rhc-color-roze-hue, 342.29)
+    );
+    --rhc-color-roze-200: oklch(
+      from var(--rhc-color-light-roze-200) var(--rhc-color-200-lightness) c var(--rhc-color-roze-hue, 342.32)
+    );
+    --rhc-color-roze-300: oklch(
+      from var(--rhc-color-light-roze-300) var(--rhc-color-300-lightness) c var(--rhc-color-roze-hue, 342.35)
+    );
+    --rhc-color-roze-400: oklch(
+      from var(--rhc-color-light-roze-400) var(--rhc-color-400-lightness) c var(--rhc-color-roze-hue, 342.38)
+    );
+    --rhc-color-roze-500: oklch(
+      from var(--rhc-color-light-roze-500) var(--rhc-color-500-lightness) c var(--rhc-color-roze-hue, 342.44)
+    );
+    --rhc-color-robijnrood-50: oklch(
+      from var(--rhc-color-light-robijnrood-50) var(--rhc-color-50-lightness) c var(--rhc-color-robijnrood-hue, 6.0286)
+    );
+    --rhc-color-robijnrood-100: oklch(
+      from var(--rhc-color-light-robijnrood-100) var(--rhc-color-100-lightness) c
+        var(--rhc-color-robijnrood-hue, 5.9412)
+    );
+    --rhc-color-robijnrood-200: oklch(
+      from var(--rhc-color-light-robijnrood-200) var(--rhc-color-200-lightness) c
+        var(--rhc-color-robijnrood-hue, 5.8376)
+    );
+    --rhc-color-robijnrood-300: oklch(
+      from var(--rhc-color-light-robijnrood-300) var(--rhc-color-300-lightness) c
+        var(--rhc-color-robijnrood-hue, 5.7126)
+    );
+    --rhc-color-robijnrood-400: oklch(
+      from var(--rhc-color-light-robijnrood-400) var(--rhc-color-400-lightness) c
+        var(--rhc-color-robijnrood-hue, 5.5584)
+    );
+    --rhc-color-robijnrood-500: oklch(
+      from var(--rhc-color-light-robijnrood-500) var(--rhc-color-500-lightness) c var(--rhc-color-robijnrood-hue, 5.2)
+    );
+    --rhc-color-lintblauw-50: oklch(
+      from var(--rhc-color-light-lintblauw-50) var(--rhc-color-50-lightness) c var(--rhc-color-lintblauw-hue, 267.39)
+    );
+    --rhc-color-lintblauw-100: oklch(
+      from var(--rhc-color-light-lintblauw-100) var(--rhc-color-100-lightness) c var(--rhc-color-lintblauw-hue, 266.47)
+    );
+    --rhc-color-lintblauw-200: oklch(
+      from var(--rhc-color-light-lintblauw-200) var(--rhc-color-200-lightness) c var(--rhc-color-lintblauw-hue, 265.26)
+    );
+    --rhc-color-lintblauw-300: oklch(
+      from var(--rhc-color-light-lintblauw-300) var(--rhc-color-300-lightness) c var(--rhc-color-lintblauw-hue, 263.59)
+    );
+    --rhc-color-lintblauw-400: oklch(
+      from var(--rhc-color-light-lintblauw-400) var(--rhc-color-400-lightness) c var(--rhc-color-lintblauw-hue, 261.16)
+    );
+    --rhc-color-lintblauw-500: oklch(
+      from var(--rhc-color-light-lintblauw-500) var(--rhc-color-500-lightness) c var(--rhc-color-lintblauw-hue, 253.44)
+    );
+    --rhc-color-lintblauw-600: oklch(
+      from var(--rhc-color-light-lintblauw-600) var(--rhc-color-600-lightness) c var(--rhc-color-lintblauw-hue, 256.1)
+    );
+    --rhc-color-lintblauw-700: oklch(
+      from var(--rhc-color-light-lintblauw-700) var(--rhc-color-700-lightness) c var(--rhc-color-lintblauw-hue, 258)
+    );
     --rhc-color-wit: oklch(0% 0 0);
     --rhc-color-zwart: oklch(100% 0 0);
   }
