@@ -61,6 +61,45 @@ export const createRollupConfig = (pkgJson) => [
       postcss(),
     ],
   },
+  {
+    input: 'src/noCss.ts',
+    output: [
+      ...(pkgJson.main
+        ? [{ file: 'dist/noCss.cjs.js', format: 'cjs', sourcemap: true, globals: outputGlobals, banner: "'use client';" }]
+        : []),
+      {
+        file: 'dist/noCss.esm.js',
+        format: 'esm',
+        sourcemap: true,
+        globals: outputGlobals,
+        banner: "'use client';",
+      },
+    ],
+    external: [/@babel\/runtime/, 'react-dom', 'react'],
+    plugins: [
+      peerDepsExternal({ includeDependencies: true }),
+      nodeExternal(),
+      resolve({ browser: true }),
+      commonjs({
+        include: /node_modules/,
+      }),
+      nodePolyfills(),
+      typescript({
+        includeDependencies: false,
+        tsconfig: process.env.APP_ENV === 'dev' ? './tsconfig.dev.json' : './tsconfig.json',
+      }),
+      babel({
+        presets: ['@babel/preset-react'],
+        babelHelpers: 'runtime',
+        exclude: ['node_modules/**', 'dist/**'],
+        extensions: ['.ts', '.tsx'],
+        inputSourceMap: true,
+        plugins: ['@babel/plugin-transform-runtime'],
+      }),
+      filesize(),
+      postcss(),
+    ],
+  },
 ];
 
 export default createRollupConfig(packageJson);

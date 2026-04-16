@@ -20,6 +20,13 @@
         "types": "./dist/index.d.ts",
         "import": "./dist/index.esm.js"
       }
+    },
+    "./no-css": {
+      "rhc:source": "./src/noCss.ts",
+      "default": {
+        "types": "./dist/noCss.d.ts",
+        "import": "./dist/noCss.esm.js"
+      }
     }
   },
   "scripts": {
