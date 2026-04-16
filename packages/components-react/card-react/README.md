@@ -4,17 +4,17 @@
 
 Dit is de Card React-component van het Rijkshuisstijl Community Design System. Zie ook de volgende links:
 
-* README.md voor alle React-componenten
-[https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/library-react/README.md]
+- README.md voor alle React-componenten
+  [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/library-react/README.md]
 
-* CSS:
-[https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/library-css/README.md]
+- CSS:
+  [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/library-css/README.md]
 
-* Web Components:
-[https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/README.md]
+- Web Components:
+  [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/README.md]
 
-* Twig:
-[https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/README.md]
+- Twig:
+  [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/README.md]
 
 ## Installatie
 
