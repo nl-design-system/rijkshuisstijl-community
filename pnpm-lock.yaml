@@ -2371,8 +2371,8 @@ importers:
         specifier: 4.0.2
         version: 4.0.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@whitespace/storybook-addon-html':
-        specifier: 8.0.2
-        version: 8.0.2(storybook@9.1.20(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(prettier@3.8.1)(vite@7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)))
+        specifier: 9.0.0
+        version: 9.0.0(prettier@3.8.1)(storybook@9.1.20(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(prettier@3.8.1)(vite@7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)))
       axe-playwright:
         specifier: 2.2.2
         version: 2.2.2(playwright@1.58.2)
@@ -8036,11 +8036,6 @@ packages:
   '@webassemblyjs/wast-printer@1.14.1':
     resolution: {integrity: sha512-kPSSXE6De1XOR820C90RIo2ogvZG+c3KiHzqUoO/F34Y2shGzesfqv7o57xrxovZJH/MetF5UjroJ/R/3isoiw==}
 
-  '@whitespace/storybook-addon-html@8.0.2':
-    resolution: {integrity: sha512-NsCpY+jWl6MamuQuSptuC5A1Xa4UWNtqhbBjv710C8Ka+n+t2e/tCfx1UAsB6m3linja2jU4Zmxu8W026lzLGQ==}
-    peerDependencies:
-      storybook: ^9.0.0
-
   '@whitespace/storybook-addon-html@9.0.0':
     resolution: {integrity: sha512-GX2lk5EgE46Lqbs1sa/7mWDWo6g/tPiIH8SyYvzBgMlUmq/q1mulHLxowQeN/HYpdlFMeUskUlYhMmE64qi44w==}
     peerDependencies:
@@ -12126,6 +12121,9 @@ packages:
 
   lodash@4.17.23:
     resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
+
+  lodash@4.18.1:
+    resolution: {integrity: sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q==}
 
   log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
@@ -22812,14 +22810,15 @@ snapshots:
       '@webassemblyjs/ast': 1.14.1
       '@xtuc/long': 4.2.2
 
-  '@whitespace/storybook-addon-html@8.0.2(storybook@9.1.20(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(prettier@3.8.1)(vite@7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)))':
-    dependencies:
-      storybook: 9.1.20(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(prettier@3.8.1)(vite@7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
-
   '@whitespace/storybook-addon-html@9.0.0(prettier@3.8.1)(storybook@10.3.3(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))':
     dependencies:
       prettier: 3.8.1
       storybook: 10.3.3(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+
+  '@whitespace/storybook-addon-html@9.0.0(prettier@3.8.1)(storybook@9.1.20(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(prettier@3.8.1)(vite@7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)))':
+    dependencies:
+      prettier: 3.8.1
+      storybook: 9.1.20(@testing-library/dom@10.4.1)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(prettier@3.8.1)(vite@7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
 
   '@xtuc/ieee754@1.2.0': {}
 
@@ -27775,7 +27774,7 @@ snapshots:
       graceful-fs: 4.2.11
       http-proxy: 1.18.1(debug@4.4.3)
       isbinaryfile: 4.0.10
-      lodash: 4.17.23
+      lodash: 4.18.1
       log4js: 6.9.1
       mime: 2.6.0
       minimatch: 3.1.5
@@ -28044,6 +28043,9 @@ snapshots:
   lodash@4.17.21: {}
 
   lodash@4.17.23: {}
+
+  lodash@4.18.1:
+    optional: true
 
   log-symbols@4.1.0:
     dependencies:
