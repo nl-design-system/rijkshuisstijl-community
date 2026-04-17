@@ -1,5 +1,22 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 15.0.0
+
+### Major Changes
+
+- b9b383c: Dot badge, horizontal cards and radio button size are no longer fluid, until we introduce a fluid size scale.
+- f61a0a6: Remove `utrecht.body.*` tokens. Migrate to the new Root component to configure these design choices.
+
+### Minor Changes
+
+- 836a616: Add `rhc.color.dark.*` tokens.
+- a2cf4b3: - component tokens toegevoegd voor `nl-data-badge`
+- fac58ed: Add design tokens for `utrecht.page-footer.content.*`'.
+
+### Patch Changes
+
+- 0c5c27a: Use appropriate `rhc.space` tokens instead of `rhc.size.*lint` tokens.
+
 ## 14.0.0
 
 ### Major Changes

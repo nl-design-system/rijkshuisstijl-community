@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/image-react
 
+## 2.0.2
+
+### Patch Changes
+
+- e9dae7c: Updated broken links in the documentation
+
 ## 2.0.1
 
 ### Patch Changes

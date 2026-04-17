@@ -1,5 +1,29 @@
 # @rijkshuisstijl-community/components-react
 
+## 15.0.2
+
+### Patch Changes
+
+- c189cdf: Use new Utrecht Page Footer CSS that provides `utrecht-page-footer__content`, which replaces `rhc-page-footer__content`.
+
+  Replace `rhc-page-footer__wrapper` new nested `rhc-page-footer-layout` div.
+
+- Updated dependencies [f091fcd]
+- Updated dependencies [e9dae7c]
+  - @rijkshuisstijl-community/action-group-react@1.0.0
+  - @rijkshuisstijl-community/blockquote-react@1.0.1
+  - @rijkshuisstijl-community/accordion-react@3.0.3
+  - @rijkshuisstijl-community/dot-badge-react@1.0.1
+  - @rijkshuisstijl-community/paragraph-react@2.0.2
+  - @rijkshuisstijl-community/separator-react@1.0.1
+  - @rijkshuisstijl-community/article-react@2.0.2
+  - @rijkshuisstijl-community/button-react@1.0.1
+  - @rijkshuisstijl-community/figure-react@1.0.1
+  - @rijkshuisstijl-community/alert-react@3.0.3
+  - @rijkshuisstijl-community/image-react@2.0.2
+  - @rijkshuisstijl-community/icon-react@3.0.3
+  - @rijkshuisstijl-community/link-react@1.0.1
+
 ## 15.0.1
 
 ### Patch Changes

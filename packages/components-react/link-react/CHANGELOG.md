@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/link-react
 
+## 1.0.1
+
+### Patch Changes
+
+- e9dae7c: Updated broken links in the documentation
+- Updated dependencies [e9dae7c]
+  - @rijkshuisstijl-community/link-css@1.0.1
+
 ## 1.0.0
 
 ### Major Changes

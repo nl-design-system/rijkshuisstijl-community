@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/accordion-react
 
+## 3.0.3
+
+### Patch Changes
+
+- e9dae7c: Updated broken links in the documentation
+- Updated dependencies [e9dae7c]
+  - @rijkshuisstijl-community/accordion-css@2.0.1
+
 ## 3.0.2
 
 ### Patch Changes
