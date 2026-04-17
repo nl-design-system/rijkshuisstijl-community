@@ -1,5 +1,23 @@
 # @rijkshuisstijl-community/examples-react-vite
 
+## 0.1.9
+
+### Patch Changes
+
+- Updated dependencies [836a616]
+- Updated dependencies [0c5c27a]
+- Updated dependencies [a2cf4b3]
+- Updated dependencies [b9b383c]
+- Updated dependencies [e9dae7c]
+- Updated dependencies [9e5760d]
+- Updated dependencies [c189cdf]
+- Updated dependencies [f61a0a6]
+- Updated dependencies [fac58ed]
+  - @rijkshuisstijl-community/design-tokens@15.0.0
+  - @rijkshuisstijl-community/icon-react@3.0.3
+  - @rijkshuisstijl-community/components-css@17.0.0
+  - @rijkshuisstijl-community/components-react@15.0.2
+
 ## 0.1.8
 
 ### Patch Changes

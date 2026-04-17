@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/blockquote-css
 
+## 1.0.1
+
+### Patch Changes
+
+- e9dae7c: Updated broken links in the documentation
+
 ## 1.0.0
 
 ### Major Changes

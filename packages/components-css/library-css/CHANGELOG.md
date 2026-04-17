@@ -1,5 +1,39 @@
 # @rijkshuisstijl-community/components-css
 
+## 17.0.0
+
+### Major Changes
+
+- 9e5760d: Switch from `var(--rhc-size-*lint)` to `var(--rhc-space-*)` for spacing. For users of `@rijkshuisstijl-community/design-tokens` there is no visual change, because the design tokens have the same values.
+
+  This is a breaking change for users that have configured different values for `var(--rhc-size-*lint)` to `var(--rhc-space-*)` in their own theme, and have not configured the component tokens.
+
+  The design for the following components has changed, if you haven't configured the component tokens:
+  - The fallback for `var(--rhc-dot-badge-size)` is now `var(--rhc-space-lg)` instead of `var(--rhc-size-quarter-lint)`.
+
+  The design for the following component has changed (because there is no component token):
+  - Heading Group gap now is `var(--rhc-space-lg)` instead of `var(--rhc-size-quarter-lint)`.
+
+### Patch Changes
+
+- c189cdf: Use new Utrecht Page Footer CSS that provides `utrecht-page-footer__content`, which replaces `rhc-page-footer__content`.
+
+  Replace `rhc-page-footer__wrapper` new nested `rhc-page-footer-layout` div.
+
+- Updated dependencies [f091fcd]
+- Updated dependencies [e9dae7c]
+  - @rijkshuisstijl-community/action-group-css@1.0.0
+  - @rijkshuisstijl-community/blockquote-css@1.0.1
+  - @rijkshuisstijl-community/accordion-css@2.0.1
+  - @rijkshuisstijl-community/dot-badge-css@1.0.1
+  - @rijkshuisstijl-community/paragraph-css@2.0.1
+  - @rijkshuisstijl-community/separator-css@1.0.1
+  - @rijkshuisstijl-community/article-css@2.0.1
+  - @rijkshuisstijl-community/button-css@1.0.1
+  - @rijkshuisstijl-community/figure-css@1.0.1
+  - @rijkshuisstijl-community/alert-css@4.0.1
+  - @rijkshuisstijl-community/link-css@1.0.1
+
 ## 16.0.1
 
 ### Patch Changes
