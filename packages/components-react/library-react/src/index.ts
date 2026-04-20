@@ -22,7 +22,7 @@ export {
   type BreadcrumbNavProps,
   BreadcrumbNavSeparator,
   type BreadcrumbNavSeparatorProps,
-} from './BreadcrumbNav';
+} from '@rijkshuisstijl-community/breadcrumb-nav-react';
 export {
   Button,
   ButtonLink,
@@ -34,7 +34,7 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from '@rijkshuisstijl-community/button-react';
-export { Card } from './Card';
+export { Card } from '@rijkshuisstijl-community/card-react';
 export {
   CardAsLink,
   type CardAsLinkProps,
