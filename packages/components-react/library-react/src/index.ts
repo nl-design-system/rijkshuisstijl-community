@@ -42,7 +42,7 @@ export {
   type FullBleedCardAsLinkProps,
   HorizontalImageCardAsLink,
   type HorizontalImageCardAsLinkProps,
-} from './CardAsLink';
+} from '@rijkshuisstijl-community/card-as-link-react';
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
 export { CodeInput } from './CodeInput';
