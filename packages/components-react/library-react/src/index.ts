@@ -22,7 +22,7 @@ export {
   type BreadcrumbNavProps,
   BreadcrumbNavSeparator,
   type BreadcrumbNavSeparatorProps,
-} from './BreadcrumbNav';
+} from '@rijkshuisstijl-community/breadcrumb-nav-react';
 export {
   Button,
   ButtonLink,
