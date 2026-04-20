@@ -64,22 +64,6 @@ export default function Page() {
                           </TableCell>
                         </TableRow>
                       ))}
-                    {[
-                      { name: 'quarter-lint', value: tokens['rhc']['size']['quarter-lint'] },
-                      { name: 'half-lint', value: tokens['rhc']['size']['half-lint'] },
-                      { name: 'lint', value: tokens['rhc']['size']['lint'] },
-                      { name: '2-lint', value: tokens['rhc']['size']['2-lint'] },
-                      { name: '3-lint', value: tokens['rhc']['size']['3-lint'] },
-                    ].map(({ name, value }) => (
-                      <TableRow key={name}>
-                        <TableCell className="utrecht-table__cell--rhc-middle">
-                          <BorderRadiusSample value={value} />
-                        </TableCell>
-                        <TableCell className="utrecht-table__cell--rhc-middle">
-                          <CopyDesignTokenButton path={['rhc', 'size', name]} />
-                        </TableCell>
-                      </TableRow>
-                    ))}
                   </TableBody>
                 </Table>
               </div>
