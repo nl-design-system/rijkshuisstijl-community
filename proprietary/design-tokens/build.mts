@@ -1,5 +1,5 @@
 import { existsSync, mkdirSync } from 'node:fs';
-import { readFile, writeFile } from 'node:fs/promises';
+import { appendFile, readFile, writeFile } from 'node:fs/promises';
 import { posix } from 'node:path';
 import StyleDictionary from 'style-dictionary';
 
@@ -134,6 +134,9 @@ const getPlatformsConfig = (buildPath: string, themeName: string) => {
   };
 };
 
+const darkModeCSS = await readFile('./src/dark-mode.css', 'utf8');
+const fluidCSS = await readFile('./src/fluid.css', 'utf8');
+
 // This will build the base tokens without the themes and without the overwrites
 async function buildBaseTokens() {
   const config = getPlatformsConfig('dist/', 'rhc-theme');
@@ -149,6 +152,9 @@ async function buildBaseTokens() {
 
   await StyleDictionaryBase.cleanAllPlatforms();
   await StyleDictionaryBase.buildAllPlatforms();
+
+  await appendFile(`dist/index.css`, darkModeCSS);
+  await appendFile(`dist/index.css`, fluidCSS);
 }
 
 // This will build the themes
@@ -184,6 +190,12 @@ async function buildThemes() {
     // Build this specific theme
     await StyleDictionaryTheme.cleanAllPlatforms();
     await StyleDictionaryTheme.buildAllPlatforms();
+
+    // Append the fluid and dark mode CSS, with the appropriate class name
+    await appendFile(
+      `dist/${themeName}/index.css`,
+      `${darkModeCSS}\n${fluidCSS}`.replaceAll('.rhc-theme', `.${themeName}`),
+    );
   }
 }
 

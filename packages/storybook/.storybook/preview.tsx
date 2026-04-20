@@ -5,9 +5,6 @@ import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-paars/index.css'
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-oranje/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index.css';
-import '@rijkshuisstijl-community/design-tokens/src/fluid.css';
-import '@rijkshuisstijl-community/design-tokens/src/fluid-font-size.css';
-import '@rijkshuisstijl-community/design-tokens/src/fluid-space.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Body, PageLayout, Paragraph, Root } from '@rijkshuisstijl-community/components-react';
@@ -19,22 +16,16 @@ import { Preview } from '@storybook/react-vite';
 import { Fragment } from 'react';
 import { StoryRootDecorator } from './StoryRootDecorator';
 
-const themeModifiers = [
-  'basis-layout-container',
-  'basis-layout-container--fluid-font-size',
-  'basis-layout-container--fluid-space',
-].join(' ');
-
 const preview: Preview = {
   decorators: [
     withThemeByClassName({
       themes: {
-        'Kern - Lintblauw': `rhc-theme ${themeModifiers}`,
-        'Uitvoerend - Groen': `uitvoerend-groen ${themeModifiers}`,
-        'Uitvoerend - Hemelblauw': `uitvoerend-hemelblauw ${themeModifiers}`,
-        'Uitvoerend - Oranje': `uitvoerend-oranje ${themeModifiers}`,
-        'Uitvoerend - Paars': `uitvoerend-paars ${themeModifiers}`,
-        'Uitvoerend - Robijn Rood': `uitvoerend-robijnrood ${themeModifiers}`,
+        'Kern - Lintblauw': `rhc-theme rhc-theme--fluid`,
+        'Uitvoerend - Groen': `uitvoerend-groen uitvoerend-groen--fluid`,
+        'Uitvoerend - Hemelblauw': `uitvoerend-hemelblauw uitvoerend-hemelblauw--fluid`,
+        'Uitvoerend - Oranje': `uitvoerend-oranje uitvoerend-oranje--fluid`,
+        'Uitvoerend - Paars': `uitvoerend-paars uitvoerend-paars--fluid`,
+        'Uitvoerend - Robijn Rood': `uitvoerend-robijnrood uitvoerend-robijnrood--fluid`,
       },
       defaultTheme: 'Kern - Lintblauw',
     }),
