@@ -28,7 +28,7 @@ export default defineConfig([
     '**/coverage/',
     '**/dist/',
     '**/tmp/',
-    'apps/rhc-templates/',
+    'apps/rijkshuisstijl-community.nl/',
   ]),
   {
     languageOptions: {

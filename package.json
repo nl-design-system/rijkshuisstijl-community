@@ -86,7 +86,7 @@
     "publish:changeset": "changeset publish",
     "release": "lerna version prerelease --conventional-prerelease --no-changelog --no-private --yes",
     "start": "node_modules/http-server/bin packages/storybook/dist/",
-    "start:rhc-templates": "pnpm run --dir apps/rhc-templates dev",
+    "start:rijkshuisstijl-community.nl": "pnpm run --dir apps/rijkshuisstijl-community.nl dev",
     "storybook": "npm-run-all --parallel watch:**",
     "test": "pnpm run test-workspaces",
     "test-update": "npm-run-all --sequential clean lint build test",
