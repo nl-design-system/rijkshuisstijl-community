@@ -7,9 +7,6 @@ Dit is het Card CSS-component van het Rijkshuisstijl Community Design System[<ht
 - README.md voor alle CSS-componenten
   [<https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/library-css/README.md>]
 
-- Storybook voor dit component
-  [<https://rijkshuisstijl-community.vercel.app/?path=/docs/css-checkbox--docs>]
-
 ## Installatie
 
 ```bash
@@ -18,4 +15,4 @@ pnpm add @rijkshuisstijl-community/checkbox-css
 
 ## Gebruik
 
-Op de Storybook voor card-css [<https://rijkshuisstijl-community.vercel.app/?path=/docs/css-checkbox--docs>] staan voorbeelden voor het gebruik van dit component.
+Op de Storybook voor checkbox-css [<https://rijkshuisstijl-community.vercel.app/?path=/docs/css-checkbox--docs>] staan voorbeelden voor het gebruik van dit component.
