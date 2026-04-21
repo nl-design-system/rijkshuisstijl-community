@@ -49,7 +49,7 @@ export { CodeInput } from './CodeInput';
 export { CodeInputGroup } from './CodeInputGroup';
 export { ColumnLayout, type ColumnLayoutProps } from './ColumnLayout';
 export { type CustomFormFieldProps, FormField } from './FormField';
-export { DataBadgeButton, type DataBadgeButtonProps } from './DataBadgeButton';
+export { DataBadgeButton, type DataBadgeButtonProps } from '@rijkshuisstijl-community/data-badge-button-react';
 export { DataSummary, type DataSummaryProps } from './DataSummary';
 export { DataSummaryItem, type DataSummaryItemProps } from './DataSummaryItem';
 export { type DivRootProps, type HtmlRootProps, Root } from './Root';
