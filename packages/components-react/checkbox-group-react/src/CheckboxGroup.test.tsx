@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { Checkbox } from './Checkbox';
-import { CheckboxGroup } from './CheckboxGroup';
+import { Checkbox } from '@rijkshuisstijl-community/checkbox-react';
+import { CheckboxGroup } from '@rijkshuisstijl-community/checkbox-group-react';
 
 describe('CheckboxGroup', () => {
   it('renders successfully', () => {
