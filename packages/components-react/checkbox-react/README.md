@@ -2,13 +2,10 @@
 
 # Omschrijving
 
-Dit is de Card React-component van het Rijkshuisstijl Community Design System. Zie ook de volgende links:
+Dit is de   Checkbox React-component van het Rijkshuisstijl Community Design System. Zie ook de volgende links:
 
 - README.md voor alle React-componenten
   [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/library-react/README.md]
-
-- Storybook voor dit component
-  [https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-checkbox--docs]
 
 ## Installatie
 
@@ -18,7 +15,7 @@ pnpm add @rijkshuisstijl-community/checkbox-react
 
 ## Gebruik
 
-Op de storybook voor Card React Component staan voorbeelden voor het gebruik van dit component[https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-checkbox--docs]
+Op de storybook voor Checkbox React Component staan voorbeelden voor het gebruik van dit component[https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-checkbox--docs]
 
 ## Testing
 
