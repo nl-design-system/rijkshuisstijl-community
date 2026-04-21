@@ -21,11 +21,6 @@ export default function SharedHeader() {
       className: pathname === '/design-tokens/' ? 'rhc-nav-bar__link--current' : '',
     },
     {
-      href: '/componenten/',
-      label: 'Componenten',
-      className: pathname === '/componenten/' ? 'rhc-nav-bar__link--current' : '',
-    },
-    {
       href: '/voorbeelden/',
       label: 'Voorbeelden',
       className: pathname === '/voorbeelden/' ? 'rhc-nav-bar__link--current' : '',

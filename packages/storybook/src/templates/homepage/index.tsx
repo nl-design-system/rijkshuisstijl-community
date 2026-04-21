@@ -104,7 +104,7 @@ export default function Page() {
               />
               <CardAsLink
                 appearance="horizontal"
-                href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/README.md"
+                href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/library-css/README.md"
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
@@ -118,7 +118,7 @@ export default function Page() {
               />
               <CardAsLink
                 appearance="horizontal"
-                href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/README.md"
+                href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/library-react/README.md"
                 imageAlt=""
                 imagePresentation={true}
                 imageSrc="/placeholder.jpg"
@@ -242,7 +242,7 @@ export default function Page() {
                 }
               />
               <CardAsLink
-                href="https://www.nldesignsystem.nl/handboek/designer/overzicht"
+                href="https://www.nldesignsystem.nl/handboek/designer/introductie/"
                 linkLabel="Lees hoe je mee ontwerpt aan het NL Design System"
                 target="_blank"
                 description={
@@ -258,7 +258,7 @@ export default function Page() {
                 }
               />
               <CardAsLink
-                href="https://www.nldesignsystem.nl/handboek/developer/overzicht"
+                href="https://www.nldesignsystem.nl/handboek/developer/introductie/"
                 linkLabel="Lees hoe je mee ontwikkelt aan het de Rijkshuisstijl Community"
                 target="_blank"
                 description={

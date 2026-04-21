@@ -10,7 +10,7 @@ export {
   type AccordionSectionProps,
   type AccordionSectionProviderProps,
 } from '@rijkshuisstijl-community/accordion-react';
-export { ActionGroup, type ActionGroupProps } from './ActionGroup';
+export { ActionGroup, type ActionGroupProps } from '@rijkshuisstijl-community/action-group-react';
 export { Alert, type AlertProps } from '@rijkshuisstijl-community/alert-react/no-css';
 export { Article, type ArticleProps } from '@rijkshuisstijl-community/article-react';
 export { Blockquote, type BlockquoteProps } from '@rijkshuisstijl-community/blockquote-react';
@@ -22,7 +22,7 @@ export {
   type BreadcrumbNavProps,
   BreadcrumbNavSeparator,
   type BreadcrumbNavSeparatorProps,
-} from './BreadcrumbNav';
+} from '@rijkshuisstijl-community/breadcrumb-nav-react';
 export {
   Button,
   ButtonLink,
@@ -34,7 +34,7 @@ export {
   SecondaryActionButton,
   SubtleButton,
 } from '@rijkshuisstijl-community/button-react';
-export { Card } from './Card';
+export { Card } from '@rijkshuisstijl-community/card-react';
 export {
   CardAsLink,
   type CardAsLinkProps,
@@ -42,7 +42,7 @@ export {
   type FullBleedCardAsLinkProps,
   HorizontalImageCardAsLink,
   type HorizontalImageCardAsLinkProps,
-} from './CardAsLink';
+} from '@rijkshuisstijl-community/card-as-link-react';
 export { Checkbox, type CheckboxProps } from './Checkbox';
 export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
 export { CodeInput } from './CodeInput';
