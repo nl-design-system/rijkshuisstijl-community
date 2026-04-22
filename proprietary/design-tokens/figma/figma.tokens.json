@@ -2525,10 +2525,6 @@
             "$type": "color",
             "$value": "{rhc.color.wit}"
           },
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
-          },
           "on-light-color": {
             "$type": "color",
             "$value": "{rhc.color.zwart}"
@@ -2592,40 +2588,6 @@
             "$value": "{rhc.color.donkergeel.50}"
           }
         },
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.lintblauw.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.lintblauw.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.lintblauw.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.lintblauw.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.lintblauw.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "{rhc.color.lintblauw.600}"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "{rhc.color.lintblauw.700}"
-          }
-        },
         "core": {
           "50": {
             "$type": "color",
@@ -2658,6 +2620,330 @@
           "active": {
             "$type": "color",
             "$value": "{rhc.color.lintblauw.700}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary/core": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.core.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.core.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.core.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.core.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.core.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{rhc.color.core.hover}",
+            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "{rhc.color.core.active}",
+            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary/groen": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#2C5D12"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#275012"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary/hemelblauw": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#1A5587"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#1A4972"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary/oranje": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#994E0E"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#82430F"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary/paars": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#301243"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#2B113A"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary/robijn-rood": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#8A1641"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#761838"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary/mintgroen": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#528E7C"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#477869"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-light-color}"
           }
         }
       }
@@ -11168,6 +11454,13 @@
       "brand/text",
       "common/border",
       "common/color",
+      "common/primary/core",
+      "common/primary/groen",
+      "common/primary/hemelblauw",
+      "common/primary/oranje",
+      "common/primary/paars",
+      "common/primary/robijn-rood",
+      "common/primary/mintgroen",
       "common/type-scale/default",
       "common/type-scale/information-dense",
       "common/viewport/max",
