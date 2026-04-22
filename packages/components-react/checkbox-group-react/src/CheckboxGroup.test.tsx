@@ -1,5 +1,6 @@
 import { CheckboxGroup } from '@rijkshuisstijl-community/checkbox-group-react';
 import '@testing-library/jest-dom/vitest';
+import { cleanup, render, screen } from '@testing-library/react';
 import { PropsWithChildren } from 'react';
 import { afterEach, describe, expect, it } from 'vitest';
 
