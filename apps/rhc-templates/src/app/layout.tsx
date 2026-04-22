@@ -4,7 +4,6 @@
  */
 
 import { PropsWithChildren } from 'react';
-import { Body } from '@utrecht/body-react';
 import { Root } from '@utrecht/root-react';
 import { PageLayout } from '@utrecht/page-layout-react';
 import type { Metadata } from 'next';
@@ -36,9 +35,9 @@ const themeModifiers = [
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
     <Root lang="nl" dir="ltr" className={`rhc-theme rhc-theme--dark-mode ${themeModifiers}`}>
-      <Body>
+      <body>
         <PageLayout>{children}</PageLayout>
-      </Body>
+      </body>
     </Root>
   );
 }

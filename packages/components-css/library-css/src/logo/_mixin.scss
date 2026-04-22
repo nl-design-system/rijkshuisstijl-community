@@ -40,6 +40,9 @@
 
 @mixin rhc-logo__caption {
   color: var(--rhc-logo-color, inherit);
+
+  /* Harden against `font-feature-settings` configured, use the default font for the logotype */
+  font-feature-settings: normal;
   grid-area: caption;
   max-inline-size: var(--rhc-logo-caption-max-inline-size);
 }
