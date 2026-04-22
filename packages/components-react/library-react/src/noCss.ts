@@ -7,11 +7,11 @@ export {
   AccordionSection,
   type AccordionSectionProps,
   type AccordionSectionProviderProps,
-} from '@rijkshuisstijl-community/accordion-react';
-export { ActionGroup, type ActionGroupProps } from '@rijkshuisstijl-community/action-group-react';
+} from '@rijkshuisstijl-community/accordion-react/no-css';
+export { ActionGroup, type ActionGroupProps } from '@rijkshuisstijl-community/action-group-react/no-css';
 export { Alert, type AlertProps } from '@rijkshuisstijl-community/alert-react/no-css';
-export { Article, type ArticleProps } from '@rijkshuisstijl-community/article-react';
-export { Blockquote, type BlockquoteProps } from '@rijkshuisstijl-community/blockquote-react';
+export { Article, type ArticleProps } from '@rijkshuisstijl-community/article-react/no-css';
+export { Blockquote, type BlockquoteProps } from '@rijkshuisstijl-community/blockquote-react/no-css';
 export { Body, type BodyBodyProps, type DivBodyProps } from './Body';
 export {
   BreadcrumbNav,
@@ -20,7 +20,7 @@ export {
   type BreadcrumbNavProps,
   BreadcrumbNavSeparator,
   type BreadcrumbNavSeparatorProps,
-} from '@rijkshuisstijl-community/breadcrumb-nav-react';
+} from '@rijkshuisstijl-community/breadcrumb-nav-react/no-css';
 export {
   Button,
   ButtonLink,
@@ -31,8 +31,8 @@ export {
   PrimaryActionButton,
   SecondaryActionButton,
   SubtleButton,
-} from '@rijkshuisstijl-community/button-react';
-export { Card } from '@rijkshuisstijl-community/card-react';
+} from '@rijkshuisstijl-community/button-react/no-css';
+export { Card } from '@rijkshuisstijl-community/card-react/no-css';
 export {
   CardAsLink,
   type CardAsLinkProps,
@@ -40,9 +40,9 @@ export {
   type FullBleedCardAsLinkProps,
   HorizontalImageCardAsLink,
   type HorizontalImageCardAsLinkProps,
-} from '@rijkshuisstijl-community/card-as-link-react';
-export { Checkbox, type CheckboxProps } from './Checkbox';
-export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
+} from '@rijkshuisstijl-community/card-as-link-react/no-css';
+export { Checkbox, type CheckboxProps } from '@rijkshuisstijl-community/checkbox-react/no-css';
+export { CheckboxGroup, type CheckboxGroupProps } from '@rijkshuisstijl-community/checkbox-group-react/no-css';
 export { CodeInput } from './CodeInput';
 export { CodeInputGroup } from './CodeInputGroup';
 export { ColumnLayout, type ColumnLayoutProps } from './ColumnLayout';
@@ -51,7 +51,7 @@ export { DataBadgeButton, type DataBadgeButtonProps } from './DataBadgeButton';
 export { DataSummary, type DataSummaryProps } from './DataSummary';
 export { DataSummaryItem, type DataSummaryItemProps } from './DataSummaryItem';
 export { type DivRootProps, type HtmlRootProps, Root } from './Root';
-export { DotBadge, type DotBadgeProps } from '@rijkshuisstijl-community/dot-badge-react';
+export { DotBadge, type DotBadgeProps } from '@rijkshuisstijl-community/dot-badge-react/no-css';
 export { Drawer, type DrawerProps } from './Drawer';
 export { ExpandableCheckboxGroup, type ExpandableCheckboxGroupProps } from './ExpandableCheckboxGroup';
 export { Fieldset, FieldsetLegend, type FieldsetLegendProps, type FieldsetProps } from './Fieldset';
@@ -60,7 +60,7 @@ export {
   FigureCaption,
   type FigureCaptionProps,
   type FigureProps,
-} from '@rijkshuisstijl-community/figure-react';
+} from '@rijkshuisstijl-community/figure-react/no-css';
 export { File } from './File';
 export { FileInput, type FileInputProps } from './FileInput';
 export { Footer } from './Footer';
@@ -95,8 +95,8 @@ export {
   flagIconSet,
   getIconSet,
   registerIconSet,
-} from '@rijkshuisstijl-community/icon-react';
-export { Image, type ImageProps } from '@rijkshuisstijl-community/image-react';
+} from '@rijkshuisstijl-community/icon-react/no-css';
+export { Image, type ImageProps } from '@rijkshuisstijl-community/image-react/no-css';
 export {
   Content as LanguageNavigationContent,
   type LanguageNavigationContentProps,
@@ -107,7 +107,7 @@ export {
   Trigger as LanguageNavigationTrigger,
   type LanguageNavigationTriggerProps,
 } from './LanguageNavigation';
-export { Link, type LinkProps } from '@rijkshuisstijl-community/link-react';
+export { Link, type LinkProps } from '@rijkshuisstijl-community/link-react/no-css';
 export { LinkButton, type LinkButtonProps } from './LinkButton';
 export { LinkList, LinkListLink, type LinkListLinkProps, type LinkListProps } from './LinkList';
 export { LinkListCard } from './LinkListCard';
@@ -139,12 +139,12 @@ export { PageContent, type PageContentProps } from './PageContent';
 export { PageHeader, type PageHeaderProps } from './PageHeader';
 export { PageLayout, type PageLayoutProps } from './PageLayout';
 export { PageNumberNavigation, type PageNumberNavigationProps } from './PageNumberNavigation';
-export { Paragraph, type ParagraphProps } from '@rijkshuisstijl-community/paragraph-react';
+export { Paragraph, type ParagraphProps } from '@rijkshuisstijl-community/paragraph-react/no-css';
 export { PreHeading, type PreHeadingProps } from './PreHeading';
 export { Radio, type RadioProps } from './Radio';
 export { RadioGroup, type RadioGroupProps } from './RadioGroup';
 export { RoundedCorner, type RoundedCornerProps } from './RoundedCorner';
-export { Separator, type SeparatorProps } from '@rijkshuisstijl-community/separator-react';
+export { Separator, type SeparatorProps } from '@rijkshuisstijl-community/separator-react/no-css';
 export { SideNav, type SideNavProps } from './SideNav';
 export { SideNavItem, type SideNavItemProps } from './SideNavItem';
 export { SideNavLink, type SideNavLinkProps } from './SideNavLink';

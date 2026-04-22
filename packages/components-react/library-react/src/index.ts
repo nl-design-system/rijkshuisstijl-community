@@ -11,7 +11,7 @@ export {
   type AccordionSectionProviderProps,
 } from '@rijkshuisstijl-community/accordion-react';
 export { ActionGroup, type ActionGroupProps } from '@rijkshuisstijl-community/action-group-react';
-export { Alert, type AlertProps } from '@rijkshuisstijl-community/alert-react/no-css';
+export { Alert, type AlertProps } from '@rijkshuisstijl-community/alert-react';
 export { Article, type ArticleProps } from '@rijkshuisstijl-community/article-react';
 export { Blockquote, type BlockquoteProps } from '@rijkshuisstijl-community/blockquote-react';
 export { Body, type BodyBodyProps, type DivBodyProps } from './Body';
