@@ -1,3 +1,3 @@
 import '@rijkshuisstijl-community/checkbox-group-css';
 
-export { CheckboxGroup } from './CheckboxGroup';
+export { CheckboxGroup, type CheckboxGroupProps } from './CheckboxGroup';
