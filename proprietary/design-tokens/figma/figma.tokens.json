@@ -4234,7 +4234,7 @@
       }
     }
   },
-  "components/button": {
+  "components/button/base": {
     "utrecht": {
       "button": {
         "background-color": {
@@ -4378,18 +4378,6 @@
           }
         },
         "primary-action": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{rhc.color.primary.500}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{rhc.color.transparent}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-primary}"
-          },
           "font-size": {
             "$type": "fontSizes",
             "$value": "{utrecht.button.font-size}"
@@ -4401,6 +4389,344 @@
           "line-height": {
             "$type": "lineHeights",
             "$value": "1.875rem"
+          }
+        },
+        "secondary-action": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{utrecht.button.font-size}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.strong}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "1.875rem"
+          }
+        },
+        "subtle": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{utrecht.button.font-size}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.strong}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "1.875rem"
+          }
+        }
+      },
+      "button-group": {
+        "margin-block-end": {
+          "$type": "dimension",
+          "$value": "{rhc.space.none}",
+          "$description": "[code-only]"
+        },
+        "margin-block-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.none}",
+          "$description": "[code-only]"
+        }
+      }
+    },
+    "rhc": {
+      "icon-only-button": {
+        "padding-block-end": {
+          "$type": "dimension",
+          "$value": "{rhc.space.lg}"
+        },
+        "padding-block-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.lg}"
+        },
+        "padding-inline-end": {
+          "$type": "dimension",
+          "$value": "{rhc.space.lg}"
+        },
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.lg}"
+        }
+      }
+    }
+  },
+  "components/button/color-core": {
+    "utrecht": {
+      "button": {
+        "primary-action": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{rhc.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          },
+          "disabled": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.100}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.400}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.hover}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.on-dark-color}"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.hover}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.on-dark-color}"
+            }
+          },
+          "pressed": {
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.on-dark-color}"
+            },
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
+            }
+          },
+          "active": {
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.foreground.on-dark-color}"
+            },
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
+            }
+          }
+        },
+        "secondary-action": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{rhc.color.transparent}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          },
+          "disabled": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.200}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.300}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.50}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.hover}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.hover}"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.50}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.hover}"
+            }
+          },
+          "pressed": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.100}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.200}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
+            }
+          }
+        },
+        "subtle": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{rhc.color.transparent}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{rhc.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          },
+          "disabled": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.100}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.50}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.hover}"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.50}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.hover}"
+            }
+          },
+          "pressed": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.100}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.200}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "components/button/color-primary": {
+    "utrecht": {
+      "button": {
+        "primary-action": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{rhc.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-primary}"
           },
           "disabled": {
             "background-color": {
@@ -4486,18 +4812,6 @@
             "$type": "color",
             "$value": "{rhc.color.primary.500}"
           },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{utrecht.button.font-size}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{rhc.text.font-weight.strong}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "1.875rem"
-          },
           "disabled": {
             "background-color": {
               "$type": "color",
@@ -4582,18 +4896,6 @@
             "$type": "color",
             "$value": "{rhc.color.primary.500}"
           },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{utrecht.button.font-size}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{rhc.text.font-weight.strong}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "1.875rem"
-          },
           "disabled": {
             "background-color": {
               "$type": "color",
@@ -4665,37 +4967,207 @@
             }
           }
         }
-      },
-      "button-group": {
-        "margin-block-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.none}",
-          "$description": "[code-only]"
+      }
+    }
+  },
+  "components/button/contrast-fix": {
+    "utrecht": {
+      "button": {
+        "secondary-action": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{rhc.color.transparent}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          },
+          "disabled": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.200}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.300}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.50}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.hover}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.hover}"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.50}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.hover}"
+            }
+          },
+          "pressed": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.100}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.200}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
+            }
+          }
         },
-        "margin-block-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.none}",
-          "$description": "[code-only]"
+        "subtle": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{rhc.color.transparent}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{rhc.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          },
+          "disabled": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.100}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.50}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.hover}"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.50}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.hover}"
+            }
+          },
+          "pressed": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.100}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.200}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
+            }
+          }
         }
       }
-    },
-    "rhc": {
-      "icon-only-button": {
-        "padding-block-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.lg}"
+    }
+  },
+  "components/button/lager-label": {
+    "utrecht": {
+      "button": {
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "1.25rem"
         },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.lg}"
+        "primary-action": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{utrecht.button.font-size}"
+          }
         },
-        "padding-inline-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.lg}"
+        "secondary-action": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{utrecht.button.font-size}"
+          }
         },
-        "padding-inline-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.lg}"
+        "subtle": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{utrecht.button.font-size}"
+          }
         }
       }
     }
@@ -9655,1007 +10127,6 @@
       }
     }
   },
-  "overrides/primaire kleur/groen": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.groen.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.groen.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.groen.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.groen.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.groen.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.groen.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "oklch(42.78% 0.1169 137.2)"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "oklch(38.71% 0.1016 137.1)"
-          }
-        },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
-          }
-        }
-      }
-    }
-  },
-  "overrides/primaire kleur/hemelblauw": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.hemelblauw.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.hemelblauw.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.hemelblauw.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.hemelblauw.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.hemelblauw.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.hemelblauw.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "oklch(43.82% 0.1017 248.4)"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "oklch(39.49% 0.086 248.3)"
-          }
-        },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
-          }
-        }
-      }
-    }
-  },
-  "overrides/primaire kleur/mintgroen": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "oklch(60.03% 0.0691 172.6)"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "oklch(60.03% 0.0691 172.6)"
-          }
-        },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-light-color}"
-          }
-        }
-      }
-    }
-  },
-  "overrides/primaire kleur/oranje": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "oklch(50.69% 0.1215 53.6)"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "oklch(45.34% 0.1055 53.92)"
-          }
-        },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
-          }
-        }
-      }
-    }
-  },
-  "overrides/primaire kleur/paars": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.paars.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.paars.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.paars.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.paars.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.paars.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.paars.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "oklch(25.58% 0.0909 309.6)"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "oklch(23.97% 0.0791 311.1)"
-          }
-        },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
-          }
-        }
-      }
-    }
-  },
-  "overrides/primaire kleur/robijn rood": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.robijnrood.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.robijnrood.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.robijnrood.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.robijnrood.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.robijnrood.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.robijnrood.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "oklch(41.89% 0.1515 5.365)"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "oklch(38% 0.1293 5.781)"
-          }
-        },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
-          }
-        }
-      }
-    }
-  },
-  "overrides/primaire kleur/roze": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.roze.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.roze.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.roze.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.roze.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.roze.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.roze.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "oklch(58.32% 0.0943 343)"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "oklch(52.01% 0.0797 343.1)"
-          }
-        },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-light-color}"
-          }
-        }
-      }
-    }
-  },
-  "overrides/primaire kleur/violet": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.violet.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.violet.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.violet.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.violet.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.violet.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.violet.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "oklch(37.63% 0.1367 355.7)"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "oklch(34.12% 0.1167 356.1)"
-          }
-        },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
-          }
-        }
-      }
-    }
-  },
-  "overrides/primaire kleur/contrast fix/alle buttons lintblauw": {
-    "utrecht": {
-      "button": {
-        "primary-action": {
-          "hover": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.hover}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.foreground.on-dark-color}"
-            }
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{rhc.color.transparent}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
-          },
-          "disabled": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.100}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.400}"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.500}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.foreground.on-dark-color}"
-            }
-          },
-          "active": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.active}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.foreground.on-dark-color}"
-            }
-          },
-          "pressed": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.active}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.foreground.on-dark-color}"
-            }
-          }
-        },
-        "secondary-action": {
-          "hover": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.50}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.hover}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.hover}"
-            }
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{rhc.color.transparent}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          },
-          "disabled": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.200}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.300}"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.50}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.500}"
-            }
-          },
-          "active": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.200}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.active}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.active}"
-            }
-          },
-          "pressed": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.100}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.active}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.active}"
-            }
-          }
-        },
-        "subtle": {
-          "hover": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.50}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.hover}"
-            }
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{rhc.color.transparent}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{rhc.color.transparent}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          },
-          "disabled": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.100}"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.50}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.500}"
-            }
-          },
-          "active": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.200}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.active}"
-            }
-          },
-          "pressed": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.100}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.active}"
-            }
-          }
-        }
-      }
-    }
-  },
-  "overrides/primaire kleur/contrast fix/button label groter": {
-    "utrecht": {
-      "button": {
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "20px"
-        }
-      }
-    }
-  },
-  "overrides/primaire kleur/contrast fix/non primary button labels coolgrey": {
-    "utrecht": {
-      "button": {
-        "secondary-action": {
-          "hover": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.100}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            }
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{rhc.color.transparent}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{rhc.color.cool-grey.700}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.cool-grey.700}"
-          },
-          "disabled": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.400}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.400}"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.100}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            }
-          },
-          "active": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.200}"
-            },
-            "border-color": {
-              "$extensions": {
-                "studio.tokens": {
-                  "modify": {
-                    "type": "darken",
-                    "value": "0.4",
-                    "space": "lch"
-                  }
-                }
-              },
-              "$type": "color",
-              "$value": "{rhc.color.primary.500}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            }
-          },
-          "pressed": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.200}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            }
-          }
-        },
-        "subtle": {
-          "hover": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.50}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            }
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{rhc.color.transparent}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{rhc.color.transparent}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.cool-grey.700}"
-          },
-          "disabled": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.400}"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.50}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            }
-          },
-          "active": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.200}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            }
-          },
-          "pressed": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.100}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.900}"
-            }
-          }
-        },
-        "primary-action": {
-          "disabled": {
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.400}"
-            }
-          }
-        }
-      }
-    }
-  },
-  "overrides/primaire kleur/contrast fix/non primary buttons coolgrey": {
-    "utrecht": {
-      "button": {
-        "secondary-action": {
-          "hover": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.200}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            }
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{rhc.color.transparent}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{rhc.color.cool-grey.700}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.cool-grey.700}"
-          },
-          "disabled": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.400}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.400}"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.200}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            }
-          },
-          "active": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.300}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            }
-          },
-          "pressed": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.300}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            }
-          }
-        },
-        "subtle": {
-          "hover": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.200}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            }
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{rhc.color.transparent}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{rhc.color.transparent}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.cool-grey.700}"
-          },
-          "disabled": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.400}"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.200}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.800}"
-            }
-          },
-          "active": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.300}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.900}"
-            }
-          },
-          "pressed": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.300}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.900}"
-            }
-          }
-        }
-      }
-    }
-  },
   "overrides/type-scale/default [code-only]": {
     "rhc": {
       "text": {
@@ -10790,7 +10261,6 @@
         "components/backdrop": "enabled",
         "components/blockquote": "enabled",
         "components/breadcrumb": "enabled",
-        "components/button": "enabled",
         "components/card": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
@@ -10862,7 +10332,9 @@
         "common/primary-color/core": "enabled",
         "common/base": "enabled",
         "components/heading/base": "enabled",
-        "components/heading/color-core": "enabled"
+        "components/heading/color-core": "enabled",
+        "components/button/base": "enabled",
+        "components/button/color-core": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10884,7 +10356,6 @@
         "components/backdrop": "enabled",
         "components/blockquote": "enabled",
         "components/breadcrumb": "enabled",
-        "components/button": "enabled",
         "components/card": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
@@ -10945,7 +10416,6 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "brand/text": "enabled",
-        "overrides/primaire kleur/groen": "enabled",
         "common/vendor": "enabled",
         "components/form-field-label-suffix": "enabled",
         "components/data-badge/utrecht": "enabled",
@@ -10957,7 +10427,9 @@
         "common/primary-color/groen": "enabled",
         "common/base": "enabled",
         "components/heading/base": "enabled",
-        "components/heading/color-core": "enabled"
+        "components/heading/color-core": "enabled",
+        "components/button/base": "enabled",
+        "components/button/color-primary": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10979,7 +10451,6 @@
         "components/backdrop": "enabled",
         "components/blockquote": "enabled",
         "components/breadcrumb": "enabled",
-        "components/button": "enabled",
         "components/card": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
@@ -11040,7 +10511,6 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "brand/text": "enabled",
-        "overrides/primaire kleur/hemelblauw": "enabled",
         "common/vendor": "enabled",
         "components/form-field-label-suffix": "enabled",
         "components/data-badge/utrecht": "enabled",
@@ -11052,7 +10522,9 @@
         "common/primary-color/hemelblauw": "enabled",
         "common/base": "enabled",
         "components/heading/base": "enabled",
-        "components/heading/color-core": "enabled"
+        "components/heading/color-core": "enabled",
+        "components/button/base": "enabled",
+        "components/button/color-primary": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11074,7 +10546,6 @@
         "components/backdrop": "enabled",
         "components/blockquote": "enabled",
         "components/breadcrumb": "enabled",
-        "components/button": "enabled",
         "components/card": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
@@ -11135,9 +10606,6 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "brand/text": "enabled",
-        "overrides/primaire kleur/oranje": "enabled",
-        "overrides/primaire kleur/contrast fix/button label groter": "enabled",
-        "overrides/primaire kleur/contrast fix/non primary buttons coolgrey": "enabled",
         "common/vendor": "enabled",
         "components/form-field-label-suffix": "enabled",
         "components/data-badge/utrecht": "enabled",
@@ -11149,7 +10617,11 @@
         "common/primary-color/oranje": "enabled",
         "common/base": "enabled",
         "components/heading/base": "enabled",
-        "components/heading/color-core": "enabled"
+        "components/heading/color-core": "enabled",
+        "components/button/base": "enabled",
+        "components/button/color-primary": "enabled",
+        "components/button/contrast-fix": "enabled",
+        "components/button/lager-label": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11171,7 +10643,6 @@
         "components/backdrop": "enabled",
         "components/blockquote": "enabled",
         "components/breadcrumb": "enabled",
-        "components/button": "enabled",
         "components/card": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
@@ -11232,7 +10703,6 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "brand/text": "enabled",
-        "overrides/primaire kleur/paars": "enabled",
         "common/vendor": "enabled",
         "components/form-field-label-suffix": "enabled",
         "components/data-badge/utrecht": "enabled",
@@ -11244,7 +10714,9 @@
         "common/primary-color/paars": "enabled",
         "common/base": "enabled",
         "components/heading/base": "enabled",
-        "components/heading/color-primary": "enabled"
+        "components/heading/color-primary": "enabled",
+        "components/button/base": "enabled",
+        "components/button/color-primary": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11266,7 +10738,6 @@
         "components/backdrop": "enabled",
         "components/blockquote": "enabled",
         "components/breadcrumb": "enabled",
-        "components/button": "enabled",
         "components/card": "enabled",
         "components/card-as-link": "enabled",
         "components/checkbox-group": "enabled",
@@ -11327,7 +10798,6 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "brand/text": "enabled",
-        "overrides/primaire kleur/robijn rood": "enabled",
         "common/vendor": "enabled",
         "components/form-field-label-suffix": "enabled",
         "components/data-badge/utrecht": "enabled",
@@ -11339,7 +10809,9 @@
         "common/primary-color/robijn-rood": "enabled",
         "common/base": "enabled",
         "components/heading/base": "enabled",
-        "components/heading/color-core": "enabled"
+        "components/heading/color-core": "enabled",
+        "components/button/base": "enabled",
+        "components/button/color-primary": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11376,7 +10848,11 @@
       "components/backdrop",
       "components/blockquote",
       "components/breadcrumb",
-      "components/button",
+      "components/button/base",
+      "components/button/color-core",
+      "components/button/color-primary",
+      "components/button/contrast-fix",
+      "components/button/lager-label",
       "components/card",
       "components/card-as-link",
       "components/checkbox-group",
@@ -11442,18 +10918,6 @@
       "components/toggletip",
       "components/unordered-list",
       "components/page-header",
-      "overrides/primaire kleur/groen",
-      "overrides/primaire kleur/hemelblauw",
-      "overrides/primaire kleur/mintgroen",
-      "overrides/primaire kleur/oranje",
-      "overrides/primaire kleur/paars",
-      "overrides/primaire kleur/robijn rood",
-      "overrides/primaire kleur/roze",
-      "overrides/primaire kleur/violet",
-      "overrides/primaire kleur/contrast fix/alle buttons lintblauw",
-      "overrides/primaire kleur/contrast fix/button label groter",
-      "overrides/primaire kleur/contrast fix/non primary button labels coolgrey",
-      "overrides/primaire kleur/contrast fix/non primary buttons coolgrey",
       "overrides/type-scale/default [code-only]",
       "overrides/type-scale/information dense [code-only]"
     ]
