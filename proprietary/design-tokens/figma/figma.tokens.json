@@ -6447,14 +6447,10 @@
       }
     }
   },
-  "components/heading": {
+  "components/heading/base": {
     "nl": {
       "heading": {
         "level-1": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          },
           "font-family": {
             "$type": "fontFamilies",
             "$value": "{rhc.text.font-family.default}"
@@ -6483,10 +6479,6 @@
           }
         },
         "level-2": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          },
           "font-family": {
             "$type": "fontFamilies",
             "$value": "{rhc.text.font-family.default}"
@@ -6515,10 +6507,6 @@
           }
         },
         "level-3": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          },
           "font-family": {
             "$type": "fontFamilies",
             "$value": "{rhc.text.font-family.default}"
@@ -6547,10 +6535,6 @@
           }
         },
         "level-4": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          },
           "font-family": {
             "$type": "fontFamilies",
             "$value": "{rhc.text.font-family.default}"
@@ -6579,10 +6563,6 @@
           }
         },
         "level-5": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          },
           "font-family": {
             "$type": "fontFamilies",
             "$value": "{rhc.text.font-family.default}"
@@ -6611,10 +6591,6 @@
           }
         },
         "level-6": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          },
           "font-family": {
             "$type": "fontFamilies",
             "$value": "{rhc.text.font-family.default}"
@@ -6640,6 +6616,90 @@
             "$type": "dimension",
             "$value": "{rhc.space.none}",
             "$description": "[code only]"
+          }
+        }
+      }
+    }
+  },
+  "components/heading/color-core": {
+    "nl": {
+      "heading": {
+        "level-1": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        },
+        "level-2": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        },
+        "level-3": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        },
+        "level-4": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        },
+        "level-5": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        },
+        "level-6": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        }
+      }
+    }
+  },
+  "components/heading/color-primary": {
+    "nl": {
+      "heading": {
+        "level-1": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
+          }
+        },
+        "level-2": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
+          }
+        },
+        "level-3": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
+          }
+        },
+        "level-4": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
+          }
+        },
+        "level-5": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
+          }
+        },
+        "level-6": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}"
           }
         }
       }
@@ -9595,42 +9655,6 @@
       }
     }
   },
-  "overrides/heading-color/primary": {
-    "nl": {
-      "heading": {
-        "level-1": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.primary.500}"
-          }
-        },
-        "level-2": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.primary.500}"
-          }
-        },
-        "level-3": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.primary.500}"
-          }
-        },
-        "level-4": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.primary.500}"
-          }
-        },
-        "level-5": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.primary.500}"
-          }
-        }
-      }
-    }
-  },
   "overrides/primaire kleur/groen": {
     "rhc": {
       "color": {
@@ -10632,54 +10656,6 @@
       }
     }
   },
-  "overrides/responsive/min": {
-    "rhc": {
-      "text": {
-        "font-size": {
-          "sm": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.sm}"
-          },
-          "md": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.md}"
-          },
-          "lg": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.lg}"
-          },
-          "xl": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.xl}"
-          },
-          "2xl": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.2xl}"
-          },
-          "3xl": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.3xl}"
-          }
-        }
-      },
-      "icon": {
-        "md": {
-          "inset-block-start": {
-            "$type": "dimension",
-            "$value": "0rem",
-            "$description": "[figma-only] [temporary – until nl-icon]"
-          }
-        },
-        "lg": {
-          "inset-block-start": {
-            "$type": "dimension",
-            "$value": "0.188rem",
-            "$description": "[figma-only] [temporary – until nl-icon]"
-          }
-        }
-      }
-    }
-  },
   "overrides/type-scale/default [code-only]": {
     "rhc": {
       "text": {
@@ -10733,62 +10709,6 @@
           "thin": {
             "$type": "fontWeights",
             "$value": "200"
-          }
-        }
-      }
-    }
-  },
-  "overrides/type-scale/information dense [figma-only]": {
-    "rhc": {
-      "text": {
-        "font-size": {
-          "max": {
-            "sm": {
-              "$type": "fontSizes",
-              "$value": "0.875rem",
-              "$description": "[figma-only]"
-            },
-            "md": {
-              "$type": "fontSizes",
-              "$value": "1rem",
-              "$description": "[figma-only]"
-            },
-            "lg": {
-              "$type": "fontSizes",
-              "$value": "1.25rem",
-              "$description": "[figma-only]"
-            },
-            "xl": {
-              "$type": "fontSizes",
-              "$value": "1.5rem",
-              "$description": "[figma-only]"
-            },
-            "2xl": {
-              "$type": "fontSizes",
-              "$value": "1.75rem",
-              "$description": "[figma-only]"
-            },
-            "3xl": {
-              "$type": "fontSizes",
-              "$value": "2rem",
-              "$description": "[figma-only]"
-            }
-          }
-        }
-      },
-      "icon": {
-        "md": {
-          "inset-block-start": {
-            "$type": "dimension",
-            "$value": "0rem",
-            "$description": "[figma-only] [temporary – until nl-icon]"
-          }
-        },
-        "lg": {
-          "inset-block-start": {
-            "$type": "dimension",
-            "$value": "0.188rem",
-            "$description": "[figma-only] [temporary – until nl-icon]"
           }
         }
       }
@@ -10931,7 +10851,6 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "brand/text": "enabled",
-        "components/heading": "enabled",
         "common/vendor": "enabled",
         "components/form-field-label-suffix": "enabled",
         "components/data-badge/utrecht": "enabled",
@@ -10941,7 +10860,9 @@
         "common/type-scale/default": "enabled",
         "common/viewport/max": "enabled",
         "common/primary-color/core": "enabled",
-        "common/base": "enabled"
+        "common/base": "enabled",
+        "components/heading/base": "enabled",
+        "components/heading/color-core": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11025,7 +10946,6 @@
         "components/page-footer": "enabled",
         "brand/text": "enabled",
         "overrides/primaire kleur/groen": "enabled",
-        "components/heading": "enabled",
         "common/vendor": "enabled",
         "components/form-field-label-suffix": "enabled",
         "components/data-badge/utrecht": "enabled",
@@ -11035,7 +10955,9 @@
         "common/type-scale/default": "enabled",
         "common/viewport/max": "enabled",
         "common/primary-color/groen": "enabled",
-        "common/base": "enabled"
+        "common/base": "enabled",
+        "components/heading/base": "enabled",
+        "components/heading/color-core": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11119,7 +11041,6 @@
         "components/page-footer": "enabled",
         "brand/text": "enabled",
         "overrides/primaire kleur/hemelblauw": "enabled",
-        "components/heading": "enabled",
         "common/vendor": "enabled",
         "components/form-field-label-suffix": "enabled",
         "components/data-badge/utrecht": "enabled",
@@ -11129,7 +11050,9 @@
         "common/type-scale/default": "enabled",
         "common/viewport/max": "enabled",
         "common/primary-color/hemelblauw": "enabled",
-        "common/base": "enabled"
+        "common/base": "enabled",
+        "components/heading/base": "enabled",
+        "components/heading/color-core": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11215,7 +11138,6 @@
         "overrides/primaire kleur/oranje": "enabled",
         "overrides/primaire kleur/contrast fix/button label groter": "enabled",
         "overrides/primaire kleur/contrast fix/non primary buttons coolgrey": "enabled",
-        "components/heading": "enabled",
         "common/vendor": "enabled",
         "components/form-field-label-suffix": "enabled",
         "components/data-badge/utrecht": "enabled",
@@ -11225,7 +11147,9 @@
         "common/type-scale/default": "enabled",
         "common/viewport/max": "enabled",
         "common/primary-color/oranje": "enabled",
-        "common/base": "enabled"
+        "common/base": "enabled",
+        "components/heading/base": "enabled",
+        "components/heading/color-core": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11309,7 +11233,6 @@
         "components/page-footer": "enabled",
         "brand/text": "enabled",
         "overrides/primaire kleur/paars": "enabled",
-        "components/heading": "enabled",
         "common/vendor": "enabled",
         "components/form-field-label-suffix": "enabled",
         "components/data-badge/utrecht": "enabled",
@@ -11319,7 +11242,9 @@
         "common/type-scale/default": "enabled",
         "common/viewport/max": "enabled",
         "common/primary-color/paars": "enabled",
-        "common/base": "enabled"
+        "common/base": "enabled",
+        "components/heading/base": "enabled",
+        "components/heading/color-primary": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11403,7 +11328,6 @@
         "components/page-footer": "enabled",
         "brand/text": "enabled",
         "overrides/primaire kleur/robijn rood": "enabled",
-        "components/heading": "enabled",
         "common/vendor": "enabled",
         "components/form-field-label-suffix": "enabled",
         "components/data-badge/utrecht": "enabled",
@@ -11413,7 +11337,9 @@
         "common/type-scale/default": "enabled",
         "common/viewport/max": "enabled",
         "common/primary-color/robijn-rood": "enabled",
-        "common/base": "enabled"
+        "common/base": "enabled",
+        "components/heading/base": "enabled",
+        "components/heading/color-core": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11477,7 +11403,9 @@
       "components/form-field-label-suffix",
       "components/form-field-option-label",
       "components/form-field-radio-option",
-      "components/heading",
+      "components/heading/base",
+      "components/heading/color-core",
+      "components/heading/color-primary",
       "components/hero",
       "components/icon",
       "components/link-list",
@@ -11514,7 +11442,6 @@
       "components/toggletip",
       "components/unordered-list",
       "components/page-header",
-      "overrides/heading-color/primary",
       "overrides/primaire kleur/groen",
       "overrides/primaire kleur/hemelblauw",
       "overrides/primaire kleur/mintgroen",
@@ -11527,9 +11454,7 @@
       "overrides/primaire kleur/contrast fix/button label groter",
       "overrides/primaire kleur/contrast fix/non primary button labels coolgrey",
       "overrides/primaire kleur/contrast fix/non primary buttons coolgrey",
-      "overrides/responsive/min",
       "overrides/type-scale/default [code-only]",
-      "overrides/type-scale/information dense [figma-only]",
       "overrides/type-scale/information dense [code-only]"
     ]
   }
