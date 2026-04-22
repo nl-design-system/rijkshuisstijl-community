@@ -20,4 +20,4 @@
 '@rijkshuisstijl-community/link-react': minor
 ---
 
-Added an option to import the components seperate from the css.
+Added an option to import the components separate from the css.
