@@ -1,7 +1,7 @@
+import { Checkbox } from '@rijkshuisstijl-community/checkbox-react';
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { Checkbox } from './Checkbox';
 import { CheckboxGroup } from './CheckboxGroup';
 
 describe('CheckboxGroup', () => {
