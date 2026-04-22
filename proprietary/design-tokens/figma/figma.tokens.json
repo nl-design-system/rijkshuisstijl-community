@@ -2843,6 +2843,180 @@
       }
     }
   },
+  "common/viewport/max": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "sm": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.sm}"
+          },
+          "md": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.md}"
+          },
+          "lg": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.lg}"
+          },
+          "xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.xl}"
+          },
+          "2xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.2xl}"
+          },
+          "3xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.max.3xl}"
+          }
+        }
+      },
+      "icon": {
+        "inset-block-start": {
+          "md": {
+            "$type": "dimension",
+            "$value": "{rhc.icon.inset-block-start.max.md}",
+            "$description": "[figma-only] [temporary – until nl-icon]"
+          }
+        }
+      },
+      "space": {
+        "none": {
+          "$type": "dimension",
+          "$value": "0rem"
+        },
+        "2xs": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.2xs}"
+        },
+        "xs": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.xs}"
+        },
+        "sm": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.sm}"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.md}"
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.lg}"
+        },
+        "xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.xl}"
+        },
+        "2xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.2xl}"
+        },
+        "3xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.3xl}"
+        },
+        "4xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.4xl}"
+        },
+        "5xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.max.5xl}"
+        }
+      }
+    }
+  },
+  "common/viewport/min": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "sm": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.sm}"
+          },
+          "md": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.md}"
+          },
+          "lg": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.lg}"
+          },
+          "xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.xl}"
+          },
+          "2xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.2xl}"
+          },
+          "3xl": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.min.3xl}"
+          }
+        }
+      },
+      "icon": {
+        "inset-block-start": {
+          "md": {
+            "$type": "dimension",
+            "$value": "{rhc.icon.inset-block-start.min.md}",
+            "$description": "[figma-only] [temporary – until nl-icon]"
+          }
+        }
+      },
+      "space": {
+        "none": {
+          "$type": "dimension",
+          "$value": "0rem"
+        },
+        "2xs": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.2xs}"
+        },
+        "xs": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.xs}"
+        },
+        "sm": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.sm}"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.md}"
+        },
+        "lg": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.lg}"
+        },
+        "xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.xl}"
+        },
+        "2xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.2xl}"
+        },
+        "3xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.3xl}"
+        },
+        "4xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.4xl}"
+        },
+        "5xl": {
+          "$type": "dimension",
+          "$value": "{rhc.space.min.5xl}"
+        }
+      }
+    }
+  },
   "common/focus": {
     "rhc": {
       "focus": {
@@ -2925,32 +3099,6 @@
   "common/text": {
     "rhc": {
       "text": {
-        "font-size": {
-          "sm": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.sm}"
-          },
-          "md": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.md}"
-          },
-          "lg": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.lg}"
-          },
-          "xl": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.xl}"
-          },
-          "2xl": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.2xl}"
-          },
-          "3xl": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.max.3xl}"
-          }
-        },
         "font-family": {
           "default": {
             "$type": "fontFamilies",
@@ -2975,22 +3123,6 @@
           "strong": {
             "$type": "fontWeights",
             "$value": "{rhc.text.font-weight.bold}"
-          }
-        }
-      },
-      "icon": {
-        "md": {
-          "inset-block-start": {
-            "$type": "dimension",
-            "$value": "0.188rem",
-            "$description": "[figma-only] [temporary – until nl-icon]"
-          }
-        },
-        "lg": {
-          "inset-block-start": {
-            "$type": "dimension",
-            "$value": "0.375rem",
-            "$description": "[figma-only] [temporary – until nl-icon]"
           }
         }
       }
@@ -10540,7 +10672,8 @@
         "components/data-badge/nl": "enabled",
         "brand/color": "enabled",
         "brand/color-mode/light": "enabled",
-        "common/type-scale/default": "enabled"
+        "common/type-scale/default": "enabled",
+        "common/viewport/max": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10635,7 +10768,8 @@
         "components/data-badge/nl": "enabled",
         "brand/color": "enabled",
         "brand/color-mode/light": "enabled",
-        "common/type-scale/default": "enabled"
+        "common/type-scale/default": "enabled",
+        "common/viewport/max": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10730,7 +10864,8 @@
         "components/data-badge/nl": "enabled",
         "brand/color": "enabled",
         "brand/color-mode/light": "enabled",
-        "common/type-scale/default": "enabled"
+        "common/type-scale/default": "enabled",
+        "common/viewport/max": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10827,7 +10962,8 @@
         "components/data-badge/nl": "enabled",
         "brand/color": "enabled",
         "brand/color-mode/light": "enabled",
-        "common/type-scale/default": "enabled"
+        "common/type-scale/default": "enabled",
+        "common/viewport/max": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10922,7 +11058,8 @@
         "components/data-badge/nl": "enabled",
         "brand/color": "enabled",
         "brand/color-mode/light": "enabled",
-        "common/type-scale/default": "enabled"
+        "common/type-scale/default": "enabled",
+        "common/viewport/max": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11017,7 +11154,8 @@
         "components/data-badge/nl": "enabled",
         "brand/color": "enabled",
         "brand/color-mode/light": "enabled",
-        "common/type-scale/default": "enabled"
+        "common/type-scale/default": "enabled",
+        "common/viewport/max": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11036,6 +11174,8 @@
       "common/color",
       "common/type-scale/default",
       "common/type-scale/information-dense",
+      "common/viewport/max",
+      "common/viewport/min",
       "common/focus",
       "common/rounded-corner",
       "common/size",
