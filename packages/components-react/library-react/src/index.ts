@@ -43,7 +43,7 @@ export {
   HorizontalImageCardAsLink,
   type HorizontalImageCardAsLinkProps,
 } from '@rijkshuisstijl-community/card-as-link-react';
-export { Checkbox, type CheckboxProps } from './Checkbox';
+export { Checkbox, type CheckboxProps } from '@rijkshuisstijl-community/checkbox-react';
 export { CheckboxGroup, type CheckboxGroupProps } from '@rijkshuisstijl-community/checkbox-group-react';
 export { CodeInput } from './CodeInput';
 export { CodeInputGroup } from './CodeInputGroup';
