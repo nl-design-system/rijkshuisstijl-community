@@ -2663,6 +2663,186 @@
       }
     }
   },
+  "common/type-scale/default": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "max": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "1rem",
+              "$description": "[figma-only]"
+            },
+            "md": {
+              "$type": "fontSizes",
+              "$value": "1.25rem",
+              "$description": "[figma-only]"
+            },
+            "lg": {
+              "$type": "fontSizes",
+              "$value": "1.5rem",
+              "$description": "[figma-only]"
+            },
+            "xl": {
+              "$type": "fontSizes",
+              "$value": "2rem",
+              "$description": "[figma-only]"
+            },
+            "2xl": {
+              "$type": "fontSizes",
+              "$value": "2.5rem",
+              "$description": "[figma-only]"
+            },
+            "3xl": {
+              "$type": "fontSizes",
+              "$value": "3rem",
+              "$description": "[figma-only]"
+            }
+          },
+          "min": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "0.875rem",
+              "$description": "[figma-only]"
+            },
+            "md": {
+              "$type": "fontSizes",
+              "$value": "1rem",
+              "$description": "[figma-only]"
+            },
+            "lg": {
+              "$type": "fontSizes",
+              "$value": "1.25rem",
+              "$description": "[figma-only]"
+            },
+            "xl": {
+              "$type": "fontSizes",
+              "$value": "1.5rem",
+              "$description": "[figma-only]"
+            },
+            "2xl": {
+              "$type": "fontSizes",
+              "$value": "1.75rem",
+              "$description": "[figma-only]"
+            },
+            "3xl": {
+              "$type": "fontSizes",
+              "$value": "2rem",
+              "$description": "[figma-only]"
+            }
+          }
+        }
+      },
+      "icon": {
+        "inset-block-start": {
+          "min": {
+            "md": {
+              "$type": "dimension",
+              "$value": "0rem",
+              "$description": "[figma-only] [temporary – until nl-icon]"
+            }
+          },
+          "max": {
+            "md": {
+              "$type": "dimension",
+              "$value": "0.188rem",
+              "$description": "[figma-only] [temporary – until nl-icon]"
+            }
+          }
+        }
+      }
+    }
+  },
+  "common/type-scale/information-dense": {
+    "rhc": {
+      "text": {
+        "font-size": {
+          "min": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "0.875rem",
+              "$description": "[figma-only]"
+            },
+            "md": {
+              "$type": "fontSizes",
+              "$value": "1rem",
+              "$description": "[figma-only]"
+            },
+            "lg": {
+              "$type": "fontSizes",
+              "$value": "1.25rem",
+              "$description": "[figma-only]"
+            },
+            "xl": {
+              "$type": "fontSizes",
+              "$value": "1.5rem",
+              "$description": "[figma-only]"
+            },
+            "2xl": {
+              "$type": "fontSizes",
+              "$value": "1.75rem",
+              "$description": "[figma-only]"
+            },
+            "3xl": {
+              "$type": "fontSizes",
+              "$value": "2rem",
+              "$description": "[figma-only]"
+            }
+          },
+          "max": {
+            "sm": {
+              "$type": "fontSizes",
+              "$value": "0.875rem",
+              "$description": "[figma-only]"
+            },
+            "md": {
+              "$type": "fontSizes",
+              "$value": "1rem",
+              "$description": "[figma-only]"
+            },
+            "lg": {
+              "$type": "fontSizes",
+              "$value": "1.25rem",
+              "$description": "[figma-only]"
+            },
+            "xl": {
+              "$type": "fontSizes",
+              "$value": "1.5rem",
+              "$description": "[figma-only]"
+            },
+            "2xl": {
+              "$type": "fontSizes",
+              "$value": "1.75rem",
+              "$description": "[figma-only]"
+            },
+            "3xl": {
+              "$type": "fontSizes",
+              "$value": "2rem",
+              "$description": "[figma-only]"
+            }
+          }
+        }
+      },
+      "icon": {
+        "inset-block-start": {
+          "min": {
+            "md": {
+              "$type": "dimension",
+              "$value": "0rem",
+              "$description": "[figma-only] [temporary – until nl-icon]"
+            }
+          },
+          "max": {
+            "md": {
+              "$type": "dimension",
+              "$value": "0rem",
+              "$description": "[figma-only] [temporary – until nl-icon]"
+            }
+          }
+        }
+      }
+    }
+  },
   "common/focus": {
     "rhc": {
       "focus": {
@@ -10359,7 +10539,8 @@
         "components/data-badge/utrecht": "enabled",
         "components/data-badge/nl": "enabled",
         "brand/color": "enabled",
-        "brand/color-mode/light": "enabled"
+        "brand/color-mode/light": "enabled",
+        "common/type-scale/default": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10453,7 +10634,8 @@
         "components/data-badge/utrecht": "enabled",
         "components/data-badge/nl": "enabled",
         "brand/color": "enabled",
-        "brand/color-mode/light": "enabled"
+        "brand/color-mode/light": "enabled",
+        "common/type-scale/default": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10547,7 +10729,8 @@
         "components/data-badge/utrecht": "enabled",
         "components/data-badge/nl": "enabled",
         "brand/color": "enabled",
-        "brand/color-mode/light": "enabled"
+        "brand/color-mode/light": "enabled",
+        "common/type-scale/default": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10643,7 +10826,8 @@
         "components/data-badge/utrecht": "enabled",
         "components/data-badge/nl": "enabled",
         "brand/color": "enabled",
-        "brand/color-mode/light": "enabled"
+        "brand/color-mode/light": "enabled",
+        "common/type-scale/default": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10737,7 +10921,8 @@
         "components/data-badge/utrecht": "enabled",
         "components/data-badge/nl": "enabled",
         "brand/color": "enabled",
-        "brand/color-mode/light": "enabled"
+        "brand/color-mode/light": "enabled",
+        "common/type-scale/default": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10831,7 +11016,8 @@
         "components/data-badge/utrecht": "enabled",
         "components/data-badge/nl": "enabled",
         "brand/color": "enabled",
-        "brand/color-mode/light": "enabled"
+        "brand/color-mode/light": "enabled",
+        "common/type-scale/default": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10848,6 +11034,8 @@
       "brand/text",
       "common/border",
       "common/color",
+      "common/type-scale/default",
+      "common/type-scale/information-dense",
       "common/focus",
       "common/rounded-corner",
       "common/size",
