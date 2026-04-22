@@ -5,10 +5,8 @@ import { PropsWithChildren } from 'react';
 import { afterEach, describe, expect, it } from 'vitest';
 
 const Checkbox = ({ children }: PropsWithChildren) => (
-  <label>
     <input type="checkbox" />
     {children}
-  </label>
 );
 
 describe('CheckboxGroup', () => {
