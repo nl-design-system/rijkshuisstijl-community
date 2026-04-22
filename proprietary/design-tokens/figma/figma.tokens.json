@@ -2483,21 +2483,7 @@
       }
     }
   },
-  "common/border": {
-    "rhc": {
-      "border-radius": {
-        "sm": {
-          "$type": "dimension",
-          "$value": "2.5px"
-        },
-        "md": {
-          "$type": "dimension",
-          "$value": "5px"
-        }
-      }
-    }
-  },
-  "common/color": {
+  "common/base": {
     "rhc": {
       "color": {
         "foreground": {
@@ -2622,328 +2608,60 @@
             "$value": "{rhc.color.lintblauw.700}"
           }
         }
-      }
-    }
-  },
-  "common/primary/core": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.core.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.core.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.core.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.core.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.core.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "{rhc.color.core.hover}",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "{rhc.color.core.active}",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
+      },
+      "border-radius": {
+        "sm": {
+          "$type": "dimension",
+          "$value": "2.5px"
+        },
+        "md": {
+          "$type": "dimension",
+          "$value": "5px"
+        }
+      },
+      "size": {
+        "pointer-target": {
+          "$type": "dimension",
+          "$value": "48px"
+        },
+        "icon": {
+          "md": {
+            "$type": "dimension",
+            "$value": "24px"
           }
         },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
+        "page": {
+          "md": {
+            "$type": "dimension",
+            "$value": "80rem"
           }
         }
-      }
-    }
-  },
-  "common/primary/groen": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.groen.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.groen.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.groen.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.groen.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.groen.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.groen.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "#2C5D12"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "#275012"
+      },
+      "text": {
+        "font-family": {
+          "default": {
+            "$type": "fontFamilies",
+            "$value": "{rhc.text.font-family.sans}"
           }
         },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
-          }
-        }
-      }
-    }
-  },
-  "common/primary/hemelblauw": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.hemelblauw.50}"
+        "font-weight": {
+          "default": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.regular}"
           },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.hemelblauw.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.hemelblauw.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.hemelblauw.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.hemelblauw.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.hemelblauw.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "#1A5587"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "#1A4972"
+          "strong": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.bold}"
           }
         },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
-          }
-        }
-      }
-    }
-  },
-  "common/primary/oranje": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.50}"
+        "line-height": {
+          "sm": {
+            "$type": "lineHeights",
+            "$value": "125%"
           },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.oranje.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "#994E0E"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "#82430F"
-          }
-        },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
-          }
-        }
-      }
-    }
-  },
-  "common/primary/paars": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.paars.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.paars.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.paars.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.paars.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.paars.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.paars.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "#301243"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "#2B113A"
-          }
-        },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
-          }
-        }
-      }
-    }
-  },
-  "common/primary/robijn-rood": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.robijnrood.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.robijnrood.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.robijnrood.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.robijnrood.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.robijnrood.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.robijnrood.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "#8A1641"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "#761838"
-          }
-        },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
-          }
-        }
-      }
-    }
-  },
-  "common/primary/mintgroen": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.mintgroen.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "#528E7C"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "#477869"
-          }
-        },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-light-color}"
+          "md": {
+            "$type": "lineHeights",
+            "$value": "150%"
           }
         }
       }
@@ -3299,6 +3017,330 @@
       }
     }
   },
+  "common/primary-color/core": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.core.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.core.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.core.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.core.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.core.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{rhc.color.core.hover}",
+            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "{rhc.color.core.active}",
+            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary-color/groen": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#2C5D12"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#275012"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary-color/hemelblauw": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#1A5587"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#1A4972"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary-color/mintgroen": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#528E7C"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#477869"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-light-color}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary-color/oranje": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#994E0E"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#82430F"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary-color/paars": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#301243"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#2B113A"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary-color/robijn-rood": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "#8A1641"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "#761838"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
+        }
+      }
+    }
+  },
   "common/focus": {
     "rhc": {
       "focus": {
@@ -3351,60 +3393,6 @@
           "border-radius": {
             "$type": "dimension",
             "$value": "{rhc.size.2-lint}"
-          }
-        }
-      }
-    }
-  },
-  "common/size": {
-    "rhc": {
-      "size": {
-        "pointer-target": {
-          "$type": "dimension",
-          "$value": "48px"
-        },
-        "icon": {
-          "md": {
-            "$type": "dimension",
-            "$value": "24px"
-          }
-        },
-        "page": {
-          "md": {
-            "$type": "other",
-            "$value": "80rem"
-          }
-        }
-      }
-    }
-  },
-  "common/text": {
-    "rhc": {
-      "text": {
-        "font-family": {
-          "default": {
-            "$type": "fontFamilies",
-            "$value": "{rhc.text.font-family.sans}"
-          }
-        },
-        "line-height": {
-          "sm": {
-            "$type": "lineHeights",
-            "$value": "125%"
-          },
-          "md": {
-            "$type": "lineHeights",
-            "$value": "150%"
-          }
-        },
-        "font-weight": {
-          "default": {
-            "$type": "fontWeights",
-            "$value": "{rhc.text.font-weight.regular}"
-          },
-          "strong": {
-            "$type": "fontWeights",
-            "$value": "{rhc.text.font-weight.bold}"
           }
         }
       }
@@ -10873,11 +10861,8 @@
         "brand/border": "enabled",
         "brand/size": "enabled",
         "brand/space": "enabled",
-        "common/border": "enabled",
-        "common/color": "enabled",
         "common/focus": "enabled",
         "common/rounded-corner": "enabled",
-        "common/size": "enabled",
         "components/accordion": "enabled",
         "components/action-group": "enabled",
         "components/alert": "enabled",
@@ -10946,7 +10931,6 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "brand/text": "enabled",
-        "common/text": "enabled",
         "components/heading": "enabled",
         "common/vendor": "enabled",
         "components/form-field-label-suffix": "enabled",
@@ -10956,7 +10940,8 @@
         "brand/color-mode/light": "enabled",
         "common/type-scale/default": "enabled",
         "common/viewport/max": "enabled",
-        "common/primary/core": "enabled"
+        "common/primary-color/core": "enabled",
+        "common/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -10969,11 +10954,8 @@
         "brand/border": "enabled",
         "brand/size": "enabled",
         "brand/space": "enabled",
-        "common/border": "enabled",
-        "common/color": "enabled",
         "common/focus": "enabled",
         "common/rounded-corner": "enabled",
-        "common/size": "enabled",
         "components/accordion": "enabled",
         "components/action-group": "enabled",
         "components/alert": "enabled",
@@ -11042,7 +11024,6 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "brand/text": "enabled",
-        "common/text": "enabled",
         "overrides/primaire kleur/groen": "enabled",
         "components/heading": "enabled",
         "common/vendor": "enabled",
@@ -11053,7 +11034,8 @@
         "brand/color-mode/light": "enabled",
         "common/type-scale/default": "enabled",
         "common/viewport/max": "enabled",
-        "common/primary/groen": "enabled"
+        "common/primary-color/groen": "enabled",
+        "common/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11066,11 +11048,8 @@
         "brand/border": "enabled",
         "brand/size": "enabled",
         "brand/space": "enabled",
-        "common/border": "enabled",
-        "common/color": "enabled",
         "common/focus": "enabled",
         "common/rounded-corner": "enabled",
-        "common/size": "enabled",
         "components/accordion": "enabled",
         "components/action-group": "enabled",
         "components/alert": "enabled",
@@ -11139,7 +11118,6 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "brand/text": "enabled",
-        "common/text": "enabled",
         "overrides/primaire kleur/hemelblauw": "enabled",
         "components/heading": "enabled",
         "common/vendor": "enabled",
@@ -11150,7 +11128,8 @@
         "brand/color-mode/light": "enabled",
         "common/type-scale/default": "enabled",
         "common/viewport/max": "enabled",
-        "common/primary/hemelblauw": "enabled"
+        "common/primary-color/hemelblauw": "enabled",
+        "common/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11163,11 +11142,8 @@
         "brand/border": "enabled",
         "brand/size": "enabled",
         "brand/space": "enabled",
-        "common/border": "enabled",
-        "common/color": "enabled",
         "common/focus": "enabled",
         "common/rounded-corner": "enabled",
-        "common/size": "enabled",
         "components/accordion": "enabled",
         "components/action-group": "enabled",
         "components/alert": "enabled",
@@ -11236,7 +11212,6 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "brand/text": "enabled",
-        "common/text": "enabled",
         "overrides/primaire kleur/oranje": "enabled",
         "overrides/primaire kleur/contrast fix/button label groter": "enabled",
         "overrides/primaire kleur/contrast fix/non primary buttons coolgrey": "enabled",
@@ -11249,7 +11224,8 @@
         "brand/color-mode/light": "enabled",
         "common/type-scale/default": "enabled",
         "common/viewport/max": "enabled",
-        "common/primary/oranje": "enabled"
+        "common/primary-color/oranje": "enabled",
+        "common/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11262,11 +11238,8 @@
         "brand/border": "enabled",
         "brand/size": "enabled",
         "brand/space": "enabled",
-        "common/border": "enabled",
-        "common/color": "enabled",
         "common/focus": "enabled",
         "common/rounded-corner": "enabled",
-        "common/size": "enabled",
         "components/accordion": "enabled",
         "components/action-group": "enabled",
         "components/alert": "enabled",
@@ -11335,7 +11308,6 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "brand/text": "enabled",
-        "common/text": "enabled",
         "overrides/primaire kleur/paars": "enabled",
         "components/heading": "enabled",
         "common/vendor": "enabled",
@@ -11346,7 +11318,8 @@
         "brand/color-mode/light": "enabled",
         "common/type-scale/default": "enabled",
         "common/viewport/max": "enabled",
-        "common/primary/paars": "enabled"
+        "common/primary-color/paars": "enabled",
+        "common/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11359,11 +11332,8 @@
         "brand/border": "enabled",
         "brand/size": "enabled",
         "brand/space": "enabled",
-        "common/border": "enabled",
-        "common/color": "enabled",
         "common/focus": "enabled",
         "common/rounded-corner": "enabled",
-        "common/size": "enabled",
         "components/accordion": "enabled",
         "components/action-group": "enabled",
         "components/alert": "enabled",
@@ -11432,7 +11402,6 @@
         "components/page-number-navigation": "enabled",
         "components/page-footer": "enabled",
         "brand/text": "enabled",
-        "common/text": "enabled",
         "overrides/primaire kleur/robijn rood": "enabled",
         "components/heading": "enabled",
         "common/vendor": "enabled",
@@ -11443,7 +11412,8 @@
         "brand/color-mode/light": "enabled",
         "common/type-scale/default": "enabled",
         "common/viewport/max": "enabled",
-        "common/primary/robijn-rood": "enabled"
+        "common/primary-color/robijn-rood": "enabled",
+        "common/base": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -11458,23 +11428,20 @@
       "brand/space",
       "brand/size",
       "brand/text",
-      "common/border",
-      "common/color",
-      "common/primary/core",
-      "common/primary/groen",
-      "common/primary/hemelblauw",
-      "common/primary/oranje",
-      "common/primary/paars",
-      "common/primary/robijn-rood",
-      "common/primary/mintgroen",
+      "common/base",
       "common/type-scale/default",
       "common/type-scale/information-dense",
       "common/viewport/max",
       "common/viewport/min",
+      "common/primary-color/core",
+      "common/primary-color/groen",
+      "common/primary-color/hemelblauw",
+      "common/primary-color/mintgroen",
+      "common/primary-color/oranje",
+      "common/primary-color/paars",
+      "common/primary-color/robijn-rood",
       "common/focus",
       "common/rounded-corner",
-      "common/size",
-      "common/text",
       "common/vendor",
       "components/accordion",
       "components/action-group",
