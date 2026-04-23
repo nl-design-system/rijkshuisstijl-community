@@ -1,50 +1,73 @@
 import { existsSync, mkdirSync } from 'node:fs';
 import { readFile, writeFile } from 'node:fs/promises';
 
-const themeGroupsAlwaysOn = ['Brand', 'Common', 'Components'];
-const themeGroupsToExpandThemeMatrix = ['Theme', 'Type scale'];
-const themeGroupsToIgnore = ['Viewport'];
+const DEBUG = true;
 
-export const parseThemeDefinition = (value) => {
-  const { group, id, name, selectedTokenSets } = value;
-
-  const parsedSelectedTokenSets = {};
-
-  for (const [tokenSet, status] of Object.entries(selectedTokenSets)) {
-    parsedSelectedTokenSets[tokenSet] = status;
-  }
-
-  return {
-    group,
-    id,
-    name,
-    selectedTokenSets: parsedSelectedTokenSets,
-  };
+const settings = {
+  alwaysOn: ['Brand', 'Common', 'Components'],
+  expandThemeMatrix: ['Theme', 'Type scale'],
+  ignore: ['Viewport'],
 };
 
-export const parseTokensFile = (json) => {
-  const parsed = JSON.parse(json);
+const readTokensFile = async () => {
+  const json = await readFile('./figma/figma.tokens.json', 'utf-8');
+  return JSON.parse(json);
+};
 
-  const tokenSets = {};
-  let themes = [];
+const findSetting = (groupName) =>
+  Object.entries(settings).find(([_, groupNames]) => groupNames.indexOf(groupName) !== -1)[0] ?? 'Not found';
 
-  for (const [key, value] of Object.entries(parsed)) {
-    if (key === '$themes') {
-      themes = value.map(parseThemeDefinition);
-      continue;
+const debugInfo = (themesMatrix) => {
+  const debugData = Object.entries(themesMatrix).reduce(
+    (acc, [themeGroupName, choices]) => ({
+      product: acc.product * Object.keys(choices).length,
+      nums: [...acc.nums, `${Object.keys(choices).length} ${themeGroupName}`],
+    }),
+    { product: 1, nums: [] },
+  );
+  return `${debugData.nums.join(' x ')} = ${debugData.product}`;
+};
+
+const readThemeGroups = (themeGroups) => {
+  let themesAlwaysOn = {};
+  const themesMatrix = {};
+  themeGroups.forEach((themeGroup) => {
+    const setting = findSetting(themeGroup.group);
+    switch (setting) {
+      case 'expandThemeMatrix':
+        if (!(themeGroup.group in themesMatrix)) themesMatrix[themeGroup.group] = {};
+        themesMatrix[themeGroup.group][themeGroup.name] = themeGroup.selectedTokenSets;
+        break;
+
+      case 'alwaysOn':
+        themesAlwaysOn = {
+          ...themesAlwaysOn,
+          ...themeGroup.selectedTokenSets,
+        };
+        break;
+
+      case 'Not found':
+        console.warn(`Theme group found that is not configured: ${themeGroup.group}.`);
+        break;
+
+      case 'ignore':
+      default:
+        break;
     }
+  });
 
-    tokenSets[key] = value;
-  }
-
-  return { themes, tokenSets };
+  return { themesAlwaysOn, themesMatrix };
 };
 
-const addTokenSetIfPresent = (tokenSets, key, value) => {
-  if (value !== undefined) {
-    tokenSets[key] = value;
-  }
-};
+const buildThemesFiles = ({ tokens, themesAlwaysOn, themesMatrix }) => {};
+
+const tokens = await readTokensFile();
+const { themesAlwaysOn, themesMatrix } = readThemeGroups(tokens.$themes);
+if (DEBUG) {
+  console.log(`Found ${Object.keys(themesAlwaysOn).length} always on entries`);
+  console.log(`About to generate ${debugInfo(themesMatrix)} themes`);
+}
+buildThemesFiles({ tokens, themesAlwaysOn, themesMatrix });
 
 // Split tokens into separate files
 export async function transformAndSplitTokens() {
@@ -99,4 +122,4 @@ export async function transformAndSplitTokens() {
   await writeFile('./src/generated/themes.json', JSON.stringify(processedThemes, null, 2));
 }
 
-await transformAndSplitTokens();
+//await transformAndSplitTokens();
