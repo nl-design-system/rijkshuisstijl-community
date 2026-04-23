@@ -1,1 +1,1 @@
-export { DotBadge, type DotBadgeProps } from './DotBadge';
+export * from './DotBadge';

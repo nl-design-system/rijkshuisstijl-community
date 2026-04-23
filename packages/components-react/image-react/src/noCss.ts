@@ -1,1 +1,1 @@
-export { Image, type ImageProps } from './Image';
+export * from './Image';

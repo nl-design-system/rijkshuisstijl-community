@@ -1,1 +1,1 @@
-export { ActionGroup, type ActionGroupProps } from './ActionGroup';
+export * from './ActionGroup';

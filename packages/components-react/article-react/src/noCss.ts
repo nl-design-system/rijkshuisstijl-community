@@ -1,1 +1,1 @@
-export { Article, type ArticleProps } from './Article';
+export * from './Article';

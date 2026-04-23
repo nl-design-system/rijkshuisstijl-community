@@ -1,1 +1,1 @@
-export { Blockquote, type BlockquoteProps } from './Blockquote';
+export * from './Blockquote';
