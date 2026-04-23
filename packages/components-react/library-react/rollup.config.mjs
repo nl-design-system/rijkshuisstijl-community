@@ -76,7 +76,7 @@ export const createRollupConfig = (pkgJson) => {
     configs.push(
       createReactRollupConfig({
         input: './src/noCss.ts',
-        output: [createOutputConfig('./dist/noCss.esm.js', 'esm')],
+        output: [createOutputConfig('./dist/noCss.mjs', 'esm')],
       }),
     );
   }
