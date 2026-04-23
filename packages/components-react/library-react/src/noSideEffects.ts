@@ -1,16 +1,16 @@
 // Export overwrites and new components
-export * from '@rijkshuisstijl-community/accordion-react/no-css';
-export * from '@rijkshuisstijl-community/action-group-react/no-css';
-export * from '@rijkshuisstijl-community/alert-react/no-css';
-export * from '@rijkshuisstijl-community/article-react/no-css';
-export * from '@rijkshuisstijl-community/blockquote-react/no-css';
+export * from '@rijkshuisstijl-community/accordion-react/no-side-effects';
+export * from '@rijkshuisstijl-community/action-group-react/no-side-effects';
+export * from '@rijkshuisstijl-community/alert-react/no-side-effects';
+export * from '@rijkshuisstijl-community/article-react/no-side-effects';
+export * from '@rijkshuisstijl-community/blockquote-react/no-side-effects';
 export * from './Body';
-export * from '@rijkshuisstijl-community/breadcrumb-nav-react/no-css';
-export * from '@rijkshuisstijl-community/button-react/no-css';
-export * from '@rijkshuisstijl-community/card-react/no-css';
-export * from '@rijkshuisstijl-community/card-as-link-react/no-css';
-export * from '@rijkshuisstijl-community/checkbox-react/no-css';
-export * from '@rijkshuisstijl-community/checkbox-group-react/no-css';
+export * from '@rijkshuisstijl-community/breadcrumb-nav-react/no-side-effects';
+export * from '@rijkshuisstijl-community/button-react/no-side-effects';
+export * from '@rijkshuisstijl-community/card-react/no-side-effects';
+export * from '@rijkshuisstijl-community/card-as-link-react/no-side-effects';
+export * from '@rijkshuisstijl-community/checkbox-react/no-side-effects';
+export * from '@rijkshuisstijl-community/checkbox-group-react/no-side-effects';
 export * from './CodeInput';
 export * from './CodeInputGroup';
 export * from './ColumnLayout';
@@ -19,11 +19,11 @@ export * from './DataBadgeButton';
 export * from './DataSummary';
 export * from './DataSummaryItem';
 export * from './Root';
-export * from '@rijkshuisstijl-community/dot-badge-react/no-css';
+export * from '@rijkshuisstijl-community/dot-badge-react/no-side-effects';
 export * from './Drawer';
 export * from './ExpandableCheckboxGroup';
 export * from './Fieldset';
-export * from '@rijkshuisstijl-community/figure-react/no-css';
+export * from '@rijkshuisstijl-community/figure-react/no-side-effects';
 export * from './File';
 export * from './FileInput';
 export * from './Footer';
@@ -39,8 +39,8 @@ export * from './FormSummary';
 export * from './Heading';
 export * from './HeadingGroup';
 export * from './Hero';
-export * from '@rijkshuisstijl-community/icon-react/no-css';
-export * from '@rijkshuisstijl-community/image-react/no-css';
+export * from '@rijkshuisstijl-community/icon-react/no-side-effects';
+export * from '@rijkshuisstijl-community/image-react/no-side-effects';
 export {
   Content as LanguageNavigationContent,
   type LanguageNavigationContentProps,
@@ -51,7 +51,7 @@ export {
   Trigger as LanguageNavigationTrigger,
   type LanguageNavigationTriggerProps,
 } from './LanguageNavigation';
-export * from '@rijkshuisstijl-community/link-react/no-css';
+export * from '@rijkshuisstijl-community/link-react/no-side-effects';
 export * from './LinkButton';
 export * from './LinkList';
 export * from './LinkListCard';
@@ -69,12 +69,12 @@ export * from './PageContent';
 export * from './PageHeader';
 export * from './PageLayout';
 export * from './PageNumberNavigation';
-export * from '@rijkshuisstijl-community/paragraph-react/no-css';
+export * from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 export * from './PreHeading';
 export * from './Radio';
 export * from './RadioGroup';
 export * from './RoundedCorner';
-export * from '@rijkshuisstijl-community/separator-react/no-css';
+export * from '@rijkshuisstijl-community/separator-react/no-side-effects';
 export * from './SideNav';
 export * from './SideNavItem';
 export * from './SideNavLink';

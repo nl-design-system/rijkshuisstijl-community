@@ -72,11 +72,11 @@ export const createRollupConfig = (pkgJson) => {
     }),
   ];
 
-  if (pkgJson.exports?.['./no-css']) {
+  if (pkgJson.exports?.['./no-side-effects']) {
     configs.push(
       createReactRollupConfig({
-        input: './src/noCss.ts',
-        output: [createOutputConfig('./dist/noCss.mjs', 'esm')],
+        input: './src/noSideEffects.ts',
+        output: [createOutputConfig('./dist/noSideEffects.mjs', 'esm')],
       }),
     );
   }
