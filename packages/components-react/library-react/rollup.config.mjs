@@ -76,7 +76,7 @@ export const createRollupConfig = (pkgJson, { clientComponent = false } = {}) =>
     configs.push(
       createReactRollupConfig({
         input: './src/noSideEffects.ts',
-        output: [createOutputConfig('./dist/noSideEffects.mjs', 'esm', clientComponent)],
+        output: [createOutputConfig('./dist/noSideEffects.mjs', 'esm', false)],
       }),
     );
   }
