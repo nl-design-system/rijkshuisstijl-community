@@ -44,12 +44,12 @@ const plugins = [
   postcss(),
 ];
 
-const createOutputConfig = (file, format) => ({
+const createOutputConfig = (file, format, clientComponent) => ({
   file,
   format,
   sourcemap: true,
   globals: outputGlobals,
-  banner: clientBanner,
+  banner: clientComponent ? clientBanner : undefined,
 });
 
 const createReactRollupConfig = ({ input, output }) => {
@@ -61,13 +61,13 @@ const createReactRollupConfig = ({ input, output }) => {
   };
 };
 
-export const createRollupConfig = (pkgJson) => {
+export const createRollupConfig = (pkgJson, { clientComponent = false } = {}) => {
   const configs = [
     createReactRollupConfig({
       input: './src/index.ts',
       output: [
-        createOutputConfig(pkgJson.module, 'esm'),
-        ...(pkgJson.main ? [createOutputConfig(pkgJson.main, 'cjs')] : []),
+        createOutputConfig(pkgJson.module, 'esm', clientComponent),
+        ...(pkgJson.main ? [createOutputConfig(pkgJson.main, 'cjs', clientComponent)] : []),
       ],
     }),
   ];
@@ -76,7 +76,7 @@ export const createRollupConfig = (pkgJson) => {
     configs.push(
       createReactRollupConfig({
         input: './src/noSideEffects.ts',
-        output: [createOutputConfig('./dist/noSideEffects.mjs', 'esm')],
+        output: [createOutputConfig('./dist/noSideEffects.mjs', 'esm', clientComponent)],
       }),
     );
   }
@@ -84,4 +84,4 @@ export const createRollupConfig = (pkgJson) => {
   return configs;
 };
 
-export default createRollupConfig(packageJson);
+export default createRollupConfig(packageJson, { clientComponent: true });
