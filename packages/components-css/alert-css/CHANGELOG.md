@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/alert-css
 
+## 4.0.1
+
+### Patch Changes
+
+- e9dae7c: Updated broken links in the documentation
+
 ## 4.0.0
 
 ### Major Changes
