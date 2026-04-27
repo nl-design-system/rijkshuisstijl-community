@@ -29,6 +29,31 @@ const debugInfo = (themesMatrix) => {
   return `${debugData.nums.join(' x ')} = ${debugData.product}`;
 };
 
+/**
+  Transforms the $themes object from figma.tokens.json into a tree-like
+  structure that is more like what we need. So from:
+  [
+    {
+      name: 'Default',
+      group: 'Type scale',
+      selectedTokenSets: [ ... ],
+    },
+    {
+      name: 'Information dense',
+      group: 'Type scale',
+      selectedTokenSets: [ ... ],
+    },
+    ...
+  ]
+  into:
+  {
+    'Type scale': {
+      'Default': [ ... ],
+      'Information dense': [ ... ],
+    },
+    ...
+  }
+*/
 const readThemeGroups = (themeGroups) => {
   let themesAlwaysOn = {};
   const themesMatrix = {};
