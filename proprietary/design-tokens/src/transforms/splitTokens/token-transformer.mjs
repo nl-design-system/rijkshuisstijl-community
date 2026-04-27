@@ -2,6 +2,7 @@ import { existsSync, mkdirSync } from 'node:fs';
 import { readFile, writeFile } from 'node:fs/promises';
 
 const DEBUG = true;
+const TOKENS_FILE = './figma/figma.tokens.json';
 
 const settings = {
   alwaysOn: ['Brand', 'Common', 'Components'],
@@ -10,7 +11,7 @@ const settings = {
 };
 
 const readTokensFile = async () => {
-  const json = await readFile('./figma/figma.tokens.json', 'utf-8');
+  const json = await readFile(TOKENS_FILE, 'utf-8');
   return JSON.parse(json);
 };
 
@@ -59,13 +60,22 @@ const readThemeGroups = (themeGroups) => {
   return { themesAlwaysOn, themesMatrix };
 };
 
-const buildThemesFiles = ({ tokens, themesAlwaysOn, themesMatrix }) => {};
+const buildThemesFiles = ({ tokens, themesAlwaysOn, themesMatrix }) => {
+  if (settings.expandThemeMatrix.find((themeGroupName) => !(themeGroupName in themesMatrix))) {
+    console.error(`Error: configured theme group name ${themeGroupName} not found after processing ${TOKENS_FILE}`);
+    if (DEBUG) console.log(themesMatrix);
+    process.exit(15);
+  }
+
+  Object.entries(themesMatrix).reduce((acc, val, index) => ({}), {});
+};
 
 const tokens = await readTokensFile();
 const { themesAlwaysOn, themesMatrix } = readThemeGroups(tokens.$themes);
 if (DEBUG) {
   console.log(`Found ${Object.keys(themesAlwaysOn).length} always on entries`);
   console.log(`About to generate ${debugInfo(themesMatrix)} themes`);
+  //console.log(themesMatrix);
 }
 buildThemesFiles({ tokens, themesAlwaysOn, themesMatrix });
 
