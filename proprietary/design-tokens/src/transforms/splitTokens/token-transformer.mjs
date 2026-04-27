@@ -53,6 +53,27 @@ const debugInfo = (themesMatrix) => {
     },
     ...
   }
+
+  but what we actually want is:
+  [
+    [ ... ... ], (type scale default + theme 1
+    [ ... ... ], (type scale default + theme 2
+    ...
+    [ ... ... ], (type scale information dense + theme 1
+    [ ... ... ], (type scale information dense + theme 2
+    ...
+  ]
+  so we probably need an intermediate:
+  [
+    {
+      typescale: default
+      theme: 1
+    }
+    {
+      typescale: default
+      theme: 2
+    }
+  ]
 */
 const readThemeGroups = (themeGroups) => {
   let themesAlwaysOn = {};
