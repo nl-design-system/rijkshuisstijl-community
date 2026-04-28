@@ -2,7 +2,7 @@
 
 # Omschrijving
 
-Dit is de Card React-component van het Rijkshuisstijl Community Design System. Zie ook de volgende links:
+Dit is de Card As Link React-component van het Rijkshuisstijl Community Design System. Zie ook de volgende links:
 
 - README.md voor alle React-componenten
   [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/library-react/README.md]
@@ -15,7 +15,7 @@ pnpm add @rijkshuisstijl-community/card-as-link-react
 
 ## Gebruik
 
-Op de storybook voor Card React Component staan voorbeelden voor het gebruik van dit component[https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-card-as-link--docs]
+Op de storybook voor Card As Link React Component staan voorbeelden voor het gebruik van dit component[https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-card-as-link--docs]
 
 ## Testing
 
