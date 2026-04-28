@@ -7,9 +7,6 @@ Dit is de Card React-component van het Rijkshuisstijl Community Design System. Z
 - README.md voor alle React-componenten
   [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/library-react/README.md]
 
-- Storybook voor dit component
-  [https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-card-as-link--docs]
-
 ## Installatie
 
 ```bash
