@@ -22,7 +22,7 @@ describe('flattenMatrix', () => {
       { name: 'groen-information-dense', tokenSets: ['3', '4', 'b'] },
     ];
 
-    expect(flattenMatrix(input)).toBe(expectedOutput);
+    expect(flattenMatrix(input)).toStrictEqual(expectedOutput);
   });
 
   test('flattens a simple tree correctly (advanced)', () => {
@@ -42,16 +42,16 @@ describe('flattenMatrix', () => {
     };
 
     const expectedOutput = [
-      { name: 'kern-default', tokenSets: ['x', '1', '2', 'a'] },
-      { name: 'kern-information-dense', tokenSets: ['x', '1', '2', 'b'] },
-      { name: 'groen-default', tokenSets: ['x', '3', '4', 'a'] },
-      { name: 'groen-information-dense', tokenSets: ['x', '3', '4', 'b'] },
-      { name: 'kern-default', tokenSets: ['y', '1', '2', 'a'] },
-      { name: 'kern-information-dense', tokenSets: ['y', '1', '2', 'b'] },
-      { name: 'groen-default', tokenSets: ['y', '3', '4', 'a'] },
-      { name: 'groen-information-dense', tokenSets: ['y', '3', '4', 'b'] },
+      { name: 'ding1-kern-default', tokenSets: ['x', '1', '2', 'a'] },
+      { name: 'ding1-kern-information-dense', tokenSets: ['x', '1', '2', 'b'] },
+      { name: 'ding1-groen-default', tokenSets: ['x', '3', '4', 'a'] },
+      { name: 'ding1-groen-information-dense', tokenSets: ['x', '3', '4', 'b'] },
+      { name: 'ding2-kern-default', tokenSets: ['y', '1', '2', 'a'] },
+      { name: 'ding2-kern-information-dense', tokenSets: ['y', '1', '2', 'b'] },
+      { name: 'ding2-groen-default', tokenSets: ['y', '3', '4', 'a'] },
+      { name: 'ding2-groen-information-dense', tokenSets: ['y', '3', '4', 'b'] },
     ];
 
-    expect(flattenMatrix(input)).toBe(expectedOutput);
+    expect(flattenMatrix(input)).toStrictEqual(expectedOutput);
   });
 });
