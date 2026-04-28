@@ -70,43 +70,43 @@ const debugInfo = (tokenSetsMatrix) => {
   ]
 */
 const readThemeGroups = (themeGroups) => {
-  let tokenSetsAlwaysOn = {};
+  let tokenSetsAlwaysOn = [];
+  let tokenSetNamesAlwaysOn = [];
   const tokenSetsMatrix = {};
   themeGroups.forEach((themeGroup) => {
     if (IGNORE.indexOf(themeGroup.group) !== -1) return;
 
-    if (themeGroup.group === ALWAYS_ON)
-      tokenSetsAlwaysOn = {
+    if (themeGroup.name === ALWAYS_ON) {
+      tokenSetsAlwaysOn = [
         ...tokenSetsAlwaysOn,
-        ...themeGroup.selectedTokenSets,
-      };
-    else {
+        ...Object.entries(themeGroup.selectedTokenSets)
+          .map(([tokenSetName, enabled]) => enabled === 'enabled' && tokenSetName)
+          .map(Boolean),
+      ];
+      tokenSetNamesAlwaysOn.push(themeGroup.group);
+    } else {
       if (!(themeGroup.group in tokenSetsMatrix)) tokenSetsMatrix[themeGroup.group] = {};
       tokenSetsMatrix[themeGroup.group][themeGroup.name] = themeGroup.selectedTokenSets;
     }
   });
 
-  return { tokenSetsAlwaysOn, tokenSetsMatrix };
+  return { tokenSetsAlwaysOn, tokenSetsMatrix, tokenSetNamesAlwaysOn };
 };
 
-const buildThemesFiles = ({ tokens, tokenSetsAlwaysOn, tokenSetsMatrix }) => {
-  if (settings.expandThemeMatrix.find((themeGroupName) => !(themeGroupName in tokenSetsMatrix))) {
-    console.error(`Error: configured theme group name ${themeGroupName} not found after processing ${TOKENS_FILE}`);
-    if (DEBUG) console.log(tokenSetsMatrix);
-    process.exit(15);
-  }
-
-  Object.entries(tokenSetsMatrix).reduce((acc, val, index) => ({}), {});
+const flattenMatrix = (tokenSetsMatrix) => {
+  console.log(tokenSetsMatrix);
 };
 
 const tokens = await readTokensFile();
-const { tokenSetsAlwaysOn, tokenSetsMatrix } = readThemeGroups(tokens.$themes);
+const { tokenSetsAlwaysOn, tokenSetsMatrix, tokenSetNamesAlwaysOn } = readThemeGroups(tokens.$themes);
 if (DEBUG) {
-  console.log(`Found ${Object.keys(tokenSetsAlwaysOn).length} always on entries`);
+  console.log(
+    `Found ${Object.keys(tokenSetsAlwaysOn).length} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`,
+  );
   console.log(`About to generate ${debugInfo(tokenSetsMatrix)} themes`);
   //console.log(tokenSetsMatrix);
 }
-buildThemesFiles({ tokens, tokenSetsAlwaysOn, tokenSetsMatrix });
+flattenMatrix(tokenSetsMatrix);
 
 // Split tokens into separate files
 export async function transformAndSplitTokens() {
