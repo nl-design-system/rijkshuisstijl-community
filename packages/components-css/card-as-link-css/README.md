@@ -18,4 +18,4 @@ pnpm add @rijkshuisstijl-community/card-as-link-css
 
 ## Gebruik
 
-Op de Storybook voor card-css [<https://rijkshuisstijl-community.vercel.app/?path=/docs/css-card-as-link--docs>] staan voorbeelden voor het gebruik van dit component.
+Op de Storybook voor card-as-link-css [<https://rijkshuisstijl-community.vercel.app/?path=/docs/css-card-as-link--docs>] staan voorbeelden voor het gebruik van dit component.
