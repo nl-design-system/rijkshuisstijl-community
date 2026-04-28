@@ -4,22 +4,16 @@ import { readFile, writeFile } from 'node:fs/promises';
 const DEBUG = true;
 const TOKENS_FILE = './figma/figma.tokens.json';
 
-const settings = {
-  alwaysOn: ['Brand', 'Common', 'Components'],
-  expandThemeMatrix: ['Theme', 'Type scale'],
-  ignore: ['Viewport'],
-};
+const ALWAYS_ON = 'Always on';
+const IGNORE = ['Viewport'];
 
 const readTokensFile = async () => {
   const json = await readFile(TOKENS_FILE, 'utf-8');
   return JSON.parse(json);
 };
 
-const findSetting = (groupName) =>
-  Object.entries(settings).find(([_, groupNames]) => groupNames.indexOf(groupName) !== -1)[0] ?? 'Not found';
-
-const debugInfo = (themesMatrix) => {
-  const debugData = Object.entries(themesMatrix).reduce(
+const debugInfo = (tokenSetsMatrix) => {
+  const debugData = Object.entries(tokenSetsMatrix).reduce(
     (acc, [themeGroupName, choices]) => ({
       product: acc.product * Object.keys(choices).length,
       nums: [...acc.nums, `${Object.keys(choices).length} ${themeGroupName}`],
@@ -76,54 +70,43 @@ const debugInfo = (themesMatrix) => {
   ]
 */
 const readThemeGroups = (themeGroups) => {
-  let themesAlwaysOn = {};
-  const themesMatrix = {};
+  let tokenSetsAlwaysOn = {};
+  const tokenSetsMatrix = {};
   themeGroups.forEach((themeGroup) => {
-    const setting = findSetting(themeGroup.group);
-    switch (setting) {
-      case 'expandThemeMatrix':
-        if (!(themeGroup.group in themesMatrix)) themesMatrix[themeGroup.group] = {};
-        themesMatrix[themeGroup.group][themeGroup.name] = themeGroup.selectedTokenSets;
-        break;
+    if (IGNORE.indexOf(themeGroup.group) !== -1) return;
 
-      case 'alwaysOn':
-        themesAlwaysOn = {
-          ...themesAlwaysOn,
-          ...themeGroup.selectedTokenSets,
-        };
-        break;
-
-      case 'Not found':
-        console.warn(`Theme group found that is not configured: ${themeGroup.group}.`);
-        break;
-
-      case 'ignore':
-      default:
-        break;
+    if (themeGroup.group === ALWAYS_ON)
+      tokenSetsAlwaysOn = {
+        ...tokenSetsAlwaysOn,
+        ...themeGroup.selectedTokenSets,
+      };
+    else {
+      if (!(themeGroup.group in tokenSetsMatrix)) tokenSetsMatrix[themeGroup.group] = {};
+      tokenSetsMatrix[themeGroup.group][themeGroup.name] = themeGroup.selectedTokenSets;
     }
   });
 
-  return { themesAlwaysOn, themesMatrix };
+  return { tokenSetsAlwaysOn, tokenSetsMatrix };
 };
 
-const buildThemesFiles = ({ tokens, themesAlwaysOn, themesMatrix }) => {
-  if (settings.expandThemeMatrix.find((themeGroupName) => !(themeGroupName in themesMatrix))) {
+const buildThemesFiles = ({ tokens, tokenSetsAlwaysOn, tokenSetsMatrix }) => {
+  if (settings.expandThemeMatrix.find((themeGroupName) => !(themeGroupName in tokenSetsMatrix))) {
     console.error(`Error: configured theme group name ${themeGroupName} not found after processing ${TOKENS_FILE}`);
-    if (DEBUG) console.log(themesMatrix);
+    if (DEBUG) console.log(tokenSetsMatrix);
     process.exit(15);
   }
 
-  Object.entries(themesMatrix).reduce((acc, val, index) => ({}), {});
+  Object.entries(tokenSetsMatrix).reduce((acc, val, index) => ({}), {});
 };
 
 const tokens = await readTokensFile();
-const { themesAlwaysOn, themesMatrix } = readThemeGroups(tokens.$themes);
+const { tokenSetsAlwaysOn, tokenSetsMatrix } = readThemeGroups(tokens.$themes);
 if (DEBUG) {
-  console.log(`Found ${Object.keys(themesAlwaysOn).length} always on entries`);
-  console.log(`About to generate ${debugInfo(themesMatrix)} themes`);
-  //console.log(themesMatrix);
+  console.log(`Found ${Object.keys(tokenSetsAlwaysOn).length} always on entries`);
+  console.log(`About to generate ${debugInfo(tokenSetsMatrix)} themes`);
+  //console.log(tokenSetsMatrix);
 }
-buildThemesFiles({ tokens, themesAlwaysOn, themesMatrix });
+buildThemesFiles({ tokens, tokenSetsAlwaysOn, tokenSetsMatrix });
 
 // Split tokens into separate files
 export async function transformAndSplitTokens() {
