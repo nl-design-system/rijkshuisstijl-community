@@ -16,7 +16,7 @@ export * from './CodeInputGroup';
 export * from './ColumnLayout';
 export * from './FormField';
 export * from './DataBadgeButton';
-export * from '@rijkshuisstijl-community/data-summary-react';
+export * from '@rijkshuisstijl-community/data-summary-react/no-side-effects';
 export * from './DataSummaryItem';
 export * from './Root';
 export * from '@rijkshuisstijl-community/dot-badge-react/no-side-effects';
