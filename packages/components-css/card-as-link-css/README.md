@@ -7,9 +7,6 @@ Dit is het Card As Link CSS-component van het Rijkshuisstijl Community Design Sy
 - README.md voor alle CSS-componenten
   [<https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/library-css/README.md>]
 
-- Storybook voor dit component
-  [<https://rijkshuisstijl-community.vercel.app/?path=/docs/css-card-as-link--docs>]
-
 ## Installatie
 
 ```bash

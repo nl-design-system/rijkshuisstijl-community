@@ -7,9 +7,6 @@ Dit is het Breadcrumb Navigation CSS-component van het Rijkshuisstijl Community 
 - README.md voor alle CSS-componenten
   [<https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/library-css/README.md>]
 
-- Storybook voor dit component
-  [<https://rijkshuisstijl-community.vercel.app/?path=/docs/css-breadcrumb-nav--docs>]
-
 ## Installatie
 
 ```bash

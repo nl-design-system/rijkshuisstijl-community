@@ -7,9 +7,6 @@ Dit is het Alert CSS-component van het Rijkshuisstijl Community Design System[<h
 - README.md voor alle CSS-componenten
   [<https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/library-css/README.md>]
 
-- Storybook voor dit component
-  [<https://rijkshuisstijl-community.vercel.app/?path=/docs/css-alert--docs>]
-
 ## Installatie
 
 ```bash
