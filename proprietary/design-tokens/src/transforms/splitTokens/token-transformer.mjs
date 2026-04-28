@@ -6,6 +6,7 @@ const TOKENS_FILE = './figma/figma.tokens.json';
 
 const ALWAYS_ON = 'Always on';
 const IGNORE = ['Viewport'];
+const THEME_GROUP_NAME_SORT = ['Theme', 'Type scale'];
 
 const readTokensFile = async () => {
   const json = await readFile(TOKENS_FILE, 'utf-8');
@@ -22,6 +23,11 @@ const debugInfo = (tokenSetsMatrix) => {
   );
   return `${debugData.nums.join(' x ')} = ${debugData.product}`;
 };
+
+const flattenTokenSetSets = (tokenSetsObject) =>
+  Object.entries(tokenSetsObject)
+    .map(([tokenSetName, enabled]) => enabled === 'enabled' && tokenSetName)
+    .filter(Boolean);
 
 /**
   Transforms the $themes object from figma.tokens.json into a tree-like
@@ -77,36 +83,42 @@ const readThemeGroups = (themeGroups) => {
     if (IGNORE.indexOf(themeGroup.group) !== -1) return;
 
     if (themeGroup.name === ALWAYS_ON) {
-      tokenSetsAlwaysOn = [
-        ...tokenSetsAlwaysOn,
-        ...Object.entries(themeGroup.selectedTokenSets)
-          .map(([tokenSetName, enabled]) => enabled === 'enabled' && tokenSetName)
-          .map(Boolean),
-      ];
+      tokenSetsAlwaysOn = [...tokenSetsAlwaysOn, ...flattenTokenSetSets(themeGroup.selectedTokenSets)];
       tokenSetNamesAlwaysOn.push(themeGroup.group);
     } else {
       if (!(themeGroup.group in tokenSetsMatrix)) tokenSetsMatrix[themeGroup.group] = {};
-      tokenSetsMatrix[themeGroup.group][themeGroup.name] = themeGroup.selectedTokenSets;
+      tokenSetsMatrix[themeGroup.group][themeGroup.name] = flattenTokenSetSets(themeGroup.selectedTokenSets);
     }
   });
 
   return { tokenSetsAlwaysOn, tokenSetsMatrix, tokenSetNamesAlwaysOn };
 };
 
-const flattenMatrix = (tokenSetsMatrix) => {
-  console.log(tokenSetsMatrix);
+const normaliseTokenSetName = (tokenSetName) => tokenSetName.toLowerCase().replace(/\s+/g, '-');
+
+const accordingTo = (list) => (a, b) => list.indexOf(a) - list.indexOf(b);
+
+export const flattenMatrix = (tokenSetsMatrix) => {
+  const themeGroupsSorted = Object.keys(tokenSetsMatrix).sort(accordingTo(THEME_GROUP_NAME_SORT));
+  const matrixDimensions = themeGroupsSorted.reduce((acc, el) => [...acc, Object.keys(tokenSetsMatrix[el]).length], []);
+  const flatMatrixLength = themeGroupsSorted.reduce((acc, el) => acc * Object.keys(tokenSetsMatrix[el]).length, 1);
+  const result = Array(flatMatrixLength).fill({});
+  console.log({ themeGroupsSorted, matrixDimensions });
+  return result;
 };
 
-const tokens = await readTokensFile();
-const { tokenSetsAlwaysOn, tokenSetsMatrix, tokenSetNamesAlwaysOn } = readThemeGroups(tokens.$themes);
-if (DEBUG) {
-  console.log(
-    `Found ${Object.keys(tokenSetsAlwaysOn).length} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`,
-  );
-  console.log(`About to generate ${debugInfo(tokenSetsMatrix)} themes`);
-  //console.log(tokenSetsMatrix);
-}
-flattenMatrix(tokenSetsMatrix);
+const doTheThing = async () => {
+  const tokens = await readTokensFile();
+  const { tokenSetsAlwaysOn, tokenSetsMatrix, tokenSetNamesAlwaysOn } = readThemeGroups(tokens.$themes);
+  if (DEBUG) {
+    console.log(
+      `Found ${Object.keys(tokenSetsAlwaysOn).length} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`,
+    );
+    console.log(`About to generate ${debugInfo(tokenSetsMatrix)} themes`);
+    //console.log(tokenSetsMatrix);
+  }
+  const tokenSetSets = flattenMatrix(tokenSetsMatrix);
+};
 
 // Split tokens into separate files
 export async function transformAndSplitTokens() {
