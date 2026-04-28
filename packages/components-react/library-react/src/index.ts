@@ -51,7 +51,7 @@ export { ColumnLayout, type ColumnLayoutProps } from './ColumnLayout';
 export { type CustomFormFieldProps, FormField } from './FormField';
 export { DataBadgeButton, type DataBadgeButtonProps } from './DataBadgeButton';
 export { DataSummary, type DataSummaryProps } from '@rijkshuisstijl-community/data-summary-react';
-export { DataSummaryItem, type DataSummaryItemProps } from './DataSummaryItem';
+export { DataSummaryItem, type DataSummaryItemProps } from '@rijkshuisstijl-community/data-summary-item-react';
 export { type DivRootProps, type HtmlRootProps, Root } from './Root';
 export { DotBadge, type DotBadgeProps } from '@rijkshuisstijl-community/dot-badge-react';
 export { Drawer, type DrawerProps } from './Drawer';
