@@ -98,17 +98,22 @@ const normaliseTokenSetName = (tokenSetName) => tokenSetName.toLowerCase().repla
 
 const accordingTo = (list) => (a, b) => list.indexOf(a) - list.indexOf(b);
 
+/*
 const makeMatrix = (length, ...restDimensionLengths) =>
   Array.from({ length }, () => (restDimensionLengths.length ? makeMatrix(...restDimensionLengths) : 0));
+*/
+
+const cartesian = (...a) => a.reduce((a, b) => a.flatMap((d) => b.map((e) => [d, e].flat())));
 
 export const flattenMatrix = (tokenSetsMatrix) => {
   const themeGroupsSorted = Object.keys(tokenSetsMatrix).sort(accordingTo(THEME_GROUP_NAME_SORT));
-  const matrix = themeGroupsSorted.reduce((acc, el) => [...acc, Object.keys(tokenSetsMatrix[el])], []);
-  const flatMatrixLength = matrix.reduce((acc, el) => acc * el.length, 1);
-  const result = Array(flatMatrixLength).fill({ name: '', tokenSets: [] });
-  //console.log({ themeGroupsSorted, matrixDimensions });
-  console.log(matrix);
-  return matrix;
+  const matrix = themeGroupsSorted.reduce(
+    (acc, el) => [...acc, Object.keys(tokenSetsMatrix[el]).map(normaliseTokenSetName)],
+    [],
+  );
+  const product = cartesian(...matrix);
+  console.log({ matrix, product });
+  return product;
 };
 
 if (require.main === module) {
