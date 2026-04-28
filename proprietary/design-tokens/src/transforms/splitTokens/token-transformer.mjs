@@ -98,16 +98,20 @@ const normaliseTokenSetName = (tokenSetName) => tokenSetName.toLowerCase().repla
 
 const accordingTo = (list) => (a, b) => list.indexOf(a) - list.indexOf(b);
 
+const makeMatrix = (length, ...restDimensionLengths) =>
+  Array.from({ length }, () => (restDimensionLengths.length ? makeMatrix(...restDimensionLengths) : 0));
+
 export const flattenMatrix = (tokenSetsMatrix) => {
   const themeGroupsSorted = Object.keys(tokenSetsMatrix).sort(accordingTo(THEME_GROUP_NAME_SORT));
-  const matrixDimensions = themeGroupsSorted.reduce((acc, el) => [...acc, Object.keys(tokenSetsMatrix[el]).length], []);
-  const flatMatrixLength = themeGroupsSorted.reduce((acc, el) => acc * Object.keys(tokenSetsMatrix[el]).length, 1);
-  const result = Array(flatMatrixLength).fill({});
-  console.log({ themeGroupsSorted, matrixDimensions });
-  return result;
+  const matrix = themeGroupsSorted.reduce((acc, el) => [...acc, Object.keys(tokenSetsMatrix[el])], []);
+  const flatMatrixLength = matrix.reduce((acc, el) => acc * el.length, 1);
+  const result = Array(flatMatrixLength).fill({ name: '', tokenSets: [] });
+  //console.log({ themeGroupsSorted, matrixDimensions });
+  console.log(matrix);
+  return matrix;
 };
 
-const doTheThing = async () => {
+if (require.main === module) {
   const tokens = await readTokensFile();
   const { tokenSetsAlwaysOn, tokenSetsMatrix, tokenSetNamesAlwaysOn } = readThemeGroups(tokens.$themes);
   if (DEBUG) {
@@ -118,7 +122,7 @@ const doTheThing = async () => {
     //console.log(tokenSetsMatrix);
   }
   const tokenSetSets = flattenMatrix(tokenSetsMatrix);
-};
+}
 
 // Split tokens into separate files
 export async function transformAndSplitTokens() {
