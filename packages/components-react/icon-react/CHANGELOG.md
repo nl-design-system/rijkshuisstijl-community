@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/icon-react
 
+## 3.0.3
+
+### Patch Changes
+
+- e9dae7c: Updated broken links in the documentation
+
 ## 3.0.2
 
 ### Patch Changes
