@@ -3,4 +3,4 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-export { PageHeader, type PageHeaderProps } from '@utrecht/page-header-react';
+export * from '@utrecht/page-header-react';
