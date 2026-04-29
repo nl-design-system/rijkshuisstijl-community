@@ -2,7 +2,7 @@
 
 # Omschrijving
 
-Dit is de Data Summary React-component van het Rijkshuisstijl Community Design System. Zie ook de volgende links:
+Dit is de Data Summary React Component van het Rijkshuisstijl Community Design System. Zie ook de volgende links:
 
 - README.md voor alle React-componenten
   [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/library-react/README.md]
