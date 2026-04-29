@@ -133,7 +133,7 @@ export const flattenMatrix = (tokenSetsMatrix, tokenSetsAlwaysOn) => {
   return result;
 };
 
-if (require.main === module) {
+if (import.meta.main) {
   const tokens = await readTokensFile();
   const { tokenSetsAlwaysOn, tokenSetsMatrix, tokenSetNamesAlwaysOn } = readThemeGroups(tokens.$themes);
   if (DEBUG) {
