@@ -2,6 +2,9 @@ import { existsSync, mkdirSync } from 'node:fs';
 import { readFile, writeFile } from 'node:fs/promises';
 
 const DEBUG = true;
+const LOG = (msg) => {
+  if (DEBUG) console.log(msg);
+};
 const TOKENS_FILE = './figma/figma.tokens.json';
 
 const ALWAYS_ON = 'Always on';
@@ -138,15 +141,16 @@ export const flattenMatrix = (tokenSetsMatrix, tokenSetsAlwaysOn) => {
 
 if (import.meta.main) {
   const tokens = await readTokensFile();
+  LOG(`Token file ${TOKENS_FILE} successfully parsed as JSON`);
+
   const { tokenSetsAlwaysOn, tokenSetsMatrix, tokenSetNamesAlwaysOn } = readThemeGroups(tokens.$themes);
+  LOG(
+    `Found ${Object.keys(tokenSetsAlwaysOn).length} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`,
+  );
+  LOG(`Generating ${debugInfo(tokenSetsMatrix)} themes`);
+
   const tokenSetSets = flattenMatrix(tokenSetsMatrix, tokenSetsAlwaysOn);
-  if (DEBUG) {
-    console.log(
-      `Found ${Object.keys(tokenSetsAlwaysOn).length} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`,
-    );
-    console.log(`About to generate ${debugInfo(tokenSetsMatrix)} themes`);
-    console.log(tokenSetSets);
-  }
+  LOG(tokenSetSets.map((theme) => `* ${theme.name}`).join('\n'));
 }
 
 // Split tokens into separate files
