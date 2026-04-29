@@ -480,6 +480,9 @@ importers:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
+      '@rijkshuisstijl-community/button-css':
+        specifier: workspace:*
+        version: link:../button-css
       '@utrecht/data-badge-css':
         specifier: 1.0.1
         version: 1.0.1
@@ -1902,9 +1905,6 @@ importers:
 
   packages/components-react/data-badge-button-react:
     dependencies:
-      '@rijkshuisstijl-community/button-react':
-        specifier: workspace:*
-        version: link:../button-react
       '@rijkshuisstijl-community/data-badge-button-css':
         specifier: workspace:*
         version: link:../../components-css/data-badge-button-css

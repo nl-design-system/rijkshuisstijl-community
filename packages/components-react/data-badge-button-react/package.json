@@ -16,10 +16,10 @@
   "exports": {
     ".": {
       "rhc:source": "./src/index.ts",
-        "types": "./dist/index.d.ts",
-        "import": "./dist/index.mjs"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
     },
-     "./no-side-effects": {
+    "./no-side-effects": {
       "rhc:source": "./src/noSideEffects.ts",
       "types": "./dist/noSideEffects.d.ts",
       "import": "./dist/noSideEffects.mjs"
@@ -81,7 +81,6 @@
   },
   "dependencies": {
     "@rijkshuisstijl-community/data-badge-button-css": "workspace:*",
-    "@rijkshuisstijl-community/button-react": "workspace:*",
     "@utrecht/component-library-react": "13.0.1"
   }
 }
