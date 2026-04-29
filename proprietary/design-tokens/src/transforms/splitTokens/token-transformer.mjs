@@ -24,9 +24,11 @@ const debugInfo = (tokenSetsMatrix) => {
   return `${debugData.nums.join(' x ')} = ${debugData.product}`;
 };
 
+const isEnabled = (str) => str === 'enabled' || str === 'source';
+
 const flattenTokenSetSets = (tokenSetsObject) =>
   Object.entries(tokenSetsObject)
-    .map(([tokenSetName, enabled]) => enabled === 'enabled' && tokenSetName)
+    .map(([tokenSetName, enabled]) => isEnabled(enabled) && tokenSetName)
     .filter(Boolean);
 
 /**
