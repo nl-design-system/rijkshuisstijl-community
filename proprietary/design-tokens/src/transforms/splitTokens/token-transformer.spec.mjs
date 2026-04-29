@@ -16,9 +16,9 @@ describe('flattenMatrix', () => {
     };
 
     const expectedOutput = [
-      { name: 'kern-default', tokenSets: ['1', '2', 'a'] },
+      { name: 'kern', tokenSets: ['1', '2', 'a'] },
       { name: 'kern-information-dense', tokenSets: ['1', '2', 'b'] },
-      { name: 'groen-default', tokenSets: ['3', '4', 'a'] },
+      { name: 'groen', tokenSets: ['3', '4', 'a'] },
       { name: 'groen-information-dense', tokenSets: ['3', '4', 'b'] },
     ];
 
@@ -42,13 +42,13 @@ describe('flattenMatrix', () => {
     };
 
     const expectedOutput = [
-      { name: 'ding1-kern-default', tokenSets: ['x', '1', '2', 'a'] },
+      { name: 'ding1-kern', tokenSets: ['x', '1', '2', 'a'] },
       { name: 'ding1-kern-information-dense', tokenSets: ['x', '1', '2', 'b'] },
-      { name: 'ding1-groen-default', tokenSets: ['x', '3', '4', 'a'] },
+      { name: 'ding1-groen', tokenSets: ['x', '3', '4', 'a'] },
       { name: 'ding1-groen-information-dense', tokenSets: ['x', '3', '4', 'b'] },
-      { name: 'ding2-kern-default', tokenSets: ['y', '1', '2', 'a'] },
+      { name: 'ding2-kern', tokenSets: ['y', '1', '2', 'a'] },
       { name: 'ding2-kern-information-dense', tokenSets: ['y', '1', '2', 'b'] },
-      { name: 'ding2-groen-default', tokenSets: ['y', '3', '4', 'a'] },
+      { name: 'ding2-groen', tokenSets: ['y', '3', '4', 'a'] },
       { name: 'ding2-groen-information-dense', tokenSets: ['y', '3', '4', 'b'] },
     ];
 

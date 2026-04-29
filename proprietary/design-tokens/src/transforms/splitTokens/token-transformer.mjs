@@ -127,8 +127,11 @@ export const flattenMatrix = (tokenSetsMatrix, tokenSetsAlwaysOn) => {
   );
   const product = cartesian(...matrix);
   const result = product.map((choices) => ({
-    name: choices.map(({ choice }) => choice).join('-'),
-    tokenSets: choices.map(({ tokenSets }) => tokenSets).flat(),
+    name: choices
+      .map(({ choice }) => choice)
+      .filter((name) => name !== 'default')
+      .join('-'),
+    tokenSets: [...choices.map(({ tokenSets }) => tokenSets).flat(), ...tokenSetsAlwaysOn],
   }));
   return result;
 };
