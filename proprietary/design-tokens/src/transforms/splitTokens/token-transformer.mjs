@@ -139,14 +139,14 @@ export const flattenMatrix = (tokenSetsMatrix, tokenSetsAlwaysOn) => {
 if (import.meta.main) {
   const tokens = await readTokensFile();
   const { tokenSetsAlwaysOn, tokenSetsMatrix, tokenSetNamesAlwaysOn } = readThemeGroups(tokens.$themes);
+  const tokenSetSets = flattenMatrix(tokenSetsMatrix, tokenSetsAlwaysOn);
   if (DEBUG) {
     console.log(
       `Found ${Object.keys(tokenSetsAlwaysOn).length} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`,
     );
     console.log(`About to generate ${debugInfo(tokenSetsMatrix)} themes`);
-    //console.log(tokenSetsMatrix);
+    console.log(tokenSetSets);
   }
-  const tokenSetSets = flattenMatrix(tokenSetsMatrix);
 }
 
 // Split tokens into separate files
