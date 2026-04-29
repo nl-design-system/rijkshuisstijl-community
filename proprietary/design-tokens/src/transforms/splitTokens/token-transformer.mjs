@@ -55,27 +55,6 @@ const flattenTokenSetSets = (tokenSetsObject) =>
     },
     ...
   }
-
-  but what we actually want is:
-  [
-    [ ... ... ], (type scale default + theme 1
-    [ ... ... ], (type scale default + theme 2
-    ...
-    [ ... ... ], (type scale information dense + theme 1
-    [ ... ... ], (type scale information dense + theme 2
-    ...
-  ]
-  so we probably need an intermediate:
-  [
-    {
-      typescale: default
-      theme: 1
-    }
-    {
-      typescale: default
-      theme: 2
-    }
-  ]
 */
 const readThemeGroups = (themeGroups) => {
   let tokenSetsAlwaysOn = [];
@@ -107,7 +86,33 @@ const makeMatrix = (length, ...restDimensionLengths) =>
 
 const cartesian = (...a) => a.reduce((a, b) => a.flatMap((d) => b.map((e) => [d, e].flat())));
 
-export const flattenMatrix = (tokenSetsMatrix) => {
+/**
+ *
+ *  Transforms the theme choices tree from `readThemeGroups`:
+ *  {
+ *    'Type scale': {
+ *      'Default': [ ... ],
+ *      'Information dense': [ ... ],
+ *    },
+ *    'Theme': {
+ *      'Kern': [ ... ],
+ *      'Groen': [ ... ],
+ *    },
+ *    ...
+ *  }
+ *  into a flat array with the cartesian product of every theme set combination:
+ *  [
+ *    {
+ *      name: 'kern',
+ *      tokenSets: [ ... ],
+ *    },
+ *    {
+ *      name: 'kern-information-dense',
+ *      tokenSets: [ ... ],
+ *    },
+ *  ]
+ */
+export const flattenMatrix = (tokenSetsMatrix, tokenSetsAlwaysOn) => {
   const themeGroupsSorted = Object.keys(tokenSetsMatrix).sort(accordingTo(THEME_GROUP_NAME_SORT));
   const matrix = themeGroupsSorted.reduce(
     (acc, el) => [
