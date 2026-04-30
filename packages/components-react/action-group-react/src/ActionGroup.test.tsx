@@ -1,12 +1,10 @@
 import { cleanup, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/vitest';
-import { createRef,  PropsWithChildren } from 'react';
+import { createRef, PropsWithChildren } from 'react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { ActionGroup} from './ActionGroup';
+import { ActionGroup } from './ActionGroup';
 
-const Button = ({ children }: PropsWithChildren) => (
-  <button>{children}</button>
-);
+const Button = ({ children }: PropsWithChildren) => <button>{children}</button>;
 
 describe('Action group', () => {
   it('renders a visible element', () => {

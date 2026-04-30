@@ -45,6 +45,16 @@ const filterComponents = (data: ComponentData[], searchTerm: string, frameworks:
   });
 };
 
+const getStatusText = (count: number): string => {
+  if (count === 0) {
+    return 'Geen componenten gevonden, probeer andere zoektermen of filters.';
+  } else if (count === 1) {
+    return '1 component gevonden';
+  } else {
+    return `${count} componenten gevonden`;
+  }
+};
+
 interface ActiveFiltersBadgeListProps {
   onRemoveFilter: (framework: string) => void;
   selectedFrameworks: string[];
@@ -119,8 +129,8 @@ export default function Componenten() {
   const onPaginationLinkClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const href = e.currentTarget.href;
-    const pageNumber = href.substring(href.lastIndexOf('/') + 1, href.length);
-    setCurrentPage(parseInt(pageNumber, 10) - 1);
+    const pageNumber = href.slice(href.lastIndexOf('/') + 1);
+    setCurrentPage(Number.parseInt(pageNumber, 10) - 1);
   }, []);
 
   const frameworkCounts: { [key: string]: number } = useMemo(
@@ -171,16 +181,6 @@ export default function Componenten() {
 
     if (resultsRef.current) {
       resultsRef.current.focus({ preventScroll: true });
-    }
-  };
-
-  const getStatusText = (count: number): string => {
-    if (count === 0) {
-      return 'Geen componenten gevonden, probeer andere zoektermen of filters.';
-    } else if (count === 1) {
-      return '1 component gevonden';
-    } else {
-      return `${count} componenten gevonden`;
     }
   };
 

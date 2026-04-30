@@ -16,16 +16,16 @@ export abstract class BaseWebComponent extends HTMLElement {
 
     const style = document.createElement('style');
     style.textContent = stylesheet;
-    this.shadowRoot.appendChild(style);
+    this.shadowRoot.append(style);
 
     this._observer = new MutationObserver((mutations) => mutations.forEach(this.attributeChangedCallback.bind(this)));
   }
 
   setupProps(): void {
-    this.getAttributeNames().forEach((attributeName) => {
+    for (const attributeName of this.getAttributeNames()) {
       this.props[attributeName] = this.getAttribute(attributeName);
       this.removeAttribute(attributeName);
-    });
+    }
   }
 
   connectedCallback(): void {

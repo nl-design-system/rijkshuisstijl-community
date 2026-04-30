@@ -750,7 +750,7 @@ describe('Form field with a textinput', () => {
     });
 
     // "color", "file" and "range" might work too, but only textboxes are officially supported
-    [
+    for (const type of [
       'date',
       'datetime-local',
       'email',
@@ -763,7 +763,7 @@ describe('Form field with a textinput', () => {
       'time',
       'url',
       'week',
-    ].forEach((type) => {
+    ]) {
       it(`can render type="${type}" on the input element`, () => {
         const { container } = render(<FormFieldTextInput {...defaultProps} type={type} />);
 
@@ -771,7 +771,7 @@ describe('Form field with a textinput', () => {
 
         expect(textbox).toHaveAttribute('type', type);
       });
-    });
+    }
   });
 
   describe('name', () => {
