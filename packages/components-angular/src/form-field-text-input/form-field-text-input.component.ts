@@ -68,25 +68,25 @@ export class FormFieldTextInputComponent implements ControlValueAccessor {
   @Input() step?: number;
   @Input() type?: TextInputTypes = 'text';
   @Input({ required: true }) inputId!: string;
+  @Input() defaultValue = '';
 
-  value: string = '';
   disabled: boolean = false;
 
-  private onChange: Function = () => {};
-  private onTouched: Function = () => {};
+  private onChange: (value: string) => void = () => {};
+  private onTouched: () => void = () => {};
 
   onValueChange(event: Event): void {
     const input = event.target as HTMLInputElement;
-    this.value = input.value;
-    this.onChange(this.value);
+    this.defaultValue = input.value;
+    this.onChange(this.defaultValue);
   }
 
   markAsTouched(): void {
     this.onTouched();
   }
 
-  writeValue(value: string): void {
-    this.value = value;
+  writeValue(value: string | null): void {
+    this.defaultValue = value ?? '';
   }
 
   registerOnChange(fn: (value: string) => void): void {

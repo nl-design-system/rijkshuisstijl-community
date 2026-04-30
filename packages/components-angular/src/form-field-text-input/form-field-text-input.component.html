@@ -13,6 +13,7 @@
   </rhc-form-field-error-message>
   <input
     rhc-text-input
+    [value]="defaultValue"
     (input)="onValueChange($event)"
     (blur)="markAsTouched()"
     [id]="inputId"

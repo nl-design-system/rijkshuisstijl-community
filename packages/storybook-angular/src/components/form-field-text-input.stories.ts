@@ -104,7 +104,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
         category: 'Props',
       },
     },
-    value: {
+    defaultValue: {
       table: {
         category: 'Props',
       },
@@ -233,7 +233,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
     type: 'text',
     dir: 'auto',
     name: 'subject',
-    value: '',
+    defaultValue: '',
     autocomplete: '',
     placeholder: '',
     size: undefined,
@@ -256,7 +256,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
     readonly,
     dir,
     name,
-    value,
+    defaultValue,
     autocomplete,
     placeholder,
     size,
@@ -297,7 +297,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
     `,
     props: {
       form: new FormGroup({
-        textInput: new FormControl(''),
+        textInput: new FormControl(defaultValue),
       }),
       inputId,
       invalid,
@@ -311,7 +311,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
       readonly,
       dir,
       name,
-      value,
+      defaultValue,
       autocomplete,
       placeholder,
       size,
@@ -434,34 +434,33 @@ export const Status: StoryObj<FormFieldTextInputComponent> = {
   args: {
     name: 'subject',
     label: 'Onderwerp',
-    value: 'Hello, World!',
+    defaultValue: 'Hello, World!',
     status: '13 van de 50 tekens gebruikt',
   },
-  render: ({ name, label, value, status }) => ({
-    template: `
-    <form [formGroup]="form">
-      <rhc-form-field-text-input
-        formControlName="textInput"
-        inputId="status"
-        [name]="name"
-        [label]="label"
-        [status]="status"
-      />
-    </form>
-    `,
-    props: {
-      form: new FormGroup({
-        textInput: new FormControl(value),
-      }),
-      name,
-      label,
-      value,
-      status,
-    },
-    moduleMetadata: {
-      imports: [ReactiveFormsModule],
-    },
-  }),
+  render: ({ name, label, defaultValue, status }) => ({
+      template: `
+        <form [formGroup]="form">
+          <rhc-form-field-text-input
+            formControlName="textInput"
+            inputId="status"
+            [name]="name"
+            [label]="label"
+            [status]="status"
+          />
+        </form>
+      `,
+      props: {
+        form:  new FormGroup({
+          textInput: new FormControl(defaultValue),
+        }),
+        name,
+        label,
+        status,
+      },
+      moduleMetadata: {
+        imports: [ReactiveFormsModule],
+      },
+  })
 };
 
 export const Password: StoryObj<FormFieldTextInputComponent> = {
@@ -504,9 +503,9 @@ export const Disabled: StoryObj<FormFieldTextInputComponent> = {
     name: 'subject',
     label: 'Onderwerp',
     disabled: true,
-    value: 'Hello, world!',
+    defaultValue: 'Hello, world!',
   },
-  render: ({ name, label, value, disabled }) => ({
+  render: ({ name, label, defaultValue, disabled }) => ({
     template: `
     <form [formGroup]="form">
       <rhc-form-field-text-input
@@ -519,12 +518,11 @@ export const Disabled: StoryObj<FormFieldTextInputComponent> = {
     `,
     props: {
       form: new FormGroup({
-        textInput: new FormControl({ value: value, disabled: disabled }),
+        textInput: new FormControl({ value: defaultValue, disabled: disabled }),
       }),
       name,
       label,
-      disabled,
-      value,
+      disabled
     },
     moduleMetadata: {
       imports: [ReactiveFormsModule],
@@ -537,9 +535,9 @@ export const Readonly: StoryObj<FormFieldTextInputComponent> = {
     name: 'subject',
     label: 'Onderwerp',
     readonly: true,
-    value: 'Hello, world!',
+    defaultValue: 'Hello, world!',
   },
-  render: ({ name, label, value, readonly }) => ({
+  render: ({ name, label, defaultValue, readonly }) => ({
     template: `
     <form [formGroup]="form">
       <rhc-form-field-text-input
@@ -553,12 +551,11 @@ export const Readonly: StoryObj<FormFieldTextInputComponent> = {
     `,
     props: {
       form: new FormGroup({
-        textInput: new FormControl(value),
+        textInput: new FormControl(defaultValue),
       }),
       name,
       label,
-      readonly,
-      value,
+      readonly
     },
     moduleMetadata: {
       imports: [ReactiveFormsModule],
