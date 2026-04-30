@@ -64,7 +64,7 @@ const readThemeGroups = (themeGroups) => {
   let tokenSetNamesAlwaysOn = [];
   const tokenSetsMatrix = {};
   themeGroups.forEach((themeGroup) => {
-    if (IGNORE.indexOf(themeGroup.group) !== -1) return;
+    if (IGNORE.includes(themeGroup.group)) return;
 
     if (themeGroup.name === ALWAYS_ON) {
       tokenSetsAlwaysOn = [...tokenSetsAlwaysOn, ...flattenTokenSetSets(themeGroup.selectedTokenSets)];
@@ -78,14 +78,9 @@ const readThemeGroups = (themeGroups) => {
   return { tokenSetsAlwaysOn, tokenSetsMatrix, tokenSetNamesAlwaysOn };
 };
 
-const normaliseTokenSetName = (tokenSetName) => tokenSetName.toLowerCase().replace(/\s+/g, '-');
+const normaliseTokenSetName = (tokenSetName) => tokenSetName.toLowerCase().replaceAll(/\s+/, '-');
 
 const accordingTo = (list) => (a, b) => list.indexOf(a) - list.indexOf(b);
-
-/*
-const makeMatrix = (length, ...restDimensionLengths) =>
-  Array.from({ length }, () => (restDimensionLengths.length ? makeMatrix(...restDimensionLengths) : 0));
-*/
 
 const cartesian = (...a) => a.reduce((a, b) => a.flatMap((d) => b.map((e) => [d, e].flat())));
 
