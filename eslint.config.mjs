@@ -1,6 +1,7 @@
 import stylistic from '@stylistic/eslint-plugin';
 import sonarjs from 'eslint-plugin-sonarjs';
 import { defineConfig, globalIgnores } from 'eslint/config';
+import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
 import _import from 'eslint-plugin-import';
 import json from 'eslint-plugin-json';
@@ -24,6 +25,7 @@ const sharedRules = {
 
 export default defineConfig([
   globalIgnores([
+    '**/.angular/',
     '**/node_modules/',
     '**/vendor/',
     '**/build/',
@@ -56,6 +58,30 @@ export default defineConfig([
     rules: {
       'sonarjs/no-empty-test-file': 0,
       'sonarjs/todo-tag': 0,
+    },
+  },
+
+  eslintPluginUnicorn.configs.recommended,
+  {
+    /**
+     * The following rules would be nice to use, but probably best to migrate in a separate PR:
+     *
+     * - unicorn/import-style
+     * - unicorn/prefer-module
+     *
+     * We can use the following rules when we migrate `tsconfig.json` from es2022 to es2023:
+     *
+     * - unicorn/no-array-sort
+     */
+    rules: {
+      'unicorn/filename-case': 'off',
+      'unicorn/import-style': 'off',
+      'unicorn/no-array-reduce': 'off',
+      'unicorn/no-array-sort': 'off',
+      'unicorn/no-null': 'off',
+      'unicorn/prefer-export-from': 'off',
+      'unicorn/prefer-module': 'off',
+      'unicorn/prevent-abbreviations': 'off',
     },
   },
 
