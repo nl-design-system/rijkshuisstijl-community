@@ -8,6 +8,6 @@ describe('Listbox', () => {
     render(<Listbox />);
 
     // Assert
-    expect(screen.getByRole('listbox'));
+    expect(screen.getByRole('listbox')).toBeTruthy();
   });
 });

@@ -11,7 +11,7 @@ import { BaseWebComponent } from './BaseComponent';
 export type ActionGroupWebComponentAttributes = ActionGroupProps;
 
 export class ActionGroupWebComponent extends BaseWebComponent {
-  static override tagName: string = 'rhc-action-group';
+  static override readonly tagName: string = 'rhc-action-group';
 
   constructor() {
     super(stylesheet);

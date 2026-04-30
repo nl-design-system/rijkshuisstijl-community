@@ -28,15 +28,18 @@ const meta: Meta<HeadingComponent> = {
       },
     },
   },
-  render: ({ level, appearanceLevel }) => ({
-    template: `<rhc-heading [level]=${level} ${appearanceLevel ? `[appearanceLevel]=${appearanceLevel}` : ''}>
+  render: ({ level, appearanceLevel }) => {
+    const optionalAttribute = appearanceLevel ? ` [appearanceLevel]=${appearanceLevel}` : '';
+    return {
+      template: `<rhc-heading [level]=${level}${optionalAttribute}>
     Lorem ipsum dolor
     </rhc-heading>`,
-    props: {
-      level,
-      appearanceLevel,
-    },
-  }),
+      props: {
+        level,
+        appearanceLevel,
+      },
+    };
+  },
 };
 
 export default meta;
