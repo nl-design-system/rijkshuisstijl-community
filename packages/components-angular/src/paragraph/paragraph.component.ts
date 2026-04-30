@@ -13,10 +13,6 @@ export class ParagraphComponent {
   @Input() appearance?: AppearanceType;
 
   computedClass = () => {
-    if (this.appearance === 'lead') {
-      return 'nl-paragraph nl-paragraph--lead';
-    } else {
-      return 'nl-paragraph';
-    }
+    return this.appearance === 'lead' ? 'nl-paragraph nl-paragraph--lead' : 'nl-paragraph';
   };
 }

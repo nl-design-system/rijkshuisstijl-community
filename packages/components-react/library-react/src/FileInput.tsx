@@ -37,7 +37,7 @@ export const FileInput = ({
 
   const onChange = (newFiles: FileList | null) => {
     if (newFiles) {
-      const updatedFiles = [...files, ...Array.from(newFiles)];
+      const updatedFiles = [...files, ...newFiles];
       setFiles(updatedFiles);
       if (onValueChange) {
         onValueChange(updatedFiles);

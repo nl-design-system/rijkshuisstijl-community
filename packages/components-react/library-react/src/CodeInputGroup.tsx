@@ -31,8 +31,8 @@ export const CodeInputGroup = ({
   ref,
   ...restProps
 }: PropsWithChildren<CodeInputGroupProps>) => {
-  let values = new Array<string>();
-  const inputIds = new Array<string>(codeLength).fill(useId());
+  let values: (string | undefined)[] = [];
+  const inputIds = Array.from<string>({ length: codeLength }).fill(useId());
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
   const regex = new RegExp(`^${pattern}$`);
   const fullPattern = `^${pattern}{1,${codeLength}}$`;
@@ -42,15 +42,15 @@ export const CodeInputGroup = ({
     const input = event.target.value;
 
     if (regex.test(input)) {
-      values.splice(index, typeof values[index] === 'undefined' ? 0 : 1, input);
+      values.splice(index, values[index] === undefined ? 0 : 1, input);
     } else if (input === '') {
       values.splice(index, 1, input);
     } else if (index === 0 && input.length > 1 && new RegExp(fullPattern).test(input.trim())) {
       // If the input is pasted or auto-completed and the pattern is correct, fill the inputs
-      values = input.split('');
-      inputRefs.current.forEach((inputRef, i) => {
-        if (inputRef) inputRef.value = values[i];
-      });
+      values = [...input];
+      for (const [i, inputRef] of inputRefs.current.entries()) {
+        if (inputRef) inputRef.value = values[i] || '';
+      }
       delayedFocus(inputRefs.current[codeLength - 1]);
     }
 
@@ -94,7 +94,7 @@ export const CodeInputGroup = ({
           </div>
         )}
         <div className={clsx('rhc-code-input-group', className)}>
-          {[...Array(codeLength)].map((_, i) => (
+          {Array.from({ length: codeLength }).map((_, i) => (
             <CodeInput
               {...restProps}
               aria-label={`${i + 1}/${codeLength}`}

@@ -97,7 +97,7 @@ export const BlockEnd: Story = {
 export const OverflowY: Story = {
   args: {
     align: 'inline-start',
-    children: Array(10)
+    children: Array.from({ length: 10 })
       .fill(0)
       .map(() => (
         <Paragraph>
