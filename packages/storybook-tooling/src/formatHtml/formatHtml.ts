@@ -6,6 +6,7 @@ export const formatHtml = (html: string) => {
   const singleLineHtml = html.replace(/>\s+</g, '><').trim();
 
   // Split the HTML into an array of tags and text content
+  /* eslint-disable-next-line sonarjs/slow-regex */
   const tokens = singleLineHtml.split(/(<[^>]*>)/).filter(Boolean);
 
   let formattedHtml = '';

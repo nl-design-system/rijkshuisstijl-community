@@ -18,7 +18,7 @@ import { PageBody } from '@utrecht/page-body-react';
 import React, {
   AnchorHTMLAttributes,
   ChangeEvent,
-  FormEvent,
+  SubmitEvent,
   useCallback,
   useEffect,
   useMemo,
@@ -155,7 +155,7 @@ export default function Componenten() {
     }
   }, [selectedFrameworks, filteredComponents.length, announceChange]);
 
-  const handleSearchSubmit = (event: FormEvent) => {
+  const handleSearchSubmit = (event: SubmitEvent) => {
     event.preventDefault();
     setSubmittedSearchTerm(searchTerm);
 
@@ -207,7 +207,7 @@ export default function Componenten() {
 
   // Apply the staged framework selections when filter button is clicked
   const handleFilterSubmit = useCallback(
-    (event: FormEvent<HTMLFormElement>): void => {
+    (event: SubmitEvent<HTMLFormElement>): void => {
       event.preventDefault();
 
       const previousCount = selectedFrameworks.length;

@@ -42,7 +42,7 @@ export const CodeInputGroup = ({
     const input = event.target.value;
 
     if (regex.test(input)) {
-      values.splice(index, values[index] === undefined ? 0 : 1, input);
+      values.splice(index, typeof values[index] === 'undefined' ? 0 : 1, input);
     } else if (input === '') {
       values.splice(index, 1, input);
     } else if (index === 0 && input.length > 1 && new RegExp(fullPattern).test(input.trim())) {

@@ -23,8 +23,12 @@ const iconMap: Record<UtrechtAlertType, RHCIconID> = {
   error: 'alert-circle',
 };
 export const Alert = ({ type, icon, className, ...restProps }: PropsWithChildren<AlertProps>) => {
-  const rhcIcon = icon ? <Icon icon={icon} /> : type ? <Icon icon={iconMap[type]} /> : undefined;
-  return <UtrechtAlert className={clsx('rhc-alert', className)} {...restProps} icon={rhcIcon} type={type} />;
+  const slottedIcon = icon ? <Icon icon={icon} /> : null;
+  const namedIcon = type ? <Icon icon={iconMap[type]} /> : null;
+
+  return (
+    <UtrechtAlert className={clsx('rhc-alert', className)} {...restProps} icon={slottedIcon || namedIcon} type={type} />
+  );
 };
 
 Alert.displayName = 'Alert';
