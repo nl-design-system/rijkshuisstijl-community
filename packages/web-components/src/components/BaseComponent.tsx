@@ -18,7 +18,9 @@ export abstract class BaseWebComponent extends HTMLElement {
     style.textContent = stylesheet;
     this.shadowRoot.append(style);
 
-    this._observer = new MutationObserver((mutations) => mutations.forEach(this.attributeChangedCallback.bind(this)));
+    this._observer = new MutationObserver(() => {
+      this.attributeChangedCallback();
+    });
   }
 
   setupProps(): void {
