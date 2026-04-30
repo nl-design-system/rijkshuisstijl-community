@@ -1,3 +1,5 @@
+import stylistic from '@stylistic/eslint-plugin';
+import sonarjs from 'eslint-plugin-sonarjs';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import globals from 'globals';
 import _import from 'eslint-plugin-import';
@@ -49,10 +51,31 @@ export default defineConfig([
   // JSON files (no comments allowed)
   json.configs.recommended,
 
+  sonarjs.configs.recommended,
+  {
+    rules: {
+      'sonarjs/no-empty-test-file': 0,
+      'sonarjs/todo-tag': 0,
+    },
+  },
+
   // JSONC files (tsconfig.*.json — TypeScript config files allow comments)
   {
     ...json.configs['recommended-with-comments'],
     files: ['**/tsconfig*.json', '**/tsconfig.*.json', '**/.storybook/tsconfig*.json'],
+  },
+
+  {
+    plugins: {
+      '@stylistic': stylistic,
+    },
+    rules: {
+      'comma-dangle': ['error', 'always-multiline'],
+      'no-trailing-spaces': ['error'],
+      quotes: ['error', 'single', { avoidEscape: true }],
+      'eol-last': ['error', 'always'],
+      'max-statements-per-line': ['error'],
+    },
   },
 
   // MDX files
