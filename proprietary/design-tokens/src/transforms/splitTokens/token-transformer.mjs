@@ -78,7 +78,7 @@ const readThemeGroups = (themeGroups) => {
   return { tokenSetsAlwaysOn, tokenSetsMatrix, tokenSetNamesAlwaysOn };
 };
 
-const normaliseTokenSetName = (tokenSetName) => tokenSetName.toLowerCase().replaceAll(/\s+/, '-');
+const normaliseTokenSetName = (tokenSetName) => tokenSetName.toLowerCase().replaceAll(/\s+/g, '-');
 
 const accordingTo = (list) => (a, b) => list.indexOf(a) - list.indexOf(b);
 
