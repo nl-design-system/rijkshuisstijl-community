@@ -151,6 +151,27 @@ if (import.meta.main) {
 
   const tokenSetSets = flattenMatrix(tokenSetsMatrix, tokenSetsAlwaysOn);
   LOG(tokenSetSets.map((theme) => `* ${theme.name}`).join('\n'));
+
+  if (!existsSync('./src/generated')) {
+    mkdirSync('./src/generated', { recursive: true });
+  }
+
+  await writeFile(
+    './src/generated/themes.json',
+    JSON.stringify(
+      tokenSetSets.reduce(
+        (acc, val) => ({
+          ...acc,
+          [val.name]: {
+            tokens: Object.fromEntries(val.tokenSets.map((tokenSet) => [tokenSet, tokens[tokenSet]])),
+          },
+        }),
+        {},
+      ),
+      null,
+      2,
+    ),
+  );
 }
 
 // Split tokens into separate files
