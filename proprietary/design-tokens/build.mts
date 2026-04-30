@@ -134,6 +134,23 @@ const getPlatformsConfig = (buildPath: string, themeName: string) => {
   };
 };
 
+// This will build the base theme kern-lintblauw
+async function buildBaseTokens() {
+  const config = getPlatformsConfig('dist/', 'rhc-theme');
+  const StyleDictionaryBase = new StyleDictionary({
+    log: { verbosity: 'verbose' },
+    source: ['./src/**/base.tokens.json'],
+    preprocessors: ['tokens-studio'],
+    platforms: {
+      ...config,
+    },
+  });
+  await StyleDictionaryBase.hasInitialized;
+
+  await StyleDictionaryBase.cleanAllPlatforms();
+  await StyleDictionaryBase.buildAllPlatforms();
+}
+
 // This will build the themes
 async function buildThemes() {
   const themesJson = await readFile('./src/generated/themes.json', 'utf-8');
@@ -172,6 +189,7 @@ async function buildThemes() {
 
 async function build() {
   removeUnitlessLineHeightTransform(); // This needs to happen before building anything
+  await buildBaseTokens();
   await buildThemes();
 }
 

@@ -10,6 +10,7 @@ const TOKENS_FILE = './figma/figma.tokens.json';
 const ALWAYS_ON = 'Always on';
 const IGNORE = ['Viewport'];
 const THEME_GROUP_NAME_SORT = ['Theme', 'Type scale'];
+const BASE_THEME_NAME = 'core';
 
 const readTokensFile = async () => {
   const json = await readFile(TOKENS_FILE, 'utf-8');
@@ -151,75 +152,16 @@ if (import.meta.main) {
     mkdirSync('./src/generated', { recursive: true });
   }
 
-  await writeFile(
-    './src/generated/themes.json',
-    JSON.stringify(
-      tokenSetSets.reduce(
-        (acc, val) => ({
-          ...acc,
-          [val.name]: {
-            tokens: Object.fromEntries(val.tokenSets.map((tokenSet) => [tokenSet, tokens[tokenSet]])),
-          },
-        }),
-        {},
-      ),
-      null,
-      2,
-    ),
-  );
-}
-
-// Split tokens into separate files
-export async function transformAndSplitTokens() {
-  // Read the raw JSON file directly
-  const json = await readFile('./figma/figma.tokens.json', 'utf-8');
-  const tokens = parseTokensFile(json);
-
-  // Process themes to add the enabled components
-  const processedThemes = {};
-
-  tokens.themes.forEach((theme) => {
-    const themeTokens = {};
-
-    Object.entries(theme.selectedTokenSets).forEach(([tokenSet, status]) => {
-      if (status === 'enabled' && !tokenSet.endsWith('[figma-only]')) {
-        addTokenSetIfPresent(themeTokens, tokenSet, tokens.tokenSets[tokenSet]);
-      }
-    });
-
-    // Add default type scale here, because Figma does not understand `clamp(...)`
-    addTokenSetIfPresent(themeTokens, DEFAULT, tokens.tokenSets[DEFAULT]);
-
-    processedThemes[theme.name] = {
-      id: theme.id,
-      tokens: themeTokens,
-      group: theme.group,
-    };
-
-    processedThemes[`${theme.name}-information-dense`] = {
-      id: theme.id,
-      tokens: {
-        ...themeTokens,
-        [INFORMATION_DENSE]: tokens.tokenSets[INFORMATION_DENSE],
+  const allThemes = tokenSetSets.reduce(
+    (acc, val) => ({
+      ...acc,
+      [val.name]: {
+        tokens: Object.fromEntries(val.tokenSets.map((tokenSet) => [tokenSet, tokens[tokenSet]])),
       },
-      group: theme.group,
-    };
-  });
+    }),
+    {},
+  );
 
-  const baseTheme = processedThemes[BASE_THEME_NAME];
-
-  if (!baseTheme) {
-    throw new Error(`Expected "${BASE_THEME_NAME}" to exist in processed themes.`);
-  }
-
-  // Ensure directories exist
-  if (!existsSync('./src/generated')) {
-    mkdirSync('./src/generated', { recursive: true });
-  }
-
-  // Write files
-  await writeFile('./src/generated/base.tokens.json', JSON.stringify(baseTheme.tokens, null, 2));
-  await writeFile('./src/generated/themes.json', JSON.stringify(processedThemes, null, 2));
+  await writeFile('./src/generated/base.tokens.json', JSON.stringify(allThemes[BASE_THEME_NAME].tokens, null, 2));
+  await writeFile('./src/generated/themes.json', JSON.stringify(allThemes, null, 2));
 }
-
-//await transformAndSplitTokens();
