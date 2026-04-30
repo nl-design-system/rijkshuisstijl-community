@@ -1,5 +1,5 @@
 {
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Community for Rijkshuisstijl-Community Design System",
   "description": "Card component",
   "license": "EUPL-1.2",
@@ -11,15 +11,18 @@
     "src/",
     "*.md"
   ],
-  "module": "./dist/index.esm.js",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "rhc:source": "./src/index.ts",
-      "default": {
-        "types": "./dist/index.d.ts",
-        "import": "./dist/index.esm.js"
-      }
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./no-side-effects": {
+      "rhc:source": "./src/noSideEffects.ts",
+      "types": "./dist/noSideEffects.d.ts",
+      "import": "./dist/noSideEffects.mjs"
     }
   },
   "scripts": {
@@ -33,7 +36,8 @@
     "rijkshuisstijl-community-design-system"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "repository": {
     "type": "git+ssh",

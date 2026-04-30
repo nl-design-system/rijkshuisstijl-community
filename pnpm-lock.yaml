@@ -454,6 +454,54 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
 
+  packages/components-css/checkbox-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      '@utrecht/checkbox-css':
+        specifier: 1.6.1
+        version: 1.6.1
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
+  packages/components-css/checkbox-group-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
+  packages/components-css/data-badge-button-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      '@rijkshuisstijl-community/button-css':
+        specifier: workspace:*
+        version: link:../button-css
+      '@utrecht/data-badge-css':
+        specifier: 1.0.1
+        version: 1.0.1
+      '@utrecht/focus-ring-css':
+        specifier: 2.3.1
+        version: 2.3.1
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
+  packages/components-css/data-summary-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
   packages/components-css/dot-badge-css:
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
@@ -522,6 +570,18 @@ importers:
       '@rijkshuisstijl-community/card-css':
         specifier: workspace:*
         version: link:../card-css
+      '@rijkshuisstijl-community/checkbox-css':
+        specifier: workspace:*
+        version: link:../checkbox-css
+      '@rijkshuisstijl-community/checkbox-group-css':
+        specifier: workspace:*
+        version: link:../checkbox-group-css
+      '@rijkshuisstijl-community/data-badge-button-css':
+        specifier: workspace:*
+        version: link:../data-badge-button-css
+      '@rijkshuisstijl-community/data-summary-css':
+        specifier: workspace:*
+        version: link:../data-summary-css
       '@rijkshuisstijl-community/dot-badge-css':
         specifier: workspace:*
         version: link:../dot-badge-css
@@ -531,6 +591,9 @@ importers:
       '@rijkshuisstijl-community/link-css':
         specifier: workspace:*
         version: link:../link-css
+      '@rijkshuisstijl-community/logo-css':
+        specifier: workspace:*
+        version: link:../logo-css
       '@rijkshuisstijl-community/paragraph-css':
         specifier: workspace:*
         version: link:../paragraph-css
@@ -697,6 +760,15 @@ importers:
       '@nl-design-system-candidate/link-css':
         specifier: 2.0.3
         version: 2.0.3
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
+  packages/components-css/logo-css:
+    devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
@@ -1643,6 +1715,506 @@ importers:
         specifier: 3.2.4
         version: 3.2.4(@types/debug@4.1.13)(@types/node@25.5.0)(jiti@2.6.1)(jsdom@26.1.0)(less@4.6.4)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
 
+  packages/components-react/checkbox-group-react:
+    dependencies:
+      '@rijkshuisstijl-community/checkbox-group-css':
+        specifier: workspace:*
+        version: link:../../components-css/checkbox-group-css
+      '@utrecht/component-library-react':
+        specifier: 13.0.1
+        version: 13.0.1(@babel/runtime@7.28.6)(date-fns@2.30.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+    devDependencies:
+      '@babel/core':
+        specifier: 7.29.0
+        version: 7.29.0
+      '@babel/plugin-transform-runtime':
+        specifier: 7.29.0
+        version: 7.29.0(@babel/core@7.29.0)
+      '@babel/preset-env':
+        specifier: 7.29.0
+        version: 7.29.0(@babel/core@7.29.0)
+      '@babel/preset-react':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.29.0)
+      '@babel/preset-typescript':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.29.0)
+      '@babel/runtime':
+        specifier: 7.28.6
+        version: 7.28.6
+      '@rollup/plugin-babel':
+        specifier: 6.1.0
+        version: 6.1.0(@babel/core@7.29.0)(@types/babel__core@7.20.5)(rollup@4.59.0)
+      '@rollup/plugin-commonjs':
+        specifier: 29.0.0
+        version: 29.0.0(rollup@4.59.0)
+      '@rollup/plugin-node-resolve':
+        specifier: 16.0.3
+        version: 16.0.3(rollup@4.59.0)
+      '@testing-library/dom':
+        specifier: 10.4.1
+        version: 10.4.1
+      '@testing-library/jest-dom':
+        specifier: 6.9.1
+        version: 6.9.1
+      '@testing-library/react':
+        specifier: 16.3.2
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@testing-library/user-event':
+        specifier: 14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.1)
+      '@types/lodash.chunk':
+        specifier: 4.2.9
+        version: 4.2.9
+      '@types/react':
+        specifier: 19.2.14
+        version: 19.2.14
+      '@vitejs/plugin-react':
+        specifier: 4.7.0
+        version: 4.7.0(vite@7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
+      '@vitest/coverage-v8':
+        specifier: 3.2.4
+        version: 3.2.4(vitest@3.2.4(@types/debug@4.1.13)(@types/node@25.5.0)(jiti@2.6.1)(jsdom@26.1.0)(less@4.6.4)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      react:
+        specifier: 19.2.4
+        version: 19.2.4
+      react-dom:
+        specifier: 19.2.4
+        version: 19.2.4(react@19.2.4)
+      rollup:
+        specifier: 4.59.0
+        version: 4.59.0
+      rollup-plugin-filesize:
+        specifier: 10.0.0
+        version: 10.0.0
+      rollup-plugin-node-externals:
+        specifier: 8.1.2
+        version: 8.1.2(rollup@4.59.0)
+      rollup-plugin-node-polyfills:
+        specifier: 0.2.1
+        version: 0.2.1
+      rollup-plugin-peer-deps-external:
+        specifier: 2.2.4
+        version: 2.2.4(rollup@4.59.0)
+      rollup-plugin-postcss:
+        specifier: 4.0.2
+        version: 4.0.2(postcss@8.5.8)
+      rollup-plugin-typescript2:
+        specifier: 0.36.0
+        version: 0.36.0(rollup@4.59.0)(typescript@5.9.3)
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vite:
+        specifier: 7.3.1
+        version: 7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
+      vitest:
+        specifier: 3.2.4
+        version: 3.2.4(@types/debug@4.1.13)(@types/node@25.5.0)(jiti@2.6.1)(jsdom@26.1.0)(less@4.6.4)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
+
+  packages/components-react/checkbox-react:
+    dependencies:
+      '@rijkshuisstijl-community/checkbox-css':
+        specifier: workspace:*
+        version: link:../../components-css/checkbox-css
+      '@utrecht/component-library-react':
+        specifier: 13.0.1
+        version: 13.0.1(@babel/runtime@7.28.6)(date-fns@2.30.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+    devDependencies:
+      '@babel/core':
+        specifier: 7.29.0
+        version: 7.29.0
+      '@babel/plugin-transform-runtime':
+        specifier: 7.29.0
+        version: 7.29.0(@babel/core@7.29.0)
+      '@babel/preset-env':
+        specifier: 7.29.0
+        version: 7.29.0(@babel/core@7.29.0)
+      '@babel/preset-react':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.29.0)
+      '@babel/preset-typescript':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.29.0)
+      '@babel/runtime':
+        specifier: 7.28.6
+        version: 7.28.6
+      '@rollup/plugin-babel':
+        specifier: 6.1.0
+        version: 6.1.0(@babel/core@7.29.0)(@types/babel__core@7.20.5)(rollup@4.59.0)
+      '@rollup/plugin-commonjs':
+        specifier: 29.0.0
+        version: 29.0.0(rollup@4.59.0)
+      '@rollup/plugin-node-resolve':
+        specifier: 16.0.3
+        version: 16.0.3(rollup@4.59.0)
+      '@testing-library/dom':
+        specifier: 10.4.1
+        version: 10.4.1
+      '@testing-library/jest-dom':
+        specifier: 6.9.1
+        version: 6.9.1
+      '@testing-library/react':
+        specifier: 16.3.2
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@testing-library/user-event':
+        specifier: 14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.1)
+      '@types/lodash.chunk':
+        specifier: 4.2.9
+        version: 4.2.9
+      '@types/react':
+        specifier: 19.2.14
+        version: 19.2.14
+      '@vitejs/plugin-react':
+        specifier: 4.7.0
+        version: 4.7.0(vite@7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
+      '@vitest/coverage-v8':
+        specifier: 3.2.4
+        version: 3.2.4(vitest@3.2.4(@types/debug@4.1.13)(@types/node@25.5.0)(jiti@2.6.1)(jsdom@26.1.0)(less@4.6.4)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      react:
+        specifier: 19.2.4
+        version: 19.2.4
+      react-dom:
+        specifier: 19.2.4
+        version: 19.2.4(react@19.2.4)
+      rollup:
+        specifier: 4.59.0
+        version: 4.59.0
+      rollup-plugin-filesize:
+        specifier: 10.0.0
+        version: 10.0.0
+      rollup-plugin-node-externals:
+        specifier: 8.1.2
+        version: 8.1.2(rollup@4.59.0)
+      rollup-plugin-node-polyfills:
+        specifier: 0.2.1
+        version: 0.2.1
+      rollup-plugin-peer-deps-external:
+        specifier: 2.2.4
+        version: 2.2.4(rollup@4.59.0)
+      rollup-plugin-postcss:
+        specifier: 4.0.2
+        version: 4.0.2(postcss@8.5.8)
+      rollup-plugin-typescript2:
+        specifier: 0.36.0
+        version: 0.36.0(rollup@4.59.0)(typescript@5.9.3)
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vite:
+        specifier: 7.3.1
+        version: 7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
+      vitest:
+        specifier: 3.2.4
+        version: 3.2.4(@types/debug@4.1.13)(@types/node@25.5.0)(jiti@2.6.1)(jsdom@26.1.0)(less@4.6.4)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
+
+  packages/components-react/data-badge-button-react:
+    dependencies:
+      '@rijkshuisstijl-community/data-badge-button-css':
+        specifier: workspace:*
+        version: link:../../components-css/data-badge-button-css
+      '@utrecht/component-library-react':
+        specifier: 13.0.1
+        version: 13.0.1(@babel/runtime@7.28.6)(date-fns@2.30.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+    devDependencies:
+      '@babel/core':
+        specifier: 7.29.0
+        version: 7.29.0
+      '@babel/plugin-transform-runtime':
+        specifier: 7.29.0
+        version: 7.29.0(@babel/core@7.29.0)
+      '@babel/preset-env':
+        specifier: 7.29.0
+        version: 7.29.0(@babel/core@7.29.0)
+      '@babel/preset-react':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.29.0)
+      '@babel/preset-typescript':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.29.0)
+      '@babel/runtime':
+        specifier: 7.28.6
+        version: 7.28.6
+      '@rollup/plugin-babel':
+        specifier: 6.1.0
+        version: 6.1.0(@babel/core@7.29.0)(@types/babel__core@7.20.5)(rollup@4.59.0)
+      '@rollup/plugin-commonjs':
+        specifier: 29.0.0
+        version: 29.0.0(rollup@4.59.0)
+      '@rollup/plugin-node-resolve':
+        specifier: 16.0.3
+        version: 16.0.3(rollup@4.59.0)
+      '@testing-library/dom':
+        specifier: 10.4.1
+        version: 10.4.1
+      '@testing-library/jest-dom':
+        specifier: 6.9.1
+        version: 6.9.1
+      '@testing-library/react':
+        specifier: 16.3.2
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@testing-library/user-event':
+        specifier: 14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.1)
+      '@types/lodash.chunk':
+        specifier: 4.2.9
+        version: 4.2.9
+      '@types/react':
+        specifier: 19.2.14
+        version: 19.2.14
+      '@vitejs/plugin-react':
+        specifier: 4.7.0
+        version: 4.7.0(vite@7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
+      '@vitest/coverage-v8':
+        specifier: 3.2.4
+        version: 3.2.4(vitest@3.2.4(@types/debug@4.1.13)(@types/node@25.5.0)(jiti@2.6.1)(jsdom@26.1.0)(less@4.6.4)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      react:
+        specifier: 19.2.4
+        version: 19.2.4
+      react-dom:
+        specifier: 19.2.4
+        version: 19.2.4(react@19.2.4)
+      rollup:
+        specifier: 4.59.0
+        version: 4.59.0
+      rollup-plugin-filesize:
+        specifier: 10.0.0
+        version: 10.0.0
+      rollup-plugin-node-externals:
+        specifier: 8.1.2
+        version: 8.1.2(rollup@4.59.0)
+      rollup-plugin-node-polyfills:
+        specifier: 0.2.1
+        version: 0.2.1
+      rollup-plugin-peer-deps-external:
+        specifier: 2.2.4
+        version: 2.2.4(rollup@4.59.0)
+      rollup-plugin-postcss:
+        specifier: 4.0.2
+        version: 4.0.2(postcss@8.5.8)
+      rollup-plugin-typescript2:
+        specifier: 0.36.0
+        version: 0.36.0(rollup@4.59.0)(typescript@5.9.3)
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vite:
+        specifier: 7.3.1
+        version: 7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
+      vitest:
+        specifier: 3.2.4
+        version: 3.2.4(@types/debug@4.1.13)(@types/node@25.5.0)(jiti@2.6.1)(jsdom@26.1.0)(less@4.6.4)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
+
+  packages/components-react/data-summary-item-react:
+    dependencies:
+      '@rijkshuisstijl-community/link-react':
+        specifier: workspace:*
+        version: link:../link-react
+      '@utrecht/component-library-react':
+        specifier: 13.0.1
+        version: 13.0.1(@babel/runtime@7.28.6)(date-fns@2.30.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+    devDependencies:
+      '@babel/core':
+        specifier: 7.29.0
+        version: 7.29.0
+      '@babel/plugin-transform-runtime':
+        specifier: 7.29.0
+        version: 7.29.0(@babel/core@7.29.0)
+      '@babel/preset-env':
+        specifier: 7.29.0
+        version: 7.29.0(@babel/core@7.29.0)
+      '@babel/preset-react':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.29.0)
+      '@babel/preset-typescript':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.29.0)
+      '@babel/runtime':
+        specifier: 7.28.6
+        version: 7.28.6
+      '@rollup/plugin-babel':
+        specifier: 6.1.0
+        version: 6.1.0(@babel/core@7.29.0)(@types/babel__core@7.20.5)(rollup@4.59.0)
+      '@rollup/plugin-commonjs':
+        specifier: 29.0.0
+        version: 29.0.0(rollup@4.59.0)
+      '@rollup/plugin-node-resolve':
+        specifier: 16.0.3
+        version: 16.0.3(rollup@4.59.0)
+      '@testing-library/dom':
+        specifier: 10.4.1
+        version: 10.4.1
+      '@testing-library/jest-dom':
+        specifier: 6.9.1
+        version: 6.9.1
+      '@testing-library/react':
+        specifier: 16.3.2
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@testing-library/user-event':
+        specifier: 14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.1)
+      '@types/lodash.chunk':
+        specifier: 4.2.9
+        version: 4.2.9
+      '@types/react':
+        specifier: 19.2.14
+        version: 19.2.14
+      '@vitejs/plugin-react':
+        specifier: 4.7.0
+        version: 4.7.0(vite@7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
+      '@vitest/coverage-v8':
+        specifier: 3.2.4
+        version: 3.2.4(vitest@3.2.4(@types/debug@4.1.13)(@types/node@25.5.0)(jiti@2.6.1)(jsdom@26.1.0)(less@4.6.4)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      react:
+        specifier: 19.2.4
+        version: 19.2.4
+      react-dom:
+        specifier: 19.2.4
+        version: 19.2.4(react@19.2.4)
+      rollup:
+        specifier: 4.59.0
+        version: 4.59.0
+      rollup-plugin-filesize:
+        specifier: 10.0.0
+        version: 10.0.0
+      rollup-plugin-node-externals:
+        specifier: 8.1.2
+        version: 8.1.2(rollup@4.59.0)
+      rollup-plugin-node-polyfills:
+        specifier: 0.2.1
+        version: 0.2.1
+      rollup-plugin-peer-deps-external:
+        specifier: 2.2.4
+        version: 2.2.4(rollup@4.59.0)
+      rollup-plugin-postcss:
+        specifier: 4.0.2
+        version: 4.0.2(postcss@8.5.8)
+      rollup-plugin-typescript2:
+        specifier: 0.36.0
+        version: 0.36.0(rollup@4.59.0)(typescript@5.9.3)
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vite:
+        specifier: 7.3.1
+        version: 7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
+      vitest:
+        specifier: 3.2.4
+        version: 3.2.4(@types/debug@4.1.13)(@types/node@25.5.0)(jiti@2.6.1)(jsdom@26.1.0)(less@4.6.4)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
+
+  packages/components-react/data-summary-react:
+    dependencies:
+      '@rijkshuisstijl-community/data-summary-css':
+        specifier: workspace:*
+        version: link:../../components-css/data-summary-css
+      '@utrecht/component-library-react':
+        specifier: 13.0.1
+        version: 13.0.1(@babel/runtime@7.28.6)(date-fns@2.30.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+    devDependencies:
+      '@babel/core':
+        specifier: 7.29.0
+        version: 7.29.0
+      '@babel/plugin-transform-runtime':
+        specifier: 7.29.0
+        version: 7.29.0(@babel/core@7.29.0)
+      '@babel/preset-env':
+        specifier: 7.29.0
+        version: 7.29.0(@babel/core@7.29.0)
+      '@babel/preset-react':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.29.0)
+      '@babel/preset-typescript':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.29.0)
+      '@babel/runtime':
+        specifier: 7.28.6
+        version: 7.28.6
+      '@rollup/plugin-babel':
+        specifier: 6.1.0
+        version: 6.1.0(@babel/core@7.29.0)(@types/babel__core@7.20.5)(rollup@4.59.0)
+      '@rollup/plugin-commonjs':
+        specifier: 29.0.0
+        version: 29.0.0(rollup@4.59.0)
+      '@rollup/plugin-node-resolve':
+        specifier: 16.0.3
+        version: 16.0.3(rollup@4.59.0)
+      '@testing-library/dom':
+        specifier: 10.4.1
+        version: 10.4.1
+      '@testing-library/jest-dom':
+        specifier: 6.9.1
+        version: 6.9.1
+      '@testing-library/react':
+        specifier: 16.3.2
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@testing-library/user-event':
+        specifier: 14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.1)
+      '@types/lodash.chunk':
+        specifier: 4.2.9
+        version: 4.2.9
+      '@types/react':
+        specifier: 19.2.14
+        version: 19.2.14
+      '@vitejs/plugin-react':
+        specifier: 4.7.0
+        version: 4.7.0(vite@7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
+      '@vitest/coverage-v8':
+        specifier: 3.2.4
+        version: 3.2.4(vitest@3.2.4(@types/debug@4.1.13)(@types/node@25.5.0)(jiti@2.6.1)(jsdom@26.1.0)(less@4.6.4)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      react:
+        specifier: 19.2.4
+        version: 19.2.4
+      react-dom:
+        specifier: 19.2.4
+        version: 19.2.4(react@19.2.4)
+      rollup:
+        specifier: 4.59.0
+        version: 4.59.0
+      rollup-plugin-filesize:
+        specifier: 10.0.0
+        version: 10.0.0
+      rollup-plugin-node-externals:
+        specifier: 8.1.2
+        version: 8.1.2(rollup@4.59.0)
+      rollup-plugin-node-polyfills:
+        specifier: 0.2.1
+        version: 0.2.1
+      rollup-plugin-peer-deps-external:
+        specifier: 2.2.4
+        version: 2.2.4(rollup@4.59.0)
+      rollup-plugin-postcss:
+        specifier: 4.0.2
+        version: 4.0.2(postcss@8.5.8)
+      rollup-plugin-typescript2:
+        specifier: 0.36.0
+        version: 0.36.0(rollup@4.59.0)(typescript@5.9.3)
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vite:
+        specifier: 7.3.1
+        version: 7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
+      vitest:
+        specifier: 3.2.4
+        version: 3.2.4(@types/debug@4.1.13)(@types/node@25.5.0)(jiti@2.6.1)(jsdom@26.1.0)(less@4.6.4)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
+
   packages/components-react/dot-badge-react:
     dependencies:
       '@rijkshuisstijl-community/dot-badge-css':
@@ -2084,6 +2656,21 @@ importers:
       '@rijkshuisstijl-community/card-react':
         specifier: workspace:*
         version: link:../card-react
+      '@rijkshuisstijl-community/checkbox-group-react':
+        specifier: workspace:*
+        version: link:../checkbox-group-react
+      '@rijkshuisstijl-community/checkbox-react':
+        specifier: workspace:*
+        version: link:../checkbox-react
+      '@rijkshuisstijl-community/data-badge-button-react':
+        specifier: workspace:*
+        version: link:../data-badge-button-react
+      '@rijkshuisstijl-community/data-summary-item-react':
+        specifier: workspace:*
+        version: link:../data-summary-item-react
+      '@rijkshuisstijl-community/data-summary-react':
+        specifier: workspace:*
+        version: link:../data-summary-react
       '@rijkshuisstijl-community/dot-badge-react':
         specifier: workspace:*
         version: link:../dot-badge-react
@@ -2099,6 +2686,9 @@ importers:
       '@rijkshuisstijl-community/link-react':
         specifier: workspace:*
         version: link:../link-react
+      '@rijkshuisstijl-community/logo-react':
+        specifier: workspace:*
+        version: link:../logo-react
       '@rijkshuisstijl-community/paragraph-react':
         specifier: workspace:*
         version: link:../paragraph-react
@@ -2314,6 +2904,103 @@ importers:
       '@types/react':
         specifier: 19.2.14
         version: 19.2.14
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      react:
+        specifier: 19.2.4
+        version: 19.2.4
+      react-dom:
+        specifier: 19.2.4
+        version: 19.2.4(react@19.2.4)
+      rollup:
+        specifier: 4.60.1
+        version: 4.60.1
+      rollup-plugin-filesize:
+        specifier: 10.0.0
+        version: 10.0.0
+      rollup-plugin-node-externals:
+        specifier: 8.1.2
+        version: 8.1.2(rollup@4.60.1)
+      rollup-plugin-node-polyfills:
+        specifier: 0.2.1
+        version: 0.2.1
+      rollup-plugin-peer-deps-external:
+        specifier: 2.2.4
+        version: 2.2.4(rollup@4.60.1)
+      rollup-plugin-postcss:
+        specifier: 4.0.2
+        version: 4.0.2(postcss@8.5.8)
+      rollup-plugin-typescript2:
+        specifier: 0.37.0
+        version: 0.37.0(rollup@4.60.1)(typescript@5.9.3)
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vite:
+        specifier: 7.3.1
+        version: 7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
+      vitest:
+        specifier: 3.2.4
+        version: 3.2.4(@types/debug@4.1.13)(@types/node@25.5.0)(jiti@2.6.1)(jsdom@26.1.0)(less@4.6.4)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
+
+  packages/components-react/logo-react:
+    dependencies:
+      '@rijkshuisstijl-community/logo-css':
+        specifier: workspace:*
+        version: link:../../components-css/logo-css
+    devDependencies:
+      '@babel/core':
+        specifier: 7.29.0
+        version: 7.29.0
+      '@babel/plugin-transform-runtime':
+        specifier: 7.29.0
+        version: 7.29.0(@babel/core@7.29.0)
+      '@babel/preset-env':
+        specifier: 7.29.2
+        version: 7.29.2(@babel/core@7.29.0)
+      '@babel/preset-react':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.29.0)
+      '@babel/preset-typescript':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.29.0)
+      '@babel/runtime':
+        specifier: 7.29.2
+        version: 7.29.2
+      '@rollup/plugin-babel':
+        specifier: 6.1.0
+        version: 6.1.0(@babel/core@7.29.0)(@types/babel__core@7.20.5)(rollup@4.60.1)
+      '@rollup/plugin-commonjs':
+        specifier: 29.0.2
+        version: 29.0.2(rollup@4.60.1)
+      '@rollup/plugin-node-resolve':
+        specifier: 16.0.3
+        version: 16.0.3(rollup@4.60.1)
+      '@testing-library/dom':
+        specifier: 10.4.1
+        version: 10.4.1
+      '@testing-library/jest-dom':
+        specifier: 6.9.1
+        version: 6.9.1
+      '@testing-library/react':
+        specifier: 16.3.2
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@testing-library/user-event':
+        specifier: 14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.1)
+      '@types/lodash.chunk':
+        specifier: 4.2.9
+        version: 4.2.9
+      '@types/react':
+        specifier: 19.2.14
+        version: 19.2.14
+      '@vitejs/plugin-react':
+        specifier: 4.7.0
+        version: 4.7.0(vite@7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
+      '@vitest/coverage-v8':
+        specifier: 3.2.4
+        version: 3.2.4(vitest@3.2.4(@types/debug@4.1.13)(@types/node@25.5.0)(jiti@2.6.1)(jsdom@26.1.0)(less@4.6.4)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -20636,11 +21323,11 @@ snapshots:
     optionalDependencies:
       rollup: 4.60.1
 
-  '@rollup/plugin-json@6.1.0(rollup@4.59.0)':
+  '@rollup/plugin-json@6.1.0(rollup@4.60.1)':
     dependencies:
-      '@rollup/pluginutils': 5.3.0(rollup@4.59.0)
+      '@rollup/pluginutils': 5.3.0(rollup@4.60.1)
     optionalDependencies:
-      rollup: 4.59.0
+      rollup: 4.60.1
 
   '@rollup/plugin-node-resolve@16.0.3(rollup@4.59.0)':
     dependencies:
@@ -29505,7 +30192,7 @@ snapshots:
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular/compiler-cli': 21.2.6(@angular/compiler@21.2.6)(typescript@5.9.3)
-      '@rollup/plugin-json': 6.1.0(rollup@4.59.0)
+      '@rollup/plugin-json': 6.1.0(rollup@4.60.1)
       '@rollup/wasm-node': 4.60.0
       ajv: 8.18.0
       ansi-colors: 4.1.3
@@ -29521,14 +30208,14 @@ snapshots:
       ora: 9.3.0
       piscina: 5.1.4
       postcss: 8.5.8
-      rollup-plugin-dts: 6.4.1(rollup@4.59.0)(typescript@5.9.3)
+      rollup-plugin-dts: 6.4.1(rollup@4.60.1)(typescript@5.9.3)
       rxjs: 7.8.2
       sass: 1.98.0
       tinyglobby: 0.2.15
       tslib: 2.8.1
       typescript: 5.9.3
     optionalDependencies:
-      rollup: 4.59.0
+      rollup: 4.60.1
 
   nice-try@1.0.5: {}
 
@@ -31344,13 +32031,13 @@ snapshots:
       - '@emnapi/core'
       - '@emnapi/runtime'
 
-  rollup-plugin-dts@6.4.1(rollup@4.59.0)(typescript@5.9.3):
+  rollup-plugin-dts@6.4.1(rollup@4.60.1)(typescript@5.9.3):
     dependencies:
       '@jridgewell/remapping': 2.3.5
       '@jridgewell/sourcemap-codec': 1.5.5
       convert-source-map: 2.0.0
       magic-string: 0.30.21
-      rollup: 4.59.0
+      rollup: 4.60.1
       typescript: 5.9.3
     optionalDependencies:
       '@babel/code-frame': 7.29.0

@@ -1,5 +1,14 @@
 # @rijkshuisstijl-community/web-components
 
+## 6.0.2
+
+### Patch Changes
+
+- Updated dependencies [e9dae7c]
+  - @rijkshuisstijl-community/accordion-css@2.0.1
+  - @rijkshuisstijl-community/article-css@2.0.1
+  - @rijkshuisstijl-community/alert-css@4.0.1
+
 ## 6.0.1
 
 ### Patch Changes
