@@ -3,11 +3,11 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react';
 import { Image } from '@rijkshuisstijl-community/image-react';
 import { Paragraph } from '@rijkshuisstijl-community/paragraph-react';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactNode, Ref } from 'react';
-import { Heading, HeadingLevel } from './Heading';
 import { HeadingGroup } from './HeadingGroup';
 
 export interface HeroBaseProps extends HTMLAttributes<HTMLDivElement> {

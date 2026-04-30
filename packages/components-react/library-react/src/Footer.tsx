@@ -3,12 +3,12 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react';
 import { Icon } from '@rijkshuisstijl-community/icon-react';
 import { Link } from '@rijkshuisstijl-community/link-react';
 import clsx from 'clsx';
 import { HTMLAttributes, MouseEvent, PropsWithChildren, ReactNode, Ref } from 'react';
 import { ColumnLayout } from './ColumnLayout';
-import { Heading, HeadingLevel } from './Heading';
 
 interface FooterProps extends HTMLAttributes<HTMLDivElement> {
   heading?: ReactNode;
