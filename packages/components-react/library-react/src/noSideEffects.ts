@@ -36,7 +36,7 @@ export * from './FormFieldSelect';
 export * from './FormFieldTextInput';
 export * from './FormFieldTextarea';
 export * from './FormSummary';
-export * from './Heading';
+export * from '@rijkshuisstijl-community/heading-react/no-side-effects';
 export * from './HeadingGroup';
 export * from './Hero';
 export * from '@rijkshuisstijl-community/icon-react/no-side-effects';
