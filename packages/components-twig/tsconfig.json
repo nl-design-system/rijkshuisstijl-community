@@ -2,12 +2,11 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "outDir": "./dist/",
-    "lib": ["ESNext", "dom"],
     "types": ["node"],
     "module": "Preserve",
     "moduleResolution": "bundler",
     "declaration": true
   },
-  "extends": "@nl-design-system/tsconfig",
+  "extends": "../../tsconfig.json",
   "include": ["./src/"]
 }
