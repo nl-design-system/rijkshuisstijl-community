@@ -56,7 +56,7 @@ export * from './LinkButton';
 export * from './LinkList';
 export * from './LinkListCard';
 export * from './Listbox';
-export * from './Logo';
+export * from '@rijkshuisstijl-community/logo-react/no-side-effects';
 export * from './MessageList';
 export * from './MessageListItem';
 export * from './NavBar';
