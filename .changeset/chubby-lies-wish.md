@@ -1,5 +1,6 @@
 ---
 '@rijkshuisstijl-community/heading-react': major
+'@rijkshuisstijl-community/heading-group-react': major
 '@rijkshuisstijl-community/heading-css': major
 ---
 
