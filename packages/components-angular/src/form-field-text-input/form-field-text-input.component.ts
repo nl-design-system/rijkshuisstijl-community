@@ -68,7 +68,7 @@ export class FormFieldTextInputComponent implements ControlValueAccessor {
   @Input() step?: number;
   @Input() type?: TextInputTypes = 'text';
   @Input({ required: true }) inputId!: string;
-  @Input() defaultValue = '';
+  @Input() value = '';
 
   disabled: boolean = false;
 
@@ -77,8 +77,8 @@ export class FormFieldTextInputComponent implements ControlValueAccessor {
 
   onValueChange(event: Event): void {
     const input = event.target as HTMLInputElement;
-    this.defaultValue = input.value;
-    this.onChange(this.defaultValue);
+    this.value = input.value;
+    this.onChange(this.value);
   }
 
   markAsTouched(): void {
@@ -86,7 +86,7 @@ export class FormFieldTextInputComponent implements ControlValueAccessor {
   }
 
   writeValue(value: string | null): void {
-    this.defaultValue = value ?? '';
+    this.value = value ?? '';
   }
 
   registerOnChange(fn: (value: string) => void): void {

@@ -104,7 +104,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
         category: 'Props',
       },
     },
-    defaultValue: {
+    value: {
       table: {
         category: 'Props',
       },
@@ -233,7 +233,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
     type: 'text',
     dir: 'auto',
     name: 'subject',
-    defaultValue: '',
+    value: '',
     autocomplete: '',
     placeholder: '',
     size: undefined,
@@ -256,7 +256,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
     readonly,
     dir,
     name,
-    defaultValue,
+    value,
     autocomplete,
     placeholder,
     size,
@@ -297,7 +297,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
     `,
     props: {
       form: new FormGroup({
-        textInput: new FormControl(defaultValue),
+        textInput: new FormControl(value),
       }),
       inputId,
       invalid,
@@ -311,7 +311,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
       readonly,
       dir,
       name,
-      defaultValue,
+      value,
       autocomplete,
       placeholder,
       size,
@@ -434,10 +434,10 @@ export const Status: StoryObj<FormFieldTextInputComponent> = {
   args: {
     name: 'subject',
     label: 'Onderwerp',
-    defaultValue: 'Hello, World!',
+    value: 'Hello, World!',
     status: '13 van de 50 tekens gebruikt',
   },
-  render: ({ name, label, defaultValue, status }) => ({
+  render: ({ name, label, value, status }) => ({
       template: `
         <form [formGroup]="form">
           <rhc-form-field-text-input
@@ -451,7 +451,7 @@ export const Status: StoryObj<FormFieldTextInputComponent> = {
       `,
       props: {
         form:  new FormGroup({
-          textInput: new FormControl(defaultValue),
+          textInput: new FormControl(value),
         }),
         name,
         label,
@@ -503,9 +503,9 @@ export const Disabled: StoryObj<FormFieldTextInputComponent> = {
     name: 'subject',
     label: 'Onderwerp',
     disabled: true,
-    defaultValue: 'Hello, world!',
+    value: 'Hello, world!',
   },
-  render: ({ name, label, defaultValue, disabled }) => ({
+  render: ({ name, label, value, disabled }) => ({
     template: `
     <form [formGroup]="form">
       <rhc-form-field-text-input
@@ -518,7 +518,7 @@ export const Disabled: StoryObj<FormFieldTextInputComponent> = {
     `,
     props: {
       form: new FormGroup({
-        textInput: new FormControl({ value: defaultValue, disabled: disabled }),
+        textInput: new FormControl({ value: value, disabled: disabled }),
       }),
       name,
       label,
@@ -535,9 +535,9 @@ export const Readonly: StoryObj<FormFieldTextInputComponent> = {
     name: 'subject',
     label: 'Onderwerp',
     readonly: true,
-    defaultValue: 'Hello, world!',
+    value: 'Hello, world!',
   },
-  render: ({ name, label, defaultValue, readonly }) => ({
+  render: ({ name, label, value, readonly }) => ({
     template: `
     <form [formGroup]="form">
       <rhc-form-field-text-input
@@ -551,7 +551,7 @@ export const Readonly: StoryObj<FormFieldTextInputComponent> = {
     `,
     props: {
       form: new FormGroup({
-        textInput: new FormControl(defaultValue),
+        textInput: new FormControl(value),
       }),
       name,
       label,
