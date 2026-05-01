@@ -1,5 +1,6 @@
 import stylistic from '@stylistic/eslint-plugin';
 import sonarjs from 'eslint-plugin-sonarjs';
+import regexpPlugin from 'eslint-plugin-regexp';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
@@ -60,6 +61,8 @@ export default defineConfig([
       'sonarjs/todo-tag': 0,
     },
   },
+
+  regexpPlugin.configs.recommended,
 
   eslintPluginUnicorn.configs.recommended,
   {
