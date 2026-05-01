@@ -4,8 +4,8 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '../components-react/skip-link.md?raw';
 
 const meta = {
-  title: 'Separator',
-  id: 'rhc-twig-separator',
+  title: 'Skip-link',
+  id: 'rhc-twig-skiplink',
   component: TwigSkiplink,
   argTypes: {
     invisible: {
@@ -21,12 +21,12 @@ const meta = {
       },
     },
     componentOrigin:
-      'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
+      'Dit component is overgenomen vanuit de NL-Design system candidate repo.',
     figma:
-      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1-1&t=n1djYpmvDCKmAEUi-0',
-    nldesignsystem: 'https://www.nldesignsystem.nl/skip-link/',
+      'https://www.figma.com/design/2cCxjvY0jNjdhp7wkZVBnr/button?node-id=2217-10122&m=dev',
+    nldesignsystem: 'https://nldesignsystem.nl/skip-link/',
     github:
-      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/src/Separator.twig',
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/src/Skip-link.twig',
   },
 } satisfies Meta<typeof TwigSkiplink>;
 
@@ -34,13 +34,14 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const SeparatorDefault: Story = {
+export const SkiplinkDefault: Story = {
   name: 'Default',
 };
 
-export const SeparatorInvisible: Story = {
-  name: 'Invisible',
-  args: {
-    invisible: true,
-  },
+export const SkiplinkRightToLeft: Story = {
+  name: 'Right-to-left',
+};
+
+export const SkiplinkFocusVisible: Story = {
+  name: 'Focus visible',
 };
