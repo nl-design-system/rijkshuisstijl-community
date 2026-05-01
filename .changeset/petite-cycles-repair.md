@@ -2,4 +2,4 @@
 '@rijkshuisstijl-community/components-angular': major
 ---
 
-defaultValue added to FormFieldTextInput component
+Add `value` input to FormFieldTextInput component with default empty string.
