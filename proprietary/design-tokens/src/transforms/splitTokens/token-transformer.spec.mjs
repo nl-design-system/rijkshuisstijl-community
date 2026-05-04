@@ -22,7 +22,7 @@ describe('flattenMatrix', () => {
       { name: 'groen-information-dense', tokenSets: ['3', '4', 'b'] },
     ];
 
-    expect(flattenMatrix(input)).toStrictEqual(expectedOutput);
+    expect(flattenMatrix(input, [])).toStrictEqual(expectedOutput);
   });
 
   test('flattens a simple tree correctly (advanced)', () => {
@@ -52,6 +52,6 @@ describe('flattenMatrix', () => {
       { name: 'ding2-groen-information-dense', tokenSets: ['y', '3', '4', 'b'] },
     ];
 
-    expect(flattenMatrix(input)).toStrictEqual(expectedOutput);
+    expect(flattenMatrix(input, [])).toStrictEqual(expectedOutput);
   });
 });
