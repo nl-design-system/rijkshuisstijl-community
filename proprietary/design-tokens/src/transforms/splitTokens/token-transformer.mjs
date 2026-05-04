@@ -83,7 +83,7 @@ const normaliseTokenSetName = (tokenSetName) => tokenSetName.toLowerCase().repla
 
 const accordingTo = (list) => (a, b) => list.indexOf(a) - list.indexOf(b);
 
-const cartesian = (...a) => a.reduce((a, b) => a.flatMap((d) => b.map((e) => [d, e].flat())));
+const cartesian = (...a) => a.reduce((a, b) => a.flatMap((d) => b.map((e) => [d, e].flat())), [[]]);
 
 /**
  *
