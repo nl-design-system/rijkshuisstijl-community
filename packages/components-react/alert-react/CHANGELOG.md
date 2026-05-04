@@ -1,5 +1,14 @@
 # @rijkshuisstijl-community/alert-react
 
+## 3.0.3
+
+### Patch Changes
+
+- e9dae7c: Updated broken links in the documentation
+- Updated dependencies [e9dae7c]
+  - @rijkshuisstijl-community/icon-react@3.0.3
+  - @rijkshuisstijl-community/alert-css@4.0.1
+
 ## 3.0.2
 
 ### Patch Changes

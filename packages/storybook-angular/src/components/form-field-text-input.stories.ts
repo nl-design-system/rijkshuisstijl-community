@@ -297,7 +297,7 @@ const meta: Meta<FormFieldTextInputComponent> = {
     `,
     props: {
       form: new FormGroup({
-        textInput: new FormControl(''),
+        textInput: new FormControl(value),
       }),
       inputId,
       invalid,
@@ -438,30 +438,29 @@ export const Status: StoryObj<FormFieldTextInputComponent> = {
     status: '13 van de 50 tekens gebruikt',
   },
   render: ({ name, label, value, status }) => ({
-    template: `
-    <form [formGroup]="form">
-      <rhc-form-field-text-input
-        formControlName="textInput"
-        inputId="status"
-        [name]="name"
-        [label]="label"
-        [status]="status"
-      />
-    </form>
-    `,
-    props: {
-      form: new FormGroup({
-        textInput: new FormControl(value),
-      }),
-      name,
-      label,
-      value,
-      status,
-    },
-    moduleMetadata: {
-      imports: [ReactiveFormsModule],
-    },
-  }),
+      template: `
+        <form [formGroup]="form">
+          <rhc-form-field-text-input
+            formControlName="textInput"
+            inputId="status"
+            [name]="name"
+            [label]="label"
+            [status]="status"
+          />
+        </form>
+      `,
+      props: {
+        form:  new FormGroup({
+          textInput: new FormControl(value),
+        }),
+        name,
+        label,
+        status,
+      },
+      moduleMetadata: {
+        imports: [ReactiveFormsModule],
+      },
+  })
 };
 
 export const Password: StoryObj<FormFieldTextInputComponent> = {
@@ -523,8 +522,7 @@ export const Disabled: StoryObj<FormFieldTextInputComponent> = {
       }),
       name,
       label,
-      disabled,
-      value,
+      disabled
     },
     moduleMetadata: {
       imports: [ReactiveFormsModule],
@@ -557,8 +555,7 @@ export const Readonly: StoryObj<FormFieldTextInputComponent> = {
       }),
       name,
       label,
-      readonly,
-      value,
+      readonly
     },
     moduleMetadata: {
       imports: [ReactiveFormsModule],

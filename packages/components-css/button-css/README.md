@@ -2,7 +2,10 @@
 
 # Omschrijving
 
-Dit package bevat de specifieke code voor het component. Als je alle rijkshuisstijl community componenten wil kijk dan naar [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/library-css/README.md]. Voor verdere informatie over het inzet van de component kijk naar onze documentatie [https://rijkshuisstijl-community.vercel.app/?path=/docs/css-button--docs]
+Dit is het Button CSS-component van het Rijkshuisstijl Community Design System[<https://github.com/nl-design-system/rijkshuisstijl-community/>]. Zie ook de volgende links:
+
+- README.md voor alle CSS-componenten
+  [<https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/library-css/README.md>]
 
 ## Installatie
 
@@ -12,14 +15,4 @@ pnpm add @rijkshuisstijl-community/button-css
 
 ## Gebruik
 
-```html
-import '@rijkshuisstijl-community/button-css';
-
-<div class="utrecht-document">
-  <button class="utrecht-button" type="button">Label</button>
-</div>
-```
-
-## Rijkshuisstijl Community Componenten
-
-**Direct aan de slag met [CSS](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/library-css/README.md) | [React](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/library-react/README.md) | [Web Components](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/README.md) | [Twig](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/README.md)**
+Op de Storybook voor button-css [<https://rijkshuisstijl-community.vercel.app/?path=/docs/css-button--docs>] staan voorbeelden voor het gebruik van dit component.
