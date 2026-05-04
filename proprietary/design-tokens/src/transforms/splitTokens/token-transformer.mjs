@@ -7,7 +7,7 @@ const LOG = (msg) => {
 };
 const TOKENS_FILE = './figma/figma.tokens.json';
 
-const ALWAYS_ON = 'Always on';
+export const ALWAYS_ON = 'Always on';
 const IGNORE = new Set(['Viewport']);
 const THEME_GROUP_NAME_SORT = ['Theme', 'Type scale'];
 const BASE_THEME_NAME = 'core';
@@ -60,12 +60,12 @@ const flattenTokenSetSets = (tokenSetsObject) =>
     ...
   }
 */
-const readThemeGroups = (themeGroups) => {
+export const readThemeGroups = (themeGroups, ignoreList = new Set()) => {
   let tokenSetsAlwaysOn = [];
   let tokenSetNamesAlwaysOn = [];
   const tokenSetsMatrix = {};
   themeGroups.forEach((themeGroup) => {
-    if (IGNORE.has(themeGroup.group)) return;
+    if (ignoreList.has(themeGroup.group)) return;
 
     if (themeGroup.name === ALWAYS_ON) {
       tokenSetsAlwaysOn = [...tokenSetsAlwaysOn, ...flattenTokenSetSets(themeGroup.selectedTokenSets)];
@@ -139,7 +139,7 @@ if (import.meta.main) {
   const tokens = await readTokensFile();
   LOG(`Token file ${TOKENS_FILE} successfully parsed as JSON`);
 
-  const { tokenSetsAlwaysOn, tokenSetsMatrix, tokenSetNamesAlwaysOn } = readThemeGroups(tokens.$themes);
+  const { tokenSetsAlwaysOn, tokenSetsMatrix, tokenSetNamesAlwaysOn } = readThemeGroups(tokens.$themes, IGNORE);
   LOG(
     `Found ${Object.keys(tokenSetsAlwaysOn).length} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`,
   );
