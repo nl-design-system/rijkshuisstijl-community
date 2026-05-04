@@ -8,11 +8,14 @@ const meta = {
   id: 'rhc-twig-skiplink',
   component: TwigSkiplink,
   argTypes: {
-    invisible: {
-      description: 'Invisible',
-      control: { type: 'boolean' },
-      defaultValue: false,
+    href: {
+      description: 'string',
+      control: { type: 'text' },
     },
+    lang: {
+      description: 'string',
+      control: { type: 'text' },
+    }
   },
   parameters: {
     docs: {
@@ -35,13 +38,27 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const SkiplinkDefault: Story = {
+  args: {
+    href: '#main',
+    children: 'Skip to main content',
+  },
   name: 'Default',
 };
 
 export const SkiplinkRightToLeft: Story = {
+  args: {
+    href: '#main',
+    children: 'تخطي إلى المحتوى الرئيسي',
+    lang: 'ar',
+    dir: 'rtl',
+  },
   name: 'Right-to-left',
 };
 
 export const SkiplinkFocusVisible: Story = {
+  args: {
+    href: '#main',
+    children: 'Skip to main content',
+  },
   name: 'Focus visible',
 };
