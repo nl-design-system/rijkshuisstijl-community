@@ -1,10 +1,10 @@
 import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-robijnrood/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-paars/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-oranje/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/robijnrood/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/paars/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/oranje/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/groen/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/hemelblauw/index.css';
 import '@rijkshuisstijl-community/design-tokens/src/fluid.css';
 import '@rijkshuisstijl-community/design-tokens/src/fluid-font-size.css';
 import '@rijkshuisstijl-community/design-tokens/src/fluid-space.css';
@@ -30,11 +30,11 @@ const preview: Preview = {
     withThemeByClassName({
       themes: {
         'Kern - Lintblauw': `rhc-theme ${themeModifiers}`,
-        'Uitvoerend - Groen': `uitvoerend-groen ${themeModifiers}`,
-        'Uitvoerend - Hemelblauw': `uitvoerend-hemelblauw ${themeModifiers}`,
-        'Uitvoerend - Oranje': `uitvoerend-oranje ${themeModifiers}`,
-        'Uitvoerend - Paars': `uitvoerend-paars ${themeModifiers}`,
-        'Uitvoerend - Robijn Rood': `uitvoerend-robijnrood ${themeModifiers}`,
+        'Uitvoerend - Groen': `groen ${themeModifiers}`,
+        'Uitvoerend - Hemelblauw': `hemelblauw ${themeModifiers}`,
+        'Uitvoerend - Oranje': `oranje ${themeModifiers}`,
+        'Uitvoerend - Paars': `paars ${themeModifiers}`,
+        'Uitvoerend - Robijn Rood': `robijnrood ${themeModifiers}`,
       },
       defaultTheme: 'Kern - Lintblauw',
     }),
