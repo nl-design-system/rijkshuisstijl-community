@@ -8,7 +8,7 @@ const LOG = (msg) => {
 const TOKENS_FILE = './figma/figma.tokens.json';
 
 const ALWAYS_ON = 'Always on';
-const IGNORE = ['Viewport'];
+const IGNORE = new Set(['Viewport']);
 const THEME_GROUP_NAME_SORT = ['Theme', 'Type scale'];
 const BASE_THEME_NAME = 'core';
 
@@ -65,7 +65,7 @@ const readThemeGroups = (themeGroups) => {
   let tokenSetNamesAlwaysOn = [];
   const tokenSetsMatrix = {};
   themeGroups.forEach((themeGroup) => {
-    if (IGNORE.includes(themeGroup.group)) return;
+    if (IGNORE.has(themeGroup.group)) return;
 
     if (themeGroup.name === ALWAYS_ON) {
       tokenSetsAlwaysOn = [...tokenSetsAlwaysOn, ...flattenTokenSetSets(themeGroup.selectedTokenSets)];
