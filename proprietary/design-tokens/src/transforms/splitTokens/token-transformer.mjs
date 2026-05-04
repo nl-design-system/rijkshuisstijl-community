@@ -130,7 +130,7 @@ export const flattenMatrix = (tokenSetsMatrix, tokenSetsAlwaysOn) => {
       .map(({ choice }) => choice)
       .filter((name) => name !== 'default')
       .join('-'),
-    tokenSets: [...choices.map(({ tokenSets }) => tokenSets).flat(), ...tokenSetsAlwaysOn],
+    tokenSets: [...choices.flatMap(({ tokenSets }) => tokenSets), ...tokenSetsAlwaysOn],
   }));
   return result;
 };
