@@ -1,10 +1,17 @@
 import '@nl-rvo/assets/fonts/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/core/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/robijnrood/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/paars/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/oranje/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/groen/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/hemelblauw/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/core-information-dense/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/robijnrood-information-dense/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/paars-information-dense/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/oranje-information-dense/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/groen-information-dense/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/hemelblauw-information-dense/index.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Body, PageLayout, Paragraph, Root } from '@rijkshuisstijl-community/components-react';
@@ -20,12 +27,19 @@ const preview: Preview = {
   decorators: [
     withThemeByClassName({
       themes: {
-        'Kern - Lintblauw': `rhc-theme rhc-theme--fluid`,
-        'Uitvoerend - Groen': `groen groen--fluid`,
-        'Uitvoerend - Hemelblauw': `hemelblauw hemelblauw--fluid`,
-        'Uitvoerend - Oranje': `oranje oranje--fluid`,
-        'Uitvoerend - Paars': `paars paars--fluid`,
-        'Uitvoerend - Robijn Rood': `robijnrood robijnrood--fluid`,
+        Lintblauw: `rhc-theme rhc-theme--fluid`,
+        Groen: `groen groen--fluid`,
+        Hemelblauw: `hemelblauw hemelblauw--fluid`,
+        Oranje: `oranje oranje--fluid`,
+        Paars: `paars paars--fluid`,
+        'Robijn Rood': `robijnrood robijnrood--fluid`,
+
+        'Lintblauw (information dense)': `core-information-dense rhc-theme--fluid`,
+        'Groen (information dense)': `groen-information-dense groen--fluid`,
+        'Hemelblauw (information dense)': `hemelblauw-information-dense hemelblauw--fluid`,
+        'Oranje (information dense)': `oranje-information-dense oranje--fluid`,
+        'Paars (information dense)': `paars-information-dense paars--fluid`,
+        'Robijn Rood (information dense)': `robijnrood-information-dense robijnrood--fluid`,
       },
       defaultTheme: 'Kern - Lintblauw',
     }),
