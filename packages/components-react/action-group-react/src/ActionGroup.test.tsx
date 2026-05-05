@@ -1,10 +1,8 @@
 import { cleanup, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/vitest';
-import { createRef, PropsWithChildren } from 'react';
+import { createRef } from 'react';
 import { afterEach, describe, expect, it } from 'vitest';
 import { ActionGroup } from './ActionGroup';
-
-const Button = ({ children }: PropsWithChildren) => <button>{children}</button>;
 
 describe('Action group', () => {
   it('renders a visible element', () => {
@@ -68,7 +66,7 @@ describe('Action group', () => {
     it('renders no group role element', () => {
       render(
         <ActionGroup>
-          <Button>Button 1</Button>
+          <button>Button 1</button>
         </ActionGroup>,
       );
 
@@ -82,8 +80,8 @@ describe('Action group', () => {
     it('renders a group role element', () => {
       render(
         <ActionGroup>
-          <Button>Button 1</Button>
-          <Button>Button 2</Button>
+          <button>Button 1</button>
+          <button>Button 2</button>
         </ActionGroup>,
       );
 
@@ -99,8 +97,8 @@ describe('Action group', () => {
       render(
         <ActionGroup>
           <>
-            <Button>Button 1</Button>
-            <Button>Button 2</Button>
+            <button>Button 1</button>
+            <button>Button 2</button>
           </>
         </ActionGroup>,
       );
