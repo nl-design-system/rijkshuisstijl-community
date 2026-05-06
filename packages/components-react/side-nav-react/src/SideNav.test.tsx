@@ -43,8 +43,8 @@ describe('SideNav', () => {
 
       try {
         expect(screen.getByRole('heading', { name: headingText })).toBeInTheDocument();
-      } catch (e) {
-        expect(e).toBeDefined();
+      } catch (error) {
+        expect(error).toBeDefined();
         return;
       }
       expect(true).toBe(false);

@@ -14,10 +14,6 @@ import '@rijkshuisstijl-community/components-css/dist/index.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/storybook/src/templates/globals.css';
 import './layout.css';
-import '@rijkshuisstijl-community/design-tokens/src/fluid.css';
-import '@rijkshuisstijl-community/design-tokens/src/fluid-font-size.css';
-import '@rijkshuisstijl-community/design-tokens/src/fluid-space.css';
-import '@rijkshuisstijl-community/design-tokens/src/dark-mode.css';
 
 export const metadata: Metadata = {
   title: {
@@ -26,15 +22,9 @@ export const metadata: Metadata = {
   },
 };
 
-const themeModifiers = [
-  'basis-layout-container',
-  'basis-layout-container--fluid-font-size',
-  'basis-layout-container--fluid-space',
-].join(' ');
-
 export default function RootLayout({ children }: PropsWithChildren<{}>) {
   return (
-    <Root lang="nl" dir="ltr" className={`rhc-theme rhc-theme--dark-mode ${themeModifiers}`}>
+    <Root lang="nl" dir="ltr" className="rhc-theme rhc-theme--dark-mode rhc-theme--fluid">
       <body>
         <PageLayout>{children}</PageLayout>
       </body>

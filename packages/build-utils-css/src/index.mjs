@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import postcss from 'postcss';
@@ -102,7 +103,7 @@ const buildTokens = async ({ inputFile, outputFile }) => {
   console.log(outputDir);
   await mkdir(outputDir, { recursive: true });
 
-  const json = JSON.parse(await readFile(inputFile, 'utf-8'));
+  const json = JSON.parse(await readFile(inputFile, 'utf8'));
 
   await writeFile(outputFile, `export default ${JSON.stringify(json, null, 2)};\n`);
 
@@ -116,21 +117,21 @@ export default tokens;
   );
 };
 
-buildStyles({
+await buildStyles({
   inputFile: 'src/index.scss',
   outputFile: 'dist/index.css',
   sourceMap: process.env.NODE_ENV === 'development',
   minify: false,
 });
 
-buildStyles({
+await buildStyles({
   inputFile: 'src/index.scss',
   outputFile: 'dist/index.min.css',
   sourceMap: process.env.NODE_ENV === 'development',
   minify: true,
 });
 
-buildStyles({
+await buildStyles({
   inputFile: 'src/index.scss',
   outputFile: 'dist/index.mjs',
   sourceMap: false,
@@ -139,7 +140,7 @@ buildStyles({
   dts: 'dist/index.d.mts',
 });
 
-buildStyles({
+await buildStyles({
   inputFile: 'src/html/index.scss',
   outputFile: 'dist/html/index.css',
   sourceMap: process.env.NODE_ENV === 'development',
@@ -147,7 +148,7 @@ buildStyles({
   optional: true,
 });
 
-buildStyles({
+await buildStyles({
   inputFile: 'src/html/index.scss',
   outputFile: 'dist/html/index.min.css',
   sourceMap: process.env.NODE_ENV === 'development',
@@ -155,7 +156,7 @@ buildStyles({
   optional: true,
 });
 
-buildStyles({
+await buildStyles({
   inputFile: 'src/html/index.scss',
   outputFile: 'dist/html/index.mjs',
   sourceMap: false,
@@ -165,7 +166,7 @@ buildStyles({
   optional: true,
 });
 
-buildTokens({
+await buildTokens({
   inputFile: 'src/tokens.json',
   outputFile: 'dist/tokens.mjs',
 });
