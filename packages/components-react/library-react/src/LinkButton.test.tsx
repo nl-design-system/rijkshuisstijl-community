@@ -8,6 +8,6 @@ describe('LinkButton', () => {
     render(<LinkButton>test button</LinkButton>);
 
     // Assert
-    expect(screen.getByRole('button'));
+    expect(screen.getByRole('button')).toBeTruthy();
   });
 });

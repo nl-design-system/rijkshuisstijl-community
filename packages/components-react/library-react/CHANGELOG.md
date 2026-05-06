@@ -1,5 +1,70 @@
 # @rijkshuisstijl-community/components-react
 
+## 15.0.2
+
+### Patch Changes
+
+- c189cdf: Use new Utrecht Page Footer CSS that provides `utrecht-page-footer__content`, which replaces `rhc-page-footer__content`.
+
+  Replace `rhc-page-footer__wrapper` new nested `rhc-page-footer-layout` div.
+
+- Updated dependencies [f091fcd]
+- Updated dependencies [f694cf6]
+- Updated dependencies [4bf9045]
+- Updated dependencies [e9dae7c]
+- Updated dependencies [40e5ea8]
+- Updated dependencies [d7a8f02]
+- Updated dependencies [35f5c52]
+  - @rijkshuisstijl-community/action-group-react@1.0.0
+  - @rijkshuisstijl-community/checkbox-react@1.0.0
+  - @rijkshuisstijl-community/checkbox-group-react@1.0.0
+  - @rijkshuisstijl-community/blockquote-react@1.0.1
+  - @rijkshuisstijl-community/accordion-react@3.0.3
+  - @rijkshuisstijl-community/dot-badge-react@1.0.1
+  - @rijkshuisstijl-community/paragraph-react@2.0.2
+  - @rijkshuisstijl-community/separator-react@1.0.1
+  - @rijkshuisstijl-community/article-react@2.0.2
+  - @rijkshuisstijl-community/button-react@1.0.1
+  - @rijkshuisstijl-community/figure-react@1.0.1
+  - @rijkshuisstijl-community/alert-react@3.0.3
+  - @rijkshuisstijl-community/image-react@2.0.2
+  - @rijkshuisstijl-community/icon-react@3.0.3
+  - @rijkshuisstijl-community/link-react@1.0.1
+  - @rijkshuisstijl-community/card-as-link-react@1.0.0
+  - @rijkshuisstijl-community/breadcrumb-nav-react@0.0.1
+  - @rijkshuisstijl-community/card-react@1.0.0
+
+## 15.0.1
+
+### Patch Changes
+
+- Updated dependencies [35e7d11]
+  - @rijkshuisstijl-community/link-react@1.0.0
+
+## 15.0.0
+
+### Major Changes
+
+- 71e84f2: `<Footer>` property `heading` is now renamed to `tagline`, and `heading` property now is for landmark name.
+
+### Minor Changes
+
+- 2ec3235: Add `heading` and `headingId` properties to `<SideNav>` for the navigation landmark heading.
+
+### Patch Changes
+
+- 6915216: Update to latest Root component.
+- a2bbb05: Remove unused breakpoint from `rhc-navigation-list__item__description`.
+- 6ef869c: Fix `SideNav` component to use correct landmark: `navigation`.
+- Updated dependencies [9882e13]
+- Updated dependencies [5d5eeaf]
+- Updated dependencies [609b8bd]
+- Updated dependencies [e7dc0ae]
+  - @rijkshuisstijl-community/blockquote-react@1.0.0
+  - @rijkshuisstijl-community/separator-react@1.0.0
+  - @rijkshuisstijl-community/button-react@1.0.0
+  - @rijkshuisstijl-community/dot-badge-react@1.0.0
+
 ## 14.0.1
 
 ### Patch Changes

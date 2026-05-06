@@ -134,7 +134,7 @@ export const DefaultFooter: Story = {
 
 export const PrimaryOutlinedFooter: Story = {
   args: {
-    tagline: 'Footer taglne',
+    tagline: 'Footer tagline',
     appearanceLevel: 3,
     background: 'primary-outlined',
     preFooterMessage: '',

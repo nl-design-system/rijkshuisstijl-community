@@ -48,6 +48,7 @@ auditConfig:
     - GHSA-vh9h-29pq-r5m8
 
 overrides:
+  axios@<1.15.0: ">=1.15.0"
   handlebars@>=4.0.0 <4.7.9: ">=4.7.9"
   locutus@>=2.0.12 <2.0.39: ">=2.0.39"
   "@isaacs/brace-expansion@<=5.0.0": ">=5.0.1"

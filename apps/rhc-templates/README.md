@@ -1,4 +1,6 @@
-# Rijkshuisstijl community template page
+<!-- markdownlint-disable-next-line MD034 -->
+
+# Webpage <www.rijkshuisstijl-community.nl>
 
 ## Getting Started
 

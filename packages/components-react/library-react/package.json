@@ -1,6 +1,6 @@
 {
   "name": "@rijkshuisstijl-community/components-react",
-  "version": "14.0.1",
+  "version": "15.0.2",
   "author": "Community for NL Design System",
   "description": "React component library for the Rijkshuisstijl Community repository, based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -11,7 +11,7 @@
   "type": "module",
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "provenance": true
   },
   "repository": {
     "type": "git+ssh",
@@ -30,16 +30,19 @@
     "watch:test": "vitest --coverage --watch"
   },
   "main": "./dist/index.cjs.js",
-  "module": "./dist/index.esm.js",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "rhc:source": "./src/index.ts",
-      "default": {
-        "types": "./dist/index.d.ts",
-        "import": "./dist/index.esm.js",
-        "require": "./dist/index.cjs.js"
-      }
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs.js"
+    },
+    "./no-side-effects": {
+      "rhc:source": "./src/noSideEffects.ts",
+      "types": "./dist/noSideEffects.d.ts",
+      "import": "./dist/noSideEffects.mjs"
     },
     "./CHANGELOG.md": "./CHANGELOG.md",
     "./README.md": "./README.md"
@@ -101,20 +104,34 @@
     "@nl-design-system-candidate/link-react": "1.1.8",
     "@nl-design-system-candidate/skip-link-react": "1.1.7",
     "@rijkshuisstijl-community/accordion-react": "workspace:*",
+    "@rijkshuisstijl-community/action-group-react": "workspace:*",
     "@rijkshuisstijl-community/alert-react": "workspace:*",
     "@rijkshuisstijl-community/article-react": "workspace:*",
-    "@rijkshuisstijl-community/button-react": "workspace:*",
     "@rijkshuisstijl-community/blockquote-react": "workspace:*",
+    "@rijkshuisstijl-community/breadcrumb-nav-react": "workspace:*",
+    "@rijkshuisstijl-community/button-react": "workspace:*",
+    "@rijkshuisstijl-community/card-as-link-react": "workspace:*",
+    "@rijkshuisstijl-community/card-react": "workspace:*",
+    "@rijkshuisstijl-community/checkbox-group-react": "workspace:*",
+    "@rijkshuisstijl-community/checkbox-react": "workspace:*",
+    "@rijkshuisstijl-community/data-badge-button-react": "workspace:*",
+    "@rijkshuisstijl-community/data-summary-react": "workspace:*",
+    "@rijkshuisstijl-community/data-summary-item-react": "workspace:*",
+    "@rijkshuisstijl-community/dot-badge-react": "workspace:*",
     "@rijkshuisstijl-community/figure-react": "workspace:*",
     "@rijkshuisstijl-community/icon-react": "workspace:*",
     "@rijkshuisstijl-community/image-react": "workspace:*",
+    "@rijkshuisstijl-community/link-react": "workspace:*",
+    "@rijkshuisstijl-community/logo-react": "workspace:*",
     "@rijkshuisstijl-community/paragraph-react": "workspace:*",
     "@rijkshuisstijl-community/separator-react": "workspace:*",
-    "@utrecht/body-react": "0.0.9",
+    "@rijkshuisstijl-community/side-nav-react": "workspace:*",
+    "@utrecht/body-react": "0.0.11",
     "@utrecht/component-library-react": "13.0.4",
-    "@utrecht/page-body-react": "1.0.10",
-    "@utrecht/page-header-react": "1.0.9",
-    "@utrecht/page-layout-react": "1.0.9",
-    "@utrecht/root-react": "1.0.11"
+    "@utrecht/page-body-react": "1.0.11",
+    "@utrecht/page-footer-react": "1.0.11",
+    "@utrecht/page-header-react": "1.0.10",
+    "@utrecht/page-layout-react": "1.0.11",
+    "@utrecht/root-react": "1.0.15"
   }
 }

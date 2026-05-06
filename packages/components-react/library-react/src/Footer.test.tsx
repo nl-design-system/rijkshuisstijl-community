@@ -58,9 +58,21 @@ describe('Footer', () => {
   });
 
   it('applies background class when background prop is provided', () => {
-    render(<Footer background="primary-filled" />);
-    const footerElement = screen.getByRole('contentinfo');
+    const { container } = render(<Footer background="primary-filled" />);
+    const footerElement = container.querySelector('.rhc-page-footer');
     expect(footerElement).toHaveClass('rhc-page-footer--primary-filled');
+  });
+
+  it('renders a landmark with an accessible name', () => {
+    render(<Footer heading="Colofon" />);
+    const footerElement = screen.getByRole('contentinfo', { name: 'Colofon' });
+    expect(footerElement).toBeInTheDocument();
+  });
+
+  it('renders an invisible heading with the landmark name', () => {
+    render(<Footer heading="Colofon" />);
+    const footerElement = screen.getByText('Colofon');
+    expect(footerElement).toHaveAttribute('aria-hidden', 'true');
   });
 
   it('renders children inside the footer', () => {

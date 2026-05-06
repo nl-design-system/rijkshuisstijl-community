@@ -40,7 +40,7 @@ export const ExpandableCheckboxGroup = ({
   const actualMaxVisible = Math.max(Math.min(maxVisible, options.length), 0);
   const actualVisibleOptions = options.slice(0, actualMaxVisible);
   const actualExtraOptions = options.slice(actualMaxVisible);
-  const actualShowExpandable = actualExtraOptions.length >= 1;
+  const actualShowExpandable = actualExtraOptions.length > 0;
   const handleToggle = (event: React.SyntheticEvent<HTMLDetailsElement>) => {
     setIsExpanded(event.currentTarget.open);
   };

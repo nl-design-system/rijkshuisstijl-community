@@ -24,9 +24,6 @@ Om vervolgens gebruik te maken van alle opties van het Rijkshuisstijl Community-
 
 ```js
 import '@rijkshuisstijl-community/design-tokens/dist/theme.css';
-import '@rijkshuisstijl-community/design-tokens/src/fluid.css';
-import '@rijkshuisstijl-community/design-tokens/src/fluid-font-size.css';
-import '@rijkshuisstijl-community/design-tokens/src/fluid-space.css';
 ```
 
 En in je HTML:
@@ -98,14 +95,14 @@ ook opgeven in Design Tokens JSON. Deze waarden moeten pixelwaarden zijn. Bijvoo
 
 Als je afhankelijk bent van hardcoded waarden voor de minimum- en maximumviewport, kun je dit instellen bij de `:root`-elementselector. Maar om viewportgroottes uit design tokens te gebruiken, moet deze CSS worden toegepast op hetzelfde element als het thema.
 
-Vervolgens genereert deze CSS een CSS-variabele waarmee je kunt vermenigvuldigen: `var(--basis-layout-container-scale)`.
+Vervolgens genereert deze CSS een CSS-variabele waarmee je kunt vermenigvuldigen: `var(--rhc-viewport-scale)`.
 Deze bevat een waarde tussen 0 en 1. 0 wanneer de viewport gelijk aan of kleiner is dan de minimumviewport,
 1 wanneer deze groter dan of gelijk is aan de maximumviewport, of ergens daartussenin.
 
 Als je een waarde wilt laten variëren tussen 16px en 48px, gebruik je de volgende berekening:
 
 ```css
---rhc-text-font-size-sm: calc(16px + (48px - 16px) * var(--basis-layout-container-scale));
+--rhc-text-font-size-sm: calc(16px + (48px - 16px) * var(--rhc-viewport-scale));
 ```
 
 Uiteraard kun je de exacte waarden in het bovenstaande voorbeeld vervangen door CSS-variabelen. Bijvoorbeeld:
@@ -113,7 +110,7 @@ Uiteraard kun je de exacte waarden in het bovenstaande voorbeeld vervangen door 
 ```css
 --rhc-text-font-size-sm: calc(
   var(--rhc-text-font-size-min-sm) + (var(--rhc-text-font-size-max-sm) - var(--rhc-text-font-size-min-sm)) *
-    var(--basis-layout-container-scale)
+    var(--rhc-viewport-scale)
 );
 ```
 

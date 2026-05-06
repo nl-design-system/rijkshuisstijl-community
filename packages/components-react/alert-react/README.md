@@ -2,7 +2,10 @@
 
 # Omschrijving
 
-Dit package bevat de specifieke code voor het component. Als je alle rijkshuisstijl community componenten wil kijk dan naar [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/README.md]. Voor verdere informatie over het inzet van de component kijk naar onze documentatie [https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-alert--docs]
+Dit is de Alert React-component van het Rijkshuisstijl Community Design System. Zie ook de volgende links:
+
+- README.md voor alle React-componenten
+  [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/library-react/README.md]
 
 ## Installatie
 
@@ -12,19 +15,8 @@ pnpm add @rijkshuisstijl-community/alert-react
 
 ## Gebruik
 
-```tsx
-import { Alert } from '@rijkshuisstijl-community/alert-react';
-
-<Alert type="info">
-  <Heading level={3}>Heading</Heading>
-  <Paragraph>Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *</Paragraph>
-</Alert>;
-```
+Op de storybook voor Alert React Component staan voorbeelden voor het gebruik van dit component[https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-alert--docs]
 
 ## Testing
 
 We bundelen de CSS direct mee met de componenten zodat je dit niet apart hoeft in te laden. Let wel op met unit tests die in de Node omgeving draaien: die ondersteunen niet altijd standaard `.css` files. Voor vitest moet je bijvoorbeeld `pool: 'vmThreads',` aanzetten in de config als je de volgende error tegenkomt: `TypeError: Unknown file extension ".css"`
-
-## Rijkshuisstijl Community Componenten
-
-**Direct aan de slag met [CSS](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/README.md) | [React](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/README.md) | [Web Components](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/README.md) | [Twig](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/README.md)**

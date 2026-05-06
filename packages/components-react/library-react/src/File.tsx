@@ -6,9 +6,9 @@
 import { Alert } from '@rijkshuisstijl-community/alert-react';
 import { Button } from '@rijkshuisstijl-community/button-react';
 import { Icon } from '@rijkshuisstijl-community/icon-react';
+import { Link } from '@rijkshuisstijl-community/link-react';
 import { Paragraph } from '@rijkshuisstijl-community/paragraph-react';
 import clsx from 'clsx';
-import { Link } from './Link';
 
 interface FileProps {
   file: File;
@@ -19,6 +19,15 @@ interface FileProps {
   fileTypeErrorMessage: string;
 }
 
+const extractFileTypeShort = (fileType: string): string => fileType.split('/')[1];
+
+const formatBytes = (bytes: number): string => {
+  const kilobytes: number = bytes / 1024;
+  const megabytes: number = kilobytes / 1024;
+
+  return megabytes >= 1 ? `${megabytes.toFixed(1)} MB` : `${kilobytes.toFixed(1)} KB`;
+};
+
 export const File = ({
   file,
   onDelete,
@@ -27,7 +36,6 @@ export const File = ({
   fileSizeErrorMessage,
   fileTypeErrorMessage,
 }: FileProps) => {
-  const extractFileTypeShort = (fileType: string): string => fileType.split('/')[1];
   let error: boolean = false;
   let errorMessage: string = '';
 
@@ -44,13 +52,6 @@ export const File = ({
       trimmedTypes.includes(`.${extractFileTypeShort(file.type)}`) ||
       ((errorMessage = fileTypeErrorMessage), (error = true), false)
     );
-  };
-
-  const formatBytes = (bytes: number): string => {
-    const kilobytes: number = bytes / 1024;
-    const megabytes: number = kilobytes / 1024;
-
-    return megabytes >= 1 ? `${megabytes.toFixed(1)} MB` : `${kilobytes.toFixed(1)} KB`;
   };
 
   return (

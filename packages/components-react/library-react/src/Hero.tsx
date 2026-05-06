@@ -59,7 +59,7 @@ export const Hero = ({
         heading &&
           borderRadiusCorner &&
           `rhc-hero--custom-border-radius-corner rhc-hero--border-radius-corner-${borderRadiusCorner}`,
-        `rhc-hero--aspect-ratio-${aspectRatio.replace(' / ', '-')}`,
+        `rhc-hero--aspect-ratio-${aspectRatio.replaceAll(' / ', '-')}`,
         className,
       )}
       {...restProps}

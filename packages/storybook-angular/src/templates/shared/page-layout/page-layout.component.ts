@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LinkComponent } from '@rijkshuisstijl-community/components-angular';
 import {
   BackToTopComponent,
   FooterComponent,
@@ -37,6 +38,7 @@ import {
     FooterComponent,
     TablerIconComponent,
     HeadingComponent,
+    LinkComponent,
     LinkListComponent,
     LinkListLinkComponent,
     LinkListItemComponent,

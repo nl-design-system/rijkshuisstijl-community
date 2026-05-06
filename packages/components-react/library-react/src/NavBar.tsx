@@ -4,11 +4,11 @@
  */
 
 import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react';
+import { Link } from '@rijkshuisstijl-community/link-react';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref } from 'react';
 import { ColumnLayout } from './ColumnLayout';
 import { Heading, HeadingLevel } from './Heading';
-import { Link } from './Link';
 import { LinkList, LinkListLink } from './LinkList';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {

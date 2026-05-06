@@ -1,5 +1,19 @@
 # @rijkshuisstijl-community/components-angular
 
+## 11.0.1
+
+### Patch Changes
+
+- c189cdf: Use new Utrecht Page Footer CSS that provides `utrecht-page-footer__content`, which replaces `rhc-page-footer__content`.
+
+  Replace `rhc-page-footer__wrapper` new nested `rhc-page-footer-layout` div.
+
+## 11.0.0
+
+### Major Changes
+
+- 71e84f2: `<rhc-footer>` property `heading` is now renamed to `tagline`, and `heading` property now is for landmark name.
+
 ## 10.0.1
 
 ### Patch Changes

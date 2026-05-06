@@ -1,5 +1,79 @@
 # @rijkshuisstijl-community/components-css
 
+## 17.0.0
+
+### Major Changes
+
+- 9e5760d: Switch from `var(--rhc-size-*lint)` to `var(--rhc-space-*)` for spacing. For users of `@rijkshuisstijl-community/design-tokens` there is no visual change, because the design tokens have the same values.
+
+  This is a breaking change for users that have configured different values for `var(--rhc-size-*lint)` to `var(--rhc-space-*)` in their own theme, and have not configured the component tokens.
+
+  The design for the following components has changed, if you haven't configured the component tokens:
+  - The fallback for `var(--rhc-dot-badge-size)` is now `var(--rhc-space-lg)` instead of `var(--rhc-size-quarter-lint)`.
+
+  The design for the following component has changed (because there is no component token):
+  - Heading Group gap now is `var(--rhc-space-lg)` instead of `var(--rhc-size-quarter-lint)`.
+
+### Patch Changes
+
+- 3f6f843: Fix logo CSS to avoid "Hockeystick l"
+- c189cdf: Use new Utrecht Page Footer CSS that provides `utrecht-page-footer__content`, which replaces `rhc-page-footer__content`.
+
+  Replace `rhc-page-footer__wrapper` new nested `rhc-page-footer-layout` div.
+
+- Updated dependencies [f091fcd]
+- Updated dependencies [f694cf6]
+- Updated dependencies [4bf9045]
+- Updated dependencies [e9dae7c]
+- Updated dependencies [40e5ea8]
+- Updated dependencies [d7a8f02]
+- Updated dependencies [35f5c52]
+  - @rijkshuisstijl-community/action-group-css@1.0.0
+  - @rijkshuisstijl-community/checkbox-css@1.0.0
+  - @rijkshuisstijl-community/checkbox-group-css@1.0.0
+  - @rijkshuisstijl-community/blockquote-css@1.0.1
+  - @rijkshuisstijl-community/accordion-css@2.0.1
+  - @rijkshuisstijl-community/dot-badge-css@1.0.1
+  - @rijkshuisstijl-community/paragraph-css@2.0.1
+  - @rijkshuisstijl-community/separator-css@1.0.1
+  - @rijkshuisstijl-community/article-css@2.0.1
+  - @rijkshuisstijl-community/button-css@1.0.1
+  - @rijkshuisstijl-community/figure-css@1.0.1
+  - @rijkshuisstijl-community/alert-css@4.0.1
+  - @rijkshuisstijl-community/link-css@1.0.1
+  - @rijkshuisstijl-community/card-as-link-css@1.0.0
+  - @rijkshuisstijl-community/breadcrumb-nav-css@1.0.0
+  - @rijkshuisstijl-community/card-css@1.0.0
+
+## 16.0.1
+
+### Patch Changes
+
+- Updated dependencies [35e7d11]
+  - @rijkshuisstijl-community/link-css@1.0.0
+
+## 16.0.0
+
+### Major Changes
+
+- 71e84f2: `rhc-page-footer__title` is renamed to `rhc-page-footer__tagline`
+
+### Minor Changes
+
+- 364a45e: Add `rhc-side-nav__heading` class name for a screen reader only landmark heading.
+
+### Patch Changes
+
+- 6915216: Update to latest Root component.
+- Updated dependencies [9882e13]
+- Updated dependencies [5d5eeaf]
+- Updated dependencies [609b8bd]
+- Updated dependencies [e7dc0ae]
+  - @rijkshuisstijl-community/blockquote-css@1.0.0
+  - @rijkshuisstijl-community/separator-css@1.0.0
+  - @rijkshuisstijl-community/button-css@1.0.0
+  - @rijkshuisstijl-community/dot-badge-css@1.0.0
+
 ## 15.0.1
 
 ### Patch Changes

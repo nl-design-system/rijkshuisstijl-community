@@ -2,7 +2,10 @@
 
 # Omschrijving
 
-Dit package bevat de specifieke code voor het component. Als je alle rijkshuisstijl community componenten wil kijk dan naar [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/README.md]. Voor verdere informatie over het inzet van de component kijk naar onze documentatie [https://rijkshuisstijl-community.vercel.app/?path=/docs/css-separator--docs]
+Dit is het Separator CSS-component van het Rijkshuisstijl Community Design System[<https://github.com/nl-design-system/rijkshuisstijl-community/>]. Zie ook de volgende links:
+
+- README.md voor alle CSS-componenten
+  [<https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/library-css/README.md>]
 
 ## Installatie
 
@@ -12,14 +15,4 @@ pnpm add @rijkshuisstijl-community/separator-css
 
 ## Gebruik
 
-```html
-import '@rijkshuisstijl-community/separator-css';
-
-<div class="utrecht-document">
-  <hr class="utrecht-separator rhc-separator" />
-</div>
-```
-
-## Rijkshuisstijl Community Componenten
-
-**Direct aan de slag met [CSS](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/README.md) | [React](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/README.md) | [Web Components](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/README.md) | [Twig](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/README.md)**
+Op de Storybook voor separator-css [<https://rijkshuisstijl-community.vercel.app/?path=/docs/css-separator--docs>] staan voorbeelden voor het gebruik van dit component.

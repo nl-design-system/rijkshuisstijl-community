@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/paragraph-react
 
+## 2.0.2
+
+### Patch Changes
+
+- e9dae7c: Updated broken links in the documentation
+- Updated dependencies [e9dae7c]
+  - @rijkshuisstijl-community/paragraph-css@2.0.1
+
 ## 2.0.1
 
 ### Patch Changes
