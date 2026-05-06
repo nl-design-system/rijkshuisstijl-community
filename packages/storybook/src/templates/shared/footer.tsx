@@ -1,6 +1,6 @@
 import { Footer, Icon, LinkList, LinkListLink, Paragraph } from '@rijkshuisstijl-community/components-react';
 
-export default function SharedFooter({ isLightTheme }: { isLightTheme?: boolean }) {
+export default function SharedFooter({ isLightTheme }: Readonly<{ isLightTheme?: boolean }>) {
   return (
     <Footer
       appearanceLevel={4}

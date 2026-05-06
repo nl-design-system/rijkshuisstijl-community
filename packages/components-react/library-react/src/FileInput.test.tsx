@@ -5,7 +5,7 @@ import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import { FileInput, FileInputProps } from './FileInput';
 
 beforeAll(() => {
-  window.URL.createObjectURL = vi.fn((file) => `mocked-url/${(file as File).name}`);
+  globalThis.URL.createObjectURL = vi.fn((file) => `mocked-url/${(file as File).name}`);
 });
 
 describe('File Input tests', () => {

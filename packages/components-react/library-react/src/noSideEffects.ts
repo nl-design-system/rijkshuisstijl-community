@@ -75,7 +75,7 @@ export * from './Radio';
 export * from './RadioGroup';
 export * from './RoundedCorner';
 export * from '@rijkshuisstijl-community/separator-react/no-side-effects';
-export * from './SideNav';
+export * from '@rijkshuisstijl-community/side-nav-react/no-side-effects';
 export * from './SideNavItem';
 export * from './SideNavLink';
 export * from './SideNavList';

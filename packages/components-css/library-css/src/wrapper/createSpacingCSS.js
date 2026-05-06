@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 const spacingMatrix = JSON.parse(fs.readFileSync('./src/wrapper/spacing-matrix.json'));
 
 const spaceMap = {

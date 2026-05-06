@@ -61,7 +61,7 @@ export class CardAsLinkWebComponent extends BaseWebComponent {
     }
 
     switch (appearance) {
-      case 'full-bleed':
+      case 'full-bleed': {
         component = (
           <CardAsLink
             appearance={appearance as FullBleedCardAsLinkPropsWebComponentAttributes['appearance']}
@@ -79,7 +79,8 @@ export class CardAsLinkWebComponent extends BaseWebComponent {
           </CardAsLink>
         );
         break;
-      case 'horizontal':
+      }
+      case 'horizontal': {
         component = (
           <CardAsLink
             appearance={appearance as HorizontalImageCardAsLinkPropsWebComponentAttributes['appearance']}
@@ -95,6 +96,7 @@ export class CardAsLinkWebComponent extends BaseWebComponent {
           </CardAsLink>
         );
         break;
+      }
       default: {
         component = (
           <CardAsLink

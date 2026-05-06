@@ -5,7 +5,7 @@
  * The `vi` unit is unfortunately not yet implemented by all evergreen browsers.
  */
 
-@property --basis-layout-viewport-width {
+@property --rhc-viewport-width {
   inherits: true;
   initial-value: 0;
   syntax: "<length>";
@@ -17,30 +17,99 @@
  *
  * As a design token it would be `basis.layout-viewport.inline-size`.
  */
-@property --basis-layout-viewport-inline-size {
+@property --rhc-viewport-inline-size {
   inherits: true;
   initial-value: 0;
   syntax: "<length>";
 }
 
-.basis-layout-container,
 .rhc-theme {
-  --basis-layout-viewport-width: 100vw;
-  --basis-layout-viewport-inline-size: 100vi;
-  --_basis-layout-container-min-inline-size: tan(atan2(var(--basis-layout-container-min-inline-size, 400px), 1px));
-  --_basis-layout-container-max-inline-size: tan(atan2(var(--basis-layout-container-max-inline-size, 1200px), 1px));
-  --basis-layout-container-size: tan(
-    atan2(var(--basis-layout-viewport-inline-size, var(--basis-layout-viewport-width)), 1px)
-  );
-  --basis-layout-container-scale: calc(
+  --rhc-viewport-width: 100vw;
+  --rhc-viewport-inline-size: 100vi;
+  --_rhc-viewport-min-inline-size: tan(atan2(var(--rhc-viewport-min-inline-size, 400px), 1px));
+  --_rhc-viewport-max-inline-size: tan(atan2(var(--rhc-viewport-max-inline-size, 1200px), 1px));
+  --rhc-viewport-size: tan(atan2(var(--rhc-viewport-inline-size, var(--rhc-viewport-width)), 1px));
+  --rhc-viewport-scale: calc(
     (
-        clamp(
-            var(--_basis-layout-container-min-inline-size),
-            var(--basis-layout-container-size),
-            var(--_basis-layout-container-max-inline-size)
-          ) -
-          var(--_basis-layout-container-min-inline-size)
+        clamp(var(--_rhc-viewport-min-inline-size), var(--rhc-viewport-size), var(--_rhc-viewport-max-inline-size)) -
+          var(--_rhc-viewport-min-inline-size)
       ) /
-      (var(--_basis-layout-container-max-inline-size) - var(--_basis-layout-container-min-inline-size))
+      (var(--_rhc-viewport-max-inline-size) - var(--_rhc-viewport-min-inline-size))
+  );
+}
+
+.rhc-theme--fluid,
+.rhc-theme--fluid-space {
+  /* fluid t-shirt size tokens.
+   * In short: `space-[size]` is a value between `space-min-[size]` and `space-max-[size]`
+   */
+  --rhc-space-2xs: calc(
+    var(--rhc-space-min-2xs) + (var(--rhc-space-max-2xs) - var(--rhc-space-min-2xs)) * var(--rhc-viewport-scale)
+  );
+  --rhc-space-xs: calc(
+    var(--rhc-space-min-xs) + (var(--rhc-space-max-xs) - var(--rhc-space-min-xs)) * var(--rhc-viewport-scale)
+  );
+  --rhc-space-sm: calc(
+    var(--rhc-space-min-sm) + (var(--rhc-space-max-sm) - var(--rhc-space-min-sm)) * var(--rhc-viewport-scale)
+  );
+  --rhc-space-md: calc(
+    var(--rhc-space-min-md) + (var(--rhc-space-max-md) - var(--rhc-space-min-md)) * var(--rhc-viewport-scale)
+  );
+  --rhc-space-lg: calc(
+    var(--rhc-space-min-lg) + (var(--rhc-space-max-lg) - var(--rhc-space-min-lg)) * var(--rhc-viewport-scale)
+  );
+  --rhc-space-xl: calc(
+    var(--rhc-space-min-xl) + (var(--rhc-space-max-xl) - var(--rhc-space-min-xl)) * var(--rhc-viewport-scale)
+  );
+  --rhc-space-2xl: calc(
+    var(--rhc-space-min-2xl) + (var(--rhc-space-max-2xl) - var(--rhc-space-min-2xl)) * var(--rhc-viewport-scale)
+  );
+  --rhc-space-3xl: calc(
+    var(--rhc-space-min-3xl) + (var(--rhc-space-max-3xl) - var(--rhc-space-min-3xl)) * var(--rhc-viewport-scale)
+  );
+  --rhc-space-4xl: calc(
+    var(--rhc-space-min-4xl) + (var(--rhc-space-max-4xl) - var(--rhc-space-min-4xl)) * var(--rhc-viewport-scale)
+  );
+  --rhc-space-5xl: calc(
+    var(--rhc-space-min-5xl) + (var(--rhc-space-max-5xl) - var(--rhc-space-min-5xl)) * var(--rhc-viewport-scale)
+  );
+
+  /* fluid logo size tokens
+   */
+  --rhc-size-lint: calc(
+    var(--rhc-size-min-lint) + (var(--rhc-size-max-lint) - var(--rhc-size-min-lint)) * var(--rhc-viewport-scale)
+  );
+  --rhc-size-quarter-lint: calc(0.25 * var(--rhc-size-lint));
+  --rhc-size-half-lint: calc(0.5 * var(--rhc-size-lint));
+  --rhc-size-2-lint: calc(2 * var(--rhc-size-lint));
+  --rhc-size-3-lint: calc(3 * var(--rhc-size-lint));
+  --rhc-size-4-lint: calc(4 * var(--rhc-size-lint));
+}
+
+.rhc-theme--fluid,
+.rhc-theme--fluid-text {
+  --rhc-text-font-size-sm: calc(
+    var(--rhc-text-font-size-min-sm) + (var(--rhc-text-font-size-max-sm) - var(--rhc-text-font-size-min-sm)) *
+      var(--rhc-viewport-scale)
+  );
+  --rhc-text-font-size-md: calc(
+    var(--rhc-text-font-size-min-md) + (var(--rhc-text-font-size-max-md) - var(--rhc-text-font-size-min-md)) *
+      var(--rhc-viewport-scale)
+  );
+  --rhc-text-font-size-lg: calc(
+    var(--rhc-text-font-size-min-lg) + (var(--rhc-text-font-size-max-lg) - var(--rhc-text-font-size-min-lg)) *
+      var(--rhc-viewport-scale)
+  );
+  --rhc-text-font-size-xl: calc(
+    var(--rhc-text-font-size-min-xl) + (var(--rhc-text-font-size-max-xl) - var(--rhc-text-font-size-min-xl)) *
+      var(--rhc-viewport-scale)
+  );
+  --rhc-text-font-size-2xl: calc(
+    var(--rhc-text-font-size-min-2xl) + (var(--rhc-text-font-size-max-2xl) - var(--rhc-text-font-size-min-2xl)) *
+      var(--rhc-viewport-scale)
+  );
+  --rhc-text-font-size-3xl: calc(
+    var(--rhc-text-font-size-min-3xl) + (var(--rhc-text-font-size-max-3xl) - var(--rhc-text-font-size-min-3xl)) *
+      var(--rhc-viewport-scale)
   );
 }

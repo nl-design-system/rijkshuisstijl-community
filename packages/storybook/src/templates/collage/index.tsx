@@ -280,7 +280,7 @@ export default function Collage() {
               <CodeInputGroup
                 codeLength={6}
                 onChange={(value: string) => {
-                  console.log('onchange: ', value);
+                  console.log('onchange:', value);
                 }}
               />
             </div>
