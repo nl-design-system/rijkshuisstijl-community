@@ -2,7 +2,7 @@
 
 # Omschrijving
 
-Dit is de Side Navigation React component van het Rijkshuisstijl Community Design System. Zie ook de volgende links:
+Dit is de Column Layout React Component van het Rijkshuisstijl Community Design System. Zie ook de volgende links:
 
 - README.md voor alle React-componenten
   [https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/library-react/README.md]
@@ -10,12 +10,12 @@ Dit is de Side Navigation React component van het Rijkshuisstijl Community Desig
 ## Installatie
 
 ```bash
-pnpm add @rijkshuisstijl-community/side-nav-react
+pnpm add @rijkshuisstijl-community/column-layout-react
 ```
 
 ## Gebruik
 
-Op de storybook voor Side Navigation React component staan voorbeelden voor het gebruik van dit component[https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-sidenav--docs]
+Op de storybook voor Column Layout React Component staan voorbeelden voor het gebruik van dit component[https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-columnlayout--docs]
 
 ## Testing
 
