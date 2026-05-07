@@ -13,7 +13,7 @@ export * from '@rijkshuisstijl-community/checkbox-react/no-side-effects';
 export * from '@rijkshuisstijl-community/checkbox-group-react/no-side-effects';
 export * from './CodeInput';
 export * from './CodeInputGroup';
-export * from './ColumnLayout';
+export * from '@rijkshuisstijl-community/column-layout-react/no-side-effects';
 export * from './FormField';
 export * from '@rijkshuisstijl-community/data-badge-button-react/no-side-effects';
 export * from '@rijkshuisstijl-community/data-summary-react/no-side-effects';
