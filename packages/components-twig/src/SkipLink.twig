@@ -1,11 +1,3 @@
 {%- set classes = ['nl-skip-link nl-skip-link--visible-on-focus rhc-skip-link'] -%}
 
-<div style="width: 400px; height: 100px;">
-  {% if dir %}
-  <div dir="{{ dir }}" lang="{{ lang }}">
-  {% endif %}
-  <a href="{{ href }}" {{ attributes.addClass(classes) }}>{{ children }}</a>
-  {% if dir %}
-  </div>
-  {% endif %}
-</div>
+<a href="{{ href }}" {{ attributes.addClass(classes) }}>{{ children }}</a>
