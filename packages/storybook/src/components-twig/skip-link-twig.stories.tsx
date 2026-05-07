@@ -8,15 +8,19 @@ const meta = {
   id: 'twig-skip-link',
   component: TwigSkipLink,
   argTypes: {
-    href: {
-      description: 'string',
-      control: { type: 'text' },
+    children: {
+      description: 'Link text',
     },
-    lang: {
-      description: 'string',
-      control: { type: 'text' },
+    href: {
+      description: 'Target URL',
     },
   },
+  args: {
+    children: '',
+    href: '',
+  },
+  // set fixed height and width so that the automatic hiding works
+  decorators: [(Story) => <div style={{ width: '400px', height: '100px' }}>{Story()}</div>],
   parameters: {
     docs: {
       description: {
