@@ -3,12 +3,12 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react';
 import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react';
 import { Link } from '@rijkshuisstijl-community/link-react';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref } from 'react';
 import { ColumnLayout } from './ColumnLayout';
-import { Heading, HeadingLevel } from './Heading';
 import { LinkList, LinkListLink } from './LinkList';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {

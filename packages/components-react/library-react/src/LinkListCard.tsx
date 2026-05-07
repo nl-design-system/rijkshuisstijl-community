@@ -3,9 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react';
 import clsx from 'clsx';
 import { HTMLAttributes, ReactNode, Ref } from 'react';
-import { Heading, HeadingLevel } from './Heading';
 import { LinkList } from './LinkList';
 
 export interface LinkListCardProps extends HTMLAttributes<HTMLDivElement> {
