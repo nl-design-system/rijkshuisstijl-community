@@ -79,7 +79,7 @@ export * from '@rijkshuisstijl-community/side-nav-react/no-side-effects';
 export * from './SideNavItem';
 export * from './SideNavLink';
 export * from './SideNavList';
-export * from './SkipLink';
+export * from '@rijkshuisstijl-community/skip-link-react/no-side-effects';
 export * from './Table';
 export * from './TableCaption';
 export * from './TableCell';
