@@ -8,14 +8,6 @@
   inline-size: var(--rhc-hero-inline-size);
   overflow: hidden;
   position: relative;
-
-  .rhc-hero__heading {
-    color: currentColor;
-    font-family: var(--rhc-hero-heading-font-family);
-    font-size: var(--rhc-hero-heading-font-size);
-    font-weight: var(--rhc-hero-heading-font-weight);
-    line-height: var(--rhc-hero-heading-line-height);
-  }
 }
 
 @mixin rhc-hero--aspect-ratio-16-9 {
@@ -82,6 +74,14 @@
   block-size: auto;
   inline-size: var(--rhc-hero-inline-size);
   position: relative;
+}
+
+@mixin rhc-hero__heading {
+  color: currentColor;
+  font-family: var(--rhc-hero-heading-font-family);
+  font-size: var(--rhc-hero-heading-font-size);
+  font-weight: var(--rhc-hero-heading-font-weight);
+  line-height: var(--rhc-hero-heading-line-height);
 }
 
 @mixin rhc-hero__sub-heading {
