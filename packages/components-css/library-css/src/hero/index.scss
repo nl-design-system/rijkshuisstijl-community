@@ -8,6 +8,10 @@
 .rhc-hero {
   @include mixin.rhc-hero;
 
+  .rhc-hero__heading {
+    @include mixin.rhc-hero__heading;
+  }
+
   .utrecht-img:not(img[width]) {
     inline-size: var(--rhc-hero-inline-size);
   }
@@ -76,12 +80,6 @@
 .rhc-hero__image:not(img[height]) {
   block-size: auto;
   inline-size: var(--rhc-hero-inline-size);
-}
-
-.rhc-hero {
-  .rhc-hero__heading {
-    @include mixin.rhc-hero__heading;
-  }
 }
 
 .rhc-hero__sub-heading {
