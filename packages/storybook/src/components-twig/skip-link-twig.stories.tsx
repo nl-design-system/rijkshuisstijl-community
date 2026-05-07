@@ -40,17 +40,35 @@ export const Default: Story = {
     href: '#main',
     children: 'Skip to main content',
   },
-  name: 'Default',
+  parameters: {
+    docs: {
+      description: {
+        story: `Styling met de \`.rhc-skip-link\` en \`.rhc-skip-link--visible-on-focus\` class naam.`,
+      },
+    },
+  },
 };
 
 export const RightToLeft: Story = {
   args: {
     href: '#main',
     children: 'تخطي إلى المحتوى الرئيسي',
-    lang: 'ar',
-    dir: 'rtl',
   },
   name: 'Right-to-left',
+  decorators: [
+    (Story) => (
+      <div dir="rtl" lang="ar">
+        {Story()}
+      </div>
+    ),
+  ],
+  parameters: {
+    docs: {
+      description: {
+        story: `Skip link in right-to-left script.`,
+      },
+    },
+  },
 };
 
 export const FocusVisible: Story = {
@@ -59,4 +77,7 @@ export const FocusVisible: Story = {
     children: 'Skip to main content',
   },
   name: 'Focus visible',
+  parameters: {
+    pseudo: { focus: true, focusVisible: true },
+  },
 };
