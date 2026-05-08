@@ -810,6 +810,14 @@
           "500": {
             "value": "oklch(55.24% 0.16526 137.86)",
             "type": "color"
+          },
+          "600": {
+            "value": "oklch(42.78% 0.1169 137.2)",
+            "type": "color"
+          },
+          "700": {
+            "value": "oklch(38.71% 0.1016 137.1)",
+            "type": "color"
           }
         },
         "donkergroen": {
@@ -991,6 +999,14 @@
           },
           "500": {
             "value": "oklch(56.705% 0.20669 29.543)",
+            "type": "color"
+          },
+          "600": {
+            "value": "#9E1B16",
+            "type": "color"
+          },
+          "700": {
+            "value": "#731310",
             "type": "color"
           }
         },
@@ -2871,11 +2887,11 @@
                 "type": "color"
               },
               "border-color": {
-                "value": "{rhc.color.primary.500}",
+                "value": "{rhc.color.primary.active}",
                 "type": "color"
               },
               "color": {
-                "value": "{rhc.color.primary.500}",
+                "value": "{rhc.color.primary.active}",
                 "type": "color"
               }
             },
@@ -2899,11 +2915,11 @@
                 "type": "color"
               },
               "border-color": {
-                "value": "{rhc.color.primary.500}",
+                "value": "{rhc.color.primary.hover}",
                 "type": "color"
               },
               "color": {
-                "value": "{rhc.color.primary.500}",
+                "value": "{rhc.color.primary.hover}",
                 "type": "color"
               }
             }
@@ -2970,11 +2986,11 @@
                   "type": "color"
                 },
                 "border-color": {
-                  "value": "{rhc.color.negative.default}",
+                  "value": "{rhc.color.rood.700}",
                   "type": "color"
                 },
                 "color": {
-                  "value": "{rhc.color.negative.default}",
+                  "value": "{rhc.color.rood.700}",
                   "type": "color"
                 }
               },
@@ -2984,11 +3000,11 @@
                   "type": "color"
                 },
                 "border-color": {
-                  "value": "{rhc.color.negative.default}",
+                  "value": "{rhc.color.rood.600}",
                   "type": "color"
                 },
                 "color": {
-                  "value": "{rhc.color.negative.default}",
+                  "value": "{rhc.color.rood.600}",
                   "type": "color"
                 }
               }
@@ -3009,9 +3025,8 @@
             },
             "active": {
               "background-color": {
-                "value": "#2D591A",
-                "type": "color",
-                "description": "Norday hex active"
+                "value": "{rhc.color.groen.700}",
+                "type": "color"
               },
               "border-color": {
                 "value": "{rhc.color.transparent}",
@@ -3024,9 +3039,8 @@
             },
             "hover": {
               "background-color": {
-                "value": "#316B17",
-                "type": "color",
-                "description": "Norday hex hover"
+                "value": "{rhc.color.groen.600}",
+                "type": "color"
               },
               "border-color": {
                 "value": "{rhc.color.transparent}",
@@ -3056,11 +3070,11 @@
                   "type": "color"
                 },
                 "border-color": {
-                  "value": "{rhc.color.positive.default}",
+                  "value": "{rhc.color.groen.700}",
                   "type": "color"
                 },
                 "color": {
-                  "value": "{rhc.color.positive.default}",
+                  "value": "{rhc.color.groen.700}",
                   "type": "color"
                 }
               },
@@ -3070,11 +3084,11 @@
                   "type": "color"
                 },
                 "border-color": {
-                  "value": "{rhc.color.positive.default}",
+                  "value": "{rhc.color.groen.600}",
                   "type": "color"
                 },
                 "color": {
-                  "value": "{rhc.color.positive.default}",
+                  "value": "{rhc.color.groen.700}",
                   "type": "color"
                 }
               }
@@ -3307,9 +3321,8 @@
               "type": "color"
             },
             "color": {
-              "value": "#2D591A",
-              "type": "color",
-              "description": "Norday hex active"
+              "value": "{rhc.color.positive.default}",
+              "type": "color"
             },
             "active": {
               "background-color": {
@@ -3317,14 +3330,12 @@
                 "type": "color"
               },
               "border-color": {
-                "value": "#2D591A",
-                "type": "color",
-                "description": "Norday hex active"
+                "value": "{rhc.color.groen.700}",
+                "type": "color"
               },
               "color": {
-                "value": "#2D591A",
-                "type": "color",
-                "description": "Norday hex active"
+                "value": "{rhc.color.groen.700}",
+                "type": "color"
               }
             },
             "hover": {
@@ -3333,14 +3344,12 @@
                 "type": "color"
               },
               "border-color": {
-                "value": "#2D591A",
-                "type": "color",
-                "description": "Norday hex active"
+                "value": "{rhc.color.groen.600}",
+                "type": "color"
               },
               "color": {
-                "value": "#2D591A",
-                "type": "color",
-                "description": "Norday hex active\n"
+                "value": "{rhc.color.groen.600}",
+                "type": "color"
               }
             },
             "pressed": {
@@ -3358,7 +3367,7 @@
               },
               "active": {
                 "background-color": {
-                  "value": "{rhc.color.positive.default}",
+                  "value": "{rhc.color.groen.700}",
                   "type": "color"
                 },
                 "border-color": {
@@ -3372,7 +3381,7 @@
               },
               "hover": {
                 "background-color": {
-                  "value": "{rhc.color.positive.default}",
+                  "value": "{rhc.color.groen.600}",
                   "type": "color"
                 },
                 "border-color": {
@@ -3621,7 +3630,7 @@
                 "type": "color"
               },
               "color": {
-                "value": "{rhc.color.positive.default}",
+                "value": "{rhc.color.groen.700}",
                 "type": "color"
               }
             },
