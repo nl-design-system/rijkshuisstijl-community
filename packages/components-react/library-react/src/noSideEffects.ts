@@ -26,7 +26,7 @@ export * from './Fieldset';
 export * from '@rijkshuisstijl-community/figure-react/no-side-effects';
 export * from './File';
 export * from './FileInput';
-export * from './Footer';
+export * from '@rijkshuisstijl-community/footer-react/no-side-effects';
 export * from './FormFieldCheckboxGroup';
 export * from './FormFieldCheckboxOption';
 export * from './FormFieldErrorMessage';
