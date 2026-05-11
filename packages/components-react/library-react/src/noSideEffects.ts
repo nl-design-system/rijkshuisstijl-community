@@ -4,7 +4,7 @@ export * from '@rijkshuisstijl-community/action-group-react/no-side-effects';
 export * from '@rijkshuisstijl-community/alert-react/no-side-effects';
 export * from '@rijkshuisstijl-community/article-react/no-side-effects';
 export * from '@rijkshuisstijl-community/blockquote-react/no-side-effects';
-export * from './Body';
+export * from '@rijkshuisstijl-community/body-react/no-side-effects';
 export * from '@rijkshuisstijl-community/breadcrumb-nav-react/no-side-effects';
 export * from '@rijkshuisstijl-community/button-react/no-side-effects';
 export * from '@rijkshuisstijl-community/card-react/no-side-effects';
