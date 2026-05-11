@@ -85,7 +85,7 @@ export * from './TableCaption';
 export * from './TableCell';
 export * from './TableHeaderCell';
 export * from './TextInput';
-export * from './Textarea';
+export * from '@rijkshuisstijl-community/textarea-react/no-side-effects';
 export * from './Toggletip';
 export * from './UnorderedList';
 export * from './UnorderedListItem';
