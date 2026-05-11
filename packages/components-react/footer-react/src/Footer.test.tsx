@@ -1,9 +1,13 @@
 import '@testing-library/jest-dom/vitest';
-import { Icon } from '@rijkshuisstijl-community/icon-react';
 import { cleanup, render, screen } from '@testing-library/react';
 import { LinkList, LinkListLink } from '@utrecht/component-library-react';
+import { PropsWithChildren } from 'react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { Footer } from '../../library-react/src/Footer';
+import { Footer } from './Footer';
+
+const Icon = ({ children }: PropsWithChildren) => (
+  <>{children}</>
+);
 
 describe('Footer', () => {
   it('renders successfully with required props', () => {
