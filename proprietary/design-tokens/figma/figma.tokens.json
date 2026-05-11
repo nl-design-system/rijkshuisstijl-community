@@ -3670,15 +3670,15 @@
               },
               "hover": {
                 "background-color": {
-                  "value": "{basis.color.positive-inverse.bg-hover}",
+                  "value": "{rhc.color.groen.600}",
                   "type": "color"
                 },
                 "border-color": {
-                  "value": "{basis.color.transparent}",
+                  "value": "{rhc.color.transparent}",
                   "type": "color"
                 },
                 "color": {
-                  "value": "{basis.color.positive-inverse.color-hover}",
+                  "value": "{rhc.color.foreground.on-dark-color}",
                   "type": "color"
                 }
               }
@@ -9043,6 +9043,52 @@
       }
     }
   },
+  "overrides/primaire kleur/rood": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "value": "{rhc.color.rood.50}",
+            "type": "color"
+          },
+          "100": {
+            "value": "{rhc.color.rood.100}",
+            "type": "color"
+          },
+          "200": {
+            "value": "{rhc.color.rood.200}",
+            "type": "color"
+          },
+          "300": {
+            "value": "{rhc.color.rood.300}",
+            "type": "color"
+          },
+          "400": {
+            "value": "{rhc.color.rood.400}",
+            "type": "color"
+          },
+          "500": {
+            "value": "{rhc.color.rood.500}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{rhc.color.rood.600}",
+            "type": "color"
+          },
+          "active": {
+            "value": "{rhc.color.rood.700}",
+            "type": "color"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "value": "{rhc.color.foreground.on-dark-color}",
+            "type": "color"
+          }
+        }
+      }
+    }
+  },
   "overrides/primaire kleur/hemelblauw": {
     "rhc": {
       "color": {
@@ -10867,6 +10913,7 @@
       "components/page-header",
       "overrides/heading-color/primary",
       "overrides/primaire kleur/groen",
+      "overrides/primaire kleur/rood",
       "overrides/primaire kleur/hemelblauw",
       "overrides/primaire kleur/mintgroen",
       "overrides/primaire kleur/oranje",
