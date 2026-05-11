@@ -1,9 +1,10 @@
 import '@testing-library/jest-dom/vitest';
-import { Icon } from '@rijkshuisstijl-community/icon-react';
 import { cleanup, render, screen } from '@testing-library/react';
 import { LinkList, LinkListLink } from '@utrecht/component-library-react';
 import { afterEach, describe, expect, it } from 'vitest';
 import { Footer } from './Footer';
+
+const Icon = ({ icon }: { icon: string }) => <>{icon}</>;
 
 describe('Footer', () => {
   it('renders successfully with required props', () => {

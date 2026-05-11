@@ -3,9 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { TextInput, type TextInputProps } from '@rijkshuisstijl-community/text-input-react';
 import clsx from 'clsx';
 import { ForwardedRef } from 'react';
-import { TextInput, type TextInputProps } from './TextInput';
 
 export interface CodeInputProps extends TextInputProps {
   capitalize?: boolean;

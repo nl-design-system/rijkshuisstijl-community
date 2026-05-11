@@ -18,7 +18,7 @@ import { PageBody } from '@utrecht/page-body-react';
 import React, {
   AnchorHTMLAttributes,
   ChangeEvent,
-  FormEvent,
+  SubmitEvent,
   useCallback,
   useEffect,
   useMemo,
@@ -43,6 +43,16 @@ const filterComponents = (data: ComponentData[], searchTerm: string, frameworks:
 
     return searchMatch && frameworkMatch;
   });
+};
+
+const getStatusText = (count: number): string => {
+  if (count === 0) {
+    return 'Geen componenten gevonden, probeer andere zoektermen of filters.';
+  } else if (count === 1) {
+    return '1 component gevonden';
+  } else {
+    return `${count} componenten gevonden`;
+  }
 };
 
 interface ActiveFiltersBadgeListProps {
@@ -119,8 +129,8 @@ export default function Componenten() {
   const onPaginationLinkClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const href = e.currentTarget.href;
-    const pageNumber = href.substring(href.lastIndexOf('/') + 1, href.length);
-    setCurrentPage(parseInt(pageNumber, 10) - 1);
+    const pageNumber = href.slice(href.lastIndexOf('/') + 1);
+    setCurrentPage(Number.parseInt(pageNumber, 10) - 1);
   }, []);
 
   const frameworkCounts: { [key: string]: number } = useMemo(
@@ -155,7 +165,7 @@ export default function Componenten() {
     }
   }, [selectedFrameworks, filteredComponents.length, announceChange]);
 
-  const handleSearchSubmit = (event: FormEvent) => {
+  const handleSearchSubmit = (event: SubmitEvent) => {
     event.preventDefault();
     setSubmittedSearchTerm(searchTerm);
 
@@ -171,16 +181,6 @@ export default function Componenten() {
 
     if (resultsRef.current) {
       resultsRef.current.focus({ preventScroll: true });
-    }
-  };
-
-  const getStatusText = (count: number): string => {
-    if (count === 0) {
-      return 'Geen componenten gevonden, probeer andere zoektermen of filters.';
-    } else if (count === 1) {
-      return '1 component gevonden';
-    } else {
-      return `${count} componenten gevonden`;
     }
   };
 
@@ -207,7 +207,7 @@ export default function Componenten() {
 
   // Apply the staged framework selections when filter button is clicked
   const handleFilterSubmit = useCallback(
-    (event: FormEvent<HTMLFormElement>): void => {
+    (event: SubmitEvent<HTMLFormElement>): void => {
       event.preventDefault();
 
       const previousCount = selectedFrameworks.length;

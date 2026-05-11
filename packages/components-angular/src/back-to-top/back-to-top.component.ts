@@ -14,7 +14,7 @@ import { Component, inject } from '@angular/core';
   providers: [
     {
       provide: Window,
-      useValue: window,
+      useValue: globalThis,
     },
   ],
 })

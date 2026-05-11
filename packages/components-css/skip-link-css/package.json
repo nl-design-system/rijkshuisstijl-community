@@ -1,0 +1,36 @@
+{
+  "version": "0.0.0",
+  "author": "Community for Rijkshuisstijl-Community Design System",
+  "description": "Skip Link component",
+  "license": "EUPL-1.2",
+  "name": "@rijkshuisstijl-community/skip-link-css",
+  "files": [
+    "dist/",
+    "docs/",
+    "src/",
+    "*.md"
+  ],
+  "main": "dist/index.css",
+  "scripts": {
+    "build": "build-css-package",
+    "clean": "rimraf dist",
+    "watch": "chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
+  },
+  "devDependencies": {
+    "@rijkshuisstijl-community/build-utils-css": "workspace:*",
+    "@nl-design-system-candidate/skip-link-css": "1.0.5",
+    "chokidar-cli": "3.0.0"
+  },
+  "keywords": [
+    "rijkshuisstijl-community-design-system"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
+    "directory": "packages/components-css/skip-link-css"
+  }
+}

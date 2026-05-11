@@ -84,10 +84,10 @@ describe('ExpandableCheckboxGroup', () => {
     const details = container.querySelector('details');
     expect(details).not.toHaveAttribute('open');
 
-    const allCheckboxes = container.querySelectorAll('input[type="checkbox"]');
+    const allCheckboxes = [...container.querySelectorAll('input[type="checkbox"]')];
     expect(allCheckboxes).toHaveLength(testOptions.length);
 
     expect(allCheckboxes[0]).toBeVisible();
-    expect(allCheckboxes[allCheckboxes.length - 1]).not.toBeVisible();
+    expect(allCheckboxes.at(-1)).not.toBeVisible();
   });
 });

@@ -3,12 +3,12 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { HeadingProps } from '@rijkshuisstijl-community/heading-react';
 import {
   PreHeading as UtrechtPreHeading,
   type PreHeadingProps as UtrechtPreHeadingProps,
 } from '@utrecht/component-library-react';
 import { PropsWithChildren, ReactElement, Ref } from 'react';
-import { HeadingProps } from './Heading';
 
 export interface PreHeadingProps extends UtrechtPreHeadingProps {
   heading: ReactElement<HeadingProps>;

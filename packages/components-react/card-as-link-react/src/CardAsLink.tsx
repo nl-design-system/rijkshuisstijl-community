@@ -44,12 +44,15 @@ export const CardAsLink = (
 ) => {
   const { appearance, ref, ...cardProps } = props;
   switch (appearance) {
-    case 'full-bleed':
+    case 'full-bleed': {
       return <FullBleedCardAsLink {...(cardProps as FullBleedCardAsLinkProps)} ref={ref} />;
-    case 'horizontal':
+    }
+    case 'horizontal': {
       return <HorizontalImageCardAsLink {...(cardProps as HorizontalImageCardAsLinkProps)} ref={ref} />;
-    default:
+    }
+    default: {
       return <DefaultCardAsLink {...(cardProps as CardAsLinkProps)} ref={ref} />;
+    }
   }
 };
 

@@ -3,7 +3,7 @@ import { cleanup, render, screen } from '@testing-library/react';
 import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import { File as FileComponent } from './File';
 beforeAll(() => {
-  Object.defineProperty(window, 'URL', {
+  Object.defineProperty(globalThis, 'URL', {
     value: {
       createObjectURL: vi.fn().mockImplementation((blob: Blob | MediaSource) => `mocked-url/${(blob as File).name}`),
     },
@@ -43,7 +43,7 @@ describe('FileComponent', () => {
         file={file}
         fileSizeErrorMessage=""
         fileTypeErrorMessage={fileTypeErrorMessage}
-        maxFileSizeInBytes={10485760}
+        maxFileSizeInBytes={10_485_760}
         onDelete={vi.fn()}
       />,
     );
@@ -63,7 +63,7 @@ describe('FileComponent', () => {
         file={largeFile}
         fileSizeErrorMessage={fileSizeErrorMessage}
         fileTypeErrorMessage=""
-        maxFileSizeInBytes={10485760}
+        maxFileSizeInBytes={10_485_760}
         onDelete={vi.fn()}
       />,
     );
@@ -81,7 +81,7 @@ describe('FileComponent', () => {
         file={file}
         fileSizeErrorMessage=""
         fileTypeErrorMessage=""
-        maxFileSizeInBytes={10485760}
+        maxFileSizeInBytes={10_485_760}
         onDelete={vi.fn()}
       />,
     );

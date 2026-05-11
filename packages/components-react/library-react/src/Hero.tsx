@@ -3,12 +3,12 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { HeadingGroup } from '@rijkshuisstijl-community/heading-group-react';
+import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react';
 import { Image } from '@rijkshuisstijl-community/image-react';
 import { Paragraph } from '@rijkshuisstijl-community/paragraph-react';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactNode, Ref } from 'react';
-import { Heading, HeadingLevel } from './Heading';
-import { HeadingGroup } from './HeadingGroup';
 
 export interface HeroBaseProps extends HTMLAttributes<HTMLDivElement> {
   textAlign?: 'start' | 'end';
@@ -59,7 +59,7 @@ export const Hero = ({
         heading &&
           borderRadiusCorner &&
           `rhc-hero--custom-border-radius-corner rhc-hero--border-radius-corner-${borderRadiusCorner}`,
-        `rhc-hero--aspect-ratio-${aspectRatio.replace(' / ', '-')}`,
+        `rhc-hero--aspect-ratio-${aspectRatio.replaceAll(' / ', '-')}`,
         className,
       )}
       {...restProps}

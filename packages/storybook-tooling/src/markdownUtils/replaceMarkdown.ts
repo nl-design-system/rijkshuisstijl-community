@@ -21,5 +21,5 @@ export const replaceMarkdown = (
 ): string => {
   // Include backticks explicitly since they need to be escaped in template literals
   const regex = new RegExp(`(?<=^|[\\s\\p{P}_\\-\`])${target}(?=[\\s\\p{P}_\\-\`]|$)`, `g${caseSensitive ? '' : 'i'}u`);
-  return markdown.replace(regex, replacement);
+  return markdown.replaceAll(regex, replacement);
 };

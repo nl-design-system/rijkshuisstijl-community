@@ -15,7 +15,7 @@ pnpm add @rijkshuisstijl-community/side-nav-react
 
 ## Gebruik
 
-Op de storybook voor Side Navigation React component staan voorbeelden voor het gebruik van dit component[https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-side-nav--docs]
+Op de storybook voor Side Navigation React component staan voorbeelden voor het gebruik van dit component[https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-sidenav--docs]
 
 ## Testing
 

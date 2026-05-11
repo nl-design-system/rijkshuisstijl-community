@@ -6,7 +6,7 @@ export default function SharedHeader() {
   const [pathname, setPathname] = useState('');
   useEffect(() => {
     // NB: set the pathname when the component mounts, this is done in a useEffect hook to not error in a server environment
-    setPathname(window.location.pathname);
+    setPathname(globalThis.location.pathname);
   }, []);
 
   const items: NavBarItemProps[] = [
