@@ -1,12 +1,11 @@
 import '@nl-rvo/assets/fonts/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/core/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/lintblauw/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/robijnrood/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/paars/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/oranje/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/groen/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/hemelblauw/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/core-information-dense/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/lintblauw-information-dense/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/robijnrood-information-dense/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/paars-information-dense/index.css';
 import '@rijkshuisstijl-community/design-tokens/dist/oranje-information-dense/index.css';
@@ -27,14 +26,14 @@ const preview: Preview = {
   decorators: [
     withThemeByClassName({
       themes: {
-        Lintblauw: `rhc-theme rhc-theme--fluid`,
+        Lintblauw: `lintblauw lintblauw--fluid`,
         Groen: `groen groen--fluid`,
         Hemelblauw: `hemelblauw hemelblauw--fluid`,
         Oranje: `oranje oranje--fluid`,
         Paars: `paars paars--fluid`,
         'Robijn Rood': `robijnrood robijnrood--fluid`,
 
-        'Lintblauw (information dense)': `core-information-dense rhc-theme--fluid`,
+        'Lintblauw (information dense)': `lintblauw-information-dense lintblauw--fluid`,
         'Groen (information dense)': `groen-information-dense groen--fluid`,
         'Hemelblauw (information dense)': `hemelblauw-information-dense hemelblauw--fluid`,
         'Oranje (information dense)': `oranje-information-dense oranje--fluid`,
