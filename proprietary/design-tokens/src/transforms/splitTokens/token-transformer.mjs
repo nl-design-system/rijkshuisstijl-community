@@ -10,7 +10,7 @@ const TOKENS_FILE = './figma/figma.tokens.json';
 export const ALWAYS_ON = 'Always on';
 const IGNORE = new Set(['Viewport']);
 const THEME_GROUP_NAME_SORT = ['Theme', 'Type scale'];
-const BASE_THEME_NAME = 'core';
+const BASE_THEME_NAME = 'lintblauw';
 
 const readTokensFile = async () => {
   const json = await readFile(TOKENS_FILE, 'utf-8');
