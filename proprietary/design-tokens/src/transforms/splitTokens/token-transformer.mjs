@@ -145,6 +145,7 @@ if (import.meta.main) {
   );
   LOG(`Generating ${debugInfo(tokenSetsMatrix)} themes`);
 
+  tokenSetsAlwaysOn.push('common/viewport/max');
   const tokenSetSets = flattenMatrix(tokenSetsMatrix, tokenSetsAlwaysOn);
   LOG(tokenSetSets.map((theme) => `* ${theme.name}`).join('\n'));
 
