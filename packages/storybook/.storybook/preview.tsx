@@ -40,7 +40,7 @@ const preview: Preview = {
         'Paars (information dense)': 'paars-information-dense paars--fluid',
         'Robijnrood (information dense)': 'robijnrood-information-dense robijnrood--fluid',
       },
-      defaultTheme: 'Kern - Lintblauw',
+      defaultTheme: 'Lintblauw',
     }),
     (Story, options) => {
       return options.parameters['isPage'] ? (
