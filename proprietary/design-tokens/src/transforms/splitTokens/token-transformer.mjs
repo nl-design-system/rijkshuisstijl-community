@@ -13,7 +13,7 @@ const THEME_GROUP_NAME_SORT = ['Theme', 'Type scale'];
 const BASE_THEME_NAME = 'lintblauw';
 
 const readTokensFile = async () => {
-  const json = await readFile(TOKENS_FILE, 'utf-8');
+  const json = await readFile(TOKENS_FILE, 'utf8');
   return JSON.parse(json);
 };
 
@@ -64,8 +64,8 @@ export const readThemeGroups = (themeGroups, ignoreList = new Set()) => {
   let tokenSetsAlwaysOn = [];
   let tokenSetNamesAlwaysOn = [];
   const tokenSetsMatrix = {};
-  themeGroups.forEach((themeGroup) => {
-    if (ignoreList.has(themeGroup.group)) return;
+  for (const themeGroup of themeGroups) {
+    if (ignoreList.has(themeGroup.group)) continue;
 
     if (themeGroup.name === ALWAYS_ON) {
       tokenSetsAlwaysOn = [...tokenSetsAlwaysOn, ...flattenTokenSetSets(themeGroup.selectedTokenSets)];
@@ -74,7 +74,7 @@ export const readThemeGroups = (themeGroups, ignoreList = new Set()) => {
       if (!(themeGroup.group in tokenSetsMatrix)) tokenSetsMatrix[themeGroup.group] = {};
       tokenSetsMatrix[themeGroup.group][themeGroup.name] = flattenTokenSetSets(themeGroup.selectedTokenSets);
     }
-  });
+  }
 
   return { tokenSetsAlwaysOn, tokenSetsMatrix, tokenSetNamesAlwaysOn };
 };
@@ -153,14 +153,13 @@ if (import.meta.main) {
     mkdirSync('./src/generated', { recursive: true });
   }
 
-  const allThemes = tokenSetSets.reduce(
-    (acc, val) => ({
-      ...acc,
-      [val.name]: {
+  const allThemes = Object.fromEntries(
+    tokenSetSets.map((val) => [
+      val.name,
+      {
         tokens: Object.fromEntries(val.tokenSets.map((tokenSet) => [tokenSet, tokens[tokenSet]])),
       },
-    }),
-    {},
+    ]),
   );
 
   await writeFile('./src/generated/base.tokens.json', JSON.stringify(allThemes[BASE_THEME_NAME].tokens, null, 2));
