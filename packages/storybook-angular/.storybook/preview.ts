@@ -33,14 +33,21 @@ const preview: Preview = {
     componentWrapperDecorator((story) => `<div class="utrecht-root">${story}</div>`),
     withThemeByClassName({
       themes: {
-        'Kern - Lintblauw': 'rhc-theme',
-        'Uitvoerend - Groen': 'groen',
-        'Uitvoerend - Hemelblauw': 'hemelblauw',
-        'Uitvoerend - Oranje': 'oranje',
-        'Uitvoerend - Paars': 'paars',
-        'Uitvoerend - Robijn Rood': 'robijnrood',
+        Lintblauw: 'lintblauw lintblauw--fluid',
+        Groen: 'groen groen--fluid',
+        Hemelblauw: 'hemelblauw hemelblauw--fluid',
+        Oranje: 'oranje oranje--fluid',
+        Paars: 'paars paars--fluid',
+        Robijnrood: 'robijnrood robijnrood--fluid',
+
+        'Lintblauw (information dense)': 'lintblauw-information-dense lintblauw--fluid',
+        'Groen (information dense)': 'groen-information-dense groen--fluid',
+        'Hemelblauw (information dense)': 'hemelblauw-information-dense hemelblauw--fluid',
+        'Oranje (information dense)': 'oranje-information-dense oranje--fluid',
+        'Paars (information dense)': 'paars-information-dense paars--fluid',
+        'Robijnrood (information dense)': 'robijnrood-information-dense robijnrood--fluid',
       },
-      defaultTheme: 'Kern - Lintblauw',
+      defaultTheme: 'Lintblauw',
     }),
   ],
 
