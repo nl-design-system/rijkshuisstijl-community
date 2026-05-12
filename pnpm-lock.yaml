@@ -651,6 +651,9 @@ importers:
       '@rijkshuisstijl-community/textarea-css':
         specifier: workspace:*
         version: link:../textarea-css
+      '@rijkshuisstijl-community/visually-hidden-css':
+        specifier: workspace:*
+        version: link:../visually-hidden-css
       '@utrecht/accordion-css':
         specifier: 2.0.0
         version: 2.0.0
@@ -873,6 +876,15 @@ importers:
         version: 3.0.0
 
   packages/components-css/textarea-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
+  packages/components-css/visually-hidden-css:
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
