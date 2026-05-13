@@ -15,4 +15,4 @@ pnpm add @rijkshuisstijl-community/text-input-css
 
 ## Gebruik
 
-Op de Storybook voor Text Inputcss [<https://rijkshuisstijl-community.vercel.app/?path=/docs/css-text-input--docs>] staan voorbeelden voor het gebruik van dit component.
+Op de Storybook voor Text Input CSS [<https://rijkshuisstijl-community.vercel.app/?path=/docs/css-text-input--docs>] staan voorbeelden voor het gebruik van dit component.
