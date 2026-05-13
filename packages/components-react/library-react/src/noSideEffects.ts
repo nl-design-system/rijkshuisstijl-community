@@ -12,7 +12,7 @@ export * from '@rijkshuisstijl-community/card-as-link-react/no-side-effects';
 export * from '@rijkshuisstijl-community/checkbox-react/no-side-effects';
 export * from '@rijkshuisstijl-community/checkbox-group-react/no-side-effects';
 export * from '@rijkshuisstijl-community/code-input-react/no-side-effects';
-export * from './CodeInputGroup';
+export * from '@rijkshuisstijl-community/code-input-group-react/no-side-effects';
 export * from '@rijkshuisstijl-community/column-layout-react/no-side-effects';
 export * from './FormField';
 export * from '@rijkshuisstijl-community/data-badge-button-react/no-side-effects';

@@ -2149,9 +2149,9 @@ importers:
 
   packages/components-react/code-input-group-react:
     dependencies:
-      '@rijkshuisstijl-community/code-input-css':
+      '@rijkshuisstijl-community/code-input-group-css':
         specifier: workspace:*
-        version: link:../../components-css/code-input-css
+        version: link:../../components-css/code-input-group-css
       '@rijkshuisstijl-community/text-input-react':
         specifier: workspace:*
         version: link:../text-input-react
@@ -3515,6 +3515,9 @@ importers:
       '@rijkshuisstijl-community/checkbox-react':
         specifier: workspace:*
         version: link:../checkbox-react
+      '@rijkshuisstijl-community/code-input-group-react':
+        specifier: workspace:*
+        version: link:../code-input-group-react
       '@rijkshuisstijl-community/code-input-react':
         specifier: workspace:*
         version: link:../code-input-react
