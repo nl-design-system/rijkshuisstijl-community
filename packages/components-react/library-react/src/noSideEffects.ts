@@ -22,7 +22,7 @@ export * from './Root';
 export * from '@rijkshuisstijl-community/dot-badge-react/no-side-effects';
 export * from './Drawer';
 export * from './ExpandableCheckboxGroup';
-export * from './Fieldset';
+export * from '@rijkshuisstijl-community/fieldset-react/no-side-effects';
 export * from '@rijkshuisstijl-community/figure-react/no-side-effects';
 export * from './File';
 export * from './FileInput';
