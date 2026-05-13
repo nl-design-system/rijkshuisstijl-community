@@ -3,11 +3,11 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { Fieldset, FieldsetLegend } from '@rijkshuisstijl-community/fieldset-react';
 import { FormLabel } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ChangeEvent, ComponentPropsWithRef, KeyboardEvent, PropsWithChildren, ReactNode, useId, useRef } from 'react';
 import { CodeInput, CodeInputProps } from './CodeInput';
-import { Fieldset, FieldsetLegend } from './Fieldset';
 
 export interface CodeInputGroupProps extends Omit<CodeInputProps, 'ref' | 'onChange'> {
   codeLength: number;
