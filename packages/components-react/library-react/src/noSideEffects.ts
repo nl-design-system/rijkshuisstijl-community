@@ -89,4 +89,4 @@ export * from '@rijkshuisstijl-community/textarea-react/no-side-effects';
 export * from './Toggletip';
 export * from './UnorderedList';
 export * from './UnorderedListItem';
-export * from './VisuallyHidden';
+export * from '@rijkshuisstijl-community/visually-hidden-react/no-side-effects';
