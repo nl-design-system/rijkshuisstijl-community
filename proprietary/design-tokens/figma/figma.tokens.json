@@ -3665,6 +3665,52 @@
       }
     }
   },
+  "common/deprecated": {
+    "rhc": {
+      "color": {
+        "positive": {
+          "default": {
+            "value": "{rhc.color.groen.500}",
+            "type": "color"
+          },
+          "subtle": {
+            "value": "{rhc.color.groen.50}",
+            "type": "color"
+          }
+        },
+        "info": {
+          "default": {
+            "value": "{rhc.color.hemelblauw.500}",
+            "type": "color"
+          },
+          "subtle": {
+            "value": "{rhc.color.hemelblauw.50}",
+            "type": "color"
+          }
+        },
+        "negative": {
+          "default": {
+            "value": "{rhc.color.rood.500}",
+            "type": "color"
+          },
+          "subtle": {
+            "value": "{rhc.color.rood.50}",
+            "type": "color"
+          }
+        },
+        "warning": {
+          "default": {
+            "value": "{rhc.color.donkergeel.500}",
+            "type": "color"
+          },
+          "subtle": {
+            "value": "{rhc.color.donkergeel.50}",
+            "type": "color"
+          }
+        }
+      }
+    }
+  },
   "components/accordion": {
     "todo": {
       "accordion": {
@@ -12702,6 +12748,7 @@
       "common/focus",
       "common/rounded-corner",
       "common/vendor",
+      "common/deprecated",
       "components/accordion",
       "components/action-group",
       "components/alert",
