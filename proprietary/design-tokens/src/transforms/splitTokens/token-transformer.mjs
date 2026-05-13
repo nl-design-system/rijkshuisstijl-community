@@ -111,7 +111,7 @@ const cartesian = (...a) => a.reduce((a, b) => a.flatMap((d) => b.map((e) => [d,
  *    },
  *  ]
  */
-export const flattenMatrix = (tokenSetsMatrix, tokenSetsAlwaysOn) => {
+export const flattenMatrix = (tokenSetsMatrix, tokenSetsAlwaysOn = []) => {
   const themeGroupsSorted = Object.keys(tokenSetsMatrix).sort(accordingTo(THEME_GROUP_NAME_SORT));
   const matrix = themeGroupsSorted.reduce(
     (acc, el) => [

@@ -143,4 +143,53 @@ describe('token-transformer', () => {
       expect(flattenMatrix(input, [])).toStrictEqual(expectedOutput);
     });
   });
+
+  describe('readThemeGroups + flattenMatrix', () => {
+    test.only('does the whole thing, correctly', () => {
+      const input = [
+        {
+          name: 'blue',
+          group: 'colours',
+          selectedTokenSets: generateSelectedTokenSetsArray('1', '2'),
+        },
+        {
+          name: 'green',
+          group: 'colours',
+          selectedTokenSets: generateSelectedTokenSetsArray('4', '5'),
+        },
+        {
+          name: 'default',
+          group: 'type scale',
+          selectedTokenSets: generateSelectedTokenSetsArray('a', 'b'),
+        },
+        {
+          name: 'information dense',
+          group: 'type scale',
+          selectedTokenSets: generateSelectedTokenSetsArray('x', 'y'),
+        },
+      ];
+
+      const { tokenSetsMatrix } = readThemeGroups(input);
+      const tokenSetSets = flattenMatrix(tokenSetsMatrix);
+
+      expect(tokenSetSets).toStrictEqual([
+        {
+          name: 'blue',
+          tokenSets: ['1', '2', 'a', 'b'],
+        },
+        {
+          name: 'blue-information-dense',
+          tokenSets: ['1', '2', 'x', 'y'],
+        },
+        {
+          name: 'green',
+          tokenSets: ['4', '5', 'a', 'b'],
+        },
+        {
+          name: 'green-information-dense',
+          tokenSets: ['4', '5', 'x', 'y'],
+        },
+      ]);
+    });
+  });
 });
