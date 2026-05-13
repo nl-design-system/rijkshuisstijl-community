@@ -13,3 +13,4 @@
   - Rename `rhc.color.negative.subtle` to `rhc.color.negative.50`
   - Rename `rhc.color.warning.default` to `rhc.color.warning.500`
   - Rename `rhc.color.warning.subtle` to `rhc.color.warning.50`
+- Oranje thema bijgewerkt: de Button is nu lintblauw gestyld in plaats van oranje, zodat de Button consistent is met de Rijkshuisstijl richtlijnen.
