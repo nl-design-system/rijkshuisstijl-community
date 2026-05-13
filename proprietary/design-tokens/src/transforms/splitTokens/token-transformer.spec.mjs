@@ -21,12 +21,18 @@ describe('token-transformer', () => {
         },
       ];
 
-      expect(readThemeGroups(input).tokenSetsMatrix).toStrictEqual({
-        colours: {
-          themeGroup1: ['1', '2', '3'],
-          themeGroup2: ['4', '5', '6'],
+      expect(readThemeGroups(input).tokenSetsTable).toStrictEqual([
+        {
+          choice: 'themegroup1',
+          group: 'colours',
+          tokenSets: ['1', '2', '3'],
         },
-      });
+        {
+          choice: 'themegroup2',
+          group: 'colours',
+          tokenSets: ['4', '5', '6'],
+        },
+      ]);
     });
 
     test('ignores entries that are in given ignore list', () => {
@@ -43,25 +49,15 @@ describe('token-transformer', () => {
           group: 'colors',
           selectedTokenSets: generateSelectedTokenSetsArray('4', '5', '6'),
         },
-        {
-          name: 'group3',
-          group: 'colours',
-          selectedTokenSets: generateSelectedTokenSetsArray('1', '2', '3'),
-        },
-        {
-          name: 'group4',
-          group: 'colours',
-          selectedTokenSets: generateSelectedTokenSetsArray('4', '5', '6'),
-        },
       ];
 
-      expect(readThemeGroups(input, ignoreList).tokenSetsMatrix).toStrictEqual({
-        colours: {
-          group1: ['1', '2', '3'],
-          group3: ['1', '2', '3'],
-          group4: ['4', '5', '6'],
+      expect(readThemeGroups(input, ignoreList).tokenSetsTable).toStrictEqual([
+        {
+          choice: 'group1',
+          group: 'colours',
+          tokenSets: ['1', '2', '3'],
         },
-      });
+      ]);
     });
 
     test(`passes back all information needed about the "${ALWAYS_ON}" token groups`, () => {
@@ -92,16 +88,37 @@ describe('token-transformer', () => {
 
   describe('flattenMatrix', () => {
     test('flattens a simple tree correctly (2d)', () => {
-      const input = {
-        'Type scale': {
-          Default: ['a'],
-          'Information dense': ['b'],
+      /*
+       *  [
+       *    {
+       *      group: 'type scale',
+       *      choice: 'default',
+       *      tokenSets: [ ... ],
+       *    },
+       *    {
+       */
+      const input = [
+        {
+          group: 'type-scale',
+          choice: 'default',
+          tokenSets: ['a'],
         },
-        Theme: {
-          Kern: ['1', '2'],
-          Groen: ['3', '4'],
+        {
+          group: 'type-scale',
+          choice: 'information-dense',
+          tokenSets: ['b'],
         },
-      };
+        {
+          group: 'theme',
+          choice: 'kern',
+          tokenSets: ['1', '2'],
+        },
+        {
+          group: 'theme',
+          choice: 'groen',
+          tokenSets: ['3', '4'],
+        },
+      ];
 
       const expectedOutput = [
         { name: 'kern', tokenSets: ['1', '2', 'a'] },
@@ -114,20 +131,38 @@ describe('token-transformer', () => {
     });
 
     test('flattens a simple tree correctly (3d)', () => {
-      const input = {
-        'Type scale': {
-          Default: ['a'],
-          'Information dense': ['b'],
+      const input = [
+        {
+          group: 'type-scale',
+          choice: 'default',
+          tokenSets: ['a'],
         },
-        Theme: {
-          Kern: ['1', '2'],
-          Groen: ['3', '4'],
+        {
+          group: 'type-scale',
+          choice: 'information-dense',
+          tokenSets: ['b'],
         },
-        Fantasie: {
-          Ding1: ['x'],
-          Ding2: ['y'],
+        {
+          group: 'theme',
+          choice: 'kern',
+          tokenSets: ['1', '2'],
         },
-      };
+        {
+          group: 'theme',
+          choice: 'groen',
+          tokenSets: ['3', '4'],
+        },
+        {
+          group: 'fantasie',
+          choice: 'ding1',
+          tokenSets: ['x'],
+        },
+        {
+          group: 'fantasie',
+          choice: 'ding2',
+          tokenSets: ['y'],
+        },
+      ];
 
       const expectedOutput = [
         { name: 'ding1-kern', tokenSets: ['x', '1', '2', 'a'] },
@@ -145,7 +180,7 @@ describe('token-transformer', () => {
   });
 
   describe('readThemeGroups + flattenMatrix', () => {
-    test.only('does the whole thing, correctly', () => {
+    test('does the whole thing, correctly', () => {
       const input = [
         {
           name: 'blue',
@@ -163,14 +198,14 @@ describe('token-transformer', () => {
           selectedTokenSets: generateSelectedTokenSetsArray('a', 'b'),
         },
         {
-          name: 'information dense',
+          name: 'information-dense',
           group: 'type scale',
           selectedTokenSets: generateSelectedTokenSetsArray('x', 'y'),
         },
       ];
 
-      const { tokenSetsMatrix } = readThemeGroups(input);
-      const tokenSetSets = flattenMatrix(tokenSetsMatrix);
+      const { tokenSetsTable } = readThemeGroups(input);
+      const tokenSetSets = flattenMatrix(tokenSetsTable);
 
       expect(tokenSetSets).toStrictEqual([
         {

@@ -9,7 +9,7 @@ const TOKENS_FILE = './figma/figma.tokens.json';
 
 export const ALWAYS_ON = 'Always on';
 const IGNORE = new Set(['Viewport']);
-const THEME_GROUP_NAME_SORT = ['Theme', 'Type scale'];
+const THEME_GROUP_NAME_SORT = ['theme', 'type-scale'];
 const BASE_THEME_NAME = 'lintblauw';
 
 const readTokensFile = async () => {
@@ -17,8 +17,8 @@ const readTokensFile = async () => {
   return JSON.parse(json);
 };
 
-const debugInfo = (tokenSetsMatrix) => {
-  const debugData = Object.entries(tokenSetsMatrix).reduce(
+const debugInfo = (tokenSetsTable) => {
+  const debugData = Object.entries(tokenSetsTable).reduce(
     (acc, [themeGroupName, choices]) => ({
       product: acc.product * Object.keys(choices).length,
       nums: [...acc.nums, `${Object.keys(choices).length} ${themeGroupName}`],
@@ -35,50 +35,6 @@ const flattenTokenSetSets = (tokenSetsObject) =>
     .map(([tokenSetName, enabled]) => isEnabled(enabled) && tokenSetName)
     .filter(Boolean);
 
-/**
-  Transforms the $themes object from figma.tokens.json into a tree-like
-  structure that is more like what we need. So from:
-  [
-    {
-      name: 'Default',
-      group: 'Type scale',
-      selectedTokenSets: [ ... ],
-    },
-    {
-      name: 'Information dense',
-      group: 'Type scale',
-      selectedTokenSets: [ ... ],
-    },
-    ...
-  ]
-  into:
-  {
-    'Type scale': {
-      'Default': [ ... ],
-      'Information dense': [ ... ],
-    },
-    ...
-  }
-*/
-export const readThemeGroups = (themeGroups, ignoreList = new Set()) => {
-  let tokenSetsAlwaysOn = [];
-  let tokenSetNamesAlwaysOn = [];
-  const tokenSetsMatrix = {};
-  for (const themeGroup of themeGroups) {
-    if (ignoreList.has(themeGroup.group)) continue;
-
-    if (themeGroup.name === ALWAYS_ON) {
-      tokenSetsAlwaysOn = [...tokenSetsAlwaysOn, ...flattenTokenSetSets(themeGroup.selectedTokenSets)];
-      tokenSetNamesAlwaysOn.push(themeGroup.group);
-    } else {
-      if (!(themeGroup.group in tokenSetsMatrix)) tokenSetsMatrix[themeGroup.group] = {};
-      tokenSetsMatrix[themeGroup.group][themeGroup.name] = flattenTokenSetSets(themeGroup.selectedTokenSets);
-    }
-  }
-
-  return { tokenSetsAlwaysOn, tokenSetsMatrix, tokenSetNamesAlwaysOn };
-};
-
 const normaliseTokenSetName = (tokenSetName) => tokenSetName.toLowerCase().replaceAll(/\s+/g, '-');
 
 const accordingTo = (list) => (a, b) => list.indexOf(a) - list.indexOf(b);
@@ -87,48 +43,89 @@ const cartesian = (...a) => a.reduce((a, b) => a.flatMap((d) => b.map((e) => [d,
 
 /**
  *
- *  Transforms the theme choices tree from `readThemeGroups`:
- *  {
- *    'Type scale': {
- *      'Default': [ ... ],
- *      'Information dense': [ ... ],
- *    },
- *    'Theme': {
- *      'Kern': [ ... ],
- *      'Groen': [ ... ],
- *    },
- *    ...
- *  }
- *  into a flat array with the cartesian product of every theme set combination:
+ * Sorts every entry in $themes into three lists:
+ * - always on (only one choice in the group)
+ * - ignore (eg. viewport is figma-only)
+ * - regular choice matrix (type scale, theme)
+ *
+ */
+export const readThemeGroups = (themeGroups, ignoreList = new Set()) => {
+  let tokenSetsAlwaysOn = [];
+  let tokenSetNamesAlwaysOn = [];
+  let tokenSetsTable = [];
+  for (const themeGroup of themeGroups) {
+    if (ignoreList.has(themeGroup.group)) continue;
+
+    if (themeGroup.name === ALWAYS_ON) {
+      tokenSetsAlwaysOn = [...tokenSetsAlwaysOn, ...flattenTokenSetSets(themeGroup.selectedTokenSets)];
+      tokenSetNamesAlwaysOn.push(themeGroup.group);
+    } else {
+      tokenSetsTable.push({
+        group: themeGroup.group,
+        choice: normaliseTokenSetName(themeGroup.name),
+        tokenSets: flattenTokenSetSets(themeGroup.selectedTokenSets),
+      });
+    }
+  }
+
+  return { tokenSetsAlwaysOn, tokenSetsTable, tokenSetNamesAlwaysOn };
+};
+
+/**
+ *
+ *  Transforms the theme choices array from `readThemeGroups`:
  *  [
  *    {
- *      name: 'kern',
+ *      group: 'type scale',
+ *      choice: 'default',
  *      tokenSets: [ ... ],
  *    },
  *    {
- *      name: 'kern-information-dense',
+ *      group: 'type scale',
+ *      choice: 'information dense',
+ *      tokenSets: [ ... ],
+ *    },
+ *    {
+ *      group: 'colours',
+ *      choice: 'blue',
+ *      tokenSets: [ ... ],
+ *    },
+ *    ...
+ *  ]
+ *  into a flat array with the cartesian product of every theme set combination:
+ *  [
+ *    {
+ *      name: 'blue',
+ *      tokenSets: [ ... ],
+ *    },
+ *    {
+ *      name: 'blue-information-dense',
  *      tokenSets: [ ... ],
  *    },
  *  ]
  */
-export const flattenMatrix = (tokenSetsMatrix, tokenSetsAlwaysOn = []) => {
-  const themeGroupsSorted = Object.keys(tokenSetsMatrix).sort(accordingTo(THEME_GROUP_NAME_SORT));
-  const matrix = themeGroupsSorted.map(
-    (name) =>
-      Object.entries(tokenSetsMatrix[name]).map(([key, value]) => ({
-        group: name,
-        choice: normaliseTokenSetName(key),
-        tokenSets: value,
-      })),
-    [],
-  );
+export const flattenMatrix = (tokenSetsTable, tokenSetsAlwaysOn = []) => {
+  // make a list of the found theme groups, sorted
+  const themeGroupsUnique = [...new Set(tokenSetsTable.map((choice) => choice.group))];
+  const themeGroupsUniqueSorted = themeGroupsUnique.sort(accordingTo(THEME_GROUP_NAME_SORT));
+
+  // sort and group the options by theme group (eg. type scale, theme/colour)
+  const matrix = themeGroupsUniqueSorted.map((val) => tokenSetsTable.filter((el) => el.group === val));
+
+  // make cartesian product: transform an array of an array of choices
+  // into a flat multiplied list of every combination of choices
   const product = cartesian(...matrix);
-  const result = product.map((choices) => ({
-    name: choices
+
+  // for every combination of choices, make object in the form that will
+  // be used to make the actual themes
+  const result = product.map((choiceSets) => ({
+    // concatenate theme name, eg. blue & information dense -> blue-information-dense
+    name: choiceSets
       .map(({ choice }) => choice)
       .filter((name) => name !== 'default')
       .join('-'),
-    tokenSets: [...choices.flatMap(({ tokenSets }) => tokenSets), ...tokenSetsAlwaysOn],
+    // collect all selected tokenSets in choice combination with the 'always on' sets
+    tokenSets: [...choiceSets.flatMap(({ tokenSets }) => tokenSets), ...tokenSetsAlwaysOn],
   }));
   return result;
 };
@@ -137,14 +134,14 @@ if (import.meta.main) {
   const tokens = await readTokensFile();
   LOG(`Token file ${TOKENS_FILE} successfully parsed as JSON`);
 
-  const { tokenSetsAlwaysOn, tokenSetsMatrix, tokenSetNamesAlwaysOn } = readThemeGroups(tokens.$themes, IGNORE);
+  const { tokenSetsAlwaysOn, tokenSetsTable, tokenSetNamesAlwaysOn } = readThemeGroups(tokens.$themes, IGNORE);
   LOG(
     `Found ${Object.keys(tokenSetsAlwaysOn).length} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`,
   );
-  LOG(`Generating ${debugInfo(tokenSetsMatrix)} themes`);
+  LOG(`Generating ${debugInfo(tokenSetsTable)} themes`);
 
   tokenSetsAlwaysOn.push('common/viewport/max');
-  const tokenSetSets = flattenMatrix(tokenSetsMatrix, tokenSetsAlwaysOn);
+  const tokenSetSets = flattenMatrix(tokenSetsTable, tokenSetsAlwaysOn);
   LOG(tokenSetSets.map((theme) => `* ${theme.name}`).join('\n'));
 
   if (!existsSync('./src/generated')) {
