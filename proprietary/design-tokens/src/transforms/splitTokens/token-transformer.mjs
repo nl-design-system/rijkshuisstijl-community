@@ -61,7 +61,7 @@ export const readThemeGroups = (themeGroups, ignoreList = new Set()) => {
       tokenSetNamesAlwaysOn.push(themeGroup.group);
     } else {
       tokenSetsTable.push({
-        group: themeGroup.group,
+        group: normaliseTokenSetName(themeGroup.group),
         choice: normaliseTokenSetName(themeGroup.name),
         tokenSets: flattenTokenSetSets(themeGroup.selectedTokenSets),
       });
@@ -106,8 +106,9 @@ export const readThemeGroups = (themeGroups, ignoreList = new Set()) => {
  */
 export const flattenMatrix = (tokenSetsTable, tokenSetsAlwaysOn = []) => {
   // make a list of the found theme groups, sorted
-  const themeGroupsUnique = [...new Set(tokenSetsTable.map((choice) => choice.group))];
-  const themeGroupsUniqueSorted = themeGroupsUnique.sort(accordingTo(THEME_GROUP_NAME_SORT));
+  const themeGroups = tokenSetsTable.map((choice) => choice.group);
+  const themeGroupsSorted = themeGroups.sort(accordingTo(THEME_GROUP_NAME_SORT));
+  const themeGroupsUniqueSorted = [...new Set(themeGroupsSorted)];
 
   // sort and group the options by theme group (eg. type scale, theme/colour)
   const matrix = themeGroupsUniqueSorted.map((val) => tokenSetsTable.filter((el) => el.group === val));
