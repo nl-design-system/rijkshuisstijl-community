@@ -25,7 +25,7 @@ export * from './ExpandableCheckboxGroup';
 export * from '@rijkshuisstijl-community/fieldset-react/no-side-effects';
 export * from '@rijkshuisstijl-community/figure-react/no-side-effects';
 export * from './File';
-export * from './FileInput';
+export * from '@rijkshuisstijl-community/file-input-react/no-side-effects';
 export * from '@rijkshuisstijl-community/footer-react/no-side-effects';
 export * from './FormFieldCheckboxGroup';
 export * from './FormFieldCheckboxOption';
