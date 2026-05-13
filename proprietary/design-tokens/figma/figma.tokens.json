@@ -5096,7 +5096,7 @@
       }
     }
   },
-  "components/button/utrecht-contrast-fix": {
+  "components/button/utrecht-color-primary+core": {
     "utrecht": {
       "button": {
         "secondary-action": {
@@ -5266,33 +5266,89 @@
               "type": "color"
             }
           }
-        }
-      }
-    }
-  },
-  "components/button/utrecht-lager-label": {
-    "utrecht": {
-      "button": {
-        "font-size": {
-          "value": "1.25rem",
-          "type": "fontSizes"
         },
         "primary-action": {
-          "font-size": {
-            "value": "{utrecht.button.font-size}",
-            "type": "fontSizes"
-          }
-        },
-        "secondary-action": {
-          "font-size": {
-            "value": "{utrecht.button.font-size}",
-            "type": "fontSizes"
-          }
-        },
-        "subtle": {
-          "font-size": {
-            "value": "{utrecht.button.font-size}",
-            "type": "fontSizes"
+          "background-color": {
+            "value": "{rhc.color.primary.500}",
+            "type": "color"
+          },
+          "border-color": {
+            "value": "{rhc.color.transparent}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{rhc.color.foreground.on-primary}",
+            "type": "color"
+          },
+          "disabled": {
+            "background-color": {
+              "value": "{rhc.color.primary.100}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "{rhc.color.transparent}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.primary.400}",
+              "type": "color"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "value": "{rhc.color.primary.hover}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "{rhc.color.transparent}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.foreground.on-primary}",
+              "type": "color"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "value": "{rhc.color.primary.hover}",
+              "type": "color"
+            },
+            "border-color": {
+              "value": "{rhc.color.transparent}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.foreground.on-primary}",
+              "type": "color"
+            }
+          },
+          "pressed": {
+            "border-color": {
+              "value": "{rhc.color.transparent}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.foreground.on-primary}",
+              "type": "color"
+            },
+            "background-color": {
+              "value": "{rhc.color.primary.active}",
+              "type": "color"
+            }
+          },
+          "active": {
+            "border-color": {
+              "value": "{rhc.color.transparent}",
+              "type": "color"
+            },
+            "color": {
+              "value": "{rhc.color.foreground.on-primary}",
+              "type": "color"
+            },
+            "background-color": {
+              "value": "{rhc.color.primary.active}",
+              "type": "color"
+            }
           }
         }
       }
@@ -12520,11 +12576,9 @@
         "components/heading/base": "enabled",
         "components/heading/color-core": "enabled",
         "components/button/utrecht-base": "enabled",
-        "components/button/utrecht-color-primary": "enabled",
-        "components/button/utrecht-lager-label": "enabled",
         "components/button/nl-color-core": "enabled",
         "components/button/nl-base": "enabled",
-        "components/button/utrecht-contrast-fix": "enabled"
+        "components/button/utrecht-color-core": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
@@ -12759,8 +12813,7 @@
       "components/button/utrecht-base",
       "components/button/utrecht-color-core",
       "components/button/utrecht-color-primary",
-      "components/button/utrecht-contrast-fix",
-      "components/button/utrecht-lager-label",
+      "components/button/utrecht-color-primary+core",
       "components/button/nl-base",
       "components/button/nl-color-core",
       "components/button/nl-color-primary",
