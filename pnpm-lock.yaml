@@ -693,6 +693,9 @@ importers:
       '@rijkshuisstijl-community/textarea-css':
         specifier: workspace:*
         version: link:../textarea-css
+      '@rijkshuisstijl-community/toggletip-css':
+        specifier: workspace:*
+        version: link:../toggletip-css
       '@rijkshuisstijl-community/visually-hidden-css':
         specifier: workspace:*
         version: link:../visually-hidden-css
@@ -930,6 +933,15 @@ importers:
         version: 3.0.0
 
   packages/components-css/textarea-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
+  packages/components-css/toggletip-css:
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
