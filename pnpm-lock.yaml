@@ -589,6 +589,15 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
 
+  packages/components-css/hero-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
   packages/components-css/library-css:
     dependencies:
       '@amsterdam/design-system-css':
@@ -669,6 +678,9 @@ importers:
       '@rijkshuisstijl-community/heading-css':
         specifier: workspace:*
         version: link:../heading-css
+      '@rijkshuisstijl-community/hero-css':
+        specifier: workspace:*
+        version: link:../hero-css
       '@rijkshuisstijl-community/link-css':
         specifier: workspace:*
         version: link:../link-css
