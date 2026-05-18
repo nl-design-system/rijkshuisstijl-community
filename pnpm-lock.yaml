@@ -3603,9 +3603,21 @@ importers:
 
   packages/components-react/hero-react:
     dependencies:
+      '@rijkshuisstijl-community/heading-group-react':
+        specifier: workspace:*
+        version: link:../heading-group-react
+      '@rijkshuisstijl-community/heading-react':
+        specifier: workspace:*
+        version: link:../heading-react
       '@rijkshuisstijl-community/hero-css':
         specifier: workspace:*
         version: link:../../components-css/hero-css
+      '@rijkshuisstijl-community/image-react':
+        specifier: workspace:*
+        version: link:../image-react
+      '@rijkshuisstijl-community/paragraph-react':
+        specifier: workspace:*
+        version: link:../paragraph-react
     devDependencies:
       '@babel/core':
         specifier: 7.29.0
