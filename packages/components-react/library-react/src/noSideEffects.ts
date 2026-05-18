@@ -71,7 +71,7 @@ export * from './PageLayout';
 export * from './PageNumberNavigation';
 export * from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 export * from './PreHeading';
-export * from './Radio';
+export * from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 export * from './RadioGroup';
 export * from './RoundedCorner';
 export * from '@rijkshuisstijl-community/separator-react/no-side-effects';
