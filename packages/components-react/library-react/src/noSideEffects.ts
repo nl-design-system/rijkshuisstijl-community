@@ -20,7 +20,7 @@ export * from '@rijkshuisstijl-community/data-summary-react/no-side-effects';
 export * from '@rijkshuisstijl-community/data-summary-item-react/no-side-effects';
 export * from './Root';
 export * from '@rijkshuisstijl-community/dot-badge-react/no-side-effects';
-export * from './Drawer';
+export * from '@rijkshuisstijl-community/drawer-react/no-side-effects';
 export * from './ExpandableCheckboxGroup';
 export * from '@rijkshuisstijl-community/fieldset-react/no-side-effects';
 export * from '@rijkshuisstijl-community/figure-react/no-side-effects';
