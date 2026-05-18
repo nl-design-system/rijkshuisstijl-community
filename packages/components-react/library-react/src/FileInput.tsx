@@ -4,9 +4,9 @@
  */
 
 import { Button, ButtonProps } from '@rijkshuisstijl-community/button-react';
+import { File } from '@rijkshuisstijl-community/file-react';
 import { Paragraph } from '@rijkshuisstijl-community/paragraph-react';
 import { ChangeEvent, PropsWithChildren, Ref, useEffect, useRef, useState } from 'react';
-import { File } from './File';
 
 export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
   ref?: Ref<HTMLInputElement>;
