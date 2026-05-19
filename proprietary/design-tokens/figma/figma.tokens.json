@@ -8547,17 +8547,17 @@
         "padding-inline-end": {
           "$type": "dimension",
           "$value": "{rhc.space.4xl}"
-        }
-      },
-      "subfooter": {
-        "link": {
-          "text-decoration-line": {
-            "$type": "textDecoration",
-            "$value": "none"
-          },
-          "min-block-size": {
-            "$type": "dimension",
-            "$value": "{rhc.size.pointer-target}"
+        },
+        "sub": {
+          "link": {
+            "text-decoration-line": {
+              "$type": "textDecoration",
+              "$value": "none"
+            },
+            "min-block-size": {
+              "$type": "dimension",
+              "$value": "{rhc.size.pointer-target}"
+            }
           }
         }
       }
@@ -10410,7 +10410,8 @@
         "components/heading/base": "enabled",
         "components/heading/color-core": "enabled",
         "components/button/base": "enabled",
-        "components/button/color-core": "enabled"
+        "components/button/color-core": "enabled",
+        "components/page-footer-new": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Rijkshuisstijl"
