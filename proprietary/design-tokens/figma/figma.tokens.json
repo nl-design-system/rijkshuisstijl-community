@@ -8532,17 +8532,23 @@
           "$type": "dimension",
           "$value": "{rhc.space.4xl}"
         },
-        "link": {
-          "text-decoration-line": {
-            "$type": "textDecoration",
-            "$value": "none"
+        "navigation": {
+          "link": {
+            "text-decoration-line": {
+              "$type": "textDecoration",
+              "$value": "none"
+            },
+            "min-block-size": {
+              "$type": "dimension",
+              "$value": "{rhc.size.pointer-target}"
+            }
           },
-          "min-block-size": {
+          "row-gap": {
             "$type": "dimension",
-            "$value": "{rhc.size.pointer-target}"
+            "$value": "{rhc.space.2xl}"
           }
         },
-        "sub": {
+        "sub-footer": {
           "border-block-start-color": {
             "$type": "color",
             "$value": "{rhc.color.wit}"
@@ -8564,12 +8570,6 @@
           "font-size": {
             "$type": "fontSizes",
             "$value": "{rhc.text.font-size.xl}"
-          }
-        },
-        "link-list": {
-          "row-gap": {
-            "$type": "dimension",
-            "$value": "{rhc.space.2xl}"
           }
         }
       }
