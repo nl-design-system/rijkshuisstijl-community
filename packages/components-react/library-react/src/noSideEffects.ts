@@ -87,6 +87,6 @@ export * from './TableHeaderCell';
 export * from '@rijkshuisstijl-community/text-input-react/no-side-effects';
 export * from '@rijkshuisstijl-community/textarea-react/no-side-effects';
 export * from './Toggletip';
-export * from './UnorderedList';
+export * from '@rijkshuisstijl-community/unordered-list-react/no-side-effects';
 export * from '@rijkshuisstijl-community/unordered-list-item-react/no-side-effects';
 export * from '@rijkshuisstijl-community/visually-hidden-react/no-side-effects';
