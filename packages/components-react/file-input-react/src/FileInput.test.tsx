@@ -18,23 +18,30 @@ describe('File Input tests', () => {
     fileTypeErrorMessage: 'Dit bestandstype wordt niet toegestaan.',
   };
 
-  const renderComponent = (props: Partial<FileInputProps> = {}) => {
-    return render(<FileInput {...defaultProps} {...props} />);
-  };
-
   it('renders the FileInput element', () => {
-    const { container } = renderComponent();
+    const { container } = render(<FileInput {...defaultProps} />);
+
     const field = container.querySelector('div');
+
     expect(field).toBeInTheDocument();
     expect(field?.className).toEqual('rhc-file-input');
   });
 
   it('should be able to upload one file', async () => {
     const mockOnFileChange = vi.fn();
-    const { container } = renderComponent({ onValueChange: mockOnFileChange });
+
+    const propsTest: FileInputProps = {
+      ...defaultProps,
+      onValueChange: mockOnFileChange,
+    };
+
+    const { container } = render(<FileInput {...propsTest} />);
+
     const file = new File(['dummy content'], 'example.png', { type: 'image/png' });
     const fileInput = container.querySelector('input');
+
     expect(fileInput).not.toBeNull();
+
     await waitFor(() =>
       fireEvent.change(fileInput!, {
         target: { files: [file] },
@@ -47,7 +54,12 @@ describe('File Input tests', () => {
 
   it('should be able to delete a selected file', async () => {
     const mockOnFileChange = vi.fn();
-    const { container } = renderComponent({ onValueChange: mockOnFileChange });
+    const propsTest: FileInputProps = {
+      ...defaultProps,
+      onValueChange: mockOnFileChange,
+    };
+
+    const { container } = render(<FileInput {...propsTest} />);
     const file = new File(['dummy content'], 'example.png', { type: 'image/png' });
     const fileInput = container.querySelector('input');
 
@@ -68,11 +80,19 @@ describe('File Input tests', () => {
 
   it('should be able to upload multiple files at once', async () => {
     const mockOnFileChange = vi.fn();
-    const { container } = renderComponent({ onValueChange: mockOnFileChange });
+
+    const propsTest: FileInputProps = {
+      ...defaultProps,
+      onValueChange: mockOnFileChange,
+    };
+
+    const { container } = render(<FileInput {...propsTest} />);
 
     const fileOne = new File(['dummy content'], 'exampleOne.png', { type: 'image/png' });
     const fileTwo = new File(['dummy content'], 'exampleTwo.png', { type: 'image/png' });
+
     const fileInput = container.querySelector('input');
+
     expect(fileInput).not.toBeNull();
 
     await waitFor(() =>
@@ -88,25 +108,40 @@ describe('File Input tests', () => {
 
   it('should not accept files not in the list', async () => {
     const mockOnFileChange = vi.fn();
-    const { container } = renderComponent({
+
+    const propsTest: FileInputProps = {
+      ...defaultProps,
       allowedFileTypes: '.doc,.docx,.xlsx,.pdf,.zip,.jpg,.bmp,.gif',
       onValueChange: mockOnFileChange,
-    });
+    };
+
+    const { container } = render(<FileInput {...propsTest} />);
 
     const fileOne = new File(['dummy content'], 'exampleOne.png', { type: 'image/png' });
+
     const fileInput = container.querySelector('input');
+
     expect(fileInput).not.toBeNull();
 
     await waitFor(() => userEvent.upload(fileInput!, fileOne));
+
     expect(mockOnFileChange).toHaveBeenCalledTimes(0);
   });
 
   it('should render a link with the correct URL and target attributes for a preview of the selected file', async () => {
     const mockOnFileChange = vi.fn();
-    const { container, getByRole } = renderComponent({ onValueChange: mockOnFileChange });
+
+    const propsTest: FileInputProps = {
+      ...defaultProps,
+      onValueChange: mockOnFileChange,
+    };
+
+    const { container, getByRole } = render(<FileInput {...propsTest} />);
 
     const file = new File(['dummy content'], 'example.png', { type: 'image/png' });
+
     const fileInput = container.querySelector('input');
+
     expect(fileInput).not.toBeNull();
 
     await waitFor(() =>
@@ -116,19 +151,25 @@ describe('File Input tests', () => {
     );
 
     const link = getByRole('link', { name: file.name });
+
     expect(link).toHaveAttribute('href', 'mocked-url/example.png');
     expect(link).toHaveAttribute('target', '_blank');
   });
 
   it('should handle the case when ref is missing or invalid', async () => {
     const mockOnFileChange = vi.fn();
-    const { container } = renderComponent({
+
+    const propsTest: FileInputProps = {
+      ...defaultProps,
       onValueChange: mockOnFileChange,
       ref: { current: null },
-    });
+    };
+
+    const { container } = render(<FileInput {...propsTest} />);
 
     const file = new File(['dummy content'], 'example.png', { type: 'image/png' });
     const fileInput = container.querySelector('input');
+
     expect(fileInput).not.toBeNull();
 
     await waitFor(() =>
