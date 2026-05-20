@@ -678,6 +678,9 @@ importers:
       '@rijkshuisstijl-community/paragraph-css':
         specifier: workspace:*
         version: link:../paragraph-css
+      '@rijkshuisstijl-community/rounded-corner-css':
+        specifier: workspace:*
+        version: link:../rounded-corner-css
       '@rijkshuisstijl-community/separator-css':
         specifier: workspace:*
         version: link:../separator-css
@@ -877,6 +880,15 @@ importers:
       '@nl-design-system-candidate/paragraph-css':
         specifier: 2.1.3
         version: 2.1.3
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
+  packages/components-css/rounded-corner-css:
+    devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
