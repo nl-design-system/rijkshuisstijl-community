@@ -3,8 +3,7 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Textarea as UtrechtTextArea } from '@utrecht/component-library-react';
-import { TextareaProps } from '@utrecht/component-library-react';
+import { TextareaProps, Textarea as UtrechtTextArea } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 
 export type { TextareaProps } from '@utrecht/component-library-react';
