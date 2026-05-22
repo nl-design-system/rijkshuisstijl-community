@@ -5,7 +5,7 @@
 
 import clsx from 'clsx';
 import { ComponentPropsWithoutRef, ElementType } from 'react';
-import type { OverwriteTokens } from './tokenUtils';
+import type { OverwriteTokens } from './types/tokenUtils';
 
 type Size = 'sm' | 'md' | 'lg';
 type Position = 'start-start' | 'start-end' | 'end-start' | 'end-end';
