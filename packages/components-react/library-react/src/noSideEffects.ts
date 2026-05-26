@@ -73,7 +73,7 @@ export * from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 export * from './PreHeading';
 export * from './Radio';
 export * from './RadioGroup';
-export * from './RoundedCorner';
+export * from '@rijkshuisstijl-community/rounded-corner-react/no-side-effects';
 export * from '@rijkshuisstijl-community/separator-react/no-side-effects';
 export * from '@rijkshuisstijl-community/side-nav-react/no-side-effects';
 export * from './SideNavItem';
