@@ -21,7 +21,7 @@ import {
   useRef,
   useState,
 } from 'react';
-import { LinkButton, LinkButtonProps } from './LinkButton';
+import { LinkButton, LinkButtonProps } from @rijkshuisstijl-community/link-button-react';
 
 /* -------------------------------------------------------------------------------------------------
  * Context
