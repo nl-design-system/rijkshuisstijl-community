@@ -10,7 +10,7 @@ Dit is het Link List CSS-component van het Rijkshuisstijl Community Design Syste
 ## Installatie
 
 ```bash
-pnpm add @rijkshuisstijl-communitylink-list-css
+pnpm add @rijkshuisstijl-community/link-list-css
 ```
 
 ## Gebruik
