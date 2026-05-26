@@ -52,7 +52,7 @@ export {
 } from './LanguageNavigation';
 export * from '@rijkshuisstijl-community/link-react/no-side-effects';
 export * from './LinkButton';
-export * from './LinkList';
+export * from '@rijkshuisstijl-community/link-list-react/no-side-effects';
 export * from './LinkListCard';
 export * from './Listbox';
 export * from '@rijkshuisstijl-community/logo-react/no-side-effects';
