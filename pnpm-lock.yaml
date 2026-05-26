@@ -598,6 +598,18 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
 
+  packages/components-css/language-navigation-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      '@utrecht/listbox-css':
+        specifier: 2.1.0
+        version: 2.1.0
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
   packages/components-css/library-css:
     dependencies:
       '@amsterdam/design-system-css':
@@ -681,6 +693,9 @@ importers:
       '@rijkshuisstijl-community/heading-css':
         specifier: workspace:*
         version: link:../heading-css
+      '@rijkshuisstijl-community/language-navigation-css':
+        specifier: workspace:*
+        version: link:../language-navigation-css
       '@rijkshuisstijl-community/link-css':
         specifier: workspace:*
         version: link:../link-css
