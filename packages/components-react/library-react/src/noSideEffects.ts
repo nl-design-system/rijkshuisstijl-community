@@ -37,7 +37,7 @@ export * from './FormFieldTextarea';
 export * from './FormSummary';
 export * from '@rijkshuisstijl-community/heading-react/no-side-effects';
 export * from '@rijkshuisstijl-community/heading-group-react/no-side-effects';
-export * from './Hero';
+export * from '@rijkshuisstijl-community/hero-react/no-side-effects';
 export * from '@rijkshuisstijl-community/icon-react/no-side-effects';
 export * from '@rijkshuisstijl-community/image-react/no-side-effects';
 export {
