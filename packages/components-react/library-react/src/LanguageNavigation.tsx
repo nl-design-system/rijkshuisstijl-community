@@ -4,6 +4,7 @@
  */
 
 import { Icon } from '@rijkshuisstijl-community/icon-react';
+import { LinkButton, LinkButtonProps } from '@rijkshuisstijl-community/link-button-react';
 import { Link } from '@rijkshuisstijl-community/link-react';
 import clsx from 'clsx';
 import {
@@ -21,7 +22,6 @@ import {
   useRef,
   useState,
 } from 'react';
-import { LinkButton, LinkButtonProps } from @rijkshuisstijl-community/link-button-react';
 
 /* -------------------------------------------------------------------------------------------------
  * Context
