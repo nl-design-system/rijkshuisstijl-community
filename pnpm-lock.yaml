@@ -687,6 +687,9 @@ importers:
       '@rijkshuisstijl-community/logo-css':
         specifier: workspace:*
         version: link:../logo-css
+      '@rijkshuisstijl-community/ordered-list-css':
+        specifier: workspace:*
+        version: link:../ordered-list-css
       '@rijkshuisstijl-community/paragraph-css':
         specifier: workspace:*
         version: link:../paragraph-css
@@ -886,6 +889,18 @@ importers:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
+  packages/components-css/ordered-list-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      '@utrecht/ordered-list-css':
+        specifier: 2.0.0
+        version: 2.0.0
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
