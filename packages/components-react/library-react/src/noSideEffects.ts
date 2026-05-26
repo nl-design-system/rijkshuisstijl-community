@@ -62,7 +62,7 @@ export * from './NavBar';
 export * from './NavigationList';
 export * from './NavigationListItem';
 export * from './NumberBadge';
-export * from './OrderedList';
+export * from '@rijkshuisstijl-community/ordered-list-react/no-side-effects';
 export * from './PageBody';
 export * from './PageContent';
 export * from './PageHeader';
