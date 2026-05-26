@@ -681,6 +681,9 @@ importers:
       '@rijkshuisstijl-community/heading-css':
         specifier: workspace:*
         version: link:../heading-css
+      '@rijkshuisstijl-community/link-button-css':
+        specifier: workspace:*
+        version: link:../link-button-css
       '@rijkshuisstijl-community/link-css':
         specifier: workspace:*
         version: link:../link-css
@@ -868,6 +871,18 @@ importers:
       vite:
         specifier: 7.3.1
         version: 7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
+
+  packages/components-css/link-button-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      '@utrecht/link-button-css':
+        specifier: 2.0.1
+        version: 2.0.1
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
 
   packages/components-css/link-css:
     devDependencies:
