@@ -3073,54 +3073,6 @@
       }
     }
   },
-  "common/primary-color/lintblauw": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.core.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.core.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.core.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.core.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.core.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "{rhc.color.core.hover}",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "{rhc.color.core.active}",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
-          }
-        },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
-          }
-        }
-      }
-    }
-  },
   "common/primary-color/groen": {
     "rhc": {
       "color": {
@@ -3386,6 +3338,54 @@
           "active": {
             "$type": "color",
             "$value": "#761838"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary-color/lintblauw": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.core.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.core.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.core.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.core.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.core.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{rhc.color.core.hover}",
+            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "{rhc.color.core.active}",
+            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
           }
         },
         "foreground": {
@@ -12278,7 +12278,7 @@
         "common/primary-color/oranje": "enabled",
         "components/button/nl-color-core": "enabled",
         "components/button/utrecht-color-core": "enabled",
-        "components/heading/base": "enabled"
+        "components/heading/color-core": "enabled"
       },
       "group": "Theme"
     },
@@ -12401,13 +12401,13 @@
       "common/type-scale/information-dense",
       "common/viewport/min",
       "common/viewport/max",
-      "common/primary-color/core",
       "common/primary-color/groen",
       "common/primary-color/hemelblauw",
       "common/primary-color/mintgroen",
       "common/primary-color/oranje",
       "common/primary-color/paars",
       "common/primary-color/robijn-rood",
+      "common/primary-color/lintblauw",
       "common/focus",
       "common/rounded-corner",
       "common/vendor",
