@@ -8502,6 +8502,30 @@
           "$type": "color",
           "$value": "{rhc.color.foreground.on-dark-color}"
         },
+        "compact": {
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.4xl}"
+          },
+          "tagline": {
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "{rhc.text.font-size.lg}"
+            }
+          },
+          "background-color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.50}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        },
         "padding-block-start": {
           "$type": "dimension",
           "$value": "{rhc.space.4xl}"
@@ -8552,25 +8576,15 @@
             "$value": "{rhc.text.font-size.xl}"
           }
         },
-        "compact": {
-          "tagline": {
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "{rhc.text.font-size.lg}"
-            }
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.50}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          }
-        },
         "row-gap": {
           "$type": "dimension",
-          "$value": "{rhc.space.2xl}"
+          "$value": "{rhc.space.3xl}"
+        },
+        "slot-1": {
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          }
         }
       }
     }
