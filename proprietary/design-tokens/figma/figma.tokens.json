@@ -8482,27 +8482,17 @@
   "components/page-footer-new": {
     "rhc": {
       "page-footer": {
-        "content": {
+        "body": {
           "max-inline-size": {
             "$type": "dimension",
             "$value": "{rhc.size.page.md}"
-          },
+          }
+        },
+        "layout": {
           "column-gap": {
             "$type": "dimension",
             "$value": "{rhc.space.3xl}"
-          },
-          "row-gap": {
-            "$type": "dimension",
-            "$value": "{rhc.space.2xl}"
           }
-        },
-        "border-block-start-width": {
-          "$type": "dimension",
-          "$value": "{rhc.border-width.md}"
-        },
-        "border-block-start-color": {
-          "$type": "color",
-          "$value": "{rhc.color.transparent}"
         },
         "background-color": {
           "$type": "color",
@@ -8544,12 +8534,6 @@
             "$value": "{rhc.space.2xl}"
           }
         },
-        "sub-footer": {
-          "border-block-start-color": {
-            "$type": "color",
-            "$value": "{rhc.color.wit}"
-          }
-        },
         "font-family": {
           "$type": "fontFamilies",
           "$value": "{rhc.text.font-family.default}"
@@ -8575,10 +8559,6 @@
               "$value": "{rhc.text.font-size.lg}"
             }
           },
-          "border-block-start-color": {
-            "$type": "color",
-            "$value": "{rhc.color.transparent}"
-          },
           "background-color": {
             "$type": "color",
             "$value": "{rhc.color.core.50}"
@@ -8586,13 +8566,11 @@
           "color": {
             "$type": "color",
             "$value": "{rhc.color.core.500}"
-          },
-          "sub-footer": {
-            "border-block-start-color": {
-              "$type": "color",
-              "$value": "{rhc.color.wit}"
-            }
           }
+        },
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.2xl}"
         }
       }
     }
