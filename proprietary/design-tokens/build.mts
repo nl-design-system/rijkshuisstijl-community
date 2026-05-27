@@ -137,7 +137,7 @@ const getPlatformsConfig = (buildPath: string, themeName: string) => {
 const darkModeCSS = await readFile('./src/dark-mode.css', 'utf8');
 const fluidCSS = await readFile('./src/fluid.css', 'utf8');
 
-// This will build the base theme kern-lintblauw
+// This will build the base theme lintblauw
 async function buildBaseTokens() {
   const config = getPlatformsConfig('dist/', 'rhc-theme');
   const StyleDictionaryBase = new StyleDictionary({
