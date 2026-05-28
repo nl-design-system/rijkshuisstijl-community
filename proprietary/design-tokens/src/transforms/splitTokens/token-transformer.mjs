@@ -43,7 +43,12 @@ const normaliseTokenSetName = (tokenSetName) => tokenSetName.toLowerCase().repla
  */
 const accordingTo = (arrayToSortBy) => (a, b) => arrayToSortBy.indexOf(a) - arrayToSortBy.indexOf(b);
 
-export const cartesian = (...a) => a.reduce((a, b) => a.flatMap((d) => b.map((e) => [d, e].flat())), [[]]);
+export const cartesian = (...groups) =>
+  groups.reduce(
+    (combinations, group) =>
+      combinations.flatMap((combination) => group.map((groupChoice) => [combination, groupChoice].flat())),
+    [[]],
+  );
 
 /**
  *
