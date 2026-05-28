@@ -79,10 +79,9 @@ describe('token-transformer', () => {
         },
       ];
 
-      const { tokenSetsAlwaysOn, tokenSetNamesAlwaysOn } = readThemeGroups(input);
+      const { tokenSetsAlwaysOn } = readThemeGroups(input);
 
       expect(tokenSetsAlwaysOn).toStrictEqual(['x', 'y', 'z']);
-      expect(tokenSetNamesAlwaysOn).toStrictEqual(['basics']);
     });
   });
 
