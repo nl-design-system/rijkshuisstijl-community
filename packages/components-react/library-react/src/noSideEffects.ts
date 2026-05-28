@@ -49,7 +49,7 @@ export {
   type LanguageNavigationRootProps,
   Trigger as LanguageNavigationTrigger,
   type LanguageNavigationTriggerProps,
-} from './LanguageNavigation';
+} from '@rijkshuisstijl-community/language-navigation-react/no-side-effects';
 export * from '@rijkshuisstijl-community/link-react/no-side-effects';
 export * from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 export * from './LinkList';
