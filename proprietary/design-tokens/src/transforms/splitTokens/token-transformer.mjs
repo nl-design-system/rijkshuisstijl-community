@@ -87,7 +87,7 @@ export const readThemeGroups = (themeGroups, ignoreList = new Set()) => {
     }
   }
 
-  if (tokenSetNamesAlwaysOn.length)
+  if (tokenSetNamesAlwaysOn.length > 0)
     console.log(
       `Found ${tokenSetNamesAlwaysOn.length} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`,
     );
