@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import { ALWAYS_ON, flattenMatrix, readThemeGroups } from './token-transformer.mjs';
+import { ALWAYS_ON, cartesian, flattenMatrix, readThemeGroups } from './token-transformer.mjs';
 
 const generateSelectedTokenSetsArray = (...tokenSets) =>
   Object.fromEntries(tokenSets.map((tokenSet) => [tokenSet, 'enabled']));
@@ -223,6 +223,22 @@ describe('token-transformer', () => {
           name: 'green-information-dense',
           tokenSets: ['4', '5', 'x', 'y'],
         },
+      ]);
+    });
+  });
+
+  describe('cartesian', () => {
+    test('makes a flat list of every possible combination of options', () => {
+      const input = [
+        ['a', 'b'],
+        ['1', '2'],
+      ];
+
+      expect(cartesian(...input)).toStrictEqual([
+        ['a', '1'],
+        ['a', '2'],
+        ['b', '1'],
+        ['b', '2'],
       ]);
     });
   });
