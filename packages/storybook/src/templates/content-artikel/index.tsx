@@ -25,7 +25,6 @@ import SharedDisclaimer from '../shared/disclaimer';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
-import './index.css';
 
 const stappenplan = [
   {
@@ -283,7 +282,7 @@ export default function Page() {
               </Paragraph>
             </div>
 
-            <div className="rhc-content-artikel-cta rhc-templates-spacing-2">
+            <div className="rhc-templates-spacing-2">
               <Heading level={2}>Maak een plan</Heading>
               <Paragraph>
                 Heb jij ook een asbestdak op jouw erf? Maak een plan om het te laten verwijderen! Lees meer op de pagina
@@ -298,7 +297,7 @@ export default function Page() {
 
             <div className="rhc-templates-spacing-2">
               <Heading level={2}>Ervaringsverhalen</Heading>
-              <div className="rhc-content-artikel-card-group">
+              <div className="rhc-card-as-link-group">
                 {ervaringsverhalen.map((verhaal) => (
                   <Card
                     key={verhaal.heading}
