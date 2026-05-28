@@ -699,6 +699,9 @@ importers:
       '@rijkshuisstijl-community/link-css':
         specifier: workspace:*
         version: link:../link-css
+      '@rijkshuisstijl-community/link-list-card-css':
+        specifier: workspace:*
+        version: link:../link-list-card-css
       '@rijkshuisstijl-community/logo-css':
         specifier: workspace:*
         version: link:../logo-css
@@ -904,6 +907,15 @@ importers:
       '@nl-design-system-candidate/link-css':
         specifier: 2.0.3
         version: 2.0.3
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
+  packages/components-css/link-list-card-css:
+    devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
