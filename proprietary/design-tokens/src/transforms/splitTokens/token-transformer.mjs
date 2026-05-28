@@ -1,10 +1,6 @@
 import { existsSync, mkdirSync } from 'node:fs';
 import { readFile, writeFile } from 'node:fs/promises';
 
-const DEBUG = true;
-const LOG = (msg) => {
-  if (DEBUG) console.log(msg);
-};
 const TOKENS_FILE = './figma/figma.tokens.json';
 
 export const ALWAYS_ON = 'Always on';
@@ -14,7 +10,9 @@ const BASE_THEME_NAME = 'lintblauw';
 
 const readTokensFile = async () => {
   const json = await readFile(TOKENS_FILE, 'utf8');
-  return JSON.parse(json);
+  const parsed = JSON.parse(json);
+  console.log(`Token file ${TOKENS_FILE} successfully parsed as JSON`);
+  return parsed;
 };
 
 const debugInfo = (tokenSetsTable) => {
@@ -54,6 +52,7 @@ const cartesian = (...a) => a.reduce((a, b) => a.flatMap((d) => b.map((e) => [d,
 export const readThemeGroups = (themeGroups, ignoreList = new Set()) => {
   let tokenSetsAlwaysOn = [];
   let tokenSetNamesAlwaysOn = [];
+  let numTokenSetNamesAlwaysOn = 0;
   let tokenSetsTable = [];
   for (const themeGroup of themeGroups) {
     if (ignoreList.has(themeGroup.group)) continue;
@@ -61,6 +60,7 @@ export const readThemeGroups = (themeGroups, ignoreList = new Set()) => {
     if (themeGroup.name === ALWAYS_ON) {
       tokenSetsAlwaysOn = [...tokenSetsAlwaysOn, ...flattenTokenSetSets(themeGroup.selectedTokenSets)];
       tokenSetNamesAlwaysOn.push(themeGroup.group);
+      numTokenSetNamesAlwaysOn++;
     } else {
       tokenSetsTable.push({
         group: normaliseTokenSetName(themeGroup.group),
@@ -70,7 +70,10 @@ export const readThemeGroups = (themeGroups, ignoreList = new Set()) => {
     }
   }
 
-  return { tokenSetsAlwaysOn, tokenSetsTable, tokenSetNamesAlwaysOn };
+  console.log(`Found ${numTokenSetNamesAlwaysOn} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`);
+  console.log(`Generating ${debugInfo(tokenSetsTable)} themes`);
+
+  return { tokenSetsAlwaysOn, tokenSetsTable };
 };
 
 /**
@@ -130,22 +133,19 @@ export const flattenMatrix = (tokenSetsTable, tokenSetsAlwaysOn = []) => {
     // collect all selected tokenSets in choice combination with the 'always on' sets
     tokenSets: [...choiceSets.flatMap(({ tokenSets }) => tokenSets), ...tokenSetsAlwaysOn],
   }));
+
+  console.log(result.map((theme) => `* ${theme.name}`).join('\n'));
+
   return result;
 };
 
 if (import.meta.main) {
   const tokens = await readTokensFile();
-  LOG(`Token file ${TOKENS_FILE} successfully parsed as JSON`);
 
-  const { tokenSetsAlwaysOn, tokenSetsTable, tokenSetNamesAlwaysOn } = readThemeGroups(tokens.$themes, IGNORE);
-  LOG(
-    `Found ${Object.keys(tokenSetsAlwaysOn).length} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`,
-  );
-  LOG(`Generating ${debugInfo(tokenSetsTable)} themes`);
+  const { tokenSetsAlwaysOn, tokenSetsTable } = readThemeGroups(tokens.$themes, IGNORE);
 
   tokenSetsAlwaysOn.push('common/viewport/max');
   const tokenSetSets = flattenMatrix(tokenSetsTable, tokenSetsAlwaysOn);
-  LOG(tokenSetSets.map((theme) => `* ${theme.name}`).join('\n'));
 
   if (!existsSync('./src/generated')) {
     mkdirSync('./src/generated', { recursive: true });
