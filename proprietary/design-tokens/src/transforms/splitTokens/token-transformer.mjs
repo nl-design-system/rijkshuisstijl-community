@@ -68,7 +68,10 @@ export const readThemeGroups = (themeGroups, ignoreList = new Set()) => {
     }
   }
 
-  console.log(`Found ${tokenSetNamesAlwaysOn.length} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`);
+  if (tokenSetNamesAlwaysOn.length)
+    console.log(
+      `Found ${tokenSetNamesAlwaysOn.length} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`,
+    );
   console.log(`Generating ${debugInfo(tokenSetsTable)} themes`);
 
   return { tokenSetsAlwaysOn, tokenSetsTable };
