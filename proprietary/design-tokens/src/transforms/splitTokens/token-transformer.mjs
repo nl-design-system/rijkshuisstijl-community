@@ -38,11 +38,21 @@ const flattenTokenSetSets = (tokenSetsObject) =>
 const normaliseTokenSetName = (tokenSetName) => tokenSetName.toLowerCase().replaceAll(/\s+/g, '-');
 
 /**
+ *
  * Makes a sorter function to be given to Array.sort, to sort an array (of strings in this case) according to another,
  * pre-sorted, array
+ *
  */
 const accordingTo = (arrayToSortBy) => (a, b) => arrayToSortBy.indexOf(a) - arrayToSortBy.indexOf(b);
 
+/**
+ *
+ * Creates a table of every possible combination choices
+ * eg. pass in an array of arrays, each entry representing a choice group:
+ * cartesian(['blauw', 'groen', 'oranje'], ['groot', 'klein'])
+ * outputs [ ['blauw', 'groot'], ['blauw', 'klein'], ['groen', 'groot'], ['groen', 'klein'].... ]
+ *
+ */
 export const cartesian = (...groups) =>
   groups.reduce(
     (combinations, group) =>
