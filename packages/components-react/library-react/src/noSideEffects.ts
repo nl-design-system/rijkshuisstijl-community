@@ -51,7 +51,7 @@ export {
   type LanguageNavigationTriggerProps,
 } from './LanguageNavigation';
 export * from '@rijkshuisstijl-community/link-react/no-side-effects';
-export * from './LinkButton';
+export * from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 export * from './LinkList';
 export * from './LinkListCard';
 export * from './Listbox';
