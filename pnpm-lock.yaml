@@ -4660,6 +4660,9 @@ importers:
 
   packages/components-react/link-list-card-react:
     dependencies:
+      '@rijkshuisstijl-community/heading-react':
+        specifier: workspace:*
+        version: link:../heading-react
       '@rijkshuisstijl-community/link-list-card-css':
         specifier: workspace:*
         version: link:../../components-css/link-list-card-css
