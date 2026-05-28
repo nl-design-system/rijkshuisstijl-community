@@ -18,14 +18,16 @@ const readTokensFile = async () => {
 };
 
 const debugInfo = (tokenSetsTable) => {
-  const debugData = Object.entries(tokenSetsTable).reduce(
-    (acc, [themeGroupName, choices]) => ({
-      product: acc.product * Object.keys(choices).length,
-      nums: [...acc.nums, `${Object.keys(choices).length} ${themeGroupName}`],
-    }),
-    { product: 1, nums: [] },
+  const groups = Object.fromEntries(
+    tokenSetsTable.map((option) => [
+      option.group,
+      tokenSetsTable.filter((entry) => entry.group === option.group).length,
+    ]),
   );
-  return `${debugData.nums.join(' x ')} = ${debugData.product}`;
+  const total = Object.values(groups).reduce((acc, val) => acc * val, 1);
+  return `${Object.entries(groups)
+    .map(([key, value]) => `${value} ${key}`)
+    .join(' x ')} = ${total}`;
 };
 
 const isEnabled = (str) => str === 'enabled' || str === 'source';
