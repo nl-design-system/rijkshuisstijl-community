@@ -1,0 +1,40 @@
+/**
+ * Page-level styling for the Content / Artikel example page (issue #2624).
+ * Composes existing RHC components; no component overrides.
+ * The "Colored Block" call-to-action does not exist as a component yet,
+ * so it is composed here from a tinted surface + existing components.
+ */
+
+.rhc-content-artikel-cta {
+  background-color: var(--rhc-color-primary-50);
+  border-radius: var(--rhc-rounded-corner-md-border-radius, var(--rhc-border-radius-md));
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-space-xl);
+  padding-block-end: var(--rhc-space-2xl);
+  padding-block-start: var(--rhc-space-2xl);
+  padding-inline-end: var(--rhc-space-2xl);
+  padding-inline-start: var(--rhc-space-2xl);
+}
+
+/**
+ * Mimic the non-existing Card Group: a responsive grid for the
+ * "Ervaringsverhalen" cards (1 column, 2 from 768px, 3 from 1024px).
+ */
+.rhc-content-artikel-card-group {
+  display: grid;
+  gap: var(--rhc-space-xl);
+  grid-template-columns: 1fr;
+}
+
+@media (width > 768px) {
+  .rhc-content-artikel-card-group {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (width > 1024px) {
+  .rhc-content-artikel-card-group {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
