@@ -38,10 +38,7 @@ Vervolgens kun je de componenten in je HTML gebruiken:
       customElements.define('rhc-button', ButtonWebComponent);
     </script>
     <!-- design tokens importeren -->
-    <link
-      rel="stylesheet"
-      href="node_modules/@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css"
-    />
+    <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/design-tokens/dist/groen/index.css" />
     <!-- css importeren -->
     <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/components-css/dist/index.css" />
   </head>
@@ -64,7 +61,7 @@ pakket, en omring het deel van je applicatie waar je het thema wilt toepassen me
 #### Thema wijzigen
 
 Om een ander thema toe te passen moet je het importeren van `import '@rijkshuisstijl-community/design-tokens/dist/{thema}/index.css';` en de class aanpassen naar het desbetreffende thema.
-Zie het volgende voorbeeld om het uitvoerend-groen thema toe te passen:
+Zie het volgende voorbeeld om het thema "groen" toe te passen:
 
 ```html
 <!DOCTYPE html>
@@ -77,16 +74,13 @@ Zie het volgende voorbeeld om het uitvoerend-groen thema toe te passen:
       customElements.define('rhc-button', ButtonWebComponent);
     </script>
     <!-- design tokens importeren -->
-    <link
-      rel="stylesheet"
-      href="node_modules/@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css"
-    />
+    <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/design-tokens/dist/groen/index.css" />
     <!-- css importeren -->
     <link rel="stylesheet" href="node_modules/@rijkshuisstijl-community/components-css/dist/index.css" />
   </head>
   <body>
     <!--geef alle thema tokens mee aan child components voor styling-->
-    <div class="uitvoerend-groen">
+    <div class="groen">
       <rhc-button>Click Here!</rhc-button>
     </div>
   </body>
