@@ -37,7 +37,7 @@ export * from './FormFieldTextarea';
 export * from './FormSummary';
 export * from '@rijkshuisstijl-community/heading-react/no-side-effects';
 export * from '@rijkshuisstijl-community/heading-group-react/no-side-effects';
-export * from './Hero';
+export * from '@rijkshuisstijl-community/hero-react/no-side-effects';
 export * from '@rijkshuisstijl-community/icon-react/no-side-effects';
 export * from '@rijkshuisstijl-community/image-react/no-side-effects';
 export {
@@ -51,7 +51,7 @@ export {
   type LanguageNavigationTriggerProps,
 } from '@rijkshuisstijl-community/language-navigation-react/no-side-effects';
 export * from '@rijkshuisstijl-community/link-react/no-side-effects';
-export * from './LinkButton';
+export * from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 export * from './LinkList';
 export * from './LinkListCard';
 export * from './Listbox';
@@ -70,7 +70,8 @@ export * from './PageLayout';
 export * from './PageNumberNavigation';
 export * from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 export * from './PreHeading';
-export * from './Radio';
+export * from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
+export * from '@rijkshuisstijl-community/radio-react/no-side-effects';
 export * from './RadioGroup';
 export * from '@rijkshuisstijl-community/root-react/no-side-effects';
 export * from '@rijkshuisstijl-community/rounded-corner-react/no-side-effects';
