@@ -50,17 +50,15 @@ const cartesian = (...a) => a.reduce((a, b) => a.flatMap((d) => b.map((e) => [d,
  *
  */
 export const readThemeGroups = (themeGroups, ignoreList = new Set()) => {
-  let tokenSetsAlwaysOn = [];
-  let tokenSetNamesAlwaysOn = [];
-  let numTokenSetNamesAlwaysOn = 0;
-  let tokenSetsTable = [];
+  const tokenSetsAlwaysOn = [];
+  const tokenSetNamesAlwaysOn = [];
+  const tokenSetsTable = [];
   for (const themeGroup of themeGroups) {
     if (ignoreList.has(themeGroup.group)) continue;
 
     if (themeGroup.name === ALWAYS_ON) {
-      tokenSetsAlwaysOn = [...tokenSetsAlwaysOn, ...flattenTokenSetSets(themeGroup.selectedTokenSets)];
+      tokenSetsAlwaysOn.push(...flattenTokenSetSets(themeGroup.selectedTokenSets));
       tokenSetNamesAlwaysOn.push(themeGroup.group);
-      numTokenSetNamesAlwaysOn++;
     } else {
       tokenSetsTable.push({
         group: normaliseTokenSetName(themeGroup.group),
@@ -70,7 +68,7 @@ export const readThemeGroups = (themeGroups, ignoreList = new Set()) => {
     }
   }
 
-  console.log(`Found ${numTokenSetNamesAlwaysOn} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`);
+  console.log(`Found ${tokenSetNamesAlwaysOn.length} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`);
   console.log(`Generating ${debugInfo(tokenSetsTable)} themes`);
 
   return { tokenSetsAlwaysOn, tokenSetsTable };
