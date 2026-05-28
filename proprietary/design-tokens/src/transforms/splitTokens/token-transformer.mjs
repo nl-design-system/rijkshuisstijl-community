@@ -37,7 +37,11 @@ const flattenTokenSetSets = (tokenSetsObject) =>
 
 const normaliseTokenSetName = (tokenSetName) => tokenSetName.toLowerCase().replaceAll(/\s+/g, '-');
 
-const accordingTo = (list) => (a, b) => list.indexOf(a) - list.indexOf(b);
+/**
+ * Makes a sorter function to be given to Array.sort, to sort an array (of strings in this case) according to another,
+ * pre-sorted, array
+ */
+const accordingTo = (arrayToSortBy) => (a, b) => arrayToSortBy.indexOf(a) - arrayToSortBy.indexOf(b);
 
 const cartesian = (...a) => a.reduce((a, b) => a.flatMap((d) => b.map((e) => [d, e].flat())), [[]]);
 
