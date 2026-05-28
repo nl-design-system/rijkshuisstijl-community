@@ -1,10 +1,16 @@
 import '@nl-rvo/assets/fonts/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-robijnrood/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-paars/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-oranje/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
-import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-hemelblauw/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/lintblauw/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/robijnrood/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/paars/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/oranje/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/groen/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/hemelblauw/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/lintblauw-information-dense/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/robijnrood-information-dense/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/paars-information-dense/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/oranje-information-dense/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/groen-information-dense/index.css';
+import '@rijkshuisstijl-community/design-tokens/dist/hemelblauw-information-dense/index.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Body, PageLayout, Paragraph, Root } from '@rijkshuisstijl-community/components-react';
@@ -20,14 +26,21 @@ const preview: Preview = {
   decorators: [
     withThemeByClassName({
       themes: {
-        'Kern - Lintblauw': `rhc-theme rhc-theme--fluid`,
-        'Uitvoerend - Groen': `uitvoerend-groen uitvoerend-groen--fluid`,
-        'Uitvoerend - Hemelblauw': `uitvoerend-hemelblauw uitvoerend-hemelblauw--fluid`,
-        'Uitvoerend - Oranje': `uitvoerend-oranje uitvoerend-oranje--fluid`,
-        'Uitvoerend - Paars': `uitvoerend-paars uitvoerend-paars--fluid`,
-        'Uitvoerend - Robijn Rood': `uitvoerend-robijnrood uitvoerend-robijnrood--fluid`,
+        Lintblauw: 'lintblauw lintblauw--fluid',
+        Groen: 'groen groen--fluid',
+        Hemelblauw: 'hemelblauw hemelblauw--fluid',
+        Oranje: 'oranje oranje--fluid',
+        Paars: 'paars paars--fluid',
+        Robijnrood: 'robijnrood robijnrood--fluid',
+
+        'Lintblauw (information dense)': 'lintblauw-information-dense lintblauw--fluid',
+        'Groen (information dense)': 'groen-information-dense groen--fluid',
+        'Hemelblauw (information dense)': 'hemelblauw-information-dense hemelblauw--fluid',
+        'Oranje (information dense)': 'oranje-information-dense oranje--fluid',
+        'Paars (information dense)': 'paars-information-dense paars--fluid',
+        'Robijnrood (information dense)': 'robijnrood-information-dense robijnrood--fluid',
       },
-      defaultTheme: 'Kern - Lintblauw',
+      defaultTheme: 'Lintblauw',
     }),
     (Story, options) => {
       return options.parameters['isPage'] ? (

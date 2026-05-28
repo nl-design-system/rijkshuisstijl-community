@@ -41,10 +41,10 @@ pakket, en omring het deel van je applicatie waar je het thema wilt toepassen me
 #### Thema wijzigen
 
 Om een ander thema toe te passen moet je het importeren van `import '@rijkshuisstijl-community/design-tokens/dist/{thema}/index.css';` en de class aanpassen naar het desbetreffende thema.
-Zie het volgende voorbeeld om het uitvoerend-groen thema toe te passen:
+Zie het volgende voorbeeld om het thema "groen" toe te passen:
 
 ```scss
-@import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css'; // design tokens importeren
+@import '@rijkshuisstijl-community/design-tokens/dist/groen/index.css'; // design tokens importeren
 @import '@rijkshuisstijl-community/components-css/dist/index.css'; // css importeren
 ```
 

@@ -5,6 +5,8 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    cooldown:
+      default-days: 1
     groups:
       github-actions:
         applies-to: "version-updates"
@@ -14,6 +16,8 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    cooldown:
+      default-days: 1
     groups:
       patch-and-minor-dependencies:
         applies-to: "version-updates"

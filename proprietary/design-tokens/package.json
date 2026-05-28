@@ -20,12 +20,13 @@
   "scripts": {
     "clean": "rimraf dist/ src/generated/",
     "build": "npm-run-all clean build:figma-tokens build:style-dictionary",
-    "build:figma-tokens": "node --experimental-strip-types ./src/transforms/splitTokens/token-transformer.mts",
+    "build:figma-tokens": "node ./src/transforms/splitTokens/token-transformer.mjs",
     "build:style-dictionary": "node --experimental-strip-types ./build.mts",
     "typecheck": "tsc --noEmit",
     "watch": "npm-run-all watch:**",
     "watch:style-dictionary": "chokidar 'src/**/*.tokens.json' 'figma/**/*.tokens.json' --follow-symlinks --command 'pnpm run build' --ignore '/src/generated/'",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:watch": "vitest run --watch"
   },
   "devDependencies": {
     "@tokens-studio/sd-transforms": "2.0.3",
