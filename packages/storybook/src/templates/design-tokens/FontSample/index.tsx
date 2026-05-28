@@ -12,7 +12,7 @@ export const FontSample = ({
 }: PropsWithChildren<
   {
     fontFamily: string;
-    fontWeight: string;
+    fontWeight: number;
     fontSize: string;
     lineHeight: string;
   } & HTMLAttributes<HTMLDivElement>

@@ -1,7 +1,7 @@
+import { Radio } from '@rijkshuisstijl-community/radio-react';
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { Radio } from './Radio';
 import { RadioGroup } from './RadioGroup';
 
 describe('RadioGroup', () => {
