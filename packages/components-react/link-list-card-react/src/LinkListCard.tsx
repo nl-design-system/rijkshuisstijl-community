@@ -6,7 +6,7 @@
 import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react';
 import clsx from 'clsx';
 import { HTMLAttributes, ReactNode, Ref } from 'react';
-import { LinkList } from './LinkList';
+import { LinkList } from '@';
 
 export interface LinkListCardProps extends HTMLAttributes<HTMLDivElement> {
   headingLevel: HeadingLevel;
