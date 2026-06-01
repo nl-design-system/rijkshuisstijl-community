@@ -717,6 +717,9 @@ importers:
       '@rijkshuisstijl-community/link-css':
         specifier: workspace:*
         version: link:../link-css
+      '@rijkshuisstijl-community/listbox-css':
+        specifier: workspace:*
+        version: link:../listbox-css
       '@rijkshuisstijl-community/logo-css':
         specifier: workspace:*
         version: link:../logo-css
@@ -931,6 +934,18 @@ importers:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
+  packages/components-css/listbox-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      '@utrecht/listbox-css':
+        specifier: 2.1.0
+        version: 2.1.0
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
