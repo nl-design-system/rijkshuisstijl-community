@@ -10,7 +10,7 @@ Dit is het Navigation Bar CSS component van het Rijkshuisstijl Community Design 
 ## Installatie
 
 ```bash
-pnpm add @rijkshuisstijl-community/nav-bar-css
+pnpm add @rijkshuisstijl-community/navigation-bar-css
 ```
 
 ## Gebruik
