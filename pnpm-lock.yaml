@@ -720,6 +720,9 @@ importers:
       '@rijkshuisstijl-community/logo-css':
         specifier: workspace:*
         version: link:../logo-css
+      '@rijkshuisstijl-community/number-badge-css':
+        specifier: workspace:*
+        version: link:../number-badge-css
       '@rijkshuisstijl-community/ordered-list-css':
         specifier: workspace:*
         version: link:../ordered-list-css
@@ -937,6 +940,18 @@ importers:
 
   packages/components-css/logo-css:
     devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
+  packages/components-css/number-badge-css:
+    devDependencies:
+      '@nl-design-system-candidate/number-badge-css':
+        specifier: 1.1.5
+        version: 1.1.5
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
