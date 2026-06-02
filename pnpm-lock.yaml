@@ -720,6 +720,9 @@ importers:
       '@rijkshuisstijl-community/logo-css':
         specifier: workspace:*
         version: link:../logo-css
+      '@rijkshuisstijl-community/nav-bar-css':
+        specifier: workspace:*
+        version: link:../nav-bar-css
       '@rijkshuisstijl-community/ordered-list-css':
         specifier: workspace:*
         version: link:../ordered-list-css
@@ -936,6 +939,15 @@ importers:
         version: 3.0.0
 
   packages/components-css/logo-css:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
+  packages/components-css/nav-bar-css:
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
