@@ -60,7 +60,7 @@ export * from './MessageList';
 export * from './MessageListItem';
 export * from './NavBar';
 export * from '@rijkshuisstijl-community/navigation-list-react/no-side-effects';
-export * from './NavigationListItem';
+export * from '@rijkshuisstijl-community/navigation-list-item-react/no-side-effects';
 export * from './NumberBadge';
 export * from '@rijkshuisstijl-community/ordered-list-react/no-side-effects';
 export * from './PageBody';
