@@ -59,7 +59,7 @@ export * from '@rijkshuisstijl-community/logo-react/no-side-effects';
 export * from './MessageList';
 export * from './MessageListItem';
 export * from './NavBar';
-export * from './NavigationList';
+export * from '@rijkshuisstijl-community/navigation-list-react/no-side-effects';
 export * from './NavigationListItem';
 export * from './NumberBadge';
 export * from '@rijkshuisstijl-community/ordered-list-react/no-side-effects';
