@@ -58,7 +58,9 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-themes'),
     getAbsolutePath('storybook-addon-pseudo-states'),
     getAbsolutePath('storybook-addon-tag-badges'),
-    '@whitespace/storybook-addon-html', // uses a CJS export, so we can't use getAbsolutePath here
+    // uses a CJS export, so we can't use getAbsolutePath here
+    '@whitespace/storybook-addon-html',
+    getAbsolutePath('@storybook/addon-vitest'),
   ],
 
   framework: {
