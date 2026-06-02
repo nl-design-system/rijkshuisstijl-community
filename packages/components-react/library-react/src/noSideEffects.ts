@@ -58,7 +58,7 @@ export * from './Listbox';
 export * from '@rijkshuisstijl-community/logo-react/no-side-effects';
 export * from './MessageList';
 export * from './MessageListItem';
-export * from './NavBar';
+export * from '@rijkshuisstijl-community/navigation-bar-react/no-side-effects';
 export * from './NavigationList';
 export * from './NavigationListItem';
 export * from './NumberBadge';
