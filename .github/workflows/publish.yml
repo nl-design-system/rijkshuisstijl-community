@@ -154,13 +154,13 @@ jobs:
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: web-component
-          path: packages/web-component/dist/
+          path: packages/web-components/dist/
 
       - name: "Retain build artifact: twig component package"
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: twig
-          path: packages/twig-component/dist/
+          path: packages/components-twig/dist/
 
   test:
     runs-on: ubuntu-latest
@@ -332,13 +332,13 @@ jobs:
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           name: web-component
-          path: packages/web-component/dist/
+          path: packages/web-components/dist/
 
       - name: "Restore build artifact: twig component"
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           name: twig
-          path: packages/twig-component/dist/
+          path: packages/components-twig/dist/
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
