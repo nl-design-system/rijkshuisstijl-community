@@ -119,9 +119,6 @@ jobs:
       - name: "Continuous Integration: typecheck"
         run: pnpm run --if-present typecheck
 
-      - name: "Continuous Integration: a11y check"
-        run: pnpm run --if-present test-storybook:ci
-
       - name: "Retain build artifact: Storybook"
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
@@ -152,6 +149,18 @@ jobs:
         with:
           name: storybook-angular
           path: packages/storybook-angular/dist/
+
+      - name: "Retain build artifact: web component package"
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: web-component
+          path: packages/web-component/dist/
+
+      - name: "Retain build artifact: twig component package"
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: twig
+          path: packages/twig-component/dist/
 
   test:
     runs-on: ubuntu-latest
@@ -318,6 +327,18 @@ jobs:
         with:
           name: storybook
           path: packages/storybook/dist/
+
+      - name: "Restore build artifact: web component"
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: web-component
+          path: packages/web-component/dist/
+
+      - name: "Restore build artifact: twig component"
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: twig
+          path: packages/twig-component/dist/
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
