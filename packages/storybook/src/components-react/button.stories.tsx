@@ -65,7 +65,9 @@ export const Default: Story = {
 
 export const PrimaryAction: Story = {
   args: {
-    children: 'Label',
+    // DONT MERGE
+    // Visible label, but hidden from the accessibility tree: should be flagged by axe ("button-name").
+    children: <span aria-hidden="true">Label</span>,
     appearance: 'primary-action-button',
   },
 };

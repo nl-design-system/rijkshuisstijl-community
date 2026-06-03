@@ -57,6 +57,7 @@ const preview: Preview = {
   ],
 
   parameters: {
+    a11y: { test: 'error' },
     html: {
       transform: formatHtml,
     },

@@ -52,6 +52,7 @@ const config: StorybookConfig = {
 
   addons: [
     getAbsolutePath('@chromatic-com/storybook'),
+    getAbsolutePath('@storybook/addon-vitest'),
     getAbsolutePath('@storybook/addon-a11y'),
     getAbsolutePath('@storybook/addon-docs'),
     getAbsolutePath('@storybook/addon-links'),
@@ -60,7 +61,6 @@ const config: StorybookConfig = {
     getAbsolutePath('storybook-addon-tag-badges'),
     // uses a CJS export, so we can't use getAbsolutePath here
     '@whitespace/storybook-addon-html',
-    getAbsolutePath('@storybook/addon-vitest'),
   ],
 
   framework: {
