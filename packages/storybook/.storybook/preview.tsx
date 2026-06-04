@@ -15,8 +15,7 @@ import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
 import { Body, PageLayout, Paragraph, Root } from '@rijkshuisstijl-community/components-react';
 import { formatHtml } from '@rijkshuisstijl-community/storybook-tooling/formatHtml';
-import { Controls, Description, Primary, Stories } from '@storybook/addon-docs/blocks';
-import { useOf } from '@storybook/addon-docs/blocks';
+import { Controls, Description, Primary, Stories, useOf } from '@storybook/addon-docs/blocks';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import { Preview } from '@storybook/react-vite';
 import { Fragment } from 'react';
@@ -57,6 +56,7 @@ const preview: Preview = {
   ],
 
   parameters: {
+    a11y: { test: 'error' },
     html: {
       transform: formatHtml,
     },
