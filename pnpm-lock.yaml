@@ -4676,8 +4676,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
       '@vitest/coverage-v8':
-        specifier: 3.2.4
-        version: 3.2.4(vitest@3.2.4(@types/debug@4.1.13)(@types/node@25.5.0)(jiti@2.6.1)(jsdom@26.1.0)(less@4.6.4)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
+        specifier: 4.1.8
+        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
     devDependencies:
       '@babel/core':
         specifier: 7.29.0
@@ -4761,8 +4761,8 @@ importers:
         specifier: 7.3.1
         version: 7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
       vitest:
-        specifier: 3.2.4
-        version: 3.2.4(@types/debug@4.1.13)(@types/node@25.5.0)(jiti@2.6.1)(jsdom@26.1.0)(less@4.6.4)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3)
+        specifier: 4.1.8
+        version: 4.1.8(@types/node@25.5.0)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(msw@2.7.3(@types/node@25.5.0)(typescript@5.9.3))(vite@7.3.1(@types/node@25.5.0)(jiti@2.6.1)(less@4.6.4)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))
 
   packages/components-react/link-react:
     dependencies:
@@ -20638,7 +20638,7 @@ snapshots:
   '@babel/helper-member-expression-to-functions@7.28.5':
     dependencies:
       '@babel/traverse': 7.29.0
-      '@babel/types': 7.29.0
+      '@babel/types': 7.29.7
     transitivePeerDependencies:
       - supports-color
 
@@ -20660,7 +20660,7 @@ snapshots:
 
   '@babel/helper-optimise-call-expression@7.27.1':
     dependencies:
-      '@babel/types': 7.29.0
+      '@babel/types': 7.29.7
 
   '@babel/helper-plugin-utils@7.28.6': {}
 
@@ -20685,7 +20685,7 @@ snapshots:
   '@babel/helper-skip-transparent-expression-wrappers@7.27.1':
     dependencies:
       '@babel/traverse': 7.29.0
-      '@babel/types': 7.29.0
+      '@babel/types': 7.29.7
     transitivePeerDependencies:
       - supports-color
 
@@ -20707,7 +20707,7 @@ snapshots:
     dependencies:
       '@babel/template': 7.28.6
       '@babel/traverse': 7.29.0
-      '@babel/types': 7.29.0
+      '@babel/types': 7.29.7
     transitivePeerDependencies:
       - supports-color
 
@@ -21757,7 +21757,7 @@ snapshots:
     dependencies:
       '@simple-libs/child-process-utils': 1.0.2
       '@simple-libs/stream-utils': 1.2.0
-      semver: 7.7.4
+      semver: 7.8.1
     optionalDependencies:
       conventional-commits-filter: 5.0.0
       conventional-commits-parser: 6.3.0
@@ -23339,7 +23339,7 @@ snapshots:
 
   '@npmcli/fs@5.0.0':
     dependencies:
-      semver: 7.7.4
+      semver: 7.8.1
 
   '@npmcli/git@4.1.0':
     dependencies:
@@ -23409,7 +23409,7 @@ snapshots:
       json-parse-even-better-errors: 5.0.0
       pacote: 21.5.0
       proc-log: 6.1.0
-      semver: 7.7.4
+      semver: 7.8.1
     transitivePeerDependencies:
       - supports-color
 
@@ -24925,7 +24925,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 8.57.2
       debug: 4.4.3
       minimatch: 10.2.5
-      semver: 7.7.4
+      semver: 7.8.1
       tinyglobby: 0.2.17
       ts-api-utils: 2.5.0(typescript@5.9.3)
       typescript: 5.9.3
@@ -26572,7 +26572,7 @@ snapshots:
 
   '@vue/compiler-core@3.5.13':
     dependencies:
-      '@babel/parser': 7.29.2
+      '@babel/parser': 7.29.7
       '@vue/shared': 3.5.13
       entities: 4.5.0
       estree-walker: 2.0.2
@@ -27825,7 +27825,7 @@ snapshots:
       conventional-commits-filter: 5.0.0
       handlebars: 4.7.9
       meow: 13.2.0
-      semver: 7.7.4
+      semver: 7.8.1
 
   conventional-changelog@7.2.0(conventional-commits-filter@5.0.0):
     dependencies:
@@ -27993,7 +27993,7 @@ snapshots:
       postcss-modules-scope: 3.2.1(postcss@8.5.8)
       postcss-modules-values: 4.0.0(postcss@8.5.8)
       postcss-value-parser: 4.2.0
-      semver: 7.7.4
+      semver: 7.8.1
     optionalDependencies:
       webpack: 5.105.4(esbuild@0.27.4)
 
@@ -29542,7 +29542,7 @@ snapshots:
       minimatch: 3.1.5
       node-abort-controller: 3.1.1
       schema-utils: 3.3.0
-      semver: 7.7.4
+      semver: 7.8.1
       tapable: 2.3.2
       typescript: 5.9.3
       webpack: 5.105.4(esbuild@0.27.4)
@@ -30289,7 +30289,7 @@ snapshots:
 
   is-bun-module@2.0.0:
     dependencies:
-      semver: 7.7.4
+      semver: 7.8.1
 
   is-callable@1.2.7: {}
 
@@ -32519,7 +32519,7 @@ snapshots:
 
   npm-install-checks@8.0.0:
     dependencies:
-      semver: 7.7.4
+      semver: 7.8.1
 
   npm-normalize-package-bin@3.0.1: {}
 
