@@ -11,4 +11,7 @@
   --nl-heading-level-4-color: var(--_utrecht-alert-color, var(--utrecht-alert-color));
   --nl-heading-level-5-color: var(--_utrecht-alert-color, var(--utrecht-alert-color));
   --nl-paragraph-color: var(--_utrecht-alert-color, var(--utrecht-alert-color));
+
+  // Utrecht sets border-width on all four sides; override only the inline-start width here (base stays 0) so a variant can carry an accent border on the start side.
+  border-inline-start-width: var(--utrecht-alert-border-inline-start-width);
 }
