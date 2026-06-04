@@ -49,7 +49,7 @@ export {
   type LanguageNavigationRootProps,
   Trigger as LanguageNavigationTrigger,
   type LanguageNavigationTriggerProps,
-} from './LanguageNavigation';
+} from '@rijkshuisstijl-community/language-navigation-react/no-side-effects';
 export * from '@rijkshuisstijl-community/link-react/no-side-effects';
 export * from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 export * from './LinkList';
@@ -62,7 +62,7 @@ export * from './NavBar';
 export * from './NavigationList';
 export * from './NavigationListItem';
 export * from './NumberBadge';
-export * from './OrderedList';
+export * from '@rijkshuisstijl-community/ordered-list-react/no-side-effects';
 export * from './PageBody';
 export * from './PageContent';
 export * from './PageHeader';
@@ -88,6 +88,6 @@ export * from './TableHeaderCell';
 export * from '@rijkshuisstijl-community/text-input-react/no-side-effects';
 export * from '@rijkshuisstijl-community/textarea-react/no-side-effects';
 export * from '@rijkshuisstijl-community/toggletip-react/no-side-effects';
-export * from './UnorderedList';
-export * from './UnorderedListItem';
+export * from '@rijkshuisstijl-community/unordered-list-react/no-side-effects';
+export * from '@rijkshuisstijl-community/unordered-list-item-react/no-side-effects';
 export * from '@rijkshuisstijl-community/visually-hidden-react/no-side-effects';
