@@ -3754,7 +3754,7 @@
         "button": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.bg-document}"
+            "$value": "{rhc.color.transparent}"
           },
           "border-color": {
             "$type": "color",
@@ -3770,7 +3770,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.foreground.default}"
+            "$value": "{rhc.color.core.500}"
           },
           "gap": {
             "$type": "dimension",
@@ -3801,7 +3801,7 @@
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.cool-grey.100}"
+              "$value": "{rhc.color.core.100}"
             },
             "border-color": {
               "$type": "color",
@@ -3809,13 +3809,13 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.foreground.default}"
+              "$value": "{rhc.color.core.active}"
             }
           },
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.cool-grey.50}"
+              "$value": "{rhc.color.core.50}"
             },
             "border-color": {
               "$type": "color",
@@ -3823,13 +3823,13 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.foreground.default}"
+              "$value": "{rhc.color.core.hover}"
             }
           },
           "focus-visible": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.50}"
+              "$value": "{rhc.color.transparent}"
             },
             "border-color": {
               "$type": "color",
@@ -3841,19 +3841,19 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.foreground.default}"
+              "$value": "{rhc.color.core.500}"
             }
           }
         },
         "section": {
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.border.subtle}"
+            "$value": "{rhc.color.core.300}"
           },
           "hover": {
             "border-color": {
               "$type": "color",
-              "$value": "{rhc.color.border.subtle}"
+              "$value": "{rhc.color.core.hover}"
             }
           },
           "border-width": {
