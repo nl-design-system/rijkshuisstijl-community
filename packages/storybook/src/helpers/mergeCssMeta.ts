@@ -18,6 +18,7 @@ export const mergeCssMeta = <Base extends Meta<any>, Overwrite extends Meta<any>
   // configure generic metadata overwrite for CSS components
   const genericMeta: Meta<any> = {
     parameters: {
+      a11y: { test: 'todo' }, // disable duplicate a11y errors as these are reexports of react components
       chromatic: { disableSnapshot: true }, // as these are reexports of react components
       docs: {
         codePanel: false, // hide the react code panel by default
