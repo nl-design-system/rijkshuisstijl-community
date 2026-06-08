@@ -54,7 +54,7 @@ export * from '@rijkshuisstijl-community/link-react/no-side-effects';
 export * from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 export * from '@rijkshuisstijl-community/link-list-react/no-side-effects';
 export * from '@rijkshuisstijl-community/link-list-card-react/no-side-effects';
-export * from './Listbox';
+export * from '@rijkshuisstijl-community/listbox-react/no-side-effects';
 export * from '@rijkshuisstijl-community/logo-react/no-side-effects';
 export * from './MessageList';
 export * from './MessageListItem';
