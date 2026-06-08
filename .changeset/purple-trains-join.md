@@ -1,7 +1,0 @@
----
-'@rijkshuisstijl-community/navigation-list-react': major
-'@rijkshuisstijl-community/navigation-list-css': major
-'@rijkshuisstijl-community/navigation-list-item-react': major
----
-
-We hebben individuele packages aangemaakt om meer controle te geven over dependency maintenance en versie beheer duidelijker per component te omschrijven.

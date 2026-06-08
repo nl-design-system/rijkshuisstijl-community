@@ -1,5 +1,18 @@
 # @rijkshuisstijl-community/components-twig
 
+## 3.2.0
+
+### Minor Changes
+
+- c053fef: Added skiplink
+
+### Patch Changes
+
+- c414601: Ensure package is published with provenance
+- Updated dependencies [c414601]
+- Updated dependencies [e9dc77c]
+  - @rijkshuisstijl-community/components-css@17.1.0
+
 ## 3.1.7
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/components-angular
 
+## 11.1.0
+
+### Minor Changes
+
+- fbe44a2: Add `value` input to FormFieldTextInput component with default empty string.
+
+### Patch Changes
+
+- c414601: Ensure package is published with provenance
+
 ## 11.0.1
 
 ### Patch Changes

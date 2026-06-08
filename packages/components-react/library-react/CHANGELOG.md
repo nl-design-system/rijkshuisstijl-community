@@ -1,5 +1,116 @@
 # @rijkshuisstijl-community/components-react
 
+## 15.1.0
+
+### Minor Changes
+
+- c9e30de: Added an option to import the components separate from the css.
+
+### Patch Changes
+
+- c414601: Ensure package is published with provenance
+- 02786d9: security patch
+- Updated dependencies [f6b0afd]
+- Updated dependencies [a95bbae]
+- Updated dependencies [751ef52]
+- Updated dependencies [4ba4cf3]
+- Updated dependencies [c9f1aef]
+- Updated dependencies [8739bb6]
+- Updated dependencies [c414601]
+- Updated dependencies [fd8ec62]
+- Updated dependencies [83c69fc]
+- Updated dependencies [79e611b]
+- Updated dependencies [786a5e5]
+- Updated dependencies [02786d9]
+- Updated dependencies [d47e1d2]
+- Updated dependencies [06753fc]
+- Updated dependencies [6e04b8c]
+- Updated dependencies [52eeadc]
+- Updated dependencies [fcecdbc]
+- Updated dependencies [9305b36]
+- Updated dependencies [d23a29e]
+- Updated dependencies [317ebfd]
+- Updated dependencies [c37bb2e]
+- Updated dependencies [f756388]
+- Updated dependencies [21112d5]
+- Updated dependencies [748c6ea]
+- Updated dependencies [1958cf3]
+- Updated dependencies [0ef5bc4]
+- Updated dependencies [9b67b3a]
+- Updated dependencies [de35f24]
+- Updated dependencies [2abc2f7]
+- Updated dependencies [20fecee]
+- Updated dependencies [6fd5cb1]
+- Updated dependencies [41b86ef]
+- Updated dependencies [0dbc2d1]
+- Updated dependencies [f766ac0]
+- Updated dependencies [c9e30de]
+- Updated dependencies [e56376c]
+- Updated dependencies [83c1415]
+- Updated dependencies [6e4ab18]
+- Updated dependencies [1ec5593]
+- Updated dependencies [90fe910]
+- Updated dependencies [41dabdc]
+- Updated dependencies [655cc62]
+  - @rijkshuisstijl-community/listbox-react@1.0.0
+  - @rijkshuisstijl-community/message-list-react@1.0.0
+  - @rijkshuisstijl-community/heading-react@1.0.0
+  - @rijkshuisstijl-community/heading-group-react@1.0.0
+  - @rijkshuisstijl-community/page-number-navigation-react@1.0.0
+  - @rijkshuisstijl-community/textarea-react@1.0.0
+  - @rijkshuisstijl-community/hero-react@1.0.0
+  - @rijkshuisstijl-community/data-summary-item-react@1.0.0
+  - @rijkshuisstijl-community/breadcrumb-nav-react@0.1.0
+  - @rijkshuisstijl-community/checkbox-group-react@1.1.0
+  - @rijkshuisstijl-community/action-group-react@1.1.0
+  - @rijkshuisstijl-community/card-as-link-react@1.1.0
+  - @rijkshuisstijl-community/data-summary-react@1.0.0
+  - @rijkshuisstijl-community/blockquote-react@1.1.0
+  - @rijkshuisstijl-community/accordion-react@3.1.0
+  - @rijkshuisstijl-community/dot-badge-react@1.1.0
+  - @rijkshuisstijl-community/paragraph-react@2.1.0
+  - @rijkshuisstijl-community/separator-react@1.1.0
+  - @rijkshuisstijl-community/checkbox-react@1.1.0
+  - @rijkshuisstijl-community/article-react@2.1.0
+  - @rijkshuisstijl-community/button-react@1.1.0
+  - @rijkshuisstijl-community/figure-react@1.1.0
+  - @rijkshuisstijl-community/alert-react@3.1.0
+  - @rijkshuisstijl-community/image-react@2.1.0
+  - @rijkshuisstijl-community/card-react@1.1.0
+  - @rijkshuisstijl-community/icon-react@3.1.0
+  - @rijkshuisstijl-community/link-react@1.1.0
+  - @rijkshuisstijl-community/body-react@1.0.0
+  - @rijkshuisstijl-community/text-input-react@1.0.0
+  - @rijkshuisstijl-community/ordered-list-react@1.0.0
+  - @rijkshuisstijl-community/column-layout-react@1.0.0
+  - @rijkshuisstijl-community/data-badge-button-react@1.0.0
+  - @rijkshuisstijl-community/code-input-group-react@1.0.0
+  - @rijkshuisstijl-community/visually-hidden-react@1.0.0
+  - @rijkshuisstijl-community/rounded-corner-react@1.0.0
+  - @rijkshuisstijl-community/link-button-react@1.0.0
+  - @rijkshuisstijl-community/code-input-react@1.0.0
+  - @rijkshuisstijl-community/file-input-react@2.0.0
+  - @rijkshuisstijl-community/skip-link-react@1.0.0
+  - @rijkshuisstijl-community/toggletip-react@1.0.0
+  - @rijkshuisstijl-community/fieldset-react@1.0.0
+  - @rijkshuisstijl-community/side-nav-react@1.0.0
+  - @rijkshuisstijl-community/drawer-react@1.0.0
+  - @rijkshuisstijl-community/footer-react@1.0.0
+  - @rijkshuisstijl-community/radio-react@1.0.0
+  - @rijkshuisstijl-community/file-react@1.0.0
+  - @rijkshuisstijl-community/logo-react@1.0.0
+  - @rijkshuisstijl-community/root-react@1.0.0
+  - @rijkshuisstijl-community/link-list-card-react@1.0.0
+  - @rijkshuisstijl-community/number-badge-react@1.0.0
+  - @rijkshuisstijl-community/link-list-react@1.0.0
+  - @rijkshuisstijl-community/navigation-list-react@1.0.0
+  - @rijkshuisstijl-community/navigation-list-item-react@1.0.0
+  - @rijkshuisstijl-community/language-navigation-react@1.0.0
+  - @rijkshuisstijl-community/unordered-list-item-react@1.0.0
+  - @rijkshuisstijl-community/unordered-list-react@1.0.0
+  - @rijkshuisstijl-community/navigation-bar-react@1.0.0
+  - @rijkshuisstijl-community/message-list-item-react@0.0.1
+
 ## 15.0.2
 
 ### Patch Changes

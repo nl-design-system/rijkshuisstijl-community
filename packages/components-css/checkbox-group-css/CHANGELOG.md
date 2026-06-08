@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/checkbox-group-css
 
+## 1.0.1
+
+### Patch Changes
+
+- c414601: Ensure package is published with provenance
+
 ## 1.0.0
 
 ### Major Changes
