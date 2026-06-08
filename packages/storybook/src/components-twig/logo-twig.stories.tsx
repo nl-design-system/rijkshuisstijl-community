@@ -1,0 +1,103 @@
+import TwigLogo from '@rijkshuisstijl-community/components-twig/src/Logo.twig';
+import { Icon, Logo, type LogoProps } from '@rijkshuisstijl-community/components-react';
+import {
+  rhcLogoColor,
+  rhcLogoImageBackgroundColor,
+  rhcLogoImageColor,
+} from '@rijkshuisstijl-community/design-tokens/dist';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import { CSSProperties } from 'react';
+import readme from '../components-react/logo.md?raw';
+
+interface LogoCSSProperties extends CSSProperties {
+  '--rhc-logo-color': string;
+  '--rhc-logo-image-background-color': string;
+  '--rhc-logo-image-color': string;
+}
+
+interface LogoStoryArgs extends LogoProps {
+  imageBackgroundColor?: string;
+  imageIconColor?: string;
+  textColor?: string;
+}
+
+const meta = {
+  title: 'Logo',
+  id: 'twig-rhc-logo',
+  component: TwigLogo,
+  args: {
+    organisation: '',
+    subtitle: '',
+    imageBackgroundColor: rhcLogoImageBackgroundColor,
+    imageIconColor: rhcLogoImageColor,
+    textColor: rhcLogoColor,
+  },
+  argTypes: {
+    imageBackgroundColor: {
+      name: '--rhc-logo-image-background-color',
+      control: 'color',
+      description: 'Changes background color of the image',
+      table: {
+        category: 'Design tokens',
+      },
+    },
+    imageIconColor: {
+      name: '--rhc-logo-image-color',
+      control: 'color',
+      description: 'Changes color of the image icon',
+      table: {
+        category: 'Design tokens',
+      },
+    },
+    textColor: {
+      name: '--rhc-logo-color',
+      control: 'color',
+      description: 'Changes text color',
+      table: {
+        category: 'Design tokens',
+      },
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: mergeMarkdown([readme]),
+      },
+    },
+    // TODO: add Figma and NL DesignSystem links
+    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/src/Logo.twig',
+  },
+  render: ({ imageBackgroundColor, textColor, imageIconColor, ...args }: LogoStoryArgs) => (
+    <Logo
+      {...args}
+      style={
+        {
+          '--rhc-logo-color': textColor || rhcLogoColor,
+          '--rhc-logo-image-background-color': imageBackgroundColor || rhcLogoImageBackgroundColor,
+          '--rhc-logo-image-color': imageIconColor || rhcLogoImageColor,
+        } as LogoCSSProperties
+      }
+    >
+      <Icon icon={'nederland-map'} />
+    </Logo>
+  ),
+} satisfies Meta<typeof TwigLogo>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {
+  args: {
+    organisation: 'Voorbeeld organisatie',
+  },
+};
+
+export const WithSubtitle: Story = {
+  args: {
+    organisation: 'Voorbeeld organisatie',
+    subtitle: 'Voorbeeld sub-title',
+  },
+};

@@ -1,0 +1,19 @@
+{%- set classes = [''] -%}
+
+{%- if className  -%}
+  {%- set classes = classes|merge([className]) -%}
+{%- endif -%}
+
+<a href="{{ href }}" {{ attributes.addClass(classes) }}>{{ children }}</a>
+
+<figure {{ attributes.addClass(classes) }}>
+  <div class="rhc-logo__image">
+    <span class="utrecht-icon" role="presentation" aria-hidden="true">
+      {{ logo }}
+    </span>
+  </div>
+  <figcaption class="rhc-logo__caption">
+    <p class="rhc-logo__title">{{ organisation }}</p>
+    <p class="rhc-logo__subtitle">{{ subtitle }}</p>
+  </figcaption>
+</figure>
