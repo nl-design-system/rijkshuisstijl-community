@@ -61,7 +61,7 @@ export * from '@rijkshuisstijl-community/message-list-item-react/no-side-effects
 export * from '@rijkshuisstijl-community/navigation-bar-react/no-side-effects';
 export * from '@rijkshuisstijl-community/navigation-list-react/no-side-effects';
 export * from '@rijkshuisstijl-community/navigation-list-item-react/no-side-effects';
-export * from './NumberBadge';
+export * from '@rijkshuisstijl-community/number-badge-react/no-side-effects';
 export * from '@rijkshuisstijl-community/ordered-list-react/no-side-effects';
 export * from './PageBody';
 export * from './PageContent';
