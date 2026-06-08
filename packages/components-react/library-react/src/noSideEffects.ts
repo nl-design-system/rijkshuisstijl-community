@@ -58,7 +58,7 @@ export * from '@rijkshuisstijl-community/listbox-react/no-side-effects';
 export * from '@rijkshuisstijl-community/logo-react/no-side-effects';
 export * from '@rijkshuisstijl-community/message-list-react/no-side-effects';
 export * from '@rijkshuisstijl-community/message-list-item-react/no-side-effects';
-export * from './NavBar';
+export * from '@rijkshuisstijl-community/navigation-bar-react/no-side-effects';
 export * from '@rijkshuisstijl-community/navigation-list-react/no-side-effects';
 export * from '@rijkshuisstijl-community/navigation-list-item-react/no-side-effects';
 export * from './NumberBadge';
