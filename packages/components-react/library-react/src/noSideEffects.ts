@@ -67,7 +67,7 @@ export * from './PageBody';
 export * from './PageContent';
 export * from './PageHeader';
 export * from './PageLayout';
-export * from './PageNumberNavigation';
+export * from '@rijkshuisstijl-community/page-number-navigation-react/no-side-effects';
 export * from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 export * from './PreHeading';
 export * from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
