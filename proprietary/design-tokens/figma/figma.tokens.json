@@ -2678,12 +2678,16 @@
       "size": {
         "pointer-target": {
           "$type": "dimension",
-          "$value": "3rem"
+          "$value": "48px"
         },
         "icon": {
           "md": {
             "$type": "dimension",
-            "$value": "1.5rem"
+            "$value": "{rhc.text.font-size.md}"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{rhc.text.font-size.lg}"
           }
         },
         "page": {
@@ -2798,12 +2802,26 @@
           "inset-block-start": {
             "min": {
               "$type": "dimension",
-              "$value": "0rem",
+              "$value": "0.125rem",
               "$description": "[figma-only] [temporary – until nl-icon]"
             },
             "max": {
               "$type": "dimension",
-              "$value": "0.188rem",
+              "$value": "0.313rem",
+              "$description": "[figma-only] [temporary – until nl-icon]"
+            }
+          }
+        },
+        "lg": {
+          "inset-block-start": {
+            "min": {
+              "$type": "dimension",
+              "$value": "0.313rem",
+              "$description": "[figma-only] [temporary – until nl-icon]"
+            },
+            "max": {
+              "$type": "dimension",
+              "$value": "0.25rem",
               "$description": "[figma-only] [temporary – until nl-icon]"
             }
           }
@@ -2886,12 +2904,26 @@
           "inset-block-start": {
             "min": {
               "$type": "dimension",
-              "$value": "0rem",
+              "$value": "0.125rem",
               "$description": "[figma-only] [temporary – until nl-icon]"
             },
             "max": {
               "$type": "dimension",
-              "$value": "0rem",
+              "$value": "0.125rem",
+              "$description": "[figma-only] [temporary – until nl-icon]"
+            }
+          }
+        },
+        "lg": {
+          "inset-block-start": {
+            "min": {
+              "$type": "dimension",
+              "$value": "0.313rem",
+              "$description": "[figma-only] [temporary – until nl-icon]"
+            },
+            "max": {
+              "$type": "dimension",
+              "$value": "0.313rem",
               "$description": "[figma-only] [temporary – until nl-icon]"
             }
           }
@@ -2933,7 +2965,14 @@
         "md": {
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "0rem",
+            "$value": "0.125rem",
+            "$description": "[figma-only] [temporary – until nl-icon]"
+          }
+        },
+        "lg": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0.313rem",
             "$description": "[figma-only] [temporary – until nl-icon]"
           }
         }
@@ -3020,7 +3059,14 @@
         "md": {
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "0.188rem",
+            "$value": "0.313rem",
+            "$description": "[figma-only] [temporary – until nl-icon]"
+          }
+        },
+        "lg": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0.25rem",
             "$description": "[figma-only] [temporary – until nl-icon]"
           }
         }
@@ -4028,11 +4074,11 @@
           },
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.icon.md.inset-block-start}"
+            "$value": "{rhc.icon.lg.inset-block-start}"
           },
           "size": {
             "$type": "dimension",
-            "$value": "{rhc.size.icon.md}"
+            "$value": "{rhc.size.icon.lg}"
           },
           "error": {
             "color": {
