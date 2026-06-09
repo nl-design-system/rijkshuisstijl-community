@@ -1,5 +1,16 @@
 # @rijkshuisstijl-community/web-components
 
+## 6.0.3
+
+### Patch Changes
+
+- c414601: Ensure package is published with provenance
+- Updated dependencies [c414601]
+- Updated dependencies [de35f24]
+  - @rijkshuisstijl-community/accordion-css@2.1.0
+  - @rijkshuisstijl-community/article-css@2.1.0
+  - @rijkshuisstijl-community/alert-css@4.1.0
+
 ## 6.0.2
 
 ### Patch Changes
