@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/breadcrumb-nav-react
 
+## 0.1.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+
 ## 0.1.0
 
 ### Minor Changes

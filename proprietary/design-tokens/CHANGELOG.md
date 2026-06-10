@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 16.0.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+
 ## 16.0.0
 
 ### Major Changes

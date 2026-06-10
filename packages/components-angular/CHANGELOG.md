@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-angular
 
+## 11.1.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+
 ## 11.1.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/action-group-react
 
+## 1.1.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+
 ## 1.1.0
 
 ### Minor Changes

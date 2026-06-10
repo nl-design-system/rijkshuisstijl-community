@@ -1,5 +1,14 @@
 # @rijkshuisstijl-community/link-list-card-react
 
+## 1.0.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+- Updated dependencies [e41c59f]
+  - @rijkshuisstijl-community/link-list-react@1.0.1
+  - @rijkshuisstijl-community/heading-react@1.0.1
+
 ## 1.0.0
 
 ### Major Changes

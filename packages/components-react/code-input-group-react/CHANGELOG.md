@@ -1,5 +1,14 @@
 # @rijkshuisstijl-community/code-input-group-react
 
+## 1.0.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+- Updated dependencies [e41c59f]
+  - @rijkshuisstijl-community/code-input-react@1.0.1
+  - @rijkshuisstijl-community/fieldset-react@1.0.1
+
 ## 1.0.0
 
 ### Major Changes
