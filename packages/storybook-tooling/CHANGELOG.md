@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/storybook-tooling
 
+## 1.1.4
+
+### Patch Changes
+
+- e41c59f: update dependencies
+
 ## 1.1.3
 
 ### Patch Changes
