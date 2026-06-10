@@ -545,6 +545,15 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
 
+  packages/components-css/expandable-checkbox-group:
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
   packages/components-css/figure-css:
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
@@ -694,6 +703,9 @@ importers:
       '@rijkshuisstijl-community/dot-badge-css':
         specifier: workspace:*
         version: link:../dot-badge-css
+      '@rijkshuisstijl-community/expandable-checkbox-group-css':
+        specifier: workspace:*
+        version: link:../expandable-checkbox-group
       '@rijkshuisstijl-community/figure-css':
         specifier: workspace:*
         version: link:../figure-css
