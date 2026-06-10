@@ -1,5 +1,70 @@
 # @rijkshuisstijl-community/components-react
 
+## 15.1.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+- Updated dependencies [e41c59f]
+  - @rijkshuisstijl-community/page-number-navigation-react@1.0.1
+  - @rijkshuisstijl-community/navigation-list-item-react@1.0.1
+  - @rijkshuisstijl-community/language-navigation-react@1.0.1
+  - @rijkshuisstijl-community/unordered-list-item-react@1.0.1
+  - @rijkshuisstijl-community/data-badge-button-react@1.0.1
+  - @rijkshuisstijl-community/data-summary-item-react@1.0.1
+  - @rijkshuisstijl-community/message-list-item-react@0.0.2
+  - @rijkshuisstijl-community/code-input-group-react@1.0.1
+  - @rijkshuisstijl-community/navigation-list-react@1.0.1
+  - @rijkshuisstijl-community/visually-hidden-react@1.0.1
+  - @rijkshuisstijl-community/breadcrumb-nav-react@0.1.1
+  - @rijkshuisstijl-community/checkbox-group-react@1.1.1
+  - @rijkshuisstijl-community/link-list-card-react@1.0.1
+  - @rijkshuisstijl-community/navigation-bar-react@1.0.1
+  - @rijkshuisstijl-community/rounded-corner-react@1.0.1
+  - @rijkshuisstijl-community/unordered-list-react@1.0.1
+  - @rijkshuisstijl-community/column-layout-react@1.0.1
+  - @rijkshuisstijl-community/heading-group-react@1.0.1
+  - @rijkshuisstijl-community/action-group-react@1.1.1
+  - @rijkshuisstijl-community/card-as-link-react@1.1.1
+  - @rijkshuisstijl-community/data-summary-react@1.0.1
+  - @rijkshuisstijl-community/message-list-react@1.0.1
+  - @rijkshuisstijl-community/number-badge-react@1.0.1
+  - @rijkshuisstijl-community/ordered-list-react@1.0.1
+  - @rijkshuisstijl-community/link-button-react@1.0.1
+  - @rijkshuisstijl-community/blockquote-react@1.1.1
+  - @rijkshuisstijl-community/code-input-react@1.0.1
+  - @rijkshuisstijl-community/file-input-react@2.0.1
+  - @rijkshuisstijl-community/text-input-react@1.0.1
+  - @rijkshuisstijl-community/accordion-react@3.1.1
+  - @rijkshuisstijl-community/dot-badge-react@1.1.1
+  - @rijkshuisstijl-community/link-list-react@1.0.1
+  - @rijkshuisstijl-community/paragraph-react@2.1.1
+  - @rijkshuisstijl-community/separator-react@1.1.1
+  - @rijkshuisstijl-community/skip-link-react@1.0.1
+  - @rijkshuisstijl-community/toggletip-react@1.0.1
+  - @rijkshuisstijl-community/checkbox-react@1.1.1
+  - @rijkshuisstijl-community/fieldset-react@1.0.1
+  - @rijkshuisstijl-community/side-nav-react@1.0.1
+  - @rijkshuisstijl-community/textarea-react@1.0.1
+  - @rijkshuisstijl-community/article-react@2.1.1
+  - @rijkshuisstijl-community/heading-react@1.0.1
+  - @rijkshuisstijl-community/listbox-react@1.0.1
+  - @rijkshuisstijl-community/button-react@1.1.1
+  - @rijkshuisstijl-community/drawer-react@1.0.1
+  - @rijkshuisstijl-community/figure-react@1.1.1
+  - @rijkshuisstijl-community/footer-react@1.0.1
+  - @rijkshuisstijl-community/alert-react@3.1.1
+  - @rijkshuisstijl-community/image-react@2.1.1
+  - @rijkshuisstijl-community/radio-react@1.0.1
+  - @rijkshuisstijl-community/body-react@1.0.1
+  - @rijkshuisstijl-community/card-react@1.1.1
+  - @rijkshuisstijl-community/file-react@1.0.1
+  - @rijkshuisstijl-community/hero-react@1.0.1
+  - @rijkshuisstijl-community/icon-react@3.1.1
+  - @rijkshuisstijl-community/link-react@1.1.1
+  - @rijkshuisstijl-community/logo-react@1.0.1
+  - @rijkshuisstijl-community/root-react@1.0.1
+
 ## 15.1.0
 
 ### Minor Changes

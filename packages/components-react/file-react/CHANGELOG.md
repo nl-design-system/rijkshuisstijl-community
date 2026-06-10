@@ -1,5 +1,18 @@
 # @rijkshuisstijl-community/file-react
 
+## 1.0.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+- Updated dependencies [e41c59f]
+  - @rijkshuisstijl-community/paragraph-react@2.1.1
+  - @rijkshuisstijl-community/button-react@1.1.1
+  - @rijkshuisstijl-community/alert-react@3.1.1
+  - @rijkshuisstijl-community/icon-react@3.1.1
+  - @rijkshuisstijl-community/link-react@1.1.1
+  - @rijkshuisstijl-community/file-css@1.0.1
+
 ## 1.0.0
 
 ### Major Changes

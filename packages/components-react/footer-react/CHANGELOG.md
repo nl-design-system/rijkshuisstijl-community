@@ -1,5 +1,17 @@
 # @rijkshuisstijl-community/footer-react
 
+## 1.0.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+- Updated dependencies [e41c59f]
+  - @rijkshuisstijl-community/column-layout-react@1.0.1
+  - @rijkshuisstijl-community/heading-react@1.0.1
+  - @rijkshuisstijl-community/icon-react@3.1.1
+  - @rijkshuisstijl-community/link-react@1.1.1
+  - @rijkshuisstijl-community/footer-css@1.0.1
+
 ## 1.0.0
 
 ### Major Changes
