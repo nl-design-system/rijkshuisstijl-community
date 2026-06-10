@@ -6216,6 +6216,9 @@ importers:
 
   packages/components-react/pre-heading-react:
     dependencies:
+      '@rijkshuisstijl-community/heading-react':
+        specifier: workspace:*
+        version: link:../heading-react
       '@rijkshuisstijl-community/pre-heading-css':
         specifier: workspace:*
         version: link:../../components-css/pre-heading-css
