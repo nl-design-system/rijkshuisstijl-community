@@ -10436,53 +10436,68 @@
     "ams": {
       "pagination": {
         "font-family": {
-          "$type": "other",
+          "$type": "fontFamilies",
           "$value": "{rhc.text.font-family.default}"
         },
         "font-size": {
-          "$type": "other",
-          "$value": "{utrecht.document.font-size}"
+          "$type": "fontSizes",
+          "$value": "{rhc.text.font-size.md}"
         },
         "font-weight": {
-          "$type": "other",
-          "$value": "{utrecht.document.font-weight}"
+          "$type": "fontWeights",
+          "$value": "{rhc.text.font-weight.default}"
         },
         "line-height": {
-          "$type": "other",
-          "$value": "{utrecht.document.line-height}"
+          "$type": "lineHeights",
+          "$value": "{rhc.text.line-height.md}"
         },
         "link": {
           "color": {
-            "$type": "other",
-            "$value": "{nl.link.color}"
+            "$type": "color",
+            "$value": "{rhc.color.foreground.link}"
           },
           "gap": {
-            "$type": "other",
+            "$type": "dimension",
             "$value": "{rhc.space.sm}"
           },
           "outline-offset": {
             "$type": "other",
-            "$value": "{utrecht.focus.outline-offset}"
+            "$value": "{rhc.focus.outline-offset}",
+            "$description": "[code-only]"
           },
           "padding-inline": {
-            "$type": "other",
+            "$type": "dimension",
             "$value": "{rhc.space.sm}"
           },
           "current": {
             "font-weight": {
-              "$type": "other",
+              "$type": "fontWeights",
               "$value": "{rhc.text.font-weight.bold}"
             }
           },
           "hover": {
             "color": {
-              "$type": "other",
-              "$value": "{nl.link.hover.color}"
+              "$type": "color",
+              "$value": "{rhc.color.foreground.link-hover}"
             },
             "text-decoration-line": {
-              "$type": "other",
+              "$type": "textDecoration",
               "$value": "underline"
             }
+          },
+          "text-decoration-line": {
+            "$type": "textDecoration",
+            "$value": "none"
+          },
+          "text-decoration-thickness": {
+            "$type": "other",
+            "$value": "0.0625em",
+            "$description": "[code only]"
+          },
+          "text-underline-offset": {
+            "$type": "other",
+            "$value": "{rhc.space.xs}",
+            "$description": "[code-only]"
           }
         }
       }
