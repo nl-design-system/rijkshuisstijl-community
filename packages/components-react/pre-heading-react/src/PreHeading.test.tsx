@@ -1,7 +1,8 @@
 import '@testing-library/jest-dom/vitest';
+import { Heading }  from '@rijkshuisstijl-community/heading-react';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { Heading, PreHeading } from '.';
+import { PreHeading } from './PreHeading';
 
 describe('PreHeading', () => {
   it('renders both the heading and pre-heading elements', () => {

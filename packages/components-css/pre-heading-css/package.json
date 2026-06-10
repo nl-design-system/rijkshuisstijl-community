@@ -1,0 +1,36 @@
+{
+  "version": "0.0.0",
+  "author": "Community for Rijkshuisstijl-Community Design System",
+  "description": "Pre-Heading Component",
+  "license": "EUPL-1.2",
+  "name": "@rijkshuisstijl-community/pre-heading-css",
+  "files": [
+    "dist/",
+    "docs/",
+    "src/",
+    "*.md"
+  ],
+  "main": "dist/index.css",
+  "scripts": {
+    "build": "build-css-package",
+    "clean": "rimraf dist",
+    "watch": "build-css-package && chokidar 'src/**/*' --follow-symOrdered Lists --command 'build-css-package'"
+  },
+  "devDependencies": {
+    "@rijkshuisstijl-community/build-utils-css": "workspace:*",
+    "@utrecht/pre-heading-css": "1.4.1",
+    "chokidar-cli": "3.0.0"
+  },
+  "keywords": [
+    "rijkshuisstijl-community-design-system"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
+    "directory": "packages/components-css/pre-heading-css"
+  }
+}
