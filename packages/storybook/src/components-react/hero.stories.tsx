@@ -84,7 +84,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     imageSrc: '/placeholder.jpg',
-    imageAlt: 'Tullip field',
+    imageAlt: 'Tulip field',
     heading: 'Heading',
     subHeading: 'Subtext',
   },
@@ -93,7 +93,7 @@ export const Default: Story = {
 export const CustomChildren: Story = {
   args: {
     imageSrc: '/placeholder.jpg',
-    imageAlt: 'Tullip field',
+    imageAlt: 'Tulip field',
     children: (
       <LinkListCard heading="Hello World" headingLevel={2}>
         <LinkListLink href="#">Link 1</LinkListLink>
@@ -107,7 +107,7 @@ export const CustomChildren: Story = {
 export const TextAlignRight: Story = {
   args: {
     imageSrc: '/placeholder.jpg',
-    imageAlt: 'Tullip field',
+    imageAlt: 'Tulip field',
     heading: 'Heading',
     subHeading: 'Hero with the text area aligned to the right (end)',
     textAlign: 'end',
@@ -118,7 +118,7 @@ export const AspectRatioFourToThree: Story = {
   args: {
     aspectRatio: '4 / 3',
     imageSrc: '/placeholder.jpg',
-    imageAlt: 'Tullip field',
+    imageAlt: 'Tulip field',
     heading: 'Heading',
     subHeading: 'Hero with the aspect ratio of 4:3',
   },
