@@ -1,4 +1,4 @@
-import { Footer, Icon, LinkList, LinkListLink, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { Footer, Icon, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
 
 export default function SharedFooter({ isLightTheme }: Readonly<{ isLightTheme?: boolean }>) {
   return (
@@ -8,26 +8,6 @@ export default function SharedFooter({ isLightTheme }: Readonly<{ isLightTheme?:
       backtotop={true}
       tagline="NL Design System voor de rijksoverheid"
       columns={[
-        {
-          heading: 'Disclaimer',
-          children: (
-            <>
-              <Paragraph>
-                Dit is geen officiële website van de makers van de Rijkshuisstijl. Dit project wordt niet gesteund door
-                het Ministerie van Algemene Zaken.
-              </Paragraph>
-              <LinkList key="1">
-                <LinkListLink
-                  href="https://www.rijkshuisstijl.nl/"
-                  icon={<Icon icon={'chevron-right'} />}
-                  target="_blank"
-                >
-                  De officiële Rijkshuisstijl website
-                </LinkListLink>
-              </LinkList>
-            </>
-          ),
-        },
         {
           appearanceLevel: 3,
           heading: 'Over de Rijkshuisstijl Community',

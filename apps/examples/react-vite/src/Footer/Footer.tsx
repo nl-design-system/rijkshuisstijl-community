@@ -1,10 +1,4 @@
-import {
-  Icon,
-  LinkList,
-  LinkListLink,
-  Paragraph,
-  Footer as RhcFooter,
-} from '@rijkshuisstijl-community/components-react';
+import { Icon, LinkList, LinkListLink, Footer as RhcFooter } from '@rijkshuisstijl-community/components-react';
 import './Footer.css';
 
 export function Footer() {
@@ -17,22 +11,7 @@ export function Footer() {
       columns={[
         {
           appearanceLevel: 3,
-          children: (
-            <>
-              <Paragraph>
-                Dit is geen officiële website van de makers van de Rijkshuisstijl. Dit project wordt niet gesteund door
-                het Ministerie van Algemene Zaken.
-              </Paragraph>
-              <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                De officiele Rijkshuisstijl website
-              </LinkListLink>
-            </>
-          ),
-          heading: 'Disclaimer',
-        },
-
-        {
-          appearanceLevel: 3,
+          heading: 'Over de Rijkshuisstijl Community',
           children: (
             <LinkList>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
@@ -52,10 +31,10 @@ export function Footer() {
               </LinkListLink>
             </LinkList>
           ),
-          heading: 'Over de Rijkshuisstijl Community',
         },
         {
           appearanceLevel: 3,
+          heading: 'Contact',
           children: (
             <LinkList>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
@@ -72,7 +51,6 @@ export function Footer() {
               </LinkListLink>
             </LinkList>
           ),
-          heading: 'Contact',
         },
       ]}
     />
