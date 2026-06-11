@@ -1,29 +1,27 @@
 import { Icon, Logo, NavBar, NavBarItemProps, PageHeader, SkipLink } from '@rijkshuisstijl-community/components-react';
 import './header.css';
-import { useEffect, useState } from 'react';
 
 export default function SharedHeader() {
-  const [pathname, setPathname] = useState('');
-  useEffect(() => {
-    // NB: set the pathname when the component mounts, this is done in a useEffect hook to not error in a server environment
-    setPathname(globalThis.location.pathname);
-  }, []);
-
   const items: NavBarItemProps[] = [
     {
       href: '/',
       label: 'Homepage',
-      className: pathname === '/' ? 'rhc-nav-bar__link--current' : '',
+      className: globalThis?.location?.pathname === '/' ? 'rhc-nav-bar__link--current' : '',
+    },
+    {
+      href: '/componenten/',
+      label: 'Componenten',
+      className: globalThis?.location?.pathname === '/componenten/' ? 'rhc-nav-bar__link--current' : '',
     },
     {
       href: '/design-tokens/',
       label: 'Design Tokens',
-      className: pathname === '/design-tokens/' ? 'rhc-nav-bar__link--current' : '',
+      className: globalThis?.location?.pathname === '/design-tokens/' ? 'rhc-nav-bar__link--current' : '',
     },
     {
       href: '/voorbeelden/',
       label: 'Voorbeelden',
-      className: pathname === '/voorbeelden/' ? 'rhc-nav-bar__link--current' : '',
+      className: globalThis?.location?.pathname === '/voorbeelden/' ? 'rhc-nav-bar__link--current' : '',
     },
   ].map(({ ...props }) => ({
     ...props,
@@ -37,7 +35,7 @@ export default function SharedHeader() {
       </SkipLink>
       <div className="rhc-page-header-layout">
         <Logo organisation="Rijkshuisstijl Community">
-          <Icon className={'dutch-map'} icon={'nederland-map'} />
+          <Icon className="dutch-map" icon="nederland-map" />
         </Logo>
         <NavBar
           items={items}
