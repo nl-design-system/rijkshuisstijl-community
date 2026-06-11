@@ -82,8 +82,6 @@ export default function Details() {
                   <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
                     Welke brochures zijn er over Arbeidstijdenwet?
                   </LinkListLink>
-                </LinkList>
-                <LinkList>
                   <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
                     Wanneer geldt de Arbeidstijdenwet niet (of gedeeltelijk) voor mij?
                   </LinkListLink>
