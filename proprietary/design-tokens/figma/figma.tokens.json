@@ -2678,12 +2678,16 @@
       "size": {
         "pointer-target": {
           "$type": "dimension",
-          "$value": "3rem"
+          "$value": "48px"
         },
         "icon": {
           "md": {
             "$type": "dimension",
-            "$value": "1.5rem"
+            "$value": "1.25rem"
+          },
+          "lg": {
+            "$type": "dimension",
+            "$value": "{rhc.text.font-size.lg}"
           }
         },
         "page": {
@@ -2798,12 +2802,26 @@
           "inset-block-start": {
             "min": {
               "$type": "dimension",
-              "$value": "0rem",
+              "$value": "0.125rem",
               "$description": "[figma-only] [temporary – until nl-icon]"
             },
             "max": {
               "$type": "dimension",
-              "$value": "0.188rem",
+              "$value": "0.313rem",
+              "$description": "[figma-only] [temporary – until nl-icon]"
+            }
+          }
+        },
+        "lg": {
+          "inset-block-start": {
+            "min": {
+              "$type": "dimension",
+              "$value": "0.313rem",
+              "$description": "[figma-only] [temporary – until nl-icon]"
+            },
+            "max": {
+              "$type": "dimension",
+              "$value": "0.25rem",
               "$description": "[figma-only] [temporary – until nl-icon]"
             }
           }
@@ -2886,12 +2904,26 @@
           "inset-block-start": {
             "min": {
               "$type": "dimension",
-              "$value": "0rem",
+              "$value": "0.125rem",
               "$description": "[figma-only] [temporary – until nl-icon]"
             },
             "max": {
               "$type": "dimension",
-              "$value": "0rem",
+              "$value": "0.125rem",
+              "$description": "[figma-only] [temporary – until nl-icon]"
+            }
+          }
+        },
+        "lg": {
+          "inset-block-start": {
+            "min": {
+              "$type": "dimension",
+              "$value": "0.313rem",
+              "$description": "[figma-only] [temporary – until nl-icon]"
+            },
+            "max": {
+              "$type": "dimension",
+              "$value": "0.313rem",
               "$description": "[figma-only] [temporary – until nl-icon]"
             }
           }
@@ -2933,7 +2965,14 @@
         "md": {
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "0rem",
+            "$value": "0.125rem",
+            "$description": "[figma-only] [temporary – until nl-icon]"
+          }
+        },
+        "lg": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0.313rem",
             "$description": "[figma-only] [temporary – until nl-icon]"
           }
         }
@@ -3020,7 +3059,14 @@
         "md": {
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "0.188rem",
+            "$value": "0.313rem",
+            "$description": "[figma-only] [temporary – until nl-icon]"
+          }
+        },
+        "lg": {
+          "inset-block-start": {
+            "$type": "dimension",
+            "$value": "0.25rem",
             "$description": "[figma-only] [temporary – until nl-icon]"
           }
         }
@@ -4028,11 +4074,11 @@
           },
           "inset-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.icon.md.inset-block-start}"
+            "$value": "{rhc.icon.lg.inset-block-start}"
           },
           "size": {
             "$type": "dimension",
-            "$value": "{rhc.size.icon.md}"
+            "$value": "{rhc.size.icon.lg}"
           },
           "error": {
             "color": {
@@ -8866,7 +8912,7 @@
         "input": {
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.icon.md.inset-block-start}"
+            "$value": "0.188rem"
           }
         }
       }
@@ -12095,96 +12141,6 @@
       }
     }
   },
-  "overrides/type-scale/default [code-only]": {
-    "rhc": {
-      "text": {
-        "font-weight": {
-          "extra-bold": {
-            "$type": "fontWeights",
-            "$value": "800"
-          },
-          "bold": {
-            "$type": "fontWeights",
-            "$value": "700"
-          },
-          "semi-bold": {
-            "$type": "fontWeights",
-            "$value": "550"
-          },
-          "regular": {
-            "$type": "fontWeights",
-            "$value": "400"
-          },
-          "light": {
-            "$type": "fontWeights",
-            "$value": "300"
-          },
-          "thin": {
-            "$type": "fontWeights",
-            "$value": "200"
-          }
-        }
-      }
-    }
-  },
-  "overrides/type-scale/information dense [code-only]": {
-    "rhc": {
-      "text": {
-        "font-size": {
-          "sm": {
-            "$type": "fontSizes",
-            "$value": "clamp(1.000rem, 0.875rem + 0.5000vw, 1.000rem)"
-          },
-          "md": {
-            "$type": "fontSizes",
-            "$value": "clamp(1.000rem, 0.875rem + 0.5000vw, 1.000rem)"
-          },
-          "lg": {
-            "$type": "fontSizes",
-            "$value": "clamp(1.250rem, 1.0188rem + 0.7250vw, 1.250rem)"
-          },
-          "xl": {
-            "$type": "fontSizes",
-            "$value": "clamp(1.500rem, 1.1834rem + 1.0263vw, 1.500rem)"
-          },
-          "2xl": {
-            "$type": "fontSizes",
-            "$value": "clamp(1.750rem, 1.3713rem + 1.4268vw, 1.750rem)"
-          },
-          "3xl": {
-            "$type": "fontSizes",
-            "$value": "clamp(2.000rem, 1.5845rem + 1.9563vw, 2.000rem)"
-          }
-        },
-        "font-weight": {
-          "extra-bold": {
-            "$type": "fontWeights",
-            "$value": "800"
-          },
-          "bold": {
-            "$type": "fontWeights",
-            "$value": "700"
-          },
-          "semi-bold": {
-            "$type": "fontWeights",
-            "$value": "550"
-          },
-          "regular": {
-            "$type": "fontWeights",
-            "$value": "400"
-          },
-          "light": {
-            "$type": "fontWeights",
-            "$value": "300"
-          },
-          "thin": {
-            "$type": "fontWeights",
-            "$value": "200"
-          }
-        }
-      }
-    }
-  },
   "$themes": [
     {
       "id": "0048b2d80fdc07967e19f605ae7bb4b75d916418",
@@ -12506,9 +12462,7 @@
       "components/textarea",
       "components/toggletip",
       "components/unordered-list",
-      "components/page-header",
-      "overrides/type-scale/default [code-only]",
-      "overrides/type-scale/information dense [code-only]"
+      "components/page-header"
     ]
   }
 }
