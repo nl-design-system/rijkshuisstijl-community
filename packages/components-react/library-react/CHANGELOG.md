@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/components-react
 
+## 15.1.2
+
+### Patch Changes
+
+- Updated dependencies [8d20001]
+  - @rijkshuisstijl-community/pre-heading-react@1.0.0
+  - @rijkshuisstijl-community/rounded-corner-react@1.0.1
+
 ## 15.1.1
 
 ### Patch Changes
