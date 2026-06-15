@@ -10,6 +10,10 @@
   --utrecht-button-padding-inline-start: var(--rhc-icon-only-button-padding-inline-start, inherit);
 }
 
+@mixin utrecht-button-icon {
+  line-height: 0;
+}
+
 @mixin invisible-but-accessible {
   block-size: 1px;
 
