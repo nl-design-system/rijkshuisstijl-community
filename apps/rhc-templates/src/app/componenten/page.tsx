@@ -1,14 +1,8 @@
 import SharedHeader from '@rijkshuisstijl-community/storybook/src/templates/shared/header';
 import SharedFooter from '@rijkshuisstijl-community/storybook/src/templates/shared/footer';
 import { PageBody } from '@utrecht/page-body-react';
-import {
-  CardAsLink,
-  DataBadgeButton,
-  Heading,
-  LinkList,
-  LinkListLink,
-  Paragraph,
-} from '@rijkshuisstijl-community/components-react';
+import { DataBadge } from '@utrecht/component-library-react';
+import { CardAsLink, Heading, LinkList, LinkListLink, Paragraph } from '@rijkshuisstijl-community/components-react';
 import type { Metadata } from 'next';
 
 import components from './componenten';
@@ -36,10 +30,10 @@ export default () => (
             <Paragraph>Oorsprong: {comp.oorsprong}</Paragraph>
             <Paragraph>NL status: {comp['nL Status']}</Paragraph>
             <div style={{ display: 'flex', columnGap: '4px' }}>
-              {comp.react == 'Available' && <DataBadgeButton>React</DataBadgeButton>}
-              {comp.angular == 'Available' && <DataBadgeButton>Angular</DataBadgeButton>}
-              {comp.twig == 'Available' && <DataBadgeButton>Twig</DataBadgeButton>}
-              {comp['web component'] == 'Available' && <DataBadgeButton>Web component</DataBadgeButton>}
+              {comp.react == 'Available' && <DataBadge>React</DataBadge>}
+              {comp.angular == 'Available' && <DataBadge>Angular</DataBadge>}
+              {comp.twig == 'Available' && <DataBadge>Twig</DataBadge>}
+              {comp['web component'] == 'Available' && <DataBadge>Web component</DataBadge>}
             </div>
             <LinkList>
               {comp['figma URL'] && <LinkListLink href={comp['figma URL']}>Design</LinkListLink>}
