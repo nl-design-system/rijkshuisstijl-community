@@ -13,7 +13,7 @@ import {
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
 import { IconCheck, IconPlus, IconSearch } from '@tabler/icons-react';
-import { BadgeList, ButtonLink, Icon } from '@utrecht/component-library-react';
+import { BadgeList, ButtonLink, DataBadge, Icon } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 import React, {
   AnchorHTMLAttributes,
@@ -25,7 +25,9 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { allComponentsData, ComponentData } from './components-data';
+import { type ComponentData } from './components-data';
+//import { allComponentsData } from './components-data';
+import allComponentsData from './transform';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
@@ -286,7 +288,7 @@ export default function Componenten() {
 
           <HeadingGroup>
             <Heading id="main-heading" level={1}>
-              Componenten overzicht
+              Componentenoverzicht
             </Heading>
             <Paragraph>
               Filter op zoekterm en framework om componenten uit de Rijkshuisstijl Community te vinden. Bekijk direct de
@@ -294,46 +296,40 @@ export default function Componenten() {
             </Paragraph>
           </HeadingGroup>
 
-          <div className="rhc-search-container">
-            <search aria-labelledby="search-heading" role="search">
-              <h2 className="rhc-sr-only" id="search-heading">
-                Zoeken
-              </h2>
-              <form className="rhc-search-form" onSubmit={handleSearchSubmit}>
-                <FormFieldTextInput
-                  aria-describedby="search-help"
-                  className="rhc-search-form__label"
-                  id="componentSearchInput"
-                  label="Voer een zoekterm in"
-                  name="q"
-                  type="text"
-                  value={searchTerm}
-                  onChange={handleSearchChange}
-                />
-                <div className="rhc-sr-only" id="search-help">
-                  Zoek in componentnamen en beschrijvingen. Druk op Enter om te zoeken.
-                </div>
-                <Button aria-label="Zoeken" className="rhc-search-button" type="submit">
-                  <Icon>
-                    <IconSearch />
-                  </Icon>
-                </Button>
-              </form>
-            </search>
-            <div className="rhc-componenten-toevoegen">
-              <ButtonLink appearance="secondary-action-button" href="/">
-                <Icon>
-                  <IconPlus />
-                </Icon>
-                Component toevoegen
-              </ButtonLink>
-            </div>
-          </div>
-
-          <ActiveFiltersBadgeList selectedFrameworks={selectedFrameworks} onRemoveFilter={handleRemoveActiveFilter} />
-
           <div className="rhc-container">
             <aside aria-labelledby="filters-heading">
+              <ActiveFiltersBadgeList
+                selectedFrameworks={selectedFrameworks}
+                onRemoveFilter={handleRemoveActiveFilter}
+              />
+              <div className="rhc-search-container">
+                <search aria-labelledby="search-heading" role="search">
+                  <h2 className="rhc-sr-only" id="search-heading">
+                    Zoeken
+                  </h2>
+                  <form className="rhc-search-form" onSubmit={handleSearchSubmit}>
+                    <FormFieldTextInput
+                      aria-describedby="search-help"
+                      className="rhc-search-form__label"
+                      id="componentSearchInput"
+                      label="Voer een zoekterm in"
+                      name="q"
+                      type="text"
+                      value={searchTerm}
+                      onChange={handleSearchChange}
+                    />
+                    <div className="rhc-sr-only" id="search-help">
+                      Zoek in componentnamen en beschrijvingen. Druk op Enter om te zoeken.
+                    </div>
+                    <Button aria-label="Zoeken" className="rhc-search-button" type="submit">
+                      <Icon>
+                        <IconSearch />
+                      </Icon>
+                    </Button>
+                  </form>
+                </search>
+              </div>
+
               <h2 className="rhc-sr-only" id="filters-heading">
                 Filters
               </h2>
@@ -350,7 +346,7 @@ export default function Componenten() {
                     expandText="Toon meer frameworks"
                     extraOptionsText="Extra framework opties"
                     legend="Framework"
-                    maxVisible={3}
+                    maxVisible={105}
                     selectedOptions={stagedFrameworks}
                     options={frameworkOptions.map((option) => ({
                       label: (
@@ -408,13 +404,15 @@ export default function Componenten() {
                             </Heading>
                           }
                         >
+                          <div>NLDS Status: {component.nlStatus}</div>
+                          <div>Oorsprong: {component.oorsprong}</div>
                           <BadgeList
                             aria-label={`Framework opties voor ${component.heading}`}
                             className="rhc-templates-badgelist"
                             role="group"
                           >
                             {component.frameworks.map((framework) => (
-                              <DataBadgeButton
+                              <DataBadge
                                 aria-label={`${framework} filter ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
                                 helperText={`- Klik om filter te ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
                                 key={framework}
@@ -423,7 +421,7 @@ export default function Componenten() {
                                 onClick={() => handleDataBadgeClick(framework)}
                               >
                                 {framework}
-                              </DataBadgeButton>
+                              </DataBadge>
                             ))}
                           </BadgeList>
                         </Card>

@@ -30,7 +30,7 @@
 .rhc-container {
   display: grid;
   gap: var(--rhc-space-xl, 20px); /* not an exact match: from 20px to 16px */
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
 
   @media (width <= 780px) {
     grid-template-columns: 1fr;
@@ -102,8 +102,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--rhc-space-md);
-  margin-block: var(--rhc-space-xl);
-  padding-block: var(--rhc-space-xl);
+  margin-block-end: var(--rhc-space-xl);
 }
 
 .rhc-active-filters__list {
