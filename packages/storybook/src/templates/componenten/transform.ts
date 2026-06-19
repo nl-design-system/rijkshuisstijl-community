@@ -1,5 +1,27 @@
 import componentsInput from './componenten';
 
+type ComponentInput = Partial<{
+  angular: string;
+  content: {
+    body: string;
+    id: string;
+    title: string;
+    type: string;
+  };
+  figma: string;
+  'figma URL': string;
+  'nL Status': string;
+  oorsprong: string;
+  'openstaande issues URL': string;
+  react: string;
+  'rijkshuisstijl interpretatie discussie URL': string;
+  title: string;
+  twig: string;
+  'web component': string;
+}> & {
+  id: string;
+};
+
 export type ComponentData = {
   id: string;
   title: string;
@@ -12,19 +34,19 @@ export type ComponentData = {
   oorsprong?: string[];
 };
 
-const knownFrameworks = ['react', 'angular', 'twig', 'web component'];
+const knownFrameworks: (keyof ComponentInput)[] = ['react', 'angular', 'twig', 'web component'];
 
-const normalise = (name) => name.replaceAll(/\s+/g, '-').toLowerCase();
-const normaliseSystem = (name) => name.replaceAll(/\s+/g, '_').toLowerCase();
+const normalise = (name: string) => name.replaceAll(/\s+/g, '-').toLowerCase();
+const normaliseSystem = (name: string) => name.replaceAll(/\s+/g, '_').toLowerCase();
 
-const readableFrameworkNames = {
+const readableFrameworkNames: Partial<Record<keyof ComponentInput, string>> = {
   react: 'React',
   angular: 'Angular',
   twig: 'Twig',
   ['web component']: 'Web Components',
 };
 
-const descriptions = {
+const descriptions: Record<ComponentData['title'], string> = {
   accordion: 'Secties met de mogelijkheid om gerelateerde content te tonen en weer te verbergen.',
   actiongroup: 'Groepeert één of meer gerelateerde acties en verzorgt de lay-out van de content.',
   alert: 'Belangrijk bericht dat informeert over de huidige activiteit van de gebruiker.',
@@ -38,12 +60,12 @@ const descriptions = {
   dot_badge: 'Stip bij een Link of Button die zonder zichtbaar label de aandacht trekt bij een statuswijziging.',
 };
 
-const components: ComponentData = componentsInput.items.map((comp) => ({
+const components: ComponentData[] = componentsInput.items.map((comp: ComponentInput) => ({
   id: comp.id,
-  heading: comp.content.title,
-  title: `Bekijk de ${comp.content.title} component in Storybook`,
-  description: descriptions[normaliseSystem(comp.content.title)] || '',
-  href: `https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-${normalise(comp.content.title)}--docs`,
+  heading: comp?.content?.title ?? '',
+  title: `Bekijk de ${comp?.content?.title ?? ''} component in Storybook`,
+  description: descriptions[normaliseSystem(comp?.content?.title ?? '')] ?? '',
+  href: `https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-${normalise(comp?.content?.title ?? '')}--docs`,
   linkLabel: 'Bekijk in Storybook',
   frameworks: [
     'CSS',
