@@ -27,23 +27,12 @@ import React, {
 } from 'react';
 //import { type ComponentData } from './components-data';
 //import { allComponentsData } from './components-data';
+import { type ComponentData } from './transform';
 import allComponentsData from './transform';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
 import './index.css';
-
-type ComponentData = {
-  id: string;
-  title: string;
-  heading: string;
-  description: string;
-  href: string;
-  linkLabel: string;
-  frameworks: string[];
-  nlStatus?: string;
-  oorsprong?: string[];
-};
 
 const frameworkOptions: string[] = ['CSS', 'React', 'Angular', 'Web Components', 'Twig'];
 

@@ -1,4 +1,16 @@
-import components from './componenten';
+import componentsInput from './componenten';
+
+export type ComponentData = {
+  id: string;
+  title: string;
+  heading: string;
+  description: string;
+  href: string;
+  linkLabel: string;
+  frameworks: string[];
+  nlStatus?: string;
+  oorsprong?: string[];
+};
 
 const knownFrameworks = ['react', 'angular', 'twig', 'web component'];
 
@@ -26,7 +38,7 @@ const descriptions = {
   dot_badge: 'Stip bij een Link of Button die zonder zichtbaar label de aandacht trekt bij een statuswijziging.',
 };
 
-export default components.items.map((comp) => ({
+const components: ComponentData = componentsInput.items.map((comp) => ({
   id: comp.id,
   heading: comp.content.title,
   title: `Bekijk de ${comp.content.title} component in Storybook`,
@@ -40,3 +52,5 @@ export default components.items.map((comp) => ({
   nlStatus: comp['nL Status'],
   oorsprong: (comp.oorsprong ?? '').split(', '),
 }));
+
+export default components;
