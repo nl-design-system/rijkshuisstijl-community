@@ -1,7 +1,9 @@
 'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
 
-import { CardAsLink, ColumnLayout, Heading, Hero, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { ButtonLink, Card, CardAsLink, Heading, Paragraph, Separator } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
+import { Grid } from '@amsterdam/design-system-react';
+import '@amsterdam/design-system-css/dist/index.css';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
@@ -10,394 +12,492 @@ export default function Page() {
   return (
     <>
       <SharedHeader />
-      <PageBody className="utrecht-page-body--rhc-tinted">
+      <PageBody className="utrecht-page-body--rhc-tinted rhc-templates-spacing-2">
         <SharedMainPageContent>
-          <Hero
-            heading="Rijkshuisstijl Community Design System"
-            headingLevel={1}
-            imageAlt="Tullip field"
-            imageSrc="/placeholder.jpg"
-          />
-          <ColumnLayout>
+          <section id="intro" className="rhc-templates-spacing-2">
+            <Grid paddingVertical="x-large">
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 8,
+                  narrow: 4,
+                  wide: 8,
+                }}
+              >
+                <div className="rhc-margin-block-end-wrapper">
+                  <Heading level={1}>De Rijkshuisstijl, toegankelijk gebouwd op het NL Design System</Heading>
+                  <Paragraph>
+                    De Rijkshuisstijl Community vertaalt de Rijkshuisstijl naar herbruikbare, toegankelijke front-end
+                    componenten — gebouwd bovenop de fundamenten van NL Design System. Eén technische basis, met het
+                    eigen uiterlijk en de unieke onderdelen van de Rijksoverheid.
+                  </Paragraph>
+                  <Paragraph>
+                    <ButtonLink appearance="primary-action-button" href="/handboek/">
+                      Aan de slag
+                    </ButtonLink>
+                    {/* <ButtonLink appearance="subtle-button" href="#nl-design-system">
+                      Bekijk hoe het werkt
+                    </ButtonLink> */}
+                  </Paragraph>
+                </div>
+              </Grid.Cell>
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 4,
+                  narrow: 4,
+                  wide: 4,
+                }}
+              ></Grid.Cell>
+            </Grid>
+          </section>
+        </SharedMainPageContent>
+      </PageBody>
+      <PageBody>
+        <SharedMainPageContent>
+          <section id="nl-design-system" className="rhc-templates-spacing-1">
+            <Heading level={2}>Wat is NL Design System?</Heading>
             <Paragraph>
-              De Rijkshuisstijl Community is een Open Source project van{' '}
-              <Link href="https://www.nldesignsystem.nl/componenten/">NL Design System-componenten</Link> voor projecten
-              die moeten voldoen aan de Rijkshuisstijl.
+              NL Design System is een samenwerkingsverband van overheidsorganisaties die samen bouwen aan herbruikbare,
+              toegankelijke en gebruiksvriendelijke componenten, patronen en richtlijnen voor digitale dienstverlening.
+              Geen kant-en-klaar pakket, maar een groeiende verzameling bouwstenen die in de praktijk worden getoetst —
+              met als doel een Hall of Fame van componenten die écht werken.
             </Paragraph>
-            <Paragraph>
-              De community bestaat uit organisaties van de centrale overheid van Nederland en leveranciers die zijn
-              ingehuurd voor het ontwikkelen van websites en apps. Doe jij ook mee?
-            </Paragraph>
-          </ColumnLayout>
-          {/* Dit worden Marwa's improved cards */}
-          <div className="rhc-card-as-link-group">
-            <CardAsLink
-              className="rhc-card-as-link-no-link"
-              heading={
-                <Heading appearanceLevel={4} level={2}>
-                  Efficiënt
-                </Heading>
-              }
-            >
-              <Paragraph>
-                Een uitgebreide bibliotheek van herbruikbare componenten. Platform-onafhankelijk met de nieuwe
-                Rijkshuisstijl.
-              </Paragraph>
-            </CardAsLink>
-            <CardAsLink
-              className="rhc-card-as-link-no-link"
-              heading={
-                <Heading appearanceLevel={4} level={2}>
-                  Breed gedragen
-                </Heading>
-              }
-            >
-              <Paragraph>De community deelt regelmatig kennis, ervaring, updates en verbeteringen.</Paragraph>
-            </CardAsLink>
-            <CardAsLink
-              className="rhc-card-as-link-no-link"
-              heading={
-                <Heading appearanceLevel={4} level={2}>
-                  Gebruiksvriendelijk
-                </Heading>
-              }
-            >
-              <Paragraph>Consistente gebruikservaring met herbruikbare voorbeeldpagina&apos;s</Paragraph>
-            </CardAsLink>
-          </div>
+            <Grid paddingVertical="x-large">
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 3,
+                  narrow: 3,
+                  wide: 3,
+                }}
+              >
+                <Card
+                  heading={
+                    <Heading appearanceLevel={4} level={3}>
+                      Over NL Design System
+                    </Heading>
+                  }
+                  href="https://nldesignsystem.nl/project/"
+                  linkLabel="Bekijk Over NL Design System"
+                >
+                  <Paragraph>
+                    De basiswaarden voor kleur, typografie, ruimte en meer, waarmee elke organisatie zijn eigen
+                    huisstijl kan toepassen.
+                  </Paragraph>
+                </Card>
+              </Grid.Cell>
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 3,
+                  narrow: 3,
+                  wide: 3,
+                }}
+              >
+                <Card
+                  heading={
+                    <Heading appearanceLevel={4} level={3}>
+                      Componenten
+                    </Heading>
+                  }
+                  href="https://nldesignsystem.nl/componenten/"
+                  linkLabel="Bekijk Componenten"
+                >
+                  <Paragraph>
+                    Herbruikbare, toegankelijke bouwstenen voor formulieren, navigatie, tabellen en meer.
+                  </Paragraph>
+                </Card>
+              </Grid.Cell>
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 3,
+                  narrow: 3,
+                  wide: 3,
+                }}
+              >
+                <Card
+                  heading={
+                    <Heading appearanceLevel={4} level={3}>
+                      Richtlijnen en Toegankelijkheid (WCAG)
+                    </Heading>
+                  }
+                  href="https://nldesignsystem.nl/richtlijnen/"
+                  linkLabel="Bekijk Richtlijnen en Toegankelijkheid (WCAG)"
+                >
+                  <Paragraph>
+                    Componenten en richtlijnen die voldoen aan de toegankelijkheidseisen voor de overheid.
+                  </Paragraph>
+                </Card>
+              </Grid.Cell>
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 3,
+                  narrow: 3,
+                  wide: 3,
+                }}
+              >
+                <Card
+                  heading={
+                    <Heading appearanceLevel={4} level={3}>
+                      Open community
+                    </Heading>
+                  }
+                  href="https://nldesignsystem.nl/community/"
+                  linkLabel="Bekijk Open community"
+                >
+                  <Paragraph>Open source, zonder licentiekosten, met ruimte om op elk niveau mee te doen.</Paragraph>
+                </Card>
+              </Grid.Cell>
+            </Grid>
 
-          <section className="rhc-templates-spacing-1">
-            <Heading level={2}>In de praktijk</Heading>
+            <ButtonLink href="https://nldesignsystem.nl/" target="_blank">
+              Bekijk NL Design System
+            </ButtonLink>
+          </section>
+          <Separator />
+          <section id="richtlijnen" className="rhc-templates-spacing-1">
+            <Heading level={2}>Waar begin je met de Rijkshuisstijl?</Heading>
             <Paragraph>
-              Klaar om er direct van start te gaan? Hieronder vind je de README&apos;s van de beschikbare tools en
-              frameworks. Voor een dieper begrip en uitgebreide documentatie verwijzen we je graag naar de &quot;lees en
-              leer&quot; section.
+              Of je nu websites bouwt, designs maakt, content beheert of projecten leidt — hier vind je de juiste
+              ingang.
             </Paragraph>
+            <Grid paddingVertical="x-large">
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 3,
+                  narrow: 3,
+                  wide: 3,
+                }}
+              >
+                <Card
+                  heading={
+                    <Heading appearanceLevel={4} level={3}>
+                      Als je bouwt
+                    </Heading>
+                  }
+                  href="/handboek/voor-ontwikkelaars"
+                  linkLabel="Bekijk Voor ontwikkelaars"
+                >
+                  <Paragraph>
+                    Aan de slag met onze componenten, gebaseerd op NL Design System, in jouw codebase.
+                  </Paragraph>
+                </Card>
+              </Grid.Cell>
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 3,
+                  narrow: 3,
+                  wide: 3,
+                }}
+              >
+                <Card
+                  heading={
+                    <Heading appearanceLevel={4} level={3}>
+                      Als je ontwerpt
+                    </Heading>
+                  }
+                  href="/handboek/voor-designers"
+                  linkLabel="Bekijk Voor designers"
+                >
+                  <Paragraph>Gebruik onze Figma-bibliotheek met Rijkshuisstijl-componenten en design tokens.</Paragraph>
+                </Card>
+              </Grid.Cell>
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 3,
+                  narrow: 3,
+                  wide: 3,
+                }}
+              >
+                <Card
+                  heading={
+                    <Heading appearanceLevel={4} level={3}>
+                      Als je content beheert
+                    </Heading>
+                  }
+                  href="/handboek/voor-contentbeheerders"
+                  linkLabel="Bekijk Voor contentbeheerders"
+                >
+                  <Paragraph>Richtlijnen voor toegankelijke en consistente content binnen de Rijkshuisstijl.</Paragraph>
+                </Card>
+              </Grid.Cell>
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 3,
+                  narrow: 3,
+                  wide: 3,
+                }}
+              >
+                <Card
+                  heading={
+                    <Heading appearanceLevel={4} level={3}>
+                      Als je projecten leidt
+                    </Heading>
+                  }
+                  href="/handboek/voor-projectleiders"
+                  linkLabel="Bekijk Voor projectleiders"
+                >
+                  <Paragraph>Herbruikbare oplossingen die tijd en budget besparen voor jouw organisatie.</Paragraph>
+                </Card>
+              </Grid.Cell>
+            </Grid>
+          </section>
+          <Separator />
+          <section id="componenten" className="rhc-templates-spacing-1">
+            <Heading level={2}>Gebruik de Rijkshuisstijl</Heading>
+            <Paragraph>
+              Net als NL Design System bieden we documentatie, componenten en voorbeelden — met de Rijkshuisstijl als
+              laag erbovenop.
+            </Paragraph>
+            <Grid paddingVertical="x-large">
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 3,
+                  narrow: 3,
+                  wide: 3,
+                }}
+              >
+                <CardAsLink
+                  href="#"
+                  heading={
+                    <Heading appearanceLevel={4} level={3}>
+                      Richtlijnen
+                    </Heading>
+                  }
+                >
+                  <Paragraph>Stijlrichtlijnen voor typografie, kleuren en iconen volgens de Rijkshuisstijl.</Paragraph>
+                </CardAsLink>
+              </Grid.Cell>
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 3,
+                  narrow: 3,
+                  wide: 3,
+                }}
+              >
+                <CardAsLink
+                  href="#"
+                  heading={
+                    <Heading appearanceLevel={4} level={3}>
+                      Componenten
+                    </Heading>
+                  }
+                >
+                  <Paragraph>
+                    Herbruikbare componenten, gebouwd op NL Design System, met Rijkshuisstijl-uiterlijk.
+                  </Paragraph>
+                </CardAsLink>
+              </Grid.Cell>
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 3,
+                  narrow: 3,
+                  wide: 3,
+                }}
+              >
+                <CardAsLink
+                  href="#"
+                  heading={
+                    <Heading appearanceLevel={4} level={3}>
+                      Voorbeelden
+                    </Heading>
+                  }
+                >
+                  <Paragraph>Patronen en templates voor veelvoorkomende Rijksoverheid-scenario&apos;s.</Paragraph>
+                </CardAsLink>
+              </Grid.Cell>
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 3,
+                  narrow: 3,
+                  wide: 3,
+                }}
+              >
+                <CardAsLink
+                  href="https://nldesignsystem.nl/"
+                  target="_blank"
+                  heading={
+                    <Heading appearanceLevel={4} level={3}>
+                      NL Design System ↗
+                    </Heading>
+                  }
+                >
+                  <Paragraph>Het fundament waarop onze componenten en richtlijnen zijn gebouwd.</Paragraph>
+                </CardAsLink>
+              </Grid.Cell>
+            </Grid>
+          </section>
+          {/* <Separator /> */}
+          {/* <section id="laatste-updates" className="rhc-templates-spacing-1">
+            <Heading level={2}>De laatste updates</Heading>
+            <Heading appearanceLevel={3} level={3}>
+              Update van 9 juni 2026
+            </Heading>
+            <Paragraph>
+              Een korte terugblik op de afgelopen periode: nieuwe componenten die zijn toegevoegd aan de Rijkshuisstijl
+              Community, de laatste ontwikkelingen rondom tooling en toegankelijkheid, en wat er de komende tijd op de
+              planning staat.
+            </Paragraph>
+            <ButtonLink href="#updates">Eerdere updates</ButtonLink>
+          </section> */}
+          <Separator />
+          <section id="over" className="rhc-templates-spacing-1">
+            <Heading level={2}>Bouw mee met de Rijkshuisstijl Community</Heading>
+            <Paragraph>
+              De Rijkshuisstijl Community groeit door de inbreng van Rijksoverheidsorganisaties die hun componenten,
+              kennis en ervaring delen. Of je nu een nieuw component hebt ontwikkeld, een verbetering signaleert of
+              gewoon wilt meedenken — er is een plek om bij te dragen, op het niveau dat bij jouw organisatie past.
+            </Paragraph>
+            <Grid paddingVertical="x-large">
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 3,
+                  narrow: 3,
+                  wide: 3,
+                }}
+              >
+                <Card
+                  className="rhc-card-as-link-no-link"
+                  heading={
+                    <Heading appearanceLevel={4} level={3}>
+                      Bouw mee aan componenten
+                    </Heading>
+                  }
+                >
+                  <Paragraph>
+                    Heeft jouw organisatie al componenten gebouwd op de Rijkshuisstijl? Draag ze bij zodat anderen ze
+                    kunnen hergebruiken.
+                  </Paragraph>
+                </Card>
+              </Grid.Cell>
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 3,
+                  narrow: 3,
+                  wide: 3,
+                }}
+              >
+                <Card
+                  className="rhc-card-as-link-no-link"
+                  heading={
+                    <Heading appearanceLevel={4} level={3}>
+                      Sluit aan bij de Open Hour
+                    </Heading>
+                  }
+                  linkLabel="Bekijk op GitHub"
+                >
+                  <Paragraph>
+                    Praat mee tijdens de Rijkshuisstijl Community Open Hour en deel ervaringen met andere organisaties.
+                  </Paragraph>
+                </Card>
+              </Grid.Cell>
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 3,
+                  narrow: 3,
+                  wide: 3,
+                }}
+              >
+                <Card
+                  className="rhc-card-as-link-no-link"
+                  heading={
+                    <Heading appearanceLevel={4} level={3}>
+                      Denk mee over richtlijnen
+                    </Heading>
+                  }
+                >
+                  <Paragraph>
+                    Geef feedback op de Rijkshuisstijl-richtlijnen en help mee om ze actueel en bruikbaar te houden.
+                  </Paragraph>
+                </Card>
+              </Grid.Cell>
+              <Grid.Cell
+                className="_ams-item"
+                span={{
+                  medium: 3,
+                  narrow: 3,
+                  wide: 3,
+                }}
+              >
+                <Card
+                  className="rhc-card-as-link-no-link"
+                  heading={
+                    <Heading appearanceLevel={4} level={3}>
+                      Draag bij op GitHub
+                    </Heading>
+                  }
+                  href="https://github.com/nl-design-system/rijkshuisstijl-community"
+                  linkLabel="Bekijk op GitHub"
+                >
+                  <Paragraph>
+                    Open source en zonder licentiekosten: meld een issue, doe een pull request of help bij het testen.
+                  </Paragraph>
+                </Card>
+              </Grid.Cell>
+            </Grid>
+          </section>
+          {/* <Separator /> */}
+          {/* <section id="community" className="rhc-templates-spacing-1">
+            <Heading level={2}>Wie doen er al mee?</Heading>
+            <Paragraph>Onderdeel van de bredere NL Design System community.</Paragraph>
+            <Paragraph>Rijksoverheid · Logius · RVO · UWV · Belastingdienst · + jouw organisatie</Paragraph>
+          </section>
+          <Separator /> */}
+          {/* <section id="updates" className="rhc-templates-spacing-2">
+            <Heading level={2}>Blijf op de hoogte</Heading>
             <div className="rhc-card-as-link-group">
               <CardAsLink
-                appearance="horizontal"
-                href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/README.md"
-                imageAlt=""
-                imagePresentation={true}
-                imageSrc="/placeholder.jpg"
-                target="_blank"
-                title="Lees hoe je in het algemeen van start gaat met de Rijkshuisstijl Community"
+                href="#"
                 heading={
                   <Heading appearanceLevel={4} level={3}>
-                    Aan de slag
+                    Open Hour
                   </Heading>
                 }
-              />
+              >
+                <Paragraph>
+                  Sluit aan bij de Rijkshuisstijl Community Open Hour om kennis en ervaringen te delen.
+                </Paragraph>
+              </CardAsLink>
               <CardAsLink
-                appearance="horizontal"
-                href="https://github.com/orgs/nl-design-system/projects/59"
-                imageAlt=""
-                imagePresentation={true}
-                imageSrc="/placeholder.jpg"
+                href="https://github.com/nl-design-system/rijkshuisstijl-community"
                 target="_blank"
-                title="Bekijk het Sprint Bord van de Rijkshuisstijl Community op GitHub"
                 heading={
                   <Heading appearanceLevel={4} level={3}>
-                    Sprint bord
+                    GitHub ↗
                   </Heading>
                 }
-              />
+              >
+                <Paragraph>Volg de ontwikkeling en draag bij aan onze repository.</Paragraph>
+              </CardAsLink>
               <CardAsLink
-                appearance="horizontal"
-                href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-css/library-css/README.md"
-                imageAlt=""
-                imagePresentation={true}
-                imageSrc="/placeholder.jpg"
+                href="https://nldesignsystem.nl/events/heartbeat/aanmelden/"
                 target="_blank"
-                title="Lees hoe je enkel de CSS van de Rijkshuisstijl Community kunt gebruiken"
                 heading={
                   <Heading appearanceLevel={4} level={3}>
-                    CSS
+                    Heartbeat ↗
                   </Heading>
                 }
-              />
-              <CardAsLink
-                appearance="horizontal"
-                href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/library-react/README.md"
-                imageAlt=""
-                imagePresentation={true}
-                imageSrc="/placeholder.jpg"
-                target="_blank"
-                title="Lees hoe je de React-componenten van de Rijkshuisstijl Community kunt gebruiken"
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    React
-                  </Heading>
-                }
-              />
-              <CardAsLink
-                appearance="horizontal"
-                href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/web-components/README.md"
-                imageAlt=""
-                imagePresentation={true}
-                imageSrc="/placeholder.jpg"
-                target="_blank"
-                title="Lees hoe je de Web Components van de Rijkshuisstijl Community kunt gebruiken"
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    Web Components
-                  </Heading>
-                }
-              />
-              <CardAsLink
-                appearance="horizontal"
-                href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-angular/README.md"
-                imageAlt=""
-                imagePresentation={true}
-                imageSrc="/placeholder.jpg"
-                target="_blank"
-                title="Lees hoe je de Angular-componenten van de Rijkshuisstijl Community kunt gebruiken"
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    Angular
-                  </Heading>
-                }
-              />
-              <CardAsLink
-                appearance="horizontal"
-                href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/README.md"
-                imageAlt=""
-                imagePresentation={true}
-                imageSrc="/placeholder.jpg"
-                target="_blank"
-                title="Lees hoe je de Twig-componenten van de Rijkshuisstijl Community kunt gebruiken"
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    Twig
-                  </Heading>
-                }
-              />
-              <CardAsLink
-                appearance="horizontal"
-                href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/proprietary/design-tokens/README.md"
-                imageAlt=""
-                imagePresentation={true}
-                imageSrc="/placeholder.jpg"
-                target="_blank"
-                title="Lees hoe je de Design Tokens van de Rijkshuisstijl Community kunt gebruiken"
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    Design Tokens
-                  </Heading>
-                }
-              />
+              >
+                <Paragraph>
+                  De 2-wekelijkse bijeenkomst van NL Design System, waar ook onze updates aan bod komen.
+                </Paragraph>
+              </CardAsLink>
             </div>
-          </section>
-
-          <section className="rhc-templates-spacing-1">
-            <Heading level={2}>Lees en leer</Heading>
-            <div className="rhc-card-as-link-group">
-              <CardAsLink
-                href="https://rijkshuisstijl-community.vercel.app/"
-                linkLabel="Bekijk de Rijkshuisstijl Community Storybook"
-                target="_blank"
-                description={
-                  <Paragraph>
-                    Storybook is een overzicht van al onze componenten en templates in verschillende frameworks, handig
-                    voor zowel designers als developers om snel te zien hoe iets eruitziet en werkt.
-                  </Paragraph>
-                }
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    Rijkshuisstijl Community Storybook
-                  </Heading>
-                }
-              />
-              <CardAsLink
-                href="https://github.com/nl-design-system/rijkshuisstijl-community/discussions/1505"
-                linkLabel="Ga naar de Rijkshuisstijl styling implementatie GitHub discussies"
-                target="_blank"
-                description={
-                  <Paragraph>
-                    Voor het inzichtelijker maken van designkeuzes, gebruiken we GitHub Discussions. Feedback op de
-                    hierin voorgestelde keuzes (ook bijv. een korte &apos;akkoord&apos;) is zeer welkom. Het delen van
-                    reeds zelfgemaakte designkeuzes wordt ook gewaardeerd.
-                  </Paragraph>
-                }
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    Rijkshuisstijl styling implementatie GitHub discussies
-                  </Heading>
-                }
-              />
-              <CardAsLink
-                href="https://www.nldesignsystem.nl/handboek/design-tokens/"
-                linkLabel="Lees alles over design tokens"
-                target="_blank"
-                description={
-                  <Paragraph>
-                    We werken toe naar één centrale JSON met design tokens, waarmee je eenvoudig componenten uit het NL
-                    Design System kunt stijlen volgens jouw Rijkshuisstijl-deelidentiteit.
-                  </Paragraph>
-                }
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    Design Tokens
-                  </Heading>
-                }
-              />
-              <CardAsLink
-                href="https://www.nldesignsystem.nl/handboek/designer/introductie/"
-                linkLabel="Lees hoe je mee ontwerpt aan het NL Design System"
-                target="_blank"
-                description={
-                  <Paragraph>
-                    Mee designen aan het NL Design System of gebruik maken van bestaande Figma componenten? Als designer
-                    vind je hier alle documentatie die je nodig hebt.
-                  </Paragraph>
-                }
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    Designer Handboek
-                  </Heading>
-                }
-              />
-              <CardAsLink
-                href="https://www.nldesignsystem.nl/handboek/developer/introductie/"
-                linkLabel="Lees hoe je mee ontwikkelt aan het de Rijkshuisstijl Community"
-                target="_blank"
-                description={
-                  <Paragraph>
-                    Mee ontwikkelen aan NL Design System of gebruik maken van bestaande componenten? Als developer vind
-                    je hier alle documentatie die je nodig hebt om te beginnen.
-                  </Paragraph>
-                }
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    Developer Handboek
-                  </Heading>
-                }
-              />
-              <CardAsLink
-                href="https://www.figma.com/design/Q5Imc7Xi9KnBQhcYI3Hytj/NL-Design-System---Bibliotheek---Rijkshuisstijl-Community"
-                linkLabel="Bekijk de NL Design System Rijkshuisstijl Bibliotheek in Figma"
-                target="_blank"
-                description={
-                  <Paragraph>
-                    Een duplicaat van de Voorbeeld bibliotheek van het NL Design System, waarin de design tokens van het
-                    RHC-project zijn toegepast. Deze setup maakt het mogelijk om stijlkeuzes te testen en inzichtelijk
-                    te maken. Door de design tokens via Token Studio in te laden, kun je tussen thema&apos;s schakelen
-                    en beoordelen of de stijl aansluit bij jouw organisatie.
-                  </Paragraph>
-                }
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    NL Design System Rijkshuisstijl Figma Bibliotheek
-                  </Heading>
-                }
-              />
-              <CardAsLink
-                href="https://www.figma.com/design/H4hSqpPbvFMLklDZgswwgd/NL-Design-System---Templates---Rijkshuisstijl"
-                linkLabel="Bekijk de Rijkshuisstijl Templates in Figma"
-                target="_blank"
-                description={
-                  <Paragraph>
-                    Beide bibliotheken zijn gekoppeld aan dit Figma bestand met templates en patronen voor gehele
-                    pagina&apos;s. Bestaande overheidswebsites zijn nagebouwd met NLDS-componenten en RHC-tokens, om te
-                    toetsen of stijl en componenten aansluiten bij de praktijk.
-                  </Paragraph>
-                }
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    NL Design System Rijkshuisstijl Figma Templates
-                  </Heading>
-                }
-              />
-              <CardAsLink
-                href="https://www.nldesignsystem.nl/handboek/estafettemodel/"
-                linkLabel="Lees over het estafettemodel van NL Design System"
-                target="_blank"
-                description={
-                  <Paragraph>
-                    Met deze aanpak maken we de beste en meest bruikbare componenten, patronen en richtlijnen te maken.
-                    Elk nieuw onderdeel volgt het estafette model en beweegt zich in een samenwerking tussen het
-                    kernteam en de community van begin tot eind door dit model.
-                  </Paragraph>
-                }
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    Estafettemodel
-                  </Heading>
-                }
-              />
-            </div>
-          </section>
-
-          <section className="rhc-templates-spacing-1">
-            <Heading level={2}>Kom in contact</Heading>
-            <div className="rhc-card-as-link-group">
-              <CardAsLink
-                appearance="full-bleed"
-                href="https://praatmee.codefor.nl/"
-                imageAlt=""
-                imagePresentation={true}
-                imageSrc="/placeholder.jpg"
-                target="_blank"
-                title="Volg en neem deel aan de slowchat van de huidige sprint op Slack"
-                description={
-                  <Paragraph>
-                    Volg en neem deel aan de slowchat van de huidige sprint op Code for NL Slack in
-                    #nl-design-system-developers
-                  </Paragraph>
-                }
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    Slack
-                  </Heading>
-                }
-              />
-              <CardAsLink
-                appearance="full-bleed"
-                description={<Paragraph>Neem deel aan de Rijkshuisstijl styling discussies</Paragraph>}
-                href="https://github.com/nl-design-system/rijkshuisstijl-community/discussions/1505"
-                imageAlt=""
-                imagePresentation={true}
-                imageSrc="/placeholder.jpg"
-                target="_blank"
-                title="Neem deel aan de Rijkshuisstijl styling discussies"
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    GitHub Discussies
-                  </Heading>
-                }
-              />
-              <CardAsLink
-                appearance="full-bleed"
-                description={<Paragraph>Neem contact op met de contributors op GitHub.</Paragraph>}
-                href="https://github.com/nl-design-system/rijkshuisstijl-community/graphs/contributors"
-                imageAlt=""
-                imagePresentation={true}
-                imageSrc="/placeholder.jpg"
-                target="_blank"
-                title="Neem contact op met de contributors op GitHub"
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    GitHub Contributors
-                  </Heading>
-                }
-              />
-              <CardAsLink
-                appearance="full-bleed"
-                description={<Paragraph>Of neem contact op met het NL Design System kernteam.</Paragraph>}
-                href="https://nldesignsystem.nl/project/kernteam/"
-                imageAlt=""
-                imagePresentation={true}
-                imageSrc="/placeholder.jpg"
-                target="_blank"
-                title="Neem contact op met het NL Design System kernteam"
-                heading={
-                  <Heading appearanceLevel={4} level={3}>
-                    Kernteam
-                  </Heading>
-                }
-              />
-            </div>
-          </section>
+          </section> */}
         </SharedMainPageContent>
       </PageBody>
       <SharedFooter />

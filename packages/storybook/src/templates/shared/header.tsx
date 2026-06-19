@@ -16,9 +16,9 @@ export default function SharedHeader() {
       className: pathname === '/' ? 'rhc-nav-bar__link--current' : '',
     },
     {
-      href: '/design-tokens/',
-      label: 'Design Tokens',
-      className: pathname === '/design-tokens/' ? 'rhc-nav-bar__link--current' : '',
+      href: '/handboek/',
+      label: 'Handboek',
+      className: pathname.startsWith('/handboek/') ? 'rhc-nav-bar__link--current' : '',
     },
     {
       href: '/voorbeelden/',

@@ -56,8 +56,12 @@ const getRichTextStyles = (components) => `
 @use "./mixin";
 
 .rhc-margin-block-end-wrapper {
---utrecht-space-around: 1;
-${components.map((mixinGroup) => `@include mixin.${mixinGroup[0].component}`).join(';\n')}
+  --utrecht-space-around: 1;
+  --utrecht-rich-text-stranger-margin-block-end: calc(var(--utrecht-space-around) * var(--rhc-space-3xl));
+  --utrecht-rich-text-acquaintance-margin-block-end: calc(var(--utrecht-space-around) * var(--rhc-space-xl));
+  --utrecht-rich-text-friend-margin-block-end: calc(var(--utrecht-space-around) * var(--rhc-space-md));
+  --utrecht-rich-text-best-friend-margin-block-end: calc(var(--utrecht-space-around) * var(--rhc-space-sm));
+${components.map((mixinGroup) => `  @include mixin.${mixinGroup[0].component}`).join(';\n')}
 }`;
 
 const spacings = getSpacings(spacingMatrix);
