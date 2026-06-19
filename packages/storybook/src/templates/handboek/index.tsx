@@ -7,7 +7,7 @@ import { navigation } from './navigation';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import './index.css';
-import { LinkList, Paragraph } from '@utrecht/component-library-react';
+import { LinkList } from '@utrecht/component-library-react';
 
 export default function Page() {
   return (
