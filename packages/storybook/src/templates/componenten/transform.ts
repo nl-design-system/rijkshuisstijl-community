@@ -46,7 +46,7 @@ const components: ComponentData[] = componentsInput.items.map((comp: ComponentIn
   href: `https://rijkshuisstijl-community.vercel.app/?path=/docs/rhc-${normalise(comp?.content?.title ?? '')}--docs`,
   linkLabel: 'Bekijk in Storybook',
   frameworks: [
-    'CSS',
+    ...(knownFrameworks.some((fw) => comp[fw] === 'Available') ? ['CSS'] : []),
     ...knownFrameworks.filter((fw) => comp[fw] === 'Available').map((fw) => readableFrameworkNames[fw] || fw),
   ],
   nlStatus: comp['nL Status'],
