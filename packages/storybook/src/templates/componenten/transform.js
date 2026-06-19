@@ -2,8 +2,8 @@ import components from './componenten';
 
 const knownFrameworks = ['react', 'angular', 'twig', 'web component'];
 
-const normalise = (name) => name.replace(/\s+/g, '-').toLowerCase();
-const normaliseSystem = (name) => name.replace(/\s+/g, '_').toLowerCase();
+const normalise = (name) => name.replaceAll(/\s+/, '-').toLowerCase();
+const normaliseSystem = (name) => name.replaceAll(/\s+/, '_').toLowerCase();
 
 const readableFrameworkNames = {
   react: 'React',

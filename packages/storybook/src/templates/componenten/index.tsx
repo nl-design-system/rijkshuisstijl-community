@@ -12,8 +12,8 @@ import {
   PageNumberNavigation,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
-import { IconCheck, IconPlus, IconSearch } from '@tabler/icons-react';
-import { BadgeList, ButtonLink, DataBadge, Icon } from '@utrecht/component-library-react';
+import { IconCheck, IconSearch } from '@tabler/icons-react';
+import { BadgeList, DataBadge, Icon } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 import React, {
   AnchorHTMLAttributes,
