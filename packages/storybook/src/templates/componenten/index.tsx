@@ -25,13 +25,25 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { type ComponentData } from './components-data';
+//import { type ComponentData } from './components-data';
 //import { allComponentsData } from './components-data';
 import allComponentsData from './transform';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
 import './index.css';
+
+type ComponentData = {
+  id: string;
+  title: string;
+  heading: string;
+  description: string;
+  href: string;
+  linkLabel: string;
+  frameworks: string[];
+  nlStatus?: string;
+  oorsprong?: string[];
+};
 
 const frameworkOptions: string[] = ['CSS', 'React', 'Angular', 'Web Components', 'Twig'];
 
@@ -414,9 +426,7 @@ export default function Componenten() {
                             {component.frameworks.map((framework) => (
                               <DataBadge
                                 aria-label={`${framework} filter ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
-                                helperText={`- Klik om filter te ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
                                 key={framework}
-                                pressed={selectedFrameworks.includes(framework)}
                                 value={framework}
                                 onClick={() => handleDataBadgeClick(framework)}
                               >
