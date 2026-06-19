@@ -1,26 +1,4 @@
-import componentsInput from './componenten';
-
-type ComponentInput = Partial<{
-  angular: string;
-  content: {
-    body: string;
-    id: string;
-    title: string;
-    type: string;
-  };
-  figma: string;
-  'figma URL': string;
-  'nL Status': string;
-  oorsprong: string;
-  'openstaande issues URL': string;
-  react: string;
-  'rijkshuisstijl interpretatie discussie URL': string;
-  title: string;
-  twig: string;
-  'web component': string;
-}> & {
-  id: string;
-};
+import componentsInput, { type ComponentInput } from './componenten';
 
 export type ComponentData = {
   id: string;
