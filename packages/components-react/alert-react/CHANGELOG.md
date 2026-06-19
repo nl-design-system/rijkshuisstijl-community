@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/alert-react
 
+## 3.1.2
+
+### Patch Changes
+
+- Updated dependencies [b3db8e1]
+  - @rijkshuisstijl-community/icon-react@3.1.2
+
 ## 3.1.1
 
 ### Patch Changes

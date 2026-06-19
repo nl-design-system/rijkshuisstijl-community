@@ -1,5 +1,14 @@
 # @rijkshuisstijl-community/file-react
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies [b3db8e1]
+  - @rijkshuisstijl-community/icon-react@3.1.2
+  - @rijkshuisstijl-community/alert-react@3.1.2
+  - @rijkshuisstijl-community/button-react@1.1.2
+
 ## 1.0.1
 
 ### Patch Changes
