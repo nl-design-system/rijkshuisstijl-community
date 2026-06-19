@@ -1,6 +1,3 @@
-// generate by running:
-// gh project item-list 83 --owner nl-design-system -L 200 --format json
-
 export type ComponentInput = Partial<{
   angular: string;
   'code = Figma qua design tokens': string;
@@ -32,6 +29,8 @@ type Input = {
   totalCount: number;
 };
 
+// generate by running:
+// gh project item-list 83 --owner nl-design-system -L 200 --format json
 export default {
   items: [
     {
@@ -594,7 +593,7 @@ export default {
       oorsprong: 'rhc',
       'openstaande issues URL':
         'https://github.com/nl-design-system/rijkshuisstijl-community/issues?q=state%3Aopen%20label%3Acomponent%2Fnavigation-bar',
-      react: 'Not available',
+      react: 'Available',
       title: 'Navigation Bar',
       twig: 'Not available',
       'web component': 'Not available',
