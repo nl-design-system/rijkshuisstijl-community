@@ -2,7 +2,7 @@
 
 import { Article, Heading, SideNav } from '@rijkshuisstijl-community/components-react';
 import { NavItems } from './NavItems';
-import { PageBodyContainer, PageBodyContent, PageBodyMain } from './PageBody';
+import { PageBodyContainer, PageBodyContent, PageBodyMain, PageBodySide } from './PageBody';
 import { navigation } from './navigation';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
@@ -13,10 +13,12 @@ export default function Page() {
     <>
       <SharedHeader />
       <PageBodyContainer>
-        <PageBodyContent layout="side-nav">
-          <SideNav className="rhc-side-nav" heading="Submenu">
-            <NavItems items={navigation} />
-          </SideNav>
+        <PageBodyContent layout="none">
+          <PageBodySide>
+            <SideNav className="rhc-side-nav" heading="Submenu">
+              <NavItems items={navigation} />
+            </SideNav>
+          </PageBodySide>
           <PageBodyMain>
             <Article>
               <div className="rhc-margin-block-end-wrapper">

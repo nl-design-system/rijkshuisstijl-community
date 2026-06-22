@@ -27,8 +27,8 @@ export default function Page() {
                 <Grid.Cell
                   className="_ams-item"
                   span={{
-                    medium: 10,
-                    narrow: 10,
+                    medium: 6,
+                    narrow: 3,
                     wide: 10,
                   }}
                 >
@@ -51,7 +51,7 @@ export default function Page() {
                   className="_ams-item"
                   span={{
                     medium: 2,
-                    narrow: 2,
+                    narrow: 1,
                     wide: 2,
                   }}
                 >

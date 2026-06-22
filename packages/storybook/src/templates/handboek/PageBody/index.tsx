@@ -20,31 +20,11 @@ PageBodyContainer.displayName = 'PageBodyContainer';
 
 export const PageBodyContent = forwardRef(
   (
-    {
-      children,
-      layout,
-      className,
-      ...restProps
-    }: PropsWithChildren<{ layout: string } & HTMLAttributes<HTMLDivElement>>,
-    ref: ForwardedRef<HTMLDivElement>,
+    { children }: PropsWithChildren<{ layout?: string } & HTMLAttributes<HTMLDivElement>>,
+    _ref: ForwardedRef<HTMLDivElement>,
   ) => (
     <div className="utrecht-page-body__content">
-      <Grid paddingVertical="x-large">
-        {/* <div
-        className={clsx(
-          'utrecht-page-body__content',
-          'rhc-page-body__content',
-          {
-            'rhc-page-body__content--side-nav': layout === 'side-nav',
-          },
-          className,
-        )}
-        {...restProps}
-        ref={ref}
-      > */}
-        {children}
-        {/* </div> */}
-      </Grid>
+      <Grid paddingVertical="x-large">{children}</Grid>
     </div>
   ),
 );
@@ -56,8 +36,8 @@ export const PageBodySide = ({ children }: PropsWithChildren<{}>) => {
     <Grid.Cell
       className="_ams-item"
       span={{
-        medium: 12,
-        narrow: 12,
+        medium: 8,
+        narrow: 4,
         wide: 3,
       }}
     >
@@ -73,8 +53,8 @@ export const PageBodyMain = ({ children }: PropsWithChildren<{}>) => {
     <Grid.Cell
       className="_ams-item"
       span={{
-        medium: 9,
-        narrow: 9,
+        medium: 8,
+        narrow: 4,
         wide: 9,
       }}
     >
