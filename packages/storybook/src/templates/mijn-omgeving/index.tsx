@@ -18,6 +18,7 @@ import {
   SideNav,
   SideNavItem,
   SideNavLink,
+  SideNavLinkLabel,
   SideNavList,
 } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
@@ -80,11 +81,14 @@ export const useSideNav = ({ items }: { items: typeof sideNav }) => ({
       <SideNavList key={index}>
         {items.map(({ href, icon, label, numberBadgeLabel, numberBadgeValue }) => (
           <SideNavItem key={href}>
-            <SideNavLink href={href} icon={icon}>
-              {label}
-              {numberBadgeLabel && numberBadgeValue ? (
-                <NumberBadge label={numberBadgeLabel}>{numberBadgeValue}</NumberBadge>
-              ) : null}
+            <SideNavLink href={href}>
+              <Icon icon={icon} />
+              <SideNavLinkLabel>
+                {label}
+                {numberBadgeLabel && numberBadgeValue ? (
+                  <NumberBadge label={numberBadgeLabel}>{numberBadgeValue}</NumberBadge>
+                ) : null}
+              </SideNavLinkLabel>
             </SideNavLink>
           </SideNavItem>
         ))}
@@ -125,7 +129,7 @@ export default function MijnOmgeving() {
       <PageBody className="utrecht-page-body--rhc-mijn-omgeving">
         <SharedMainPageContent>
           <SharedDisclaimer />
-          <SideNav className="rhc-side-nav" heading="Submenu" {...useSideNav({ items: sideNav })} />
+          <SideNav {...useSideNav({ items: sideNav })} />
           <section className={'rhc-page-main-content'}>
             <Heading level={1}>Welkom Bert Burger</Heading>
             <div>
