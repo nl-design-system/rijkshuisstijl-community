@@ -1,9 +1,5 @@
-'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
-
 import {
-  Article,
   Heading,
-  SideNav,
   Table,
   TableBody,
   TableCell,
@@ -12,19 +8,11 @@ import {
   TableRow,
 } from '@rijkshuisstijl-community/components-react';
 import { Code, Paragraph } from '@utrecht/component-library-react';
-import { CopyDesignTokenButton } from '../../../../design-tokens/CopyDesignTokenButton';
-import { NavItems } from '../../../NavItems';
-import { PageBodyContainer, PageBodyContent, PageBodyMain, PageBodySide } from '../../../PageBody';
-import { SpaceSample } from '../../../../design-tokens/SpaceSample';
-import { navigation } from '../../../navigation';
-import SharedFooter from '../../../../shared/footer';
-import SharedHeader from '../../../../shared/header';
-import '../../../index.css';
+import { CopyDesignTokenButton } from '../../../design-tokens/CopyDesignTokenButton';
+import { SpaceSample } from '../../../design-tokens/SpaceSample';
+import PageLayoutTwoColumnSidenav from '../../../../PageLayoutTwoColumnSidenav';
 
-type SpacingTable = Array<{
-  name: string;
-  path: Array<string>;
-}>;
+type SpacingTable = Array<{ name: string; path: Array<string> }>;
 
 const TableRows = ({ rows }: { rows: SpacingTable }) =>
   rows.map(({ name, path }) => (
@@ -62,41 +50,25 @@ const lintSizesTable: SpacingTable = [
 
 export default function Page() {
   return (
-    <>
-      <SharedHeader />
-      <PageBodyContainer>
-        <PageBodyContent layout="none">
-          <PageBodySide>
-            <SideNav className="rhc-side-nav" heading="Submenu">
-              <NavItems items={navigation} />
-            </SideNav>
-          </PageBodySide>
-          <PageBodyMain>
-            <Article>
-              <div className="rhc-margin-block-end-wrapper">
-                <Heading level={1}>Ruimte</Heading>
-                <Paragraph>
-                  Gebruik deze tokens in CSS voor bijvoorbeeld <Code>padding</Code>, <Code>margin</Code> en{' '}
-                  <Code>gap</Code>.
-                </Paragraph>
-                <Table className="utrecht-table--rhc-breakout-gutter">
-                  <TableHeader>
-                    <TableRow>
-                      <TableHeaderCell>Voorbeeld</TableHeaderCell>
-                      <TableHeaderCell>Design Token</TableHeaderCell>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    <TableRows rows={tshirtSizesTable} />
-                    <TableRows rows={lintSizesTable} />
-                  </TableBody>
-                </Table>
-              </div>
-            </Article>
-          </PageBodyMain>
-        </PageBodyContent>
-      </PageBodyContainer>
-      <SharedFooter />
-    </>
+    <PageLayoutTwoColumnSidenav>
+      <div className="rhc-margin-block-end-wrapper">
+        <Heading level={1}>Ruimte</Heading>
+        <Paragraph>
+          Gebruik deze tokens in CSS voor bijvoorbeeld <Code>padding</Code>, <Code>margin</Code> en <Code>gap</Code>.
+        </Paragraph>
+        <Table className="utrecht-table--rhc-breakout-gutter">
+          <TableHeader>
+            <TableRow>
+              <TableHeaderCell>Voorbeeld</TableHeaderCell>
+              <TableHeaderCell>Design Token</TableHeaderCell>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            <TableRows rows={tshirtSizesTable} />
+            <TableRows rows={lintSizesTable} />
+          </TableBody>
+        </Table>
+      </div>
+    </PageLayoutTwoColumnSidenav>
   );
 }
