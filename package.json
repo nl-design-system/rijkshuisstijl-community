@@ -16,7 +16,7 @@
   "engines": {
     "//": "Update @types/node to match the highest node version here",
     "node": ">=24 <=25",
-    "pnpm": "^10.17.0"
+    "pnpm": ">=8"
   },
   "workspaces": [
     "./apps/**",
@@ -107,5 +107,5 @@
     "watch:sd": "pnpm run --recursive watch:style-dictionary",
     "test-storybook:ci": "pnpm --filter @rijkshuisstijl-community/storybook run playwright:install && pnpm --filter @rijkshuisstijl-community/storybook exec vitest run --project=storybook"
   },
-  "packageManager": "pnpm@10.30.1+sha512.3590e550d5384caa39bd5c7c739f72270234b2f6059e13018f975c313b1eb9fefcc09714048765d4d9efe961382c312e624572c0420762bdc5d5940cdf9be73a"
+  "packageManager": "pnpm@11.8.0+sha512.c1f5e7c4cb241c8f174b743851d82f42b802324afc8b0f116b96adb15aa06664948dde36960a3ba1079ba5b4b29dd0140135b94b5b5f5263592249d68e555f26"
 }
