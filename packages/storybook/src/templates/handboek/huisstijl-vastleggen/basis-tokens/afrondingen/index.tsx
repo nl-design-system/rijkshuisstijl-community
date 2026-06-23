@@ -1,7 +1,7 @@
-import { Heading, TableCell, TableRow } from '@rijkshuisstijl-community/components-react';
+import { Heading } from '@rijkshuisstijl-community/components-react';
 import tokens from '@rijkshuisstijl-community/design-tokens/dist/index.tokens.json';
 import { BorderRadiusSample } from '../../../design-tokens/BorderRadiusSample';
-import { CopyDesignTokenButton } from '../../../design-tokens/CopyDesignTokenButton';
+import { DesignTokenRow } from '../../../design-tokens/DesignTokenRow';
 import { DesignTokenTable } from '../../../design-tokens/DesignTokenTable';
 import PageLayoutTwoColumnSidenav from '../../../../PageLayoutTwoColumnSidenav';
 
@@ -16,14 +16,9 @@ export default function Page() {
           {Object.entries(tokens['rhc']['border-radius'])
             .sort(([, valueA], [, valueB]) => Number.parseFloat(`${valueA}`) - Number.parseFloat(`${valueB}`))
             .map(([name, value]) => (
-              <TableRow key={name}>
-                <TableCell className="utrecht-table__cell--rhc-middle">
-                  <BorderRadiusSample value={`${value}`} />
-                </TableCell>
-                <TableCell className="utrecht-table__cell--rhc-middle">
-                  <CopyDesignTokenButton path={['rhc', 'border-radius', name]} />
-                </TableCell>
-              </TableRow>
+              <DesignTokenRow key={name} path={['rhc', 'border-radius', name]}>
+                <BorderRadiusSample value={`${value}`} />
+              </DesignTokenRow>
             ))}
           {[
             { name: 'quarter-lint', value: tokens['rhc']['size']['quarter-lint'] },
@@ -32,14 +27,9 @@ export default function Page() {
             { name: '2-lint', value: tokens['rhc']['size']['2-lint'] },
             { name: '3-lint', value: tokens['rhc']['size']['3-lint'] },
           ].map(({ name, value }) => (
-            <TableRow key={name}>
-              <TableCell className="utrecht-table__cell--rhc-middle">
-                <BorderRadiusSample value={value} />
-              </TableCell>
-              <TableCell className="utrecht-table__cell--rhc-middle">
-                <CopyDesignTokenButton path={['rhc', 'size', name]} />
-              </TableCell>
-            </TableRow>
+            <DesignTokenRow key={name} path={['rhc', 'size', name]}>
+              <BorderRadiusSample value={value} />
+            </DesignTokenRow>
           ))}
         </DesignTokenTable>
       </div>

@@ -1,25 +1,13 @@
-import { Heading, TableCell, TableRow } from '@rijkshuisstijl-community/components-react';
+import { Heading } from '@rijkshuisstijl-community/components-react';
 import { Code, Paragraph } from '@utrecht/component-library-react';
-import { CopyDesignTokenButton } from '../../../design-tokens/CopyDesignTokenButton';
+import { DesignTokenRow } from '../../../design-tokens/DesignTokenRow';
 import { DesignTokenTable } from '../../../design-tokens/DesignTokenTable';
 import { SpaceSample } from '../../../design-tokens/SpaceSample';
 import PageLayoutTwoColumnSidenav from '../../../../PageLayoutTwoColumnSidenav';
 
-type SpacingTable = Array<{ name: string; path: Array<string> }>;
+type SpacingEntry = { name: string; path: string[] };
 
-const TableRows = ({ rows }: { rows: SpacingTable }) =>
-  rows.map(({ name, path }) => (
-    <TableRow key={name}>
-      <TableCell className="utrecht-table__cell--rhc-middle">
-        <SpaceSample value={`var(--${path.join('-')})`} />
-      </TableCell>
-      <TableCell className="utrecht-table__cell--rhc-middle">
-        <CopyDesignTokenButton path={['rhc', 'space', name]} />
-      </TableCell>
-    </TableRow>
-  ));
-
-const tshirtSizesTable: SpacingTable = [
+const spacingEntries: SpacingEntry[] = [
   { name: 'none', path: ['rhc', 'space', 'none'] },
   { name: '2xs', path: ['rhc', 'space', '2xs'] },
   { name: 'xs', path: ['rhc', 'space', 'xs'] },
@@ -31,9 +19,6 @@ const tshirtSizesTable: SpacingTable = [
   { name: '3xl', path: ['rhc', 'space', '3xl'] },
   { name: '4xl', path: ['rhc', 'space', '4xl'] },
   { name: '5xl', path: ['rhc', 'space', '5xl'] },
-];
-
-const lintSizesTable: SpacingTable = [
   { name: 'quarter-lint', path: ['rhc', 'size', 'quarter-lint'] },
   { name: 'half-lint', path: ['rhc', 'size', 'half-lint'] },
   { name: 'lint', path: ['rhc', 'size', 'lint'] },
@@ -50,8 +35,11 @@ export default function Page() {
           Gebruik deze tokens in CSS voor bijvoorbeeld <Code>padding</Code>, <Code>margin</Code> en <Code>gap</Code>.
         </Paragraph>
         <DesignTokenTable>
-          <TableRows rows={tshirtSizesTable} />
-          <TableRows rows={lintSizesTable} />
+          {spacingEntries.map(({ name, path }) => (
+            <DesignTokenRow key={name} path={path}>
+              <SpaceSample value={`var(--${path.join('-')})`} />
+            </DesignTokenRow>
+          ))}
         </DesignTokenTable>
       </div>
     </PageLayoutTwoColumnSidenav>
