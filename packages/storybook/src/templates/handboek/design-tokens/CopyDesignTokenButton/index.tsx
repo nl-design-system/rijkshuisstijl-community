@@ -1,3 +1,5 @@
+'use client';
+
 import { IconCopy } from '@tabler/icons-react';
 import { Button } from '@utrecht/component-library-react';
 import { DesignTokenBadge } from '../DesignTokenBadge';
