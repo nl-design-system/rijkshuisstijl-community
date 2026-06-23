@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import Page from './design-tokens/color';
+import Page from './handboek/huisstijl-vastleggen/basis-tokens';
 import './globals.css';
 
 const meta: Meta = {
-  title: 'Design Tokens/Kleuren',
-  id: 'rhc-templates-design-tokens-color',
+  title: 'Handboek/huisstijl vastleggen/basis tokens',
+  id: 'rhc-templates-handboek-huisstijl-vastleggen-basis-tokens',
   component: Page,
   parameters: {
     layout: 'fullscreen',

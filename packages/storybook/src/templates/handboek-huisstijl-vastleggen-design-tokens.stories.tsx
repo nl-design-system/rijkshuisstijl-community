@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import Page from './design-tokens/font';
+import Page from './handboek/huisstijl-vastleggen/design-tokens';
 import './globals.css';
 
 const meta: Meta = {
-  title: 'Design Tokens/Lettertypes',
-  id: 'rhc-templates-design-tokens-font',
+  title: 'Handboek/huisstijl vastleggen/design tokens',
+  id: 'rhc-templates-handboek-huisstijl-vastleggen-design-tokens',
   component: Page,
   parameters: {
     layout: 'fullscreen',

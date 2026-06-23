@@ -84,4 +84,8 @@ export const navigation: NavItem[] = [
     href: '/handboek/voor-contentbeheerders/',
     label: 'Voor contentbeheerders',
   },
+  {
+    href: '/handboek/richtlijnen/',
+    label: 'Richtlijnen',
+  },
 ];

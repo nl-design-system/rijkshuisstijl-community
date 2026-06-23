@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import Page from './design-tokens/border-radius';
+import Page from './handboek/huisstijl-vastleggen';
 import './globals.css';
 
 const meta: Meta = {
-  title: 'Design Tokens/Afrondingen',
-  id: 'rhc-templates-design-tokens-border-radius',
+  title: 'Handboek/huisstijl vastleggen',
+  id: 'rhc-templates-handboek-huisstijl-vastleggen',
   component: Page,
   parameters: {
     layout: 'fullscreen',

@@ -24,6 +24,9 @@ export default function Page() {
           <LinkListLink href="/handboek/voor-projectleiders" icon={<Icon icon="chevron-right" />}>
             Voor projectleiders
           </LinkListLink>
+          <LinkListLink href="/handboek/richtlijnen" icon={<Icon icon="chevron-right" />}>
+            Richtlijnen
+          </LinkListLink>
         </LinkList>
       </div>
     </PageLayoutTwoColumnSidenav>
