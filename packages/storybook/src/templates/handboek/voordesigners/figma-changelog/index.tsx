@@ -1,3 +1,5 @@
+'use client'; // TODO: move Grid usage to a dedicated client component
+
 import { Grid } from '@amsterdam/design-system-react';
 import { Heading, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
 import '@amsterdam/design-system-css/dist/index.css';
