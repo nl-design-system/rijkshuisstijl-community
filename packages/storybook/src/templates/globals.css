@@ -136,35 +136,35 @@
 }
 
 .rhc-side-nav {
-  padding-right: 2em;
-  margin-right: 1em;
-  border-right: 1px solid var(--rhc-color-cool-grey-300);
+  border-inline-end: 1px solid var(--rhc-color-cool-grey-300);
+  margin-inline-end: 1em;
+  padding-inline-end: 2em;
 }
 .rhc-side-nav__list {
   .rhc-side-nav__list {
-    padding-left: 1rem;
+    padding-inline-start: 1rem;
   }
   .rhc-side-nav__link {
     position: relative;
   }
-  [aria-current='page'] {
+  [aria-current="page"] {
     font-weight: var(--rhc-font-weight-bold);
   }
-  [aria-expanded='true'] > .rhc-side-nav__link,
-  [aria-expanded='false'] > .rhc-side-nav__link {
-    &:after {
+  [aria-expanded="true"] > .rhc-side-nav__link,
+  [aria-expanded="false"] > .rhc-side-nav__link {
+    &::after {
+      inset-block-start: 0.8rem;
+      inset-inline-end: 0;
       position: absolute;
-      right: 0;
-      top: .8rem;
     }
   }
-  [aria-expanded='true'] > .rhc-side-nav__link {
-    &:after {
+  [aria-expanded="true"] > .rhc-side-nav__link {
+    &::after {
       content: "-";
     }
   }
-  [aria-expanded='false'] > .rhc-side-nav__link {
-    &:after {
+  [aria-expanded="false"] > .rhc-side-nav__link {
+    &::after {
       content: "+";
     }
   }
