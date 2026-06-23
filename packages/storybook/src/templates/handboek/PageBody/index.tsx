@@ -1,9 +1,9 @@
+import { Grid } from '@amsterdam/design-system-react';
+import '@amsterdam/design-system-css/dist/index.css';
 import clsx from 'clsx';
 import { forwardRef } from 'react';
 import type { ForwardedRef, HTMLAttributes, PropsWithChildren } from 'react';
 import './index.css';
-import { Grid } from '@amsterdam/design-system-react';
-import '@amsterdam/design-system-css/dist/index.css';
 
 export const PageBodyContainer = forwardRef(
   (
@@ -18,18 +18,11 @@ export const PageBodyContainer = forwardRef(
 
 PageBodyContainer.displayName = 'PageBodyContainer';
 
-export const PageBodyContent = forwardRef(
-  (
-    { children }: PropsWithChildren<{ layout?: string } & HTMLAttributes<HTMLDivElement>>,
-    _ref: ForwardedRef<HTMLDivElement>,
-  ) => (
-    <div className="utrecht-page-body__content">
-      <Grid paddingVertical="x-large">{children}</Grid>
-    </div>
-  ),
+export const PageBodyContent = ({ children }: PropsWithChildren<{ layout?: string } & HTMLAttributes<HTMLDivElement>>) => (
+  <div className="utrecht-page-body__content">
+    <Grid paddingVertical="x-large">{children}</Grid>
+  </div>
 );
-
-PageBodyContent.displayName = 'PageBodyContent';
 
 export const PageBodySide = ({ children }: PropsWithChildren<{}>) => {
   return (

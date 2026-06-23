@@ -1,9 +1,9 @@
 import { Heading } from '@rijkshuisstijl-community/components-react';
 import tokens from '@rijkshuisstijl-community/design-tokens/dist/index.tokens.json';
+import PageLayoutTwoColumnSidenav from '../../../../PageLayoutTwoColumnSidenav';
 import { BorderRadiusSample } from '../../../design-tokens/BorderRadiusSample';
 import { DesignTokenRow } from '../../../design-tokens/DesignTokenRow';
 import { DesignTokenTable } from '../../../design-tokens/DesignTokenTable';
-import PageLayoutTwoColumnSidenav from '../../../../PageLayoutTwoColumnSidenav';
 
 export default function Page() {
   return (

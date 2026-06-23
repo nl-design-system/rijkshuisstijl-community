@@ -1,10 +1,10 @@
 import { Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
 import tokens from '@rijkshuisstijl-community/design-tokens/dist/index.tokens.json';
+import PageLayoutTwoColumnSidenav from '../../../../PageLayoutTwoColumnSidenav';
 import { DesignTokenRow } from '../../../design-tokens/DesignTokenRow';
 import { DesignTokenTable } from '../../../design-tokens/DesignTokenTable';
 import { FontSample } from '../../../design-tokens/FontSample';
 import { LineHeightSample } from '../../../design-tokens/LineHeightSample';
-import PageLayoutTwoColumnSidenav from '../../../../PageLayoutTwoColumnSidenav';
 
 export default function Page() {
   return (

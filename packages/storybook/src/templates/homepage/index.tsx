@@ -1,8 +1,8 @@
 'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
 
+import { Grid } from '@amsterdam/design-system-react';
 import { ButtonLink, Card, CardAsLink, Heading, Paragraph, Separator } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
-import { Grid } from '@amsterdam/design-system-react';
 import '@amsterdam/design-system-css/dist/index.css';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
@@ -14,7 +14,7 @@ export default function Page() {
       <SharedHeader />
       <PageBody className="utrecht-page-body--rhc-tinted rhc-templates-spacing-2">
         <SharedMainPageContent>
-          <section id="intro" className="rhc-templates-spacing-2">
+          <section className="rhc-templates-spacing-2" id="intro">
             <Grid paddingVertical="x-large">
               <Grid.Cell
                 className="_ams-item"
@@ -55,7 +55,7 @@ export default function Page() {
       </PageBody>
       <PageBody>
         <SharedMainPageContent>
-          <section id="nl-design-system" className="rhc-templates-spacing-1">
+          <section className="rhc-templates-spacing-1" id="nl-design-system">
             <Heading level={2}>Wat is NL Design System?</Heading>
             <Paragraph>
               NL Design System is een samenwerkingsverband van overheidsorganisaties die samen bouwen aan herbruikbare,
@@ -73,13 +73,13 @@ export default function Page() {
                 }}
               >
                 <Card
+                  href="https://nldesignsystem.nl/project/"
+                  linkLabel="Bekijk Over NL Design System"
                   heading={
                     <Heading appearanceLevel={4} level={3}>
                       Over NL Design System
                     </Heading>
                   }
-                  href="https://nldesignsystem.nl/project/"
-                  linkLabel="Bekijk Over NL Design System"
                 >
                   <Paragraph>
                     De basiswaarden voor kleur, typografie, ruimte en meer, waarmee elke organisatie zijn eigen
@@ -96,13 +96,13 @@ export default function Page() {
                 }}
               >
                 <Card
+                  href="https://nldesignsystem.nl/componenten/"
+                  linkLabel="Bekijk Componenten"
                   heading={
                     <Heading appearanceLevel={4} level={3}>
                       Componenten
                     </Heading>
                   }
-                  href="https://nldesignsystem.nl/componenten/"
-                  linkLabel="Bekijk Componenten"
                 >
                   <Paragraph>
                     Herbruikbare, toegankelijke bouwstenen voor formulieren, navigatie, tabellen en meer.
@@ -118,13 +118,13 @@ export default function Page() {
                 }}
               >
                 <Card
+                  href="https://nldesignsystem.nl/richtlijnen/"
+                  linkLabel="Bekijk Richtlijnen en Toegankelijkheid (WCAG)"
                   heading={
                     <Heading appearanceLevel={4} level={3}>
                       Richtlijnen en Toegankelijkheid (WCAG)
                     </Heading>
                   }
-                  href="https://nldesignsystem.nl/richtlijnen/"
-                  linkLabel="Bekijk Richtlijnen en Toegankelijkheid (WCAG)"
                 >
                   <Paragraph>
                     Componenten en richtlijnen die voldoen aan de toegankelijkheidseisen voor de overheid.
@@ -140,13 +140,13 @@ export default function Page() {
                 }}
               >
                 <Card
+                  href="https://nldesignsystem.nl/community/"
+                  linkLabel="Bekijk Open community"
                   heading={
                     <Heading appearanceLevel={4} level={3}>
                       Open community
                     </Heading>
                   }
-                  href="https://nldesignsystem.nl/community/"
-                  linkLabel="Bekijk Open community"
                 >
                   <Paragraph>Open source, zonder licentiekosten, met ruimte om op elk niveau mee te doen.</Paragraph>
                 </Card>
@@ -158,7 +158,7 @@ export default function Page() {
             </ButtonLink>
           </section>
           <Separator />
-          <section id="richtlijnen" className="rhc-templates-spacing-1">
+          <section className="rhc-templates-spacing-1" id="richtlijnen">
             <Heading level={2}>Waar begin je met de Rijkshuisstijl?</Heading>
             <Paragraph>
               Of je nu websites bouwt, designs maakt, content beheert of projecten leidt — hier vind je de juiste
@@ -174,13 +174,13 @@ export default function Page() {
                 }}
               >
                 <Card
+                  href="/handboek/voor-ontwikkelaars"
+                  linkLabel="Bekijk Voor ontwikkelaars"
                   heading={
                     <Heading appearanceLevel={4} level={3}>
                       Als je bouwt
                     </Heading>
                   }
-                  href="/handboek/voor-ontwikkelaars"
-                  linkLabel="Bekijk Voor ontwikkelaars"
                 >
                   <Paragraph>
                     Aan de slag met onze componenten, gebaseerd op NL Design System, in jouw codebase.
@@ -196,13 +196,13 @@ export default function Page() {
                 }}
               >
                 <Card
+                  href="/handboek/voor-designers"
+                  linkLabel="Bekijk Voor designers"
                   heading={
                     <Heading appearanceLevel={4} level={3}>
                       Als je ontwerpt
                     </Heading>
                   }
-                  href="/handboek/voor-designers"
-                  linkLabel="Bekijk Voor designers"
                 >
                   <Paragraph>Gebruik onze Figma-bibliotheek met Rijkshuisstijl-componenten en design tokens.</Paragraph>
                 </Card>
@@ -216,13 +216,13 @@ export default function Page() {
                 }}
               >
                 <Card
+                  href="/handboek/voor-contentbeheerders"
+                  linkLabel="Bekijk Voor contentbeheerders"
                   heading={
                     <Heading appearanceLevel={4} level={3}>
                       Als je content beheert
                     </Heading>
                   }
-                  href="/handboek/voor-contentbeheerders"
-                  linkLabel="Bekijk Voor contentbeheerders"
                 >
                   <Paragraph>Richtlijnen voor toegankelijke en consistente content binnen de Rijkshuisstijl.</Paragraph>
                 </Card>
@@ -236,13 +236,13 @@ export default function Page() {
                 }}
               >
                 <Card
+                  href="/handboek/voor-projectleiders"
+                  linkLabel="Bekijk Voor projectleiders"
                   heading={
                     <Heading appearanceLevel={4} level={3}>
                       Als je projecten leidt
                     </Heading>
                   }
-                  href="/handboek/voor-projectleiders"
-                  linkLabel="Bekijk Voor projectleiders"
                 >
                   <Paragraph>Herbruikbare oplossingen die tijd en budget besparen voor jouw organisatie.</Paragraph>
                 </Card>
@@ -250,7 +250,7 @@ export default function Page() {
             </Grid>
           </section>
           <Separator />
-          <section id="componenten" className="rhc-templates-spacing-1">
+          <section className="rhc-templates-spacing-1" id="componenten">
             <Heading level={2}>Gebruik de Rijkshuisstijl</Heading>
             <Paragraph>
               Net als NL Design System bieden we documentatie, componenten en voorbeelden — met de Rijkshuisstijl als
@@ -352,7 +352,7 @@ export default function Page() {
             <ButtonLink href="#updates">Eerdere updates</ButtonLink>
           </section> */}
           <Separator />
-          <section id="over" className="rhc-templates-spacing-1">
+          <section className="rhc-templates-spacing-1" id="over">
             <Heading level={2}>Bouw mee met de Rijkshuisstijl Community</Heading>
             <Paragraph>
               De Rijkshuisstijl Community groeit door de inbreng van Rijksoverheidsorganisaties die hun componenten,
@@ -392,12 +392,12 @@ export default function Page() {
               >
                 <Card
                   className="rhc-card-as-link-no-link"
+                  linkLabel="Bekijk op GitHub"
                   heading={
                     <Heading appearanceLevel={4} level={3}>
                       Sluit aan bij de Open Hour
                     </Heading>
                   }
-                  linkLabel="Bekijk op GitHub"
                 >
                   <Paragraph>
                     Praat mee tijdens de Rijkshuisstijl Community Open Hour en deel ervaringen met andere organisaties.
@@ -435,13 +435,13 @@ export default function Page() {
               >
                 <Card
                   className="rhc-card-as-link-no-link"
+                  href="https://github.com/nl-design-system/rijkshuisstijl-community"
+                  linkLabel="Bekijk op GitHub"
                   heading={
                     <Heading appearanceLevel={4} level={3}>
                       Draag bij op GitHub
                     </Heading>
                   }
-                  href="https://github.com/nl-design-system/rijkshuisstijl-community"
-                  linkLabel="Bekijk op GitHub"
                 >
                   <Paragraph>
                     Open source en zonder licentiekosten: meld een issue, doe een pull request of help bij het testen.

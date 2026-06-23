@@ -1,6 +1,6 @@
 import { SideNavItem, SideNavLink, SideNavList } from '@rijkshuisstijl-community/components-react';
-import type { NavItem } from './navigation';
 import { useEffect, useState } from 'react';
+import type { NavItem } from './navigation';
 
 const normalize = (path: string) => path.replace(/\/$/, '');
 
@@ -14,7 +14,7 @@ export const NavItems = ({
   items: NavItem[];
   currentPath?: string;
 }) => {
-  const [clientPath, setClientPath] = useState<string | undefined>(undefined);
+  const [clientPath, setClientPath] = useState<string | undefined>();
 
   useEffect(() => {
     setClientPath(globalThis.location.pathname);
@@ -29,10 +29,10 @@ export const NavItems = ({
           children && children.length > 0 && activePath !== undefined && isAncestorActive(href, activePath);
         return (
           <SideNavItem key={href} {...(children && children.length > 0 ? { 'aria-expanded': Boolean(expanded) } : {})}>
-            <SideNavLink href={href} current={activePath !== undefined && normalize(activePath) === normalize(href)}>
+            <SideNavLink current={activePath !== undefined && normalize(activePath) === normalize(href)} href={href}>
               {label}
             </SideNavLink>
-            {expanded && <NavItems items={children!} currentPath={activePath} />}
+            {expanded && <NavItems currentPath={activePath} items={children!} />}
           </SideNavItem>
         );
       })}

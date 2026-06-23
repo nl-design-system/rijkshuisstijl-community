@@ -1,9 +1,9 @@
 import { Heading, Link, Paragraph, TableCell, TableRow } from '@rijkshuisstijl-community/components-react';
 import tokens from '@rijkshuisstijl-community/design-tokens/dist/index.tokens.json';
 import { ColorSample } from '@utrecht/component-library-react';
+import PageLayoutTwoColumnSidenav from '../../../../PageLayoutTwoColumnSidenav';
 import { CopyDesignTokenButton } from '../../../design-tokens/CopyDesignTokenButton';
 import { DesignTokenTable } from '../../../design-tokens/DesignTokenTable';
-import PageLayoutTwoColumnSidenav from '../../../../PageLayoutTwoColumnSidenav';
 
 const colors: { label: string; path: string[]; tokens: { [index: string]: string } }[] = [
   { label: 'Lintblauw', path: ['rhc', 'color', 'lintblauw'], tokens: tokens['rhc']['color']['lintblauw'] },
@@ -39,7 +39,7 @@ export default function Page() {
           </Paragraph>
         </div>
         {colors.map(({ label, tokens, path }) => (
-          <div key={label} className="rhc-templates-spacing-2">
+          <div className="rhc-templates-spacing-2" key={label}>
             <Heading level={2}>{label}</Heading>
             <DesignTokenTable>
               {Object.entries(tokens).map(([name, value]) => (

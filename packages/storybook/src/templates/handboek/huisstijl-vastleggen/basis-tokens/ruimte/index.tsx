@@ -1,9 +1,9 @@
 import { Heading } from '@rijkshuisstijl-community/components-react';
 import { Code, Paragraph } from '@utrecht/component-library-react';
+import PageLayoutTwoColumnSidenav from '../../../../PageLayoutTwoColumnSidenav';
 import { DesignTokenRow } from '../../../design-tokens/DesignTokenRow';
 import { DesignTokenTable } from '../../../design-tokens/DesignTokenTable';
 import { SpaceSample } from '../../../design-tokens/SpaceSample';
-import PageLayoutTwoColumnSidenav from '../../../../PageLayoutTwoColumnSidenav';
 
 type SpacingEntry = { name: string; path: string[] };
 

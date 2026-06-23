@@ -2,14 +2,14 @@
 
 import { Article, SideNav } from '@rijkshuisstijl-community/components-react';
 import type { PropsWithChildren } from 'react';
-import SharedFooter from './shared/footer';
-import SharedHeader from './shared/header';
 import { NavItems } from './handboek/NavItems';
 import { PageBodyContainer, PageBodyContent, PageBodyMain, PageBodySide } from './handboek/PageBody';
 import './handboek/index.css';
 import { navigation } from './handboek/navigation';
+import SharedFooter from './shared/footer';
+import SharedHeader from './shared/header';
 
-export default function PageLayoutTwoColumnSidenav({ children }: PropsWithChildren) {
+export default function PageLayoutTwoColumnSidenav({ children }: Readonly<PropsWithChildren>) {
   return (
     <>
       <SharedHeader />
