@@ -1,17 +1,8 @@
-import {
-  Heading,
-  Link,
-  Paragraph,
-  Table,
-  TableBody,
-  TableCell,
-  TableHeader,
-  TableHeaderCell,
-  TableRow,
-} from '@rijkshuisstijl-community/components-react';
+import { Heading, Link, Paragraph, TableCell, TableRow } from '@rijkshuisstijl-community/components-react';
 import tokens from '@rijkshuisstijl-community/design-tokens/dist/index.tokens.json';
 import { ColorSample } from '@utrecht/component-library-react';
 import { CopyDesignTokenButton } from '../../../design-tokens/CopyDesignTokenButton';
+import { DesignTokenTable } from '../../../design-tokens/DesignTokenTable';
 import PageLayoutTwoColumnSidenav from '../../../../PageLayoutTwoColumnSidenav';
 
 const colors: { label: string; path: string[]; tokens: { [index: string]: string } }[] = [
@@ -50,26 +41,18 @@ export default function Page() {
         {colors.map(({ label, tokens, path }) => (
           <div key={label} className="rhc-templates-spacing-2">
             <Heading level={2}>{label}</Heading>
-            <Table className="utrecht-table--rhc-breakout-gutter">
-              <TableHeader>
-                <TableRow>
-                  <TableHeaderCell>Voorbeeld</TableHeaderCell>
-                  <TableHeaderCell>Design Token</TableHeaderCell>
+            <DesignTokenTable>
+              {Object.entries(tokens).map(([name, value]) => (
+                <TableRow key={name}>
+                  <TableCell className="utrecht-table__cell--rhc-fill utrecht-table__cell--rhc-color-sample">
+                    <ColorSample className="rhc-color-sample--table-cell" color={String(value) || ''} />
+                  </TableCell>
+                  <TableCell className="utrecht-table__cell--rhc-middle">
+                    <CopyDesignTokenButton path={[...path, name]} />
+                  </TableCell>
                 </TableRow>
-              </TableHeader>
-              <TableBody>
-                {Object.entries(tokens).map(([name, value]) => (
-                  <TableRow key={name}>
-                    <TableCell className="utrecht-table__cell--rhc-fill utrecht-table__cell--rhc-color-sample">
-                      <ColorSample className="rhc-color-sample--table-cell" color={String(value) || ''} />
-                    </TableCell>
-                    <TableCell className="utrecht-table__cell--rhc-middle">
-                      <CopyDesignTokenButton path={[...path, name]} />
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
+              ))}
+            </DesignTokenTable>
           </div>
         ))}
       </div>

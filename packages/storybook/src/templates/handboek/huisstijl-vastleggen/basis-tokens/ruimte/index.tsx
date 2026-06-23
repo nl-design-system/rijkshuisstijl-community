@@ -1,14 +1,7 @@
-import {
-  Heading,
-  Table,
-  TableBody,
-  TableCell,
-  TableHeader,
-  TableHeaderCell,
-  TableRow,
-} from '@rijkshuisstijl-community/components-react';
+import { Heading, TableCell, TableRow } from '@rijkshuisstijl-community/components-react';
 import { Code, Paragraph } from '@utrecht/component-library-react';
 import { CopyDesignTokenButton } from '../../../design-tokens/CopyDesignTokenButton';
+import { DesignTokenTable } from '../../../design-tokens/DesignTokenTable';
 import { SpaceSample } from '../../../design-tokens/SpaceSample';
 import PageLayoutTwoColumnSidenav from '../../../../PageLayoutTwoColumnSidenav';
 
@@ -56,18 +49,10 @@ export default function Page() {
         <Paragraph>
           Gebruik deze tokens in CSS voor bijvoorbeeld <Code>padding</Code>, <Code>margin</Code> en <Code>gap</Code>.
         </Paragraph>
-        <Table className="utrecht-table--rhc-breakout-gutter">
-          <TableHeader>
-            <TableRow>
-              <TableHeaderCell>Voorbeeld</TableHeaderCell>
-              <TableHeaderCell>Design Token</TableHeaderCell>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            <TableRows rows={tshirtSizesTable} />
-            <TableRows rows={lintSizesTable} />
-          </TableBody>
-        </Table>
+        <DesignTokenTable>
+          <TableRows rows={tshirtSizesTable} />
+          <TableRows rows={lintSizesTable} />
+        </DesignTokenTable>
       </div>
     </PageLayoutTwoColumnSidenav>
   );
