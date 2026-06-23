@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/file-input-react
 
+## 2.0.2
+
+### Patch Changes
+
+- @rijkshuisstijl-community/button-react@1.1.2
+- @rijkshuisstijl-community/file-react@1.0.2
+
 ## 2.0.1
 
 ### Patch Changes
