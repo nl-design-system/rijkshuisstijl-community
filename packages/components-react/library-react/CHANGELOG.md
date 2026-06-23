@@ -1,5 +1,25 @@
 # @rijkshuisstijl-community/components-react
 
+## 15.1.2
+
+### Patch Changes
+
+- Updated dependencies [b3db8e1]
+- Updated dependencies [8d20001]
+  - @rijkshuisstijl-community/icon-react@3.1.2
+  - @rijkshuisstijl-community/pre-heading-react@1.0.0
+  - @rijkshuisstijl-community/alert-react@3.1.2
+  - @rijkshuisstijl-community/button-react@1.1.2
+  - @rijkshuisstijl-community/file-react@1.0.2
+  - @rijkshuisstijl-community/footer-react@1.0.2
+  - @rijkshuisstijl-community/language-navigation-react@1.0.2
+  - @rijkshuisstijl-community/message-list-item-react@0.0.3
+  - @rijkshuisstijl-community/navigation-bar-react@1.0.2
+  - @rijkshuisstijl-community/navigation-list-item-react@1.0.2
+  - @rijkshuisstijl-community/toggletip-react@1.0.2
+  - @rijkshuisstijl-community/rounded-corner-react@1.0.1
+  - @rijkshuisstijl-community/file-input-react@2.0.2
+
 ## 15.1.1
 
 ### Patch Changes
