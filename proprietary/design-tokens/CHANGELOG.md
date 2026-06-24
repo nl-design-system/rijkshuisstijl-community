@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 16.1.0
+
+### Minor Changes
+
+- 9cfac08: - Page Number Navigation tokens van Amsterdam bijgewerkt: juiste types toegekend en missende tokens toegevoegd.
+
 ## 16.0.1
 
 ### Patch Changes
