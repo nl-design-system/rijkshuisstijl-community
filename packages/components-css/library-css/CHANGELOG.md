@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/components-css
 
+## 17.1.2
+
+### Patch Changes
+
+- Updated dependencies [8d20001]
+  - @rijkshuisstijl-community/pre-heading-css@1.0.0
+
 ## 17.1.1
 
 ### Patch Changes
