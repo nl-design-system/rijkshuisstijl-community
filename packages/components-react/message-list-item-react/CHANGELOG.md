@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/message-list-item-react
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [b3db8e1]
+  - @rijkshuisstijl-community/icon-react@3.1.2
+
 ## 0.0.2
 
 ### Patch Changes
