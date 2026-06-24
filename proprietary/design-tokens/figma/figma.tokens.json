@@ -8340,7 +8340,7 @@
       "drawer": {
         "max-inline-size": {
           "$type": "dimension",
-          "$value": "16rem"
+          "$value": "1440px"
         },
         "z-index": {
           "$type": "dimension",
@@ -8368,23 +8368,69 @@
         },
         "max-block-size": {
           "$type": "dimension",
-          "$value": "15rem"
+          "$value": "800px"
         },
         "padding-block-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.xl}"
+          "$value": "{rhc.space.5xl}"
         },
         "padding-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.xl}"
+          "$value": "{rhc.space.5xl}"
         },
         "padding-inline-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.xl}"
+          "$value": "{rhc.space.5xl}"
         },
         "padding-inline-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.xl}"
+          "$value": "{rhc.space.5xl}"
+        },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{rhc.border-radius.none}"
+        },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "{rhc.size.pointer-target}"
+        },
+        "min-inline-size": {
+          "$type": "dimension",
+          "$value": "312px"
+        },
+        "backdrop": {
+          "min-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.pointer-target}"
+          }
+        }
+      }
+    },
+    "rhc": {
+      "drawer": {
+        "header": {
+          "border-color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          },
+          "border-block-end-width": {
+            "$type": "dimension",
+            "$value": "{basis.border-width.sm}"
+          }
+        },
+        "body": {
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          }
+        },
+        "margin-block-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.5xl}"
         }
       }
     }
