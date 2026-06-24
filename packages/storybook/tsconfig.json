@@ -10,6 +10,13 @@
     }
   },
   "extends": "../../tsconfig.json",
-  "include": ["src/**/*.ts", "src/**/*.tsx", ".storybook/**/*.tsx", ".storybook/**/*.ts", "./types/twig.d.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    ".storybook/**/*.tsx",
+    ".storybook/**/*.ts",
+    "./types/twig.d.ts",
+    "./types/css.d.ts"
+  ],
   "exclude": ["**/node_modules/*"]
 }

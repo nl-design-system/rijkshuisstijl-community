@@ -1,7 +1,14 @@
 'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
 
 import { Grid } from '@amsterdam/design-system-react';
-import { ButtonLink, Card, CardAsLink, Heading, Paragraph, Separator } from '@rijkshuisstijl-community/components-react';
+import {
+  ButtonLink,
+  Card,
+  CardAsLink,
+  Heading,
+  Paragraph,
+  Separator,
+} from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
 import '@amsterdam/design-system-css/dist/index.css';
 import SharedFooter from '../shared/footer';
@@ -153,7 +160,7 @@ export default function Page() {
               </Grid.Cell>
             </Grid>
 
-            <ButtonLink href="https://nldesignsystem.nl/" target="_blank">
+            <ButtonLink appearance="primary-action-button" href="https://nldesignsystem.nl/" target="_blank">
               Bekijk NL Design System
             </ButtonLink>
           </section>
