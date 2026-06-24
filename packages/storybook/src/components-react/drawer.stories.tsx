@@ -1,6 +1,41 @@
-import { Drawer, Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
+import {
+  Button,
+  DataSummary,
+  DataSummaryItem,
+  Drawer,
+  Heading,
+  IconButton,
+  Paragraph,
+} from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './drawer.md?raw';
+
+const drawerChildren = [
+  <header className="utrecht-drawer__header" key="header" style={{ justifyContent: 'space-between' }}>
+    <Heading appearanceLevel={3} level={2}>
+      Drawer title
+    </Heading>
+    <IconButton appearance="secondary-action-button" icon="kruis" label="Sluiten" />
+  </header>,
+  <div className="utrecht-drawer__body" key="body">
+    <Paragraph>
+      Lorem ipsum dolor sit amet consectetur. Morbi sed faucibus arcu turpis. Urna ante odio neque euismod quis. Magna
+      velit pharetra varius tristique nisi placerat. Rhoncus elementum et porttitor ullamcorper.
+    </Paragraph>
+    <Heading appearanceLevel={5} level={3}>
+      Datalist
+    </Heading>
+    <DataSummary appearance="row">
+      <DataSummaryItem itemKey="2025 - 2026" itemValue="Ontwerp, aanvraag vergunningen en start aanbesteding" />
+      <DataSummaryItem itemKey="2026" itemValue="Definitieve gunning en planning werkzaamheden" />
+      <DataSummaryItem itemKey="2027" itemValue="In werking stellen van de vispassage" />
+    </DataSummary>
+    <Paragraph>Deze planning kan nog veranderen.</Paragraph>
+  </div>,
+  <footer className="utrecht-drawer__footer" key="footer">
+    <Button appearance="primary-action-button">Ja ik doe mee</Button>
+  </footer>,
+];
 
 const meta = {
   title: 'Drawer',
@@ -33,7 +68,7 @@ const meta = {
     nldesignsystem: 'https://www.nldesignsystem.nl/drawer',
     figma:
       'https://www.figma.com/design/3cORTNo1mrlNBUtU5a8YXK/NL-Design-System---Bibliotheek--Community-?node-id=6021-5140',
-    componentOrigin: 'Dit component is overgenomen van Utrech Drawer',
+    componentOrigin: 'Dit component is overgenomen van Utrecht Drawer',
     docs: {
       description: {
         component: readme,
@@ -48,66 +83,32 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: [
-      <Heading level={1}>Lorem ipsum</Heading>,
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
-      </Paragraph>,
-    ],
+    align: 'inline-start',
+    className:
+      'rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-end rhc-rounded-corner--position-end-end',
+    children: drawerChildren,
     open: true,
   },
-};
-
-export const InlineStart: Story = {
-  args: {
-    ...Default.args,
-    align: 'inline-start',
-  },
-  name: 'inline-start alignment',
 };
 
 export const InlineEnd: Story = {
   args: {
-    ...Default.args,
     align: 'inline-end',
+    className:
+      'rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-start rhc-rounded-corner--position-end-start',
+    children: drawerChildren,
+    open: true,
   },
   name: 'inline-end alignment',
 };
 
-export const BlockStart: Story = {
-  args: {
-    ...Default.args,
-    align: 'block-start',
-  },
-  name: 'block-start alignment',
-};
-
 export const BlockEnd: Story = {
   args: {
-    ...Default.args,
     align: 'block-end',
-  },
-  name: 'block-end alignment',
-};
-
-export const OverflowY: Story = {
-  args: {
-    align: 'inline-start',
-    children: Array.from({ length: 10 })
-      .fill(0)
-      .map(() => (
-        <Paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.
-        </Paragraph>
-      )),
+    className:
+      'rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-start rhc-rounded-corner--position-start-end',
+    children: drawerChildren,
     open: true,
   },
+  name: 'block-end alignment',
 };
