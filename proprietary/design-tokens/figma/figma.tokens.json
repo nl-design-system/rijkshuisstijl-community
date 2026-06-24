@@ -8340,10 +8340,11 @@
       "drawer": {
         "max-inline-size": {
           "$type": "dimension",
-          "$value": "1440px"
+          "$value": "1440px",
+          "$description": "[code only] vaste paneelbreedte, geen tekst-spacing"
         },
         "z-index": {
-          "$type": "dimension",
+          "$type": "other",
           "$value": "1"
         },
         "background-color": {
@@ -8364,23 +8365,24 @@
         },
         "max-block-size": {
           "$type": "dimension",
-          "$value": "800px"
+          "$value": "800px",
+          "$description": "[code only] vaste paneelhoogte, geen tekst-spacing"
         },
         "padding-block-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.5xl}"
+          "$value": "{rhc.space.none}"
         },
         "padding-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.5xl}"
+          "$value": "{rhc.space.none}"
         },
         "padding-inline-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.5xl}"
+          "$value": "{rhc.space.none}"
         },
         "padding-inline-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.5xl}"
+          "$value": "{rhc.space.none}"
         },
         "border-radius": {
           "$type": "dimension",
@@ -8392,26 +8394,39 @@
         },
         "min-inline-size": {
           "$type": "dimension",
-          "$value": "312px"
+          "$value": "312px",
+          "$description": "[code only] vaste minimale paneelbreedte, geen tekst-spacing"
         },
         "backdrop": {
           "min-size": {
             "$type": "dimension",
             "$value": "{rhc.size.pointer-target}"
           }
-        }
-      }
-    },
-    "rhc": {
-      "drawer": {
+        },
         "header": {
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.core.500}"
+            "$value": "{rhc.color.border.default}"
           },
           "border-block-end-width": {
             "$type": "dimension",
-            "$value": "{basis.border-width.sm}"
+            "$value": "{rhc.border-width.sm}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.none}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
           }
         },
         "body": {
@@ -8422,8 +8437,50 @@
           "padding-block-start": {
             "$type": "dimension",
             "$value": "{rhc.space.2xl}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
           }
         },
+        "footer": {
+          "border-color": {
+            "$type": "color",
+            "$value": "{rhc.color.border.default}"
+          },
+          "border-block-start-width": {
+            "$type": "dimension",
+            "$value": "{rhc.border-width.sm}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.none}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          }
+        }
+      }
+    },
+    "rhc": {
+      "drawer": {
         "margin-block-start": {
           "$type": "dimension",
           "$value": "{rhc.space.5xl}"
