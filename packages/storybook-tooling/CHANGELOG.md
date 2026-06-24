@@ -1,5 +1,18 @@
 # @rijkshuisstijl-community/storybook-tooling
 
+## 1.1.4
+
+### Patch Changes
+
+- e41c59f: update dependencies
+
+## 1.1.3
+
+### Patch Changes
+
+- c414601: Ensure package is published with provenance
+- 02786d9: security patch
+
 ## 1.1.2
 
 ### Patch Changes
