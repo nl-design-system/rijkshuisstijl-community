@@ -1,11 +1,20 @@
-# Edit this file by hand. Using `pnpm config` reformats the file and removes all comments.
-
 packages:
   - "apps/**"
   - "packages/*"
   - "packages/components-css/*"
   - "packages/components-react/*"
   - "proprietary/*"
+
+allowBuilds:
+  '@parcel/watcher': true
+  core-js: false
+  esbuild: true
+  fsevents: true
+  lmdb: true
+  msgpackr-extract: true
+  msw: true
+  sharp: true
+  unrs-resolver: true
 
 # Configure pnpm so peer dependencies are automatically installed.
 autoInstallPeers: true
@@ -74,3 +83,5 @@ overrides:
 
 # Configure pnpm to not fail when there are missing or invalid peer dependencies in the tree.
 strictPeerDependencies: false
+
+provenance: true
