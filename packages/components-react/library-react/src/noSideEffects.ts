@@ -66,7 +66,7 @@ export * from '@rijkshuisstijl-community/ordered-list-react/no-side-effects';
 export * from './PageBody';
 export * from '@rijkshuisstijl-community/page-content-react/no-side-effects';
 export * from './PageHeader';
-export * from './PageLayout';
+export * from '@rijkshuisstijl-community/page-layout-react/no-side-effects';
 export * from '@rijkshuisstijl-community/page-number-navigation-react/no-side-effects';
 export * from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 export * from '@rijkshuisstijl-community/pre-heading-react/no-side-effects';

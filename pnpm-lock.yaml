@@ -4534,9 +4534,15 @@ importers:
       '@rijkshuisstijl-community/ordered-list-react':
         specifier: workspace:*
         version: link:../ordered-list-react
+<<<<<<< HEAD
       '@rijkshuisstijl-community/page-content-react':
         specifier: workspace:*
         version: link:../page-content-react
+=======
+      '@rijkshuisstijl-community/page-layout-react':
+        specifier: workspace:*
+        version: link:../page-layout-react
+>>>>>>> main
       '@rijkshuisstijl-community/page-number-navigation-react':
         specifier: workspace:*
         version: link:../page-number-navigation-react
@@ -6043,11 +6049,19 @@ importers:
         specifier: 4.1.8
         version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(msw@2.7.3(@types/node@25.9.2)(typescript@5.9.3))(vite@7.3.5(@types/node@25.9.2)(jiti@2.6.1)(less@4.6.4)(sass@1.100.0)(terser@5.46.1)(yaml@2.8.3))
 
+<<<<<<< HEAD
   packages/components-react/page-content-react:
     dependencies:
       '@utrecht/component-library-react':
         specifier: 13.3.1
         version: 13.3.1(@babel/runtime@7.29.7)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+=======
+  packages/components-react/page-layout-react:
+    dependencies:
+      '@utrecht/page-layout-react':
+        specifier: 1.0.12
+        version: 1.0.12(@babel/runtime@7.29.7)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+>>>>>>> main
     devDependencies:
       '@babel/core':
         specifier: 7.29.7
