@@ -70,21 +70,24 @@
   }
 
   &:focus {
+    --nl-link-color: var(--rhc-nav-bar-link-focus-color);
+
     background-color: var(--rhc-nav-bar-link-focus-background-color);
-    color: var(--rhc-nav-bar-link-focus-color);
   }
 
   &:active {
+    --nl-link-color: var(--rhc-nav-bar-link-active-color);
+
     background-color: var(--rhc-nav-bar-link-active-background-color);
     border-block-end-color: var(--rhc-nav-bar-link-active-border-color);
-    color: var(--rhc-nav-bar-link-active-color);
   }
 }
 
 .rhc-nav-bar__link--current {
+  --nl-link-color: var(--rhc-nav-bar-link-current-color);
+
   background-color: var(--rhc-nav-bar-link-current-background-color);
   border-block-end-color: var(--rhc-nav-bar-link-current-border-color);
-  color: var(--rhc-nav-bar-link-current-color);
   font-weight: var(--rhc-nav-bar-link-current-font-weight);
 }
 
