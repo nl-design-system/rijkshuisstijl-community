@@ -12,7 +12,7 @@ export interface SideNavListProps extends HTMLAttributes<HTMLUListElement> {
 
 export const SideNavList = ({ ref, className, children, ...restProps }: SideNavListProps) => {
   return (
-    <ul className={clsx('rhc-side-nav__list', className)} ref={ref} role="list" {...restProps}>
+    <ul className={clsx('rhc-side-nav__list', className)} ref={ref} {...restProps}>
       {children}
     </ul>
   );
