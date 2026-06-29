@@ -4,11 +4,13 @@
  */
 
 import { Fieldset, FieldsetLegend } from '@rijkshuisstijl-community/fieldset-react';
-import { FormFieldCheckboxGroup, FormFieldCheckboxGroupProps } from '@rijkshuisstijl-community/library-react';
-import { FormFieldCheckboxOption } from '@rijkshuisstijl-community/library-react';
+import {
+  FormFieldCheckboxGroup,
+  FormFieldCheckboxGroupProps,
+  FormFieldCheckboxOption,
+} from '@rijkshuisstijl-community/library-react';
 import clsx from 'clsx';
 import React, { PropsWithChildren, ReactNode, useState } from 'react';
-
 
 interface Option {
   value: string;
