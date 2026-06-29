@@ -570,11 +570,17 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
 
-  packages/components-css/expandable-checkbox-group:
+  packages/components-css/expandable-checkbox-group-css:
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
+      '@rijkshuisstijl-community/visually-hidden-css':
+        specifier: 1.0.0
+        version: 1.0.0
+      '@utrecht/focus-ring-css':
+        specifier: 2.3.1
+        version: 2.3.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -730,7 +736,7 @@ importers:
         version: link:../dot-badge-css
       '@rijkshuisstijl-community/expandable-checkbox-group-css':
         specifier: workspace:*
-        version: link:../expandable-checkbox-group
+        version: link:../expandable-checkbox-group-css
       '@rijkshuisstijl-community/figure-css':
         specifier: workspace:*
         version: link:../figure-css
@@ -3259,7 +3265,7 @@ importers:
     dependencies:
       '@rijkshuisstijl-community/expandable-checkbox-group-css':
         specifier: workspace:*
-        version: link:../../components-css/expandable-checkbox-group
+        version: link:../../components-css/expandable-checkbox-group-css
       '@rijkshuisstijl-community/fieldset-react':
         specifier: workspace:*
         version: link:../fieldset-react
@@ -11833,6 +11839,9 @@ packages:
     resolution: {integrity: sha512-yF9G8vK/LYUTF3Cijd7VC9La3b20F20/J/fgoR4H0B8JGOWnZVZX6+I6+vODPosjmMcpdlUV+gUqJQZp3kLOcw==}
     peerDependencies:
       prettier: '*'
+
+  '@rijkshuisstijl-community/visually-hidden-css@1.0.0':
+    resolution: {integrity: sha512-AMpgTz6auS9CAZNIAgwzp1fM7/uxifcnWuB+APCOvGoicIO8StWuMlRiLuhCdJS7fKs8BQsiHLtXFRr38OqGXw==}
 
   '@rolldown/binding-android-arm64@1.0.0-rc.4':
     resolution: {integrity: sha512-vRq9f4NzvbdZavhQbjkJBx7rRebDKYR9zHfO/Wg486+I7bSecdUapzCm5cyXoK+LHokTxgSq7A5baAXUZkIz0w==}
@@ -26255,6 +26264,8 @@ snapshots:
     dependencies:
       make-synchronized: 0.8.0
       prettier: 3.8.3
+
+  '@rijkshuisstijl-community/visually-hidden-css@1.0.0': {}
 
   '@rolldown/binding-android-arm64@1.0.0-rc.4':
     optional: true
