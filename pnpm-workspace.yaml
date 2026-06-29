@@ -1,11 +1,20 @@
-# Edit this file by hand. Using `pnpm config` reformats the file and removes all comments.
-
 packages:
   - "apps/**"
   - "packages/*"
   - "packages/components-css/*"
   - "packages/components-react/*"
   - "proprietary/*"
+
+allowBuilds:
+  '@parcel/watcher': true
+  core-js: false
+  esbuild: true
+  fsevents: true
+  lmdb: true
+  msgpackr-extract: true
+  msw: true
+  sharp: true
+  unrs-resolver: true
 
 # Configure pnpm so peer dependencies are automatically installed.
 autoInstallPeers: true
@@ -44,11 +53,35 @@ auditConfig:
     - GHSA-vh9h-29pq-r5m8
 
 overrides:
+  "@babel/runtime@<7.26.10": ">=7.26.10"
+  "@hono/node-server@<1.19.13": ">=1.19.13"
+  "@isaacs/brace-expansion@<=5.0.0": ">=5.0.6"
+  "@tootallnate/once@<2.0.1": ">=2.0.1"
+  ajv@>=7.0.0-alpha.0 <8.18.0: ">=8.18.0"
   axios@<1.15.0: ">=1.15.0"
+  brace-expansion@>=5.0.0 <5.0.6: ">=5.0.6"
+  braces@<3.0.3: ">=3.0.3"
+  cross-spawn@<6.0.6: ">=6.0.6"
+  defu@<6.1.5: ">=6.1.5"
+  fast-uri@<3.1.2: ">=3.1.2"
+  flatted@<3.4.2: ">=3.4.2"
   handlebars@>=4.0.0 <4.7.9: ">=4.7.9"
-  locutus@>=2.0.12 <2.0.39: ">=2.0.39"
-  "@isaacs/brace-expansion@<=5.0.0": ">=5.0.1"
-  shell-quote@>=1.1.0 <=1.8.3: '>=1.8.4'
+  hono@<4.12.21: ">=4.12.21"
+  ip-address@<=10.1.0: ">=10.1.1"
+  locutus: "2.0.39"
+  lodash@>=4.0.0 <=4.17.22: ">=4.17.23"
+  micromatch@<4.0.8: ">=4.0.8"
+  postcss@<8.5.10: ">=8.5.10"
+  prismjs@<1.30.0: ">=1.30.0"
+  qs@>=6.7.0 <=6.15.1: ">=6.15.2"
+  shell-quote@>=1.1.0 <=1.8.3: ">=1.8.4"
+  svgo@<2.8.1: ">=2.8.1"
+  tar@<7.5.11: ">=7.5.11"
+  uuid@<11.1.1: ">=11.1.1"
+  webpack-dev-server@<=5.2.3: ">=5.2.4"
+  ws@>=8.0.0 <8.20.1: ">=8.20.1"
 
 # Configure pnpm to not fail when there are missing or invalid peer dependencies in the tree.
 strictPeerDependencies: false
+
+provenance: true

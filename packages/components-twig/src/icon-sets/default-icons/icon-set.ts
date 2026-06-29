@@ -11,6 +11,7 @@ export const iconSet: Partial<Record<string, string>> = {
   briefcase: 'briefcase',
   car: 'car',
   'circle-check': 'circle-check',
+  'chevron-left': 'chevron-left',
   'chevron-right': 'chevron-right',
   comment: 'message-dots',
   communicatie: 'bubble',

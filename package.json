@@ -16,7 +16,7 @@
   "engines": {
     "//": "Update @types/node to match the highest node version here",
     "node": ">=24 <=25",
-    "pnpm": "^10.17.0"
+    "pnpm": "^11.4.0"
   },
   "workspaces": [
     "./apps/**",
@@ -56,6 +56,7 @@
     "eslint-plugin-sort-exports": "0.9.1",
     "eslint-plugin-unicorn": "64.0.0",
     "globals": "17.6.0",
+    "husky": "9.1.7",
     "lint-staged": "16.4.0",
     "markdownlint-cli": "0.48.0",
     "npm-check-updates": "19.6.6",
@@ -107,5 +108,5 @@
     "watch:sd": "pnpm run --recursive watch:style-dictionary",
     "test-storybook:ci": "pnpm --filter @rijkshuisstijl-community/storybook run playwright:install && pnpm --filter @rijkshuisstijl-community/storybook exec vitest run --project=storybook"
   },
-  "packageManager": "pnpm@10.30.1+sha512.3590e550d5384caa39bd5c7c739f72270234b2f6059e13018f975c313b1eb9fefcc09714048765d4d9efe961382c312e624572c0420762bdc5d5940cdf9be73a"
+  "packageManager": "pnpm@11.5.2+sha512.71c631e382066efc25625d5cf029075de07b61b37f6e27350fbd84b1bda5864c8c1967adc280776b45c30a715c0359a3be08fef42d5bb09e2b99029979692916"
 }
