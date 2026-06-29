@@ -3263,6 +3263,9 @@ importers:
 
   packages/components-react/expandable-checkbox-group-react:
     dependencies:
+      '@rijkshuisstijl-community/components-react':
+        specifier: workspace:*
+        version: link:../library-react
       '@rijkshuisstijl-community/expandable-checkbox-group-css':
         specifier: workspace:*
         version: link:../../components-css/expandable-checkbox-group-css
