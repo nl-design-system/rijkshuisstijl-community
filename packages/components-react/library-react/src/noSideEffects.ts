@@ -34,7 +34,7 @@ export * from './FormFieldRadioGroup';
 export * from './FormFieldSelect';
 export * from './FormFieldTextInput';
 export * from './FormFieldTextarea';
-export * from './FormSummary';
+export * from '@rijkshuisstijl-community/form-summary-react/no-side-effects';
 export * from '@rijkshuisstijl-community/heading-react/no-side-effects';
 export * from '@rijkshuisstijl-community/heading-group-react/no-side-effects';
 export * from '@rijkshuisstijl-community/hero-react/no-side-effects';
