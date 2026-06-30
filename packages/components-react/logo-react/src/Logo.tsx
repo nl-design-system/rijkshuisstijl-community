@@ -7,7 +7,7 @@ import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactNode, Ref } from 'react';
 
 export interface LogoProps extends HTMLAttributes<HTMLDivElement> {
-  organisation: ReactNode;
+  organisation?: ReactNode;
   subtitle?: ReactNode;
   ref?: Ref<HTMLDivElement>;
 }
@@ -23,10 +23,12 @@ export const Logo = ({
   return (
     <figure className={clsx('rhc-logo', className)} ref={ref} {...restProps}>
       <div className="rhc-logo__image">{children}</div>
-      <figcaption className="rhc-logo__caption">
-        <p className="rhc-logo__title">{organisation}</p>
-        {subtitle && <p className="rhc-logo__subtitle">{subtitle}</p>}
-      </figcaption>
+      {organisation ? (
+        <figcaption className="rhc-logo__caption">
+          <p className="rhc-logo__title">{organisation}</p>
+          {subtitle && <p className="rhc-logo__subtitle">{subtitle}</p>}
+        </figcaption>
+      ) : null}
     </figure>
   );
 };

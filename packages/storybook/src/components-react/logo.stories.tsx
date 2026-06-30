@@ -94,6 +94,13 @@ export const Default: Story = {
   },
 };
 
+export const NoOrganisation: Story = {
+  args: {
+    organisation: undefined,
+    subtitle: undefined,
+  },
+};
+
 export const WithSubtitle: Story = {
   args: {
     organisation: 'Voorbeeld organisatie',

@@ -9,4 +9,5 @@ export default {
 };
 
 export const Default = ReactStories.Default;
+export const NoOrganisation = ReactStories.NoOrganisation;
 export const WithSubtitle = ReactStories.WithSubtitle;
