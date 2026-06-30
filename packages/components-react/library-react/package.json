@@ -20,7 +20,7 @@
   },
   "scripts": {
     "prebuild": "pnpm run clean",
-    "build": "npm-run-all --serial build:components build:packages",
+    "build": "npm-run-all build:**",
     "build:components": "rollup --config rollup.config.mjs",
     "clean": "rimraf dist/ pages/",
     "test": "vitest run --coverage --reporter verbose",
