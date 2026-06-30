@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/assets
 
+## 1.0.3
+
+### Patch Changes
+
+- c414601: Ensure package is published with provenance
+
 ## 1.0.2
 
 ### Patch Changes
