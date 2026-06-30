@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/accordion-css
 
+## 2.1.0
+
+### Minor Changes
+
+- de35f24: Update README files
+
+### Patch Changes
+
+- c414601: Ensure package is published with provenance
+
 ## 2.0.1
 
 ### Patch Changes

@@ -1,5 +1,26 @@
 # @rijkshuisstijl-community/article-react
 
+## 2.1.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+
+## 2.1.0
+
+### Minor Changes
+
+- de35f24: Update README files
+- c9e30de: Added an option to import the components separate from the css.
+
+### Patch Changes
+
+- c414601: Ensure package is published with provenance
+- 02786d9: security patch
+- Updated dependencies [c414601]
+- Updated dependencies [de35f24]
+  - @rijkshuisstijl-community/article-css@2.1.0
+
 ## 2.0.2
 
 ### Patch Changes

@@ -16,6 +16,7 @@ export const iconSet: Partial<Record<RHCIconID, ReactNode>> = {
   briefcase: <TablerIcons.IconBriefcase />,
   car: <TablerIcons.IconCar />,
   'circle-check': <TablerIcons.IconCircleCheck />,
+  'chevron-left': <TablerIcons.IconChevronLeft />,
   'chevron-right': <TablerIcons.IconChevronRight />,
   'chevron-down': <TablerIcons.IconChevronDown />,
   'chevron-up': <TablerIcons.IconChevronUp />,

@@ -1,5 +1,113 @@
 # @rijkshuisstijl-community/components-css
 
+## 17.1.2
+
+### Patch Changes
+
+- Updated dependencies [8d20001]
+  - @rijkshuisstijl-community/pre-heading-css@1.0.0
+
+## 17.1.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+- Updated dependencies [e41c59f]
+  - @rijkshuisstijl-community/language-navigation-css@1.0.1
+  - @rijkshuisstijl-community/listbox-css@1.0.1
+  - @rijkshuisstijl-community/footer-css@1.0.1
+  - @rijkshuisstijl-community/file-css@1.0.1
+
+## 17.1.0
+
+### Minor Changes
+
+- e9dc77c: Refactor: Restructure and cleanup Data Badge Button component CSS
+
+### Patch Changes
+
+- c414601: Ensure package is published with provenance
+- Updated dependencies [f6b0afd]
+- Updated dependencies [a95bbae]
+- Updated dependencies [0b2f076]
+- Updated dependencies [751ef52]
+- Updated dependencies [4ba4cf3]
+- Updated dependencies [8739bb6]
+- Updated dependencies [c414601]
+- Updated dependencies [83c69fc]
+- Updated dependencies [79e611b]
+- Updated dependencies [d47e1d2]
+- Updated dependencies [06753fc]
+- Updated dependencies [6e04b8c]
+- Updated dependencies [52eeadc]
+- Updated dependencies [9305b36]
+- Updated dependencies [d23a29e]
+- Updated dependencies [317ebfd]
+- Updated dependencies [c37bb2e]
+- Updated dependencies [21112d5]
+- Updated dependencies [748c6ea]
+- Updated dependencies [1958cf3]
+- Updated dependencies [0ef5bc4]
+- Updated dependencies [9b67b3a]
+- Updated dependencies [de35f24]
+- Updated dependencies [2abc2f7]
+- Updated dependencies [20fecee]
+- Updated dependencies [41b86ef]
+- Updated dependencies [0dbc2d1]
+- Updated dependencies [f766ac0]
+- Updated dependencies [e56376c]
+- Updated dependencies [83c1415]
+- Updated dependencies [6e4ab18]
+- Updated dependencies [1ec5593]
+- Updated dependencies [41dabdc]
+- Updated dependencies [655cc62]
+  - @rijkshuisstijl-community/listbox-css@1.0.0
+  - @rijkshuisstijl-community/message-list-css@1.0.0
+  - @rijkshuisstijl-community/text-input-css@1.0.0
+  - @rijkshuisstijl-community/heading-css@1.0.0
+  - @rijkshuisstijl-community/page-number-navigation-css@1.0.0
+  - @rijkshuisstijl-community/hero-css@1.0.0
+  - @rijkshuisstijl-community/breadcrumb-nav-css@1.1.0
+  - @rijkshuisstijl-community/checkbox-group-css@1.0.1
+  - @rijkshuisstijl-community/action-group-css@1.1.0
+  - @rijkshuisstijl-community/card-as-link-css@1.1.0
+  - @rijkshuisstijl-community/data-summary-css@1.0.0
+  - @rijkshuisstijl-community/blockquote-css@1.1.0
+  - @rijkshuisstijl-community/accordion-css@2.1.0
+  - @rijkshuisstijl-community/dot-badge-css@1.1.0
+  - @rijkshuisstijl-community/paragraph-css@2.1.0
+  - @rijkshuisstijl-community/separator-css@1.1.0
+  - @rijkshuisstijl-community/checkbox-css@1.0.1
+  - @rijkshuisstijl-community/article-css@2.1.0
+  - @rijkshuisstijl-community/button-css@1.1.0
+  - @rijkshuisstijl-community/figure-css@1.1.0
+  - @rijkshuisstijl-community/alert-css@4.1.0
+  - @rijkshuisstijl-community/card-css@1.1.0
+  - @rijkshuisstijl-community/link-css@1.1.0
+  - @rijkshuisstijl-community/ordered-list-css@1.0.0
+  - @rijkshuisstijl-community/code-input-group-css@1.0.0
+  - @rijkshuisstijl-community/link-list-card-css@1.0.0
+  - @rijkshuisstijl-community/file-css@1.0.0
+  - @rijkshuisstijl-community/link-button-css@1.0.0
+  - @rijkshuisstijl-community/number-badge-css@1.0.0
+  - @rijkshuisstijl-community/toggletip-css@1.0.0
+  - @rijkshuisstijl-community/link-list-css@1.0.0
+  - @rijkshuisstijl-community/file-input-css@1.0.0
+  - @rijkshuisstijl-community/logo-css@1.0.0
+  - @rijkshuisstijl-community/navigation-list-css@1.0.0
+  - @rijkshuisstijl-community/language-navigation-css@1.0.0
+  - @rijkshuisstijl-community/data-badge-button-css@1.0.0
+  - @rijkshuisstijl-community/unordered-list-css@1.0.0
+  - @rijkshuisstijl-community/rounded-corner-css@1.0.0
+  - @rijkshuisstijl-community/skip-link-css@1.0.0
+  - @rijkshuisstijl-community/navigation-bar-css@1.0.0
+  - @rijkshuisstijl-community/code-input-css@1.0.0
+  - @rijkshuisstijl-community/textarea-css@1.0.0
+  - @rijkshuisstijl-community/footer-css@1.0.0
+  - @rijkshuisstijl-community/radio-css@1.0.0
+  - @rijkshuisstijl-community/side-nav-css@1.0.0
+  - @rijkshuisstijl-community/visually-hidden-css@1.0.0
+
 ## 17.0.0
 
 ### Major Changes

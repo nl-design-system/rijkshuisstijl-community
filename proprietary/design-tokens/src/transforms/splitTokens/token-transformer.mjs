@@ -1,10 +1,6 @@
 import { existsSync, mkdirSync } from 'node:fs';
 import { readFile, writeFile } from 'node:fs/promises';
 
-const DEBUG = true;
-const LOG = (msg) => {
-  if (DEBUG) console.log(msg);
-};
 const TOKENS_FILE = './figma/figma.tokens.json';
 
 export const ALWAYS_ON = 'Always on';
@@ -14,18 +10,22 @@ const BASE_THEME_NAME = 'lintblauw';
 
 const readTokensFile = async () => {
   const json = await readFile(TOKENS_FILE, 'utf8');
-  return JSON.parse(json);
+  const parsed = JSON.parse(json);
+  console.log(`Token file ${TOKENS_FILE} successfully parsed as JSON`);
+  return parsed;
 };
 
 const debugInfo = (tokenSetsTable) => {
-  const debugData = Object.entries(tokenSetsTable).reduce(
-    (acc, [themeGroupName, choices]) => ({
-      product: acc.product * Object.keys(choices).length,
-      nums: [...acc.nums, `${Object.keys(choices).length} ${themeGroupName}`],
-    }),
-    { product: 1, nums: [] },
+  const groups = Object.fromEntries(
+    tokenSetsTable.map((option) => [
+      option.group,
+      tokenSetsTable.filter((entry) => entry.group === option.group).length,
+    ]),
   );
-  return `${debugData.nums.join(' x ')} = ${debugData.product}`;
+  const total = Object.values(groups).reduce((acc, val) => acc * val, 1);
+  return `${Object.entries(groups)
+    .map(([key, value]) => `${value} ${key}`)
+    .join(' x ')} = ${total}`;
 };
 
 const isEnabled = (str) => str === 'enabled' || str === 'source';
@@ -37,9 +37,28 @@ const flattenTokenSetSets = (tokenSetsObject) =>
 
 const normaliseTokenSetName = (tokenSetName) => tokenSetName.toLowerCase().replaceAll(/\s+/g, '-');
 
-const accordingTo = (list) => (a, b) => list.indexOf(a) - list.indexOf(b);
+/**
+ *
+ * Makes a sorter function to be given to Array.sort, to sort an array (of strings in this case) according to another,
+ * pre-sorted, array
+ *
+ */
+const accordingTo = (arrayToSortBy) => (a, b) => arrayToSortBy.indexOf(a) - arrayToSortBy.indexOf(b);
 
-const cartesian = (...a) => a.reduce((a, b) => a.flatMap((d) => b.map((e) => [d, e].flat())), [[]]);
+/**
+ *
+ * Creates a table of every possible combination choices
+ * eg. pass in an array of arrays, each entry representing a choice group:
+ * cartesian(['blauw', 'groen', 'oranje'], ['groot', 'klein'])
+ * outputs [ ['blauw', 'groot'], ['blauw', 'klein'], ['groen', 'groot'], ['groen', 'klein'].... ]
+ *
+ */
+export const cartesian = (...groups) =>
+  groups.reduce(
+    (combinations, group) =>
+      combinations.flatMap((combination) => group.map((groupChoice) => [combination, groupChoice].flat())),
+    [[]],
+  );
 
 /**
  *
@@ -50,14 +69,14 @@ const cartesian = (...a) => a.reduce((a, b) => a.flatMap((d) => b.map((e) => [d,
  *
  */
 export const readThemeGroups = (themeGroups, ignoreList = new Set()) => {
-  let tokenSetsAlwaysOn = [];
-  let tokenSetNamesAlwaysOn = [];
-  let tokenSetsTable = [];
+  const tokenSetsAlwaysOn = [];
+  const tokenSetNamesAlwaysOn = [];
+  const tokenSetsTable = [];
   for (const themeGroup of themeGroups) {
     if (ignoreList.has(themeGroup.group)) continue;
 
     if (themeGroup.name === ALWAYS_ON) {
-      tokenSetsAlwaysOn = [...tokenSetsAlwaysOn, ...flattenTokenSetSets(themeGroup.selectedTokenSets)];
+      tokenSetsAlwaysOn.push(...flattenTokenSetSets(themeGroup.selectedTokenSets));
       tokenSetNamesAlwaysOn.push(themeGroup.group);
     } else {
       tokenSetsTable.push({
@@ -68,7 +87,13 @@ export const readThemeGroups = (themeGroups, ignoreList = new Set()) => {
     }
   }
 
-  return { tokenSetsAlwaysOn, tokenSetsTable, tokenSetNamesAlwaysOn };
+  if (tokenSetNamesAlwaysOn.length > 0)
+    console.log(
+      `Found ${tokenSetNamesAlwaysOn.length} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`,
+    );
+  console.log(`Generating ${debugInfo(tokenSetsTable)} themes`);
+
+  return { tokenSetsAlwaysOn, tokenSetsTable };
 };
 
 /**
@@ -128,22 +153,19 @@ export const flattenMatrix = (tokenSetsTable, tokenSetsAlwaysOn = []) => {
     // collect all selected tokenSets in choice combination with the 'always on' sets
     tokenSets: [...choiceSets.flatMap(({ tokenSets }) => tokenSets), ...tokenSetsAlwaysOn],
   }));
+
+  console.log(result.map((theme) => `* ${theme.name}`).join('\n'));
+
   return result;
 };
 
 if (import.meta.main) {
   const tokens = await readTokensFile();
-  LOG(`Token file ${TOKENS_FILE} successfully parsed as JSON`);
 
-  const { tokenSetsAlwaysOn, tokenSetsTable, tokenSetNamesAlwaysOn } = readThemeGroups(tokens.$themes, IGNORE);
-  LOG(
-    `Found ${Object.keys(tokenSetsAlwaysOn).length} "${ALWAYS_ON}" token sets in ${tokenSetNamesAlwaysOn.join(', ')}`,
-  );
-  LOG(`Generating ${debugInfo(tokenSetsTable)} themes`);
+  const { tokenSetsAlwaysOn, tokenSetsTable } = readThemeGroups(tokens.$themes, IGNORE);
 
   tokenSetsAlwaysOn.push('common/viewport/max');
   const tokenSetSets = flattenMatrix(tokenSetsTable, tokenSetsAlwaysOn);
-  LOG(tokenSetSets.map((theme) => `* ${theme.name}`).join('\n'));
 
   if (!existsSync('./src/generated')) {
     mkdirSync('./src/generated', { recursive: true });
