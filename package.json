@@ -16,7 +16,7 @@
   "engines": {
     "//": "Update @types/node to match the highest node version here",
     "node": ">=24 <=25",
-    "pnpm": "^10.17.0"
+    "pnpm": "^11.4.0"
   },
   "workspaces": [
     "./apps/**",
@@ -30,43 +30,45 @@
     "rimraf": "6.1.3"
   },
   "devDependencies": {
-    "@changesets/cli": "2.30.0",
+    "@changesets/cli": "2.31.0",
     "@chromatic-com/storybook": "4.1.3",
-    "@eslint/compat": "2.0.3",
+    "@eslint/compat": "2.1.0",
     "@eslint/eslintrc": "3.3.5",
     "@eslint/js": "9.39.4",
     "@lerna-lite/cli": "4.11.5",
     "@lerna-lite/publish": "4.11.5",
     "@lerna-lite/run": "4.11.5",
     "@stylistic/eslint-plugin": "5.10.0",
-    "@types/node": "25.5.0",
-    "@typescript-eslint/eslint-plugin": "8.58.0",
-    "@typescript-eslint/parser": "8.58.0",
+    "@types/node": "25.9.2",
+    "@typescript-eslint/eslint-plugin": "8.60.1",
+    "@typescript-eslint/parser": "8.60.1",
+    "@vitest/expect": "4.1.8",
     "chromatic": "13.3.5",
     "concurrently": "9.2.1",
     "eslint": "9.39.4",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-json": "4.0.1",
-    "eslint-plugin-mdx": "3.7.0",
+    "eslint-plugin-mdx": "3.8.1",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-regexp": "3.1.0",
     "eslint-plugin-sonarjs": "4.0.3",
     "eslint-plugin-sort-exports": "0.9.1",
     "eslint-plugin-unicorn": "64.0.0",
-    "globals": "16.5.0",
+    "globals": "17.6.0",
+    "husky": "9.1.7",
     "lint-staged": "16.4.0",
     "markdownlint-cli": "0.48.0",
     "npm-check-updates": "19.6.6",
     "npm-package-json-lint": "9.1.0",
     "npm-run-all": "4.1.5",
-    "postcss": "8.5.8",
-    "prettier": "3.8.1",
+    "postcss": "8.5.15",
+    "prettier": "3.8.3",
     "stylelint": "16.26.1",
     "stylelint-config-standard-scss": "13.1.0",
     "stylelint-order": "7.0.1",
     "typescript": "5.9.3",
-    "wait-on": "9.0.4"
+    "wait-on": "9.0.10"
   },
   "scripts": {
     "prebuild": "pnpm run clean",
@@ -104,7 +106,7 @@
     "watch:storybook": "pnpm run --parallel --recursive storybook",
     "watch:packages": "pnpm run --parallel --recursive watch",
     "watch:sd": "pnpm run --recursive watch:style-dictionary",
-    "test-storybook:ci": "pnpm --filter @rijkshuisstijl-community/storybook run playwright:install && concurrently -k -s first -n \"STORYBOOK,A11Y-TEST\" -c \"magenta,green\" \"pnpm --filter @rijkshuisstijl-community/storybook run prod-static -- --silent\" \"wait-on tcp:6006 && pnpm --filter @rijkshuisstijl-community/storybook run test-storybook\""
+    "test-storybook:ci": "pnpm --filter @rijkshuisstijl-community/storybook run playwright:install && pnpm --filter @rijkshuisstijl-community/storybook exec vitest run --project=storybook"
   },
-  "packageManager": "pnpm@10.30.1+sha512.3590e550d5384caa39bd5c7c739f72270234b2f6059e13018f975c313b1eb9fefcc09714048765d4d9efe961382c312e624572c0420762bdc5d5940cdf9be73a"
+  "packageManager": "pnpm@11.5.2+sha512.71c631e382066efc25625d5cf029075de07b61b37f6e27350fbd84b1bda5864c8c1967adc280776b45c30a715c0359a3be08fef42d5bb09e2b99029979692916"
 }

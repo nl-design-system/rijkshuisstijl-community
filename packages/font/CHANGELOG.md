@@ -1,5 +1,17 @@
 # @rijkshuisstijl-community/font
 
+## 1.1.6
+
+### Patch Changes
+
+- e41c59f: update dependencies
+
+## 1.1.5
+
+### Patch Changes
+
+- c414601: Ensure package is published with provenance
+
 ## 1.1.4
 
 ### Patch Changes

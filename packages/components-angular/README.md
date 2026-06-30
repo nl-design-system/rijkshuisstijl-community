@@ -2,8 +2,6 @@
 
 # Rijkshuisstijl Community Componenten - Angular
 
-_Dit project wordt **niet** gesteund door het Ministerie van Algemene Zaken._
-
 **Het toepassen van design-elementen uit dit project is strikt verboden voor organisaties die geen deel uitmaken van de
 centrale overheid van Nederland.**
 
@@ -57,10 +55,10 @@ pakket, en omring het deel van je applicatie waar je het thema wilt toepassen me
 #### Thema wijzigen
 
 Om een ander thema toe te passen moet je het importeren van `import '@rijkshuisstijl-community/design-tokens/dist/{thema}/index.css';` en de class aanpassen naar het desbetreffende thema.
-Zie het volgende voorbeeld om het uitvoerend-groen thema toe te passen:
+Zie het volgende voorbeeld om het thema "groen" toe te passen:
 
 ```css
-@import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css';
+@import '@rijkshuisstijl-community/design-tokens/dist/groen/index.css';
 @import '@rijkshuisstijl-community/components-css/dist/index.css';
 ```
 
@@ -72,7 +70,7 @@ import { ButtonComponent } from '@rijkshuisstijl-community/components-angular';
   selector: 'app-root',
   imports: [ButtonComponent],
   template: `
-    <main class="uitvoerend-groen">
+    <main class="groen">
       <button rhc-button [appearance]="'primary-action'" [disabled]="false">hello world</button>
     </main>
   `,

@@ -3073,54 +3073,6 @@
       }
     }
   },
-  "common/primary-color/core": {
-    "rhc": {
-      "color": {
-        "primary": {
-          "50": {
-            "$type": "color",
-            "$value": "{rhc.color.core.50}"
-          },
-          "100": {
-            "$type": "color",
-            "$value": "{rhc.color.core.100}"
-          },
-          "200": {
-            "$type": "color",
-            "$value": "{rhc.color.core.200}"
-          },
-          "300": {
-            "$type": "color",
-            "$value": "{rhc.color.core.300}"
-          },
-          "400": {
-            "$type": "color",
-            "$value": "{rhc.color.core.400}"
-          },
-          "500": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          },
-          "hover": {
-            "$type": "color",
-            "$value": "{rhc.color.core.hover}",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
-          },
-          "active": {
-            "$type": "color",
-            "$value": "{rhc.color.core.active}",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
-          }
-        },
-        "foreground": {
-          "on-primary": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.on-dark-color}"
-          }
-        }
-      }
-    }
-  },
   "common/primary-color/groen": {
     "rhc": {
       "color": {
@@ -3386,6 +3338,54 @@
           "active": {
             "$type": "color",
             "$value": "#761838"
+          }
+        },
+        "foreground": {
+          "on-primary": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.on-dark-color}"
+          }
+        }
+      }
+    }
+  },
+  "common/primary-color/lintblauw": {
+    "rhc": {
+      "color": {
+        "primary": {
+          "50": {
+            "$type": "color",
+            "$value": "{rhc.color.core.50}"
+          },
+          "100": {
+            "$type": "color",
+            "$value": "{rhc.color.core.100}"
+          },
+          "200": {
+            "$type": "color",
+            "$value": "{rhc.color.core.200}"
+          },
+          "300": {
+            "$type": "color",
+            "$value": "{rhc.color.core.300}"
+          },
+          "400": {
+            "$type": "color",
+            "$value": "{rhc.color.core.400}"
+          },
+          "500": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          },
+          "hover": {
+            "$type": "color",
+            "$value": "{rhc.color.core.hover}",
+            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
+          },
+          "active": {
+            "$type": "color",
+            "$value": "{rhc.color.core.active}",
+            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
           }
         },
         "foreground": {
@@ -3697,7 +3697,7 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{utrecht.button.subtle.font-size}"
+            "$value": "{rhc.text.font-size.lg}"
           },
           "font-weight": {
             "$type": "fontWeights",
@@ -3740,7 +3740,7 @@
           },
           "padding-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.space.xl}"
+            "$value": "{rhc.space.none}"
           },
           "padding-inline-end": {
             "$type": "dimension",
@@ -3748,13 +3748,13 @@
           },
           "padding-inline-start": {
             "$type": "dimension",
-            "$value": "{rhc.space.xl}"
+            "$value": "{rhc.space.5xl}"
           }
         },
         "button": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.bg-document}"
+            "$value": "{rhc.color.transparent}"
           },
           "border-color": {
             "$type": "color",
@@ -3770,7 +3770,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.foreground.default}"
+            "$value": "{rhc.color.core.500}"
           },
           "gap": {
             "$type": "dimension",
@@ -3801,7 +3801,7 @@
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.cool-grey.100}"
+              "$value": "{rhc.color.core.100}"
             },
             "border-color": {
               "$type": "color",
@@ -3809,13 +3809,13 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.foreground.default}"
+              "$value": "{rhc.color.core.active}"
             }
           },
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.cool-grey.50}"
+              "$value": "{rhc.color.core.50}"
             },
             "border-color": {
               "$type": "color",
@@ -3823,13 +3823,13 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.foreground.default}"
+              "$value": "{rhc.color.core.hover}"
             }
           },
           "focus-visible": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.50}"
+              "$value": "{rhc.color.transparent}"
             },
             "border-color": {
               "$type": "color",
@@ -3841,19 +3841,19 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.foreground.default}"
+              "$value": "{rhc.color.core.500}"
             }
           }
         },
         "section": {
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.border.subtle}"
+            "$value": "{rhc.color.core.300}"
           },
           "hover": {
             "border-color": {
               "$type": "color",
-              "$value": "{rhc.color.border.subtle}"
+              "$value": "{rhc.color.core.hover}"
             }
           },
           "border-width": {
@@ -7625,7 +7625,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.core.400}"
+            "$value": "{rhc.color.core.active}"
           },
           "border-width": {
             "$type": "dimension",
@@ -7635,11 +7635,11 @@
         "disabled": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.cool-grey.300}"
+            "$value": "{rhc.color.cool-grey.200}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.cool-grey.400}"
+            "$value": "{rhc.color.cool-grey.300}"
           }
         },
         "hover": {
@@ -7649,7 +7649,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.core.300}"
+            "$value": "{rhc.color.core.hover}"
           },
           "border-width": {
             "$type": "dimension",
@@ -7690,7 +7690,7 @@
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.400}"
+              "$value": "{rhc.color.core.active}"
             },
             "border-color": {
               "$type": "color",
@@ -7708,11 +7708,11 @@
           "disabled": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.cool-grey.300}"
+              "$value": "{rhc.color.cool-grey.200}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{rhc.color.cool-grey.400}"
+              "$value": "{rhc.color.cool-grey.300}"
             },
             "color": {
               "$type": "color",
@@ -7722,7 +7722,7 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.core.300}"
+              "$value": "{rhc.color.core.hover}"
             },
             "border-color": {
               "$type": "color",
@@ -7776,7 +7776,7 @@
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.400}"
+              "$value": "{rhc.color.core.active}"
             },
             "border-color": {
               "$type": "color",
@@ -7794,11 +7794,11 @@
           "disabled": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.cool-grey.300}"
+              "$value": "{rhc.color.cool-grey.200}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{rhc.color.cool-grey.400}"
+              "$value": "{rhc.color.cool-grey.300}"
             },
             "color": {
               "$type": "color",
@@ -7808,7 +7808,7 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.300}"
+              "$value": "{rhc.color.core.hover}"
             },
             "border-color": {
               "$type": "color",
@@ -7850,7 +7850,7 @@
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.core.400}"
+              "$value": "{rhc.color.core.active}"
             },
             "border-color": {
               "$type": "color",
@@ -7868,11 +7868,11 @@
           "disabled": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.cool-grey.300}"
+              "$value": "{rhc.color.cool-grey.200}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{rhc.color.cool-grey.400}"
+              "$value": "{rhc.color.cool-grey.300}"
             },
             "color": {
               "$type": "color",
@@ -7882,7 +7882,7 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.core.300}"
+              "$value": "{rhc.color.core.hover}"
             },
             "border-color": {
               "$type": "color",
@@ -7920,7 +7920,7 @@
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.core.400}"
+              "$value": "{rhc.color.core.active}"
             },
             "border-color": {
               "$type": "color",
@@ -7938,11 +7938,11 @@
           "disabled": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.cool-grey.300}"
+              "$value": "{rhc.color.cool-grey.200}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{rhc.color.cool-grey.400}"
+              "$value": "{rhc.color.cool-grey.300}"
             },
             "color": {
               "$type": "color",
@@ -7952,7 +7952,7 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.core.300}"
+              "$value": "{rhc.color.core.hover}"
             },
             "border-color": {
               "$type": "color",
@@ -8768,7 +8768,7 @@
         "disabled": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.border.subtle}"
+            "$value": "{rhc.color.cool-grey.600}"
           }
         }
       },
@@ -9706,11 +9706,11 @@
           },
           "line-height": {
             "$type": "lineHeights",
-            "$value": "1.063rem"
+            "$value": "118%"
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "0.913rem"
+            "$value": "0.9rem"
           },
           "padding-block-start": {
             "$type": "dimension",
@@ -9724,11 +9724,11 @@
           },
           "line-height": {
             "$type": "lineHeights",
-            "$value": "1rem"
+            "$value": "118%"
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "0.775rem"
+            "$value": "0.9rem"
           }
         },
         "column-gap": {
@@ -10436,53 +10436,68 @@
     "ams": {
       "pagination": {
         "font-family": {
-          "$type": "other",
+          "$type": "fontFamilies",
           "$value": "{rhc.text.font-family.default}"
         },
         "font-size": {
-          "$type": "other",
-          "$value": "{utrecht.document.font-size}"
+          "$type": "fontSizes",
+          "$value": "{rhc.text.font-size.md}"
         },
         "font-weight": {
-          "$type": "other",
-          "$value": "{utrecht.document.font-weight}"
+          "$type": "fontWeights",
+          "$value": "{rhc.text.font-weight.default}"
         },
         "line-height": {
-          "$type": "other",
-          "$value": "{utrecht.document.line-height}"
+          "$type": "lineHeights",
+          "$value": "{rhc.text.line-height.md}"
         },
         "link": {
           "color": {
-            "$type": "other",
-            "$value": "{nl.link.color}"
+            "$type": "color",
+            "$value": "{rhc.color.foreground.link}"
           },
           "gap": {
-            "$type": "other",
+            "$type": "dimension",
             "$value": "{rhc.space.sm}"
           },
           "outline-offset": {
             "$type": "other",
-            "$value": "{utrecht.focus.outline-offset}"
+            "$value": "{rhc.focus.outline-offset}",
+            "$description": "[code-only]"
           },
           "padding-inline": {
-            "$type": "other",
+            "$type": "dimension",
             "$value": "{rhc.space.sm}"
           },
           "current": {
             "font-weight": {
-              "$type": "other",
+              "$type": "fontWeights",
               "$value": "{rhc.text.font-weight.bold}"
             }
           },
           "hover": {
             "color": {
-              "$type": "other",
-              "$value": "{nl.link.hover.color}"
+              "$type": "color",
+              "$value": "{rhc.color.foreground.link-hover}"
             },
             "text-decoration-line": {
-              "$type": "other",
+              "$type": "textDecoration",
               "$value": "underline"
             }
+          },
+          "text-decoration-line": {
+            "$type": "textDecoration",
+            "$value": "none"
+          },
+          "text-decoration-thickness": {
+            "$type": "other",
+            "$value": "0.0625em",
+            "$description": "[code only]"
+          },
+          "text-underline-offset": {
+            "$type": "other",
+            "$value": "{rhc.space.xs}",
+            "$description": "[code-only]"
           }
         }
       }
@@ -10604,7 +10619,7 @@
         "icon": {
           "size": {
             "$type": "dimension",
-            "$value": "0.75rem"
+            "$value": "1rem"
           }
         },
         "invalid": {
@@ -10632,7 +10647,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.core.400}"
+            "$value": "{rhc.color.core.active}"
           },
           "color": {
             "$type": "color",
@@ -10646,11 +10661,11 @@
         "disabled": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.cool-grey.300}"
+            "$value": "{rhc.color.cool-grey.200}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.cool-grey.400}"
+            "$value": "{rhc.color.cool-grey.300}"
           },
           "color": {
             "$type": "color",
@@ -10664,7 +10679,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.core.300}"
+            "$value": "{rhc.color.core.hover}"
           },
           "color": {
             "$type": "color",
@@ -10696,11 +10711,11 @@
         "checked": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.core.500}"
+            "$value": "{rhc.color.bg-document}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.transparent}"
+            "$value": "{rhc.color.core.500}"
           },
           "border-width": {
             "$type": "dimension",
@@ -10708,16 +10723,16 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.wit}"
+            "$value": "{rhc.color.core.500}"
           },
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.core.400}"
+              "$value": "{rhc.color.bg-document}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{rhc.color.transparent}"
+              "$value": "{rhc.color.core.active}"
             },
             "border-width": {
               "$type": "dimension",
@@ -10725,17 +10740,17 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.wit}"
+              "$value": "{rhc.color.core.active}"
             }
           },
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.core.300}"
+              "$value": "{rhc.color.bg-document}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{rhc.color.transparent}"
+              "$value": "{rhc.color.core.hover}"
             },
             "border-width": {
               "$type": "dimension",
@@ -10743,7 +10758,7 @@
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.wit}"
+              "$value": "{rhc.color.core.hover}"
             }
           },
           "focus": {
@@ -10773,11 +10788,11 @@
           "disabled": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.cool-grey.300}"
+              "$value": "{rhc.color.cool-grey.200}"
             },
             "border-color": {
               "$type": "color",
-              "$value": "{rhc.color.cool-grey.400}"
+              "$value": "{rhc.color.cool-grey.300}"
             },
             "color": {
               "$type": "color",
@@ -10972,11 +10987,11 @@
         "disabled": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.cool-grey.300}"
+            "$value": "{rhc.color.cool-grey.200}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.cool-grey.400}"
+            "$value": "{rhc.color.cool-grey.300}"
           },
           "color": {
             "$type": "color",
@@ -10990,7 +11005,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.core.300}"
+            "$value": "{rhc.color.core.hover}"
           },
           "color": {
             "$type": "color",
@@ -11586,7 +11601,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.core.300}"
+            "$value": "{rhc.color.core.hover}"
           },
           "color": {
             "$type": "color",
@@ -11696,7 +11711,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.transparent}"
+            "$value": "{rhc.color.cool-grey.300}"
           },
           "color": {
             "$type": "color",
@@ -11706,11 +11721,11 @@
         "disabled": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.cool-grey.300}"
+            "$value": "{rhc.color.cool-grey.200}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.cool-grey.400}"
+            "$value": "{rhc.color.cool-grey.300}"
           },
           "color": {
             "$type": "color",
@@ -11784,7 +11799,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.core.300}"
+            "$value": "{rhc.color.core.hover}"
           },
           "color": {
             "$type": "color",
@@ -11894,7 +11909,7 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.transparent}"
+            "$value": "{rhc.color.cool-grey.300}"
           },
           "color": {
             "$type": "color",
@@ -11904,11 +11919,11 @@
         "disabled": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.cool-grey.300}"
+            "$value": "{rhc.color.cool-grey.200}"
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.cool-grey.400}"
+            "$value": "{rhc.color.cool-grey.300}"
           },
           "color": {
             "$type": "color",
@@ -12172,586 +12187,219 @@
   },
   "$themes": [
     {
-      "id": "05865788a086eeac7ffc4514736ccd777f1ff95c",
-      "name": "Kern - Lintblauw",
+      "id": "0048b2d80fdc07967e19f605ae7bb4b75d916418",
+      "name": "Always on",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
         "brand/border": "enabled",
-        "brand/size": "enabled",
+        "brand/color": "source",
+        "brand/color-mode/light": "enabled",
         "brand/space": "enabled",
+        "brand/size": "enabled",
+        "brand/text": "enabled"
+      },
+      "group": "Brand"
+    },
+    {
+      "id": "6bef3ecc9338e95be92666718966d1cc1a67f068",
+      "name": "Always on",
+      "$figmaStyleReferences": {},
+      "selectedTokenSets": {
+        "common/base": "enabled",
         "common/focus": "enabled",
         "common/rounded-corner": "enabled",
-        "components/accordion": "enabled",
-        "components/action-group": "enabled",
-        "components/alert": "enabled",
-        "components/article": "enabled",
-        "components/backdrop": "enabled",
-        "components/blockquote": "enabled",
-        "components/breadcrumb": "enabled",
-        "components/card": "enabled",
-        "components/card-as-link": "enabled",
-        "components/checkbox-group": "enabled",
-        "components/checkbox": "enabled",
-        "components/code-input": "enabled",
-        "components/code-input-group": "enabled",
-        "components/column-layout": "enabled",
-        "components/data-badge-button": "enabled",
-        "components/data-summary": "enabled",
-        "components/dot-badge": "enabled",
-        "components/drawer": "enabled",
-        "components/expandable-checkbox-group": "enabled",
-        "components/fieldset": "enabled",
-        "components/figure": "enabled",
-        "components/file-input": "enabled",
-        "components/form-field": "enabled",
-        "components/form-field-checkbox-option": "enabled",
-        "components/form-field-description": "enabled",
-        "components/form-field-error-message": "enabled",
-        "components/form-field-option-label": "enabled",
-        "components/form-field-radio-option": "enabled",
-        "components/hero": "enabled",
-        "components/icon": "enabled",
-        "components/link-list": "enabled",
-        "components/link-list-card": "enabled",
-        "components/link/nl": "enabled",
-        "components/link/utrecht": "enabled",
-        "components/listbox": "enabled",
-        "components/logo": "enabled",
-        "components/message-list": "enabled",
-        "components/nav-bar": "enabled",
-        "components/navigation-list": "enabled",
-        "components/number-badge/nl": "enabled",
-        "components/number-badge/utrecht": "enabled",
-        "components/ordered-list": "enabled",
-        "components/paragraph": "enabled",
-        "components/page-body": "enabled",
-        "components/page-header": "enabled",
-        "components/pre-heading": "enabled",
-        "components/radio-button": "enabled",
-        "components/radio-group": "enabled",
-        "components/root": "enabled",
-        "components/select": "enabled",
-        "components/separator": "enabled",
-        "components/side-nav": "enabled",
-        "components/skip-link": "enabled",
-        "components/status-badge": "enabled",
-        "components/sub-nav-bar": "enabled",
-        "components/table": "enabled",
-        "components/text-input/base": "enabled",
-        "components/text-input/deprecated": "enabled",
-        "components/textarea": "enabled",
-        "components/toggletip": "enabled",
-        "components/unordered-list": "enabled",
-        "components/document": "enabled",
-        "components/rich-text": "enabled",
-        "components/form-field-label": "enabled",
-        "components/page-number-navigation": "enabled",
-        "components/page-footer": "enabled",
-        "brand/text": "enabled",
-        "common/vendor": "enabled",
-        "components/form-field-label-suffix": "enabled",
-        "components/data-badge/utrecht": "enabled",
-        "components/data-badge/nl": "enabled",
-        "brand/color": "enabled",
-        "brand/color-mode/light": "enabled",
-        "common/type-scale/default": "enabled",
-        "common/viewport/max": "enabled",
-        "common/primary-color/core": "enabled",
-        "common/base": "enabled",
-        "components/heading/base": "enabled",
-        "components/heading/color-core": "enabled",
-        "components/button/utrecht-base": "enabled",
+        "common/vendor": "source"
+      },
+      "group": "Common"
+    },
+    {
+      "id": "dit-zou-een-willekeurig-uuid-moeten-zijn",
+      "name": "Default",
+      "$figmaStyleReferences": {},
+      "selectedTokenSets": {
+        "common/type-scale/default": "enabled"
+      },
+      "$figmaVariableReferences": {},
+      "group": "Type scale"
+    },
+    {
+      "id": "9e2348c5a7fedc3e50c7b4284a2eb6e2b1b83145",
+      "name": "Information dense",
+      "$figmaStyleReferences": {},
+      "selectedTokenSets": {
+        "common/type-scale/information-dense": "enabled"
+      },
+      "group": "Type scale"
+    },
+    {
+      "id": "56706eaf82818c037fbc25d8d249dbf8ba0f2ac1",
+      "name": "Min",
+      "$figmaStyleReferences": {},
+      "selectedTokenSets": {
+        "common/viewport/min": "enabled"
+      },
+      "group": "Viewport"
+    },
+    {
+      "id": "2768e3ed79267e65748f03874458ee68741a9816",
+      "name": "Max",
+      "$figmaStyleReferences": {},
+      "selectedTokenSets": {
+        "common/viewport/max": "enabled"
+      },
+      "group": "Viewport"
+    },
+    {
+      "id": "6b301903f0b8e937b58836e4fd4f0ae3f79f1e54",
+      "name": "Lintblauw",
+      "$figmaStyleReferences": {},
+      "selectedTokenSets": {
+        "components/button/nl-color-core": "enabled",
         "components/button/utrecht-color-core": "enabled",
-        "components/button/nl-color-core": "enabled",
-        "components/button/nl-base": "enabled"
+        "components/heading/color-core": "enabled",
+        "common/primary-color/lintblauw": "enabled"
       },
-      "$figmaVariableReferences": {},
-      "group": "Rijkshuisstijl"
+      "group": "Theme"
     },
     {
-      "id": "uitvoerend - groen",
-      "name": "Uitvoerend - Groen",
+      "id": "23d5d54abeb2e98199bb4ab49f12bd83626bf14c",
+      "name": "Groen",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
-        "brand/border": "enabled",
-        "brand/size": "enabled",
-        "brand/space": "enabled",
-        "common/focus": "enabled",
-        "common/rounded-corner": "enabled",
-        "components/accordion": "enabled",
-        "components/action-group": "enabled",
-        "components/alert": "enabled",
-        "components/article": "enabled",
-        "components/backdrop": "enabled",
-        "components/blockquote": "enabled",
-        "components/breadcrumb": "enabled",
-        "components/card": "enabled",
-        "components/card-as-link": "enabled",
-        "components/checkbox-group": "enabled",
-        "components/checkbox": "enabled",
-        "components/code-input": "enabled",
-        "components/code-input-group": "enabled",
-        "components/column-layout": "enabled",
-        "components/data-badge-button": "enabled",
-        "components/data-summary": "enabled",
-        "components/dot-badge": "enabled",
-        "components/drawer": "enabled",
-        "components/expandable-checkbox-group": "enabled",
-        "components/fieldset": "enabled",
-        "components/figure": "enabled",
-        "components/file-input": "enabled",
-        "components/form-field": "enabled",
-        "components/form-field-checkbox-option": "enabled",
-        "components/form-field-description": "enabled",
-        "components/form-field-error-message": "enabled",
-        "components/form-field-option-label": "enabled",
-        "components/form-field-radio-option": "enabled",
-        "components/hero": "enabled",
-        "components/icon": "enabled",
-        "components/link-list": "enabled",
-        "components/link-list-card": "enabled",
-        "components/link/nl": "enabled",
-        "components/link/utrecht": "enabled",
-        "components/listbox": "enabled",
-        "components/logo": "enabled",
-        "components/message-list": "enabled",
-        "components/nav-bar": "enabled",
-        "components/navigation-list": "enabled",
-        "components/number-badge/nl": "enabled",
-        "components/number-badge/utrecht": "enabled",
-        "components/ordered-list": "enabled",
-        "components/paragraph": "enabled",
-        "components/page-body": "enabled",
-        "components/page-header": "enabled",
-        "components/pre-heading": "enabled",
-        "components/radio-button": "enabled",
-        "components/radio-group": "enabled",
-        "components/root": "enabled",
-        "components/select": "enabled",
-        "components/separator": "enabled",
-        "components/side-nav": "enabled",
-        "components/skip-link": "enabled",
-        "components/status-badge": "enabled",
-        "components/sub-nav-bar": "enabled",
-        "components/table": "enabled",
-        "components/text-input/base": "enabled",
-        "components/text-input/deprecated": "enabled",
-        "components/textarea": "enabled",
-        "components/toggletip": "enabled",
-        "components/unordered-list": "enabled",
-        "components/document": "enabled",
-        "components/rich-text": "enabled",
-        "components/form-field-label": "enabled",
-        "components/page-number-navigation": "enabled",
-        "components/page-footer": "enabled",
-        "brand/text": "enabled",
-        "common/vendor": "enabled",
-        "components/form-field-label-suffix": "enabled",
-        "components/data-badge/utrecht": "enabled",
-        "components/data-badge/nl": "enabled",
-        "brand/color": "enabled",
-        "brand/color-mode/light": "enabled",
-        "common/type-scale/default": "enabled",
-        "common/viewport/max": "enabled",
         "common/primary-color/groen": "enabled",
-        "common/base": "enabled",
-        "components/heading/base": "enabled",
-        "components/heading/color-core": "enabled",
-        "components/button/utrecht-base": "enabled",
-        "components/button/utrecht-color-primary": "enabled",
         "components/button/nl-color-primary": "enabled",
-        "components/button/nl-base": "enabled"
+        "components/button/utrecht-color-primary": "enabled",
+        "components/heading/color-primary": "enabled"
       },
-      "$figmaVariableReferences": {},
-      "group": "Rijkshuisstijl"
+      "group": "Theme"
     },
     {
-      "id": "uitvoerend - hemelblauw",
-      "name": "Uitvoerend - Hemelblauw",
+      "id": "3e67811141491ec3663bbcd289e8064eb0a3b9a2",
+      "name": "Hemelblauw",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
-        "brand/border": "enabled",
-        "brand/size": "enabled",
-        "brand/space": "enabled",
-        "common/focus": "enabled",
-        "common/rounded-corner": "enabled",
-        "components/accordion": "enabled",
-        "components/action-group": "enabled",
-        "components/alert": "enabled",
-        "components/article": "enabled",
-        "components/backdrop": "enabled",
-        "components/blockquote": "enabled",
-        "components/breadcrumb": "enabled",
-        "components/card": "enabled",
-        "components/card-as-link": "enabled",
-        "components/checkbox-group": "enabled",
-        "components/checkbox": "enabled",
-        "components/code-input": "enabled",
-        "components/code-input-group": "enabled",
-        "components/column-layout": "enabled",
-        "components/data-badge-button": "enabled",
-        "components/data-summary": "enabled",
-        "components/dot-badge": "enabled",
-        "components/drawer": "enabled",
-        "components/expandable-checkbox-group": "enabled",
-        "components/fieldset": "enabled",
-        "components/figure": "enabled",
-        "components/file-input": "enabled",
-        "components/form-field": "enabled",
-        "components/form-field-checkbox-option": "enabled",
-        "components/form-field-description": "enabled",
-        "components/form-field-error-message": "enabled",
-        "components/form-field-option-label": "enabled",
-        "components/form-field-radio-option": "enabled",
-        "components/hero": "enabled",
-        "components/icon": "enabled",
-        "components/link-list": "enabled",
-        "components/link-list-card": "enabled",
-        "components/link/nl": "enabled",
-        "components/link/utrecht": "enabled",
-        "components/listbox": "enabled",
-        "components/logo": "enabled",
-        "components/message-list": "enabled",
-        "components/nav-bar": "enabled",
-        "components/navigation-list": "enabled",
-        "components/number-badge/nl": "enabled",
-        "components/number-badge/utrecht": "enabled",
-        "components/ordered-list": "enabled",
-        "components/paragraph": "enabled",
-        "components/page-body": "enabled",
-        "components/page-header": "enabled",
-        "components/pre-heading": "enabled",
-        "components/radio-button": "enabled",
-        "components/radio-group": "enabled",
-        "components/root": "enabled",
-        "components/select": "enabled",
-        "components/separator": "enabled",
-        "components/side-nav": "enabled",
-        "components/skip-link": "enabled",
-        "components/status-badge": "enabled",
-        "components/sub-nav-bar": "enabled",
-        "components/table": "enabled",
-        "components/text-input/base": "enabled",
-        "components/text-input/deprecated": "enabled",
-        "components/textarea": "enabled",
-        "components/toggletip": "enabled",
-        "components/unordered-list": "enabled",
-        "components/document": "enabled",
-        "components/rich-text": "enabled",
-        "components/form-field-label": "enabled",
-        "components/page-number-navigation": "enabled",
-        "components/page-footer": "enabled",
-        "brand/text": "enabled",
-        "common/vendor": "enabled",
-        "components/form-field-label-suffix": "enabled",
-        "components/data-badge/utrecht": "enabled",
-        "components/data-badge/nl": "enabled",
-        "brand/color": "enabled",
-        "brand/color-mode/light": "enabled",
-        "common/type-scale/default": "enabled",
-        "common/viewport/max": "enabled",
         "common/primary-color/hemelblauw": "enabled",
-        "common/base": "enabled",
-        "components/heading/base": "enabled",
         "components/heading/color-core": "enabled",
-        "components/button/utrecht-base": "enabled",
-        "components/button/utrecht-color-primary": "enabled",
         "components/button/nl-color-primary": "enabled",
-        "components/button/nl-base": "enabled"
+        "components/button/utrecht-color-primary": "enabled"
       },
-      "$figmaVariableReferences": {},
-      "group": "Rijkshuisstijl"
+      "group": "Theme"
     },
     {
-      "id": "uitvoerend - oranje",
-      "name": "Uitvoerend - Oranje",
+      "id": "1c3d94816e1ceead3542fe37a68ee53db9bd8975",
+      "name": "Oranje",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
-        "brand/border": "enabled",
-        "brand/size": "enabled",
-        "brand/space": "enabled",
-        "common/focus": "enabled",
-        "common/rounded-corner": "enabled",
-        "components/accordion": "enabled",
-        "components/action-group": "enabled",
-        "components/alert": "enabled",
-        "components/article": "enabled",
-        "components/backdrop": "enabled",
-        "components/blockquote": "enabled",
-        "components/breadcrumb": "enabled",
-        "components/card": "enabled",
-        "components/card-as-link": "enabled",
-        "components/checkbox-group": "enabled",
-        "components/checkbox": "enabled",
-        "components/code-input": "enabled",
-        "components/code-input-group": "enabled",
-        "components/column-layout": "enabled",
-        "components/data-badge-button": "enabled",
-        "components/data-summary": "enabled",
-        "components/dot-badge": "enabled",
-        "components/drawer": "enabled",
-        "components/expandable-checkbox-group": "enabled",
-        "components/fieldset": "enabled",
-        "components/figure": "enabled",
-        "components/file-input": "enabled",
-        "components/form-field": "enabled",
-        "components/form-field-checkbox-option": "enabled",
-        "components/form-field-description": "enabled",
-        "components/form-field-error-message": "enabled",
-        "components/form-field-option-label": "enabled",
-        "components/form-field-radio-option": "enabled",
-        "components/hero": "enabled",
-        "components/icon": "enabled",
-        "components/link-list": "enabled",
-        "components/link-list-card": "enabled",
-        "components/link/nl": "enabled",
-        "components/link/utrecht": "enabled",
-        "components/listbox": "enabled",
-        "components/logo": "enabled",
-        "components/message-list": "enabled",
-        "components/nav-bar": "enabled",
-        "components/navigation-list": "enabled",
-        "components/number-badge/nl": "enabled",
-        "components/number-badge/utrecht": "enabled",
-        "components/ordered-list": "enabled",
-        "components/paragraph": "enabled",
-        "components/page-body": "enabled",
-        "components/page-header": "enabled",
-        "components/pre-heading": "enabled",
-        "components/radio-button": "enabled",
-        "components/radio-group": "enabled",
-        "components/root": "enabled",
-        "components/select": "enabled",
-        "components/separator": "enabled",
-        "components/side-nav": "enabled",
-        "components/skip-link": "enabled",
-        "components/status-badge": "enabled",
-        "components/sub-nav-bar": "enabled",
-        "components/table": "enabled",
-        "components/text-input/base": "enabled",
-        "components/text-input/deprecated": "enabled",
-        "components/textarea": "enabled",
-        "components/toggletip": "enabled",
-        "components/unordered-list": "enabled",
-        "components/document": "enabled",
-        "components/rich-text": "enabled",
-        "components/form-field-label": "enabled",
-        "components/page-number-navigation": "enabled",
-        "components/page-footer": "enabled",
-        "brand/text": "enabled",
-        "common/vendor": "enabled",
-        "components/form-field-label-suffix": "enabled",
-        "components/data-badge/utrecht": "enabled",
-        "components/data-badge/nl": "enabled",
-        "brand/color": "enabled",
-        "brand/color-mode/light": "enabled",
-        "common/type-scale/default": "enabled",
-        "common/viewport/max": "enabled",
         "common/primary-color/oranje": "enabled",
-        "common/base": "enabled",
-        "components/heading/base": "enabled",
-        "components/heading/color-core": "enabled",
-        "components/button/utrecht-base": "enabled",
         "components/button/nl-color-core": "enabled",
-        "components/button/nl-base": "enabled",
-        "components/button/utrecht-color-core": "enabled"
+        "components/button/utrecht-color-core": "enabled",
+        "components/heading/color-core": "enabled"
       },
-      "$figmaVariableReferences": {},
-      "group": "Rijkshuisstijl"
+      "group": "Theme"
     },
     {
-      "id": "uitvoerend - paars",
-      "name": "Uitvoerend - Paars",
+      "id": "9bc9c2260e1466c7a8eb642ea93f6edd55f2211c",
+      "name": "Paars",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
-        "brand/border": "enabled",
-        "brand/size": "enabled",
-        "brand/space": "enabled",
-        "common/focus": "enabled",
-        "common/rounded-corner": "enabled",
-        "components/accordion": "enabled",
-        "components/action-group": "enabled",
-        "components/alert": "enabled",
-        "components/article": "enabled",
-        "components/backdrop": "enabled",
-        "components/blockquote": "enabled",
-        "components/breadcrumb": "enabled",
-        "components/card": "enabled",
-        "components/card-as-link": "enabled",
-        "components/checkbox-group": "enabled",
-        "components/checkbox": "enabled",
-        "components/code-input": "enabled",
-        "components/code-input-group": "enabled",
-        "components/column-layout": "enabled",
-        "components/data-badge-button": "enabled",
-        "components/data-summary": "enabled",
-        "components/dot-badge": "enabled",
-        "components/drawer": "enabled",
-        "components/expandable-checkbox-group": "enabled",
-        "components/fieldset": "enabled",
-        "components/figure": "enabled",
-        "components/file-input": "enabled",
-        "components/form-field": "enabled",
-        "components/form-field-checkbox-option": "enabled",
-        "components/form-field-description": "enabled",
-        "components/form-field-error-message": "enabled",
-        "components/form-field-option-label": "enabled",
-        "components/form-field-radio-option": "enabled",
-        "components/hero": "enabled",
-        "components/icon": "enabled",
-        "components/link-list": "enabled",
-        "components/link-list-card": "enabled",
-        "components/link/nl": "enabled",
-        "components/link/utrecht": "enabled",
-        "components/listbox": "enabled",
-        "components/logo": "enabled",
-        "components/message-list": "enabled",
-        "components/nav-bar": "enabled",
-        "components/navigation-list": "enabled",
-        "components/number-badge/nl": "enabled",
-        "components/number-badge/utrecht": "enabled",
-        "components/ordered-list": "enabled",
-        "components/paragraph": "enabled",
-        "components/page-body": "enabled",
-        "components/page-header": "enabled",
-        "components/pre-heading": "enabled",
-        "components/radio-button": "enabled",
-        "components/radio-group": "enabled",
-        "components/root": "enabled",
-        "components/select": "enabled",
-        "components/separator": "enabled",
-        "components/side-nav": "enabled",
-        "components/skip-link": "enabled",
-        "components/status-badge": "enabled",
-        "components/sub-nav-bar": "enabled",
-        "components/table": "enabled",
-        "components/text-input/base": "enabled",
-        "components/text-input/deprecated": "enabled",
-        "components/textarea": "enabled",
-        "components/toggletip": "enabled",
-        "components/unordered-list": "enabled",
-        "components/document": "enabled",
-        "components/rich-text": "enabled",
-        "components/form-field-label": "enabled",
-        "components/page-number-navigation": "enabled",
-        "components/page-footer": "enabled",
-        "brand/text": "enabled",
-        "common/vendor": "enabled",
-        "components/form-field-label-suffix": "enabled",
-        "components/data-badge/utrecht": "enabled",
-        "components/data-badge/nl": "enabled",
-        "brand/color": "enabled",
-        "brand/color-mode/light": "enabled",
-        "common/type-scale/default": "enabled",
-        "common/viewport/max": "enabled",
         "common/primary-color/paars": "enabled",
-        "common/base": "enabled",
-        "components/heading/base": "enabled",
-        "components/heading/color-primary": "enabled",
-        "components/button/utrecht-base": "enabled",
+        "components/button/nl-color-primary": "enabled",
         "components/button/utrecht-color-primary": "enabled",
-        "components/button/nl-base": "enabled",
-        "components/button/nl-color-primary": "enabled"
+        "components/heading/color-primary": "enabled"
       },
-      "$figmaVariableReferences": {},
-      "group": "Rijkshuisstijl"
+      "group": "Theme"
     },
     {
-      "id": "786957ab6fd72ed726e59e0415f638eea0de0995",
-      "name": "Uitvoerend - Robijn Rood",
+      "id": "4c2f97e498eca5e65cad9e7cb06692aec977b584",
+      "name": "Robijnrood",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
-        "brand/border": "enabled",
-        "brand/size": "enabled",
-        "brand/space": "enabled",
-        "common/focus": "enabled",
-        "common/rounded-corner": "enabled",
-        "components/accordion": "enabled",
-        "components/action-group": "enabled",
-        "components/alert": "enabled",
-        "components/article": "enabled",
-        "components/backdrop": "enabled",
-        "components/blockquote": "enabled",
-        "components/breadcrumb": "enabled",
-        "components/card": "enabled",
-        "components/card-as-link": "enabled",
-        "components/checkbox-group": "enabled",
-        "components/checkbox": "enabled",
-        "components/code-input": "enabled",
-        "components/code-input-group": "enabled",
-        "components/column-layout": "enabled",
-        "components/data-badge-button": "enabled",
-        "components/data-summary": "enabled",
-        "components/dot-badge": "enabled",
-        "components/drawer": "enabled",
-        "components/expandable-checkbox-group": "enabled",
-        "components/fieldset": "enabled",
-        "components/figure": "enabled",
-        "components/file-input": "enabled",
-        "components/form-field": "enabled",
-        "components/form-field-checkbox-option": "enabled",
-        "components/form-field-description": "enabled",
-        "components/form-field-error-message": "enabled",
-        "components/form-field-option-label": "enabled",
-        "components/form-field-radio-option": "enabled",
-        "components/hero": "enabled",
-        "components/icon": "enabled",
-        "components/link-list": "enabled",
-        "components/link-list-card": "enabled",
-        "components/link/nl": "enabled",
-        "components/link/utrecht": "enabled",
-        "components/listbox": "enabled",
-        "components/logo": "enabled",
-        "components/message-list": "enabled",
-        "components/nav-bar": "enabled",
-        "components/navigation-list": "enabled",
-        "components/number-badge/nl": "enabled",
-        "components/number-badge/utrecht": "enabled",
-        "components/ordered-list": "enabled",
-        "components/paragraph": "enabled",
-        "components/page-body": "enabled",
-        "components/page-header": "enabled",
-        "components/pre-heading": "enabled",
-        "components/radio-button": "enabled",
-        "components/radio-group": "enabled",
-        "components/root": "enabled",
-        "components/select": "enabled",
-        "components/separator": "enabled",
-        "components/side-nav": "enabled",
-        "components/skip-link": "enabled",
-        "components/status-badge": "enabled",
-        "components/sub-nav-bar": "enabled",
-        "components/table": "enabled",
-        "components/text-input/base": "enabled",
-        "components/text-input/deprecated": "enabled",
-        "components/textarea": "enabled",
-        "components/toggletip": "enabled",
-        "components/unordered-list": "enabled",
-        "components/document": "enabled",
-        "components/rich-text": "enabled",
-        "components/form-field-label": "enabled",
-        "components/page-number-navigation": "enabled",
-        "components/page-footer": "enabled",
-        "brand/text": "enabled",
-        "common/vendor": "enabled",
-        "components/form-field-label-suffix": "enabled",
-        "components/data-badge/utrecht": "enabled",
-        "components/data-badge/nl": "enabled",
-        "brand/color": "enabled",
-        "brand/color-mode/light": "enabled",
-        "common/type-scale/default": "enabled",
-        "common/viewport/max": "enabled",
         "common/primary-color/robijn-rood": "enabled",
-        "common/base": "enabled",
-        "components/heading/base": "enabled",
-        "components/heading/color-core": "enabled",
-        "components/button/utrecht-base": "enabled",
+        "components/button/nl-color-primary": "enabled",
         "components/button/utrecht-color-primary": "enabled",
-        "components/button/nl-base": "enabled",
-        "components/button/nl-color-primary": "enabled"
+        "components/heading/color-core": "enabled"
       },
-      "$figmaVariableReferences": {},
-      "group": "Rijkshuisstijl"
+      "group": "Theme"
+    },
+    {
+      "id": "2f286db8786143ca85d30b21a16d394e810b1184",
+      "name": "Always on",
+      "$figmaStyleReferences": {},
+      "selectedTokenSets": {
+        "components/accordion": "source",
+        "components/action-group": "source",
+        "components/alert": "source",
+        "components/article": "source",
+        "components/backdrop": "source",
+        "components/blockquote": "source",
+        "components/breadcrumb": "source",
+        "components/button/nl-base": "source",
+        "components/button/utrecht-base": "source",
+        "components/card": "source",
+        "components/card-as-link": "source",
+        "components/checkbox-group": "source",
+        "components/checkbox": "source",
+        "components/code-input": "source",
+        "components/code-input-group": "source",
+        "components/column-layout": "source",
+        "components/data-badge/nl": "source",
+        "components/data-badge/utrecht": "source",
+        "components/data-badge-button": "source",
+        "components/data-summary": "source",
+        "components/document": "source",
+        "components/dot-badge": "source",
+        "components/drawer": "source",
+        "components/expandable-checkbox-group": "source",
+        "components/fieldset": "source",
+        "components/figure": "source",
+        "components/file-input": "source",
+        "components/form-field": "source",
+        "components/form-field-checkbox-option": "source",
+        "components/form-field-description": "source",
+        "components/form-field-error-message": "source",
+        "components/form-field-label": "source",
+        "components/form-field-label-suffix": "source",
+        "components/form-field-option-label": "source",
+        "components/form-field-radio-option": "source",
+        "components/heading/base": "source",
+        "components/hero": "source",
+        "components/icon": "source",
+        "components/link-list": "source",
+        "components/link-list-card": "source",
+        "components/link/nl": "source",
+        "components/link/utrecht": "source",
+        "components/listbox": "source",
+        "components/logo": "source",
+        "components/message-list": "source",
+        "components/nav-bar": "source",
+        "components/navigation-list": "source",
+        "components/number-badge/nl": "source",
+        "components/number-badge/utrecht": "source",
+        "components/ordered-list": "source",
+        "components/page-body": "source",
+        "components/page-footer": "source",
+        "components/page-number-navigation": "source",
+        "components/paragraph": "source",
+        "components/pre-heading": "source",
+        "components/radio-button": "source",
+        "components/radio-group": "source",
+        "components/rich-text": "source",
+        "components/root": "source",
+        "components/select": "source",
+        "components/separator": "source",
+        "components/side-nav": "source",
+        "components/skip-link": "source",
+        "components/status-badge": "source",
+        "components/sub-nav-bar": "source",
+        "components/table": "source",
+        "components/text-input/base": "source",
+        "components/text-input/deprecated": "source",
+        "components/textarea": "source",
+        "components/toggletip": "source",
+        "components/unordered-list": "source",
+        "components/page-header": "source"
+      },
+      "group": "Components"
     }
   ],
   "$metadata": {
@@ -12768,13 +12416,13 @@
       "common/type-scale/information-dense",
       "common/viewport/min",
       "common/viewport/max",
-      "common/primary-color/core",
       "common/primary-color/groen",
       "common/primary-color/hemelblauw",
       "common/primary-color/mintgroen",
       "common/primary-color/oranje",
       "common/primary-color/paars",
       "common/primary-color/robijn-rood",
+      "common/primary-color/lintblauw",
       "common/focus",
       "common/rounded-corner",
       "common/vendor",

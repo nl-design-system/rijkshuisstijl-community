@@ -2,8 +2,6 @@
 
 # Rijkshuisstijl Community Componenten - React
 
-_Dit project wordt **niet** gesteund door het Ministerie van Algemene Zaken._
-
 **Het toepassen van design-elementen uit dit project is strikt verboden voor organisaties die geen deel uitmaken van de
 centrale overheid van Nederland.**
 
@@ -58,16 +56,16 @@ pakket, en omring het deel van je applicatie waar je het thema wilt toepassen me
 #### Thema wijzigen
 
 Om een ander thema toe te passen moet je het importeren van `import '@rijkshuisstijl-community/design-tokens/dist/{thema}/index.css';` en de class aanpassen naar het desbetreffende thema.
-Zie het volgende voorbeeld om het uitvoerend-groen thema toe te passen:
+Zie het volgende voorbeeld om het thema "groen" toe te passen:
 
 ```tsx
-import '@rijkshuisstijl-community/design-tokens/dist/uitvoerend-groen/index.css'; // design tokens importeren
+import '@rijkshuisstijl-community/design-tokens/dist/groen/index.css'; // design tokens importeren
 import '@rijkshuisstijl-community/components-css/dist/index.css'; // css importeren
 import { Button } from '@rijkshuisstijl-community/components-react'; // React-component importeren
 
 function App() {
   return (
-    <div className="uitvoerend-groen">
+    <div className="groen">
       {/* geef alle thema tokens mee aan child components voor styling */}
       <Button appearance="primary-action-button">Click Here!</Button>
     </div>
