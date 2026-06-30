@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import Page from './design-tokens/space';
+import Page from './handboek/huisstijl-vastleggen/themas';
 import './globals.css';
 
 const meta: Meta = {
-  title: 'Design Tokens/Ruimte',
-  id: 'rhc-templates-design-tokens-space',
+  title: 'Handboek/huisstijl vastleggen/themas',
+  id: 'rhc-templates-handboek-huisstijl-vastleggen-themas',
   component: Page,
   parameters: {
     layout: 'fullscreen',

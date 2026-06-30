@@ -8872,6 +8872,104 @@
       }
     }
   },
+  "components/grid": {
+    "ams": {
+      "grid": {
+        "column-count": {
+          "$value": "4",
+          "$type": "other"
+        },
+        "column-gap": {
+          "$value": "{rhc.space.xl}",
+          "$type": "dimension"
+        },
+        "padding-block-l": {
+          "$value": "{rhc.space.3xl}",
+          "$type": "dimension"
+        },
+        "padding-block-xl": {
+          "$value": "{rhc.space.4xl}",
+          "$type": "dimension"
+        },
+        "padding-block-2xl": {
+          "$value": "{rhc.space.5xl}",
+          "$type": "dimension"
+        },
+        "padding-inline": {
+          "$value": "{rhc.space.xl}",
+          "$type": "dimension"
+        },
+        "row-gap-l": {
+          "$value": "{rhc.space.xl}",
+          "$type": "dimension"
+        },
+        "row-gap-xl": {
+          "$value": "32px",
+          "$type": "dimension"
+        },
+        "row-gap-2xl": {
+          "$value": "{rhc.space.2xl}",
+          "$type": "dimension"
+        },
+        "medium": {
+          "column-count": {
+            "$value": "8",
+            "$type": "other"
+          },
+          "padding-inline": {
+            "$value": "initial",
+            "$type": "dimension"
+          }
+        },
+        "wide": {
+          "column-count": {
+            "$value": "12",
+            "$type": "other"
+          },
+          "padding-inline": {
+            "$value": "initial",
+            "$type": "dimension"
+          }
+        },
+        "vi": {
+          "medium": {
+            "column-count": {
+              "$value": "8",
+              "$type": "other"
+            },
+            "padding-inline": {
+              "$value": "{rhc.space.xl}",
+              "$type": "dimension"
+            }
+          },
+          "wide": {
+            "column-count": {
+              "$value": "14",
+              "$type": "other"
+            },
+            "padding-inline": {
+              "$value": "{rhc.space.2xl}",
+              "$type": "dimension"
+            }
+          }
+        },
+        "cell": {
+          "background-color": {
+            "$value": "initial",
+            "$type": "color"
+          },
+          "padding-block": {
+            "$value": "initial",
+            "$type": "dimension"
+          },
+          "padding-inline": {
+            "$value": "initial",
+            "$type": "dimension"
+          }
+        }
+      }
+    }
+  },
   "components/heading/base": {
     "nl": {
       "heading": {
@@ -12361,6 +12459,7 @@
         "components/form-field-label-suffix": "source",
         "components/form-field-option-label": "source",
         "components/form-field-radio-option": "source",
+        "components/grid": "source",
         "components/heading/base": "source",
         "components/hero": "source",
         "components/icon": "source",
@@ -12468,6 +12567,7 @@
       "components/form-field-label-suffix",
       "components/form-field-option-label",
       "components/form-field-radio-option",
+      "components/grid",
       "components/heading/base",
       "components/heading/color-core",
       "components/heading/color-primary",

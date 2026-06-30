@@ -8,6 +8,10 @@
 
 .rhc-margin-block-end-wrapper {
   --utrecht-space-around: 1;
+  --utrecht-rich-text-stranger-margin-block-end: calc(var(--utrecht-space-around) * var(--rhc-space-3xl));
+  --utrecht-rich-text-acquaintance-margin-block-end: calc(var(--utrecht-space-around) * var(--rhc-space-xl));
+  --utrecht-rich-text-friend-margin-block-end: calc(var(--utrecht-space-around) * var(--rhc-space-md));
+  --utrecht-rich-text-best-friend-margin-block-end: calc(var(--utrecht-space-around) * var(--rhc-space-sm));
   @include mixin.nl-heading--level-1;
   @include mixin.nl-heading--level-2;
   @include mixin.nl-heading--level-3;
