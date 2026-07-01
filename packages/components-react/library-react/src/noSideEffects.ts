@@ -76,7 +76,7 @@ export * from '@rijkshuisstijl-community/root-react/no-side-effects';
 export * from '@rijkshuisstijl-community/rounded-corner-react/no-side-effects';
 export * from '@rijkshuisstijl-community/separator-react/no-side-effects';
 export * from '@rijkshuisstijl-community/side-nav-react/no-side-effects';
-export * from '@rijkshuisstijl-community/side-nav-react/no-side-effects';
+export * from '@rijkshuisstijl-community/side-nav-item-react/no-side-effects';
 export * from './SideNavLink';
 export * from './SideNavList';
 export * from '@rijkshuisstijl-community/skip-link-react/no-side-effects';
