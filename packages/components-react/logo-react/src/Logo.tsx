@@ -4,12 +4,14 @@
  */
 
 import clsx from 'clsx';
-import { HTMLAttributes, PropsWithChildren, ReactNode, Ref } from 'react';
+import { AnchorHTMLAttributes, HTMLAttributes, PropsWithChildren, ReactNode, Ref } from 'react';
 
 export interface LogoProps extends HTMLAttributes<HTMLDivElement> {
   organisation?: ReactNode;
   subtitle?: ReactNode;
   ref?: Ref<HTMLDivElement>;
+  href?: string;
+  hrefProps?: AnchorHTMLAttributes<HTMLAnchorElement>;
 }
 
 export const Logo = ({
@@ -18,10 +20,12 @@ export const Logo = ({
   className,
   organisation,
   subtitle,
+  href,
+  hrefProps,
   ...restProps
 }: PropsWithChildren<LogoProps>) => {
-  return (
-    <figure className={clsx('rhc-logo', className)} ref={ref} {...restProps}>
+  const content = (
+    <>
       <div className="rhc-logo__image">{children}</div>
       {organisation ? (
         <figcaption className="rhc-logo__caption">
@@ -29,6 +33,18 @@ export const Logo = ({
           {subtitle && <p className="rhc-logo__subtitle">{subtitle}</p>}
         </figcaption>
       ) : null}
+    </>
+  );
+
+  return (
+    <figure className={clsx('rhc-logo', className)} ref={ref} {...restProps}>
+      {href ? (
+        <a {...hrefProps} className={clsx('rhc-logo__link', hrefProps?.className)} href={href}>
+          {content}
+        </a>
+      ) : (
+        content
+      )}
     </figure>
   );
 };

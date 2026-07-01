@@ -90,20 +90,64 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
-    organisation: 'Voorbeeld organisatie',
+    organisation: 'Title',
   },
 };
 
-export const NoOrganisation: Story = {
+export const NoOrganisation: Story = {};
+
+export const WithLink: Story = {
   args: {
-    organisation: undefined,
-    subtitle: undefined,
+    organisation: 'Title',
+    href: 'https://example.com',
+  },
+};
+
+export const WithLinkHover: Story = {
+  args: {
+    organisation: 'Title',
+    subtitle: 'Subtitle',
+    href: 'https://example.com',
+  },
+  parameters: {
+    pseudo: { hover: true },
+  },
+};
+
+export const WithLinkFocus: Story = {
+  parameters: {
+    pseudo: { focus: true },
+  },
+  args: {
+    organisation: 'Title',
+    subtitle: 'Subtitle',
+    href: 'https://example.com',
+  },
+};
+
+export const WithLinkFocusVisible: Story = {
+  args: {
+    organisation: 'Title',
+    subtitle: 'Subtitle',
+    href: 'https://example.com',
+    hrefProps: { className: 'nl-link--focus-visible' },
+  },
+};
+
+export const WithLinkActive: Story = {
+  args: {
+    organisation: 'Title',
+    subtitle: 'Subtitle',
+    href: 'https://example.com',
+  },
+  parameters: {
+    pseudo: { active: true },
   },
 };
 
 export const WithSubtitle: Story = {
   args: {
-    organisation: 'Voorbeeld organisatie',
-    subtitle: 'Voorbeeld sub-title',
+    organisation: 'Title',
+    subtitle: 'Subtitle',
   },
 };
