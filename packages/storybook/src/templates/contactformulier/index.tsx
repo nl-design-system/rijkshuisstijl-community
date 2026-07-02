@@ -71,10 +71,10 @@ export default function Contactformulier({ showErrors = false }: Readonly<{ show
                 </Alert>
               ) : null}
 
-              {/* GAP: de Form Field-componenten exposen het input-id niet, dus de error-summary-links kunnen de focus niet naar het veld verplaatsen. */}
-              {/* GAP: FormFieldSelect accepteert zelfs geen eigen id: dat overschrijft alleen de htmlFor van het label en breekt de label-koppeling (select-name). Kale div als anchor-doel. */}
+              {/* GAP: de Form Field-componenten exposen het input-id niet (een eigen id landt op de wrapper, bij FormFieldSelect breekt het zelfs de label-koppeling). */}
+              {/* De error-summary-links landen daarom op focusbare wrapper-divs (tabIndex -1) naast het veld, niet in de control zelf. */}
               {/* GAP: geen placeholder-API en `required` wordt niet doorgegeven aan de native <select>; verplicht-select-patroon kan niet volledig via de component. */}
-              <div id="wat-is-uw-situatie">
+              <div id="wat-is-uw-situatie" tabIndex={-1}>
                 <FormFieldSelect
                   defaultValue=""
                   errorMessage="U heeft geen keuze gemaakt. Maak een keuze."
@@ -95,14 +95,15 @@ export default function Contactformulier({ showErrors = false }: Readonly<{ show
                 defaultValue={showErrors ? 'Mijn vlucht is geannuleerd' : undefined}
                 label="Wat wilt u precies weten?"
               />
-              <FormFieldTextInput
-                defaultValue={showErrors ? 'jan.jansen@voorbeeld' : undefined}
-                errorMessage="Dit is geen geldig e-mailadres. Vul een geldig e-mailadres in."
-                id="e-mailadres"
-                invalid={showErrors}
-                label="E-mailadres"
-                type="email"
-              />
+              <div id="e-mailadres" tabIndex={-1}>
+                <FormFieldTextInput
+                  defaultValue={showErrors ? 'jan.jansen@voorbeeld' : undefined}
+                  errorMessage="Dit is geen geldig e-mailadres. Vul een geldig e-mailadres in."
+                  invalid={showErrors}
+                  label="E-mailadres"
+                  type="email"
+                />
+              </div>
               {/* GAP: Form Field heeft geen label-suffix-API; het "(Niet verplicht)"-suffix uit Figma staat hier als platte tekst in het label. */}
               <FormFieldTextInput label="Telefoonnummer (Niet verplicht)" type="tel" />
 
@@ -115,12 +116,13 @@ export default function Contactformulier({ showErrors = false }: Readonly<{ show
                   Meer informatie over uw privacy.
                 </Link>
               </Paragraph>
-              <FormFieldCheckboxOption
-                errorMessage="U heeft nog geen akkoord gegeven. Vink 'Ik begrijp het' aan."
-                id="ik-begrijp-het"
-                invalid={showErrors}
-                label="Ik begrijp het"
-              />
+              <div id="ik-begrijp-het" tabIndex={-1}>
+                <FormFieldCheckboxOption
+                  errorMessage="U heeft nog geen akkoord gegeven. Vink 'Ik begrijp het' aan."
+                  invalid={showErrors}
+                  label="Ik begrijp het"
+                />
+              </div>
 
               <Button appearance="primary-action-button" type="submit">
                 Verzenden
