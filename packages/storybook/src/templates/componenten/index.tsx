@@ -3,7 +3,6 @@
 import {
   Button,
   Card,
-  DataBadgeButton,
   ExpandableCheckboxGroup,
   FormFieldTextInput,
   Heading,
@@ -12,7 +11,7 @@ import {
   PageNumberNavigation,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
-import { IconCheck, IconPlus, IconSearch } from '@tabler/icons-react';
+import { IconPlus, IconSearch, IconX } from '@tabler/icons-react';
 import { BadgeList, ButtonLink, Icon } from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react';
 import React, {
@@ -60,6 +59,13 @@ interface ActiveFiltersBadgeListProps {
   selectedFrameworks: string[];
 }
 
+/**
+ * Verwijderbare filter-tag, bewust lokaal in dit template opgelost (zie #2651):
+ * er is nog geen tag/chips-component binnen NLDS, dus geen eigen component maar
+ * een native button met de bestaande badge-styling. De native button geeft
+ * toetsenbordbediening (Enter/Space); de verwijder-actie zit in de toegankelijke
+ * naam en het sluit-icoon is decoratief.
+ */
 const ActiveFiltersBadgeList = ({ onRemoveFilter, selectedFrameworks }: ActiveFiltersBadgeListProps) => {
   if (selectedFrameworks.length === 0) return null;
 
@@ -72,19 +78,18 @@ const ActiveFiltersBadgeList = ({ onRemoveFilter, selectedFrameworks }: ActiveFi
       </div>
       <BadgeList aria-labelledby="actieve-filters-heading" className="rhc-active-filters__list" role="group">
         {selectedFrameworks.map((framework) => (
-          <DataBadgeButton
-            aria-label={`${framework} filter verwijderen`}
-            className="rhc-active-filters__badge"
-            helperText="- Klik om filter te verwijderen"
-            icon={<IconCheck />}
-            iconAlign={'end'}
+          <button
+            className="utrecht-data-badge rhc-data-badge-button rhc-active-filters__badge"
             key={`active-${framework}`}
-            pressed={true}
-            value={framework}
+            type="button"
             onClick={() => onRemoveFilter(framework)}
           >
-            {framework}
-          </DataBadgeButton>
+            <span className="rhc-data-badge-button__label">{framework}</span>
+            <span className="rhc-data-badge-button__sr-only">, filter verwijderen</span>
+            <Icon>
+              <IconX />
+            </Icon>
+          </button>
         ))}
       </BadgeList>
     </div>
@@ -414,16 +419,17 @@ export default function Componenten() {
                             role="group"
                           >
                             {component.frameworks.map((framework) => (
-                              <DataBadgeButton
-                                aria-label={`${framework} filter ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
-                                helperText={`- Klik om filter te ${selectedFrameworks.includes(framework) ? 'verwijderen' : 'toevoegen'}`}
+                              // Filter-toggle als native button met aria-pressed, lokaal in dit template opgelost (zie #2651)
+                              <button
+                                aria-pressed={selectedFrameworks.includes(framework)}
+                                className="utrecht-data-badge rhc-data-badge-button"
                                 key={framework}
-                                pressed={selectedFrameworks.includes(framework)}
-                                value={framework}
+                                type="button"
                                 onClick={() => handleDataBadgeClick(framework)}
                               >
-                                {framework}
-                              </DataBadgeButton>
+                                <span className="rhc-data-badge-button__label">{framework}</span>
+                                <span className="rhc-data-badge-button__sr-only">, filter</span>
+                              </button>
                             ))}
                           </BadgeList>
                         </Card>
