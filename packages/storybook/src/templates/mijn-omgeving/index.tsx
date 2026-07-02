@@ -229,6 +229,7 @@ export default function MijnOmgeving() {
           </section>
         </SharedMainPageContent>
       </PageBody>
+      {/* GAP: compact Page Footer variant does not exist yet (#2649); using the standard footer in its light variant. */}
       <SharedFooter isLightTheme={true} />
     </>
   );
