@@ -271,12 +271,12 @@ export default function Page() {
 
             <div className="rhc-templates-spacing-2">
               <Heading level={2}>Aan de slag</Heading>
-              <AccordionProvider sections={stappenplan} />
+              <AccordionProvider headingLevel={3} sections={stappenplan} />
             </div>
 
             <div className="rhc-templates-spacing-2">
               <Heading level={2}>Vraag en antwoord</Heading>
-              <AccordionProvider sections={faq} />
+              <AccordionProvider headingLevel={3} sections={faq} />
               <Paragraph>
                 Meer weten? Ga naar de pagina{' '}
                 <Link inline href="#">
