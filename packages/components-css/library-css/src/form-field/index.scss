@@ -47,8 +47,9 @@
 }
 
 .rhc-form-field.utrecht-form-field--invalid .utrecht-textbox {
-  /* The indent is only subtracted from the token cap; if `--utrecht-textbox-value-max-length`
-     (the size-based cap in the first min() operand) ever gets a value, it needs the same subtraction. */
+  /* The indent is only subtracted from the token cap; the size-based cap in the first min() operand
+     (`--_utrecht-textbox-max-inline-size`, derived from `--utrecht-textbox-value-max-length`) would
+     need the same subtraction once that token gets a value. */
   max-inline-size: min(
     var(--_utrecht-textbox-max-inline-size, 100%),
     calc(

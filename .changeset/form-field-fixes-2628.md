@@ -1,5 +1,5 @@
 ---
-'@rijkshuisstijl-community/design-tokens': minor
+'@rijkshuisstijl-community/design-tokens': patch
 '@rijkshuisstijl-community/components-css': minor
 '@rijkshuisstijl-community/components-react': patch
 ---
