@@ -24,7 +24,7 @@ export default function Page() {
       <SharedHeader />
       <PageBodyContainer>
         <PageBodyContent layout="side-nav">
-          <SideNav>
+          <SideNav aria-label="Zijnavigatie">
             <SideNavList>
               {navigation.map(({ href, label }) => (
                 <SideNavItem key={href}>

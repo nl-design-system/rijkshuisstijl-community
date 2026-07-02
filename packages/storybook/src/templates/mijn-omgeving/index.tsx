@@ -75,6 +75,7 @@ export const sideNav: {
 ];
 
 export const useSideNav = ({ items }: { items: typeof sideNav }) => ({
+  'aria-label': 'Zijnavigatie',
   children: items.map(({ id, items }, index) => (
     <Fragment key={id}>
       {index >= 1 ? <Separator invisible /> : null}
