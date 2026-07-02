@@ -1,8 +1,9 @@
-import { Radio } from '@rijkshuisstijl-community/radio-react';
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
 import { RadioGroup } from './RadioGroup';
+
+const Radio = () => <input type="radio" />;
 
 describe('RadioGroup', () => {
   it('renders successfully', () => {
