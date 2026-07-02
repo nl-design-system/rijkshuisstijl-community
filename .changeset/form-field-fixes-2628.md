@@ -1,0 +1,7 @@
+---
+'@rijkshuisstijl-community/design-tokens': minor
+'@rijkshuisstijl-community/components-css': minor
+'@rijkshuisstijl-community/components-react': patch
+---
+
+Het Form Field krijgt een aantal gedragsfixes en een token-opschoning conform het bijgewerkte ontwerp: FormFieldSelect zet de required-prop nu daadwerkelijk op het native select-element (voorheen werd hij stilletjes genegeerd), FormField gebruikt descriptionId zodat aria-describedby van Select, RadioGroup en CheckboxGroup naar een bestaand id verwijst zodra er een description is, en de description rendert nu met zowel de class `utrecht-form-field-description` als `utrecht-form-field__description` zodat de bestaande description-tokens (subtiele kleur) grijpen. Omdat de aparte focus-rand van het select vervalt (de focus-outline blijft), is utrecht.select.focus.border-width verplaatst naar de nieuwe deprecated-subset van select en is de bijbehorende :focus-regel uit de CSS verwijderd; ook utrecht.select.image-background-position is naar die deprecated-subset verplaatst, omdat de CSS de waarde al lokaal zet (mede vanwege de RTL-variant) en het token daardoor redundant is. Beide custom properties blijven voorlopig gegenereerd worden zodat bestaande afnemers tijd hebben om te migreren. Tot slot maakt de invalid-inspringing (foutstreep + padding) een veld niet langer breder dan een veld zonder error: de maximale veldbreedte binnen een invalid form field wordt met dezelfde inspringing verlaagd, zodat de inline-eindranden van alle velden uitgelijnd blijven.

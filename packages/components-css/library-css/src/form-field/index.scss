@@ -36,3 +36,41 @@
 .rhc-form-field.utrecht-form-field--checkbox {
   grid-template-areas: "input label" "input description" "input error-message" "input status";
 }
+
+/* The invalid indent (error stripe + padding) must not make a field wider than its siblings:
+   reduce the field's max size cap by the same indent so the inline end edges stay aligned. */
+.rhc-form-field.utrecht-form-field--invalid {
+  --_rhc-form-field-invalid-indent: calc(
+    var(--utrecht-form-field-invalid-border-inline-start-width, 0px) +
+      var(--utrecht-form-field-invalid-padding-inline-start, 0px)
+  );
+}
+
+.rhc-form-field.utrecht-form-field--invalid .utrecht-textbox {
+  /* The indent is only subtracted from the token cap; if `--utrecht-textbox-value-max-length`
+     (the size-based cap in the first min() operand) ever gets a value, it needs the same subtraction. */
+  max-inline-size: min(
+    var(--_utrecht-textbox-max-inline-size, 100%),
+    calc(
+      var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size)) - var(
+          --_rhc-form-field-invalid-indent
+        )
+    )
+  );
+}
+
+.rhc-form-field.utrecht-form-field--invalid .utrecht-select {
+  max-inline-size: calc(
+    var(--utrecht-select-max-inline-size, var(--utrecht-form-control-max-inline-size)) - var(
+        --_rhc-form-field-invalid-indent
+      )
+  );
+}
+
+.rhc-form-field.utrecht-form-field--invalid .utrecht-textarea {
+  max-inline-size: calc(
+    var(--utrecht-textarea-max-inline-size, var(--utrecht-form-control-max-inline-size)) - var(
+        --_rhc-form-field-invalid-indent
+      )
+  );
+}

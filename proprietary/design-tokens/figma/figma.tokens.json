@@ -10887,7 +10887,7 @@
       }
     }
   },
-  "components/select": {
+  "components/select/base": {
     "utrecht": {
       "select": {
         "background-color": {
@@ -10932,11 +10932,6 @@
             "$value": "{rhc.size.icon.md}",
             "$description": "[code-only]"
           }
-        },
-        "image-background-position": {
-          "$type": "other",
-          "$value": "right 0.5rem center",
-          "$description": "[code-only]"
         },
         "line-height": {
           "$type": "lineHeights",
@@ -11021,13 +11016,26 @@
             "$type": "color",
             "$value": "{rhc.color.core.500}"
           },
-          "border-width": {
-            "$type": "dimension",
-            "$value": "{rhc.border-width.md}"
-          },
           "color": {
             "$type": "color",
             "$value": "{rhc.color.foreground.default}"
+          }
+        }
+      }
+    }
+  },
+  "components/select/deprecated": {
+    "utrecht": {
+      "select": {
+        "image-background-position": {
+          "$type": "other",
+          "$value": "right 0.5rem center",
+          "$description": "[code-only]"
+        },
+        "focus": {
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{rhc.border-width.md}"
           }
         }
       }
@@ -12385,7 +12393,8 @@
         "components/radio-group": "source",
         "components/rich-text": "source",
         "components/root": "source",
-        "components/select": "source",
+        "components/select/base": "source",
+        "components/select/deprecated": "source",
         "components/separator": "source",
         "components/side-nav": "source",
         "components/skip-link": "source",
@@ -12494,7 +12503,8 @@
       "components/radio-group",
       "components/rich-text",
       "components/root",
-      "components/select",
+      "components/select/base",
+      "components/select/deprecated",
       "components/separator",
       "components/side-nav",
       "components/skip-link",
