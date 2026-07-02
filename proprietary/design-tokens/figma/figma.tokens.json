@@ -10468,7 +10468,7 @@
           },
           "padding-inline": {
             "$type": "dimension",
-            "$value": "{rhc.space.sm}"
+            "$value": "{rhc.space.lg}"
           },
           "current": {
             "font-weight": {
@@ -10527,19 +10527,18 @@
         "link": {
           "min-block-size": {
             "$type": "dimension",
-            "$value": "{rhc.size.pointer-target}"
+            "$value": "{rhc.size.pointer-target}",
+            "$description": "[code-only] Minimaal klikdoel"
           },
           "min-inline-size": {
             "$type": "dimension",
-            "$value": "{rhc.size.pointer-target}"
+            "$value": "{rhc.size.pointer-target}",
+            "$description": "[code-only] Minimaal klikdoel"
           },
           "padding-block": {
             "$type": "dimension",
-            "$value": "{rhc.space.lg}"
-          },
-          "padding-inline": {
-            "$type": "dimension",
-            "$value": "{rhc.space.lg}"
+            "$value": "{rhc.space.lg}",
+            "$description": "[code-only]"
           },
           "current": {
             "background-color": {
@@ -10557,15 +10556,18 @@
         "relative-link": {
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.lg}"
+            "$value": "{rhc.text.font-size.lg}",
+            "$description": "[code-only]"
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.text.font-weight.bold}"
+            "$value": "{rhc.text.font-weight.bold}",
+            "$description": "[code-only]"
           },
           "padding-inline": {
             "$type": "dimension",
-            "$value": "{rhc.space.none}"
+            "$value": "{rhc.space.none}",
+            "$description": "[code-only]"
           }
         }
       }
