@@ -203,9 +203,14 @@ export default function Page() {
         <SharedMainPageContent>
           <SharedDisclaimer />
           <Article>
+            <Paragraph purpose="lead">
+              Heb jij nog een asbestdak op je erf? Dit is een goed moment om daar een plan voor te maken. Want jouw
+              asbestdak ligt al meer dan 30 jaar in de buitenlucht en is daardoor aan het slijten. En dat zorgt voor
+              risico&apos;s.
+            </Paragraph>
             <div className="rhc-templates-spacing-2">
               <Heading level={2}>Waarom is het slim om je asbestdak te verwijderen?</Heading>
-              <Paragraph purpose="lead">
+              <Paragraph>
                 Asbest is jarenlang gebruikt in daken van schuren en stallen. Sinds 2024 is een asbestdak niet meer
                 toegestaan. Een asbestdak verweert door de jaren heen en kan dan gevaarlijke vezels verspreiden. Op tijd
                 verwijderen voorkomt gezondheidsrisico&apos;s en hoge opruimkosten later.
