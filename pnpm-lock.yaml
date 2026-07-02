@@ -791,9 +791,6 @@ importers:
       '@rijkshuisstijl-community/separator-css':
         specifier: workspace:*
         version: link:../separator-css
-      '@rijkshuisstijl-community/side-nav-css':
-        specifier: workspace:*
-        version: link:../side-nav-css
       '@rijkshuisstijl-community/skip-link-css':
         specifier: workspace:*
         version: link:../skip-link-css
@@ -1149,18 +1146,6 @@ importers:
       '@utrecht/separator-css':
         specifier: 1.5.1
         version: 1.5.1
-      chokidar-cli:
-        specifier: 3.0.0
-        version: 3.0.0
-
-  packages/components-css/side-nav-css:
-    devDependencies:
-      '@gemeente-denhaag/side-navigation':
-        specifier: 4.1.1
-        version: 4.1.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@rijkshuisstijl-community/build-utils-css':
-        specifier: workspace:*
-        version: link:../../build-utils-css
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -7148,9 +7133,6 @@ importers:
       '@gemeente-denhaag/side-navigation':
         specifier: 4.1.1
         version: 4.1.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@rijkshuisstijl-community/side-nav-css':
-        specifier: workspace:*
-        version: link:../../components-css/side-nav-css
     devDependencies:
       '@babel/core':
         specifier: 7.29.7
@@ -28622,9 +28604,9 @@ snapshots:
       obug: 2.1.1
       std-env: 4.1.0
       tinyrainbow: 3.1.0
-      vitest: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(msw@2.7.3(@types/node@25.9.2)(typescript@5.9.3))(vite@7.3.5(@types/node@25.9.2)(jiti@2.6.1)(less@4.6.4)(sass@1.100.0)(terser@5.46.1)(yaml@2.8.3))
+      vitest: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(msw@2.7.3(@types/node@25.9.2)(typescript@5.9.3))(vite@7.3.2(@types/node@25.9.2)(jiti@2.6.1)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.3))
     optionalDependencies:
-      '@vitest/browser': 4.1.8(msw@2.7.3(@types/node@25.9.2)(typescript@5.9.3))(vite@7.3.5(@types/node@25.9.2)(jiti@2.6.1)(less@4.6.4)(sass@1.100.0)(terser@5.46.1)(yaml@2.8.3))(vitest@4.1.8)
+      '@vitest/browser': 4.1.8(msw@2.7.3(@types/node@25.9.2)(typescript@5.9.3))(vite@7.3.2(@types/node@25.9.2)(jiti@2.6.1)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.3))(vitest@4.1.8)
 
   '@vitest/expect@3.2.4':
     dependencies:
@@ -28660,7 +28642,6 @@ snapshots:
     optionalDependencies:
       msw: 2.7.3(@types/node@25.9.2)(typescript@5.9.3)
       vite: 7.3.2(@types/node@25.9.2)(jiti@2.6.1)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.3)
-    optional: true
 
   '@vitest/mocker@4.1.8(msw@2.7.3(@types/node@25.9.2)(typescript@5.9.3))(vite@7.3.5(@types/node@25.9.2)(jiti@2.6.1)(less@4.6.4)(sass@1.100.0)(terser@5.46.1)(yaml@2.8.3))':
     dependencies:
@@ -37807,7 +37788,6 @@ snapshots:
       jsdom: 26.1.0
     transitivePeerDependencies:
       - msw
-    optional: true
 
   vitest@4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(msw@2.7.3(@types/node@25.9.2)(typescript@5.9.3))(vite@7.3.5(@types/node@25.9.2)(jiti@2.6.1)(less@4.6.4)(sass@1.100.0)(terser@5.46.1)(yaml@2.8.3)):
     dependencies:
