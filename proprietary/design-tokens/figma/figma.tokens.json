@@ -10454,7 +10454,8 @@
         "link": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.foreground.link}"
+            "$value": "{rhc.color.primary.500}",
+            "$description": "Figma: text/action"
           },
           "gap": {
             "$type": "dimension",
@@ -10478,7 +10479,7 @@
           "hover": {
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.foreground.link-hover}"
+              "$value": "{rhc.color.primary.hover}"
             },
             "text-decoration-line": {
               "$type": "textDecoration",
@@ -10498,6 +10499,73 @@
             "$type": "other",
             "$value": "{rhc.space.xs}",
             "$description": "[code-only]"
+          }
+        }
+      }
+    },
+    "rhc": {
+      "page-number-navigation": {
+        "gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.lg}",
+          "$description": "[code-only] Ruimte tussen de vorige/volgende-links en de paginanummers onderling"
+        },
+        "ellipsis": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.default}",
+            "$description": "Figma: text/body"
+          }
+        },
+        "icon": {
+          "size": {
+            "$type": "dimension",
+            "$value": "1.25rem",
+            "$description": "[code-only] Chevron-icoon, 20px in Figma"
+          }
+        },
+        "link": {
+          "min-block-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.pointer-target}"
+          },
+          "min-inline-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.pointer-target}"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{rhc.space.lg}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.lg}"
+          },
+          "current": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.primary.50}",
+              "$description": "Figma: surface/action/subtle"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.500}",
+              "$description": "Figma: text/core/body"
+            }
+          }
+        },
+        "relative-link": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.lg}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.bold}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.none}"
           }
         }
       }
