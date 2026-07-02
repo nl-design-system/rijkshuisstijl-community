@@ -1,5 +1,5 @@
 ---
-'@rijkshuisstijl-community/text-input-css': minor
+'@rijkshuisstijl-community/text-input-css': patch
 ---
 
-De Text Input verdikt de border bij focus niet langer: de focus-outline is het enige focusmiddel, dus de aparte focus-border-width-regels zijn uit de CSS verwijderd. Het token `utrecht.textbox.focus.border-width` blijft voorlopig beschikbaar in de deprecated-set zodat bestaande afnemers tijd hebben om te migreren; de padding-inline blijft 12px, conform het actuele Figma-ontwerp.
+Text Input verdikt de border niet meer bij focus: de focus-outline is voortaan het enige focusmiddel. Het token `utrecht.textbox.focus.border-width` blijft in de deprecated-set voor Figma-pariteit.
