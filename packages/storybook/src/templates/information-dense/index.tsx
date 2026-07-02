@@ -137,7 +137,6 @@ export default function InformationDense() {
             </Paragraph>
             <Link href="#lees-meer">Lees meer over deze tool</Link>
 
-            {/* GAP: zou de vaste information-dense type-scale moeten gebruiken; nu valt alles op fluid terug. */}
             {/* GAP: ColumnLayout geeft gelijke kolommen i.p.v. de smalle filter- / brede resultaten-verhouding. */}
             <ColumnLayout>
               {/* GAP: geen tint-surface-container-component voor de primary-tint paneelachtergrond. */}
@@ -185,6 +184,7 @@ export default function InformationDense() {
                   Status Open voor aanvragen
                 </DataBadgeButton>
 
+                <Heading level={2}>Zoekresultaten</Heading>
                 {/* GAP: telling + sorteer-Select op één regel mist een inline-layout-component (telling hoort in aria-live, WCAG 4.1.3). */}
                 <Paragraph>166 zoekresultaten</Paragraph>
                 <FormFieldSelect
@@ -194,7 +194,7 @@ export default function InformationDense() {
 
                 <Separator />
                 {/* GAP: accordeon-rij met titel als link bestaat niet; AccordionProvider doet knoptekst. */}
-                <AccordionProvider sections={subsidies} />
+                <AccordionProvider headingLevel={3} sections={subsidies} />
                 <Separator />
 
                 <PageNumberNavigation

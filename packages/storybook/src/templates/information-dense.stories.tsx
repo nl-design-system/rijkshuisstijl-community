@@ -15,10 +15,15 @@ export default meta;
 
 type Story = StoryObj<typeof Page>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  globals: {
+    theme: 'Lintblauw (information dense)',
+  },
+};
 
 export const Mobile: Story = {
   globals: {
+    theme: 'Lintblauw (information dense)',
     viewport: { value: 'mobiel', isRotated: false },
   },
   parameters: {
