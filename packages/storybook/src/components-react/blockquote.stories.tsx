@@ -1,7 +1,6 @@
 import { Blockquote } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { CSSProperties } from 'react';
 import readme from './blockquote.md?raw';
 
 const meta = {
@@ -53,15 +52,12 @@ export const RoundedCorner: Story = {
     children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
     attribution: '— Pippi Langkous',
     className: 'rhc-rounded-corner rhc-rounded-corner--size-sm rhc-rounded-corner--position-start-start',
-    // De achtergrondkleur komt hier tijdelijk uit het blockquote background token;
-    // de surface utility class voor kleur en appearance is nog in ontwikkeling.
-    style: { '--utrecht-blockquote-background-color': 'var(--rhc-color-core-50)' } as CSSProperties,
   },
   parameters: {
     docs: {
       description: {
         story:
-          'Zet de rounded corner utility class op de blockquote om één hoek af te ronden, zoals in het ontwerp. De kleur en appearance (fill of outline) worden later via een surface utility class geregeld; die is nog in ontwikkeling.',
+          'Zet de rounded corner utility class op de blockquote om één hoek af te ronden, zoals in het ontwerp. De blockquote heeft nog geen achtergrondkleur; daardoor is de afgeronde hoek in dit voorbeeld nog niet zichtbaar.',
       },
     },
   },

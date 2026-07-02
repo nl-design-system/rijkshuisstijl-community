@@ -15,13 +15,11 @@ Rond één hoek van de blockquote af met de rounded corner utility class, zoals 
 
 ```html
 <blockquote
-  class="rhc-blockquote utrecht-blockquote rhc-rounded-corner rhc-rounded-corner--size-sm rhc-rounded-corner--position-start-start"
+  class="rhc-blockquote rhc-rounded-corner rhc-rounded-corner--size-sm rhc-rounded-corner--position-start-start"
 >
   ...
 </blockquote>
 ```
-
-De kleur en appearance (fill of outline) van de blockquote worden via een surface utility class geregeld; die is nog in ontwikkeling.
 
 ## Relevante WCAG eisen
 
