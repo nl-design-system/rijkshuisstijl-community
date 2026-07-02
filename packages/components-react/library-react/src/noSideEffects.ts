@@ -78,7 +78,7 @@ export * from '@rijkshuisstijl-community/separator-react/no-side-effects';
 export * from '@rijkshuisstijl-community/side-nav-react/no-side-effects';
 export * from '@rijkshuisstijl-community/side-nav-item-react/no-side-effects';
 export * from '@rijkshuisstijl-community/side-nav-link-react/no-side-effects';
-export * from './SideNavList';
+export * from '@rijkshuisstijl-community/side-nav-list-react/no-side-effects';
 export * from '@rijkshuisstijl-community/skip-link-react/no-side-effects';
 export * from './Table';
 export * from './TableCaption';
