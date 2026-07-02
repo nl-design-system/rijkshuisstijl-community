@@ -71,23 +71,25 @@ export default function Contactformulier({ showErrors = false }: Readonly<{ show
                 </Alert>
               ) : null}
 
-              {/* GAP: het id landt op de FormField-wrapper; de Form Field-componenten exposen het input-id niet, dus de error-summary-links verplaatsen de focus niet naar het veld. */}
+              {/* GAP: de Form Field-componenten exposen het input-id niet, dus de error-summary-links kunnen de focus niet naar het veld verplaatsen. */}
+              {/* GAP: FormFieldSelect accepteert zelfs geen eigen id: dat overschrijft alleen de htmlFor van het label en breekt de label-koppeling (select-name). Kale div als anchor-doel. */}
               {/* GAP: geen placeholder-API en `required` wordt niet doorgegeven aan de native <select>; verplicht-select-patroon kan niet volledig via de component. */}
-              <FormFieldSelect
-                defaultValue=""
-                errorMessage="U heeft geen keuze gemaakt. Maak een keuze."
-                id="wat-is-uw-situatie"
-                invalid={showErrors}
-                label="Wat is uw situatie?"
-              >
-                <SelectOption disabled value="">
-                  Kies een van de situaties...
-                </SelectOption>
-                <SelectOption value="reizen">Ik heb een vraag over reizen</SelectOption>
-                <SelectOption value="documenten">Ik heb een vraag over documenten</SelectOption>
-                <SelectOption value="consulair">Ik heb consulaire hulp nodig</SelectOption>
-                <SelectOption value="overig">Overig</SelectOption>
-              </FormFieldSelect>
+              <div id="wat-is-uw-situatie">
+                <FormFieldSelect
+                  defaultValue=""
+                  errorMessage="U heeft geen keuze gemaakt. Maak een keuze."
+                  invalid={showErrors}
+                  label="Wat is uw situatie?"
+                >
+                  <SelectOption disabled value="">
+                    Kies een van de situaties...
+                  </SelectOption>
+                  <SelectOption value="reizen">Ik heb een vraag over reizen</SelectOption>
+                  <SelectOption value="documenten">Ik heb een vraag over documenten</SelectOption>
+                  <SelectOption value="consulair">Ik heb consulaire hulp nodig</SelectOption>
+                  <SelectOption value="overig">Overig</SelectOption>
+                </FormFieldSelect>
+              </div>
               <FormFieldTextInput defaultValue={showErrors ? 'Aruba' : undefined} label="Om welke plek gaat het?" />
               <FormFieldTextInput
                 defaultValue={showErrors ? 'Mijn vlucht is geannuleerd' : undefined}
