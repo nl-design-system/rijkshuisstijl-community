@@ -12,7 +12,7 @@ De Page Footer heeft twee varianten: `default` en `compact`.
 
 De compacte variant is een lichte footer met alleen een tagline en enkele links. Gebruik deze wanneer de footer visueel naar de achtergrond mag treden, zoals bij formulieren, zoekresultaten of pagina's met een sterke taakfocus.
 
-- De tagline is decoratieve tekst en gebruikt bewust geen Heading component.
+- De tagline is gewone tekst en bewust geen Heading component: het is geen kop in de documentstructuur.
 - De links worden als children meegegeven en naast elkaar getoond; op smalle schermen lopen ze door naar een volgende regel.
 - De kleuren en witruimte komen uit de `rhc.page-footer.compact.*` design tokens.
 

@@ -68,7 +68,7 @@ export const Footer = ({
         <div className="utrecht-page-footer__content">
           <div className="rhc-page-footer-compact-layout">
             {tagline && <span className="rhc-page-footer__tagline">{tagline}</span>}
-            {children && <div className="rhc-page-footer__navigation">{children}</div>}
+            {children && <div className="rhc-page-footer__links">{children}</div>}
           </div>
         </div>
       </div>

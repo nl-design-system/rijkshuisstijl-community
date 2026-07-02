@@ -96,12 +96,12 @@
   row-gap: var(--rhc-page-footer-column-gap);
 }
 
-.rhc-page-footer__navigation {
+.rhc-page-footer__links {
   column-gap: var(--rhc-page-footer-column-gap);
   display: flex;
   flex-wrap: wrap;
 
-  /* Allow the navigation to shrink within the layout row, so the links inside can wrap. */
+  /* Allow the link group to shrink within the layout row, so the links inside can wrap. */
   min-inline-size: 0;
   row-gap: var(--rhc-page-footer-column-gap);
 }

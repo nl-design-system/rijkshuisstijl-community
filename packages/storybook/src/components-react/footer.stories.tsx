@@ -160,7 +160,7 @@ export const CompactFooter: Story = {
     docs: {
       description: {
         story:
-          'De compacte variant van de Page Footer bevat alleen een tagline en enkele links. Gebruik deze wanneer de footer visueel naar de achtergrond mag treden, zoals bij formulieren of andere pagina’s met een sterke taakfocus. De tagline is decoratieve tekst en gebruikt bewust geen Heading component.',
+          'De compacte variant van de Page Footer bevat alleen een tagline en enkele links. Gebruik deze wanneer de footer visueel naar de achtergrond mag treden, zoals bij formulieren of andere pagina’s met een sterke taakfocus. De tagline is gewone tekst en bewust geen Heading component: het is geen kop in de documentstructuur.',
       },
     },
   },
