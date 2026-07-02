@@ -1,6 +1,6 @@
-const minorConfig = require('./.ncurc.minor.cjs');
+import minorConfig from './.ncurc.minor.mjs';
 
-module.exports = {
+export default {
   ...minorConfig,
   reject: [...minorConfig.reject, 'eslint', 'eslint-plugin-json', 'style-dictionary'],
   target: 'latest',
