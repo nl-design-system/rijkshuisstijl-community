@@ -33,7 +33,7 @@ export default function MijnOmgeving() {
               <form method="POST">
                 <FormFieldTextInput label="E-mailadres" value="demo@mijn.overheid.nl"></FormFieldTextInput>
                 <ActionGroup>
-                  <Button appearance="primary-action-button">Opslaan</Button>
+                  <Button purpose="primary">Opslaan</Button>
                 </ActionGroup>
               </form>
             </div>

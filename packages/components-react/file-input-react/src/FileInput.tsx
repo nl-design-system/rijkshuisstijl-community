@@ -8,9 +8,10 @@ import { File } from '@rijkshuisstijl-community/file-react';
 import { Paragraph } from '@rijkshuisstijl-community/paragraph-react';
 import { ChangeEvent, PropsWithChildren, Ref, useEffect, useRef, useState } from 'react';
 
-export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
+export interface FileInputProps extends Omit<ButtonProps, 'appearance' | 'ref'> {
   ref?: Ref<HTMLInputElement>;
   buttonText: string;
+  // eslint-disable-next-line sonarjs/deprecation -- backwards compatibiliteit voor de deprecated appearance property
   buttonAppearance?: ButtonProps['appearance'];
   maxFileSizeInBytes: number;
   allowedFileTypes: string;
@@ -75,6 +76,7 @@ export const FileInput = ({
       />
       <div className="rhc-file-input__button-feedback-container">
         <Button
+          // eslint-disable-next-line sonarjs/deprecation -- backwards compatibiliteit voor de deprecated appearance property
           appearance={buttonAppearance ?? 'secondary-action-button'}
           onClick={() => inputElement?.current?.click()}
         >

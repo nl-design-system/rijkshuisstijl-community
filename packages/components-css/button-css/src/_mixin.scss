@@ -3,6 +3,18 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+/**
+ * De nl.button.focus tokens zijn bewust leeg: de button houdt bij focus de
+ * kleuren van de rustsituatie en toont alleen de generieke focus ring.
+ * Zonder deze doorverwijzing zou `var(--nl-button-focus-*)` ongeldig zijn en
+ * de achtergrond bij focus wegvallen (invalid at computed-value time).
+ */
+@mixin rhc-button-focus-keep-colors($variant) {
+  --nl-button-focus-background-color: var(--nl-button-#{$variant}-background-color);
+  --nl-button-focus-border-color: var(--nl-button-#{$variant}-border-color);
+  --nl-button-focus-color: var(--nl-button-#{$variant}-color);
+}
+
 @mixin rhc-button--icon-only {
   --utrecht-button-padding-block-end: var(--rhc-icon-only-button-padding-block-end, inherit);
   --utrecht-button-padding-block-start: var(--rhc-icon-only-button-padding-block-start, inherit);
