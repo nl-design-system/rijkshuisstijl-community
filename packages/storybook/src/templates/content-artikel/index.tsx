@@ -35,7 +35,7 @@ const stappenplan = [
         Ligt er asbestbedekking op jouw schuur of stal? Asbest op het bedrijfspand mag je nooit zelf weghalen. Laat
         eerst een asbestinventarisatie uitvoeren door een gecertificeerd asbestinventarisatiebedrijf. Dit rapport is 3
         jaar geldig.{' '}
-        <Link href="#" inline>
+        <Link inline href="#">
           Vind een gecertificeerd bedrijf bij jou in de buurt.
         </Link>
       </Paragraph>
@@ -72,7 +72,8 @@ const stappenplan = [
     ),
   },
   {
-    label: '5. Kies welk bedrijf jouw dak gaat verwijderen en welke partij de sloop uitvoert of het nieuwe dak gaat leggen',
+    label:
+      '5. Kies welk bedrijf jouw dak gaat verwijderen en welke partij de sloop uitvoert of het nieuwe dak gaat leggen',
     expanded: false,
     body: (
       <Paragraph>
@@ -95,9 +96,7 @@ const stappenplan = [
     label: '7. Laat het asbestdak verwijderen',
     expanded: false,
     body: (
-      <Paragraph>
-        Het gecertificeerde bedrijf verwijdert het asbestdak volgens de geldende veiligheidsregels.
-      </Paragraph>
+      <Paragraph>Het gecertificeerde bedrijf verwijdert het asbestdak volgens de geldende veiligheidsregels.</Paragraph>
     ),
   },
   {
@@ -120,7 +119,7 @@ const faq = [
         Ligt er asbestbedekking op jouw schuur of stal? Asbest op een bedrijfspand mag je nooit zelf weghalen. Laat
         eerst een asbestinventarisatie uitvoeren door een gecertificeerd asbestinventarisatiebedrijf. Dit rapport is 3
         jaar geldig.{' '}
-        <Link href="#" inline>
+        <Link inline href="#">
           Vind een gecertificeerd bedrijf bij jou in de buurt.
         </Link>
       </Paragraph>
@@ -214,7 +213,7 @@ export default function Page() {
               <Paragraph>
                 Het verwijderen van een asbestdak kost geld, maar levert ook voordelen op. Je dak is daarna veilig, je
                 voorkomt boetes en je kunt het moment gebruiken om je schuur te verduurzamen.{' '}
-                <Link href="#" inline>
+                <Link inline href="#">
                   Lees meer over de regels rond asbestdaken.
                 </Link>
               </Paragraph>
@@ -233,7 +232,7 @@ export default function Page() {
                   dakbedekking zitten. Een asbestdak van maximaal 35 vierkante meter mag je als particulier, onder
                   voorwaarden, eenmalig zelf verwijderen. Is jouw dak groter? Schakel dan een asbestverwijderingsbedrijf
                   in.{' '}
-                  <Link href="#" inline>
+                  <Link inline href="#">
                     Lees hoe je je asbestdak kunt herkennen.
                   </Link>
                 </OrderedListItem>
@@ -275,7 +274,7 @@ export default function Page() {
               <AccordionProvider sections={faq} />
               <Paragraph>
                 Meer weten? Ga naar de pagina{' '}
-                <Link href="#" inline>
+                <Link inline href="#">
                   &apos;Contact&apos;
                 </Link>{' '}
                 voor antwoorden op alle veelgestelde vragen en contactmogelijkheden.
@@ -300,10 +299,10 @@ export default function Page() {
               <div className="rhc-card-as-link-group">
                 {ervaringsverhalen.map((verhaal) => (
                   <Card
-                    key={verhaal.heading}
                     heading={verhaal.heading}
                     headingLevel={3}
                     image={<Image alt={verhaal.imageAlt} height="200" src="/placeholder.jpg" width="360" />}
+                    key={verhaal.heading}
                   >
                     <ButtonLink appearance="secondary-action-button" href="#">
                       Lees verder
