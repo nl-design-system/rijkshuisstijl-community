@@ -1,4 +1,4 @@
-<footer class="rhc-page-footer-container">
+<footer class="rhc-page-footer-container" [attr.aria-labelledby]="heading ? headingId : null">
   @if (preFooter) {
     <div class="rhc-page-prefooter">
       @if (preFooterMessage) {
@@ -11,7 +11,7 @@
     <div class="utrecht-page-footer__content">
       <div class="rhc-page-footer-layout">
         @if (heading) {
-          <h2 aria-hidden="true" hidden>{{ heading }}</h2>
+          <h2 [id]="headingId" hidden>{{ heading }}</h2>
         }
         @if (tagline) {
           <p class="rhc-page-footer__tagline">{{ tagline }}</p>

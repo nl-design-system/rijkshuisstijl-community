@@ -71,6 +71,20 @@ describe('FooterComponent in host context', () => {
     expect(fixture.nativeElement.querySelector('.rhc-page-footer__tagline rhc-heading')).toBeFalsy();
   });
 
+  it('should label the contentinfo landmark with the hidden heading', () => {
+    component.heading = 'Colofon';
+    fixture.detectChanges();
+    const footer = fixture.nativeElement.querySelector('footer.rhc-page-footer-container');
+    const headingElement = fixture.nativeElement.querySelector('#page-footer-heading');
+    expect(footer.getAttribute('aria-labelledby')).toBe('page-footer-heading');
+    expect(headingElement.textContent).toContain('Colofon');
+    expect(headingElement.hasAttribute('hidden')).toBe(true);
+
+    component.heading = undefined;
+    fixture.detectChanges();
+    expect(footer.getAttribute('aria-labelledby')).toBeNull();
+  });
+
   it('should display subFooter based on input', () => {
     const subFooterLink = fixture.nativeElement.querySelector('.rhc-page-subfooter-layout');
     expect(subFooterLink).toBeTruthy();

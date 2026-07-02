@@ -82,7 +82,7 @@
   display: flex;
   gap: var(--rhc-page-footer-content-column-gap);
   justify-content: space-between;
-  padding-block-start: var(--rhc-size-lint);
+  padding-block-start: var(--rhc-page-footer-subfooter-padding-block-start);
 
   @media (width <= 1024px) {
     flex-direction: column;
@@ -91,11 +91,11 @@
 
 /* The subfooter shows its links as a horizontal row. */
 .rhc-page-subfooter-layout .utrecht-link-list {
-  column-gap: var(--rhc-space-xl);
+  column-gap: var(--rhc-page-footer-subfooter-link-list-column-gap);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  row-gap: var(--rhc-space-sm);
+  row-gap: var(--rhc-page-footer-subfooter-link-list-row-gap);
 }
 
 .rhc-page-prefooter {

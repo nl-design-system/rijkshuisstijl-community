@@ -11,6 +11,7 @@ export class FooterComponent {
   @Input() preFooter?: boolean;
   @Input() preFooterMessage?: string;
   @Input() heading?: string;
+  @Input() headingId = 'page-footer-heading';
   @Input() tagline?: string;
   @Input() subFooter?: boolean;
 }

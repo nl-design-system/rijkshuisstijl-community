@@ -75,7 +75,7 @@ describe('Footer', () => {
   it('renders an invisible heading with the landmark name', () => {
     render(<Footer heading="Colofon" />);
     const footerElement = screen.getByText('Colofon');
-    expect(footerElement).toHaveAttribute('aria-hidden', 'true');
+    expect(footerElement).toHaveAttribute('hidden');
   });
 
   it('renders children inside the footer', () => {
