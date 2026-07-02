@@ -4,6 +4,4 @@
 '@rijkshuisstijl-community/design-tokens': minor
 ---
 
-- Navigation Bar bijgewerkt naar het Figma-ontwerp: `current`-state op de link (`aria-current="page"` + `rhc-nav-bar__link--current`), icon-start + icon-end met `link.column-gap` ertussen, hover-underline verwijderd, en een per-state onderlijn via `rhc.nav-bar.link.{hover,active,current}.border-color` + `rhc.nav-bar.link.border-block-end-width`.
-- Heading-als-link verwijderd: de `headingItem`-prop, de `__heading`-class, het token `rhc.nav-bar.heading.font-weight` en de With Heading-story zijn weg.
-- Ongebruikte tokens verwijderd (`rhc.nav-bar.icon.size`/`.color`/`.active.color`, `rhc.nav-bar.padding-inline`); de icon-grootte zit nu op `rhc.nav-bar.link.icon.size`. Nieuwe link-tokens toegevoegd: `current.*`, `font-family`, `font-weight`, `line-height`.
+Navigation Bar bijgewerkt naar het Figma-ontwerp. Links krijgen een `current`-state (`aria-current="page"` + `rhc-nav-bar__link--current`), icon-start en icon-end met `link.column-gap` ertussen, en een per-state onderlijn via `rhc.nav-bar.link.{hover,active,current}.border-color` + `rhc.nav-bar.link.border-block-end-width`; de hover-underline vervalt. Heading-als-link is verwijderd (de `headingItem`-prop, de `__heading`-class en het token `rhc.nav-bar.heading.font-weight`), en de tokens zijn opgeschoond: `rhc.nav-bar.icon.size`/`.color`/`.active.color` en `rhc.nav-bar.padding-inline` vervallen, de icon-grootte zit op `rhc.nav-bar.link.icon.size`, en er zijn nieuwe link-tokens voor `current.*`, `font-family`, `font-weight` en `line-height`.
