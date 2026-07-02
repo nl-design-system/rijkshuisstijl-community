@@ -12,3 +12,4 @@ export default {
 export const Default = ReactStories.Default;
 export const InlineEnd = ReactStories.InlineEnd;
 export const BlockEnd = ReactStories.BlockEnd;
+export const OverflowY = ReactStories.OverflowY;

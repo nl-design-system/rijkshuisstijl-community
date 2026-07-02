@@ -4,19 +4,32 @@ import {
   DataSummaryItem,
   Drawer,
   Heading,
-  IconButton,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './drawer.md?raw';
 
-const drawerChildren = [
-  <header className="utrecht-drawer__header" key="header" style={{ justifyContent: 'space-between' }}>
+const drawerHeader = (
+  <header className="utrecht-drawer__header" key="header">
     <Heading appearanceLevel={3} level={2}>
       Drawer title
     </Heading>
-    <IconButton appearance="secondary-action-button" icon="kruis" label="Sluiten" />
-  </header>,
+    <form className="utrecht-drawer__header-actions" method="dialog">
+      <Button appearance="secondary-action-button" type="submit">
+        Sluiten
+      </Button>
+    </form>
+  </header>
+);
+
+const drawerFooter = (
+  <footer className="utrecht-drawer__footer" key="footer">
+    <Button appearance="primary-action-button">Ja ik doe mee</Button>
+  </footer>
+);
+
+const drawerChildren = [
+  drawerHeader,
   <div className="utrecht-drawer__body" key="body">
     <Paragraph>
       Lorem ipsum dolor sit amet consectetur. Morbi sed faucibus arcu turpis. Urna ante odio neque euismod quis. Magna
@@ -32,9 +45,23 @@ const drawerChildren = [
     </DataSummary>
     <Paragraph>Deze planning kan nog veranderen.</Paragraph>
   </div>,
-  <footer className="utrecht-drawer__footer" key="footer">
-    <Button appearance="primary-action-button">Ja ik doe mee</Button>
-  </footer>,
+  drawerFooter,
+];
+
+const overflowChildren = [
+  drawerHeader,
+  <div className="utrecht-drawer__body" key="body">
+    {Array.from({ length: 10 }, (_, index) => (
+      <Paragraph key={index}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </Paragraph>
+    ))}
+  </div>,
+  drawerFooter,
 ];
 
 const meta = {
@@ -111,4 +138,15 @@ export const BlockEnd: Story = {
     open: true,
   },
   name: 'block-end alignment',
+};
+
+export const OverflowY: Story = {
+  args: {
+    align: 'inline-start',
+    className:
+      'rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-end rhc-rounded-corner--position-end-end',
+    children: overflowChildren,
+    open: true,
+  },
+  name: 'overflow',
 };
