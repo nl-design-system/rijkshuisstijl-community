@@ -79,7 +79,7 @@ const ActiveFiltersBadgeList = ({ onRemoveFilter, selectedFrameworks }: ActiveFi
       <BadgeList aria-labelledby="actieve-filters-heading" className="rhc-active-filters__list" role="group">
         {selectedFrameworks.map((framework) => (
           <button
-            className="utrecht-data-badge rhc-data-badge-button rhc-active-filters__badge"
+            className="utrecht-data-badge rhc-data-badge-button"
             key={`active-${framework}`}
             type="button"
             onClick={() => onRemoveFilter(framework)}
