@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { LinkComponent } from '@rijkshuisstijl-community/components-angular';
 import {
-  BackToTopComponent,
   FooterComponent,
   HeadingComponent,
   IconComponent,
@@ -15,7 +13,6 @@ import {
 import { provideTablerIcons, TablerIconComponent } from 'angular-tabler-icons';
 import {
   IconArrowNarrowLeft,
-  IconArrowNarrowUp,
   IconBriefcase,
   IconCamera,
   IconChevronRight,
@@ -38,11 +35,9 @@ import {
     FooterComponent,
     TablerIconComponent,
     HeadingComponent,
-    LinkComponent,
     LinkListComponent,
     LinkListLinkComponent,
     LinkListItemComponent,
-    BackToTopComponent,
   ],
   templateUrl: './page-layout.component.html',
   styleUrls: ['./page-layout.component.css'],
@@ -59,7 +54,6 @@ import {
       IconExternalLink,
       IconExclamationCircle,
       IconChevronRight,
-      IconArrowNarrowUp,
     }),
   ],
 })

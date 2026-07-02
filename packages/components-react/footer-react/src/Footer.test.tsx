@@ -54,14 +54,16 @@ describe('Footer', () => {
   });
 
   it('renders the Back to Top button if enabled', () => {
+    // eslint-disable-next-line sonarjs/deprecation
     render(<Footer backtotop />);
     expect(screen.getByText('Terug naar boven')).toBeInTheDocument();
   });
 
-  it('applies background class when background prop is provided', () => {
-    const { container } = render(<Footer background="primary-filled" />);
-    const footerElement = container.querySelector('.rhc-page-footer');
-    expect(footerElement).toHaveClass('rhc-page-footer--primary-filled');
+  it('renders the tagline as plain text instead of a heading', () => {
+    render(<Footer tagline="Footer tagline" />);
+    const tagline = screen.getByText('Footer tagline');
+    expect(tagline).toHaveClass('rhc-page-footer__tagline');
+    expect(tagline.closest('h1, h2, h3, h4, h5, h6')).toBeNull();
   });
 
   it('renders a landmark with an accessible name', () => {

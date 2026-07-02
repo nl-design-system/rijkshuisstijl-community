@@ -19,28 +19,8 @@
   --utrecht-column-layout-column-width: var(--rhc-page-footer-column-width);
   --utrecht-column-layout-gap: var(--rhc-page-footer-column-gap);
   --utrecht-link-hover-text-decoration: underline;
-  --utrecht-space-around: 1;
-}
-
-.rhc-page-footer--primary-filled {
-  --utrecht-page-footer-background-color: var(--rhc-color-primary-500);
-  --utrecht-page-footer-color: var(--rhc-color-wit);
   --utrecht-page-footer-content-color: inherit;
-}
-
-.rhc-page-footer--primary-filled.rhc-page-footer--subfooter {
-  border-block-start-color: var(--rhc-page-footer-border-block-start-color);
-  border-block-start-style: var(--rhc-page-footer-border-block-start-style);
-  border-block-start-width: var(--rhc-page-footer-border-block-start-width);
-}
-
-.rhc-page-footer--primary-outlined {
-  --utrecht-page-footer-background-color: var(--rhc-page-footer-outlined-background-color);
-  --utrecht-page-footer-color: var(--rhc-page-footer-outlined-color);
-
-  border-block-start-color: var(--rhc-page-footer-outlined-border-color);
-  border-block-start-style: var(--rhc-page-footer-border-block-start-style);
-  border-block-start-width: var(--rhc-page-footer-border-block-start-width);
+  --utrecht-space-around: 1;
 }
 
 /**
@@ -77,15 +57,45 @@
   padding-block-end: var(--rhc-page-footer-padding-block-end);
 }
 
+.rhc-page-footer__tagline {
+  font-size: var(--rhc-page-footer-tagline-font-size);
+  font-style: var(--rhc-page-footer-tagline-font-style);
+  font-weight: var(--rhc-page-footer-tagline-font-weight);
+  line-height: var(--rhc-page-footer-tagline-line-height);
+  margin-block: 0;
+}
+
+/**
+ * The separator between the page footer content and the subfooter is rendered
+ * inside the subfooter content, so it gets the same inline padding as the
+ * content of both slots.
+ */
+.rhc-page-footer--subfooter {
+  --utrecht-page-footer-content-padding-block-start: var(--rhc-space-none);
+}
+
 .rhc-page-subfooter-layout {
   align-items: center;
+  border-block-start-color: var(--rhc-page-footer-border-block-start-color);
+  border-block-start-style: var(--rhc-page-footer-border-block-start-style);
+  border-block-start-width: var(--rhc-page-footer-border-block-start-width);
   display: flex;
   gap: var(--rhc-page-footer-content-column-gap);
   justify-content: space-between;
+  padding-block-start: var(--rhc-size-lint);
 
   @media (width <= 1024px) {
     flex-direction: column;
   }
+}
+
+/* The subfooter shows its links as a horizontal row. */
+.rhc-page-subfooter-layout .utrecht-link-list {
+  column-gap: var(--rhc-space-xl);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: var(--rhc-space-sm);
 }
 
 .rhc-page-prefooter {

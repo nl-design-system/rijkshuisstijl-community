@@ -1,15 +1,12 @@
 import { Footer, Icon, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
 
-export default function SharedFooter({ isLightTheme }: Readonly<{ isLightTheme?: boolean }>) {
+export default function SharedFooter() {
   return (
     <Footer
-      appearanceLevel={4}
-      background={isLightTheme ? 'primary-outlined' : 'primary-filled'}
-      backtotop={true}
+      heading="Colofon"
       tagline="NL Design System voor de rijksoverheid"
       columns={[
         {
-          appearanceLevel: 3,
           heading: 'Over de Rijkshuisstijl Community',
           children: [
             <LinkList key="2">
@@ -91,6 +88,13 @@ export default function SharedFooter({ isLightTheme }: Readonly<{ isLightTheme?:
           ),
         },
       ]}
+      subFooter={
+        <LinkList>
+          <LinkListLink href="#">Kwetsbaarheid melden</LinkListLink>
+          <LinkListLink href="#">Toegankelijkheid</LinkListLink>
+          <LinkListLink href="#">Privacy</LinkListLink>
+        </LinkList>
+      }
     />
   );
 }

@@ -12,15 +12,11 @@ import { LinkListLinkComponent } from '../link-list-link/link-list-link.componen
   template: `
     <footer
       rhc-footer
-      [background]="background"
       [preFooter]="preFooter"
       [preFooterMessage]="preFooterMessage"
       [tagline]="tagline"
       [heading]="heading"
-      [appearanceLevel]="appearanceLevel"
-      [columns]="columns"
       [subFooter]="subFooter"
-      [backtotop]="backtotop"
     ></footer>
   `,
   standalone: true,
@@ -35,11 +31,10 @@ import { LinkListLinkComponent } from '../link-list-link/link-list-link.componen
   ],
 })
 class FooterTestHostComponent {
-  @Input() background: 'primary-filled' | 'primary-outlined' = 'primary-filled';
   @Input() preFooter = true;
   @Input() preFooterMessage = 'Extra info above footer';
   @Input() tagline = 'Footer tagline';
-  @Input() appearanceLevel = 3;
+  @Input() heading?: string;
   @Input() subFooter = true;
 }
 describe('FooterComponent in host context', () => {
@@ -70,9 +65,10 @@ describe('FooterComponent in host context', () => {
     expect(spanAfterChange).toBeFalsy();
   });
 
-  it('should display the tagline', () => {
-    const heading = fixture.nativeElement.querySelector('.rhc-page-footer__tagline rhc-heading');
-    expect(heading?.textContent).toContain('Footer tagline');
+  it('should display the tagline as plain text instead of a heading', () => {
+    const tagline = fixture.nativeElement.querySelector('p.rhc-page-footer__tagline');
+    expect(tagline?.textContent).toContain('Footer tagline');
+    expect(fixture.nativeElement.querySelector('.rhc-page-footer__tagline rhc-heading')).toBeFalsy();
   });
 
   it('should display subFooter based on input', () => {

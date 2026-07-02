@@ -15,7 +15,10 @@ interface FooterProps extends HTMLAttributes<HTMLDivElement> {
   headingId?: string;
   appearanceLevel?: HeadingLevel;
   columns?: ColumnProps[];
-  background?: 'primary-filled' | 'primary-outlined';
+  /**
+   * @deprecated Plaats een terug-naar-boven-knop als los component buiten de Page Footer,
+   * na de content maar voor het footer-element.
+   */
   backtotop?: boolean;
   subFooter?: ReactNode;
   preFooter?: boolean;
@@ -47,12 +50,12 @@ export const Footer = ({
   className,
   heading,
   headingId = 'page-footer-heading',
-  appearanceLevel = 3,
+  appearanceLevel = 4,
   columns,
+  // eslint-disable-next-line sonarjs/deprecation
   backtotop,
   subFooter,
   children,
-  background,
   tagline,
   ...restProps
 }: PropsWithChildren<FooterProps>) => (
@@ -63,16 +66,7 @@ export const Footer = ({
       </div>
     )}
 
-    <div
-      {...restProps}
-      ref={ref}
-      className={clsx(
-        'utrecht-page-footer',
-        'rhc-page-footer',
-        background ? `rhc-page-footer--${background}` : 'rhc-page-footer--primary-filled',
-        className,
-      )}
-    >
+    <div {...restProps} className={clsx('utrecht-page-footer', 'rhc-page-footer', className)} ref={ref}>
       <div className="utrecht-page-footer__content">
         {heading ? (
           <Heading hidden aria-hidden="true" id={headingId} level={2}>
@@ -80,13 +74,7 @@ export const Footer = ({
           </Heading>
         ) : null}
         <div className="rhc-page-footer-layout">
-          {tagline && (
-            <div className="rhc-page-footer__tagline" key={'heading'}>
-              <Heading appearanceLevel={appearanceLevel} level={2} role="presentation">
-                {tagline}
-              </Heading>
-            </div>
-          )}
+          {tagline && <p className="rhc-page-footer__tagline">{tagline}</p>}
           <ColumnLayout>
             {columns?.map(({ heading: columnHeading, children }: ColumnProps, index: number) => (
               <div className="rhc-page-footer__section" key={index}>
@@ -102,14 +90,7 @@ export const Footer = ({
       </div>
     </div>
     {(backtotop || subFooter) && (
-      <div
-        className={clsx(
-          'utrecht-page-footer',
-          'rhc-page-footer',
-          'rhc-page-footer--subfooter',
-          background ? `rhc-page-footer--${background}` : 'rhc-page-footer--primary-filled',
-        )}
-      >
+      <div className={clsx('utrecht-page-footer', 'rhc-page-footer', 'rhc-page-footer--subfooter')}>
         <div className="utrecht-page-footer__content">
           <div className="rhc-page-subfooter-layout">
             {subFooter}

@@ -40,9 +40,9 @@
     <ng-content></ng-content>
   </div>
 </div>
-<footer rhc-footer [background]="'filled'" [heading]="'Heading'" [appearanceLevel]="3" [subFooter]="true">
+<footer rhc-footer [heading]="'Heading'" [subFooter]="true">
   <div class="rhc-page-footer__section" columns>
-    <rhc-heading [level]="3"> Service </rhc-heading>
+    <rhc-heading [level]="3" [appearanceLevel]="4"> Service </rhc-heading>
     <rhc-link-list>
       <li rhc-link-list-item>
         <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
@@ -89,7 +89,7 @@
     </rhc-link-list>
   </div>
   <div class="rhc-page-footer__section" columns>
-    <rhc-heading [level]="3"> Over deze site </rhc-heading>
+    <rhc-heading [level]="3" [appearanceLevel]="4"> Over deze site </rhc-heading>
     <rhc-link-list>
       <li rhc-link-list-item>
         <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
@@ -129,8 +129,15 @@
       </li>
     </rhc-link-list>
   </div>
-  <rhc-link href="#" subFooter>
-    Terug naar boven
-    <rhc-icon icon><i-tabler name="arrow-narrow-up" /></rhc-icon>
-  </rhc-link>
+  <rhc-link-list subFooter>
+    <li rhc-link-list-item>
+      <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">Kwetsbaarheid melden</a>
+    </li>
+    <li rhc-link-list-item>
+      <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">Toegankelijkheid</a>
+    </li>
+    <li rhc-link-list-item>
+      <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">Privacy</a>
+    </li>
+  </rhc-link-list>
 </footer>

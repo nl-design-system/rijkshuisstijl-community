@@ -1,26 +1,41 @@
 # Rijkshuisstijl Community Footer component
 
-De footer bestaat uit kolommen met als eerste de tagline en daarna `LinkList` componenten met handige bronnen.
+De footer (Page Footer) bestaat uit twee delen: de hoofdinhoud met een optionele tagline en kolommen met vrije content (zoals `LinkList` componenten), en een optionele sub-footer voor wettelijk verplichte links zoals Privacy, Toegankelijkheid en Kwetsbaarheid melden. Tussen beide delen staat een scheidingslijn met dezelfde inline padding als de content.
 
-De kolommen lijsten kunnen worden toegevoegd door middel van properties aan het `<Footer>` component.
+De kolommen kunnen worden toegevoegd via de `columns` property van het `<Footer>` component.
 
-## level
+## Tagline
 
-De heading kolom is de titel level +1, omdat deze een subsectie vormt van de titel. Hierdoor staan de kolomtitels altijd één niveau hoger dan de titel. Echter, wanneer de heading niveau 6 bereikt, wordt er geen niveau 7 gebruikt. In dat geval blijven zowel de titel als de kolommen op niveau 6.
+De tagline is decoratieve tekst en gebruikt geen Heading component. De styling komt uit de `rhc.page-footer.tagline.*` design tokens; cursief is de standaard.
 
-### Belangrijkste punten
+## Heading niveau en appearance
 
-De heading kolom heeft altijd een niveau meer dan de titel.
-Dit geldt voor alle niveaus behalve niveau 6.
-Bij niveau 6 worden zowel de titel als de kolommen op niveau 6 gehouden.
-Er bestaat geen niveau 7 heading in HTML.
+De headings boven de kolommen krijgen standaard de appearance van heading niveau 4. Semantisch zijn het niveau 3 headings wanneer een (visueel verborgen) `heading` voor de hele footer is opgegeven; zonder `heading` zijn het niveau 2 headings. Niveau 2 is gereserveerd voor de verborgen sectiekop, zodat gebruikers van hulptechnologie de footer als sectie kunnen herkennen en navigeren.
 
 ```tsx
-columns={[
-    {
-      children: <LinkList><LinkListLink href="#" icon={<UtrechtIconChevronRight />}>Contact</LinkListLink> etc...</LinkList>,
-      heading: 'Service'
-    }
-  ]}
+<Footer
+  heading="Colofon"
   tagline="Footer tagline"
+  columns={[
+    {
+      children: (
+        <LinkList>
+          <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+            Contact
+          </LinkListLink>
+        </LinkList>
+      ),
+      heading: 'Service',
+    },
+  ]}
+  subFooter={
+    <LinkList>
+      <LinkListLink href="#">Privacy</LinkListLink>
+    </LinkList>
+  }
+/>
 ```
+
+## Terug naar boven
+
+Een terug-naar-boven-knop is bewust geen onderdeel van de Page Footer. Plaats die als los component buiten de footer, na de content maar voor het footer-element.

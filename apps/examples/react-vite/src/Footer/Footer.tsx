@@ -4,13 +4,9 @@ import './Footer.css';
 export function Footer() {
   return (
     <RhcFooter
-      backtotop
-      appearanceLevel={3}
-      background="primary-filled"
       className="rhc-page-footer__layout"
       columns={[
         {
-          appearanceLevel: 3,
           heading: 'Over de Rijkshuisstijl Community',
           children: (
             <LinkList>
@@ -33,7 +29,6 @@ export function Footer() {
           ),
         },
         {
-          appearanceLevel: 3,
           heading: 'Contact',
           children: (
             <LinkList>
