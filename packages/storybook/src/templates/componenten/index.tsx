@@ -62,9 +62,12 @@ interface ActiveFiltersBadgeListProps {
 /**
  * Verwijderbare filter-tag, bewust lokaal in dit template opgelost (zie #2651):
  * er is nog geen tag/chips-component binnen NLDS, dus geen eigen component maar
- * een native button met de bestaande badge-styling. De native button geeft
- * toetsenbordbediening (Enter/Space); de verwijder-actie zit in de toegankelijke
- * naam en het sluit-icoon is decoratief.
+ * een native button met de bestaande badge-styling. De button hergebruikt bewust
+ * classes uit data-badge-button-css: de root-class rhc-data-badge-button levert
+ * hover- en focus-styling, en rhc-data-badge-button__label heeft geen eigen
+ * stijlregel maar houdt de markup gelijk aan DataBadgeButton. De native button
+ * geeft toetsenbordbediening (Enter/Space); de verwijder-actie zit in de
+ * toegankelijke naam en het sluit-icoon is decoratief.
  */
 const ActiveFiltersBadgeList = ({ onRemoveFilter, selectedFrameworks }: ActiveFiltersBadgeListProps) => {
   if (selectedFrameworks.length === 0) return null;
@@ -85,7 +88,7 @@ const ActiveFiltersBadgeList = ({ onRemoveFilter, selectedFrameworks }: ActiveFi
             onClick={() => onRemoveFilter(framework)}
           >
             <span className="rhc-data-badge-button__label">{framework}</span>
-            <span className="rhc-data-badge-button__sr-only">, filter verwijderen</span>
+            <span className="rhc-sr-only">, filter verwijderen</span>
             <Icon>
               <IconX />
             </Icon>
@@ -419,7 +422,7 @@ export default function Componenten() {
                             role="group"
                           >
                             {component.frameworks.map((framework) => (
-                              // Filter-toggle als native button met aria-pressed, lokaal in dit template opgelost (zie #2651)
+                              // Filter-toggle als native button met aria-pressed, zelfde aanpak en class-hergebruik als ActiveFiltersBadgeList (zie docblock daar en #2651)
                               <button
                                 aria-pressed={selectedFrameworks.includes(framework)}
                                 className="utrecht-data-badge rhc-data-badge-button"
@@ -428,7 +431,7 @@ export default function Componenten() {
                                 onClick={() => handleDataBadgeClick(framework)}
                               >
                                 <span className="rhc-data-badge-button__label">{framework}</span>
-                                <span className="rhc-data-badge-button__sr-only">, filter</span>
+                                <span className="rhc-sr-only">, filter</span>
                               </button>
                             ))}
                           </BadgeList>
