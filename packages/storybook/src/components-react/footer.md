@@ -10,7 +10,7 @@ De tagline is decoratieve tekst en gebruikt geen Heading component. De styling k
 
 ## Heading niveau en appearance
 
-De headings boven de kolommen krijgen standaard de appearance van heading niveau 4. Semantisch zijn het niveau 3 headings wanneer een verborgen `heading` voor de hele footer is opgegeven; zonder `heading` zijn het niveau 2 headings. De footer is een `contentinfo` landmark. Geef je een `heading` op, dan krijgt die landmark daarmee een naam (via `aria-labelledby`), zodat de footer te vinden is in de lijst met landmarks. De kop zelf wordt niet getoond en is niet via koppennavigatie bereikbaar.
+De headings boven de kolommen krijgen standaard de appearance van heading niveau 4. Semantisch zijn het niveau 3 headings wanneer een `heading` voor de hele footer is opgegeven; zonder `heading` zijn het niveau 2 headings. De footer is een `contentinfo` landmark. Geef je een `heading` op, dan krijgt die landmark daarmee een naam (via `aria-labelledby`), zodat de footer te vinden is in de lijst met landmarks. De kop is visueel verborgen, maar telt wel mee in de koppenstructuur: de footer is daardoor ook via koppennavigatie bereikbaar en de kolomkoppen (h3) volgen netjes op de footerkop (h2).
 
 ```tsx
 <Footer

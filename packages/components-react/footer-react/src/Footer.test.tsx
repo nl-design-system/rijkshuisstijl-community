@@ -72,10 +72,11 @@ describe('Footer', () => {
     expect(footerElement).toBeInTheDocument();
   });
 
-  it('renders an invisible heading with the landmark name', () => {
+  it('renders a visually hidden heading with the landmark name', () => {
     render(<Footer heading="Colofon" />);
-    const footerElement = screen.getByText('Colofon');
-    expect(footerElement).toHaveAttribute('hidden');
+    const headingElement = screen.getByRole('heading', { level: 2, name: 'Colofon' });
+    expect(headingElement).toHaveClass('rhc-page-footer__heading');
+    expect(headingElement).not.toHaveAttribute('hidden');
   });
 
   it('renders children inside the footer', () => {

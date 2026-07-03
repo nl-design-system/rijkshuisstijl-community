@@ -71,14 +71,15 @@ describe('FooterComponent in host context', () => {
     expect(fixture.nativeElement.querySelector('.rhc-page-footer__tagline rhc-heading')).toBeFalsy();
   });
 
-  it('should label the contentinfo landmark with the hidden heading', () => {
+  it('should label the contentinfo landmark with the visually hidden heading', () => {
     component.heading = 'Colofon';
     fixture.detectChanges();
     const footer = fixture.nativeElement.querySelector('footer.rhc-page-footer-container');
     const headingElement = fixture.nativeElement.querySelector('#page-footer-heading');
     expect(footer.getAttribute('aria-labelledby')).toBe('page-footer-heading');
     expect(headingElement.textContent).toContain('Colofon');
-    expect(headingElement.hasAttribute('hidden')).toBe(true);
+    expect(headingElement.classList.contains('rhc-page-footer__heading')).toBe(true);
+    expect(headingElement.hasAttribute('hidden')).toBe(false);
 
     component.heading = undefined;
     fixture.detectChanges();

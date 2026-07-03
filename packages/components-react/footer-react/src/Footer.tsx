@@ -69,7 +69,7 @@ export const Footer = ({
     <div {...restProps} className={clsx('utrecht-page-footer', 'rhc-page-footer', className)} ref={ref}>
       <div className="utrecht-page-footer__content">
         {heading ? (
-          <Heading hidden id={headingId} level={2}>
+          <Heading className="rhc-page-footer__heading" id={headingId} level={2}>
             {heading}
           </Heading>
         ) : null}

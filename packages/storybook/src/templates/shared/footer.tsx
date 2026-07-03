@@ -93,6 +93,7 @@ export default function SharedFooter() {
           <LinkListLink href="#">Kwetsbaarheid melden</LinkListLink>
           <LinkListLink href="#">Toegankelijkheid</LinkListLink>
           <LinkListLink href="#">Privacy</LinkListLink>
+          <LinkListLink href="#">Cookies</LinkListLink>
         </LinkList>
       }
     />

@@ -9,10 +9,10 @@
 
   <div class="utrecht-page-footer rhc-page-footer">
     <div class="utrecht-page-footer__content">
+      @if (heading) {
+        <h2 class="rhc-page-footer__heading" [id]="headingId">{{ heading }}</h2>
+      }
       <div class="rhc-page-footer-layout">
-        @if (heading) {
-          <h2 [id]="headingId" hidden>{{ heading }}</h2>
-        }
         @if (tagline) {
           <p class="rhc-page-footer__tagline">{{ tagline }}</p>
         }

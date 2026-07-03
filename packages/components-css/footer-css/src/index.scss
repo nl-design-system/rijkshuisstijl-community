@@ -3,6 +3,8 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+@use "mixin";
+
 .rhc-page-footer {
   --_utrecht-link-state-text-decoration-color: currentColor;
   --nl-heading-level-1-color: currentColor;
@@ -33,6 +35,15 @@
   display: flex;
   flex-direction: column;
   inline-size: 100%;
+}
+
+/**
+ * The heading that names the contentinfo landmark is visually hidden, but
+ * stays in the accessibility tree so it counts in the heading structure and
+ * is reachable via screen reader heading navigation.
+ */
+.rhc-page-footer__heading {
+  @include mixin.invisible-but-accessible;
 }
 
 .rhc-page-footer-layout {
