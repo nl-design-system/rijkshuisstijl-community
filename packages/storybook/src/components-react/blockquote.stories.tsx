@@ -50,7 +50,7 @@ export const RoundedCorner: Story = {
   name: 'Rounded corner',
   args: {
     children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
-    attribution: '— Pippi Langkous',
+    attribution: 'Pippi Langkous',
     className: 'rhc-rounded-corner rhc-rounded-corner--size-sm rhc-rounded-corner--position-start-start',
   },
   parameters: {
