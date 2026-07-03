@@ -104,6 +104,7 @@ export default function InformationDense() {
         </>
       ),
     },
+    // GAP: NavBar kent alleen link-items; de zoekknop uit Figma is hier daarom een link.
     {
       id: 'zoeken',
       href: '#',
@@ -151,6 +152,7 @@ export default function InformationDense() {
                   <FormFieldTextInput label="Zoek subsidies en financiering" type="search" />
                   <Separator />
 
+                  {/* GAP: 'Toon meer' rendert als details/summary met '(n)'-teller; Figma toont een tekstknop met plus-icoon zonder teller. */}
                   <ExpandableCheckboxGroup
                     expandText="Toon meer"
                     legend="Ik ben/werk bij"
@@ -173,6 +175,7 @@ export default function InformationDense() {
 
               <div>
                 {/* GAP: verwijderbare filter-Tags ontbreken; DataBadgeButton is de naaste (toggle, geen dismiss). Zie #2651. */}
+                {/* De chip-teksten zijn letterlijk de Figma-content; ook in Figma corresponderen ze niet met de aangevinkte filters. */}
                 <Heading level={2}>Actieve filters</Heading>
                 <DataBadgeButton icon={<Icon icon="kruis" />} iconAlign="end">
                   Zoekterm WBSO
@@ -200,7 +203,9 @@ export default function InformationDense() {
                 <PageNumberNavigation
                   linkTemplate={(page: number) => `#pagina-${page}`}
                   maxVisiblePages={5}
+                  nextLabel="Volgende"
                   page={1}
+                  previousLabel="Vorige"
                   totalPages={30}
                 />
               </div>
