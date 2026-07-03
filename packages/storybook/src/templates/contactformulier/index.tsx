@@ -20,7 +20,10 @@ import { Main } from '../shared/Main';
 import SharedMainPageContent from '../shared/main-page-content';
 
 // Contactformulier voorbeeldpagina (#2650). Puur uit RHC-componenten samengesteld; gaten t.o.v. Figma staan in de PR.
-export default function Contactformulier({ showErrors = false }: Readonly<{ showErrors?: boolean }>) {
+export default function Contactformulier({
+  showErrors = false,
+  showNotification = true,
+}: Readonly<{ showErrors?: boolean; showNotification?: boolean }>) {
   return (
     <>
       <PageHeader>
@@ -47,11 +50,14 @@ export default function Contactformulier({ showErrors = false }: Readonly<{ show
               U kunt uw vraag aan NederlandWereldwijd stellen via het contactformulier. We proberen binnen 5 dagen
               antwoord te geven.
             </Paragraph>
-            <Alert type="info">
-              <Paragraph>
-                Door de situatie in het Midden-Oosten kan het tot 14 dagen duren voordat wij uw mail beantwoorden.
-              </Paragraph>
-            </Alert>
+            {/* Issue-variatie: informatieve alert zichtbaar/verborgen; de Figma-foutvariant verbergt hem. */}
+            {showNotification ? (
+              <Alert type="info">
+                <Paragraph>
+                  Door de situatie in het Midden-Oosten kan het tot 14 dagen duren voordat wij uw mail beantwoorden.
+                </Paragraph>
+              </Alert>
+            ) : null}
 
             <form>
               {showErrors ? (

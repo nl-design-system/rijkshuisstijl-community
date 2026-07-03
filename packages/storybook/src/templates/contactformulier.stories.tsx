@@ -15,11 +15,17 @@ export default meta;
 
 type Story = StoryObj<typeof Page>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    showNotification: true,
+  },
+};
 
 export const MetFoutmeldingen: Story = {
   args: {
     showErrors: true,
+    // Conform de Figma-foutvariant: de informatieve alert is daar verborgen.
+    showNotification: false,
   },
 };
 
