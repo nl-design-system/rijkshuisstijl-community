@@ -19,8 +19,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 /*
- * GAP: the Side Navigation has no mobile (menu bar/drawer) variant yet, so at 375px the
- * two-column layout persists and the main content overflows the viewport, while the
+ * GAP: the Side Navigation has no mobile (menu bar/drawer) variant yet (#2754), so at 375px
+ * the two-column layout persists and the main content overflows the viewport, while the
  * mobile design shows a stacked layout with a bottom menu bar.
  */
 export const Mobile: Story = {
