@@ -76,7 +76,7 @@ const meta = {
 
     variant: {
       description:
-        'De variant van de Page Footer. De compacte variant toont alleen een tagline en enkele links, voor pagina’s met een sterke taakfocus.',
+        'De variant van de Page Footer. De compacte variant toont alleen de tagline en de links uit children, voor pagina’s met een sterke taakfocus; de overige props (heading, columns, background, subFooter, backtotop, preFooter) hebben daar geen effect.',
       defaultValue: 'default',
       control: { type: 'select' },
       options: ['default', 'compact'],
