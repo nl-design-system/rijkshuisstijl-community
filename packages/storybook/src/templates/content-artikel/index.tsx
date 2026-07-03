@@ -32,7 +32,7 @@ const stappenplan = [
     expanded: true,
     body: (
       <Paragraph>
-        Ligt er asbestbedekking op jouw schuur of stal? Asbest op het bedrijfspand mag je nooit zelf weghalen. Laat
+        Ligt er asbestbedekking op jouw schuur of stal? Asbest op een bedrijfspand mag je nooit zelf weghalen. Laat
         eerst een asbestinventarisatie uitvoeren door een gecertificeerd asbestinventarisatiebedrijf. Dit rapport is 3
         jaar geldig.{' '}
         <Link inline href="#">
@@ -179,7 +179,7 @@ export default function Page() {
       <PageBody>
         <div className="rhc-templates-main-content">
           <div className="rhc-templates-page-content">
-            <BreadcrumbNav>
+            <BreadcrumbNav label="Kruimelpad">
               <BreadcrumbNavLink href="#" index={0} rel="home">
                 <Icon icon="home" />
                 Home
