@@ -8341,11 +8341,12 @@
         "max-inline-size": {
           "$type": "dimension",
           "$value": "1440px",
-          "$description": "[code only] vaste paneelbreedte, geen tekst-spacing"
+          "$description": "[code only] vaste paneelbreedte uit het AZ-drawer-ontwerp (Figma: MinAZ-library, component Drawer, desktopformaat), geen tekst-spacing; de Utrecht-CSS begrenst effectief op 100% minus de backdrop-strook"
         },
         "z-index": {
           "$type": "other",
-          "$value": "1"
+          "$value": "1",
+          "$description": "unitless; $type other volgt de Utrecht-tokendefinitie (css-property-syntax <number>)"
         },
         "background-color": {
           "$type": "color",
@@ -8366,7 +8367,7 @@
         "max-block-size": {
           "$type": "dimension",
           "$value": "800px",
-          "$description": "[code only] vaste paneelhoogte, geen tekst-spacing"
+          "$description": "[code only] vaste paneelhoogte uit het AZ-drawer-ontwerp (Figma: MinAZ-library, component Drawer), geen tekst-spacing; de Utrecht-CSS begrenst effectief op 100% minus de backdrop-strook"
         },
         "padding-block-start": {
           "$type": "dimension",
@@ -8395,12 +8396,13 @@
         "min-inline-size": {
           "$type": "dimension",
           "$value": "312px",
-          "$description": "[code only] vaste minimale paneelbreedte, geen tekst-spacing"
+          "$description": "[code only] vaste minimale paneelbreedte uit het AZ-drawer-ontwerp (Figma: MinAZ-library, component Drawer), geen tekst-spacing"
         },
         "backdrop": {
           "min-size": {
             "$type": "dimension",
-            "$value": "{rhc.size.pointer-target}"
+            "$value": "{rhc.size.pointer-target}",
+            "$description": "plek volgt de Utrecht-tokenstructuur (voedt --utrecht-drawer-backdrop-min-size); houdt de backdrop-strook vrij voor light-dismiss (WCAG 2.5.5, minimaal 44px)"
           }
         },
         "header": {
