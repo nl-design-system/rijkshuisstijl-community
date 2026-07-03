@@ -7,7 +7,7 @@ describe('Blockquote', () => {
   it('renders a visible element', () => {
     const { container } = render(<Blockquote>Citaat</Blockquote>);
 
-    const blockquote = container.querySelector(':only-child');
+    const blockquote = container.firstElementChild;
 
     expect(blockquote).toBeInTheDocument();
     expect(blockquote).toBeVisible();
@@ -22,7 +22,7 @@ describe('Blockquote', () => {
   it('merges a custom class name with the rhc class name', () => {
     const { container } = render(<Blockquote className="rhc-rounded-corner">Citaat</Blockquote>);
 
-    const blockquote = container.querySelector(':only-child');
+    const blockquote = container.firstElementChild;
 
     expect(blockquote).toHaveClass('rhc-blockquote', 'rhc-rounded-corner');
   });
