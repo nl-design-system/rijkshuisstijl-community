@@ -464,15 +464,12 @@ importers:
 
   packages/components-css/button-css:
     devDependencies:
+      '@nl-design-system-candidate/button-css':
+        specifier: 1.1.0
+        version: 1.1.0
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/button-css':
-        specifier: 3.1.0
-        version: 3.1.0
-      '@utrecht/icon-css':
-        specifier: 2.0.1
-        version: 2.0.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -656,6 +653,9 @@ importers:
       '@amsterdam/design-system-css':
         specifier: 3.1.0
         version: 3.1.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.1.0)
+      '@nl-design-system-candidate/button-css':
+        specifier: 1.1.0
+        version: 1.1.0
       '@nl-design-system-candidate/heading-css':
         specifier: 1.1.3
         version: 1.1.3
@@ -1963,6 +1963,9 @@ importers:
 
   packages/components-react/button-react:
     dependencies:
+      '@nl-design-system-candidate/button-react':
+        specifier: 1.1.0
+        version: 1.1.0(@babel/runtime@7.29.7)(react@19.2.7)
       '@rijkshuisstijl-community/button-css':
         specifier: workspace:*
         version: link:../../components-css/button-css
@@ -4429,6 +4432,9 @@ importers:
       '@amsterdam/design-system-react':
         specifier: 1.1.0
         version: 1.1.0(@amsterdam/design-system-css@1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.1))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@nl-design-system-candidate/button-react':
+        specifier: 1.1.0
+        version: 1.1.0(@babel/runtime@7.29.7)(react@19.2.7)
       '@nl-design-system-candidate/link-react':
         specifier: 1.1.8
         version: 1.1.8(@babel/runtime@7.29.7)(react@19.2.7)
@@ -11784,6 +11790,15 @@ packages:
       '@angular/compiler-cli': ^21.0.0
       typescript: '>=5.9 <6.0'
       webpack: ^5.54.0
+
+  '@nl-design-system-candidate/button-css@1.1.0':
+    resolution: {integrity: sha512-w0JLQyiPL9UrfRwzu3Mq2EWbYvAJbolepeFH4ggyBFXoYm9RMWX6vWb/8Oj999GzAF6N77LlES5jUnaR3BJ7Yw==}
+
+  '@nl-design-system-candidate/button-react@1.1.0':
+    resolution: {integrity: sha512-Zi2QGpAq6/AWkL0hf9BNcNp8AQUV5yyDcKw7WDBuZ3W0ci/EF46ZfvntTbbBpHX09lYqS6F4Vf7hPGh1BdGxTg==}
+    peerDependencies:
+      '@babel/runtime': '>=7.26.10'
+      react: ^18 || ^19
 
   '@nl-design-system-candidate/code-block-css@1.2.0':
     resolution: {integrity: sha512-oem6db9bdWyllcCJ1WNEuLQfx9uF9yZAsbmzMYs7YF448EYhhEnEXEqfjtkUrLwuly3OEnThI28g69IXpigx/g==}
@@ -25819,6 +25834,14 @@ snapshots:
       '@angular/compiler-cli': 21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3)
       typescript: 5.9.3
       webpack: 5.105.2(esbuild@0.28.1)(postcss@8.5.12)
+
+  '@nl-design-system-candidate/button-css@1.1.0': {}
+
+  '@nl-design-system-candidate/button-react@1.1.0(@babel/runtime@7.29.7)(react@19.2.7)':
+    dependencies:
+      '@babel/runtime': 7.29.7
+      clsx: 2.1.1
+      react: 19.2.7
 
   '@nl-design-system-candidate/code-block-css@1.2.0': {}
 
