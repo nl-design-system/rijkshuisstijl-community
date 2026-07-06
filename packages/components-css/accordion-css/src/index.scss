@@ -6,7 +6,26 @@
 @forward "@utrecht/accordion-css/dist/index.css";
 @forward "@utrecht/button-css/dist/index.css";
 
-// Utrecht maps the subtle-button vars onto the accordion tokens but not the border-radius, so map it here too to avoid inheriting the global button radius.
+// The installed @utrecht/accordion-css and button-css don't wire every accordion token onto the
+// subtle button, so this rule carries two kinds of override:
+//   Temporary, delete once the matching upstream PR is released:
+//     --utrecht-button-border-radius    -> nl-design-system/utrecht#3178
+//     --utrecht-button-subtle-font-size -> nl-design-system/utrecht#3173
+//   Permanent (no upstream fix): button-css doesn't map the subtle padding-inline var, so the generic
+//     button default wins and the label drifts out of line with the panel. Pin the inline axis to the
+//     accordion token so the label starts at the panel's calculated inline offset.
 .utrecht-accordion__button {
   --utrecht-button-border-radius: var(--utrecht-accordion-button-border-radius);
+  --utrecht-button-subtle-font-size: var(--utrecht-accordion-button-font-size);
+
+  padding-inline-end: var(--utrecht-accordion-button-padding-inline-end);
+  padding-inline-start: var(--utrecht-accordion-button-padding-inline-start);
+}
+
+// Reserve the icon-size column so the panel text lines up with the label. The default chevron is a
+// fixed 14x8 SVG that ignores the icon-size token, so reserve the column width ourselves until the
+// upstream fix lands (nl-design-system/utrecht#3174).
+.utrecht-accordion__button-icon {
+  inline-size: var(--utrecht-accordion-button-icon-size);
+  justify-content: center;
 }
