@@ -84,6 +84,18 @@
   --rhc-size-2-lint: calc(2 * var(--rhc-size-lint));
   --rhc-size-3-lint: calc(3 * var(--rhc-size-lint));
   --rhc-size-4-lint: calc(4 * var(--rhc-size-lint));
+
+  /* fluid logo font-size tokens
+   * Scales with the lint-size above so the logo text stays proportional to the logo image.
+   */
+  --rhc-logo-title-font-size: calc(
+    var(--rhc-logo-title-min-font-size) + (var(--rhc-logo-title-max-font-size) - var(--rhc-logo-title-min-font-size)) *
+      var(--rhc-viewport-scale)
+  );
+  --rhc-logo-subtitle-font-size: calc(
+    var(--rhc-logo-subtitle-min-font-size) +
+      (var(--rhc-logo-subtitle-max-font-size) - var(--rhc-logo-subtitle-min-font-size)) * var(--rhc-viewport-scale)
+  );
 }
 
 .rhc-theme--fluid,
