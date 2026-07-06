@@ -1,0 +1,6 @@
+---
+'@rijkshuisstijl-community/design-tokens': minor
+'@rijkshuisstijl-community/textarea-css': patch
+---
+
+De Text Area volgt nu de AZ-spec voor focus en padding. De aparte 2px focus-borderregel is uit textarea-css verwijderd: de gedeelde focus-outline is voortaan het enige focusmiddel, waardoor dit als stylingcorrectie een patch is (dezelfde lijn als de Text Input-wijziging). Het token `rhc.textarea.focus.border-width` is daarbij niet verwijderd maar verplaatst naar de nieuwe deprecated-subset `components/textarea/deprecated` (naar het patroon van `components/text-input/deprecated`), zodat bestaande afnemers een overgangsperiode hebben voordat het definitief verdwijnt; de custom property blijft dus gewoon gegenereerd worden. De horizontale padding is verbreed: `utrecht.textarea.padding-inline-start/-end` verwijst nu naar `{rhc.space.xl}` in plaats van `{rhc.space.lg}`. Die ruimte is fluid en schaalt mee met de viewport van 0.8rem tot 1rem (op de grootste viewport 16px in plaats van 12px); deze token-waardewijziging maakt de design-tokens-bump minor. Verder is een kapotte fallback in de read-only-borderregel hersteld: die verwees zonder `var()`-wrapper naar het niet-bestaande `--rhc-color-grijs-100` en is geschrapt, want `--utrecht-textarea-read-only-background-color` levert de waarde al.
