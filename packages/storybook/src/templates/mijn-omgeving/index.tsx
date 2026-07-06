@@ -234,6 +234,7 @@ export default function MijnOmgeving() {
           </section>
         </SharedMainPageContent>
       </PageBody>
+      {/* GAP: de compacte Page Footer-variant bestaat nog niet (#2649); hier staat de standaard footer. */}
       <SharedFooter />
     </>
   );
