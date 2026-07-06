@@ -9,3 +9,4 @@ export default {
 };
 
 export const DefaultFooter = ReactStories.DefaultFooter;
+export const CompactFooter = ReactStories.CompactFooter;

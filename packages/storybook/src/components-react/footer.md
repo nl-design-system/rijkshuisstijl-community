@@ -4,6 +4,27 @@ De footer (Page Footer) bestaat uit twee delen: de hoofdinhoud met een optionele
 
 De kolommen kunnen worden toegevoegd via de `columns` property van het `<Footer>` component.
 
+## Varianten
+
+De Page Footer heeft twee varianten: `default` en `compact`.
+
+### Compact
+
+De compacte variant is een lichte footer met alleen een tagline en enkele links. Gebruik deze wanneer de footer visueel naar de achtergrond mag treden, zoals bij formulieren, zoekresultaten of pagina's met een sterke taakfocus.
+
+- De tagline is gewone tekst en bewust geen Heading component: het is geen kop in de documentstructuur.
+- De links worden als children meegegeven en naast elkaar getoond; op smalle schermen lopen ze door naar een volgende regel.
+- De kleuren en witruimte komen uit de `rhc.page-footer.compact.*` design tokens.
+- De props van de standaardvariant (`heading`, `columns`, `subFooter`, `backtotop`, `preFooter`) hebben in de compacte variant geen effect.
+
+```tsx
+<Footer variant="compact" tagline="De rijksoverheid. Voor Nederland">
+  <Link href="#">Privacy</Link>
+  <Link href="#">Toegankelijkheid</Link>
+  <Link href="#">Kwetsbaarheid melden</Link>
+</Footer>
+```
+
 ## Tagline
 
 De tagline is decoratieve tekst en gebruikt geen Heading component. De styling komt uit de `rhc.page-footer.tagline.*` design tokens; cursief is de standaard.

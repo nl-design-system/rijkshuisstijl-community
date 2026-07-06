@@ -26,6 +26,23 @@
 }
 
 /**
+ * Compact variant: a light footer with only a tagline and a few links,
+ * for pages with a strong task focus, such as forms.
+ */
+.rhc-page-footer--compact {
+  --utrecht-page-footer-background-color: var(--rhc-page-footer-compact-background-color);
+  --utrecht-page-footer-color: var(--rhc-page-footer-compact-color);
+  --utrecht-page-footer-content-color: inherit;
+  --utrecht-page-footer-content-padding-block-end: var(--rhc-page-footer-compact-padding-block-end);
+  --utrecht-page-footer-content-padding-block-start: var(--rhc-page-footer-compact-padding-block-start);
+}
+
+/* Let the content shrink with the viewport, so the tagline and links inside can wrap. */
+.rhc-page-footer--compact .utrecht-page-footer__content {
+  min-inline-size: 0;
+}
+
+/**
  * Contains:
  * - the pre-footer (optional)
  * - the regular page footer
@@ -61,6 +78,25 @@
   flex: 1;
 }
 
+.rhc-page-footer-compact-layout {
+  align-items: baseline;
+  column-gap: var(--rhc-page-footer-content-column-gap);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: var(--rhc-page-footer-column-gap);
+}
+
+.rhc-page-footer__links {
+  column-gap: var(--rhc-page-footer-column-gap);
+  display: flex;
+  flex-wrap: wrap;
+
+  /* Allow the link group to shrink within the layout row, so the links inside can wrap. */
+  min-inline-size: 0;
+  row-gap: var(--rhc-page-footer-column-gap);
+}
+
 .rhc-page-footer__section,
 .rhc-page-footer__tagline {
   break-inside: avoid;
@@ -74,6 +110,14 @@
   font-weight: var(--rhc-page-footer-tagline-font-weight);
   line-height: var(--rhc-page-footer-tagline-line-height);
   margin-block: 0;
+}
+
+.rhc-page-footer--compact .rhc-page-footer__tagline {
+  font-size: var(--rhc-page-footer-compact-tagline-font-size);
+  font-style: var(--rhc-page-footer-tagline-font-style);
+  font-weight: var(--rhc-page-footer-tagline-font-weight);
+  line-height: var(--rhc-page-footer-tagline-line-height);
+  padding-block-end: var(--rhc-space-none, 0);
 }
 
 /**

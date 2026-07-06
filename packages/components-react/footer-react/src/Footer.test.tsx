@@ -87,6 +87,34 @@ describe('Footer', () => {
     );
     expect(screen.getByText('Custom Child')).toBeInTheDocument();
   });
+
+  describe('compact variant', () => {
+    it('applies the compact class', () => {
+      const { container } = render(<Footer tagline="De rijksoverheid. Voor Nederland" variant="compact" />);
+      const footerElement = container.querySelector('.rhc-page-footer');
+      expect(footerElement).toHaveClass('rhc-page-footer--compact');
+    });
+
+    it('renders the tagline as plain text, not as a heading', () => {
+      render(<Footer tagline="De rijksoverheid. Voor Nederland" variant="compact" />);
+      const tagline = screen.getByText('De rijksoverheid. Voor Nederland');
+      expect(tagline).toBeInTheDocument();
+      expect(screen.queryByRole('heading')).not.toBeInTheDocument();
+    });
+
+    it('renders links inside the footer landmark', () => {
+      render(
+        <Footer tagline="De rijksoverheid. Voor Nederland" variant="compact">
+          <a href="#privacy">Privacy</a>
+          <a href="#toegankelijkheid">Toegankelijkheid</a>
+        </Footer>,
+      );
+      const footerElement = screen.getByRole('contentinfo');
+      expect(footerElement).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: 'Privacy' })).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: 'Toegankelijkheid' })).toBeInTheDocument();
+    });
+  });
 });
 
 afterEach(() => cleanup());
