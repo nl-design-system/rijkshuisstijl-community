@@ -5,3 +5,8 @@
 
 @forward "@utrecht/accordion-css/dist/index.css";
 @forward "@utrecht/button-css/dist/index.css";
+
+// Utrecht maps the subtle-button vars onto the accordion tokens but not the border-radius, so map it here too to avoid inheriting the global button radius.
+.utrecht-accordion__button {
+  --utrecht-button-border-radius: var(--utrecht-accordion-button-border-radius);
+}
