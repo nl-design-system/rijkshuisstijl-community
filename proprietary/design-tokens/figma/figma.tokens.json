@@ -10627,27 +10627,7 @@
           "$type": "dimension",
           "$value": "12.5rem"
         },
-        "column": {
-          "title": {
-            "margin-block-end": {
-              "$type": "dimension",
-              "$value": "{rhc.space.lg}"
-            }
-          }
-        },
         "content": {
-          "max-inline-size": {
-            "$type": "dimension",
-            "$value": "{rhc.size.page.md}"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{rhc.space.xl}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "{rhc.space.xl}"
-          },
           "column-gap": {
             "$type": "dimension",
             "$value": "{rhc.space.3xl}"
@@ -10665,40 +10645,42 @@
           "$type": "other",
           "$value": "solid"
         },
-        "outlined": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{rhc.color.wit}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          }
-        },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
-        },
         "padding-block-end": {
           "$type": "dimension",
           "$value": "{rhc.space.4xl}"
         },
-        "padding-inline-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
+        "subfooter": {
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.size.lint}"
+          },
+          "link-list": {
+            "column-gap": {
+              "$type": "dimension",
+              "$value": "{rhc.space.xl}"
+            },
+            "row-gap": {
+              "$type": "dimension",
+              "$value": "{rhc.space.sm}"
+            }
+          }
         },
-        "padding-inline-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
-        },
-        "flex": {
-          "direction": {
-            "$type": "flexDirection",
-            "$value": "column"
+        "tagline": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.xl}"
+          },
+          "font-style": {
+            "$type": "other",
+            "$value": "italic"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{rhc.text.line-height.sm}"
           }
         }
       }

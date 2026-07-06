@@ -1,0 +1,8 @@
+---
+'@rijkshuisstijl-community/footer-css': major
+'@rijkshuisstijl-community/footer-react': major
+'@rijkshuisstijl-community/components-angular': major
+'@rijkshuisstijl-community/design-tokens': major
+---
+
+De Page Footer volgt nu de opbouw uit de nieuwe Rijkshuisstijl richtlijn. De tagline is een los tekstelement in plaats van een Heading, gestyled via de nieuwe `rhc.page-footer.tagline.*` tokens en standaard cursief. De scheidingslijn tussen de footer en de sub-footer loopt gelijk met de content in plaats van over de volledige breedte en de links in de sub-footer staan als horizontale rij; de ruimte rond de scheidingslijn en tussen de links is instelbaar via de nieuwe `rhc.page-footer.subfooter.*` tokens. Er is nog maar een kleurstelling (lintblauw via de theme tokens): de outlined variant is verwijderd, inclusief de `background` prop van de React component, de `background` en `appearanceLevel` inputs van de Angular component en de `rhc.page-footer.outlined.*` tokens. Ongebruikte page-footer tokens zijn opgeruimd en de headings in de footer krijgen standaard de appearance van niveau 4. De `heading` die de footer-landmark benoemt is voortaan visueel verborgen via de nieuwe class `rhc-page-footer__heading` in plaats van het `hidden`-attribuut, zodat de kop meetelt in de koppenstructuur en de footer via koppennavigatie bereikbaar is. De `backtotop` prop is deprecated; plaats een terug-naar-boven-knop voortaan als los component buiten de footer.
