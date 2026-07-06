@@ -18,6 +18,7 @@ import {
 } from '@rijkshuisstijl-community/components-react';
 import { Main } from '../shared/Main';
 import SharedMainPageContent from '../shared/main-page-content';
+import './index.css';
 
 // Contactformulier voorbeeldpagina (#2650). Puur uit RHC-componenten samengesteld; gaten t.o.v. Figma staan in de PR.
 export default function Contactformulier({
@@ -51,15 +52,16 @@ export default function Contactformulier({
               antwoord te geven.
             </Paragraph>
             {/* Issue-variatie: informatieve alert zichtbaar/verborgen; de Figma-foutvariant verbergt hem. */}
+            {/* Figma toont de melding als waarschuwing (let-op-icoon), vandaar type="warning". */}
             {showNotification ? (
-              <Alert type="info">
+              <Alert type="warning">
                 <Paragraph>
                   Door de situatie in het Midden-Oosten kan het tot 14 dagen duren voordat wij uw mail beantwoorden.
                 </Paragraph>
               </Alert>
             ) : null}
 
-            <form>
+            <form className="rhc-example-contactformulier__form">
               {showErrors ? (
                 <Alert type="error">
                   <Heading level={2}>Dit formulier bevat meerdere fouten:</Heading>
@@ -114,20 +116,23 @@ export default function Contactformulier({
               <FormFieldTextInput label="Telefoonnummer (Niet verplicht)" type="tel" />
 
               {/* GAP: een Form Field rond een checkbox met titel + beschrijving + inline link bestaat niet kant-en-klaar. */}
-              <Paragraph>Verwerking van uw persoonsgegevens</Paragraph>
-              <Paragraph>
-                Wij gebruiken uw gegevens om uw vraag te beantwoorden. Voor trainingsdoeleinden worden uw gegevens 12
-                maanden bewaard. Uw informatie wordt niet met derden gedeeld.{' '}
-                <Link inline href="#privacy">
-                  Meer informatie over uw privacy.
-                </Link>
-              </Paragraph>
-              <div id="ik-begrijp-het" tabIndex={-1}>
-                <FormFieldCheckboxOption
-                  errorMessage="U heeft nog geen akkoord gegeven. Vink 'Ik begrijp het' aan."
-                  invalid={showErrors}
-                  label="Ik begrijp het"
-                />
+              {/* Groepeer titel, beschrijving en checkbox als één veld, zoals in de Figma. */}
+              <div className="rhc-example-contactformulier__consent">
+                <Paragraph>Verwerking van uw persoonsgegevens</Paragraph>
+                <Paragraph>
+                  Wij gebruiken uw gegevens om uw vraag te beantwoorden. Voor trainingsdoeleinden worden uw gegevens 12
+                  maanden bewaard. Uw informatie wordt niet met derden gedeeld.{' '}
+                  <Link inline href="#privacy">
+                    Meer informatie over uw privacy.
+                  </Link>
+                </Paragraph>
+                <div id="ik-begrijp-het" tabIndex={-1}>
+                  <FormFieldCheckboxOption
+                    errorMessage="U heeft nog geen akkoord gegeven. Vink 'Ik begrijp het' aan."
+                    invalid={showErrors}
+                    label="Ik begrijp het"
+                  />
+                </div>
               </div>
 
               <Button appearance="primary-action-button" type="submit">
