@@ -13,6 +13,7 @@ import '@rijkshuisstijl-community/design-tokens/dist/groen-information-dense/ind
 import '@rijkshuisstijl-community/design-tokens/dist/hemelblauw-information-dense/index.css';
 import '@rijkshuisstijl-community/font/src/index.mjs';
 import '@rijkshuisstijl-community/components-css/dist/index.css';
+import '@utrecht/color-sample-css/dist/index.css';
 import { Body, PageLayout, Paragraph, Root } from '@rijkshuisstijl-community/components-react';
 import { formatHtml } from '@rijkshuisstijl-community/storybook-tooling/formatHtml';
 import { Controls, Description, Primary, Stories, useOf } from '@storybook/addon-docs/blocks';
