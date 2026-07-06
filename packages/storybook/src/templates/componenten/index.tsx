@@ -25,8 +25,6 @@ import React, {
   useRef,
   useState,
 } from 'react';
-//import { type ComponentData } from './components-data';
-//import { allComponentsData } from './components-data';
 import { type ComponentData } from './transform';
 import allComponentsData from './transform';
 import SharedFooter from '../shared/footer';
