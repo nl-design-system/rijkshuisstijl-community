@@ -1,6 +1,6 @@
 import { CardAsLink, Heading } from '@rijkshuisstijl-community/components-react';
 
-export default () => (
+const Uitgelicht = () => (
   <>
     <Heading level={2}>Uitgelicht</Heading>
     <div className="rhc-card-as-link-group">
@@ -23,3 +23,5 @@ export default () => (
     </div>
   </>
 );
+
+export default Uitgelicht;
