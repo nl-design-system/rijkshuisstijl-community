@@ -11,3 +11,4 @@ export default {
 export const Default = ReactStories.Default;
 export const MiddlePage = ReactStories.MiddlePage;
 export const LastPage = ReactStories.LastPage;
+export const Compact = ReactStories.Compact;

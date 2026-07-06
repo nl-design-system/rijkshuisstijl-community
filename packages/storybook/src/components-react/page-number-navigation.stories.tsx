@@ -49,3 +49,18 @@ export const LastPage: Story = {
     totalPages: 10,
   },
 };
+
+export const Compact: Story = {
+  args: {
+    maxVisiblePages: 7,
+    page: 10,
+    totalPages: 30,
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ maxInlineSize: '30rem' }}>
+        <Story />
+      </div>
+    ),
+  ],
+};
