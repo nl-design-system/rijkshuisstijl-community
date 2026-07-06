@@ -9834,6 +9834,127 @@
       }
     }
   },
+  "components/modal-dialog": {
+    "ams": {
+      "dialog": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{rhc.color.bg-document}"
+        },
+        "backdrop-background-color": {
+          "$type": "color",
+          "$value": "rgba(0, 0, 0, 0.5)",
+          "$description": "[todo: bevestigen, nog geen overlay-token in de Mapped-laag]"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{rhc.color.transparent}"
+        },
+        "border-style": {
+          "$type": "other",
+          "$value": "solid"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{rhc.border-width.none}"
+        },
+        "gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.none}"
+        },
+        "inline-size": {
+          "$type": "other",
+          "$value": "calc(100% - 2 * {rhc.space.2xl})",
+          "$description": "[code only]"
+        },
+        "max-block-size": {
+          "$type": "other",
+          "$value": "calc(100dvh - 2 * {rhc.space.2xl})",
+          "$description": "[code only]"
+        },
+        "max-inline-size": {
+          "$type": "dimension",
+          "$value": "48rem"
+        },
+        "medium": {
+          "inline-size": {
+            "$type": "other",
+            "$value": "calc(100% - 2 * {rhc.space.2xl})",
+            "$description": "[code only]"
+          },
+          "max-block-size": {
+            "$type": "other",
+            "$value": "calc(100dvh - 2 * {rhc.space.2xl})",
+            "$description": "[code only]"
+          }
+        },
+        "header": {
+          "gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "padding-block": {
+            "$type": "other",
+            "$value": "{rhc.space.2xl} 0",
+            "$description": "[code only]"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "medium": {
+            "padding-block": {
+              "$type": "other",
+              "$value": "{rhc.space.2xl} 0",
+              "$description": "[code only]"
+            },
+            "padding-inline": {
+              "$type": "dimension",
+              "$value": "{rhc.space.2xl}"
+            }
+          }
+        },
+        "body": {
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "medium": {
+            "padding-inline": {
+              "$type": "dimension",
+              "$value": "{rhc.space.2xl}"
+            }
+          }
+        },
+        "footer": {
+          "padding-block": {
+            "$type": "other",
+            "$value": "0 {rhc.space.2xl}",
+            "$description": "[code only]"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "medium": {
+            "padding-block": {
+              "$type": "other",
+              "$value": "0 {rhc.space.2xl}",
+              "$description": "[code only]"
+            },
+            "padding-inline": {
+              "$type": "dimension",
+              "$value": "{rhc.space.2xl}"
+            }
+          }
+        }
+      }
+    }
+  },
   "components/nav-bar": {
     "rhc": {
       "nav-bar": {
@@ -12371,6 +12492,7 @@
         "components/listbox": "source",
         "components/logo": "source",
         "components/message-list": "source",
+        "components/modal-dialog": "source",
         "components/nav-bar": "source",
         "components/navigation-list": "source",
         "components/number-badge/nl": "source",
@@ -12480,6 +12602,7 @@
       "components/listbox",
       "components/logo",
       "components/message-list",
+      "components/modal-dialog",
       "components/nav-bar",
       "components/navigation-list",
       "components/number-badge/nl",
