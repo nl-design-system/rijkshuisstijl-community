@@ -5,3 +5,64 @@
 
 @use "@amsterdam/design-system-css/dist/pagination/pagination.css";
 @use "@amsterdam/design-system-css/dist/visually-hidden/visually-hidden.css";
+
+/* Amsterdam levert de markup en classnames; selectors op .ams-* zijn hier door Stylelint
+ * verboden, daarom stylet deze laag bewust via element- en attribuutselectors. */
+.rhc-page-number-navigation {
+  align-items: center;
+  gap: var(--rhc-page-number-navigation-gap);
+
+  ol {
+    align-items: center;
+    gap: var(--rhc-page-number-navigation-gap);
+  }
+
+  li {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-block-size: var(--rhc-page-number-navigation-link-min-block-size);
+    min-inline-size: var(--rhc-page-number-navigation-link-min-inline-size);
+  }
+
+  li[aria-hidden="true"] {
+    color: var(--rhc-page-number-navigation-ellipsis-color);
+  }
+
+  svg {
+    fill: currentColor;
+  }
+
+  a {
+    align-items: center;
+    justify-content: center;
+    min-block-size: var(--rhc-page-number-navigation-link-min-block-size);
+  }
+
+  li a {
+    min-inline-size: var(--rhc-page-number-navigation-link-min-inline-size);
+    padding-block: var(--rhc-page-number-navigation-link-padding-block);
+  }
+
+  a:focus-visible {
+    outline: var(--rhc-focus-outline-width) var(--rhc-focus-outline-style) var(--rhc-focus-outline-color);
+  }
+
+  a[rel="prev"],
+  a[rel="next"] {
+    font-size: var(--rhc-page-number-navigation-relative-link-font-size);
+    font-weight: var(--rhc-page-number-navigation-relative-link-font-weight);
+    padding-inline: var(--rhc-page-number-navigation-relative-link-padding-inline);
+  }
+
+  a[rel="prev"] span svg,
+  a[rel="next"] span svg {
+    block-size: var(--rhc-page-number-navigation-icon-size);
+    inline-size: var(--rhc-page-number-navigation-icon-size);
+  }
+
+  a[aria-current="page"] {
+    background-color: var(--rhc-page-number-navigation-link-current-background-color);
+    color: var(--rhc-page-number-navigation-link-current-color);
+  }
+}

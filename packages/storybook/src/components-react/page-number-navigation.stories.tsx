@@ -34,3 +34,18 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const MiddlePage: Story = {
+  args: {
+    maxVisiblePages: 7,
+    page: 10,
+    totalPages: 30,
+  },
+};
+
+export const LastPage: Story = {
+  args: {
+    page: 10,
+    totalPages: 10,
+  },
+};

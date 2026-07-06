@@ -3114,6 +3114,16 @@
           "on-primary": {
             "$type": "color",
             "$value": "{rhc.color.foreground.on-dark-color}"
+          },
+          "action": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}",
+            "$description": "Actiekleur als tekst op een lichte achtergrond; haalt in dit thema WCAG AA (4,5:1) op wit"
+          },
+          "action-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.hover}",
+            "$description": "Hover-variant van foreground.action"
           }
         }
       }
@@ -3160,6 +3170,16 @@
           "on-primary": {
             "$type": "color",
             "$value": "{rhc.color.foreground.on-dark-color}"
+          },
+          "action": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}",
+            "$description": "Actiekleur als tekst op een lichte achtergrond; haalt in dit thema WCAG AA (4,5:1) op wit"
+          },
+          "action-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.hover}",
+            "$description": "Hover-variant van foreground.action"
           }
         }
       }
@@ -3206,6 +3226,16 @@
           "on-primary": {
             "$type": "color",
             "$value": "{rhc.color.foreground.on-light-color}"
+          },
+          "action": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.active}",
+            "$description": "Actiekleur als tekst op een lichte achtergrond; mintgroen.500 (1,8:1) en de hover-tint (3,8:1) halen geen WCAG AA op wit, daarom de active-tint (5,1:1)"
+          },
+          "action-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.active}",
+            "$description": "Gelijk aan foreground.action; een donkerdere AA-tint is binnen mintgroen niet beschikbaar, hover-feedback komt van de onderstreping"
           }
         }
       }
@@ -3252,6 +3282,16 @@
           "on-primary": {
             "$type": "color",
             "$value": "{rhc.color.foreground.on-dark-color}"
+          },
+          "action": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.hover}",
+            "$description": "Actiekleur als tekst op een lichte achtergrond; oranje.500 haalt 3,2:1 op wit, daarom de donkerdere hover-tint (6,1:1) voor WCAG AA"
+          },
+          "action-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.active}",
+            "$description": "Hover-variant van foreground.action (7,6:1 op wit)"
           }
         }
       }
@@ -3298,6 +3338,16 @@
           "on-primary": {
             "$type": "color",
             "$value": "{rhc.color.foreground.on-dark-color}"
+          },
+          "action": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}",
+            "$description": "Actiekleur als tekst op een lichte achtergrond; haalt in dit thema WCAG AA (4,5:1) op wit"
+          },
+          "action-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.hover}",
+            "$description": "Hover-variant van foreground.action"
           }
         }
       }
@@ -3344,6 +3394,16 @@
           "on-primary": {
             "$type": "color",
             "$value": "{rhc.color.foreground.on-dark-color}"
+          },
+          "action": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}",
+            "$description": "Actiekleur als tekst op een lichte achtergrond; haalt in dit thema WCAG AA (4,5:1) op wit"
+          },
+          "action-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.hover}",
+            "$description": "Hover-variant van foreground.action"
           }
         }
       }
@@ -3392,6 +3452,16 @@
           "on-primary": {
             "$type": "color",
             "$value": "{rhc.color.foreground.on-dark-color}"
+          },
+          "action": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.500}",
+            "$description": "Actiekleur als tekst op een lichte achtergrond; haalt in dit thema WCAG AA (4,5:1) op wit"
+          },
+          "action-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.primary.hover}",
+            "$description": "Hover-variant van foreground.action"
           }
         }
       }
@@ -10708,7 +10778,8 @@
         "link": {
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.foreground.link}"
+            "$value": "{rhc.color.foreground.action}",
+            "$description": "Figma: text/action"
           },
           "gap": {
             "$type": "dimension",
@@ -10721,7 +10792,7 @@
           },
           "padding-inline": {
             "$type": "dimension",
-            "$value": "{rhc.space.sm}"
+            "$value": "{rhc.space.lg}"
           },
           "current": {
             "font-weight": {
@@ -10732,7 +10803,7 @@
           "hover": {
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.foreground.link-hover}"
+              "$value": "{rhc.color.foreground.action-hover}"
             },
             "text-decoration-line": {
               "$type": "textDecoration",
@@ -10751,6 +10822,75 @@
           "text-underline-offset": {
             "$type": "other",
             "$value": "{rhc.space.xs}",
+            "$description": "[code-only]"
+          }
+        }
+      }
+    },
+    "rhc": {
+      "page-number-navigation": {
+        "gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.lg}",
+          "$description": "[code-only] Ruimte tussen de vorige/volgende-links en de paginanummers onderling"
+        },
+        "ellipsis": {
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.foreground.default}",
+            "$description": "Figma: text/body"
+          }
+        },
+        "icon": {
+          "size": {
+            "$type": "dimension",
+            "$value": "1.25rem",
+            "$description": "[code-only] Chevron-icoon, 20px in Figma"
+          }
+        },
+        "link": {
+          "min-block-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.pointer-target}",
+            "$description": "[code-only] Minimaal klikdoel"
+          },
+          "min-inline-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.pointer-target}",
+            "$description": "[code-only] Minimaal klikdoel"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{rhc.space.lg}",
+            "$description": "[code-only]"
+          },
+          "current": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.primary.50}",
+              "$description": "Figma: surface/action/subtle"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.500}",
+              "$description": "Figma: text/core/body"
+            }
+          }
+        },
+        "relative-link": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.lg}",
+            "$description": "[code-only]"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.bold}",
+            "$description": "[code-only]"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.none}",
             "$description": "[code-only]"
           }
         }
