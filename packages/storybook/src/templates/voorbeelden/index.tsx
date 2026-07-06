@@ -2,7 +2,6 @@
 
 import {
   Article,
-  CardAsLink,
   ColumnLayout,
   Heading,
   Hero,
@@ -19,6 +18,7 @@ import SharedDisclaimer from '../shared/disclaimer';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
+import Uitgelicht from '../shared/uitgelicht';
 import '../details/index.css';
 
 export default function Details() {
@@ -102,25 +102,7 @@ export default function Details() {
                 </div>
               </ColumnLayout>
               <Separator />
-              <Heading level={2}>Uitgelicht</Heading>
-              <div className="rhc-card-as-link-group">
-                <CardAsLink
-                  heading="Bijbaan, vakantiewerk en stage door jongeren"
-                  href="#"
-                  imageAlt="Tulip field"
-                  imageSrc="/placeholder.jpg"
-                  linkLabel="Lees meer"
-                  title="Tekst over de link"
-                ></CardAsLink>
-                <CardAsLink
-                  heading="Vakantiedagen en vakantiegeld"
-                  href="#"
-                  imageAlt="Tulip field"
-                  imageSrc="/placeholder.jpg"
-                  linkLabel="Lees meer"
-                  title="Tekst over de link"
-                ></CardAsLink>
-              </div>
+              <Uitgelicht />
             </div>
           </Article>
         </SharedMainPageContent>
