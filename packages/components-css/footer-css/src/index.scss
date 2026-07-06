@@ -46,23 +46,22 @@
   @include mixin.invisible-but-accessible;
 }
 
+/**
+ * The tagline sits full-width above the sections (Page Footer discussion
+ * #2619, "Optie 1 - tagline boven"), so the layout stacks vertically. The
+ * sections themselves flow as columns via the nested Column Layout.
+ */
 .rhc-page-footer-layout {
-  column-gap: var(--rhc-page-footer-column-gap);
   display: flex;
-  flex: 1;
-  flex-direction: row;
+  flex-direction: column;
+  row-gap: var(--rhc-page-footer-layout-row-gap);
 
   :is(.rhc-heading, .rhc-paragraph):is(h1, h2, h3, h4, h5, h6, p) {
     margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
 }
 
-.rhc-page-footer-layout > * {
-  flex: 1;
-}
-
-.rhc-page-footer__section,
-.rhc-page-footer__tagline {
+.rhc-page-footer__section {
   break-inside: avoid;
   line-height: var(--rhc-text-line-height-md, inherit);
   padding-block-end: var(--rhc-page-footer-padding-block-end);
