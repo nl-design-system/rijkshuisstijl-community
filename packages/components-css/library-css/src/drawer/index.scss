@@ -6,13 +6,13 @@
 /**
  * De Utrecht Drawer levert alleen de basiscontainer. De header/body/footer-slots
  * halen hun spacing en separator-borders uit de `utrecht.drawer.{header,body,footer}.*`
- * tokens; de drawer zelf heeft geen padding meer.
+ * tokens; de drawer zelf heeft geen padding meer. De separators lopen niet van rand
+ * tot rand: ze zijn met een pseudo-element ingesprongen op dezelfde inline-padding
+ * als de content, conform het ontwerp.
  */
 .utrecht-drawer {
   &__header {
     align-items: flex-start;
-    border-block-end: var(--utrecht-drawer-header-border-block-end-width, 0) solid
-      var(--utrecht-drawer-header-border-color, transparent);
     column-gap: var(--rhc-space-2xl);
     display: flex;
     justify-content: space-between;
@@ -20,6 +20,17 @@
     padding-block-start: var(--utrecht-drawer-header-padding-block-start);
     padding-inline-end: var(--utrecht-drawer-header-padding-inline-end);
     padding-inline-start: var(--utrecht-drawer-header-padding-inline-start);
+    position: relative;
+
+    &::after {
+      background-color: var(--utrecht-drawer-header-border-color, transparent);
+      block-size: var(--utrecht-drawer-header-border-block-end-width, 0);
+      content: "";
+      inset-block-end: 0;
+      inset-inline-end: var(--utrecht-drawer-header-padding-inline-end);
+      inset-inline-start: var(--utrecht-drawer-header-padding-inline-start);
+      position: absolute;
+    }
   }
 
   &__body {
@@ -33,11 +44,20 @@
   }
 
   &__footer {
-    border-block-start: var(--utrecht-drawer-footer-border-block-start-width, 0) solid
-      var(--utrecht-drawer-footer-border-color, transparent);
     padding-block-end: var(--utrecht-drawer-footer-padding-block-end);
     padding-block-start: var(--utrecht-drawer-footer-padding-block-start);
     padding-inline-end: var(--utrecht-drawer-footer-padding-inline-end);
     padding-inline-start: var(--utrecht-drawer-footer-padding-inline-start);
+    position: relative;
+
+    &::before {
+      background-color: var(--utrecht-drawer-footer-border-color, transparent);
+      block-size: var(--utrecht-drawer-footer-border-block-start-width, 0);
+      content: "";
+      inset-block-start: 0;
+      inset-inline-end: var(--utrecht-drawer-footer-padding-inline-end);
+      inset-inline-start: var(--utrecht-drawer-footer-padding-inline-start);
+      position: absolute;
+    }
   }
 }
