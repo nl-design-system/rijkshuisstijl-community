@@ -12,7 +12,7 @@ import readme from './drawer.md?raw';
 
 const drawerHeader = (
   <header className="utrecht-drawer__header" key="header">
-    <Heading appearanceLevel={3} level={2}>
+    <Heading appearanceLevel={3} className="utrecht-drawer__title" level={2}>
       Drawer title
     </Heading>
     <form className="utrecht-drawer__header-actions" method="dialog">
