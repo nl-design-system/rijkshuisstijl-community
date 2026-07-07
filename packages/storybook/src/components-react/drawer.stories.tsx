@@ -4,6 +4,7 @@ import {
   DataSummaryItem,
   Drawer,
   Heading,
+  IconButton,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
@@ -15,9 +16,7 @@ const drawerHeader = (
       Drawer title
     </Heading>
     <form className="utrecht-drawer__header-actions" method="dialog">
-      <Button appearance="secondary-action-button" type="submit">
-        Sluiten
-      </Button>
+      <IconButton icon="kruis" label="Sluiten" purpose="secondary" type="submit" />
     </form>
   </header>
 );
