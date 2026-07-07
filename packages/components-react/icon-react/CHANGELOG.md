@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/icon-react
 
+## 3.1.2
+
+### Patch Changes
+
+- b3db8e1: Icoon chevron-left toegevoegd
+
 ## 3.1.1
 
 ### Patch Changes
