@@ -1,6 +1,8 @@
 import {
+  ActionGroup,
   Alert,
   Button,
+  Footer,
   FormFieldCheckboxOption,
   FormFieldSelect,
   FormFieldTextInput,
@@ -31,16 +33,14 @@ export default function Contactformulier({
         <SkipLink className="rhc-skip-link--visible-on-focus" href="#main" id="top">
           Ga naar hoofdinhoud
         </SkipLink>
-        <Logo organisation="Ministerie van Buitenlandse Zaken" />
-        {/* GAP: hero action-balk (outline "Contact" + filled "Menu") bestaat niet als component. */}
-        <Button appearance="secondary-action-button">
-          <Icon icon="telefoon" />
-          Contact
-        </Button>
-        <Button appearance="primary-action-button">
-          <Icon icon="menu" />
-          Menu
-        </Button>
+        <Logo organisation="Ministerie van Buitenlandse Zaken">
+          <Icon icon="nederland-map" />
+        </Logo>
+        {/* GAP: hero action-balk (outline "Contact" + filled "Menu") bestaat niet als component; ActionGroup geeft de tussenruimte. */}
+        <ActionGroup>
+          <Button iconStart={<Icon icon="telefoon" />} label="Contact" purpose="secondary" />
+          <Button iconStart={<Icon icon="menu" />} label="Menu" purpose="primary" />
+        </ActionGroup>
       </PageHeader>
       <PageBody>
         <Main>
@@ -118,12 +118,15 @@ export default function Contactformulier({
               {/* GAP: een Form Field rond een checkbox met titel + beschrijving + inline link bestaat niet kant-en-klaar. */}
               {/* Groepeer titel, beschrijving en checkbox als één veld, zoals in de Figma. */}
               <div className="rhc-example-contactformulier__consent">
-                <Paragraph>Verwerking van uw persoonsgegevens</Paragraph>
+                {/* Geen Heading: in Figma is dit een bold veld-label (bijna zwart), niet een lintblauwe kop. */}
+                <Paragraph>
+                  <strong>Verwerking van uw persoonsgegevens</strong>
+                </Paragraph>
                 <Paragraph>
                   Wij gebruiken uw gegevens om uw vraag te beantwoorden. Voor trainingsdoeleinden worden uw gegevens 12
                   maanden bewaard. Uw informatie wordt niet met derden gedeeld.{' '}
                   <Link inline href="#privacy">
-                    Meer informatie over uw privacy.
+                    <strong>Meer informatie over uw privacy.</strong>
                   </Link>
                 </Paragraph>
                 <div id="ik-begrijp-het" tabIndex={-1}>
@@ -135,22 +138,15 @@ export default function Contactformulier({
                 </div>
               </div>
 
-              <Button appearance="primary-action-button" type="submit">
-                Verzenden
-                <Icon icon="pijl-naar-rechts" />
-              </Button>
+              <Button iconEnd={<Icon icon="pijl-naar-rechts" />} label="Verzenden" purpose="primary" type="submit" />
             </form>
           </SharedMainPageContent>
         </Main>
       </PageBody>
-      {/* GAP: Page Footer Compact (sitenaam + 2 links) bestaat nog niet als component. */}
-      <footer>
-        <SharedMainPageContent>
-          <Paragraph>NederlandWereldwijd</Paragraph>
-          <Link href="#over-nederlandwereldwijd">Over NederlandWereldwijd</Link>
-          <Link href="#over-de-website">Over de website</Link>
-        </SharedMainPageContent>
-      </footer>
+      <Footer tagline="NederlandWereldwijd" variant="compact">
+        <Link href="#over-nederlandwereldwijd">Over NederlandWereldwijd</Link>
+        <Link href="#over-de-website">Over de website</Link>
+      </Footer>
     </>
   );
 }
