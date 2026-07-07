@@ -31,6 +31,12 @@
       inset-inline-start: var(--utrecht-drawer-header-padding-inline-start);
       position: absolute;
     }
+
+    /* Kleine bovenmarge op de titel zodat de tekst optisch uitlijnt met het
+       hart van de sluitknop, die iets hoger is dan de regelhoogte. */
+    > :first-child {
+      padding-block-start: var(--rhc-space-sm);
+    }
   }
 
   &__body {
@@ -59,5 +65,20 @@
       inset-inline-start: var(--utrecht-drawer-footer-padding-inline-start);
       position: absolute;
     }
+  }
+
+  /**
+   * De drawer staat 48px van de bovenkant (`rhc.drawer.margin-block-start`),
+   * conform het ontwerp. Selector met dubbele klasse voor hogere specificiteit
+   * dan de Utrecht-basis, die na deze laag wordt geimporteerd.
+   */
+  &.utrecht-drawer--inline-start,
+  &.utrecht-drawer--inline-end {
+    block-size: auto;
+    inset-block-start: var(--rhc-drawer-margin-block-start, 0);
+  }
+
+  &.utrecht-drawer--block-start {
+    inset-block-start: var(--rhc-drawer-margin-block-start, 0);
   }
 }
