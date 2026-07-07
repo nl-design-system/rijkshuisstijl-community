@@ -110,10 +110,10 @@ export default function Collage() {
                   <IconArrowRight />
                 </Icon>
               </Link>
-              <Button appearance="primary-action-button">Primary button</Button>
-              <Button appearance="secondary-action-button">Secondary button</Button>
+              <Button purpose="primary">Primary button</Button>
+              <Button purpose="secondary">Secondary button</Button>
               <Button>Default button</Button>
-              <Button appearance="subtle-button">Subtle button</Button>
+              <Button purpose="subtle">Subtle button</Button>
               <IconButton label="calendar">
                 <IconCalendarEvent />
               </IconButton>

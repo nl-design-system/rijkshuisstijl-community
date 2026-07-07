@@ -117,7 +117,7 @@ export default function Form() {
                   <FieldsetLegend>Akkoordverklaring</FieldsetLegend>
                   <FormFieldCheckboxOption label="Ik heb gelezen en begrepen wat er met mijn persoonsgegevens wordt gedaan"></FormFieldCheckboxOption>
                 </Fieldset>
-                <Button appearance="primary-action-button" type="submit">
+                <Button purpose="primary" type="submit">
                   Ga verder
                 </Button>
               </form>
