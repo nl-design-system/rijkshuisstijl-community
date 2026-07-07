@@ -146,7 +146,6 @@ export const Hover: Story = {
     children: 'Label',
   },
 };
-
 export const FocusVisible: Story = {
   parameters: {},
   args: {
