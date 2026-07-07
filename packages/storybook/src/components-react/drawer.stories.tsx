@@ -111,8 +111,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     align: 'inline-start',
-    className:
-      'rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-end rhc-rounded-corner--position-end-end',
+    className: 'rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-end',
     children: drawerChildren,
     open: true,
   },
@@ -121,8 +120,7 @@ export const Default: Story = {
 export const InlineEnd: Story = {
   args: {
     align: 'inline-end',
-    className:
-      'rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-start rhc-rounded-corner--position-end-start',
+    className: 'rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-start',
     children: drawerChildren,
     open: true,
   },
@@ -143,8 +141,7 @@ export const BlockEnd: Story = {
 export const OverflowY: Story = {
   args: {
     align: 'inline-start',
-    className:
-      'rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-end rhc-rounded-corner--position-end-end',
+    className: 'rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-end',
     children: overflowChildren,
     open: true,
   },

@@ -1,0 +1,43 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+/**
+ * De Utrecht Drawer levert alleen de basiscontainer. De header/body/footer-slots
+ * halen hun spacing en separator-borders uit de `utrecht.drawer.{header,body,footer}.*`
+ * tokens; de drawer zelf heeft geen padding meer.
+ */
+.utrecht-drawer {
+  &__header {
+    align-items: flex-start;
+    border-block-end: var(--utrecht-drawer-header-border-block-end-width, 0) solid
+      var(--utrecht-drawer-header-border-color, transparent);
+    column-gap: var(--rhc-space-2xl);
+    display: flex;
+    justify-content: space-between;
+    padding-block-end: var(--utrecht-drawer-header-padding-block-end);
+    padding-block-start: var(--utrecht-drawer-header-padding-block-start);
+    padding-inline-end: var(--utrecht-drawer-header-padding-inline-end);
+    padding-inline-start: var(--utrecht-drawer-header-padding-inline-start);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding-block-end: var(--utrecht-drawer-body-padding-block-end);
+    padding-block-start: var(--utrecht-drawer-body-padding-block-start);
+    padding-inline-end: var(--utrecht-drawer-body-padding-inline-end);
+    padding-inline-start: var(--utrecht-drawer-body-padding-inline-start);
+    row-gap: var(--utrecht-drawer-body-row-gap);
+  }
+
+  &__footer {
+    border-block-start: var(--utrecht-drawer-footer-border-block-start-width, 0) solid
+      var(--utrecht-drawer-footer-border-color, transparent);
+    padding-block-end: var(--utrecht-drawer-footer-padding-block-end);
+    padding-block-start: var(--utrecht-drawer-footer-padding-block-start);
+    padding-inline-end: var(--utrecht-drawer-footer-padding-inline-end);
+    padding-inline-start: var(--utrecht-drawer-footer-padding-inline-start);
+  }
+}
