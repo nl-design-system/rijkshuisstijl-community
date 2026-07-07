@@ -36,7 +36,7 @@ const meta: Meta<LogoComponent> = {
     },
   },
   render: ({ organisation, subtitle }) => {
-    const optionalAttribute = subtitle ? ` subtitle="'${subtitle}'"` : '';
+    const optionalAttribute = subtitle ? ` subtitle="${subtitle}"` : '';
 
     return {
       template: `<figure rhc-logo [organisation]="'${organisation}'"${optionalAttribute}>
