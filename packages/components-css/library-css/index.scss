@@ -50,6 +50,7 @@
 @use "@rijkshuisstijl-community/rounded-corner-css/src/index" as roundedCorner;
 @use "src/form-field-select/index" as formFieLdSelect;
 @use "@rijkshuisstijl-community/separator-css/src/index" as separator;
+@use "src/side-nav/index" as sideNav;
 @use "@rijkshuisstijl-community/skip-link-css/src/index" as skipLink;
 @use "src/table/index" as table;
 @use "@rijkshuisstijl-community/textarea-css/src/index" as textarea;
@@ -59,6 +60,7 @@
 @use "@rijkshuisstijl-community/visually-hidden-css/src/index" as visually-hidden;
 @use "src/wrapper/index" as wrapper;
 
+@import "@gemeente-denhaag/side-navigation/index.css";
 @import "@utrecht/action-group-css/dist/index.css";
 @import "@utrecht/article-css/dist/index.css";
 @import "@utrecht/badge-list-css/dist/index.css";

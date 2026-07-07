@@ -1,7 +1,6 @@
 import {
   Icon,
   NumberBadge,
-  Separator,
   SideNav,
   SideNavItem,
   SideNavLink,
@@ -38,41 +37,77 @@ export const Default: Story = {
       <SideNavList key="ul-1">
         <SideNavItem>
           <SideNavLink current href="/#">
-            <Icon icon="tegelweergave" />
-            <SideNavLinkLabel>Overzicht</SideNavLinkLabel>
+            <Icon icon="home" />
+            <SideNavLinkLabel>Dashboard</SideNavLinkLabel>
           </SideNavLink>
         </SideNavItem>
       </SideNavList>,
-      <Separator invisible key="separator-1" />,
       <SideNavList key="ul-2">
-        <SideNavItem>
-          <SideNavLink href="/#">
-            <Icon icon="activiteit" />
-            <SideNavLinkLabel>Mijn taken</SideNavLinkLabel>
-          </SideNavLink>
-        </SideNavItem>
         <SideNavItem>
           <SideNavLink href="/#">
             <Icon icon="mail" />
             <SideNavLinkLabel>
-              Mijn berichten
-              <NumberBadge>2</NumberBadge>
+              Berichtenbox
+              <NumberBadge>9</NumberBadge>
             </SideNavLinkLabel>
           </SideNavLink>
         </SideNavItem>
         <SideNavItem>
           <SideNavLink href="/#">
-            <Icon icon="bewerken" />
-            <SideNavLinkLabel>Mijn lopende zaken</SideNavLinkLabel>
+            <Icon icon="comment" />
+            <SideNavLinkLabel>MijnZaken</SideNavLinkLabel>
           </SideNavLink>
         </SideNavItem>
       </SideNavList>,
-      <Separator invisible key="separator-2" />,
       <SideNavList key="ul-3">
         <SideNavItem>
           <SideNavLink href="/#">
             <Icon icon="user" />
-            <SideNavLinkLabel>Mijn gegevens</SideNavLinkLabel>
+            <SideNavLinkLabel>Identiteit</SideNavLinkLabel>
+          </SideNavLink>
+        </SideNavItem>
+        <SideNavItem>
+          <SideNavLink href="/#">
+            <Icon icon="currency-euro" />
+            <SideNavLinkLabel>Financiën</SideNavLinkLabel>
+          </SideNavLink>
+        </SideNavItem>
+        <SideNavItem>
+          <SideNavLink href="/#">
+            <Icon icon="hashtag" />
+            <SideNavLinkLabel>Werk</SideNavLinkLabel>
+          </SideNavLink>
+        </SideNavItem>
+        <SideNavItem>
+          <SideNavLink href="/#">
+            <Icon icon="favoriet" />
+            <SideNavLinkLabel>Gezondheid</SideNavLinkLabel>
+          </SideNavLink>
+        </SideNavItem>
+        <SideNavItem>
+          <SideNavLink href="/#">
+            <Icon icon="home" />
+            <SideNavLinkLabel>Wonen</SideNavLinkLabel>
+          </SideNavLink>
+        </SideNavItem>
+        <SideNavItem>
+          <SideNavLink href="/#">
+            <Icon icon="car" />
+            <SideNavLinkLabel>Vervoer</SideNavLinkLabel>
+          </SideNavLink>
+        </SideNavItem>
+        <SideNavItem>
+          <SideNavLink href="/#">
+            <Icon icon="school" />
+            <SideNavLinkLabel>Onderwijs</SideNavLinkLabel>
+          </SideNavLink>
+        </SideNavItem>
+      </SideNavList>,
+      <SideNavList key="ul-4">
+        <SideNavItem>
+          <SideNavLink href="/#">
+            <Icon icon="instellingen" />
+            <SideNavLinkLabel>Instellingen</SideNavLinkLabel>
           </SideNavLink>
         </SideNavItem>
       </SideNavList>,
