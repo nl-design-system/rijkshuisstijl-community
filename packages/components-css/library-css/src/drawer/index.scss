@@ -13,7 +13,7 @@
 .utrecht-drawer {
   &__header {
     align-items: flex-start;
-    column-gap: var(--rhc-space-2xl);
+    column-gap: var(--utrecht-drawer-header-column-gap);
     display: flex;
     justify-content: space-between;
     padding-block-end: var(--utrecht-drawer-header-padding-block-end);
@@ -31,12 +31,12 @@
       inset-inline-start: var(--utrecht-drawer-header-padding-inline-start);
       position: absolute;
     }
+  }
 
-    /* Kleine bovenmarge op de titel zodat de tekst optisch uitlijnt met het
-       hart van de sluitknop, die iets hoger is dan de regelhoogte. */
-    > :first-child {
-      padding-block-start: var(--rhc-space-sm);
-    }
+  /* Kleine bovenmarge op de titel zodat de tekst optisch uitlijnt met het
+     hart van de sluitknop, die iets hoger is dan de regelhoogte. */
+  &__title {
+    padding-block-start: var(--utrecht-drawer-header-title-padding-block-start);
   }
 
   &__body {
@@ -69,8 +69,10 @@
 
   /**
    * De drawer staat 48px van de bovenkant (`rhc.drawer.margin-block-start`),
-   * conform het ontwerp. Selector met dubbele klasse voor hogere specificiteit
-   * dan de Utrecht-basis, die na deze laag wordt geimporteerd.
+   * conform het ontwerp. De Utrecht-basis cascadet eerder (de plain-CSS
+   * `@import` wordt boven deze laag gehoist); de dubbele klasse borgt dat deze
+   * override wint. `block-size: auto` is nodig omdat de Utrecht-basis
+   * `block-size: 100%` zet, wat samen met de 48px-inset zou overflowen.
    */
   &.utrecht-drawer--inline-start,
   &.utrecht-drawer--inline-end {
