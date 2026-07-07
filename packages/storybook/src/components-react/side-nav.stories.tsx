@@ -22,7 +22,6 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add Figma and NL DesignSystem links
     componentOrigin: 'Dit component is overgenomen van Gemeente Den Haag Side Navigation',
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/side-nav-react/src/SideNav.tsx',
