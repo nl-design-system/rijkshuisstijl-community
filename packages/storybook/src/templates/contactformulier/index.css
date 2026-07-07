@@ -1,0 +1,27 @@
+/*
+ * Contactformulier voorbeeldpagina (#2650).
+ * Layout-waarden zijn scoped op deze template en sluiten aan op het Figma-ontwerp
+ * (node 5861-30087): 24px ritme tussen velden, 8px binnen een veld, veldbreedte 627px.
+ * De onderliggende componenten blijven ongewijzigd.
+ */
+
+.rhc-example-contactformulier__form {
+  /* Figma Form field-breedte, alleen binnen deze voorbeeldpagina. */
+  --rhc-example-contactformulier-field-max-inline-size: 627px;
+  --utrecht-select-max-inline-size: var(--rhc-example-contactformulier-field-max-inline-size);
+  --utrecht-textbox-max-inline-size: var(--rhc-example-contactformulier-field-max-inline-size);
+  --utrecht-textarea-max-inline-size: var(--rhc-example-contactformulier-field-max-inline-size);
+
+  display: flex;
+  flex-direction: column;
+
+  /* Figma static-spacing/1xl: verticaal ritme tussen de velden. */
+  gap: var(--rhc-space-2xl);
+}
+
+/* Groepeer label, beschrijving en checkbox als één veld (Figma static-spacing/xs). */
+.rhc-example-contactformulier__consent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-space-md);
+}
