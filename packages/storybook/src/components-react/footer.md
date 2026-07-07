@@ -15,7 +15,7 @@ De compacte variant is een lichte footer met alleen een tagline en enkele links.
 - De tagline is gewone tekst en bewust geen Heading component: het is geen kop in de documentstructuur.
 - De links worden als children meegegeven en naast elkaar getoond; op smalle schermen lopen ze door naar een volgende regel.
 - De kleuren en witruimte komen uit de `rhc.page-footer.compact.*` design tokens.
-- De props van de standaardvariant (`heading`, `columns`, `subFooter`, `backtotop`, `preFooter`) hebben in de compacte variant geen effect.
+- De props van de standaardvariant (`heading`, `columns`, `background`, `subFooter`, `backtotop`, `preFooter`) hebben in de compacte variant geen effect.
 
 ```tsx
 <Footer variant="compact" tagline="De rijksoverheid. Voor Nederland">
