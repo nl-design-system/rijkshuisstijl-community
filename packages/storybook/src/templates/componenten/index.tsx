@@ -345,7 +345,6 @@ export default function Componenten() {
                     expandText="Toon meer frameworks"
                     extraOptionsText="Extra framework opties"
                     legend="Framework"
-                    maxVisible={105}
                     selectedOptions={stagedFrameworks}
                     options={frameworkOptions.map((option) => ({
                       label: (
