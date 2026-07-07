@@ -13,7 +13,5 @@ export const IconLeft = ReactStories.IconLeft;
 export const IconRight = ReactStories.IconRight;
 export const Active = ReactStories.Active;
 export const Hover = ReactStories.Hover;
-export const Focus = ReactStories.Focus;
 export const FocusVisible = ReactStories.FocusVisible;
-export const Visited = ReactStories.Visited;
 export const LinkInParagraph = ReactStories.LinkInParagraph;
