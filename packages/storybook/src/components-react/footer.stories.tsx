@@ -89,24 +89,33 @@ function _toLinkList(items: string[]) {
 export const DefaultFooter: Story = {
   args: {
     heading: 'Colofon',
-    tagline: 'Footer tagline',
+    tagline: 'De Rijksoverheid. Voor Nederland',
     preFooter: false,
     columns: [
       {
-        heading: 'Service',
-        children: _toLinkList(['Contact', 'Abonneren', 'RSS', 'Vacatures', 'Sitemap', 'Help', 'Archief']),
+        heading: 'Link group 1',
+        children: _toLinkList(['Contact', 'Abonneren', 'RSS', 'Vacatures', 'Sitemap']),
       },
       {
-        heading: 'Over deze site',
-        children: _toLinkList(['Over deze organisatie', 'Wetten en regelingen', 'Copyright', 'Open data']),
+        heading: 'Link group 2',
+        children: _toLinkList(['Contact', 'Abonneren', 'RSS', 'Vacatures', 'Sitemap']),
+      },
+      {
+        heading: 'Link group 3',
+        children: _toLinkList(['Contact', 'Abonneren', 'RSS', 'Vacatures', 'Sitemap']),
+      },
+      {
+        heading: 'Link group 4',
+        children: _toLinkList(['Contact', 'Abonneren', 'RSS', 'Vacatures', 'Sitemap']),
       },
     ],
     subFooter: (
       <LinkList>
-        <LinkListLink href="#">Kwetsbaarheid melden</LinkListLink>
-        <LinkListLink href="#">Toegankelijkheid</LinkListLink>
+        <LinkListLink href="#">Contact</LinkListLink>
         <LinkListLink href="#">Privacy</LinkListLink>
-        <LinkListLink href="#">Cookies</LinkListLink>
+        <LinkListLink href="#">Cookies en anti-spam</LinkListLink>
+        <LinkListLink href="#">Toegankelijkheid</LinkListLink>
+        <LinkListLink href="#">Proclaimer</LinkListLink>
       </LinkList>
     ),
   },
