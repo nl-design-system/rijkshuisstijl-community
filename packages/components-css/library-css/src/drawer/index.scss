@@ -11,10 +11,20 @@
  * als de content, conform het ontwerp.
  */
 .utrecht-drawer {
+  /**
+   * De rounded-corner utility zet `overflow: hidden` op de drawer (om de
+   * afgeronde hoek te clippen), waardoor de drawer zelf niet meer scrollt.
+   * Daarom is de drawer een flex-kolom: header en footer blijven staan en de
+   * body is de scroll-container.
+   */
+  display: flex;
+  flex-direction: column;
+
   &__header {
     align-items: flex-start;
     column-gap: var(--utrecht-drawer-header-column-gap);
     display: flex;
+    flex: 0 0 auto;
     justify-content: space-between;
     padding-block-end: var(--utrecht-drawer-header-padding-block-end);
     padding-block-start: var(--utrecht-drawer-header-padding-block-start);
@@ -41,7 +51,10 @@
 
   &__body {
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
+    min-block-size: 0;
+    overflow-y: auto;
     padding-block-end: var(--utrecht-drawer-body-padding-block-end);
     padding-block-start: var(--utrecht-drawer-body-padding-block-start);
     padding-inline-end: var(--utrecht-drawer-body-padding-inline-end);
@@ -50,6 +63,7 @@
   }
 
   &__footer {
+    flex: 0 0 auto;
     padding-block-end: var(--utrecht-drawer-footer-padding-block-end);
     padding-block-start: var(--utrecht-drawer-footer-padding-block-start);
     padding-inline-end: var(--utrecht-drawer-footer-padding-inline-end);
