@@ -67,6 +67,11 @@
   padding-block-end: var(--rhc-page-footer-padding-block-end);
 }
 
+/* The link groups give their links a bit more breathing room than the default link list. */
+.rhc-page-footer__section .utrecht-link-list {
+  row-gap: var(--rhc-page-footer-link-list-row-gap);
+}
+
 .rhc-page-footer__tagline {
   font-size: var(--rhc-page-footer-tagline-font-size);
   font-style: var(--rhc-page-footer-tagline-font-style);
