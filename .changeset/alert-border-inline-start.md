@@ -3,4 +3,4 @@
 '@rijkshuisstijl-community/alert-css': patch
 ---
 
-Voegt een `alert.border-inline-start-width`-token toe en laat `.rhc-alert` dit honoreren, zodat de Alert een accentrand aan alleen de inline-start-zijde kan tonen (zoals het ontwerp vraagt) zonder de generieke `border-width` te kapen. De waarde staat nu op 0; de breedte en de overige Alert-waarden (tint, accentkleur, padding, hoeken, icoongrootte, tekstkleur) komen uit Figma.
+Alert afgestemd op het Figma-ontwerp: een 4px accentrand aan alleen de inline-start-zijde in de statuskleur, met lichte tint-achtergrond, 24px padding en rechte hoeken. Hiervoor is een nieuwe `rhc.border-width.lg` (4px) toegevoegd en honoreert `.rhc-alert` de `alert.border-inline-start-width` zonder de generieke `border-width` te kapen.
