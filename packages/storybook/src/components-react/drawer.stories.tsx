@@ -4,6 +4,7 @@ import {
   DataSummaryItem,
   Drawer,
   Heading,
+  IconButton,
   Paragraph,
 } from '@rijkshuisstijl-community/components-react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
@@ -11,13 +12,11 @@ import readme from './drawer.md?raw';
 
 const drawerHeader = (
   <header className="utrecht-drawer__header" key="header">
-    <Heading appearanceLevel={3} level={2}>
+    <Heading appearanceLevel={3} className="utrecht-drawer__title" level={2}>
       Drawer title
     </Heading>
     <form className="utrecht-drawer__header-actions" method="dialog">
-      <Button appearance="secondary-action-button" type="submit">
-        Sluiten
-      </Button>
+      <IconButton icon="kruis" label="Sluiten" purpose="secondary" type="submit" />
     </form>
   </header>
 );
@@ -111,8 +110,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     align: 'inline-start',
-    className:
-      'rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-end rhc-rounded-corner--position-end-end',
+    className: 'rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-end',
     children: drawerChildren,
     open: true,
   },
@@ -121,8 +119,7 @@ export const Default: Story = {
 export const InlineEnd: Story = {
   args: {
     align: 'inline-end',
-    className:
-      'rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-start rhc-rounded-corner--position-end-start',
+    className: 'rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-start',
     children: drawerChildren,
     open: true,
   },
@@ -143,8 +140,7 @@ export const BlockEnd: Story = {
 export const OverflowY: Story = {
   args: {
     align: 'inline-start',
-    className:
-      'rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-end rhc-rounded-corner--position-end-end',
+    className: 'rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-end',
     children: overflowChildren,
     open: true,
   },

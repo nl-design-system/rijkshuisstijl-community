@@ -1,0 +1,100 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+/**
+ * De Utrecht Drawer levert alleen de basiscontainer. De header/body/footer-slots
+ * halen hun spacing en separator-borders uit de `utrecht.drawer.{header,body,footer}.*`
+ * tokens; de drawer zelf heeft geen padding meer. De separators lopen niet van rand
+ * tot rand: ze zijn met een pseudo-element ingesprongen op dezelfde inline-padding
+ * als de content, conform het ontwerp.
+ */
+.utrecht-drawer {
+  /**
+   * De rounded-corner utility zet `overflow: hidden` op de drawer (om de
+   * afgeronde hoek te clippen), waardoor de drawer zelf niet meer scrollt.
+   * Daarom is de drawer een flex-kolom: header en footer blijven staan en de
+   * body is de scroll-container.
+   */
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    align-items: flex-start;
+    column-gap: var(--utrecht-drawer-header-column-gap);
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    padding-block-end: var(--utrecht-drawer-header-padding-block-end);
+    padding-block-start: var(--utrecht-drawer-header-padding-block-start);
+    padding-inline-end: var(--utrecht-drawer-header-padding-inline-end);
+    padding-inline-start: var(--utrecht-drawer-header-padding-inline-start);
+    position: relative;
+
+    &::after {
+      background-color: var(--utrecht-drawer-header-border-color, transparent);
+      block-size: var(--utrecht-drawer-header-border-block-end-width, 0);
+      content: "";
+      inset-block-end: 0;
+      inset-inline-end: var(--utrecht-drawer-header-padding-inline-end);
+      inset-inline-start: var(--utrecht-drawer-header-padding-inline-start);
+      position: absolute;
+    }
+  }
+
+  /* Kleine bovenmarge op de titel zodat de tekst optisch uitlijnt met het
+     hart van de sluitknop, die iets hoger is dan de regelhoogte. */
+  &__title {
+    padding-block-start: var(--utrecht-drawer-header-title-padding-block-start);
+  }
+
+  &__body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-block-size: 0;
+    overflow-y: auto;
+    padding-block-end: var(--utrecht-drawer-body-padding-block-end);
+    padding-block-start: var(--utrecht-drawer-body-padding-block-start);
+    padding-inline-end: var(--utrecht-drawer-body-padding-inline-end);
+    padding-inline-start: var(--utrecht-drawer-body-padding-inline-start);
+    row-gap: var(--utrecht-drawer-body-row-gap);
+  }
+
+  &__footer {
+    flex: 0 0 auto;
+    padding-block-end: var(--utrecht-drawer-footer-padding-block-end);
+    padding-block-start: var(--utrecht-drawer-footer-padding-block-start);
+    padding-inline-end: var(--utrecht-drawer-footer-padding-inline-end);
+    padding-inline-start: var(--utrecht-drawer-footer-padding-inline-start);
+    position: relative;
+
+    &::before {
+      background-color: var(--utrecht-drawer-footer-border-color, transparent);
+      block-size: var(--utrecht-drawer-footer-border-block-start-width, 0);
+      content: "";
+      inset-block-start: 0;
+      inset-inline-end: var(--utrecht-drawer-footer-padding-inline-end);
+      inset-inline-start: var(--utrecht-drawer-footer-padding-inline-start);
+      position: absolute;
+    }
+  }
+
+  /**
+   * De drawer staat 48px van de bovenkant (`rhc.drawer.margin-block-start`),
+   * conform het ontwerp. De Utrecht-basis cascadet eerder (de plain-CSS
+   * `@import` wordt boven deze laag gehoist); de dubbele klasse borgt dat deze
+   * override wint. `block-size: auto` is nodig omdat de Utrecht-basis
+   * `block-size: 100%` zet, wat samen met de 48px-inset zou overflowen.
+   */
+  &.utrecht-drawer--inline-start,
+  &.utrecht-drawer--inline-end {
+    block-size: auto;
+    inset-block-start: var(--rhc-drawer-margin-block-start, 0);
+  }
+
+  &.utrecht-drawer--block-start {
+    inset-block-start: var(--rhc-drawer-margin-block-start, 0);
+  }
+}
