@@ -2,6 +2,7 @@
 import {
   AccordionProvider,
   ActionGroup,
+  Alert,
   ButtonLink,
   Card,
   Heading,
@@ -13,6 +14,7 @@ import {
   NavigationList,
   NavigationListItem,
   NumberBadge,
+  Paragraph,
   RHCIconID,
   Separator,
   SideNav,
@@ -22,7 +24,7 @@ import {
   SideNavList,
 } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
-import { Fragment, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import SharedDisclaimer from '../shared/disclaimer';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
@@ -41,7 +43,7 @@ export const sideNav: {
 }[] = [
   {
     id: '1',
-    items: [{ href: '/mijn-omgeving/', icon: 'home', label: 'Overzicht' }],
+    items: [{ href: '/mijn-omgeving/', icon: 'home', label: 'Dashboard' }],
   },
   {
     id: '2',
@@ -50,10 +52,10 @@ export const sideNav: {
         href: '/mijn-omgeving-berichtenbox/',
         icon: 'mail',
         label: 'Berichtenbox',
-        numberBadgeValue: 4,
-        numberBadgeLabel: '4 berichten',
+        numberBadgeValue: 9,
+        numberBadgeLabel: '9 berichten',
       },
-      { href: '#', icon: 'inbox', label: 'MijnZaken' },
+      { href: '#', icon: 'comment', label: 'MijnZaken' },
     ],
   },
   {
@@ -61,7 +63,7 @@ export const sideNav: {
     items: [
       { href: '/mijn-omgeving-identiteit/', icon: 'user', label: 'Identiteit' },
       { href: '/mijn-omgeving-financien/', icon: 'currency-euro', label: 'Financiën' },
-      { href: '/mijn-omgeving-werk/', icon: 'briefcase', label: 'Werk' },
+      { href: '/mijn-omgeving-werk/', icon: 'hashtag', label: 'Werk' },
       { href: '/mijn-omgeving-gezondheid/', icon: 'favoriet', label: 'Gezondheid' },
       { href: '/mijn-omgeving-wonen/', icon: 'home', label: 'Wonen' },
       { href: '/mijn-omgeving-vervoer/', icon: 'car', label: 'Vervoer' },
@@ -74,27 +76,24 @@ export const sideNav: {
   },
 ];
 
-export const useSideNav = ({ items }: { items: typeof sideNav }) => ({
+export const useSideNav = ({ items, currentHref }: { items: typeof sideNav; currentHref?: string }) => ({
   'aria-label': 'Zijnavigatie',
-  children: items.map(({ id, items }, index) => (
-    <Fragment key={id}>
-      {index >= 1 ? <Separator invisible /> : null}
-      <SideNavList key={index}>
-        {items.map(({ href, icon, label, numberBadgeLabel, numberBadgeValue }) => (
-          <SideNavItem key={href}>
-            <SideNavLink href={href}>
-              <Icon icon={icon} />
-              <SideNavLinkLabel>
-                {label}
-                {numberBadgeLabel && numberBadgeValue ? (
-                  <NumberBadge label={numberBadgeLabel}>{numberBadgeValue}</NumberBadge>
-                ) : null}
-              </SideNavLinkLabel>
-            </SideNavLink>
-          </SideNavItem>
-        ))}
-      </SideNavList>
-    </Fragment>
+  children: items.map(({ id, items }) => (
+    <SideNavList key={id}>
+      {items.map(({ href, icon, label, numberBadgeLabel, numberBadgeValue }) => (
+        <SideNavItem key={href}>
+          <SideNavLink current={href === currentHref} href={href}>
+            <Icon icon={icon} />
+            <SideNavLinkLabel>
+              {label}
+              {numberBadgeLabel && numberBadgeValue ? (
+                <NumberBadge label={numberBadgeLabel}>{numberBadgeValue}</NumberBadge>
+              ) : null}
+            </SideNavLinkLabel>
+          </SideNavLink>
+        </SideNavItem>
+      ))}
+    </SideNavList>
   )),
 });
 
@@ -130,9 +129,26 @@ export default function MijnOmgeving() {
       <PageBody className="utrecht-page-body--rhc-mijn-omgeving">
         <SharedMainPageContent>
           <SharedDisclaimer />
-          <SideNav {...useSideNav({ items: sideNav })} />
+          <SideNav {...useSideNav({ items: sideNav, currentHref: '/mijn-omgeving/' })} />
           <section className={'rhc-page-main-content'}>
             <Heading level={1}>Welkom Bert Burger</Heading>
+            <Alert type="info">
+              <Heading appearanceLevel={5} level={2}>
+                Optional heading
+              </Heading>
+              <Paragraph>
+                Lorem ipsum dolor sit amet consectetur. Purus pulvinar ut volutpat imperdiet iaculis vitae ipsum risus
+                faucibus. Varius odio tellus ut iaculis purus quam tristique vitae cras. Phasellus tincidunt enim
+                bibendum tristique turpis diam quam proin. Ac et interdum viverra viverra. A nulla pretium massa
+                faucibus ullamcorper etiam id in.
+              </Paragraph>
+            </Alert>
+            {/*
+             * GAP: het ontwerp toont 'Recent' en 'Wat kan ik waar vinden?' in card-containers op volle
+             * breedte. De RHC Card is een vaste-breedte grid-card (inline-flex + max-inline-size); een
+             * full-width card/panel-variant hoort in de component-bron (card-css), niet in deze
+             * integratiebranch. Daarom hier platte secties met de al matchende item-componenten.
+             */}
             <div>
               <Heading level={2}>Recent</Heading>
               <Separator invisible />

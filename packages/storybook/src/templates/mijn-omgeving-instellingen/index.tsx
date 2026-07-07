@@ -25,7 +25,7 @@ export default function MijnOmgeving() {
       <PageBody className="utrecht-page-body--rhc-mijn-omgeving">
         <SharedMainPageContent>
           <SharedDisclaimer />
-          <SideNav {...useSideNav({ items: sideNav })} />
+          <SideNav {...useSideNav({ items: sideNav, currentHref: '/mijn-omgeving-instellingen/' })} />
           <section className={'rhc-page-main-content'}>
             <Heading level={1}>Mijn Instellingen</Heading>
             <div>

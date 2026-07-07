@@ -74,7 +74,7 @@ export default function MijnOmgeving() {
       <PageBody className="utrecht-page-body--rhc-mijn-omgeving">
         <SharedMainPageContent>
           <SharedDisclaimer />
-          <SideNav {...useSideNav({ items: sideNav })} />
+          <SideNav {...useSideNav({ items: sideNav, currentHref: '/mijn-omgeving-wonen/' })} />
           <section className={'rhc-page-main-content'}>
             <Heading level={1}>Wonen</Heading>
             <div className="rhc-card-as-link-group" {...useCards({ items: cards, headingLevel: 2 })} />
