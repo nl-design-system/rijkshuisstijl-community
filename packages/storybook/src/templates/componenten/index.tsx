@@ -402,8 +402,12 @@ export default function Componenten() {
                             </Heading>
                           }
                         >
-                          <div>NLDS Status: {component.nlStatus}</div>
-                          <div>Oorsprong: {component.oorsprong}</div>
+                          <dl>
+                            <dt>NLDS Status:</dt>
+                            <dd>{component.nlStatus}</dd>
+                            <dt>Oorsprong:</dt>
+                            <dd>{component.oorsprong}</dd>
+                          </dl>
                           <BadgeList
                             aria-label={`Framework opties voor ${component.heading}`}
                             className="rhc-templates-badgelist"
