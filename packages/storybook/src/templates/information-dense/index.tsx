@@ -144,10 +144,7 @@ export default function InformationDense() {
               <RoundedCorner position="start-end">
                 <div>
                   <Heading level={2}>Filters</Heading>
-                  <Button appearance="subtle-button">
-                    <Icon icon="verwijderen" />
-                    Reset filters
-                  </Button>
+                  <Button iconStart={<Icon icon="verwijderen" />} label="Reset filters" purpose="subtle" />
 
                   <FormFieldTextInput label="Zoek subsidies en financiering" type="search" />
                   <Separator />
