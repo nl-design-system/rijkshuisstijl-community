@@ -4,13 +4,13 @@ import { afterEach, describe, expect, it } from 'vitest';
 import { Logo } from './Logo';
 
 describe('Logo', () => {
-  it('renders a logo role element', () => {
-    render(<Logo organisation="Voorbeeld organisatie" subtitle="Voorbeeld sub-title"></Logo>);
+  it('renders a logo element', () => {
+    render(<Logo organisation="Organisatie" subtitle="Ondertitel"></Logo>);
 
-    const logo = screen.getByText('Voorbeeld organisatie');
+    const text = screen.getByText('Organisatie');
 
-    expect(logo).toBeInTheDocument();
-    expect(logo).toBeVisible();
+    expect(text).toBeInTheDocument();
+    expect(text).toBeVisible();
   });
 });
 

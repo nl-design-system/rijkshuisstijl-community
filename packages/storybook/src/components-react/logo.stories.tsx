@@ -90,13 +90,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
-    organisation: 'Voorbeeld organisatie',
+    organisation: 'Organisatie',
   },
 };
 
 export const WithSubtitle: Story = {
   args: {
-    organisation: 'Voorbeeld organisatie',
-    subtitle: 'Voorbeeld sub-title',
+    organisation: 'Organisatie',
+    subtitle: 'Ondertitel',
   },
 };

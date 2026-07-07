@@ -25,8 +25,8 @@ const meta: Meta<LogoComponent> = {
     },
   },
   args: {
-    organisation: 'Voorbeeld organisatie',
-    subtitle: 'Voorbeeld ondertitel',
+    organisation: 'Organisatie',
+    subtitle: 'Ondertitel',
   },
   parameters: {
     docs: {
@@ -57,7 +57,7 @@ export const Default: StoryObj<LogoComponent> = {};
 
 export const NoSubtitle: StoryObj<LogoComponent> = {
   args: {
-    organisation: 'Voorbeeld organisatie',
+    organisation: 'Organisatie',
     subtitle: null,
   },
 };
