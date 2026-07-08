@@ -98,44 +98,42 @@ export const SharedSideNav = ({ currentHref }: { currentHref?: string }) => {
         <Icon icon="menu" />
         Menu
       </button>
-      {open ? (
-        <Drawer
-          modal
-          open
-          align="block-end"
-          aria-label="Menu"
-          className="rhc-shared-side-nav__drawer rhc-rounded-corner rhc-rounded-corner--size-lg rhc-rounded-corner--position-start-start rhc-rounded-corner--position-start-end"
-          onCancel={(event) => {
-            event.preventDefault();
-            setOpen(false);
-          }}
-        >
-          <header className="utrecht-drawer__header rhc-shared-side-nav__drawer-header" key="header">
-            <button className="rhc-shared-side-nav__drawer-close" type="button" onClick={() => setOpen(false)}>
+      <Drawer
+        modal
+        align="inline-end"
+        aria-label="Menu"
+        className="rhc-shared-side-nav__drawer rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-start rhc-rounded-corner--position-end-start"
+        open={open}
+        onClose={() => setOpen(false)}
+      >
+        <header className="utrecht-drawer__header rhc-shared-side-nav__drawer-header" key="header">
+          {/* Native sluiten: submit van een method="dialog"-form sluit de <dialog>. */}
+          <form method="dialog">
+            <button className="rhc-shared-side-nav__drawer-close" type="submit">
               Sluiten
               <Icon icon="kruis" />
             </button>
-          </header>
-          <nav aria-label="Zijnavigatie" className="utrecht-drawer__body rhc-mobile-nav" key="body">
-            {mobileGroups.map((items, index) => (
-              <ul className="rhc-mobile-nav__group" key={index}>
-                {items.map(({ href, icon, label }) => (
-                  <li key={href}>
-                    <a
-                      aria-current={href === currentHref ? 'page' : undefined}
-                      className="rhc-mobile-nav__item"
-                      href={href}
-                    >
-                      <Icon icon={icon} />
-                      {label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            ))}
-          </nav>
-        </Drawer>
-      ) : null}
+          </form>
+        </header>
+        <nav aria-label="Zijnavigatie" className="utrecht-drawer__body rhc-mobile-nav" key="body">
+          {mobileGroups.map((items, index) => (
+            <ul className="rhc-mobile-nav__group" key={index}>
+              {items.map(({ href, icon, label }) => (
+                <li key={href}>
+                  <a
+                    aria-current={href === currentHref ? 'page' : undefined}
+                    className="rhc-mobile-nav__item"
+                    href={href}
+                  >
+                    <Icon icon={icon} />
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          ))}
+        </nav>
+      </Drawer>
     </>
   );
 };

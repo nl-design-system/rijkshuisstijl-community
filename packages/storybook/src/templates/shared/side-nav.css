@@ -8,51 +8,77 @@
   display: none;
 }
 
-/* Sluitknop rechtsboven in de drawer, in de Rijkshuisstijl-actiekleur. */
+/*
+ * Menu-drawer: structuur/gedrag komen uit het Drawer-component (library-css + tokens); hier
+ * afgestemd op de mobiele menu-context: rechter side-drawer bijna vol, donkere backdrop en
+ * compactere padding/afronding dan de standaard (die op de bredere side-drawer is afgestemd).
+ */
+.rhc-shared-side-nav__drawer {
+  /* Drawer begint bovenaan i.p.v. de component-default van 48px. */
+  --rhc-drawer-margin-block-start: var(--rhc-space-none);
+
+  /* Compactere padding voor het smalle mobiele menu. */
+  --utrecht-drawer-header-padding-block-start: var(--rhc-space-2xl);
+  --utrecht-drawer-header-padding-block-end: var(--rhc-space-lg);
+  --utrecht-drawer-header-padding-inline-start: var(--rhc-space-2xl);
+  --utrecht-drawer-header-padding-inline-end: var(--rhc-space-2xl);
+  --utrecht-drawer-body-padding-block-start: var(--rhc-space-2xl);
+  --utrecht-drawer-body-padding-block-end: var(--rhc-space-2xl);
+  --utrecht-drawer-body-padding-inline-start: var(--rhc-space-2xl);
+  --utrecht-drawer-body-padding-inline-end: var(--rhc-space-2xl);
+
+  /* Afronding zoals Figma (border-radius/0.5 = 20px) i.p.v. de rounded-corner-md van 48px. */
+  --rhc-rounded-corner-md-border-radius: 1.25rem;
+
+  /* Bijna volle breedte met linkermarge, rechts flush (Figma). */
+  box-sizing: border-box;
+  inline-size: calc(100% - var(--rhc-space-lg));
+}
+
+/* Backdrop conform Figma (surface/backdrop), duidelijk donkerder dan de component-default. */
+.rhc-shared-side-nav__drawer::backdrop {
+  background-color: rgb(15 23 42 / 80%);
+}
+
+/* Sluitknop rechtsboven in de action-kleur (Figma). */
 .rhc-shared-side-nav__drawer-header {
   justify-content: flex-end;
 }
 
 .rhc-shared-side-nav__drawer-close {
   align-items: center;
-  background: transparent;
-  border: 0;
-  color: var(--rhc-color-core-500);
+  background: none;
+  border: none;
+  color: var(--rhc-color-foreground-link);
+  column-gap: var(--rhc-space-sm);
   cursor: pointer;
   display: inline-flex;
   font: inherit;
-  font-size: var(--rhc-text-font-size-md);
   font-weight: 700;
-  gap: var(--rhc-space-column-xs, 0.25rem);
 }
 
-/* Donkere dimlaag zoals in het ontwerp. */
-.rhc-shared-side-nav__drawer::backdrop {
-  background-color: rgb(0 0 0 / 70%);
-}
-
-/* Mobiel menu in de drawer (Figma "MobileMenuItem"). */
+/* Mobiel menu in de drawer (Figma "MobileMenuItem"): gevuld actief item, icoon + label. */
 .rhc-mobile-nav {
-  gap: var(--rhc-space-row-sm, 0.5rem);
+  gap: var(--rhc-space-sm);
 }
 
 .rhc-mobile-nav__group {
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin-block: 0;
-  padding-inline: 0;
+  margin-block: var(--rhc-space-none);
+  padding-inline: var(--rhc-space-none);
 }
 
 .rhc-mobile-nav__item {
   align-items: center;
   block-size: 3rem;
   border-radius: var(--rhc-border-radius-md);
-  color: var(--rhc-color-core-500);
+  color: var(--rhc-color-primary-500);
+  column-gap: var(--rhc-space-sm);
   display: flex;
   font-size: var(--rhc-text-font-size-md);
-  gap: var(--rhc-space-row-sm, 0.5rem);
-  padding-inline: 1rem;
+  padding-inline: var(--rhc-space-md);
   text-decoration: none;
 }
 
@@ -69,14 +95,14 @@
   /* Vaste donkerblauwe "Menu"-balk onderaan die de drawer opent. */
   .rhc-shared-side-nav__trigger {
     align-items: center;
-    background-color: var(--rhc-color-core-500);
+    background-color: var(--rhc-color-primary-500);
     block-size: 3rem;
-    border: 0;
+    border: none;
     color: var(--rhc-color-foreground-on-dark-color);
+    column-gap: var(--rhc-space-sm);
     cursor: pointer;
     display: flex;
     font: inherit;
-    gap: var(--rhc-space-row-sm, 0.5rem);
     inline-size: 100%;
     inset-block-end: 0;
     inset-inline: 0;
