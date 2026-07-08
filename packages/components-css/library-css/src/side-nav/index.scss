@@ -51,3 +51,10 @@
 .denhaag-side-navigation__link--hover {
   background-color: var(--denhaag-side-navigation-link-hover-background-color);
 }
+
+/* Op hover is de rij-achtergrond gelijk aan de badge; keer de badge om zodat de pil zichtbaar blijft. */
+.denhaag-side-navigation__link:hover .rhc-number-badge,
+.denhaag-side-navigation__link--hover .rhc-number-badge {
+  --nl-number-badge-background-color: var(--denhaag-side-navigation-link-hover-color);
+  --nl-number-badge-color: var(--denhaag-side-navigation-link-hover-background-color);
+}
