@@ -1,6 +1,7 @@
 import { Icon, Logo, PageHeader, SkipLink } from '@rijkshuisstijl-community/components-react';
 import './header.css';
 import { KeyboardEvent, PointerEvent, useEffect, useRef, useState } from 'react';
+import SharedFooter from './footer';
 
 // POC: minimum pointer travel (px) before a press counts as a drag instead of a click
 const DRAG_THRESHOLD = 6;
@@ -188,7 +189,8 @@ export default function SharedHeader() {
           ref={panelRef}
         >
           <div className="rhc-header-nav-panel__content" ref={contentRef}>
-            <div className="rhc-header-nav-panel__spacer">Betaald met belasting centen</div>
+            <SharedFooter />
+            {/* <div className="rhc-header-nav-panel__spacer">Betaald met belastingcenten</div> */}
           </div>
         </div>
       </div>
