@@ -4,11 +4,13 @@
 */
 :root body {
   --rhc-nav-bar-link-hover-background-color: #dce3ea;
+  --rhc-logo-image-color: white;
+  --rhc-logo-image-background-color: var(--rhc-color-lintblauw-500);
 }
 
 .rhc-page-header-layout {
   display: grid;
-  row-gap: var(--rhc-size-quarter-lint);
+  margin-block-end: 2rem;
 }
 
 /**
@@ -21,19 +23,6 @@
 .rhc-nav-bar .rhc-nav-bar__list {
   flex-wrap: wrap;
 }
-
-/*
-@media (width <= 780px) {
-  .rhc-nav-bar .nl-link:any-link {
-    --rhc-nav-bar-link-padding-block-end: var(--rhc-space-md);
-    --rhc-nav-bar-link-padding-block-start: var(--rhc-space-md);
-    --rhc-nav-bar-link-padding-inline-end: var(--rhc-space-md);
-    --rhc-nav-bar-link-padding-inline-start: var(--rhc-space-md);
-
-    font-size: var(--rhc-text-font-size-min-md);
-  }
-}
-*/
 
 /**
 /* Temporary demo solution for acceptable contrast on current nav bar link (+ hover and focus-visible states).
@@ -62,4 +51,68 @@
 
 .rhc-nav-bar__link--current:focus-visible .rhc-nav-bar__label {
   color: var(--utrecht-link-visited-color);
+}
+
+/**
+* POC: pull-down navigation panel, revealed by dragging the logo ribbon.
+* The panel height is driven by the unitless --rhc-header-panel-size custom
+* property (pixels), set from JS while dragging; 0 means collapsed.
+*/
+.rhc-header-nav-panel {
+  block-size: calc(var(--rhc-header-panel-size, 0) * 1px);
+  order: -1; /* visually above the logo so the ribbon travels down as the panel grows; DOM/tab order unchanged */
+  overflow: hidden;
+  transition: block-size 250ms ease;
+}
+
+.rhc-header-nav-panel--dragging {
+  transition: none; /* panel tracks the pointer 1:1 while dragging */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rhc-header-nav-panel {
+    transition: none;
+  }
+}
+
+.rhc-header-drag-handle {
+  cursor: grab;
+  touch-action: none; /* required to receive pointer move events during touch drags */
+  user-select: none;
+}
+
+.rhc-header-drag-handle:active {
+  cursor: grabbing;
+}
+
+/**
+* POC "tactile" feature flag variant: the tab stretches while you tug it
+* (--rhc-tab-stretch) and folds over upwards when pulled up (--rhc-tab-fold).
+* Both custom properties are set from JS during the drag; only the ribbon
+* (.rhc-logo__image) transforms, anchored at its top edge.
+*/
+.rhc-header-drag-handle--tactile .rhc-logo__image {
+  transform: perspective(500px) rotateX(var(--rhc-tab-fold, 0deg)) scaleY(var(--rhc-tab-stretch, 1));
+  transform-origin: top center;
+  transition: transform 250ms cubic-bezier(0.34, 1.56, 0.64, 1); /* springy snap-back with a little overshoot */
+}
+
+.rhc-header-drag-handle--tactile.rhc-header-drag-handle--dragging .rhc-logo__image {
+  transition: none; /* the tab tracks the pointer 1:1 while dragging */
+}
+
+.rhc-header-nav-panel__spacer {
+  align-items: center;
+  background-color: var(--rhc-color-lintblauw-500);
+  block-size: 20rem;
+  color: white;
+  display: flex;
+  font-size: 3em;
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rhc-header-drag-handle--tactile .rhc-logo__image {
+    transition: none;
+  }
 }

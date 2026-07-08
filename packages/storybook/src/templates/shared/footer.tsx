@@ -59,37 +59,6 @@ export default function SharedFooter({ isLightTheme }: Readonly<{ isLightTheme?:
             </LinkList>,
           ],
         },
-        {
-          heading: 'Contact',
-          children: (
-            <LinkList key="3">
-              <LinkListLink href="https://praatmee.codefor.nl/" icon={<Icon icon={'chevron-right'} />} target="_blank">
-                Slack #nl-design-system-developers (Code for NL)
-              </LinkListLink>
-              <LinkListLink
-                href="https://github.com/nl-design-system/rijkshuisstijl-community/discussions/1505"
-                icon={<Icon icon={'chevron-right'} />}
-                target="_blank"
-              >
-                Rijkshuisstijl styling discussies
-              </LinkListLink>
-              <LinkListLink
-                href="https://github.com/nl-design-system/rijkshuisstijl-community/graphs/contributors"
-                icon={<Icon icon={'chevron-right'} />}
-                target="_blank"
-              >
-                Contributors op GitHub
-              </LinkListLink>
-              <LinkListLink
-                href="https://nldesignsystem.nl/project/kernteam/"
-                icon={<Icon icon={'chevron-right'} />}
-                target="_blank"
-              >
-                NL Design System kernteam
-              </LinkListLink>
-            </LinkList>
-          ),
-        },
       ]}
     />
   );
