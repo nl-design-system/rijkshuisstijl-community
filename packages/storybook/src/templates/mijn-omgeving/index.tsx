@@ -2,6 +2,7 @@
 import {
   AccordionProvider,
   ActionGroup,
+  Alert,
   ButtonLink,
   Card,
   Heading,
@@ -12,91 +13,19 @@ import {
   MessageListItem,
   NavigationList,
   NavigationListItem,
-  NumberBadge,
-  RHCIconID,
+  Paragraph,
   Separator,
-  SideNav,
-  SideNavItem,
-  SideNavLink,
-  SideNavLinkLabel,
-  SideNavList,
 } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
-import { Fragment, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import SharedDisclaimer from '../shared/disclaimer';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
+import { SharedSideNav } from '../shared/side-nav';
 import './index.css';
 
-export const sideNav: {
-  id: string;
-  items: {
-    href: string;
-    icon: RHCIconID;
-    label: string;
-    numberBadgeValue?: number;
-    numberBadgeLabel?: string;
-  }[];
-}[] = [
-  {
-    id: '1',
-    items: [{ href: '/mijn-omgeving/', icon: 'home', label: 'Overzicht' }],
-  },
-  {
-    id: '2',
-    items: [
-      {
-        href: '/mijn-omgeving-berichtenbox/',
-        icon: 'mail',
-        label: 'Berichtenbox',
-        numberBadgeValue: 4,
-        numberBadgeLabel: '4 berichten',
-      },
-      { href: '#', icon: 'inbox', label: 'MijnZaken' },
-    ],
-  },
-  {
-    id: '3',
-    items: [
-      { href: '/mijn-omgeving-identiteit/', icon: 'user', label: 'Identiteit' },
-      { href: '/mijn-omgeving-financien/', icon: 'currency-euro', label: 'Financiën' },
-      { href: '/mijn-omgeving-werk/', icon: 'briefcase', label: 'Werk' },
-      { href: '/mijn-omgeving-gezondheid/', icon: 'favoriet', label: 'Gezondheid' },
-      { href: '/mijn-omgeving-wonen/', icon: 'home', label: 'Wonen' },
-      { href: '/mijn-omgeving-vervoer/', icon: 'car', label: 'Vervoer' },
-      { href: '/mijn-omgeving-onderwijs/', icon: 'school', label: 'Onderwijs' },
-    ],
-  },
-  {
-    id: '4',
-    items: [{ href: '/mijn-omgeving-instellingen/', icon: 'instellingen', label: 'Instellingen' }],
-  },
-];
-
-export const useSideNav = ({ items }: { items: typeof sideNav }) => ({
-  'aria-label': 'Zijnavigatie',
-  children: items.map(({ id, items }, index) => (
-    <Fragment key={id}>
-      {index >= 1 ? <Separator invisible /> : null}
-      <SideNavList key={index}>
-        {items.map(({ href, icon, label, numberBadgeLabel, numberBadgeValue }) => (
-          <SideNavItem key={href}>
-            <SideNavLink href={href}>
-              <Icon icon={icon} />
-              <SideNavLinkLabel>
-                {label}
-                {numberBadgeLabel && numberBadgeValue ? (
-                  <NumberBadge label={numberBadgeLabel}>{numberBadgeValue}</NumberBadge>
-                ) : null}
-              </SideNavLinkLabel>
-            </SideNavLink>
-          </SideNavItem>
-        ))}
-      </SideNavList>
-    </Fragment>
-  )),
-});
+export { sideNav, useSideNav } from '../shared/side-nav';
 
 export const useCards = ({
   items,
@@ -130,9 +59,26 @@ export default function MijnOmgeving() {
       <PageBody className="utrecht-page-body--rhc-mijn-omgeving">
         <SharedMainPageContent>
           <SharedDisclaimer />
-          <SideNav {...useSideNav({ items: sideNav })} />
+          <SharedSideNav currentHref="/mijn-omgeving/" />
           <section className={'rhc-page-main-content'}>
             <Heading level={1}>Welkom Bert Burger</Heading>
+            <Alert type="info">
+              <Heading appearanceLevel={5} level={2}>
+                Optional heading
+              </Heading>
+              <Paragraph>
+                Lorem ipsum dolor sit amet consectetur. Purus pulvinar ut volutpat imperdiet iaculis vitae ipsum risus
+                faucibus. Varius odio tellus ut iaculis purus quam tristique vitae cras. Phasellus tincidunt enim
+                bibendum tristique turpis diam quam proin. Ac et interdum viverra viverra. A nulla pretium massa
+                faucibus ullamcorper etiam id in.
+              </Paragraph>
+            </Alert>
+            {/*
+             * GAP: het ontwerp toont 'Recent' en 'Wat kan ik waar vinden?' in card-containers op volle
+             * breedte. De RHC Card is een vaste-breedte grid-card (inline-flex + max-inline-size); een
+             * full-width card/panel-variant hoort in de component-bron (card-css), niet in deze
+             * integratiebranch. Daarom hier platte secties met de al matchende item-componenten.
+             */}
             <div>
               <Heading level={2}>Recent</Heading>
               <Separator invisible />
@@ -234,8 +180,8 @@ export default function MijnOmgeving() {
           </section>
         </SharedMainPageContent>
       </PageBody>
-      {/* GAP: compact Page Footer variant does not exist yet (#2649); using the standard footer in its light variant. */}
-      <SharedFooter isLightTheme={true} />
+      {/* GAP: de compacte Page Footer-variant bestaat nog niet (#2649); hier staat de standaard footer. */}
+      <SharedFooter />
     </>
   );
 }
