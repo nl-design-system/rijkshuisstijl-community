@@ -1,0 +1,87 @@
+/* Inline nav op desktop; display:contents houdt de bestaande flex-layout intact. */
+.rhc-shared-side-nav__inline {
+  display: contents;
+}
+
+/* Menu-balk en drawer alleen op mobiel. */
+.rhc-shared-side-nav__trigger {
+  display: none;
+}
+
+/* Sluitknop rechtsboven in de drawer, in de Rijkshuisstijl-actiekleur. */
+.rhc-shared-side-nav__drawer-header {
+  justify-content: flex-end;
+}
+
+.rhc-shared-side-nav__drawer-close {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--rhc-color-core-500);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-size: var(--rhc-text-font-size-md);
+  font-weight: 700;
+  gap: var(--rhc-space-column-xs, 0.25rem);
+}
+
+/* Donkere dimlaag zoals in het ontwerp. */
+.rhc-shared-side-nav__drawer::backdrop {
+  background-color: rgb(0 0 0 / 70%);
+}
+
+/* Mobiel menu in de drawer (Figma "MobileMenuItem"). */
+.rhc-mobile-nav {
+  gap: var(--rhc-space-row-sm, 0.5rem);
+}
+
+.rhc-mobile-nav__group {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rhc-mobile-nav__item {
+  align-items: center;
+  block-size: 3rem;
+  border-radius: var(--rhc-border-radius-md);
+  color: var(--rhc-color-core-500);
+  display: flex;
+  font-size: var(--rhc-text-font-size-md);
+  gap: var(--rhc-space-row-sm, 0.5rem);
+  padding-inline: 1rem;
+  text-decoration: none;
+}
+
+.rhc-mobile-nav__item[aria-current='page'] {
+  background-color: var(--rhc-color-primary-200);
+  font-weight: 700;
+}
+
+@media (width <= 768px) {
+  .rhc-shared-side-nav__inline {
+    display: none;
+  }
+
+  /* Vaste donkerblauwe "Menu"-balk onderaan die de drawer opent. */
+  .rhc-shared-side-nav__trigger {
+    align-items: center;
+    background-color: var(--rhc-color-core-500);
+    block-size: 3rem;
+    border: 0;
+    color: var(--rhc-color-foreground-on-dark-color);
+    cursor: pointer;
+    display: flex;
+    font: inherit;
+    gap: var(--rhc-space-row-sm, 0.5rem);
+    inline-size: 100%;
+    inset-block-end: 0;
+    inset-inline: 0;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+  }
+}

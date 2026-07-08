@@ -24,7 +24,7 @@ export default function MijnOmgeving() {
       <PageBody className="utrecht-page-body--rhc-mijn-omgeving">
         <SharedMainPageContent>
           <SharedDisclaimer />
-          <SideNav {...useSideNav({ items: sideNav })} />
+          <SideNav {...useSideNav({ items: sideNav, currentHref: '/mijn-omgeving-berichtenbox/' })} />
           <section className={'rhc-page-main-content'}>
             <Heading level={1}>Berichtenbox</Heading>
             <div>
@@ -84,7 +84,7 @@ export default function MijnOmgeving() {
           </section>
         </SharedMainPageContent>
       </PageBody>
-      <SharedFooter isLightTheme={true} />
+      <SharedFooter />
     </>
   );
 }
