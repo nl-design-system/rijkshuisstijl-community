@@ -58,13 +58,14 @@
 @use "@rijkshuisstijl-community/unordered-list-css/src/index" as unorderedList;
 @use "@rijkshuisstijl-community/visually-hidden-css/src/index" as visually-hidden;
 @use "src/wrapper/index" as wrapper;
+@use "@utrecht/document-css/src/mixin" as *;
+@use "@utrecht/focus-ring-css/src/mixin" as *;
 
 @import "@utrecht/action-group-css/dist/index.css";
 @import "@utrecht/article-css/dist/index.css";
 @import "@utrecht/badge-list-css/dist/index.css";
 @import "@utrecht/button-css/dist/index.css";
 @import "@utrecht/button-link-css/dist/index.css";
-@import "@utrecht/document-css/dist/index.css";
 @import "@utrecht/data-badge-css/dist/index.css";
 @import "@utrecht/data-list-css/dist/index.css";
 @import "@utrecht/body-css/dist/index.css";
@@ -103,3 +104,18 @@
 @import "@utrecht/textbox-css/dist/index.css";
 @import "@utrecht/textarea-css/dist/index.css";
 @import "@utrecht/unordered-list-css/dist/index.css";
+
+.rhc-document {
+  @include utrecht-document;
+
+  a,
+  input,
+  textarea,
+  select,
+  button {
+    &:focus,
+    &:focus-visible {
+      @include utrecht-focus-visible;
+    }
+  }
+}
