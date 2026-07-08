@@ -7,13 +7,18 @@ import { Link as CandidateLink, type LinkProps as CandidateLinkProps } from '@nl
 import clsx from 'clsx';
 import { PropsWithChildren, Ref } from 'react';
 
-export interface LinkProps extends CandidateLinkProps {
+export interface LinkProps extends Omit<CandidateLinkProps, 'disabled'> {
   ref?: Ref<HTMLAnchorElement>;
   inline?: boolean;
 }
 
 export const Link = ({ ref, children, className, inline, ...restProps }: PropsWithChildren<LinkProps>) => (
-  <CandidateLink {...restProps} className={clsx('rhc-link', { 'rhc-link--inline': inline }, className)} ref={ref}>
+  <CandidateLink
+    {...restProps}
+    className={clsx('rhc-link', { 'rhc-link--inline': inline }, className)}
+    disabled={undefined}
+    ref={ref}
+  >
     {children}
   </CandidateLink>
 );
