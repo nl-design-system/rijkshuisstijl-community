@@ -10,6 +10,7 @@ export default {
 
 export const Default = ReactStories.Default;
 export const Hover = ReactStories.Hover;
+export const FocusVisible = ReactStories.FocusVisible;
 export const Required = ReactStories.Required;
 export const InputRequired = ReactStories.InputRequired;
 export const Disabled = ReactStories.Disabled;

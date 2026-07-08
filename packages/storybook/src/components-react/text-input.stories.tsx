@@ -329,6 +329,12 @@ export const Hover: Story = {
   },
 };
 
+export const FocusVisible: Story = {
+  parameters: {
+    pseudo: { focus: true, focusVisible: true },
+  },
+};
+
 export const InputRequired: Story = {
   args: {
     name: 'subject',
