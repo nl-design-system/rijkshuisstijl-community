@@ -64,6 +64,13 @@
     inline-size: var(--rhc-page-number-navigation-icon-size);
   }
 
+  /* Chevron-span centreren met de tekst; anders lijnt de svg op de baseline uit. */
+  a[rel="prev"] span:has(svg),
+  a[rel="next"] span:has(svg) {
+    align-items: center;
+    display: flex;
+  }
+
   a[aria-current="page"] {
     background-color: var(--rhc-page-number-navigation-link-current-background-color);
     color: var(--rhc-page-number-navigation-link-current-color);
