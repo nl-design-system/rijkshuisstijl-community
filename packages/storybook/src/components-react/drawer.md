@@ -4,7 +4,7 @@
 
 ## Usage
 
-Importeer `Drawer` en vul deze met de slot-elementen. Default is `open={false}` en `align="inline-start"`. De drawer staat 48px van de bovenkant en heeft een vaste paneelbreedte (600px) bij de zij-varianten.
+Importeer `Drawer` en vul deze met de slot-elementen. `open` bepaalt de zichtbaarheid, `align` de positie. Bij de zij-varianten `inline-start` en `inline-end` staat de drawer 48px van de bovenkant en is de breedte begrensd tot 600px.
 
 ```tsx
 import { Drawer } from '@rijkshuisstijl-community/components-react';
@@ -14,10 +14,10 @@ import { Drawer } from '@rijkshuisstijl-community/components-react';
 
 ## Structuur (header / body / footer)
 
-De drawer levert alleen de container. De opmaak (padding, separators, scroll) komt van drie slot-elementen die je zelf als children meegeeft:
+De drawer levert alleen de container. De opmaak van padding, separators en scroll komt van drie slot-elementen die je als children meegeeft:
 
-- `.utrecht-drawer__header`: blijft staan (scrollt niet mee). Bevat de titel (`.utrecht-drawer__title`) en de sluitknop, met een ingesprongen separator eronder.
-- `.utrecht-drawer__body`: de scroll-container. Alleen dit deel scrollt bij overflow.
+- `.utrecht-drawer__header`: blijft staan en scrollt niet mee. Bevat de titel `.utrecht-drawer__title` en de sluitknop, met een ingesprongen separator eronder.
+- `.utrecht-drawer__body`: de scroll-container. Alleen dit deel scrollt bij overflow. Geef het een `tabIndex={0}` zodat toetsenbordgebruikers de inhoud kunnen scrollen.
 - `.utrecht-drawer__footer`: blijft staan, met een ingesprongen separator erboven.
 
 ```tsx
@@ -28,26 +28,28 @@ import { Button, Drawer, Heading, IconButton } from '@rijkshuisstijl-community/c
     <Heading appearanceLevel={3} className="utrecht-drawer__title" level={2}>
       Drawer title
     </Heading>
-    <form className="utrecht-drawer__header-actions" method="dialog">
+    <form method="dialog">
       <IconButton icon="kruis" label="Sluiten" purpose="secondary" type="submit" />
     </form>
   </header>
-  <div className="utrecht-drawer__body">{/* scrollbare content */}</div>
+  <div aria-label="Inhoud" className="utrecht-drawer__body" role="group" tabIndex={0}>
+    {/* scrollbare content */}
+  </div>
   <footer className="utrecht-drawer__footer">
-    <Button appearance="primary-action-button">Ja ik doe mee</Button>
+    <Button purpose="primary">Ja ik doe mee</Button>
   </footer>
 </Drawer>;
 ```
 
-De sluitknop gebruikt de native `<form method="dialog">` met een `type="submit"`-knop, zodat de drawer zonder JavaScript sluit. `label="Sluiten"` levert een toegankelijke naam (visueel verborgen bij de icon-only variant).
+De sluitknop gebruikt een native `<form method="dialog">` met een `type="submit"`-knop, zodat de drawer zonder JavaScript sluit. `label="Sluiten"` levert een toegankelijke naam, visueel verborgen bij de icon-only variant.
 
 ## Afgeronde hoek
 
-De afgeronde hoek loopt via de `rhc-rounded-corner` utility op de `Drawer` (`utrecht.drawer.border-radius` staat daarom op `none`). Rond alleen de bovenhoek af die naar de content wijst:
+De afgeronde hoek wordt geregeld door de `rhc-rounded-corner` utility op de `Drawer`; `utrecht.drawer.border-radius` staat daarom op `none`. Rond alleen de bovenhoek aan de contentzijde af:
 
-- `inline-start`: top-right (`rhc-rounded-corner--position-start-end`)
-- `inline-end`: top-left (`rhc-rounded-corner--position-start-start`)
-- `block-end`: beide bovenhoeken (`--position-start-start` en `--position-start-end`)
+- `inline-start`: top-right, met `rhc-rounded-corner--position-start-end`
+- `inline-end`: top-left, met `rhc-rounded-corner--position-start-start`
+- `block-end`: beide bovenhoeken, met `--position-start-start` en `--position-start-end`
 
 ```tsx
 <Drawer
@@ -61,4 +63,4 @@ De afgeronde hoek loopt via de `rhc-rounded-corner` utility op de `Drawer` (`utr
 
 ## Modal
 
-Met `modal={true}` opent de drawer als modale dialog (`showModal()`) en krijgt de achtergrond een donkere overlay (backdrop).
+Met `modal={true}` opent de drawer als modale dialog met `showModal()` en verschijnt er een backdrop-overlay over de achtergrond. De kleur daarvan is themebaar via de backdrop-tokens.
