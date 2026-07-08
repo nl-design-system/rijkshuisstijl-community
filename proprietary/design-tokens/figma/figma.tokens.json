@@ -8410,11 +8410,13 @@
       "drawer": {
         "max-inline-size": {
           "$type": "dimension",
-          "$value": "16rem"
+          "$value": "600px",
+          "$description": "[code only] vaste paneelbreedte uit het AZ-drawer-ontwerp (Figma: MinAZ-library, component Drawer, paneel ~593px), geen tekst-spacing; de Utrecht-CSS begrenst effectief op 100% minus de backdrop-strook"
         },
         "z-index": {
-          "$type": "dimension",
-          "$value": "1"
+          "$type": "other",
+          "$value": "1",
+          "$description": "unitless; $type other volgt de Utrecht-tokendefinitie (css-property-syntax <number>)"
         },
         "background-color": {
           "$type": "color",
@@ -8434,23 +8436,137 @@
         },
         "max-block-size": {
           "$type": "dimension",
-          "$value": "15rem"
+          "$value": "800px",
+          "$description": "[code only] vaste paneelhoogte uit het AZ-drawer-ontwerp (Figma: MinAZ-library, component Drawer), geen tekst-spacing; de Utrecht-CSS begrenst effectief op 100% minus de backdrop-strook"
         },
         "padding-block-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.xl}"
+          "$value": "{rhc.space.none}"
         },
         "padding-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.xl}"
+          "$value": "{rhc.space.none}"
         },
         "padding-inline-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.xl}"
+          "$value": "{rhc.space.none}"
         },
         "padding-inline-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.xl}"
+          "$value": "{rhc.space.none}"
+        },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{rhc.border-radius.none}"
+        },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "{rhc.size.pointer-target}"
+        },
+        "min-inline-size": {
+          "$type": "dimension",
+          "$value": "312px",
+          "$description": "[code only] vaste minimale paneelbreedte uit het AZ-drawer-ontwerp (Figma: MinAZ-library, component Drawer), geen tekst-spacing"
+        },
+        "backdrop": {
+          "min-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.pointer-target}",
+            "$description": "plek volgt de Utrecht-tokenstructuur (voedt --utrecht-drawer-backdrop-min-size); houdt de backdrop-strook vrij voor light-dismiss (WCAG 2.5.5, minimaal 44px)"
+          }
+        },
+        "header": {
+          "border-color": {
+            "$type": "color",
+            "$value": "{rhc.color.border.default}"
+          },
+          "border-block-end-width": {
+            "$type": "dimension",
+            "$value": "{rhc.border-width.sm}"
+          },
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          },
+          "title": {
+            "padding-block-start": {
+              "$type": "dimension",
+              "$value": "{rhc.space.md}",
+              "$description": "[code only] optische nudge zodat de titel uitlijnt met het hart van de sluitknop; 8px (rhc.space.md) visueel gekozen, niet uit Figma afgeleid"
+            }
+          }
+        },
+        "body": {
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.lg}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          }
+        },
+        "footer": {
+          "border-color": {
+            "$type": "color",
+            "$value": "{rhc.color.border.default}"
+          },
+          "border-block-start-width": {
+            "$type": "dimension",
+            "$value": "{rhc.border-width.sm}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          }
+        }
+      }
+    },
+    "rhc": {
+      "drawer": {
+        "margin-block-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.5xl}"
         }
       }
     }
