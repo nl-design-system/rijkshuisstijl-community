@@ -21,6 +21,15 @@
   flex-direction: column;
   overflow: hidden;
 
+  /**
+   * Een gesloten `<dialog>` hoort niet zichtbaar te zijn. De onvoorwaardelijke
+   * `display: flex` hierboven overschrijft de UA-regel `dialog:not([open]) { display: none }`
+   * (author wint van UA), dus verbergen we de gesloten drawer expliciet.
+   */
+  &:not([open]) {
+    display: none;
+  }
+
   &__header {
     align-items: flex-start;
     column-gap: var(--utrecht-drawer-header-column-gap);
