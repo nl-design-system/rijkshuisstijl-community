@@ -1,26 +1,62 @@
 # Rijkshuisstijl Community Footer component
 
-De footer bestaat uit kolommen met als eerste de tagline en daarna `LinkList` componenten met handige bronnen.
+De footer (Page Footer) bestaat uit twee delen: de hoofdinhoud met een optionele tagline en kolommen met vrije content (zoals `LinkList` componenten), en een optionele sub-footer voor wettelijk verplichte links zoals Privacy, Toegankelijkheid en Kwetsbaarheid melden. Tussen beide delen staat een scheidingslijn met dezelfde inline padding als de content.
 
-De kolommen lijsten kunnen worden toegevoegd door middel van properties aan het `<Footer>` component.
+De kolommen kunnen worden toegevoegd via de `columns` property van het `<Footer>` component.
 
-## level
+## Varianten
 
-De heading kolom is de titel level +1, omdat deze een subsectie vormt van de titel. Hierdoor staan de kolomtitels altijd één niveau hoger dan de titel. Echter, wanneer de heading niveau 6 bereikt, wordt er geen niveau 7 gebruikt. In dat geval blijven zowel de titel als de kolommen op niveau 6.
+De Page Footer heeft twee varianten: `default` en `compact`.
 
-### Belangrijkste punten
+### Compact
 
-De heading kolom heeft altijd een niveau meer dan de titel.
-Dit geldt voor alle niveaus behalve niveau 6.
-Bij niveau 6 worden zowel de titel als de kolommen op niveau 6 gehouden.
-Er bestaat geen niveau 7 heading in HTML.
+De compacte variant is een lichte footer met alleen een tagline en enkele links. Gebruik deze wanneer de footer visueel naar de achtergrond mag treden, zoals bij formulieren, zoekresultaten of pagina's met een sterke taakfocus.
+
+- De tagline is gewone tekst en bewust geen Heading component: het is geen kop in de documentstructuur.
+- De links worden als children meegegeven en naast elkaar getoond; op smalle schermen lopen ze door naar een volgende regel.
+- De kleuren en witruimte komen uit de `rhc.page-footer.compact.*` design tokens.
+- De props van de standaardvariant (`heading`, `columns`, `background`, `subFooter`, `backtotop`, `preFooter`) hebben in de compacte variant geen effect.
 
 ```tsx
-columns={[
-    {
-      children: <LinkList><LinkListLink href="#" icon={<UtrechtIconChevronRight />}>Contact</LinkListLink> etc...</LinkList>,
-      heading: 'Service'
-    }
-  ]}
-  tagline="Footer tagline"
+<Footer variant="compact" tagline="De rijksoverheid. Voor Nederland">
+  <Link href="#">Privacy</Link>
+  <Link href="#">Toegankelijkheid</Link>
+  <Link href="#">Kwetsbaarheid melden</Link>
+</Footer>
 ```
+
+## Tagline
+
+De tagline is decoratieve tekst en gebruikt geen Heading component. De styling komt uit de `rhc.page-footer.tagline.*` design tokens; cursief is de standaard.
+
+## Heading niveau en appearance
+
+De headings boven de kolommen krijgen standaard de appearance van heading niveau 4. Semantisch zijn het niveau 3 headings wanneer een `heading` voor de hele footer is opgegeven; zonder `heading` zijn het niveau 2 headings. De footer is een `contentinfo` landmark. Geef je een `heading` op, dan krijgt die landmark daarmee een naam (via `aria-labelledby`), zodat de footer te vinden is in de lijst met landmarks. De kop is visueel verborgen, maar telt wel mee in de koppenstructuur: de footer is daardoor ook via koppennavigatie bereikbaar en de kolomkoppen (h3) volgen netjes op de footerkop (h2).
+
+```tsx
+<Footer
+  heading="Colofon"
+  tagline="Footer tagline"
+  columns={[
+    {
+      children: (
+        <LinkList>
+          <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+            Contact
+          </LinkListLink>
+        </LinkList>
+      ),
+      heading: 'Service',
+    },
+  ]}
+  subFooter={
+    <LinkList>
+      <LinkListLink href="#">Privacy</LinkListLink>
+    </LinkList>
+  }
+/>
+```
+
+## Terug naar boven
+
+Een terug-naar-boven-knop is bewust geen onderdeel van de Page Footer. Plaats die als los component buiten de footer, na de content maar voor het footer-element.

@@ -15,13 +15,17 @@ interface FooterProps extends HTMLAttributes<HTMLDivElement> {
   headingId?: string;
   appearanceLevel?: HeadingLevel;
   columns?: ColumnProps[];
-  background?: 'primary-filled' | 'primary-outlined';
+  /**
+   * @deprecated Plaats een terug-naar-boven-knop als los component buiten de Page Footer,
+   * na de content maar voor het footer-element.
+   */
   backtotop?: boolean;
   subFooter?: ReactNode;
   preFooter?: boolean;
   preFooterMessage?: ReactNode;
   ref?: Ref<HTMLDivElement>;
   tagline?: ReactNode;
+  variant?: 'default' | 'compact';
 }
 
 interface ColumnProps {
@@ -47,82 +51,77 @@ export const Footer = ({
   className,
   heading,
   headingId = 'page-footer-heading',
-  appearanceLevel = 3,
+  appearanceLevel = 4,
   columns,
+  // eslint-disable-next-line sonarjs/deprecation
   backtotop,
   subFooter,
   children,
-  background,
   tagline,
+  variant = 'default',
   ...restProps
-}: PropsWithChildren<FooterProps>) => (
-  <footer aria-labelledby={heading ? headingId : undefined} className="rhc-page-footer-container">
-    {preFooter && (
-      <div className="rhc-page-prefooter">
-        {preFooterMessage && <span className="rhc-page-prefooter__content">{preFooterMessage}</span>}
-      </div>
-    )}
-
-    <div
-      {...restProps}
-      ref={ref}
-      className={clsx(
-        'utrecht-page-footer',
-        'rhc-page-footer',
-        background ? `rhc-page-footer--${background}` : 'rhc-page-footer--primary-filled',
-        className,
-      )}
-    >
-      <div className="utrecht-page-footer__content">
-        {heading ? (
-          <Heading hidden aria-hidden="true" id={headingId} level={2}>
-            {heading}
-          </Heading>
-        ) : null}
-        <div className="rhc-page-footer-layout">
-          {tagline && (
-            <div className="rhc-page-footer__tagline" key={'heading'}>
-              <Heading appearanceLevel={appearanceLevel} level={2} role="presentation">
-                {tagline}
-              </Heading>
-            </div>
-          )}
-          <ColumnLayout>
-            {columns?.map(({ heading: columnHeading, children }: ColumnProps, index: number) => (
-              <div className="rhc-page-footer__section" key={index}>
-                <Heading appearanceLevel={appearanceLevel} level={heading ? 3 : 2}>
-                  {columnHeading}
-                </Heading>
-                {children}
-              </div>
-            ))}
-            {children}
-          </ColumnLayout>
-        </div>
-      </div>
-    </div>
-    {(backtotop || subFooter) && (
+}: PropsWithChildren<FooterProps>) =>
+  variant === 'compact' ? (
+    <footer className="rhc-page-footer-container">
       <div
-        className={clsx(
-          'utrecht-page-footer',
-          'rhc-page-footer',
-          'rhc-page-footer--subfooter',
-          background ? `rhc-page-footer--${background}` : 'rhc-page-footer--primary-filled',
-        )}
+        {...restProps}
+        className={clsx('utrecht-page-footer', 'rhc-page-footer', 'rhc-page-footer--compact', className)}
+        ref={ref}
       >
         <div className="utrecht-page-footer__content">
-          <div className="rhc-page-subfooter-layout">
-            {subFooter}
-            {backtotop && (
-              <Link href="#main" onClick={scrollBackToTop}>
-                Terug naar boven <Icon icon="pijl-omhoog" />
-              </Link>
-            )}
+          <div className="rhc-page-footer-compact-layout">
+            {tagline && <span className="rhc-page-footer__tagline">{tagline}</span>}
+            {children && <div className="rhc-page-footer__links">{children}</div>}
           </div>
         </div>
       </div>
-    )}
-  </footer>
-);
+    </footer>
+  ) : (
+    <footer aria-labelledby={heading ? headingId : undefined} className="rhc-page-footer-container">
+      {preFooter && (
+        <div className="rhc-page-prefooter">
+          {preFooterMessage && <span className="rhc-page-prefooter__content">{preFooterMessage}</span>}
+        </div>
+      )}
+
+      <div {...restProps} className={clsx('utrecht-page-footer', 'rhc-page-footer', className)} ref={ref}>
+        <div className="utrecht-page-footer__content">
+          {heading ? (
+            <Heading className="rhc-page-footer__heading" id={headingId} level={2}>
+              {heading}
+            </Heading>
+          ) : null}
+          <div className="rhc-page-footer-layout">
+            {tagline && <p className="rhc-page-footer__tagline">{tagline}</p>}
+            <ColumnLayout>
+              {columns?.map(({ heading: columnHeading, children }: ColumnProps, index: number) => (
+                <div className="rhc-page-footer__section" key={index}>
+                  <Heading appearanceLevel={appearanceLevel} level={heading ? 3 : 2}>
+                    {columnHeading}
+                  </Heading>
+                  {children}
+                </div>
+              ))}
+              {children}
+            </ColumnLayout>
+          </div>
+        </div>
+      </div>
+      {(backtotop || subFooter) && (
+        <div className={clsx('utrecht-page-footer', 'rhc-page-footer', 'rhc-page-footer--subfooter')}>
+          <div className="utrecht-page-footer__content">
+            <div className="rhc-page-subfooter-layout">
+              {subFooter}
+              {backtotop && (
+                <Link href="#main" onClick={scrollBackToTop}>
+                  Terug naar boven <Icon icon="pijl-omhoog" />
+                </Link>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+    </footer>
+  );
 
 Footer.displayName = 'Footer';

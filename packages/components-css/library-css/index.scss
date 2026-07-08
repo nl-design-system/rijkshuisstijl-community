@@ -19,6 +19,7 @@
 @use "@rijkshuisstijl-community/data-badge-button-css/src/index" as dataBadgeButton;
 @use "@rijkshuisstijl-community/data-summary-css/src/index" as dataSummary;
 @use "@rijkshuisstijl-community/dot-badge-css/src/index" as dotBadge;
+@use "src/drawer/index" as drawer;
 @use "src/expandable-checkbox-group/index" as expandableCheckboxGroup;
 @use "@rijkshuisstijl-community/figure-css/src/index" as figure;
 @use "@rijkshuisstijl-community/file-css/src/index" as file;
@@ -38,6 +39,7 @@
 @use "@rijkshuisstijl-community/logo-css/src/index" as logo;
 @use "@rijkshuisstijl-community/navigation-bar-css/src/index" as navBar;
 @use "@rijkshuisstijl-community/message-list-css/src/index" as messageList;
+@use "@rijkshuisstijl-community/modal-dialog-css/src/index" as modalDialog;
 @use "@rijkshuisstijl-community/navigation-list-css/src/index" as navigationList;
 @use "@rijkshuisstijl-community/number-badge-css/src/index" as numberBadge;
 @use "@rijkshuisstijl-community/ordered-list-css/src/index" as orderedList;
@@ -49,7 +51,7 @@
 @use "@rijkshuisstijl-community/rounded-corner-css/src/index" as roundedCorner;
 @use "src/form-field-select/index" as formFieLdSelect;
 @use "@rijkshuisstijl-community/separator-css/src/index" as separator;
-@use "@rijkshuisstijl-community/side-nav-css/src/index" as sideNav;
+@use "src/side-nav/index" as sideNav;
 @use "@rijkshuisstijl-community/skip-link-css/src/index" as skipLink;
 @use "src/table/index" as table;
 @use "@rijkshuisstijl-community/textarea-css/src/index" as textarea;
@@ -59,6 +61,7 @@
 @use "@rijkshuisstijl-community/visually-hidden-css/src/index" as visually-hidden;
 @use "src/wrapper/index" as wrapper;
 
+@import "@gemeente-denhaag/side-navigation/index.css";
 @import "@utrecht/action-group-css/dist/index.css";
 @import "@utrecht/article-css/dist/index.css";
 @import "@utrecht/badge-list-css/dist/index.css";

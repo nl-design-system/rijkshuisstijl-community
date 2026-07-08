@@ -1,4 +1,4 @@
-<footer class="rhc-page-footer-container">
+<footer class="rhc-page-footer-container" [attr.aria-labelledby]="heading ? headingId : null">
   @if (preFooter) {
     <div class="rhc-page-prefooter">
       @if (preFooterMessage) {
@@ -7,16 +7,14 @@
     </div>
   }
 
-  <div [class]="`utrecht-page-footer rhc-page-footer ${backgroundClass}`">
+  <div class="utrecht-page-footer rhc-page-footer">
     <div class="utrecht-page-footer__content">
+      @if (heading) {
+        <h2 class="rhc-page-footer__heading" [id]="headingId">{{ heading }}</h2>
+      }
       <div class="rhc-page-footer-layout">
-        @if (heading) {
-          <h2 aria-hidden="true" hidden>{{ heading }}</h2>
-        }
         @if (tagline) {
-          <div class="rhc-page-footer__tagline">
-            <rhc-heading [level]="2" [appearanceLevel]="appearanceLevel" role="presentation">{{ tagline }}</rhc-heading>
-          </div>
+          <p class="rhc-page-footer__tagline">{{ tagline }}</p>
         }
         <rhc-column-layout>
           <ng-content select="[columns]"></ng-content>
@@ -26,7 +24,7 @@
   </div>
 
   @if (subFooter) {
-    <div [class]="`utrecht-page-footer rhc-page-footer rhc-page-footer--subfooter ${backgroundClass}`">
+    <div class="utrecht-page-footer rhc-page-footer rhc-page-footer--subfooter">
       <div class="utrecht-page-footer__content">
         <div class="rhc-page-subfooter-layout">
           <ng-content select="[subFooter]"></ng-content>

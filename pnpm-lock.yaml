@@ -467,15 +467,12 @@ importers:
 
   packages/components-css/button-css:
     devDependencies:
+      '@nl-design-system-candidate/button-css':
+        specifier: 1.1.0
+        version: 1.1.0
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/button-css':
-        specifier: 3.1.0
-        version: 3.1.0
-      '@utrecht/icon-css':
-        specifier: 2.0.1
-        version: 2.0.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -657,8 +654,14 @@ importers:
   packages/components-css/library-css:
     dependencies:
       '@amsterdam/design-system-css':
-        specifier: 1.0.1
-        version: 1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.1)
+        specifier: 3.1.0
+        version: 3.1.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.1.0)
+      '@gemeente-denhaag/side-navigation':
+        specifier: 4.1.1
+        version: 4.1.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@nl-design-system-candidate/button-css':
+        specifier: 1.1.0
+        version: 1.1.0
       '@nl-design-system-candidate/heading-css':
         specifier: 1.1.3
         version: 1.1.3
@@ -764,6 +767,9 @@ importers:
       '@rijkshuisstijl-community/message-list-css':
         specifier: workspace:*
         version: link:../message-list-css
+      '@rijkshuisstijl-community/modal-dialog-css':
+        specifier: workspace:*
+        version: link:../modal-dialog-css
       '@rijkshuisstijl-community/navigation-bar-css':
         specifier: workspace:*
         version: link:../navigation-bar-css
@@ -797,9 +803,6 @@ importers:
       '@rijkshuisstijl-community/separator-css':
         specifier: workspace:*
         version: link:../separator-css
-      '@rijkshuisstijl-community/side-nav-css':
-        specifier: workspace:*
-        version: link:../side-nav-css
       '@rijkshuisstijl-community/skip-link-css':
         specifier: workspace:*
         version: link:../skip-link-css
@@ -1045,6 +1048,18 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
 
+  packages/components-css/modal-dialog-css:
+    devDependencies:
+      '@amsterdam/design-system-css':
+        specifier: 3.1.0
+        version: 3.1.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.1.0)
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
   packages/components-css/navigation-bar-css:
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
@@ -1090,8 +1105,8 @@ importers:
   packages/components-css/page-number-navigation-css:
     devDependencies:
       '@amsterdam/design-system-css':
-        specifier: 1.0.1
-        version: 1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.1)
+        specifier: 3.1.0
+        version: 3.1.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.1.0)
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
@@ -1167,15 +1182,6 @@ importers:
       '@utrecht/separator-css':
         specifier: 1.5.1
         version: 1.5.1
-      chokidar-cli:
-        specifier: 3.0.0
-        version: 3.0.0
-
-  packages/components-css/side-nav-css:
-    devDependencies:
-      '@rijkshuisstijl-community/build-utils-css':
-        specifier: workspace:*
-        version: link:../../build-utils-css
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1948,6 +1954,9 @@ importers:
 
   packages/components-react/button-react:
     dependencies:
+      '@nl-design-system-candidate/button-react':
+        specifier: 1.1.0
+        version: 1.1.0(@babel/runtime@7.29.7)(react@19.2.7)
       '@rijkshuisstijl-community/button-css':
         specifier: workspace:*
         version: link:../../components-css/button-css
@@ -4414,6 +4423,9 @@ importers:
       '@amsterdam/design-system-react':
         specifier: 1.1.0
         version: 1.1.0(@amsterdam/design-system-css@1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.1))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@nl-design-system-candidate/button-react':
+        specifier: 1.1.0
+        version: 1.1.0(@babel/runtime@7.29.7)(react@19.2.7)
       '@nl-design-system-candidate/link-react':
         specifier: 1.1.8
         version: 1.1.8(@babel/runtime@7.29.7)(react@19.2.7)
@@ -4537,6 +4549,9 @@ importers:
       '@rijkshuisstijl-community/message-list-react':
         specifier: workspace:*
         version: link:../message-list-react
+      '@rijkshuisstijl-community/modal-dialog-react':
+        specifier: workspace:*
+        version: link:../modal-dialog-react
       '@rijkshuisstijl-community/navigation-bar-react':
         specifier: workspace:*
         version: link:../navigation-bar-react
@@ -4588,15 +4603,6 @@ importers:
       '@rijkshuisstijl-community/separator-react':
         specifier: workspace:*
         version: link:../separator-react
-      '@rijkshuisstijl-community/side-nav-item-react':
-        specifier: workspace:*
-        version: link:../side-nav-item-react
-      '@rijkshuisstijl-community/side-nav-link-react':
-        specifier: workspace:*
-        version: link:../side-nav-link-react
-      '@rijkshuisstijl-community/side-nav-list-react':
-        specifier: workspace:*
-        version: link:../side-nav-list-react
       '@rijkshuisstijl-community/side-nav-react':
         specifier: workspace:*
         version: link:../side-nav-react
@@ -5524,6 +5530,106 @@ importers:
       '@types/lodash.chunk':
         specifier: 4.2.9
         version: 4.2.9
+      '@types/react':
+        specifier: 19.2.17
+        version: 19.2.17
+      '@vitejs/plugin-react':
+        specifier: 4.7.0
+        version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+      '@vitest/coverage-v8':
+        specifier: 4.1.8
+        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      react:
+        specifier: 19.2.7
+        version: 19.2.7
+      react-dom:
+        specifier: 19.2.7
+        version: 19.2.7(react@19.2.7)
+      rollup:
+        specifier: 4.61.1
+        version: 4.61.1
+      rollup-plugin-filesize:
+        specifier: 10.0.0
+        version: 10.0.0
+      rollup-plugin-node-externals:
+        specifier: 8.1.2
+        version: 8.1.2(rollup@4.61.1)
+      rollup-plugin-node-polyfills:
+        specifier: 0.2.1
+        version: 0.2.1
+      rollup-plugin-peer-deps-external:
+        specifier: 2.2.4
+        version: 2.2.4(rollup@4.61.1)
+      rollup-plugin-postcss:
+        specifier: 4.0.2
+        version: 4.0.2(postcss@8.5.15)
+      rollup-plugin-typescript2:
+        specifier: 0.37.0
+        version: 0.37.0(rollup@4.61.1)(typescript@5.9.3)
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+      vite:
+        specifier: 7.3.5
+        version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
+      vitest:
+        specifier: 4.1.8
+        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+
+  packages/components-react/modal-dialog-react:
+    dependencies:
+      '@rijkshuisstijl-community/button-react':
+        specifier: workspace:*
+        version: link:../button-react
+      '@rijkshuisstijl-community/heading-react':
+        specifier: workspace:*
+        version: link:../heading-react
+      '@rijkshuisstijl-community/modal-dialog-css':
+        specifier: workspace:*
+        version: link:../../components-css/modal-dialog-css
+    devDependencies:
+      '@babel/core':
+        specifier: 7.29.7
+        version: 7.29.7
+      '@babel/plugin-transform-runtime':
+        specifier: 7.29.7
+        version: 7.29.7(@babel/core@7.29.7)
+      '@babel/preset-env':
+        specifier: 7.29.7
+        version: 7.29.7(@babel/core@7.29.7)
+      '@babel/preset-react':
+        specifier: 7.29.7
+        version: 7.29.7(@babel/core@7.29.7)
+      '@babel/preset-typescript':
+        specifier: 7.29.7
+        version: 7.29.7(@babel/core@7.29.7)
+      '@babel/runtime':
+        specifier: 7.29.7
+        version: 7.29.7
+      '@rollup/plugin-babel':
+        specifier: 6.1.0
+        version: 6.1.0(@babel/core@7.29.7)(@types/babel__core@7.20.5)(rollup@4.61.1)
+      '@rollup/plugin-commonjs':
+        specifier: 29.0.3
+        version: 29.0.3(rollup@4.61.1)
+      '@rollup/plugin-node-resolve':
+        specifier: 16.0.3
+        version: 16.0.3(rollup@4.61.1)
+      '@testing-library/dom':
+        specifier: 10.4.1
+        version: 10.4.1
+      '@testing-library/jest-dom':
+        specifier: 6.9.1
+        version: 6.9.1
+      '@testing-library/react':
+        specifier: 16.3.2
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@testing-library/user-event':
+        specifier: 14.6.1
+        version: 14.6.1(@testing-library/dom@10.4.1)
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -7555,9 +7661,9 @@ importers:
 
   packages/components-react/side-nav-react:
     dependencies:
-      '@rijkshuisstijl-community/side-nav-css':
-        specifier: workspace:*
-        version: link:../../components-css/side-nav-css
+      '@gemeente-denhaag/side-navigation':
+        specifier: 4.1.1
+        version: 4.1.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
     devDependencies:
       '@babel/core':
         specifier: 7.29.7
@@ -8400,11 +8506,11 @@ importers:
   packages/storybook:
     dependencies:
       '@amsterdam/design-system-css':
-        specifier: 1.0.1
-        version: 1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.1)
+        specifier: 3.1.0
+        version: 3.1.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.1.0)
       '@amsterdam/design-system-react':
         specifier: 1.1.0
-        version: 1.1.0(@amsterdam/design-system-css@1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.1))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+        version: 1.1.0(@amsterdam/design-system-css@3.1.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.1.0))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@nl-design-system-candidate/code-block-css':
         specifier: 1.2.0
         version: 1.2.0
@@ -8876,11 +8982,20 @@ packages:
   '@amsterdam/design-system-assets@1.0.0':
     resolution: {integrity: sha512-OajcVs/wvJVds8i+OO8M2nCigzAlxlBMS2ljXMq5nXTUOWPv7LO7sC2p/S3L6yk7UcDABFwI6EQJdUfaU7HY+w==}
 
+  '@amsterdam/design-system-assets@2.0.0':
+    resolution: {integrity: sha512-+cc+m7LW7Fadjczk+U73qiN7EewiD0KrCH5XsriauM3PYEy8pNmJ0zHKBsWj4DlL/pP1t87AJq3o4O+I95orKQ==}
+
   '@amsterdam/design-system-css@1.0.1':
     resolution: {integrity: sha512-nO1QCqNC0UXEdNESeJBJ8qLnYH4zPXNLWDuD+HRoLanM8NUsLexTVt2EQ9GVT0qYW1EQGgyeou9TouLVfkqPKw==}
     peerDependencies:
       '@amsterdam/design-system-assets': 1.0.0
       '@amsterdam/design-system-tokens': 1.0.1
+
+  '@amsterdam/design-system-css@3.1.0':
+    resolution: {integrity: sha512-1EF0op5lEqGapz/ynrx9a32iGG6RqrzjIYJvQfT+RrRgby1gcxgwcHO3c603+rP7BHS72gCwmKbIGXaJnupflw==}
+    peerDependencies:
+      '@amsterdam/design-system-assets': 2.0.0
+      '@amsterdam/design-system-tokens': 3.1.0
 
   '@amsterdam/design-system-react-icons@1.0.0':
     resolution: {integrity: sha512-rgY7haz069mYWPFJaXqsOFFqZQt+1sMOR9WpxybJB0SmAXevlkdEY5X12CtCCzbeBtzRXgCJxTouYjl+5dZblw==}
@@ -8897,6 +9012,9 @@ packages:
 
   '@amsterdam/design-system-tokens@1.0.1':
     resolution: {integrity: sha512-IPBs09ekJQF6ADYgMNp9rpgbKQTAqbug/HQDlIKJjRu3VWLPFX7X+MBFSsIXZYnkUZJtrOGpisRBYBC/WTZ+HA==}
+
+  '@amsterdam/design-system-tokens@3.1.0':
+    resolution: {integrity: sha512-9c/Gir7a5XAZld8m/eJnOnf1V/qRQbQcP62TWZyOUQNDb+ejkSuiBa3vrDzqZ2+++3zV1S0jS1Aie620HqSj2Q==}
 
   '@angular-devkit/architect@0.2102.14':
     resolution: {integrity: sha512-0+vjVsCkMyJdVjz5XkPW+Bdf/9TI8V2voomx/+o0o+oOaqqiEhptQWFnaIlLr7HasjB0LxXK5P9L0oQ61vxj8Q==}
@@ -10697,6 +10815,30 @@ packages:
   '@gar/promisify@1.1.3':
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
 
+  '@gemeente-denhaag/iconbutton@3.1.1':
+    resolution: {integrity: sha512-5xWtVxXZcNYPsN4WuXdxIdAlV5wQtimD8psfX5mtCvPBbePj34KA7OsMeUg0FTlpEh6PFhTkqQQEgDq6bBqATg==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
+
+  '@gemeente-denhaag/icons@4.1.0':
+    resolution: {integrity: sha512-Q6fQ1TLQu4USfZyQ+82ONgL60eYgm9AAwMeULvXzOEHOaEHQp74DGBmd5YjNXi0XXkjkBdA+gfUgU+rnYX4R4Q==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
+
+  '@gemeente-denhaag/number-badge@2.1.0':
+    resolution: {integrity: sha512-m1ar7fpQzzmzfUMKgj2wrU1WMrLPmNppgjk3KnffbR6rswh05OlX2RwY00nOrdQwtQzwlRdir3U9CMo21n4gEg==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
+
+  '@gemeente-denhaag/side-navigation@4.1.1':
+    resolution: {integrity: sha512-l+TFU5l8fWf68LPzE6Q6b1YK9EQx78HJ+KP8vcCcxAIcDMcVoI292CVs212r32vHaTGIcTvVhPz67LBt0U8fqQ==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
+
   '@hapi/address@5.1.1':
     resolution: {integrity: sha512-A+po2d/dVoY7cYajycYI43ZbYMXukuopIsqCjh5QzsBCipDtdofHntljDlpccMjIfTy6UOkg+5KPriwYch2bXA==}
     engines: {node: '>=14.0.0'}
@@ -11657,6 +11799,15 @@ packages:
       '@angular/compiler-cli': ^21.0.0
       typescript: '>=5.9 <6.0'
       webpack: ^5.54.0
+
+  '@nl-design-system-candidate/button-css@1.1.0':
+    resolution: {integrity: sha512-w0JLQyiPL9UrfRwzu3Mq2EWbYvAJbolepeFH4ggyBFXoYm9RMWX6vWb/8Oj999GzAF6N77LlES5jUnaR3BJ7Yw==}
+
+  '@nl-design-system-candidate/button-react@1.1.0':
+    resolution: {integrity: sha512-Zi2QGpAq6/AWkL0hf9BNcNp8AQUV5yyDcKw7WDBuZ3W0ci/EF46ZfvntTbbBpHX09lYqS6F4Vf7hPGh1BdGxTg==}
+    peerDependencies:
+      '@babel/runtime': '>=7.26.10'
+      react: ^18 || ^19
 
   '@nl-design-system-candidate/code-block-css@1.2.0':
     resolution: {integrity: sha512-oem6db9bdWyllcCJ1WNEuLQfx9uF9yZAsbmzMYs7YF448EYhhEnEXEqfjtkUrLwuly3OEnThI28g69IXpigx/g==}
@@ -22022,10 +22173,17 @@ snapshots:
 
   '@amsterdam/design-system-assets@1.0.0': {}
 
+  '@amsterdam/design-system-assets@2.0.0': {}
+
   '@amsterdam/design-system-css@1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.1)':
     dependencies:
       '@amsterdam/design-system-assets': 1.0.0
       '@amsterdam/design-system-tokens': 1.0.1
+
+  '@amsterdam/design-system-css@3.1.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.1.0)':
+    dependencies:
+      '@amsterdam/design-system-assets': 2.0.0
+      '@amsterdam/design-system-tokens': 3.1.0
 
   '@amsterdam/design-system-react-icons@1.0.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
@@ -22041,7 +22199,18 @@ snapshots:
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
 
+  '@amsterdam/design-system-react@1.1.0(@amsterdam/design-system-css@3.1.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.1.0))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+    dependencies:
+      '@amsterdam/design-system-css': 3.1.0(@amsterdam/design-system-assets@2.0.0)(@amsterdam/design-system-tokens@3.1.0)
+      '@amsterdam/design-system-react-icons': 1.0.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@babel/runtime': 7.27.4
+      clsx: 2.1.1
+      react: 19.2.7
+      react-dom: 19.2.7(react@19.2.7)
+
   '@amsterdam/design-system-tokens@1.0.1': {}
+
+  '@amsterdam/design-system-tokens@3.1.0': {}
 
   '@angular-devkit/architect@0.2102.14(chokidar@5.0.0)':
     dependencies:
@@ -24589,6 +24758,33 @@ snapshots:
 
   '@gar/promisify@1.1.3': {}
 
+  '@gemeente-denhaag/iconbutton@3.1.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+    dependencies:
+      '@gemeente-denhaag/icons': 4.1.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      clsx: 2.1.1
+      react: 19.2.7
+      react-dom: 19.2.7(react@19.2.7)
+
+  '@gemeente-denhaag/icons@4.1.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+    dependencies:
+      clsx: 2.1.1
+      react: 19.2.7
+      react-dom: 19.2.7(react@19.2.7)
+
+  '@gemeente-denhaag/number-badge@2.1.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+    dependencies:
+      react: 19.2.7
+      react-dom: 19.2.7(react@19.2.7)
+
+  '@gemeente-denhaag/side-navigation@4.1.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+    dependencies:
+      '@gemeente-denhaag/iconbutton': 3.1.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@gemeente-denhaag/icons': 4.1.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@gemeente-denhaag/number-badge': 2.1.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      clsx: 2.1.1
+      react: 19.2.7
+      react-dom: 19.2.7(react@19.2.7)
+
   '@hapi/address@5.1.1':
     dependencies:
       '@hapi/hoek': 11.0.7
@@ -25674,6 +25870,14 @@ snapshots:
       '@angular/compiler-cli': 21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3)
       typescript: 5.9.3
       webpack: 5.105.2(esbuild@0.28.1)(postcss@8.5.12)
+
+  '@nl-design-system-candidate/button-css@1.1.0': {}
+
+  '@nl-design-system-candidate/button-react@1.1.0(@babel/runtime@7.29.7)(react@19.2.7)':
+    dependencies:
+      '@babel/runtime': 7.29.7
+      clsx: 2.1.1
+      react: 19.2.7
 
   '@nl-design-system-candidate/code-block-css@1.2.0': {}
 

@@ -1,9 +1,9 @@
 {
   "version": "1.0.0",
   "author": "Community for Rijkshuisstijl-Community Design System",
-  "description": "Side Navigation component",
+  "description": "Modal Dialog Component",
   "license": "EUPL-1.2",
-  "name": "@rijkshuisstijl-community/side-nav-css",
+  "name": "@rijkshuisstijl-community/modal-dialog-css",
   "files": [
     "dist/",
     "docs/",
@@ -14,10 +14,11 @@
   "scripts": {
     "build": "build-css-package",
     "clean": "rimraf dist",
-    "watch": "chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
+    "watch": "build-css-package && chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
   },
   "devDependencies": {
     "@rijkshuisstijl-community/build-utils-css": "workspace:*",
+    "@amsterdam/design-system-css": "3.1.0",
     "chokidar-cli": "3.0.0"
   },
   "keywords": [
@@ -30,6 +31,6 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
-    "directory": "packages/components-css/side-nav-css"
+    "directory": "packages/components-css/modal-dialog-css"
   }
 }
