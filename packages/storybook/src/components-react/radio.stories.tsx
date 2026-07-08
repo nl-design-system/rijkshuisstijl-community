@@ -144,3 +144,16 @@ export const Invalid: Story = {
     invalid: true,
   },
 };
+
+export const Checked: Story = {
+  args: {
+    checked: true,
+  },
+};
+
+export const CheckedAndDisabled: Story = {
+  args: {
+    checked: true,
+    disabled: true,
+  },
+};
