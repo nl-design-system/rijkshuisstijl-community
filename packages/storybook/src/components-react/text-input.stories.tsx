@@ -323,6 +323,12 @@ export const Required: Story = {
   },
 };
 
+export const Hover: Story = {
+  parameters: {
+    pseudo: { hover: true },
+  },
+};
+
 export const InputRequired: Story = {
   args: {
     name: 'subject',
