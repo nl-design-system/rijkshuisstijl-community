@@ -17,3 +17,10 @@
 .utrecht-page-body--rhc-mijn-omgeving .denhaag-side-navigation {
   --denhaag-side-navigation-min-width: 17rem;
 }
+
+/* Ruimte voor de vaste "Menu"-balk onderaan op mobiel. */
+@media (width <= 768px) {
+  .utrecht-page-body--rhc-mijn-omgeving {
+    padding-block-end: 4rem;
+  }
+}

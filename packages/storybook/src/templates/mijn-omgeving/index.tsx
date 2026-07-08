@@ -13,15 +13,8 @@ import {
   MessageListItem,
   NavigationList,
   NavigationListItem,
-  NumberBadge,
   Paragraph,
-  RHCIconID,
   Separator,
-  SideNav,
-  SideNavItem,
-  SideNavLink,
-  SideNavLinkLabel,
-  SideNavList,
 } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
 import { ReactNode } from 'react';
@@ -29,73 +22,10 @@ import SharedDisclaimer from '../shared/disclaimer';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
+import { SharedSideNav } from '../shared/side-nav';
 import './index.css';
 
-export const sideNav: {
-  id: string;
-  items: {
-    href: string;
-    icon: RHCIconID;
-    label: string;
-    numberBadgeValue?: number;
-    numberBadgeLabel?: string;
-  }[];
-}[] = [
-  {
-    id: '1',
-    items: [{ href: '/mijn-omgeving/', icon: 'home', label: 'Dashboard' }],
-  },
-  {
-    id: '2',
-    items: [
-      {
-        href: '/mijn-omgeving-berichtenbox/',
-        icon: 'mail',
-        label: 'Berichtenbox',
-        numberBadgeValue: 9,
-        numberBadgeLabel: '9 berichten',
-      },
-      { href: '#', icon: 'comment', label: 'MijnZaken' },
-    ],
-  },
-  {
-    id: '3',
-    items: [
-      { href: '/mijn-omgeving-identiteit/', icon: 'user', label: 'Identiteit' },
-      { href: '/mijn-omgeving-financien/', icon: 'currency-euro', label: 'Financiën' },
-      { href: '/mijn-omgeving-werk/', icon: 'hashtag', label: 'Werk' },
-      { href: '/mijn-omgeving-gezondheid/', icon: 'favoriet', label: 'Gezondheid' },
-      { href: '/mijn-omgeving-wonen/', icon: 'home', label: 'Wonen' },
-      { href: '/mijn-omgeving-vervoer/', icon: 'car', label: 'Vervoer' },
-      { href: '/mijn-omgeving-onderwijs/', icon: 'school', label: 'Onderwijs' },
-    ],
-  },
-  {
-    id: '4',
-    items: [{ href: '/mijn-omgeving-instellingen/', icon: 'instellingen', label: 'Instellingen' }],
-  },
-];
-
-export const useSideNav = ({ items, currentHref }: { items: typeof sideNav; currentHref?: string }) => ({
-  'aria-label': 'Zijnavigatie',
-  children: items.map(({ id, items }) => (
-    <SideNavList key={id}>
-      {items.map(({ href, icon, label, numberBadgeLabel, numberBadgeValue }) => (
-        <SideNavItem key={href}>
-          <SideNavLink current={href === currentHref} href={href}>
-            <Icon icon={icon} />
-            <SideNavLinkLabel>
-              {label}
-              {numberBadgeLabel && numberBadgeValue ? (
-                <NumberBadge label={numberBadgeLabel}>{numberBadgeValue}</NumberBadge>
-              ) : null}
-            </SideNavLinkLabel>
-          </SideNavLink>
-        </SideNavItem>
-      ))}
-    </SideNavList>
-  )),
-});
+export { sideNav, useSideNav } from '../shared/side-nav';
 
 export const useCards = ({
   items,
@@ -129,7 +59,7 @@ export default function MijnOmgeving() {
       <PageBody className="utrecht-page-body--rhc-mijn-omgeving">
         <SharedMainPageContent>
           <SharedDisclaimer />
-          <SideNav {...useSideNav({ items: sideNav, currentHref: '/mijn-omgeving/' })} />
+          <SharedSideNav currentHref="/mijn-omgeving/" />
           <section className={'rhc-page-main-content'}>
             <Heading level={1}>Welkom Bert Burger</Heading>
             <Alert type="info">
