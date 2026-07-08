@@ -15,7 +15,7 @@ const drawerHeader = (
     <Heading appearanceLevel={3} className="utrecht-drawer__title" level={2}>
       Drawer title
     </Heading>
-    <form className="utrecht-drawer__header-actions" method="dialog">
+    <form method="dialog">
       <IconButton icon="kruis" label="Sluiten" purpose="secondary" type="submit" />
     </form>
   </header>
@@ -23,13 +23,13 @@ const drawerHeader = (
 
 const drawerFooter = (
   <footer className="utrecht-drawer__footer" key="footer">
-    <Button appearance="primary-action-button">Ja ik doe mee</Button>
+    <Button purpose="primary">Ja ik doe mee</Button>
   </footer>
 );
 
 const drawerChildren = [
   drawerHeader,
-  <div className="utrecht-drawer__body" key="body">
+  <div aria-label="Inhoud" className="utrecht-drawer__body" key="body" role="group" tabIndex={0}>
     <Paragraph>
       Lorem ipsum dolor sit amet consectetur. Morbi sed faucibus arcu turpis. Urna ante odio neque euismod quis. Magna
       velit pharetra varius tristique nisi placerat. Rhoncus elementum et porttitor ullamcorper.
@@ -49,7 +49,7 @@ const drawerChildren = [
 
 const overflowChildren = [
   drawerHeader,
-  <div className="utrecht-drawer__body" key="body">
+  <div aria-label="Inhoud" className="utrecht-drawer__body" key="body" role="group" tabIndex={0}>
     {Array.from({ length: 10 }, (_, index) => (
       <Paragraph key={index}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
