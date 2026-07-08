@@ -3,4 +3,4 @@
 '@rijkshuisstijl-community/link-list-css': minor
 ---
 
-3 laags versimpelt naar 2 (met \_\_link)
+3 laags versimpeld naar 2 (met \_\_link)
