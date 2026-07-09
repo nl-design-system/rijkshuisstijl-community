@@ -55,7 +55,7 @@ export const useCards = ({
 export default function MijnOmgeving() {
   return (
     <>
-      <SharedHeader />
+      <SharedHeader organisation="Rijksoverheid" />
       <PageBody className="utrecht-page-body--rhc-mijn-omgeving">
         <SharedMainPageContent>
           <SharedDisclaimer />
