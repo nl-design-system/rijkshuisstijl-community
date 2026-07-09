@@ -1,8 +1,8 @@
 {%- set quote_class = 'utrecht-blockquote__quote' -%}
 {%- set caption_class = 'utrecht-blockquote__caption' -%}
 {%- set classes = ['utrecht-blockquote', 'rhc-blockquote'] -%}
-{%- if borderRadiusCorner -%}
-  {%- set classes = classes|merge(['rhc-blockquote--border-radius-corner-' ~ borderRadiusCorner]) -%}
+{%- if outlineCorner -%}
+  {%- set classes = classes|merge(['rhc-blockquote--outline-' ~ outlineCorner]) -%}
 {%- endif -%}
 <figure {{ attributes.addClass(classes) }}>
   <blockquote class="{{ quote_class }}">

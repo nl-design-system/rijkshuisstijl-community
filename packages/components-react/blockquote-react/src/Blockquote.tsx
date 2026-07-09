@@ -9,24 +9,21 @@ import {
 } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 
-export type BlockquoteBorderRadiusCorner = 'start-start' | 'start-end' | 'end-start' | 'end-end';
+export type BlockquoteOutlineCorner = 'start-start' | 'start-end' | 'end-start' | 'end-end';
 
 export interface BlockquoteProps extends UtrechtBlockquoteProps {
   /**
    * Draw the opt-in bracket outline: a border on the two sides adjacent to the
-   * given corner, with that corner rounded. Omit for the default blockquote.
+   * given corner, with that corner rounded and the text tinted with the theme
+   * accent. Omit for the default blockquote.
    */
-  borderRadiusCorner?: BlockquoteBorderRadiusCorner;
+  outlineCorner?: BlockquoteOutlineCorner;
 }
 
-export const Blockquote = ({ borderRadiusCorner, className, ...restProps }: BlockquoteProps) => {
+export const Blockquote = ({ outlineCorner, className, ...restProps }: BlockquoteProps) => {
   return (
     <UtrechtBlockquote
-      className={clsx(
-        'rhc-blockquote',
-        borderRadiusCorner && `rhc-blockquote--border-radius-corner-${borderRadiusCorner}`,
-        className,
-      )}
+      className={clsx('rhc-blockquote', outlineCorner && `rhc-blockquote--outline-${outlineCorner}`, className)}
       {...restProps}
     />
   );

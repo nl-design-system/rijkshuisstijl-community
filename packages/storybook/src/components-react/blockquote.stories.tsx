@@ -12,8 +12,8 @@ const meta = {
       name: 'attribution',
       type: { name: 'string', required: false },
     },
-    borderRadiusCorner: {
-      name: 'borderRadiusCorner',
+    outlineCorner: {
+      name: 'outlineCorner',
       control: { type: 'select' },
       options: [undefined, 'start-start', 'start-end', 'end-start', 'end-end'],
     },
@@ -73,13 +73,13 @@ export const OutlineTopLeft: Story = {
   args: {
     children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
     attribution: 'Pippi Langkous',
-    borderRadiusCorner: 'start-start',
+    outlineCorner: 'start-start',
   },
   parameters: {
     docs: {
       description: {
         story:
-          'Zet `borderRadiusCorner` om de opt-in outline te tekenen: een rand op de twee zijden naast de gekozen hoek, met die hoek afgerond. De rand en tekst nemen de themeable primary-kleur over.',
+          'Zet `outlineCorner` om de opt-in outline te tekenen: een rand op de twee zijden naast de gekozen hoek, met die hoek afgerond. De rand neemt de themeable primary-kleur over; de tekst gebruikt de action-foregroundkleur, die in elk thema WCAG AA haalt.',
       },
     },
   },
@@ -90,7 +90,7 @@ export const OutlineTopRight: Story = {
   args: {
     children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
     attribution: 'Pippi Langkous',
-    borderRadiusCorner: 'start-end',
+    outlineCorner: 'start-end',
   },
 };
 
@@ -99,6 +99,6 @@ export const OutlineBottomLeft: Story = {
   args: {
     children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
     attribution: 'Pippi Langkous',
-    borderRadiusCorner: 'end-start',
+    outlineCorner: 'end-start',
   },
 };

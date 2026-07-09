@@ -27,12 +27,12 @@ describe('Blockquote', () => {
     expect(blockquote).toHaveClass('rhc-blockquote', 'rhc-rounded-corner');
   });
 
-  it('adds the outline modifier class for the given border radius corner', () => {
-    const { container } = render(<Blockquote borderRadiusCorner="start-start">Citaat</Blockquote>);
+  it('adds the outline modifier class for the given corner', () => {
+    const { container } = render(<Blockquote outlineCorner="start-start">Citaat</Blockquote>);
 
     const blockquote = container.firstElementChild;
 
-    expect(blockquote).toHaveClass('rhc-blockquote', 'rhc-blockquote--border-radius-corner-start-start');
+    expect(blockquote).toHaveClass('rhc-blockquote', 'rhc-blockquote--outline-start-start');
   });
 
   it('omits the outline modifier class by default', () => {
@@ -40,7 +40,7 @@ describe('Blockquote', () => {
 
     const blockquote = container.firstElementChild;
 
-    expect(blockquote?.className).not.toContain('rhc-blockquote--border-radius-corner');
+    expect(blockquote?.className).not.toContain('rhc-blockquote--outline');
   });
 });
 

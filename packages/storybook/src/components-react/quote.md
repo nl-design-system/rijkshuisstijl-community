@@ -6,7 +6,7 @@ De quote accentueert een blok tekst met een gevulde achtergrond en een gekleurde
 
 ## Terminologie
 
-- **heading**: optionele kop boven de bodytekst. Het semantische niveau stel je in met `headingLevel` (standaard 2); met `headingAppearanceLevel` kun je het visuele niveau los daarvan zetten.
+- **heading**: optionele kop boven de bodytekst. Het semantische niveau stel je in met `headingLevel`, standaard 2. Kies het niveau dat past in de kopstructuur van de pagina; met `headingAppearanceLevel` zet je het visuele niveau daar los van.
 - **content**: de bodytekst van de quote, doorgegeven via `children`.
 
 ## Thema

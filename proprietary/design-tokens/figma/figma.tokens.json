@@ -4276,6 +4276,30 @@
         "margin-inline-start": {
           "$type": "dimension",
           "$value": "{rhc.space.none}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{rhc.color.primary.500}"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{rhc.border-width.md}"
+        },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{rhc.size.half-lint}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.foreground.action}"
+        },
+        "content-color": {
+          "$type": "color",
+          "$value": "{rhc.color.foreground.action}"
+        },
+        "attribution-color": {
+          "$type": "color",
+          "$value": "{rhc.color.foreground.action}"
         }
       }
     }
@@ -11036,6 +11060,72 @@
       }
     }
   },
+  "components/quote": {
+    "rhc": {
+      "quote": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{rhc.color.primary.50}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{rhc.color.primary.500}"
+        },
+        "border-inline-start-width": {
+          "$type": "dimension",
+          "$value": "{rhc.border-width.lg}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.foreground.default}"
+        },
+        "padding-block-end": {
+          "$type": "dimension",
+          "$value": "{rhc.space.2xl}"
+        },
+        "padding-block-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.2xl}"
+        },
+        "padding-inline-end": {
+          "$type": "dimension",
+          "$value": "{rhc.space.2xl}"
+        },
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.2xl}"
+        },
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.md}"
+        },
+        "heading-font-family": {
+          "$type": "fontFamilies",
+          "$value": "{rhc.text.font-family.default}"
+        },
+        "heading-font-size": {
+          "$type": "fontSizes",
+          "$value": "{rhc.text.font-size.lg}"
+        },
+        "heading-font-weight": {
+          "$type": "fontWeights",
+          "$value": "{rhc.text.font-weight.strong}"
+        },
+        "heading-line-height": {
+          "$type": "lineHeights",
+          "$value": "{rhc.text.line-height.sm}"
+        },
+        "content-font-size": {
+          "$type": "fontSizes",
+          "$value": "{rhc.text.font-size.md}"
+        },
+        "content-line-height": {
+          "$type": "lineHeights",
+          "$value": "{rhc.text.line-height.md}"
+        }
+      }
+    }
+  },
   "components/radio-button": {
     "utrecht": {
       "radio-button": {
@@ -12833,6 +12923,7 @@
         "components/page-number-navigation": "source",
         "components/paragraph": "source",
         "components/pre-heading": "source",
+        "components/quote": "source",
         "components/radio-button": "source",
         "components/radio-group": "source",
         "components/rich-text": "source",
@@ -12945,6 +13036,7 @@
       "components/page-number-navigation",
       "components/paragraph",
       "components/pre-heading",
+      "components/quote",
       "components/radio-button",
       "components/radio-group",
       "components/rich-text",
