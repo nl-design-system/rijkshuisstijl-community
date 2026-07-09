@@ -18,7 +18,6 @@ import {
 } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
 import { ReactNode } from 'react';
-import SharedDisclaimer from '../shared/disclaimer';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
@@ -58,7 +57,6 @@ export default function MijnOmgeving() {
       <SharedHeader organisation="Rijksoverheid" />
       <PageBody className="utrecht-page-body--rhc-mijn-omgeving">
         <SharedMainPageContent>
-          <SharedDisclaimer />
           <SharedSideNav currentHref="/mijn-omgeving/" />
           <section className={'rhc-page-main-content'}>
             <Heading level={1}>Welkom Bert Burger</Heading>

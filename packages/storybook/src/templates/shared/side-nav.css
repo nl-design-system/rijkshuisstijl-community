@@ -28,6 +28,16 @@
   --rhc-logo-image-color: var(--rhc-color-foreground-on-primary);
 }
 
+/* Zelfde gutter + max-breedte op de header-content als de body, zodat logo/menu uitlijnen (info-dense). */
+.utrecht-page-header__content:has(.rhc-shared-side-nav__trigger) {
+  --rhc-mijn-omgeving-gutter: 5rem;
+
+  box-sizing: border-box;
+  margin-inline: auto;
+  max-inline-size: calc(var(--rhc-size-page-md) + var(--rhc-mijn-omgeving-gutter) * 2);
+  padding-inline: var(--rhc-mijn-omgeving-gutter);
+}
+
 /*
  * Menu-drawer: structuur/gedrag komen uit het Drawer-component (library-css + tokens); hier
  * afgestemd op de mobiele menu-context: rechter side-drawer bijna vol, donkere backdrop en
@@ -126,5 +136,9 @@
   /* Verberg de desktop-navbalk als er een mobiele menu-knop is (net als info-dense). */
   .rhc-page-header-layout:has(.rhc-shared-side-nav__trigger) .rhc-nav-bar__container {
     display: none;
+  }
+
+  .utrecht-page-header__content:has(.rhc-shared-side-nav__trigger) {
+    --rhc-mijn-omgeving-gutter: var(--rhc-space-xl);
   }
 }
