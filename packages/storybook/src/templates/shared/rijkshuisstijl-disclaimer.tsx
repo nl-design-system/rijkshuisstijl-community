@@ -1,8 +1,9 @@
 import { Alert, Heading, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
+import './rijkshuisstijl-disclaimer.css';
 
 export default function SharedRijkshuisstijlDisclaimer() {
   return (
-    <Alert type="warning">
+    <Alert className="rhc-shared-disclaimer" type="warning">
       <Heading appearanceLevel={5} level={2}>
         Deze pagina toont nog niet de juiste rijkshuisstijl
       </Heading>
