@@ -3,9 +3,22 @@
   display: contents;
 }
 
-/* Menu-balk en drawer alleen op mobiel. */
-.rhc-shared-side-nav__trigger {
+/* Het header-slot voor de "Menu"-knop is er alleen op mobiel; het regelt de zichtbaarheid. */
+.rhc-page-header-layout__mobile-menu {
   display: none;
+}
+
+/* "Menu"-knop als tekstknop met icoon in de header (info-dense-stijl). */
+.rhc-shared-side-nav__trigger {
+  align-items: center;
+  background: none;
+  border: none;
+  color: var(--rhc-color-primary-500);
+  column-gap: var(--rhc-space-sm);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-weight: 700;
 }
 
 /*
@@ -94,22 +107,14 @@
     display: none;
   }
 
-  /* Vaste donkerblauwe "Menu"-balk onderaan die de drawer opent. */
-  .rhc-shared-side-nav__trigger {
-    align-items: center;
-    background-color: var(--rhc-color-primary-500);
-    block-size: 3rem;
-    border: none;
-    color: var(--rhc-color-foreground-on-dark-color);
-    column-gap: var(--rhc-space-sm);
-    cursor: pointer;
+  /* Toon de "Menu"-knop in de header, rechts uitgelijnd. */
+  .rhc-page-header-layout__mobile-menu {
     display: flex;
-    font: inherit;
-    inline-size: 100%;
-    inset-block-end: 0;
-    inset-inline: 0;
-    justify-content: center;
-    position: fixed;
-    z-index: 10;
+    justify-content: flex-end;
+  }
+
+  /* Verberg de desktop-navbalk als er een mobiele menu-knop is (net als info-dense). */
+  .rhc-page-header-layout:has(.rhc-shared-side-nav__trigger) .rhc-nav-bar {
+    display: none;
   }
 }

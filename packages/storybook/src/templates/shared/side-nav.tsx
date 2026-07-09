@@ -10,7 +10,8 @@ import {
   SideNavLinkLabel,
   SideNavList,
 } from '@rijkshuisstijl-community/components-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import './side-nav.css';
 
 export const sideNav: {
@@ -85,6 +86,11 @@ export const useSideNav = ({ items, currentHref }: { items: typeof sideNav; curr
  */
 export const SharedSideNav = ({ currentHref }: { currentHref?: string }) => {
   const [open, setOpen] = useState(false);
+  // De "Menu"-knop rendert in het header-slot (net als info-dense), niet als losse balk.
+  const [menuSlot, setMenuSlot] = useState<Element | null>(null);
+  useEffect(() => {
+    setMenuSlot(document.querySelector('.rhc-page-header-layout__mobile-menu'));
+  }, []);
   const nav = useSideNav({ items: sideNav, currentHref });
   // Figma-mobiel groepeert Dashboard/Berichtenbox/MijnZaken samen, dan de thema's, dan Instellingen.
   const mobileGroups = [[...sideNav[0].items, ...sideNav[1].items], sideNav[2].items, sideNav[3].items];
@@ -94,15 +100,20 @@ export const SharedSideNav = ({ currentHref }: { currentHref?: string }) => {
       <div className="rhc-shared-side-nav__inline">
         <SideNav {...nav} />
       </div>
-      <button
-        aria-haspopup="dialog"
-        className="rhc-shared-side-nav__trigger"
-        type="button"
-        onClick={() => setOpen(true)}
-      >
-        <Icon icon="menu" />
-        Menu
-      </button>
+      {menuSlot
+        ? createPortal(
+            <button
+              aria-haspopup="dialog"
+              className="rhc-shared-side-nav__trigger"
+              type="button"
+              onClick={() => setOpen(true)}
+            >
+              Menu
+              <Icon icon="menu" />
+            </button>,
+            menuSlot,
+          )
+        : null}
       <Drawer
         modal
         align="inline-end"
