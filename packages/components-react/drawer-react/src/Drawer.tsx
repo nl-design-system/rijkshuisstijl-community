@@ -32,22 +32,18 @@ export const Drawer: React.FC<React.ComponentProps<typeof UtrechtDrawer>> = ({ o
     }
   }, [open, modal]);
 
-  // `close`/`cancel` bubbelen niet en React's synthetische handlers vuren hier onbetrouwbaar.
-  // Koppel native listeners zodat sluiten via de sluitknop (`close`) én Escape (`cancel`) de
-  // open-state van de parent synct. Zonder de `cancel`-listener blijft de state na Escape hangen.
+  // `close` bubbelt niet, dus koppel een native listener (React's synthetische onClose is
+  // onbetrouwbaar voor dit event). `close` vuurt bij élke sluiting: via de sluitknop
+  // (`<form method="dialog">`), via Escape (de UA vuurt `cancel` en sluit dan, wat `close`
+  // triggert) en via een programmatische `close()`. Eén listener dekt alles en vuurt één keer.
   useEffect(() => {
     const dialog = dialogRef.current;
     const handler = onClose as EventListener | undefined;
-    if (dialog && handler) {
-      dialog.addEventListener('close', handler);
-      dialog.addEventListener('cancel', handler);
+    if (!dialog || !handler) {
+      return () => {};
     }
-    return () => {
-      if (dialog && handler) {
-        dialog.removeEventListener('close', handler);
-        dialog.removeEventListener('cancel', handler);
-      }
-    };
+    dialog.addEventListener('close', handler);
+    return () => dialog.removeEventListener('close', handler);
   }, [onClose]);
 
   // De scroll-container is de `.utrecht-drawer__body` (die krijgt in de markup een `tabIndex`
