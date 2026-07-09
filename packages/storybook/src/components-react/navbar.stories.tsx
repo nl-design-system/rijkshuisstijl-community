@@ -29,7 +29,6 @@ const items: NavBarItemProps[] = [
     id: 'first-link',
     label: 'Link',
     href: '/',
-    current: true,
   },
   {
     id: 'second-link',
@@ -59,6 +58,17 @@ const endItems: NavBarItemProps[] = [
 export const Default: Story = {
   args: {
     items,
+  },
+};
+
+export const WithHeading: Story = {
+  args: {
+    items,
+    headingItem: {
+      id: 'heading',
+      label: 'Heading',
+      href: '/',
+    },
   },
 };
 
