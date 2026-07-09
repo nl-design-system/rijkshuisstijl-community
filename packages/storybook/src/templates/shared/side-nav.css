@@ -22,6 +22,12 @@
   padding-block: var(--rhc-space-md);
 }
 
+/* Rijksoverheid-logo (blauwe box met wit kaartje) op mijn-omgeving-pagina's, zoals info-dense. */
+.rhc-page-header-layout:has(.rhc-shared-side-nav__trigger) .rhc-logo {
+  --rhc-logo-image-background-color: var(--rhc-color-primary-500);
+  --rhc-logo-image-color: var(--rhc-color-foreground-on-primary);
+}
+
 /*
  * Menu-drawer: structuur/gedrag komen uit het Drawer-component (library-css + tokens); hier
  * afgestemd op de mobiele menu-context: rechter side-drawer bijna vol, donkere backdrop en

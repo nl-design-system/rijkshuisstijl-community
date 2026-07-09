@@ -1,8 +1,8 @@
 import { Icon, Logo, NavBar, NavBarItemProps, PageHeader, SkipLink } from '@rijkshuisstijl-community/components-react';
 import './header.css';
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
-export default function SharedHeader() {
+export default function SharedHeader({ organisation = 'Rijkshuisstijl Community' }: { organisation?: ReactNode } = {}) {
   const [pathname, setPathname] = useState('');
   useEffect(() => {
     // NB: set the pathname when the component mounts, this is done in a useEffect hook to not error in a server environment
@@ -36,7 +36,7 @@ export default function SharedHeader() {
         Ga naar hoofdinhoud
       </SkipLink>
       <div className="rhc-page-header-layout">
-        <Logo organisation="Rijkshuisstijl Community">
+        <Logo organisation={organisation}>
           <Icon className={'dutch-map'} icon={'nederland-map'} />
         </Logo>
         <NavBar
