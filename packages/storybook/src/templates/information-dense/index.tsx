@@ -216,7 +216,9 @@ export default function InformationDense() {
             <ul className="rhc-info-dense__drawer-nav">
               {navItems.map((item) => (
                 <li key={item.id}>
-                  <Link href={item.href}>{item.label}</Link>
+                  <Link aria-current={item.id === 'subsidies' ? 'page' : undefined} href={item.href}>
+                    {item.label}
+                  </Link>
                 </li>
               ))}
               {navEndItems.map((item) => (
