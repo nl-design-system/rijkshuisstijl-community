@@ -177,7 +177,7 @@ export default function Page() {
   return (
     <>
       <SharedHeader hideNav invertedLogo />
-      <PageBody>
+      <PageBody className="rhc-templates-content-artikel-page">
         <Hero
           className="rhc-templates-content-artikel__hero"
           imageAlt="Agrariër voor een schuur met een asbestdak"
