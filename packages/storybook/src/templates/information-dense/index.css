@@ -32,6 +32,10 @@
   --rhc-logo-image-color: var(--rhc-color-foreground-on-primary);
 }
 
+.rhc-info-dense-page .utrecht-alert {
+  margin-block: var(--rhc-space-2xl);
+}
+
 .rhc-info-dense__grid {
   align-items: start;
   display: grid;
@@ -75,13 +79,6 @@
    */
   --rhc-drawer-margin-block-start: var(--rhc-space-none);
 
-  /* Bijna volle breedte met 12px linkermarge (Figma), rechts flush; component-max (600px) begrenst breder. */
-  box-sizing: border-box;
-  inline-size: calc(100% - var(--rhc-space-lg));
-
-  /* Hoogte = inhoud (Figma), niet volledig: onderkant loslaten zodat de afgeronde onderrand zichtbaar is. */
-  inset-block-end: auto;
-
   /* Compactere padding voor het smalle mobiele menu (default is space-5xl = 48px). */
   --utrecht-drawer-header-padding-block-end: var(--rhc-space-lg);
   --utrecht-drawer-header-padding-block-start: var(--rhc-space-2xl);
@@ -94,6 +91,13 @@
 
   /* Onderhoeken 24px (Figma) i.p.v. de rounded-corner-md van 48px. */
   --rhc-rounded-corner-md-border-radius: 1.5rem;
+
+  /* Bijna volle breedte met 12px linkermarge (Figma), rechts flush; component-max (600px) begrenst breder. */
+  box-sizing: border-box;
+  inline-size: calc(100% - var(--rhc-space-lg));
+
+  /* Hoogte = inhoud (Figma), niet volledig: onderkant loslaten zodat de afgeronde onderrand zichtbaar is. */
+  inset-block-end: auto;
 }
 
 /* Backdrop conform Figma (surface/backdrop), duidelijk donkerder dan de component-default. */
