@@ -40,3 +40,20 @@
     --rhc-mijn-omgeving-gutter: var(--rhc-space-xl);
   }
 }
+
+/*
+ * Full-width card-container uit het ontwerp: witte kaart met subtiele rand en een afgeronde
+ * rechterbovenhoek (border-radius/1 = 48px). Padding en gap conform het ontwerp.
+ */
+.rhc-mijn-omgeving-card {
+  background-color: var(--rhc-color-wit);
+  border: 1px solid var(--rhc-color-border-subtle);
+  border-start-end-radius: var(--rhc-rounded-corner-md-border-radius);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-space-lg);
+  padding-block-end: var(--rhc-space-4xl);
+  padding-block-start: var(--rhc-space-2xl);
+  padding-inline: var(--rhc-space-2xl);
+}
