@@ -8,4 +8,106 @@
 .utrecht-page-body--rhc-mijn-omgeving .rhc-templates-page-content {
   flex-direction: row;
   flex-wrap: wrap;
+
+  /* Geen inline-padding hier: de gutter komt van .utrecht-page-body__content (anders dubbel). */
+  padding-inline: var(--rhc-space-none);
+}
+
+/**
+ * De Den Haag Side Navigation laat de breedte bewust vrij (min-width 0); dit
+ * dashboard geeft 'm de vaste breedte uit het ontwerp via de bestaande token.
+ */
+.utrecht-page-body--rhc-mijn-omgeving .denhaag-side-navigation {
+  --denhaag-side-navigation-min-width: 17rem;
+}
+
+/*
+ * Zijmarge (gutter) + max-breedte op de body-content, zoals info-dense: op alle breedtes
+ * (5rem desktop, kleiner op mobiel), gecentreerd. De header krijgt dezelfde gutter (side-nav.css)
+ * zodat logo/menu uitlijnen met de content.
+ */
+.utrecht-page-body--rhc-mijn-omgeving .utrecht-page-body__content {
+  --rhc-mijn-omgeving-gutter: 5rem;
+
+  box-sizing: border-box;
+  margin-inline: auto;
+  max-inline-size: calc(var(--rhc-size-page-md) + var(--rhc-mijn-omgeving-gutter) * 2);
+
+  /* Extra ruimte tussen de laatste content en de (compacte) footer. */
+  padding-block-end: var(--rhc-space-5xl);
+  padding-inline: var(--rhc-mijn-omgeving-gutter);
+}
+
+@media (width < 64rem) {
+  .utrecht-page-body--rhc-mijn-omgeving .utrecht-page-body__content {
+    --rhc-mijn-omgeving-gutter: var(--rhc-space-xl);
+  }
+}
+
+/*
+ * Koppen (paginatitel + sectiekoppen) volgen bewust NIET het kleurthema: alleen de navigatie
+ * doet dat. In de thema's Groen/Paars zetten de heading-tokens de kop op primary; hier pinnen
+ * we de gebruikte niveaus (h1 = level-1, sectiekoppen = level-4) terug op de vaste core-navy.
+ */
+.rhc-page-main-content {
+  --nl-heading-level-1-color: var(--rhc-color-core-500);
+  --nl-heading-level-4-color: var(--rhc-color-core-500);
+}
+
+/*
+ * Full-width card-container uit het ontwerp: witte kaart met subtiele rand en een afgeronde
+ * rechterbovenhoek (border-radius/1 = 48px). Padding en gap conform het ontwerp.
+ */
+.rhc-mijn-omgeving-card {
+  background-color: var(--rhc-color-wit);
+  border: 1px solid var(--rhc-color-border-subtle);
+  border-start-end-radius: var(--rhc-rounded-corner-md-border-radius);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-space-lg);
+  padding-block-end: var(--rhc-space-4xl);
+  padding-block-start: var(--rhc-space-2xl);
+  padding-inline: var(--rhc-space-2xl);
+}
+
+/*
+ * Rijen links uitlijnen met de kop: de component-default geeft de rijen een eigen inspring
+ * (padding-inline); die halen we hier weg zodat label en kop op dezelfde lijn staan.
+ * Iconen in de link-kleur (de rij is een link).
+ */
+.rhc-mijn-omgeving-card .rhc-message-list__item {
+  --utrecht-icon-color: var(--rhc-color-foreground-link);
+
+  padding-inline: var(--rhc-space-none);
+}
+
+/*
+ * In het ontwerp staan er alleen scheidingslijnen tússen de rijen: geen lijn direct
+ * onder de heading (top-border van de eerste rij) en geen lijn onder de laatste rij.
+ */
+.rhc-mijn-omgeving-card .rhc-message-list > li:first-child .rhc-message-list__item {
+  border-block-start-width: 0;
+}
+
+.rhc-mijn-omgeving-card .rhc-message-list {
+  border-block-end-width: 0;
+}
+
+/*
+ * Kleuren conform het ontwerp: de rij is een link, dus label + datum + iconen in de
+ * link-kleur, met de datum onderstreept. Deze content volgt bewust NIET het kleurthema
+ * (alleen de navigatie doet dat); in het ontwerp is dit #007bc7.
+ */
+.rhc-mijn-omgeving-card .rhc-message-list__item__end-icon {
+  --utrecht-icon-color: var(--rhc-color-foreground-link);
+}
+
+.rhc-mijn-omgeving-card .rhc-message-list__item__label,
+.rhc-mijn-omgeving-card .rhc-message-list__item__meta-data {
+  --nl-paragraph-color: var(--rhc-color-foreground-link);
+}
+
+.rhc-mijn-omgeving-card .rhc-message-list__item__meta-data {
+  text-decoration-line: underline;
 }

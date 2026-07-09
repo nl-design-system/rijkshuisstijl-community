@@ -47,14 +47,14 @@ export default function MijnOmgeving() {
       <PageBody className="utrecht-page-body--rhc-mijn-omgeving">
         <SharedMainPageContent>
           <SharedDisclaimer />
-          <SideNav className="rhc-side-nav" heading="Submenu" {...useSideNav({ items: sideNav })} />
+          <SideNav {...useSideNav({ items: sideNav, currentHref: '/mijn-omgeving-identiteit/' })} />
           <section className={'rhc-page-main-content'}>
             <Heading level={1}>Identiteit</Heading>
             <div className="rhc-card-as-link-group" {...useCards({ items: cards, headingLevel: 2 })} />
           </section>
         </SharedMainPageContent>
       </PageBody>
-      <SharedFooter isLightTheme={true} />
+      <SharedFooter />
     </>
   );
 }

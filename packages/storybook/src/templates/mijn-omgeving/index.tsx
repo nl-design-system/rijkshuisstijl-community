@@ -2,96 +2,27 @@
 import {
   AccordionProvider,
   ActionGroup,
+  Alert,
   ButtonLink,
   Card,
+  Footer,
   Heading,
   HeadingLevel,
   Icon,
   Link,
   MessageList,
   MessageListItem,
-  NavigationList,
-  NavigationListItem,
-  NumberBadge,
-  RHCIconID,
+  Paragraph,
   Separator,
-  SideNav,
-  SideNavItem,
-  SideNavLink,
-  SideNavList,
 } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
-import { Fragment, ReactNode } from 'react';
-import SharedDisclaimer from '../shared/disclaimer';
-import SharedFooter from '../shared/footer';
-import SharedHeader from '../shared/header';
+import { ReactNode } from 'react';
 import SharedMainPageContent from '../shared/main-page-content';
+import MijnOmgevingHeader from '../shared/mijn-omgeving-header';
+import { SharedSideNav } from '../shared/side-nav';
 import './index.css';
 
-export const sideNav: {
-  id: string;
-  items: {
-    href: string;
-    icon: RHCIconID;
-    label: string;
-    numberBadgeValue?: number;
-    numberBadgeLabel?: string;
-  }[];
-}[] = [
-  {
-    id: '1',
-    items: [{ href: '/mijn-omgeving/', icon: 'home', label: 'Overzicht' }],
-  },
-  {
-    id: '2',
-    items: [
-      {
-        href: '/mijn-omgeving-berichtenbox/',
-        icon: 'mail',
-        label: 'Berichtenbox',
-        numberBadgeValue: 4,
-        numberBadgeLabel: '4 berichten',
-      },
-      { href: '#', icon: 'inbox', label: 'MijnZaken' },
-    ],
-  },
-  {
-    id: '3',
-    items: [
-      { href: '/mijn-omgeving-identiteit/', icon: 'user', label: 'Identiteit' },
-      { href: '/mijn-omgeving-financien/', icon: 'currency-euro', label: 'Financiën' },
-      { href: '/mijn-omgeving-werk/', icon: 'briefcase', label: 'Werk' },
-      { href: '/mijn-omgeving-gezondheid/', icon: 'favoriet', label: 'Gezondheid' },
-      { href: '/mijn-omgeving-wonen/', icon: 'home', label: 'Wonen' },
-      { href: '/mijn-omgeving-vervoer/', icon: 'car', label: 'Vervoer' },
-      { href: '/mijn-omgeving-onderwijs/', icon: 'school', label: 'Onderwijs' },
-    ],
-  },
-  {
-    id: '4',
-    items: [{ href: '/mijn-omgeving-instellingen/', icon: 'instellingen', label: 'Instellingen' }],
-  },
-];
-
-export const useSideNav = ({ items }: { items: typeof sideNav }) => ({
-  children: items.map(({ id, items }, index) => (
-    <Fragment key={id}>
-      {index >= 1 ? <Separator invisible /> : null}
-      <SideNavList key={index}>
-        {items.map(({ href, icon, label, numberBadgeLabel, numberBadgeValue }) => (
-          <SideNavItem key={href}>
-            <SideNavLink href={href} icon={icon}>
-              {label}
-              {numberBadgeLabel && numberBadgeValue ? (
-                <NumberBadge label={numberBadgeLabel}>{numberBadgeValue}</NumberBadge>
-              ) : null}
-            </SideNavLink>
-          </SideNavItem>
-        ))}
-      </SideNavList>
-    </Fragment>
-  )),
-});
+export { sideNav, useSideNav } from '../shared/side-nav';
 
 export const useCards = ({
   items,
@@ -121,16 +52,28 @@ export const useCards = ({
 export default function MijnOmgeving() {
   return (
     <>
-      <SharedHeader />
+      <MijnOmgevingHeader />
       <PageBody className="utrecht-page-body--rhc-mijn-omgeving">
         <SharedMainPageContent>
-          <SharedDisclaimer />
-          <SideNav className="rhc-side-nav" heading="Submenu" {...useSideNav({ items: sideNav })} />
+          <SharedSideNav currentHref="/mijn-omgeving/" />
           <section className={'rhc-page-main-content'}>
             <Heading level={1}>Welkom Bert Burger</Heading>
-            <div>
-              <Heading level={2}>Recent</Heading>
-              <Separator invisible />
+            <Alert type="info">
+              <Heading appearanceLevel={5} level={2}>
+                Optional heading
+              </Heading>
+              <Paragraph>
+                Lorem ipsum dolor sit amet consectetur. Purus pulvinar ut volutpat imperdiet iaculis vitae ipsum risus
+                faucibus. Varius odio tellus ut iaculis purus quam tristique vitae cras. Phasellus tincidunt enim
+                bibendum tristique turpis diam quam proin. Ac et interdum viverra viverra. A nulla pretium massa
+                faucibus ullamcorper etiam id in.
+              </Paragraph>
+            </Alert>
+            {/* Full-width card-container (ontwerp): witte kaart met subtiele rand en afgeronde rechterbovenhoek. */}
+            <div className="rhc-mijn-omgeving-card">
+              <Heading appearanceLevel={4} level={2}>
+                Recent
+              </Heading>
               <MessageList>
                 <MessageListItem
                   description={'Update: Uw klacht bij gemeente Utrecht'}
@@ -153,56 +96,94 @@ export default function MijnOmgeving() {
                 />
               </MessageList>
             </div>
-            <div>
-              <Heading level={2}>Wat kan ik waar vinden?</Heading>
-              <Separator invisible />
-              <NavigationList>
-                <NavigationListItem
+            <div className="rhc-mijn-omgeving-card">
+              <Heading appearanceLevel={4} level={2}>
+                Wat kan ik waar vinden?
+              </Heading>
+              <MessageList>
+                <MessageListItem
                   description="Uw gegevens, familie en identiteitsbewijs"
                   href="/mijn-omgeving-identiteit/"
-                  icon="user"
-                  label="Identiteit"
+                  metaData="18/06/2025"
+                  label={
+                    <>
+                      <Icon icon="user" />
+                      Identiteit
+                    </>
+                  }
                 />
-                <NavigationListItem
+                <MessageListItem
                   description="Uw inkomen, toeslagen, bijdragen en belastingen"
                   href="/mijn-omgeving-financien/"
-                  icon="currency-euro"
-                  label="Financiën"
+                  metaData="18/06/2025"
+                  label={
+                    <>
+                      <Icon icon="currency-euro" />
+                      Financiën
+                    </>
+                  }
                 />
-                <NavigationListItem
+                <MessageListItem
                   description="Uw pensioen, arbeidsgegevens en uitkeringen"
                   href="/mijn-omgeving-werk/"
-                  icon="briefcase"
-                  label="Werk"
+                  metaData="18/06/2025"
+                  label={
+                    <>
+                      <Icon icon="hashtag" />
+                      Werk
+                    </>
+                  }
                 />
-                <NavigationListItem
+                <MessageListItem
                   description="Donorregister en Persoonsgebonden budget"
                   href="/mijn-omgeving-gezondheid/"
-                  icon="favoriet"
-                  label="Gezondheid"
+                  metaData="18/06/2025"
+                  label={
+                    <>
+                      <Icon icon="favoriet" />
+                      Gezondheid
+                    </>
+                  }
                 />
-                <NavigationListItem
+                <MessageListItem
                   description="Uw energielabel, kadastrale- en WOZ-gegevens"
                   href="/mijn-omgeving-wonen/"
-                  icon="home"
-                  label="Wonen"
+                  metaData="18/06/2025"
+                  label={
+                    <>
+                      <Icon icon="home" />
+                      Wonen
+                    </>
+                  }
                 />
-                <NavigationListItem
+                <MessageListItem
                   description="Uw voertuigen"
                   href="/mijn-omgeving-vervoer/"
-                  icon="car"
-                  label="Vervoer"
-                />{' '}
-                <NavigationListItem
+                  metaData="18/06/2025"
+                  label={
+                    <>
+                      <Icon icon="car" />
+                      Vervoer
+                    </>
+                  }
+                />
+                <MessageListItem
                   description="Uw diploma’s en studiefinanciering / studieschuld"
                   href="/mijn-omgeving-onderwijs/"
-                  icon="backpack"
-                  label="Onderwijs"
+                  metaData="18/06/2025"
+                  label={
+                    <>
+                      <Icon icon="school" />
+                      Onderwijs
+                    </>
+                  }
                 />
-              </NavigationList>
+              </MessageList>
             </div>
             <div>
-              <Heading level={2}>Veelgestelde vragen</Heading>
+              <Heading appearanceLevel={4} level={2}>
+                Veelgestelde vragen
+              </Heading>
               <Separator invisible />
               <AccordionProvider
                 sections={[
@@ -229,7 +210,14 @@ export default function MijnOmgeving() {
           </section>
         </SharedMainPageContent>
       </PageBody>
-      <SharedFooter isLightTheme={true} />
+      {/* GAP: de compacte Page Footer-variant bestaat nog niet (#2649); hier staat de standaard footer. */}
+      <Footer tagline="De Rijksoverheid. Voor Nederland" variant="compact">
+        <Link href="#">Contact</Link>
+        <Link href="#">Privacy</Link>
+        <Link href="#">Cookies en anti-spam</Link>
+        <Link href="#">Toegankelijkheid</Link>
+        <Link href="#">Proclaimer</Link>
+      </Footer>
     </>
   );
 }

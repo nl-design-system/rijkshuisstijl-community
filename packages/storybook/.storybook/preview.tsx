@@ -65,6 +65,11 @@ const preview: Preview = {
       disable: true,
     },
     controls: { exclude: ['children'] },
+    viewport: {
+      options: {
+        mobiel: { name: 'Mobiel', styles: { height: '812px', width: '375px' } },
+      },
+    },
     options: {
       storySort: {
         method: 'alphabetical',
