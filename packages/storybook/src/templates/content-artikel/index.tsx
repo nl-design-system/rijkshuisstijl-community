@@ -13,6 +13,7 @@ import {
   Heading,
   Hero,
   Icon,
+  IconButton,
   Image,
   Link,
   OrderedList,
@@ -21,10 +22,10 @@ import {
   Paragraph,
   Separator,
 } from '@rijkshuisstijl-community/components-react';
-import SharedDisclaimer from '../shared/disclaimer';
 import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
+import './index.css';
 
 const stappenplan = [
   {
@@ -175,34 +176,40 @@ const ervaringsverhalen = [
 export default function Page() {
   return (
     <>
-      <SharedHeader />
+      <SharedHeader hideNav invertedLogo />
       <PageBody>
-        <div className="rhc-templates-main-content">
-          <div className="rhc-templates-page-content">
+        <Hero
+          className="rhc-templates-content-artikel__hero"
+          imageAlt="Agrariër voor een schuur met een asbestdak"
+          imageSrc="/content-artikel-hero.png"
+        >
+          <div className="rhc-templates-content-artikel__breadcrumb">
             <BreadcrumbNav label="Kruimelpad">
-              <BreadcrumbNavLink href="#" index={0} rel="home">
+              <BreadcrumbNavLink current href="#" index={0} rel="home">
                 <Icon icon="home" />
-                Home
+                Asbestvrijdak
               </BreadcrumbNavLink>
               <BreadcrumbNavSeparator>
                 <Icon icon="chevron-right" />
               </BreadcrumbNavSeparator>
-              <BreadcrumbNavLink current href="#" index={1}>
-                Asbestvrijdak
+              <BreadcrumbNavLink href="#" index={1}>
+                Ik heb een stal of boerenschuur
               </BreadcrumbNavLink>
             </BreadcrumbNav>
           </div>
+          <IconButton aria-label="Zoeken" className="rhc-templates-content-artikel__search" icon="zoek" />
+        </Hero>
+        <div className="rhc-templates-content-artikel__title">
+          <Link className="rhc-templates-content-artikel__back" href="#">
+            <Icon icon="chevron-left" />
+            Ik heb een stal of boerenschuur
+          </Link>
+          <Heading appearanceLevel={2} level={1}>
+            Ik ben geen agrariër (meer)
+          </Heading>
         </div>
-        <Hero
-          borderRadiusCorner="start-end"
-          heading="Ik ben geen agrariër (meer)"
-          headingLevel={1}
-          imageAlt="Agrariër voor een schuur met een asbestdak"
-          imageSrc="/placeholder.jpg"
-        />
         <SharedMainPageContent>
-          <SharedDisclaimer />
-          <Article>
+          <Article className="rhc-templates-content-artikel__article">
             <Paragraph purpose="lead">
               Heb jij nog een asbestdak op je erf? Dit is een goed moment om daar een plan voor te maken. Want jouw
               asbestdak ligt al meer dan 30 jaar in de buitenlucht en is daardoor aan het slijten. En dat zorgt voor
