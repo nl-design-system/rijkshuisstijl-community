@@ -43,15 +43,20 @@
  * site-naam-badge linksboven en Contact/Menu-knoppen rechtsboven. Nog geen RHC-component.
  */
 
-/* Gedeelde contentkolom-breedte, zodat hero en formulier uitlijnen. */
+/* Gedeelde contentkolom-breedte, zodat hero en formulier uitlijnen. Tekst in cool-grey-900. */
 .rhc-example-contactformulier-page {
   --rhc-example-contactformulier-content-max-inline-size: 845px;
+
+  color: var(--rhc-color-cool-grey-900);
 }
 
-/* Logo gecentreerd bovenaan, met inverted kleuren (navy vlak, wit wapen) en ruimte eronder. */
+/*
+ * Logo gecentreerd bovenaan (navy vlak, wit wapen), met ruimte eronder. De rijkslint blijft
+ * lintblauw (navy) ongeacht het thema, daarom vast op lintblauw i.p.v. de primary-schaal.
+ */
 .rhc-example-contactformulier-page .rhc-logo {
-  --rhc-logo-image-background-color: var(--rhc-color-primary-500);
-  --rhc-logo-image-color: var(--rhc-color-foreground-on-primary);
+  --rhc-logo-image-background-color: var(--rhc-color-lintblauw-500);
+  --rhc-logo-image-color: var(--rhc-color-foreground-on-dark-color);
   --rhc-logo-margin-block-end: var(--rhc-space-2xl);
 
   justify-content: center;
@@ -73,9 +78,15 @@
   overflow: clip;
   padding-block-end: var(--rhc-size-lint);
 
-  /* Ruime kop met plek voor de badge; onder en opzij de lint-maat. */
+  /* Ruime kop met plek voor de badge; onderaan de lint-maat. */
   padding-block-start: var(--rhc-size-2-lint);
-  padding-inline: var(--rhc-size-lint);
+
+  /*
+   * Geen horizontale padding: zo krijgt de hero-content dezelfde breedte als het formulier
+   * (band-marge = de content-gutter van het formulier), waardoor kop, intro en melding op
+   * elke breedte uitlijnen met de velden.
+   */
+  padding-inline: var(--rhc-space-none);
   position: relative;
 }
 
@@ -145,7 +156,6 @@
     border-end-start-radius: 0;
     border-start-end-radius: var(--rhc-rounded-corner-md-border-radius);
     padding-block-start: var(--rhc-space-none);
-    padding-inline: var(--rhc-space-none);
     row-gap: var(--rhc-space-xl);
   }
 
