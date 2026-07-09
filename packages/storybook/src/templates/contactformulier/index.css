@@ -57,9 +57,20 @@
 .rhc-example-contactformulier-page .rhc-logo {
   --rhc-logo-image-background-color: var(--rhc-color-lintblauw-500);
   --rhc-logo-image-color: var(--rhc-color-foreground-on-dark-color);
-  --rhc-logo-margin-block-end: var(--rhc-space-2xl);
+
+  /* Zelfde ritme als de header-items op de andere voorbeeldpagina's (quarter-lint) tot de waarschuwing. */
+  --rhc-logo-margin-block-end: var(--rhc-size-quarter-lint);
 
   justify-content: center;
+}
+
+/*
+ * Waarschuwing "nog niet de juiste rijkshuisstijl", net als de andere voorbeeldpagina's.
+ * Zelfde verticale ritme (quarter-lint boven/onder) en zij-inspringing (content-gutter) als de hero.
+ */
+.rhc-example-contactformulier__disclaimer {
+  margin-block-end: var(--rhc-size-quarter-lint);
+  margin-inline: var(--rhc-size-quarter-lint);
 }
 
 .rhc-example-contactformulier-hero {

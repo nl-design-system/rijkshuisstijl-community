@@ -19,6 +19,7 @@ import {
 import { Hero } from './Hero';
 import { Main } from '../shared/Main';
 import SharedMainPageContent from '../shared/main-page-content';
+import SharedRijkshuisstijlDisclaimer from '../shared/rijkshuisstijl-disclaimer';
 import './index.css';
 
 // Contactformulier voorbeeldpagina (#2650). Puur uit RHC-componenten samengesteld; gaten t.o.v. het ontwerp staan in de PR.
@@ -35,6 +36,10 @@ export default function Contactformulier({
         <Logo organisation="Rijkshuisstijl Community">
           <Icon icon="nederland-map" />
         </Logo>
+        {/* Waarschuwing dat de pagina nog niet de juiste rijkshuisstijl toont, net als de andere voorbeeldpagina's. */}
+        <div className="rhc-example-contactformulier__disclaimer">
+          <SharedRijkshuisstijlDisclaimer />
+        </div>
       </PageHeader>
       <PageBody className="rhc-example-contactformulier-page">
         <Main>
