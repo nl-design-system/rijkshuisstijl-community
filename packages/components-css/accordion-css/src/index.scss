@@ -25,7 +25,11 @@
 // Reserve the icon-size column so the panel text lines up with the label. The default chevron is a
 // fixed 14x8 SVG that ignores the icon-size token, so reserve the column width ourselves until the
 // upstream fix lands (nl-design-system/utrecht#3174).
+// De kolom is precies 1 regel hoog met de chevron gecentreerd, zodat die op de eerste tekstregel
+// uitlijnt (gecentreerd bij 1 regel, bovenaan bij meerdere) samen met align-items: flex-start op de knop.
 .utrecht-accordion__button-icon {
+  align-items: center;
+  block-size: 1lh;
   inline-size: var(--utrecht-accordion-button-icon-size);
   justify-content: center;
 }
