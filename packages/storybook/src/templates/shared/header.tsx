@@ -57,6 +57,8 @@ export default function SharedHeader() {
             { id: 'end3', target: '_blank', href: 'https://rijkshuisstijl-community.vercel.app/', label: 'Storybook' },
           ]}
         />
+        {/* Slot voor een mobiele menu-knop (bijv. de SharedSideNav-drawer); leeg als een pagina er geen heeft. */}
+        <div className="rhc-page-header-layout__mobile-menu" />
       </div>
     </PageHeader>
   );
