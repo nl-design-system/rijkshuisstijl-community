@@ -27,9 +27,10 @@
   padding-inline: var(--rhc-info-dense-page-gutter);
 }
 
+/* De rijkslint blijft lintblauw (navy) ongeacht het thema: core-500 i.p.v. de primary-schaal. */
 .rhc-info-dense-page .rhc-logo {
-  --rhc-logo-image-background-color: var(--rhc-color-primary-500);
-  --rhc-logo-image-color: var(--rhc-color-foreground-on-primary);
+  --rhc-logo-image-background-color: var(--rhc-color-core-500);
+  --rhc-logo-image-color: var(--rhc-color-foreground-on-dark-color);
 }
 
 .rhc-info-dense-page .utrecht-alert {

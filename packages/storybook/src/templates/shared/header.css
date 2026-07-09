@@ -64,8 +64,9 @@
   color: var(--utrecht-link-visited-color);
 }
 
-/* Ge-inverteerd logo-lint: blauw blok met wit icoon (opt-in via invertedLogo). */
+/* Ge-inverteerd logo-lint: navy blok met wit icoon (opt-in via invertedLogo). De rijkslint
+   blijft lintblauw ongeacht het thema, daarom core-500 i.p.v. de primary-schaal. */
 .rhc-page-header-layout--inverted-logo .rhc-logo__image {
-  --rhc-logo-image-background-color: var(--rhc-color-primary-500);
-  --rhc-logo-image-color: var(--rhc-color-wit);
+  --rhc-logo-image-background-color: var(--rhc-color-core-500);
+  --rhc-logo-image-color: var(--rhc-color-foreground-on-dark-color);
 }
