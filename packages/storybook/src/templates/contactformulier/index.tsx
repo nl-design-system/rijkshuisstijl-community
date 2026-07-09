@@ -1,5 +1,4 @@
 import {
-  ActionGroup,
   Alert,
   Button,
   Footer,
@@ -18,6 +17,7 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@rijkshuisstijl-community/components-react';
+import { Hero } from './Hero';
 import { Main } from '../shared/Main';
 import SharedMainPageContent from '../shared/main-page-content';
 import './index.css';
@@ -29,38 +29,19 @@ export default function Contactformulier({
 }: Readonly<{ showErrors?: boolean; showNotification?: boolean }>) {
   return (
     <>
-      <PageHeader>
+      <PageHeader className="rhc-example-contactformulier-page">
         <SkipLink className="rhc-skip-link--visible-on-focus" href="#main" id="top">
           Ga naar hoofdinhoud
         </SkipLink>
-        <Logo organisation="Ministerie van Buitenlandse Zaken">
+        <Logo organisation="Rijksoverheid">
           <Icon icon="nederland-map" />
         </Logo>
-        {/* GAP: hero action-balk (outline "Contact" + filled "Menu") bestaat niet als component; ActionGroup geeft de tussenruimte. */}
-        <ActionGroup>
-          <Button iconStart={<Icon icon="telefoon" />} label="Contact" purpose="secondary" />
-          <Button iconStart={<Icon icon="menu" />} label="Menu" purpose="primary" />
-        </ActionGroup>
       </PageHeader>
-      <PageBody>
+      <PageBody className="rhc-example-contactformulier-page">
         <Main>
+          {/* Titel, intro en de informatieve melding zitten in de custom hero (zie Hero.tsx). */}
+          <Hero showNotification={showNotification} />
           <SharedMainPageContent>
-            {/* GAP: geen primary-tint hero-banner zonder afbeelding + geen SiteNameContainer. */}
-            <Heading level={1}>Contactformulier</Heading>
-            <Paragraph>
-              U kunt uw vraag aan NederlandWereldwijd stellen via het contactformulier. We proberen binnen 5 dagen
-              antwoord te geven.
-            </Paragraph>
-            {/* Issue-variatie: informatieve alert zichtbaar/verborgen; de Figma-foutvariant verbergt hem. */}
-            {/* Figma toont de melding als waarschuwing (let-op-icoon), vandaar type="warning". */}
-            {showNotification ? (
-              <Alert type="warning">
-                <Paragraph>
-                  Door de situatie in het Midden-Oosten kan het tot 14 dagen duren voordat wij uw mail beantwoorden.
-                </Paragraph>
-              </Alert>
-            ) : null}
-
             <form className="rhc-example-contactformulier__form">
               {showErrors ? (
                 <Alert type="error">
