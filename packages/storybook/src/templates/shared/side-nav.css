@@ -19,6 +19,7 @@
   display: inline-flex;
   font: inherit;
   font-weight: 700;
+  padding-block: var(--rhc-space-md);
 }
 
 /*
@@ -107,14 +108,17 @@
     display: none;
   }
 
-  /* Toon de "Menu"-knop in de header, rechts uitgelijnd. */
+  /* Toon de "Menu"-knop in de nav-rij van de header, rechts uitgelijnd, met scheidingslijn eronder. */
   .rhc-page-header-layout__mobile-menu {
+    align-items: center;
+    border-block-end: var(--rhc-nav-bar-border-block-end-width, 1px) solid
+      var(--rhc-nav-bar-border-color, var(--rhc-color-primary-100));
     display: flex;
     justify-content: flex-end;
   }
 
   /* Verberg de desktop-navbalk als er een mobiele menu-knop is (net als info-dense). */
-  .rhc-page-header-layout:has(.rhc-shared-side-nav__trigger) .rhc-nav-bar {
+  .rhc-page-header-layout:has(.rhc-shared-side-nav__trigger) .rhc-nav-bar__container {
     display: none;
   }
 }
