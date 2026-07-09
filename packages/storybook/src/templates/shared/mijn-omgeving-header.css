@@ -1,0 +1,37 @@
+/* Hoofdmenu van de MijnOmgeving-applicatie: sitenaam links, ingelogde gebruiker rechts, subtiele onderrand. */
+.rhc-mijn-omgeving-menu {
+  align-items: center;
+  border-block-end: 1px solid var(--rhc-color-border-subtle);
+  display: flex;
+  justify-content: space-between;
+  padding-block: var(--rhc-space-md);
+}
+
+.rhc-mijn-omgeving-menu__site {
+  color: var(--rhc-color-primary-500);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.rhc-mijn-omgeving-menu__user {
+  align-items: center;
+  background: none;
+  border: none;
+  color: var(--rhc-color-primary-500);
+  column-gap: var(--rhc-space-sm);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-weight: 700;
+}
+
+@media (width <= 768px) {
+  /* Op mobiel vervangt de Menu-knop het user-element; de balk heeft zelf al een onderrand. */
+  .rhc-mijn-omgeving-menu__user {
+    display: none;
+  }
+
+  .rhc-mijn-omgeving-menu .rhc-page-header-layout__mobile-menu {
+    border-block-end-width: 0;
+  }
+}

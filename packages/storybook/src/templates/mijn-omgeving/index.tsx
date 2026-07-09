@@ -17,8 +17,8 @@ import {
 } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
 import { ReactNode } from 'react';
-import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
+import MijnOmgevingHeader from '../shared/mijn-omgeving-header';
 import { SharedSideNav } from '../shared/side-nav';
 import './index.css';
 
@@ -52,7 +52,7 @@ export const useCards = ({
 export default function MijnOmgeving() {
   return (
     <>
-      <SharedHeader organisation="Rijksoverheid" />
+      <MijnOmgevingHeader />
       <PageBody className="utrecht-page-body--rhc-mijn-omgeving">
         <SharedMainPageContent>
           <SharedSideNav currentHref="/mijn-omgeving/" />
