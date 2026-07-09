@@ -62,6 +62,17 @@
 }
 
 /*
+ * Rijen links uitlijnen met de kop: de component-default geeft de rijen een eigen inspring
+ * (padding-inline); die halen we hier weg zodat label en kop op dezelfde lijn staan.
+ * Iconen in de link-kleur (de rij is een link).
+ */
+.rhc-mijn-omgeving-card .rhc-message-list__item {
+  --utrecht-icon-color: var(--rhc-color-foreground-link);
+
+  padding-inline: var(--rhc-space-none);
+}
+
+/*
  * In het ontwerp staan er alleen scheidingslijnen tússen de rijen: geen lijn direct
  * onder de heading (top-border van de eerste rij) en geen lijn onder de laatste rij.
  */
@@ -71,4 +82,22 @@
 
 .rhc-mijn-omgeving-card .rhc-message-list {
   border-block-end-width: 0;
+}
+
+/*
+ * Kleuren conform het ontwerp: de rij is een link, dus label + datum + iconen in de
+ * link-kleur, met de datum onderstreept. De exacte tint (#007bc7 in het ontwerp) komt uit
+ * het actieve kleurthema; hier volgen we het link-token zodat het thema-bewust blijft.
+ */
+.rhc-mijn-omgeving-card .rhc-message-list__item__end-icon {
+  --utrecht-icon-color: var(--rhc-color-foreground-link);
+}
+
+.rhc-mijn-omgeving-card .rhc-message-list__item__label,
+.rhc-mijn-omgeving-card .rhc-message-list__item__meta-data {
+  --nl-paragraph-color: var(--rhc-color-foreground-link);
+}
+
+.rhc-mijn-omgeving-card .rhc-message-list__item__meta-data {
+  text-decoration-line: underline;
 }
