@@ -64,10 +64,10 @@
 /*
  * Rijen links uitlijnen met de kop: de component-default geeft de rijen een eigen inspring
  * (padding-inline); die halen we hier weg zodat label en kop op dezelfde lijn staan.
- * Iconen in de primaire (thema-)kleur (de rij is een link).
+ * Iconen in de link-kleur (de rij is een link).
  */
 .rhc-mijn-omgeving-card .rhc-message-list__item {
-  --utrecht-icon-color: var(--rhc-color-primary-500);
+  --utrecht-icon-color: var(--rhc-color-foreground-link);
 
   padding-inline: var(--rhc-space-none);
 }
@@ -85,17 +85,17 @@
 }
 
 /*
- * Kleuren conform het ontwerp: de rij is een link, dus label + datum + iconen krijgen de
- * primaire (thema-)kleur, met de datum onderstreept. Zo volgen ze het actieve kleurthema
- * (net als de sidenav/badge/accordion); in het ontwerp is dat #007bc7.
+ * Kleuren conform het ontwerp: de rij is een link, dus label + datum + iconen in de
+ * link-kleur, met de datum onderstreept. Deze content volgt bewust NIET het kleurthema
+ * (alleen de navigatie doet dat); in het ontwerp is dit #007bc7.
  */
 .rhc-mijn-omgeving-card .rhc-message-list__item__end-icon {
-  --utrecht-icon-color: var(--rhc-color-primary-500);
+  --utrecht-icon-color: var(--rhc-color-foreground-link);
 }
 
 .rhc-mijn-omgeving-card .rhc-message-list__item__label,
 .rhc-mijn-omgeving-card .rhc-message-list__item__meta-data {
-  --nl-paragraph-color: var(--rhc-color-primary-500);
+  --nl-paragraph-color: var(--rhc-color-foreground-link);
 }
 
 .rhc-mijn-omgeving-card .rhc-message-list__item__meta-data {

@@ -13,7 +13,7 @@
   align-items: center;
   background: none;
   border: none;
-  color: var(--rhc-color-primary-500);
+  color: var(--rhc-color-core-500);
   column-gap: var(--rhc-space-sm);
   cursor: pointer;
   display: inline-flex;
@@ -22,10 +22,11 @@
   padding-block: var(--rhc-space-md);
 }
 
-/* Rijksoverheid-logo (blauwe box met wit kaartje) op mijn-omgeving-pagina's, zoals info-dense. */
+/* Rijksoverheid-logo (blauwe box met wit kaartje) op mijn-omgeving-pagina's, zoals info-dense.
+   Vaste Rijksoverheid-navy (core), volgt bewust NIET het kleurthema. */
 .rhc-page-header-layout:has(.rhc-shared-side-nav__trigger) .rhc-logo {
-  --rhc-logo-image-background-color: var(--rhc-color-primary-500);
-  --rhc-logo-image-color: var(--rhc-color-foreground-on-primary);
+  --rhc-logo-image-background-color: var(--rhc-color-core-500);
+  --rhc-logo-image-color: var(--rhc-color-foreground-on-dark-color);
 }
 
 /* Zelfde gutter + max-breedte op de header-content als de body, zodat logo/menu uitlijnen (info-dense). */
@@ -106,7 +107,7 @@
   align-items: center;
   block-size: 3rem;
   border-radius: var(--rhc-border-radius-md);
-  color: var(--rhc-color-primary-500);
+  color: var(--rhc-color-core-500);
   column-gap: var(--rhc-space-sm);
   display: flex;
   font-size: var(--rhc-text-font-size-md);
