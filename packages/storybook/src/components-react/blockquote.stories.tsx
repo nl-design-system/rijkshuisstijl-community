@@ -12,6 +12,11 @@ const meta = {
       name: 'attribution',
       type: { name: 'string', required: false },
     },
+    borderRadiusCorner: {
+      name: 'borderRadiusCorner',
+      control: { type: 'select' },
+      options: [undefined, 'start-start', 'start-end', 'end-start', 'end-end'],
+    },
   },
   args: {
     children: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
@@ -60,5 +65,40 @@ export const RoundedCorner: Story = {
           'Zet de rounded corner utility class op de blockquote om één hoek af te ronden, zoals in het ontwerp. De blockquote heeft nog geen achtergrondkleur; daardoor is de afgeronde hoek in dit voorbeeld nog niet zichtbaar.',
       },
     },
+  },
+};
+
+export const OutlineTopLeft: Story = {
+  name: 'Outline (hoek linksboven)',
+  args: {
+    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
+    attribution: 'Pippi Langkous',
+    borderRadiusCorner: 'start-start',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Zet `borderRadiusCorner` om de opt-in outline te tekenen: een rand op de twee zijden naast de gekozen hoek, met die hoek afgerond. De rand en tekst nemen de themeable primary-kleur over.',
+      },
+    },
+  },
+};
+
+export const OutlineTopRight: Story = {
+  name: 'Outline (hoek rechtsboven)',
+  args: {
+    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
+    attribution: 'Pippi Langkous',
+    borderRadiusCorner: 'start-end',
+  },
+};
+
+export const OutlineBottomLeft: Story = {
+  name: 'Outline (hoek linksonder)',
+  args: {
+    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
+    attribution: 'Pippi Langkous',
+    borderRadiusCorner: 'end-start',
   },
 };
