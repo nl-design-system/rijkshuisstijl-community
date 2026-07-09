@@ -94,28 +94,30 @@ export const SharedSideNav = ({ currentHref }: { currentHref?: string }) => {
       <div className="rhc-shared-side-nav__inline">
         <SideNav {...nav} />
       </div>
-      <button className="rhc-shared-side-nav__trigger" type="button" onClick={() => setOpen(true)}>
+      <button
+        aria-haspopup="dialog"
+        className="rhc-shared-side-nav__trigger"
+        type="button"
+        onClick={() => setOpen(true)}
+      >
         <Icon icon="menu" />
         Menu
       </button>
       <Drawer
         modal
         align="inline-end"
-        aria-label="Menu"
-        className="rhc-shared-side-nav__drawer rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-start-start rhc-rounded-corner--position-end-start"
+        className="rhc-shared-side-nav__drawer rhc-rounded-corner rhc-rounded-corner--size-md rhc-rounded-corner--position-end-start"
         open={open}
         onClose={() => setOpen(false)}
       >
         <header className="utrecht-drawer__header rhc-shared-side-nav__drawer-header" key="header">
-          {/* Native sluiten: submit van een method="dialog"-form sluit de <dialog>. */}
-          <form method="dialog">
-            <button className="rhc-shared-side-nav__drawer-close" type="submit">
-              Sluiten
-              <Icon icon="kruis" />
-            </button>
-          </form>
+          {/* Sluiten via de state; onClose vangt daarnaast Esc / backdrop-sluiten af. */}
+          <button className="rhc-shared-side-nav__drawer-close" type="button" onClick={() => setOpen(false)}>
+            Sluiten
+            <Icon icon="kruis" />
+          </button>
         </header>
-        <nav aria-label="Zijnavigatie" className="utrecht-drawer__body rhc-mobile-nav" key="body">
+        <div aria-label="Menu" className="utrecht-drawer__body rhc-mobile-nav" key="body" role="group" tabIndex={0}>
           {mobileGroups.map((items, index) => (
             <ul className="rhc-mobile-nav__group" key={index}>
               {items.map(({ href, icon, label }) => (
@@ -132,7 +134,7 @@ export const SharedSideNav = ({ currentHref }: { currentHref?: string }) => {
               ))}
             </ul>
           ))}
-        </nav>
+        </div>
       </Drawer>
     </>
   );

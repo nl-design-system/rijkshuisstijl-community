@@ -27,12 +27,13 @@
   --utrecht-drawer-body-padding-inline-start: var(--rhc-space-2xl);
   --utrecht-drawer-body-padding-inline-end: var(--rhc-space-2xl);
 
-  /* Afronding zoals Figma (border-radius/0.5 = 20px) i.p.v. de rounded-corner-md van 48px. */
-  --rhc-rounded-corner-md-border-radius: 1.25rem;
+  /* Onderhoek (24px) i.p.v. de rounded-corner-md van 48px. */
+  --rhc-rounded-corner-md-border-radius: 1.5rem;
 
-  /* Bijna volle breedte met linkermarge, rechts flush (Figma). */
+  /* Bijna volle breedte met linkermarge, rechts flush; hoogte = inhoud (onderrand loslaten). */
   box-sizing: border-box;
   inline-size: calc(100% - var(--rhc-space-lg));
+  inset-block-end: auto;
 }
 
 /* Backdrop conform Figma (surface/backdrop), duidelijk donkerder dan de component-default. */
@@ -40,8 +41,9 @@
   background-color: rgb(15 23 42 / 80%);
 }
 
-/* Sluitknop rechtsboven in de action-kleur (Figma). */
+/* Sluitknop rechtsboven, verticaal gecentreerd (component-header is flex-start). */
 .rhc-shared-side-nav__drawer-header {
+  align-items: center;
   justify-content: flex-end;
 }
 
