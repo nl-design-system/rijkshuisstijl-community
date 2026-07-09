@@ -9,6 +9,14 @@
  * (nu page-CSS, zoals details/). GAP: design-tokens + component.
  */
 
+/* Zijspacing rond de hele pagina-content (hero, titelband, artikel), gecentreerd op brede schermen. */
+.rhc-templates-content-artikel-page .utrecht-page-body__content {
+  box-sizing: border-box;
+  margin-inline: auto;
+  max-inline-size: 80rem;
+  padding-inline: var(--rhc-space-2xl);
+}
+
 /* Hero zet border-radius/aspect-ratio alleen met een heading; beeld-only regelt het hier. */
 .rhc-templates-content-artikel__hero.rhc-hero--aspect-ratio-16-9 {
   aspect-ratio: 1282 / 418;
@@ -106,6 +114,12 @@
   color: var(--rhc-color-primary-500);
 }
 
+/* Artikel-body in een gecentreerde leeskolom (hero + titelband blijven full-width). */
+.rhc-templates-content-artikel__article {
+  margin-inline: auto;
+  max-inline-size: 846px;
+}
+
 /* Ruimere afstand tussen de content-blokken; overschrijft de gedeelde 32px. */
 .rhc-templates-content-artikel__article .rhc-templates-spacing-2 {
   margin-block-end: var(--rhc-space-5xl);
@@ -115,8 +129,11 @@
   margin-block-end: var(--rhc-space-5xl);
 }
 
-/* Terug-link naar de bovenliggende pagina; alleen op smalle schermen zichtbaar. */
-.rhc-templates-content-artikel__back {
+/*
+ * Terug-link naar de bovenliggende pagina; alleen op smalle schermen zichtbaar.
+ * .rhc-link erbij voor genoeg specificity om de inline-flex van .rhc-link.nl-link:any-link te verslaan.
+ */
+.rhc-templates-content-artikel__title .rhc-templates-content-artikel__back.rhc-link {
   --utrecht-link-color: var(--rhc-color-primary-500);
 
   color: var(--rhc-color-primary-500);
@@ -143,7 +160,7 @@
     display: none;
   }
 
-  .rhc-templates-content-artikel__back {
+  .rhc-templates-content-artikel__title .rhc-templates-content-artikel__back {
     align-items: center;
     column-gap: var(--rhc-space-sm);
     display: inline-flex;

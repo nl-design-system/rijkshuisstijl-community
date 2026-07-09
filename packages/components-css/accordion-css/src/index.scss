@@ -29,3 +29,14 @@
   inline-size: var(--utrecht-accordion-button-icon-size);
   justify-content: center;
 }
+
+/**
+ * Chevron bovenaan uitlijnen met meerregelige titels (Utrecht's baseline wordt
+ * overruled door .utrecht-button align-items: center) en meer ruimte om het icoon.
+ * Compound-selector voor genoeg specificity om .utrecht-button te verslaan.
+ */
+.utrecht-button.utrecht-accordion__button {
+  --utrecht-accordion-button-gap: var(--rhc-space-md);
+
+  align-items: flex-start;
+}
