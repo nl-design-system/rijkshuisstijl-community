@@ -9,7 +9,7 @@ import SharedRijkshuisstijlDisclaimer from './rijkshuisstijl-disclaimer';
  * (sitenaam + ingelogde gebruiker), niet het community-websitemenu.
  */
 export default function MijnOmgevingHeader({
-  organisation = 'Rijksoverheid',
+  organisation = 'Rijkshuisstijl Community',
   siteName = 'MijnDashboard',
   userName = 'J. Janssen',
 }: { organisation?: ReactNode; siteName?: ReactNode; userName?: ReactNode } = {}) {
