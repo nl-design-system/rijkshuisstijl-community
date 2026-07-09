@@ -8,6 +8,9 @@
 .utrecht-page-body--rhc-mijn-omgeving .rhc-templates-page-content {
   flex-direction: row;
   flex-wrap: wrap;
+
+  /* Geen inline-padding hier: de gutter komt van .utrecht-page-body__content (anders dubbel). */
+  padding-inline: var(--rhc-space-none);
 }
 
 /**
@@ -16,4 +19,24 @@
  */
 .utrecht-page-body--rhc-mijn-omgeving .denhaag-side-navigation {
   --denhaag-side-navigation-min-width: 17rem;
+}
+
+/*
+ * Zijmarge (gutter) + max-breedte op de body-content, zoals info-dense: op alle breedtes
+ * (5rem desktop, kleiner op mobiel), gecentreerd. De header krijgt dezelfde gutter (side-nav.css)
+ * zodat logo/menu uitlijnen met de content.
+ */
+.utrecht-page-body--rhc-mijn-omgeving .utrecht-page-body__content {
+  --rhc-mijn-omgeving-gutter: 5rem;
+
+  box-sizing: border-box;
+  margin-inline: auto;
+  max-inline-size: calc(var(--rhc-size-page-md) + var(--rhc-mijn-omgeving-gutter) * 2);
+  padding-inline: var(--rhc-mijn-omgeving-gutter);
+}
+
+@media (width < 64rem) {
+  .utrecht-page-body--rhc-mijn-omgeving .utrecht-page-body__content {
+    --rhc-mijn-omgeving-gutter: var(--rhc-space-xl);
+  }
 }
