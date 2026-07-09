@@ -1,0 +1,390 @@
+.rhc-info-dense {
+  /**
+   * GAP: de subtle Button (de tekstknop-variant) rendert navy/semibold/20px,
+   * terwijl hier een action-blauwe, regular, compacte tekstknop nodig is. Kleur
+   * staat hier; grootte/gewicht/icoon per knop verderop. Weg te halen zodra de
+   * subtle-button tokens (--nl-button-subtle-*) op componentniveau kloppen.
+   */
+  --nl-button-subtle-color: var(--rhc-color-foreground-link);
+
+  box-sizing: border-box;
+  inline-size: 100%;
+  padding-block: var(--rhc-space-3xl);
+}
+
+/*
+ * Paginabreedte + zijmarge (Figma: content max 1280px, gutter 80px = base-unit/20; nog geen RHC-token).
+ * Op zowel de paginakop (NavBar/logo) als de body-content, zodat ze uitlijnen. Beide kappen standaard
+ * op 1280px zonder gutter; hier verruimd naar 1280 + 2×gutter zodat de content 1280 blijft mét zijmarge.
+ */
+.rhc-info-dense-page .utrecht-page-header__content,
+.rhc-info-dense-page .utrecht-page-body__content {
+  --rhc-info-dense-page-gutter: 5rem;
+
+  box-sizing: border-box;
+  margin-inline: auto;
+  max-inline-size: calc(var(--rhc-size-page-md) + var(--rhc-info-dense-page-gutter) * 2);
+  padding-inline: var(--rhc-info-dense-page-gutter);
+}
+
+.rhc-info-dense-page .rhc-logo {
+  --rhc-logo-image-background-color: var(--rhc-color-primary-500);
+  --rhc-logo-image-color: var(--rhc-color-foreground-on-primary);
+}
+
+.rhc-info-dense__grid {
+  align-items: start;
+  display: grid;
+  gap: var(--rhc-space-3xl);
+  grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
+}
+
+/* Mobiele nav (Zoeken + Menu); NavBar heeft geen mobiele modus (GAP). Standaard verborgen. */
+.rhc-info-dense__mobile-nav {
+  display: none;
+}
+
+.rhc-info-dense__mobile-nav-link {
+  /* Icoon↔tekst-afstand als de TextButton in Figma (base-unit/1 = 4px). */
+  --rhc-link-column-gap: var(--rhc-space-sm);
+  --utrecht-icon-size: 1.5rem;
+
+  align-items: center;
+  background: none;
+  border: none;
+  color: var(--rhc-color-primary-500);
+  column-gap: var(--rhc-space-sm);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-weight: 700;
+  padding-block: var(--rhc-space-md);
+  text-decoration: none;
+}
+
+/*
+ * Menu-drawer (Figma 9141-31074): structuur/gedrag komen uit het Drawer-component (library-css
+ * drawer-laag + tokens). Hier stemmen we het af op de mobiele menu-context: donkerdere backdrop en
+ * compactere padding/afronding dan de standaard (die op de 600px side-drawer is afgestemd).
+ */
+.rhc-info-dense__drawer {
+  /*
+   * Rechter side-drawer, vlak tegen de bovenkant. De component zet op inline-drawers een
+   * inset-block-start van 48px; voor dit menu hoort dat 0 te zijn (drawer begint bovenaan).
+   * TODO: gedrag evt. in het drawer-component zelf afstemmen (2640-drawer-rounded-corner).
+   */
+  --rhc-drawer-margin-block-start: var(--rhc-space-none);
+
+  /* Bijna volle breedte met 12px linkermarge (Figma), rechts flush; component-max (600px) begrenst breder. */
+  box-sizing: border-box;
+  inline-size: calc(100% - var(--rhc-space-lg));
+
+  /* Hoogte = inhoud (Figma), niet volledig: onderkant loslaten zodat de afgeronde onderrand zichtbaar is. */
+  inset-block-end: auto;
+
+  /* Compactere padding voor het smalle mobiele menu (default is space-5xl = 48px). */
+  --utrecht-drawer-header-padding-block-end: var(--rhc-space-lg);
+  --utrecht-drawer-header-padding-block-start: var(--rhc-space-2xl);
+  --utrecht-drawer-header-padding-inline-end: var(--rhc-space-2xl);
+  --utrecht-drawer-header-padding-inline-start: var(--rhc-space-2xl);
+  --utrecht-drawer-body-padding-block-end: var(--rhc-space-2xl);
+  --utrecht-drawer-body-padding-block-start: var(--rhc-space-2xl);
+  --utrecht-drawer-body-padding-inline-end: var(--rhc-space-2xl);
+  --utrecht-drawer-body-padding-inline-start: var(--rhc-space-2xl);
+
+  /* Onderhoeken 24px (Figma) i.p.v. de rounded-corner-md van 48px. */
+  --rhc-rounded-corner-md-border-radius: 1.5rem;
+}
+
+/* Backdrop conform Figma (surface/backdrop), duidelijk donkerder dan de component-default. */
+.rhc-info-dense__drawer::backdrop {
+  background-color: rgb(15 23 42 / 80%);
+}
+
+/* Home-icoon en sluitknop verticaal centreren; de component-header is flex-start. */
+.rhc-info-dense__drawer .utrecht-drawer__header {
+  align-items: center;
+}
+
+.rhc-info-dense__drawer-home {
+  --utrecht-icon-size: 1.5rem;
+
+  color: var(--rhc-color-primary-500);
+}
+
+/* Sluiten in de action-kleur (Figma). */
+.rhc-info-dense__drawer-close {
+  color: var(--rhc-color-foreground-link);
+}
+
+.rhc-info-dense__drawer-nav {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-block: var(--rhc-space-none);
+  padding-inline-start: var(--rhc-space-none);
+  row-gap: var(--rhc-space-2xl);
+}
+
+/* Nav-items navy zonder onderstreping. */
+.rhc-info-dense__drawer-nav a {
+  --nl-link-text-decoration-line: none;
+
+  color: var(--rhc-color-primary-500);
+}
+
+/* Snelkoppelingen onderaan (Mijn RVO, Zoeken) vet, met icoon, in de action-kleur. */
+.rhc-info-dense__drawer-nav-end a {
+  --rhc-link-column-gap: var(--rhc-space-sm);
+
+  color: var(--rhc-color-foreground-link);
+  font-weight: 700;
+}
+
+/* Mimict een nog niet bestaande surface-container met primary-tint. */
+.rhc-info-dense__filters {
+  background-color: var(--rhc-color-primary-50);
+  box-sizing: border-box;
+}
+
+.rhc-info-dense__filters-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-space-2xl);
+  padding-block: var(--rhc-space-3xl);
+  padding-inline: var(--rhc-space-3xl);
+}
+
+.rhc-info-dense__filters-header {
+  align-items: center;
+  column-gap: var(--rhc-space-md);
+  display: flex;
+  justify-content: space-between;
+}
+
+.rhc-info-dense__reset {
+  /* Icoon schaalt mee met de knoptekst i.p.v. de vaste 1.5rem. */
+  --utrecht-icon-size: 1em;
+
+  column-gap: var(--rhc-space-sm);
+  flex-shrink: 0;
+  font-size: var(--rhc-text-font-size-sm);
+  font-weight: var(--rhc-text-font-weight-default);
+  white-space: nowrap;
+}
+
+/* Icoon donker terwijl de knoptekst de action-kleur houdt. */
+.rhc-info-dense__reset .utrecht-icon {
+  color: var(--rhc-color-primary-500);
+}
+
+.rhc-info-dense__toon-meer {
+  --utrecht-icon-size: 1em;
+
+  align-self: flex-start;
+  font-size: var(--rhc-text-font-size-sm);
+  font-weight: var(--rhc-text-font-weight-default);
+
+  /* Tekst flush met de legend/checkboxen; subtle button heeft standaard inline-padding. */
+  padding-inline: var(--rhc-space-none);
+}
+
+.rhc-info-dense__main {
+  display: flex;
+  flex-direction: column;
+
+  /* Titel start lager dan de sidebar: gelijk aan de bovenpadding van de filterkaart, zodat de H1 met de 'Filters'-kop uitlijnt. */
+  padding-block-start: var(--rhc-space-3xl);
+
+  /* Ruimere scheiding tussen de hoofdblokken (titelblok, actieve filters, resultaten). */
+  row-gap: var(--rhc-space-3xl);
+}
+
+/* Titelblok: kop, intro-tekst en link compact bij elkaar (Figma responsive-spacing/md = 16px). */
+.rhc-info-dense__intro {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--rhc-space-xl);
+}
+
+.rhc-info-dense__section {
+  display: flex;
+  flex-direction: column;
+
+  /* Blokken binnen een sectie (kop, separators, lijst, paginering) op 24px (Figma base-unit/6). */
+  row-gap: var(--rhc-space-2xl);
+}
+
+/* Separator flush: de sectie-row-gap regelt de afstand (Figma auto-layout), geen dubbele marge. */
+.rhc-info-dense__section .rhc-separator {
+  margin-block: var(--rhc-space-none);
+}
+
+/* GAP: geen dismissible Tag-component (#2651); hier gemimickt met een knop. */
+.rhc-info-dense__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--rhc-space-sm);
+  list-style: none;
+  margin-block: var(--rhc-space-none);
+  padding-inline-start: var(--rhc-space-none);
+}
+
+.rhc-info-dense__tag {
+  align-items: center;
+  background-color: var(--rhc-color-primary-100);
+  border: none;
+  border-radius: var(--rhc-border-radius-md);
+  color: var(--rhc-color-primary-500);
+  column-gap: var(--rhc-space-sm);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  padding-block: var(--rhc-space-2xs);
+  padding-inline: var(--rhc-space-md);
+}
+
+.rhc-info-dense__results-header {
+  align-items: center;
+  column-gap: var(--rhc-space-lg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: var(--rhc-space-sm);
+}
+
+/* Label inline vóór de select i.p.v. erboven. */
+.rhc-info-dense__sort .utrecht-form-field {
+  align-items: center;
+  column-gap: var(--rhc-space-lg);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.rhc-info-dense__sort .utrecht-form-field__label {
+  flex: 0 0 auto;
+
+  /* Label staat naast (niet boven) de select; stacked-marge eronder zou 'm bij align-items:center omhoog duwen. */
+  margin-block-end: var(--rhc-space-none);
+  order: -1;
+}
+
+.rhc-info-dense__sort .utrecht-form-label {
+  white-space: nowrap;
+}
+
+.rhc-info-dense__sort .utrecht-select {
+  /*
+   * Focus verdikt de rand 1px→2px. Zonder vaste hoogte groeit de box mee (48→50px)
+   * en schuift de hele resultatenrij 2px omlaag. Pin de hoogte op de eigen min-hoogte
+   * (border-box vangt de dikkere rand naar binnen op), dus geen layout-shift bij focus.
+   */
+  block-size: var(--utrecht-select-min-block-size);
+  box-sizing: border-box;
+  min-inline-size: 14rem;
+}
+
+.rhc-info-dense__results {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-block: var(--rhc-space-none);
+
+  /* Extra lucht onder de lijst vóór de afsluitende separator (Figma list-frame padding). */
+  padding-block-end: var(--rhc-space-2xl);
+  padding-inline-start: var(--rhc-space-none);
+
+  /* Ruimte tussen de resultaten onderling (Figma responsive-spacing/2xl = 32px). */
+  row-gap: var(--rhc-space-3xl);
+}
+
+.rhc-info-dense__result {
+  display: flex;
+  flex-direction: column;
+
+  /* Titel en omschrijving compact bij elkaar (Figma responsive-spacing/sm = 12px). */
+  row-gap: var(--rhc-space-lg);
+}
+
+.rhc-info-dense__result-link {
+  /* Chevron→titel-gap op 8px (Figma base-unit/2) via de component-token; met chevron 24px valt de titeltekst op de 32px-indent. */
+  --rhc-link-column-gap: var(--rhc-space-md);
+
+  font-size: var(--rhc-text-font-size-lg);
+  font-weight: 700;
+}
+
+/* Omschrijving lijnt uit met de titeltekst (niet met de chevron): chevron 24px + gap 8px = 32px. */
+.rhc-info-dense__result-body {
+  padding-inline-start: var(--rhc-space-3xl);
+}
+
+/*
+ * Responsive overrides staan bewust achteraan, ná de basisregels, zodat ze bij gelijke
+ * specificiteit winnen (media queries verhogen de specificiteit niet).
+ */
+
+/* Onder de nav-breakpoint: de volledige menubalk verbergen, compacte mobiele nav tonen. */
+@media (width < 75rem) {
+  .rhc-info-dense-page .rhc-nav-bar__container {
+    display: none;
+  }
+
+  .rhc-info-dense__mobile-nav {
+    align-items: center;
+    border-block-end: var(--rhc-nav-bar-border-block-end-width, 1px) solid
+      var(--rhc-nav-bar-border-color, var(--rhc-color-primary-100));
+    column-gap: var(--rhc-space-lg);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+/* Onder de layout-breakpoint: één kolom, sidebar weg, kleinere zijmarge (Figma mobiel). */
+@media (width < 64rem) {
+  .rhc-info-dense-page .utrecht-page-header__content,
+  .rhc-info-dense-page .utrecht-page-body__content {
+    /* Compactere zijmarge dan 80px. */
+    --rhc-info-dense-page-gutter: var(--rhc-space-xl);
+  }
+
+  .rhc-info-dense__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Filterpaneel zit op mobiel niet in de layout (Figma); GAP: hoort in een drawer. */
+  .rhc-info-dense__filters {
+    display: none;
+  }
+
+  /* Zonder sidebar is de titel-offset niet meer nodig. */
+  .rhc-info-dense__main {
+    padding-block-start: var(--rhc-space-none);
+  }
+
+  /* Actieve-filter-tags onder elkaar. */
+  .rhc-info-dense__tags {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  /* Sorteren boven het aantal resultaten (Figma mobiel). */
+  .rhc-info-dense__results-header {
+    align-items: stretch;
+    flex-direction: column-reverse;
+    row-gap: var(--rhc-space-md);
+  }
+
+  /* Select vult de resterende breedte naast het label. */
+  .rhc-info-dense__sort .utrecht-select {
+    flex: 1 1 auto;
+    min-inline-size: 0;
+  }
+
+  /* Logo gecentreerd op mobiel (Figma). */
+  .rhc-info-dense-page .rhc-logo {
+    justify-content: center;
+  }
+}
