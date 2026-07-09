@@ -212,7 +212,7 @@ export default function InformationDense() {
               <Icon icon="kruis" />
             </button>
           </header>
-          <div aria-label="Menu" className="utrecht-drawer__body" role="group" tabIndex={0}>
+          <div aria-label="Menu" className="utrecht-drawer__body" role="group">
             <ul className="rhc-info-dense__drawer-nav">
               {navItems.map((item) => (
                 <li key={item.id}>
