@@ -137,7 +137,10 @@
   .rhc-page-header-layout:has(.rhc-shared-side-nav__trigger) .rhc-nav-bar__container {
     display: none;
   }
+}
 
+/* Kleinere gutter zodra de content-gutter ook krimpt (< 64rem), zodat header en content uitlijnen. */
+@media (width < 64rem) {
   .utrecht-page-header__content:has(.rhc-shared-side-nav__trigger) {
     --rhc-mijn-omgeving-gutter: var(--rhc-space-xl);
   }
