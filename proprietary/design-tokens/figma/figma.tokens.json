@@ -20,6 +20,10 @@
           "$type": "dimension",
           "$value": "2px"
         },
+        "lg": {
+          "$type": "dimension",
+          "$value": "4px"
+        },
         "none": {
           "$type": "dimension",
           "$value": "0px"
@@ -3983,11 +3987,15 @@
         },
         "border-radius": {
           "$type": "dimension",
-          "$value": "{rhc.border-radius.md}"
+          "$value": "{rhc.border-radius.none}"
         },
         "border-width": {
           "$type": "dimension",
           "$value": "{rhc.border-width.none}"
+        },
+        "border-inline-start-width": {
+          "$type": "dimension",
+          "$value": "{rhc.border-width.lg}"
         },
         "color": {
           "$type": "color",
@@ -4009,19 +4017,19 @@
         },
         "padding-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.xl}"
+          "$value": "{rhc.space.2xl}"
         },
         "padding-block-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.xl}"
+          "$value": "{rhc.space.2xl}"
         },
         "padding-inline-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.xl}"
+          "$value": "{rhc.space.2xl}"
         },
         "padding-inline-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.xl}"
+          "$value": "{rhc.space.2xl}"
         },
         "content": {
           "row-gap": {
@@ -4036,7 +4044,11 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.transparent}"
+            "$value": "{rhc.color.negative.500}"
+          },
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{rhc.border-width.none}"
           },
           "color": {
             "$type": "color",
@@ -4050,7 +4062,11 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.transparent}"
+            "$value": "{rhc.color.info.500}"
+          },
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{rhc.border-width.none}"
           },
           "color": {
             "$type": "color",
@@ -4070,7 +4086,11 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.transparent}"
+            "$value": "{rhc.color.positive.500}"
+          },
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{rhc.border-width.none}"
           },
           "color": {
             "$type": "color",
@@ -4084,7 +4104,11 @@
           },
           "border-color": {
             "$type": "color",
-            "$value": "{rhc.color.transparent}"
+            "$value": "{rhc.color.warning.500}"
+          },
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{rhc.border-width.none}"
           },
           "color": {
             "$type": "color",
