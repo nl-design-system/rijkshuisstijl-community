@@ -5,6 +5,7 @@ import {
   Alert,
   ButtonLink,
   Card,
+  Footer,
   Heading,
   HeadingLevel,
   Icon,
@@ -18,7 +19,6 @@ import {
 } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
 import { ReactNode } from 'react';
-import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
 import { SharedSideNav } from '../shared/side-nav';
@@ -71,15 +71,9 @@ export default function MijnOmgeving() {
                 faucibus ullamcorper etiam id in.
               </Paragraph>
             </Alert>
-            {/*
-             * GAP: het ontwerp toont 'Recent' en 'Wat kan ik waar vinden?' in card-containers op volle
-             * breedte. De RHC Card is een vaste-breedte grid-card (inline-flex + max-inline-size); een
-             * full-width card/panel-variant hoort in de component-bron (card-css), niet in deze
-             * integratiebranch. Daarom hier platte secties met de al matchende item-componenten.
-             */}
-            <div>
+            {/* Full-width card-container (ontwerp): witte kaart met subtiele rand en afgeronde rechterbovenhoek. */}
+            <div className="rhc-mijn-omgeving-card">
               <Heading level={2}>Recent</Heading>
-              <Separator invisible />
               <MessageList>
                 <MessageListItem
                   description={'Update: Uw klacht bij gemeente Utrecht'}
@@ -102,9 +96,8 @@ export default function MijnOmgeving() {
                 />
               </MessageList>
             </div>
-            <div>
+            <div className="rhc-mijn-omgeving-card">
               <Heading level={2}>Wat kan ik waar vinden?</Heading>
-              <Separator invisible />
               <NavigationList>
                 <NavigationListItem
                   description="Uw gegevens, familie en identiteitsbewijs"
@@ -179,7 +172,13 @@ export default function MijnOmgeving() {
         </SharedMainPageContent>
       </PageBody>
       {/* GAP: de compacte Page Footer-variant bestaat nog niet (#2649); hier staat de standaard footer. */}
-      <SharedFooter />
+      <Footer tagline="De Rijksoverheid. Voor Nederland" variant="compact">
+        <Link href="#">Contact</Link>
+        <Link href="#">Privacy</Link>
+        <Link href="#">Cookies en anti-spam</Link>
+        <Link href="#">Toegankelijkheid</Link>
+        <Link href="#">Proclaimer</Link>
+      </Footer>
     </>
   );
 }
