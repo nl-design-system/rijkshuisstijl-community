@@ -12,8 +12,6 @@ import {
   Link,
   MessageList,
   MessageListItem,
-  NavigationList,
-  NavigationListItem,
   Paragraph,
   Separator,
 } from '@rijkshuisstijl-community/components-react';
@@ -73,7 +71,9 @@ export default function MijnOmgeving() {
             </Alert>
             {/* Full-width card-container (ontwerp): witte kaart met subtiele rand en afgeronde rechterbovenhoek. */}
             <div className="rhc-mijn-omgeving-card">
-              <Heading level={2}>Recent</Heading>
+              <Heading appearanceLevel={4} level={2}>
+                Recent
+              </Heading>
               <MessageList>
                 <MessageListItem
                   description={'Update: Uw klacht bij gemeente Utrecht'}
@@ -97,54 +97,93 @@ export default function MijnOmgeving() {
               </MessageList>
             </div>
             <div className="rhc-mijn-omgeving-card">
-              <Heading level={2}>Wat kan ik waar vinden?</Heading>
-              <NavigationList>
-                <NavigationListItem
+              <Heading appearanceLevel={4} level={2}>
+                Wat kan ik waar vinden?
+              </Heading>
+              <MessageList>
+                <MessageListItem
                   description="Uw gegevens, familie en identiteitsbewijs"
                   href="/mijn-omgeving-identiteit/"
-                  icon="user"
-                  label="Identiteit"
+                  metaData="18/06/2025"
+                  label={
+                    <>
+                      <Icon icon="user" />
+                      Identiteit
+                    </>
+                  }
                 />
-                <NavigationListItem
+                <MessageListItem
                   description="Uw inkomen, toeslagen, bijdragen en belastingen"
                   href="/mijn-omgeving-financien/"
-                  icon="currency-euro"
-                  label="Financiën"
+                  metaData="18/06/2025"
+                  label={
+                    <>
+                      <Icon icon="currency-euro" />
+                      Financiën
+                    </>
+                  }
                 />
-                <NavigationListItem
+                <MessageListItem
                   description="Uw pensioen, arbeidsgegevens en uitkeringen"
                   href="/mijn-omgeving-werk/"
-                  icon="briefcase"
-                  label="Werk"
+                  metaData="18/06/2025"
+                  label={
+                    <>
+                      <Icon icon="hashtag" />
+                      Werk
+                    </>
+                  }
                 />
-                <NavigationListItem
+                <MessageListItem
                   description="Donorregister en Persoonsgebonden budget"
                   href="/mijn-omgeving-gezondheid/"
-                  icon="favoriet"
-                  label="Gezondheid"
+                  metaData="18/06/2025"
+                  label={
+                    <>
+                      <Icon icon="favoriet" />
+                      Gezondheid
+                    </>
+                  }
                 />
-                <NavigationListItem
+                <MessageListItem
                   description="Uw energielabel, kadastrale- en WOZ-gegevens"
                   href="/mijn-omgeving-wonen/"
-                  icon="home"
-                  label="Wonen"
+                  metaData="18/06/2025"
+                  label={
+                    <>
+                      <Icon icon="home" />
+                      Wonen
+                    </>
+                  }
                 />
-                <NavigationListItem
+                <MessageListItem
                   description="Uw voertuigen"
                   href="/mijn-omgeving-vervoer/"
-                  icon="car"
-                  label="Vervoer"
-                />{' '}
-                <NavigationListItem
+                  metaData="18/06/2025"
+                  label={
+                    <>
+                      <Icon icon="car" />
+                      Vervoer
+                    </>
+                  }
+                />
+                <MessageListItem
                   description="Uw diploma’s en studiefinanciering / studieschuld"
                   href="/mijn-omgeving-onderwijs/"
-                  icon="backpack"
-                  label="Onderwijs"
+                  metaData="18/06/2025"
+                  label={
+                    <>
+                      <Icon icon="school" />
+                      Onderwijs
+                    </>
+                  }
                 />
-              </NavigationList>
+              </MessageList>
             </div>
             <div>
-              <Heading level={2}>Veelgestelde vragen</Heading>
+              <Heading appearanceLevel={4} level={2}>
+                Veelgestelde vragen
+              </Heading>
               <Separator invisible />
               <AccordionProvider
                 sections={[

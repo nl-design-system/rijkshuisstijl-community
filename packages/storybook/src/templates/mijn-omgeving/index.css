@@ -32,6 +32,9 @@
   box-sizing: border-box;
   margin-inline: auto;
   max-inline-size: calc(var(--rhc-size-page-md) + var(--rhc-mijn-omgeving-gutter) * 2);
+
+  /* Extra ruimte tussen de laatste content en de (compacte) footer. */
+  padding-block-end: var(--rhc-space-5xl);
   padding-inline: var(--rhc-mijn-omgeving-gutter);
 }
 
@@ -56,4 +59,16 @@
   padding-block-end: var(--rhc-space-4xl);
   padding-block-start: var(--rhc-space-2xl);
   padding-inline: var(--rhc-space-2xl);
+}
+
+/*
+ * In het ontwerp staan er alleen scheidingslijnen tússen de rijen: geen lijn direct
+ * onder de heading (top-border van de eerste rij) en geen lijn onder de laatste rij.
+ */
+.rhc-mijn-omgeving-card .rhc-message-list > li:first-child .rhc-message-list__item {
+  border-block-start-width: 0;
+}
+
+.rhc-mijn-omgeving-card .rhc-message-list {
+  border-block-end-width: 0;
 }
