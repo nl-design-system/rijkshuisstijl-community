@@ -21,6 +21,9 @@
 
   /* Zelfde gecentreerde contentkolom als de hero, zodat kop en formulier uitlijnen. */
   inline-size: 100%;
+
+  /* Ruimte tussen het formulier en de footer. */
+  margin-block-end: var(--rhc-size-2-lint);
   margin-inline: auto;
   max-inline-size: var(--rhc-example-contactformulier-content-max-inline-size);
 }
@@ -45,10 +48,7 @@
   --rhc-example-contactformulier-content-max-inline-size: 845px;
 }
 
-/*
- * Logo gecentreerd bovenaan, met inverted kleuren (navy vlak, wit wapen) en ruimte eronder,
- * gelijk aan de andere voorbeeldpagina's zoals information-dense.
- */
+/* Logo gecentreerd bovenaan, met inverted kleuren (navy vlak, wit wapen) en ruimte eronder. */
 .rhc-example-contactformulier-page .rhc-logo {
   --rhc-logo-image-background-color: var(--rhc-color-primary-500);
   --rhc-logo-image-color: var(--rhc-color-foreground-on-primary);
@@ -64,6 +64,12 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+
+  /* Ruimte tussen de hero-band en het formulier. */
+  margin-block-end: var(--rhc-space-4xl);
+
+  /* Zij-inspringing gelijk aan de content-gutter, zodat de hero nooit tegen de rand plakt. */
+  margin-inline: var(--rhc-size-quarter-lint);
   overflow: clip;
   padding-block-end: var(--rhc-size-lint);
 
@@ -75,23 +81,26 @@
 
 /* Site-naam-badge linksboven, vlak in de hoek, met afgeronde onderhoek rechts. */
 .rhc-example-contactformulier-hero__sitename {
-  --utrecht-icon-size: 2.5rem;
+  /* Badge-maten uit het ontwerp; sluiten niet aan op een space-token. */
+  --rhc-example-contactformulier-sitename-icon-size: 2.5rem;
+  --rhc-example-contactformulier-sitename-padding: 1.25rem;
+  --utrecht-icon-size: var(--rhc-example-contactformulier-sitename-icon-size);
 
   align-items: center;
   background-color: var(--rhc-color-primary-500);
   box-sizing: border-box;
   color: var(--rhc-color-foreground-on-primary);
-  column-gap: var(--rhc-space-sm);
+  column-gap: var(--rhc-space-lg);
   display: flex;
   inset-block-start: 0;
   inset-inline-start: 0;
-  padding-block: var(--rhc-space-lg);
-  padding-inline: var(--rhc-space-lg);
+  padding-block: var(--rhc-example-contactformulier-sitename-padding);
+  padding-inline: var(--rhc-example-contactformulier-sitename-padding);
   position: absolute;
 }
 
 .rhc-example-contactformulier-hero__sitename-label {
-  font-weight: 700;
+  font-weight: var(--rhc-text-font-weight-bold);
 }
 
 /* Contact (outline) + Menu (filled) rechtsboven. */
@@ -120,6 +129,8 @@
   --utrecht-alert-warning-border-color: var(--rhc-color-primary-500);
   --utrecht-alert-icon-warning-color: var(--rhc-color-primary-500);
 
+  /* border-box zodat de eigen padding + rand binnen de contentbreedte blijven (geen overflow rechts). */
+  box-sizing: border-box;
   inline-size: 100%;
 }
 

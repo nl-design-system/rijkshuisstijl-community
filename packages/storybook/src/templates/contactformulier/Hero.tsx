@@ -28,8 +28,7 @@ export const Hero = ({ showNotification = true }: Readonly<{ showNotification?: 
           U kunt uw vraag aan NederlandWereldwijd stellen via het contactformulier. We proberen binnen 5 dagen antwoord
           te geven.
         </Paragraph>
-        {/* De melding is een waarschuwing (let-op-icoon) op de primary-tint; de kleuren
-            worden in index.css afgestemd zodat hij niet als standaard-geel opvalt. */}
+        {/* Waarschuwing (let-op-icoon); kleuren in index.css op de primary-tint afgestemd. */}
         {showNotification ? (
           <Alert className="rhc-example-contactformulier-hero__notification" type="warning">
             <Paragraph>
