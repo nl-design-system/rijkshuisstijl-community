@@ -46,6 +46,7 @@
 @use "@rijkshuisstijl-community/pre-heading-css/src/index" as preHeading;
 @use "@rijkshuisstijl-community/radio-group-css/src/index" as radioGroup;
 @use "@rijkshuisstijl-community/radio-css/src/index" as radio;
+@use "@rijkshuisstijl-community/root-css/src/index" as root;
 @use "@rijkshuisstijl-community/rounded-corner-css/src/index" as roundedCorner;
 @use "src/form-field-select/index" as formFieLdSelect;
 @use "@rijkshuisstijl-community/separator-css/src/index" as separator;
@@ -58,8 +59,6 @@
 @use "@rijkshuisstijl-community/unordered-list-css/src/index" as unorderedList;
 @use "@rijkshuisstijl-community/visually-hidden-css/src/index" as visually-hidden;
 @use "src/wrapper/index" as wrapper;
-@use "@utrecht/document-css/src/mixin" as *;
-@use "@utrecht/focus-ring-css/src/mixin" as *;
 
 @import "@utrecht/action-group-css/dist/index.css";
 @import "@utrecht/article-css/dist/index.css";
@@ -104,18 +103,3 @@
 @import "@utrecht/textbox-css/dist/index.css";
 @import "@utrecht/textarea-css/dist/index.css";
 @import "@utrecht/unordered-list-css/dist/index.css";
-
-.rhc-document {
-  @include utrecht-document;
-
-  a,
-  input,
-  textarea,
-  select,
-  button {
-    &:focus,
-    &:focus-visible {
-      @include utrecht-focus-visible;
-    }
-  }
-}

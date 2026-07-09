@@ -44,15 +44,13 @@ const preview: Preview = {
     }),
     (Story, options) => {
       return options.parameters['isPage'] ? (
-        <Root Component="div" className="rhc-document">
+        <Root Component="div">
           <Body Component="div">
             <PageLayout>{Story()}</PageLayout>
           </Body>
         </Root>
       ) : (
-        <Root Component="div" className="rhc-document">
-          {Story()}
-        </Root>
+        <Root Component="div">{Story()}</Root>
       );
     },
     StoryRootDecorator,
