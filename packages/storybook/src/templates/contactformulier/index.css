@@ -1,12 +1,12 @@
 /*
  * Contactformulier voorbeeldpagina (#2650).
- * Layout-waarden zijn scoped op deze template en sluiten aan op het Figma-ontwerp
- * (node 5861-30087): 24px ritme tussen velden, 8px binnen een veld, veldbreedte 627px.
+ * Layout-waarden zijn scoped op deze template en volgen het ontwerp:
+ * 24px ritme tussen velden, 8px binnen een veld, veldbreedte 627px.
  * De onderliggende componenten blijven ongewijzigd.
  */
 
 .rhc-example-contactformulier__form {
-  /* Figma Form field-breedte, alleen binnen deze voorbeeldpagina. */
+  /* Vaste veldbreedte uit het ontwerp, alleen binnen deze voorbeeldpagina. */
   --rhc-example-contactformulier-field-max-inline-size: 627px;
   --utrecht-select-max-inline-size: var(--rhc-example-contactformulier-field-max-inline-size);
   --utrecht-textbox-max-inline-size: var(--rhc-example-contactformulier-field-max-inline-size);
@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
 
-  /* Figma static-spacing/1xl: verticaal ritme tussen de velden. */
+  /* Verticaal ritme tussen de velden. */
   gap: var(--rhc-space-2xl);
 
   /* Zelfde gecentreerde contentkolom als de hero, zodat kop en formulier uitlijnen. */
@@ -25,13 +25,13 @@
   max-inline-size: var(--rhc-example-contactformulier-content-max-inline-size);
 }
 
-/* Groepeer label, beschrijving en checkbox als één veld (Figma static-spacing/xs). */
+/* Groepeer label, beschrijving en checkbox als één veld. */
 .rhc-example-contactformulier__consent {
   display: flex;
   flex-direction: column;
   gap: var(--rhc-space-md);
 
-  /* Zelfde kolombreedte als de velden, zodat de tekst net als in Figma wrapt. */
+  /* Zelfde kolombreedte als de velden, zodat de tekst gelijk wrapt. */
   max-inline-size: var(--rhc-example-contactformulier-field-max-inline-size);
 }
 
@@ -40,7 +40,7 @@
  * site-naam-badge linksboven en Contact/Menu-knoppen rechtsboven. Nog geen RHC-component.
  */
 
-/* Gedeelde contentkolom-breedte (Figma), zodat hero en formulier uitlijnen. */
+/* Gedeelde contentkolom-breedte, zodat hero en formulier uitlijnen. */
 .rhc-example-contactformulier-page {
   --rhc-example-contactformulier-content-max-inline-size: 845px;
 }

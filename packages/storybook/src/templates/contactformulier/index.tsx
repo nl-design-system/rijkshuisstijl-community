@@ -22,7 +22,7 @@ import { Main } from '../shared/Main';
 import SharedMainPageContent from '../shared/main-page-content';
 import './index.css';
 
-// Contactformulier voorbeeldpagina (#2650). Puur uit RHC-componenten samengesteld; gaten t.o.v. Figma staan in de PR.
+// Contactformulier voorbeeldpagina (#2650). Puur uit RHC-componenten samengesteld; gaten t.o.v. het ontwerp staan in de PR.
 export default function Contactformulier({
   showErrors = false,
   showNotification = true,
@@ -93,13 +93,13 @@ export default function Contactformulier({
                   type="email"
                 />
               </div>
-              {/* GAP: Form Field heeft geen label-suffix-API; het "(Niet verplicht)"-suffix uit Figma staat hier als platte tekst in het label. */}
+              {/* GAP: Form Field heeft geen label-suffix-API; het "(Niet verplicht)"-suffix staat hier als platte tekst in het label. */}
               <FormFieldTextInput label="Telefoonnummer (Niet verplicht)" type="tel" />
 
               {/* GAP: een Form Field rond een checkbox met titel + beschrijving + inline link bestaat niet kant-en-klaar. */}
-              {/* Groepeer titel, beschrijving en checkbox als één veld, zoals in de Figma. */}
+              {/* Groepeer titel, beschrijving en checkbox als één veld, zoals in het ontwerp. */}
               <div className="rhc-example-contactformulier__consent">
-                {/* Geen Heading: in Figma is dit een bold veld-label (bijna zwart), niet een lintblauwe kop. */}
+                {/* Geen Heading: dit is een bold veld-label (bijna zwart), niet een lintblauwe kop. */}
                 <Paragraph>
                   <strong>Verwerking van uw persoonsgegevens</strong>
                 </Paragraph>
