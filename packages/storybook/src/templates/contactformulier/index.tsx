@@ -32,7 +32,7 @@ export default function Contactformulier({
         <SkipLink className="rhc-skip-link--visible-on-focus" href="#main" id="top">
           Ga naar hoofdinhoud
         </SkipLink>
-        <Logo organisation="Rijksoverheid">
+        <Logo organisation="Rijkshuisstijl Community">
           <Icon icon="nederland-map" />
         </Logo>
       </PageHeader>
