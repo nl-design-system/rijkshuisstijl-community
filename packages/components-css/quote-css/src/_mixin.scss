@@ -1,0 +1,37 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+// Filled callout: a background tint with a coloured inline-start accent, a bold
+// heading and body text. Colours come from the themeable primary layer so the
+// quote recolours per department theme.
+@mixin rhc-quote {
+  background-color: var(--rhc-quote-background-color, var(--rhc-color-primary-50));
+  border-inline-start-color: var(--rhc-quote-border-color, var(--rhc-color-primary-500));
+  border-inline-start-style: solid;
+  border-inline-start-width: var(--rhc-quote-border-inline-start-width, var(--rhc-border-width-lg));
+  box-sizing: border-box;
+  color: var(--rhc-quote-color, var(--rhc-color-foreground-default));
+  display: flex;
+  flex-direction: column;
+  padding-block-end: var(--rhc-quote-padding-block-end, var(--rhc-space-2xl));
+  padding-block-start: var(--rhc-quote-padding-block-start, var(--rhc-space-2xl));
+  padding-inline-end: var(--rhc-quote-padding-inline-end, var(--rhc-space-2xl));
+  padding-inline-start: var(--rhc-quote-padding-inline-start, var(--rhc-space-2xl));
+  row-gap: var(--rhc-quote-row-gap, var(--rhc-space-md));
+}
+
+@mixin rhc-quote__heading {
+  color: currentColor;
+  font-family: var(--rhc-quote-heading-font-family, var(--rhc-text-font-family-default));
+  font-size: var(--rhc-quote-heading-font-size, var(--rhc-text-font-size-lg));
+  font-weight: var(--rhc-quote-heading-font-weight, var(--rhc-text-font-weight-bold));
+  line-height: var(--rhc-quote-heading-line-height, var(--rhc-text-line-height-sm));
+}
+
+@mixin rhc-quote__content {
+  color: currentColor;
+  font-size: var(--rhc-quote-content-font-size, var(--rhc-text-font-size-md));
+  line-height: var(--rhc-quote-content-line-height, var(--rhc-text-line-height-md));
+}
