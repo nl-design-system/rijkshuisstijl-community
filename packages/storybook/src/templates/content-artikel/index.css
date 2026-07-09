@@ -46,7 +46,7 @@
 }
 
 .rhc-templates-content-artikel__breadcrumb {
-  /* Figma surface/primary/default = hemelblauw (verzadigder dan de lintblauw-primary-tint). */
+  /* Hemelblauw-tint; de lintblauw-primary-tint was te gedempt. */
   background-color: var(--rhc-color-hemelblauw-200);
 
   /* Geen radius-token van 24px; --rhc-size-half-lint heeft die waarde. */
@@ -105,7 +105,7 @@
 }
 
 .rhc-templates-content-artikel__title {
-  /* Figma surface/primary/2 = hemelblauw-tint, consistent met de pill. */
+  /* Hemelblauw-tint, consistent met de pill. */
   background-color: var(--rhc-color-hemelblauw-50);
   padding-block-end: var(--rhc-space-5xl);
   padding-block-start: var(--rhc-space-3xl);
@@ -163,7 +163,7 @@
 
 /*
  * Op smalle schermen toont het kruimelpad alleen de eerste crumb; de tweede crumb
- * verhuist naar de terug-link boven de titel (Figma-mobiel).
+ * verhuist naar de terug-link boven de titel.
  */
 @media (width <= 768px) {
   /* Vaste hoogte i.p.v. aspect-ratio: aspect-ratio + min-height leidt de breedte af en veroorzaakt overflow. */
