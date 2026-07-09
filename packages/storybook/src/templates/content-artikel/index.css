@@ -46,7 +46,8 @@
 }
 
 .rhc-templates-content-artikel__breadcrumb {
-  background-color: var(--rhc-color-primary-200);
+  /* Figma surface/primary/default = hemelblauw (verzadigder dan de lintblauw-primary-tint). */
+  background-color: var(--rhc-color-hemelblauw-200);
 
   /* Geen radius-token van 24px; --rhc-size-half-lint heeft die waarde. */
   border-end-end-radius: var(--rhc-size-half-lint);
@@ -104,7 +105,8 @@
 }
 
 .rhc-templates-content-artikel__title {
-  background-color: var(--rhc-color-primary-50);
+  /* Figma surface/primary/2 = hemelblauw-tint, consistent met de pill. */
+  background-color: var(--rhc-color-hemelblauw-50);
   padding-block-end: var(--rhc-space-5xl);
   padding-block-start: var(--rhc-space-3xl);
   padding-inline: var(--rhc-space-3xl);
