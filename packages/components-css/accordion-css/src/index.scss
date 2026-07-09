@@ -16,3 +16,10 @@
 
   align-items: flex-start;
 }
+
+/* Icoon-kolom precies één regel hoog met de chevron gecentreerd, zodat die op de
+ * eerste tekstregel uitlijnt (gecentreerd bij één regel, bovenaan bij meerdere). */
+.utrecht-accordion__button-icon {
+  align-items: center;
+  block-size: 1lh;
+}
