@@ -17,7 +17,9 @@
     "watch": "build-css-package && chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
   },
   "devDependencies": {
-    "@rijkshuisstijl-community/build-utils-css": "workspace:*",
+    "@rijkshuisstijl-community/build-utils-css": "workspace:*"
+  },
+  "dependencies": {
     "@utrecht/root-css": "4.1.2",
     "@utrecht/focus-ring-css": "2.3.1"
   },
