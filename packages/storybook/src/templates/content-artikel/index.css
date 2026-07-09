@@ -134,6 +134,20 @@
   margin-block: var(--rhc-space-2xl);
 }
 
+/* Verticale ruimte rond de figuur, net als bij de accordeon. */
+.rhc-templates-content-artikel__article .rhc-figure {
+  margin-block: var(--rhc-space-2xl);
+}
+
+/* Afbeelding vult de leeskolom, top-left afgerond (zoals de hero-hoek). */
+.rhc-templates-content-artikel__article .rhc-figure .utrecht-img {
+  aspect-ratio: 16 / 9;
+  block-size: auto;
+  border-start-start-radius: var(--rhc-hero-border-radius);
+  inline-size: 100%;
+  object-fit: cover;
+}
+
 /*
  * Terug-link naar de bovenliggende pagina; alleen op smalle schermen zichtbaar.
  * .rhc-link erbij voor genoeg specificity om de inline-flex van .rhc-link.nl-link:any-link te verslaan.
