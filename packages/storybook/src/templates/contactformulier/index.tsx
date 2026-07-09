@@ -5,7 +5,6 @@ import {
   FormFieldCheckboxOption,
   FormFieldSelect,
   FormFieldTextInput,
-  Heading,
   Icon,
   Link,
   Logo,
@@ -45,7 +44,7 @@ export default function Contactformulier({
             <form className="rhc-example-contactformulier__form">
               {showErrors ? (
                 <Alert type="error">
-                  <Heading level={2}>Dit formulier bevat meerdere fouten:</Heading>
+                  <Paragraph>Dit formulier bevat meerdere fouten:</Paragraph>
                   <UnorderedList>
                     <UnorderedListItem>
                       <Link href="#wat-is-uw-situatie">Wat is uw situatie? is verplicht</Link>

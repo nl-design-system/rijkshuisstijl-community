@@ -6,6 +6,10 @@ const meta: Meta<typeof Page> = {
   title: 'Contactformulier',
   id: 'rhc-templates-contactformulier',
   component: Page,
+  // NederlandWereldwijd voert het hemelblauw-thema; de rijkslint blijft lintblauw (zie index.css).
+  globals: {
+    theme: 'Hemelblauw',
+  },
   parameters: {
     layout: 'fullscreen',
     isPage: true,
