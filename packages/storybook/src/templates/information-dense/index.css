@@ -127,14 +127,21 @@
   list-style: none;
   margin-block: var(--rhc-space-none);
   padding-inline-start: var(--rhc-space-none);
-  row-gap: var(--rhc-space-2xl);
+  row-gap: var(--rhc-space-sm);
 }
 
-/* Nav-items navy zonder onderstreping. */
+/* Nav-items als volledige balk (navy, geen onderstreping) met hover/current-vlak. */
 .rhc-info-dense__drawer-nav a {
   --nl-link-text-decoration-line: none;
 
+  align-items: center;
+  border-radius: var(--rhc-border-radius-md);
+  box-sizing: border-box;
   color: var(--rhc-color-primary-500);
+  display: flex;
+  inline-size: 100%;
+  padding-block: var(--rhc-space-lg);
+  padding-inline: var(--rhc-space-lg);
 }
 
 /* Snelkoppelingen onderaan (Mijn RVO, Zoeken) vet, met icoon, in de action-kleur. */
@@ -142,6 +149,21 @@
   --rhc-link-column-gap: var(--rhc-space-sm);
 
   color: var(--rhc-color-foreground-link);
+  font-weight: 700;
+}
+
+.rhc-info-dense__drawer-nav a:hover,
+.rhc-info-dense__drawer-nav a:focus-visible {
+  background-color: var(--rhc-color-primary-200);
+}
+
+.rhc-info-dense__drawer-nav a:active {
+  background-color: var(--rhc-color-primary-300);
+}
+
+/* Huidige pagina: subtieler, blijvend gevuld vlak. */
+.rhc-info-dense__drawer-nav a[aria-current="page"] {
+  background-color: var(--rhc-color-primary-50);
   font-weight: 700;
 }
 
