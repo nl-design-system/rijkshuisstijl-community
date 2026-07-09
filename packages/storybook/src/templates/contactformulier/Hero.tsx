@@ -28,7 +28,7 @@ export const Hero = ({ showNotification = true }: Readonly<{ showNotification?: 
           U kunt uw vraag aan NederlandWereldwijd stellen via het contactformulier. We proberen binnen 5 dagen antwoord
           te geven.
         </Paragraph>
-        {/* Figma toont de melding als waarschuwing (let-op-icoon) op de primary-tint; de kleuren
+        {/* De melding is een waarschuwing (let-op-icoon) op de primary-tint; de kleuren
             worden in index.css afgestemd zodat hij niet als standaard-geel opvalt. */}
         {showNotification ? (
           <Alert className="rhc-example-contactformulier-hero__notification" type="warning">
