@@ -46,8 +46,8 @@
 }
 
 .rhc-templates-content-artikel__breadcrumb {
-  /* Hemelblauw-tint; de lintblauw-primary-tint was te gedempt. */
-  background-color: var(--rhc-color-hemelblauw-200);
+  /* Lichte primary-tint die met het actieve thema meebeweegt. */
+  background-color: var(--rhc-color-primary-200);
 
   /* Geen radius-token van 24px; --rhc-size-half-lint heeft die waarde. */
   border-end-end-radius: var(--rhc-size-half-lint);
@@ -105,8 +105,8 @@
 }
 
 .rhc-templates-content-artikel__title {
-  /* Hemelblauw-tint, consistent met de pill. */
-  background-color: var(--rhc-color-hemelblauw-50);
+  /* Zachtere primary-tint dan de pill, volgt hetzelfde thema. */
+  background-color: var(--rhc-color-primary-50);
   padding-block-end: var(--rhc-space-5xl);
   padding-block-start: var(--rhc-space-3xl);
   padding-inline: var(--rhc-space-3xl);
