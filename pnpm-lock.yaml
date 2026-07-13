@@ -797,6 +797,9 @@ importers:
       '@rijkshuisstijl-community/radio-group-css':
         specifier: workspace:*
         version: link:../radio-group-css
+      '@rijkshuisstijl-community/root-css':
+        specifier: workspace:*
+        version: link:../root-css
       '@rijkshuisstijl-community/rounded-corner-css':
         specifier: workspace:*
         version: link:../rounded-corner-css
@@ -881,6 +884,9 @@ importers:
       '@utrecht/figure-css':
         specifier: 1.6.0
         version: 1.6.0
+      '@utrecht/focus-ring-css':
+        specifier: 2.3.1
+        version: 2.3.1
       '@utrecht/form-field-css':
         specifier: 1.5.1
         version: 1.5.1
@@ -966,9 +972,6 @@ importers:
         specifier: 1.5.1
         version: 1.5.1
     devDependencies:
-      '@utrecht/focus-ring-css':
-        specifier: 2.3.1
-        version: 2.3.1
       scss:
         specifier: 0.2.4
         version: 0.2.4
@@ -1155,6 +1158,19 @@ importers:
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
+
+  packages/components-css/root-css:
+    dependencies:
+      '@utrecht/focus-ring-css':
+        specifier: 2.3.1
+        version: 2.3.1
+      '@utrecht/root-css':
+        specifier: 4.1.2
+        version: 4.1.2
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
 
   packages/components-css/rounded-corner-css:
     devDependencies:

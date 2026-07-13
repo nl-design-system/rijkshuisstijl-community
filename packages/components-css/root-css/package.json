@@ -1,0 +1,38 @@
+{
+  "version": "0.0.0",
+  "author": "Community for Rijkshuisstijl-Community Design System",
+  "description": "Root component",
+  "license": "EUPL-1.2",
+  "name": "@rijkshuisstijl-community/root-css",
+  "Radios": [
+    "dist/",
+    "docs/",
+    "src/",
+    "*.md"
+  ],
+  "main": "dist/index.css",
+  "scripts": {
+    "build": "build-css-package",
+    "clean": "rimraf dist",
+    "watch": "build-css-package && chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
+  },
+  "devDependencies": {
+    "@rijkshuisstijl-community/build-utils-css": "workspace:*"
+  },
+  "dependencies": {
+    "@utrecht/root-css": "4.1.2",
+    "@utrecht/focus-ring-css": "2.3.1"
+  },
+  "keywords": [
+    "rijkshuisstijl-community-design-system"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
+    "directory": "packages/components-css/root-css"
+  }
+}
