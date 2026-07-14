@@ -3,6 +3,8 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+@use "mixin";
+
 .rhc-page-footer {
   --_utrecht-link-state-text-decoration-color: currentColor;
   --nl-heading-level-1-color: currentColor;
@@ -19,28 +21,8 @@
   --utrecht-column-layout-column-width: var(--rhc-page-footer-column-width);
   --utrecht-column-layout-gap: var(--rhc-page-footer-column-gap);
   --utrecht-link-hover-text-decoration: underline;
-  --utrecht-space-around: 1;
-}
-
-.rhc-page-footer--primary-filled {
-  --utrecht-page-footer-background-color: var(--rhc-color-primary-500);
-  --utrecht-page-footer-color: var(--rhc-color-wit);
   --utrecht-page-footer-content-color: inherit;
-}
-
-.rhc-page-footer--primary-filled.rhc-page-footer--subfooter {
-  border-block-start-color: var(--rhc-page-footer-border-block-start-color);
-  border-block-start-style: var(--rhc-page-footer-border-block-start-style);
-  border-block-start-width: var(--rhc-page-footer-border-block-start-width);
-}
-
-.rhc-page-footer--primary-outlined {
-  --utrecht-page-footer-background-color: var(--rhc-page-footer-outlined-background-color);
-  --utrecht-page-footer-color: var(--rhc-page-footer-outlined-color);
-
-  border-block-start-color: var(--rhc-page-footer-outlined-border-color);
-  border-block-start-style: var(--rhc-page-footer-border-block-start-style);
-  border-block-start-width: var(--rhc-page-footer-border-block-start-width);
+  --utrecht-space-around: 1;
 }
 
 /**
@@ -55,37 +37,80 @@
   inline-size: 100%;
 }
 
+/**
+ * The heading that names the contentinfo landmark is visually hidden, but
+ * stays in the accessibility tree so it counts in the heading structure and
+ * is reachable via screen reader heading navigation.
+ */
+.rhc-page-footer__heading {
+  @include mixin.invisible-but-accessible;
+}
+
+/**
+ * The tagline sits full-width above the sections (Page Footer discussion
+ * #2619, "Optie 1 - tagline boven"), so the layout stacks vertically. The
+ * sections themselves flow as columns via the nested Column Layout.
+ */
 .rhc-page-footer-layout {
-  column-gap: var(--rhc-page-footer-column-gap);
   display: flex;
-  flex: 1;
-  flex-direction: row;
+  flex-direction: column;
+  row-gap: var(--rhc-page-footer-layout-row-gap);
 
   :is(.rhc-heading, .rhc-paragraph):is(h1, h2, h3, h4, h5, h6, p) {
     margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
 }
 
-.rhc-page-footer-layout > * {
-  flex: 1;
-}
-
-.rhc-page-footer__section,
-.rhc-page-footer__tagline {
+.rhc-page-footer__section {
   break-inside: avoid;
   line-height: var(--rhc-text-line-height-md, inherit);
   padding-block-end: var(--rhc-page-footer-padding-block-end);
 }
 
+/* The link groups give their links a bit more breathing room than the default link list. */
+.rhc-page-footer__section .utrecht-link-list {
+  row-gap: var(--rhc-page-footer-link-list-row-gap);
+}
+
+.rhc-page-footer__tagline {
+  font-size: var(--rhc-page-footer-tagline-font-size);
+  font-style: var(--rhc-page-footer-tagline-font-style);
+  font-weight: var(--rhc-page-footer-tagline-font-weight);
+  line-height: var(--rhc-page-footer-tagline-line-height);
+  margin-block: 0;
+}
+
+/**
+ * The separator between the page footer content and the subfooter is rendered
+ * inside the subfooter content, so it gets the same inline padding as the
+ * content of both slots.
+ */
+.rhc-page-footer--subfooter {
+  --utrecht-page-footer-content-padding-block-start: var(--rhc-space-none);
+}
+
 .rhc-page-subfooter-layout {
   align-items: center;
+  border-block-start-color: var(--rhc-page-footer-border-block-start-color);
+  border-block-start-style: var(--rhc-page-footer-border-block-start-style);
+  border-block-start-width: var(--rhc-page-footer-border-block-start-width);
   display: flex;
   gap: var(--rhc-page-footer-content-column-gap);
   justify-content: space-between;
+  padding-block-start: var(--rhc-page-footer-subfooter-padding-block-start);
 
   @media (width <= 1024px) {
     flex-direction: column;
   }
+}
+
+/* The subfooter shows its links as a horizontal row. */
+.rhc-page-subfooter-layout .utrecht-link-list {
+  column-gap: var(--rhc-page-footer-subfooter-link-list-column-gap);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: var(--rhc-page-footer-subfooter-link-list-row-gap);
 }
 
 .rhc-page-prefooter {
