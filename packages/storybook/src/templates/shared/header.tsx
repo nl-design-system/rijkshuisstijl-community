@@ -3,6 +3,7 @@
 import { Icon, Logo, NavBar, NavBarItemProps, PageHeader, SkipLink } from '@rijkshuisstijl-community/components-react';
 import './header.css';
 import { useEffect, useState } from 'react';
+import SharedRijkshuisstijlDisclaimer from './rijkshuisstijl-disclaimer';
 
 export default function SharedHeader() {
   const [pathname, setPathname] = useState('');
@@ -46,6 +47,7 @@ export default function SharedHeader() {
         <Logo organisation="Rijkshuisstijl Community">
           <Icon className={'dutch-map'} icon={'nederland-map'} />
         </Logo>
+        <SharedRijkshuisstijlDisclaimer />
         <NavBar
           items={items}
           endItems={[
