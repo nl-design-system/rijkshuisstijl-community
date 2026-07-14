@@ -118,7 +118,7 @@ export default function Page() {
 
                 <Heading level={5}>Document delen</Heading>
                 <ActionGroup>
-                  <Button appearance="secondary-action-button">
+                  <Button purpose="secondary">
                     Link kopiëren
                     <Icon>
                       <svg
