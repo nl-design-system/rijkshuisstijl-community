@@ -1,4 +1,4 @@
-import { Button, Icon, IconButton, IconButtonProps } from '@rijkshuisstijl-community/components-react';
+import { Button, Icon, IconButton } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { IconArrowRight, IconCalendarEvent } from '@tabler/icons-react';
@@ -13,12 +13,20 @@ const meta = {
   id: 'rhc-button',
   component: Button,
   argTypes: {
+    purpose: {
+      description: 'Het doel van de button',
+      control: { type: 'select' },
+      options: [undefined, 'primary', 'secondary', 'subtle'],
+      table: {
+        category: 'Variant',
+      },
+    },
     appearance: {
-      description: 'Button appearance',
+      description: 'Deprecated: gebruik `purpose`. Wordt vertaald naar de overeenkomstige `purpose`.',
       control: { type: 'select' },
       options: ['', 'primary-action-button', 'secondary-action-button', 'subtle-button'],
       table: {
-        category: 'Variant',
+        category: 'Deprecated',
       },
     },
     children: {
@@ -28,13 +36,24 @@ const meta = {
       },
     },
     disabled: {
+      description: 'Niet beschikbaar via `aria-disabled`; de button blijft focusbaar',
+      table: {
+        category: 'Props',
+      },
+    },
+    busy: {
+      table: {
+        category: 'Props',
+      },
+    },
+    pressed: {
       table: {
         category: 'Props',
       },
     },
   },
   args: {
-    appearance: undefined,
+    purpose: undefined,
     children: 'Label',
     disabled: false,
   },
@@ -45,12 +64,12 @@ const meta = {
       },
     },
     github:
-      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Button.tsx',
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/button-react/src/Button.tsx',
     figma:
       'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=153-1138&p=f&t=bIUNfPQ6Tcm5rDPk-0',
     nldesignsystem: 'https://nldesignsystem.nl/button',
     componentOrigin:
-      'Dit component is overgenomen van de Gemeente Utrecht, met HTML aanpassingen (voor de IconButton) en styling van de Rijkshuisstijl Community.',
+      'Dit component is gebaseerd op de Button candidate van NL Design System (nl-button), met styling van de Rijkshuisstijl Community.',
   },
 } satisfies Meta<typeof Button>;
 
@@ -66,48 +85,56 @@ export const Default: Story = {
 export const PrimaryAction: Story = {
   args: {
     children: 'Label',
-    appearance: 'primary-action-button',
+    purpose: 'primary',
   },
 };
 
 export const SecondaryAction: Story = {
   args: {
     children: 'Label',
-    appearance: 'secondary-action-button',
+    purpose: 'secondary',
   },
 };
 
 export const Subtle: Story = {
   args: {
     children: 'Label',
-    appearance: 'subtle-button',
+    purpose: 'subtle',
   },
 };
 
 export const IconLeft: Story = {
   args: {
-    appearance: 'secondary-action-button',
+    purpose: 'secondary',
   },
-  render: (args) => (
-    <Button {...args}>
-      <Icon>
-        <IconCalendarEvent />
-      </Icon>
-      Label
+  render: ({ children, purpose }) => (
+    <Button
+      purpose={purpose}
+      iconStart={
+        <Icon>
+          <IconCalendarEvent />
+        </Icon>
+      }
+    >
+      {children}
     </Button>
   ),
 };
 
 export const IconRight: Story = {
   args: {
-    appearance: 'primary-action-button',
+    purpose: 'primary',
   },
-  render: (args) => (
-    <Button {...args}>
-      Label
-      <Icon>
-        <IconArrowRight />
-      </Icon>
+  render: ({ children, purpose }) => (
+    <Button
+      purpose={purpose}
+      iconEnd={
+        <Icon>
+          <IconArrowRight />
+        </Icon>
+      }
+    >
+      {children}
     </Button>
   ),
 };
@@ -126,6 +153,7 @@ export const Active: Story = {
 export const Pressed: Story = {
   args: {
     pressed: true,
+    toggle: true,
     children: 'Pressed',
   },
 };
@@ -137,6 +165,17 @@ export const Hover: Story = {
   parameters: {
     pseudo: {
       hover: true,
+    },
+  },
+};
+
+export const FocusVisible: Story = {
+  args: {
+    children: 'Focus visible',
+  },
+  parameters: {
+    pseudo: {
+      focusVisible: true,
     },
   },
 };
@@ -155,12 +194,17 @@ export const Busy: Story = {
   },
 };
 
+export const DeprecatedAppearance: Story = {
+  name: 'Appearance (deprecated)',
+  args: {
+    appearance: 'primary-action-button',
+    children: 'Label',
+  },
+};
+
 export const IconOnly: Story = {
   args: {
-    appearance: 'subtle-button',
-    children: null,
-    icon: 'kalender',
-    label: 'calendar',
+    purpose: 'subtle',
   },
-  render: ({ icon, ...args }) => <IconButton {...args} icon={icon as IconButtonProps['icon']} />,
+  render: ({ purpose }) => <IconButton icon="kalender" label="calendar" purpose={purpose} />,
 };

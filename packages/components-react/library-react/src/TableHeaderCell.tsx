@@ -43,7 +43,7 @@ export const TableHeaderCell = ({
   >
     {withSorting ? (
       <Button
-        appearance={'subtle-button'}
+        purpose="subtle"
         type={'button'}
         className={clsx('utrecht-table__header-cell-button', {
           'utrecht-table__header--align-right': alignCell === 'end',
