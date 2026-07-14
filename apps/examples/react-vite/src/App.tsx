@@ -1,12 +1,10 @@
 import './App.css';
-import { Card, Hero, Link, PageContent, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { Card, Hero, Link, PageContent, Paragraph } from '@rijkshuisstijl-community/components-react/no-side-effects';
 import { PageBody } from '@utrecht/page-body-react';
 import { Footer } from './Footer';
 import { Header } from './Header';
 import { InDePraktijk } from './InDePraktijk';
 import { LeesEnLeer } from './LeesEnLeer';
-import '@rijkshuisstijl-community/design-tokens/dist/index.css';
-import '@rijkshuisstijl-community/components-css/dist/index.css';
 
 function App() {
   return (

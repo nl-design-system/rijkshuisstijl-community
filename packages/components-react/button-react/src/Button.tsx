@@ -2,7 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2026 Community for NL Design System
  */
-import { Icon, type RHCIconID } from '@rijkshuisstijl-community/icon-react';
+import { Icon, type RHCIconID } from '@rijkshuisstijl-community/icon-react/no-side-effects';
 import { Button, type ButtonProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { PropsWithChildren, Ref } from 'react';

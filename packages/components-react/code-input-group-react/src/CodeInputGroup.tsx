@@ -3,8 +3,8 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { CodeInput, CodeInputProps } from '@rijkshuisstijl-community/code-input-react';
-import { Fieldset, FieldsetLegend } from '@rijkshuisstijl-community/fieldset-react';
+import { CodeInput, CodeInputProps } from '@rijkshuisstijl-community/code-input-react/no-side-effects';
+import { Fieldset, FieldsetLegend } from '@rijkshuisstijl-community/fieldset-react/no-side-effects';
 import { FormLabel } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { ChangeEvent, ComponentPropsWithRef, KeyboardEvent, PropsWithChildren, ReactNode, useId, useRef } from 'react';

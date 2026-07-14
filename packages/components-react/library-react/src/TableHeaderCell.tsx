@@ -3,8 +3,8 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Button } from '@rijkshuisstijl-community/button-react';
-import { Icon } from '@rijkshuisstijl-community/icon-react';
+import { Button } from '@rijkshuisstijl-community/button-react/no-side-effects';
+import { Icon } from '@rijkshuisstijl-community/icon-react/no-side-effects';
 import {
   TableHeaderCell as UtrechtTableHeaderCell,
   TableHeaderCellProps as UtrechtTableHeaderCellProps,

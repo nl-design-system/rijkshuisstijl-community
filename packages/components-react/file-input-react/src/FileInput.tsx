@@ -3,9 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Button, ButtonProps } from '@rijkshuisstijl-community/button-react';
-import { File } from '@rijkshuisstijl-community/file-react';
-import { Paragraph } from '@rijkshuisstijl-community/paragraph-react';
+import { Button, ButtonProps } from '@rijkshuisstijl-community/button-react/no-side-effects';
+import { File } from '@rijkshuisstijl-community/file-react/no-side-effects';
+import { Paragraph } from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 import { ChangeEvent, PropsWithChildren, Ref, useEffect, useRef, useState } from 'react';
 
 export interface FileInputProps extends Omit<ButtonProps, 'appearance'> {
