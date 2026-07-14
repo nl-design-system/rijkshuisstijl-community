@@ -23,18 +23,6 @@
   padding-inline-start: 0;
 }
 
-@mixin rhc-language-navigation__list__item--html-li {
-  @include utrecht-listbox-mixin.reset-li;
-
-  &:hover {
-    @include utrecht-listbox-mixin.utrecht-listbox__option--hover;
-  }
-
-  &:focus {
-    @include utrecht-listbox-mixin.utrecht-listbox__option--focus;
-  }
-}
-
 // Currently the utrecht mixin does not apply pseudo classes properly so we set the variables ourselves
 // once the following issue is resolved we can use the mixin again: https://github.com/nl-design-system/utrecht/issues/3031
 @mixin rhc-language-navigation__list__item--selected {
