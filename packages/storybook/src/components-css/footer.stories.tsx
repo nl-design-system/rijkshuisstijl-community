@@ -9,6 +9,7 @@ export default {
 };
 
 export const DefaultFooter = ReactStories.DefaultFooter;
+export const CompactFooter = ReactStories.CompactFooter;
 export const PrimaryOutlinedFooter = ReactStories.PrimaryOutlinedFooter;
 export const PrimaryOutlinedFooterSubFooter = ReactStories.PrimaryOutlinedFooterSubFooter;
 export const ColumnLayoutFooter = ReactStories.ColumnLayoutFooter;
