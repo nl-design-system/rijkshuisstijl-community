@@ -5,3 +5,94 @@
 
 @use "@amsterdam/design-system-css/dist/pagination/pagination.css";
 @use "@amsterdam/design-system-css/dist/visually-hidden/visually-hidden.css";
+
+/* Amsterdam levert de markup en classnames; selectors op .ams-* zijn hier door Stylelint
+ * verboden, daarom stylet deze laag bewust via element- en attribuutselectors. */
+.rhc-page-number-navigation {
+  align-items: center;
+  container-type: inline-size;
+  flex-wrap: nowrap;
+  gap: var(--rhc-page-number-navigation-gap);
+
+  ol {
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: var(--rhc-page-number-navigation-gap);
+  }
+
+  li {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-block-size: var(--rhc-page-number-navigation-link-min-block-size);
+    min-inline-size: var(--rhc-page-number-navigation-link-min-inline-size);
+  }
+
+  li[aria-hidden="true"] {
+    color: var(--rhc-page-number-navigation-ellipsis-color);
+  }
+
+  svg {
+    fill: currentColor;
+  }
+
+  a {
+    align-items: center;
+    justify-content: center;
+    min-block-size: var(--rhc-page-number-navigation-link-min-block-size);
+  }
+
+  li a {
+    min-inline-size: var(--rhc-page-number-navigation-link-min-inline-size);
+    padding-block: var(--rhc-page-number-navigation-link-padding-block);
+  }
+
+  a:focus-visible {
+    outline: var(--rhc-focus-outline-width) var(--rhc-focus-outline-style) var(--rhc-focus-outline-color);
+  }
+
+  a[rel="prev"],
+  a[rel="next"] {
+    font-size: var(--rhc-page-number-navigation-relative-link-font-size);
+    font-weight: var(--rhc-page-number-navigation-relative-link-font-weight);
+    padding-inline: var(--rhc-page-number-navigation-relative-link-padding-inline);
+  }
+
+  a[rel="prev"] span svg,
+  a[rel="next"] span svg {
+    block-size: var(--rhc-page-number-navigation-icon-size);
+    inline-size: var(--rhc-page-number-navigation-icon-size);
+  }
+
+  /* Chevron-span centreren met de tekst; anders lijnt de svg op de baseline uit. */
+  a[rel="prev"] span:has(svg),
+  a[rel="next"] span:has(svg) {
+    align-items: center;
+    display: flex;
+  }
+
+  a[aria-current="page"] {
+    background-color: var(--rhc-page-number-navigation-link-current-background-color);
+    color: var(--rhc-page-number-navigation-link-current-color);
+  }
+
+  /* Compacte modus: staat de navigatie in een smalle container, dan vervalt de zichtbare
+   * "Vorige"/"Volgende"-tekst (de ams-visually-hidden a11y-naam blijft, dus screenreaders
+   * ongewijzigd), schuiven de paginanummers tegen elkaar en verkleint de tekst. De chevron
+   * zit in een losse span zonder aria-hidden en blijft dus staan. */
+  @container (width <= 48rem) {
+    a[rel="prev"] span[aria-hidden="true"],
+    a[rel="next"] span[aria-hidden="true"] {
+      display: none;
+    }
+
+    ol {
+      gap: var(--rhc-space-none);
+    }
+
+    li a,
+    li[aria-hidden="true"] {
+      font-size: var(--rhc-text-font-size-sm);
+    }
+  }
+}
