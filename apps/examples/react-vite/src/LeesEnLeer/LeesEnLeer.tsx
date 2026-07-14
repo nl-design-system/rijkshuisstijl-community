@@ -1,5 +1,5 @@
 import './LeesEnLeer.css';
-import { CardAsLink, Heading } from '@rijkshuisstijl-community/components-react';
+import { CardAsLink, Heading } from '@rijkshuisstijl-community/components-react/no-side-effects';
 
 export function LeesEnLeer() {
   return (

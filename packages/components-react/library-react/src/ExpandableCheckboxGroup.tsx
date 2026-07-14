@@ -3,7 +3,7 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Fieldset, FieldsetLegend } from '@rijkshuisstijl-community/fieldset-react';
+import { Fieldset, FieldsetLegend } from '@rijkshuisstijl-community/fieldset-react/no-side-effects';
 import clsx from 'clsx';
 import React, { PropsWithChildren, ReactNode, useState } from 'react';
 import { FormFieldCheckboxGroup, FormFieldCheckboxGroupProps } from './FormFieldCheckboxGroup';
