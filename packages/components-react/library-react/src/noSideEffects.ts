@@ -70,6 +70,7 @@ export * from '@rijkshuisstijl-community/page-layout-react/no-side-effects';
 export * from '@rijkshuisstijl-community/page-number-navigation-react/no-side-effects';
 export * from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 export * from '@rijkshuisstijl-community/pre-heading-react/no-side-effects';
+export * from '@rijkshuisstijl-community/quote-react/no-side-effects';
 export * from '@rijkshuisstijl-community/radio-react/no-side-effects';
 export * from '@rijkshuisstijl-community/radio-group-react/no-side-effects';
 export * from '@rijkshuisstijl-community/root-react/no-side-effects';
