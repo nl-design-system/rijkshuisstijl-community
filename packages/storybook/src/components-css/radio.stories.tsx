@@ -15,3 +15,5 @@ export const Focus = ReactStories.Focus;
 export const FocusVisible = ReactStories.FocusVisible;
 export const Disabled = ReactStories.Disabled;
 export const Invalid = ReactStories.Invalid;
+export const Checked = ReactStories.Checked;
+export const CheckedAndDisabled = ReactStories.CheckedAndDisabled;
