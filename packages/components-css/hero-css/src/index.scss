@@ -4,6 +4,9 @@
  */
 
 @use "mixin";
+@forward "@rijkshuisstijl-community/heading-css/dist/index.css";
+@forward "@utrecht/heading-group-css/dist/index.css";
+@forward "@utrecht/img-css/dist/index.css";
 
 .rhc-hero {
   @include mixin.rhc-hero;

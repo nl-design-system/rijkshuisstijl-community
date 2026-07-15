@@ -18,8 +18,7 @@
   },
   "devDependencies": {
     "@rijkshuisstijl-community/build-utils-css": "workspace:*",
-    "chokidar-cli": "3.0.0",
-    "@nl-design-system-candidate/link-css": "2.0.3"
+    "chokidar-cli": "3.0.0"
   },
   "keywords": [
     "rijkshuisstijl-community-design-system"
@@ -32,5 +31,9 @@
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
     "directory": "packages/components-css/link-css"
+  },
+  "dependencies": {
+    "@nl-design-system-candidate/link-css": "2.0.3",
+    "@utrecht/icon-css": "2.0.1"
   }
 }

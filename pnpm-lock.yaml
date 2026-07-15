@@ -394,99 +394,110 @@ importers:
         version: 0.16.2
 
   packages/components-css/accordion-css:
+    dependencies:
+      '@rijkshuisstijl-community/button-css':
+        specifier: workspace:*
+        version: link:../button-css
+      '@utrecht/accordion-css':
+        specifier: 3.0.1
+        version: 3.0.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/accordion-css':
-        specifier: 3.0.1
-        version: 3.0.1
-      '@utrecht/button-css':
-        specifier: 3.1.0
-        version: 3.1.0
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/action-group-css:
+    dependencies:
+      '@utrecht/action-group-css':
+        specifier: 2.0.0
+        version: 2.0.0
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/action-group-css':
-        specifier: 2.0.0
-        version: 2.0.0
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/alert-css:
-    devDependencies:
-      '@rijkshuisstijl-community/build-utils-css':
-        specifier: workspace:*
-        version: link:../../build-utils-css
+    dependencies:
       '@utrecht/alert-css':
         specifier: 2.4.0
         version: 2.4.0
       '@utrecht/icon-css':
         specifier: 2.0.1
         version: 2.0.1
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/article-css:
+    dependencies:
+      '@utrecht/article-css':
+        specifier: 1.5.1
+        version: 1.5.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/article-css':
-        specifier: 1.5.1
-        version: 1.5.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/blockquote-css:
+    dependencies:
+      '@utrecht/blockquote-css':
+        specifier: 1.6.1
+        version: 1.6.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/blockquote-css':
-        specifier: 1.6.1
-        version: 1.6.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/breadcrumb-nav-css:
+    dependencies:
+      '@utrecht/breadcrumb-nav-css':
+        specifier: 1.5.1
+        version: 1.5.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/breadcrumb-nav-css':
-        specifier: 1.5.1
-        version: 1.5.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/button-css:
+    dependencies:
+      '@utrecht/button-css':
+        specifier: 3.1.0
+        version: 3.1.0
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/button-css':
-        specifier: 3.1.0
-        version: 3.1.0
-      '@utrecht/icon-css':
-        specifier: 2.0.1
-        version: 2.0.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/card-as-link-css:
+    dependencies:
+      '@rijkshuisstijl-community/link-css':
+        specifier: workspace:*
+        version: link:../link-css
+      '@utrecht/img-css':
+        specifier: 1.3.1
+        version: 1.3.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
@@ -496,6 +507,13 @@ importers:
         version: 3.0.0
 
   packages/components-css/card-css:
+    dependencies:
+      '@rijkshuisstijl-community/link-css':
+        specifier: workspace:*
+        version: link:../link-css
+      '@utrecht/img-css':
+        specifier: 1.3.1
+        version: 1.3.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
@@ -505,18 +523,23 @@ importers:
         version: 3.0.0
 
   packages/components-css/checkbox-css:
+    dependencies:
+      '@utrecht/checkbox-css':
+        specifier: 1.6.1
+        version: 1.6.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/checkbox-css':
-        specifier: 1.6.1
-        version: 1.6.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/checkbox-group-css:
+    dependencies:
+      '@rijkshuisstijl-community/checkbox-css':
+        specifier: workspace:*
+        version: link:../checkbox-css
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
@@ -544,6 +567,13 @@ importers:
         version: 3.0.0
 
   packages/components-css/data-badge-button-css:
+    dependencies:
+      '@utrecht/data-badge-css':
+        specifier: 1.0.1
+        version: 1.0.1
+      '@utrecht/focus-ring-css':
+        specifier: 2.3.1
+        version: 2.3.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
@@ -551,12 +581,6 @@ importers:
       '@rijkshuisstijl-community/button-css':
         specifier: workspace:*
         version: link:../button-css
-      '@utrecht/data-badge-css':
-        specifier: 1.0.1
-        version: 1.0.1
-      '@utrecht/focus-ring-css':
-        specifier: 2.3.1
-        version: 2.3.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -580,13 +604,14 @@ importers:
         version: 3.0.0
 
   packages/components-css/figure-css:
+    dependencies:
+      '@utrecht/figure-css':
+        specifier: 1.6.0
+        version: 1.6.0
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/figure-css':
-        specifier: 1.6.0
-        version: 1.6.0
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -596,14 +621,18 @@ importers:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/component-library-css':
-        specifier: 9.0.12
-        version: 9.0.12
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/file-input-css:
+    dependencies:
+      '@rijkshuisstijl-community/button-css':
+        specifier: workspace:*
+        version: link:../button-css
+      '@rijkshuisstijl-community/paragraph-css':
+        specifier: workspace:*
+        version: link:../paragraph-css
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
@@ -613,22 +642,30 @@ importers:
         version: 3.0.0
 
   packages/components-css/footer-css:
+    dependencies:
+      '@rijkshuisstijl-community/heading-css':
+        specifier: workspace:*
+        version: link:../heading-css
+      '@rijkshuisstijl-community/paragraph-css':
+        specifier: workspace:*
+        version: link:../paragraph-css
+      '@utrecht/page-footer-css':
+        specifier: 4.0.2
+        version: 4.0.2
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/page-footer-css':
-        specifier: 4.0.2
-        version: 4.0.2
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/heading-css:
-    devDependencies:
+    dependencies:
       '@nl-design-system-candidate/heading-css':
         specifier: 1.1.3
         version: 1.1.3
+    devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
@@ -637,6 +674,16 @@ importers:
         version: 3.0.0
 
   packages/components-css/hero-css:
+    dependencies:
+      '@rijkshuisstijl-community/heading-css':
+        specifier: workspace:*
+        version: link:../heading-css
+      '@utrecht/heading-group-css':
+        specifier: 1.5.1
+        version: 1.5.1
+      '@utrecht/img-css':
+        specifier: 1.3.1
+        version: 1.3.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
@@ -646,16 +693,23 @@ importers:
         version: 3.0.0
 
   packages/components-css/language-navigation-css:
-    devDependencies:
-      '@rijkshuisstijl-community/build-utils-css':
+    dependencies:
+      '@rijkshuisstijl-community/link-button-css':
         specifier: workspace:*
-        version: link:../../build-utils-css
+        version: link:../link-button-css
+      '@rijkshuisstijl-community/link-css':
+        specifier: workspace:*
+        version: link:../link-css
       '@utrecht/focus-ring-css':
         specifier: 2.3.1
         version: 2.3.1
       '@utrecht/listbox-css':
         specifier: 2.1.1
         version: 2.1.1
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -980,22 +1034,27 @@ importers:
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
 
   packages/components-css/link-button-css:
+    dependencies:
+      '@utrecht/link-button-css':
+        specifier: 2.0.1
+        version: 2.0.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/link-button-css':
-        specifier: 2.0.1
-        version: 2.0.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/link-css:
-    devDependencies:
+    dependencies:
       '@nl-design-system-candidate/link-css':
         specifier: 2.0.3
         version: 2.0.3
+      '@utrecht/icon-css':
+        specifier: 2.0.1
+        version: 2.0.1
+    devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
@@ -1013,30 +1072,42 @@ importers:
         version: 3.0.0
 
   packages/components-css/link-list-css:
+    dependencies:
+      '@rijkshuisstijl-community/link-css':
+        specifier: workspace:*
+        version: link:../link-css
+      '@utrecht/icon-css':
+        specifier: 2.0.1
+        version: 2.0.1
+      '@utrecht/link-list-css':
+        specifier: 2.3.1
+        version: 2.3.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/link-list-css':
-        specifier: 2.3.1
-        version: 2.3.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/listbox-css:
+    dependencies:
+      '@utrecht/listbox-css':
+        specifier: 2.1.1
+        version: 2.1.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/listbox-css':
-        specifier: 2.1.1
-        version: 2.1.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/logo-css:
+    dependencies:
+      '@utrecht/icon-css':
+        specifier: 2.0.1
+        version: 2.0.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
@@ -1055,6 +1126,13 @@ importers:
         version: 3.0.0
 
   packages/components-css/navigation-bar-css:
+    dependencies:
+      '@rijkshuisstijl-community/heading-css':
+        specifier: workspace:*
+        version: link:../heading-css
+      '@rijkshuisstijl-community/link-css':
+        specifier: workspace:*
+        version: link:../link-css
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
@@ -1073,10 +1151,11 @@ importers:
         version: 3.0.0
 
   packages/components-css/number-badge-css:
-    devDependencies:
+    dependencies:
       '@nl-design-system-candidate/number-badge-css':
         specifier: 1.1.5
         version: 1.1.5
+    devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
@@ -1085,22 +1164,24 @@ importers:
         version: 3.0.0
 
   packages/components-css/ordered-list-css:
+    dependencies:
+      '@utrecht/ordered-list-css':
+        specifier: 2.0.0
+        version: 2.0.0
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/ordered-list-css':
-        specifier: 2.0.0
-        version: 2.0.0
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/page-number-navigation-css:
-    devDependencies:
+    dependencies:
       '@amsterdam/design-system-css':
         specifier: 1.0.1
         version: 1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.1)
+    devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
@@ -1109,10 +1190,11 @@ importers:
         version: 3.0.0
 
   packages/components-css/paragraph-css:
-    devDependencies:
+    dependencies:
       '@nl-design-system-candidate/paragraph-css':
         specifier: 2.1.3
         version: 2.1.3
+    devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
@@ -1121,40 +1203,43 @@ importers:
         version: 3.0.0
 
   packages/components-css/pre-heading-css:
+    dependencies:
+      '@utrecht/pre-heading-css':
+        specifier: 1.4.1
+        version: 1.4.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/pre-heading-css':
-        specifier: 1.4.1
-        version: 1.4.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/radio-css:
+    dependencies:
+      '@utrecht/radio-button-css':
+        specifier: 1.6.1
+        version: 1.6.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/radio-button-css':
-        specifier: 1.6.1
-        version: 1.6.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/radio-group-css:
-    devDependencies:
-      '@rijkshuisstijl-community/build-utils-css':
-        specifier: workspace:*
-        version: link:../../build-utils-css
+    dependencies:
       '@utrecht/form-fieldset-css':
         specifier: 1.5.1
         version: 1.5.1
       '@utrecht/radio-button-css':
         specifier: 1.6.1
         version: 1.6.1
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1182,13 +1267,14 @@ importers:
         version: 3.0.0
 
   packages/components-css/separator-css:
+    dependencies:
+      '@utrecht/separator-css':
+        specifier: 1.5.1
+        version: 1.5.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/separator-css':
-        specifier: 1.5.1
-        version: 1.5.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -1203,10 +1289,11 @@ importers:
         version: 3.0.0
 
   packages/components-css/skip-link-css:
-    devDependencies:
+    dependencies:
       '@nl-design-system-candidate/skip-link-css':
         specifier: 1.0.5
         version: 1.0.5
+    devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
@@ -1215,18 +1302,23 @@ importers:
         version: 3.0.0
 
   packages/components-css/text-input-css:
+    dependencies:
+      '@utrecht/textbox-css':
+        specifier: 2.0.0
+        version: 2.0.0
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/textbox-css':
-        specifier: 2.0.0
-        version: 2.0.0
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
 
   packages/components-css/textarea-css:
+    dependencies:
+      '@utrecht/textarea-css':
+        specifier: 2.3.2
+        version: 2.3.2
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
@@ -1236,6 +1328,10 @@ importers:
         version: 3.0.0
 
   packages/components-css/toggletip-css:
+    dependencies:
+      '@utrecht/icon-css':
+        specifier: 2.0.1
+        version: 2.0.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
@@ -1245,13 +1341,14 @@ importers:
         version: 3.0.0
 
   packages/components-css/unordered-list-css:
+    dependencies:
+      '@utrecht/unordered-list-css':
+        specifier: 1.5.1
+        version: 1.5.1
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
-      '@utrecht/unordered-list-css':
-        specifier: 1.5.1
-        version: 1.5.1
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0

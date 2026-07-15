@@ -4,6 +4,7 @@
  */
 
 @use "mixin";
+@forward "@utrecht/textarea-css/dist/index.css";
 
 .rhc-textarea.utrecht-textarea {
   @include mixin.rhc-textarea;

@@ -18,8 +18,7 @@
   },
   "devDependencies": {
     "@rijkshuisstijl-community/build-utils-css": "workspace:*",
-    "chokidar-cli": "3.0.0",
-    "@utrecht/listbox-css": "2.1.1"
+    "chokidar-cli": "3.0.0"
   },
   "keywords": [
     "rijkshuisstijl-community-design-system"
@@ -32,5 +31,8 @@
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
     "directory": "packages/components-css/listbox-css"
+  },
+  "dependencies": {
+    "@utrecht/listbox-css": "2.1.1"
   }
 }

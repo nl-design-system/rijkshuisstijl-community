@@ -14,7 +14,7 @@
   "scripts": {
     "build": "build-css-package",
     "clean": "rimraf dist",
-    "watch": "chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
+    "watch": "build-css-package && chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
   },
   "devDependencies": {
     "@rijkshuisstijl-community/build-utils-css": "workspace:*",

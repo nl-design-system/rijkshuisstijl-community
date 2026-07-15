@@ -18,8 +18,6 @@
   },
   "devDependencies": {
     "@rijkshuisstijl-community/build-utils-css": "workspace:*",
-    "@utrecht/listbox-css": "2.1.1",
-    "@utrecht/focus-ring-css": "2.3.1",
     "chokidar-cli": "3.0.0"
   },
   "keywords": [
@@ -33,5 +31,11 @@
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
     "directory": "packages/components-css/language-navigation-css"
+  },
+  "dependencies": {
+    "@rijkshuisstijl-community/link-button-css": "workspace:*",
+    "@rijkshuisstijl-community/link-css": "workspace:*",
+    "@utrecht/focus-ring-css": "2.3.1",
+    "@utrecht/listbox-css": "2.1.1"
   }
 }

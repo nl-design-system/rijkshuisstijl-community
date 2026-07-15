@@ -4,6 +4,8 @@
  */
 
 @use "mixin";
+@forward "@rijkshuisstijl-community/button-css/dist/index.css";
+@forward "@rijkshuisstijl-community/paragraph-css/dist/index.css";
 
 .rhc-file-input {
   @include mixin.rhc-file-input;

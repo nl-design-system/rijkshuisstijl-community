@@ -4,6 +4,8 @@
  */
 
 @use "mixin";
+@forward "@rijkshuisstijl-community/link-css/dist/index.css";
+@forward "@rijkshuisstijl-community/heading-css/dist/index.css";
 
 .rhc-nav-bar__container {
   @include mixin.rhc-nav-bar__container;
