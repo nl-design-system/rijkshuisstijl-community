@@ -8482,20 +8482,20 @@
   "components/page-footer-new": {
     "rhc": {
       "page-footer": {
-        "body": {
-          "max-inline-size": {
-            "$type": "dimension",
-            "$value": "{rhc.size.page.md}"
-          },
-          "row-gap": {
-            "$type": "dimension",
-            "$value": "{rhc.space.2xl}"
-          }
+        "max-inline-size": {
+          "$type": "dimension",
+          "$value": "{rhc.size.page.md}"
         },
-        "layout": {
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{rhc.space.3xl}"
+        "body": {
+          "layout": {
+            "column-gap": {
+              "$type": "dimension",
+              "$value": "{rhc.space.3xl}"
+            },
+            "row-gap": {
+              "$type": "dimension",
+              "$value": "{rhc.space.2xl}"
+            }
           }
         },
         "background-color": {
@@ -8583,30 +8583,6 @@
         "row-gap": {
           "$type": "dimension",
           "$value": "{rhc.space.3xl}"
-        }
-      }
-    }
-  },
-  "components/page-footer-new-outline": {
-    "rhc": {
-      "page-footer": {
-        "border-block-start-color": {
-          "$type": "color",
-          "$value": "{rhc.color.core.500}"
-        },
-        "background-color": {
-          "$type": "color",
-          "$value": "{rhc.color.core.50}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.core.500}"
-        },
-        "sub-footer": {
-          "border-block-start-color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          }
         }
       }
     }
@@ -11006,7 +10982,6 @@
       "components/page-body",
       "components/page-footer",
       "components/page-footer-new",
-      "components/page-footer-new-outline",
       "components/page-number-navigation",
       "components/paragraph",
       "components/pre-heading",
