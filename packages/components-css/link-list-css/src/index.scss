@@ -4,6 +4,8 @@
  */
 
 .rhc-link-list {
+  display: block;
+
   .utrecht-link-list__link {
     align-items: flex-start;
 
@@ -17,7 +19,7 @@
   }
 
   .utrecht-link-list__item {
-    display: inline-flex;
+    display: block;
     font-family: var(--rhc-text-font-family-default, inherit);
     font-size: var(--utrecht-link-list-item-font-size, inherit);
   }
