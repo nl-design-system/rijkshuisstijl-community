@@ -17,7 +17,8 @@
     "watch": "build-css-package && chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
   },
   "devDependencies": {
-    "@rijkshuisstijl-community/build-utils-css": "workspace:*"
+    "@rijkshuisstijl-community/build-utils-css": "workspace:*",
+    "chokidar-cli": "3.0.0"
   },
   "dependencies": {
     "@utrecht/root-css": "4.1.2",

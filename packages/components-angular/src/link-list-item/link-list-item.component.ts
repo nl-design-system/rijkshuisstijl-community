@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './link-list-item.component.html',
   host: {
     '[class.utrecht-link-list__item]': 'true',
+    '[class.rhc-link-list__item]': 'true',
   },
 })
 export class LinkListItemComponent {}
