@@ -1,0 +1,119 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+@mixin rhc-page-footer {
+  --_utrecht-link-state-text-decoration-color: currentColor;
+  --nl-heading-level-1-color: currentColor;
+  --nl-heading-level-2-color: currentColor;
+  --nl-heading-level-3-color: currentColor;
+  --nl-heading-level-4-color: currentColor;
+  --nl-heading-level-5-color: currentColor;
+  --nl-heading-level-6-color: currentColor;
+  --nl-link-active-color: currentColor;
+  --nl-link-color: currentColor;
+  --nl-link-hover-color: currentColor;
+  --nl-link-text-decoration-color: currentColor;
+  --nl-paragraph-color: currentColor;
+  --utrecht-column-layout-column-width: var(--rhc-page-footer-column-width);
+  --utrecht-column-layout-gap: var(--rhc-page-footer-column-gap);
+  --utrecht-link-hover-text-decoration: underline;
+  --utrecht-space-around: 1;
+}
+
+@mixin rhc-page-footer--primary-filled {
+  --utrecht-page-footer-background-color: var(--rhc-color-primary-500);
+  --utrecht-page-footer-color: var(--rhc-color-wit);
+  --utrecht-page-footer-content-color: inherit;
+}
+
+@mixin rhc-page-footer--primary-filled-subfooter {
+  border-block-start-color: var(--rhc-page-footer-border-block-start-color);
+  border-block-start-style: var(--rhc-page-footer-border-block-start-style);
+  border-block-start-width: var(--rhc-page-footer-border-block-start-width);
+}
+
+@mixin rhc-page-footer--primary-outlined {
+  --utrecht-page-footer-background-color: var(--rhc-page-footer-outlined-background-color);
+  --utrecht-page-footer-color: var(--rhc-page-footer-outlined-color);
+
+  border-block-start-color: var(--rhc-page-footer-outlined-border-color);
+  border-block-start-style: var(--rhc-page-footer-border-block-start-style);
+  border-block-start-width: var(--rhc-page-footer-border-block-start-width);
+}
+
+@mixin rhc-page-footer-container {
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+}
+
+@mixin rhc-page-footer-layout {
+  column-gap: var(--rhc-page-footer-column-gap);
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+
+  :is(.rhc-heading, .rhc-paragraph):is(h1, h2, h3, h4, h5, h6, p) {
+    margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+
+@mixin rhc-page-footer-layout-child {
+  flex: 1;
+}
+
+@mixin rhc-page-footer__section {
+  break-inside: avoid;
+  line-height: var(--rhc-text-line-height-md, inherit);
+  padding-block-end: var(--rhc-page-footer-padding-block-end);
+}
+
+@mixin rhc-page-subfooter-layout {
+  align-items: center;
+  display: flex;
+  gap: var(--rhc-page-footer-content-column-gap);
+  justify-content: space-between;
+
+  @media (width <= 1024px) {
+    flex-direction: column;
+  }
+}
+
+@mixin rhc-page-prefooter {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+@mixin rhc-page-prefooter--before {
+  background-color: var(--rhc-color-primary-500, currentColor);
+  block-size: var(--rhc-space-2xl);
+  content: "";
+  inline-size: var(--rhc-space-5xl);
+
+  @media (forced-colors: active) {
+    background-color: CanvasText;
+  }
+}
+
+@mixin rhc-page-prefooter__content {
+  font-family: var(--rhc-text-font-family-serif);
+  inset: 0% 50% auto auto;
+  line-height: 1;
+  margin-inline-end: calc(-1 * var(--rhc-space-3xl));
+  position: absolute;
+  transform: translateX(100%);
+
+  @media (width <= 720px) {
+    /*
+     * Hiding the text of this feature is a violation of WCAG SC 1.4.10 Reflow
+     * TODO: Reconsider if the Page Footer Prefooter can be made accessible, or should be removed.
+     * https://nldesignsystem.nl/wcag/1.4.10/
+     */
+    & {
+      display: none;
+    }
+  }
+}

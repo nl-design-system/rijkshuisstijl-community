@@ -1,0 +1,12 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+@mixin rhc-text-input--focus {
+  border-width: var(--utrecht-textbox-focus-border-width, var(--rhc-border-width-md));
+}
+
+@mixin rhc-text-input--invalid-focus {
+  border-width: var(--utrecht-textbox-focus-border-width, var(--rhc-border-width-md));
+}

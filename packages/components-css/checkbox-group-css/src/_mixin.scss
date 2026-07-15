@@ -1,0 +1,17 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+@mixin rhc-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  padding-block-end: var(--rhc-checkbox-group-padding-block-end);
+  padding-block-start: var(--rhc-checkbox-group-padding-block-start);
+  row-gap: var(--rhc-checkbox-group-row-gap);
+
+  .utrecht-checkbox {
+    align-self: baseline;
+    line-height: var(--rhc-text-line-height-md, inherit);
+  }
+}

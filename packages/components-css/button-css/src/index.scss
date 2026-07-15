@@ -4,6 +4,8 @@
  */
 
 @use "mixin";
+@forward "@utrecht/button-css/dist/index.css";
+@forward "@utrecht/icon-css/dist/index.css";
 
 .rhc-button--icon-only {
   @include mixin.rhc-button--icon-only;

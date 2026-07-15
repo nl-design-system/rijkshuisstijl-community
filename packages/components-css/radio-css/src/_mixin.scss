@@ -1,0 +1,24 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+@mixin rhc-radio {
+  --utrecht-radio-button-icon-size: calc(var(--utrecht-radio-button-dot-size) * 0.5);
+}
+
+@mixin rhc-radio--disabled {
+  --utrecht-radio-button-checked-color: var(--utrecht-radio-button-disabled-color, inherit);
+}
+
+@mixin rhc-radio--invalid {
+  --utrecht-radio-button-background-color: var(--utrecht-radio-button-invalid-background-color, inherit);
+  &:hover,
+  &:focus {
+    background-color: var(--utrecht-radio-button-background-color);
+  }
+}
+
+@mixin rhc-radio--focus {
+  --utrecht-radio-button-checked-color: var(--utrecht-radio-button-checked-background-color, inherit);
+}

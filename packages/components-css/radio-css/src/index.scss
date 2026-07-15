@@ -3,25 +3,24 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+@use "mixin";
+@forward "@utrecht/radio-button-css/dist/index.css";
+
 .rhc-radio.utrecht-radio-button {
-  --utrecht-radio-button-icon-size: calc(var(--utrecht-radio-button-dot-size) * 0.5);
+  @include mixin.rhc-radio;
 }
 
 .rhc-radio.utrecht-radio-button:disabled,
 .rhc-radio.utrecht-radio-button--disabled {
-  --utrecht-radio-button-checked-color: var(--utrecht-radio-button-disabled-color, inherit);
+  @include mixin.rhc-radio--disabled;
 }
 
 .rhc-radio.utrecht-radio-button:invalid,
 .rhc-radio.utrecht-radio-button--invalid {
-  --utrecht-radio-button-background-color: var(--utrecht-radio-button-invalid-background-color, inherit);
-  &:hover,
-  &:focus {
-    background-color: var(--utrecht-radio-button-background-color);
-  }
+  @include mixin.rhc-radio--invalid;
 }
 
 .rhc-radio.utrecht-radio-button:focus:focus,
 .rhc-radio.utrecht-radio-button--focus {
-  --utrecht-radio-button-checked-color: var(--utrecht-radio-button-checked-background-color, inherit);
+  @include mixin.rhc-radio--focus;
 }

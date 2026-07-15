@@ -3,8 +3,6 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-@use "mixin";
-
-.rhc-link-list-card {
-  @include mixin.rhc-link-list-card;
+@mixin rhc-number-badge {
+  box-sizing: content-box;
 }

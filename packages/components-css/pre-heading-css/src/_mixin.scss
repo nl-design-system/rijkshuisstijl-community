@@ -1,0 +1,19 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+@mixin rhc-heading-container {
+  display: grid;
+  grid-template-areas:
+    "preheading"
+    "heading";
+}
+
+@mixin rhc-pre-heading {
+  grid-area: preheading;
+}
+
+@mixin rhc-heading-container-child {
+  grid-area: heading;
+}

@@ -3,11 +3,8 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+@use "mixin";
+
 .rhc-textarea.utrecht-textarea {
-  &:focus {
-    border-width: var(--rhc-textarea-focus-border-width, var(--rhc-border-width-md));
-  }
-  &--html-textarea:read-only {
-    --utrecht-textarea-read-only-border: var(--utrecht-textarea-read-only-background-color, --rhc-color-grijs-100);
-  }
+  @include mixin.rhc-textarea;
 }
