@@ -3,41 +3,28 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+@use "mixin";
+
 .rhc-file {
-  border-color: var(--rhc-file-border-color);
-  border-radius: var(--rhc-file-border-radius);
-  border-style: var(--rhc-file-border-style);
-  display: flex;
-  flex-direction: column;
-  padding-block-end: var(--rhc-file-padding-block-end);
-  padding-block-start: var(--rhc-file-padding-block-start);
-  padding-inline-end: var(--rhc-file-padding-inline-end);
-  padding-inline-start: var(--rhc-file-padding-inline-start);
+  @include mixin.rhc-file;
 }
 
 .rhc-file__name {
-  display: inline-block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  @include mixin.rhc-file__name;
 }
 
 .rhc-file__subtitle {
-  color: var(--rhc-file-subtitle-color);
+  @include mixin.rhc-file__subtitle;
 }
 
 .rhc-file__inner-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  @include mixin.rhc-file__inner-container;
 }
 
 .rhc-file__inner-container__sub {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  @include mixin.rhc-file__inner-container__sub;
 }
 
 .rhc-file--error {
-  border-color: var(--rhc-file-error-border-color);
+  @include mixin.rhc-file--error;
 }

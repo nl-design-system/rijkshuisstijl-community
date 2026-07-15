@@ -3,20 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+@use "mixin";
+@forward "@utrecht/breadcrumb-nav-css/dist/index.css";
+
 .rhc-breadcrumb-nav {
-  .utrecht-breadcrumb-nav__list {
-    align-items: center;
-  }
-
-  &__link {
-    &--current {
-      --utrecht-link-text-decoration: none;
-
-      color: var(--rhc-breadcrumb-nav-link-current-color);
-    }
-
-    &--active {
-      --utrecht-link-text-decoration: var(--utrecht-breadcrumb-nav-link-active-text-decoration, underline);
-    }
-  }
+  @include mixin.rhc-breadcrumb-nav;
 }

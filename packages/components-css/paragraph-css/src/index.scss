@@ -3,9 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+@use "mixin";
 @use "@nl-design-system-candidate/paragraph-css/dist/paragraph.css";
 
 .rhc-paragraph {
-  margin-block-end: var(--nl-paragraph-margin-block-end);
-  margin-block-start: var(--nl-paragraph-margin-block-start);
+  @include mixin.rhc-paragraph;
 }

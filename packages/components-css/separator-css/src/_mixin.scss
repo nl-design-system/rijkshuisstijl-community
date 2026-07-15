@@ -1,0 +1,14 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+@mixin rhc-separator {
+  --utrecht-space-around: 1;
+
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+  &--invisible {
+    --utrecht-separator-color: transparent;
+  }
+}

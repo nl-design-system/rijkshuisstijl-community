@@ -3,15 +3,8 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-.rhc-checkbox-group {
-  display: flex;
-  flex-direction: column;
-  padding-block-end: var(--rhc-checkbox-group-padding-block-end);
-  padding-block-start: var(--rhc-checkbox-group-padding-block-start);
-  row-gap: var(--rhc-checkbox-group-row-gap);
+@use "mixin";
 
-  .utrecht-checkbox {
-    align-self: baseline;
-    line-height: var(--rhc-text-line-height-md, inherit);
-  }
+.rhc-checkbox-group {
+  @include mixin.rhc-checkbox-group;
 }
