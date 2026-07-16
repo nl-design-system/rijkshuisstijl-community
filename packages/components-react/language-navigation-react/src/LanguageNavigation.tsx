@@ -72,7 +72,7 @@ export interface LanguageNavigationRootProps extends HTMLAttributes<HTMLElement>
  * Root container for the LanguageNavigation component which holds the context for state management.
  * Supports both controlled and uncontrolled modes for open state and selected language.
  */
-export const Root = ({
+const Root = ({
   children,
   open: openProp,
   defaultOpen = false,
@@ -149,7 +149,7 @@ export const Root = ({
     </LanguageNavigationContext>
   );
 };
-Root.displayName = 'LanguageNavigation.Root';
+Root.displayName = 'LanguageNavigation';
 
 /* -------------------------------------------------------------------------------------------------
  * Trigger
@@ -165,7 +165,7 @@ export interface LanguageNavigationTriggerProps extends LinkButtonProps {
  * Trigger button that toggles the language navigation content visibility.
  * Automatically displays the selected language.
  */
-export const Trigger = ({
+const Trigger = ({
   children,
   showIcon = true,
   className,
@@ -221,7 +221,7 @@ export interface LanguageNavigationContentProps extends Omit<HTMLAttributes<HTML
  * Container for language options. Only rendered when the navigation is open.
  * Handles click-outside behavior and ARIA attributes.
  */
-export const Content = ({
+const Content = ({
   children,
   closeOnOutsideClick = true,
   className,
@@ -330,7 +330,7 @@ export type LanguageNavigationItemProps = LanguageNavigationItemLinkProps | Lang
  * Renders as a link when `href` is provided (for URL-based navigation),
  * or as a button when `onClick` is provided (for programmatic navigation).
  */
-export const Item = ({
+const Item = ({
   children,
   lang,
   languageName,
@@ -408,3 +408,10 @@ Item.displayName = 'LanguageNavigation.Item';
 /* -------------------------------------------------------------------------------------------------
  * Compound Component Export
  * -----------------------------------------------------------------------------------------------*/
+const LanguageNavigation = Object.assign(Root, {
+  Trigger,
+  Content,
+  Item,
+});
+
+export default LanguageNavigation;
