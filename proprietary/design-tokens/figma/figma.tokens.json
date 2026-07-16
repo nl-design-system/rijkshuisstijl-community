@@ -3688,28 +3688,6 @@
     }
   },
   "components/accordion": {
-    "todo": {
-      "accordion": {
-        "button": {
-          "font-family": {
-            "$type": "fontFamilies",
-            "$value": "{utrecht.button.font-family}"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.lg}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{utrecht.button.subtle.font-weight}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{utrecht.button.subtle.line-height}"
-          }
-        }
-      }
-    },
     "utrecht": {
       "accordion": {
         "margin-block-end": {
@@ -3748,7 +3726,7 @@
           },
           "padding-inline-start": {
             "$type": "dimension",
-            "$value": "{rhc.space.5xl}"
+            "$value": "calc({utrecht.accordion.button.padding-inline-start} + {utrecht.accordion.button.icon.size} + {utrecht.accordion.button.gap})"
           }
         },
         "button": {
@@ -3772,6 +3750,10 @@
             "$type": "color",
             "$value": "{rhc.color.core.500}"
           },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.lg}"
+          },
           "gap": {
             "$type": "dimension",
             "$value": "{rhc.space.md}"
@@ -3790,7 +3772,7 @@
           },
           "padding-inline-start": {
             "$type": "dimension",
-            "$value": "{rhc.space.xl}"
+            "$value": "{rhc.space.lg}"
           },
           "icon": {
             "size": {
