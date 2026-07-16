@@ -1,1 +1,1 @@
-export { default } from './LanguageNavigation';
+export * from './LanguageNavigation';

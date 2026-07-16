@@ -408,10 +408,8 @@ Item.displayName = 'LanguageNavigation.Item';
 /* -------------------------------------------------------------------------------------------------
  * Compound Component Export
  * -----------------------------------------------------------------------------------------------*/
-const LanguageNavigation = Object.assign(Root, {
+export const LanguageNavigation = Object.assign(Root, {
   Trigger,
   Content,
   Item,
 });
-
-export default LanguageNavigation;

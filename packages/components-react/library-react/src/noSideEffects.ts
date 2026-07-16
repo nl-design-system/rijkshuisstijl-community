@@ -41,7 +41,7 @@ export * from '@rijkshuisstijl-community/hero-react/no-side-effects';
 export * from '@rijkshuisstijl-community/icon-react/no-side-effects';
 export * from '@rijkshuisstijl-community/image-react/no-side-effects';
 export {
-  default as LanguageNavigation,
+  LanguageNavigation,
   type LanguageNavigationContentProps,
   type LanguageNavigationItemProps,
   type LanguageNavigationRootProps,
