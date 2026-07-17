@@ -103,7 +103,7 @@ export const KeepOpenOnSelect: Story = {
     <LanguageNavigation defaultOpen defaultSelectedLanguage="Nederlands" {...props}>
       <LanguageNavigation.Trigger />
       <LanguageNavigation.Content>
-        <LanguageNavigation.Item closeOnSelect={false} href="#" lang="nl" languageName="Nederlands" />
+        <LanguageNavigation.Item closeOnSelect={false} {...languages.nl} />
         <LanguageNavigation.Item closeOnSelect={false} {...languages.en} localLanguageName="Engels" />
         <LanguageNavigation.Item closeOnSelect={false} {...languages.de} localLanguageName="Duits" />
       </LanguageNavigation.Content>
@@ -182,14 +182,14 @@ export const ButtonNavigation: Story = {
       <LanguageNavigation.Content>
         <LanguageNavigation.Item lang="nl" languageName="Nederlands" onClick={() => console.log('Switched to Dutch')} />
         <LanguageNavigation.Item
-          lang="en"
-          languageName="English"
+          {...languages.en}
+          href={undefined}
           localLanguageName="Engels"
           onClick={() => console.log('Switched to English')}
         />
         <LanguageNavigation.Item
-          lang="de"
-          languageName="Deutsch"
+          {...languages.de}
+          href={undefined}
           localLanguageName="Duits"
           onClick={() => console.log('Switched to German')}
         />
@@ -222,19 +222,19 @@ const ControlledButtonNavigationTemplate = (props: LanguageNavigationRootProps) 
         <LanguageNavigation.Trigger />
         <LanguageNavigation.Content>
           <LanguageNavigation.Item
-            lang="nl"
-            languageName="Nederlands"
+            {...languages.nl}
+            href={undefined}
             onClick={() => console.log('Switched to Dutch')}
           />
           <LanguageNavigation.Item
-            lang="en"
-            languageName="English"
+            {...languages.en}
+            href={undefined}
             localLanguageName="Engels"
             onClick={() => console.log('Switched to English')}
           />
           <LanguageNavigation.Item
-            lang="de"
-            languageName="Deutsch"
+            {...languages.de}
+            href={undefined}
             localLanguageName="Duits"
             onClick={() => console.log('Switched to German')}
           />
