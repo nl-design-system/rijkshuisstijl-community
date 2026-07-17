@@ -23,14 +23,27 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 export default meta;
 
+const languages = {
+  nl: { href: '#', lang: 'nl', languageName: 'Nederlands' },
+  en: { href: '#', lang: 'en', languageName: 'English' },
+  de: { href: '#', lang: 'de', languageName: 'Deutsch' },
+  fr: { href: '#', lang: 'fr', languageName: 'Français' },
+  es: { href: '#', lang: 'es', languageName: 'Español' },
+  it: { href: '#', lang: 'it', languageName: 'Italiano' },
+  pt: { href: '#', lang: 'pt', languageName: 'Português' },
+  pl: { href: '#', lang: 'pl', languageName: 'Polski' },
+  ar: { href: '#', lang: 'ar', languageName: 'العربية' },
+};
+
 export const Default: Story = {
   render: (props) => (
     <LanguageNavigation defaultSelectedLanguage="Nederlands" {...props}>
       <LanguageNavigation.Trigger />
       <LanguageNavigation.Content>
-        <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" />
-        <LanguageNavigation.Item href="#" lang="en" languageName="English" localLanguageName="Engels" />
-        <LanguageNavigation.Item href="#" lang="de" languageName="Deutsch" localLanguageName="Duits" />
+        {[languages.nl, languages.en, languages.de].map((language) => (
+          <LanguageNavigation.Item key={language.lang} {...language} />
+        ))}
+        ,
       </LanguageNavigation.Content>
     </LanguageNavigation>
   ),
@@ -41,9 +54,10 @@ export const DefaultOpen: Story = {
     <LanguageNavigation defaultOpen defaultSelectedLanguage="Nederlands" {...props}>
       <LanguageNavigation.Trigger />
       <LanguageNavigation.Content>
-        <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" />
-        <LanguageNavigation.Item href="#" lang="en" languageName="English" localLanguageName="Engels" />
-        <LanguageNavigation.Item href="#" lang="de" languageName="Deutsch" localLanguageName="Duits" />
+        {[languages.nl, languages.en, languages.de].map((language) => (
+          <LanguageNavigation.Item key={language.lang} {...language} />
+        ))}
+        ,
       </LanguageNavigation.Content>
     </LanguageNavigation>
   ),
@@ -54,14 +68,18 @@ export const ManyLanguages: Story = {
     <LanguageNavigation defaultSelectedLanguage="Nederlands" {...props}>
       <LanguageNavigation.Trigger />
       <LanguageNavigation.Content>
-        <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" />
-        <LanguageNavigation.Item href="#" lang="en" languageName="English" localLanguageName="Engels" />
-        <LanguageNavigation.Item href="#" lang="de" languageName="Deutsch" localLanguageName="Duits" />
-        <LanguageNavigation.Item href="#" lang="fr" languageName="Français" localLanguageName="Frans" />
-        <LanguageNavigation.Item href="#" lang="es" languageName="Español" localLanguageName="Spaans" />
-        <LanguageNavigation.Item href="#" lang="it" languageName="Italiano" localLanguageName="Italiaans" />
-        <LanguageNavigation.Item href="#" lang="pt" languageName="Português" localLanguageName="Portugees" />
-        <LanguageNavigation.Item href="#" lang="pl" languageName="Polski" localLanguageName="Pools" />
+        {[
+          languages.nl,
+          languages.en,
+          languages.de,
+          languages.fr,
+          languages.es,
+          languages.it,
+          languages.pt,
+          languages.pl,
+        ].map((language) => (
+          <LanguageNavigation.Item key={language.lang} {...language} />
+        ))}
       </LanguageNavigation.Content>
     </LanguageNavigation>
   ),
@@ -72,9 +90,9 @@ export const WithoutIcon: Story = {
     <LanguageNavigation defaultSelectedLanguage="Nederlands" {...props}>
       <LanguageNavigation.Trigger showIcon={false} />
       <LanguageNavigation.Content>
-        <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" />
-        <LanguageNavigation.Item href="#" lang="en" languageName="English" localLanguageName="Engels" />
-        <LanguageNavigation.Item href="#" lang="de" languageName="Deutsch" localLanguageName="Duits" />
+        {[languages.nl, languages.en, languages.de].map((language) => (
+          <LanguageNavigation.Item key={language.lang} {...language} />
+        ))}
       </LanguageNavigation.Content>
     </LanguageNavigation>
   ),
@@ -86,20 +104,8 @@ export const KeepOpenOnSelect: Story = {
       <LanguageNavigation.Trigger />
       <LanguageNavigation.Content>
         <LanguageNavigation.Item closeOnSelect={false} href="#" lang="nl" languageName="Nederlands" />
-        <LanguageNavigation.Item
-          closeOnSelect={false}
-          href="#"
-          lang="en"
-          languageName="English"
-          localLanguageName="Engels"
-        />
-        <LanguageNavigation.Item
-          closeOnSelect={false}
-          href="#"
-          lang="de"
-          languageName="Deutsch"
-          localLanguageName="Duits"
-        />
+        <LanguageNavigation.Item closeOnSelect={false} {...languages.en} localLanguageName="Engels" />
+        <LanguageNavigation.Item closeOnSelect={false} {...languages.de} localLanguageName="Duits" />
       </LanguageNavigation.Content>
     </LanguageNavigation>
   ),
@@ -128,9 +134,9 @@ const ControlledTemplate = (props: LanguageNavigationRootProps) => {
       >
         <LanguageNavigation.Trigger />
         <LanguageNavigation.Content>
-          <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" />
-          <LanguageNavigation.Item href="#" lang="en" languageName="English" localLanguageName="Engels" />
-          <LanguageNavigation.Item href="#" lang="de" languageName="Deutsch" localLanguageName="Duits" />
+          {[languages.nl, languages.en, languages.de].map((language) => (
+            <LanguageNavigation.Item key={language.lang} {...language} />
+          ))}
         </LanguageNavigation.Content>
       </LanguageNavigation>
     </div>
@@ -146,9 +152,9 @@ export const EnglishDefault: Story = {
     <LanguageNavigation defaultSelectedLanguage="English" {...props}>
       <LanguageNavigation.Trigger />
       <LanguageNavigation.Content>
-        <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" localLanguageName="Dutch" />
-        <LanguageNavigation.Item href="#" lang="en" languageName="English" />
-        <LanguageNavigation.Item href="#" lang="de" languageName="Deutsch" localLanguageName="German" />
+        <LanguageNavigation.Item {...languages.nl} localLanguageName="Dutch" />
+        <LanguageNavigation.Item {...languages.en} />
+        <LanguageNavigation.Item {...languages.de} localLanguageName="German" />
       </LanguageNavigation.Content>
     </LanguageNavigation>
   ),
@@ -160,9 +166,9 @@ export const RTLExample: Story = {
       <LanguageNavigation defaultSelectedLanguage="العربية" {...props}>
         <LanguageNavigation.Trigger />
         <LanguageNavigation.Content>
-          <LanguageNavigation.Item href="#" lang="ar" languageName="العربية" />
-          <LanguageNavigation.Item href="#" lang="en" languageName="English" localLanguageName="الإنجليزية" />
-          <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" localLanguageName="الهولندية" />
+          <LanguageNavigation.Item {...languages.ar} />
+          <LanguageNavigation.Item {...languages.en} localLanguageName="الإنجليزية" />
+          <LanguageNavigation.Item {...languages.en} localLanguageName="الهولندية" />
         </LanguageNavigation.Content>
       </LanguageNavigation>
     </div>
