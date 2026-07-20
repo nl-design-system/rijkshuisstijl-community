@@ -2,12 +2,12 @@
  * @license EUPL-1.2
  * Copyright (c) 2026 Community for NL Design System
  */
-
 @use "@utrecht/listbox-css/src/mixin" as utrecht-listbox-mixin;
 
 @mixin rhc-language-navigation__trigger {
   --utrecht-button-font-weight: var(--rhc-font-weight-regular);
-  --utrecht-button-gap: var(--rhc-link-column-gap);
+
+  gap: var(--rhc-link-column-gap);
 }
 
 @mixin rhc-language-navigation__list {
