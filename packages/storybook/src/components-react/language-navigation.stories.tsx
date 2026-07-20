@@ -43,7 +43,6 @@ export const Default: Story = {
         {[languages.nl, languages.en, languages.de].map((language) => (
           <LanguageNavigation.Item key={language.lang} {...language} />
         ))}
-        ,
       </LanguageNavigation.Content>
     </LanguageNavigation>
   ),
@@ -57,7 +56,6 @@ export const DefaultOpen: Story = {
         {[languages.nl, languages.en, languages.de].map((language) => (
           <LanguageNavigation.Item key={language.lang} {...language} />
         ))}
-        ,
       </LanguageNavigation.Content>
     </LanguageNavigation>
   ),
