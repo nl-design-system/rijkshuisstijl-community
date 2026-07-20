@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom/vitest';
-import { Heading }  from '@rijkshuisstijl-community/heading-react';
+import { Heading } from '@rijkshuisstijl-community/heading-react';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
 import { PreHeading } from './PreHeading';

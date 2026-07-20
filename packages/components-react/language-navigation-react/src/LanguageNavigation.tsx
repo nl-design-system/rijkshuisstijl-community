@@ -3,9 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Icon } from '@rijkshuisstijl-community/icon-react';
-import { LinkButton, LinkButtonProps } from '@rijkshuisstijl-community/link-button-react';
-import { Link } from '@rijkshuisstijl-community/link-react';
+import { Icon } from '@rijkshuisstijl-community/icon-react/no-side-effects';
+import { LinkButton, LinkButtonProps } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
+import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import clsx from 'clsx';
 import {
   createContext,

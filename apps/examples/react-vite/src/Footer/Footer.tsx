@@ -1,4 +1,9 @@
-import { Icon, LinkList, LinkListLink, Footer as RhcFooter } from '@rijkshuisstijl-community/components-react';
+import {
+  Icon,
+  LinkList,
+  LinkListLink,
+  Footer as RhcFooter,
+} from '@rijkshuisstijl-community/components-react/no-side-effects';
 import './Footer.css';
 
 export function Footer() {

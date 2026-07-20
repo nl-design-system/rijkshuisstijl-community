@@ -2,8 +2,8 @@
  * @license EUPL-1.2
  * Copyright (c) 2026 Community for NL Design System
  */
-import { Image } from '@rijkshuisstijl-community/image-react';
-import { Link } from '@rijkshuisstijl-community/link-react';
+import { Image } from '@rijkshuisstijl-community/image-react/no-side-effects';
+import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import clsx from 'clsx';
 import { PropsWithChildren, ReactNode, Ref } from 'react';
 

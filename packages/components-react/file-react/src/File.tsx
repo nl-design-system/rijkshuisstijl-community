@@ -3,11 +3,11 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Alert } from '@rijkshuisstijl-community/alert-react';
-import { Button } from '@rijkshuisstijl-community/button-react';
-import { Icon } from '@rijkshuisstijl-community/icon-react';
-import { Link } from '@rijkshuisstijl-community/link-react';
-import { Paragraph } from '@rijkshuisstijl-community/paragraph-react';
+import { Alert } from '@rijkshuisstijl-community/alert-react/no-side-effects';
+import { Button } from '@rijkshuisstijl-community/button-react/no-side-effects';
+import { Icon } from '@rijkshuisstijl-community/icon-react/no-side-effects';
+import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
+import { Paragraph } from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 import clsx from 'clsx';
 
 interface FileProps {
