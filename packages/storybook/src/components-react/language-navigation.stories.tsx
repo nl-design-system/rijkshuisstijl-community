@@ -178,7 +178,7 @@ export const ButtonNavigation: Story = {
     <LanguageNavigation defaultSelectedLanguage="Nederlands" {...props}>
       <LanguageNavigation.Trigger />
       <LanguageNavigation.Content>
-        <LanguageNavigation.Item {...languages.nl} href={undefined} onClick={() => console.log('Switched to Dutch')} />
+        <LanguageNavigation.Item lang="nl" languageName="Nederlands" onClick={() => console.log('Switched to Dutch')} />
         <LanguageNavigation.Item
           {...languages.en}
           href={undefined}
