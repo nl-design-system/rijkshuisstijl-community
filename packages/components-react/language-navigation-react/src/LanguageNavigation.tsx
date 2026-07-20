@@ -339,7 +339,6 @@ const Item = ({
   lang,
   languageName,
   localLanguageName,
-  closeOnSelect: closeOnSelectProp,
   className,
   ref,
   ...restProps
@@ -348,15 +347,13 @@ const Item = ({
     selectedLanguage,
     onLanguageChange,
     onOpenChange,
-    closeOnSelect: globalCloseOnSelect,
+    closeOnSelect = true,
   } = useLanguageNavigationContext('Item');
   const isSelected = languageName === selectedLanguage;
 
-  const finalCloseOnSelect = closeOnSelectProp ?? globalCloseOnSelect ?? true;
-
   const handleSelect = () => {
     onLanguageChange(languageName);
-    if (finalCloseOnSelect) {
+    if (closeOnSelect) {
       onOpenChange(false);
     }
   };
