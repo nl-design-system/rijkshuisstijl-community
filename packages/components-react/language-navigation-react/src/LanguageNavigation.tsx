@@ -32,6 +32,7 @@ type LanguageNavigationContextValue = {
   onOpenChange: (_newOpen: boolean) => void;
   onOpenToggle: () => void;
   selectedLanguage: string | undefined;
+  closeOnSelect: boolean;
   onLanguageChange: (_newLanguage: string) => void;
   contentId: string;
   triggerRef: RefObject<HTMLButtonElement | null>;
@@ -66,6 +67,7 @@ export interface LanguageNavigationRootProps extends HTMLAttributes<HTMLElement>
   /** Callback when selected language changes */
   onLanguageChange?: (_newLanguage: string) => void;
   ref?: Ref<HTMLElement>;
+  closeOnSelect?: boolean;
 }
 
 /**
@@ -83,6 +85,7 @@ const Root = ({
   className,
   ref,
   'aria-label': navAriaLabel,
+  closeOnSelect = true,
   ...restProps
 }: PropsWithChildren<LanguageNavigationRootProps>) => {
   // Controlled vs uncontrolled open state
@@ -132,8 +135,9 @@ const Root = ({
       onLanguageChange,
       contentId,
       triggerRef,
+      closeOnSelect,
     }),
-    [open, onOpenChange, onOpenToggle, selectedLanguage, onLanguageChange, contentId],
+    [open, onOpenChange, onOpenToggle, selectedLanguage, onLanguageChange, contentId, closeOnSelect],
   );
 
   return (
@@ -335,17 +339,24 @@ const Item = ({
   lang,
   languageName,
   localLanguageName,
-  closeOnSelect = true,
+  closeOnSelect: closeOnSelectProp,
   className,
   ref,
   ...restProps
 }: PropsWithChildren<LanguageNavigationItemProps>) => {
-  const { selectedLanguage, onLanguageChange, onOpenChange } = useLanguageNavigationContext('Item');
+  const {
+    selectedLanguage,
+    onLanguageChange,
+    onOpenChange,
+    closeOnSelect: globalCloseOnSelect,
+  } = useLanguageNavigationContext('Item');
   const isSelected = languageName === selectedLanguage;
+
+  const finalCloseOnSelect = closeOnSelectProp ?? globalCloseOnSelect ?? true;
 
   const handleSelect = () => {
     onLanguageChange(languageName);
-    if (closeOnSelect) {
+    if (finalCloseOnSelect) {
       onOpenChange(false);
     }
   };

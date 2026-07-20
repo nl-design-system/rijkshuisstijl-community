@@ -100,12 +100,12 @@ export const WithoutIcon: Story = {
 
 export const KeepOpenOnSelect: Story = {
   render: (props) => (
-    <LanguageNavigation defaultOpen defaultSelectedLanguage="Nederlands" {...props}>
+    <LanguageNavigation defaultOpen defaultSelectedLanguage="Nederlands" {...props} closeOnSelect={false}>
       <LanguageNavigation.Trigger />
       <LanguageNavigation.Content>
-        <LanguageNavigation.Item closeOnSelect={false} {...languages.nl} />
-        <LanguageNavigation.Item closeOnSelect={false} {...languages.en} localLanguageName="Engels" />
-        <LanguageNavigation.Item closeOnSelect={false} {...languages.de} localLanguageName="Duits" />
+        <LanguageNavigation.Item {...languages.nl} />
+        <LanguageNavigation.Item {...languages.en} localLanguageName="Engels" />
+        <LanguageNavigation.Item {...languages.de} localLanguageName="Duits" />
       </LanguageNavigation.Content>
     </LanguageNavigation>
   ),
