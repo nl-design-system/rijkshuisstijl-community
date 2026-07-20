@@ -3,7 +3,7 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { HeadingProps } from '@rijkshuisstijl-community/heading-react';
+import { HeadingProps } from '@rijkshuisstijl-community/heading-react/no-side-effects';
 import {
   PreHeading as UtrechtPreHeading,
   type PreHeadingProps as UtrechtPreHeadingProps,
