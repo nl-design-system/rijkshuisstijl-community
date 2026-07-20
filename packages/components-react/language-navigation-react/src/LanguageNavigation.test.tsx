@@ -82,6 +82,22 @@ describe('LanguageNavigation', () => {
       expect(screen.getByRole('list')).toBeInTheDocument();
     });
 
+    it('keeps content open when closeOnSelect is false', async () => {
+      const user = userEvent.setup();
+      render(
+        <LanguageNavigation closeOnSelect={false} defaultOpen={true} defaultSelectedLanguage="Nederlands">
+          <LanguageNavigation.Trigger />
+          <LanguageNavigation.Content>
+            <LanguageNavigation.Item href="#" lang="en" languageName="English" />
+          </LanguageNavigation.Content>
+        </LanguageNavigation>,
+      );
+
+      await user.click(screen.getByRole('link', { name: /English/ }));
+
+      expect(screen.getByRole('list')).toBeInTheDocument();
+    });
+
     it('supports controlled open state', async () => {
       const onOpenChange = vi.fn();
       const { rerender, user } = await renderLanguageNavigation({ open: false, onOpenChange: onOpenChange });
@@ -376,22 +392,6 @@ describe('LanguageNavigation', () => {
       expect(screen.queryByRole('list')).not.toBeInTheDocument();
     });
 
-    it('keeps content open when closeOnSelect is false', async () => {
-      const user = userEvent.setup();
-      render(
-        <LanguageNavigation defaultOpen={true} defaultSelectedLanguage="Nederlands">
-          <LanguageNavigation.Trigger />
-          <LanguageNavigation.Content>
-            <LanguageNavigation.Item closeOnSelect={false} href="#" lang="en" languageName="English" />
-          </LanguageNavigation.Content>
-        </LanguageNavigation>,
-      );
-
-      await user.click(screen.getByRole('link', { name: /English/ }));
-
-      expect(screen.getByRole('list')).toBeInTheDocument();
-    });
-
     it('applies custom className', () => {
       render(
         <LanguageNavigation defaultOpen={true}>
@@ -507,23 +507,6 @@ describe('LanguageNavigation', () => {
       await user.click(englishButton);
 
       expect(screen.queryByRole('list')).not.toBeInTheDocument();
-    });
-
-    it('keeps content open when closeOnSelect is false for button item', async () => {
-      const user = userEvent.setup();
-      const onClick = vi.fn();
-      render(
-        <LanguageNavigation defaultOpen={true} defaultSelectedLanguage="Nederlands">
-          <LanguageNavigation.Trigger />
-          <LanguageNavigation.Content>
-            <LanguageNavigation.Item closeOnSelect={false} lang="en" languageName="English" onClick={onClick} />
-          </LanguageNavigation.Content>
-        </LanguageNavigation>,
-      );
-
-      await user.click(screen.getByRole('button', { name: /English/ }));
-
-      expect(screen.getByRole('list')).toBeInTheDocument();
     });
 
     it('applies custom className to button item', () => {
