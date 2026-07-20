@@ -53,9 +53,9 @@ export const DefaultOpen: Story = {
     <LanguageNavigation defaultOpen defaultSelectedLanguage="Nederlands" {...props}>
       <LanguageNavigation.Trigger />
       <LanguageNavigation.Content>
-        {[languages.nl, languages.en, languages.de].map((language) => (
-          <LanguageNavigation.Item key={language.lang} {...language} />
-        ))}
+        <LanguageNavigation.Item {...languages.nl} localLanguageName="Nederlands" />
+        <LanguageNavigation.Item {...languages.en} localLanguageName="Engels" />
+        <LanguageNavigation.Item {...languages.de} localLanguageName="Duits" />
       </LanguageNavigation.Content>
     </LanguageNavigation>
   ),
