@@ -3,9 +3,7 @@ import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { createRef } from 'react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { Content, Item, Root, Trigger } from './LanguageNavigation';
-
-const LanguageNavigation = { Root, Trigger, Content, Item };
+import { LanguageNavigation } from './LanguageNavigation';
 
 const languages = [
   { languageName: 'Nederlands', localLanguageName: 'Nederlands', lang: 'nl' },
@@ -16,7 +14,7 @@ const languages = [
 const renderLanguageNavigation = async (props = {}) => {
   const user = userEvent.setup();
   const utils = render(
-    <LanguageNavigation.Root defaultSelectedLanguage="Nederlands" {...props}>
+    <LanguageNavigation defaultSelectedLanguage="Nederlands" {...props}>
       <LanguageNavigation.Trigger />
       <LanguageNavigation.Content>
         {languages.map(({ languageName, localLanguageName, lang }) => (
@@ -29,7 +27,7 @@ const renderLanguageNavigation = async (props = {}) => {
           />
         ))}
       </LanguageNavigation.Content>
-    </LanguageNavigation.Root>,
+    </LanguageNavigation>,
   );
   return { ...utils, user };
 };
@@ -37,7 +35,7 @@ const renderLanguageNavigation = async (props = {}) => {
 const renderButtonLanguageNavigation = async (props = {}, onItemClick = vi.fn()) => {
   const user = userEvent.setup();
   const utils = render(
-    <LanguageNavigation.Root defaultSelectedLanguage="Nederlands" {...props}>
+    <LanguageNavigation defaultSelectedLanguage="Nederlands" {...props}>
       <LanguageNavigation.Trigger />
       <LanguageNavigation.Content>
         {languages.map(({ languageName, localLanguageName, lang }) => (
@@ -50,7 +48,7 @@ const renderButtonLanguageNavigation = async (props = {}, onItemClick = vi.fn())
           />
         ))}
       </LanguageNavigation.Content>
-    </LanguageNavigation.Root>,
+    </LanguageNavigation>,
   );
   return { ...utils, user, onItemClick };
 };
@@ -84,6 +82,22 @@ describe('LanguageNavigation', () => {
       expect(screen.getByRole('list')).toBeInTheDocument();
     });
 
+    it('keeps content open when closeOnSelect is false', async () => {
+      const user = userEvent.setup();
+      render(
+        <LanguageNavigation closeOnSelect={false} defaultOpen={true} defaultSelectedLanguage="Nederlands">
+          <LanguageNavigation.Trigger />
+          <LanguageNavigation.Content>
+            <LanguageNavigation.Item href="#" lang="en" languageName="English" />
+          </LanguageNavigation.Content>
+        </LanguageNavigation>,
+      );
+
+      await user.click(screen.getByRole('link', { name: /English/ }));
+
+      expect(screen.getByRole('list')).toBeInTheDocument();
+    });
+
     it('supports controlled open state', async () => {
       const onOpenChange = vi.fn();
       const { rerender, user } = await renderLanguageNavigation({ open: false, onOpenChange: onOpenChange });
@@ -97,12 +111,12 @@ describe('LanguageNavigation', () => {
 
       // Rerender with open=true
       rerender(
-        <LanguageNavigation.Root open={true} onOpenChange={onOpenChange}>
+        <LanguageNavigation open={true} onOpenChange={onOpenChange}>
           <LanguageNavigation.Trigger />
           <LanguageNavigation.Content>
             <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" />
           </LanguageNavigation.Content>
-        </LanguageNavigation.Root>,
+        </LanguageNavigation>,
       );
 
       expect(screen.getByRole('list')).toBeInTheDocument();
@@ -141,9 +155,9 @@ describe('LanguageNavigation', () => {
 
     it('displays custom children instead of selected language', () => {
       render(
-        <LanguageNavigation.Root defaultSelectedLanguage="Nederlands">
+        <LanguageNavigation defaultSelectedLanguage="Nederlands">
           <LanguageNavigation.Trigger>Custom Label</LanguageNavigation.Trigger>
-        </LanguageNavigation.Root>,
+        </LanguageNavigation>,
       );
       expect(screen.getByRole('button', { name: 'Custom Label' })).toBeInTheDocument();
     });
@@ -188,9 +202,9 @@ describe('LanguageNavigation', () => {
 
     it('hides chevron icon when showIcon is false', () => {
       render(
-        <LanguageNavigation.Root>
+        <LanguageNavigation>
           <LanguageNavigation.Trigger showIcon={false} />
-        </LanguageNavigation.Root>,
+        </LanguageNavigation>,
       );
       const trigger = screen.getByRole('button');
       expect(trigger.querySelector('.utrecht-icon')).not.toBeInTheDocument();
@@ -198,9 +212,9 @@ describe('LanguageNavigation', () => {
 
     it('applies custom className', () => {
       render(
-        <LanguageNavigation.Root>
+        <LanguageNavigation>
           <LanguageNavigation.Trigger className="custom-trigger" />
-        </LanguageNavigation.Root>,
+        </LanguageNavigation>,
       );
       expect(screen.getByRole('button').classList.contains('custom-trigger')).toBe(true);
     });
@@ -209,9 +223,9 @@ describe('LanguageNavigation', () => {
       const onClick = vi.fn();
       const user = userEvent.setup();
       render(
-        <LanguageNavigation.Root>
+        <LanguageNavigation>
           <LanguageNavigation.Trigger onClick={onClick} />
-        </LanguageNavigation.Root>,
+        </LanguageNavigation>,
       );
 
       await user.click(screen.getByRole('button'));
@@ -221,10 +235,10 @@ describe('LanguageNavigation', () => {
     it('forwards ref to button element', () => {
       const ref = createRef<HTMLButtonElement>();
       render(
-        <LanguageNavigation.Root>
+        <LanguageNavigation>
           <LanguageNavigation.Trigger ref={ref} />
           <LanguageNavigation.Content />
-        </LanguageNavigation.Root>,
+        </LanguageNavigation>,
       );
       expect(ref.current).toBeInstanceOf(HTMLButtonElement);
     });
@@ -243,10 +257,10 @@ describe('LanguageNavigation', () => {
 
     it('applies custom className', () => {
       render(
-        <LanguageNavigation.Root defaultOpen={true}>
+        <LanguageNavigation defaultOpen={true}>
           <LanguageNavigation.Trigger />
           <LanguageNavigation.Content className="custom-content" />
-        </LanguageNavigation.Root>,
+        </LanguageNavigation>,
       );
       expect(screen.getByRole('list').classList.contains('custom-content')).toBe(true);
     });
@@ -264,12 +278,12 @@ describe('LanguageNavigation', () => {
       render(
         <div>
           <div data-testid="outside">Outside element</div>
-          <LanguageNavigation.Root defaultOpen={true}>
+          <LanguageNavigation defaultOpen={true}>
             <LanguageNavigation.Trigger />
             <LanguageNavigation.Content>
               <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" />
             </LanguageNavigation.Content>
-          </LanguageNavigation.Root>
+          </LanguageNavigation>
         </div>,
       );
 
@@ -286,12 +300,12 @@ describe('LanguageNavigation', () => {
       render(
         <div>
           <div data-testid="outside">Outside element</div>
-          <LanguageNavigation.Root defaultOpen={true}>
+          <LanguageNavigation defaultOpen={true}>
             <LanguageNavigation.Trigger />
             <LanguageNavigation.Content closeOnOutsideClick={false}>
               <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands" />
             </LanguageNavigation.Content>
-          </LanguageNavigation.Root>
+          </LanguageNavigation>
         </div>,
       );
 
@@ -378,30 +392,14 @@ describe('LanguageNavigation', () => {
       expect(screen.queryByRole('list')).not.toBeInTheDocument();
     });
 
-    it('keeps content open when closeOnSelect is false', async () => {
-      const user = userEvent.setup();
-      render(
-        <LanguageNavigation.Root defaultOpen={true} defaultSelectedLanguage="Nederlands">
-          <LanguageNavigation.Trigger />
-          <LanguageNavigation.Content>
-            <LanguageNavigation.Item closeOnSelect={false} href="#" lang="en" languageName="English" />
-          </LanguageNavigation.Content>
-        </LanguageNavigation.Root>,
-      );
-
-      await user.click(screen.getByRole('link', { name: /English/ }));
-
-      expect(screen.getByRole('list')).toBeInTheDocument();
-    });
-
     it('applies custom className', () => {
       render(
-        <LanguageNavigation.Root defaultOpen={true}>
+        <LanguageNavigation defaultOpen={true}>
           <LanguageNavigation.Trigger />
           <LanguageNavigation.Content>
             <LanguageNavigation.Item className="custom-list-item" href="#" lang="nl" languageName="Nederlands" />
           </LanguageNavigation.Content>
-        </LanguageNavigation.Root>,
+        </LanguageNavigation>,
       );
 
       expect(screen.getByRole('listitem').classList.contains('custom-list-item')).toBe(true);
@@ -415,14 +413,14 @@ describe('LanguageNavigation', () => {
 
     it('renders custom children instead of default content', () => {
       render(
-        <LanguageNavigation.Root defaultOpen={true}>
+        <LanguageNavigation defaultOpen={true}>
           <LanguageNavigation.Trigger />
           <LanguageNavigation.Content>
             <LanguageNavigation.Item href="#" lang="nl" languageName="Nederlands">
               <span data-testid="custom-content">Custom Option Content</span>
             </LanguageNavigation.Item>
           </LanguageNavigation.Content>
-        </LanguageNavigation.Root>,
+        </LanguageNavigation>,
       );
 
       expect(screen.getByTestId('custom-content')).toBeInTheDocument();
@@ -511,27 +509,10 @@ describe('LanguageNavigation', () => {
       expect(screen.queryByRole('list')).not.toBeInTheDocument();
     });
 
-    it('keeps content open when closeOnSelect is false for button item', async () => {
-      const user = userEvent.setup();
-      const onClick = vi.fn();
-      render(
-        <LanguageNavigation.Root defaultOpen={true} defaultSelectedLanguage="Nederlands">
-          <LanguageNavigation.Trigger />
-          <LanguageNavigation.Content>
-            <LanguageNavigation.Item closeOnSelect={false} lang="en" languageName="English" onClick={onClick} />
-          </LanguageNavigation.Content>
-        </LanguageNavigation.Root>,
-      );
-
-      await user.click(screen.getByRole('button', { name: /English/ }));
-
-      expect(screen.getByRole('list')).toBeInTheDocument();
-    });
-
     it('applies custom className to button item', () => {
       const onClick = vi.fn();
       render(
-        <LanguageNavigation.Root defaultOpen={true}>
+        <LanguageNavigation defaultOpen={true}>
           <LanguageNavigation.Trigger />
           <LanguageNavigation.Content>
             <LanguageNavigation.Item
@@ -541,7 +522,7 @@ describe('LanguageNavigation', () => {
               onClick={onClick}
             />
           </LanguageNavigation.Content>
-        </LanguageNavigation.Root>,
+        </LanguageNavigation>,
       );
 
       expect(screen.getByRole('listitem').classList.contains('custom-button-item')).toBe(true);
@@ -550,14 +531,14 @@ describe('LanguageNavigation', () => {
     it('renders custom children in button mode', () => {
       const onClick = vi.fn();
       render(
-        <LanguageNavigation.Root defaultOpen={true}>
+        <LanguageNavigation defaultOpen={true}>
           <LanguageNavigation.Trigger />
           <LanguageNavigation.Content>
             <LanguageNavigation.Item lang="nl" languageName="Nederlands" onClick={onClick}>
               <span data-testid="custom-button-content">Custom Button Content</span>
             </LanguageNavigation.Item>
           </LanguageNavigation.Content>
-        </LanguageNavigation.Root>,
+        </LanguageNavigation>,
       );
 
       expect(screen.getByTestId('custom-button-content')).toBeInTheDocument();
