@@ -8481,23 +8481,21 @@
   },
   "components/page-footer-new": {
     "rhc": {
-      "page-footer": {
+      "page-footer-layout": {
         "max-inline-size": {
           "$type": "dimension",
           "$value": "{rhc.size.page.md}"
         },
-        "body": {
-          "layout": {
-            "column-gap": {
-              "$type": "dimension",
-              "$value": "{rhc.space.3xl}"
-            },
-            "row-gap": {
-              "$type": "dimension",
-              "$value": "{rhc.space.2xl}"
-            }
-          }
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.3xl}"
         },
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.2xl}"
+        }
+      },
+      "page-footer": {
         "background-color": {
           "$type": "color",
           "$value": "{rhc.color.core.500}"
@@ -8513,7 +8511,7 @@
           },
           "padding-block-end": {
             "$type": "dimension",
-            "$value": "{rhc.space.4xl}"
+            "$value": "{rhc.space.2xl}"
           },
           "tagline": {
             "font-size": {
@@ -8546,18 +8544,18 @@
           "$type": "dimension",
           "$value": "{rhc.space.4xl}"
         },
-        "navigation": {
-          "link": {
-            "text-decoration-line": {
-              "$type": "textDecoration",
-              "$value": "none"
-            },
-            "min-block-size": {
-              "$type": "dimension",
-              "$value": "{rhc.size.pointer-target}"
-            }
+        "navigation-link": {
+          "text-decoration-line": {
+            "$type": "textDecoration",
+            "$value": "none"
           },
-          "row-gap": {
+          "min-block-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.pointer-target}"
+          }
+        },
+        "navigation": {
+          "column-gap": {
             "$type": "dimension",
             "$value": "{rhc.space.2xl}"
           }
