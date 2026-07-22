@@ -1,5 +1,29 @@
 # @rijkshuisstijl-community/components-css
 
+## 18.0.0
+
+### Major Changes
+
+- 30f8098: Refactor: Hernoem en verplaats Select CSS component naar Form Field Select.
+- 9b2f197: Verwijder color-sample uit de gedeelde components CSS Package en laad deze direct in rhc-templates en Storybook.
+
+### Patch Changes
+
+- Updated dependencies [4b9bf3a]
+- Updated dependencies [89b2604]
+- Updated dependencies [4412b0c]
+- Updated dependencies [455f91f]
+- Updated dependencies [be92256]
+- Updated dependencies [89b2604]
+- Updated dependencies [a851df1]
+- Updated dependencies [0307ff5]
+- Updated dependencies [bcee4ed]
+  - @rijkshuisstijl-community/logo-css@1.1.0
+  - @rijkshuisstijl-community/language-navigation-css@1.0.2
+  - @rijkshuisstijl-community/link-list-css@1.1.0
+  - @rijkshuisstijl-community/root-css@1.0.0
+  - @rijkshuisstijl-community/radio-group-css@1.0.0
+
 ## 17.1.2
 
 ### Patch Changes

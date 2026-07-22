@@ -1,5 +1,99 @@
 # @rijkshuisstijl-community/components-react
 
+## 16.0.0
+
+### Major Changes
+
+- 30f8098: Refactor: Hernoem en verplaats Select CSS component naar Form Field Select.
+
+### Patch Changes
+
+- 38c6e39: Fix: de `/no-side-effects` entrypoints laden geen CSS meer. Componenten importeerden onderliggende componenten via hun standaard entrypoint, waardoor de bijbehorende CSS toch als side effect werd geladen — ook bij gebruik van `/no-side-effects`. Interne imports gebruiken nu `/no-side-effects`; de standaard entrypoints importeren de CSS van onderliggende componenten expliciet, zodat het bestaande gedrag daar ongewijzigd blijft.
+- 89b2604: Fix security vulnerabilities identified by pnpm audit by upgrading vitest and @vitest/coverage-v8 from 4.1.8 to 4.1.10.
+- Updated dependencies [4b9bf3a]
+- Updated dependencies [91d25ee]
+- Updated dependencies [b51b81e]
+- Updated dependencies [6fbaca3]
+- Updated dependencies [218d6aa]
+- Updated dependencies [5ac8201]
+- Updated dependencies [ff5aa70]
+- Updated dependencies [4412b0c]
+- Updated dependencies [38c6e39]
+- Updated dependencies [abaa13f]
+- Updated dependencies [455f91f]
+- Updated dependencies [8389be9]
+- Updated dependencies [89b2604]
+- Updated dependencies [0307ff5]
+- Updated dependencies [bcee4ed]
+- Updated dependencies [91ee3f8]
+  - @rijkshuisstijl-community/logo-react@1.1.0
+  - @rijkshuisstijl-community/link-react@1.1.2
+  - @rijkshuisstijl-community/side-nav-link-react@1.0.0
+  - @rijkshuisstijl-community/page-layout-react@1.0.0
+  - @rijkshuisstijl-community/page-body-react@1.0.0
+  - @rijkshuisstijl-community/page-header-react@1.0.0
+  - @rijkshuisstijl-community/language-navigation-react@2.0.0
+  - @rijkshuisstijl-community/alert-react@3.1.3
+  - @rijkshuisstijl-community/button-react@1.1.3
+  - @rijkshuisstijl-community/card-as-link-react@1.1.2
+  - @rijkshuisstijl-community/card-react@1.1.2
+  - @rijkshuisstijl-community/code-input-group-react@1.0.2
+  - @rijkshuisstijl-community/code-input-react@1.0.2
+  - @rijkshuisstijl-community/data-summary-item-react@1.0.2
+  - @rijkshuisstijl-community/file-input-react@2.0.3
+  - @rijkshuisstijl-community/file-react@1.0.3
+  - @rijkshuisstijl-community/footer-react@1.0.3
+  - @rijkshuisstijl-community/hero-react@1.0.2
+  - @rijkshuisstijl-community/link-list-card-react@1.0.2
+  - @rijkshuisstijl-community/message-list-item-react@0.0.4
+  - @rijkshuisstijl-community/navigation-bar-react@1.0.3
+  - @rijkshuisstijl-community/navigation-list-item-react@1.0.3
+  - @rijkshuisstijl-community/pre-heading-react@1.0.1
+  - @rijkshuisstijl-community/toggletip-react@1.0.3
+  - @rijkshuisstijl-community/side-nav-list-react@1.0.0
+  - @rijkshuisstijl-community/link-list-react@1.1.0
+  - @rijkshuisstijl-community/page-content-react@1.0.0
+  - @rijkshuisstijl-community/page-number-navigation-react@1.0.2
+  - @rijkshuisstijl-community/unordered-list-item-react@1.0.2
+  - @rijkshuisstijl-community/data-badge-button-react@1.0.2
+  - @rijkshuisstijl-community/navigation-list-react@1.0.2
+  - @rijkshuisstijl-community/visually-hidden-react@1.0.2
+  - @rijkshuisstijl-community/breadcrumb-nav-react@0.1.2
+  - @rijkshuisstijl-community/checkbox-group-react@1.1.2
+  - @rijkshuisstijl-community/rounded-corner-react@1.0.2
+  - @rijkshuisstijl-community/unordered-list-react@1.0.2
+  - @rijkshuisstijl-community/column-layout-react@1.0.2
+  - @rijkshuisstijl-community/heading-group-react@1.0.2
+  - @rijkshuisstijl-community/side-nav-item-react@1.0.0
+  - @rijkshuisstijl-community/action-group-react@1.1.2
+  - @rijkshuisstijl-community/data-summary-react@1.0.2
+  - @rijkshuisstijl-community/message-list-react@1.0.2
+  - @rijkshuisstijl-community/number-badge-react@1.0.2
+  - @rijkshuisstijl-community/ordered-list-react@1.0.2
+  - @rijkshuisstijl-community/link-button-react@1.0.2
+  - @rijkshuisstijl-community/radio-group-react@1.0.0
+  - @rijkshuisstijl-community/blockquote-react@1.1.2
+  - @rijkshuisstijl-community/text-input-react@1.0.2
+  - @rijkshuisstijl-community/accordion-react@3.1.2
+  - @rijkshuisstijl-community/dot-badge-react@1.1.2
+  - @rijkshuisstijl-community/paragraph-react@2.1.2
+  - @rijkshuisstijl-community/separator-react@1.1.2
+  - @rijkshuisstijl-community/skip-link-react@1.0.2
+  - @rijkshuisstijl-community/checkbox-react@1.1.2
+  - @rijkshuisstijl-community/fieldset-react@1.0.2
+  - @rijkshuisstijl-community/side-nav-react@1.0.2
+  - @rijkshuisstijl-community/textarea-react@1.0.2
+  - @rijkshuisstijl-community/article-react@2.1.2
+  - @rijkshuisstijl-community/heading-react@1.0.2
+  - @rijkshuisstijl-community/listbox-react@1.0.2
+  - @rijkshuisstijl-community/drawer-react@1.0.2
+  - @rijkshuisstijl-community/figure-react@1.1.2
+  - @rijkshuisstijl-community/image-react@2.1.2
+  - @rijkshuisstijl-community/radio-react@1.0.2
+  - @rijkshuisstijl-community/body-react@1.0.2
+  - @rijkshuisstijl-community/icon-react@3.1.3
+  - @rijkshuisstijl-community/root-react@1.0.2
+
 ## 15.1.2
 
 ### Patch Changes

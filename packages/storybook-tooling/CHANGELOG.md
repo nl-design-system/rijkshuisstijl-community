@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/storybook-tooling
 
+## 1.1.5
+
+### Patch Changes
+
+- 89b2604: Fix security vulnerabilities identified by pnpm audit by upgrading vitest and @vitest/coverage-v8 from 4.1.8 to 4.1.10.
+
 ## 1.1.4
 
 ### Patch Changes

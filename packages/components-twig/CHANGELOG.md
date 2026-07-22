@@ -1,5 +1,14 @@
 # @rijkshuisstijl-community/components-twig
 
+## 3.2.3
+
+### Patch Changes
+
+- 91d25ee: "disabled=false" uit de code gehaald.
+- Updated dependencies [30f8098]
+- Updated dependencies [9b2f197]
+  - @rijkshuisstijl-community/components-css@18.0.0
+
 ## 3.2.2
 
 ### Patch Changes
