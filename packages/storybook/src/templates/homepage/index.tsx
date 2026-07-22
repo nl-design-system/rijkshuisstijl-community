@@ -15,7 +15,7 @@ export default function Page() {
           <Hero
             heading="Rijkshuisstijl Community Design System"
             headingLevel={1}
-            imageAlt="Tullip field"
+            imageAlt="Tulip field"
             imageSrc="/placeholder.jpg"
           />
           <ColumnLayout>

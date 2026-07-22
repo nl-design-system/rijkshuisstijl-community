@@ -3,7 +3,7 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Link } from '@rijkshuisstijl-community/link-react';
+import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import clsx from 'clsx';
 import React from 'react';
 import { forwardRef, type HTMLAttributes, JSX, type ReactNode } from 'react';

@@ -64,7 +64,7 @@ const preview: Preview = {
     actions: {
       disable: true,
     },
-    controls: { exclude: ['children'] },
+    controls: { exclude: ['children', 'ref', 'className'] },
     options: {
       storySort: {
         method: 'alphabetical',

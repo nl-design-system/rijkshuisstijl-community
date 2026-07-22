@@ -5,33 +5,33 @@
 
 .rhc-link-list {
   display: block;
+}
+.rhc-link-list__item .utrecht-link-list__link {
+  align-items: flex-start;
 
-  .utrecht-link-list__link {
-    align-items: flex-start;
-
-    .utrecht-icon {
-      align-items: center;
-      block-size: 1lh;
-      display: flex;
-      flex-shrink: 0;
-      position: static;
-    }
-
-    &:hover .utrecht-link-list__link-text {
-      text-decoration-line: var(--_utrecht-link-state-text-decoration, var(--utrecht-link-text-decoration, underline));
-      text-decoration-skip-ink: all;
-      text-decoration-thickness: 3px;
-      text-underline-offset: var(--utrecht-link-text-underline-offset);
-    }
+  &:hover .utrecht-link-list__link-text {
+    text-decoration-line: var(--_utrecht-link-state-text-decoration, var(--utrecht-link-text-decoration, underline));
+    text-decoration-skip-ink: all;
+    text-decoration-thickness: 3px;
+    text-underline-offset: var(--utrecht-link-text-underline-offset);
   }
+}
 
-  .utrecht-link-list__item {
-    display: block;
-    font-family: var(--rhc-text-font-family-default, inherit);
-    font-size: var(--utrecht-link-list-item-font-size, inherit);
-  }
+.rhc-link-list__item .utrecht-icon {
+  align-items: center;
+  block-size: 1lh;
+  display: flex;
+  flex-shrink: 0;
+  position: static;
+}
 
-  .utrecht-link-list__item .utrecht-link:any-link {
-    line-height: var(--rhc-text-line-height-md, inherit);
-  }
+.rhc-link-list__item {
+  // display: inline-flex;
+  display: block;
+  font-family: var(--rhc-text-font-family-default, inherit);
+  font-size: var(--utrecht-link-list-item-font-size, inherit);
+}
+
+.rhc-link-list__item .utrecht-link:any-link {
+  line-height: var(--rhc-text-line-height-md, inherit);
 }
