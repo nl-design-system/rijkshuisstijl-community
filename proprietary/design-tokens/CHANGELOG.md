@@ -1,5 +1,17 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 16.2.0
+
+### Minor Changes
+
+- 4a9b4bd: Border-radius fijner afgestemd op het ontwerp: `rhc.border-radius.sm` van 2.5px naar 2px en `rhc.border-radius.md` van 5px naar 4px. Select en Table gebruiken nu `md` in plaats van `sm`.
+
+### Patch Changes
+
+- 4b9bf3a: variant mogelijk zonder organisatie + variant mogelijk met hyperlink
+- 738948d: nl-link hover text-decoration-thickness aanpassen naar 0.1875em
+- 89b2604: Fix security vulnerabilities identified by pnpm audit by upgrading vitest and @vitest/coverage-v8 from 4.1.8 to 4.1.10.
+
 ## 16.1.0
 
 ### Minor Changes

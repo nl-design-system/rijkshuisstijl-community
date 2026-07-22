@@ -1,5 +1,17 @@
 # @rijkshuisstijl-community/logo-react
 
+## 1.1.0
+
+### Minor Changes
+
+- 4b9bf3a: variant mogelijk zonder organisatie + variant mogelijk met hyperlink
+
+### Patch Changes
+
+- 89b2604: Fix security vulnerabilities identified by pnpm audit by upgrading vitest and @vitest/coverage-v8 from 4.1.8 to 4.1.10.
+- Updated dependencies [4b9bf3a]
+  - @rijkshuisstijl-community/logo-css@1.1.0
+
 ## 1.0.1
 
 ### Patch Changes

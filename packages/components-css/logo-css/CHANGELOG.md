@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/logo-css
 
+## 1.1.0
+
+### Minor Changes
+
+- 4b9bf3a: variant mogelijk zonder organisatie + variant mogelijk met hyperlink
+
 ## 1.0.0
 
 ### Major Changes
