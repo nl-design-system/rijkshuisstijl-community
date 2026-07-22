@@ -2691,6 +2691,12 @@
             "$type": "dimension",
             "$value": "80rem"
           }
+        },
+        "content": {
+          "max-inline-size": {
+            "$type": "dimension",
+            "$value": "84rem"
+          }
         }
       },
       "text": {
@@ -10434,21 +10440,13 @@
   },
   "components/page-footer-new": {
     "rhc": {
-      "page-footer-layout": {
-        "max-inline-size": {
-          "$type": "dimension",
-          "$value": "{rhc.size.page.md}"
-        },
-        "column-gap": {
-          "$type": "dimension",
-          "$value": "{rhc.space.3xl}"
-        },
-        "row-gap": {
-          "$type": "dimension",
-          "$value": "{rhc.space.2xl}"
-        }
-      },
       "page-footer": {
+        "content": {
+          "max-inline-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.page.md}"
+          }
+        },
         "background-color": {
           "$type": "color",
           "$value": "{rhc.color.core.500}"
@@ -10511,6 +10509,10 @@
           "column-gap": {
             "$type": "dimension",
             "$value": "{rhc.space.2xl}"
+          },
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.md}"
           }
         },
         "font-family": {
@@ -11148,7 +11150,7 @@
         },
         "color": {
           "$type": "color",
-          "$value": "{rhc.color.cool-grey.300}"
+          "$value": "{rhc.color.core.300}"
         },
         "margin-block-end": {
           "$type": "dimension",
@@ -12186,7 +12188,7 @@
       "grid": {
         "column-count": {
           "$type": "number",
-          "$value": 4
+          "$value": "4"
         },
         "column-gap": {
           "$type": "dimension",
@@ -12227,7 +12229,7 @@
         "vi-medium": {
           "column-count": {
             "$type": "number",
-            "$value": 8
+            "$value": "8"
           },
           "padding-inline": {
             "$type": "dimension",
@@ -12237,7 +12239,7 @@
         "vi-wide": {
           "column-count": {
             "$type": "number",
-            "$value": 12
+            "$value": "12"
           },
           "padding-inline": {
             "$type": "dimension",
