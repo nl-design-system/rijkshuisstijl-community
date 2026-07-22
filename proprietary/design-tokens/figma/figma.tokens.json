@@ -12075,6 +12075,86 @@
       }
     }
   },
+  "components/grid": {
+    "ams": {
+      "grid": {
+        "column-count": {
+          "$type": "number",
+          "$value": 4
+        },
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.2xl}"
+        },
+        "padding-block": {
+          "l": {
+            "$type": "dimension",
+            "$value": "{rhc.space.none}"
+          },
+          "xl": {
+            "$type": "dimension",
+            "$value": "{rhc.space.none}"
+          },
+          "2xl": {
+            "$type": "dimension",
+            "$value": "{rhc.space.none}"
+          }
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{rhc.space.none}"
+        },
+        "row-gap": {
+          "l": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "xl": {
+            "$type": "dimension",
+            "$value": "{rhc.space.3xl}"
+          },
+          "2xl": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          }
+        },
+        "vi-medium": {
+          "column-count": {
+            "$type": "number",
+            "$value": 8
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.none}"
+          }
+        },
+        "vi-wide": {
+          "column-count": {
+            "$type": "number",
+            "$value": 12
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.none}"
+          }
+        },
+        "cell": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{rhc.color.transparent}"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{rhc.space.none}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.none}"
+          }
+        }
+      }
+    }
+  },
   "components/page-header": {
     "utrecht": {
       "page-header": {
@@ -12397,8 +12477,10 @@
         "components/textarea": "source",
         "components/toggletip": "source",
         "components/unordered-list": "source",
-        "components/page-header": "source"
+        "components/page-header": "source",
+        "components/grid": "source"
       },
+      "$figmaVariableReferences": {},
       "group": "Components"
     }
   ],
@@ -12506,6 +12588,7 @@
       "components/textarea",
       "components/toggletip",
       "components/unordered-list",
+      "components/grid",
       "components/page-header",
       "overrides/type-scale/default [code-only]",
       "overrides/type-scale/information dense [code-only]"
