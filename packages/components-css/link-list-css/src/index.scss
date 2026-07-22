@@ -16,6 +16,13 @@
       flex-shrink: 0;
       position: static;
     }
+
+    &:hover .utrecht-link-list__link-text {
+      text-decoration-line: var(--_utrecht-link-state-text-decoration, var(--utrecht-link-text-decoration, underline));
+      text-decoration-skip-ink: all;
+      text-decoration-thickness: 3px;
+      text-underline-offset: var(--utrecht-link-text-underline-offset);
+    }
   }
 
   .utrecht-link-list__item {
