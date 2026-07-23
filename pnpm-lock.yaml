@@ -665,6 +665,9 @@ importers:
       '@amsterdam/design-system-css':
         specifier: 1.0.1
         version: 1.0.1(@amsterdam/design-system-assets@1.0.0)(@amsterdam/design-system-tokens@1.0.1)
+      '@gemeente-denhaag/side-navigation':
+        specifier: 4.1.1
+        version: 4.1.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@nl-design-system-candidate/heading-css':
         specifier: 1.1.3
         version: 1.1.3
@@ -806,9 +809,6 @@ importers:
       '@rijkshuisstijl-community/separator-css':
         specifier: workspace:*
         version: link:../separator-css
-      '@rijkshuisstijl-community/side-nav-css':
-        specifier: workspace:*
-        version: link:../side-nav-css
       '@rijkshuisstijl-community/skip-link-css':
         specifier: workspace:*
         version: link:../skip-link-css
@@ -1192,15 +1192,6 @@ importers:
       '@utrecht/separator-css':
         specifier: 1.5.1
         version: 1.5.1
-      chokidar-cli:
-        specifier: 3.0.0
-        version: 3.0.0
-
-  packages/components-css/side-nav-css:
-    devDependencies:
-      '@rijkshuisstijl-community/build-utils-css':
-        specifier: workspace:*
-        version: link:../../build-utils-css
       chokidar-cli:
         specifier: 3.0.0
         version: 3.0.0
@@ -4613,15 +4604,6 @@ importers:
       '@rijkshuisstijl-community/separator-react':
         specifier: workspace:*
         version: link:../separator-react
-      '@rijkshuisstijl-community/side-nav-item-react':
-        specifier: workspace:*
-        version: link:../side-nav-item-react
-      '@rijkshuisstijl-community/side-nav-link-react':
-        specifier: workspace:*
-        version: link:../side-nav-link-react
-      '@rijkshuisstijl-community/side-nav-list-react':
-        specifier: workspace:*
-        version: link:../side-nav-list-react
       '@rijkshuisstijl-community/side-nav-react':
         specifier: workspace:*
         version: link:../side-nav-react
@@ -7580,9 +7562,9 @@ importers:
 
   packages/components-react/side-nav-react:
     dependencies:
-      '@rijkshuisstijl-community/side-nav-css':
-        specifier: workspace:*
-        version: link:../../components-css/side-nav-css
+      '@gemeente-denhaag/side-navigation':
+        specifier: 4.1.1
+        version: 4.1.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
     devDependencies:
       '@babel/core':
         specifier: 7.29.7
@@ -10724,6 +10706,30 @@ packages:
 
   '@gar/promisify@1.1.3':
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
+
+  '@gemeente-denhaag/iconbutton@3.1.1':
+    resolution: {integrity: sha512-5xWtVxXZcNYPsN4WuXdxIdAlV5wQtimD8psfX5mtCvPBbePj34KA7OsMeUg0FTlpEh6PFhTkqQQEgDq6bBqATg==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
+
+  '@gemeente-denhaag/icons@4.1.0':
+    resolution: {integrity: sha512-Q6fQ1TLQu4USfZyQ+82ONgL60eYgm9AAwMeULvXzOEHOaEHQp74DGBmd5YjNXi0XXkjkBdA+gfUgU+rnYX4R4Q==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
+
+  '@gemeente-denhaag/number-badge@2.1.0':
+    resolution: {integrity: sha512-m1ar7fpQzzmzfUMKgj2wrU1WMrLPmNppgjk3KnffbR6rswh05OlX2RwY00nOrdQwtQzwlRdir3U9CMo21n4gEg==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
+
+  '@gemeente-denhaag/side-navigation@4.1.1':
+    resolution: {integrity: sha512-l+TFU5l8fWf68LPzE6Q6b1YK9EQx78HJ+KP8vcCcxAIcDMcVoI292CVs212r32vHaTGIcTvVhPz67LBt0U8fqQ==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
 
   '@hapi/address@5.1.1':
     resolution: {integrity: sha512-A+po2d/dVoY7cYajycYI43ZbYMXukuopIsqCjh5QzsBCipDtdofHntljDlpccMjIfTy6UOkg+5KPriwYch2bXA==}
@@ -24628,6 +24634,33 @@ snapshots:
   '@gar/promise-retry@1.0.3': {}
 
   '@gar/promisify@1.1.3': {}
+
+  '@gemeente-denhaag/iconbutton@3.1.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+    dependencies:
+      '@gemeente-denhaag/icons': 4.1.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      clsx: 2.1.1
+      react: 19.2.7
+      react-dom: 19.2.7(react@19.2.7)
+
+  '@gemeente-denhaag/icons@4.1.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+    dependencies:
+      clsx: 2.1.1
+      react: 19.2.7
+      react-dom: 19.2.7(react@19.2.7)
+
+  '@gemeente-denhaag/number-badge@2.1.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+    dependencies:
+      react: 19.2.7
+      react-dom: 19.2.7(react@19.2.7)
+
+  '@gemeente-denhaag/side-navigation@4.1.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+    dependencies:
+      '@gemeente-denhaag/iconbutton': 3.1.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@gemeente-denhaag/icons': 4.1.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@gemeente-denhaag/number-badge': 2.1.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      clsx: 2.1.1
+      react: 19.2.7
+      react-dom: 19.2.7(react@19.2.7)
 
   '@hapi/address@5.1.1':
     dependencies:

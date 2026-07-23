@@ -1,4 +1,4 @@
-import { getIconSet, SideNavLink } from '@rijkshuisstijl-community/components-react';
+import { Icon, SideNavLink, SideNavLinkLabel } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './side-nav-link.md?raw';
@@ -8,14 +8,6 @@ const meta = {
   id: 'rhc-sideNavLink',
   component: SideNavLink,
   argTypes: {
-    icon: {
-      control: { type: 'select' },
-      options: Object.keys(getIconSet()),
-      description: 'The icon to use',
-      table: {
-        type: { summary: 'string' },
-      },
-    },
     current: {
       control: { type: 'boolean' },
       description: 'The current state of the link',
@@ -26,13 +18,14 @@ const meta = {
     },
   },
   args: {
-    children: 'Label',
-    icon: 'activiteit',
+    href: '/#',
   },
-  render: (args) => {
-    return <SideNavLink {...args} />;
-  },
-
+  render: (args) => (
+    <SideNavLink {...args}>
+      <Icon icon="user" />
+      <SideNavLinkLabel>Mijn gegevens</SideNavLinkLabel>
+    </SideNavLink>
+  ),
   parameters: {
     docs: {
       description: {
@@ -40,20 +33,15 @@ const meta = {
       },
     },
     // TODO: add Figma and NL DesignSystem links
-    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+    componentOrigin: 'Dit component is overgenomen van Gemeente Den Haag Side Navigation',
     github:
-      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/SideNavLink.tsx',
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/side-nav-react/src/SideNav.tsx',
   },
 } satisfies Meta<typeof SideNavLink>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  args: {
-    children: 'Mijn gegevens',
-    icon: 'user',
-  },
-};
+export const Default: Story = {};
 
 export const Hover: Story = {
   parameters: {
@@ -113,11 +101,5 @@ export const CurrentAndFocusVisible: Story = {
   },
   parameters: {
     pseudo: { focusVisible: true, focus: true },
-  },
-};
-
-export const WithoutIcon: Story = {
-  args: {
-    icon: undefined,
   },
 };

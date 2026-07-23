@@ -1,0 +1,60 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+/**
+ * Rijkshuisstijl-uitbreiding op het Gemeente Den Haag Side Navigation-component.
+ *
+ * De Den Haag-basis levert alleen tekst-states (kleur + gewicht). De Rijkshuisstijl
+ * voegt daarnaast "box"-states toe: de actieve pagina met een lichte achtergrond en
+ * de hover met een donkere achtergrond en witte tekst. Achtergrond, border-radius en
+ * inline-padding komen hier bovenop via de bestaande --denhaag-side-navigation-link-*
+ * tokens; kleur/gewicht blijven via de basis.
+ */
+.denhaag-side-navigation__link {
+  border-radius: var(--denhaag-side-navigation-link-border-radius);
+  padding-inline: var(--denhaag-side-navigation-link-padding-inline);
+}
+
+/*
+ * De Icon-wrapper (.utrecht-icon) heeft line-height 36px met een inline svg
+ * (vertical-align: baseline), waardoor het icoon ~1px onder het optische midden
+ * van de tekst valt. Als block vult het icoon de wrapper zonder baseline-offset
+ * en staat het netjes gecentreerd in de rij.
+ */
+.denhaag-side-navigation__link .utrecht-icon > svg {
+  display: block;
+}
+
+/* Laat het label de resterende breedte vullen en lijn de NumberBadge rechts uit. */
+.denhaag-side-navigation__link-label {
+  flex-grow: 1;
+}
+
+.denhaag-side-navigation__link-label .rhc-number-badge {
+  margin-inline-start: auto;
+}
+
+/*
+ * Actieve pagina: lichte achtergrond (donkerblauwe tekst komt via de basis). De
+ * selector staat in :where() (specificiteit 0), zodat de hover-regel hieronder
+ * altijd wint op specificiteit, onafhankelijk van bron-volgorde of cascade-layers.
+ * Hover op de actieve pagina ziet er zo hetzelfde uit als hover op een gewoon item.
+ */
+:where(.denhaag-side-navigation__link--current, .denhaag-side-navigation__link[aria-current="page"]) {
+  background-color: var(--denhaag-side-navigation-link-active-background-color);
+}
+
+/* Hover (ook op de actieve pagina): donkerblauwe achtergrond met witte tekst. */
+.denhaag-side-navigation__link:hover,
+.denhaag-side-navigation__link--hover {
+  background-color: var(--denhaag-side-navigation-link-hover-background-color);
+}
+
+/* Op hover is de rij-achtergrond gelijk aan de badge; keer de badge om zodat de pil zichtbaar blijft. */
+.denhaag-side-navigation__link--hover .rhc-number-badge,
+.denhaag-side-navigation__link:hover .rhc-number-badge {
+  --nl-number-badge-background-color: var(--denhaag-side-navigation-link-hover-color);
+  --nl-number-badge-color: var(--denhaag-side-navigation-link-hover-background-color);
+}
