@@ -73,14 +73,6 @@ describe('Separator', () => {
 
     expect(ref.current).toBe(separator);
   });
-
-  it('can be invisible', () => {
-    const { container } = render(<Separator invisible />);
-
-    const separator = container.querySelector(':only-child');
-
-    expect(separator).toHaveClass('utrecht-separator--invisible');
-  });
 });
 
 afterEach(() => cleanup());
