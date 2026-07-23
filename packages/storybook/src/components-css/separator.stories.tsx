@@ -9,4 +9,3 @@ export default {
 };
 
 export const Default = ReactStories.Default;
-export const Invisible = ReactStories.Invisible;
