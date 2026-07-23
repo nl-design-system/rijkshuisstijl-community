@@ -10432,6 +10432,108 @@
       }
     }
   },
+  "components/page-footer-new": {
+    "rhc": {
+      "page-footer": {
+        "content": {
+          "max-inline-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.page.md}"
+          }
+        },
+        "background-color": {
+          "$type": "color",
+          "$value": "{rhc.color.core.500}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.foreground.on-dark-color}"
+        },
+        "compact": {
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "tagline": {
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "{rhc.text.font-size.lg}"
+            }
+          },
+          "background-color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.50}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          }
+        },
+        "padding-block-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.4xl}"
+        },
+        "padding-block-end": {
+          "$type": "dimension",
+          "$value": "{rhc.space.4xl}"
+        },
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.4xl}"
+        },
+        "padding-inline-end": {
+          "$type": "dimension",
+          "$value": "{rhc.space.4xl}"
+        },
+        "navigation-link": {
+          "text-decoration-line": {
+            "$type": "textDecoration",
+            "$value": "none"
+          },
+          "min-block-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.pointer-target}"
+          }
+        },
+        "navigation": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.md}"
+          }
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{rhc.text.font-family.default}"
+        },
+        "tagline": {
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "SemiBold Italic"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{rhc.text.line-height.md}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.xl}"
+          }
+        },
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.3xl}"
+        }
+      }
+    }
+  },
   "components/page-number-navigation": {
     "ams": {
       "pagination": {
@@ -12487,6 +12589,7 @@
       "components/ordered-list",
       "components/page-body",
       "components/page-footer",
+      "components/page-footer-new",
       "components/page-number-navigation",
       "components/paragraph",
       "components/pre-heading",
