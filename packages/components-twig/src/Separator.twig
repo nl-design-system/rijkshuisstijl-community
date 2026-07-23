@@ -1,5 +1,3 @@
 {%- set classes = ['utrecht-separator rhc-separator'] -%}
-{%- if invisible -%}
-{%- set classes = classes|merge(['utrecht-separator--invisible']) -%}
 {%- endif -%}
 <hr{{ attributes.addClass(classes) }}>

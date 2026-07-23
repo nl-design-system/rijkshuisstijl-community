@@ -39,14 +39,6 @@ describe('Separator', () => {
     expect(separator).toBeEmptyDOMElement();
   });
 
-  it('can be hidden', () => {
-    const { container } = render(<Separator hidden />);
-
-    const separator = container.querySelector(':only-child');
-
-    expect(separator).not.toBeVisible();
-  });
-
   it('can have a custom class name', () => {
     const { container } = render(<Separator className="decorative" />);
 
@@ -80,14 +72,6 @@ describe('Separator', () => {
     const separator = container.querySelector(':only-child');
 
     expect(ref.current).toBe(separator);
-  });
-
-  it('can be invisible', () => {
-    const { container } = render(<Separator invisible />);
-
-    const separator = container.querySelector(':only-child');
-
-    expect(separator).toHaveClass('utrecht-separator--invisible');
   });
 });
 

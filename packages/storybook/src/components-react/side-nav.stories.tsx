@@ -40,7 +40,7 @@ export const Default: Story = {
           </SideNavLink>
         </SideNavItem>
       </SideNavList>,
-      <Separator invisible key="separator-1" />,
+      <Separator key="separator-1" />,
       <SideNavList key="ul-2">
         <SideNavItem>
           <SideNavLink href="/#" icon="activiteit">
@@ -59,7 +59,7 @@ export const Default: Story = {
           </SideNavLink>
         </SideNavItem>
       </SideNavList>,
-      <Separator invisible key="separator-2" />,
+      <Separator key="separator-2" />,
       <SideNavList key="ul-3">
         <SideNavItem>
           <SideNavLink href="/#" icon="user">
