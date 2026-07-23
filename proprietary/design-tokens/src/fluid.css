@@ -73,29 +73,6 @@
   --rhc-space-5xl: calc(
     var(--rhc-space-min-5xl) + (var(--rhc-space-max-5xl) - var(--rhc-space-min-5xl)) * var(--rhc-viewport-scale)
   );
-
-  /* fluid logo size tokens
-   */
-  --rhc-size-lint: calc(
-    var(--rhc-size-min-lint) + (var(--rhc-size-max-lint) - var(--rhc-size-min-lint)) * var(--rhc-viewport-scale)
-  );
-  --rhc-size-quarter-lint: calc(0.25 * var(--rhc-size-lint));
-  --rhc-size-half-lint: calc(0.5 * var(--rhc-size-lint));
-  --rhc-size-2-lint: calc(2 * var(--rhc-size-lint));
-  --rhc-size-3-lint: calc(3 * var(--rhc-size-lint));
-  --rhc-size-4-lint: calc(4 * var(--rhc-size-lint));
-
-  /* fluid logo font-size tokens
-   * Scales with the lint-size above so the logo text stays proportional to the logo image.
-   */
-  --rhc-logo-title-font-size: calc(
-    var(--rhc-logo-title-min-font-size) + (var(--rhc-logo-title-max-font-size) - var(--rhc-logo-title-min-font-size)) *
-      var(--rhc-viewport-scale)
-  );
-  --rhc-logo-subtitle-font-size: calc(
-    var(--rhc-logo-subtitle-min-font-size) +
-      (var(--rhc-logo-subtitle-max-font-size) - var(--rhc-logo-subtitle-min-font-size)) * var(--rhc-viewport-scale)
-  );
 }
 
 .rhc-theme--fluid,
@@ -123,5 +100,31 @@
   --rhc-text-font-size-3xl: calc(
     var(--rhc-text-font-size-min-3xl) + (var(--rhc-text-font-size-max-3xl) - var(--rhc-text-font-size-min-3xl)) *
       var(--rhc-viewport-scale)
+  );
+}
+
+.rhc-theme--fluid,
+.rhc-theme--fluid-lint {
+  /* fluid logo size tokens
+   */
+  --rhc-size-lint: calc(
+    var(--rhc-size-min-lint) + (var(--rhc-size-max-lint) - var(--rhc-size-min-lint)) * var(--rhc-viewport-scale)
+  );
+  --rhc-size-quarter-lint: calc(0.25 * var(--rhc-size-lint));
+  --rhc-size-half-lint: calc(0.5 * var(--rhc-size-lint));
+  --rhc-size-2-lint: calc(2 * var(--rhc-size-lint));
+  --rhc-size-3-lint: calc(3 * var(--rhc-size-lint));
+  --rhc-size-4-lint: calc(4 * var(--rhc-size-lint));
+
+  /* fluid logo font-size tokens
+   * Scales with the lint-size above so the logo text stays proportional to the logo image.
+   */
+  --rhc-logo-title-font-size: calc(
+    var(--rhc-logo-title-min-font-size) + (var(--rhc-logo-title-max-font-size) - var(--rhc-logo-title-min-font-size)) *
+      var(--rhc-viewport-scale)
+  );
+  --rhc-logo-subtitle-font-size: calc(
+    var(--rhc-logo-subtitle-min-font-size) +
+      (var(--rhc-logo-subtitle-max-font-size) - var(--rhc-logo-subtitle-min-font-size)) * var(--rhc-viewport-scale)
   );
 }
