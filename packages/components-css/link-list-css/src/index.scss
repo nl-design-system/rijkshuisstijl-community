@@ -3,32 +3,6 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-.rhc-link-list.rhc-link-list {
-  display: block;
-}
-
-.rhc-link-list__item {
-  display: flex;
-  font-family: var(--rhc-text-font-family-default, inherit);
-  font-size: var(--utrecht-link-list-item-font-size, inherit);
-}
-
-.rhc-link-list__item:not(:last-child) {
-  padding-block-end: var(--utrecht-link-list-row-gap);
-}
-
-.utrecht-column-layout .rhc-link-list.rhc-link-list {
-  column-gap: var(--utrecht-column-layout-gap, 2em);
-  column-span: all;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--utrecht-column-layout-column-width, 40ch), 1fr));
-  row-gap: var(--utrecht-link-list-row-gap);
-}
-
-.utrecht-column-layout .rhc-link-list__item:not(:last-child) {
-  padding-block-end: 0;
-}
-
 .rhc-link-list__item .utrecht-link-list__link {
   align-items: flex-start;
 
@@ -46,6 +20,12 @@
   display: flex;
   flex-shrink: 0;
   position: static;
+}
+
+.rhc-link-list__item {
+  display: inline-flex;
+  font-family: var(--rhc-text-font-family-default, inherit);
+  font-size: var(--utrecht-link-list-item-font-size, inherit);
 }
 
 .rhc-link-list__item .utrecht-link:any-link {
