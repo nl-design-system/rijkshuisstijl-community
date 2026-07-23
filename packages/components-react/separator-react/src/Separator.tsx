@@ -15,20 +15,8 @@ export interface SeparatorProps extends UtrechtSeparatorProps {
   ref?: Ref<HTMLHRElement>;
 }
 
-export const Separator = ({ ref, invisible, className, ...restProps }: SeparatorProps) => {
-  return (
-    <UtrechtSeparator
-      ref={ref}
-      className={clsx(
-        'rhc-separator',
-        {
-          'utrecht-separator--invisible': invisible,
-        },
-        className,
-      )}
-      {...restProps}
-    />
-  );
+export const Separator = ({ className, ref, ...restProps }: SeparatorProps) => {
+  return <UtrechtSeparator className={clsx('rhc-separator', className)} ref={ref} {...restProps} />;
 };
 
 Separator.displayName = 'Separator';
