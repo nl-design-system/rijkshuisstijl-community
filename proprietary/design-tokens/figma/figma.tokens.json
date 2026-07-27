@@ -10435,12 +10435,6 @@
   "components/page-footer-new": {
     "rhc": {
       "page-footer": {
-        "content": {
-          "max-inline-size": {
-            "$type": "dimension",
-            "$value": "{rhc.size.page.md}"
-          }
-        },
         "background-color": {
           "$type": "color",
           "$value": "{rhc.color.core.500}"
@@ -10449,39 +10443,15 @@
           "$type": "color",
           "$value": "{rhc.color.foreground.on-dark-color}"
         },
-        "compact": {
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{rhc.space.2xl}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{rhc.space.2xl}"
-          },
-          "tagline": {
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "{rhc.text.font-size.lg}"
-            }
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.50}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          }
-        },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{rhc.text.font-family.default}"
         },
         "padding-block-end": {
           "$type": "dimension",
           "$value": "{rhc.space.4xl}"
         },
-        "padding-inline-start": {
+        "padding-block-start": {
           "$type": "dimension",
           "$value": "{rhc.space.4xl}"
         },
@@ -10489,14 +10459,18 @@
           "$type": "dimension",
           "$value": "{rhc.space.4xl}"
         },
-        "navigation-bar-link": {
-          "text-decoration-line": {
-            "$type": "textDecoration",
-            "$value": "none"
-          },
-          "min-block-size": {
+        "padding-inline-start": {
+          "$type": "dimension",
+          "$value": "{rhc.space.4xl}"
+        },
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.3xl}"
+        },
+        "content": {
+          "max-inline-size": {
             "$type": "dimension",
-            "$value": "{rhc.size.pointer-target}"
+            "$value": "{rhc.size.page.md}"
           }
         },
         "navigation-bar": {
@@ -10509,11 +10483,21 @@
             "$value": "{rhc.space.md}"
           }
         },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{rhc.text.font-family.default}"
+        "navigation-bar-link": {
+          "min-block-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.pointer-target}"
+          },
+          "text-decoration-line": {
+            "$type": "textDecoration",
+            "$value": "none"
+          }
         },
         "tagline": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.xl}"
+          },
           "font-weight": {
             "$type": "fontWeights",
             "$value": "SemiBold Italic"
@@ -10521,15 +10505,31 @@
           "line-height": {
             "$type": "lineHeights",
             "$value": "{rhc.text.line-height.md}"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.xl}"
           }
         },
-        "row-gap": {
-          "$type": "dimension",
-          "$value": "{rhc.space.3xl}"
+        "compact": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.50}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "tagline": {
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "{rhc.text.font-size.lg}"
+            }
+          }
         }
       }
     }
