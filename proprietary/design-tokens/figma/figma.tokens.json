@@ -9735,6 +9735,18 @@
           "padding-block-start": {
             "$type": "dimension",
             "$value": ""
+          },
+          "min": {
+            "padding-block-start": {
+              "$type": "dimension",
+              "$value": "2.604rem"
+            }
+          },
+          "max": {
+            "padding-block-start": {
+              "$type": "dimension",
+              "$value": "3.125rem"
+            }
           }
         },
         "min": {
@@ -12289,10 +12301,11 @@
       "name": "Min",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
-        "common/viewport/min": "enabled"
+        "common/viewport/min": "enabled",
+        "viewport/min": "enabled"
       },
-      "group": "Viewport",
-      "$figmaVariableReferences": {}
+      "$figmaVariableReferences": {},
+      "group": "Viewport"
     },
     {
       "id": "2768e3ed79267e65748f03874458ee68741a9816",
