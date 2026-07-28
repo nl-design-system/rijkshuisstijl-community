@@ -9702,7 +9702,7 @@
         "title": {
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "600"
+            "$value": "{rhc.text.font-weight.semi-bold}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -9710,11 +9710,23 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.sm}"
+            "$value": "{rhc.logo.title.max.font-size}"
           },
           "padding-block-start": {
             "$type": "dimension",
             "$value": ""
+          },
+          "min": {
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "0.75rem"
+            }
+          },
+          "max": {
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "0.9rem"
+            }
           }
         },
         "subtitle": {
@@ -9728,7 +9740,19 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "0.9rem"
+            "$value": "{rhc.logo.subtitle.max.font-size}"
+          },
+          "min": {
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "0.75rem"
+            }
+          },
+          "max": {
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "0.9rem"
+            }
           }
         },
         "column-gap": {
