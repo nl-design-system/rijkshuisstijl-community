@@ -1,0 +1,20 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+@use "mixin";
+
+.rhc-grid {
+  @include mixin.rhc-grid;
+}
+
+@for $i from 1 through 12 {
+  .rhc-grid__cell--span-#{$i} {
+    @include mixin.rhc-grid__cell--span($i);
+  }
+
+  .rhc-grid__cell--start-#{$i} {
+    @include mixin.rhc-grid__cell--start($i);
+  }
+}

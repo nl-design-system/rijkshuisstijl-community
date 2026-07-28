@@ -9714,7 +9714,8 @@
           },
           "padding-block-start": {
             "$type": "dimension",
-            "$value": ""
+            "$value": "0",
+            "$description": "[todo]"
           }
         },
         "subtitle": {
@@ -10428,6 +10429,16 @@
             "$type": "flexDirection",
             "$value": "column"
           }
+        }
+      }
+    }
+  },
+  "components/grid-new": {
+    "rhc": {
+      "grid": {
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.2xl}"
         }
       }
     }
