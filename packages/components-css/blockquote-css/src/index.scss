@@ -8,3 +8,31 @@
 .rhc-blockquote .utrecht-blockquote__quote {
   @include mixin.rhc-blockquote__quote;
 }
+
+// The compound `.rhc-blockquote.rhc-blockquote--…` selectors outrank the
+// `.utrecht-blockquote` base rules, so the per-side border widths and single
+// rounded corner win without `!important`.
+.rhc-blockquote {
+  &.rhc-blockquote--outline-start-start,
+  &.rhc-blockquote--outline-start-end,
+  &.rhc-blockquote--outline-end-start,
+  &.rhc-blockquote--outline-end-end {
+    @include mixin.rhc-blockquote--outline;
+  }
+
+  &.rhc-blockquote--outline-start-start {
+    @include mixin.rhc-blockquote--outline-corner("block-start", "inline-start", "start-start");
+  }
+
+  &.rhc-blockquote--outline-start-end {
+    @include mixin.rhc-blockquote--outline-corner("block-start", "inline-end", "start-end");
+  }
+
+  &.rhc-blockquote--outline-end-start {
+    @include mixin.rhc-blockquote--outline-corner("block-end", "inline-start", "end-start");
+  }
+
+  &.rhc-blockquote--outline-end-end {
+    @include mixin.rhc-blockquote--outline-corner("block-end", "inline-end", "end-end");
+  }
+}
