@@ -2376,12 +2376,20 @@
           "lint": {
             "$type": "dimension",
             "$value": "2.5rem"
+          },
+          "2-lint": {
+            "$type": "dimension",
+            "$value": "5rem"
           }
         },
         "max": {
           "lint": {
             "$type": "dimension",
             "$value": "3rem"
+          },
+          "2-lint": {
+            "$type": "dimension",
+            "$value": "6rem"
           }
         },
         "quarter-lint": {
@@ -2391,14 +2399,6 @@
         "half-lint": {
           "$type": "dimension",
           "$value": "1.5rem"
-        },
-        "lint": {
-          "$type": "dimension",
-          "$value": "3rem"
-        },
-        "2-lint": {
-          "$type": "dimension",
-          "$value": "6rem"
         },
         "3-lint": {
           "$type": "dimension",
@@ -2983,6 +2983,16 @@
           "$type": "dimension",
           "$value": "{rhc.space.min.5xl}"
         }
+      },
+      "size": {
+        "lint": {
+          "$type": "dimension",
+          "$value": "{rhc.size.min.lint}"
+        },
+        "2-lint": {
+          "$type": "dimension",
+          "$value": "{rhc.size.min.2-lint}"
+        }
       }
     }
   },
@@ -3069,6 +3079,16 @@
         "5xl": {
           "$type": "dimension",
           "$value": "{rhc.space.max.5xl}"
+        }
+      },
+      "size": {
+        "lint": {
+          "$type": "dimension",
+          "$value": "{rhc.size.max.lint}"
+        },
+        "2-lint": {
+          "$type": "dimension",
+          "$value": "{rhc.size.max.2-lint}"
         }
       }
     }
@@ -12197,6 +12217,24 @@
       }
     }
   },
+  "viewport/min": {
+    "rhc": {
+      "logo": {
+        "title": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.logo.min.font-size}"
+          }
+        },
+        "subtitle": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.logo.min.font-size}"
+          }
+        }
+      }
+    }
+  },
   "$themes": [
     {
       "id": "0048b2d80fdc07967e19f605ae7bb4b75d916418",
@@ -12532,7 +12570,8 @@
       "components/unordered-list",
       "components/page-header",
       "overrides/type-scale/default [code-only]",
-      "overrides/type-scale/information dense [code-only]"
+      "overrides/type-scale/information dense [code-only]",
+      "viewport/min"
     ]
   }
 }
