@@ -3,4 +3,4 @@
 '@rijkshuisstijl-community/components-twig': major
 ---
 
-Removed margin-inline-start and margin-inline-end styles from the component. Border-color is aangepast.
+Reset margin-inline-start and margin-inline-end. Border-color is aangepast.
