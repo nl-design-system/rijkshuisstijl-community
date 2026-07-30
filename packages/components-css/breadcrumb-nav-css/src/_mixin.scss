@@ -8,14 +8,14 @@
     align-items: center;
   }
 
-  &__link {
-    &--current {
+  .rhc-breadcrumb-nav__link {
+    .rhc-breadcrumb-nav__link--current {
       --utrecht-link-text-decoration: none;
 
       color: var(--rhc-breadcrumb-nav-link-current-color);
     }
 
-    &--active {
+    .rhc-breadcrumb-nav__link--active {
       --utrecht-link-text-decoration: var(--utrecht-breadcrumb-nav-link-active-text-decoration, underline);
     }
   }
