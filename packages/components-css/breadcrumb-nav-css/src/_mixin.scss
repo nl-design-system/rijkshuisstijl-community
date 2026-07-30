@@ -7,16 +7,14 @@
   .utrecht-breadcrumb-nav__list {
     align-items: center;
   }
+}
 
-  .rhc-breadcrumb-nav__link {
-    .rhc-breadcrumb-nav__link--current {
-      --utrecht-link-text-decoration: none;
+.rhc-breadcrumb-nav__link--current {
+  --utrecht-link-text-decoration: none;
 
-      color: var(--rhc-breadcrumb-nav-link-current-color);
-    }
+  color: var(--rhc-breadcrumb-nav-link-current-color);
+}
 
-    .rhc-breadcrumb-nav__link--active {
-      --utrecht-link-text-decoration: var(--utrecht-breadcrumb-nav-link-active-text-decoration, underline);
-    }
-  }
+.rhc-breadcrumb-nav__link--active {
+  --utrecht-link-text-decoration: var(--utrecht-breadcrumb-nav-link-active-text-decoration, underline);
 }
