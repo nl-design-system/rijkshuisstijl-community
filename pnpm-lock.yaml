@@ -318,7 +318,7 @@ importers:
     dependencies:
       '@angular-devkit/build-angular':
         specifier: 21.2.14
-        version: 21.2.14(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(@angular/compiler@21.2.16)(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.16(@angular/common@21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2)))(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.1)(@types/node@25.9.2)(chokidar@5.0.0)(html-webpack-plugin@5.6.7(webpack@5.105.2(esbuild@0.28.1)(postcss@8.5.12)))(jest-environment-jsdom@30.4.1)(jest@30.4.2(@types/node@25.9.2)(esbuild-register@3.6.0(esbuild@0.28.1)))(jiti@2.7.0)(ng-packagr@21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(typescript@5.9.3)(vitest@4.1.8)(yaml@2.9.0)
+        version: 21.2.14(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(@angular/compiler@21.2.16)(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.16(@angular/common@21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2)))(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.1)(@types/node@25.9.2)(chokidar@5.0.0)(html-webpack-plugin@5.6.7(webpack@5.105.2(esbuild@0.28.1)(postcss@8.5.12)))(jest-environment-jsdom@30.4.1)(jest@30.4.2(@types/node@25.9.2)(esbuild-register@3.6.0(esbuild@0.28.1)))(jiti@2.7.0)(ng-packagr@21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(typescript@5.9.3)(vitest@4.1.10)(yaml@2.9.0)
       '@angular/cli':
         specifier: 21.2.14
         version: 21.2.14(@types/node@25.9.2)(chokidar@5.0.0)
@@ -1256,6 +1256,9 @@ importers:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
         version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
 
   packages/components-css/rounded-corner-css:
     devDependencies:
@@ -1420,8 +1423,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -1459,8 +1462,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/action-group-react:
     dependencies:
@@ -1520,8 +1523,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -1559,8 +1562,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/alert-react:
     dependencies:
@@ -1623,8 +1626,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -1662,8 +1665,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/article-react:
     dependencies:
@@ -1723,8 +1726,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -1762,8 +1765,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/blockquote-react:
     dependencies:
@@ -1823,8 +1826,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -1862,8 +1865,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/body-react:
     dependencies:
@@ -1923,8 +1926,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -1962,8 +1965,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/breadcrumb-nav-react:
     dependencies:
@@ -2023,8 +2026,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2062,8 +2065,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/button-react:
     dependencies:
@@ -2126,8 +2129,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2165,8 +2168,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/card-as-link-react:
     dependencies:
@@ -2232,8 +2235,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2271,8 +2274,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/card-react:
     dependencies:
@@ -2335,8 +2338,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2374,8 +2377,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/checkbox-group-react:
     dependencies:
@@ -2435,8 +2438,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2474,8 +2477,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/checkbox-react:
     dependencies:
@@ -2535,8 +2538,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2574,8 +2577,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/code-input-group-react:
     dependencies:
@@ -2641,8 +2644,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2680,8 +2683,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/code-input-react:
     dependencies:
@@ -2744,8 +2747,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2783,8 +2786,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/column-layout-react:
     dependencies:
@@ -2841,8 +2844,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2880,8 +2883,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/data-badge-button-react:
     dependencies:
@@ -2941,8 +2944,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2980,8 +2983,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/data-summary-item-react:
     dependencies:
@@ -3041,8 +3044,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3080,8 +3083,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/data-summary-react:
     dependencies:
@@ -3141,8 +3144,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3180,8 +3183,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/dot-badge-react:
     dependencies:
@@ -3241,8 +3244,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3280,8 +3283,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/drawer-react:
     dependencies:
@@ -3338,8 +3341,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3377,8 +3380,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/fieldset-react:
     dependencies:
@@ -3435,8 +3438,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3474,8 +3477,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/figure-react:
     dependencies:
@@ -3535,8 +3538,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3574,8 +3577,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/file-input-react:
     dependencies:
@@ -3641,8 +3644,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3680,8 +3683,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/file-react:
     dependencies:
@@ -3753,8 +3756,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3792,8 +3795,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/footer-react:
     dependencies:
@@ -3868,8 +3871,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3907,8 +3910,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/heading-group-react:
     dependencies:
@@ -3968,8 +3971,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -4007,8 +4010,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/heading-react:
     dependencies:
@@ -4068,8 +4071,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -4107,8 +4110,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/hero-react:
     dependencies:
@@ -4177,8 +4180,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -4216,8 +4219,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/icon-react:
     dependencies:
@@ -4280,8 +4283,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -4319,8 +4322,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/image-react:
     dependencies:
@@ -4380,8 +4383,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -4419,8 +4422,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/language-navigation-react:
     dependencies:
@@ -4486,8 +4489,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -4525,8 +4528,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/library-react:
     dependencies:
@@ -4832,8 +4835,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -4886,8 +4889,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/link-button-react:
     dependencies:
@@ -4947,8 +4950,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -4986,8 +4989,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/link-list-card-react:
     dependencies:
@@ -5053,8 +5056,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -5092,8 +5095,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/link-list-react:
     dependencies:
@@ -5153,8 +5156,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -5192,8 +5195,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/link-react:
     dependencies:
@@ -5253,8 +5256,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -5292,8 +5295,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/listbox-react:
     dependencies:
@@ -5353,8 +5356,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -5392,8 +5395,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/logo-react:
     dependencies:
@@ -5450,8 +5453,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -5489,8 +5492,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/message-list-item-react:
     dependencies:
@@ -5553,8 +5556,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -5592,8 +5595,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/message-list-react:
     dependencies:
@@ -5650,8 +5653,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -5689,8 +5692,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/navigation-bar-react:
     dependencies:
@@ -5765,8 +5768,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -5804,8 +5807,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/navigation-list-item-react:
     dependencies:
@@ -5865,8 +5868,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -5904,8 +5907,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/navigation-list-react:
     dependencies:
@@ -5962,8 +5965,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -6001,8 +6004,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/number-badge-react:
     dependencies:
@@ -6062,8 +6065,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -6101,8 +6104,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/ordered-list-react:
     dependencies:
@@ -6159,8 +6162,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -6198,8 +6201,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/page-body-react:
     dependencies:
@@ -6256,8 +6259,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -6295,8 +6298,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/page-content-react:
     dependencies:
@@ -6353,8 +6356,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -6392,8 +6395,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/page-header-react:
     dependencies:
@@ -6450,8 +6453,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -6489,8 +6492,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/page-layout-react:
     dependencies:
@@ -6547,8 +6550,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -6586,8 +6589,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/page-number-navigation-react:
     dependencies:
@@ -6647,8 +6650,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -6686,8 +6689,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/paragraph-react:
     dependencies:
@@ -6747,8 +6750,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -6786,8 +6789,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/pre-heading-react:
     dependencies:
@@ -6850,8 +6853,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -6889,8 +6892,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/radio-group-react:
     dependencies:
@@ -6950,8 +6953,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -6989,8 +6992,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/radio-react:
     dependencies:
@@ -7050,8 +7053,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -7089,8 +7092,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/root-react:
     dependencies:
@@ -7147,8 +7150,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -7186,8 +7189,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/rounded-corner-react:
     dependencies:
@@ -7247,8 +7250,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -7286,8 +7289,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/separator-react:
     dependencies:
@@ -7347,8 +7350,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -7386,8 +7389,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/side-nav-item-react:
     devDependencies:
@@ -7440,8 +7443,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -7479,8 +7482,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/side-nav-link-react:
     dependencies:
@@ -7537,8 +7540,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -7576,8 +7579,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/side-nav-list-react:
     devDependencies:
@@ -7630,8 +7633,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -7669,8 +7672,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/side-nav-react:
     dependencies:
@@ -7727,8 +7730,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -7766,8 +7769,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/skip-link-react:
     dependencies:
@@ -7827,8 +7830,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -7866,8 +7869,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/text-input-react:
     dependencies:
@@ -7927,8 +7930,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -7966,8 +7969,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/textarea-react:
     dependencies:
@@ -8027,8 +8030,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -8066,8 +8069,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/toggletip-react:
     dependencies:
@@ -8133,8 +8136,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -8172,8 +8175,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/unordered-list-item-react:
     dependencies:
@@ -8230,8 +8233,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -8269,8 +8272,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/unordered-list-react:
     dependencies:
@@ -8327,8 +8330,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -8366,8 +8369,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-react/visually-hidden-react:
     dependencies:
@@ -8424,8 +8427,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -8463,8 +8466,8 @@ importers:
         specifier: 7.3.5
         version: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/components-twig:
     dependencies:
@@ -8530,6 +8533,9 @@ importers:
       '@nl-design-system-candidate/code-block-react':
         specifier: 1.4.0
         version: 1.4.0(@babel/runtime@7.29.7)(react@19.2.7)
+      '@vitest/browser':
+        specifier: 4.1.10
+        version: 4.1.10(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vitest@4.1.10)
     devDependencies:
       '@babel/core':
         specifier: 7.29.7
@@ -8593,7 +8599,7 @@ importers:
         version: 9.1.20(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.8.3)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)))
       '@storybook/addon-vitest':
         specifier: 9.1.20
-        version: 9.1.20(@vitest/browser-playwright@4.1.8)(@vitest/browser@4.1.8)(@vitest/runner@4.1.8)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.8.3)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)))(vitest@4.1.8)
+        version: 9.1.20(@vitest/browser-playwright@4.1.10)(@vitest/browser@4.1.10)(@vitest/runner@4.1.10)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.8.3)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)))(vitest@4.1.10)
       '@storybook/cli':
         specifier: 9.1.20
         version: 9.1.20(@babel/preset-env@7.29.7(@babel/core@7.29.7))(@testing-library/dom@10.4.1)(prettier@3.8.3)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
@@ -8643,11 +8649,11 @@ importers:
         specifier: 4.0.5
         version: 4.0.5(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@vitest/browser-playwright':
-        specifier: 4.1.8
-        version: 4.1.8(playwright@1.60.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(playwright@1.60.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vitest@4.1.10)
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       '@whitespace/storybook-addon-html':
         specifier: 8.0.2
         version: 8.0.2(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.8.3)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)))
@@ -8718,8 +8724,8 @@ importers:
         specifier: 1.7.0
         version: 1.7.0(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/storybook-angular:
     dependencies:
@@ -8759,7 +8765,7 @@ importers:
     devDependencies:
       '@angular-devkit/build-angular':
         specifier: 21.2.14
-        version: 21.2.14(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(@angular/compiler@21.2.16)(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.16(@angular/common@21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2)))(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.1)(@types/node@25.9.2)(chokidar@5.0.0)(html-webpack-plugin@5.6.7(webpack@5.108.3(esbuild@0.28.1)(postcss@8.5.15)))(jest-environment-jsdom@30.4.1)(jest@30.4.2(@types/node@25.9.2)(esbuild-register@3.6.0(esbuild@0.28.1)))(jiti@2.7.0)(ng-packagr@21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(typescript@5.9.3)(vitest@4.1.8)(yaml@2.9.0)
+        version: 21.2.14(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(@angular/compiler@21.2.16)(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.16(@angular/common@21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2)))(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.1)(@types/node@25.9.2)(chokidar@5.0.0)(html-webpack-plugin@5.6.7(webpack@5.108.3(esbuild@0.28.1)(postcss@8.5.15)))(jest-environment-jsdom@30.4.1)(jest@30.4.2(@types/node@25.9.2)(esbuild-register@3.6.0(esbuild@0.28.1)))(jiti@2.7.0)(ng-packagr@21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(typescript@5.9.3)(vitest@4.1.10)(yaml@2.9.0)
       '@angular/cli':
         specifier: 21.2.14
         version: 21.2.14(@types/node@25.9.2)(chokidar@5.0.0)
@@ -8798,7 +8804,7 @@ importers:
         version: 4.0.1(webpack@5.108.3(esbuild@0.28.1)(postcss@8.5.15))
       '@storybook/angular':
         specifier: 10.4.2
-        version: 10.4.2(38dfbe8d49c36ad2f7ac918187f0e2e3)
+        version: 10.4.2(c22b0ed658d122abcb2c22730594b9e3)
       '@types/mdx':
         specifier: 2.0.14
         version: 2.0.14
@@ -8840,11 +8846,11 @@ importers:
         specifier: 25.9.2
         version: 25.9.2
       '@vitest/coverage-v8':
-        specifier: 4.1.8
-        version: 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+        specifier: 4.1.10
+        version: 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
   packages/web-components:
     dependencies:
@@ -8924,8 +8930,8 @@ importers:
         specifier: 5.4.3
         version: 5.4.3(tslib@2.8.1)
       vitest:
-        specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+        specifier: 4.1.10
+        version: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
 
 packages:
 
@@ -14503,28 +14509,31 @@ packages:
     peerDependencies:
       vite: ^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
 
-  '@vitest/browser-playwright@4.1.8':
-    resolution: {integrity: sha512-SR7FqgegaexEg73xvf3ArtygXegagMdXnL0EZMpxrWvvhQxvicD/E8p0ib0J91riPRtQUViyh67Xjw3NqvyhVg==}
+  '@vitest/browser-playwright@4.1.10':
+    resolution: {integrity: sha512-nMoXGEiRpT7m3W7NsbvrM2aKNwiNHZf+zEpUCvMteGjZFvfT96Q9fh7QyB98dvDWXiKvrLxA7bJ1mCOOv+JQPw==}
     peerDependencies:
       playwright: '*'
-      vitest: 4.1.8
+      vitest: 4.1.10
 
-  '@vitest/browser@4.1.8':
-    resolution: {integrity: sha512-u21VzX07HzlJYpFgkxmjEXar/tG2UqWGgyGG/46SrrPc7rSdCTPw5vuowopO9CIqF8UCUQzDFdbVnNpw6N0BfQ==}
+  '@vitest/browser@4.1.10':
+    resolution: {integrity: sha512-UDwuWGwXj646CBx/bQHOaJSX7np0I8JL/UKQYa1e4QrVHH8VdWtx8eaOuf8sy0ShwDgR6NjJAsp5eF6vjF6qng==}
     peerDependencies:
-      vitest: 4.1.8
+      vitest: 4.1.10
 
-  '@vitest/coverage-v8@4.1.8':
-    resolution: {integrity: sha512-lt3kovsyHwYe00wq4D1ti0Z974fWj4NLp6siqiyEufUpyFwK9Yhi7rBhac9JL5aA0zoMrJqc4vYPZRUnI7l7nw==}
+  '@vitest/coverage-v8@4.1.10':
+    resolution: {integrity: sha512-IM49HmthevbgAO4anp1hwtoT9wYe59w0LR00gr+eagHE+ZJ5lK4sLPeO0ubgoJcwLk6dehU3R24N+FbEEKDc8g==}
     peerDependencies:
-      '@vitest/browser': 4.1.8
-      vitest: 4.1.8
+      '@vitest/browser': 4.1.10
+      vitest: 4.1.10
     peerDependenciesMeta:
       '@vitest/browser':
         optional: true
 
   '@vitest/expect@3.2.4':
     resolution: {integrity: sha512-Io0yyORnB6sikFlt8QW5K7slY4OjqNX9jmJQ02QDda8lyM6B5oNgVWoSoKPac8/kgnCUzuHQKrSLtu/uOqqrig==}
+
+  '@vitest/expect@4.1.10':
+    resolution: {integrity: sha512-YsCn+qAk1GWjQOWFEsEcL2gNQ0zmVmQu3T03qP6UyjhtmdtwtbuI+DASn/7iQB3HGTXkdBwGddzxPlmiql5vlA==}
 
   '@vitest/expect@4.1.8':
     resolution: {integrity: sha512-h3nDO677RDLEGlBxyQ5CW8RlMThSKSRLUePLOx09gNIWRL40edgA1GCZSZgf1W55MFAG6/Sw14KeaAnqv0NKdQ==}
@@ -14540,8 +14549,8 @@ packages:
       vite:
         optional: true
 
-  '@vitest/mocker@4.1.8':
-    resolution: {integrity: sha512-LEiN/xe4OSIbKe9HQIp5OC24agGD9J5CnmMgsLohVVoOPWL9a2sBoR6VBx43jQZb7Kr1l4RCuyCJzcAa0+dojw==}
+  '@vitest/mocker@4.1.10':
+    resolution: {integrity: sha512-v0xaezt+DKEmKfaxg133ldzADrwLGd7Ze1MfQQTYfvs8OqZIwbxyxaYURivwV7sWy5fqn3rH5uOrSp07bp44Ow==}
     peerDependencies:
       msw: ^2.4.9
       vite: ^6.0.0 || ^7.0.0 || ^8.0.0
@@ -14554,23 +14563,32 @@ packages:
   '@vitest/pretty-format@3.2.4':
     resolution: {integrity: sha512-IVNZik8IVRJRTr9fxlitMKeJeXFFFN0JaB9PHPGQ8NKQbGpfjlTx9zO4RefN8gp7eqjNy8nyK3NZmBzOPeIxtA==}
 
+  '@vitest/pretty-format@4.1.10':
+    resolution: {integrity: sha512-W1HsjSH4MXQ9YfmmhLAoIYf1HRfekQCGngeIgcei6MP5QQGWUe0gkopdZQaVCFO+JDJMrAJGwa5pRpNpvy4P8Q==}
+
   '@vitest/pretty-format@4.1.8':
     resolution: {integrity: sha512-9GasEBxpZ1VYIpqHf/0+YGg121uSNwCKOJqIrTwWP/TB7DmFCiaBpNl3aPZzoLWfWkuqhbH8vJIVobZkvdo2cA==}
 
-  '@vitest/runner@4.1.8':
-    resolution: {integrity: sha512-EmVxeBAfMJvycdjd6Hm+RbFBbA9fKvo0Kx37hNpBYoYeavH3RNsBXWDooR1mgD52dCrxIIuP7UotpfiwOikvcg==}
+  '@vitest/runner@4.1.10':
+    resolution: {integrity: sha512-IKI6kpIH+LmpROplyLwBBaCfMgOZOMsygVa6BARD6ahA04VRuJSa6OaVG7kRvSEMD870Vd91rSSw0eegtWyLGg==}
 
-  '@vitest/snapshot@4.1.8':
-    resolution: {integrity: sha512-acfZboRmAIf05DEKcBQy33VXojFJjtUdLyo7oOmV9kebb2xdU01UknNiPuPZoJZQyO7DF0gZdTGTpeAzET9QPQ==}
+  '@vitest/snapshot@4.1.10':
+    resolution: {integrity: sha512-xRkfOT1qpTAi/Ti4Y1LtfRc3kEuqxGw59eN2jN9pRWMtS/XDevekhcFSqvQqjUNGksfjMJu3Y+oJ+4Ypn2OaJw==}
 
   '@vitest/spy@3.2.4':
     resolution: {integrity: sha512-vAfasCOe6AIK70iP5UD11Ac4siNUNJ9i/9PZ3NKx07sG6sUxeag1LWdNrMWeKKYBLlzuK+Gn65Yd5nyL6ds+nw==}
+
+  '@vitest/spy@4.1.10':
+    resolution: {integrity: sha512-PLf/Ugvoq5wO/b4rwYCR1h2PSIdXz7wnkQFMiUpLdtM7l6pqVFcQIBEHyT1+l+cj7mNwAfZHzqXqDyjvOuwbDw==}
 
   '@vitest/spy@4.1.8':
     resolution: {integrity: sha512-6EevtBp6OZOPF7bmz36HrGMeP3txgVSrgebWxHOafDXGkhIzfXK14f8KF6MuFfgXXUeHxmpD3BQxkV00/3s5mA==}
 
   '@vitest/utils@3.2.4':
     resolution: {integrity: sha512-fB2V0JFrQSMsCo9HiSq3Ezpdv4iYaXRG1Sx8edX3MwxfyNn83mKiGzOcH+Fkxt4MHxr3y42fQi1oeAInqgX2QA==}
+
+  '@vitest/utils@4.1.10':
+    resolution: {integrity: sha512-fy9am/HWxbaGt/Sawrp90vt6Y6jQwf1RX77cz3uwoJwJVMli/e1IEwRPnMNJ7vKfPTwo0diXifkpPvwH9v7nGA==}
 
   '@vitest/utils@4.1.8':
     resolution: {integrity: sha512-uOJamYALNhfJ6iolExyQM40yIQwDqYnkKtQ5VCiSe17E33H0aQ/u+1GlRuz4LZBk6Mm3sg90G9hEbmEt37C1Zg==}
@@ -21607,20 +21625,20 @@ packages:
       yaml:
         optional: true
 
-  vitest@4.1.8:
-    resolution: {integrity: sha512-flY6ScbCIt9HThs+C5HS7jvGOB560DJtk/Z15IQROTA6zEy49Nh8T/dofWTQL+n3vswqn87sbJNiuqw1SDp5Ig==}
+  vitest@4.1.10:
+    resolution: {integrity: sha512-R9jUTe5S4Qb0HCd4TNqpC7oGcrMssMRGXLW80ubjWsW9VH5GF8y1Y0SFLY9AbqSk6nt0PnOx4H4WNJYZ13GUPw==}
     engines: {node: ^20.0.0 || ^22.0.0 || >=24.0.0}
     hasBin: true
     peerDependencies:
       '@edge-runtime/vm': '*'
       '@opentelemetry/api': ^1.9.0
       '@types/node': ^20.0.0 || ^22.0.0 || >=24.0.0
-      '@vitest/browser-playwright': 4.1.8
-      '@vitest/browser-preview': 4.1.8
-      '@vitest/browser-webdriverio': 4.1.8
-      '@vitest/coverage-istanbul': 4.1.8
-      '@vitest/coverage-v8': 4.1.8
-      '@vitest/ui': 4.1.8
+      '@vitest/browser-playwright': 4.1.10
+      '@vitest/browser-preview': 4.1.10
+      '@vitest/browser-webdriverio': 4.1.10
+      '@vitest/coverage-istanbul': 4.1.10
+      '@vitest/coverage-v8': 4.1.10
+      '@vitest/ui': 4.1.10
       happy-dom: '*'
       jsdom: '*'
       vite: ^6.0.0 || ^7.0.0 || ^8.0.0
@@ -22169,13 +22187,13 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@angular-devkit/build-angular@21.2.14(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(@angular/compiler@21.2.16)(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.16(@angular/common@21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2)))(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.1)(@types/node@25.9.2)(chokidar@5.0.0)(html-webpack-plugin@5.6.7(webpack@5.105.2(esbuild@0.28.1)(postcss@8.5.12)))(jest-environment-jsdom@30.4.1)(jest@30.4.2(@types/node@25.9.2)(esbuild-register@3.6.0(esbuild@0.28.1)))(jiti@2.7.0)(ng-packagr@21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(typescript@5.9.3)(vitest@4.1.8)(yaml@2.9.0)':
+  '@angular-devkit/build-angular@21.2.14(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(@angular/compiler@21.2.16)(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.16(@angular/common@21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2)))(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.1)(@types/node@25.9.2)(chokidar@5.0.0)(html-webpack-plugin@5.6.7(webpack@5.105.2(esbuild@0.28.1)(postcss@8.5.12)))(jest-environment-jsdom@30.4.1)(jest@30.4.2(@types/node@25.9.2)(esbuild-register@3.6.0(esbuild@0.28.1)))(jiti@2.7.0)(ng-packagr@21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(typescript@5.9.3)(vitest@4.1.10)(yaml@2.9.0)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2102.14(chokidar@5.0.0)
       '@angular-devkit/build-webpack': 0.2102.14(chokidar@5.0.0)(webpack-dev-server@5.2.5(tslib@2.8.1)(webpack@5.105.2(esbuild@0.28.1)(postcss@8.5.12)))(webpack@5.105.2(esbuild@0.28.1)(postcss@8.5.12))
       '@angular-devkit/core': 21.2.14(chokidar@5.0.0)
-      '@angular/build': 21.2.14(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(@angular/compiler@21.2.16)(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.16(@angular/common@21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2)))(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.1)(@types/node@25.9.2)(chokidar@5.0.0)(jiti@2.7.0)(less@4.4.2)(ng-packagr@21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(postcss@8.5.12)(terser@5.46.0)(tslib@2.8.1)(typescript@5.9.3)(vitest@4.1.8)(yaml@2.9.0)
+      '@angular/build': 21.2.14(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(@angular/compiler@21.2.16)(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.16(@angular/common@21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2)))(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.1)(@types/node@25.9.2)(chokidar@5.0.0)(jiti@2.7.0)(less@4.4.2)(ng-packagr@21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(postcss@8.5.12)(terser@5.46.0)(tslib@2.8.1)(typescript@5.9.3)(vitest@4.1.10)(yaml@2.9.0)
       '@angular/compiler-cli': 21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3)
       '@babel/core': 7.29.0
       '@babel/generator': 7.29.1
@@ -22266,13 +22284,13 @@ snapshots:
       - webpack-cli
       - yaml
 
-  '@angular-devkit/build-angular@21.2.14(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(@angular/compiler@21.2.16)(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.16(@angular/common@21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2)))(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.1)(@types/node@25.9.2)(chokidar@5.0.0)(html-webpack-plugin@5.6.7(webpack@5.108.3(esbuild@0.28.1)(postcss@8.5.15)))(jest-environment-jsdom@30.4.1)(jest@30.4.2(@types/node@25.9.2)(esbuild-register@3.6.0(esbuild@0.28.1)))(jiti@2.7.0)(ng-packagr@21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(typescript@5.9.3)(vitest@4.1.8)(yaml@2.9.0)':
+  '@angular-devkit/build-angular@21.2.14(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(@angular/compiler@21.2.16)(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.16(@angular/common@21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2)))(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.1)(@types/node@25.9.2)(chokidar@5.0.0)(html-webpack-plugin@5.6.7(webpack@5.108.3(esbuild@0.28.1)(postcss@8.5.15)))(jest-environment-jsdom@30.4.1)(jest@30.4.2(@types/node@25.9.2)(esbuild-register@3.6.0(esbuild@0.28.1)))(jiti@2.7.0)(ng-packagr@21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(typescript@5.9.3)(vitest@4.1.10)(yaml@2.9.0)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2102.14(chokidar@5.0.0)
       '@angular-devkit/build-webpack': 0.2102.14(chokidar@5.0.0)(webpack-dev-server@5.2.5(tslib@2.8.1)(webpack@5.105.2(esbuild@0.27.3)(postcss@8.5.12)))(webpack@5.105.2(esbuild@0.27.3)(postcss@8.5.12))
       '@angular-devkit/core': 21.2.14(chokidar@5.0.0)
-      '@angular/build': 21.2.14(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(@angular/compiler@21.2.16)(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.16(@angular/common@21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2)))(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.1)(@types/node@25.9.2)(chokidar@5.0.0)(jiti@2.7.0)(less@4.4.2)(ng-packagr@21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(postcss@8.5.12)(terser@5.46.0)(tslib@2.8.1)(typescript@5.9.3)(vitest@4.1.8)(yaml@2.9.0)
+      '@angular/build': 21.2.14(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(@angular/compiler@21.2.16)(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.16(@angular/common@21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2)))(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.1)(@types/node@25.9.2)(chokidar@5.0.0)(jiti@2.7.0)(less@4.4.2)(ng-packagr@21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(postcss@8.5.12)(terser@5.46.0)(tslib@2.8.1)(typescript@5.9.3)(vitest@4.1.10)(yaml@2.9.0)
       '@angular/compiler-cli': 21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3)
       '@babel/core': 7.29.0
       '@babel/generator': 7.29.1
@@ -22402,7 +22420,7 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@angular/build@21.2.14(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(@angular/compiler@21.2.16)(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.16(@angular/common@21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2)))(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.1)(@types/node@25.9.2)(chokidar@5.0.0)(jiti@2.7.0)(less@4.4.2)(ng-packagr@21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(postcss@8.5.12)(terser@5.46.0)(tslib@2.8.1)(typescript@5.9.3)(vitest@4.1.8)(yaml@2.9.0)':
+  '@angular/build@21.2.14(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(@angular/compiler@21.2.16)(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.16(@angular/common@21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2)))(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.1)(@types/node@25.9.2)(chokidar@5.0.0)(jiti@2.7.0)(less@4.4.2)(ng-packagr@21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(postcss@8.5.12)(terser@5.46.0)(tslib@2.8.1)(typescript@5.9.3)(vitest@4.1.10)(yaml@2.9.0)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2102.14(chokidar@5.0.0)
@@ -22442,7 +22460,7 @@ snapshots:
       lmdb: 3.5.1
       ng-packagr: 21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3)
       postcss: 8.5.12
-      vitest: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))
+      vitest: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))
     transitivePeerDependencies:
       - '@emnapi/core'
       - '@emnapi/runtime'
@@ -26852,7 +26870,7 @@ snapshots:
       storybook: 9.1.20(@testing-library/dom@10.4.1)(prettier@3.8.3)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       ts-dedent: 2.3.0
 
-  '@storybook/addon-vitest@9.1.20(@vitest/browser-playwright@4.1.8)(@vitest/browser@4.1.8)(@vitest/runner@4.1.8)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.8.3)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)))(vitest@4.1.8)':
+  '@storybook/addon-vitest@9.1.20(@vitest/browser-playwright@4.1.10)(@vitest/browser@4.1.10)(@vitest/runner@4.1.10)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(storybook@9.1.20(@testing-library/dom@10.4.1)(prettier@3.8.3)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)))(vitest@4.1.10)':
     dependencies:
       '@storybook/global': 5.0.0
       '@storybook/icons': 1.6.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -26860,10 +26878,10 @@ snapshots:
       storybook: 9.1.20(@testing-library/dom@10.4.1)(prettier@3.8.3)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       ts-dedent: 2.3.0
     optionalDependencies:
-      '@vitest/browser': 4.1.8(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vitest@4.1.8)
-      '@vitest/browser-playwright': 4.1.8(playwright@1.60.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vitest@4.1.8)
-      '@vitest/runner': 4.1.8
-      vitest: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+      '@vitest/browser': 4.1.10(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vitest@4.1.10)
+      '@vitest/browser-playwright': 4.1.10(playwright@1.60.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vitest@4.1.10)
+      '@vitest/runner': 4.1.10
+      vitest: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
     transitivePeerDependencies:
       - react
       - react-dom
@@ -26877,10 +26895,10 @@ snapshots:
       - supports-color
       - webpack
 
-  '@storybook/angular@10.4.2(38dfbe8d49c36ad2f7ac918187f0e2e3)':
+  '@storybook/angular@10.4.2(c22b0ed658d122abcb2c22730594b9e3)':
     dependencies:
       '@angular-devkit/architect': 0.2102.14(chokidar@5.0.0)
-      '@angular-devkit/build-angular': 21.2.14(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(@angular/compiler@21.2.16)(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.16(@angular/common@21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2)))(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.1)(@types/node@25.9.2)(chokidar@5.0.0)(html-webpack-plugin@5.6.7(webpack@5.108.3(esbuild@0.28.1)(postcss@8.5.15)))(jest-environment-jsdom@30.4.1)(jest@30.4.2(@types/node@25.9.2)(esbuild-register@3.6.0(esbuild@0.28.1)))(jiti@2.7.0)(ng-packagr@21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(typescript@5.9.3)(vitest@4.1.8)(yaml@2.9.0)
+      '@angular-devkit/build-angular': 21.2.14(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(@angular/compiler@21.2.16)(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(@angular/platform-browser@21.2.16(@angular/common@21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2))(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2)))(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.1)(@types/node@25.9.2)(chokidar@5.0.0)(html-webpack-plugin@5.6.7(webpack@5.108.3(esbuild@0.28.1)(postcss@8.5.15)))(jest-environment-jsdom@30.4.1)(jest@30.4.2(@types/node@25.9.2)(esbuild-register@3.6.0(esbuild@0.28.1)))(jiti@2.7.0)(ng-packagr@21.2.5(@angular/compiler-cli@21.2.16(@angular/compiler@21.2.16)(typescript@5.9.3))(tslib@2.8.1)(typescript@5.9.3))(typescript@5.9.3)(vitest@4.1.10)(yaml@2.9.0)
       '@angular-devkit/core': 21.2.14(chokidar@5.0.0)
       '@angular/common': 21.2.16(@angular/core@21.2.16(@angular/compiler@21.2.16)(rxjs@7.8.2)(zone.js@0.16.2))(rxjs@7.8.2)
       '@angular/compiler': 21.2.16
@@ -28588,13 +28606,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/browser-playwright@4.1.8(playwright@1.60.0)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))(vitest@4.1.8)':
+  '@vitest/browser-playwright@4.1.10(playwright@1.60.0)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))(vitest@4.1.10)':
     dependencies:
-      '@vitest/browser': 4.1.8(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))(vitest@4.1.8)
-      '@vitest/mocker': 4.1.8(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))
+      '@vitest/browser': 4.1.10(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))(vitest@4.1.10)
+      '@vitest/mocker': 4.1.10(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))
       playwright: 1.60.0
       tinyrainbow: 3.1.0
-      vitest: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))
+      vitest: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))
     transitivePeerDependencies:
       - bufferutil
       - msw
@@ -28602,29 +28620,29 @@ snapshots:
       - vite
     optional: true
 
-  '@vitest/browser-playwright@4.1.8(playwright@1.60.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vitest@4.1.8)':
+  '@vitest/browser-playwright@4.1.10(playwright@1.60.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vitest@4.1.10)':
     dependencies:
-      '@vitest/browser': 4.1.8(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vitest@4.1.8)
-      '@vitest/mocker': 4.1.8(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+      '@vitest/browser': 4.1.10(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vitest@4.1.10)
+      '@vitest/mocker': 4.1.10(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       playwright: 1.60.0
       tinyrainbow: 3.1.0
-      vitest: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+      vitest: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
     transitivePeerDependencies:
       - bufferutil
       - msw
       - utf-8-validate
       - vite
 
-  '@vitest/browser@4.1.8(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))(vitest@4.1.8)':
+  '@vitest/browser@4.1.10(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))(vitest@4.1.10)':
     dependencies:
       '@blazediff/core': 1.9.1
-      '@vitest/mocker': 4.1.8(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))
-      '@vitest/utils': 4.1.8
+      '@vitest/mocker': 4.1.10(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))
+      '@vitest/utils': 4.1.10
       magic-string: 0.30.21
       pngjs: 7.0.0
       sirv: 3.0.2
       tinyrainbow: 3.1.0
-      vitest: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))
+      vitest: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))
       ws: 8.21.0
     transitivePeerDependencies:
       - bufferutil
@@ -28633,16 +28651,16 @@ snapshots:
       - vite
     optional: true
 
-  '@vitest/browser@4.1.8(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vitest@4.1.8)':
+  '@vitest/browser@4.1.10(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vitest@4.1.10)':
     dependencies:
       '@blazediff/core': 1.9.1
-      '@vitest/mocker': 4.1.8(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
-      '@vitest/utils': 4.1.8
+      '@vitest/mocker': 4.1.10(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+      '@vitest/utils': 4.1.10
       magic-string: 0.30.21
       pngjs: 7.0.0
       sirv: 3.0.2
       tinyrainbow: 3.1.0
-      vitest: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+      vitest: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
       ws: 8.21.0
     transitivePeerDependencies:
       - bufferutil
@@ -28650,10 +28668,10 @@ snapshots:
       - utf-8-validate
       - vite
 
-  '@vitest/coverage-v8@4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)':
+  '@vitest/coverage-v8@4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)':
     dependencies:
       '@bcoe/v8-coverage': 1.0.2
-      '@vitest/utils': 4.1.8
+      '@vitest/utils': 4.1.10
       ast-v8-to-istanbul: 1.0.4
       istanbul-lib-coverage: 3.2.2
       istanbul-lib-report: 3.0.1
@@ -28662,9 +28680,9 @@ snapshots:
       obug: 2.1.3
       std-env: 4.1.0
       tinyrainbow: 3.1.0
-      vitest: 4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))
+      vitest: 4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))
     optionalDependencies:
-      '@vitest/browser': 4.1.8(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))(vitest@4.1.8)
+      '@vitest/browser': 4.1.10(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))(vitest@4.1.10)
 
   '@vitest/expect@3.2.4':
     dependencies:
@@ -28673,6 +28691,15 @@ snapshots:
       '@vitest/utils': 3.2.4
       chai: 5.3.3
       tinyrainbow: 2.0.0
+
+  '@vitest/expect@4.1.10':
+    dependencies:
+      '@standard-schema/spec': 1.1.0
+      '@types/chai': 5.2.3
+      '@vitest/spy': 4.1.10
+      '@vitest/utils': 4.1.10
+      chai: 6.2.2
+      tinyrainbow: 3.1.0
 
   '@vitest/expect@4.1.8':
     dependencies:
@@ -28691,17 +28718,17 @@ snapshots:
     optionalDependencies:
       vite: 7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)
 
-  '@vitest/mocker@4.1.8(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))':
+  '@vitest/mocker@4.1.10(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))':
     dependencies:
-      '@vitest/spy': 4.1.8
+      '@vitest/spy': 4.1.10
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
       vite: 7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0)
 
-  '@vitest/mocker@4.1.8(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))':
+  '@vitest/mocker@4.1.10(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))':
     dependencies:
-      '@vitest/spy': 4.1.8
+      '@vitest/spy': 4.1.10
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
@@ -28711,25 +28738,31 @@ snapshots:
     dependencies:
       tinyrainbow: 2.0.0
 
+  '@vitest/pretty-format@4.1.10':
+    dependencies:
+      tinyrainbow: 3.1.0
+
   '@vitest/pretty-format@4.1.8':
     dependencies:
       tinyrainbow: 3.1.0
 
-  '@vitest/runner@4.1.8':
+  '@vitest/runner@4.1.10':
     dependencies:
-      '@vitest/utils': 4.1.8
+      '@vitest/utils': 4.1.10
       pathe: 2.0.3
 
-  '@vitest/snapshot@4.1.8':
+  '@vitest/snapshot@4.1.10':
     dependencies:
-      '@vitest/pretty-format': 4.1.8
-      '@vitest/utils': 4.1.8
+      '@vitest/pretty-format': 4.1.10
+      '@vitest/utils': 4.1.10
       magic-string: 0.30.21
       pathe: 2.0.3
 
   '@vitest/spy@3.2.4':
     dependencies:
       tinyspy: 4.0.4
+
+  '@vitest/spy@4.1.10': {}
 
   '@vitest/spy@4.1.8': {}
 
@@ -28738,6 +28771,12 @@ snapshots:
       '@vitest/pretty-format': 3.2.4
       loupe: 3.2.1
       tinyrainbow: 2.0.0
+
+  '@vitest/utils@4.1.10':
+    dependencies:
+      '@vitest/pretty-format': 4.1.10
+      convert-source-map: 2.0.0
+      tinyrainbow: 3.1.0
 
   '@vitest/utils@4.1.8':
     dependencies:
@@ -37419,15 +37458,15 @@ snapshots:
       terser: 5.48.0
       yaml: 2.9.0
 
-  vitest@4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0)):
+  vitest@4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0)):
     dependencies:
-      '@vitest/expect': 4.1.8
-      '@vitest/mocker': 4.1.8(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))
-      '@vitest/pretty-format': 4.1.8
-      '@vitest/runner': 4.1.8
-      '@vitest/snapshot': 4.1.8
-      '@vitest/spy': 4.1.8
-      '@vitest/utils': 4.1.8
+      '@vitest/expect': 4.1.10
+      '@vitest/mocker': 4.1.10(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))
+      '@vitest/pretty-format': 4.1.10
+      '@vitest/runner': 4.1.10
+      '@vitest/snapshot': 4.1.10
+      '@vitest/spy': 4.1.10
+      '@vitest/utils': 4.1.10
       es-module-lexer: 2.2.0
       expect-type: 1.4.0
       magic-string: 0.30.21
@@ -37443,21 +37482,21 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 25.9.2
-      '@vitest/browser-playwright': 4.1.8(playwright@1.60.0)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))(vitest@4.1.8)
-      '@vitest/coverage-v8': 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+      '@vitest/browser-playwright': 4.1.10(playwright@1.60.0)(vite@7.3.2(@types/node@25.9.2)(jiti@2.7.0)(less@4.4.2)(sass@1.97.3)(terser@5.46.0)(yaml@2.9.0))(vitest@4.1.10)
+      '@vitest/coverage-v8': 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       jsdom: 26.1.0
     transitivePeerDependencies:
       - msw
 
-  vitest@4.1.8(@types/node@25.9.2)(@vitest/browser-playwright@4.1.8)(@vitest/coverage-v8@4.1.8)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)):
+  vitest@4.1.10(@types/node@25.9.2)(@vitest/browser-playwright@4.1.10)(@vitest/coverage-v8@4.1.10)(jsdom@26.1.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)):
     dependencies:
-      '@vitest/expect': 4.1.8
-      '@vitest/mocker': 4.1.8(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
-      '@vitest/pretty-format': 4.1.8
-      '@vitest/runner': 4.1.8
-      '@vitest/snapshot': 4.1.8
-      '@vitest/spy': 4.1.8
-      '@vitest/utils': 4.1.8
+      '@vitest/expect': 4.1.10
+      '@vitest/mocker': 4.1.10(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+      '@vitest/pretty-format': 4.1.10
+      '@vitest/runner': 4.1.10
+      '@vitest/snapshot': 4.1.10
+      '@vitest/spy': 4.1.10
+      '@vitest/utils': 4.1.10
       es-module-lexer: 2.2.0
       expect-type: 1.4.0
       magic-string: 0.30.21
@@ -37473,8 +37512,8 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 25.9.2
-      '@vitest/browser-playwright': 4.1.8(playwright@1.60.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vitest@4.1.8)
-      '@vitest/coverage-v8': 4.1.8(@vitest/browser@4.1.8)(vitest@4.1.8)
+      '@vitest/browser-playwright': 4.1.10(playwright@1.60.0)(vite@7.3.5(@types/node@25.9.2)(jiti@2.7.0)(less@4.6.7)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vitest@4.1.10)
+      '@vitest/coverage-v8': 4.1.10(@vitest/browser@4.1.10)(vitest@4.1.10)
       jsdom: 26.1.0
     transitivePeerDependencies:
       - msw

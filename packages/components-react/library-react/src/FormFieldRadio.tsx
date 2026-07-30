@@ -3,7 +3,7 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Radio, RadioProps } from '@rijkshuisstijl-community/radio-react';
+import { Radio, RadioProps } from '@rijkshuisstijl-community/radio-react/no-side-effects';
 import clsx from 'clsx';
 import { ReactNode, Ref, useId } from 'react';
 import { FormField } from './FormField';
