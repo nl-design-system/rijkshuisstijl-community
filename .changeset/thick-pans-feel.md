@@ -3,4 +3,4 @@
 '@rijkshuisstijl-community/button-css': patch
 ---
 
-fix(button,sidenav): uitlijning van icon
+fix(button,sidenav): uitlijning van icon gecentreerd ten opzichte van tekst
