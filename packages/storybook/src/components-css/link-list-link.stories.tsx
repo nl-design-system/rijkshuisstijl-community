@@ -12,5 +12,5 @@ export const Default = ReactStories.Default;
 export const NoIcon = ReactStories.NoIcon;
 export const Hover = ReactStories.Hover;
 export const Active = ReactStories.Active;
-export const Focus = ReactStories.Focus;
+export const FocusVisible = ReactStories.FocusVisible;
 export const Visited = ReactStories.Visited;

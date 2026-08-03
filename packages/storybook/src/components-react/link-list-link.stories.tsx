@@ -65,7 +65,7 @@ export const Active: Story = {
   },
 };
 
-export const Focus: Story = {
+export const FocusVisible: Story = {
   parameters: {
     pseudo: { focus: true },
   },

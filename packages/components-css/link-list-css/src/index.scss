@@ -5,6 +5,13 @@
 
 .rhc-link-list__item .utrecht-link-list__link {
   align-items: flex-start;
+
+  &:hover .utrecht-link-list__link-text {
+    text-decoration-line: var(--_utrecht-link-state-text-decoration, var(--utrecht-link-text-decoration, underline));
+    text-decoration-skip-ink: all;
+    text-decoration-thickness: 3px;
+    text-underline-offset: var(--utrecht-link-text-underline-offset);
+  }
 }
 
 .rhc-link-list__item .utrecht-icon {

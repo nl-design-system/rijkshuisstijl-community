@@ -10,11 +10,10 @@ Links zonder pijl als voorloopteken kunnen ook worden gebruikt, deze zijn vaak t
 
 - `Link:` Een interactief element waarmee de gebruiker naar een andere locatie kan navigeren.
 - `Link List:` Een lijst van meerdere links die samen worden gepresenteerd.
-- `Pijl-icoon:` Een visueel element dat optioneel kan worden toegevoegd aan de links om aan te geven dat ze verwijzen naar aanvullende inhoud.
 
 ## Usage
 
-- In dit voorbeeld worden drie links weergegeven, elk met een pijl-icoon (chevron-right). De links kunnen ook zonder iconen worden weergegeven door de icon prop weg te laten.
+- In dit voorbeeld worden drie links weergegeven, elk met een pijl-icoon (chevron-right).
 
 ```jsx
 import { Icon } from '@rijkshuisstijl-community/icon-react';
