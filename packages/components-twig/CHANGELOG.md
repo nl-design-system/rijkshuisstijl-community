@@ -1,5 +1,19 @@
 # @rijkshuisstijl-community/components-twig
 
+## 3.2.2
+
+### Patch Changes
+
+- b3db8e1: Icoon chevron-left toegevoegd
+  - @rijkshuisstijl-community/components-css@17.1.2
+
+## 3.2.1
+
+### Patch Changes
+
+- Updated dependencies [e41c59f]
+  - @rijkshuisstijl-community/components-css@17.1.1
+
 ## 3.2.0
 
 ### Minor Changes

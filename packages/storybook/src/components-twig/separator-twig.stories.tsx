@@ -7,13 +7,6 @@ const meta = {
   title: 'Separator',
   id: 'rhc-twig-separator',
   component: TwigSeparator,
-  argTypes: {
-    invisible: {
-      description: 'Invisible',
-      control: { type: 'boolean' },
-      defaultValue: false,
-    },
-  },
   parameters: {
     docs: {
       description: {
@@ -36,11 +29,4 @@ type Story = StoryObj<typeof meta>;
 
 export const SeparatorDefault: Story = {
   name: 'Default',
-};
-
-export const SeparatorInvisible: Story = {
-  name: 'Invisible',
-  args: {
-    invisible: true,
-  },
 };

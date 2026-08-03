@@ -1,5 +1,21 @@
 # @rijkshuisstijl-community/navigation-list-item-react
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies [b3db8e1]
+  - @rijkshuisstijl-community/icon-react@3.1.2
+
+## 1.0.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+- Updated dependencies [e41c59f]
+  - @rijkshuisstijl-community/paragraph-react@2.1.1
+  - @rijkshuisstijl-community/icon-react@3.1.1
+
 ## 1.0.0
 
 ### Major Changes

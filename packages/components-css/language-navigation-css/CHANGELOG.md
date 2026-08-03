@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/language-navigation-css
 
+## 1.0.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+
 ## 1.0.0
 
 ### Major Changes

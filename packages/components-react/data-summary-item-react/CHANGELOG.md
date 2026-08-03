@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/data-summary-item-react
 
+## 1.0.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+- Updated dependencies [e41c59f]
+  - @rijkshuisstijl-community/link-react@1.1.1
+
 ## 1.0.0
 
 ### Major Changes

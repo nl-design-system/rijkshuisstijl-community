@@ -41,13 +41,10 @@ export * from '@rijkshuisstijl-community/hero-react/no-side-effects';
 export * from '@rijkshuisstijl-community/icon-react/no-side-effects';
 export * from '@rijkshuisstijl-community/image-react/no-side-effects';
 export {
-  Content as LanguageNavigationContent,
+  LanguageNavigation,
   type LanguageNavigationContentProps,
-  Item as LanguageNavigationItem,
   type LanguageNavigationItemProps,
-  Root as LanguageNavigationRoot,
   type LanguageNavigationRootProps,
-  Trigger as LanguageNavigationTrigger,
   type LanguageNavigationTriggerProps,
 } from '@rijkshuisstijl-community/language-navigation-react/no-side-effects';
 export * from '@rijkshuisstijl-community/link-react/no-side-effects';
@@ -63,23 +60,22 @@ export * from '@rijkshuisstijl-community/navigation-list-react/no-side-effects';
 export * from '@rijkshuisstijl-community/navigation-list-item-react/no-side-effects';
 export * from '@rijkshuisstijl-community/number-badge-react/no-side-effects';
 export * from '@rijkshuisstijl-community/ordered-list-react/no-side-effects';
-export * from './PageBody';
-export * from './PageContent';
-export * from './PageHeader';
-export * from './PageLayout';
+export * from '@rijkshuisstijl-community/page-body-react/no-side-effects';
+export * from '@rijkshuisstijl-community/page-content-react/no-side-effects';
+export * from '@rijkshuisstijl-community/page-header-react/no-side-effects';
+export * from '@rijkshuisstijl-community/page-layout-react/no-side-effects';
 export * from '@rijkshuisstijl-community/page-number-navigation-react/no-side-effects';
 export * from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
-export * from './PreHeading';
-export * from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
+export * from '@rijkshuisstijl-community/pre-heading-react/no-side-effects';
 export * from '@rijkshuisstijl-community/radio-react/no-side-effects';
-export * from './RadioGroup';
+export * from '@rijkshuisstijl-community/radio-group-react/no-side-effects';
 export * from '@rijkshuisstijl-community/root-react/no-side-effects';
 export * from '@rijkshuisstijl-community/rounded-corner-react/no-side-effects';
 export * from '@rijkshuisstijl-community/separator-react/no-side-effects';
 export * from '@rijkshuisstijl-community/side-nav-react/no-side-effects';
-export * from './SideNavItem';
-export * from './SideNavLink';
-export * from './SideNavList';
+export * from '@rijkshuisstijl-community/side-nav-item-react/no-side-effects';
+export * from '@rijkshuisstijl-community/side-nav-link-react/no-side-effects';
+export * from '@rijkshuisstijl-community/side-nav-list-react/no-side-effects';
 export * from '@rijkshuisstijl-community/skip-link-react/no-side-effects';
 export * from './Table';
 export * from './TableCaption';
