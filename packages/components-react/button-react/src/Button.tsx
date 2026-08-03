@@ -27,12 +27,7 @@ export const PrimaryActionButton = ({
   className,
   ...restProps
 }: PropsWithChildren<Omit<ButtonProps, 'appearance'>> & { ref?: Ref<HTMLButtonElement> }) => (
-  <UtrechtButton
-    appearance="primary-action-button"
-    className={clsx('rhc-button', className)}
-    ref={ref}
-    {...restProps}
-  />
+  <Button appearance="primary-action-button" className={className} ref={ref} {...restProps} />
 );
 
 export const SecondaryActionButton = ({
@@ -40,12 +35,7 @@ export const SecondaryActionButton = ({
   className,
   ...restProps
 }: PropsWithChildren<Omit<ButtonProps, 'appearance'>> & { ref?: Ref<HTMLButtonElement> }) => (
-  <UtrechtButton
-    appearance="secondary-action-button"
-    className={clsx('rhc-button', className)}
-    ref={ref}
-    {...restProps}
-  />
+  <Button appearance="secondary-action-button" className={className} ref={ref} {...restProps} />
 );
 
 export const SubtleButton = ({
@@ -53,7 +43,7 @@ export const SubtleButton = ({
   className,
   ...restProps
 }: PropsWithChildren<Omit<ButtonProps, 'appearance'>> & { ref?: Ref<HTMLButtonElement> }) => (
-  <UtrechtButton appearance="subtle-button" className={clsx('rhc-button', className)} ref={ref} {...restProps} />
+  <Button appearance="subtle-button" className={className} ref={ref} {...restProps} />
 );
 
 export const ButtonLink = ({
