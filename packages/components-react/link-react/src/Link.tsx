@@ -16,7 +16,7 @@ export const Link = ({ ref, children, className, inline, ...restProps }: PropsWi
   <CandidateLink
     {...restProps}
     className={clsx('rhc-link', { 'rhc-link--inline': inline }, className)}
-    disabled={false}
+    disabled={undefined}
     ref={ref}
   >
     {children}

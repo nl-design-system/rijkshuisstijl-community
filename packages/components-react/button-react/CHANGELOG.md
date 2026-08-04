@@ -1,5 +1,20 @@
 # @rijkshuisstijl-community/button-react
 
+## 1.1.2
+
+### Patch Changes
+
+- Updated dependencies [b3db8e1]
+  - @rijkshuisstijl-community/icon-react@3.1.2
+
+## 1.1.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+- Updated dependencies [e41c59f]
+  - @rijkshuisstijl-community/icon-react@3.1.1
+
 ## 1.1.0
 
 ### Minor Changes

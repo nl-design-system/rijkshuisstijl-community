@@ -1,5 +1,16 @@
 # @rijkshuisstijl-community/hero-react
 
+## 1.0.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+- Updated dependencies [e41c59f]
+  - @rijkshuisstijl-community/heading-group-react@1.0.1
+  - @rijkshuisstijl-community/paragraph-react@2.1.1
+  - @rijkshuisstijl-community/heading-react@1.0.1
+  - @rijkshuisstijl-community/image-react@2.1.1
+
 ## 1.0.0
 
 ### Major Changes

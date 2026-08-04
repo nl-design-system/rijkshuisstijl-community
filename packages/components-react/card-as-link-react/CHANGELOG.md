@@ -1,5 +1,14 @@
 # @rijkshuisstijl-community/card-as-link-react
 
+## 1.1.1
+
+### Patch Changes
+
+- e41c59f: update dependencies
+- Updated dependencies [e41c59f]
+  - @rijkshuisstijl-community/image-react@2.1.1
+  - @rijkshuisstijl-community/link-react@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes

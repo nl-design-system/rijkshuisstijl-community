@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/font
 
+## 1.1.6
+
+### Patch Changes
+
+- e41c59f: update dependencies
+
 ## 1.1.5
 
 ### Patch Changes

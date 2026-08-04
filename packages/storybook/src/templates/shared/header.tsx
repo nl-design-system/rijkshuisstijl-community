@@ -1,3 +1,5 @@
+'use client';
+
 import { Icon, Logo, NavBar, NavBarItemProps, PageHeader, SkipLink } from '@rijkshuisstijl-community/components-react';
 import './header.css';
 import { useEffect, useState } from 'react';
@@ -14,6 +16,11 @@ export default function SharedHeader() {
       href: '/',
       label: 'Homepage',
       className: pathname === '/' ? 'rhc-nav-bar__link--current' : '',
+    },
+    {
+      href: '/componenten/',
+      label: 'Componenten',
+      className: pathname === '/componenten/' ? 'rhc-nav-bar__link--current' : '',
     },
     {
       href: '/design-tokens/',
