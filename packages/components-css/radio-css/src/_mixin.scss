@@ -13,8 +13,8 @@
 
 @mixin rhc-radio--invalid {
   --utrecht-radio-button-background-color: var(--utrecht-radio-button-invalid-background-color, inherit);
-  .rhc-radio--invalid:hover,
-  .rhc-radio--invalid:focus {
+  &:hover,
+  &:focus {
     background-color: var(--utrecht-radio-button-background-color);
   }
 }

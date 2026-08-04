@@ -4,10 +4,10 @@
  */
 
 @mixin rhc-textarea {
-  .rhc-textarea:focus {
+  &:focus {
     border-width: var(--rhc-textarea-focus-border-width, var(--rhc-border-width-md));
   }
-  .rhc-textarea--html-textarea:read-only {
+  &--html-textarea:read-only {
     --utrecht-textarea-read-only-border: var(--utrecht-textarea-read-only-background-color, --rhc-color-grijs-100);
   }
 }

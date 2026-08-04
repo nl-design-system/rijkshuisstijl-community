@@ -7,9 +7,5 @@
 @forward "@utrecht/separator-css/dist/index.css";
 
 .rhc-separator.utrecht-separator {
-  --utrecht-space-around: 1;
-
-  margin-inline-end: var(--rhc-space-none);
-  margin-inline-start: var(--rhc-space-none);
   @include mixin.rhc-separator;
 }

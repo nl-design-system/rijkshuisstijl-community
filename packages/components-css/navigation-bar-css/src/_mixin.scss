@@ -57,16 +57,16 @@
   padding-inline-start: var(--rhc-nav-bar-link-padding-inline-start);
   text-decoration: none;
 
-  .rhc-nav-bar__link:active {
+  &:active {
     background-color: var(--rhc-nav-bar-link-active-background-color);
     color: var(--rhc-nav-bar-link-active-color);
   }
 
-  .rhc-nav-bar__link:hover {
+  &:hover {
     background-color: var(--rhc-nav-bar-link-hover-background-color);
   }
 
-  .rhc-nav-bar__link:focus {
+  &:focus {
     background-color: var(--rhc-nav-bar-link-focus-background-color);
     color: var(--rhc-nav-bar-link-focus-color);
   }

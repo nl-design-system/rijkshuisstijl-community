@@ -20,6 +20,13 @@ const meta = {
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Separator.tsx',
   },
+  argTypes: {
+    invisible: {
+      control: {
+        type: 'boolean',
+      },
+    },
+  },
 } satisfies Meta<typeof Separator>;
 
 export default meta;
