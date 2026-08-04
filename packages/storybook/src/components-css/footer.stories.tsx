@@ -21,19 +21,19 @@ const LinkListMaker = ({ list }: { list: Array<string> }) => (
 
 const FooterLinks = () => (
   <>
-    <div className="rhc-grid__cell--span-3">
+    <div className="rhc-grid__cell--full-on-mobile-span-3">
       <h2>Overheid.nl</h2>
       <i>Ingang naar informatie en diensten van alle overheden</i>
     </div>
-    <div className="rhc-grid__cell--span-3">
+    <div className="rhc-grid__cell--full-on-mobile-span-3">
       <h3>Overheid.nl</h3>
       <LinkListMaker list={linkList1} />
     </div>
-    <div className="rhc-grid__cell--span-3">
+    <div className="rhc-grid__cell--full-on-mobile-span-3">
       <h3>Officiële overheidsinformatie</h3>
       <LinkListMaker list={linkList2} />
     </div>
-    <div className="rhc-grid__cell--span-3">
+    <div className="rhc-grid__cell--full-on-mobile-span-3">
       <h3>Andere overheidssites</h3>
       <LinkListMaker list={linkList3} />
     </div>

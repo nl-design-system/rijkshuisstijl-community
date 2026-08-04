@@ -14,6 +14,18 @@
     @include mixin.rhc-grid__cell--span($i);
   }
 
+  .rhc-grid__cell--full-on-mobile-span-#{$i} {
+    grid-column-start: 1;
+    grid-column-end: span 12;
+
+    @media only screen and (width >= 768) {
+      .rhc-grid__cell--full-on-mobile-span-#{$i} {
+        grid-column-start: unset;
+        @include mixin.rhc-grid__cell--span($i);
+      }
+    }
+  }
+
   .rhc-grid__cell--start-#{$i} {
     @include mixin.rhc-grid__cell--start($i);
   }
