@@ -11,4 +11,16 @@
   & .utrecht-link-list__link {
     color: var(--rhc-page-footer-color);
   }
+
+  .rhc-footer--separator {
+    padding-block: 0;
+
+    .rhc-separator {
+      margin-block: 0;
+    }
+  }
+
+  .rhc-page-section.rhc-footer--sub > * {
+    --rhc-page-section-padding-block: var(--rhc-page-footer-compact-padding-block);
+  }
 }

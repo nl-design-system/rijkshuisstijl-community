@@ -1,9 +1,7 @@
 import '@rijkshuisstijl-community/footer-css/dist/index.css';
 import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
-import '@rijkshuisstijl-community/link-list-css/dist/index.css';
-import '@rijkshuisstijl-community/link-css/dist/index.css';
-import { Icon } from '@rijkshuisstijl-community/components-react';
+import { Icon, Link, LinkList, LinkListLink, Separator } from '@rijkshuisstijl-community/components-react';
 
 const linkList1 = ['Contact', 'Veel gestelde vragen', 'Over deze site', 'Werken bij'];
 
@@ -12,16 +10,13 @@ const linkList2 = ['Wetten', 'Verdragen', 'Lokale regelgeving', 'Officiële beke
 const linkList3 = ['Mijn overheid', 'Rijksoverheid.nl', 'Ondernemersplein', 'NederlandWereldwijd'];
 
 const LinkListMaker = ({ list }: { list: Array<string> }) => (
-  <ul className="rhc-link-list utrecht-link-list utrecht-link-list--html-ul">
+  <LinkList>
     {list.map((entry) => (
-      <li className="rhc-link-list__item" key={entry}>
-        <a className="utrecht-link-list__link" href="#">
-          <Icon icon="chevron-right" />
-          {entry}
-        </a>
-      </li>
+      <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+        {entry}
+      </LinkListLink>
     ))}
-  </ul>
+  </LinkList>
 );
 
 const FooterLinks = () => (
@@ -47,18 +42,10 @@ const FooterLinks = () => (
 
 const FooterFooterLinks = () => (
   <>
-    <a className="rhc-link" href="#">
-      Privacy
-    </a>
-    <a className="rhc-link" href="#">
-      Cookies en anti-spam
-    </a>
-    <a className="rhc-link" href="#">
-      Toegankelijkheid
-    </a>
-    <a className="rhc-link" href="#">
-      Proclaimer
-    </a>
+    <Link href="#">Privacy</Link>
+    <Link href="#">Cookies en anti-spam</Link>
+    <Link href="#">Toegankelijkheid</Link>
+    <Link href="#">Proclaimer</Link>
   </>
 );
 
@@ -69,8 +56,12 @@ export const Footer = () => (
         <FooterLinks />
       </div>
     </div>
-    <div className="rhc-separator" />
     <div className="rhc-page-section">
+      <div className="rhc-footer--separator">
+        <Separator />
+      </div>
+    </div>
+    <div className="rhc-page-section rhc-footer--sub">
       <div style={{ display: 'flex', columnGap: '24px' }}>
         <FooterFooterLinks />
       </div>
@@ -85,8 +76,8 @@ export const NonFullBleed = () => (
         <FooterLinks />
       </div>
     </div>
-    <div className="rhc-separator" />
-    <div className="rhc-page-section">
+    <Separator />
+    <div className="rhc-page-section rhc-footer--sub">
       <div style={{ display: 'flex', columnGap: '24px', background: 'var(--rhc-page-footer-background-color)' }}>
         <FooterFooterLinks />
       </div>
