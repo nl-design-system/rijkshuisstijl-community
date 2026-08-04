@@ -59,9 +59,24 @@
 
 @mixin rhc-logo__title {
   /* reset margin of HTML <h1> element */
+  font-weight: var(--rhc-text-font-weight-semi-bold);
   margin-block-end: 0;
   margin-block-start: 0;
   white-space: pre-line;
+
+  font-size: clamp(
+    var(--rhc-logo-min-font-size),
+    calc(
+      --rhc-logo-min-font-size + (--rhc-logo-max-font-size - --rhc-logo-min-font-size) *
+        (
+          (
+            100vw - var(--rhc-text-font-size-min-sm) /
+              var(--rhc-text-font-size-max-3xl) - var(--rhc-text-font-size-min-sm)
+          )
+        )
+    ),
+    var(--rhc-logo-max-font-size)
+  );
 }
 
 @mixin rhc-logo__subtitle {

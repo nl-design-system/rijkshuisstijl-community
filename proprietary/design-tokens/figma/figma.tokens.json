@@ -9696,7 +9696,7 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{rhc.color.core.500}"
+            "$value": "{rhc.text.font-weight.semi-bold}"
           }
         },
         "title": {
@@ -9710,12 +9710,36 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.sm}"
+            "$value": "{rhc.logo.max.font-size}"
           },
           "padding-block-start": {
             "$type": "dimension",
             "$value": ""
+          },
+
+          "min": {
+            "padding-block-start": {
+              "$type": "dimension",
+              "$value": "2.604rem"
+            }
+          },
+          "max": {
+            "padding-block-start": {
+              "$type": "dimension",
+              "$value": "3.125rem"
+            }
           }
+        },
+        "min": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "0.75rem"
+          }
+        },
+        "max": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "0.9rem"
         },
         "subtitle": {
           "font-weight": {
@@ -9728,7 +9752,7 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "0.9rem"
+            "$value": "{rhc.logo.max.font-size}"
           }
         },
         "column-gap": {
@@ -12180,6 +12204,24 @@
           "thin": {
             "$type": "fontWeights",
             "$value": "200"
+          }
+        }
+      }
+    }
+  },
+  "viewport/min": {
+    "rhc": {
+      "logo": {
+        "title": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.logo.min.font-size}"
+          }
+        },
+        "subtitle": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.logo.min.font-size}"
           }
         }
       }
