@@ -5,29 +5,13 @@ import '@rijkshuisstijl-community/link-list-css/dist/index.css';
 import '@rijkshuisstijl-community/link-css/dist/index.css';
 import { Icon } from '@rijkshuisstijl-community/components-react';
 
-const linkList1 = [
-  'Contact',
-  'Veel gestelde vragen',
-  'Over deze site',
-  'Werken bij',
-];
+const linkList1 = ['Contact', 'Veel gestelde vragen', 'Over deze site', 'Werken bij'];
 
-const linkList2 = [
-  'Wetten',
-  'Verdragen',
-  'Lokale regelgeving',
-  'Officiële bekendmakingen',
-  'Tuchtrecht',
-];
+const linkList2 = ['Wetten', 'Verdragen', 'Lokale regelgeving', 'Officiële bekendmakingen', 'Tuchtrecht'];
 
-const linkList3 = [
-  'Mijn overheid',
-  'Rijksoverheid.nl',
-  'Ondernemersplein',
-  'NederlandWereldwijd',
-];
+const linkList3 = ['Mijn overheid', 'Rijksoverheid.nl', 'Ondernemersplein', 'NederlandWereldwijd'];
 
-const LinkListMaker = ({ list }) => (
+const LinkListMaker = ({ list }: { list: Array<string> }) => (
   <ul className="rhc-link-list utrecht-link-list utrecht-link-list--html-ul">
     {list.map((entry) => (
       <li className="rhc-link-list__item" key={entry}>
@@ -63,10 +47,18 @@ const FooterLinks = () => (
 
 const FooterFooterLinks = () => (
   <>
-    <a className="rhc-link" href="#">Privacy</a>
-    <a className="rhc-link" href="#">Cookies en anti-spam</a>
-    <a className="rhc-link" href="#">Toegankelijkheid</a>
-    <a className="rhc-link" href="#">Proclaimer</a>
+    <a className="rhc-link" href="#">
+      Privacy
+    </a>
+    <a className="rhc-link" href="#">
+      Cookies en anti-spam
+    </a>
+    <a className="rhc-link" href="#">
+      Toegankelijkheid
+    </a>
+    <a className="rhc-link" href="#">
+      Proclaimer
+    </a>
   </>
 );
 
