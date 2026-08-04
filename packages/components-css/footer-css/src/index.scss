@@ -6,6 +6,13 @@
 .rhc-page-footer {
   background-color: var(--rhc-page-footer-background-color);
   color: var(--rhc-page-footer-color);
+  font-family: var(--rhc-page-footer-font-family);
+
+  &__tagline {
+    font-weight: var(--rhc-page-footer-tagline-font-weight);
+    line-height: var(--rhc-page-footer-tagline-line-height);
+    font-size: var(--rhc-page-footer-tagline-font-size);
+  }
 
   & .rhc-link,
   & .utrecht-link-list__link {
@@ -20,7 +27,18 @@
     }
   }
 
-  .rhc-page-section.rhc-footer--sub > * {
+  &--navigation {
     --rhc-page-section-padding-block: var(--rhc-page-footer-compact-padding-block);
+
+    column-gap: var(--rhc-page-footer-navigation-column-gap);
+    display: flex;
+    flex-direction: row;
+    row-gap: var(--rhc-page-footer-navigation-row-gap);
+
+    & .nl-link.rhc-link{
+      text-decoration-line: var(--rhc-page-footer-navigation-link-text-decoration-line);
+      min-block-size: var(--rhc-page-footer-navigation-link-min-block-size);
+      align-items: center;
+    }
   }
 }
