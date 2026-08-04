@@ -10484,11 +10484,7 @@
             "$value": "{rhc.color.core.500}"
           }
         },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
-        },
-        "padding-block-end": {
+        "padding-block": {
           "$type": "dimension",
           "$value": "{rhc.space.4xl}"
         },
@@ -10541,6 +10537,24 @@
         "row-gap": {
           "$type": "dimension",
           "$value": "{rhc.space.3xl}"
+        }
+      }
+    }
+  },
+  "components/page-section-new": {
+    "rhc": {
+      "page-section": {
+        "max-inline-size": {
+          "$type": "dimension",
+          "$value": "{rhc.size.page.md}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{rhc.space.4xl}"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{rhc.space.4xl}"
         }
       }
     }
@@ -12490,8 +12504,9 @@
         "components/number-badge/utrecht": "source",
         "components/ordered-list": "source",
         "components/page-body": "source",
-        "components/page-footer": "source",
+        "components/page-footer-new": "source",
         "components/page-number-navigation": "source",
+        "components/page-section-new": "source",
         "components/paragraph": "source",
         "components/pre-heading": "source",
         "components/radio-button": "source",

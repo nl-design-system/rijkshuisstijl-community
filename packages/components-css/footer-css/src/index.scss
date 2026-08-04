@@ -4,5 +4,11 @@
  */
 
 .rhc-page-footer {
-  background-color: var(--rhc-footer-background-color);
+  background-color: var(--rhc-page-footer-background-color);
+  color: var(--rhc-page-footer-color);
+
+  & .rhc-link,
+  & .utrecht-link-list__link {
+    color: var(--rhc-page-footer-color);
+  }
 }
