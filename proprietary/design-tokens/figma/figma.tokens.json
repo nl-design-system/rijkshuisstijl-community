@@ -9729,12 +9729,20 @@
             "$value": "118%"
           },
           "min": {
+            "padding-block-start": {
+              "$type": "dimension",
+              "$value": "2.604rem"
+            },
             "font-size": {
               "$type": "fontSizes",
               "$value": "0.75rem"
             }
           },
           "max": {
+            "padding-block-start": {
+              "$type": "dimension",
+              "$value": "3.125rem"
+            },
             "font-size": {
               "$type": "fontSizes",
               "$value": "0.9rem"
@@ -9742,35 +9750,11 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{rhc.logo.max.font-size}"
+            "$value": "{rhc.logo.title.max.font-size}"
           },
           "padding-block-start": {
             "$type": "dimension",
             "$value": ""
-          },
-          "min": {
-            "padding-block-start": {
-              "$type": "dimension",
-              "$value": "2.604rem"
-            }
-          },
-          "max": {
-            "padding-block-start": {
-              "$type": "dimension",
-              "$value": "3.125rem"
-            }
-          }
-        },
-        "min": {
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "0.75rem"
-          }
-        },
-        "max": {
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "0.9rem"
           }
         },
         "subtitle": {
@@ -9796,7 +9780,7 @@
           },
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{rhc.logo.max.font-size}"
+            "$value": "{rhc.logo.title.max.font-size}"
           }
         },
         "column-gap": {
@@ -12259,13 +12243,13 @@
         "title": {
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{rhc.logo.min.font-size}"
+            "$value": "{rhc.logo.title.min.font-size}"
           }
         },
         "subtitle": {
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{rhc.logo.min.font-size}"
+            "$value": "{rhc.logo.subtitle.min.font-size}"
           }
         }
       }
