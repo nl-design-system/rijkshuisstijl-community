@@ -2376,12 +2376,20 @@
           "lint": {
             "$type": "dimension",
             "$value": "2.5rem"
+          },
+          "2-lint": {
+            "$type": "dimension",
+            "$value": "5rem"
           }
         },
         "max": {
           "lint": {
             "$type": "dimension",
             "$value": "3rem"
+          },
+          "2-lint": {
+            "$type": "dimension",
+            "$value": "6rem"
           }
         },
         "quarter-lint": {
@@ -2391,14 +2399,6 @@
         "half-lint": {
           "$type": "dimension",
           "$value": "1.5rem"
-        },
-        "lint": {
-          "$type": "dimension",
-          "$value": "3rem"
-        },
-        "2-lint": {
-          "$type": "dimension",
-          "$value": "6rem"
         },
         "3-lint": {
           "$type": "dimension",
@@ -2983,6 +2983,16 @@
           "$type": "dimension",
           "$value": "{rhc.space.min.5xl}"
         }
+      },
+      "size": {
+        "lint": {
+          "$type": "dimension",
+          "$value": "{rhc.size.min.lint}"
+        },
+        "2-lint": {
+          "$type": "dimension",
+          "$value": "{rhc.size.min.2-lint}"
+        }
       }
     }
   },
@@ -3069,6 +3079,16 @@
         "5xl": {
           "$type": "dimension",
           "$value": "{rhc.space.max.5xl}"
+        }
+      },
+      "size": {
+        "lint": {
+          "$type": "dimension",
+          "$value": "{rhc.size.max.lint}"
+        },
+        "2-lint": {
+          "$type": "dimension",
+          "$value": "{rhc.size.max.2-lint}"
         }
       }
     }
@@ -9681,79 +9701,9 @@
   "components/logo": {
     "rhc": {
       "logo": {
-        "image": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{rhc.color.wit}"
-          },
-          "inline-size": {
-            "$type": "dimension",
-            "$value": "{rhc.size.lint}"
-          },
-          "block-size": {
-            "$type": "dimension",
-            "$value": "{rhc.size.2-lint}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          }
-        },
-        "title": {
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "600"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "118%"
-          },
-          "min": {
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "0.75rem"
-            }
-          },
-          "max": {
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "0.9rem"
-            }
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.sm}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": ""
-          }
-        },
-        "subtitle": {
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{rhc.text.font-weight.regular}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "118%"
-          },
-          "min": {
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "0.75rem"
-            }
-          },
-          "max": {
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "0.9rem"
-            }
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "0.9rem"
-          }
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.core.500}"
         },
         "column-gap": {
           "$type": "dimension",
@@ -9763,9 +9713,87 @@
           "$type": "fontFamilies",
           "$value": "{rhc.text.font-family.default}"
         },
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.core.500}"
+        "image": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{rhc.color.wit}"
+          },
+          "block-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.2-lint}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          },
+          "inline-size": {
+            "$type": "dimension",
+            "$value": "{rhc.size.lint}"
+          }
+        },
+        "subtitle": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.logo.title.max.font-size}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.regular}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "118%"
+          },
+          "max": {
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "0.9rem"
+            }
+          },
+          "min": {
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "0.75rem"
+            }
+          }
+        },
+        "title": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.logo.title.max.font-size}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.semi-bold}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "118%"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.logo.title.max.padding-block-start}"
+          },
+          "max": {
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "0.9rem"
+            },
+            "padding-block-start": {
+              "$type": "dimension",
+              "$value": "3.125rem"
+            }
+          },
+          "min": {
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "0.75rem"
+            },
+            "padding-block-start": {
+              "$type": "dimension",
+              "$value": "2.604rem"
+            }
+          }
         }
       }
     }
@@ -12209,6 +12237,28 @@
       }
     }
   },
+  "viewport/min": {
+    "rhc": {
+      "logo": {
+        "title": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.logo.title.min.font-size}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.logo.title.min.padding-block-start}"
+          }
+        },
+        "subtitle": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.logo.subtitle.min.font-size}"
+          }
+        }
+      }
+    }
+  },
   "$themes": [
     {
       "id": "0048b2d80fdc07967e19f605ae7bb4b75d916418",
@@ -12222,7 +12272,8 @@
         "brand/size": "enabled",
         "brand/text": "enabled"
       },
-      "group": "Brand"
+      "group": "Brand",
+      "$figmaVariableReferences": {}
     },
     {
       "id": "6bef3ecc9338e95be92666718966d1cc1a67f068",
@@ -12234,7 +12285,8 @@
         "common/rounded-corner": "enabled",
         "common/vendor": "source"
       },
-      "group": "Common"
+      "group": "Common",
+      "$figmaVariableReferences": {}
     },
     {
       "id": "dit-zou-een-willekeurig-uuid-moeten-zijn",
@@ -12253,15 +12305,18 @@
       "selectedTokenSets": {
         "common/type-scale/information-dense": "enabled"
       },
-      "group": "Type scale"
+      "group": "Type scale",
+      "$figmaVariableReferences": {}
     },
     {
       "id": "56706eaf82818c037fbc25d8d249dbf8ba0f2ac1",
       "name": "Min",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
-        "common/viewport/min": "enabled"
+        "common/viewport/min": "enabled",
+        "viewport/min": "enabled"
       },
+      "$figmaVariableReferences": {},
       "group": "Viewport"
     },
     {
@@ -12271,7 +12326,8 @@
       "selectedTokenSets": {
         "common/viewport/max": "enabled"
       },
-      "group": "Viewport"
+      "group": "Viewport",
+      "$figmaVariableReferences": {}
     },
     {
       "id": "6b301903f0b8e937b58836e4fd4f0ae3f79f1e54",
@@ -12283,7 +12339,8 @@
         "components/heading/color-core": "enabled",
         "common/primary-color/lintblauw": "enabled"
       },
-      "group": "Theme"
+      "group": "Theme",
+      "$figmaVariableReferences": {}
     },
     {
       "id": "23d5d54abeb2e98199bb4ab49f12bd83626bf14c",
@@ -12295,7 +12352,8 @@
         "components/button/utrecht-color-primary": "enabled",
         "components/heading/color-primary": "enabled"
       },
-      "group": "Theme"
+      "group": "Theme",
+      "$figmaVariableReferences": {}
     },
     {
       "id": "3e67811141491ec3663bbcd289e8064eb0a3b9a2",
@@ -12307,7 +12365,8 @@
         "components/button/nl-color-primary": "enabled",
         "components/button/utrecht-color-primary": "enabled"
       },
-      "group": "Theme"
+      "group": "Theme",
+      "$figmaVariableReferences": {}
     },
     {
       "id": "1c3d94816e1ceead3542fe37a68ee53db9bd8975",
@@ -12319,7 +12378,8 @@
         "components/button/utrecht-color-core": "enabled",
         "components/heading/color-core": "enabled"
       },
-      "group": "Theme"
+      "group": "Theme",
+      "$figmaVariableReferences": {}
     },
     {
       "id": "9bc9c2260e1466c7a8eb642ea93f6edd55f2211c",
@@ -12331,7 +12391,8 @@
         "components/button/utrecht-color-primary": "enabled",
         "components/heading/color-primary": "enabled"
       },
-      "group": "Theme"
+      "group": "Theme",
+      "$figmaVariableReferences": {}
     },
     {
       "id": "4c2f97e498eca5e65cad9e7cb06692aec977b584",
@@ -12343,7 +12404,8 @@
         "components/button/utrecht-color-primary": "enabled",
         "components/heading/color-core": "enabled"
       },
-      "group": "Theme"
+      "group": "Theme",
+      "$figmaVariableReferences": {}
     },
     {
       "id": "2f286db8786143ca85d30b21a16d394e810b1184",
@@ -12423,7 +12485,8 @@
         "components/unordered-list": "source",
         "components/page-header": "source"
       },
-      "group": "Components"
+      "group": "Components",
+      "$figmaVariableReferences": {}
     }
   ],
   "$metadata": {
@@ -12532,7 +12595,8 @@
       "components/unordered-list",
       "components/page-header",
       "overrides/type-scale/default [code-only]",
-      "overrides/type-scale/information dense [code-only]"
+      "overrides/type-scale/information dense [code-only]",
+      "viewport/min"
     ]
   }
 }
