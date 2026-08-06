@@ -8,12 +8,35 @@
 .rhc-side-nav {
   @include mixin.rhc-side-nav;
 }
+
+// notitie:
+// dit is alleen nodig zodat onze stories de goede styling krijgen. Omdat een individuele link story
+// niet in de .rhc-side-nav zit, kunnen we onze css hier niet netjes nesten.
+
 .rhc-side-nav__heading {
   @include mixin.rhc-side-nav__heading;
 }
+
 .rhc-side-nav__list {
   @include mixin.rhc-side-nav__list;
 }
+
 .rhc-side-nav__link {
   @include mixin.rhc-side-nav__link;
+}
+
+.rhc-side-nav__link[aria-current="page"] {
+  @include mixin.rhc-side-nav__link--current;
+}
+
+.rhc-side-nav__link:active {
+  @include mixin.rhc-side-nav__link--active;
+}
+
+.rhc-side-nav__link:focus {
+  @include mixin.rhc-side-nav__link--focus;
+}
+
+.rhc-side-nav__link:hover {
+  @include mixin.rhc-side-nav__link--hover;
 }
