@@ -3,7 +3,12 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { type FormFieldProps, FormLabel, FormField as UtrechtFormField } from '@utrecht/component-library-react';
+import {
+  FormFieldDescription,
+  type FormFieldProps,
+  FormLabel,
+  FormField as UtrechtFormField,
+} from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { PropsWithChildren, ReactNode, Ref } from 'react';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
@@ -30,6 +35,7 @@ export const FormField = ({
   invalid,
   input,
   description,
+  descriptionId,
   label,
   status,
   id,
@@ -41,12 +47,16 @@ export const FormField = ({
   return (
     <UtrechtFormField
       className={clsx('rhc-form-field', className)}
-      description={description}
       dir={dir}
       invalid={invalid}
       label={labelComponent}
       ref={ref}
     >
+      {description && (
+        <FormFieldDescription className="utrecht-form-field__description" id={descriptionId}>
+          {description}
+        </FormFieldDescription>
+      )}
       {invalid && errorMessage && <FormFieldErrorMessage id={errorMessageId}>{errorMessage}</FormFieldErrorMessage>}
       {input}
       {status && (
