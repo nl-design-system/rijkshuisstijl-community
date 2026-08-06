@@ -9,7 +9,3 @@ export default {
 };
 
 export const DefaultFooter = ReactStories.DefaultFooter;
-export const PrimaryOutlinedFooter = ReactStories.PrimaryOutlinedFooter;
-export const PrimaryOutlinedFooterSubFooter = ReactStories.PrimaryOutlinedFooterSubFooter;
-export const ColumnLayoutFooter = ReactStories.ColumnLayoutFooter;
-export const CustomHeadingFooter = ReactStories.CustomHeadingFooter;

@@ -1,10 +1,8 @@
-import { LinkComponent } from '@rijkshuisstijl-community/components-angular';
 import { type Meta, moduleMetadata, type StoryObj } from '@storybook/angular';
 import { provideTablerIcons, TablerIconComponent } from 'angular-tabler-icons';
-import { IconArrowNarrowUp, IconChevronRight } from 'angular-tabler-icons/icons';
+import { IconChevronRight } from 'angular-tabler-icons/icons';
 import readme from './footer.md';
 import {
-  BackToTopComponent,
   FooterComponent,
   HeadingComponent,
   IconComponent,
@@ -23,16 +21,13 @@ const meta: Meta<FooterComponent> = {
         LinkListItemComponent,
         LinkListLinkComponent,
         LinkListComponent,
-        LinkComponent,
         HeadingComponent,
         TablerIconComponent,
         IconComponent,
-        BackToTopComponent,
       ],
       providers: [
         provideTablerIcons({
           IconChevronRight,
-          IconArrowNarrowUp,
         }),
       ],
     }),
@@ -46,26 +41,8 @@ const meta: Meta<FooterComponent> = {
       },
     },
     tagline: {
-      description: 'Tagline',
+      description: 'Optionele decoratieve tekst in de footer, standaard cursief.',
       control: { type: 'text' },
-      table: {
-        type: { summary: 'string' },
-      },
-    },
-    appearanceLevel: {
-      description: 'Het uiterlijk van de heading in de footer.',
-      defaultValue: 3,
-      control: { type: 'select' },
-      options: [1, 2, 3, 4, 5, 6],
-      table: {
-        type: { summary: 'number' },
-      },
-    },
-
-    background: {
-      description: 'De achtergrondkleur van de footer.',
-      control: { type: 'select' },
-      options: ['primary-filled', 'primary-outlined'],
       table: {
         type: { summary: 'string' },
       },
@@ -98,10 +75,10 @@ const meta: Meta<FooterComponent> = {
     },
   },
   args: {
-    tagline: 'Tagline',
-    preFooter: true,
+    heading: 'Colofon',
+    tagline: 'Footer tagline',
+    preFooter: false,
     preFooterMessage: 'Pre Footer Message',
-    background: 'primary-filled',
     subFooter: true,
   },
   parameters: {
@@ -111,18 +88,17 @@ const meta: Meta<FooterComponent> = {
       },
     },
   },
-  render: ({ heading, tagline, background, preFooter, preFooterMessage, appearanceLevel, subFooter }) => ({
+  render: ({ heading, tagline, preFooter, preFooterMessage, subFooter }) => ({
     template: `
       <footer rhc-footer
         [preFooter]="${preFooter}"
         [preFooterMessage]="'${preFooterMessage}'"
-        [background]="'${background}'"
+        ${heading ? `[heading] = "'${heading}'"` : ''}
         ${tagline ? `[tagline] = "'${tagline}'"` : ''}
-        [appearanceLevel] = "${appearanceLevel}"
         [subFooter]="${subFooter}"
       >
         <div class="rhc-page-footer__section" columns>
-          <rhc-heading [level]="${heading ? 3 : 2}" [appearanceLevel]="${appearanceLevel}">
+          <rhc-heading [level]="${heading ? 3 : 2}" [appearanceLevel]="4">
             Service
           </rhc-heading>
             <rhc-link-list>
@@ -171,7 +147,7 @@ const meta: Meta<FooterComponent> = {
           </rhc-link-list>
         </div>
         <div class="rhc-page-footer__section" columns>
-          <rhc-heading [level]="heading ? 3 : 2" [appearanceLevel]="${appearanceLevel}">
+          <rhc-heading [level]="${heading ? 3 : 2}" [appearanceLevel]="4">
             Over deze site
           </rhc-heading>
           <rhc-link-list>
@@ -190,13 +166,7 @@ const meta: Meta<FooterComponent> = {
               <li rhc-link-list-item>
                 <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
                   <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
-                  Privacy
-                </a>
-              </li>
-              <li rhc-link-list-item>
-                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
-                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
-                  Cookies
+                  Copyright
                 </a>
               </li>
               <li rhc-link-list-item>
@@ -205,23 +175,26 @@ const meta: Meta<FooterComponent> = {
                   Open data
                 </a>
               </li>
-              <li rhc-link-list-item>
-                <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">
-                  <rhc-icon icon><i-tabler name="chevron-right"/></rhc-icon>
-                  Kwetsbaarheid melden
-                </a>
-              </li>
           </rhc-link-list>
         </div>
-        <rhc-link href="#" subFooter>
-            Terug naar boven
-            <rhc-icon icon><i-tabler name="arrow-narrow-up"/></rhc-icon>
-        </rhc-link>
+        <rhc-link-list subFooter>
+          <li rhc-link-list-item>
+            <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">Kwetsbaarheid melden</a>
+          </li>
+          <li rhc-link-list-item>
+            <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">Toegankelijkheid</a>
+          </li>
+          <li rhc-link-list-item>
+            <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">Privacy</a>
+          </li>
+          <li rhc-link-list-item>
+            <a rhc-link-list-link [href]="'#'" [attr.href]="'#'">Cookies</a>
+          </li>
+        </rhc-link-list>
       </footer>
     `,
     props: {
       heading,
-      background,
       preFooter,
       preFooterMessage,
     },
@@ -232,28 +205,4 @@ export default meta;
 
 export const Default: StoryObj<FooterComponent> = {
   args: {},
-};
-
-export const NoPreFooter: StoryObj<FooterComponent> = {
-  args: {
-    preFooter: false,
-  },
-};
-
-export const NoSubFooter: StoryObj<FooterComponent> = {
-  args: {
-    subFooter: false,
-  },
-};
-
-export const PrimaryOutlined: StoryObj<FooterComponent> = {
-  args: {
-    background: 'primary-outlined',
-  },
-};
-
-export const NoHeading: StoryObj<FooterComponent> = {
-  args: {
-    heading: undefined,
-  },
 };
