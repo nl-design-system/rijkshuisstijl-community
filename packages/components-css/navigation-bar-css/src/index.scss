@@ -41,35 +41,54 @@
   margin-inline-start: auto;
 }
 
-.rhc-nav-bar__heading {
-  font-weight: var(--rhc-nav-bar-heading-font-weight);
-}
-
 .rhc-nav-bar__link {
   --nl-link-text-decoration-line: none;
+  --nl-link-hover-text-decoration-line: none;
   --utrecht-link-visited-color: var(--rhc-nav-bar-color);
   --nl-link-color: var(--rhc-nav-bar-color);
+  --utrecht-icon-size: var(--rhc-nav-bar-link-icon-size);
 
+  align-items: center;
+  border-block-end-color: transparent;
+  border-block-end-style: solid;
+  border-block-end-width: var(--rhc-nav-bar-link-border-block-end-width);
+  column-gap: var(--rhc-nav-bar-link-column-gap);
+  display: inline-flex;
+  font-family: var(--rhc-nav-bar-link-font-family);
   font-size: var(--rhc-nav-bar-link-font-size);
+  font-weight: var(--rhc-nav-bar-link-font-weight);
+  line-height: var(--rhc-nav-bar-link-line-height);
   padding-block-end: var(--rhc-nav-bar-link-padding-block-end);
   padding-block-start: var(--rhc-nav-bar-link-padding-block-start);
   padding-inline-end: var(--rhc-nav-bar-link-padding-inline-end);
   padding-inline-start: var(--rhc-nav-bar-link-padding-inline-start);
   text-decoration: none;
 
-  &:active {
-    background-color: var(--rhc-nav-bar-link-active-background-color);
-    color: var(--rhc-nav-bar-link-active-color);
-  }
-
   &:hover {
     background-color: var(--rhc-nav-bar-link-hover-background-color);
+    border-block-end-color: var(--rhc-nav-bar-link-hover-border-color);
   }
 
   &:focus {
+    --nl-link-color: var(--rhc-nav-bar-link-focus-color);
+
     background-color: var(--rhc-nav-bar-link-focus-background-color);
-    color: var(--rhc-nav-bar-link-focus-color);
   }
+
+  &:active {
+    --nl-link-color: var(--rhc-nav-bar-link-active-color);
+
+    background-color: var(--rhc-nav-bar-link-active-background-color);
+    border-block-end-color: var(--rhc-nav-bar-link-active-border-color);
+  }
+}
+
+.rhc-nav-bar__link--current {
+  --nl-link-color: var(--rhc-nav-bar-link-current-color);
+
+  background-color: var(--rhc-nav-bar-link-current-background-color);
+  border-block-end-color: var(--rhc-nav-bar-link-current-border-color);
+  font-weight: var(--rhc-nav-bar-link-current-font-weight);
 }
 
 .rhc-sub-nav-bar {

@@ -12,7 +12,6 @@ import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref } from 'react';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
-  headingItem?: NavBarItemProps;
   items: NavBarItemProps[];
   endItems?: NavBarItemProps[];
   ref?: Ref<HTMLDivElement>;
@@ -27,6 +26,8 @@ export interface NavBarLinkProps {
 
 export interface NavBarItemProps extends NavBarLinkProps, HTMLAttributes<HTMLLIElement> {
   icon?: ReactElement<IconProps>;
+  endIcon?: ReactElement<IconProps>;
+  current?: boolean;
   subList?: NavbarSubListProps;
   bold?: boolean;
   iconOnly?: boolean;
@@ -58,6 +59,8 @@ const NavBarItem = ({
   target,
   label,
   icon,
+  endIcon,
+  current = false,
   subList,
   bold = false,
   iconOnly = false,
@@ -65,9 +68,19 @@ const NavBarItem = ({
 }: PropsWithChildren<NavBarItemProps>) => {
   return (
     <li className={clsx('rhc-nav-bar__item', className)} ref={ref} {...restProps}>
-      <Link className={clsx('rhc-nav-bar__link', bold && 'rhc-nav-bar__link--bold')} href={href} target={target}>
+      <Link
+        aria-current={current ? 'page' : undefined}
+        href={href}
+        target={target}
+        className={clsx(
+          'rhc-nav-bar__link',
+          bold && 'rhc-nav-bar__link--bold',
+          current && 'rhc-nav-bar__link--current',
+        )}
+      >
         {icon}
         <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__lable--sr-only')}>{label}</span>
+        {endIcon}
       </Link>
       {subList && (
         <div className="rhc-nav-bar__sub-list">
@@ -96,20 +109,11 @@ const NavBarItem = ({
 
 NavBarItem.displayName = 'NavBarItem';
 
-export const NavBar = ({
-  ref,
-  children,
-  className,
-  headingItem,
-  items,
-  endItems,
-  ...restProps
-}: PropsWithChildren<NavBarProps>) => {
+export const NavBar = ({ ref, children, className, items, endItems, ...restProps }: PropsWithChildren<NavBarProps>) => {
   return (
     <div className="rhc-nav-bar__container">
       <nav className={clsx('rhc-nav-bar', className)} ref={ref} {...restProps}>
         <ul className="rhc-nav-bar__list">
-          {headingItem && <NavBarItem className="rhc-nav-bar__heading" {...headingItem} />}
           {items.map((item) => (
             <NavBarItem key={item.id} {...item} />
           ))}
