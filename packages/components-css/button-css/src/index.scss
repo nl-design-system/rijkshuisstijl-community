@@ -9,6 +9,10 @@
   @include mixin.rhc-button--icon-only;
 }
 
+.rhc-button.utrecht-button .utrecht-icon {
+  @include mixin.rhc-button-utrecht-button-icon;
+}
+
 .rhc-button--icon-only .rhc-button__sr-only {
   @include mixin.invisible-but-accessible;
 }
