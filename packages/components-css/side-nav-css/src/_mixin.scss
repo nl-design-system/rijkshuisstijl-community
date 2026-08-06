@@ -7,50 +7,50 @@
   display: var(--rhc-sidenav-display, flex);
   flex-direction: column;
   row-gap: var(--rhc-sidenav-row-gap);
+}
 
-  .rhc-side-nav__heading {
-    display: none;
+@mixin rhc-side-nav__heading {
+  display: none;
+}
+
+@mixin rhc-side-nav__list {
+  list-style: none;
+  margin-block: 0;
+  padding-block: 0;
+  padding-inline: 0;
+}
+
+@mixin rhc-side-nav__link {
+  align-items: center;
+  color: var(--rhc-sidenav-link-color);
+  column-gap: var(--rhc-sidenav-link-column-gap);
+  display: flex;
+  font-family: var(--rhc-sidenav-link-font-family), sans-serif;
+  font-size: var(--rhc-sidenav-link-font-size);
+  font-weight: var(--rhc-sidenav-link-font-weight);
+  line-height: var(--rhc-sidenav-link-line-height);
+  padding-block-end: var(--rhc-sidenav-link-padding-block-end);
+  padding-block-start: var(--rhc-sidenav-link-padding-block-start);
+  text-decoration: var(--rhc-sidenav-link-text-decoration);
+
+  &[aria-current="page"] {
+    color: var(--rhc-sidenav-link-current-color);
+    font-weight: var(--rhc-sidenav-link-current-font-weight);
   }
 
-  .rhc-side-nav__list {
-    list-style: none;
-    margin-block: 0;
-    padding-block: 0;
-    padding-inline: 0;
+  &:active {
+    color: var(--rhc-sidenav-link-active-color);
+    text-decoration: var(--rhc-sidenav-link-active-text-decoration);
   }
 
-  .rhc-side-nav__link {
-    align-items: center;
-    color: var(--rhc-sidenav-link-color);
-    column-gap: var(--rhc-sidenav-link-column-gap);
-    display: flex;
-    font-family: var(--rhc-sidenav-link-font-family), sans-serif;
-    font-size: var(--rhc-sidenav-link-font-size);
-    font-weight: var(--rhc-sidenav-link-font-weight);
-    line-height: var(--rhc-sidenav-link-line-height);
-    padding-block-end: var(--rhc-sidenav-link-padding-block-end);
-    padding-block-start: var(--rhc-sidenav-link-padding-block-start);
-    text-decoration: var(--rhc-sidenav-link-text-decoration);
+  &:focus {
+    background-color: var(--rhc-sidenav-link-focus-background-color);
+    color: var(--rhc-sidenav-link-focus-color);
+    text-decoration: var(--rhc-sidenav-link-focus-text-decoration);
+  }
 
-    &[aria-current="page"] {
-      color: var(--rhc-sidenav-link-current-color);
-      font-weight: var(--rhc-sidenav-link-current-font-weight);
-    }
-
-    &:active {
-      color: var(--rhc-sidenav-link-active-color);
-      text-decoration: var(--rhc-sidenav-link-active-text-decoration);
-    }
-
-    &:focus {
-      background-color: var(--rhc-sidenav-link-focus-background-color);
-      color: var(--rhc-sidenav-link-focus-color);
-      text-decoration: var(--rhc-sidenav-link-focus-text-decoration);
-    }
-
-    &:hover {
-      color: var(--rhc-sidenav-link-hover-color);
-      text-decoration: var(--rhc-sidenav-link-hover-text-decoration);
-    }
+  &:hover {
+    color: var(--rhc-sidenav-link-hover-color);
+    text-decoration: var(--rhc-sidenav-link-hover-text-decoration);
   }
 }
