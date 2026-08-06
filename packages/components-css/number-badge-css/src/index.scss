@@ -3,8 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+@use "mixin";
 @use "@nl-design-system-candidate/number-badge-css/dist/number-badge.css";
 
 .rhc-number-badge.nl-number-badge {
-  box-sizing: content-box;
+  @include mixin.rhc-number-badge;
 }

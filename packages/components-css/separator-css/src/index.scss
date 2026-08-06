@@ -3,9 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-.rhc-separator.utrecht-separator {
-  --utrecht-space-around: 1;
+@use "mixin";
+@forward "@utrecht/separator-css/dist/index.css";
 
-  margin-inline-end: var(--rhc-space-none);
-  margin-inline-start: var(--rhc-space-none);
+.rhc-separator.utrecht-separator {
+  @include mixin.rhc-separator;
 }
