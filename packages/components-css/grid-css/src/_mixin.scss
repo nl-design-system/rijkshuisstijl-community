@@ -1,0 +1,14 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+@mixin rhc-grid {
+  column-gap: var(--rhc-grid-column-gap);
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+@mixin rhc-grid__cell--span($i) {
+  grid-column-end: span $i;
+}

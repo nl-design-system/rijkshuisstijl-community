@@ -1,0 +1,17 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+@mixin rhc-page-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  & > * {
+    flex-grow: 1;
+    max-inline-size: var(--rhc-page-section-max-inline-size);
+    padding-block: var(--rhc-page-section-padding-block);
+    padding-inline: var(--rhc-page-section-padding-inline);
+  }
+}
