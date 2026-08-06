@@ -9,10 +9,6 @@
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
-@mixin rhc-grid__cell--start($i) {
-  grid-column-start: $i;
-}
-
 @mixin rhc-grid__cell--span($i) {
   grid-column-end: span $i;
 }

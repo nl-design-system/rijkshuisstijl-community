@@ -13,8 +13,16 @@
   .rhc-grid__cell--span-#{$i} {
     @include mixin.rhc-grid__cell--span($i);
   }
+}
 
-  .rhc-grid__cell--start-#{$i} {
-    @include mixin.rhc-grid__cell--start($i);
+.rhc-grid__cell--cols-421 {
+  grid-column-end: span 3;
+
+  @media screen and (width < 1344px) {
+    grid-column-end: span 6;
+  }
+
+  @media screen and (width < 768px) {
+    grid-column-end: span 12;
   }
 }
