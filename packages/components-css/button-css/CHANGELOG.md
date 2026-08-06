@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/button-css
 
+## 1.1.1
+
+### Patch Changes
+
+- 30c4a0e: fix(button,sidenav): uitlijning van icon gecentreerd ten opzichte van tekst
+
 ## 1.1.0
 
 ### Minor Changes
