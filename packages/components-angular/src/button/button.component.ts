@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   imports: [CommonModule],
   templateUrl: './button.component.html',
   host: {
+    '[class.rhc-button]': 'true',
     '[class.utrecht-button]': 'true',
     '[class.utrecht-button--primary-action]': 'appearance === "primary-action"',
     '[class.utrecht-button--secondary-action]': 'appearance === "secondary-action"',
