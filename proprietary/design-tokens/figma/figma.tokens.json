@@ -11839,17 +11839,7 @@
       }
     }
   },
-  "components/textarea": {
-    "rhc": {
-      "textarea": {
-        "focus": {
-          "border-width": {
-            "$type": "dimension",
-            "$value": "{rhc.border-width.md}"
-          }
-        }
-      }
-    },
+  "components/textarea/base": {
     "todo": {
       "textarea": {
         "hover": {
@@ -11928,11 +11918,11 @@
         },
         "padding-inline-end": {
           "$type": "dimension",
-          "$value": "{rhc.space.lg}"
+          "$value": "{rhc.space.xl}"
         },
         "padding-inline-start": {
           "$type": "dimension",
-          "$value": "{rhc.space.lg}"
+          "$value": "{rhc.space.xl}"
         },
         "invalid": {
           "background-color": {
@@ -12002,6 +11992,18 @@
           "color": {
             "$type": "color",
             "$value": "{rhc.color.foreground.default}"
+          }
+        }
+      }
+    }
+  },
+  "components/textarea/deprecated": {
+    "rhc": {
+      "textarea": {
+        "focus": {
+          "border-width": {
+            "$type": "dimension",
+            "$value": "{rhc.border-width.md}"
           }
         }
       }
@@ -12398,7 +12400,8 @@
         "components/table": "source",
         "components/text-input/base": "source",
         "components/text-input/deprecated": "source",
-        "components/textarea": "source",
+        "components/textarea/base": "source",
+        "components/textarea/deprecated": "source",
         "components/toggletip": "source",
         "components/unordered-list": "source",
         "components/page-header": "source"
@@ -12508,7 +12511,8 @@
       "components/table",
       "components/text-input/base",
       "components/text-input/deprecated",
-      "components/textarea",
+      "components/textarea/base",
+      "components/textarea/deprecated",
       "components/toggletip",
       "components/unordered-list",
       "components/page-header",
