@@ -9,7 +9,10 @@
 
 .rhc-radio.utrecht-radio-button:disabled,
 .rhc-radio.utrecht-radio-button--disabled {
-  --utrecht-radio-button-checked-color: var(--utrecht-radio-button-disabled-color, inherit);
+  --utrecht-radio-button-checked-color: var(
+    --utrecht-radio-button-checked-disabled-color,
+    var(--utrecht-radio-button-disabled-color, inherit)
+  );
 }
 
 .rhc-radio.utrecht-radio-button:invalid,
