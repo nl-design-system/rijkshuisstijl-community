@@ -2,6 +2,7 @@ import {
   ColumnLayout,
   Footer,
   Icon,
+  Link,
   LinkList,
   LinkListLink,
   Paragraph,
@@ -72,6 +73,17 @@ const meta = {
         type: { summary: 'string' },
       },
     },
+
+    variant: {
+      description:
+        'De variant van de Page Footer. De compacte variant toont alleen de tagline en de links uit children, voor pagina’s met een sterke taakfocus; de overige props (heading, columns, background, subFooter, backtotop, preFooter) hebben daar geen effect.',
+      defaultValue: 'default',
+      control: { type: 'select' },
+      options: ['default', 'compact'],
+      table: {
+        type: { summary: 'string' },
+      },
+    },
   },
 } satisfies Meta<typeof Footer>;
 
@@ -129,6 +141,28 @@ export const DefaultFooter: Story = {
         ),
       },
     ],
+  },
+};
+
+export const CompactFooter: Story = {
+  args: {
+    variant: 'compact',
+    tagline: 'De rijksoverheid. Voor Nederland',
+    children: (
+      <>
+        <Link href="#privacy">Privacy</Link>
+        <Link href="#toegankelijkheid">Toegankelijkheid</Link>
+        <Link href="#kwetsbaarheid-melden">Kwetsbaarheid melden</Link>
+      </>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De compacte variant van de Page Footer bevat alleen een tagline en enkele links. Gebruik deze wanneer de footer visueel naar de achtergrond mag treden, zoals bij formulieren of andere pagina’s met een sterke taakfocus. De tagline is gewone tekst en bewust geen Heading component: het is geen kop in de documentstructuur.',
+      },
+    },
   },
 };
 
