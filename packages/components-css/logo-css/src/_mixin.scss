@@ -13,6 +13,7 @@
   grid-template-areas: ". image ." ". image caption";
   grid-template-columns: 1fr var(--rhc-logo-image-inline-size) 1fr;
   grid-template-rows: var(--rhc-logo-title-padding-block-start) 1fr;
+  letter-spacing: var(--rhc-logo-title-letter-spacing, -0.004em);
   line-height: var(--rhc-logo-title-line-height, 1);
   margin-block-end: var(--rhc-logo-margin-block-end, 0);
   margin-block-start: var(--rhc-logo-margin-block-start, 0);
