@@ -4,6 +4,8 @@
  */
 
 @use "mixin";
+@forward "@utrecht/form-fieldset-css/dist/index.css";
+@forward "@utrecht/radio-button-css/dist/index.css";
 
 .rhc-radio-group {
   @include mixin.rhc-radio-group;

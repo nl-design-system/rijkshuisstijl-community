@@ -1,0 +1,20 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+@mixin rhc-breadcrumb-nav {
+  .utrecht-breadcrumb-nav__list {
+    align-items: center;
+  }
+
+  .rhc-breadcrumb-nav__link--current {
+    --utrecht-link-text-decoration: none;
+
+    color: var(--rhc-breadcrumb-nav-link-current-color);
+  }
+
+  .rhc-breadcrumb-nav__link--active {
+    --utrecht-link-text-decoration: var(--utrecht-breadcrumb-nav-link-active-text-decoration, underline);
+  }
+}

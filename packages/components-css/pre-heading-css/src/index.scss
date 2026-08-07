@@ -3,17 +3,17 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+@use "mixin";
+@forward "@utrecht/pre-heading-css/dist/index.css";
+
 .rhc-heading-container {
-  display: grid;
-  grid-template-areas:
-    "preheading"
-    "heading";
+  @include mixin.rhc-heading-container;
 }
 
 .rhc-pre-heading {
-  grid-area: preheading;
+  @include mixin.rhc-pre-heading;
 }
 
 .rhc-heading-container > *:not(.rhc-pre-heading) {
-  grid-area: heading;
+  @include mixin.rhc-heading-container-child;
 }

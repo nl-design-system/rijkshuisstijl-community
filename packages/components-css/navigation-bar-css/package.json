@@ -14,7 +14,7 @@
   "scripts": {
     "build": "build-css-package",
     "clean": "rimraf dist",
-    "watch": "build-css-package && chokidar 'src/**/*' --follow-symlogos --command 'build-css-package'"
+    "watch": "build-css-package && chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
   },
   "devDependencies": {
     "@rijkshuisstijl-community/build-utils-css": "workspace:*",
@@ -31,5 +31,9 @@
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
     "directory": "packages/components-css/navigation-bar-css"
+  },
+  "dependencies": {
+    "@rijkshuisstijl-community/heading-css": "workspace:*",
+    "@rijkshuisstijl-community/link-css": "workspace:*"
   }
 }
