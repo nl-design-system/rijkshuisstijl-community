@@ -81,8 +81,19 @@ export const NonFullBleed = () => (
         <Separator />
       </div>
     </div>
-    <div className="rhc-page-section rhc-footer--sub">
+    <div className="rhc-page-section rhc-footer--navigation">
       <div style={{ display: 'flex', columnGap: '24px', background: 'var(--rhc-page-footer-background-color)' }}>
+        <FooterFooterLinks />
+      </div>
+    </div>
+  </footer>
+);
+
+export const Compact = () => (
+  <footer className="rhc-page-footer">
+    <div className="rhc-page-section rhc-page-footer--navigation">
+      <div style={{ display: 'flex', columnGap: '24px', alignItems: 'baseline' }}>
+        <h2 className="rhc-page-footer-compact--tagline">Overheid.nl</h2>
         <FooterFooterLinks />
       </div>
     </div>

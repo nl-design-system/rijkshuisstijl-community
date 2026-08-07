@@ -9,9 +9,9 @@
   font-family: var(--rhc-page-footer-font-family);
 
   &__tagline {
+    font-size: var(--rhc-page-footer-tagline-font-size);
     font-weight: var(--rhc-page-footer-tagline-font-weight);
     line-height: var(--rhc-page-footer-tagline-line-height);
-    font-size: var(--rhc-page-footer-tagline-font-size);
   }
 
   & .rhc-link,
@@ -36,9 +36,13 @@
     row-gap: var(--rhc-page-footer-navigation-row-gap);
 
     & .nl-link.rhc-link{
-      text-decoration-line: var(--rhc-page-footer-navigation-link-text-decoration-line);
-      min-block-size: var(--rhc-page-footer-navigation-link-min-block-size);
       align-items: center;
+      min-block-size: var(--rhc-page-footer-navigation-link-min-block-size);
+      text-decoration-line: var(--rhc-page-footer-navigation-link-text-decoration-line);
+    }
+
+    .rhc-page-footer-compact--tagline {
+      margin-block: var(--rhc-space-none);
     }
   }
 }
