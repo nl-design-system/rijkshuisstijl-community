@@ -2509,6 +2509,17 @@
               "$type": "fontSizes",
               "$value": "2rem",
               "$description": "[figma-only]"
+            },
+            "letter-spacing": {
+              "tight": {
+              "$type": "letterSpacing",
+              "$value": "-0.004em",
+              "$description": "[figma-only]"
+            },
+            "normal": {
+              "$type": "letterSpacing",
+              "$value": "0em",
+              "$description": "[figma-only]"
             }
           }
         }
@@ -9752,6 +9763,10 @@
             "$type": "lineHeights",
             "$value": "118%"
           },
+          "letter-spacing": {
+            "$type": "letterSpacing",
+            "$value": "{rhc.text.letter-spacing.tight}"
+          },
           "max": {
             "font-size": {
               "$type": "fontSizes",
@@ -9777,6 +9792,10 @@
           "line-height": {
             "$type": "lineHeights",
             "$value": "118%"
+          },
+          "letter-spacing": {
+            "$type": "letterSpacing",
+            "$value": "{rhc.text.letter-spacing.normal}"
           },
           "padding-block-start": {
             "$type": "dimension",
@@ -12513,6 +12532,7 @@
       "components/unordered-list",
       "components/page-header",
       "viewport/min"
-    ]
+      ]
+    }
   }
 }
