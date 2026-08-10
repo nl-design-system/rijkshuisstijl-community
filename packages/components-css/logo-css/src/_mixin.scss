@@ -59,7 +59,7 @@
 
 @mixin rhc-logo__title {
   /* reset margin of HTML <h1> element */
-  letter-spacing: var(--rhc-logo-title-letter-spacing, 0em);
+  letter-spacing: var(--rhc-logo-title-letter-spacing, 0);
   margin-block-end: 0;
   margin-block-start: 0;
   white-space: pre-line;
@@ -70,4 +70,6 @@
   font-weight: var(--rhc-logo-subtitle-font-weight);
   letter-spacing: var(--rhc-logo-subtitle-letter-spacing, -0.004em);
   line-height: var(--rhc-logo-subtitle-line-height, 1);
+  margin-block-end: 0;
+  margin-block-start: 0;
 }
