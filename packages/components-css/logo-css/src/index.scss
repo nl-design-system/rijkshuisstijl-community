@@ -4,6 +4,7 @@
  */
 
 @use "mixin";
+@forward "@utrecht/icon-css/dist/index.css";
 
 .rhc-logo {
   @include mixin.rhc-logo;
@@ -28,9 +29,16 @@
 
 .rhc-logo__title {
   @include mixin.rhc-logo__title;
+
+  &:lang(nl, en, de, fr, es, it, pap, fy) {
+    letter-spacing: var(--rhc-logo-title-letter-spacing, 0);
+  }
 }
 
 .rhc-logo__subtitle {
   @include mixin.rhc-logo__subtitle;
-  @include mixin.rhc-logo__title;
+
+  &:lang(nl, en, de, fr, es, it, pap, fy) {
+    letter-spacing: var(--rhc-logo-subtitle-letter-spacing, -0.004em);
+  }
 }

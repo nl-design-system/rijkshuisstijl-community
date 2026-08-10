@@ -14,12 +14,11 @@
   "scripts": {
     "build": "build-css-package",
     "clean": "rimraf dist",
-    "watch": "build-css-package && chokidar 'src/**/*' --follow-symLink Lists --command 'build-css-package'"
+    "watch": "build-css-package && chokidar 'src/**/*' --follow-symlink --command 'build-css-package'"
   },
   "devDependencies": {
     "@rijkshuisstijl-community/build-utils-css": "workspace:*",
-    "chokidar-cli": "3.0.0",
-    "@utrecht/link-list-css": "2.3.1"
+    "chokidar-cli": "3.0.0"
   },
   "keywords": [
     "rijkshuisstijl-community-design-system"
@@ -32,5 +31,10 @@
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
     "directory": "packages/components-css/link-list-css"
+  },
+  "dependencies": {
+    "@utrecht/icon-css": "2.0.1",
+    "@rijkshuisstijl-community/link-css": "workspace:*",
+    "@utrecht/link-list-css": "2.3.1"
   }
 }

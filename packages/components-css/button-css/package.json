@@ -14,12 +14,10 @@
   "scripts": {
     "build": "build-css-package",
     "clean": "rimraf dist",
-    "watch": "chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
+    "watch": "build-css-package && chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
   },
   "devDependencies": {
     "@rijkshuisstijl-community/build-utils-css": "workspace:*",
-    "@utrecht/button-css": "3.1.0",
-    "@utrecht/icon-css": "2.0.1",
     "chokidar-cli": "3.0.0"
   },
   "keywords": [
@@ -33,5 +31,8 @@
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
     "directory": "packages/components-css/button-css"
+  },
+  "dependencies": {
+    "@utrecht/button-css": "3.1.0"
   }
 }
