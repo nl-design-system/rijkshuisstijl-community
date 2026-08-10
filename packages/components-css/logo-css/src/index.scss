@@ -33,4 +33,8 @@
 
 .rhc-logo__subtitle {
   @include mixin.rhc-logo__subtitle;
+
+  &:lang(nl, en, de, fr, es, it, pap) {
+    letter-spacing: var(--rhc-logo-subtitle-letter-spacing, -0.004em);
+  }
 }
