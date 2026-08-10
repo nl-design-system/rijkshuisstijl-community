@@ -39,6 +39,7 @@ De class names die je kunt gebruiken:
 - `.rhc-theme--fluid` schakelt alle soorten fluid sizing tegelijk in.
 - `.rhc-theme--fluid-font` schakelt fluid lettergrootte in.
 - `.rhc-theme--fluid-space` schakelt fluid witruimte in — paddings, margins, enz.
+- `.rhc-theme--fluid-lint` schakelt fluid lint in.
 
 De files die je kunt gebruiken:
 

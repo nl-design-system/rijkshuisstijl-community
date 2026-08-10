@@ -14,11 +14,10 @@
   "scripts": {
     "build": "build-css-package",
     "clean": "rimraf dist",
-    "watch": "build-css-package && chokidar 'src/**/*' --follow-symOrdered Lists --command 'build-css-package'"
+    "watch": "build-css-package && chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
   },
   "devDependencies": {
     "@rijkshuisstijl-community/build-utils-css": "workspace:*",
-    "@nl-design-system-candidate/number-badge-css": "1.1.5",
     "chokidar-cli": "3.0.0"
   },
   "keywords": [
@@ -32,5 +31,8 @@
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
     "directory": "packages/components-css/number-badge-css"
+  },
+  "dependencies": {
+    "@nl-design-system-candidate/number-badge-css": "1.1.5"
   }
 }

@@ -1,5 +1,31 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 17.0.0
+
+### Major Changes
+
+- 30c4a0e: - `rhc.size.pointer-target` aangepast van `3rem` naar `48px` zodat je altijd aan de 44px voldoet, ongeacht de font-size.
+  - `rhc.size.icon.md` gelijkgesteld aan de font-size waarde van md.
+  - `icon.inset-block-start` zo ingericht dat de positionering van het icoon nu op viewport en type-scale goed werkt.
+  - token `rhc.icon.md.inset-block-start.min` hernoemd naar `rhc.icon.inset-block-start.min.md`.
+  - token `rhc.icon.md.inset-block-start.max` hernoemd naar `rhc.icon.inset-block-start.max.md`.
+  - tokensets `overrides/type-scale/*` verwijderd omdat deze na de hernieuwde implementatie van clamp overbodig zijn geworden.
+
+### Minor Changes
+
+- 4a9b4bd: Border-radius fijner afgestemd op het ontwerp: `rhc.border-radius.sm` van 2.5px naar 2px en `rhc.border-radius.md` van 5px naar 4px. Select en Table gebruiken nu `md` in plaats van `sm`.
+- 3d4e7e0: Logo-titel en -subtitle font-size fluid gemaakt (min/max-tokens + interpolatie in `fluid.css` bij de lint-size), zodat de logotekst meeschaalt met het logo-beeld; niet-fluid blijft 0.9rem.
+- 1605e66: - Min- en max-font-size tokens toegevoegd voor het logo: `rhc.logo.min.font-size` en `rhc.logo.max.font-size`.
+  - Min- en max-size common tokens toegevoegd voor de hoogte van de image: `rhc.size.min.2-lint` en `rhc.size.max.2-lint`.
+  - Tokenset `viewport/min` toegevoegd: hiermee wordt `rhc.logo.font-size` bij een min-viewport overschreven naar `rhc.logo.min.font-size` (standaard verwijst deze token naar `rhc.logo.max.font-size`).
+  - Font-size en font-weight van de titel in het logo gecorrigeerd.
+
+### Patch Changes
+
+- 4b9bf3a: variant mogelijk zonder organisatie + variant mogelijk met hyperlink
+- 738948d: nl-link hover text-decoration-thickness aanpassen naar 0.1875em
+- 89b2604: Fix security vulnerabilities identified by pnpm audit by upgrading vitest and @vitest/coverage-v8 from 4.1.8 to 4.1.10.
+
 ## 16.1.0
 
 ### Minor Changes

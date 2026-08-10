@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/separator-css
 
+## 2.0.0
+
+### Major Changes
+
+- 462b16e: De invisible variant is verwijderd uit de Separator component.
+- 1d4ab21: Reset margin-inline-start and margin-inline-end. Border-color is aangepast.
+
 ## 1.1.0
 
 ### Minor Changes

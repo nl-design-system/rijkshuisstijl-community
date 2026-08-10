@@ -41,13 +41,10 @@ export * from '@rijkshuisstijl-community/hero-react/no-side-effects';
 export * from '@rijkshuisstijl-community/icon-react/no-side-effects';
 export * from '@rijkshuisstijl-community/image-react/no-side-effects';
 export {
-  Content as LanguageNavigationContent,
+  LanguageNavigation,
   type LanguageNavigationContentProps,
-  Item as LanguageNavigationItem,
   type LanguageNavigationItemProps,
-  Root as LanguageNavigationRoot,
   type LanguageNavigationRootProps,
-  Trigger as LanguageNavigationTrigger,
   type LanguageNavigationTriggerProps,
 } from '@rijkshuisstijl-community/language-navigation-react/no-side-effects';
 export * from '@rijkshuisstijl-community/link-react/no-side-effects';

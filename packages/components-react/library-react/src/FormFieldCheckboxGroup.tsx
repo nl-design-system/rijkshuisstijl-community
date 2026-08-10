@@ -3,7 +3,7 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { CheckboxGroup } from '@rijkshuisstijl-community/checkbox-group-react';
+import { CheckboxGroup } from '@rijkshuisstijl-community/checkbox-group-react/no-side-effects';
 import { type FormFieldProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import { Children, PropsWithChildren, ReactNode, Ref, useId } from 'react';

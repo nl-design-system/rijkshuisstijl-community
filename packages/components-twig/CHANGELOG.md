@@ -1,5 +1,19 @@
 # @rijkshuisstijl-community/components-twig
 
+## 4.0.0
+
+### Major Changes
+
+- 462b16e: De invisible variant is verwijderd uit de Separator component.
+- 1d4ab21: Reset margin-inline-start and margin-inline-end. Border-color is aangepast.
+
+### Patch Changes
+
+- 91d25ee: "disabled=false" uit de code gehaald.
+- Updated dependencies [30f8098]
+- Updated dependencies [9b2f197]
+  - @rijkshuisstijl-community/components-css@18.0.0
+
 ## 3.2.2
 
 ### Patch Changes

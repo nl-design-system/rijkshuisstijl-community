@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/dot-badge-react
 
+## 1.1.2
+
+### Patch Changes
+
+- 89b2604: Fix security vulnerabilities identified by pnpm audit by upgrading vitest and @vitest/coverage-v8 from 4.1.8 to 4.1.10.
+
 ## 1.1.1
 
 ### Patch Changes

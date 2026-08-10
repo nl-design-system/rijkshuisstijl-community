@@ -4,6 +4,7 @@
  */
 
 @use "mixin";
+@forward "@utrecht/icon-css/dist/index.css";
 
 .rhc-logo {
   @include mixin.rhc-logo;
@@ -16,6 +17,10 @@
 .rhc-logo__image .utrecht-icon,
 .rhc-logo__image .rhc-icon {
   @include mixin.rhc-logo__icon;
+}
+
+.rhc-logo__link {
+  @include mixin.rhc-logo__link;
 }
 
 .rhc-logo__caption {

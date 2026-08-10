@@ -3,19 +3,18 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+@use "mixin";
+@forward "@utrecht/figure-css/dist/index.css";
+
 .rhc-figure.utrecht-figure img {
-  border-end-end-radius: var(--utrecht-figure-img-border-end-end-radius);
-  border-end-start-radius: var(--utrecht-figure-img-border-end-start-radius);
-  border-start-end-radius: var(--utrecht-figure-img-border-start-end-radius);
-  border-start-start-radius: var(--utrecht-figure-img-border-start-start-radius);
+  @include mixin.rhc-figure-img;
 }
 
 /* Inline behaviour for rounded-corner to fix cornering on block elements */
 .rhc-figure.utrecht-figure .rhc-rounded-corner {
-  display: inline-block;
-  vertical-align: top;
+  @include mixin.rhc-figure-rounded-corner;
 }
 
 .rhc-figure.utrecht-figure .rhc-rounded-corner img {
-  border-radius: inherit;
+  @include mixin.rhc-figure-rounded-corner-img;
 }

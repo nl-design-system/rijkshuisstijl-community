@@ -46,4 +46,22 @@ Zie het volgende voorbeeld om het thema "groen" toe te passen:
 @import '@rijkshuisstijl-community/components-css/dist/index.css'; // css importeren
 ```
 
+### Importeren in een cascade layer (aanbevolen)
+
+Door de CSS van het design systeem in een eigen [cascade layer](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer) te importeren, wint de CSS van je eigen applicatie altijd van de CSS van het design systeem — ongeacht de specificiteit van de selectors. CSS buiten een layer gaat namelijk altijd vóór CSS binnen een layer.
+
+```css
+@import '@rijkshuisstijl-community/design-tokens/dist/index.css' layer(rhc-design-system);
+@import '@rijkshuisstijl-community/components-css/dist/index.css' layer(rhc-design-system);
+
+/* Eigen stijlen buiten de layer winnen altijd van de layer hierboven,
+   ook met een lagere specificiteit: */
+.nl-heading {
+  color: red;
+}
+```
+
+> [!NOTE]
+> Gebruik je ook `@rijkshuisstijl-community/components-react`? Importeer de componenten dan via het `/no-side-effects` entrypoint (`import { Hero } from '@rijkshuisstijl-community/components-react/no-side-effects';`). Het standaard entrypoint laadt de component-CSS zelf als side effect, buiten je layer om — waardoor die alsnog van je eigen stijlen kan winnen.
+
 Bekijk de [packages/font/README.md](https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/font/README.md) voor de meerdere manieren om de lettertypen te installeren voor jouw project.

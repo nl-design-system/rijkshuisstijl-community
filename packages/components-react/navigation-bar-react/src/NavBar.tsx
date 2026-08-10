@@ -3,11 +3,11 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { ColumnLayout } from '@rijkshuisstijl-community/column-layout-react';
-import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react';
-import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react';
-import { LinkList, LinkListLink } from '@rijkshuisstijl-community/link-list-react';
-import { Link } from '@rijkshuisstijl-community/link-react';
+import { ColumnLayout } from '@rijkshuisstijl-community/column-layout-react/no-side-effects';
+import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react/no-side-effects';
+import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react/no-side-effects';
+import { LinkList, LinkListLink } from '@rijkshuisstijl-community/link-list-react/no-side-effects';
+import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref } from 'react';
 
