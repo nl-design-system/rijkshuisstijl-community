@@ -7,11 +7,11 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
 
-  & > * {
-    flex-grow: 1;
-    max-inline-size: var(--rhc-page-section-max-inline-size);
-    padding-block: var(--rhc-page-section-padding-block);
-    padding-inline: var(--rhc-page-section-padding-inline);
-  }
+@mixin rhc-page-section__content {
+  flex-grow: 1;
+  max-inline-size: var(--rhc-page-section-max-inline-size);
+  padding-block: var(--rhc-page-section-padding-block);
+  padding-inline: var(--rhc-page-section-padding-inline);
 }
