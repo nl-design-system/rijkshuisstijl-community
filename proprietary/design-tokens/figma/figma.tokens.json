@@ -20,6 +20,10 @@
           "$type": "dimension",
           "$value": "2px"
         },
+        "lg": {
+          "$type": "dimension",
+          "$value": "4px"
+        },
         "none": {
           "$type": "dimension",
           "$value": "0px"
@@ -9920,7 +9924,7 @@
       "navigation-bar": {
         "border-block-end-width": {
           "$type": "dimension",
-          "$value": "{rhc.border-width.sm}"
+          "$value": "{rhc.border-width.lg}"
         },
         "item": {
           "icon": {
@@ -9977,11 +9981,11 @@
           },
           "padding-block-end": {
             "$type": "dimension",
-            "$value": "{rhc.space.xl}"
+            "$value": "{rhc.space.md}"
           },
           "padding-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.space.xl}"
+            "$value": "{rhc.space.md}"
           },
           "padding-inline-end": {
             "$type": "dimension",
@@ -10031,12 +10035,12 @@
           },
           "border-block-end-width": {
             "$type": "dimension",
-            "$value": "{rhc.border-width.md}"
+            "$value": "{rhc.border-width.lg}"
           }
         },
         "background-color": {
           "$type": "color",
-          "$value": "{rhc.color.wit}"
+          "$value": "{rhc.color.transparent}"
         },
         "color": {
           "$type": "color",
@@ -10044,7 +10048,15 @@
         },
         "border-color": {
           "$type": "color",
-          "$value": "{rhc.color.core.500}"
+          "$value": "{rhc.color.core.50}"
+        },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "{rhc.size.pointer-target}"
+        },
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.2xl}"
         }
       }
     }
@@ -12560,10 +12572,12 @@
         "components/textarea": "source",
         "components/toggletip": "source",
         "components/unordered-list": "source",
-        "components/page-header": "source"
+        "components/page-header": "source",
+        "components/page-footer": "source",
+        "components/navigation-bar": "source"
       },
-      "group": "Components",
-      "$figmaVariableReferences": {}
+      "$figmaVariableReferences": {},
+      "group": "Components"
     }
   ],
   "$metadata": {

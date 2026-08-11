@@ -1,5 +1,13 @@
-import { Footer, Icon, Logo, PageHeader, NavBar } from '@rijkshuisstijl-community/components-react';
-import { FooterLinks, FooterFooterLinks } from '../../components-css/footer.stories';
+import {
+  BreadcrumbNav,
+  BreadcrumbNavLink,
+  Footer,
+  Icon,
+  Logo,
+  NavBar,
+  PageHeader,
+} from '@rijkshuisstijl-community/components-react';
+import { FooterFooterLinks, FooterLinks } from '../../components-css/footer.stories';
 
 const HeaderFooter = () => {
   const slot1 = <FooterLinks />;
@@ -9,8 +17,8 @@ const HeaderFooter = () => {
     <>
       <PageHeader>
         <Logo organisation="Organisatie" subtitle="Wat wij doen">
-          <Icon className={'dutch-map'} icon={'nederland-map'} />
-        </Logo> 
+          <Icon className="dutch-map" icon="nederland-map" />
+        </Logo>
         <NavBar
           className="rhc-nav-bar"
           endItems={[
@@ -48,6 +56,11 @@ const HeaderFooter = () => {
             },
           ]}
         />
+        <BreadcrumbNav>
+          <BreadcrumbNavLink href="Text1"></BreadcrumbNavLink>
+          <BreadcrumbNavLink href="Text2"></BreadcrumbNavLink>
+          <BreadcrumbNavLink href="Text3"></BreadcrumbNavLink>
+        </BreadcrumbNav>
       </PageHeader>
       <Footer slot1={slot1} slot2={slot2} />
     </>
