@@ -9,8 +9,8 @@ const HeaderFooter = () => {
     <>
       <PageHeader>
         <Logo organisation="Organisatie" subtitle="Wat wij doen">
-          <Icon className={'dutch-map'} icon={'nederland-map'} />
-        </Logo> 
+          <Icon className="dutch-map" icon="nederland-map" />
+        </Logo>
         <NavBar
           className="rhc-nav-bar"
           endItems={[
