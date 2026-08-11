@@ -58,16 +58,13 @@ const HeaderFooter = () => {
         />
         <BreadcrumbNav>
           <BreadcrumbNavLink href="/" index={0} rel="home">
-            {' '}
-            Home{' '}
+            Home
           </BreadcrumbNavLink>
           <BreadcrumbNavLink href="/a/" index={1}>
-            {' '}
-            Label{' '}
+            Label
           </BreadcrumbNavLink>
           <BreadcrumbNavLink current href="/a/b/" index={2}>
-            {' '}
-            Label{' '}
+            Label
           </BreadcrumbNavLink>
         </BreadcrumbNav>
       </PageHeader>
