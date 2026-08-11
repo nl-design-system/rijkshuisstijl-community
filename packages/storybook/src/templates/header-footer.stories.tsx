@@ -16,4 +16,3 @@ export default meta;
 type Story = StoryObj<typeof Page>;
 
 export const Default: Story = {};
-
