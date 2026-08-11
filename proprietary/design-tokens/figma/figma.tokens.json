@@ -9778,7 +9778,7 @@
             "font-size": {
               "$type": "fontSizes",
               "$value": "0",
-            "$description": "[todo]0.75rem"
+              "$description": "[todo]0.75rem"
             }
           }
         },
@@ -10039,6 +10039,140 @@
         "border-color": {
           "$type": "color",
           "$value": "{rhc.color.core.400}"
+        }
+      }
+    }
+  },
+  "components/nav-bar-new": {
+    "rhc": {
+      "navigation-bar": {
+        "border-block-end-width": {
+          "$type": "dimension",
+          "$value": "{rhc.border-width.sm}"
+        },
+        "item": {
+          "icon": {
+            "size": {
+              "$type": "dimension",
+              "$value": "{rhc.size.icon.md}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.100}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
+            }
+          },
+          "background-color": {
+            "$type": "color",
+            "$value": "{rhc.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{rhc.color.core.500}"
+          },
+          "focus": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.500}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.50}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.hover}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.hover}"
+            }
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.xl}"
+          },
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.xl}"
+          },
+          "padding-inline-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.lg}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.lg}"
+          },
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.md}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.md}"
+          },
+          "current": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.500}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.500}"
+            },
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{rhc.text.font-weight.bold}"
+            }
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.regular}"
+          },
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{rhc.text.font-family.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{rhc.text.line-height.md}"
+          },
+          "border-block-end-width": {
+            "$type": "dimension",
+            "$value": "{rhc.border-width.md}"
+          }
+        },
+        "background-color": {
+          "$type": "color",
+          "$value": "{rhc.color.wit}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{rhc.color.core.500}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{rhc.color.core.500}"
         }
       }
     }
@@ -10513,16 +10647,6 @@
       }
     }
   },
-  "components/grid-new": {
-    "rhc": {
-      "grid": {
-        "column-gap": {
-          "$type": "dimension",
-          "$value": "{rhc.space.2xl}"
-        }
-      }
-    }
-  },
   "components/page-footer-new": {
     "rhc": {
       "page-footer": {
@@ -10621,24 +10745,6 @@
         "row-gap": {
           "$type": "dimension",
           "$value": "{rhc.space.3xl}"
-        }
-      }
-    }
-  },
-  "components/page-section-new": {
-    "rhc": {
-      "page-section": {
-        "max-inline-size": {
-          "$type": "dimension",
-          "$value": "{rhc.size.page.md}"
-        },
-        "padding-inline": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
-        },
-        "padding-block": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
         }
       }
     }
@@ -12306,6 +12412,34 @@
       }
     }
   },
+  "components/grid-new": {
+    "rhc": {
+      "grid": {
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.2xl}"
+        }
+      }
+    }
+  },
+  "components/page-section-new": {
+    "rhc": {
+      "page-section": {
+        "max-inline-size": {
+          "$type": "dimension",
+          "$value": "{rhc.size.page.md}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{rhc.space.4xl}"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{rhc.space.4xl}"
+        }
+      }
+    }
+  },
   "viewport/min": {
     "rhc": {
       "logo": {
@@ -12639,6 +12773,7 @@
       "components/logo",
       "components/message-list",
       "components/nav-bar",
+      "components/nav-bar-new",
       "components/navigation-list",
       "components/number-badge/nl",
       "components/number-badge/utrecht",
@@ -12666,7 +12801,9 @@
       "components/toggletip",
       "components/unordered-list",
       "components/page-header",
+      "components/grid-new",
+      "components/page-section-new",
       "viewport/min"
-      ]
-    }
+    ]
   }
+}
