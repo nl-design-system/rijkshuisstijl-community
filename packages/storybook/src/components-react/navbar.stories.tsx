@@ -72,6 +72,14 @@ export const WithHeading: Story = {
   },
 };
 
+export const WithIdentity: Story = {
+  args: {
+    identity: 'Identity',
+    items,
+    endItems
+  },
+};
+
 export const WithEndItems: Story = {
   args: {
     items,

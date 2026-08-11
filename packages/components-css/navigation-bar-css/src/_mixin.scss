@@ -3,32 +3,43 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-@mixin rhc-nav-bar__container {
-  align-items: center;
-  background-color: var(--rhc-nav-bar-background-color);
-  border-block-end-color: var(--rhc-nav-bar-border-color);
-  border-block-end-style: solid;
-  border-block-end-width: var(--rhc-nav-bar-border-block-end-width);
-  display: flex;
-  inline-size: var(--rhc-nav-bar-container-inline-size);
-  justify-content: center;
-}
-
 @mixin rhc-nav-bar {
   align-items: center;
-  background-color: var(--rhc-nav-bar-background-color);
-  color: var(--rhc-nav-bar-color);
-  column-gap: var(--rhc-nav-bar-content-column-gap);
+  background-color: var(--rhc-navigation-bar-background-color);
+  border-block-end: var(--rhc-navigation-bar-border-block-end-width) solid var(--rhc-navigation-bar-border-color);
+  color: var(--rhc-navigation-bar-color);
   display: flex;
-  flex: 1;
   font-family: var(--rhc-text-font-family-default, inherit);
+  inline-size: 100%;
   justify-content: space-between;
-  max-inline-size: var(--rhc-nav-bar-max-inline-size);
-  row-gap: var(--rhc-nav-bar-content-row-gap);
+
+  @at-root {
+    .rhc-nav-bar:has(> .rhc-nav-bar__slot:nth-last-child(2):first-child) {
+      justify-content: space-between;
+    }
+
+    .rhc-nav-bar:has(> .rhc-nav-bar__slot:nth-last-child(3):first-child) {
+      > .rhc-nav-bar__slot:nth-child(2) {
+        flex-grow: 1;
+      }
+      > .rhc-nav-bar__slot:nth-child(3) {
+        margin-left: auto;
+      }
+    }
+  } 
+}
+
+@mixin rhc-nav-bar__slot {
+  width: auto;
+}
+
+@mixin rhc-nav-bar__nav {
+  align-items: center;
+  display: flex;
 }
 
 @mixin rhc-nav-bar__list {
-  background-color: var(--rhc-nav-bar-background-color);
+  background-color: var(--rhc-navigation-bar-background-color);
   display: flex;
   list-style: none;
   margin-block: 0;
@@ -42,33 +53,35 @@
 }
 
 @mixin rhc-nav-bar__heading {
-  font-weight: var(--rhc-nav-bar-heading-font-weight);
+  font-weight: var(--rhc-navigation-bar-item-current-font-weight);
 }
 
 @mixin rhc-nav-bar__link {
   --nl-link-text-decoration-line: none;
-  --utrecht-link-visited-color: var(--rhc-nav-bar-color);
-  --nl-link-color: var(--rhc-nav-bar-color);
+  --nl-link-color: var(--rhc-navigation-bar-item-color);
+  --utrecht-link-visited-color: var(--rhc-navigation-bar-item-color);
 
-  font-size: var(--rhc-nav-bar-link-font-size);
-  padding-block-end: var(--rhc-nav-bar-link-padding-block-end);
-  padding-block-start: var(--rhc-nav-bar-link-padding-block-start);
-  padding-inline-end: var(--rhc-nav-bar-link-padding-inline-end);
-  padding-inline-start: var(--rhc-nav-bar-link-padding-inline-start);
+  background-color: var(--rhc-navigation-bar-item-background-color);
+  font-size: var(--rhc-navigation-bar-item-font-size);
+  padding-block-end: var(--rhc-navigation-bar-item-padding-block-end);
+  padding-block-start: var(--rhc-navigation-bar-item-padding-block-start);
+  padding-inline-end: var(--rhc-navigation-bar-item-padding-inline-end);
+  padding-inline-start: var(--rhc-navigation-bar-item-padding-inline-start);
   text-decoration: none;
 
-  .rhc-nav-bar__link:active {
-    background-color: var(--rhc-nav-bar-link-active-background-color);
-    color: var(--rhc-nav-bar-link-active-color);
+  &:active {
+    background-color: var(--rhc-navigation-bar-item-active-background-color);
+    color: var(--rhc-navigation-bar-item-active-color);
   }
 
-  .rhc-nav-bar__link:hover {
-    background-color: var(--rhc-nav-bar-link-hover-background-color);
+  &:hover {
+    background-color: var(--rhc-navigation-bar-item-hover-background-color);
+    color: var(--rhc-navigation-bar-item-hover-color);
   }
 
-  .rhc-nav-bar__link:focus {
-    background-color: var(--rhc-nav-bar-link-focus-background-color);
-    color: var(--rhc-nav-bar-link-focus-color);
+  &:focus {
+    background-color: var(--rhc-navigation-bar-item-focus-background-color);
+    color: var(--rhc-navigation-bar-item-focus-color);
   }
 }
 
