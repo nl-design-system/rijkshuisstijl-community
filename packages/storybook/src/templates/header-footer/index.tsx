@@ -1,4 +1,4 @@
-import { Footer, Logo, PageHeader } from '@rijkshuisstijl-community/components-react';
+import { Footer, Icon, Logo, PageHeader } from '@rijkshuisstijl-community/components-react';
 import { FooterLinks, FooterFooterLinks } from '../../components-css/footer.stories';
 
 const HeaderFooter = () => {
@@ -8,7 +8,9 @@ const HeaderFooter = () => {
   return (
     <>
       <PageHeader>
-        <Logo organisation="Organisatie" subtitle="Wat wij doen" />
+        <Logo organisation="Organisatie" subtitle="Wat wij doen">
+          <Icon className={'dutch-map'} icon={'nederland-map'} />
+        </Logo> 
       </PageHeader>
       <Footer slot1={slot1} slot2={slot2} />
     </>
