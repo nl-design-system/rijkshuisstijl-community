@@ -32,13 +32,17 @@
     }
   }
 
-  &--navigation {
-    --rhc-page-section-padding-block: var(--rhc-page-footer-compact-padding-block);
+  &--primary {
+    padding-block: var(--rhc-page-section-padding-block);
+  }
 
+  &--secondary {
+    align-items: start;
     column-gap: var(--rhc-page-footer-navigation-column-gap);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-block: var(--rhc-page-footer-compact-padding-block);
     row-gap: var(--rhc-page-footer-navigation-row-gap);
 
     .nl-link.rhc-link {
