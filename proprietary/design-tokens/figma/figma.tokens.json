@@ -20,6 +20,10 @@
           "$type": "dimension",
           "$value": "2px"
         },
+        "lg": {
+          "$type": "dimension",
+          "$value": "4px"
+        },
         "none": {
           "$type": "dimension",
           "$value": "0px"
@@ -9920,7 +9924,7 @@
       "navigation-bar": {
         "border-block-end-width": {
           "$type": "dimension",
-          "$value": "{rhc.border-width.sm}"
+          "$value": "{rhc.border-width.lg}"
         },
         "item": {
           "icon": {
@@ -10031,7 +10035,7 @@
           },
           "border-block-end-width": {
             "$type": "dimension",
-            "$value": "{rhc.border-width.md}"
+            "$value": "{rhc.border-width.lg}"
           }
         },
         "background-color": {
@@ -10044,7 +10048,7 @@
         },
         "border-color": {
           "$type": "color",
-          "$value": "{rhc.color.core.500}"
+          "$value": "{rhc.color.core.50}"
         }
       }
     }
@@ -12559,10 +12563,12 @@
         "components/textarea": "source",
         "components/toggletip": "source",
         "components/unordered-list": "source",
-        "components/page-header": "source"
+        "components/page-header": "source",
+        "components/page-footer": "source",
+        "components/navigation-bar": "source"
       },
-      "group": "Components",
-      "$figmaVariableReferences": {}
+      "$figmaVariableReferences": {},
+      "group": "Components"
     }
   ],
   "$metadata": {
