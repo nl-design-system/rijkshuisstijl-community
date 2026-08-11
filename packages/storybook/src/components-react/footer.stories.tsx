@@ -1,240 +1,77 @@
-import {
-  ColumnLayout,
-  Footer,
-  Icon,
-  LinkList,
-  LinkListLink,
-  Paragraph,
-} from '@rijkshuisstijl-community/components-react';
-import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
-import { Meta, StoryObj } from '@storybook/react-vite';
-import readme from './footer.md?raw';
+import '@rijkshuisstijl-community/footer-css/dist/index.css';
+import '@rijkshuisstijl-community/section-css/dist/index.css';
+import '@rijkshuisstijl-community/grid-css/dist/index.css';
+import { Footer, Icon, Link, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
 
-const meta = {
-  title: 'Footer',
-  id: 'rhc-footer',
-  component: Footer,
-  parameters: {
-    docs: {
-      description: {
-        // TODO: restructure this, but not until readme is correctly structurized in the Utrecht documentation source
-        component: mergeMarkdown([readme]),
-      },
-    },
-    // TODO: add Figma and NL DesignSystem links
-    github:
-      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/Footer.tsx',
-    componentOrigin:
-      'Dit component is overgenomen van de Gemeente Utrecht (daar heeft het de naam PageFooter), met HTML aanpassingen en styling van de Rijkshuisstijl Community.',
-  },
-  argTypes: {
-    appearanceLevel: {
-      description: 'Het uiterlijk van de heading in de footer.',
-      defaultValue: 3,
-      control: { type: 'select' },
-      options: [1, 2, 3, 4, 5, 6],
-      table: {
-        type: { summary: 'number' },
-      },
-    },
+const linkList1 = ['Contact', 'Veel gestelde vragen', 'Over deze site', 'Werken bij'];
 
-    background: {
-      description: 'De achtergrondkleur van de footer.',
-      control: { type: 'select' },
-      options: ['primary-filled', 'primary-outlined'],
-      table: {
-        type: { summary: 'string' },
-      },
-    },
+const linkList2 = ['Wetten', 'Verdragen', 'Lokale regelgeving', 'Officiële bekendmakingen', 'Tuchtrecht'];
 
-    backtotop: {
-      description: 'Toon de "Terug naar boven" knop.',
-      control: { type: 'boolean' },
-      table: {
-        type: { summary: 'boolean' },
-      },
-    },
+const linkList3 = ['Mijn overheid', 'Rijksoverheid.nl', 'Ondernemersplein', 'NederlandWereldwijd'];
 
-    preFooter: {
-      description: 'Het balkje die boven de footer wordt getoond.',
-      control: { type: 'boolean' },
-      table: {
-        type: { summary: 'boolean' },
-      },
-    },
+const LinkListMaker = ({ list }: { list: Array<string> }) => (
+  <LinkList>
+    {list.map((entry) => (
+      <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+        {entry}
+      </LinkListLink>
+    ))}
+  </LinkList>
+);
 
-    preFooterMessage: {
-      description: 'De tekst die in het balkje boven de footer wordt getoond.',
-      defaultValue: '',
-      control: { type: 'text' },
-      if: { arg: 'preFooter', eq: true },
-      table: {
-        type: { summary: 'string' },
-      },
-    },
-  },
-} satisfies Meta<typeof Footer>;
+const FooterLinks = () => (
+  <>
+    <div className="rhc-grid__cell--cols-421">
+      <h2>Overheid.nl</h2>
+      <i>Ingang naar informatie en diensten van alle overheden</i>
+    </div>
+    <div className="rhc-grid__cell--cols-421">
+      <h3>Overheid.nl</h3>
+      <LinkListMaker list={linkList1} />
+    </div>
+    <div className="rhc-grid__cell--cols-421">
+      <h3>Officiële overheidsinformatie</h3>
+      <LinkListMaker list={linkList2} />
+    </div>
+    <div className="rhc-grid__cell--cols-421">
+      <h3>Andere overheidssites</h3>
+      <LinkListMaker list={linkList3} />
+    </div>
+  </>
+);
 
-export default meta;
+const FooterFooterLinks = () => (
+  <>
+    <Link href="#">Privacy</Link>
+    <Link href="#">Cookies en anti-spam</Link>
+    <Link href="#">Toegankelijkheid</Link>
+    <Link href="#">Proclaimer</Link>
+  </>
+);
 
-type Story = StoryObj<typeof meta>;
+export const Default = () => {
+  const slot1 = <FooterLinks />;
+  const slot2 = <FooterFooterLinks />;
 
-function _toLinkList(items: string[]) {
-  return (
-    <LinkList>
-      {items.map((item) => (
-        <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
-          {item}
-        </LinkListLink>
-      ))}
-    </LinkList>
+  return <Footer slot1={slot1} slot2={slot2} />;
+};
+
+export const Compact = () => {
+  const slot2 = (
+    <div style={{ display: 'flex', columnGap: '24px', alignItems: 'baseline' }}>
+      <h2 className="rhc-page-footer-compact--tagline">Overheid.nl</h2>
+      <FooterFooterLinks />
+    </div>
   );
-}
 
-export const DefaultFooter: Story = {
-  args: {
-    tagline: 'Footer tagline',
-    appearanceLevel: 3,
-    background: 'primary-filled',
-    backtotop: true,
-    preFooter: false,
-    subFooter: (
-      <LinkList>
-        <LinkListLink href="#">Privacy</LinkListLink>
-      </LinkList>
-    ),
-    columns: [
-      {
-        heading: 'Service',
-        appearanceLevel: 3,
-        children: _toLinkList(['Contact', 'Abonneren', 'RSS', 'Vacatures', 'Sitemap', 'Help', 'Archief']),
-      },
-      {
-        heading: 'Over deze site',
-        appearanceLevel: 3,
-        children: (
-          <>
-            <Paragraph>Een behulpzame paragraaf.</Paragraph>
-            {_toLinkList([
-              'Over deze organisatie',
-              'Wetten en regelingen',
-              'Copyright',
-              'Privacy',
-              'Cookies',
-              'Toegankelijkheid',
-              'Open data',
-              'Kwetsbaarheid melden',
-            ])}
-          </>
-        ),
-      },
-    ],
-  },
+  return <Footer slot2={slot2} />;
 };
 
-export const PrimaryOutlinedFooter: Story = {
-  args: {
-    tagline: 'Footer tagline',
-    appearanceLevel: 3,
-    background: 'primary-outlined',
-    preFooterMessage: '',
-    preFooter: true,
-
-    children: (
-      <ColumnLayout>
-        <Paragraph>Een behulpzame paragraaf.</Paragraph>
-        {_toLinkList([
-          'Over deze organisatie',
-          'Wetten en regelingen',
-          'Copyright',
-          'Privacy',
-          'Cookies',
-          'Toegankelijkheid',
-          'Open data',
-          'Kwetsbaarheid melden',
-        ])}
-      </ColumnLayout>
-    ),
-  },
-};
-
-export const PrimaryOutlinedFooterSubFooter: Story = {
-  args: {
-    tagline: 'Footer tagline',
-    appearanceLevel: 3,
-    background: 'primary-outlined',
-    preFooterMessage: 'Kwaliteit, vertrouwen en duurzaamheid',
-    preFooter: true,
-    subFooter: (
-      <LinkList className="rhc-subfooter-details">
-        <LinkListLink href="#">Privacy</LinkListLink>
-      </LinkList>
-    ),
-    children: (
-      <ColumnLayout>
-        <Paragraph>Een behulpzame paragraaf.</Paragraph>
-        {_toLinkList([
-          'Over deze organisatie',
-          'Wetten en regelingen',
-          'Copyright',
-          'Privacy',
-          'Cookies',
-          'Toegankelijkheid',
-          'Open data',
-          'Kwetsbaarheid melden',
-        ])}
-      </ColumnLayout>
-    ),
-  },
-};
-
-export const ColumnLayoutFooter: Story = {
-  args: {
-    tagline: 'Footer tagline',
-    appearanceLevel: 3,
-    background: 'primary-filled',
-    children: (
-      <ColumnLayout>
-        <Paragraph>Een behulpzame paragraaf.</Paragraph>
-        {_toLinkList([
-          'Over deze organisatie',
-          'Wetten en regelingen',
-          'Copyright',
-          'Privacy',
-          'Cookies',
-          'Toegankelijkheid',
-          'Open data',
-          'Kwetsbaarheid melden',
-        ])}
-      </ColumnLayout>
-    ),
-  },
-};
-
-export const CustomHeadingFooter: Story = {
-  args: {
-    background: 'primary-filled',
-    columns: [
-      {
-        heading: 'First heading',
-        appearanceLevel: 3,
-        children: _toLinkList(['List item 1', 'List item 2', 'List item 3']),
-      },
-      {
-        heading: 'Second heading',
-        appearanceLevel: 3,
-        children: _toLinkList(['List item 1', 'List item 2', 'List item 3']),
-      },
-      {
-        heading: 'Third heading',
-        appearanceLevel: 3,
-        children: _toLinkList(['List item 1', 'List item 2', 'List item 3']),
-      },
-      {
-        heading: 'Fourth heading',
-        appearanceLevel: 3,
-        children: _toLinkList(['List item 1', 'List item 2', 'List item 3']),
-      },
-    ],
+export default {
+  component: Footer,
+  title: 'Footer',
+  id: 'rhc-react-footer',
+  parameters: {
+    layout: 'fullscreen',
   },
 };

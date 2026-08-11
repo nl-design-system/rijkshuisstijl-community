@@ -3,62 +3,49 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-@use "mixin";
-@forward "@utrecht/page-footer-css/dist/index.css";
-@forward "@rijkshuisstijl-community/heading-css/dist/index.css";
-@forward "@rijkshuisstijl-community/paragraph-css/dist/index.css";
-
 .rhc-page-footer {
-  @include mixin.rhc-page-footer;
-}
+  background-color: var(--rhc-page-footer-background-color);
+  color: var(--rhc-page-footer-color);
+  font-family: var(--rhc-page-footer-font-family);
 
-.rhc-page-footer--primary-filled {
-  @include mixin.rhc-page-footer--primary-filled;
-}
+  &__tagline {
+    font-size: var(--rhc-page-footer-tagline-font-size);
+    font-weight: var(--rhc-page-footer-tagline-font-weight);
+    line-height: var(--rhc-page-footer-tagline-line-height);
+  }
 
-.rhc-page-footer--primary-filled.rhc-page-footer--subfooter {
-  @include mixin.rhc-page-footer--primary-filled-subfooter;
-}
+  & .rhc-link,
+  & .utrecht-link-list__link {
+    color: var(--rhc-page-footer-color);
+  }
 
-.rhc-page-footer--primary-outlined {
-  @include mixin.rhc-page-footer--primary-outlined;
-}
+  .rhc-footer--separator {
+    padding-block: 0;
 
-/**
- * Contains:
- * - the pre-footer (optional)
- * - the regular page footer
- * - the subfooter (optional)
- */
-.rhc-page-footer-container {
-  @include mixin.rhc-page-footer-container;
-}
+    .rhc-separator {
+      --utrecht-separator-color: var(--rhc-page-footer-color);
 
-.rhc-page-footer-layout {
-  @include mixin.rhc-page-footer-layout;
-}
+      margin-block: 0;
+    }
+  }
 
-.rhc-page-footer-layout > * {
-  @include mixin.rhc-page-footer-layout-child;
-}
+  &--navigation {
+    --rhc-page-section-padding-block: var(--rhc-page-footer-compact-padding-block);
 
-.rhc-page-footer__section,
-.rhc-page-footer__tagline {
-  @include mixin.rhc-page-footer__section;
-}
+    column-gap: var(--rhc-page-footer-navigation-column-gap);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: var(--rhc-page-footer-navigation-row-gap);
 
-.rhc-page-subfooter-layout {
-  @include mixin.rhc-page-subfooter-layout;
-}
+    .nl-link.rhc-link {
+      align-items: center;
+      min-block-size: var(--rhc-page-footer-navigation-link-min-block-size);
+      text-decoration-line: var(--rhc-page-footer-navigation-link-text-decoration-line);
+    }
 
-.rhc-page-prefooter {
-  @include mixin.rhc-page-prefooter;
-}
-
-.rhc-page-prefooter::before {
-  @include mixin.rhc-page-prefooter--before;
-}
-
-.rhc-page-prefooter__content {
-  @include mixin.rhc-page-prefooter__content;
+    .rhc-page-footer-compact--tagline {
+      margin-block: var(--rhc-space-none);
+    }
+  }
 }

@@ -3,4 +3,4 @@ import { readFileSync } from 'node:fs';
 
 const packageJson = JSON.parse(readFileSync('./package.json', 'utf8'));
 
-export default createRollupConfig(packageJson);
+export default createRollupConfig(packageJson, { clientComponent: true });

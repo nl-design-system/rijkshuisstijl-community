@@ -173,6 +173,9 @@ importers:
       '@rijkshuisstijl-community/design-tokens':
         specifier: workspace:*
         version: link:../../../proprietary/design-tokens
+      '@rijkshuisstijl-community/footer-css':
+        specifier: workspace:*
+        version: link:../../../packages/components-css/footer-css
       '@rijkshuisstijl-community/icon-react':
         specifier: workspace:*
         version: link:../../../packages/components-react/icon-react
@@ -652,6 +655,18 @@ importers:
       '@utrecht/page-footer-css':
         specifier: 4.0.2
         version: 4.0.2
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      '@rijkshuisstijl-community/grid-css':
+        specifier: workspace:*
+        version: link:../grid-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
+  packages/components-css/grid-css:
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
@@ -3809,27 +3824,18 @@ importers:
 
   packages/components-react/footer-react:
     dependencies:
-      '@rijkshuisstijl-community/column-layout-react':
-        specifier: workspace:*
-        version: link:../column-layout-react
       '@rijkshuisstijl-community/footer-css':
         specifier: workspace:*
         version: link:../../components-css/footer-css
-      '@rijkshuisstijl-community/heading-react':
+      '@rijkshuisstijl-community/grid-css':
         specifier: workspace:*
-        version: link:../heading-react
-      '@rijkshuisstijl-community/icon-react':
+        version: link:../../components-css/grid-css
+      '@rijkshuisstijl-community/section-css':
         specifier: workspace:*
-        version: link:../icon-react
-      '@rijkshuisstijl-community/link-react':
+        version: link:../../components-css/section-css
+      '@rijkshuisstijl-community/separator-react':
         specifier: workspace:*
-        version: link:../link-react
-      '@utrecht/component-library-react':
-        specifier: 13.3.1
-        version: 13.3.1(@babel/runtime@7.29.7)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@utrecht/page-footer-react':
-        specifier: 1.0.13
-        version: 1.0.13(@babel/runtime@7.29.7)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+        version: link:../separator-react
     devDependencies:
       '@babel/core':
         specifier: 7.29.7
@@ -8588,6 +8594,15 @@ importers:
       '@rijkshuisstijl-community/font':
         specifier: workspace:*
         version: link:../font
+      '@rijkshuisstijl-community/footer-css':
+        specifier: workspace:*
+        version: link:../components-css/footer-css
+      '@rijkshuisstijl-community/grid-css':
+        specifier: workspace:*
+        version: link:../components-css/grid-css
+      '@rijkshuisstijl-community/section-css':
+        specifier: workspace:*
+        version: link:../components-css/section-css
       '@rijkshuisstijl-community/storybook-tooling':
         specifier: workspace:*
         version: link:../storybook-tooling
