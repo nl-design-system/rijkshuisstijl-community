@@ -9915,135 +9915,7 @@
       }
     }
   },
-  "components/nav-bar": {
-    "rhc": {
-      "nav-bar": {
-        "border-block-end-width": {
-          "$type": "dimension",
-          "$value": "{rhc.border-width.sm}"
-        },
-        "max-inline-size": {
-          "$type": "dimension",
-          "$value": "{rhc.size.page.md}"
-        },
-        "padding-inline": {
-          "$type": "dimension",
-          "$value": "{rhc.space.xl}"
-        },
-        "container": {
-          "inline-size": {
-            "$type": "dimension",
-            "$value": "100%"
-          }
-        },
-        "content": {
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{rhc.space.xl}"
-          }
-        },
-        "icon": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.default}"
-          },
-          "active": {
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.foreground.on-dark-color}"
-            }
-          },
-          "size": {
-            "$type": "dimension",
-            "$value": "{rhc.size.icon.md}"
-          }
-        },
-        "link": {
-          "active": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.500}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.foreground.on-dark-color}"
-            }
-          },
-          "background-color": {
-            "$type": "color",
-            "$value": "{rhc.color.wit}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          },
-          "focus": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.primary.50}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.500}"
-            }
-          },
-          "hover": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.cool-grey.50}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.500}"
-            }
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{rhc.space.xl}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{rhc.space.xl}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "{rhc.space.lg}"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{rhc.space.lg}"
-          },
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{rhc.space.md}"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.md}"
-          }
-        },
-        "heading": {
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{rhc.text.font-weight.strong}"
-          }
-        },
-        "background-color": {
-          "$type": "color",
-          "$value": "{rhc.color.wit}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.core.500}"
-        },
-        "border-color": {
-          "$type": "color",
-          "$value": "{rhc.color.core.400}"
-        }
-      }
-    }
-  },
-  "components/nav-bar-new": {
+  "components/navigation-bar": {
     "rhc": {
       "navigation-bar": {
         "border-block-end-width": {
@@ -12661,7 +12533,6 @@
         "components/listbox": "source",
         "components/logo": "source",
         "components/message-list": "source",
-        "components/nav-bar": "source",
         "components/navigation-list": "source",
         "components/number-badge/nl": "source",
         "components/number-badge/utrecht": "source",
@@ -12772,8 +12643,7 @@
       "components/listbox",
       "components/logo",
       "components/message-list",
-      "components/nav-bar",
-      "components/nav-bar-new",
+      "components/navigation-bar",
       "components/navigation-list",
       "components/number-badge/nl",
       "components/number-badge/utrecht",
