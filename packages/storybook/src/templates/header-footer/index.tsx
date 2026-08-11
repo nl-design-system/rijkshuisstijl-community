@@ -57,9 +57,18 @@ const HeaderFooter = () => {
           ]}
         />
         <BreadcrumbNav>
-          <BreadcrumbNavLink href="Text1"></BreadcrumbNavLink>
-          <BreadcrumbNavLink href="Text2"></BreadcrumbNavLink>
-          <BreadcrumbNavLink href="Text3"></BreadcrumbNavLink>
+          <BreadcrumbNavLink href="/" index={0} rel="home">
+            {' '}
+            Home{' '}
+          </BreadcrumbNavLink>
+          <BreadcrumbNavLink href="/a/" index={1}>
+            {' '}
+            Label{' '}
+          </BreadcrumbNavLink>
+          <BreadcrumbNavLink current href="/a/b/" index={2}>
+            {' '}
+            Label{' '}
+          </BreadcrumbNavLink>
         </BreadcrumbNav>
       </PageHeader>
       <Footer slot1={slot1} slot2={slot2} />
