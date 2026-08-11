@@ -1,13 +1,14 @@
 import {
   BreadcrumbNav,
   BreadcrumbNavLink,
+  BreadcrumbNavSeparator,
   Footer,
   Icon,
   Logo,
   NavBar,
   PageHeader,
 } from '@rijkshuisstijl-community/components-react';
-import { FooterLinks, FooterFooterLinks } from '../../components-css/footer.stories';
+import { FooterFooterLinks, FooterLinks } from '../../components-css/footer.stories';
 import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
 
@@ -60,13 +61,25 @@ const HeaderFooter = () => {
                 },
               ]}
             />
+            <BreadcrumbNav className="rhc-breadcrumb-nav">
+              <BreadcrumbNavLink href="/" index={0} rel="home">
+                Home
+              </BreadcrumbNavLink>
+              <BreadcrumbNavSeparator>
+                <Icon icon="chevron-right" />
+              </BreadcrumbNavSeparator>
+              <BreadcrumbNavLink href="/a/" index={1}>
+                Label
+              </BreadcrumbNavLink>
+              <BreadcrumbNavSeparator>
+                <Icon icon="chevron-right" />
+              </BreadcrumbNavSeparator>
+              <BreadcrumbNavLink current href="/a/b/" index={2}>
+                Label
+              </BreadcrumbNavLink>
+            </BreadcrumbNav>
           </div>
         </div>
-        <BreadcrumbNav>
-          <BreadcrumbNavLink href="Text1"></BreadcrumbNavLink>
-          <BreadcrumbNavLink href="Text2"></BreadcrumbNavLink>
-          <BreadcrumbNavLink href="Text3"></BreadcrumbNavLink>
-        </BreadcrumbNav>
       </PageHeader>
       <Footer slot1={slot1} slot2={slot2} />
     </>

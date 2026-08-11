@@ -38,7 +38,7 @@
         }
       }
     }
-  } 
+  }
   @at-root {
     .is-open:has(> .rhc-nav-bar__slot:nth-last-child(3):first-child) {
       > .rhc-nav-bar__slot:nth-child(3) {
@@ -72,22 +72,21 @@
 @mixin rhc-nav-bar__nav {
   // align-items: center;
   // display: flex;
-  
 }
 
 @mixin rhc-nav-bar__list {
   background-color: var(--rhc-navigation-bar-background-color);
-  
+
   // @include visually-hidden.rhc-visually-hidden;
-  
+
   // @media (width > 768px) {
-    display: flex;
-    list-style: none;
-    margin-block: 0;
-    margin-inline: 0;
-    padding-block: 0;
-    padding-inline: 0;
-    // @include visually-hidden.rhc-visually-hidden-reset;
+  display: flex;
+  list-style: none;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+  // @include visually-hidden.rhc-visually-hidden-reset;
   // }
 }
 

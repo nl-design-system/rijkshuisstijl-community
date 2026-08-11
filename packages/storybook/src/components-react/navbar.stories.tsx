@@ -76,7 +76,7 @@ export const WithIdentity: Story = {
   args: {
     identity: 'Identity',
     items,
-    endItems
+    endItems,
   },
 };
 
