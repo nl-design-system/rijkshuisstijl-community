@@ -9,8 +9,8 @@ const HeaderFooter = () => {
     <>
       <PageHeader>
         <Logo organisation="Organisatie" subtitle="Wat wij doen">
-          <Icon className={'dutch-map'} icon={'nederland-map'} />
-        </Logo> 
+          <Icon className="dutch-map" icon="nederland-map" />
+        </Logo>
       </PageHeader>
       <Footer slot1={slot1} slot2={slot2} />
     </>
