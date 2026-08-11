@@ -9,12 +9,14 @@ import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react/no-side-ef
 import { LinkList, LinkListLink } from '@rijkshuisstijl-community/link-list-react/no-side-effects';
 import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import clsx from 'clsx';
-import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref } from 'react';
+import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useState } from 'react';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   headingItem?: NavBarItemProps;
-  items: NavBarItemProps[];
+  identity?: ReactNode;
+  items?: NavBarItemProps[];
   endItems?: NavBarItemProps[];
+  megamenu?: ReactNode;
   ref?: Ref<HTMLDivElement>;
 }
 
@@ -28,7 +30,6 @@ export interface NavBarLinkProps {
 export interface NavBarItemProps extends NavBarLinkProps, HTMLAttributes<HTMLLIElement> {
   icon?: ReactElement<IconProps>;
   subList?: NavbarSubListProps;
-  bold?: boolean;
   iconOnly?: boolean;
   id: string;
   ref?: Ref<HTMLLIElement>;
@@ -59,13 +60,13 @@ const NavBarItem = ({
   label,
   icon,
   subList,
-  bold = false,
   iconOnly = false,
   ...restProps
 }: PropsWithChildren<NavBarItemProps>) => {
   return (
     <li className={clsx('rhc-nav-bar__item', className)} ref={ref} {...restProps}>
-      <Link className={clsx('rhc-nav-bar__link', bold && 'rhc-nav-bar__link--bold')} href={href} target={target}>
+      {/* // button, or: */}
+      <Link className={clsx('rhc-nav-bar__link')} href={href} target={target}>
         {icon}
         <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__lable--sr-only')}>{label}</span>
       </Link>
@@ -101,28 +102,50 @@ export const NavBar = ({
   children,
   className,
   headingItem,
+  identity,
   items,
   endItems,
+  megamenu,
   ...restProps
 }: PropsWithChildren<NavBarProps>) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="rhc-nav-bar__container">
-      <nav className={clsx('rhc-nav-bar', className)} ref={ref} {...restProps}>
-        <ul className="rhc-nav-bar__list">
-          {headingItem && <NavBarItem className="rhc-nav-bar__heading" {...headingItem} />}
-          {items.map((item) => (
-            <NavBarItem key={item.id} {...item} />
-          ))}
-        </ul>
-        {endItems && (
-          <ul className="rhc-nav-bar__list rhc-nav-bar__list--end">
-            {endItems.map((enditem) => (
-              <NavBarItem key={enditem.id} {...enditem} />
-            ))}
-          </ul>
-        )}
-        {children}
-      </nav>
+    <div className={clsx('rhc-nav-bar', isOpen && 'is-open')}>
+      {identity && <div className="rhc-nav-bar__slot">{identity}</div>}
+
+      {/* megamenu */}
+      {megamenu && (
+        <div className="rhc-nav-bar__slot">
+          <button type="button" className="rhc-nav-bar__toggle" onClick={() => setIsOpen((prev) => !prev)}>
+            toggle
+          </button>
+          {megamenu && isOpen && <div className="rhc-nav-bar__megamenu">{megamenu}</div>}
+        </div>
+      )}
+      {/* navbar */}
+      {items && (
+        <div className="rhc-nav-bar__slot">
+          <nav className={clsx('rhc-nav-bar__nav', className)} ref={ref} {...restProps}>
+            <ul className="rhc-nav-bar__list">
+              {items.map((item) => (
+                <NavBarItem {...item} />
+              ))}
+            </ul>
+          </nav>
+        </div>
+      )}
+      {endItems && (
+        <div className="rhc-nav-bar__slot">
+          <nav className={clsx('rhc-nav-bar__nav', className)} ref={ref} {...restProps}>
+            <ul className="rhc-nav-bar__list">
+              {endItems.map((enditem) => (
+                <NavBarItem {...enditem} />
+              ))}
+            </ul>
+          </nav>
+        </div>
+      )}
+      {children}
     </div>
   );
 };

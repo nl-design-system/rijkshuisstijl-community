@@ -1,4 +1,4 @@
-import { NavBar, type NavBarItemProps } from '@rijkshuisstijl-community/components-react';
+import { NavBar, SubNavBar, type NavBarItemProps } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './navbar.md?raw';
@@ -70,6 +70,46 @@ export const WithHeading: Story = {
       href: '/',
     },
   },
+};
+
+export const WithIdentity: Story = {
+  args: {
+    identity: 'Identity',
+    items,
+    endItems
+  },
+};
+
+export const WithMegamenu: Story = {
+  args: {
+    identity: 'Identity',
+    endItems,
+  },
+  render: (args) => (
+    <NavBar
+      {...args}
+      megamenu={
+        <SubNavBar
+          columns={[
+            [
+              { id: 'mm-1', label: 'Onderwerp 1', href: '/' },
+              { id: 'mm-2', label: 'Onderwerp 2', href: '/' },
+              { id: 'mm-3', label: 'Onderwerp 3', href: '/' },
+            ],
+            [
+              { id: 'mm-4', label: 'Onderwerp 4', href: '/' },
+              { id: 'mm-5', label: 'Onderwerp 5', href: '/' },
+            ],
+            [
+              { id: 'mm-6', label: 'Onderwerp 6', href: '/' },
+              { id: 'mm-7', label: 'Onderwerp 7', href: '/' },
+              { id: 'mm-8', label: 'Onderwerp 8', href: '/' },
+            ],
+          ]}
+        />
+      }
+    />
+  ),
 };
 
 export const WithEndItems: Story = {

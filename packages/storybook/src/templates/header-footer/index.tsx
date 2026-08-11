@@ -1,4 +1,12 @@
-import { Footer, Icon, Logo, PageHeader, NavBar } from '@rijkshuisstijl-community/components-react';
+import {
+  BreadcrumbNav,
+  BreadcrumbNavLink,
+  Footer,
+  Icon,
+  Logo,
+  NavBar,
+  PageHeader,
+} from '@rijkshuisstijl-community/components-react';
 import { FooterLinks, FooterFooterLinks } from '../../components-css/footer.stories';
 import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
@@ -54,6 +62,11 @@ const HeaderFooter = () => {
             />
           </div>
         </div>
+        <BreadcrumbNav>
+          <BreadcrumbNavLink href="Text1"></BreadcrumbNavLink>
+          <BreadcrumbNavLink href="Text2"></BreadcrumbNavLink>
+          <BreadcrumbNavLink href="Text3"></BreadcrumbNavLink>
+        </BreadcrumbNav>
       </PageHeader>
       <Footer slot1={slot1} slot2={slot2} />
     </>
