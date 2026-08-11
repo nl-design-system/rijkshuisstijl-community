@@ -19,7 +19,7 @@ const LinkListMaker = ({ list }: { list: Array<string> }) => (
   </LinkList>
 );
 
-const FooterLinks = () => (
+export const FooterLinks = () => (
   <>
     <div className="rhc-grid__cell--cols-421">
       <h2>Overheid.nl</h2>
@@ -40,7 +40,7 @@ const FooterLinks = () => (
   </>
 );
 
-const FooterFooterLinks = () => (
+export const FooterFooterLinks = () => (
   <>
     <Link href="#">Privacy</Link>
     <Link href="#">Cookies en anti-spam</Link>
