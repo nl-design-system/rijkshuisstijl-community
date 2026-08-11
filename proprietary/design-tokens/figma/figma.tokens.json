@@ -9778,7 +9778,7 @@
             "font-size": {
               "$type": "fontSizes",
               "$value": "0",
-            "$description": "[todo]0.75rem"
+              "$description": "[todo]0.75rem"
             }
           }
         },
@@ -9915,63 +9915,37 @@
       }
     }
   },
-  "components/nav-bar": {
+  "components/navigation-bar": {
     "rhc": {
-      "nav-bar": {
+      "navigation-bar": {
         "border-block-end-width": {
           "$type": "dimension",
           "$value": "{rhc.border-width.sm}"
         },
-        "max-inline-size": {
-          "$type": "dimension",
-          "$value": "{rhc.size.page.md}"
-        },
-        "padding-inline": {
-          "$type": "dimension",
-          "$value": "{rhc.space.xl}"
-        },
-        "container": {
-          "inline-size": {
-            "$type": "dimension",
-            "$value": "100%"
-          }
-        },
-        "content": {
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{rhc.space.xl}"
-          }
-        },
-        "icon": {
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.foreground.default}"
-          },
-          "active": {
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.foreground.on-dark-color}"
+        "item": {
+          "icon": {
+            "size": {
+              "$type": "dimension",
+              "$value": "{rhc.size.icon.md}"
             }
           },
-          "size": {
-            "$type": "dimension",
-            "$value": "{rhc.size.icon.md}"
-          }
-        },
-        "link": {
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.core.500}"
+              "$value": "{rhc.color.core.100}"
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.foreground.on-dark-color}"
+              "$value": "{rhc.color.core.active}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.active}"
             }
           },
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.wit}"
+            "$value": "{rhc.color.transparent}"
           },
           "color": {
             "$type": "color",
@@ -9980,7 +9954,7 @@
           "focus": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.primary.50}"
+              "$value": "{rhc.color.transparent}"
             },
             "color": {
               "$type": "color",
@@ -9990,11 +9964,15 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{rhc.color.cool-grey.50}"
+              "$value": "{rhc.color.core.50}"
             },
             "color": {
               "$type": "color",
-              "$value": "{rhc.color.core.500}"
+              "$value": "{rhc.color.core.hover}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.hover}"
             }
           },
           "padding-block-end": {
@@ -10020,12 +9998,40 @@
           "font-size": {
             "$type": "fontSizes",
             "$value": "{rhc.text.font-size.md}"
-          }
-        },
-        "heading": {
+          },
+          "current": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.500}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.500}"
+            },
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{rhc.text.font-weight.bold}"
+            }
+          },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{rhc.text.font-weight.strong}"
+            "$value": "{rhc.text.font-weight.regular}"
+          },
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{rhc.text.font-family.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{rhc.text.line-height.md}"
+          },
+          "border-block-end-width": {
+            "$type": "dimension",
+            "$value": "{rhc.border-width.md}"
           }
         },
         "background-color": {
@@ -10038,7 +10044,7 @@
         },
         "border-color": {
           "$type": "color",
-          "$value": "{rhc.color.core.400}"
+          "$value": "{rhc.color.core.500}"
         }
       }
     }
@@ -10513,16 +10519,6 @@
       }
     }
   },
-  "components/grid-new": {
-    "rhc": {
-      "grid": {
-        "column-gap": {
-          "$type": "dimension",
-          "$value": "{rhc.space.2xl}"
-        }
-      }
-    }
-  },
   "components/page-footer-new": {
     "rhc": {
       "page-footer": {
@@ -10621,24 +10617,6 @@
         "row-gap": {
           "$type": "dimension",
           "$value": "{rhc.space.3xl}"
-        }
-      }
-    }
-  },
-  "components/page-section-new": {
-    "rhc": {
-      "page-section": {
-        "max-inline-size": {
-          "$type": "dimension",
-          "$value": "{rhc.size.page.md}"
-        },
-        "padding-inline": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
-        },
-        "padding-block": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
         }
       }
     }
@@ -12306,6 +12284,34 @@
       }
     }
   },
+  "components/grid-new": {
+    "rhc": {
+      "grid": {
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.2xl}"
+        }
+      }
+    }
+  },
+  "components/page-section-new": {
+    "rhc": {
+      "page-section": {
+        "max-inline-size": {
+          "$type": "dimension",
+          "$value": "{rhc.size.page.md}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{rhc.space.4xl}"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{rhc.space.4xl}"
+        }
+      }
+    }
+  },
   "viewport/min": {
     "rhc": {
       "logo": {
@@ -12527,7 +12533,6 @@
         "components/listbox": "source",
         "components/logo": "source",
         "components/message-list": "source",
-        "components/nav-bar": "source",
         "components/navigation-list": "source",
         "components/number-badge/nl": "source",
         "components/number-badge/utrecht": "source",
@@ -12638,7 +12643,7 @@
       "components/listbox",
       "components/logo",
       "components/message-list",
-      "components/nav-bar",
+      "components/navigation-bar",
       "components/navigation-list",
       "components/number-badge/nl",
       "components/number-badge/utrecht",
@@ -12666,7 +12671,9 @@
       "components/toggletip",
       "components/unordered-list",
       "components/page-header",
+      "components/grid-new",
+      "components/page-section-new",
       "viewport/min"
-      ]
-    }
+    ]
   }
+}
