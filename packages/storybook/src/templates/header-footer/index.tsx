@@ -81,6 +81,16 @@ const HeaderFooter = () => {
           </div>
         </div>
       </PageHeader>
+      <div className="rhc-page-section">
+        <h1>Voorbeeld pagina</h1>
+        <p>
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas est
+          dui, rutrum eget condimentum sed, bibendum ut augue. Pellentesque vulputate ipsum risus, et dapibus nunc
+          laoreet eu. Morbi at nulla varius, sagittis ligula vel, fermentum ligula. Vestibulum accumsan leo turpis, ut
+          efficitur erat accumsan ut. Curabitur at ipsum a sapien gravida varius a ac magna. Fusce dictum mi eu cursus
+          placerat. Aenean sagittis venenatis augue sagittis mattis.
+        </p>
+      </div>
       <Footer slot1={slot1} slot2={slot2} />
     </>
   );
