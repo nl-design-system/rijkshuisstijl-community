@@ -26,7 +26,6 @@ const HeaderFooter = () => {
               <Icon className="dutch-map" icon="nederland-map" />
             </Logo>
             <NavBar
-              className="rhc-nav-bar2"
               identity="Organisatie"
               megamenu={
                 <SubNavBar
