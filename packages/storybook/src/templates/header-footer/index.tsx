@@ -60,6 +60,48 @@ const HeaderFooter = () => {
                 },
               ]}
             />
+            <NavBar
+              identity="Dataregister"
+              items={[
+                {
+                  href: '/',
+                  id: 'data',
+                  label: 'Data',
+                },
+                {
+                  href: '/',
+                  id: 'impact',
+                  label: 'Impact',
+                },
+                {
+                  href: '/',
+                  id: 'Communities',
+                  label: 'Communities',
+                },
+                {
+                  href: '/',
+                  id: 'Actueel',
+                  label: 'Actueel',
+                },
+                {
+                  href: '/',
+                  id: 'Support',
+                  label: 'Support',
+                },
+              ]}
+              endItems={[
+                {
+                  href: '/',
+                  id: 'end-first-link',
+                  label: 'Zoeken',
+                },
+                {
+                  href: '/',
+                  id: 'end-second-link',
+                  label: 'Inloggen',
+                },
+              ]}
+            />
             <BreadcrumbNav className="rhc-breadcrumb-nav">
               <BreadcrumbNavLink href="/" index={0} rel="home">
                 Home
