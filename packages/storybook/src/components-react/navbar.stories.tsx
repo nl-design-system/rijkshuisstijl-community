@@ -1,4 +1,4 @@
-import { NavBar, SubNavBar, type NavBarItemProps } from '@rijkshuisstijl-community/components-react';
+import { NavBar, NavBarMegaMenu, type NavBarItemProps } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './navbar.md?raw';
@@ -89,25 +89,43 @@ export const WithMegamenu: Story = {
     <NavBar
       {...args}
       megamenu={
-        <SubNavBar
+        <NavBarMegaMenu
+          tagline="Ingang naar informatie en diensten van alle overheden"
           columns={[
-            [
-              { id: 'mm-1', label: 'Onderwerp 1', href: '/' },
-              { id: 'mm-2', label: 'Onderwerp 2', href: '/' },
-              { id: 'mm-3', label: 'Onderwerp 3', href: '/' },
-            ],
-            [
-              { id: 'mm-4', label: 'Onderwerp 4', href: '/' },
-              { id: 'mm-5', label: 'Onderwerp 5', href: '/' },
-            ],
-            [
-              { id: 'mm-6', label: 'Onderwerp 6', href: '/' },
-              { id: 'mm-7', label: 'Onderwerp 7', href: '/' },
-              { id: 'mm-8', label: 'Onderwerp 8', href: '/' },
-            ],
+            {
+              id: 'col-1',
+              heading: 'Diensten van de overheid',
+              items: [
+                { id: 'mm-1', label: 'Diensten overzicht', href: '/' },
+                { id: 'mm-2', label: 'Berichten over uw buurt', href: '/' },
+                { id: 'mm-3', label: 'Gegevens bij besluiten', href: '/' },
+                { id: 'mm-4', label: 'Internetconsultatie', href: '/' },
+                { id: 'mm-5', label: 'Levensgebeurtenissen', href: '/' },
+              ],
+            },
+            {
+              id: 'col-2',
+              heading: 'Beleid en regelgeving',
+              items: [
+                { id: 'mm-6', label: 'Overzicht', href: '/' },
+                { id: 'mm-7', label: 'Wetten', href: '/' },
+                { id: 'mm-8', label: 'Verdragen', href: '/' },
+                { id: 'mm-9', label: 'Lokale regelgeving', href: '/' },
+              ],
+            },
+            {
+              id: 'col-3',
+              heading: 'Transparantie',
+              items: [
+                { id: 'mm-10', label: 'Standaarden', href: '/' },
+                { id: 'mm-11', label: 'Open Data', href: '/' },
+                { id: 'mm-12', label: 'Linked data', href: '/' },
+              ],
+            },
           ]}
         />
       }
+
     />
   ),
 };

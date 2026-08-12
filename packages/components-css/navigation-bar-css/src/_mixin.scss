@@ -25,10 +25,10 @@
     .rhc-nav-bar:has(> .rhc-nav-bar__slot:nth-last-child(3):first-child) {
       > .rhc-nav-bar__slot:nth-child(2) {
         flex-grow: 1;
-        text-align: right;
+        // text-align: right;
 
         @media (width > 768px) {
-          text-align: left;
+          // text-align: left;
         }
       }
       > .rhc-nav-bar__slot:nth-child(3) {
@@ -73,10 +73,12 @@
 
 @mixin rhc-nav-bar__megamenu {
   position: absolute;
-  left: 0;
-  top: 60px;
-  right: 0;
-  background: orange;
+  left: -2em;
+  top: 2.4em;
+  right: -2em;
+  padding: 2em 2em 5em;
+  // background: var(--rhc-navigation-bar-megamenu-background-color);
+  background: #c2c2c2;
 }
 
 @mixin rhc-nav-bar__nav {

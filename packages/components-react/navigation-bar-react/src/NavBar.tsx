@@ -10,7 +10,7 @@ import { LinkList, LinkListLink } from '@rijkshuisstijl-community/link-list-reac
 import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 import clsx from 'clsx';
-import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useState } from 'react';
+import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useEffect, useState } from 'react';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   headingItem?: NavBarItemProps;
@@ -44,6 +44,18 @@ interface NavbarSubListProps {
 
 export interface SubNavBarProps extends HTMLAttributes<HTMLDivElement> {
   columns: NavBarLinkProps[][];
+  ref?: Ref<HTMLDivElement>;
+}
+
+export interface NavBarMegaMenuColumnProps {
+  id: string;
+  heading: ReactNode;
+  items: NavBarLinkProps[];
+}
+
+export interface NavBarMegaMenuProps extends HTMLAttributes<HTMLDivElement> {
+  tagline?: ReactNode;
+  columns: NavBarMegaMenuColumnProps[];
   ref?: Ref<HTMLDivElement>;
 }
 
@@ -128,6 +140,12 @@ export const NavBar = ({
   ...restProps
 }: PropsWithChildren<NavBarProps>) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('is-megamenu-open', isOpen);
+    return () => document.documentElement.classList.remove('is-megamenu-open');
+  }, [isOpen]);
+
   return (
     <div className={clsx('rhc-nav-bar', isOpen && 'is-open')}>
       {identity && <div className="rhc-nav-bar__slot">{identity}</div>}
@@ -171,6 +189,38 @@ export const NavBar = ({
 };
 
 NavBar.displayName = 'NavBar';
+
+export const NavBarMegaMenu = ({
+  ref,
+  children,
+  className,
+  tagline,
+  columns,
+  ...restProps
+}: PropsWithChildren<NavBarMegaMenuProps>) => {
+  return (
+    <div className={clsx('rhc-nav-bar__megamenu-content', className)} ref={ref} {...restProps}>
+      {tagline && <p className="rhc-nav-bar__megamenu-tagline">{tagline}</p>}
+      <div className="rhc-grid">
+        {columns.map(({ id, heading, items }) => (
+          <div className="rhc-grid__cell--cols-421" key={id}>
+            <p className="rhc-nav-bar__megamenu-column-heading">{heading}</p>
+            <LinkList>
+              {items.map(({ id: itemId, href, target, label }) => (
+                <LinkListLink href={href} key={itemId} target={target}>
+                  {label}
+                </LinkListLink>
+              ))}
+            </LinkList>
+          </div>
+        ))}
+      </div>
+      {children}
+    </div>
+  );
+};
+
+NavBarMegaMenu.displayName = 'NavBarMegaMenu';
 
 export const SubNavBar = ({ ref, children, className, columns, ...restProps }: PropsWithChildren<SubNavBarProps>) => {
   return (
