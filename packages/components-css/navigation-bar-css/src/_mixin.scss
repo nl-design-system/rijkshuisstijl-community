@@ -5,6 +5,7 @@
 
 @use "@rijkshuisstijl-community/visually-hidden-css/src/mixin" as visually-hidden;
 
+
 @mixin rhc-nav-bar {
   position: relative;
   align-items: center;
@@ -15,9 +16,13 @@
   font-family: var(--rhc-text-font-family-default, inherit);
   inline-size: 100%;
   justify-content: space-between;
-  z-index: var(--rhc-navigation-bar-z-index, 1);
+  z-index: var(--rhc-navigation-bar-z-index, 2);
 
   @at-root {
+    .rhc-nav-bar ~ .rhc-nav-bar {
+      z-index: calc(var(--rhc-navigation-bar-z-index, 2) - 1);
+    }
+
     .rhc-nav-bar:has(> .rhc-nav-bar__slot:nth-last-child(2):first-child) {
       justify-content: space-between;
     }
@@ -77,9 +82,15 @@
   top: 2.4em;
   right: -2em;
   padding: 2em 2em 5em;
-  // background: var(--rhc-navigation-bar-megamenu-background-color);
   background: #c2c2c2;
+  // z-index: 2;
+  
 }
+
+@mixin rhc-nav-bar__megamenu-tagline {
+  font-style: italic;
+}
+
 
 @mixin rhc-nav-bar__nav {
   // align-items: center;

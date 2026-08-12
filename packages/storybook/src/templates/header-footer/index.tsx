@@ -27,7 +27,7 @@ const HeaderFooter = () => {
             </Logo>
             <NavBar
               className="rhc-nav-bar2"
-              identity="Organisatie"
+              identity="Overheid.nl"
               megamenu={
                 <NavBarMegaMenu
                   tagline="Ingang naar informatie en diensten van alle overheden"
@@ -75,6 +75,38 @@ const HeaderFooter = () => {
                   href: '/',
                   id: 'end-second-link',
                   label: 'Contact',
+                },
+              ]}
+            />
+            <NavBar
+              identity="Organisatie"
+              items={[
+                {
+                  href: '/',
+                  id: 'first-link',
+                  label: 'Homepage',
+                },
+                {
+                  href: '/',
+                  id: 'second-link',
+                  label: 'Componenten',
+                },
+                {
+                  href: '/',
+                  id: 'third-link',
+                  label: 'Voorbeelden',
+                },
+              ]}
+              endItems={[
+                {
+                  href: '/',
+                  id: 'end-first-link',
+                  label: 'Zoeken',
+                },
+                {
+                  href: '/',
+                  id: 'end-second-link',
+                  label: 'Inloggen',
                 },
               ]}
             />
