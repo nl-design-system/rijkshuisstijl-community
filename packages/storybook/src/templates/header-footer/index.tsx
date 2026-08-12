@@ -1,7 +1,4 @@
 import {
-  BreadcrumbNav,
-  BreadcrumbNavLink,
-  BreadcrumbNavSeparator,
   Footer,
   Heading,
   Icon,
@@ -124,23 +121,6 @@ const HeaderFooter = () => {
                 },
               ]}
             />
-            <BreadcrumbNav className="rhc-breadcrumb-nav">
-              <BreadcrumbNavLink href="/" index={0} rel="home">
-                Home
-              </BreadcrumbNavLink>
-              <BreadcrumbNavSeparator>
-                <Icon icon="chevron-right" />
-              </BreadcrumbNavSeparator>
-              <BreadcrumbNavLink href="/a/" index={1}>
-                Label
-              </BreadcrumbNavLink>
-              <BreadcrumbNavSeparator>
-                <Icon icon="chevron-right" />
-              </BreadcrumbNavSeparator>
-              <BreadcrumbNavLink current href="/a/b/" index={2}>
-                Label
-              </BreadcrumbNavLink>
-            </BreadcrumbNav>
           </div>
         </div>
       </PageHeader>
