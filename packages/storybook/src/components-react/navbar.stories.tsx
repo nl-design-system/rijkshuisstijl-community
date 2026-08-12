@@ -118,3 +118,45 @@ export const WithEndItems: Story = {
     endItems,
   },
 };
+
+const itemsWithSubList: NavBarItemProps[] = [
+  {
+    id: 'sublist-link',
+    label: 'Onderwerpen',
+    href: '/',
+    subList: {
+      sections: [
+        {
+          id: 'section-1',
+          heading: 'Categorie A',
+          items: [
+            { id: 'sub-1', label: 'Onderwerp 1', href: '/' },
+            { id: 'sub-2', label: 'Onderwerp 2', href: '/' },
+            { id: 'sub-3', label: 'Onderwerp 3', href: '/' },
+          ],
+        },
+        {
+          id: 'section-2',
+          heading: 'Categorie B',
+          items: [
+            { id: 'sub-4', label: 'Onderwerp 4', href: '/' },
+            { id: 'sub-5', label: 'Onderwerp 5', href: '/' },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    id: 'plain-link',
+    label: 'Link',
+    href: '/',
+  },
+];
+
+export const WithSubList: Story = {
+  args: {
+    identity: 'Identity',
+    items: itemsWithSubList,
+    endItems,
+  },
+};

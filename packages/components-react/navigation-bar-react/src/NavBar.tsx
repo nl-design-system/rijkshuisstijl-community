@@ -8,6 +8,7 @@ import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react/n
 import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react/no-side-effects';
 import { LinkList, LinkListLink } from '@rijkshuisstijl-community/link-list-react/no-side-effects';
 import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
+import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useState } from 'react';
 
@@ -33,6 +34,8 @@ export interface NavBarItemProps extends NavBarLinkProps, HTMLAttributes<HTMLLIE
   iconOnly?: boolean;
   id: string;
   ref?: Ref<HTMLLIElement>;
+  open?: boolean;
+  contentId?: string;
 }
 
 interface NavbarSubListProps {
@@ -61,25 +64,41 @@ const NavBarItem = ({
   icon,
   subList,
   iconOnly = false,
+  open = false,
+  contentId = '1',
   ...restProps
 }: PropsWithChildren<NavBarItemProps>) => {
+  const [isItemOpen, setIsItemOpen] = useState(open);
+
   return (
-    <li className={clsx('rhc-nav-bar__item', className)} ref={ref} {...restProps}>
-      {/* // button, or: */}
-      <Link className={clsx('rhc-nav-bar__link')} href={href} target={target}>
-        {icon}
-        <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__lable--sr-only')}>{label}</span>
-      </Link>
-      {subList && (
-        <div className="rhc-nav-bar__sub-list">
+    <li className={clsx('rhc-nav-bar__item', isItemOpen && 'is-open', className)} ref={ref} {...restProps}>
+
+      {/* todo: make linkButton meganism into a seperate re-useable component */}
+      {subList ? (
+        <LinkButton
+          aria-controls={`rhc-nav-bar__item-dropdown-${contentId}`}
+          aria-expanded={isItemOpen}
+          onClick={() => setIsItemOpen((prev) => !prev)}
+        >
+          <Icon icon={isItemOpen ? 'chevron-up' : 'chevron-down'} />
+          <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__label--sr-only')}>{label}</span>
+        </LinkButton>
+      ) : (
+        <Link className={clsx('rhc-nav-bar__link')} href={href} target={target}>
+          {icon}
+          <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__label--sr-only')}>{label}</span>
+        </Link>
+      )}
+      {subList && isItemOpen && (
+        <div className="rhc-nav-bar__item-dropdown" id={`rhc-nav-bar__item-dropdown-${contentId}`}>
           {subList.sections.map(({ id, heading, headingLevel = 3, items }) => (
-            <div className="rhc-nav-bar__sub-list-section" key={id}>
-              <Heading className="rhc-nav-bar__sub-list-section-title" level={headingLevel}>
+            <div className="rhc-nav-bar__item-dropdown-section" key={id}>
+              <Heading className="rhc-nav-bar__item-dropdown-section-title" level={headingLevel}>
                 {heading}
               </Heading>
-              <ul className="rhc-nav-bar__sub-list-section-list">
+              <ul className="rhc-nav-bar__item-dropdown-section-list">
                 {items.map(({ id, href, target, label }) => (
-                  <li className="rhc-nav-bar__sub-list-section-item" key={id}>
+                  <li className="rhc-nav-bar__item-dropdown-section-item" key={id}>
                     <Link href={href} target={target}>
                       {label}
                     </Link>
@@ -116,9 +135,10 @@ export const NavBar = ({
       {/* megamenu */}
       {megamenu && (
         <div className="rhc-nav-bar__slot">
-          <button type="button" className="rhc-nav-bar__toggle" onClick={() => setIsOpen((prev) => !prev)}>
-            toggle
-          </button>
+          <LinkButton onClick={() => setIsOpen((prev) => !prev)}>
+            <Icon icon="menu" />
+            Kies een onderwerp of dienst
+          </LinkButton>
           {megamenu && isOpen && <div className="rhc-nav-bar__megamenu">{megamenu}</div>}
         </div>
       )}
@@ -154,7 +174,7 @@ NavBar.displayName = 'NavBar';
 
 export const SubNavBar = ({ ref, children, className, columns, ...restProps }: PropsWithChildren<SubNavBarProps>) => {
   return (
-    <div className={clsx('rhc-sub-nav-bar', className)} ref={ref} {...restProps}>
+    <div className={clsx('', className)} ref={ref} {...restProps}>
       <div className="rhc-sub-nav-bar__content">
         <ColumnLayout>
           {columns.map((column: NavBarLinkProps[]) => (

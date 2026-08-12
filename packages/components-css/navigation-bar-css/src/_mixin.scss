@@ -6,6 +6,7 @@
 @use "@rijkshuisstijl-community/visually-hidden-css/src/mixin" as visually-hidden;
 
 @mixin rhc-nav-bar {
+  position: relative;
   align-items: center;
   background-color: var(--rhc-navigation-bar-background-color);
   border-block-end: var(--rhc-navigation-bar-border-block-end-width) solid var(--rhc-navigation-bar-border-color);
@@ -14,6 +15,7 @@
   font-family: var(--rhc-text-font-family-default, inherit);
   inline-size: 100%;
   justify-content: space-between;
+  z-index: var(--rhc-navigation-bar-z-index, 1);
 
   @at-root {
     .rhc-nav-bar:has(> .rhc-nav-bar__slot:nth-last-child(2):first-child) {
@@ -23,6 +25,11 @@
     .rhc-nav-bar:has(> .rhc-nav-bar__slot:nth-last-child(3):first-child) {
       > .rhc-nav-bar__slot:nth-child(2) {
         flex-grow: 1;
+        text-align: right;
+
+        @media (width > 768px) {
+          text-align: left;
+        }
       }
       > .rhc-nav-bar__slot:nth-child(3) {
         @include visually-hidden.rhc-visually-hidden;
@@ -46,12 +53,14 @@
         position: fixed;
         bottom: 0;
         left: 0;
+        background: white;
         @media (width > 768px) {
           // @include visually-hidden.rhc-visually-hidden;
           margin-left: auto;
           position: relative;
           bottom: auto;
           left: auto;
+          background: transparent;
         }
       }
     }
@@ -65,8 +74,9 @@
 @mixin rhc-nav-bar__megamenu {
   position: absolute;
   left: 0;
-  top: 80px;
+  top: 60px;
   right: 0;
+  background: orange;
 }
 
 @mixin rhc-nav-bar__nav {
@@ -89,10 +99,6 @@
     padding-inline: 0;
     // @include visually-hidden.rhc-visually-hidden-reset;
   // }
-}
-
-@mixin rhc-nav-bar__list--end {
-  margin-inline-start: auto;
 }
 
 @mixin rhc-nav-bar__heading {
