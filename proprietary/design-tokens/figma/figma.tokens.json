@@ -10004,18 +10004,6 @@
             "$value": "{rhc.text.font-size.md}"
           },
           "current": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.500}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.500}"
-            },
             "font-weight": {
               "$type": "fontWeights",
               "$value": "{rhc.text.font-weight.bold}"
@@ -10032,6 +10020,22 @@
           "line-height": {
             "$type": "lineHeights",
             "$value": "{rhc.text.line-height.md}"
+          }
+        },
+        "link": {
+          "current": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.transparent}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.500}"
+            },
+            "border-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.500}"
+            }
           },
           "border-block-end-width": {
             "$type": "dimension",
@@ -10057,6 +10061,18 @@
         "column-gap": {
           "$type": "dimension",
           "$value": "{rhc.space.2xl}"
+        },
+        "button": {
+          "expanded": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.50}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.500}"
+            }
+          }
         }
       }
     }
@@ -12296,6 +12312,20 @@
       }
     }
   },
+  "components/page-header-new": {
+    "rhc": {
+      "page-header": {
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.2xl}"
+        },
+        "background-color": {
+          "$type": "color",
+          "$value": "{rhc.color.wit}"
+        }
+      }
+    }
+  },
   "components/grid-new": {
     "rhc": {
       "grid": {
@@ -12703,6 +12733,7 @@
       "components/toggletip",
       "components/unordered-list",
       "components/page-header",
+      "components/page-header-new",
       "components/grid-new",
       "components/page-section-new",
       "viewport/min"

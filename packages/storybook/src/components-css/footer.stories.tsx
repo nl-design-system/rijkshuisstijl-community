@@ -51,7 +51,7 @@ export const FooterFooterLinks = () => (
 
 export const Footer = () => (
   <footer className="rhc-page-footer">
-    <div className="rhc-page-section">
+    <div className="rhc-page-section rhc-footer--primary">
       <div className="rhc-grid">
         <FooterLinks />
       </div>
@@ -61,17 +61,15 @@ export const Footer = () => (
         <Separator />
       </div>
     </div>
-    <div className="rhc-page-section">
-      <div className="rhc-page-footer--navigation">
-        <FooterFooterLinks />
-      </div>
+    <div className="rhc-page-section rhc-page-footer--secondary">
+      <FooterFooterLinks />
     </div>
   </footer>
 );
 
 export const NonFullBleed = () => (
   <footer className="rhc-page-footer" style={{ background: 'none' }}>
-    <div className="rhc-page-section">
+    <div className="rhc-page-section rhc-footer--primary">
       <div className="rhc-grid" style={{ background: 'var(--rhc-page-footer-background-color)' }}>
         <FooterLinks />
       </div>
@@ -81,7 +79,7 @@ export const NonFullBleed = () => (
         <Separator />
       </div>
     </div>
-    <div className="rhc-page-section rhc-footer--navigation">
+    <div className="rhc-page-section rhc-footer--secondary">
       <div style={{ display: 'flex', columnGap: '24px', background: 'var(--rhc-page-footer-background-color)' }}>
         <FooterFooterLinks />
       </div>
@@ -91,7 +89,7 @@ export const NonFullBleed = () => (
 
 export const Compact = () => (
   <footer className="rhc-page-footer">
-    <div className="rhc-page-section rhc-page-footer--navigation">
+    <div className="rhc-page-section rhc-page-footer--secondary">
       <div style={{ display: 'flex', columnGap: '24px', alignItems: 'baseline' }}>
         <h2 className="rhc-page-footer-compact--tagline">Overheid.nl</h2>
         <FooterFooterLinks />

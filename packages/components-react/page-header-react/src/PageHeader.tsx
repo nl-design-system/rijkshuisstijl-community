@@ -12,8 +12,10 @@ type PageHeaderProps = {
   className?: string;
 };
 
-export const PageHeader = ({ children, className, ...restProps }: PageHeaderProps) =>
-  <header className={['rhc-page-header', className].filter(Boolean).join(' ')} {...restProps}>{children}</header>;
-
+export const PageHeader = ({ children, className, ...restProps }: PageHeaderProps) => (
+  <header className={['rhc-page-header', className].filter(Boolean).join(' ')} {...restProps}>
+    {children}
+  </header>
+);
 
 //export default PageHeader;
