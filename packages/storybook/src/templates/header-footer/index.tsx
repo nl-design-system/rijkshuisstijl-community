@@ -83,7 +83,7 @@ const HeaderFooter = () => {
               ]}
             />
             <NavBar
-              identity="Dataregister"
+              identity={<b>Dataregister</b>}
               items={[
                 {
                   href: '/',
