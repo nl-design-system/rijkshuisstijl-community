@@ -3,6 +3,7 @@ import {
   BreadcrumbNavLink,
   BreadcrumbNavSeparator,
   Footer,
+  Heading,
   Icon,
   Logo,
   NavBar,
@@ -26,7 +27,11 @@ const HeaderFooter = () => {
               <Icon className="dutch-map" icon="nederland-map" />
             </Logo>
             <NavBar
-              identity="Organisatie"
+              identity={
+                <Heading level={2} appearanceLevel={3}>
+                  Overheid.nl
+                </Heading>
+              }
               megamenu={
                 <SubNavBar
                   columns={[
