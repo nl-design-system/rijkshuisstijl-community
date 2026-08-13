@@ -30,7 +30,7 @@
   }
 }
 
-@mixin rhc-nav-bar__overlay {
+@mixin rhc-nav-bar__shade {
   background-color: rgb(0 0 0 / 50%);
   inset: 0;
   position: fixed;
@@ -48,19 +48,33 @@
   flex-grow: 1;
   align-items: center;
 
-  // todo: refactor, instable code.
-  > [data-role="toggle"] {
-    margin-inline-start: auto;
-    
-    @media (width > 768px) {
-      display: none;
+  // als er twee _slot's zijn, dan moet de tweede _slot naar rechts worden geduwd
+  @media (width > 768px) {
+    .rhc-nav-bar__slot:last-child:not(:first-child) {
+      margin-inline-start: auto;
     }
   }
 }
 
+@mixin rhc-nav-bar__slot-main__btn-trigger {
+  margin-inline-start: auto;
+  
+  @media (width > 768px) {
+    display: none;
+  }
+}
+
 @mixin rhc-nav-bar__slots {
-  @media (width <= 768px) {
-    @include visually-hidden.rhc-visually-hidden; // todo: fix, not still focusuable.
+  display: none;
+
+  @media (width > 768px) {
+    display: flex;
+    flex: 1;
+    align-items: center;
+
+    .rhc-nav-bar__megamenu ~ .rhc-nav-bar__slot {
+      margin-inline-start: auto;
+    }
   }
 
   @at-root {
@@ -68,27 +82,22 @@
     .rhc-nav-bar__slot-megamenu.is-megamenu-open & {
       @media (width <= 768px) {
         @include visually-hidden.rhc-visually-hidden-reset;
-        display: flex;
-        flex-direction: column;
+        display: block;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background-color: var(--rhc-navigation-bar-background-color);
         background: orange;
+      }
+
+      @media (width >= 768px) {
+        .rhc-nav-bar__megamenu__btn-close {
+          display: inline-block;
+        }
       }
     }
   }
 
-  @media (width > 768px) {
-    display: flex;
-    flex: 1;
-    align-items: center;
-
-    > .rhc-nav-bar__slot:last-child {
-      margin-inline-start: auto;
-    }
-  }
 }
 
 // MEGAMENU --
@@ -103,6 +112,11 @@
         margin-inline-start: auto;
       }
     }
+    @media (width > 768px) {
+      & .rhc-nav-bar__slots > .rhc-nav-bar__slot {
+        margin-inline-start: auto;
+      }
+    }
   }
 }
 
@@ -112,6 +126,7 @@
 }
 
 @mixin rhc-nav-bar__megamenu {
+  // position: relative;
   top: 2.9em;
   // right: -2em;
   padding: 2em 2em 5em;
@@ -125,11 +140,25 @@
   }
 }
 
-@mixin rhc-nav-bar__megamenu-tagline {
-  font-style: italic;
+@mixin rhc-nav-bar__megamenu__btn-close {
+  position: absolute;
+  right: 0.75em;
+  top: 0.75em;
+  @media (width >= 768px) {
+    display: none;
+    right: 0.75em;
+    top: 2.75em;
+  }
 }
 
+// TAGLINE --
+@mixin rhc-nav-bar__megamenu-tagline {
+  font-style: italic;
+  border-bottom: 1px solid white;
+  padding-block-end: 1em;
+}
 
+// NAV --
 @mixin rhc-nav-bar__nav {
 }
 

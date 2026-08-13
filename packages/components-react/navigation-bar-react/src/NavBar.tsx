@@ -173,7 +173,12 @@ export const NavBar = ({
             {isOpen && <div className="rhc-nav-bar__megamenu">{megamenu}</div>}
             {items && (
               <div className="rhc-nav-bar__slot">
-                <nav className={clsx('rhc-nav-bar__nav', className)} ref={ref} {...restProps}>
+                <nav
+                  aria-label="todo-geefnaam"
+                  className={clsx('rhc-nav-bar__nav', className)}
+                  ref={ref}
+                  {...restProps}
+                >
                   <ul className="rhc-nav-bar__list">
                     {items.map((item) => (
                       <NavBarItem {...item} />
@@ -184,7 +189,12 @@ export const NavBar = ({
             )}
             {endItems && (
               <div className="rhc-nav-bar__slot">
-                <nav className={clsx('rhc-nav-bar__nav', className)} ref={ref} {...restProps}>
+                <nav
+                  aria-label="todo-geefnaam"
+                  className={clsx('rhc-nav-bar__nav', className)}
+                  ref={ref}
+                  {...restProps}
+                >
                   <ul className="rhc-nav-bar__list">
                     {endItems.map((enditem) => (
                       <NavBarItem {...enditem} />
@@ -193,12 +203,23 @@ export const NavBar = ({
                 </nav>
               </div>
             )}
+            {isOpen && (
+              <LinkButton
+                aria-label="Sluit menu"
+                className="rhc-nav-bar__megamenu__btn-close"
+                onClick={() => setIsOpen(false)}
+              >
+                <Icon icon="kruis" />
+                Sluiten
+              </LinkButton>
+            )}
           </div>
         </FocusTrap>
       ) : (
         <FocusTrap active={isMainNavOpen} className={clsx('rhc-nav-bar__slot-main', isMainNavOpen && 'is-main-open')}>
           <LinkButton
             aria-expanded={isMainNavOpen}
+            className="rhc-nav-bar__slot-main__btn-trigger"
             data-role="toggle"
             onClick={() => setIsMainNavOpen((prev) => !prev)}
           >
@@ -207,7 +228,12 @@ export const NavBar = ({
           <div className="rhc-nav-bar__slots">
             {items && (
               <div className="rhc-nav-bar__slot">
-                <nav className={clsx('rhc-nav-bar__nav', className)} ref={ref} {...restProps}>
+                <nav
+                  aria-label="todo-geefnaam"
+                  className={clsx('rhc-nav-bar__nav', className)}
+                  ref={ref}
+                  {...restProps}
+                >
                   <ul className="rhc-nav-bar__list">
                     {items.map((item) => (
                       <NavBarItem {...item} />
@@ -218,7 +244,12 @@ export const NavBar = ({
             )}
             {endItems && (
               <div className="rhc-nav-bar__slot">
-                <nav className={clsx('rhc-nav-bar__nav', className)} ref={ref} {...restProps}>
+                <nav
+                  aria-label="todo-geefnaam"
+                  className={clsx('rhc-nav-bar__nav', className)}
+                  ref={ref}
+                  {...restProps}
+                >
                   <ul className="rhc-nav-bar__list">
                     {endItems.map((enditem) => (
                       <NavBarItem {...enditem} />
@@ -237,7 +268,7 @@ export const NavBar = ({
         createPortal(
           <div
             aria-hidden="true"
-            className="rhc-nav-bar__overlay"
+            className="rhc-nav-bar__shade"
             onClick={() => {
               setIsOpen(false);
               setIsMainNavOpen(false);
@@ -261,7 +292,7 @@ export const NavBarMegaMenu = ({
   ...restProps
 }: PropsWithChildren<NavBarMegaMenuProps>) => {
   return (
-    <div className={clsx('rhc-nav-bar__megamenu-content', className)} ref={ref} {...restProps}>
+    <div className={clsx(className)} ref={ref} {...restProps}>
       {tagline && <p className="rhc-nav-bar__megamenu-tagline">{tagline}</p>}
       <div className="rhc-grid">
         {columns.map(({ id, heading, items }) => (

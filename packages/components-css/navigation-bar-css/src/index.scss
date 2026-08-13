@@ -12,8 +12,8 @@
   @include mixin.rhc-nav-bar;
 }
 
-.rhc-nav-bar__overlay {
-  @include mixin.rhc-nav-bar__overlay;
+.rhc-nav-bar__shade {
+  @include mixin.rhc-nav-bar__shade;
 }
 
 .rhc-nav-bar__slot {
@@ -28,6 +28,10 @@
   @include mixin.rhc-nav-bar__slot-main;
 }
 
+.rhc-nav-bar__slot-main__btn-trigger {
+  @include mixin.rhc-nav-bar__slot-main__btn-trigger;
+}
+
 .rhc-nav-bar__slots {
   @include mixin.rhc-nav-bar__slots;
 }
@@ -38,6 +42,10 @@
 
 .rhc-nav-bar__megamenu {
   @include mixin.rhc-nav-bar__megamenu;
+}
+
+.rhc-nav-bar__megamenu__btn-close {
+  @include mixin.rhc-nav-bar__megamenu__btn-close;
 }
 
 .rhc-nav-bar__megamenu-tagline {
