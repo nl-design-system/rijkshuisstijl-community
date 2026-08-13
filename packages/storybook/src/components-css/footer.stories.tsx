@@ -50,39 +50,15 @@ const FooterFooterLinks = () => (
 );
 
 export const Footer = () => (
-  <footer className="rhc-page-footer">
-    <div className="rhc-page-section">
-      <div className="rhc-grid">
+  <footer className="rhc-page-footer rhc-page-section">
+    <div className="rhc-page-section__content">
+      <div className="rhc-grid rhc-page-footer__main">
         <FooterLinks />
       </div>
-    </div>
-    <div className="rhc-page-section">
-      <div className="rhc-footer--separator">
+      <div className="rhc-page-footer__separator">
         <Separator />
       </div>
-    </div>
-    <div className="rhc-page-section">
-      <div className="rhc-page-footer--navigation">
-        <FooterFooterLinks />
-      </div>
-    </div>
-  </footer>
-);
-
-export const NonFullBleed = () => (
-  <footer className="rhc-page-footer" style={{ background: 'none' }}>
-    <div className="rhc-page-section">
-      <div className="rhc-grid" style={{ background: 'var(--rhc-page-footer-background-color)' }}>
-        <FooterLinks />
-      </div>
-    </div>
-    <div className="rhc-page-section">
-      <div className="rhc-footer--separator">
-        <Separator />
-      </div>
-    </div>
-    <div className="rhc-page-section rhc-footer--navigation">
-      <div style={{ display: 'flex', columnGap: '24px', background: 'var(--rhc-page-footer-background-color)' }}>
+      <div className="rhc-page-footer__navigation">
         <FooterFooterLinks />
       </div>
     </div>
@@ -90,9 +66,9 @@ export const NonFullBleed = () => (
 );
 
 export const Compact = () => (
-  <footer className="rhc-page-footer">
-    <div className="rhc-page-section rhc-page-footer--navigation">
-      <div style={{ display: 'flex', columnGap: '24px', alignItems: 'baseline' }}>
+  <footer className="rhc-page-footer rhc-page-section">
+    <div className="rhc-page-footer__navigation rhc-page-section__content">
+      <div className="rhc-page-section__content" style={{ display: 'flex', columnGap: '24px', alignItems: 'baseline' }}>
         <h2 className="rhc-page-footer-compact--tagline">Overheid.nl</h2>
         <FooterFooterLinks />
       </div>

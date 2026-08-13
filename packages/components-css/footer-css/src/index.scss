@@ -19,23 +19,27 @@
     color: var(--rhc-page-footer-color);
   }
 
-  .rhc-footer--separator {
+  &__main {
+    padding-block: var(--rhc-page-footer-padding-block);
+  }
+
+  &__separator {
     padding-block: 0;
 
     .rhc-separator {
+      --utrecht-space-around: 0;
       --utrecht-separator-color: var(--rhc-page-footer-color);
 
       margin-block: 0;
     }
   }
 
-  &--navigation {
-    --rhc-page-section-padding-block: var(--rhc-page-footer-compact-padding-block);
-
+  &__navigation {
     column-gap: var(--rhc-page-footer-navigation-column-gap);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-block: var(--rhc-page-footer-compact-padding-block);
     row-gap: var(--rhc-page-footer-navigation-row-gap);
 
     .nl-link.rhc-link {
