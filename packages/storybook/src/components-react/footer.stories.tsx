@@ -23,7 +23,9 @@ const FooterLinks = () => (
   <>
     <div className="rhc-grid__cell--cols-421">
       <h2>Overheid.nl</h2>
-      <p><i>Ingang naar informatie en diensten van alle overheden</i></p>
+      <p>
+        <i>Ingang naar informatie en diensten van alle overheden</i>
+      </p>
     </div>
     <div className="rhc-grid__cell--cols-421">
       <h3>Overheid.nl</h3>
@@ -58,10 +60,10 @@ export const Default = () => {
 
 export const Compact = () => {
   const slot2 = (
-    <div style={{ display: 'flex', columnGap: '24px', alignItems: 'baseline' }}>
-      <h2 className="rhc-page-footer-compact--tagline">Overheid.nl</h2>
+    <>
+      <h2 className="rhc-page-footer--compact__tagline">Overheid.nl</h2>
       <FooterFooterLinks />
-    </div>
+    </>
   );
 
   return <Footer slot2={slot2} />;

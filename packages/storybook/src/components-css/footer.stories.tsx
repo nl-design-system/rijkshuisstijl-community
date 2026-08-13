@@ -68,7 +68,7 @@ export const Footer = () => (
 export const Compact = () => (
   <footer className="rhc-page-footer rhc-page-section">
     <div className="rhc-page-footer__navigation rhc-page-section__content">
-      <h2 className="rhc-page-footer-compact--tagline">Overheid.nl</h2>
+      <h2 className="rhc-page-footer--compact__tagline">Overheid.nl</h2>
       <FooterFooterLinks />
     </div>
   </footer>
