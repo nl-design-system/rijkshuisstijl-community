@@ -15,76 +15,99 @@
   display: flex;
   font-family: var(--rhc-text-font-family-default, inherit);
   inline-size: 100%;
-  justify-content: space-between;
   z-index: var(--rhc-navigation-bar-z-index, 2);
 
   @at-root {
     .rhc-nav-bar ~ .rhc-nav-bar {
       z-index: calc(var(--rhc-navigation-bar-z-index, 2) - 1);
+      border-bottom: 0;
     }
+  }
+}
 
-    .rhc-nav-bar:has(> .rhc-nav-bar__slot:nth-last-child(2):first-child) {
-      justify-content: space-between;
+// IDENTITY --
+@mixin rhc-nav-bar__slot-identity {
+  flex-shrink: 0;
+}
+
+// MAIN --
+@mixin rhc-nav-bar__slot-main {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+
+  // todo: refactor, instable code.
+  > [type="button"] {
+    margin-inline-start: auto;
+    
+    @media (width > 768px) {
+      display: none;
     }
+  }
+}
 
-    .rhc-nav-bar:has(> .rhc-nav-bar__slot:nth-last-child(3):first-child) {
-      > .rhc-nav-bar__slot:nth-child(2) {
-        flex-grow: 1;
-        // text-align: right;
+@mixin rhc-nav-bar__slots {
+  display: none;
 
-        @media (width > 768px) {
-          // text-align: left;
-        }
-      }
-      > .rhc-nav-bar__slot:nth-child(3) {
-        @include visually-hidden.rhc-visually-hidden;
-        position: fixed;
-        bottom: 0;
+  @at-root {
+    .is-mobile-open &,
+    .is-megamenu-open & {
+      @media (width <= 768px) {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
         left: 0;
-        @media (width > 768px) {
-          @include visually-hidden.rhc-visually-hidden-reset;
-          margin-left: auto;
-          position: relative;
-          bottom: auto;
-          left: auto;
-        }
+        right: 0;
+        background-color: var(--rhc-navigation-bar-background-color);
+        background: orange;
       }
     }
   }
+
+  @media (width > 768px) {
+    display: flex;
+    flex: 1;
+    align-items: center;
+
+    > .rhc-nav-bar__slot:last-child {
+      margin-inline-start: auto;
+    }
+  }
+}
+
+// MEGAMENU --
+@mixin rhc-nav-bar__slot-megamenu {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+
   @at-root {
-    .is-open:has(> .rhc-nav-bar__slot:nth-last-child(3):first-child) {
-      > .rhc-nav-bar__slot:nth-child(3) {
-        @include visually-hidden.rhc-visually-hidden-reset;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        background: white;
-        @media (width > 768px) {
-          // @include visually-hidden.rhc-visually-hidden;
-          margin-left: auto;
-          position: relative;
-          bottom: auto;
-          left: auto;
-          background: transparent;
-        }
+    @media (width <= 768px) {
+      & > :first-child {
+        margin-inline-start: auto;
       }
     }
   }
 }
 
+// ---
 @mixin rhc-nav-bar__slot {
   width: auto;
 }
 
 @mixin rhc-nav-bar__megamenu {
-  position: absolute;
-  left: -2em;
-  top: 2.4em;
-  right: -2em;
+  top: 2.9em;
+  // right: -2em;
   padding: 2em 2em 5em;
   background: #c2c2c2;
-  // z-index: 2;
-  
+
+  @media (width >= 768px) {
+    position: absolute;
+    top: 2.4em;
+    left: 0;
+    right: 0;
+  }
 }
 
 @mixin rhc-nav-bar__megamenu-tagline {
@@ -93,24 +116,16 @@
 
 
 @mixin rhc-nav-bar__nav {
-  // align-items: center;
-  // display: flex;
 }
 
 @mixin rhc-nav-bar__list {
   background-color: var(--rhc-navigation-bar-background-color);
-
-  // @include visually-hidden.rhc-visually-hidden;
-
-  // @media (width > 768px) {
   display: flex;
   list-style: none;
   margin-block: 0;
   margin-inline: 0;
   padding-block: 0;
   padding-inline: 0;
-  // @include visually-hidden.rhc-visually-hidden-reset;
-  // }
 }
 
 @mixin rhc-nav-bar__heading {

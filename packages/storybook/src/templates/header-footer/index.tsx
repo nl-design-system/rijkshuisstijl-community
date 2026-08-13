@@ -75,6 +75,7 @@ const HeaderFooter = () => {
                   href: '/',
                   id: 'end-second-link',
                   label: 'Contact',
+                  icon: <Icon icon="chat" />,
                 },
               ]}
             />
@@ -102,31 +103,16 @@ const HeaderFooter = () => {
                   href: '/',
                   id: 'end-first-link',
                   label: 'Zoeken',
+                  icon: <Icon icon="" />,
                 },
                 {
                   href: '/',
                   id: 'end-second-link',
                   label: 'Inloggen',
+                  icon: <Icon icon="inloggen" />,
                 },
               ]}
             />
-            <BreadcrumbNav className="rhc-breadcrumb-nav">
-              <BreadcrumbNavLink href="/" index={0} rel="home">
-                Home
-              </BreadcrumbNavLink>
-              <BreadcrumbNavSeparator>
-                <Icon icon="chevron-right" />
-              </BreadcrumbNavSeparator>
-              <BreadcrumbNavLink href="/a/" index={1}>
-                Label
-              </BreadcrumbNavLink>
-              <BreadcrumbNavSeparator>
-                <Icon icon="chevron-right" />
-              </BreadcrumbNavSeparator>
-              <BreadcrumbNavLink current href="/a/b/" index={2}>
-                Label
-              </BreadcrumbNavLink>
-            </BreadcrumbNav>
           </div>
         </div>
       </PageHeader>

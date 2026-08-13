@@ -140,6 +140,7 @@ export const NavBar = ({
   ...restProps
 }: PropsWithChildren<NavBarProps>) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     document.documentElement.classList.toggle('is-megamenu-open', isOpen);
@@ -148,47 +149,79 @@ export const NavBar = ({
 
   return (
     <div className={clsx('rhc-nav-bar', isOpen && 'is-open')}>
-      {identity && <div className="rhc-nav-bar__slot">{identity}</div>}
+      {identity && <div className="rhc-nav-bar__slot-identity">{identity}</div>}
 
-      {/* megamenu */}
-      {megamenu && (
-        <div className="rhc-nav-bar__slot">
+      {megamenu ? (
+        <div className={clsx('rhc-nav-bar__slot-megamenu', isOpen && 'is-megamenu-open')}>
           <LinkButton onClick={() => setIsOpen((prev) => !prev)}>
             <Icon icon="menu" />
-            Kies een onderwerp of dienst
+            <span className="rhc-visually-hidden-mobile">Kies een onderwerp of dienst</span>
           </LinkButton>
-          {megamenu && isOpen && <div className="rhc-nav-bar__megamenu">{megamenu}</div>}
+          <div className="rhc-nav-bar__slots">
+            {isOpen && <div className="rhc-nav-bar__megamenu">{megamenu}</div>}
+            {items && (
+              <div className="rhc-nav-bar__slot">
+                <nav className={clsx('rhc-nav-bar__nav', className)} ref={ref} {...restProps}>
+                  <ul className="rhc-nav-bar__list">
+                    {items.map((item) => (
+                      <NavBarItem {...item} />
+                    ))}
+                  </ul>
+                </nav>
+              </div>
+            )}
+            {endItems && (
+              <div className="rhc-nav-bar__slot">
+                <nav className={clsx('rhc-nav-bar__nav', className)} ref={ref} {...restProps}>
+                  <ul className="rhc-nav-bar__list">
+                    {endItems.map((enditem) => (
+                      <NavBarItem {...enditem} />
+                    ))}
+                  </ul>
+                </nav>
+              </div>
+            )}
+          </div>
+        </div>
+      ) : (
+        <div className={clsx('rhc-nav-bar__slot-main', isMobileMenuOpen && 'is-mobile-open')}>
+          <LinkButton onClick={() => setIsMobileMenuOpen((prev) => !prev)}>
+            <Icon icon={isMobileMenuOpen ? 'chevron-up' : 'chevron-down'} />
+          </LinkButton>
+          <div className="rhc-nav-bar__slots">
+            {items && (
+              <div className="rhc-nav-bar__slot">
+                <nav className={clsx('rhc-nav-bar__nav', className)} ref={ref} {...restProps}>
+                  <ul className="rhc-nav-bar__list">
+                    {items.map((item) => (
+                      <NavBarItem {...item} />
+                    ))}
+                  </ul>
+                </nav>
+              </div>
+            )}
+            {endItems && (
+              <div className="rhc-nav-bar__slot">
+                <nav className={clsx('rhc-nav-bar__nav', className)} ref={ref} {...restProps}>
+                  <ul className="rhc-nav-bar__list">
+                    {endItems.map((enditem) => (
+                      <NavBarItem {...enditem} />
+                    ))}
+                  </ul>
+                </nav>
+              </div>
+            )}
+          </div>
         </div>
       )}
-      {/* navbar */}
-      {items && (
-        <div className="rhc-nav-bar__slot">
-          <nav className={clsx('rhc-nav-bar__nav', className)} ref={ref} {...restProps}>
-            <ul className="rhc-nav-bar__list">
-              {items.map((item) => (
-                <NavBarItem {...item} />
-              ))}
-            </ul>
-          </nav>
-        </div>
-      )}
-      {endItems && (
-        <div className="rhc-nav-bar__slot">
-          <nav className={clsx('rhc-nav-bar__nav', className)} ref={ref} {...restProps}>
-            <ul className="rhc-nav-bar__list">
-              {endItems.map((enditem) => (
-                <NavBarItem {...enditem} />
-              ))}
-            </ul>
-          </nav>
-        </div>
-      )}
+
       {children}
     </div>
   );
 };
 
 NavBar.displayName = 'NavBar';
+
 
 export const NavBarMegaMenu = ({
   ref,
