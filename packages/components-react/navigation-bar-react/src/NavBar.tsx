@@ -184,7 +184,7 @@ export const NavBar = ({
           </div>
         </div>
       ) : (
-        <div className={clsx('rhc-nav-bar__slot-main', isMobileMenuOpen && 'is-mobile-open')}>
+        <div className={clsx('rhc-nav-bar__slot-main', isMobileMenuOpen && 'is-main-open')}>
           <LinkButton onClick={() => setIsMobileMenuOpen((prev) => !prev)}>
             <Icon icon={isMobileMenuOpen ? 'chevron-up' : 'chevron-down'} />
           </LinkButton>
