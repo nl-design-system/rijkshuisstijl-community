@@ -3,7 +3,7 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { ColumnLayout } from '@rijkshuisstijl-community/column-layout-react/no-side-effects';
+import { FocusTrap } from '@rijkshuisstijl-community/focus-trap/no-side-effects';
 import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react/no-side-effects';
 import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react/no-side-effects';
 import { LinkList, LinkListLink } from '@rijkshuisstijl-community/link-list-react/no-side-effects';
@@ -11,6 +11,7 @@ import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   headingItem?: NavBarItemProps;
@@ -85,7 +86,6 @@ const NavBarItem = ({
   return (
     <li className={clsx('rhc-nav-bar__item', isItemOpen && 'is-open', className)} ref={ref} {...restProps}>
 
-      {/* todo: make linkButton meganism into a seperate re-useable component */}
       {subList ? (
         <LinkButton
           aria-controls={`rhc-nav-bar__item-dropdown-${contentId}`}
@@ -140,20 +140,32 @@ export const NavBar = ({
   ...restProps
 }: PropsWithChildren<NavBarProps>) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMainNavOpen, setIsMainNavOpen] = useState(false);
+  const [overlayContainer, setOverlayContainer] = useState<Element | null>(null);
+  const isAnyMenuOpen = isOpen || isMainNavOpen;
+
+  useEffect(() => {
+    const pageHeader = document.querySelector('.rhc-page-header');
+    setOverlayContainer(pageHeader?.parentElement ?? document.body);
+  }, []);
 
   useEffect(() => {
     document.documentElement.classList.toggle('is-megamenu-open', isOpen);
     return () => document.documentElement.classList.remove('is-megamenu-open');
   }, [isOpen]);
 
+  useEffect(() => {
+    document.documentElement.classList.toggle('is-main-open', isMainNavOpen);
+    return () => document.documentElement.classList.remove('is-main-open');
+  }, [isMainNavOpen]);
+
   return (
     <div className={clsx('rhc-nav-bar', isOpen && 'is-open')}>
       {identity && <div className="rhc-nav-bar__slot-identity">{identity}</div>}
 
       {megamenu ? (
-        <div className={clsx('rhc-nav-bar__slot-megamenu', isOpen && 'is-megamenu-open')}>
-          <LinkButton onClick={() => setIsOpen((prev) => !prev)}>
+        <FocusTrap active={isOpen} className={clsx('rhc-nav-bar__slot-megamenu', isOpen && 'is-megamenu-open')}>
+          <LinkButton onClick={() => setIsOpen((prev) => !prev)} aria-expanded={isOpen}>
             <Icon icon="menu" />
             <span className="rhc-visually-hidden-mobile">Kies een onderwerp of dienst</span>
           </LinkButton>
@@ -182,11 +194,15 @@ export const NavBar = ({
               </div>
             )}
           </div>
-        </div>
+        </FocusTrap>
       ) : (
-        <div className={clsx('rhc-nav-bar__slot-main', isMobileMenuOpen && 'is-main-open')}>
-          <LinkButton onClick={() => setIsMobileMenuOpen((prev) => !prev)}>
-            <Icon icon={isMobileMenuOpen ? 'chevron-up' : 'chevron-down'} />
+        <FocusTrap active={isMainNavOpen} className={clsx('rhc-nav-bar__slot-main', isMainNavOpen && 'is-main-open')}>
+          <LinkButton
+            aria-expanded={isMainNavOpen}
+            data-role="toggle"
+            onClick={() => setIsMainNavOpen((prev) => !prev)}
+          >
+            <Icon icon={isMainNavOpen ? 'chevron-up' : 'chevron-down'} />
           </LinkButton>
           <div className="rhc-nav-bar__slots">
             {items && (
@@ -212,10 +228,23 @@ export const NavBar = ({
               </div>
             )}
           </div>
-        </div>
+        </FocusTrap>
       )}
 
       {children}
+      {isAnyMenuOpen &&
+        overlayContainer &&
+        createPortal(
+          <div
+            aria-hidden="true"
+            className="rhc-nav-bar__overlay"
+            onClick={() => {
+              setIsOpen(false);
+              setIsMainNavOpen(false);
+            }}
+          />,
+          overlayContainer,
+        )}
     </div>
   );
 };
@@ -259,7 +288,7 @@ export const SubNavBar = ({ ref, children, className, columns, ...restProps }: P
   return (
     <div className={clsx('', className)} ref={ref} {...restProps}>
       <div className="rhc-sub-nav-bar__content">
-        <ColumnLayout>
+        
           {columns.map((column: NavBarLinkProps[]) => (
             <div className="rhc-sub-nav-bar__list" key={column.map((item) => item.id).join('-')}>
               <LinkList>
@@ -271,7 +300,7 @@ export const SubNavBar = ({ ref, children, className, columns, ...restProps }: P
               </LinkList>
             </div>
           ))}
-        </ColumnLayout>
+        
         {children}
       </div>
     </div>
