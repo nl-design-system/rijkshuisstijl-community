@@ -1,8 +1,6 @@
 import {
-  BreadcrumbNav,
-  BreadcrumbNavLink,
-  BreadcrumbNavSeparator,
   Footer,
+  Heading,
   Icon,
   Logo,
   NavBar,
@@ -26,8 +24,11 @@ const HeaderFooter = () => {
               <Icon className="dutch-map" icon="nederland-map" />
             </Logo>
             <NavBar
-              className="rhc-nav-bar2"
-              identity="Overheid.nl"
+              identity={
+                <Heading level={2} appearanceLevel={3}>
+                  Overheid.nl
+                </Heading>
+              }
               megamenu={
                 <NavBarMegaMenu
                   tagline="Ingang naar informatie en diensten van alle overheden"
@@ -80,22 +81,32 @@ const HeaderFooter = () => {
               ]}
             />
             <NavBar
-              identity="Organisatie"
+              identity={<b>Dataregister</b>}
               items={[
                 {
                   href: '/',
-                  id: 'first-link',
-                  label: 'Homepage',
+                  id: 'data',
+                  label: 'Data',
                 },
                 {
                   href: '/',
-                  id: 'second-link',
-                  label: 'Componenten',
+                  id: 'impact',
+                  label: 'Impact',
                 },
                 {
                   href: '/',
-                  id: 'third-link',
-                  label: 'Voorbeelden',
+                  id: 'Communities',
+                  label: 'Communities',
+                },
+                {
+                  href: '/',
+                  id: 'Actueel',
+                  label: 'Actueel',
+                },
+                {
+                  href: '/',
+                  id: 'Support',
+                  label: 'Support',
                 },
               ]}
               endItems={[
@@ -118,13 +129,20 @@ const HeaderFooter = () => {
       </PageHeader>
       <div className="rhc-page-section">
         <div>
-          <h1>Voorbeeld pagina</h1>
+          <h1>Voorbeeldpagina</h1>
           <p>
-            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas est
-            dui, rutrum eget condimentum sed, bibendum ut augue. Pellentesque vulputate ipsum risus, et dapibus nunc
-            laoreet eu. Morbi at nulla varius, sagittis ligula vel, fermentum ligula. Vestibulum accumsan leo turpis, ut
-            efficitur erat accumsan ut. Curabitur at ipsum a sapien gravida varius a ac magna. Fusce dictum mi eu cursus
-            placerat. Aenean sagittis venenatis augue sagittis mattis.
+            Pitchfork art party microdosing, digicam spritz polycule sambas ascot. Offal meditation bruh, twee akerman
+            pabst angela davis. Next level vaporware bruh, wide-leg blackbird spyplane sally rooney fanny pack messenger
+            bag didion n+1. Banjo marfa mlkshk ottessa moshfegh, sus wide-leg locavore baffler beard eames digicam
+            chillwave poke hexagon try-hard.
+          </p>
+          <p>
+            Molly baz birth chart cacio e pepe bluesky. Lockwood marfa supper club bodega boys, booktok mezcal bluesky
+            vibe check cacio e pepe open studio. Jawn yes plz EMDR, sus helvetica salvia listicle jean shorts ethical
+            hashtag ayahuasca small batch furikake. Harissa I think you should leave humblebrag pét-nat vagus nerve
+            chronically online, pour-over duck fat tattooed master cleanse moss wall omakase cliche knausgaard. Shabby
+            chic chia cold-pressed, taiyaki bauhaus cortado chartreuse paleo aeropress art party gorpcore prism.
+            Attachment style 8-bit copper mug bauhaus.
           </p>
         </div>
       </div>
