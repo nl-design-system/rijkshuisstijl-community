@@ -12,17 +12,13 @@ type FooterProps = {
 export const Footer = ({ slot1, slot2 }: FooterProps) => (
   <footer className="rhc-page-footer rhc-page-section">
     <div className="rhc-page-section__content">
-      {slot1 && (
-        <div className="rhc-grid">{slot1}</div>
-      )}
+      {slot1 && <div className="rhc-grid">{slot1}</div>}
       {slot1 && slot2 && (
         <div className="rhc-footer__separator">
           <Separator />
         </div>
       )}
-      {slot2 && (
-        <div className="rhc-page-footer__navigation">{slot2}</div>
-      )}
+      {slot2 && <div className="rhc-page-footer__navigation">{slot2}</div>}
     </div>
   </footer>
 );
