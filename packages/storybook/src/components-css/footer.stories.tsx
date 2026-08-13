@@ -68,10 +68,8 @@ export const Footer = () => (
 export const Compact = () => (
   <footer className="rhc-page-footer rhc-page-section">
     <div className="rhc-page-footer__navigation rhc-page-section__content">
-      <div className="rhc-page-section__content" style={{ display: 'flex', columnGap: '24px', alignItems: 'baseline' }}>
-        <h2 className="rhc-page-footer-compact--tagline">Overheid.nl</h2>
-        <FooterFooterLinks />
-      </div>
+      <h2 className="rhc-page-footer-compact--tagline">Overheid.nl</h2>
+      <FooterFooterLinks />
     </div>
   </footer>
 );
