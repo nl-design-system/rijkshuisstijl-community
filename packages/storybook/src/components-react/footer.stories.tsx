@@ -12,7 +12,7 @@ const linkList3 = ['Mijn overheid', 'Rijksoverheid.nl', 'Ondernemersplein', 'Ned
 const LinkListMaker = ({ list }: { list: Array<string> }) => (
   <LinkList>
     {list.map((entry) => (
-      <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
+      <LinkListLink key={entry} href="#" icon={<Icon icon="chevron-right" />}>
         {entry}
       </LinkListLink>
     ))}

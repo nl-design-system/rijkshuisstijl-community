@@ -181,7 +181,7 @@ export const NavBar = ({
                 >
                   <ul className="rhc-nav-bar__list">
                     {items.map((item) => (
-                      <NavBarItem {...item} />
+                      <NavBarItem key={item.id} {...item} />
                     ))}
                   </ul>
                 </nav>
@@ -197,7 +197,7 @@ export const NavBar = ({
                 >
                   <ul className="rhc-nav-bar__list">
                     {endItems.map((enditem) => (
-                      <NavBarItem {...enditem} />
+                      <NavBarItem key={enditem.id} {...enditem} />
                     ))}
                   </ul>
                 </nav>
@@ -236,7 +236,7 @@ export const NavBar = ({
                 >
                   <ul className="rhc-nav-bar__list">
                     {items.map((item) => (
-                      <NavBarItem {...item} />
+                      <NavBarItem key={item.id} {...item} />
                     ))}
                   </ul>
                 </nav>
@@ -252,7 +252,7 @@ export const NavBar = ({
                 >
                   <ul className="rhc-nav-bar__list">
                     {endItems.map((enditem) => (
-                      <NavBarItem {...enditem} />
+                      <NavBarItem key={enditem.id} {...enditem} />
                     ))}
                   </ul>
                 </nav>
