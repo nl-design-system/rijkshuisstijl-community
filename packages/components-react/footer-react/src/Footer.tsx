@@ -18,9 +18,7 @@ export const Footer = ({ slot1, slot2 }: FooterProps) => (
           <Separator />
         </div>
       )}
-      {slot2 && <div className="rhc-page-footer__navigation">
-        {slot2}
-      </div>}
+      {slot2 && <div className="rhc-page-footer__navigation">{slot2}</div>}
     </div>
   </footer>
 );

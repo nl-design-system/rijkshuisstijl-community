@@ -23,7 +23,9 @@ const FooterLinks = () => (
   <>
     <div className="rhc-grid__cell--cols-421">
       <h2>Overheid.nl</h2>
-      <p><i>Ingang naar informatie en diensten van alle overheden</i></p>
+      <p>
+        <i>Ingang naar informatie en diensten van alle overheden</i>
+      </p>
     </div>
     <div className="rhc-grid__cell--cols-421">
       <h3>Overheid.nl</h3>
