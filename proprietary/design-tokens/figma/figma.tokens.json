@@ -10379,141 +10379,7 @@
       }
     }
   },
-  "components/page-footer": {
-    "utrecht": {
-      "page-footer": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{rhc.color.core.500}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{rhc.color.foreground.on-dark-color}"
-        },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.none}"
-        },
-        "padding-block-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.none}"
-        },
-        "padding-inline-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.none}"
-        },
-        "padding-inline-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.none}"
-        },
-        "content": {
-          "max-inline-size": {
-            "$type": "dimension",
-            "$value": "{rhc.size.page.md}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{rhc.size.lint}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{rhc.size.lint}"
-          },
-          "padding-inline": {
-            "$type": "dimension",
-            "$value": "{rhc.size.quarter-lint}"
-          }
-        }
-      }
-    },
-    "rhc": {
-      "page-footer": {
-        "column-gap": {
-          "$type": "dimension",
-          "$value": "{rhc.space.2xl}"
-        },
-        "column-width": {
-          "$type": "dimension",
-          "$value": "12.5rem"
-        },
-        "column": {
-          "title": {
-            "margin-block-end": {
-              "$type": "dimension",
-              "$value": "{rhc.space.lg}"
-            }
-          }
-        },
-        "content": {
-          "max-inline-size": {
-            "$type": "dimension",
-            "$value": "{rhc.size.page.md}"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{rhc.space.xl}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "{rhc.space.xl}"
-          },
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{rhc.space.3xl}"
-          }
-        },
-        "border-block-start-width": {
-          "$type": "dimension",
-          "$value": "{rhc.border-width.md}"
-        },
-        "border-block-start-color": {
-          "$type": "color",
-          "$value": "{rhc.color.core.300}"
-        },
-        "border-block-start-style": {
-          "$type": "other",
-          "$value": "solid"
-        },
-        "outlined": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{rhc.color.wit}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
-          }
-        },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
-        },
-        "padding-block-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
-        },
-        "padding-inline-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
-        },
-        "padding-inline-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
-        },
-        "flex": {
-          "direction": {
-            "$type": "flexDirection",
-            "$value": "column"
-          }
-        }
-      }
-    }
-  },
-  "components/grid-new": {
+  "components/grid": {
     "rhc": {
       "grid": {
         "column-gap": {
@@ -10523,7 +10389,7 @@
       }
     }
   },
-  "components/page-footer-new": {
+  "components/page-footer": {
     "rhc": {
       "page-footer": {
         "content": {
@@ -10625,7 +10491,7 @@
       }
     }
   },
-  "components/page-section-new": {
+  "components/page-section": {
     "rhc": {
       "page-section": {
         "max-inline-size": {
@@ -12516,7 +12382,7 @@
         "components/form-field-label-suffix": "source",
         "components/form-field-option-label": "source",
         "components/form-field-radio-option": "source",
-        "components/grid-new": "source",
+        "components/grid": "source",
         "components/heading/base": "source",
         "components/hero": "source",
         "components/icon": "source",
@@ -12533,9 +12399,9 @@
         "components/number-badge/utrecht": "source",
         "components/ordered-list": "source",
         "components/page-body": "source",
-        "components/page-footer-new": "source",
+        "components/page-footer": "source",
         "components/page-number-navigation": "source",
-        "components/page-section-new": "source",
+        "components/page-section": "source",
         "components/paragraph": "source",
         "components/pre-heading": "source",
         "components/radio-button": "source",
@@ -12626,6 +12492,7 @@
       "components/form-field-label-suffix",
       "components/form-field-option-label",
       "components/form-field-radio-option",
+      "components/grid",
       "components/heading/base",
       "components/heading/color-core",
       "components/heading/color-primary",
@@ -12645,8 +12512,8 @@
       "components/ordered-list",
       "components/page-body",
       "components/page-footer",
-      "components/page-footer-new",
       "components/page-number-navigation",
+      "components/page-section",
       "components/paragraph",
       "components/pre-heading",
       "components/radio-button",
