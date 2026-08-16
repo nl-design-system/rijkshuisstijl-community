@@ -1,6 +1,5 @@
 import {
   Footer,
-  Heading,
   Icon,
   Logo,
   NavBar,
@@ -24,11 +23,7 @@ const HeaderFooter = () => {
               <Icon className="dutch-map" icon="nederland-map" />
             </Logo>
             <NavBar
-              identity={
-                <Heading level={2} appearanceLevel={3}>
-                  Overheid.nl
-                </Heading>
-              }
+              identity={{ value: 'Overheid.nl', href: '/', appearance: 'primary' }}
               megamenu={
                 <NavBarMegaMenu
                   tagline="Ingang naar informatie en diensten van alle overheden"
@@ -76,12 +71,13 @@ const HeaderFooter = () => {
                   href: '/',
                   id: 'end-second-link',
                   label: 'Contact',
-                  icon: <Icon icon="chat" />,
+                  currentPage: true,
+                  icon: <Icon icon="inloggen" />,
                 },
               ]}
             />
             <NavBar
-              identity={<b>Dataregister</b>}
+              identity={{ value: 'Dataregister', href: '/' }}
               items={[
                 {
                   href: '/',
@@ -114,7 +110,7 @@ const HeaderFooter = () => {
                   href: '/',
                   id: 'end-first-link',
                   label: 'Zoeken',
-                  icon: <Icon icon="" />,
+                  icon: <Icon icon="inloggen" />,
                 },
                 {
                   href: '/',

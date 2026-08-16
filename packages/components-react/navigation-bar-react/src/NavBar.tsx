@@ -13,9 +13,21 @@ import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
+export interface NavBarIdentityProps {
+  value: ReactNode;
+  href: string;
+  appearance?: string;
+}
+
+const NavBarIdentity = ({ value, href, appearance }: NavBarIdentityProps) => (
+  <div className={clsx('rhc-nav-bar__identity', appearance && `rhc-nav-bar__identity--${appearance}`)}>
+    <a href={href}>{value}</a>
+  </div>
+);
+
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   headingItem?: NavBarItemProps;
-  identity?: ReactNode;
+  identity?: NavBarIdentityProps;
   items?: NavBarItemProps[];
   endItems?: NavBarItemProps[];
   megamenu?: ReactNode;
@@ -33,6 +45,7 @@ export interface NavBarItemProps extends NavBarLinkProps, HTMLAttributes<HTMLLIE
   icon?: ReactElement<IconProps>;
   subList?: NavbarSubListProps;
   iconOnly?: boolean;
+  currentPage?: boolean;
   id: string;
   ref?: Ref<HTMLLIElement>;
   open?: boolean;
@@ -77,6 +90,7 @@ const NavBarItem = ({
   icon,
   subList,
   iconOnly = false,
+  currentPage = false,
   open = false,
   contentId = '1',
   ...restProps
@@ -96,7 +110,7 @@ const NavBarItem = ({
           <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__label--sr-only')}>{label}</span>
         </LinkButton>
       ) : (
-        <Link className={clsx('rhc-nav-bar__link')} href={href} target={target}>
+        <Link aria-current={currentPage ? 'page' : undefined} className={clsx('rhc-nav-bar__link')} href={href} target={target}>
           {icon}
           <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__label--sr-only')}>{label}</span>
         </Link>
@@ -127,6 +141,7 @@ const NavBarItem = ({
 };
 
 NavBarItem.displayName = 'NavBarItem';
+
 
 export const NavBar = ({
   ref,
@@ -161,7 +176,11 @@ export const NavBar = ({
 
   return (
     <div className={clsx('rhc-nav-bar', isOpen && 'is-open')}>
-      {identity && <div className="rhc-nav-bar__slot-identity">{identity}</div>}
+      {identity && (
+        <div className="rhc-nav-bar__slot-identity">
+          <NavBarIdentity {...identity} />
+        </div>
+      )}
 
       {megamenu ? (
         <FocusTrap active={isOpen} className={clsx('rhc-nav-bar__slot-megamenu', isOpen && 'is-megamenu-open')}>
