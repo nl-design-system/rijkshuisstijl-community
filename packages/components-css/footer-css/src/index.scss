@@ -72,6 +72,12 @@
 
     padding-block-end: var(--rhc-page-footer-secondary-padding-block-end);
     padding-block-start: var(--rhc-page-footer-secondary-padding-block-start);
+
+    @media screen and (width < 768px) {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__separator {
@@ -96,6 +102,12 @@
       align-items: center;
       min-block-size: var(--rhc-page-footer-navigation-bar-link-min-block-size);
       text-decoration-line: var(--rhc-page-footer-navigation-bar-link-text-decoration-line);
+    }
+
+    @media screen and (width < 768px) {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
     }
   }
 }
