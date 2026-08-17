@@ -123,7 +123,8 @@ export const PrimaryOnly = () => (
 export const Compact = () => (
   <footer className="rhc-page-footer rhc-page-footer--compact rhc-page-section">
     <div className="rhc-page-footer__secondary rhc-page-section__content">
-      <h2 className="rhc-page-footer--compact__tagline">Overheid.nl</h2>
+      <div className="rhc-page-footer__tagline rhc-page-footer--compact__tagline">Overheid.nl</div>
+      <Separator className="rhc-page-footer--compact__separator" />
       <FooterNavbarLinks />
     </div>
   </footer>

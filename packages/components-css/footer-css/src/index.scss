@@ -22,31 +22,6 @@
     margin-block-start: 0;
   }
 
-  &--compact {
-    background-color: var(--rhc-page-footer-compact-background-color);
-    color: var(--rhc-page-footer-compact-color);
-
-    & .rhc-link,
-    & .utrecht-link-list__link {
-      color: var(--rhc-page-footer-compact-color);
-    }
-
-    &__tagline {
-      align-self: center;
-      font-size: var(--rhc-page-footer-compact-tagline-font-size);
-      margin-block: var(--rhc-space-none);
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin-block-end: 0;
-    }
-  }
-
   &__tagline {
     font-size: var(--rhc-page-footer-tagline-font-size);
     font-style: var(--rhc-page-footer-tagline-font-style);
@@ -108,6 +83,40 @@
       width: 100%;
       flex-direction: column;
       align-items: center;
+    }
+  }
+
+  &--compact {
+    background-color: var(--rhc-page-footer-compact-background-color);
+    color: var(--rhc-page-footer-compact-color);
+
+    & .rhc-link,
+    & .utrecht-link-list__link {
+      color: var(--rhc-page-footer-compact-color);
+    }
+
+    &__tagline {
+      align-self: center;
+      font-size: var(--rhc-page-footer-compact-tagline-font-size);
+      margin-block: var(--rhc-space-none);
+    }
+
+    &__separator {
+      display: none;
+
+      @media screen and (width < 768px) {
+        display: block;
+        inline-size: 100%;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-block-end: 0;
     }
   }
 }
