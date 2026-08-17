@@ -54,7 +54,7 @@ const FooterFooterLinks = () => (
 export const Footer = () => (
   <footer className="rhc-page-footer rhc-page-section">
     <div className="rhc-page-section__content">
-      <div className="rhc-grid rhc-page-footer__main">
+      <div className="rhc-grid rhc-page-footer__primary">
         <FooterLinks />
       </div>
       <div className="rhc-page-footer__separator">
