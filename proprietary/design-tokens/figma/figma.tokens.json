@@ -2705,7 +2705,7 @@
         "page": {
           "md": {
             "$type": "dimension",
-            "$value": "80rem"
+            "$value": "84rem"
           }
         }
       },
@@ -8912,6 +8912,16 @@
       }
     }
   },
+  "components/grid": {
+    "rhc": {
+      "grid": {
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.2xl}"
+        }
+      }
+    }
+  },
   "components/heading/base": {
     "nl": {
       "heading": {
@@ -9778,7 +9788,7 @@
             "font-size": {
               "$type": "fontSizes",
               "$value": "0",
-            "$description": "[todo]0.75rem"
+              "$description": "[todo]0.75rem"
             }
           }
         },
@@ -10379,16 +10389,6 @@
       }
     }
   },
-  "components/grid": {
-    "rhc": {
-      "grid": {
-        "column-gap": {
-          "$type": "dimension",
-          "$value": "{rhc.space.2xl}"
-        }
-      }
-    }
-  },
   "components/page-footer": {
     "rhc": {
       "page-footer": {
@@ -10493,24 +10493,6 @@
       }
     }
   },
-  "components/page-section": {
-    "rhc": {
-      "page-section": {
-        "max-inline-size": {
-          "$type": "dimension",
-          "$value": "{rhc.size.page.md}"
-        },
-        "padding-inline": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
-        },
-        "padding-block": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
-        }
-      }
-    }
-  },
   "components/page-number-navigation": {
     "ams": {
       "pagination": {
@@ -10578,6 +10560,24 @@
             "$value": "{rhc.space.xs}",
             "$description": "[code-only]"
           }
+        }
+      }
+    }
+  },
+  "components/page-section": {
+    "rhc": {
+      "page-section": {
+        "max-inline-size": {
+          "$type": "dimension",
+          "$value": "90rem"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{rhc.space.4xl}"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{rhc.space.4xl}"
         }
       }
     }
@@ -12536,6 +12536,6 @@
       "components/unordered-list",
       "components/page-header",
       "viewport/min"
-      ]
-    }
+    ]
   }
+}
