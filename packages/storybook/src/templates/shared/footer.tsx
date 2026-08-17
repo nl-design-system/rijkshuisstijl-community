@@ -5,11 +5,11 @@ const SharedFooter = () => (
   <footer className="rhc-page-footer rhc-page-section">
     <div className="rhc-page-section__content">
       <div className="rhc-grid rhc-page-footer__main">
-        <div className="rhc-grid__cell--cols-421">
+        <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
           <h2>Overheid.nl</h2>
           <i>Ingang naar informatie en diensten van alle overheden</i>
         </div>
-        <div className="rhc-grid__cell--cols-421">
+        <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
           <h3>Overheid.nl</h3>
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
@@ -26,7 +26,7 @@ const SharedFooter = () => (
             </LinkListLink>
           </LinkList>
         </div>
-        <div className="rhc-grid__cell--cols-421">
+        <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
           <h3>Officiële overheidsinformatie</h3>
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
@@ -46,7 +46,7 @@ const SharedFooter = () => (
             </LinkListLink>
           </LinkList>
         </div>
-        <div className="rhc-grid__cell--cols-421">
+        <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
           <h3>Andere overheidssites</h3>
           <LinkList>
             <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
