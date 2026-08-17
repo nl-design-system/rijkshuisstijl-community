@@ -9941,10 +9941,6 @@
             "color": {
               "$type": "color",
               "$value": "{rhc.color.core.active}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.active}"
             }
           },
           "background-color": {
@@ -9963,10 +9959,6 @@
             "color": {
               "$type": "color",
               "$value": "{rhc.color.core.500}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.500}"
             }
           },
           "hover": {
@@ -9975,10 +9967,6 @@
               "$value": "{rhc.color.core.50}"
             },
             "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.hover}"
-            },
-            "border-color": {
               "$type": "color",
               "$value": "{rhc.color.core.hover}"
             }
@@ -10008,18 +9996,6 @@
             "$value": "{rhc.text.font-size.md}"
           },
           "current": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.100}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.500}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.500}"
-            },
             "font-weight": {
               "$type": "fontWeights",
               "$value": "{rhc.text.font-weight.bold}"
@@ -10040,13 +10016,23 @@
         },
         "link": {
           "current": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{rhc.color.transparent}"
+            "active": {
+              "border-color": {
+                "$type": "color",
+                "$value": "{rhc.color.core.active}"
+              }
             },
-            "color": {
-              "$type": "color",
-              "$value": "{rhc.color.core.500}"
+            "focus": {
+              "border-color": {
+                "$type": "color",
+                "$value": "{rhc.color.core.500}"
+              }
+            },
+            "hover": {
+              "border-color": {
+                "$type": "color",
+                "$value": "{rhc.color.core.hover}"
+              }
             },
             "border-color": {
               "$type": "color",
