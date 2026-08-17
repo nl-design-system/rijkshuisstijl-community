@@ -22,7 +22,7 @@ const LinkListMaker = ({ list }: { list: Array<string> }) => (
 const FooterLinks4 = () => (
   <>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <h3>Overheid.nl</h3>
+      <h3>Rijksoverheid.nl</h3>
       <LinkListMaker list={linkList1} />
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
@@ -43,7 +43,7 @@ const FooterLinks4 = () => (
 const FooterLinks3 = () => (
   <>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <h2>Overheid.nl</h2>
+      <h2>De Rijksoverheid. Voor Nederland</h2>
       <p>
         <i>Ingang naar informatie en diensten van alle overheden</i>
       </p>
@@ -76,7 +76,7 @@ export const Default = () => (
   <footer className="rhc-page-footer rhc-page-section">
     <div className="rhc-page-section__content">
       <div className="rhc-page-footer__primary">
-        <div className="rhc-page-footer__tagline">Overheid.nl</div>
+        <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
         <div className="rhc-grid">
           <FooterLinks4 />
         </div>
@@ -111,7 +111,7 @@ export const PrimaryOnly = () => (
   <footer className="rhc-page-footer rhc-page-section">
     <div className="rhc-page-section__content">
       <div className="rhc-page-footer__primary">
-        <div className="rhc-page-footer__tagline">Overheid.nl</div>
+        <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
         <div className="rhc-grid">
           <FooterLinks4 />
         </div>
@@ -123,7 +123,7 @@ export const PrimaryOnly = () => (
 export const Compact = () => (
   <footer className="rhc-page-footer rhc-page-footer--compact rhc-page-section">
     <div className="rhc-page-footer__secondary rhc-page-section__content">
-      <div className="rhc-page-footer__tagline rhc-page-footer--compact__tagline">Overheid.nl</div>
+      <div className="rhc-page-footer__tagline rhc-page-footer--compact__tagline">De Rijksoverheid. Voor Nederland</div>
       <Separator className="rhc-page-footer--compact__separator" />
       <FooterNavbarLinks />
     </div>
