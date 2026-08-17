@@ -8917,7 +8917,25 @@
       "grid": {
         "column-gap": {
           "$type": "dimension",
-          "$value": "{rhc.space.2xl}"
+          "$value": "{rhc.grid.vi-large.column-gap}"
+        },
+        "vi-large": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          }
+        },
+        "vi-medium": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          }
+        },
+        "vi-small": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.xl}"
+          }
         }
       }
     }
@@ -10567,17 +10585,35 @@
   "components/page-section": {
     "rhc": {
       "page-section": {
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{rhc.space.4xl}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{rhc.page-section.vi-large.padding-inline}"
+        },
         "max-inline-size": {
           "$type": "dimension",
           "$value": "90rem"
         },
-        "padding-inline": {
-          "$type": "dimension",
-          "$value": "{rhc.space.5xl}"
+        "vi-large": {
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          }
         },
-        "padding-block": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
+        "vi-small": {
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.xl}"
+          }
+        },
+        "vi-medium": {
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          }
         }
       }
     }
