@@ -42,16 +42,16 @@ const FooterLinks = () => (
   </>
 );
 
-const FooterFooterLinks = () => (
-  <>
+const FooterNavbarLinks = () => (
+  <div className="rhc-page-footer__navigation">
     <Link href="#">Privacy</Link>
     <Link href="#">Cookies en anti-spam</Link>
     <Link href="#">Toegankelijkheid</Link>
     <Link href="#">Proclaimer</Link>
-  </>
+  </div>
 );
 
-export const Footer = () => (
+export const Default = () => (
   <footer className="rhc-page-footer rhc-page-section">
     <div className="rhc-page-section__content">
       <div className="rhc-grid rhc-page-footer__primary">
@@ -60,24 +60,24 @@ export const Footer = () => (
       <div className="rhc-page-footer__separator">
         <Separator />
       </div>
-      <div className="rhc-page-footer__navigation">
-        <FooterFooterLinks />
+      <div className="rhc-page-footer__secondary">
+        <FooterNavbarLinks />
       </div>
     </div>
   </footer>
 );
 
 export const Compact = () => (
-  <footer className="rhc-page-footer rhc-page-section">
-    <div className="rhc-page-footer__navigation rhc-page-section__content">
+  <footer className="rhc-page-footer rhc-page-footer--compact rhc-page-section">
+    <div className="rhc-page-footer__secondary rhc-page-section__content">
       <h2 className="rhc-page-footer--compact__tagline">Overheid.nl</h2>
-      <FooterFooterLinks />
+      <FooterNavbarLinks />
     </div>
   </footer>
 );
 
 export default {
-  component: Footer,
+  component: Default,
   title: 'Footer',
   id: 'rhc-footer',
   parameters: {

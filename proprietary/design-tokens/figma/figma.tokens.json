@@ -10407,14 +10407,6 @@
           "$value": "{rhc.color.foreground.on-dark-color}"
         },
         "compact": {
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{rhc.space.2xl}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{rhc.space.2xl}"
-          },
           "tagline": {
             "font-size": {
               "$type": "fontSizes",
@@ -10430,14 +10422,6 @@
             "$value": "{rhc.color.core.500}"
           }
         },
-        "padding-inline-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
-        },
-        "padding-inline-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
-        },
         "primary": {
           "padding-block-start": {
             "$type": "dimension",
@@ -10446,6 +10430,20 @@
           "padding-block-end": {
             "$type": "dimension",
             "$value": "{rhc.space.4xl}"
+          },
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.3xl}"
+          }
+        },
+        "secondary": {
+          "padding-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "padding-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
           }
         },
         "navigation-bar": {
@@ -10473,9 +10471,9 @@
           "$value": "{rhc.text.font-family.default}"
         },
         "tagline": {
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "SemiBold Italic"
+          "font-style": {
+            "$type": "$other",
+            "$value": "italic"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -10485,10 +10483,6 @@
             "$type": "fontSizes",
             "$value": "{rhc.text.font-size.xl}"
           }
-        },
-        "row-gap": {
-          "$type": "dimension",
-          "$value": "{rhc.space.3xl}"
         }
       }
     }
