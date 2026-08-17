@@ -19,7 +19,28 @@ const LinkListMaker = ({ list }: { list: Array<string> }) => (
   </LinkList>
 );
 
-const FooterLinks = () => (
+const FooterLinks4 = () => (
+  <>
+    <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+      <h3>Overheid.nl</h3>
+      <LinkListMaker list={linkList1} />
+    </div>
+    <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+      <h3>Officiële overheidsinformatie</h3>
+      <LinkListMaker list={linkList2} />
+    </div>
+    <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+      <h3>Andere overheidssites</h3>
+      <LinkListMaker list={linkList3} />
+    </div>
+    <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+      <h3>Officiële overheidsinformatie</h3>
+      <LinkListMaker list={linkList2} />
+    </div>
+  </>
+);
+
+const FooterLinks3 = () => (
   <>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
       <h2>Overheid.nl</h2>
@@ -54,14 +75,46 @@ const FooterNavbarLinks = () => (
 export const Default = () => (
   <footer className="rhc-page-footer rhc-page-section">
     <div className="rhc-page-section__content">
-      <div className="rhc-grid rhc-page-footer__primary">
-        <FooterLinks />
+      <div className="rhc-page-footer__primary">
+        <div className="rhc-page-footer__tagline">Overheid.nl</div>
+        <div className="rhc-grid">
+          <FooterLinks4 />
+        </div>
       </div>
       <div className="rhc-page-footer__separator">
         <Separator />
       </div>
       <div className="rhc-page-footer__secondary">
         <FooterNavbarLinks />
+      </div>
+    </div>
+  </footer>
+);
+
+export const TaglineInColumn = () => (
+  <footer className="rhc-page-footer rhc-page-section">
+    <div className="rhc-page-section__content">
+      <div className="rhc-grid rhc-page-footer__primary">
+        <FooterLinks3 />
+      </div>
+      <div className="rhc-page-footer__separator">
+        <Separator />
+      </div>
+      <div className="rhc-page-footer__secondary">
+        <FooterNavbarLinks />
+      </div>
+    </div>
+  </footer>
+);
+
+export const PrimaryOnly = () => (
+  <footer className="rhc-page-footer rhc-page-section">
+    <div className="rhc-page-section__content">
+      <div className="rhc-page-footer__primary">
+        <div className="rhc-page-footer__tagline">Overheid.nl</div>
+        <div className="rhc-grid">
+          <FooterLinks4 />
+        </div>
       </div>
     </div>
   </footer>

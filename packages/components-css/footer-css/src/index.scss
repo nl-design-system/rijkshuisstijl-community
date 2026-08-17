@@ -54,6 +54,8 @@
   }
 
   &__primary {
+    display: flex;
+    flex-direction: column;
     padding-block-end: var(--rhc-page-footer-primary-padding-block-end);
     padding-block-start: var(--rhc-page-footer-primary-padding-block-start);
     row-gap: var(--rhc-page-footer-primary-row-gap);
