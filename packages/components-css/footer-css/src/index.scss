@@ -30,8 +30,7 @@
   &__primary {
     display: flex;
     flex-direction: column;
-    padding-block-end: var(--rhc-page-footer-primary-padding-block-end);
-    padding-block-start: var(--rhc-page-footer-primary-padding-block-start);
+    padding-block: var(--rhc-page-footer-primary-padding-block);
     row-gap: var(--rhc-page-footer-primary-row-gap);
 
     .rhc-grid {
@@ -43,8 +42,7 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding-block-end: var(--rhc-page-footer-secondary-padding-block-end);
-    padding-block-start: var(--rhc-page-footer-secondary-padding-block-start);
+    padding-block: var(--rhc-page-footer-secondary-padding-block);
     row-gap: var(--rhc-page-footer-secondary-row-gap);
 
     @media screen and (width < 768px) {
