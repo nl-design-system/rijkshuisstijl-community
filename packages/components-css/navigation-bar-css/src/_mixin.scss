@@ -9,7 +9,8 @@
   position: relative;
   align-items: center;
   background-color: var(--rhc-navigation-bar-background-color);
-  box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0 var(--rhc-navigation-bar-border-color);
+  box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0
+    var(--rhc-navigation-bar-border-color);
   color: var(--rhc-navigation-bar-color);
   display: flex;
   font-family: var(--rhc-text-font-family-default, inherit);
@@ -56,7 +57,7 @@
         font-size: var(--rhc-navigation-bar-identity-primary-font-size);
         font-weight: var(--rhc-navigation-bar-identity-primary-font-weight);
         line-height: var(--rhc-navigation-bar-identity-primary-line-height);
-  
+
         font-size: 1.5em;
         font-weight: bold;
       }
@@ -80,7 +81,7 @@
 
 @mixin rhc-nav-bar__slot-main__btn-trigger {
   margin-inline-start: auto;
-  
+
   @media (width > 768px) {
     display: none;
   }
@@ -119,7 +120,6 @@
       }
     }
   }
-
 }
 
 // MEGAMENU --
@@ -191,7 +191,7 @@
   margin-inline: 0;
   padding-block: 0;
   padding-inline: 0;
-  
+
   @media (width >= 768px) {
     display: flex;
   }
@@ -223,10 +223,11 @@
     color: var(--rhc-navigation-bar-link-active-color);
     border-color: var(--rhc-navigation-bar-link-active-border-color);
   }
-  
+
   &:hover {
     background-color: var(--rhc-navigation-bar-link-hover-background-color);
-    box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0 var(--rhc-navigation-bar-link-hover-border-color);
+    box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0
+      var(--rhc-navigation-bar-link-hover-border-color);
     color: var(--rhc-navigation-bar-link-hover-color);
     text-decoration: none;
   }
@@ -240,7 +241,8 @@
     // background-color: var(--rhc-navigation-bar-link-current-background-color);
     font-weight: var(--rhc-navigation-bar-link-current-font-weight);
     color: var(--rhc-navigation-bar-link-current-color);
-    box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0 var(--rhc-navigation-bar-link-current-border-color);
+    box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0
+      var(--rhc-navigation-bar-link-current-border-color);
   }
 }
 
