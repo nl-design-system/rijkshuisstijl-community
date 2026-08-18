@@ -109,7 +109,6 @@
         top: 100%;
         left: 0;
         right: 0;
-        background: orange;
       }
 
       @media (width >= 768px) {
@@ -150,11 +149,12 @@
 @mixin rhc-nav-bar__megamenu {
   // position: relative;
   top: 2.9em;
-  // right: -2em;
-  padding: 2em;
-  background: #c2c2c2;
-
+  padding-inline: var(--rhc-page-section-vi-small-padding-inline);
+  background: var(--rhc-mega-menu-background-color);
+  background: red;
+  
   @media (width >= 768px) {
+    padding-inline: var(--rhc-page-section-vi-large-padding-inline);
     position: absolute;
     top: 2.4em;
     left: 0;
@@ -198,7 +198,7 @@
 }
 
 @mixin rhc-nav-bar__heading {
-  font-weight: var(--rhc-navigation-bar-item-current-font-weight);
+  // font-weight: var(--rhc-navigation-bar-item-current-font-weight);
 }
 
 @mixin rhc-nav-bar__link {
