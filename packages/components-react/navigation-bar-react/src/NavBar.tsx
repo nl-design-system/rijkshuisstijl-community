@@ -6,9 +6,9 @@
 import { FocusTrap } from '@rijkshuisstijl-community/focus-trap/no-side-effects';
 import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react/no-side-effects';
 import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react/no-side-effects';
+import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 import { LinkList, LinkListLink } from '@rijkshuisstijl-community/link-list-react/no-side-effects';
 import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
-import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -26,7 +26,6 @@ const NavBarIdentity = ({ value, href, appearance }: NavBarIdentityProps) => (
 );
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
-  headingItem?: NavBarItemProps;
   identity?: NavBarIdentityProps;
   items?: NavBarItemProps[];
   endItems?: NavBarItemProps[];
@@ -150,7 +149,6 @@ export const NavBar = ({
   ref,
   children,
   className,
-  headingItem,
   identity,
   items,
   endItems,
@@ -187,7 +185,7 @@ export const NavBar = ({
 
       {megamenu ? (
         <FocusTrap active={isOpen} className={clsx('rhc-nav-bar__slot-megamenu', isOpen && 'is-megamenu-open')}>
-          <LinkButton onClick={() => setIsOpen((prev) => !prev)} aria-expanded={isOpen}>
+          <LinkButton aria-expanded={isOpen} onClick={() => setIsOpen((prev) => !prev)}>
             <Icon icon="menu" />
             <span className="rhc-visually-hidden-mobile">Kies een onderwerp of dienst</span>
           </LinkButton>
