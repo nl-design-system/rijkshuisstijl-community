@@ -11,6 +11,7 @@
 }
 
 @mixin rhc-page-section__content {
+  box-sizing: border-box;
   flex-grow: 1;
   max-inline-size: var(--rhc-page-section-max-inline-size);
   padding-inline: var(--rhc-page-section-vi-small-padding-inline);
