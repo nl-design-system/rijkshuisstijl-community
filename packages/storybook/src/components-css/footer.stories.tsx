@@ -3,6 +3,12 @@ import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
 import { Icon, Link, LinkList, LinkListLink, Separator } from '@rijkshuisstijl-community/components-react';
 
+const headerlikeStyles = {
+  fontSize: '1.17em',
+  fontWeight: 700,
+  marginBlockEnd: '1em',
+};
+
 const linkList1 = ['Contact', 'Veel gestelde vragen', 'Over deze site', 'Werken bij'];
 
 const linkList2 = ['Wetten', 'Verdragen', 'Lokale regelgeving', 'Officiële bekendmakingen', 'Tuchtrecht'];
@@ -22,19 +28,19 @@ const LinkListMaker = ({ list }: { list: Array<string> }) => (
 const FooterLinks4 = () => (
   <>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <h3>Rijksoverheid.nl</h3>
+      <div style={headerlikeStyles}>Rijksoverheid.nl</div>
       <LinkListMaker list={linkList1} />
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <h3>Officiële overheidsinformatie</h3>
+      <div style={headerlikeStyles}>Officiële overheidsinformatie</div>
       <LinkListMaker list={linkList2} />
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <h3>Andere overheidssites</h3>
+      <div style={headerlikeStyles}>Andere overheidssites</div>
       <LinkListMaker list={linkList3} />
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <h3>Officiële overheidsinformatie</h3>
+      <div style={headerlikeStyles}>Officiële overheidsinformatie</div>
       <LinkListMaker list={linkList2} />
     </div>
   </>
@@ -49,15 +55,15 @@ const FooterLinks3 = () => (
       </p>
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <h3>Overheid.nl</h3>
+      <div style={headerlikeStyles}>Overheid.nl</div>
       <LinkListMaker list={linkList1} />
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <h3>Officiële overheidsinformatie</h3>
+      <div style={headerlikeStyles}>Officiële overheidsinformatie</div>
       <LinkListMaker list={linkList2} />
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <h3>Andere overheidssites</h3>
+      <div style={headerlikeStyles}>Andere overheidssites</div>
       <LinkListMaker list={linkList3} />
     </div>
   </>

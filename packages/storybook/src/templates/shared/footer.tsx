@@ -1,6 +1,12 @@
 import '@rijkshuisstijl-community/footer-css/dist/index.css';
 import { Icon, Link, LinkList, LinkListLink, Separator } from '@rijkshuisstijl-community/components-react';
 
+const headerlikeStyles = {
+  fontSize: '1.17em',
+  fontWeight: 700,
+  marginBlockEnd: '1em',
+};
+
 const SharedFooter = () => (
   <footer className="rhc-page-footer rhc-page-section">
     <div className="rhc-page-section__content">
@@ -8,7 +14,7 @@ const SharedFooter = () => (
         <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
         <div className="rhc-grid">
           <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-            <h3>Rijksoverheid.nl</h3>
+            <div style={headerlikeStyles}>Rijksoverheid.nl</div>
             <LinkList>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
                 Contact
@@ -25,7 +31,7 @@ const SharedFooter = () => (
             </LinkList>
           </div>
           <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-            <h3>Officiële overheidsinformatie</h3>
+            <div style={headerlikeStyles}>Officiële overheidsinformatie</div>
             <LinkList>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
                 Wetten
@@ -45,7 +51,7 @@ const SharedFooter = () => (
             </LinkList>
           </div>
           <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-            <h3>Andere overheidssites</h3>
+            <div style={headerlikeStyles}>Andere overheidssites</div>
             <LinkList>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
                 Mijn overheid
@@ -62,7 +68,7 @@ const SharedFooter = () => (
             </LinkList>
           </div>
           <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-            <h3>Officiële overheidsinformatie</h3>
+            <div style={headerlikeStyles}>Officiële overheidsinformatie</div>
             <LinkList>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
                 Wetten
