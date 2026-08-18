@@ -5,7 +5,6 @@
 
 @use "@rijkshuisstijl-community/visually-hidden-css/src/mixin" as visually-hidden;
 
-
 @mixin rhc-nav-bar {
   position: relative;
   align-items: center;
@@ -187,12 +186,15 @@
 
 @mixin rhc-nav-bar__list {
   background-color: var(--rhc-navigation-bar-background-color);
-  display: flex;
   list-style: none;
   margin-block: 0;
   margin-inline: 0;
   padding-block: 0;
   padding-inline: 0;
+  
+  @media (width >= 768px) {
+    display: flex;
+  }
 }
 
 @mixin rhc-nav-bar__heading {
