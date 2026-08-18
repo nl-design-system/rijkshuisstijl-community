@@ -5,7 +5,6 @@
 
 @use "@rijkshuisstijl-community/visually-hidden-css/src/mixin" as visually-hidden;
 
-
 @mixin rhc-nav-bar {
   position: relative;
   align-items: center;
@@ -16,6 +15,7 @@
   font-family: var(--rhc-text-font-family-default, inherit);
   inline-size: 100%;
   z-index: var(--rhc-navigation-bar-z-index, 2);
+  //gap: var(--rhc-navigation-bar-column-gap);
 
   @at-root {
     .rhc-nav-bar ~ .rhc-nav-bar {
@@ -40,13 +40,35 @@
 // IDENTITY --
 @mixin rhc-nav-bar__slot-identity {
   flex-shrink: 0;
+  font-weight: var(--rhc-navigation-bar-item-current-font-weight);
+  padding-inline-end: var(--rhc-navigation-bar-item-padding-inline-end);
 }
+
+// //HEADING
+// @mixin rhc-nav-bar__slot-heading {
+//   align-items: center;
+//   justify-content: center;
+//   display: flex;
+//   flex-shrink: 0;
+//   flex-grow: 0;
+//   padding-inline-end: var(--rhc-navigation-bar-item-padding-inline-end, 1rem); 
+//   row-gap: var(--rhc-navigation-bar-item-column-gap, 0.5rem);
+
+//   .rhc-nav-bar__heading-link {
+//     display: inline-flex;
+//     align-items: center;
+//     color: inherit;
+    
+//     text-decoration: none; 
+//     --nl-link-text-decoration-line: none;
+//   }
+// }
 
 // MAIN --
 @mixin rhc-nav-bar__slot-main {
+  align-items: center;
   display: flex;
   flex-grow: 1;
-  align-items: center;
 
   // als er twee _slot's zijn, dan moet de tweede _slot naar rechts worden geduwd
   @media (width > 768px) {
@@ -58,7 +80,7 @@
 
 @mixin rhc-nav-bar__slot-main__btn-trigger {
   margin-inline-start: auto;
-  
+
   @media (width > 768px) {
     display: none;
   }
@@ -97,7 +119,6 @@
       }
     }
   }
-
 }
 
 // MEGAMENU --
@@ -106,10 +127,33 @@
   flex-grow: 1;
   align-items: center;
 
+  // > button,
+  // > .utrecht-link-button {
+  //   gap: 0.5rem;
+  //   font-weight: var(--rhc-navigation-bar-item-font-weight, 600);
+  //   text-decoration: none;
+
+  //   &:hover {
+  //     background-color: var(--rhc-navigation-bar-item-hover-background-color);
+  //     color: var(--rhc-navigation-bar-item-hover-color);
+  //   }
+
+  //   .rhc-icon {
+  //     width: 24px;
+  //     height: 24px;
+
+  //     svg {
+  //       width: 100%;
+  //       height: 100%;
+  //     }
+  //   }
+  }
+
   @at-root {
     @media (width <= 768px) {
       & > :first-child {
         margin-inline-start: auto;
+        font-weight: var(--rhc-navigation-bar-item-font-weight);
       }
     }
     @media (width > 768px) {
@@ -118,7 +162,7 @@
       }
     }
   }
-}
+
 
 // ---
 @mixin rhc-nav-bar__slot {
@@ -144,12 +188,24 @@
   position: absolute;
   right: 0.75em;
   top: 0.75em;
+
+  .rhc-icon, svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+
+  &:hover {
+    background-color: var(--rhc-navigation-bar-item-hover-background-color, #f3f4f6);
+  }
+
   @media (width >= 768px) {
-    display: none;
+    // display: none;
     right: 0.75em;
     top: 2.75em;
   }
 }
+
 
 // TAGLINE --
 @mixin rhc-nav-bar__megamenu-tagline {
@@ -170,10 +226,11 @@
   margin-inline: 0;
   padding-block: 0;
   padding-inline: 0;
-}
 
-@mixin rhc-nav-bar__heading {
-  font-weight: var(--rhc-navigation-bar-item-current-font-weight);
+  @media (width <= 768px) {
+    flex-direction: column;
+    inline-size: 100%; 
+  }
 }
 
 @mixin rhc-nav-bar__link {

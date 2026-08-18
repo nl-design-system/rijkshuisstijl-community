@@ -71,12 +71,13 @@ const HeaderFooter = () => {
                   href: '/',
                   id: 'end-first-link',
                   label: 'Taalswitch',
+                  icon: <Icon icon="chevron-down" />,
                 },
                 {
                   href: '/',
                   id: 'end-second-link',
                   label: 'Contact',
-                  icon: <Icon icon="chat" />,
+                  icon: <Icon icon="comment" />,
                 },
               ]}
             />
@@ -114,7 +115,7 @@ const HeaderFooter = () => {
                   href: '/',
                   id: 'end-first-link',
                   label: 'Zoeken',
-                  icon: <Icon icon="" />,
+                  icon: <Icon icon="zoek" />,
                 },
                 {
                   href: '/',

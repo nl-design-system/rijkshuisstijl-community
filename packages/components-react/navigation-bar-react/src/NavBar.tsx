@@ -6,9 +6,9 @@
 import { FocusTrap } from '@rijkshuisstijl-community/focus-trap/no-side-effects';
 import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react/no-side-effects';
 import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react/no-side-effects';
+import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 import { LinkList, LinkListLink } from '@rijkshuisstijl-community/link-list-react/no-side-effects';
 import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
-import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -85,7 +85,6 @@ const NavBarItem = ({
 
   return (
     <li className={clsx('rhc-nav-bar__item', isItemOpen && 'is-open', className)} ref={ref} {...restProps}>
-
       {subList ? (
         <LinkButton
           aria-controls={`rhc-nav-bar__item-dropdown-${contentId}`}
@@ -163,6 +162,17 @@ export const NavBar = ({
     <div className={clsx('rhc-nav-bar', isOpen && 'is-open')}>
       {identity && <div className="rhc-nav-bar__slot-identity">{identity}</div>}
 
+      {headingItem && (
+        <div className="rhc-nav-bar__slot-heading">
+          <Heading className="rhc-nav-bar__heading" level={5}>
+            <Link className="rhc-nav-bar__heading-link" href={headingItem.href} target={headingItem.target}>
+              {headingItem.label}
+            </Link>
+          </Heading>
+        </div>
+      )}
+ 
+    
       {megamenu ? (
         <FocusTrap active={isOpen} className={clsx('rhc-nav-bar__slot-megamenu', isOpen && 'is-megamenu-open')}>
           <LinkButton onClick={() => setIsOpen((prev) => !prev)} aria-expanded={isOpen}>
@@ -282,7 +292,6 @@ export const NavBar = ({
 
 NavBar.displayName = 'NavBar';
 
-
 export const NavBarMegaMenu = ({
   ref,
   children,
@@ -319,19 +328,18 @@ export const SubNavBar = ({ ref, children, className, columns, ...restProps }: P
   return (
     <div className={clsx('', className)} ref={ref} {...restProps}>
       <div className="rhc-sub-nav-bar__content">
-        
-          {columns.map((column: NavBarLinkProps[]) => (
-            <div className="rhc-sub-nav-bar__list" key={column.map((item) => item.id).join('-')}>
-              <LinkList>
-                {column.map(({ id, href, target, label }) => (
-                  <LinkListLink href={href} icon={<Icon icon={'chevron-right'} />} key={id} target={target}>
-                    {label}
-                  </LinkListLink>
-                ))}
-              </LinkList>
-            </div>
-          ))}
-        
+        {columns.map((column: NavBarLinkProps[]) => (
+          <div className="rhc-sub-nav-bar__list" key={column.map((item) => item.id).join('-')}>
+            <LinkList>
+              {column.map(({ id, href, target, label }) => (
+                <LinkListLink href={href} icon={<Icon icon={'chevron-right'} />} key={id} target={target}>
+                  {label}
+                </LinkListLink>
+              ))}
+            </LinkList>
+          </div>
+        ))}
+
         {children}
       </div>
     </div>

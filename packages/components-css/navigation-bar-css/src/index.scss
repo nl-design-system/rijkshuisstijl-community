@@ -7,7 +7,6 @@
 @forward "@rijkshuisstijl-community/link-css/dist/index.css";
 @forward "@rijkshuisstijl-community/heading-css/dist/index.css";
 
-
 .rhc-nav-bar {
   @include mixin.rhc-nav-bar;
 }
@@ -39,7 +38,6 @@
   @include mixin.rhc-nav-bar__slot-megamenu;
 }
 
-
 .rhc-nav-bar__megamenu {
   @include mixin.rhc-nav-bar__megamenu;
 }
@@ -58,10 +56,6 @@
 
 .rhc-nav-bar__list {
   @include mixin.rhc-nav-bar__list;
-}
-
-.rhc-nav-bar__heading {
-  @include mixin.rhc-nav-bar__heading;
 }
 
 .rhc-nav-bar__link {

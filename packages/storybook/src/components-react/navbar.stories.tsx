@@ -61,17 +61,6 @@ export const Default: Story = {
   },
 };
 
-export const WithHeading: Story = {
-  args: {
-    items,
-    headingItem: {
-      id: 'heading',
-      label: 'Heading',
-      href: '/',
-    },
-  },
-};
-
 export const WithIdentity: Story = {
   args: {
     identity: 'Identity',
@@ -125,7 +114,6 @@ export const WithMegamenu: Story = {
           ]}
         />
       }
-
     />
   ),
 };
