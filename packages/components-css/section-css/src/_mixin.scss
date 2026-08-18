@@ -13,5 +13,12 @@
 @mixin rhc-page-section__content {
   flex-grow: 1;
   max-inline-size: var(--rhc-page-section-max-inline-size);
-  padding-inline: var(--rhc-page-section-padding-inline);
+  padding-inline: var(--rhc-page-section-vi-small-padding-inline);
+
+  @media screen and (width >= 768px) {
+    padding-inline: var(--rhc-page-section-vi-medium-padding-inline);
+  }
+  @media screen and (width >= 1024px) {
+    padding-inline: var(--rhc-page-section-vi-large-padding-inline);
+  }
 }
