@@ -201,12 +201,12 @@
 
 @mixin rhc-nav-bar__link {
   --nl-link-text-decoration-line: none;
-  --nl-link-color: var(--rhc-navigation-bar-item-color);
-  --utrecht-link-visited-color: var(--rhc-navigation-bar-item-color);
+  --nl-link-color: var(--rhc-navigation-bar-link-color);
+  --utrecht-link-visited-color: var(--rhc-navigation-bar-link-color);
 
   // column-gap
-  background-color: var(--rhc-navigation-bar-item-background-color);
-  color: var(--rhc-navigation-bar-item-color);
+  background-color: var(--rhc-navigation-bar-link-background-color);
+  color: var(--rhc-navigation-bar-link-color);
   font-size: var(--rhc-navigation-bar-item-font-size);
   font-weight: var(--rhc-navigation-bar-item-font-weight);
   line-height: var(--rhc-navigation-bar-item-line-height);
@@ -217,28 +217,28 @@
   text-decoration: none;
 
   &:active {
-    background-color: var(--rhc-navigation-bar-item-active-background-color);
-    color: var(--rhc-navigation-bar-item-active-color);
-    border-color: var(--rhc-navigation-bar-item-active-border-color);
+    background-color: var(--rhc-navigation-bar-link-active-background-color);
+    color: var(--rhc-navigation-bar-link-active-color);
+    border-color: var(--rhc-navigation-bar-link-active-border-color);
   }
   
   &:hover {
-    background-color: var(--rhc-navigation-bar-item-hover-background-color);
-    box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0 var(--rhc-navigation-bar-item-hover-border-color);
-    color: var(--rhc-navigation-bar-item-hover-color);
+    background-color: var(--rhc-navigation-bar-link-hover-background-color);
+    box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0 var(--rhc-navigation-bar-link-hover-border-color);
+    color: var(--rhc-navigation-bar-link-hover-color);
     text-decoration: none;
   }
 
   &:focus {
-    background-color: var(--rhc-navigation-bar-item-focus-background-color);
-    color: var(--rhc-navigation-bar-item-focus-color);
+    background-color: var(--rhc-navigation-bar-link-focus-background-color);
+    color: var(--rhc-navigation-bar-link-focus-color);
   }
 
   &[aria-current="page"] {
-    background-color: var(--rhc-navigation-bar-item-current-background-color);
-    font-weight: var(--rhc-navigation-bar-item-current-font-weight);
-    color: var(--rhc-navigation-bar-item-current-color);
-    box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0 var(--rhc-navigation-bar-item-current-border-color);
+    // background-color: var(--rhc-navigation-bar-link-current-background-color);
+    font-weight: var(--rhc-navigation-bar-link-current-font-weight);
+    color: var(--rhc-navigation-bar-link-current-color);
+    box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0 var(--rhc-navigation-bar-link-current-border-color);
   }
 }
 
