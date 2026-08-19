@@ -43,16 +43,17 @@
   flex-shrink: 0;
 }
 @mixin rhc-nav-bar__identity {
-  a {
+  .rhc-link {
     font-size: 1em;
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
+
+    &:not(:hover){
+      text-decoration: none;
+    }
   }
 
   @at-root {
     &--primary {
-      a {
+      .rhc-link {
         color: var(--rhc-navigation-bar-identity-primary-color);
         font-size: 1.5em;
         font-weight: 700;
@@ -102,7 +103,7 @@
     .rhc-nav-bar__slot-megamenu.is-megamenu-open & {
       @media (width <= 768px) {
         @include visually-hidden.rhc-visually-hidden-reset;
-
+        background: var(--rhc-navigation-bar-mega-menu-background-color);
         display: block;
         left: 0;
         position: absolute;
