@@ -1,13 +1,7 @@
 import '@rijkshuisstijl-community/footer-css/dist/index.css';
 import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
-import { Icon, Link, LinkList, LinkListLink, Separator } from '@rijkshuisstijl-community/components-react';
-
-const headerlikeStyles = {
-  fontSize: '1.17em',
-  fontWeight: 700,
-  marginBlockEnd: '1em',
-};
+import { Heading, Icon, Link, LinkList, LinkListLink, Separator } from '@rijkshuisstijl-community/components-react';
 
 const linkList1 = ['Contact', 'Veel gestelde vragen', 'Over deze site', 'Werken bij'];
 
@@ -28,19 +22,19 @@ const LinkListMaker = ({ list }: { list: Array<string> }) => (
 const FooterLinks4 = () => (
   <>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <div style={headerlikeStyles}>Rijksoverheid.nl</div>
+      <Heading appearanceLevel={5} level={3}>Rijksoverheid.nl</Heading>
       <LinkListMaker list={linkList1} />
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <div style={headerlikeStyles}>Officiële overheidsinformatie</div>
+      <Heading appearanceLevel={5} level={3}>Officiële overheidsinformatie</Heading>
       <LinkListMaker list={linkList2} />
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <div style={headerlikeStyles}>Andere overheidssites</div>
+      <Heading appearanceLevel={5} level={3}>Andere overheidssites</Heading>
       <LinkListMaker list={linkList3} />
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <div style={headerlikeStyles}>Officiële overheidsinformatie</div>
+      <Heading appearanceLevel={5} level={3}>Officiële overheidsinformatie</Heading>
       <LinkListMaker list={linkList2} />
     </div>
   </>
@@ -49,21 +43,21 @@ const FooterLinks4 = () => (
 const FooterLinks3 = () => (
   <>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <h2>De Rijksoverheid. Voor Nederland</h2>
+      <h2 style={{ marginTop: 0 }}>De Rijksoverheid. Voor Nederland</h2>
       <p>
         <i>Ingang naar informatie en diensten van alle overheden</i>
       </p>
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <div style={headerlikeStyles}>Overheid.nl</div>
+      <Heading appearanceLevel={5} level={3}>Overheid.nl</Heading>
       <LinkListMaker list={linkList1} />
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <div style={headerlikeStyles}>Officiële overheidsinformatie</div>
+      <Heading appearanceLevel={5} level={3}>Officiële overheidsinformatie</Heading>
       <LinkListMaker list={linkList2} />
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <div style={headerlikeStyles}>Andere overheidssites</div>
+      <Heading appearanceLevel={5} level={3}>Andere overheidssites</Heading>
       <LinkListMaker list={linkList3} />
     </div>
   </>
