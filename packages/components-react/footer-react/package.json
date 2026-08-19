@@ -1,5 +1,5 @@
 {
-  "version": "1.0.3",
+  "version": "0.0.0",
   "author": "Community for Rijkshuisstijl-Community Design System",
   "description": "Footer component",
   "license": "EUPL-1.2",
@@ -29,8 +29,7 @@
     "build": "rollup --config rollup.config.mjs",
     "clean": "rimraf dist",
     "watch": "rollup --config rollup.config.mjs --watch",
-    "typecheck": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
-    "test": "vitest run --coverage --reporter verbose"
+    "typecheck": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json"
   },
   "keywords": [
     "rijkshuisstijl-community-design-system"
@@ -81,12 +80,9 @@
     "react-dom": ">=18.2.0"
   },
   "dependencies": {
-    "@rijkshuisstijl-community/column-layout-react": "workspace:*",
     "@rijkshuisstijl-community/footer-css": "workspace:*",
-    "@rijkshuisstijl-community/heading-react": "workspace:*",
-    "@rijkshuisstijl-community/icon-react": "workspace:*",
-    "@rijkshuisstijl-community/link-react": "workspace:*",
-    "@utrecht/component-library-react": "13.3.1",
-    "@utrecht/page-footer-react": "1.0.13"
+    "@rijkshuisstijl-community/grid-css": "workspace:*",
+    "@rijkshuisstijl-community/section-css": "workspace:*",
+    "@rijkshuisstijl-community/separator-react": "workspace:*"
   }
 }

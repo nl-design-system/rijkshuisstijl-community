@@ -2705,7 +2705,7 @@
         "page": {
           "md": {
             "$type": "dimension",
-            "$value": "80rem"
+            "$value": "84rem"
           }
         }
       },
@@ -8912,6 +8912,34 @@
       }
     }
   },
+  "components/grid": {
+    "rhc": {
+      "grid": {
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{rhc.grid.vi-large.column-gap}"
+        },
+        "vi-large": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          }
+        },
+        "vi-medium": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          }
+        },
+        "vi-small": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.xl}"
+          }
+        }
+      }
+    }
+  },
   "components/heading/base": {
     "nl": {
       "heading": {
@@ -9777,7 +9805,8 @@
           "min": {
             "font-size": {
               "$type": "fontSizes",
-              "$value": "0.75rem"
+              "$value": "0",
+              "$description": "[todo]0.75rem"
             }
           }
         },
@@ -10379,7 +10408,7 @@
     }
   },
   "components/page-footer": {
-    "utrecht": {
+    "rhc": {
       "page-footer": {
         "background-color": {
           "$type": "color",
@@ -10389,124 +10418,74 @@
           "$type": "color",
           "$value": "{rhc.color.foreground.on-dark-color}"
         },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.none}"
-        },
-        "padding-block-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.none}"
-        },
-        "padding-inline-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.none}"
-        },
-        "padding-inline-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.none}"
-        },
-        "content": {
-          "max-inline-size": {
-            "$type": "dimension",
-            "$value": "{rhc.size.page.md}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{rhc.size.lint}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{rhc.size.lint}"
-          },
-          "padding-inline": {
-            "$type": "dimension",
-            "$value": "{rhc.size.quarter-lint}"
-          }
-        }
-      }
-    },
-    "rhc": {
-      "page-footer": {
-        "column-gap": {
-          "$type": "dimension",
-          "$value": "{rhc.space.2xl}"
-        },
-        "column-width": {
-          "$type": "dimension",
-          "$value": "12.5rem"
-        },
-        "column": {
-          "title": {
-            "margin-block-end": {
-              "$type": "dimension",
-              "$value": "{rhc.space.lg}"
+        "compact": {
+          "tagline": {
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "{rhc.text.font-size.lg}"
             }
-          }
-        },
-        "content": {
-          "max-inline-size": {
-            "$type": "dimension",
-            "$value": "{rhc.size.page.md}"
           },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{rhc.space.xl}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "{rhc.space.xl}"
-          },
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{rhc.space.3xl}"
-          }
-        },
-        "border-block-start-width": {
-          "$type": "dimension",
-          "$value": "{rhc.border-width.md}"
-        },
-        "border-block-start-color": {
-          "$type": "color",
-          "$value": "{rhc.color.core.300}"
-        },
-        "border-block-start-style": {
-          "$type": "other",
-          "$value": "solid"
-        },
-        "outlined": {
           "background-color": {
             "$type": "color",
-            "$value": "{rhc.color.wit}"
+            "$value": "{rhc.color.core.50}"
           },
           "color": {
             "$type": "color",
             "$value": "{rhc.color.core.500}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{rhc.color.core.500}"
           }
         },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
+        "primary": {
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{rhc.space.4xl}"
+          },
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.3xl}"
+          }
         },
-        "padding-block-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
+        "secondary": {
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          }
         },
-        "padding-inline-start": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
+        "navigation-bar": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          },
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.lg}"
+          },
+          "link": {
+            "text-decoration-line": {
+              "$type": "textDecoration",
+              "$value": "none"
+            },
+            "min-block-size": {
+              "$type": "dimension",
+              "$value": "{rhc.size.pointer-target}"
+            }
+          }
         },
-        "padding-inline-end": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
-        },
-        "flex": {
-          "direction": {
-            "$type": "flexDirection",
-            "$value": "column"
+        "tagline": {
+          "font-style": {
+            "$type": "$other",
+            "$value": "italic"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{rhc.text.line-height.md}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.xl}"
           }
         }
       }
@@ -10578,6 +10557,38 @@
             "$type": "other",
             "$value": "{rhc.space.xs}",
             "$description": "[code-only]"
+          }
+        }
+      }
+    }
+  },
+  "components/page-section": {
+    "rhc": {
+      "page-section": {
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{rhc.page-section.vi-large.padding-inline}"
+        },
+        "max-inline-size": {
+          "$type": "dimension",
+          "$value": "90rem"
+        },
+        "vi-small": {
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.xl}"
+          }
+        },
+        "vi-medium": {
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          }
+        },
+        "vi-large": {
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
           }
         }
       }
@@ -12385,6 +12396,7 @@
         "components/form-field-label-suffix": "source",
         "components/form-field-option-label": "source",
         "components/form-field-radio-option": "source",
+        "components/grid": "source",
         "components/heading/base": "source",
         "components/hero": "source",
         "components/icon": "source",
@@ -12403,6 +12415,7 @@
         "components/page-body": "source",
         "components/page-footer": "source",
         "components/page-number-navigation": "source",
+        "components/page-section": "source",
         "components/paragraph": "source",
         "components/pre-heading": "source",
         "components/radio-button": "source",
@@ -12493,6 +12506,7 @@
       "components/form-field-label-suffix",
       "components/form-field-option-label",
       "components/form-field-radio-option",
+      "components/grid",
       "components/heading/base",
       "components/heading/color-core",
       "components/heading/color-primary",
@@ -12513,6 +12527,7 @@
       "components/page-body",
       "components/page-footer",
       "components/page-number-navigation",
+      "components/page-section",
       "components/paragraph",
       "components/pre-heading",
       "components/radio-button",
@@ -12533,6 +12548,6 @@
       "components/unordered-list",
       "components/page-header",
       "viewport/min"
-      ]
-    }
+    ]
   }
+}
