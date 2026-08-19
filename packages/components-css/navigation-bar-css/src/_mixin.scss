@@ -43,16 +43,18 @@
   flex-shrink: 0;
 }
 @mixin rhc-nav-bar__identity {
-  a {
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
+  .rhc-link {
+    // font-weight: bold;
     font-size: 1em;
+
+    &:not(:hover){
+      text-decoration: none;
+    }
   }
 
   @at-root {
     &--primary {
-      a {
+      .rhc-link {
         color: var(--rhc-navigation-bar-identity-primary-color);
         font-size: var(--rhc-navigation-bar-identity-primary-font-size);
         font-weight: var(--rhc-navigation-bar-identity-primary-font-weight);
@@ -105,6 +107,7 @@
     .rhc-nav-bar__slot-megamenu.is-megamenu-open & {
       @media (width <= 768px) {
         @include visually-hidden.rhc-visually-hidden-reset;
+        background: var(--rhc-navigation-bar-mega-menu-background-color);
         display: block;
         position: absolute;
         top: 100%;
