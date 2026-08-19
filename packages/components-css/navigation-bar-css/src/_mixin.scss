@@ -107,6 +107,7 @@
     .rhc-nav-bar__slot-megamenu.is-megamenu-open & {
       @media (width <= 768px) {
         @include visually-hidden.rhc-visually-hidden-reset;
+
         background: var(--rhc-navigation-bar-mega-menu-background-color);
         display: block;
         left: 0;
