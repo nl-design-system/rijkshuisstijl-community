@@ -11,6 +11,102 @@ import { FooterFooterLinks, FooterLinks } from '../../components-css/footer.stor
 import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
 
+const endItemsPrimary = [
+  {
+    href: '/',
+    id: 'end-first-link',
+    label: 'Taalswitch',
+  },
+  {
+    href: '/',
+    id: 'end-second-link',
+    label: 'Contact',
+    currentPage: true,
+    icon: <Icon icon="inloggen" />,
+  },
+];
+
+const endItemsSecondary = [
+  {
+    href: '/',
+    id: 'end-first-link',
+    label: 'Zoeken',
+    icon: <Icon icon="inloggen" />,
+  },
+  {
+    href: '/',
+    id: 'end-second-link',
+    label: 'Inloggen',
+    icon: <Icon icon="inloggen" />,
+  },
+];
+
+const itemsMain = [
+  {
+    href: '/',
+    id: 'data',
+    label: 'Data',
+  },
+  {
+    href: '/',
+    id: 'impact',
+    label: 'Impact',
+  },
+  {
+    href: '/',
+    id: 'Communities',
+    label: 'Communities',
+  },
+  {
+    href: '/',
+    id: 'Actueel',
+    label: 'Actueel',
+  },
+  {
+    href: '/',
+    id: 'Support',
+    label: 'Support',
+  },
+];
+
+const megamenu = (
+  <NavBarMegaMenu
+    tagline="Ingang naar informatie en diensten van alle overheden"
+    columns={[
+      {
+        id: 'col-1',
+        heading: 'Diensten van de overheid',
+        items: [
+          { id: 'mm-1', label: 'Diensten overzicht', href: '/' },
+          { id: 'mm-2', label: 'Berichten over uw buurt', href: '/' },
+          { id: 'mm-3', label: 'Gegevens bij besluiten', href: '/' },
+          { id: 'mm-4', label: 'Internetconsultatie', href: '/' },
+          { id: 'mm-5', label: 'Levensgebeurtenissen', href: '/' },
+        ],
+      },
+      {
+        id: 'col-2',
+        heading: 'Beleid en regelgeving',
+        items: [
+          { id: 'mm-6', label: 'Overzicht', href: '/' },
+          { id: 'mm-7', label: 'Wetten', href: '/' },
+          { id: 'mm-8', label: 'Verdragen', href: '/' },
+          { id: 'mm-9', label: 'Lokale regelgeving', href: '/' },
+        ],
+      },
+      {
+        id: 'col-3',
+        heading: 'Transparantie',
+        items: [
+          { id: 'mm-10', label: 'Standaarden', href: '/' },
+          { id: 'mm-11', label: 'Open Data', href: '/' },
+          { id: 'mm-12', label: 'Linked data', href: '/' },
+        ],
+      },
+    ]}
+  />
+);
+
 const HeaderFooter = () => {
   const slot1 = <FooterLinks />;
   const slot2 = <FooterFooterLinks />;
@@ -25,105 +121,17 @@ const HeaderFooter = () => {
             </Logo>
             <NavBar
               identity={{ value: 'Overheid.nl', href: '/', appearance: 'primary' }}
-              endItems={[
-                {
-                  href: '/',
-                  id: 'end-first-link',
-                  label: 'Taalswitch',
-                },
-                {
-                  href: '/',
-                  id: 'end-second-link',
-                  label: 'Contact',
-                  currentPage: true,
-                  icon: <Icon icon="inloggen" />,
-                },
-              ].map((endItem) => (
+              megamenu={megamenu}
+              endItems={endItemsPrimary.map((endItem) => (
                 <NavBarItem key={endItem.id} {...endItem} />
               ))}
-              megamenu={
-                <NavBarMegaMenu
-                  tagline="Ingang naar informatie en diensten van alle overheden"
-                  columns={[
-                    {
-                      id: 'col-1',
-                      heading: 'Diensten van de overheid',
-                      items: [
-                        { id: 'mm-1', label: 'Diensten overzicht', href: '/' },
-                        { id: 'mm-2', label: 'Berichten over uw buurt', href: '/' },
-                        { id: 'mm-3', label: 'Gegevens bij besluiten', href: '/' },
-                        { id: 'mm-4', label: 'Internetconsultatie', href: '/' },
-                        { id: 'mm-5', label: 'Levensgebeurtenissen', href: '/' },
-                      ],
-                    },
-                    {
-                      id: 'col-2',
-                      heading: 'Beleid en regelgeving',
-                      items: [
-                        { id: 'mm-6', label: 'Overzicht', href: '/' },
-                        { id: 'mm-7', label: 'Wetten', href: '/' },
-                        { id: 'mm-8', label: 'Verdragen', href: '/' },
-                        { id: 'mm-9', label: 'Lokale regelgeving', href: '/' },
-                      ],
-                    },
-                    {
-                      id: 'col-3',
-                      heading: 'Transparantie',
-                      items: [
-                        { id: 'mm-10', label: 'Standaarden', href: '/' },
-                        { id: 'mm-11', label: 'Open Data', href: '/' },
-                        { id: 'mm-12', label: 'Linked data', href: '/' },
-                      ],
-                    },
-                  ]}
-                />
-              }
             />
             <NavBar
               identity={{ value: 'Dataregister', href: '/' }}
-              endItems={[
-                {
-                  href: '/',
-                  id: 'end-first-link',
-                  label: 'Zoeken',
-                  icon: <Icon icon="inloggen" />,
-                },
-                {
-                  href: '/',
-                  id: 'end-second-link',
-                  label: 'Inloggen',
-                  icon: <Icon icon="inloggen" />,
-                },
-              ].map((endItem) => (
+              items={itemsMain}
+              endItems={endItemsSecondary.map((endItem) => (
                 <NavBarItem key={endItem.id} {...endItem} />
               ))}
-              items={[
-                {
-                  href: '/',
-                  id: 'data',
-                  label: 'Data',
-                },
-                {
-                  href: '/',
-                  id: 'impact',
-                  label: 'Impact',
-                },
-                {
-                  href: '/',
-                  id: 'Communities',
-                  label: 'Communities',
-                },
-                {
-                  href: '/',
-                  id: 'Actueel',
-                  label: 'Actueel',
-                },
-                {
-                  href: '/',
-                  id: 'Support',
-                  label: 'Support',
-                },
-              ]}
             />
           </div>
         </div>
