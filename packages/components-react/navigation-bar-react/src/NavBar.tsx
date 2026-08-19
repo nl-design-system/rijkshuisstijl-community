@@ -179,6 +179,7 @@ export const NavBar = ({
 
   return (
     <div className={clsx('rhc-nav-bar', isOpen && 'is-open')}>
+      <h2 className="rhc-visually-hidden">Hoofd navigatie</h2>
       {identity && (
         <div className="rhc-nav-bar__slot-identity">
           <NavBarIdentity {...identity} />
@@ -187,12 +188,32 @@ export const NavBar = ({
 
       {megamenu ? (
         <FocusTrap active={isOpen} className={clsx('rhc-nav-bar__slot-megamenu', isOpen && 'is-megamenu-open')}>
-          <LinkButton aria-expanded={isOpen} onClick={() => setIsOpen((prev) => !prev)}>
-            <Icon icon="menu" />
-            <span className="rhc-visually-hidden-mobile">Kies een onderwerp of dienst</span>
-          </LinkButton>
+          <ul className="rhc-nav-bar__list">
+            <li className="rhc-nav-bar__item">
+              <LinkButton
+                className={clsx('rhc-nav-bar__link')}
+                aria-expanded={isOpen}
+                onClick={() => setIsOpen((prev) => !prev)}
+              >
+                <Icon icon="menu" />
+                <span className={clsx('rhc-nav-bar__label', 'rhc-visually-hidden-mobile')}>
+                  Kies een onderwerp of dienst
+                </span>
+              </LinkButton>
+            </li>
+          </ul>
           <div className="rhc-nav-bar__slots">
             {isOpen && <div className="rhc-nav-bar__megamenu">{megamenu}</div>}
+            {isOpen && (
+              <LinkButton
+                aria-label="Sluit menu"
+                className="rhc-nav-bar__megamenu__btn-close"
+                onClick={() => setIsOpen(false)}
+              >
+                <Icon icon="kruis" />
+                Sluiten
+              </LinkButton>
+            )}
             {items && (
               <div className="rhc-nav-bar__slot">
                 <nav
