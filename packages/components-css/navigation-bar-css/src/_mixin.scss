@@ -149,11 +149,13 @@
 @mixin rhc-nav-bar__megamenu {
   // position: relative;
   top: 2.9em;
+  padding-block: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block);
   padding-inline: var(--rhc-page-section-vi-small-padding-inline);
-  background: var(--rhc-mega-menu-background-color);
-  background: red;
+  background: var(--rhc-navigation-bar-mega-menu-background-color);
+  color: var(--rhc-navigation-bar-mega-menu-color);
   
   @media (width >= 768px) {
+    padding-block: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block);
     padding-inline: var(--rhc-page-section-vi-large-padding-inline);
     position: absolute;
     top: 2.4em;
