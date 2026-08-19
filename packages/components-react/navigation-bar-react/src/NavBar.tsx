@@ -224,7 +224,7 @@ export const NavBar = ({
             {isOpen && (
               <LinkButton
                 aria-label="Sluit menu"
-                className="rhc-nav-bar__megamenu__btn-close"
+                className="rhc-nav-bar__megamenu__btn-close utrecht-button--subtle"
                 onClick={() => setIsOpen(false)}
               >
                 <Icon icon="kruis" />

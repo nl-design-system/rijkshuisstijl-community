@@ -21,7 +21,6 @@ const endItemsPrimary = [
     href: '/',
     id: 'end-second-link',
     label: 'Contact',
-    currentPage: true,
     icon: <Icon icon="inloggen" />,
   },
 ].map((endItem) => (
