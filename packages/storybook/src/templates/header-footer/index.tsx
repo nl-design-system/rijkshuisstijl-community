@@ -21,11 +21,10 @@ const endItemsPrimary = [
     href: '/',
     id: 'end-second-link',
     label: 'Contact',
+    currentPage: true,
     icon: <Icon icon="inloggen" />,
   },
-].map((endItem) => (
-  <NavBarItem key={endItem.id} {...endItem} />
-));
+].map((endItem) => <NavBarItem key={endItem.id} {...endItem} />);
 
 const endItemsSecondary = [
   {

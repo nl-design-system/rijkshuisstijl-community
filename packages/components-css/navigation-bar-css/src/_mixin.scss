@@ -12,7 +12,7 @@
     var(--rhc-navigation-bar-border-color);
   
   color: var(--rhc-navigation-bar-color);
-  column-gap: var(--rhc-navigation-bar-column-gap);
+  column-gap: var(--rhc-navigation-bar-column-gap, 1rem);
   display: flex;
   font-family: var(--rhc-text-font-family-default, inherit);
   inline-size: 100%;
@@ -42,19 +42,15 @@
 // IDENTITY --
 @mixin rhc-nav-bar__slot-identity {
   flex-shrink: 0;
-  font-weight: var(--rhc-navigation-bar-item-current-font-weight);
   padding-inline-end: var(--rhc-navigation-bar-item-padding-inline-end);
 }
 
 @mixin rhc-nav-bar__identity {
-  a {
+  .rhc-link {
     --nl-link-text-decoration-line: none;
-
     color: var(--rhc-navigation-bar-color);
     font-size: 1em;
     font-weight: 700;
-    margin: 0;
-    padding: 0;
   }
 
   @at-root {
@@ -137,18 +133,6 @@
   align-items: center;
   display: flex;
   flex-grow: 1;
- 
-  > button,
-  > .utrecht-link-button {
-    font-weight: var(--rhc-navigation-bar-item-font-weight);
-    gap: 0.5rem;
-    text-decoration: none;
-
-    &:hover {
-      background-color: var(--rhc-navigation-bar-item-hover-background-color);
-      color: var(--rhc-navigation-bar-item-hover-color);
-    }
-  }
 
   @at-root {
     @media (width <= 768px) {
@@ -170,22 +154,15 @@
   width: auto;
 }
 
-@mixin rhc-nav-bar__megamenu {  
+@mixin rhc-nav-bar__megamenu {
   background: var(--rhc-navigation-bar-mega-menu-background-color);
   color: var(--rhc-navigation-bar-mega-menu-color);
   padding-block: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block);
   padding-inline: var(--rhc-page-section-vi-small-padding-inline);
 
-  background: #c2c2c2;
-  padding-inline-end: var(--rhc-space-lg, 1.5rem);
-
-  // position: relative;
-  // top: 2.9em;
-  // right: -2em;
-  padding-inline-start: var(--rhc-space-lg, 1.5rem);
-
   @media (width >= 768px) {
     left:0;
+    padding-block: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block);
     padding-inline: var(--rhc-page-section-vi-large-padding-inline);
     position: absolute;
     right: 0;
@@ -202,17 +179,19 @@
   color: var(--rhc-navigation-bar-button-color, #11406c);
   cursor: pointer;
 
-  // right: 0.75em;
-  // top: 0.75em;
+  position: absolute;
+  right: 0.75em;
+  top: 0.75em;
 
-  display: inline-flex;     
+  //todo;
+  //misschien niet nodig, als subtle als appearance is aangegeven;
+  // display: inline-flex;     
   gap: var(--rhc-navigation-bar-item-gap-mobile, 0.5rem);
   justify-content: center;  
   min-block-size: 48px;
   min-inline-size: 48px; 
   padding-block: 0; 
   padding-inline: 0;
-  position: relative;
   text-decoration: none;
 
   .rhc-icon, svg {
@@ -246,31 +225,21 @@
 
 @mixin rhc-nav-bar__list {
   background-color: var(--rhc-navigation-bar-background-color);
-  display: flex;
   list-style: none;
   margin-block: 0;
   margin-inline: 0;
   padding-block: 0;
   padding-inline: 0;
 
-  @media (width <= 768px) {
-    background-color: orange;
-    display: flex;
-    flex-direction: column;
-    gap: var(--rhc-navigation-bar-item-gap-mobile, 0.5rem);
-    inline-size: 100%;
-  }
-
   @media (width >= 768px) {
     display: flex;
-    flex-direction: row;
   }
 }
 
 @mixin rhc-nav-bar__link {
   --nl-link-text-decoration-line: none;
- 
-  
+  --nl-link-color: var(--rhc-navigation-bar-link-color);
+  --utrecht-link-visited-color: var(--rhc-navigation-bar-link-color);
 
   // column-gap
   background-color: var(--rhc-navigation-bar-link-background-color);

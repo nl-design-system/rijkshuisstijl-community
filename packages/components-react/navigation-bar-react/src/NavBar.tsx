@@ -204,16 +204,6 @@ export const NavBar = ({
           </ul>
           <div className="rhc-nav-bar__slots">
             {isOpen && <div className="rhc-nav-bar__megamenu">{megamenu}</div>}
-            {isOpen && (
-              <LinkButton
-                aria-label="Sluit menu"
-                className="rhc-nav-bar__megamenu__btn-close"
-                onClick={() => setIsOpen(false)}
-              >
-                <Icon icon="kruis" />
-                Sluiten
-              </LinkButton>
-            )}
             {items && (
               <div className="rhc-nav-bar__slot">
                 <nav
