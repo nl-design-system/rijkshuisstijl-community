@@ -21,7 +21,12 @@ export interface NavBarIdentityProps {
 
 const NavBarIdentity = ({ value, href, appearance }: NavBarIdentityProps) => (
   <div className={clsx('rhc-nav-bar__identity', appearance && `rhc-nav-bar__identity--${appearance}`)}>
-    <a href={href}>{value}</a>
+    <Link
+      href={href}
+      target={href}
+    >
+      {value}
+    </Link>
   </div>
 );
 
