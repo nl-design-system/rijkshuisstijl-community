@@ -24,7 +24,9 @@ const endItemsPrimary = [
     currentPage: true,
     icon: <Icon icon="inloggen" />,
   },
-];
+].map((endItem) => (
+  <NavBarItem key={endItem.id} {...endItem} />
+));
 
 const endItemsSecondary = [
   {
@@ -39,7 +41,9 @@ const endItemsSecondary = [
     label: 'Inloggen',
     icon: <Icon icon="inloggen" />,
   },
-];
+].map((endItem) => (
+  <NavBarItem key={endItem.id} {...endItem} />
+));
 
 const itemsMain = [
   {
@@ -120,18 +124,14 @@ const HeaderFooter = () => {
               <Icon className="dutch-map" icon="nederland-map" />
             </Logo>
             <NavBar
+              endItems={endItemsPrimary}
               identity={{ value: 'Overheid.nl', href: '/', appearance: 'primary' }}
               megamenu={megamenu}
-              endItems={endItemsPrimary.map((endItem) => (
-                <NavBarItem key={endItem.id} {...endItem} />
-              ))}
             />
             <NavBar
+              endItems={endItemsSecondary}
               identity={{ value: 'Dataregister', href: '/' }}
               items={itemsMain}
-              endItems={endItemsSecondary.map((endItem) => (
-                <NavBarItem key={endItem.id} {...endItem} />
-              ))}
             />
           </div>
         </div>
