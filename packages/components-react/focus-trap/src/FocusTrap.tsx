@@ -35,14 +35,14 @@ export const FocusTrap = ({ active = true, children, ...props }: FocusTrapProps)
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key !== 'Tab') return;
 
-      const focusableElements = Array.from(container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTORS)).filter(
+      const focusableElements = [...container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTORS)].filter(
         (el) => !el.closest('[hidden]') && !el.closest('[inert]'),
       );
 
       if (focusableElements.length === 0) return;
 
       const firstElement = focusableElements[0];
-      const lastElement = focusableElements[focusableElements.length - 1];
+      const lastElement = focusableElements.at(-1);
 
       if (event.shiftKey) {
         if (document.activeElement === firstElement) {

@@ -6,22 +6,22 @@
 @use "@rijkshuisstijl-community/visually-hidden-css/src/mixin" as visually-hidden;
 
 @mixin rhc-nav-bar {
-  position: relative;
   align-items: center;
   background-color: var(--rhc-navigation-bar-background-color);
   box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0
     var(--rhc-navigation-bar-border-color);
   color: var(--rhc-navigation-bar-color);
+  column-gap: var(--rhc-navigation-bar-column-gap, 1rem);
   display: flex;
   font-family: var(--rhc-text-font-family-default, inherit);
   inline-size: 100%;
+  position: relative;
   z-index: var(--rhc-navigation-bar-z-index, 2);
-  column-gap: var(--rhc-navigation-bar-column-gap, 1rem);
 
   @at-root {
     .rhc-nav-bar ~ .rhc-nav-bar {
-      z-index: calc(var(--rhc-navigation-bar-z-index, 2) - 1);
       box-shadow: none;
+      z-index: calc(var(--rhc-navigation-bar-z-index, 2) - 1);
     }
 
     :is(.is-megamenu-open, .is-main-open) .rhc-page-header {
@@ -44,7 +44,6 @@
 }
 @mixin rhc-nav-bar__identity {
   .rhc-link {
-    // font-weight: bold;
     font-size: 1em;
 
     &:not(:hover){
@@ -56,12 +55,9 @@
     &--primary {
       .rhc-link {
         color: var(--rhc-navigation-bar-identity-primary-color);
-        font-size: var(--rhc-navigation-bar-identity-primary-font-size);
-        font-weight: var(--rhc-navigation-bar-identity-primary-font-weight);
-        line-height: var(--rhc-navigation-bar-identity-primary-line-height);
-
         font-size: 1.5em;
-        font-weight: bold;
+        font-weight: 700;
+        line-height: var(--rhc-navigation-bar-identity-primary-line-height);
       }
     }
   }
@@ -69,9 +65,9 @@
 
 // MAIN --
 @mixin rhc-nav-bar__slot-main {
+  align-items: center;
   display: flex;
   flex-grow: 1;
-  align-items: center;
 
   // als er twee _slot's zijn, dan moet de tweede _slot naar rechts worden geduwd
   @media (width > 768px) {
@@ -93,9 +89,9 @@
   display: none;
 
   @media (width > 768px) {
+    align-items: center;
     display: flex;
     flex: 1;
-    align-items: center;
 
     .rhc-nav-bar__megamenu ~ .rhc-nav-bar__slot {
       margin-inline-start: auto;
@@ -109,10 +105,10 @@
         @include visually-hidden.rhc-visually-hidden-reset;
         background: var(--rhc-navigation-bar-mega-menu-background-color);
         display: block;
-        position: absolute;
-        top: 100%;
         left: 0;
+        position: absolute;
         right: 0;
+        top: 100%;
       }
 
       @media (width >= 768px) {
@@ -126,9 +122,9 @@
 
 // MEGAMENU --
 @mixin rhc-nav-bar__slot-megamenu {
+  align-items: center;
   display: flex;
   flex-grow: 1;
-  align-items: center;
 
   @at-root {
     @media (width <= 768px) {
@@ -150,20 +146,21 @@
 }
 
 @mixin rhc-nav-bar__megamenu {
-  // position: relative;
-  top: 2.9em;
-  padding-block: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block);
-  padding-inline: var(--rhc-page-section-vi-small-padding-inline);
   background: var(--rhc-navigation-bar-mega-menu-background-color);
   color: var(--rhc-navigation-bar-mega-menu-color);
-  
+  padding-block: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block);
+  padding-inline: var(--rhc-page-section-vi-small-padding-inline);
+
+  // position: relative;
+  top: 2.9em;
+
   @media (width >= 768px) {
+    left: 0;
     padding-block: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block);
     padding-inline: var(--rhc-page-section-vi-large-padding-inline);
     position: absolute;
-    top: 2.4em;
-    left: 0;
     right: 0;
+    top: 2.4em;
   }
 }
 
@@ -180,8 +177,8 @@
 
 // TAGLINE --
 @mixin rhc-nav-bar__megamenu-tagline {
-  font-style: italic;
   border-bottom: 1px solid white;
+  font-style: italic;
   padding-block-end: 1em;
 }
 
@@ -225,8 +222,8 @@
 
   &:active {
     background-color: var(--rhc-navigation-bar-link-active-background-color);
-    color: var(--rhc-navigation-bar-link-active-color);
     border-color: var(--rhc-navigation-bar-link-active-border-color);
+    color: var(--rhc-navigation-bar-link-active-color);
   }
 
   &:hover {
@@ -243,11 +240,12 @@
   }
 
   &[aria-current="page"] {
-    // background-color: var(--rhc-navigation-bar-link-current-background-color);
-    font-weight: var(--rhc-navigation-bar-link-current-font-weight);
-    color: var(--rhc-navigation-bar-link-current-color);
     box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0
       var(--rhc-navigation-bar-link-current-border-color);
+    color: var(--rhc-navigation-bar-link-current-color);
+
+    // background-color: var(--rhc-navigation-bar-link-current-background-color);
+    font-weight: var(--rhc-navigation-bar-link-current-font-weight);
   }
 }
 

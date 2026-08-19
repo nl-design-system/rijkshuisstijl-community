@@ -21,10 +21,7 @@ export interface NavBarIdentityProps {
 
 const NavBarIdentity = ({ value, href, appearance }: NavBarIdentityProps) => (
   <div className={clsx('rhc-nav-bar__identity', appearance && `rhc-nav-bar__identity--${appearance}`)}>
-    <Link
-      href={href}
-      target={href}
-    >
+    <Link href={href} target={href}>
       {value}
     </Link>
   </div>
@@ -33,7 +30,7 @@ const NavBarIdentity = ({ value, href, appearance }: NavBarIdentityProps) => (
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   identity?: NavBarIdentityProps;
   items?: NavBarItemProps[];
-  endItems?: NavBarItemProps[];
+  endItems?: ReactNode;
   megamenu?: ReactNode;
   ref?: Ref<HTMLDivElement>;
 }
@@ -84,7 +81,7 @@ interface SectionProps {
   items: NavBarLinkProps[];
 }
 
-const NavBarItem = ({
+export const NavBarItem = ({
   ref,
   children,
   className,
@@ -220,11 +217,7 @@ export const NavBar = ({
                   ref={ref}
                   {...restProps}
                 >
-                  <ul className="rhc-nav-bar__list">
-                    {endItems.map((enditem) => (
-                      <NavBarItem key={enditem.id} {...enditem} />
-                    ))}
-                  </ul>
+                  <ul className="rhc-nav-bar__list">{endItems}</ul>
                 </nav>
               </div>
             )}
@@ -275,11 +268,7 @@ export const NavBar = ({
                   ref={ref}
                   {...restProps}
                 >
-                  <ul className="rhc-nav-bar__list">
-                    {endItems.map((enditem) => (
-                      <NavBarItem key={enditem.id} {...enditem} />
-                    ))}
-                  </ul>
+                  <ul className="rhc-nav-bar__list">{endItems}</ul>
                 </nav>
               </div>
             )}

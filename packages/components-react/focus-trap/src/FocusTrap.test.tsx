@@ -78,7 +78,7 @@ describe('FocusTrap', () => {
 
   it('passes additional HTML attributes to the container div', () => {
     render(
-      <FocusTrap data-testid="trap-container" className="my-trap">
+      <FocusTrap className="my-trap" data-testid="trap-container">
         <button>Button</button>
       </FocusTrap>,
     );

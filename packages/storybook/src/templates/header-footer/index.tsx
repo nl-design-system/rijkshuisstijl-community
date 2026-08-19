@@ -1,4 +1,12 @@
-import { Footer, Icon, Logo, NavBar, NavBarMegaMenu, PageHeader } from '@rijkshuisstijl-community/components-react';
+import {
+  Footer,
+  Icon,
+  Logo,
+  NavBar,
+  NavBarItem,
+  NavBarMegaMenu,
+  PageHeader,
+} from '@rijkshuisstijl-community/components-react';
 import { FooterFooterLinks, FooterLinks } from '../../components-css/footer.stories';
 import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
@@ -17,6 +25,22 @@ const HeaderFooter = () => {
             </Logo>
             <NavBar
               identity={{ value: 'Overheid.nl', href: '/', appearance: 'primary' }}
+              endItems={[
+                {
+                  href: '/',
+                  id: 'end-first-link',
+                  label: 'Taalswitch',
+                },
+                {
+                  href: '/',
+                  id: 'end-second-link',
+                  label: 'Contact',
+                  currentPage: true,
+                  icon: <Icon icon="inloggen" />,
+                },
+              ].map((endItem) => (
+                <NavBarItem key={endItem.id} {...endItem} />
+              ))}
               megamenu={
                 <NavBarMegaMenu
                   tagline="Ingang naar informatie en diensten van alle overheden"
@@ -54,23 +78,25 @@ const HeaderFooter = () => {
                   ]}
                 />
               }
+            />
+            <NavBar
+              identity={{ value: 'Dataregister', href: '/' }}
               endItems={[
                 {
                   href: '/',
                   id: 'end-first-link',
-                  label: 'Taalswitch',
+                  label: 'Zoeken',
+                  icon: <Icon icon="inloggen" />,
                 },
                 {
                   href: '/',
                   id: 'end-second-link',
-                  label: 'Contact',
-                  currentPage: true,
+                  label: 'Inloggen',
                   icon: <Icon icon="inloggen" />,
                 },
-              ]}
-            />
-            <NavBar
-              identity={{ value: 'Dataregister', href: '/' }}
+              ].map((endItem) => (
+                <NavBarItem key={endItem.id} {...endItem} />
+              ))}
               items={[
                 {
                   href: '/',
@@ -96,20 +122,6 @@ const HeaderFooter = () => {
                   href: '/',
                   id: 'Support',
                   label: 'Support',
-                },
-              ]}
-              endItems={[
-                {
-                  href: '/',
-                  id: 'end-first-link',
-                  label: 'Zoeken',
-                  icon: <Icon icon="inloggen" />,
-                },
-                {
-                  href: '/',
-                  id: 'end-second-link',
-                  label: 'Inloggen',
-                  icon: <Icon icon="inloggen" />,
                 },
               ]}
             />
