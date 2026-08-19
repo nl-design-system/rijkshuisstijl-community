@@ -6,9 +6,9 @@
 import { FocusTrap } from '@rijkshuisstijl-community/focus-trap/no-side-effects';
 import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react/no-side-effects';
 import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react/no-side-effects';
+import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 import { LinkList, LinkListLink } from '@rijkshuisstijl-community/link-list-react/no-side-effects';
 import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
-import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -26,7 +26,6 @@ const NavBarIdentity = ({ value, href, appearance }: NavBarIdentityProps) => (
 );
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
-  headingItem?: NavBarItemProps;
   identity?: NavBarIdentityProps;
   items?: NavBarItemProps[];
   endItems?: NavBarItemProps[];
@@ -99,7 +98,6 @@ const NavBarItem = ({
 
   return (
     <li className={clsx('rhc-nav-bar__item', isItemOpen && 'is-open', className)} ref={ref} {...restProps}>
-
       {subList ? (
         <LinkButton
           aria-controls={`rhc-nav-bar__item-dropdown-${contentId}`}
@@ -110,7 +108,12 @@ const NavBarItem = ({
           <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__label--sr-only')}>{label}</span>
         </LinkButton>
       ) : (
-        <Link aria-current={currentPage ? 'page' : undefined} className={clsx('rhc-nav-bar__link')} href={href} target={target}>
+        <Link
+          aria-current={currentPage ? 'page' : undefined}
+          className={clsx('rhc-nav-bar__link')}
+          href={href}
+          target={target}
+        >
           {icon}
           <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__label--sr-only')}>{label}</span>
         </Link>
@@ -142,12 +145,10 @@ const NavBarItem = ({
 
 NavBarItem.displayName = 'NavBarItem';
 
-
 export const NavBar = ({
   ref,
   children,
   className,
-  headingItem,
   identity,
   items,
   endItems,
@@ -184,7 +185,7 @@ export const NavBar = ({
 
       {megamenu ? (
         <FocusTrap active={isOpen} className={clsx('rhc-nav-bar__slot-megamenu', isOpen && 'is-megamenu-open')}>
-          <LinkButton onClick={() => setIsOpen((prev) => !prev)} aria-expanded={isOpen}>
+          <LinkButton aria-expanded={isOpen} onClick={() => setIsOpen((prev) => !prev)}>
             <Icon icon="menu" />
             <span className="rhc-visually-hidden-mobile">Kies een onderwerp of dienst</span>
           </LinkButton>
@@ -301,7 +302,6 @@ export const NavBar = ({
 
 NavBar.displayName = 'NavBar';
 
-
 export const NavBarMegaMenu = ({
   ref,
   children,
@@ -338,19 +338,18 @@ export const SubNavBar = ({ ref, children, className, columns, ...restProps }: P
   return (
     <div className={clsx('', className)} ref={ref} {...restProps}>
       <div className="rhc-sub-nav-bar__content">
-        
-          {columns.map((column: NavBarLinkProps[]) => (
-            <div className="rhc-sub-nav-bar__list" key={column.map((item) => item.id).join('-')}>
-              <LinkList>
-                {column.map(({ id, href, target, label }) => (
-                  <LinkListLink href={href} icon={<Icon icon={'chevron-right'} />} key={id} target={target}>
-                    {label}
-                  </LinkListLink>
-                ))}
-              </LinkList>
-            </div>
-          ))}
-        
+        {columns.map((column: NavBarLinkProps[]) => (
+          <div className="rhc-sub-nav-bar__list" key={column.map((item) => item.id).join('-')}>
+            <LinkList>
+              {column.map(({ id, href, target, label }) => (
+                <LinkListLink href={href} icon={<Icon icon={'chevron-right'} />} key={id} target={target}>
+                  {label}
+                </LinkListLink>
+              ))}
+            </LinkList>
+          </div>
+        ))}
+
         {children}
       </div>
     </div>

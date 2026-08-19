@@ -1,11 +1,4 @@
-import {
-  Footer,
-  Icon,
-  Logo,
-  NavBar,
-  NavBarMegaMenu,
-  PageHeader,
-} from '@rijkshuisstijl-community/components-react';
+import { Footer, Icon, Logo, NavBar, NavBarMegaMenu, PageHeader } from '@rijkshuisstijl-community/components-react';
 import { FooterFooterLinks, FooterLinks } from '../../components-css/footer.stories';
 import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';

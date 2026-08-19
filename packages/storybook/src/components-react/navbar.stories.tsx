@@ -1,4 +1,4 @@
-import { NavBar, NavBarMegaMenu, type NavBarItemProps } from '@rijkshuisstijl-community/components-react';
+import { NavBar, type NavBarItemProps, NavBarMegaMenu } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './navbar.md?raw';
@@ -61,20 +61,9 @@ export const Default: Story = {
   },
 };
 
-export const WithHeading: Story = {
-  args: {
-    items,
-    headingItem: {
-      id: 'heading',
-      label: 'Heading',
-      href: '/',
-    },
-  },
-};
-
 export const WithIdentity: Story = {
   args: {
-    identity: 'Identity',
+    identity: { value: 'Identity', href: '#', appearance: 'default' },
     items,
     endItems,
   },
@@ -82,7 +71,7 @@ export const WithIdentity: Story = {
 
 export const WithMegamenu: Story = {
   args: {
-    identity: 'Identity',
+    identity: { value: 'Identity', href: '#', appearance: 'default' },
     endItems,
   },
   render: (args) => (
@@ -125,7 +114,6 @@ export const WithMegamenu: Story = {
           ]}
         />
       }
-
     />
   ),
 };
@@ -173,7 +161,7 @@ const itemsWithSubList: NavBarItemProps[] = [
 
 export const WithSubList: Story = {
   args: {
-    identity: 'Identity',
+    identity: { value: 'Identity', href: '#', appearance: 'default' },
     items: itemsWithSubList,
     endItems,
   },
