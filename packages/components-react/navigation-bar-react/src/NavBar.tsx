@@ -3,6 +3,7 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { Button } from '@rijkshuisstijl-community/button-react/no-side-effects';
 import { FocusTrap } from '@rijkshuisstijl-community/focus-trap/no-side-effects';
 import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react/no-side-effects';
 import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react/no-side-effects';
@@ -233,14 +234,15 @@ export const NavBar = ({
               </div>
             )}
             {isOpen && (
-              <LinkButton
+              <Button
                 aria-label="Sluit menu"
-                className="rhc-nav-bar__megamenu__btn-close utrecht-button--subtle"
+                appearance="subtle-button"
+                className="rhc-nav-bar__megamenu__btn-close"
                 onClick={() => setIsOpen(false)}
               >
                 <Icon icon="kruis" />
                 Sluiten
-              </LinkButton>
+              </Button>
             )}
           </div>
         </FocusTrap>

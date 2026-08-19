@@ -109,20 +109,12 @@
     .rhc-nav-bar__slot-megamenu.is-megamenu-open & {
       @media (width <= 768px) {
         @include visually-hidden.rhc-visually-hidden-reset;
-
         background: var(--rhc-navigation-bar-mega-menu-background-color);
-
         display: block;
         left: 0;
         position: absolute;
         right: 0;
         top: 100%;
-      }
-
-      @media (width >= 768px) {
-        .rhc-nav-bar__megamenu__btn-close {
-          display: inline-block;
-        }
       }
     }
   }
@@ -171,41 +163,16 @@
 }
 
 @mixin rhc-nav-bar__megamenu__btn-close {
-  align-items: center;
-  background-color: transparent;   
-  block-size: 48px;
-  border: none;       
-  border-radius: 4px;
-  color: var(--rhc-navigation-bar-button-color, #11406c);
-  cursor: pointer;
-
   position: absolute;
   right: 0.75em;
   top: 0.75em;
 
-  //todo;
-  //misschien niet nodig, als subtle als appearance is aangegeven;
-  // display: inline-flex;     
-  gap: var(--rhc-navigation-bar-item-gap-mobile, 0.5rem);
-  justify-content: center;  
-  min-block-size: 48px;
-  min-inline-size: 48px; 
-  padding-block: 0; 
-  padding-inline: 0;
-  text-decoration: none;
-
-  .rhc-icon, svg {
-    fill: currentColor;
-    height: 16px;
-    width: 16px;
-  }
-
-  &:hover {
-    background-color: var(--rhc-navigation-bar-item-hover-background-color, #f3f4f6);
+  &.rhc-button:hover {
+    //todo; token corrigeren
+    background-color: var(--rhc-navigation-bar-item-hover-background-color);
   }
 
   @media (width >= 768px) {
-    // display: none;
     right: 0.75em;
     top: 2.75em;
   }
