@@ -166,6 +166,7 @@ export const NavBar = ({
   const hamburgerLiRef = useRef<HTMLLIElement>(null);
   const wasOpenRef = useRef(false);
   const isAnyMenuOpen = isOpen || isMainNavOpen;
+  const closedByKeyboardRef = useRef(false);
 
   useEffect(() => {
     const pageHeader = document.querySelector('.rhc-page-header');
@@ -237,6 +238,7 @@ export const NavBar = ({
     if (!isAnyMenuOpen) return;
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
+        closedByKeyboardRef.current = true;
         setIsOpen(false);
         setIsMainNavOpen(false);
       }
@@ -249,10 +251,13 @@ export const NavBar = ({
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isAnyMenuOpen]);
 
-  // Reset the focustrap naar btn-trigger (hamburger menu) na sluiten van megamenu;
+  // Reset the focustrap naar btn-trigger (hamburger menu) na sluiten van megamenu
   useEffect(() => {
     if (!isOpen && wasOpenRef.current) {
-      hamburgerLiRef.current?.querySelector<HTMLElement>('button, [href]')?.focus();
+      if (closedByKeyboardRef.current) {
+        hamburgerLiRef.current?.querySelector<HTMLElement>('button, [href]')?.focus();
+      }
+      closedByKeyboardRef.current = false;
     }
     wasOpenRef.current = isOpen;
   }, [isOpen]);
@@ -288,7 +293,7 @@ export const NavBar = ({
                 className={clsx('rhc-nav-bar__link')}
                 onClick={() => setIsOpen((prev) => !prev)}
               >
-                <Icon icon={isOpen ? 'kruis' : 'menu'} />
+                <Icon icon={isOpen && globalThis.matchMedia('(max-width: 768px)').matches ? 'kruis' : 'menu'} />
 
                 <span className={clsx('rhc-nav-bar__label', 'rhc-visually-hidden-mobile')}>
                   Kies een onderwerp of dienst
