@@ -129,7 +129,31 @@
     margin-inline-start: auto;
   }
 
+  // wanneer megamenu open is, krijgt endItems speciale weergave;
   @at-root {
+    &.is-megamenu-open {
+      .rhc-nav-bar__slot {
+        background-color: var(--token, white);
+        padding: var(--token, 1em);
+
+        @media (width > 768px) {
+          background: none;
+          padding: 0;
+        }
+
+        .rhc-nav-bar__list {
+          display: flex;
+          justify-content: space-between;
+        }
+        // .rhc-nav-bar__item:first-child {
+        //   order: 10;
+
+        //   @media (width > 768px) {
+        //     order: unset;
+        //   }
+        // }
+      }
+    }
     @media (width > 768px) {
       & .rhc-nav-bar__slots > .rhc-nav-bar__slot {
         margin-inline-start: auto;
