@@ -11,7 +11,7 @@ import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-
 import { LinkList, LinkListLink } from '@rijkshuisstijl-community/link-list-react/no-side-effects';
 import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import clsx from 'clsx';
-import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useEffect, useState } from 'react';
+import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 export interface NavBarIdentityProps {
@@ -161,12 +161,55 @@ export const NavBar = ({
   const [isOpen, setIsOpen] = useState(false);
   const [isMainNavOpen, setIsMainNavOpen] = useState(false);
   const [overlayContainer, setOverlayContainer] = useState<Element | null>(null);
+  const itemsSlotRef = useRef<HTMLDivElement>(null);
+  const endItemsSlotRef = useRef<HTMLDivElement>(null);
+  const hamburgerLiRef = useRef<HTMLLIElement>(null);
+  const wasOpenRef = useRef(false);
   const isAnyMenuOpen = isOpen || isMainNavOpen;
 
   useEffect(() => {
     const pageHeader = document.querySelector('.rhc-page-header');
     setOverlayContainer(pageHeader?.parentElement ?? document.body);
   }, []);
+
+  // Op desktop, maak de endItems 'inert' zodat ze geen onderdeel zijn van de focus trap
+  // en houdt rekening met resizing;
+  useEffect(() => {
+    if (!isOpen) {
+      itemsSlotRef.current?.removeAttribute('inert');
+      endItemsSlotRef.current?.removeAttribute('inert');
+      return;
+    }
+    const mq = window.matchMedia('(min-width: 769px)');
+    const applyInert = () => {
+      itemsSlotRef.current?.toggleAttribute('inert', mq.matches);
+      endItemsSlotRef.current?.toggleAttribute('inert', mq.matches);
+    };
+    applyInert();
+    mq.addEventListener('change', applyInert);
+    return () => mq.removeEventListener('change', applyInert);
+  }, [isOpen]);
+
+  // escape sluit het menu;
+  useEffect(() => {
+    if (!isAnyMenuOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false);
+        setIsMainNavOpen(false);
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isAnyMenuOpen]);
+
+  // Reset the focustrap naar btn-trigger (hamburger menu) na sluiten van megamenu;
+  useEffect(() => {
+    if (!isOpen && wasOpenRef.current) {
+      hamburgerLiRef.current?.querySelector<HTMLElement>('button, [href]')?.focus();
+    }
+    wasOpenRef.current = isOpen;
+  }, [isOpen]);
 
   useEffect(() => {
     document.documentElement.classList.toggle('is-megamenu-open', isOpen);
@@ -190,7 +233,7 @@ export const NavBar = ({
       {megamenu ? (
         <FocusTrap active={isOpen} className={clsx('rhc-nav-bar__slot-megamenu', isOpen && 'is-megamenu-open')}>
           <ul className="rhc-nav-bar__list">
-            <li className="rhc-nav-bar__item">
+            <li className="rhc-nav-bar__item" ref={hamburgerLiRef}>
               <LinkButton
                 className={clsx('rhc-nav-bar__link')}
                 aria-expanded={isOpen}
@@ -206,7 +249,7 @@ export const NavBar = ({
           <div className="rhc-nav-bar__slots">
             {isOpen && <div className="rhc-nav-bar__megamenu">{megamenu}</div>}
             {items && (
-              <div className="rhc-nav-bar__slot">
+              <div className="rhc-nav-bar__slot" ref={itemsSlotRef}>
                 <nav
                   aria-label="todo-geefnaam"
                   className={clsx('rhc-nav-bar__nav', className)}
@@ -222,7 +265,7 @@ export const NavBar = ({
               </div>
             )}
             {endItems && (
-              <div className="rhc-nav-bar__slot">
+              <div className="rhc-nav-bar__slot" ref={endItemsSlotRef}>
                 <nav
                   aria-label="todo-geefnaam"
                   className={clsx('rhc-nav-bar__nav', className)}
