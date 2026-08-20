@@ -293,7 +293,7 @@ export const NavBar = ({
                 className={clsx('rhc-nav-bar__link')}
                 onClick={() => setIsOpen((prev) => !prev)}
               >
-                <Icon icon={isOpen ? 'kruis' : 'menu'} />
+                <Icon icon={isOpen && globalThis.matchMedia('(max-width: 768px)').matches ? 'kruis' : 'menu'} />
 
                 <span className={clsx('rhc-nav-bar__label', 'rhc-visually-hidden-mobile')}>
                   Kies een onderwerp of dienst
