@@ -1,4 +1,4 @@
-import { NavBar, type NavBarItemProps, NavBarMegaMenu } from '@rijkshuisstijl-community/components-react';
+import { NavBar, NavBarItem, type NavBarItemProps, NavBarMegaMenu } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './navbar.md?raw';
@@ -42,18 +42,12 @@ const items: NavBarItemProps[] = [
   },
 ];
 
-const endItems: NavBarItemProps[] = [
-  {
-    id: 'end-first-link',
-    label: 'Link',
-    href: '/',
-  },
-  {
-    id: 'end-second-link',
-    label: 'Link',
-    href: '/',
-  },
-];
+const endItems = (
+  <>
+    <NavBarItem href="/" id="end-first-link" label="Link" />
+    <NavBarItem href="/" id="end-second-link" label="Link" />
+  </>
+);
 
 export const Default: Story = {
   args: {

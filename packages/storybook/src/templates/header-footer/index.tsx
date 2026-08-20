@@ -39,9 +39,7 @@ const endItemsSecondary = [
     label: 'Inloggen',
     icon: <Icon icon="inloggen" />,
   },
-].map((endItem) => (
-  <NavBarItem key={endItem.id} {...endItem} />
-));
+].map((endItem) => <NavBarItem key={endItem.id} {...endItem} />);
 
 const itemsMain = [
   {
@@ -126,11 +124,7 @@ const HeaderFooter = () => {
               identity={{ value: 'Overheid.nl', href: '/', appearance: 'primary' }}
               megamenu={megamenu}
             />
-            <NavBar
-              endItems={endItemsSecondary}
-              identity={{ value: 'Dataregister', href: '/' }}
-              items={itemsMain}
-            />
+            <NavBar endItems={endItemsSecondary} identity={{ value: 'Dataregister', href: '/' }} items={itemsMain} />
           </div>
         </div>
       </PageHeader>

@@ -9,23 +9,13 @@ export function Header() {
       </Logo>
       <NavBar
         className="rhc-nav-bar"
-        endItems={[
-          {
-            href: '/',
-            id: 'end-first-link',
-            label: 'Figma',
-          },
-          {
-            href: '/',
-            id: 'end-second-link',
-            label: 'Github',
-          },
-          {
-            href: '/',
-            id: 'end-third-link',
-            label: 'Storybook',
-          },
-        ].map((endItem) => <NavBarItem key={endItem.id} {...endItem} />)}
+        endItems={
+          <>
+            <NavBarItem href="/" id="end-first-link" label="Figma" />
+            <NavBarItem href="/" id="end-second-link" label="Github" />
+            <NavBarItem href="/" id="end-third-link" label="Storybook" />
+          </>
+        }
         items={[
           {
             href: '/',

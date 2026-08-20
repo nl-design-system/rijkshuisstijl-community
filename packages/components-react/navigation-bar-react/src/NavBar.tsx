@@ -185,26 +185,26 @@ export const NavBar = ({
     }
 
     const setEndItemsTabIndex = (disabled: boolean) => {
-      if (!endItemsSlot) return;
+      if (!endItemsSlot) return undefined;
       if (disabled) {
-        endItemsSlot.querySelectorAll<HTMLElement>('a[href], button, input, select, textarea').forEach((el) => {
+        for (const el of endItemsSlot.querySelectorAll<HTMLElement>('a[href], button, input, select, textarea')) {
           el.dataset['savedTabindex'] = el.getAttribute('tabindex') ?? '';
           el.tabIndex = -1;
-        });
+        }
       } else {
-        endItemsSlot.querySelectorAll<HTMLElement>('[data-saved-tabindex]').forEach((el) => {
+        for (const el of endItemsSlot.querySelectorAll<HTMLElement>('[data-saved-tabindex]')) {
           const saved = el.dataset['savedTabindex'];
           if (saved === '') {
             el.removeAttribute('tabindex');
           } else {
             el.setAttribute('tabindex', saved!);
           }
-          el.removeAttribute('data-saved-tabindex');
-        });
+          delete el.dataset.savedTabindex;
+        }
       }
     };
 
-    const mq = window.matchMedia('(min-width: 769px)');
+    const mq = globalThis.matchMedia('(min-width: 769px)');
     const applyInert = () => {
       itemsSlot?.toggleAttribute('inert', mq.matches);
       if (mq.matches) {
@@ -230,7 +230,7 @@ export const NavBar = ({
 
   // escape sluit het menu;
   useEffect(() => {
-    if (!isAnyMenuOpen) return;
+    if (!isAnyMenuOpen) return undefined;
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setIsOpen(false);
@@ -260,7 +260,7 @@ export const NavBar = ({
   }, [isMainNavOpen]);
 
   return (
-    <div className={clsx('rhc-nav-bar', isOpen && 'is-open')}>
+    <div className={clsx('rhc-nav-bar', { 'is-open': isOpen })}>
       <h2 className="rhc-visually-hidden">Hoofd navigatie</h2>
       {identity && (
         <div className="rhc-nav-bar__slot-identity">
@@ -269,12 +269,12 @@ export const NavBar = ({
       )}
 
       {megamenu ? (
-        <FocusTrap active={isOpen} className={clsx('rhc-nav-bar__slot-megamenu', isOpen && 'is-megamenu-open')}>
+        <FocusTrap active={isOpen} className={clsx('rhc-nav-bar__slot-megamenu', { 'is-megamenu-open': isOpen })}>
           <ul className="rhc-nav-bar__list">
             <li className="rhc-nav-bar__item" ref={hamburgerLiRef}>
               <LinkButton
-                className={clsx('rhc-nav-bar__link')}
                 aria-expanded={isOpen}
+                className={clsx('rhc-nav-bar__link')}
                 onClick={() => setIsOpen((prev) => !prev)}
               >
                 <Icon icon={isOpen ? 'kruis' : 'menu'} />
@@ -317,8 +317,8 @@ export const NavBar = ({
             )}
             {isOpen && (
               <Button
-                aria-label="Sluit menu"
                 appearance="subtle-button"
+                aria-label="Sluit menu"
                 className="rhc-nav-bar__megamenu__btn-close"
                 onClick={() => setIsOpen(false)}
               >
@@ -329,7 +329,7 @@ export const NavBar = ({
           </div>
         </FocusTrap>
       ) : (
-        <FocusTrap active={isMainNavOpen} className={clsx('rhc-nav-bar__slot-main', isMainNavOpen && 'is-main-open')}>
+        <FocusTrap active={isMainNavOpen} className={clsx('rhc-nav-bar__slot-main', { 'is-main-open': isMainNavOpen })}>
           <LinkButton
             aria-expanded={isMainNavOpen}
             className="rhc-nav-bar__slot-main__btn-trigger"
