@@ -48,18 +48,19 @@
 @mixin rhc-nav-bar__identity {
   .rhc-link {
     --nl-link-text-decoration-line: none;
-    color: var(--rhc-navigation-bar-color);
-    font-size: 1em;
-    font-weight: 700;
+    --nl-link-color: var(--rhc-navigation-bar-color);
+    font-size: var(--token, 1em);
+    font-weight: var(--token, 700);
   }
 
   @at-root {
     &--primary {
       .rhc-link {
+        --nl-link-font-size: 1.5em;
         color: var(--rhc-navigation-bar-identity-primary-color);
-        font-size: 1.5em;
-        font-weight: 700;
+        font-size: var(--token, 1.5em);
         line-height: var(--rhc-navigation-bar-identity-primary-line-height);
+        font-weight: var(--token, 500);
       }
     }
   }
@@ -81,6 +82,13 @@
 
 @mixin rhc-nav-bar__slot-main__btn-trigger {
   margin-inline-start: auto;
+
+  @at-root {
+    &[aria-expanded="true"] {
+      background: var(--rhc-navigation-bar-link-hover-background-color);
+      border-radius: 0;
+    }
+  }
 
   @media (width > 768px) {
     display: none;
@@ -135,6 +143,10 @@
       .rhc-nav-bar__slot {
         background-color: var(--token, white);
         padding: var(--token, 1em);
+        padding-inline-end: var(--rhc-page-section-vi-small-padding-inline-end);
+        padding-inline-start: var(--rhc-page-section-vi-small-padding-inline-start);
+        padding-block-end: var(--rhc-page-section-vi-small-padding-block-end);
+        padding-block-start: var(--rhc-page-section-vi-small-padding-block-start);
 
         @media (width > 768px) {
           background: none;
@@ -170,23 +182,32 @@
 @mixin rhc-nav-bar__megamenu {
   background: var(--rhc-navigation-bar-mega-menu-background-color);
   color: var(--rhc-navigation-bar-mega-menu-color);
-  padding-block: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block);
-  padding-inline: var(--rhc-page-section-vi-small-padding-inline);
+  padding-block-end: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block-end);
+  padding-block-start: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block-start);
+  padding-inline-end: var(--rhc-navigation-bar-mega-menu-vi-small-padding-inline-end);
+  padding-inline-start: var(--rhc-navigation-bar-mega-menu-vi-small-padding-inline-start);
+  
   
   @media (width >= 768px) {
     left:0;
-    padding-block: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block);
-    padding-inline: var(--rhc-page-section-vi-large-padding-inline);
+    padding-block-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-end);
+    padding-block-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-start);
+    padding-inline-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-end);
+    padding-inline-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-start);
     position: absolute;
     right: 0;
     top: 2.4em;
   }
 }
 
+
+
 @mixin rhc-nav-bar__megamenu__btn-close {
   position: absolute;
   right: 0.75em;
   top: 0.75em;
+  font-weight: var(--token, normal);
+  display: none;
 
   &.rhc-button:hover {
     //todo; token corrigeren
@@ -194,6 +215,7 @@
   }
 
   @media (width >= 768px) {
+    display: flex;
     right: 0.75em;
     top: 2.75em;
   }
@@ -201,10 +223,8 @@
 
 // TAGLINE --
 @mixin rhc-nav-bar__megamenu-tagline {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--rhc-navigation-bar-mega-menu-separator-color, white);
   font-style: italic;
-  padding-block-end: 1.5rem;
-  padding-inline-end: 6em;
   margin-block-start: 0;
 }
 

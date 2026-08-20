@@ -277,7 +277,8 @@ export const NavBar = ({
                 aria-expanded={isOpen}
                 onClick={() => setIsOpen((prev) => !prev)}
               >
-                <Icon icon="menu" />
+                <Icon icon={isOpen ? 'kruis' : 'menu'} />
+
                 <span className={clsx('rhc-nav-bar__label', 'rhc-visually-hidden-mobile')}>
                   Kies een onderwerp of dienst
                 </span>
@@ -335,7 +336,7 @@ export const NavBar = ({
             data-role="toggle"
             onClick={() => setIsMainNavOpen((prev) => !prev)}
           >
-            <Icon icon={isMainNavOpen ? 'chevron-up' : 'chevron-down'} />
+            <Icon icon={isMainNavOpen ? 'kruis' : 'menu'} />
           </LinkButton>
           <div className="rhc-nav-bar__slots">
             {items && (
