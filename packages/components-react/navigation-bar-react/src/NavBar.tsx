@@ -199,7 +199,7 @@ export const NavBar = ({
           } else {
             el.setAttribute('tabindex', saved!);
           }
-          delete el.dataset.savedTabindex;
+          delete el.dataset['savedTabindex'];
         }
       }
     };
