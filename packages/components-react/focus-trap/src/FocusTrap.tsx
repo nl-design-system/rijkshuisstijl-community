@@ -47,7 +47,7 @@ export const FocusTrap = ({ active = true, children, ...props }: FocusTrapProps)
       if (event.shiftKey) {
         if (document.activeElement === firstElement) {
           event.preventDefault();
-          lastElement.focus();
+          lastElement?.focus();
         }
       } else {
         if (document.activeElement === lastElement) {
