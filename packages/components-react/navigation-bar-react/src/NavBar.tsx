@@ -181,11 +181,11 @@ export const NavBar = ({
     if (!isOpen) {
       itemsSlot?.removeAttribute('inert');
       endItemsSlot?.removeAttribute('inert');
-      return undefined;
+      return;
     }
 
     const setEndItemsTabIndex = (disabled: boolean) => {
-      if (!endItemsSlot) return undefined;
+      if (!endItemsSlot) return;
       if (disabled) {
         for (const el of endItemsSlot.querySelectorAll<HTMLElement>('a[href], button, input, select, textarea')) {
           el.dataset['savedTabindex'] = el.getAttribute('tabindex') ?? '';
@@ -222,6 +222,10 @@ export const NavBar = ({
     applyInert();
     mq.addEventListener('change', applyInert);
 
+    // Stuck between a rock and a hard place here: without the ignore line, eslint complains that the function sometimes
+    // returns something, sometimes nothing. But when putting `return undefined` above instead of just `return`, it will
+    // complain about a different rule called `unicorn/no-useless-undefined`.
+    // eslint-disable-next-line consistent-return
     return () => {
       mq.removeEventListener('change', applyInert);
       setEndItemsTabIndex(false);
@@ -230,7 +234,7 @@ export const NavBar = ({
 
   // escape sluit het menu;
   useEffect(() => {
-    if (!isAnyMenuOpen) return undefined;
+    if (!isAnyMenuOpen) return;
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setIsOpen(false);
@@ -238,6 +242,10 @@ export const NavBar = ({
       }
     };
     document.addEventListener('keydown', handleKeyDown);
+    // Stuck between a rock and a hard place here: without the ignore line, eslint complains that the function sometimes
+    // returns something, sometimes nothing. But when putting `return undefined` above instead of just `return`, it will
+    // complain about a different rule called `unicorn/no-useless-undefined`.
+    // eslint-disable-next-line consistent-return
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isAnyMenuOpen]);
 
