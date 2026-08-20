@@ -181,11 +181,11 @@ export const NavBar = ({
     if (!isOpen) {
       itemsSlot?.removeAttribute('inert');
       endItemsSlot?.removeAttribute('inert');
-      return;
+      return undefined;
     }
 
     const setEndItemsTabIndex = (disabled: boolean) => {
-      if (!endItemsSlot) return;
+      if (!endItemsSlot) return undefined;
       if (disabled) {
         for (const el of endItemsSlot.querySelectorAll<HTMLElement>('a[href], button, input, select, textarea')) {
           el.dataset['savedTabindex'] = el.getAttribute('tabindex') ?? '';
@@ -230,7 +230,7 @@ export const NavBar = ({
 
   // escape sluit het menu;
   useEffect(() => {
-    if (!isAnyMenuOpen) return;
+    if (!isAnyMenuOpen) return undefined;
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setIsOpen(false);

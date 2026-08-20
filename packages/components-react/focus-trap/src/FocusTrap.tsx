@@ -27,19 +27,19 @@ export const FocusTrap = ({ active = true, children, ...props }: FocusTrapProps)
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!active) return;
+    if (!active) return undefined;
 
     const container = containerRef.current;
-    if (!container) return;
+    if (!container) return undefined;
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key !== 'Tab') return;
+      if (event.key !== 'Tab') return undefined;
 
       const focusableElements = [...container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTORS)].filter(
         (el) => !el.closest('[hidden]') && !el.closest('[inert]'),
       );
 
-      if (focusableElements.length === 0) return;
+      if (focusableElements.length === 0) return undefined;
 
       const firstElement = focusableElements[0];
       const lastElement = focusableElements.at(-1);
@@ -50,6 +50,9 @@ export const FocusTrap = ({ active = true, children, ...props }: FocusTrapProps)
           lastElement?.focus();
         }
       } else {
+        // For some reason, SQ thinks activeElement can never be the same type as lastElement, even though it does not
+        // have this problem with firstElement
+        // eslint-disable-next-line sonarjs/different-types-comparison
         if (document.activeElement === lastElement) {
           event.preventDefault();
           firstElement.focus();
