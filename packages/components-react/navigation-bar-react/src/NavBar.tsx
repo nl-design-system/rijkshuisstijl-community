@@ -188,12 +188,12 @@ export const NavBar = ({
       if (!endItemsSlot) return;
       if (disabled) {
         endItemsSlot.querySelectorAll<HTMLElement>('a[href], button, input, select, textarea').forEach((el) => {
-          el.dataset.savedTabindex = el.getAttribute('tabindex') ?? '';
+          el.dataset['savedTabindex'] = el.getAttribute('tabindex') ?? '';
           el.tabIndex = -1;
         });
       } else {
         endItemsSlot.querySelectorAll<HTMLElement>('[data-saved-tabindex]').forEach((el) => {
-          const saved = el.dataset.savedTabindex;
+          const saved = el.dataset['savedTabindex'];
           if (saved === '') {
             el.removeAttribute('tabindex');
           } else {
