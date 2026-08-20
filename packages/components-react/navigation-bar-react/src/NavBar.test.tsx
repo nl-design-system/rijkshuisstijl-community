@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { NavBar } from '.';
+import { NavBar, NavBarItem } from '.';
 
 describe('NavBar', () => {
   it('renders a visible element', () => {
@@ -36,13 +36,7 @@ describe('NavBar', () => {
     render(
       <NavBar
         items={[]}
-        endItems={[
-          {
-            id: 'test-end-item',
-            href: '#',
-            label: 'Test End Item',
-          },
-        ]}
+        endItems={<NavBarItem id="test-end-item" href="#" label="Test End Item" />}
       />,
     );
 

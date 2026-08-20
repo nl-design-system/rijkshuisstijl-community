@@ -1,6 +1,6 @@
 'use client';
 
-import { Icon, Logo, NavBar, NavBarItemProps, PageHeader, SkipLink } from '@rijkshuisstijl-community/components-react';
+import { Icon, Logo, NavBar, NavBarItem, NavBarItemProps, PageHeader, SkipLink } from '@rijkshuisstijl-community/components-react';
 import './header.css';
 import { useEffect, useState } from 'react';
 
@@ -48,21 +48,23 @@ export default function SharedHeader() {
         </Logo>
         <NavBar
           items={items}
-          endItems={[
-            {
-              id: 'end1',
-              target: '_blank',
-              href: 'https://www.figma.com/design/Q5Imc7Xi9KnBQhcYI3Hytj/NL-Design-System---Bibliotheek---Rijkshuisstijl-Community',
-              label: 'Figma',
-            },
-            {
-              id: 'end2',
-              target: '_blank',
-              href: 'https://github.com/nl-design-system/rijkshuisstijl-community',
-              label: 'GitHub',
-            },
-            { id: 'end3', target: '_blank', href: 'https://rijkshuisstijl-community.vercel.app/', label: 'Storybook' },
-          ]}
+          endItems={
+            <>
+              <NavBarItem
+                id="end1"
+                target="_blank"
+                href="https://www.figma.com/design/Q5Imc7Xi9KnBQhcYI3Hytj/NL-Design-System---Bibliotheek---Rijkshuisstijl-Community"
+                label="Figma"
+              />
+              <NavBarItem
+                id="end2"
+                target="_blank"
+                href="https://github.com/nl-design-system/rijkshuisstijl-community"
+                label="GitHub"
+              />
+              <NavBarItem id="end3" target="_blank" href="https://rijkshuisstijl-community.vercel.app/" label="Storybook" />
+            </>
+          }
         />
       </div>
     </PageHeader>
