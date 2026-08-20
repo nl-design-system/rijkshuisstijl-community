@@ -185,7 +185,7 @@ export const NavBar = ({
     }
 
     const setEndItemsTabIndex = (disabled: boolean) => {
-      if (!endItemsSlot) return undefined;
+      if (!endItemsSlot) return;
       if (disabled) {
         for (const el of endItemsSlot.querySelectorAll<HTMLElement>('a[href], button, input, select, textarea')) {
           el.dataset['savedTabindex'] = el.getAttribute('tabindex') ?? '';
@@ -230,7 +230,7 @@ export const NavBar = ({
 
   // escape sluit het menu;
   useEffect(() => {
-    if (!isAnyMenuOpen) return undefined;
+    if (!isAnyMenuOpen) return;
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setIsOpen(false);
@@ -269,7 +269,10 @@ export const NavBar = ({
       )}
 
       {megamenu ? (
-        <FocusTrap active={isOpen} className={clsx('rhc-nav-bar__slot-megamenu', { 'rhc-nav-bar--megamenu-open': isOpen })}>
+        <FocusTrap
+          active={isOpen}
+          className={clsx('rhc-nav-bar__slot-megamenu', { 'rhc-nav-bar--megamenu-open': isOpen })}
+        >
           <ul className="rhc-nav-bar__list">
             <li className="rhc-nav-bar__item" ref={hamburgerLiRef}>
               <LinkButton
@@ -329,7 +332,10 @@ export const NavBar = ({
           </div>
         </FocusTrap>
       ) : (
-        <FocusTrap active={isMainNavOpen} className={clsx('rhc-nav-bar__slot-main', { 'rhc-nav-bar--main-open': isMainNavOpen })}>
+        <FocusTrap
+          active={isMainNavOpen}
+          className={clsx('rhc-nav-bar__slot-main', { 'rhc-nav-bar--main-open': isMainNavOpen })}
+        >
           <LinkButton
             aria-expanded={isMainNavOpen}
             className="rhc-nav-bar__slot-main__btn-trigger"

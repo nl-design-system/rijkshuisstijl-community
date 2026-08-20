@@ -27,19 +27,19 @@ export const FocusTrap = ({ active = true, children, ...props }: FocusTrapProps)
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!active) return undefined;
+    if (!active) return;
 
     const container = containerRef.current;
-    if (!container) return undefined;
+    if (!container) return;
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key !== 'Tab') return undefined;
+      if (event.key !== 'Tab') return;
 
       const focusableElements = [...container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTORS)].filter(
         (el) => !el.closest('[hidden]') && !el.closest('[inert]'),
       );
 
-      if (focusableElements.length === 0) return undefined;
+      if (focusableElements.length === 0) return;
 
       const firstElement = focusableElements[0];
       const lastElement = focusableElements.at(-1);
@@ -58,7 +58,9 @@ export const FocusTrap = ({ active = true, children, ...props }: FocusTrapProps)
     };
 
     container.addEventListener('keydown', handleKeyDown);
-    return () => { container.removeEventListener('keydown', handleKeyDown); };
+    return () => {
+      container.removeEventListener('keydown', handleKeyDown);
+    };
   }, [active]);
 
   return (
