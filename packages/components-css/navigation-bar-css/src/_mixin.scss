@@ -49,8 +49,8 @@
     --nl-link-text-decoration-line: none;
     --nl-link-color: var(--rhc-navigation-bar-color);
 
-    font-size: var(--token, 1em);
-    font-weight: var(--token, 700);
+    font-size: 1em; // TODO tokenise
+    font-weight: 700; // TODO tokenise
   }
 
   @at-root {
@@ -59,8 +59,8 @@
         --nl-link-font-size: 1.5em;
 
         color: var(--rhc-navigation-bar-identity-primary-color);
-        font-size: var(--token, 1.5em);
-        font-weight: var(--token, 500);
+        font-size: 1.5em; // TODO tokenise
+        font-weight: 500; // TODO tokenise
         line-height: var(--rhc-navigation-bar-identity-primary-line-height);
       }
     }
@@ -143,8 +143,8 @@
   @at-root {
     &.rhc-nav-bar--megamenu-open {
       .rhc-nav-bar__slot {
-        background-color: var(--token, white);
-        padding: var(--token, 1em);
+        background-color: white; // TODO tokenise
+        padding: 1em; // TODO tokenise
         padding-block-end: var(--rhc-page-section-vi-small-padding-block-end);
         padding-block-start: var(--rhc-page-section-vi-small-padding-block-start);
         padding-inline-end: var(--rhc-page-section-vi-small-padding-inline-end);
@@ -204,7 +204,7 @@
 
 @mixin rhc-nav-bar__megamenu__btn-close {
   display: none;
-  font-weight: var(--token, normal);
+  font-weight: normal; // TODO tokenise
   position: absolute;
   right: 0.75em;
   top: 0.75em;
