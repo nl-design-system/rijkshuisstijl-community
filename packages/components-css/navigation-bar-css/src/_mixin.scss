@@ -125,14 +125,11 @@
   align-items: center;
   display: flex;
   flex-grow: 1;
+  > .rhc-nav-bar__list:first-child {
+    margin-inline-start: auto;
+  }
 
   @at-root {
-    @media (width <= 768px) {
-      & > button:first-child {
-        margin-inline-start: auto;
-      
-      }
-    }
     @media (width > 768px) {
       & .rhc-nav-bar__slots > .rhc-nav-bar__slot {
         margin-inline-start: auto;
