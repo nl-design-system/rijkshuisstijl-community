@@ -1,4 +1,4 @@
-import { Icon, Logo, NavBar, PageHeader } from '@rijkshuisstijl-community/components-react/no-side-effects';
+import { Icon, Logo, NavBar, NavBarItem, PageHeader } from '@rijkshuisstijl-community/components-react/no-side-effects';
 import './Header.css';
 
 export function Header() {
@@ -25,7 +25,7 @@ export function Header() {
             id: 'end-third-link',
             label: 'Storybook',
           },
-        ]}
+        ].map((endItem) => <NavBarItem key={endItem.id} {...endItem} />)}
         items={[
           {
             href: '/',
