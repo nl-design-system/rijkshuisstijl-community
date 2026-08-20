@@ -250,13 +250,13 @@ export const NavBar = ({
   }, [isOpen]);
 
   useEffect(() => {
-    document.documentElement.classList.toggle('is-megamenu-open', isOpen);
-    return () => document.documentElement.classList.remove('is-megamenu-open');
+    document.documentElement.classList.toggle('rhc-nav-bar--megamenu-open', isOpen);
+    return () => document.documentElement.classList.remove('rhc-nav-bar--megamenu-open');
   }, [isOpen]);
 
   useEffect(() => {
-    document.documentElement.classList.toggle('is-main-open', isMainNavOpen);
-    return () => document.documentElement.classList.remove('is-main-open');
+    document.documentElement.classList.toggle('rhc-nav-bar--main-open', isMainNavOpen);
+    return () => document.documentElement.classList.remove('rhc-nav-bar--main-open');
   }, [isMainNavOpen]);
 
   return (
@@ -269,7 +269,7 @@ export const NavBar = ({
       )}
 
       {megamenu ? (
-        <FocusTrap active={isOpen} className={clsx('rhc-nav-bar__slot-megamenu', { 'is-megamenu-open': isOpen })}>
+        <FocusTrap active={isOpen} className={clsx('rhc-nav-bar__slot-megamenu', { 'rhc-nav-bar--megamenu-open': isOpen })}>
           <ul className="rhc-nav-bar__list">
             <li className="rhc-nav-bar__item" ref={hamburgerLiRef}>
               <LinkButton
@@ -329,7 +329,7 @@ export const NavBar = ({
           </div>
         </FocusTrap>
       ) : (
-        <FocusTrap active={isMainNavOpen} className={clsx('rhc-nav-bar__slot-main', { 'is-main-open': isMainNavOpen })}>
+        <FocusTrap active={isMainNavOpen} className={clsx('rhc-nav-bar__slot-main', { 'rhc-nav-bar--main-open': isMainNavOpen })}>
           <LinkButton
             aria-expanded={isMainNavOpen}
             className="rhc-nav-bar__slot-main__btn-trigger"

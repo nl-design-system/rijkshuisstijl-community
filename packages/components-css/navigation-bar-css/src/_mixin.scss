@@ -24,7 +24,7 @@
       z-index: calc(var(--rhc-navigation-bar-z-index, 2) - 1);
     }
 
-    :is(.is-megamenu-open, .is-main-open) .rhc-page-header {
+    :is(.rhc-nav-bar--megamenu-open, .rhc-nav-bar--main-open) .rhc-page-header {
       position: relative;
       z-index: 5;
     }
@@ -114,8 +114,8 @@
   }
 
   @at-root {
-    .rhc-nav-bar__slot-main.is-main-open &,
-    .rhc-nav-bar__slot-megamenu.is-megamenu-open & {
+    .rhc-nav-bar__slot-main.rhc-nav-bar--main-open &,
+    .rhc-nav-bar__slot-megamenu.rhc-nav-bar--megamenu-open & {
       @media (width <= 768px) {
         @include visually-hidden.rhc-visually-hidden-reset;
 
@@ -141,7 +141,7 @@
 
   // wanneer megamenu open is, krijgt endItems speciale weergave;
   @at-root {
-    &.is-megamenu-open {
+    &.rhc-nav-bar--megamenu-open {
       .rhc-nav-bar__slot {
         background-color: var(--token, white);
         padding: var(--token, 1em);
