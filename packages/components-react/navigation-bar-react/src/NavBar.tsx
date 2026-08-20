@@ -172,22 +172,60 @@ export const NavBar = ({
     setOverlayContainer(pageHeader?.parentElement ?? document.body);
   }, []);
 
-  // Op desktop, maak de endItems 'inert' zodat ze geen onderdeel zijn van de focus trap
-  // en houdt rekening met resizing;
+  // Op desktop, maak de endItems niet-focusbaar (via tabindex) maar wel klikbaar.
+  // Op mobiel worden ze volledig inert (overlay dekt ze af). Houdt rekening met resizing.
   useEffect(() => {
+    const endItemsSlot = endItemsSlotRef.current;
+    const itemsSlot = itemsSlotRef.current;
+
     if (!isOpen) {
-      itemsSlotRef.current?.removeAttribute('inert');
-      endItemsSlotRef.current?.removeAttribute('inert');
+      itemsSlot?.removeAttribute('inert');
+      endItemsSlot?.removeAttribute('inert');
       return;
     }
+
+    const setEndItemsTabIndex = (disabled: boolean) => {
+      if (!endItemsSlot) return;
+      if (disabled) {
+        endItemsSlot.querySelectorAll<HTMLElement>('a[href], button, input, select, textarea').forEach((el) => {
+          el.dataset.savedTabindex = el.getAttribute('tabindex') ?? '';
+          el.tabIndex = -1;
+        });
+      } else {
+        endItemsSlot.querySelectorAll<HTMLElement>('[data-saved-tabindex]').forEach((el) => {
+          const saved = el.dataset.savedTabindex;
+          if (saved === '') {
+            el.removeAttribute('tabindex');
+          } else {
+            el.setAttribute('tabindex', saved!);
+          }
+          el.removeAttribute('data-saved-tabindex');
+        });
+      }
+    };
+
     const mq = window.matchMedia('(min-width: 769px)');
     const applyInert = () => {
-      itemsSlotRef.current?.toggleAttribute('inert', mq.matches);
-      endItemsSlotRef.current?.toggleAttribute('inert', mq.matches);
+      itemsSlot?.toggleAttribute('inert', mq.matches);
+      if (mq.matches) {
+        // Desktop: endItems zijn zichtbaar en klikbaar, maar niet in de tab-volgorde
+        setEndItemsTabIndex(false);
+        endItemsSlot?.removeAttribute('inert');
+        setEndItemsTabIndex(true);
+      } else {
+        // Mobiel: endItems zijn onderdeel van de focus trap, volledig toegankelijk
+        setEndItemsTabIndex(false);
+        endItemsSlot?.removeAttribute('inert');
+      }
     };
+
     applyInert();
     mq.addEventListener('change', applyInert);
-    return () => mq.removeEventListener('change', applyInert);
+
+    return () => {
+      mq.removeEventListener('change', applyInert);
+      setEndItemsTabIndex(false);
+    };
   }, [isOpen]);
 
   // escape sluit het menu;
