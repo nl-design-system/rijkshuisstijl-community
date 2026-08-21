@@ -10121,9 +10121,73 @@
             "$type": "color",
             "$value": "{rhc.color.light.lintblauw.500}"
           },
-          "padding-block": {
-            "$type": "dimension",
-            "$value": "{rhc.size.lint}"
+          "vi-large": {
+            "padding-inline-start": {
+              "$type": "dimension",
+              "$value": "{rhc.size.lint}"
+            },
+            "padding-block-start": {
+              "$type": "dimension",
+              "$value": "{rhc.space.none}"
+            },
+            "padding-inline-end": {
+              "$type": "dimension",
+              "$value": "{rhc.size.lint}"
+            },
+            "padding-block-end": {
+              "$type": "dimension",
+              "$value": "{rhc.space.none}"
+            }
+          },
+          "button-subtle": {
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{rhc.text.font-weight.regular}"
+            }
+          },
+          "vi-small": {
+            "padding-inline-start": {
+              "$type": "dimension",
+              "$value": "{rhc.space.xl}"
+            },
+            "padding-block-start": {
+              "$type": "dimension",
+              "$value": "{rhc.space.none}"
+            },
+            "padding-inline-end": {
+              "$type": "dimension",
+              "$value": "{rhc.space.xl}"
+            },
+            "padding-block-end": {
+              "$type": "dimension",
+              "$value": "{rhc.space.none}"
+            }
+          },
+          "seperator": {
+            "color": {
+              "$type": "color",
+              "$value": "{rhc.color.core.500}"
+            }
+          }
+        },
+        "identity": {
+          "primary": {
+            "font-weight": {
+              "$type": "fontWeights",
+              "$value": "{rhc.text.font-weight.regular}"
+            },
+            "font-size": {
+              "$type": "fontSizes",
+              "$value": "{rhc.text.font-size.lg}"
+            }
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{rhc.text.font-weight.bold}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.lg}"
           }
         }
       }
