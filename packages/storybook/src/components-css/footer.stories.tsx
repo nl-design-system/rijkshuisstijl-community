@@ -22,19 +22,27 @@ const LinkListMaker = ({ list }: { list: Array<string> }) => (
 const FooterLinks4 = () => (
   <>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <Heading appearanceLevel={5} level={3}>Rijksoverheid.nl</Heading>
+      <Heading appearanceLevel={5} level={3}>
+        Rijksoverheid.nl
+      </Heading>
       <LinkListMaker list={linkList1} />
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <Heading appearanceLevel={5} level={3}>Officiële overheidsinformatie</Heading>
+      <Heading appearanceLevel={5} level={3}>
+        Officiële overheidsinformatie
+      </Heading>
       <LinkListMaker list={linkList2} />
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <Heading appearanceLevel={5} level={3}>Andere overheidssites</Heading>
+      <Heading appearanceLevel={5} level={3}>
+        Andere overheidssites
+      </Heading>
       <LinkListMaker list={linkList3} />
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <Heading appearanceLevel={5} level={3}>Officiële overheidsinformatie</Heading>
+      <Heading appearanceLevel={5} level={3}>
+        Officiële overheidsinformatie
+      </Heading>
       <LinkListMaker list={linkList2} />
     </div>
   </>
@@ -49,15 +57,21 @@ const FooterLinks3 = () => (
       </p>
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <Heading appearanceLevel={5} level={3}>Overheid.nl</Heading>
+      <Heading appearanceLevel={5} level={3}>
+        Overheid.nl
+      </Heading>
       <LinkListMaker list={linkList1} />
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <Heading appearanceLevel={5} level={3}>Officiële overheidsinformatie</Heading>
+      <Heading appearanceLevel={5} level={3}>
+        Officiële overheidsinformatie
+      </Heading>
       <LinkListMaker list={linkList2} />
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <Heading appearanceLevel={5} level={3}>Andere overheidssites</Heading>
+      <Heading appearanceLevel={5} level={3}>
+        Andere overheidssites
+      </Heading>
       <LinkListMaker list={linkList3} />
     </div>
   </>
@@ -123,7 +137,7 @@ export const PrimaryOnly = () => (
 export const Compact = () => (
   <footer className="rhc-page-footer rhc-page-footer--compact rhc-page-section">
     <div className="rhc-page-footer__secondary rhc-page-section__content">
-      <div className="rhc-page-footer__tagline rhc-page-footer--compact__tagline">De Rijksoverheid. Voor Nederland</div>
+      <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
       <Separator className="rhc-page-footer--compact__separator" />
       <FooterNavbarLinks />
     </div>
