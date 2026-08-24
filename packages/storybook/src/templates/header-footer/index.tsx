@@ -103,7 +103,7 @@ const HeaderFooter = () => (
   <>
     <PageHeader>
       <div className="rhc-page-section">
-        <div className="rhc-page-section--column">
+        <div className="rhc-page-section__content">
           <Logo organisation="Organisatie" subtitle="Wat wij doen">
             <Icon className="dutch-map" icon="nederland-map" />
           </Logo>
@@ -117,7 +117,7 @@ const HeaderFooter = () => (
       </div>
     </PageHeader>
     <div className="rhc-page-section">
-      <div>
+      <div className="rhc-page-section__content">
         <h1>Voorbeeldpagina</h1>
         <p>
           Pitchfork art party microdosing, digicam spritz polycule sambas ascot. Offal meditation bruh, twee akerman
