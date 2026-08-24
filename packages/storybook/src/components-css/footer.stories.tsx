@@ -91,6 +91,7 @@ export const Default = () => (
     <div className="rhc-page-section__content">
       <div className="rhc-page-footer__primary">
         <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
+        <h2 className="rhc-visually-hidden">Footer heading</h2>
         <div className="rhc-grid">
           <FooterLinks4 />
         </div>
