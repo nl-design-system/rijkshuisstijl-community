@@ -3,6 +3,12 @@ import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
 import { Footer, Icon, Link, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
 
+const headerlikeStyles = {
+  fontSize: '1.17em',
+  fontWeight: 700,
+  marginBlockEnd: '1em',
+};
+
 const linkList1 = ['Contact', 'Veel gestelde vragen', 'Over deze site', 'Werken bij'];
 
 const linkList2 = ['Wetten', 'Verdragen', 'Lokale regelgeving', 'Officiële bekendmakingen', 'Tuchtrecht'];
@@ -21,32 +27,35 @@ const LinkListMaker = ({ list }: { list: Array<string> }) => (
 
 const FooterLinks = () => (
   <>
-    <div className="rhc-grid__cell--cols-421">
-      <h2>Overheid.nl</h2>
-      <i>Ingang naar informatie en diensten van alle overheden</i>
-    </div>
-    <div className="rhc-grid__cell--cols-421">
-      <h3>Overheid.nl</h3>
-      <LinkListMaker list={linkList1} />
-    </div>
-    <div className="rhc-grid__cell--cols-421">
-      <h3>Officiële overheidsinformatie</h3>
-      <LinkListMaker list={linkList2} />
-    </div>
-    <div className="rhc-grid__cell--cols-421">
-      <h3>Andere overheidssites</h3>
-      <LinkListMaker list={linkList3} />
+    <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
+    <div className="rhc-grid">
+      <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+        <div style={headerlikeStyles}>Rijksoverheid.nl</div>
+        <LinkListMaker list={linkList1} />
+      </div>
+      <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+        <div style={headerlikeStyles}>Officiële overheidsinformatie</div>
+        <LinkListMaker list={linkList2} />
+      </div>
+      <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+        <div style={headerlikeStyles}>Andere overheidssites</div>
+        <LinkListMaker list={linkList3} />
+      </div>
+      <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+        <div style={headerlikeStyles}>Officiële overheidsinformatie</div>
+        <LinkListMaker list={linkList2} />
+      </div>
     </div>
   </>
 );
 
 const FooterFooterLinks = () => (
-  <>
+  <div className="rhc-page-footer__navigation">
     <Link href="#">Privacy</Link>
     <Link href="#">Cookies en anti-spam</Link>
     <Link href="#">Toegankelijkheid</Link>
     <Link href="#">Proclaimer</Link>
-  </>
+  </div>
 );
 
 export const Default = () => {
@@ -58,10 +67,10 @@ export const Default = () => {
 
 export const Compact = () => {
   const slot2 = (
-    <div style={{ display: 'flex', columnGap: '24px', alignItems: 'baseline' }}>
-      <h2 className="rhc-page-footer-compact--tagline">Overheid.nl</h2>
+    <>
+      <h2 className="rhc-page-footer--compact__tagline">Overheid.nl</h2>
       <FooterFooterLinks />
-    </div>
+    </>
   );
 
   return <Footer slot2={slot2} />;

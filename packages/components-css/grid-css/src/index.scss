@@ -9,20 +9,34 @@
   @include mixin.rhc-grid;
 }
 
+.rhc-grid__cell {
+  @include mixin.rhc-grid__cell;
+}
+
 @for $i from 1 through 12 {
   .rhc-grid__cell--span-#{$i} {
     @include mixin.rhc-grid__cell--span($i);
   }
 }
 
-.rhc-grid__cell--cols-421 {
-  grid-column-end: span 3;
-
-  @media screen and (width < 1280px) {
-    grid-column-end: span 6;
+@for $i from 1 through 12 {
+  .rhc-grid__cell-#{$i} {
+    grid-column-end: span $i;
   }
+}
 
-  @media screen and (width < 768px) {
-    grid-column-end: span 12;
+@media screen and (width >= 768px) {
+  @for $i from 1 through 12 {
+    .rhc-grid__cell-t-#{$i} {
+      grid-column-end: span $i;
+    }
+  }
+}
+
+@media screen and (width >= 1024px) {
+  @for $i from 1 through 12 {
+    .rhc-grid__cell-d-#{$i} {
+      grid-column-end: span $i;
+    }
   }
 }
