@@ -53,7 +53,7 @@ const FooterLinks3 = () => (
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
       <h2 style={{ marginTop: 0 }}>De Rijksoverheid. Voor Nederland</h2>
       <p>
-        <i>Ingang naar informatie en diensten van alle overheden</i>
+        <i>Ingang naar informatie en<br />diensten van alle overheden</i>
       </p>
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
