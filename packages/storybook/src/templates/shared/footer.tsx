@@ -50,7 +50,7 @@ const SharedFooter = () => (
             <h3>Andere overheidssites</h3>
             <LinkList>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                Mijn overheid
+                MijnOverheid
               </LinkListLink>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
                 Rijksoverheid.nl

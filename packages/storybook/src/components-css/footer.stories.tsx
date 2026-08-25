@@ -7,7 +7,7 @@ const linkList1 = ['Contact', 'Veelgestelde vragen', 'Over deze site', 'Werken b
 
 const linkList2 = ['Wetten', 'Verdragen', 'Lokale regelgeving', 'Officiële bekendmakingen', 'Tuchtrecht'];
 
-const linkList3 = ['Mijn overheid', 'Rijksoverheid.nl', 'Ondernemersplein', 'NederlandWereldwijd'];
+const linkList3 = ['MijnOverheid', 'Rijksoverheid.nl', 'Ondernemersplein', 'NederlandWereldwijd'];
 
 const LinkListMaker = ({ list }: { list: Array<string> }) => (
   <LinkList>
