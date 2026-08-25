@@ -16,7 +16,7 @@ const SharedFooter = () => (
                 Contact
               </LinkListLink>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                Veel gestelde vragen
+                Veelgestelde vragen
               </LinkListLink>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
                 Over deze site

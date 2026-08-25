@@ -3,7 +3,7 @@ import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
 import { Heading, Icon, Link, LinkList, LinkListLink, Separator } from '@rijkshuisstijl-community/components-react';
 
-const linkList1 = ['Contact', 'Veel gestelde vragen', 'Over deze site', 'Werken bij'];
+const linkList1 = ['Contact', 'Veelgestelde vragen', 'Over deze site', 'Werken bij'];
 
 const linkList2 = ['Wetten', 'Verdragen', 'Lokale regelgeving', 'Officiële bekendmakingen', 'Tuchtrecht'];
 
