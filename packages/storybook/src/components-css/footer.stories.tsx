@@ -3,6 +3,13 @@ import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
 import { Heading, Icon, Link, LinkList, LinkListLink, Separator } from '@rijkshuisstijl-community/components-react';
 
+const headerLikeStyles = {
+  fontSize: 'var(--rhc-text-font-size-xl',
+  lineHeight: 'var(--rhc-text-line-height-md',
+  marginTop: 0,
+  marginBottom: '8px',
+};
+
 const linkList1 = ['Contact', 'Veelgestelde vragen', 'Over deze site', 'Werken bij'];
 
 const linkList2 = ['Wetten', 'Verdragen', 'Lokale regelgeving', 'Officiële bekendmakingen', 'Tuchtrecht'];
@@ -51,8 +58,8 @@ const FooterLinks4 = () => (
 const FooterLinks3 = () => (
   <>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <h2 style={{ marginTop: 0 }}>De Rijksoverheid. Voor Nederland</h2>
-      <p>
+      <p style={headerLikeStyles}>Overheid.nl</p>
+      <p style={{ marginTop: 0 }}>
         <i>Ingang naar informatie en<br />diensten van alle overheden</i>
       </p>
     </div>
@@ -109,8 +116,11 @@ export const Default = () => (
 export const TaglineInColumn = () => (
   <footer className="rhc-page-footer rhc-page-section">
     <div className="rhc-page-section__content">
-      <div className="rhc-grid rhc-page-footer__primary">
-        <FooterLinks3 />
+      <div className="rhc-page-footer__primary">
+        <h2 className="rhc-visually-hidden">Footer heading</h2>
+        <div className="rhc-grid">
+          <FooterLinks3 />
+        </div>
       </div>
       <div className="rhc-page-footer__separator">
         <Separator />
