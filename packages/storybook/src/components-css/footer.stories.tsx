@@ -9,6 +9,7 @@ export const Default = () => (
     <div className="rhc-page-section__content">
       <div className="rhc-page-footer__primary">
         <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
+        <h2 className="rhc-visually-hidden">Footer heading</h2>
         <div className="rhc-grid">
           <FooterLinks4 />
         </div>
@@ -55,7 +56,7 @@ export const PrimaryOnly = () => (
 export const Compact = () => (
   <footer className="rhc-page-footer rhc-page-footer--compact rhc-page-section">
     <div className="rhc-page-footer__secondary rhc-page-section__content">
-      <div className="rhc-page-footer__tagline rhc-page-footer--compact__tagline">De Rijksoverheid. Voor Nederland</div>
+      <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
       <Separator className="rhc-page-footer--compact__separator" />
       <FooterNavbarLinks />
     </div>

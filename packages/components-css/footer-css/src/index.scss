@@ -7,18 +7,14 @@
   background-color: var(--rhc-page-footer-background-color);
   color: var(--rhc-page-footer-color);
 
-  & .rhc-link,
-  & .utrecht-link-list__link {
+  .rhc-link,
+  .utrecht-link-list__link {
     color: var(--rhc-page-footer-color);
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-block-start: 0;
+  .rhc-heading {
+    color: currentColor;
+    margin-block-end: 1em;
   }
 
   &__tagline {
@@ -80,6 +76,7 @@
       align-items: center;
       flex-direction: column;
       inline-size: 100%;
+      row-gap: 0;
     }
   }
 
@@ -92,7 +89,7 @@
       color: var(--rhc-page-footer-compact-color);
     }
 
-    &__tagline {
+    .rhc-page-footer__tagline {
       align-self: center;
       font-size: var(--rhc-page-footer-compact-tagline-font-size);
       margin-block: var(--rhc-space-none);
@@ -100,12 +97,13 @@
 
     &__separator {
       --utrecht-separator-color: var(--rhc-page-footer-compact-color);
+      --utrecht-space-around: 0;
+      --utrecht-separator-margin-block-end: 0;
+      --utrecht-separator-margin-block-start: 0;
 
       display: none;
 
       @media screen and (width < 768px) {
-        --utrecht-space-around: 0;
-
         display: block;
         inline-size: 100%;
       }
