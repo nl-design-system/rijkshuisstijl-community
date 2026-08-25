@@ -145,6 +145,15 @@ export const Compact = () => (
   </footer>
 );
 
+export const CompactWithoutTagline = () => (
+  <footer className="rhc-page-footer rhc-page-footer--compact rhc-page-section">
+    <div className="rhc-page-footer__secondary rhc-page-section__content">
+      <Separator className="rhc-page-footer--compact__separator" />
+      <FooterNavbarLinks />
+    </div>
+  </footer>
+);
+
 export default {
   component: Default,
   title: 'Footer',
