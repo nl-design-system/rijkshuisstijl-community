@@ -158,14 +158,14 @@ export const NavBar = ({
   megamenu,
   ...restProps
 }: PropsWithChildren<NavBarProps>) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMegamenuOpen, setIsOpen] = useState(false);
   const [isMainNavOpen, setIsMainNavOpen] = useState(false);
   const [overlayContainer, setOverlayContainer] = useState<Element | null>(null);
   const itemsSlotRef = useRef<HTMLDivElement>(null);
   const endItemsSlotRef = useRef<HTMLDivElement>(null);
   const hamburgerLiRef = useRef<HTMLLIElement>(null);
   const wasOpenRef = useRef(false);
-  const isAnyMenuOpen = isOpen || isMainNavOpen;
+  const isAnyMenuOpen = isMegamenuOpen || isMainNavOpen;
   const closedByKeyboardRef = useRef(false);
 
   useEffect(() => {
@@ -179,7 +179,7 @@ export const NavBar = ({
     const endItemsSlot = endItemsSlotRef.current;
     const itemsSlot = itemsSlotRef.current;
 
-    if (!isOpen) {
+    if (!isMegamenuOpen) {
       itemsSlot?.removeAttribute('inert');
       endItemsSlot?.removeAttribute('inert');
       return;
@@ -231,7 +231,7 @@ export const NavBar = ({
       mq.removeEventListener('change', applyInert);
       setEndItemsTabIndex(false);
     };
-  }, [isOpen]);
+  }, [isMegamenuOpen]);
 
   // escape sluit het menu;
   useEffect(() => {
@@ -253,27 +253,31 @@ export const NavBar = ({
 
   // Reset the focustrap naar btn-trigger (hamburger menu) na sluiten van megamenu
   useEffect(() => {
-    if (!isOpen && wasOpenRef.current) {
+    if (!isMegamenuOpen && wasOpenRef.current) {
       if (closedByKeyboardRef.current) {
         hamburgerLiRef.current?.querySelector<HTMLElement>('button, [href]')?.focus();
       }
       closedByKeyboardRef.current = false;
     }
-    wasOpenRef.current = isOpen;
-  }, [isOpen]);
+    wasOpenRef.current = isMegamenuOpen;
+  }, [isMegamenuOpen]);
 
+  // wanneer isMegamenuOpen veranderd, toggled de 'open' class op de rhc-page-header (ivm z-index)
   useEffect(() => {
-    document.documentElement.classList.toggle('rhc-nav-bar--megamenu-open', isOpen);
-    return () => document.documentElement.classList.remove('rhc-nav-bar--megamenu-open');
-  }, [isOpen]);
+    const pageHeader = document.querySelector('.rhc-page-header');
+    pageHeader?.classList.toggle('is-navbar-megamenu-open', isMegamenuOpen);
+    return () => pageHeader?.classList.remove('is-navbar-megamenu-open');
+  }, [isMegamenuOpen]);
 
+  // wanneer isMegamenuOpen veranderd, toggled de 'open' class op de rhc-page-header (ivm z-index)
   useEffect(() => {
-    document.documentElement.classList.toggle('rhc-nav-bar--main-open', isMainNavOpen);
-    return () => document.documentElement.classList.remove('rhc-nav-bar--main-open');
+    const pageHeader = document.querySelector('.rhc-page-header');
+    pageHeader?.classList.toggle('is-navbar-main-open', isMainNavOpen);
+    return () => pageHeader?.classList.remove('is-navbar-main-open');
   }, [isMainNavOpen]);
 
   return (
-    <div className={clsx('rhc-nav-bar', { 'is-open': isOpen })}>
+    <div className={clsx('rhc-nav-bar', { 'is-open': isMegamenuOpen })}>
       <h2 className="rhc-visually-hidden">Hoofd navigatie</h2>
       {identity && (
         <div className="rhc-nav-bar__slot-identity">
@@ -283,17 +287,17 @@ export const NavBar = ({
 
       {megamenu ? (
         <FocusTrap
-          active={isOpen}
-          className={clsx('rhc-nav-bar__slot-megamenu', { 'rhc-nav-bar--megamenu-open': isOpen })}
+          active={isMegamenuOpen}
+          className={clsx('rhc-nav-bar__slot-megamenu', { 'is-navbar-megamenu-open': isMegamenuOpen })}
         >
           <ul className="rhc-nav-bar__list">
             <li className="rhc-nav-bar__item" ref={hamburgerLiRef}>
               <LinkButton
-                aria-expanded={isOpen}
+                aria-expanded={isMegamenuOpen}
                 className={clsx('rhc-nav-bar__link')}
                 onClick={() => setIsOpen((prev) => !prev)}
               >
-                <Icon icon={isOpen && globalThis.matchMedia('(max-width: 768px)').matches ? 'kruis' : 'menu'} />
+                <Icon icon={isMegamenuOpen && globalThis.matchMedia('(max-width: 768px)').matches ? 'kruis' : 'menu'} />
 
                 <span className={clsx('rhc-nav-bar__label', 'rhc-visually-hidden-mobile')}>
                   Kies een onderwerp of dienst
@@ -302,7 +306,7 @@ export const NavBar = ({
             </li>
           </ul>
           <div className="rhc-nav-bar__slots">
-            {isOpen && <div className="rhc-nav-bar__megamenu">{megamenu}</div>}
+            {isMegamenuOpen && <div className="rhc-nav-bar__megamenu">{megamenu}</div>}
             {items && (
               <div className="rhc-nav-bar__slot" ref={itemsSlotRef}>
                 <nav
@@ -331,7 +335,7 @@ export const NavBar = ({
                 </nav>
               </div>
             )}
-            {isOpen && (
+            {isMegamenuOpen && (
               <Button
                 appearance="subtle-button"
                 aria-label="Sluit menu"
@@ -347,7 +351,7 @@ export const NavBar = ({
       ) : (
         <FocusTrap
           active={isMainNavOpen}
-          className={clsx('rhc-nav-bar__slot-main', { 'rhc-nav-bar--main-open': isMainNavOpen })}
+          className={clsx('rhc-nav-bar__slot-main', { 'is-navbar-main-open': isMainNavOpen })}
         >
           <LinkButton
             aria-expanded={isMainNavOpen}
@@ -423,7 +427,7 @@ export const NavBarMegaMenu = ({
       {tagline && <p className="rhc-nav-bar__megamenu-tagline">{tagline}</p>}
       <div className="rhc-grid">
         {columns.map(({ id, heading, items }) => (
-          <div className="rhc-grid__cell--cols-421" key={id}>
+          <div className="rhc-grid__cell rhc-grid__cell-d-3" key={id}>
             <p className="rhc-nav-bar__megamenu-column-heading">{heading}</p>
             <LinkList>
               {items.map(({ id: itemId, href, target, label }) => (
