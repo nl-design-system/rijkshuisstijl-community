@@ -24,7 +24,7 @@
       z-index: calc(var(--rhc-navigation-bar-z-index, 2) - 1);
     }
 
-    :is(.rhc-nav-bar--megamenu-open, .rhc-nav-bar--main-open) .rhc-page-header {
+    .rhc-page-header:is(.is-navbar-megamenu-open, .is-navbar-main-open) {
       position: relative;
       z-index: 5;
     }
@@ -114,8 +114,8 @@
   }
 
   @at-root {
-    .rhc-nav-bar__slot-main.rhc-nav-bar--main-open &,
-    .rhc-nav-bar__slot-megamenu.rhc-nav-bar--megamenu-open & {
+    .rhc-nav-bar__slot-main.is-navbar-main-open &,
+    .rhc-nav-bar__slot-megamenu.is-navbar-megamenu-open & {
       @media (width <= 768px) {
         @include visually-hidden.rhc-visually-hidden-reset;
 
@@ -141,7 +141,7 @@
 
   // wanneer megamenu open is, krijgt endItems speciale weergave;
   @at-root {
-    &.rhc-nav-bar--megamenu-open {
+    &.is-navbar-megamenu-open {
       .rhc-nav-bar__slot {
         background-color: white; // TODO tokenise
         padding-block-end: var(--rhc-page-section-vi-small-padding-block-end);
@@ -203,29 +203,23 @@
 }
 
 @mixin rhc-nav-bar__megamenu__btn-close {
-  display: none;
   font-weight: 400; // TODO tokenise
-  inset-block-start: 0.75em;
-  inset-inline-end: 0.75em;
+  inset-block-start: calc(var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-start) + 1.8em);
+  inset-inline-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-end);
   position: absolute;
 
   &.rhc-button:hover {
     // todo; token corrigeren
     background-color: var(--rhc-navigation-bar-item-hover-background-color);
   }
-
-  @media (width >= 768px) {
-    display: flex;
-    inset-block-start: 2.75em;
-    inset-inline-end: 0.75em;
-  }
 }
 
 // TAGLINE --
 @mixin rhc-nav-bar__megamenu-tagline {
-  border-block-end: 1px solid var(--rhc-navigation-bar-mega-menu-separator-color, white);
+  border-block-end: 1px solid var(--rhc-navigation-bar-mega-menu-seperator-color, white);
   font-style: italic;
   margin-block-start: 0;
+  padding-block-end: 1em;
 }
 
 // NAV --
