@@ -16,7 +16,7 @@ const SharedFooter = () => (
                 Contact
               </LinkListLink>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                Veel gestelde vragen
+                Veelgestelde vragen
               </LinkListLink>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
                 Over deze site
@@ -50,7 +50,7 @@ const SharedFooter = () => (
             <h3>Andere overheidssites</h3>
             <LinkList>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
-                Mijn overheid
+                MijnOverheid
               </LinkListLink>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
                 Rijksoverheid.nl
