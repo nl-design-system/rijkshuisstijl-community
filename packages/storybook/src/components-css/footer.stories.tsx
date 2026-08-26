@@ -4,8 +4,8 @@ import '@rijkshuisstijl-community/grid-css/dist/index.css';
 import { Heading, Icon, Link, LinkList, LinkListLink, Separator } from '@rijkshuisstijl-community/components-react';
 
 const headerLikeStyles = {
-  fontSize: 'var(--rhc-text-font-size-xl',
-  lineHeight: 'var(--rhc-text-line-height-md',
+  fontSize: 'var(--rhc-text-font-size-xl)',
+  lineHeight: 'var(--rhc-text-line-height-md)',
   marginTop: 0,
   marginBottom: '8px',
 };
@@ -60,7 +60,11 @@ const FooterLinks3 = () => (
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
       <p style={headerLikeStyles}>Overheid.nl</p>
       <p style={{ marginTop: 0 }}>
-        <i>Ingang naar informatie en<br />diensten van alle overheden</i>
+        <i>
+          Ingang naar informatie en
+          <br />
+          diensten van alle overheden
+        </i>
       </p>
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
