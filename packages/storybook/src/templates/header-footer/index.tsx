@@ -1,22 +1,35 @@
-import { Icon, Logo, NavBar, NavBarItem, NavBarMegaMenu, PageHeader } from '@rijkshuisstijl-community/components-react';
+import {
+  Icon,
+  LanguageNavigation,
+  Logo,
+  NavBar,
+  NavBarItem,
+  NavBarMegaMenu,
+  PageHeader,
+} from '@rijkshuisstijl-community/components-react';
 import SharedFooter from '../shared/footer';
 import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
 
-const endItemsPrimary = [
-  {
-    href: '/',
-    id: 'end-first-link',
-    label: 'Taalswitch',
-  },
-  {
-    href: '/',
-    id: 'end-second-link',
-    label: 'Contact',
-    currentPage: true,
-    icon: <Icon icon="inloggen" />,
-  },
-].map((endItem) => <NavBarItem key={endItem.id} {...endItem} />);
+const languages = {
+  nl: { href: '#', lang: 'nl', languageName: 'Nederlands' },
+  en: { href: '#', lang: 'en', languageName: 'English' },
+  de: { href: '#', lang: 'de', languageName: 'Deutsch' },
+};
+
+const endItemsPrimary = (
+  <>
+    <LanguageNavigation defaultSelectedLanguage="Nederlands">
+      <LanguageNavigation.Trigger />
+      <LanguageNavigation.Content>
+        {[languages.nl, languages.en, languages.de].map((language) => (
+          <LanguageNavigation.Item key={language.lang} {...language} />
+        ))}
+      </LanguageNavigation.Content>
+    </LanguageNavigation>
+    <NavBarItem currentPage={true} href="/" icon={<Icon icon="inloggen" />} id="end-second-link" label="Contact" />
+  </>
+);
 
 const endItemsSecondary = [
   {
