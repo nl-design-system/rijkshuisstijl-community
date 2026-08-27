@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/paragraph-react
 
+## 2.1.3
+
+### Patch Changes
+
+- Updated dependencies [3845c86]
+  - @rijkshuisstijl-community/paragraph-css@2.2.0
+
 ## 2.1.2
 
 ### Patch Changes

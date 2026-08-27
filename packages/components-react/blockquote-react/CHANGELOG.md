@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/blockquote-react
 
+## 1.1.3
+
+### Patch Changes
+
+- Updated dependencies [3845c86]
+  - @rijkshuisstijl-community/blockquote-css@1.2.0
+
 ## 1.1.2
 
 ### Patch Changes

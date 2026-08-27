@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/navigation-list-item-react
 
+## 1.0.4
+
+### Patch Changes
+
+- @rijkshuisstijl-community/paragraph-react@2.1.3
+
 ## 1.0.3
 
 ### Patch Changes

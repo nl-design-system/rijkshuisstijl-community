@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/separator-react
 
+## 2.0.1
+
+### Patch Changes
+
+- Updated dependencies [3845c86]
+  - @rijkshuisstijl-community/separator-css@2.1.0
+
 ## 2.0.0
 
 ### Major Changes

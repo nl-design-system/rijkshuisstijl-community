@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/pre-heading-react
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies [3845c86]
+  - @rijkshuisstijl-community/pre-heading-css@1.1.0
+  - @rijkshuisstijl-community/heading-react@1.0.3
+
 ## 1.0.1
 
 ### Patch Changes
