@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/button-react
 
+## 1.1.4
+
+### Patch Changes
+
+- Updated dependencies [3845c86]
+  - @rijkshuisstijl-community/button-css@1.2.0
+
 ## 1.1.3
 
 ### Patch Changes

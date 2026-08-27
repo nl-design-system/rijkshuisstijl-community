@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/breadcrumb-nav-react
 
+## 0.1.3
+
+### Patch Changes
+
+- Updated dependencies [3845c86]
+  - @rijkshuisstijl-community/breadcrumb-nav-css@1.2.0
+
 ## 0.1.2
 
 ### Patch Changes

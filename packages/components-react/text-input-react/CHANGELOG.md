@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/text-input-react
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [3845c86]
+  - @rijkshuisstijl-community/text-input-css@1.1.0
+
 ## 1.0.2
 
 ### Patch Changes

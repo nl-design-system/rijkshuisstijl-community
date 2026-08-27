@@ -1,5 +1,63 @@
 # @rijkshuisstijl-community/components-css
 
+## 18.0.1
+
+### Patch Changes
+
+- ba8b11e: Republish, the previous release did not include a dist folder
+- Updated dependencies [6fe22ce]
+- Updated dependencies [cb9bc2c]
+- Updated dependencies [64b1fa5]
+- Updated dependencies [3845c86]
+- Updated dependencies [cb9bc2c]
+- Updated dependencies [683939c]
+  - @rijkshuisstijl-community/logo-css@1.2.0
+  - @rijkshuisstijl-community/link-list-css@1.2.0
+  - @rijkshuisstijl-community/footer-css@2.0.0
+  - @rijkshuisstijl-community/page-number-navigation-css@1.1.0
+  - @rijkshuisstijl-community/language-navigation-css@1.1.0
+  - @rijkshuisstijl-community/data-badge-button-css@1.1.0
+  - @rijkshuisstijl-community/code-input-group-css@1.1.0
+  - @rijkshuisstijl-community/navigation-list-css@1.1.0
+  - @rijkshuisstijl-community/visually-hidden-css@1.1.0
+  - @rijkshuisstijl-community/breadcrumb-nav-css@1.2.0
+  - @rijkshuisstijl-community/checkbox-group-css@1.1.0
+  - @rijkshuisstijl-community/link-list-card-css@1.1.0
+  - @rijkshuisstijl-community/navigation-bar-css@1.1.0
+  - @rijkshuisstijl-community/rounded-corner-css@1.1.0
+  - @rijkshuisstijl-community/unordered-list-css@1.1.0
+  - @rijkshuisstijl-community/action-group-css@1.2.0
+  - @rijkshuisstijl-community/card-as-link-css@1.2.0
+  - @rijkshuisstijl-community/message-list-css@1.1.0
+  - @rijkshuisstijl-community/number-badge-css@1.1.0
+  - @rijkshuisstijl-community/ordered-list-css@1.1.0
+  - @rijkshuisstijl-community/link-button-css@1.1.0
+  - @rijkshuisstijl-community/pre-heading-css@1.1.0
+  - @rijkshuisstijl-community/radio-group-css@1.1.0
+  - @rijkshuisstijl-community/blockquote-css@1.2.0
+  - @rijkshuisstijl-community/code-input-css@1.1.0
+  - @rijkshuisstijl-community/file-input-css@1.1.0
+  - @rijkshuisstijl-community/text-input-css@1.1.0
+  - @rijkshuisstijl-community/accordion-css@2.2.0
+  - @rijkshuisstijl-community/paragraph-css@2.2.0
+  - @rijkshuisstijl-community/separator-css@2.1.0
+  - @rijkshuisstijl-community/skip-link-css@1.1.0
+  - @rijkshuisstijl-community/toggletip-css@1.1.0
+  - @rijkshuisstijl-community/checkbox-css@1.1.0
+  - @rijkshuisstijl-community/side-nav-css@1.1.0
+  - @rijkshuisstijl-community/textarea-css@1.1.0
+  - @rijkshuisstijl-community/article-css@2.2.0
+  - @rijkshuisstijl-community/heading-css@1.1.0
+  - @rijkshuisstijl-community/listbox-css@1.1.0
+  - @rijkshuisstijl-community/button-css@1.2.0
+  - @rijkshuisstijl-community/figure-css@1.2.0
+  - @rijkshuisstijl-community/alert-css@4.2.0
+  - @rijkshuisstijl-community/radio-css@1.1.0
+  - @rijkshuisstijl-community/card-css@1.2.0
+  - @rijkshuisstijl-community/file-css@1.1.0
+  - @rijkshuisstijl-community/hero-css@1.1.0
+  - @rijkshuisstijl-community/link-css@1.2.0
+
 ## 18.0.0
 
 ### Major Changes

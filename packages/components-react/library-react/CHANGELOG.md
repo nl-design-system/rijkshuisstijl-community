@@ -1,5 +1,61 @@
 # @rijkshuisstijl-community/components-react
 
+## 17.0.0
+
+### Major Changes
+
+- cb9bc2c: Implement new footer design
+
+### Patch Changes
+
+- @rijkshuisstijl-community/logo-react@1.1.1
+- @rijkshuisstijl-community/link-list-react@1.1.1
+- @rijkshuisstijl-community/footer-react@0.0.1
+- @rijkshuisstijl-community/page-number-navigation-react@1.0.3
+- @rijkshuisstijl-community/language-navigation-react@2.0.1
+- @rijkshuisstijl-community/data-badge-button-react@1.0.3
+- @rijkshuisstijl-community/code-input-group-react@1.0.3
+- @rijkshuisstijl-community/navigation-list-react@1.0.3
+- @rijkshuisstijl-community/visually-hidden-react@1.0.3
+- @rijkshuisstijl-community/breadcrumb-nav-react@0.1.3
+- @rijkshuisstijl-community/checkbox-group-react@1.1.3
+- @rijkshuisstijl-community/link-list-card-react@1.0.3
+- @rijkshuisstijl-community/navigation-bar-react@1.0.4
+- @rijkshuisstijl-community/rounded-corner-react@1.0.3
+- @rijkshuisstijl-community/action-group-react@1.1.3
+- @rijkshuisstijl-community/card-as-link-react@1.1.3
+- @rijkshuisstijl-community/message-list-react@1.0.3
+- @rijkshuisstijl-community/number-badge-react@1.0.3
+- @rijkshuisstijl-community/link-button-react@1.0.3
+- @rijkshuisstijl-community/pre-heading-react@1.0.2
+- @rijkshuisstijl-community/radio-group-react@1.0.1
+- @rijkshuisstijl-community/blockquote-react@1.1.3
+- @rijkshuisstijl-community/code-input-react@1.0.3
+- @rijkshuisstijl-community/file-input-react@2.0.4
+- @rijkshuisstijl-community/text-input-react@1.0.3
+- @rijkshuisstijl-community/accordion-react@3.1.3
+- @rijkshuisstijl-community/paragraph-react@2.1.3
+- @rijkshuisstijl-community/separator-react@2.0.1
+- @rijkshuisstijl-community/skip-link-react@1.0.3
+- @rijkshuisstijl-community/toggletip-react@1.0.4
+- @rijkshuisstijl-community/checkbox-react@1.1.3
+- @rijkshuisstijl-community/side-nav-react@1.0.3
+- @rijkshuisstijl-community/textarea-react@1.0.3
+- @rijkshuisstijl-community/article-react@2.1.3
+- @rijkshuisstijl-community/heading-react@1.0.3
+- @rijkshuisstijl-community/listbox-react@1.0.3
+- @rijkshuisstijl-community/button-react@1.1.4
+- @rijkshuisstijl-community/figure-react@1.1.3
+- @rijkshuisstijl-community/alert-react@3.1.4
+- @rijkshuisstijl-community/radio-react@1.0.3
+- @rijkshuisstijl-community/card-react@1.1.3
+- @rijkshuisstijl-community/file-react@1.0.4
+- @rijkshuisstijl-community/hero-react@1.0.3
+- @rijkshuisstijl-community/link-react@1.1.3
+- @rijkshuisstijl-community/message-list-item-react@0.0.5
+- @rijkshuisstijl-community/navigation-list-item-react@1.0.4
+- @rijkshuisstijl-community/data-summary-item-react@1.0.3
+
 ## 16.0.0
 
 ### Major Changes

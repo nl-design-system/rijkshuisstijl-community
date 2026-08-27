@@ -1,5 +1,14 @@
 # @rijkshuisstijl-community/logo-react
 
+## 1.1.1
+
+### Patch Changes
+
+- Updated dependencies [6fe22ce]
+- Updated dependencies [3845c86]
+- Updated dependencies [683939c]
+  - @rijkshuisstijl-community/logo-css@1.2.0
+
 ## 1.1.0
 
 ### Minor Changes

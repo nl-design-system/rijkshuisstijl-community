@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/card-react
 
+## 1.1.3
+
+### Patch Changes
+
+- Updated dependencies [3845c86]
+  - @rijkshuisstijl-community/card-css@1.2.0
+  - @rijkshuisstijl-community/link-react@1.1.3
+
 ## 1.1.2
 
 ### Patch Changes
