@@ -27,7 +27,7 @@ const endItemsPrimary = (
         ))}
       </LanguageNavigation.Content>
     </LanguageNavigation>
-    <NavBarItem currentPage={true} href="/" icon={<Icon icon="inloggen" />} id="end-second-link" label="Contact" />
+    <NavBarItem currentPage={true} href="/" iconEnd={<Icon icon="communicatie" />} id="end-second-link" label="Contact" />
   </>
 );
 
@@ -36,7 +36,7 @@ const endItemsSecondary = [
     href: '/',
     id: 'end-first-link',
     label: 'Zoeken',
-    icon: <Icon icon="inloggen" />,
+    icon: <Icon icon="zoek" />,
   },
   {
     href: '/',

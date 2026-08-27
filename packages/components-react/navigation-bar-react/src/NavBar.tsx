@@ -45,6 +45,7 @@ export interface NavBarLinkProps {
 
 export interface NavBarItemProps extends NavBarLinkProps, HTMLAttributes<HTMLLIElement> {
   icon?: ReactElement<IconProps>;
+  iconEnd?: ReactElement<IconProps>;
   subList?: NavbarSubListProps;
   iconOnly?: boolean;
   currentPage?: boolean;
@@ -90,6 +91,7 @@ export const NavBarItem = ({
   target,
   label,
   icon,
+  iconEnd,
   subList,
   iconOnly = false,
   currentPage = false,
@@ -119,6 +121,7 @@ export const NavBarItem = ({
         >
           {icon}
           <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__label--sr-only')}>{label}</span>
+          {iconEnd}
         </Link>
       )}
       {subList && isItemOpen && (
