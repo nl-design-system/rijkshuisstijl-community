@@ -66,7 +66,7 @@ export interface LanguageNavigationRootProps extends HTMLAttributes<HTMLElement>
   defaultSelectedLanguage?: string;
   /** Callback when selected language changes */
   onLanguageChange?: (_newLanguage: string) => void;
-  ref?: Ref<HTMLElement>;
+  ref?: Ref<HTMLDivElement>;
   closeOnSelect?: boolean;
 }
 
