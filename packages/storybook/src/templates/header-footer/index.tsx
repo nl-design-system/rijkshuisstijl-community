@@ -27,7 +27,13 @@ const endItemsPrimary = (
         ))}
       </LanguageNavigation.Content>
     </LanguageNavigation>
-    <NavBarItem currentPage={true} href="/" iconEnd={<Icon icon="communicatie" />} id="end-second-link" label="Contact" />
+    <NavBarItem
+      currentPage={true}
+      href="/"
+      iconEnd={<Icon icon="communicatie" />}
+      id="end-second-link"
+      label="Contact"
+    />
   </>
 );
 
@@ -81,6 +87,8 @@ const megamenu = (
       {
         id: 'col-1',
         heading: 'Diensten van de overheid',
+        headingAppearanceLevel: 5,
+        headingLevel: 3,
         items: [
           { id: 'mm-1', label: 'Diensten overzicht', href: '/' },
           { id: 'mm-2', label: 'Berichten over uw buurt', href: '/' },
@@ -92,6 +100,8 @@ const megamenu = (
       {
         id: 'col-2',
         heading: 'Beleid en regelgeving',
+        headingAppearanceLevel: 5,
+        headingLevel: 3,
         items: [
           { id: 'mm-6', label: 'Overzicht', href: '/' },
           { id: 'mm-7', label: 'Wetten', href: '/' },
@@ -102,6 +112,8 @@ const megamenu = (
       {
         id: 'col-3',
         heading: 'Transparantie',
+        headingAppearanceLevel: 5,
+        headingLevel: 3,
         items: [
           { id: 'mm-10', label: 'Standaarden', href: '/' },
           { id: 'mm-11', label: 'Open Data', href: '/' },

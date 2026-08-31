@@ -78,6 +78,8 @@ export const WithMegamenu: Story = {
             {
               id: 'col-1',
               heading: 'Diensten van de overheid',
+              headingLevel: 3,
+              headingAppearanceLevel: 5,
               items: [
                 { id: 'mm-1', label: 'Diensten overzicht', href: '/' },
                 { id: 'mm-2', label: 'Berichten over uw buurt', href: '/' },
@@ -89,6 +91,8 @@ export const WithMegamenu: Story = {
             {
               id: 'col-2',
               heading: 'Beleid en regelgeving',
+              headingLevel: 3,
+              headingAppearanceLevel: 5,
               items: [
                 { id: 'mm-6', label: 'Overzicht', href: '/' },
                 { id: 'mm-7', label: 'Wetten', href: '/' },
@@ -99,6 +103,8 @@ export const WithMegamenu: Story = {
             {
               id: 'col-3',
               heading: 'Transparantie',
+              headingLevel: 3,
+              headingAppearanceLevel: 5,
               items: [
                 { id: 'mm-10', label: 'Standaarden', href: '/' },
                 { id: 'mm-11', label: 'Open Data', href: '/' },

@@ -67,6 +67,9 @@ export interface SubNavBarProps extends HTMLAttributes<HTMLDivElement> {
 export interface NavBarMegaMenuColumnProps {
   id: string;
   heading: ReactNode;
+  headingAppearanceLevel?: HeadingLevel;
+  headingLevel?: HeadingLevel;
+
   items: NavBarLinkProps[];
 }
 
@@ -79,6 +82,7 @@ export interface NavBarMegaMenuProps extends HTMLAttributes<HTMLDivElement> {
 interface SectionProps {
   id: string;
   heading: ReactNode;
+  headingAppearanceLevel?: HeadingLevel;
   headingLevel?: HeadingLevel;
   items: NavBarLinkProps[];
 }
@@ -126,9 +130,13 @@ export const NavBarItem = ({
       )}
       {subList && isItemOpen && (
         <div className="rhc-nav-bar__item-dropdown" id={`rhc-nav-bar__item-dropdown-${contentId}`}>
-          {subList.sections.map(({ id, heading, headingLevel = 3, items }) => (
+          {subList.sections.map(({ id, heading, headingLevel = 3, headingAppearanceLevel = 5, items }) => (
             <div className="rhc-nav-bar__item-dropdown-section" key={id}>
-              <Heading className="rhc-nav-bar__item-dropdown-section-title" level={headingLevel}>
+              <Heading
+                appearanceLevel={headingAppearanceLevel}
+                className="rhc-nav-bar__item-dropdown-section-title"
+                level={headingLevel}
+              >
                 {heading}
               </Heading>
               <ul className="rhc-nav-bar__item-dropdown-section-list">
