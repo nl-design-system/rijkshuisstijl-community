@@ -8916,6 +8916,34 @@
       }
     }
   },
+  "components/grid": {
+    "rhc": {
+      "grid": {
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{rhc.grid.vi-large.column-gap}"
+        },
+        "vi-large": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          }
+        },
+        "vi-medium": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
+          }
+        },
+        "vi-small": {
+          "column-gap": {
+            "$type": "dimension",
+            "$value": "{rhc.space.xl}"
+          }
+        }
+      }
+    }
+  },
   "components/heading/base": {
     "nl": {
       "heading": {
@@ -10613,6 +10641,20 @@
       }
     }
   },
+  "components/page-header": {
+    "rhc": {
+      "page-header": {
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "{rhc.space.2xl}"
+        },
+        "background-color": {
+          "$type": "color",
+          "$value": "{rhc.color.wit}"
+        }
+      }
+    }
+  },
   "components/page-number-navigation": {
     "ams": {
       "pagination": {
@@ -10679,6 +10721,42 @@
             "$type": "other",
             "$value": "{rhc.space.xs}",
             "$description": "[code-only]"
+          }
+        }
+      }
+    }
+  },
+  "components/page-section": {
+    "rhc": {
+      "page-section": {
+        "max-inline-size": {
+          "$type": "dimension",
+          "$value": "90rem"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{rhc.space.5xl}"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{rhc.space.5xl}"
+        },
+        "vi-small": {
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.xl}"
+          }
+        },
+        "vi-large": {
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.5xl}"
+          }
+        },
+        "vi-medium": {
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{rhc.space.2xl}"
           }
         }
       }
@@ -12251,84 +12329,6 @@
           "margin-inline-start": {
             "$type": "dimension",
             "$value": "{rhc.space.none}"
-          }
-        }
-      }
-    }
-  },
-  "components/page-header": {
-    "rhc": {
-      "page-header": {
-        "row-gap": {
-          "$type": "dimension",
-          "$value": "{rhc.space.2xl}"
-        },
-        "background-color": {
-          "$type": "color",
-          "$value": "{rhc.color.wit}"
-        }
-      }
-    }
-  },
-  "components/grid": {
-    "rhc": {
-      "grid": {
-        "column-gap": {
-          "$type": "dimension",
-          "$value": "{rhc.grid.vi-large.column-gap}"
-        },
-        "vi-large": {
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{rhc.space.2xl}"
-          }
-        },
-        "vi-medium": {
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{rhc.space.2xl}"
-          }
-        },
-        "vi-small": {
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{rhc.space.xl}"
-          }
-        }
-      }
-    }
-  },
-  "components/page-section": {
-    "rhc": {
-      "page-section": {
-        "max-inline-size": {
-          "$type": "dimension",
-          "$value": "90rem"
-        },
-        "padding-inline": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
-        },
-        "padding-block": {
-          "$type": "dimension",
-          "$value": "{rhc.space.4xl}"
-        },
-        "vi-small": {
-          "padding-inline": {
-            "$type": "dimension",
-            "$value": "{rhc.space.xl}"
-          }
-        },
-        "vi-large": {
-          "padding-inline": {
-            "$type": "dimension",
-            "$value": "{rhc.space.5xl}"
-          }
-        },
-        "vi-medium": {
-          "padding-inline": {
-            "$type": "dimension",
-            "$value": "{rhc.space.2xl}"
           }
         }
       }
