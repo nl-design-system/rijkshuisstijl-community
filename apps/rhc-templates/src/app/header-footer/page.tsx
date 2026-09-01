@@ -1,10 +1,6 @@
-import PageContent from '@rijkshuisstijl-community/storybook/src/templates/header-footer';
-import type { Metadata } from 'next';
+"use client";
 
-export const metadata: Metadata = {
-  title: 'Header & Footer',
-  description: 'Header & Footer template voor de Rijkshuisstijl Community',
-};
+import PageContent from '@rijkshuisstijl-community/storybook/src/templates/header-footer';
 
 export default function Page() {
   return <PageContent />;
