@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/alert-react
 
+## 3.1.4
+
+### Patch Changes
+
+- Updated dependencies [3845c86]
+  - @rijkshuisstijl-community/alert-css@4.2.0
+
 ## 3.1.3
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/navigation-bar-react
 
+## 1.0.4
+
+### Patch Changes
+
+- Updated dependencies [3845c86]
+  - @rijkshuisstijl-community/navigation-bar-css@1.1.0
+  - @rijkshuisstijl-community/link-list-react@1.1.1
+  - @rijkshuisstijl-community/heading-react@1.0.3
+  - @rijkshuisstijl-community/link-react@1.1.3
+
 ## 1.0.3
 
 ### Patch Changes

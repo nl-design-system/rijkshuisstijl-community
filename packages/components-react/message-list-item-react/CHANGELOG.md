@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/message-list-item-react
 
+## 0.0.5
+
+### Patch Changes
+
+- @rijkshuisstijl-community/paragraph-react@2.1.3
+
 ## 0.0.4
 
 ### Patch Changes

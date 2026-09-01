@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/data-summary-item-react
 
+## 1.0.3
+
+### Patch Changes
+
+- @rijkshuisstijl-community/link-react@1.1.3
+
 ## 1.0.2
 
 ### Patch Changes

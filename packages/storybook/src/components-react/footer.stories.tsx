@@ -3,11 +3,11 @@ import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
 import { Footer, Heading, Icon, Link, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
 
-const linkList1 = ['Contact', 'Veel gestelde vragen', 'Over deze site', 'Werken bij'];
+const linkList1 = ['Contact', 'Veelgestelde vragen', 'Over deze site', 'Werken bij'];
 
 const linkList2 = ['Wetten', 'Verdragen', 'Lokale regelgeving', 'Officiële bekendmakingen', 'Tuchtrecht'];
 
-const linkList3 = ['Mijn overheid', 'Rijksoverheid.nl', 'Ondernemersplein', 'NederlandWereldwijd'];
+const linkList3 = ['MijnOverheid', 'Rijksoverheid.nl', 'Ondernemersplein', 'NederlandWereldwijd'];
 
 const LinkListMaker = ({ list }: { list: Array<string> }) => (
   <LinkList>

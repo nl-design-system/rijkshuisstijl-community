@@ -27,8 +27,11 @@ export const Default = () => (
 export const TaglineInColumn = () => (
   <footer className="rhc-page-footer rhc-page-section">
     <div className="rhc-page-section__content">
-      <div className="rhc-grid rhc-page-footer__primary">
-        <FooterLinks3 />
+      <div className="rhc-page-footer__primary">
+        <h2 className="rhc-visually-hidden">Footer heading</h2>
+        <div className="rhc-grid">
+          <FooterLinks3 />
+        </div>
       </div>
       <div className="rhc-page-footer__separator">
         <Separator />
@@ -57,6 +60,15 @@ export const Compact = () => (
   <footer className="rhc-page-footer rhc-page-footer--compact rhc-page-section">
     <div className="rhc-page-footer__secondary rhc-page-section__content">
       <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
+      <Separator className="rhc-page-footer--compact__separator" />
+      <FooterNavbarLinks />
+    </div>
+  </footer>
+);
+
+export const CompactWithoutTagline = () => (
+  <footer className="rhc-page-footer rhc-page-footer--compact rhc-page-section">
+    <div className="rhc-page-footer__secondary rhc-page-section__content">
       <Separator className="rhc-page-footer--compact__separator" />
       <FooterNavbarLinks />
     </div>
