@@ -71,7 +71,6 @@
     "wait-on": "9.0.10"
   },
   "scripts": {
-    "prebuild": "pnpm run clean",
     "build": "pnpm run --recursive build",
     "build:dev": "APP_ENV=dev pnpm run --recursive build",
     "clean": "rimraf dist/ && pnpm run --recursive clean",
