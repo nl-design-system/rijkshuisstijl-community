@@ -168,7 +168,7 @@ export const NavBar = ({
   megamenu,
   ...restProps
 }: PropsWithChildren<NavBarProps>) => {
-  const [isMegamenuOpen, setIsOpen] = useState(false);
+  const [isMegamenuOpen, setIsMegamenuOpen] = useState(false);
   const [isMainNavOpen, setIsMainNavOpen] = useState(false);
   const [overlayContainer, setOverlayContainer] = useState<Element | null>(null);
   const itemsSlotRef = useRef<HTMLDivElement>(null);
@@ -249,7 +249,7 @@ export const NavBar = ({
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         closedByKeyboardRef.current = true;
-        setIsOpen(false);
+        setIsMegamenuOpen(false);
         setIsMainNavOpen(false);
       }
     };
@@ -305,7 +305,7 @@ export const NavBar = ({
               <LinkButton
                 aria-expanded={isMegamenuOpen}
                 className={clsx('rhc-nav-bar__link')}
-                onClick={() => setIsOpen((prev) => !prev)}
+                onClick={() => setIsMegamenuOpen((prev) => !prev)}
               >
                 <Icon icon={isMegamenuOpen && globalThis.matchMedia('(max-width: 768px)').matches ? 'kruis' : 'menu'} />
 
@@ -350,7 +350,7 @@ export const NavBar = ({
                 appearance="subtle-button"
                 aria-label="Sluit menu"
                 className="rhc-nav-bar__megamenu__btn-close"
-                onClick={() => setIsOpen(false)}
+                onClick={() => setIsMegamenuOpen(false)}
               >
                 <Icon icon="kruis" />
                 Sluiten
@@ -415,7 +415,7 @@ export const NavBar = ({
               pointerEvents: overlayContainer === document.body ? 'none' : 'auto',
             }}
             onClick={() => {
-              setIsOpen(false);
+              setIsMegamenuOpen(false);
               setIsMainNavOpen(false);
             }}
           />,
