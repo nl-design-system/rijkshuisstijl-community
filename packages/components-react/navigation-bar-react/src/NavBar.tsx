@@ -69,7 +69,6 @@ export interface NavBarMegaMenuColumnProps {
   heading: ReactNode;
   headingAppearanceLevel?: HeadingLevel;
   headingLevel?: HeadingLevel;
-
   items: NavBarLinkProps[];
 }
 
@@ -412,6 +411,9 @@ export const NavBar = ({
           <div
             aria-hidden="true"
             className="rhc-nav-bar__shade"
+            style={{
+              pointerEvents: overlayContainer === document.body ? 'none' : 'auto',
+            }}
             onClick={() => {
               setIsOpen(false);
               setIsMainNavOpen(false);
@@ -437,9 +439,15 @@ export const NavBarMegaMenu = ({
     <div className={clsx(className)} ref={ref} {...restProps}>
       {tagline && <p className="rhc-nav-bar__megamenu-tagline">{tagline}</p>}
       <div className="rhc-grid">
-        {columns.map(({ id, heading, items }) => (
+        {columns.map(({ id, heading, headingLevel = 3, headingAppearanceLevel = 5, items }) => (
           <div className="rhc-grid__cell rhc-grid__cell-d-3" key={id}>
-            <p className="rhc-nav-bar__megamenu-column-heading">{heading}</p>
+            <Heading
+              appearanceLevel={headingAppearanceLevel}
+              className="rhc-nav-bar__megamenu-column-heading"
+              level={headingLevel}
+            >
+              {heading}
+            </Heading>
             <LinkList>
               {items.map(({ id: itemId, href, target, label }) => (
                 <LinkListLink href={href} key={itemId} target={target}>
