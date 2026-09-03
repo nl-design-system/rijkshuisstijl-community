@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-react
 
+## 17.0.1
+
+### Patch Changes
+
+- @rijkshuisstijl-community/footer-react@0.0.2
+
 ## 17.0.0
 
 ### Major Changes
