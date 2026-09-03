@@ -177,6 +177,12 @@
   }
 }
 
+@mixin item-height {
+  align-content: center;
+  display: block;
+  min-block-size: 48px;
+}
+
 // ---
 @mixin rhc-nav-bar__slot {
   inline-size: auto;
@@ -221,10 +227,9 @@
 
 // TAGLINE --
 @mixin rhc-nav-bar__megamenu-tagline {
-  border-block-end: 1px solid var(--rhc-navigation-bar-mega-menu-seperator-color, white);
   font-style: italic;
   margin-block-start: 0;
-  padding-block-end: 1em;
+  padding-block-end: 0;
 }
 
 // NAV --

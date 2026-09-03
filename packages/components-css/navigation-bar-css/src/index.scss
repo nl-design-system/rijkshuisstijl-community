@@ -46,6 +46,18 @@
   @include mixin.rhc-nav-bar__megamenu;
 }
 
+.rhc-nav-bar__megamenu-column-heading {
+  @include mixin.item-height;
+}
+
+.rhc-nav-bar__megamenu-column-link .utrecht-link-list__link {
+  @include mixin.item-height;
+}
+
+.rhc-nav-bar__megamenu__link-list {
+  row-gap: 0;
+}
+
 .rhc-nav-bar__megamenu__btn-close {
   @include mixin.rhc-nav-bar__megamenu__btn-close;
 }
