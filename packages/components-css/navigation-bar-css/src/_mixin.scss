@@ -207,10 +207,15 @@
 }
 
 @mixin rhc-nav-bar__megamenu__btn-close {
-  font-weight: 400; // TODO tokenise
-  inset-block-start: calc(var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-start) + 1.8em);
-  inset-inline-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-end);
-  position: absolute;
+  display: none;
+
+  @media (width >= 768px) {
+    display: inline;
+    font-weight: 400; // TODO tokenise
+    inset-block-start: calc(var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-start) + 1.8em);
+    inset-inline-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-end);
+    position: absolute;
+  }
 
   &.rhc-button:hover {
     // todo; token corrigeren
