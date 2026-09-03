@@ -13,7 +13,7 @@
   "main": "dist/index.css",
   "scripts": {
     "build": "build-css-package",
-    "clean": "rimraf dist",
+    "clean": "./../../../scripts/rm.mjs dist",
     "watch": "build-css-package && chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
   },
   "devDependencies": {
