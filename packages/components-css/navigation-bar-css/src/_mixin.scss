@@ -188,6 +188,14 @@
   min-block-size: 48px;
 }
 
+@mixin full-width-mobile {
+  inline-size: 100%;
+
+  @media (width >= 768px) {
+    inline-size: unset;
+  }
+}
+
 // ---
 @mixin rhc-nav-bar__slot {
   inline-size: auto;
