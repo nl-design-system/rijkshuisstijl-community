@@ -1,6 +1,6 @@
 import '@rijkshuisstijl-community/footer-css/dist/index.css';
 import '@rijkshuisstijl-community/visually-hidden-css/dist/index.css';
-import { Icon, Link, LinkList, LinkListLink, Separator } from '@rijkshuisstijl-community/components-react';
+import { Heading, Icon, Link, LinkList, LinkListLink, Separator } from '@rijkshuisstijl-community/components-react';
 
 const SharedFooter = () => (
   <footer className="rhc-page-footer rhc-page-section">
@@ -9,7 +9,9 @@ const SharedFooter = () => (
         <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
         <div className="rhc-grid">
           <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-            <h3>Rijksoverheid.nl</h3>
+            <Heading appearanceLevel={5} level={2}>
+              Rijksoverheid.nl
+            </Heading>
             <LinkList>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
                 Contact
@@ -26,7 +28,9 @@ const SharedFooter = () => (
             </LinkList>
           </div>
           <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-            <h3>Officiële overheidsinformatie</h3>
+            <Heading appearanceLevel={5} level={2}>
+              Officiële overheidsinformatie
+            </Heading>
             <LinkList>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
                 Wetten
@@ -46,7 +50,9 @@ const SharedFooter = () => (
             </LinkList>
           </div>
           <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-            <h3>Andere overheidssites</h3>
+            <Heading appearanceLevel={5} level={2}>
+              Andere overheidssites
+            </Heading>
             <LinkList>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
                 MijnOverheid
@@ -63,7 +69,9 @@ const SharedFooter = () => (
             </LinkList>
           </div>
           <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-            <h3>Officiële overheidsinformatie</h3>
+            <Heading appearanceLevel={5} level={2}>
+              Officiële overheidsinformatie
+            </Heading>
             <LinkList>
               <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
                 Wetten
