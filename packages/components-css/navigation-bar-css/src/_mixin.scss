@@ -55,6 +55,11 @@
 
     font-size: 1em; // TODO tokenise
     font-weight: 700; // TODO tokenise
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
   }
 
   @at-root {
