@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import PageContent from '@rijkshuisstijl-community/storybook/src/templates/header-footer';
 
