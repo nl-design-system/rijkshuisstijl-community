@@ -19,15 +19,17 @@ const languages = {
 
 const endItemsPrimary = (
   <>
-    <LanguageNavigation defaultSelectedLanguage="Nederlands">
-      <LanguageNavigation.Trigger />
-      <LanguageNavigation.Content>
-        {[languages.nl, languages.en, languages.de].map((language) => (
-          <LanguageNavigation.Item key={language.lang} {...language} />
-        ))}
-      </LanguageNavigation.Content>
-    </LanguageNavigation>
-    <NavBarItem href="/" iconEnd={<Icon icon="communicatie" />} id="end-second-link" label="Contact" />
+    <li>
+      <LanguageNavigation defaultSelectedLanguage="Nederlands">
+        <LanguageNavigation.Trigger />
+        <LanguageNavigation.Content>
+          {[languages.nl, languages.en, languages.de].map((language) => (
+            <LanguageNavigation.Item key={language.lang} {...language} />
+          ))}
+        </LanguageNavigation.Content>
+      </LanguageNavigation>
+    </li>
+    <NavBarItem href="/" id="end-second-link" label="Contact" />
   </>
 );
 

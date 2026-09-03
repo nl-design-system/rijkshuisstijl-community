@@ -3,8 +3,6 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-@use "@rijkshuisstijl-community/visually-hidden-css/src/mixin" as visually-hidden;
-
 @mixin rhc-nav-bar {
   align-items: center;
   background-color: var(--rhc-navigation-bar-background-color);
@@ -95,7 +93,9 @@
 
   @at-root {
     &[aria-expanded="true"] {
-      background: var(--rhc-navigation-bar-link-hover-background-color);
+      --utrecht-link-focus-background-color: var(--rhc-navigation-bar-link-hover-background-color);
+
+      background-color: var(--rhc-navigation-bar-link-hover-background-color);
       border-radius: 0;
     }
   }
@@ -122,14 +122,18 @@
     .rhc-nav-bar__slot-main.is-navbar-main-open &,
     .rhc-nav-bar__slot-megamenu.is-navbar-megamenu-open & {
       @media (width <= 768px) {
-        @include visually-hidden.rhc-visually-hidden-reset;
-
         background: var(--rhc-navigation-bar-mega-menu-background-color);
         display: block;
         inset-block-start: 100%;
         inset-inline-end: 0;
         inset-inline-start: 0;
+        margin-inline: calc(-1 * var(--rhc-page-section-vi-small-padding-inline));
         position: absolute;
+
+        .rhc-nav-bar__link {
+          inline-size: 100%;
+          padding-inline: var(--rhc-page-section-vi-small-padding-inline);
+        }
       }
     }
   }
@@ -164,14 +168,6 @@
           display: flex;
           justify-content: space-between;
         }
-
-        // .rhc-nav-bar__item:first-child {
-        //   order: 10;
-
-        //   @media (width > 768px) {
-        //     order: unset;
-        //   }
-        // }
       }
     }
     @media (width > 768px) {
@@ -303,8 +299,6 @@
 
   &[aria-current="page"] {
     color: var(--rhc-navigation-bar-link-current-color);
-
-    // background-color: var(--rhc-navigation-bar-link-current-background-color);
     font-weight: var(--rhc-navigation-bar-link-current-font-weight);
 
     @media (width >= 768px) {

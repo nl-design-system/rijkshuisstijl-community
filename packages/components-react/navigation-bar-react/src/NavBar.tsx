@@ -426,7 +426,7 @@ export const NavBarMegaMenu = ({
             </Heading>
             <LinkList className="rhc-nav-bar__megamenu__link-list">
               {items.map(({ id: itemId, href, target, label }) => (
-                <LinkListLink href={href} key={itemId} target={target} className="rhc-nav-bar__megamenu-column-link">
+                <LinkListLink className="rhc-nav-bar__megamenu-column-link" href={href} key={itemId} target={target}>
                   {label}
                 </LinkListLink>
               ))}
