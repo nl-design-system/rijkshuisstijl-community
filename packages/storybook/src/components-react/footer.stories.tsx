@@ -22,28 +22,27 @@ const LinkListMaker = ({ list }: { list: Array<string> }) => (
 const FooterLinks = () => (
   <>
     <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
-    <h2 className="rhc-visually-hidden">Footer heading</h2>
     <div className="rhc-grid">
       <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-        <Heading appearanceLevel={5} level={3}>
+        <Heading appearanceLevel={5} level={2}>
           Rijksoverheid.nl
         </Heading>
         <LinkListMaker list={linkList1} />
       </div>
       <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-        <Heading appearanceLevel={5} level={3}>
+        <Heading appearanceLevel={5} level={2}>
           Officiële overheidsinformatie
         </Heading>
         <LinkListMaker list={linkList2} />
       </div>
       <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-        <Heading appearanceLevel={5} level={3}>
+        <Heading appearanceLevel={5} level={2}>
           Andere overheidssites
         </Heading>
         <LinkListMaker list={linkList3} />
       </div>
       <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-        <Heading appearanceLevel={5} level={3}>
+        <Heading appearanceLevel={5} level={2}>
           Officiële overheidsinformatie
         </Heading>
         <LinkListMaker list={linkList2} />
