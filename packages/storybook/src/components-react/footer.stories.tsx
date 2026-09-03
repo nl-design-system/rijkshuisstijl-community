@@ -22,7 +22,6 @@ const LinkListMaker = ({ list }: { list: Array<string> }) => (
 const FooterLinks = () => (
   <>
     <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
-    <h2 className="rhc-visually-hidden">Footer heading</h2>
     <div className="rhc-grid">
       <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
         <Heading appearanceLevel={5} level={3}>

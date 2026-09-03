@@ -7,7 +7,6 @@ const SharedFooter = () => (
     <div className="rhc-page-section__content">
       <div className="rhc-page-footer__primary">
         <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
-        <h2 className="rhc-visually-hidden">Footer heading</h2>
         <div className="rhc-grid">
           <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
             <h3>Rijksoverheid.nl</h3>
