@@ -2,7 +2,9 @@ import '@rijkshuisstijl-community/footer-css/dist/index.css';
 import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
 import { Separator } from '@rijkshuisstijl-community/components-react';
-import { FooterLinks3, FooterLinks4, FooterNavbarLinks } from '../templates/shared/footer';
+import { FooterLinks4, FooterNavbarLinks } from '../templates/shared/footer';
+
+export { SharedFooterOverheidNl as FooterOverheid } from '../templates/shared/footer';
 
 export const Default = () => (
   <footer className="rhc-page-footer rhc-page-section">
@@ -12,25 +14,6 @@ export const Default = () => (
         <h2 className="rhc-visually-hidden">Footer heading</h2>
         <div className="rhc-grid">
           <FooterLinks4 />
-        </div>
-      </div>
-      <div className="rhc-page-footer__separator">
-        <Separator />
-      </div>
-      <div className="rhc-page-footer__secondary">
-        <FooterNavbarLinks />
-      </div>
-    </div>
-  </footer>
-);
-
-export const TaglineInColumn = () => (
-  <footer className="rhc-page-footer rhc-page-section">
-    <div className="rhc-page-section__content">
-      <div className="rhc-page-footer__primary">
-        <h2 className="rhc-visually-hidden">Footer heading</h2>
-        <div className="rhc-grid">
-          <FooterLinks3 />
         </div>
       </div>
       <div className="rhc-page-footer__separator">

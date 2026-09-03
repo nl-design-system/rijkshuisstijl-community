@@ -47,9 +47,9 @@ export const FooterLinks4 = () => (
 export const FooterLinks3 = () => (
   <>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <h2>De Rijksoverheid. Voor Nederland</h2>
+      <h2 style={{ marginTop: 0 }}>Overheid.nl</h2>
       <p>
-        <i>Ingang naar informatie en diensten van alle overheden</i>
+        <i>Ingang naar informatie en<br />diensten van alle overheden</i>
       </p>
     </div>
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
@@ -75,6 +75,23 @@ export const FooterNavbarLinks = () => (
     <Link href="#">Proclaimer</Link>
   </div>
 );
+
+export const SharedFooterOverheidNl = () =>
+  <footer className="rhc-page-footer rhc-page-section">
+    <div className="rhc-page-section__content">
+      <div className="rhc-page-footer__primary">
+        <div className="rhc-grid">
+          <FooterLinks3 />
+        </div>
+      </div>
+      <div className="rhc-page-footer__separator">
+        <Separator />
+      </div>
+      <div className="rhc-page-footer__secondary">
+        <FooterNavbarLinks />
+      </div>
+    </div>
+  </footer>
 
 const SharedFooter = () => (
   <footer className="rhc-page-footer rhc-page-section">

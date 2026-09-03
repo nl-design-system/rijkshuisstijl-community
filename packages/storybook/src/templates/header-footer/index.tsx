@@ -7,7 +7,7 @@ import {
   NavBarMegaMenu,
   PageHeader,
 } from '@rijkshuisstijl-community/components-react';
-import SharedFooter from '../shared/footer';
+import { SharedFooterOverheidNl } from '../shared/footer';
 import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
 
@@ -141,7 +141,7 @@ const HeaderFooter = () => (
         </div>
       </div>
     </PageHeader>
-    <div className="rhc-page-section">
+    <div className="rhc-page-section" style={{ marginBlockEnd: 'var(--rhc-space-2xl)' }}>
       <div className="rhc-page-section__content">
         <h1>Voorbeeldpagina</h1>
         <p>
@@ -160,7 +160,7 @@ const HeaderFooter = () => (
         </p>
       </div>
     </div>
-    <SharedFooter />
+    <SharedFooterOverheidNl />
   </>
 );
 
