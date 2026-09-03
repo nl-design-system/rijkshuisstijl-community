@@ -302,12 +302,15 @@
   }
 
   &[aria-current="page"] {
-    box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0
-      var(--rhc-navigation-bar-link-current-border-color);
     color: var(--rhc-navigation-bar-link-current-color);
 
     // background-color: var(--rhc-navigation-bar-link-current-background-color);
     font-weight: var(--rhc-navigation-bar-link-current-font-weight);
+
+    @media (width >= 768px) {
+      box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0
+        var(--rhc-navigation-bar-link-current-border-color);
+    }
   }
 
   .utrecht-icon {

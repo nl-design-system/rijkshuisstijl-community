@@ -27,13 +27,7 @@ const endItemsPrimary = (
         ))}
       </LanguageNavigation.Content>
     </LanguageNavigation>
-    <NavBarItem
-      currentPage={true}
-      href="/"
-      iconEnd={<Icon icon="communicatie" />}
-      id="end-second-link"
-      label="Contact"
-    />
+    <NavBarItem href="/" iconEnd={<Icon icon="communicatie" />} id="end-second-link" label="Contact" />
   </>
 );
 
@@ -65,8 +59,9 @@ const itemsMain = [
   },
   {
     href: '/',
-    id: 'Communities',
-    label: 'Communities',
+    currentPage: true,
+    id: 'Voorbeeldpagina',
+    label: 'Voorbeeldpagina',
   },
   {
     href: '/',
