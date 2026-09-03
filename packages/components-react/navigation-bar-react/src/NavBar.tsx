@@ -12,7 +12,6 @@ import { LinkList, LinkListLink } from '@rijkshuisstijl-community/link-list-reac
 import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useEffect, useRef, useState } from 'react';
-import { createPortal } from 'react-dom';
 
 export interface NavBarIdentityProps {
   value: ReactNode;
@@ -170,7 +169,6 @@ export const NavBar = ({
 }: PropsWithChildren<NavBarProps>) => {
   const [isMegamenuOpen, setIsMegamenuOpen] = useState(false);
   const [isMainNavOpen, setIsMainNavOpen] = useState(false);
-  const [overlayContainer, setOverlayContainer] = useState<Element | null>(null);
   const itemsSlotRef = useRef<HTMLDivElement>(null);
   const endItemsSlotRef = useRef<HTMLDivElement>(null);
   const hamburgerLiRef = useRef<HTMLLIElement>(null);
@@ -178,13 +176,7 @@ export const NavBar = ({
   const isAnyMenuOpen = isMegamenuOpen || isMainNavOpen;
   const closedByKeyboardRef = useRef(false);
 
-  useEffect(() => {
-    const pageHeader = document.querySelector('.rhc-page-header');
-    setOverlayContainer(pageHeader?.parentElement ?? document.body);
-  }, []);
-
-  // Op desktop, maak de endItems niet-focusbaar (via tabindex) maar wel klikbaar.
-  // Op mobiel worden ze volledig inert (overlay dekt ze af). Houdt rekening met resizing.
+  // Op mobiel worden ze volledig inert (megamenu dekt ze af). Houdt rekening met resizing.
   useEffect(() => {
     const endItemsSlot = endItemsSlotRef.current;
     const itemsSlot = itemsSlotRef.current;
@@ -405,22 +397,6 @@ export const NavBar = ({
       )}
 
       {children}
-      {isAnyMenuOpen &&
-        overlayContainer &&
-        createPortal(
-          <div
-            aria-hidden="true"
-            className="rhc-nav-bar__shade"
-            style={{
-              pointerEvents: overlayContainer === document.body ? 'none' : 'auto',
-            }}
-            onClick={() => {
-              setIsMegamenuOpen(false);
-              setIsMainNavOpen(false);
-            }}
-          />,
-          overlayContainer,
-        )}
     </div>
   );
 };
