@@ -4,15 +4,31 @@
  */
 @use "@utrecht/listbox-css/src/mixin" as utrecht-listbox-mixin;
 
+@mixin rhc-language-navigation {
+  position: relative;
+}
+
 @mixin rhc-language-navigation__trigger {
   --utrecht-button-font-weight: var(--rhc-font-weight-regular);
+  --utrecht-link-hover-text-decoration: none;
+  --utrecht-link-text-decoration: none;
 
   column-gap: var(--rhc-link-column-gap);
+
+  &:hover,
+  &[aria-expanded="true"] {
+    --utrecht-link-focus-background-color: var(--rhc-nav-bar-link-hover-background-color);
+
+    background-color: var(--rhc-nav-bar-link-hover-background-color);
+  }
 }
 
 @mixin rhc-language-navigation__list {
   @include utrecht-listbox-mixin.utrecht-listbox;
   @include utrecht-listbox-mixin.reset-ul;
+
+  inset-block-start: calc(var(--utrecht-button-min-block-size) - 8px);
+  position: absolute;
 }
 
 @mixin rhc-language-navigation__list__item {

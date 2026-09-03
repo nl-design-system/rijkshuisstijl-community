@@ -9,5 +9,5 @@ export default {
 };
 
 export const Default = ReactStories.Default;
-export const WithHeading = ReactStories.WithHeading;
+export const WithIdentity = ReactStories.WithIdentity;
 export const WithEndItems = ReactStories.WithEndItems;

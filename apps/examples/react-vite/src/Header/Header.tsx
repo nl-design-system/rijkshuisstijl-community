@@ -1,4 +1,4 @@
-import { Icon, Logo, NavBar, PageHeader } from '@rijkshuisstijl-community/components-react/no-side-effects';
+import { Icon, Logo, NavBar, NavBarItem, PageHeader } from '@rijkshuisstijl-community/components-react/no-side-effects';
 import './Header.css';
 
 export function Header() {
@@ -9,23 +9,13 @@ export function Header() {
       </Logo>
       <NavBar
         className="rhc-nav-bar"
-        endItems={[
-          {
-            href: '/',
-            id: 'end-first-link',
-            label: 'Figma',
-          },
-          {
-            href: '/',
-            id: 'end-second-link',
-            label: 'Github',
-          },
-          {
-            href: '/',
-            id: 'end-third-link',
-            label: 'Storybook',
-          },
-        ]}
+        endItems={
+          <>
+            <NavBarItem href="/" id="end-first-link" label="Figma" />
+            <NavBarItem href="/" id="end-second-link" label="Github" />
+            <NavBarItem href="/" id="end-third-link" label="Storybook" />
+          </>
+        }
         items={[
           {
             href: '/',

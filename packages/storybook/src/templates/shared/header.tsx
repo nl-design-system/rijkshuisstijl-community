@@ -1,6 +1,14 @@
 'use client';
 
-import { Icon, Logo, NavBar, NavBarItemProps, PageHeader, SkipLink } from '@rijkshuisstijl-community/components-react';
+import {
+  Icon,
+  Logo,
+  NavBar,
+  NavBarItem,
+  NavBarItemProps,
+  PageHeader,
+  SkipLink,
+} from '@rijkshuisstijl-community/components-react';
 import './header.css';
 import { useEffect, useState } from 'react';
 
@@ -62,7 +70,9 @@ export default function SharedHeader() {
               label: 'GitHub',
             },
             { id: 'end3', target: '_blank', href: 'https://rijkshuisstijl-community.vercel.app/', label: 'Storybook' },
-          ]}
+          ].map((endItem) => (
+            <NavBarItem key={endItem.id} {...endItem} />
+          ))}
         />
       </div>
     </PageHeader>
