@@ -10,3 +10,4 @@ export default {
 
 export const Default = ReactStories.Default;
 export const Attribution = ReactStories.Attribution;
+export const RoundedCorner = ReactStories.RoundedCorner;
