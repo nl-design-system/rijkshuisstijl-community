@@ -158,6 +158,7 @@ export default defineConfig([
       ...sharedRules,
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'error',
+      'no-lonely-if': 'error',
     },
   },
 
