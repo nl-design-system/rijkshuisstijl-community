@@ -1,0 +1,25 @@
+{%- set classes = ['utrecht-radio-button utrecht-radio-button--html-input rhc-radio'] -%}
+
+{%- if checked -%}
+  {%- set classes = classes|merge(['utrecht-radio-button--checked']) -%}
+{%- endif -%}
+{%- if active -%}
+  {%- set classes = classes|merge(['utrecht-radio-button--active utrecht-radio-button--focus']) -%}
+{%- endif -%}
+{%- if focus -%}
+  {%- set classes = classes|merge(['utrecht-radio-button--focus']) -%}
+{%- endif -%}
+{%- if focusVisible -%}
+  {%- set classes = classes|merge(['utrecht-radio-button--focus-visible']) -%}
+{%- endif -%}
+{%- if disabled -%}
+  {%- set classes = classes|merge(['utrecht-radio-button--disabled']) -%}
+{%- endif -%}
+{%- if invalid -%}
+  {%- set classes = classes|merge(['utrecht-radio-button--invalid']) -%}
+{%- endif -%}
+{%- if className  -%}
+  {%- set classes = classes|merge([className]) -%}
+{%- endif -%}
+
+<input {{ attributes.addClass(classes) }} aria-label="radio-label" type="radio" />
