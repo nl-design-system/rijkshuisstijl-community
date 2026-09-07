@@ -81,7 +81,7 @@
   flex-grow: 1;
 
   // als er twee _slot's zijn, dan moet de tweede _slot naar rechts worden geduwd
-  @media (width > 768px) {
+  @media (width >= 768px) {
     .rhc-nav-bar__slot:last-child:not(:first-child) {
       margin-inline-start: auto;
     }
@@ -100,7 +100,7 @@
     }
   }
 
-  @media (width > 768px) {
+  @media (width >= 768px) {
     display: none;
   }
 }
@@ -108,7 +108,7 @@
 @mixin rhc-nav-bar__slots {
   display: none;
 
-  @media (width > 768px) {
+  @media (width >= 768px) {
     align-items: center;
     display: flex;
     flex: 1;
@@ -158,7 +158,7 @@
         padding-inline-end: var(--rhc-page-section-vi-small-padding-inline-end);
         padding-inline-start: var(--rhc-page-section-vi-small-padding-inline-start);
 
-        @media (width > 768px) {
+        @media (width >= 768px) {
           background: none;
           padding-block: 0;
           padding-inline: 0;
@@ -170,7 +170,7 @@
         }
       }
     }
-    @media (width > 768px) {
+    @media (width >= 768px) {
       & .rhc-nav-bar__slots > .rhc-nav-bar__slot {
         margin-inline-start: auto;
       }
