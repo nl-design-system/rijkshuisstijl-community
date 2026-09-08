@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-twig
 
+## 4.1.1
+
+### Patch Changes
+
+- @rijkshuisstijl-community/components-css@18.0.2
+
 ## 4.1.0
 
 ### Minor Changes
