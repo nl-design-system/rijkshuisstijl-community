@@ -36,6 +36,7 @@ export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export interface NavBarLinkProps {
+  className?: string;
   id: string;
   label: ReactNode;
   href: string;
@@ -443,20 +444,24 @@ NavBarMegaMenu.displayName = 'NavBarMegaMenu';
 
 export const SubNavBar = ({ ref, children, className, columns, ...restProps }: PropsWithChildren<SubNavBarProps>) => {
   return (
-    <div className={clsx('', className)} ref={ref} {...restProps}>
+    <div className={clsx(className)} ref={ref} {...restProps}>
       <div className="rhc-sub-nav-bar__content">
         {columns.map((column: NavBarLinkProps[]) => (
           <div className="rhc-sub-nav-bar__list" key={column.map((item) => item.id).join('-')}>
             <LinkList>
               {column.map(({ id, href, target, label }) => (
-                <LinkListLink href={href} icon={<Icon icon={'chevron-right'} />} key={id} target={target}>
+                <LinkListLink
+                  href={href}
+                  icon={<Icon icon={'chevron-right'} />}
+                  key={id}
+                  target={target}
+                >
                   {label}
                 </LinkListLink>
               ))}
             </LinkList>
           </div>
         ))}
-
         {children}
       </div>
     </div>
