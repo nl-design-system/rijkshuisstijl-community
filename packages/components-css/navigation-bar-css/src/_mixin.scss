@@ -91,6 +91,14 @@
 @mixin rhc-nav-bar__slot-main__btn-trigger {
   margin-inline-start: auto;
 
+  .utrecht-icon {
+    align-self: center;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    inline-size: 20px;
+    line-height: 1.25em;
+  }
+
   @at-root {
     &[aria-expanded="true"] {
       --utrecht-link-focus-background-color: var(--rhc-navigation-bar-link-hover-background-color);
@@ -120,9 +128,9 @@
 
   @media (width < 768px) {
     .rhc-nav-bar__slot-main.is-navbar-main-open & {
-      padding-block: 24px;
       display: flex;
       flex-direction: column;
+      padding-block: 24px;
       row-gap: 24px;
     }
   }
@@ -254,12 +262,12 @@
 // NAV --
 @mixin rhc-nav-bar__list {
   background-color: var(--rhc-navigation-bar-background-color);
+  display: flex;
   list-style: none;
   margin-block: 0;
   margin-inline: 0;
   padding-block: 0;
   padding-inline: 0;
-  display: flex;
 
   @media (width < 768px) {
     flex-direction: column;
@@ -277,20 +285,21 @@
       display: flex;
 
       .rhc-nav-bar__link {
-        inline-size: 100%;
-        margin-inline: var(--rhc-page-section-vi-small-padding-inline);
+        --nl-link-text-decoration-line: none;
+
         align-items: center;
         border-radius: var(--utrecht-button-border-radius);
         display: flex;
         font-weight: 700;
+        inline-size: 100%;
         justify-content: center;
+        margin-inline: var(--rhc-page-section-vi-small-padding-inline);
         min-block-size: 48px;
         text-decoration: none;
-        --nl-link-text-decoration-line: none;
       }
 
       &.rhc-nav-bar__item--button-on-mobile--secondary > .rhc-nav-bar__link {
-        background-color: var(--utrecht-button-secondary-background-color, #ffffff);
+        background-color: var(--utrecht-button-secondary-background-color, #fff);
         border: 2px solid
           var(--utrecht-button-secondary-border-color, var(--rhc-navigation-bar-link-hover-border-color));
         color: var(--utrecht-button-secondary-text-color, var(--rhc-navigation-bar-link-hover-color));
@@ -299,7 +308,7 @@
       &.rhc-nav-bar__item--button-on-mobile--primary > .rhc-nav-bar__link {
         background-color: var(--utrecht-button-primary-background-color, #0058b8);
         border: 2px solid transparent;
-        color: var(--utrecht-button-primary-text-color, #ffffff);
+        color: var(--utrecht-button-primary-text-color, #fff);
       }
     }
   }
@@ -359,12 +368,19 @@
 
   .utrecht-icon {
     align-self: center;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    inline-size: 20px;
     line-height: 1.25em;
+    @media (width >= 768px) {
+      block-size: 24px;
+      inline-size: 24px;
+    }
   }
 
   @media (width < 768px) {
-    min-block-size: 30px;
     align-items: center !important;
+    min-block-size: 30px;
   }
 }
 
