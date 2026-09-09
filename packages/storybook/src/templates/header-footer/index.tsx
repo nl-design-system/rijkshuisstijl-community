@@ -35,14 +35,14 @@ const endItemsPrimary = (
 
 const endItemsSecondary = [
   {
-    apperance: 'secondary',
+    appearance: 'secondary',
     href: '/',
     id: 'end-first-link',
     label: 'Zoeken',
     icon: <Icon icon="zoek" />,
   },
   {
-    apperance: 'primary',
+    appearance: 'primary',
     href: '/',
     id: 'end-second-link',
     label: 'Inloggen',
