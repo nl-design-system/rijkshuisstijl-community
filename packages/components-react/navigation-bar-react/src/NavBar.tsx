@@ -450,12 +450,7 @@ export const SubNavBar = ({ ref, children, className, columns, ...restProps }: P
           <div className="rhc-sub-nav-bar__list" key={column.map((item) => item.id).join('-')}>
             <LinkList>
               {column.map(({ id, href, target, label }) => (
-                <LinkListLink
-                  href={href}
-                  icon={<Icon icon={'chevron-right'} />}
-                  key={id}
-                  target={target}
-                >
+                <LinkListLink href={href} icon={<Icon icon={'chevron-right'} />} key={id} target={target}>
                   {label}
                 </LinkListLink>
               ))}
