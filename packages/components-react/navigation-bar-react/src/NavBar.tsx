@@ -38,7 +38,6 @@ export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
 export interface NavBarLinkProps {
   appearance?: 'primary' | 'secondary' | string;
   id: string;
-  index: number;
   label: ReactNode;
   href: string;
   target?: string;
