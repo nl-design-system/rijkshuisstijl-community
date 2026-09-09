@@ -35,14 +35,14 @@ const endItemsPrimary = (
 
 const endItemsSecondary = [
   {
-    appearance: 'secondary',
+    className: 'rhc-nav-bar__item--button-on-mobile rhc-nav-bar__item--button-on-mobile--secondary',
     href: '/',
     id: 'end-first-link',
     label: 'Zoeken',
     icon: <Icon icon="zoek" />,
   },
   {
-    appearance: 'primary',
+    className: 'rhc-nav-bar__item--button-on-mobile rhc-nav-bar__item--button-on-mobile--primary',
     href: '/',
     id: 'end-second-link',
     label: 'Inloggen',
