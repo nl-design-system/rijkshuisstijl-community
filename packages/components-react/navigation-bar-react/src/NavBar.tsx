@@ -36,7 +36,9 @@ export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export interface NavBarLinkProps {
+  appearance?: 'primary' | 'secondary' | string;
   id: string;
+  index: number;
   label: ReactNode;
   href: string;
   target?: string;
@@ -448,15 +450,24 @@ export const SubNavBar = ({ ref, children, className, columns, ...restProps }: P
         {columns.map((column: NavBarLinkProps[]) => (
           <div className="rhc-sub-nav-bar__list" key={column.map((item) => item.id).join('-')}>
             <LinkList>
-              {column.map(({ id, href, target, label }) => (
-                <LinkListLink href={href} icon={<Icon icon={'chevron-right'} />} key={id} target={target}>
+              {column.map(({ id, href, target, label, appearance }) => (
+                <LinkListLink
+                  data-appearance={appearance}
+                  href={href}
+                  icon={<Icon icon={'chevron-right'} />}
+                  key={id}
+                  target={target}
+                  className={clsx('utrecht-button', {
+                    'utrecht-button--primary-action': appearance === 'primary',
+                    'utrecht-button--secondary-action': appearance === 'secondary',
+                  })}
+                >
                   {label}
                 </LinkListLink>
               ))}
             </LinkList>
           </div>
         ))}
-
         {children}
       </div>
     </div>
