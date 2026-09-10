@@ -172,7 +172,6 @@ export const NavBar = ({
   const itemsSlotRef = useRef<HTMLDivElement>(null);
   const endItemsSlotRef = useRef<HTMLDivElement>(null);
   const hamburgerLiRef = useRef<HTMLLIElement>(null);
-  const wasOpenRef = useRef(false);
   const isAnyMenuOpen = isMegamenuOpen || isMainNavOpen;
   const closedByKeyboardRef = useRef(false);
 
@@ -253,15 +252,14 @@ export const NavBar = ({
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isAnyMenuOpen]);
 
-  // Reset the focustrap naar btn-trigger (hamburger menu) na sluiten van megamenu
+  // Reset the focus naar btn-trigger (hamburger menu) na sluiten van megamenu
   useEffect(() => {
-    if (!isMegamenuOpen && wasOpenRef.current) {
+    if (!isMegamenuOpen) {
       if (closedByKeyboardRef.current) {
         hamburgerLiRef.current?.querySelector<HTMLElement>('button, [href]')?.focus();
       }
       closedByKeyboardRef.current = false;
     }
-    wasOpenRef.current = isMegamenuOpen;
   }, [isMegamenuOpen]);
 
   // wanneer isMegamenuOpen veranderd, toggled de 'open' class op de rhc-page-header (ivm z-index)
