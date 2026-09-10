@@ -252,12 +252,10 @@ export const NavBar = ({
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isAnyMenuOpen]);
 
-  // Reset the focus naar btn-trigger (hamburger menu) na sluiten van megamenu
+  // Focus btn-trigger (hamburger menu) na sluiten van megamenu
   useEffect(() => {
-    if (!isMegamenuOpen) {
-      if (closedByKeyboardRef.current) {
-        hamburgerLiRef.current?.querySelector<HTMLElement>('button, [href]')?.focus();
-      }
+    if (!isMegamenuOpen && closedByKeyboardRef.current) {
+      hamburgerLiRef.current?.querySelector<HTMLElement>('button, [href]')?.focus();
       closedByKeyboardRef.current = false;
     }
   }, [isMegamenuOpen]);
