@@ -4,7 +4,6 @@
  */
 
 import { Button } from '@rijkshuisstijl-community/button-react/no-side-effects';
-import { FocusTrap } from '@rijkshuisstijl-community/focus-trap/no-side-effects';
 import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react/no-side-effects';
 import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react/no-side-effects';
 import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
@@ -289,10 +288,7 @@ export const NavBar = ({
       )}
 
       {megamenu ? (
-        <FocusTrap
-          active={isMegamenuOpen}
-          className={clsx('rhc-nav-bar__slot-megamenu', { 'is-navbar-megamenu-open': isMegamenuOpen })}
-        >
+        <div className={clsx('rhc-nav-bar__slot-megamenu', { 'is-navbar-megamenu-open': isMegamenuOpen })}>
           <ul className="rhc-nav-bar__list">
             <li className="rhc-nav-bar__item" ref={hamburgerLiRef}>
               <LinkButton
@@ -350,12 +346,9 @@ export const NavBar = ({
               </Button>
             )}
           </div>
-        </FocusTrap>
+        </div>
       ) : (
-        <FocusTrap
-          active={isMainNavOpen}
-          className={clsx('rhc-nav-bar__slot-main', { 'is-navbar-main-open': isMainNavOpen })}
-        >
+        <div className={clsx('rhc-nav-bar__slot-main', { 'is-navbar-main-open': isMainNavOpen })}>
           <LinkButton
             aria-expanded={isMainNavOpen}
             className="rhc-nav-bar__slot-main__btn-trigger"
@@ -394,7 +387,7 @@ export const NavBar = ({
               </div>
             )}
           </div>
-        </FocusTrap>
+        </div>
       )}
 
       {children}
