@@ -172,6 +172,7 @@ export const NavBar = ({
   const itemsSlotRef = useRef<HTMLDivElement>(null);
   const endItemsSlotRef = useRef<HTMLDivElement>(null);
   const hamburgerLiRef = useRef<HTMLLIElement>(null);
+  const megamenuRef = useRef<HTMLDivElement>(null);
   const isAnyMenuOpen = isMegamenuOpen || isMainNavOpen;
   const closedByKeyboardRef = useRef(false);
 
@@ -274,6 +275,22 @@ export const NavBar = ({
     return () => pageHeader?.classList.remove('is-navbar-main-open');
   }, [isMainNavOpen]);
 
+  useEffect(() => {
+    if (!isMegamenuOpen || !megamenuRef.current) return;
+    const focusableElements = megamenuRef.current.querySelectorAll<HTMLElement>(
+      'a[href], button, input, select, textarea',
+    );
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') setIsMegamenuOpen(false);
+    };
+
+    if (focusableElements.length < 1) return;
+
+    focusableElements[focusableElements.length - 1].addEventListener('keydown', handleKeyDown);
+    // eslint-disable-next-line consistent-return
+    return () => focusableElements[focusableElements.length - 1].removeEventListener('keydown', handleKeyDown);
+  }, [isMegamenuOpen]);
+
   return (
     <div className={clsx('rhc-nav-bar', { 'is-open': isMegamenuOpen })}>
       <h2 className="rhc-visually-hidden">Hoofd navigatie</h2>
@@ -301,7 +318,11 @@ export const NavBar = ({
             </li>
           </ul>
           <div className="rhc-nav-bar__slots">
-            {isMegamenuOpen && <div className="rhc-nav-bar__megamenu">{megamenu}</div>}
+            {isMegamenuOpen && (
+              <div className="rhc-nav-bar__megamenu" ref={megamenuRef}>
+                {megamenu}
+              </div>
+            )}
             {items && (
               <div className="rhc-nav-bar__slot" ref={itemsSlotRef}>
                 <nav
