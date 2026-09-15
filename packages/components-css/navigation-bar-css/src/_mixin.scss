@@ -14,6 +14,8 @@
   inline-size: 100%;
 
   // Nodig om de ::before laag correct binnen de navbar te plaatsen.
+  // Let op: als je dit verwijdert, komt de achtergrond in ::before
+  // verkeerd te liggen (zie regel met z-index: -1 verderop).
   position: relative;
   z-index: var(--rhc-navigation-bar-z-index, 2);
 
@@ -45,6 +47,7 @@
           position: absolute;
 
           // Zorgt dat deze extra achtergrond achter de tekst en links blijft.
+          // Werkt alleen dankzij position: relative + z-index hierboven op .rhc-nav-bar.
           z-index: -1;
         }
       }
