@@ -1,6 +1,5 @@
 import { readFile, writeFile } from 'node:fs/promises';
-
-import { exponentiationRegex, operatorRegex, varRegex } from '../../regex/index.mts';
+import { exponentiationRegex, operatorRegex, varRegex } from '../../regex/index.js';
 
 // When using `outputReferences: true` in Style Dictionary (see `build.mts`), any calculations/transforms are overwritten by the css-var-names.
 // So you'll end up with invalid CSS like:
@@ -9,7 +8,7 @@ import { exponentiationRegex, operatorRegex, varRegex } from '../../regex/index.
 // This applies to both .css and .scss files.
 
 export async function fixCSSFile(filePath: string): Promise<void> {
-  let content = await readFile(filePath, 'utf-8');
+  let content = await readFile(filePath, 'utf8');
 
   content = fixRoundTo(content);
   content = fixExponentiation(content);
@@ -21,6 +20,7 @@ export async function fixCSSFile(filePath: string): Promise<void> {
 // This will wrap any calculations in `calc()`.
 export function fixCalc(content: string): string {
   return content.replaceAll(varRegex, (match, prefix, value, suffix) => {
+    // eslint-disable-next-line unicorn/prefer-regexp-test
     if (!value.match(operatorRegex)) {
       return match;
     }
