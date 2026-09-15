@@ -6,13 +6,14 @@
 @mixin rhc-nav-bar {
   align-items: center;
   background-color: var(--rhc-navigation-bar-background-color);
-  box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0
-    var(--rhc-navigation-bar-border-color);
+  box-shadow: none;
   color: var(--rhc-navigation-bar-color);
   column-gap: var(--rhc-navigation-bar-column-gap, 1rem);
   display: flex;
   font-family: var(--rhc-text-font-family-default, inherit);
   inline-size: 100%;
+
+  // Nodig om de ::before laag correct binnen de navbar te plaatsen.
   position: relative;
   z-index: var(--rhc-navigation-bar-z-index, 2);
 
@@ -29,6 +30,24 @@
 
     .rhc-language-navigation__trigger {
       color: var(--rhc-navigation-bar-color);
+    }
+
+    @media (width < 768px) {
+      .rhc-page-header.is-navbar-main-open .rhc-nav-bar ~ .rhc-nav-bar {
+        background-color: var(--rhc-navigation-bar-link-hover-background-color);
+
+        // Maakt de achtergrond breder zonder de tekst of dropdowns te verschuiven.
+        &::before {
+          background-color: inherit;
+          content: "";
+          inset-block: 0;
+          inset-inline: calc(-1 * var(--rhc-page-section-vi-small-padding-inline));
+          position: absolute;
+
+          // Zorgt dat deze extra achtergrond achter de tekst en links blijft.
+          z-index: -1;
+        }
+      }
     }
   }
 }
@@ -138,7 +157,7 @@
   @at-root {
     .rhc-nav-bar__slot-main.is-navbar-main-open &,
     .rhc-nav-bar__slot-megamenu.is-navbar-megamenu-open & {
-      @media (width <= 768px) {
+      @media (width < 768px) {
         background: var(--rhc-navigation-bar-mega-menu-background-color);
         display: flex;
         flex-direction: column;
