@@ -1,6 +1,5 @@
 import { describe, expect, test, vi } from 'vitest';
-
-import { skipRemTransform, transformSizeRemSafely } from './styleDictionaryTransforms.mts';
+import { skipRemTransform, transformSizeRemSafely } from './styleDictionaryTransforms.js';
 
 describe('styleDictionaryTransforms', () => {
   describe('skipRemTransform', () => {
