@@ -2,12 +2,12 @@ import { existsSync, mkdirSync } from 'node:fs';
 import { appendFile, readFile, writeFile } from 'node:fs/promises';
 import { registerHooks } from 'node:module';
 import { posix } from 'node:path';
+import { exit } from 'node:process';
 import StyleDictionary from 'style-dictionary';
 import type { TransformedTokens } from 'style-dictionary/types';
 import { convertTokenData, stripMeta, usesReferences } from 'style-dictionary/utils';
-
-import { fixCSSFile } from './src/transforms/css/cssFixers.mts';
-import { registerTokenStudioTransformGroup } from './src/transforms/styleDictonary/styleDictionaryTransforms.mts';
+import { fixCSSFile } from './src/transforms/css/cssFixers.js';
+import { registerTokenStudioTransformGroup } from './src/transforms/styleDictonary/styleDictionaryTransforms.js';
 
 // Style Dictionary runs every javascript/* and typescript/* output through Prettier, which takes up
 // ~70% of the build time. The unformatted output is equivalent, so we replace Prettier with a no-op.
@@ -206,7 +206,7 @@ async function buildBaseTokens() {
 
 // This will build the themes
 async function buildThemes() {
-  const themesJson = await readFile('./src/generated/themes.json', 'utf-8');
+  const themesJson = await readFile('./src/generated/themes.json', 'utf8');
   const themes: Record<string, { tokens: unknown }> = JSON.parse(themesJson);
 
   // Process each theme separately
@@ -254,5 +254,5 @@ async function build() {
 
 await build().catch((error) => {
   console.error(error);
-  process.exitCode = 1;
+  exit(1);
 });
