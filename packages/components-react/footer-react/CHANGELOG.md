@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/footer-react
 
+## 0.0.2
+
+### Patch Changes
+
+- Updated dependencies [62a5613]
+- Updated dependencies [a81a652]
+  - @rijkshuisstijl-community/footer-css@2.1.0
+
 ## 0.0.1
 
 ### Patch Changes

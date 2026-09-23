@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/footer-css
 
+## 2.1.0
+
+### Minor Changes
+
+- 62a5613: Changed H3 above link lists into H2 in examples
+- a81a652: Fixed the fg colours of the links in secondary slot in footer
+
 ## 2.0.0
 
 ### Major Changes

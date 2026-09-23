@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 18.0.1
+
+### Patch Changes
+
+- 8629bc4: fix typo in documentation
+
 ## 18.0.0
 
 ### Major Changes

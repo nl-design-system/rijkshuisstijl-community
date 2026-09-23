@@ -9,6 +9,8 @@
 
   .rhc-link,
   .utrecht-link-list__link {
+    --nl-link-color: var(--rhc-page-footer-color);
+
     color: var(--rhc-page-footer-color);
   }
 
@@ -35,6 +37,8 @@
   }
 
   &__secondary {
+    --nl-link-color: var(--rhc-page-footer-color);
+
     align-items: center;
     display: flex;
     justify-content: space-between;

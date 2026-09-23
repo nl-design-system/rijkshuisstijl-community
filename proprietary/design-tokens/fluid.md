@@ -6,7 +6,7 @@ Fluid design is responsive design, waarbij alles automatisch iets groter en lees
 
 ## Hoe werkt 't?
 
-Je maakt twee ontwerpen: voor een klein schermformaat waarbij lettergroote en afmetingen niet meer kleiner moeten worden, en een groot schermformaat waarbij de tekst en witruimte het maximum heeft bereikt.
+Je maakt twee ontwerpen: voor een klein schermformaat waarbij lettergrootte en afmetingen niet meer kleiner moeten worden, en een groot schermformaat waarbij de tekst en witruimte het maximum heeft bereikt.
 
 Schermformaten die je bijvoorbeeld kunt gebruiken zijn bijvoorbeeld 320px en 1280px, dat zijn resoluties die belangrijk zijn voor het testen van toegankelijkheid.
 
@@ -63,8 +63,8 @@ Vervang alle hardcoded lettergroottes in je CSS door CSS-variabelen. Bijvoorbeel
 
 Vervang alle hardcoded witruimtes in je CSS door CSS-variabelen. Bijvoorbeeld:
 
-- `margin-block-start: 16px;` wordt `font-size: var(--rhc-space-xl);`
-- `padding-inline-start: .5rem;` wordt `font-size: var(--rhc-space-md);`
+- `margin-block-start: 16px;` wordt `margin-block-start: var(--rhc-space-xl);`
+- `padding-inline-start: .5rem;` wordt `padding-inline-start: var(--rhc-space-md);`
 
 Als je een witruimte tegenkomt die geen exact equivalent heeft in het ontwerpsysteem, heb je twee opties:
 
