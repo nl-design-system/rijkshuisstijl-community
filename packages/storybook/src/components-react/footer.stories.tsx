@@ -71,6 +71,10 @@ const meta = {
     slot2: <FooterFooterLinks />,
   },
   parameters: {
+    //!FIGMA LINK MOET LATER UPDATEN 
+    figma: 'https://www.figma.com/design/sI0irzDSf737cAz4QDfiRk/Logius-Samenwerkruimte?node-id=35473-2&p=f&m=dev',
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/tree/main/packages/components-react/footer-react',
     layout: 'fullscreen',
     docs: {
       description: {
