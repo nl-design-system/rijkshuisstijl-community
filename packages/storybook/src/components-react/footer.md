@@ -1,6 +1,6 @@
-Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.
-
 # Rijkshuisstijl Community Footer component
+
+Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.
 
 ## Beschrijving
 
