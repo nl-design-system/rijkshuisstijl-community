@@ -2,6 +2,9 @@ import '@rijkshuisstijl-community/footer-css/dist/index.css';
 import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
 import { Footer, Heading, Icon, Link, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
+import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
+import { Meta, StoryObj } from '@storybook/react-vite';
+import readme from './footer.md?raw';
 
 const linkList1 = ['Contact', 'Veelgestelde vragen', 'Over deze site', 'Werken bij'];
 
@@ -60,29 +63,46 @@ const FooterFooterLinks = () => (
   </div>
 );
 
-export const Default = () => {
-  const slot1 = <FooterLinks />;
-  const slot2 = <FooterFooterLinks />;
-
-  return <Footer slot1={slot1} slot2={slot2} />;
-};
-
-export const Compact = () => {
-  const slot2 = (
-    <>
-      <div className="rhc-page-footer__tagline rhc-page-footer--compact__tagline">Overheid.nl</div>
-      <FooterFooterLinks />
-    </>
-  );
-
-  return <Footer slot2={slot2} />;
-};
-
-export default {
-  component: Footer,
+const meta = {
   title: 'Footer',
   id: 'rhc-react-footer',
+  component: Footer,
+  args: {
+    slot2: <FooterFooterLinks />,
+  },
   parameters: {
+    //!VOEG HIER FIGMA LINK TOE
+    github:
+      'https://github.com/nl-design-system/rijkshuisstijl-community/tree/main/packages/components-react/footer-react',
     layout: 'fullscreen',
+    docs: {
+      description: {
+        component: mergeMarkdown([readme]),
+      },
+    },
+  },
+} satisfies Meta<typeof Footer>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  render: () => {
+    const slot1 = <FooterLinks />;
+    const slot2 = <FooterFooterLinks />;
+    return <Footer slot1={slot1} slot2={slot2} />;
+  },
+};
+
+export const Compact: Story = {
+  render: () => {
+    const slot2 = (
+      <>
+        <div className="rhc-page-footer__tagline rhc-page-footer--compact__tagline">Overheid.nl</div>
+        <FooterFooterLinks />
+      </>
+    );
+    return <Footer slot2={slot2} />;
   },
 };
