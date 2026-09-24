@@ -85,6 +85,7 @@ export default defineConfig([
       'unicorn/prefer-export-from': 'off',
       'unicorn/prefer-module': 'off',
       'unicorn/prevent-abbreviations': 'off',
+      'unicorn/no-abusive-eslint-disable': 'off',
     },
   },
 
