@@ -1,0 +1,18 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+@use "mixin";
+
+.rhc-quote {
+  @include mixin.rhc-quote;
+
+  .rhc-quote__heading {
+    @include mixin.rhc-quote__heading;
+  }
+
+  .rhc-quote__content {
+    @include mixin.rhc-quote__content;
+  }
+}

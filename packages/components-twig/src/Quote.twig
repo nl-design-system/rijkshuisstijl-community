@@ -1,0 +1,19 @@
+{#
+  @license EUPL-1.2
+  Copyright (c) 2026 Community for NL Design System
+#}
+{%- set classes = ['rhc-quote'] -%}
+{%- set heading_level = headingLevel|default(2) -%}
+<div {{ attributes.addClass(classes) }}>
+  {% if heading %}
+  {% include '@rhc/Heading.twig' with {
+    attributes: create_attribute().addClass('rhc-quote__heading'),
+    level: heading_level,
+    appearance: headingAppearanceLevel|default(heading_level),
+    children: heading
+  } %}
+  {% endif %}
+  <div class="rhc-quote__content">
+    {{ children }}
+  </div>
+</div>
