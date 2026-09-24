@@ -1,5 +1,7 @@
 # Rijkshuisstijl Community Footer component
 
+Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.
+
 ## Beschrijving
 
 De Footer component (CSS) biedt de basisstructuur voor de pagina-footer, opgebouwd met losse CSS classes op een gewoon `<footer>` element.
