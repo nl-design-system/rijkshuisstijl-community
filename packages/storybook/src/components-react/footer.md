@@ -4,7 +4,7 @@ Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.
 
 ## Beschrijving
 
-De Footer component biedt de basisstructuur voor de pagina-footer volgens de Rijkshuisstijl. Je vult twee slots met eigen content: `slot1` voor het bovenste gedeelte (bijvoorbeeld links in kolommen) en `slot2` voor het onderste gedeelte (bijvoorbeeld juridische links zoals Privacy en Cookies).
+De Footer component biedt de basisstructuur voor de pagina-footer. Je vult twee slots met eigen content: `slot1` voor het bovenste gedeelte (bijvoorbeeld links in kolommen) en `slot2` voor het onderste gedeelte (bijvoorbeeld juridische links zoals Privacy en Cookies).
 
 ## Gebruik
 
