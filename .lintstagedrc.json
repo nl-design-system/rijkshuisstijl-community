@@ -2,6 +2,9 @@
   "composer.json": "composer validate",
   "package.json": "npmPkgJsonLint --allowEmptyTargets",
   "*.md": ["markdownlint", "prettier --write"],
-  "*.{js,cjs,mjs,json,jsx,mdx,ts,tsx}": ["eslint --no-error-on-unmatched-pattern", "prettier --write"],
+  "*.{js,cjs,mjs,json,jsx,mdx,ts,tsx}": [
+    "eslint --fix --report-unused-disable-directives --no-error-on-unmatched-pattern",
+    "prettier --write"
+  ],
   "*.{css,scss}": ["stylelint --allow-empty-input", "prettier --write"]
 }
