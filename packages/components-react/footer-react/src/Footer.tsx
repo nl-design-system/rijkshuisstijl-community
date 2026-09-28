@@ -18,23 +18,23 @@ export const Tagline = ({ children, className, compact }: TaglineProps) => (
 );
 
 type FooterProps = {
-  slot1?: ReactNode;
-  slot2: ReactNode;
+  primary?: ReactNode;
+  secondary: ReactNode;
 };
 
-export const Footer = ({ slot1, slot2 }: FooterProps) => {
-  const compact = !slot1;
+export const Footer = ({ primary, secondary }: FooterProps) => {
+  const compact = !primary;
 
   return (
     <footer className={clsx('rhc-page-footer', 'rhc-page-section', { 'rhc-page-footer--compact': compact })}>
       <div className="rhc-page-section__content">
-        {slot1 && <div className="rhc-page-footer__primary">{slot1}</div>}
-        {slot1 && slot2 && (
+        {primary && <div className="rhc-page-footer__primary">{primary}</div>}
+        {primary && secondary && (
           <div className="rhc-footer__separator">
             <Separator className={clsx({ 'rhc-page-footer--compact__separator': compact })} />
           </div>
         )}
-        {slot2 && <div className="rhc-page-footer__secondary">{slot2}</div>}
+        {secondary && <div className="rhc-page-footer__secondary">{secondary}</div>}
       </div>
     </footer>
   );
