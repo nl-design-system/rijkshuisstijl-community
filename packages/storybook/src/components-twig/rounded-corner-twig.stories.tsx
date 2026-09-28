@@ -11,7 +11,7 @@ const meta = {
     position: {
       options: ['start-start', 'start-end', 'end-start', 'end-end'],
       control: { type: 'radio' },
-      type: { required: true },
+      type: { name: 'string', required: true },
     },
     size: {
       options: ['sm', 'md', 'lg'],
