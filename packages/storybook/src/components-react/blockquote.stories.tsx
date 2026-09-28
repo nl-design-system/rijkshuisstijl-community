@@ -12,6 +12,11 @@ const meta = {
       name: 'attribution',
       type: { name: 'string', required: false },
     },
+    outlineCorner: {
+      name: 'outlineCorner',
+      control: { type: 'select' },
+      options: [undefined, 'start-start', 'start-end', 'end-start', 'end-end'],
+    },
   },
   args: {
     children: 'Lorem ipsum dolor sit amet, consectetur ad * isicing elit, sed do eiusmod *',
@@ -43,5 +48,40 @@ export const Attribution: Story = {
   args: {
     children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
     attribution: '— Pippi Langkous',
+  },
+};
+
+export const OutlineTopLeft: Story = {
+  name: 'Outline (hoek linksboven)',
+  args: {
+    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
+    attribution: 'Pippi Langkous',
+    outlineCorner: 'start-start',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Zet `outlineCorner` om de opt-in outline te tekenen: een rand op de twee zijden naast de gekozen hoek, met die hoek afgerond. De rand neemt de themeable primary-kleur over; de tekst gebruikt de action-foregroundkleur, die in elk thema WCAG AA haalt.',
+      },
+    },
+  },
+};
+
+export const OutlineTopRight: Story = {
+  name: 'Outline (hoek rechtsboven)',
+  args: {
+    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
+    attribution: 'Pippi Langkous',
+    outlineCorner: 'start-end',
+  },
+};
+
+export const OutlineBottomLeft: Story = {
+  name: 'Outline (hoek linksonder)',
+  args: {
+    children: '"Ik heb het nog nooit gedaan dus ik denk dat ik het wel kan"',
+    attribution: 'Pippi Langkous',
+    outlineCorner: 'end-start',
   },
 };
