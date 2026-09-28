@@ -68,7 +68,7 @@ const meta = {
   id: 'rhc-react-footer',
   component: Footer,
   args: {
-    slot2: <FooterFooterLinks />,
+    secondary: <FooterFooterLinks />,
   },
   parameters: {
     //!VOEG HIER FIGMA LINK TOE
@@ -89,20 +89,20 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: () => {
-    const slot1 = <FooterLinks />;
-    const slot2 = <FooterFooterLinks />;
-    return <Footer slot1={slot1} slot2={slot2} />;
+    const primary = <FooterLinks />;
+    const secondary = <FooterFooterLinks />;
+    return <Footer primary={primary} secondary={secondary} />;
   },
 };
 
 export const Compact: Story = {
   render: () => {
-    const slot2 = (
+    const secondary = (
       <>
         <div className="rhc-page-footer__tagline rhc-page-footer--compact__tagline">Overheid.nl</div>
         <FooterFooterLinks />
       </>
     );
-    return <Footer slot2={slot2} />;
+    return <Footer secondary={secondary} />;
   },
 };
