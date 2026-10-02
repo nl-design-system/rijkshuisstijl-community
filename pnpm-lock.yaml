@@ -23,6 +23,7 @@ overrides:
   locutus: 2.0.39
   lodash@>=4.0.0 <=4.17.22: '>=4.17.23'
   micromatch@<4.0.8: '>=4.0.8'
+  piscina@>=5.0.0 <5.3.2: ^5.3.2
   postcss@<8.5.10: '>=8.5.10'
   prismjs@<1.30.0: '>=1.30.0'
   qs@>=6.7.0 <=6.15.1: '>=6.15.2'
@@ -19349,12 +19350,8 @@ packages:
     resolution: {integrity: sha512-TfySrs/5nm8fQJDcBDuUng3VOUKsd7S+zqvbOTiGXHfxX4wK31ard+hoNuvkicM/2YFzlpDgABOevKSsB4G/FA==}
     engines: {node: '>= 6'}
 
-  piscina@5.1.4:
-    resolution: {integrity: sha512-7uU4ZnKeQq22t9AsmHGD2w4OYQGonwFnTypDypaWi7Qr2EvQIFVtG8J5D/3bE7W123Wdc9+v4CZDu5hJXVCtBg==}
-    engines: {node: '>=20.x'}
-
-  piscina@5.2.0:
-    resolution: {integrity: sha512-DszUCKeVN/5G5QKo6jAVHL8fmKnkJvQ0ACiVgY7YGCq3TUB2oznAOayvZPIAdEThvhczkXR+qm3IHsNXpFCYfA==}
+  piscina@5.3.2:
+    resolution: {integrity: sha512-vv7l/mM7B9WgrhDaudIqv1x6v4LOBRYYmpWGdWushhpbCmVHp11sUB2v4hj1CAeTGXVxuZFz6xOU1RalAiPKfQ==}
     engines: {node: '>=20.x'}
 
   pkce-challenge@5.0.1:
@@ -22213,7 +22210,7 @@ snapshots:
       open: 11.0.0
       ora: 9.3.0
       picomatch: 4.0.4
-      piscina: 5.1.4
+      piscina: 5.3.2
       postcss: 8.5.12
       postcss-loader: 8.2.0(postcss@8.5.12)(typescript@5.9.3)(webpack@5.105.2(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.12))(csso@5.0.5)(esbuild@0.28.1)(html-minifier-terser@6.1.0)(postcss@8.5.12)(uglify-js@3.19.3))
       resolve-url-loader: 5.0.0
@@ -22310,7 +22307,7 @@ snapshots:
       open: 11.0.0
       ora: 9.3.0
       picomatch: 4.0.4
-      piscina: 5.1.4
+      piscina: 5.3.2
       postcss: 8.5.12
       postcss-loader: 8.2.0(postcss@8.5.12)(typescript@5.9.3)(webpack@5.105.2(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.15))(csso@5.0.5)(esbuild@0.27.3)(html-minifier-terser@6.1.0)(postcss@8.5.12)(uglify-js@3.19.3))
       resolve-url-loader: 5.0.0
@@ -22430,7 +22427,7 @@ snapshots:
       mrmime: 2.0.1
       parse5-html-rewriting-stream: 8.0.0
       picomatch: 4.0.4
-      piscina: 5.1.4
+      piscina: 5.3.2
       rolldown: 1.0.0-rc.4(@emnapi/core@1.11.0)(@emnapi/runtime@1.11.3)
       sass: 1.97.3
       semver: 7.7.4
@@ -34079,7 +34076,7 @@ snapshots:
       jsonc-parser: 3.3.1
       less: 4.6.7
       ora: 9.4.1
-      piscina: 5.2.0
+      piscina: 5.3.2
       postcss: 8.5.15
       rollup-plugin-dts: 6.4.1(rollup@4.61.1)(typescript@5.9.3)
       rxjs: 7.8.2
@@ -34844,11 +34841,7 @@ snapshots:
 
   pirates@4.0.7: {}
 
-  piscina@5.1.4:
-    optionalDependencies:
-      '@napi-rs/nice': 1.1.1
-
-  piscina@5.2.0:
+  piscina@5.3.2:
     optionalDependencies:
       '@napi-rs/nice': 1.1.1
 
