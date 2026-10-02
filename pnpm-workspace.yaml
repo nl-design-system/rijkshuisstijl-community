@@ -42,6 +42,7 @@ minimumReleaseAgeExclude:
   - "@utrecht/*"
   - "@next/*"
   - "next"
+  - piscina@5.3.2
 
 # Configure pnpm to save exact version numbers (not including ^ or ~) in package.json. Lock dependencies to specific
 # versions to ensure reproducible installs and prevent automatic upgrades to newer minor or patch releases.
@@ -51,6 +52,7 @@ savePrefix: ""
 auditConfig:
   ignoreGhsas:
     - GHSA-vh9h-29pq-r5m8
+    - GHSA-67c8-pqhq-4rmx
 
 overrides:
   "@babel/runtime@<7.26.10": ">=7.26.10"
