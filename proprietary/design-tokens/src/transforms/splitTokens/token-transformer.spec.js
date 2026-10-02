@@ -1,6 +1,5 @@
 import { describe, expect, test } from 'vitest';
-
-import { ALWAYS_ON, cartesian, flattenMatrix, readThemeGroups } from './token-transformer.mjs';
+import { ALWAYS_ON, cartesian, flattenMatrix, readThemeGroups } from './token-transformer.js';
 
 const generateSelectedTokenSetsArray = (...tokenSets) =>
   Object.fromEntries(tokenSets.map((tokenSet) => [tokenSet, 'enabled']));

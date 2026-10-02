@@ -4,6 +4,7 @@
   "author": "Community for NL Design System",
   "description": "Example design tokens",
   "license": "SEE LICENSE IN LICENSE.md",
+  "type": "module",
   "keywords": [
     "nl-design-system"
   ],
@@ -20,8 +21,8 @@
   "scripts": {
     "clean": "rimraf dist/ src/generated/",
     "build": "npm-run-all clean build:figma-tokens build:style-dictionary",
-    "build:figma-tokens": "node ./src/transforms/splitTokens/token-transformer.mjs",
-    "build:style-dictionary": "node --experimental-strip-types ./build.mts",
+    "build:figma-tokens": "node ./src/transforms/splitTokens/token-transformer.js",
+    "build:style-dictionary": "node --import=tsx ./build.ts",
     "typecheck": "tsc --noEmit",
     "watch": "npm-run-all watch:**",
     "watch:style-dictionary": "chokidar 'src/**/*.tokens.json' 'figma/**/*.tokens.json' --follow-symlinks --command 'pnpm run build' --ignore '/src/generated/'",
@@ -33,6 +34,7 @@
     "chokidar-cli": "3.0.0",
     "rimraf": "6.1.3",
     "style-dictionary": "5.4.3",
+    "tsx": "4.23.13",
     "vitest": "4.1.10"
   }
 }
