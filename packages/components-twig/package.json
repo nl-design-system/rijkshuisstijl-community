@@ -20,8 +20,8 @@
   },
   "scripts": {
     "prebuild": "pnpm run clean && mkdir dist",
-    "build": "npm-run-all build:**",
-    "build:components": "cpx \"src/**/*.twig\" dist/",
+    "build": "run-p build:**",
+    "build:components": "cpy \"src/**/*.twig\" dist/",
     "build:typescript": "tsc",
     "clean": "rimraf dist/",
     "lint": "tsc --project ./tsconfig.json --noEmit",
@@ -36,7 +36,6 @@
   },
   "devDependencies": {
     "@nl-design-system/tsconfig": "1.0.5",
-    "cpx": "1.5.0",
     "drupal-attribute": "1.2.1",
     "drupal-twig-extensions": "1.0.0-beta.5",
     "rimraf": "6.1.3",
