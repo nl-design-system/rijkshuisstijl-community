@@ -59,7 +59,9 @@ De Navigation Bar bestaat uit de volgende onderdelen:
       <div class="rhc-nav-bar__slot">
         <nav class="rhc-nav-bar__nav" aria-label="Overige links">
           <ul class="rhc-nav-bar__list">
-            <li class="rhc-nav-bar__item rhc-nav-bar__item--button-on-mobile rhc-nav-bar__item--button-on-mobile--primary">
+            <li
+              class="rhc-nav-bar__item rhc-nav-bar__item--button-on-mobile rhc-nav-bar__item--button-on-mobile--primary"
+            >
               <a class="rhc-nav-bar__link" href="/inloggen">Inloggen</a>
             </li>
           </ul>
