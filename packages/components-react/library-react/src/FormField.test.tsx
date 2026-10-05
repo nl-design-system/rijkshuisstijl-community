@@ -24,6 +24,18 @@ describe('FormField', () => {
     expect(screen.getByText('Test Description')).toBeInTheDocument();
   });
 
+  it('renders the description with the descriptionId and both description classes', () => {
+    render(<FormField {...defaultProps} description="Test Description" />);
+    const description = screen.getByText('Test Description');
+    expect(description).toHaveAttribute('id', 'description-id');
+    expect(description).toHaveClass('utrecht-form-field-description', 'utrecht-form-field__description');
+  });
+
+  it('does not render a description element when no description is provided', () => {
+    const { container } = render(<FormField {...defaultProps} />);
+    expect(container.querySelector('.utrecht-form-field-description')).not.toBeInTheDocument();
+  });
+
   it('does not render error message when valid', () => {
     render(<FormField {...defaultProps} errorMessage="Error occurred" invalid={false} />);
     expect(screen.queryByText('Error occurred')).not.toBeInTheDocument();
