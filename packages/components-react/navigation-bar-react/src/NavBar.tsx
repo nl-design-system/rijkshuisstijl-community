@@ -284,10 +284,10 @@ export const NavBar = ({
       if (e.key === 'Tab') setIsMegamenuOpen(false);
     };
 
-    if (focusableElements.length < 1) return;
-
+    if (focusableElements.length === 0) return;
+    // eslint-disable-next-line unicorn/prefer-at
     focusableElements[focusableElements.length - 1].addEventListener('keydown', handleKeyDown);
-    // eslint-disable-next-line consistent-return
+    // eslint-disable-next-line consistent-return,unicorn/prefer-at
     return () => focusableElements[focusableElements.length - 1].removeEventListener('keydown', handleKeyDown);
   }, [isMegamenuOpen]);
 
