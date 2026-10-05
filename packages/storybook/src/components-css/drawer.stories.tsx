@@ -10,8 +10,6 @@ export default {
 };
 
 export const Default = ReactStories.Default;
-export const InlineStart = ReactStories.InlineStart;
 export const InlineEnd = ReactStories.InlineEnd;
-export const BlockStart = ReactStories.BlockStart;
 export const BlockEnd = ReactStories.BlockEnd;
 export const OverflowY = ReactStories.OverflowY;
