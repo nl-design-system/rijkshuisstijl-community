@@ -1,4 +1,10 @@
-import { NavBar, NavBarItem, type NavBarItemProps, NavBarMegaMenu } from '@rijkshuisstijl-community/components-react';
+import {
+  Icon,
+  NavBar,
+  NavBarItem,
+  type NavBarItemProps,
+  NavBarMegaMenu,
+} from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './navbar.md?raw';
@@ -13,8 +19,7 @@ const meta = {
         component: mergeMarkdown([readme]),
       },
     },
-    // TODO: add Figma, GitHub and NL DesignSystem links
-    componentOrigin: 'Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.',
+    // TODO: add Figma and GitHub links
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/NavBar.tsx',
   },
@@ -25,144 +30,88 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const items: NavBarItemProps[] = [
-  {
-    id: 'first-link',
-    label: 'Link',
-    href: '/',
-  },
-  {
-    id: 'second-link',
-    label: 'Link',
-    href: '/',
-  },
-  {
-    id: 'third-link',
-    label: 'Link',
-    href: '/',
-  },
+  { id: 'first-link', label: 'Link', href: '/' },
+  { id: 'second-link', label: 'Link', href: '/' },
+  { id: 'third-link', label: 'Link', href: '/' },
 ];
 
-const endItems = (
-  <>
-    <NavBarItem href="/" id="end-first-link" label="Link" />
-    <NavBarItem href="/" id="end-second-link" label="Link" />
-  </>
-);
+const endItems = [
+  <NavBarItem href="/" id="end-first-link" key="end-first-link" label="Link" />,
+  <NavBarItem href="/" id="end-second-link" key="end-second-link" label="Link" />,
+];
 
 export const Default: Story = {
-  args: {
-    items,
-  },
+  args: { items },
 };
 
 export const WithIdentity: Story = {
   args: {
-    identity: { value: 'Identity', href: '#', appearance: 'default' },
     items,
-    endItems,
+    identity: { value: 'Identity', href: '/' },
   },
-};
-
-export const WithMegamenu: Story = {
-  args: {
-    identity: { value: 'Identity', href: '#', appearance: 'default' },
-    endItems,
-  },
-  render: (args) => (
-    <NavBar
-      {...args}
-      megamenu={
-        <NavBarMegaMenu
-          tagline="Ingang naar informatie en diensten van alle overheden"
-          columns={[
-            {
-              id: 'col-1',
-              heading: 'Diensten van de overheid',
-              headingLevel: 3,
-              headingAppearanceLevel: 5,
-              items: [
-                { id: 'mm-1', label: 'Diensten overzicht', href: '/' },
-                { id: 'mm-2', label: 'Berichten over uw buurt', href: '/' },
-                { id: 'mm-3', label: 'Gegevens bij besluiten', href: '/' },
-                { id: 'mm-4', label: 'Internetconsultatie', href: '/' },
-                { id: 'mm-5', label: 'Levensgebeurtenissen', href: '/' },
-              ],
-            },
-            {
-              id: 'col-2',
-              heading: 'Beleid en regelgeving',
-              headingLevel: 3,
-              headingAppearanceLevel: 5,
-              items: [
-                { id: 'mm-6', label: 'Overzicht', href: '/' },
-                { id: 'mm-7', label: 'Wetten', href: '/' },
-                { id: 'mm-8', label: 'Verdragen', href: '/' },
-                { id: 'mm-9', label: 'Lokale regelgeving', href: '/' },
-              ],
-            },
-            {
-              id: 'col-3',
-              heading: 'Transparantie',
-              headingLevel: 3,
-              headingAppearanceLevel: 5,
-              items: [
-                { id: 'mm-10', label: 'Standaarden', href: '/' },
-                { id: 'mm-11', label: 'Open Data', href: '/' },
-                { id: 'mm-12', label: 'Linked data', href: '/' },
-              ],
-            },
-          ]}
-        />
-      }
-    />
-  ),
 };
 
 export const WithEndItems: Story = {
+  args: { items, endItems },
+};
+
+export const WithCurrentPage: Story = {
   args: {
-    items,
-    endItems,
+    items: [{ ...items[0], currentPage: true }, ...items.slice(1)],
   },
 };
 
-const itemsWithSubList: NavBarItemProps[] = [
-  {
-    id: 'sublist-link',
-    label: 'Onderwerpen',
-    href: '/',
-    subList: {
-      sections: [
-        {
-          id: 'section-1',
-          heading: 'Categorie A',
-          items: [
-            { id: 'sub-1', label: 'Onderwerp 1', href: '/' },
-            { id: 'sub-2', label: 'Onderwerp 2', href: '/' },
-            { id: 'sub-3', label: 'Onderwerp 3', href: '/' },
-          ],
-        },
-        {
-          id: 'section-2',
-          heading: 'Categorie B',
-          items: [
-            { id: 'sub-4', label: 'Onderwerp 4', href: '/' },
-            { id: 'sub-5', label: 'Onderwerp 5', href: '/' },
-          ],
-        },
-      ],
-    },
+export const WithIcons: Story = {
+  args: {
+    items: [
+      { id: 'search', label: 'Zoeken', href: '/', icon: <Icon icon="zoek" /> },
+      { id: 'login', label: 'Inloggen', href: '/', icon: <Icon icon="inloggen" />, iconOnly: true },
+    ],
   },
-  {
-    id: 'plain-link',
-    label: 'Link',
-    href: '/',
-  },
-];
+};
 
 export const WithSubList: Story = {
   args: {
-    identity: { value: 'Identity', href: '#', appearance: 'default' },
-    items: itemsWithSubList,
-    endItems,
+    items: [
+      {
+        id: 'topics',
+        label: 'Onderwerpen',
+        href: '/',
+        contentId: 'topics',
+        subList: {
+          sections: [
+            {
+              id: 'section-a',
+              heading: 'Sectie A',
+              items: [
+                { id: 'a-1', label: 'Link', href: '/' },
+                { id: 'a-2', label: 'Link', href: '/' },
+              ],
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
+
+export const WithMegaMenu: Story = {
+  args: {
+    identity: { value: 'Overheid.nl', href: '/', appearance: 'primary' },
+    megamenu: (
+      <NavBarMegaMenu
+        tagline="Ingang naar informatie en diensten van alle overheden"
+        columns={[
+          {
+            id: 'col-1',
+            heading: 'Diensten van de overheid',
+            items: [
+              { id: 'mm-1', label: 'Diensten overzicht', href: '/' },
+              { id: 'mm-2', label: 'Levensgebeurtenissen', href: '/' },
+            ],
+          },
+        ]}
+      />
+    ),
   },
 };
