@@ -30,14 +30,6 @@ const meta = {
         },
       },
     },
-    // as: {
-    //   description: 'The HTML element or React component to render as the rounded corner wrapper.',
-    //   table: {
-    //     type: {
-    //       summary: 'React.ElementType',
-    //     },
-    //   },
-    // },
   },
   parameters: {
     controls: {
@@ -57,17 +49,16 @@ export const BlueCurvedBorder: StoryObj<typeof meta> = {
   args: {
     position: 'start-start',
     size: 'md',
+    children:
+      '<div style="padding: 3rem 1rem; background-color: var(--rhc-color-primary-500)"><span style="color: white;">Rounded Corner Content</span></div>',
   },
 };
 
 export const ImageInsideRoundedCorner: StoryObj<typeof meta> = {
   args: {
     position: 'end-end',
-    as: 'img',
-    style: { width: '300px', height: 'auto' },
-    src: './placeholder.jpg',
-    alt: 'Nature',
-    children: undefined,
+    size: 'md',
+    children: '<img alt="Nature" class="" src="./placeholder.jpg" style="width: 300px; height: auto;">',
   },
 };
 
@@ -76,19 +67,28 @@ export const ImageBackground: StoryObj<typeof meta> = {
     position: 'start-start',
     size: 'lg',
     style: {
-      width: 'full',
-      height: 'full',
-      backgroundImage: 'url(./placeholder.jpg)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
+      '--rhc-rounded-corner-border-radius': '1rem',
     },
-    children: (
-      <div data-position="start-end" data-size="md" style={{ margin: '13rem 3rem 0rem 0rem' }}>
-        <div style={{ padding: '3rem 1rem', backgroundColor: 'var(--rhc-color-primary-500)' }}>
-          <span style={{ color: 'white' }}>Rounded Corner Content</span>
+    children: `
+      <style>
+        .image-background-wrapper {
+          margin: 13rem 3rem 0rem 0rem;
+          position: relative;
+        }
+        .image-background-wrapper::before {
+          content: '';
+          display: block;
+          padding-top: 56.25%;
+          background-image: url('./placeholder.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+      </style>
+      <div class="image-background-wrapper">
+        <div style="padding: 3rem 1rem; background-color: var(--rhc-color-primary-500);">
+          <span style="color: #fff;">Rounded Corner Content</span>
         </div>
-      </div>
-    ),
+      </div>`,
   },
 };
 

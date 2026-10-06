@@ -1,15 +1,24 @@
 {% set classes = ['rhc-rounded-corner'] %}
 
 {% if position in ['start-start', 'start-end', 'end-start', 'end-end'] %}
-  {% set classes = classes|merge(['rhc-rounded-corner--position-' ~ position]) %} 
+  {% set classes = classes|merge(['rhc-rounded-corner--position-' ~ position]) %}
 {% endif %}
 
 {% if size in ['sm', 'md', 'lg'] %}
   {% set classes = classes|merge(['rhc-rounded-corner--size-' ~ size]) %}
 {% endif %}
 
-<div{{ attributes.addClass(classes) }}>
-  <div style="padding: 3rem 1rem; background-color: var(--rhc-color-primary-500)">
-    <span style="color: white;">Rounded Corner Content</span>
-  </div>
+{% set style_string = '' %}
+{% if style is defined and style %}
+  {% if style is iterable %}
+    {% for prop, value in style %}
+      {% set style_string = style_string ~ prop ~ ': ' ~ value ~ '; ' %}
+    {% endfor %}
+  {% else %}
+    {% set style_string = style %}
+  {% endif %}
+{% endif %}
+
+<div {{ attributes.addClass(classes) }}{% if style is defined and style %} style="{{ style }}"{% endif %}>
+  {{ children }}
 </div>
