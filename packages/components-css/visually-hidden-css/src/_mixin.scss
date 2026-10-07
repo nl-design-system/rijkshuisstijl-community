@@ -3,6 +3,21 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+@mixin rhc-visually-hidden-reset {
+  block-size: auto !important;
+  border: unset !important;
+  clip: auto !important;
+  inline-size: auto !important;
+  margin-block: 0 !important;
+  margin-inline: 0 !important;
+  opacity: 100% !important;
+  overflow: visible !important;
+  padding-block: unset !important;
+  padding-inline: unset !important;
+  position: static;
+  white-space: normal !important;
+}
+
 @mixin rhc-visually-hidden {
   block-size: 1px !important;
   border: 0 !important;
