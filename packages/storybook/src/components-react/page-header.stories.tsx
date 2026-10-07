@@ -1,7 +1,7 @@
 import { PageHeader } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { SharedHeaderOverheidNl } from '../templates/shared/header';
 import readme from './page-header.md?raw';
+import { SharedHeaderOverheidNl } from '../templates/shared/header';
 
 const meta = {
   title: 'Page Header',
@@ -14,6 +14,7 @@ const meta = {
         component: readme,
       },
     },
+    layout: 'fullscreen',
     // TODO: add Figma and GitHub links
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/page-header-react/src/PageHeader.tsx',
