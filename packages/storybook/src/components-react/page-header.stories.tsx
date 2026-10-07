@@ -14,6 +14,7 @@ const meta = {
         component: readme,
       },
     },
+    layout: 'fullscreen',
     // TODO: add Figma and GitHub links
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/page-header-react/src/PageHeader.tsx',
