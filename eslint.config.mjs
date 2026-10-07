@@ -85,6 +85,7 @@ export default defineConfig([
       'unicorn/prefer-export-from': 'off',
       'unicorn/prefer-module': 'off',
       'unicorn/prevent-abbreviations': 'off',
+      'unicorn/no-abusive-eslint-disable': 'off',
     },
   },
 
@@ -158,6 +159,7 @@ export default defineConfig([
       ...sharedRules,
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'error',
+      'no-lonely-if': 'error',
     },
   },
 

@@ -1,6 +1,6 @@
 {
   "name": "@rijkshuisstijl-community/components-twig",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "author": "Community for NL Design System",
   "description": "Twig component library for the Rijkshuisstijl Community repository, based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -20,8 +20,8 @@
   },
   "scripts": {
     "prebuild": "pnpm run clean && mkdir dist",
-    "build": "npm-run-all build:**",
-    "build:components": "cpx \"src/**/*.twig\" dist/",
+    "build": "run-p build:**",
+    "build:components": "cpy \"src/**/*.twig\" dist/",
     "build:typescript": "tsc",
     "clean": "rimraf dist/",
     "lint": "tsc --project ./tsconfig.json --noEmit",
@@ -36,10 +36,8 @@
   },
   "devDependencies": {
     "@nl-design-system/tsconfig": "1.0.5",
-    "cpx": "1.5.0",
     "drupal-attribute": "1.2.1",
     "drupal-twig-extensions": "1.0.0-beta.5",
-    "npm-run-all": "4.1.5",
     "rimraf": "6.1.3",
     "twig": "1.17.1",
     "typescript": "5.9.3"

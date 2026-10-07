@@ -139,3 +139,5 @@ export const SharedHeaderOverheidNl = () => (
     </div>
   </PageHeader>
 );
+
+export default SharedHeaderOverheidNl;

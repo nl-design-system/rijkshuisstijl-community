@@ -1,7 +1,7 @@
 import { PageHeader } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { SharedHeaderOverheidNl } from '../templates/shared/header';
 import readme from './page-header.md?raw';
+import SharedHeader from '../templates/shared/header';
 
 const meta = {
   title: 'Page Header',
@@ -25,7 +25,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: SharedHeaderOverheidNl,
+  render: SharedHeader,
   args: {
     children: undefined,
   },
