@@ -19,8 +19,11 @@ export class BlockquoteWebComponent extends BaseWebComponent {
 
   render(): void {
     if (!this.shadowRoot) return;
+
+    const { outlinecorner, ...restProps } = this.props;
+
     render(
-      <Blockquote {...(this.props as BlockquoteWebComponentAttributes)}>
+      <Blockquote outlineCorner={outlinecorner as BlockquoteWebComponentAttributes['outlineCorner']} {...restProps}>
         <slot />
       </Blockquote>,
       this.shadowRoot,
