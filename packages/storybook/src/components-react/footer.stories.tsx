@@ -22,6 +22,13 @@ const LinkListMaker = ({ list }: { list: Array<string> }) => (
   </LinkList>
 );
 
+const headerLikeStyles = {
+  fontSize: 'var(--rhc-text-font-size-xl)',
+  lineHeight: 'var(--rhc-text-line-height-md)',
+  marginTop: 0,
+  marginBottom: '8px',
+};
+
 const FooterLinks = () => (
   <>
     <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
@@ -52,6 +59,39 @@ const FooterLinks = () => (
       </div>
     </div>
   </>
+);
+
+const FooterLinks3 = () => (
+  <div className="rhc-grid">
+    <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+      <p style={headerLikeStyles}>Overheid.nl</p>
+      <p style={{ marginTop: 0 }}>
+        <i>
+          Ingang naar informatie en
+          <br />
+          diensten van alle overheden
+        </i>
+      </p>
+    </div>
+    <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+      <Heading appearanceLevel={5} level={2}>
+        Overheid.nl
+      </Heading>
+      <LinkListMaker list={linkList1} />
+    </div>
+    <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+      <Heading appearanceLevel={5} level={2}>
+        Officiële overheidsinformatie
+      </Heading>
+      <LinkListMaker list={linkList2} />
+    </div>
+    <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+      <Heading appearanceLevel={5} level={2}>
+        Andere overheidssites
+      </Heading>
+      <LinkListMaker list={linkList3} />
+    </div>
+  </div>
 );
 
 const FooterFooterLinks = () => (
@@ -90,6 +130,14 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: () => {
     const primary = <FooterLinks />;
+    const secondary = <FooterFooterLinks />;
+    return <Footer primary={primary} secondary={secondary} />;
+  },
+};
+
+export const TaglineInColumn: Story = {
+  render: () => {
+    const primary = <FooterLinks3 />;
     const secondary = <FooterFooterLinks />;
     return <Footer primary={primary} secondary={secondary} />;
   },
