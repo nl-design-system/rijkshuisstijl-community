@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/components-react
 
+## 17.0.2
+
+### Patch Changes
+
+- Updated dependencies [08c5118]
+  - @rijkshuisstijl-community/footer-react@0.1.0
+  - @rijkshuisstijl-community/rounded-corner-react@1.0.3
+
 ## 17.0.1
 
 ### Patch Changes
