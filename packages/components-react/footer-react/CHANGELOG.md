@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/footer-react
 
+## 0.1.0
+
+### Minor Changes
+
+- 08c5118: # Slot-namen aangepast
+  
+  De slot-namen van het `Footer`-component zijn aangepast van `slot1` en `slot2` naar `primary` and `secondary`.
+
 ## 0.0.2
 
 ### Patch Changes
