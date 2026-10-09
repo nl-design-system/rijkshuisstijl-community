@@ -30,7 +30,7 @@ export const Footer = ({ primary, secondary }: FooterProps) => {
       <div className="rhc-page-section__content">
         {primary && <div className="rhc-page-footer__primary">{primary}</div>}
         {primary && secondary && (
-          <div className="rhc-footer__separator">
+          <div className="rhc-page-footer__separator">
             <Separator className={clsx({ 'rhc-page-footer--compact__separator': compact })} />
           </div>
         )}
