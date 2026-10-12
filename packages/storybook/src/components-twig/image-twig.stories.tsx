@@ -26,6 +26,14 @@ const meta = {
         category: 'Property',
       },
     },
+    presentation: {
+      description: 'Image is decorative',
+      type: { name: 'boolean' },
+      control: 'boolean',
+      table: {
+        category: 'Property',
+      },
+    },
     width: {
       description: 'Image width',
       control: { type: 'number' },
@@ -49,7 +57,9 @@ const meta = {
     },
     componentOrigin:
       'Dit component is overgenomen van de Gemeente Utrecht, maar de photo property altijd geset, daardoor is hij altijd max-height en max-width 100%.',
-    //Todo: voeg NL-Design system & Figma links toe
+    nldesignsystem: 'https://nldesignsystem.nl/image', 
+    figma:
+      'https://www.figma.com/design/txFX5MGRf4O904dtIFcGTF/NLDS---Rijkshuisstijl---Bibliotheek?node-id=1303-6078&p=f&t=qOUC6V0a7o4DPaSw-0',
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-twig/src/Image.twig',
   },
@@ -57,7 +67,9 @@ const meta = {
 
 export default meta;
 
-export const TwigImage1: StoryObj<typeof meta> = {
+type Story = StoryObj<typeof meta>;
+
+export const TwigImage1: Story = {
   args: {
     attributes: new DrupalAttribute(),
     width: 763,
@@ -66,4 +78,16 @@ export const TwigImage1: StoryObj<typeof meta> = {
     alt: 'Multicolored tulip field',
   },
   name: 'Image',
+};
+
+export const TwigImage2: Story = {
+  args: {
+    attributes: new DrupalAttribute(),
+    width: 763,
+    height: 640,
+    src: '/placeholder.jpg',
+    alt: '',
+    presentation: true,
+  },
+  name: 'Decorative',
 };
