@@ -318,19 +318,35 @@
         margin-inline: var(--rhc-page-section-vi-small-padding-inline);
         min-block-size: 48px;
         text-decoration: none;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
 
       &.rhc-nav-bar__item--button-on-mobile--secondary > .rhc-nav-bar__link {
-        background-color: var(--utrecht-button-secondary-background-color, #fff);
-        border: 2px solid
-          var(--utrecht-button-secondary-border-color, var(--rhc-navigation-bar-link-hover-border-color));
-        color: var(--utrecht-button-secondary-text-color, var(--rhc-navigation-bar-link-hover-color));
+        // Wit volgens ontwerp; het Secondary Button-token is transparant en toont hier de menu-achtergrond.
+        background-color: #fff;
+        border: 2px solid var(--utrecht-button-secondary-action-border-color);
+        color: var(--utrecht-button-secondary-action-color, var(--rhc-navigation-bar-link-hover-color));
       }
 
       &.rhc-nav-bar__item--button-on-mobile--primary > .rhc-nav-bar__link {
-        background-color: var(--utrecht-button-primary-background-color, #0058b8);
+        background-color: var(--utrecht-button-primary-action-background-color, #0058b8);
         border: 2px solid transparent;
-        color: var(--utrecht-button-primary-text-color, #fff);
+        color: var(--utrecht-button-primary-action-color, #fff);
+      }
+
+      &.rhc-nav-bar__item--button-on-mobile--secondary > .rhc-nav-bar__link:hover {
+        background-color: var(--utrecht-button-secondary-action-hover-background-color);
+        border-color: var(--utrecht-button-secondary-action-border-color);
+        color: var(--utrecht-button-secondary-action-hover-color);
+      }
+
+      &.rhc-nav-bar__item--button-on-mobile--primary > .rhc-nav-bar__link:hover {
+        background-color: var(--utrecht-button-primary-action-hover-background-color);
+        border-color: var(--utrecht-button-primary-action-border-color);
+        color: var(--utrecht-button-primary-action-hover-color);
       }
     }
   }
