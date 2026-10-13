@@ -49,6 +49,7 @@ export const FormFieldSelect = ({
   selectRef,
   status,
   invalid,
+  errorMessage,
   input,
   children,
   options,
@@ -60,6 +61,7 @@ export const FormFieldSelect = ({
   onBlur,
   onFocus,
   name,
+  required,
   ...restProps
 }: PropsWithChildren<FormFieldSelectProps>) => {
   const id = useId();
@@ -76,11 +78,12 @@ export const FormFieldSelect = ({
       invalid={invalid}
       name={name}
       ref={selectRef}
+      required={required}
       value={value}
       aria-describedby={
         clsx({
           [descriptionId]: description,
-          [errorMessageId]: invalid,
+          [errorMessageId]: invalid && errorMessage,
           [statusId]: status,
         }) || undefined
       }
@@ -107,6 +110,7 @@ export const FormFieldSelect = ({
       description={description}
       descriptionId={descriptionId}
       dir={dir}
+      errorMessage={errorMessage}
       errorMessageId={errorMessageId}
       id={id}
       input={input ?? inputComponent}
