@@ -31,6 +31,7 @@ import { type FormFieldTextareaAttributes, FormFieldTextareaWebComponent } from 
 import { HeroWebComponent, type HeroWebComponentAttributes } from './components/Hero';
 import { IconWebComponent, type IconWebComponentAttributes } from './components/Icon';
 import { LinkWebComponent, type LinkWebComponentAttributes } from './components/Link';
+import { QuoteWebComponent, type QuoteWebComponentAttributes } from './components/Quote';
 
 export { AccordionWebComponent, type AccordionWebComponentAttributes };
 export { ActionGroupWebComponent, type ActionGroupWebComponentAttributes };
@@ -57,6 +58,7 @@ export { type FormFieldTextareaAttributes, FormFieldTextareaWebComponent };
 export { HeroWebComponent, type HeroWebComponentAttributes };
 export { IconWebComponent, type IconWebComponentAttributes };
 export { LinkWebComponent, type LinkWebComponentAttributes };
+export { QuoteWebComponent, type QuoteWebComponentAttributes };
 
 declare global {
   namespace JSX {
@@ -81,6 +83,7 @@ declare global {
       'rhc-form-textarea': WebComponentAttributes<FormFieldTextareaAttributes>;
       'rhc-hero': WebComponentAttributes<HeroWebComponentAttributes>;
       'rhc-icon': WebComponentAttributes<IconWebComponentAttributes>;
+      'rhc-quote': WebComponentAttributes<QuoteWebComponentAttributes>;
     }
   }
 }
