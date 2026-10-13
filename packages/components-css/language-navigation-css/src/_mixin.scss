@@ -21,6 +21,20 @@
 
     background-color: var(--rhc-nav-bar-link-hover-background-color);
   }
+
+  // Mobiel: onderstreping i.p.v. achtergrond, zoals de andere menulinks.
+  @media (width < 768px) {
+    border-radius: 0;
+    font-size: 20px;
+    inline-size: 100%;
+    justify-content: flex-start;
+
+    &:hover:not([aria-expanded="true"]) {
+      --utrecht-link-hover-text-decoration: underline;
+
+      background-color: transparent;
+    }
+  }
 }
 
 @mixin rhc-language-navigation__list {
