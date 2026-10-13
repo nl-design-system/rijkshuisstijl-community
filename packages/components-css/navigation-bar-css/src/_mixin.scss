@@ -403,6 +403,13 @@
   @media (width < 768px) {
     align-items: center !important;
     min-block-size: 30px;
+
+    // Mobiel: onderstreping i.p.v. achtergrond, alleen in het open menu.
+    .rhc-nav-bar__slots &:hover:not([aria-expanded="true"]) {
+      background-color: transparent;
+      box-shadow: none;
+      text-decoration: underline;
+    }
   }
 }
 
