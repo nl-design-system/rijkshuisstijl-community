@@ -1,0 +1,33 @@
+{%- set classes = ['utrecht-textbox utrecht-textbox--html-input rhc-text-input'] -%}
+
+{%- if name is defined -%}{%- set attributes = attributes.setAttribute('name', name) -%}{%- endif -%}
+{%- if dir is defined -%}{%- set attributes = attributes.setAttribute('dir', dir) -%}{%- else -%}{%- set attributes = attributes.setAttribute('dir', 'auto') -%}{%- endif -%}
+{%- if defaultValue is defined -%}{%- set attributes = attributes.setAttribute('value', defaultValue) -%}{%- endif -%}
+{%- if value is defined -%}{%- set attributes = attributes.setAttribute('value', value) -%}{%- endif -%}
+{%- if placeholder is defined -%}{%- set attributes = attributes.setAttribute('placeholder', placeholder) -%}{%- endif -%}
+
+{%- if required -%}
+  {%- set classes = classes|merge(['utrecht-textbox--required']) -%}
+  {%- set attributes = attributes
+    .setAttribute('required', 'true') -%}
+{%- endif -%}
+{%- if inputRequired -%}
+  {%- set classes = classes|merge(['utrecht-textbox--required']) -%}
+  {%- set attributes = attributes
+    .setAttribute('required', '') -%}
+{%- endif -%}
+{%- if disabled -%}
+  {%- set classes = classes|merge(['utrecht-textbox--disabled']) -%}
+{%- endif -%}
+{%- if readOnly -%}
+  {%- set classes = classes|merge(['utrecht-textbox--readonly']) -%}
+{%- endif -%}
+{%- if invalid -%}
+  {%- set classes = classes|merge(['utrecht-textbox--invalid']) -%}
+{%- endif -%}
+
+{%- if className  -%}
+  {%- set classes = classes|merge([className]) -%}
+{%- endif -%}
+
+<input {{ attributes.addClass(classes) }} aria-label="text-input-label" type="text" name="subject" />
