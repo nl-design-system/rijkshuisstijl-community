@@ -7,8 +7,8 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './footer.md?raw';
 
 const headerLikeStyles = {
-  fontSize: 'var(--rhc-text-font-size-xl',
-  lineHeight: 'var(--rhc-text-line-height-md',
+  fontSize: 'var(--rhc-text-font-size-xl)',
+  lineHeight: 'var(--rhc-text-line-height-md)',
   marginTop: 0,
   marginBottom: '8px',
 };
