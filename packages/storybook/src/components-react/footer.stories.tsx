@@ -5,6 +5,7 @@ import { Footer, Heading, Icon, Link, LinkList, LinkListLink } from '@rijkshuiss
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './footer.md?raw';
+import './footer.css';
 
 const linkList1 = ['Contact', 'Veelgestelde vragen', 'Over deze site', 'Werken bij'];
 
@@ -21,13 +22,6 @@ const LinkListMaker = ({ list }: { list: Array<string> }) => (
     ))}
   </LinkList>
 );
-
-const headerLikeStyles = {
-  fontSize: 'var(--rhc-text-font-size-xl)',
-  lineHeight: 'var(--rhc-text-line-height-md)',
-  marginTop: 0,
-  marginBottom: '8px',
-};
 
 const FooterLinks = () => (
   <>
@@ -64,7 +58,7 @@ const FooterLinks = () => (
 const FooterLinks3 = () => (
   <div className="rhc-grid">
     <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
-      <p style={headerLikeStyles}>Overheid.nl</p>
+      <p className="header-like">Overheid.nl</p>
       <p style={{ marginTop: 0 }}>
         <i>
           Ingang naar informatie en
