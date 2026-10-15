@@ -8,3 +8,15 @@
 .rhc-visually-hidden {
   @include mixin.rhc-visually-hidden;
 }
+
+.rhc-visually-hidden-mobile {
+  @media (width <= 768px) {
+    @include mixin.rhc-visually-hidden;
+  }
+}
+
+.rhc-visually-hidden-desktop {
+  @media (width > 768px) {
+    @include mixin.rhc-visually-hidden;
+  }
+}

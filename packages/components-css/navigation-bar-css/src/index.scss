@@ -4,27 +4,72 @@
  */
 
 @use "mixin";
+
 @forward "@rijkshuisstijl-community/link-css/dist/index.css";
 @forward "@rijkshuisstijl-community/heading-css/dist/index.css";
-
-.rhc-nav-bar__container {
-  @include mixin.rhc-nav-bar__container;
-}
 
 .rhc-nav-bar {
   @include mixin.rhc-nav-bar;
 }
 
+.rhc-nav-bar__shade {
+  @include mixin.rhc-nav-bar__shade;
+}
+
+.rhc-nav-bar__slot {
+  @include mixin.rhc-nav-bar__slot;
+}
+
+.rhc-nav-bar__identity {
+  @include mixin.rhc-nav-bar__identity;
+}
+
+.rhc-nav-bar__slot-identity {
+  @include mixin.rhc-nav-bar__slot-identity;
+}
+
+.rhc-nav-bar__slot-main {
+  @include mixin.rhc-nav-bar__slot-main;
+}
+
+.rhc-nav-bar__slot-main__btn-trigger {
+  @include mixin.rhc-nav-bar__slot-main__btn-trigger;
+}
+
+.rhc-nav-bar__slots {
+  @include mixin.rhc-nav-bar__slots;
+}
+.rhc-nav-bar__slot-megamenu {
+  @include mixin.rhc-nav-bar__slot-megamenu;
+}
+
+.rhc-nav-bar__megamenu {
+  @include mixin.rhc-nav-bar__megamenu;
+}
+
+.rhc-nav-bar__megamenu-column-heading {
+  @include mixin.item-height;
+}
+
+.rhc-nav-bar__megamenu-column-link .utrecht-link-list__link {
+  @include mixin.item-height;
+  @include mixin.full-width-mobile;
+}
+
+.rhc-nav-bar__megamenu__link-list {
+  row-gap: 0;
+}
+
+.rhc-nav-bar__megamenu__btn-close {
+  @include mixin.rhc-nav-bar__megamenu__btn-close;
+}
+
+.rhc-nav-bar__megamenu-tagline {
+  @include mixin.rhc-nav-bar__megamenu-tagline;
+}
+
 .rhc-nav-bar__list {
   @include mixin.rhc-nav-bar__list;
-}
-
-.rhc-nav-bar__list--end {
-  @include mixin.rhc-nav-bar__list--end;
-}
-
-.rhc-nav-bar__heading {
-  @include mixin.rhc-nav-bar__heading;
 }
 
 .rhc-nav-bar__link {
@@ -37,8 +82,4 @@
 
 .rhc-sub-nav-bar__content {
   @include mixin.rhc-sub-nav-bar__content;
-}
-
-.rhc-sub-nav-bar__list {
-  @include mixin.rhc-sub-nav-bar__list;
 }

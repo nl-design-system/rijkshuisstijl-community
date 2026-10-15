@@ -2,37 +2,84 @@
 
 # Rijkshuisstijl Community Page Header component
 
-Dit is een Utrecht component met Rijkshuisstijl Community styling
+Consistente plek bovenaan elke pagina, vaak met een logo, navigation bar en zoekfunctie, taal switch.
 
-[Utrecht Page Header](https://nl-design-system.github.io/utrecht/storybook/?path=/docs/react_react-page-header--docs)  
-[NL Design System Page Header](https://nldesignsystem.nl/page-header)
+De component zelf voegt geen logo of navigatie toe: je geeft de inhoud mee als children, meestal een Logo en een of twee NavBar's.
 
-De page header bevat vaak de volgende onderdelen:
+## Anatomie
 
-- Logo (met link naar de homepage)
-- Navigatie
-- Zoekveld
-- Kruimelpad-navigatie
-- Eventueel een melding met een waarschuwing, bijvoorbeeld over een actuele storing.
-- Cookie banner.
+De Page Header bestaat uit de volgende onderdelen:
 
-Het logo maakt duidelijk wie verantwoordelijk is voor de website en geeft daarmee belangrijke context voor de rest van de pagina.
+- **Header**: de `<header>` met de rhc-page-header-class, als buitenste wrapper.
+- **Children**: de inhoud die je zelf meegeeft, bijvoorbeeld een `Logo` en een of meerdere `NavBar`'s.
 
-## HTML
+## Gebruik
 
-Gebruik het HTML `<header>` element, zodat het automatisch een `banner` landmark krijgt.
-
-## Relevante WCAG eisen
-
-- [WCAG eis 1.3.1](https://www.w3.org/TR/WCAG21/#info-and-relationships): plaats de header in een `banner` landmark, door het `<header>` element te gebruiken
-- [WCAG eis 1.3.2](https://www.w3.org/TR/WCAG21/#meaningful-sequence): plaats de header aan het begin van pagina, maar na de _skip links_. Zo is het gelijk duidelijk wie verantwoordelijk is voor de pagina die er op volgt.
-
-## Usage
+### Eenvoudig voorbeeld
 
 ```tsx
-import { Heading, PageHeader } from '@rijkshuisstijl-community/components-react';
+import { PageHeader } from '@rijkshuisstijl-community/components-react';
+
+const items = [
+  { id: 'home', label: 'Home', href: '/' },
+  { id: 'contact', label: 'Contact', href: '/' },
+];
 
 <PageHeader>
-    <Heading level={2}>Header Area</Heading>
-<PageHeader/>
+  <div className="rhc-page-section">
+    <div className="rhc-page-section__content">
+      <Logo organisation="Organisatie" subtitle="Wat wij doen" />
+      <NavBar identity={{ value: 'Dataregister', href: '/' }} items={items} />
+    </div>
+  </div>
+</PageHeader>;
 ```
+
+### Uitgebreid voorbeeld
+
+Voor een pagina met een `megamenu` en een tweede navigatiebalk geeft je meerdere `NavBar`'s mee als `children`.
+
+```tsx
+import { Icon, Logo, NavBar, NavBarMegaMenu, PageHeader } from '@rijkshuisstijl-community/components-react';
+
+const itemsMain = [
+  { id: 'data', label: 'Data', href: '/' },
+  { id: 'impact', label: 'Impact', href: '/' },
+];
+
+const megamenu = (
+  <NavBarMegaMenu
+    tagline="Ingang naar informatie en diensten van alle overheden"
+    columns={[
+      {
+        id: 'col-1',
+        heading: 'Diensten van de overheid',
+        items: [{ id: 'mm-1', label: 'Diensten overzicht', href: '/' }],
+      },
+    ]}
+  />
+);
+
+<PageHeader>
+  <div className="rhc-page-section">
+    <div className="rhc-page-section__content">
+      <Logo organisation="Organisatie" subtitle="Wat wij doen">
+        <Icon className="dutch-map" icon="nederland-map" />
+      </Logo>
+      <NavBar identity={{ value: 'Overheid.nl', href: '/', appearance: 'primary' }} megamenu={megamenu} />
+      <NavBar identity={{ value: 'Dataregister', href: '/' }} items={itemsMain} />
+    </div>
+  </div>
+</PageHeader>;
+```
+
+Zie SharedHeaderOverheidNl in het header-footer -template voor een volledig voorbeeld.
+
+## API Referentie
+
+### PageHeader
+
+| Prop        | Type      | Default   | Beschrijving             |
+| ----------- | --------- | --------- | ------------------------ |
+| `children`  | ReactNode | verplicht | De inhoud van de header. |
+| `className` | string    | -         | Extra CSS class names    |
