@@ -292,6 +292,22 @@ export const Placeholder: Story = {
   },
 };
 
+export const AutoComplete: Story = {
+  args: {
+    name: 'subject',
+    autoComplete: 'current-password',
+    type: 'password',
+  },
+  decorators: [
+    (Story) => (
+      <form>
+        <input hidden autoComplete="username" type="text" />
+        {Story()}
+      </form>
+    ),
+  ],
+};
+
 export const LeftToRightInput: Story = {
   args: {
     dir: 'rtl',
