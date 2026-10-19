@@ -73,6 +73,7 @@ const RelaxedCandidateButton = CandidateButton as ForwardRefExoticComponent<
   RelaxedCandidateButtonProps & RefAttributes<HTMLButtonElement>
 >;
 
+// eslint-disable-next-line sonarjs/deprecation
 export const Button = ({ appearance, children, className, ref, ...restProps }: PropsWithChildren<ButtonProps>) => (
   <RelaxedCandidateButton
     purpose={appearance ? PURPOSE_BY_APPEARANCE[appearance] : undefined}
@@ -92,6 +93,7 @@ export type IconButtonProps = Omit<ButtonProps, 'children' | 'label'> & {
 };
 
 export const IconButton = ({
+  // eslint-disable-next-line sonarjs/deprecation
   appearance,
   children,
   className,
