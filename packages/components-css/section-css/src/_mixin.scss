@@ -1,0 +1,25 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+@mixin rhc-page-section {
+  display: flex;
+  flex-direction: row;
+  inline-size: 100%;
+  justify-content: center;
+}
+
+@mixin rhc-page-section__content {
+  box-sizing: border-box;
+  flex-grow: 1;
+  max-inline-size: var(--rhc-page-section-max-inline-size);
+  padding-inline: var(--rhc-page-section-vi-small-padding-inline);
+
+  @media screen and (width >= 768px) {
+    padding-inline: var(--rhc-page-section-vi-medium-padding-inline);
+  }
+  @media screen and (width >= 1024px) {
+    padding-inline: var(--rhc-page-section-vi-large-padding-inline);
+  }
+}

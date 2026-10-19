@@ -3,9 +3,12 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+@use "mixin";
+@forward "@utrecht/textbox-css/dist/index.css";
+
 .rhc-text-input.utrecht-textbox:focus {
-  border-width: var(--utrecht-textbox-focus-border-width, var(--rhc-border-width-md));
+  @include mixin.rhc-text-input--focus;
 }
 .rhc-text-input.utrecht-textbox--invalid:focus {
-  border-width: var(--utrecht-textbox-focus-border-width, var(--rhc-border-width-md));
+  @include mixin.rhc-text-input--invalid-focus;
 }

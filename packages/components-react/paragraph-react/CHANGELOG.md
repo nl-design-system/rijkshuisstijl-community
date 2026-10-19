@@ -1,5 +1,18 @@
 # @rijkshuisstijl-community/paragraph-react
 
+## 2.1.3
+
+### Patch Changes
+
+- Updated dependencies [3845c86]
+  - @rijkshuisstijl-community/paragraph-css@2.2.0
+
+## 2.1.2
+
+### Patch Changes
+
+- 89b2604: Fix security vulnerabilities identified by pnpm audit by upgrading vitest and @vitest/coverage-v8 from 4.1.8 to 4.1.10.
+
 ## 2.1.1
 
 ### Patch Changes

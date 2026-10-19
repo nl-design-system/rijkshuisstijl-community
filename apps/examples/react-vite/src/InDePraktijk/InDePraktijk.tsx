@@ -1,4 +1,4 @@
-import { CardAsLink, Heading, Paragraph } from '@rijkshuisstijl-community/components-react';
+import { CardAsLink, Heading, Paragraph } from '@rijkshuisstijl-community/components-react/no-side-effects';
 import './InDePraktijk.css';
 
 export function InDePraktijk() {

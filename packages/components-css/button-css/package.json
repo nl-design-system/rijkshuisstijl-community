@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Community for Rijkshuisstijl-Community Design System",
   "description": "Button component",
   "license": "EUPL-1.2",
@@ -14,7 +14,7 @@
   "scripts": {
     "build": "build-css-package",
     "clean": "rimraf dist",
-    "watch": "chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
+    "watch": "build-css-package && chokidar 'src/**/*' --follow-symlinks --command 'build-css-package'"
   },
   "devDependencies": {
     "@nl-design-system-candidate/button-css": "1.1.0",
@@ -32,5 +32,8 @@
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
     "directory": "packages/components-css/button-css"
+  },
+  "dependencies": {
+    "@utrecht/button-css": "3.1.0"
   }
 }

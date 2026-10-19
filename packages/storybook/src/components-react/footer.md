@@ -1,26 +1,68 @@
 # Rijkshuisstijl Community Footer component
 
-De footer bestaat uit kolommen met als eerste de tagline en daarna `LinkList` componenten met handige bronnen.
+Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.
 
-De kolommen lijsten kunnen worden toegevoegd door middel van properties aan het `<Footer>` component.
+## Beschrijving
 
-## level
+De Footer component biedt de basisstructuur voor de pagina-footer. Je vult twee slots met eigen content: `primary` voor het bovenste gedeelte (bijvoorbeeld links in kolommen) en `secondary` voor het onderste gedeelte (bijvoorbeeld juridische links zoals Privacy en Cookies).
 
-De heading kolom is de titel level +1, omdat deze een subsectie vormt van de titel. Hierdoor staan de kolomtitels altijd één niveau hoger dan de titel. Echter, wanneer de heading niveau 6 bereikt, wordt er geen niveau 7 gebruikt. In dat geval blijven zowel de titel als de kolommen op niveau 6.
+## Gebruik
 
-### Belangrijkste punten
+### Eenvoudig voorbeeld
 
-De heading kolom heeft altijd een niveau meer dan de titel.
-Dit geldt voor alle niveaus behalve niveau 6.
-Bij niveau 6 worden zowel de titel als de kolommen op niveau 6 gehouden.
-Er bestaat geen niveau 7 heading in HTML.
+De minimale manier om de Footer te gebruiken, met alleen `secondary`.
 
-```tsx
-columns={[
-    {
-      children: <LinkList><LinkListLink href="#" icon={<UtrechtIconChevronRight />}>Contact</LinkListLink> etc...</LinkList>,
-      heading: 'Service'
-    }
-  ]}
-  tagline="Footer tagline"
+```jsx
+import { Footer, Link } from '@rijkshuisstijl-community/components-react';
+
+const FooterFooterLinks = () => (
+  <div className="rhc-page-footer__navigation">
+    <Link href="#">Privacy</Link>
+    <Link href="#">Cookies en anti-spam</Link>
+  </div>
+);
+
+<Footer secondary={<FooterFooterLinks />} />;
 ```
+
+### Uitgebreid voorbeeld
+
+Gebruik in `primary` het `rhc-grid` grid-systeem als je de inhoud in kolommen wilt verdelen, bijvoorbeeld voor links per categorie.
+
+```jsx
+import { Footer, Heading, Link, LinkList, LinkListLink } from '@rijkshuisstijl-community/components-react';
+
+const FooterLinks = () => (
+  <div className="rhc-grid">
+    <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+      <Heading appearanceLevel={5} level={2}>
+        Rijksoverheid.nl
+      </Heading>
+      <LinkList>
+        <LinkListLink href="#">Contact</LinkListLink>
+      </LinkList>
+    </div>
+  </div>
+);
+
+const FooterFooterLinks = () => (
+  <div className="rhc-page-footer__navigation">
+    <Link href="#">Privacy</Link>
+    <Link href="#">Cookies en anti-spam</Link>
+  </div>
+);
+
+<Footer primary={<FooterLinks />} secondary={<FooterFooterLinks />} />;
+```
+
+`primary` is optioneel, `secondary` is verplicht.
+
+## API Referentie
+
+### Footer
+
+| Prop        | Type      | Default   | Beschrijving                                     |
+| ----------- | --------- | --------- | ------------------------------------------------ |
+| `primary`   | ReactNode | -         | Inhoud voor het bovenste gedeelte van de footer. |
+| `secondary` | ReactNode | verplicht | Inhoud voor het onderste gedeelte van de footer. |
+| `className` | string    | -         | Extra CSS class names.                           |

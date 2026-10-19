@@ -7,7 +7,7 @@
   {%- set classes = classes|merge([className]) -%}
 {%- endif -%}
 
-<a aria-disabled="false" {{ attributes.addClass(classes) }} href="#">
+<a {{ attributes.addClass(classes) }} href="#">
   {%- if iconLeft -%}
     {% include '@rhc/Icon.twig' with {
       attributes: create_attribute(),

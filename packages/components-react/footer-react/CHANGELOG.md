@@ -1,42 +1,22 @@
 # @rijkshuisstijl-community/footer-react
 
-## 1.0.2
+## 0.0.2
 
 ### Patch Changes
 
-- Updated dependencies [b3db8e1]
-  - @rijkshuisstijl-community/icon-react@3.1.2
+- Updated dependencies [62a5613]
+- Updated dependencies [a81a652]
+  - @rijkshuisstijl-community/footer-css@2.1.0
 
-## 1.0.1
-
-### Patch Changes
-
-- e41c59f: update dependencies
-- Updated dependencies [e41c59f]
-  - @rijkshuisstijl-community/column-layout-react@1.0.1
-  - @rijkshuisstijl-community/heading-react@1.0.1
-  - @rijkshuisstijl-community/icon-react@3.1.1
-  - @rijkshuisstijl-community/link-react@1.1.1
-  - @rijkshuisstijl-community/footer-css@1.0.1
-
-## 1.0.0
-
-### Major Changes
-
-- e56376c: We hebben individuele packages aangemaakt om meer controle te geven over dependency maintenance en versie beheer duidelijker per component te omschrijven.
+## 0.0.1
 
 ### Patch Changes
 
-- 02786d9: security patch
-- Updated dependencies [751ef52]
-- Updated dependencies [c414601]
-- Updated dependencies [786a5e5]
-- Updated dependencies [02786d9]
-- Updated dependencies [de35f24]
-- Updated dependencies [c9e30de]
-- Updated dependencies [e56376c]
-  - @rijkshuisstijl-community/heading-react@1.0.0
-  - @rijkshuisstijl-community/icon-react@3.1.0
-  - @rijkshuisstijl-community/link-react@1.1.0
-  - @rijkshuisstijl-community/column-layout-react@1.0.0
-  - @rijkshuisstijl-community/footer-css@1.0.0
+- Updated dependencies [cb9bc2c]
+- Updated dependencies [64b1fa5]
+- Updated dependencies [3845c86]
+- Updated dependencies [cb9bc2c]
+  - @rijkshuisstijl-community/section-css@0.0.2
+  - @rijkshuisstijl-community/grid-css@0.0.2
+  - @rijkshuisstijl-community/footer-css@2.0.0
+  - @rijkshuisstijl-community/separator-react@2.0.1

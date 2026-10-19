@@ -3,9 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Icon } from '@rijkshuisstijl-community/icon-react';
-import { LinkButton, LinkButtonProps } from '@rijkshuisstijl-community/link-button-react';
-import { Link } from '@rijkshuisstijl-community/link-react';
+import { Icon } from '@rijkshuisstijl-community/icon-react/no-side-effects';
+import { LinkButton, LinkButtonProps } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
+import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import clsx from 'clsx';
 import {
   createContext,
@@ -32,6 +32,7 @@ type LanguageNavigationContextValue = {
   onOpenChange: (_newOpen: boolean) => void;
   onOpenToggle: () => void;
   selectedLanguage: string | undefined;
+  closeOnSelect: boolean;
   onLanguageChange: (_newLanguage: string) => void;
   contentId: string;
   triggerRef: RefObject<HTMLButtonElement | null>;
@@ -66,13 +67,14 @@ export interface LanguageNavigationRootProps extends HTMLAttributes<HTMLElement>
   /** Callback when selected language changes */
   onLanguageChange?: (_newLanguage: string) => void;
   ref?: Ref<HTMLElement>;
+  closeOnSelect?: boolean;
 }
 
 /**
  * Root container for the LanguageNavigation component which holds the context for state management.
  * Supports both controlled and uncontrolled modes for open state and selected language.
  */
-export const Root = ({
+const Root = ({
   children,
   open: openProp,
   defaultOpen = false,
@@ -83,6 +85,7 @@ export const Root = ({
   className,
   ref,
   'aria-label': navAriaLabel,
+  closeOnSelect = true,
   ...restProps
 }: PropsWithChildren<LanguageNavigationRootProps>) => {
   // Controlled vs uncontrolled open state
@@ -132,8 +135,9 @@ export const Root = ({
       onLanguageChange,
       contentId,
       triggerRef,
+      closeOnSelect,
     }),
-    [open, onOpenChange, onOpenToggle, selectedLanguage, onLanguageChange, contentId],
+    [open, onOpenChange, onOpenToggle, selectedLanguage, onLanguageChange, contentId, closeOnSelect],
   );
 
   return (
@@ -149,7 +153,7 @@ export const Root = ({
     </LanguageNavigationContext>
   );
 };
-Root.displayName = 'LanguageNavigation.Root';
+Root.displayName = 'LanguageNavigation';
 
 /* -------------------------------------------------------------------------------------------------
  * Trigger
@@ -165,7 +169,7 @@ export interface LanguageNavigationTriggerProps extends LinkButtonProps {
  * Trigger button that toggles the language navigation content visibility.
  * Automatically displays the selected language.
  */
-export const Trigger = ({
+const Trigger = ({
   children,
   showIcon = true,
   className,
@@ -221,7 +225,7 @@ export interface LanguageNavigationContentProps extends Omit<HTMLAttributes<HTML
  * Container for language options. Only rendered when the navigation is open.
  * Handles click-outside behavior and ARIA attributes.
  */
-export const Content = ({
+const Content = ({
   children,
   closeOnOutsideClick = true,
   className,
@@ -330,17 +334,21 @@ export type LanguageNavigationItemProps = LanguageNavigationItemLinkProps | Lang
  * Renders as a link when `href` is provided (for URL-based navigation),
  * or as a button when `onClick` is provided (for programmatic navigation).
  */
-export const Item = ({
+const Item = ({
   children,
   lang,
   languageName,
   localLanguageName,
-  closeOnSelect = true,
   className,
   ref,
   ...restProps
 }: PropsWithChildren<LanguageNavigationItemProps>) => {
-  const { selectedLanguage, onLanguageChange, onOpenChange } = useLanguageNavigationContext('Item');
+  const {
+    selectedLanguage,
+    onLanguageChange,
+    onOpenChange,
+    closeOnSelect = true,
+  } = useLanguageNavigationContext('Item');
   const isSelected = languageName === selectedLanguage;
 
   const handleSelect = () => {
@@ -393,7 +401,7 @@ export const Item = ({
       ) : (
         <button
           aria-current={isSelected ? 'page' : undefined}
-          className="rhc-language-navigation__link rhc-link"
+          className="rhc-language-navigation__link--button rhc-link"
           type="button"
           onClick={handleButtonClick}
         >
@@ -408,3 +416,8 @@ Item.displayName = 'LanguageNavigation.Item';
 /* -------------------------------------------------------------------------------------------------
  * Compound Component Export
  * -----------------------------------------------------------------------------------------------*/
+export const LanguageNavigation = Object.assign(Root, {
+  Trigger,
+  Content,
+  Item,
+});

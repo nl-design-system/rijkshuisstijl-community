@@ -1,5 +1,25 @@
 # @rijkshuisstijl-community/separator-react
 
+## 2.0.1
+
+### Patch Changes
+
+- Updated dependencies [3845c86]
+  - @rijkshuisstijl-community/separator-css@2.1.0
+
+## 2.0.0
+
+### Major Changes
+
+- 462b16e: De invisible variant is verwijderd uit de Separator component.
+
+### Patch Changes
+
+- 89b2604: Fix security vulnerabilities identified by pnpm audit by upgrading vitest and @vitest/coverage-v8 from 4.1.8 to 4.1.10.
+- Updated dependencies [462b16e]
+- Updated dependencies [1d4ab21]
+  - @rijkshuisstijl-community/separator-css@2.0.0
+
 ## 1.1.1
 
 ### Patch Changes

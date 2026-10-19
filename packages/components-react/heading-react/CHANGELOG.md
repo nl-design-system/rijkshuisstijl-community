@@ -1,5 +1,18 @@
 # @rijkshuisstijl-community/heading-react
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [3845c86]
+  - @rijkshuisstijl-community/heading-css@1.1.0
+
+## 1.0.2
+
+### Patch Changes
+
+- 89b2604: Fix security vulnerabilities identified by pnpm audit by upgrading vitest and @vitest/coverage-v8 from 4.1.8 to 4.1.10.
+
 ## 1.0.1
 
 ### Patch Changes

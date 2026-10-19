@@ -1,0 +1,42 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+@use "mixin";
+
+.rhc-grid {
+  @include mixin.rhc-grid;
+}
+
+.rhc-grid__cell {
+  @include mixin.rhc-grid__cell;
+}
+
+@for $i from 1 through 12 {
+  .rhc-grid__cell--span-#{$i} {
+    @include mixin.rhc-grid__cell--span($i);
+  }
+}
+
+@for $i from 1 through 12 {
+  .rhc-grid__cell-#{$i} {
+    grid-column-end: span $i;
+  }
+}
+
+@media screen and (width >= 768px) {
+  @for $i from 1 through 12 {
+    .rhc-grid__cell-t-#{$i} {
+      grid-column-end: span $i;
+    }
+  }
+}
+
+@media screen and (width >= 1024px) {
+  @for $i from 1 through 12 {
+    .rhc-grid__cell-d-#{$i} {
+      grid-column-end: span $i;
+    }
+  }
+}

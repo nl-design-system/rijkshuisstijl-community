@@ -1,5 +1,18 @@
 # @rijkshuisstijl-community/action-group-react
 
+## 1.1.3
+
+### Patch Changes
+
+- Updated dependencies [3845c86]
+  - @rijkshuisstijl-community/action-group-css@1.2.0
+
+## 1.1.2
+
+### Patch Changes
+
+- 89b2604: Fix security vulnerabilities identified by pnpm audit by upgrading vitest and @vitest/coverage-v8 from 4.1.8 to 4.1.10.
+
 ## 1.1.1
 
 ### Patch Changes

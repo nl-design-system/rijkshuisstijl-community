@@ -1,0 +1,25 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+@mixin rhc-grid {
+  column-gap: var(--rhc-grid-vi-small-column-gap);
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+
+  @media screen and (width >= 768px) {
+    column-gap: var(--rhc-grid-vi-medium-column-gap);
+  }
+  @media screen and (width >= 1024px) {
+    column-gap: var(--rhc-grid-vi-large-column-gap);
+  }
+}
+
+@mixin rhc-grid__cell {
+  grid-column-end: span 12;
+}
+
+@mixin rhc-grid__cell--span($i) {
+  grid-column-end: span $i;
+}

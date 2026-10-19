@@ -38,6 +38,16 @@
   inline-size: unset;
 }
 
+@mixin rhc-logo__link {
+  color: inherit;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  text-decoration: none;
+}
+
 @mixin rhc-logo__caption {
   color: var(--rhc-logo-color, inherit);
 
@@ -58,4 +68,6 @@
   font-size: var(--rhc-logo-subtitle-font-size, 1em);
   font-weight: var(--rhc-logo-subtitle-font-weight);
   line-height: var(--rhc-logo-subtitle-line-height, 1);
+  margin-block-end: 0;
+  margin-block-start: 0;
 }

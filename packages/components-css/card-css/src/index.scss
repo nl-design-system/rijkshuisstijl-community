@@ -4,6 +4,8 @@
  */
 
 @use "mixin";
+@forward "@rijkshuisstijl-community/link-css/dist/index.css";
+@forward "@utrecht/img-css/dist/index.css";
 
 .rhc-card {
   @include mixin.rhc-card;

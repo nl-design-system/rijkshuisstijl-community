@@ -1,5 +1,37 @@
 # @rijkshuisstijl-community/components-twig
 
+## 4.1.1
+
+### Patch Changes
+
+- @rijkshuisstijl-community/components-css@18.0.2
+
+## 4.1.0
+
+### Minor Changes
+
+- 3845c86: Onderliggende CSS van community-components is nu direct meegebundeld in de `dist` om te voorkomen dat gebruikers half gestylede componenten te zien krijgen.
+  Voorheen exporteerden de CSS-packages alleen de Rhc-specifieke klassen. Omdat deze bouwen op community-components, functioneerden ze niet zonder de onderliggende stijlen. De meeste stijlen zijn nu vanuit de `index` naar `@mixin`-structuren verplaatst (met wat tussentijdse boyscouting). Hierdoor worden afhankelijkheden automatisch meegeleverd; zo shipt de Accordion CSS nu bijvoorbeeld ook direct de vereiste Button CSS mee.
+
+### Patch Changes
+
+- Updated dependencies [ba8b11e]
+  - @rijkshuisstijl-community/components-css@18.0.1
+
+## 4.0.0
+
+### Major Changes
+
+- 462b16e: De invisible variant is verwijderd uit de Separator component.
+- 1d4ab21: Reset margin-inline-start and margin-inline-end. Border-color is aangepast.
+
+### Patch Changes
+
+- 91d25ee: "disabled=false" uit de code gehaald.
+- Updated dependencies [30f8098]
+- Updated dependencies [9b2f197]
+  - @rijkshuisstijl-community/components-css@18.0.0
+
 ## 3.2.2
 
 ### Patch Changes

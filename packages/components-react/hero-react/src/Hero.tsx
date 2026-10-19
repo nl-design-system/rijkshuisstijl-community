@@ -3,10 +3,10 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { HeadingGroup } from '@rijkshuisstijl-community/heading-group-react';
-import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react';
-import { Image } from '@rijkshuisstijl-community/image-react';
-import { Paragraph } from '@rijkshuisstijl-community/paragraph-react';
+import { HeadingGroup } from '@rijkshuisstijl-community/heading-group-react/no-side-effects';
+import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react/no-side-effects';
+import { Image } from '@rijkshuisstijl-community/image-react/no-side-effects';
+import { Paragraph } from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactNode, Ref } from 'react';
 

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { LinkComponent } from '@rijkshuisstijl-community/components-angular';
 import {
   BackToTopComponent,
-  FooterComponent,
   HeadingComponent,
   IconComponent,
   LinkListComponent,
@@ -35,7 +34,6 @@ import {
     NavbarComponent,
     NavbarItemComponent,
     LogoComponent,
-    FooterComponent,
     TablerIconComponent,
     HeadingComponent,
     LinkComponent,

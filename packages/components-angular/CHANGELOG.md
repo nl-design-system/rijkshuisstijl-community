@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-angular
 
+## 12.0.0
+
+### Major Changes
+
+- 105bb99: Added EUPL lisence to source files
+
 ## 11.1.1
 
 ### Patch Changes

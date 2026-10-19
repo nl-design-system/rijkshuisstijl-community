@@ -12,7 +12,13 @@ export default defineConfig({
       {
         extends: './vite.config.mjs',
         optimizeDeps: {
-          include: ['@mdx-js/react', '@storybook/addon-a11y/preview', 'markdown-to-jsx', 'twig', 'drupal-twig-extensions/twig'],
+          include: [
+            '@mdx-js/react',
+            '@storybook/addon-a11y/preview',
+            'markdown-to-jsx',
+            'twig',
+            'drupal-twig-extensions/twig',
+          ],
         },
         plugins: [
           storybookTest({

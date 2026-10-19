@@ -17,6 +17,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "prepare": "playwright install",
     "lint": "eslint .",
     "preview": "vite preview",
     "test:e2e": "playwright test"
@@ -25,18 +26,19 @@
     "@rijkshuisstijl-community/components-css": "workspace:*",
     "@rijkshuisstijl-community/components-react": "workspace:*",
     "@rijkshuisstijl-community/design-tokens": "workspace:*",
+    "@rijkshuisstijl-community/footer-css": "workspace:*",
     "@rijkshuisstijl-community/icon-react": "workspace:*",
     "@utrecht/page-body-react": "1.0.13",
-    "react": "19.2.7",
-    "react-dom": "19.2.7"
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.3.5",
     "@eslint/js": "9.39.4",
     "@playwright/test": "1.60.0",
     "@types/node": "25.9.2",
-    "@types/react": "19.2.17",
-    "@types/react-dom": "19.2.3",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
     "@vitejs/plugin-react": "4.7.0",
     "eslint": "9.39.4",
     "eslint-plugin-react-hooks": "7.1.1",

@@ -1,5 +1,83 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 18.0.1
+
+### Patch Changes
+
+- 8629bc4: fix typo in documentation
+
+## 18.0.0
+
+### Major Changes
+
+- cb9bc2c: Added new tokens for section, grid and footer and changed page.size.md to account for padding-inline
+
+  Section tokens:
+  - rhc.page-section.padding-inline
+    - ook voor viewport sm, md, lg onder -vi-small-, -vi-medium- en -vi-large-
+  - rhc.page-section.max-inline-size - set to 90rem, to account for padding-inline.
+
+  Grid tokens:
+  - rhc.grid.column-gap
+    - ook voor viewport sm, md, lg onder -vi-small-, -vi-medium- en -vi-large-
+
+  Footer tokens:
+  - alle utrecht.page-footer.\* weggehaald in ruil voor:
+  - rhc.page-footer.compact.tagline.font-size
+  - rhc.page-footer.compact.tagline.color
+  - rhc.page-footer.compact.tagline.background-color
+  - rhc.page-footer.primary.padding-block
+  - rhc.page-footer.primary.row-gap
+  - rhc.page-footer.secondary.padding-block
+  - rhc.page-footer.secondary.row-gap
+  - rhc.page-footer.navigation-bar.column-gap
+  - rhc.page-footer.navigation-bar.row-gap
+  - rhc.page-footer.navigation-bar.link.text-decoration-line
+  - rhc.page-footer.navigation-bar.link.min-block-size
+  - rhc.page-footer.tagline.font-style
+  - rhc.page-footer.tagline.font-size
+  - rhc.page-footer.tagline.line-height
+
+### Minor Changes
+
+- 3845c86: Onderliggende CSS van community-components is nu direct meegebundeld in de `dist` om te voorkomen dat gebruikers half gestylede componenten te zien krijgen.
+  Voorheen exporteerden de CSS-packages alleen de Rhc-specifieke klassen. Omdat deze bouwen op community-components, functioneerden ze niet zonder de onderliggende stijlen. De meeste stijlen zijn nu vanuit de `index` naar `@mixin`-structuren verplaatst (met wat tussentijdse boyscouting). Hierdoor worden afhankelijkheden automatisch meegeleverd; zo shipt de Accordion CSS nu bijvoorbeeld ook direct de vereiste Button CSS mee.
+- 683939c: Letterspacing toegevoegd voor het logo.
+  - Nieuwe `letter-spacing.tight` (-0.4%) en `letter-spacing.normal` (0%) tokens gemaakt in de globale type-scale.
+  - De logo `title` gebruikt nu `normal` (0%) en de logo `subtitle` gebruikt `tight` (-0.4%).
+
+  ***
+
+### Patch Changes
+
+- ba8b11e: Republish, the previous release did not include a dist folder
+
+## 17.0.0
+
+### Major Changes
+
+- 30c4a0e: - `rhc.size.pointer-target` aangepast van `3rem` naar `48px` zodat je altijd aan de 44px voldoet, ongeacht de font-size.
+  - `rhc.size.icon.md` gelijkgesteld aan de font-size waarde van md.
+  - `icon.inset-block-start` zo ingericht dat de positionering van het icoon nu op viewport en type-scale goed werkt.
+  - token `rhc.icon.md.inset-block-start.min` hernoemd naar `rhc.icon.inset-block-start.min.md`.
+  - token `rhc.icon.md.inset-block-start.max` hernoemd naar `rhc.icon.inset-block-start.max.md`.
+  - tokensets `overrides/type-scale/*` verwijderd omdat deze na de hernieuwde implementatie van clamp overbodig zijn geworden.
+
+### Minor Changes
+
+- 4a9b4bd: Border-radius fijner afgestemd op het ontwerp: `rhc.border-radius.sm` van 2.5px naar 2px en `rhc.border-radius.md` van 5px naar 4px. Select en Table gebruiken nu `md` in plaats van `sm`.
+- 3d4e7e0: Logo-titel en -subtitle font-size fluid gemaakt (min/max-tokens + interpolatie in `fluid.css` bij de lint-size), zodat de logotekst meeschaalt met het logo-beeld; niet-fluid blijft 0.9rem.
+- 1605e66: - Min- en max-font-size tokens toegevoegd voor het logo: `rhc.logo.min.font-size` en `rhc.logo.max.font-size`.
+  - Min- en max-size common tokens toegevoegd voor de hoogte van de image: `rhc.size.min.2-lint` en `rhc.size.max.2-lint`.
+  - Tokenset `viewport/min` toegevoegd: hiermee wordt `rhc.logo.font-size` bij een min-viewport overschreven naar `rhc.logo.min.font-size` (standaard verwijst deze token naar `rhc.logo.max.font-size`).
+  - Font-size en font-weight van de titel in het logo gecorrigeerd.
+
+### Patch Changes
+
+- 4b9bf3a: variant mogelijk zonder organisatie + variant mogelijk met hyperlink
+- 738948d: nl-link hover text-decoration-thickness aanpassen naar 0.1875em
+- 89b2604: Fix security vulnerabilities identified by pnpm audit by upgrading vitest and @vitest/coverage-v8 from 4.1.8 to 4.1.10.
+
 ## 16.1.0
 
 ### Minor Changes

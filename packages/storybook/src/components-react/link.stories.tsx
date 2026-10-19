@@ -147,32 +147,12 @@ export const Hover: Story = {
   },
 };
 
-export const Focus: Story = {
-  parameters: {
-    pseudo: { focus: true },
-  },
-  args: {
-    href: '#',
-    children: 'Label',
-  },
-};
-
 export const FocusVisible: Story = {
   parameters: {},
   args: {
     href: '#',
     children: 'Label',
     className: 'nl-link--focus-visible',
-  },
-};
-
-export const Visited: Story = {
-  parameters: {
-    pseudo: { visited: true },
-  },
-  args: {
-    href: 'https://example.com/',
-    children: 'Label',
   },
 };
 

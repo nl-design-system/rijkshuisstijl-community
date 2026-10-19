@@ -6,7 +6,7 @@ packages:
   - "proprietary/*"
 
 allowBuilds:
-  '@parcel/watcher': true
+  "@parcel/watcher": true
   core-js: false
   esbuild: true
   fsevents: true
@@ -42,6 +42,7 @@ minimumReleaseAgeExclude:
   - "@utrecht/*"
   - "@next/*"
   - "next"
+  - piscina@5.3.2
 
 # Configure pnpm to save exact version numbers (not including ^ or ~) in package.json. Lock dependencies to specific
 # versions to ensure reproducible installs and prevent automatic upgrades to newer minor or patch releases.
@@ -65,16 +66,18 @@ overrides:
   defu@<6.1.5: ">=6.1.5"
   fast-uri@<3.1.2: ">=3.1.2"
   flatted@<3.4.2: ">=3.4.2"
-  handlebars@>=4.0.0 <4.7.9: ">=4.7.9"
+  handlebars@>=4.0.0 <=4.7.9: 4.7.10
   hono@<4.12.21: ">=4.12.21"
   ip-address@<=10.1.0: ">=10.1.1"
   locutus: "2.0.39"
   lodash@>=4.0.0 <=4.17.22: ">=4.17.23"
   micromatch@<4.0.8: ">=4.0.8"
+  piscina@>=5.0.0 <5.3.2: ^5.3.2
   postcss@<8.5.10: ">=8.5.10"
   prismjs@<1.30.0: ">=1.30.0"
+  proxy-addr@>=1.1.0 <2.0.8: 2.0.8
   qs@>=6.7.0 <=6.15.1: ">=6.15.2"
-  shell-quote@>=1.1.0 <=1.8.3: ">=1.8.4"
+  shell-quote@>=1.1.0 <=1.10.0: 1.12.0
   svgo@<2.8.1: ">=2.8.1"
   tar@<7.5.11: ">=7.5.11"
   uuid@<11.1.1: ">=11.1.1"

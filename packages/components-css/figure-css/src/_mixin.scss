@@ -1,0 +1,20 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
+
+@mixin rhc-figure-img {
+  border-end-end-radius: var(--utrecht-figure-img-border-end-end-radius);
+  border-end-start-radius: var(--utrecht-figure-img-border-end-start-radius);
+  border-start-end-radius: var(--utrecht-figure-img-border-start-end-radius);
+  border-start-start-radius: var(--utrecht-figure-img-border-start-start-radius);
+}
+
+@mixin rhc-figure-rounded-corner {
+  display: inline-block;
+  vertical-align: top;
+}
+
+@mixin rhc-figure-rounded-corner-img {
+  border-radius: inherit;
+}

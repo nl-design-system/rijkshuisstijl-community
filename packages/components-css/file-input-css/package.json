@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Community for Rijkshuisstijl-Community Design System",
   "description": "File Input component",
   "license": "EUPL-1.2",
@@ -31,5 +31,9 @@
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/rijkshuisstijl-community.git",
     "directory": "packages/components-css/file-css"
+  },
+  "dependencies": {
+    "@rijkshuisstijl-community/button-css": "workspace:*",
+    "@rijkshuisstijl-community/paragraph-css": "workspace:*"
   }
 }
