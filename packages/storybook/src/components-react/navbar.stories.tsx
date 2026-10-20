@@ -106,7 +106,7 @@ export const WithMegaMenu: Story = {
             id: 'col-1',
             heading: 'Diensten van de overheid',
             items: [
-              { id: 'mm-1', label: 'Diensten overzicht', href: '/' },
+              { id: 'mm-1', label: 'Dienstenoverzicht', href: '/' },
               { id: 'mm-2', label: 'Levensgebeurtenissen', href: '/' },
             ],
           },

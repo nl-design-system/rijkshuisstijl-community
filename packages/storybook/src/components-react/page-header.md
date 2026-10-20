@@ -54,7 +54,7 @@ const megamenu = (
       {
         id: 'col-1',
         heading: 'Diensten van de overheid',
-        items: [{ id: 'mm-1', label: 'Diensten overzicht', href: '/' }],
+        items: [{ id: 'mm-1', label: 'Dienstenoverzicht', href: '/' }],
       },
     ]}
   />

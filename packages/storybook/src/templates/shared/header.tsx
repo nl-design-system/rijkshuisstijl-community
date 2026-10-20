@@ -88,7 +88,7 @@ const megamenu = (
         headingAppearanceLevel: 5,
         headingLevel: 3,
         items: [
-          { id: 'mm-1', label: 'Diensten overzicht', href: '/' },
+          { id: 'mm-1', label: 'Dienstenoverzicht', href: '/' },
           { id: 'mm-2', label: 'Berichten over uw buurt', href: '/' },
           { id: 'mm-3', label: 'Gegevens bij besluiten', href: '/' },
           { id: 'mm-4', label: 'Internetconsultatie', href: '/' },
