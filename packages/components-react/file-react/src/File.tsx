@@ -70,7 +70,7 @@ export const File = ({
           </span>
         </div>
         <span>
-          <Button appearance="subtle-button" onClick={() => onDelete(file)}>
+          <Button purpose="subtle" onClick={() => onDelete(file)}>
             <Icon icon="verwijderen" />
             Verwijder
           </Button>

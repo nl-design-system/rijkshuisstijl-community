@@ -39,10 +39,10 @@ type Story = StoryObj<typeof ActionGroup>;
 export const Row: Story = {
   args: {
     children: [
-      <Button appearance="primary-action-button" key="primary-action-button">
+      <Button key="primary-action-button" purpose="primary">
         Save and continue
       </Button>,
-      <Button appearance="secondary-action-button" key="secondary-action-button">
+      <Button key="secondary-action-button" purpose="secondary">
         Back
       </Button>,
     ],
@@ -53,10 +53,10 @@ export const Column: Story = {
   args: {
     direction: 'column',
     children: [
-      <Button appearance="primary-action-button" key="primary-action-button">
+      <Button key="primary-action-button" purpose="primary">
         Save and continue
       </Button>,
-      <Button appearance="secondary-action-button" key="secondary-action-button">
+      <Button key="secondary-action-button" purpose="secondary">
         Back
       </Button>,
     ],
@@ -67,10 +67,10 @@ export const ColumnStretch: Story = {
   args: {
     direction: 'column-stretch',
     children: [
-      <Button appearance="primary-action-button" key="primary-action-button">
+      <Button key="primary-action-button" purpose="primary">
         Save and continue
       </Button>,
-      <Button appearance="secondary-action-button" key="secondary-action-button">
+      <Button key="secondary-action-button" purpose="secondary">
         Back
       </Button>,
     ],
