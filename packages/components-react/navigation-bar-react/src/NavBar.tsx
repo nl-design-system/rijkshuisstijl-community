@@ -9,6 +9,7 @@ import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react/no-side-ef
 import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 import { LinkList, LinkListLink } from '@rijkshuisstijl-community/link-list-react/no-side-effects';
 import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
+import { Separator } from '@rijkshuisstijl-community/separator-react/no-side-effects';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useEffect, useRef, useState } from 'react';
 
@@ -425,6 +426,11 @@ export const NavBarMegaMenu = ({
   return (
     <div className={clsx(className)} ref={ref} {...restProps}>
       {tagline && <p className="rhc-nav-bar__megamenu-tagline">{tagline}</p>}
+      {tagline && (
+        <div className="rhc-nav-bar__megamenu-separator">
+          <Separator />
+        </div>
+      )}
       <div className="rhc-grid">
         {columns.map(({ id, heading, headingLevel = 3, headingAppearanceLevel = 5, items }) => (
           <div className="rhc-grid__cell rhc-grid__cell-d-3" key={id}>
