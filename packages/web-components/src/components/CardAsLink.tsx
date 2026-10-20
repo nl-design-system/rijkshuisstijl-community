@@ -25,7 +25,6 @@ export class CardAsLinkWebComponent extends BaseWebComponent {
   Button({ appearance, disabled, text, ...restProps }: { [key: string]: string }) {
     return (
       <Button
-        // eslint-disable-next-line sonarjs/deprecation
         appearance={appearance as ButtonWebComponentAttributes['appearance']}
         disabled={(disabled === 'true') as ButtonWebComponentAttributes['disabled']}
         {...restProps}
