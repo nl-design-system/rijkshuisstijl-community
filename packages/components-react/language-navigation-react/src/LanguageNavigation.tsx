@@ -66,7 +66,7 @@ export interface LanguageNavigationRootProps extends HTMLAttributes<HTMLElement>
   defaultSelectedLanguage?: string;
   /** Callback when selected language changes */
   onLanguageChange?: (_newLanguage: string) => void;
-  ref?: Ref<HTMLElement>;
+  ref?: Ref<HTMLDivElement>;
   closeOnSelect?: boolean;
 }
 
@@ -142,14 +142,14 @@ const Root = ({
 
   return (
     <LanguageNavigationContext value={value}>
-      <nav
+      <div
         aria-label={navAriaLabel ?? 'Language selection'}
         className={clsx('rhc-language-navigation', className)}
         ref={ref}
         {...restProps}
       >
         {children}
-      </nav>
+      </div>
     </LanguageNavigationContext>
   );
 };

@@ -5,7 +5,7 @@ import { PageHeader } from '.';
 
 describe('PageHeader', () => {
   it('renders a visible element', () => {
-    const { container } = render(<PageHeader />);
+    const { container } = render(<PageHeader>hai</PageHeader>);
 
     const pageHeader = container.querySelector(':only-child');
 
