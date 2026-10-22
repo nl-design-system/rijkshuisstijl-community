@@ -18,4 +18,12 @@
   &:focus {
     border-width: var(--utrecht-select-focus-border-width, var(--rhc-border-width-md));
   }
+
+  // Chromium gives a disabled <select> `opacity: 0.7` in its user agent stylesheet, a disabled
+  // text input gets none. The disabled colours already come from the design tokens, so undo it:
+  // otherwise the select looks paler than the text input and its contrast drops below WCAG AA.
+  &:disabled,
+  &.utrecht-select--disabled {
+    opacity: 100%;
+  }
 }
