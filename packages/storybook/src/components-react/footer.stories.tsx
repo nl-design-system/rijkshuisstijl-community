@@ -5,6 +5,7 @@ import { Footer, Heading, Icon, Link, LinkList, LinkListLink } from '@rijkshuiss
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './footer.md?raw';
+import './footer.css';
 
 const linkList1 = ['Contact', 'Veelgestelde vragen', 'Over deze site', 'Werken bij'];
 
@@ -54,6 +55,39 @@ const FooterLinks = () => (
   </>
 );
 
+const FooterLinks3 = () => (
+  <div className="rhc-grid">
+    <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+      <p className="header-like">Overheid.nl</p>
+      <p style={{ marginTop: 0 }}>
+        <i>
+          Ingang naar informatie en
+          <br />
+          diensten van alle overheden
+        </i>
+      </p>
+    </div>
+    <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+      <Heading appearanceLevel={5} level={2}>
+        Overheid.nl
+      </Heading>
+      <LinkListMaker list={linkList1} />
+    </div>
+    <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+      <Heading appearanceLevel={5} level={2}>
+        Officiële overheidsinformatie
+      </Heading>
+      <LinkListMaker list={linkList2} />
+    </div>
+    <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+      <Heading appearanceLevel={5} level={2}>
+        Andere overheidssites
+      </Heading>
+      <LinkListMaker list={linkList3} />
+    </div>
+  </div>
+);
+
 const FooterFooterLinks = () => (
   <div className="rhc-page-footer__navigation">
     <Link href="#">Privacy</Link>
@@ -90,6 +124,14 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: () => {
     const primary = <FooterLinks />;
+    const secondary = <FooterFooterLinks />;
+    return <Footer primary={primary} secondary={secondary} />;
+  },
+};
+
+export const TaglineInColumn: Story = {
+  render: () => {
+    const primary = <FooterLinks3 />;
     const secondary = <FooterFooterLinks />;
     return <Footer primary={primary} secondary={secondary} />;
   },

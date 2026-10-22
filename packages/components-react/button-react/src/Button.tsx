@@ -2,76 +2,122 @@
  * @license EUPL-1.2
  * Copyright (c) 2026 Community for NL Design System
  */
-import { Icon, type RHCIconID } from '@rijkshuisstijl-community/icon-react/no-side-effects';
 import {
-  type ButtonLinkProps,
-  type ButtonProps,
-  Button as UtrechtButton,
-  ButtonLink as UtrechtButtonLink,
-} from '@utrecht/component-library-react';
+  type ButtonHint,
+  type ButtonPurpose,
+  Button as CandidateButton,
+  type ButtonProps as CandidateButtonProps,
+} from '@nl-design-system-candidate/button-react';
+import { Icon, type RHCIconID } from '@rijkshuisstijl-community/icon-react';
 import clsx from 'clsx';
-import { PropsWithChildren, Ref } from 'react';
+import {
+  ButtonHTMLAttributes,
+  ForwardRefExoticComponent,
+  PropsWithChildren,
+  ReactNode,
+  Ref,
+  RefAttributes,
+} from 'react';
 
-export type { ButtonLinkProps, ButtonProps };
+export { type ButtonHint, type ButtonPurpose } from '@nl-design-system-candidate/button-react';
 
-export const Button = ({
-  ref,
-  className,
-  ...restProps
-}: PropsWithChildren<ButtonProps> & { ref?: Ref<HTMLButtonElement> }) => (
-  <UtrechtButton className={clsx('rhc-button', className)} ref={ref} {...restProps} />
-);
+/**
+ * @deprecated Deze re-exports zijn gebaseerd op de Utrecht Button en verdwijnen
+ * in een volgende major versie. Gebruik `Button` met de `purpose` property.
+ */
+export {
+  ButtonLink,
+  type ButtonLinkProps,
+  PrimaryActionButton,
+  SecondaryActionButton,
+  SubtleButton,
+} from '@utrecht/component-library-react';
 
-export const PrimaryActionButton = ({
-  ref,
-  className,
-  ...restProps
-}: PropsWithChildren<Omit<ButtonProps, 'appearance'>> & { ref?: Ref<HTMLButtonElement> }) => (
-  <Button appearance="primary-action-button" className={className} ref={ref} {...restProps} />
-);
+type AppearanceValue = 'primary-action-button' | 'secondary-action-button' | 'subtle-button';
 
-export const SecondaryActionButton = ({
-  ref,
-  className,
-  ...restProps
-}: PropsWithChildren<Omit<ButtonProps, 'appearance'>> & { ref?: Ref<HTMLButtonElement> }) => (
-  <Button appearance="secondary-action-button" className={className} ref={ref} {...restProps} />
-);
+const PURPOSE_BY_APPEARANCE: Record<AppearanceValue, ButtonPurpose> = {
+  'primary-action-button': 'primary',
+  'secondary-action-button': 'secondary',
+  'subtle-button': 'subtle',
+};
 
-export const SubtleButton = ({
-  ref,
-  className,
-  ...restProps
-}: PropsWithChildren<Omit<ButtonProps, 'appearance'>> & { ref?: Ref<HTMLButtonElement> }) => (
-  <Button appearance="subtle-button" className={className} ref={ref} {...restProps} />
-);
-
-export const ButtonLink = ({
-  ref,
-  className,
-  ...restProps
-}: PropsWithChildren<ButtonLinkProps> & { ref?: Ref<HTMLAnchorElement> }) => (
-  <UtrechtButtonLink className={clsx('rhc-button', className)} ref={ref} {...restProps} />
-);
-
-export interface IconButtonProps extends ButtonProps {
+export type ButtonProps = CandidateButtonProps & {
   ref?: Ref<HTMLButtonElement>;
+  /**
+   * @deprecated Gebruik `purpose`. Deze property wordt vertaald naar de
+   * overeenkomstige `purpose` en verdwijnt in een volgende major versie.
+   */
+  appearance?: AppearanceValue;
+};
+
+/**
+ * Interne, niet-onderscheiden variant van de candidate Button props, zodat de
+ * wrapper `label` en `children` gecombineerd kan doorgeven. De publieke
+ * `ButtonProps` behoudt de strikte candidate-typen.
+ */
+type RelaxedCandidateButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  busy?: boolean;
+  disabled?: boolean;
+  hint?: ButtonHint;
+  htmlDisabled?: boolean;
+  iconEnd?: ReactNode;
+  iconOnly?: boolean;
+  iconStart?: ReactNode;
+  label?: ReactNode;
+  pressed?: boolean;
+  purpose?: ButtonPurpose;
+  toggle?: boolean;
+};
+
+const RelaxedCandidateButton = CandidateButton as ForwardRefExoticComponent<
+  RelaxedCandidateButtonProps & RefAttributes<HTMLButtonElement>
+>;
+
+// eslint-disable-next-line sonarjs/deprecation
+export const Button = ({ appearance, children, className, ref, ...restProps }: PropsWithChildren<ButtonProps>) => (
+  <RelaxedCandidateButton
+    purpose={appearance ? PURPOSE_BY_APPEARANCE[appearance] : undefined}
+    {...restProps}
+    className={clsx('rhc-button', className)}
+    ref={ref}
+  >
+    {children}
+  </RelaxedCandidateButton>
+);
+
+Button.displayName = 'Button';
+
+export type IconButtonProps = Omit<ButtonProps, 'children' | 'label'> & {
   icon?: RHCIconID;
-}
+  label?: ReactNode;
+};
 
 export const IconButton = ({
-  ref,
+  // eslint-disable-next-line sonarjs/deprecation
+  appearance,
   children,
   className,
-  label,
   icon,
+  label,
+  ref,
   ...restProps
 }: PropsWithChildren<IconButtonProps>) => (
-  <Button appearance="subtle-button" className={clsx('rhc-button--icon-only', className)} ref={ref} {...restProps}>
-    <span className="rhc-button__sr-only">{label}</span>
-    {icon && <Icon icon={icon} />}
-    {children}
-  </Button>
+  <RelaxedCandidateButton
+    purpose={appearance ? PURPOSE_BY_APPEARANCE[appearance] : 'subtle'}
+    {...restProps}
+    iconOnly
+    className={clsx('rhc-button', 'rhc-button--icon-only', className)}
+    label={label}
+    ref={ref}
+    iconStart={
+      icon || children ? (
+        <>
+          {icon && <Icon icon={icon} />}
+          {children}
+        </>
+      ) : undefined
+    }
+  />
 );
 
 IconButton.displayName = 'IconButton';

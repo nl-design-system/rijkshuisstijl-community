@@ -362,7 +362,7 @@ export default function Componenten() {
                     }))}
                     onOptionChange={handleCheckboxChange}
                   />
-                  <Button appearance="secondary-action-button" aria-describedby="filter-button-help" type="submit">
+                  <Button aria-describedby="filter-button-help" purpose="secondary" type="submit">
                     Filter
                   </Button>
                   <div className="rhc-sr-only" id="filter-button-help">
