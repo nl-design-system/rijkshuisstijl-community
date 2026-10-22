@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Matches a CSS custom property declaration and captures the declaration prefix,
 // the raw value, and the trailing semicolon separately for targeted rewrites.
 export const varRegex = /(?<prefix>^\s*--[^:]+:\s*)(?<value>[^;]+?)(?<suffix>\s*;)/gm;

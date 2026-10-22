@@ -1,6 +1,5 @@
 import { describe, expect, test } from 'vitest';
-
-import { exponentiationRegex, operatorRegex, varRegex } from './index.mts';
+import { exponentiationRegex, operatorRegex, varRegex } from './index.js';
 
 describe('regex', () => {
   describe('varRegex', () => {
@@ -15,9 +14,9 @@ describe('regex', () => {
     });
 
     test('matches multiple custom property declarations across lines because you can process entire files', () => {
-      const matches = Array.from(
-        '--spacing-sm: 4px;\n--spacing-md: 8px;'.matchAll(new RegExp(varRegex.source, varRegex.flags)),
-      );
+      const matches = [
+        ...'--spacing-sm: 4px;\n--spacing-md: 8px;'.matchAll(new RegExp(varRegex.source, varRegex.flags)),
+      ];
 
       expect(matches).toHaveLength(2);
       expect(matches[0]?.groups?.['value']).toBe('4px');
