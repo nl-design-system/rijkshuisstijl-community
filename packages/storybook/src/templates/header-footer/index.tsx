@@ -6,7 +6,7 @@ import '@rijkshuisstijl-community/grid-css/dist/index.css';
 const HeaderFooter = () => (
   <>
     <SharedHeaderOverheidNl />
-    <div className="rhc-page-section" style={{ marginBlockEnd: 'var(--rhc-space-2xl)' }}>
+    <div className="rhc-page-section">
       <div className="rhc-page-section__content">
         <h1>Voorbeeldpagina</h1>
         <p>
@@ -29,6 +29,11 @@ const HeaderFooter = () => (
           bag didion n+1. Banjo marfa mlkshk ottessa moshfegh, sus wide-leg locavore baffler beard eames digicam
           chillwave poke hexagon try-hard.
         </p>
+      </div>
+    </div>
+    <div className="rhc-page-section" style={{ backgroundColor: 'var(--rhc-color-core-100)' }}>
+      <div className="rhc-page-section__content">
+        <h2>Sectie</h2>
         <p>
           Molly baz birth chart cacio e pepe bluesky. Lockwood marfa supper club bodega boys, booktok mezcal bluesky
           vibe check cacio e pepe open studio. Jawn yes plz EMDR, sus helvetica salvia listicle jean shorts ethical
@@ -43,6 +48,10 @@ const HeaderFooter = () => (
           bag didion n+1. Banjo marfa mlkshk ottessa moshfegh, sus wide-leg locavore baffler beard eames digicam
           chillwave poke hexagon try-hard.
         </p>
+      </div>
+    </div>
+    <div className="rhc-page-section" style={{ marginBlockEnd: 'var(--rhc-space-2xl)' }}>
+      <div className="rhc-page-section__content">
         <p>
           Molly baz birth chart cacio e pepe bluesky. Lockwood marfa supper club bodega boys, booktok mezcal bluesky
           vibe check cacio e pepe open studio. Jawn yes plz EMDR, sus helvetica salvia listicle jean shorts ethical

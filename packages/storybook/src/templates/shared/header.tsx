@@ -29,6 +29,7 @@ const endItemsPrimary = (
       </LanguageNavigation>
     </li>
     <NavBarItem href="/" id="end-second-link" label="Contact" />
+    <NavBarItem href="/" id="end-second-link" label="Tweede" />
   </>
 );
 
