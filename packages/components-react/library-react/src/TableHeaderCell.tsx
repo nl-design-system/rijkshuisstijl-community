@@ -40,6 +40,7 @@ export const TableHeaderCell = ({
       textAlign: alignCell,
     }}
     {...restProps}
+    aria-sort={ariaSort}
   >
     {withSorting ? (
       <Button
