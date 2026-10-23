@@ -4805,24 +4805,45 @@
       "border-radius": {
         "none": {
           "$type": "dimension",
-          "$value": "0px",
+          "$value": "{rhc.border-radius.none}",
           "$description": "Square"
         },
         "sm": {
           "$type": "dimension",
-          "$value": "4px"
+          "$value": "{rhc.border-radius.sm}"
         },
         "md": {
           "$type": "dimension",
-          "$value": "8px"
+          "$value": "{rhc.border-radius.md}"
         },
         "lg": {
           "$type": "dimension",
-          "$value": "16px"
+          "$value": "{rhc.size.quarter-lint}",
+          "$description": "todo: new token, discuss with Kernteam"
+        },
+        "xl": {
+          "$type": "dimension",
+          "$value": "{rhc.size.half-lint}",
+          "$description": "todo: new token, discuss with Kernteam"
+        },
+        "2xl": {
+          "$type": "dimension",
+          "$value": "{rhc.size.lint}",
+          "$description": "todo: new token, discuss with Kernteam"
+        },
+        "3xl": {
+          "$type": "dimension",
+          "$value": "{rhc.size.2-lint}",
+          "$description": "todo: new token, discuss with Kernteam"
+        },
+        "4xl": {
+          "$type": "dimension",
+          "$value": "{rhc.size.3-lint}",
+          "$description": "todo: new token, discuss with Kernteam"
         },
         "round": {
           "$type": "dimension",
-          "$value": "999px"
+          "$value": "{rhc.border-radius.round}"
         }
       },
       "border-width": {
