@@ -4849,19 +4849,20 @@
       "border-width": {
         "none": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{rhc.border-width.none}"
         },
         "sm": {
           "$type": "dimension",
-          "$value": "0.0625rem"
+          "$value": "{rhc.border-width.sm}"
         },
         "md": {
           "$type": "dimension",
-          "$value": "0.125rem"
+          "$value": "{rhc.border-width.md}"
         },
         "lg": {
           "$type": "dimension",
-          "$value": "0.25rem"
+          "$value": "0.25rem",
+          "$description": "todo: no RHC token available yet"
         }
       },
       "box-shadow": {
