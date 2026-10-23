@@ -9,3 +9,26 @@
   margin-inline-end: var(--utrecht-blockquote-margin-inline-end, var(--rhc-blockquote-margin-inline-end));
   margin-inline-start: var(--utrecht-blockquote-margin-inline-start, var(--rhc-blockquote-margin-inline-start));
 }
+
+// Opt-in bracket outline. Retint the border with the themeable primary layer and
+// the text with the action-foreground token (which stays WCAG AA across themes,
+// where a raw primary-500 would fail as body text). Reset the border widths so
+// only the two sides adjacent to the chosen corner are drawn.
+@mixin rhc-blockquote--outline {
+  --utrecht-blockquote-border-color: var(--rhc-blockquote-border-color, var(--rhc-color-primary-500));
+  --utrecht-blockquote-color: var(--rhc-blockquote-color, var(--rhc-color-foreground-action));
+  --utrecht-blockquote-content-color: var(--rhc-blockquote-content-color, var(--rhc-color-foreground-action));
+  --utrecht-blockquote-caption-color: var(--rhc-blockquote-attribution-color, var(--rhc-color-foreground-action));
+
+  border-block-end-width: var(--rhc-border-width-none);
+  border-block-start-width: var(--rhc-border-width-none);
+  border-inline-end-width: var(--rhc-border-width-none);
+  border-inline-start-width: var(--rhc-border-width-none);
+}
+
+// Draw the 2px border on the two sides adjacent to $corner and round that corner.
+@mixin rhc-blockquote--outline-corner($block, $inline, $corner) {
+  border-#{$block}-width: var(--rhc-blockquote-border-width, var(--rhc-border-width-md));
+  border-#{$inline}-width: var(--rhc-blockquote-border-width, var(--rhc-border-width-md));
+  border-#{$corner}-radius: var(--rhc-blockquote-border-radius, var(--rhc-rounded-corner-sm-border-radius));
+}
