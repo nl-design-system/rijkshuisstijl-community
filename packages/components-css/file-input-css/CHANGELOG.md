@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/file-input-css
 
+## 1.1.1
+
+### Patch Changes
+
+- Updated dependencies [ad84e31]
+  - @rijkshuisstijl-community/button-css@2.0.0
+
 ## 1.1.0
 
 ### Minor Changes
