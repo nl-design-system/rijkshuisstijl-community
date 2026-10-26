@@ -77,53 +77,169 @@ export const Default: Story = {
     ariaLabel: 'checkbox-label',
   },
 };
+export const Active: Story = {
+  args: {
+    ariaLabel: 'checkbox-label',
+  },
+  parameters: {
+    pseudo: {
+      active: true,
+    },
+  },
+};
+export const Hover: Story = {
+  args: {
+    ariaLabel: 'checkbox-label',
+  },
+  parameters: {
+    pseudo: {
+      hover: true,
+    },
+  },
+};
+export const Focus: Story = {
+  args: {
+    ariaLabel: 'checkbox-label',
+  },
+  parameters: {
+    pseudo: {
+      focus: true,
+    },
+  },
+};
+export const FocusVisible: Story = {
+  args: {
+    ariaLabel: 'checkbox-label',
+  },
+  parameters: {
+    pseudo: {
+      focusVisible: true,
+    },
+  },
+};
 export const Disabled: Story = {
   args: {
     ariaLabel: 'checkbox-label',
     disabled: true,
   },
 };
-
-export const ReadOnly: Story = {
-  args: {
-    name: 'subject',
-    readOnly: true,
-    placeholder: 'Read only',
-  },
-};
-
-export const Required: Story = {
-  args: {
-    name: 'subject',
-    required: true,
-  },
-};
-
-export const InputRequired: Story = {
-  args: {
-    name: 'subject',
-    inputRequired: true,
-  },
-};
-
 export const Invalid: Story = {
   args: {
-    name: 'subject',
+    ariaLabel: 'checkbox-label',
     invalid: true,
   },
 };
-
-export const Placeholder: Story = {
+export const Checked: Story = {
   args: {
-    name: 'subject',
-    placeholder: 'Placeholder',
+    ariaLabel: 'checkbox-label',
+    checked: 'true',
   },
 };
-
-export const RightToLeftInput: Story = {
+export const CheckedAndActive: Story = {
   args: {
-    dir: 'rtl',
-    placeholder: 'الموضوع',
+    ariaLabel: 'checkbox-label',
+    checked: true,
   },
-  name: 'Right To Left',
+  parameters: {
+    pseudo: {
+      active: true,
+    },
+  },
+};
+export const CheckedAndHover: Story = {
+  args: {
+    ariaLabel: 'checkbox-label',
+    checked: true,
+  },
+  parameters: {
+    pseudo: {
+      hover: true,
+    },
+  },
+};
+export const CheckedAndFocus: Story = {
+  args: {
+    ariaLabel: 'checkbox-label',
+    checked: true,
+  },
+  parameters: {
+    pseudo: {
+      focus: true,
+    },
+  },
+};
+export const CheckedAndFocusVisible: Story = {
+  args: {
+    ariaLabel: 'checkbox-label',
+    checked: true,
+  },
+  parameters: {
+    pseudo: {
+      focusVisible: true,
+    },
+  },
+};
+export const CheckedAndDisabled: Story = {
+  args: {
+    ariaLabel: 'checkbox-label',
+    checked: true,
+    disabled: true,
+  },
+};
+export const Indeterminate: Story = {
+  args: {
+    ariaLabel: 'checkbox-label',
+    indeterminate: true,
+  },
+};
+export const IndeterminateAndActive: Story = {
+  args: {
+    ariaLabel: 'checkbox-label',
+    indeterminate: true,
+  },
+  parameters: {
+    pseudo: {
+      active: true,
+    },
+  },
+};
+export const IndeterminateAndHover: Story = {
+  args: {
+    ariaLabel: 'checkbox-label',
+    indeterminate: true,
+  },
+  parameters: {
+    pseudo: {
+      hover: true,
+    },
+  },
+};
+export const IndeterminateAndFocus: Story = {
+  args: {
+    ariaLabel: 'checkbox-label',
+    indeterminate: true,
+  },
+  parameters: {
+    pseudo: {
+      focus: true,
+    },
+  },
+};
+export const IndeterminateAndFocusVisible: Story = {
+  args: {
+    ariaLabel: 'checkbox-label',
+    indeterminate: true,
+  },
+  parameters: {
+    pseudo: {
+      focusVisible: true,
+    },
+  },
+};
+export const IndeterminateAndDisabled: Story = {
+  args: {
+    ariaLabel: 'checkbox-label',
+    indeterminate: true,
+    disabled: true,
+  },
 };
