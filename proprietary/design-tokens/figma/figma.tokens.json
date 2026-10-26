@@ -2514,12 +2514,12 @@
         },
         "letter-spacing": {
           "tight": {
-            "$type": "dimension",
+            "$type": "letterSpacing",
             "$value": "-0.004em",
             "$description": "[figma-only]"
           },
           "normal": {
-            "$type": "dimension",
+            "$type": "letterSpacing",
             "$value": "0em",
             "$description": "[figma-only]"
           }
@@ -6243,7 +6243,7 @@
           }
         },
         "outline-offset": {
-          "$type": "other",
+          "$type": "dimension",
           "$value": "{rhc.space.xs}"
         },
         "outline-style": {
@@ -7322,7 +7322,7 @@
           },
           "line-height": {
             "$type": "lineHeights",
-            "$value": "1.875rem"
+            "$value": "{nl.button.primary.line-height}"
           }
         },
         "secondary-action": {
@@ -7336,7 +7336,7 @@
           },
           "line-height": {
             "$type": "lineHeights",
-            "$value": "1.875rem"
+            "$value": "{nl.button.secondary.line-height}"
           }
         },
         "subtle": {
@@ -7350,7 +7350,7 @@
           },
           "line-height": {
             "$type": "lineHeights",
-            "$value": "1.875rem"
+            "$value": "{nl.button.subtle.line-height}"
           }
         }
       },
@@ -11513,7 +11513,7 @@
         },
         "line-height": {
           "$type": "lineHeights",
-          "$value": "normal"
+          "$value": "{rhc.text.line-height.md}"
         },
         "margin-block-end": {
           "$type": "dimension",
@@ -12217,7 +12217,7 @@
           "$description": "[code-only]"
         },
         "text-underline-offset": {
-          "$type": "other",
+          "$type": "dimension",
           "$value": "{rhc.space.xs}",
           "$description": "[code-only]"
         },
@@ -12307,7 +12307,7 @@
           "$description": "[code-only]"
         },
         "text-underline-offset": {
-          "$type": "other",
+          "$type": "dimension",
           "$value": "{rhc.space.xs}",
           "$description": "[code-only]"
         },
@@ -12392,7 +12392,7 @@
           "$value": "{rhc.color.zwart}"
         },
         "font-weight": {
-          "$type": "dimension",
+          "$type": "fontWeights",
           "$value": "{rhc.text.font-weight.regular}"
         },
         "option": {
@@ -12709,19 +12709,19 @@
           },
           "label": {
             "font-family": {
-              "$type": "font-family",
+              "$type": "fontFamily",
               "$value": "{rhc.text.font-family.default}"
             },
             "font-size": {
-              "$type": "font-size",
+              "$type": "fontSizes",
               "$value": "{rhc.text.font-size.md}"
             },
             "font-weight": {
-              "$type": "font-weight",
+              "$type": "fontWeights",
               "$value": "{rhc.text.font-weight.strong}"
             },
             "line-height": {
-              "$type": "line-height",
+              "$type": "lineHeights",
               "$value": "{rhc.text.line-height.md}"
             }
           },
@@ -13312,7 +13312,7 @@
             "$value": "{rhc.space.sm}"
           },
           "outline-offset": {
-            "$type": "other",
+            "$type": "dimension",
             "$value": "{rhc.focus.outline-offset}",
             "$description": "[code-only]"
           },
@@ -13346,7 +13346,7 @@
             "$description": "[code only]"
           },
           "text-underline-offset": {
-            "$type": "other",
+            "$type": "dimension",
             "$value": "{rhc.space.xs}",
             "$description": "[code-only]"
           }
@@ -14091,7 +14091,7 @@
           "$description": "[code-only]"
         },
         "text-underline-offset": {
-          "$type": "other",
+          "$type": "dimension",
           "$value": "{utrecht.link.text-underline-offset}",
           "$description": "[code-only]"
         },
