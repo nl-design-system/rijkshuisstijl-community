@@ -5063,33 +5063,35 @@
       "focus": {
         "background-color": {
           "$type": "color",
-          "$value": "#ffdd00"
+          "$value": "#ffdd00",
+          "$description": "todo: no RHC token available yet"
         },
         "color": {
           "$type": "color",
-          "$value": "#0b0c0c"
+          "$value": "#0b0c0c",
+          "$description": "todo: no RHC token available yet"
         },
         "outline-color": {
           "$type": "color",
-          "$value": "#0b0c0c"
+          "$value": "{rhc.focus.outline-color}"
         },
         "inverse": {
           "outline-color": {
             "$type": "color",
-            "$value": "#ffffff"
+            "$value": "{rhc.focus.inverse.outline-color}"
           }
         },
         "outline-offset": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{rhc.focus.outline-offset}"
         },
         "outline-style": {
           "$type": "other",
-          "$value": "dashed"
+          "$value": "{rhc.focus.outline-style}"
         },
         "outline-width": {
           "$type": "dimension",
-          "$value": "{basis.border-width.md}"
+          "$value": "{rhc.focus.outline-width}"
         }
       },
       "form-control": {
