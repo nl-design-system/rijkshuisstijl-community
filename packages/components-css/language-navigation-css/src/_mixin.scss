@@ -15,11 +15,13 @@
 
   column-gap: var(--rhc-link-column-gap);
 
-  &:hover,
-  &[aria-expanded="true"] {
-    --utrecht-link-focus-background-color: var(--rhc-navigation-bar-link-hover-background-color);
+  @at-root {
+    &:hover,
+    &[aria-expanded="true"] {
+      --utrecht-link-focus-background-color: var(--rhc-navigation-bar-link-hover-background-color);
 
-    background-color: var(--rhc-navigation-bar-link-hover-background-color);
+      background-color: var(--rhc-navigation-bar-link-hover-background-color);
+    }
   }
 
   // Mobiel: onderstreping i.p.v. achtergrond, zoals de andere menulinks.
@@ -29,10 +31,12 @@
     inline-size: 100%;
     justify-content: flex-start;
 
-    &:hover:not([aria-expanded="true"]) {
-      --utrecht-link-hover-text-decoration: underline;
+    @at-root {
+      &:hover:not([aria-expanded="true"]) {
+        --utrecht-link-hover-text-decoration: underline;
 
-      background-color: transparent;
+        background-color: transparent;
+      }
     }
   }
 }
