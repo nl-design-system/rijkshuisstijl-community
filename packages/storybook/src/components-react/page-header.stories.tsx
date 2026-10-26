@@ -15,7 +15,7 @@ const meta = {
       },
     },
     layout: 'fullscreen',
-    // TODO: add Figma and GitHub links
+    figma: 'https://www.figma.com/design/Lcb6LFWJhL69h6UANxICTz/Page-Header---Schetsboek?node-id=1-631&m=dev',
     github:
       'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/page-header-react/src/PageHeader.tsx',
   },
