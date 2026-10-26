@@ -49,14 +49,12 @@ export const FocusTrap = ({ active = true, children, ...props }: FocusTrapProps)
           event.preventDefault();
           lastElement?.focus();
         }
-      } else {
         // For some reason, SQ thinks activeElement can never be the same type as lastElement, even though it does not
         // have this problem with firstElement
         // eslint-disable-next-line sonarjs/different-types-comparison
-        if (document.activeElement === lastElement) {
-          event.preventDefault();
-          firstElement.focus();
-        }
+      } else if (document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
       }
     };
 
