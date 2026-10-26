@@ -5109,7 +5109,7 @@
         },
         "border-radius": {
           "$type": "dimension",
-          "$value": "0px"
+          "$value": "{basis.border-radius.none}"
         },
         "border-width": {
           "$type": "dimension",
@@ -5159,7 +5159,8 @@
         },
         "max-inline-size": {
           "$type": "dimension",
-          "$value": "25rem"
+          "$value": "25rem",
+          "$description": "todo: no RHC token available yet"
         },
         "active": {
           "accent-color": {
