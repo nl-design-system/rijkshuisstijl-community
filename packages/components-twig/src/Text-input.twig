@@ -1,0 +1,44 @@
+{%- set classes = ['utrecht-textbox utrecht-textbox--html-input rhc-text-input'] -%}
+
+{%- if name is defined -%}{%- set attributes = attributes.setAttribute('name', name) -%}{%- endif -%}
+
+{%- if defaultValue is defined -%}{%- set attributes = attributes.setAttribute('value', defaultValue) -%}{%- endif -%}
+{%- if value is defined -%}{%- set attributes = attributes.setAttribute('value', value) -%}{%- endif -%}
+{%- if placeholder is defined -%}{%- set attributes = attributes.setAttribute('placeholder', placeholder) -%}{%- endif -%}
+{%- if autoComplete is defined -%}{%- set attributes = attributes.setAttribute('autocomplete', autoComplete) -%} {%- endif -%}
+{%- if step is defined -%}{%- set attributes = attributes.setAttribute('step', step) -%} {%- endif -%}
+{%- if size is defined -%}{%- set attributes = attributes.setAttribute('size', size) -%} {%- endif -%}
+{%- if type is defined -%}{%- set attributes = attributes.setAttribute('type', type) -%}{%- else -%}{%- set attributes = attributes.setAttribute('type', 'text') -%}{%- endif -%}
+{%- if dir is defined -%}{%- set attributes = attributes.setAttribute('dir', dir) -%}{%- else -%}{%- set attributes = attributes.setAttribute('dir', 'auto') -%}{%- endif -%}
+{%- if spellCheck is defined -%}{%- set attributes = attributes.setAttribute('spellcheck', spellCheck) -%}{%- else -%}{%- set attributes = attributes.setAttribute('spellcheck', 'false') -%}{%- endif -%}
+{%- if minLength is defined -%}{%- set attributes = attributes.setAttribute('minlength', minLength) -%}{%- endif -%}
+{%- if maxLength is defined -%}{%- set attributes = attributes.setAttribute('maxlength', maxLength) -%}{%- endif -%}
+{%- if min is defined -%}{%- set attributes = attributes.setAttribute('min', min) -%}{%- endif -%}
+{%- if max is defined -%}{%- set attributes = attributes.setAttribute('max', max) -%}{%- endif -%}
+
+{%- if required -%}
+  {%- set classes = classes|merge(['utrecht-textbox--required']) -%}
+  {%- set attributes = attributes
+    .setAttribute('required', true) -%}
+{%- endif -%}
+{%- if inputRequired -%}
+  {%- set classes = classes|merge(['utrecht-textbox--required']) -%}
+  {%- set attributes = attributes
+    .setAttribute('required', true) -%}
+{%- endif -%}
+{%- if disabled -%}
+  {%- set attributes = attributes.setAttribute('disabled', true) -%}
+  {%- set classes = classes|merge(['utrecht-textbox--disabled']) -%}
+{%- endif -%}
+{%- if readOnly -%}
+  {%- set classes = classes|merge(['utrecht-textbox--readonly']) -%}
+{%- endif -%}
+{%- if invalid -%}
+  {%- set classes = classes|merge(['utrecht-textbox--invalid']) -%}
+{%- endif -%}
+
+{%- if className  -%}
+  {%- set classes = classes|merge([className]) -%}
+{%- endif -%}
+
+<input {{ attributes.addClass(classes) }} aria-label="text-input-label" type="text" name="subject" />
