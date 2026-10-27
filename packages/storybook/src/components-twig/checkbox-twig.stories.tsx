@@ -3,6 +3,11 @@ import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markd
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '../components-react/checkbox.md?raw';
 
+const setIndeterminate: Story['play'] = async ({ canvasElement }) => {
+  const input = canvasElement.querySelector<HTMLInputElement>('input[type="checkbox"]');
+  if (input) input.indeterminate = true;
+};
+
 const meta = {
   title: 'Checkbox',
   id: 'rhc-twig-checkbox',
@@ -132,7 +137,7 @@ export const Invalid: Story = {
 export const Checked: Story = {
   args: {
     ariaLabel: 'checkbox-label',
-    checked: 'true',
+    checked: true,
   },
 };
 export const CheckedAndActive: Story = {
@@ -191,6 +196,7 @@ export const Indeterminate: Story = {
     ariaLabel: 'checkbox-label',
     indeterminate: true,
   },
+  play: setIndeterminate,
 };
 export const IndeterminateAndActive: Story = {
   args: {
@@ -202,6 +208,7 @@ export const IndeterminateAndActive: Story = {
       active: true,
     },
   },
+  play: setIndeterminate,
 };
 export const IndeterminateAndHover: Story = {
   args: {
@@ -213,6 +220,7 @@ export const IndeterminateAndHover: Story = {
       hover: true,
     },
   },
+  play: setIndeterminate,
 };
 export const IndeterminateAndFocus: Story = {
   args: {
@@ -224,6 +232,7 @@ export const IndeterminateAndFocus: Story = {
       focus: true,
     },
   },
+  play: setIndeterminate,
 };
 export const IndeterminateAndFocusVisible: Story = {
   args: {
@@ -235,6 +244,7 @@ export const IndeterminateAndFocusVisible: Story = {
       focusVisible: true,
     },
   },
+  play: setIndeterminate,
 };
 export const IndeterminateAndDisabled: Story = {
   args: {
@@ -242,4 +252,5 @@ export const IndeterminateAndDisabled: Story = {
     indeterminate: true,
     disabled: true,
   },
+  play: setIndeterminate,
 };
