@@ -73,8 +73,8 @@
     --nl-link-text-decoration-line: none;
     --nl-link-color: var(--rhc-navigation-bar-color);
 
-    font-size: 1em; // TODO tokenise
-    font-weight: 700; // TODO tokenise
+    font-size: var(--rhc-text-font-size-lg);
+    font-weight: var(--rhc-text-font-weight-bold);
 
     &:hover,
     &:focus {
@@ -88,8 +88,8 @@
         --nl-link-font-size: 1.5em;
 
         color: var(--rhc-navigation-bar-identity-primary-color);
-        font-size: 1.5em; // TODO tokenise
-        font-weight: 500; // TODO tokenise
+        font-size: var(--rhc-text-font-size-xl);
+        font-weight: var(--rhc-text-font-weight-regular);
         line-height: var(--rhc-navigation-bar-identity-primary-line-height);
       }
     }
