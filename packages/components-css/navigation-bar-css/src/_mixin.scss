@@ -211,6 +211,13 @@
           flex-direction: row;
           justify-content: space-between;
         }
+
+        &--secondary {
+          @media (width < 768px) {
+            background-color: var(--rhc-navigation-bar-mega-menu-secondary-slot-mobile-background-color);
+            min-block-size: var(--rhc-navigation-bar-mega-menu-secondary-slot-mobile-min-block-size);
+          }
+        }
       }
     }
     @media (width >= 768px) {

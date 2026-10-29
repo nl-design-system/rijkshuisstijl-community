@@ -325,7 +325,7 @@ export const NavBar = ({
               </div>
             )}
             {items && (
-              <div className="rhc-nav-bar__slot" ref={itemsSlotRef}>
+              <div className="rhc-nav-bar__slot rhc-nav-bar__slot--primary" ref={itemsSlotRef}>
                 <nav
                   aria-label="todo-geefnaam"
                   className={clsx('rhc-nav-bar__nav', className)}
@@ -341,7 +341,7 @@ export const NavBar = ({
               </div>
             )}
             {endItems && (
-              <div className="rhc-nav-bar__slot" ref={endItemsSlotRef}>
+              <div className="rhc-nav-bar__slot rhc-nav-bar__slot--secondary" ref={endItemsSlotRef}>
                 <nav
                   aria-label="todo-geefnaam"
                   className={clsx('rhc-nav-bar__nav', className)}
@@ -354,9 +354,9 @@ export const NavBar = ({
             )}
             {isMegamenuOpen && (
               <Button
-                appearance="subtle-button"
                 aria-label="Sluit menu"
                 className="rhc-nav-bar__megamenu__btn-close"
+                purpose="subtle"
                 onClick={() => setIsMegamenuOpen(false)}
               >
                 <Icon icon="kruis" />
