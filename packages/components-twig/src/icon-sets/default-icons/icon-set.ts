@@ -1,4 +1,4 @@
-export const iconSet: Partial<Record<string, string>> = {
+export const iconSet: Record<string, string> = {
   activiteit: 'calendar-check',
   'agile-werken': 'arrow-iteration',
   'alert-circle': 'alert-circle',
