@@ -443,7 +443,7 @@
 
   @media (width < 768px) {
     align-items: center !important;
-    min-block-size: 30px;
+    min-block-size: var(--rhc-navigation-bar-block-size);
 
     // Mobiel: onderstreping i.p.v. achtergrond, alleen in het open menu.
     .rhc-nav-bar__slots &:hover:not([aria-expanded="true"]) {
