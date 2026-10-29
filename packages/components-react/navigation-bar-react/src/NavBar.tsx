@@ -369,7 +369,7 @@ export const NavBar = ({
         <div className={clsx('rhc-nav-bar__slot-main', { 'is-navbar-main-open': isMainNavOpen })}>
           <LinkButton
             aria-expanded={isMainNavOpen}
-            className="rhc-nav-bar__slot-main__btn-trigger"
+            className="rhc-nav-bar__slot-main__btn-trigger rhc-nav-bar__link"
             data-role="toggle"
             onClick={() => setIsMainNavOpen((prev) => !prev)}
           >
