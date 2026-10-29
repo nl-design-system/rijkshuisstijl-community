@@ -194,7 +194,7 @@
   @at-root {
     &.is-navbar-megamenu-open {
       .rhc-nav-bar__slot {
-        background-color: white; // TODO tokenise
+        background-color: var(--rhc-navigation-bar-mega-menu-background-color);
         padding-block-end: var(--rhc-page-section-vi-small-padding-block-end);
         padding-block-start: var(--rhc-page-section-vi-small-padding-block-start);
         padding-inline-end: var(--rhc-page-section-vi-small-padding-inline-end);
@@ -266,7 +266,7 @@
 
   @media (width >= 768px) {
     display: flex;
-    font-weight: 400; // TODO tokenise
+    font-weight: var(--rhc-text-font-weight-regular);
     inset-block-start: calc(var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-start) + 1.8em);
     inset-inline-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-end);
     position: absolute;
