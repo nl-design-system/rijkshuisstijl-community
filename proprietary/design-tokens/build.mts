@@ -2,6 +2,8 @@ import { existsSync, mkdirSync } from 'node:fs';
 import { appendFile, readFile, writeFile } from 'node:fs/promises';
 import { posix } from 'node:path';
 import StyleDictionary from 'style-dictionary';
+import type { TransformedTokens } from 'style-dictionary/types';
+import { convertTokenData, stripMeta, usesReferences } from 'style-dictionary/utils';
 
 import { fixCSSFile } from './src/transforms/css/cssFixers.mts';
 import { registerTokenStudioTransformGroup } from './src/transforms/styleDictonary/styleDictionaryTransforms.mts';
@@ -48,6 +50,23 @@ StyleDictionary.registerFileHeader({
   name: 'nlds-rhc-header',
   fileHeader: function (defaultMessage = []) {
     return [...defaultMessage, `Generated on ${new Date().toUTCString()}`];
+  },
+});
+
+// The built-in `json` format ignores `outputReferences`, so this variant restores the original
+// reference (e.g. `{basis.color.default.color-default}`) for every token that used one.
+StyleDictionary.registerFormat({
+  name: 'json/dtcg',
+  format: function ({ dictionary, options }) {
+    const { outputReferences, usesDtcg } = options;
+    const tokens = dictionary.allTokens.map((token) => {
+      const originalValue = token.original['$value'];
+      const keepReference =
+        typeof outputReferences === 'function' ? outputReferences(token, { dictionary, usesDtcg }) : outputReferences;
+      return keepReference && usesReferences(originalValue) ? { ...token, $value: originalValue } : token;
+    });
+    const nestedTokens = convertTokenData(tokens, { output: 'object', usesDtcg }) as TransformedTokens;
+    return `${JSON.stringify(stripMeta(nestedTokens, options['stripMeta']), null, 2)}\n`;
   },
 });
 
@@ -100,6 +119,14 @@ const getPlatformsConfig = (buildPath: string, themeName: string) => {
         {
           destination: 'index.json',
           format: 'json/flat',
+        },
+        {
+          destination: 'tokens.json',
+          format: 'json/dtcg',
+          options: {
+            outputReferences: true,
+            stripMeta: { keep: ['$value', '$type', '$description', '$deprecated'], usesDtcg: true },
+          },
         },
       ],
     },
