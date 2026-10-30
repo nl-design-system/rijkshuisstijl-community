@@ -8939,6 +8939,9 @@ importers:
 
   proprietary/design-tokens:
     devDependencies:
+      '@nl-design-system-community/design-tokens-lint':
+        specifier: 1.1.0
+        version: 1.1.0
       '@tokens-studio/sd-transforms':
         specifier: 2.0.3
         version: 2.0.3(style-dictionary@5.4.3(tslib@2.8.1))
@@ -11778,6 +11781,9 @@ packages:
       '@babel/runtime': '>=7.26.10'
       react: ^18 || ^19
 
+  '@nl-design-system-candidate/button-tokens@1.0.0':
+    resolution: {integrity: sha512-2uxqqVUW9kyib/rPn1rvWI09auUVOkA5IUC+rBlYxUz9DVVn4UcXPeOe9KVgh0a1WuM2dzX3k/bpWRBINtKACw==}
+
   '@nl-design-system-candidate/code-block-css@1.2.0':
     resolution: {integrity: sha512-oem6db9bdWyllcCJ1WNEuLQfx9uF9yZAsbmzMYs7YF448EYhhEnEXEqfjtkUrLwuly3OEnThI28g69IXpigx/g==}
 
@@ -11786,6 +11792,18 @@ packages:
     peerDependencies:
       '@babel/runtime': '>=7.26.10'
       react: ^18 || ^19
+
+  '@nl-design-system-candidate/code-block-tokens@2.0.3':
+    resolution: {integrity: sha512-cMaLJRxJFbgbxG18E+Dky8mABMCJR/KwugqlfF8ERK7S4K06m4dwHQk3Al18adISuRReApfueJ2CiMTSJL40GQ==}
+
+  '@nl-design-system-candidate/code-tokens@3.0.0':
+    resolution: {integrity: sha512-uPjCHB5mvFMFXDjxjAhWk9zmPxdDdRrrza2vUROmB8jSszxP/37f2tPMqEa+F/ugZTyBOt9AYWk/feBfOruhmQ==}
+
+  '@nl-design-system-candidate/color-sample-tokens@2.0.3':
+    resolution: {integrity: sha512-B3hIdU+bX70W5XbRpPjXrpi3F1JiNoMhNbsP0PauO0jhK2386uSFgBEqb4iDN0wruqX0qAiBhOcJuepy7vding==}
+
+  '@nl-design-system-candidate/data-badge-tokens@2.0.3':
+    resolution: {integrity: sha512-W2SB4PTND45OEJeXLSeYjA+RT2cyLRFXKcZu1rDTh5Q3n6EED65HsocFmOu6uRK7pAb6WwU6W14X4EAD47QOUA==}
 
   '@nl-design-system-candidate/heading-css@1.1.3':
     resolution: {integrity: sha512-s4ERGrHcsBkZlCc+qz8+XDB5rCpxvkxwxI2bg4OB2GDS0DU5LzjNMWhsV1I8IPOboTvWMabvrsscxVuj5Bijuw==}
@@ -11796,6 +11814,9 @@ packages:
       '@babel/runtime': '>=7.26.10'
       react: ^18 || ^19
 
+  '@nl-design-system-candidate/heading-tokens@1.1.2':
+    resolution: {integrity: sha512-9A7V/k2JyQ6It6JBViu2h06uN7IbMZ6//hdkznJxc9w7qVJjlx+5sIewgEs/8kkFAlSCMBrgNRkqZsQZaRPTRg==}
+
   '@nl-design-system-candidate/link-css@2.0.3':
     resolution: {integrity: sha512-NpRIm9YDCK1bihslc9UD3OvV5hmm91Dc7v2oBIllqlZZyS1THFmPsyi+sJ1Vd7ZDa54GgqjuzUJOzAoQDJOFzQ==}
 
@@ -11804,6 +11825,12 @@ packages:
     peerDependencies:
       '@babel/runtime': '>=7.26.10'
       react: ^18 || ^19
+
+  '@nl-design-system-candidate/link-tokens@3.0.3':
+    resolution: {integrity: sha512-4CS7pyfBpCwCY9u2C1QbQg/sYBLcruB7ZHCprUCJR11NyjcdXGYVnxxnOU+uko/G7UZ6Vuy66bALIbro7Iy+aw==}
+
+  '@nl-design-system-candidate/mark-tokens@2.0.3':
+    resolution: {integrity: sha512-eA0Poy1qyoGSOAwJUirRHOm4nSzsL33fz1D585FKIucmQTV8EDrBLgLlysRDAdLriWAXPINsETaAkSQ9/EFq0A==}
 
   '@nl-design-system-candidate/number-badge-css@1.1.5':
     resolution: {integrity: sha512-H9/+72dHiuKZUk+xixykqpgoH7O70SUw1Ak71NIAscVcBbivWK4Hzj9fF4uNXpIXdERxVdiJxa1TIBhCdMRwAQ==}
@@ -11814,6 +11841,9 @@ packages:
       '@babel/runtime': '>=7.26.10'
       react: ^18 || ^19
 
+  '@nl-design-system-candidate/number-badge-tokens@2.0.3':
+    resolution: {integrity: sha512-LfJVX9ha486SMJ7laHy/yRy31mDdJHS5r8bczsuR4afll5F6xiwvhyxeJlzGv4z/Gsdoub3SWiz3apVObYJErg==}
+
   '@nl-design-system-candidate/paragraph-css@2.1.3':
     resolution: {integrity: sha512-f3GHiSpisUZAcn4gSNpSX2C3Mhl7y9dg1TfTe+jGMtHAqau/tztrtE3H27FlwrZeVEtsUtvssRCYUA3UO/GDpQ==}
 
@@ -11823,6 +11853,9 @@ packages:
       '@babel/runtime': '>=7.26.10'
       react: ^18 || ^19
 
+  '@nl-design-system-candidate/paragraph-tokens@1.1.3':
+    resolution: {integrity: sha512-EtFFQagTwkJYL5k9+h8xDQDh9GKzgo4CJnFrSuxWNzM3A3Hi+vAd6bIBAj4ECBZfW5IJBtsONAduSoCiPo5CbA==}
+
   '@nl-design-system-candidate/skip-link-css@1.0.5':
     resolution: {integrity: sha512-0Bq6yDPgz6sCGrd5EuV8CfL9m78he1a914sJPeZ+Cqr4WTqN0m1qf3LPJ2YVpOP0fYgk5GX2UqwTKIDhSLg5GA==}
 
@@ -11831,6 +11864,20 @@ packages:
     peerDependencies:
       '@babel/runtime': '>=7.26.10'
       react: ^18 || ^19
+
+  '@nl-design-system-candidate/skip-link-tokens@1.0.4':
+    resolution: {integrity: sha512-MD1+m55nRqkj2eATcBNOLE8N5jWfvjJg2ax+POX8zXm49wJcBGTS6B/kK4kzIPbMuivYnxVtNlmA+Cz/upFBZA==}
+
+  '@nl-design-system-community/design-tokens-lint@1.1.0':
+    resolution: {integrity: sha512-ZjLHFJjHTdUSIn6URnAuYOVt7zaenfeCWDx0+Cq3BFChWMBKQhW7GZsX1dfWm7JUrswPfmKe/i/4kiIJHRrvnA==}
+    engines: {node: '>=20.12.0'}
+    hasBin: true
+
+  '@nl-design-system-community/design-tokens-schema@2.5.0':
+    resolution: {integrity: sha512-7G1ZyWA2pEio/CdoYFrYFLrm/fV8ESRGmAeOl3N55FYhnwg24zFWQl9fWzEmqpRwyjRjlcwT9vjFENvWgHhhaA==}
+
+  '@nl-design-system-unstable/basis-design-tokens@3.1.1':
+    resolution: {integrity: sha512-eENh3scHg7ZXGERZy9SL7wdVi56sg1gqnSEAhC2QpWf60pd5p3FClPoQTI4/hISFnpFKvlHLsl4xJgjT/gLsmg==}
 
   '@nl-design-system/tsconfig@1.0.5':
     resolution: {integrity: sha512-XXThvLEGrO68chEvJI9ITmJ8OqNL/Km7KWWXypUQGAZWkiYiXzLf9oo/Z/ahevqqcp9bC/p+HtQe6xHZQ++rbQ==}
@@ -12363,6 +12410,10 @@ packages:
     resolution: {integrity: sha512-yF9G8vK/LYUTF3Cijd7VC9La3b20F20/J/fgoR4H0B8JGOWnZVZX6+I6+vODPosjmMcpdlUV+gUqJQZp3kLOcw==}
     peerDependencies:
       prettier: '*'
+
+  '@projectwallace/css-parser@0.18.8':
+    resolution: {integrity: sha512-yjXsE/7XZOQdh5lX/y6Vy1k8dldDl4KCGSZXWfN+7nZxIHC123d55gGCx4srU/FE8ACJAtx70WIKCNclFG2iLA==}
+    engines: {pnpm: '>=11.0.0'}
 
   '@rolldown/binding-android-arm64@1.0.0-rc.4':
     resolution: {integrity: sha512-vRq9f4NzvbdZavhQbjkJBx7rRebDKYR9zHfO/Wg486+I7bSecdUapzCm5cyXoK+LHokTxgSq7A5baAXUZkIz0w==}
@@ -15333,6 +15384,9 @@ packages:
   colorjs.io@0.5.2:
     resolution: {integrity: sha512-twmVoizEW7ylZSN32OgKdXRmo1qg+wT5/6C3xu5b9QsWzSFAhHLn2xd8ro0diCsKfCj1RdaTP/nrcW+vAoQPIw==}
 
+  colorjs.io@0.7.1:
+    resolution: {integrity: sha512-LY7OHnJZxHwT5UlzNa9bbhHHDbzB6yE5+3MIPwJEQKRvSCt/T4G7epsj+9j2BExUIIfXFIJGsIXUKdfrK9Q5tA==}
+
   colors@1.4.0:
     resolution: {integrity: sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==}
     engines: {node: '>=0.1.90'}
@@ -15802,6 +15856,9 @@ packages:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
     engines: {node: '>=8'}
 
+  dlv@1.1.3:
+    resolution: {integrity: sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==}
+
   dns-packet@5.6.1:
     resolution: {integrity: sha512-l4gcSouhcgIKRvyy99RNVOgxXiicE+2jZoNmaNmZ6JXiGajBOJAesk1OBlJuM5k2c+eudGdLxDqXuPCKIj6kpw==}
     engines: {node: '>=6'}
@@ -15986,6 +16043,9 @@ packages:
 
   es-toolkit@1.49.0:
     resolution: {integrity: sha512-G5iZ6Pc/FNRY/soKZHC+TxGDD83rHUDXxzaWhGCX44vAv/tMs56WMusnm/KMNK+luUPsgA9U28cGr4RDlSzL2g==}
+
+  es-toolkit@1.52.0:
+    resolution: {integrity: sha512-XTNEJQh1tY1ZJVcf6ayP/2n4ZPyaHlW2FWs7xvw5ddPuhUVjLD3olQVQS7kf58JbAB48iL0uL/jerTrjtV3lDA==}
 
   esbuild-register@3.6.0:
     resolution: {integrity: sha512-H2/S7Pm8a9CL1uhp9OvjwrBh5Pvx0H8qVOxNu8Wed9Y7qv56MPtq+GGM8RJpq6glYJn9Wspr8uw7l55uyinNeg==}
@@ -21585,6 +21645,9 @@ packages:
   zod@4.4.3:
     resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
 
+  zod@4.6.5:
+    resolution: {integrity: sha512-v5l/aFXZQeai4awLbOpSoHecE9UiMrnfx75tEXLjNonXVARxQ5mOeipTjROUchszUNCqnE+hqAMujRsRHsut2Q==}
+
   zone.js@0.16.2:
     resolution: {integrity: sha512-Eky7p2Z1Ig3NnbfodSPoARCjKBSTFMnE/ACsP1L/XJEfY4SdOFce19BsUCWVwL6K5ABZFy5J3bjcMWffX+YM3Q==}
 
@@ -25155,6 +25218,8 @@ snapshots:
       clsx: 2.1.1
       react: 19.3.0
 
+  '@nl-design-system-candidate/button-tokens@1.0.0': {}
+
   '@nl-design-system-candidate/code-block-css@1.2.0': {}
 
   '@nl-design-system-candidate/code-block-react@1.4.0(@babel/runtime@7.29.7)(react@19.3.0)':
@@ -25164,12 +25229,22 @@ snapshots:
       clsx: 2.1.1
       react: 19.3.0
 
+  '@nl-design-system-candidate/code-block-tokens@2.0.3': {}
+
+  '@nl-design-system-candidate/code-tokens@3.0.0': {}
+
+  '@nl-design-system-candidate/color-sample-tokens@2.0.3': {}
+
+  '@nl-design-system-candidate/data-badge-tokens@2.0.3': {}
+
   '@nl-design-system-candidate/heading-css@1.1.3': {}
 
   '@nl-design-system-candidate/heading-react@1.1.7(@babel/runtime@7.29.7)(react@19.3.0)':
     dependencies:
       '@babel/runtime': 7.29.7
       react: 19.3.0
+
+  '@nl-design-system-candidate/heading-tokens@1.1.2': {}
 
   '@nl-design-system-candidate/link-css@2.0.3': {}
 
@@ -25179,12 +25254,18 @@ snapshots:
       clsx: 2.1.1
       react: 19.3.0
 
+  '@nl-design-system-candidate/link-tokens@3.0.3': {}
+
+  '@nl-design-system-candidate/mark-tokens@2.0.3': {}
+
   '@nl-design-system-candidate/number-badge-css@1.1.5': {}
 
   '@nl-design-system-candidate/number-badge-react@1.3.2(@babel/runtime@7.29.7)(react@19.3.0)':
     dependencies:
       '@babel/runtime': 7.29.7
       react: 19.3.0
+
+  '@nl-design-system-candidate/number-badge-tokens@2.0.3': {}
 
   '@nl-design-system-candidate/paragraph-css@2.1.3': {}
 
@@ -25194,6 +25275,8 @@ snapshots:
       clsx: 2.1.1
       react: 19.3.0
 
+  '@nl-design-system-candidate/paragraph-tokens@1.1.3': {}
+
   '@nl-design-system-candidate/skip-link-css@1.0.5': {}
 
   '@nl-design-system-candidate/skip-link-react@1.1.7(@babel/runtime@7.29.7)(react@19.3.0)':
@@ -25201,6 +25284,35 @@ snapshots:
       '@babel/runtime': 7.29.7
       clsx: 2.1.1
       react: 19.3.0
+
+  '@nl-design-system-candidate/skip-link-tokens@1.0.4': {}
+
+  '@nl-design-system-community/design-tokens-lint@1.1.0':
+    dependencies:
+      '@nl-design-system-community/design-tokens-schema': 2.5.0
+
+  '@nl-design-system-community/design-tokens-schema@2.5.0':
+    dependencies:
+      '@nl-design-system-candidate/button-tokens': 1.0.0
+      '@nl-design-system-candidate/code-block-tokens': 2.0.3
+      '@nl-design-system-candidate/code-tokens': 3.0.0
+      '@nl-design-system-candidate/color-sample-tokens': 2.0.3
+      '@nl-design-system-candidate/data-badge-tokens': 2.0.3
+      '@nl-design-system-candidate/heading-tokens': 1.1.2
+      '@nl-design-system-candidate/link-tokens': 3.0.3
+      '@nl-design-system-candidate/mark-tokens': 2.0.3
+      '@nl-design-system-candidate/number-badge-tokens': 2.0.3
+      '@nl-design-system-candidate/paragraph-tokens': 1.1.3
+      '@nl-design-system-candidate/skip-link-tokens': 1.0.4
+      '@nl-design-system-unstable/basis-design-tokens': 3.1.1
+      '@projectwallace/css-parser': 0.18.8
+      colorjs.io: 0.7.1
+      dequal: 2.0.3
+      dlv: 1.1.3
+      es-toolkit: 1.52.0
+      zod: 4.6.5
+
+  '@nl-design-system-unstable/basis-design-tokens@3.1.1': {}
 
   '@nl-design-system/tsconfig@1.0.5(typescript@5.9.3)':
     dependencies:
@@ -25721,6 +25833,8 @@ snapshots:
     dependencies:
       make-synchronized: 0.8.0
       prettier: 3.8.3
+
+  '@projectwallace/css-parser@0.18.8': {}
 
   '@rolldown/binding-android-arm64@1.0.0-rc.4':
     optional: true
@@ -28989,6 +29103,8 @@ snapshots:
 
   colorjs.io@0.5.2: {}
 
+  colorjs.io@0.7.1: {}
+
   colors@1.4.0: {}
 
   combined-stream@1.0.8:
@@ -29540,6 +29656,8 @@ snapshots:
     dependencies:
       path-type: 4.0.0
 
+  dlv@1.1.3: {}
+
   dns-packet@5.6.1:
     dependencies:
       '@leichtgewicht/ip-codec': 2.0.5
@@ -29788,6 +29906,8 @@ snapshots:
       is-symbol: 1.1.1
 
   es-toolkit@1.49.0: {}
+
+  es-toolkit@1.52.0: {}
 
   esbuild-register@3.6.0(esbuild@0.25.12)(supports-color@9.4.0):
     dependencies:
@@ -37146,6 +37266,8 @@ snapshots:
   zod@4.3.6: {}
 
   zod@4.4.3: {}
+
+  zod@4.6.5: {}
 
   zone.js@0.16.2: {}
 
