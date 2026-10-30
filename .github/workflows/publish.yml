@@ -91,9 +91,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: "build internal packages for linting"
-        run: pnpm --filter "@rijkshuisstijl-community/design-tokens" build
-
       - name: "Continuous Integration: lint"
         run: pnpm run --if-present lint
 
@@ -128,6 +125,10 @@ jobs:
       # Due to dependency on type definitions, typechecking must be done after build
       - name: "Continuous Integration: typecheck"
         run: pnpm run --if-present typecheck
+
+      # Some linters operate on build output, so they must run after build
+      - name: "Continuous Integration: lint-build"
+        run: pnpm run --if-present lint-build
 
       - name: "Retain build artifact: Storybook"
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1

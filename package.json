@@ -81,6 +81,7 @@
     "lint:md": "markdownlint '**/*.md'",
     "lint:package-json": "npmPkgJsonLint '**/package.json'",
     "lint:package-lock": "pnpm ls --recursive",
+    "lint-build": "pnpm run --no-bail --recursive lint-build",
     "lint-fix": "npm-run-all --continue-on-error lint-fix:** prettier",
     "lint-fix:css": "stylelint --fix '**/*.{css,scss}'",
     "lint-fix:js": "eslint --fix --report-unused-disable-directives .",
