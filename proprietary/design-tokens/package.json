@@ -22,7 +22,7 @@
     "build": "npm-run-all clean build:figma-tokens build:style-dictionary",
     "build:figma-tokens": "node ./src/transforms/splitTokens/token-transformer.mjs",
     "build:style-dictionary": "node --experimental-strip-types ./build.mts",
-    "lint": "design-tokens-lint --exclude-parent-keys figma/figma.tokens.json",
+    "lint": "s=0; for f in dist/*/tokens.json; do design-tokens-lint --max-errors=165 \"$f\" || s=1; done; exit $s",
     "typecheck": "tsc --noEmit",
     "watch": "npm-run-all watch:**",
     "watch:style-dictionary": "chokidar 'src/**/*.tokens.json' 'figma/**/*.tokens.json' --follow-symlinks --command 'pnpm run build' --ignore '/src/generated/'",
