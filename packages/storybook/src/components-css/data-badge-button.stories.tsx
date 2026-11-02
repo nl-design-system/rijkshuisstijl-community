@@ -9,9 +9,9 @@ export default {
 };
 
 export const Default = ReactStories.Default;
-export const MultipleButtons = ReactStories.MultipleButtons;
 export const WithIconAfter = ReactStories.WithIconAfter;
 export const WithIconBefore = ReactStories.WithIconBefore;
 export const WithHelperText = ReactStories.WithHelperText;
 export const FocusVisible = ReactStories.FocusVisible;
 export const Hover = ReactStories.Hover;
+export const MultipleButtons = ReactStories.MultipleButtons;

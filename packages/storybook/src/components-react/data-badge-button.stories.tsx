@@ -123,15 +123,15 @@ export const Hover: Story = {
 };
 
 export const MultipleButtons: Story = {
-  render: () => (
+  render: (args) => (
     <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-      <DataBadgeButton>All Items</DataBadgeButton>
-      <DataBadgeButton>Videos </DataBadgeButton>
-      <DataBadgeButton pressed icon={<IconCheck />}>
+      <DataBadgeButton {...args}>All Items</DataBadgeButton>
+      <DataBadgeButton {...args}>Videos </DataBadgeButton>
+      <DataBadgeButton {...args} pressed icon={<IconCheck />}>
         Documents
       </DataBadgeButton>
-      <DataBadgeButton>Images</DataBadgeButton>
-      <DataBadgeButton helperText="Filter op recente uploads"></DataBadgeButton>
+      <DataBadgeButton {...args}>Images</DataBadgeButton>
+      <DataBadgeButton {...args} helperText="Filter op recente uploads"></DataBadgeButton>
     </div>
   ),
 };

@@ -37,20 +37,12 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  args: {
-    children: 'Label',
-    href: '#',
-    icon: <Icon icon={'chevron-right'} />,
-  },
-};
+export const Default: Story = {};
 
 export const NoIcon: Story = {
-  render: () => (
-    <LinkList>
-      <LinkListLink href="#">Label</LinkListLink>
-    </LinkList>
-  ),
+  args: {
+    icon: undefined,
+  },
 };
 
 export const Hover: Story = {
