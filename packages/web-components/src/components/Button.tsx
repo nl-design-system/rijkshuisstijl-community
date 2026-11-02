@@ -19,6 +19,7 @@ export class ButtonWebComponent extends BaseWebComponent {
 
     render(
       <Button
+        // eslint-disable-next-line sonarjs/deprecation
         appearance={(appearance as ButtonWebComponentAttributes['appearance']) ?? undefined}
         disabled={(disabled === 'true') as ButtonWebComponentAttributes['disabled']}
         {...restProps}
