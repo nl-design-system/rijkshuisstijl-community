@@ -1,0 +1,41 @@
+{%- set classes = ['utrecht-textarea utrecht-textarea--html-textarea rhc-textarea'] -%}
+ 
+{%- if name is defined -%}{%- set attributes = attributes.setAttribute('name', name) -%}{%- else -%}{%- set attributes = attributes.setAttribute('name', 'subject') -%}{%- endif -%}
+
+{%- if defaultValue is defined -%}{%- set attributes = attributes.setAttribute('value', defaultValue) -%}{%- endif -%}
+{%- if value is defined -%}{%- set attributes = attributes.setAttribute('value', value) -%}{%- endif -%}
+{%- if placeholder is defined -%}{%- set attributes = attributes.setAttribute('placeholder', placeholder) -%}{%- endif -%}
+{%- if dir is defined -%}{%- set attributes = attributes.setAttribute('dir', dir) -%}{%- else -%}{%- set attributes = attributes.setAttribute('dir', 'auto') -%}{%- endif -%}
+{%- if minLength is defined -%}{%- set attributes = attributes.setAttribute('minlength', minLength) -%}{%- endif -%}
+{%- if maxLength is defined -%}{%- set attributes = attributes.setAttribute('maxlength', maxLength) -%}{%- endif -%}
+
+{%- if required -%}
+  {%- set classes = classes|merge(['utrecht-textarea--required']) -%}
+  {%- set attributes = attributes
+    .setAttribute('aria-required', 'true') -%}
+{%- endif -%}
+{%- if inputRequired -%}
+  {%- set classes = classes|merge(['utrecht-textarea--required']) -%}
+  {%- set attributes = attributes
+    .setAttribute('required', true) -%}
+{%- endif -%}
+{%- if disabled -%}
+  {%- set attributes = attributes.setAttribute('disabled', true) -%}
+  {%- set classes = classes|merge(['utrecht-textarea--disabled']) -%}
+{%- endif -%}
+{%- if readOnly -%}
+  {%- set classes = classes|merge(['utrecht-textarea--readonly']) -%}
+  {%- set attributes = attributes
+    .setAttribute('readonly', true) -%}
+{%- endif -%}
+{%- if invalid -%}
+  {%- set classes = classes|merge(['utrecht-textarea--invalid']) -%}
+  {%- set attributes = attributes
+    .setAttribute('aria-invalid', 'true') -%}
+{%- endif -%}
+
+{%- if className  -%}
+  {%- set classes = classes|merge([className]) -%}
+{%- endif -%}
+
+<textarea {{ attributes.addClass(classes) }} aria-label="textarea-label"></textarea>
