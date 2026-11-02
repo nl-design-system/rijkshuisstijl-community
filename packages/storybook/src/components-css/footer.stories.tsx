@@ -118,8 +118,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: () => (
-    <footer className="rhc-page-footer rhc-page-section">
+  render: (args) => (
+    <footer {...args} className="rhc-page-footer rhc-page-section">
       <div className="rhc-page-section__content">
         <div className="rhc-page-footer__primary">
           <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
@@ -140,8 +140,8 @@ export const Default: Story = {
 };
 
 export const TaglineInColumn: Story = {
-  render: () => (
-    <footer className="rhc-page-footer rhc-page-section">
+  render: (args) => (
+    <footer {...args} className="rhc-page-footer rhc-page-section">
       <div className="rhc-page-section__content">
         <div className="rhc-page-footer__primary">
           <h2 className="rhc-visually-hidden">Footer heading</h2>
@@ -161,8 +161,8 @@ export const TaglineInColumn: Story = {
 };
 
 export const PrimaryOnly: Story = {
-  render: () => (
-    <footer className="rhc-page-footer rhc-page-section">
+  render: (args) => (
+    <footer {...args} className="rhc-page-footer rhc-page-section">
       <div className="rhc-page-section__content">
         <div className="rhc-page-footer__primary">
           <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
@@ -176,8 +176,8 @@ export const PrimaryOnly: Story = {
 };
 
 export const Compact: Story = {
-  render: () => (
-    <footer className="rhc-page-footer rhc-page-footer--compact rhc-page-section">
+  render: (args) => (
+    <footer {...args} className="rhc-page-footer rhc-page-footer--compact rhc-page-section">
       <div className="rhc-page-footer__secondary rhc-page-section__content">
         <div className="rhc-page-footer__tagline">De Rijksoverheid. Voor Nederland</div>
         <Separator className="rhc-page-footer--compact__separator" />
@@ -188,8 +188,8 @@ export const Compact: Story = {
 };
 
 export const CompactWithoutTagline: Story = {
-  render: () => (
-    <footer className="rhc-page-footer rhc-page-footer--compact rhc-page-section">
+  render: (args) => (
+    <footer {...args} className="rhc-page-footer rhc-page-footer--compact rhc-page-section">
       <div className="rhc-page-footer__secondary rhc-page-section__content">
         <Separator className="rhc-page-footer--compact__separator" />
         <FooterNavbarLinks />
