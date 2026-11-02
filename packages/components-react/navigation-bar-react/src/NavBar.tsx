@@ -293,7 +293,7 @@ export const NavBar = ({
   }, [isMegamenuOpen]);
 
   return (
-    <div className={clsx('rhc-nav-bar', { 'is-open': isMegamenuOpen })}>
+    <div className={clsx('rhc-nav-bar', { 'is-open': isMegamenuOpen })} ref={ref} {...restProps}>
       <h2 className="rhc-visually-hidden">Hoofd navigatie</h2>
       {identity && (
         <div className="rhc-nav-bar__slot-identity">
@@ -326,12 +326,7 @@ export const NavBar = ({
             )}
             {items && (
               <div className="rhc-nav-bar__slot rhc-nav-bar__slot--primary" ref={itemsSlotRef}>
-                <nav
-                  aria-label="todo-geefnaam"
-                  className={clsx('rhc-nav-bar__nav', className)}
-                  ref={ref}
-                  {...restProps}
-                >
+                <nav aria-label="primary-navigation" className={clsx('rhc-nav-bar__nav', className)}>
                   <ul className="rhc-nav-bar__list">
                     {items.map((item) => (
                       <NavBarItem key={item.id} {...item} />
@@ -342,12 +337,7 @@ export const NavBar = ({
             )}
             {endItems && (
               <div className="rhc-nav-bar__slot rhc-nav-bar__slot--secondary" ref={endItemsSlotRef}>
-                <nav
-                  aria-label="todo-geefnaam"
-                  className={clsx('rhc-nav-bar__nav', className)}
-                  ref={ref}
-                  {...restProps}
-                >
+                <nav aria-label="secondary-navigation" className={clsx('rhc-nav-bar__nav', className)}>
                   <ul className="rhc-nav-bar__list">{endItems}</ul>
                 </nav>
               </div>
@@ -378,12 +368,7 @@ export const NavBar = ({
           <div className="rhc-nav-bar__slots">
             {items && (
               <div className="rhc-nav-bar__slot">
-                <nav
-                  aria-label="todo-geefnaam"
-                  className={clsx('rhc-nav-bar__nav', className)}
-                  ref={ref}
-                  {...restProps}
-                >
+                <nav aria-label="primary-navigation-mobile" className={clsx('rhc-nav-bar__nav', className)}>
                   <ul className="rhc-nav-bar__list">
                     {items.map((item) => (
                       <NavBarItem key={item.id} {...item} />
@@ -394,12 +379,7 @@ export const NavBar = ({
             )}
             {endItems && (
               <div className="rhc-nav-bar__slot">
-                <nav
-                  aria-label="todo-geefnaam"
-                  className={clsx('rhc-nav-bar__nav', className)}
-                  ref={ref}
-                  {...restProps}
-                >
+                <nav aria-label="secondary-navigation-mobile" className={clsx('rhc-nav-bar__nav', className)}>
                   <ul className="rhc-nav-bar__list">{endItems}</ul>
                 </nav>
               </div>
