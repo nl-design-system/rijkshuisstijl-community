@@ -122,29 +122,29 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: () => {
+  render: (args) => {
     const primary = <FooterLinks />;
     const secondary = <FooterFooterLinks />;
-    return <Footer primary={primary} secondary={secondary} />;
+    return <Footer {...args} primary={primary} secondary={secondary} />;
   },
 };
 
 export const TaglineInColumn: Story = {
-  render: () => {
+  render: (args) => {
     const primary = <FooterLinks3 />;
     const secondary = <FooterFooterLinks />;
-    return <Footer primary={primary} secondary={secondary} />;
+    return <Footer {...args} primary={primary} secondary={secondary} />;
   },
 };
 
 export const Compact: Story = {
-  render: () => {
+  render: (args) => {
     const secondary = (
       <>
         <div className="rhc-page-footer__tagline rhc-page-footer--compact__tagline">Overheid.nl</div>
         <FooterFooterLinks />
       </>
     );
-    return <Footer secondary={secondary} />;
+    return <Footer {...args} secondary={secondary} />;
   },
 };

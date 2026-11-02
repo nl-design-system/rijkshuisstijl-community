@@ -22,6 +22,7 @@
     "build": "npm-run-all clean build:figma-tokens build:style-dictionary",
     "build:figma-tokens": "node ./src/transforms/splitTokens/token-transformer.mjs",
     "build:style-dictionary": "node --experimental-strip-types ./build.mts",
+    "lint-build": "s=0; for f in dist/*/tokens.json; do design-tokens-lint --max-errors=165 \"$f\" || s=1; done; exit $s",
     "typecheck": "tsc --noEmit",
     "watch": "npm-run-all watch:**",
     "watch:style-dictionary": "chokidar 'src/**/*.tokens.json' 'figma/**/*.tokens.json' --follow-symlinks --command 'pnpm run build' --ignore '/src/generated/'",
@@ -29,6 +30,7 @@
     "test:watch": "vitest run --watch"
   },
   "devDependencies": {
+    "@nl-design-system-community/design-tokens-lint": "1.1.0",
     "@tokens-studio/sd-transforms": "2.0.3",
     "chokidar-cli": "3.0.0",
     "rimraf": "6.1.3",

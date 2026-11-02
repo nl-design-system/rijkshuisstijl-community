@@ -15,18 +15,19 @@
   },
   "engines": {
     "//": "Update @types/node to match the highest node version here",
-    "node": ">=24.15 <=25",
+    "node": ">=24.15",
     "pnpm": "^11.4.0"
   },
   "overrides": {
-    "next": ">=16.3.3"
+    "next": ">=16.4.1"
   },
   "workspaces": [
     "./apps/**",
     "./packages/*",
     "./packages/components-css/*",
     "./packages/components-react/*",
-    "./proprietary/*"
+    "./proprietary/*",
+    "!**/dist/**"
   ],
   "dependencies": {
     "http-server": "14.1.1",
@@ -81,6 +82,7 @@
     "lint:md": "markdownlint '**/*.md'",
     "lint:package-json": "npmPkgJsonLint '**/package.json'",
     "lint:package-lock": "pnpm ls --recursive",
+    "lint-build": "pnpm run --no-bail --recursive lint-build",
     "lint-fix": "npm-run-all --continue-on-error lint-fix:** prettier",
     "lint-fix:css": "stylelint --fix '**/*.{css,scss}'",
     "lint-fix:js": "eslint --fix --report-unused-disable-directives .",
