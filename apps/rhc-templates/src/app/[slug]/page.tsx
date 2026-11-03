@@ -25,7 +25,7 @@ const allComponents = components.map((obj) => {
   };
 });
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return allComponents;
 }
 
