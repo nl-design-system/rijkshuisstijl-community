@@ -77,6 +77,12 @@ const ComponentPage = ({ component }: ComponentPageProps) => {
             <Article>
               <Heading level={1}>{heading}</Heading>
               {description && <Paragraph purpose="lead">{description}</Paragraph>}
+              <dl>
+                <dt>NLDS Status:</dt>
+                <dd>{component.nlStatus}</dd>
+                <dt>Oorsprong:</dt>
+                <dd>{component.oorsprong}</dd>
+              </dl>
               <ActionGroup direction="column">
                 {storybookURL && (
                   <ButtonLink appearance="secondary-action-button" href={storybookURL} target="_blank">

@@ -413,12 +413,6 @@ export default function Componenten({ maxComponentsPerPage = 200 }: Readonly<Com
                             })
                           }
                         >
-                          <dl>
-                            <dt>NLDS Status:</dt>
-                            <dd>{component.nlStatus}</dd>
-                            <dt>Oorsprong:</dt>
-                            <dd>{component.oorsprong}</dd>
-                          </dl>
                           <BadgeList
                             aria-label={`Framework opties voor ${component.heading}`}
                             className="rhc-templates-badgelist"
