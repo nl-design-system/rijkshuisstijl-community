@@ -116,8 +116,12 @@ const actionGroupStory = {
   component: ActionGroup,
   args: {
     children: [
-      <Button key="button-1" purpose="primary">Primary button</Button>,
-      <Button key="button-2" purpose="secondary">Secondary button</Button>,
+      <Button key="button-1" purpose="primary">
+        Primary button
+      </Button>,
+      <Button key="button-2" purpose="secondary">
+        Secondary button
+      </Button>,
     ],
   },
   parameters: {
@@ -253,7 +257,7 @@ const dataSummaryStory = {
     ],
   },
   parameters: {
-    layout: 'block',
+    layout: 'center',
   },
 };
 
@@ -272,7 +276,9 @@ const drawerStory = {
       position: 'relative',
     },
     children: [
-      <Heading key="drawer-heading" level={1}>Lorem ipsum</Heading>,
+      <Heading key="drawer-heading" level={1}>
+        Lorem ipsum
+      </Heading>,
       <Paragraph key="drawer-paragraph">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -319,7 +325,7 @@ const formFieldStory = {
     invalid: true,
   },
   parameters: {
-    layout: 'block',
+    layout: 'center',
   },
 };
 
@@ -335,7 +341,7 @@ const formFieldRadioGroupStory = {
     ),
   },
   parameters: {
-    layout: 'block',
+    layout: 'center',
   },
 };
 
@@ -351,7 +357,7 @@ const formFieldCheckboxGroupStory = {
     ),
   },
   parameters: {
-    layout: 'block',
+    layout: 'center',
   },
 };
 
@@ -368,7 +374,7 @@ const formFieldSelectStory = {
     defaultValue: 'optie 2',
   },
   parameters: {
-    layout: 'block',
+    layout: 'center',
   },
 };
 
@@ -391,7 +397,7 @@ const formFieldTextAreaStory = {
     label: 'Onderwerp',
   },
   parameters: {
-    layout: 'block',
+    layout: 'center',
   },
 };
 
@@ -528,7 +534,7 @@ const orderedListStory = {
     ],
   },
   parameters: {
-    layout: 'block',
+    layout: 'center',
   },
 };
 
@@ -745,7 +751,7 @@ const unorderedListStory = {
     ],
   },
   parameters: {
-    layout: 'block',
+    layout: 'center',
   },
 };
 
