@@ -25,6 +25,7 @@ import React, {
   useRef,
   useState,
 } from 'react';
+import { mapping as componentIllustration } from './ComponentIllustration';
 import { type ComponentData } from './transform';
 import allComponentsData from './transform';
 import SharedFooter from '../shared/footer';
@@ -32,12 +33,14 @@ import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
 import './index.css';
 
-const frameworkOptions: string[] = ['CSS', 'React', 'Angular', 'Web Components', 'Twig'];
+const slugify = (arg: string) => arg.toLowerCase().replaceAll(/\W+/g, '-');
+
+const frameworkOptions: string[] = ['CSS', 'React', 'Angular', 'Web Components', 'Twig', 'Figma'];
 
 const filterComponents = (data: ComponentData[], searchTerm: string, frameworks: string[]) => {
   return data.filter((component) => {
     const searchMatch =
-      component.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      component.heading.toLowerCase().includes(searchTerm.toLowerCase()) ||
       component.description.toLowerCase().includes(searchTerm.toLowerCase());
 
     const frameworkMatch = frameworks.length === 0 || frameworks.some((f) => component.frameworks.includes(f));
@@ -92,7 +95,11 @@ const ActiveFiltersBadgeList = ({ onRemoveFilter, selectedFrameworks }: ActiveFi
   );
 };
 
-export default function Componenten() {
+export interface ComponentenProps {
+  maxComponentsPerPage?: number;
+}
+
+export default function Componenten({ maxComponentsPerPage = 200 }: Readonly<ComponentenProps>) {
   const [searchTerm, setSearchTerm] = useState('');
   const [submittedSearchTerm, setSubmittedSearchTerm] = useState('');
   const [selectedFrameworks, setSelectedFrameworks] = useState<string[]>([]);
@@ -124,8 +131,6 @@ export default function Componenten() {
     () => filterComponents(allComponentsData, submittedSearchTerm, selectedFrameworks),
     [submittedSearchTerm, selectedFrameworks],
   );
-
-  const maxComponentsPerPage = 5;
 
   const onPaginationLinkClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -392,22 +397,22 @@ export default function Componenten() {
                         <Card
                           className="rhc-templates-card"
                           description={<Paragraph>{component.description}</Paragraph>}
-                          href={component.href}
-                          linkLabel={component.linkLabel}
-                          target="_blank"
-                          title={component.title}
+                          href={`/${slugify(component.heading)}`}
+                          linkLabel={`Bekijk de ${component.heading} component`}
+                          title={component.storybookLabel}
                           heading={
                             <Heading appearanceLevel={4} level={2}>
                               {component.heading}
                             </Heading>
                           }
+                          image={
+                            Object.hasOwn(componentIllustration, component.heading) &&
+                            componentIllustration[component.heading]({
+                              title: component.heading,
+                              labelId: `${slugify(component.heading)}-img-caption`,
+                            })
+                          }
                         >
-                          <dl>
-                            <dt>NLDS Status:</dt>
-                            <dd>{component.nlStatus}</dd>
-                            <dt>Oorsprong:</dt>
-                            <dd>{component.oorsprong}</dd>
-                          </dl>
                           <BadgeList
                             aria-label={`Framework opties voor ${component.heading}`}
                             className="rhc-templates-badgelist"

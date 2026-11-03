@@ -1,0 +1,90 @@
+.rhc-component-example {
+  pointer-events: none;
+}
+
+.rhc-component-example--block,
+.rhc-component-example--page-body {
+  padding-inline: 1em;
+  padding-block: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rhc-component-example--window {
+  padding-inline: 1em;
+  padding-block: 1em;
+}
+
+.rhc-component-example--block .rhc-component-example__content {
+  max-inline-size: 60ch;
+  zoom: 0.5;
+}
+.rhc-component-example--page-body .rhc-component-example__content {
+  max-inline-size: 80ch;
+  zoom: 0.4;
+}
+
+.rhc-component-example--window .rhc-component-example__content {
+  max-inline-size: 80ch;
+  min-inline-size: 40em;
+  min-block-size: 40em;
+  zoom: 0.4;
+}
+
+.rhc-component-example--center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 1em;
+  padding-block: 1em;
+}
+
+.rhc-component-example__content {
+}
+
+.rhc-component-example--graph-paper-lines {
+  --_clippy-graph-paper-cell-size: var(--clippy-graph-paper-cell-size, 1lh);
+  --_clippy-graph-paper-line-size: var(--clippy-graph-paper-line-size, 1px);
+  --_clippy-graph-paper-line-color: var(--clippy-graph-paper-line-color, rgb(0 0 0 / 6%));
+  --_clippy-graph-paper-minor-line-color: var(
+    --clippy-graph-paper-minor-line-color,
+    var(--_clippy-graph-paper-line-color)
+  );
+  --_clippy-graph-paper-major-line-color: var(
+    --clippy-graph-paper-major-line-color,
+    var(--_clippy-graph-paper-line-color)
+  );
+  --_clippy-graph-paper-major-line-interval: var(--clippy-graph-paper-major-line-interval, 4);
+  background-image:
+    linear-gradient(
+      to right,
+      var(--_clippy-graph-paper-minor-line-color) var(--_clippy-graph-paper-line-size),
+      transparent var(--_clippy-graph-paper-line-size)
+    ),
+    linear-gradient(
+      to bottom,
+      var(--_clippy-graph-paper-minor-line-color) var(--_clippy-graph-paper-line-size),
+      transparent var(--_clippy-graph-paper-line-size)
+    ),
+    linear-gradient(
+      to right,
+      var(--_clippy-graph-paper-major-line-color) var(--_clippy-graph-paper-line-size),
+      transparent var(--_clippy-graph-paper-line-size)
+    ),
+    linear-gradient(
+      to bottom,
+      var(--_clippy-graph-paper-major-line-color) var(--_clippy-graph-paper-line-size),
+      transparent var(--_clippy-graph-paper-line-size)
+    );
+  background-position: calc(var(--_clippy-graph-paper-line-size) * -1) calc(var(--_clippy-graph-paper-line-size) * -1);
+  background-size:
+    var(--_clippy-graph-paper-cell-size) var(--_clippy-graph-paper-cell-size),
+    var(--_clippy-graph-paper-cell-size) var(--_clippy-graph-paper-cell-size),
+    calc(var(--_clippy-graph-paper-cell-size) * var(--_clippy-graph-paper-major-line-interval))
+      calc(var(--_clippy-graph-paper-cell-size) * var(--_clippy-graph-paper-major-line-interval)),
+    calc(var(--_clippy-graph-paper-cell-size) * var(--_clippy-graph-paper-major-line-interval))
+      calc(var(--_clippy-graph-paper-cell-size) * var(--_clippy-graph-paper-major-line-interval));
+
+  /* temporary border for a separator in the rhc-card */
+  border-block-end: 1px solid var(--_clippy-graph-paper-line-color);
+}

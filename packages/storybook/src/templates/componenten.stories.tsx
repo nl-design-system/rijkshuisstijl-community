@@ -6,6 +6,9 @@ const meta: Meta = {
   title: 'Componenten',
   id: 'rhc-templates-componenten',
   component: Page,
+  args: {
+    maxComponentsPerPage: 5,
+  },
   parameters: {
     layout: 'fullscreen',
     isPage: true,
