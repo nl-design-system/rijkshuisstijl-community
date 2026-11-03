@@ -753,7 +753,7 @@ interface ExampleOptions {
   layout?: string;
 }
 
-type ExampleComponent = ({ labelId }: { labelId: string }) => ReactNode;
+type ExampleComponent = ({ title, labelId }: { title: string; labelId: string }) => ReactNode;
 
 /**
  * Every design system component needs an example image that demonstrates the component
@@ -766,8 +766,8 @@ const storyRenderer = (meta: Meta, story: StoryObj, options: ExampleOptions = {}
   const args = story.args || {};
   const { layout } = options;
 
-  const CustomExampleComponent = ({ labelId }: { labelId: string }) => (
-    <HTMLImage label={`Voorbeeld van de component "${meta.title}"`} labelId={labelId}>
+  const CustomExampleComponent = ({ title, labelId }: { title: string; labelId: string }) => (
+    <HTMLImage label={`Voorbeeld van de component "${title}"`} labelId={labelId}>
       <div
         className={clsx('rhc-component-example', {
           'rhc-component-example--center': layout === 'center',
