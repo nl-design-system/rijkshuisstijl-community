@@ -408,7 +408,7 @@ export default function Componenten({ maxComponentsPerPage = 200 }: Readonly<Com
                           image={
                             Object.hasOwn(componentIllustration, component.heading) &&
                             componentIllustration[component.heading]({
-                              labelId: `${slugify(component.heading)}-img-caption}`,
+                              labelId: `${slugify(component.heading)}-img-caption`,
                             })
                           }
                         >

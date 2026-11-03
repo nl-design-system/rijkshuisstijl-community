@@ -94,7 +94,6 @@ const ComponentPage = ({ component }: ComponentPageProps) => {
                   </ButtonLink>
                 )}
               </ActionGroup>
-              {/* <pre>{JSON.stringify(component, null, 2)}</pre> */}
               {figmaEmbedURL && (
                 <>
                   <Heading level={2} id="figma">

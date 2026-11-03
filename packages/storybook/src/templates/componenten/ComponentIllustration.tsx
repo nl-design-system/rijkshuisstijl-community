@@ -1,4 +1,3 @@
-// import { HTMLImage } from '@nl-design-system-community/documentation-components/src/html-image/html-image';
 import {
   AccordionProvider,
   ActionGroup,
@@ -73,7 +72,6 @@ const alertStory = {
   component: Alert,
   args: {
     type: 'info',
-    // children: <Heading level={3}>Heading</Heading>,
     children: (
       <>
         <Heading level={3}>Heading</Heading>
@@ -118,8 +116,8 @@ const actionGroupStory = {
   component: ActionGroup,
   args: {
     children: [
-      <Button purpose="primary">Primary button</Button>,
-      <Button purpose="secondary">Secondary button</Button>,
+      <Button key="button-1" purpose="primary">Primary button</Button>,
+      <Button key="button-2" purpose="secondary">Secondary button</Button>,
     ],
   },
   parameters: {
@@ -274,8 +272,8 @@ const drawerStory = {
       position: 'relative',
     },
     children: [
-      <Heading level={1}>Lorem ipsum</Heading>,
-      <Paragraph>
+      <Heading key="drawer-heading" level={1}>Lorem ipsum</Heading>,
+      <Paragraph key="drawer-paragraph">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -401,10 +399,10 @@ const figureStory = {
   component: Figure,
   args: {
     children: [
-      <RoundedCorner position="start-end" size="md">
+      <RoundedCorner key="figure-rounded-corner" position="start-end" size="md">
         <Image alt="Multicolored tulip field" src="/placeholder.jpg" width={640} />
       </RoundedCorner>,
-      <FigureCaption>{'Bijschrift (figcaption) van afbeelding.'}</FigureCaption>,
+      <FigureCaption key="figure-caption">{'Bijschrift (figcaption) van afbeelding.'}</FigureCaption>,
     ],
   },
   parameters: {
@@ -524,9 +522,9 @@ const orderedListStory = {
   component: OrderedList,
   args: {
     children: [
-      <OrderedListItem>Boter</OrderedListItem>,
-      <OrderedListItem>Kaas</OrderedListItem>,
-      <OrderedListItem>Eieren</OrderedListItem>,
+      <OrderedListItem key="ordered-list-item-1">Boter</OrderedListItem>,
+      <OrderedListItem key="ordered-list-item-2">Kaas</OrderedListItem>,
+      <OrderedListItem key="ordered-list-item-3">Eieren</OrderedListItem>,
     ],
   },
   parameters: {
@@ -741,9 +739,9 @@ const unorderedListStory = {
   component: UnorderedList,
   args: {
     children: [
-      <UnorderedListItem>Boter</UnorderedListItem>,
-      <UnorderedListItem>Kaas</UnorderedListItem>,
-      <UnorderedListItem>Eieren</UnorderedListItem>,
+      <UnorderedListItem key="unordered-list-item-1">Boter</UnorderedListItem>,
+      <UnorderedListItem key="unordered-list-item-2">Kaas</UnorderedListItem>,
+      <UnorderedListItem key="unordered-list-item-3">Eieren</UnorderedListItem>,
     ],
   },
   parameters: {
@@ -768,7 +766,6 @@ const storyRenderer = (meta: Meta, story: StoryObj, options: ExampleOptions = {}
   const args = story.args || {};
   const { layout } = options;
 
-  // return () => <Component {...defaultArgs} {...args}></Component>;
   const CustomExampleComponent = ({ labelId }: { labelId: string }) => (
     <HTMLImage label={`Voorbeeld van de component "${meta.title}"`} labelId={labelId}>
       <div
