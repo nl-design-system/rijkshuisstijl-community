@@ -122,7 +122,14 @@ const ComponentPage = ({ component }: ComponentPageProps) => {
                   </Heading>
                   <details>
                     <summary>Bekijk Figma</summary>
-                    <iframe src={figmaEmbedURL} height="450px" width="100%" allowFullScreen frameBorder={0}></iframe>
+                    <iframe
+                      aria-label={`De component "${component.heading}" in Figma`}
+                      src={figmaEmbedURL}
+                      height="450px"
+                      width="100%"
+                      allowFullScreen
+                      frameBorder={0}
+                    ></iframe>
                   </details>
                 </>
               )}
