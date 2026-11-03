@@ -9,6 +9,7 @@ import {
   SideNavLink,
   SideNavList,
 } from '@rijkshuisstijl-community/components-react';
+import { BadgeList, DataBadge } from '@utrecht/component-library-react';
 import {
   PageBodyContainer,
   PageBodyContent,
@@ -100,6 +101,20 @@ const ComponentPage = ({ component }: ComponentPageProps) => {
                   </ButtonLink>
                 )}
               </ActionGroup>
+              <Heading level={2} id="supported-techniques">
+                Ondersteunde technieken
+              </Heading>
+              <BadgeList
+                aria-label={`Ondersteunde technieken voor ${component.heading}`}
+                className="rhc-templates-badgelist"
+                role="group"
+              >
+                {component.frameworks.map((framework) => (
+                  <DataBadge key={framework} value={framework}>
+                    {framework}
+                  </DataBadge>
+                ))}
+              </BadgeList>
               {figmaEmbedURL && (
                 <>
                   <Heading level={2} id="figma">
