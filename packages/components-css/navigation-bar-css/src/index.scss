@@ -17,6 +17,10 @@
   display: flex;
   flex-direction: row;
 
+  &__identity {
+    padding-inline-end: var(--rhc-navigation-bar-item-padding-inline-end);
+  }
+
   &__items {
     display: flex;
     flex-direction: row;
@@ -25,12 +29,28 @@
   }
 
   &-megamenu {
+    &:has([popover]:popover-open) button {
+      background-color: var(--rhc-navigation-bar-button-active-background-color);
+    }
+
     &__trigger {
       anchor-name: --navbar-megamenu;
+
+      &:hover {
+        background-color: var(--rhc-navigation-bar-link-hover-background-color);
+      }
+
+      .utrecht-icon {
+        @media (width >= 768px) {
+          block-size: 24px;
+          inline-size: 24px;
+        }
+      }
     }
 
     &__content[popover] {
-      background: var(--rhc-navigation-bar-mega-menu-background-color);
+      background-color: var(--rhc-navigation-bar-mega-menu-background-color);
+      border: 0;
       color: var(--rhc-navigation-bar-mega-menu-color);
       inset: auto;
       padding-block-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-end);
