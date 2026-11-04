@@ -1,4 +1,5 @@
-import LanguageNavigation from '@rijkshuisstijl-community/language-navigation-react';
+import { Icon } from '@rijkshuisstijl-community/icon-react';
+import { LanguageNavigation } from '@rijkshuisstijl-community/language-navigation-react';
 import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 import { LinkList, LinkListLink } from '@rijkshuisstijl-community/link-list-react';
 
@@ -9,13 +10,16 @@ export default function NavBarFionn() {
       <div className="__rhc-nav-bar__items">
         <div>
           <LinkButton className="__rhc-nav-bar-megamenu__trigger" popoverTarget="navbar-megamenu">
-            menu
+            <Icon
+              icon={false ? 'kruis' : 'menu'}
+            />
+            Kies een onderwerp op dienst
           </LinkButton>
           <div className="__rhc-nav-bar-megamenu__content" id="navbar-megamenu" popover="auto">
             coolio
           </div>
         </div>
-        <LinkList style={{ flexDirection: 'row', gap: '1rem' }}>
+        <LinkList className="fd-row">
           <LanguageNavigation defaultSelectedLanguage="Nederlands">
             <LanguageNavigation.Trigger />
             <LanguageNavigation.Content>
@@ -24,9 +28,7 @@ export default function NavBarFionn() {
               <LanguageNavigation.Item href="#" lang="de" languageName="Deutsch" />
             </LanguageNavigation.Content>
           </LanguageNavigation>
-          <LinkListLink>Link</LinkListLink>
-          <LinkListLink>Link</LinkListLink>
-          <LinkListLink>Link</LinkListLink>
+          <LinkListLink>Contact</LinkListLink>
         </LinkList>
       </div>
     </div>

@@ -8,16 +8,22 @@
 @forward "@rijkshuisstijl-community/link-css/dist/index.css";
 @forward "@rijkshuisstijl-community/heading-css/dist/index.css";
 
+.fd-row.fd-row.fd-row {
+  flex-direction: row;
+}
+
 .__rhc-nav-bar {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
+
   &__items {
     display: flex;
-    flex-grow: 1;
     flex-direction: row;
+    flex-grow: 1;
     justify-content: space-between;
   }
+
   &-megamenu {
     &__trigger {
       anchor-name: --navbar-megamenu;
