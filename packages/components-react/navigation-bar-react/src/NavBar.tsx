@@ -12,6 +12,7 @@ import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import { Separator } from '@rijkshuisstijl-community/separator-react/no-side-effects';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useEffect, useRef, useState } from 'react';
+import NavBarFionn from './NavBarFionn';
 
 export interface NavBarIdentityProps {
   value: ReactNode;
@@ -293,103 +294,108 @@ export const NavBar = ({
   }, [isMegamenuOpen]);
 
   return (
-    <div className={clsx('rhc-nav-bar', { 'is-open': isMegamenuOpen })} ref={ref} {...restProps}>
-      <h2 className="rhc-visually-hidden">Hoofd navigatie</h2>
-      {identity && (
-        <div className="rhc-nav-bar__slot-identity">
-          <NavBarIdentity {...identity} />
-        </div>
-      )}
-
-      {megamenu ? (
-        <div className={clsx('rhc-nav-bar__slot-megamenu', { 'is-navbar-megamenu-open': isMegamenuOpen })}>
-          <ul className="rhc-nav-bar__list">
-            <li className="rhc-nav-bar__item" ref={hamburgerLiRef}>
-              <LinkButton
-                aria-expanded={isMegamenuOpen}
-                className={clsx('rhc-nav-bar__link')}
-                onClick={() => setIsMegamenuOpen((prev) => !prev)}
-              >
-                <Icon icon={isMegamenuOpen && globalThis.matchMedia('(max-width: 768px)').matches ? 'kruis' : 'menu'} />
-
-                <span className={clsx('rhc-nav-bar__label', 'rhc-visually-hidden-mobile')}>
-                  Kies een onderwerp of dienst
-                </span>
-              </LinkButton>
-            </li>
-          </ul>
-          <div className="rhc-nav-bar__slots">
-            {isMegamenuOpen && (
-              <div className="rhc-nav-bar__megamenu" ref={megamenuRef}>
-                {megamenu}
-              </div>
-            )}
-            {items && (
-              <div className="rhc-nav-bar__slot rhc-nav-bar__slot--primary" ref={itemsSlotRef}>
-                <nav aria-label="primary-navigation" className={clsx('rhc-nav-bar__nav', className)}>
-                  <ul className="rhc-nav-bar__list">
-                    {items.map((item) => (
-                      <NavBarItem key={item.id} {...item} />
-                    ))}
-                  </ul>
-                </nav>
-              </div>
-            )}
-            {endItems && (
-              <div className="rhc-nav-bar__slot rhc-nav-bar__slot--secondary" ref={endItemsSlotRef}>
-                <nav aria-label="secondary-navigation" className={clsx('rhc-nav-bar__nav', className)}>
-                  <ul className="rhc-nav-bar__list">{endItems}</ul>
-                </nav>
-              </div>
-            )}
-            {isMegamenuOpen && (
-              <Button
-                aria-label="Sluit menu"
-                className="rhc-nav-bar__megamenu__btn-close"
-                purpose="subtle"
-                onClick={() => setIsMegamenuOpen(false)}
-              >
-                <Icon icon="kruis" />
-                Sluiten
-              </Button>
-            )}
+    <>
+      <div className={clsx('rhc-nav-bar', { 'is-open': isMegamenuOpen })} ref={ref} {...restProps}>
+        <h2 className="rhc-visually-hidden">Hoofd navigatie</h2>
+        {identity && (
+          <div className="rhc-nav-bar__slot-identity">
+            <NavBarIdentity {...identity} />
           </div>
-        </div>
-      ) : (
-        <div className={clsx('rhc-nav-bar__slot-main', { 'is-navbar-main-open': isMainNavOpen })}>
-          <LinkButton
-            aria-expanded={isMainNavOpen}
-            className="rhc-nav-bar__slot-main__btn-trigger rhc-nav-bar__link"
-            data-role="toggle"
-            onClick={() => setIsMainNavOpen((prev) => !prev)}
-          >
-            <Icon icon={isMainNavOpen ? 'kruis' : 'menu'} />
-          </LinkButton>
-          <div className="rhc-nav-bar__slots">
-            {items && (
-              <div className="rhc-nav-bar__slot">
-                <nav aria-label="primary-navigation-mobile" className={clsx('rhc-nav-bar__nav', className)}>
-                  <ul className="rhc-nav-bar__list">
-                    {items.map((item) => (
-                      <NavBarItem key={item.id} {...item} />
-                    ))}
-                  </ul>
-                </nav>
-              </div>
-            )}
-            {endItems && (
-              <div className="rhc-nav-bar__slot">
-                <nav aria-label="secondary-navigation-mobile" className={clsx('rhc-nav-bar__nav', className)}>
-                  <ul className="rhc-nav-bar__list">{endItems}</ul>
-                </nav>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
+        )}
 
-      {children}
-    </div>
+        {megamenu ? (
+          <div className={clsx('rhc-nav-bar__slot-megamenu', { 'is-navbar-megamenu-open': isMegamenuOpen })}>
+            <ul className="rhc-nav-bar__list">
+              <li className="rhc-nav-bar__item" ref={hamburgerLiRef}>
+                <LinkButton
+                  aria-expanded={isMegamenuOpen}
+                  className={clsx('rhc-nav-bar__link')}
+                  onClick={() => setIsMegamenuOpen((prev) => !prev)}
+                >
+                  <Icon
+                    icon={isMegamenuOpen && globalThis.matchMedia('(max-width: 768px)').matches ? 'kruis' : 'menu'}
+                  />
+
+                  <span className={clsx('rhc-nav-bar__label', 'rhc-visually-hidden-mobile')}>
+                    Kies een onderwerp of dienst
+                  </span>
+                </LinkButton>
+              </li>
+            </ul>
+            <div className="rhc-nav-bar__slots">
+              {isMegamenuOpen && (
+                <div className="rhc-nav-bar__megamenu" ref={megamenuRef}>
+                  {megamenu}
+                </div>
+              )}
+              {items && (
+                <div className="rhc-nav-bar__slot rhc-nav-bar__slot--primary" ref={itemsSlotRef}>
+                  <nav aria-label="primary-navigation" className={clsx('rhc-nav-bar__nav', className)}>
+                    <ul className="rhc-nav-bar__list">
+                      {items.map((item) => (
+                        <NavBarItem key={item.id} {...item} />
+                      ))}
+                    </ul>
+                  </nav>
+                </div>
+              )}
+              {endItems && (
+                <div className="rhc-nav-bar__slot rhc-nav-bar__slot--secondary" ref={endItemsSlotRef}>
+                  <nav aria-label="secondary-navigation" className={clsx('rhc-nav-bar__nav', className)}>
+                    <ul className="rhc-nav-bar__list">{endItems}</ul>
+                  </nav>
+                </div>
+              )}
+              {isMegamenuOpen && (
+                <Button
+                  aria-label="Sluit menu"
+                  className="rhc-nav-bar__megamenu__btn-close"
+                  purpose="subtle"
+                  onClick={() => setIsMegamenuOpen(false)}
+                >
+                  <Icon icon="kruis" />
+                  Sluiten
+                </Button>
+              )}
+            </div>
+          </div>
+        ) : (
+          <div className={clsx('rhc-nav-bar__slot-main', { 'is-navbar-main-open': isMainNavOpen })}>
+            <LinkButton
+              aria-expanded={isMainNavOpen}
+              className="rhc-nav-bar__slot-main__btn-trigger rhc-nav-bar__link"
+              data-role="toggle"
+              onClick={() => setIsMainNavOpen((prev) => !prev)}
+            >
+              <Icon icon={isMainNavOpen ? 'kruis' : 'menu'} />
+            </LinkButton>
+            <div className="rhc-nav-bar__slots">
+              {items && (
+                <div className="rhc-nav-bar__slot">
+                  <nav aria-label="primary-navigation-mobile" className={clsx('rhc-nav-bar__nav', className)}>
+                    <ul className="rhc-nav-bar__list">
+                      {items.map((item) => (
+                        <NavBarItem key={item.id} {...item} />
+                      ))}
+                    </ul>
+                  </nav>
+                </div>
+              )}
+              {endItems && (
+                <div className="rhc-nav-bar__slot">
+                  <nav aria-label="secondary-navigation-mobile" className={clsx('rhc-nav-bar__nav', className)}>
+                    <ul className="rhc-nav-bar__list">{endItems}</ul>
+                  </nav>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {children}
+      </div>
+      <NavBarFionn />
+    </>
   );
 };
 
