@@ -8,21 +8,33 @@
 @forward "@rijkshuisstijl-community/link-css/dist/index.css";
 @forward "@rijkshuisstijl-community/heading-css/dist/index.css";
 
-.rhc-nav-menu {
-  &__trigger {
-    anchor-name: --menu;
+.__rhc-nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__items {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
   }
-  &__content[popover] {
-    background: var(--rhc-navigation-bar-mega-menu-background-color);
-    color: var(--rhc-navigation-bar-mega-menu-color);
-    inset: auto;
-    padding-block-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-end);
-    padding-block-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-start);
-    padding-inline-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-end);
-    padding-inline-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-start);
-    position: absolute;
-    position-anchor: --menu;
-    position-area: bottom span-right;
+  &-megamenu {
+    &__trigger {
+      anchor-name: --navbar-megamenu;
+    }
+
+    &__content[popover] {
+      background: var(--rhc-navigation-bar-mega-menu-background-color);
+      color: var(--rhc-navigation-bar-mega-menu-color);
+      inset: auto;
+      padding-block-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-end);
+      padding-block-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-start);
+      padding-inline-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-end);
+      padding-inline-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-start);
+      position: absolute;
+      position-anchor: --navbar-megamenu;
+      position-area: bottom span-right;
+    }
   }
 }
 
