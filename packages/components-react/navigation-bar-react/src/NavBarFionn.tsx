@@ -10,10 +10,8 @@ export default function NavBarFionn() {
       <div className="__rhc-nav-bar__items">
         <div>
           <LinkButton className="__rhc-nav-bar-megamenu__trigger" popoverTarget="navbar-megamenu">
-            <Icon
-              icon={false ? 'kruis' : 'menu'}
-            />
-            Kies een onderwerp op dienst
+            <Icon icon={false ? 'kruis' : 'menu'} />
+            Kies een onderwerp of dienst
           </LinkButton>
           <div className="__rhc-nav-bar-megamenu__content" id="navbar-megamenu" popover="auto">
             coolio
