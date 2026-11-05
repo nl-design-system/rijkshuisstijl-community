@@ -8979,8 +8979,8 @@ importers:
   proprietary/design-tokens:
     devDependencies:
       '@nl-design-system-community/design-tokens-lint':
-        specifier: 1.1.1
-        version: 1.1.1
+        specifier: 1.1.3
+        version: 1.1.3
       '@tokens-studio/sd-transforms':
         specifier: 2.0.3
         version: 2.0.3(style-dictionary@5.4.3(tslib@2.8.1))
@@ -11907,13 +11907,13 @@ packages:
   '@nl-design-system-candidate/skip-link-tokens@1.0.4':
     resolution: {integrity: sha512-MD1+m55nRqkj2eATcBNOLE8N5jWfvjJg2ax+POX8zXm49wJcBGTS6B/kK4kzIPbMuivYnxVtNlmA+Cz/upFBZA==}
 
-  '@nl-design-system-community/design-tokens-lint@1.1.1':
-    resolution: {integrity: sha512-joUtNWrbJMSGZNewLDi9kHXXzTciBYVmrDC5zNHOGby2+I/I0pEFSfF5gd//HVmIcUUSHf4lWj59+RzTC7yihw==}
+  '@nl-design-system-community/design-tokens-lint@1.1.3':
+    resolution: {integrity: sha512-ntyxa8psCNVy4bqueumLqUB+uXwcXuVqMqbsxNj+ijtdN+7ymesC82k876FHoGL72Vt42Zw6Caup6pSAs8MZ/A==}
     engines: {node: '>=20.12.0'}
     hasBin: true
 
-  '@nl-design-system-community/design-tokens-schema@2.6.0':
-    resolution: {integrity: sha512-Ndybu213cN3Ef1uSh5moKKqsqEwgkzX6+uXY6XkFJqe7VW08Fclbb90eUfNllmknqYrwWA/LC2f+WHRNwatxjQ==}
+  '@nl-design-system-community/design-tokens-schema@2.7.0':
+    resolution: {integrity: sha512-de6L5Ljpnk1CFmM8n8T9L+hXUM2VeNmE7E9+TFxEGIT/vvnbgUKWrhP0IK6jpEJW0MUksUb5BwJkQYkX07O0Vg==}
 
   '@nl-design-system-unstable/basis-design-tokens@3.1.1':
     resolution: {integrity: sha512-eENh3scHg7ZXGERZy9SL7wdVi56sg1gqnSEAhC2QpWf60pd5p3FClPoQTI4/hISFnpFKvlHLsl4xJgjT/gLsmg==}
@@ -15950,6 +15950,10 @@ packages:
 
   drupal-twig-extensions@1.0.0-beta.5:
     resolution: {integrity: sha512-TrijTIs6wAwMmAa6eikQDyHTLNVizHPptpMd2BsRWDGpRozfH4OdY75ZQXbfnQmH5vl9kydKUfp57lUkcgQZBQ==}
+
+  dset@3.1.4:
+    resolution: {integrity: sha512-2QF/g9/zTaPDc3BjNcVTGoBbXBgYfMTTceLaYcFJ/W9kggFUkhxD/hMEeuLKbugyef9SqAx8cpgwlIP/jinUTA==}
+    engines: {node: '>=4'}
 
   dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
@@ -25326,11 +25330,11 @@ snapshots:
 
   '@nl-design-system-candidate/skip-link-tokens@1.0.4': {}
 
-  '@nl-design-system-community/design-tokens-lint@1.1.1':
+  '@nl-design-system-community/design-tokens-lint@1.1.3':
     dependencies:
-      '@nl-design-system-community/design-tokens-schema': 2.6.0
+      '@nl-design-system-community/design-tokens-schema': 2.7.0
 
-  '@nl-design-system-community/design-tokens-schema@2.6.0':
+  '@nl-design-system-community/design-tokens-schema@2.7.0':
     dependencies:
       '@nl-design-system-candidate/button-tokens': 1.0.0
       '@nl-design-system-candidate/code-block-tokens': 2.0.3
@@ -25348,6 +25352,7 @@ snapshots:
       colorjs.io: 0.7.1
       dequal: 2.0.3
       dlv: 1.1.3
+      dset: 3.1.4
       es-toolkit: 1.53.1
       zod: 4.6.7
 
@@ -29763,6 +29768,8 @@ snapshots:
       drupal-attribute: 1.2.1
       locutus: 2.0.39
       lodash.clonedeep: 4.5.0
+
+  dset@3.1.4: {}
 
   dunder-proto@1.0.1:
     dependencies:
