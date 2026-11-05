@@ -12,20 +12,7 @@ import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import { Separator } from '@rijkshuisstijl-community/separator-react/no-side-effects';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useEffect, useRef, useState } from 'react';
-
-export interface NavBarIdentityProps {
-  value: ReactNode;
-  href: string;
-  appearance?: string;
-}
-
-const NavBarIdentity = ({ value, href, appearance }: NavBarIdentityProps) => (
-  <div className={clsx('rhc-nav-bar__identity', appearance && `rhc-nav-bar__identity--${appearance}`)}>
-    <Link href={href} target={href}>
-      {value}
-    </Link>
-  </div>
-);
+import { NavBarIdentity, NavBarIdentityProps } from './NavBarIdentity';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   identity?: NavBarIdentityProps;
