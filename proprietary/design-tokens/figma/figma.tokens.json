@@ -2557,7 +2557,8 @@
           },
           "link": {
             "$type": "color",
-            "$value": "{rhc.color.donkerblauw.500}"
+            "$value": "{rhc.color.donkerblauw.500}",
+            "$description": "todo: convert to basis token"
           },
           "link-active": {
             "$type": "color",
@@ -2565,7 +2566,8 @@
           },
           "link-hover": {
             "$type": "color",
-            "$value": "{rhc.color.donkerblauw.600}"
+            "$value": "{rhc.color.donkerblauw.600}",
+            "$description": "todo: convert to basis token"
           },
           "on-dark-color": {
             "$type": "color",
@@ -2573,7 +2575,8 @@
           },
           "on-light-color": {
             "$type": "color",
-            "$value": "{rhc.color.zwart}"
+            "$value": "{rhc.color.zwart}",
+            "$description": "todo: convert to basis token"
           }
         },
         "border": {
@@ -2619,7 +2622,8 @@
         "info": {
           "50": {
             "$type": "color",
-            "$value": "{rhc.color.hemelblauw.50}"
+            "$value": "{rhc.color.hemelblauw.50}",
+            "$description": "todo: convert to basis token"
           },
           "500": {
             "$type": "color",
@@ -2645,7 +2649,8 @@
           },
           "active": {
             "$type": "color",
-            "$value": "{rhc.color.rood.700}"
+            "$value": "{rhc.color.rood.700}",
+            "$description": "todo: convert to basis token"
           }
         },
         "warning": {
@@ -2655,41 +2660,50 @@
           },
           "500": {
             "$type": "color",
-            "$value": "{rhc.color.donkergeel.500}"
+            "$value": "{rhc.color.donkergeel.500}",
+            "$description": "todo: convert to basis token"
           }
         },
         "core": {
           "50": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.50}"
+            "$value": "{rhc.color.lintblauw.50}",
+            "$description": "todo: convert to basis token"
           },
           "100": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.100}"
+            "$value": "{rhc.color.lintblauw.100}",
+            "$description": "todo: convert to basis token"
           },
           "200": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.200}"
+            "$value": "{rhc.color.lintblauw.200}",
+            "$description": "todo: convert to basis token"
           },
           "300": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.300}"
+            "$value": "{rhc.color.lintblauw.300}",
+            "$description": "todo: convert to basis token"
           },
           "400": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.400}"
+            "$value": "{rhc.color.lintblauw.400}",
+            "$description": "todo: convert to basis token"
           },
           "500": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.500}"
+            "$value": "{rhc.color.lintblauw.500}",
+            "$description": "todo: convert to basis token"
           },
           "hover": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.600}"
+            "$value": "{rhc.color.lintblauw.600}",
+            "$description": "todo: convert to basis token"
           },
           "active": {
             "$type": "color",
-            "$value": "{rhc.color.lintblauw.700}"
+            "$value": "{rhc.color.lintblauw.700}",
+            "$description": "todo: convert to basis token"
           }
         }
       },
@@ -2711,17 +2725,19 @@
         "icon": {
           "md": {
             "$type": "dimension",
-            "$value": "{rhc.text.font-size.md}"
+            "$value": "{rhc.text.font-size.md}",
+            "$description": "todo: convert to basis token"
           },
           "lg": {
             "$type": "dimension",
-            "$value": "{rhc.text.font-size.lg}"
+            "$value": "{rhc.text.font-size.lg}",
+            "$description": "todo: convert to basis token"
           }
         },
         "page": {
           "md": {
             "$type": "dimension",
-            "$value": "84rem"
+            "$value": "{basis.page.max-inline-size}"
           }
         }
       },
@@ -5458,8 +5474,7 @@
       "page": {
         "max-inline-size": {
           "$type": "dimension",
-          "$value": "1140px",
-          "$description": "todo: no RHC token available yet"
+          "$value": "84rem"
         }
       },
       "pointer-target": {
