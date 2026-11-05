@@ -1,5 +1,6 @@
 import { existsSync, mkdirSync } from 'node:fs';
 import { appendFile, readFile, writeFile } from 'node:fs/promises';
+import { registerHooks } from 'node:module';
 import { posix } from 'node:path';
 import StyleDictionary from 'style-dictionary';
 import type { TransformedTokens } from 'style-dictionary/types';
@@ -7,6 +8,25 @@ import { convertTokenData, stripMeta, usesReferences } from 'style-dictionary/ut
 
 import { fixCSSFile } from './src/transforms/css/cssFixers.mts';
 import { registerTokenStudioTransformGroup } from './src/transforms/styleDictonary/styleDictionaryTransforms.mts';
+
+// Style Dictionary runs every javascript/* and typescript/* output through Prettier, which takes up
+// ~70% of the build time. The unformatted output is equivalent, so we replace Prettier with a no-op.
+// Style Dictionary imports Prettier lazily, so registering the hook here is early enough.
+const prettierStubs: Record<string, string> = {
+  'prettier/standalone': 'export const format = async (content) => content;',
+  'prettier/plugins/babel': 'export default {};',
+  'prettier/plugins/estree': 'export default {};',
+  'prettier/plugins/typescript': 'export default {};',
+};
+registerHooks({
+  resolve(specifier, context, nextResolve) {
+    const stub = prettierStubs[specifier];
+    if (stub) {
+      return { url: `data:text/javascript,${encodeURIComponent(stub)}`, shortCircuit: true };
+    }
+    return nextResolve(specifier, context);
+  },
+});
 
 // Will take the theme name and remove all spaces and make it lowercase
 const normalizeThemeName = (name: string): string => {
@@ -125,7 +145,7 @@ const getPlatformsConfig = (buildPath: string, themeName: string) => {
           format: 'json/dtcg',
           options: {
             outputReferences: true,
-            stripMeta: { keep: ['$value', '$type', '$description', '$deprecated'], usesDtcg: true },
+            stripMeta: { keep: ['$value', '$type', '$description', '$deprecated', '$extensions'], usesDtcg: true },
           },
         },
       ],

@@ -12590,7 +12590,12 @@
           "min": {
             "font-size": {
               "$type": "fontSizes",
-              "$value": "0.75rem"
+              "$value": "0.75rem",
+              "$extensions": {
+                "nl.nldesignsystem.lint-ignore": {
+                  "min-font-size": "This min-font-size is in accordance to the Rijkshuisstijl design."
+                }
+              }
             },
             "padding-block-start": {
               "$type": "dimension",
