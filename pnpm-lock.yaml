@@ -859,6 +859,9 @@ importers:
       '@rijkshuisstijl-community/ordered-list-css':
         specifier: workspace:*
         version: link:../ordered-list-css
+      '@rijkshuisstijl-community/page-header-css':
+        specifier: workspace:*
+        version: link:../page-header-css
       '@rijkshuisstijl-community/page-number-navigation-css':
         specifier: workspace:*
         version: link:../page-number-navigation-css
@@ -1156,9 +1159,15 @@ importers:
       '@rijkshuisstijl-community/heading-css':
         specifier: workspace:*
         version: link:../heading-css
+      '@rijkshuisstijl-community/link-button-css':
+        specifier: workspace:*
+        version: link:../link-button-css
       '@rijkshuisstijl-community/link-css':
         specifier: workspace:*
         version: link:../link-css
+      '@rijkshuisstijl-community/visually-hidden-css':
+        specifier: workspace:*
+        version: link:../visually-hidden-css
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
@@ -1194,6 +1203,15 @@ importers:
       '@utrecht/ordered-list-css':
         specifier: 2.0.0
         version: 2.0.0
+    devDependencies:
+      '@rijkshuisstijl-community/build-utils-css':
+        specifier: workspace:*
+        version: link:../../build-utils-css
+      chokidar-cli:
+        specifier: 3.0.0
+        version: 3.0.0
+
+  packages/components-css/page-header-css:
     devDependencies:
       '@rijkshuisstijl-community/build-utils-css':
         specifier: workspace:*
@@ -5726,15 +5744,24 @@ importers:
 
   packages/components-react/navigation-bar-react:
     dependencies:
+      '@rijkshuisstijl-community/button-react':
+        specifier: workspace:*
+        version: link:../button-react
       '@rijkshuisstijl-community/column-layout-react':
         specifier: workspace:*
         version: link:../column-layout-react
+      '@rijkshuisstijl-community/grid-css':
+        specifier: workspace:*
+        version: link:../../components-css/grid-css
       '@rijkshuisstijl-community/heading-react':
         specifier: workspace:*
         version: link:../heading-react
       '@rijkshuisstijl-community/icon-react':
         specifier: workspace:*
         version: link:../icon-react
+      '@rijkshuisstijl-community/link-button-react':
+        specifier: workspace:*
+        version: link:../link-button-react
       '@rijkshuisstijl-community/link-list-react':
         specifier: workspace:*
         version: link:../link-list-react
@@ -5744,6 +5771,9 @@ importers:
       '@rijkshuisstijl-community/navigation-bar-css':
         specifier: workspace:*
         version: link:../../components-css/navigation-bar-css
+      '@rijkshuisstijl-community/separator-react':
+        specifier: workspace:*
+        version: link:../separator-react
       '@utrecht/component-library-react':
         specifier: 13.3.1
         version: 13.3.1(@babel/runtime@7.29.7)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
@@ -6429,9 +6459,9 @@ importers:
 
   packages/components-react/page-header-react:
     dependencies:
-      '@utrecht/page-header-react':
-        specifier: 1.0.12
-        version: 1.0.12(@babel/runtime@7.29.7)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@rijkshuisstijl-community/page-header-css':
+        specifier: workspace:*
+        version: link:../../components-css/page-header-css
     devDependencies:
       '@babel/core':
         specifier: 7.29.7
