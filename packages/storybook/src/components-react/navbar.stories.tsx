@@ -1,6 +1,7 @@
 import {
   Icon,
   NavBar,
+  NavBarIdentity,
   NavBarItem,
   type NavBarItemProps,
   NavBarMegaMenu,
@@ -47,7 +48,7 @@ export const Default: Story = {
 export const WithIdentity: Story = {
   args: {
     items,
-    identity: { value: 'Identity', href: '/' },
+    children: <NavBarIdentity href="/">Identity</NavBarIdentity>,
   },
 };
 
@@ -97,7 +98,11 @@ export const WithSubList: Story = {
 
 export const WithMegaMenu: Story = {
   args: {
-    identity: { value: 'Overheid.nl', href: '/', appearance: 'primary' },
+    children: (
+      <NavBarIdentity appearance="primary" href="/">
+        Overheid.nl
+      </NavBarIdentity>
+    ),
     megamenu: (
       <NavBarMegaMenu
         tagline="Ingang naar informatie en diensten van alle overheden"

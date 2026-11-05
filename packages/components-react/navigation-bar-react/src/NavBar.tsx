@@ -13,22 +13,7 @@ import { Separator } from '@rijkshuisstijl-community/separator-react/no-side-eff
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useEffect, useRef, useState } from 'react';
 
-export interface NavBarIdentityProps {
-  value: ReactNode;
-  href: string;
-  appearance?: string;
-}
-
-const NavBarIdentity = ({ value, href, appearance }: NavBarIdentityProps) => (
-  <div className={clsx('rhc-nav-bar__identity', appearance && `rhc-nav-bar__identity--${appearance}`)}>
-    <Link href={href} target={href}>
-      {value}
-    </Link>
-  </div>
-);
-
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
-  identity?: NavBarIdentityProps;
   items?: NavBarItemProps[];
   endItems?: ReactNode;
   megamenu?: ReactNode;
@@ -162,7 +147,6 @@ export const NavBar = ({
   ref,
   children,
   className,
-  identity,
   items,
   endItems,
   megamenu,
@@ -295,11 +279,7 @@ export const NavBar = ({
   return (
     <div className={clsx('rhc-nav-bar', { 'is-open': isMegamenuOpen })} ref={ref} {...restProps}>
       <h2 className="rhc-visually-hidden">Hoofd navigatie</h2>
-      {identity && (
-        <div className="rhc-nav-bar__slot-identity">
-          <NavBarIdentity {...identity} />
-        </div>
-      )}
+      {children}
 
       {megamenu ? (
         <div className={clsx('rhc-nav-bar__slot-megamenu', { 'is-navbar-megamenu-open': isMegamenuOpen })}>
@@ -387,8 +367,6 @@ export const NavBar = ({
           </div>
         </div>
       )}
-
-      {children}
     </div>
   );
 };

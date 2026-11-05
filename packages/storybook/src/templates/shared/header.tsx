@@ -5,6 +5,7 @@ import {
   LanguageNavigation,
   Logo,
   NavBar,
+  NavBarIdentity,
   NavBarItem,
   NavBarMegaMenu,
   PageHeader,
@@ -129,12 +130,14 @@ export const SharedHeaderOverheidNl = () => (
         <Logo organisation="Organisatie" subtitle="Wat wij doen">
           <Icon className="dutch-map" icon="nederland-map" />
         </Logo>
-        <NavBar
-          endItems={endItemsPrimary}
-          identity={{ value: 'Overheid.nl', href: '/', appearance: 'primary' }}
-          megamenu={megamenu}
-        />
-        <NavBar endItems={endItemsSecondary} identity={{ value: 'Dataregister', href: '/' }} items={itemsMain} />
+        <NavBar endItems={endItemsPrimary} megamenu={megamenu}>
+          <NavBarIdentity appearance="primary" href="/">
+            Overheid.nl
+          </NavBarIdentity>
+        </NavBar>
+        <NavBar endItems={endItemsSecondary} items={itemsMain}>
+          <NavBarIdentity href="/">Dataregister</NavBarIdentity>
+        </NavBar>
       </div>
     </div>
   </PageHeader>
