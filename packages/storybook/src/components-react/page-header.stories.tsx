@@ -1,7 +1,7 @@
 import { PageHeader } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './page-header.md?raw';
-import SharedHeader from '../templates/shared/header';
+import { SharedHeader } from '../templates/shared/header';
 
 const meta = {
   title: 'Page Header',
