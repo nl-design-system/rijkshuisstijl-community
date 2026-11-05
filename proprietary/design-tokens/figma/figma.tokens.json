@@ -2631,23 +2631,23 @@
         "negative": {
           "50": {
             "$type": "color",
-            "$value": "{basis.color.negative.bg-document}"
+            "$value": "{basis.color.negative.bg-subtle}"
           },
           "100": {
             "$type": "color",
-            "$value": "{basis.color.negative.bg-default}"
+            "$value": "{basis.color.negative.bg-active}"
           },
           "500": {
             "$type": "color",
-            "$value": "{basis.color.negative.border-default}"
+            "$value": "{basis.color.negative.color-default}"
           },
           "hover": {
             "$type": "color",
-            "$value": "{basis.color.negative.border-hover}"
+            "$value": "{basis.color.negative.color-hover}"
           },
           "active": {
             "$type": "color",
-            "$value": "{rhc.color.rood.700}",
+            "$value": "{basis.color.negative.color-active}",
             "$description": "todo: convert to basis token"
           }
         },
@@ -3344,7 +3344,7 @@
           },
           "bg-subtle": {
             "$type": "color",
-            "$value": "{rhc.color.rood.100}"
+            "$value": "{rhc.color.rood.50}"
           },
           "bg-default": {
             "$type": "color",
@@ -3352,11 +3352,11 @@
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "{rhc.color.rood.200}"
+            "$value": "{rhc.color.rood.50}"
           },
           "bg-active": {
             "$type": "color",
-            "$value": "{rhc.color.rood.200}"
+            "$value": "{rhc.color.rood.100}"
           },
           "border-subtle": {
             "$type": "color",
@@ -3372,15 +3372,15 @@
           },
           "border-active": {
             "$type": "color",
-            "$value": "{rhc.color.rood.600}"
+            "$value": "{rhc.color.rood.700}"
           },
           "color-default": {
             "$type": "color",
-            "$value": "{rhc.color.rood.700}"
+            "$value": "{rhc.color.rood.500}"
           },
           "color-hover": {
             "$type": "color",
-            "$value": "{rhc.color.rood.700}"
+            "$value": "{rhc.color.rood.600}"
           },
           "color-active": {
             "$type": "color",
@@ -6449,11 +6449,11 @@
         "negative": {
           "default": {
             "$type": "color",
-            "$value": "{basis.color.negative.border-default}"
+            "$value": "{basis.color.negative.color-default}"
           },
           "subtle": {
             "$type": "color",
-            "$value": "{basis.color.negative.bg-document}"
+            "$value": "{basis.color.negative.bg-subtle}"
           }
         },
         "warning": {
