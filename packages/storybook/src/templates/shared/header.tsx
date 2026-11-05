@@ -204,7 +204,7 @@ export function SharedHeader() {
   );
 }
 
-const Header = ({ overheidNl }: { overheidNl: boolean }) =>
+const Header = ({ overheidNl = false }: { overheidNl?: boolean }) =>
   overheidNl ? <SharedHeaderOverheidNl /> : <SharedHeader />;
 
 export default Header;
