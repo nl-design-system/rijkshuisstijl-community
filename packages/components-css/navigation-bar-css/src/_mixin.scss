@@ -62,13 +62,10 @@
   z-index: 3;
 }
 
-// IDENTITY --
-@mixin rhc-nav-bar__slot-identity {
+@mixin rhc-nav-bar__identity {
   flex-shrink: 0;
   padding-inline-end: var(--rhc-navigation-bar-item-padding-inline-end);
-}
 
-@mixin rhc-nav-bar__identity {
   .rhc-link {
     --nl-link-text-decoration-line: none;
     --nl-link-color: var(--rhc-navigation-bar-color);

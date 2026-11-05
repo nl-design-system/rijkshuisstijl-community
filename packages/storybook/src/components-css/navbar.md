@@ -40,33 +40,31 @@ De Navigation Bar bestaat uit de volgende onderdelen:
 
 ```html
 <div class="rhc-nav-bar">
-  <div class="rhc-nav-bar__slot-identity">
-    <div class="rhc-nav-bar__identity">
-      <a class="rhc-link" href="/">Dataregister</a>
-    </div>
+  <div class="rhc-nav-bar__identity">
+    <a class="rhc-link" href="/">Dataregister</a>
   </div>
-  <div class="rhc-nav-bar__slot-main">
-    <div class="rhc-nav-bar__slots">
-      <div class="rhc-nav-bar__slot">
-        <nav class="rhc-nav-bar__nav" aria-label="Hoofdnavigatie">
-          <ul class="rhc-nav-bar__list">
-            <li class="rhc-nav-bar__item">
-              <a class="rhc-nav-bar__link" href="/">Data</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="rhc-nav-bar__slot">
-        <nav class="rhc-nav-bar__nav" aria-label="Overige links">
-          <ul class="rhc-nav-bar__list">
-            <li
-              class="rhc-nav-bar__item rhc-nav-bar__item--button-on-mobile rhc-nav-bar__item--button-on-mobile--primary"
-            >
-              <a class="rhc-nav-bar__link" href="/inloggen">Inloggen</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+</div>
+<div class="rhc-nav-bar__slot-main">
+  <div class="rhc-nav-bar__slots">
+    <div class="rhc-nav-bar__slot">
+      <nav class="rhc-nav-bar__nav" aria-label="Hoofdnavigatie">
+        <ul class="rhc-nav-bar__list">
+          <li class="rhc-nav-bar__item">
+            <a class="rhc-nav-bar__link" href="/">Data</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="rhc-nav-bar__slot">
+      <nav class="rhc-nav-bar__nav" aria-label="Overige links">
+        <ul class="rhc-nav-bar__list">
+          <li
+            class="rhc-nav-bar__item rhc-nav-bar__item--button-on-mobile rhc-nav-bar__item--button-on-mobile--primary"
+          >
+            <a class="rhc-nav-bar__link" href="/inloggen">Inloggen</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 </div>
