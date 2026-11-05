@@ -5,17 +5,25 @@
 
 import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import clsx from 'clsx';
-import { ReactNode } from 'react';
+import { HTMLAttributes, PropsWithChildren } from 'react';
 
-export interface NavBarIdentityProps {
-  value: ReactNode;
+export interface NavBarIdentityProps extends HTMLAttributes<HTMLDivElement> {
   href: string;
   appearance?: string;
 }
 
-export const NavBarIdentity = ({ value, href, appearance }: NavBarIdentityProps) => (
-  <div className={clsx('rhc-nav-bar__identity', appearance && `rhc-nav-bar__identity--${appearance}`)}>
-    <Link href={href}>{value}</Link>
+export const NavBarIdentity = ({
+  appearance,
+  children,
+  className,
+  href,
+  ...restProps
+}: PropsWithChildren<NavBarIdentityProps>) => (
+  <div
+    className={clsx('rhc-nav-bar__identity', appearance && `rhc-nav-bar__identity--${appearance}`, className)}
+    {...restProps}
+  >
+    <Link href={href}>{children}</Link>
   </div>
 );
 
