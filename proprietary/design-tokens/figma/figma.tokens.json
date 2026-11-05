@@ -2761,7 +2761,7 @@
         "font-family": {
           "default": {
             "$type": "fontFamilies",
-            "$value": "{rhc.text.font-family.default}"
+            "$value": "{rhc.text.font-family.sans}"
           },
           "monospace": {
             "$type": "fontFamilies",
@@ -2772,7 +2772,7 @@
         "font-weight": {
           "default": {
             "$type": "fontWeights",
-            "$value": "{rhc.text.font-weight.default}"
+            "$value": "{rhc.text.font-weight.regular}"
           },
           "bold": {
             "$type": "fontWeights",
@@ -2813,11 +2813,11 @@
         "line-height": {
           "sm": {
             "$type": "lineHeights",
-            "$value": "{rhc.text.line-height.sm}"
+            "$value": "125%"
           },
           "md": {
             "$type": "lineHeights",
-            "$value": "{rhc.text.line-height.md}"
+            "$value": "150%"
           },
           "lg": {
             "$type": "lineHeights",
@@ -3516,7 +3516,7 @@
           },
           "bg-default": {
             "$type": "color",
-            "$value": "{rhc.color.warning.50}"
+            "$value": "{rhc.color.donkergeel.50}"
           },
           "bg-hover": {
             "$type": "color",
@@ -5091,11 +5091,11 @@
         },
         "sm": {
           "$type": "dimension",
-          "$value": "{rhc.border-radius.sm}"
+          "$value": "2px"
         },
         "md": {
           "$type": "dimension",
-          "$value": "{rhc.border-radius.md}"
+          "$value": "4px"
         },
         "lg": {
           "$type": "dimension",
@@ -5227,25 +5227,25 @@
         },
         "outline-color": {
           "$type": "color",
-          "$value": "{rhc.focus.outline-color}"
+          "$value": "{rhc.color.zwart}"
         },
         "inverse": {
           "outline-color": {
             "$type": "color",
-            "$value": "{rhc.focus.inverse.outline-color}"
+            "$value": "{rhc.color.wit}"
           }
         },
         "outline-offset": {
           "$type": "dimension",
-          "$value": "{rhc.focus.outline-offset}"
+          "$value": "{rhc.space.xs}"
         },
         "outline-style": {
           "$type": "other",
-          "$value": "{rhc.focus.outline-style}"
+          "$value": "solid"
         },
         "outline-width": {
           "$type": "dimension",
-          "$value": "{rhc.focus.outline-width}"
+          "$value": "{rhc.border-width.md}"
         }
       },
       "form-control": {
@@ -5465,11 +5465,11 @@
       "pointer-target": {
         "min-block-size": {
           "$type": "dimension",
-          "$value": "{rhc.size.pointer-target}"
+          "$value": "48px"
         },
         "min-inline-size": {
           "$type": "dimension",
-          "$value": "{rhc.size.pointer-target}"
+          "$value": "48px"
         }
       }
     }
