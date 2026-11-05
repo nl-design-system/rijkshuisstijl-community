@@ -8,6 +8,7 @@ import {
   NavBarItem,
   NavBarMegaMenu,
   PageHeader,
+  SkipLink,
 } from '@rijkshuisstijl-community/components-react';
 
 const languages = {
@@ -140,4 +141,70 @@ export const SharedHeaderOverheidNl = () => (
   </PageHeader>
 );
 
-export default SharedHeaderOverheidNl;
+export function SharedHeader() {
+  const items = [
+    {
+      href: '/',
+      label: 'Homepage',
+    },
+    {
+      href: '/componenten/',
+      label: 'Componenten',
+    },
+    {
+      href: '/design-tokens/',
+      label: 'Design Tokens',
+    },
+    {
+      href: '/voorbeelden/',
+      label: 'Voorbeelden',
+    },
+  ].map(({ ...props }) => ({
+    ...props,
+    id: props.href,
+  }));
+
+  const endItems = [
+    {
+      id: 'end1',
+      target: '_blank',
+      href: 'https://www.figma.com/design/Q5Imc7Xi9KnBQhcYI3Hytj/NL-Design-System---Bibliotheek---Rijkshuisstijl-Community',
+      label: 'Figma',
+    },
+    {
+      id: 'end2',
+      target: '_blank',
+      href: 'https://github.com/nl-design-system/rijkshuisstijl-community',
+      label: 'GitHub',
+    },
+    { id: 'end3', target: '_blank', href: 'https://rijkshuisstijl-community.vercel.app/', label: 'Storybook' },
+  ];
+
+  return (
+    <PageHeader>
+      <SkipLink className="rhc-skip-link--visible-on-focus" href="#main" id="top">
+        Ga naar hoofdinhoud
+      </SkipLink>
+      <div className="rhc-page-header-layout">
+        <Logo organisation="Rijkshuisstijl Community">
+          <Icon className={'dutch-map'} icon={'nederland-map'} />
+        </Logo>
+        <NavBar
+          items={items}
+          endItems={
+            <>
+              {endItems.map((item) => (
+                <NavBarItem {...item} key={item.id} />
+              ))}
+            </>
+          }
+        />
+      </div>
+    </PageHeader>
+  );
+}
+
+const Header = ({ overheidNl }: { overheidNl: boolean }) =>
+  overheidNl ? <SharedHeaderOverheidNl /> : <SharedHeader />;
+
+export default Header;
