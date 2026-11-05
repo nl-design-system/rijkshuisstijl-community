@@ -3,6 +3,8 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+@import "@utrecht/backdrop-css/dist/index.css";
+
 @mixin rhc-nav-bar {
   align-items: center;
   background-color: var(--rhc-navigation-bar-background-color);
@@ -151,6 +153,10 @@
 
   @media (width < 768px) {
     .rhc-nav-bar__slot-main.is-navbar-main-open & {
+      &::backdrop {
+        @include utrecht-backdrop;
+      }
+
       display: flex;
       flex-direction: column;
       padding-block: 24px;

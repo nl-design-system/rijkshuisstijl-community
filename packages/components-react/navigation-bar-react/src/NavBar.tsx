@@ -365,7 +365,7 @@ export const NavBar = ({
           >
             <Icon icon={isMainNavOpen ? 'kruis' : 'menu'} />
           </LinkButton>
-          <div className="rhc-nav-bar__slots">
+          <dialog className="rhc-nav-bar__slots" open={isMainNavOpen}>
             {items && (
               <div className="rhc-nav-bar__slot">
                 <nav aria-label="primary-navigation-mobile" className={clsx('rhc-nav-bar__nav', className)}>
@@ -384,7 +384,7 @@ export const NavBar = ({
                 </nav>
               </div>
             )}
-          </div>
+          </dialog>
         </div>
       )}
 
