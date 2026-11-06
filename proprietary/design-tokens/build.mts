@@ -125,7 +125,7 @@ const getPlatformsConfig = (buildPath: string, themeName: string) => {
           format: 'json/dtcg',
           options: {
             outputReferences: true,
-            stripMeta: { keep: ['$value', '$type', '$description', '$deprecated'], usesDtcg: true },
+            stripMeta: { keep: ['$value', '$type', '$description', '$deprecated', '$extensions'], usesDtcg: true },
           },
         },
       ],
