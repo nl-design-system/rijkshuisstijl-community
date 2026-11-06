@@ -2549,27 +2549,33 @@
         "foreground": {
           "default": {
             "$type": "color",
-            "$value": "{basis.color.default.color-document}"
+            "$value": "{basis.color.default.color-document}",
+            "$deprecated": "Use basis tokens instead"
           },
           "subtle": {
             "$type": "color",
-            "$value": "{basis.color.default.color-subtle}"
+            "$value": "{basis.color.default.color-subtle}",
+            "$deprecated": "Use basis tokens instead"
           },
           "link": {
             "$type": "color",
-            "$value": "{basis.color.action-1.color-default}"
+            "$value": "{basis.color.action-1.color-default}",
+            "$deprecated": "Use basis tokens instead"
           },
           "link-active": {
             "$type": "color",
-            "$value": "{basis.color.action-1.color-active}"
+            "$value": "{basis.color.action-1.color-active}",
+            "$deprecated": "Use basis tokens instead"
           },
           "link-hover": {
             "$type": "color",
-            "$value": "{basis.color.action-1.color-hover}"
+            "$value": "{basis.color.action-1.color-hover}",
+            "$deprecated": "Use basis tokens instead"
           },
           "on-dark-color": {
             "$type": "color",
-            "$value": "{basis.color.default-inverse.color-document}"
+            "$value": "{basis.color.default-inverse.color-document}",
+            "$deprecated": "Use basis tokens instead"
           },
           "on-light-color": {
             "$type": "color",
@@ -2580,83 +2586,101 @@
         "border": {
           "default": {
             "$type": "color",
-            "$value": "{basis.color.default.border-default}"
+            "$value": "{basis.color.default.border-default}",
+            "$deprecated": "Use basis tokens instead"
           },
           "subtle": {
             "$type": "color",
-            "$value": "{basis.color.default.border-subtle}"
+            "$value": "{basis.color.default.border-subtle}",
+            "$deprecated": "Use basis tokens instead"
           },
           "strong": {
             "$type": "color",
-            "$value": "{basis.color.default.color-document}"
+            "$value": "{basis.color.default.color-document}",
+            "$deprecated": "Use basis tokens instead"
           }
         },
         "bg-document": {
           "$type": "color",
-          "$value": "{basis.color.default.bg-document}"
+          "$value": "{basis.color.default.bg-document}",
+          "$deprecated": "Use basis tokens instead"
         },
         "positive": {
           "50": {
             "$type": "color",
-            "$value": "{basis.color.positive.bg-subtle}"
+            "$value": "{basis.color.positive.bg-subtle}",
+            "$deprecated": "Use basis tokens instead"
           },
           "100": {
             "$type": "color",
-            "$value": "{basis.color.positive.bg-active}"
+            "$value": "{basis.color.positive.bg-active}",
+            "$deprecated": "Use basis tokens instead"
           },
           "500": {
             "$type": "color",
-            "$value": "{basis.color.positive.color-default}"
+            "$value": "{basis.color.positive.color-default}",
+            "$deprecated": "Use basis tokens instead"
           },
           "hover": {
             "$type": "color",
-            "$value": "{basis.color.positive.color-hover}"
+            "$value": "{basis.color.positive.color-hover}",
+            "$deprecated": "Use basis tokens instead"
           },
           "active": {
             "$type": "color",
-            "$value": "{basis.color.positive.color-active}"
+            "$value": "{basis.color.positive.color-active}",
+            "$deprecated": "Use basis tokens instead"
           }
         },
         "info": {
           "50": {
             "$type": "color",
-            "$value": "{basis.color.info.bg-subtle}"
+            "$value": "{basis.color.info.bg-subtle}",
+            "$deprecated": "Use basis tokens instead"
           },
           "500": {
             "$type": "color",
-            "$value": "{basis.color.info.color-default}"
+            "$value": "{basis.color.info.color-default}",
+            "$deprecated": "Use basis tokens instead"
           }
         },
         "negative": {
           "50": {
             "$type": "color",
-            "$value": "{basis.color.negative.bg-subtle}"
+            "$value": "{basis.color.negative.bg-subtle}",
+            "$deprecated": "Use basis tokens instead"
           },
           "100": {
             "$type": "color",
-            "$value": "{basis.color.negative.bg-active}"
+            "$value": "{basis.color.negative.bg-active}",
+            "$deprecated": "Use basis tokens instead"
           },
           "500": {
             "$type": "color",
-            "$value": "{basis.color.negative.color-default}"
+            "$value": "{basis.color.negative.color-default}",
+            "$deprecated": "Use basis tokens instead"
           },
           "hover": {
             "$type": "color",
-            "$value": "{basis.color.negative.color-hover}"
+            "$value": "{basis.color.negative.color-hover}",
+            "$deprecated": "Use basis tokens instead"
           },
           "active": {
             "$type": "color",
-            "$value": "{basis.color.negative.color-active}"
+            "$value": "{basis.color.negative.color-active}",
+            "$deprecated": "Use basis tokens instead"
           }
         },
         "warning": {
           "50": {
             "$type": "color",
-            "$value": "{basis.color.warning.bg-subtle}"
+            "$value": "{basis.color.warning.bg-subtle}",
+            "$deprecated": "Use basis tokens instead"
           },
           "500": {
             "$type": "color",
-            "$value": "{basis.color.warning.color-default}"
+            "$value": "{basis.color.warning.color-default}",
+            "$deprecated": "Use basis tokens instead"
           }
         },
         "core": {
@@ -2705,17 +2729,20 @@
       "border-radius": {
         "sm": {
           "$type": "dimension",
-          "$value": "{basis.border-radius.sm}"
+          "$value": "{basis.border-radius.sm}",
+          "$deprecated": "Use basis tokens instead"
         },
         "md": {
           "$type": "dimension",
-          "$value": "{basis.border-radius.md}"
+          "$value": "{basis.border-radius.md}",
+          "$deprecated": "Use basis tokens instead"
         }
       },
       "size": {
         "pointer-target": {
           "$type": "dimension",
-          "$value": "{basis.pointer-target.min-block-size}"
+          "$value": "{basis.pointer-target.min-block-size}",
+          "$deprecated": "Use basis tokens instead"
         },
         "icon": {
           "md": {
@@ -2732,7 +2759,8 @@
         "page": {
           "md": {
             "$type": "dimension",
-            "$value": "{basis.page.max-inline-size}"
+            "$value": "{basis.page.max-inline-size}",
+            "$deprecated": "Use basis tokens instead"
           }
         }
       },
@@ -2740,27 +2768,32 @@
         "font-family": {
           "default": {
             "$type": "fontFamilies",
-            "$value": "{basis.text.font-family.default}"
+            "$value": "{basis.text.font-family.default}",
+            "$deprecated": "Use basis tokens instead"
           }
         },
         "font-weight": {
           "default": {
             "$type": "fontWeights",
-            "$value": "{basis.text.font-weight.default}"
+            "$value": "{basis.text.font-weight.default}",
+            "$deprecated": "Use basis tokens instead"
           },
           "strong": {
             "$type": "fontWeights",
-            "$value": "{basis.text.font-weight.bold}"
+            "$value": "{basis.text.font-weight.bold}",
+            "$deprecated": "Use basis tokens instead"
           }
         },
         "line-height": {
           "sm": {
             "$type": "lineHeights",
-            "$value": "{basis.text.line-height.sm}"
+            "$value": "{basis.text.line-height.sm}",
+            "$deprecated": "Use basis tokens instead"
           },
           "md": {
             "$type": "lineHeights",
-            "$value": "{basis.text.line-height.md}"
+            "$value": "{basis.text.line-height.md}",
+            "$deprecated": "Use basis tokens instead"
           }
         }
       }
