@@ -65,6 +65,23 @@ describe('TableHeaderCell', () => {
     expect(container.querySelector('svg')).toBeInTheDocument(); // Checks if the icon is rendered
   });
 
+  it.each(['ascending', 'descending', 'none', 'other'] as const)(
+    'sets aria-sort="%s" on the th element',
+    (ariaSort) => {
+      const { container } = render(
+        <TableHeaderCellInTable withSorting aria-sort={ariaSort}>
+          Sortable
+        </TableHeaderCellInTable>,
+      );
+      expect(container.querySelector('th')).toHaveAttribute('aria-sort', ariaSort);
+    },
+  );
+
+  it('does not set aria-sort on the th element when aria-sort is not provided', () => {
+    const { container } = render(<TableHeaderCellInTable withSorting>Sortable</TableHeaderCellInTable>);
+    expect(container.querySelector('th')).not.toHaveAttribute('aria-sort');
+  });
+
   it('renders children correctly when withSorting is false', () => {
     const { getByText } = render(<TableHeaderCellInTable withSorting={false}>No Sorting</TableHeaderCellInTable>);
     expect(getByText('No Sorting')).toBeInTheDocument();
