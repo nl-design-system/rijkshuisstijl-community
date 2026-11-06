@@ -112,13 +112,14 @@ te typen. Installeer het met `npm install -g pnpm` als dat niet zo is.
 
 Alle commando’s worden uitgevoerd vanuit de root van het project, in een terminal:
 
-| Command              | Action                                                                        |
-| :------------------- | :---------------------------------------------------------------------------- |
-| `pnpm install`       | Installeert dependencies.                                                     |
-| `pnpm run storybook` | Start de lokale ontwikkelserver op `localhost:6006`.                          |
-| `pnpm run build`     | Bouw je productie-site naar `./dist/`.                                        |
-| `pnpm run lint`      | Voert de lint-scripts uit om de code aan de projectstandaarden te voldoen.    |
-| `pnpm run lint-fix`  | Voert lint-scripts uit en herstelt automatisch fouten mits die gevonden zijn. |
+| Command                    | Action                                                                                      |
+| :------------------------- | :------------------------------------------------------------------------------------------ |
+| `pnpm install`             | Installeert dependencies.                                                                   |
+| `pnpm run storybook`       | Start de lokale ontwikkelserver op `localhost:6006`.                                        |
+| `pnpm run storybook:react` | Start alleen de React Storybook op `localhost:6006`. Draai eerst eenmalig `pnpm run build`. |
+| `pnpm run build`           | Bouw je productie-site naar `./dist/`.                                                      |
+| `pnpm run lint`            | Voert de lint-scripts uit om de code aan de projectstandaarden te voldoen.                  |
+| `pnpm run lint-fix`        | Voert lint-scripts uit en herstelt automatisch fouten mits die gevonden zijn.               |
 
 Vanuit`packages/components-react/library-react` krijg je een gedetailleerder overzicht van tests:
 
