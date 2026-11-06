@@ -2831,32 +2831,32 @@
         "font-size": {
           "sm": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.sm}"
+            "$value": "{rhc.text.font-size.sm}"
           },
           "md": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.md}"
+            "$value": "{rhc.text.font-size.md}"
           },
           "lg": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.lg}"
+            "$value": "{rhc.text.font-size.lg}"
           },
           "xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.xl}"
+            "$value": "{rhc.text.font-size.xl}"
           },
           "2xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.2xl}"
+            "$value": "{rhc.text.font-size.2xl}"
           },
           "3xl": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.min.3xl}"
+            "$value": "{rhc.text.font-size.3xl}"
           },
           "4xl": {
             "$type": "fontSizes",
-            "$value": "2.5rem",
-            "$description": "todo: no RHC token available yet"
+            "$value": "{rhc.text.font-size.3xl}",
+            "$description": "todo: no RHC token available"
           }
         },
         "line-height": {
@@ -5204,24 +5204,14 @@
         },
         "md": {
           "$type": "boxShadow",
-          "$value": [
-            {
-              "x": "0",
-              "y": "2",
-              "blur": "4",
-              "spread": "0",
-              "color": "rgba(0,0,0,0.08)",
-              "type": "dropShadow"
-            },
-            {
-              "x": "0",
-              "y": "8",
-              "blur": "16",
-              "spread": "0",
-              "color": "rgba(0,0,0,0.06)",
-              "type": "dropShadow"
-            }
-          ],
+          "$value": {
+            "x": "0",
+            "y": "8",
+            "blur": "16",
+            "spread": "0",
+            "color": "{rhc.color.cool-grey.500}",
+            "type": "dropShadow"
+          },
           "$description": "todo: no RHC token available yet"
         },
         "lg": {
@@ -6348,7 +6338,7 @@
       "heading": {
         "color": {
           "$type": "color",
-          "$value": "{rhc.color.core.500}"
+          "$value": "{basis.color.accent-1.color-default}"
         },
         "font-family": {
           "$type": "fontFamilies",
