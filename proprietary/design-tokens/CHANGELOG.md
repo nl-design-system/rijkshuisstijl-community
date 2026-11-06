@@ -1,5 +1,17 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 18.1.0
+
+### Minor Changes
+
+- 23479aa: Number-badge: de achtergrondkleur volgt nu het kleurthema (`primary` in plaats van de vaste `core`/lintblauw), zodat de badge per departement meekleurt. Overgenomen van de integratiebranch.
+- cf30b5d: Added new Page Header component
+- 683f5ae: feat: introduce Basis tokens and point all basis tokens to their Rijkshuisstijl Community counterpart tokens.
+
+### Patch Changes
+
+- 951de8b: fix 164 contrast issues in basis tokens
+
 ## 18.0.1
 
 ### Patch Changes
