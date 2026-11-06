@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/visually-hidden-react
 
+## 1.0.4
+
+### Patch Changes
+
+- cf30b5d: Change code formatting (chore, nothing changes)
+- Updated dependencies [cf30b5d]
+  - @rijkshuisstijl-community/visually-hidden-css@1.2.0
+
 ## 1.0.3
 
 ### Patch Changes

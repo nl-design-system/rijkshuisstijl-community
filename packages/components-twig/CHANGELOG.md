@@ -1,5 +1,20 @@
 # @rijkshuisstijl-community/components-twig
 
+## 4.2.0
+
+### Minor Changes
+
+- 9d2203e: Added the radio-component for twig
+
+### Patch Changes
+
+- 8780e24: Added new styles to the component to match the react component and changed markup to match accordingly
+- cf30b5d: Fix export type
+- Updated dependencies [ad84e31]
+- Updated dependencies [cb17d0a]
+- Updated dependencies [cf30b5d]
+  - @rijkshuisstijl-community/components-css@19.0.0
+
 ## 4.1.1
 
 ### Patch Changes
