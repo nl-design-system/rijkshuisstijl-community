@@ -15,10 +15,15 @@ export class ButtonWebComponent extends BaseWebComponent {
   render(): void {
     if (!this.shadowRoot) return;
 
-    const { disabled, ...restProps } = this.props;
+    const { appearance, purpose, disabled, ...restProps } = this.props;
 
     render(
-      <Button disabled={(disabled === 'true') as ButtonWebComponentAttributes['disabled']} {...restProps}>
+      <Button
+        appearance={(appearance as ButtonWebComponentAttributes['appearance']) ?? undefined}
+        purpose={(purpose as ButtonWebComponentAttributes['purpose']) ?? undefined}
+        disabled={(disabled === 'true') as ButtonWebComponentAttributes['disabled']}
+        {...restProps}
+      >
         <slot />
       </Button>,
       this.shadowRoot,

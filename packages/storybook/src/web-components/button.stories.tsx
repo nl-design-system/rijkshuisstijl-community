@@ -14,8 +14,17 @@ const meta = {
   id: 'rhc-button-web',
   component: 'rhc-button',
   argTypes: {
+    purpose: {
+      description: 'Button purpose variant (NL Design System)',
+      control: { type: 'select' },
+      options: ['', 'primary', 'secondary', 'subtle'],
+      table: {
+        category: 'Attributes',
+      },
+      defaultValue: '',
+    },
     appearance: {
-      description: 'Button appearance',
+      description: 'Button appearance (deprecated: use purpose instead)',
       control: { type: 'select' },
       options: ['', 'primary-action-button', 'secondary-action-button', 'subtle-button'],
       table: {

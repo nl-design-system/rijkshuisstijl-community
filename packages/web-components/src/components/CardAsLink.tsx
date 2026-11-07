@@ -22,9 +22,14 @@ export class CardAsLinkWebComponent extends BaseWebComponent {
     super(stylesheet);
   }
 
-  Button({ disabled, text, ...restProps }: { [key: string]: string }) {
+  Button({ appearance, purpose, disabled, text, ...restProps }: { [key: string]: string }) {
     return (
-      <Button disabled={(disabled === 'true') as ButtonWebComponentAttributes['disabled']} {...restProps}>
+      <Button
+        appearance={appearance as ButtonWebComponentAttributes['appearance']}
+        purpose={purpose as ButtonWebComponentAttributes['purpose']}
+        disabled={(disabled === 'true') as ButtonWebComponentAttributes['disabled']}
+        {...restProps}
+      >
         {text}
       </Button>
     );
