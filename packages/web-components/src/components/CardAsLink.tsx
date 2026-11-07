@@ -23,10 +23,13 @@ export class CardAsLinkWebComponent extends BaseWebComponent {
   }
 
   Button({ appearance, purpose, disabled, text, ...restProps }: { [key: string]: string }) {
+    const normalizedAppearance = (appearance || undefined) as ButtonWebComponentAttributes['appearance'];
+    const normalizedPurpose = (purpose || undefined) as ButtonWebComponentAttributes['purpose'];
+
     return (
       <Button
-        appearance={appearance as ButtonWebComponentAttributes['appearance']}
-        purpose={purpose as ButtonWebComponentAttributes['purpose']}
+        appearance={normalizedAppearance}
+        purpose={normalizedPurpose}
         disabled={(disabled === 'true') as ButtonWebComponentAttributes['disabled']}
         {...restProps}
       >

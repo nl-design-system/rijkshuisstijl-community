@@ -17,10 +17,13 @@ export class ButtonWebComponent extends BaseWebComponent {
 
     const { appearance, purpose, disabled, ...restProps } = this.props;
 
+    const normalizedAppearance = (appearance || undefined) as ButtonWebComponentAttributes['appearance'];
+    const normalizedPurpose = (purpose || undefined) as ButtonWebComponentAttributes['purpose'];
+
     render(
       <Button
-        appearance={(appearance as ButtonWebComponentAttributes['appearance']) ?? undefined}
-        purpose={(purpose as ButtonWebComponentAttributes['purpose']) ?? undefined}
+        appearance={normalizedAppearance}
+        purpose={normalizedPurpose}
         disabled={(disabled === 'true') as ButtonWebComponentAttributes['disabled']}
         {...restProps}
       >
