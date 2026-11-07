@@ -22,15 +22,16 @@ export class CardAsLinkWebComponent extends BaseWebComponent {
     super(stylesheet);
   }
 
-  Button({ appearance, purpose, disabled, text, ...restProps }: { [key: string]: string }) {
+  Button({ appearance, disabled, purpose, text, ...restProps }: { [key: string]: string }) {
+    // eslint-disable-next-line sonarjs/deprecation
     const normalizedAppearance = (appearance || undefined) as ButtonWebComponentAttributes['appearance'];
     const normalizedPurpose = (purpose || undefined) as ButtonWebComponentAttributes['purpose'];
 
     return (
       <Button
-        appearance={normalizedAppearance}
-        purpose={normalizedPurpose}
         disabled={(disabled === 'true') as ButtonWebComponentAttributes['disabled']}
+        {...(normalizedAppearance ? { appearance: normalizedAppearance } : {})}
+        {...(normalizedPurpose ? { purpose: normalizedPurpose } : {})}
         {...restProps}
       >
         {text}
