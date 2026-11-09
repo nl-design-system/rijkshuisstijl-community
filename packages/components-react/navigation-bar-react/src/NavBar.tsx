@@ -3,6 +3,7 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+import { Button } from '@rijkshuisstijl-community/button-react/no-side-effects';
 import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react/no-side-effects';
 import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react/no-side-effects';
 import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
@@ -172,13 +173,26 @@ interface MegaMenuTriggerProps extends ComponentPropsWithRef<typeof LinkButton> 
   id: string;
 }
 
-const MegaMenuTrigger = ({ id, className, style, ...restProps }: MegaMenuTriggerProps) => (
-  <LinkButton
+const MegaMenuTrigger = ({ id, className, ...restProps }: MegaMenuTriggerProps) => (
+  <LinkButton popoverTarget={`${id}-panel`} {...restProps} className={clsx('rhc-nav-bar__link', className)} />
+);
+
+interface MegaMenuCloseButtonProps extends PropsWithChildren<HTMLAttributes<HTMLButtonElement>> {
+  id: string;
+}
+
+const MegaMenuCloseButton = ({ id, className, children, ...restProps }: MegaMenuCloseButtonProps) => (
+  <Button
+    aria-label="Sluit menu"
     popoverTarget={`${id}-panel`}
+    popoverTargetAction="hide"
+    purpose="subtle"
     {...restProps}
-    className={clsx('rhc-nav-bar__link', className)}
-    style={{ anchorName: `--${id}-anchor`, ...style } as CSSProperties}
-  />
+    className={clsx('rhc-nav-bar__megamenu__btn-close', className)}
+  >
+    <Icon icon="kruis" />
+    {children ?? 'Sluiten'}
+  </Button>
 );
 
 interface MegaMenuPanelProps extends ComponentPropsWithRef<'div'> {
@@ -195,7 +209,10 @@ const MegaMenuPanel = ({ id, className, style, children, onOpenChange, ...restPr
     onToggle={(event) => onOpenChange?.(event.newState === 'open')}
     {...restProps}
   >
-    <div className="rhc-nav-bar__megamenu">{children}</div>
+    <div className="rhc-nav-bar__megamenu">
+      {children}
+      <MegaMenuCloseButton id={id} />
+    </div>
   </div>
 );
 
@@ -207,11 +224,13 @@ export const NavBar = ({
   items,
   endItems,
   megamenu,
+  style,
   ...restProps
 }: PropsWithChildren<NavBarProps>) => {
   const [isMegamenuOpen, setIsMegamenuOpen] = useState(false);
   const [isMainNavOpen, setIsMainNavOpen] = useState(false);
   const megamenuId = `rhc-nav-bar-megamenu-${useId().replaceAll(':', '')}`;
+  const megamenuAnchorName = `--${megamenuId}-anchor`;
 
   // escape sluit het hoofdmenu; het megamenu sluit zichzelf via de native Popover API
   useEffect(() => {
@@ -232,7 +251,12 @@ export const NavBar = ({
   }, [isMainNavOpen]);
 
   return (
-    <div className="rhc-nav-bar" ref={ref} {...restProps}>
+    <div
+      className="rhc-nav-bar"
+      ref={ref}
+      style={megamenu ? ({ anchorName: megamenuAnchorName, ...style } as CSSProperties) : style}
+      {...restProps}
+    >
       <h2 className="rhc-visually-hidden">Hoofd navigatie</h2>
       {identity && (
         <div className="rhc-nav-bar__slot-identity">
