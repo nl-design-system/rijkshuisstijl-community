@@ -29,11 +29,14 @@ const items = [
   <div className="rhc-page-section">
     <div className="rhc-page-section__content">
       <Logo organisation="Organisatie" subtitle="Wat wij doen" />
-      <NavBar items={items}>
-        <NavBarIdentity appearance="primary" href="/">
-          Dataregister
-        </NavBarIdentity>
-      </NavBar>
+      <NavBar
+        identity={
+          <NavBarIdentity primary href="/">
+            Dataregister
+          </NavBarIdentity>
+        }
+        items={items}
+      />
     </div>
   </div>
 </PageHeader>;
@@ -77,14 +80,15 @@ const megamenu = (
       <Logo organisation="Organisatie" subtitle="Wat wij doen">
         <Icon className="dutch-map" icon="nederland-map" />
       </Logo>
-      <NavBar megamenu={megamenu}>
-        <NavBarIdentity appearance="primary" href="/">
-          Overheid.nl
-        </NavBarIdentity>
-      </NavBar>
-      <NavBar items={itemsMain}>
-        <NavBarIdentity href="/">Dataregister</NavBarIdentity>
-      </NavBar>
+      <NavBar
+        identity={
+          <NavBarIdentity primary href="/">
+            Overheid.nl
+          </NavBarIdentity>
+        }
+        megamenu={megamenu}
+      />
+      <NavBar identity={<NavBarIdentity href="/">Dataregister</NavBarIdentity>} items={itemsMain} />
     </div>
   </div>
 </PageHeader>;

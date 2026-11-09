@@ -48,7 +48,7 @@ export const Default: Story = {
 export const WithIdentity: Story = {
   args: {
     items,
-    children: <NavBarIdentity href="/">Identity</NavBarIdentity>,
+    identity: <NavBarIdentity href="/">Identity</NavBarIdentity>,
   },
 };
 
@@ -98,11 +98,12 @@ export const WithSubList: Story = {
 
 export const WithMegaMenu: Story = {
   args: {
-    children: (
-      <NavBarIdentity appearance="primary" href="/">
+    identity: (
+      <NavBarIdentity primary href="/">
         Overheid.nl
       </NavBarIdentity>
     ),
+
     megamenu: (
       <NavBarMegaMenu
         tagline="Ingang naar informatie en diensten van alle overheden"

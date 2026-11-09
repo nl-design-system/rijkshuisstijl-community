@@ -131,7 +131,7 @@ export const SharedHeaderOverheidNl = () => (
           <Icon className="dutch-map" icon="nederland-map" />
         </Logo>
         <NavBar endItems={endItemsPrimary} megamenu={megamenu}>
-          <NavBarIdentity appearance="primary" href="/">
+          <NavBarIdentity primary href="/">
             Overheid.nl
           </NavBarIdentity>
         </NavBar>

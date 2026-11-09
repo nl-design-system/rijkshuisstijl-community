@@ -3,9 +3,9 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
+import { Link, LinkProps } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import clsx from 'clsx';
-import { HTMLAttributes, PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 
 export interface NavBarIdentityProps extends LinkProps {
   href: string;
@@ -13,17 +13,16 @@ export interface NavBarIdentityProps extends LinkProps {
 }
 
 export const NavBarIdentity = ({
-  appearance,
   children,
   className,
   href,
+  primary,
   ...restProps
 }: PropsWithChildren<NavBarIdentityProps>) => (
-  <div
-    className={clsx('rhc-nav-bar__identity', primary && `rhc-nav-bar__identity--primary`, className)}
-    {...restProps}
-  >
-    <Link href={href}>{children}</Link>
+  <div className={clsx('rhc-nav-bar-identity', primary && 'rhc-nav-bar-identity--primary')}>
+    <Link className={clsx('rhc-nav-bar-identity__link', className)} href={href} {...restProps}>
+      {children}
+    </Link>
   </div>
 );
 

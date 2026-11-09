@@ -46,9 +46,9 @@ const items = [
 
 const endItems = [<NavBarItem href="/zoeken" icon={<Icon icon="zoek" />} id="zoeken" key="zoeken" label="Zoeken" />];
 
-<NavBar endItems={endItems} items={items}>
-  <NavBarIdentity href="/">Dataregister</NavBarIdentity>
-</NavBar>;
+const Identity = (<NavBarIdentity href="/">Dataregister</NavBarIdentity>)
+
+<NavBar endItems={endItems} identity={identity} items={items} />;
 ```
 
 Een item kan ook een `subList` of een `megamenu` krijgen voor een uitklapgedeelte met secties of kolommen. Een sectie of kolom heeft een `id`, een `heading` en `items`.
@@ -63,7 +63,7 @@ Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk.
 
 | Prop        | Type              | Default | Beschrijving                                              |
 | ----------- | ----------------- | ------- | --------------------------------------------------------- |
-| `children`  | ReactNode         | -       | Een NavBarIdentity, getoond aan het begin van de balk.    |
+| `identity`  | ReactNode         | -       | Een NavBarIdentity, getoond aan het begin van de balk.    |
 | `items`     | NavBarItemProps[] | -       | De links in het hoofdgedeelte.                            |
 | `endItems`  | ReactNode         | -       | `NavBarItem`-elementen aan het einde van de balk(`<ul>`). |
 | `megamenu`  | ReactNode         | -       | Een `NavBarMegaMenu` dat opent via een menuknop.          |
@@ -83,9 +83,9 @@ Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk.
 
 ### NavBarIdentity
 
-| Prop         | Type      | Default   | Beschrijving                           |
-| ------------ | --------- | --------- | -------------------------------------- |
-| `href`       | string    | verplicht | De URL waar de identity naartoe linkt. |
-| `children`   | ReactNode | verplicht | De naam of titel van de site.          |
-| `className`  | string    | -         | Extra CSS class names.                 |
-| `primary` | boolean    | -         | Primary variant voor de hoofd navigatie |
+| Prop        | Type      | Default   | Beschrijving                            |
+| ----------- | --------- | --------- | --------------------------------------- |
+| `href`      | string    | verplicht | De URL waar de identity naartoe linkt.  |
+| `children`  | ReactNode | verplicht | De naam of titel van de site.           |
+| `className` | string    | -         | Extra CSS class names.                  |
+| `primary`   | boolean   | -         | Primary variant voor de hoofd navigatie |
