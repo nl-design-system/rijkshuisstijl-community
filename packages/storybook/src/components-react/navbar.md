@@ -88,4 +88,4 @@ Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk.
 | `href`       | string    | verplicht | De URL waar de identity naartoe linkt. |
 | `children`   | ReactNode | verplicht | De naam of titel van de site.          |
 | `className`  | string    | -         | Extra CSS class names.                 |
-| `appearance` | string    | -         | Variant, bijvoorbeeld `primary`.       |
+| `primary` | boolean    | -         | Primary variant voor de hoofd navigatie |
