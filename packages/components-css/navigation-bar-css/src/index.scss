@@ -47,6 +47,10 @@
   @include mixin.rhc-nav-bar__megamenu;
 }
 
+.rhc-nav-bar__megamenu-panel {
+  @include mixin.rhc-nav-bar__megamenu-panel;
+}
+
 .rhc-nav-bar__megamenu-column-heading {
   @include mixin.item-height;
 }
@@ -58,10 +62,6 @@
 
 .rhc-nav-bar__megamenu__link-list {
   row-gap: 0;
-}
-
-.rhc-nav-bar__megamenu__btn-close.rhc-nav-bar__megamenu__btn-close.rhc-nav-bar__megamenu__btn-close {
-  @include mixin.rhc-nav-bar__megamenu__btn-close;
 }
 
 .rhc-nav-bar__megamenu-separator {

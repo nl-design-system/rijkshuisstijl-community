@@ -3,7 +3,6 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Button } from '@rijkshuisstijl-community/button-react/no-side-effects';
 import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react/no-side-effects';
 import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react/no-side-effects';
 import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
@@ -11,7 +10,18 @@ import { LinkList, LinkListLink } from '@rijkshuisstijl-community/link-list-reac
 import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import { Separator } from '@rijkshuisstijl-community/separator-react/no-side-effects';
 import clsx from 'clsx';
-import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useEffect, useRef, useState } from 'react';
+import {
+  ComponentPropsWithRef,
+  CSSProperties,
+  HTMLAttributes,
+  PropsWithChildren,
+  ReactElement,
+  ReactNode,
+  Ref,
+  useEffect,
+  useId,
+  useState,
+} from 'react';
 
 export interface NavBarIdentityProps {
   value: ReactNode;
@@ -158,6 +168,37 @@ export const NavBarItem = ({
 
 NavBarItem.displayName = 'NavBarItem';
 
+interface MegaMenuTriggerProps extends ComponentPropsWithRef<typeof LinkButton> {
+  id: string;
+}
+
+const MegaMenuTrigger = ({ id, className, style, ...restProps }: MegaMenuTriggerProps) => (
+  <LinkButton
+    popoverTarget={`${id}-panel`}
+    {...restProps}
+    className={clsx('rhc-nav-bar__link', className)}
+    style={{ anchorName: `--${id}-anchor`, ...style } as CSSProperties}
+  />
+);
+
+interface MegaMenuPanelProps extends ComponentPropsWithRef<'div'> {
+  id: string;
+  onOpenChange?: (open: boolean) => void;
+}
+
+const MegaMenuPanel = ({ id, className, style, children, onOpenChange, ...restProps }: MegaMenuPanelProps) => (
+  <div
+    className={clsx('rhc-nav-bar__megamenu-panel', className)}
+    id={`${id}-panel`}
+    popover="auto"
+    style={{ positionAnchor: `--${id}-anchor`, ...style } as CSSProperties}
+    onToggle={(event) => onOpenChange?.(event.newState === 'open')}
+    {...restProps}
+  >
+    <div className="rhc-nav-bar__megamenu">{children}</div>
+  </div>
+);
+
 export const NavBar = ({
   ref,
   children,
@@ -170,130 +211,28 @@ export const NavBar = ({
 }: PropsWithChildren<NavBarProps>) => {
   const [isMegamenuOpen, setIsMegamenuOpen] = useState(false);
   const [isMainNavOpen, setIsMainNavOpen] = useState(false);
-  const itemsSlotRef = useRef<HTMLDivElement>(null);
-  const endItemsSlotRef = useRef<HTMLDivElement>(null);
-  const hamburgerLiRef = useRef<HTMLLIElement>(null);
-  const megamenuRef = useRef<HTMLDivElement>(null);
-  const isAnyMenuOpen = isMegamenuOpen || isMainNavOpen;
-  const closedByKeyboardRef = useRef(false);
+  const megamenuId = `rhc-nav-bar-megamenu-${useId().replaceAll(':', '')}`;
 
-  // Op mobiel worden ze volledig inert (megamenu dekt ze af). Houdt rekening met resizing.
+  // escape sluit het hoofdmenu; het megamenu sluit zichzelf via de native Popover API
   useEffect(() => {
-    const endItemsSlot = endItemsSlotRef.current;
-    const itemsSlot = itemsSlotRef.current;
-
-    if (!isMegamenuOpen) {
-      itemsSlot?.removeAttribute('inert');
-      endItemsSlot?.removeAttribute('inert');
-      return;
-    }
-
-    const setEndItemsTabIndex = (disabled: boolean) => {
-      if (!endItemsSlot) return;
-      if (disabled) {
-        for (const el of endItemsSlot.querySelectorAll<HTMLElement>('a[href], button, input, select, textarea')) {
-          el.dataset['savedTabindex'] = el.getAttribute('tabindex') ?? '';
-          el.tabIndex = -1;
-        }
-      } else {
-        for (const el of endItemsSlot.querySelectorAll<HTMLElement>('[data-saved-tabindex]')) {
-          const saved = el.dataset['savedTabindex'];
-          if (saved === '') {
-            el.removeAttribute('tabindex');
-          } else {
-            el.setAttribute('tabindex', saved!);
-          }
-          delete el.dataset['savedTabindex'];
-        }
-      }
-    };
-
-    const mq = globalThis.matchMedia('(min-width: 769px)');
-    const applyInert = () => {
-      itemsSlot?.toggleAttribute('inert', mq.matches);
-      if (mq.matches) {
-        // Desktop: endItems zijn zichtbaar en klikbaar, maar niet in de tab-volgorde
-        setEndItemsTabIndex(false);
-        endItemsSlot?.removeAttribute('inert');
-        setEndItemsTabIndex(true);
-      } else {
-        // Mobiel: endItems zijn onderdeel van de focus trap, volledig toegankelijk
-        setEndItemsTabIndex(false);
-        endItemsSlot?.removeAttribute('inert');
-      }
-    };
-
-    applyInert();
-    mq.addEventListener('change', applyInert);
-
-    // Stuck between a rock and a hard place here: without the ignore line, eslint complains that the function sometimes
-    // returns something, sometimes nothing. But when putting `return undefined` above instead of just `return`, it will
-    // complain about a different rule called `unicorn/no-useless-undefined`.
-    // eslint-disable-next-line consistent-return
-    return () => {
-      mq.removeEventListener('change', applyInert);
-      setEndItemsTabIndex(false);
-    };
-  }, [isMegamenuOpen]);
-
-  // escape sluit het menu;
-  useEffect(() => {
-    if (!isAnyMenuOpen) return;
+    if (!isMainNavOpen) return;
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        closedByKeyboardRef.current = true;
-        setIsMegamenuOpen(false);
-        setIsMainNavOpen(false);
-      }
+      if (e.key === 'Escape') setIsMainNavOpen(false);
     };
     document.addEventListener('keydown', handleKeyDown);
-    // Stuck between a rock and a hard place here: without the ignore line, eslint complains that the function sometimes
-    // returns something, sometimes nothing. But when putting `return undefined` above instead of just `return`, it will
-    // complain about a different rule called `unicorn/no-useless-undefined`.
     // eslint-disable-next-line consistent-return
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isAnyMenuOpen]);
+  }, [isMainNavOpen]);
 
-  // Focus btn-trigger (hamburger menu) na sluiten van megamenu
-  useEffect(() => {
-    if (!isMegamenuOpen && closedByKeyboardRef.current) {
-      hamburgerLiRef.current?.querySelector<HTMLElement>('button, [href]')?.focus();
-      closedByKeyboardRef.current = false;
-    }
-  }, [isMegamenuOpen]);
-
-  // wanneer isMegamenuOpen veranderd, toggled de 'open' class op de rhc-page-header (ivm z-index)
-  useEffect(() => {
-    const pageHeader = document.querySelector('.rhc-page-header');
-    pageHeader?.classList.toggle('is-navbar-megamenu-open', isMegamenuOpen);
-    return () => pageHeader?.classList.remove('is-navbar-megamenu-open');
-  }, [isMegamenuOpen]);
-
-  // wanneer isMegamenuOpen veranderd, toggled de 'open' class op de rhc-page-header (ivm z-index)
+  // wanneer isMainNavOpen veranderd, toggled de 'open' class op de rhc-page-header (ivm z-index)
   useEffect(() => {
     const pageHeader = document.querySelector('.rhc-page-header');
     pageHeader?.classList.toggle('is-navbar-main-open', isMainNavOpen);
     return () => pageHeader?.classList.remove('is-navbar-main-open');
   }, [isMainNavOpen]);
 
-  useEffect(() => {
-    if (!isMegamenuOpen || !megamenuRef.current) return;
-    const focusableElements = megamenuRef.current.querySelectorAll<HTMLElement>(
-      'a[href], button, input, select, textarea',
-    );
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') setIsMegamenuOpen(false);
-    };
-
-    if (focusableElements.length === 0) return;
-    // eslint-disable-next-line unicorn/prefer-at
-    focusableElements[focusableElements.length - 1].addEventListener('keydown', handleKeyDown);
-    // eslint-disable-next-line consistent-return,unicorn/prefer-at
-    return () => focusableElements[focusableElements.length - 1].removeEventListener('keydown', handleKeyDown);
-  }, [isMegamenuOpen]);
-
   return (
-    <div className={clsx('rhc-nav-bar', { 'is-open': isMegamenuOpen })} ref={ref} {...restProps}>
+    <div className="rhc-nav-bar" ref={ref} {...restProps}>
       <h2 className="rhc-visually-hidden">Hoofd navigatie</h2>
       {identity && (
         <div className="rhc-nav-bar__slot-identity">
@@ -302,30 +241,20 @@ export const NavBar = ({
       )}
 
       {megamenu ? (
-        <div className={clsx('rhc-nav-bar__slot-megamenu', { 'is-navbar-megamenu-open': isMegamenuOpen })}>
+        <div className="rhc-nav-bar__slot-megamenu">
           <ul className="rhc-nav-bar__list">
-            <li className="rhc-nav-bar__item" ref={hamburgerLiRef}>
-              <LinkButton
-                aria-expanded={isMegamenuOpen}
-                className={clsx('rhc-nav-bar__link')}
-                onClick={() => setIsMegamenuOpen((prev) => !prev)}
-              >
-                <Icon icon={isMegamenuOpen && globalThis.matchMedia('(max-width: 768px)').matches ? 'kruis' : 'menu'} />
-
+            <li className="rhc-nav-bar__item">
+              <MegaMenuTrigger aria-expanded={isMegamenuOpen} id={megamenuId}>
+                <Icon icon={isMegamenuOpen ? 'kruis' : 'menu'} />
                 <span className={clsx('rhc-nav-bar__label', 'rhc-visually-hidden-mobile')}>
                   Kies een onderwerp of dienst
                 </span>
-              </LinkButton>
+              </MegaMenuTrigger>
             </li>
           </ul>
           <div className="rhc-nav-bar__slots">
-            {isMegamenuOpen && (
-              <div className="rhc-nav-bar__megamenu" ref={megamenuRef}>
-                {megamenu}
-              </div>
-            )}
             {items && (
-              <div className="rhc-nav-bar__slot rhc-nav-bar__slot--primary" ref={itemsSlotRef}>
+              <div className="rhc-nav-bar__slot rhc-nav-bar__slot--primary">
                 <nav aria-label="primary-navigation" className={clsx('rhc-nav-bar__nav', className)}>
                   <ul className="rhc-nav-bar__list">
                     {items.map((item) => (
@@ -336,24 +265,16 @@ export const NavBar = ({
               </div>
             )}
             {endItems && (
-              <div className="rhc-nav-bar__slot rhc-nav-bar__slot--secondary" ref={endItemsSlotRef}>
+              <div className="rhc-nav-bar__slot rhc-nav-bar__slot--secondary">
                 <nav aria-label="secondary-navigation" className={clsx('rhc-nav-bar__nav', className)}>
                   <ul className="rhc-nav-bar__list">{endItems}</ul>
                 </nav>
               </div>
             )}
-            {isMegamenuOpen && (
-              <Button
-                aria-label="Sluit menu"
-                className="rhc-nav-bar__megamenu__btn-close"
-                purpose="subtle"
-                onClick={() => setIsMegamenuOpen(false)}
-              >
-                <Icon icon="kruis" />
-                Sluiten
-              </Button>
-            )}
           </div>
+          <MegaMenuPanel id={megamenuId} onOpenChange={setIsMegamenuOpen}>
+            {megamenu}
+          </MegaMenuPanel>
         </div>
       ) : (
         <div className={clsx('rhc-nav-bar__slot-main', { 'is-navbar-main-open': isMainNavOpen })}>

@@ -25,7 +25,7 @@
       z-index: calc(var(--rhc-navigation-bar-z-index, 2) - 1);
     }
 
-    .rhc-page-header:is(.is-navbar-megamenu-open, .is-navbar-main-open) {
+    .rhc-page-header.is-navbar-main-open {
       position: relative;
       z-index: 5;
     }
@@ -143,13 +143,14 @@
     align-items: center;
     display: flex;
     flex: 1;
-
-    .rhc-nav-bar__megamenu ~ .rhc-nav-bar__slot {
-      margin-inline-start: auto;
-    }
   }
 
   @media (width < 768px) {
+    // het megamenu-paneel is nu een losstaande popover; de endItems blijven gewoon zichtbaar.
+    .rhc-nav-bar__slot-megamenu & {
+      display: flex;
+    }
+
     .rhc-nav-bar__slot-main.is-navbar-main-open & {
       display: flex;
       flex-direction: column;
@@ -159,8 +160,7 @@
   }
 
   @at-root {
-    .rhc-nav-bar__slot-main.is-navbar-main-open &,
-    .rhc-nav-bar__slot-megamenu.is-navbar-megamenu-open & {
+    .rhc-nav-bar__slot-main.is-navbar-main-open & {
       @media (width < 768px) {
         background: var(--rhc-navigation-bar-mega-menu-background-color);
         display: flex;
@@ -189,40 +189,9 @@
     margin-inline-start: auto;
   }
 
-  // wanneer megamenu open is, krijgt endItems speciale weergave;
   @at-root {
-    &.is-navbar-megamenu-open {
-      .rhc-nav-bar__slot {
-        background-color: var(--rhc-navigation-bar-mega-menu-background-color);
-        padding-block-end: var(--rhc-page-section-vi-small-padding-block-end);
-        padding-block-start: var(--rhc-page-section-vi-small-padding-block-start);
-        padding-inline-end: var(--rhc-page-section-vi-small-padding-inline-end);
-        padding-inline-start: var(--rhc-page-section-vi-small-padding-inline-start);
-
-        @media (width >= 768px) {
-          background: none;
-          padding-block: 0;
-          padding-inline: 0;
-        }
-
-        .rhc-nav-bar__list {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-        }
-
-        &--secondary {
-          @media (width < 768px) {
-            background-color: var(--rhc-navigation-bar-mega-menu-secondary-slot-mobile-background-color);
-            min-block-size: var(--rhc-navigation-bar-mega-menu-secondary-slot-mobile-min-block-size);
-          }
-        }
-      }
-    }
-    @media (width >= 768px) {
-      & .rhc-nav-bar__slots > .rhc-nav-bar__slot {
-        margin-inline-start: auto;
-      }
+    & .rhc-nav-bar__slots > .rhc-nav-bar__slot {
+      margin-inline-start: auto;
     }
   }
 }
@@ -256,32 +225,31 @@
   padding-inline-start: var(--rhc-navigation-bar-mega-menu-vi-small-padding-inline-start);
 
   @media (width >= 768px) {
-    inset-block-start: 2.4em;
-    inset-inline-end: 0;
-    inset-inline-start: 0;
     padding-block-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-end);
     padding-block-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-start);
     padding-inline-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-end);
     padding-inline-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-start);
-    position: absolute;
   }
 }
 
-@mixin rhc-nav-bar__megamenu__btn-close {
-  display: none;
-
-  @media (width >= 768px) {
-    display: flex;
-    font-weight: var(--rhc-text-font-weight-regular);
-    inset-block-start: calc(var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-start) + 1.8em);
-    inset-inline-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-end);
-    position: absolute;
-  }
-
-  &.rhc-button:hover {
-    // todo; token corrigeren
-    background-color: var(--rhc-navigation-bar-item-hover-background-color);
-  }
+// het paneel is de popover zelf: onzichtbaar, geankerd onder de trigger, en begrensd
+// tot de resterende viewport-hoogte zodat de trigger altijd zichtbaar blijft; de
+// zichtbare achtergrond/kleur/padding zitten op .rhc-nav-bar__megamenu erbinnen.
+@mixin rhc-nav-bar__megamenu-panel {
+  background: none;
+  block-size: auto;
+  border: 0;
+  inline-size: 100vw;
+  inset-block-end: 0;
+  inset-block-start: anchor(bottom);
+  inset-inline-end: 0;
+  inset-inline-start: 0;
+  margin-block: 0;
+  margin-inline: 0;
+  max-inline-size: 100vw;
+  overflow-block: auto;
+  padding-block: 0;
+  padding-inline: 0;
 }
 
 @mixin rhc-nav-bar__megamenu-separator {
