@@ -62,7 +62,7 @@
   z-index: 3;
 }
 
-@mixin rhc-nav-bar__identity {
+@mixin rhc-nav-bar-identity {
   flex-shrink: 0;
   padding-inline-end: var(--rhc-navigation-bar-item-padding-inline-end);
 }
@@ -80,7 +80,7 @@
   }
 
   @at-root {
-    &--primary & {
+    .rhc-nav-bar-identity--primary & {
       --nl-link-font-size: 1.5em;
 
       color: var(--rhc-navigation-bar-identity-primary-color);

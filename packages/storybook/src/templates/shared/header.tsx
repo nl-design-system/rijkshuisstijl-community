@@ -130,14 +130,20 @@ export const SharedHeaderOverheidNl = () => (
         <Logo organisation="Organisatie" subtitle="Wat wij doen">
           <Icon className="dutch-map" icon="nederland-map" />
         </Logo>
-        <NavBar endItems={endItemsPrimary} megamenu={megamenu}>
-          <NavBarIdentity primary href="/">
-            Overheid.nl
-          </NavBarIdentity>
-        </NavBar>
-        <NavBar endItems={endItemsSecondary} items={itemsMain}>
-          <NavBarIdentity href="/">Dataregister</NavBarIdentity>
-        </NavBar>
+        <NavBar
+          endItems={endItemsPrimary}
+          megamenu={megamenu}
+          identity={
+            <NavBarIdentity primary href="/">
+              Overheid.nl
+            </NavBarIdentity>
+          }
+        />
+        <NavBar
+          endItems={endItemsSecondary}
+          identity={<NavBarIdentity href="/">Dataregister</NavBarIdentity>}
+          items={itemsMain}
+        />
       </div>
     </div>
   </PageHeader>
