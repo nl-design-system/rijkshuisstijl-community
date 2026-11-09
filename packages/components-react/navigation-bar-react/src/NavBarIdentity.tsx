@@ -7,7 +7,7 @@ import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren } from 'react';
 
-export interface NavBarIdentityProps extends HTMLAttributes<HTMLDivElement> {
+export interface NavBarIdentityProps extends LinkProps {
   href: string;
   primary?: boolean;
 }
