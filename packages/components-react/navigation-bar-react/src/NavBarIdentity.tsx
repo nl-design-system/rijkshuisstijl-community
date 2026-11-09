@@ -20,7 +20,7 @@ export const NavBarIdentity = ({
   ...restProps
 }: PropsWithChildren<NavBarIdentityProps>) => (
   <div
-    className={clsx('rhc-nav-bar__identity', appearance && `rhc-nav-bar__identity--${appearance}`, className)}
+    className={clsx('rhc-nav-bar__identity', primary && `rhc-nav-bar__identity--primary`, className)}
     {...restProps}
   >
     <Link href={href}>{children}</Link>
