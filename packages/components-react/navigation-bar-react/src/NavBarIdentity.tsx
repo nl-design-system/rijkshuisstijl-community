@@ -9,7 +9,7 @@ import { HTMLAttributes, PropsWithChildren } from 'react';
 
 export interface NavBarIdentityProps extends HTMLAttributes<HTMLDivElement> {
   href: string;
-  appearance?: string;
+  primary?: boolean;
 }
 
 export const NavBarIdentity = ({
