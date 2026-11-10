@@ -12,7 +12,7 @@ De Navigation Bar bestaat uit de volgende onderdelen:
 - **Items**: de links in het hoofdgedeelte van de balk.
 - **End items**: optionele items aan het einde van de balk, bijvoorbeeld zoeken, inloggen of taalkeuze.
 - **Sublijst**: een uitklapgedeelte bij een item, opgebouwd uit secties met een kop en links.
-- **Megamenu**: een optioneel uitklapmenu met links in kolommen, dat opent via een menuknop.
+- **Megamenu**: een optioneel uitklapmenu met links in kolommen, dat opent via een menuknop. Op smalle schermen bevat dit paneel ook de `items` en `endItems`.
 
 Op smalle schermen klapt de balk in achter een menuknop.
 
@@ -59,7 +59,9 @@ Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk.
 
 ### Megamenu
 
-Geef `NavBar` een `megamenu` om de hoofdnavigatie te vervangen door een menuknop die een uitklapmenu opent. De menuknop, op basis van de native Popover API: geen eigen JavaScript nodig, en het paneel sluit ook via de `Escape`-toets of door ernaast te klikken. Na sluiten gaat de focus terug naar de menuknop.
+Geef `NavBar` een `megamenu` om naast `items`/`endItems` ook een menuknop te tonen die een uitklapmenu opent. Op basis van de native Popover API: geen eigen JavaScript nodig en het sluit ook via de `Escape`-toets of door ernaast te klikken. Na sluiten gaat de focus terug naar de menuknop.
+
+Op smalle schermen worden `items` en `endItems` automatisch mee opgenomen in hetzelfde paneel als het megamenu, zodat er één uitklapmenu is in plaats van losse knoppen. Vanaf desktop-breedte blijven `items`/`endItems` gewoon naast de menuknop staan, zoals normaal.
 
 De inhoud van het menu bepaal je zelf. `NavBarMegaMenuTagline` en `NavBarMegaMenuSeparator` zijn er voor de introductietekst, maar de kolommen en links styling je zelf, bijvoorbeeld met `rhc-grid` en `LinkList`:
 
@@ -76,24 +78,20 @@ import {
 
 const megamenu = (
   <>
-    <NavBarMegaMenuTrigger>Kies een onderwerp of dienst</NavBarMegaMenuTrigger>
-    <NavBarMegaMenuPanel>
-      <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
-      <NavBarMegaMenuSeparator />
-      <div className="rhc-grid">
-        <div className="rhc-grid__cell rhc-grid__cell-d-3">
-          <Heading appearanceLevel={5} className="rhc-nav-bar__megamenu-column-heading" level={3}>
-            Diensten van de overheid
-          </Heading>
-          <LinkList className="rhc-nav-bar__megamenu__link-list">
-            <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
-              Dienstenoverzicht
-            </LinkListLink>
-          </LinkList>
-        </div>
-        <NavBarMegaMenuClose />
+    <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
+    <NavBarMegaMenuSeparator />
+    <div className="rhc-grid">
+      <div className="rhc-grid__cell rhc-grid__cell-d-3">
+        <Heading appearanceLevel={5} className="rhc-nav-bar__megamenu-column-heading" level={3}>
+          Diensten van de overheid
+        </Heading>
+        <LinkList className="rhc-nav-bar__megamenu__link-list">
+          <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
+            Dienstenoverzicht
+          </LinkListLink>
+        </LinkList>
       </div>
-    </NavBarMegaMenuPanel>
+    </div>
   </>
 );
 
@@ -109,7 +107,7 @@ const megamenu = (
 | `identity`  | ReactNode         | -       | Een NavBarIdentity, getoond aan het begin van de balk.    |
 | `items`     | NavBarItemProps[] | -       | De links in het hoofdgedeelte.                            |
 | `endItems`  | ReactNode         | -       | `NavBarItem`-elementen aan het einde van de balk(`<ul>`). |
-| `megamenu`  | ReactNode         | -       | Een `NavBarMegaMenu` dat opent via een menuknop.          |
+| `megamenu`  | ReactNode         | -       | Inhoud van het uitklapmenu, geopend via een menuknop.     |
 | `className` | string            | -       | Extra CSS class names.                                    |
 
 ### NavBarItem
