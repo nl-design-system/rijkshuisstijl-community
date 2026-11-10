@@ -3,16 +3,13 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Button } from '@rijkshuisstijl-community/button-react/no-side-effects';
 import { Heading, HeadingLevel } from '@rijkshuisstijl-community/heading-react/no-side-effects';
 import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react/no-side-effects';
 import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 import { LinkList, LinkListLink } from '@rijkshuisstijl-community/link-list-react/no-side-effects';
 import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
-import { Separator } from '@rijkshuisstijl-community/separator-react/no-side-effects';
 import clsx from 'clsx';
 import {
-  ComponentPropsWithRef,
   CSSProperties,
   HTMLAttributes,
   PropsWithChildren,
@@ -23,6 +20,7 @@ import {
   useId,
   useState,
 } from 'react';
+import { NavBarMegaMenuClose, NavBarMegaMenuPanel, NavBarMegaMenuTrigger } from './MegaMenu';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   identity?: ReactNode;
@@ -58,20 +56,6 @@ interface NavbarSubListProps {
 
 export interface SubNavBarProps extends HTMLAttributes<HTMLDivElement> {
   columns: NavBarLinkProps[][];
-  ref?: Ref<HTMLDivElement>;
-}
-
-export interface NavBarMegaMenuColumnProps {
-  id: string;
-  heading: ReactNode;
-  headingAppearanceLevel?: HeadingLevel;
-  headingLevel?: HeadingLevel;
-  items: NavBarLinkProps[];
-}
-
-export interface NavBarMegaMenuProps extends HTMLAttributes<HTMLDivElement> {
-  tagline?: ReactNode;
-  columns: NavBarMegaMenuColumnProps[];
   ref?: Ref<HTMLDivElement>;
 }
 
@@ -155,53 +139,6 @@ export const NavBarItem = ({
 
 NavBarItem.displayName = 'NavBarItem';
 
-interface MegaMenuTriggerProps extends ComponentPropsWithRef<typeof LinkButton> {
-  id: string;
-}
-
-const MegaMenuTrigger = ({ id, className, ...restProps }: MegaMenuTriggerProps) => (
-  <LinkButton popoverTarget={`${id}-panel`} {...restProps} className={clsx('rhc-nav-bar__link', className)} />
-);
-
-interface MegaMenuCloseButtonProps extends PropsWithChildren<HTMLAttributes<HTMLButtonElement>> {
-  id: string;
-}
-
-const MegaMenuCloseButton = ({ id, className, children, ...restProps }: MegaMenuCloseButtonProps) => (
-  <Button
-    aria-label="Sluit menu"
-    popoverTarget={`${id}-panel`}
-    popoverTargetAction="hide"
-    purpose="subtle"
-    {...restProps}
-    className={clsx('rhc-nav-bar__megamenu__btn-close', className)}
-  >
-    <Icon icon="kruis" />
-    {children ?? 'Sluiten'}
-  </Button>
-);
-
-interface MegaMenuPanelProps extends ComponentPropsWithRef<'div'> {
-  id: string;
-  onOpenChange?: (open: boolean) => void;
-}
-
-const MegaMenuPanel = ({ id, className, style, children, onOpenChange, ...restProps }: MegaMenuPanelProps) => (
-  <div
-    className={clsx('rhc-nav-bar__megamenu-panel', className)}
-    id={`${id}-panel`}
-    popover="auto"
-    style={{ positionAnchor: `--${id}-anchor`, ...style } as CSSProperties}
-    onToggle={(event) => onOpenChange?.(event.newState === 'open')}
-    {...restProps}
-  >
-    <div className="rhc-nav-bar__megamenu">
-      {children}
-      <MegaMenuCloseButton id={id} />
-    </div>
-  </div>
-);
-
 export const NavBar = ({
   ref,
   children,
@@ -250,12 +187,12 @@ export const NavBar = ({
         <div className="rhc-nav-bar__slot-megamenu">
           <ul className="rhc-nav-bar__list">
             <li className="rhc-nav-bar__item">
-              <MegaMenuTrigger aria-expanded={isMegamenuOpen} id={megamenuId}>
+              <NavBarMegaMenuTrigger aria-expanded={isMegamenuOpen} id={megamenuId}>
                 <Icon icon={isMegamenuOpen ? 'kruis' : 'menu'} />
                 <span className={clsx('rhc-nav-bar__label', 'rhc-visually-hidden-mobile')}>
                   Kies een onderwerp of dienst
                 </span>
-              </MegaMenuTrigger>
+              </NavBarMegaMenuTrigger>
             </li>
           </ul>
           <div className="rhc-nav-bar__slots">
@@ -278,9 +215,10 @@ export const NavBar = ({
               </div>
             )}
           </div>
-          <MegaMenuPanel id={megamenuId} onOpenChange={setIsMegamenuOpen}>
+          <NavBarMegaMenuPanel id={megamenuId} onOpenChange={setIsMegamenuOpen}>
             {megamenu}
-          </MegaMenuPanel>
+            <NavBarMegaMenuClose id={megamenuId} />
+          </NavBarMegaMenuPanel>
         </div>
       ) : (
         <div className={clsx('rhc-nav-bar__slot-main', { 'is-navbar-main-open': isMainNavOpen })}>
@@ -321,49 +259,6 @@ export const NavBar = ({
 };
 
 NavBar.displayName = 'NavBar';
-
-export const NavBarMegaMenu = ({
-  ref,
-  children,
-  className,
-  tagline,
-  columns,
-  ...restProps
-}: PropsWithChildren<NavBarMegaMenuProps>) => {
-  return (
-    <div className={clsx(className)} ref={ref} {...restProps}>
-      {tagline && <p className="rhc-nav-bar__megamenu-tagline">{tagline}</p>}
-      {tagline && (
-        <div className="rhc-nav-bar__megamenu-separator">
-          <Separator />
-        </div>
-      )}
-      <div className="rhc-grid">
-        {columns.map(({ id, heading, headingLevel = 3, headingAppearanceLevel = 5, items }) => (
-          <div className="rhc-grid__cell rhc-grid__cell-d-3" key={id}>
-            <Heading
-              appearanceLevel={headingAppearanceLevel}
-              className="rhc-nav-bar__megamenu-column-heading"
-              level={headingLevel}
-            >
-              {heading}
-            </Heading>
-            <LinkList className="rhc-nav-bar__megamenu__link-list">
-              {items.map(({ id: itemId, href, target, label }) => (
-                <LinkListLink className="rhc-nav-bar__megamenu-column-link" href={href} key={itemId} target={target}>
-                  {label}
-                </LinkListLink>
-              ))}
-            </LinkList>
-          </div>
-        ))}
-      </div>
-      {children}
-    </div>
-  );
-};
-
-NavBarMegaMenu.displayName = 'NavBarMegaMenu';
 
 export const SubNavBar = ({ ref, children, className, columns, ...restProps }: PropsWithChildren<SubNavBarProps>) => {
   return (

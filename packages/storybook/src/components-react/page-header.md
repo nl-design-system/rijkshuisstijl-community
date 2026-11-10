@@ -48,11 +48,15 @@ Voor een pagina met een `megamenu` en een tweede navigatiebalk geef je meerdere 
 
 ```tsx
 import {
+  Heading,
   Icon,
+  LinkList,
+  LinkListLink,
   Logo,
   NavBar,
   NavBarIdentity,
-  NavBarMegaMenu,
+  NavBarMegaMenuSeparator,
+  NavBarMegaMenuTagline,
   PageHeader,
 } from '@rijkshuisstijl-community/components-react';
 
@@ -62,16 +66,22 @@ const itemsMain = [
 ];
 
 const megamenu = (
-  <NavBarMegaMenu
-    tagline="Ingang naar informatie en diensten van alle overheden"
-    columns={[
-      {
-        id: 'col-1',
-        heading: 'Diensten van de overheid',
-        items: [{ id: 'mm-1', label: 'Dienstenoverzicht', href: '/' }],
-      },
-    ]}
-  />
+  <>
+    <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
+    <NavBarMegaMenuSeparator />
+    <div className="rhc-grid">
+      <div className="rhc-grid__cell rhc-grid__cell-d-3">
+        <Heading appearanceLevel={5} className="rhc-nav-bar__megamenu-column-heading" level={3}>
+          Diensten van de overheid
+        </Heading>
+        <LinkList className="rhc-nav-bar__megamenu__link-list">
+          <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
+            Dienstenoverzicht
+          </LinkListLink>
+        </LinkList>
+      </div>
+    </div>
+  </>
 );
 
 <PageHeader>
