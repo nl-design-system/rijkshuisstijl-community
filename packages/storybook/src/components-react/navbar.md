@@ -34,10 +34,10 @@ const items = [
 
 ### Uitgebreid voorbeeld
 
-Gebruik `identity` voor de sitenaam, `currentPage` voor de huidige pagina, en `endItems` voor extra items zoals zoeken of inloggen.
+Gebruik `NavBarIdentity` als child voor de sitenaam, `currentPage` voor de huidige pagina, en `endItems` voor extra items zoals zoeken of inloggen.
 
 ```tsx
-import { Icon, NavBar, NavBarItem } from '@rijkshuisstijl-community/components-react';
+import { Icon, NavBar, NavBarIdentity, NavBarItem } from '@rijkshuisstijl-community/components-react';
 
 const items = [
   { id: 'home', label: 'Home', href: '/', currentPage: true },
@@ -46,7 +46,9 @@ const items = [
 
 const endItems = [<NavBarItem href="/zoeken" icon={<Icon icon="zoek" />} id="zoeken" key="zoeken" label="Zoeken" />];
 
-<NavBar endItems={endItems} identity={{ value: 'Dataregister', href: '/' }} items={items} />;
+const Identity = (<NavBarIdentity href="/">Dataregister</NavBarIdentity>)
+
+<NavBar endItems={endItems} identity={identity} items={items} />;
 ```
 
 Een item kan ook een `subList` of een `megamenu` krijgen voor een uitklapgedeelte met secties of kolommen. Een sectie of kolom heeft een `id`, een `heading` en `items`.
@@ -59,13 +61,13 @@ Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk.
 
 ### NavBar
 
-| Prop        | Type                           | Default | Beschrijving                                       |
-| ----------- | ------------------------------ | ------- | -------------------------------------------------- |
-| `identity`  | `{ value, href, appearance? }` | -       | De naam of titel van de site.                      |
-| `items`     | NavBarItemProps[]              | -       | De links in het hoofdgedeelte.                     |
-| `endItems`  | ReactNode                      | -       | Items aan het einde van de balk, als `NavBarItem`. |
-| `megamenu`  | ReactNode                      | -       | Een `NavBarMegaMenu` dat opent via een menuknop.   |
-| `className` | string                         | -       | Extra CSS class names.                             |
+| Prop        | Type              | Default | Beschrijving                                              |
+| ----------- | ----------------- | ------- | --------------------------------------------------------- |
+| `identity`  | ReactNode         | -       | Een NavBarIdentity, getoond aan het begin van de balk.    |
+| `items`     | NavBarItemProps[] | -       | De links in het hoofdgedeelte.                            |
+| `endItems`  | ReactNode         | -       | `NavBarItem`-elementen aan het einde van de balk(`<ul>`). |
+| `megamenu`  | ReactNode         | -       | Een `NavBarMegaMenu` dat opent via een menuknop.          |
+| `className` | string            | -       | Extra CSS class names.                                    |
 
 ### NavBarItem
 
@@ -78,3 +80,12 @@ Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk.
 | `currentPage` | boolean        | `false`   | Markeert de huidige pagina met `aria-current="page"`.         |
 | `subList`     | `{ sections }` | -         | Uitklapgedeelte met secties.                                  |
 | `contentId`   | string         | `1`       | Id voor de sublijst. Maak deze uniek bij meerdere sublijsten. |
+
+### NavBarIdentity
+
+| Prop        | Type      | Default   | Beschrijving                            |
+| ----------- | --------- | --------- | --------------------------------------- |
+| `href`      | string    | verplicht | De URL waar de identity naartoe linkt.  |
+| `children`  | ReactNode | verplicht | De naam of titel van de site.           |
+| `className` | string    | -         | Extra CSS class names.                  |
+| `primary`   | boolean   | -         | Primary variant voor de hoofd navigatie |

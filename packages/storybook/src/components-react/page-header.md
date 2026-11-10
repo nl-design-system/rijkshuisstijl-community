@@ -18,7 +18,7 @@ De Page Header bestaat uit de volgende onderdelen:
 ### Eenvoudig voorbeeld
 
 ```tsx
-import { PageHeader } from '@rijkshuisstijl-community/components-react';
+import { Logo, NavBar, NavBarIdentity, PageHeader } from '@rijkshuisstijl-community/components-react';
 
 const items = [
   { id: 'home', label: 'Home', href: '/' },
@@ -29,7 +29,14 @@ const items = [
   <div className="rhc-page-section">
     <div className="rhc-page-section__content">
       <Logo organisation="Organisatie" subtitle="Wat wij doen" />
-      <NavBar identity={{ value: 'Dataregister', href: '/' }} items={items} />
+      <NavBar
+        identity={
+          <NavBarIdentity primary href="/">
+            Dataregister
+          </NavBarIdentity>
+        }
+        items={items}
+      />
     </div>
   </div>
 </PageHeader>;
@@ -37,10 +44,17 @@ const items = [
 
 ### Uitgebreid voorbeeld
 
-Voor een pagina met een `megamenu` en een tweede navigatiebalk geeft je meerdere `NavBar`'s mee als `children`.
+Voor een pagina met een `megamenu` en een tweede navigatiebalk geef je meerdere `NavBar`'s mee als `children`.
 
 ```tsx
-import { Icon, Logo, NavBar, NavBarMegaMenu, PageHeader } from '@rijkshuisstijl-community/components-react';
+import {
+  Icon,
+  Logo,
+  NavBar,
+  NavBarIdentity,
+  NavBarMegaMenu,
+  PageHeader,
+} from '@rijkshuisstijl-community/components-react';
 
 const itemsMain = [
   { id: 'data', label: 'Data', href: '/' },
@@ -66,8 +80,15 @@ const megamenu = (
       <Logo organisation="Organisatie" subtitle="Wat wij doen">
         <Icon className="dutch-map" icon="nederland-map" />
       </Logo>
-      <NavBar identity={{ value: 'Overheid.nl', href: '/', appearance: 'primary' }} megamenu={megamenu} />
-      <NavBar identity={{ value: 'Dataregister', href: '/' }} items={itemsMain} />
+      <NavBar
+        identity={
+          <NavBarIdentity primary href="/">
+            Overheid.nl
+          </NavBarIdentity>
+        }
+        megamenu={megamenu}
+      />
+      <NavBar identity={<NavBarIdentity href="/">Dataregister</NavBarIdentity>} items={itemsMain} />
     </div>
   </div>
 </PageHeader>;
