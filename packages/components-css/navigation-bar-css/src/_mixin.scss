@@ -212,6 +212,9 @@
 @mixin rhc-nav-bar__megamenu {
   background: var(--rhc-navigation-bar-mega-menu-background-color);
   color: var(--rhc-navigation-bar-mega-menu-color);
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-grid-vi-large-column-gap);
   padding-block-end: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block-end);
   padding-block-start: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block-start);
   padding-inline-end: var(--rhc-navigation-bar-mega-menu-vi-small-padding-inline-end);
@@ -274,14 +277,16 @@
 }
 
 @mixin rhc-nav-bar__megamenu-separator {
+  --utrecht-separator-margin-block-end: 0;
+  --utrecht-separator-margin-block-start: 0;
   --utrecht-separator-color: var(--rhc-navigation-bar-mega-menu-color);
 }
 
 // TAGLINE --
 @mixin rhc-nav-bar__megamenu-tagline {
+  --nl-paragraph-line-height: 3rem;
+
   font-style: italic;
-  margin-block-start: 0;
-  padding-block-end: 0;
 }
 
 // NAV --
