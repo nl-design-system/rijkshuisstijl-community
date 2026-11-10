@@ -8,7 +8,7 @@
   background-color: var(--rhc-navigation-bar-background-color);
   block-size: var(--rhc-navigation-bar-block-size);
   color: var(--rhc-navigation-bar-color);
-  column-gap: var(--rhc-navigation-bar-column-gap, 1rem);
+  column-gap: var(--rhc-navigation-bar-column-gap, var(--rhc-space-xl));
   display: flex;
   font-family: var(--rhc-text-font-family-default, inherit);
   inline-size: 100%;
@@ -201,7 +201,7 @@
 @mixin item-height {
   align-content: center;
   display: block;
-  min-block-size: 48px;
+  min-block-size: var(--rhc-size-pointer-target);
 }
 
 @mixin full-width-mobile {
@@ -323,14 +323,14 @@
 
   @media (width < 768px) {
     flex-direction: column;
-    row-gap: 12px;
+    row-gap: var(--rhc-space-lg);
 
     .rhc-nav-bar__link {
-      font-size: 20px;
+      font-size: var(--rhc-text-font-size-md);
     }
 
     &:has(.rhc-nav-bar__item--button-on-mobile) {
-      row-gap: 24px;
+      row-gap: var(--rhc-space-2xl);
     }
 
     .rhc-nav-bar__item.rhc-nav-bar__item--button-on-mobile {
@@ -342,11 +342,11 @@
         align-items: center;
         border-radius: var(--utrecht-button-border-radius);
         display: flex;
-        font-weight: 700;
+        font-weight: var(--rhc-text-font-weight-bold);
         inline-size: 100%;
         justify-content: center;
         margin-inline: var(--rhc-page-section-vi-small-padding-inline);
-        min-block-size: 48px;
+        min-block-size: var(--rhc-size-pointer-target);
         text-decoration: none;
 
         &:hover {
@@ -356,15 +356,15 @@
 
       &.rhc-nav-bar__item--button-on-mobile--secondary > .rhc-nav-bar__link {
         // Wit volgens ontwerp; het Secondary Button-token is transparant en toont hier de menu-achtergrond.
-        background-color: #fff;
-        border: 2px solid var(--utrecht-button-secondary-action-border-color);
+        background-color: var(--rhc-color-wit);
+        border: var(--rhc-border-width-md) solid var(--utrecht-button-secondary-action-border-color);
         color: var(--utrecht-button-secondary-action-color, var(--rhc-navigation-bar-link-hover-color));
       }
 
       &.rhc-nav-bar__item--button-on-mobile--primary > .rhc-nav-bar__link {
         background-color: var(--utrecht-button-primary-action-background-color, #0058b8);
-        border: 2px solid transparent;
-        color: var(--utrecht-button-primary-action-color, #fff);
+        border: var(--rhc-border-width-md) solid transparent;
+        color: var(--utrecht-button-primary-action-color, var(--rhc-color-wit));
       }
 
       &.rhc-nav-bar__item--button-on-mobile--secondary > .rhc-nav-bar__link:hover {
