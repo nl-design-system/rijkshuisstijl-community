@@ -195,28 +195,52 @@ export const NavBar = ({
               </NavBarMegaMenuTrigger>
             </li>
           </ul>
-          <div className="rhc-nav-bar__slots">
-            {items && (
-              <div className="rhc-nav-bar__slot rhc-nav-bar__slot--primary">
-                <nav aria-label="primary-navigation" className={clsx('rhc-nav-bar__nav', className)}>
-                  <ul className="rhc-nav-bar__list">
-                    {items.map((item) => (
-                      <NavBarItem key={item.id} {...item} />
-                    ))}
-                  </ul>
-                </nav>
-              </div>
-            )}
-            {endItems && (
-              <div className="rhc-nav-bar__slot rhc-nav-bar__slot--secondary">
-                <nav aria-label="secondary-navigation" className={clsx('rhc-nav-bar__nav', className)}>
-                  <ul className="rhc-nav-bar__list">{endItems}</ul>
-                </nav>
-              </div>
-            )}
-          </div>
+          {(items || endItems) && (
+            <div className="rhc-nav-bar__slots">
+              {items && (
+                <div className="rhc-nav-bar__slot rhc-nav-bar__slot--primary">
+                  <nav aria-label="primary-navigation" className={clsx('rhc-nav-bar__nav', className)}>
+                    <ul className="rhc-nav-bar__list">
+                      {items.map((item) => (
+                        <NavBarItem key={item.id} {...item} />
+                      ))}
+                    </ul>
+                  </nav>
+                </div>
+              )}
+              {endItems && (
+                <div className="rhc-nav-bar__slot rhc-nav-bar__slot--secondary">
+                  <nav aria-label="secondary-navigation" className={clsx('rhc-nav-bar__nav', className)}>
+                    <ul className="rhc-nav-bar__list">{endItems}</ul>
+                  </nav>
+                </div>
+              )}
+            </div>
+          )}
           <NavBarMegaMenuPanel id={megamenuId} onOpenChange={setIsMegamenuOpen}>
             {megamenu}
+            {(items || endItems) && (
+              <div className="rhc-nav-bar__slots rhc-nav-bar__slots--mobile-in-megamenu">
+                {items && (
+                  <div className="rhc-nav-bar__slot rhc-nav-bar__slot--primary">
+                    <nav aria-label="primary-navigation-mobile" className={clsx('rhc-nav-bar__nav', className)}>
+                      <ul className="rhc-nav-bar__list">
+                        {items.map((item) => (
+                          <NavBarItem key={item.id} {...item} />
+                        ))}
+                      </ul>
+                    </nav>
+                  </div>
+                )}
+                {endItems && (
+                  <div className="rhc-nav-bar__slot rhc-nav-bar__slot--secondary">
+                    <nav aria-label="secondary-navigation-mobile" className={clsx('rhc-nav-bar__nav', className)}>
+                      <ul className="rhc-nav-bar__list">{endItems}</ul>
+                    </nav>
+                  </div>
+                )}
+              </div>
+            )}
             <NavBarMegaMenuClose id={megamenuId} />
           </NavBarMegaMenuPanel>
         </div>

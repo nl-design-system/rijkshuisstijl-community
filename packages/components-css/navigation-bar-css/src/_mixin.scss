@@ -139,11 +139,6 @@
   }
 
   @media (width < 768px) {
-    // het megamenu-paneel is nu een losstaande popover; de endItems blijven gewoon zichtbaar.
-    .rhc-nav-bar__slot-megamenu & {
-      display: flex;
-    }
-
     .rhc-nav-bar__slot-main.is-navbar-main-open & {
       display: flex;
       flex-direction: column;
@@ -173,6 +168,18 @@
   }
 }
 
+// de items/endItems worden nogmaals (verborgen op desktop) binnen het megamenu-paneel
+// gerenderd, zodat ze op mobiel onderdeel worden van dezelfde geopende menu-inhoud.
+@mixin rhc-nav-bar__slots--mobile-in-megamenu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  @media (width >= 768px) {
+    display: none;
+  }
+}
+
 // MEGAMENU --
 @mixin rhc-nav-bar__slot-megamenu {
   align-items: center;
@@ -185,6 +192,12 @@
   @at-root {
     & .rhc-nav-bar__slots > .rhc-nav-bar__slot {
       margin-inline-start: auto;
+    }
+
+    // de inline-start-auto hierboven is bedoeld voor de desktop-layout; de gebundelde
+    // mobiele kopie binnen het megamenu-paneel moet gewoon links uitgelijnd blijven.
+    & .rhc-nav-bar__slots--mobile-in-megamenu > .rhc-nav-bar__slot {
+      margin-inline-start: 0;
     }
   }
 }
