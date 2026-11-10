@@ -5,6 +5,7 @@ import {
   LanguageNavigation,
   Logo,
   NavBar,
+  NavBarIdentity,
   NavBarItem,
   NavBarMegaMenu,
   PageHeader,
@@ -132,10 +133,18 @@ export const SharedHeaderOverheidNl = () => (
         </Logo>
         <NavBar
           endItems={endItemsPrimary}
-          identity={{ value: 'Overheid.nl', href: '/', appearance: 'primary' }}
           megamenu={megamenu}
+          identity={
+            <NavBarIdentity primary href="/">
+              Overheid.nl
+            </NavBarIdentity>
+          }
         />
-        <NavBar endItems={endItemsSecondary} identity={{ value: 'Dataregister', href: '/' }} items={itemsMain} />
+        <NavBar
+          endItems={endItemsSecondary}
+          identity={<NavBarIdentity href="/">Dataregister</NavBarIdentity>}
+          items={itemsMain}
+        />
       </div>
     </div>
   </PageHeader>

@@ -39,11 +39,10 @@ De Navigation Bar bestaat uit de volgende onderdelen:
 ### Met identity en meerdere slots
 
 ```html
+<
 <div class="rhc-nav-bar">
-  <div class="rhc-nav-bar__slot-identity">
-    <div class="rhc-nav-bar__identity">
-      <a class="rhc-link" href="/">Dataregister</a>
-    </div>
+  <div class="rhc-nav-bar__identity">
+    <a class="rhc-link" href="/">Dataregister</a>
   </div>
   <div class="rhc-nav-bar__slot-main">
     <div class="rhc-nav-bar__slots">
