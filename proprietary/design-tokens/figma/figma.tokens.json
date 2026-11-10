@@ -5840,40 +5840,140 @@
     }
   },
   "common/primary-color/groen": {
+    "basis": {
+      "color": {
+        "accent-1": {
+          "bg-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.50}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.100}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.50}"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.100}"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.300}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.500}"
+          },
+          "border-hover": {
+            "$type": "color",
+            "$value": "#2C5D12",
+            "$description": "todo: RHC color scale does not provide full groen scale"
+          },
+          "border-active": {
+            "$type": "color",
+            "$value": "#275012",
+            "$description": "todo: RHC color scale does not provide full groen scale"
+          },
+          "color-default": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.500}"
+          },
+          "color-hover": {
+            "$type": "color",
+            "$value": "#2C5D12",
+            "$description": "todo: RHC color scale does not provide full groen scale"
+          },
+          "color-active": {
+            "$type": "color",
+            "$value": "#275012",
+            "$description": "todo: RHC color scale does not provide full groen scale"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.500}"
+          },
+          "color-document": {
+            "$type": "color",
+            "$value": "#275012",
+            "$description": "todo: RHC color scale does not provide full groen scale"
+          }
+        },
+        "accent-1-inverse": {
+          "bg-document": {
+            "$type": "color",
+            "$value": "#275012",
+            "$description": "todo: RHC color scale does not provide full groen scale"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.500}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "#2C5D12",
+            "$description": "todo: RHC color scale does not provide full groen scale"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "#275012",
+            "$description": "todo: RHC color scale does not provide full groen scale"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.500}"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.groen.100}"
+          }
+        }
+      }
+    },
     "rhc": {
       "color": {
         "primary": {
           "50": {
             "$type": "color",
-            "$value": "{rhc.color.groen.50}"
+            "$value": "{basis.color.accent-1.bg-hover}",
+            "$deprecated": "Use basis tokens instead"
           },
           "100": {
             "$type": "color",
-            "$value": "{rhc.color.groen.100}"
+            "$value": "{basis.color.accent-1.bg-active}",
+            "$deprecated": "Use basis tokens instead"
           },
           "200": {
             "$type": "color",
-            "$value": "{rhc.color.groen.200}"
+            "$value": "{rhc.color.groen.200}",
+            "$description": "todo: no basis token available"
           },
           "300": {
             "$type": "color",
-            "$value": "{rhc.color.groen.300}"
+            "$value": "{basis.color.accent-1.border-subtle}",
+            "$deprecated": "Use basis tokens instead"
           },
           "400": {
             "$type": "color",
-            "$value": "{rhc.color.groen.400}"
+            "$value": "{rhc.color.groen.400}",
+            "$description": "todo: no basis token available"
           },
           "500": {
             "$type": "color",
-            "$value": "{rhc.color.groen.500}"
+            "$value": "{basis.color.accent-1.color-default}",
+            "$deprecated": "Use basis tokens instead"
           },
           "hover": {
             "$type": "color",
-            "$value": "#2C5D12"
+            "$value": "{basis.color.accent-1.color-hover}",
+            "$deprecated": "Use basis tokens instead"
           },
           "active": {
             "$type": "color",
-            "$value": "#275012"
+            "$value": "{basis.color.accent-1.color-active}",
+            "$deprecated": "Use basis tokens instead"
           }
         },
         "foreground": {
@@ -5886,40 +5986,140 @@
     }
   },
   "common/primary-color/hemelblauw": {
+    "basis": {
+      "color": {
+        "accent-1": {
+          "bg-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.50}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.100}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.50}"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.100}"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.300}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.500}"
+          },
+          "border-hover": {
+            "$type": "color",
+            "$value": "#1A5587",
+            "$description": "todo: RHC color scale does not provide full hemelblauw scale"
+          },
+          "border-active": {
+            "$type": "color",
+            "$value": "#1A4972",
+            "$description": "todo: RHC color scale does not provide full hemelblauw scale"
+          },
+          "color-default": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.500}"
+          },
+          "color-hover": {
+            "$type": "color",
+            "$value": "#1A5587",
+            "$description": "todo: RHC color scale does not provide full hemelblauw scale"
+          },
+          "color-active": {
+            "$type": "color",
+            "$value": "#1A4972",
+            "$description": "todo: RHC color scale does not provide full hemelblauw scale"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.500}"
+          },
+          "color-document": {
+            "$type": "color",
+            "$value": "#1A4972",
+            "$description": "todo: RHC color scale does not provide full hemelblauw scale"
+          }
+        },
+        "accent-1-inverse": {
+          "bg-document": {
+            "$type": "color",
+            "$value": "#1A4972",
+            "$description": "todo: RHC color scale does not provide full hemelblauw scale"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.500}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "#1A5587",
+            "$description": "todo: RHC color scale does not provide full hemelblauw scale"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "#1A4972",
+            "$description": "todo: RHC color scale does not provide full hemelblauw scale"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.500}"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.hemelblauw.100}"
+          }
+        }
+      }
+    },
     "rhc": {
       "color": {
         "primary": {
           "50": {
             "$type": "color",
-            "$value": "{rhc.color.hemelblauw.50}"
+            "$value": "{basis.color.accent-1.bg-hover}",
+            "$deprecated": "Use basis tokens instead"
           },
           "100": {
             "$type": "color",
-            "$value": "{rhc.color.hemelblauw.100}"
+            "$value": "{basis.color.accent-1.bg-active}",
+            "$deprecated": "Use basis tokens instead"
           },
           "200": {
             "$type": "color",
-            "$value": "{rhc.color.hemelblauw.200}"
+            "$value": "{rhc.color.hemelblauw.200}",
+            "$description": "todo: no basis token available"
           },
           "300": {
             "$type": "color",
-            "$value": "{rhc.color.hemelblauw.300}"
+            "$value": "{basis.color.accent-1.border-subtle}",
+            "$deprecated": "Use basis tokens instead"
           },
           "400": {
             "$type": "color",
-            "$value": "{rhc.color.hemelblauw.400}"
+            "$value": "{rhc.color.hemelblauw.400}",
+            "$description": "todo: no basis token available"
           },
           "500": {
             "$type": "color",
-            "$value": "{rhc.color.hemelblauw.500}"
+            "$value": "{basis.color.accent-1.color-default}",
+            "$deprecated": "Use basis tokens instead"
           },
           "hover": {
             "$type": "color",
-            "$value": "#1A5587"
+            "$value": "{basis.color.accent-1.color-hover}",
+            "$deprecated": "Use basis tokens instead"
           },
           "active": {
             "$type": "color",
-            "$value": "#1A4972"
+            "$value": "{basis.color.accent-1.color-active}",
+            "$deprecated": "Use basis tokens instead"
           }
         },
         "foreground": {
@@ -5932,40 +6132,140 @@
     }
   },
   "common/primary-color/mintgroen": {
+    "basis": {
+      "color": {
+        "accent-1": {
+          "bg-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.50}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.100}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.50}"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.100}"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.300}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.500}"
+          },
+          "border-hover": {
+            "$type": "color",
+            "$value": "#528E7C",
+            "$description": "todo: RHC color scale does not provide full mintgroen scale"
+          },
+          "border-active": {
+            "$type": "color",
+            "$value": "#477869",
+            "$description": "todo: RHC color scale does not provide full mintgroen scale"
+          },
+          "color-default": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.500}"
+          },
+          "color-hover": {
+            "$type": "color",
+            "$value": "#528E7C",
+            "$description": "todo: RHC color scale does not provide full mintgroen scale"
+          },
+          "color-active": {
+            "$type": "color",
+            "$value": "#477869",
+            "$description": "todo: RHC color scale does not provide full mintgroen scale"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.500}"
+          },
+          "color-document": {
+            "$type": "color",
+            "$value": "#477869",
+            "$description": "todo: RHC color scale does not provide full mintgroen scale"
+          }
+        },
+        "accent-1-inverse": {
+          "bg-document": {
+            "$type": "color",
+            "$value": "#477869",
+            "$description": "todo: RHC color scale does not provide full mintgroen scale"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.500}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "#528E7C",
+            "$description": "todo: RHC color scale does not provide full mintgroen scale"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "#477869",
+            "$description": "todo: RHC color scale does not provide full mintgroen scale"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.500}"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.mintgroen.100}"
+          }
+        }
+      }
+    },
     "rhc": {
       "color": {
         "primary": {
           "50": {
             "$type": "color",
-            "$value": "{rhc.color.mintgroen.50}"
+            "$value": "{basis.color.accent-1.bg-hover}",
+            "$deprecated": "Use basis tokens instead"
           },
           "100": {
             "$type": "color",
-            "$value": "{rhc.color.mintgroen.100}"
+            "$value": "{basis.color.accent-1.bg-active}",
+            "$deprecated": "Use basis tokens instead"
           },
           "200": {
             "$type": "color",
-            "$value": "{rhc.color.mintgroen.200}"
+            "$value": "{rhc.color.mintgroen.200}",
+            "$description": "todo: no basis token available"
           },
           "300": {
             "$type": "color",
-            "$value": "{rhc.color.mintgroen.300}"
+            "$value": "{basis.color.accent-1.border-subtle}",
+            "$deprecated": "Use basis tokens instead"
           },
           "400": {
             "$type": "color",
-            "$value": "{rhc.color.mintgroen.400}"
+            "$value": "{rhc.color.mintgroen.400}",
+            "$description": "todo: no basis token available"
           },
           "500": {
             "$type": "color",
-            "$value": "{rhc.color.mintgroen.500}"
+            "$value": "{basis.color.accent-1.color-default}",
+            "$deprecated": "Use basis tokens instead"
           },
           "hover": {
             "$type": "color",
-            "$value": "#528E7C"
+            "$value": "{basis.color.accent-1.color-hover}",
+            "$deprecated": "Use basis tokens instead"
           },
           "active": {
             "$type": "color",
-            "$value": "#477869"
+            "$value": "{basis.color.accent-1.color-active}",
+            "$deprecated": "Use basis tokens instead"
           }
         },
         "foreground": {
@@ -5978,40 +6278,140 @@
     }
   },
   "common/primary-color/oranje": {
+    "basis": {
+      "color": {
+        "accent-1": {
+          "bg-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.50}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.100}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.50}"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.100}"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.300}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.500}"
+          },
+          "border-hover": {
+            "$type": "color",
+            "$value": "#994E0E",
+            "$description": "todo: RHC color scale does not provide full oranje scale"
+          },
+          "border-active": {
+            "$type": "color",
+            "$value": "#82430F",
+            "$description": "todo: RHC color scale does not provide full oranje scale"
+          },
+          "color-default": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.500}"
+          },
+          "color-hover": {
+            "$type": "color",
+            "$value": "#994E0E",
+            "$description": "todo: RHC color scale does not provide full oranje scale"
+          },
+          "color-active": {
+            "$type": "color",
+            "$value": "#82430F",
+            "$description": "todo: RHC color scale does not provide full oranje scale"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.500}"
+          },
+          "color-document": {
+            "$type": "color",
+            "$value": "#82430F",
+            "$description": "todo: RHC color scale does not provide full oranje scale"
+          }
+        },
+        "accent-1-inverse": {
+          "bg-document": {
+            "$type": "color",
+            "$value": "#82430F",
+            "$description": "todo: RHC color scale does not provide full oranje scale"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.500}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "#994E0E",
+            "$description": "todo: RHC color scale does not provide full oranje scale"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "#82430F",
+            "$description": "todo: RHC color scale does not provide full oranje scale"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.500}"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.oranje.100}"
+          }
+        }
+      }
+    },
     "rhc": {
       "color": {
         "primary": {
           "50": {
             "$type": "color",
-            "$value": "{rhc.color.oranje.50}"
+            "$value": "{basis.color.accent-1.bg-hover}",
+            "$deprecated": "Use basis tokens instead"
           },
           "100": {
             "$type": "color",
-            "$value": "{rhc.color.oranje.100}"
+            "$value": "{basis.color.accent-1.bg-active}",
+            "$deprecated": "Use basis tokens instead"
           },
           "200": {
             "$type": "color",
-            "$value": "{rhc.color.oranje.200}"
+            "$value": "{rhc.color.oranje.200}",
+            "$description": "todo: no basis token available"
           },
           "300": {
             "$type": "color",
-            "$value": "{rhc.color.oranje.300}"
+            "$value": "{basis.color.accent-1.border-subtle}",
+            "$deprecated": "Use basis tokens instead"
           },
           "400": {
             "$type": "color",
-            "$value": "{rhc.color.oranje.400}"
+            "$value": "{rhc.color.oranje.400}",
+            "$description": "todo: no basis token available"
           },
           "500": {
             "$type": "color",
-            "$value": "{rhc.color.oranje.500}"
+            "$value": "{basis.color.accent-1.color-default}",
+            "$deprecated": "Use basis tokens instead"
           },
           "hover": {
             "$type": "color",
-            "$value": "#994E0E"
+            "$value": "{basis.color.accent-1.color-hover}",
+            "$deprecated": "Use basis tokens instead"
           },
           "active": {
             "$type": "color",
-            "$value": "#82430F"
+            "$value": "{basis.color.accent-1.color-active}",
+            "$deprecated": "Use basis tokens instead"
           }
         },
         "foreground": {
@@ -6024,40 +6424,140 @@
     }
   },
   "common/primary-color/paars": {
+    "basis": {
+      "color": {
+        "accent-1": {
+          "bg-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.50}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.100}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.50}"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.100}"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.300}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.500}"
+          },
+          "border-hover": {
+            "$type": "color",
+            "$value": "#301243",
+            "$description": "todo: RHC color scale does not provide full paars scale"
+          },
+          "border-active": {
+            "$type": "color",
+            "$value": "#2B113A",
+            "$description": "todo: RHC color scale does not provide full paars scale"
+          },
+          "color-default": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.500}"
+          },
+          "color-hover": {
+            "$type": "color",
+            "$value": "#301243",
+            "$description": "todo: RHC color scale does not provide full paars scale"
+          },
+          "color-active": {
+            "$type": "color",
+            "$value": "#2B113A",
+            "$description": "todo: RHC color scale does not provide full paars scale"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.500}"
+          },
+          "color-document": {
+            "$type": "color",
+            "$value": "#2B113A",
+            "$description": "todo: RHC color scale does not provide full paars scale"
+          }
+        },
+        "accent-1-inverse": {
+          "bg-document": {
+            "$type": "color",
+            "$value": "#2B113A",
+            "$description": "todo: RHC color scale does not provide full paars scale"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.500}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "#301243",
+            "$description": "todo: RHC color scale does not provide full paars scale"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "#2B113A",
+            "$description": "todo: RHC color scale does not provide full paars scale"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.500}"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.paars.100}"
+          }
+        }
+      }
+    },
     "rhc": {
       "color": {
         "primary": {
           "50": {
             "$type": "color",
-            "$value": "{rhc.color.paars.50}"
+            "$value": "{basis.color.accent-1.bg-hover}",
+            "$deprecated": "Use basis tokens instead"
           },
           "100": {
             "$type": "color",
-            "$value": "{rhc.color.paars.100}"
+            "$value": "{basis.color.accent-1.bg-active}",
+            "$deprecated": "Use basis tokens instead"
           },
           "200": {
             "$type": "color",
-            "$value": "{rhc.color.paars.200}"
+            "$value": "{rhc.color.paars.200}",
+            "$description": "todo: no basis token available"
           },
           "300": {
             "$type": "color",
-            "$value": "{rhc.color.paars.300}"
+            "$value": "{basis.color.accent-1.border-subtle}",
+            "$deprecated": "Use basis tokens instead"
           },
           "400": {
             "$type": "color",
-            "$value": "{rhc.color.paars.400}"
+            "$value": "{rhc.color.paars.400}",
+            "$description": "todo: no basis token available"
           },
           "500": {
             "$type": "color",
-            "$value": "{rhc.color.paars.500}"
+            "$value": "{basis.color.accent-1.color-default}",
+            "$deprecated": "Use basis tokens instead"
           },
           "hover": {
             "$type": "color",
-            "$value": "#301243"
+            "$value": "{basis.color.accent-1.color-hover}",
+            "$deprecated": "Use basis tokens instead"
           },
           "active": {
             "$type": "color",
-            "$value": "#2B113A"
+            "$value": "{basis.color.accent-1.color-active}",
+            "$deprecated": "Use basis tokens instead"
           }
         },
         "foreground": {
@@ -6070,40 +6570,256 @@
     }
   },
   "common/primary-color/robijn-rood": {
+    "basis": {
+      "color": {
+        "accent-1": {
+          "bg-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.50}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.100}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.50}"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.100}"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.300}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.500}"
+          },
+          "border-hover": {
+            "$type": "color",
+            "$value": "#8A1641",
+            "$description": "todo: RHC color scale does not provide full robijnrood scale"
+          },
+          "border-active": {
+            "$type": "color",
+            "$value": "#761838",
+            "$description": "todo: RHC color scale does not provide full robijnrood scale"
+          },
+          "color-default": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.500}"
+          },
+          "color-hover": {
+            "$type": "color",
+            "$value": "#8A1641",
+            "$description": "todo: RHC color scale does not provide full robijnrood scale"
+          },
+          "color-active": {
+            "$type": "color",
+            "$value": "#761838",
+            "$description": "todo: RHC color scale does not provide full robijnrood scale"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.500}"
+          },
+          "color-document": {
+            "$type": "color",
+            "$value": "#761838",
+            "$description": "todo: RHC color scale does not provide full robijnrood scale"
+          }
+        },
+        "accent-1-inverse": {
+          "bg-document": {
+            "$type": "color",
+            "$value": "#761838",
+            "$description": "todo: RHC color scale does not provide full robijnrood scale"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.500}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "#8A1641",
+            "$description": "todo: RHC color scale does not provide full robijnrood scale"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "#761838",
+            "$description": "todo: RHC color scale does not provide full robijnrood scale"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.500}"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.robijnrood.100}"
+          }
+        },
+        "selected": {
+          "bg-document": {
+            "$type": "color",
+            "$value": "{basis.color.default.bg-document}"
+          },
+          "bg-subtle": {
+            "$type": "color",
+            "$value": "{basis.color.default.bg-subtle}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{basis.color.default.bg-default}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "{basis.color.default.bg-hover}"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "{basis.color.default.bg-active}"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{basis.color.default.border-subtle}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{basis.color.default.border-default}"
+          },
+          "border-hover": {
+            "$type": "color",
+            "$value": "{basis.color.default.border-hover}"
+          },
+          "border-active": {
+            "$type": "color",
+            "$value": "{basis.color.default.border-active}"
+          },
+          "color-default": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-default}"
+          },
+          "color-hover": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-hover}"
+          },
+          "color-active": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-active}"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-subtle}"
+          },
+          "color-document": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
+          }
+        },
+        "selected-inverse": {
+          "bg-document": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.bg-document}"
+          },
+          "bg-subtle": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.bg-subtle}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.bg-default}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.bg-hover}"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.bg-active}"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.border-subtle}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.border-default}"
+          },
+          "border-hover": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.border-hover}"
+          },
+          "border-active": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.border-active}"
+          },
+          "color-default": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.color-default}"
+          },
+          "color-hover": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.color-hover}"
+          },
+          "color-active": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.color-active}"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.color-subtle}"
+          },
+          "color-document": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.color-document}"
+          }
+        }
+      }
+    },
     "rhc": {
       "color": {
         "primary": {
           "50": {
             "$type": "color",
-            "$value": "{rhc.color.robijnrood.50}"
+            "$value": "{basis.color.accent-1.bg-hover}",
+            "$deprecated": "Use basis tokens instead"
           },
           "100": {
             "$type": "color",
-            "$value": "{rhc.color.robijnrood.100}"
+            "$value": "{basis.color.accent-1.bg-active}",
+            "$deprecated": "Use basis tokens instead"
           },
           "200": {
             "$type": "color",
-            "$value": "{rhc.color.robijnrood.200}"
+            "$value": "{rhc.color.robijnrood.200}",
+            "$description": "todo: no basis token available"
           },
           "300": {
             "$type": "color",
-            "$value": "{rhc.color.robijnrood.300}"
+            "$value": "{basis.color.accent-1.border-subtle}",
+            "$deprecated": "Use basis tokens instead"
           },
           "400": {
             "$type": "color",
-            "$value": "{rhc.color.robijnrood.400}"
+            "$value": "{rhc.color.robijnrood.400}",
+            "$description": "todo: no basis token available"
           },
           "500": {
             "$type": "color",
-            "$value": "{rhc.color.robijnrood.500}"
+            "$value": "{basis.color.accent-1.color-default}",
+            "$deprecated": "Use basis tokens instead"
           },
           "hover": {
             "$type": "color",
-            "$value": "#8A1641"
+            "$value": "{basis.color.accent-1.color-hover}",
+            "$deprecated": "Use basis tokens instead"
           },
           "active": {
             "$type": "color",
-            "$value": "#761838"
+            "$value": "{basis.color.accent-1.color-active}",
+            "$deprecated": "Use basis tokens instead"
           }
         },
         "foreground": {
@@ -6116,42 +6832,134 @@
     }
   },
   "common/primary-color/lintblauw": {
+    "basis": {
+      "color": {
+        "accent-1": {
+          "bg-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.50}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.100}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.50}"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.100}"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.300}"
+          },
+          "border-default": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.500}"
+          },
+          "border-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.600}"
+          },
+          "border-active": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.700}"
+          },
+          "color-default": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.500}"
+          },
+          "color-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.600}"
+          },
+          "color-active": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.700}"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.500}"
+          },
+          "color-document": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.700}"
+          }
+        },
+        "accent-1-inverse": {
+          "bg-document": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.700}"
+          },
+          "bg-default": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.500}"
+          },
+          "bg-hover": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.600}"
+          },
+          "bg-active": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.700}"
+          },
+          "border-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.500}"
+          },
+          "color-subtle": {
+            "$type": "color",
+            "$value": "{rhc.color.lintblauw.100}"
+          }
+        }
+      }
+    },
     "rhc": {
       "color": {
         "primary": {
           "50": {
             "$type": "color",
-            "$value": "{rhc.color.core.50}"
+            "$value": "{basis.color.accent-1.bg-hover}",
+            "$deprecated": "Use basis tokens instead"
           },
           "100": {
             "$type": "color",
-            "$value": "{rhc.color.core.100}"
+            "$value": "{basis.color.accent-1.bg-active}",
+            "$deprecated": "Use basis tokens instead"
           },
           "200": {
             "$type": "color",
-            "$value": "{rhc.color.core.200}"
+            "$value": "{rhc.color.core.200}",
+            "$description": "todo: no basis token available"
           },
           "300": {
             "$type": "color",
-            "$value": "{rhc.color.core.300}"
+            "$value": "{basis.color.accent-1.border-subtle}",
+            "$deprecated": "Use basis tokens instead"
           },
           "400": {
             "$type": "color",
-            "$value": "{rhc.color.core.400}"
+            "$value": "{rhc.color.core.400}",
+            "$description": "todo: no basis token available"
           },
           "500": {
             "$type": "color",
-            "$value": "{rhc.color.core.500}"
+            "$value": "{basis.color.accent-1.color-default}",
+            "$deprecated": "Use basis tokens instead"
           },
           "hover": {
             "$type": "color",
-            "$value": "{rhc.color.core.hover}",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3"
+            "$value": "{basis.color.accent-1.color-hover}",
+            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.3",
+            "$deprecated": "Use basis tokens instead"
           },
           "active": {
             "$type": "color",
-            "$value": "{rhc.color.core.active}",
-            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4"
+            "$value": "{basis.color.accent-1.color-active}",
+            "$description": "Originally rhc.color.primary.500 darkened (lch) by 0.4",
+            "$deprecated": "Use basis tokens instead"
           }
         },
         "foreground": {
@@ -15200,11 +16008,11 @@
       "name": "Lintblauw",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
+        "common/basis": "enabled",
         "components/button/nl-color-core": "enabled",
         "components/button/utrecht-color-core": "enabled",
         "components/heading/color-core": "enabled",
-        "common/primary-color/lintblauw": "enabled",
-        "common/basis": "enabled"
+        "common/primary-color/lintblauw": "enabled"
       },
       "group": "Theme",
       "$figmaVariableReferences": {}
@@ -15214,11 +16022,11 @@
       "name": "Groen",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
+        "common/basis": "enabled",
         "common/primary-color/groen": "enabled",
         "components/button/nl-color-primary": "enabled",
         "components/button/utrecht-color-primary": "enabled",
-        "components/heading/color-primary": "enabled",
-        "common/basis": "enabled"
+        "components/heading/color-primary": "enabled"
       },
       "group": "Theme",
       "$figmaVariableReferences": {}
@@ -15228,11 +16036,11 @@
       "name": "Hemelblauw",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
+        "common/basis": "enabled",
         "common/primary-color/hemelblauw": "enabled",
         "components/heading/color-core": "enabled",
         "components/button/nl-color-primary": "enabled",
-        "components/button/utrecht-color-primary": "enabled",
-        "common/basis": "enabled"
+        "components/button/utrecht-color-primary": "enabled"
       },
       "group": "Theme",
       "$figmaVariableReferences": {}
@@ -15242,11 +16050,11 @@
       "name": "Oranje",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
+        "common/basis": "enabled",
         "common/primary-color/oranje": "enabled",
         "components/button/nl-color-core": "enabled",
         "components/button/utrecht-color-core": "enabled",
-        "components/heading/color-core": "enabled",
-        "common/basis": "enabled"
+        "components/heading/color-core": "enabled"
       },
       "group": "Theme",
       "$figmaVariableReferences": {}
@@ -15256,11 +16064,11 @@
       "name": "Paars",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
+        "common/basis": "enabled",
         "common/primary-color/paars": "enabled",
         "components/button/nl-color-primary": "enabled",
         "components/button/utrecht-color-primary": "enabled",
-        "components/heading/color-primary": "enabled",
-        "common/basis": "enabled"
+        "components/heading/color-primary": "enabled"
       },
       "group": "Theme",
       "$figmaVariableReferences": {}
@@ -15270,11 +16078,11 @@
       "name": "Robijnrood",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
+        "common/basis": "enabled",
         "common/primary-color/robijn-rood": "enabled",
         "components/button/nl-color-primary": "enabled",
         "components/button/utrecht-color-primary": "enabled",
-        "components/heading/color-core": "enabled",
-        "common/basis": "enabled"
+        "components/heading/color-core": "enabled"
       },
       "group": "Theme",
       "$figmaVariableReferences": {}
