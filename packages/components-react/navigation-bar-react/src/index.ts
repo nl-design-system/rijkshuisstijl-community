@@ -8,3 +8,4 @@ import '@rijkshuisstijl-community/navigation-bar-css';
 
 export * from './NavBar';
 export * from './NavBarIdentity';
+export * from './NavBarLink';

@@ -12,6 +12,7 @@ import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import { Separator } from '@rijkshuisstijl-community/separator-react/no-side-effects';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useEffect, useRef, useState } from 'react';
+import { NavBarLink } from './NavBarLink';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   identity?: ReactNode;
@@ -102,16 +103,9 @@ export const NavBarItem = ({
           <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__label--sr-only')}>{label}</span>
         </LinkButton>
       ) : (
-        <Link
-          aria-current={currentPage ? 'page' : undefined}
-          className={clsx('rhc-nav-bar__link')}
-          href={href}
-          target={target}
-        >
-          {icon}
-          <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__label--sr-only')}>{label}</span>
-          {iconEnd}
-        </Link>
+        <NavBarLink current={currentPage} href={href} icon={icon} iconEnd={iconEnd} iconOnly={iconOnly} target={target}>
+          + {label}+{' '}
+        </NavBarLink>
       )}
       {subList && isItemOpen && (
         <div className="rhc-nav-bar__item-dropdown" id={`rhc-nav-bar__item-dropdown-${contentId}`}>
