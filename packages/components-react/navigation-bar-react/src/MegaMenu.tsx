@@ -6,6 +6,7 @@
 import { Button } from '@rijkshuisstijl-community/button-react/no-side-effects';
 import { Icon } from '@rijkshuisstijl-community/icon-react/no-side-effects';
 import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
+import { Paragraph } from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 import { Separator, SeparatorProps } from '@rijkshuisstijl-community/separator-react/no-side-effects';
 import clsx from 'clsx';
 import { ComponentPropsWithRef, CSSProperties, HTMLAttributes, PropsWithChildren } from 'react';
@@ -54,9 +55,9 @@ export const NavBarMegaMenuTagline = ({
   className,
   ...restProps
 }: PropsWithChildren<NavBarMegaMenuTaglineProps>) => (
-  <p className={clsx('rhc-nav-bar__megamenu-tagline', className)} {...restProps}>
+  <Paragraph className={clsx('rhc-nav-bar__megamenu-tagline', className)} {...restProps}>
     {children}
-  </p>
+  </Paragraph>
 );
 
 NavBarMegaMenuTagline.displayName = 'NavBarMegaMenuTagline';
