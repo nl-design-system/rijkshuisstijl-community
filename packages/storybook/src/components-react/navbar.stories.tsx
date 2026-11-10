@@ -1,10 +1,14 @@
 import {
+  Heading,
   Icon,
+  LinkList,
+  LinkListLink,
   NavBar,
   NavBarIdentity,
   NavBarItem,
   type NavBarItemProps,
-  NavBarMegaMenu,
+  NavBarMegaMenuSeparator,
+  NavBarMegaMenuTagline,
 } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
@@ -105,19 +109,25 @@ export const WithMegaMenu: Story = {
     ),
 
     megamenu: (
-      <NavBarMegaMenu
-        tagline="Ingang naar informatie en diensten van alle overheden"
-        columns={[
-          {
-            id: 'col-1',
-            heading: 'Diensten van de overheid',
-            items: [
-              { id: 'mm-1', label: 'Dienstenoverzicht', href: '/' },
-              { id: 'mm-2', label: 'Levensgebeurtenissen', href: '/' },
-            ],
-          },
-        ]}
-      />
+      <>
+        <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
+        <NavBarMegaMenuSeparator />
+        <div className="rhc-grid">
+          <div className="rhc-grid__cell rhc-grid__cell-d-3">
+            <Heading appearanceLevel={5} className="rhc-nav-bar__megamenu-column-heading" level={3}>
+              Diensten van de overheid
+            </Heading>
+            <LinkList className="rhc-nav-bar__megamenu__link-list">
+              <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
+                Dienstenoverzicht
+              </LinkListLink>
+              <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
+                Levensgebeurtenissen
+              </LinkListLink>
+            </LinkList>
+          </div>
+        </div>
+      </>
     ),
   },
 };

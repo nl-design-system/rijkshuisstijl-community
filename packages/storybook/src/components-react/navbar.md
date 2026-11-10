@@ -51,11 +51,54 @@ const Identity = (<NavBarIdentity href="/">Dataregister</NavBarIdentity>)
 <NavBar endItems={endItems} identity={identity} items={items} />;
 ```
 
-Een item kan ook een `subList` of een `megamenu` krijgen voor een uitklapgedeelte met secties of kolommen. Een sectie of kolom heeft een `id`, een `heading` en `items`.
+Een item kan ook een `subList` krijgen voor een uitklapgedeelte met secties. Een sectie heeft een `id`, een `heading` en `items`.
 
 De classes `rhc-nav-bar__item--button-on-mobile--secondary` en `rhc-nav-bar__item--button-on-mobile--primary` tonen een item op smalle schermen als knop, in plaats van als link.
 
 Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk.
+
+### Megamenu
+
+Geef `NavBar` een `megamenu` om de hoofdnavigatie te vervangen door een menuknop die een uitklapmenu opent. De menuknop, op basis van de native Popover API: geen eigen JavaScript nodig, en het paneel sluit ook via de `Escape`-toets of door ernaast te klikken. Na sluiten gaat de focus terug naar de menuknop.
+
+De inhoud van het menu bepaal je zelf. `NavBarMegaMenuTagline` en `NavBarMegaMenuSeparator` zijn er voor de introductietekst, maar de kolommen en links styling je zelf, bijvoorbeeld met `rhc-grid` en `LinkList`:
+
+```tsx
+import {
+  Heading,
+  LinkList,
+  LinkListLink,
+  NavBar,
+  NavBarIdentity,
+  NavBarMegaMenuSeparator,
+  NavBarMegaMenuTagline,
+} from '@rijkshuisstijl-community/components-react';
+
+const megamenu = (
+  <>
+    <NavBarMegaMenuTrigger>Kies een onderwerp of dienst</NavBarMegaMenuTrigger>
+    <NavBarMegaMenuPanel>
+      <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
+      <NavBarMegaMenuSeparator />
+      <div className="rhc-grid">
+        <div className="rhc-grid__cell rhc-grid__cell-d-3">
+          <Heading appearanceLevel={5} className="rhc-nav-bar__megamenu-column-heading" level={3}>
+            Diensten van de overheid
+          </Heading>
+          <LinkList className="rhc-nav-bar__megamenu__link-list">
+            <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
+              Dienstenoverzicht
+            </LinkListLink>
+          </LinkList>
+        </div>
+        <NavBarMegaMenuClose />
+      </div>
+    </NavBarMegaMenuPanel>
+  </>
+);
+
+<NavBar identity={<NavBarIdentity href="/">Overheid.nl</NavBarIdentity>} megamenu={megamenu} />;
+```
 
 ## API Referentie
 
@@ -89,3 +132,20 @@ Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk.
 | `children`  | ReactNode | verplicht | De naam of titel van de site.           |
 | `className` | string    | -         | Extra CSS class names.                  |
 | `primary`   | boolean   | -         | Primary variant voor de hoofd navigatie |
+
+### NavBarMegaMenuTagline
+
+Optionele introductietekst boven de inhoud van het megamenu.
+
+| Prop        | Type      | Default | Beschrijving           |
+| ----------- | --------- | ------- | ---------------------- |
+| `children`  | ReactNode | -       | De introductietekst.   |
+| `className` | string    | -       | Extra CSS class names. |
+
+### NavBarMegaMenuSeparator
+
+Scheidingslijn, bijvoorbeeld tussen de `NavBarMegaMenuTagline` en de rest van de inhoud.
+
+| Prop        | Type   | Default | Beschrijving           |
+| ----------- | ------ | ------- | ---------------------- |
+| `className` | string | -       | Extra CSS class names. |
