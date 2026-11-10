@@ -142,8 +142,8 @@
     .rhc-nav-bar__slot-main.is-navbar-main-open & {
       display: flex;
       flex-direction: column;
-      padding-block: 24px;
-      row-gap: 24px;
+      padding-block: var(--rhc-space-2xl);
+      row-gap: var(--rhc-grid-vi-large-column-gap);
     }
   }
 
@@ -168,12 +168,10 @@
   }
 }
 
-// de items/endItems worden nogmaals (verborgen op desktop) binnen het megamenu-paneel
-// gerenderd, zodat ze op mobiel onderdeel worden van dezelfde geopende menu-inhoud.
 @mixin rhc-nav-bar__slots--mobile-in-megamenu {
   display: flex;
   flex-direction: column;
-  row-gap: 24px;
+  row-gap: var(--rhc-space-2xl);
 
   @media (width >= 768px) {
     display: none;
@@ -194,8 +192,6 @@
       margin-inline-start: auto;
     }
 
-    // de inline-start-auto hierboven is bedoeld voor de desktop-layout; de gebundelde
-    // mobiele kopie binnen het megamenu-paneel moet gewoon links uitgelijnd blijven.
     & .rhc-nav-bar__slots--mobile-in-megamenu > .rhc-nav-bar__slot {
       margin-inline-start: 0;
     }
@@ -260,11 +256,6 @@
   }
 }
 
-// het paneel is de popover zelf: onzichtbaar, geankerd onder de trigger, en begrensd
-// tot de resterende viewport-hoogte zodat de trigger altijd zichtbaar blijft; de
-// zichtbare achtergrond/kleur/padding zitten op .rhc-nav-bar__megamenu erbinnen.
-// Op mobiel loopt het paneel randloos tot de viewport-rand; vanaf desktop
-// blijft het beperkt tot de breedte van de navigatiebalk zelf.
 @mixin rhc-nav-bar__megamenu-panel {
   background: none;
   block-size: auto;
@@ -287,6 +278,19 @@
     inset-inline-start: anchor(start);
     max-inline-size: none;
   }
+
+  // anchor de lijst van de language navigation zodat hij naar boven kan uitklappen als er onderin de viewport geen ruimte meer is.
+  .rhc-language-navigation {
+    anchor-name: --rhc-nav-bar-megamenu-language-nav;
+  }
+
+  .rhc-language-navigation__list {
+    inset-block-start: anchor(bottom);
+    inset-inline-start: anchor(start);
+    position: fixed;
+    position-anchor: --rhc-nav-bar-megamenu-language-nav;
+    position-try-fallbacks: flip-block;
+  }
 }
 
 @mixin rhc-nav-bar__megamenu-separator {
@@ -297,7 +301,7 @@
 
 // TAGLINE --
 @mixin rhc-nav-bar__megamenu-tagline {
-  --nl-paragraph-line-height: 3rem;
+  --nl-paragraph-line-height: var(--rhc-space-5xl);
 
   font-style: italic;
 }
