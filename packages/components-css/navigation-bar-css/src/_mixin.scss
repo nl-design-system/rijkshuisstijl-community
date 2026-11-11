@@ -280,15 +280,17 @@
   }
 
   // anchor de lijst van de language navigation zodat hij naar boven kan uitklappen als er onderin de viewport geen ruimte meer is.
+  // de anchor-naam komt van het paneel zelf (uniek per NavBar-instantie); de statische
+  // waarde is enkel een fallback voor als die custom property onverhoopt ontbreekt.
   .rhc-language-navigation {
-    anchor-name: --rhc-nav-bar-megamenu-language-nav;
+    anchor-name: var(--rhc-nav-bar-megamenu-language-nav-anchor, --rhc-nav-bar-megamenu-language-nav);
   }
 
   .rhc-language-navigation__list {
     inset-block-start: anchor(bottom);
     inset-inline-start: anchor(start);
     position: fixed;
-    position-anchor: --rhc-nav-bar-megamenu-language-nav;
+    position-anchor: var(--rhc-nav-bar-megamenu-language-nav-anchor, --rhc-nav-bar-megamenu-language-nav);
     position-try-fallbacks: flip-block;
   }
 }
