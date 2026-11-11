@@ -39,7 +39,13 @@ export const NavBarMegaMenuPanel = ({
     className={clsx('rhc-nav-bar__megamenu-panel', className)}
     id={`${id}-panel`}
     popover="auto"
-    style={{ positionAnchor: `--${id}-anchor`, ...style } as CSSProperties}
+    style={
+      {
+        positionAnchor: `--${id}-anchor`,
+        '--rhc-nav-bar-megamenu-language-nav-anchor': `--${id}-language-nav`,
+        ...style,
+      } as CSSProperties
+    }
     onToggle={(event) => {
       onOpenChange?.(event.newState === 'open');
       onToggle?.(event);
