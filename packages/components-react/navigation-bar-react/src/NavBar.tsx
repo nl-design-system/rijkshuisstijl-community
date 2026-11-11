@@ -104,7 +104,7 @@ export const NavBarItem = ({
         </LinkButton>
       ) : (
         <NavBarLink current={currentPage} href={href} icon={icon} iconEnd={iconEnd} iconOnly={iconOnly} target={target}>
-          + {label}+{' '}
+          {label}{' '}
         </NavBarLink>
       )}
       {subList && isItemOpen && (
