@@ -1,7 +1,7 @@
 /**
-+ * @license EUPL-1.2
-+ * Copyright (c) 2026 Community for NL Design System
-+ */
+ * @license EUPL-1.2
+ * Copyright (c) 2026 Community for NL Design System
+ */
 
 import { IconProps } from '@rijkshuisstijl-community/icon-react/no-side-effects';
 import { Link, LinkProps } from '@rijkshuisstijl-community/link-react/no-side-effects';
