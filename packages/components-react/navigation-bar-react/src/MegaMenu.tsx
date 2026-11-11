@@ -32,6 +32,7 @@ export const NavBarMegaMenuPanel = ({
   style,
   children,
   onOpenChange,
+  onToggle,
   ...restProps
 }: PropsWithChildren<NavBarMegaMenuPanelProps>) => (
   <div
@@ -39,7 +40,10 @@ export const NavBarMegaMenuPanel = ({
     id={`${id}-panel`}
     popover="auto"
     style={{ positionAnchor: `--${id}-anchor`, ...style } as CSSProperties}
-    onToggle={(event) => onOpenChange?.(event.newState === 'open')}
+    onToggle={(event) => {
+      onOpenChange?.(event.newState === 'open');
+      onToggle?.(event);
+    }}
     {...restProps}
   >
     <div className="rhc-nav-bar__megamenu">{children}</div>
