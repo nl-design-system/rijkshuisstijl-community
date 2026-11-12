@@ -84,33 +84,6 @@ export const WithIcons: Story = {
   },
 };
 
-export const WithSubList: Story = {
-  args: {
-    children: (
-      <NavBar.Start>
-        <NavBar.Item
-          contentId="topics"
-          href="/"
-          id="topics"
-          label="Onderwerpen"
-          subList={{
-            sections: [
-              {
-                id: 'section-a',
-                heading: 'Sectie A',
-                items: [
-                  { id: 'a-1', label: 'Link', href: '/' },
-                  { id: 'a-2', label: 'Link', href: '/' },
-                ],
-              },
-            ],
-          }}
-        />
-      </NavBar.Start>
-    ),
-  },
-};
-
 export const WithMegaMenu: Story = {
   args: {
     children: (
