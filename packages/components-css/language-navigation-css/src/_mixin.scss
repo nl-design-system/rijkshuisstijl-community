@@ -47,6 +47,9 @@
 
   inset-block-start: calc(var(--utrecht-button-min-block-size) - 8px);
   position: absolute;
+
+  // boven gepositioneerde content die erna komt
+  z-index: 1;
 }
 
 @mixin rhc-language-navigation__list__item {
