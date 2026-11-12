@@ -1,4 +1,4 @@
-import { type NavBarLinkProps, SubNavBar } from '@rijkshuisstijl-community/components-react';
+import { type NavBarLinkData, SubNavBar } from '@rijkshuisstijl-community/components-react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta = {
@@ -16,7 +16,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const columns: NavBarLinkProps[][] = [
+const columns: NavBarLinkData[][] = [
   [
     {
       label: 'Label',

@@ -89,3 +89,15 @@ Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk.
 | `children`  | ReactNode | verplicht | De naam of titel van de site.           |
 | `className` | string    | -         | Extra CSS class names.                  |
 | `primary`   | boolean   | -         | Primary variant voor de hoofd navigatie |
+
+### NavBarLink
+
+| Prop        | Type         | Default   | Beschrijving                                               |
+| ----------- | ------------ | --------- | ---------------------------------------------------------- |
+| `href`      | string       | verplicht | De url van de link.                                        |
+| `children`  | ReactNode    | verplicht | De tekst van de link.                                      |
+| `current`   | boolean      | `false`   | Markeert de huidige pagina met `aria-current="page"`.      |
+| `icon`      | ReactElement | -         | Icoon voor de tekst.                                       |
+| `iconEnd`   | ReactElement | -         | Icoon na de tekst.                                         |
+| `iconOnly`  | boolean      | `false`   | Toont alleen het icoon; de tekst blijft voor schermlezers. |
+| `className` | string       | -         | Extra CSS class names.                                     |

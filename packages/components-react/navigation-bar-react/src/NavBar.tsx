@@ -12,6 +12,7 @@ import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import { Separator } from '@rijkshuisstijl-community/separator-react/no-side-effects';
 import clsx from 'clsx';
 import { HTMLAttributes, PropsWithChildren, ReactElement, ReactNode, Ref, useEffect, useRef, useState } from 'react';
+import { NavBarLink } from './NavBarLink';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   identity?: ReactNode;
@@ -20,8 +21,8 @@ export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   megamenu?: ReactNode;
   ref?: Ref<HTMLDivElement>;
 }
-
-export interface NavBarLinkProps {
+//tijdelijke hernoeming
+export interface NavBarLinkData {
   className?: string;
   id: string;
   label: ReactNode;
@@ -29,7 +30,7 @@ export interface NavBarLinkProps {
   target?: string;
 }
 
-export interface NavBarItemProps extends NavBarLinkProps, HTMLAttributes<HTMLLIElement> {
+export interface NavBarItemProps extends NavBarLinkData, HTMLAttributes<HTMLLIElement> {
   icon?: ReactElement<IconProps>;
   iconEnd?: ReactElement<IconProps>;
   subList?: NavbarSubListProps;
@@ -46,7 +47,7 @@ interface NavbarSubListProps {
 }
 
 export interface SubNavBarProps extends HTMLAttributes<HTMLDivElement> {
-  columns: NavBarLinkProps[][];
+  columns: NavBarLinkData[][];
   ref?: Ref<HTMLDivElement>;
 }
 
@@ -55,7 +56,7 @@ export interface NavBarMegaMenuColumnProps {
   heading: ReactNode;
   headingAppearanceLevel?: HeadingLevel;
   headingLevel?: HeadingLevel;
-  items: NavBarLinkProps[];
+  items: NavBarLinkData[];
 }
 
 export interface NavBarMegaMenuProps extends HTMLAttributes<HTMLDivElement> {
@@ -69,7 +70,7 @@ interface SectionProps {
   heading: ReactNode;
   headingAppearanceLevel?: HeadingLevel;
   headingLevel?: HeadingLevel;
-  items: NavBarLinkProps[];
+  items: NavBarLinkData[];
 }
 
 export const NavBarItem = ({
@@ -102,16 +103,9 @@ export const NavBarItem = ({
           <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__label--sr-only')}>{label}</span>
         </LinkButton>
       ) : (
-        <Link
-          aria-current={currentPage ? 'page' : undefined}
-          className={clsx('rhc-nav-bar__link')}
-          href={href}
-          target={target}
-        >
-          {icon}
-          <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__label--sr-only')}>{label}</span>
-          {iconEnd}
-        </Link>
+        <NavBarLink current={currentPage} href={href} icon={icon} iconEnd={iconEnd} iconOnly={iconOnly} target={target}>
+          {label}{' '}
+        </NavBarLink>
       )}
       {subList && isItemOpen && (
         <div className="rhc-nav-bar__item-dropdown" id={`rhc-nav-bar__item-dropdown-${contentId}`}>
@@ -424,7 +418,7 @@ export const SubNavBar = ({ ref, children, className, columns, ...restProps }: P
   return (
     <div className={clsx(className)} ref={ref} {...restProps}>
       <div className="rhc-sub-nav-bar__content">
-        {columns.map((column: NavBarLinkProps[]) => (
+        {columns.map((column: NavBarLinkData[]) => (
           <div className="rhc-sub-nav-bar__list" key={column.map((item) => item.id).join('-')}>
             <LinkList>
               {column.map(({ id, href, target, label }) => (
