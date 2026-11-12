@@ -18,25 +18,21 @@ De Page Header bestaat uit de volgende onderdelen:
 ### Eenvoudig voorbeeld
 
 ```tsx
-import { Logo, NavBar, NavBarIdentity, PageHeader } from '@rijkshuisstijl-community/components-react';
-
-const items = [
-  { id: 'home', label: 'Home', href: '/' },
-  { id: 'contact', label: 'Contact', href: '/' },
-];
+import { Logo, NavBar, PageHeader } from '@rijkshuisstijl-community/components-react';
 
 <PageHeader>
   <div className="rhc-page-section">
     <div className="rhc-page-section__content">
       <Logo organisation="Organisatie" subtitle="Wat wij doen" />
-      <NavBar
-        identity={
+      <NavBar aria-label="Dataregister">
+        <NavBarStart>
           <NavBarIdentity primary href="/">
             Dataregister
           </NavBarIdentity>
-        }
-        items={items}
-      />
+          <NavBarItem href="/" id="home" label="Home" />
+          <NavBarItem href="/" id="contact" label="Contact" />
+        </NavBarStart>
+      </NavBar>
     </div>
   </div>
 </PageHeader>;
@@ -44,35 +40,18 @@ const items = [
 
 ### Uitgebreid voorbeeld
 
-Voor een pagina met een `megamenu` en een tweede navigatiebalk geef je meerdere `NavBar`'s mee als `children`.
+Voor een pagina met een megamenu en een tweede navigatiebalk geef je meerdere `NavBar`'s mee als `children`.
 
 ```tsx
 import {
+  Heading,
   Icon,
+  LinkList,
+  LinkListLink,
   Logo,
   NavBar,
-  NavBarIdentity,
-  NavBarMegaMenu,
   PageHeader,
 } from '@rijkshuisstijl-community/components-react';
-
-const itemsMain = [
-  { id: 'data', label: 'Data', href: '/' },
-  { id: 'impact', label: 'Impact', href: '/' },
-];
-
-const megamenu = (
-  <NavBarMegaMenu
-    tagline="Ingang naar informatie en diensten van alle overheden"
-    columns={[
-      {
-        id: 'col-1',
-        heading: 'Diensten van de overheid',
-        items: [{ id: 'mm-1', label: 'Dienstenoverzicht', href: '/' }],
-      },
-    ]}
-  />
-);
 
 <PageHeader>
   <div className="rhc-page-section">
@@ -80,15 +59,39 @@ const megamenu = (
       <Logo organisation="Organisatie" subtitle="Wat wij doen">
         <Icon className="dutch-map" icon="nederland-map" />
       </Logo>
-      <NavBar
-        identity={
+      <NavBar aria-label="Overheid.nl">
+        <NavBarStart>
           <NavBarIdentity primary href="/">
             Overheid.nl
           </NavBarIdentity>
-        }
-        megamenu={megamenu}
-      />
-      <NavBar identity={<NavBarIdentity href="/">Dataregister</NavBarIdentity>} items={itemsMain} />
+          <NavBarMegaMenu>
+            <NavBarMegaMenuTrigger target="onderwerpen">Kies een onderwerp of dienst</NavBarMegaMenuTrigger>
+            <NavBarMegaMenuPanel id="onderwerpen">
+              <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
+              <NavBarMegaMenuSeparator />
+              <div className="rhc-grid">
+                <div className="rhc-grid__cell rhc-grid__cell-d-3">
+                  <Heading appearanceLevel={5} level={3}>
+                    Diensten van de overheid
+                  </Heading>
+                  <LinkList>
+                    <LinkListLink href="/">Dienstenoverzicht</LinkListLink>
+                  </LinkList>
+                </div>
+              </div>
+
+              <NavBarMegaMenuClose target="onderwerpen" />
+            </NavBarMegaMenuPanel>
+          </NavBarMegaMenu>
+        </NavBarStart>
+      </NavBar>
+      <NavBar aria-label="Dataregister">
+        <NavBarStart>
+          <NavBarIdentity href="/">Dataregister</NavBarIdentity>
+          <NavBarItem href="/" id="data" label="Data" />
+          <NavBarItem href="/" id="impact" label="Impact" />
+        </NavBarStart>
+      </NavBar>
     </div>
   </div>
 </PageHeader>;

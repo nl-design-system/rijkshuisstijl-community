@@ -1,10 +1,19 @@
 import {
+  Heading,
   Icon,
+  LinkList,
+  LinkListLink,
   NavBar,
+  NavBarEnd,
   NavBarIdentity,
   NavBarItem,
-  type NavBarItemProps,
   NavBarMegaMenu,
+  NavBarMegaMenuClose,
+  NavBarMegaMenuPanel,
+  NavBarMegaMenuSeparator,
+  NavBarMegaMenuTagline,
+  NavBarMegaMenuTrigger,
+  NavBarStart,
 } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
@@ -22,7 +31,7 @@ const meta = {
     },
     // TODO: add Figma and GitHub links
     github:
-      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/NavBar.tsx',
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/navigation-bar-react/src/NavBar.tsx',
   },
 } satisfies Meta<typeof NavBar>;
 
@@ -30,94 +39,100 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const items: NavBarItemProps[] = [
-  { id: 'first-link', label: 'Link', href: '/' },
-  { id: 'second-link', label: 'Link', href: '/' },
-  { id: 'third-link', label: 'Link', href: '/' },
-];
-
-const endItems = [
-  <NavBarItem href="/" id="end-first-link" key="end-first-link" label="Link" />,
-  <NavBarItem href="/" id="end-second-link" key="end-second-link" label="Link" />,
-];
+const items = (
+  <>
+    <NavBarItem href="/" id="first-link" label="Link" />
+    <NavBarItem href="/" id="second-link" label="Link" />
+    <NavBarItem href="/" id="third-link" label="Link" />
+  </>
+);
 
 export const Default: Story = {
-  args: { items },
+  args: {
+    children: <NavBarStart>{items}</NavBarStart>,
+  },
 };
 
 export const WithIdentity: Story = {
   args: {
-    items,
-    identity: <NavBarIdentity href="/">Identity</NavBarIdentity>,
+    children: (
+      <NavBarStart>
+        <NavBarIdentity href="/">Identity</NavBarIdentity>
+        {items}
+      </NavBarStart>
+    ),
   },
 };
 
 export const WithEndItems: Story = {
-  args: { items, endItems },
+  args: {
+    children: (
+      <>
+        <NavBarStart>{items}</NavBarStart>
+        <NavBarEnd>
+          <NavBarItem href="/" id="end-first-link" label="Link" />
+          <NavBarItem href="/" id="end-second-link" label="Link" />
+        </NavBarEnd>
+      </>
+    ),
+  },
 };
 
 export const WithCurrentPage: Story = {
   args: {
-    items: [{ ...items[0], currentPage: true }, ...items.slice(1)],
+    children: (
+      <NavBarStart>
+        <NavBarItem currentPage href="/" id="first-link" label="Link" />
+        <NavBarItem href="/" id="second-link" label="Link" />
+      </NavBarStart>
+    ),
   },
 };
 
 export const WithIcons: Story = {
   args: {
-    items: [
-      { id: 'search', label: 'Zoeken', href: '/', icon: <Icon icon="zoek" /> },
-      { id: 'login', label: 'Inloggen', href: '/', icon: <Icon icon="inloggen" />, iconOnly: true },
-    ],
-  },
-};
-
-export const WithSubList: Story = {
-  args: {
-    items: [
-      {
-        id: 'topics',
-        label: 'Onderwerpen',
-        href: '/',
-        contentId: 'topics',
-        subList: {
-          sections: [
-            {
-              id: 'section-a',
-              heading: 'Sectie A',
-              items: [
-                { id: 'a-1', label: 'Link', href: '/' },
-                { id: 'a-2', label: 'Link', href: '/' },
-              ],
-            },
-          ],
-        },
-      },
-    ],
+    children: (
+      <NavBarStart>
+        <NavBarItem href="/" icon={<Icon icon="zoek" />} id="search" label="Zoeken" />
+        <NavBarItem iconOnly href="/" icon={<Icon icon="inloggen" />} id="login" label="Inloggen" />
+      </NavBarStart>
+    ),
   },
 };
 
 export const WithMegaMenu: Story = {
   args: {
-    identity: (
-      <NavBarIdentity primary href="/">
-        Overheid.nl
-      </NavBarIdentity>
-    ),
+    children: (
+      <>
+        <NavBarStart>
+          <NavBarIdentity primary href="/">
+            Overheid.nl
+          </NavBarIdentity>
+          <NavBarMegaMenu>
+            <NavBarMegaMenuTrigger target="onderwerpen">Kies een onderwerp of dienst</NavBarMegaMenuTrigger>
+            <NavBarMegaMenuPanel id="onderwerpen">
+              <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
+              <NavBarMegaMenuSeparator />
+              <div className="rhc-grid">
+                <div className="rhc-grid__cell rhc-grid__cell-d-3">
+                  <Heading appearanceLevel={5} level={3}>
+                    Diensten van de overheid
+                  </Heading>
+                  <LinkList>
+                    <LinkListLink href="/">Dienstenoverzicht</LinkListLink>
+                    <LinkListLink href="/">Levensgebeurtenissen</LinkListLink>
+                  </LinkList>
+                </div>
+              </div>
 
-    megamenu: (
-      <NavBarMegaMenu
-        tagline="Ingang naar informatie en diensten van alle overheden"
-        columns={[
-          {
-            id: 'col-1',
-            heading: 'Diensten van de overheid',
-            items: [
-              { id: 'mm-1', label: 'Dienstenoverzicht', href: '/' },
-              { id: 'mm-2', label: 'Levensgebeurtenissen', href: '/' },
-            ],
-          },
-        ]}
-      />
+              <NavBarMegaMenuClose target="onderwerpen" />
+            </NavBarMegaMenuPanel>
+          </NavBarMegaMenu>
+        </NavBarStart>
+        <NavBarEnd>
+          <NavBarItem href="/" id="contact" label="Contact" />
+        </NavBarEnd>
+      </>
     ),
   },
 };
