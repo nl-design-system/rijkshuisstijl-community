@@ -6,7 +6,7 @@ import {
   NavBar,
   NavBarIdentity,
   NavBarItem,
-  type NavBarItemProps,
+  NavBarMegaMenu,
   NavBarMegaMenuSeparator,
   NavBarMegaMenuTagline,
 } from '@rijkshuisstijl-community/components-react';
@@ -26,7 +26,7 @@ const meta = {
     },
     // TODO: add Figma and GitHub links
     github:
-      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/src/NavBar.tsx',
+      'https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/packages/components-react/navigation-bar-react/src/NavBar.tsx',
   },
 } satisfies Meta<typeof NavBar>;
 
@@ -34,56 +34,71 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const items: NavBarItemProps[] = [
-  { id: 'first-link', label: 'Link', href: '/' },
-  { id: 'second-link', label: 'Link', href: '/' },
-  { id: 'third-link', label: 'Link', href: '/' },
-];
+const items = (
+  <>
+    <NavBarItem href="/" id="first-link" label="Link" />
+    <NavBarItem href="/" id="second-link" label="Link" />
+    <NavBarItem href="/" id="third-link" label="Link" />
+  </>
+);
 
-const endItems = [
-  <NavBarItem href="/" id="end-first-link" key="end-first-link" label="Link" />,
-  <NavBarItem href="/" id="end-second-link" key="end-second-link" label="Link" />,
-];
+const endItems = (
+  <>
+    <NavBarItem href="/" id="end-first-link" label="Link" />
+    <NavBarItem href="/" id="end-second-link" label="Link" />
+  </>
+);
 
 export const Default: Story = {
-  args: { items },
+  args: { startItems: items },
 };
 
 export const WithIdentity: Story = {
   args: {
-    items,
-    identity: <NavBarIdentity href="/">Identity</NavBarIdentity>,
+    startItems: (
+      <>
+        <NavBarIdentity href="/">Identity</NavBarIdentity>
+        {items}
+      </>
+    ),
   },
 };
 
 export const WithEndItems: Story = {
-  args: { items, endItems },
+  args: { startItems: items, endItems },
 };
 
 export const WithCurrentPage: Story = {
   args: {
-    items: [{ ...items[0], currentPage: true }, ...items.slice(1)],
+    startItems: (
+      <>
+        <NavBarItem currentPage href="/" id="first-link" label="Link" />
+        <NavBarItem href="/" id="second-link" label="Link" />
+      </>
+    ),
   },
 };
 
 export const WithIcons: Story = {
   args: {
-    items: [
-      { id: 'search', label: 'Zoeken', href: '/', icon: <Icon icon="zoek" /> },
-      { id: 'login', label: 'Inloggen', href: '/', icon: <Icon icon="inloggen" />, iconOnly: true },
-    ],
+    startItems: (
+      <>
+        <NavBarItem href="/" icon={<Icon icon="zoek" />} id="search" label="Zoeken" />
+        <NavBarItem iconOnly href="/" icon={<Icon icon="inloggen" />} id="login" label="Inloggen" />
+      </>
+    ),
   },
 };
 
 export const WithSubList: Story = {
   args: {
-    items: [
-      {
-        id: 'topics',
-        label: 'Onderwerpen',
-        href: '/',
-        contentId: 'topics',
-        subList: {
+    startItems: (
+      <NavBarItem
+        contentId="topics"
+        href="/"
+        id="topics"
+        label="Onderwerpen"
+        subList={{
           sections: [
             {
               id: 'section-a',
@@ -94,40 +109,40 @@ export const WithSubList: Story = {
               ],
             },
           ],
-        },
-      },
-    ],
+        }}
+      />
+    ),
   },
 };
 
 export const WithMegaMenu: Story = {
   args: {
-    identity: (
-      <NavBarIdentity primary href="/">
-        Overheid.nl
-      </NavBarIdentity>
-    ),
-
-    megamenu: (
+    startItems: (
       <>
-        <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
-        <NavBarMegaMenuSeparator />
-        <div className="rhc-grid">
-          <div className="rhc-grid__cell rhc-grid__cell-d-3">
-            <Heading appearanceLevel={5} className="rhc-nav-bar__megamenu-column-heading" level={3}>
-              Diensten van de overheid
-            </Heading>
-            <LinkList className="rhc-nav-bar__megamenu__link-list">
-              <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
-                Dienstenoverzicht
-              </LinkListLink>
-              <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
-                Levensgebeurtenissen
-              </LinkListLink>
-            </LinkList>
+        <NavBarIdentity primary href="/">
+          Overheid.nl
+        </NavBarIdentity>
+        <NavBarMegaMenu>
+          <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
+          <NavBarMegaMenuSeparator />
+          <div className="rhc-grid">
+            <div className="rhc-grid__cell rhc-grid__cell-d-3">
+              <Heading appearanceLevel={5} className="rhc-nav-bar__megamenu-column-heading" level={3}>
+                Diensten van de overheid
+              </Heading>
+              <LinkList className="rhc-nav-bar__megamenu__link-list">
+                <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
+                  Dienstenoverzicht
+                </LinkListLink>
+                <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
+                  Levensgebeurtenissen
+                </LinkListLink>
+              </LinkList>
+            </div>
           </div>
-        </div>
+        </NavBarMegaMenu>
       </>
     ),
+    endItems: <NavBarItem href="/" id="contact" label="Contact" />,
   },
 };
