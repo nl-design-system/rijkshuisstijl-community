@@ -2,66 +2,74 @@
 
 # Rijkshuisstijl Community Nav Bar component
 
-De Navigation Bar is de hoofdnavigatie van een pagina. Je geeft de links als data mee en de component bouwt de lijst op. Voor een uitklapbaar menu met kolommen gebruik je de prop `megamenu`.
+De Navigation Bar is de hoofdnavigatie van een pagina. De balk heeft twee kanten: `startItems` en `endItems`. Wat je daarin plaatst bepaal je zelf: een `NavBarIdentity`, `NavBarItem`s, een `NavBarMegaMenu` of een eigen `<li>`.
 
 ## Anatomie
 
 De Navigation Bar bestaat uit de volgende onderdelen:
 
-- **Identity**: de naam of titel van de site, aan het begin van de balk.
-- **Items**: de links in het hoofdgedeelte van de balk.
-- **End items**: optionele items aan het einde van de balk, bijvoorbeeld zoeken, inloggen of taalkeuze.
+- **Start items**: items aan het begin van de balk.
+- **End items**: items aan het einde van de balk, bijvoorbeeld zoeken, inloggen of taalkeuze.
+- **Identity**: de naam of titel van de site, meestal als eerste start item.
 - **Sublijst**: een uitklapgedeelte bij een item, opgebouwd uit secties met een kop en links.
-- **Megamenu**: een optioneel uitklapmenu met links in kolommen, dat opent via een menuknop. Op smalle schermen bevat dit paneel ook de `items` en `endItems`.
+- **Megamenu**: een item met een menuknop die een uitklappaneel met links in kolommen opent.
+- **Menuknop**: op smalle schermen klappen de items in achter een menuknop.
 
-Op smalle schermen klapt de balk in achter een menuknop.
+### Smalle schermen
+
+Op smalle schermen toont de balk alleen de identity en de menuknop. De menuknop opent een paneel met alle andere items. De inhoud van een `NavBarMegaMenu` staat daar direct in het paneel; de knop van het megamenu wordt dan niet getoond.
+
+Wil je een item ook op smalle schermen in de balk houden, geef het dan de prop `persistent`. `NavBarIdentity` is standaard `persistent`.
+
+Het menu en het megamenu gebruiken de native Popover API. Er is geen eigen JavaScript nodig: ze sluiten via de `Escape`-toets of door ernaast te klikken, en de focus gaat terug naar de knop.
 
 ## Gebruik
 
 ### Eenvoudig voorbeeld
 
 ```tsx
-import { NavBar } from '@rijkshuisstijl-community/components-react';
+import { NavBar, NavBarItem } from '@rijkshuisstijl-community/components-react';
 
-const items = [
-  { id: 'home', label: 'Home', href: '/' },
-  { id: 'nieuws', label: 'Nieuws', href: '/nieuws' },
-  { id: 'contact', label: 'Contact', href: '/contact' },
-];
-
-<NavBar items={items} />;
+<NavBar
+  startItems={
+    <>
+      <NavBarItem href="/" id="home" label="Home" />
+      <NavBarItem href="/nieuws" id="nieuws" label="Nieuws" />
+      <NavBarItem href="/contact" id="contact" label="Contact" />
+    </>
+  }
+/>;
 ```
 
 ### Uitgebreid voorbeeld
 
-Gebruik `NavBarIdentity` als child voor de sitenaam, `currentPage` voor de huidige pagina, en `endItems` voor extra items zoals zoeken of inloggen.
+Gebruik `NavBarIdentity` voor de sitenaam, `currentPage` voor de huidige pagina, en `endItems` voor extra items zoals zoeken of inloggen.
 
 ```tsx
 import { Icon, NavBar, NavBarIdentity, NavBarItem } from '@rijkshuisstijl-community/components-react';
 
-const items = [
-  { id: 'home', label: 'Home', href: '/', currentPage: true },
-  { id: 'nieuws', label: 'Nieuws', href: '/nieuws' },
-];
-
-const endItems = [<NavBarItem href="/zoeken" icon={<Icon icon="zoek" />} id="zoeken" key="zoeken" label="Zoeken" />];
-
-const Identity = (<NavBarIdentity href="/">Dataregister</NavBarIdentity>)
-
-<NavBar endItems={endItems} identity={identity} items={items} />;
+<NavBar
+  aria-label="Dataregister"
+  startItems={
+    <>
+      <NavBarIdentity href="/">Dataregister</NavBarIdentity>
+      <NavBarItem currentPage href="/" id="home" label="Home" />
+      <NavBarItem href="/nieuws" id="nieuws" label="Nieuws" />
+    </>
+  }
+  endItems={<NavBarItem href="/zoeken" icon={<Icon icon="zoek" />} id="zoeken" label="Zoeken" />}
+/>;
 ```
 
 Een item kan ook een `subList` krijgen voor een uitklapgedeelte met secties. Een sectie heeft een `id`, een `heading` en `items`.
 
 De classes `rhc-nav-bar__item--button-on-mobile--secondary` en `rhc-nav-bar__item--button-on-mobile--primary` tonen een item op smalle schermen als knop, in plaats van als link.
 
-Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk.
+Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk, zeker als er meerdere balken op een pagina staan.
 
 ### Megamenu
 
-Geef `NavBar` een `megamenu` om naast `items`/`endItems` ook een menuknop te tonen die een uitklapmenu opent. Op basis van de native Popover API: geen eigen JavaScript nodig en het sluit ook via de `Escape`-toets of door ernaast te klikken. Na sluiten gaat de focus terug naar de menuknop.
-
-Op smalle schermen worden `items` en `endItems` automatisch mee opgenomen in hetzelfde paneel als het megamenu, zodat er één uitklapmenu is in plaats van losse knoppen. Vanaf desktop-breedte blijven `items`/`endItems` gewoon naast de menuknop staan, zoals normaal.
+Plaats een `NavBarMegaMenu` in `startItems` of `endItems`. Op brede schermen opent de knop een paneel onder de balk; op smalle schermen staat de inhoud direct in het menu van de balk.
 
 De inhoud van het menu bepaal je zelf. `NavBarMegaMenuTagline` en `NavBarMegaMenuSeparator` zijn er voor de introductietekst, maar de kolommen en links styling je zelf, bijvoorbeeld met `rhc-grid` en `LinkList`:
 
@@ -72,43 +80,49 @@ import {
   LinkListLink,
   NavBar,
   NavBarIdentity,
+  NavBarMegaMenu,
   NavBarMegaMenuSeparator,
   NavBarMegaMenuTagline,
 } from '@rijkshuisstijl-community/components-react';
 
-const megamenu = (
-  <>
-    <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
-    <NavBarMegaMenuSeparator />
-    <div className="rhc-grid">
-      <div className="rhc-grid__cell rhc-grid__cell-d-3">
-        <Heading appearanceLevel={5} className="rhc-nav-bar__megamenu-column-heading" level={3}>
-          Diensten van de overheid
-        </Heading>
-        <LinkList className="rhc-nav-bar__megamenu__link-list">
-          <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
-            Dienstenoverzicht
-          </LinkListLink>
-        </LinkList>
-      </div>
-    </div>
-  </>
-);
-
-<NavBar identity={<NavBarIdentity href="/">Overheid.nl</NavBarIdentity>} megamenu={megamenu} />;
+<NavBar
+  startItems={
+    <>
+      <NavBarIdentity primary href="/">
+        Overheid.nl
+      </NavBarIdentity>
+      <NavBarMegaMenu label="Kies een onderwerp of dienst">
+        <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
+        <NavBarMegaMenuSeparator />
+        <div className="rhc-grid">
+          <div className="rhc-grid__cell rhc-grid__cell-d-3">
+            <Heading appearanceLevel={5} className="rhc-nav-bar__megamenu-column-heading" level={3}>
+              Diensten van de overheid
+            </Heading>
+            <LinkList className="rhc-nav-bar__megamenu__link-list">
+              <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
+                Dienstenoverzicht
+              </LinkListLink>
+            </LinkList>
+          </div>
+        </div>
+      </NavBarMegaMenu>
+    </>
+  }
+/>;
 ```
 
 ## API Referentie
 
 ### NavBar
 
-| Prop        | Type              | Default | Beschrijving                                              |
-| ----------- | ----------------- | ------- | --------------------------------------------------------- |
-| `identity`  | ReactNode         | -       | Een NavBarIdentity, getoond aan het begin van de balk.    |
-| `items`     | NavBarItemProps[] | -       | De links in het hoofdgedeelte.                            |
-| `endItems`  | ReactNode         | -       | `NavBarItem`-elementen aan het einde van de balk(`<ul>`). |
-| `megamenu`  | ReactNode         | -       | Inhoud van het uitklapmenu, geopend via een menuknop.     |
-| `className` | string            | -       | Extra CSS class names.                                    |
+| Prop          | Type      | Default            | Beschrijving                                           |
+| ------------- | --------- | ------------------ | ------------------------------------------------------ |
+| `startItems`  | ReactNode | -                  | `<li>`-elementen aan het begin van de balk.            |
+| `endItems`    | ReactNode | -                  | `<li>`-elementen aan het einde van de balk.            |
+| `aria-label`  | string    | `"Hoofdnavigatie"` | Toegankelijke naam van de navigatie.                   |
+| `toggleLabel` | string    | `"Menu"`           | Toegankelijke naam van de menuknop op smalle schermen. |
+| `className`   | string    | -                  | Extra CSS class names.                                 |
 
 ### NavBarItem
 
@@ -121,15 +135,25 @@ const megamenu = (
 | `currentPage` | boolean        | `false`   | Markeert de huidige pagina met `aria-current="page"`.         |
 | `subList`     | `{ sections }` | -         | Uitklapgedeelte met secties.                                  |
 | `contentId`   | string         | `1`       | Id voor de sublijst. Maak deze uniek bij meerdere sublijsten. |
+| `persistent`  | boolean        | `false`   | Blijft op smalle schermen zichtbaar in de balk.               |
 
 ### NavBarIdentity
 
-| Prop        | Type      | Default   | Beschrijving                            |
-| ----------- | --------- | --------- | --------------------------------------- |
-| `href`      | string    | verplicht | De URL waar de identity naartoe linkt.  |
-| `children`  | ReactNode | verplicht | De naam of titel van de site.           |
-| `className` | string    | -         | Extra CSS class names.                  |
-| `primary`   | boolean   | -         | Primary variant voor de hoofd navigatie |
+| Prop         | Type      | Default   | Beschrijving                                    |
+| ------------ | --------- | --------- | ----------------------------------------------- |
+| `href`       | string    | verplicht | De URL waar de identity naartoe linkt.          |
+| `children`   | ReactNode | verplicht | De naam of titel van de site.                   |
+| `className`  | string    | -         | Extra CSS class names.                          |
+| `primary`    | boolean   | -         | Primary variant voor de hoofd navigatie         |
+| `persistent` | boolean   | `true`    | Blijft op smalle schermen zichtbaar in de balk. |
+
+### NavBarMegaMenu
+
+| Prop         | Type      | Default                          | Beschrijving                      |
+| ------------ | --------- | -------------------------------- | --------------------------------- |
+| `label`      | ReactNode | `"Kies een onderwerp of dienst"` | Tekst van de menuknop.            |
+| `closeLabel` | string    | `"Sluit menu"`                   | Toegankelijke naam van sluitknop. |
+| `children`   | ReactNode | -                                | De inhoud van het megamenu.       |
 
 ### NavBarMegaMenuTagline
 
