@@ -88,13 +88,13 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
       padding-inline: var(--rhc-page-section-vi-small-padding-inline, var(--rhc-space-lg));
       row-gap: var(--rhc-space-2xl);
 
-      // > .rhc-nav-bar__list {
-      //   block-size: auto;
-      // }
-
       .rhc-nav-bar__link {
         inline-size: 100%;
         padding-inline: 0;
+      }
+
+      .rhc-language-navigation__list {
+        position: static;
       }
     }
   }
@@ -179,7 +179,6 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
   }
 }
 
-// smal: geen knop, de inhoud van het megamenu staat direct in het menu van de balk
 @mixin rhc-nav-bar__megamenu-trigger {
   @media #{$rhc-nav-bar-mobile} {
     display: none;
@@ -212,21 +211,6 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
       padding-inline: 0;
     }
   }
-
-  // anchor de lijst van de language navigation zodat hij naar boven kan uitklappen als er onderin de viewport geen ruimte meer is.
-  // de anchor-naam komt van het paneel zelf (uniek per NavBar-instantie); de statische
-  // waarde is enkel een fallback voor als die custom property onverhoopt ontbreekt.
-  //   .rhc-language-navigation {
-  //     anchor-name: var(--rhc-nav-bar-megamenu-language-nav-anchor, --rhc-nav-bar-megamenu-language-nav);
-  //   }
-
-  //   .rhc-language-navigation__list {
-  //     inset-block-start: anchor(bottom);
-  //     inset-inline-start: anchor(start);
-  //     position: fixed;
-  //     position-anchor: var(--rhc-nav-bar-megamenu-language-nav-anchor, --rhc-nav-bar-megamenu-language-nav);
-  //     position-try-fallbacks: flip-block;
-  //   }
 }
 
 @mixin rhc-nav-bar__megamenu {
