@@ -5,24 +5,41 @@
 
 $rhc-nav-bar-mobile: "(width < 768px)" !default;
 $rhc-nav-bar-desktop: "(width >= 768px)" !default;
+$rhc-nav-bar-menu-padding-inline: var(--rhc-navigation-bar-menu-padding-inline, var(--rhc-space-lg)) !default;
 
-// Zet de UA-styles van een popover terug, zodat hij gesloten gewoon in de flow staat.
-@mixin popover-in-flow {
+// HELPERS --
+// De UA-styles van een popover terugzetten.
+@mixin popover-reset {
   background: none;
-  block-size: auto;
   border: 0;
   color: inherit;
-  inline-size: auto;
-  inset: auto;
   margin-block: 0;
   margin-inline: 0;
-  max-block-size: none;
-  overflow: visible;
   padding-block: 0;
   padding-inline: 0;
+}
+
+@mixin popover-in-flow {
+  block-size: auto;
+  inline-size: auto;
+  inset: auto;
+  max-block-size: none;
+  overflow: visible;
   position: static;
 }
 
+@mixin link-indicator($color) {
+  box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0 $color;
+}
+
+@mixin link-hover {
+  @include link-indicator(var(--rhc-navigation-bar-link-hover-border-color));
+
+  background-color: var(--rhc-navigation-bar-link-hover-background-color);
+  color: var(--rhc-navigation-bar-link-hover-color);
+}
+
+// BALK --
 @mixin rhc-nav-bar {
   align-items: center;
   anchor-name: var(--rhc-nav-bar-anchor);
@@ -36,9 +53,9 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
 }
 
 // MENU --
-// De balk is altijd een popover. Gesloten staat hij in de flow; op smalle
-// schermen opent de menuknop hem als paneel over de balk in de top layer.
+// Altijd een popover; gesloten staat het als balk in de flow.
 @mixin rhc-nav-bar__menu {
+  @include popover-reset;
   @include popover-in-flow;
 
   align-items: center;
@@ -48,24 +65,28 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
   flex-grow: 1;
 
   &:popover-open {
-    background-color: var(--rhc-navigation-bar-background-color);
-    block-size: anchor-size(block);
-    inline-size: auto;
     inset-block-start: anchor(top);
-    inset-inline-end: anchor(right);
-    inset-inline-start: anchor(left);
     position: fixed;
     position-anchor: var(--rhc-nav-bar-anchor);
   }
 
+  @media #{$rhc-nav-bar-desktop} {
+    // open gebleven nadat het scherm breder werd
+    &:popover-open {
+      background-color: var(--rhc-navigation-bar-background-color);
+      block-size: anchor-size(block);
+      inset-inline-end: anchor(right);
+      inset-inline-start: anchor(left);
+    }
+  }
+
   @media #{$rhc-nav-bar-mobile} {
-    // gesloten: alleen persistente items (zoals de identity) en de menuknop in de balk
+    // gesloten: alleen persistente items en de menuknop
     &:not(:popover-open) > .rhc-nav-bar__list > li:not(.rhc-nav-bar__item--persistent) {
       display: none;
     }
 
     &:popover-open {
-      // de bovenste band in de kleur van de balk, de rest in de kleur van het menu
       align-items: stretch;
       background: var(--rhc-navigation-bar-mega-menu-background-color);
       block-size: fit-content;
@@ -75,14 +96,25 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
       max-block-size: stretch;
       overflow-y: auto;
       padding-block-end: var(--rhc-space-2xl);
-      padding-inline: var(--rhc-navigation-bar-menu-padding-inline, var(--rhc-space-lg));
+      padding-inline: $rhc-nav-bar-menu-padding-inline;
       row-gap: var(--rhc-space-2xl);
-
-      .rhc-nav-bar__link {
-        inline-size: 100%;
-        padding-inline: 0;
-      }
     }
+  }
+}
+
+// LIJST --
+@mixin rhc-nav-bar__list {
+  block-size: 100%;
+  display: flex;
+  list-style: none;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+
+  @media #{$rhc-nav-bar-mobile} {
+    flex-direction: column;
+    row-gap: var(--rhc-space-lg);
   }
 }
 
@@ -92,6 +124,92 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
   }
 }
 
+// LINK --
+@mixin rhc-nav-bar__link {
+  --nl-link-text-decoration-line: none;
+  --nl-link-color: var(--rhc-navigation-bar-link-color);
+  --utrecht-link-visited-color: var(--rhc-navigation-bar-link-color);
+
+  background-color: var(--rhc-navigation-bar-link-background-color);
+  color: var(--rhc-navigation-bar-link-color);
+  column-gap: var(--rhc-link-column-gap, inherit);
+  font-size: var(--rhc-navigation-bar-item-font-size);
+  font-weight: var(--rhc-navigation-bar-item-font-weight);
+  line-height: var(--rhc-navigation-bar-item-line-height);
+  min-block-size: var(--rhc-navigation-bar-block-size);
+  padding-inline-end: var(--rhc-navigation-bar-item-padding-inline-end);
+  padding-inline-start: var(--rhc-navigation-bar-item-padding-inline-start);
+  text-decoration: none;
+
+  // wint van de `align-items: baseline` van de Link
+  &.rhc-link.nl-link:any-link {
+    align-items: center;
+    block-size: 100%;
+  }
+
+  &:active {
+    background-color: var(--rhc-navigation-bar-link-active-background-color);
+    border-color: var(--rhc-navigation-bar-link-active-border-color);
+    color: var(--rhc-navigation-bar-link-active-color);
+  }
+
+  &:hover {
+    @include link-hover;
+
+    text-decoration: none;
+  }
+
+  &:focus {
+    background-color: var(--rhc-navigation-bar-link-focus-background-color);
+    color: var(--rhc-navigation-bar-link-focus-color);
+  }
+
+  &[aria-current="page"] {
+    @media #{$rhc-nav-bar-desktop} {
+      @include link-indicator(var(--rhc-navigation-bar-link-current-border-color));
+
+      color: var(--rhc-navigation-bar-link-current-color);
+      font-weight: var(--rhc-navigation-bar-link-current-font-weight);
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .utrecht-icon {
+    align-self: center;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    inline-size: 20px;
+    line-height: 1.25em;
+
+    @media #{$rhc-nav-bar-desktop} {
+      block-size: 24px;
+      inline-size: 24px;
+    }
+  }
+
+  @media #{$rhc-nav-bar-mobile} {
+    .rhc-nav-bar__list & {
+      font-size: var(--rhc-text-font-size-md);
+    }
+
+    // alleen de links in de lijsten, niet de menuknop
+    .rhc-nav-bar__menu:popover-open .rhc-nav-bar__list & {
+      inline-size: 100%;
+      padding-inline: 0;
+
+      &:hover {
+        background-color: transparent;
+        box-shadow: none;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// MENUKNOP --
 @mixin rhc-nav-bar__toggle {
   margin-inline-start: auto;
 
@@ -107,9 +225,8 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
     .rhc-nav-bar__menu:popover-open > & {
       background-color: var(--rhc-navigation-bar-link-hover-background-color);
       block-size: var(--rhc-navigation-bar-block-size);
-      inline-size: auto;
       inset-block-start: 0;
-      inset-inline-end: var(--rhc-navigation-bar-menu-padding-inline, var(--rhc-space-lg));
+      inset-inline-end: $rhc-nav-bar-menu-padding-inline;
       padding-inline: var(--rhc-navigation-bar-item-padding-inline-start);
       position: absolute;
     }
@@ -152,8 +269,7 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
 }
 
 // MEGAMENU --
-// De open-state komt uit `:popover-open` van het paneel, zodat trigger en paneel
-// los van elkaar binnen het item geplaatst kunnen worden.
+// De open-state komt uit `:popover-open` van het paneel.
 @mixin rhc-nav-bar__megamenu-item {
   &:not(:has(.rhc-nav-bar__megamenu-panel:popover-open)) .rhc-nav-bar__megamenu-icon-close,
   &:has(.rhc-nav-bar__megamenu-panel:popover-open) .rhc-nav-bar__megamenu-icon-open {
@@ -161,10 +277,7 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
   }
 
   &:has(.rhc-nav-bar__megamenu-panel:popover-open) .rhc-nav-bar__megamenu-trigger {
-    background-color: var(--rhc-navigation-bar-link-hover-background-color);
-    box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0
-      var(--rhc-navigation-bar-link-hover-border-color);
-    color: var(--rhc-navigation-bar-link-hover-color);
+    @include link-hover;
   }
 }
 
@@ -175,30 +288,25 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
 }
 
 @mixin rhc-nav-bar__megamenu-panel {
-  background: none;
-  block-size: fit-content;
-  border: 0;
-  inline-size: auto;
-  inset-block-end: 0;
-  inset-block-start: anchor(bottom);
-  inset-inline-end: anchor(right);
-  inset-inline-start: anchor(left);
-  margin-block: 0;
-  margin-inline: 0;
-  max-block-size: stretch;
-  overflow-y: auto;
-  padding-block: 0;
-  padding-inline: 0;
-  position-anchor: var(--rhc-nav-bar-anchor);
+  @include popover-reset;
 
+  @media #{$rhc-nav-bar-desktop} {
+    block-size: fit-content;
+    inline-size: auto;
+    inset-block-end: 0;
+    inset-block-start: anchor(bottom);
+    inset-inline-end: anchor(right);
+    inset-inline-start: anchor(left);
+    max-block-size: stretch;
+    overflow-y: auto;
+    position-anchor: var(--rhc-nav-bar-anchor);
+  }
+
+  // altijd zichtbaar, ook als de popover niet open is
   @media #{$rhc-nav-bar-mobile} {
     @include popover-in-flow;
 
     display: block;
-
-    .rhc-nav-bar__megamenu {
-      padding-inline: 0;
-    }
   }
 }
 
@@ -210,8 +318,6 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
   gap: var(--rhc-space-2xl);
   padding-block-end: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block-end);
   padding-block-start: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block-start);
-  padding-inline-end: var(--rhc-navigation-bar-mega-menu-vi-small-padding-inline-end);
-  padding-inline-start: var(--rhc-navigation-bar-mega-menu-vi-small-padding-inline-start);
 
   // positioneringscontext voor de sluitknop, die rechtsboven in de content hoort.
   position: relative;
@@ -224,8 +330,10 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
   }
 }
 
-@mixin rhc-nav-bar__megamenu__btn-close {
-  display: none;
+@mixin rhc-nav-bar__megamenu-close {
+  @media #{$rhc-nav-bar-mobile} {
+    display: none;
+  }
 
   @media #{$rhc-nav-bar-desktop} {
     display: flex;
@@ -250,107 +358,4 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
   --nl-paragraph-line-height: var(--rhc-space-5xl);
 
   font-style: italic;
-}
-
-// LIST --
-@mixin rhc-nav-bar__list {
-  block-size: 100%;
-  display: flex;
-  list-style: none;
-  margin-block: 0;
-  margin-inline: 0;
-  padding-block: 0;
-  padding-inline: 0;
-
-  @media #{$rhc-nav-bar-mobile} {
-    flex-direction: column;
-    row-gap: var(--rhc-space-lg);
-
-    .rhc-nav-bar__link {
-      font-size: var(--rhc-text-font-size-md);
-    }
-  }
-}
-
-@mixin rhc-nav-bar__link {
-  --nl-link-text-decoration-line: none;
-  --nl-link-color: var(--rhc-navigation-bar-link-color);
-  --utrecht-link-visited-color: var(--rhc-navigation-bar-link-color);
-
-  background-color: var(--rhc-navigation-bar-link-background-color);
-  color: var(--rhc-navigation-bar-link-color);
-  column-gap: var(--rhc-link-column-gap, inherit);
-  font-size: var(--rhc-navigation-bar-item-font-size);
-  font-weight: var(--rhc-navigation-bar-item-font-weight);
-  line-height: var(--rhc-navigation-bar-item-line-height);
-  min-block-size: var(--rhc-navigation-bar-block-size);
-  padding-inline-end: var(--rhc-navigation-bar-item-padding-inline-end);
-  padding-inline-start: var(--rhc-navigation-bar-item-padding-inline-start);
-  text-decoration: none;
-
-  &.rhc-link.nl-link:any-link {
-    align-items: center;
-    block-size: 100%;
-  }
-
-  &:active {
-    background-color: var(--rhc-navigation-bar-link-active-background-color);
-    border-color: var(--rhc-navigation-bar-link-active-border-color);
-    color: var(--rhc-navigation-bar-link-active-color);
-  }
-
-  &:hover,
-  &[aria-expanded="true"] {
-    background-color: var(--rhc-navigation-bar-link-hover-background-color);
-    box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0
-      var(--rhc-navigation-bar-link-hover-border-color);
-    color: var(--rhc-navigation-bar-link-hover-color);
-    text-decoration: none;
-  }
-
-  &:focus {
-    background-color: var(--rhc-navigation-bar-link-focus-background-color);
-    color: var(--rhc-navigation-bar-link-focus-color);
-  }
-
-  &[aria-expanded="true"]:focus {
-    background-color: var(--rhc-navigation-bar-link-hover-background-color);
-  }
-
-  &[aria-current="page"] {
-    @media #{$rhc-nav-bar-desktop} {
-      box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0
-        var(--rhc-navigation-bar-link-current-border-color);
-      color: var(--rhc-navigation-bar-link-current-color);
-      font-weight: var(--rhc-navigation-bar-link-current-font-weight);
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-
-  .utrecht-icon {
-    align-self: center;
-    aspect-ratio: 1 / 1;
-    box-sizing: border-box;
-    inline-size: 20px;
-    line-height: 1.25em;
-
-    @media #{$rhc-nav-bar-desktop} {
-      block-size: 24px;
-      inline-size: 24px;
-    }
-  }
-
-  @media #{$rhc-nav-bar-mobile} {
-    align-items: center !important;
-
-    // Mobiel: onderstreping i.p.v. achtergrond, alleen in het open menu.
-    .rhc-nav-bar__menu:popover-open &:hover:not([aria-expanded="true"]) {
-      background-color: transparent;
-      box-shadow: none;
-      text-decoration: underline;
-    }
-  }
 }

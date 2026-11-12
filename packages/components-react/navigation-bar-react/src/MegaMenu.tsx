@@ -80,7 +80,7 @@ export const NavBarMegaMenuClose = ({ target, className, children, ...restProps 
   <Button
     purpose="subtle"
     {...restProps}
-    className={clsx('rhc-nav-bar__megamenu__btn-close', className)}
+    className={clsx('rhc-nav-bar__megamenu-close', className)}
     popoverTarget={target}
     popoverTargetAction="hide"
   >
