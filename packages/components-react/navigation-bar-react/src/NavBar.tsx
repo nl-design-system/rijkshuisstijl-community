@@ -17,15 +17,7 @@ import {
   Ref,
   useId,
 } from 'react';
-import { NavBarMegaMenu } from './MegaMenu';
-import { NavBarIdentity } from './NavBarIdentity';
-
-export interface NavBarProps extends ComponentPropsWithRef<'nav'> {
-  /** Toegankelijke naam van de menuknop op smalle schermen. */
-  toggleLabel?: string;
-}
-
-export type NavBarListProps = ComponentPropsWithRef<'ul'>;
+import { hidePopoverOnFocusOut } from './hidePopoverOnFocusOut';
 
 export interface NavBarLinkProps {
   className?: string;
@@ -46,7 +38,7 @@ export interface NavBarItemProps extends NavBarLinkProps, HTMLAttributes<HTMLLIE
   persistent?: boolean;
 }
 
-const Item = ({
+export const NavBarItem = ({
   ref,
   children,
   className,
@@ -79,28 +71,34 @@ const Item = ({
   </li>
 );
 
-Item.displayName = 'NavBar.Item';
+NavBarItem.displayName = 'NavBarItem';
+
+export type NavBarListProps = ComponentPropsWithRef<'ul'>;
 
 /** Items aan het begin van de balk. */
-const Start = ({ className, ...restProps }: NavBarListProps) => (
+export const NavBarStart = ({ className, ...restProps }: NavBarListProps) => (
   <ul {...restProps} className={clsx('rhc-nav-bar__list', 'rhc-nav-bar__list--start', className)} />
 );
 
-Start.displayName = 'NavBar.Start';
+NavBarStart.displayName = 'NavBarStart';
 
 /** Items aan het einde van de balk. */
-const End = ({ className, ...restProps }: NavBarListProps) => (
+export const NavBarEnd = ({ className, ...restProps }: NavBarListProps) => (
   <ul {...restProps} className={clsx('rhc-nav-bar__list', 'rhc-nav-bar__list--end', className)} />
 );
 
-End.displayName = 'NavBar.End';
+NavBarEnd.displayName = 'NavBarEnd';
+
+export interface NavBarProps extends ComponentPropsWithRef<'nav'> {
+  /** Toegankelijke naam van de menuknop op smalle schermen. */
+  toggleLabel?: string;
+}
 
 /**
- * De balk zelf is een popover. Gesloten wordt hij via CSS gewoon in de balk getoond;
- * op smalle schermen opent de menuknop hem als paneel in de top layer. Escape,
- * klikken buiten het paneel en focusherstel komen van de native Popover API.
+ * Losse named exports (`NavBar`, `NavBarStart`, `NavBarItem`, ...) werken zowel in
+ * client components als in React Server Components.
  */
-const Root = ({
+export const NavBar = ({
   ref,
   children,
   className,
@@ -120,24 +118,17 @@ const Root = ({
       style={{ '--rhc-nav-bar-anchor': `--${id}`, ...style } as CSSProperties}
       {...restProps}
     >
-      <div className="rhc-nav-bar__menu" id={menuId} popover="auto">
-        {children}
+      <div className="rhc-nav-bar__menu" id={menuId} popover="auto" onBlur={hidePopoverOnFocusOut}>
+        {/* Eerst in de DOM, zodat Tab na het openen de items in gaat; CSS zet hem achteraan. */}
         <LinkButton className="rhc-nav-bar__toggle rhc-nav-bar__link" popoverTarget={menuId}>
           <Icon className="rhc-nav-bar__toggle-icon-open" icon="menu" />
           <Icon className="rhc-nav-bar__toggle-icon-close" icon="kruis" />
-          <span className="rhc-visually-hidden">{toggleLabel}</span>
+          <span className="rhc-nav-bar__toggle-label">{toggleLabel}</span>
         </LinkButton>
+        {children}
       </div>
     </nav>
   );
 };
 
-Root.displayName = 'NavBar';
-
-export const NavBar = Object.assign(Root, {
-  Start,
-  End,
-  Item,
-  Identity: NavBarIdentity,
-  MegaMenu: NavBarMegaMenu,
-});
+NavBar.displayName = 'NavBar';

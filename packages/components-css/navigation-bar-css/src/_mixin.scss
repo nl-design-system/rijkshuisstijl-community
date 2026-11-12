@@ -73,7 +73,7 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
       inset-block-end: 0;
       inset-inline: 0;
       max-block-size: stretch;
-      overflow-block: auto;
+      overflow-y: auto;
       padding-block-end: var(--rhc-space-2xl);
       padding-inline: var(--rhc-navigation-bar-menu-padding-inline, var(--rhc-space-lg));
       row-gap: var(--rhc-space-2xl);
@@ -94,6 +94,9 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
 
 @mixin rhc-nav-bar__toggle {
   margin-inline-start: auto;
+
+  // staat als eerste in de DOM (focusvolgorde in het open menu), maar achteraan in de balk
+  order: 1;
 
   .rhc-nav-bar__menu:not(:popover-open) > & > .rhc-nav-bar__toggle-icon-close,
   .rhc-nav-bar__menu:popover-open > & > .rhc-nav-bar__toggle-icon-open {
@@ -183,7 +186,7 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
   margin-block: 0;
   margin-inline: 0;
   max-block-size: stretch;
-  overflow-block: auto;
+  overflow-y: auto;
   padding-block: 0;
   padding-inline: 0;
   position-anchor: var(--rhc-nav-bar-anchor);
@@ -344,7 +347,7 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
     align-items: center !important;
 
     // Mobiel: onderstreping i.p.v. achtergrond, alleen in het open menu.
-    .rhc-nav-bar__list &:hover:not([aria-expanded="true"]) {
+    .rhc-nav-bar__menu:popover-open &:hover:not([aria-expanded="true"]) {
       background-color: transparent;
       box-shadow: none;
       text-decoration: underline;

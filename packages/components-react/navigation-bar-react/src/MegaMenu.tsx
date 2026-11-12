@@ -9,23 +9,27 @@ import { LinkButton, LinkButtonProps } from '@rijkshuisstijl-community/link-butt
 import { Paragraph, ParagraphProps } from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 import { Separator, SeparatorProps } from '@rijkshuisstijl-community/separator-react/no-side-effects';
 import clsx from 'clsx';
-import { ComponentPropsWithRef, CSSProperties } from 'react';
+import { ComponentPropsWithRef, FocusEvent, ReactNode } from 'react';
+import { hidePopoverOnFocusOut } from './hidePopoverOnFocusOut';
+
+/** `Omit` per lid van een union, zodat een discriminated union intact blijft. */
+type DistributiveOmit<T, K extends PropertyKey> = T extends unknown ? Omit<T, K> : never;
 
 export type NavBarMegaMenuProps = ComponentPropsWithRef<'li'>;
 
-const Root = ({ className, ...restProps }: NavBarMegaMenuProps) => (
+export const NavBarMegaMenu = ({ className, ...restProps }: NavBarMegaMenuProps) => (
   <li {...restProps} className={clsx('rhc-nav-bar__item', 'rhc-nav-bar__megamenu-item', className)} />
 );
 
-Root.displayName = 'NavBar.MegaMenu';
+NavBarMegaMenu.displayName = 'NavBarMegaMenu';
 
 export interface NavBarMegaMenuTriggerProps extends Omit<LinkButtonProps, 'popoverTarget'> {
-  /** De `id` van het `NavBar.MegaMenu.Panel` dat deze knop opent. */
+  /** De `id` van het `NavBarMegaMenuPanel` dat deze knop opent. */
   target: string;
 }
 
 /** De knop die het paneel opent en sluit. Het icoon wisselt via CSS mee met de open-state. */
-const Trigger = ({ target, className, children, ...restProps }: NavBarMegaMenuTriggerProps) => (
+export const NavBarMegaMenuTrigger = ({ target, className, children, ...restProps }: NavBarMegaMenuTriggerProps) => (
   <LinkButton
     {...restProps}
     className={clsx('rhc-nav-bar__link', 'rhc-nav-bar__megamenu-trigger', className)}
@@ -37,35 +41,42 @@ const Trigger = ({ target, className, children, ...restProps }: NavBarMegaMenuTr
   </LinkButton>
 );
 
-Trigger.displayName = 'NavBar.MegaMenu.Trigger';
+NavBarMegaMenuTrigger.displayName = 'NavBarMegaMenuTrigger';
 
 export interface NavBarMegaMenuPanelProps extends ComponentPropsWithRef<'div'> {
   /** Uniek id, waarnaar `target` van de Trigger en Close verwijst. */
   id: string;
 }
 
-/** Het uitklappaneel met de inhoud van het megamenu. */
-const Panel = ({ id, className, style, children, ...restProps }: NavBarMegaMenuPanelProps) => (
+/** Het uitklappaneel met de inhoud van het megamenu. Sluit als de focus het paneel verlaat. */
+export const NavBarMegaMenuPanel = ({ id, className, children, onBlur, ...restProps }: NavBarMegaMenuPanelProps) => (
   <div
     {...restProps}
     className={clsx('rhc-nav-bar__megamenu-panel', className)}
     id={id}
     popover="auto"
-    style={{ '--rhc-nav-bar-megamenu-language-nav-anchor': `--${id}-language-nav`, ...style } as CSSProperties}
+    onBlur={(event: FocusEvent<HTMLDivElement>) => {
+      onBlur?.(event);
+      hidePopoverOnFocusOut(event);
+    }}
   >
     <div className="rhc-nav-bar__megamenu">{children}</div>
   </div>
 );
 
-Panel.displayName = 'NavBar.MegaMenu.Panel';
+NavBarMegaMenuPanel.displayName = 'NavBarMegaMenuPanel';
 
-export type NavBarMegaMenuCloseProps = Omit<ButtonProps, 'popoverTarget' | 'popoverTargetAction'> & {
-  /** De `id` van het `NavBar.MegaMenu.Panel` dat deze knop sluit. */
+/** De Close heeft altijd children (standaard icoon + "Sluiten"), dus geen `label`. */
+export type NavBarMegaMenuCloseProps = DistributiveOmit<
+  Exclude<ButtonProps, { label: ReactNode }>,
+  'label' | 'popoverTarget' | 'popoverTargetAction'
+> & {
+  /** De `id` van het `NavBarMegaMenuPanel` dat deze knop sluit. */
   target: string;
 };
 
 /** Sluitknop voor in het paneel. Alleen zichtbaar op brede schermen. */
-const Close = ({ target, className, children, ...restProps }: NavBarMegaMenuCloseProps) => (
+export const NavBarMegaMenuClose = ({ target, className, children, ...restProps }: NavBarMegaMenuCloseProps) => (
   <Button
     purpose="subtle"
     {...restProps}
@@ -82,30 +93,22 @@ const Close = ({ target, className, children, ...restProps }: NavBarMegaMenuClos
   </Button>
 );
 
-Close.displayName = 'NavBar.MegaMenu.Close';
+NavBarMegaMenuClose.displayName = 'NavBarMegaMenuClose';
 
 export type NavBarMegaMenuTaglineProps = ParagraphProps;
 
 /** Optionele introductietekst boven de inhoud van het megamenu. */
-const Tagline = ({ className, ...restProps }: NavBarMegaMenuTaglineProps) => (
+export const NavBarMegaMenuTagline = ({ className, ...restProps }: NavBarMegaMenuTaglineProps) => (
   <Paragraph {...restProps} className={clsx('rhc-nav-bar__megamenu-tagline', className)} />
 );
 
-Tagline.displayName = 'NavBar.MegaMenu.Tagline';
+NavBarMegaMenuTagline.displayName = 'NavBarMegaMenuTagline';
 
 export type NavBarMegaMenuSeparatorProps = SeparatorProps;
 
 /** Scheidingslijn, bijvoorbeeld tussen de tagline en de rest van de inhoud. */
-const MegaMenuSeparator = ({ className, ...restProps }: NavBarMegaMenuSeparatorProps) => (
+export const NavBarMegaMenuSeparator = ({ className, ...restProps }: NavBarMegaMenuSeparatorProps) => (
   <Separator {...restProps} className={clsx('rhc-nav-bar__megamenu-separator', className)} />
 );
 
-MegaMenuSeparator.displayName = 'NavBar.MegaMenu.Separator';
-
-export const NavBarMegaMenu = Object.assign(Root, {
-  Trigger,
-  Panel,
-  Close,
-  Tagline,
-  Separator: MegaMenuSeparator,
-});
+NavBarMegaMenuSeparator.displayName = 'NavBarMegaMenuSeparator';

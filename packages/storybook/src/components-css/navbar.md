@@ -9,10 +9,10 @@ De Navigation Bar bestaat uit de volgende onderdelen:
 - **Menu** (`rhc-nav-bar__menu`): een popover die gesloten gewoon als balk wordt getoond. Op smalle schermen opent de menuknop hem als paneel over de pagina.
 - **Lijsten** (`rhc-nav-bar__list`): een lijst aan het begin en een lijst aan het einde (`rhc-nav-bar__list--end`) van de balk.
 - **Identity** (`rhc-nav-bar-identity`): de naam of titel van de site, als item in een lijst.
-- **Menuknop** (`rhc-nav-bar__toggle`): alleen zichtbaar op smalle schermen.
+- **Menuknop** (`rhc-nav-bar__toggle`): alleen zichtbaar op smalle schermen. Zet hem als eerste in `rhc-nav-bar__menu`, zodat Tab na het openen de items in gaat; CSS toont hem achteraan in de balk.
 - **Link met huidige pagina**: een link met `aria-current="page"` krijgt een eigen kleur en onderstreping.
 
-Op smalle schermen staan alleen items met `rhc-nav-bar__item--persistent` en de menuknop in de balk. De andere items staan in het menu. Openen, sluiten met `Escape` en klikken buiten het menu regelt de native Popover API, zonder JavaScript.
+Op smalle schermen staan alleen items met `rhc-nav-bar__item--persistent` en de menuknop in de balk. De andere items staan in het menu. Openen, sluiten met `Escape` en klikken buiten het menu regelt de native Popover API, zonder JavaScript. Alleen het sluiten als de toetsenbordfocus het menu verlaat vraagt een klein script: roep bij `focusout` op het menu `hidePopover()` aan als het nieuwe focusdoel buiten het menu ligt. De React-component doet dit al.
 
 Geef de balk een unieke anchor-naam via `--rhc-nav-bar-anchor`. Het menu en het megamenu positioneren zich daarmee ten opzichte van de juiste balk.
 
@@ -23,6 +23,11 @@ Geef de balk een unieke anchor-naam via `--rhc-nav-bar-anchor`. Het menu en het 
 ```html
 <nav class="rhc-nav-bar" aria-label="Hoofdnavigatie" style="--rhc-nav-bar-anchor: --hoofdnavigatie">
   <div class="rhc-nav-bar__menu" id="hoofdnavigatie-menu" popover="auto">
+    <button class="rhc-nav-bar__toggle rhc-nav-bar__link" popovertarget="hoofdnavigatie-menu">
+      <span class="utrecht-icon rhc-nav-bar__toggle-icon-open"><!-- menu-icoon --></span>
+      <span class="utrecht-icon rhc-nav-bar__toggle-icon-close"><!-- kruis-icoon --></span>
+      <span class="rhc-nav-bar__toggle-label">Menu</span>
+    </button>
     <ul class="rhc-nav-bar__list rhc-nav-bar__list--start">
       <li class="rhc-nav-bar__item">
         <a class="rhc-nav-bar__link" href="/">Home</a>
@@ -32,11 +37,6 @@ Geef de balk een unieke anchor-naam via `--rhc-nav-bar-anchor`. Het menu en het 
       </li>
     </ul>
     <ul class="rhc-nav-bar__list rhc-nav-bar__list--end"></ul>
-    <button class="rhc-nav-bar__toggle rhc-nav-bar__link" popovertarget="hoofdnavigatie-menu">
-      <span class="utrecht-icon rhc-nav-bar__toggle-icon-open"><!-- menu-icoon --></span>
-      <span class="utrecht-icon rhc-nav-bar__toggle-icon-close"><!-- kruis-icoon --></span>
-      <span class="rhc-visually-hidden">Menu</span>
-    </button>
   </div>
 </nav>
 ```
@@ -46,6 +46,11 @@ Geef de balk een unieke anchor-naam via `--rhc-nav-bar-anchor`. Het menu en het 
 ```html
 <nav class="rhc-nav-bar" aria-label="Dataregister" style="--rhc-nav-bar-anchor: --dataregister">
   <div class="rhc-nav-bar__menu" id="dataregister-menu" popover="auto">
+    <button class="rhc-nav-bar__toggle rhc-nav-bar__link" popovertarget="dataregister-menu">
+      <span class="utrecht-icon rhc-nav-bar__toggle-icon-open"><!-- menu-icoon --></span>
+      <span class="utrecht-icon rhc-nav-bar__toggle-icon-close"><!-- kruis-icoon --></span>
+      <span class="rhc-nav-bar__toggle-label">Menu</span>
+    </button>
     <ul class="rhc-nav-bar__list rhc-nav-bar__list--start">
       <li class="rhc-nav-bar__item rhc-nav-bar__item--persistent rhc-nav-bar-identity">
         <a class="rhc-link rhc-nav-bar-identity__link" href="/">Dataregister</a>
@@ -59,11 +64,6 @@ Geef de balk een unieke anchor-naam via `--rhc-nav-bar-anchor`. Het menu en het 
         <a class="rhc-nav-bar__link" href="/inloggen">Inloggen</a>
       </li>
     </ul>
-    <button class="rhc-nav-bar__toggle rhc-nav-bar__link" popovertarget="dataregister-menu">
-      <span class="utrecht-icon rhc-nav-bar__toggle-icon-open"><!-- menu-icoon --></span>
-      <span class="utrecht-icon rhc-nav-bar__toggle-icon-close"><!-- kruis-icoon --></span>
-      <span class="rhc-visually-hidden">Menu</span>
-    </button>
   </div>
 </nav>
 ```

@@ -25,13 +25,13 @@ import { Logo, NavBar, PageHeader } from '@rijkshuisstijl-community/components-r
     <div className="rhc-page-section__content">
       <Logo organisation="Organisatie" subtitle="Wat wij doen" />
       <NavBar aria-label="Dataregister">
-        <NavBar.Start>
-          <NavBar.Identity primary href="/">
+        <NavBarStart>
+          <NavBarIdentity primary href="/">
             Dataregister
-          </NavBar.Identity>
-          <NavBar.Item href="/" id="home" label="Home" />
-          <NavBar.Item href="/" id="contact" label="Contact" />
-        </NavBar.Start>
+          </NavBarIdentity>
+          <NavBarItem href="/" id="home" label="Home" />
+          <NavBarItem href="/" id="contact" label="Contact" />
+        </NavBarStart>
       </NavBar>
     </div>
   </div>
@@ -60,15 +60,15 @@ import {
         <Icon className="dutch-map" icon="nederland-map" />
       </Logo>
       <NavBar aria-label="Overheid.nl">
-        <NavBar.Start>
-          <NavBar.Identity primary href="/">
+        <NavBarStart>
+          <NavBarIdentity primary href="/">
             Overheid.nl
-          </NavBar.Identity>
-          <NavBar.MegaMenu>
-            <NavBar.MegaMenu.Trigger target="onderwerpen">Kies een onderwerp of dienst</NavBar.MegaMenu.Trigger>
-            <NavBar.MegaMenu.Panel id="onderwerpen">
-              <NavBar.MegaMenu.Tagline>Ingang naar informatie en diensten van alle overheden</NavBar.MegaMenu.Tagline>
-              <NavBar.MegaMenu.Separator />
+          </NavBarIdentity>
+          <NavBarMegaMenu>
+            <NavBarMegaMenuTrigger target="onderwerpen">Kies een onderwerp of dienst</NavBarMegaMenuTrigger>
+            <NavBarMegaMenuPanel id="onderwerpen">
+              <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
+              <NavBarMegaMenuSeparator />
               <div className="rhc-grid">
                 <div className="rhc-grid__cell rhc-grid__cell-d-3">
                   <Heading appearanceLevel={5} level={3}>
@@ -80,17 +80,17 @@ import {
                 </div>
               </div>
 
-              <NavBar.MegaMenu.Close target="onderwerpen" />
-            </NavBar.MegaMenu.Panel>
-          </NavBar.MegaMenu>
-        </NavBar.Start>
+              <NavBarMegaMenuClose target="onderwerpen" />
+            </NavBarMegaMenuPanel>
+          </NavBarMegaMenu>
+        </NavBarStart>
       </NavBar>
       <NavBar aria-label="Dataregister">
-        <NavBar.Start>
-          <NavBar.Identity href="/">Dataregister</NavBar.Identity>
-          <NavBar.Item href="/" id="data" label="Data" />
-          <NavBar.Item href="/" id="impact" label="Impact" />
-        </NavBar.Start>
+        <NavBarStart>
+          <NavBarIdentity href="/">Dataregister</NavBarIdentity>
+          <NavBarItem href="/" id="data" label="Data" />
+          <NavBarItem href="/" id="impact" label="Impact" />
+        </NavBarStart>
       </NavBar>
     </div>
   </div>
