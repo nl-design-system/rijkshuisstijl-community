@@ -11,6 +11,7 @@ import {
   PageHeader,
   SkipLink,
 } from '@rijkshuisstijl-community/components-react';
+import './header-overheid-nl.css';
 
 const languages = {
   nl: { href: '#', lang: 'nl', languageName: 'Nederlands' },
@@ -36,14 +37,14 @@ const endItemsPrimary = (
 
 const endItemsSecondary = [
   {
-    className: 'rhc-nav-bar__item--button-on-mobile rhc-nav-bar__item--button-on-mobile--secondary',
+    className: 'overheid-nl-header__button-item overheid-nl-header__button-item--secondary',
     href: '/',
     id: 'end-first-link',
     label: 'Zoeken',
     icon: <Icon icon="zoek" />,
   },
   {
-    className: 'rhc-nav-bar__item--button-on-mobile rhc-nav-bar__item--button-on-mobile--primary',
+    className: 'overheid-nl-header__button-item overheid-nl-header__button-item--primary',
     href: '/',
     id: 'end-second-link',
     label: 'Inloggen',
@@ -120,12 +121,12 @@ const megamenu = (
     <div className="rhc-grid">
       {megamenuColumns.map(({ id, heading, items }) => (
         <div className="rhc-grid__cell rhc-grid__cell-d-3" key={id}>
-          <Heading appearanceLevel={5} className="rhc-nav-bar__megamenu-column-heading" level={3}>
+          <Heading appearanceLevel={5} className="overheid-nl-header__column-heading" level={3}>
             {heading}
           </Heading>
-          <LinkList className="rhc-nav-bar__megamenu__link-list">
+          <LinkList className="overheid-nl-header__link-list">
             {items.map((item) => (
-              <LinkListLink className="rhc-nav-bar__megamenu-column-link" href={item.href} key={item.id}>
+              <LinkListLink className="overheid-nl-header__column-link" href={item.href} key={item.id}>
                 {item.label}
               </LinkListLink>
             ))}
@@ -137,7 +138,7 @@ const megamenu = (
 );
 
 export const SharedHeaderOverheidNl = () => (
-  <PageHeader>
+  <PageHeader className="overheid-nl-header">
     <div className="rhc-page-section">
       <div className="rhc-page-section__content">
         <Logo organisation="Organisatie" subtitle="Wat wij doen">

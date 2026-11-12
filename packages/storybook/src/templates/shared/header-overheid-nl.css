@@ -1,0 +1,89 @@
+/* stylelint-disable selector-class-pattern */
+
+/**
+ * Styling voor de inhoud van de Overheid.nl-header in dit voorbeeld.
+ * De NavBar regelt alleen de layout, het hamburgermenu en het megamenu-paneel;
+ * hoe de inhoud daarin eruitziet, bepaalt de gebruiker zelf (zoals hier).
+ */
+
+.overheid-nl-header .rhc-language-navigation__trigger {
+  color: var(--rhc-navigation-bar-color);
+}
+
+/* Megamenu: kolommen met een kop en een lijst links */
+.overheid-nl-header__column-heading,
+.overheid-nl-header__column-link .utrecht-link-list__link {
+  align-content: center;
+  display: block;
+  min-block-size: var(--rhc-size-pointer-target);
+}
+
+.overheid-nl-header__link-list {
+  row-gap: 0;
+}
+
+@media (width < 768px) {
+  .overheid-nl-header__column-link .utrecht-link-list__link {
+    inline-size: 100%;
+  }
+
+  /*
+   * Een absoluut gepositioneerde dropdown telt niet mee voor de hoogte van het menu,
+   * maar wel voor de scrollbare overflow: dan verschijnt er een scrollbar terwijl er
+   * onder het menu nog ruimte is. In de flow duwt de lijst de rest naar beneden.
+   */
+  .overheid-nl-header .rhc-nav-bar__menu:popover-open .rhc-language-navigation__list {
+    position: static;
+  }
+
+  /* Items die in het mobiele menu als knop worden getoond */
+  .overheid-nl-header .rhc-nav-bar__list:has(.overheid-nl-header__button-item) {
+    row-gap: var(--rhc-space-2xl);
+  }
+
+  .overheid-nl-header__button-item {
+    display: flex;
+  }
+
+  .overheid-nl-header__button-item .rhc-nav-bar__link {
+    --nl-link-text-decoration-line: none;
+
+    align-items: center;
+    border-radius: var(--utrecht-button-border-radius);
+    display: flex;
+    font-weight: var(--rhc-text-font-weight-bold);
+    inline-size: 100%;
+    justify-content: center;
+    min-block-size: var(--rhc-size-pointer-target);
+    text-decoration: none;
+  }
+
+  .overheid-nl-header__button-item .rhc-nav-bar__link:hover {
+    text-decoration: none;
+  }
+
+  .overheid-nl-header__button-item--secondary > .rhc-nav-bar__link {
+    /* Wit volgens ontwerp; het Secondary Button-token is transparant en toont hier de menu-achtergrond. */
+    background-color: var(--rhc-color-wit);
+    border: var(--rhc-border-width-md) solid var(--utrecht-button-secondary-action-border-color);
+    color: var(--utrecht-button-secondary-action-color, var(--rhc-navigation-bar-link-hover-color));
+  }
+
+  .overheid-nl-header__button-item--primary > .rhc-nav-bar__link {
+    background-color: var(--utrecht-button-primary-action-background-color, #0058b8);
+    border: var(--rhc-border-width-md) solid transparent;
+    color: var(--utrecht-button-primary-action-color, var(--rhc-color-wit));
+  }
+
+  .overheid-nl-header__button-item--secondary > .rhc-nav-bar__link:hover {
+    background-color: var(--utrecht-button-secondary-action-hover-background-color);
+    border-color: var(--utrecht-button-secondary-action-border-color);
+    color: var(--utrecht-button-secondary-action-hover-color);
+  }
+
+  .overheid-nl-header__button-item--primary > .rhc-nav-bar__link:hover {
+    background-color: var(--utrecht-button-primary-action-hover-background-color);
+    border-color: var(--utrecht-button-primary-action-border-color);
+    color: var(--utrecht-button-primary-action-hover-color);
+  }
+}

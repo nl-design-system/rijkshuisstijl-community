@@ -126,16 +126,12 @@ export const WithMegaMenu: Story = {
               <NavBar.MegaMenu.Separator />
               <div className="rhc-grid">
                 <div className="rhc-grid__cell rhc-grid__cell-d-3">
-                  <Heading appearanceLevel={5} className="rhc-nav-bar__megamenu-column-heading" level={3}>
+                  <Heading appearanceLevel={5} level={3}>
                     Diensten van de overheid
                   </Heading>
-                  <LinkList className="rhc-nav-bar__megamenu__link-list">
-                    <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
-                      Dienstenoverzicht
-                    </LinkListLink>
-                    <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
-                      Levensgebeurtenissen
-                    </LinkListLink>
+                  <LinkList>
+                    <LinkListLink href="/">Dienstenoverzicht</LinkListLink>
+                    <LinkListLink href="/">Levensgebeurtenissen</LinkListLink>
                   </LinkList>
                 </div>
               </div>

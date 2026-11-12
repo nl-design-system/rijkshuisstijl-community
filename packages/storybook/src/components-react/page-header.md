@@ -71,13 +71,11 @@ import {
               <NavBar.MegaMenu.Separator />
               <div className="rhc-grid">
                 <div className="rhc-grid__cell rhc-grid__cell-d-3">
-                  <Heading appearanceLevel={5} className="rhc-nav-bar__megamenu-column-heading" level={3}>
+                  <Heading appearanceLevel={5} level={3}>
                     Diensten van de overheid
                   </Heading>
-                  <LinkList className="rhc-nav-bar__megamenu__link-list">
-                    <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
-                      Dienstenoverzicht
-                    </LinkListLink>
+                  <LinkList>
+                    <LinkListLink href="/">Dienstenoverzicht</LinkListLink>
                   </LinkList>
                 </div>
               </div>

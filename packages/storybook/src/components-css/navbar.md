@@ -55,7 +55,7 @@ Geef de balk een unieke anchor-naam via `--rhc-nav-bar-anchor`. Het menu en het 
       </li>
     </ul>
     <ul class="rhc-nav-bar__list rhc-nav-bar__list--end">
-      <li class="rhc-nav-bar__item rhc-nav-bar__item--button-on-mobile rhc-nav-bar__item--button-on-mobile--primary">
+      <li class="rhc-nav-bar__item">
         <a class="rhc-nav-bar__link" href="/inloggen">Inloggen</a>
       </li>
     </ul>
@@ -67,8 +67,6 @@ Geef de balk een unieke anchor-naam via `--rhc-nav-bar-anchor`. Het menu en het 
   </div>
 </nav>
 ```
-
-De classes `rhc-nav-bar__item--button-on-mobile--secondary` en `rhc-nav-bar__item--button-on-mobile--primary` tonen een item op smalle schermen als knop, in plaats van als link.
 
 Gebruik een duidelijke `aria-label` die past bij de inhoud van de balk, zoals "Hoofdnavigatie" of "Dataregister".
 
