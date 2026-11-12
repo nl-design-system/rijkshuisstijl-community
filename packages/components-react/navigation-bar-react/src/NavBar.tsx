@@ -134,10 +134,6 @@ const Root = ({
 
 Root.displayName = 'NavBar';
 
-/**
- * Compound component: `NavBar.Start` en `NavBar.End` bevatten de items
- * (`NavBar.Identity`, `NavBar.Item`, `NavBar.MegaMenu`).
- */
 export const NavBar = Object.assign(Root, {
   Start,
   End,

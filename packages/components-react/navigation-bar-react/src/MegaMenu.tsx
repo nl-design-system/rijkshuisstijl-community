@@ -11,19 +11,8 @@ import { Separator, SeparatorProps } from '@rijkshuisstijl-community/separator-r
 import clsx from 'clsx';
 import { ComponentPropsWithRef, CSSProperties } from 'react';
 
-/*
- * Het megamenu werkt zonder JavaScript via de native Popover API. Trigger en Close
- * vinden het paneel via `target`, net als `popovertarget` in HTML: geef het paneel
- * een `id` en geef dezelfde waarde als `target` aan de Trigger en de Close.
- */
-
 export type NavBarMegaMenuProps = ComponentPropsWithRef<'li'>;
 
-/**
- * Een item voor in `NavBar.Start` of `NavBar.End` dat de Trigger en het Panel bevat.
- * Op brede schermen opent de Trigger het Panel onder de balk; op smalle schermen is de
- * Trigger verborgen en staat de inhoud van het Panel direct in het menu van de `NavBar`.
- */
 const Root = ({ className, ...restProps }: NavBarMegaMenuProps) => (
   <li {...restProps} className={clsx('rhc-nav-bar__item', 'rhc-nav-bar__megamenu-item', className)} />
 );
