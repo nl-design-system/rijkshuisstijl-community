@@ -8,7 +8,7 @@
   background-color: var(--rhc-navigation-bar-background-color);
   block-size: var(--rhc-navigation-bar-block-size);
   color: var(--rhc-navigation-bar-color);
-  column-gap: var(--rhc-navigation-bar-column-gap, 1rem);
+  column-gap: var(--rhc-navigation-bar-column-gap, var(--rhc-space-xl));
   display: flex;
   font-family: var(--rhc-text-font-family-default, inherit);
   inline-size: 100%;
@@ -25,7 +25,7 @@
       z-index: calc(var(--rhc-navigation-bar-z-index, 2) - 1);
     }
 
-    .rhc-page-header:is(.is-navbar-megamenu-open, .is-navbar-main-open) {
+    .rhc-page-header.is-navbar-main-open {
       position: relative;
       z-index: 5;
     }
@@ -136,24 +136,19 @@
     align-items: center;
     display: flex;
     flex: 1;
-
-    .rhc-nav-bar__megamenu ~ .rhc-nav-bar__slot {
-      margin-inline-start: auto;
-    }
   }
 
   @media (width < 768px) {
     .rhc-nav-bar__slot-main.is-navbar-main-open & {
       display: flex;
       flex-direction: column;
-      padding-block: 24px;
-      row-gap: 24px;
+      padding-block: var(--rhc-space-2xl);
+      row-gap: var(--rhc-grid-vi-large-column-gap);
     }
   }
 
   @at-root {
-    .rhc-nav-bar__slot-main.is-navbar-main-open &,
-    .rhc-nav-bar__slot-megamenu.is-navbar-megamenu-open & {
+    .rhc-nav-bar__slot-main.is-navbar-main-open & {
       @media (width < 768px) {
         background: var(--rhc-navigation-bar-mega-menu-background-color);
         display: flex;
@@ -173,6 +168,16 @@
   }
 }
 
+@mixin rhc-nav-bar__slots--mobile-in-megamenu {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--rhc-space-2xl);
+
+  @media (width >= 768px) {
+    display: none;
+  }
+}
+
 // MEGAMENU --
 @mixin rhc-nav-bar__slot-megamenu {
   align-items: center;
@@ -182,40 +187,13 @@
     margin-inline-start: auto;
   }
 
-  // wanneer megamenu open is, krijgt endItems speciale weergave;
   @at-root {
-    &.is-navbar-megamenu-open {
-      .rhc-nav-bar__slot {
-        background-color: var(--rhc-navigation-bar-mega-menu-background-color);
-        padding-block-end: var(--rhc-page-section-vi-small-padding-block-end);
-        padding-block-start: var(--rhc-page-section-vi-small-padding-block-start);
-        padding-inline-end: var(--rhc-page-section-vi-small-padding-inline-end);
-        padding-inline-start: var(--rhc-page-section-vi-small-padding-inline-start);
-
-        @media (width >= 768px) {
-          background: none;
-          padding-block: 0;
-          padding-inline: 0;
-        }
-
-        .rhc-nav-bar__list {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-        }
-
-        &--secondary {
-          @media (width < 768px) {
-            background-color: var(--rhc-navigation-bar-mega-menu-secondary-slot-mobile-background-color);
-            min-block-size: var(--rhc-navigation-bar-mega-menu-secondary-slot-mobile-min-block-size);
-          }
-        }
-      }
+    & .rhc-nav-bar__slots > .rhc-nav-bar__slot {
+      margin-inline-start: auto;
     }
-    @media (width >= 768px) {
-      & .rhc-nav-bar__slots > .rhc-nav-bar__slot {
-        margin-inline-start: auto;
-      }
+
+    & .rhc-nav-bar__slots--mobile-in-megamenu > .rhc-nav-bar__slot {
+      margin-inline-start: 0;
     }
   }
 }
@@ -223,7 +201,7 @@
 @mixin item-height {
   align-content: center;
   display: block;
-  min-block-size: 48px;
+  min-block-size: var(--rhc-size-pointer-target);
 }
 
 @mixin full-width-mobile {
@@ -243,20 +221,22 @@
 @mixin rhc-nav-bar__megamenu {
   background: var(--rhc-navigation-bar-mega-menu-background-color);
   color: var(--rhc-navigation-bar-mega-menu-color);
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-space-2xl);
   padding-block-end: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block-end);
   padding-block-start: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block-start);
   padding-inline-end: var(--rhc-navigation-bar-mega-menu-vi-small-padding-inline-end);
   padding-inline-start: var(--rhc-navigation-bar-mega-menu-vi-small-padding-inline-start);
 
+  // positioneringscontext voor de sluitknop, die rechtsboven in de content hoort.
+  position: relative;
+
   @media (width >= 768px) {
-    inset-block-start: 2.4em;
-    inset-inline-end: 0;
-    inset-inline-start: 0;
     padding-block-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-end);
     padding-block-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-start);
     padding-inline-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-end);
     padding-inline-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-start);
-    position: absolute;
   }
 }
 
@@ -266,26 +246,66 @@
   @media (width >= 768px) {
     display: flex;
     font-weight: var(--rhc-text-font-weight-regular);
-    inset-block-start: calc(var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-start) + 1.8em);
+    inset-block-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-start);
     inset-inline-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-end);
     position: absolute;
   }
 
   &.rhc-button:hover {
-    // todo; token corrigeren
     background-color: var(--rhc-navigation-bar-item-hover-background-color);
   }
 }
 
+@mixin rhc-nav-bar__megamenu-panel {
+  background: none;
+  block-size: auto;
+  border: 0;
+  inline-size: 100vw;
+  inset-block-end: 0;
+  inset-block-start: anchor(bottom);
+  inset-inline-end: 0;
+  inset-inline-start: 0;
+  margin-block: 0;
+  margin-inline: 0;
+  max-inline-size: 100vw;
+  overflow-block: auto;
+  padding-block: 0;
+  padding-inline: 0;
+
+  @media (width >= 768px) {
+    inline-size: auto;
+    inset-inline-end: anchor(end);
+    inset-inline-start: anchor(start);
+    max-inline-size: none;
+  }
+
+  // anchor de lijst van de language navigation zodat hij naar boven kan uitklappen als er onderin de viewport geen ruimte meer is.
+  // de anchor-naam komt van het paneel zelf (uniek per NavBar-instantie); de statische
+  // waarde is enkel een fallback voor als die custom property onverhoopt ontbreekt.
+  .rhc-language-navigation {
+    anchor-name: var(--rhc-nav-bar-megamenu-language-nav-anchor, --rhc-nav-bar-megamenu-language-nav);
+  }
+
+  .rhc-language-navigation__list {
+    inset-block-start: anchor(bottom);
+    inset-inline-start: anchor(start);
+    position: fixed;
+    position-anchor: var(--rhc-nav-bar-megamenu-language-nav-anchor, --rhc-nav-bar-megamenu-language-nav);
+    position-try-fallbacks: flip-block;
+  }
+}
+
 @mixin rhc-nav-bar__megamenu-separator {
+  --utrecht-separator-margin-block-end: 0;
+  --utrecht-separator-margin-block-start: 0;
   --utrecht-separator-color: var(--rhc-navigation-bar-mega-menu-color);
 }
 
 // TAGLINE --
 @mixin rhc-nav-bar__megamenu-tagline {
+  --nl-paragraph-line-height: var(--rhc-space-5xl);
+
   font-style: italic;
-  margin-block-start: 0;
-  padding-block-end: 0;
 }
 
 // NAV --
@@ -305,14 +325,14 @@
 
   @media (width < 768px) {
     flex-direction: column;
-    row-gap: 12px;
+    row-gap: var(--rhc-space-lg);
 
     .rhc-nav-bar__link {
-      font-size: 20px;
+      font-size: var(--rhc-text-font-size-md);
     }
 
     &:has(.rhc-nav-bar__item--button-on-mobile) {
-      row-gap: 24px;
+      row-gap: var(--rhc-space-2xl);
     }
 
     .rhc-nav-bar__item.rhc-nav-bar__item--button-on-mobile {
@@ -324,11 +344,11 @@
         align-items: center;
         border-radius: var(--utrecht-button-border-radius);
         display: flex;
-        font-weight: 700;
+        font-weight: var(--rhc-text-font-weight-bold);
         inline-size: 100%;
         justify-content: center;
         margin-inline: var(--rhc-page-section-vi-small-padding-inline);
-        min-block-size: 48px;
+        min-block-size: var(--rhc-size-pointer-target);
         text-decoration: none;
 
         &:hover {
@@ -338,15 +358,15 @@
 
       &.rhc-nav-bar__item--button-on-mobile--secondary > .rhc-nav-bar__link {
         // Wit volgens ontwerp; het Secondary Button-token is transparant en toont hier de menu-achtergrond.
-        background-color: #fff;
-        border: 2px solid var(--utrecht-button-secondary-action-border-color);
+        background-color: var(--rhc-color-wit);
+        border: var(--rhc-border-width-md) solid var(--utrecht-button-secondary-action-border-color);
         color: var(--utrecht-button-secondary-action-color, var(--rhc-navigation-bar-link-hover-color));
       }
 
       &.rhc-nav-bar__item--button-on-mobile--primary > .rhc-nav-bar__link {
         background-color: var(--utrecht-button-primary-action-background-color, #0058b8);
-        border: 2px solid transparent;
-        color: var(--utrecht-button-primary-action-color, #fff);
+        border: var(--rhc-border-width-md) solid transparent;
+        color: var(--utrecht-button-primary-action-color, var(--rhc-color-wit));
       }
 
       &.rhc-nav-bar__item--button-on-mobile--secondary > .rhc-nav-bar__link:hover {

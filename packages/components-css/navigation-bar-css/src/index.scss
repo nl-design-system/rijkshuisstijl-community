@@ -39,12 +39,25 @@
 .rhc-nav-bar__slots {
   @include mixin.rhc-nav-bar__slots;
 }
+
+.rhc-nav-bar__slots--mobile-in-megamenu {
+  @include mixin.rhc-nav-bar__slots--mobile-in-megamenu;
+}
+
 .rhc-nav-bar__slot-megamenu {
   @include mixin.rhc-nav-bar__slot-megamenu;
 }
 
 .rhc-nav-bar__megamenu {
   @include mixin.rhc-nav-bar__megamenu;
+}
+
+.rhc-nav-bar__megamenu-panel {
+  @include mixin.rhc-nav-bar__megamenu-panel;
+}
+
+.rhc-nav-bar__megamenu > .rhc-nav-bar__megamenu__btn-close {
+  @include mixin.rhc-nav-bar__megamenu__btn-close;
 }
 
 .rhc-nav-bar__megamenu-column-heading {
@@ -58,10 +71,6 @@
 
 .rhc-nav-bar__megamenu__link-list {
   row-gap: 0;
-}
-
-.rhc-nav-bar__megamenu__btn-close.rhc-nav-bar__megamenu__btn-close.rhc-nav-bar__megamenu__btn-close {
-  @include mixin.rhc-nav-bar__megamenu__btn-close;
 }
 
 .rhc-nav-bar__megamenu-separator {
