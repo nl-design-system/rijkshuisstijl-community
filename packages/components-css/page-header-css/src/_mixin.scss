@@ -4,6 +4,9 @@
  */
 
 @mixin rhc-page-header {
+  // Lijn het mobiele menu van de NavBar uit met de kantlijn van de page section.
+  --rhc-navigation-bar-menu-padding-inline: var(--rhc-page-section-vi-small-padding-inline, var(--rhc-space-lg));
+
   background: white;
   box-sizing: border-box;
   inline-size: 100%;

@@ -33,16 +33,6 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
   font-family: var(--rhc-text-font-family-default, inherit);
   inline-size: 100%;
   position: relative;
-
-  @at-root {
-    .rhc-nav-bar ~ .rhc-nav-bar {
-      box-shadow: none;
-    }
-
-    .rhc-language-navigation__trigger {
-      color: var(--rhc-navigation-bar-color);
-    }
-  }
 }
 
 // MENU --
@@ -85,16 +75,12 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
       max-block-size: stretch;
       overflow-block: auto;
       padding-block-end: var(--rhc-space-2xl);
-      padding-inline: var(--rhc-page-section-vi-small-padding-inline, var(--rhc-space-lg));
+      padding-inline: var(--rhc-navigation-bar-menu-padding-inline, var(--rhc-space-lg));
       row-gap: var(--rhc-space-2xl);
 
       .rhc-nav-bar__link {
         inline-size: 100%;
         padding-inline: 0;
-      }
-
-      .rhc-language-navigation__list {
-        position: static;
       }
     }
   }
@@ -120,7 +106,7 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
       block-size: var(--rhc-navigation-bar-block-size);
       inline-size: auto;
       inset-block-start: 0;
-      inset-inline-end: var(--rhc-page-section-vi-small-padding-inline, var(--rhc-space-lg));
+      inset-inline-end: var(--rhc-navigation-bar-menu-padding-inline, var(--rhc-space-lg));
       padding-inline: var(--rhc-navigation-bar-item-padding-inline-start);
       position: absolute;
     }
@@ -263,20 +249,6 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
   font-style: italic;
 }
 
-@mixin item-height {
-  align-content: center;
-  display: block;
-  min-block-size: var(--rhc-size-pointer-target);
-}
-
-@mixin full-width-mobile {
-  inline-size: 100%;
-
-  @media #{$rhc-nav-bar-desktop} {
-    inline-size: unset;
-  }
-}
-
 // LIST --
 @mixin rhc-nav-bar__list {
   block-size: 100%;
@@ -293,56 +265,6 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
 
     .rhc-nav-bar__link {
       font-size: var(--rhc-text-font-size-md);
-    }
-
-    &:has(.rhc-nav-bar__item--button-on-mobile) {
-      row-gap: var(--rhc-space-2xl);
-    }
-
-    .rhc-nav-bar__item.rhc-nav-bar__item--button-on-mobile {
-      display: flex;
-
-      .rhc-nav-bar__link {
-        --nl-link-text-decoration-line: none;
-
-        align-items: center;
-        border-radius: var(--utrecht-button-border-radius);
-        display: flex;
-        font-weight: var(--rhc-text-font-weight-bold);
-        inline-size: 100%;
-        justify-content: center;
-        min-block-size: var(--rhc-size-pointer-target);
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: none;
-        }
-      }
-
-      &.rhc-nav-bar__item--button-on-mobile--secondary > .rhc-nav-bar__link {
-        // Wit volgens ontwerp; het Secondary Button-token is transparant en toont hier de menu-achtergrond.
-        background-color: var(--rhc-color-wit);
-        border: var(--rhc-border-width-md) solid var(--utrecht-button-secondary-action-border-color);
-        color: var(--utrecht-button-secondary-action-color, var(--rhc-navigation-bar-link-hover-color));
-      }
-
-      &.rhc-nav-bar__item--button-on-mobile--primary > .rhc-nav-bar__link {
-        background-color: var(--utrecht-button-primary-action-background-color, #0058b8);
-        border: var(--rhc-border-width-md) solid transparent;
-        color: var(--utrecht-button-primary-action-color, var(--rhc-color-wit));
-      }
-
-      &.rhc-nav-bar__item--button-on-mobile--secondary > .rhc-nav-bar__link:hover {
-        background-color: var(--utrecht-button-secondary-action-hover-background-color);
-        border-color: var(--utrecht-button-secondary-action-border-color);
-        color: var(--utrecht-button-secondary-action-hover-color);
-      }
-
-      &.rhc-nav-bar__item--button-on-mobile--primary > .rhc-nav-bar__link:hover {
-        background-color: var(--utrecht-button-primary-action-hover-background-color);
-        border-color: var(--utrecht-button-primary-action-border-color);
-        color: var(--utrecht-button-primary-action-hover-color);
-      }
     }
   }
 }
