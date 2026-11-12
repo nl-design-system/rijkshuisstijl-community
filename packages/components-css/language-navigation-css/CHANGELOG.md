@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/language-navigation-css
 
+## 1.2.0
+
+### Minor Changes
+
+- cf30b5d: Added new Page Header component
+
 ## 1.1.0
 
 ### Minor Changes
