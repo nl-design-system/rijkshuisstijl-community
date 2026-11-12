@@ -78,8 +78,6 @@ import { Icon, NavBar } from '@rijkshuisstijl-community/components-react';
 </NavBar>;
 ```
 
-Een item kan ook een `subList` krijgen voor een uitklapgedeelte met secties. Een sectie heeft een `id`, een `heading` en `items`.
-
 De classes `rhc-nav-bar__item--button-on-mobile--secondary` en `rhc-nav-bar__item--button-on-mobile--primary` tonen een item op smalle schermen als knop, in plaats van als link.
 
 Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk, zeker als er meerdere balken op een pagina staan.
@@ -144,16 +142,14 @@ Renderen een `<ul>` en accepteren alle attributen van een `<ul>`.
 
 ### NavBar.Item
 
-| Prop          | Type           | Default   | Beschrijving                                                  |
-| ------------- | -------------- | --------- | ------------------------------------------------------------- |
-| `id`          | string         | verplicht | Unieke id van het item.                                       |
-| `label`       | ReactNode      | verplicht | De tekst van de link.                                         |
-| `href`        | string         | verplicht | De url van de link.                                           |
-| `icon`        | ReactElement   | -         | Icoon voor de tekst.                                          |
-| `currentPage` | boolean        | `false`   | Markeert de huidige pagina met `aria-current="page"`.         |
-| `subList`     | `{ sections }` | -         | Uitklapgedeelte met secties.                                  |
-| `contentId`   | string         | `1`       | Id voor de sublijst. Maak deze uniek bij meerdere sublijsten. |
-| `persistent`  | boolean        | `false`   | Blijft op smalle schermen zichtbaar in de balk.               |
+| Prop          | Type         | Default   | Beschrijving                                          |
+| ------------- | ------------ | --------- | ----------------------------------------------------- |
+| `id`          | string       | verplicht | Unieke id van het item.                               |
+| `label`       | ReactNode    | verplicht | De tekst van de link.                                 |
+| `href`        | string       | verplicht | De url van de link.                                   |
+| `icon`        | ReactElement | -         | Icoon voor de tekst.                                  |
+| `currentPage` | boolean      | `false`   | Markeert de huidige pagina met `aria-current="page"`. |
+| `persistent`  | boolean      | `false`   | Blijft op smalle schermen zichtbaar in de balk.       |
 
 ### NavBar.Identity
 
