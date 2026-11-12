@@ -10,24 +10,24 @@ import { LinkList, LinkListLink } from '@rijkshuisstijl-community/link-list-reac
 import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import clsx from 'clsx';
 import {
+  ComponentPropsWithRef,
   CSSProperties,
   HTMLAttributes,
   PropsWithChildren,
   ReactElement,
   ReactNode,
   Ref,
-  useEffect,
   useId,
   useState,
 } from 'react';
-import { NavBarMegaMenuClose, NavBarMegaMenuPanel, NavBarMegaMenuTrigger } from './MegaMenu';
 
-export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
-  identity?: ReactNode;
-  items?: NavBarItemProps[];
+export interface NavBarProps extends ComponentPropsWithRef<'nav'> {
+  /** `<li>`-elementen aan het begin van de balk */
+  startItems?: ReactNode;
+  /** `<li>`-elementen aan het einde van de balk. */
   endItems?: ReactNode;
-  megamenu?: ReactNode;
-  ref?: Ref<HTMLDivElement>;
+  /** Toegankelijke naam van de menuknop op smalle schermen. */
+  toggleLabel?: string;
 }
 
 export interface NavBarLinkProps {
@@ -48,6 +48,8 @@ export interface NavBarItemProps extends NavBarLinkProps, HTMLAttributes<HTMLLIE
   ref?: Ref<HTMLLIElement>;
   open?: boolean;
   contentId?: string;
+  /** Blijft op smalle schermen zichtbaar in de balk in plaats van in het menu. */
+  persistent?: boolean;
 }
 
 interface NavbarSubListProps {
@@ -81,12 +83,22 @@ export const NavBarItem = ({
   currentPage = false,
   open = false,
   contentId = '1',
+  persistent = false,
   ...restProps
 }: PropsWithChildren<NavBarItemProps>) => {
   const [isItemOpen, setIsItemOpen] = useState(open);
 
   return (
-    <li className={clsx('rhc-nav-bar__item', isItemOpen && 'is-open', className)} ref={ref} {...restProps}>
+    <li
+      ref={ref}
+      {...restProps}
+      className={clsx(
+        'rhc-nav-bar__item',
+        persistent && 'rhc-nav-bar__item--persistent',
+        isItemOpen && 'is-open',
+        className,
+      )}
+    >
       {subList ? (
         <LinkButton
           aria-controls={`rhc-nav-bar__item-dropdown-${contentId}`}
@@ -139,145 +151,39 @@ export const NavBarItem = ({
 
 NavBarItem.displayName = 'NavBarItem';
 
-interface NavBarSlotsProps {
-  items?: NavBarItemProps[];
-  endItems?: ReactNode;
-  className?: string;
-  wrapperClassName?: string;
-  ariaLabelSuffix?: string;
-}
-
-const NavBarSlots = ({ items, endItems, className, wrapperClassName, ariaLabelSuffix = '' }: NavBarSlotsProps) => {
-  if (!items && !endItems) return null;
-
-  return (
-    <div className={clsx('rhc-nav-bar__slots', wrapperClassName)}>
-      {items && (
-        <div className="rhc-nav-bar__slot rhc-nav-bar__slot--primary">
-          <nav aria-label={`primary-navigation${ariaLabelSuffix}`} className={clsx('rhc-nav-bar__nav', className)}>
-            <ul className="rhc-nav-bar__list">
-              {items.map((item) => (
-                <NavBarItem key={item.id} {...item} />
-              ))}
-            </ul>
-          </nav>
-        </div>
-      )}
-      {endItems && (
-        <div className="rhc-nav-bar__slot rhc-nav-bar__slot--secondary">
-          <nav aria-label={`secondary-navigation${ariaLabelSuffix}`} className={clsx('rhc-nav-bar__nav', className)}>
-            <ul className="rhc-nav-bar__list">{endItems}</ul>
-          </nav>
-        </div>
-      )}
-    </div>
-  );
-};
-
 export const NavBar = ({
   ref,
   children,
   className,
-  identity,
-  items,
+  startItems,
   endItems,
-  megamenu,
+  toggleLabel = 'Menu',
   style,
+  'aria-label': ariaLabel = 'Hoofdnavigatie',
   ...restProps
 }: PropsWithChildren<NavBarProps>) => {
-  const [isMegamenuOpen, setIsMegamenuOpen] = useState(false);
-  const [isMainNavOpen, setIsMainNavOpen] = useState(false);
-  const megamenuId = `rhc-nav-bar-megamenu-${useId().replaceAll(':', '')}`;
-  const megamenuAnchorName = `--${megamenuId}-anchor`;
-
-  // escape sluit het hoofdmenu; het megamenu sluit zichzelf via de native Popover API
-  useEffect(() => {
-    if (!isMainNavOpen) return;
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setIsMainNavOpen(false);
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    // eslint-disable-next-line consistent-return
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isMainNavOpen]);
-
-  // wanneer isMainNavOpen veranderd, toggled de 'open' class op de rhc-page-header (ivm z-index)
-  useEffect(() => {
-    const pageHeader = document.querySelector('.rhc-page-header');
-    pageHeader?.classList.toggle('is-navbar-main-open', isMainNavOpen);
-    return () => pageHeader?.classList.remove('is-navbar-main-open');
-  }, [isMainNavOpen]);
+  const id = `rhc-nav-bar-${useId().replaceAll(':', '')}`;
+  const menuId = `${id}-menu`;
 
   return (
-    <div
-      className="rhc-nav-bar"
+    <nav
+      aria-label={ariaLabel}
+      className={clsx('rhc-nav-bar', className)}
       ref={ref}
-      style={megamenu ? ({ anchorName: megamenuAnchorName, ...style } as CSSProperties) : style}
+      style={{ '--rhc-nav-bar-anchor': `--${id}`, ...style } as CSSProperties}
       {...restProps}
     >
-      <h2 className="rhc-visually-hidden">Hoofd navigatie</h2>
-      {identity}
-
-      {megamenu ? (
-        <div className="rhc-nav-bar__slot-megamenu">
-          <ul className="rhc-nav-bar__list">
-            <li className="rhc-nav-bar__item">
-              <NavBarMegaMenuTrigger aria-expanded={isMegamenuOpen} id={megamenuId}>
-                <Icon icon={isMegamenuOpen ? 'kruis' : 'menu'} />
-                <span className={clsx('rhc-nav-bar__label', 'rhc-visually-hidden-mobile')}>
-                  Kies een onderwerp of dienst
-                </span>
-              </NavBarMegaMenuTrigger>
-            </li>
-          </ul>
-          <NavBarSlots className={className} endItems={endItems} items={items} />
-          <NavBarMegaMenuPanel id={megamenuId} onOpenChange={setIsMegamenuOpen}>
-            {megamenu}
-            <NavBarSlots
-              ariaLabelSuffix="-mobile"
-              className={className}
-              endItems={endItems}
-              items={items}
-              wrapperClassName="rhc-nav-bar__slots--mobile-in-megamenu"
-            />
-            <NavBarMegaMenuClose id={megamenuId} />
-          </NavBarMegaMenuPanel>
-        </div>
-      ) : (
-        <div className={clsx('rhc-nav-bar__slot-main', { 'is-navbar-main-open': isMainNavOpen })}>
-          <LinkButton
-            aria-expanded={isMainNavOpen}
-            className="rhc-nav-bar__slot-main__btn-trigger rhc-nav-bar__link"
-            data-role="toggle"
-            onClick={() => setIsMainNavOpen((prev) => !prev)}
-          >
-            <Icon icon={isMainNavOpen ? 'kruis' : 'menu'} />
-          </LinkButton>
-          <div className="rhc-nav-bar__slots">
-            {items && (
-              <div className="rhc-nav-bar__slot">
-                <nav aria-label="primary-navigation-mobile" className={clsx('rhc-nav-bar__nav', className)}>
-                  <ul className="rhc-nav-bar__list">
-                    {items.map((item) => (
-                      <NavBarItem key={item.id} {...item} />
-                    ))}
-                  </ul>
-                </nav>
-              </div>
-            )}
-            {endItems && (
-              <div className="rhc-nav-bar__slot">
-                <nav aria-label="secondary-navigation-mobile" className={clsx('rhc-nav-bar__nav', className)}>
-                  <ul className="rhc-nav-bar__list">{endItems}</ul>
-                </nav>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-
+      <div className="rhc-nav-bar__menu" id={menuId} popover="auto">
+        <ul className="rhc-nav-bar__list rhc-nav-bar__list--start">{startItems}</ul>
+        <ul className="rhc-nav-bar__list rhc-nav-bar__list--end">{endItems}</ul>
+        <LinkButton className="rhc-nav-bar__toggle rhc-nav-bar__link" popoverTarget={menuId}>
+          <Icon className="rhc-nav-bar__toggle-icon-open" icon="menu" />
+          <Icon className="rhc-nav-bar__toggle-icon-close" icon="kruis" />
+          <span className="rhc-visually-hidden">{toggleLabel}</span>
+        </LinkButton>
+      </div>
       {children}
-    </div>
+    </nav>
   );
 };
 
