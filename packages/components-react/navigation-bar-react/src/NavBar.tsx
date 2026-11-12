@@ -20,15 +20,15 @@ import {
   useId,
   useState,
 } from 'react';
+import { NavBarMegaMenu } from './MegaMenu';
+import { NavBarIdentity } from './NavBarIdentity';
 
 export interface NavBarProps extends ComponentPropsWithRef<'nav'> {
-  /** `<li>`-elementen aan het begin van de balk */
-  startItems?: ReactNode;
-  /** `<li>`-elementen aan het einde van de balk. */
-  endItems?: ReactNode;
   /** Toegankelijke naam van de menuknop op smalle schermen. */
   toggleLabel?: string;
 }
+
+export type NavBarListProps = ComponentPropsWithRef<'ul'>;
 
 export interface NavBarLinkProps {
   className?: string;
@@ -69,7 +69,7 @@ interface SectionProps {
   items: NavBarLinkProps[];
 }
 
-export const NavBarItem = ({
+const Item = ({
   ref,
   children,
   className,
@@ -149,14 +149,31 @@ export const NavBarItem = ({
   );
 };
 
-NavBarItem.displayName = 'NavBarItem';
+Item.displayName = 'NavBar.Item';
 
-export const NavBar = ({
+/** Items aan het begin van de balk. */
+const Start = ({ className, ...restProps }: NavBarListProps) => (
+  <ul {...restProps} className={clsx('rhc-nav-bar__list', 'rhc-nav-bar__list--start', className)} />
+);
+
+Start.displayName = 'NavBar.Start';
+
+/** Items aan het einde van de balk. */
+const End = ({ className, ...restProps }: NavBarListProps) => (
+  <ul {...restProps} className={clsx('rhc-nav-bar__list', 'rhc-nav-bar__list--end', className)} />
+);
+
+End.displayName = 'NavBar.End';
+
+/**
+ * De balk zelf is een popover. Gesloten wordt hij via CSS gewoon in de balk getoond;
+ * op smalle schermen opent de menuknop hem als paneel in de top layer. Escape,
+ * klikken buiten het paneel en focusherstel komen van de native Popover API.
+ */
+const Root = ({
   ref,
   children,
   className,
-  startItems,
-  endItems,
   toggleLabel = 'Menu',
   style,
   'aria-label': ariaLabel = 'Hoofdnavigatie',
@@ -174,20 +191,30 @@ export const NavBar = ({
       {...restProps}
     >
       <div className="rhc-nav-bar__menu" id={menuId} popover="auto">
-        <ul className="rhc-nav-bar__list rhc-nav-bar__list--start">{startItems}</ul>
-        <ul className="rhc-nav-bar__list rhc-nav-bar__list--end">{endItems}</ul>
+        {children}
         <LinkButton className="rhc-nav-bar__toggle rhc-nav-bar__link" popoverTarget={menuId}>
           <Icon className="rhc-nav-bar__toggle-icon-open" icon="menu" />
           <Icon className="rhc-nav-bar__toggle-icon-close" icon="kruis" />
           <span className="rhc-visually-hidden">{toggleLabel}</span>
         </LinkButton>
       </div>
-      {children}
     </nav>
   );
 };
 
-NavBar.displayName = 'NavBar';
+Root.displayName = 'NavBar';
+
+/**
+ * Compound component: `NavBar.Start` en `NavBar.End` bevatten de items
+ * (`NavBar.Identity`, `NavBar.Item`, `NavBar.MegaMenu`).
+ */
+export const NavBar = Object.assign(Root, {
+  Start,
+  End,
+  Item,
+  Identity: NavBarIdentity,
+  MegaMenu: NavBarMegaMenu,
+});
 
 export const SubNavBar = ({ ref, children, className, columns, ...restProps }: PropsWithChildren<SubNavBarProps>) => {
   return (

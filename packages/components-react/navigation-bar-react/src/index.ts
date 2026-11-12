@@ -10,6 +10,13 @@ import '@rijkshuisstijl-community/navigation-bar-css';
 import '@rijkshuisstijl-community/paragraph-react';
 import '@rijkshuisstijl-community/separator-react';
 
-export * from './MegaMenu';
 export * from './NavBar';
-export * from './NavBarIdentity';
+export type { NavBarIdentityProps } from './NavBarIdentity';
+export type {
+  NavBarMegaMenuCloseProps,
+  NavBarMegaMenuPanelProps,
+  NavBarMegaMenuProps,
+  NavBarMegaMenuSeparatorProps,
+  NavBarMegaMenuTaglineProps,
+  NavBarMegaMenuTriggerProps,
+} from './MegaMenu';

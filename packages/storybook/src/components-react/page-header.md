@@ -18,25 +18,21 @@ De Page Header bestaat uit de volgende onderdelen:
 ### Eenvoudig voorbeeld
 
 ```tsx
-import { Logo, NavBar, NavBarIdentity, PageHeader } from '@rijkshuisstijl-community/components-react';
-
-const items = [
-  { id: 'home', label: 'Home', href: '/' },
-  { id: 'contact', label: 'Contact', href: '/' },
-];
+import { Logo, NavBar, PageHeader } from '@rijkshuisstijl-community/components-react';
 
 <PageHeader>
   <div className="rhc-page-section">
     <div className="rhc-page-section__content">
       <Logo organisation="Organisatie" subtitle="Wat wij doen" />
-      <NavBar
-        identity={
-          <NavBarIdentity primary href="/">
+      <NavBar aria-label="Dataregister">
+        <NavBar.Start>
+          <NavBar.Identity primary href="/">
             Dataregister
-          </NavBarIdentity>
-        }
-        items={items}
-      />
+          </NavBar.Identity>
+          <NavBar.Item href="/" id="home" label="Home" />
+          <NavBar.Item href="/" id="contact" label="Contact" />
+        </NavBar.Start>
+      </NavBar>
     </div>
   </div>
 </PageHeader>;
@@ -44,7 +40,7 @@ const items = [
 
 ### Uitgebreid voorbeeld
 
-Voor een pagina met een `megamenu` en een tweede navigatiebalk geef je meerdere `NavBar`'s mee als `children`.
+Voor een pagina met een megamenu en een tweede navigatiebalk geef je meerdere `NavBar`'s mee als `children`.
 
 ```tsx
 import {
@@ -54,35 +50,8 @@ import {
   LinkListLink,
   Logo,
   NavBar,
-  NavBarIdentity,
-  NavBarMegaMenuSeparator,
-  NavBarMegaMenuTagline,
   PageHeader,
 } from '@rijkshuisstijl-community/components-react';
-
-const itemsMain = [
-  { id: 'data', label: 'Data', href: '/' },
-  { id: 'impact', label: 'Impact', href: '/' },
-];
-
-const megamenu = (
-  <>
-    <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
-    <NavBarMegaMenuSeparator />
-    <div className="rhc-grid">
-      <div className="rhc-grid__cell rhc-grid__cell-d-3">
-        <Heading appearanceLevel={5} className="rhc-nav-bar__megamenu-column-heading" level={3}>
-          Diensten van de overheid
-        </Heading>
-        <LinkList className="rhc-nav-bar__megamenu__link-list">
-          <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
-            Dienstenoverzicht
-          </LinkListLink>
-        </LinkList>
-      </div>
-    </div>
-  </>
-);
 
 <PageHeader>
   <div className="rhc-page-section">
@@ -90,15 +59,41 @@ const megamenu = (
       <Logo organisation="Organisatie" subtitle="Wat wij doen">
         <Icon className="dutch-map" icon="nederland-map" />
       </Logo>
-      <NavBar
-        identity={
-          <NavBarIdentity primary href="/">
+      <NavBar aria-label="Overheid.nl">
+        <NavBar.Start>
+          <NavBar.Identity primary href="/">
             Overheid.nl
-          </NavBarIdentity>
-        }
-        megamenu={megamenu}
-      />
-      <NavBar identity={<NavBarIdentity href="/">Dataregister</NavBarIdentity>} items={itemsMain} />
+          </NavBar.Identity>
+          <NavBar.MegaMenu>
+            <NavBar.MegaMenu.Trigger target="onderwerpen">Kies een onderwerp of dienst</NavBar.MegaMenu.Trigger>
+            <NavBar.MegaMenu.Panel id="onderwerpen">
+              <NavBar.MegaMenu.Tagline>Ingang naar informatie en diensten van alle overheden</NavBar.MegaMenu.Tagline>
+              <NavBar.MegaMenu.Separator />
+              <div className="rhc-grid">
+                <div className="rhc-grid__cell rhc-grid__cell-d-3">
+                  <Heading appearanceLevel={5} className="rhc-nav-bar__megamenu-column-heading" level={3}>
+                    Diensten van de overheid
+                  </Heading>
+                  <LinkList className="rhc-nav-bar__megamenu__link-list">
+                    <LinkListLink className="rhc-nav-bar__megamenu-column-link" href="/">
+                      Dienstenoverzicht
+                    </LinkListLink>
+                  </LinkList>
+                </div>
+              </div>
+
+              <NavBar.MegaMenu.Close target="onderwerpen" />
+            </NavBar.MegaMenu.Panel>
+          </NavBar.MegaMenu>
+        </NavBar.Start>
+      </NavBar>
+      <NavBar aria-label="Dataregister">
+        <NavBar.Start>
+          <NavBar.Identity href="/">Dataregister</NavBar.Identity>
+          <NavBar.Item href="/" id="data" label="Data" />
+          <NavBar.Item href="/" id="impact" label="Impact" />
+        </NavBar.Start>
+      </NavBar>
     </div>
   </div>
 </PageHeader>;
