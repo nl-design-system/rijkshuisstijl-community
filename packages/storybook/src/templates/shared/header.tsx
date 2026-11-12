@@ -10,6 +10,7 @@ import {
   NavBar,
   NavBarIdentity,
   NavBarItem,
+  NavBarMegaMenu,
   NavBarMegaMenuSeparator,
   NavBarMegaMenuTagline,
   PageHeader,
@@ -148,18 +149,28 @@ export const SharedHeaderOverheidNl = () => (
           <Icon className="dutch-map" icon="nederland-map" />
         </Logo>
         <NavBar
+          aria-label="Overheid.nl"
           endItems={endItemsPrimary}
-          megamenu={megamenu}
-          identity={
-            <NavBarIdentity primary href="/">
-              Overheid.nl
-            </NavBarIdentity>
+          startItems={
+            <>
+              <NavBarIdentity primary href="/">
+                Overheid.nl
+              </NavBarIdentity>
+              <NavBarMegaMenu>{megamenu}</NavBarMegaMenu>
+            </>
           }
         />
         <NavBar
+          aria-label="Dataregister"
           endItems={endItemsSecondary}
-          identity={<NavBarIdentity href="/">Dataregister</NavBarIdentity>}
-          items={itemsMain}
+          startItems={
+            <>
+              <NavBarIdentity href="/">Dataregister</NavBarIdentity>
+              {itemsMain.map((item) => (
+                <NavBarItem key={item.id} {...item} />
+              ))}
+            </>
+          }
         />
       </div>
     </div>
@@ -215,7 +226,6 @@ export function SharedHeader() {
           <Icon className={'dutch-map'} icon={'nederland-map'} />
         </Logo>
         <NavBar
-          items={items}
           endItems={
             <>
               {endItems.map((item) => (
@@ -223,6 +233,9 @@ export function SharedHeader() {
               ))}
             </>
           }
+          startItems={items.map((item) => (
+            <NavBarItem {...item} key={item.id} />
+          ))}
         />
       </div>
     </PageHeader>

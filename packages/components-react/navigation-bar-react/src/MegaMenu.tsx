@@ -9,7 +9,7 @@ import { LinkButton, LinkButtonProps } from '@rijkshuisstijl-community/link-butt
 import { Paragraph, ParagraphProps } from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 import { Separator, SeparatorProps } from '@rijkshuisstijl-community/separator-react/no-side-effects';
 import clsx from 'clsx';
-import { ComponentPropsWithRef, CSSProperties, PropsWithChildren } from 'react';
+import { ComponentPropsWithRef, CSSProperties, PropsWithChildren, ReactNode, useId } from 'react';
 
 export const NavBarMegaMenuTrigger = ({ id, className, ...restProps }: LinkButtonProps) => (
   <LinkButton popoverTarget={`${id}-panel`} {...restProps} className={clsx('rhc-nav-bar__link', className)} />
@@ -36,7 +36,6 @@ export const NavBarMegaMenuPanel = ({
     popover="auto"
     style={
       {
-        positionAnchor: `--${id}-anchor`,
         '--rhc-nav-bar-megamenu-language-nav-anchor': `--${id}-language-nav`,
         ...style,
       } as CSSProperties
@@ -88,3 +87,41 @@ export const NavBarMegaMenuClose = ({ id, className, children, ...restProps }: B
 );
 
 NavBarMegaMenuClose.displayName = 'NavBarMegaMenuClose';
+
+export interface NavBarMegaMenuProps extends ComponentPropsWithRef<'li'> {
+  /** Tekst van de menuknop. */
+  label?: ReactNode;
+  /** Toegankelijke naam van de sluitknop. */
+  closeLabel?: string;
+}
+
+/**
+ * Een item voor in `startItems` of `endItems` van de `NavBar`. Op brede schermen
+ * opent de knop een paneel onder de balk; op smalle schermen wordt de inhoud van
+ * het paneel direct in het menu van de `NavBar` getoond.
+ */
+export const NavBarMegaMenu = ({
+  children,
+  className,
+  closeLabel = 'Sluit menu',
+  label = 'Kies een onderwerp of dienst',
+  ...restProps
+}: NavBarMegaMenuProps) => {
+  const id = `rhc-nav-bar-megamenu-${useId().replaceAll(':', '')}`;
+
+  return (
+    <li {...restProps} className={clsx('rhc-nav-bar__item', 'rhc-nav-bar__megamenu-item', className)}>
+      <NavBarMegaMenuTrigger id={id}>
+        <Icon className="rhc-nav-bar__megamenu-icon-open" icon="menu" />
+        <Icon className="rhc-nav-bar__megamenu-icon-close" icon="kruis" />
+        <span className="rhc-nav-bar__label">{label}</span>
+      </NavBarMegaMenuTrigger>
+      <NavBarMegaMenuPanel id={id}>
+        {children}
+        <NavBarMegaMenuClose aria-label={closeLabel} id={id} />
+      </NavBarMegaMenuPanel>
+    </li>
+  );
+};
+
+NavBarMegaMenu.displayName = 'NavBarMegaMenu';

@@ -3,19 +3,34 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
+$rhc-nav-bar-mobile: "(width < 768px)" !default;
+$rhc-nav-bar-desktop: "(width >= 768px)" !default;
+
+// Zet de UA-styles van een popover terug, zodat hij gesloten gewoon in de flow staat.
+@mixin popover-in-flow {
+  background: none;
+  block-size: auto;
+  border: 0;
+  color: inherit;
+  inline-size: auto;
+  inset: auto;
+  margin-block: 0;
+  margin-inline: 0;
+  overflow: visible;
+  padding-block: 0;
+  padding-inline: 0;
+  position: static;
+}
+
 @mixin rhc-nav-bar {
   align-items: center;
+  anchor-name: var(--rhc-nav-bar-anchor);
   background-color: var(--rhc-navigation-bar-background-color);
   block-size: var(--rhc-navigation-bar-block-size);
   color: var(--rhc-navigation-bar-color);
-  column-gap: var(--rhc-navigation-bar-column-gap, var(--rhc-space-xl));
   display: flex;
   font-family: var(--rhc-text-font-family-default, inherit);
   inline-size: 100%;
-
-  // Nodig om de ::before laag correct binnen de navbar te plaatsen.
-  // Let op: als je dit verwijdert, komt de achtergrond in ::before
-  // verkeerd te liggen (zie regel met z-index: -1 verderop).
   position: relative;
   z-index: var(--rhc-navigation-bar-z-index, 2);
 
@@ -25,45 +40,106 @@
       z-index: calc(var(--rhc-navigation-bar-z-index, 2) - 1);
     }
 
-    .rhc-page-header.is-navbar-main-open {
-      position: relative;
-      z-index: 5;
-    }
-
     .rhc-language-navigation__trigger {
       color: var(--rhc-navigation-bar-color);
     }
+  }
+}
 
-    @media (width < 768px) {
-      .rhc-page-header.is-navbar-main-open .rhc-nav-bar ~ .rhc-nav-bar {
-        background-color: var(--rhc-navigation-bar-link-hover-background-color);
+// MENU --
+// De balk is altijd een popover. Gesloten staat hij in de flow; op smalle
+// schermen opent de menuknop hem als paneel over de balk in de top layer.
+@mixin rhc-nav-bar__menu {
+  @include popover-in-flow;
 
-        // Maakt de achtergrond breder zonder de tekst of dropdowns te verschuiven.
-        &::before {
-          background-color: inherit;
-          content: "";
-          inset-block: 0;
-          inset-inline: calc(-1 * var(--rhc-page-section-vi-small-padding-inline));
-          position: absolute;
+  align-items: center;
+  block-size: 100%;
+  column-gap: var(--rhc-navigation-bar-column-gap, var(--rhc-space-xl));
+  display: flex;
+  flex-grow: 1;
 
-          // Zorgt dat deze extra achtergrond achter de tekst en links blijft.
-          // Werkt alleen dankzij position: relative + z-index hierboven op .rhc-nav-bar.
-          z-index: -1;
-        }
+  &:popover-open {
+    background-color: var(--rhc-navigation-bar-background-color);
+    block-size: anchor-size(block);
+    inline-size: auto;
+    inset-block-start: anchor(top);
+    inset-inline-end: anchor(right);
+    inset-inline-start: anchor(left);
+    position: fixed;
+    position-anchor: var(--rhc-nav-bar-anchor);
+  }
+
+  @media #{$rhc-nav-bar-mobile} {
+    // gesloten: alleen persistente items (zoals de identity) en de menuknop in de balk
+    &:not(:popover-open) > .rhc-nav-bar__list > li:not(.rhc-nav-bar__item--persistent) {
+      display: none;
+    }
+
+    &:popover-open {
+      // de bovenste band in de kleur van de balk, de rest in de kleur van het menu
+      align-items: stretch;
+      background:
+        linear-gradient(var(--rhc-navigation-bar-background-color), var(--rhc-navigation-bar-background-color)) top /
+          100% var(--rhc-navigation-bar-block-size) no-repeat local,
+        var(--rhc-navigation-bar-mega-menu-background-color);
+      block-size: auto;
+      flex-direction: column;
+      inset-block-end: 0;
+      inset-inline: 0;
+      overflow-block: auto;
+      padding-block-end: var(--rhc-space-2xl);
+      padding-inline: var(--rhc-page-section-vi-small-padding-inline, var(--rhc-space-lg));
+      row-gap: var(--rhc-space-2xl);
+
+      > .rhc-nav-bar__list {
+        block-size: auto;
+      }
+
+      .rhc-nav-bar__link {
+        inline-size: 100%;
+        padding-inline: 0;
       }
     }
   }
 }
 
-@mixin rhc-nav-bar__shade {
-  background-color: rgb(0 0 0 / 50%);
-  inset: 0;
-  position: fixed;
-  z-index: 3;
+@mixin rhc-nav-bar__list--end {
+  @media #{$rhc-nav-bar-desktop} {
+    margin-inline-start: auto;
+  }
 }
 
+@mixin rhc-nav-bar__toggle {
+  margin-inline-start: auto;
+
+  .rhc-nav-bar__menu:not(:popover-open) > & > .rhc-nav-bar__toggle-icon-close,
+  .rhc-nav-bar__menu:popover-open > & > .rhc-nav-bar__toggle-icon-open {
+    display: none;
+  }
+
+  @media #{$rhc-nav-bar-mobile} {
+    .rhc-nav-bar__menu:popover-open > & {
+      background-color: var(--rhc-navigation-bar-link-hover-background-color);
+      block-size: var(--rhc-navigation-bar-block-size);
+      inline-size: auto;
+      inset-block-start: 0;
+      inset-inline-end: var(--rhc-page-section-vi-small-padding-inline, var(--rhc-space-lg));
+      padding-inline: var(--rhc-navigation-bar-item-padding-inline-start);
+      position: absolute;
+    }
+  }
+
+  @media #{$rhc-nav-bar-desktop} {
+    display: none;
+  }
+}
+
+// IDENTITY --
 @mixin rhc-nav-bar-identity {
+  align-items: center;
+  display: flex;
   flex-shrink: 0;
+  min-block-size: var(--rhc-navigation-bar-block-size);
   padding-inline-end: var(--rhc-navigation-bar-item-padding-inline-end);
 }
 
@@ -89,170 +165,25 @@
   }
 }
 
-// MAIN --
-@mixin rhc-nav-bar__slot-main {
-  align-items: center;
-  block-size: 100%;
-  display: flex;
-  flex-grow: 1;
-
-  // als er twee _slot's zijn, dan moet de tweede _slot naar rechts worden geduwd
-  @media (width >= 768px) {
-    .rhc-nav-bar__slot:last-child:not(:first-child) {
-      margin-inline-start: auto;
-    }
-  }
-}
-
-@mixin rhc-nav-bar__slot-main__btn-trigger {
-  margin-inline-start: auto;
-
-  .utrecht-icon {
-    align-self: center;
-    aspect-ratio: 1 / 1;
-    box-sizing: border-box;
-    inline-size: 20px;
-    line-height: 1.25em;
-  }
-
-  @at-root {
-    &[aria-expanded="true"] {
-      --utrecht-link-focus-background-color: var(--rhc-navigation-bar-link-hover-background-color);
-
-      background-color: var(--rhc-navigation-bar-link-hover-background-color);
-      border-radius: 0;
-    }
-  }
-
-  @media (width >= 768px) {
-    display: none;
-  }
-}
-
-@mixin rhc-nav-bar__slots {
-  display: none;
-
-  @media (width >= 768px) {
-    align-items: center;
-    display: flex;
-    flex: 1;
-  }
-
-  @media (width < 768px) {
-    .rhc-nav-bar__slot-main.is-navbar-main-open & {
-      display: flex;
-      flex-direction: column;
-      padding-block: var(--rhc-space-2xl);
-      row-gap: var(--rhc-grid-vi-large-column-gap);
-    }
-  }
-
-  @at-root {
-    .rhc-nav-bar__slot-main.is-navbar-main-open & {
-      @media (width < 768px) {
-        background: var(--rhc-navigation-bar-mega-menu-background-color);
-        display: flex;
-        flex-direction: column;
-        inset-block-start: 100%;
-        inset-inline-end: 0;
-        inset-inline-start: 0;
-        margin-inline: calc(-1 * var(--rhc-page-section-vi-small-padding-inline));
-        position: absolute;
-
-        .rhc-nav-bar__link {
-          inline-size: 100%;
-          padding-inline: var(--rhc-page-section-vi-small-padding-inline);
-        }
-      }
-    }
-  }
-}
-
-@mixin rhc-nav-bar__slots--mobile-in-megamenu {
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--rhc-space-2xl);
-
-  @media (width >= 768px) {
-    display: none;
-  }
-}
-
 // MEGAMENU --
-@mixin rhc-nav-bar__slot-megamenu {
-  align-items: center;
-  display: flex;
-  flex-grow: 1;
-  > .rhc-nav-bar__list:first-child {
-    margin-inline-start: auto;
+@mixin rhc-nav-bar__megamenu-item {
+  &:not(:has(> .rhc-nav-bar__megamenu-panel:popover-open)) .rhc-nav-bar__megamenu-icon-close,
+  &:has(> .rhc-nav-bar__megamenu-panel:popover-open) .rhc-nav-bar__megamenu-icon-open {
+    display: none;
   }
 
-  @at-root {
-    & .rhc-nav-bar__slots > .rhc-nav-bar__slot {
-      margin-inline-start: auto;
+  &:has(> .rhc-nav-bar__megamenu-panel:popover-open) > .rhc-nav-bar__link {
+    background-color: var(--rhc-navigation-bar-link-hover-background-color);
+    box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0
+      var(--rhc-navigation-bar-link-hover-border-color);
+    color: var(--rhc-navigation-bar-link-hover-color);
+  }
+
+  // smal: geen knop, de inhoud van het megamenu staat direct in het menu van de balk
+  @media #{$rhc-nav-bar-mobile} {
+    > .rhc-nav-bar__link {
+      display: none;
     }
-
-    & .rhc-nav-bar__slots--mobile-in-megamenu > .rhc-nav-bar__slot {
-      margin-inline-start: 0;
-    }
-  }
-}
-
-@mixin item-height {
-  align-content: center;
-  display: block;
-  min-block-size: var(--rhc-size-pointer-target);
-}
-
-@mixin full-width-mobile {
-  inline-size: 100%;
-
-  @media (width >= 768px) {
-    inline-size: unset;
-  }
-}
-
-// ---
-@mixin rhc-nav-bar__slot {
-  block-size: 100%;
-  inline-size: auto;
-}
-
-@mixin rhc-nav-bar__megamenu {
-  background: var(--rhc-navigation-bar-mega-menu-background-color);
-  color: var(--rhc-navigation-bar-mega-menu-color);
-  display: flex;
-  flex-direction: column;
-  gap: var(--rhc-space-2xl);
-  padding-block-end: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block-end);
-  padding-block-start: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block-start);
-  padding-inline-end: var(--rhc-navigation-bar-mega-menu-vi-small-padding-inline-end);
-  padding-inline-start: var(--rhc-navigation-bar-mega-menu-vi-small-padding-inline-start);
-
-  // positioneringscontext voor de sluitknop, die rechtsboven in de content hoort.
-  position: relative;
-
-  @media (width >= 768px) {
-    padding-block-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-end);
-    padding-block-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-start);
-    padding-inline-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-end);
-    padding-inline-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-start);
-  }
-}
-
-@mixin rhc-nav-bar__megamenu__btn-close {
-  display: none;
-
-  @media (width >= 768px) {
-    display: flex;
-    font-weight: var(--rhc-text-font-weight-regular);
-    inset-block-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-start);
-    inset-inline-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-end);
-    position: absolute;
-  }
-
-  &.rhc-button:hover {
-    background-color: var(--rhc-navigation-bar-item-hover-background-color);
   }
 }
 
@@ -260,23 +191,26 @@
   background: none;
   block-size: auto;
   border: 0;
-  inline-size: 100vw;
+  inline-size: auto;
   inset-block-end: 0;
   inset-block-start: anchor(bottom);
-  inset-inline-end: 0;
-  inset-inline-start: 0;
+  inset-inline-end: anchor(right);
+  inset-inline-start: anchor(left);
   margin-block: 0;
   margin-inline: 0;
-  max-inline-size: 100vw;
   overflow-block: auto;
   padding-block: 0;
   padding-inline: 0;
+  position-anchor: var(--rhc-nav-bar-anchor);
 
-  @media (width >= 768px) {
-    inline-size: auto;
-    inset-inline-end: anchor(end);
-    inset-inline-start: anchor(start);
-    max-inline-size: none;
+  @media #{$rhc-nav-bar-mobile} {
+    @include popover-in-flow;
+
+    display: block;
+
+    .rhc-nav-bar__megamenu {
+      padding-inline: 0;
+    }
   }
 
   // anchor de lijst van de language navigation zodat hij naar boven kan uitklappen als er onderin de viewport geen ruimte meer is.
@@ -295,26 +229,72 @@
   }
 }
 
+@mixin rhc-nav-bar__megamenu {
+  background: var(--rhc-navigation-bar-mega-menu-background-color);
+  color: var(--rhc-navigation-bar-mega-menu-color);
+  display: flex;
+  flex-direction: column;
+  gap: var(--rhc-space-2xl);
+  padding-block-end: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block-end);
+  padding-block-start: var(--rhc-navigation-bar-mega-menu-vi-small-padding-block-start);
+  padding-inline-end: var(--rhc-navigation-bar-mega-menu-vi-small-padding-inline-end);
+  padding-inline-start: var(--rhc-navigation-bar-mega-menu-vi-small-padding-inline-start);
+
+  // positioneringscontext voor de sluitknop, die rechtsboven in de content hoort.
+  position: relative;
+
+  @media #{$rhc-nav-bar-desktop} {
+    padding-block-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-end);
+    padding-block-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-start);
+    padding-inline-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-end);
+    padding-inline-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-start);
+  }
+}
+
+@mixin rhc-nav-bar__megamenu__btn-close {
+  display: none;
+
+  @media #{$rhc-nav-bar-desktop} {
+    display: flex;
+    font-weight: var(--rhc-text-font-weight-regular);
+    inset-block-start: var(--rhc-navigation-bar-mega-menu-vi-large-padding-block-start);
+    inset-inline-end: var(--rhc-navigation-bar-mega-menu-vi-large-padding-inline-end);
+    position: absolute;
+  }
+
+  &.rhc-button:hover {
+    background-color: var(--rhc-navigation-bar-item-hover-background-color);
+  }
+}
+
 @mixin rhc-nav-bar__megamenu-separator {
   --utrecht-separator-margin-block-end: 0;
   --utrecht-separator-margin-block-start: 0;
   --utrecht-separator-color: var(--rhc-navigation-bar-mega-menu-color);
 }
 
-// TAGLINE --
 @mixin rhc-nav-bar__megamenu-tagline {
   --nl-paragraph-line-height: var(--rhc-space-5xl);
 
   font-style: italic;
 }
 
-// NAV --
-@mixin rhc-nav-bar__nav {
-  block-size: 100%;
+@mixin item-height {
+  align-content: center;
+  display: block;
+  min-block-size: var(--rhc-size-pointer-target);
 }
 
+@mixin full-width-mobile {
+  inline-size: 100%;
+
+  @media #{$rhc-nav-bar-desktop} {
+    inline-size: unset;
+  }
+}
+
+// LIST --
 @mixin rhc-nav-bar__list {
-  background-color: var(--rhc-navigation-bar-background-color);
   block-size: 100%;
   display: flex;
   list-style: none;
@@ -323,7 +303,7 @@
   padding-block: 0;
   padding-inline: 0;
 
-  @media (width < 768px) {
+  @media #{$rhc-nav-bar-mobile} {
     flex-direction: column;
     row-gap: var(--rhc-space-lg);
 
@@ -347,7 +327,6 @@
         font-weight: var(--rhc-text-font-weight-bold);
         inline-size: 100%;
         justify-content: center;
-        margin-inline: var(--rhc-page-section-vi-small-padding-inline);
         min-block-size: var(--rhc-size-pointer-target);
         text-decoration: none;
 
@@ -430,7 +409,7 @@
   }
 
   &[aria-current="page"] {
-    @media (width >= 768px) {
+    @media #{$rhc-nav-bar-desktop} {
       box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0
         var(--rhc-navigation-bar-link-current-border-color);
       color: var(--rhc-navigation-bar-link-current-color);
@@ -448,17 +427,18 @@
     box-sizing: border-box;
     inline-size: 20px;
     line-height: 1.25em;
-    @media (width >= 768px) {
+
+    @media #{$rhc-nav-bar-desktop} {
       block-size: 24px;
       inline-size: 24px;
     }
   }
 
-  @media (width < 768px) {
+  @media #{$rhc-nav-bar-mobile} {
     align-items: center !important;
 
     // Mobiel: onderstreping i.p.v. achtergrond, alleen in het open menu.
-    .rhc-nav-bar__slots &:hover:not([aria-expanded="true"]) {
+    .rhc-nav-bar__list &:hover:not([aria-expanded="true"]) {
       background-color: transparent;
       box-shadow: none;
       text-decoration: underline;
@@ -466,6 +446,7 @@
   }
 }
 
+// SUB NAV BAR --
 @mixin rhc-sub-nav-bar {
   --utrecht-column-layout-gap: var(--rhc-sub-nav-bar-column-gap);
   --utrecht-column-layout-column-width: var(--rhc-sub-nav-bar-column-width);

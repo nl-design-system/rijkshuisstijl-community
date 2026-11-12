@@ -8,7 +8,6 @@ export function Header() {
         <Icon icon="nederland-map" />
       </Logo>
       <NavBar
-        className="rhc-nav-bar"
         endItems={
           <>
             <NavBarItem href="/" id="end-first-link" label="Figma" />
@@ -16,23 +15,13 @@ export function Header() {
             <NavBarItem href="/" id="end-third-link" label="Storybook" />
           </>
         }
-        items={[
-          {
-            href: '/',
-            id: 'first-link',
-            label: 'Homepage',
-          },
-          {
-            href: '/',
-            id: 'second-link',
-            label: 'Componenten',
-          },
-          {
-            href: '/',
-            id: 'third-link',
-            label: 'Voorbeelden',
-          },
-        ]}
+        startItems={
+          <>
+            <NavBarItem href="/" id="first-link" label="Homepage" />
+            <NavBarItem href="/" id="second-link" label="Componenten" />
+            <NavBarItem href="/" id="third-link" label="Voorbeelden" />
+          </>
+        }
       />
     </PageHeader>
   );
