@@ -1,5 +1,30 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 18.1.0
+
+### Minor Changes
+
+- 23479aa: Number-badge: de achtergrondkleur volgt nu het kleurthema (`primary` in plaats van de vaste `core`/lintblauw), zodat de badge per departement meekleurt. Overgenomen van de integratiebranch.
+- cf30b5d: Added new Page Header component
+- 683f5ae: feat: introduce Basis tokens and point all basis tokens to their Rijkshuisstijl Community counterpart tokens.
+
+### Patch Changes
+
+- 3414d12: Point component tokens to basis tokens instead of `rhc` tokens, wherever the basis token resolves to exactly the same value in every theme, type scale, viewport and color mode. Resolved values do not change; generated CSS now references `--basis-*` custom properties instead of `--rhc-*`.
+  
+  - border: `rhc.border-width.*` and `rhc.border-radius.*` → `basis.border-width.*` and `basis.border-radius.*`
+  - text: `rhc.text.font-family.*`, `font-weight.*`, `font-size.*` and `line-height.*` → `basis.text.*` (fluid font sizes keep working)
+  - focus: `rhc.focus.outline-offset` → `basis.focus.outline-offset`
+  - color: `rhc.color.foreground.*`, `rhc.color.bg-document`, `rhc.color.border.*` and `rhc.color.transparent` → `basis.color.default.*`, `basis.color.default-inverse.*`, `basis.color.action-1.*` and `basis.color.transparent`
+  - size: `rhc.size.page.md` → `basis.page.max-inline-size`, `rhc.size.pointer-target` → `basis.pointer-target.min-block-size` / `min-inline-size`
+  - space: `rhc.space.*` → `basis.space.{block,inline,row,column}.*`, chosen by the CSS property that uses it (fluid space keeps working)
+- 951de8b: fix 164 contrast issues in basis tokens
+- 5621b7c: - rebuild basis tokens based on actual color usage
+  - make sure no circular references exist
+  - add clear todos to spot where we need to have conversations around which tokens to add or change
+  - deprecate common non-basis tokens where possible
+- 6bfb620: rebuild all common/primary-color layers to use basis tokens
+
 ## 18.0.1
 
 ### Patch Changes
