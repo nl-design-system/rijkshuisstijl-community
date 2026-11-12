@@ -16,6 +16,7 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
   inset: auto;
   margin-block: 0;
   margin-inline: 0;
+  max-block-size: none;
   overflow: visible;
   padding-block: 0;
   padding-inline: 0;
@@ -77,10 +78,11 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
       // de bovenste band in de kleur van de balk, de rest in de kleur van het menu
       align-items: stretch;
       background: var(--rhc-navigation-bar-mega-menu-background-color);
-      block-size: auto;
+      block-size: fit-content;
       flex-direction: column;
       inset-block-end: 0;
       inset-inline: 0;
+      max-block-size: stretch;
       overflow-block: auto;
       padding-block-end: var(--rhc-space-2xl);
       padding-inline: var(--rhc-page-section-vi-small-padding-inline, var(--rhc-space-lg));
@@ -186,7 +188,7 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
 
 @mixin rhc-nav-bar__megamenu-panel {
   background: none;
-  block-size: auto;
+  block-size: fit-content;
   border: 0;
   inline-size: auto;
   inset-block-end: 0;
@@ -195,6 +197,7 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
   inset-inline-start: anchor(left);
   margin-block: 0;
   margin-inline: 0;
+  max-block-size: stretch;
   overflow-block: auto;
   padding-block: 0;
   padding-inline: 0;
@@ -213,17 +216,17 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
   // anchor de lijst van de language navigation zodat hij naar boven kan uitklappen als er onderin de viewport geen ruimte meer is.
   // de anchor-naam komt van het paneel zelf (uniek per NavBar-instantie); de statische
   // waarde is enkel een fallback voor als die custom property onverhoopt ontbreekt.
-  .rhc-language-navigation {
-    anchor-name: var(--rhc-nav-bar-megamenu-language-nav-anchor, --rhc-nav-bar-megamenu-language-nav);
-  }
+  //   .rhc-language-navigation {
+  //     anchor-name: var(--rhc-nav-bar-megamenu-language-nav-anchor, --rhc-nav-bar-megamenu-language-nav);
+  //   }
 
-  .rhc-language-navigation__list {
-    inset-block-start: anchor(bottom);
-    inset-inline-start: anchor(start);
-    position: fixed;
-    position-anchor: var(--rhc-nav-bar-megamenu-language-nav-anchor, --rhc-nav-bar-megamenu-language-nav);
-    position-try-fallbacks: flip-block;
-  }
+  //   .rhc-language-navigation__list {
+  //     inset-block-start: anchor(bottom);
+  //     inset-inline-start: anchor(start);
+  //     position: fixed;
+  //     position-anchor: var(--rhc-nav-bar-megamenu-language-nav-anchor, --rhc-nav-bar-megamenu-language-nav);
+  //     position-try-fallbacks: flip-block;
+  //   }
 }
 
 @mixin rhc-nav-bar__megamenu {
