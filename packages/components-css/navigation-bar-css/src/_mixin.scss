@@ -32,12 +32,10 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
   font-family: var(--rhc-text-font-family-default, inherit);
   inline-size: 100%;
   position: relative;
-  z-index: var(--rhc-navigation-bar-z-index, 2);
 
   @at-root {
     .rhc-nav-bar ~ .rhc-nav-bar {
       box-shadow: none;
-      z-index: calc(var(--rhc-navigation-bar-z-index, 2) - 1);
     }
 
     .rhc-language-navigation__trigger {
@@ -78,10 +76,7 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
     &:popover-open {
       // de bovenste band in de kleur van de balk, de rest in de kleur van het menu
       align-items: stretch;
-      background:
-        linear-gradient(var(--rhc-navigation-bar-background-color), var(--rhc-navigation-bar-background-color)) top /
-          100% var(--rhc-navigation-bar-block-size) no-repeat local,
-        var(--rhc-navigation-bar-mega-menu-background-color);
+      background: var(--rhc-navigation-bar-mega-menu-background-color);
       block-size: auto;
       flex-direction: column;
       inset-block-end: 0;
@@ -91,9 +86,9 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
       padding-inline: var(--rhc-page-section-vi-small-padding-inline, var(--rhc-space-lg));
       row-gap: var(--rhc-space-2xl);
 
-      > .rhc-nav-bar__list {
-        block-size: auto;
-      }
+      // > .rhc-nav-bar__list {
+      //   block-size: auto;
+      // }
 
       .rhc-nav-bar__link {
         inline-size: 100%;
@@ -166,24 +161,26 @@ $rhc-nav-bar-desktop: "(width >= 768px)" !default;
 }
 
 // MEGAMENU --
+// De open-state komt uit `:popover-open` van het paneel, zodat trigger en paneel
+// los van elkaar binnen het item geplaatst kunnen worden.
 @mixin rhc-nav-bar__megamenu-item {
-  &:not(:has(> .rhc-nav-bar__megamenu-panel:popover-open)) .rhc-nav-bar__megamenu-icon-close,
-  &:has(> .rhc-nav-bar__megamenu-panel:popover-open) .rhc-nav-bar__megamenu-icon-open {
+  &:not(:has(.rhc-nav-bar__megamenu-panel:popover-open)) .rhc-nav-bar__megamenu-icon-close,
+  &:has(.rhc-nav-bar__megamenu-panel:popover-open) .rhc-nav-bar__megamenu-icon-open {
     display: none;
   }
 
-  &:has(> .rhc-nav-bar__megamenu-panel:popover-open) > .rhc-nav-bar__link {
+  &:has(.rhc-nav-bar__megamenu-panel:popover-open) .rhc-nav-bar__megamenu-trigger {
     background-color: var(--rhc-navigation-bar-link-hover-background-color);
     box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0
       var(--rhc-navigation-bar-link-hover-border-color);
     color: var(--rhc-navigation-bar-link-hover-color);
   }
+}
 
-  // smal: geen knop, de inhoud van het megamenu staat direct in het menu van de balk
+// smal: geen knop, de inhoud van het megamenu staat direct in het menu van de balk
+@mixin rhc-nav-bar__megamenu-trigger {
   @media #{$rhc-nav-bar-mobile} {
-    > .rhc-nav-bar__link {
-      display: none;
-    }
+    display: none;
   }
 }
 

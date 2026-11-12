@@ -8,11 +8,6 @@ import {
   LinkListLink,
   Logo,
   NavBar,
-  NavBarIdentity,
-  NavBarItem,
-  NavBarMegaMenu,
-  NavBarMegaMenuSeparator,
-  NavBarMegaMenuTagline,
   PageHeader,
   SkipLink,
 } from '@rijkshuisstijl-community/components-react';
@@ -35,7 +30,7 @@ const endItemsPrimary = (
         </LanguageNavigation.Content>
       </LanguageNavigation>
     </li>
-    <NavBarItem href="/" id="end-second-link" label="Contact" />
+    <NavBar.Item href="/" id="end-second-link" label="Contact" />
   </>
 );
 
@@ -54,7 +49,7 @@ const endItemsSecondary = [
     label: 'Inloggen',
     icon: <Icon icon="inloggen" />,
   },
-].map((endItem) => <NavBarItem key={endItem.id} {...endItem} />);
+].map((endItem) => <NavBar.Item key={endItem.id} {...endItem} />);
 
 const itemsMain = [
   {
@@ -120,8 +115,8 @@ const megamenuColumns = [
 
 const megamenu = (
   <>
-    <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
-    <NavBarMegaMenuSeparator />
+    <NavBar.MegaMenu.Tagline>Ingang naar informatie en diensten van alle overheden</NavBar.MegaMenu.Tagline>
+    <NavBar.MegaMenu.Separator />
     <div className="rhc-grid">
       {megamenuColumns.map(({ id, heading, items }) => (
         <div className="rhc-grid__cell rhc-grid__cell-d-3" key={id}>
@@ -148,30 +143,30 @@ export const SharedHeaderOverheidNl = () => (
         <Logo organisation="Organisatie" subtitle="Wat wij doen">
           <Icon className="dutch-map" icon="nederland-map" />
         </Logo>
-        <NavBar
-          aria-label="Overheid.nl"
-          endItems={endItemsPrimary}
-          startItems={
-            <>
-              <NavBarIdentity primary href="/">
-                Overheid.nl
-              </NavBarIdentity>
-              <NavBarMegaMenu>{megamenu}</NavBarMegaMenu>
-            </>
-          }
-        />
-        <NavBar
-          aria-label="Dataregister"
-          endItems={endItemsSecondary}
-          startItems={
-            <>
-              <NavBarIdentity href="/">Dataregister</NavBarIdentity>
-              {itemsMain.map((item) => (
-                <NavBarItem key={item.id} {...item} />
-              ))}
-            </>
-          }
-        />
+        <NavBar aria-label="Overheid.nl">
+          <NavBar.Start>
+            <NavBar.Identity primary href="/">
+              Overheid.nl
+            </NavBar.Identity>
+            <NavBar.MegaMenu>
+              <NavBar.MegaMenu.Trigger target="onderwerpen">Kies een onderwerp of dienst</NavBar.MegaMenu.Trigger>
+              <NavBar.MegaMenu.Panel id="onderwerpen">
+                {megamenu}
+                <NavBar.MegaMenu.Close target="onderwerpen" />
+              </NavBar.MegaMenu.Panel>
+            </NavBar.MegaMenu>
+          </NavBar.Start>
+          <NavBar.End>{endItemsPrimary}</NavBar.End>
+        </NavBar>
+        <NavBar aria-label="Dataregister">
+          <NavBar.Start>
+            <NavBar.Identity href="/">Dataregister</NavBar.Identity>
+            {itemsMain.map((item) => (
+              <NavBar.Item key={item.id} {...item} />
+            ))}
+          </NavBar.Start>
+          <NavBar.End>{endItemsSecondary}</NavBar.End>
+        </NavBar>
       </div>
     </div>
   </PageHeader>
@@ -225,18 +220,18 @@ export function SharedHeader() {
         <Logo organisation="Rijkshuisstijl Community">
           <Icon className={'dutch-map'} icon={'nederland-map'} />
         </Logo>
-        <NavBar
-          endItems={
-            <>
-              {endItems.map((item) => (
-                <NavBarItem {...item} key={item.id} />
-              ))}
-            </>
-          }
-          startItems={items.map((item) => (
-            <NavBarItem {...item} key={item.id} />
-          ))}
-        />
+        <NavBar>
+          <NavBar.Start>
+            {items.map((item) => (
+              <NavBar.Item {...item} key={item.id} />
+            ))}
+          </NavBar.Start>
+          <NavBar.End>
+            {endItems.map((item) => (
+              <NavBar.Item {...item} key={item.id} />
+            ))}
+          </NavBar.End>
+        </NavBar>
       </div>
     </PageHeader>
   );

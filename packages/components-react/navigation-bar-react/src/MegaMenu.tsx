@@ -9,119 +9,114 @@ import { LinkButton, LinkButtonProps } from '@rijkshuisstijl-community/link-butt
 import { Paragraph, ParagraphProps } from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 import { Separator, SeparatorProps } from '@rijkshuisstijl-community/separator-react/no-side-effects';
 import clsx from 'clsx';
-import { ComponentPropsWithRef, CSSProperties, PropsWithChildren, ReactNode, useId } from 'react';
+import { ComponentPropsWithRef, CSSProperties } from 'react';
 
-export const NavBarMegaMenuTrigger = ({ id, className, ...restProps }: LinkButtonProps) => (
-  <LinkButton popoverTarget={`${id}-panel`} {...restProps} className={clsx('rhc-nav-bar__link', className)} />
+/*
+ * Het megamenu werkt zonder JavaScript via de native Popover API. Trigger en Close
+ * vinden het paneel via `target`, net als `popovertarget` in HTML: geef het paneel
+ * een `id` en geef dezelfde waarde als `target` aan de Trigger en de Close.
+ */
+
+export type NavBarMegaMenuProps = ComponentPropsWithRef<'li'>;
+
+/**
+ * Een item voor in `NavBar.Start` of `NavBar.End` dat de Trigger en het Panel bevat.
+ * Op brede schermen opent de Trigger het Panel onder de balk; op smalle schermen is de
+ * Trigger verborgen en staat de inhoud van het Panel direct in het menu van de `NavBar`.
+ */
+const Root = ({ className, ...restProps }: NavBarMegaMenuProps) => (
+  <li {...restProps} className={clsx('rhc-nav-bar__item', 'rhc-nav-bar__megamenu-item', className)} />
 );
 
-NavBarMegaMenuTrigger.displayName = 'NavBarMegaMenuTrigger';
+Root.displayName = 'NavBar.MegaMenu';
 
-export interface NavBarMegaMenuPanelProps extends ComponentPropsWithRef<'div'> {
-  onOpenChange?: (open: boolean) => void;
+export interface NavBarMegaMenuTriggerProps extends Omit<LinkButtonProps, 'popoverTarget'> {
+  /** De `id` van het `NavBar.MegaMenu.Panel` dat deze knop opent. */
+  target: string;
 }
 
-export const NavBarMegaMenuPanel = ({
-  id,
-  className,
-  style,
-  children,
-  onOpenChange,
-  onToggle,
-  ...restProps
-}: PropsWithChildren<NavBarMegaMenuPanelProps>) => (
-  <div
-    className={clsx('rhc-nav-bar__megamenu-panel', className)}
-    id={`${id}-panel`}
-    popover="auto"
-    style={
-      {
-        '--rhc-nav-bar-megamenu-language-nav-anchor': `--${id}-language-nav`,
-        ...style,
-      } as CSSProperties
-    }
-    onToggle={(event) => {
-      onOpenChange?.(event.newState === 'open');
-      onToggle?.(event);
-    }}
+/** De knop die het paneel opent en sluit. Het icoon wisselt via CSS mee met de open-state. */
+const Trigger = ({ target, className, children, ...restProps }: NavBarMegaMenuTriggerProps) => (
+  <LinkButton
     {...restProps}
+    className={clsx('rhc-nav-bar__link', 'rhc-nav-bar__megamenu-trigger', className)}
+    popoverTarget={target}
+  >
+    <Icon className="rhc-nav-bar__megamenu-icon-open" icon="menu" />
+    <Icon className="rhc-nav-bar__megamenu-icon-close" icon="kruis" />
+    <span className="rhc-nav-bar__label">{children}</span>
+  </LinkButton>
+);
+
+Trigger.displayName = 'NavBar.MegaMenu.Trigger';
+
+export interface NavBarMegaMenuPanelProps extends ComponentPropsWithRef<'div'> {
+  /** Uniek id, waarnaar `target` van de Trigger en Close verwijst. */
+  id: string;
+}
+
+/** Het uitklappaneel met de inhoud van het megamenu. */
+const Panel = ({ id, className, style, children, ...restProps }: NavBarMegaMenuPanelProps) => (
+  <div
+    {...restProps}
+    className={clsx('rhc-nav-bar__megamenu-panel', className)}
+    id={id}
+    popover="auto"
+    style={{ '--rhc-nav-bar-megamenu-language-nav-anchor': `--${id}-language-nav`, ...style } as CSSProperties}
   >
     <div className="rhc-nav-bar__megamenu">{children}</div>
   </div>
 );
 
-NavBarMegaMenuPanel.displayName = 'NavBarMegaMenuPanel';
+Panel.displayName = 'NavBar.MegaMenu.Panel';
 
-export const NavBarMegaMenuTagline = ({ children, className, ...restProps }: ParagraphProps) => (
-  <Paragraph className={clsx('rhc-nav-bar__megamenu-tagline', className)} {...restProps}>
-    {children}
-  </Paragraph>
-);
+export type NavBarMegaMenuCloseProps = Omit<ButtonProps, 'popoverTarget' | 'popoverTargetAction'> & {
+  /** De `id` van het `NavBar.MegaMenu.Panel` dat deze knop sluit. */
+  target: string;
+};
 
-NavBarMegaMenuTagline.displayName = 'NavBarMegaMenuTagline';
-
-export type NavBarMegaMenuSeparatorProps = SeparatorProps;
-
-export const NavBarMegaMenuSeparator = ({ className, ...restProps }: NavBarMegaMenuSeparatorProps) => (
-  <Separator {...restProps} className={clsx('rhc-nav-bar__megamenu-separator', className)} />
-);
-
-NavBarMegaMenuSeparator.displayName = 'NavBarMegaMenuSeparator';
-
-export const NavBarMegaMenuClose = ({ id, className, children, ...restProps }: ButtonProps) => (
+/** Sluitknop voor in het paneel. Alleen zichtbaar op brede schermen. */
+const Close = ({ target, className, children, ...restProps }: NavBarMegaMenuCloseProps) => (
   <Button
-    aria-label="Sluit menu"
-    popoverTarget={`${id}-panel`}
-    popoverTargetAction="hide"
     purpose="subtle"
     {...restProps}
     className={clsx('rhc-nav-bar__megamenu__btn-close', className)}
+    popoverTarget={target}
+    popoverTargetAction="hide"
   >
     {children ?? (
       <>
         <Icon icon="kruis" />
-        {'Sluiten'}
+        Sluiten
       </>
     )}
   </Button>
 );
 
-NavBarMegaMenuClose.displayName = 'NavBarMegaMenuClose';
+Close.displayName = 'NavBar.MegaMenu.Close';
 
-export interface NavBarMegaMenuProps extends ComponentPropsWithRef<'li'> {
-  /** Tekst van de menuknop. */
-  label?: ReactNode;
-  /** Toegankelijke naam van de sluitknop. */
-  closeLabel?: string;
-}
+export type NavBarMegaMenuTaglineProps = ParagraphProps;
 
-/**
- * Een item voor in `startItems` of `endItems` van de `NavBar`. Op brede schermen
- * opent de knop een paneel onder de balk; op smalle schermen wordt de inhoud van
- * het paneel direct in het menu van de `NavBar` getoond.
- */
-export const NavBarMegaMenu = ({
-  children,
-  className,
-  closeLabel = 'Sluit menu',
-  label = 'Kies een onderwerp of dienst',
-  ...restProps
-}: NavBarMegaMenuProps) => {
-  const id = `rhc-nav-bar-megamenu-${useId().replaceAll(':', '')}`;
+/** Optionele introductietekst boven de inhoud van het megamenu. */
+const Tagline = ({ className, ...restProps }: NavBarMegaMenuTaglineProps) => (
+  <Paragraph {...restProps} className={clsx('rhc-nav-bar__megamenu-tagline', className)} />
+);
 
-  return (
-    <li {...restProps} className={clsx('rhc-nav-bar__item', 'rhc-nav-bar__megamenu-item', className)}>
-      <NavBarMegaMenuTrigger id={id}>
-        <Icon className="rhc-nav-bar__megamenu-icon-open" icon="menu" />
-        <Icon className="rhc-nav-bar__megamenu-icon-close" icon="kruis" />
-        <span className="rhc-nav-bar__label">{label}</span>
-      </NavBarMegaMenuTrigger>
-      <NavBarMegaMenuPanel id={id}>
-        {children}
-        <NavBarMegaMenuClose aria-label={closeLabel} id={id} />
-      </NavBarMegaMenuPanel>
-    </li>
-  );
-};
+Tagline.displayName = 'NavBar.MegaMenu.Tagline';
 
-NavBarMegaMenu.displayName = 'NavBarMegaMenu';
+export type NavBarMegaMenuSeparatorProps = SeparatorProps;
+
+/** Scheidingslijn, bijvoorbeeld tussen de tagline en de rest van de inhoud. */
+const MegaMenuSeparator = ({ className, ...restProps }: NavBarMegaMenuSeparatorProps) => (
+  <Separator {...restProps} className={clsx('rhc-nav-bar__megamenu-separator', className)} />
+);
+
+MegaMenuSeparator.displayName = 'NavBar.MegaMenu.Separator';
+
+export const NavBarMegaMenu = Object.assign(Root, {
+  Trigger,
+  Panel,
+  Close,
+  Tagline,
+  Separator: MegaMenuSeparator,
+});

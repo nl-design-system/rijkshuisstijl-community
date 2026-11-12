@@ -36,4 +36,4 @@ export const NavBarIdentity = ({
   </li>
 );
 
-NavBarIdentity.displayName = 'NavBarIdentity';
+NavBarIdentity.displayName = 'NavBar.Identity';

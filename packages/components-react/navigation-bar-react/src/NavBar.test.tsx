@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it } from 'vitest';
-import { NavBar, NavBarIdentity, NavBarItem, NavBarMegaMenu } from '.';
+import { NavBar } from '.';
 
 describe('NavBar', () => {
   it('renders a navigation landmark with a default label', () => {
@@ -18,10 +18,14 @@ describe('NavBar', () => {
 
   it('renders start and end items in separate lists', () => {
     render(
-      <NavBar
-        endItems={<NavBarItem href="#" id="end" label="End Item" />}
-        startItems={<NavBarItem href="#" id="start" label="Start Item" />}
-      />,
+      <NavBar>
+        <NavBar.Start>
+          <NavBar.Item href="#" id="start" label="Start Item" />
+        </NavBar.Start>
+        <NavBar.End>
+          <NavBar.Item href="#" id="end" label="End Item" />
+        </NavBar.End>
+      </NavBar>,
     );
 
     const [startList, endList] = screen.getAllByRole('list');
@@ -42,34 +46,68 @@ describe('NavBar', () => {
   });
 
   it('passes className to a nav bar item', () => {
-    render(<NavBar startItems={<NavBarItem className="custom-class" href="#" id="item" label="Item" />} />);
+    render(
+      <NavBar>
+        <NavBar.Start>
+          <NavBar.Item className="custom-class" href="#" id="item" label="Item" />
+        </NavBar.Start>
+      </NavBar>,
+    );
 
     expect(screen.getByRole('listitem')).toHaveClass('rhc-nav-bar__item', 'custom-class');
   });
 
   it('marks the identity as persistent by default', () => {
-    render(<NavBar startItems={<NavBarIdentity href="/">Identity</NavBarIdentity>} />);
+    render(
+      <NavBar>
+        <NavBar.Start>
+          <NavBar.Identity href="/">Identity</NavBar.Identity>
+        </NavBar.Start>
+      </NavBar>,
+    );
 
     expect(screen.getByRole('listitem')).toHaveClass('rhc-nav-bar__item--persistent');
   });
 
   it('marks a nav bar item as persistent when requested', () => {
-    render(<NavBar startItems={<NavBarItem persistent href="#" id="item" label="Item" />} />);
+    render(
+      <NavBar>
+        <NavBar.Start>
+          <NavBar.Item persistent href="#" id="item" label="Item" />
+        </NavBar.Start>
+      </NavBar>,
+    );
 
     expect(screen.getByRole('listitem')).toHaveClass('rhc-nav-bar__item--persistent');
   });
 
-  it('renders a mega menu with a trigger targeting its panel', () => {
+  it('wires a mega menu trigger and close button to the panel by id', () => {
     const { container } = render(
-      <NavBar startItems={<NavBarMegaMenu label="Onderwerpen">Mega menu content</NavBarMegaMenu>} />,
+      <NavBar>
+        <NavBar.Start>
+          <NavBar.MegaMenu>
+            <NavBar.MegaMenu.Trigger target="onderwerpen">Onderwerpen</NavBar.MegaMenu.Trigger>
+            <NavBar.MegaMenu.Panel id="onderwerpen">
+              <NavBar.MegaMenu.Tagline>Mega menu content</NavBar.MegaMenu.Tagline>
+              <NavBar.MegaMenu.Separator />
+              <NavBar.MegaMenu.Close target="onderwerpen" />
+            </NavBar.MegaMenu.Panel>
+          </NavBar.MegaMenu>
+        </NavBar.Start>
+      </NavBar>,
     );
 
-    const panel = container.querySelector('.rhc-nav-bar__megamenu-panel');
+    const panel = container.querySelector('#onderwerpen');
+    expect(panel).toHaveClass('rhc-nav-bar__megamenu-panel');
     expect(panel).toHaveAttribute('popover', 'auto');
     expect(panel).toHaveTextContent('Mega menu content');
+    expect(panel?.querySelector('.rhc-nav-bar__megamenu-separator')).toBeInTheDocument();
 
-    const trigger = screen.getByRole('button', { name: 'Onderwerpen' });
-    expect(trigger).toHaveAttribute('popovertarget', panel?.id);
+    expect(screen.getByRole('button', { name: 'Onderwerpen' })).toHaveAttribute('popovertarget', 'onderwerpen');
+
+    const close = screen.getByRole('button', { name: 'Sluiten' });
+    expect(close).toHaveAttribute('popovertarget', 'onderwerpen');
+    expect(close).toHaveAttribute('popovertargetaction', 'hide');
   });
 });
 

@@ -1,3 +1,10 @@
-export * from './MegaMenu';
+export type {
+  NavBarMegaMenuCloseProps,
+  NavBarMegaMenuPanelProps,
+  NavBarMegaMenuProps,
+  NavBarMegaMenuSeparatorProps,
+  NavBarMegaMenuTaglineProps,
+  NavBarMegaMenuTriggerProps,
+} from './MegaMenu';
 export * from './NavBar';
-export * from './NavBarIdentity';
+export type { NavBarIdentityProps } from './NavBarIdentity';
