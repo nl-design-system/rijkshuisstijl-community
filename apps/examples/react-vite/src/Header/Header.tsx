@@ -1,4 +1,12 @@
-import { Icon, Logo, NavBar, PageHeader } from '@rijkshuisstijl-community/components-react/no-side-effects';
+import {
+  Icon,
+  Logo,
+  NavBar,
+  NavBarEnd,
+  NavBarItem,
+  NavBarStart,
+  PageHeader,
+} from '@rijkshuisstijl-community/components-react/no-side-effects';
 import './Header.css';
 
 export function Header() {
@@ -8,16 +16,16 @@ export function Header() {
         <Icon icon="nederland-map" />
       </Logo>
       <NavBar>
-        <NavBar.Start>
-          <NavBar.Item href="/" id="first-link" label="Homepage" />
-          <NavBar.Item href="/" id="second-link" label="Componenten" />
-          <NavBar.Item href="/" id="third-link" label="Voorbeelden" />
-        </NavBar.Start>
-        <NavBar.End>
-          <NavBar.Item href="/" id="end-first-link" label="Figma" />
-          <NavBar.Item href="/" id="end-second-link" label="Github" />
-          <NavBar.Item href="/" id="end-third-link" label="Storybook" />
-        </NavBar.End>
+        <NavBarStart>
+          <NavBarItem href="/" id="first-link" label="Homepage" />
+          <NavBarItem href="/" id="second-link" label="Componenten" />
+          <NavBarItem href="/" id="third-link" label="Voorbeelden" />
+        </NavBarStart>
+        <NavBarEnd>
+          <NavBarItem href="/" id="end-first-link" label="Figma" />
+          <NavBarItem href="/" id="end-second-link" label="Github" />
+          <NavBarItem href="/" id="end-third-link" label="Storybook" />
+        </NavBarEnd>
       </NavBar>
     </PageHeader>
   );

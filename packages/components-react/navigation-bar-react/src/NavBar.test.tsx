@@ -1,7 +1,19 @@
 import '@testing-library/jest-dom/vitest';
-import { cleanup, render, screen } from '@testing-library/react';
-import { afterEach, describe, expect, it } from 'vitest';
-import { NavBar } from '.';
+import { cleanup, fireEvent, render, screen } from '@testing-library/react';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+import {
+  NavBar,
+  NavBarEnd,
+  NavBarIdentity,
+  NavBarItem,
+  NavBarMegaMenu,
+  NavBarMegaMenuClose,
+  NavBarMegaMenuPanel,
+  NavBarMegaMenuSeparator,
+  NavBarMegaMenuTagline,
+  NavBarMegaMenuTrigger,
+  NavBarStart,
+} from '.';
 
 describe('NavBar', () => {
   it('renders a navigation landmark with a default label', () => {
@@ -19,12 +31,12 @@ describe('NavBar', () => {
   it('renders start and end items in separate lists', () => {
     render(
       <NavBar>
-        <NavBar.Start>
-          <NavBar.Item href="#" id="start" label="Start Item" />
-        </NavBar.Start>
-        <NavBar.End>
-          <NavBar.Item href="#" id="end" label="End Item" />
-        </NavBar.End>
+        <NavBarStart>
+          <NavBarItem href="#" id="start" label="Start Item" />
+        </NavBarStart>
+        <NavBarEnd>
+          <NavBarItem href="#" id="end" label="End Item" />
+        </NavBarEnd>
       </NavBar>,
     );
 
@@ -48,9 +60,9 @@ describe('NavBar', () => {
   it('passes className to a nav bar item', () => {
     render(
       <NavBar>
-        <NavBar.Start>
-          <NavBar.Item className="custom-class" href="#" id="item" label="Item" />
-        </NavBar.Start>
+        <NavBarStart>
+          <NavBarItem className="custom-class" href="#" id="item" label="Item" />
+        </NavBarStart>
       </NavBar>,
     );
 
@@ -60,9 +72,9 @@ describe('NavBar', () => {
   it('marks the identity as persistent by default', () => {
     render(
       <NavBar>
-        <NavBar.Start>
-          <NavBar.Identity href="/">Identity</NavBar.Identity>
-        </NavBar.Start>
+        <NavBarStart>
+          <NavBarIdentity href="/">Identity</NavBarIdentity>
+        </NavBarStart>
       </NavBar>,
     );
 
@@ -72,9 +84,9 @@ describe('NavBar', () => {
   it('marks a nav bar item as persistent when requested', () => {
     render(
       <NavBar>
-        <NavBar.Start>
-          <NavBar.Item persistent href="#" id="item" label="Item" />
-        </NavBar.Start>
+        <NavBarStart>
+          <NavBarItem persistent href="#" id="item" label="Item" />
+        </NavBarStart>
       </NavBar>,
     );
 
@@ -84,16 +96,16 @@ describe('NavBar', () => {
   it('wires a mega menu trigger and close button to the panel by id', () => {
     const { container } = render(
       <NavBar>
-        <NavBar.Start>
-          <NavBar.MegaMenu>
-            <NavBar.MegaMenu.Trigger target="onderwerpen">Onderwerpen</NavBar.MegaMenu.Trigger>
-            <NavBar.MegaMenu.Panel id="onderwerpen">
-              <NavBar.MegaMenu.Tagline>Mega menu content</NavBar.MegaMenu.Tagline>
-              <NavBar.MegaMenu.Separator />
-              <NavBar.MegaMenu.Close target="onderwerpen" />
-            </NavBar.MegaMenu.Panel>
-          </NavBar.MegaMenu>
-        </NavBar.Start>
+        <NavBarStart>
+          <NavBarMegaMenu>
+            <NavBarMegaMenuTrigger target="onderwerpen">Onderwerpen</NavBarMegaMenuTrigger>
+            <NavBarMegaMenuPanel id="onderwerpen">
+              <NavBarMegaMenuTagline>Mega menu content</NavBarMegaMenuTagline>
+              <NavBarMegaMenuSeparator />
+              <NavBarMegaMenuClose target="onderwerpen" />
+            </NavBarMegaMenuPanel>
+          </NavBarMegaMenu>
+        </NavBarStart>
       </NavBar>,
     );
 
@@ -108,6 +120,37 @@ describe('NavBar', () => {
     const close = screen.getByRole('button', { name: 'Sluiten' });
     expect(close).toHaveAttribute('popovertarget', 'onderwerpen');
     expect(close).toHaveAttribute('popovertargetaction', 'hide');
+  });
+
+  it('closes the open mega menu panel when keyboard focus leaves it', () => {
+    const { container } = render(
+      <NavBar>
+        <NavBarStart>
+          <NavBarMegaMenu>
+            <NavBarMegaMenuTrigger target="onderwerpen">Onderwerpen</NavBarMegaMenuTrigger>
+            <NavBarMegaMenuPanel id="onderwerpen">
+              <a href="#binnen">Binnen</a>
+            </NavBarMegaMenuPanel>
+          </NavBarMegaMenu>
+        </NavBarStart>
+        <NavBarEnd>
+          <NavBarItem href="#buiten" id="buiten" label="Buiten" />
+        </NavBarEnd>
+      </NavBar>,
+    );
+
+    const panel = container.querySelector<HTMLElement>('#onderwerpen')!;
+    // jsdom heeft geen Popover API: simuleer een open paneel.
+    panel.matches = (selector: string) => selector === ':popover-open';
+    panel.hidePopover = vi.fn();
+
+    const inside = screen.getByRole('link', { name: 'Binnen' });
+
+    fireEvent.focusOut(inside, { relatedTarget: screen.getByRole('button', { name: 'Onderwerpen' }) });
+    expect(panel.hidePopover).not.toHaveBeenCalled();
+
+    fireEvent.focusOut(inside, { relatedTarget: screen.getByRole('link', { name: 'Buiten' }) });
+    expect(panel.hidePopover).toHaveBeenCalledTimes(1);
   });
 });
 

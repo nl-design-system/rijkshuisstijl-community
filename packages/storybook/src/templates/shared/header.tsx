@@ -8,6 +8,16 @@ import {
   LinkListLink,
   Logo,
   NavBar,
+  NavBarEnd,
+  NavBarIdentity,
+  NavBarItem,
+  NavBarMegaMenu,
+  NavBarMegaMenuClose,
+  NavBarMegaMenuPanel,
+  NavBarMegaMenuSeparator,
+  NavBarMegaMenuTagline,
+  NavBarMegaMenuTrigger,
+  NavBarStart,
   PageHeader,
   SkipLink,
 } from '@rijkshuisstijl-community/components-react';
@@ -31,7 +41,7 @@ const endItemsPrimary = (
         </LanguageNavigation.Content>
       </LanguageNavigation>
     </li>
-    <NavBar.Item href="/" id="end-second-link" label="Contact" />
+    <NavBarItem href="/" id="end-second-link" label="Contact" />
   </>
 );
 
@@ -50,7 +60,7 @@ const endItemsSecondary = [
     label: 'Inloggen',
     icon: <Icon icon="inloggen" />,
   },
-].map((endItem) => <NavBar.Item key={endItem.id} {...endItem} />);
+].map((endItem) => <NavBarItem key={endItem.id} {...endItem} />);
 
 const itemsMain = [
   {
@@ -116,8 +126,8 @@ const megamenuColumns = [
 
 const megamenu = (
   <>
-    <NavBar.MegaMenu.Tagline>Ingang naar informatie en diensten van alle overheden</NavBar.MegaMenu.Tagline>
-    <NavBar.MegaMenu.Separator />
+    <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
+    <NavBarMegaMenuSeparator />
     <div className="rhc-grid">
       {megamenuColumns.map(({ id, heading, items }) => (
         <div className="rhc-grid__cell rhc-grid__cell-d-3" key={id}>
@@ -145,28 +155,28 @@ export const SharedHeaderOverheidNl = () => (
           <Icon className="dutch-map" icon="nederland-map" />
         </Logo>
         <NavBar aria-label="Overheid.nl">
-          <NavBar.Start>
-            <NavBar.Identity primary href="/">
+          <NavBarStart>
+            <NavBarIdentity primary href="/">
               Overheid.nl
-            </NavBar.Identity>
-            <NavBar.MegaMenu>
-              <NavBar.MegaMenu.Trigger target="onderwerpen">Kies een onderwerp of dienst</NavBar.MegaMenu.Trigger>
-              <NavBar.MegaMenu.Panel id="onderwerpen">
+            </NavBarIdentity>
+            <NavBarMegaMenu>
+              <NavBarMegaMenuTrigger target="onderwerpen">Kies een onderwerp of dienst</NavBarMegaMenuTrigger>
+              <NavBarMegaMenuPanel id="onderwerpen">
                 {megamenu}
-                <NavBar.MegaMenu.Close target="onderwerpen" />
-              </NavBar.MegaMenu.Panel>
-            </NavBar.MegaMenu>
-          </NavBar.Start>
-          <NavBar.End>{endItemsPrimary}</NavBar.End>
+                <NavBarMegaMenuClose target="onderwerpen" />
+              </NavBarMegaMenuPanel>
+            </NavBarMegaMenu>
+          </NavBarStart>
+          <NavBarEnd>{endItemsPrimary}</NavBarEnd>
         </NavBar>
         <NavBar aria-label="Dataregister">
-          <NavBar.Start>
-            <NavBar.Identity href="/">Dataregister</NavBar.Identity>
+          <NavBarStart>
+            <NavBarIdentity href="/">Dataregister</NavBarIdentity>
             {itemsMain.map((item) => (
-              <NavBar.Item key={item.id} {...item} />
+              <NavBarItem key={item.id} {...item} />
             ))}
-          </NavBar.Start>
-          <NavBar.End>{endItemsSecondary}</NavBar.End>
+          </NavBarStart>
+          <NavBarEnd>{endItemsSecondary}</NavBarEnd>
         </NavBar>
       </div>
     </div>
@@ -222,16 +232,16 @@ export function SharedHeader() {
           <Icon className={'dutch-map'} icon={'nederland-map'} />
         </Logo>
         <NavBar>
-          <NavBar.Start>
+          <NavBarStart>
             {items.map((item) => (
-              <NavBar.Item {...item} key={item.id} />
+              <NavBarItem {...item} key={item.id} />
             ))}
-          </NavBar.Start>
-          <NavBar.End>
+          </NavBarStart>
+          <NavBarEnd>
             {endItems.map((item) => (
-              <NavBar.Item {...item} key={item.id} />
+              <NavBarItem {...item} key={item.id} />
             ))}
-          </NavBar.End>
+          </NavBarEnd>
         </NavBar>
       </div>
     </PageHeader>

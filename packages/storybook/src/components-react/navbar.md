@@ -2,46 +2,46 @@
 
 # Rijkshuisstijl Community Nav Bar component
 
-De Navigation Bar is de hoofdnavigatie van een pagina. Het is een compound component: alle onderdelen gebruik je via `NavBar`, zoals `NavBar.Start`, `NavBar.Item` en `NavBar.MegaMenu`. De balk heeft twee kanten, `NavBar.Start` en `NavBar.End`. Wat je daarin plaatst bepaal je zelf.
+De Navigation Bar is de hoofdnavigatie van een pagina. De onderdelen, zoals `NavBarStart`, `NavBarItem` en `NavBarMegaMenu`, zijn losse exports. Zo werken ze zowel in client components als in React Server Components. De balk heeft twee kanten, `NavBarStart` en `NavBarEnd`. Wat je daarin plaatst bepaal je zelf.
 
 ## Anatomie
 
 ```tsx
 <NavBar>
-  <NavBar.Start>
-    <NavBar.Identity />
-    <NavBar.Item />
-    <NavBar.MegaMenu>
-      <NavBar.MegaMenu.Trigger target="onderwerpen">Kies een onderwerp of dienst</NavBar.MegaMenu.Trigger>
-      <NavBar.MegaMenu.Panel id="onderwerpen">
-        <NavBar.MegaMenu.Tagline />
-        <NavBar.MegaMenu.Separator />
-        <NavBar.MegaMenu.Close target="onderwerpen" />
-      </NavBar.MegaMenu.Panel>
-    </NavBar.MegaMenu>
-  </NavBar.Start>
-  <NavBar.End>
-    <NavBar.Item />
-  </NavBar.End>
+  <NavBarStart>
+    <NavBarIdentity />
+    <NavBarItem />
+    <NavBarMegaMenu>
+      <NavBarMegaMenuTrigger target="onderwerpen">Kies een onderwerp of dienst</NavBarMegaMenuTrigger>
+      <NavBarMegaMenuPanel id="onderwerpen">
+        <NavBarMegaMenuTagline />
+        <NavBarMegaMenuSeparator />
+        <NavBarMegaMenuClose target="onderwerpen" />
+      </NavBarMegaMenuPanel>
+    </NavBarMegaMenu>
+  </NavBarStart>
+  <NavBarEnd>
+    <NavBarItem />
+  </NavBarEnd>
 </NavBar>
 ```
 
-- **`NavBar.Start`**: items aan het begin van de balk.
-- **`NavBar.End`**: items aan het einde van de balk, bijvoorbeeld zoeken, inloggen of taalkeuze.
-- **`NavBar.Identity`**: de naam of titel van de site, meestal als eerste item in `NavBar.Start`.
-- **`NavBar.Item`**: een link, optioneel met een sublijst (een uitklapgedeelte met secties).
-- **`NavBar.MegaMenu`**: een item met een `Trigger` die een `Panel` met links in kolommen opent. Een `Close` in het paneel sluit het weer.
+- **`NavBarStart`**: items aan het begin van de balk.
+- **`NavBarEnd`**: items aan het einde van de balk, bijvoorbeeld zoeken, inloggen of taalkeuze.
+- **`NavBarIdentity`**: de naam of titel van de site, meestal als eerste item in `NavBarStart`.
+- **`NavBarItem`**: een link.
+- **`NavBarMegaMenu`**: een item met een `NavBarMegaMenuTrigger` die een `NavBarMegaMenuPanel` opent. Een `NavBarMegaMenuClose` in het paneel sluit het weer.
 - **Menuknop**: op smalle schermen klappen de items in achter een menuknop. Die voegt `NavBar` zelf toe.
 
-`NavBar.Start` en `NavBar.End` renderen een `<ul>`; de items renderen een `<li>`. Een eigen item, zoals de `LanguageNavigation`, zet je daarom in een `<li>`.
+`NavBarStart` en `NavBarEnd` renderen een `<ul>`; de items renderen een `<li>`. Een eigen item, zoals de `LanguageNavigation`, zet je daarom in een `<li>`.
 
 ### Smalle schermen
 
-Op smalle schermen toont de balk alleen de identity en de menuknop. De menuknop opent een paneel met alle andere items. De inhoud van een `NavBar.MegaMenu` staat daar direct in het paneel; de knop van het megamenu wordt dan niet getoond.
+Op smalle schermen toont de balk alleen de identity en de menuknop. De menuknop opent een paneel met alle andere items. De inhoud van een `NavBarMegaMenu` staat daar direct in het paneel; de knop van het megamenu wordt dan niet getoond.
 
-Wil je een item ook op smalle schermen in de balk houden, geef het dan de prop `persistent`. `NavBar.Identity` is standaard `persistent`.
+Wil je een item ook op smalle schermen in de balk houden, geef het dan de prop `persistent`. `NavBarIdentity` is standaard `persistent`.
 
-Het menu en het megamenu gebruiken de native Popover API. Er is geen eigen JavaScript nodig: ze sluiten via de `Escape`-toets of door ernaast te klikken, en de focus gaat terug naar de knop.
+Het menu en het megamenu gebruiken de native Popover API. Ze sluiten via de `Escape`-toets of door ernaast te klikken, en de focus gaat terug naar de knop. Daarnaast sluiten ze als de toetsenbordfocus het paneel verlaat, zodat de focus nooit achter een open paneel verdwijnt.
 
 ## Gebruik
 
@@ -51,30 +51,30 @@ Het menu en het megamenu gebruiken de native Popover API. Er is geen eigen JavaS
 import { NavBar } from '@rijkshuisstijl-community/components-react';
 
 <NavBar>
-  <NavBar.Start>
-    <NavBar.Item href="/" id="home" label="Home" />
-    <NavBar.Item href="/nieuws" id="nieuws" label="Nieuws" />
-    <NavBar.Item href="/contact" id="contact" label="Contact" />
-  </NavBar.Start>
+  <NavBarStart>
+    <NavBarItem href="/" id="home" label="Home" />
+    <NavBarItem href="/nieuws" id="nieuws" label="Nieuws" />
+    <NavBarItem href="/contact" id="contact" label="Contact" />
+  </NavBarStart>
 </NavBar>;
 ```
 
 ### Uitgebreid voorbeeld
 
-Gebruik `NavBar.Identity` voor de sitenaam, `currentPage` voor de huidige pagina, en `NavBar.End` voor extra items zoals zoeken of inloggen.
+Gebruik `NavBarIdentity` voor de sitenaam, `currentPage` voor de huidige pagina, en `NavBarEnd` voor extra items zoals zoeken of inloggen.
 
 ```tsx
 import { Icon, NavBar } from '@rijkshuisstijl-community/components-react';
 
 <NavBar aria-label="Dataregister">
-  <NavBar.Start>
-    <NavBar.Identity href="/">Dataregister</NavBar.Identity>
-    <NavBar.Item currentPage href="/" id="home" label="Home" />
-    <NavBar.Item href="/nieuws" id="nieuws" label="Nieuws" />
-  </NavBar.Start>
-  <NavBar.End>
-    <NavBar.Item href="/zoeken" icon={<Icon icon="zoek" />} id="zoeken" label="Zoeken" />
-  </NavBar.End>
+  <NavBarStart>
+    <NavBarIdentity href="/">Dataregister</NavBarIdentity>
+    <NavBarItem currentPage href="/" id="home" label="Home" />
+    <NavBarItem href="/nieuws" id="nieuws" label="Nieuws" />
+  </NavBarStart>
+  <NavBarEnd>
+    <NavBarItem href="/zoeken" icon={<Icon icon="zoek" />} id="zoeken" label="Zoeken" />
+  </NavBarEnd>
 </NavBar>;
 ```
 
@@ -82,25 +82,25 @@ Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk, zeker 
 
 ### Megamenu
 
-Plaats een `NavBar.MegaMenu` in `NavBar.Start` of `NavBar.End`, met daarin een `NavBar.MegaMenu.Trigger` en een `NavBar.MegaMenu.Panel`. Op brede schermen opent de Trigger het paneel onder de balk; op smalle schermen zijn de Trigger en de `NavBar.MegaMenu.Close` verborgen en staat de inhoud van het paneel direct in het menu van de balk.
+Plaats een `NavBarMegaMenu` in `NavBarStart` of `NavBarEnd`, met daarin een `NavBarMegaMenuTrigger` en een `NavBarMegaMenuPanel`. Op brede schermen opent de Trigger het paneel onder de balk; op smalle schermen zijn de Trigger en de `NavBarMegaMenuClose` verborgen en staat de inhoud van het paneel direct in het menu van de balk.
 
-De onderdelen werken zonder JavaScript via de native Popover API en vinden elkaar via een id, net als `popovertarget` in HTML. Geef het `Panel` een unieke `id` en geef dezelfde waarde als `target` aan de `Trigger` en de `Close`. Waar je de `Close` in het paneel plaatst bepaal je zelf.
+De onderdelen gebruiken de native Popover API en vinden elkaar via een id, net als `popovertarget` in HTML. Geef het `NavBarMegaMenuPanel` een unieke `id` en geef dezelfde waarde als `target` aan de `NavBarMegaMenuTrigger` en de `NavBarMegaMenuClose`. Waar je de `NavBarMegaMenuClose` in het paneel plaatst bepaal je zelf.
 
-De inhoud van het menu bepaal je zelf. `NavBar.MegaMenu.Tagline` en `NavBar.MegaMenu.Separator` zijn er voor de introductietekst, maar de kolommen en links styling je zelf, bijvoorbeeld met `rhc-grid` en `LinkList`:
+De inhoud van het menu bepaal je zelf. `NavBarMegaMenuTagline` en `NavBarMegaMenuSeparator` zijn er voor de introductietekst, maar de kolommen en links styling je zelf, bijvoorbeeld met `rhc-grid` en `LinkList`:
 
 ```tsx
 import { Heading, LinkList, LinkListLink, NavBar } from '@rijkshuisstijl-community/components-react';
 
 <NavBar aria-label="Overheid.nl">
-  <NavBar.Start>
-    <NavBar.Identity primary href="/">
+  <NavBarStart>
+    <NavBarIdentity primary href="/">
       Overheid.nl
-    </NavBar.Identity>
-    <NavBar.MegaMenu>
-      <NavBar.MegaMenu.Trigger target="onderwerpen">Kies een onderwerp of dienst</NavBar.MegaMenu.Trigger>
-      <NavBar.MegaMenu.Panel id="onderwerpen">
-        <NavBar.MegaMenu.Tagline>Ingang naar informatie en diensten van alle overheden</NavBar.MegaMenu.Tagline>
-        <NavBar.MegaMenu.Separator />
+    </NavBarIdentity>
+    <NavBarMegaMenu>
+      <NavBarMegaMenuTrigger target="onderwerpen">Kies een onderwerp of dienst</NavBarMegaMenuTrigger>
+      <NavBarMegaMenuPanel id="onderwerpen">
+        <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
+        <NavBarMegaMenuSeparator />
         <div className="rhc-grid">
           <div className="rhc-grid__cell rhc-grid__cell-d-3">
             <Heading appearanceLevel={5} level={3}>
@@ -111,10 +111,10 @@ import { Heading, LinkList, LinkListLink, NavBar } from '@rijkshuisstijl-communi
             </LinkList>
           </div>
         </div>
-        <NavBar.MegaMenu.Close target="onderwerpen" />
-      </NavBar.MegaMenu.Panel>
-    </NavBar.MegaMenu>
-  </NavBar.Start>
+        <NavBarMegaMenuClose target="onderwerpen" />
+      </NavBarMegaMenuPanel>
+    </NavBarMegaMenu>
+  </NavBarStart>
 </NavBar>;
 ```
 
@@ -124,21 +124,21 @@ import { Heading, LinkList, LinkListLink, NavBar } from '@rijkshuisstijl-communi
 
 | Prop          | Type      | Default            | Beschrijving                                           |
 | ------------- | --------- | ------------------ | ------------------------------------------------------ |
-| `children`    | ReactNode | -                  | `NavBar.Start` en/of `NavBar.End`.                     |
+| `children`    | ReactNode | -                  | `NavBarStart` en/of `NavBarEnd`.                       |
 | `aria-label`  | string    | `"Hoofdnavigatie"` | Toegankelijke naam van de navigatie.                   |
 | `toggleLabel` | string    | `"Menu"`           | Toegankelijke naam van de menuknop op smalle schermen. |
 | `className`   | string    | -                  | Extra CSS class names.                                 |
 
-### NavBar.Start / NavBar.End
+### NavBarStart / NavBarEnd
 
 Renderen een `<ul>` en accepteren alle attributen van een `<ul>`.
 
-| Prop        | Type      | Default | Beschrijving                                                       |
-| ----------- | --------- | ------- | ------------------------------------------------------------------ |
-| `children`  | ReactNode | -       | `NavBar.Identity`, `NavBar.Item`, `NavBar.MegaMenu` of een `<li>`. |
-| `className` | string    | -       | Extra CSS class names.                                             |
+| Prop        | Type      | Default | Beschrijving                                                    |
+| ----------- | --------- | ------- | --------------------------------------------------------------- |
+| `children`  | ReactNode | -       | `NavBarIdentity`, `NavBarItem`, `NavBarMegaMenu` of een `<li>`. |
+| `className` | string    | -       | Extra CSS class names.                                          |
 
-### NavBar.Item
+### NavBarItem
 
 | Prop          | Type         | Default   | Beschrijving                                          |
 | ------------- | ------------ | --------- | ----------------------------------------------------- |
@@ -149,7 +149,7 @@ Renderen een `<ul>` en accepteren alle attributen van een `<ul>`.
 | `currentPage` | boolean      | `false`   | Markeert de huidige pagina met `aria-current="page"`. |
 | `persistent`  | boolean      | `false`   | Blijft op smalle schermen zichtbaar in de balk.       |
 
-### NavBar.Identity
+### NavBarIdentity
 
 | Prop         | Type      | Default   | Beschrijving                                    |
 | ------------ | --------- | --------- | ----------------------------------------------- |
@@ -159,34 +159,34 @@ Renderen een `<ul>` en accepteren alle attributen van een `<ul>`.
 | `primary`    | boolean   | -         | Primary variant voor de hoofd navigatie         |
 | `persistent` | boolean   | `true`    | Blijft op smalle schermen zichtbaar in de balk. |
 
-### NavBar.MegaMenu
+### NavBarMegaMenu
 
 Rendert een `<li>` en accepteert alle attributen van een `<li>`. Bevat de `Trigger` en het `Panel`.
 
-### NavBar.MegaMenu.Trigger
+### NavBarMegaMenuTrigger
 
 | Prop       | Type      | Default   | Beschrijving                                                        |
 | ---------- | --------- | --------- | ------------------------------------------------------------------- |
-| `target`   | string    | verplicht | De `id` van het `NavBar.MegaMenu.Panel` dat opent.                  |
+| `target`   | string    | verplicht | De `id` van het `NavBarMegaMenuPanel` dat opent.                    |
 | `children` | ReactNode | -         | Tekst van de menuknop, bijvoorbeeld "Kies een onderwerp of dienst". |
 
-### NavBar.MegaMenu.Panel
+### NavBarMegaMenuPanel
 
 | Prop       | Type      | Default   | Beschrijving                                               |
 | ---------- | --------- | --------- | ---------------------------------------------------------- |
 | `id`       | string    | verplicht | Uniek id, waarnaar `target` van Trigger en Close verwijst. |
 | `children` | ReactNode | -         | De inhoud van het megamenu.                                |
 
-### NavBar.MegaMenu.Close
+### NavBarMegaMenuClose
 
 Een subtle `Button` die het paneel sluit. Alleen zichtbaar op brede schermen.
 
-| Prop       | Type      | Default           | Beschrijving                                       |
-| ---------- | --------- | ----------------- | -------------------------------------------------- |
-| `target`   | string    | verplicht         | De `id` van het `NavBar.MegaMenu.Panel` dat sluit. |
-| `children` | ReactNode | kruis + "Sluiten" | Inhoud van de knop.                                |
+| Prop       | Type      | Default           | Beschrijving                                     |
+| ---------- | --------- | ----------------- | ------------------------------------------------ |
+| `target`   | string    | verplicht         | De `id` van het `NavBarMegaMenuPanel` dat sluit. |
+| `children` | ReactNode | kruis + "Sluiten" | Inhoud van de knop.                              |
 
-### NavBar.MegaMenu.Tagline
+### NavBarMegaMenuTagline
 
 Optionele introductietekst boven de inhoud van het megamenu.
 
@@ -195,9 +195,9 @@ Optionele introductietekst boven de inhoud van het megamenu.
 | `children`  | ReactNode | -       | De introductietekst.   |
 | `className` | string    | -       | Extra CSS class names. |
 
-### NavBar.MegaMenu.Separator
+### NavBarMegaMenuSeparator
 
-Scheidingslijn, bijvoorbeeld tussen de `NavBar.MegaMenu.Tagline` en de rest van de inhoud.
+Scheidingslijn, bijvoorbeeld tussen de `NavBarMegaMenuTagline` en de rest van de inhoud.
 
 | Prop        | Type   | Default | Beschrijving           |
 | ----------- | ------ | ------- | ---------------------- |

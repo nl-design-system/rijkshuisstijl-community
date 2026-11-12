@@ -4,6 +4,7 @@
  */
 
 @use "mixin";
+@use "@rijkshuisstijl-community/visually-hidden-css/src/mixin" as visually-hidden;
 
 @forward "@rijkshuisstijl-community/link-css/dist/index.css";
 @forward "@rijkshuisstijl-community/heading-css/dist/index.css";
@@ -30,6 +31,13 @@
 
 .rhc-nav-bar__toggle {
   @include mixin.rhc-nav-bar__toggle;
+}
+
+// Toegankelijke naam van de menuknop en het label van een `iconOnly` item: alleen voor
+// screenreaders, zonder afhankelijk te zijn van de losse visually-hidden-css.
+.rhc-nav-bar__toggle-label,
+.rhc-nav-bar__label--sr-only {
+  @include visually-hidden.rhc-visually-hidden;
 }
 
 .rhc-nav-bar-identity {
