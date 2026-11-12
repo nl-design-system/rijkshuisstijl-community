@@ -3,26 +3,21 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Button } from '@rijkshuisstijl-community/button-react/no-side-effects';
+import { Button, ButtonProps } from '@rijkshuisstijl-community/button-react/no-side-effects';
 import { Icon } from '@rijkshuisstijl-community/icon-react/no-side-effects';
-import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
-import { Paragraph } from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
+import { LinkButton, LinkButtonProps } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
+import { Paragraph, ParagraphProps } from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 import { Separator, SeparatorProps } from '@rijkshuisstijl-community/separator-react/no-side-effects';
 import clsx from 'clsx';
-import { ComponentPropsWithRef, CSSProperties, HTMLAttributes, PropsWithChildren } from 'react';
+import { ComponentPropsWithRef, CSSProperties, PropsWithChildren } from 'react';
 
-export interface NavBarMegaMenuTriggerProps extends ComponentPropsWithRef<typeof LinkButton> {
-  id: string;
-}
-
-export const NavBarMegaMenuTrigger = ({ id, className, ...restProps }: NavBarMegaMenuTriggerProps) => (
+export const NavBarMegaMenuTrigger = ({ id, className, ...restProps }: LinkButtonProps) => (
   <LinkButton popoverTarget={`${id}-panel`} {...restProps} className={clsx('rhc-nav-bar__link', className)} />
 );
 
 NavBarMegaMenuTrigger.displayName = 'NavBarMegaMenuTrigger';
 
 export interface NavBarMegaMenuPanelProps extends ComponentPropsWithRef<'div'> {
-  id: string;
   onOpenChange?: (open: boolean) => void;
 }
 
@@ -58,13 +53,7 @@ export const NavBarMegaMenuPanel = ({
 
 NavBarMegaMenuPanel.displayName = 'NavBarMegaMenuPanel';
 
-export type NavBarMegaMenuTaglineProps = HTMLAttributes<HTMLParagraphElement>;
-
-export const NavBarMegaMenuTagline = ({
-  children,
-  className,
-  ...restProps
-}: PropsWithChildren<NavBarMegaMenuTaglineProps>) => (
+export const NavBarMegaMenuTagline = ({ children, className, ...restProps }: ParagraphProps) => (
   <Paragraph className={clsx('rhc-nav-bar__megamenu-tagline', className)} {...restProps}>
     {children}
   </Paragraph>
@@ -80,16 +69,7 @@ export const NavBarMegaMenuSeparator = ({ className, ...restProps }: NavBarMegaM
 
 NavBarMegaMenuSeparator.displayName = 'NavBarMegaMenuSeparator';
 
-export interface NavBarMegaMenuCloseProps extends HTMLAttributes<HTMLButtonElement> {
-  id: string;
-}
-
-export const NavBarMegaMenuClose = ({
-  id,
-  className,
-  children,
-  ...restProps
-}: PropsWithChildren<NavBarMegaMenuCloseProps>) => (
+export const NavBarMegaMenuClose = ({ id, className, children, ...restProps }: ButtonProps) => (
   <Button
     aria-label="Sluit menu"
     popoverTarget={`${id}-panel`}

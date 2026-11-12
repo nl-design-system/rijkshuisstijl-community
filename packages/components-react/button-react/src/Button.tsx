@@ -6,7 +6,6 @@ import {
   type ButtonHint,
   type ButtonPurpose,
   Button as CandidateButton,
-  type ButtonProps as CandidateButtonProps,
 } from '@nl-design-system-candidate/button-react';
 import { Icon, type RHCIconID } from '@rijkshuisstijl-community/icon-react';
 import clsx from 'clsx';
@@ -41,19 +40,11 @@ const PURPOSE_BY_APPEARANCE: Record<AppearanceValue, ButtonPurpose> = {
   'subtle-button': 'subtle',
 };
 
-export type ButtonProps = CandidateButtonProps & {
-  ref?: Ref<HTMLButtonElement>;
-  /**
-   * @deprecated Gebruik `purpose`. Deze property wordt vertaald naar de
-   * overeenkomstige `purpose` en verdwijnt in een volgende major versie.
-   */
-  appearance?: AppearanceValue;
-};
-
 /**
- * Interne, niet-onderscheiden variant van de candidate Button props, zodat de
- * wrapper `label` en `children` gecombineerd kan doorgeven. De publieke
- * `ButtonProps` behoudt de strikte candidate-typen.
+ * Niet-onderscheiden variant van de candidate Button props. De candidate typt
+ * `label` en `children` als een discriminated union; zodra een wrapper props
+ * destructureert en weer doorgeeft (`...restProps`) gaat die onderscheiding
+ * verloren. Deze type laat `label` en `children` daarom naast elkaar toe.
  */
 type RelaxedCandidateButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   busy?: boolean;
@@ -67,6 +58,15 @@ type RelaxedCandidateButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   pressed?: boolean;
   purpose?: ButtonPurpose;
   toggle?: boolean;
+};
+
+export type ButtonProps = RelaxedCandidateButtonProps & {
+  ref?: Ref<HTMLButtonElement>;
+  /**
+   * @deprecated Gebruik `purpose`. Deze property wordt vertaald naar de
+   * overeenkomstige `purpose` en verdwijnt in een volgende major versie.
+   */
+  appearance?: AppearanceValue;
 };
 
 const RelaxedCandidateButton = CandidateButton as ForwardRefExoticComponent<
