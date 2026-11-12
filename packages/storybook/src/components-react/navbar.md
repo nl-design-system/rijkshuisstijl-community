@@ -78,8 +78,6 @@ import { Icon, NavBar } from '@rijkshuisstijl-community/components-react';
 </NavBar>;
 ```
 
-De classes `rhc-nav-bar__item--button-on-mobile--secondary` en `rhc-nav-bar__item--button-on-mobile--primary` tonen een item op smalle schermen als knop, in plaats van als link.
-
 Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk, zeker als er meerdere balken op een pagina staan.
 
 ### Megamenu
