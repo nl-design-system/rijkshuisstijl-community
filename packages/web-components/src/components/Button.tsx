@@ -15,10 +15,19 @@ export class ButtonWebComponent extends BaseWebComponent {
   render(): void {
     if (!this.shadowRoot) return;
 
-    const { disabled, ...restProps } = this.props;
+    const { appearance, disabled, purpose, ...restProps } = this.props;
+
+    // eslint-disable-next-line sonarjs/deprecation
+    const normalizedAppearance = (appearance || undefined) as ButtonWebComponentAttributes['appearance'];
+    const normalizedPurpose = (purpose || undefined) as ButtonWebComponentAttributes['purpose'];
 
     render(
-      <Button disabled={(disabled === 'true') as ButtonWebComponentAttributes['disabled']} {...restProps}>
+      <Button
+        disabled={(disabled === 'true') as ButtonWebComponentAttributes['disabled']}
+        {...(normalizedAppearance ? { appearance: normalizedAppearance } : {})}
+        {...(normalizedPurpose ? { purpose: normalizedPurpose } : {})}
+        {...restProps}
+      >
         <slot />
       </Button>,
       this.shadowRoot,
