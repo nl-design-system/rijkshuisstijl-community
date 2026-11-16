@@ -85,7 +85,7 @@ describe('NavBar', () => {
     render(
       <NavBar>
         <NavBarStart>
-          <NavBarItem persistent href="#" id="item" label="Item" />
+          <NavBarItem persistOnSmallViewport href="#" id="item" label="Item" />
         </NavBarStart>
       </NavBar>,
     );

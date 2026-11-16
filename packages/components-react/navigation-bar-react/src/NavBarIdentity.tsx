@@ -10,8 +10,8 @@ import { PropsWithChildren } from 'react';
 export interface NavBarIdentityProps extends LinkProps {
   href: string;
   primary?: boolean;
-  /** Blijft op smalle schermen zichtbaar in de balk. Standaard `true`. */
-  persistent?: boolean;
+  /** Wordt verborgen op smalle schermen. Standaard `false`. */
+  hideOnSmallViewport?: boolean;
 }
 
 export const NavBarIdentity = ({
@@ -19,14 +19,14 @@ export const NavBarIdentity = ({
   className,
   href,
   primary,
-  persistent = true,
+  hideOnSmallViewport = false,
   ...restProps
 }: PropsWithChildren<NavBarIdentityProps>) => (
   <li
     className={clsx(
       'rhc-nav-bar__item',
       'rhc-nav-bar-identity',
-      persistent && 'rhc-nav-bar__item--persistent',
+      !hideOnSmallViewport && 'rhc-nav-bar__item--persistent',
       primary && 'rhc-nav-bar-identity--primary',
     )}
   >

@@ -33,7 +33,7 @@ De Navigation Bar is opnieuw opgezet. Je stelt de balk nu zelf samen uit losse o
 ```
 
 - `NavBarStart` en `NavBarEnd` zijn de twee kanten van de balk.
-- Op smalle schermen bundelt `NavBar` de items in een menu achter een menuknop. Met `persistent` blijft een item in de balk staan. `NavBarIdentity` is standaard `persistent`.
+- Op smalle schermen bundelt `NavBar` de items in een menu achter een menuknop. Met `persistOnSmallViewport` blijft een item in de balk staan. `NavBarIdentity` is standaard `persistent`, dit kan verborgen worden door `hideOnSmallViewport`.
 - Op smalle schermen staat de inhoud van een `NavBarMegaMenuPanel` direct in het menu.
 - `NavBarMegaMenuTrigger` en `NavBarMegaMenuClose` vinden het paneel via `target`, dat gelijk is aan de `id` van het paneel.
 - `toggleLabel` op `NavBar` geeft de menuknop zijn toegankelijke naam (standaard "Menu"). `aria-label` is standaard "Hoofdnavigatie".

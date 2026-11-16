@@ -11,7 +11,7 @@ import type { FocusEvent } from 'react';
  * tabt een gebruiker verder naar content die achter het open paneel ligt
  * (WCAG 2.4.11 Focus Not Obscured).
  */
-export const hidePopoverOnFocusOut = (event: FocusEvent<HTMLElement>) => {
+export const hidePopoverOnBlur = (event: FocusEvent<HTMLElement>) => {
   const popover = event.currentTarget;
   const next = event.relatedTarget;
 

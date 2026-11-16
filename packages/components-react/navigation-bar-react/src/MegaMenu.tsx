@@ -10,7 +10,7 @@ import { Paragraph, ParagraphProps } from '@rijkshuisstijl-community/paragraph-r
 import { Separator, SeparatorProps } from '@rijkshuisstijl-community/separator-react/no-side-effects';
 import clsx from 'clsx';
 import { ComponentPropsWithRef, FocusEvent, ReactNode } from 'react';
-import { hidePopoverOnFocusOut } from './hidePopoverOnFocusOut';
+import { hidePopoverOnBlur } from './hidePopoverOnBlur';
 
 /** `Omit` per lid van een union, zodat een discriminated union intact blijft. */
 type DistributiveOmit<T, K extends PropertyKey> = T extends unknown ? Omit<T, K> : never;
@@ -57,7 +57,7 @@ export const NavBarMegaMenuPanel = ({ id, className, children, onBlur, ...restPr
     popover="auto"
     onBlur={(event: FocusEvent<HTMLDivElement>) => {
       onBlur?.(event);
-      hidePopoverOnFocusOut(event);
+      hidePopoverOnBlur(event);
     }}
   >
     <div className="rhc-nav-bar__megamenu">{children}</div>

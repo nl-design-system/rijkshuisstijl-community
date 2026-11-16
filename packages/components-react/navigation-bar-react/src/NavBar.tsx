@@ -17,7 +17,7 @@ import {
   Ref,
   useId,
 } from 'react';
-import { hidePopoverOnFocusOut } from './hidePopoverOnFocusOut';
+import { hidePopoverOnBlur } from './hidePopoverOnBlur';
 
 export interface NavBarLinkProps {
   className?: string;
@@ -35,7 +35,7 @@ export interface NavBarItemProps extends NavBarLinkProps, HTMLAttributes<HTMLLIE
   id: string;
   ref?: Ref<HTMLLIElement>;
   /** Blijft op smalle schermen zichtbaar in de balk in plaats van in het menu. */
-  persistent?: boolean;
+  persistOnSmallViewport?: boolean;
 }
 
 export const NavBarItem = ({
@@ -49,13 +49,13 @@ export const NavBarItem = ({
   iconEnd,
   iconOnly = false,
   currentPage = false,
-  persistent = false,
+  persistOnSmallViewport = false,
   ...restProps
 }: PropsWithChildren<NavBarItemProps>) => (
   <li
     ref={ref}
     {...restProps}
-    className={clsx('rhc-nav-bar__item', persistent && 'rhc-nav-bar__item--persistent', className)}
+    className={clsx('rhc-nav-bar__item', persistOnSmallViewport && 'rhc-nav-bar__item--persistent', className)}
   >
     <Link
       aria-current={currentPage ? 'page' : undefined}
@@ -118,7 +118,7 @@ export const NavBar = ({
       style={{ '--rhc-nav-bar-anchor': `--${id}`, ...style } as CSSProperties}
       {...restProps}
     >
-      <div className="rhc-nav-bar__menu" id={menuId} popover="auto" onBlur={hidePopoverOnFocusOut}>
+      <div className="rhc-nav-bar__menu" id={menuId} popover="auto" onBlur={hidePopoverOnBlur}>
         {/* Eerst in de DOM, zodat Tab na het openen de items in gaat; CSS zet hem achteraan. */}
         <LinkButton className="rhc-nav-bar__toggle rhc-nav-bar__link" popoverTarget={menuId}>
           <Icon className="rhc-nav-bar__toggle-icon-open" icon="menu" />
