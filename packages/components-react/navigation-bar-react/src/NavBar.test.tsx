@@ -14,17 +14,7 @@ describe('NavBar', () => {
   });
 
   it('renders a nav bar item element', () => {
-    render(
-      <NavBar
-        items={[
-          {
-            id: 'test-item',
-            href: '#',
-            label: 'Test Item',
-          },
-        ]}
-      />,
-    );
+    render(<NavBar items={[<NavBarItem href="#" id="test-item" key="test-item" label="Test Item" />]} />);
 
     const navBarItem = screen.getByRole('link', {
       name: /test item/i,
@@ -44,14 +34,7 @@ describe('NavBar', () => {
   it('renders a nav bar item with a custom class', () => {
     render(
       <NavBar
-        items={[
-          {
-            id: 'test-item',
-            href: '#',
-            label: 'Test Item',
-            className: 'custom-class',
-          },
-        ]}
+        items={[<NavBarItem className="custom-class" href="#" id="test-item" key="test-item" label="Test Item" />]}
       />,
     );
     const navBarItem = screen.getByRole('listitem');
