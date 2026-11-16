@@ -1,6 +1,6 @@
 # Rijkshuisstijl Community Footer component
 
-Dit component is volledig ontwikkeld door de Rijkshuisstijl Community.
+Dit component is volledig ontwikkeld door de Rijkshuisstijl Community. demo commit voor de Footer component demo
 
 ## Beschrijving
 
