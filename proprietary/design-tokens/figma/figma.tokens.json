@@ -7688,36 +7688,6 @@
       }
     }
   },
-  "components/backdrop": {
-    "utrecht": {
-      "backdrop": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{basis.color.default-inverse.bg-document}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default-inverse.bg-document}"
-        },
-        "opacity": {
-          "$type": "opacity",
-          "$value": "0.7"
-        },
-        "fade-in": {
-          "animation-duration": {
-            "$type": "other",
-            "$value": "400ms"
-          }
-        },
-        "reduced-transparency": {
-          "opacity": {
-            "$type": "opacity",
-            "$value": "0.88"
-          }
-        }
-      }
-    }
-  },
   "components/blockquote": {
     "utrecht": {
       "blockquote": {
@@ -13548,13 +13518,13 @@
           },
           "min": {
             "font-size": {
-              "$type": "fontSizes",
-              "$value": "0.75rem",
               "$extensions": {
                 "nl.nldesignsystem.lint-ignore": {
                   "min-font-size": "This min-font-size is in accordance to the Rijkshuisstijl design."
                 }
-              }
+              },
+              "$type": "fontSizes",
+              "$value": "0.75rem"
             },
             "padding-block-start": {
               "$type": "dimension",
@@ -16122,6 +16092,36 @@
       }
     }
   },
+  "components/backdrop": {
+    "utrecht": {
+      "backdrop": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.color.default-inverse.bg-document}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.default-inverse.bg-document}"
+        },
+        "opacity": {
+          "$type": "opacity",
+          "$value": "0.7"
+        },
+        "fade-in": {
+          "animation-duration": {
+            "$type": "other",
+            "$value": "400ms"
+          }
+        },
+        "reduced-transparency": {
+          "opacity": {
+            "$type": "opacity",
+            "$value": "0.88"
+          }
+        }
+      }
+    }
+  },
   "viewport/min": {
     "rhc": {
       "logo": {
@@ -16313,7 +16313,6 @@
         "components/action-group": "source",
         "components/alert": "source",
         "components/article": "source",
-        "components/backdrop/utrecht": "source",
         "components/blockquote": "source",
         "components/breadcrumb": "source",
         "components/button/nl-base": "source",
@@ -16419,7 +16418,6 @@
       "components/action-group",
       "components/alert",
       "components/article",
-      "components/backdrop/utrecht",
       "components/blockquote",
       "components/breadcrumb",
       "components/button/utrecht-base",
@@ -16497,6 +16495,7 @@
       "components/textarea",
       "components/toggletip",
       "components/unordered-list",
+      "components/backdrop",
       "viewport/min"
     ]
   }
