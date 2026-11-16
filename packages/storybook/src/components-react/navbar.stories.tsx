@@ -1,11 +1,4 @@
-import {
-  Icon,
-  NavBar,
-  NavBarIdentity,
-  NavBarItem,
-  type NavBarItemProps,
-  NavBarMegaMenu,
-} from '@rijkshuisstijl-community/components-react';
+import { Icon, NavBar, NavBarIdentity, NavBarItem, NavBarMegaMenu } from '@rijkshuisstijl-community/components-react';
 import { mergeMarkdown } from '@rijkshuisstijl-community/storybook-tooling/markdownUtils';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from './navbar.md?raw';
@@ -30,10 +23,10 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const items: NavBarItemProps[] = [
-  { id: 'first-link', label: 'Link', href: '/' },
-  { id: 'second-link', label: 'Link', href: '/' },
-  { id: 'third-link', label: 'Link', href: '/' },
+const items = [
+  <NavBarItem href="/" id="first-link" key="first-link" label="Link" />,
+  <NavBarItem href="/" id="second-link" key="second-link" label="Link" />,
+  <NavBarItem href="/" id="third-link" key="third-link" label="Link" />,
 ];
 
 const endItems = [
@@ -58,15 +51,15 @@ export const WithEndItems: Story = {
 
 export const WithCurrentPage: Story = {
   args: {
-    items: [{ ...items[0], currentPage: true }, ...items.slice(1)],
+    items: [<NavBarItem currentPage href="/" id="first-link" key="first-link" label="Link" />, ...items.slice(1)],
   },
 };
 
 export const WithIcons: Story = {
   args: {
     items: [
-      { id: 'search', label: 'Zoeken', href: '/', icon: <Icon icon="zoek" /> },
-      { id: 'login', label: 'Inloggen', href: '/', icon: <Icon icon="inloggen" />, iconOnly: true },
+      <NavBarItem href="/" icon={<Icon icon="zoek" />} id="search" key="search" label="Zoeken" />,
+      <NavBarItem iconOnly href="/" icon={<Icon icon="inloggen" />} id="login" key="login" label="Inloggen" />,
     ],
   },
 };
@@ -74,12 +67,13 @@ export const WithIcons: Story = {
 export const WithSubList: Story = {
   args: {
     items: [
-      {
-        id: 'topics',
-        label: 'Onderwerpen',
-        href: '/',
-        contentId: 'topics',
-        subList: {
+      <NavBarItem
+        contentId="topics"
+        href="/"
+        id="topics"
+        key="topics"
+        label="Onderwerpen"
+        subList={{
           sections: [
             {
               id: 'section-a',
@@ -90,8 +84,8 @@ export const WithSubList: Story = {
               ],
             },
           ],
-        },
-      },
+        }}
+      />,
     ],
   },
 };

@@ -16,12 +16,12 @@ import { NavBarLink } from './NavBarLink';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {
   identity?: ReactNode;
-  items?: NavBarItemProps[];
+  items?: ReactNode;
   endItems?: ReactNode;
   megamenu?: ReactNode;
   ref?: Ref<HTMLDivElement>;
 }
-//tijdelijke hernoeming
+// Heette eerst NavBarLinkProps. Hernoemd, omdat die naam nu bij de component NavBarLink hoort.
 export interface NavBarLinkData {
   className?: string;
   id: string;
@@ -104,7 +104,7 @@ export const NavBarItem = ({
         </LinkButton>
       ) : (
         <NavBarLink current={currentPage} href={href} icon={icon} iconEnd={iconEnd} iconOnly={iconOnly} target={target}>
-          {label}{' '}
+          {label}
         </NavBarLink>
       )}
       {subList && isItemOpen && (
@@ -303,11 +303,7 @@ export const NavBar = ({
             {items && (
               <div className="rhc-nav-bar__slot rhc-nav-bar__slot--primary" ref={itemsSlotRef}>
                 <nav aria-label="primary-navigation" className={clsx('rhc-nav-bar__nav', className)}>
-                  <ul className="rhc-nav-bar__list">
-                    {items.map((item) => (
-                      <NavBarItem key={item.id} {...item} />
-                    ))}
-                  </ul>
+                  <ul className="rhc-nav-bar__list">{items}</ul>
                 </nav>
               </div>
             )}
@@ -345,11 +341,7 @@ export const NavBar = ({
             {items && (
               <div className="rhc-nav-bar__slot">
                 <nav aria-label="primary-navigation-mobile" className={clsx('rhc-nav-bar__nav', className)}>
-                  <ul className="rhc-nav-bar__list">
-                    {items.map((item) => (
-                      <NavBarItem key={item.id} {...item} />
-                    ))}
-                  </ul>
+                  <ul className="rhc-nav-bar__list">{items}</ul>
                 </nav>
               </div>
             )}

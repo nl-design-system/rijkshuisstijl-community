@@ -51,34 +51,17 @@ const endItemsSecondary = [
   },
 ].map((endItem) => <NavBarItem key={endItem.id} {...endItem} />);
 
-const itemsMain = [
-  {
-    href: '/',
-    id: 'data',
-    label: 'Data',
-  },
-  {
-    href: '/',
-    id: 'impact',
-    label: 'Impact',
-  },
-  {
-    href: '/',
-    currentPage: true,
-    id: 'Voorbeeldpagina',
-    label: 'Voorbeeldpagina',
-  },
-  {
-    href: '/',
-    id: 'Actueel',
-    label: 'Actueel',
-  },
-  {
-    href: '/',
-    id: 'Support',
-    label: 'Support',
-  },
-];
+const itemsMain = (
+  <>
+    <NavBarItem href="/" id="Data" label="Data" />
+    <NavBarItem href="/" id="Impact" label="Impact" />
+    <NavBarItem currentPage href="/" id="Voorbeeldpagina" label="Voorbeeldpagina" />
+    <NavBarItem href="/" id="Actueel" label="Actueel" />
+    <NavBarItem href="/" id="Support" label="Support" />
+  </>
+);
+
+<NavBar items={itemsMain} />;
 
 const megamenu = (
   <NavBarMegaMenu
@@ -199,10 +182,16 @@ export function SharedHeader() {
           <Icon className={'dutch-map'} icon={'nederland-map'} />
         </Logo>
         <NavBar
-          items={items}
           endItems={
             <>
               {endItems.map((item) => (
+                <NavBarItem {...item} key={item.id} />
+              ))}
+            </>
+          }
+          items={
+            <>
+              {items.map((item) => (
                 <NavBarItem {...item} key={item.id} />
               ))}
             </>
