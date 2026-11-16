@@ -1,0 +1,29 @@
+{%- set classes = ['utrecht-checkbox utrecht-checkbox--html-input utrecht-checkbox--custom rhc-checkbox'] -%}
+
+{%- if value is defined -%}{%- set attributes = attributes.setAttribute('value', value) -%}{%- endif -%}
+
+{%- if ariaLabel is defined -%}{%- set attributes = attributes.setAttribute('aria-label', ariaLabel) -%}{%- endif -%}
+
+{%- if disabled -%}
+  {%- set attributes = attributes.setAttribute('disabled', true) -%}
+  {%- set classes = classes|merge(['utrecht-checkbox--disabled']) -%}
+{%- endif -%}
+{%- if invalid -%}
+  {%- set classes = classes|merge(['utrecht-checkbox--invalid']) -%}
+  {%- set attributes = attributes
+    .setAttribute('aria-invalid', 'true') -%}
+{%- endif -%}
+
+{%- if checked -%}{%- set attributes = attributes.setAttribute('checked', 'true') -%}{%- endif -%}
+
+{%- if indeterminate -%}
+  {%- set classes = classes|merge(['utrecht-checkbox--indeterminate']) -%}
+  {%- set attributes = attributes
+    .setAttribute('aria-checked', 'mixed') -%}
+{%- endif -%}
+
+{%- if className  -%}
+  {%- set classes = classes|merge([className]) -%}
+{%- endif -%}
+
+<input {{ attributes.addClass(classes) }} type="checkbox">
