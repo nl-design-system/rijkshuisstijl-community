@@ -14376,6 +14376,26 @@
             "$type": "fontSizes",
             "$value": "{basis.text.font-size.xl}"
           }
+        },
+        "identity": {
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{rhc.text.font-size.xl}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{rhc.text.line-height.md}"
+          },
+          "margin-block-start": {
+            "$type": "dimension",
+            "$value": "{rhc.space.none}",
+            "$description": "[code-only]"
+          },
+          "margin-block-end": {
+            "$type": "dimension",
+            "$value": "{rhc.space.md}",
+            "$description": "[code-only]"
+          }
         }
       }
     }
@@ -16293,6 +16313,7 @@
         "components/action-group": "source",
         "components/alert": "source",
         "components/article": "source",
+        "components/backdrop/utrecht": "source",
         "components/blockquote": "source",
         "components/breadcrumb": "source",
         "components/button/nl-base": "source",
@@ -16362,8 +16383,7 @@
         "components/textarea": "source",
         "components/toggletip": "source",
         "components/unordered-list": "source",
-        "common/basis": "enabled",
-        "components/backdrop/utrecht": "source"
+        "common/basis": "enabled"
       },
       "$figmaVariableReferences": {},
       "group": "Components"
@@ -16400,7 +16420,6 @@
       "components/alert",
       "components/article",
       "components/backdrop/utrecht",
-      "components/backdrop/rhc",
       "components/blockquote",
       "components/breadcrumb",
       "components/button/utrecht-base",
