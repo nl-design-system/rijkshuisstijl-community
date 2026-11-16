@@ -39,7 +39,7 @@ De Navigation Bar is de hoofdnavigatie van een pagina. De onderdelen, zoals `Nav
 
 Op smalle schermen toont de balk alleen de identity en de menuknop. De menuknop opent een paneel met alle andere items. De inhoud van een `NavBarMegaMenu` staat daar direct in het paneel; de knop van het megamenu wordt dan niet getoond.
 
-Wil je een item ook op smalle schermen in de balk houden, geef het dan de prop `persistent`. `NavBarIdentity` is standaard `persistent`.
+Wil je een item ook op smalle schermen in de balk houden, geef het dan de prop `persistOnSmallViewport`. `NavBarIdentity` is standaard `persistent`, dit kan verborgen worden door `hideOnSmallViewport`.
 
 Het menu en het megamenu gebruiken de native Popover API. Ze sluiten via de `Escape`-toets of door ernaast te klikken, en de focus gaat terug naar de knop. Daarnaast sluiten ze als de toetsenbordfocus het paneel verlaat, zodat de focus nooit achter een open paneel verdwijnt.
 
@@ -140,24 +140,24 @@ Renderen een `<ul>` en accepteren alle attributen van een `<ul>`.
 
 ### NavBarItem
 
-| Prop          | Type         | Default   | Beschrijving                                          |
-| ------------- | ------------ | --------- | ----------------------------------------------------- |
-| `id`          | string       | verplicht | Unieke id van het item.                               |
-| `label`       | ReactNode    | verplicht | De tekst van de link.                                 |
-| `href`        | string       | verplicht | De url van de link.                                   |
-| `icon`        | ReactElement | -         | Icoon voor de tekst.                                  |
-| `currentPage` | boolean      | `false`   | Markeert de huidige pagina met `aria-current="page"`. |
-| `persistent`  | boolean      | `false`   | Blijft op smalle schermen zichtbaar in de balk.       |
+| Prop                     | Type         | Default   | Beschrijving                                          |
+| ------------------------ | ------------ | --------- | ----------------------------------------------------- |
+| `id`                     | string       | verplicht | Unieke id van het item.                               |
+| `label`                  | ReactNode    | verplicht | De tekst van de link.                                 |
+| `href`                   | string       | verplicht | De url van de link.                                   |
+| `icon`                   | ReactElement | -         | Icoon voor de tekst.                                  |
+| `currentPage`            | boolean      | `false`   | Markeert de huidige pagina met `aria-current="page"`. |
+| `persistOnSmallViewport` | boolean      | `false`   | Blijft op smalle schermen zichtbaar in de balk.       |
 
 ### NavBarIdentity
 
-| Prop         | Type      | Default   | Beschrijving                                    |
-| ------------ | --------- | --------- | ----------------------------------------------- |
-| `href`       | string    | verplicht | De URL waar de identity naartoe linkt.          |
-| `children`   | ReactNode | verplicht | De naam of titel van de site.                   |
-| `className`  | string    | -         | Extra CSS class names.                          |
-| `primary`    | boolean   | -         | Primary variant voor de hoofd navigatie         |
-| `persistent` | boolean   | `true`    | Blijft op smalle schermen zichtbaar in de balk. |
+| Prop                  | Type      | Default   | Beschrijving                            |
+| --------------------- | --------- | --------- | --------------------------------------- |
+| `href`                | string    | verplicht | De URL waar de identity naartoe linkt.  |
+| `children`            | ReactNode | verplicht | De naam of titel van de site.           |
+| `className`           | string    | -         | Extra CSS class names.                  |
+| `primary`             | boolean   | -         | Primary variant voor de hoofd navigatie |
+| `hideOnSmallViewport` | boolean   | `false`   | Wordt verborgen op smalle schermen.     |
 
 ### NavBarMegaMenu
 
