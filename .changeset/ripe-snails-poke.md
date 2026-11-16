@@ -2,4 +2,4 @@
 '@rijkshuisstijl-community/design-tokens': patch
 ---
 
-chore: replace `rhc.size.icon.*` with `basis.size.icon.*`
+Replace references to `rhc.size.icon.*` with `basis.size.icon.*` which has the value `rhc.size.icon.*`
