@@ -2,7 +2,7 @@
 
 # Rijkshuisstijl Community Nav Bar component
 
-De Navigation Bar is de hoofdnavigatie van een pagina. Je geeft de links als data mee en de component bouwt de lijst op. Voor een uitklapbaar menu met kolommen gebruik je de prop `megamenu`.
+De Navigation Bar is de hoofdnavigatie van een pagina. Je geeft de links mee als `NavBarItem`-elementen en de component zet ze in de lijst. Voor een uitklapbaar menu met kolommen gebruik je de prop `megamenu`.
 
 ## Anatomie
 
@@ -21,12 +21,12 @@ Op smalle schermen klapt de balk in achter een menuknop.
 ### Eenvoudig voorbeeld
 
 ```tsx
-import { NavBar } from '@rijkshuisstijl-community/components-react';
+import { NavBar, NavBarItem } from '@rijkshuisstijl-community/components-react';
 
 const items = [
-  { id: 'home', label: 'Home', href: '/' },
-  { id: 'nieuws', label: 'Nieuws', href: '/nieuws' },
-  { id: 'contact', label: 'Contact', href: '/contact' },
+  <NavBarItem href="/" id="home" key="home" label="Home" />,
+  <NavBarItem href="/nieuws" id="nieuws" key="nieuws" label="Nieuws" />,
+  <NavBarItem href="/contact" id="contact" key="contact" label="Contact" />,
 ];
 
 <NavBar items={items} />;
@@ -34,19 +34,19 @@ const items = [
 
 ### Uitgebreid voorbeeld
 
-Gebruik `NavBarIdentity` als child voor de sitenaam, `currentPage` voor de huidige pagina, en `endItems` voor extra items zoals zoeken of inloggen.
+Gebruik `NavBarIdentity` voor de sitenaam en geef die mee via de prop `identity`. Gebruik `currentPage` voor de huidige pagina en `endItems` voor extra items zoals zoeken of inloggen.
 
 ```tsx
 import { Icon, NavBar, NavBarIdentity, NavBarItem } from '@rijkshuisstijl-community/components-react';
 
 const items = [
-  { id: 'home', label: 'Home', href: '/', currentPage: true },
-  { id: 'nieuws', label: 'Nieuws', href: '/nieuws' },
+  <NavBarItem currentPage href="/" id="home" key="home" label="Home" />,
+  <NavBarItem href="/nieuws" id="nieuws" key="nieuws" label="Nieuws" />,
 ];
 
 const endItems = [<NavBarItem href="/zoeken" icon={<Icon icon="zoek" />} id="zoeken" key="zoeken" label="Zoeken" />];
 
-const Identity = (<NavBarIdentity href="/">Dataregister</NavBarIdentity>)
+const identity = <NavBarIdentity href="/">Dataregister</NavBarIdentity>;
 
 <NavBar endItems={endItems} identity={identity} items={items} />;
 ```
@@ -61,13 +61,13 @@ Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk.
 
 ### NavBar
 
-| Prop        | Type              | Default | Beschrijving                                              |
-| ----------- | ----------------- | ------- | --------------------------------------------------------- |
-| `identity`  | ReactNode         | -       | Een NavBarIdentity, getoond aan het begin van de balk.    |
-| `items`     | NavBarItemProps[] | -       | De links in het hoofdgedeelte.                            |
-| `endItems`  | ReactNode         | -       | `NavBarItem`-elementen aan het einde van de balk(`<ul>`). |
-| `megamenu`  | ReactNode         | -       | Een `NavBarMegaMenu` dat opent via een menuknop.          |
-| `className` | string            | -       | Extra CSS class names.                                    |
+| Prop        | Type      | Default | Beschrijving                                             |
+| ----------- | --------- | ------- | -------------------------------------------------------- |
+| `identity`  | ReactNode | -       | Een NavBarIdentity, getoond aan het begin van de balk.   |
+| `items`     | ReactNode | -       | `NavBarItem`-elementen in het hoofdgedeelte van de balk. |
+| `endItems`  | ReactNode | -       | `NavBarItem`-elementen aan het einde van de balk.        |
+| `megamenu`  | ReactNode | -       | Een `NavBarMegaMenu` dat opent via een menuknop.         |
+| `className` | string    | -       | Extra CSS class names.                                   |
 
 ### NavBarItem
 
@@ -77,6 +77,9 @@ Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk.
 | `label`       | ReactNode      | verplicht | De tekst van de link.                                         |
 | `href`        | string         | verplicht | De url van de link.                                           |
 | `icon`        | ReactElement   | -         | Icoon voor de tekst.                                          |
+| `iconEnd`     | ReactElement   | -         | Icoon na de tekst.                                            |
+| `iconOnly`    | boolean        | `false`   | Toont alleen het icoon; de tekst blijft voor schermlezers.    |
+| `target`      | string         | -         | Waar de link opent, bijvoorbeeld `_blank`.                    |
 | `currentPage` | boolean        | `false`   | Markeert de huidige pagina met `aria-current="page"`.         |
 | `subList`     | `{ sections }` | -         | Uitklapgedeelte met secties.                                  |
 | `contentId`   | string         | `1`       | Id voor de sublijst. Maak deze uniek bij meerdere sublijsten. |
@@ -101,3 +104,4 @@ Gebruik een duidelijke `aria-label` die past bij de inhoud van elke balk.
 | `iconEnd`   | ReactElement | -         | Icoon na de tekst.                                         |
 | `iconOnly`  | boolean      | `false`   | Toont alleen het icoon; de tekst blijft voor schermlezers. |
 | `className` | string       | -         | Extra CSS class names.                                     |
+| `target`    | string       | -         | Waar de link opent, bijvoorbeeld `_blank`.                 |

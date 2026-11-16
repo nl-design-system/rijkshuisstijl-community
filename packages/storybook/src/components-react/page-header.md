@@ -18,11 +18,11 @@ De Page Header bestaat uit de volgende onderdelen:
 ### Eenvoudig voorbeeld
 
 ```tsx
-import { Logo, NavBar, NavBarIdentity, PageHeader } from '@rijkshuisstijl-community/components-react';
+import { Logo, NavBar, NavBarIdentity, NavBarItem, PageHeader } from '@rijkshuisstijl-community/components-react';
 
 const items = [
-  { id: 'home', label: 'Home', href: '/' },
-  { id: 'contact', label: 'Contact', href: '/' },
+  <NavBarItem href="/" id="home" key="home" label="Home" />,
+  <NavBarItem href="/" id="contact" key="contact" label="Contact" />,
 ];
 
 <PageHeader>
@@ -52,13 +52,14 @@ import {
   Logo,
   NavBar,
   NavBarIdentity,
+  NavBarItem,
   NavBarMegaMenu,
   PageHeader,
 } from '@rijkshuisstijl-community/components-react';
 
 const itemsMain = [
-  { id: 'data', label: 'Data', href: '/' },
-  { id: 'impact', label: 'Impact', href: '/' },
+  <NavBarItem href="/" id="data" key="data" label="Data" />,
+  <NavBarItem href="/" id="impact" key="impact" label="Impact" />,
 ];
 
 const megamenu = (
