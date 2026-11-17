@@ -5,7 +5,6 @@
 
 import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react/no-side-effects';
 import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
-import { Link } from '@rijkshuisstijl-community/link-react/no-side-effects';
 import clsx from 'clsx';
 import {
   ComponentPropsWithRef,
@@ -17,9 +16,10 @@ import {
   Ref,
   useId,
 } from 'react';
+import { NavBarLink } from './NavBarLink';
 import { hidePopoverOnBlur } from './hidePopoverOnBlur';
 
-export interface NavBarLinkProps {
+export interface NavBarLinkData {
   className?: string;
   id: string;
   label: ReactNode;
@@ -27,7 +27,7 @@ export interface NavBarLinkProps {
   target?: string;
 }
 
-export interface NavBarItemProps extends NavBarLinkProps, HTMLAttributes<HTMLLIElement> {
+export interface NavBarItemProps extends NavBarLinkData, HTMLAttributes<HTMLLIElement> {
   icon?: ReactElement<IconProps>;
   iconEnd?: ReactElement<IconProps>;
   iconOnly?: boolean;
@@ -57,16 +57,17 @@ export const NavBarItem = ({
     {...restProps}
     className={clsx('rhc-nav-bar__item', persistOnSmallViewport && 'rhc-nav-bar__item--persistent', className)}
   >
-    <Link
+    <NavBarLink
       aria-current={currentPage ? 'page' : undefined}
       className={clsx('rhc-nav-bar__link')}
       href={href}
+      icon={icon}
+      iconEnd={iconEnd}
+      iconOnly={iconOnly}
       target={target}
     >
-      {icon}
-      <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__label--sr-only')}>{label}</span>
-      {iconEnd}
-    </Link>
+      {label}
+    </NavBarLink>
     {children}
   </li>
 );

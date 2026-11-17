@@ -48,7 +48,7 @@ Het menu en het megamenu gebruiken de native Popover API. Ze sluiten via de `Esc
 ### Eenvoudig voorbeeld
 
 ```tsx
-import { NavBar } from '@rijkshuisstijl-community/components-react';
+import { NavBar, NavBarItem } from '@rijkshuisstijl-community/components-react';
 
 <NavBar>
   <NavBarStart>
@@ -202,3 +202,16 @@ Scheidingslijn, bijvoorbeeld tussen de `NavBarMegaMenuTagline` en de rest van de
 | Prop        | Type   | Default | Beschrijving           |
 | ----------- | ------ | ------- | ---------------------- |
 | `className` | string | -       | Extra CSS class names. |
+
+### NavBarLink
+
+| Prop        | Type         | Default   | Beschrijving                                               |
+| ----------- | ------------ | --------- | ---------------------------------------------------------- |
+| `href`      | string       | verplicht | De url van de link.                                        |
+| `children`  | ReactNode    | verplicht | De tekst van de link.                                      |
+| `current`   | boolean      | `false`   | Markeert de huidige pagina met `aria-current="page"`.      |
+| `icon`      | ReactElement | -         | Icoon voor de tekst.                                       |
+| `iconEnd`   | ReactElement | -         | Icoon na de tekst.                                         |
+| `iconOnly`  | boolean      | `false`   | Toont alleen het icoon; de tekst blijft voor schermlezers. |
+| `className` | string       | -         | Extra CSS class names.                                     |
+| `target`    | string       | -         | Waar de link opent, bijvoorbeeld `_blank`.                 |

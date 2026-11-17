@@ -62,34 +62,15 @@ const endItemsSecondary = [
   },
 ].map((endItem) => <NavBarItem key={endItem.id} {...endItem} />);
 
-const itemsMain = [
-  {
-    href: '/',
-    id: 'data',
-    label: 'Data',
-  },
-  {
-    href: '/',
-    id: 'impact',
-    label: 'Impact',
-  },
-  {
-    href: '/',
-    currentPage: true,
-    id: 'Voorbeeldpagina',
-    label: 'Voorbeeldpagina',
-  },
-  {
-    href: '/',
-    id: 'Actueel',
-    label: 'Actueel',
-  },
-  {
-    href: '/',
-    id: 'Support',
-    label: 'Support',
-  },
-];
+const itemsMain = (
+  <>
+    <NavBarItem href="/" id="Data" label="Data" />
+    <NavBarItem href="/" id="Impact" label="Impact" />
+    <NavBarItem currentPage href="/" id="Voorbeeldpagina" label="Voorbeeldpagina" />
+    <NavBarItem href="/" id="Actueel" label="Actueel" />
+    <NavBarItem href="/" id="Support" label="Support" />
+  </>
+);
 
 const megamenuColumns = [
   {
@@ -172,9 +153,7 @@ export const SharedHeaderOverheidNl = () => (
         <NavBar aria-label="Dataregister">
           <NavBarStart>
             <NavBarIdentity href="/">Dataregister</NavBarIdentity>
-            {itemsMain.map((item) => (
-              <NavBarItem key={item.id} {...item} />
-            ))}
+            {itemsMain}
           </NavBarStart>
           <NavBarEnd>{endItemsSecondary}</NavBarEnd>
         </NavBar>

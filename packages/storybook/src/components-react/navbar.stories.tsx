@@ -124,7 +124,6 @@ export const WithMegaMenu: Story = {
                   </LinkList>
                 </div>
               </div>
-
               <NavBarMegaMenuClose target="onderwerpen" />
             </NavBarMegaMenuPanel>
           </NavBarMegaMenu>
