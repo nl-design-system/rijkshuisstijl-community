@@ -19,6 +19,7 @@ import {
   NavBarMegaMenuTrigger,
   NavBarStart,
   PageHeader,
+  Separator,
   SkipLink,
 } from '@rijkshuisstijl-community/components-react';
 import './header-overheid-nl.css';
@@ -150,6 +151,9 @@ export const SharedHeaderOverheidNl = () => (
           </NavBarStart>
           <NavBarEnd>{endItemsPrimary}</NavBarEnd>
         </NavBar>
+        <div>
+          <Separator className="overheid-nl-nav-bar__separator"></Separator>
+        </div>
         <NavBar aria-label="Dataregister">
           <NavBarStart>
             <NavBarIdentity href="/">Dataregister</NavBarIdentity>
