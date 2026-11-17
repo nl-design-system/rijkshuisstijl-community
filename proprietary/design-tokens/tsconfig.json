@@ -4,11 +4,12 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "noEmit": true,
-    "target": "ES2022",
+    "allowJs": true,
+    "target": "esnext",
     "types": ["node"],
     "allowImportingTsExtensions": true,
     "skipLibCheck": true
   },
-  "include": ["**/*.mts", "**/*.ts"],
+  "include": ["**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

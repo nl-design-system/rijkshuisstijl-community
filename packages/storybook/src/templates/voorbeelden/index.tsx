@@ -11,7 +11,6 @@ import {
   LinkListLink,
   Paragraph,
   Separator,
-  SubNavBar,
 } from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
 import SharedDisclaimer from '../shared/disclaimer';
@@ -45,30 +44,6 @@ export default function Details() {
             </LinkListLink>
           </LinkListCard>
         </Hero>
-        <SubNavBar
-          className="rhc-subnavbar-details-template"
-          columns={[
-            [
-              {
-                href: '#',
-                label: 'Regels voor rijtijden en rusttijden bij wegvervoer',
-                id: 'regels-rijtijden',
-              },
-              {
-                href: '#',
-                label: 'Vraag en antwoord',
-                id: 'vraag-antwoord',
-              },
-            ],
-            [
-              {
-                href: '#',
-                label: 'Documenten',
-                id: 'documenten',
-              },
-            ],
-          ]}
-        />
         <SharedMainPageContent>
           <SharedDisclaimer />
           <Article>

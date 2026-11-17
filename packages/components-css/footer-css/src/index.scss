@@ -4,15 +4,20 @@
  */
 
 .rhc-page-footer {
+  /* Links follow the footer color. Set the link variables instead of `color` on the links,
+     so the result does not depend on the order in which the link and footer CSS are loaded. */
+  --_rhc-page-footer-link-color: var(--rhc-page-footer-color);
+  --nl-link-active-color: var(--_rhc-page-footer-link-color);
+  --nl-link-color: var(--_rhc-page-footer-link-color);
+  --nl-link-hover-color: var(--_rhc-page-footer-link-color);
+  --utrecht-link-active-color: var(--_rhc-page-footer-link-color);
+  --utrecht-link-color: var(--_rhc-page-footer-link-color);
+  --utrecht-link-focus-color: var(--_rhc-page-footer-link-color);
+  --utrecht-link-hover-color: var(--_rhc-page-footer-link-color);
+  --utrecht-link-visited-color: var(--_rhc-page-footer-link-color);
+
   background-color: var(--rhc-page-footer-background-color);
   color: var(--rhc-page-footer-color);
-
-  .rhc-link,
-  .utrecht-link-list__link {
-    --nl-link-color: var(--rhc-page-footer-color);
-
-    color: var(--rhc-page-footer-color);
-  }
 
   .rhc-heading {
     color: currentColor;
@@ -37,8 +42,6 @@
   }
 
   &__secondary {
-    --nl-link-color: var(--rhc-page-footer-color);
-
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -70,7 +73,7 @@
     flex-wrap: wrap;
     row-gap: var(--rhc-page-footer-navigation-bar-row-gap);
 
-    .nl-link.rhc-link {
+    .rhc-link.nl-link:any-link {
       align-items: center;
       min-block-size: var(--rhc-page-footer-navigation-bar-link-min-block-size);
       text-decoration-line: var(--rhc-page-footer-navigation-bar-link-text-decoration-line);
@@ -85,13 +88,10 @@
   }
 
   &--compact {
+    --_rhc-page-footer-link-color: var(--rhc-page-footer-compact-color);
+
     background-color: var(--rhc-page-footer-compact-background-color);
     color: var(--rhc-page-footer-compact-color);
-
-    & .rhc-link,
-    & .utrecht-link-list__link {
-      color: var(--rhc-page-footer-compact-color);
-    }
 
     .rhc-page-footer__tagline {
       align-self: center;

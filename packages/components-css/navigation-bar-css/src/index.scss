@@ -4,6 +4,7 @@
  */
 
 @use "mixin";
+@use "@rijkshuisstijl-community/visually-hidden-css/src/mixin" as visually-hidden;
 
 @forward "@rijkshuisstijl-community/link-css/dist/index.css";
 @forward "@rijkshuisstijl-community/heading-css/dist/index.css";
@@ -12,12 +13,31 @@
   @include mixin.rhc-nav-bar;
 }
 
-.rhc-nav-bar__shade {
-  @include mixin.rhc-nav-bar__shade;
+.rhc-nav-bar__menu {
+  @include mixin.rhc-nav-bar__menu;
 }
 
-.rhc-nav-bar__slot {
-  @include mixin.rhc-nav-bar__slot;
+.rhc-nav-bar__list {
+  @include mixin.rhc-nav-bar__list;
+}
+
+.rhc-nav-bar__list--end {
+  @include mixin.rhc-nav-bar__list--end;
+}
+
+.rhc-nav-bar__link {
+  @include mixin.rhc-nav-bar__link;
+}
+
+.rhc-nav-bar__toggle {
+  @include mixin.rhc-nav-bar__toggle;
+}
+
+// Toegankelijke naam van de menuknop en het label van een `iconOnly` item: alleen voor
+// screenreaders, zonder afhankelijk te zijn van de losse visually-hidden-css.
+.rhc-nav-bar__toggle-label,
+.rhc-nav-bar__label--sr-only {
+  @include visually-hidden.rhc-visually-hidden;
 }
 
 .rhc-nav-bar-identity {
@@ -28,40 +48,24 @@
   @include mixin.rhc-nav-bar-identity__link;
 }
 
-.rhc-nav-bar__slot-main {
-  @include mixin.rhc-nav-bar__slot-main;
+.rhc-nav-bar__megamenu-item {
+  @include mixin.rhc-nav-bar__megamenu-item;
 }
 
-.rhc-nav-bar__slot-main__btn-trigger {
-  @include mixin.rhc-nav-bar__slot-main__btn-trigger;
+.rhc-nav-bar__megamenu-trigger {
+  @include mixin.rhc-nav-bar__megamenu-trigger;
 }
 
-.rhc-nav-bar__slots {
-  @include mixin.rhc-nav-bar__slots;
-}
-.rhc-nav-bar__slot-megamenu {
-  @include mixin.rhc-nav-bar__slot-megamenu;
+.rhc-nav-bar__megamenu-panel {
+  @include mixin.rhc-nav-bar__megamenu-panel;
 }
 
 .rhc-nav-bar__megamenu {
   @include mixin.rhc-nav-bar__megamenu;
 }
 
-.rhc-nav-bar__megamenu-column-heading {
-  @include mixin.item-height;
-}
-
-.rhc-nav-bar__megamenu-column-link .utrecht-link-list__link {
-  @include mixin.item-height;
-  @include mixin.full-width-mobile;
-}
-
-.rhc-nav-bar__megamenu__link-list {
-  row-gap: 0;
-}
-
-.rhc-nav-bar__megamenu__btn-close.rhc-nav-bar__megamenu__btn-close.rhc-nav-bar__megamenu__btn-close {
-  @include mixin.rhc-nav-bar__megamenu__btn-close;
+.rhc-nav-bar__megamenu-panel .rhc-nav-bar__megamenu-close {
+  @include mixin.rhc-nav-bar__megamenu-close;
 }
 
 .rhc-nav-bar__megamenu-separator {
@@ -70,24 +74,4 @@
 
 .rhc-nav-bar__megamenu-tagline {
   @include mixin.rhc-nav-bar__megamenu-tagline;
-}
-
-.rhc-nav-bar__nav {
-  @include mixin.rhc-nav-bar__nav;
-}
-
-.rhc-nav-bar__list {
-  @include mixin.rhc-nav-bar__list;
-}
-
-.rhc-nav-bar__link {
-  @include mixin.rhc-nav-bar__link;
-}
-
-.rhc-sub-nav-bar {
-  @include mixin.rhc-sub-nav-bar;
-}
-
-.rhc-sub-nav-bar__content {
-  @include mixin.rhc-sub-nav-bar__content;
 }

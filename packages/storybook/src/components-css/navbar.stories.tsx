@@ -26,5 +26,4 @@ export const WithIdentity = ReactStories.WithIdentity;
 export const WithEndItems = ReactStories.WithEndItems;
 export const WithCurrentPage = ReactStories.WithCurrentPage;
 export const WithIcons = ReactStories.WithIcons;
-export const WithSubList = ReactStories.WithSubList;
 export const WithMegaMenu = ReactStories.WithMegaMenu;
