@@ -61,11 +61,12 @@ export const NavBarItem = ({
       aria-current={currentPage ? 'page' : undefined}
       className={clsx('rhc-nav-bar__link')}
       href={href}
+      icon={icon}
+      iconEnd={iconEnd}
+      iconOnly={iconOnly}
       target={target}
     >
-      {icon}
-      <span className={clsx('rhc-nav-bar__label', iconOnly && 'rhc-nav-bar__label--sr-only')}>{label}</span>
-      {iconEnd}
+      {label}
     </NavBarLink>
     {children}
   </li>
