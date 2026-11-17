@@ -153,9 +153,7 @@ export const SharedHeaderOverheidNl = () => (
         <NavBar aria-label="Dataregister">
           <NavBarStart>
             <NavBarIdentity href="/">Dataregister</NavBarIdentity>
-            {itemsMain.map((item) => (
-              <NavBarItem key={item.id} {...item} />
-            ))}
+            {itemsMain}
           </NavBarStart>
           <NavBarEnd>{endItemsSecondary}</NavBarEnd>
         </NavBar>
