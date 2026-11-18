@@ -1,10 +1,26 @@
 'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
 
-import { CardAsLink, ColumnLayout, Heading, Hero, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
+import {
+  CardAsLink,
+  ColumnLayout,
+  Heading,
+  Hero,
+  Icon,
+  Link,
+  LinkList,
+  LinkListLink,
+  Paragraph,
+  Separator,
+} from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
-import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
+
+const headerlikeStyles = {
+  fontSize: '1.17em',
+  fontWeight: 700,
+  marginBlockEnd: '1em',
+};
 
 export default function Page() {
   return (
@@ -400,7 +416,34 @@ export default function Page() {
           </section>
         </SharedMainPageContent>
       </PageBody>
-      <SharedFooter />
+      <footer className="rhc-page-footer rhc-page-section">
+        <div className="rhc-page-section__content">
+          <div className="rhc-page-footer__primary">
+            <div className="rhc-page-footer__tagline">Rijkshuisstijl Community Design System</div>
+            <div className="rhc-grid">
+              <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+                <div style={headerlikeStyles}>rijkshuisstijl-community.nl</div>
+                <LinkList>
+                  <LinkListLink href="#" icon={<Icon icon="chevron-right" />} key="bla">
+                    bla
+                  </LinkListLink>
+                </LinkList>
+              </div>
+            </div>
+          </div>
+          <div className="rhc-page-footer__separator">
+            <Separator />
+          </div>
+          <div className="rhc-page-footer__secondary">
+            <div className="rhc-page-footer__navigation">
+              <Link href="#">Privacy</Link>
+              <Link href="#">Cookies en anti-spam</Link>
+              <Link href="#">Toegankelijkheid</Link>
+              <Link href="#">Proclaimer</Link>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
