@@ -62,10 +62,6 @@
     text-decoration: none;
   }
 
-  .overheid-nl-header__button-item .rhc-nav-bar__link:hover {
-    text-decoration: none;
-  }
-
   .overheid-nl-header__button-item--secondary > .rhc-nav-bar__link {
     /* Wit volgens ontwerp; het Secondary Button-token is transparant en toont hier de menu-achtergrond. */
     background-color: var(--rhc-color-wit);
@@ -77,6 +73,10 @@
     background-color: var(--utrecht-button-primary-action-background-color, #0058b8);
     border: var(--rhc-border-width-md) solid transparent;
     color: var(--utrecht-button-primary-action-color, var(--rhc-color-wit));
+  }
+
+  .overheid-nl-header__button-item .rhc-nav-bar__link:hover {
+    text-decoration: none;
   }
 
   .overheid-nl-header__button-item--secondary > .rhc-nav-bar__link:hover {
