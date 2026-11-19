@@ -20,6 +20,7 @@ import {
   NavBarMegaMenuTrigger,
   NavBarStart,
   PageHeader,
+  Separator,
   SkipLink,
 } from '@rijkshuisstijl-community/components-react';
 import './header-overheid-nl.css';
@@ -32,7 +33,7 @@ const languages = {
 
 const endItemsPrimary = (
   <>
-    <li>
+    <NavBarItem>
       <LanguageNavigation defaultSelectedLanguage="Nederlands">
         <LanguageNavigation.Trigger />
         <LanguageNavigation.Content>
@@ -41,7 +42,7 @@ const endItemsPrimary = (
           ))}
         </LanguageNavigation.Content>
       </LanguageNavigation>
-    </li>
+    </NavBarItem>
     <NavBarItem>
       <NavBarLink href="/">Contact</NavBarLink>
     </NavBarItem>
@@ -167,6 +168,7 @@ export const SharedHeaderOverheidNl = () => (
           </NavBarStart>
           <NavBarEnd>{endItemsPrimary}</NavBarEnd>
         </NavBar>
+        <Separator className="overheid-nl-nav-bar__separator"></Separator>
         <NavBar aria-label="Dataregister">
           <NavBarStart>
             <NavBarIdentity href="/">Dataregister</NavBarIdentity>

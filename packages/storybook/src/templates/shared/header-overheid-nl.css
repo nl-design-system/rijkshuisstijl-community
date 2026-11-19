@@ -22,6 +22,12 @@
   row-gap: 0;
 }
 
+.overheid-nl-header .overheid-nl-nav-bar__separator {
+  --utrecht-space-around: 0;
+  --utrecht-separator-color: var(--rhc-navigation-bar-border-color);
+  --utrecht-separator-block-size: var(--rhc-space-xs);
+}
+
 @media (width < 768px) {
   .overheid-nl-header__column-link .utrecht-link-list__link {
     inline-size: 100%;
