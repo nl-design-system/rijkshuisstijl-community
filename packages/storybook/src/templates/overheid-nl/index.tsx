@@ -1,12 +1,12 @@
 import { Separator } from '@rijkshuisstijl-community/components-react';
+import OverheidNlHeader from './header';
 import { FooterLinks3, FooterNavbarLinks } from '../shared/footer';
-import { SharedHeaderOverheidNl } from '../shared/header';
 import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
 
 const OverheidNl = () => (
   <>
-    <SharedHeaderOverheidNl />
+    <OverheidNlHeader />
     <div className="rhc-page-section">
       <div className="rhc-page-section__content">
         <h1>Voorbeeldpagina</h1>
