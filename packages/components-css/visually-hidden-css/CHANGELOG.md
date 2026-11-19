@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/visually-hidden-css
 
+## 1.2.0
+
+### Minor Changes
+
+- cf30b5d: Added visually-hidden-mobile and visually-hidden-desktop
+
 ## 1.1.0
 
 ### Minor Changes

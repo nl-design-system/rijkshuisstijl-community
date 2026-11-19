@@ -1,5 +1,22 @@
 # @rijkshuisstijl-community/file-input-react
 
+## 2.0.5
+
+### Patch Changes
+
+- ad84e31: Button gebruikt nu de NL Design System Button-candidate (`nl-button`) als basis in plaats van de Utrecht Button, met classname `nl-button` en `--nl-button-*` tokens. Nieuwe `purpose` prop (`primary`/`secondary`/`subtle`); `appearance` blijft werken maar is deprecated. De derde kleuroptie (primary in de themakleur, rest lintblauw) volgt met de themakoppeling in een latere release.
+  
+  Breaking changes:
+  
+  - `disabled` zet nu `aria-disabled="true"` in plaats van het HTML-attribuut, zodat de button focusbaar blijft; gebruik `htmlDisabled` voor het echte `disabled`-attribuut.
+  - Classname van `utrecht-button` naar `nl-button`; theming van `--utrecht-button-*` naar `--nl-button-*`.
+  - De `hint` prop gebruikt nu `positive`/`negative` in plaats van de Utrecht-waarden.
+  - De Utrecht-re-exports (`ButtonLink`, `PrimaryActionButton`, `SecondaryActionButton`, `SubtleButton`) zijn deprecated.
+- Updated dependencies [ad84e31]
+  - @rijkshuisstijl-community/button-react@2.0.0
+  - @rijkshuisstijl-community/file-react@1.0.5
+  - @rijkshuisstijl-community/file-input-css@1.1.1
+
 ## 2.0.4
 
 ### Patch Changes
