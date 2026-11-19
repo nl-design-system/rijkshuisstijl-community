@@ -7,6 +7,7 @@ import {
   NavBarEnd,
   NavBarIdentity,
   NavBarItem,
+  NavBarLink,
   NavBarMegaMenu,
   NavBarMegaMenuClose,
   NavBarMegaMenuPanel,
@@ -41,9 +42,15 @@ type Story = StoryObj<typeof meta>;
 
 const items = (
   <>
-    <NavBarItem href="/" id="first-link" label="Link" />
-    <NavBarItem href="/" id="second-link" label="Link" />
-    <NavBarItem href="/" id="third-link" label="Link" />
+    <NavBarItem>
+      <NavBarLink href="/">Link</NavBarLink>
+    </NavBarItem>
+    <NavBarItem>
+      <NavBarLink href="/">Link</NavBarLink>
+    </NavBarItem>
+    <NavBarItem>
+      <NavBarLink href="/">Link</NavBarLink>
+    </NavBarItem>
   </>
 );
 
@@ -70,8 +77,12 @@ export const WithEndItems: Story = {
       <>
         <NavBarStart>{items}</NavBarStart>
         <NavBarEnd>
-          <NavBarItem href="/" id="end-first-link" label="Link" />
-          <NavBarItem href="/" id="end-second-link" label="Link" />
+          <NavBarItem>
+            <NavBarLink href="/">Link</NavBarLink>
+          </NavBarItem>
+          <NavBarItem>
+            <NavBarLink href="/">Link</NavBarLink>
+          </NavBarItem>
         </NavBarEnd>
       </>
     ),
@@ -82,8 +93,14 @@ export const WithCurrentPage: Story = {
   args: {
     children: (
       <NavBarStart>
-        <NavBarItem currentPage href="/" id="first-link" label="Link" />
-        <NavBarItem href="/" id="second-link" label="Link" />
+        <NavBarItem>
+          <NavBarLink current href="/">
+            Link
+          </NavBarLink>
+        </NavBarItem>
+        <NavBarItem>
+          <NavBarLink href="/">Link</NavBarLink>
+        </NavBarItem>
       </NavBarStart>
     ),
   },
@@ -93,8 +110,16 @@ export const WithIcons: Story = {
   args: {
     children: (
       <NavBarStart>
-        <NavBarItem href="/" icon={<Icon icon="zoek" />} id="search" label="Zoeken" />
-        <NavBarItem iconOnly href="/" icon={<Icon icon="inloggen" />} id="login" label="Inloggen" />
+        <NavBarItem>
+          <NavBarLink href="/" icon={<Icon icon="zoek" />}>
+            Zoeken
+          </NavBarLink>
+        </NavBarItem>
+        <NavBarItem>
+          <NavBarLink iconOnly href="/" iconEnd={<Icon icon="inloggen" />}>
+            Inloggen
+          </NavBarLink>
+        </NavBarItem>
       </NavBarStart>
     ),
   },
@@ -129,7 +154,9 @@ export const WithMegaMenu: Story = {
           </NavBarMegaMenu>
         </NavBarStart>
         <NavBarEnd>
-          <NavBarItem href="/" id="contact" label="Contact" />
+          <NavBarItem>
+            <NavBarLink href="/">Contact</NavBarLink>
+          </NavBarItem>
         </NavBarEnd>
       </>
     ),

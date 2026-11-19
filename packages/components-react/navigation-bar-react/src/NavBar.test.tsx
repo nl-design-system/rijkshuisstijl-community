@@ -6,6 +6,7 @@ import {
   NavBarEnd,
   NavBarIdentity,
   NavBarItem,
+  NavBarLink,
   NavBarMegaMenu,
   NavBarMegaMenuClose,
   NavBarMegaMenuPanel,
@@ -28,14 +29,18 @@ describe('NavBar', () => {
     expect(screen.getByRole('navigation', { name: 'Dataregister' })).toHaveClass('rhc-nav-bar', 'custom-class');
   });
 
-  it('renders start and end items in separate lists', () => {
+  it('renders start and end links in separate lists', () => {
     render(
       <NavBar>
         <NavBarStart>
-          <NavBarItem href="#" id="start" label="Start Item" />
+          <NavBarItem>
+            <NavBarLink href="#">Start Item</NavBarLink>
+          </NavBarItem>
         </NavBarStart>
         <NavBarEnd>
-          <NavBarItem href="#" id="end" label="End Item" />
+          <NavBarItem>
+            <NavBarLink href="#">End Item</NavBarLink>
+          </NavBarItem>
         </NavBarEnd>
       </NavBar>,
     );
@@ -61,7 +66,9 @@ describe('NavBar', () => {
     render(
       <NavBar>
         <NavBarStart>
-          <NavBarItem className="custom-class" href="#" id="item" label="Item" />
+          <NavBarItem className="custom-class">
+            <NavBarLink href="#">Item</NavBarLink>
+          </NavBarItem>
         </NavBarStart>
       </NavBar>,
     );
@@ -85,7 +92,9 @@ describe('NavBar', () => {
     render(
       <NavBar>
         <NavBarStart>
-          <NavBarItem persistOnSmallViewport href="#" id="item" label="Item" />
+          <NavBarItem persistOnSmallViewport>
+            <NavBarLink href="#">Item</NavBarLink>
+          </NavBarItem>
         </NavBarStart>
       </NavBar>,
     );
@@ -129,12 +138,14 @@ describe('NavBar', () => {
           <NavBarMegaMenu>
             <NavBarMegaMenuTrigger target="onderwerpen">Onderwerpen</NavBarMegaMenuTrigger>
             <NavBarMegaMenuPanel id="onderwerpen">
-              <a href="#binnen">Binnen</a>
+              <NavBarLink href="#binnen">Binnen</NavBarLink>
             </NavBarMegaMenuPanel>
           </NavBarMegaMenu>
         </NavBarStart>
         <NavBarEnd>
-          <NavBarItem href="#buiten" id="buiten" label="Buiten" />
+          <NavBarItem>
+            <NavBarLink href="#buiten">Buiten</NavBarLink>
+          </NavBarItem>
         </NavBarEnd>
       </NavBar>,
     );
