@@ -1,5 +1,73 @@
 # @rijkshuisstijl-community/navigation-bar-react
 
+## 2.0.0
+
+### Major Changes
+
+- ad0ee52: # NavBarLink
+  
+  De link in de NavBar is nu een eigen component: `NavBarLink`. `NavBarItem` gebruikt deze component voor de link.
+  
+  De prop `items` van `NavBar` is nu een `ReactNode` in plaats van een array met objecten. Geef de items mee als `NavBarItem`-elementen, net als `endItems`.
+  
+  Het oude type `NavBarLinkProps` heet nu `NavBarLinkData`. De naam `NavBarLinkProps` hoort nu bij de nieuwe component `NavBarLink`.
+- 47932f6: # Navigation Bar: samenstelbaar en op basis van de Popover API
+  
+  De Navigation Bar is opnieuw opgezet. Je stelt de balk nu zelf samen uit losse onderdelen. Het mobiele menu en het megamenu gebruiken de native Popover API. Zo sluiten ze met `Escape`, door ernaast te klikken en als de toetsenbordfocus het paneel verlaat.
+  
+  ## Nieuwe opbouw
+  
+  ```tsx
+  <NavBar aria-label="Hoofdnavigatie">
+    <NavBarStart>
+      <NavBarIdentity href="/">Naam</NavBarIdentity>
+      <NavBarItem>
+        <NavBarLink href="/" >Home</NavbarLink>
+      </NavBarItem>
+      <NavBarMegaMenu>
+        <NavBarMegaMenuTrigger target="onderwerpen">Onderwerpen</NavBarMegaMenuTrigger>
+        <NavBarMegaMenuPanel id="onderwerpen">
+          <NavBarMegaMenuTagline>…</NavBarMegaMenuTagline>
+          <NavBarMegaMenuSeparator />
+          {/* eigen inhoud */}
+          <NavBarMegaMenuClose target="onderwerpen" />
+        </NavBarMegaMenuPanel>
+      </NavBarMegaMenu>
+    </NavBarStart>
+    <NavBarEnd>
+      <NavBarItem>
+        <NavBarLink href="/contact">Contact</NavBarLink>
+      </NavBarItem>
+    </NavBarEnd>
+  </NavBar>
+  ```
+  
+  - `NavBarStart` en `NavBarEnd` zijn de twee kanten van de balk.
+  - Op smalle schermen bundelt `NavBar` de items in een menu achter een menuknop. Met `persistOnSmallViewport` blijft een item in de balk staan. `NavBarIdentity` is standaard `persistent`, dit kan verborgen worden door `hideOnSmallViewport`.
+  - Op smalle schermen staat de inhoud van een `NavBarMegaMenuPanel` direct in het menu.
+  - `NavBarMegaMenuTrigger` en `NavBarMegaMenuClose` vinden het paneel via `target`, dat gelijk is aan de `id` van het paneel.
+  - `toggleLabel` op `NavBar` geeft de menuknop zijn toegankelijke naam (standaard "Menu"). `aria-label` is standaard "Hoofdnavigatie".
+  
+  ## Page Header
+  
+  `rhc-page-header` zet `--rhc-navigation-bar-menu-padding-inline` op de kantlijn van de page section. Zo lijnt het mobiele menu van de Navigation Bar daarbinnen uit.
+  
+  ## Language Navigation
+  
+  De lijst van de Language Navigation valt niet meer onder gepositioneerde content die erna komt.
+
+### Minor Changes
+
+- cf30b5d: Added new Page Header component
+
+### Patch Changes
+
+- Updated dependencies [ad84e31]
+- Updated dependencies [47932f6]
+- Updated dependencies [cf30b5d]
+  - @rijkshuisstijl-community/button-react@2.0.0
+  - @rijkshuisstijl-community/navigation-bar-css@2.0.0
+
 ## 1.0.4
 
 ### Patch Changes
