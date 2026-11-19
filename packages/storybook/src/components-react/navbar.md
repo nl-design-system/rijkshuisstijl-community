@@ -10,7 +10,9 @@ De Navigation Bar is de hoofdnavigatie van een pagina. De onderdelen, zoals `Nav
 <NavBar>
   <NavBarStart>
     <NavBarIdentity />
-    <NavBarItem />
+    <NavBarItem>
+      <NavBarLink href="/">Home</NavBarLink>
+    </NavBarItem>
     <NavBarMegaMenu>
       <NavBarMegaMenuTrigger target="onderwerpen">Kies een onderwerp of dienst</NavBarMegaMenuTrigger>
       <NavBarMegaMenuPanel id="onderwerpen">
@@ -21,7 +23,9 @@ De Navigation Bar is de hoofdnavigatie van een pagina. De onderdelen, zoals `Nav
     </NavBarMegaMenu>
   </NavBarStart>
   <NavBarEnd>
-    <NavBarItem />
+    <NavBarItem>
+      <NavBarLink href="/inloggen">Inloggen</NavBarLink>
+    </NavBarItem>
   </NavBarEnd>
 </NavBar>
 ```
@@ -29,11 +33,12 @@ De Navigation Bar is de hoofdnavigatie van een pagina. De onderdelen, zoals `Nav
 - **`NavBarStart`**: items aan het begin van de balk.
 - **`NavBarEnd`**: items aan het einde van de balk, bijvoorbeeld zoeken, inloggen of taalkeuze.
 - **`NavBarIdentity`**: de naam of titel van de site, meestal als eerste item in `NavBarStart`.
-- **`NavBarItem`**: een link.
+- **`NavBarItem`**: een li die ook de inhoud kan behouden op de navbar op mobiel ipv in het menu.
+- **`NavBarLink`**: een link.
 - **`NavBarMegaMenu`**: een item met een `NavBarMegaMenuTrigger` die een `NavBarMegaMenuPanel` opent. Een `NavBarMegaMenuClose` in het paneel sluit het weer.
 - **Menuknop**: op smalle schermen klappen de items in achter een menuknop. Die voegt `NavBar` zelf toe.
 
-`NavBarStart` en `NavBarEnd` renderen een `<ul>`; de items renderen een `<li>`. Een eigen item, zoals de `LanguageNavigation`, zet je daarom in een `<li>`.
+`NavBarStart` en `NavBarEnd` renderen een `<ul>`; de items renderen een `<li>`. Een eigen item, zoals de `LanguageNavigation`, zet je daarom in een `<NavBarItem>`.
 
 ### Smalle schermen
 
@@ -48,13 +53,19 @@ Het menu en het megamenu gebruiken de native Popover API. Ze sluiten via de `Esc
 ### Eenvoudig voorbeeld
 
 ```tsx
-import { NavBar, NavBarItem } from '@rijkshuisstijl-community/components-react';
+import { NavBar, NavBarStart, NavBarItem, NavBarLink } from '@rijkshuisstijl-community/components-react';
 
 <NavBar>
   <NavBarStart>
-    <NavBarItem href="/" id="home" label="Home" />
-    <NavBarItem href="/nieuws" id="nieuws" label="Nieuws" />
-    <NavBarItem href="/contact" id="contact" label="Contact" />
+    <NavBarItem>
+      <NavBarLink href="/">Home</NavBarLink>
+    </NavBarItem>
+    <NavBarItem>
+      <NavBarLink href="/nieuws">Nieuws</NavBarLink>
+    </NavBarItem>
+    <NavBarItem>
+      <NavBarLink href="/contact">Contact</NavBarLink>
+    </NavBarItem>
   </NavBarStart>
 </NavBar>;
 ```
@@ -64,16 +75,24 @@ import { NavBar, NavBarItem } from '@rijkshuisstijl-community/components-react';
 Gebruik `NavBarIdentity` voor de sitenaam, `currentPage` voor de huidige pagina, en `NavBarEnd` voor extra items zoals zoeken of inloggen.
 
 ```tsx
-import { Icon, NavBar } from '@rijkshuisstijl-community/components-react';
+import { Icon, NavBar, NavBarIdentity, NavBarItem, NavBarLink } from '@rijkshuisstijl-community/components-react';
 
 <NavBar aria-label="Dataregister">
   <NavBarStart>
     <NavBarIdentity href="/">Dataregister</NavBarIdentity>
-    <NavBarItem currentPage href="/" id="home" label="Home" />
-    <NavBarItem href="/nieuws" id="nieuws" label="Nieuws" />
+    <NavBarItem>
+      <NavBarLink href="/">Home</NavBarLink>
+    </NavBarItem>
+    <NavBarItem>
+      <NavBarLink href="/nieuws">Nieuws</NavBarLink>
+    </NavBarItem>
   </NavBarStart>
   <NavBarEnd>
-    <NavBarItem href="/zoeken" icon={<Icon icon="zoek" />} id="zoeken" label="Zoeken" />
+    <NavBarItem>
+      <NavBarLink href="/zoeken" icon={<Icon icon="zoek" />}>
+        Zoeken
+      </NavBarLink>
+    </NavBarItem>
   </NavBarEnd>
 </NavBar>;
 ```
@@ -140,14 +159,22 @@ Renderen een `<ul>` en accepteren alle attributen van een `<ul>`.
 
 ### NavBarItem
 
-| Prop                     | Type         | Default   | Beschrijving                                          |
-| ------------------------ | ------------ | --------- | ----------------------------------------------------- |
-| `id`                     | string       | verplicht | Unieke id van het item.                               |
-| `label`                  | ReactNode    | verplicht | De tekst van de link.                                 |
-| `href`                   | string       | verplicht | De url van de link.                                   |
-| `icon`                   | ReactElement | -         | Icoon voor de tekst.                                  |
-| `currentPage`            | boolean      | `false`   | Markeert de huidige pagina met `aria-current="page"`. |
-| `persistOnSmallViewport` | boolean      | `false`   | Blijft op smalle schermen zichtbaar in de balk.       |
+| Prop                     | Type    | Default | Beschrijving                                    |
+| ------------------------ | ------- | ------- | ----------------------------------------------- |
+| `persistOnSmallViewport` | boolean | `false` | Blijft op smalle schermen zichtbaar in de balk. |
+
+### NavBarLink
+
+| Prop        | Type         | Default   | Beschrijving                                               |
+| ----------- | ------------ | --------- | ---------------------------------------------------------- |
+| `href`      | string       | verplicht | De url van de link.                                        |
+| `children`  | ReactNode    | verplicht | De tekst van de link.                                      |
+| `current`   | boolean      | `false`   | Markeert de huidige pagina met `aria-current="page"`.      |
+| `icon`      | ReactElement | -         | Icoon voor de tekst.                                       |
+| `iconEnd`   | ReactElement | -         | Icoon na de tekst.                                         |
+| `iconOnly`  | boolean      | `false`   | Toont alleen het icoon; de tekst blijft voor schermlezers. |
+| `className` | string       | -         | Extra CSS class names.                                     |
+| `target`    | string       | -         | Waar de link opent, bijvoorbeeld `_blank`.                 |
 
 ### NavBarIdentity
 
@@ -202,16 +229,3 @@ Scheidingslijn, bijvoorbeeld tussen de `NavBarMegaMenuTagline` en de rest van de
 | Prop        | Type   | Default | Beschrijving           |
 | ----------- | ------ | ------- | ---------------------- |
 | `className` | string | -       | Extra CSS class names. |
-
-### NavBarLink
-
-| Prop        | Type         | Default   | Beschrijving                                               |
-| ----------- | ------------ | --------- | ---------------------------------------------------------- |
-| `href`      | string       | verplicht | De url van de link.                                        |
-| `children`  | ReactNode    | verplicht | De tekst van de link.                                      |
-| `current`   | boolean      | `false`   | Markeert de huidige pagina met `aria-current="page"`.      |
-| `icon`      | ReactElement | -         | Icoon voor de tekst.                                       |
-| `iconEnd`   | ReactElement | -         | Icoon na de tekst.                                         |
-| `iconOnly`  | boolean      | `false`   | Toont alleen het icoon; de tekst blijft voor schermlezers. |
-| `className` | string       | -         | Extra CSS class names.                                     |
-| `target`    | string       | -         | Waar de link opent, bijvoorbeeld `_blank`.                 |

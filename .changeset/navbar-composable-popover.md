@@ -15,7 +15,9 @@ De Navigation Bar is opnieuw opgezet. Je stelt de balk nu zelf samen uit losse o
 <NavBar aria-label="Hoofdnavigatie">
   <NavBarStart>
     <NavBarIdentity href="/">Naam</NavBarIdentity>
-    <NavBarItem href="/" id="home" label="Home" />
+    <NavBarItem>
+      <NavBarLink href="/" >Home</NavbarLink>
+    </NavBarItem>
     <NavBarMegaMenu>
       <NavBarMegaMenuTrigger target="onderwerpen">Onderwerpen</NavBarMegaMenuTrigger>
       <NavBarMegaMenuPanel id="onderwerpen">
@@ -27,7 +29,9 @@ De Navigation Bar is opnieuw opgezet. Je stelt de balk nu zelf samen uit losse o
     </NavBarMegaMenu>
   </NavBarStart>
   <NavBarEnd>
-    <NavBarItem href="/contact" id="contact" label="Contact" />
+    <NavBarItem>
+      <NavBarLink href="/contact">Contact</NavBarLink>
+    </NavBarItem>
   </NavBarEnd>
 </NavBar>
 ```

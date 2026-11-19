@@ -11,6 +11,7 @@ import {
   NavBarEnd,
   NavBarIdentity,
   NavBarItem,
+  NavBarLink,
   NavBarMegaMenu,
   NavBarMegaMenuClose,
   NavBarMegaMenuPanel,
@@ -41,7 +42,9 @@ const endItemsPrimary = (
         </LanguageNavigation.Content>
       </LanguageNavigation>
     </li>
-    <NavBarItem href="/" id="end-second-link" label="Contact" />
+    <NavBarItem>
+      <NavBarLink href="/">Contact</NavBarLink>
+    </NavBarItem>
   </>
 );
 
@@ -49,26 +52,40 @@ const endItemsSecondary = [
   {
     className: 'overheid-nl-header__button-item overheid-nl-header__button-item--secondary',
     href: '/',
-    id: 'end-first-link',
     label: 'Zoeken',
     icon: <Icon icon="zoek" />,
   },
   {
     className: 'overheid-nl-header__button-item overheid-nl-header__button-item--primary',
     href: '/',
-    id: 'end-second-link',
     label: 'Inloggen',
     icon: <Icon icon="inloggen" />,
   },
-].map((endItem) => <NavBarItem key={endItem.id} {...endItem} />);
+].map((endItem) => (
+  <NavBarItem key={endItem.label}>
+    <NavBarLink {...endItem}>{endItem.label}</NavBarLink>
+  </NavBarItem>
+));
 
 const itemsMain = (
   <>
-    <NavBarItem href="/" id="Data" label="Data" />
-    <NavBarItem href="/" id="Impact" label="Impact" />
-    <NavBarItem currentPage href="/" id="Voorbeeldpagina" label="Voorbeeldpagina" />
-    <NavBarItem href="/" id="Actueel" label="Actueel" />
-    <NavBarItem href="/" id="Support" label="Support" />
+    <NavBarItem>
+      <NavBarLink href="/">Data</NavBarLink>
+    </NavBarItem>
+    <NavBarItem>
+      <NavBarLink href="/">Impact</NavBarLink>
+    </NavBarItem>
+    <NavBarItem>
+      <NavBarLink current href="/">
+        Voorbeeldpagina
+      </NavBarLink>
+    </NavBarItem>
+    <NavBarItem>
+      <NavBarLink href="/">Actueel</NavBarLink>
+    </NavBarItem>
+    <NavBarItem>
+      <NavBarLink href="/">Support</NavBarLink>
+    </NavBarItem>
   </>
 );
 
@@ -187,18 +204,16 @@ export function SharedHeader() {
 
   const endItems = [
     {
-      id: 'end1',
       target: '_blank',
       href: 'https://www.figma.com/design/Q5Imc7Xi9KnBQhcYI3Hytj/NL-Design-System---Bibliotheek---Rijkshuisstijl-Community',
       label: 'Figma',
     },
     {
-      id: 'end2',
       target: '_blank',
       href: 'https://github.com/nl-design-system/rijkshuisstijl-community',
       label: 'GitHub',
     },
-    { id: 'end3', target: '_blank', href: 'https://rijkshuisstijl-community.vercel.app/', label: 'Storybook' },
+    { target: '_blank', href: 'https://rijkshuisstijl-community.vercel.app/', label: 'Storybook' },
   ];
 
   return (
@@ -213,12 +228,16 @@ export function SharedHeader() {
         <NavBar>
           <NavBarStart>
             {items.map((item) => (
-              <NavBarItem {...item} key={item.id} />
+              <NavBarItem key={item.label}>
+                <NavBarLink {...item}>{item.label}</NavBarLink>
+              </NavBarItem>
             ))}
           </NavBarStart>
           <NavBarEnd>
             {endItems.map((item) => (
-              <NavBarItem {...item} key={item.id} />
+              <NavBarItem key={item.label}>
+                <NavBarLink {...item}>{item.label}</NavBarLink>
+              </NavBarItem>
             ))}
           </NavBarEnd>
         </NavBar>
