@@ -43,13 +43,13 @@ type Story = StoryObj<typeof meta>;
 const items = (
   <>
     <NavBarItem>
-      <NavBarLink href="/">Link</NavBarLink>§
+      <NavBarLink href="/">Link</NavBarLink>
     </NavBarItem>
     <NavBarItem>
-      <NavBarLink href="/">Link</NavBarLink>§
+      <NavBarLink href="/">Link</NavBarLink>
     </NavBarItem>
     <NavBarItem>
-      <NavBarLink href="/">Link</NavBarLink>§
+      <NavBarLink href="/">Link</NavBarLink>
     </NavBarItem>
   </>
 );
@@ -78,10 +78,10 @@ export const WithEndItems: Story = {
         <NavBarStart>{items}</NavBarStart>
         <NavBarEnd>
           <NavBarItem>
-            <NavBarLink href="/">Link</NavBarLink>§
+            <NavBarLink href="/">Link</NavBarLink>
           </NavBarItem>
           <NavBarItem>
-            <NavBarLink href="/">Link</NavBarLink>§
+            <NavBarLink href="/">Link</NavBarLink>
           </NavBarItem>
         </NavBarEnd>
       </>
@@ -155,7 +155,7 @@ export const WithMegaMenu: Story = {
         </NavBarStart>
         <NavBarEnd>
           <NavBarItem>
-            <NavBarLink href="/">Contact</NavBarLink>§
+            <NavBarLink href="/">Contact</NavBarLink>
           </NavBarItem>
         </NavBarEnd>
       </>
