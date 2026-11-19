@@ -1,11 +1,12 @@
-import { SharedFooterOverheidNl } from '../shared/footer';
-import { SharedHeaderOverheidNl } from '../shared/header';
+import { Separator } from '@rijkshuisstijl-community/components-react';
+import OverheidNlHeader from './header';
+import { FooterLinks3, FooterNavbarLinks } from '../shared/footer';
 import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
 
-const HeaderFooter = () => (
+const OverheidNl = () => (
   <>
-    <SharedHeaderOverheidNl />
+    <OverheidNlHeader />
     <div className="rhc-page-section">
       <div className="rhc-page-section__content">
         <h1>Voorbeeldpagina</h1>
@@ -90,8 +91,22 @@ const HeaderFooter = () => (
         </p>
       </div>
     </div>
-    <SharedFooterOverheidNl />
+    <footer className="rhc-page-footer rhc-page-section">
+      <div className="rhc-page-section__content">
+        <div className="rhc-page-footer__primary">
+          <div className="rhc-grid">
+            <FooterLinks3 />
+          </div>
+        </div>
+        <div className="rhc-page-footer__separator">
+          <Separator />
+        </div>
+        <div className="rhc-page-footer__secondary">
+          <FooterNavbarLinks />
+        </div>
+      </div>
+    </footer>
   </>
 );
 
-export default HeaderFooter;
+export default OverheidNl;

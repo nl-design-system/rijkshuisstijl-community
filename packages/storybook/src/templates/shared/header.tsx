@@ -1,185 +1,17 @@
 'use client';
 
 import {
-  Heading,
   Icon,
-  LanguageNavigation,
-  LinkList,
-  LinkListLink,
   Logo,
   NavBar,
   NavBarEnd,
-  NavBarIdentity,
   NavBarItem,
   NavBarLink,
-  NavBarMegaMenu,
-  NavBarMegaMenuClose,
-  NavBarMegaMenuPanel,
-  NavBarMegaMenuSeparator,
-  NavBarMegaMenuTagline,
-  NavBarMegaMenuTrigger,
   NavBarStart,
   PageHeader,
-  Separator,
   SkipLink,
 } from '@rijkshuisstijl-community/components-react';
 import './header-overheid-nl.css';
-
-const languages = {
-  nl: { href: '#', lang: 'nl', languageName: 'Nederlands' },
-  en: { href: '#', lang: 'en', languageName: 'English' },
-  de: { href: '#', lang: 'de', languageName: 'Deutsch' },
-};
-
-const endItemsPrimary = (
-  <>
-    <NavBarItem>
-      <LanguageNavigation defaultSelectedLanguage="Nederlands">
-        <LanguageNavigation.Trigger />
-        <LanguageNavigation.Content>
-          {[languages.nl, languages.en, languages.de].map((language) => (
-            <LanguageNavigation.Item key={language.lang} {...language} />
-          ))}
-        </LanguageNavigation.Content>
-      </LanguageNavigation>
-    </NavBarItem>
-    <NavBarItem>
-      <NavBarLink href="/">Contact</NavBarLink>
-    </NavBarItem>
-  </>
-);
-
-const endItemsSecondary = [
-  {
-    className: 'overheid-nl-header__button-item overheid-nl-header__button-item--secondary',
-    href: '/',
-    label: 'Zoeken',
-    icon: <Icon icon="zoek" />,
-  },
-  {
-    className: 'overheid-nl-header__button-item overheid-nl-header__button-item--primary',
-    href: '/',
-    label: 'Inloggen',
-    icon: <Icon icon="inloggen" />,
-  },
-].map((endItem) => (
-  <NavBarItem key={endItem.label}>
-    <NavBarLink {...endItem}>{endItem.label}</NavBarLink>
-  </NavBarItem>
-));
-
-const itemsMain = (
-  <>
-    <NavBarItem>
-      <NavBarLink href="/">Data</NavBarLink>
-    </NavBarItem>
-    <NavBarItem>
-      <NavBarLink href="/">Impact</NavBarLink>
-    </NavBarItem>
-    <NavBarItem>
-      <NavBarLink current href="/">
-        Voorbeeldpagina
-      </NavBarLink>
-    </NavBarItem>
-    <NavBarItem>
-      <NavBarLink href="/">Actueel</NavBarLink>
-    </NavBarItem>
-    <NavBarItem>
-      <NavBarLink href="/">Support</NavBarLink>
-    </NavBarItem>
-  </>
-);
-
-const megamenuColumns = [
-  {
-    id: 'col-1',
-    heading: 'Diensten van de overheid',
-    items: [
-      { id: 'mm-1', label: 'Dienstenoverzicht', href: '/' },
-      { id: 'mm-2', label: 'Berichten over uw buurt', href: '/' },
-      { id: 'mm-3', label: 'Gegevens bij besluiten', href: '/' },
-      { id: 'mm-4', label: 'Internetconsultatie', href: '/' },
-      { id: 'mm-5', label: 'Levensgebeurtenissen', href: '/' },
-    ],
-  },
-  {
-    id: 'col-2',
-    heading: 'Beleid en regelgeving',
-    items: [
-      { id: 'mm-6', label: 'Overzicht', href: '/' },
-      { id: 'mm-7', label: 'Wetten', href: '/' },
-      { id: 'mm-8', label: 'Verdragen', href: '/' },
-      { id: 'mm-9', label: 'Lokale regelgeving', href: '/' },
-    ],
-  },
-  {
-    id: 'col-3',
-    heading: 'Transparantie',
-    items: [
-      { id: 'mm-10', label: 'Standaarden', href: '/' },
-      { id: 'mm-11', label: 'Open Data', href: '/' },
-      { id: 'mm-12', label: 'Linked data', href: '/' },
-    ],
-  },
-];
-
-const megamenu = (
-  <>
-    <NavBarMegaMenuTagline>Ingang naar informatie en diensten van alle overheden</NavBarMegaMenuTagline>
-    <NavBarMegaMenuSeparator />
-    <div className="rhc-grid">
-      {megamenuColumns.map(({ id, heading, items }) => (
-        <div className="rhc-grid__cell rhc-grid__cell-d-3" key={id}>
-          <Heading appearanceLevel={5} className="overheid-nl-header__column-heading" level={3}>
-            {heading}
-          </Heading>
-          <LinkList className="overheid-nl-header__link-list">
-            {items.map((item) => (
-              <LinkListLink className="overheid-nl-header__column-link" href={item.href} key={item.id}>
-                {item.label}
-              </LinkListLink>
-            ))}
-          </LinkList>
-        </div>
-      ))}
-    </div>
-  </>
-);
-
-export const SharedHeaderOverheidNl = () => (
-  <PageHeader className="overheid-nl-header">
-    <div className="rhc-page-section">
-      <div className="rhc-page-section__content">
-        <Logo organisation="Organisatie" subtitle="Wat wij doen">
-          <Icon className="dutch-map" icon="nederland-map" />
-        </Logo>
-        <NavBar aria-label="Overheid.nl">
-          <NavBarStart>
-            <NavBarIdentity primary href="/">
-              Overheid.nl
-            </NavBarIdentity>
-            <NavBarMegaMenu>
-              <NavBarMegaMenuTrigger target="onderwerpen">Kies een onderwerp of dienst</NavBarMegaMenuTrigger>
-              <NavBarMegaMenuPanel id="onderwerpen">
-                {megamenu}
-                <NavBarMegaMenuClose target="onderwerpen" />
-              </NavBarMegaMenuPanel>
-            </NavBarMegaMenu>
-          </NavBarStart>
-          <NavBarEnd>{endItemsPrimary}</NavBarEnd>
-        </NavBar>
-        <Separator className="overheid-nl-nav-bar__separator"></Separator>
-        <NavBar aria-label="Dataregister">
-          <NavBarStart>
-            <NavBarIdentity href="/">Dataregister</NavBarIdentity>
-            {itemsMain}
-          </NavBarStart>
-          <NavBarEnd>{endItemsSecondary}</NavBarEnd>
-        </NavBar>
-      </div>
-    </div>
-  </PageHeader>
-);
 
 export function SharedHeader() {
   const items = [
@@ -248,7 +80,4 @@ export function SharedHeader() {
   );
 }
 
-const Header = ({ overheidNl = false }: { overheidNl?: boolean }) =>
-  overheidNl ? <SharedHeaderOverheidNl /> : <SharedHeader />;
-
-export default Header;
+export default SharedHeader;
