@@ -28,6 +28,13 @@ $rhc-nav-bar-menu-padding-inline: var(--rhc-navigation-bar-menu-padding-inline, 
   position: static;
 }
 
+// Fallback voor browsers zonder anchor positioning; de waarden zet de JS bij het openen.
+@mixin no-anchor-positioning {
+  @supports not (anchor-name: --a) {
+    @content;
+  }
+}
+
 @mixin link-indicator($color) {
   box-shadow: inset 0 calc(-1 * var(--rhc-navigation-bar-border-block-end-width)) 0 0 $color;
 }
@@ -68,6 +75,10 @@ $rhc-nav-bar-menu-padding-inline: var(--rhc-navigation-bar-menu-padding-inline, 
     inset-block-start: anchor(top);
     position: fixed;
     position-anchor: var(--rhc-nav-bar-anchor);
+
+    @include no-anchor-positioning {
+      inset-block-start: var(--rhc-nav-bar-fallback-top, 0);
+    }
   }
 
   @media #{$rhc-nav-bar-desktop} {
@@ -77,6 +88,13 @@ $rhc-nav-bar-menu-padding-inline: var(--rhc-navigation-bar-menu-padding-inline, 
       block-size: anchor-size(block);
       inset-inline-end: anchor(right);
       inset-inline-start: anchor(left);
+
+      @include no-anchor-positioning {
+        block-size: var(--rhc-navigation-bar-block-size);
+        inline-size: var(--rhc-nav-bar-fallback-width, 100%);
+        inset-inline-end: auto;
+        inset-inline-start: var(--rhc-nav-bar-fallback-left, 0);
+      }
     }
   }
 
@@ -300,6 +318,14 @@ $rhc-nav-bar-menu-padding-inline: var(--rhc-navigation-bar-menu-padding-inline, 
     max-block-size: stretch;
     overflow-y: auto;
     position-anchor: var(--rhc-nav-bar-anchor);
+
+    @include no-anchor-positioning {
+      inline-size: var(--rhc-nav-bar-fallback-width, 100%);
+      inset-block-start: var(--rhc-nav-bar-fallback-bottom, var(--rhc-navigation-bar-block-size));
+      inset-inline-end: auto;
+      inset-inline-start: var(--rhc-nav-bar-fallback-left, 0);
+      position: fixed;
+    }
   }
 
   // altijd zichtbaar, ook als de popover niet open is
