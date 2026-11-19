@@ -166,7 +166,7 @@ export const SharedHeaderOverheidNl = () => (
               </NavBarMegaMenuPanel>
             </NavBarMegaMenu>
           </NavBarStart>
-          <NavBarEnd className="overheid-nl-header__end-items-primary">{endItemsPrimary}</NavBarEnd>
+          <NavBarEnd>{endItemsPrimary}</NavBarEnd>
         </NavBar>
         <Separator className="overheid-nl-nav-bar__separator"></Separator>
         <NavBar aria-label="Dataregister">
