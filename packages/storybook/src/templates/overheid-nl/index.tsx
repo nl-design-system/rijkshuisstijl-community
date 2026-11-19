@@ -4,7 +4,7 @@ import { SharedHeaderOverheidNl } from '../shared/header';
 import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
 
-const HeaderFooter = () => (
+const OverheidNl = () => (
   <>
     <SharedHeaderOverheidNl />
     <div className="rhc-page-section">
@@ -109,4 +109,4 @@ const HeaderFooter = () => (
   </>
 );
 
-export default HeaderFooter;
+export default OverheidNl;

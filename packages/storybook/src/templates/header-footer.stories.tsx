@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import Page from './header-footer';
+import Page from './overheid-nl';
 import './globals.css';
 
 const meta: Meta = {
-  title: 'HeaderFooter',
-  id: 'rhc-templates-header-footer',
+  title: 'Overheid.nl',
+  id: 'rhc-templates-overheid-nl',
   component: Page,
   parameters: {
     layout: 'fullscreen',
