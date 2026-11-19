@@ -33,7 +33,7 @@ const languages = {
 
 const endItemsPrimary = (
   <>
-    <li>
+    <NavBarItem>
       <LanguageNavigation defaultSelectedLanguage="Nederlands">
         <LanguageNavigation.Trigger />
         <LanguageNavigation.Content>
@@ -42,7 +42,7 @@ const endItemsPrimary = (
           ))}
         </LanguageNavigation.Content>
       </LanguageNavigation>
-    </li>
+    </NavBarItem>
     <NavBarItem>
       <NavBarLink href="/">Contact</NavBarLink>
     </NavBarItem>
