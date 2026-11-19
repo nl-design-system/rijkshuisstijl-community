@@ -1,10 +1,27 @@
 'use client'; // TODO: move to lower level at which it is actually needed, instead of wrapping the whole file
 
-import { CardAsLink, ColumnLayout, Heading, Hero, Link, Paragraph } from '@rijkshuisstijl-community/components-react';
+import {
+  CardAsLink,
+  ColumnLayout,
+  Heading,
+  Hero,
+  Icon,
+  Link,
+  LinkList,
+  LinkListLink,
+  Paragraph,
+} from '@rijkshuisstijl-community/components-react';
 import { PageBody } from '@utrecht/page-body-react';
-import SharedFooter from '../shared/footer';
 import SharedHeader from '../shared/header';
 import SharedMainPageContent from '../shared/main-page-content';
+
+const headerlikeStyles = {
+  fontSize: '1.17em',
+  fontWeight: 700,
+  marginBlockEnd: '1em',
+};
+
+const chevron = <Icon icon="chevron-right" />;
 
 export default function Page() {
   return (
@@ -400,7 +417,82 @@ export default function Page() {
           </section>
         </SharedMainPageContent>
       </PageBody>
-      <SharedFooter />
+      <footer className="rhc-page-footer rhc-page-section">
+        <div className="rhc-page-section__content">
+          <div className="rhc-page-footer__primary">
+            <div className="rhc-grid">
+              <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-12 rhc-page-footer__tagline">
+                Rijkshuisstijl Community Design System
+              </div>
+              <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+                <div style={headerlikeStyles}>Contact en meedoen</div>
+                <LinkList>
+                  <LinkListLink href="https://praatmee.codefor.nl/" icon={chevron} key="bla">
+                    Code for NL Slack
+                  </LinkListLink>
+                  <LinkListLink
+                    href="https://nldesignsystem.nl/community/community-sprints/rijkshuisstijl-community/"
+                    icon={chevron}
+                    key="bla"
+                  >
+                    Community Sprints
+                  </LinkListLink>
+                  <LinkListLink
+                    href="https://github.com/nl-design-system/rijkshuisstijl-community/discussions/1505"
+                    icon={chevron}
+                    key="bla"
+                  >
+                    Styling discussies
+                  </LinkListLink>
+                  <LinkListLink
+                    href="https://github.com/nl-design-system/rijkshuisstijl-community/discussions/1733"
+                    icon={chevron}
+                    key="bla"
+                  >
+                    Implementatiediscussies
+                  </LinkListLink>
+                  <LinkListLink
+                    href="https://github.com/nl-design-system/rijkshuisstijl-community/graphs/contributors"
+                    icon={chevron}
+                    key="bla"
+                  >
+                    Bijdragers
+                  </LinkListLink>
+                  <LinkListLink href="https://nldesignsystem.nl/project/kernteam/" icon={chevron} key="bla">
+                    NL Design System kernteam
+                  </LinkListLink>
+                </LinkList>
+              </div>
+              <div className="rhc-grid__cell rhc-grid__cell-t-6 rhc-grid__cell-d-3">
+                <div style={headerlikeStyles}>Technische links</div>
+                <LinkList>
+                  <LinkListLink
+                    href="https://www.figma.com/design/Q5Imc7Xi9KnBQhcYI3Hytj/NL-Design-System---Bibliotheek---Rijkshuisstijl-Community"
+                    icon={chevron}
+                    key="bla"
+                  >
+                    Figma bibliotheek
+                  </LinkListLink>
+                  <LinkListLink
+                    href="https://www.figma.com/design/H4hSqpPbvFMLklDZgswwgd/NL-Design-System---Templates---Rijkshuisstijl"
+                    icon={chevron}
+                    key="bla"
+                  >
+                    Figma templates
+                  </LinkListLink>
+                  <LinkListLink
+                    href="https://github.com/nl-design-system/rijkshuisstijl-community/blob/main/proprietary/design-tokens/README.md"
+                    icon={chevron}
+                    key="bla"
+                  >
+                    Design tokens README
+                  </LinkListLink>
+                </LinkList>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
