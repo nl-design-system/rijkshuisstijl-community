@@ -80,24 +80,6 @@ export const FooterNavbarLinks = () => (
   </div>
 );
 
-export const SharedFooterOverheidNl = () => (
-  <footer className="rhc-page-footer rhc-page-section">
-    <div className="rhc-page-section__content">
-      <div className="rhc-page-footer__primary">
-        <div className="rhc-grid">
-          <FooterLinks3 />
-        </div>
-      </div>
-      <div className="rhc-page-footer__separator">
-        <Separator />
-      </div>
-      <div className="rhc-page-footer__secondary">
-        <FooterNavbarLinks />
-      </div>
-    </div>
-  </footer>
-);
-
 const SharedFooter = () => (
   <footer className="rhc-page-footer rhc-page-section">
     <div className="rhc-page-section__content">
