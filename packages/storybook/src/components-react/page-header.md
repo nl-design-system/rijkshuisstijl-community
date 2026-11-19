@@ -29,8 +29,12 @@ import { Logo, NavBar, PageHeader } from '@rijkshuisstijl-community/components-r
           <NavBarIdentity primary href="/">
             Dataregister
           </NavBarIdentity>
-          <NavBarItem href="/" id="home" label="Home" />
-          <NavBarItem href="/" id="contact" label="Contact" />
+          <NavBarItem>
+            <NavBarLink href="/">Home</NavBarLink>
+          </NavBarItem>
+          <NavBarItem>
+            <NavBarLink href="/">Contact</NavBarLink>
+          </NavBarItem>
         </NavBarStart>
       </NavBar>
     </div>
@@ -88,8 +92,12 @@ import {
       <NavBar aria-label="Dataregister">
         <NavBarStart>
           <NavBarIdentity href="/">Dataregister</NavBarIdentity>
-          <NavBarItem href="/" id="data" label="Data" />
-          <NavBarItem href="/" id="impact" label="Impact" />
+          <NavBarItem>
+            <NavBarLink href="/">Data</NavBarLink>
+          </NavBarItem>
+          <NavBarItem>
+            <NavBarLink href="/">Impact</NavBarLink>
+          </NavBarItem>
         </NavBarStart>
       </NavBar>
     </div>

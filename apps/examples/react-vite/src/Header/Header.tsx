@@ -4,6 +4,7 @@ import {
   NavBar,
   NavBarEnd,
   NavBarItem,
+  NavBarLink,
   NavBarStart,
   PageHeader,
 } from '@rijkshuisstijl-community/components-react/no-side-effects';
@@ -17,14 +18,26 @@ export function Header() {
       </Logo>
       <NavBar>
         <NavBarStart>
-          <NavBarItem href="/" id="first-link" label="Homepage" />
-          <NavBarItem href="/" id="second-link" label="Componenten" />
-          <NavBarItem href="/" id="third-link" label="Voorbeelden" />
+          <NavBarItem>
+            <NavBarLink href="/">Homepage</NavBarLink>
+          </NavBarItem>
+          <NavBarItem>
+            <NavBarLink href="/">Componenten</NavBarLink>
+          </NavBarItem>
+          <NavBarItem>
+            <NavBarLink href="/">Voorbeelden</NavBarLink>
+          </NavBarItem>
         </NavBarStart>
         <NavBarEnd>
-          <NavBarItem href="/" id="end-first-link" label="Figma" />
-          <NavBarItem href="/" id="end-second-link" label="Github" />
-          <NavBarItem href="/" id="end-third-link" label="Storybook" />
+          <NavBarItem>
+            <NavBarLink href="/">Figma</NavBarLink>
+          </NavBarItem>
+          <NavBarItem>
+            <NavBarLink href="/">Github</NavBarLink>
+          </NavBarItem>
+          <NavBarItem>
+            <NavBarLink href="/">Storybook</NavBarLink>
+          </NavBarItem>
         </NavBarEnd>
       </NavBar>
     </PageHeader>

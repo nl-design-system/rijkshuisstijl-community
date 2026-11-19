@@ -3,73 +3,21 @@
  * Copyright (c) 2026 Community for NL Design System
  */
 
-import { Icon, IconProps } from '@rijkshuisstijl-community/icon-react/no-side-effects';
+import { Icon } from '@rijkshuisstijl-community/icon-react/no-side-effects';
 import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 import clsx from 'clsx';
-import {
-  ComponentPropsWithRef,
-  CSSProperties,
-  HTMLAttributes,
-  PropsWithChildren,
-  ReactElement,
-  ReactNode,
-  Ref,
-  useId,
-} from 'react';
-import { NavBarLink } from './NavBarLink';
+import { ComponentPropsWithRef, CSSProperties, HTMLAttributes, PropsWithChildren, useId } from 'react';
 import { hidePopoverOnBlur } from './hidePopoverOnBlur';
-
-export interface NavBarLinkData {
-  className?: string;
-  id: string;
-  label: ReactNode;
-  href: string;
-  target?: string;
-}
-
-export interface NavBarItemProps extends NavBarLinkData, HTMLAttributes<HTMLLIElement> {
-  icon?: ReactElement<IconProps>;
-  iconEnd?: ReactElement<IconProps>;
-  iconOnly?: boolean;
-  currentPage?: boolean;
-  id: string;
-  ref?: Ref<HTMLLIElement>;
+export interface NavBarItemProps extends HTMLAttributes<HTMLLIElement> {
   /** Blijft op smalle schermen zichtbaar in de balk in plaats van in het menu. */
   persistOnSmallViewport?: boolean;
 }
 
-export const NavBarItem = ({
-  ref,
-  children,
-  className,
-  href,
-  target,
-  label,
-  icon,
-  iconEnd,
-  iconOnly = false,
-  currentPage = false,
-  persistOnSmallViewport = false,
-  ...restProps
-}: PropsWithChildren<NavBarItemProps>) => (
+export const NavBarItem = ({ className, persistOnSmallViewport = false, ...restProps }: NavBarItemProps) => (
   <li
-    ref={ref}
     {...restProps}
     className={clsx('rhc-nav-bar__item', persistOnSmallViewport && 'rhc-nav-bar__item--persistent', className)}
-  >
-    <NavBarLink
-      aria-current={currentPage ? 'page' : undefined}
-      className={clsx('rhc-nav-bar__link')}
-      href={href}
-      icon={icon}
-      iconEnd={iconEnd}
-      iconOnly={iconOnly}
-      target={target}
-    >
-      {label}
-    </NavBarLink>
-    {children}
-  </li>
+  />
 );
 
 NavBarItem.displayName = 'NavBarItem';
@@ -95,10 +43,7 @@ export interface NavBarProps extends ComponentPropsWithRef<'nav'> {
   toggleLabel?: string;
 }
 
-/**
- * Losse named exports (`NavBar`, `NavBarStart`, `NavBarItem`, ...) werken zowel in
- * client components als in React Server Components.
- */
+/** Root component voor de navigatie balk, dit regelt ook de hamburger menu op kleine viewports */
 export const NavBar = ({
   ref,
   children,
@@ -120,7 +65,7 @@ export const NavBar = ({
       {...restProps}
     >
       <div className="rhc-nav-bar__menu" id={menuId} popover="auto" onBlur={hidePopoverOnBlur}>
-        {/* Eerst in de DOM, zodat Tab na het openen de items in gaat; CSS zet hem achteraan. */}
+        {/* Hamburger menu op mobile eerst in de DOM, zodat Tab na het openen de items in gaat; CSS zet hem achteraan. */}
         <LinkButton className="rhc-nav-bar__toggle rhc-nav-bar__link" popoverTarget={menuId}>
           <Icon className="rhc-nav-bar__toggle-icon-open" icon="menu" />
           <Icon className="rhc-nav-bar__toggle-icon-close" icon="kruis" />
