@@ -16,6 +16,8 @@ Op smalle schermen staan alleen items met `rhc-nav-bar__item--persistent` en de 
 
 Geef de balk een unieke anchor-naam via `--rhc-nav-bar-anchor`. Het menu en het megamenu positioneren zich daarmee ten opzichte van de juiste balk.
 
+Browsers zonder CSS anchor positioning gebruiken een fallback: het menu en het megamenu staan dan `position: fixed` op basis van `--rhc-nav-bar-fallback-top`, `--rhc-nav-bar-fallback-bottom`, `--rhc-nav-bar-fallback-left` en `--rhc-nav-bar-fallback-width`. Zet die bij het `toggle`-event van de popover op de waarden van `getBoundingClientRect()` van de balk. De React-component doet dit al. Zonder script staat het megamenu direct onder een balk bovenaan de pagina.
+
 ## Gebruik
 
 ### Eenvoudig voorbeeld

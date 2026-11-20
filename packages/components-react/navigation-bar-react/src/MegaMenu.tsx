@@ -9,7 +9,8 @@ import { LinkButton, LinkButtonProps } from '@rijkshuisstijl-community/link-butt
 import { Paragraph, ParagraphProps } from '@rijkshuisstijl-community/paragraph-react/no-side-effects';
 import { Separator, SeparatorProps } from '@rijkshuisstijl-community/separator-react/no-side-effects';
 import clsx from 'clsx';
-import { ComponentPropsWithRef, FocusEvent, ReactNode } from 'react';
+import { ComponentPropsWithRef, FocusEvent, ReactNode, ToggleEvent } from 'react';
+import { setAnchorFallback } from './anchorFallback';
 import { hidePopoverOnBlur } from './hidePopoverOnBlur';
 
 /** `Omit` per lid van een union, zodat een discriminated union intact blijft. */
@@ -49,7 +50,14 @@ export interface NavBarMegaMenuPanelProps extends ComponentPropsWithRef<'div'> {
 }
 
 /** Het uitklappaneel met de inhoud van het megamenu. Sluit als de focus het paneel verlaat. */
-export const NavBarMegaMenuPanel = ({ id, className, children, onBlur, ...restProps }: NavBarMegaMenuPanelProps) => (
+export const NavBarMegaMenuPanel = ({
+  id,
+  className,
+  children,
+  onBlur,
+  onToggle,
+  ...restProps
+}: NavBarMegaMenuPanelProps) => (
   <div
     {...restProps}
     className={clsx('rhc-nav-bar__megamenu-panel', className)}
@@ -58,6 +66,10 @@ export const NavBarMegaMenuPanel = ({ id, className, children, onBlur, ...restPr
     onBlur={(event: FocusEvent<HTMLDivElement>) => {
       onBlur?.(event);
       hidePopoverOnBlur(event);
+    }}
+    onToggle={(event: ToggleEvent<HTMLDivElement>) => {
+      onToggle?.(event);
+      setAnchorFallback(event);
     }}
   >
     <div className="rhc-nav-bar__megamenu">{children}</div>
