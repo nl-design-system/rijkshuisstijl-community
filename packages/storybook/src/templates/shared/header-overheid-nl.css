@@ -29,6 +29,25 @@
 }
 
 @media (width < 768px) {
+  .overheid-nl-header .rhc-nav-bar__menu:popover-open {
+    padding-block: 0;
+    padding-inline: 0;
+  }
+
+  .overheid-nl-header .rhc-nav-bar__menu:popover-open .rhc-nav-bar__megamenu {
+    padding-block: var(--rhc-space-2xl);
+    padding-inline: var(--rhc-space-xl);
+  }
+
+  .overheid-nl-header .rhc-nav-bar__menu:popover-open .rhc-nav-bar__list--end {
+    background-color: var(--rhc-color-wit);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-block: var(--rhc-space-xl);
+    padding-inline: var(--rhc-space-xl);
+  }
+
   .overheid-nl-header__column-link .utrecht-link-list__link {
     inline-size: 100%;
   }
