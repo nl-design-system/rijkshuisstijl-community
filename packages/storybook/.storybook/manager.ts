@@ -1,5 +1,5 @@
 import { addons } from 'storybook/manager-api';
-import { defaultConfig } from 'storybook-addon-tag-badges';
+import { defaultConfig } from 'storybook-addon-tag-badges/manager-helpers';
 
 addons.setConfig({
   tagBadges: [
@@ -15,7 +15,11 @@ addons.setConfig({
         tooltip: 'Dit component vereist JavaScript voor zijn interactieve functionaliteit',
       },
       display: {
-        sidebar: ['component'],
+        sidebar: [
+          {
+            type: 'component',
+          },
+        ],
         toolbar: true,
       },
     },
