@@ -42,7 +42,9 @@ const Header = () => (
               <OverheidNlLanguageNavigation />
             </NavBarItem>
             <NavBarItem>
-              <NavBarLink href="/">Contact</NavBarLink>
+              <NavBarLink href="/" iconEnd={<Icon icon="comment" />}>
+                Contact
+              </NavBarLink>
             </NavBarItem>
           </NavBarEnd>
         </NavBar>
