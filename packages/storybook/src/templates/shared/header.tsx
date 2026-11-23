@@ -9,6 +9,7 @@ import {
   NavBarLink,
   NavBarStart,
   PageHeader,
+  Separator,
   SkipLink,
 } from '@rijkshuisstijl-community/components-react';
 
@@ -75,6 +76,7 @@ export function SharedHeader() {
               ))}
             </NavBarEnd>
           </NavBar>
+          <Separator style={{ '--utrecht-space-around': 0 }} />
         </div>
       </div>
     </PageHeader>
