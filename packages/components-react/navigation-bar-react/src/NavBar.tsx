@@ -7,6 +7,7 @@ import { Icon } from '@rijkshuisstijl-community/icon-react/no-side-effects';
 import { LinkButton } from '@rijkshuisstijl-community/link-button-react/no-side-effects';
 import clsx from 'clsx';
 import { ComponentPropsWithRef, CSSProperties, HTMLAttributes, PropsWithChildren, useId } from 'react';
+import { setAnchorFallback } from './anchorFallback';
 import { hidePopoverOnBlur } from './hidePopoverOnBlur';
 export interface NavBarItemProps extends HTMLAttributes<HTMLLIElement> {
   /** Blijft op smalle schermen zichtbaar in de balk in plaats van in het menu. */
@@ -64,7 +65,13 @@ export const NavBar = ({
       style={{ '--rhc-nav-bar-anchor': `--${id}`, ...style } as CSSProperties}
       {...restProps}
     >
-      <div className="rhc-nav-bar__menu" id={menuId} popover="auto" onBlur={hidePopoverOnBlur}>
+      <div
+        className="rhc-nav-bar__menu"
+        id={menuId}
+        popover="auto"
+        onBlur={hidePopoverOnBlur}
+        onToggle={setAnchorFallback}
+      >
         {/* Hamburger menu op mobile eerst in de DOM, zodat Tab na het openen de items in gaat; CSS zet hem achteraan. */}
         <LinkButton className="rhc-nav-bar__toggle rhc-nav-bar__link" popoverTarget={menuId}>
           <Icon className="rhc-nav-bar__toggle-icon-open" icon="menu" />

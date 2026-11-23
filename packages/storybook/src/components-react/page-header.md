@@ -105,7 +105,7 @@ import {
 </PageHeader>;
 ```
 
-Zie SharedHeaderOverheidNl in het header-footer -template voor een volledig voorbeeld.
+Zie SharedHeaderOverheidNl in het `overheid-nl`-template voor een volledig voorbeeld.
 
 ## API Referentie
 

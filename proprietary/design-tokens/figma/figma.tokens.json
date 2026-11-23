@@ -303,6 +303,14 @@
             "500": {
               "$type": "color",
               "$value": "oklch(65% 0.16526 137.86)"
+            },
+            "600": {
+              "$type": "color",
+              "$value": "oklch(70% 0.1169 137.2)"
+            },
+            "700": {
+              "$type": "color",
+              "$value": "oklch(75% 0.1016 137.1)"
             }
           },
           "donkergroen": {
@@ -1956,6 +1964,14 @@
           "500": {
             "$type": "color",
             "$value": "{rhc.color.dark.groen.500}"
+          },
+          "600": {
+            "$type": "color",
+            "$value": "{rhc.color.dark.groen.600}"
+          },
+          "700": {
+            "$type": "color",
+            "$value": "{rhc.color.dark.groen.700}"
           }
         },
         "donkergroen": {
@@ -5039,11 +5055,12 @@
         },
         "sm": {
           "$type": "dimension",
-          "$value": "{rhc.size.min.lint}"
+          "$value": "2.5rem",
+          "$description": "todo: no RHC token available"
         },
         "md": {
           "$type": "dimension",
-          "$value": "{rhc.size.max.lint}"
+          "$value": "{rhc.size.lint}"
         },
         "lg": {
           "$type": "dimension",
@@ -5052,7 +5069,7 @@
         },
         "xl": {
           "$type": "dimension",
-          "$value": "{rhc.size.max.2-lint}"
+          "$value": "{rhc.size.2-lint}"
         },
         "2xl": {
           "$type": "dimension",
@@ -5074,7 +5091,8 @@
           },
           "xl": {
             "$type": "dimension",
-            "$value": "2rem"
+            "$value": "2rem",
+            "$description": "todo: no RHC token available"
           },
           "2xl": {
             "$type": "dimension",
@@ -5083,11 +5101,13 @@
           },
           "3xl": {
             "$type": "dimension",
-            "$value": "{rhc.size.min.lint}"
+            "$value": "2.5rem",
+            "$description": "todo: no RHC token available"
           },
           "4xl": {
             "$type": "dimension",
-            "$value": "{rhc.size.max.lint}"
+            "$value": "3rem",
+            "$description": "todo: no RHC token available"
           }
         }
       },
@@ -5869,13 +5889,11 @@
           },
           "border-hover": {
             "$type": "color",
-            "$value": "#2C5D12",
-            "$description": "todo: RHC color scale does not provide full groen scale"
+            "$value": "{rhc.color.groen.600}"
           },
           "border-active": {
             "$type": "color",
-            "$value": "#275012",
-            "$description": "todo: RHC color scale does not provide full groen scale"
+            "$value": "{rhc.color.groen.700}"
           },
           "color-default": {
             "$type": "color",
@@ -5883,13 +5901,11 @@
           },
           "color-hover": {
             "$type": "color",
-            "$value": "#2C5D12",
-            "$description": "todo: RHC color scale does not provide full groen scale"
+            "$value": "{rhc.color.groen.600}"
           },
           "color-active": {
             "$type": "color",
-            "$value": "#275012",
-            "$description": "todo: RHC color scale does not provide full groen scale"
+            "$value": "{rhc.color.groen.700}"
           },
           "color-subtle": {
             "$type": "color",
@@ -5897,15 +5913,13 @@
           },
           "color-document": {
             "$type": "color",
-            "$value": "#275012",
-            "$description": "todo: RHC color scale does not provide full groen scale"
+            "$value": "{rhc.color.groen.700}"
           }
         },
         "accent-1-inverse": {
           "bg-document": {
             "$type": "color",
-            "$value": "#275012",
-            "$description": "todo: RHC color scale does not provide full groen scale"
+            "$value": "{rhc.color.groen.700}"
           },
           "bg-default": {
             "$type": "color",
@@ -5913,13 +5927,11 @@
           },
           "bg-hover": {
             "$type": "color",
-            "$value": "#2C5D12",
-            "$description": "todo: RHC color scale does not provide full groen scale"
+            "$value": "{rhc.color.groen.600}"
           },
           "bg-active": {
             "$type": "color",
-            "$value": "#275012",
-            "$description": "todo: RHC color scale does not provide full groen scale"
+            "$value": "{rhc.color.groen.700}"
           },
           "border-subtle": {
             "$type": "color",
@@ -11291,8 +11303,7 @@
         },
         "size": {
           "$type": "dimension",
-          "$value": "{rhc.size.half-lint}",
-          "$description": "todo: no basis token available"
+          "$value": "{basis.size.xs}"
         },
         "icon": {
           "size": {
@@ -11783,13 +11794,11 @@
         },
         "min-block-size": {
           "$type": "dimension",
-          "$value": "{rhc.size.half-lint}",
-          "$description": "todo: no basis token available"
+          "$value": "{basis.size.xs}"
         },
         "min-inline-size": {
           "$type": "dimension",
-          "$value": "{rhc.size.half-lint}",
-          "$description": "todo: no basis token available"
+          "$value": "{basis.size.xs}"
         },
         "padding-block": {
           "$type": "dimension",
@@ -13450,8 +13459,7 @@
           },
           "block-size": {
             "$type": "dimension",
-            "$value": "{rhc.size.2-lint}",
-            "$description": "todo: no basis token available"
+            "$value": "{basis.size.xl}"
           },
           "color": {
             "$type": "color",
@@ -13459,14 +13467,12 @@
           },
           "inline-size": {
             "$type": "dimension",
-            "$value": "{rhc.size.lint}",
-            "$description": "todo: no basis token available"
+            "$value": "{basis.size.md}"
           }
         },
         "margin-block-end": {
           "$type": "dimension",
-          "$value": "{rhc.size.half-lint}",
-          "$description": "todo: no basis token available"
+          "$value": "{basis.size.xs}"
         },
         "subtitle": {
           "font-size": {
@@ -13841,23 +13847,19 @@
           "vi-large": {
             "padding-inline-start": {
               "$type": "dimension",
-              "$value": "{rhc.size.lint}",
-              "$description": "todo: no basis token available"
+              "$value": "{basis.size.md}"
             },
             "padding-block-start": {
               "$type": "dimension",
-              "$value": "{rhc.size.half-lint}",
-              "$description": "todo: no basis token available"
+              "$value": "{basis.size.xs}"
             },
             "padding-inline-end": {
               "$type": "dimension",
-              "$value": "{rhc.size.lint}",
-              "$description": "todo: no basis token available"
+              "$value": "{basis.size.md}"
             },
             "padding-block-end": {
               "$type": "dimension",
-              "$value": "{rhc.size.lint}",
-              "$description": "todo: no basis token available"
+              "$value": "{basis.size.md}"
             }
           },
           "button-subtle": {
@@ -13879,8 +13881,8 @@
             },
             "padding-block-start": {
               "$type": "dimension",
-              "$value": "{rhc.space.max.xl}",
-              "$description": "todo: replace with basis.space.block.max.xl"
+              "$value": "1rem",
+              "$description": "todo: no basis token available"
             },
             "padding-inline-end": {
               "$type": "dimension",
@@ -14364,20 +14366,20 @@
         "identity": {
           "font-size": {
             "$type": "fontSizes",
-            "$value": "{rhc.text.font-size.xl}"
+            "$value": "{basis.text.font-size.xl}"
           },
           "line-height": {
             "$type": "lineHeights",
-            "$value": "{rhc.text.line-height.md}"
+            "$value": "{basis.text.line-height.md}"
           },
           "margin-block-start": {
             "$type": "dimension",
-            "$value": "{rhc.space.none}",
+            "$value": "{basis.space.none}",
             "$description": "[code-only]"
           },
           "margin-block-end": {
             "$type": "dimension",
-            "$value": "{rhc.space.md}",
+            "$value": "{basis.space.block.md}",
             "$description": "[code-only]"
           }
         }
