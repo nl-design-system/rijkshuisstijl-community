@@ -8,7 +8,7 @@ export default function IconSet() {
     <div className="rhc-icon-set">
       {iconIDs.map((iconID) => (
         <div className="rhc-icon-set-item" key={iconID}>
-          <Icon icon={iconID}></Icon>
+          <Icon icon={iconID} />
           <span>{iconID}</span>
         </div>
       ))}

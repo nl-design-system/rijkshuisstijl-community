@@ -5,7 +5,7 @@ import { MessageListItem } from './MessageListItem';
 
 describe('MessageListItem', () => {
   it('renders children correctly', () => {
-    render(<MessageListItem description={'Description'} href={'#'} label={'Label'}></MessageListItem>);
+    render(<MessageListItem description={'Description'} href={'#'} label={'Label'} />);
 
     expect(screen.getByText('Description')).toBeInTheDocument();
     expect(screen.getByText('Label')).toBeInTheDocument();

@@ -30,7 +30,7 @@ export const SideNavLink = ({
       role="link"
       {...restProps}
     >
-      {icon && <Icon icon={icon}></Icon>}
+      {icon && <Icon icon={icon} />}
       {children}
     </a>
   );

@@ -14,7 +14,7 @@ export default function IconSet() {
           <Heading appearanceLevel={5} level={1}>
             {countryCodeConverter.of(iconID.slice(0, 2).toUpperCase())}
           </Heading>
-          <Icon icon={iconID}></Icon>
+          <Icon icon={iconID} />
           <span>{iconID}</span>
         </div>
       ))}

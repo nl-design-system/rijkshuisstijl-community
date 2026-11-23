@@ -52,7 +52,7 @@ export const TableHeaderCell = ({
         })}
       >
         {children}
-        <Icon icon={ariaSort === 'ascending' || ariaSort === 'descending' ? `sort-${ariaSort}` : 'arrows-sort'}></Icon>
+        <Icon icon={ariaSort === 'ascending' || ariaSort === 'descending' ? `sort-${ariaSort}` : 'arrows-sort'} />
       </Button>
     ) : (
       children

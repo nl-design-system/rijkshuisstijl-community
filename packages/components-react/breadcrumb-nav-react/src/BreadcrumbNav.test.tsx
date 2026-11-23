@@ -21,7 +21,7 @@ describe('Breadcrumb navigation', () => {
   it('renders a listitem element', () => {
     render(
       <BreadcrumbNav>
-        <BreadcrumbNavLink href="/" index={0} rel="home"></BreadcrumbNavLink>
+        <BreadcrumbNavLink href="/" index={0} rel="home" />
       </BreadcrumbNav>,
     );
 
@@ -32,7 +32,7 @@ describe('Breadcrumb navigation', () => {
   it('renders a link element', () => {
     render(
       <BreadcrumbNav>
-        <BreadcrumbNavLink href="/" rel="home"></BreadcrumbNavLink>
+        <BreadcrumbNavLink href="/" rel="home" />
       </BreadcrumbNav>,
     );
 
@@ -44,7 +44,7 @@ describe('Breadcrumb navigation', () => {
   it('renders a link element', () => {
     render(
       <BreadcrumbNav>
-        <BreadcrumbNavLink href="/"></BreadcrumbNavLink>
+        <BreadcrumbNavLink href="/" />
       </BreadcrumbNav>,
     );
 

@@ -60,10 +60,10 @@ export default function Form() {
                 Lees verder over de <Link href="#">verantwoordingsmethode SiSa</Link>.
               </Paragraph>
               <form>
-                <FormFieldTextInput required label="Naam"></FormFieldTextInput>
-                <FormFieldTextInput label="Organisatie"></FormFieldTextInput>
-                <FormFieldTextInput label="E-mailadres" type="email"></FormFieldTextInput>
-                <FormFieldTextInput label="Telefoonnummer" type="tel"></FormFieldTextInput>
+                <FormFieldTextInput required label="Naam" />
+                <FormFieldTextInput label="Organisatie" />
+                <FormFieldTextInput label="E-mailadres" type="email" />
+                <FormFieldTextInput label="Telefoonnummer" type="tel" />
                 {/*
                 <div className="unstarted">
                   <FormField label="Datum">
@@ -71,11 +71,8 @@ export default function Form() {
                   </FormField>
                 </div>
               */}
-                <FormFieldTextInput
-                  description="Bijvoorbeeld E27B"
-                  label="Om welke uitkering gaat het?"
-                ></FormFieldTextInput>
-                <FormFieldTextarea cols={40} label="Stel hier uw vraag" rows={6}></FormFieldTextarea>
+                <FormFieldTextInput description="Bijvoorbeeld E27B" label="Om welke uitkering gaat het?" />
+                <FormFieldTextarea cols={40} label="Stel hier uw vraag" rows={6} />
                 <Fieldset>
                   <FieldsetLegend>Label</FieldsetLegend>
                   <div className="rhc-radio-group">
@@ -112,10 +109,10 @@ export default function Form() {
                       body: 'Dit is extra informatie',
                     },
                   ]}
-                ></AccordionProvider>
+                />
                 <Fieldset>
                   <FieldsetLegend>Akkoordverklaring</FieldsetLegend>
-                  <FormFieldCheckboxOption label="Ik heb gelezen en begrepen wat er met mijn persoonsgegevens wordt gedaan"></FormFieldCheckboxOption>
+                  <FormFieldCheckboxOption label="Ik heb gelezen en begrepen wat er met mijn persoonsgegevens wordt gedaan" />
                 </Fieldset>
                 <Button purpose="primary" type="submit">
                   Ga verder

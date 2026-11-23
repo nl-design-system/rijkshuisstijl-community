@@ -64,7 +64,7 @@ export default function Collage() {
                 <span>Invisible text</span>
               </VisuallyHidden>
               <Heading level={1}>Componenten collage NL Design System</Heading>
-              <Image alt="Multicolored tulip field" height="763" src="/placeholder.jpg" width="640"></Image>
+              <Image alt="Multicolored tulip field" height="763" src="/placeholder.jpg" width="640" />
               <Paragraph purpose="lead">
                 In het NL Design System verzamelen we principes, handvatten, elementen, patronen en richtlijnen.
               </Paragraph>
@@ -136,16 +136,16 @@ export default function Collage() {
                 }
               />
               <FormFieldCheckboxGroup description="Description" label="Label">
-                <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
-                <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
-                <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
-                <FormFieldCheckboxOption label="Label"></FormFieldCheckboxOption>
+                <FormFieldCheckboxOption label="Label" />
+                <FormFieldCheckboxOption label="Label" />
+                <FormFieldCheckboxOption label="Label" />
+                <FormFieldCheckboxOption label="Label" />
               </FormFieldCheckboxGroup>
               <div>
                 Checkbox Group buiten Form:
                 <CheckboxGroup>
-                  <FormFieldCheckboxOption label="Checkbox 1"></FormFieldCheckboxOption>
-                  <FormFieldCheckboxOption label="Checkbox 1"></FormFieldCheckboxOption>
+                  <FormFieldCheckboxOption label="Checkbox 1" />
+                  <FormFieldCheckboxOption label="Checkbox 1" />
                 </CheckboxGroup>
               </div>
               <Alert type="error">
@@ -252,7 +252,7 @@ export default function Collage() {
                     body: 'Body',
                   },
                 ]}
-              ></AccordionProvider>
+              />
               <Table>
                 <TableCaption>Caption van tabel</TableCaption>
                 <TableHeader>
