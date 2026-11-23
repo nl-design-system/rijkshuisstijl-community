@@ -44,7 +44,9 @@ const endItemsPrimary = (
       </LanguageNavigation>
     </NavBarItem>
     <NavBarItem>
-      <NavBarLink href="/">Contact</NavBarLink>
+      <NavBarLink href="/" iconEnd={<Icon icon="comment" />}>
+        Contact
+      </NavBarLink>
     </NavBarItem>
   </>
 );
