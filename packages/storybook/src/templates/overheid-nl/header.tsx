@@ -38,7 +38,7 @@ const Header = () => (
               </NavBarMegaMenuPanel>
             </NavBarMegaMenu>
           </NavBarStart>
-          <NavBarEnd>
+          <NavBarEnd className="overheid-nl-primary-navbar-end">
             <NavBarItem>
               <OverheidNlLanguageNavigation />
             </NavBarItem>

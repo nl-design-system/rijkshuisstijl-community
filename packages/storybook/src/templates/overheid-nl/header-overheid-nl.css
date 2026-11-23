@@ -32,6 +32,7 @@
   .overheid-nl-header .rhc-nav-bar__menu:popover-open {
     padding-block: 0;
     padding-inline: 0;
+    row-gap: 0;
   }
 
   .overheid-nl-header .rhc-nav-bar__menu:popover-open .rhc-nav-bar__megamenu {
@@ -39,8 +40,8 @@
     padding-inline: var(--rhc-space-xl);
   }
 
-  .overheid-nl-header .rhc-nav-bar__menu:popover-open .rhc-nav-bar__list--end {
-    align-items: center;
+  .overheid-nl-header .rhc-nav-bar__menu:popover-open .overheid-nl-primary-navbar-end {
+    align-items: start;
     background-color: var(--rhc-color-wit);
     display: flex;
     flex-direction: row;
@@ -50,16 +51,20 @@
   }
 
   /* Contact */
-  .overheid-nl-header .rhc-nav-bar__menu:popover-open .rhc-nav-bar__list--end .rhc-nav-bar__link {
+  .overheid-nl-header .rhc-nav-bar__menu:popover-open .overheid-nl-primary-navbar-end .rhc-nav-bar__link {
     block-size: auto;
     column-gap: var(--rhc-space-md);
+    font-size: 20px;
     min-block-size: 0;
     padding-block: var(--rhc-space-md);
     padding-inline: var(--rhc-space-lg);
   }
 
   /* LanguageNavigation */
-  .overheid-nl-header .rhc-nav-bar__menu:popover-open .rhc-nav-bar__list--end .rhc-language-navigation__trigger {
+  .overheid-nl-header
+    .rhc-nav-bar__menu:popover-open
+    .overheid-nl-primary-navbar-end
+    .rhc-language-navigation__trigger {
     block-size: auto;
     column-gap: var(--rhc-space-sm);
     min-block-size: 0;
