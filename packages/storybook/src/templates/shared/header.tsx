@@ -51,29 +51,31 @@ export function SharedHeader() {
 
   return (
     <PageHeader>
-      <SkipLink className="rhc-skip-link--visible-on-focus" href="#main" id="top">
-        Ga naar hoofdinhoud
-      </SkipLink>
-      <div className="rhc-page-header-layout">
-        <Logo organisation="Rijkshuisstijl Community">
-          <Icon className={'dutch-map'} icon={'nederland-map'} />
-        </Logo>
-        <NavBar>
-          <NavBarStart>
-            {items.map((item) => (
-              <NavBarItem key={item.label}>
-                <NavBarLink {...item}>{item.label}</NavBarLink>
-              </NavBarItem>
-            ))}
-          </NavBarStart>
-          <NavBarEnd>
-            {endItems.map((item) => (
-              <NavBarItem key={item.label}>
-                <NavBarLink {...item}>{item.label}</NavBarLink>
-              </NavBarItem>
-            ))}
-          </NavBarEnd>
-        </NavBar>
+      <div className="rhc-page-section">
+        <div className="rhc-page-section__content">
+          <SkipLink className="rhc-skip-link--visible-on-focus" href="#main" id="top">
+            Ga naar hoofdinhoud
+          </SkipLink>
+          <Logo organisation="Rijkshuisstijl Community">
+            <Icon className={'dutch-map'} icon={'nederland-map'} />
+          </Logo>
+          <NavBar>
+            <NavBarStart>
+              {items.map((item) => (
+                <NavBarItem key={item.label}>
+                  <NavBarLink {...item}>{item.label}</NavBarLink>
+                </NavBarItem>
+              ))}
+            </NavBarStart>
+            <NavBarEnd>
+              {endItems.map((item) => (
+                <NavBarItem key={item.label}>
+                  <NavBarLink {...item}>{item.label}</NavBarLink>
+                </NavBarItem>
+              ))}
+            </NavBarEnd>
+          </NavBar>
+        </div>
       </div>
     </PageHeader>
   );
