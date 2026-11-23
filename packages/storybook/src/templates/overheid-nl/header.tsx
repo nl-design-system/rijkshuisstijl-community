@@ -16,6 +16,7 @@ import {
 } from '@rijkshuisstijl-community/components-react';
 import OverheidNlLanguageNavigation from './language-navigation';
 import megaMenuContent from './megamenu-content';
+import './header-overheid-nl.css';
 
 const Header = () => (
   <PageHeader className="overheid-nl-header">
@@ -48,7 +49,7 @@ const Header = () => (
             </NavBarItem>
           </NavBarEnd>
         </NavBar>
-        <Separator className="overheid-nl-nav-bar__separator"></Separator>
+        <Separator className="overheid-nl-nav-bar__separator" />
         <NavBar aria-label="Dataregister">
           <NavBarStart>
             <NavBarIdentity href="/">Dataregister</NavBarIdentity>
@@ -62,12 +63,6 @@ const Header = () => (
               <NavBarLink current href="/">
                 Voorbeeldpagina
               </NavBarLink>
-            </NavBarItem>
-            <NavBarItem>
-              <NavBarLink href="/">Actueel</NavBarLink>
-            </NavBarItem>
-            <NavBarItem>
-              <NavBarLink href="/">Support</NavBarLink>
             </NavBarItem>
           </NavBarStart>
           <NavBarEnd>

@@ -9,9 +9,10 @@ import {
   NavBarLink,
   NavBarStart,
   PageHeader,
+  Separator,
   SkipLink,
 } from '@rijkshuisstijl-community/components-react';
-import './header-overheid-nl.css';
+import { CSSProperties } from 'react';
 
 export function SharedHeader() {
   const items = [
@@ -52,29 +53,32 @@ export function SharedHeader() {
 
   return (
     <PageHeader>
-      <SkipLink className="rhc-skip-link--visible-on-focus" href="#main" id="top">
-        Ga naar hoofdinhoud
-      </SkipLink>
-      <div className="rhc-page-header-layout">
-        <Logo organisation="Rijkshuisstijl Community">
-          <Icon className={'dutch-map'} icon={'nederland-map'} />
-        </Logo>
-        <NavBar>
-          <NavBarStart>
-            {items.map((item) => (
-              <NavBarItem key={item.label}>
-                <NavBarLink {...item}>{item.label}</NavBarLink>
-              </NavBarItem>
-            ))}
-          </NavBarStart>
-          <NavBarEnd>
-            {endItems.map((item) => (
-              <NavBarItem key={item.label}>
-                <NavBarLink {...item}>{item.label}</NavBarLink>
-              </NavBarItem>
-            ))}
-          </NavBarEnd>
-        </NavBar>
+      <div className="rhc-page-section">
+        <div className="rhc-page-section__content">
+          <SkipLink className="rhc-skip-link--visible-on-focus" href="#main" id="top">
+            Ga naar hoofdinhoud
+          </SkipLink>
+          <Logo organisation="Rijkshuisstijl Community">
+            <Icon className={'dutch-map'} icon={'nederland-map'} />
+          </Logo>
+          <NavBar>
+            <NavBarStart>
+              {items.map((item) => (
+                <NavBarItem key={item.label}>
+                  <NavBarLink {...item}>{item.label}</NavBarLink>
+                </NavBarItem>
+              ))}
+            </NavBarStart>
+            <NavBarEnd>
+              {endItems.map((item) => (
+                <NavBarItem key={item.label}>
+                  <NavBarLink {...item}>{item.label}</NavBarLink>
+                </NavBarItem>
+              ))}
+            </NavBarEnd>
+          </NavBar>
+          <Separator style={{ '--utrecht-space-around': 0 } as CSSProperties} />
+        </div>
       </div>
     </PageHeader>
   );
