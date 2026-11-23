@@ -136,7 +136,7 @@ export const FullBleedCardAsLink = ({
 }: PropsWithChildren<FullBleedCardAsLinkProps>) => (
   <div className={clsx('rhc-card-as-link', 'rhc-card-as-link--full-bleed', className)} ref={ref} {...restProps}>
     <span className="rhc-card-as-link__anchor">
-      <a aria-label={title} href={href} target={target} title={title}></a>
+      <a aria-label={title} href={href} target={target} title={title} />
     </span>
     <div className="rhc-card-as-link__content">
       <div className="rhc-card-as-link__heading">{heading}</div>
@@ -165,7 +165,7 @@ export const HorizontalImageCardAsLink = ({
 }: PropsWithChildren<HorizontalImageCardAsLinkProps>) => (
   <div className={clsx('rhc-card-as-link', 'rhc-card-as-link--horizontal', className)} ref={ref} {...restProps}>
     <span className="rhc-card-as-link__anchor">
-      <a aria-label={title} href={href} target={target} title={title}></a>
+      <a aria-label={title} href={href} target={target} title={title} />
     </span>
     <div className="rhc-card-as-link__content">
       <div className="rhc-card-as-link__heading">{heading}</div>

@@ -131,7 +131,7 @@ export const MultipleButtons: Story = {
         Documents
       </DataBadgeButton>
       <DataBadgeButton {...args}>Images</DataBadgeButton>
-      <DataBadgeButton {...args} helperText="Filter op recente uploads"></DataBadgeButton>
+      <DataBadgeButton {...args} helperText="Filter op recente uploads" />
     </div>
   ),
 };

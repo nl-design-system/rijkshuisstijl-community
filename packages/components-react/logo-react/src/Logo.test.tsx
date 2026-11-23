@@ -5,7 +5,7 @@ import { Logo } from './Logo';
 
 describe('Logo', () => {
   it('renders a logo role element', () => {
-    render(<Logo organisation="Voorbeeld organisatie" subtitle="Voorbeeld sub-title"></Logo>);
+    render(<Logo organisation="Voorbeeld organisatie" subtitle="Voorbeeld sub-title" />);
 
     const logo = screen.getByText('Voorbeeld organisatie');
 

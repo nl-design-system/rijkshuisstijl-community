@@ -784,7 +784,7 @@ const storyRenderer = (meta: Meta, story: StoryObj, options: ExampleOptions = {}
         })}
       >
         <div className="rhc-component-example__content">
-          <Component {...defaultArgs} {...args}></Component>
+          <Component {...defaultArgs} {...args} />
         </div>
       </div>
     </HTMLImage>
