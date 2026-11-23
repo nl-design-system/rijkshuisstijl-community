@@ -62,12 +62,6 @@ const Header = () => (
                 Voorbeeldpagina
               </NavBarLink>
             </NavBarItem>
-            <NavBarItem>
-              <NavBarLink href="/">Actueel</NavBarLink>
-            </NavBarItem>
-            <NavBarItem>
-              <NavBarLink href="/">Support</NavBarLink>
-            </NavBarItem>
           </NavBarStart>
           <NavBarEnd>
             <NavBarItem>
