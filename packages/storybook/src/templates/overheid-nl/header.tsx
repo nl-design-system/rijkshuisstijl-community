@@ -16,6 +16,7 @@ import {
 } from '@rijkshuisstijl-community/components-react';
 import OverheidNlLanguageNavigation from './language-navigation';
 import megaMenuContent from './megamenu-content';
+import './header-overheid-nl.css';
 
 const Header = () => (
   <PageHeader className="overheid-nl-header">

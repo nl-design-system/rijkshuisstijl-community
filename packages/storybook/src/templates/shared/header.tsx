@@ -11,7 +11,6 @@ import {
   PageHeader,
   SkipLink,
 } from '@rijkshuisstijl-community/components-react';
-import './header-overheid-nl.css';
 
 export function SharedHeader() {
   const items = [
