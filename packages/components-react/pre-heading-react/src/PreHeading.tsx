@@ -19,7 +19,7 @@ export const PreHeading = ({ ref, children, heading, ...restProps }: PropsWithCh
   return (
     <div className="rhc-heading-container" {...restProps}>
       {heading}
-      <UtrechtPreHeading className={'rhc-pre-heading'} ref={ref}>
+      <UtrechtPreHeading className="rhc-pre-heading" ref={ref}>
         {children}
       </UtrechtPreHeading>
     </div>

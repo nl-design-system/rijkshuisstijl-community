@@ -19,10 +19,10 @@ describe('FileComponent', () => {
     const file = new File([], 'example.png', { type: 'image/png' });
     const { container } = render(
       <FileComponent
-        allowedFileTypes={''}
+        allowedFileTypes=""
         file={file}
-        fileSizeErrorMessage={''}
-        fileTypeErrorMessage={''}
+        fileSizeErrorMessage=""
+        fileTypeErrorMessage=""
         maxFileSizeInBytes={0}
         onDelete={undefined}
       />,

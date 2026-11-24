@@ -99,9 +99,9 @@ export default function Page() {
                   Installeer de laatste versie van design tokens in je project met npm of pnpm. Op deze manier kun je
                   ook makkelijk updaten naar nieuwe versies:
                 </Paragraph>
-                <CodeBlock>{`npm install @rijkshuisstijl-communty/design-tokens@latest`}</CodeBlock>
+                <CodeBlock>npm install @rijkshuisstijl-communty/design-tokens@latest</CodeBlock>
                 <Paragraph>Of:</Paragraph>
-                <CodeBlock>{`pnpm add @rijkshuisstijl-communty/design-tokens@latest`}</CodeBlock>
+                <CodeBlock>pnpm add @rijkshuisstijl-communty/design-tokens@latest</CodeBlock>
                 <Paragraph>
                   Bekijk de npm package:{' '}
                   <Link href="https://www.npmjs.com/package/@rijkshuisstijl-community/design-tokens">

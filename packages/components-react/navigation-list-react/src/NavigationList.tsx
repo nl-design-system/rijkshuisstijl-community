@@ -16,7 +16,7 @@ export const NavigationList = ({ ref, children, className, ...restProps }: Navig
       aria-label="Navigation List"
       className={clsx('rhc-navigation-list rhc-navigation-list--container-small', className)}
       ref={ref}
-      role={'list'}
+      role="list"
       {...restProps}
     >
       {children}

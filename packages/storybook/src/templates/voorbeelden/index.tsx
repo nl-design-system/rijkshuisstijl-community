@@ -49,9 +49,8 @@ export default function Details() {
           <Article>
             <div className="rhc-templates-spacing-1">
               <Paragraph purpose="lead">
-                {
-                  "We hebben een aantal voorbeeldpagina's gemaakt, waar je kunt zien wat er mogelijk is met de componenten van Rijkshuisstijl Community."
-                }
+                We hebben een aantal voorbeeldpagina's gemaakt, waar je kunt zien wat er mogelijk is met de componenten
+                van Rijkshuisstijl Community.
               </Paragraph>
               <Separator />
               <Heading level={2}>Vraag en antwoord</Heading>

@@ -84,7 +84,7 @@ export default function MijnOmgeving() {
         <SharedMainPageContent>
           <SharedDisclaimer />
           <SideNav className="rhc-side-nav" heading="Submenu" {...useSideNav({ items: sideNav })} />
-          <section className={'rhc-page-main-content'}>
+          <section className="rhc-page-main-content">
             <Heading level={1}>Financiën</Heading>
             <div className="rhc-card-as-link-group" {...useCards({ items: cards, headingLevel: 2 })} />
           </section>

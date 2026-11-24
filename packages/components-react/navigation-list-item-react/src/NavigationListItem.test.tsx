@@ -8,14 +8,14 @@ const description = 'description';
 
 describe('NavigationListItem', () => {
   it('renders a NavigationListItem', () => {
-    render(<NavigationListItem description={description} href={'#'} icon={'chevron-right'} label={label} />);
+    render(<NavigationListItem description={description} href="#" icon="chevron-right" label={label} />);
     expect(screen.getByText(description)).toBeInTheDocument();
     expect(screen.getByText(label)).toBeInTheDocument();
     expect(screen.getByRole('listitem')).toBeInTheDocument();
   });
 
   it('forwards ref correctly', () => {
-    render(<NavigationListItem description={description} href={'#'} icon={'chevron-right'} label={label} />);
+    render(<NavigationListItem description={description} href="#" icon="chevron-right" label={label} />);
 
     expect(screen.getByRole('listitem')).toBeInstanceOf(HTMLLIElement);
   });
@@ -26,8 +26,8 @@ describe('NavigationListItem', () => {
       <NavigationListItem
         className={testClassName}
         description={description}
-        href={'#'}
-        icon={'chevron-right'}
+        href="#"
+        icon="chevron-right"
         label={label}
       />,
     );

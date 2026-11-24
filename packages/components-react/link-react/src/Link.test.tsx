@@ -35,7 +35,7 @@ describe('Link', () => {
     const { container } = render(
       <Link href="https://example.com/">
         <strong>https:</strong>
-        {'//example.com/'}
+        //example.com/
       </Link>,
     );
 
@@ -81,7 +81,7 @@ describe('Link', () => {
 
     const { container } = render(
       <Link href="#" ref={ref}>
-        {'https://example.com/'}
+        https://example.com/
       </Link>,
     );
 

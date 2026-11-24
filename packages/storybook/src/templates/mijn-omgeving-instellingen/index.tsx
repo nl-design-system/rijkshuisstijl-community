@@ -26,7 +26,7 @@ export default function MijnOmgeving() {
         <SharedMainPageContent>
           <SharedDisclaimer />
           <SideNav className="rhc-side-nav" heading="Submenu" {...useSideNav({ items: sideNav })} />
-          <section className={'rhc-page-main-content'}>
+          <section className="rhc-page-main-content">
             <Heading level={1}>Mijn Instellingen</Heading>
             <div>
               <Heading level={2}>E-mailadres</Heading>

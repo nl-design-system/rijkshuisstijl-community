@@ -32,13 +32,13 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: (args) => (
     <LinkList {...args}>
-      <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+      <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
         Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
       </LinkListLink>
-      <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+      <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
         Link 2
       </LinkListLink>
-      <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+      <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
         Link 3
       </LinkListLink>
     </LinkList>
@@ -49,13 +49,13 @@ export const ColumnsLayout: Story = {
   render: (args) => (
     <ColumnLayout>
       <LinkList {...args}>
-        <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+        <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
           Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
         </LinkListLink>
-        <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+        <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
           Link 2
         </LinkListLink>
-        <LinkListLink href="#" icon={<Icon icon={'chevron-right'} />}>
+        <LinkListLink href="#" icon={<Icon icon="chevron-right" />}>
           Link 3
         </LinkListLink>
       </LinkList>

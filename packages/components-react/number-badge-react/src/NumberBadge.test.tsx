@@ -18,7 +18,7 @@ describe('numberBadge', () => {
   });
   it('render value en children', () => {
     render(
-      <NumberBadge data-testid="test-id" value={'5555'}>
+      <NumberBadge data-testid="test-id" value="5555">
         5,555
       </NumberBadge>,
     );

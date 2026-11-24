@@ -24,7 +24,7 @@ describe('CardAsLink', () => {
 
     it('renders a link with the correct href and title', () => {
       linkTest(
-        <CardAsLink heading="Heading" href="/example" linkLabel={'Example Label'} title="Example Title" />,
+        <CardAsLink heading="Heading" href="/example" linkLabel="Example Label" title="Example Title" />,
         '/example',
         'Example Title',
       );

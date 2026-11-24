@@ -30,7 +30,7 @@ export const DefaultFigure: StoryObj<typeof meta> = {
       <RoundedCorner position="start-end" size="md">
         <Image alt="Multicolored tulip field" src="/placeholder.jpg" width={640} />
       </RoundedCorner>,
-      <FigureCaption>{'Bijschrift (figcaption) van afbeelding.'}</FigureCaption>,
+      <FigureCaption>Bijschrift (figcaption) van afbeelding.</FigureCaption>,
     ],
   },
 };

@@ -31,19 +31,19 @@ export const Default: Story = {
       <>
         <NavigationListItem
           description="Uw gegevens, familie en identiteitsbewijs"
-          href={'#'}
+          href="#"
           icon="user"
           label="Identiteit"
         />
         <NavigationListItem
           description="Uw inkomen, toeslagen, bijdragen en belastingen"
-          href={'#'}
+          href="#"
           icon="currency-euro"
           label="Financiën"
         />
         <NavigationListItem
           description="Uw pensioen, arbeidsgegevens en uitkeringen"
-          href={'#'}
+          href="#"
           icon="briefcase"
           label="Werk"
         />
@@ -57,19 +57,19 @@ export const SmallContainer: Story = {
       <>
         <NavigationListItem
           description="Uw gegevens, familie en identiteitsbewijs"
-          href={'#'}
+          href="#"
           icon="user"
           label="Identiteit"
         />
         <NavigationListItem
           description="Uw inkomen, toeslagen, bijdragen en belastingen"
-          href={'#'}
+          href="#"
           icon="currency-euro"
           label="Financiën"
         />
         <NavigationListItem
           description="Uw pensioen, arbeidsgegevens en uitkeringen"
-          href={'#'}
+          href="#"
           icon="briefcase"
           label="Werk"
         />

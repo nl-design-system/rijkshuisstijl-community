@@ -38,7 +38,7 @@ export const DataBadgeButton = ({
       {...restProps}
     >
       {iconAlign === 'start' && icon}
-      <span className={'rhc-data-badge-button__label'}>{children}</span>
+      <span className="rhc-data-badge-button__label">{children}</span>
       {iconAlign === 'end' && icon}
 
       {helperText && (
