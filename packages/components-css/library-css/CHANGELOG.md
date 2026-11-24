@@ -1,5 +1,42 @@
 # @rijkshuisstijl-community/components-css
 
+## 19.0.0
+
+### Major Changes
+
+- ad84e31: Button gebruikt nu de NL Design System Button-candidate (`nl-button`) als basis in plaats van de Utrecht Button, met classname `nl-button` en `--nl-button-*` tokens. Nieuwe `purpose` prop (`primary`/`secondary`/`subtle`); `appearance` blijft werken maar is deprecated. De derde kleuroptie (primary in de themakleur, rest lintblauw) volgt met de themakoppeling in een latere release.
+  
+  Breaking changes:
+  
+  - `disabled` zet nu `aria-disabled="true"` in plaats van het HTML-attribuut, zodat de button focusbaar blijft; gebruik `htmlDisabled` voor het echte `disabled`-attribuut.
+  - Classname van `utrecht-button` naar `nl-button`; theming van `--utrecht-button-*` naar `--nl-button-*`.
+  - De `hint` prop gebruikt nu `positive`/`negative` in plaats van de Utrecht-waarden.
+  - De Utrecht-re-exports (`ButtonLink`, `PrimaryActionButton`, `SecondaryActionButton`, `SubtleButton`) zijn deprecated.
+
+### Minor Changes
+
+- cb17d0a: Added Grid and Section css components into the bundled library
+- cf30b5d: Added new Page Header component
+
+### Patch Changes
+
+- Updated dependencies [ad84e31]
+- Updated dependencies [77be1eb]
+- Updated dependencies [a66a58e]
+- Updated dependencies [47932f6]
+- Updated dependencies [f2893f4]
+- Updated dependencies [cf30b5d]
+- Updated dependencies [d214b18]
+- Updated dependencies [cf30b5d]
+  - @rijkshuisstijl-community/button-css@2.0.0
+  - @rijkshuisstijl-community/footer-css@2.1.1
+  - @rijkshuisstijl-community/navigation-bar-css@2.0.0
+  - @rijkshuisstijl-community/page-header-css@0.1.0
+  - @rijkshuisstijl-community/language-navigation-css@1.2.0
+  - @rijkshuisstijl-community/visually-hidden-css@1.2.0
+  - @rijkshuisstijl-community/data-badge-button-css@1.1.0
+  - @rijkshuisstijl-community/file-input-css@1.1.1
+
 ## 18.0.2
 
 ### Patch Changes

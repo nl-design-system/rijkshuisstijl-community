@@ -1,5 +1,18 @@
 # @rijkshuisstijl-community/page-header-react
 
+## 1.1.0
+
+### Minor Changes
+
+- cf30b5d: Added new Page Header component
+
+### Patch Changes
+
+- Updated dependencies [47932f6]
+- Updated dependencies [cf30b5d]
+- Updated dependencies [d214b18]
+  - @rijkshuisstijl-community/page-header-css@0.1.0
+
 ## 1.0.0
 
 ### Major Changes
