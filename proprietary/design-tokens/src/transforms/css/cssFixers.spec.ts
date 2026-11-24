@@ -13,7 +13,7 @@ describe('css fixers', () => {
       const output = '--some-var: calc(100px + var(--some-other-var));';
       expect(fixCalc(input)).toBe(output);
     });
-    test('should wrap calculations with variables in calc()', async () => {
+    test('should wrap calculations with leading variables in calc()', async () => {
       const input = '--some-var: var(--some-other-var) + 100px;';
       const output = '--some-var: calc(var(--some-other-var) + 100px);';
       expect(fixCalc(input)).toBe(output);

@@ -41,7 +41,7 @@ describe('NavbarComponent', () => {
     const nav = fixture.nativeElement.querySelector('nav');
     const uls = nav.querySelectorAll('ul');
 
-    expect(uls.length).toBe(1);
+    expect(uls).toHaveLength(1);
     expect(uls[0].classList.contains('rhc-nav-bar__list--end')).toBeFalsy();
   });
 
@@ -52,7 +52,7 @@ describe('NavbarComponent', () => {
     const nav = fixture.nativeElement.querySelector('nav');
     const uls = nav.querySelectorAll('ul');
 
-    expect(uls.length).toBe(2);
+    expect(uls).toHaveLength(2);
     expect(uls[0].classList.contains('rhc-nav-bar__list--end')).toBeFalsy();
     expect(uls[1].classList.contains('rhc-nav-bar__list--end')).toBeTruthy();
   });
@@ -64,13 +64,13 @@ describe('NavbarComponent', () => {
     const nav = fixture.nativeElement.querySelector('nav');
     const uls = nav.querySelectorAll('ul');
 
-    expect(uls.length).toBe(2);
+    expect(uls).toHaveLength(2);
 
     const navbarItems = uls[0].querySelectorAll('li');
     const navbarEndItems = uls[1].querySelectorAll('li');
 
-    expect(navbarItems.length).toBe(2);
-    expect(navbarEndItems.length).toBe(1);
+    expect(navbarItems).toHaveLength(2);
+    expect(navbarEndItems).toHaveLength(1);
 
     expect(navbarItems[0]).toHaveTextContent('Heading');
     expect(navbarItems[1]).toHaveTextContent('Home');

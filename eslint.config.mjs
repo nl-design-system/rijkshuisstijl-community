@@ -58,6 +58,7 @@ export default defineConfig([
   {
     rules: {
       'sonarjs/no-empty-test-file': 0,
+      'sonarjs/parameterized-tests': 0,
       'sonarjs/todo-tag': 0,
     },
   },

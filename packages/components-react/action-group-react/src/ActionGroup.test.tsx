@@ -93,6 +93,7 @@ describe('Action group', () => {
   });
 
   describe('fragment with many buttons', () => {
+    // Skipped: Utrecht ActionGroup counts a fragment as one child, so no group role is rendered
     it.skip('renders a group role element', () => {
       render(
         <ActionGroup>

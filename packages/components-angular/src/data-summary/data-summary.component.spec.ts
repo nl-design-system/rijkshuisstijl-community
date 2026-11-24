@@ -52,7 +52,7 @@ describe('DataSummaryComponent', () => {
     expect(fixture.nativeElement.querySelector('dl')).toHaveClass('rhc-data-summary--column');
   });
 
-  it('should add the correct class when appearance is set to Column', () => {
+  it('should add the correct class when appearance is set to Row', () => {
     component.appearance = 'Row';
     fixture.detectChanges();
     expect(fixture.nativeElement.querySelector('dl')).toHaveClass('rhc-data-summary--row');
@@ -60,6 +60,6 @@ describe('DataSummaryComponent', () => {
 
   it('should render its two children correctly', () => {
     const items = fixture.nativeElement.querySelectorAll('div[rhc-data-summary-item]');
-    expect(items.length).toBe(2);
+    expect(items).toHaveLength(2);
   });
 });
