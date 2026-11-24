@@ -29,28 +29,6 @@
 }
 
 @media (width < 768px) {
-  .overheid-nl-header__column-link .utrecht-link-list__link {
-    inline-size: 100%;
-  }
-
-  /*
-   * Een absoluut gepositioneerde dropdown telt niet mee voor de hoogte van het menu,
-   * maar wel voor de scrollbare overflow: dan verschijnt er een scrollbar terwijl er
-   * onder het menu nog ruimte is. In de flow duwt de lijst de rest naar beneden.
-   */
-  .overheid-nl-header .rhc-nav-bar__menu:popover-open .rhc-language-navigation__list {
-    position: static;
-  }
-
-  /* Items die in het mobiele menu als knop worden getoond */
-  .overheid-nl-header .rhc-nav-bar__list:has(.overheid-nl-header__button-item) {
-    row-gap: var(--rhc-space-2xl);
-  }
-
-  .overheid-nl-header__button-item {
-    display: flex;
-  }
-
   .overheid-nl-header__button-item .rhc-nav-bar__link {
     --nl-link-text-decoration-line: none;
 
@@ -91,5 +69,77 @@
     background-color: var(--utrecht-button-primary-action-hover-background-color);
     border-color: var(--utrecht-button-primary-action-border-color);
     color: var(--utrecht-button-primary-action-hover-color);
+  }
+
+  .overheid-nl-header .rhc-nav-bar__menu:popover-open {
+    padding-block: 0;
+    padding-inline: 0;
+    row-gap: 0;
+  }
+
+  .overheid-nl-header .rhc-nav-bar__menu:popover-open .rhc-nav-bar__megamenu {
+    padding-block: 0;
+  }
+
+  .overheid-nl-header .rhc-nav-bar__menu:popover-open .rhc-nav-bar__list--start {
+    padding-block: var(--rhc-space-2xl);
+    padding-inline: var(--rhc-space-xl);
+  }
+
+  .overheid-nl-header .rhc-nav-bar__menu:popover-open .overheid-nl-primary-navbar-end {
+    align-items: start;
+    background-color: var(--rhc-color-wit);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .overheid-nl-header .rhc-nav-bar__menu:popover-open .rhc-nav-bar__list--end {
+    padding-block: var(--rhc-space-xl);
+    padding-inline: var(--rhc-space-xl);
+  }
+
+  /* Contact */
+  .overheid-nl-header .rhc-nav-bar__menu:popover-open .overheid-nl-primary-navbar-end .rhc-nav-bar__link {
+    block-size: auto;
+    column-gap: var(--rhc-space-md);
+    font-size: var(--basis-text-font-size-md);
+    min-block-size: 0;
+    padding-block: var(--rhc-space-md);
+    padding-inline: var(--rhc-space-lg);
+  }
+
+  /* LanguageNavigation */
+  .overheid-nl-header
+    .rhc-nav-bar__menu:popover-open
+    .overheid-nl-primary-navbar-end
+    .rhc-language-navigation__trigger {
+    block-size: auto;
+    column-gap: var(--rhc-space-sm);
+    min-block-size: 0;
+    padding-block: var(--rhc-space-md);
+    padding-inline: var(--rhc-space-xl);
+  }
+
+  .overheid-nl-header__column-link .utrecht-link-list__link {
+    inline-size: 100%;
+  }
+
+  /*
+
+   * Een absoluut gepositioneerde dropdown telt niet mee voor de hoogte van het menu,
+   * maar wel voor de scrollbare overflow: dan verschijnt er een scrollbar terwijl er
+   * onder het menu nog ruimte is. In de flow duwt de lijst de rest naar beneden.
+   */
+  .overheid-nl-header .rhc-nav-bar__menu:popover-open .rhc-language-navigation__list {
+    position: static;
+  }
+
+  /* Items die in het mobiele menu als knop worden getoond */
+  .overheid-nl-header .rhc-nav-bar__list:has(.overheid-nl-header__button-item) {
+    row-gap: var(--rhc-space-2xl);
+  }
+  .overheid-nl-header__button-item {
+    display: flex;
   }
 }

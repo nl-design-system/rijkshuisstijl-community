@@ -38,12 +38,14 @@ const Header = () => (
               </NavBarMegaMenuPanel>
             </NavBarMegaMenu>
           </NavBarStart>
-          <NavBarEnd>
+          <NavBarEnd className="overheid-nl-primary-navbar-end">
             <NavBarItem>
               <OverheidNlLanguageNavigation />
             </NavBarItem>
             <NavBarItem>
-              <NavBarLink href="/">Contact</NavBarLink>
+              <NavBarLink href="/" iconEnd={<Icon icon="comment" />}>
+                Contact
+              </NavBarLink>
             </NavBarItem>
           </NavBarEnd>
         </NavBar>
@@ -64,21 +66,13 @@ const Header = () => (
             </NavBarItem>
           </NavBarStart>
           <NavBarEnd>
-            <NavBarItem>
-              <NavBarLink
-                className="overheid-nl-header__button-item overheid-nl-header__button-item--secondary"
-                href="/"
-                icon={<Icon icon="zoek" />}
-              >
+            <NavBarItem className="overheid-nl-header__button-item overheid-nl-header__button-item--secondary">
+              <NavBarLink href="/" icon={<Icon icon="zoek" />}>
                 Zoeken
               </NavBarLink>
             </NavBarItem>
-            <NavBarItem>
-              <NavBarLink
-                className="overheid-nl-header__button-item overheid-nl-header__button-item--primary"
-                href="/"
-                icon={<Icon icon="inloggen" />}
-              >
+            <NavBarItem className="overheid-nl-header__button-item overheid-nl-header__button-item--primary">
+              <NavBarLink href="/" icon={<Icon icon="inloggen" />}>
                 Inloggen
               </NavBarLink>
             </NavBarItem>
