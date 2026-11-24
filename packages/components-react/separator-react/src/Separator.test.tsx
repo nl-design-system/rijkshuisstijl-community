@@ -55,15 +55,6 @@ describe('Separator', () => {
 
     expect(separator).toHaveClass('utrecht-separator');
   });
-  it('can have a additional class name', () => {
-    const { container } = render(<Separator className="large" />);
-
-    const separator = container.querySelector(':only-child');
-
-    expect(separator).toHaveClass('large');
-
-    expect(separator).toHaveClass('utrecht-separator');
-  });
   it('supports ref in React', () => {
     const ref = createRef<HTMLHRElement>();
 

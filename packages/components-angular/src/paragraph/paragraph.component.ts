@@ -10,7 +10,7 @@ export type AppearanceType = (typeof appearanceOptions)[number];
   styleUrl: './paragraph.component.css',
 })
 export class ParagraphComponent {
-  @Input() appearance?: AppearanceType;
+  @Input() appearance: AppearanceType;
 
   computedClass = () => {
     return this.appearance === 'lead' ? 'nl-paragraph nl-paragraph--lead' : 'nl-paragraph';

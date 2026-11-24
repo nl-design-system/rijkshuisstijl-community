@@ -29,7 +29,7 @@ describe('Breadcrumb navigation', () => {
 
     expect(listitem).toBeInTheDocument();
   });
-  it('renders a link element', () => {
+  it('renders a link element with rel attribute', () => {
     render(
       <BreadcrumbNav>
         <BreadcrumbNavLink href="/" rel="home" />
