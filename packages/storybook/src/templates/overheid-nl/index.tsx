@@ -3,6 +3,7 @@ import OverheidNlHeader from './header';
 import { FooterLinks3, FooterNavbarLinks } from '../shared/footer';
 import '@rijkshuisstijl-community/section-css/dist/index.css';
 import '@rijkshuisstijl-community/grid-css/dist/index.css';
+import './backdrop.css';
 
 const OverheidNl = () => (
   <>

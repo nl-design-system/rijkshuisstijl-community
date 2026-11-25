@@ -31,6 +31,7 @@ const Header = () => (
               Overheid.nl
             </NavBarIdentity>
             <NavBarMegaMenu>
+              <div className="rhc-backdrop" />
               <NavBarMegaMenuTrigger target="onderwerpen">Kies een onderwerp of dienst</NavBarMegaMenuTrigger>
               <NavBarMegaMenuPanel id="onderwerpen">
                 {megaMenuContent}
