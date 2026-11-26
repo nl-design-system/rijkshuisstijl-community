@@ -39,7 +39,6 @@ export default function Page() {
                   Gebruik deze tokens in CSS voor bijvoorbeeld <Code>padding</Code>, <Code>margin</Code> en{' '}
                   <Code>gap</Code>.
                 </Paragraph>
-                <TokenGroupTable path="rhc.space" />
                 <TokenGroupTable path="basis.space" />
               </div>
             </Article>

@@ -10,6 +10,7 @@ import {
   SideNavLink,
   SideNavList,
 } from '@rijkshuisstijl-community/components-react';
+import { Fragment } from 'react/jsx-runtime';
 import { PageBodyContainer, PageBodyContent, PageBodyMain } from './PageBody';
 import { TokenGroupTable } from './TokenGroupTable';
 import { navigation } from './navigation';
@@ -121,10 +122,10 @@ export default function Page() {
                   kopieëren.
                 </Paragraph>
                 {colors.map(({ label, path }) => (
-                  <>
+                  <Fragment key={path.join('.')}>
                     <Heading level={2}>{label}</Heading>
                     <TokenGroupTable path={path.join('.')} />
-                  </>
+                  </Fragment>
                 ))}
               </div>
             </Article>

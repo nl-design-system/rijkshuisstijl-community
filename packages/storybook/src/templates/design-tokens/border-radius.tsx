@@ -34,7 +34,6 @@ export default function Page() {
             <Article>
               <div className="rhc-margin-block-end-wrapper">
                 <Heading level={1}>Afrondingen</Heading>
-                <TokenGroupTable path="rhc.border-radius" />
                 <TokenGroupTable path="basis.border-radius" />
               </div>
             </Article>

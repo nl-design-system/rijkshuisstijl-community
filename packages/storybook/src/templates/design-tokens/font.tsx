@@ -42,7 +42,6 @@ export default function Page() {
                 <TokenGroupTable path="basis.text.font-size" />
 
                 <Heading level={2}>Regelhoogte</Heading>
-                <TokenGroupTable path="rhc.text.line-height" />
                 <TokenGroupTable path="basis.text.line-height" />
 
                 <Heading level={2}>Letterdikte</Heading>
