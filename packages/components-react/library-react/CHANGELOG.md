@@ -1,5 +1,81 @@
 # @rijkshuisstijl-community/components-react
 
+## 18.0.1
+
+### Patch Changes
+
+- 009dd98: Changed a linting rule (simple refactor/chore)
+- 9cc6818: security updates
+- Updated dependencies [009dd98]
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/card-as-link-react@1.1.4
+  - @rijkshuisstijl-community/data-badge-button-react@1.0.4
+  - @rijkshuisstijl-community/dot-badge-react@1.1.3
+  - @rijkshuisstijl-community/file-react@1.0.6
+  - @rijkshuisstijl-community/link-react@1.1.4
+  - @rijkshuisstijl-community/message-list-item-react@0.0.6
+  - @rijkshuisstijl-community/navigation-list-item-react@1.0.5
+  - @rijkshuisstijl-community/navigation-list-react@1.0.4
+  - @rijkshuisstijl-community/number-badge-react@1.0.4
+  - @rijkshuisstijl-community/pre-heading-react@1.0.3
+  - @rijkshuisstijl-community/skip-link-react@1.0.4
+  - @rijkshuisstijl-community/accordion-react@3.1.4
+  - @rijkshuisstijl-community/action-group-react@1.1.4
+  - @rijkshuisstijl-community/alert-react@3.1.5
+  - @rijkshuisstijl-community/article-react@2.1.4
+  - @rijkshuisstijl-community/blockquote-react@1.1.4
+  - @rijkshuisstijl-community/body-react@1.0.3
+  - @rijkshuisstijl-community/breadcrumb-nav-react@0.1.4
+  - @rijkshuisstijl-community/button-react@2.0.1
+  - @rijkshuisstijl-community/card-react@1.1.4
+  - @rijkshuisstijl-community/checkbox-group-react@1.1.4
+  - @rijkshuisstijl-community/checkbox-react@1.1.4
+  - @rijkshuisstijl-community/code-input-group-react@1.0.4
+  - @rijkshuisstijl-community/code-input-react@1.0.4
+  - @rijkshuisstijl-community/column-layout-react@1.0.3
+  - @rijkshuisstijl-community/data-summary-item-react@1.0.4
+  - @rijkshuisstijl-community/data-summary-react@1.0.3
+  - @rijkshuisstijl-community/drawer-react@1.0.3
+  - @rijkshuisstijl-community/fieldset-react@1.0.3
+  - @rijkshuisstijl-community/figure-react@1.1.4
+  - @rijkshuisstijl-community/file-input-react@2.0.6
+  - @rijkshuisstijl-community/footer-react@0.1.1
+  - @rijkshuisstijl-community/heading-group-react@1.0.3
+  - @rijkshuisstijl-community/heading-react@1.0.4
+  - @rijkshuisstijl-community/hero-react@1.0.4
+  - @rijkshuisstijl-community/icon-react@3.1.4
+  - @rijkshuisstijl-community/image-react@2.1.3
+  - @rijkshuisstijl-community/language-navigation-react@2.1.1
+  - @rijkshuisstijl-community/link-button-react@1.0.4
+  - @rijkshuisstijl-community/link-list-card-react@1.0.4
+  - @rijkshuisstijl-community/link-list-react@1.1.2
+  - @rijkshuisstijl-community/listbox-react@1.0.4
+  - @rijkshuisstijl-community/logo-react@1.1.2
+  - @rijkshuisstijl-community/message-list-react@1.0.4
+  - @rijkshuisstijl-community/navigation-bar-react@2.0.1
+  - @rijkshuisstijl-community/ordered-list-react@1.0.3
+  - @rijkshuisstijl-community/page-body-react@1.0.1
+  - @rijkshuisstijl-community/page-content-react@1.0.1
+  - @rijkshuisstijl-community/page-header-react@1.1.1
+  - @rijkshuisstijl-community/page-layout-react@1.0.1
+  - @rijkshuisstijl-community/page-number-navigation-react@1.0.4
+  - @rijkshuisstijl-community/paragraph-react@2.1.4
+  - @rijkshuisstijl-community/radio-group-react@1.0.2
+  - @rijkshuisstijl-community/radio-react@1.0.4
+  - @rijkshuisstijl-community/root-react@1.0.3
+  - @rijkshuisstijl-community/rounded-corner-react@1.0.4
+  - @rijkshuisstijl-community/separator-react@2.0.2
+  - @rijkshuisstijl-community/side-nav-item-react@1.0.1
+  - @rijkshuisstijl-community/side-nav-link-react@1.0.1
+  - @rijkshuisstijl-community/side-nav-list-react@1.0.1
+  - @rijkshuisstijl-community/side-nav-react@1.0.4
+  - @rijkshuisstijl-community/text-input-react@1.0.4
+  - @rijkshuisstijl-community/textarea-react@1.0.4
+  - @rijkshuisstijl-community/toggletip-react@1.0.5
+  - @rijkshuisstijl-community/unordered-list-item-react@1.0.3
+  - @rijkshuisstijl-community/unordered-list-react@1.0.3
+  - @rijkshuisstijl-community/visually-hidden-react@1.0.5
+
 ## 18.0.0
 
 ### Major Changes

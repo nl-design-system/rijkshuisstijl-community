@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/components-css
 
+## 19.0.1
+
+### Patch Changes
+
+- 9cc6818: security updates
+- Updated dependencies [756687a]
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/navigation-bar-css@2.0.1
+  - @rijkshuisstijl-community/number-badge-css@1.1.1
+
 ## 19.0.0
 
 ### Major Changes

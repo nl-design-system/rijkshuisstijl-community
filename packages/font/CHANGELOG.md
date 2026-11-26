@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/font
 
+## 1.1.7
+
+### Patch Changes
+
+- 9cc6818: security updates
+
 ## 1.1.6
 
 ### Patch Changes

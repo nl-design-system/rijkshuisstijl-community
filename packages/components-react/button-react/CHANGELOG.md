@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/button-react
 
+## 2.0.1
+
+### Patch Changes
+
+- 9cc6818: security updates
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/icon-react@3.1.4
+
 ## 2.0.0
 
 ### Major Changes

@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/code-input-react
 
+## 1.0.4
+
+### Patch Changes
+
+- 9cc6818: security updates
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/text-input-react@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes

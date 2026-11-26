@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/footer-react
 
+## 0.1.1
+
+### Patch Changes
+
+- 9cc6818: security updates
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/separator-react@2.0.2
+
 ## 0.1.0
 
 ### Minor Changes

@@ -1,5 +1,14 @@
 # @rijkshuisstijl-community/data-summary-item-react
 
+## 1.0.4
+
+### Patch Changes
+
+- 9cc6818: security updates
+- Updated dependencies [009dd98]
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/link-react@1.1.4
+
 ## 1.0.3
 
 ### Patch Changes

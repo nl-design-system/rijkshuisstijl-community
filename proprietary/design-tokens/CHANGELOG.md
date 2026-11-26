@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/design-tokens
 
+## 18.1.1
+
+### Patch Changes
+
+- 9cc6818: security updates
+- 850272e: Added rhc.backdrop tokens
+
 ## 18.1.0
 
 ### Minor Changes

@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/navigation-list-react
 
+## 1.0.4
+
+### Patch Changes
+
+- 009dd98: Changed a linting rule (simple refactor/chore)
+- 9cc6818: security updates
+
 ## 1.0.3
 
 ### Patch Changes

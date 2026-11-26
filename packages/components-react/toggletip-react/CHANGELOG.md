@@ -1,5 +1,15 @@
 # @rijkshuisstijl-community/toggletip-react
 
+## 1.0.5
+
+### Patch Changes
+
+- 9cc6818: security updates
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/alert-react@3.1.5
+  - @rijkshuisstijl-community/icon-react@3.1.4
+  - @rijkshuisstijl-community/paragraph-react@2.1.4
+
 ## 1.0.4
 
 ### Patch Changes

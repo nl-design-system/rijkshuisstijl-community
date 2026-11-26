@@ -1,5 +1,16 @@
 # @rijkshuisstijl-community/file-input-react
 
+## 2.0.6
+
+### Patch Changes
+
+- 9cc6818: security updates
+- Updated dependencies [009dd98]
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/file-react@1.0.6
+  - @rijkshuisstijl-community/button-react@2.0.1
+  - @rijkshuisstijl-community/paragraph-react@2.1.4
+
 ## 2.0.5
 
 ### Patch Changes

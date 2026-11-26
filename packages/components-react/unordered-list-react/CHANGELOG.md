@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/unordered-list-react
 
+## 1.0.3
+
+### Patch Changes
+
+- 9cc6818: security updates
+
 ## 1.0.2
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @rijkshuisstijl-community/hero-react
 
+## 1.0.4
+
+### Patch Changes
+
+- 9cc6818: security updates
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/heading-group-react@1.0.3
+  - @rijkshuisstijl-community/heading-react@1.0.4
+  - @rijkshuisstijl-community/image-react@2.1.3
+  - @rijkshuisstijl-community/paragraph-react@2.1.4
+
 ## 1.0.3
 
 ### Patch Changes

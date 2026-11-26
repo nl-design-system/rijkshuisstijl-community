@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/separator-react
 
+## 2.0.2
+
+### Patch Changes
+
+- 9cc6818: security updates
+
 ## 2.0.1
 
 ### Patch Changes

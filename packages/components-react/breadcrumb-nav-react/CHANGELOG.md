@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/breadcrumb-nav-react
 
+## 0.1.4
+
+### Patch Changes
+
+- 9cc6818: security updates
+
 ## 0.1.3
 
 ### Patch Changes

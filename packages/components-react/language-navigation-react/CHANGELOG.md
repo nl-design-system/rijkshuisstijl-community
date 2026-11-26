@@ -1,5 +1,16 @@
 # @rijkshuisstijl-community/language-navigation-react
 
+## 2.1.1
+
+### Patch Changes
+
+- 9cc6818: security updates
+- Updated dependencies [009dd98]
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/link-react@1.1.4
+  - @rijkshuisstijl-community/icon-react@3.1.4
+  - @rijkshuisstijl-community/link-button-react@1.0.4
+
 ## 2.1.0
 
 ### Minor Changes

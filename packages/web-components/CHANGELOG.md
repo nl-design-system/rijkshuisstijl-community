@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/web-components
 
+## 6.0.6
+
+### Patch Changes
+
+- 9cc6818: security updates
+
 ## 6.0.5
 
 ### Patch Changes

@@ -1,5 +1,21 @@
 # @rijkshuisstijl-community/navigation-bar-react
 
+## 2.0.1
+
+### Patch Changes
+
+- 9cc6818: security updates
+- Updated dependencies [009dd98]
+- Updated dependencies [756687a]
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/link-react@1.1.4
+  - @rijkshuisstijl-community/navigation-bar-css@2.0.1
+  - @rijkshuisstijl-community/button-react@2.0.1
+  - @rijkshuisstijl-community/icon-react@3.1.4
+  - @rijkshuisstijl-community/link-button-react@1.0.4
+  - @rijkshuisstijl-community/paragraph-react@2.1.4
+  - @rijkshuisstijl-community/separator-react@2.0.2
+
 ## 2.0.0
 
 ### Major Changes

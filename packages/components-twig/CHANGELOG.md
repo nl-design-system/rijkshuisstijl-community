@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/components-twig
 
+## 4.2.1
+
+### Patch Changes
+
+- 9cc6818: security updates
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/components-css@19.0.1
+
 ## 4.2.0
 
 ### Minor Changes

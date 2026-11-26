@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/number-badge-css
 
+## 1.1.1
+
+### Patch Changes
+
+- 9cc6818: security updates
+
 ## 1.1.0
 
 ### Minor Changes

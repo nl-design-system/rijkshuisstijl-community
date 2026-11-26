@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/image-react
 
+## 2.1.3
+
+### Patch Changes
+
+- 9cc6818: security updates
+
 ## 2.1.2
 
 ### Patch Changes

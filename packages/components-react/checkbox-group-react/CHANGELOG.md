@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/checkbox-group-react
 
+## 1.1.4
+
+### Patch Changes
+
+- 9cc6818: security updates
+
 ## 1.1.3
 
 ### Patch Changes
