@@ -78,13 +78,13 @@ export const Separator: Story = {
         Home
       </BreadcrumbNavLink>,
       <BreadcrumbNavSeparator key="icon">
-        <Icon icon={'chevron-right'} />
+        <Icon icon="chevron-right" />
       </BreadcrumbNavSeparator>,
       <BreadcrumbNavLink href="/a/" index={1} key="label">
         Label
       </BreadcrumbNavLink>,
       <BreadcrumbNavSeparator key="icon-2">
-        <Icon icon={'chevron-right'} />
+        <Icon icon="chevron-right" />
       </BreadcrumbNavSeparator>,
       <BreadcrumbNavLink href="/a/b/" index={2} key="label-2">
         Label

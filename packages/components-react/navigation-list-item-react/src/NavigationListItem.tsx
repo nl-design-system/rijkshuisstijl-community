@@ -28,19 +28,19 @@ export const NavigationListItem = ({
 }: NavigationListItemProps) => {
   return (
     <li ref={ref} role="listitem" {...restProps}>
-      <a className={clsx('rhc-navigation-list__item', className)} href={href} role={'link'}>
+      <a className={clsx('rhc-navigation-list__item', className)} href={href} role="link">
         {typeof icon === 'string' ? (
-          <Icon className={'rhc-navigation-list__item__start-icon'} icon={icon as RHCIconID} />
+          <Icon className="rhc-navigation-list__item__start-icon" icon={icon as RHCIconID} />
         ) : (
-          <Icon className={'rhc-navigation-list__item__start-icon'}>{icon}</Icon>
+          <Icon className="rhc-navigation-list__item__start-icon">{icon}</Icon>
         )}
-        <span className={'rhc-navigation-list__item-content'}>
-          <Paragraph className={'rhc-navigation-list__item__label'}>{label}</Paragraph>
-          <Paragraph className={'rhc-navigation-list__item__description'}>{description}</Paragraph>
+        <span className="rhc-navigation-list__item-content">
+          <Paragraph className="rhc-navigation-list__item__label">{label}</Paragraph>
+          <Paragraph className="rhc-navigation-list__item__description">{description}</Paragraph>
           {typeof iconEnd === 'string' ? (
-            <Icon className={'rhc-navigation-list__item__end-icon'} icon={iconEnd as RHCIconID} />
+            <Icon className="rhc-navigation-list__item__end-icon" icon={iconEnd as RHCIconID} />
           ) : (
-            <Icon className={'rhc-navigation-list__item__end-icon'}>{iconEnd}</Icon>
+            <Icon className="rhc-navigation-list__item__end-icon">{iconEnd}</Icon>
           )}
         </span>
       </a>

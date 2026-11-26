@@ -59,7 +59,7 @@ export function SharedHeader() {
             Ga naar hoofdinhoud
           </SkipLink>
           <Logo organisation="Rijkshuisstijl Community">
-            <Icon className={'dutch-map'} icon={'nederland-map'} />
+            <Icon className="dutch-map" icon="nederland-map" />
           </Logo>
           <NavBar>
             <NavBarStart>

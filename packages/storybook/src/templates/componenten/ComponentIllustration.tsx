@@ -158,13 +158,13 @@ const breadcrumbNavigationStory = {
         Home
       </BreadcrumbNavLink>,
       <BreadcrumbNavSeparator key="icon">
-        <Icon icon={'chevron-right'} />
+        <Icon icon="chevron-right" />
       </BreadcrumbNavSeparator>,
       <BreadcrumbNavLink href="/a/" index={1} key="label">
         Label
       </BreadcrumbNavLink>,
       <BreadcrumbNavSeparator key="icon-2">
-        <Icon icon={'chevron-right'} />
+        <Icon icon="chevron-right" />
       </BreadcrumbNavSeparator>,
       <BreadcrumbNavLink href="/a/b/" index={2} key="label-2">
         Label
@@ -408,7 +408,7 @@ const figureStory = {
       <RoundedCorner key="figure-rounded-corner" position="start-end" size="md">
         <Image alt="Multicolored tulip field" src="/placeholder.jpg" width={640} />
       </RoundedCorner>,
-      <FigureCaption key="figure-caption">{'Bijschrift (figcaption) van afbeelding.'}</FigureCaption>,
+      <FigureCaption key="figure-caption">Bijschrift (figcaption) van afbeelding.</FigureCaption>,
     ],
   },
   parameters: {

@@ -53,7 +53,7 @@ describe('ExpandableCheckboxGroup', () => {
   it('applies custom classnames', async () => {
     const { container } = render(
       <ExpandableCheckboxGroup
-        className={'rhc-custom-classname'}
+        className="rhc-custom-classname"
         legend="Test"
         maxVisible={3}
         options={testOptions}
@@ -72,7 +72,7 @@ describe('ExpandableCheckboxGroup', () => {
   it('shows only maxVisible options when collapsed', () => {
     const { container } = render(
       <ExpandableCheckboxGroup
-        className={'rhc-custom-classname'}
+        className="rhc-custom-classname"
         legend="Test"
         maxVisible={3}
         options={testOptions}

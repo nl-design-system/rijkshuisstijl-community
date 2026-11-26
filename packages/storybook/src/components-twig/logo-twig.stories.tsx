@@ -83,7 +83,7 @@ const meta = {
         } as LogoCSSProperties
       }
     >
-      <Icon icon={'nederland-map'} />
+      <Icon icon="nederland-map" />
     </Logo>
   ),
 } satisfies Meta<typeof TwigLogo>;

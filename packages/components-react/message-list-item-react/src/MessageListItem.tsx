@@ -28,16 +28,16 @@ export const MessageListItem = ({
   withBadge,
   ...restProps
 }: MessageListItemProps) => (
-  <li ref={ref} role={'listitem'} {...restProps}>
-    <a className={clsx('rhc-message-list__item', className)} href={href} role={'link'}>
-      <span className={'rhc-message-list__item-content'}>
+  <li ref={ref} role="listitem" {...restProps}>
+    <a className={clsx('rhc-message-list__item', className)} href={href} role="link">
+      <span className="rhc-message-list__item-content">
         <Paragraph className={clsx('rhc-message-list__item__label')}>
           {withBadge && <DotBadge {...withBadge} />}
           {label}
         </Paragraph>
-        <Paragraph className={'rhc-message-list__item__description'}>{description}</Paragraph>
-        <Paragraph className={'rhc-message-list__item__meta-data'}>{metaData}</Paragraph>
-        <Icon className={'rhc-message-list__item__end-icon'} icon={'chevron-right'} />
+        <Paragraph className="rhc-message-list__item__description">{description}</Paragraph>
+        <Paragraph className="rhc-message-list__item__meta-data">{metaData}</Paragraph>
+        <Icon className="rhc-message-list__item__end-icon" icon="chevron-right" />
       </span>
     </a>
   </li>

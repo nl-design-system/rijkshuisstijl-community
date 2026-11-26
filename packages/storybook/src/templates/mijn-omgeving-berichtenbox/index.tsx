@@ -25,35 +25,35 @@ export default function MijnOmgeving() {
         <SharedMainPageContent>
           <SharedDisclaimer />
           <SideNav className="rhc-side-nav" heading="Submenu" {...useSideNav({ items: sideNav })} />
-          <section className={'rhc-page-main-content'}>
+          <section className="rhc-page-main-content">
             <Heading level={1}>Berichtenbox</Heading>
             <div>
               <Heading level={2}>Recent</Heading>
               <Separator invisible />
               <MessageList>
                 <MessageListItem
-                  description={'Update: Uw klacht bij gemeente Utrecht'}
-                  href={'#'}
-                  label={'Gemeente Utrecht'}
-                  metaData={'18/06/2024'}
+                  description="Update: Uw klacht bij gemeente Utrecht"
+                  href="#"
+                  label="Gemeente Utrecht"
+                  metaData="18/06/2024"
                 />
-                <MessageListItem description={'Herinnering APK'} href={'#'} label={'RDW'} metaData={'01/06/2024'} />
+                <MessageListItem description="Herinnering APK" href="#" label="RDW" metaData="01/06/2024" />
                 <MessageListItem
-                  description={'Vergunning uitbouw achter'}
-                  href={'#'}
-                  label={'Gemeente Den Haag'}
-                  metaData={'01/05/2024'}
+                  description="Vergunning uitbouw achter"
+                  href="#"
+                  label="Gemeente Den Haag"
+                  metaData="01/05/2024"
                 />
                 <MessageListItem
-                  description={'Uw pensioenoverzicht'}
-                  href={'#'}
-                  label={'Pensioenfonds'}
-                  metaData={'03/03/2024'}
+                  description="Uw pensioenoverzicht"
+                  href="#"
+                  label="Pensioenfonds"
+                  metaData="03/03/2024"
                 />
               </MessageList>
               <Link className="" href="#">
                 Bekijk aangesloten organisaties
-                <Icon icon={'pijl-naar-rechts'} />
+                <Icon icon="pijl-naar-rechts" />
               </Link>
             </div>
             <div>
@@ -78,7 +78,7 @@ export default function MijnOmgeving() {
               <Separator invisible />
               <Link className="" href="#">
                 Bekijk alle veelgestelde vragen
-                <Icon icon={'pijl-naar-rechts'} />
+                <Icon icon="pijl-naar-rechts" />
               </Link>
             </div>
           </section>

@@ -8,7 +8,7 @@ const meta = {
   args: {
     children: 'Label',
     href: '#',
-    icon: <Icon icon={'chevron-right'} />,
+    icon: <Icon icon="chevron-right" />,
   },
   argTypes: {
     href: {

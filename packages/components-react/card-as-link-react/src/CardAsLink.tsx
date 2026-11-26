@@ -82,14 +82,7 @@ const DefaultCardAsLink = ({
         <div className="rhc-card-as-link__heading">{heading}</div>
         {imageSrc && (
           <div className="rhc-card-as-link__image-container" data-testid="rhc-card-as-link__image-container">
-            {
-              <Image
-                alt={imageAlt}
-                className="rhc-card-as-link__image"
-                presentation={imagePresentation}
-                src={imageSrc}
-              />
-            }
+            <Image alt={imageAlt} className="rhc-card-as-link__image" presentation={imagePresentation} src={imageSrc} />
           </div>
         )}
         <div className="rhc-card-as-link__icon">{icon}</div>
@@ -144,7 +137,7 @@ export const FullBleedCardAsLink = ({
       <div className="rhc-card-as-link__metadata">{metadata}</div>
       {children}
     </div>
-    {<Image alt={imageAlt} className="rhc-card-as-link__image" presentation={imagePresentation} src={imageSrc} />}
+    <Image alt={imageAlt} className="rhc-card-as-link__image" presentation={imagePresentation} src={imageSrc} />
   </div>
 );
 
