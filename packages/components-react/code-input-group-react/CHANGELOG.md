@@ -1,5 +1,14 @@
 # @rijkshuisstijl-community/code-input-group-react
 
+## 1.0.4
+
+### Patch Changes
+
+- 9cc6818: security updates
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/code-input-react@1.0.4
+  - @rijkshuisstijl-community/fieldset-react@1.0.3
+
 ## 1.0.3
 
 ### Patch Changes

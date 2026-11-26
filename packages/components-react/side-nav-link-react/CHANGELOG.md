@@ -1,5 +1,13 @@
 # @rijkshuisstijl-community/side-nav-link-react
 
+## 1.0.1
+
+### Patch Changes
+
+- 9cc6818: security updates
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/icon-react@3.1.4
+
 ## 1.0.0
 
 ### Major Changes

@@ -1,5 +1,12 @@
 # @rijkshuisstijl-community/dot-badge-react
 
+## 1.1.3
+
+### Patch Changes
+
+- 009dd98: Changed a linting rule (simple refactor/chore)
+- 9cc6818: security updates
+
 ## 1.1.2
 
 ### Patch Changes

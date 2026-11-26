@@ -1,5 +1,19 @@
 # @rijkshuisstijl-community/file-react
 
+## 1.0.6
+
+### Patch Changes
+
+- 009dd98: Changed a linting rule (simple refactor/chore)
+- 9cc6818: security updates
+- Updated dependencies [009dd98]
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/link-react@1.1.4
+  - @rijkshuisstijl-community/alert-react@3.1.5
+  - @rijkshuisstijl-community/button-react@2.0.1
+  - @rijkshuisstijl-community/icon-react@3.1.4
+  - @rijkshuisstijl-community/paragraph-react@2.1.4
+
 ## 1.0.5
 
 ### Patch Changes

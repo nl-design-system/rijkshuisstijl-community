@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/navigation-bar-css
 
+## 2.0.1
+
+### Patch Changes
+
+- 756687a: Navigation Bar - Maga menu tagline: line-height op mobile is aangepast
+
 ## 2.0.0
 
 ### Major Changes

@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/storybook-tooling
 
+## 1.1.6
+
+### Patch Changes
+
+- 9cc6818: security updates
+
 ## 1.1.5
 
 ### Patch Changes

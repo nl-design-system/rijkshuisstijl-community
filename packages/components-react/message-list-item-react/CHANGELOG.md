@@ -1,5 +1,17 @@
 # @rijkshuisstijl-community/message-list-item-react
 
+## 0.0.6
+
+### Patch Changes
+
+- 009dd98: Changed a linting rule (simple refactor/chore)
+- 9cc6818: security updates
+- Updated dependencies [009dd98]
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/dot-badge-react@1.1.3
+  - @rijkshuisstijl-community/icon-react@3.1.4
+  - @rijkshuisstijl-community/paragraph-react@2.1.4
+
 ## 0.0.5
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/page-content-react
 
+## 1.0.1
+
+### Patch Changes
+
+- 9cc6818: security updates
+
 ## 1.0.0
 
 ### Major Changes

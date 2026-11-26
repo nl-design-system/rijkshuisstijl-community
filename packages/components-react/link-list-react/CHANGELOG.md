@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/link-list-react
 
+## 1.1.2
+
+### Patch Changes
+
+- 9cc6818: security updates
+
 ## 1.1.1
 
 ### Patch Changes

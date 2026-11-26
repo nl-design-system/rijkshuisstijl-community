@@ -1,5 +1,14 @@
 # @rijkshuisstijl-community/link-list-card-react
 
+## 1.0.4
+
+### Patch Changes
+
+- 9cc6818: security updates
+- Updated dependencies [9cc6818]
+  - @rijkshuisstijl-community/heading-react@1.0.4
+  - @rijkshuisstijl-community/link-list-react@1.1.2
+
 ## 1.0.3
 
 ### Patch Changes

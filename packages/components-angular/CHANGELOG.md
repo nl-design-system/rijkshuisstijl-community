@@ -1,5 +1,11 @@
 # @rijkshuisstijl-community/components-angular
 
+## 12.0.1
+
+### Patch Changes
+
+- 9cc6818: security updates
+
 ## 12.0.0
 
 ### Major Changes
